@@ -58,19 +58,16 @@ class KTouchSettings {
     int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediately')
 
     // training page
-    bool            m_autoLevelChange;  ///< Whether to use automatic level change or not.
     int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
     int             m_downSpeedLimit;   ///< If user types slower, the level will be descreased.
     int             m_upCorrectLimit;   ///< If user types more correct, the level will be increased.
     int             m_upSpeedLimit;     ///< If user types faster, the level will be increased.
-    bool            m_rememberLevel;    ///< If true, the old level will be set when starting KTouch normally.
 
     // keyboard page
     bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
     int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
     QString         m_keyboardLayout;   ///< The currently chosen keyboard layout.
     QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
-    bool            m_showAnimation;    ///< If the keyboard shoud animate keys or not.
     QFont           m_keyboardFont;     ///< The keyboard font
 
     // colors page

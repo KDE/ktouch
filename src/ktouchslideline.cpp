@@ -21,6 +21,7 @@
 
 #include "ktouchsettings.h"
 #include "ktouchmacros.h"
+#include "prefs.h"
 
 // don't use defines here... most of the time they are pure evil :-)
 const int LINE_SPACING          = 2;    // the distance between the teacher and student line
@@ -108,7 +109,7 @@ void KTouchSlideLine::slide() {
     if (m_studentPixmap==NULL || m_teacherPixmap==NULL) return;
     // kdDebug() << "[KTouchSlideLine::slide]" << endl;
     // calculate new x positions depending on slide speed
-    double speed = 1.0 + 0.2*KTouchConfig().m_slideSpeed;
+    double speed = 1.0 + 0.2*Prefs::slidingSpeed();
     double m_teacherDX = (m_teacherFrameXEnd - m_teacherFrameX)/speed;
     double m_studentDX = (m_studentFrameXEnd - m_studentFrameX)/speed;
     if (fabs(m_teacherDX)>1.0)  m_teacherFrameX += m_teacherDX;

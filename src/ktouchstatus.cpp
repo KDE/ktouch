@@ -19,6 +19,7 @@
 #include <kpushbutton.h>
 #include <kdebug.h>
 #include "ktouchsettings.h"
+#include "prefs.h"
 
 KTouchStatus::KTouchStatus(QWidget *parent)
  : KTouchStatusLayout(parent)
@@ -27,8 +28,8 @@ KTouchStatus::KTouchStatus(QWidget *parent)
 
 void KTouchStatus::applyPreferences() {
     // we just need to turn on/off the level change buttons
-    levelUpBtn->setEnabled( !KTouchConfig().m_autoLevelChange );
-    levelDownBtn->setEnabled( !KTouchConfig().m_autoLevelChange );
+    levelUpBtn->setEnabled( !Prefs::autoLevelChange() );
+    levelDownBtn->setEnabled( !Prefs::autoLevelChange() );
 }
 
 void KTouchStatus::setNewChars(const QString& newChars) {

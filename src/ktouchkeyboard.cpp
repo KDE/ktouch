@@ -24,6 +24,7 @@
 
 #include "ktouchsettings.h"
 #include "ktouchmacros.h"
+#include "prefs.h"
 
 // the margin between keyboard and widget frame
 const int MARGIN = 10;
@@ -132,8 +133,6 @@ void KTouchKeyboard::applyPreferences(bool silent) {
                 m_currentLayout=KTouchConfig().m_keyboardLayout;
         }
     }
-    // set if we have animation or not.
-    m_showAnimation = KTouchConfig().m_showAnimation;
 
     updateColours();    // we recreate the colour connections,
     resizeEvent(NULL);  // paint the keyboard
@@ -152,7 +151,7 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
         }
     }
 
-    if (m_showAnimation){ // only do this if we want to show animation.
+    if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
         QValueList<KTouchKeyConnector>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;

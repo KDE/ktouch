@@ -25,7 +25,6 @@ class KToggleAction;
 class KActionMenu;
 
 class KTouchLecture;
-class KTouchPref;
 class KTouchEditor;
 class KTouchStatistics;
 class KTouchStatus;
@@ -93,6 +92,8 @@ class KTouch : public KMainWindow {
     void changeColor(int num);
     /// Quick-changes the lecture.
     void changeLecture(int num);
+    
+    void updateSettings();
 
   private:
     /// Will be called when this app is restored.
@@ -116,7 +117,6 @@ class KTouch : public KMainWindow {
     KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".
 
-    KTouchPref             *m_preferencesDlg;       ///< Pointer to the preferences dialog.
     KTouchEditor           *m_editorDlg;            ///< Pointer to the lecture editor dialog.
     KTouchStartNewDialog   *m_startNewDlg;          ///< Pointer to the "start new session" dialog.
     KTouchStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.

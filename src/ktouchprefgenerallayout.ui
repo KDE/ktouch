@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>KTouchPrefGeneralLayout</class>
 <widget class="QWidget">
     <property name="name">
@@ -41,7 +41,7 @@
                 </property>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>errorBeepCheck</cstring>
+                        <cstring>kcfg_BeepOnError</cstring>
                     </property>
                     <property name="text">
                         <string>Beep on error</string>
@@ -49,7 +49,7 @@
                 </widget>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>levelBeepCheck</cstring>
+                        <cstring>kcfg_SoundOnLevel</cstring>
                     </property>
                     <property name="text">
                         <string>Sound on automatic level change</string>
@@ -155,7 +155,7 @@
                         </property>
                         <widget class="QSlider" row="0" column="1" rowspan="1" colspan="3">
                             <property name="name">
-                                <cstring>slidingSpeedSlider</cstring>
+                                <cstring>kcfg_SlidingSpeed</cstring>
                             </property>
                             <property name="maximumSize">
                                 <size>
@@ -254,8 +254,6 @@
         </spacer>
     </vbox>
 </widget>
-<customwidgets>
-</customwidgets>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kpushbutton.h</includehint>

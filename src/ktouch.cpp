@@ -27,9 +27,10 @@
 #include <kmessagebox.h>
 #include <kdebug.h>
 #include <kpopupmenu.h>
+#include <kconfigdialog.h>
 
 // Own header files
-#include "ktouchpref.h"
+//#include "ktouchpref.h"
 #include "ktouchlecture.h"
 #include "ktoucheditor.h"
 #include "ktouchstatus.h"
@@ -39,10 +40,14 @@
 #include "ktouchtrainer.h"
 #include "ktouchstartnewdialog.h"
 #include "ktouchstatistics.h"
+#include "ktouchprefgenerallayout.h"
+#include "ktouchpreftraininglayout.h"
+#include "ktouchprefkeyboardlayout.h"
+#include "ktouchprefcolorslayout.h"
+#include "prefs.h"
 
 KTouch::KTouch()
   : KMainWindow( 0, "KTouch" ),
-    m_preferencesDlg(NULL),
     m_editorDlg(NULL),
     m_startNewDlg(NULL),
     m_statusWidget(NULL),
@@ -97,7 +102,7 @@ KTouch::KTouch()
         // Reload the last used training file.
         reloadLecture();
         // If the user doesn't want to restart with his old level, reset it
-        if (!KTouchConfig().m_rememberLevel)
+        if (!Prefs::rememberLevel())
             m_trainer->m_level=0;
         // now let's show the first line of the current level
         m_trainer->goFirstLine();
@@ -113,13 +118,11 @@ KTouch::KTouch()
 KTouch::~KTouch() {
     // Note: The dialogs that are created as childs of KTouch will be deleted when the KTouch object
     //       is destructed. But I consider it good and clean style to clean up the mess you've caused :-)
-    delete m_preferencesDlg;    // free memory of preferences dialog
     delete m_editorDlg;         // free memory of editor dialog
     delete m_startNewDlg;       // free memory of "start new session" dialog
     delete m_lecture;           // free memory of the lecture object
     delete m_trainer;           // free memory of the trainer
     // set the pointers to zero (not necessary but just a little bit on the safe side)
-    m_preferencesDlg=NULL;
     m_editorDlg=NULL;
     m_startNewDlg=NULL;
     m_lecture=NULL;
@@ -297,22 +300,30 @@ void KTouch::trainingLectureEdit() {
 
 
 void KTouch::optionsPreferences() {
-    trainingPause();
-    // If the preferences dialog hasn't been used until now, create one on the heap
-    // and store the pointer for later use. The memory will be freed upen destroying
-    // the KTouch object.
-    if (m_preferencesDlg==NULL) {
-        m_preferencesDlg=new KTouchPref;
-        connect(m_preferencesDlg,SIGNAL(applyPreferences()),this,SLOT(applyPreferences()));
-    };
-    // Update the dialogs UI widgets
-    m_preferencesDlg->update(true);
-    // And finally execute the dialog
-    if (m_preferencesDlg->exec()==QDialog::Accepted) {
-        m_preferencesDlg->update(false);        // store the changes in the settings object and save them
-        applyPreferences();                     // apply the changes to the widgets
-    };
+        trainingPause();
+	if ( KConfigDialog::showDialog( "settings" ) )  {
+        	return;
+	}
+	//KConfigDialog didn't find an instance of this dialog, so lets create it :
+	KConfigDialog* dialog = new KConfigDialog( this, "settings",  Prefs::self() );
+	KTouchPrefGeneralLayout * m_pageGeneral = new KTouchPrefGeneralLayout(0, "General");
+	dialog->addPage(m_pageGeneral, i18n("General Options"), "style");
+	KTouchPrefTrainingLayout * m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
+	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
+	KTouchPrefKeyboardLayout * m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
+	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
+	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
+	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
+	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(updateSettings()));
+	dialog->show();
 }
+
+void KTouch::updateSettings()
+{
+	//TODO:test if this setting has changed
+	changeColor(Prefs::colorScheme());
+}
+
 
 void KTouch::changeStatusbarMessage(const QString& text) {
     statusBar()->message(text);
@@ -494,6 +505,7 @@ void KTouch::setupQuickSettings() {
         menu->plug(settingsMenu);
     };
     // add the colour schemes
+    //TODO use a KSelectAction and connect to changeColors, write the scheme number in Prefs
     if (settingsMenu) {
         QSignalMapper *signalMapper = new QSignalMapper( this );
         connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeColor(int)) );

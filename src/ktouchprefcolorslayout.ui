@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>KTouchPrefColorsLayout</class>
 <widget class="QWidget">
     <property name="name">
@@ -43,7 +43,7 @@
                         </property>
                         <widget class="KColorButton" row="0" column="7">
                             <property name="name">
-                                <cstring>teacherBackgroundBtn</cstring>
+                                <cstring>kcfg_TeacherBackgroundColor</cstring>
                             </property>
                             <property name="minimumSize">
                                 <size>
@@ -65,7 +65,7 @@
                         </widget>
                         <widget class="KColorButton" row="0" column="4">
                             <property name="name">
-                                <cstring>teacherTextBtn</cstring>
+                                <cstring>kcfg_TeacherTextColor</cstring>
                             </property>
                             <property name="sizePolicy">
                                 <sizepolicy>
@@ -121,7 +121,7 @@
                         </spacer>
                         <widget class="KColorButton" row="1" column="4">
                             <property name="name">
-                                <cstring>studentTextBtn</cstring>
+                                <cstring>kcfg_StudentTextColor</cstring>
                             </property>
                             <property name="minimumSize">
                                 <size>
@@ -143,7 +143,7 @@
                         </widget>
                         <widget class="KColorButton" row="1" column="7">
                             <property name="name">
-                                <cstring>studentBackgroundBtn</cstring>
+                                <cstring>kcfg_StudentBackgroundColor</cstring>
                             </property>
                             <property name="minimumSize">
                                 <size>
@@ -242,10 +242,13 @@
                 </spacer>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>errorColorCheck</cstring>
+                        <cstring>kcfg_ColorOnError</cstring>
                     </property>
                     <property name="text">
                         <string>Use different color on error in typing line</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>If checked this shows your error using the colors below on the typing line</string>
                     </property>
                 </widget>
                 <widget class="QLayoutWidget">
@@ -283,7 +286,7 @@
                         </widget>
                         <widget class="KColorButton">
                             <property name="name">
-                                <cstring>errorTextBtn</cstring>
+                                <cstring>kcfg_ErrorTextColor</cstring>
                             </property>
                             <property name="enabled">
                                 <bool>true</bool>
@@ -299,10 +302,13 @@
                             </property>
                             <property name="color">
                                 <color>
-                                    <red>175</red>
+                                    <red>170</red>
                                     <green>0</green>
-                                    <blue>55</blue>
+                                    <blue>0</blue>
                                 </color>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Choose the text color for error in typing line</string>
                             </property>
                         </widget>
                         <spacer>
@@ -332,7 +338,7 @@
                         </widget>
                         <widget class="KColorButton">
                             <property name="name">
-                                <cstring>errorBackgroundBtn</cstring>
+                                <cstring>kcfg_ErrorBackgroundColor</cstring>
                             </property>
                             <property name="enabled">
                                 <bool>true</bool>
@@ -352,6 +358,9 @@
                                     <green>0</green>
                                     <blue>55</blue>
                                 </color>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Choose the background color for error in typing line</string>
                             </property>
                         </widget>
                     </hbox>
@@ -395,8 +404,28 @@
                     </property>
                 </spacer>
                 <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>Black'n White</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Classic</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Deep Blue</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Stripy</string>
+                        </property>
+                    </item>
                     <property name="name">
-                        <cstring>keyboardColorCombo</cstring>
+                        <cstring>kcfg_ColorScheme</cstring>
                     </property>
                 </widget>
             </hbox>
@@ -421,14 +450,22 @@
     </vbox>
 </widget>
 <tabstops>
-    <tabstop>teacherTextBtn</tabstop>
-    <tabstop>teacherBackgroundBtn</tabstop>
-    <tabstop>studentTextBtn</tabstop>
-    <tabstop>studentBackgroundBtn</tabstop>
-    <tabstop>errorColorCheck</tabstop>
-    <tabstop>errorTextBtn</tabstop>
-    <tabstop>errorBackgroundBtn</tabstop>
-    <tabstop>keyboardColorCombo</tabstop>
+    <tabstop>kcfg_TeacherTextColor</tabstop>
+    <tabstop>kcfg_TeacherBackgroundColor</tabstop>
+    <tabstop>kcfg_StudentTextColor</tabstop>
+    <tabstop>kcfg_StudentBackgroundColor</tabstop>
+    <tabstop>kcfg_ColorOnError</tabstop>
+    <tabstop>kcfg_ErrorTextColor</tabstop>
+    <tabstop>kcfg_ErrorBackgroundColor</tabstop>
+    <tabstop>kcfg_ColorScheme</tabstop>
 </tabstops>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+</includehints>
 </UI>

@@ -27,6 +27,7 @@
 #include "ktouchkeyboard.h"
 #include "ktouchlecture.h"
 #include "ktouchsettings.h"
+#include "prefs.h"
 
 const int UPDATE_INTERVAL = 500;    // milli seconds between updates of the speed LCD
 
@@ -84,7 +85,7 @@ void KTouchTrainer::keyPressed(QChar key) {
     }
     else {
         // nope, the key was wrong : beep !!!
-        if (KTouchConfig().m_errorBeep)   QApplication::beep();
+        if (Prefs::beepOnError())   QApplication::beep();
         // now find the key the user missed:
         if (m_teacherText.left(len-1)==m_studentText.left(len-1) && m_teacherText.length()>=len)
             m_session.addWrongChar(m_teacherText[len-1]);
@@ -127,7 +128,7 @@ void KTouchTrainer::enterPressed() {
         return;
     };
 
-    if (KTouchConfig().m_autoLevelChange) {
+    if (Prefs::autoLevelChange()) {
         // if level increase criterion was fulfilled, increase line counter
         if (KTouchConfig().m_upCorrectLimit <= m_session.correctness()*100 &&
             KTouchConfig().m_upSpeedLimit <= m_session.charSpeed())
@@ -155,7 +156,7 @@ void KTouchTrainer::enterPressed() {
     // Now let's increase the line
     ++m_line;
     if (m_line >= m_lecture->level(m_level).lineCount()) {
-        if (KTouchConfig().m_autoLevelChange) {
+        if (Prefs::autoLevelChange()) {
             // adjust level if limits exceeded
             if (KTouchConfig().m_upCorrectLimit<=m_session.correctness()*100 &&
                 KTouchConfig().m_upSpeedLimit<=m_session.charSpeed())
