@@ -1,0 +1,603 @@
+<KTouchLecture>
+ <Title>Dvorak (auto-generated)</Title>
+ <Comment>Trainingfile genereated Mon Apr  8 18:44:12 2002
+Program written by Håvard Frøiland
+</Comment>
+ <FontSuggestions>Courier 10 Pitch</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>uh</NewCharacters>
+   <Line>h uh h h h huh uh h uh u uh u uh u h h u u</Line>
+   <Line>huh u huh huh huh h huh uh huh huh h huh u</Line>
+   <Line>h u uh u u uh h uh h u h uh h uh uh h h huh</Line>
+   <Line>h u huh huh u h uh huh huh uh huh huh h h</Line>
+   <Line>h uh u uh h u u u huh uh h h u uh u u uh u</Line>
+   <Line>huh uh h h uh huh h uh u h u u h uh h uh h</Line>
+   <Line>u h uh huh h h huh h u uh u uh h uh uh huh</Line>
+   <Line>huh uh u uh huh h huh huh uh h h h u uh u</Line>
+   <Line>uh uh huh u huh huh u huh h huh u huh h huh</Line>
+   <Line>u huh huh h u u h u h huh huh u huh huh huh</Line>
+   <Line>uh h u h huh huh h huh h huh h huh h huh huh</Line>
+   <Line>h u huh huh uh h h uh u u uh u huh u h uh</Line>
+   <Line>h u h u u huh u h h h h h u h h u uh huh h</Line>
+   <Line>h huh u huh u huh u uh uh huh huh u huh u</Line>
+   <Line>u h uh u u huh uh u h uh uh h uh huh uh u</Line>
+   <Line>h huh u uh uh uh u huh u huh uh u u u uh huh</Line>
+   <Line>u u u uh u huh h u u uh u huh uh h u huh huh</Line>
+   <Line>uh u u u uh h uh uh huh h huh h uh huh uh</Line>
+   <Line>h h h u huh u uh h h h h huh h u uh h h h</Line>
+   <Line>uh u huh uh h uh uh h uh uh huh u u huh u</Line>
+   <Line>uh h u huh huh uh huh huh uh uh h h u h h</Line>
+   <Line>uh uh uh u u uh huh huh huh u uh uh uh huh</Line>
+   <Line>uh h u uh u h uh huh h u u huh u uh h uh huh</Line>
+   <Line>uh u u h uh h huh uh huh h h uh huh h u huh</Line>
+   <Line>uh h u huh uh h huh huh uh uh u h huh huh</Line>
+   <Line>huh uh h u uh huh u u u u uh uh h uh huh u</Line>
+   <Line>u u u huh h huh huh h huh uh huh h uh uh h</Line>
+   <Line>uh h u huh uh h u h uh huh huh u huh u h u</Line>
+   <Line>huh uh uh uh huh uh u huh u huh uh uh uh u</Line>
+   <Line>uh u u h u h u uh u huh u h u u u uh uh u</Line>
+  </Level>
+  <Level>
+   <NewCharacters>et</NewCharacters>
+   <Line>eh th teeth et et th teethe tee th the et</Line>
+   <Line>et tutu tutu tee t teethe thee th t tee tutu</Line>
+   <Line>t teethe teeth the eh th t teethe thee th</Line>
+   <Line>t the th e teethe e the e tut the e eh eh</Line>
+   <Line>tee tee e e tutu t tee tee eh eh eh tutu tee</Line>
+   <Line>tut teethe eh t t tee thee tee tee tee the</Line>
+   <Line>teeth the et th the eh the teeth tut the et</Line>
+   <Line>eh thee tee tut teeth thee teethe thee et</Line>
+   <Line>th the eh the tut tut e et et tee tee teethe</Line>
+   <Line>teethe tee e th tut tut t e e t eh thee the</Line>
+   <Line>teethe tut e tut t e teethe tut eh eh t tutu</Line>
+   <Line>eh e tutu thee the the tee teethe tut thee</Line>
+   <Line>tee t teethe tee t teeth thee teethe tee tee</Line>
+   <Line>th tee et the the teethe et thee et e tee</Line>
+   <Line>eh t e teethe tut tut eh tee e teeth tutu</Line>
+   <Line>t thee t th tut tutu e teeth t tee th e teethe</Line>
+   <Line>tutu teethe teethe tee teethe teeth teethe</Line>
+   <Line>e et teeth teeth tut tee t teeth tee et thee</Line>
+   <Line>tut tut tutu teethe t the teethe et tut eh</Line>
+   <Line>eh thee e et the teethe tee th tutu t tee</Line>
+   <Line>thee et eh eh th th t tutu eh tutu eh teethe</Line>
+   <Line>tee et teeth teeth teethe teeth tee et t e</Line>
+   <Line>et e tut tutu tee teethe tee tut eh e the</Line>
+   <Line>the th teethe tutu tee the et e thee teethe</Line>
+   <Line>the thee tutu th tee tut tutu th tutu teethe</Line>
+   <Line>eh tutu th et t t tee tutu th the t tutu tutu</Line>
+   <Line>et the t tee the eh e th thee thee et et et</Line>
+   <Line>tut tutu th eh the tut et teethe tut e et</Line>
+   <Line>teeth teethe th tee teeth e t teeth tut eh</Line>
+   <Line>eh et the th th e teeth eh e teeth tutu teethe</Line>
+  </Level>
+  <Level>
+   <NewCharacters>on</NewCharacters>
+   <Line>oh noun net note neon o nu noun n on nun not</Line>
+   <Line>out non one nun nth nett noun oho nett one</Line>
+   <Line>noun no nut onto one nee none o nu nett noon</Line>
+   <Line>ooh oho onto out neon none non noon one nett</Line>
+   <Line>out noun nu nu not no on neut neut nee neon</Line>
+   <Line>o noun oho nut nth not nee non oh nut o onto</Line>
+   <Line>nu oho oho noun oh oho net o on oh not nth</Line>
+   <Line>ooh nth ooh nut one noon net nut nett nett</Line>
+   <Line>neon nu on net neon one none noun no noun</Line>
+   <Line>out note neon none one o onto ooh nu o nett</Line>
+   <Line>none nut one on onto one nth oh oh nu noon</Line>
+   <Line>nut nth nu nu none neut no neon neon nun out</Line>
+   <Line>oho one noun nun on nth noun oh net oho oho</Line>
+   <Line>oho note nut neut no non no one out out none</Line>
+   <Line>onto note nut none nett net ooh ooh neon on</Line>
+   <Line>nett none neon noon no none oh one not neon</Line>
+   <Line>neut o nu noun on onto n nee one out oh no</Line>
+   <Line>not non neon oh nett one nun nun nee out one</Line>
+   <Line>not out nee noon note neon not out onto one</Line>
+   <Line>onto nun ooh non nun neut noun oh on n nee</Line>
+   <Line>none neon nun non on not nu oho nett non noun</Line>
+   <Line>nth n noun on nett oh none oho out nee net</Line>
+   <Line>n o noun noon neut no no noon non neon onto</Line>
+   <Line>nu nth neut out non out nth oh nut onto oh</Line>
+   <Line>one neut n out oho nun o no noun no on neon</Line>
+   <Line>o o noun oh n ooh noon neon none nth note</Line>
+   <Line>net noon net nun on none nee one o nth nth</Line>
+   <Line>non noon n oho o noun note oh none neon net</Line>
+   <Line>oho noon not no noon no neon nth nett o one</Line>
+   <Line>on note nee nett oh onto noun out on nee out</Line>
+  </Level>
+  <Level>
+   <NewCharacters>as</NewCharacters>
+   <Line>aunt ash soothest st sooth attenuate shouts</Line>
+   <Line>attest ant sanest astute season sanes seen</Line>
+   <Line>shoos senses stenos soot sasses senses souths</Line>
+   <Line>shootout senates settees statuses stoat ahas</Line>
+   <Line>sooth astutest ates autos shushes shunt statue</Line>
+   <Line>annotates attune sheet soothest sensuousness</Line>
+   <Line>auto souse stoutness sets shuts souths shouts</Line>
+   <Line>saute statues set sens stetson attune stet</Line>
+   <Line>stash sensuous stoat sea sen autos sautes</Line>
+   <Line>sheet sashes anon stones aunts snoots sot</Line>
+   <Line>sauna at soon shunts ah southeast soothes</Line>
+   <Line>sanes sanenesses autos stet sos sooths snouts</Line>
+   <Line>sonatas aha sanenesses shots shahs ante sanes</Line>
+   <Line>sue assess ante stouts assen snots sheets</Line>
+   <Line>asses shut state souths ahas auto suets sensuousness</Line>
+   <Line>sue sense attests shouts soothe souses sensuousnesses</Line>
+   <Line>seasons season sonata antennae sea ahas stoutnesses</Line>
+   <Line>statuses asset shutouts suntan statuette ante</Line>
+   <Line>anus sanenesses ashes shh stouts aunt soothes</Line>
+   <Line>son an sense anons ate stoutest ass suntan</Line>
+   <Line>saneness souses sautes seats shutouts stash</Line>
+   <Line>astutenesses snoots sautes sunsets anent soonest</Line>
+   <Line>atone steno shes sos astutest ah shunt shuns</Line>
+   <Line>auto sonatas snoots settee statutes stouts</Line>
+   <Line>sane s sheath sane stoutness setts southeast</Line>
+   <Line>sateens sons anon ashen anent seats stunt</Line>
+   <Line>sets stetsons seasons shot sots soothes attn</Line>
+   <Line>stoutness seen she sees soots sates sue statehouses</Line>
+   <Line>antennas assonant ates sensuousnesses sanenesses</Line>
+   <Line>astuteness sheath ashen ate sans snout snot</Line>
+  </Level>
+  <Level>
+   <NewCharacters>id</NewCharacters>
+   <Line>denseness intestate destined inst denies inane</Line>
+   <Line>detainee deadheads denseness insinuations</Line>
+   <Line>detain deadest ideation donutted detuned dist</Line>
+   <Line>dished its indeeds denudes disunited innuendos</Line>
+   <Line>instantaneousness death inane desist intuits</Line>
+   <Line>inset issuant dded donut insanities detune</Line>
+   <Line>intone insidious intentions iodinated detained</Line>
+   <Line>dissension dents dust dustinesses insist in</Line>
+   <Line>didoes intension danishes intentnesses innate</Line>
+   <Line>indentions initiation detainee deadness dentition</Line>
+   <Line>dottiest issued dadoes dissuaded disunites</Line>
+   <Line>dune denotation disunited dueness inned inundate</Line>
+   <Line>douse iodate daises inn doth instate danishes</Line>
+   <Line>intuited inion instantiate duh dissident indent</Line>
+   <Line>dinned donate intension intense iodides deaths</Line>
+   <Line>indents initiation dentins insaneness dottiest</Line>
+   <Line>dishes dinette insides dented disunite detained</Line>
+   <Line>ind duennas dunno desist desuetudes destinate</Line>
+   <Line>denotation disuses detonations deadens dadoed</Line>
+   <Line>denies duetted do indentation dentition ideate</Line>
+   <Line>iodination ind innuendo detonations diseases</Line>
+   <Line>id dentins dustinesses dustiest diastases</Line>
+   <Line>diathesis dished distentions destine douse</Line>
+   <Line>dandies destined denseness iodines insentient</Line>
+   <Line>dodos dotted diseased institutes dissuaded</Line>
+   <Line>donas donnishness destituteness duet danseuses</Line>
+   <Line>dandies detonation inned d instantiations</Line>
+   <Line>destine id insinuates intentnesses insanest</Line>
+   <Line>dusts instantness dueness iodines dainties</Line>
+   <Line>dandiest densest detonation datasets destitutions</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>phosphates pantheons patented pea pinto pipes</Line>
+   <Line>panned pods poshed paste passioned poshest</Line>
+   <Line>pons pusses poshest posted ponies possess</Line>
+   <Line>poisons pieties peens pennons pithiest pethidine</Line>
+   <Line>pated petite peened petunias pinheadedness</Line>
+   <Line>poinsettias piousnesses patientest pad pennis</Line>
+   <Line>passionateness pappiest pas pet posthaste</Line>
+   <Line>pops pout peed phone postdate pined pope poison</Line>
+   <Line>position pitapats pouts pushed pinions popped</Line>
+   <Line>passionates pupates pit punts piteousness</Line>
+   <Line>peso pied pithiest pensions pension puppet</Line>
+   <Line>pope potatoes pianists potions patsies pontoon</Line>
+   <Line>peasant pistons paints poets poss panpipes</Line>
+   <Line>pas postseason pose postpones phat putout</Line>
+   <Line>psst penitent pennons patented pendant pinon</Line>
+   <Line>pensioned pinatas peonies pod pitapat positions</Line>
+   <Line>puses pudenda pipes ponies pints pantsuits</Line>
+   <Line>pan puppet pappies peened pennis pus pope</Line>
+   <Line>ponded patted pups phosphate punishes postponed</Line>
+   <Line>penned potashes pipette passionates pinon</Line>
+   <Line>pains passionateness peptide peptidases pupation</Line>
+   <Line>pettiest pitas pistons pippin pantheists pa</Line>
+   <Line>paddies pest pot pied pop points phosphatase</Line>
+   <Line>pans postdate pussiest pinon pest posed paeans</Line>
+   <Line>petted pip pipped pone puts pinpoints puppet</Line>
+   <Line>pines photoed past pities pipette pine psi</Line>
+   <Line>pantheons paths push pinups punishes potshot</Line>
+   <Line>pantie pendants padded psi pa phosphide pinnate</Line>
+   <Line>patientest positioned postpaid pipettes putt</Line>
+   <Line>pendents popped poppet pod pappiest pinpointed</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>get gossips gadgets gneisses get gasped gaging</Line>
+   <Line>giddies gout gush gasps git gusto gusseting</Line>
+   <Line>g gene gutsed gag gating gnats guising gusting</Line>
+   <Line>getups genuinenesses giddied gnashing gunning</Line>
+   <Line>guideposts gateau getting guested giants gutsiest</Line>
+   <Line>gainsaid gadding gagging gouging gusseted</Line>
+   <Line>gaunts ghettos gateau gatehouse goodnesses</Line>
+   <Line>geese gotta gad gainsaid go goutiest gist</Line>
+   <Line>guanine gentians geest gunships gadded gunpoints</Line>
+   <Line>gunshot gauntnesses gashed geed geode gnash</Line>
+   <Line>gaudies ghosting gashing gaunting gad gush</Line>
+   <Line>goatees got gist gens gauss goddess gist guessing</Line>
+   <Line>gets geode guesting gonna gutsiest gussets</Line>
+   <Line>gens guineas geed gust gnashes gees genesis</Line>
+   <Line>gigs gestates gust gossiped gunships godsend</Line>
+   <Line>gashest godson gaudies ghosts guessing giantesses</Line>
+   <Line>going gnashing gustiness gaped ghosted genuinenesses</Line>
+   <Line>gust gentians guest gaits gags gushiest gigs</Line>
+   <Line>gateau gains guise going gutties gudgeon gestated</Line>
+   <Line>godsons gaped gaps gateau going gatehouse</Line>
+   <Line>good ghosts giddinesses ghettoing gases gestation</Line>
+   <Line>gestapos gouge gouges giddiness gashing gaudiest</Line>
+   <Line>gunpoint ghats guanine giddies goddess gashing</Line>
+   <Line>guanos gunpoints gunpoint godding ginning</Line>
+   <Line>god godsons gauss gating gutted gashest godhood</Line>
+   <Line>gannet ghosted geode gages gages gusting gusset</Line>
+   <Line>godhoods goto gags goos ghosts gestations</Line>
+   <Line>ginseng gustiest guanines gaudinesses godded</Line>
+   <Line>gassiest gets gentian gaging gnu gush gun</Line>
+   <Line>gnash gnu gage gusts gaits goatees gasping</Line>
+  </Level>
+  <Level>
+   <NewCharacters>.c</NewCharacters>
+   <Line>cacheting cascading contentions chip consented</Line>
+   <Line>cheetahs constituting chaps consensus continuations</Line>
+   <Line>cadet chant cations canoes chuted catenate</Line>
+   <Line>caging censused cheapen contusing coituses</Line>
+   <Line>china chicnesses chasten chianti condensates</Line>
+   <Line>cocaines continuous coconuts ceases catching</Line>
+   <Line>constitutes cushioned cunts cacophonist copied</Line>
+   <Line>cot coincident cessations consonant cupidities</Line>
+   <Line>chitchatting canasta congestions cheapening</Line>
+   <Line>consented cannoning ceded conies caucusing</Line>
+   <Line>cession condescended causations conceit congaed</Line>
+   <Line>cathodic coated chitchatted cutout continuations</Line>
+   <Line>chinas caddied captains cocas cannonaded coeducation</Line>
+   <Line>coping chat cooing consign cannoned codded</Line>
+   <Line>count chit constituent catchpennies cassias</Line>
+   <Line>censused canine chestiest cheap cease countenancing</Line>
+   <Line>conspectuses condescended coses casing coedits</Line>
+   <Line>cocoons conspicuousness constitution cassia</Line>
+   <Line>cc choosing cites cup copings consigned choosinesses</Line>
+   <Line>chain cheapish caucused cottoned chaoses chips</Line>
+   <Line>cocooning concedes cu cunning cheapen connotes</Line>
+   <Line>conduced continuousness concision cosinesses</Line>
+   <Line>condensations caucusing chinning canoes cued</Line>
+   <Line>chastening contused chihuahua casts couscous</Line>
+   <Line>cachet captaining canton cheap connections</Line>
+   <Line>contents copied coping concatenated conspicuousnesses</Line>
+   <Line>cadencing coined concessions coca cosines</Line>
+   <Line>casuist continua catnips cheapest condensing</Line>
+   <Line>concision cacophonies chestiest cant chide</Line>
+   <Line>caches cupping constituencies capacitances</Line>
+  </Level>
+  <Level>
+   <NewCharacters>,r</NewCharacters>
+   <Line>renegaded randiness reedinesses ruder rushers</Line>
+   <Line>recs rhesus reddishness riptides restated</Line>
+   <Line>rephrasing rephotographs radon rosetting rants</Line>
+   <Line>ripener rodeoed retrace roached rattiest recto</Line>
+   <Line>resonances radiated recreant randinesses riposting</Line>
+   <Line>read recoding randing routing rattier reappearing</Line>
+   <Line>radiance rodents ragouted rapier rechristened</Line>
+   <Line>reparteeing repeat rushers roe repossesses</Line>
+   <Line>reducing roper restarting reprehensions renaissances</Line>
+   <Line>raunchier reunions reacting ripcords reintroduction</Line>
+   <Line>ranges reship runtiness reroutes reds retrogrades</Line>
+   <Line>regraded reproducing raccoons reopening regenerate</Line>
+   <Line>recuse reaccessed redirected reproductions</Line>
+   <Line>recess radiated ripened ring reprocesses rottenest</Line>
+   <Line>rigging riping retain rhinoceroses retracted</Line>
+   <Line>radios repartitioner retrod readier reciprocities</Line>
+   <Line>riptides renaissance reattached reorientates</Line>
+   <Line>rustier rogue reticence rids recognitions</Line>
+   <Line>roadsigns radiotherapist reduct residents</Line>
+   <Line>reset recurses reputations racecourses regents</Line>
+   <Line>resurges raptness recreated raucousnesses</Line>
+   <Line>reintegrates reconsecration repairer restitutions</Line>
+   <Line>repartees routers reenact reprehension reappointed</Line>
+   <Line>recrudescences renditioning roots rotation</Line>
+   <Line>rattraps rerecords rites repartitioner ropers</Line>
+   <Line>reapportioned repost reiterating reintegrating</Line>
+   <Line>recoding restarter renouncer rashest ragout</Line>
+   <Line>reasserted renderer redundancies retest reconstructions</Line>
+   <Line>rectos renaissance rounds receptor rainiest</Line>
+   <Line>rained ruses repudiations renouncing riposted</Line>
+  </Level>
+  <Level>
+   <NewCharacters>'q</NewCharacters>
+   <Line>quash queens quartets queued quarantine's</Line>
+   <Line>quipping quart's quads quest quarantine's</Line>
+   <Line>quaintness quintic questioning queuing quart's</Line>
+   <Line>quencher queen q's quietude's quitter's quester</Line>
+   <Line>quadrant qt quietening quire quoined quitters</Line>
+   <Line>quietest quince quashes question quince's</Line>
+   <Line>queasinesses quasar's quietus quashes quire</Line>
+   <Line>quintet's quotient quietus quest quitters</Line>
+   <Line>quietness quadricepses quart's quests quahogs</Line>
+   <Line>quiche's questers queens queasier quadraphonic</Line>
+   <Line>quietest quotients queasinesses quotients</Line>
+   <Line>quid's quoit queers queuer's quadded quietening</Line>
+   <Line>quiche's quiets queuers quartet quarried quittances</Line>
+   <Line>quietnesses querier quadding queue quangos</Line>
+   <Line>quietude's questioners quietus's quince quad's</Line>
+   <Line>quenches quadratic's quiche quadric quietness's</Line>
+   <Line>quartics questionnaire's quart's quencher</Line>
+   <Line>quenchers queered quinines quotidians quoting</Line>
+   <Line>queernesses quietens quitters quarries quanta</Line>
+   <Line>quadrupeds quarter quires quiets quadruped's</Line>
+   <Line>quadraphonic quine quart's quieted quadrature</Line>
+   <Line>quotidians quiescentness quint's question</Line>
+   <Line>queasier quotient's quainter quitting quitters</Line>
+   <Line>quoter quasar quired quiescent quadratic quadratures</Line>
+   <Line>quid's quotations quotas queues quoined quotients</Line>
+   <Line>queasiness quietudes question's queernesses</Line>
+   <Line>quite quadratures quahog quieter's quitters</Line>
+   <Line>queers quern quited ques quonset quota's quarto's</Line>
+   <Line>quittances quiesced quirt's questing quenching</Line>
+   <Line>quarries q quoits quarterer quine quatrain's</Line>
+  </Level>
+  <Level>
+   <NewCharacters>l</NewCharacters>
+   <Line>logistical leaded lipreading lassies lignites</Line>
+   <Line>lesions landlord laddering lost laciest liquorice</Line>
+   <Line>laterals locution linguist's lichen licensee</Line>
+   <Line>legislator's lurcher's litigiousness's legislator</Line>
+   <Line>listeners learned lotter lighthouse lusted</Line>
+   <Line>lugsails lupus's lecherousness's lord's lettering's</Line>
+   <Line>lintels lustrous luting litterers league lender</Line>
+   <Line>letterhead's largess's leanness lulled localed</Line>
+   <Line>loggia lustinesses lupuses liaising loon legit</Line>
+   <Line>landau linting lutanist's loins lastings latches</Line>
+   <Line>logins lunatic lier's legion lousing litigators</Line>
+   <Line>learner lipase largenesses littered landslid</Line>
+   <Line>letters lurching learn ladder's luggages lodestones</Line>
+   <Line>lancet's leaned lidding looters ladder lagoon's</Line>
+   <Line>logical lulls logic's linted lard lanced lollipop's</Line>
+   <Line>lurcher's loneliness loonies lorn ludicrousness</Line>
+   <Line>lisp loudliest lunate lushed leggings lossier</Line>
+   <Line>lecture's logical litigant's larch ltd lunch</Line>
+   <Line>lecherousness legend's landscaping lecithins</Line>
+   <Line>loudened lorises lot lease's lastingness's</Line>
+   <Line>legislations login listing lashes loaning's</Line>
+   <Line>lustiness leanings leap laura's liaised lessors</Line>
+   <Line>loggia's legatee's loaning lacuna's lopsidedness</Line>
+   <Line>letterpresses literatures local latticed lutenist's</Line>
+   <Line>lusted lien lactational loincloths lilted</Line>
+   <Line>loophole's legalese's locus's lii littlenesses</Line>
+   <Line>lightning leniencies laggard's longhair lenser</Line>
+   <Line>lactating lodge lardier loaner landslid liquor's</Line>
+   <Line>loch's lariat lated loop's loiters lento league</Line>
+   <Line>licentiousness's lipid licorice lipid lean</Line>
+  </Level>
+  <Level>
+   <NewCharacters>kb</NewCharacters>
+   <Line>budgie barracking booting bee's books bookkeeper's</Line>
+   <Line>beddings been bursitis bluest biding bluings</Line>
+   <Line>brothel's bigger breeding knockabout's bedder</Line>
+   <Line>blinkering knuckleheads baptist's burglars</Line>
+   <Line>bingos billboard backscattered kibble's bing</Line>
+   <Line>blotted bloodline's k's knockings bikinied</Line>
+   <Line>bitser's bind beanstalk's bot knob brightest</Line>
+   <Line>borstal's ballers brouhahas birthstone bottlenecks</Line>
+   <Line>baccarats backstabber bookstore kindling's</Line>
+   <Line>backdating bloodsheds bookishness boodle begot</Line>
+   <Line>bingen balconies boutique bods bilker's belletrist's</Line>
+   <Line>blitheness's bonding boatclubs kestrels bittier</Line>
+   <Line>broadcasters knickers bricker blood bobolink</Line>
+   <Line>bass's braggarts bastion kitchener's bubbling</Line>
+   <Line>banking's kissing bidden blackcurrant bikini's</Line>
+   <Line>bedaubing balding kinkier baggage's keener's</Line>
+   <Line>boater's karat bilge's buccaneers bunco's</Line>
+   <Line>bill blindings breathier bespattering bi bestrides</Line>
+   <Line>boas bedridden blueing's bookkeeping's bulleting</Line>
+   <Line>bottlers kindness's barring basest bookers</Line>
+   <Line>bullhorn battlers bonneting kit beastliness</Line>
+   <Line>basins krills bitser bassoonist budgerigars</Line>
+   <Line>baggie bequests blunting butane busgirl bisects</Line>
+   <Line>kilting boll kibble's beguiles broaden bull</Line>
+   <Line>bundle bouldered boggling bibliographic braggart</Line>
+   <Line>blitheness's butch barracking bungee boatloads</Line>
+   <Line>kindness's bounteousness's bobbin bibbed killer's</Line>
+   <Line>billboards backpacked bluebottle's baobab</Line>
+   <Line>birthstones bookkeeper's bacon ballot breathless</Line>
+   <Line>boulder brassiness blockading blinks burgle</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>masthead's modulus mer misapplier's month</Line>
+   <Line>marmosets missioner mutilation's musher misconducted</Line>
+   <Line>meetinghouses mosquitoes maraca melodiousness</Line>
+   <Line>methanol mintage's mopers matter's malenesses</Line>
+   <Line>mister minister's mescal mud melter's mealiest</Line>
+   <Line>mightn't microcomputer's monographes multiplier</Line>
+   <Line>moccasin micromanaged miscalculation's maltreated</Line>
+   <Line>mesomorph muscatels maggotier metering motionlessness</Line>
+   <Line>menial murk museum's ministrant metronome</Line>
+   <Line>miring mesquites mutilating moistener miking</Line>
+   <Line>maltier morned mundanes moulted mistrial's</Line>
+   <Line>muslin's marriages mealing manipulatable maidens</Line>
+   <Line>malocclusions marshals motliest morphemes</Line>
+   <Line>marmot's megabuck mountainous mulch microelectronics</Line>
+   <Line>manipulatable mensches mutterers missioners</Line>
+   <Line>mistaken merchantman misaddress minings mannikin's</Line>
+   <Line>moonstone mandarin's moulders masting mores</Line>
+   <Line>mountaintop microdot mourned macaque modulator</Line>
+   <Line>mischanced monitors mete miniaturing mulled</Line>
+   <Line>markkaa mopping mudguard's maillot moldboards</Line>
+   <Line>mucilage manliness microscopic multicomputer's</Line>
+   <Line>milts motor machinations muser's mousiness</Line>
+   <Line>macadams monorails mishitting menaced masochisms</Line>
+   <Line>machinate management's maintains mascara machismo</Line>
+   <Line>maligns merchandising masonic millimeter monopole</Line>
+   <Line>mikado mids misleading maraschino mos manuscript</Line>
+   <Line>membranes mosque's monarchs manatee's moistnesses</Line>
+   <Line>morsel musked marinara's murmurings microscopes</Line>
+   <Line>minuend's makeups midterm mist mildest microelectronics's</Line>
+   <Line>melodic manures municipals micromanages mutate</Line>
+  </Level>
+  <Level>
+   <NewCharacters>jw</NewCharacters>
+   <Line>jaunting wattage's workmanship's woolgatherer</Line>
+   <Line>waitpeople winegrower's wheatens wildernesses</Line>
+   <Line>wooden wrathed whereon wealth jaunt jam's</Line>
+   <Line>joined jollied watchtowers winsomer wassail's</Line>
+   <Line>widths weighted junctures windbreaker jackboot</Line>
+   <Line>woning wantoning wiggliest wrangles jingoism</Line>
+   <Line>windbreaker windmilled jangled wrongnesses</Line>
+   <Line>wains ware's watercoloring workhorses wariest</Line>
+   <Line>wackes juju watertightness wildcatter jujitsu</Line>
+   <Line>winged worldlinesses wino worsted's jock wagons</Line>
+   <Line>wingspans wingtips wannabee westing's jubilating</Line>
+   <Line>work's woodcock's jolliness wherewith whimper</Line>
+   <Line>weaner's woodcocks whispered who wagtail's</Line>
+   <Line>wheat wholesaled whopper's words wooden wedgier</Line>
+   <Line>whitest jettisoning whisted weakeners jingoistic</Line>
+   <Line>wobble jabberer's jennet jacket's whig waggled</Line>
+   <Line>witches whelk's wrinkled jauntiness writer</Line>
+   <Line>whitebait wheres jackass jun joisted jujubes</Line>
+   <Line>wallowed warmers wold jihad's wintriest withholdings</Line>
+   <Line>weeping walnut weirdest whorehouse workbooks</Line>
+   <Line>wordless workstation wrestlings jerkiness</Line>
+   <Line>watercourse's jawbreaker withstood warinesses</Line>
+   <Line>wiggled wiping weighting's jags wardrobes</Line>
+   <Line>jointer's wriggliest widow jab windchill junk</Line>
+   <Line>jerkwaters weaner jar wooled woodland's wisdom's</Line>
+   <Line>joust whine jaunt jugs withstands workout</Line>
+   <Line>wonkier jape's jackpots website jewel's woodside</Line>
+   <Line>who'd whisperer with woning witlessness wonts</Line>
+   <Line>wills wildest wiretapper windwards jaggedest</Line>
+   <Line>whisker's wait jinrikisha winos johns willingness's</Line>
+  </Level>
+  <Level>
+   <NewCharacters>qv</NewCharacters>
+   <Line>quakes volubilities quester's valetudinarianism</Line>
+   <Line>questionableness varicoses virago version</Line>
+   <Line>valuation's victualer's vis's queller's veined</Line>
+   <Line>viaduct's violins vaccinia varnisher's queuer's</Line>
+   <Line>vaporise vignettes ventilates victor's quickness</Line>
+   <Line>vapor vb venter's valiantness quashed quadrillion's</Line>
+   <Line>vengeance validated verging verged vitriol</Line>
+   <Line>vellum viaducts viper quisling's veronica</Line>
+   <Line>vests quitclaims quadriplegia vowelled quelling</Line>
+   <Line>queered quiesce voucher's quantiles viscus's</Line>
+   <Line>quadripartition vendibles verve's vector's</Line>
+   <Line>vapored vote's visitor's vintager's vegetations</Line>
+   <Line>vitriolic quaintness's vibraharp's value veiner</Line>
+   <Line>veto vestige's virgin vaccinated vocabularies</Line>
+   <Line>quadrants quashes vouched vets vegan's vanilla</Line>
+   <Line>qualm vectorial quickened vane vanquished</Line>
+   <Line>velars vanquish viticultures vended vitrine</Line>
+   <Line>verdigrising vagabonding vagabond's veers</Line>
+   <Line>quad's vernaculars voiceband quipped quadruples</Line>
+   <Line>vault's voltage vertigo vitrine's quipping</Line>
+   <Line>vegetarian's quencher quell villainousness</Line>
+   <Line>virus's vegans verdict vest's vainest queues</Line>
+   <Line>viewpoints variegations verisimilitudes vaporer</Line>
+   <Line>vented vacated viscera quartering's visoring</Line>
+   <Line>vignette quicksilvered quail vagueing voltmeter's</Line>
+   <Line>venison's quipped quicken quilling vegetative</Line>
+   <Line>questionnaire's vised viking variegations</Line>
+   <Line>veldt's quicksilvering quilting versus quoter's</Line>
+   <Line>quicksand's virulence vaudeville valors vibes</Line>
+   <Line>vertebrate virulence's vesture vacation vacuumed</Line>
+  </Level>
+  <Level>
+   <NewCharacters>;z</NewCharacters>
+   <Line>zigzagging zipper's zoos zigamorph zebra zebra's</Line>
+   <Line>zombie zoned zealots zone's zeal's zwieback's</Line>
+   <Line>zwieback's zeals zed's zealot zorches zeppelin</Line>
+   <Line>zwiebacks zonal zippiest zoner zilch zebu's</Line>
+   <Line>zonal zeroed zorch zilch zippiest zenith zigged</Line>
+   <Line>zippiest zed's zeta zone zebra's zombi's zigzagging</Line>
+   <Line>zinnias zip zone's zircon zeros zoned zippiest</Line>
+   <Line>zing's zinnias zealotries zoned zest's zookeeper</Line>
+   <Line>zinging zounds zorched zodiacal zwiebacks</Line>
+   <Line>zeitgeists zoner zucchini's zonings zaniness's</Line>
+   <Line>zaps zippier zucchini's zippered zig zoo zirconiums</Line>
+   <Line>zed zirconium's zone's zed's zirconiums zoological</Line>
+   <Line>zither's zillions zeroing's zero's zillion's</Line>
+   <Line>zithers zealot zucchinis zeppelin zillions</Line>
+   <Line>zaniness's zested zone zero's zoologist zoner</Line>
+   <Line>zeros zealot's zagging zealousness zigged</Line>
+   <Line>zincs zucchini's zodiac zapped zonked zeta's</Line>
+   <Line>zinger zeugma's zero zucchini's zealotries</Line>
+   <Line>zeniths zippiest zillion zagging zealot's</Line>
+   <Line>zoologist zodiacs zucchinis zillion zeitgeist</Line>
+   <Line>zonal zanies zombi's zealot zillion's zip's</Line>
+   <Line>zags zebra zounds zebu zebu's zenned zippers</Line>
+   <Line>zest zen z zippers zucchinis zero zirconium's</Line>
+   <Line>zinc's zoologist's zoned zodiacs zestiest</Line>
+   <Line>zigamorph zoologies zeppelin's zoner zippers</Line>
+   <Line>zone zinger zebus z zigzags zinnia zip's zoning</Line>
+   <Line>zeitgeists zanied zeppelin's zombi's zeitgeists</Line>
+   <Line>zigzag's zodiacal zesting zigzag's zealotries</Line>
+   <Line>zirconiums zap zips zombie's zucchinis zenning</Line>
+   <Line>zooms zoological zounds zenned zoned zealotries</Line>
+  </Level>
+  <Level>
+   <NewCharacters>yf</NewCharacters>
+   <Line>flurries frailer footsteps flinting forthright</Line>
+   <Line>fluoroscope foolishly fedora's frolicker flutings</Line>
+   <Line>fraud's fortnights frigate yak fads function's</Line>
+   <Line>frogman feminist's fibrin firepower fulfill</Line>
+   <Line>flaccidities forswearing faulty firebrick</Line>
+   <Line>freak's fearsome formals fascinations yowed</Line>
+   <Line>fealty's fraternization's flagstones fawningly</Line>
+   <Line>filthiest fiends funking fairway's fieldworks</Line>
+   <Line>festoon's yelps fortieth fleetingnesses furnishers</Line>
+   <Line>factored fob fleeted fancies fiber foregrounding</Line>
+   <Line>favorite's forgivingly folksy frost's farsightedness</Line>
+   <Line>furtiveness's finickiness faction facade's</Line>
+   <Line>fructose flout foundations flayers flint's</Line>
+   <Line>faultlessness finishes falsie farmings frosteds</Line>
+   <Line>farrow's fellowman fabricator's fritterer</Line>
+   <Line>foments foreshadowed firefight fovea's flipped</Line>
+   <Line>firelights forcing flounciest flanges fogged</Line>
+   <Line>forerunners forevermore fliers flyleaf facilitating</Line>
+   <Line>filtered forecastles faining farthings flippers</Line>
+   <Line>faces fatuity flipper's flabby franchise felicities</Line>
+   <Line>forfeitures fusspot's flat's fazing flunk</Line>
+   <Line>freckled fizzer fiestas fireman's femaleness</Line>
+   <Line>firewater's fluoridate footstep forewarn fishermen's</Line>
+   <Line>fourthly fretfulness's felicitation friggings</Line>
+   <Line>fountainheads fouler framer's forging flimsily</Line>
+   <Line>fornications falloffs flamboyants fops felicitation</Line>
+   <Line>fandango's flashcube fudging figures foretasting</Line>
+   <Line>futilely fatteners frying fontanels fascinated</Line>
+   <Line>fumigant's fibrin footwear's furtiveness's</Line>
+   <Line>fluoresce flimflam's yea floury flyweight's</Line>
+  </Level>
+  <Level>
+   <NewCharacters>yf</NewCharacters>
+   <Line>facade's footrest farmhand falsity's ferny</Line>
+   <Line>finials forethoughts flossier forwardness</Line>
+   <Line>furiousness foraged foddering flank's youthfully</Line>
+   <Line>flaws fatigue furlong's firebrick flyway foggiest</Line>
+   <Line>foreordained fabulists ferrous fuzzball frets</Line>
+   <Line>formate's yarning flypapers fink firehouses</Line>
+   <Line>fancywork's feeding footprints faring frequency's</Line>
+   <Line>forequarter firebrick's fussbudget faintly</Line>
+   <Line>foo faddish firms friendlinesses flowcharting</Line>
+   <Line>falsifies foreleg's falconer's fundraisers</Line>
+   <Line>ferrule franticness facings form's flat's</Line>
+   <Line>feminine finalists formatting falsification</Line>
+   <Line>freeloaded flouters furtive flack's forced</Line>
+   <Line>foreleg foil flumed frenetic fields faith's</Line>
+   <Line>fumigating farseeing finner farewelling figurativeness's</Line>
+   <Line>frightened fretfulness's fomentation's ferrets</Line>
+   <Line>faces fainter fustiest fibrils yellows fluorite</Line>
+   <Line>fandangos frangibilities farm's fruitlessness's</Line>
+   <Line>filed freebooters fen fawner factory flameproofed</Line>
+   <Line>fez flinging fatuities fascists flamenco flirted</Line>
+   <Line>feedlot's foamer finally frays fable firmer</Line>
+   <Line>firearms footstool's furbisher's floridness</Line>
+   <Line>flue flans fib faultfinder ferules yaw fascicles</Line>
+   <Line>forswearing freezing fluents fecundability</Line>
+   <Line>farsighted frontrunner's fairgoers fortuity</Line>
+   <Line>favors fervidness's fancier fleawort's flags</Line>
+   <Line>funkier friarly filterers falsetto's frozenly</Line>
+   <Line>yodeler fit's faraway friskily faulted farads</Line>
+   <Line>yarmulke's fatso furiousness furring fitting</Line>
+   <Line>florets fishnet's fuddle film falsetto fistula</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

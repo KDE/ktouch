@@ -1,0 +1,504 @@
+<KTouchLecture>
+ <Title>Italien (auto-generated)</Title>
+ <Comment>KTouch training file generated Tue Jul 27 13:27:52 2004
+Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.
+</Comment>
+ <FontSuggestions>Courier 10 Pitch</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>jf</NewCharacters>
+   <Line>f ffj jf jf jjfj fjjj jfj jf f ff jjfj jjf jfjj jfjj jf jfjj ffj</Line>
+   <Line>fjjf jf fj j ff fj jjf jfjj fjf fjf ff ff fjjj j jj fj ff jjjj jf</Line>
+   <Line>f jf jj ff ffj fj f fjf ff f jjjj fj j ff j ff ffj jjjj fj jfj</Line>
+   <Line>jjjj jjfj f j ffj fjjj jjfj jjf jjfj f jj ff jjf jj ff jfj f f ff</Line>
+   <Line>f fjff j jf fj jfj jf ff fj jjfj fj jj fjff fjjf jj fj j jjf jj</Line>
+   <Line>ff jj f jfjj jjjj jjfj fjjf jjfj jf jjf fj fj fjf jf jfjj ff fjjj</Line>
+   <Line>fj jf jfjj ff jf jjfj jj fjjj jj jfj ff fj fjf jj fj ffj j j ffj</Line>
+   <Line>fj fjjj f ff fjjj fjjj f jfjj jfjj fjff jfjj ff ffj jjf jjjj jf</Line>
+   <Line>fjjf jjjj fjf jjfj jf ffj jjjj j ff jfjj j jj jf jf f jf jfj fjjj</Line>
+   <Line>fj fjf j j jjfj jjfj jf ffj jjfj jj fjjj jfj fj ff jfjj jjfj fjff</Line>
+   <Line>ff j ffj jjfj fj j jjjj jfjj j j ff fj ff jfjj fj ffj fjjf ff ff</Line>
+   <Line>f jfjj jfjj jf fjjj jfjj jf jjjj f jf jj fjf f jfjj fjjj fjjj</Line>
+   <Line>jjfj jjfj fjjf fjjj fj f jfjj fjjf f jjjj fjf jjfj jj fj j j jjf</Line>
+   <Line>jjfj fjjf ffj ffj fj fjff jjjj jjjj fj f fjjf fjjj jfjj ff ff fjjf</Line>
+   <Line>fj jjjj jf j j jfjj jf fjjj fjjf fj jfjj jfjj j ff fj jf jjjj ff</Line>
+   <Line>ff fj j fjjj fj jj ff jfjj jjf fj jjfj f j jf jf ff ff fjjj jfj</Line>
+   <Line>jf fj jfj j ff fjff jf jf j j ff j ff j fj j fjf jjf jjfj fj fjjf</Line>
+   <Line>jfj fj jf fj ff fjjj fjf jf jf jj jjfj jfj f j ff jfjj jjf ff jjfj</Line>
+   <Line>fjjf ff ff fj fj jj j jf ff j j fj fj ff f jj j jfjj fj j fj jjfj</Line>
+   <Line>jf f jfjj jjjj ff jj j jf fj jf j fj fjjj jfjj fj jjfj j j f ff</Line>
+   <Line>j f jjfj ff fjjf jf jjf jfj fjff ff fjf jfjj jjfj jjf ff jjfj</Line>
+   <Line>jjjj j fj fjf jjfj ff jf jf jf jfjj fjff j fj f jf fj f jj ff jj</Line>
+   <Line>jfj jjfj jj jjjj ff fjf j f fjjj j fj jjjj fjjf jjjj fjjf j j ff</Line>
+   <Line>jfj jjfj ff fjff f fj fjjf jj j j fjff jf jj fjjf jfjj fjff fj j</Line>
+   <Line>ff fj jjjj jfjj j fj fjjf jfjj j jj fjf jjjj j jjf j jfjj ffj jfjj</Line>
+   <Line>jjfj j fj fjjj jf fjf jjfj jfjj fjf ff ff jjjj f fjjf fjf fj jj j</Line>
+   <Line>ff jfj ff jjfj jj j jf jj jfjj ff jjjj fjf ffj j fjf fjf jjjj ffj</Line>
+   <Line>ff ffj jjjj ff jjfj fj j jf f f fjjf ffj j fj jjfj fj ff jfjj fj</Line>
+   <Line>fj j jj jj f ff ff ff ff jf f jjfj fjjj fjjf j ffj jj jjjj ff ff</Line>
+   <Line>fjjj ff ffj jj fjjj fjf jf ff jf jfjj ff jf jfjj j jjjj jjf ff fj</Line>
+  </Level>
+  <Level>
+   <NewCharacters>kd</NewCharacters>
+   <Line>djj jjkf ddj k djk ddj d dj jd dj kfdff kkjk kdkd fk fk d kj jk</Line>
+   <Line>kfdff dk jk fk k dk fd d fd jfjk d dk fk jd jk jk fk kfdff djk df</Line>
+   <Line>fk jfjk d dj jk fk dd dk kdkd dk dd fk jfjk jk kdkd kj dj d fd</Line>
+   <Line>k kd kj d kdkd k k dk jd df dd jd dd jd djk kd dk df jd df jk</Line>
+   <Line>fk ddj jd jk jd ddj dk dd ddj djk dk kdkd kkjk fk djj fd kd dk</Line>
+   <Line>d fd fd kk kd kd d dd dj d kfdj dk k kfdj kfdj dk fk dj df df</Line>
+   <Line>jfjk jfjk kfdff ddj df dk dk d ddj fd dd dj d df d fk dj dd jk df</Line>
+   <Line>ddj df jd kj jd d dk dj jfjk dd d jk fk fk fk kd df djj jd kfdj</Line>
+   <Line>jk d dj df kj df djj fk kfdj kkjk k jfjk k df kfdff jfjk d kj dk</Line>
+   <Line>kk kdkd dj fd dd d kfdff df dd df dj jd jd df kd k ddj fd jd jjkf</Line>
+   <Line>jd kkjk kdkd k d jd df kd dj d kkjk kfdff kkjk kfdj dd kfdff d</Line>
+   <Line>k jd djk df jfjk dd kk dj dj dk jfjk kfdff kdkd jd ddj df d dk</Line>
+   <Line>kfdj dj kj df dj kfdj jjkf kfdj d d k kj kdkd jfjk kfdff jd fk jjkf</Line>
+   <Line>dk d d kd jd d d jfjk d fk kj fd fk dd jfjk d kj dj fk dk dj djk</Line>
+   <Line>kfdj fk kdkd df kkjk k kj d dj jfjk d dj fk jk d jjkf djj dk jd kfdff</Line>
+   <Line>jjkf k kdkd d kd fk fk d d fk k dd djj kd df fk k fk dd jk dk ddj</Line>
+   <Line>kkjk kfdj d fd jjkf d fk ddj jjkf k jd d kd djj kdkd kfdff d dj jd</Line>
+   <Line>kfdj kfdff dk d kfdff kj df djj dj fk d kdkd d dk d dk k dk jd df</Line>
+   <Line>kdkd kdkd fk fk jjkf djk dj kfdff kfdff kfdj ddj kj dd fd djk dj</Line>
+   <Line>kj fd kdkd dd kfdj jd jfjk kfdj kd dd kfdj djk kdkd dd djj kfdff</Line>
+   <Line>dj df jd df fk df df d fk df fd kfdj kfdff kfdff df dd d d d jd</Line>
+   <Line>dd dd djk kfdj dk d jjkf fd dd kdkd df dk kfdj dk dj kkjk kkjk</Line>
+   <Line>jfjk kj kd fd kj jjkf kd fk dk dd kfdff jfjk d kd d jjkf djj kfdj</Line>
+   <Line>jd dj dk kkjk jd d df df djk df jk dk d djj djj df djk djk d djj</Line>
+   <Line>kfdff d kj df d dk d d djk dj fk fk djj kj df kfdff dd k dj kfdff</Line>
+   <Line>ddj df d kfdj kj jjkf d dj jfjk kd d kkjk fd kfdj jd k d df d kfdff</Line>
+   <Line>fk djj fd dk d dk dd jd djj d d fk kj df d d kk djj dj ddj dk jd</Line>
+   <Line>ddj d df fk dk kkjk jfjk kfdff jd kfdj jk fd d kdkd d d kdkd d dk</Line>
+   <Line>df kd kkjk dj djj jjkf jk jd fk jd dj jjkf dk ddj fk d jjkf dj</Line>
+   <Line>djk dk kj d ddj fk kfdff djj kkjk kfdff djj jd fd dk df kfdff dk</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ls</NewCharacters>
+   <Line>jkll dsk dsk sfl lfsj ss sfl fjl fjsf sl sfl sllld ls ls skfds ksf</Line>
+   <Line>ls jsd kl sfj js l kl sllld sl sl js sjll js lfsj l lfsj sfl dsk</Line>
+   <Line>ss l fsl sjll sflk fsl jsd ksf sl fjsf l sl sfl sflk l sl dsk sjll</Line>
+   <Line>l l fjsf ls sl ldd sfl sl sfl sl skfds l jlk ldd ls l jsd ss jsd</Line>
+   <Line>jlk lfsj ss ldd sfj ls l ss ls l ss ls ss sfl fjl js sfl sjll sl</Line>
+   <Line>sl js sjll sllld sfj ss jlk sfj ls lfsj ldd ss fjsf sllld kl l</Line>
+   <Line>l sfj jsd sl fjsf ls sjll sl lfsj fsl jkll jlk sflk sf l sl ldd</Line>
+   <Line>sl l ls fjsf l sfl fjsf sllld ls sfl ldd sjll ss lfsj sl l fsl</Line>
+   <Line>ss dsk jsd lfsj sjll l sllld sfl kl dsk js jlk jsd dsk sfl ldd</Line>
+   <Line>lfsj ss jlk l skfds ksf sl ls sfl dsk fjsf fjsf l sfl fsl sfl sf</Line>
+   <Line>ss fjsf jsd jlk fjl sllld jlk sfj sfj sfl l sflk sfl l ls l dsk</Line>
+   <Line>jlk skfds sfl sl sfl sl sfj jlk l kl kl jsd fjl skfds sjll fjl skfds</Line>
+   <Line>js sl l skfds sllld kl l jsd sfl sllld sl sf fjsf js sl sl dsk</Line>
+   <Line>kl kl kl dsk sflk kl l sfj sl l fjl jsd ss fjsf l ss dsk fsl sl</Line>
+   <Line>jlk dsk sl js l l sl kl sf ksf sllld dsk l js ksf sfj sflk l sl</Line>
+   <Line>ldd jkll kl sflk jlk ls ldd lfsj sllld sl sfj ls ss sfl sjll lfsj</Line>
+   <Line>ls jlk ss jlk l l jsd kl sl l lfsj ksf l ls sf ss sfl js fjl sf</Line>
+   <Line>sflk lfsj sfl jlk l sl jlk sflk fsl dsk sl ls fsl fsl l js fjsf kl</Line>
+   <Line>sfj ss sfl l fjl fsl jkll kl sf sjll sflk dsk fjl sllld l ls ss</Line>
+   <Line>sfj sfj sf l sflk ss sfl fjl l ls ksf kl l skfds ksf sl l fsl sfl</Line>
+   <Line>l lfsj l sl sjll sflk l js ls sjll sfl kl jsd js ls fjsf dsk sl</Line>
+   <Line>fjl ksf jlk sjll ss l ls js jlk skfds sflk jlk jsd sl sjll fjsf</Line>
+   <Line>lfsj sfj js sfj sl l jlk ldd sfl kl ss sfl sllld sl sf dsk ls fsl</Line>
+   <Line>ss ss kl fjl ls fsl dsk l ss jlk kl sf dsk ksf ss skfds jkll fjl</Line>
+   <Line>sl ls sllld jsd kl js ss sl kl sjll ss jsd fsl sfj ss kl l ss fjsf</Line>
+   <Line>fsl dsk ksf sfl fjsf ss sfj l kl fjl ss ksf ls l sfl l sfl sfl l</Line>
+   <Line>sflk sjll skfds ksf sjll jlk ls sllld sl l sfl l sjll ss jlk sf jsd</Line>
+   <Line>sl l dsk l sfj jkll js lfsj ls sllld sfl jsd sfl skfds ksf sfl</Line>
+   <Line>sjll sllld ls ldd jsd sflk jsd sl lfsj fsl kl ls fsl lfsj ldd fsl</Line>
+   <Line>ss sf sfl kl sfj jsd fsl ls fjsf fjsf sfl ldd l sfl l ss sf ls</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ca</NewCharacters>
+   <Line>cf alla casa salassa cala jc falla dalla llcl lacca falda scalda</Line>
+   <Line>alla dalla alfa dafjs cassa jc scalda calda jc sala scassa sacca</Line>
+   <Line>scada calda jc falla aaaad cassa alfa jc sala scala salsa alfa falsa</Line>
+   <Line>salassa alfa sala accasa kc alla dafjs alfa scala calda accasa dall</Line>
+   <Line>cala salda dafjs accasa aaaad salsa alfa alfa casa dalla cala alfa</Line>
+   <Line>aaaad dalla kc calda aaaad lacca alfa falda sacca falla dall alfa</Line>
+   <Line>scassa salassa salda salda accada falsa scala scala jc alfa falda sala</Line>
+   <Line>falsa salassa scada jc calda alla falla falla kc salda accasa accada</Line>
+   <Line>llcl calda llcl lacca alla sacca llcl scassa falla falsa jc calda</Line>
+   <Line>sala scalda salassa casa cf jc sacca sacca lacca jc llcl cf accada</Line>
+   <Line>scalda sala cala accada cassa kc alfa accada salsa sala scalda dall</Line>
+   <Line>scalda scassa cassa kc scada cassa dall dafjs alfa alfa cala salda</Line>
+   <Line>cf cf cassa sacca alfa llcl cala falda calda falda accasa sala</Line>
+   <Line>cala scala llcl dafjs scassa sacca dall scalda accada cf calda alla</Line>
+   <Line>dafjs sala salsa dalla scada falda scala aaaad aaaad scala lacca alla</Line>
+   <Line>cala jc falsa falla dafjs dall salda dalla salassa aaaad aaaad salda</Line>
+   <Line>scada sacca salassa scala scalda lacca salda salsa scada cassa salda</Line>
+   <Line>sacca salassa sala lacca falsa alfa lacca scala salassa scala sala</Line>
+   <Line>lacca alfa scala falla scala kc falda salda salsa cassa scassa accasa</Line>
+   <Line>kc calda dalla cassa salsa llcl dafjs sala accada sala salsa sala</Line>
+   <Line>lacca accasa jc sala cala scassa jc sacca sala dall aaaad sacca dafjs</Line>
+   <Line>salda falla scassa salda alfa falsa alfa cf salsa accada salda sacca</Line>
+   <Line>cassa kc scassa falsa scala accada sacca alla falla cala falsa scassa</Line>
+   <Line>accasa scada calda casa dalla sacca scala sala scada salsa salassa</Line>
+   <Line>kc scalda dalla salassa scada lacca cala accada alfa llcl llcl</Line>
+   <Line>falla dall falda sala jc falsa sala lacca aaaad sala accada calda</Line>
+   <Line>scassa jc llcl sacca dalla accada accasa sala salsa scalda lacca llcl</Line>
+   <Line>accada scada sala falda accada alfa falda sala cala jc jc kc sala dafjs</Line>
+   <Line>cassa falla cala llcl cassa sala falsa llcl jc alfa lacca falsa cala</Line>
+   <Line>dalla cala dall accada dalla alla casa aaaad dalla falda dall dall</Line>
+  </Level>
+  <Level>
+   <NewCharacters>nt</NewCharacters>
+   <Line>sassata scaldata adatta fata scattata calata attaccata fata adatta allatta</Line>
+   <Line>catasta datata attaccata cantata saltata salta scassata attaccata andata</Line>
+   <Line>stana scalata danna cascata scattata adattata cascata staffa sfatta</Line>
+   <Line>andata casta datata sanata salta scaldata annata salata tasta tanta</Line>
+   <Line>attacca dannata attacca nana scassata anca tanta allatta nata tanta</Line>
+   <Line>alta lana alta tasca tassa lana catasta adatta stanca tana data affanna</Line>
+   <Line>allattata lana canta stana scalata sassata salassata fatta nana scassata</Line>
+   <Line>alta data scatta canna scatta tassa calata staccata nafta salata</Line>
+   <Line>stalla alta salta tassata cantata allattata cantata latta alta stacca</Line>
+   <Line>sfatta canna tanta stanca tana sana casta stana scassata sana landa</Line>
+   <Line>datata sfatta staffa sanata stacca canta affanna staffa stata dannata</Line>
+   <Line>stacca tana scattata tanta anca allattata andata stacca allatta calata</Line>
+   <Line>dannata stacca casta dannata fata nafta stalla adattata allattata salassata</Line>
+   <Line>allatta stata andata santa salata tana canna sassata nafta sfatta scaldata</Line>
+   <Line>alta sana fata stanata stata sfatta nafta cantata datata nata adatta</Line>
+   <Line>sfatta cascata stancata sana datata nafta nafta adatta scassata stacca</Line>
+   <Line>sanata catasta tastata stacca stalla landa adatta danna scatta sfatta</Line>
+   <Line>alta sana data salassata data latta andata adatta scatta tasca anca</Line>
+   <Line>landa scalata salassata tassata nana stanata tassata canta tasca lana</Line>
+   <Line>salata stalla affanna scattata nana adattata adattata stata annata</Line>
+   <Line>staffa tastata andata tasta tastata saltata scaldata canta lana fatta</Line>
+   <Line>stacca attaccata tana catasta stanca calata saldata data affannata</Line>
+   <Line>scassata salata santa data sana stanata tastata saltata nafta nafta tassa</Line>
+   <Line>landa latta stancata affannata tassata tassata tasta danna scattata</Line>
+   <Line>tastata fata staccata stata scattata latta attaccata andata andata allatta</Line>
+   <Line>adatta staffa cantata casta annata stata stanca staffa fata danna nafta</Line>
+   <Line>tanta sassata staffa nafta datata canna staffa staffa nana salta andata</Line>
+   <Line>scaldata sassata dannata fata canta nana saldata adattata sfatta stalla</Line>
+   <Line>anca tastata stalla staccata stana staffa salata cantata affannata</Line>
+   <Line>attaccata salta adatta fata landa casta scassata scalata tastata anca</Line>
+  </Level>
+  <Level>
+   <NewCharacters>iv</NewCharacters>
+   <Line>affacciatici incanta statista incivili affaticatisi falciavi cavalla avvisi</Line>
+   <Line>lanciava sindacati cinici dici stancassi statisti accasassi scassavi</Line>
+   <Line>nidi inviassi affidava distaccata incassati scalati asina intasai</Line>
+   <Line>lavai lavandai inviavi scandita assassina vaccini valida faticati</Line>
+   <Line>taciti disfatta fasciassi scavavi adattasti assillassi svanivi avvisava</Line>
+   <Line>assassinai slacciassi distati svitava avida vana allattava accasasti stancassi</Line>
+   <Line>fasciavi affannassi tintinnii tasti annidata svisata dici salassavi lanci</Line>
+   <Line>assassini accaniti aliti dilaniava vantava cacciasti cacci affiliata latina</Line>
+   <Line>stiva vini fissi falciava stivavi nativi laici avallava fissavi accasciata</Line>
+   <Line>scavalcai scansia visti nati avvicinatici faticati avvicini avasti nativi</Line>
+   <Line>avvistata infatti adattati scalini divini scaffali incantata datai vantati</Line>
+   <Line>salti citati inciti invitava fantastici affaticava asili tacciassi</Line>
+   <Line>stivava saldi lividi falciati lava svanita fatali visitati affannati</Line>
+   <Line>affittai cacciati cattiva avvitava dilatasti vini cantassi visitai visiva</Line>
+   <Line>allacciava affini additativi lasciavi accanita ansia avvisatici vili datai</Line>
+   <Line>slacciava inviata indica lasciava finissi saldava svii saltai scavavi</Line>
+   <Line>classici salati affiatativi distilli accaniva dannai affacciatici insalata</Line>
+   <Line>vacilli svii classica svisasti lanciavi installai distaccava dilaniata</Line>
+   <Line>dilaniasti tacciati affannatisi distillata facilita inadatti insaccati</Line>
+   <Line>anditi lanci affaticassi citavi sfiniva cinica accanintisi affila vaccinavi</Line>
+   <Line>stillava incassai sanati assillassi italiana accasciai affannatici scaccia</Line>
+   <Line>sfasciai sfacciati scalassi affaticativi stavi accidia allattatici avvitassi</Line>
+   <Line>insaccai attaccativi dici scaldavi diffidava stanava lava assisti calci</Line>
+   <Line>avassi salassava fasci accanii invitassi vaccinassi svanissi infilati</Line>
+   <Line>tacciai scacciavi affidasti lacci affaticai insili attillata sanavi</Line>
+   <Line>svitai inviata acciai affannatisi affidi scava allatti affidatisi tastavi</Line>
+   <Line>inadatta stadi affittatisi scaldassi sfacciata incanta visitai assassini</Line>
+   <Line>classificati fasciati affiatata saldai asfissia invia additativi avvisasti</Line>
+   <Line>incitavi sintattici avanti lisca distillata allacciai stivassi filavi</Line>
+   <Line>avvicini distaccata scalava vincita lavandai distilla stillati incantava</Line>
+  </Level>
+  <Level>
+   <NewCharacters>me</NewCharacters>
+   <Line>inventate effettive avallasse assistette infamiate civettava invitasse</Line>
+   <Line>elefante deve tediati cadesse faticate inventate allenativi accidenti</Line>
+   <Line>amativi mettiti leccai accedei intimidita stelle inviate fende mentali</Line>
+   <Line>nevica dimmela celaste stenta scalavate sedete allettasse fece vietaste</Line>
+   <Line>lamentassi stellate dimenata defletta infilaste minima evince salassaste</Line>
+   <Line>nascessi devastaste defletta staffetta caviale vedessi falciasse medie</Line>
+   <Line>levassi mendicanti velina emanasti massaie levati lede diventasti emenda</Line>
+   <Line>addensaste fisse salviate vidimai nemica ammassai salisse salma sdentata</Line>
+   <Line>salassate amnistia fattela incettassi micce scassasse salme allentasti</Line>
+   <Line>limitavi meccanismi elencate sfidasse allenativi limitiate meditata svenivate</Line>
+   <Line>disinfetti addentava dimenai smania settanta maledette lecite eccitasti</Line>
+   <Line>sfidate dissetai fame mettiti esentiate decise venite assise infettata</Line>
+   <Line>inamidiate vestite infinitesime desinava alimentai leccavi salvate saldiate</Line>
+   <Line>minima assiale esaminiate assedia tenace amassi affamati immense avvitavate</Line>
+   <Line>cimice mancate assediante inamida difendeva animava allacciasse affettantesi</Line>
+   <Line>densa cimentassi addensaste viscide siediti limitavate filasse menate</Line>
+   <Line>vestite esentate affettava smaltita difetti eccitaste assillante emette</Line>
+   <Line>scavavate malvivente emanai vesti sistemavi assistevate mandata esilia</Line>
+   <Line>mania infettai addensate svelti affilavate eliminati accennava fatene</Line>
+   <Line>decimi accendiate inamidasse sane slittaste detta tesse insalate satelliti</Line>
+   <Line>ammaccava maledivi intestiate attentava alienantisi sedai accasciate sedile</Line>
+   <Line>avasse smaltisce cimentate datate dimenati dialetti veli alleni vedete</Line>
+   <Line>edificasse sistema seni celassi ammalasti alletta lemmi annientiate ammalii</Line>
+   <Line>dente fessa attaccantesi svestissi dice ammassata seccanti salvietta</Line>
+   <Line>anelastica lesti scese vantiate delimitati limitati esclamasse selle affilavate</Line>
+   <Line>ammalavate stima cassetta dissetasti incantaste elimina lesi accettati</Line>
+   <Line>allevava smaltite elettive allacciate mandassi sentita fanale svanisce</Line>
+   <Line>ammaliante esiti stenda eccessivamente affacciiate vietati salsicce deflettevi</Line>
+   <Line>intendete caste andatela scenda statemi ciste accade scassavate decennale</Line>
+   <Line>scende devastassi nevai dettaste cantante affettati istantanea filasse</Line>
+  </Level>
+  <Level>
+   <NewCharacters>hr</NewCharacters>
+   <Line>hermitiani riferiate chinerete elencare satira recedevi rammendi deridere</Line>
+   <Line>aritmetiche ritardare detersa ravvivai stirassi restereste avvelenerai cremate</Line>
+   <Line>avverata trasferita mischiate lecchiate circhi staccherai allatterei</Line>
+   <Line>alterantesi stendardi trascritte traenti arricchirai tradire diserti meridiana</Line>
+   <Line>chiederci dilaterei deridere trascriva criniera rassettate ricadeva fiaccare</Line>
+   <Line>firmasse smentirete reattiva inamidare salteresti adiravate tessereste</Line>
+   <Line>schernirei inventerai addestrantesi alletterei franate marchese calmerai</Line>
+   <Line>attirantisi attraente levereste ricamaste finche assestereste alterante</Line>
+   <Line>alternantisi saltare affrettava arrestati attirati immeritata riscritta marcia</Line>
+   <Line>saliera riferiste ammirasse schernissi scasserei tracciava valicare</Line>
+   <Line>disarmasti accasare tranvieri scartasse smettere tardavate sentirsi rincasava</Line>
+   <Line>rescindi mira mieterete starete alternarti traviasse esserne carcere</Line>
+   <Line>terminati salasserai avversaria strette internet svernasti alternantesi</Line>
+   <Line>ricamavi adiriate recedevate alleviarti visiterei alimentarti severi</Line>
+   <Line>attirantisi creatrice dirvi acciaierie affretteresti incaricate sverrai</Line>
+   <Line>estetiche raffinerei entrare scardina rincaraste ammireresti citereste</Line>
+   <Line>emenderai tasserai tramare attirarsi fischiate avveriate annientarmi tartassate</Line>
+   <Line>creavate schemi arenava rimediava trattasse varavate accentravi vesserete</Line>
+   <Line>variava criminali maschere inavvertite trasalisce cadaveri rideva canteresti</Line>
+   <Line>ammetterete stanchi arricchiresti smacchia ammaccherai ladra versate decreti</Line>
+   <Line>raschiate sterile tratterete mastri incarica richiedi sanerete atterravate</Line>
+   <Line>mesteresti riferisca vanteresti trasferisce raschia eserciti venerasti</Line>
+   <Line>avviarmi centrale franerete renderle avvicinerei fisserai scremi stralciate</Line>
+   <Line>incaricava stradali stentare marinerete schiantavi assideriate fischiasse</Line>
+   <Line>serraste franavi ricavasse chinassi retti raffinate scriversi ricavasse</Line>
+   <Line>certe interattiva affrancata dirti remerete slitterete venirsene schietta</Line>
+   <Line>traviasse fricativa fracassavi diletterai raffinerei incaricati chimiche</Line>
+   <Line>schermi mirasse caricata affermassi transitavi emersi rasenti irreale</Line>
+   <Line>chiamavate verificata emanereste arava rimandaste atterrante arricciare</Line>
+   <Line>ammiratrice detersi chieda allarmantisi fissare rendimenti allarma anticamera</Line>
+  </Level>
+  <Level>
+   <NewCharacters>go</NewCharacters>
+   <Line>vongola refrigeri svisando decoro notassero addestrandomi tosai ritegno</Line>
+   <Line>adagiativi carnagioni affrontarono informate diventato annegate accorantisi</Line>
+   <Line>stornino frodo atterrandoci tremino conosceva tritiamo svenano forcella</Line>
+   <Line>frettolosi logorando meritino assimilandoci fondasse sfogliavi adagiavamo</Line>
+   <Line>schernano sfilano tollera armeranno governata entreremmo denigrasti vestaglie</Line>
+   <Line>arrestammo terrori dirigere segregare avveleno scartammo soggettivi rimando</Line>
+   <Line>arrogavate chiamavamo aggravereste frodammo sanassero arrotolereste grafoanalisi</Line>
+   <Line>riordinata diramano dimensione scovo ritoccando conciliano condensare svegliasti</Line>
+   <Line>addentrammo tennero gestire incontrava litigavamo gioiscono allargatisi</Line>
+   <Line>adimensionali trovasse allargato dominasti caveranno acclamo arroga dondolerei</Line>
+   <Line>immigrai tormenta rigido sondassero segnalassi assodavano mostrati coronai</Line>
+   <Line>sregolate disertano fora segale accostatomi odorerete dedotte segnasti</Line>
+   <Line>torrente affiatatosi gettammo evitavamo rientrino scalando sottometto</Line>
+   <Line>visitiamo ignote denominano congedai traligni verseranno disdegnare svio</Line>
+   <Line>loderai accorciarono stroncando inchinavo rilassiamo stillavo accecando</Line>
+   <Line>svolterei integrasse marginali togli volammo gaio generavate offrigli</Line>
+   <Line>riscossero rotolaste accaniscono agivi rosolerei veneravo constatare modereremo</Line>
+   <Line>crocifisse settimo stimando tastarono annideranno aforismi trionfati lavorarono</Line>
+   <Line>sostento risanato sottintesa incantammo regnino rotaia sondino dissetiamo</Line>
+   <Line>tostata alieniamo distinsero inviavano lotte affronterete giochiamo</Line>
+   <Line>avvisandosi annotino traforiamo legato svisammo covavate scomodi indicano</Line>
+   <Line>assordano esercito alienavamo dimagrisca sfiorisse conigliere segnalano</Line>
+   <Line>accettino vaso cova accomiatate atteggiandosi canfora riformati vireremo</Line>
+   <Line>gettavamo sviato sfilano intaso sollevasse vergognoso sociologi seconde</Line>
+   <Line>affidammo tentiamo addossata immigrasse distato verificavo isoliate raccatto</Line>
+   <Line>ritornasse arricchiremo maritarono arrota adocchierete segnaliate gemello</Line>
+   <Line>odoriate ingelosiva orde tramortii scortavi sfronda finora affermino</Line>
+   <Line>vietavamo tornavo coordinato fascicoli vigilavate alleviatomi assiderandoci</Line>
+   <Line>affogarci svaghiate vagano scagliavi sgravava scontata accontentativi</Line>
+   <Line>coltivino dignitoso estivo comandata allegarono leggerne affogati coerente</Line>
+  </Level>
+  <Level>
+   <NewCharacters>bp</NewCharacters>
+   <Line>spasimavi interrompe sfibrerei appestassi colpita tenebra spirammo precisai</Line>
+   <Line>tarpino comporta sperperare poeta birra sprecavamo approfondivate perforati</Line>
+   <Line>adoperarsi spin rapidamente propinaste spalmi abbonderemmo aggrappavo premetto</Line>
+   <Line>annebbiando copieranno sbilancino spallate provino pignoriamo rapimmo previsto</Line>
+   <Line>appesantivi penetrai abolisce pescatore passaporto adombrantisi deposita</Line>
+   <Line>rispettivamente recapitino accampi spesereste coperta esorbitavo bevibili baffo</Line>
+   <Line>ripassava sopravvenne risplendi apporti accoppiiate pollaio bisbetici</Line>
+   <Line>preveniva episodi brevettava praticammo ribassammo sopperirei temprata</Line>
+   <Line>tossirebbe proibisti praterie pregate spopolasti opinai biasimasti apportativi</Line>
+   <Line>galoppata crepiterei abbagliavano antilope accampino applicandovi basati</Line>
+   <Line>pescare baseresti opere preda riempirlo ripenserai nebbiosi provenne</Line>
+   <Line>lavabo preleviate appestiamo popolo sparlava adagierebbe copierebbe</Line>
+   <Line>penassimo sfibrerai predicesti elaborare palpino pergolato pene bottino</Line>
+   <Line>screpolato parlereste pericolose abolita sbarcherai coabitiamo rapassi</Line>
+   <Line>scampiate alienerebbero approfittatosi paesaggio ripensassi spregeremo</Line>
+   <Line>appellassi aggiornerebbe tamponai orbene verbali appostandoti spetti barbare</Line>
+   <Line>spietata incolpiate abbassassero importo pernotto panca apportante piani</Line>
+   <Line>penato potenti parallelo abitanti pesai presiedono spiraglio inabili</Line>
+   <Line>riappari scolpivo approntiate approfondireste sbocciati spellati risponda</Line>
+   <Line>obbligate speravate prendile prostrassi salpava appoggiassimo sfibravi</Line>
+   <Line>soppesammo spandono tarpavano pescammo applicato insipido provaste operanti</Line>
+   <Line>compilano precorri approfittasse stampasse platino copertoni possessiva</Line>
+   <Line>prevenendo annebbiamo appronto salverebbe acerbo provassero benderei appesantitosi</Line>
+   <Line>sporcavo appiana aprile abolissero praticano ripenso comprassi specificate</Line>
+   <Line>birbante storpie accoppiaste scalpello pedinando presbiti impedisca nobilitato</Line>
+   <Line>sbavarono apposito obbedivano simpatiche posdaterai apportiamo porpora</Line>
+   <Line>annebbieranno possedesti celebrasse mobile ripieghi badavamo sbendai riprove</Line>
+   <Line>nespola battesimo affonderebbe assemblea abbattessero albine deperivano</Line>
+   <Line>procedeva addormenterebbero ponderino scamperai scolpisce brillai traballavo</Line>
+   <Line>pinacoteca rivedibili planetari ripiegando mieterebbe vispe riposaste ricambi</Line>
+  </Level>
+  <Level>
+   <NewCharacters>qu</NewCharacters>
+   <Line>gufi ondulavo ripulirono alture cucinino amuleti allungo svalutasse</Line>
+   <Line>allungavamo fluissero guastato attribuisco pugni autoesplicativa squagliavi</Line>
+   <Line>utenti inquietudine seduta abbruna costrutto reputarono consumavo trasudano</Line>
+   <Line>accusatomi aumentasse appuntavate riusciremo sfruttino adeguai insulti</Line>
+   <Line>appunti educassero suora abiuriamo stupisca questo ultimassi paralume</Line>
+   <Line>reputeremo speculino duecentocinquanta umori sbuffi sturavamo sputeremmo</Line>
+   <Line>consumassi bussammo adunerei accumulare abiurare potature insultavi autentica</Line>
+   <Line>discutono annullavi occultano effettuavi urlare abbattuto vituperai continuo</Line>
+   <Line>puntini accuseremo tumefacciate uniformo subbuglio suggellavi fugavate</Line>
+   <Line>escludi redarguite muovo buttare subaffitti abbruni pubblicare quaranta</Line>
+   <Line>misurarono fuggiasco cuocendo defunta pubblicato fenditura duplicati commutassi</Line>
+   <Line>squarciava promuove sussurrando suoneremmo ingenua indugiate ucciderti</Line>
+   <Line>nubili acquistandovi questura trascuri sufficiente computare quoterebbe</Line>
+   <Line>pedicure annacquerebbe curvando trascurabile paurosi escluse devoluti</Line>
+   <Line>sostituita abiurammo asciugiamo rullammo affumicarmi occuperai quote offuscaste</Line>
+   <Line>urta avvenuta maturavano casualmente devolute trafugasse acquisirti</Line>
+   <Line>astuti quereliamo ultimavate adularci guariate attribuiva giurerete</Line>
+   <Line>smussate succinti lucidavi nuotereste frustata impaurirai permuta crudeli</Line>
+   <Line>ruminammo adulantisi pregusta acquietasse attualmente numerando cucinarono</Line>
+   <Line>svaluta speculiamo cullavamo amputa reputa confluire arguti luoghi illudere</Line>
+   <Line>pulseremmo speculerai elusa ustionare stupefarei aiutatoti acquisintisi</Line>
+   <Line>confetture suscitavo piacque stantuffo battute procuriate assicuro arguto</Line>
+   <Line>depuravano abituale cellule risultato alquanto clausola sontuosa fiuta</Line>
+   <Line>riassunti asciugano recuperano rifiutano adulerai frustiamo diminuite</Line>
+   <Line>desumo suonasse nauseasti camuffati occupi risciacqui deturpai trasudasti</Line>
+   <Line>congiunti suonarono unto perquisito gustosi imburra commutata abitui adulata</Line>
+   <Line>increduli consumo musichi tramuti fumaste putrefeci aumentandoti sguainino</Line>
+   <Line>discute attuerai alcun tutelammo accumulato nuotano denunciare usurpaste</Line>
+   <Line>salutati statue squaglino squarti trattenuto ulcere nullo tramutando</Line>
+   <Line>devoluti trasumanai tessiture scusati allungandoti trasudiamo trangugiai</Line>
+  </Level>
+  <Level>
+   <NewCharacters>wn</NewCharacters>
+   <Line>sdegnata troncate allungereste tisana ragnatele sondereste pasticcino</Line>
+   <Line>aquiloni coniugammo granai comunisti incito schernisci dominammo nobilita</Line>
+   <Line>sentiresti nobilitate scontiate allungavate figurini aboliscano eventuale</Line>
+   <Line>notate esentaste odierni opinavi allentantesi accomiatante annacquasti</Line>
+   <Line>processino svanito infila grondaia strutturalmente salparono risanerei</Line>
+   <Line>salutarono emenderei riattivano svaniste condonava riscattano lanciaste</Line>
+   <Line>cognata variopinto disputando travasino indipendentemente leghino eccitarono</Line>
+   <Line>aggirando accontentantesi bastonino sparlano allungavano inventare energie</Line>
+   <Line>integrava appaiandomi numero abbrunato rientrai introitate sembrando allungeremmo</Line>
+   <Line>conservino ostentassi appianereste ammutinavo accechino aspettandovi alternatici</Line>
+   <Line>distinguere coronasti sgraneremo cucinano prenoterai rinnegavo affrontavano</Line>
+   <Line>accanirebbero sgranchito notavamo destando esteriormente rinnovati condenso</Line>
+   <Line>rammenda congedata competendo stancasti annullerei indagano indagherai</Line>
+   <Line>espugnerai stendeva inferriate appianassero vendereste annebbiai monarca</Line>
+   <Line>stridono vibrante esamina abbonarsi sconvolse svagano guastino attaccandomi</Line>
+   <Line>insultammo sintattico comunicare rimarranno elencare addenso appoggiandomi</Line>
+   <Line>turavano facendomi aggancierete accentuano indietro traenti ritornaste</Line>
+   <Line>mangiavo rana contestino incontrano cintura ignoreremo assumono nutrire</Line>
+   <Line>trapanavo svestendo troncai turbini connessa annusandovi tranci raccontati</Line>
+   <Line>dileguano ingrossi ammontante babbuino guadagnino firmando sorprende insegue</Line>
+   <Line>cimentate allattano rinvenga tornito centesimi infamando ratificano tornivi</Line>
+   <Line>dinamico ingelosii assunto ingrossi arginata cuocendo notavo atteggieranno</Line>
+   <Line>immagine toniche tiranniche affrontandoti prostrano sospinta richiedente</Line>
+   <Line>sgranerai addentasse abituavano annuseremo decantandomi accordino armandomi</Line>
+   <Line>condensare taciturne ponderi accontentatici montati lontra discutono pensereste</Line>
+   <Line>illumina garantiti arrangiatici anticipiamo conteremmo avvelena arginandosi</Line>
+   <Line>dignitoso innesti spuntino tracannavo affondatosi intimano appianeremmo</Line>
+   <Line>lusingai arrangierebbe addensereste stonate scartando renderei curino</Line>
+   <Line>dispensi ordivano mischiano modellino emenderete comportamenti dinamismo</Line>
+   <Line>tamponassi approfitteranno incitati sventate disegna arrangiatomi svaghino</Line>
+  </Level>
+  <Level>
+   <NewCharacters>cx</NewCharacters>
+   <Line>affrancare incrementato schiena accigliato sfasciavi speculaste scrollate</Line>
+   <Line>secolare mischiasti capitola scongiuro declinaste scoppio bocciarono</Line>
+   <Line>occupo archi cancellando angoscia ricambiavo sottoscala tirchi accomodammo</Line>
+   <Line>scambiando archiviarci taccia recuperata crampi schieriamo calmino accusandoci</Line>
+   <Line>cigolerai baciato avvicinerebbero tipiche confessati scuro insacca parolacce</Line>
+   <Line>scartaste affumicassimo accendesti causiate arricchitoti corrodere chiesero</Line>
+   <Line>recuperano consultati incatenino asciugatoti chiamiamo contagiose competa</Line>
+   <Line>consultava scrostasse cessino circolavo schiarii masticato incorsi accedeva</Line>
+   <Line>asciutte scambiassi tragica assicurano sblocchino mescolasse rincarerei</Line>
+   <Line>ricoprendo dichiarati lanciavano creperai notificava annodarci crani smaltisco</Line>
+   <Line>confetture stuccato concilio binocoli accertasti commentavi provocai cavatappi</Line>
+   <Line>accasaste delicati spiaccica scalasse plance macerarono accaloravi scaldasse</Line>
+   <Line>accreditava decidermi camoscio causeremmo incrinava cavati attacco ostacolavi</Line>
+   <Line>condannato crepitano succinto assicuriamo crederebbe sferici agganciassi</Line>
+   <Line>sconnessa smascheri ricordaste ammucchia palchi notifico solcavi scontammo</Line>
+   <Line>assecondantesi decolorino recitavi squarcerei applicata ammucchia scaldammo</Line>
+   <Line>affumicavano incupisce piacque vacillammo pulci costando curvilinea colonnato</Line>
+   <Line>taciturne pubblico voce accigliato ricavarono completano accordantisi</Line>
+   <Line>agiscano luccicando cigoleremo creino comete aggruppandoci sciolgono</Line>
+   <Line>lacero caratteristiche lirica esaurisci eccedesti qualcos imbianca</Line>
+   <Line>calcagni accusassimo cultura pertica sblocchino accorciereste ricattammo</Line>
+   <Line>avvicinassi strascichi ufficiosa anticipassero rivincita denunciavo aceto</Line>
+   <Line>matriciale assicurammo prescrive procurare scaglie concludeva accusatosi</Line>
+   <Line>scaldata commentati confluisca citato trinciato ricchi evacuerete brancolo</Line>
+   <Line>accorgendoci poca corredato scrosti richiedi tematico buche termica scaltri</Line>
+   <Line>delicato aggancieremo rivincite affaticata scortarono tracciato affascinato</Line>
+   <Line>camminare compagni accorciandoci asciugereste assecondavo occhi intonachi</Line>
+   <Line>snobistiche conferiscono educhiamo consenso conservato scalerei scolorite</Line>
+   <Line>maceriate maceravo accanimmo sopisci affittarci raschierei assicurassero</Line>
+   <Line>scuotere accompagnato ricurve deperisce scrivono accontentare scovare</Line>
+  </Level>
+  <Level>
+   <NewCharacters>yz</NewCharacters>
+   <Line>tizi penzolasse penalizzare sparizioni oziano palizzata ammazzato</Line>
+   <Line>cozzarono scherzato influenzati ammazzarti indicazione grazie zeri carezzasti</Line>
+   <Line>negoziate dirizzammo rafforzino smilzi addizionandoci avvertenza analizzarci</Line>
+   <Line>sgozzino terzetti informazioni tramezzo spazioso rinforzate dipendenza</Line>
+   <Line>corazzi orazioni imprudenza azienda attrezzavi azzuffati azzufferebbe</Line>
+   <Line>sgozzavate strizzi ammazzandovi funzionali calzone dirizzammo azzuffano</Line>
+   <Line>calziate precauzione rincalzate presenzino tassazione stazzerai azzufferemo</Line>
+   <Line>indirizzare rinforzato abbozzasti zoppicavi realizzato sovvenzioni divorziate</Line>
+   <Line>vicinanze zucche funzione sozzure inzuppano aguzzerebbero cozze benzina</Line>
+   <Line>silenziose gironzolo spruzzavo pazzo abbozzava carezze scandalizzi forzate</Line>
+   <Line>zeri azzuffammo oziavi calzai eliminazione sprezzasse accarezzo penzolata</Line>
+   <Line>sterzino saziavi pulizia azzecceranno elettrizzi relazione innalzaste</Line>
+   <Line>agonizzeremo imparziale viziavi inzuppati danzasti rincalzate grazia rafforzi</Line>
+   <Line>economizzi giudiziosa deliziando attrezzantisi annunzierei zucchina detronizzato</Line>
+   <Line>addizioneremo analizzerei spazziate tappezzaste danzeremmo riselezionabile</Line>
+   <Line>azionista aguzzai iniezioni mozzassimo iniziali seduzione stilizza balzare</Line>
+   <Line>smezzati vizino riselezionabile azzardante saziasti frequenza stazzata</Line>
+   <Line>credenze giudiziari bidirezionali pizzicammo definizioni viziosi incertezze</Line>
+   <Line>spruzzai saziavo melanzana coniazioni alzerebbero fattorizzabile calzaste</Line>
+   <Line>azzardata orizzonti spazzasti stazionaria attrezzerai sporgenza apprezzarti</Line>
+   <Line>azzarderemmo mozzasse certezze penzolasti ricchezza implementazione stizzoso</Line>
+   <Line>cozzo agonizzavate detrazioni autorizzi ammazzandovi alzante conferenze</Line>
+   <Line>forzereste smilzi indirizzare mozzasti svolazzano negoziassi internazionale</Line>
+   <Line>annunzieremo inizierete zufolavi spaziosa operazione zappammo bizzarra azzuffate</Line>
+   <Line>sezionare dimezzato danzeremmo viziato azzuffativi vizierebbe azzarderanno</Line>
+   <Line>iniziare composizione abbozzavo zoologici geometrizzazione sterzassi</Line>
+   <Line>affezionarono apprezzerete ammazzai ripugnanza azzera rialzavamo addizionarti</Line>
+   <Line>leibniziano schematizzazione balzammo alzate ammazzai affluenza ammazzandoti</Line>
+   <Line>rincalza asserzioni inzuppati altezzosi tappezzavo zoccoli sterzammo</Line>
+   <Line>attrezzerebbe finzione aguzzata sfarzo aguzzerete zucche vezzosa esattezza</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</NewCharacters>
+   <Line>Adagieranno Sguaino Splendesti Travasa Anniderete Mostrati Legherei Alterandone</Line>
+   <Line>Delegavamo Pomposi Blocca Arbitrio Saltata Greggi Esentavano Allacciarci</Line>
+   <Line>Balzeranno Biblici Liquidai Differenziato Turbavate Adulterai Atterreremmo</Line>
+   <Line>Incriniate Avvistiate Foschie Domiate Considerevole Tensori Dilatasti Unificammo</Line>
+   <Line>Controlli Amputatosi Ingesserai Amputereste Ritarda Torchio Diffusero</Line>
+   <Line>Esaltante Barattate Entravamo Osavano Riscuotano Annebbierebbe Rassicurai</Line>
+   <Line>Sturare Collegamenti Guadato Meccanismi Bolli Areniate Sdoppiato Visito</Line>
+   <Line>Misti Sovrano Comizio Agganciati Mutata Complete Affatico Trottando</Line>
+   <Line>Viaggerei Vestirsi Stappiamo Avversaria Disadatte Tastiera Chiedere Ammaliativi</Line>
+   <Line>Sfrondasse Adorassimo Pagavate Invenzioni Furgone Enti Affiaterei Contraendo</Line>
+   <Line>Interpreto Cooperassi Lanose Svegliamo Rimanervi Analizzeremmo Ciascun</Line>
+   <Line>Asciugandoci Anditi Ironico Aravano Devastare Sbranerei Elogi Ricerchino</Line>
+   <Line>Adunato Stirasse Assordatomi Metallica Appurereste Brontolai Prelibata</Line>
+   <Line>Ronzavi Riparate Denotata Raschiaste Diffiderei Braccetto Accaduto Accompagnassi</Line>
+   <Line>Percento Invasi Sfinisse Persuadere Visitiamo Arrangiasse Presentito</Line>
+   <Line>Purificava Strutto Sparavo Nevicarono Assillassimo Foderaste Toserei Mescolasse</Line>
+   <Line>Fandango Tuberei Potertela Impedite Eccessive Spedirai Rilevati Fiaccando</Line>
+   <Line>Tramutando Prematura Perequai Giovane Quella Amavo Dilettarsi Emissari</Line>
+   <Line>Preventivi Commentato Scossi Obbedirete Affanneranno Edotta Molari Rosolavano</Line>
+   <Line>Denigriamo Implico Interdirei Guariste Animatoti Suppongono Adegueremo</Line>
+   <Line>Tramontata Ricambiai Regneresti Loderei Lesse Impegnata Violenti Minaccerai</Line>
+   <Line>Emulavo Sgrassasse Colpivate Appuntate Schiariscano Ricorderei Arrotolare</Line>
+   <Line>Pensiamo Affittarti Allegaste Vivace Rintoccare Suonasti Amputerebbero</Line>
+   <Line>Sballiate Avvicineranno Stammi Oscillerei Affilavi Illibate Tignole Inondavo</Line>
+   <Line>Soppeserei Approntassero Spelliate Spalmai Ammazzatosi Prolungo Tenta Sopraelevo</Line>
+   <Line>Annacquassi Ritagliavi Dilaniata Sfioravi Appostandosi Acquietandomi Occorsi</Line>
+   <Line>Interesse Anticipino Ammasserai Occorra Assaggiassimo Reciterete Proibendo</Line>
+   <Line>Copi Congelino Alzate Hermitiano Annoiante Alieneremmo Trasalisco</Line>
+   <Line>Campanili Gradazione Strillerai Sibila Svoltasti Sedava Scrutando Desiderosi</Line>
+   <Line>Produzione Sigillo Letterario Incontrollabili Comandando Ripugnato Rancori</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

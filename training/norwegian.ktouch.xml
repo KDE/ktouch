@@ -1,0 +1,1032 @@
+<KTouchLecture>
+ <Title>Norwegian (auto-generated)</Title>
+ <Comment>Trainingfile genereated Mon Oct  1 07:36:58 2001
+Program written by Håvard Frøiland
+</Comment>
+ <FontSuggestions>Courier 10 Pitch</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>jf</NewCharacters>
+   <Line>f ff f f f jf ff f ff j ff j ff j f f j j</Line>
+   <Line>jf j jf jf jf f jf ff jf jf f jf j f j ff</Line>
+   <Line>j j ff f ff f j f ff f ff ff f f jf f j jf</Line>
+   <Line>jf j f ff jf jf ff jf jf f f f ff j ff f j</Line>
+   <Line>j j jf ff f f j ff j j ff j jf ff f f ff jf</Line>
+   <Line>f ff j f j j f ff f ff f j f ff jf f f jf</Line>
+   <Line>f j ff j ff f ff ff jf jf ff j ff jf f jf</Line>
+   <Line>jf ff f f f j ff j ff ff jf j jf jf j jf f</Line>
+   <Line>jf j jf f jf j jf jf f j j f j f jf jf j jf</Line>
+   <Line>jf jf ff f j f jf jf f jf f jf f jf f jf jf</Line>
+   <Line>f j jf jf ff f f ff j j ff j jf j f ff f j</Line>
+   <Line>f j j jf j f f f f f j f f j ff jf f f jf</Line>
+   <Line>j jf j jf j ff ff jf jf j jf j j f ff j j</Line>
+   <Line>jf ff j f ff ff f ff jf ff j f jf j ff ff</Line>
+   <Line>ff j jf j jf ff j j j ff jf j j j ff j jf</Line>
+   <Line>f j j ff j jf ff f j jf jf ff j j j ff f ff</Line>
+   <Line>ff jf f jf f ff jf ff f f f j jf j ff f f</Line>
+   <Line>f f jf f j ff f f f ff j jf ff f ff ff f ff</Line>
+   <Line>ff jf j j jf j ff f j jf jf ff jf jf ff ff</Line>
+   <Line>f f j f f ff ff ff j j ff jf jf jf j ff ff</Line>
+   <Line>ff jf ff f j ff j f ff jf f j j jf j ff f</Line>
+   <Line>ff jf ff j j f ff f jf ff jf f f ff jf f j</Line>
+   <Line>jf ff f j jf ff f jf jf ff ff j f jf jf jf</Line>
+   <Line>ff f j ff jf j j j j ff ff f ff jf j j j j</Line>
+   <Line>jf f jf jf f jf ff jf f ff ff f ff f j jf</Line>
+   <Line>ff f j f ff jf jf j jf j f j jf ff ff ff jf</Line>
+   <Line>ff j jf j jf ff ff ff j ff j j f j f j ff</Line>
+   <Line>j jf j f j j j ff ff j f j jf jf jf j jf j</Line>
+   <Line>j j jf jf ff ff j f jf ff j f j ff f jf jf</Line>
+   <Line>j f j f jf ff j f j j f jf f j f ff j f f</Line>
+  </Level>
+  <Level>
+   <NewCharacters>aø</NewCharacters>
+   <Line>a a a a a ø a a a a a a ø a ø ø a a a a ø</Line>
+   <Line>a a a a ø a ø a a a a ø ø a ø a ø a ø ø ø</Line>
+   <Line>ø ø ø a a a a ø ø a ø ø a a ø ø a a a ø ø</Line>
+   <Line>a a a a a ø a ø ø a ø a a ø ø a a a ø a a</Line>
+   <Line>ø ø a a a ø ø ø a a ø a a ø ø ø a a a a ø</Line>
+   <Line>a a ø ø ø ø a a a a a ø ø ø a a a ø ø a ø</Line>
+   <Line>a a ø ø a ø a a a a ø ø ø ø a ø ø ø a ø ø</Line>
+   <Line>ø ø a a ø a ø ø ø ø ø ø a a ø ø ø a a ø a</Line>
+   <Line>ø a ø a a ø a a ø ø a a a a a ø a ø a ø a</Line>
+   <Line>ø ø ø ø ø a ø a a ø a ø ø a ø a ø a a a a</Line>
+   <Line>a ø ø a a ø a ø ø a ø ø a a ø ø a ø ø a ø</Line>
+   <Line>a ø a a a ø a a a ø ø ø a a a a a a a ø ø</Line>
+   <Line>ø ø ø ø ø a a a ø ø ø ø a ø ø ø a a ø a a</Line>
+   <Line>ø ø a a ø a a a a ø a a ø ø ø a ø a ø ø a</Line>
+   <Line>a ø a a ø a ø ø a ø a ø ø ø ø a ø a a ø a</Line>
+   <Line>a ø a a ø ø a ø ø ø ø ø ø ø a ø ø ø a a a</Line>
+   <Line>a a ø ø a ø a ø ø a a a a ø a a a ø a ø ø</Line>
+   <Line>ø a ø a a a a a a a a a a a ø a a ø ø ø a</Line>
+   <Line>a a ø a ø ø a ø ø ø ø ø a a ø a a a ø ø a</Line>
+   <Line>a a ø a a a a a ø a a a a ø ø a ø ø ø ø ø</Line>
+   <Line>a ø ø a a ø a a ø ø ø ø a ø a ø a a ø ø ø</Line>
+   <Line>ø ø a ø ø a ø ø ø a ø ø ø ø a ø a a a ø ø</Line>
+   <Line>a a ø a ø a a a ø a a a ø ø a ø a ø ø a ø</Line>
+   <Line>a a ø a ø ø ø a ø ø a ø ø a ø ø ø ø a a a</Line>
+   <Line>a ø ø ø ø a a a ø ø ø ø a a ø a ø a ø ø ø</Line>
+   <Line>a a a a ø ø ø a a ø ø ø ø a a ø ø ø ø a a</Line>
+   <Line>a ø a a ø a ø ø ø a a ø a a ø a a ø a a a</Line>
+   <Line>ø ø ø a ø a ø a ø a ø a a a a a ø ø a ø a</Line>
+   <Line>ø ø a ø ø a ø ø a a ø a ø a ø a a a ø a ø</Line>
+   <Line>a ø ø ø a a ø a a ø a ø ø ø ø a a ø a a ø</Line>
+  </Level>
+  <Level>
+   <NewCharacters>kd</NewCharacters>
+   <Line>kjøa daa kajakk daa kad daa kjøa kø kakk daa</Line>
+   <Line>død kjød da dadda dødd dødd kad dadda kakk</Line>
+   <Line>kajakk daffa døkk kakk kaka da daffa kajakk</Line>
+   <Line>daffa død kjøa kjøa kakk kakk kjøa kø dø kakk</Line>
+   <Line>døkk død kjød kakka kjød k kø kad dødfødd</Line>
+   <Line>kakk dødfødd døkk kjød dødd daff kø kjøa d</Line>
+   <Line>daa kad d da kaka kjøa dødd kad død kø kjøa</Line>
+   <Line>daff kakka d dødd daff kajakk da kjøa k døkk</Line>
+   <Line>da daffa død kakk daff kajakk dø kjød kjøa</Line>
+   <Line>da daffa dadda da k daff dødfødd kakk dadda</Line>
+   <Line>kajakk daffa død kad kakk daa k da død død</Line>
+   <Line>dødd kad dadda kakka da kø dødd kaka kø daffa</Line>
+   <Line>kø kaka k d daff død k daffa kajakk dadda</Line>
+   <Line>dødd kajakk dødfødd kajakk kad kjød død daff</Line>
+   <Line>dødfødd døkk dødd daff kakka kjød daa kø dødd</Line>
+   <Line>d kakk dadda daffa daffa daff kakka kakka</Line>
+   <Line>daffa da d dødfødd da daffa daff dø døkk daff</Line>
+   <Line>døkk kø dødd kajakk dadda død dødd død dø</Line>
+   <Line>dø kaka daa daffa kaka k dødd kjøa kajakk</Line>
+   <Line>k daff daffa kakka dødd daffa dødd daffa dødfødd</Line>
+   <Line>kø k daa kjød kaka daff dø kaka død kjøa død</Line>
+   <Line>døkk kaka daff dø kakka død kakk kajakk kajakk</Line>
+   <Line>død kajakk d dødfødd dadda kajakk kad dødfødd</Line>
+   <Line>kaka død kjøa kakk kad kakk død kajakk da</Line>
+   <Line>kjøa kaka kjød kakka daffa k kjød daa da kjøa</Line>
+   <Line>kaka d kjøa døkk død daff døkk kajakk død</Line>
+   <Line>døkk kad kajakk dø kaka daff kakka kajakk</Line>
+   <Line>da da kajakk kjøa dødd døkk kajakk døkk daff</Line>
+   <Line>k kø dødfødd død kaka daa død k kakka døkk</Line>
+   <Line>kjøa kjød døkk dødfødd k kakka dødfødd død</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ls</NewCharacters>
+   <Line>skaffa sjakal ska sals sala sjøl lødd søkka</Line>
+   <Line>sa s skjød sakka lødd saksa slask skjøda sjakal</Line>
+   <Line>sjal lass lakk lødd lødd l skaff sjakk sakk</Line>
+   <Line>skada s saks sjal løk l skaffa saks sals skald</Line>
+   <Line>skadd løkka skalk skaff sjakk skaffa saka</Line>
+   <Line>laks sjal sjøl lassa skal slask skjøda skaff</Line>
+   <Line>skalla skada skaff sal lassa skaffa saksa</Line>
+   <Line>sakka l skalla skaff l slakk sjøs skal sakka</Line>
+   <Line>slafsa lødd sjal skalla laks skald saksa skadd</Line>
+   <Line>løk lad skaffa slask lø slak skall løk sjøs</Line>
+   <Line>skada laks la skjøda slafsa skall skjøda lass</Line>
+   <Line>skada skjøda sak lød skall sjakk sjøl sal</Line>
+   <Line>sala lakka saka lad sals sals lada slak s</Line>
+   <Line>sak slask slafs la la sal slak skal søl skaff</Line>
+   <Line>søkka skaff las sala saka sala skaka skalk</Line>
+   <Line>lød skada sjø løk lø slak skald slafsa skalla</Line>
+   <Line>sjøl søla skala sjøs las slakk sal skjøda</Line>
+   <Line>søla ladd løkka ladd søkk skald løa lada la</Line>
+   <Line>lada løa lakk skalla skadd skaffa skakk skala</Line>
+   <Line>slask løkka skall skada lad sjakk sa sjø løkka</Line>
+   <Line>sals lad skall skada lødd sakk lø sjøs skakk</Line>
+   <Line>saka sak sa las sjal saka sak skjød saksa</Line>
+   <Line>ska sak slakk sal sjø skall skakk slask skala</Line>
+   <Line>skadd saksa sjø søla sla ladd sakk s søkka</Line>
+   <Line>sjakal la skalla lø sakka lass søk søkka skaff</Line>
+   <Line>skall sjakal slak søkk sla sa ladd skal løa</Line>
+   <Line>lød sjøs løkka lød slafsa skjød sal sjakal</Line>
+   <Line>las skaffa skalk løa ladd saksa skjøda søkk</Line>
+   <Line>skald skadd las l skalk lød slak søla søla</Line>
+   <Line>sla sal skald skada skada sa slafs sjø s saksa</Line>
+  </Level>
+  <Level>
+   <NewCharacters>iå</NewCharacters>
+   <Line>isa isflaka i ilda isøksa ilsk id is åssida</Line>
+   <Line>il ill åla i id åsdøl i iskald isøks iallfall</Line>
+   <Line>ildløs ilsk åa iskald ild iallfall åsdøl ilda</Line>
+   <Line>ilda isøsa ilsk ill åk isa isa ilska ill iskald</Line>
+   <Line>iskald ilda ildsjø å åssida åas å åk i åa</Line>
+   <Line>il isøsa ildsjø åssida isj iskald isflak iallfall</Line>
+   <Line>isøks ilda iss ilk ilk isflak ifall ild ilk</Line>
+   <Line>å is ifall å il ål åssida ål il ilk id ilk</Line>
+   <Line>ilk åas ill i ål isj iss is åk åa isflak ilska</Line>
+   <Line>ila is isøksa isj ildløs ila issa isflak issa</Line>
+   <Line>ilk isjias isøks ild isflaka åssida issa åa</Line>
+   <Line>is ildsjø åas ida id ill ilska ilda ilska</Line>
+   <Line>ildsjø isøks ildløs isøsa ila ås åssida isa</Line>
+   <Line>ilda isøks ildsjø is issa ild isa ida åk isflak</Line>
+   <Line>åas åa ild ild id isj ildløs isøsa ilda åk</Line>
+   <Line>ild åa isflak isj ildløs ifall å ås åssida</Line>
+   <Line>iskald åsdøl ila ifall ida issa ilk isøksa</Line>
+   <Line>isøksa ildløs åk ildsjø is id isj issa åla</Line>
+   <Line>ilja isa ås åk issa ifall id ild isøksa å</Line>
+   <Line>is å ilk å isøksa isjias ida ifall ild åa</Line>
+   <Line>isjias ila å isøks issa isjias isflak isflaka</Line>
+   <Line>ås åla iss ildsjø isflak ilda i åla ås ilk</Line>
+   <Line>iskald ål iss il id ilja åk id ilda ifall</Line>
+   <Line>åssida i isøsa isflaka ila isflaka ilsk å</Line>
+   <Line>isøsa ild ildsjø isøksa isjias ål isflaka</Line>
+   <Line>isflaka isøks isflaka isj iskald il ilk is</Line>
+   <Line>ila ill ill å ilsk ilja issa ås ilda issa</Line>
+   <Line>isøksa ill å isflaka iskald å ilsk isa isjias</Line>
+   <Line>ilsk åas il ill åk ildsjø ås åla ildløs iss</Line>
+   <Line>iallfall iskald isøsa is åas ildløs ilska</Line>
+  </Level>
+  <Level>
+   <NewCharacters>en</NewCharacters>
+   <Line>endelsen nisse nikkelens enkes ei eksilene</Line>
+   <Line>nellik nøl essensen niesens edle eldes ensa</Line>
+   <Line>nåe eldens essenes nåes esse eiende en eidene</Line>
+   <Line>nifs eksessens nedfall ese najada nidelens</Line>
+   <Line>nek edle endeløs elskes nei nedfelle nisjenes</Line>
+   <Line>nødlidende eiendel nikkens nellikene endelsene</Line>
+   <Line>eddik ekkel nøkkene nesenes edelfiskens nasene</Line>
+   <Line>nøklenes niks eika najade najade enes nøles</Line>
+   <Line>ekle nikkel ekla ensa edelfisken najada naskende</Line>
+   <Line>nedless enda eksil endene elende nål eidene</Line>
+   <Line>essensens nikkenes nålens nedfalls nisse nådeløse</Line>
+   <Line>nasal nåde essensene eiken nølende ne nasalene</Line>
+   <Line>nissens eldsjelens nidelens ense nek eksellensens</Line>
+   <Line>nedkalle naskende nøkk nåla neiene nøkkel</Line>
+   <Line>nedla nedslående edenes ensa esles elska elskes</Line>
+   <Line>nåla ense enkel eskenes nisjens eskene eksila</Line>
+   <Line>nisse ed eskens nasalene eiendelens eslenes</Line>
+   <Line>nifse eksisens nålens essens nellikene niendedel</Line>
+   <Line>en nødsfall eskene endene endelse eld nei</Line>
+   <Line>eddik elle nasalene eksilenes ekle nødsfallenes</Line>
+   <Line>enda nisjens enkle essene nåla neia nei nådeløse</Line>
+   <Line>ene enkens ekles nisenes nesene edene eddene</Line>
+   <Line>nådeløs eddiken nås eksellensens essensene</Line>
+   <Line>nedsnødd naska nelliken eldens eiendelens</Line>
+   <Line>niesen edda neiene nesenes nøles nedsidens</Line>
+   <Line>nisene endeløse nesene eldende nask elsk nøklenes</Line>
+   <Line>elden nåes nedslående enka nisjene nås niende</Line>
+   <Line>endes nellikenes ende nedside end eldsjelene</Line>
+   <Line>nisje eksellensen nedisede nådeløse edenes</Line>
+   <Line>eiendelene nådeløs eldene neka nellik nåda</Line>
+  </Level>
+  <Level>
+   <NewCharacters>vu</NewCharacters>
+   <Line>veid venndølene visens veskenes veven vevens</Line>
+   <Line>ulike vulkanens vulka villand vasselen veidele</Line>
+   <Line>vadsekkens ufiskens vindsel vidjens ukelønnen</Line>
+   <Line>vilje vanna veiknende veileda vindelen uflidde</Line>
+   <Line>vill villelsen vindsiden vådeskudd ukens visnende</Line>
+   <Line>vaklende venninnens vissen vennens veies vannliljen</Line>
+   <Line>ukens vaniljeisen vesen vei vedflisene vell</Line>
+   <Line>vaskefilla uke ul ulnende veivende uviljens</Line>
+   <Line>vevle vaksinene vanskene veides vannskiene</Line>
+   <Line>vases ulke vinsje vinkes vandelen uinnvidde</Line>
+   <Line>veves vindus vinkes vesken vende veksles vinenes</Line>
+   <Line>veken våk vaksinens vindskjeve usuell uflidde</Line>
+   <Line>via vinkene vaksinene vasene ulke vanens vaskekjøkken</Line>
+   <Line>vindjakkens vidja vansken udekka vulkansk</Line>
+   <Line>vinflasken viljesvake venndølen uvanenes valsen</Line>
+   <Line>veskene udåden vannene vå uvennenes vedskjula</Line>
+   <Line>vedflisene våses villaksen vannsekk våknende</Line>
+   <Line>vindua veisjefene vaudevillen vassen villfisk</Line>
+   <Line>veivde visaene veiv vinn ullen vannsekkens</Line>
+   <Line>unsen viss ulven ujevne vannveiene vevle veene</Line>
+   <Line>vavle vånda vandalen unnsi vannenes vaska</Line>
+   <Line>vinkelen vennene veiv vekkende ulkene viss</Line>
+   <Line>våkene unnseelse valens valens vik ull vika</Line>
+   <Line>vevle visla veis vadd velvilje vesena veskens</Line>
+   <Line>vennes vaselin vindskjev vanvidd vikende vasene</Line>
+   <Line>vikla veda vinflaskene ujevne velkledd vide</Line>
+   <Line>vaknende vevd vidda vikka ufisken vulkanen</Line>
+   <Line>uvenns viken valsende vann ukeavisens ukasen</Line>
+   <Line>vekkelsen vakene villandens vedda ul vafle</Line>
+   <Line>våkne vaniljeisens visuelle vaniljens uvanene</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ir</NewCharacters>
+   <Line>rusle røden israeler isnende ilde riflens</Line>
+   <Line>raver rekkverkene ifører injuriere issa røres</Line>
+   <Line>rein iljene ransakelsens innkreve reiseklare</Line>
+   <Line>reiseveien ruskende refill ressurslederen</Line>
+   <Line>revansjen riksarkivaren innvandreres innkalle</Line>
+   <Line>indisierekke indeksverdiene rillene rufferi</Line>
+   <Line>innvåneren randkurvens relansere rad russernes</Line>
+   <Line>rå indifferens indianerkvinnen røske innsjø</Line>
+   <Line>innkjørselen rederier reservedelens israelsk</Line>
+   <Line>røk innvandre idene relanserer indekse rånas</Line>
+   <Line>ivrernes indeksa innvarsla idenes ivrer rives</Line>
+   <Line>islenderne illskrike innved reverens innkreve</Line>
+   <Line>rønna irra rikke rørsenderen revideres inderes</Line>
+   <Line>renneløkke reisende randverdiene råser rivalinnen</Line>
+   <Line>ridderens røffelen ruskenes innvia rekna riflene</Line>
+   <Line>irakeren risler innavlens rekne innkrevd risle</Line>
+   <Line>ruinerer rivalinnene resurslaus inn resursrik</Line>
+   <Line>insider revefellene råda innøve russiske innvia</Line>
+   <Line>røske residens råe raller innlevelsesevnen</Line>
+   <Line>innfallenes rødkledd røffe rikskanslernes</Line>
+   <Line>islandiserer reinlav issvuller rønnerens rava</Line>
+   <Line>innskrenker raka rekka rakefiskens ilk råvaren</Line>
+   <Line>renkene red innøva inkl innvia innkjørsel</Line>
+   <Line>innvånerne ressurs radikalernes resurser injuriene</Line>
+   <Line>innskreven innfallsvinkel resursvern riksarkivaren</Line>
+   <Line>rørende innlever reirene indeksene råkene</Line>
+   <Line>referanse illuderer rikkes ruinerende iliader</Line>
+   <Line>illsvien residensen ruses riksråd reisefellene</Line>
+   <Line>rakka resursledelsen reddikenes irra isene</Line>
+   <Line>rennenes inderens radens rauka inkluder innelukkede</Line>
+  </Level>
+  <Level>
+   <NewCharacters>oæ</NewCharacters>
+   <Line>ærenes ordskilleren ordens ofsene ordens orva</Line>
+   <Line>oldefedre orenes okseleveren overvelde overvurderende</Line>
+   <Line>olivenlundens overdrivelsens ovn overkjeven</Line>
+   <Line>orreleikens overveielser overveldende ordskilleren</Line>
+   <Line>okulere ordrenes onklenes overlesse offisersskolers</Line>
+   <Line>okselever oljekurs overser offensivens ære</Line>
+   <Line>ordleik ære osloavis oldefedrenes odører ok</Line>
+   <Line>overskrive overskjønn offiseren æressak orkanvind</Line>
+   <Line>ovafor overdel ordinær ordskilleres overvinnes</Line>
+   <Line>ollenes oddens æressaker ovalene æresfølelsens</Line>
+   <Line>overskred overlevendes overdrive olivenoljens</Line>
+   <Line>orddannelse ordinasjonens orddiareens orlon</Line>
+   <Line>æresfølelsens odelsloven oljereservoarer overskrives</Line>
+   <Line>olivenens oksekalvene orkideenes æresrunde</Line>
+   <Line>ordonnans overførselens ordskillerens osende</Line>
+   <Line>ordener orene os oldrene oldefar over offensivens</Line>
+   <Line>ordinanden onanerer oksidasjonene okulara</Line>
+   <Line>okse oljer overjordiskes overvar okseskinn</Line>
+   <Line>odla oksidene oljeraffineri overkjevenes oksidasjoner</Line>
+   <Line>oksekalvens onklenes ovaler ordenskansleres</Line>
+   <Line>ordkløveri oljenes æsj overreaksjon ærdun</Line>
+   <Line>offensiv overdriver ovasjoner oseana overlærere</Line>
+   <Line>oldsakens orre overføres oralene overnasjonal</Line>
+   <Line>ærekrenkelser ordinansen æren orkideen ovasjonenes</Line>
+   <Line>oral overdoseres odelssønn offisersskoleelev</Line>
+   <Line>oljelunden okularene oden overallene ærendssveinens</Line>
+   <Line>ordskillere offiserens okkluderer æsa ordenssans</Line>
+   <Line>overreaksjons æreløs ovnsveden overførsla</Line>
+   <Line>ærefulle oldefedre offiserer oksekalvene okseklauven</Line>
+   <Line>orenes onklenes overraske oldsakens oksidasjoner</Line>
+  </Level>
+  <Level>
+   <NewCharacters>cm</NewCharacters>
+   <Line>medisinmennenes moloer makroøkonomiske månenes</Line>
+   <Line>mellommenns mimikken millionærene mandarinene</Line>
+   <Line>melk munnlås colliene morsarven medisinene</Line>
+   <Line>museal miserens mediefokuserer mandrillens</Line>
+   <Line>menneskeressursene menneskeressursens markedsundersøkelser</Line>
+   <Line>mesenens minussider måkes musiker medias middelskolers</Line>
+   <Line>menisk mølla makrodefinisjonens malnummer</Line>
+   <Line>malerne menneskefødens målfører cøliaki morosamme</Line>
+   <Line>cosec meieri cancanens misjonskalenderes minikanalen</Line>
+   <Line>markedsandelens munkene csardasene musikere</Line>
+   <Line>masomn molok meddommer mønja cruisere musikerens</Line>
+   <Line>moderland malen maroder cellulosen makronene</Line>
+   <Line>marsjallen mannssida medfølelsenes muddermaskinens</Line>
+   <Line>muldens massemordere mesallianser miljøvernsaken</Line>
+   <Line>milliardærer møllernes mjølkende morfinen</Line>
+   <Line>mørkna markedssjefenes m mon menneskas musikkskolene</Line>
+   <Line>månedslønnens melde misunnelsen morløs marmorkuler</Line>
+   <Line>mekka melonene målefeilenes meridianen meisen</Line>
+   <Line>misjoneres månedslønnens månekrone mno minsker</Line>
+   <Line>medfører munndel markedslederne monomanens</Line>
+   <Line>cøliakernes mediefokuseres melkemenns crescendoen</Line>
+   <Line>mellomøre marken minnemedaljer makedonere</Line>
+   <Line>momsen caser maksle markedssjef månedslønn</Line>
+   <Line>mils markedsledende casa modemer melder mimisk</Line>
+   <Line>manuskonkurranse molokens makadamiserer mimer</Line>
+   <Line>meddeler moskus mellomalder morfin moromannens</Line>
+   <Line>middelskolers månefiskens makrodefinisjoner</Line>
+   <Line>minna memorere mausere marmorkulene musklene</Line>
+   <Line>makadamiser mal målskriverens maksimalverdiens</Line>
+   <Line>minikanalene mislederen monarken markeskjell</Line>
+  </Level>
+  <Level>
+   <NewCharacters>pq</NewCharacters>
+   <Line>påfunna perm pureene permisjoners planla peka</Line>
+   <Line>pi polarseksjonens provoser pilla pioneråndens</Line>
+   <Line>plasser papirlapper pendlerens plenens panoramaene</Line>
+   <Line>profesjonell permisjonssøknaden pelsverk prinsene</Line>
+   <Line>prioren plansjer paneres polemikerens promillekjøreren</Line>
+   <Line>prisfordel personenes peruaneren pursere pinoler</Line>
+   <Line>premisser påkjørselen prunke proskripsjoners</Line>
+   <Line>produksjonsformer popen pareser pønska prosesjoner</Line>
+   <Line>prinsippdiskusjonenes prøveperiode posjere</Line>
+   <Line>påske pleonasmens presedensens propanen puddelen</Line>
+   <Line>pasifiserer pikenes pardon pluraler personalsak</Line>
+   <Line>pariaen prikkommandoene palesuppe palmekledd</Line>
+   <Line>posisjonsanviserens pluraler plasserer pensjonskasser</Line>
+   <Line>parken peppermø persepsjonenes pipene primærproduksjon</Line>
+   <Line>plandivisjonen podier prislappens padleåren</Line>
+   <Line>proporsjonene påskuddene praksisperiodene</Line>
+   <Line>passersedlene pjokkenes pasjaene produksjonsmodell</Line>
+   <Line>plener projeksjonens pasifisme pappaenes plur</Line>
+   <Line>pepper pacemakere pansera pausen produksjonsprofiler</Line>
+   <Line>personalenes proklamere posesuppe persienne</Line>
+   <Line>prekær paddekummen pinslenes perifraser puser</Line>
+   <Line>pukkverk pareser produksjonsperiodens proskripsjonenes</Line>
+   <Line>personifiseres perikum palladiene pionerånden</Line>
+   <Line>promille palen pappeska pleiefedrene pornoens</Line>
+   <Line>peispipa produksjonsfeilene pussemaskiner</Line>
+   <Line>primærkommunen parafrasere produsere pilskassene</Line>
+   <Line>padde panserskip passivene panoramavinduer</Line>
+   <Line>pensjonere pilarene pulverform profan prikken</Line>
+   <Line>pilen primærkommunens persepsjonen popler</Line>
+   <Line>påkens paranoikere poder pallene papirformer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>wt</NewCharacters>
+   <Line>tendert tukta takkonstruksjon turistkontors</Line>
+   <Line>trollete tekstmønsterets treff transportplanens</Line>
+   <Line>totalisolasjonenes troppen tilpliktet trådløst</Line>
+   <Line>tankfarten tilskuerplass tannet trafikksjefenes</Line>
+   <Line>tilsådd tapet tømmerlassets tåpent teoretikernes</Line>
+   <Line>tredjeperson wienernes tussmørk termosflasker</Line>
+   <Line>tusen trukket terminlistene tariffrevisjonene</Line>
+   <Line>tart turistattraksjonens turistsjefs tommestokk</Line>
+   <Line>turenes toppspillere trapeskunstnere turistruta</Line>
+   <Line>toktet telekommunikasjonssentrenes titulaturer</Line>
+   <Line>teskeiene trafikkdirektører tuvens trålende</Line>
+   <Line>trailersjåførene tusenet trottel tollkasserernes</Line>
+   <Line>trøe taslet trekkferjene tankskipet windsurferes</Line>
+   <Line>transportøren tanne teleindustri trekktidens</Line>
+   <Line>terroraksjoner trives tennsatsen trappens</Line>
+   <Line>toppkampen turnipsen talskvinnens tiendedeler</Line>
+   <Line>tsjekker trommes trattene tverrmål translatørene</Line>
+   <Line>transparensens treets toppformens tilsvarende</Line>
+   <Line>terriernes worcestersausen tak tømmermannens</Line>
+   <Line>tollepinnen topptidens tonsurer talja tunika</Line>
+   <Line>trimrom tarpon testfunksjonsrom tverrsnitt</Line>
+   <Line>trekktid tanken tidsnivåene tidsoptimale taktikkmøtets</Line>
+   <Line>testament tørkeperioden terminlistenes tappelukens</Line>
+   <Line>tarmenes tråkkes taksperre taut tapetlimet</Line>
+   <Line>takstmann temperaturenes takluker terapeutiske</Line>
+   <Line>telelinsa tantalet tilsettende temperaturskalaen</Line>
+   <Line>tiendedels tutleren testrapportene teatermiljøets</Line>
+   <Line>trilleren termlista tippoldemora wankelmotoren</Line>
+   <Line>tallskiven trettifire turnuskandidater tiltalepunkter</Line>
+   <Line>trosse transportselskapenes trafikksentraler</Line>
+  </Level>
+  <Level>
+   <NewCharacters>bp</NewCharacters>
+   <Line>bananplantene barnevernsarbeidets boikottrusselens</Line>
+   <Line>partia boklista perm publikumsleders postombærerne</Line>
+   <Line>bebudelsene børstens bladluskolonien botilskottet</Line>
+   <Line>presisert blomsteroppsats beinrad bokstavmønstret</Line>
+   <Line>biometri borvinde billedband bakekunstens</Line>
+   <Line>blasfemien bilarbeider bjerkelundens bruddsåret</Line>
+   <Line>brukermiljøet pensjonistjobb petroleumsretta</Line>
+   <Line>banalitet boresektoren prislistens presseseminaret</Line>
+   <Line>brennemerkets postmestere protestert bulletiner</Line>
+   <Line>bredsiden biotop bakketjeneste barnepikeekspedisjonene</Line>
+   <Line>persondiktaturet partistrid brevkontaktens</Line>
+   <Line>boikottrusselen brillemakere plukke bedåra</Line>
+   <Line>blindpassasjer prediksjon blakret politurens</Line>
+   <Line>bønnemøta beånder bendelbåndets perverst paraboliske</Line>
+   <Line>polarkraften ballistiske bevisopptakets boltefestet</Line>
+   <Line>butan bjørkefrø besøksvisum pressestoffet</Line>
+   <Line>pantebokas blokksenterets blindtarmbetennelser</Line>
+   <Line>boremaskina perfid banenes bekrefta pentan</Line>
+   <Line>bensinstasjonenes bomullsdottene promenerer</Line>
+   <Line>bakkesoldat polarekspedisjonenes bruddskadene</Line>
+   <Line>blindeskolens bæretillatelser benmassens potpurrier</Line>
+   <Line>pelikaner profeter barndomsepisodene pionerprosjektets</Line>
+   <Line>påtaleunnlatelse bankkunder pirkerier buldrebassene</Line>
+   <Line>brevordnerne påkravene baketidens bolten pomadiseres</Line>
+   <Line>brettenes barneklinikk busstoppene barnevernsutdannelsen</Line>
+   <Line>båtkjøl barnepleierskene pelsfrakk badetid</Line>
+   <Line>passasjerfart potensrekkene banklån bukes</Line>
+   <Line>bataljonssjefenes påskefestens prisnemnda</Line>
+   <Line>pensjonistforbund bladskriver paktsblodet</Line>
+   <Line>polarland prinsen bier beæres polarstjern</Line>
+  </Level>
+  <Level>
+   <NewCharacters>yx</NewCharacters>
+   <Line>xerofytter ytreprodukt ytreløperne ymtets</Line>
+   <Line>ytterfrakkens ytterfrakk yard ypper yrkesutøveres</Line>
+   <Line>yterens yrkesskolers ytelsenes ytterdørene</Line>
+   <Line>yrkesrollens ydmykte xantippens yrkessykdom</Line>
+   <Line>yteres ynke yttersida xantippene yppersteprester</Line>
+   <Line>ylt yrt ydmykelsene yen yrvaken ymis yppa</Line>
+   <Line>ydmykelsene yrkesmedisinske yttrium xenofobi</Line>
+   <Line>yttermur xeroformen yrkesstatusen yrker yrkesrollen</Line>
+   <Line>yrkesfrekvens yrkesskade yankee yppersteprester</Line>
+   <Line>yrkesmanns yrkessøsteren xeroformen yster</Line>
+   <Line>yrkespraksis yrkessykdommene yrkesaktive yrkessjukdom</Line>
+   <Line>yrkeskvinnen ydmykelsens yrkesetikk yrkesmoralen</Line>
+   <Line>ytterklærnes yppersteprestene yndet xantippen</Line>
+   <Line>ytreløper yterne yrka xantippene yrkesdeltakelsen</Line>
+   <Line>ytret ytreprodukt ytterkanten yrkessjukdom</Line>
+   <Line>yenkurser yvent ymtene yrkesfrekvens ytterkanter</Line>
+   <Line>yrende ytterdører ypsilonene ytelsens yrkesrollen</Line>
+   <Line>yndens ymtens ynktes yrkesutøvernes yternes</Line>
+   <Line>ymta yankeen yrkesaktivitetens yrkesretta</Line>
+   <Line>yter ynda x yrkesretta yrkesfrekvens yrka</Line>
+   <Line>ydmyke yrkestitlene ypperst xerofytter ymtene</Line>
+   <Line>yrkeskompetansens yrkesskadd ytere ytterdørenes</Line>
+   <Line>yrkespraksis yrkeslivet yvne yrkesutøverens</Line>
+   <Line>yrkessøster x xerofyttene yrkesnevrosen ymtens</Line>
+   <Line>ytterbiumets yrkesteorien yrkesteoriens ytterbium</Line>
+   <Line>yrkesmoralens yrkesteorien yrkesmennenes yrkesteoretiske</Line>
+   <Line>ytterklær yrkesmennenes ytterdør xantippe</Line>
+   <Line>yd yver yttersiden yrkesbrødrenes ynkes ytterparti</Line>
+   <Line>yrkesmedisinske yternes yrkesaktivitetens</Line>
+   <Line>xerofytter ytterfrakkens yrkesskolers yrkesbroren</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>zairerens zoofytten zimbabwerens zambier zairer</Line>
+   <Line>zaireres zoomer zulukaffernes zoofytt zoom</Line>
+   <Line>zuluene zebu zulu zimbabwerens zimbabwisk</Line>
+   <Line>zoomlinsens zoomlinsa zoofyttene zeppelineren</Line>
+   <Line>zooma zimbabweres zaireren zoom zoofytt zuluens</Line>
+   <Line>zoofyttene zeppelinerens zairisk zimbabwerens</Line>
+   <Line>zambierne zulukaffer zeppelinerens zoofytten</Line>
+   <Line>zambiernes zeppelineres zimbabwisk zairer</Line>
+   <Line>zambiere zeppelinernes zeppelinere zeppelineren</Line>
+   <Line>zimbabwerne zairerens zebu zambieres zambier</Line>
+   <Line>zairiske zuluens zeppelineren zoomlinsens</Line>
+   <Line>zoofytt zulu zambierens zulukafferen zwecken</Line>
+   <Line>zeppelinernes zeppelinerens zulukaffer zeppelinerne</Line>
+   <Line>zuluen zuluen zambiske zoom zebuen zimbabwere</Line>
+   <Line>zairernes zeppeliner zimbabwer zuluene zimbabwer</Line>
+   <Line>zulukaffer zimbabwernes zebu zooma zwecken</Line>
+   <Line>zairerne zoroaster zimbabwerens zoomet zuluens</Line>
+   <Line>zoofytt zulukaffere zoomlinsens zoroaster</Line>
+   <Line>zimbabwernes zoomens zebuen zeppeliner zoofytten</Line>
+   <Line>zulukaffer zulukafferne zebuen zebuens zimbabweren</Line>
+   <Line>zoomlinsa zweck zimbabwisk zairisk zambierens</Line>
+   <Line>zimbabwiske zaireren zweck zulukaffernes zoomlinsa</Line>
+   <Line>zulukaffer zoomen zootomiske zambieren zeppeliner</Line>
+   <Line>zeppelinernes zulukafferens zebuens zoomer</Line>
+   <Line>zulukafferen zoomen zoofyttens zweckens zoofytt</Line>
+   <Line>zimbabwerens zwecken zoofytten zebuen zambieren</Line>
+   <Line>zeppelinere zanzibariske zoomen z zulukafferen</Line>
+   <Line>zimbabwisk zambierens zimbabweren zool zulukafferes</Line>
+   <Line>zimbabwernes zoomens zimbabwernes zambiere</Line>
+   <Line>zoomlinsa zambier zulukafferen zaireres zebu</Line>
+  </Level>
+  <Level>
+   <NewCharacters>JF</NewCharacters>
+   <Line>Fa Jeløya Fosnes Fredrikstads Frionor Frieslands</Line>
+   <Line>Jorunns Jernbanetorvet Jannicke Frei Jostedalsrypas</Line>
+   <Line>Javas Follos Fauskes Fosslandsosen Fillefjells</Line>
+   <Line>Japan Jean Fouriers Fiji Farsund Jon Foundland</Line>
+   <Line>Forsand Fauskes Førde Fjærland Jemens Fyns</Line>
+   <Line>Fitjar Feviks Jacobideterminant Førdes Fornebus</Line>
+   <Line>Jervells Jølstra Jektvik Jeltsin Furuly Fiskeridirektoratets</Line>
+   <Line>Jerusalem Flatdals Flandern Fiane Jannes Fornebus</Line>
+   <Line>Joses Fiat Fourier Fornebus Jorsalfar Fennia</Line>
+   <Line>Frodes Fubinis Fjellstrands Judea Fiat Fønikia</Line>
+   <Line>Jobs Fremskrittspartiet Jølstra Jelsas Forus</Line>
+   <Line>Jacobideterminantens Fauskes Flekkefjord Finlands</Line>
+   <Line>Fp Flaktveits Fåvnes Fonnes Francisco Jemen</Line>
+   <Line>Jaffas Færøyene Jims Farmand Jenssens Fives</Line>
+   <Line>Jenny Joses Flatdals Fimreite Jonsvatnets</Line>
+   <Line>Femundsenden Friesland Jan Flatvalsundet Jøvik</Line>
+   <Line>Finneids Fiksdal Frøskeland Five Fjellstrand</Line>
+   <Line>Førlands Fjalers Jud Fedje Jødelands Jeriko</Line>
+   <Line>Folkedals Jakobsen Jannickes Fredrikke Fellesbankens</Line>
+   <Line>Jostedalsbreens Jakobselvs Furnes Finnøy Frøylandsdals</Line>
+   <Line>Fiats Flatåsen Frøskelands Finnair Jim Fjærland</Line>
+   <Line>Fiskarstrand Foldereids Flaknan Flåklypa Jean</Line>
+   <Line>Fleslands Fenstads Jose Jonasens Jemen Fredrikstad</Line>
+   <Line>Jonnys Fredriks Fortrans Furulys Jancos Jensen</Line>
+   <Line>Fenstad Fellesdatas Jørpeland Julien Josefs</Line>
+   <Line>Judea Førdesfjorden Jonas Fridtjof Firdas</Line>
+   <Line>Fauske Filmnet Follos Jack Føresviks Ferraras</Line>
+   <Line>Frankrike Finse Juds Froans Jektvik Forus</Line>
+   <Line>Falsters Fornebu Finnfjordbotns Jerikos Jørstad</Line>
+   <Line>Fleslandsveien Jacobimatrise Farsund Jørn</Line>
+  </Level>
+  <Level>
+   <NewCharacters>AØ</NewCharacters>
+   <Line>Aden Ararats Atlanterens Alfred Alvdals Aasmund</Line>
+   <Line>Ankenesstrand Adventfjordens Azorenes Appletalks</Line>
+   <Line>Østbanen Aldus Anettes Arild Austafjords Alberta</Line>
+   <Line>Alaskas Afrikakysten Antonio Armenias Astrid</Line>
+   <Line>Akersbanene Atna Andebus Aukrusts Albany Atlantpaktens</Line>
+   <Line>Arnulf Østersund Alster Aristoteles Asias</Line>
+   <Line>Antonios Attia Aursletta Aurdal Aureosen Austin</Line>
+   <Line>Annes Arnljots Alverstraumens Amunds Østlandsområdets</Line>
+   <Line>Øyvind Øyestads Austisen Almeria Ankerveiens</Line>
+   <Line>Arnt Ørstas Arizona Allers Ammans Arvids Antoinettes</Line>
+   <Line>Austråtts Aronsen Andresen Anastasia Arnold</Line>
+   <Line>Aden Albertville Akerselvens Almeria Arlanda</Line>
+   <Line>Asterix Ararat Almas Arntzen Alverstraumen</Line>
+   <Line>Aursjøen Atlantpakt Axel Aquinos Østfolds</Line>
+   <Line>Anette Axels Alcatraz Askøys Adventdalen Aurdals</Line>
+   <Line>Amandas Akaia Andersson Alices Audnedal Alexandrias</Line>
+   <Line>Aremarks Ankara Acem Asles Azorenes Azerbajdsjans</Line>
+   <Line>Andesfjellenes Austefjordens Akaias Atlanta</Line>
+   <Line>Andesplatåets Øysvoll Aurdalsdammen Øylo Atlasfjella</Line>
+   <Line>Aslak Øverlands Andesfjellas Adventdalens</Line>
+   <Line>Atlasfjellene Averøys Aukras Øysvoll Arabia</Line>
+   <Line>Arizona Atlanta Ølve Arkansas Ammans Andøya</Line>
+   <Line>Atlantis Arbeiderbladet Aklands Østersunds</Line>
+   <Line>Axel Akababuktas Ørland Aureosens Atlantpakta</Line>
+   <Line>Akilles Austenå Amins Antwerpen Andreassens</Line>
+   <Line>Atnbrua Amsterdam Ørnulf Østerås Øystein Østerrike</Line>
+   <Line>Austmarka Autocads Amerikas Aarons Aurland</Line>
+   <Line>Adresseavisen Akaias Øversjødalens Austevoll</Line>
+   <Line>Atkinson Amandas Øysletta Aina Aurdal Adolfson</Line>
+   <Line>Andresen Alcatels Øivinds Øysteins Akersbanene</Line>
+  </Level>
+  <Level>
+   <NewCharacters>KD</NewCharacters>
+   <Line>Dalbøs Kysnesstrand Karmsunds Kvernes Kvanndals</Line>
+   <Line>Delfis Kamerun Dyfjord Dusavik Kennedy Komsomols</Line>
+   <Line>Konsmos Kievs Kambo Kvalfjords Drevvatn Kain</Line>
+   <Line>Kerala Drammensveiens Koranen Djupevatns Dynos</Line>
+   <Line>Korsvolls Kremls Kate Kolbjørns Kokstad Komsomol</Line>
+   <Line>Dalsøyras Kadisons Kviterusslands Diesen Drøbaks</Line>
+   <Line>Kjøpsvik Kacis Krokeide Delfis Kodal Dakota</Line>
+   <Line>Kobe Dublin Donald Daniel Kristiansen Karmsunds</Line>
+   <Line>Kalevala Ketil Dubrovnik Kanada Karmøy Dølemo</Line>
+   <Line>Kristiansand Kari Dakars Kiribati Konstantins</Line>
+   <Line>Klæbus Denver Kamerun Kairos Kårstøs Kilimanjaros</Line>
+   <Line>Kotsøys Kiels Kilimanjaros Kapitol Karibia</Line>
+   <Line>Karlstad Kastrup Karsteins Kurts Detroits</Line>
+   <Line>Klaus Dalslands Kaldbakken Dalbø Kreta Drøbaksundets</Line>
+   <Line>Konnerud Kristoffersen Kokelv Kystdirektoratet</Line>
+   <Line>Knudsens Kleppstad Drøbaks Kjølsdalens Kristiansen</Line>
+   <Line>Kremls Datsun Kroksjøen Darcys Disenås Kolvereid</Line>
+   <Line>Kameruns Darbus DAK Drammensveiens Katmandus</Line>
+   <Line>Diors Kains Dalmatias Dubrovniks Dublin Kråkerøy</Line>
+   <Line>Diners Kacis Klondykes Daniels Karsten Karsteins</Line>
+   <Line>Krein Kokelvs Kobes Dalsøyra Kysnesstrands</Line>
+   <Line>Kjæs Dombås Dyrdal Kjelsås Donau Dirdalen</Line>
+   <Line>Kairo Kinsarviks Knubedalsrenna Kolltveit</Line>
+   <Line>Krækkjas Kolbjørnsviks Kaare Konnerud Klemetsruds</Line>
+   <Line>Datatilsynets Kvås Kårstøs Dalarna Danmarks</Line>
+   <Line>Dolomittenes Kvås Dikemark Dyfjord Kroksunds</Line>
+   <Line>Kain Kristoffersen Kyrkjebøs Katrines Koranens</Line>
+   <Line>Kodals Didriks Kusbass Kilimanjaros Kråkerøy</Line>
+   <Line>KrF Ketil Kiels Davids Kvåls Kårstø Dresden</Line>
+   <Line>Krøderen Ken Dovrefjells Dølemos Karibias</Line>
+  </Level>
+  <Level>
+   <NewCharacters>LS</NewCharacters>
+   <Line>Lappland Sørarnøys SØ Sn Slapøys Slapøy Storvik</Line>
+   <Line>Lesunds Liouvilles Sykkylvens Lassemoens Sidney</Line>
+   <Line>Sildkovens Stabbestad Leirdals Santalistan</Line>
+   <Line>Lademoen Sandnessjøen Sidkovens Saksemarkas</Line>
+   <Line>Sjuosjavris Seierstad Sævelandsviks Statfjordfeltet</Line>
+   <Line>Split Leibniz Stordal Storebrand Silsands</Line>
+   <Line>Laksefjord Leverkusens Sørbuøy Lierne Simensen</Line>
+   <Line>Steinstøs Skodjes Storemolla Leibniz Storesund</Line>
+   <Line>Slottsplassens Salsbruket Skorovatns Landfalløyas</Line>
+   <Line>Straume Syveruds Storemollas Skavnakks Laukvik</Line>
+   <Line>Suldalsosens Saloniki Stalins Sørlandsbanens</Line>
+   <Line>Sydkorset Stryn Sørfjordens Sandvollan Saura</Line>
+   <Line>Limfjordens Svanvik Lardals Skammesteins Laksefjords</Line>
+   <Line>Sn Lausannes Skiftun Staubøs Lerresfjord Lilleasias</Line>
+   <Line>Santas Laksefjord Sidsel Storeskards Saltstraumen</Line>
+   <Line>Laupstads Storebrand Slottsplassen Saudas</Line>
+   <Line>Svanviks Sofie Lauderdale Storekalvøy Litlakalsøys</Line>
+   <Line>Slottsplassen Lurviks Stokkøy Lofotens Selbustrands</Line>
+   <Line>Skoppum Lillians Santalistan Skjettens Sotras</Line>
+   <Line>Skorpos Sandøybotn Storviks Sortlands Lakselvs</Line>
+   <Line>Sandbakk Sandved Skillebotn Løfallstrands</Line>
+   <Line>Sems Lambertseter Stanfords Sjuosjavris Leknes</Line>
+   <Line>Sovjetunionen Larkollens Sævareids Lonkans</Line>
+   <Line>Laplace Ljubljana Sjoas Sinai Sørfolds Steinars</Line>
+   <Line>Synnøves Simons Saudi Sausvatn Laupstads Storlien</Line>
+   <Line>Senja Lardals Lr Sunnmørsbankens Sivert Skorovatns</Line>
+   <Line>Sidkoven Spro Stuvlands Sinsenkryssets Leeds</Line>
+   <Line>Sunnylvens Sandanes Snarum Somalia Søfteland</Line>
+   <Line>Sausvatns Sandefjord Sennesviks Laupstads</Line>
+   <Line>Spjelkavik Sauøy Sørvær Leksvik Suldals Sn</Line>
+  </Level>
+  <Level>
+   <NewCharacters>IÅ</NewCharacters>
+   <Line>Italia Inndyrs Ålvik Ikjefjords Åsenfjord</Line>
+   <Line>Inntian Irian Isfjordens Åserals Åmotsdal</Line>
+   <Line>Islamabads Ivelands Åsmarka Åkra Isabella</Line>
+   <Line>Åsestrandas Isfjorden Åfjord Årland Årviksand</Line>
+   <Line>Irskesjøen Inndyrs Isabella Ivars Inverness</Line>
+   <Line>Indokina Io Innsmøla Åmotsdals Ibestad Ådnøy</Line>
+   <Line>Ålvik Irskesjøen Indiana Iversen Årlands Idses</Line>
+   <Line>Iowa Innsbrucks Åsestrandas Ånstads Ibsens</Line>
+   <Line>Isdalstø Isle IAF Innsmøla Åskollen Irlands</Line>
+   <Line>Iata Indias Isles Isabellas Ålvundfjords Innsmølas</Line>
+   <Line>Ådnøys Ånneland Innsmøla Ådnøys Åsenfjords</Line>
+   <Line>Ålviks Idse Israel ILF Åneby Åsmarka Isdalstø</Line>
+   <Line>Iveland Åsestrandas Iberias Åfjord Inndyrs</Line>
+   <Line>Indokina Ikornnes Inntian Islands Iberia Åsmunds</Line>
+   <Line>Irlands Illinois Årsteinøys Ålesund Iversen</Line>
+   <Line>Åserals Åpta Informs Ådals Ivar Åses Italia</Line>
+   <Line>Ånstads Innset Iversens Åsenfjords Islamabads</Line>
+   <Line>Ibsen Ivelands Iberia Ådal Island Illevollen</Line>
+   <Line>Iberia Indonesia Åmotsdals Ålesund Åses Istanbul</Line>
+   <Line>Ikjefjord Indianas Åptas Island Ibestad IAF</Line>
+   <Line>Årstad Åskollen Irian Åndalsnes Åmli Ålvundeids</Line>
+   <Line>Åraksbø Åses IK Åfarnes Åkra Ibestad Ivans</Line>
+   <Line>Inderøys Isfjordens Ålesunds Isabella Ålvik</Line>
+   <Line>Åpta Ålvundeid Isdalstø Ivans Ånneland ILS</Line>
+   <Line>Ibiza Ålesunds Ildlandet Idse Åram Inntians</Line>
+   <Line>Åneby Istanbuls Ålvundfjords Åsmarka Ålvik</Line>
+   <Line>Istanbuls Årstads Årvoll IFA Iversens Ivars</Line>
+   <Line>Ålvundfjord Ålvundeids Ikaros Åfjord Israel</Line>
+   <Line>Iata Inverness Iowa Ålfotens Ålviks Iberias</Line>
+   <Line>Åsestrandas Åraksbøs Åskollen Ålesunds Irak</Line>
+  </Level>
+  <Level>
+   <NewCharacters>EN</NewCharacters>
+   <Line>Erlandsens Eirikssons Noresunds Edvard Nilsons</Line>
+   <Line>Etne Esseltes Nordmarka Newsweeks Eiksmarka</Line>
+   <Line>Nordsjonas Nordfjord Nesbyens Essex Europas</Line>
+   <Line>Nordmøre Nessets Edland Emmas Nessane Neidens</Line>
+   <Line>Eiknes Namnås Nydalen Etterstad Eikelund Edvard</Line>
+   <Line>Norddyrøy Namibia Espedalen Espelands Nesnas</Line>
+   <Line>Norzinks Nærøys Nidelva Nerlandsøys Nordkalottens</Line>
+   <Line>Nordlandspostens Nerveis Essex Ericssons Norsjø</Line>
+   <Line>Escort Elvarlis Everests Eiliv Eidfjord Nordsjona</Line>
+   <Line>Nerveis Espa Newtons Nidelven Nanset Nassaus</Line>
+   <Line>Eikelunds Nannestads Nairobis NASA Nordmela</Line>
+   <Line>Eikesdalsvatnets Nedstrands Nykirke Emma Evy</Line>
+   <Line>Eilivs Norzink Nordfjordeid Nordkinn Eline</Line>
+   <Line>EDI Norddyrøys Neverdals NEF Neslandsvatn</Line>
+   <Line>Nesøya Nordfjordeid Efesos Elster Eidsvollsmenn</Line>
+   <Line>Etterstad Nellys Nerlandsøys Nidelva Erviks</Line>
+   <Line>Enebakknesets Nidelvens NS Nairobis Nato Norrbottens</Line>
+   <Line>Eiksmarkas Nassaus Nesodden Nassaus Erviks</Line>
+   <Line>Ekkilsøys Emilies NKS Nordliland Novells Nidelvens</Line>
+   <Line>Nordostpassasjens Newfoundlands Nore Eikesdalsvatnet</Line>
+   <Line>Evelyn Nordmelas Nordkapps Nardoslettas Nidarvoll</Line>
+   <Line>Nordmarkas Nøss Normandies Eufrat Norsars</Line>
+   <Line>Eseks Nyland Nations Nansen Naustbukta Eikefjord</Line>
+   <Line>Nanna Njords Even Eikefjords Norskerennas</Line>
+   <Line>Enebakk Eriksen Elysion Narestø Nordmannsets</Line>
+   <Line>Nesøyas Nottveit Elsfjord Norddalsfjorden</Line>
+   <Line>European Emilie Ekkilsøys Nesbru EF Eidsvollsmennenes</Line>
+   <Line>Nydalen Nordreisas Nikkeby Elfenbenskysten</Line>
+   <Line>Everest Nordreisa Eikelandsosens Newfoundlands</Line>
+   <Line>Estlands Neva Elsa Enebakks Eikefjords Nordsmølas</Line>
+  </Level>
+  <Level>
+   <NewCharacters>VU</NewCharacters>
+   <Line>Vormsunds Vietnam Verdals Valsøyfjord Vuku</Line>
+   <Line>Umeås Vestbredden Vallersunds Vardøs Vardø</Line>
+   <Line>Verma Vannylven Valetta Vardal Vidars Ulysses</Line>
+   <Line>Vestlandets Uranus Uppsala Vinjeøras Vancouver</Line>
+   <Line>Vinjeøra Vråliosens Vokkøy Vatnestrøm Ulstein</Line>
+   <Line>Vestsmøla Volbu Ullensakers Vormedal Vinjeøra</Line>
+   <Line>Utviks Vatikanet UNEDA Unni Vormsunds Vorma</Line>
+   <Line>Ulf Vanse Vevelstads Underdal Uranus Ustaoset</Line>
+   <Line>Verrabotns Utåkers Vassfaret Vardøs UVF Vormsunds</Line>
+   <Line>Vanvikan Ullensakers Vivian Veitastrond Ulf</Line>
+   <Line>Ullerns Vivaldi Uløybukt Vartdals USAs Vassdalsviks</Line>
+   <Line>Uløybukt Ullensakers Vardals Vannareid Voldas</Line>
+   <Line>Utvik Verma Venezias Vrådals Uranus Vråliåsen</Line>
+   <Line>Vallaviks Undredal Ullmanns Vikersunds Vesuvs</Line>
+   <Line>Valsøybotns Vestfold Voldas Vadsets Voksenkollen</Line>
+   <Line>Vinland Uvdal Vardøs Vikebukt Ullevåls Volvo</Line>
+   <Line>Valdresflyis Utstein Veldres Verrans Ullmann</Line>
+   <Line>Ulysses Valsøyfjord Vistdals Vannareid Vækerø</Line>
+   <Line>Ulset Vestlis Våler Ulrikens Vinjes Uppsala</Line>
+   <Line>Vikersund Volvos Varntresk Unset Vinjeøra</Line>
+   <Line>Vadsets Uløybukt Verdal Voldas Ulvøyas Vinstra</Line>
+   <Line>Viknas Vibekes Vivians Ulvsjøen Vestindia</Line>
+   <Line>UDA Verdals Vereide Ulvøya Ulvøya Vadsø Unifil</Line>
+   <Line>USA Ulrikens Vækerø Vestfossens Unifil Vaterlands</Line>
+   <Line>Vanvikan Valnesfjord Venezia Vestfold Venturas</Line>
+   <Line>Veitrafikkloven Vemundsjøens Valnesfjord Ualand</Line>
+   <Line>Venturas Vandve Vatnestraums Veitvet Vatnestrøm</Line>
+   <Line>Unescos Veitvets Vinjes Varntresk Vestfold</Line>
+   <Line>Vivaldis Vestby Vandves Værøy Uvdals Vemundsjøen</Line>
+   <Line>Vikedal Vesaas Vallnesfjords Vassdalen Vinje</Line>
+  </Level>
+  <Level>
+   <NewCharacters>IR</NewCharacters>
+   <Line>Rolf Røykenviks Ibsen Inndyr Isdalstøs Islamabads</Line>
+   <Line>Risørs Reinli Reidars Romerikes Romsdals Reuters</Line>
+   <Line>Rebbenes Risvollans Roald Rudlås Reinsvolls</Line>
+   <Line>Røyksund Innsets Røstlandet Røykenviks Raudsand</Line>
+   <Line>Romerrikets Rebbenes Reipås Reinsvoll Renaults</Line>
+   <Line>Rud Rysstads Romeos Røvær Reinstad Inderøy</Line>
+   <Line>Isdalstø IK Røas Isdalstø Rensvik Roma Rustefjelbmas</Line>
+   <Line>IFLA Raymonds Roy Rudlås Innsbruck Isfjordens</Line>
+   <Line>Revetals Ryfylke Reistads Romania Roberts</Line>
+   <Line>Romerrikets Isle Rindal Rockefeller Rena Rindals</Line>
+   <Line>RVs Rovdes Irans Rios Ikornnes Indokina RV</Line>
+   <Line>Ikjefjords Ryfylke Rødøys Røbekks Risløkka</Line>
+   <Line>Islands Rotary Rosslands Røstlandets Røkland</Line>
+   <Line>Rødøys Indokina ISU Romsdalskysten Riemann</Line>
+   <Line>Revmatikerforbunds Revsnes Rødlands Rørosbanens</Line>
+   <Line>Rendalen Raudsands Refsnesviks Romedals Rødland</Line>
+   <Line>Reinlis Rustefjelbmas Rødseidets Rjukans Røyksunds</Line>
+   <Line>Rostøys Rødland Rondane Raymond Rolvsøys Rysstads</Line>
+   <Line>Risløkka Roverud IAAF Romerrikets RAI Rockefeller</Line>
+   <Line>Iran Røytvoll Isdalstø IRU Ramstad Ridabus</Line>
+   <Line>Roan Rendalens INRI Romerike Rudolf Revmatikerforbunds</Line>
+   <Line>Rena Roaldsøy Rolvsøy RDF Rjukans Romerike</Line>
+   <Line>Rykkinns Russlands Italia Romsås Romoslia</Line>
+   <Line>Roaldsøy Reidar Romerriket Indias IFLA Riemann</Line>
+   <Line>Rustefjelbma Rensvik Romas Roveruds Reidar</Line>
+   <Line>Riemanns Rondanes Revsnes Russenes Rørosbanens</Line>
+   <Line>Røyse Ryfoss Refstads Russenes Ronalds Randis</Line>
+   <Line>Roalds Røyrvik Roys Raudsands Innsmøla Romsdalskystens</Line>
+   <Line>Røykenviks Irlands Ramfjordbotn IKEA Islands</Line>
+   <Line>Innvik Røbekk Rendal Romerikes RVs Romsås</Line>
+  </Level>
+  <Level>
+   <NewCharacters>OÆ</NewCharacters>
+   <Line>Oddvar Olderdalens Odin Oves Olsen Odnes Oppsal</Line>
+   <Line>Ofstadsjøens Oksvoll Ombos Olsvik Ostereidet</Line>
+   <Line>Oppsal Olsens Oppåkers Oddvars Ola Oslos Okis</Line>
+   <Line>Oe Oxford Orklas Oddbjørn Osterøys Oftedal</Line>
+   <Line>Oslos Opecs Odenses Orknøyene Oddruns Office</Line>
+   <Line>Odda Ostereidets Ottars Olderdalen Ostereidet</Line>
+   <Line>Omdal Oslofjord OIR Olum Onsruds Ole Oslofjorden</Line>
+   <Line>Oltedal Oppdal Oslofjord Oskar Otteids Office</Line>
+   <Line>Omdals Ottawa Onstad Oltedal Ospesæter Oxfords</Line>
+   <Line>Oldervik Olivetti Orknøyene Oddbjørns Oseanias</Line>
+   <Line>Oxford Otteids Opelen Okis Oki Onsøy Oseania</Line>
+   <Line>Ofotbanens Orkdals Oppsal Oppstryns Oseanias</Line>
+   <Line>OL Onøys Orientekspressen Osakas Opelens Onstad</Line>
+   <Line>Olivetti Ofotbanen Oppstryn Odin Oltedals</Line>
+   <Line>Ofstadsjøens Oppedals Ofoten Osmarka Olstads</Line>
+   <Line>Oskar Olaf Odals Ottersøys Odins Osaka Oddrun</Line>
+   <Line>Ottar Oksvolls Odenses Oppedal Oddmund Oldedalens</Line>
+   <Line>Oddmunds Oddas Odenses Orleans Olderdalens</Line>
+   <Line>Oppåkers Oppedals Oftedal Olderdalens Ornes</Line>
+   <Line>Orientekspressen Oppedal Onas Osakas Ofotens</Line>
+   <Line>Osterøy Oppsal Ottos Olderviks Oves Orklas</Line>
+   <Line>OSI Oddbjørn Onsøy Orklas Onstad Oslo Oddvars</Line>
+   <Line>Oddrun Orkdals Ottar Onsøy Onas Onas Ottersøy</Line>
+   <Line>Olstad Oddrun Ottawa Ospesæters Oftedals Oftedals</Line>
+   <Line>Osterøy Ottos Oldedalen OL Onøy Olstads Oskars</Line>
+   <Line>Oftedal Opecs Oslo Omastrands Oddbjørn Ofotbanen</Line>
+   <Line>Otteid Ottos Oltedals Okis Olaf Ofstadsjøens</Line>
+   <Line>OAS Oddvar Opelen Ortneviks Olstads Ombo Ostereidets</Line>
+   <Line>Ofredal Omdal Olstads Okis Onsrud Onsøys Odense</Line>
+   <Line>Oddvars Oppedal Orklas Oksidenten Olsens Omastrands</Line>
+  </Level>
+  <Level>
+   <NewCharacters>CM</NewCharacters>
+   <Line>Meldal Maos Matre Mosjøen Ceylon Moldjords</Line>
+   <Line>Mykland Mølnbukt Mjosundet Mausundvær Cr Monsen</Line>
+   <Line>Cooper Mauras Mausundvær Munkvoll Marienlyst</Line>
+   <Line>Monas Montebello Mosjøens Carlo Cæsars Connecticuts</Line>
+   <Line>Maos Monsens Capri Mørekystens Malmefjordens</Line>
+   <Line>Midsund Madrid Myre Meløyværs Malakkas Mølnbukt</Line>
+   <Line>Marx Melfjordbotns Miland MNIF Canberras Mjølkeråen</Line>
+   <Line>Minitels Marnardal Casablancas Caen Cupidos</Line>
+   <Line>Milanos Måsøy Maurstads Cape Mauritanias Miamis</Line>
+   <Line>Mauds Minerva Caracas Computerworlds Caledonias</Line>
+   <Line>Costa Mississippi Montebellos Malmefjordens</Line>
+   <Line>Montevideo Monikas Calcuttas Claes Mary Mazda</Line>
+   <Line>Cornwalls Mois Catos Moldjord Morviks Colombia</Line>
+   <Line>Milands Cardiff Myklemyr Malaysia Meløyvær</Line>
+   <Line>Colorados Multiplan COCOM Clarks Connecticut</Line>
+   <Line>Maxwell Moseloven Commodore Clark Marry Caprino</Line>
+   <Line>Mjølkeråen Mercedesimportøren Mosviks CCC</Line>
+   <Line>MA Myrdals Caracas Clark Claus Merkurs Montevideos</Line>
+   <Line>Casablancas Microsofts Cocas Cocas Conoco</Line>
+   <Line>Morokuliens Mørekystens Muskens Mesopotamia</Line>
+   <Line>Claris Måløy Maia Myres Meldals Morten Meretes</Line>
+   <Line>Mazes Maurices Cecilie Monacos Maltas Conrad</Line>
+   <Line>Minnesotas Myrland Melbourne Colombos Constanta</Line>
+   <Line>Myrvoll Midtvestens MK Claes Mississippis</Line>
+   <Line>Maos Camillas Minnesunds Merkur Mayen Minnesunds</Line>
+   <Line>Moldtustrandas Matrands Malta COM Cerns Calkin</Line>
+   <Line>Myklebostads Marylands Creditbank CN Mandsjurias</Line>
+   <Line>Marokko Møkster Moldjords Moisunds Møllevann</Line>
+   <Line>Castors Maia MKSA Mosviks Cocas MK Mozart</Line>
+   <Line>Camillas Computerworlds Myrland Catilina Martinsens</Line>
+  </Level>
+  <Level>
+   <NewCharacters>PQ</NewCharacters>
+   <Line>Pilatus Preussen Pascal Pakistans Pyreneene</Line>
+   <Line>Punjab Peterskirkens Platon Picassos Palmafossen</Line>
+   <Line>Porsviks Persia Pasadena Pascal Pretorias</Line>
+   <Line>Pan Pans Preben Presentations Postdirektoratets</Line>
+   <Line>Passebekk Platons Postdirektoratet Ploto Paulsen</Line>
+   <Line>Prisdirektoratets Pyreneenes Passebekk Posebyen</Line>
+   <Line>Palmafossen Postsparebanken Påskeøya Pascals</Line>
+   <Line>Passebekk PSP Pasadena Prestbakkens Palmafossens</Line>
+   <Line>Pavarottis Pu PAU Ploto Parsevals Prisdirektoratets</Line>
+   <Line>Petra Pauli Paulsens Petersons Preussens Palmafossen</Line>
+   <Line>Posebyen Peters Pan PPD Paris Po Petersens</Line>
+   <Line>Pakistans Prestfoss Petter Pu Paulsen Prestfoss</Line>
+   <Line>Persiabukten PELP Postsparebankens Pan Picassos</Line>
+   <Line>Prebens Posebyen Parseval Pasadena Po Ploto</Line>
+   <Line>Platons PlanPerfect Porsvik Postsparebanken</Line>
+   <Line>Pet Petersen Platons Postdirektoratet Panamas</Line>
+   <Line>PP Preussens Pavarotti Pu PELP Plotos Peder</Line>
+   <Line>Pan Po Prix Petersens Persiabuktas Preussen</Line>
+   <Line>Paulus PS Pb PELP Prinsdal Peterskirken Paris</Line>
+   <Line>Polynesia Prix Påskeøya Parsevals Påskeøya</Line>
+   <Line>Pavlovs PE Pet Pakistans Pedersen Persia Prinsdals</Line>
+   <Line>Pretoria PELP Postdirektoratets Parkinsons</Line>
+   <Line>Paul PAU Presentations Pravdas Paulo Prebens</Line>
+   <Line>PSP Platons PELP Powers Påskeøyas Påskeøya</Line>
+   <Line>Pauls Pyreneene Pilatus PPD Pasadenas Pavarottis</Line>
+   <Line>Petter Poul Pyreneenes PPD Pasadena Paulsen</Line>
+   <Line>Prestbakken Påls Pauls Pd Postsparebankens</Line>
+   <Line>Pavarotti Pauli Picassos Postsparebankens</Line>
+   <Line>Punjabs Pasadenas Pasadenas Quijote Panama</Line>
+   <Line>Paulsens Perus Peders Paris PP Palestina Pravda</Line>
+  </Level>
+  <Level>
+   <NewCharacters>WT</NewCharacters>
+   <Line>Tessandens Tysfjord Torbjørns Torill Tørdals</Line>
+   <Line>Wilson Tyristrand Tanja Tjøtta Tessalonikis</Line>
+   <Line>Torfinn Tadsjikistan Tylldalen Tromøy Tiszas</Line>
+   <Line>Tiller Tverrveds Tromsdalens Titrans Tunstads</Line>
+   <Line>Tyinkryssets Tranbys Tempe Wimbledon Tm Texacos</Line>
+   <Line>Tydal Tyrifjorden Tafjords WP Torsteins Tylldalens</Line>
+   <Line>Toftsundets Tverlandet Tromøy Tysnes Weierstrass</Line>
+   <Line>Tårnåsens Tovik Turøys WP Tirana Trænas Tollå</Line>
+   <Line>Tvedestrand WCC Tomasjord Titania Tittelsnes</Line>
+   <Line>Tromøy Tanzania Torsnes Weierstrass Tonelli</Line>
+   <Line>Tiller Tennessees Tverlandet Westmorelands</Line>
+   <Line>Tuvalu Torbjørn Tonnes Westminster TWA Tirana</Line>
+   <Line>Torunns Turøy Tjelta Tennfjords Turkus Tor</Line>
+   <Line>Tømmerneset Turøys Tronds Toftsundets Tblisi</Line>
+   <Line>Todalens Tennessees Torpa Tyristrand Tresses</Line>
+   <Line>Tisleidalens Terråk Turids Wesenlunds Tufjord</Line>
+   <Line>Titran Tjeldsund WDR Torsteinsviks Widerøes</Line>
+   <Line>Torstein Titrans Wilson Wesenlund Westminsters</Line>
+   <Line>Torvastads Tonys Tl WEU Tyrkias TNT Torsteins</Line>
+   <Line>Tisleidalen Tufjord Wien Trænas Texacos Tim</Line>
+   <Line>Trinidad Tresfjords Trinidads Tertnes Tresfjord</Line>
+   <Line>Tarva Tranbys Tims Trond Tørdal Tynset Tromøy</Line>
+   <Line>Walters Tarva Trinidad Titrans WDR Tornes</Line>
+   <Line>Wien Turid Tyinkryssets Torøds Tyrkia Tussøy</Line>
+   <Line>Torsteinsvik Tommys Tysnes Tiki Tommys Tanem</Line>
+   <Line>Tranøy WWF TWA Wb Tennfjord Teben WEU Tokyo</Line>
+   <Line>Tysfjords Titania Tjeldsund TWA Trinidad Toviks</Line>
+   <Line>Tor Tjeldsund Tjensvolls Wilson Wieners Tl</Line>
+   <Line>Tyinkryssets Tibets Tisleidalens Tåsen Westmoreland</Line>
+   <Line>Torøds Tyristrands Trænas Tårstads Trænas</Line>
+  </Level>
+  <Level>
+   <NewCharacters>BP</NewCharacters>
+   <Line>Belfast Breivikbotns Punjab Bernadotte Blomquist</Line>
+   <Line>Brattfjords Bredtveits Bykle Babylons Basel</Line>
+   <Line>Bermuda Balder Beneluxlandene Bjørnemyrs Barr</Line>
+   <Line>Petersens Besseruds Bismarcks Breviks Byåsens</Line>
+   <Line>Beistad Barbaras Buskøys Baudelaire Bjorbekks</Line>
+   <Line>Bankakademiet Beninbuktas Bjørkåsen Bortnens</Line>
+   <Line>Baku Bjørkåsen Pravda Boston Benkow Bolstadøyri</Line>
+   <Line>Bildts Baire Bitterstad Bondeviks Bjorbekk</Line>
+   <Line>PTI Beisfjords Pd Bindalselva Bonnefjordens</Line>
+   <Line>Pan Budalens Beirut Brasøy Bokns Baltimore</Line>
+   <Line>Borøy Brennsundvik Byres Bessels Bonnefjorden</Line>
+   <Line>Basels Bjørnemyrs Porsviks Barkestad Benkows</Line>
+   <Line>Panama Bolsøya Bills Benjamins BRD Brennas</Line>
+   <Line>Pd Bilitt Blåmannsisen Baden Bosnia Billefjord</Line>
+   <Line>Berit Bardu Belvederes Bjålands Brennerpassets</Line>
+   <Line>Paals Beninbuktens Bjølstadmo Bondeviks Bermudaøyenes</Line>
+   <Line>Beisfjord Persiabuktas Bordalens Bellsunds</Line>
+   <Line>Birkeland Peru Bermudaøyenes Bjørnstjernes</Line>
+   <Line>Brekstad Bilitt Bayern Parsevals Prinsdals</Line>
+   <Line>Bordalens Breivikbotn Borten Bardufoss Breims</Line>
+   <Line>Breims Bjerkelys Bertil BMWs Bayswater Bjørø</Line>
+   <Line>Balaton Bardals Bratlies Brasilia Bjerkreims</Line>
+   <Line>Bærum Benediktinerordenens Burma Prestfoss</Line>
+   <Line>Balsfjords Pb Pb Bindalsbruket Persiabuktas</Line>
+   <Line>Brunlanes Prix Bindalsfjordens Bay Pravdas</Line>
+   <Line>Brandal Bjørkåsen Beistads Britt Picassos</Line>
+   <Line>Beaufortskala Passebekks Birkelands Persia</Line>
+   <Line>Petra Bismos Biristrands Bjerckes Brønnøysund</Line>
+   <Line>Babylonia Bennetts Balsfjords Betna Balkan</Line>
+   <Line>Baris Benkows Bari Bruviks Bjåland Brussel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>YX</NewCharacters>
+   <Line>Yvonnes Ytterøy Ytterøy Yvonne Ytteren Ytteren</Line>
+   <Line>Xerox Yemen Ytterøys Yb XP Yb Xe Xe Yb Yemens</Line>
+   <Line>Yb Xerxes XP Yorks York Yvonne Ytterøys Yvonnes</Line>
+   <Line>XP Yvonnes Ytterens Xe Yb Xerxes Ytterøy Yemen</Line>
+   <Line>XP Xerxes Xerox Xerox Xe Ytterøy Xerxes Xe</Line>
+   <Line>Ytteren Yemens York Ytterens Yorks York Xerxes</Line>
+   <Line>Ytterøy Yemen Yemens Yvonne Xerox Ytteren</Line>
+   <Line>York Yvonne Xerox Ytteren York Ytterøys Ytteren</Line>
+   <Line>Yemen Ytterøy Xerxes Ytterøy XP York Yvonnes</Line>
+   <Line>York Ytterens Ytterens Xerxes Yorks Xerxes</Line>
+   <Line>Yemen Yemen Yb Xerox Ytterens Ytterøy Xerxes</Line>
+   <Line>Xerxes Yb York XP Yvonne Yvonnes Ytterøys</Line>
+   <Line>Yb Ytteren Ytterøys Xerox Xerxes Yorks Xe</Line>
+   <Line>Yb Ytterøy Xerxes Yvonnes Ytterens Yvonne</Line>
+   <Line>Yemens Yvonne Ytterens Ytteren Ytterens Yvonnes</Line>
+   <Line>Ytteren Ytterøy Yemens Yvonnes XP Ytteren</Line>
+   <Line>Yemen Yvonne Ytterens Xerox Xerox Xerox Ytterens</Line>
+   <Line>Yemen Xerox Ytteren Ytterens Yemens Ytterens</Line>
+   <Line>Ytterøys XP Yvonne Yemens Yb Yorks Ytterens</Line>
+   <Line>Xerxes Yvonnes Ytterøy York Yb Yvonnes Ytterens</Line>
+   <Line>Yemens Ytterøys Yb Xe Yemen Yvonne Yb Yemens</Line>
+   <Line>Xe Ytterens Yvonne Ytteren Ytterøy Yb Yorks</Line>
+   <Line>Xe Ytterøys Yemen York Yvonne Yb Yvonne Ytterens</Line>
+   <Line>Ytterøys Yorks Yemens Yorks Ytterens Yemens</Line>
+   <Line>XP Xerox Xerox XP Xerox Yb Yorks Xe XP Yb</Line>
+   <Line>Yvonne Yb Xerxes Yb Ytterøy Xerxes Ytterøy</Line>
+   <Line>Ytterens Xerxes Yvonne Xe Ytterøy Xerxes Yemens</Line>
+   <Line>Yemen Yvonne XP Yb Ytterøys Ytterøys Yemens</Line>
+   <Line>Yb Ytteren Yvonne Xe Yemen Yvonne Ytteren</Line>
+   <Line>Ytteren Xerxes Xerox Yb Xerxes Xe XP XP Yemen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Z</NewCharacters>
+   <Line>Zimbabwe Zealands Zululands Zeus Zeus Zealand</Line>
+   <Line>Zambias Zealand Zevs Zimbabwe Zaire Zevs Zanzibars</Line>
+   <Line>Zimbabwes Zimbabwes Zanzibars Zanzibar Zealands</Line>
+   <Line>Zealands Zn Zorn Zambia Zambia Zimbabwes Zealand</Line>
+   <Line>Zimbabwe Zn Zaire Zealands Zeus Zorn Zanzibars</Line>
+   <Line>Zeus Zevs Zealands Zorn Zanzibars Zorns Zimbabwe</Line>
+   <Line>Zn Zululand Zambias Zorn Zeus Zevs Zululands</Line>
+   <Line>Zealands Zimbabwes Zimbabwe Zululands Zimbabwes</Line>
+   <Line>Zr Zimbabwes Zanzibar Zambia Zevs Zorn Zambia</Line>
+   <Line>Zululands Zorn Zimbabwe Zevs Zn Zealands Zanzibar</Line>
+   <Line>Zn Zorn Zorn Zambias Zeus Zorn Zimbabwe Zaire</Line>
+   <Line>Zorns Zealands Zululands Zululand Zululands</Line>
+   <Line>Zambias Zorn Zimbabwe Zevs Zululand Zambias</Line>
+   <Line>Zimbabwes Zr Zaire Zululands Zanzibars Zimbabwes</Line>
+   <Line>Zeus Zaire Zimbabwe Zevs Zaire Zorn Zevs Zealands</Line>
+   <Line>Zambias Zaire Zr Zambia Zambias Zambia Zorn</Line>
+   <Line>Zambias Zimbabwes Zealand Zanzibar Zevs Zimbabwe</Line>
+   <Line>Zaires Zululand Zevs Zanzibars Zn Zorn Zambias</Line>
+   <Line>Zululands Zr Zeus Zr Zambia Zn Zorn Zorns</Line>
+   <Line>Zaires Zanzibar Zanzibar Zanzibars Zeus Zambias</Line>
+   <Line>Zambias Zimbabwes Zaires Zambia Zevs Zealands</Line>
+   <Line>Zululand Zealand Zeus Zevs Zimbabwe Zambias</Line>
+   <Line>Zululand Zaire Zambias Zimbabwes Zevs Zorns</Line>
+   <Line>Zaire Zaires Zambias Zorns Zululand Zanzibars</Line>
+   <Line>Zululands Zimbabwes Zorn Zululand Zanzibar</Line>
+   <Line>Zululand Zimbabwe Zealands Zn Zevs Zambia</Line>
+   <Line>Zevs Zeus Zr Zanzibars Zaires Zaires Zaire</Line>
+   <Line>Zanzibars Zaire Zululand Zululand Zululand</Line>
+   <Line>Zambias Zimbabwe Zn Zimbabwe Zanzibar Zorns</Line>
+   <Line>Zevs Zevs Zanzibar Zanzibars Zanzibar Zanzibars</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Z</NewCharacters>
+   <Line>Zorn Zambia Zaire Zevs Zambia Zimbabwe Zululands</Line>
+   <Line>Zealands Zealands Zn Zambia Zorn Zaires Zanzibar</Line>
+   <Line>Zr Zn Zanzibars Zorns Zululand Zululand Zaires</Line>
+   <Line>Zanzibar Zevs Zaire Zululands Zanzibar Zululands</Line>
+   <Line>Zaires Zorn Zaires Zeus Zorns Zn Zanzibars</Line>
+   <Line>Zimbabwes Zanzibars Zimbabwes Zambias Zambia</Line>
+   <Line>Zimbabwes Zambias Zambias Zululands Zimbabwe</Line>
+   <Line>Zealands Zealands Zululands Zambia Zorns Zorn</Line>
+   <Line>Zr Zambia Zimbabwes Zaires Zorns Zealand Zaire</Line>
+   <Line>Zululand Zimbabwe Zululands Zimbabwes Zn Zululand</Line>
+   <Line>Zaire Zanzibars Zn Zambias Zanzibar Zambias</Line>
+   <Line>Zaires Zr Zr Zanzibars Zealands Zululands</Line>
+   <Line>Zambia Zululands Zimbabwe Zambias Zululand</Line>
+   <Line>Zr Zimbabwes Zeus Zambia Zululands Zimbabwes</Line>
+   <Line>Zululand Zimbabwes Zn Zevs Zambias Zimbabwes</Line>
+   <Line>Zorn Zululands Zululand Zn Zululands Zimbabwe</Line>
+   <Line>Zorns Zanzibar Zeus Zambias Zambias Zealands</Line>
+   <Line>Zorns Zorns Zambia Zanzibar Zaires Zorn Zanzibars</Line>
+   <Line>Zanzibar Zululands Zealands Zevs Zanzibars</Line>
+   <Line>Zealand Zambias Zanzibar Zealand Zambia Zealands</Line>
+   <Line>Zorn Zealands Zimbabwe Zimbabwes Zealands</Line>
+   <Line>Zambia Zambias Zorns Zevs Zimbabwes Zealands</Line>
+   <Line>Zambia Zimbabwes Zorns Zevs Zululand Zululands</Line>
+   <Line>Zorns Zimbabwes Zaire Zimbabwe Zambias Zaire</Line>
+   <Line>Zn Zululand Zorn Zealand Zanzibars Zimbabwe</Line>
+   <Line>Zaires Zambia Zeus Zorn Zimbabwes Zambia Zorn</Line>
+   <Line>Zanzibar Zorn Zaire Zimbabwes Zululands Zimbabwes</Line>
+   <Line>Zululand Zambias Zeus Zambias Zululands Zn</Line>
+   <Line>Zn Zealand Zambia Zululands Zr Zanzibar Zealands</Line>
+   <Line>Zorns Zaire Zambias Zaires Zambias Zanzibars</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
