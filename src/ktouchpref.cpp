@@ -187,7 +187,7 @@ void KTouchPref::update(bool toDialog) {
 
 void KTouchPref::slotDefault() {
     if (KMessageBox::warningContinueCancel(this, i18n("This will set the default options "
-        "in ALL pages of the preferences dialog! Continue?"), i18n("Set default options?"),
+        "in ALL pages of the preferences dialog; continue?"), i18n("Set default options?"),
         i18n("Set defaults"))==KMessageBox::Continue)
     {
         setDefaults();

@@ -212,7 +212,7 @@ void KTouch::fileOpen() {
     KURL url = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Open Training File"));
     if (!url.isEmpty() && url.isValid()) {
         if (!m_lecture->loadLecture(url))
-            KMessageBox::information(this, i18n("Could not open the training file!"));
+            KMessageBox::information(this, i18n("Could not open the training file."));
         updateCaption();
         m_trainer->goFirstLevel();
     };
@@ -360,7 +360,7 @@ void KTouch::changeLecture(int num) {
     QString fileName = dirs->findResource("appdata",KTouchConfig().m_lectureList[num] + ".ktouch");
     KURL oldLecture (m_lecture->m_lectureURL);
     if (!m_lecture->loadLecture(KURL::fromPathOrURL(fileName))) {
-        KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1.ktouch'!")
+        KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1.ktouch'.")
             .arg(KTouchConfig().m_lectureList[num]) );
         m_lecture->loadLecture(oldLecture);
     };

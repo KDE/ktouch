@@ -46,12 +46,12 @@ bool KTouchKeyboard::loadKeyboard(const KURL& url, QString* errorMsg) {
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
-            *errorMsg = i18n("Couldn't read the keyboard layout file '%1'! ").arg(url.url()) + msg;
+            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ").arg(url.url()) + msg;
         return result;
     }
     else {
         if (errorMsg!=NULL)
-            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'!").arg(url.url());
+            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.").arg(url.url());
         return false;
     }
 }
@@ -123,7 +123,7 @@ void KTouchKeyboard::applyPreferences(bool silent) {
         else {
             QString errorMsg;
             if (!loadKeyboard(KURL::fromPathOrURL( fileName ), &errorMsg)) {
-                KMessageBox::error( 0, i18n("Error reading the keyboard layout! The default number keypad will "
+                KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
@@ -255,7 +255,7 @@ void KTouchKeyboard::createDefaultKeyboard() {
 bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
     QFile infile(fileName);
     if ( !infile.open( IO_ReadOnly ) ) {
-        errorMsg = i18n("Couldn't open file!");
+        errorMsg = i18n("Could not open file.");
         return false;
     }
     QTextStream in( &infile );
@@ -304,7 +304,7 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
             m_connectorList.append( KTouchKeyConnector(keyAscII, targetChar, fingerChar, controlChar) );
         }
         else {
-            errorMsg = i18n("Missing key type in line '%1'!").arg(line);
+            errorMsg = i18n("Missing key type in line '%1'.").arg(line);
             return false;
         }
         // calculate the maximum extent of the keyboard on the fly...

@@ -29,10 +29,10 @@ const QString& KTouchLevelData::line(unsigned int lineNumber) const {
 }
 
 void KTouchLevelData::createDefault() {
-    m_comment = i18n("This is a default mini level!");
+    m_comment = i18n("This is a default mini level.");
     m_newChars = i18n("only a few");
     m_lines.clear();
-    m_lines.append( i18n("This is the first line in the mini level!") );
+    m_lines.append( i18n("This is the first line in the mini level.") );
 }
 
 bool KTouchLevelData::readLevel(QTextStream& in, const QString& newChars, const QString& comment) {
