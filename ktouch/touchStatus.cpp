@@ -21,11 +21,15 @@
 #include <qlabel.h>
 #include <qapplication.h>
 #include <qprogressbar.h>
+#include <kaudioplayer.h>
 
 TouchStatus::TouchStatus(QWidget * parent, const char * name)
            : TouchStatusLayout( parent, name )
 {
+	dirs = KGlobal::dirs();
+
 	errorSound=true;
+	levelSound=true;
 	autoLevel=true;
 	reset();
 
@@ -91,13 +95,18 @@ void TouchStatus::calculate()
 		testLevelCount=0;
 		if (charSpeed>speedLimitUp)
 		{
-		emit levelUp();
+			emit levelUp();
+			if(levelSound)
+				KAudioPlayer::play(dirs->findResource("appdata","up.wav"));
 		}
 		else
 		{
-		if(charSpeed<speedLimitDown){
-			emit levelDown();
-				}
+			if(charSpeed<speedLimitDown)
+			{
+				emit levelDown();
+				if(levelSound)
+					KAudioPlayer::play(dirs->findResource("appdata","down.wav"));
+			}
 		}
 	}
 }
@@ -176,11 +185,11 @@ void TouchStatus::setSpeedLimit(int up, int down){
 	{
 		down=up;
 	}
-  else if(up==0 || down==0)
-  {
-    down=50;
-    up=100;
-  }
+	else if(up==0 || down==0)
+	{
+		down=50;
+		up=100;
+	}
 	speedLimitDown=down;
 	speedLimitUp=up;
 }

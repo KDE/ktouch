@@ -21,6 +21,7 @@
 #include <qtimer.h>
 #include <qlcdnumber.h>
 #include <qprogressbar.h>
+#include <kstddirs.h>
 
 #include "touchStatusLayout.h"
 
@@ -39,6 +40,7 @@ class TouchStatus: public TouchStatusLayout
 		/** Returns the limit to go to next level */
 		int getSpeedLimitUp();
 		bool errorSound;
+		bool levelSound;
 		bool autoLevel;
 
 	public slots:
@@ -72,6 +74,7 @@ class TouchStatus: public TouchStatusLayout
 		int wordCount;
 
 		int testLevelCount;
+		KStandardDirs *dirs;
 
 
 	private slots:
