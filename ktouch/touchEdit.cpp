@@ -40,7 +40,7 @@ TouchEdit::~TouchEdit()
 void TouchEdit::fetchLevel(int level)
 {
 	QString res;
-	vector<QString> levelData=*(lecture->levelVector)[level];
+	std::vector<QString> levelData=*(lecture->levelVector)[level];
 
 	levelNumber->display(level+1);
 
@@ -96,7 +96,7 @@ void TouchEdit::moveDown()
 void TouchEdit::swapLevel(int a,int b)
 {
   // moving data around
-	vector<QString> *levelTmp=lecture->levelVector[b];
+	std::vector<QString> *levelTmp=lecture->levelVector[b];
 	lecture->levelVector[b]=lecture->levelVector[a];
 	lecture->levelVector[a]=levelTmp;
 
@@ -114,7 +114,7 @@ void TouchEdit::fillLevelList()
 	for(unsigned int i=0;i<lecture->levelVector.size();i++)
 	{
 		
-			vector<QString> levelData=*(lecture->levelVector)[i];
+			std::vector<QString> levelData=*(lecture->levelVector)[i];
 			levelList->insertItem(levelData[0]);
 	}
 
@@ -127,7 +127,7 @@ void TouchEdit::descriptionChanged(const QString& d)
   if(current!=-1)
   {
     kdDebug() << "changing level description to " << d << endl;
-		//vector<QString> *levelTmp=lecture->levelVector[current];
+		//std::vector<QString> *levelTmp=lecture->levelVector[current];
 		//levelTmp[0]=d;
     levelList->changeItem(QString(d),current);
   }
