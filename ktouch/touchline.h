@@ -28,9 +28,11 @@ class TouchLine: public TouchLineLayout
 {
   Q_OBJECT
 public:
-  TouchLine(QWidget *parent=0, const char *name=0,TouchLecture *myLecture=0);
+	TouchLine(QWidget *parent=0, const char *name=0);
 	~TouchLine();
-	
+
+	void setLecture(TouchLecture *l);
+
 	bool getShowError();
 	void setShowError(bool s);
 	
@@ -45,7 +47,8 @@ public slots:
   void getNextLine();
   void start();
   void stop();
-  void keyPressed(QChar);
+  void keyPressEvent(QKeyEvent *e);
+
 
 signals:
   void isError(QChar);

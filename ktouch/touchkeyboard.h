@@ -37,17 +37,22 @@ public:
 	TouchKeyboard(QWidget *parent=0, const char *name=0);
 	void loadKeyboard(QString language);
 	QString getLanguage();
-  void setShowColor(bool show);
-  void setShowAnimation(bool show);
-  bool getShowColor();
-  bool getShowAnimation();
+	void setShowColor(bool show);
+	void setShowAnimation(bool show);
+	bool getShowColor();
+	bool getShowAnimation();
+	void saveOptions();
+	void readOptions();
+
 
 public slots:
-  void newKey(const QChar&);
-			
+	void newKey(const QChar&);
+
 protected:
 	void paintEvent( QPaintEvent * );
 	virtual void resizeEvent ( QResizeEvent * );
+
+
 
 private:
 	QChar lastKey;
@@ -57,11 +62,13 @@ private:
 	void calculateSize();
 	QString language;
 	bool showAnimation;
-  int trans;
-  KStandardDirs *dirs;
-  void setIfMax(int w, int h);
-  int maxWidth;
-  int maxHight;
+	int trans;
+	KStandardDirs *dirs;
+	void setIfMax(int w, int h);
+	int maxWidth;
+	int maxHight;
+
+	KConfig *config;
 };
 
 

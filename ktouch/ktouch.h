@@ -25,10 +25,13 @@
 
 #include "touchlecture.h"
 #include "touchline.h"
-#include "touchStatus.h"
+//#include "touchStatus.h"
 #include "touchkeyboard.h"
 #include "touchstat.h"
 #include "touchStatWindow.h"
+#include "touchTrain.h"
+#include "touchEdit.h"
+#include "touchTest.h"
 #include "optionKeyboard.h"
 #include "optionTraining.h"
 #include "optionGeneral.h"
@@ -41,10 +44,13 @@ class KTouch : public KMainWindow
 		KTouch();
 		~KTouch();
 		TouchLecture *touchLecture;
-		TouchLine *touchLine;
-		TouchStatus *touchStatus;
-		TouchKeyboard *touchKeyboard;
+	//	TouchLine *touchLine;
+	//	TouchStatus *touchStatus;
+	//	TouchKeyboard *touchKeyboard;
 		TouchStat *touchStat;
+		TouchEdit *touchEdit;
+		TouchTrain *touchTrain;
+		TouchTest *touchTest;
 
 		/** opens a file specified by commandline option
 		*/
@@ -77,6 +83,12 @@ class KTouch : public KMainWindow
 		/** opens a file from the recent files menu */
 		void slotFileOpenRecent(const KURL& url);
 
+		void slotFileSave();
+
+		void slotFileSaveAs();
+
+		void slotFileEdit();
+
 		void slotFileQuit();
 		/** put the marked text/object into the clipboard and remove
 		*	it from the document
@@ -90,6 +102,10 @@ class KTouch : public KMainWindow
 		*/
 		void slotStatusMsg(const QString &text);
 
+		void slotModeTrain();
+		void slotModeEdit();
+		void slotModeTest();
+
 		void slotOptionKeyboard();
 		void slotOptionTraining();
 		void slotOptionGeneral();
@@ -97,17 +113,16 @@ class KTouch : public KMainWindow
 		void showStat();
 		void hideStat();
 
+
 	private:
 		/** the configuration object of the application */
 		KConfig *config;
-		/** view is the main widget which represents your working area. The View
-		* class should handle all events of the view widget.  It is kept empty so
-		* you can create your view according to your application's needs by
-		* changing the view class.
-		*/
 
 		// KAction pointers to enable/disable actions
 		KAction* fileOpen;
+		KAction* fileSave;
+		KAction* fileEdit;
+		KAction* fileSaveAs;
 		KRecentFilesAction* fileOpenRecent;
 		KAction* fileClose;
 		KAction* fileQuit;
@@ -115,7 +130,7 @@ class KTouch : public KMainWindow
 		KToggleAction* viewStatusBar;
 
 		KStandardDirs *dirs;
-		bool remember;
+
 		TouchStatWindow *touchStatWindow;
 };
 

@@ -18,10 +18,13 @@
 #include "touchkeyboard.h"
 #include "touchkeyboard.moc"
 #include "touchkey.h"
-#include <iostream.h>
+//#include <iostream.h>
 #include <fstream.h>
 #include <stdlib.h>
 #include <string>
+#include <kconfig.h>
+#include <kapp.h>
+#include <kdebug.h>
 
 using namespace std;
 
@@ -29,17 +32,17 @@ TouchKeyboard::TouchKeyboard(QWidget *parent, const char *name)
              : QWidget( parent, name )
 {
 	dirs = KGlobal::dirs();
+	config=kapp->config();
+
 	trans=0;
 	lastKey=0;
 	maxWidth=0;
 	maxHight=0;
-	showAnimation=true;
 
 	for (unsigned int i=0;i<512;i++)
 	{
 		keyArray[i]=0;
 	}
-
 }
 
 void TouchKeyboard::setShowColor(bool show)
@@ -153,9 +156,9 @@ void TouchKeyboard::loadKeyboard(QString lang)
 	const int maxPara=10;
 	if(lang.isEmpty())
 		lang="en";
-	ifstream ifs(dirs->findResource("data","ktouch/keyboard." + lang).latin1(), ios::in);
+	ifstream ifs(dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1(), ios::in);
 	if (!ifs)
-		cerr << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/keyboard." + lang).latin1() << endl;
+		kdDebug() << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1() << endl;
 	else
 	{
 		clearKeyboard();
@@ -166,6 +169,7 @@ void TouchKeyboard::loadKeyboard(QString lang)
 
 		while (!ifs.eof())
 		{
+			//kdDebug() << "Reading keyboard file line: " << lineNumber << endl;
 			lineNumber++;
 			ifs.getline(buffer, sizeof(buffer), '\n');
 			if (!(ifs.eof() && strlen(buffer) == 0))
@@ -308,3 +312,18 @@ void TouchKeyboard::setIfMax(int w, int h)
 	if(maxHight<h) maxHight=h;
 }
 
+void TouchKeyboard::saveOptions()
+{
+	config->setGroup("Keyboard");
+	config->writeEntry("Show Color",getShowColor());
+	config->writeEntry("Show Animation",getShowAnimation());
+	config->writeEntry("Language",getLanguage());
+}
+
+void TouchKeyboard::readOptions()
+{
+	config->setGroup("Keyboard");
+	setShowColor(config->readBoolEntry("Show Color",true));
+	setShowAnimation(config->readBoolEntry("Show Animation",true));
+	loadKeyboard(config->readEntry("Language","en"));
+}

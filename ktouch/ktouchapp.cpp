@@ -39,11 +39,11 @@ KTouchApp::~KTouchApp()
 
 int KTouchApp::newInstance()
 {
-	TouchSplash *splash = new TouchSplash();
-	splash->show();
-	splash->raise();
-	splash->setHideEnabled( true );
-	QApplication::flushX();
+//	TouchSplash *splash = new TouchSplash();
+//	splash->show();
+//	splash->raise();
+//	splash->setHideEnabled( true );
+//	QApplication::flushX();
 
 	if (isRestored())
 	{
@@ -70,9 +70,9 @@ int KTouchApp::newInstance()
 
 	}
 
-	sleep(2);
-	splash->hide();
-	delete(splash);
+//	sleep(2);
+//	splash->hide();
+//	delete(splash);
 
 	return 0;
 }

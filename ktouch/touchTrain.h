@@ -1,8 +1,9 @@
+
 /***************************************************************************
-                          touchlecture.h  -  description
+                          touchTrain.h  -  description
                              -------------------
-    begin                : Sun Dec 10 2000
-    copyright            : (C) 2000 by Haavard Froeiland
+    begin                : Tue Nov 27 2001
+    copyright            : (C) 2001 by Haavard Froeiland
     email                : haavard@users.sourceforge.net
  ***************************************************************************/
 
@@ -15,50 +16,41 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef TOUCHLECTURE_H
-#define TOUCHLECTURE_H
+#ifndef TOUCHTRAIN_H
+#define TOUCHTRAIN_H
 
-#include <vector>
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
-#include <qobject.h>
-#include <qstring.h>
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qmessagebox.h>
+#include <kconfig.h>
+#include <kapp.h>
 
-class TouchLecture : public QObject
-{
-	Q_OBJECT
+#include <qpushbutton.h>
 
-	public:
-		TouchLecture();
-		QString getNextLine();
-		QString getName();
+#include "touchTrainLayout.h"
+#include "touchkeyboard.h"
+#include "touchStatus.h"
 
-		void load(QString fileName);
-		int save();
-		int saveAs(QString fileName);
+class TouchTrain : public TouchTrainLayout {
+   Q_OBJECT
 
+public:
+	/** constructor */
+	TouchTrain(QWidget* parent=0, const char* name=0);
 
-	public slots:
-		void levelUp();
-		void levelDown();
-		void setLevel(unsigned int level);
+	/** destructor */
+	~TouchTrain();
 
-	signals:
-		void levelChanged(int);
-		void levelMessage(const QString&);
+	void saveOptions();
+	void readOptions();
+	
+private:
+	KConfig *config;
+	bool remember;
 
-	private:
-		unsigned int pos;
-		unsigned int level;
-		std::vector<std::vector<QString> *> levelVector;
-		QString fileName;
-		QWidget *parent;
-		bool levelHasChanged;
 };
 
 #endif
-
 
 

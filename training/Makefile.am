@@ -5,5 +5,6 @@ number.ktouch \
 norwegian.ktouch \
 french.ktouch \
 french-2.ktouch \
-german.ktouch
+german.ktouch \
+dvorak.ktouch
 

@@ -1,8 +1,8 @@
 /***************************************************************************
-                          touchlecture.h  -  description
+                          touchEdit.h  -  description
                              -------------------
-    begin                : Sun Dec 10 2000
-    copyright            : (C) 2000 by Haavard Froeiland
+    begin                : Tue Nov 27 2001
+    copyright            : (C) 2001 by Haavard Froeiland
     email                : haavard@users.sourceforge.net
  ***************************************************************************/
 
@@ -15,50 +15,28 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef TOUCHLECTURE_H
-#define TOUCHLECTURE_H
+#ifndef TOUCHEDIT_H
+#define TOUCHEDIT_H
 
-#include <vector>
-
-#include <qobject.h>
-#include <qstring.h>
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qmessagebox.h>
-
-class TouchLecture : public QObject
-{
-	Q_OBJECT
-
-	public:
-		TouchLecture();
-		QString getNextLine();
-		QString getName();
-
-		void load(QString fileName);
-		int save();
-		int saveAs(QString fileName);
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 
-	public slots:
-		void levelUp();
-		void levelDown();
-		void setLevel(unsigned int level);
+#include "touchEditLayout.h"
 
-	signals:
-		void levelChanged(int);
-		void levelMessage(const QString&);
+class TouchEdit : public TouchEditLayout {
+   Q_OBJECT
 
-	private:
-		unsigned int pos;
-		unsigned int level;
-		std::vector<std::vector<QString> *> levelVector;
-		QString fileName;
-		QWidget *parent;
-		bool levelHasChanged;
+public:
+	/** constructor */
+	TouchEdit(QWidget* parent=0, const char* name=0);
+
+	/** destructor */
+	~TouchEdit();
+	
 };
 
 #endif
-
 
 

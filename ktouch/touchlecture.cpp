@@ -18,6 +18,7 @@
 #include "touchlecture.h"
 #include "touchlecture.moc"
 
+
 using namespace std;
 
 TouchLecture::TouchLecture()
@@ -33,7 +34,7 @@ QString TouchLecture::getName()
 	return fileName;
 }
 
-void TouchLecture::loadLectureFile(QString f)
+void TouchLecture::load(QString f)
 {
 	QFile file(f);
 	if(file.exists())
@@ -94,6 +95,39 @@ void TouchLecture::loadLectureFile(QString f)
 	}
 }
 
+int TouchLecture::save()
+{
+	QFile file(fileName);
+	if( file.open(IO_WriteOnly) )
+	{  // file opened successfully
+		QTextStream t( &file );
+		t << "#" << endl;
+		t << "# Trainingfile for KTouch" << endl;
+		t << "#" << endl;
+
+		for(int i=0;i<levelVector.size();i++)
+		{
+			t << endl;
+			t << "################################" << endl;
+			t << "# Level: " << i << endl;
+			vector<QString> levelData=*levelVector[level];
+			for(int j=0;j<levelData.size();j++)
+			{
+				t << levelData[j] << endl;
+			}
+		}
+    }
+	else
+		return 1;
+    file.close();
+	return 0;
+}
+
+int TouchLecture::saveAs(QString f)
+{
+	fileName=f;
+	save();
+}
 
 QString TouchLecture::getNextLine()
 {
@@ -103,18 +137,18 @@ QString TouchLecture::getNextLine()
 	}
 
 	if (levelVector.empty())
-		{
+	{
 		return "No file loaded";
-		}
+	}
 	if(level<(levelVector.size()))
 	{
-		vector<QString> test=*levelVector[level];
+		vector<QString> levelData=*levelVector[level];
 
-		if (pos>=(test.size()-1))
+		if (pos>=(levelData.size()-1))
 		{
 			pos=1;
 		}
-		return test[pos++];
+		return levelData[pos++];
 	}
 	return "Error in getNextLine()";
 };
@@ -127,7 +161,6 @@ void TouchLecture::levelUp()
 		level++;
 		pos=1;
 		levelHasChanged=true;
-		//setLevel(level);
 	}
 };
 
@@ -138,7 +171,6 @@ void TouchLecture::levelDown()
 		level--;
 		pos=1;
 		levelHasChanged=true;
-		//setLevel(level);
 		}
 	};
 

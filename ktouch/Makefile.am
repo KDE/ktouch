@@ -16,7 +16,7 @@ INCLUDES= $(all_includes)
 
 # claim, which subdirectories you want to install
 # if you don't have subdirectories, comment it
-# SUBDIRS = 
+# SUBDIRS =
 
 ####### This part is very ktouch specific
 # you can add here more. This one gets installed
@@ -29,6 +29,9 @@ optionTrainingDlg.ui \
 touchLineLayout.ui \
 touchStatusLayout.ui \
 touchStatWindowLayout.ui \
+touchEditLayout.ui \
+touchTrainLayout.ui \
+touchTestLayout.ui \
 ktouch.cpp \
 touchKeyboard.cpp \
 touchStatus.cpp \
@@ -47,7 +50,10 @@ main.cpp \
 ktouchapp.cpp \
 touchstat.cpp \
 touchStatWindow.cpp \
-touchSplash.cpp
+touchSplash.cpp \
+touchEdit.cpp \
+touchTrain.cpp \
+touchTest.cpp
 
 ktouch_METASOURCES = AUTO
 
@@ -57,6 +63,37 @@ ktouch_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 # the libraries to link against. Be aware of the order. First the libraries,
 # that depend on the following ones.
 ktouch_LDADD   = $(LIB_KFILE)
+
+# this option you can leave out. Just, if you use "make dist", you need it
+noinst_HEADERS = ktouch.h \
+controlkey.h \
+fingerkey.h \
+hiddenkey.h \
+ktouchapp.h \
+normalkey.h \
+optionGeneral.h \
+optionGeneralDlg.h \
+optionKeyboard.h \
+optionKeyboardDlg.h \
+optionTraining.h \
+optionTrainingDlg.h \
+slideLine.h \
+touchLineLayout.h \
+touchStatus.h \
+touchStatusLayout.h \
+touchkey.h \
+touchkeyboard.h \
+touchlecture.h \
+touchline.h \
+touchstat.h \
+touchStatWindow.h \
+touchSplash.h \
+touchEditLayout.h \
+touchEdit.h \
+touchTrainLayout.h \
+touchTrain.h \
+touchTestLayout.h \
+touchTest.h
 
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc

@@ -17,14 +17,15 @@
 
 #include <qapplication.h>
 #include "touchline.h"
+#include "touchline.moc"
+#include <kdebug.h>
 
 
-TouchLine::TouchLine(QWidget * parent, const char * name, TouchLecture *l)
+TouchLine::TouchLine(QWidget * parent, const char * name)
          : TouchLineLayout( parent, name )
 {
 	teacherLine = "";
 	studentLine = "";
-	lecture = l;
 	pos=0;
 	stopped=false;
 }
@@ -34,13 +35,21 @@ TouchLine::~TouchLine()
 
 }
 
+void TouchLine::setLecture(TouchLecture *l)
+{
+	lecture =l;
+}
+
 void TouchLine::getNextLine()
 {
 	setTeacherLine(lecture->getNextLine());
 }
 
-void TouchLine::keyPressed(QChar e)
+void TouchLine::keyPressEvent(QKeyEvent *event)
 {
+	QChar e;
+	e=QString(event->text())[0];
+
 	if(!stopped)
 	{
 		//The character is a normal character
@@ -71,9 +80,9 @@ void TouchLine::keyPressed(QChar e)
 			// Next key must be backspace
 			emit nextKey((char)8);
 		}
-    }
+	}
 
-    // The character is a back space
+	// The character is a back space
 	else if(e.unicode()==8)
 		{
 		if (pos>0)
@@ -161,4 +170,3 @@ void TouchLine::setFont(QFont f)
 }
 
 
-#include "touchline.moc"

@@ -1,10 +1,15 @@
 <!DOCTYPE kpartgui>
 <kpartgui name="ktouch" version="0.1">
 <MenuBar>
-  <Menu name="option"><text>&amp;Option</text>
-    <Action name="optionKeyboard"/>
-    <Action name="optionTraining"/>
-    <Action name="optionGeneral"/>
-  </Menu>
+	<Menu name="mode"><text>&amp;Mode</text>
+		<Action name="train"/>
+		<Action name="edit"/>
+		<Action name="test"/>
+	</Menu>
+	<Menu name="option"><text>&amp;Option</text>
+		<Action name="optionKeyboard"/>
+		<Action name="optionTraining"/>
+		<Action name="optionGeneral"/>
+	</Menu>
 </MenuBar>
 </kpartgui>

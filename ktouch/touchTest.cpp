@@ -1,8 +1,8 @@
 /***************************************************************************
-                          touchlecture.h  -  description
+                          touchTest.cpp  -  description
                              -------------------
-    begin                : Sun Dec 10 2000
-    copyright            : (C) 2000 by Haavard Froeiland
+    begin                : Tue Nov 27 2001
+    copyright            : (C) 2001 by Haavard Froeiland
     email                : haavard@users.sourceforge.net
  ***************************************************************************/
 
@@ -15,50 +15,18 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef TOUCHLECTURE_H
-#define TOUCHLECTURE_H
+#include "touchTest.h"
+#include "touchTest.moc"
 
-#include <vector>
+#include <kdebug.h>
 
-#include <qobject.h>
-#include <qstring.h>
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qmessagebox.h>
-
-class TouchLecture : public QObject
+TouchTest::TouchTest( QWidget* parent, const char* name)
+          : TouchTestLayout(parent,name)
 {
-	Q_OBJECT
+}
 
-	public:
-		TouchLecture();
-		QString getNextLine();
-		QString getName();
+TouchTest::~TouchTest()
+{
 
-		void load(QString fileName);
-		int save();
-		int saveAs(QString fileName);
-
-
-	public slots:
-		void levelUp();
-		void levelDown();
-		void setLevel(unsigned int level);
-
-	signals:
-		void levelChanged(int);
-		void levelMessage(const QString&);
-
-	private:
-		unsigned int pos;
-		unsigned int level;
-		std::vector<std::vector<QString> *> levelVector;
-		QString fileName;
-		QWidget *parent;
-		bool levelHasChanged;
-};
-
-#endif
-
-
+}
 

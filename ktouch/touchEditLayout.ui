@@ -1,0 +1,244 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>TouchEditLayout</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>TouchEditLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>968</width>
+            <height>796</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form2</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>11</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QListBox" row="0" column="0" rowspan="7" colspan="1">
+            <item>
+                <property name="text">
+                    <string>jf</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                    <string>kd</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                    <string>ls</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                    <string>ao</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                    <string>ed</string>
+                </property>
+            </item>
+            <item>
+                <property name="text">
+                    <string>ne</string>
+                </property>
+            </item>
+            <property name="name">
+                <cstring>levelListff</cstring>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="8" column="0">
+            <property name="name">
+                <cstring>removeButtonff</cstring>
+            </property>
+            <property name="text">
+                <string>Remove Level</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="1">
+            <property name="name">
+                <cstring>TextLabel1</cstring>
+            </property>
+            <property name="text">
+                <string>Description:</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="2" column="1">
+            <property name="name">
+                <cstring>TextLabel2</cstring>
+            </property>
+            <property name="text">
+                <string>Training text:</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="5" column="1">
+            <property name="name">
+                <cstring>downButtonff</cstring>
+            </property>
+            <property name="text">
+                <string>Move down</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="7" column="0">
+            <property name="name">
+                <cstring>addButtonff</cstring>
+            </property>
+            <property name="text">
+                <string>Add Level</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit" row="2" column="2" rowspan="7" colspan="2">
+            <property name="name">
+                <cstring>textff</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="edited">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="4" column="1">
+            <property name="name">
+                <cstring>upButtonff</cstring>
+            </property>
+            <property name="text">
+                <string>Move up</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget" row="0" column="1" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>Layout8</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>TextLabel1_2_2_2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Level:</string>
+                    </property>
+                </widget>
+                <widget class="QLCDNumber">
+                    <property name="name">
+                        <cstring>level</cstring>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Plain</enum>
+                    </property>
+                    <property name="numDigits">
+                        <number>3</number>
+                    </property>
+                    <property name="segmentStyle">
+                        <enum>Flat</enum>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name" stdset="0">
+                        <cstring>Spacer8_2_2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </hbox>
+        </widget>
+        <widget class="QLineEdit" row="1" column="2">
+            <property name="name">
+                <cstring>description</cstring>
+            </property>
+        </widget>
+        <spacer row="6" column="1">
+            <property name="name" stdset="0">
+                <cstring>Spacer1</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="3" column="1">
+            <property name="name" stdset="0">
+                <cstring>Spacer16</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="1" column="3">
+            <property name="name" stdset="0">
+                <cstring>Spacer22</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </grid>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
