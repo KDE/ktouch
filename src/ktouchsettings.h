@@ -56,20 +56,11 @@ class KTouchSettings {
     void saveSettings();
 
     // general options
-    bool            m_errorBeep;        ///< Whether to beep on erro or not.
+    bool            m_errorBeep;        ///< Whether to beep on error or not.
     bool            m_levelBeep;        ///< Whether to make a sound on level change or not.
-    bool            m_useErrorColor;    ///< Whether to use a different background for wrong text or not.
-    QColor          m_errorColor;       ///< The background color for wrong text.
     QFont           m_font;             ///< The font to be used in the slide lines.
     int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediatly')
-    
-    // keyboard page
-    bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
-    int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
-    QString         m_keyboardLayout;   ///< The currently choosen keyboard layout.
-    QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
-    bool						m_showAnimation;    ///< If the keyboard shoud animate keys or not.
-    
+
     // training page
     bool            m_autoLevelChange;  ///< Whether to use automatic level change or not.
     int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
@@ -77,6 +68,22 @@ class KTouchSettings {
     int             m_upCorrectLimit;   ///< If user types more correct, the level will be increased.
     int             m_upSpeedLimit;     ///< If user types faster, the level will be increased.
     bool            m_rememberLevel;    ///< If true, the old level will be set when starting KTouch normally.
+
+    // keyboard page
+    bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
+    int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
+    QString         m_keyboardLayout;   ///< The currently choosen keyboard layout.
+    QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
+    bool            m_showAnimation;    ///< If the keyboard shoud animate keys or not.
+
+    // colors page
+    bool            m_useErrorColor;       ///< Whether to use a different background for wrong text or not.
+    QColor          m_teacherTextColor;    ///< The text color for the teachers line.
+    QColor          m_teacherBackground;   ///< The background color for the teachers line.
+    QColor          m_studentTextColor;    ///< The text color for the students line.
+    QColor          m_studentBackground;   ///< The background color for the students line.
+    QColor          m_errorTextColor;      ///< The text color for wrong text (students line).
+    QColor          m_errorBackground;     ///< The background color for wrong text (students line).
 
     // other stuff not in the preferences dialog
     QStringList     m_lectureList;      ///< A list of all lecture files found in the standard dirs (filenames only).

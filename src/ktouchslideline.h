@@ -51,25 +51,11 @@ class QPainter;
  */
 class KTouchSlideLine : public QWidget {
     Q_OBJECT
-  private:
-    bool m_rightJustify; // do we right align the widget-for langauges like hebrew which is written from right to left.
   public:
     /// Constructor
     KTouchSlideLine(QWidget *parent);
     /// Destructor, free memory allocated for the line pixmap.
     ~KTouchSlideLine();
-    /// Sets the font to be used.
-    void setFont(const QFont& font);
-    /// Returns the font used in the slide line.
-    const QFont& font() const { return m_font; };
-    /// Sets the background colour to be used for correctly typed text.
-    void setCorrectColor(const QColor& color);
-    /// Returns the background colour used for correctly typed text.
-    const QColor& correctColor() const { return m_correctColor; };
-    /// Sets the background colour to be used for wrong text.
-    void setErrorColor(const QColor& color);
-    /// Returns the background colour used for wrong text.
-    const QColor& errorColor() const { return m_errorColor; };
     /// Applies the preferences (font and colours).
     void applyPreferences();
     /// Sets the teacher and student text (usually called when a new line is started).
@@ -109,9 +95,7 @@ class KTouchSlideLine : public QWidget {
     /// Redraws the student pixmaps and updates the frame x positions
     void updateLines();
 
-    QFont       m_font;             ///< Font for the slide line.
-    QColor      m_correctColor;     ///< Background colour used for correct text.
-    QColor      m_errorColor;       ///< Background colour used for wrong text.
+    QFont       m_font;             ///< The font for the sliding lines.
     QString     m_teacherText;      ///< The teachers text.
     QString     m_studentText;      ///< The students text.
     QPixmap    *m_teacherPixmap;    ///< Pixmap used to draw the teacher sliding line.

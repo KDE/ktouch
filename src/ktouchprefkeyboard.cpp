@@ -21,17 +21,7 @@
 KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags f)
  : KTouchPrefKeyboardLayout(parent, name, f)
 {
-    // fill color scheme combo
-    colorSchemeCombo->clear();
-    for (QValueList<KTouchKeyboardColor>::const_iterator it=KTouchConfig().m_keyboardColors.begin();
-                                                        it!=KTouchConfig().m_keyboardColors.end();
-                                                        ++it)
-    {
-        colorSchemeCombo->insertItem((*it).m_name);
-    };
-
-    
-    // fill keyboard combo
+    // fill keyboard layout combo
     keyboardLayoutCombo->clear();
     for (QStringList::const_iterator it=KTouchConfig().m_keyboardLayouts.begin();
                                     it!=KTouchConfig().m_keyboardLayouts.end();
@@ -39,7 +29,4 @@ KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags
     {
         keyboardLayoutCombo->insertItem(*it);
     };
-
-    // set if the keyboard used animation
-    showAnimationCheckBox->setChecked(KTouchConfig().m_showAnimation);
 }

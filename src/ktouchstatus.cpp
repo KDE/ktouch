@@ -12,11 +12,13 @@
 
 #include "ktouchstatus.h"
 #include "ktouchstatus.moc"
+#include "ktouchstatuslayout.moc"
 
 #include <qlcdnumber.h>
 #include <qlabel.h>
 #include <qprogressbar.h>
 #include <kpushbutton.h>
+#include <kdebug.h>
 #include "ktouchsettings.h"
 
 KTouchStatus::KTouchStatus(QWidget *parent)

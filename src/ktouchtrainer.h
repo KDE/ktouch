@@ -61,6 +61,9 @@ class KTouchTrainer : public QObject {
     void backspacePressed();
     /// Will be called when "enter" has been pressed (displays next line).
     void enterPressed();
+    /// Will be called whenever the student text has changed and updates the slide line widget,
+    /// the status widget and shows the next to be pressed key on the keyboard
+    void updateWidgets();
     /// Reads the training session history.
     void readSessionHistory();
     /// Saves the training session history.

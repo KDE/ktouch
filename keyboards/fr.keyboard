@@ -27,13 +27,14 @@ FingerKey  59			M				 108   20
 ControlKey	260		Tab			0		10	15    10
 ControlKey	13		Enter		128	20	22    10
 ControlKey	258		Shift		123	30	27    10
-ControlKey	264		Alt			120	40	15    10
+ControlKey	264		AltGr		120	40	15    10
 ControlKey	265		Ctrl		135	40	15    10
 ControlKey	263		Alt			15	40	15    10
 ControlKey	262		Ctrl		0		40	15    10
 ControlKey	32    Space		30	40	90    10
 ControlKey	257		Shift		0		30	23    10
-ControlKey	259		Caps_L	0		20	18    10
+ControlKey	259		CapsLock	0		20	18    10
+ControlKey  8 		BackSpace	140  0   10   10
 #
 #
 #  NormalKey: This class represent all the
@@ -45,8 +46,8 @@ ControlKey	259		Caps_L	0		20	18    10
 #
 #					Assci	KeyText		x		y		FingerKey
 #
-NormalKey 96		²					0		0		97	
-NormalKey 49		1 				10	0		97	
+NormalKey 96		²					0		0		97
+NormalKey 49		1 				10	0		97
 NormalKey 50		2					20	0		115
 NormalKey 51    3         30	0		100
 NormalKey 52		4					40	0		102
@@ -59,7 +60,6 @@ NormalKey 48		0					100	0		59
 NormalKey 95		)					110	0		59
 NormalKey 61		=					120	0		59
 #NormalKey 92							130	0		59
-NormalKey 8 		<-				140	0		59
 #
 NormalKey	113		A					15	10	97
 NormalKey	119		Z					25	10	115

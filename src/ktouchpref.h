@@ -16,8 +16,9 @@
 #include <kdialogbase.h>
 
 class KTouchPrefGeneral;
-class KTouchPrefKeyboard;
 class KTouchPrefTraining;
+class KTouchPrefKeyboard;
+class KTouchPrefColors;
 
 /** The preferences dialog of KTouch.
  *  This is a typical preferences dialog and behaves as such :-).
@@ -56,8 +57,9 @@ class KTouchPref : public KDialogBase {
 
   private:
     KTouchPrefGeneral   *m_pageGeneral;   ///< the "General options" page
-    KTouchPrefKeyboard  *m_pageKeyboard;  ///< the "Keyboard settings" page
     KTouchPrefTraining  *m_pageTraining;  ///< the "Training options" page
+    KTouchPrefKeyboard  *m_pageKeyboard;  ///< the "Keyboard settings" page
+    KTouchPrefColors    *m_pageColors;    ///< the "Color settings" page
 };
 
 #endif  // KTOUCHPREF_H

@@ -1,3 +1,14 @@
+2003-05-05  Andreas Nicolai <andreas.nicolai@gmx.net>
+   (develop)
+   * added new files to CVS
+   * color and slide bug fix in slide line widget
+   * session management works now
+   
+2003-04-01  Andreas Nicolai <andreas.nicolai@gmx.net>
+   (develop)
+   * code port to KDE3
+   * added many features (statistics, preferences dialog & other stuff)
+
 2001-09-24  Haavard Froeiland <haavard@users.sourceforge.net>
 
    (develop)

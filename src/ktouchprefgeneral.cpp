@@ -14,7 +14,6 @@
 
 #include <qcheckbox.h>
 #include <qlabel.h>
-#include <kcolorbutton.h>
 #include <kpushbutton.h>
 #include <kfontdialog.h>
 #include <klocale.h>
@@ -22,7 +21,6 @@
 KTouchPrefGeneral::KTouchPrefGeneral(QWidget *parent, const char *name, WFlags f)
  : KTouchPrefGeneralLayout(parent, name, f)
 {
-    connect(errorColorCheck, SIGNAL(toggled(bool)), this, SLOT(errorColorToggled(bool)) );
     connect(fontChooseBtn, SIGNAL(clicked()), this, SLOT(fontChooseBtnClicked()) );
     fontDisplayLabel->setText( i18n("Have a happy typing time!") );
 }
@@ -31,10 +29,6 @@ void KTouchPrefGeneral::updateFont(const QFont& font) {
     m_font = font;
     m_font.setPointSize(14);
     fontDisplayLabel->setFont( m_font );
-};
-
-void KTouchPrefGeneral::errorColorToggled(bool on) {
-    errorColorBtn->setEnabled(on);
 };
 
 void KTouchPrefGeneral::fontChooseBtnClicked() {

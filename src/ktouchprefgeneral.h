@@ -12,8 +12,8 @@
 #ifndef KTOUCHPREFGENERAL_H
 #define KTOUCHPREFGENERAL_H
 
-#include "ktouchprefgenerallayout.h"
 #include <qfont.h>
+#include "ktouchprefgenerallayout.h"
 
 /** This is the implementation of the "General options" page of the preferences dialog.
  *  This class only contains the functionality which is used "inside" this page (e.g.
@@ -31,8 +31,6 @@ class KTouchPrefGeneral : public KTouchPrefGeneralLayout {
     QFont m_font;   ///< The font that can be choosen for the sliding lines.
 
   public slots:
-    /// Turns the 'errorColor' Button on or off.
-    void errorColorToggled(bool on);
     /// Will be called when the choose font button has been pressed.
     void fontChooseBtnClicked();
 

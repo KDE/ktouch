@@ -55,21 +55,26 @@ void KTouchSettings::loadSettings() {
 
     // now we're reading the configuration
     KConfig *config=kapp->config();
-    
+
     // read general options
     config->setGroup("General");
-    m_errorBeep = config->readBoolEntry("Beep on error", true);
-    m_levelBeep = config->readBoolEntry("Sound on level", true);
-    m_useErrorColor = config->readBoolEntry("Color on error", true);
-    QColor defaultColor(170,0,25);
-    m_errorColor = config->readColorEntry("ErrorColor", &defaultColor);
+    m_errorBeep = config->readBoolEntry("BeepOnError", true);
+    m_levelBeep = config->readBoolEntry("SoundOnLevelChange", true);
     QFont defaultFont = QFont("Courier 10 Pitch");
     m_font = config->readFontEntry("Font", &defaultFont);
     m_slideSpeed = config->readNumEntry("Sliding speed", 5);
 
+    // read training options
+    config->setGroup("Training");
+    m_autoLevelChange = config->readBoolEntry("AutoLevelChange", true);
+    m_downCorrectLimit = config->readNumEntry("CorrectLimitDown", 60);
+    m_downSpeedLimit = config->readNumEntry("SpeedLimitDown", 60);
+    m_upCorrectLimit = config->readNumEntry("CorrectLimitUp", 85);
+    m_upSpeedLimit = config->readNumEntry("SpeedLimitUp", 120);
+    m_rememberLevel = config->readBoolEntry("Remember level", true);
+
     // read keyboard settings
     config->setGroup("Keyboard");
-    m_keyboardColorScheme = config->readNumEntry("Colorscheme", 1);
     m_keyboardLayout = config->readEntry("Layout", "number");
     // if keyboard layout it not available (e.g. the layout file has been deleted) switch to default
     if (m_keyboardLayouts .contains(m_keyboardLayout)==0)
@@ -80,36 +85,38 @@ void KTouchSettings::loadSettings() {
     // create some default colour schemes
     createDefaultKeyboardColors();
     m_showAnimation = config->readBoolEntry("ShowAnimation", true);
+    // although the keyboard color scheme is selected in the color dialog, it is a property of
+    // the keyboard and thus it stays in the "Keybord" group
+    m_keyboardColorScheme = config->readNumEntry("Colorscheme", 1);
 
-    // read training options
-    config->setGroup("Training");
-    m_autoLevelChange = config->readBoolEntry("Auto Level", true);
-    m_downCorrectLimit = config->readNumEntry("CorrectLimitDown", 80);
-    m_downSpeedLimit = config->readNumEntry("SpeedLimitDown", 100);
-    m_upCorrectLimit = config->readNumEntry("CorrectLimitUp", 93);
-    m_upSpeedLimit = config->readNumEntry("SpeedLimitUp", 150);
-    m_rememberLevel = config->readBoolEntry("Remember level", true);
+    // read color options
+    config->setGroup("Colors");
+    m_useErrorColor = config->readBoolEntry("ColorOnError", true);
+    QColor defaultColor(0,00,50);
+    m_teacherTextColor = config->readColorEntry("TeacherTextColor", &defaultColor);
+    defaultColor.setRgb(190,190,255);
+    m_teacherBackground = config->readColorEntry("TeacherBackgroundColor", &defaultColor);
+    defaultColor.setRgb(0,50,0);
+    m_studentTextColor = config->readColorEntry("StudentTextColor", &defaultColor);
+    defaultColor.setRgb(160,255,160);
+    m_studentBackground = config->readColorEntry("StudentBackgroundColor", &defaultColor);
+    defaultColor.setRgb(255,255,255);
+    m_errorTextColor = config->readColorEntry("ErrorTextColor", &defaultColor);
+    defaultColor.setRgb(170,0,25);
+    m_errorBackground = config->readColorEntry("ErrorBackgroundColor", &defaultColor);
 };
 
 
 void KTouchSettings::saveSettings() {
     KConfig *config=kapp->config();
-    
+
     // write general options
     config->setGroup("General");
     config->writeEntry("BeepOnError",       m_errorBeep);
     config->writeEntry("SoundOnLevel",      m_levelBeep);
-    config->writeEntry("ColorOnError",      m_useErrorColor);
-    config->writeEntry("ErrorColor",        m_errorColor);
     config->writeEntry("Font",              m_font);
     config->writeEntry("SlidingSpeed",      m_slideSpeed);
-    
-    // write keyboard settings
-    config->setGroup("Keyboard");
-    config->writeEntry("Colorscheme",       m_keyboardColorScheme);
-    config->writeEntry("Layout",            m_keyboardLayout);
-    config->writeEntry("ShowAnimation",     m_showAnimation);
-    
+
     // write training settings
     config->setGroup("Training");
     config->writeEntry("AutoLevelChange",   m_autoLevelChange);
@@ -118,6 +125,22 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("CorrectLimitUp",    m_upCorrectLimit);
     config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
     config->writeEntry("RememberLevel",     m_rememberLevel);
+
+    // write keyboard settings
+    config->setGroup("Keyboard");
+    config->writeEntry("Colorscheme",       m_keyboardColorScheme);
+    config->writeEntry("Layout",            m_keyboardLayout);
+    config->writeEntry("ShowAnimation",     m_showAnimation);
+
+    // write color settings
+    config->setGroup("Colors");
+    config->writeEntry("ColorOnError",              m_useErrorColor);
+    config->writeEntry("TeacherTextColor",          m_teacherTextColor);
+    config->writeEntry("TeacherBackgroundColor",    m_teacherBackground);
+    config->writeEntry("StudentTextColor",          m_studentTextColor);
+    config->writeEntry("StudentBackgroundColor",    m_studentBackground);
+    config->writeEntry("ErrorTextColor",            m_errorTextColor);
+    config->writeEntry("ErrorBackgroundColor",      m_errorBackground);
 };
 
 

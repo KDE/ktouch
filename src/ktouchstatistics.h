@@ -14,7 +14,7 @@
 #define KTOUCHSTATISTICS_H
 
 #include <qwidget.h>
-#include <ktouchstatisticslayout.h>
+#include "ktouchstatisticslayout.h"
 
 class QShowEvent;
 class QResizeEvent;

@@ -20,6 +20,7 @@ class QPaintEvent;
 
 class KTouchTrainer;
 
+/// This is the chart widget and contains all chart drawing code.
 class KTouchChartWidget : public QFrame {
     Q_OBJECT
   public:

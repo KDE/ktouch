@@ -81,27 +81,22 @@ void KTouchTrainer::keyPressed(QChar key) {
         return;
     };
     m_studentText+=key;
-    m_slideLineWidget->setStudentText(m_studentText);   // does all the work in the slide line widget
+    // we need to find out, if the key was correct or not
     unsigned int len = m_studentText.length();
     if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
         // ok, all student text is correct
         m_session.addCorrectChar(key);
-        m_statusWidget->updateStatus(m_level, m_session.correctness());
-        if (m_teacherText.length()==m_studentText.length())
-            m_keyboardWidget->newKey(QChar(13));        // we have reached the end of the line
-        else
-            m_keyboardWidget->newKey(m_teacherText[len]);
     }
     else {
-        // ok, find the key the user missed:
+        // nope, the key was wrong : beep !!!
+        if (KTouchConfig().m_errorBeep)   QApplication::beep();
+        // now find the key the user missed:
         if (m_teacherText.left(len-1)==m_studentText.left(len-1) && m_teacherText.length()>=len)
             m_session.addWrongChar(m_teacherText[len-1]);
         else
             m_session.addWrongChar(8);
-        m_statusWidget->updateStatus(m_level, m_session.correctness());
-        m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
     };
-    emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
+    updateWidgets(); // update all the other widgets (keyboard widget, status widget and statusbar
 };
 
 void KTouchTrainer::backspacePressed() {
@@ -113,12 +108,15 @@ void KTouchTrainer::backspacePressed() {
             --m_session.m_correctChars;
         };
         m_studentText = m_studentText.left(--len);
-        m_slideLineWidget->setStudentText(m_studentText);
+
+        updateWidgets(); // update all the widgets
+        /*
         m_statusWidget->updateStatus(m_level, m_session.correctness());
         if (m_teacherText.left(len)==m_studentText)
             m_keyboardWidget->newKey(m_teacherText[len]);
         else
             m_keyboardWidget->newKey(QChar(8));
+        */
     }
     else {
         // TODO: Flash line
@@ -129,7 +127,10 @@ void KTouchTrainer::backspacePressed() {
 
 void KTouchTrainer::enterPressed() {
     if (!typingAllowed())  return;
-    if (m_studentText!=m_teacherText)  return;
+    if (m_studentText!=m_teacherText) {
+        QApplication::beep();
+        return;
+    };
 
     if (KTouchConfig().m_autoLevelChange) {
         // if level increase criterion was fulfilled, increase line counter
@@ -147,11 +148,11 @@ void KTouchTrainer::enterPressed() {
         };
         // Automatic level change after a number of lines can happen, if you fulfilled the
         // requirements in the last 5 lines.
-        if (m_incLinesCount>=5) {
+        if (m_incLinesCount>=2) {
             levelUp();
             return;
         }
-        if (m_decLinesCount>=5 && m_level!=0) {
+        if (m_decLinesCount>=2 && m_level!=0) {
             levelDown();
             return;
         };
@@ -178,6 +179,32 @@ void KTouchTrainer::enterPressed() {
     }
     else
         newLine();
+};
+
+void KTouchTrainer::updateWidgets() {
+    // update status widget
+    m_statusWidget->updateStatus(m_level, m_session.correctness());
+    // update slide line widget
+    m_slideLineWidget->setStudentText(m_studentText);
+    // update keyboard widget -> show next to be pressed char.
+    // That means we have to find out, whether the student text is correct or not!
+    unsigned int len = m_studentText.length();
+    if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
+        // ok, all student text is correct
+        if (m_teacherText.length()==m_studentText.length())
+            m_keyboardWidget->newKey(QChar(13));        // we have reached the end of the line
+        else
+            m_keyboardWidget->newKey(m_teacherText[len]);
+    }
+    else {
+        // ok, find the key the user missed:
+        if (m_teacherText.left(len-1)==m_studentText.left(len-1) && m_teacherText.length()>=len)
+            m_session.addWrongChar(m_teacherText[len-1]);
+        else
+            m_session.addWrongChar(8);
+        m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
+    };
+    emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
 };
 
 void KTouchTrainer::readSessionHistory() {
@@ -214,6 +241,7 @@ void KTouchTrainer::writeSessionHistory() {
 
 void KTouchTrainer::levelUp() {
     KAudioPlayer::play(m_levelUpSound);
+    m_incLinesCount=m_decLinesCount=0;
     ++m_level;  // increase the level
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
@@ -224,6 +252,7 @@ void KTouchTrainer::levelUp() {
 
 void KTouchTrainer::levelDown() {
     KAudioPlayer::play(m_levelUpSound);
+    m_incLinesCount=m_decLinesCount=0;
     if (m_level>0) {
        --m_level;
     }
@@ -258,6 +287,8 @@ void KTouchTrainer::continueTraining() {
     m_slideLineWidget->setCursorTimerEnabled(true);
     emit statusbarMessageChanged(i18n("Training session continues on next keypress...") );
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
+    m_statusWidget->updateStatus(m_level, m_session.correctness());
+    m_statusWidget->speedLCD->display( m_session.charSpeed() );
 };
 
 void KTouchTrainer::timerTick() {

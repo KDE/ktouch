@@ -154,27 +154,27 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
         };
     };
 
-		if(m_showAnimation){ // only do this if we want to show animation.
-    		// find the key in the key connector list
-		    QValueList<KTouchKeyConnector>::iterator keyIt = m_connectorList.begin();
-		    while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
-		    // if found mark the appropriate keys
-		    if (keyIt!=m_connectorList.end()) {
-		        QChar targetChar = (*keyIt).m_targetKeyChar;
-		        QChar fingerChar = (*keyIt).m_fingerKeyChar;
-		        QChar controlChar = (*keyIt).m_controlKeyChar;
-		        // find the keys in the keylist
-		        for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
-		            if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
-		            if (key->m_keyChar==targetChar) key->m_isNextKey=true;
-		            else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
-		            else if (key->m_keyChar==controlChar)  key->m_isActive=true;
-		            if (key->m_isActive || key->m_isNextKey)
-		                key->paint(painter);
-		        };
-		    };
-		    m_nextKey = nextChar;
-		}
+    if (m_showAnimation){ // only do this if we want to show animation.
+        // find the key in the key connector list
+        QValueList<KTouchKeyConnector>::iterator keyIt = m_connectorList.begin();
+        while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
+        // if found mark the appropriate keys
+        if (keyIt!=m_connectorList.end()) {
+            QChar targetChar = (*keyIt).m_targetKeyChar;
+            QChar fingerChar = (*keyIt).m_fingerKeyChar;
+            QChar controlChar = (*keyIt).m_controlKeyChar;
+            // find the keys in the keylist
+            for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
+                if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
+                if (key->m_keyChar==targetChar) key->m_isNextKey=true;
+                else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
+                else if (key->m_keyChar==controlChar)  key->m_isActive=true;
+                if (key->m_isActive || key->m_isNextKey)
+                    key->paint(painter);
+            };
+        };
+        m_nextKey = nextChar;
+    }
 };
 
 
