@@ -251,7 +251,7 @@ void KTouchSlideLine::updateLines() {
     // now let's draw the students pixmap
     QPainter painter;
     painter.begin (m_studentPixmap, this);
-    if (KTouchConfig().m_useErrorColor) {
+    if (Prefs::colorOnError()) {
         // draw the student line depending on the colour settings
         if (error) {
             m_cursorBackground = KTouchConfig().m_errorBackground;

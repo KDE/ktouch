@@ -20,7 +20,7 @@
       <default>#003200</default>
     </entry>
     <entry name="ColorOnError" type="Bool">
-      <label>Use colors In typing line to show errors</label>
+      <label>Whether to use a different background for wrong text or not.</label>
       <default code="true">true</default>
     </entry> 
     <entry name="ErrorBackgroundColor" type="Color">

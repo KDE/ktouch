@@ -52,10 +52,7 @@ class KTouchSettings {
     void saveSettings();
 
     // general options
-    bool            m_errorBeep;        ///< Whether to beep on error or not.
-    bool            m_levelBeep;        ///< Whether to make a sound on level change or not.
     QFont           m_font;             ///< The font to be used in the slide lines.
-    int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediately')
 
     // training page
     int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
@@ -71,7 +68,6 @@ class KTouchSettings {
     QFont           m_keyboardFont;     ///< The keyboard font
 
     // colors page
-    bool            m_useErrorColor;       ///< Whether to use a different background for wrong text or not.
     QColor          m_teacherTextColor;    ///< The text color for the teachers line.
     QColor          m_teacherBackground;   ///< The background color for the teachers line.
     QColor          m_studentTextColor;    ///< The text color for the students line.

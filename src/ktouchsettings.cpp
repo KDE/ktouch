@@ -58,11 +58,8 @@ void KTouchSettings::loadSettings() {
 
     // read general options
     //TODO replace directly the values by the Prefs:: functions in the files where they are used
-    m_errorBeep = Prefs::beepOnError();
-    m_levelBeep = Prefs::soundOnLevel();
     QFont defaultFont = KGlobalSettings::generalFont();
     m_font = config->readFontEntry("Font", &defaultFont);
-    m_slideSpeed = Prefs::slidingSpeed();
 
     // read training options
     config->setGroup("Training");
@@ -87,7 +84,6 @@ void KTouchSettings::loadSettings() {
     // the keyboard and thus it stays in the "Keybord" group
     m_keyboardColorScheme = Prefs::colorScheme();
     // read color options
-    m_useErrorColor = Prefs::colorOnError();
     m_teacherTextColor = Prefs::teacherTextColor();
     m_teacherBackground = Prefs::teacherBackgroundColor();
     m_studentTextColor = Prefs::studentTextColor();
