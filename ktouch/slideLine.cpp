@@ -44,6 +44,9 @@ void SlideLine::slide()
   }
   if (cursorCount>6) cursorCount=0;
   else cursorCount++;
+
+  setBackgroundMode( QWidget::PaletteBase );
+
   repaint(false);
 }
 
@@ -65,110 +68,107 @@ void SlideLine::setStudentText(QString t)
 
 void SlideLine::paintEvent( QPaintEvent * )
 {
-  if (needRecreate)
-  {
-    calculateWidth();
-    calculateCursor();
-    cursorY=height()*3/4;
-    cursorHight=height()/8;
+	if (needRecreate)
+	{
+		calculateWidth();
+		calculateCursor();
+		cursorY=height()*3/4;
+		cursorHight=height()/8;
 
-    if (pixmap!=0)
-      delete pixmap;
+		if (pixmap!=0)
+		delete pixmap;
 
-    if (pixmapSize < width())
-      pixmap = new QPixmap(width(),height());
-    else
-      pixmap = new QPixmap(pixmapSize,height());
+		if (pixmapSize < width())
+			pixmap = new QPixmap(width(),height());
+		else
+			pixmap = new QPixmap(pixmapSize,height());
 
-    //Start with the right offset
-    if(width()>=pixmapSize)
-    {
-      pos=(int)((width()-pixmapSize)/2);
-    }
-    else
-    {
-      pos=(int)((width()-pixmapSize)*(offset));
-    }
+		//Start with the right offset
+		if(width()>=pixmapSize)
+			pos=(int)((width()-pixmapSize)/2);
+		else
+			pos=(int)((width()-pixmapSize)*(offset));
 
-    QPainter painter;
-    painter.begin (pixmap, this);
-      painter.fillRect (pixmap->rect(),QColor(255,255,255));
-      painter.setFont( font );
-      painter.drawText(20,0,pixmapSize,height()/2,
-                            QPainter::AlignLeft | QPainter::AlignVCenter,
-                            teacherText);
-      //draw <-|
-      //<
-      int unit=cursorHight/2;
+		QPainter painter;
+		painter.begin (pixmap, this);
+		//painter.fillRect (pixmap->rect(),QColor(255,255,255));
+		painter.eraseRect(pixmap->rect());
+		painter.setFont( font );
+		painter.drawText(20,0,pixmapSize,height()/2,
+								QPainter::AlignLeft | QPainter::AlignVCenter,
+								teacherText);
+		//draw <-|
+		//<
+		int unit=cursorHight/2;
 
-      painter.drawLine(pixmapSize-70,height()/4,
-                       pixmapSize-70+unit,(height()/4)-unit);
-      painter.drawLine(pixmapSize-70,height()/4,
-                       pixmapSize-70+unit,(height()/4)+unit);
-      // -
-      painter.drawLine(pixmapSize-70,height()/4,
-                       pixmapSize-70+unit*4,height()/4);
-      // |
-      painter.drawLine(pixmapSize-70+unit*4,height()/4,
-                       pixmapSize-70+unit*4,height()/4-unit*2);
+		painter.drawLine(pixmapSize-70,height()/4,
+						pixmapSize-70+unit,(height()/4)-unit);
+		painter.drawLine(pixmapSize-70,height()/4,
+						pixmapSize-70+unit,(height()/4)+unit);
+		// -
+		painter.drawLine(pixmapSize-70,height()/4,
+						pixmapSize-70+unit*4,height()/4);
+		// |
+		painter.drawLine(pixmapSize-70+unit*4,height()/4,
+						pixmapSize-70+unit*4,height()/4-unit*2);
 
-    painter.end();
+		painter.end();
 
-    needRecreate = false;
-    textChanged  = true;
-  }
+		needRecreate = false;
+		textChanged  = true;
+	}
 
-  // if the text has changed we will draw the new text on the back ground image.
-  if (textChanged)
-  {
-    QPainter painter;
-    painter.begin (pixmap, this);
-    {
-      if(error)
-      {
-        painter.fillRect (0,height()/2,pixmapSize,height(),errorColor);
-      }
-      else
-      {
-        painter.fillRect (0,height()/2,pixmapSize,height(),QColor(200,255,255));
-      }
+	// if the text has changed we will draw the new text on the back ground image.
+	if (textChanged)
+	{
+		QPainter painter;
+		painter.begin (pixmap, this);
+		{
+		if(error)
+		{
+			painter.fillRect (0,height()/2,pixmapSize,height(),errorColor);
+		}
+		else
+		{
+			painter.fillRect (0,height()/2,pixmapSize,height(),QColor(200,255,255));
+		}
 
-      if (pixmapSize<width())
-        painter.fillRect (pixmapSize,height()/2,width(),height(),QColor(255,255,255));
-      painter.setFont( font );
-      painter.drawText(20,height()/2,pixmapSize,height()/2,
-                            QPainter::AlignLeft | QPainter::AlignVCenter,
-                            studentText);
-      if(cursorCount<3)
-      {
-        calculateCursor();
-        // draw cursor
-        painter.drawLine(cursorX,cursorY+cursorHight,
-                         cursorX,cursorY-cursorHight);
+		if (pixmapSize<width())
+			painter.fillRect (pixmapSize,height()/2,width(),height(),QColor(255,255,255));
+		painter.setFont( font );
+		painter.drawText(20,height()/2,pixmapSize,height()/2,
+								QPainter::AlignLeft | QPainter::AlignVCenter,
+								studentText);
+		if(cursorCount<3)
+		{
+			calculateCursor();
+			// draw cursor
+			painter.drawLine(cursorX,cursorY+cursorHight,
+							cursorX,cursorY-cursorHight);
 
-      }
-    }
-    painter.end();
-  }
-  bitBlt (this, pos+1, 1, pixmap);
+		}
+		}
+		painter.end();
+	}
+	bitBlt (this, pos+1, 1, pixmap);
 }
 
 void SlideLine::resizeEvent (QResizeEvent *)
 {
-  needRecreate=true;
+	needRecreate=true;
 }
 
 void SlideLine::calculateWidth()
 {
-  font.setPointSize(height()/4);
-  QFontMetrics fontMetrics( font );
-  pixmapSize=fontMetrics.width(teacherText)+100;
+	font.setPointSize(height()/4);
+	QFontMetrics fontMetrics( font );
+	pixmapSize=fontMetrics.width(teacherText)+100;
 }
 
 void SlideLine::calculateCursor()
 {
-  QFontMetrics fontMetrics( font );
-  cursorX=fontMetrics.width(studentText)+22;
+	QFontMetrics fontMetrics( font );
+	cursorX=fontMetrics.width(studentText)+22;
 }
 
 void SlideLine::setFont(QFont f)
