@@ -52,9 +52,10 @@ void TouchKeyboard::setShowColor(bool show)
 	repaint(false);
 }
 
-void TouchKeyboard::setShowAnimation(bool show)
+void TouchKeyboard::setShowAnimation(int show)
 {
 	showAnimation=show;
+	TouchKey::setShowAnimation(show);
 }
 
 bool TouchKeyboard::getShowColor()
@@ -62,7 +63,7 @@ bool TouchKeyboard::getShowColor()
 	return TouchKey::getShowColor();
 }
 
-bool TouchKeyboard::getShowAnimation()
+int TouchKeyboard::getShowAnimation()
 {
 	return showAnimation;
 }
@@ -85,21 +86,21 @@ void TouchKeyboard::paintEvent( QPaintEvent * )
 
 void TouchKeyboard::newKey(const QChar &nextKey)
 {
-	QPainter p(this);
-	p.translate(trans,0);
-	if (keyArray[lastKey])
-	{
-		keyArray[lastKey.unicode()]->state=false;
-		keyArray[lastKey.unicode()]->paint(&p);
-	}
-	if (keyArray[nextKey.unicode()])
-	{
-		keyArray[nextKey.unicode()]->state=true;
-		lastKey=nextKey;
-
-		if(showAnimation)
-			keyArray[nextKey.unicode()]->paint(&p);
-	}
+  QPainter p(this);
+  p.translate(trans,0);
+  if (keyArray[lastKey])
+    {
+      keyArray[lastKey.unicode()]->state=false;
+      keyArray[lastKey.unicode()]->paint(&p);
+    }
+  if (keyArray[nextKey.unicode()])
+    {
+      keyArray[nextKey.unicode()]->state=true;
+      lastKey=nextKey;
+      
+      if(showAnimation > 0)
+	keyArray[nextKey.unicode()]->paint(&p);
+    }
 }
 
 void TouchKeyboard::resizeEvent (QResizeEvent *)
@@ -328,6 +329,6 @@ void TouchKeyboard::readOptions()
 {
 	config->setGroup("Keyboard");
 	setShowColor(config->readBoolEntry("Show Color",true));
-	setShowAnimation(config->readBoolEntry("Show Animation",true));
+	setShowAnimation(config->readNumEntry("Show Animation",true));
 	loadKeyboard(config->readEntry("Language","en"));
 }

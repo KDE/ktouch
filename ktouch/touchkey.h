@@ -38,15 +38,19 @@ public:
 	virtual QColor getColor();
 	int getSmallest();
 
-  static void setShowColor(bool show);
-  static bool getShowColor();
+	static void setShowColor(bool show);
+	static bool getShowColor();
+
+	static void setShowAnimation(int show);
+	static int getShowAnimation();
 
 private:
 	int gridX;
 	int gridY;
 	int gridWidth;
 	int gridHeight;
-  static bool showColor;
+	static bool showColor;
+	static int showAnimation;
 };
 
 #endif
