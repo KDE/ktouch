@@ -222,7 +222,7 @@ void KTouch::fileOpen() {
     if (!saveModified()) return;
     trainingPause();
     KURL url = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Open Training File"));
-    if (!url.isEmpty() && !url.isMalformed()) {
+    if (!url.isEmpty() && url.isValid()) {
         if (!m_lecture->loadLecture(url))
             KMessageBox::information(this, i18n("Could not open the training file!"));
         updateCaption();
@@ -234,7 +234,7 @@ bool KTouch::fileSave() {
     // check if there is already a filename for the lecture, if not ask for it
     if (m_lecture->m_lectureURL.isEmpty()) {
         KURL fileUrl = KFileDialog::getSaveURL();
-        if (!fileUrl.isEmpty() && !fileUrl.isMalformed()) {
+        if (!fileUrl.isEmpty() && fileUrl.isValid()) {
             m_lecture->m_lectureURL = fileUrl;
             m_lecture->saveLecture();
             updateCaption();
