@@ -207,9 +207,6 @@
                     <property name="text">
                         <string>&amp;OK</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+O</string>
-                    </property>
                     <property name="default">
                         <bool>true</bool>
                     </property>
@@ -221,9 +218,6 @@
                     <property name="text">
                         <string>&amp;Apply</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+A</string>
-                    </property>
                 </widget>
                 <widget class="KPushButton">
                     <property name="name">
@@ -231,9 +225,6 @@
                     </property>
                     <property name="text">
                         <string>&amp;Cancel</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+C</string>
                     </property>
                 </widget>
             </hbox>
