@@ -1,0 +1,36 @@
+
+
+
+Step 1: få tak i data
+
+vi trenger en fil med et ord per linje
+
+forslag til å lage fil:
+  aspell dump...... 
+
+
+Step 2: Creat a configuration file
+
+length-of-line 20
+number-of-line 10
+
+jf
+kd
+ls
+ca
+nt
+iv
+me
+hr
+go
+bp
+qu
+wn
+cx
+yz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+
+Step 3: Generate your training file
+
+perl ktouch-gen.pl your-config-file < your-word-file 
