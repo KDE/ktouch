@@ -116,6 +116,16 @@ KTouch::KTouch():KMainWindow()
 	touchLine->getNextLine();
 }
 
+KTouch::~KTouch()
+{
+  delete touchLecture;
+  delete touchStat;
+  delete touchStatus;
+  delete touchLine;  
+  delete touchKeyboard;
+}
+
+
 void KTouch::initActions()
 {
 	fileOpen = KStdAction::open(this, SLOT(slotFileOpen()), actionCollection());

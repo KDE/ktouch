@@ -41,6 +41,7 @@ TouchStat::TouchStat()
 }
 
 TouchStat::~TouchStat(){
+  delete time;
 }
 
 void TouchStat::gotError(QChar c)

@@ -39,6 +39,7 @@ class KTouch : public KMainWindow
 
 	public:
 		KTouch();
+		~KTouch();
 		TouchLecture *touchLecture;
 		TouchLine *touchLine;
 		TouchStatus *touchStatus;
