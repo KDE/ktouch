@@ -46,6 +46,12 @@
                     <property name="text">
                         <string>Beep on error</string>
                     </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Emit a beep on each typing error</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>If checked (default) this will emit a beep each time you make a typing error.</string>
+                    </property>
                 </widget>
                 <widget class="QCheckBox">
                     <property name="name">
@@ -53,6 +59,12 @@
                     </property>
                     <property name="text">
                         <string>Sound on automatic level change</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Play a sound when the level automatically changes.</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>If this is checked (default) a sound will be played each time you automatically change of level.</string>
                     </property>
                 </widget>
             </vbox>
@@ -195,7 +207,7 @@
                                         <enum>Both</enum>
                                     </property>
                                     <property name="tickInterval">
-                                        <number>2</number>
+                                        <number>1</number>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="1" column="1">
@@ -203,7 +215,7 @@
                                         <cstring>textLabel2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Fast</string>
+                                        <string>20: Fast</string>
                                     </property>
                                 </widget>
                                 <spacer row="1" column="2">
@@ -236,7 +248,7 @@
                                         <cstring>textLabel3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Slow</string>
+                                        <string>Slow: 1</string>
                                     </property>
                                 </widget>
                                 <spacer row="1" column="0">

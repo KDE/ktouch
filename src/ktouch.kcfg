@@ -34,15 +34,15 @@
     </group>
  <group name="General">
     <entry name="BeepOnError" type="Bool">
-      <label></label>
+      <label>Emit a beep on each typing error</label>
       <default code="true">true</default>
     </entry>
     <entry name="SoundOnLevel" type="Bool">
-      <label></label>
+      <label>Play a sound on automatic level change</label>
       <default code="true">true</default>
     </entry>
      <entry name="SlidingSpeed" type="Int">
-      <label></label>
+      <label>The sliding speed</label>
       <default code="true">5</default>
     </entry>
      <entry name="Font" type="Font">
@@ -52,7 +52,7 @@
     </group>
   <group name="Keyboard">
     <entry name="ColorScheme" type="Int">
-      <label></label>
+      <label>Select the color scheme</label>
       <default code="true">1</default>
     </entry>
     <entry name="ShowAnimation" type="Bool">
@@ -60,7 +60,7 @@
     <default code="true">true</default>
     </entry>
     <entry name="Layout" type="Int">
-    <label></label>
+    <label>Select the keyboard layout language</label>
     <default code="true">0</default>
     </entry>
       <entry name="KeysFont" type="Font">
@@ -70,27 +70,27 @@
   </group>
   <group name="Training">
     <entry name="AutoLevelChange" type="Bool">
-    <label></label>
+    <label>Allow automatic level adjustments</label>
     <default code="true">true</default>
     </entry>
      <entry name="RememberLevel" type="Bool">
-    <label></label>
+    <label>Remember the current level for the next KTouch start</label>
     <default code="true">true</default>
     </entry>
     <entry name="UpSpeedLimit" type="Int">
-    <label></label>
+    <label>Number of chars per minute to increase a level</label>
     <default code="true">120</default>
     </entry>
     <entry name="UpCorrectLimit" type="Int">
-    <label></label>
+    <label>Percentage of correctness to increase a level</label>
     <default code="true">85</default>
     </entry>
     <entry name="DownSpeedLimit" type="Int">
-    <label></label>
+    <label>Number of chars per minute to decrease a level</label>
     <default code="true">60</default>
     </entry>
     <entry name="DownCorrectLimit" type="Int">
-    <label></label>
+    <label>Percentage of correctness to decrease a level</label>
     <default code="true">60</default>
     </entry>
   </group>
