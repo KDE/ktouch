@@ -519,14 +519,14 @@ void KTouch::setupActions() {
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***
-    new KAction(i18n("&Start New Training Session"), "launch", 0,
+    new KAction(i18n("&Start New Session"), "launch", 0,
         this, SLOT(trainingNewSession()), actionCollection(), "training_newsession");
-    m_trainingContinue = new KAction(i18n("&Continue Training Session"), "player_play", 0,
+    m_trainingContinue = new KAction(i18n("&Continue Session"), "player_play", 0,
         this, SLOT(trainingContinue()), actionCollection(), "training_run");
-    m_trainingPause = new KAction(i18n("&Pause Training Session"), "player_pause", 0,
+    m_trainingPause = new KAction(i18n("&Pause Session"), "player_pause", 0,
         this, SLOT(trainingPause()), actionCollection(), "training_pause");
     m_trainingContinue->setEnabled(false); // because the training session is running initially
-    // new KAction(i18n("Show Training S&tatistics"), "frame_chart", 0,
+    // new KAction(i18n("Show S&tatistics"), "frame_chart", 0,
     //     this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
  
     // Setup menu entries for the training lectures
