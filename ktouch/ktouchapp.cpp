@@ -24,7 +24,7 @@
 
 #include "ktouchapp.h"
 #include "ktouch.h"
-#include "touchSplash.h"
+//#include "touchSplash.h"
 
 #include "ktouchapp.moc"
 

@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <string>
 #include <kconfig.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include <kdebug.h>
 
 #include <iostream>
