@@ -52,7 +52,7 @@
                                 <string>Show on the keyboards the keys you have to type</string>
                             </property>
                             <property name="whatsThis" stdset="0">
-                                <string>This hilights on the keyboard the key you have to type next. It is easier to type when this is checked.</string>
+                                <string>This highlights on the keyboard the key you have to type next. It is easier to type when this is checked.</string>
                             </property>
                         </widget>
                         <widget class="QLayoutWidget">

@@ -56,7 +56,7 @@
       <default code="true">1</default>
     </entry>
     <entry name="ShowAnimation" type="Bool">
-    <label>Whether to use colours on the keys or not.</label>
+    <label>Whether to use colors on the keys or not.</label>
     <default code="true">true</default>
     </entry>
     <entry name="Layout" type="Int">
