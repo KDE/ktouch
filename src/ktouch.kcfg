@@ -82,7 +82,7 @@
     <label>The font for the keys on the keyboard</label>
     <default>KGlobalSettings::generalFont()</default>
     </entry>
-    <entry name="CurrentKeyboardFile" type="String">
+    <entry name="CurrentKeyboardFile" type="Path">
     <label>The currently loaded keyboard file</label>
     <default>"number.keyboard"</default>
     </entry>
