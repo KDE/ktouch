@@ -9,8 +9,4 @@ AUTOMAKE_OPTIONS = foreign
 kdelnkdir = $(kde_appsdir)/Utilities
 kdelnk_DATA = ktouch.desktop
 
-# adding the config file to ktouch dir
-rcdir = $(kde_datadir)/ktouch
-rc_DATA = ktouchui.rc
-
 KDE_ICON = ktouch
