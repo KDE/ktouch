@@ -1,0 +1,501 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!ENTITY kappname "&touch;"><!-- replace kapp here -->
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"><!-- change language only here -->
+<!-- Do not define any other entities; instead, use the entities
+from kde-genent.entities and $LANG/user.entities. -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title>The KTouch Handbook</title>
+
+<authorgroup>
+  <author>
+  <firstname>Haavard</firstname>
+  <surname>Froeiland</surname>
+  <affiliation>
+  <address><email>haavard@users.sourceforge.net</email></address>
+  </affiliation>
+  </author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+</authorgroup>
+
+<copyright>
+<year>1999</year>
+<year>2000</year>
+<year>2001</year>
+<holder>Haavard Froeiland</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>03/04/2001</date>
+<releaseinfo>1.0</releaseinfo>
+
+<abstract>
+  <para>
+  KTouch is a program for learning to touch type.
+  KTouch provides you with text to train on, and adjust to
+  different levels, depending on how good you are. It can
+  display which key to press next, and the correct finger
+  to use.
+	</para>
+	<para>
+	Since the programm is under the GPL (GNU Public License) it will be free for you, and will be free for ever! Updates and new versions will be under the GPL so you will allways get the latest version for free.
+	</para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>touchwriting</keyword>
+<keyword>touchtyping</keyword>
+<keyword>typing</keyword>
+<keyword>maschinschreiben</keyword>
+<keyword>Froeiland</keyword>
+<keyword>education</keyword>
+<keyword>KTouch</keyword>
+<keyword>Touch</keyword>
+<keyword>Type</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+KTouch is a program for learning to touch type.
+KTouch provides you with text to train on, and adjust to
+different levels, depending on how good you are. It can
+display which key to press next, and the correct finger
+to use. It's the perfekt touch typing tutor, your learn typing with all the fingers without looking at the keys, in an step by step way. It is convenient for all ages, and the perfect typing tutor for schools, universities and individuals. It is free and licensed under the GNU Public License, so you will never have to pay anything for the programm, or any update.
+</para>
+</chapter>
+
+<!-- ####################################################################################################### -->
+
+<chapter id="using-ktouch">
+<title>Using KTouch</title>
+
+<para>
+Here's a screenshot of KTouch in action
+<screenshot>
+<screeninfo>Here's a screenshot of KTouch;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="screenshot1.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Screenshot</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+You see that using KTouch is easy to use, and even children can learn touch typing with it.
+</para>
+<para>
+Screenshot of KTouch Option -> Keyboard
+<screenshot>
+<screeninfo>Here's a screenshot of KTouch;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="screenshot2.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Screenshot</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+Change the layout of your keyboard, so people all over the world can use it!
+</para>
+<para>
+Here's a screenshot of KTouch Option -> Training
+<screenshot>
+<screeninfo>Here's a screenshot of KTouch;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="screenshot3.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Screenshot</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+If you are too good for this world, you can change the level.
+</para>
+
+</chapter>
+
+<!-- ####################################################################################################### -->
+
+<chapter id="faq">
+<title>Questions and Answers</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para>Can I make my own training files?</para>
+</question>
+<answer>
+<para>
+Yes you can. Make a file as described below and call it something like "myfile.ktouch" To use this file go to File-> Open and find your file.Another good way to make your own training files is just to modify the existing files. If you look at the top of the KTouch window, you should see the name of the training file in use.
+</para>
+<para>
+<screen width="40">
+  <userinput>---myTrainingFile.ktouch-----</userinput>
+  <userinput></userinput>
+  <userinput>#This is a example of a training file (and a comment)</userinput>
+  <userinput>#This will be level one</userinput>
+  <userinput>jf fj jf fjf jf jjf jf jfjf jfj</userinput>
+  <userinput>jfj fj fjfj jf fj fj fjf jf jf</userinput>
+  <userinput></userinput>
+  <userinput>#A blank line indicates then next level, so this is level two</userinput>
+  <userinput>lskdk djslk fjkdlskdjf lskdj f</userinput>
+  <userinput>kdfj lksjdl kjsldf lsdkksldslk</userinput>
+</screen>
+</para>
+<para>
+To get more levels just make blank spaces between the levels. If you want to have comments in your file, use # at the beginning of the line.
+</para>
+</answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para>My keyboard doesn't look like the keyboard on the screen?</para>
+</question>
+<answer>
+<para>It is possible to make your own keyboard file. See the <link linkend="contribute">How can I contribute</link> section.</para>
+</answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para>Will I ever have to pay for KTouch?</para>
+</question>
+<answer>
+<para>No, never. But you can send a pizza voucher to the developer, so he gets fat and the only thing he can do, is code and code and code!!!!</para>
+</answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para>Will there ever be a windows version?</para>
+</question>
+<answer>
+<para>No, at the moment not, but you can download the source and make your own windows version. It should not be a big problem, cause it is written with Trolltech's QT-libs. But for what do you need windows? Get the latest Linux, and you will live on the edge.</para>
+</answer>
+</qandaentry>
+
+</qandaset>
+</chapter>
+
+<!-- ####################################################################################################### -->
+
+<chapter id="contribute">
+<title>How can I contiribute?</title>
+
+<qandaset id="tasks">
+<qandaentry>
+
+<question>
+<para>Make a training file</para>
+</question>
+
+<answer>
+<para>
+Yes you can. Make a file as described below and call it something like "myfile.ktouch" To use this file go to File-> Open and find your file.Another good way to make your own training files is just to modify the existing files. If you look at the top of the KTouch window, you should see the name of the training file in use.
+</para>
+<para>
+<screen width="40">
+<userinput>
+---myTrainingFile.ktouch-----
+
+#This is a example of a training file (and a comment)
+#This will be level one
+jf fj jf fjf jf jjf jf jfjf jfj
+jfj fj fjfj jf fj fj fjf jf jf
+
+#A blank line indicates then next level, so this is level two
+lskdk djslk fjkdlskdjf lskdj f
+kdfj lksjdl kjsldf lsdkksldslk
+</userinput>
+</screen>
+</para>
+<para>
+To get more levels just make blank spaces between the levels. If you want to have comments in your file, use # at the beginning of the line.
+</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para>Making a new keyboard file</para>
+</question>
+<answer>
+<para>
+You will find a complete keyboard file below with comments. Just edit the file "keyboard.en" and save it as "keyboard.yourContryCode".
+
+Please let me know if you are making a new keyboard file.
+<email>haavard@users.sourceforge.net</email>
+<screen width="40">
+<userinput>
+####################################################
+#    KTouch
+#    Keyboard layout file
+####################################################
+#
+#
+#  FingerKey: This class represents the keys where
+#  your fingers should rest between typing.
+#
+#         ASCII KeyText x   y
+FingerKey 97    A       18  20
+FingerKey 115   S       28  20
+FingerKey 100   D       38  20
+FingerKey 102   F       48  20
+FingerKey 106   J       78  20
+FingerKey 107   K       88  20
+FingerKey 108   L       98  20
+FingerKey 59    ;       108 20
+#
+#
+#  ControlKey: This class will represent all the
+#  control keys that you are using. These keys
+#  will be used later when you want to use uppercase.
+#
+#           ASCII KeyText x   y   Width
+#
+ControlKey  260   Tab     0   10  15
+ControlKey  13    Enter   128 20  22
+ControlKey  258   Shift   123 30  27
+ControlKey  264   Alt     120 40  15
+ControlKey  265   Ctrl    135 40  15
+ControlKey  263   Alt     15  40  15
+ControlKey  262   Ctrl    0   40  15
+ControlKey  32    Space   30  40  90
+ControlKey  257   Shift   0   30  23
+ControlKey  259   Caps_L  0   20  18
+#
+#
+#  NormalKey: This class represents all the
+#  normal keys where you don't need to press
+#  anything else than just one key. That would
+#  basically be all the numbers and the lowercase
+#  letters. For this class you have to indicate
+#  whitch finger key you are going to use.
+#
+#         ASCII KeyText   x   y   FingerKey
+#
+NormalKey 96    `         0   0   97
+NormalKey 49    1         10  0   97
+NormalKey 50    2         20  0   115
+NormalKey 51    3         30  0   100
+NormalKey 52    4         40  0   102
+NormalKey 53    5         50  0   102
+NormalKey 54    6         60  0   106
+NormalKey 55    7         70  0   106
+NormalKey 56    8         80  0   107
+NormalKey 57    9         90  0   108
+NormalKey 48    0         100 0   59
+NormalKey 95    -         110 0   59
+NormalKey 61    =         120 0   59
+NormalKey 92    \         130 0   59
+NormalKey 8     &lt;-        140 0   59
+#
+NormalKey 113   Q         15  10  97
+NormalKey 119   W         25  10  115
+NormalKey 101   E         35  10  100
+NormalKey 114   R         45  10  102
+NormalKey 116   T         55  10  102
+NormalKey 121   Y         65  10  106
+NormalKey 117   U         75  10  106
+NormalKey 105   I         85  10  107
+NormalKey 111   O         95  10  108
+NormalKey 112   P         105 10  59
+NormalKey 91    [         115 10  59
+NormalKey 93    ]         125 10  59
+#
+NormalKey 103   G         58  20  102
+NormalKey 104   H         68  20  106
+NormalKey 39    '         118 20  59
+#
+NormalKey 122   Z         23  30  97
+NormalKey 120   X         33  30  115
+NormalKey 99    C         43  30  100
+NormalKey 118   V         53  30  102
+NormalKey 98    B         63  30  102
+NormalKey 110   N         73  30  106
+NormalKey 109   M         83  30  106
+NormalKey 44    ,         93  30  107
+NormalKey 46    .         103 30  108
+NormalKey 47    /         113 30  59
+#
+#
+#  HiddenKey: This are all the keys that
+#  you can't see. That means that you have
+#  to use a control key to get them. Basically
+#  these are all the uppercase letters.
+#
+#         ASCII Target  Finger  Control
+#
+HiddenKey 65    97      97      258 #A
+HiddenKey 66    98      102     258 #B
+HiddenKey 67    99      100     258 #C
+HiddenKey 68    100     100     258 #D
+HiddenKey 69    101     100     258 #E
+HiddenKey 70    102     102     258 #F
+HiddenKey 71    103     102     258 #G
+HiddenKey 72    104     106     258 #H
+HiddenKey 73    105     107     258 #I
+HiddenKey 74    106     106     258 #J
+HiddenKey 75    107     107     258 #K
+HiddenKey 76    108     106     258 #L
+HiddenKey 77    109     106     258 #M
+HiddenKey 78    110     106     258 #N
+HiddenKey 79    111     108     258 #O
+HiddenKey 80    112     59      258 #P
+HiddenKey 81    113     97      258 #Q
+HiddenKey 82    114     102     258 #R
+HiddenKey 83    115     115     258 #S
+HiddenKey 84    116     102     258 #T
+HiddenKey 85    117     106     258 #U
+HiddenKey 86    118     102     258 #V
+HiddenKey 87    119     115     258 #W
+HiddenKey 88    120     115     258 #X
+HiddenKey 89    121     106     258 #Y
+HiddenKey 90    122     97      258 #Z
+</userinput>
+</screen>
+</para>
+
+<para>
+If you need aditional help please send me an email. <email>haavard@users.sourceforge.net</email>
+</para>
+</answer>
+</qandaentry>
+
+<qandaentry>
+<question>
+<para>Find some bugs or give some suggestions</para>
+</question>
+<answer>
+<para>
+If you find some bugs in the program, or have some suggestions for improvements, please let me know.
+</para>
+</answer>
+
+
+</qandaentry>
+</qandaset>
+</chapter>
+
+
+
+<!-- ####################################################################################################### -->
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+<para>KTouch</para>
+<para>
+Program Copyright, 1999, 2000, 2001 Haavard Froeiland <email>haavard@users.sourceforge.net</email>
+</para>
+<para> Contributors:
+<itemizedlist>
+<listitem><para>Frank Quotschalla, German keyboard and german training file and translation.</para></listitem>
+<listitem><para>Ernesto Hern&aacute;ndez-Novich, Latinamerican keyboard</para></listitem>
+<listitem><para>Jo&atilde;o Miguel Neves, Portuguese keyboard</para></listitem>
+<listitem><para>Henri Girard, Frence keyboard</para></listitem>
+</itemizedlist>
+</para>
+
+&underFDL;           <!-- FDL: do not remove -->
+&underGPL;        	 <!-- GPL License -->
+
+</chapter>
+
+<!-- ####################################################################################################### -->
+
+<appendix id="installation">
+<title>Installation</title>
+
+<sect1 id="getting-ktouch">
+<title>How to obtain KTouch</title>
+
+<para>
+KTouch is atm not part of the KDE <ulink url="http://www.kde.org">http://www.kde.org</ulink> project.
+KTouch can be found on Sourceforge <ulink url="http://www.sourceforge.net">http://www.sourceforge.net</ulink> @ <ulink url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>
+<!--
+<para>
+KTouch is atm not part of the KDE project
+<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
+KTouch can atm not be found in the kdeutils package on
+<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, the
+main ftp site of the KDE project. </para>
+-->
+</para>
+</sect1>
+
+<sect1 id="requirements">
+<title>Requirements</title>
+
+<para>
+In order to successfully use KTouch (version > 0.7), you need KDE > 2.0 .
+</para>
+
+<para>
+All required libraries as well as KTouch itself can be found
+on <ulink url="ftp://ftp.kde.org">The KDE ftp server</ulink> and <ulink url="ftp://ktouche.sourceforge.net">the ktouch ftp server</ulink>.
+</para>
+
+<!-- For a list of updates, you may refer to the application web site
+or the ChangeLog file, or ... -->
+<para>
+You can find a list of changes at <ulink
+url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.
+</para>
+</sect1>
+
+<sect1 id="compilation">
+<title>Compilation and Installation</title>
+
+<para>
+In order to compile and install KApp on your system, type the following in the base
+directory of the Icon Editor distribution:
+<screen width="40">
+<prompt>%</prompt> <userinput>./configure</userinput>
+<prompt>%</prompt> <userinput>make</userinput>
+<prompt>%</prompt> <userinput>make install</userinput>
+</screen>
+</para>
+
+<para>Since KTouch uses autoconf and automake you should have not trouble compiling it.
+Should you run into problems please report them to <email>haavard@users.sourceforge.net</email>.</para>
+
+</sect1>
+
+
+<!--
+<sect1 id="configuration">
+<title>Configuration</title>
+
+<para>Don't forget to tell your system to start the <filename>dtd</filename>
+dicer-toaster daemon first, or KApp won't work !</para>
+
+</sect1>
+-->
+
+
+</appendix>
+
+<!-- ####################################################################################################### -->
+
+&documentation.index;
+</book>
