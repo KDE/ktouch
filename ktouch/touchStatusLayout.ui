@@ -345,11 +345,11 @@
                     </property>
                     <property>
                         <name>toolTip</name>
-                        <string>How mutch are you typing correct?</string>
+                        <string>How much are you typing correctly?</string>
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>This chows how correct you are typing.</string>
+                        <string>This shows how correctly you are typing.</string>
                     </property>
                 </widget>
             </grid>
@@ -497,7 +497,7 @@
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>When you want to have a break, press this to stopp KTouch from calculating speed and changeing levels.</string>
+                        <string>When you want to have a break, press this to stop KTouch from calculating speed and changing levels.</string>
                     </property>
                 </widget>
                 <spacer>
