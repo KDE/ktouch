@@ -25,7 +25,7 @@ const QString& KTouchLevelData::line(unsigned int lineNumber) const {
 void KTouchLevelData::createDefault() {
     m_newChars = i18n("some");
     m_lines.clear();
-    m_lines.push_back( i18n("No training lecture loaded!") );
+    m_lines.push_back( i18n("No training lecture loaded.") );
 }
 
 bool KTouchLevelData::readLevel(QTextStream& in) {

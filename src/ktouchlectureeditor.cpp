@@ -366,7 +366,7 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
         i18n("Edit current lecture:"),
         i18n("Open a default lecture:"),
         i18n("Open a lecture file:"),
-        i18n("Create new lecture!"),
+        i18n("Create new lecture."),
         url, KTouchConfig().m_lectureFiles, i18n("<no lecture files available>"));
 
     if (result == QDialog::Accepted) {
@@ -377,7 +377,7 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
         if (!m_currentURL.isEmpty()) {
 			// try to read old format first then XML format
 			if (!m_lecture.load(this, m_currentURL) && !m_lecture.loadXML(this, m_currentURL)) {
-            	KMessageBox::sorry(this, i18n("Could not open the lecture file, creating a new one instead!"));
+            	KMessageBox::sorry(this, i18n("Could not open the lecture file, creating a new one instead."));
             	m_currentURL = QString::null; // new lectures haven't got a URL
 			}
         }

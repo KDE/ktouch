@@ -82,12 +82,12 @@ void KTouchOpenRequest::okBtnClicked() {
         m_url = QString::null;
     if (openFileRadioBtn->isChecked()) {
         if (openFileEdit->text().isEmpty()) {
-            KMessageBox::error(this, i18n("Please select or enter a file name!"));
+            KMessageBox::error(this, i18n("Please select or enter a file name."));
             return;
         }
         KURL tmp = openFileEdit->text();
         if (!tmp.isValid()) {
-            KMessageBox::error(this, i18n("The URL seems to be malformed! Please correct it!"));
+            KMessageBox::error(this, i18n("The URL seems to be malformed; please correct it."));
             return;
         }
         m_url = tmp;
