@@ -95,22 +95,22 @@
                 <widget class="QComboBox">
                     <item>
                         <property name="text">
-                            <string>none</string>
+                            <string>None</string>
                         </property>
                     </item>
                     <item>
                         <property name="text">
-                            <string>squer</string>
+                            <string>Squer</string>
                         </property>
                     </item>
                     <item>
                         <property name="text">
-                            <string>shade</string>
+                            <string>Shade</string>
                         </property>
                     </item>
                     <item>
                         <property name="text">
-                            <string>cross</string>
+                            <string>Cross</string>
                         </property>
                     </item>
                     <property name="name">
