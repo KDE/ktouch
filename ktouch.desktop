@@ -1,11 +1,11 @@
-# KDE Config File  
+# KDE Config File
 [Desktop Entry]
 Type=Application
 Exec=ktouch -caption "%c" %i %m  
 Icon=ktouch.png
 MiniIcon=ktouch.png
 DocPath=ktouch/index.html
-Comment=
+Comment=Touch Typing Tutor
 Terminal=0
 Name=KTouch
 Name[eo]=Tuŝo
