@@ -105,9 +105,9 @@ void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
 
 void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
-    if (KTouchConfig().m_currentKeyboardFile!=m_currentLayout) {
+    if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
-        if (KTouchConfig().m_currentKeyboardFile=="number.keyboard") {
+        if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
             return;
@@ -115,25 +115,32 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
         // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile )))
+            if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() )))
                 createDefaultKeyboard();
             else
-                m_currentLayout=KTouchConfig().m_currentKeyboardFile;
+                m_currentLayout=Prefs::currentKeyboardFile();
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
+            if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
             }
             else
-                m_currentLayout=KTouchConfig().m_currentKeyboardFile;
+                m_currentLayout=Prefs::currentKeyboardFile();
         }
     }
 
-    updateColours();    // we recreate the colour connections,
+    updateColours();    // we recreate the colour connections
+	// assign keyboard font to keys
+    for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
+		if (Prefs::overrideKeyboardFont())
+			key->m_font = Prefs::keyboardFont();
+		else
+			key->m_font = Prefs::font();
+	}
     resizeEvent(NULL);  // paint the keyboard
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 }

@@ -34,31 +34,26 @@ void KTouchConfiguration::readConfiguration(QWidget * window) {
     // now we're reading the configuration
     KConfig *config=kapp->config();
 
-    // read general options
-    // TODO : replace directly the values by the Prefs:: functions in the files where they are used
-    QFont defaultFont = KGlobalSettings::generalFont();
-    m_font = config->readFontEntry("Font", &defaultFont);
-
     // read training options
     config->setGroup("Training");
-	// TODO : look up the default english lecture in the m_lectureFiles string list
-	QString default_lecture = "english_default";
+	// TODO : look up a default english lecture in the m_lectureFiles string list
+	QString default_lecture;
 	if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
-	m_currentLectureFile = config->readEntry("CurrentLectureFile", default_lecture);
+	if (Prefs::currentLectureFile() == "default")
+		Prefs::setCurrentLectureFile( default_lecture );
     // read keyboard settings
     config->setGroup("Keyboard");
-    m_keyboardFont = config->readFontEntry("KeyboardFont", &defaultFont);
 	
 	QString default_keyboard = "number.keyboard";
 	// look up the default english keyboard file in the m_keyboardFiles string list
 	QStringList::iterator it = m_keyboardFiles.begin();
 	while (it != m_keyboardFiles.end()   &&   (*it).find("en.keyboard") == -1)  ++it;
 	if (it != m_keyboardFiles.end())   default_keyboard = *it;
-    m_currentKeyboardFile = config->readEntry("CurrentKeyboardFile", default_keyboard);
-    // if keyboard layout it not available (e.g. the layout file has been deleted) switch to default
-    if (m_keyboardFiles.contains(m_currentKeyboardFile)==0)
-        m_currentKeyboardFile="number.keyboard";
-    
+    // if keyboard layout (loaded by Prefs is not available (e.g. the 
+	// layout file has been deleted) switch to default keyboard
+    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0)
+        Prefs::setCurrentKeyboardFile ( default_keyboard );
+
 /* 
     Commented code from Anne-Marie - we need the file names here
 	
@@ -83,53 +78,8 @@ void KTouchConfiguration::readConfiguration(QWidget * window) {
 void KTouchConfiguration::writeConfiguration() {
     KConfig *config=kapp->config();
 
-    // write general options
-    config->setGroup("General");
-    config->writeEntry("GlobalFont",			m_font);
-    // write training settings
-    config->setGroup("Training");
-	config->writeEntry("CurrentLectureFile", 	m_currentLectureFile);
-    // write keyboard settings
-    config->setGroup("Keyboard");
-    config->writeEntry("CurrentKeyboardFile",   m_currentKeyboardFile);
-    config->writeEntry("KeyboardFont",      	m_keyboardFont);
-
-/*    
-	TODO : sort and remove old configuration settings
-
-    // write general options
-    config->setGroup("General");
-    config->writeEntry("BeepOnError",       m_errorBeep);
-    config->writeEntry("SoundOnLevel",      m_levelBeep);
-    config->writeEntry("Font",              m_font);
-    config->writeEntry("SlidingSpeed",      m_slideSpeed);
-
-    // write training settings
-    config->setGroup("Training");
-    config->writeEntry("AutoLevelChange",   m_autoLevelChange);
-    config->writeEntry("CorrectLimitDown",  m_downCorrectLimit);
-    config->writeEntry("SpeedLimitDown",    m_downSpeedLimit);
-    config->writeEntry("CorrectLimitUp",    m_upCorrectLimit);
-    config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
-    config->writeEntry("RememberLevel",     m_rememberLevel);
-
-    // write keyboard settings
-    config->setGroup("Keyboard");
-    config->writeEntry("Colorscheme",       m_keyboardColorScheme);
-    config->writeEntry("Layout",            m_keyboardLayout);
-    config->writeEntry("ShowAnimation",     m_showAnimation);
-    config->writeEntry("KeyboardFont",      m_keyboardFont);
-
-    // write color settings
-    config->setGroup("Colors");
-    config->writeEntry("ColorOnError",              m_useErrorColor);
-    config->writeEntry("TeacherTextColor",          m_teacherTextColor);
-    config->writeEntry("TeacherBackgroundColor",    m_teacherBackground);
-    config->writeEntry("StudentTextColor",          m_studentTextColor);
-    config->writeEntry("StudentBackgroundColor",    m_studentBackground);
-    config->writeEntry("ErrorTextColor",            m_errorTextColor);
-    config->writeEntry("ErrorBackgroundColor",      m_errorBackground);
-*/    
+	// TODO : when all configuration data is transferred to Prefs this function will
+	// be redundant
 }
 
 void KTouchConfiguration::updateFileLists(QWidget * window) {

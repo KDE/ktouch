@@ -31,6 +31,10 @@ class KTouchSlideLine;
 class KTouchKeyboard;
 class KTouchTrainer;
 
+class KTouchPrefTrainingLayout;
+class KTouchPrefKeyboardLayout;
+class KTouchPrefGeneralLayout;
+
 #include "ktouchlecture.h"
 
 /// This is the main window of KTouch.
@@ -61,6 +65,13 @@ class KTouch : public KMainWindow {
     /// Accepts a typed char.
     void keyPressEvent(QKeyEvent *keyEvent);
 
+	/// Called from the configuration dialog. 
+	void configOverrideLectureFontToggled(bool on);
+	/// Called from the configuration dialog. 
+	void configOverrideKeyboardFontToggled(bool on);
+	/// Called from the configuration dialog.
+	void configAutoLevelChangeToggled(bool on);
+
   protected:
     /// Reimplementated to ask user whether he/she wants to abort the test
     bool queryClose();
@@ -86,8 +97,6 @@ class KTouch : public KMainWindow {
     void changeColor(int num);
     /// Quick-changes the current training lecture file (called from menu).
     void changeLecture(int num);
-	/// Called from within the preferences dialog if the user presses 'Apply'.    
-    void updateSettings();
 
   private:
     /// Will be called when this app is restored due to session management.
@@ -112,6 +121,10 @@ class KTouch : public KMainWindow {
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).
     KTouchLecture           m_lecture;              ///< The lecture data.
 
+	KTouchPrefGeneralLayout  * m_pageGeneral;		///< The general configuration page.
+	KTouchPrefTrainingLayout * m_pageTraining;		///< The training configuration page.
+	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
+	
     QLabel                 *m_barStatsLabel;        ///< The textlabel displaying the correct number of typed chars.
 };
 

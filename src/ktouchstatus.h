@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchstatus.h                                                        *
  *   --------------                                                        *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,8 +26,6 @@ class KTouchStatus : public KTouchStatusLayout {
   public:
     /// Constructor
     KTouchStatus(QWidget *parent);
-    /// Applies the preferences settings to the widget
-    void applyPreferences();
     /// Sets the new characters text.
     void setNewChars(const QString& newChars);
     /// Updates the level LCD and the correctness progress bar

@@ -20,6 +20,7 @@
 #include <qvbox.h>
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
+#include <qlabel.h>
 
 // KDE Header
 #include <klocale.h>
@@ -33,6 +34,8 @@
 #include <kconfigdialog.h>
 #include <kaction.h>
 #include <kcombobox.h>
+#include <kfontrequester.h>
+#include <knuminput.h>
 
 // Own header files
 //#include "ktouchpref.h"
@@ -82,7 +85,6 @@ KTouch::KTouch()
     // read our preferences settings, including session history and such things
     KTouchConfig().readConfiguration(this);
     // and apply them to the widgets
-    m_statusWidget->applyPreferences();
     m_slideLineWidget->applyPreferences();
     m_keyboardWidget->applyPreferences(this, true);  // set preferences silently here
 
@@ -92,7 +94,7 @@ KTouch::KTouch()
     setupGUI();
 
     // Reload the last used training file.
-	m_lecture.loadXML(this, KTouchConfig().m_currentLectureFile);
+	m_lecture.loadXML(this, Prefs::currentLectureFile() );
 	updateFontFromLecture();
 	// TODO : adjust check mark in quick-select menu
 
@@ -134,10 +136,10 @@ KTouch::~KTouch() {
 // ********************
 
 void KTouch::applyPreferences() {
-    // ok, just notify our widgets to update themselves, we don't need to know the details...
-    m_statusWidget->applyPreferences();
-    m_slideLineWidget->applyPreferences();
-    m_keyboardWidget->applyPreferences(this, false);  // noisy preferences here
+	// This applies a new color scheme for the keyboard and also updates all other
+	// changes for the keyboard widget
+	changeColor(Prefs::colorScheme());
+	m_slideLineWidget->applyPreferences();
 }
 
 void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
@@ -154,6 +156,63 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     keyEvent->accept();
 }
 
+void KTouch::configOverrideLectureFontToggled(bool on) {
+	if (on) {
+		m_pageGeneral->fontTextLabel->setEnabled(true);
+		m_pageGeneral->kcfg_Font->setEnabled(true);
+	}
+	else {
+		m_pageGeneral->fontTextLabel->setEnabled(false);
+		m_pageGeneral->kcfg_Font->setEnabled(false);
+	}	
+}
+
+void KTouch::configOverrideKeyboardFontToggled(bool on) {
+	if (on) {
+		m_pageKeyboard->textLabel1->setEnabled(true);
+		m_pageKeyboard->kcfg_KeyboardFont->setEnabled(true);
+	}
+	else {
+		m_pageKeyboard->textLabel1->setEnabled(false);
+		m_pageKeyboard->kcfg_KeyboardFont->setEnabled(false);
+	}	
+}
+
+void KTouch::configAutoLevelChangeToggled(bool on) {
+	if (on) {
+		m_pageTraining->l1->setEnabled(true);
+		m_pageTraining->l2->setEnabled(true);
+		m_pageTraining->l3->setEnabled(true);
+		m_pageTraining->l4->setEnabled(true);
+		m_pageTraining->l5->setEnabled(true);
+		m_pageTraining->l6->setEnabled(true);
+		m_pageTraining->l7->setEnabled(true);
+		m_pageTraining->l8->setEnabled(true);
+		m_pageTraining->l9->setEnabled(true);
+		m_pageTraining->l10->setEnabled(true);
+		m_pageTraining->kcfg_UpSpeedLimit->setEnabled(true);
+		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(true);
+		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(true);
+		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(true);
+	}
+	else {
+		m_pageTraining->l1->setEnabled(false);
+		m_pageTraining->l2->setEnabled(false);
+		m_pageTraining->l3->setEnabled(false);
+		m_pageTraining->l4->setEnabled(false);
+		m_pageTraining->l5->setEnabled(false);
+		m_pageTraining->l6->setEnabled(false);
+		m_pageTraining->l7->setEnabled(false);
+		m_pageTraining->l8->setEnabled(false);
+		m_pageTraining->l9->setEnabled(false);
+		m_pageTraining->l10->setEnabled(false);
+		m_pageTraining->kcfg_UpSpeedLimit->setEnabled(false);
+		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(false);
+		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(false);
+		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(false);
+	}	
+}
+
 
 // *********************************
 // *** Protected member function ***
@@ -166,6 +225,7 @@ bool KTouch::queryClose() {
 
 bool KTouch::queryExit() {
     KTouchConfig().writeConfiguration();	// saves preferences
+    Prefs::writeConfig();
     return true;
 }
 
@@ -177,9 +237,9 @@ bool KTouch::queryExit() {
 void KTouch::fileEditLecture() {
 	// Create and execute editor
     KTouchLectureEditor dlg(this);
-    dlg.startEditor(KTouchConfig().m_currentLectureFile);
+    dlg.startEditor( Prefs::currentLectureFile() );
 	// Reload lecture in case it was modified
-	m_lecture.loadXML(this, KTouchConfig().m_currentLectureFile);
+	m_lecture.loadXML(this, Prefs::currentLectureFile() );
 	updateFontFromLecture();
 }
 // ----------------------------------------------------------------------------
@@ -231,27 +291,24 @@ void KTouch::optionsPreferences() {
 	if ( KConfigDialog::showDialog( "settings" ) )	return;
 	//KConfigDialog didn't find an instance of this dialog, so lets create it :
 	KConfigDialog* dialog = new KConfigDialog( this, "settings",  Prefs::self() );
-	KTouchPrefGeneralLayout * m_pageGeneral = new KTouchPrefGeneralLayout(0, "General");
+	m_pageGeneral = new KTouchPrefGeneralLayout(0, "General");
 	dialog->addPage(m_pageGeneral, i18n("General Options"), "style");
-	KTouchPrefTrainingLayout * m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
+	m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
-	KTouchPrefKeyboardLayout * m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
+	m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
 	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
-	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(updateSettings()));
+	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(applyPreferences()));
+	// TODO : Connect some other buttons/check boxes of the dialog
+	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), this, SLOT(configOverrideLectureFontToggled(bool)));
+	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), this, SLOT(configOverrideKeyboardFontToggled(bool)));
+	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), this, SLOT(configAutoLevelChangeToggled(bool)));
+	// call the functions to enable/disable controls depending on settings
+	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
+	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
+	configAutoLevelChangeToggled(Prefs::autoLevelChange());
 	dialog->show();
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::updateSettings() {
-	// TODO : test if this setting has changed
-	// This applies a new color scheme for the keyboard
-	changeColor(Prefs::colorScheme());
-	changeKeyboard(Prefs::layout());
-	// not sure if testing is required before applying all that or could that be done in any case?
-	m_statusWidget->applyPreferences();
-	m_slideLineWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
@@ -268,11 +325,9 @@ void KTouch::changeStatusbarStats(unsigned int correctChars, unsigned int totalC
 
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardFiles.count()) return;
-    KTouchConfig().m_currentKeyboardFile = KTouchConfig().m_keyboardFiles[num];
-	kdDebug() << "New keyboard layout: " << KTouchConfig().m_currentKeyboardFile << endl;
-    Prefs::setLayout(num);
-    Prefs::writeConfig();
-    m_keyboardLayoutAction->setCurrentItem(Prefs::layout());
+    Prefs::setCurrentKeyboardFile( KTouchConfig().m_keyboardFiles[num] );
+	kdDebug() << "New keyboard layout: " << Prefs::currentKeyboardFile() << endl;
+    m_keyboardLayoutAction->setCurrentItem(num);
     m_keyboardWidget->applyPreferences(this, false);  // noisy, pop up an error if the chosen layout file is corrupt
 }
 // ----------------------------------------------------------------------------
@@ -281,7 +336,6 @@ void KTouch::changeColor(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardColors.count()) return;
     KTouchConfig().m_keyboardColorScheme = num;
     Prefs::setColorScheme(num);
-    Prefs::writeConfig();
     m_keyboardWidget->applyPreferences(this, false);
 }
 // ----------------------------------------------------------------------------
@@ -294,7 +348,7 @@ void KTouch::changeLecture(int num) {
     if (!l.loadXML(this, KURL::fromPathOrURL(fileName)))
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.").arg(fileName) );
 	else {
-		KTouchConfig().m_currentLectureFile = fileName;
+		Prefs::setCurrentLectureFile( fileName );
 		m_lecture = l;
 		updateFontFromLecture();
 	}
@@ -387,7 +441,8 @@ void KTouch::setupActions() {
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
     m_defaultLectureAction->setItems(KTouchConfig().m_lectureTitles);
-    m_defaultLectureAction->setCurrentItem(Prefs::layout());  
+	// TODO : Select correct lecture
+    m_defaultLectureAction->setCurrentItem(0);  
     connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
 
 	// *** Settings menu ***    
@@ -395,7 +450,7 @@ void KTouch::setupActions() {
     // Setup menu entries for keyboard layouts    
     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
     m_keyboardLayoutAction->setItems(KTouchConfig().m_keyboardFiles);
-    m_keyboardLayoutAction->setCurrentItem(Prefs::layout());  
+	// TODO : Select correct keyboard
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
@@ -420,7 +475,8 @@ void KTouch::updateFontFromLecture() {
 	// if the lecture requires a font, try this 
 	if (!m_lecture.m_fontSuggestions.isEmpty()) {
 		QFont f;
-		// TODO : multiple font suggestions
+		// TODO : if multiple font suggestions are given, try one after another until a
+		// suggested font is found
 		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
 		else if (f.fromString("Courier 10 Pitch")) 		m_slideLineWidget->setFont(f);
 	}

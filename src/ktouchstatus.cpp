@@ -26,12 +26,6 @@ KTouchStatus::KTouchStatus(QWidget *parent)
 {
 }
 
-void KTouchStatus::applyPreferences() {
-    // we just need to turn on/off the level change buttons
-    levelUpBtn->setEnabled( !Prefs::autoLevelChange() );
-    levelDownBtn->setEnabled( !Prefs::autoLevelChange() );
-}
-
 void KTouchStatus::setNewChars(const QString& newChars) {
     newCharsLabel->setText(newChars);
 }

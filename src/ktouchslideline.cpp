@@ -66,8 +66,9 @@ KTouchSlideLine::~KTouchSlideLine() {
 }
 
 void KTouchSlideLine::applyPreferences() {
-	// TODO : only take font if "override lecture font" is set
-    m_font = KTouchConfig().m_font;
+	// only take font if "override lecture font" is set
+	if (Prefs::overrideLectureFont())
+    	m_font = Prefs::font();
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
     // note: resizeFont() will be called implicitly by resizeEvent()
 }

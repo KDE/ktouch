@@ -61,15 +61,12 @@ class KTouchConfiguration {
     // *** Public member variables ***
     QStringList     m_lectureFiles;         	///< A list of all default lecture files.
     QStringList     m_lectureTitles;        	///< A list of the titles of all default lecture files.
-    QString			m_currentLectureFile;		///< Contains the current lecture file.
 	
 	QStringList     m_examinationFiles;     	///< A list of all default examination files.
 	QStringList     m_examinationTitles;    	///< A list of the titles of all default examination files.
-    QString			m_currentExaminationFile;	///< Contains the current examination file.
 	
     QStringList     m_keyboardFiles;        	///< A list of all default keyboard layout files.
     QStringList     m_keyboardTitles;       	///< A list of the titles of all default keyboard layout files.
-    QString         m_currentKeyboardFile;		///< The currently chosen keyboard layout file.
 	
     unsigned int    m_currentColorScheme;   	///< Indicates which colour scheme will be used.
     bool            m_useSessionManagement; 	///< Indicates whether session management is to be used or not.
@@ -80,16 +77,10 @@ class KTouchConfiguration {
     KTouchColorScheme               m_colors;        ///< The current colour scheme.
     QValueList<KTouchColorScheme>   m_colorSchemes;  ///< Contains all colour schemes.
 
-
-
     // *** old stuff ***    
     
-    // general options
-    QFont           m_font;             ///< The font to be used in the slide lines.
-
     // keyboard page
-    int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
-    QFont           m_keyboardFont;     ///< The keyboard font
+    int             m_keyAnimationType; 		///< What kind of key highlighting would you like to have.
 
     // other stuff not in the preferences dialog
     QValueList<KTouchKeyboardColor> m_keyboardColors;   ///< A vector holding the colour schemes for the keyboard.
@@ -100,28 +91,10 @@ class KTouchConfiguration {
     // *** new stuff - to be implemented ***
  
     // general options
-    bool            m_errorBeep;        ///< Whether to beep on error or not.
-    bool            m_levelBeep;        ///< Whether to make a sound on level change or not.
-    QFont           m_font;             ///< The font to be used in the slide lines.
-    int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediately').
-    bool            m_rememberLevel;    ///< If true, the old level will be set when starting KTouch normally.
     bool            m_startupPractice;  ///< If true, KTouch will start up normally in practice mode.
     
-    // training page
-    bool            m_autoLevelChange;  ///< Whether to use automatic level change or not.
-    int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
-    int             m_downSpeedLimit;   ///< If user types slower, the level will be descreased.
-    int             m_upCorrectLimit;   ///< If user types more correct, the level will be increased.
-    int             m_upSpeedLimit;     ///< If user types faster, the level will be increased.
-
     // keyboard page
     bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
-    int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
-    QString         m_keyboardLayout;   ///< The currently chosen keyboard layout.
-    QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
-    QStringList     m_keyboardFiles;    ///< The list of available keyboard layout files.
-    bool            m_showAnimation;    ///< If the keyboard shoud animate keys or not.
-    QFont           m_keyboardFont;     ///< The keyboard font
 
 */    
     

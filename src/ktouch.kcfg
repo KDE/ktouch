@@ -45,9 +45,17 @@
       <label>The sliding speed</label>
       <default code="true">5</default>
     </entry>
+    <entry name="OverrideLectureFont" type="Bool">
+      <label>Override the default/predefined lecture fonts.</label>
+      <default code="true">false</default>
+    </entry>
      <entry name="Font" type="Font">
      <label>The font for the student and teacher lines</label>
-      <default code="true">KGlobalSettings::generalFont()</default>
+      <default>KGlobalSettings::generalFont()</default>
+    </entry>
+    <entry name="CurrentLectureFile" type="String">
+    <label>The currently loaded lecture file</label>
+    <default>"default"</default>
     </entry>
     </group>
   <group name="Keyboard">
@@ -59,13 +67,17 @@
     <label>Whether to use colors on the keys or not.</label>
     <default code="true">true</default>
     </entry>
-    <entry name="Layout" type="Int">
-    <label>Select the keyboard layout language</label>
-    <default code="true">0</default>
+    <entry name="OverrideKeyboardFont" type="Bool">
+    <label>Whether to override the default/predefined keyboard fonts.</label>
+    <default code="true">false</default>
     </entry>
-      <entry name="KeysFont" type="Font">
+    <entry name="KeyboardFont" type="Font">
     <label>The font for the keys on the keyboard</label>
-    <default code="true">KGlobalSettings::generalFont()</default>
+    <default>KGlobalSettings::generalFont()</default>
+    </entry>
+    <entry name="CurrentKeyboardFile" type="String">
+    <label>The currently loaded keyboard file</label>
+    <default>"number.keyboard"</default>
     </entry>
   </group>
   <group name="Training">
@@ -79,22 +91,19 @@
     </entry>
     <entry name="UpSpeedLimit" type="Int">
     <label>Number of chars per minute to increase a level</label>
-    <default code="true">120</default>
+    <default>120</default>
     </entry>
     <entry name="UpCorrectLimit" type="Int">
     <label>Percentage of correctness to increase a level</label>
-    <default code="true">85</default>
+    <default>85</default>
     </entry>
     <entry name="DownSpeedLimit" type="Int">
     <label>Number of chars per minute to decrease a level</label>
-    <default code="true">60</default>
+    <default>60</default>
     </entry>
     <entry name="DownCorrectLimit" type="Int">
     <label>Percentage of correctness to decrease a level</label>
-    <default code="true">60</default>
+    <default>60</default>
     </entry>
   </group>
-  <!--<group name="TrainingState">
-
-  </group>-->
 </kcfg>

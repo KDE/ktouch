@@ -35,7 +35,8 @@ void KTouchKey::resize(double scale) {
     m_yS = static_cast<int>(scale*m_y);
     m_wS = static_cast<int>(scale*m_w);
     m_hS = static_cast<int>(scale*m_h);
-    m_font=KTouchConfig().m_keyboardFont;
+	// we set the font from the keyboard widget
+    //m_font=KTouchConfig().m_keyboardFont;
     m_font.setPointSize( static_cast<int>(std::min(m_wS,m_hS)/m_font_scale) );
 }
 // -----------------------------------------------------------------------------
