@@ -242,7 +242,7 @@ bool KTouch::queryExit() {
 
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
-    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select training lecture file...") );
+    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
 		Prefs::setCurrentLectureFile(tmp.url());
 		m_lecture.loadXML(this, Prefs::currentLectureFile() );
@@ -512,9 +512,9 @@ void KTouch::initTrainingSession() {
 /// Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
-    new KAction(i18n("&Open lecture ..."), 0, 
+    new KAction(i18n("&Open Lecture..."), 0, 
 		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
-    new KAction(i18n("&Edit lecture ..."), 0, 
+    new KAction(i18n("&Edit Lecture..."), 0, 
 		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
 

@@ -113,7 +113,7 @@ void KTouchOpenRequest::radioBtnChanged() {
 
 
 void KTouchOpenRequest::browseBtnClicked() {
-    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select training lecture file...") );
+    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty())
         openFileEdit->setText(tmp.url());
 }
