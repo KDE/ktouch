@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui>
-<kpartgui name="ktouch" version="1.2">
+<kpartgui name="ktouch" version="12">
 <MenuBar>
 	<Menu name="option"><text>&amp;Option</text>
 		<Action name="optionKeyboard"/>
