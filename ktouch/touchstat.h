@@ -42,7 +42,14 @@ class TouchStat : public QObject
 		int getRatio();
 		int getWordPerMin();
 		int getCharPerMin();
-		QString getProgText();
+
+		struct charStat{
+			int ok;
+			int error;
+		};
+
+		struct charStat arrayStat[256];
+
 
 	public slots:
 		void gotError(QChar);
@@ -51,11 +58,6 @@ class TouchStat : public QObject
 		void stop();
 
 	private:
-		struct charStat{
-			int ok;
-			int error;
-		};
-		struct charStat arrayStat[256];
 
 		QTime *time;
 		int totalTime;

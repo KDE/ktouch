@@ -26,6 +26,7 @@
 #include <qlcdnumber.h>
 #include <qprogressbar.h>
 #include <qtextview.h>
+#include <qlabel.h>
 
 #include "touchStatWindowLayout.h"
 #include "touchstat.h"
@@ -46,6 +47,7 @@ class TouchStatWindow : public TouchStatWindowLayout
 		TouchStat *stat;
 		void updateToday();
 		void autoUpdate(int);
+		void setFocuseChar();
 		//void update5Times();
 		//void update20Times();
 		//void updateAllTimes();

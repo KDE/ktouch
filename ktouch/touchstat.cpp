@@ -61,6 +61,7 @@ void TouchStat::stop()
 {
 	totalTime+=time->elapsed();
 	delete(time);
+	time=NULL;
 }
 
 
@@ -96,22 +97,4 @@ int TouchStat::getWordPerMin()
 	return (int)f;
 }
 
-QString TouchStat::getProgText()
-{
-	QString s;
-	float max=0;
-	int bad=0;
-	for(int i=0;i<256;i++)
-	{
-		if((arrayStat[i].error+arrayStat[i].ok)>0)
-			if(((float)arrayStat[i].error/(arrayStat[i].ok))>max)
-			{
-				max=(float)arrayStat[i].error/arrayStat[i].ok;
-				bad=i;
-			}
-	}
-	s = "You should train on: ";
-	s += QChar(bad);
 
-	return s;
-}

@@ -52,7 +52,7 @@ void TouchStatWindow::updateToday()
 	acc        ->setProgress(stat->getRatio());
 
 	// Proggress
-	progress   ->setText(stat->getProgText());
+	setFocuseChar();
 
 }
 
@@ -62,4 +62,53 @@ void TouchStatWindow::autoUpdate(int i)
 		timer->start(1000,false);
 	else
 		timer->stop();
+}
+
+// This part should be changed, It's crap!!
+void TouchStatWindow::setFocuseChar()
+{
+	QString s;
+	float ratio;
+
+	int bad[]={0,0,0,0,0};
+	float badValue[]={0,0,0,0,0};
+
+	for(int i=0;i<256;i++)
+	{
+		if((stat->arrayStat[i].error+stat->arrayStat[i].ok)>0)
+			ratio=((float)stat->arrayStat[i].error/(float)(stat->arrayStat[i].ok+stat->arrayStat[i].error))*100;
+		else
+			ratio=0;
+
+		float min=100;
+		int minPos=0;
+		for(int j=0;j<5;j++)
+		{
+			if(badValue[j]<min)
+			{
+				min=badValue[j];
+				minPos=j;
+			}
+		}
+
+		if(min<ratio)
+		{
+			bad[minPos]=i;
+			badValue[minPos]=ratio;
+		}
+	}
+	problemChar1->setText(QChar(bad[0]));
+	problemProg1->setProgress((int)badValue[0]);
+
+	problemChar2->setText(QChar(bad[1]));
+	problemProg2->setProgress((int)badValue[1]);
+
+	problemChar3->setText(QChar(bad[2]));
+	problemProg3->setProgress((int)badValue[2]);
+
+	problemChar4->setText(QChar(bad[3]));
+	problemProg4->setProgress((int)badValue[3]);
+
+	problemChar5->setText(QChar(bad[4]));
+	problemProg5->setProgress((int)badValue[4]);
 }

@@ -199,3 +199,4 @@ void TouchStatus::setLevelMessage(const QString& s)
 {
 	message->setText(s);
 }
+
