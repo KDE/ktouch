@@ -55,7 +55,7 @@ int KTouchApp::newInstance()
 	}
 	else
 	{
-		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+//		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
 		if (top)
 		{

@@ -86,7 +86,7 @@ void TouchEdit::moveDown()
     else
     {
 	
-	if(current<(lecture->levelVector.size()-1))
+	if(current<(int)(lecture->levelVector.size()-1))
 	{
 	    kdDebug() << "moveing down " << current << endl;
 	    swapLevel(current,current+1);

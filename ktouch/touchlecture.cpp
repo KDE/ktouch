@@ -147,7 +147,7 @@ QString TouchLecture::getNextLine()
 	setLevel(level);
     }
     
-    if(level<(levelVector.size()) && level>=0)
+    if(level<(levelVector.size()))
     {
 	vector<QString> levelData=*levelVector[level];
 	
