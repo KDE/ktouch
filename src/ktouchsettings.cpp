@@ -89,7 +89,7 @@ void KTouchSettings::loadSettings() {
     // although the keyboard color scheme is selected in the color dialog, it is a property of
     // the keyboard and thus it stays in the "Keybord" group
     m_keyboardColorScheme = config->readNumEntry("Colorscheme", 1);
-    
+
     // read color options
     config->setGroup("Colors");
     m_useErrorColor = config->readBoolEntry("ColorOnError", true);
@@ -106,7 +106,7 @@ void KTouchSettings::loadSettings() {
     defaultColor.setRgb(170,0,25);
     m_errorBackground = config->readColorEntry("ErrorBackgroundColor", &defaultColor);
 
-    
+
 };
 
 
@@ -150,7 +150,7 @@ void KTouchSettings::saveSettings() {
 
 void KTouchSettings::createDefaultKeyboardColors() {
     KTouchKeyboardColor color;
-    
+
     color.m_name = "Black'n White";
     color.m_frame = Qt::black;
     for (int i=0; i<8; ++i)
@@ -163,7 +163,7 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cBackgroundH = Qt::white;
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
-    
+
     color.m_name = "Classic";
     color.m_frame = Qt::black;
     color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
@@ -178,7 +178,7 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cBackgroundH = Qt::white;
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
-    
+
     color.m_name = "Deep blue";
     color.m_frame = QColor(220,220,220);
     color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
@@ -201,11 +201,11 @@ void KTouchSettings::createDefaultKeyboardColors() {
 		for (int i=1; i<8; i=i+2)
         color.m_background[i] = Qt::darkGray;
     color.m_text = Qt::black;
-    color.m_backgroundH = QColor( 39, 70, 227);;
+    color.m_backgroundH = QColor( 39, 70, 227);
     color.m_textH = Qt::white;
     color.m_cBackground = Qt::gray;
     color.m_cText = Qt::black;
-    color.m_cBackgroundH = QColor( 39, 70, 227);;
+    color.m_cBackgroundH = QColor( 39, 70, 227);
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
 };
