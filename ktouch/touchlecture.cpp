@@ -18,6 +18,7 @@
 #include "touchlecture.h"
 #include "touchlecture.moc"
 
+using namespace std;
 
 TouchLecture::TouchLecture()
 {
@@ -70,7 +71,8 @@ void TouchLecture::loadLectureFile(QString f)
 			file.close();
 			if(levelVector[maxLevel]->empty())
 			{
-				levelVector.erase(&levelVector[maxLevel]);
+				//levelVector.erase(&levelVector[maxLevel]);
+				levelVector.erase(levelVector.begin()+maxLevel);
 				maxLevel--;
 			}
 

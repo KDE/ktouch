@@ -48,7 +48,7 @@ class TouchLecture : public QObject
 	private:
 		unsigned int pos;
 		unsigned int level;
-		vector<vector<QString> *> levelVector;
+		std::vector<std::vector<QString> *> levelVector;
 		QString fileName;
 		QWidget *parent;
 		bool levelHasChanged;

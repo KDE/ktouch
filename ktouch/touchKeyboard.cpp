@@ -23,6 +23,8 @@
 #include <stdlib.h>
 #include <string>
 
+using namespace std;
+
 TouchKeyboard::TouchKeyboard(QWidget *parent, const char *name)
              : QWidget( parent, name )
 {
