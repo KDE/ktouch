@@ -150,6 +150,7 @@ void KTouchSettings::saveSettings() {
 
 void KTouchSettings::createDefaultKeyboardColors() {
     KTouchKeyboardColor color;
+    
     color.m_name = "Black'n White";
     color.m_frame = Qt::black;
     for (int i=0; i<8; ++i)
@@ -162,6 +163,7 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cBackgroundH = Qt::white;
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
+    
     color.m_name = "Classic";
     color.m_frame = Qt::black;
     color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
@@ -176,6 +178,7 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cBackgroundH = Qt::white;
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
+    
     color.m_name = "Deep blue";
     color.m_frame = QColor(220,220,220);
     color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
@@ -189,5 +192,20 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cText = Qt::white;
     color.m_cBackgroundH = QColor(111,121,73);
     color.m_cTextH = Qt::white;
+    m_keyboardColors.append(color);
+
+    color.m_name = "Stripy";
+    color.m_frame = Qt::black;
+    for (int i=0; i<8; i=i+2)
+        color.m_background[i] = QColor( 39, 70, 127);
+		for (int i=1; i<8; i=i+2)
+        color.m_background[i] = Qt::darkGray;
+    color.m_text = Qt::black;
+    color.m_backgroundH = QColor( 39, 70, 227);;
+    color.m_textH = Qt::white;
+    color.m_cBackground = Qt::gray;
+    color.m_cText = Qt::black;
+    color.m_cBackgroundH = QColor( 39, 70, 227);;
+    color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
 };
