@@ -90,7 +90,7 @@ class LevelList:
         GetRandomList(self, listlength)
         Returns a list of randomwords with listlength length.
         First choose words with most Levelchars, if these are
-        not enough, words with less are choosen.
+        not enough, words with less are chosen.
         """
         retlist = []
         selectlist = []
@@ -214,7 +214,7 @@ def main(argv):
         Levelops.append((lchars, title, rows, type))
         Levelnum = Levelnum + 1
         section = 'Level' + str(Levelnum)
-    print '\nConfiguration for %(Levelnum)s levels read. \n!!! Be aware, if the Levels are not numberd correctly \n!!! they will not be read completly!' %vars()
+    print '\nConfiguration for %(Levelnum)s levels read. \n!!! Be aware, if the Levels are not numberd correctly \n!!! they will not be read completely!' %vars()
 
     # Generate Output
     try:
