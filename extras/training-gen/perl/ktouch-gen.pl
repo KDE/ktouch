@@ -1,6 +1,8 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl -w --strict
 
-
+# default values
+$length_of_line = 60;
+$number_of_line = 30;
 
 
 # genword( accumulated, core )
@@ -9,18 +11,18 @@
 # generated will contain at lest on character from core
 sub genword
 {
-    my $res="";
     (my $accum, my $core) = @_;
-    my $ran = int(rand()*2+2);
 
-    $test=$accum.$core;
+    my $all=$accum.$core;
+    my $res="";
 
-
-    for(my $i=0;$i<$ran;$i++)
+    for(my $i=0;$i<=rand(5);$i++)
     {
-	$g=int(rand()*length($test));
-	$res=$res.substr($test,$g,1);
+	my $ran_pos=int(rand(length($all)));
+	$res=$res.substr($all,$ran_pos,1);
     }
+
+    # check if we have generated a walid word, containig some characters from $core
     if ($res =~ m/[$core]/)
     {
 	return $res;
@@ -29,10 +31,7 @@ sub genword
     {
 	return genword($accum,$core);
     }
-
 }
-
-
 
 # This function will return a list of words containing only characters from
 # accum or core. And all words will contain at lest on echaracter from core.
@@ -42,11 +41,17 @@ sub genlist
 {
     ($accum, $core) = @_;
     my @res;
-    $all=$accum.$core;
-    foreach(@all_words)
+ 
+    my $all=$accum.$core;
+
+
+    print "$core\n";
+
+    foreach(@word_list)
     {
 	chomp($_);
-	if (m/[$core]/ && m/^[$all][$all]*$/){
+	if (m/[$core]/ && m/^[rr($all)][$all]*$/)
+	{
 	    push @res,$_;
 	}
     }
@@ -54,7 +59,6 @@ sub genlist
     for(my $i=@res;$i<30;$i++)
     {
 	push @res,genword($accum,$core);
-
     }
 
     return @res;
@@ -67,78 +71,110 @@ sub genlevel
     ($accum, $core) = @_;
     my $res = "";
     my @list = genlist($accum,$core);
-    my $lines = 30;
-    my $words = 60;
-    while($lines >0)
+    my $max_lines = $number_of_line;
+    my $max_length = $length_of_line;
+    while($max_lines >0)
     {
-	while($words >0)
+	my $tmp=$list[rand(@list)-1];
+	$res = $res.$tmp; # first word on line should not have space 
+	while($max_length >0)
 	{
-	    my $tmp=$list[rand()*@list];
-	    $res = $tmp." ".$res; 
-	    $words = $words - (length($tmp) + 1); # +1 is for counting one extra space for each word
+	    my $tmp=$list[rand(@list)-1];
+	    $res = $res." ".$tmp; 
+	    $max_length = $max_length - (length($tmp) + 1); # +1 is for counting one extra space for each word
 	}
-	$res = "\n".$res;
-	$words = 60;
-	$lines = $lines - 1;
+	$res = $res."\n";
+	$max_length = $length_of_line;
+	$max_lines = $max_lines - 1;
     }	
-    return $core.$res;
+    return $res;
 }
 
-sub print_heading
+sub rrr
 {
-    print "######################################################################\n";
-    print "##\n";
-    print "# KTouch training file generated ".localtime(time())."\n";
-    print "#\n";
-    print "# Perl Script written by Steinar Theigmann & Håvard Frøiland.\n";
-    print "#\n";
+    print ".";
+    s/\\/\\\\/g; #remove escape character...
+    s/-/\\-/g; #remove any - since this will mean range
+    s/ //g;
+    return $_;
 }
 
-sub print_usage
-  {
-    die "usage: ktouch-gen config_file\n
-           Example: ./ktouch-gen english-conf < english-word-file\n\n";
-  }
+sub heading
+{
+    return
+	"######################################################################\n".
+	"##\n".
+	"# KTouch training file generated ".localtime(time())."\n".
+	"#\n".
+	"# Perl Script written by Steinar Theigmann & Håvard Frøiland.\n".
+	"#\n";
+}
 
-# ------------------------ MAIN ----------------------------
+sub usage
+{
+    return
+	"\n".
+	"usage: ktouch-gen config_file\n".
+	"   Example: ./ktouch-gen english-conf < english-word-file\n".
+	"\n";
+}
 
-if(@ARGV == 0)
-  {
-    print_usage;
-    exit 0;
-  }
+# --------------------- START ----------------------------
 
+if(@ARGV == 0) # exit if there is no config_file specified
+{
+    die usage;
+}
 
-print_heading;
+open(CONFIG,$ARGV[0]) # First argument should be config file
+    or die "\ nCan't find config_file: $ARGV[0]\n\n";
 
-# read in all files from standard inn and put it in @list
-while (<STDIN>)
-  {
-    chomp($_);
-    push @all_words, $_;
-  }
-
-open(CONFIG,$ARGV[0]) or
-  die("The file $ARGV[0] did not exist\n"); # First argument should be config file
-
+# Read in all elements in config file
 while (<CONFIG>)
-  {
+{
     chomp($_);
-    push @config,$_;
-  }
+
+    if(s/length\-of\-line//)
+    {
+	$length_of_line = $_;
+    }
+    elsif(s/number\-of\-line//)
+    {
+	$number_of_line = $_;
+    }
+    elsif($_) # Add to config if not empty
+    {
+	push @config,$_;
+    }
+}
+
+#foreach(@config)
+#{
+#    print "$_\n";
+#}
+#exit 0;
+
+# Read in all words
+while (<STDIN>)
+{
+    chomp($_);
+    if(length($_)>0)
+    {
+	push @word_list, $_;
+    }
+}
+
+print heading;
 
 $accum="";
-
 $count=0;
 foreach(@config)
-  {
+{
     $count++;
     print "# Level $count\n";
+    print "$_\n";
     print genlevel($accum,$_);
     $accum=$accum.$_;
     print "\n\n";
-  }
-
-
-
+}
 
