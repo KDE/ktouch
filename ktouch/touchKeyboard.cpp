@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "touchkeyboard.h"
+#include "touchkeyboard.moc"
 #include "touchkey.h"
 #include <iostream.h>
 #include <fstream.h>
@@ -161,7 +162,7 @@ void TouchKeyboard::loadKeyboard(QString lang)
 		char buffer[128];
 		int lineNumber=0;
     string line;
-  	
+
   	while (!ifs.eof()) {
 			lineNumber++;
     	ifs.getline(buffer, sizeof(buffer), '\n');
@@ -184,8 +185,8 @@ void TouchKeyboard::loadKeyboard(QString lang)
 						if(end==string::npos)
 							end = line.length();
 						keyBoardVector[para]=line.substr(start, end-start);
-				
-						start = line.find_first_not_of(separators, end+1);	 	
+
+						start = line.find_first_not_of(separators, end+1);
 						para++;
 					}
 
@@ -240,7 +241,7 @@ void TouchKeyboard::loadKeyboard(QString lang)
 						{
 							cerr << "Error in line: " << lineNumber << " FingerKey " << keyBoardVector[5] << " key don't exists" << endl;
 						}
-						
+
 						string *s;
 						s=new string(keyBoardVector[2]);
 
@@ -285,7 +286,7 @@ void TouchKeyboard::loadKeyboard(QString lang)
 						{
             	cerr << "Error in line: " << lineNumber << " ControlKey " << keyBoardVector[4] << " key don't exists" << endl;
 						}
-						
+
         		keyArray[atoi(keyBoardVector[1].c_str())]=new HiddenKey(
 								keyArray[atoi(keyBoardVector[2].c_str())],
 								keyArray[atoi(keyBoardVector[3].c_str())],
