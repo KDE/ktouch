@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchkeys.h                                                          *
  *   ------------                                                          *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,7 +18,6 @@
 class KTouchFingerKey;
 class KTouchNormalKey;
 class KTouchControlKey;
-
 
 /** This is the base class for all keys (KTouchFingerKey, KTouchNormalKey and KTouchControlKey).
  *  Do not create instances of KTouchKey itself or you will get only blank keys. Note that the
@@ -49,8 +48,8 @@ class KTouchKey {
     QString m_keyText;      ///< The text on the key (may be a single char only).
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
-		QFont   m_font;
-		float   m_font_scale;
+	QFont   m_font;
+	float   m_font_scale;
     
   protected:
     int     m_x;        ///< The x position of the key.
@@ -122,8 +121,6 @@ class KTouchControlKey : public KTouchKey {
     KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
     /// Extends the parents paint routine (draws the text or other fancy stuff).
     void paint(QPainter& p) const;
-    /// Recalculates the scaled position and size properties of the key.
-    
 };
 // ------------------------------------------------------------------------------------
 

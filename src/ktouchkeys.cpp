@@ -12,9 +12,10 @@
 
 #include "ktouchkeys.h"
 #include <kdebug.h>
-#include <utility>  // for std::min
+#include <algorithm>  // for std::min
 
-#include "ktouchconfiguration.h"
+#include "ktouch.h"
+#include "prefs.h"
 
 // Initialisation of static variables
 int KTouchFingerKey::m_fingerKeyCount = 0;
@@ -36,7 +37,7 @@ void KTouchKey::resize(double scale) {
     m_wS = static_cast<int>(scale*m_w);
     m_hS = static_cast<int>(scale*m_h);
 	// we set the font from the keyboard widget
-    //m_font=KTouchConfig().m_keyboardFont;
+    m_font=Prefs::keyboardFont();
     m_font.setPointSize( static_cast<int>(std::min(m_wS,m_hS)/m_font_scale) );
 }
 // -----------------------------------------------------------------------------
@@ -53,7 +54,7 @@ KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, i
 }
 
 void KTouchNormalKey::paint(QPainter& p) const {
-    KTouchKeyboardColor& colorScheme = KTouchConfig().m_keyboardColors[KTouchConfig().m_keyboardColorScheme];
+	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
     QColor textColor;
     if (m_isNextKey) {
         // mark the key as "next"
@@ -92,8 +93,8 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
 }
 
 void KTouchFingerKey::paint(QPainter& p) const {
-    KTouchKeyboardColor& colorScheme = KTouchConfig().m_keyboardColors[KTouchConfig().m_keyboardColorScheme];
-		p.setFont( m_font );
+	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
+	p.setFont( m_font );
     if (m_isActive) {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
         p.setPen( colorScheme.m_frame );
@@ -133,7 +134,7 @@ KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText,
 }
 
 void KTouchControlKey::paint(QPainter& p) const {
-    KTouchKeyboardColor& colorScheme = KTouchConfig().m_keyboardColors[KTouchConfig().m_keyboardColorScheme];
+	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
     p.setFont( m_font );
     QColor textColor;
     if (m_isActive) {

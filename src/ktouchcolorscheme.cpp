@@ -12,7 +12,6 @@
 #include "ktouchcolorscheme.h"
 
 void KTouchColorScheme::createDefault() {
-    m_useErrorColor = true;
     m_teacherTextColor = Qt::black;
     m_teacherBackground = Qt::cyan;
     m_studentTextColor = Qt::black;

@@ -30,11 +30,12 @@
 #include <algorithm>  // for std::swap
 
 #include "ktouchlectureeditor.h"
+#include "ktouchlectureeditor.moc"
+
 #include "ktouchlecture.h"
 #include "ktouchopenrequest.h"
-#include "ktouchconfiguration.h"
+#include "ktouch.h"
 
-#include "ktouchlectureeditor.moc"
 
 // **************************
 // ***** Public functions ***
@@ -367,7 +368,7 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
         i18n("Open a default lecture:"),
         i18n("Open a lecture file:"),
         i18n("Create new lecture."),
-        url, KTouchConfig().m_lectureFiles, i18n("<no lecture files available>"));
+        url, KTouchPtr->lectureFiles(), i18n("<no lecture files available>"));
 
     if (result == QDialog::Accepted) {
         // Ok, user confirmed the dialog, now lets get the url

@@ -26,7 +26,6 @@
 #include "ktouchslideline.h"
 #include "ktouchkeyboard.h"
 #include "ktouchlecture.h"
-#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 const int UPDATE_INTERVAL = 500;    // milli seconds between updates of the speed LCD

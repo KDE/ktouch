@@ -31,6 +31,10 @@
       <label>The text color for wrong text (students line).</label>
       <default>#ffffff</default>
     </entry>
+    <entry name="CurrentColorScheme" type="Int">
+      <label>The number of the current colour scheme.</label>
+      <default>0</default>
+    </entry>
     </group>
  <group name="General">
     <entry name="BeepOnError" type="Bool">
@@ -85,9 +89,13 @@
     <label>Allow automatic level adjustments</label>
     <default code="true">true</default>
     </entry>
-     <entry name="RememberLevel" type="Bool">
+    <entry name="RememberLevel" type="Bool">
     <label>Remember the current level for the next KTouch start</label>
     <default code="true">true</default>
+    </entry>
+    <entry name="CurrentTrainingLevel" type="Int">
+    <label>The current training level</label>
+    <default>0</default>
     </entry>
     <entry name="UpSpeedLimit" type="Int">
     <label>Number of chars per minute to increase a level</label>

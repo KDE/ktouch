@@ -1,3 +1,9 @@
+2004-11-01 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Moved all configuration data to Prefs (using KConfig XT) or
+    to the KTouch Main Widget
+  * Removed the old configuration object completely
+  * Changed the startup procedure somewhat
+
 2004-10-29 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Moved some more configuration entries to the KConfig XT, 
     fixed some bugs with the configuration dialog

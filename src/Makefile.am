@@ -44,7 +44,7 @@ ktouch_SOURCES = ktouch.cpp ktouchcharstats.cpp ktouchchartwidget.cpp \
 	ktouchtrainingsession.cpp main.cpp ktouchprefcolorslayout.ui ktouchprefgenerallayout.ui \
 	ktouchprefkeyboardlayout.ui ktouchpreftraininglayout.ui ktouchstartnewdialog.ui \
 	ktouchstatisticslayout.ui ktouchstatuslayout.ui ktouchlectureeditor.cpp \
-	ktouchopenrequest.cpp ktouchopenrequest_dlg.ui ktoucheditor_dlg.ui ktouchconfiguration.cpp \
+	ktouchopenrequest.cpp ktouchopenrequest_dlg.ui ktoucheditor_dlg.ui \
 	ktouchcolorscheme.cpp ktouchutils.cpp prefs.kcfgc 
 
 # the library search path.

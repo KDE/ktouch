@@ -20,6 +20,9 @@
 #include <kmainwindow.h>
 #include <kapplication.h>
 #include <kurl.h>
+#include <qcolor.h>
+#include <qstringlist.h>
+#include <qvaluevector.h>
 
 class QLabel;
 class KToggleAction;
@@ -36,6 +39,7 @@ class KTouchPrefKeyboardLayout;
 class KTouchPrefGeneralLayout;
 
 #include "ktouchlecture.h"
+#include "ktouchcolorscheme.h"
 
 /// This is the main window of KTouch.
 ///
@@ -58,6 +62,11 @@ class KTouch : public KMainWindow {
     /// Destructor, releases memory of KTouch trainer.
     ~KTouch();
 
+	/// Returns the current color scheme
+	const QValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
+	/// Returns the available lecture files
+	const QStringList& lectureFiles() const { return m_lectureFiles; }
+	
   public slots:
     /// Will be called when the "Apply"-button has been pressed in the preferences
     /// dialog or when the user accepted the changes using the "OK"-button.
@@ -99,15 +108,31 @@ class KTouch : public KMainWindow {
     void changeLecture(int num);
 
   private:
+    // *** BEGIN - Session management ***
     /// Will be called when this app is restored due to session management.
     void readProperties(KConfig *config);
     /// Will be called when the app should save its state for session management purposes.
     void saveProperties(KConfig *config);
-    /// Creates the (standard) actions.
+    // *** END - Session management ***
+	
+    /// Initialises the program during a normal startup
+	void init();
+	/// Creates the layout and GUI setup for a practice session
+	void initTrainingSession();
+    /// Creates the (standard) actions and entries in the menu.
     void setupActions();
-	/// Call this function whenever you have read a new lecture file to update the slide line widget.
+	/// This function updates the font used in the sliding line of a font suggestions was
+	/// made for the current lecture.
+	/// Call this function whenever you have read a new lecture file to update 
+	/// the slide line widget.
 	void updateFontFromLecture();
+	/// This function populates the file lists with the installed training, keyboard and 
+	/// examination files.
+    void updateFileLists();
+    /// Creates some default color schemes.
+    void createDefaultColorSchemes();
 
+    // *** Public member variables ***
     KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".
 
@@ -125,7 +150,21 @@ class KTouch : public KMainWindow {
 	KTouchPrefTrainingLayout * m_pageTraining;		///< The training configuration page.
 	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
 	
-    QLabel                 *m_barStatsLabel;        ///< The textlabel displaying the correct number of typed chars.
+    QLabel                 *m_barStatsLabel;        ///< The textlabel in the status bar displaying the correct number of typed chars.
+
+    QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
+    QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
+	
+	QStringList     		m_examinationFiles;     ///< A list of all default examination files.
+	QStringList     		m_examinationTitles;    ///< A list of the titles of all default examination files.
+	
+    QStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
+    QStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
+
+    QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };
+
+/// A global pointer to the main widget (actually only used to retrieve some data).
+extern KTouch * KTouchPtr;
 
 #endif // _KTOUCH_H_

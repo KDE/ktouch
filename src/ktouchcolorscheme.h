@@ -29,24 +29,16 @@ class KTouchColorScheme {
     QColor m_errorTextColor;      ///< The text colour for wrong text (students line).
     QColor m_errorBackground;     ///< The background colour for wrong text (students line).
     
-    /// This flag indicates (if 'true') that when the student typed a wrong character, the 
-    /// foreground and background colour will change.
-    bool   m_useErrorColor;       
-    
-};
-
-/// This structure contains the data for a keyboard colour scheme.
-struct KTouchKeyboardColor {
-    QString     m_name;                 ///< The name of the colour scheme.
-    QColor      m_frame;                ///< The colour for the key frames.
-    QColor      m_background[8];        ///< The background colour of the finger keys and the associated normal keys.
-    QColor      m_text;                 ///< The colour for the text on the keys.
-    QColor      m_backgroundH;          ///< The background colour for highlighted (next) normal keys.
-    QColor      m_textH;                ///< The text/pen colour for highlighted (next) normal keys.
-    QColor      m_cBackground;          ///< The background colour for the control keys.
-    QColor      m_cText;                ///< The text/pen colour for the control keys.
-    QColor      m_cBackgroundH;         ///< The background colour for activated control keys.
-    QColor      m_cTextH;               ///< The text/pen colour for activated control keys.
+    QString     m_name;           ///< The name of the colour scheme.
+    QColor      m_frame;          ///< The colour for the key frames.
+    QColor      m_background[8];  ///< The background colour of the finger keys and the associated normal keys.
+    QColor      m_text;           ///< The colour for the text on the keys.
+    QColor      m_backgroundH;    ///< The background colour for highlighted (next) normal keys.
+    QColor      m_textH;          ///< The text/pen colour for highlighted (next) normal keys.
+    QColor      m_cBackground;    ///< The background colour for the control keys.
+    QColor      m_cText;          ///< The text/pen colour for the control keys.
+    QColor      m_cBackgroundH;   ///< The background colour for activated control keys.
+    QColor      m_cTextH;         ///< The text/pen colour for activated control keys.
 };
 
 #endif  // KTOUCHCOLORSCHEME_H

@@ -18,9 +18,8 @@
 #include <kdebug.h>
 
 #include <cmath>
-#include <utility>
+#include <algorithm>
 
-#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 // don't use defines here... most of the time they are pure evil :-)
@@ -89,7 +88,10 @@ void KTouchSlideLine::setStudentText(const QString& text) {
 }
 
 void KTouchSlideLine::setFont(const QFont& font) {
-	m_font = font;
+	if (Prefs::overrideLectureFont())
+		m_font = Prefs::font();
+	else
+		m_font = font;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
 }
 

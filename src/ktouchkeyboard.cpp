@@ -13,7 +13,7 @@
 #include "ktouchkeyboard.h"
 #include "ktouchkeyboard.moc"
 
-#include <utility>
+#include <algorithm>
 
 #include <qfile.h>
 
@@ -24,7 +24,6 @@
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
 
-#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 // the margin between keyboard and widget frame
@@ -132,7 +131,6 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
     }
-
     updateColours();    // we recreate the colour connections
 	// assign keyboard font to keys
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
