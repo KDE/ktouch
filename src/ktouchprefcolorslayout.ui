@@ -54,6 +54,12 @@
                             <property name="text">
                                 <string></string>
                             </property>
+                            <property name="toolTip" stdset="0">
+                                <string>The background for the teacher's  line</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>You can change here the background color for the teacher's line, i.e. the line of letters you have to type.</string>
+                            </property>
                         </widget>
                         <widget class="QLabel" row="1" column="0">
                             <property name="name">
@@ -83,6 +89,9 @@
                             </property>
                             <property name="text">
                                 <string></string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>The color for the teacher's line</string>
                             </property>
                         </widget>
                         <spacer row="0" column="2">
@@ -131,6 +140,12 @@
                             </property>
                             <property name="text">
                                 <string></string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Change the text color for the student line</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Hre you can change the color of the text you type in the student line.</string>
                             </property>
                         </widget>
                         <widget class="QLabel" row="0" column="6">
@@ -310,6 +325,9 @@
                             <property name="toolTip" stdset="0">
                                 <string>Choose the text color for error in typing line</string>
                             </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the text of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
+                            </property>
                         </widget>
                         <spacer>
                             <property name="name">
@@ -361,6 +379,9 @@
                             </property>
                             <property name="toolTip" stdset="0">
                                 <string>Choose the background color for error in typing line</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the background of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
                             </property>
                         </widget>
                     </hbox>
@@ -426,6 +447,12 @@
                     </item>
                     <property name="name">
                         <cstring>kcfg_ColorScheme</cstring>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Color scheme for displaying the keyboard</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>You can choose here the color scheme for displaying the keyboard. &lt;i&gt;Black'n White&lt;/i&gt; will display all keyboard letters black on white, &lt;i&gt;Classic&lt;/i&gt; will colorize the same color for each finger, &lt;i&gt;Deep Blue&lt;/i&gt; will display the keyboard in different deep blue colors and &lt;i&gt;Stripy&lt;/i&gt; will alternate blue and gray for letters corresponding to same finger.</string>
                     </property>
                 </widget>
             </hbox>

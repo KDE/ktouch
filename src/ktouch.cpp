@@ -322,6 +322,10 @@ void KTouch::updateSettings()
 {
 	//TODO:test if this setting has changed
 	changeColor(Prefs::colorScheme());
+	//not sure if testing is required before applying all that or could that be done in any case?
+	m_statusWidget->applyPreferences();
+    	m_slideLineWidget->applyPreferences();
+   	m_keyboardWidget->applyPreferences(true);  // set preferences silently here
 }
 
 
