@@ -125,7 +125,7 @@ void KTouchKeyboard::applyPreferences(bool silent) {
         else {
             QString errorMsg;
             if (!loadKeyboard(fileName, &errorMsg)) {
-                KMessageBox::error( 0, i18n("Error reading the keyboad layout! The default number keypad will "
+                KMessageBox::error( 0, i18n("Error reading the keyboard layout! The default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
