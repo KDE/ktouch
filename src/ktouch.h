@@ -87,7 +87,8 @@ class KTouch : public KMainWindow {
     /// Reimplementated to save preferences and
     bool queryExit();
 
-  private slots:
+  public slots:
+    void fileOpenLecture();             ///< The action File->Open lecture...
     void fileEditLecture();             ///< The action File->Edit lecture...
     void fileQuit();                    ///< The action File->Quit
     void trainingNewSession();          ///< The action Training->Start new training session...
@@ -131,7 +132,10 @@ class KTouch : public KMainWindow {
     void updateFileLists();
     /// Creates some default color schemes.
     void createDefaultColorSchemes();
-
+	/// Updates the check mark in the lecture-quick-selection menu depending on the 
+	/// lecture in Prefs::currentLectureFile().
+	void updateLectureActionCheck();
+	
     // *** Public member variables ***
     KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".

@@ -1,7 +1,8 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="ktouch" version="2">
+<kpartgui name="ktouch" version="1.4">
 <MenuBar>
   <Menu name="file"><text>F&amp;ile</text>
+    <Action name="file_openlecture" />
     <Action name="file_editlecture" />
     <Action name="file_edittest" />
     <Action name="file_editkeyboard" />

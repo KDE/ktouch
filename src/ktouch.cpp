@@ -78,6 +78,7 @@ KTouch::KTouch()
 		//        for now we just do the same as for the standard startup
 		m_lecture.loadXML(this, Prefs::currentLectureFile() );
 		updateFontFromLecture();
+		updateLectureActionCheck();
 		m_trainer->m_level = 0;
 		m_trainer->goFirstLine();
         changeStatusbarMessage( i18n("Starting training session: Waiting for first keypress...") );
@@ -99,17 +100,9 @@ KTouch::KTouch()
 		}
 		else {
 			updateFontFromLecture();
-			kdDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
 			// adjust check marks in quick-select menus
-			int num = 0;
-			QStringList::iterator it = m_lectureFiles.begin();
-			QString fname = Prefs::currentLectureFile(); 
-			while (it != m_lectureFiles.end()   &&   (*it).find(fname) == -1) {
-				++it;
-				++num;
-			}
-			if (it == m_lectureFiles.end())		m_defaultLectureAction->setCurrentItem(-1);
-			else    							m_defaultLectureAction->setCurrentItem(num);
+			updateLectureActionCheck();
+			kdDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
 		}
 		
 		// Adjust check mark for the keyboard file
@@ -247,6 +240,19 @@ bool KTouch::queryExit() {
 // *** Private slots (implementation of the actions) ***
 // *****************************************************
 
+// The action File->Open lecture...
+void KTouch::fileOpenLecture() {
+    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select training lecture file...") );
+    if (!tmp.isEmpty()) {
+		Prefs::setCurrentLectureFile(tmp.url());
+		m_lecture.loadXML(this, Prefs::currentLectureFile() );
+		updateFontFromLecture();
+		// adjust check marks in quick-select menus
+		updateLectureActionCheck();
+	}
+}
+// ----------------------------------------------------------------------------
+
 // The action File->Edit lecture...
 void KTouch::fileEditLecture() {
 	// Create and execute editor
@@ -255,6 +261,8 @@ void KTouch::fileEditLecture() {
 	// Reload lecture in case it was modified
 	m_lecture.loadXML(this, Prefs::currentLectureFile() );
 	updateFontFromLecture();
+	// adjust check marks in quick-select menus
+	updateLectureActionCheck();
 }
 // ----------------------------------------------------------------------------
 
@@ -272,7 +280,7 @@ void KTouch::trainingNewSession() {
         m_trainingContinue->setEnabled(false);
     }
     else
-        m_trainer->continueTraining();
+        trainingContinue();
 }
 // ----------------------------------------------------------------------------
 
@@ -323,7 +331,7 @@ void KTouch::optionsPreferences() {
 	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
 	configAutoLevelChangeToggled(Prefs::autoLevelChange());
 	dialog->show();
-	m_trainer->continueTraining();
+	trainingContinue();
 }
 // ----------------------------------------------------------------------------
 
@@ -370,7 +378,7 @@ void KTouch::changeLecture(int num) {
     	m_defaultLectureAction->setCurrentItem(num);
 	}
     m_trainer->goFirstLevel();
-	m_trainer->continueTraining();
+	trainingContinue();
 }
 // ----------------------------------------------------------------------------
 
@@ -504,8 +512,11 @@ void KTouch::initTrainingSession() {
 /// Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
+    new KAction(i18n("&Open lecture ..."), 0, 
+		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
+    new KAction(i18n("&Edit lecture ..."), 0, 
+		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
-    new KAction(i18n("&Edit lecture ..."), 0, this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
 
 	// *** Training menu ***
     new KAction(i18n("&Start New Training Session"), "launch", 0,
@@ -662,4 +673,20 @@ void KTouch::createDefaultColorSchemes() {
     color.m_cTextH = Qt::black;
     m_colorSchemes.push_back(color);
 }
+
+/// Updates the check mark in the lecture-quick-selection menu depending on the 
+/// lecture in Prefs::currentLectureFile().
+void KTouch::updateLectureActionCheck() {
+	int num = 0;
+	QStringList::iterator it = m_lectureFiles.begin();
+	QString fname = Prefs::currentLectureFile(); 
+	while (it != m_lectureFiles.end()   &&   (*it).find(fname) == -1) {
+		++it;
+		++num;
+	}
+	if (it == m_lectureFiles.end())		m_defaultLectureAction->setCurrentItem(-1);
+	else    							m_defaultLectureAction->setCurrentItem(num);
+}
+
+
 
