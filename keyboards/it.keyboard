@@ -15,7 +15,7 @@ FingerKey	102	F	48	20
 FingerKey	106	J	78	20
 FingerKey	107	K	88	20
 FingerKey	108	L	98	20
-FingerKey	242	ò	108	20
+FingerKey	242	Ã²	108	20
 #
 #
 #  ControllKey: This class will represent all the
@@ -58,7 +58,7 @@ NormalKey 56		8					80	0	106
 NormalKey 57		9					90	0	107
 NormalKey 48		0					100	0	108
 NormalKey 39		'					110	0	242
-NormalKey 236		ì					120	0	242
+NormalKey 236		Ã¬					120	0	242
 #
 NormalKey 113		Q					15	10	97
 NormalKey 119		W					25	10	115
@@ -70,13 +70,13 @@ NormalKey 117		U					75	10	106
 NormalKey 105		I					85	10	107
 NormalKey 111		O					95	10	108
 NormalKey 112		P					105	10	242
-NormalKey 232		è					115	10	242
+NormalKey 232		Ã¨					115	10	242
 NormalKey 43		+					125	10	242
 #
 NormalKey 103		G					58	20	102
 NormalKey 104		H					68	20	106
-NormalKey 224		à					118	20	242
-NormalKey 249		ù					128	20	242
+NormalKey 224		Ã 					118	20	242
+NormalKey 249		Ã¹					128	20	242
 #
 NormalKey 60		<					13	30	97
 NormalKey 122		Z					23	30	115
@@ -128,10 +128,10 @@ HiddenKey	90		122			115			257 #Z
 HiddenKey	59		44			108			258 #;
 HiddenKey	58		46			242			258 #:
 HiddenKey	95		45			242			258 #_
-HiddenKey	231		242			242			258 #ç
-HiddenKey	176		224			242			258 #°
-HiddenKey	167		249			242			258 #§
-HiddenKey	233		232			242			258 #é
+HiddenKey	231		242			242			258 #Ã§
+HiddenKey	176		224			242			258 #Â°
+HiddenKey	167		249			242			258 #Â§
+HiddenKey	233		232			242			258 #Ã©
 HiddenKey	42		43			242			258 #*
 HiddenKey	47		55			106 			258 #/
 HiddenKey	40 		56			106			258 #(
@@ -143,7 +143,7 @@ HiddenKey	62		60			97			257 #>
 HiddenKey	124		92			97			257 #|
 HiddenKey	33		49 			97			257 #!
 HiddenKey	34		50			97			257 #"
-HiddenKey	163		51			115			257 #£
+HiddenKey	163		51			115			257 #Â£
 HiddenKey	36		52			100			257 #$
 HiddenKey	37		53			102			257 #%
 HiddenKey	38		54			102			257 #&

@@ -46,17 +46,17 @@ ControlKey	8 	BackSpace	130  	0	20	10
 #
 #		Assci	KeyText	x	y	FingerKey
 #
-NormalKey	178	²	0	0	113
+NormalKey	178	Â²	0	0	113
 NormalKey	38	&	10	0	113
-NormalKey	233	é	20	0	115
+NormalKey	233	Ã©	20	0	115
 NormalKey	34	"	30	0	100
 NormalKey	39	'	40	0	102
 NormalKey	40	(	50	0	102
 NormalKey	45	-	60	0	106
-NormalKey	232	è	70	0	106
+NormalKey	232	Ã¨	70	0	106
 NormalKey	95	_	80	0	107
-NormalKey	231	ç	90	0	108
-NormalKey	224	à	100	0	109
+NormalKey	231	Ã§	90	0	108
+NormalKey	224	Ã 	100	0	109
 NormalKey	41	)	110	0	109
 NormalKey	61	=	120	0	109
 #
@@ -76,7 +76,7 @@ NormalKey	36	$	125	10	109
 #
 NormalKey	103	G	58	20	102
 NormalKey	104	H	68	20	106
-NormalKey	249	ù	118	20	109
+NormalKey	249	Ã¹	118	20	109
 NormalKey	42	*	128	20	109
 #
 NormalKey	60	<	13	30	113
@@ -100,26 +100,26 @@ NormalKey	33	!	113	30	109
 #		Ascii	Target	Finger	Contorll
 #
 HiddenKey	49	38	113	258 #&
-HiddenKey	50	233	115	258 #é
+HiddenKey	50	233	115	258 #Ã©
 HiddenKey	51	34	100	258 #"
 HiddenKey	52	39	102	258 #'
 HiddenKey	53	40	102	258 #(
 HiddenKey	54	45	106	257 #-
-HiddenKey	55 	232	106	257 #è
+HiddenKey	55 	232	106	257 #Ã¨
 HiddenKey	56	95	107	257 #_
-HiddenKey	57	231	108	257 #ç
-HiddenKey	48	224	109	257 #à
+HiddenKey	57	231	108	257 #Ã§
+HiddenKey	48	224	109	257 #Ã 
 HiddenKey	176	41	109	257 #)
 HiddenKey	43	61	109	257 #=
 #
-HiddenKey	126	233	115	264 #é
+HiddenKey	126	233	115	264 #Ã©
 HiddenKey	35	34	100	264 #"
 HiddenKey	123	39	102	264 #'
 HiddenKey	91	40	102	264 #(
 HiddenKey	124	45	106	264 #-
-HiddenKey	96 	232	106	264 #è
+HiddenKey	96 	232	106	264 #Ã¨
 HiddenKey	92	95	107	264 #_
-HiddenKey	64	224	109	264 #à
+HiddenKey	64	224	109	264 #Ã 
 HiddenKey	93	41	109	264 #)
 HiddenKey	125	61	109	264 #=
 #
