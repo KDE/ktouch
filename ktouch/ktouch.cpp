@@ -108,9 +108,9 @@ void KTouch::initActions()
 	viewToolBar = KStdAction::showToolbar(this, SLOT(slotViewToolBar()), actionCollection());
 	viewStatusBar = KStdAction::showStatusbar(this, SLOT(slotViewStatusBar()), actionCollection());
 
-	new KAction(i18n("Keyboard"),0,this,SLOT(slotOptionKeyboard()), actionCollection(),"optionKeyboard");
-	new KAction(i18n("Training"),0,this,SLOT(slotOptionTraining()), actionCollection(),"optionTraining");
-	new KAction(i18n("General"),0,this,SLOT(slotOptionGeneral()), actionCollection(),"optionGeneral");
+	new KAction(i18n("Keyboard..."),0,this,SLOT(slotOptionKeyboard()), actionCollection(),"optionKeyboard");
+	new KAction(i18n("Training..."),0,this,SLOT(slotOptionTraining()), actionCollection(),"optionTraining");
+	new KAction(i18n("General..."),0,this,SLOT(slotOptionGeneral()), actionCollection(),"optionGeneral");
 
 	new KAction(i18n("Train"),1,this,SLOT(slotModeTrain()), actionCollection(),"train");
 	new KAction(i18n("Edit"),2,this,SLOT(slotModeEdit()), actionCollection(),"edit");
@@ -215,7 +215,7 @@ void KTouch::slotFileOpen()
 	slotStatusMsg(i18n("Opening file..."));
 	KURL url=KFileDialog::getOpenURL(
 		dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
-		i18n("*.ktouch|KTouch training files"), this, i18n("Open File..."));
+		i18n("*.ktouch|KTouch training files"), this, i18n("Open File"));
 	if(!url.isEmpty())
 	{
 		touchLecture->load(url.directory(false) + url.fileName());
@@ -260,7 +260,7 @@ void KTouch::slotFileSaveAs()
 	slotStatusMsg(i18n("Save file..."));
 	KURL url=KFileDialog::getOpenURL(
 		dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
-		i18n("*.ktouch|KTouch training files"), this, i18n("Save File..."));
+		i18n("*.ktouch|KTouch training files"), this, i18n("Save File"));
 	if(!url.isEmpty())
 	{
 		touchLecture->saveAs(url.directory(false) + url.fileName());

@@ -59,7 +59,7 @@
                 <cstring>downButtonff</cstring>
             </property>
             <property name="text">
-                <string>Move down</string>
+                <string>Move Down</string>
             </property>
         </widget>
         <widget class="QPushButton" row="7" column="0">
@@ -75,7 +75,7 @@
                 <cstring>upButtonff</cstring>
             </property>
             <property name="text">
-                <string>Move up</string>
+                <string>Move Up</string>
             </property>
         </widget>
         <widget class="QLayoutWidget" row="0" column="1" rowspan="1" colspan="3">
