@@ -1,0 +1,251 @@
+######################################################################
+##
+# KTouch oefenbestand voor kinderen
+#
+# De woordkeuze werd gebaseerd op het
+# Perl Script geschreven door Steinar Theigmann & Haavard Friland.
+# 
+# Kenmerken van dit oefenbestand zijn :
+#                          1. Een zeer geleidelijke overgang van het 
+#                             ene niveau naar het andere, vooral in het
+#                             begin.
+#                          2. Een grote nadruk op het ritme
+#                          3. Herhaling
+#
+# Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
+# Dit document is een onderdeel van het KTouch programma en valt onder de 
+# bepalingen van de GNU General Public License versie 2 of recenter.
+#
+#
+#
+# Niveau 1
+j f
+jjj jjj jjj fff fff fff jjj fff fff jjj jjj
+jjf jjf jjf jfj jfj jfj jff jff jff jjf ffj
+ffj ffj jff jff jff jfj fjf fjf jfj fjf jfj
+jff jjff fjj jj ffjff jjff fjj jj ff jf jf fj fj
+j jjjj jjffj j ffjf jj jff jj j j j ffj fffj
+jf jjjj fjj ffj jjffj fjjjff jf jff j ffj jj
+ffjf j fjj ff ff j ffj jjffjf jjff jff fffj
+ff jjfj jj fffj jf ffjj jfj fjj jj jfff jff
+
+# Niveau 2
+g h
+ggg ggg hhh hhh ggg ggg hhh hhh ggg ggg hhh hhh
+jhj jhj jhj fgf fgf fgf fhg fhg fhg hgj hgj hgj
+hgj hgj hhf hhf hfj hfj hfj hfj fgj fgj fgj fgj
+ggj ggj ggj ggj ggj gjff gjff gjff
+ghhf gffh ghhf gffh ghhf gffh ghhf gffh ghhf gffh
+jjgf jjgf jjgf jjgf jjgf jjgf jjgf jjgf jjgf jjgfg
+hfffj fjg hfffj fjgh fffj fjgh fffj fjgh fffj
+fjfhh ffjfh hgjfg fjfhh ffjfh hgjfgfjfhh ffjfh hgfg hfffj
+hfffj fg hff jgh hgjf fg hg jjg g hhhg fjfhh hggg hg
+jjgf hgjh jgh hgjh g hgjf hhfh fg jgh hhhg g g jg hfffj
+hhfh hhfh jfh hhfh fg hg hhfh hhfh jfh hhfh fghg
+
+# Niveau 3
+d k
+ddk ddk ddk kkd kkd kkd kkd kdk kdk kdk kdk kdk
+dkd dkd dkd dkd dfj dfj dfj dfj dfj kjf kjf kjf kjf
+gdf hkj gdf hkj gdf hkj ghd ghd ghd hfk hfk hfk hfk
+jkdf jkdf jkdf ghdk ghdk ghdk ghdk ddk djgg ddk djgg
+ddk djgg ddk djgg ddk djgg ddk djgg
+hkdh djgg hkdh djgg hkdh djgg hkdh djgg hkdh djgg hkdh djgg
+hjdh kf djd hjdh kf djd hjdh kf djd hjdh kf djd
+ggd djgg kjkfg ggd djgg kjkfg ggd djgg kjkfg ggd djgg kjkfg
+kg kf fhk dhjh hjdh khfkd kf ddd kfg kg hjdh fhk
+dhjh jgd fk hjd gkkj dhjh ggd kfg kjfk kj kf khfkd
+kg kg hdj kj dhjh khfkd gkkj dd gk kj dhf hd hjdh
+kjg dd hdj fk kj kjg kfg hd dj hd ggd gk jgd dj
+
+# Niveau 4
+l s
+lls lls lls lls ssl ssl ssl sls sls sls lsl lsl lsl lsl
+lss lss lss lss sll sll sll sdj sdj sdj sdk sdk sdk sdk
+jks jks jks jks fds fds fds fds fds jks jks jks jks jks
+lkf lkf lkf lkf jkl jkl jkl jkl lkj lkj lkj lkj kls kls
+klj klj klj klk klk kds dsk kds dsk kds dsk kds dsk kds dsk
+hjs hjs hjs sjh sjh sjh sgh sgh sgh sgh sgh hds hds hds
+jhl jhl jhl jhl jgl jgl jgl jgl jgl jgl kjs kjs kjs khs khs khs
+hdfks sfs sk hdfks sfs sk hdfks sfs sk hdfks sfs hdfks sfs sk
+klg dshf sf sk klg dshf sf sk klg dshf sf sk klg dshf sf sk
+sfs lg jl lddd sdkh js ldjs slgh sgfh sgg ld sdkh
+gsd slgh gsd sgfh js sksg lddd lgg sf sfs sg ld
+js sf sdkh sfs sg sg sdkh sl ld sdkh s s sdkh lgg
+ksjfl ld sdkh ld sfs gl ld s ld sdkh gsd sf s lk
+lg lgg js js lg sf gl lk klg dshf sf sk
+
+# Niveau 5
+q m
+qqq qqq qqq mmm mmm mmm qmm qmm qmm qmm mqq mqq mqq mqq
+qmq qmq qmq qmq qmq qmq qmq mqq mqq mqm mqm mqm mqm mqm
+lmq lmq lmq lmq lmq lmq lmq jkq jkq jkq jkq qsm qsm qsm
+qsm msd msd msd msd ghm ghm ghm ghm fgm fgm fgm fgm dfq
+dfq dfq dfq jkm jkm jkm jkm mqg mqg mqg mqg jdm jdm jdm
+mfg kgm dsfq mfg kgm dsfq mfg kgm dsfq jqs mmkl dsfq jqs mmkl dsfq
+jqs mmkl dsfq jqs mmkl dsfq jqs hqff hqhq jqs hqff hqhq
+mjfm km mhl mjfm km mhl mjfm km mhl mjfm km mhl
+q hq dsfq lms llgm mkk q hq dsfq lms llgm mkk
+jmj kgm gfql kkq km hqff jmj kgm gfql kkq km hqff
+jjhm kkq llgm lfq gfql mkk jjhm kkq llgm lfq gfql mkk
+m hqff qj gfql jjhm hqsk m hqff qj gfql jjhm hqsk
+mmkl hsq mkk q mfg km llgm mmkl hsq mkk q mfg km llgm
+dsfq kgm lms llgm jmj km dsfq kgm lms llgm jmj km
+llgm mkk hq q jmj m jqs mmf llgm mkk hq q jmj m jqs mmf
+jm dsfq jm q hqff hqsk jm dsfq jm q hqff hqsk
+
+# Niveau 6
+t u
+tut tut tut tut fut fut fut fut tuf tuf tuf tuf tuf
+dus dus dus dus dus sul sul sul sul sul sul kus kus kus
+gul gul gul gul gul gul gul mul mul mul quu quu quu
+fuut fuut fuut fuut tuk tuk tuk tuk lus lus lus lus
+kust kust kust kust juf juf juf juf juf muf muf muf muf
+smult smult smult smult tuft tuft tuft tuft jut jut jut
+gum gum gum gum hut hut hut hulst hulst hult hult hult
+klutst klutst klutst klutst klutst klutst klutst klutst
+
+# Niveau 7
+r i
+rir rir rir rir rir rir iri iri iri iri iri iri
+til til til til til stil stil stil stil tilt tilt tilt tilt
+mis mis mis mis mik mik mik mik mik mik kim kim kim kim
+gif gif gif gif gif gif kik kik kik kik kik kirt kirt kirt
+ruit ruit ruit ruit tuil tuil tuil tuil tuil tuil tuil
+uur uur uur duur duur duur duur tuur tuur tuur tuur
+kuur kuur kuur kuur muur muur muur muis muis muis muis
+ruim ruim ruim ruim kruim kruim kruim kruim duim duim duim
+rijm rijm rijm rijm ijs ijs ijs ijs dij dij dij dij dij
+kijk kijk kijk kijk jij jij jij jij jij lijm lijm lijm
+fris fris fris fris fris grif grif grif grif grif grif
+krijt krijt krijt krijt drijft drijft drijft drijft drijft
+strijkt strijkt strijkt strijkt strijkt slik slik slik slik
+rust rust rust rust rust rustig rustig rustig rustig
+mistig mistig mistig mistig mistig
+
+# Niveau 8
+y e o
+ook ook ook ook ook pool pool pool pool rol rol rol rol
+ree ree ree ree de de de de de mee mee mee mee mee mee
+yam yam yam yam yam yo yo yo yo yo yo yoga yoga yoga yoga
+teug teug teug teug teug klei kle klei klei klei lied lied
+lied lied dief dief dief fee fee fee fee emmer emmer emmer
+dol dol dol dol lef lef lef lef leef leef leef leef fout fout fout
+stout stout stout kleur kleur kleur kleur lees lees lees
+meel meel meel meel smelt smelt smelt smelt keer keer keer
+streek streek streek hees hees hees goed goed goed goed hout hout
+goud goud houd houd goud koud koud koud fout fout fout
+koer koer koer koers koers koers koers 
+tikje tikje tikje tikje modder modder modder modder
+liedje liedje liedje liedje soort soort soort soort
+
+# Niveau 9
+z a p
+pa pa papa papa za za zaza zaza zal zal zal zal zap zap zap zap
+pak pak pak pak pak kap kap kap kap kap pap pa pap pap pa
+zoek zoek zoek zoek zoek soep soep soep soep soep poes poes poes
+perk perk perk perk perk paard paard paard paard dier dier dier
+jaap jaap jaap jaap paar paar paar spaar spaar spaar
+het paard staat op stal het paard staat op stal
+de koe roept meuhhh de koe roept meuhhh
+spaar jij ook mee spaar jij ook mee spaar jij ook postzegels
+moet jij ook mee moet hij ook mee hij gaapt hij slaapt
+taai taai taai saai saai saai zuster zuster zuster
+lepel lepel lepel de zuster geeft de lepel
+kerel kerel raampje raampje raampje karamel karamel karamel
+
+
+# Niveau 10
+v n
+van van van van ven ven ven ven ven van ven van ven van
+vee vee vee nee nee nee vee nee vee nee vee nou nou nee nou vee
+nar nar ver ver nar nar ver ver nar ver nar ver nar ver
+nu nu nu vel vel vel nu vel nu vel nu vel bu vel nu vel
+veel veel vee vee veel vee veel vee veel vee voet voet
+noot noot voet voet noot voet noot voet noot voet naar voet naar
+nest nest nest nest vest vest vest vest nest vest nest vest nest
+lang lang lang vast vast vast neer neer neer lang vast neer lang vast neer
+hand hand hand eind eind eind aan aan aan aan de hand een eind
+aan de hand een eind meelopen aan de hand een eind meelopen
+vlees vlees vlees geen geen geen eten eten eten geen vlees eten
+kijken kijken naar naar naar naar horizon horizon naar de horizon kijken
+ik ga naar het huis van de nar ik ga naar het huis van de nar
+morgen kunnen de mensen ook voor dit kiezen
+
+
+# Niveau 11
+b c
+och och ach ach och ach och ach bar bar och bar ach bar och bar
+bier bier baar bier baar baar bier baar boer boer bier baar boer bar beer
+beer beer beer achter achter achter er staat een beer achter je er staat een beer achter je
+blaas blaas blaas blaas ballon ballon ballon blaas die ballon op blaas die ballon op
+lachen lachen lachen ooit al een lachende beer gezien ooit al een lachende beer gezien
+boek boek boel boel boek een saaie boel een saai boek een saaie boel een saai boek
+broek broek broek gescheurd gescheurd zijn broek is gescheurd zijn broek is gescheurd
+
+
+# Niveau 12
+x w
+xxx www xxx www xxx www xxx www water water water wacht wacht wacht
+water wat water wat wat wonder wonder wat een wonder dat water wat een wonder dat water
+leeuw leeuw lynx lynx de leeuw is de koning onder de dieren de lynx is geen katje
+wist jij dit al wie wijst er naar die lynx wist willywat hij wou doen
+waarom welke wie waaronder waar wie wonder warme wachten
+op weekdagen weten wij welke mensen wachten op de wegen
+
+
+# Niveau 13
+hoofdletters
+De delen Een eenhoorn Geld geven Daarom dachten wij Welke wegen nemen
+Sterke Jan en Willy gaan op stap Xavier is er ook bij Wat ga je doen
+Zeer erg Veel erger De Efteling Jan en Mieke gaan naar de Efteling
+Doe maar wat Ga voort Mijn hond heet Rex
+
+# Niveau 14
+leestekens
+Dit is een, en dat is twee. 
+Jan, Mieke, Maaike, Steffen en Rex, de hond, gingen wandelen.
+Dat is straf! Je bent helemaal nat! Wat heb je nu weer gedaan?
+Ik heb een heleboel dieren gezien: katten, honden, vogels...
+Morgen ga ik vast terug. Jij toch ook?
+Kom je morgen met mij en Anneke wandelen?
+Het is reeds vroeg donker. Pas op! Je hebt je toch geen pijn gedaan?
+Hallo! Hier! Kijk maar naar boven! Zie je mij dan niet?
+En toen zei ze: "Ik sta hier." Maar hij hoorde haar niet. Toen riep ze: "Moet ik naar beneden komen?"
+Het is nooit te laat. Rennen maar!
+Deze kerel heb ik nog nooit gezien! Jij wel?
+
+# Niveau 15
+Volzinnen
+De laatste tijd hebben wij jou hier niet veel meer gezien!
+Ga jij morgen terug naar school?
+Een overijverige leerling behaalt meestal goede resultaten.
+De meester van de zesde klas is een toffe kerel.
+We brachten met de klas een bezoekje aan de dierentuin.
+Welke jas is van jou?
+In de dierentuin hebben we heel wat dieren gezien: een paar leeuwen, een tijger, heel wat apen en zelfs een lynx!
+Op de zeedijk waren heel wat kinderen met kleine wagentjes aan het rondrijden.
+Het water van de zee was zeer koud.
+Morgen moeten we terug naar huis; de vakantie is voorbij.
+Ik dacht wel dat je mij herkend had. Of niet soms?
+Pas op! Straks trap je nog in die plas!
+Moeten wij nog ver stappen? Ik ben moe, mijn ogen vallen dicht en ik zou graag gaan slapen.
+
+# Niveau 16
+Rekenen
+1 2 3 123 4 5 6 456 7 8 9 789 120 130 140 150 230 395 382 456
+1 + 2 = 3; 1+2=3; 44+23=67; 41+60=102; Oei! Dat is fout! Het moet 101 zijn.
+De tafel van 8: 1x8=8; 2x8=16; 3x8=24; enz.
+Op een computer wordt het maalteken vaak met een '*' aangeduid i.p.v. met een 'x'!
+Dus 4x7 is hetzelfde als 4*7...en dat is natuurlijk gelijk aan 28!
+Op een klavier vind je ook geen teken voor 'gedeeld door'! Wij vervangen dat door een schuine streep: '/' dus.
+35/7=5 of 35 / 7 = 5 indien je wat meer ruimte tussen je cijfers wil!
+Het minteken is natuurlijk een gewoon liggend streepje, '-' dus.
+10 - 5 = 5 of 10-5=5 wanneer je minder ruimte wil gebruiken.
+En nu aan de slag!
+1x1=1; 2x1=2; 3x1=3...
+
+# Niveau 17
+Einde
+Einde van de cursus. Proficiat!
+
