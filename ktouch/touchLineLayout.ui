@@ -256,7 +256,7 @@
     </property>
     <property>
         <name>whatsThis</name>
-        <string>The top text chows what you should write. When you press a key this character will apear on the bottom line. The topline and the bottom line chould be equal when you are finished. At the end of the line you have to press enter.</string>
+        <string>The top text shows what you should write. When you press a key this character will appear on the bottom line. The topline and the bottom line should be equal when you are finished. At the end of the line you have to press enter.</string>
     </property>
     <grid>
         <property stdset="1">

@@ -181,7 +181,7 @@
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>This shows witch level you are at.</string>
+                        <string>This shows which level you are at.</string>
                     </property>
                 </widget>
             </grid>
@@ -269,7 +269,7 @@
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>This shows how fast you are typing. It messures it in characters pr. minute.</string>
+                        <string>This shows how fast you are typing. It measures it in characters per minute.</string>
                     </property>
                 </widget>
             </grid>

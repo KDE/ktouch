@@ -153,7 +153,7 @@
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
                     </property>
                 </widget>
             </grid>
@@ -204,7 +204,7 @@
                     </property>
                     <property>
                         <name>whatsThis</name>
-                        <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
                     </property>
                 </widget>
                 <widget row="1"  column="0" >

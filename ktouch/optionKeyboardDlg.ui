@@ -96,7 +96,7 @@
                 </property>
                 <property>
                     <name>whatsThis</name>
-                    <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                    <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
                 </property>
             </widget>
             <widget>
@@ -124,7 +124,7 @@
                 </property>
                 <property>
                     <name>whatsThis</name>
-                    <string>If you want KTouch to indicate whitch finger to move and where to press, you shold check this option</string>
+                    <string>If you want KTouch to indicate which finger to move and where to press, you should check this option</string>
                 </property>
             </widget>
         </widget>
@@ -283,7 +283,7 @@
                 </property>
                 <property>
                     <name>whatsThis</name>
-                    <string>Here you can change the keyboard layout. If you are from Germay you want to shose de.</string>
+                    <string>Here you can change the keyboard layout. If you are from Germany you want to choose 'de'.</string>
                 </property>
             </widget>
         </widget>
