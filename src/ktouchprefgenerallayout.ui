@@ -188,7 +188,7 @@
                         <string>If you want to override the font of the training lecture check this box and set your own font.</string>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>Most lectures suggest a font to use. This is necessary for not so common languages where characters may be displayed in a strange way and distort the sliding line. If you check this button you can choose your own font an override the lecture font.</string>
+                        <string>Most lectures suggest a font to use. This is necessary for not so common languages where characters may be displayed in a strange way and distort the sliding line. If you check this button you can choose your own font and override the lecture font.</string>
                     </property>
                 </widget>
                 <spacer row="3" column="1">
