@@ -1,460 +1,863 @@
 #############################################################
-# Trainingfile genereated Tue Apr 17 19:20:52 2001
+# Rrainingfile genereated Mon Oct  1 07:43:01 2001
 # Program written by Håvard Frøiland
 #############################################################
 
 # Level 1
 jf
-ff jf jj jj ff j jf jj j fj jf fj jf fj ff
-ff fj jj f fj f j f jj f jf f f ff j fj ff
-fj j fj fj jf ff j jj fj jj jf ff j jf jj
-ff f ff fj f j fj ff jf f f jf f j ff ff ff
-j fj jf jj fj jj fj f jf ff ff jj j jj fj
-jf jj f jf ff jj j j ff jf jj ff fj fj ff
-jf ff jf jj jj ff jf j ff ff f ff fj jf fj
-j jj j jf j j j fj jf j ff f f jf jj ff ff
-jj jf jj jf j j fj j f jj f jj f jj f ff f
-fj j j jj jj fj ff fj jj f f fj f f j jf jj
-fj jj f f ff j ff f ff f ff f f ff fj j f
-jf ff jj jf fj fj jf jj f fj jj j ff fj ff
-jj fj f jj jj ff ff jj ff jj ff ff jj jf f
-jj ff f fj j fj j jj j j j f fj j fj fj ff
-j fj jj f jf fj ff jf jf ff jf f jf fj jj
-j jj jf jf j jj j fj f jf jj jj fj jf j fj
-fj jj j jj j ff jj fj j fj f j ff jj f f jf
-fj fj fj j jj j j j ff f jj j j jf ff ff jj
-jj f jj jf jj ff ff ff j jj fj j ff ff ff
-jf fj f j ff jf jf ff jf j j jj jj f fj jf
-ff jj j j jf f f jf j ff ff fj ff jj jf jf
-jf fj fj j f f f fj jf j j f jf ff fj j fj
-jj jf f ff fj fj j fj jf jj jf j j jj fj ff
-jf ff f jf f jj jj j f ff jj f jf ff jj j
-jf ff f f jf j fj jj f f f jf jj jj jf f fj
-fj fj fj jf j ff jf j fj fj fj fj j jj f f
-ff j jf j jj j jf ff jf jj fj f j jj fj ff
-j j j fj f jj jj jj j jf j jf j jf fj f fj
-f jf jf j jj j fj fj ff jj jj jj j fj f fj
-ff fj fj fj jf jf jj jj jj f f f jj j fj jj
+f f f f f j f f j f f f f f f f f f j f j
+j j f j f j j f j f f f j f f f f j f f f
+f f j f f f j f f j j f f f j j f j j f f
+f j f f f f f f j f f f f j f f f f j f f
+f j j f f f f f f f f f f f f f f j f f j
+f f f f j f j f j j j f f j f j j f f f f
+f f f f j j f j j f j f j f j f j f j j f
+f f f f f j j f j j j f f f f j j f j f j
+f j f j j f f j j f f f f f f f f j f f j
+f f f f f j f f f f f f f f f f f j f f j
+f j f j f j j j j f j f f f j f f j f f f
+f f f f j f f f j f f f j f j f j f f f f
+f j f f f j f j f f f j f j j f f j j f f
+f f j f j j j f j f j j f f f f f j f f f
+f f f j f f j f f f f f j j f f f f f j j
+f f j f f f f j j f j j f j f f f f f f f
+f f f j j j j f f j j j f f f j f f f j f
+f f j f f f f j j f f f f f j f j f f j j
+f f j f f f j f f j j f j f f j j j f f f
+f j f f f f f j f f j f f f f j f j j f j
+f j f j f f f f f j j f f f j j j f j f f
+f j f j f j f f j f j f f j f j f f f f f
+f j f j f f f f f f f f f f j j j f j f f
+f j j j j f f j f f f f j f j j f f f f j
+f f f f f f j f f f f f f f f f f f f j f
+f f f f f j f f j f f f f f f f f f j f j
+f f f f j f f j f f f f j f j f j f f f f
+f f f j j f f j j f f f f f f f f f f f f
+j f f f f f j f f f f j f f j f f f f j f
+f f f j f f j f j f f f f j f f j j f j f
 
 # Level 2
 kd
-dk d d k k dk dd k kd kk dd dk k dd k d dk
-kk kk dd k kd kk dd dk kk dd k dd dk dd kd
-dk dd kk kk dk dk dd dd k dd dk dk kk kk kk
-k dk kd k kk dd dd dk kd dk dk dk dk d dk
-d kk dk kk dk d kd dk d kk kd dk kd d kd k
-kd d kk dk kk dk kd kd dd d d dk dk k k dk
-dd kk kd kd dd dd dd dd kk kd dk k kd dd kd
-dd dd k kd kk kk dd k kk dd k kd dk dk dk
-k kd kd dk dd k dk dd d kd k dk dk kk dk d
-dk dk k d kd d dd dk kk dd dd k kd kd kk dk
-dd d k dd kd dd kk kd k dd d dd dk kk dd k
-k k k dk k d k dd d d d kd dk dd d dk d kd
-kd kd k k dd dk k d kd kk kk kd dd d dk k
-dk kk k dd dk kd d kk kk kk kk dd k kk k kk
-k dk d d d k d dk d dd dd d dd kd k dk k dk
-kd kk dd dk dk kk k k dk dk d dd kd k dk kd
-k kk dk kd k kk k k kk k kk d dd dd dk k kk
-dk dd k k d dk dd dk dk kk dd kk kd kd d d
-d kd k kk kk dk kd d k kd dd d d k kk dk d
-dd dd d kd kk kk d dk kk kk dd d kk dd d k
-k kk d kk k k dd kk d dd dd kd kk kd kd dk
-k dk d d kd d dk d dd dk k kk dk k dd kk d
-d dk kd k kd d k kd d dk d kd d kk kk kk dd
-dd d d dk k dd d kd dk dk kk dk kd kk dk dd
-k kk kd kd d kk kd kk dd dd kk kk dk dk dk
-dk dk kk d kk dk d d k kk dd kk k kk k d dd
-d kd k k k dk dd k dk kk dd d k dk dk dd k
-kk dk kk kk kk d dk dk kk kk k d dd k k kd
-kd kd dk d k dd dk d kk kk kd kd kd k dk d
-dd kd dd kk kd kd k k k dk k d kk kd kd k
+d d d d dd k k d d d dd k d k d d k k d dd
+d d d d dd k dd dd d dd dd dd d dd dd dd k
+d d dd d dd k k k k dd d d dd dd k d d k d
+dd d dd d d k d d k dd d d d d d k d k d dd
+d dd dd dd dd dd d dd d d dd d k k d dd d
+k d d d d d dd k d d dd d k dd d k k d d k
+k d k dd d k d dd d d d k d d d k k dd d d
+d d d d d k k dd dd dd k k d d d k dd dd k
+d dd dd dd d d dd d d dd k d d dd d d d d
+dd d d dd k dd d dd d k dd d d dd d d k d
+k k d k d dd dd k dd d dd d d dd d d k d d
+dd dd d k dd k dd k k dd d dd k dd d d d d
+d dd dd d dd d dd k d d d d k d d d dd d k
+k dd d k d d d d d d d d d d d dd d d dd dd
+dd d d d dd d k dd d dd k k dd k d d dd d
+d d dd k d d d dd d d d d d dd d d d d k dd
+d dd dd k k k d dd k d d dd d d k k k k d
+dd d k d d k k k dd dd d k dd d k k dd d dd
+k dd dd d k d d d dd dd d d dd d dd d d d
+k d d d k dd d dd d k k d k d d k d dd k dd
+d k dd d dd k d k k dd dd d d d d k dd k k
+d d d k dd k dd d d dd d dd d k k k d d d
+d dd dd dd d d dd k dd dd d d dd k k k d d
+d dd d d dd d k k k d d dd d d dd d d dd d
+d d dd dd k d k d dd d k d k d d d d d k dd
+d k d dd k d k dd d k dd d d dd d dd d dd
+d d d k d dd d dd dd k d d k d d k d dd dd
+dd k d d k d d k d d dd d d d d d dd d d k
+d dd k k d dd dd dd dd k dd k d dd dd dd d
+d d dd dd d d d dd k d k dd k d d d k dd k
 
 # Level 3
 ls
-ss l s s l ss s ll sl ll s l ss ll l ss s
-ss sl ll ls ll ss ll ls s ss l ll s ls sl
-ls sl ll ls sl l s s ll ls s sl s ls sl ls
-ls l l ll ss ss sl s s ls ls ss ll ll ls l
-ls l sl ss l ss l ll s ls ls sl ll ss ss l
-l l ss ss l ls s s ll sl l ls ls ls sl ss
-sl s ll ll l ss ls ls ls ss ss l ss ss s ss
-ss l ll ss sl l s s sl s ll l ll ls ss s sl
-ll ss sl sl ls l ss ls ss l s ll s s ll ls
-l ll ss l ss s sl l ss ll ss s sl l ll s l
-ls ss sl ls ss ss ls ss s s s ls ss sl ls
-sl sl ls sl ll l sl sl ll sl ss s ll ll ls
-ll s s ls sl s s l l ls s ls ll l l l ll sl
-sl s s sl ss ss s ls ll ls l ls ss ss sl s
-s s ls ls s sl ss sl ss sl sl ss ll ls sl
-s sl ll ss sl sl l ss s sl l ll sl ss ls ll
-l ll s sl l ll ls sl ll l s ll ss sl s s s
-l l ll sl s ll ss ll ll ll s sl l l ll ss
-s ls ss l ss ls ss ss sl ll ss l l l s l s
-l sl ls ll sl s ls s sl l ls sl ss s ss s
-s l l sl l l l ll ss s ll l sl ll ls sl ls
-ss s l l ll ls ll ll ll ls ll l ls ss ls sl
-l ss sl l l ls l s l s ss ss ll ls ls sl ll
-ls ll sl ll ls ls sl ss l ll s l l ll l ss
-s s l sl s ls ll sl s sl s ll l ll sl ls ls
-l l ss ls ll ll sl ls ss sl ls ll sl ls l
-ll ls sl l ll ls sl l l ll ll l sl s ls l
-ls sl ss ss s ll ls sl ll ss l ls sl ls ls
-s ss l s ll ls ss ll sl sl sl sl s ss ss s
-ls sl l s ll ss sl ls sl sl sl ss l l ls s
+l l s l l l l s s l s s l s s s l l l ls l
+s l ls s l l l s ls s s l ls l l l s ls ls
+s l l s s ls ls ls s s s s l s s s s s ls
+ls s l s s l ls l s l l l s l ls ls ls s ls
+s ls s l s l s l s l ls l s l s l s ls ls
+ls l ls ls ls s l s s ls l l l l l l s ls
+ls s s s l l s s ls s l s l ls l l ls ls s
+ls s ls s l l s l s l l s s l s l s l l ls
+s s ls ls s ls l s ls ls s s s s l s s s s
+ls s l s l ls ls l l s s l s l l l s l l ls
+s l s ls l s l ls ls s s ls l s l ls l l l
+l s s s s s l ls l l l l s l ls s s l l l
+l s l l ls l l ls s l ls s s l s l l l l l
+ls ls l s l l s s l l l l ls ls ls s ls ls
+l s l s s s l s s ls s s ls l s l ls s l s
+ls l s l l s s l s s l ls ls ls s s l s l
+s s s l s l l s s s s l s s s l s ls s l s
+s s s l l l s l s s s l l l s l s ls ls ls
+l s s s s s l s l s l s ls s s s ls ls l l
+s l s ls s ls s l ls l l l l l l s ls l ls
+ls s ls s s s ls l l ls l s s s l l l l ls
+s s l l s s s ls ls l s s l l s ls s ls ls
+ls l ls s s l l ls l l s l s l l ls ls s l
+s l s l s l l l l ls l s ls l l l l s l s
+ls s l ls ls l l s l s ls ls s l ls s s l
+s l l ls l ls l l ls l s l ls l s l l s s
+l ls s s s l l ls l s s l l s l s l s l s
+s ls ls l ls l ls s l l l l l s ls ls s ls
+ls s s l s s s ls s l s l l s l l s ls l l
+s s s s s s l s s s l l l ls s l l ls s ls
 
 # Level 4
 ai
-ails aid ill ii ails aid aid aid i i a all
-a a aid if add ill ill if aid is ai a ai all
-a ia if aid as all ails ai a ails is add aid
-if ii add ill ai add i as i ii ai aid is ails
-is is ii add all add ails ai ii all ai ask
-all ai ii aa all a ill ia ill if if ai aid
-aid aid is ails ii is is ails ails ia is aid
-ai a as a ia ill if ill all all aa all aa
-ii ails is i ii ai ill as a add ia is ia ai
-as ill a ill ask i ia ask ails ask ia add
-ai i aid i a is a all all ai a aa aa a aid
-ai all all aid ask ails add i if ii aa ia
-ill if ii as as ia ii is ia aa all i is a
-i as aa as ill ill ask ails as ia ails ai
-ails if ask aa as a all ia is ask ii ails
-ill aid ia aa add a aa ii as ia ia ia aid
-all ia ill as ai ask i i ia ails all aa is
-as as ii ia i all all aa is aa ails as add
-as ails ask a ask ai ia i aa ill aid ails
-ai if ails a is is is ask aa a aid is if ask
-ask is ask ill ia ill add all ill a a ask
-i aa i ill aa ia ails aa aa is as i ii a i
-is all aid ii ii ii i if add ii aa ia all
-ails aa ai i ia aa ai ai ii ii ill ill ails
-ai ii ii ia ia aa i all add ia a ii as add
-ask i ask ai i all aid as i ask aa ia as ill
-aid ai ill all ask all as all as is add ai
-i add ask all i ia if add add aid ia i ill
-aa add add ai ii as is ask ia add aa i ii
-as all ails ai i a if add all aid ask ii a
+ill aids ilks aids add alfalfa assail ads
+alls alfalfas adds ad id ails ask ail ii ask
+assail iii assails ails assail ills alkalis
+ilk ii alfalfas ilk iii assail ilks id aids
+ads ifs iii if ilks ask i ill ill ii aid alls
+alkalis ids if ill ad ilks aid ills assails
+i ii alfalfas alias alas ill alkali iii adds
+adj ass ass ills if ails id add aid aids ads
+aids ilk ii if adds alkali add ads ass i id
+a adj i ass alfalfa ail alkali ill ad alfalfa
+ilk i alkalis aids alfalfa ilks ails ii ads
+aid ails ilks ids a ads ii add alias is all
+as ii aids if ii ids alkali alfalfas a asks
+ails ill alls adds a alkalis ill ilks ass
+alfalfa if alls alls alkalis alls aid alias
+ad adj id ill ifs ifs a ids alas aids ii iii
+aids ass ask a alls alias i adds ilk alfalfa
+ids all as ifs if ails ii ail ills aid asks
+alias alkalis id all ills assail ass ifs alfalfa
+ail a alfalfa ilks a alkalis ails ad aid add
+a ilks aids id add asks a ads add alls ills
+a asks ids if ad ask ilks i asks alls adds
+asks alkalis ads ills ail aid alfalfas alls
+adds alias assails if as alias alias as ilk
+is alfalfa is add assails asks ill ills as
+all ilks ilks id ads alas alfalfas alias ill
+ifs adj ask ii ails aid alfalfas a ilk ails
+alias ids adj if ads ail ill if add ilks ass
+ask is ails add all all ilks add adj all alkali
+ids assails ilks ifs a ills ilk ill alkali
 
 # Level 5
 en
-end nine ekal else ekal ee ne ease ellen nails
-n ee nn ease e ee ellen end needless ekal
-nailed ne needless end need ends nails ellen
-needless need n needless needs ease need else
-else ee ellen ne else need ends nailed ellen
-nn ee end nn ne ekal ee nails nn ee ends e
-need nailed needs else n nine ease nailed
-needs ellen else end need nn nine nine needs
-else ne end needless ee ekal n en n nailed
-ends nails ease ee ends ease end en nailed
-nine end needless ease n need ends en ekal
-en nn else nn ellen nine ne needs end needs
-ekal en nine e end n need ends nailed need
-need nailed needs else needless ne ee nailed
-else ease ekal ee needs nailed ellen ee nine
-nine nailed needs ends nn needless en need
-needless needs nine ease needs needs ellen
-nine ellen ne need nine ease end e nn ekal
-end end ekal n nn need nn ee e needs n nine
-ekal ne else else ekal ellen nails need end
-ellen n ee en ee else ne need nailed n else
-end ends ne nn ellen ellen n nn ee else end
-en nn else ee en ne need ee ne en nails ease
-e else n nailed nine n n e n end end ease
-ellen ellen nailed nails e else nails needless
-needless ends ne n nine nn e ekal ease en
-e ee ee needless ee nailed ends e e need e
-nails ellen nn needless ellen else nine en
-ellen else n end nn else nine n ends need
-end need nails ee ekal e ends ekal nn nn else
+easels ended elan nailed needled elided e
+eked eases easinesses edified ed ed nines
+nine eels needs eel easel elf nakedness nils
+naiads ease eds ed ends e nines elans eases
+easiness elans edified needled nee es needled
+needinesses naked edifies needles endlessness
+ekes ended nails endlessness needs endlessnesses
+nannies nakednesses eased easiness needle
+eds end easel nines eke nails eel needinesses
+es elfins nines nakedness elf eddies n eased
+easels eels elided ends endlessness ekes needled
+elfin ease easiness else nails endlessness
+nee nasal es need nines nasals elides eases
+nasal nine naked elide ninja edifies needinesses
+ekes eels needs ninja ninja else elf eases
+elans nasals ekes needless needled elans nee
+nils easiness ended ekes eel nines n easel
+nails ninja e e nailed needinesses edifies
+ekes nail naiad ease end ninnies nannies ease
+nine ends needinesses elks elk nine needled
+ekes naiads neediness ekes ns eddies nakednesses
+end else nil eased nail nil nannies nil needed
+needless ekes need elk nailed nakednesses
+naiad needs ends n naiads e nail e nines elfin
+easel easiness ell naiad needles ns elfins
+eddied elk easinesses ed easels ekes eel ells
+endlessnesses eked eel edified eds eke ekes
+ea eels needles elide elided naiad elide eased
+needed eels endlessness easel eel edifies
+naked nil nil e e eel ekes elides eels nils
 
 # Level 6
 vu
-vessels unless vivid vessel vile uneasiness
-unaided us v v u vv usual u undefined useless
-unlike used vv vein usual uses veins vessels
-uu vivid vessel undefined useless veins uu
-vain value usual uv usual u v veins usual
-usual vv vile useless useless vessel u us
-undefined useless uses uv unless us v vein
-vivid unused unusual vein usual unused unused
-vessel usual vu u vv vain unlike valid uneasiness
-veil unlike uu unlike usual value unlike uu
-undefined u unusual vu v vile vessel use vile
-vv valid us vv valid veil valid vivid us u
-uu unlike vessel use vain veins vv unaided
-unusual unused uu unused vivid value unusual
-used uses vain undefined vile unless vain
-unlike used vessels vu v vein unless v useful
-vein useful vein valid u unaided v undefined
-value u vain value us vivid v usual unusual
-vein uv vain valid valid unaided unused vein
-u u v uv used vessels vessel vivid uu useless
-use vu valid u vile uneasiness vein usual
-vessel value vv u u vivid vain unlike useful
-use vv unusual valid useless valid vessel
-unaided unused useful uneasiness vivid us
-uv undefined uv undefined unless u vessels
-valid uu unusual used uneasiness vile uv vile
-unless vessel value usual usual u us veil
-vessel vessel uneasiness vessel unlike unlike
-vile vein vessel vessel veil vessels undefined
-unused uses useful uv usual veil use us used
+usefulness vie undies villeins vanilla unsafe
+undefended vised veld valve vane validness
+visas uneasiness unseens useful veils unleaded
+valve vilified vivified vises vandal undefined
+vulvas unfulfilled vend unkindness vein valise
+vi u vassals unevenness villain villa unskilled
+undivided villainies vivifies valises vileness
+unkindnesses veld vassal veined ukulele validness
+vales uneasinesses vane unaided unveils usuals
+unless unless valve villains undies unveils
+valise unevenness unveils unusual unevennesses
+unkindnesses velds unseals unveils undies
+unsaddles vivifies v used vandal uneasinesses
+uneasiness vanes ulnas unadvised venues vi
+visaed venal uvula veiled vanilla uselessnesses
+veiled visaed vilenesses vandals unified viands
+vanes unused villain usuals uneasinesses vales
+unfilled unasked validness unskilled unevenness
+validnesses ukuleles undivided vivified vaudeville
+vases vessel uneven usefulnesses veld villain
+van venal vials usuals unfilled visuals vi
+uvulas use useless unseens unveils vised vessels
+vended uneven uneasinesses veils use unadvised
+vividness useful vases uneasinesses valueless
+ukulele v unsaddles velds vine unevenness
+uselessnesses unsaddle vile us unadvised via
+unsaddles vivified unkindnesses uneven vines
+vended vaudevilles vulvas villas veins vividnesses
+vandal vulva unveils viva valise us villeins
+villa vies vanes vaudevilles vend unkindness
 
 # Level 7
 ir
-readiness render ridden refuse rain revivified
-india rain render real rule injuries ir revenue
-ruins rudeness individual risen ruffian resided
-ia ii revival reader revives refused rude
-rare injured injure refused rise rural riddles
-rudeness refusal injure ill individual resided
-inner readiness refuse individuals rises release
-inside revealed ran raise rise risen reveal
-readiness if reared ruins r risen invaded
-run reserve ruse revenues indian reader india
-inner ri reserve if individuals ruse ill ruse
-rise ride raise ruined runs ride idle rises
-injured real inside ruled relief reserve rudeness
-in idea revenue ruined riddles red refused
-ri risen ruffian r revivified riddles revenue
-ruffian revives rend ridden indeed rural ruins
-rule ruse ride indeed idea indeed released
-refer is injured rude run idleness relieve
-individuals rid revives ridden revives ride
-ran release rudeness r inn risk refused raven
-red refrain readers refrain ruse revives read
-reserved idleness ruined reared realised rain
-reserved readiness idea inside ruffian real
-real release reside idleness raises rank red
-idea resided rude rises ridden idleness rises
-revival rivals red ii riddles rendered ill
-riddle india if read reveal reserve render
-render released red rise rise rare ran ruled
-injure reader ruffian idle rules red revives
-revivified resided ii rudeness individuals
+reins radials rifer inn ruler riff inks reined
+revue reissues insulins rearer revised rune
+redefined rifles rended inaner reused reverse
+reused ins reared insides illus raises resides
+rise resend railleries relearned reissues
+raffled rinses inaner readier rankled reeded
+ruler refills insane raves insurers risen
+i issue r revivifies riskinesses riddles is
+rink rue refine rain rusks in irk reveres
+riders inn refined refines reruns rinks refund
+raided idlers refused reverse rueful rankle
+radial readiness refund reveille reindeer
+ruff reran infrared idle raffles realer reveal
+referenda reassures infuses revelries re renders
+relived ruddinesses risen rifle riffs isles
+runnels reek reuse ruffle inanes raids rakes
+refused ruled riversides rills infrared reeded
+iv ruse refills raids invalid resides ilk
+ruined refusal runner refueled ruddier ruin
+islands rival infidel refiled riddle readers
+idles refs riven res raffia resale refiner
+rusks reliefs rare runners inners rednesses
+relied ill r relive rarenesses ind reeds reddens
+islanded reared refine infrared idler ruined
+reeded rearer ruin rills raider residue reissued
+risers reassure rides rendered riskier rise
+infrared rendered riders redress insides ideas
+ravel idlenesses riverside issue ii invade
+ruffles refineries reveres issue rile rekindles
+irks idlers riskier relearn inverses i redder
 
 # Level 8
 oc
-officer curse confined conscience considered
-oceans once colour concerned one occurrence
-officer cocked conjure close convince closer
-occasion circle civil coolness cadences cooler
-clue cold ceased clear cuirassiers carcass
-offensive offices cloud oceans credulous confused
-our ceded career caused carries occasional
-concurrence candles conceive can career cursed
-officer cool ocular offer corridor cross conceal
-carcass clearness confer clues candles clearness
-crinkles coffins can conclusive convince confound
-cos consider candour offended censured confused
-call consider cover convinced coloured coffee
-confer occurrences confide credulous occasional
-cask conceal coffin conjuror cooler candour
-clouds close conceived carved consider convenience
-cared corner cold co coolness conclude concussion
-one concession cooler ordered candour odd
-cold odds conceived can concession confide
-confounded confound could case credulous crave
-conceive close conclusive closer occur consider
-coffee confession colours once oak cried older
-conclusive occasions coincidence occasion
-confide close offence ordeal concurrence conceived
-clean curse o off oak cover off clock convince
-colour curdles curses oak condole colours
-coffin cause crossed cleared colour curdle
-cocked cried ordeal course cousin condole
-concussion converse colours officers confusion
-offended orders consciousness coincidence
+oleos occasioned calculi canals oarlocks called
+cravens censused coalescence conferences carrion
+cocoon confrere clearness closured corridors
+curried cleave oracle colorless conjures circuses
+circled convinces carousals carnivore clunked
+conic confluences coriander offs condone offload
+cerises carcase c cu cannons censused crisscrossed
+colossi carsick corks cello clocked clerical
+carousel cocksure cellars circles crisscrossed
+careered one cackled oafs consensus caked
+consul civilians carrier ordinances clod cruise
+console cocksure cavils ordinal cirri carillonned
+curlinesses oodles cessions cafes caucus cleanlinesses
+cancans coolness coved collieries canards
+crinolines cuff crude craned coiffured classed
+cavern concluded calcified overloads census
+cassocks canvassers creeds carnelian ode cancer
+cadaver overcook corn crullers councilors
+ovens odds codices cricked corollaries cleanse
+on confide coned coddle coerces careful offers
+cairns curds cardinal cuff colonnade oaken
+convalesced connivance coalesce ordinarier
+cockerels codeines override casino coroner
+coal canoe corneas odder can collude cruises
+concord concludes offensivenesses cranial
+cardinal credence colleens overruns official
+cloaked cans collision ounce closured offline
+cavaliers cavil concludes condo clods oilier
+colics cavaliers connoisseur crocodile carousel
+cruds officials counseled caller crusade color
 
 # Level 9
 pq
-prepare process pardon principals proposed
-please proceeds provokes peals poorer passed
-purposes procession pinks produced poisoned
-persuade period princes proof perceive proud
-paler praise proffer preferred plead possessed
-previous pace pursue providence pervaded proof
-proposals pale quivered prisoner plainer pollard
-quick procession quarrelled prejudices pleases
-proud paved plea preceded popular provide
-pp pp profound peculiar people plea persons
-quarrelled produced pursued peal presses plea
-persevered procure people pardon propped placed
-q q place pinned procured pleases period pulled
-preference pronounce preceded persevered placed
-proposals peace prepared purposes passed places
-pride paid preface proposed plain pinks quid
-pop pen pallid pq proffer places quarrelled
-proffer proper praised persons principal poor
-perversion perusal peep pink passionless pounds
-precarious propulsive pace persuaded pain
-panes pervaded pinions piled popular pursued
-press pride plucked plucked poisoned quivered
-prepared plainer piece places poison previous
-presses pupil paved prove propose pause person
-papers pen prejudicial quack purpose precise
-pale propped populace procession pinned price
-principal prejudicial quarrelled period profusion
-possesses proud paved purse pen precious paler
-pass proceed proffer prefer proceeds propped
-professional pronounced quarrelled prefer
+pollen paves pinafores proofreader quarks
+poplar panics proved poison parlor quads pavilioned
+precede processioned provoke quid piffles
+prepare prerecords pickle packers pennon proceeds
+pipsqueak panned plundered prose popcorns
+purer papooses quaver pluckinesses prevailed
+popular plenaries paddle parson porcupines
+precised plodded percales pined pliers pus
+pardoned pinker qualifier propellers pulped
+pilfers quelled peculiars panes poseur press
+please please parvenu plucks pupils pep proffer
+papillae paid profiles pipers predeceases
+provenders predecessor parodies proceed peppercorns
+placarded pained possession peps procedures
+parried poppas pains pa pandas quinine penal
+pucks peacefulness pleader prolific pipelines
+quadrennial pored quadrilles polo pallid porous
+pee puckered poodles prejudice perks parlances
+plied piccolo pickerels plainness penis pals
+porno placed pain pod passels pies pluckier
+pilafs preserves park propose pounced prairies
+persuasivenesses pandered plucked poplar pol
+quails paved parlors puppies pierces peril
+parolees professorial previous prepaid pullovers
+persons prided procedures plans panniers prudence
+parred qualifier pulsed pelvises proffered
+pepsin pussier polios profounds peeved pioneered
+pounded preferred paean peps pined principals
+plodders perceives pickerels prop painkiller
+popcorns panders paves perennial peels puffs
 
 # Level 10
 wm
-mimic windows model mellifluous wise widow
-mellow marries masquerade missile mellifluous
-were macdonald wounds woven works walk mill
-wise m mark was murmur moreover mine mode
-wandered won macdonald warn women weal window
-welfare weak will mankind weapon wooden weeds
-miss monks mourned medical mankind war mimic
-wall murderous wink mellow mass wink war wore
-weariness weal marries mermaid mourned win
-wisdom maidens mw mind we ww made murdered
-moral mourn middle wreak weeps weeps wade
-minds windows man miss waves weeds widow murder
-mine meed worked man weak wade wider me wooded
-wander mimic war marked morven wink wakes
-waved wander made mound man worded model warm
-waive wilderness walks menial missed moreover
-miles waved w mm marred men wounded meadow
-walked we murderous mellow wilderness walks
-weakness moon man waved wounded macdonald
-marks mound marries maids menial musical marmaduke
-warm meadow wakes wine wonders ward maids
-wooded me mourn we w melodious were murmurs
-won wink was won miseries man woman warm wall
-mound mourn meaner missed wrapped waved wakes
-moreover warm music man walked murmurs mournful
-wink mw mid murmurs wore minor mm mournful
-mad mode masquerade warmer weariness waves
-wonderful wonder was mourn medium miser makes
-millions mound mournful wounded mourn macdonald
-meadow melodious modern wan main measure would
+widowers medicals moved meanness wooer madnesses
+messier welcomes masqueraded miscues medic
+wildlife willies welder woodener meddlesome
+mown messiness moires muesli major mannered
+milkiness wails would waled moon meddlers
+muskiness waived waffled midair macaroons
+mercurial mapper mewls workaround meander
+moleskin misled misreads melded moaned wampums
+mop word morn woos moroccos maker microfilm
+waviness macro mucks winsome wearisome moldered
+manual millisecond medicine mu wanderer midwiferies
+weeds m misspell windmilled merman mewses
+weeklies wafer misled mainframe mainlines
+wows molasseses misplace weird manual miffs
+welled mallows mimed miscarries macrames medicined
+woodennesses means mavericks mid wiles mallow
+minions marked willful mimosas midland misreads
+mammalian widen mournfulnesses mannas woodennesses
+weeper millennia waned workaround milliners
+mandolin melodic mused woodener millisecond
+mallow monsieur maples weaponless missile
+mamas miscued wand mules windowsill wines
+worsen masoned municipal moonscapes mums wider
+miracles marvelous mimicries war madders muskmelon
+wakefulnesses wedlocks windowsill maddened
+messier woodland manner womanlinesses million
+milkinesses waver morns medicinal massed weeders
+musician mannequins microscopes maraud mopes
+maniac modifier workfare maw microfloppieses
+mil moored muskinesses model moroseness mil
 
 # Level 11
 bp
-proceeded proposed palaver brink pardon pin
-periodical proper binds personifier perpendicular
-pop plank brass praised bane plucked plank
-poured beam pork pass prefer peals beneficial
-profound pronounce person blooded personifier
-perceive preserved bosom preferred barbarous
-produces book persuaded bloomed pleased blew
-brink presume park bewilder propulsive prepared
-preface piled binds purpose propped poll providence
-persuaded princes pallid place pronounce peep
-pinions burn broad blame profound bumps brows
-babes bid pleases bank plied public people
-braved bespoken principle people blown piled
-perusal pb procured peaceable place please
-bed palpable power barbarous piece preserved
-peculiar born principle beloved powers brows
-bless basked provided power produce basked
-broken board performed break purpose blade
-pike blades brood blown bar plain poured pleases
-public blackened produced bedside principals
-places precedes principals pencil praised
-pure prejudice blue presses pinned performed
-pike prejudices principals parcel passed perseverance
-beds please paper perfume bowels professed
-presses broken beds bind border brick be bless
-bravado precedes bars base peep praised possessed
-paved bland poor proper prisoner plainer pound
-predecessors placed possession back passed
-persuaded breed pervaded borne boundless boards
-praise blame pink pursue pride parlour bereaved
+pinprick priories bomber pavilioned bouillon
+plum balded brasses bonfires procedural bulimias
+believed powders babier blackbirds prospered
+bloods pervades picnic brackens bosom polemics
+proboscises blubbers barracks bumbled bebop
+precursor bides boob bulkiness proclaimed
+pursuances biweeklies pendulum preclude bicuspid
+pickup brinies plump possessions performances
+bur poisoner perspires passives polios poll
+processor bade buns pensioners presumable
+bookmakers plained bivouacs picas parsimonies
+p beavered perkiness peons binned previous
+preciousnesses bossier pruderies pueblos primped
+banker palindromes bloods billows bars plodder
+bails p praise pruriences bradded possums
+busied pocks process presidencies busier buses
+prouder brawninesses bible premised bobsled
+panels brad pours packers brainier persimmons
+pulls pelican piracies penicillin prawned
+pawns bilious pubic parable pliers plea probes
+perceived porks penal brocades plop populace
+pampas brr bromine porous purposeful blindfolded
+biffs propels proofs pussies baobab peek blessednesses
+beneficed precociousnesses predeceases blend
+bounded paralleled blackmailers burred balminess
+blower pursed performances pillow parodies
+burials plumb browsers bellicose pubic bud
+pope prof brawler purblind promise palefaces
+bloodsucker bar burnoose break professes backer
+bred peeks blackmailer previewed predispose
 
 # Level 12
 ty
-tearful told tear terrified yards trespass
-tartly trust torrent tom tenderness tar torn
-yourself toy tons till yankee times too taken
-tormented tray talked terrified t tall tale
-tearful traced truly tub title tackle torture
-yonder tossed tresses truest terrors tub tall
-taps took yard tap transcends tools traced
-temporarily tries taps traces tumble yankee
-toy turmoil y tearful trembled tired terribly
-taps trousers taste trodden yarns yours trammels
-tended tormented tray tormented tomb ties
-trips taste trees tom toe tell travelled trifled
-tapped trust tomb taper trod total treat territory
-yourself toy tower took tainted tenor tokens
-transparent transcribe twist tar travelled
-toy temporary transcribe turn tilt taken terrible
-triple terrific tackle tin tremble tenderest
-tumble terrified ten tons tottered trespassers
-timid tone tackle tearful track tremendous
-tackle tuck tap timidly tones yankee tossed
-track twenty trellis tartly tremble table
-trusts tub toy turmoil terribly tumult tired
-till ten twins trustee too yarns traveller
-train tries total tends tearful tottered tortured
-trouble twist tremble twisted task tremulous
-tortured taper terrified transparent tresses
-torture trodden toe trumpet trodden yield
-title torn trust tower trifle truest tender
-two told terms temporarily tops taller transcendent
-toe transaction tap taunts twinkle trespassers
+trolled tame token turncoat tripe tipsiest
+tarpaulins yummier tabs televised tundras
+truckle teacup twinned testament turnpike
+tenders tabbed trimaran tetanus truculent
+tenseness tenderloin tarantulas trickinesses
+tusks treaty temblors transfers towels tannins
+turbojets travailed tote timpanists tallow
+treasured tonnes tuft tricked tawdriest turban
+tomes trammel tourists trusty towers temperance
+taro yardarm transfer twinks transplant yardstick
+taint yens trundle tenders trainers telemetries
+tonal transliterations tenet tow yardstick
+transfused typists traipsed transcended twisted
+tandems typescript tuckers tinkered tarantulas
+taros tonalities yips transformed yearns transcribed
+truffles tenuousnesses truckles tipsier typesetter
+timorously toasters tillered tablespoonfuls
+tails tumid tussled turnpike turbine trounce
+tapestry tendentiously tearier tremors yep
+teem tactless tickets torpid transpire tripos
+task transposes truncated trespasses twittered
+ter terraces tallow toupees yourselves turd
+yawn turpentined tranquilly terrors timbre
+tartest tidies treated truncate tannins truncates
+triter tamers trustee tolerably tympanum truism
+trefoils tuna tar tonsillitis transferred
+tumult trickle troublesome tapes tors yesteryear
+tans tom tamponed transcriptions terraria
+trespasser tampons telltales tortoises tautness
+tides temperature transplant tension tickles
 
 # Level 13
-zx
-zealously zx zip zealously zip xx x zip z
-zz x zeal x zx zz xx zeal zip zealously x
-x zz zip zip z zip zealous xz zip zz zx zealous
-zeal xz xx x z zip x xx xx xz zealously zealous
-zealous zx xx zeal zx xz z xx x zx zealously
-zz zx xx zeal xz zx zz zx zz zeal x zealously
-xz z zeal x zip zz zip zip xz xz xx xx zip
-z zip xx xz zx xz zeal zealous z x xz zealously
-zealous zealous zx zeal x z zz zz zx zealously
-zz zip zealous xx zz xz zx z xz xx zx z z
-zealous zealous zx zealously x xx zx zip zz
-z xz xx zz zealously zx x x x zealous z x
-zz zip xx zeal zx z zealously zealously zz
-x xx xz zz zz zealously zx zip zealously zip
-zx zx zealously zeal x x z xz xz z zealous
-xx zip zealous zx zeal z xx zip x zx x zealous
-zealous zealously zz zealously z xx zz z zeal
-zeal x x z xz zz zealous zip zip zealously
-zealously zip zealously x zeal x zip zeal
-zx zx zx zx zx z zip x zz xx zealous zip zealous
-zip x x zx zealously zealous z zealously zealous
-x zz zealous zip zealous zeal x zealous z
-xx zx xx zeal zealous zeal x zeal xx zip zeal
-xx zip zeal zip x zz zealously zeal zip xx
-zeal x zx zip z z x zz z xz z zealously z
-xz xx zx xx zealous x zealously zip zip zealously
-x zip zeal zealously zealous x zealously xx
-z zeal zeal zx xz xz xx zeal zealous x xz
-zealously zz zip xz zeal zealously xz z zz
-xz z xz xx zx zz zz zx zealous zx x z zz zx
-
+xz
+zirconiums xvii xiv zealot x xxxii x xxi xci
+xiv xci xxxiv xv zombies zinc zealous z zippiest
+zealous zests zebu xenons zebras zealousness
+zaps zany zenned xxviii xylems zoned zit zillion
+xxi xcvi z xxx xxxvi z xcvi zed zip xxix xylems
+xxx xxxiii zinnias xrefs xxxvii zealous xxiv
+xenon zested xylem zonal zippiest zircons
+xxxvi zestful xii zippy xxiii xxxv zombie
+zipper zenned xreffed zaninesses zombies xxxiii
+zest zeals xx zooms zips zillions xxiii zipped
+xreffed xterm zeal zany xcii zeros xx xi zeppelins
+zany zircon xxix xref xxvi zeta zapped zonal
+zit xcvii zealousness zippers xxxvi zealously
+zebus zippered zeppelins xxxv zooms zebra
+xxv xxii xxxi zinnia zippy zombie xxxv zaniest
+zestful zealots xref xci zero zoomed zodiac
+zoomed zippers xenons zoos zaps zebras x xxvi
+zestfully xciv zit zap x zincs zircon xrefs
+zodiac zippiest xcvii zanies xxx zinc xylems
+zaninesses zero xvii xciv zebus xcix zeds
+zinnias zonal xxxi zwiebacks zed zap zincs
+xvi xrefs xci zealous xreffed xvii zenned
+xcii zippier zone zeros zealous zebra zwieback
+xrefs zaninesses zodiacal zapped zone xxviii
+zeal zinnia xxxii zeppelin zip zeros zaniness
+xylem zirconiums zips zone zoom xix xxxix
+zonked zip xylems zincs xxxii xxv zinnia xrefs
+zebra zenned zips xenons zens zap xcvi zirconium
+xv zeppelins zeroed zeroes zinnias xxxvii
+zanier xxxii zippy x x zip zoom zillions zeppelin
 
 # Level 14
-Everything
-New educational and entertainment software for KDE
-September 21, 2001 (The INTERNET).
-The KDE Edutainment team is proud to announce
-the official launch of the KDE Edutainment Project.
-The project's ultimate aim is to create educational
-software based around KDE, the K Desktop Environment.
-By doing this, the team aims to address what
-we perceive to be one of Linux's shortcomings:
-that there is little software suitable for children,
-or of an educational nature.
-Eventually, the 'kdeedu' module will be released
-simultaneously with future releases of KDE.
-The KDE Edutainment web site, http://edu.kde.org/
-is the main place to obtain information about the
-project, and the software that it contains.
-The site contains information suitable for parents,
-developers (including programmers, artists, musicians), and teachers.
-You can join the public 'kde-edu' mailing list
-if you would like to contribute to the project in
-some way, or if you want to contact the developers.
-The 'kde-edu-news' mailing list is a read-only list
-where announcements and a regular newsletter,
-regarding the project, will be available.
+JF
+Freeman Frostbelt Flossie Jayson Jeanine Jami
+Frank January Jerome Freemasonries Fulton
+Faust Juno Fri Jezebels Franciscan Februaries
+Freda Jacques Josef Frederick Jubal Florence
+Fellini Faeroe Florence Faisalabad Formosa
+Jeroboam Janna Fowler Fitzpatrick Jim Fermat
+Fe Fernando Flora Jason Julian Jaxartes Joe
+Florida Fiat Fulton Jamal Folsom Fm Finley
+Jew Jamaican Fran F Formica Jeri Fellini Falkland
+Jayson Jun Fenian Jamar Jayson Falwell Freemason
+Falstaff Fredrick Flatt Jacobson Joyner Jami
+Jacky Jan Jackson Francoise Fannie Jody Fran
+Faeroe Jenifer Flores Jerusalem Jess Frieda
+Jerusalem Felecia Jefferey Fuji Francis Judas
+Faisal Fellini Judases Julio Jesse Jill Jillian
+Floridan Jake Jodi Japanese Jeffery Jane Fauntleroy
+Fran Faye Falwell Florida Justinian Juana
+Feynman Ferrell Jansen Jordans Jainism Jon
+Flora Jerome Fortaleza Frieda Juneau Jewel
+Fenian Jeep Ferraro Formica Justice Jeanie
+Flores Judas Fafnir Filofax Frito James Finland
+Jayapura Januaries Jones Fremont Julianne
+Julies Jezebels Jeanne Fr Jarrett Forrest
+Flo Fallopian Jake Falklands Finland Jermaine
+Flores Jarvis Formicas Jenner Jermaine Faustian
+Florence Fritz Fe Jodi Jeff Jaclyn Flintstones
+Jacklyn Jesuit Francesca Jerusalem Jeep Jo
+Fredrick Frieda Justinian Filipino Jayson
+Feynman Jeri Jed Formosa Januaries Frontenac
+Jason Frye Faustino Foucault Jain Frs Jarred
+
+# Level 15
+KD
+Doctor Knievel Dare Dunkirk Dix DD Karen Darin
+Kaunda Kelly Knox Dorsey Davidson Dvina Katowice
+Dennis Keillor Kwanzaa Karyn Deccan Katelyn
+Kasai Dusty Kilimanjaro Damien Kodaly Knopf
+Danial Kaye Kuwaiti Karyn Danelaw Douay Dolbies
+Dipper Drew Karla Duane Keats Kalamazoo Kasey
+Doric Kikuyu Dalton Derek Kris Kempis Dario
+Dwayne Derrida Dewey Darren Keven Deena Damon
+Kenmore Karloff Duse Dalton Kauai Delta Ks
+Dusty Don Kilimanjaro Daryl Dunkirk Katelyn
+Derby Kentucky Kazan Dakota Katowice Dodoma
+Dolby Derby Dilberts Darryl Dylan Denmark
+Kolyma Davis Kaunda Dexedrine Kelli Kory Kansan
+Dolores Dyer Dexter Kuznetsk Kiowa Durante
+Ken Dona Dec Kris Dvina Krista Deanna Kirby
+Debra Kabul Keven Kerouac Donn Keenan Daimler
+Dumas Kodiak Dee Dane Deanne Dunkirk Kristina
+Dodson Keven DJ Kendall Dow Dipper Kafka Dora
+Dacron Dominick Dianna Deidre Kalb Kenyatta
+Daumier Korzybski Darwinism Diderot Kiev Dunkirk
+Darin Dunlap Dempsey Kareem Dominique Kenmore
+Krista Dixon Debussy Darwin Dustin Dexter
+Dodson Krakatoa Koontz Delmonico Katowice
+Djibouti Dominic Kurdistan Dipper Katelyn
+Kaunda Karakorum Kampala Daley Kari Dobro
+Kurtis Kara Kidd Kama K Kirov Kemp Karla Doppler
+Debussy Kali Delta Kline Delaware Datamations
+Dave Dakotan Darcy Kinsey Dravidian Keewatin
+Debs Kalb Klein Kellie Dorian Ken Delmer Dyer
+Darla Dooley Kantian Dover Desdemona Kilimanjaro
+
+# Level 16
+LS
+Spiro Libra Sepoy Selassie Scarlatti Serbian
+Lynnette Lucite Scandinavian Sonja Sinclair
+Lucinda Lucio Liszt Linton Luftwaffe Santos
+Serbia Savonarola Sc Sawyer Sumatra Lucretius
+Lubbock Sweeney Lucian Leif Lexus Scopes Lyell
+Leopold Salerno Lucille Suetonius Luz Lewis
+Seinfeld Liliuokalani Lyon Lorre Lilly Senate
+Stone Savonarola Sioux Louisianans Stael Lima
+Lowery Serbians Sims Listerine Stromboli Smetana
+Sullivan Levesque Scorpio Lodz Steven Lawanda
+Sukarno Louise Leta Lambert Lincolns Sosa
+Lilia Savoy Salem Silurian Skylab Lars Scylla
+Lena Lorie Scripture Luddite Lorene SS Lenora
+Skylab Sallie Sicilians Leticia Semtex Lynnette
+Scranton Salyut Lucius Scylla Lombardy Sc
+Swazi Laplace Luz Slocum Siva Sukarno Lyons
+Lucio Scarlatti Sadr Saul Son Siberian Seton
+Lucinda Libreville Luzon Scottie Spaatz Siemens
+Sauls Latina Lemuel Senate Swanee Sara Lenora
+Lawson Land Leicester Lois Spackle Lanny Smokey
+Livonia Somalians Stein Lorelei Steinem Spence
+Salyut Lords Lassa Scottie Linton Sacramento
+Lynette Spokane Lydia Styx Steven Spenserian
+Soviet Leonidas Lents Sacajawea Sabrina Laue
+Studebaker Smokey Santeria Lafitte Saunders
+Serpens Salk Sutton Strabo Laverne Saracens
+Stockton Slavonic Liston Styrofoam Listerine
+Leiden Liberia Stefan Stu Serbia Steuben Suez
+Lon Seyfert SS Staten Simon Leviticus Sundanese
+Sufi Lea Sarasota Libras Seleucid Sandra Lucinda
+
+# Level 17
+AI
+Acadia Azores Assyrian Antietam Auckland Appomattox
+Attica Arabians Addams Americanizations Aspidiske
+AF Avesta Amanda Annabelle Ilene Americanism
+Asturias Americanism Adele Aristotelian Ivory
+Afrikaner Inquisition Allison Armando Amerasian
+Averroes Abby Istanbul Attic Americas Imelda
+Ionian Atlases Acapulco Ave Aesculapius Alaskan
+Assam Amerindian Alderamin Astor Amadeus Alford
+Aldo Islamic Abidjan Aspidiske Ariadne Iliad
+Adan Isaacs Antwan Adenauer Arius Anabaptist
+Assyrian Ariadne Indonesians Avery Iaccoca
+Aristotelian Acropolis Ir Alistair Aberdeen
+Ireland Ana Albania Alfonzo AIDSes Alberto
+Averroes Ibadan Icelandic Americans Apollonian
+Al Inca Apennines Imelda Auden Alabamians
+Americans Arturo Abelson Antananarivo Ara
+Alberta Aussies Asia Austrians Ara Armour
+Irma Allstate Arius Adolf Adana Aristotle
+Isabella Ankara Irkutsk Altaic Adriana Alicia
+Antoinette Albanians Andrew Annmarie Anita
+Israelis Attila Abby Apple Atari Afrikaans
+Acton Izmir Australians Illinois Albany Asian
+Appleseed Advent Ara Ac Apennines Arcadian
+Albanians Ariosto Andromeda Afrikaans Alcestis
+Istanbul Apollinaire Arkansan Aquinas Analects
+Apollinaire Akbar Arianism Assyrian Allentown
+Azania Antares Africans Adidas Arius Aztec
+Aquila Italians Alfredo Indians Asimov Alberio
+Isolde Izaak Amber Alexandra Innocent Americanism
+Ara Amsterdam Independence Alyce Aaron Allen
+
+# Level 18
+EN
+Norse Neapolitan Elanor Napier Nosferatu Nicole
+Namibia Nyerere Evansville Nova Enrico Nelson
+Easter Estella Excellencies Earp Newcastle
+Nutrasweet Neruda Electra Noemi Noe Neri Norton
+Epstein Nero Nunez Nation Esperanza East Ned
+Evelyn Noyes Eocene Eocene Nam Nick Er Nelson
+Nyerere Earlene Nick Earnest Episcopalians
+Esq Nixon Natalie Eduardo East Nixon Esq Nubia
+Nevsky Eris Edwards Enif Elbrus Elinor Ebeneezer
+Eaton Ezekiel Natalie Ellen Noumea Excalibur
+Nate Edda Nola Elliot Newfoundlands Eveready
+Eysenck Ernest Eloise Nimrod European Noemi
+Noel Epicurean Nubia Nd ND Nickolas Newark
+Nike Elton Nevadan Erlenmeyer Elbe Etruria
+Norway Essie Nicola Nimrod Natalie Ecclesiastes
+Elton Na Normand Enif Noumea Elysiums Eula
+Erlenmeyer Eumenides Evita Nicodemus Ni Nona
+Etruscans Ebro Ericka Esperanza Elinor E Norris
+Elbe Eleanor Eltanin Nosferatu Novosibirsk
+Norberto Nantucket Elaine Novokuznetsk Easter
+Nero Norsemen Norberto Nannie Nanak Nate Europa
+Edwina Episcopalians Edwardo Es Nissan Erasmus
+Enkidu Elysium Elisa Esteban Eleazar Eva Estella
+Neptune Enkidu Edwardo Nan Ebeneezer Emmy
+Erik Nita Nannie Nair Ernest Everest Ellen
+Elysian Elanor Novocaine Novembers Estrada
+Esau Elbert Earle Elanor Eloise Norseman Newman
+Ecuadorians Ellie Erickson Nanette Ecclesiastes
+Noe Enterprise Eniwetok Numbers Nicodemus
+EFL Espinoza Neva Europeans Nazi Ellis Essequibo
+
+# Level 19
+VU
+Vanzetti Vijayawada Veracruz Veronese Voltaire
+Uzi Valentino Volta Vedas Uzbek Veronica Vas
+Vincent Veronese V Utopian Venusian Valerie
+Vesuvius Vivaldi Ukrainian Vermont Vlad V
+Valkyries Uzbek Veda Unixes Ute Verona Viennese
+Vedanta Unixes Ursuline Vicente Val Vernon
+Vaduz Varese Velez Verne Ucayali Victoria
+Ukraine Urdu Valdez Venusian Val UK Venn Vladivostok
+Vas Vermeer Vernon Uranus Urdu Unitarians
+Urey Vivaldi Valentin Vedas Varanasi Villarreal
+Unitarianisms Versailles Victor Visayans Vatican
+Vas Vazquez Vijayawada VD USS Vanderbilt Valencia
+Vesuvius Victoria Vazquez Ustinov Varese Ursuline
+Ukrainians Vivienne Vesuvius Ursa UN Utrillo
+Unitarianisms Valium Vancouver Val Van Vance
+VJ Vickie Viola Unitarianism Venezuela Vila
+Velveeta Vivienne Vesalius Ufa Ultrasuede
+Viola Volta Veracruz Verona Va Upton Verde
+Uzbekistan USS Velveeta Vermonter Venuses
+USN Vasquez Verne Utrillo Unix Vivaldi Vilnius
+Uzbekistan UK Viennese Velcros Vicente Vicky
+Ultrasuede VI Vatican Venice Uranus Vanessa
+Valentin Updike Velazquez VA Verna Ukraine
+Valenzuela Vermont Verdi Visa Utopian Vilma
+Vaselines Velasquez Vassar Venusian Ulysses
+Valdez Udall Valerie Vassar Umbriel Vickie
+Visayans Updike Vindemiatrix Vernon Vern Velcros
+Venusian Van Vicente Vaseline US Vivaldi Vila
+Utopia Urdu Vivian Vic Valencia Veblen Vanderbilt
+Ultrasuede Urdu Vatican Villa Unix Vaselines
+
+# Level 20
+IR
+Rollerblade Ian Ian Russians Robert Riddle
+Inuit Randal Racine Robespierre In Randy Rodriquez
+RV Icelandic Rosie Interpol Roland Rostov
+Ispell Robles Reid Iceland Indus Israel Izvestia
+Romeo Raul Renee Rex Renoir Independence Rossini
+Ronny Rory Israeli Italians Rudyard Rosie
+Ronda Reuters Republican Reese Rudolf Indiana
+Rupert Ryder IRAs Robbin Renault Romney Ives
+Iliad Indonesia Rockefeller Reunion Isaacs
+Iqbal Roberto Ir Rastafarian Isuzu Romero
+Roberto Robyn Rev Reed Rickenbacker Rudy Rod
+Raquel Remarque Inquisition Ramadan Ramiro
+Romania Rubens Islam IRAs Ionic Rollerblades
+Internet Isaacs Italian Robby Reuben Rwandas
+Rostand Rabelais Romeo Roswell Rooney Ras
+Rena Issac Reese Ryan Ian Rus Randall Ives
+Rosendo Russell Rowland Rodrick Reilly Indore
+Ramon Robbie Iraq Rubik Ibo Inez Ill Romulus
+Ireland Romanesque Roseau Rockefeller Indians
+Rene Rodriquez Russian Irwin Interpol IUD
+Iberian Ruiz Imus Rawalpindi Rommel Ramsey
+Isaacs Ramos Ivan Iraqis Rubinstein Rabelais
+Roswell Reynaldo IVs RV Roqueforts Russell
+Ivan RFD Rourke Isis Romanians RAF Raul RFD
+Israelites Rwandan Romania Rusty Reykjavik
+Iberian Rock Rico Rosetta Indonesian Rousseau
+Isaac Rostov Ito Rodney Ronny Rayburn Ramsey
+Ripley Intelsat Islam Reeves Rubens Runyon
+Reynolds IA Inez Intel Inquisition Rainier
+Italians Roslyn Indian Italians Izmir RDA
+
+# Level 21
+OC
+Clancy OR Orly Oedipus Okefenokee Oise Cooper
+CO Clausius Circe Carissa Cody Caldwell Clarke
+Cassie Cessna Capistrano Candy Claudia Cs
+Orion Coke Capitol Ceausescu Calvin Orin Cerenkov
+Cassie Carlyle Cordilleras Olympia CEO Celts
+Cenozoic Oneida Cunard Cooper Camemberts Oise
+Carlyle Crockett Canada Catt Occam Cooks Croce
+Carib Carmela Campos Connie Candy Copernican
+Oman Capra Cain Casey Cuvier Oxus Ouija Crusoe
+Curt Omar Coventry Columbine Copley Cm Clio
+Catiline Oktoberfest Copernicus Odyssey Caucasus
+Croatians Cary Oslo Casey Cain Corvallis Calder
+Ono Oakley Cd Capitoline Osceola Oort Constable
+OE Candy Oran Cretan Cannon Couperin Cains
+Coulomb Cavour Cain Cyclades Curtis OJ Catiline
+Carmela Couperin Colorado Cuvier Cuba Clements
+Carlene Cornelia Cyril CO Ovid Creator Cowley
+Calvin October Confucius Canaan Cd Cameroon
+Claudius Osvaldo Cassie Colin Co Oct Caribbean
+Cetus Cozumel Caroline Carlos Cobain Catalonia
+Craft Catalonia Constantinople COD Crux Osceola
+Cancers Camilla Caleb Cubans Caribbean Coors
+Cromwellian Callie Conn Cokes Carver Creek
+Castro Cypriots Capulet Cancun Cameroons Caucasian
+Cambrian Carrillo Olympic Orville Ora Carissa
+Olympus Odessa Carrie Orin Crawford Olen Oceania
+Clair Clement Cartesian CIA Cannes Cara Caucasus
+Courbet Capote Celina Olmsted Olmsted Clifton
+Camelot Orwell Osborn Cesarean Carolina CO
+Clarice Clemons Canterbury Corrine Cuban Carver
+
+# Level 22
+PQ
+Parliaments Patsy Pleiades Portland Parana
+Quixote Pentecost Potts Prince Peter Palomar
+Punjabi Pentecostal Passovers Pierce Pan Puebla
+Persians Portland Pandora Periclean Plasticine
+Pamirs Pate Pansy Q Pompadour PCs Pompey Poznan
+Peter Peron Queensland Powell Panamanian Pentium
+P Parnell Prudence Pissaro Poseidon Petra
+Pokemon Pampers Pentiums Peter Patti Patrick
+Queensland Pollyanna Presbyterianism Popeye
+Poznan Pocono Pike Powers Pasteur Protestantism
+Paleocene Piedmont Palestrina Pamirs Prut
+Pollyanna Pizarro Puritanisms Pompey Quonset
+Politburo Pomona Po Pitts Popeye Pliocene
+Pleiades Pluto Quixotism Paleozoic Pele Platonism
+Park Paula Pasquale PA Pentecostal Perry Preakness
+Pierce Patsy Procyon Pennsylvania Poole Pavarotti
+Q Pa Panza Pindar Prescott Perls Park Quonset
+Perseid Puritan PR Porrima Quebec Provo Potemkin
+Pedro PVC Persians Pindar Polynesian Piaf
+Pelee Petty Procrustes Ptolemy Pliocene Pierce
+PP Perkins Quonset Pamela Puebla Pyle Perez
+Praxiteles Perrier Purcell Peron Quinn Peoria
+Poona Puritan Pareto Paleocene Pb Pericles
+Pottawatomie Pa Quincy Pennsylvanians Pampers
+Pasquale Paleocene Porrima Quixote Puritanisms
+Pius Purus Patsy Presbyterians Q Puebla PD
+Quixotism Penny Patty Pyle Pollard Perseid
+Patrica Perseid Puck Pyrenees Pareto Penney
+Passover Quixotism Politburo Pliocene Puccini
+Peck Polynesian Parsifal Puritan Provencal
+
+# Level 23
+WM
+Muscovy Mauritania Wilsons Woolf Mussolini
+Malay Melva Mayo Walden Mick Modesto Muzaks
+Melisa Wyatt Montesquieu Merrimack Wyatt Moe
+Martel Wesleyan Wiley Marquis Mondrian Wooten
+Waller Mancini Mosley Mani WV Minn Minsky
+Mauro Miltiades McDaniel Marcy Wilmer Mandela
+Meyer Masai Maureen Marietta Manfred Mercado
+Marla Muenster Marduk McCain Millie Meyers
+Miocene Wotan Wyo Wales WV Warrens Marty Wynn
+Marcus Walls Maribel Maoisms Medusa Mill Moiseyev
+Mayans McCray Mac Malay McNeil Macmillan Melbourne
+West Wade McKinley Malraux Medici Maximilian
+Mark Macias Muzak Mars Malta Mamie Waldemar
+Mecca McClellan Marine Weyden Mountbatten
+Mintaka Molly Montoya Martian Willamette Wilburn
+Moseley Moravia Winifred Moor McCartney Marylou
+Marxist Mickie Monroe WV Wallenstein Melbourne
+MacDonald Mazatlan Mason Moroccan Mills Middleton
+Wyatt Waters Martina Warwick Miles Masters
+Muscovite Walls Mercuries Massenet Wolf Mubarak
+Mesopotamia Mauritius Maurois Wise Masaryk
+Mycenae Mobutu McCain Murillo Mondays Marci
+Windward Mesabi Mazda McClellan Will Wilkinson
+Wade Melva Mondale Mirzam Weierstrass Wendell
+Mortimer McClure Mediterranean Mb Wallace
+Murillo Menander Meany Masonic Wezen McLeod
+Modesto Maputo MIA Wake Massey Munro WWI Marxism
+Mead Mobutu Muslims Wurlitzer Workman Wylie
+Moro Maldives Warner Minnesotans Westerns
+Markab Marconi Willis Multicses Marta Madeiras
+
+# Level 24
+BP
+Boyer Petain Bowman Bunuel Beatrix Poles Bes
+Britt Bonaventure PARCs Pei Bayesian Bronson
+Brenton Bayes Buck Bella Britannic Pavlova
+Bolivian Bianca Bernice Pickwick Polk Blavatsky
+Burmese Betty Bernie Pirandello Barnett Prakrit
+Buffy Brett Blake PS Pusey Perez Bowell Popsicles
+Brynner PAC PARCs Potsdam Pueblo PMs Brampton
+Barker BA Bible Brock Popsicles Poppins Brandt
+Palestine Brillo Benny Pasadena Beowulf Petty
+Barbados Boone Palestinian Balkans Bernays
+Poole Peary Politburo Bostonian Brittany Beatriz
+Priscilla Babel Pierre Penny PARCs Benny Brazilian
+Panamanians Bridalveil Pisistratus Bunker
+Brie PE Palermo Beowulf Pomerania Britain
+Belau Brazzaville P Petty Pauli Boolean Puckett
+Be Pitt Pascal Bunuel Punjabi Palestinian
+PARC Blair Bowery Bordeaux Psalters Ptolemy
+Permian Burt Presbyterian Porfirio Bernard
+Breton Pawnee Boston Pollock Psalter Proust
+Brisbane Pollux Pasquale Pleiades Bermudas
+Barnaby Barents Btu Brinkley BB Pantaloon
+Burt Pat PS Bryant P Bantu Pd Bacardi Bonaparte
+Prentice Pequot Pike Brutus Born Bayes Pele
+Pakistani Pincus Brutus BMW BA Potomac Brynner
+Bela Pu Burundi Borneo Palomar Barcelona Brandon
+Beasley Patel Pike Barrett PD Polk PARC PLO
+Pilcomayo Braddock Peruvians Berzelius Parkinson
+Pan Bess Pole Balearic Platte Barton Bedouin
+Bilbo Penelope Bermuda Purina Bacon Parisian
+Poincare Procrustean Beaumont PP Biscay Priestley
+
+# Level 25
+TY
+Tito Tatars Tessa Tasmania TM Tipperary Titus
+Triton Tyrone Tudor Trippe Ymir Yuletide Timbuktu
+Turin Tripoli Yenisei Torricelli Titania Yukon
+Transvaal Tommie Yoda Tomas Trevino Taurus
+Yerkes Tristan Tinseltown Tut Terrie Tartuffe
+Tammy York Tyrone Tatar Tibetans Terence Tunisian
+Ymir Ti Tacitus Teasdale TB Tiffany Taoisms
+Tonia Tunisians Texan Yamoussoukro Trinities
+Yalu Trent Taiwan Tortola Ypsilanti Yemen
+Tolyatti Yamoussoukro Tues Tammie Tonia Trinidad
+Tallinn Yaounde Taiwanese Tyler Teller Terry
+Trevor Yules Toni Teletype Talmudic Trey Titus
+Tokyo Travis Yolanda Teddy Tucson Tito Taoisms
+Tosca Tetons Talbot Tolkien Tums Yakut Tamera
+Tiresias Tami Tillman Torricelli Toto Tonia
+Trekkie Tintoretto Taylors TVs Timur TM Taliesin
+Troy Tamera Tartuffe Tuscany Tokay Tunisians
+Tammi Torrance Tetons Trenton Tito Tara Tiber
+Yosemite Talbot Taylors York Yoruba Torrance
+Tiresias Tlaloc Yukon Trinidad Tate Yacc Teletype
+Tulane Torrance Tory Terkel Tillman Tibetans
+Talmud Yuri Yale Trajan Townsend Yerevan Tatum
+Torricelli Tate Tuscan Trey Talmuds Tarbell
+Tonto Tamika Yanks Toledo Twila Townes Tylenol
+Trimurti Tammie Trudeau Ypres Yb Yenisei Tompkins
+Toynbee Turpin Todd Tuscany Twila Tracey Tracy
+Transvaal Teddy Tlaloc Todd Timon Yerkes Yvette
+Tiber Titian TB Teddy Tomsk Yeats Titicaca
+Yolanda TD Tonya Tory YMMV Tammie Yanks Traci
+TELNETs Trojan Tomas Tracey Tracie Yeats Yuri
+
+# Level 26
+XZ
+Zeus XML Zionisms XL Zelma Xenakis Zambia
+Zoroastrian Zimmerman Zappa Xenakis Zimmerman
+Zambezi Zamboni Zorro Zoroaster Zworykin Zamboni
+Zaire Zorn Zeno Xe Zappa Xeroxed Zeus Zionists
+Zamora Xavier Zulu Zukor Zebedee Xeroxed X
+Zulu Xavier Zambia X Zionist Zorn Zimmerman
+Zeus Zr Zr Zambia Zoroaster Zeffirelli Zappa
+Zeffirelli Zapata Zimmerman Zimbabwe Xe Xenakis
+Zoe Zappa Zebedee Xenakis Zola Zambian X Xmas
+Zimmerman Xeroxed Xmas Zamboni Zulu Z Zamboni
+Zukor Zionisms Zorn Xeroxes Zambezi Zionist
+Zworykin Zanzibar Zorn Xerox Zens Zeus Zeno
+Zambia Zions Zamboni Zoroaster Xes Xmases
+Zairian Zionist Zens Zairian Xenia Zoroaster
+Zeke Zoroaster Zorro Zambian Zworykin Zappa
+Zionist Zorn Zionism Xeroxed Zworykin Xenia
+Xenakis Zionisms Xes Zulu Zamboni Zionists
+Zoroastrian Xerxes Zukor Zimmerman Xeroxed
+XS Zulu Zeno Zamora Zambia Zorro Zeus Zappa
+XML Zeke Zoroastrian Xerox Zane Zomba Zane
+Xanadu Xenakis Zebedee Xeroxed Zulu Zimmerman
+Zen Zimmerman Zebedee Z Z Zanuck Xenia Zamboni
+XML Zions Zeffirelli Zionists Xeroxed Zionist
+Zeus Zimmerman Zambia XS Zoroastrian XS Xavier
+Zions Zeus XML Zoroastrian Zworykin Zaire
+Zamora Zoroastrian XML Xe Zappa Xeroxed Z
+Zambia Xanadu Zoroastrianisms Zimmerman Zoroastrianisms
+Xavier Zeffirelli Zimmerman Xes Zambian XL
+Zionisms Zoe Zosma Zambezi Zambia Zamboni
+Zionism Zionism Zulus Zola Zosma Xes Zn Zomba
+
