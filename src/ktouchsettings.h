@@ -59,7 +59,7 @@ class KTouchSettings {
     bool            m_errorBeep;        ///< Whether to beep on error or not.
     bool            m_levelBeep;        ///< Whether to make a sound on level change or not.
     QFont           m_font;             ///< The font to be used in the slide lines.
-    int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediatly')
+    int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediately')
 
     // training page
     bool            m_autoLevelChange;  ///< Whether to use automatic level change or not.
