@@ -65,9 +65,6 @@
                             <property name="text">
                                 <string>Highlight &amp;keys on keyboard</string>
                             </property>
-                            <property name="accel">
-                                <string>Alt+K</string>
-                            </property>
                             <property name="toolTip" stdset="0">
                                 <string>Show on the keyboards the keys you have to type</string>
                             </property>
