@@ -26,7 +26,8 @@ static const char *description =
 static const char *version = "1.3";
 
 static KCmdLineOptions options[] = {
-    { "+[URL]", I18N_NOOP( "Training file to open." ), 0 }
+    { "+[URL]", I18N_NOOP( "Training file to open." ), 0 },
+    KCmdLineLastOption
 };
 
 int main(int argc, char **argv)
