@@ -105,7 +105,7 @@
                                             <cstring>textLabel5</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Miss-typed characters:</string>
+                                            <string>Mistyped characters:</string>
                                         </property>
                                     </widget>
                                     <widget class="QLabel" row="0" column="0">
