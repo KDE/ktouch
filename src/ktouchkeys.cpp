@@ -38,6 +38,9 @@ void KTouchKey::resize(double scale) {
     m_yS = static_cast<int>(scale*m_y);
     m_wS = static_cast<int>(scale*m_w);
     m_hS = static_cast<int>(scale*m_h);
+    m_font=KTouchConfig().m_keyboardFont;
+    m_font.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
+
 };
 // -----------------------------------------------------------------------------
 
@@ -67,9 +70,8 @@ void KTouchNormalKey::paint(QPainter& p) const {
     };
     KTouchKey::paint(p);  // call the parents paint() function
     p.setPen(textColor);
-    QFont smallFont = KGlobalSettings::generalFont();
-    smallFont.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
-    p.setFont( smallFont );
+   
+    p.setFont( m_font );
     p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
 };
 // --------------------------------------------------------------
@@ -92,6 +94,7 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
 
 void KTouchFingerKey::paint(QPainter& p) const {
     KTouchKeyboardColor& colorScheme = KTouchConfig().m_keyboardColors[KTouchConfig().m_keyboardColorScheme];
+		p.setFont( m_font );
     if (m_isActive) {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
         p.setPen( colorScheme.m_frame );
@@ -99,9 +102,6 @@ void KTouchFingerKey::paint(QPainter& p) const {
         p.setPen( QPen(colorScheme.m_frame,3) );
         p.drawRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);                             // mark it as "active"
         p.setPen( colorScheme.m_text );
-        QFont smallFont = KGlobalSettings::generalFont();
-        smallFont.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
-        p.setFont( smallFont );
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
     }
     else if (m_isNextKey) {
@@ -109,9 +109,6 @@ void KTouchFingerKey::paint(QPainter& p) const {
         p.setPen( colorScheme.m_frame );
         KTouchKey::paint(p);
         p.setPen( colorScheme.m_textH );
-        QFont smallFont = KGlobalSettings::generalFont();
-        smallFont.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
-        p.setFont( smallFont );
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
     }
     else {
@@ -120,9 +117,6 @@ void KTouchFingerKey::paint(QPainter& p) const {
         KTouchKey::paint(p);
         p.drawRoundRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);
         p.setPen( colorScheme.m_text );
-        QFont smallFont = KGlobalSettings::generalFont();
-        smallFont.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
-        p.setFont( smallFont );
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
     };
 };
@@ -140,6 +134,7 @@ KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText,
 
 void KTouchControlKey::paint(QPainter& p) const {
     KTouchKeyboardColor& colorScheme = KTouchConfig().m_keyboardColors[KTouchConfig().m_keyboardColorScheme];
+    p.setFont( m_font );
     QColor textColor;
     if (m_isActive) {
         p.setBrush( colorScheme.m_cBackgroundH );
@@ -157,10 +152,7 @@ void KTouchControlKey::paint(QPainter& p) const {
         textColor = colorScheme.m_cText;
     };
     KTouchKey::paint(p);
-    QFont smallFont = KGlobalSettings::generalFont();
-    smallFont.setPointSize( static_cast<int>(min(m_wS,m_hS)/3.5) );
     p.setPen( textColor );
-    p.setFont( smallFont );
     int h=min(m_wS, m_hS);
     int ch = static_cast<int>(h*0.5);   // the height for the special chars
     if (m_keyText=="Shift") {

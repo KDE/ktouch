@@ -13,6 +13,7 @@
 #define KTOUCHPREFKEYBOARD_H
 
 #include "ktouchprefkeyboardlayout.h"
+#include <qfont.h>
 
 /** This is the implementation of the "Keyboard settings" page of the preferences dialog.
  *  This class only contains the functionality which is used "inside" this page (e.g.
@@ -24,6 +25,17 @@ class KTouchPrefKeyboard : public KTouchPrefKeyboardLayout {
   public:
     /// Default constructor.
     KTouchPrefKeyboard(QWidget *parent, const char *name=0, WFlags f=0);
-};
 
+	  QFont m_font;   // font used for keybaord
+		void updateFont(const QFont& font);
+	  
+  public slots:
+    /// Will be called when the choose font button has been pressed.
+    void fontChooseBtnClicked();
+
+  signals:
+    /// Will be emitted when the user changed the fond settings in the font dialog.
+    void fontChanged();
+
+};
 #endif  // KTOUCHPREFKEYBOARD_H

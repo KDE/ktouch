@@ -52,7 +52,8 @@ class KTouchKey {
     QString m_keyText;      ///< The text on the key (may be a single char only).
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
-
+		QFont   m_font;
+    
   protected:
     int     m_x;        ///< The x position of the key.
     int     m_y;        ///< The y position of the key.

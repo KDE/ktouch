@@ -80,6 +80,7 @@ KTouchPref::KTouchPref() : KDialogBase(IconList, i18n("KTouch Preferences"), Def
     connect(m_pageTraining->rememberLevelCheck, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
     connect(m_pageKeyboard->keyboardLayoutCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
     connect(m_pageKeyboard->showAnimationCheckBox, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
+    connect(m_pageKeyboard, SIGNAL(fontChanged()), this, SLOT(setModified()) );
     connect(m_pageColors->errorColorCheck, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
     connect(m_pageColors->teacherTextBtn, SIGNAL(changed(const QColor&)), this, SLOT(setModified()) );
     connect(m_pageColors->teacherBackgroundBtn, SIGNAL(changed(const QColor&)), this, SLOT(setModified()) );
@@ -98,7 +99,7 @@ void KTouchPref::setDefaults() {
     // general page
     m_pageGeneral->errorBeepCheck->setChecked(true);
     m_pageGeneral->levelBeepCheck->setChecked(true);
-    m_pageGeneral->updateFont( QFont("Courier 10 Pitch") );
+    m_pageGeneral->updateFont(KGlobalSettings::generalFont());
     m_pageGeneral->slidingSpeedSlider->setValue(5);
     // training page
     m_pageTraining->levelChangeCheck->setChecked(true);
@@ -110,6 +111,7 @@ void KTouchPref::setDefaults() {
     // keyboard page
     m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(0);
     m_pageKeyboard->showAnimationCheckBox->setChecked(true);
+    m_pageKeyboard->updateFont(KGlobalSettings::generalFont());
     // colors page
     m_pageColors->errorColorCheck->setChecked( true );
     m_pageColors->errorColorCheckToggled( true );
@@ -146,6 +148,7 @@ void KTouchPref::update(bool toDialog) {
         else
             m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(0); // select "number" by default
         m_pageKeyboard->showAnimationCheckBox->setChecked(KTouchConfig().m_showAnimation);
+        m_pageKeyboard->updateFont(  KTouchConfig().m_keyboardFont );
         // colors page
         m_pageColors->errorColorCheck->setChecked(KTouchConfig().m_useErrorColor);
         m_pageColors->errorColorCheckToggled(KTouchConfig().m_useErrorColor);
@@ -174,6 +177,7 @@ void KTouchPref::update(bool toDialog) {
         // keyboard page
         KTouchConfig().m_keyboardLayout      = m_pageKeyboard->keyboardLayoutCombo->currentText();
         KTouchConfig().m_showAnimation       = m_pageKeyboard->showAnimationCheckBox->isChecked();
+        KTouchConfig().m_keyboardFont        = m_pageKeyboard->m_font;
         // colors page
         KTouchConfig().m_useErrorColor       = m_pageColors->errorColorCheck->isChecked();
         KTouchConfig().m_teacherTextColor    = m_pageColors->teacherTextBtn->color();

@@ -15,7 +15,8 @@
 #include <kcombobox.h>
 #include <klocale.h>
 #include <qcheckbox.h>
-
+#include <kfontdialog.h>
+#include <kpushbutton.h>
 #include "ktouchsettings.h"
 
 KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags f)
@@ -28,5 +29,18 @@ KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags
                                     ++it)
     {
         keyboardLayoutCombo->insertItem(*it);
+    };
+}
+
+void KTouchPrefKeyboard::updateFont(const QFont& font) {
+    m_font = font;
+}
+
+void KTouchPrefKeyboard::fontChooseBtnClicked() {
+    QFont tmpFont(m_font);
+    int result = KFontDialog::getFont(tmpFont);
+    if (result==KFontDialog::Accepted) {
+    		updateFont(tmpFont);
+        emit fontChanged();
     };
 }

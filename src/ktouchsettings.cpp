@@ -60,7 +60,7 @@ void KTouchSettings::loadSettings() {
     config->setGroup("General");
     m_errorBeep = config->readBoolEntry("BeepOnError", true);
     m_levelBeep = config->readBoolEntry("SoundOnLevelChange", true);
-    QFont defaultFont = QFont("Courier 10 Pitch");
+    QFont defaultFont = KGlobalSettings::generalFont();
     m_font = config->readFontEntry("Font", &defaultFont);
     m_slideSpeed = config->readNumEntry("Sliding speed", 5);
 
@@ -75,6 +75,7 @@ void KTouchSettings::loadSettings() {
 
     // read keyboard settings
     config->setGroup("Keyboard");
+    m_keyboardFont = config->readFontEntry("KeyboardFont", &defaultFont);
     m_keyboardLayout = config->readEntry("Layout", "number");
     // if keyboard layout it not available (e.g. the layout file has been deleted) switch to default
     if (m_keyboardLayouts .contains(m_keyboardLayout)==0)
@@ -88,7 +89,7 @@ void KTouchSettings::loadSettings() {
     // although the keyboard color scheme is selected in the color dialog, it is a property of
     // the keyboard and thus it stays in the "Keybord" group
     m_keyboardColorScheme = config->readNumEntry("Colorscheme", 1);
-
+    
     // read color options
     config->setGroup("Colors");
     m_useErrorColor = config->readBoolEntry("ColorOnError", true);
@@ -104,6 +105,8 @@ void KTouchSettings::loadSettings() {
     m_errorTextColor = config->readColorEntry("ErrorTextColor", &defaultColor);
     defaultColor.setRgb(170,0,25);
     m_errorBackground = config->readColorEntry("ErrorBackgroundColor", &defaultColor);
+
+    
 };
 
 
@@ -131,6 +134,7 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("Colorscheme",       m_keyboardColorScheme);
     config->writeEntry("Layout",            m_keyboardLayout);
     config->writeEntry("ShowAnimation",     m_showAnimation);
+    config->writeEntry("KeyboardFont",      m_keyboardFont);
 
     // write color settings
     config->setGroup("Colors");

@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>302</width>
-            <height>117</height>
+            <width>566</width>
+            <height>234</height>
         </rect>
     </property>
     <property name="caption">
@@ -33,48 +33,111 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <spacer row="0" column="1">
+                <widget class="QLayoutWidget" row="0" column="0">
                     <property name="name">
-                        <cstring>spacer12</cstring>
+                        <cstring>layout9</cstring>
                     </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>157</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLabel" row="0" column="0">
-                    <property name="name">
-                        <cstring>keyboardLayoutLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Select keyboard layout:</string>
-                    </property>
-                </widget>
-                <widget class="KComboBox" row="0" column="2">
-                    <item>
-                        <property name="text">
-                            <string>English</string>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
                         </property>
-                    </item>
-                    <property name="name">
-                        <cstring>keyboardLayoutCombo</cstring>
-                    </property>
-                </widget>
-                <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="3">
-                    <property name="name">
-                        <cstring>showAnimationCheckBox</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Highlight keys on keyboard</string>
-                    </property>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>showAnimationCheckBox</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Highlight keys on keyboard</string>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout7</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>keyboardLayoutLabel</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Select keyboard layout:</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer32</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>31</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="KComboBox">
+                                    <item>
+                                        <property name="text">
+                                            <string>English</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>keyboardLayoutCombo</cstring>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout8</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel1</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Font for keys on keyboard</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer33</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>31</width>
+                                            <height>21</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>fontChooseBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Select font...</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                    </vbox>
                 </widget>
             </grid>
         </widget>
@@ -91,17 +154,29 @@
             <property name="sizeHint">
                 <size>
                     <width>20</width>
-                    <height>20</height>
+                    <height>30</height>
                 </size>
             </property>
         </spacer>
     </vbox>
 </widget>
+<connections>
+    <connection>
+        <sender>fontChooseBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchPrefKeyboardLayout</receiver>
+        <slot>fontChooseBtnClicked()</slot>
+    </connection>
+</connections>
 <tabstops>
     <tabstop>keyboardLayoutCombo</tabstop>
 </tabstops>
+<slots>
+    <slot>fontChooseBtnClicked()</slot>
+</slots>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kcombobox.h</includehint>
+    <includehint>kpushbutton.h</includehint>
 </includehints>
 </UI>

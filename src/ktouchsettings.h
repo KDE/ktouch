@@ -75,6 +75,7 @@ class KTouchSettings {
     QString         m_keyboardLayout;   ///< The currently choosen keyboard layout.
     QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
     bool            m_showAnimation;    ///< If the keyboard shoud animate keys or not.
+    QFont           m_keyboardFont;     ///< The keyboard font
 
     // colors page
     bool            m_useErrorColor;       ///< Whether to use a different background for wrong text or not.
