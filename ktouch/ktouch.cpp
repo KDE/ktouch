@@ -41,7 +41,7 @@
 
 #define ID_STATUS_MSG 1
 
-
+#include "ktouch.moc"
 
 KTouch::KTouch():KMainWindow()
 {

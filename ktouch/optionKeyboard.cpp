@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "optionKeyboard.h"
+#include "optionKeyboard.moc"
 
 OptionKeyboard::OptionKeyboard(QWidget *parent, const char *name, bool modal)
                : OptionKeyboardDlg(parent, name, modal)

@@ -5,6 +5,7 @@
 
 #include "ktouchapp.h"
 #include "ktouch.h"
+#include "ktouchapp.moc"
 
 KTouchApp::KTouchApp()
          : KUniqueApplication(),top()

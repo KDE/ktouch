@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "slideLine.h"
+#include "slideLine.moc"
 
 SlideLine::SlideLine(QWidget *parent, const char *name)
           :QWidget( parent, name )

@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "touchstat.h"
+#include "touchstat.moc"
 #include "iostream.h"
 
 TouchStat::TouchStat(){

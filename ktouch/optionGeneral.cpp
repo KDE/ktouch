@@ -18,6 +18,8 @@
 #include "optionGeneral.h"
 
 #include <kcolordialog.h>
+#include "optionGeneral.moc"
+
 
 OptionGeneral::OptionGeneral(QWidget *parent, const char *name, bool modal)
               : OptionGeneralDlg(parent, name, modal)

@@ -16,6 +16,8 @@
  ***************************************************************************/
 
 #include "touchlecture.h"
+#include "touchlecture.moc"
+
 
 TouchLecture::TouchLecture()//QWidget *p)
 {
@@ -72,7 +74,7 @@ void TouchLecture::loadLectureFile(QString f)
  	 	  levelVector.erase(&levelVector[maxLevel]);
       maxLevel--;
     }
-	
+
     setLevel(level);
     pos=1;
     }
@@ -117,7 +119,7 @@ void TouchLecture::levelUp()
   if(level<(levelVector.size()-1))
 	{
 		level++;
-		
+
 		//is good to start at pos 0 every time you change level?
 	  pos=1;
 	  setLevel(level);
@@ -145,9 +147,9 @@ void TouchLecture::setLevel(unsigned int l)
 		emit levelChanged(level);
 		{
 		  vector<QString> test=*levelVector[level];
-		
+
 		  emit levelMessage(QString(test[0]));
-		
+
 		}
   }
   else

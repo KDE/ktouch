@@ -17,6 +17,7 @@
 
 
 #include "optionTraining.h"
+#include "optionTraining.moc"
 
 OptionTraining::OptionTraining(QWidget *parent, const char *name, bool modal)
                : OptionTrainingDlg(parent, name, modal)

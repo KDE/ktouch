@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "touchStatus.h"
+#include "touchStatus.moc"
 #include <iostream.h>
 #include <qlabel.h>
 #include <qapplication.h>
