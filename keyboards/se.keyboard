@@ -15,7 +15,7 @@ FingerKey	102		F		48	20
 FingerKey	106		J		78	20
 FingerKey	107		K		88	20
 FingerKey	108		L		98	20
-FingerKey	246		ö		108	20
+FingerKey	246		Ã¶		108	20
 #
 #
 #  ControlKey: This class will represent all the
@@ -45,7 +45,7 @@ ControlKey	259		Caps_L		0		20		18		10
 #
 #			Assci	KeyText	x		y		FingerKey
 #
-NormalKey	167		§		0		0		97
+NormalKey	167		Â§		0		0		97
 NormalKey	49		1		10		0		97
 NormalKey	50		2		20		0		115
 NormalKey	51		3		30		0		100
@@ -70,12 +70,12 @@ NormalKey	117		U		75		10		106
 NormalKey	105		I		85		10		107
 NormalKey	111		O		95		10		108
 NormalKey	112		P		105		10		246
-NormalKey	229		å		115		10		246
+NormalKey	229		Ã¥		115		10		246
 NormalKey	168		"		125		10		246
 #
 NormalKey	103		G		58		20		102
 NormalKey	104		H		68		20		106
-NormalKey	39		ä		118		20		246
+NormalKey	39		Ã¤		118		20		246
 #
 NormalKey	122		Z		23		30		97
 NormalKey	120		X		33		30		115

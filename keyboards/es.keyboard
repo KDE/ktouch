@@ -15,7 +15,7 @@ FingerKey	102	F	48	20
 FingerKey	106	J	78	20
 FingerKey	107	K	88	20
 FingerKey	108	L	98	20
-FingerKey	241	Ñ	108	20
+FingerKey	241	Ã‘	108	20
 #
 #
 #  ControllKey: This class will represent all the
@@ -46,7 +46,7 @@ ControlKey	8		BackSpace	130		0		20	10
 #
 #	Assci		KeyText					x	y  FingerKey
 #
-NormalKey 186		º					0	0	97
+NormalKey 186		Âº					0	0	97
 NormalKey 49		1					10	0	97
 NormalKey 50		2					20	0	97
 NormalKey 51		3					30	0	115
@@ -58,7 +58,7 @@ NormalKey 56		8					80	0	106
 NormalKey 57		9					90	0	107
 NormalKey 48		0					100	0	108
 NormalKey 39		'					110	0	241
-NormalKey 161		¡					120	0	241
+NormalKey 161		Â¡					120	0	241
 #
 NormalKey 113		Q					15	10	97
 NormalKey 119		W					25	10	115
@@ -76,7 +76,7 @@ NormalKey 43		+					125	10	241
 NormalKey 103		G					58	20	102
 NormalKey 104		H					68	20	106
 NormalKey 180		'					118	20	241
-NormalKey 231		ç					128	20	241
+NormalKey 231		Ã§					128	20	241
 #
 NormalKey 60		<					13	30	97
 NormalKey 122		Z					23	30	115
@@ -128,9 +128,9 @@ HiddenKey	90		122			115			257 #Z
 HiddenKey	59		44			108			258 #;
 HiddenKey	58		46			241			258 #:
 HiddenKey	95		45			241			258 #_
-HiddenKey	209		241			241			258 #Ñ
+HiddenKey	209		241			241			258 #Ã‘
 HiddenKey	168		180			241			258 #(Dieresis)
-HiddenKey	199		231			241			258 #Ç
+HiddenKey	199		231			241			258 #Ã‡
 HiddenKey	94		96			241			258 #^
 HiddenKey	42		43			241			258 #*
 HiddenKey	47		55			106 			258 #/
@@ -138,12 +138,12 @@ HiddenKey	40 		56			106			258 #(
 HiddenKey	41		57			107			258 #)
 HiddenKey	61		48			108			258 #=
 HiddenKey	63		39			241			258 #?
-HiddenKey	191		161			241			258 #¿
+HiddenKey	191		161			241			258 #Â¿
 HiddenKey	62		60			97			257 #>
-HiddenKey	170		186			97			257 #ª
+HiddenKey	170		186			97			257 #Âª
 HiddenKey	33		49 			97			257 #!
 HiddenKey	34		50			97			257 #"
-HiddenKey	183		51			115			257 #·
+HiddenKey	183		51			115			257 #Â·
 HiddenKey	36		52			100			257 #$
 HiddenKey	37		53			102			257 #%
 HiddenKey	38		54			102			257 #&

@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchtrainer.cpp                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -192,11 +192,6 @@ void KTouchTrainer::updateWidgets() {
             m_keyboardWidget->newKey(m_teacherText[len]);
     }
     else {
-        // ok, find the key the user missed:
-        if (m_teacherText.left(len-1)==m_studentText.left(len-1) && m_teacherText.length()>=len)
-            m_session.addWrongChar(m_teacherText[len-1]);
-        else
-            m_session.addWrongChar(8);
         m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
     };
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);

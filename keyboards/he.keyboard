@@ -8,14 +8,14 @@
 #  your fingers shold rest between typing.
 #
 #		UNICODE		KeyText 	x	y
-FingerKey	1513		ù		18	20
-FingerKey	1491		ã		28	20
-FingerKey	1490		â		38	20
-FingerKey	1499		ë		48	20
-FingerKey	1495		ç		78	20
-FingerKey	1500		ì		88	20
-FingerKey	1498		ê		98	20
-FingerKey	1507		ó		108	20
+FingerKey	1513		Ã¹		18	20
+FingerKey	1491		Ã£		28	20
+FingerKey	1490		Ã¢		38	20
+FingerKey	1499		Ã«		48	20
+FingerKey	1495		Ã§		78	20
+FingerKey	1500		Ã¬		88	20
+FingerKey	1498		Ãª		98	20
+FingerKey	1507		Ã³		108	20
 #
 #
 #  ControllKey: This class will represent all the
@@ -63,30 +63,30 @@ NormalKey	8 		<-		140		0		1507
 #
 NormalKey	113		/		15		10		1513
 NormalKey	119		'		25		10		1491
-NormalKey	1511		÷		35		10		1490
-NormalKey	1512		ø		45		10		1499
-NormalKey	1488		à		55		10		1499
-NormalKey	1496		è		65		10		1495
-NormalKey	1493		å		75		10		1495
-NormalKey	1503		ï		85		10		1500
-NormalKey	1501		í		95		10		1498
-NormalKey	1508		ô		105		10		1507
+NormalKey	1511		Ã·		35		10		1490
+NormalKey	1512		Ã¸		45		10		1499
+NormalKey	1488		Ã 		55		10		1499
+NormalKey	1496		Ã¨		65		10		1495
+NormalKey	1493		Ã¥		75		10		1495
+NormalKey	1503		Ã¯		85		10		1500
+NormalKey	1501		Ã­		95		10		1498
+NormalKey	1508		Ã´		105		10		1507
 NormalKey	91		[		115		10		1507
 NormalKey	93		]		125		10		1507
 #
-NormalKey	1506		ò		58		20		1499
-NormalKey	1497		é		68		20		1495
+NormalKey	1506		Ã²		58		20		1499
+NormalKey	1497		Ã©		68		20		1495
 NormalKey	39		'		118		20		1507
 #
-NormalKey	1494		æ		23		30		1513
-NormalKey	1505		ñ		33		30		1491
-NormalKey	1489		á		43		30		1490
-NormalKey	1492		ä		53		30		1499
-NormalKey	1504		ð		63		30		1499
-NormalKey	1502		î		73		30		1495
-NormalKey	1510		ö		83		30		1495
-NormalKey	1514		ú		93		30		1500
-NormalKey	1509		õ		103		30		1498
+NormalKey	1494		Ã¦		23		30		1513
+NormalKey	1505		Ã±		33		30		1491
+NormalKey	1489		Ã¡		43		30		1490
+NormalKey	1492		Ã¤		53		30		1499
+NormalKey	1504		Ã°		63		30		1499
+NormalKey	1502		Ã®		73		30		1495
+NormalKey	1510		Ã¶		83		30		1495
+NormalKey	1514		Ãº		93		30		1500
+NormalKey	1509		Ãµ		103		30		1498
 NormalKey	47		.		113		30		1507
 #
 #
