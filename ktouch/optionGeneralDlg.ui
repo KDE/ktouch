@@ -175,7 +175,7 @@
                         <string>Cancel</string>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>Close dialog and discarge all changes.</string>
+                        <string>Close dialog and discard all changes.</string>
                     </property>
                 </widget>
                 <spacer>
