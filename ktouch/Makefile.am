@@ -56,6 +56,8 @@ ktouch_LDADD   = $(LIB_KFILE)
 # this option you can leave out. Just, if you use "make dist", you need it
 #noinst_HEADERS = ktouch.h
 
+rcdir = $(kde_datadir)/ktouch
+rc_DATA = ktouchui.rc
 
 # the -x is for skipping messages already translated in kdelibs
 messages:

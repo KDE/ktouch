@@ -1,0 +1,9 @@
+<!DOCTYPE kpartgui>
+<kpartgui name="ktouch" version="0.1">
+<MenuBar>
+  <Menu name="option"><text>&amp;Option</text>
+    <Action name="optionKeyboard"/>
+    <Action name="optionTraining"/>
+  </Menu>
+</MenuBar>
+</kpartgui>
