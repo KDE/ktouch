@@ -19,6 +19,7 @@
 #include <iostream.h>
 
 bool TouchKey::showColor=true;
+int TouchKey::showAnimation = 0;
 
 TouchKey::TouchKey(const char *k, int x, int y, int w, int h)
 {
@@ -66,7 +67,7 @@ void TouchKey::setScale(float s)
 
 void TouchKey::paintBase(QPainter *p)
 {
-  if (state==true)
+  if (state)
     {
       switch(getShowAnimation()){
       case 0:
@@ -91,6 +92,7 @@ void TouchKey::paintBase(QPainter *p)
       //Draw text on keys
       p->setFont(QFont("courier", getSmallest()/2));
       p->drawText(x,y,width,height,QPainter::AlignCenter,keyValue);
+  }
 }
 
 QColor TouchKey::getColor()
