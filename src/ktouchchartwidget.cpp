@@ -23,6 +23,7 @@
 #include <klocale.h>
 
 #include <numeric>  // for mathematical functions
+#include <math.h>
 
 #include "ktouchtrainer.h"
 #include "ktouchtrainingsession.h"
