@@ -24,7 +24,7 @@
 #endif
 
 #include <kconfig.h>
-#include <kapp.h>
+#include <kapplication.h>
 
 #include <qpushbutton.h>
 
