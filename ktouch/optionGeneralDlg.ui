@@ -13,7 +13,7 @@
         </rect>
     </property>
     <property name="caption">
-        <string>General options</string>
+        <string>General Options</string>
     </property>
     <vbox>
         <property name="name">
