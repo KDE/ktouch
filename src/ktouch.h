@@ -97,6 +97,8 @@ class KTouch : public KMainWindow {
     /// Quick-changes the lecture.
     void changeLecture(int num);
 
+    void slotConfigureKeys();
+
   private:
     /// Will be called when this app is restored.
     void readProperties(KConfig *config);
