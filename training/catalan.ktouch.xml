@@ -1,0 +1,204 @@
+<KTouchLecture>
+ <Title>Catalan (auto-generated)</Title>
+ <Comment>KTouch training file generated Sat Aug 23 21:40:00 2003
+Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.
+</Comment>
+ <FontSuggestions>Courier 10 Pitch</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>jf</NewCharacters>
+   <Line>ff jfjf fj jjj ff ffjf</Line>
+   <Line>fjjj jjff ff fjj j fj ff</Line>
+   <Line>jf fjjj ff j jjj ff j j</Line>
+   <Line>ffjjf fj fjj fjjj fjjj j fjjj</Line>
+   <Line>fjj fff j fjj j jf jj ff</Line>
+   <Line>ff ff fj jj jf j ff ffjf</Line>
+   <Line>fj fj jf fff jf fff jf</Line>
+   <Line>jf fj jf ff j jf jjff jfjf</Line>
+   <Line>fjj jfjf j jf ffj fj jj</Line>
+   <Line>ffffj jjf fff fjjj ffjf ff</Line>
+  </Level>
+  <Level>
+   <NewCharacters>kd</NewCharacters>
+   <Line>jkj k d kd jd jd fdf jkj</Line>
+   <Line>kd kf jd fd jkj fdj jd</Line>
+   <Line>dd dd fk fdk jfkj jd jkj</Line>
+   <Line>kdj ffk kf ffk jkj jkkdf</Line>
+   <Line>jd ddfkd fd jd dk dd jd</Line>
+   <Line>kdj jfkj dd jd dk jkkdf</Line>
+   <Line>djd kf fdk ddfkd jkkdf jd</Line>
+   <Line>jfk dk fk fk ddfkd fdj jkj</Line>
+   <Line>k kdj dk fdjd jd djd jkj</Line>
+   <Line>jk fdj jfkj fd fdjd k jkkdf</Line>
+  </Level>
+  <Level>
+   <NewCharacters>laesç</NewCharacters>
+   <Line>deses sedesses sedada dese</Line>
+   <Line>efes sedada jaça sella llas</Line>
+   <Line>sedes alesses e lassesses</Line>
+   <Line>desllaçada allejada alleja llaçada</Line>
+   <Line>fase alejades ells salses</Line>
+   <Line>jaç falles sedasses dallades</Line>
+   <Line>dessal alfes salda sedal alleja</Line>
+   <Line>ajaçades fes fesa dallades all</Line>
+   <Line>faç lesa e fallades falsada</Line>
+   <Line>llaçada alleja faldades ells</Line>
+  </Level>
+  <Level>
+   <NewCharacters>coss</NewCharacters>
+   <Line>alfalsos falles caldejades collesses</Line>
+   <Line>lesos cossesses fosses sassolada</Line>
+   <Line>assolda sedes defeco salles</Line>
+   <Line>assolelles aflacada focs llocs</Line>
+   <Line>aclofesses follejada escada escodole</Line>
+   <Line>escasseja celles sassolades ells</Line>
+   <Line>acloca dessolcada solaçada</Line>
+   <Line>desllaça esclafada locals flaca</Line>
+   <Line>cesses assolada deso salla</Line>
+   <Line>assolades ecs callols colcada</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ntàèé</NewCharacters>
+   <Line>encasant flotà llastesses sotalades</Line>
+   <Line>faldejat desenastes tonants sadollà</Line>
+   <Line>encastés onejants estassant escalena</Line>
+   <Line>socons defensessen ajocant</Line>
+   <Line>entenc desset fosfatant escandesc</Line>
+   <Line>tascàs lesenes desdono acanalesses</Line>
+   <Line>cassanells desencastessen assestà</Line>
+   <Line>estacades esfèns telà asson delatessen</Line>
+   <Line>descloent tantejat sedàs desolessen</Line>
+   <Line>assesto descontentats atans</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ívrr</NewCharacters>
+   <Line>florada acontentar arrosarà</Line>
+   <Line>estotara escaloní acatarrares</Line>
+   <Line>enverdescades corallejaran versessen</Line>
+   <Line>desvalorara centellejara cavallares</Line>
+   <Line>desfasar afrontares relaten estavellaren</Line>
+   <Line>desenrola destacaràs entretocaran</Line>
+   <Line>afalconarà enveraven safraneres</Line>
+   <Line>concerní trastocàs rosos covaré</Line>
+   <Line>enrastelle concentrats escodarà</Line>
+   <Line>alforres casí descolorar corredores</Line>
+  </Level>
+  <Level>
+   <NewCharacters>meó</NewCharacters>
+   <Line>somortes falsejaríem mort amanollí</Line>
+   <Line>cerví entravessat escalafons</Line>
+   <Line>ensofrant retrec masera forjaves</Line>
+   <Line>comeses estotjaríem amom reforcéssem</Line>
+   <Line>recosíem esfèn telecomandam destorçara</Line>
+   <Line>atendaves amorteràrem envejàvem</Line>
+   <Line>avolesa soterrat entotsolar</Line>
+   <Line>retardarem asserenament venerarà</Line>
+   <Line>desossés malmesclant llefardaríem</Line>
+   <Line>armoll declamares terçades</Line>
+  </Level>
+  <Level>
+   <NewCharacters>hrü</NewCharacters>
+   <Line>rastellesses desenfarcellar forçat</Line>
+   <Line>anhelant lletreres remara decoloraràs</Line>
+   <Line>desarraconara tercers defenestrà electromotor</Line>
+   <Line>mofaran amorejar desencrosta</Line>
+   <Line>torcejarà trontollí encercolàs</Line>
+   <Line>esfondrades falcar recomanaríem</Line>
+   <Line>raso francmaçones assamarrarem</Line>
+   <Line>fondejares rondara entrenàrem marradejava</Line>
+   <Line>malserví emmerletem amorfes afartesses</Line>
+   <Line>desacorralen feren remarcàs assamarrades</Line>
+  </Level>
+  <Level>
+   <NewCharacters>goï</NewCharacters>
+   <Line>rotífer maregés colltorcerà</Line>
+   <Line>desgravat vagassegés torcejam</Line>
+   <Line>conhortades honorares comarcans</Line>
+   <Line>escassegesses clatellejo afetgegares</Line>
+   <Line>deshonrívol lladrons atemoríssem</Line>
+   <Line>astoraments remodela moradís tascones</Line>
+   <Line>realegrarem coratge ondegí assessoressen</Line>
+   <Line>correlant enjogassadament escaroten</Line>
+   <Line>conversegéssem canonéssem marcegem</Line>
+   <Line>desgleve desassossego torcada</Line>
+  </Level>
+  <Level>
+   <NewCharacters>bpl·l</NewCharacters>
+   <Line>desenrojolaran clamoregí debategar</Line>
+   <Line>aborronarem encrespàvem engolfem</Line>
+   <Line>capejat desemmerletara coralets</Line>
+   <Line>peonarà llocota apressats espentejada</Line>
+   <Line>espantàvem desmesclà bregares embascat</Line>
+   <Line>deportesses desborrats celebrador</Line>
+   <Line>escarpís esparpallats gansallant</Line>
+   <Line>premsat abalançaríem solvataràs</Line>
+   <Line>desempotés ponderàs angolesos anteposant</Line>
+   <Line>ensellarà enllaçaves sorollarem</Line>
+  </Level>
+  <Level>
+   <NewCharacters>quny</NewCharacters>
+   <Line>cadascuna esbrotonàrem enfadaríem</Line>
+   <Line>falsejàreu endolau condolgué arrengàveu</Line>
+   <Line>envellutaves nannaran tondosaré esbarrejaren</Line>
+   <Line>duraren mullena atapeísseu negrós</Line>
+   <Line>embrearan cananeu esbatuda camandulejàreu</Line>
+   <Line>pampalluguegesses empaquetàrem trafeguegesses</Line>
+   <Line>rafegut descabdellaríeu tufejat</Line>
+   <Line>destrenant assuaujares malmetent</Line>
+   <Line>conjuréssem ultratgésseu destrempaven</Line>
+   <Line>gallofejaren desoleu caçaven confessarem</Line>
+  </Level>
+  <Level>
+   <NewCharacters>wncc</NewCharacters>
+   <Line>esbatanésseu ensangonem embargaments</Line>
+   <Line>contraforadí emmorcarem acamussades</Line>
+   <Line>desatrac desencarregara provaven</Line>
+   <Line>asserenaràs regentats escopetejà</Line>
+   <Line>desaccentuarem entrava asserenaran</Line>
+   <Line>transsudeu acorralares rascladors</Line>
+   <Line>ulceraràs desempresonar octants</Line>
+   <Line>cèmbal copejament recalçar</Line>
+   <Line>catenes desenllosàveu enforno</Line>
+   <Line>vencereu cessa bastonera promoguessen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>cx</NewCharacters>
+   <Line>cuafí contrapassar desencerclades</Line>
+   <Line>escarufejau clatrats camuflau crestejaríeu</Line>
+   <Line>entretancarà gronxolàvem dutxaré</Line>
+   <Line>penedesc coneguem enxarxant corcares</Line>
+   <Line>escorçaràs cornésseu carburares</Line>
+   <Line>percaçàrem garfesc covers malencertam</Line>
+   <Line>encomanés recomencesses caganer</Line>
+   <Line>corejat falconers afermancéssem</Line>
+   <Line>educo malmesclaran escarxàveu</Line>
+   <Line>entrebancaven cabestro rebec desencastaren</Line>
+  </Level>
+  <Level>
+   <NewCharacters>yz</NewCharacters>
+   <Line>anyenca escanyoten grunya muntanyosos</Line>
+   <Line>embotzegam zumzejades enlleganyaren</Line>
+   <Line>embotzegàs esmorzades complanyesses</Line>
+   <Line>allenyats escanyussàs ressenyéssem</Line>
+   <Line>desentranyau benzofurans manyucléssem</Line>
+   <Line>brunzo besunyareu assenyaléssem</Line>
+   <Line>menyscabaven desenfonyara embotzegaríeu</Line>
+   <Line>magatzemera escarcanyada areny pertanys</Line>
+   <Line>despanyades estrenyereu embanyat</Line>
+   <Line>empenyalats desenyoraràs polzejàveu</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</NewCharacters>
+   <Line>Sorells Masos Campdevànol Montenegro</Line>
+   <Line>Iraq Cabanelles Camarasa</Line>
+   <Line>Macra Bompàs Laurentí Ix Salamanca</Line>
+   <Line>Urgell Armenter Justa Agatocles</Line>
+   <Line>Marçà Catral Massalfassar</Line>
+   <Line>Alda Paulí Anselm ESE Montlluís</Line>
+   <Line>Alfafar Sorollera Bolonya Leandre</Line>
+   <Line>Oxford Valença Sagàs Esdres</Line>
+   <Line>Isaura UPV Roger Aneto Corbera</Line>
+   <Line>Esteve Bulaternera Conflent</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

@@ -1,24 +1,15 @@
-######################################################################
-##
-# KTouch oefenbestand voor kinderen
-#
-# De woordkeuze werd gebaseerd op het
-# Perl Script geschreven door Steinar Theigmann & Haavard Friland.
+###################################### 
+#                                    # 
+#  Training lecture file for KTouch  # 
+#                                    # 
+###################################### 
+
+# Title: Nederlands Junior (nederlands voor kinderen)
+
+################################
+# Level: 1
 # 
-# Kenmerken van dit oefenbestand zijn :
-#                          1. Een zeer geleidelijke overgang van het 
-#                             ene niveau naar het andere, vooral in het
-#                             begin.
-#                          2. Een grote nadruk op het ritme
-#                          3. Herhaling
-#
-# Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
-# Dit document is een onderdeel van het KTouch programma en valt onder de 
-# bepalingen van de GNU General Public License versie 2 of recenter.
-#
-#
-#
-# Niveau 1
+# Comment: 
 j f
 jjj jjj jjj fff fff fff jjj fff fff jjj jjj
 jjf jjf jjf jfj jfj jfj jff jff jff jjf ffj
@@ -29,7 +20,10 @@ jf jjjj fjj ffj jjffj fjjjff jf jff j ffj jj
 ffjf j fjj ff ff j ffj jjffjf jjff jff fffj
 ff jjfj jj fffj jf ffjj jfj fjj jj jfff jff
 
-# Niveau 2
+################################
+# Level: 2
+# 
+# Comment: 
 g h
 ggg ggg hhh hhh ggg ggg hhh hhh ggg ggg hhh hhh
 jhj jhj jhj fgf fgf fgf fhg fhg fhg hgj hgj hgj
@@ -43,7 +37,10 @@ hfffj fg hff jgh hgjf fg hg jjg g hhhg fjfhh hggg hg
 jjgf hgjh jgh hgjh g hgjf hhfh fg jgh hhhg g g jg hfffj
 hhfh hhfh jfh hhfh fg hg hhfh hhfh jfh hhfh fghg
 
-# Niveau 3
+################################
+# Level: 3
+# 
+# Comment: 
 d k
 ddk ddk ddk kkd kkd kkd kkd kdk kdk kdk kdk kdk
 dkd dkd dkd dkd dfj dfj dfj dfj dfj kjf kjf kjf kjf
@@ -58,7 +55,10 @@ dhjh jgd fk hjd gkkj dhjh ggd kfg kjfk kj kf khfkd
 kg kg hdj kj dhjh khfkd gkkj dd gk kj dhf hd hjdh
 kjg dd hdj fk kj kjg kfg hd dj hd ggd gk jgd dj
 
-# Niveau 4
+################################
+# Level: 4
+# 
+# Comment: 
 l s
 lls lls lls lls ssl ssl ssl sls sls sls lsl lsl lsl lsl
 lss lss lss lss sll sll sll sdj sdj sdj sdk sdk sdk sdk
@@ -75,7 +75,10 @@ js sf sdkh sfs sg sg sdkh sl ld sdkh s s sdkh lgg
 ksjfl ld sdkh ld sfs gl ld s ld sdkh gsd sf s lk
 lg lgg js js lg sf gl lk klg dshf sf sk
 
-# Niveau 5
+################################
+# Level: 5
+# 
+# Comment: 
 q m
 qqq qqq qqq mmm mmm mmm qmm qmm qmm qmm mqq mqq mqq mqq
 qmq qmq qmq qmq qmq qmq qmq mqq mqq mqm mqm mqm mqm mqm
@@ -94,7 +97,10 @@ dsfq kgm lms llgm jmj km dsfq kgm lms llgm jmj km
 llgm mkk hq q jmj m jqs mmf llgm mkk hq q jmj m jqs mmf
 jm dsfq jm q hqff hqsk jm dsfq jm q hqff hqsk
 
-# Niveau 6
+################################
+# Level: 6
+# 
+# Comment: 
 t u
 tut tut tut tut fut fut fut fut tuf tuf tuf tuf tuf
 dus dus dus dus dus sul sul sul sul sul sul kus kus kus
@@ -105,7 +111,10 @@ smult smult smult smult tuft tuft tuft tuft jut jut jut
 gum gum gum gum hut hut hut hulst hulst hult hult hult
 klutst klutst klutst klutst klutst klutst klutst klutst
 
-# Niveau 7
+################################
+# Level: 7
+# 
+# Comment: 
 r i
 rir rir rir rir rir rir iri iri iri iri iri iri
 til til til til til stil stil stil stil tilt tilt tilt tilt
@@ -123,7 +132,10 @@ strijkt strijkt strijkt strijkt strijkt slik slik slik slik
 rust rust rust rust rust rustig rustig rustig rustig
 mistig mistig mistig mistig mistig
 
-# Niveau 8
+################################
+# Level: 8
+# 
+# Comment: 
 y e o
 ook ook ook ook ook pool pool pool pool rol rol rol rol
 ree ree ree ree de de de de de mee mee mee mee mee mee
@@ -139,7 +151,10 @@ koer koer koer koers koers koers koers
 tikje tikje tikje tikje modder modder modder modder
 liedje liedje liedje liedje soort soort soort soort
 
-# Niveau 9
+################################
+# Level: 9
+# 
+# Comment: 
 z a p
 pa pa papa papa za za zaza zaza zal zal zal zal zap zap zap zap
 pak pak pak pak pak kap kap kap kap kap pap pa pap pap pa
@@ -154,8 +169,10 @@ taai taai taai saai saai saai zuster zuster zuster
 lepel lepel lepel de zuster geeft de lepel
 kerel kerel raampje raampje raampje karamel karamel karamel
 
-
-# Niveau 10
+################################
+# Level: 10
+# 
+# Comment: 
 v n
 van van van van ven ven ven ven ven van ven van ven van
 vee vee vee nee nee nee vee nee vee nee vee nou nou nee nou vee
@@ -172,8 +189,10 @@ kijken kijken naar naar naar naar horizon horizon naar de horizon kijken
 ik ga naar het huis van de nar ik ga naar het huis van de nar
 morgen kunnen de mensen ook voor dit kiezen
 
-
-# Niveau 11
+################################
+# Level: 11
+# 
+# Comment: 
 b c
 och och ach ach och ach och ach bar bar och bar ach bar och bar
 bier bier baar bier baar baar bier baar boer boer bier baar boer bar beer
@@ -183,8 +202,10 @@ lachen lachen lachen ooit al een lachende beer gezien ooit al een lachende beer 
 boek boek boel boel boek een saaie boel een saai boek een saaie boel een saai boek
 broek broek broek gescheurd gescheurd zijn broek is gescheurd zijn broek is gescheurd
 
-
-# Niveau 12
+################################
+# Level: 12
+# 
+# Comment: 
 x w
 xxx www xxx www xxx www xxx www water water water wacht wacht wacht
 water wat water wat wat wonder wonder wat een wonder dat water wat een wonder dat water
@@ -193,15 +214,20 @@ wist jij dit al wie wijst er naar die lynx wist willywat hij wou doen
 waarom welke wie waaronder waar wie wonder warme wachten
 op weekdagen weten wij welke mensen wachten op de wegen
 
-
-# Niveau 13
+################################
+# Level: 13
+# 
+# Comment: 
 hoofdletters
 De delen Een eenhoorn Geld geven Daarom dachten wij Welke wegen nemen
 Sterke Jan en Willy gaan op stap Xavier is er ook bij Wat ga je doen
 Zeer erg Veel erger De Efteling Jan en Mieke gaan naar de Efteling
 Doe maar wat Ga voort Mijn hond heet Rex
 
-# Niveau 14
+################################
+# Level: 14
+# 
+# Comment: 
 leestekens
 Dit is een, en dat is twee. 
 Jan, Mieke, Maaike, Steffen en Rex, de hond, gingen wandelen.
@@ -215,7 +241,10 @@ En toen zei ze: "Ik sta hier." Maar hij hoorde haar niet. Toen riep ze: "Moet ik
 Het is nooit te laat. Rennen maar!
 Deze kerel heb ik nog nooit gezien! Jij wel?
 
-# Niveau 15
+################################
+# Level: 15
+# 
+# Comment: 
 Volzinnen
 De laatste tijd hebben wij jou hier niet veel meer gezien!
 Ga jij morgen terug naar school?
@@ -231,7 +260,10 @@ Ik dacht wel dat je mij herkend had. Of niet soms?
 Pas op! Straks trap je nog in die plas!
 Moeten wij nog ver stappen? Ik ben moe, mijn ogen vallen dicht en ik zou graag gaan slapen.
 
-# Niveau 16
+################################
+# Level: 16
+# 
+# Comment: 
 Rekenen
 1 2 3 123 4 5 6 456 7 8 9 789 120 130 140 150 230 395 382 456
 1 + 2 = 3; 1+2=3; 44+23=67; 41+60=102; Oei! Dat is fout! Het moet 101 zijn.
@@ -245,7 +277,11 @@ Het minteken is natuurlijk een gewoon liggend streepje, '-' dus.
 En nu aan de slag!
 1x1=1; 2x1=2; 3x1=3...
 
-# Niveau 17
+################################
+# Level: 17
+# 
+# Comment: 
 Einde
 Einde van de cursus. Proficiat!
+
 
