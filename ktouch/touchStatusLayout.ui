@@ -1,529 +1,474 @@
-<!DOCTYPE UI><UI>
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
 <class>TouchStatusLayout</class>
-<widget>
-    <class>QWidget</class>
-    <property stdset="1">
-        <name>name</name>
+<widget class="QWidget">
+    <property name="name">
         <cstring>TouchStatusLayout</cstring>
     </property>
-    <property stdset="1">
-        <name>geometry</name>
+    <property name="geometry">
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>580</width>
-            <height>83</height>
+            <width>856</width>
+            <height>93</height>
         </rect>
     </property>
-    <property stdset="1">
-        <name>sizePolicy</name>
+    <property name="sizePolicy">
         <sizepolicy>
             <hsizetype>7</hsizetype>
             <vsizetype>5</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
         </sizepolicy>
     </property>
-    <property stdset="1">
-        <name>caption</name>
+    <property name="caption">
         <string>Form1</string>
     </property>
-    <property stdset="1">
-        <name>iconText</name>
+    <property name="iconText">
         <string></string>
     </property>
-    <property>
-        <name>layoutMargin</name>
+    <property name="layoutMargin" stdset="0">
     </property>
-    <property>
-        <name>layoutSpacing</name>
+    <property name="layoutSpacing" stdset="0">
     </property>
     <hbox>
-        <property stdset="1">
-            <name>margin</name>
-            <number>4</number>
+        <property name="name">
+            <cstring>unnamed</cstring>
         </property>
-        <property stdset="1">
-            <name>spacing</name>
+        <property name="margin">
             <number>2</number>
         </property>
-        <widget>
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
+        <property name="spacing">
+            <number>2</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
                 <cstring>GroupBox1</cstring>
             </property>
-            <property stdset="1">
-                <name>sizePolicy</name>
+            <property name="sizePolicy">
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
                 </sizepolicy>
             </property>
-            <property stdset="1">
-                <name>title</name>
+            <property name="title">
                 <string>Level</string>
             </property>
             <grid>
-                <property stdset="1">
-                    <name>margin</name>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
                     <number>11</number>
                 </property>
-                <property stdset="1">
-                    <name>spacing</name>
+                <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget row="1"  column="1" >
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QPushButton" row="1" column="1">
+                    <property name="name">
                         <cstring>pushButtonLevelDown</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
                             <hsizetype>0</hsizetype>
                             <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>maximumSize</name>
+                    <property name="maximumSize">
                         <size>
                             <width>20</width>
                             <height>20</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>text</name>
+                    <property name="focusPolicy">
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property name="text">
                         <string>-</string>
                     </property>
                 </widget>
-                <widget row="0"  column="1" >
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QPushButton" row="0" column="1">
+                    <property name="name">
                         <cstring>pushButtonLevelUp</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
                             <hsizetype>0</hsizetype>
                             <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>minimumSize</name>
+                    <property name="minimumSize">
                         <size>
                             <width>20</width>
                             <height>20</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>maximumSize</name>
+                    <property name="maximumSize">
                         <size>
                             <width>20</width>
                             <height>20</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>text</name>
+                    <property name="focusPolicy">
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property name="text">
                         <string>+</string>
                     </property>
                 </widget>
-                <widget row="0"  column="0"  rowspan="2"  colspan="1" >
-                    <class>QLCDNumber</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QLCDNumber" row="0" column="0" rowspan="2" colspan="1">
+                    <property name="name">
                         <cstring>LCDLevel</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
                             <hsizetype>0</hsizetype>
                             <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>minimumSize</name>
+                    <property name="minimumSize">
                         <size>
                             <width>50</width>
                             <height>50</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>font</name>
+                    <property name="font">
                         <font>
                             <family>adobe-helvetica</family>
                             <pointsize>10</pointsize>
                         </font>
                     </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
+                    <property name="frameShape">
                         <enum>NoFrame</enum>
                     </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
+                    <property name="frameShadow">
                         <enum>Raised</enum>
                     </property>
-                    <property stdset="1">
-                        <name>numDigits</name>
+                    <property name="numDigits">
                         <number>3</number>
                     </property>
-                    <property stdset="1">
-                        <name>mode</name>
+                    <property name="mode">
                         <enum>DEC</enum>
                     </property>
-                    <property stdset="1">
-                        <name>segmentStyle</name>
+                    <property name="segmentStyle">
                         <enum>Flat</enum>
                     </property>
-                    <property>
-                        <name>toolTip</name>
+                    <property name="toolTip" stdset="0">
                         <string>Current level</string>
                     </property>
-                    <property>
-                        <name>whatsThis</name>
+                    <property name="whatsThis" stdset="0">
                         <string>This shows which level you are at.</string>
                     </property>
                 </widget>
             </grid>
         </widget>
-        <widget>
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
+        <widget class="QGroupBox">
+            <property name="name">
                 <cstring>GroupBox11</cstring>
             </property>
-            <property stdset="1">
-                <name>sizePolicy</name>
+            <property name="sizePolicy">
                 <sizepolicy>
                     <hsizetype>0</hsizetype>
                     <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
                 </sizepolicy>
             </property>
-            <property stdset="1">
-                <name>title</name>
+            <property name="title">
                 <string>Speed</string>
             </property>
             <grid>
-                <property stdset="1">
-                    <name>margin</name>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
                     <number>11</number>
                 </property>
-                <property stdset="1">
-                    <name>spacing</name>
+                <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget row="0"  column="0" >
-                    <class>QLCDNumber</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QLCDNumber" row="0" column="0">
+                    <property name="name">
                         <cstring>LCDSpeed</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
-                            <hsizetype>5</hsizetype>
-                            <vsizetype>5</vsizetype>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>minimumSize</name>
+                    <property name="minimumSize">
                         <size>
                             <width>50</width>
                             <height>50</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>font</name>
+                    <property name="font">
                         <font>
                             <family>adobe-helvetica</family>
                             <pointsize>10</pointsize>
                         </font>
                     </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
+                    <property name="frameShape">
                         <enum>NoFrame</enum>
                     </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
+                    <property name="frameShadow">
                         <enum>Raised</enum>
                     </property>
-                    <property stdset="1">
-                        <name>margin</name>
+                    <property name="margin">
                         <number>0</number>
                     </property>
-                    <property stdset="1">
-                        <name>midLineWidth</name>
+                    <property name="midLineWidth">
                         <number>0</number>
                     </property>
-                    <property stdset="1">
-                        <name>numDigits</name>
+                    <property name="numDigits">
                         <number>3</number>
                     </property>
-                    <property stdset="1">
-                        <name>segmentStyle</name>
+                    <property name="segmentStyle">
                         <enum>Flat</enum>
                     </property>
-                    <property>
-                        <name>toolTip</name>
+                    <property name="toolTip" stdset="0">
                         <string>Character/ Minute</string>
                     </property>
-                    <property>
-                        <name>whatsThis</name>
+                    <property name="whatsThis" stdset="0">
                         <string>This shows how fast you are typing. It measures it in characters per minute.</string>
                     </property>
                 </widget>
             </grid>
         </widget>
-        <widget>
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
+        <widget class="QGroupBox">
+            <property name="name">
                 <cstring>GroupBox12</cstring>
             </property>
-            <property stdset="1">
-                <name>sizePolicy</name>
+            <property name="sizePolicy">
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
                 </sizepolicy>
             </property>
-            <property stdset="1">
-                <name>frameShape</name>
+            <property name="frameShape">
                 <enum>Box</enum>
             </property>
-            <property stdset="1">
-                <name>title</name>
+            <property name="title">
                 <string>Correctness</string>
             </property>
-            <grid>
-                <property stdset="1">
-                    <name>margin</name>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
                     <number>11</number>
                 </property>
-                <property stdset="1">
-                    <name>spacing</name>
+                <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget row="1"  column="0" >
-                    <class>QProgressBar</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <spacer>
+                    <property name="name" stdset="0">
+                        <cstring>Spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QProgressBar">
+                    <property name="name">
                         <cstring>LCDCorrect</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
                             <hsizetype>3</hsizetype>
                             <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>minimumSize</name>
+                    <property name="minimumSize">
                         <size>
                             <width>0</width>
-                            <height>50</height>
+                            <height>25</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>maximumSize</name>
+                    <property name="maximumSize">
                         <size>
                             <width>300</width>
                             <height>32767</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
+                    <property name="frameShape">
                         <enum>NoFrame</enum>
                     </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
+                    <property name="frameShadow">
                         <enum>Plain</enum>
                     </property>
-                    <property stdset="1">
-                        <name>indicatorFollowsStyle</name>
+                    <property name="indicatorFollowsStyle">
                         <bool>true</bool>
                     </property>
-                    <property>
-                        <name>toolTip</name>
+                    <property name="toolTip" stdset="0">
                         <string>How much are you typing correctly?</string>
                     </property>
-                    <property>
-                        <name>whatsThis</name>
+                    <property name="whatsThis" stdset="0">
                         <string>This shows how correctly you are typing.</string>
                     </property>
                 </widget>
-            </grid>
+            </vbox>
         </widget>
-        <widget>
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
+        <widget class="QGroupBox">
+            <property name="name">
                 <cstring>GroupBox4</cstring>
             </property>
-            <property stdset="1">
-                <name>sizePolicy</name>
+            <property name="sizePolicy">
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
                 </sizepolicy>
             </property>
-            <property stdset="1">
-                <name>title</name>
+            <property name="title">
                 <string>New characters</string>
             </property>
             <grid>
-                <property stdset="1">
-                    <name>margin</name>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
                     <number>11</number>
                 </property>
-                <property stdset="1">
-                    <name>spacing</name>
+                <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget row="0"  column="0" >
-                    <class>QLabel</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
                         <cstring>message</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
+                    <property name="sizePolicy">
                         <sizepolicy>
                             <hsizetype>3</hsizetype>
                             <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property stdset="1">
-                        <name>minimumSize</name>
+                    <property name="minimumSize">
                         <size>
                             <width>0</width>
                             <height>50</height>
                         </size>
                     </property>
-                    <property stdset="1">
-                        <name>font</name>
+                    <property name="font">
                         <font>
                             <family>adobe-helvetica</family>
                             <pointsize>14</pointsize>
                             <bold>1</bold>
                         </font>
                     </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
+                    <property name="frameShape">
                         <enum>NoFrame</enum>
                     </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
+                    <property name="frameShadow">
                         <enum>Plain</enum>
                     </property>
-                    <property stdset="1">
-                        <name>text</name>
+                    <property name="text">
                         <string>Test</string>
                     </property>
-                    <property stdset="1">
-                        <name>scaledContents</name>
+                    <property name="scaledContents">
                         <bool>true</bool>
                     </property>
-                    <property stdset="1">
-                        <name>alignment</name>
+                    <property name="alignment">
                         <set>AlignCenter</set>
                     </property>
-                    <property>
-                        <name>hAlign</name>
+                    <property name="hAlign" stdset="0">
                     </property>
-                    <property>
-                        <name>wordwrap</name>
+                    <property name="wordwrap" stdset="0">
                     </property>
                 </widget>
             </grid>
         </widget>
         <spacer>
-            <property>
-                <name>name</name>
+            <property name="name" stdset="0">
                 <cstring>Spacer1</cstring>
             </property>
-            <property stdset="1">
-                <name>orientation</name>
+            <property name="orientation">
                 <enum>Horizontal</enum>
             </property>
-            <property stdset="1">
-                <name>sizeType</name>
+            <property name="sizeType">
                 <enum>Fixed</enum>
             </property>
-            <property>
-                <name>sizeHint</name>
+            <property name="sizeHint">
                 <size>
                     <width>20</width>
                     <height>20</height>
                 </size>
             </property>
         </spacer>
-        <widget>
-            <class>QLayoutWidget</class>
-            <property stdset="1">
-                <name>name</name>
+        <widget class="QLayoutWidget">
+            <property name="name">
                 <cstring>Layout2</cstring>
             </property>
             <vbox>
-                <property stdset="1">
-                    <name>margin</name>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
                     <number>0</number>
                 </property>
-                <property stdset="1">
-                    <name>spacing</name>
+                <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget>
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QPushButton">
+                    <property name="name">
                         <cstring>pauseButton</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>text</name>
+                    <property name="focusPolicy">
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property name="text">
                         <string>Pause</string>
                     </property>
-                    <property stdset="1">
-                        <name>toggleButton</name>
+                    <property name="toggleButton">
                         <bool>true</bool>
                     </property>
-                    <property stdset="1">
-                        <name>on</name>
+                    <property name="on">
                         <bool>false</bool>
                     </property>
-                    <property stdset="1">
-                        <name>toggleButton</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
-                        <name>on</name>
-                        <bool>false</bool>
-                    </property>
-                    <property>
-                        <name>toolTip</name>
+                    <property name="toolTip" stdset="0">
                         <string>Press to have a break ;-)</string>
                     </property>
-                    <property>
-                        <name>whatsThis</name>
+                    <property name="whatsThis" stdset="0">
                         <string>When you want to have a break, press this to stop KTouch from calculating speed and changing levels.</string>
                     </property>
                 </widget>
-                <widget>
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
+                <widget class="QPushButton">
+                    <property name="name">
                         <cstring>statButton</cstring>
                     </property>
-                    <property stdset="1">
-                        <name>text</name>
+                    <property name="focusPolicy">
+                        <enum>NoFocus</enum>
+                    </property>
+                    <property name="text">
                         <string>Stat</string>
                     </property>
-                    <property stdset="1">
-                        <name>toggleButton</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
-                        <name>toggleButton</name>
+                    <property name="toggleButton">
                         <bool>true</bool>
                     </property>
                 </widget>
@@ -556,11 +501,14 @@
         <receiver>TouchStatusLayout</receiver>
         <slot>showStatChanged(int)</slot>
     </connection>
-    <slot access="public">levelForcedDown()</slot>
-    <slot access="public">levelForcedUp()</slot>
-    <slot access="public">showStatChanged(int)</slot>
-    <slot access="public">runningStateChanged(int)</slot>
-    <slot access="public">startKTouch()</slot>
-    <slot access="public">stopKTouch()</slot>
 </connections>
+<slots>
+    <slot>levelForcedDown()</slot>
+    <slot>levelForcedUp()</slot>
+    <slot>showStatChanged(int)</slot>
+    <slot>runningStateChanged(int)</slot>
+    <slot>startKTouch()</slot>
+    <slot>stopKTouch()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
 </UI>

@@ -38,12 +38,6 @@ TouchStatus::TouchStatus(QWidget * parent, const char * name)
 
 	timer = new QTimer(this,"timer");
 
-	// avoid the buttons to steal keypresses
-	pauseButton					-> setFocusPolicy(QWidget::NoFocus);
-	statButton						-> setFocusPolicy(QWidget::NoFocus);
-	pushButtonLevelUp		-> setFocusPolicy(QWidget::NoFocus);
-	pushButtonLevelDown 	-> setFocusPolicy(QWidget::NoFocus);
-
 	connect( timer, SIGNAL(timeout()), SLOT(calculate()));
 	timer->start(500,false);
 }
