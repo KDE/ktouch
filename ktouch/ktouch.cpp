@@ -48,17 +48,14 @@ KTouch::KTouch():KMainWindow()
 	config=kapp->config();
 	dirs = KGlobal::dirs();
 
-	kapp->setMainWidget(this);
+//	kapp->setMainWidget(this);
 
 	touchLecture = new TouchLecture();
-
-	touchStat = new TouchStat();
-
+	touchStat    = new TouchStat();
 	QVBox * view = new QVBox ( this );
+	touchStatus  = new TouchStatus( view );
 
-	touchStatus = new TouchStatus( view );
-
-	touchLine = new TouchLine(view,"touchLine",touchLecture);
+	touchLine    = new TouchLine(view,"touchLine",touchLecture);
 	view->setStretchFactor(touchLine,1);
 
 	touchKeyboard = new TouchKeyboard(view);
