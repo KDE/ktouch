@@ -1,0 +1,5 @@
+To get files with words:
+$ aspell dump master hash_file
+
+Usage:
+python ktouchgen.py english_word english.conf  english.ktouch

@@ -1,0 +1,8 @@
+To get files with words:
+$ aspell dump master hash_file
+
+Compile the program:
+$ gcc ktouchgen.c -o ktouchgen
+
+Run the program:
+$ ./ktouchgen english_conf english_word english.ktouch

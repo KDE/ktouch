@@ -1,0 +1,190 @@
+# Configfile for ktouchgen.py
+# For Documentation see ktouchgen.by
+
+[Main]
+level_rows = 40
+row_length = 70
+
+[Level1]
+lchars = jf
+title = mainregion jf
+rows = 10
+type = 2
+
+[Level2]
+lchars = kd
+title = mainregion kd
+rows = 10
+type = 2
+
+[Level3]
+lchars = ls
+title = mainregion ls
+rows = 10
+type = 2
+
+[Level4]
+lchars = a;
+title = mainregion a;
+rows = 10
+type = 2
+
+[Level5]
+lchars = asdfjkl;
+title = mainregion practice
+
+[Level6]
+lchars = ei
+rows = 10
+type = 2
+
+[Level7]
+title = practice ei
+lchars = ei
+
+[Level8]
+lchars = ur
+rows = 10
+type = 2
+
+[Level9]
+title = practice ru
+lchars = ru
+
+[Level10]
+lchars = gh
+rows = 10
+type = 2
+
+[Level11]
+lchars = gh
+title = practice gh
+
+[Level12]
+lchars = ty
+type = 2  
+rows = 10
+
+[Level13]
+lchars = ty
+title = practice ty
+
+[Level14]
+lchars = ghty
+title = practice ghty
+
+[Level15]
+lchars = vn
+type = 2  
+rows = 10
+
+[Level16]
+lchars = vn
+title = practice vn
+
+[Level17]
+lchars = mc
+type = 2  
+rows = 10
+
+[Level18]
+lchars = mc
+title = practice mc
+
+[Level19]
+lchars = b
+type = 2  
+rows = 10
+
+[Level20]
+lchars = by
+title = practice by
+
+[Level21]
+lchars = cvbynm
+title = practice by
+
+[Level22]
+lchars = ow
+type = 2  
+rows = 10
+
+[Level23]
+lchars = ow
+title = practice ow
+
+[Level24]
+lchars = pq
+type = 2  
+rows = 10
+
+[Level25]
+lchars = oq
+title = practice pq
+
+[Level26]
+lchars = ['
+type = 2  
+rows = 10
+
+[Level27]
+lchars = qwop['
+title = practice qwoop['
+
+[Level28]
+lchars = xz
+type = 2  
+rows = 10
+
+[Level29]
+lchars = xz
+title = practice xz
+
+[Level30]
+lchars = ,.
+type = 2  
+rows = 10
+
+[Level31]
+lchars = JUYHNM
+type = 2  
+rows = 10
+
+[Level32]
+lchars = JUYHNM
+title = practice JUYHNM
+
+[Level33]
+lchars = FRTGBV
+type = 2  
+rows = 10
+
+[Level34]
+lchars = FRTGBV
+title = practice FRTGBV
+
+[Level35]
+lchars = EDCWSXQAZ
+type = 2 
+rows = 10
+
+[Level36]
+lchars = EDCWSXQAZ
+title = practice EDCWSXQAZ
+
+[Level37]
+lchars = IKOLP;:
+type = 2  
+rows = 10 
+
+[Level38]
+lchars = IKOLP;:
+title = practice IKOLP;:
+
+[Level39]
+lchars = QWERTYUIOPLKJHGFDSAZXCVBNM;:
+title = Gesamtübung
+
+
+
+
