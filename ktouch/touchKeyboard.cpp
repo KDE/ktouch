@@ -142,9 +142,9 @@ void TouchKeyboard::loadKeyboard(QString lang)
 	const int maxPara=10;
   if(lang.isEmpty())
     lang="en";
-  ifstream ifs(dirs->findResource ("data","ktouch/keyboard." + lang).latin1(), ios::in);
+  ifstream ifs(dirs->findResource("data","ktouch/keyboard." + lang).latin1(), ios::in);
   if (!ifs) {
-    cerr << "Error: unable to open keyboard" << dirs->findResource ("data","ktouch/keyboard." + lang).latin1() << endl;
+    cerr << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/keyboard." + lang).latin1() << endl;
   }
   else
 	{
@@ -161,7 +161,6 @@ void TouchKeyboard::loadKeyboard(QString lang)
 				if(!(buffer[0]=='#'))
 				{
         	line=buffer;
-//					string separators = " \"\t";
 					string separators = " \t";
 					unsigned int start=line.find_first_not_of(separators);
 					unsigned int end=0;

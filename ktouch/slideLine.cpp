@@ -29,7 +29,7 @@ SlideLine::SlideLine(QWidget *parent, const char *name)
   cursorCount=0;
   font = QFont("adobe-courier", width()/4);
   needRecreate=true;
-  showError=false;
+  error=false;
 
   timer = new QTimer(this,"timer");
   connect( timer, SIGNAL(timeout()),SLOT(slide()));
@@ -124,9 +124,9 @@ void SlideLine::paintEvent( QPaintEvent * )
     QPainter painter;
     painter.begin (pixmap, this);
     {
-      if(showError)
+      if(error)
       {
-        painter.fillRect (0,height()/2,pixmapSize,height(),QColor(255,0,0));
+        painter.fillRect (0,height()/2,pixmapSize,height(),errorColor);
       }
       else
       {

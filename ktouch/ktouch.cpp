@@ -171,7 +171,9 @@ void KTouch::saveOptions()
   //** General ****************************************************************
   config->setGroup("General");
   config->writeEntry("Beep on error",touchStatus->errorSound);
-  config->writeEntry("Color on error",touchLine->showError);
+  config->writeEntry("Color on error",touchLine->getShowError());
+
+  config->writeEntry("ErrorColor",(QColor)touchLine->getErrorColor());
 }
 
 void KTouch::readOptions()
@@ -230,7 +232,10 @@ void KTouch::readOptions()
   config->setGroup("General");
 
   touchStatus->errorSound=config->readBoolEntry("Beep on error",true);
-  touchLine->showError=config->readBoolEntry("Color on error",true);
+  touchLine->setShowError(config->readBoolEntry("Color on error",true));
+
+  QColor color(255,150,150);
+  touchLine->setErrorColor(config->readColorEntry("ErrorColor",&color));
 }
 
 bool KTouch::queryExit()
@@ -279,7 +284,8 @@ void KTouch::slotFileQuit()
 {
   cout << "exit" << endl;
   slotStatusMsg(i18n("Exiting..."));
-  exit(0);
+  //saveOptions();
+  close();
 }
 
 void KTouch::slotViewToolBar()
@@ -375,12 +381,14 @@ void KTouch::slotOptionGeneral()
 {
   OptionGeneral *optionGeneral=new OptionGeneral(this,"generalOptionDialog",true);
   optionGeneral->beepOnError->setChecked(touchStatus->errorSound);
-  optionGeneral->colorOnError->setChecked(touchLine->showError);
+  optionGeneral->colorOnError->setChecked(touchLine->getShowError());
+  optionGeneral->showColor->setPalette(QPalette(touchLine->getErrorColor()));
   int result = optionGeneral->exec();
   if(result==1)
   {
-     touchStatus->errorSound=(optionGeneral->beepOnError->isChecked());
-     touchLine->showError=(optionGeneral->colorOnError->isChecked());
+     touchStatus->errorSound=optionGeneral->beepOnError->isChecked();
+     touchLine->setShowError(optionGeneral->colorOnError->isChecked());
+     touchLine->setErrorColor(optionGeneral->showColor->backgroundColor());
   }
   delete optionGeneral;
 }

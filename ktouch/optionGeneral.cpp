@@ -26,6 +26,17 @@ OptionGeneral::~OptionGeneral()
 {
 }
 
+void OptionGeneral::setColor()
+{
+  QColor newColor;
+  newColor=showColor->backgroundColor();
+  int result = KColorDialog::getColor( newColor );
+  if ( result == KColorDialog::Accepted )
+  {
+    showColor->setBackgroundColor( newColor );
+  }
+}
+
 void OptionGeneral::keyPressEvent(QKeyEvent *)
 {
   //just to stop the keyPressEvent to go to the main window.

@@ -22,7 +22,6 @@
 TouchLine::TouchLine(QWidget * parent, const char * name, TouchLecture *l)
          : TouchLineLayout( parent, name )
 {
-  showError = false;
 	teacherLine = "";
 	studentLine = "";
 	lecture = l;
@@ -66,7 +65,7 @@ void TouchLine::keyPressed(QChar e)
       {
         emit isError();
         if(showError)
-          line->showError=true;
+          line->error=true;
         // Backspace
         emit nextKey((char)8);
       }
@@ -82,7 +81,7 @@ void TouchLine::keyPressed(QChar e)
         if (teacherLine.left(pos)==studentLine)
   	    {
           emit isOk();
-          line->showError=false;
+          line->error=false;
           emit nextKey(teacherLine[pos]);
         }
   			else
@@ -126,4 +125,24 @@ void TouchLine::stop()
 void TouchLine::start()
 {
   stopped=false;
+}
+
+bool TouchLine::getShowError()
+{
+  return showError;
+}
+
+void TouchLine::setShowError(bool s)
+{
+  showError=s;
+}
+
+QColor TouchLine::getErrorColor()
+{
+  return line->errorColor;
+}
+
+void TouchLine::setErrorColor(QColor c)
+{
+  line->errorColor=c;
 }

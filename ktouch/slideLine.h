@@ -35,7 +35,8 @@ public:
   void setTeacherText(QString text);
   void setStudentText(QString text);
   float offset;
-  bool showError;
+  bool error;
+  QColor errorColor;
 
 protected:
  	void paintEvent  ( QPaintEvent * );

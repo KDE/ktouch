@@ -22,7 +22,11 @@
 #include <config.h>
 #endif
 
+#include <qcolor.h>
+#include <kcolordialog.h>
+
 #include "optionGeneralDlg.h"
+
 
 class OptionGeneral : public OptionGeneralDlg  {
    Q_OBJECT
@@ -31,6 +35,9 @@ public:
    OptionGeneral(QWidget *parent=0, const char *name=0,bool modal=true);
           /** destructor */
    ~OptionGeneral();
+
+protected slots:
+   void setColor();
 
 protected:
    virtual void keyPressEvent(QKeyEvent *);

@@ -18,6 +18,8 @@
 #ifndef TOUCHLINE_H
 #define TOUCHLINE_H
 
+#include <qcolor.h>
+
 #include "touchlecture.h"
 #include "touchLineLayout.h"
 #include "slideLine.h"
@@ -28,7 +30,11 @@ class TouchLine: public TouchLineLayout
 public:
   TouchLine(QWidget *parent=0, const char *name=0,TouchLecture *myLecture=0);
 	~TouchLine();
-  bool showError;
+	bool getShowError();
+	void setShowError(bool s);
+	
+	QColor getErrorColor();
+	void setErrorColor(QColor);
 
 public slots:
   void setTeacherLine(const QString&);
@@ -52,6 +58,7 @@ private:
   QString studentLine;
   TouchLecture *lecture;
   bool stopped;
+  bool showError;
 
 
 };
