@@ -1,3 +1,8 @@
+2004-04-02  Andreas Nicolai <andreas.nicolai@gmx.net>
+   (develop)
+   * Fixed a bug in ktouch.cpp (wrong slots type)
+   * Cleaned up some files
+
 2003-05-19  Haavard Froeiland <haavard@users.sourceforge.net>
    (develop)
    * Added an extra keyboard colour scheme
