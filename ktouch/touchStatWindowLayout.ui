@@ -226,7 +226,7 @@
                                     <cstring>totalErrorLable</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Misstyped char:</string>
+                                    <string>Miss-typed char:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="3" column="0">
