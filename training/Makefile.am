@@ -4,5 +4,6 @@ training_DATA = english.ktouch \
 number.ktouch \
 norwegian.ktouch \
 french.ktouch \
-french-2.ktouch
+french-2.ktouch \
+german.ktouch
 
