@@ -50,7 +50,7 @@ sub genlist
     foreach(@word_list)
     {
 	chomp($_);
-	if (m/[$core]/ && m/^[rr($all)][$all]*$/)
+	if (m/[$core]/ && m/^[($all)][$all]*$/)
 	{
 	    push @res,$_;
 	}
