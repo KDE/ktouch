@@ -73,8 +73,5 @@ int main(int argc, char **argv)
         args->clear();
     }
 
-    int ret = app.exec();
-
-    delete mainWin;
-    return ret;
+    return app.exec();
 }
