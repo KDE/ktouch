@@ -12,7 +12,7 @@ FingerKey       102             F               48      20
 FingerKey       106             J               78      20
 FingerKey       107             K               88      20
 FingerKey       108             L               98      20
-FingerKey       246             Ö               108     20
+FingerKey       246             Ã–               108     20
 #
 #               Ascii           KeyText         x       y       Width	Hight
 #
@@ -30,7 +30,7 @@ ControlKey      8               BackSpace      130     0       20	10
 #
 #               Ascii           KeyText         x       y       FingerKey
 #
-NormalKey       167             §                       0       0       97
+NormalKey       167             Â§                       0       0       97
 NormalKey       49              1                       10      0       97
 NormalKey       50              2                       20      0       115
 NormalKey       51              3                       30      0       100
@@ -55,12 +55,12 @@ NormalKey       117             U                       75      10      106
 NormalKey       105             I                       85      10      107
 NormalKey       111             O                       95      10      108
 NormalKey       112             P                       105     10      246
-NormalKey       252             Ü                       115     10      246
+NormalKey       252             Ãœ                       115     10      246
 NormalKey       43              ?                       125     10      246
 #
 NormalKey       103             G                       58      20      102
 NormalKey       104             H                       68      20      106
-NormalKey       228             Ä                       118     20      246
+NormalKey       228             Ã„                       118     20      246
 NormalKey       35              $                       128     20      246
 #
 NormalKey       60              <                       13      30      97
@@ -106,11 +106,11 @@ HiddenKey       89              121                     97      258	#Y
 HiddenKey       90              122                     106     257	#Z
 #
 HiddenKey       62              60                      97      258	#>
-HiddenKey       167             167                     97      258	#°
+HiddenKey       167             167                     97      258	#Â°
 HiddenKey       43              49                      97      258	#+
 HiddenKey       34              50                      97      258	#"
 HiddenKey       42              51                      115     258	#*
-HiddenKey       135             52                      100     258	#ç
+HiddenKey       135             52                      100     258	#Ã§
 HiddenKey       37              53                      102     258	#%
 HiddenKey       38              54                      102     258	#&
 HiddenKey       47              55                      106     257	#/
@@ -120,11 +120,11 @@ HiddenKey       61              48                      108     257	#=
 HiddenKey       63              39                      246     257	#?
 HiddenKey       96              94                      246     257	#`
 #
-HiddenKey       138             252                     246     257	#è
+HiddenKey       138             252                     246     257	#Ã¨
 HiddenKey       33              43                      246     257	#!
-HiddenKey       130             246                     246     257	#é
-HiddenKey       133             228                     246     257	#à
-HiddenKey       156             35                      246     257	#£
+HiddenKey       130             246                     246     257	#Ã©
+HiddenKey       133             228                     246     257	#Ã 
+HiddenKey       156             35                      246     257	#Â£
 HiddenKey       59              44                      107     257	#;
 HiddenKey       58              46                      108     257	#:
 HiddenKey       95              45                      246     257	#_
@@ -132,7 +132,7 @@ HiddenKey       95              45                      246     257	#_
 HiddenKey       179             49                      97      264	#|
 HiddenKey       64              50                      97      264	#@
 HiddenKey       35              51                      115     264	##
-HiddenKey       170             54                      102     264	#¬
+HiddenKey       170             54                      102     264	#Â¬
 HiddenKey       124             55                      102     264	#?
 HiddenKey       126             94                      246     264	#~
 HiddenKey       91              252                     246     264	#[

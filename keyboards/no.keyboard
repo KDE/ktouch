@@ -12,7 +12,7 @@ FingerKey  102		F				48  20
 FingerKey  106		J				78  20
 FingerKey  107		K				88  20
 FingerKey  108		L				98  20
-FingerKey  230		Ø				108 20
+FingerKey  230		Ã˜				108 20
 #
 #					Assci	KeyText		x		y		Width Height
 #
@@ -54,12 +54,12 @@ NormalKey	117		U					75	10	106
 NormalKey	105		I					85	10	107
 NormalKey	111		O					95	10	108
 NormalKey	112		P					105	10	230
-NormalKey	91		Å					115	10	230
+NormalKey	91		Ã…					115	10	230
 NormalKey	93		~					125	10	230
 #
 NormalKey	103		G					58	20	102
 NormalKey	104		H					68	20	106
-NormalKey	39		Æ					118	20	230
+NormalKey	39		Ã†					118	20	230
 #
 NormalKey	60		<					13	30	97
 NormalKey	122		Z					23	30	97
@@ -101,6 +101,6 @@ HiddenKey	87		119		115		258 	   #W
 HiddenKey	88		120		115		258 	   #X
 HiddenKey	89		121		106		258 	   #Y
 HiddenKey	90		122		97		258 	   #Z
-HiddenKey	216		39		230		258 	   #Æ
-HiddenKey	198		230		230		258 	   #ø
-HiddenKey	197		91		230		258 	   #Å
+HiddenKey	216		39		230		258 	   #Ã†
+HiddenKey	198		230		230		258 	   #Ã¸
+HiddenKey	197		91		230		258 	   #Ã…
