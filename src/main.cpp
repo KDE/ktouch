@@ -43,6 +43,7 @@ int main(int argc, char **argv)
                      "submit@bugs.kde.org");
     about.addAuthor( "Haavard Froeiland", 0, "haavard@users.sourceforge.net" );
     about.addAuthor( "Andreas Nicolai", 0, "Andreas.Nicolai@gmx.net" );
+    about.addCredit( "David Vignoni", I18N_NOOP("SVG icon" ), "david80v@tin.it");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
     KApplication app;
