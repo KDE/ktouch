@@ -1,0 +1,25 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="ktouch" version="2">
+<MenuBar>
+  <Menu name="training"><text>T&amp;raining</text>
+    <Action name="training_newsession" />
+    <Action name="training_run" />
+    <Action name="training_pause" />
+    <Separator/>
+    <Action name="training_stats" />
+    <Separator/>
+    <Action name="lecture_edit" />
+  </Menu>
+  <Menu name="settings"><text>&amp;Settings</text>
+    <ActionList name="keyboard_layouts" />
+    <ActionList name="standard_lectures" />
+  </Menu>
+</MenuBar>
+<ToolBar name="mainToolBar"><text>Main Toolbar</text>
+  <Action name="training_newsession" />
+  <Action name="training_run" />
+  <Action name="training_pause" />
+  <Separator/>
+  <Action name="training_stats" />
+</ToolBar>
+</kpartgui>
