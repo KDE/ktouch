@@ -243,6 +243,12 @@
                 <item>
                     <property>
                         <name>text</name>
+                        <string>it</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
                         <string>la</string>
                     </property>
                 </item>
