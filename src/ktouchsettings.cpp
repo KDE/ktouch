@@ -179,7 +179,7 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
 
-    color.m_name = "Deep blue";
+    color.m_name = "Deep Blue";
     color.m_frame = QColor(220,220,220);
     color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
     color.m_background[1] = QColor( 39, 59,127);     color.m_background[5] = QColor(  8, 44,124);

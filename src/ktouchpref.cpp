@@ -43,25 +43,25 @@
 
 KTouchPref::KTouchPref() : KDialogBase(IconList, i18n("KTouch Preferences"), Default|Ok|Apply|Cancel, Ok) {
     // adding page "General options"
-    QFrame *frame = addPage(i18n("General"), i18n("General options"),
+    QFrame *frame = addPage(i18n("General"), i18n("General Options"),
         KGlobal::iconLoader()->loadIcon("style",KIcon::Panel,0,false) );
     QVBoxLayout *frameLayout = new QVBoxLayout( frame, 0, 0 );
     m_pageGeneral = new KTouchPrefGeneral(frame);
     frameLayout->addWidget(m_pageGeneral);
     // adding page "Training options"
-    frame = addPage(i18n("Training"), i18n("Training options"),
+    frame = addPage(i18n("Training"), i18n("Training Options"),
         KGlobal::iconLoader()->loadIcon("kalarm",KIcon::Panel,0,false) );
     frameLayout = new QVBoxLayout( frame, 0, 0 );
     m_pageTraining = new KTouchPrefTraining(frame);
     frameLayout->addWidget(m_pageTraining);
     // adding page "Keyboard settings"
-    frame = addPage(i18n("Keyboard"), i18n("Keyboard settings"),
+    frame = addPage(i18n("Keyboard"), i18n("Keyboard Settings"),
         KGlobal::iconLoader()->loadIcon("keyboard_layout",KIcon::Panel,0,false) );
     frameLayout = new QVBoxLayout( frame, 0, 0 );
     m_pageKeyboard = new KTouchPrefKeyboard(frame);
     frameLayout->addWidget(m_pageKeyboard);
     // adding page "Color settings"
-    frame = addPage(i18n("Colors"), i18n("Color settings"),
+    frame = addPage(i18n("Colors"), i18n("Color Settings"),
         KGlobal::iconLoader()->loadIcon("package_graphics",KIcon::Panel,0,false) );
     frameLayout = new QVBoxLayout( frame, 0, 0 );
     m_pageColors = new KTouchPrefColors(frame);
