@@ -1,6 +1,71 @@
+From gunner@gnuskole.dk Sat Apr 19 20:28:36 2003
+Return-Path: <gunner@gnuskole.dk>
+X-Original-To: hfroilan@broadpark.no
+Delivered-To: hfroilan@broadpark.no
+Received: from citicorp.hypnotech.no (citicorp.hypnotech.no [194.63.248.20])
+	by mail.broadpark.no (Postfix) with ESMTP id 84A757860D
+	for <hfroilan@broadpark.no>; Sat, 19 Apr 2003 21:29:51 +0200 (MEST)
+Received: from sc8-sf-list1.sourceforge.net (lists.sourceforge.net [66.35.250.206])
+	by citicorp.hypnotech.no (8.12.9/8.12.9) with ESMTP id h3JJTogU015584
+	for <haavard@solveien.net>; Sat, 19 Apr 2003 21:29:50 +0200
+Received: from 0x503feb52.abnxx3.adsl-dhcp.tele.dk ([80.63.235.82] helo=Guldbasse3)
+	by sc8-sf-list1.sourceforge.net with esmtp 
+	(Cipher TLSv1:DES-CBC3-SHA:168) (Exim 3.31-VA-mm2 #1 (Debian))
+	id 196y1V-0005IB-00
+	for <haavard@users.sourceforge.net>; Sat, 19 Apr 2003 12:29:18 -0700
+Received: from [127.0.0.1] (helo=gnuskole.dk)
+	by Guldbasse3 with esmtp (Exim 3.36 #1)
+	id 196y0q-0001HT-00; Sat, 19 Apr 2003 21:28:36 +0200
+Message-ID: <3EA1A364.1040807@gnuskole.dk>
+Date: Sat, 19 Apr 2003 21:28:36 +0200
+From: Gunner Poulsen <gunner@gnuskole.dk>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; da-DK; rv:1.3) Gecko/20030314
+X-Accept-Language: da,en
+MIME-Version: 1.0
+To: haavard@users.sourceforge.net
+Cc: "Erik K. Pedersen" <erik@binghamton.edu>
+Subject: New danish keyboard
+Content-Type: multipart/mixed;
+  boundary="------------040904090905090906020202"
+X-Spam-Status: No, hits=-5.8 required=5.0
+X-Spam-Report: -5.8 hits, 5.0 required;
+	*-5.8 -- User-Agent header indicates a non-spam MUA (Mozilla)
+X-Virus-Scanned: by moam (http://www.moam.net/)
+X-Moam-Version: 0.90
+Status: R 
+X-Status: N
+X-KMail-EncryptionState:  
+X-KMail-SignatureState:  
+
+This is a multi-part message in MIME format.
+--------------040904090905090906020202
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Dear Haavard Froeiland.
+
+I send you the danish keyboardfile for Kde 3.1.x pleace put it into CVS 
+as soon as posible.
+The one used now is not right at all.
+
+Gunner Poulsen.
+
+-- 
+Aktiv i projektet Gnuskole http://www.gnuskole.dk
+På grund af uheldige omstændigheder skal post til mig i påsken sendes til 
+gunner@gnuskole.dk
+
+
+--------------040904090905090906020202
+Content-Type: text/plain;
+ name="dk.keyboard"
+Content-Transfer-Encoding: 8bit
+Content-Disposition: inline;
+ filename="dk.keyboard"
+
 ####################################################
 #    KTouch
-#    Keybord layout file for Norwegian kaybord
+#    Keybord layout file for Danish kaybord
 ####################################################
 #
 #			Assci	KeyText	x		y
@@ -18,29 +83,29 @@ FingerKey	230		Æ		108 	20
 #
 ControlKey	260		Tab			0		10		15		10
 ControlKey	258		Shift		123		30		27		10
-ControlKey	264		Alt			120		40		15		10
+ControlKey	264		Alt_Gr			120		40		15		10
 ControlKey	265		Ctrl		135		40		15		10
 ControlKey	263		Alt			15		40		15		10
 ControlKey	262		Ctrl		0		40		15		10
-ControlKey	32		Space		30		40		90		10
+ControlKey	32		(Mellemrum)		30		40		90		10
 ControlKey	257		Shift		0		30		13		10
-ControlKey	259		Caps_L		0		20		18		10
-ControlKey  8 		<-			130		0		20		10
-ControlKey	138		Enter		128		20		22		10
+ControlKey	259		Caps_Lock		0		20		18		10
+ControlKey   8 		<----			130		0		20		10
+ControlKey	138		Enter		138		10		12	20	10
 
 #			Assci	KeyText		x	y	FingerKey
 #
-NormalKey	124		|			0	0	97
+NormalKey	124		½			0	0	97
 NormalKey	49		1			10	0	97
-NormalKey	50		2			20	0	115
-NormalKey	51		3			30	0	100
-NormalKey	52		4			40	0	102
+NormalKey	50		2			20	0	97
+NormalKey	51		3			30	0	115
+NormalKey	52		4			40	0	100
 NormalKey	53		5			50	0	102
-NormalKey	54		6			60	0	106
+NormalKey	54		6			60	0	102
 NormalKey	55		7			70	0	106
-NormalKey	56		8			80	0	107
-NormalKey	57		9			90	0	108
-NormalKey	48		0			100	0	230
+NormalKey	56		8			80	0	106
+NormalKey	57		9			90	0	107
+NormalKey	48		0			100	0	108
 NormalKey	43		+			110	0	230
 NormalKey	180		'			120	0	230
 #
@@ -55,10 +120,12 @@ NormalKey	105		I			85	10	107
 NormalKey	111		O			95	10	108
 NormalKey	112		P			105	10	230
 NormalKey	91		Å			115	10	230
+NormalKey	168		"			125	10	230
 #
 NormalKey	103		G			58	20	102
 NormalKey	104		H			68	20	106
-NormalKey	39		Æ			118	20	230
+NormalKey	248		Ø			118	20	230
+NormalKey	39		'			128	20	230
 #
 NormalKey	60		<			13	30	97
 NormalKey	122		Z			23	30	97
@@ -70,7 +137,7 @@ NormalKey	110		N			73	30	106
 NormalKey	109		M			83	30	106
 NormalKey	44		,			93	30	107
 NormalKey	46		.			103	30	108
-NormalKey	47		/			113	30	230
+NormalKey	47		-			113	30	230
 #
 #
 #			Ascii	Target	Finger	Contorll
@@ -102,5 +169,9 @@ HiddenKey	89		121		106		258 	   #Y
 HiddenKey	90		122		97		258 	   #Z
 
 HiddenKey	216		39		230		258 	   #Æ
-HiddenKey	198		230		230		258 	   #ø
+HiddenKey	198		230		230		258 	   #Ø
 HiddenKey	197		91		230		258 	   #Å
+
+--------------040904090905090906020202--
+
+
