@@ -1,0 +1,957 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>KTouchStatisticsLayout</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KTouchStatisticsLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>495</width>
+            <height>520</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>3</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>KTouch - Training statistics</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tabWidget3</cstring>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>currentTab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Current training session</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>currentTitleLabel</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>20</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Current training session statistics</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer6</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Minimum</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>8</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout8</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>groupBox4</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>General statistics</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words typed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel5</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Miss-typed characters:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Time (seconds) elapsed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>elapsedTimeLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>totalCharsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>wrongCharsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>wordsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters typed:</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout7</cstring>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QGroupBox">
+                                        <property name="name">
+                                            <cstring>groupBox5</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>Typing rate</string>
+                                        </property>
+                                        <grid>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel" row="0" column="0">
+                                                <property name="name">
+                                                    <cstring>textLabel6</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Characters per minute:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel" row="1" column="0">
+                                                <property name="name">
+                                                    <cstring>textLabel6_2</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Words per minute:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLCDNumber" row="0" column="1">
+                                                <property name="name">
+                                                    <cstring>charSpeedLCD</cstring>
+                                                </property>
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>50</width>
+                                                        <height>32767</height>
+                                                    </size>
+                                                </property>
+                                                <property name="segmentStyle">
+                                                    <enum>Flat</enum>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLCDNumber" row="1" column="1">
+                                                <property name="name">
+                                                    <cstring>wordSpeedLCD</cstring>
+                                                </property>
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>50</width>
+                                                        <height>32767</height>
+                                                    </size>
+                                                </property>
+                                                <property name="segmentStyle">
+                                                    <enum>Flat</enum>
+                                                </property>
+                                            </widget>
+                                        </grid>
+                                    </widget>
+                                    <widget class="QGroupBox">
+                                        <property name="name">
+                                            <cstring>groupBox6</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>Accuracy</string>
+                                        </property>
+                                        <grid>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QProgressBar" row="0" column="0">
+                                                <property name="name">
+                                                    <cstring>correctnessBar</cstring>
+                                                </property>
+                                            </widget>
+                                        </grid>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox7</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Character statistics (characters you need to focus on)</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QFrame" row="0" column="2" rowspan="4" colspan="1">
+                                <property name="name">
+                                    <cstring>frame4</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>20</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>VLine</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Plain</enum>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="0" column="1">
+                                <property name="name">
+                                    <cstring>charProgress1</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>charLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>a</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>charLabel2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>b</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>charLabel3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>c</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="3" column="0">
+                                <property name="name">
+                                    <cstring>charLabel4</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>d</string>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="1" column="1">
+                                <property name="name">
+                                    <cstring>charProgress2</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="2" column="1">
+                                <property name="name">
+                                    <cstring>charProgress3</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="3" column="1">
+                                <property name="name">
+                                    <cstring>charProgress4</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="0" column="4">
+                                <property name="name">
+                                    <cstring>charProgress5</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="1" column="4">
+                                <property name="name">
+                                    <cstring>charProgress6</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="2" column="4">
+                                <property name="name">
+                                    <cstring>charProgress7</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="3" column="4">
+                                <property name="name">
+                                    <cstring>charProgress8</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="3">
+                                <property name="name">
+                                    <cstring>charLabel5</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>e</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="3">
+                                <property name="name">
+                                    <cstring>charLabel6</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>f</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="3">
+                                <property name="name">
+                                    <cstring>charLabel7</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>g</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="3" column="3">
+                                <property name="name">
+                                    <cstring>charLabel8</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>h</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer14</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Averaged stats</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>averagedTitleLabel</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>20</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Averaged training statistics</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Fixed</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>16</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout5</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Average training statistics for the last</string>
+                                </property>
+                            </widget>
+                            <widget class="QSlider">
+                                <property name="name">
+                                    <cstring>sessionCountSlider</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>sessionCountLabel</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>n training sessions.</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox5_2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Typing rate</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel6_3</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Characters per minute:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>textLabel6_2_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Words per minute:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="2" column="2">
+                                <property name="name">
+                                    <cstring>wordSpeedMinLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="1" column="2">
+                                <property name="name">
+                                    <cstring>charSpeedMinLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="1" column="1">
+                                <property name="name">
+                                    <cstring>charSpeedAverageLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="2" column="1">
+                                <property name="name">
+                                    <cstring>wordSpeedAverageLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="2" column="3">
+                                <property name="name">
+                                    <cstring>wordSpeedMaxLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="1" column="3">
+                                <property name="name">
+                                    <cstring>charSpeedMaxLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel4_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>min</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="3">
+                                <property name="name">
+                                    <cstring>textLabel4_2_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>max</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="1">
+                                <property name="name">
+                                    <cstring>textLabel4_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>averaged</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignVCenter|AlignRight</set>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox8</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Accuracy</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel4_2_3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>max</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="1">
+                                <property name="name">
+                                    <cstring>textLabel4_2_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>min</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignCenter</set>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="1" column="2">
+                                <property name="name">
+                                    <cstring>correctnessMaxLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLCDNumber" row="1" column="1">
+                                <property name="name">
+                                    <cstring>correctnessMinLCD</cstring>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>50</width>
+                                        <height>32767</height>
+                                    </size>
+                                </property>
+                                <property name="segmentStyle">
+                                    <enum>Flat</enum>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="1" column="0">
+                                <property name="name">
+                                    <cstring>correctnessAverageBar</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>98</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel4_2_4</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>averaged typing accuracy</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignCenter</set>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox7_2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Character statistics (characters you need to focus on)</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QFrame" row="0" column="2" rowspan="4" colspan="1">
+                                <property name="name">
+                                    <cstring>frame4_2</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>20</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>VLine</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Plain</enum>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="0" column="1">
+                                <property name="name">
+                                    <cstring>charProgress1_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>charLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>a</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>charLabel2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>b</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>charLabel3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>c</string>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="1" column="1">
+                                <property name="name">
+                                    <cstring>charProgress2_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="2" column="1">
+                                <property name="name">
+                                    <cstring>charProgress3_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="0" column="4">
+                                <property name="name">
+                                    <cstring>charProgress4_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="1" column="4">
+                                <property name="name">
+                                    <cstring>charProgress5_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QProgressBar" row="2" column="4">
+                                <property name="name">
+                                    <cstring>charProgress6_2</cstring>
+                                </property>
+                                <property name="progress">
+                                    <number>65</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="3">
+                                <property name="name">
+                                    <cstring>charLabel4_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>e</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="3">
+                                <property name="name">
+                                    <cstring>charLabel5_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>f</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="3">
+                                <property name="name">
+                                    <cstring>charLabel6_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>g</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer18</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>chartTab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Charts</string>
+                </attribute>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>clearButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Clear history</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer5</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>closeButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Close</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
+</UI>
