@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchpref.cpp                                                        *
  *   --------------                                                        *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -187,8 +187,8 @@ void KTouchPref::update(bool toDialog) {
 
 void KTouchPref::slotDefault() {
     if (KMessageBox::warningContinueCancel(this, i18n("This will set the default options "
-        "in ALL pages of the preferences dialog; continue?"), i18n("Set default options?"),
-        i18n("Set defaults"))==KMessageBox::Continue)
+        "in ALL pages of the preferences dialog; continue?"), i18n("Set Default Options?"),
+        i18n("Set Defaults"))==KMessageBox::Continue)
     {
         setDefaults();
     }

@@ -17,7 +17,7 @@
 #include <kdebug.h>
 
 static const char description[] =
-    I18N_NOOP("A program that helps you to learn and practice touch typing.");
+    I18N_NOOP("A program that helps you to learn and practice touch typing");
 
 static const char version[] = "1.3";
 
