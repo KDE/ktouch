@@ -98,7 +98,7 @@
             </property>
             <property stdset="1">
                 <name>title</name>
-                <string>Level up/down limits</string>
+                <string>Level up/down Limits</string>
             </property>
             <property>
                 <name>whatsThis</name>
@@ -207,7 +207,7 @@
                             </property>
                             <property stdset="1">
                                 <name>text</name>
-                                <string>Limit Up :</string>
+                                <string>Limit Up:</string>
                             </property>
                         </widget>
                     </grid>

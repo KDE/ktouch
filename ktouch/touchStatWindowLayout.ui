@@ -110,7 +110,7 @@
                         </property>
                         <property stdset="1">
                             <name>title</name>
-                            <string>Typing rate</string>
+                            <string>Typing Rate</string>
                         </property>
                         <grid>
                             <property stdset="1">
@@ -175,7 +175,7 @@
                         </property>
                         <property stdset="1">
                             <name>text</name>
-                            <string>Automatic Update</string>
+                            <string>Automatic update</string>
                         </property>
                         <property stdset="1">
                             <name>checked</name>
@@ -753,7 +753,7 @@
                 </property>
                 <attribute>
                     <name>title</name>
-                    <string>All time</string>
+                    <string>All Time</string>
                 </attribute>
             </widget>
             <widget>
@@ -783,7 +783,7 @@
                         </property>
                         <property stdset="1">
                             <name>text</name>
-                            <string>Clear history</string>
+                            <string>Clear History</string>
                         </property>
                     </widget>
                     <spacer row="0"  column="1" >
