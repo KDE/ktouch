@@ -27,7 +27,7 @@
 static const char *description =
 	I18N_NOOP("Touch Typing Tutor");
 
-static const char *version = "1.0";
+static const char *version = "1.1";
 
 static KCmdLineOptions options[] =
 {
@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
 		version,
 		description,
 		KAboutData::License_GPL,
-		"Copyright (c) 2001, Haavard Froeiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
-	about.addAuthor("Haavard Froeiland",0, "haavard@users.sourceforge.net");
+		"Copyright (c) 2002, Håvard Frøiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
+	about.addAuthor("Håvard Frøiland",0, "haavard@users.sourceforge.net");
 
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions( options );

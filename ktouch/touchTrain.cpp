@@ -29,11 +29,18 @@ TouchTrain::TouchTrain( QWidget* parent, TouchLecture* l)
 	//FIXME this should be rewritten
 	line->setLecture(lecture);
 
-	connect(status,       SIGNAL(levelUp()),         lecture, SLOT(levelUp()));
-	connect(status,       SIGNAL(levelDown()),       lecture, SLOT(levelDown()));
-	connect(lecture,      SIGNAL(levelChanged(int)), status, SLOT(setLevel(int)));
-	connect(status,       SIGNAL(forceNextLine()),   line, SLOT(getNextLine()));
+	connect(status,  SIGNAL(levelUp()),         lecture,    SLOT(levelUp()));
+	connect(status,  SIGNAL(levelDown()),       lecture,    SLOT(levelDown()));
+	connect(lecture, SIGNAL(levelChanged(int)), status,     SLOT(setLevel(int)));
+	connect(status,  SIGNAL(forceNextLine()),   line,       SLOT(getNextLine()));
 	connect(lecture, SIGNAL(levelMessage(const QString&)), status, SLOT(setLevelMessage(const QString&)));
+
+//	connect(status,  SIGNAL(showStat()),        this,       SLOT(showStat()));
+//	connect(status,  SIGNAL(hideStat()),        this,       SLOT(hideStat()));
+
+//	connect(line,    SIGNAL(isError(QChar)),    touchStat,  SLOT(gotError(QChar)));
+//	connect(line,    SIGNAL(isOk(QChar)),       touchStat,  SLOT(gotOk(QChar)));
+
 
 	config=kapp->config();
 	readOptions();

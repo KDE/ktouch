@@ -102,32 +102,35 @@ int TouchLecture::save()
 	if( file.open(IO_WriteOnly) )
 	{  // file opened successfully
 		QTextStream t( &file );
-		t << "#" << endl;
-		t << "# Trainingfile for KTouch" << endl;
-		t << "#" << endl;
+		t << "################################## "  << endl;
+		t << "#                                # "  << endl;
+		t << "#  Trainingfile for KTouch       # "  << endl;
+		t << "#             (Håvard Frøiland)  # "  << endl;
+		t << "################################## "  << endl;
 
-		for(int i=0;i<levelVector.size();i++)
+		for(unsigned int i=0;i<levelVector.size();i++)
 		{
 			t << endl;
 			t << "################################" << endl;
 			t << "# Level: " << i << endl;
+			t << "#" << endl;
 			vector<QString> levelData=*levelVector[level];
-			for(int j=0;j<levelData.size();j++)
+			for(unsigned int j=0;j<levelData.size();j++)
 			{
 				t << levelData[j] << endl;
 			}
 		}
-    }
+	}
 	else
 		return 1;
-    file.close();
+	file.close();
 	return 0;
 }
 
 int TouchLecture::saveAs(QString f)
 {
 	fileName=f;
-	save();
+	return save();
 }
 
 QString TouchLecture::getNextLine()
