@@ -158,5 +158,6 @@ void TouchLecture::setLevel(unsigned int l)
 		level=levelVector.size()-1;
 		setLevel(level);
 	}
+	levelHasChanged=false;
 };
 
