@@ -6,7 +6,7 @@ SUBDIRS = ktouch keyboards training
 AUTOMAKE_OPTIONS = foreign 
 
 # place KTouch in the start menu under utilities
-kdelnkdir = $(kde_appsdir)/Utilities
+kdelnkdir = $(kde_appsdir)/Education
 kdelnk_DATA = ktouch.desktop
 
 KDE_ICON = ktouch
