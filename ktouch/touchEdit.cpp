@@ -125,12 +125,13 @@ void TouchEdit::descriptionChanged(const QString& d)
     int current=levelList->currentItem();
     if(current!=-1)
     {
-	QString tmp=d.copy();  
-	
+		
 	kdDebug() << "changing level description to " << d << endl;
-	//std::vector<QString> *levelTmp=lecture->levelVector[current];
-	//levelTmp[0]=d;
-	levelList->changeItem(tmp,current);
+	std::vector<QString> *levelTmp=lecture->levelVector[current];
+	levelTmp->front()=d;
+	
+	levelList->changeItem(d,current);
+	
     }
 }
 
