@@ -107,7 +107,7 @@
                         <cstring>fontButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Change font ...</string>
+                        <string>Change Font...</string>
                     </property>
                 </widget>
                 <spacer>
@@ -132,7 +132,7 @@
                         <cstring>openButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Open...</string>
+                        <string>&amp;Open...</string>
                     </property>
                     <property name="accel">
                         <string></string>
@@ -143,7 +143,7 @@
                         <cstring>saveButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Save</string>
+                        <string>&amp;Save</string>
                     </property>
                     <property name="accel">
                         <string></string>
@@ -157,7 +157,7 @@
                         <cstring>saveAsButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Save as...</string>
+                        <string>Save &amp;As...</string>
                     </property>
                     <property name="accel">
                         <string></string>
@@ -168,7 +168,7 @@
                         <cstring>quitButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Close</string>
+                        <string>&amp;Close</string>
                     </property>
                     <property name="accel">
                         <string></string>
