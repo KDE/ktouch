@@ -33,9 +33,7 @@ const int INNER_MARGIN          = 20;   // the margin inside the line boxes
 const int DEAD_BORDER           = 40;   // the width of the no scrolling region near the border
 
 KTouchSlideLine::KTouchSlideLine(QWidget *parent)
-  : QWidget( parent ),m_rightJustify(false),
-    m_correctColor( 100, 255, 100),
-    m_errorColor(255,100,100),
+  : QWidget( parent ),
     m_teacherPixmap(NULL),
     m_studentPixmap(NULL),
     m_slideTimer(this),
@@ -58,7 +56,6 @@ KTouchSlideLine::KTouchSlideLine(QWidget *parent)
     setMinimumHeight(50);
     setMaximumHeight(150);
     setCursorTimerEnabled(true);
-    QFont       m_font;             ///< Font for the slide line.
 
     connect( &m_cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()) );
     connect( &m_slideTimer, SIGNAL(timeout()), this, SLOT(slide()) );
@@ -71,24 +68,8 @@ KTouchSlideLine::~KTouchSlideLine() {
 
 void KTouchSlideLine::applyPreferences() {
     m_font = KTouchConfig().m_font;
-    m_errorColor = KTouchConfig().m_errorColor;
-    resizeEvent(NULL);  // because we need to recreate the teachers line also
-};
-
-void KTouchSlideLine::setFont(const QFont& font) {
-    m_font = font;
-    resizeFont();
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
-};
-
-void KTouchSlideLine::setCorrectColor(const QColor& color) {
-    m_correctColor = color;
-    updateLines();
-};
-
-void KTouchSlideLine::setErrorColor(const QColor& color) {
-    m_errorColor = color;
-    updateLines();
+    // note: resizeFont() will be called implicitly by resizeEvent()
 };
 
 void KTouchSlideLine::setNewText(const QString& teacherText, const QString& studentText) {
@@ -132,10 +113,10 @@ void KTouchSlideLine::slide() {
     double speed = 1.0 + 0.2*KTouchConfig().m_slideSpeed;
     double m_teacherDX = (m_teacherFrameXEnd - m_teacherFrameX)/speed;
     double m_studentDX = (m_studentFrameXEnd - m_studentFrameX)/speed;
-    if (fabs(m_teacherDX)<1.0)  m_teacherFrameX = m_teacherFrameXEnd;
-    else                        m_teacherFrameX += m_teacherDX;
-    if (fabs(m_studentDX)<1.0)  m_studentFrameX = m_studentFrameXEnd;
-    else                        m_studentFrameX += m_studentDX;
+    if (fabs(m_teacherDX)>1.0)  m_teacherFrameX += m_teacherDX;
+    if (fabs(m_studentDX)>1.0)  m_studentFrameX += m_studentDX;
+    if (m_studentFrameX<m_teacherFrameX)
+        m_studentFrameX=m_teacherFrameX;
     // now simply copy the required parts of the teacher and student pixmaps onto the widget
     if(m_rightJustify==false){
      bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
@@ -161,10 +142,13 @@ void KTouchSlideLine::slide() {
 // *** Protected member functions (event implementation)
 
 void KTouchSlideLine::paintEvent(QPaintEvent*) {
-    slide();
+    if (m_studentPixmap==NULL || m_teacherPixmap==NULL)
+        resizeEvent(NULL);
+    else
+        slide();
 };
 
-void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
+void KTouchSlideLine::resizeEvent( QResizeEvent * ) {
     if (m_teacherText.isEmpty()) return;  // can happen during startup
     // kdDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
     resizeFont();
@@ -187,8 +171,9 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     QPainter painter;
     painter.begin (m_teacherPixmap, this);
     painter.setFont( m_font );
-    painter.eraseRect( m_teacherPixmap->rect() );
-    painter.setPen( paletteForegroundColor() );
+    //painter.setColor( KTouchConfig().m_teacherTextColor );
+    painter.fillRect( m_teacherPixmap->rect(), QBrush(KTouchConfig().m_teacherBackground) );
+    painter.setPen( KTouchConfig().m_teacherTextColor );
     // create a rectangle for the text drawing
     QRect textRect(INNER_MARGIN, 0, w-2*INNER_MARGIN, h);
     if(m_rightJustify==false)
@@ -268,24 +253,26 @@ void KTouchSlideLine::updateLines() {
     QPainter painter;
     painter.begin (m_studentPixmap, this);
     if (KTouchConfig().m_useErrorColor) {
-        // draw the background depending on the error colour settings
+        // draw the student line depending on the colour settings
         if (error) {
-            painter.fillRect (m_studentPixmap->rect(), m_errorColor);
-            m_cursorBackground = m_errorColor;
+            m_cursorBackground = KTouchConfig().m_errorBackground;
+            painter.fillRect (m_studentPixmap->rect(), m_cursorBackground);
+            m_cursorColor = KTouchConfig().m_errorTextColor;
+            painter.setPen( m_cursorColor );
         }
         else {
-            painter.fillRect (m_studentPixmap->rect(), m_correctColor);
-            m_cursorBackground = m_correctColor;
+            m_cursorBackground = KTouchConfig().m_studentBackground;
+            painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground) );
+            m_cursorColor = KTouchConfig().m_studentTextColor;
+            painter.setPen( m_cursorColor );
         };
-        painter.setPen( Qt::black );
-        m_cursorColor = Qt::black;
     }
     else {
-        // just use normal widget colours
-        painter.setPen( paletteForegroundColor() );
-        painter.eraseRect( m_studentPixmap->rect() );
-        m_cursorBackground = paletteBackgroundColor();
-        m_cursorColor = paletteForegroundColor();
+        // use always student text colors
+        m_cursorColor = KTouchConfig().m_studentTextColor;
+        painter.setPen( m_cursorColor );
+        m_cursorBackground = KTouchConfig().m_studentBackground;
+        painter.fillRect( m_studentPixmap->rect(), QBrush(m_cursorBackground) );
     };
     // draw the text
     painter.setFont( m_font );
