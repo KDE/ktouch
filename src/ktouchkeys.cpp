@@ -39,7 +39,7 @@ void KTouchKey::resize(double scale) {
     m_wS = static_cast<int>(scale*m_w);
     m_hS = static_cast<int>(scale*m_h);
     m_font=KTouchConfig().m_keyboardFont;
-    m_font.setPointSize( static_cast<int>(min(m_wS,m_hS)/2.0) );
+    m_font.setPointSize( static_cast<int>(min(m_wS,m_hS)/m_font_scale) );
 
 };
 // -----------------------------------------------------------------------------
@@ -52,6 +52,7 @@ KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, i
   : KTouchKey(keyChar, keyText, x, y, w, h), m_colorIndex(0)
 {
     m_type = NORMAL_KEY;
+    m_font_scale =2;
 }
 
 void KTouchNormalKey::paint(QPainter& p) const {
@@ -90,6 +91,7 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
         m_colorIndex=0;
     };
     m_type = FINGER_KEY;
+    m_font_scale =2;
 };
 
 void KTouchFingerKey::paint(QPainter& p) const {
@@ -130,6 +132,7 @@ KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText,
   : KTouchKey(keyChar, keyText, x, y, w, h)
 {
     m_type = CONTROL_KEY;
+    m_font_scale = 4;
 };
 
 void KTouchControlKey::paint(QPainter& p) const {
@@ -216,4 +219,6 @@ void KTouchControlKey::paint(QPainter& p) const {
     else
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter | QPainter::AlignVCenter, m_keyText);
 }
-// --------------------------------------------------------------
+
+
+

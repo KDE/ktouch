@@ -53,6 +53,7 @@ class KTouchKey {
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
 		QFont   m_font;
+		float   m_font_scale;
     
   protected:
     int     m_x;        ///< The x position of the key.
@@ -124,6 +125,8 @@ class KTouchControlKey : public KTouchKey {
     KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
     /// Extends the parents paint routine (draws the text or other fancy stuff).
     void paint(QPainter& p) const;
+    /// Recalculates the scaled position and size properties of the key.
+    
 };
 // ------------------------------------------------------------------------------------
 
