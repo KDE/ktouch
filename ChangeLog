@@ -1,3 +1,9 @@
+2004-10-26 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Converted the remaining lecture files to XML format
+
+2004-10-01 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Converted all not yet converted source files to UTF-8
+
 2004-09-30 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Implemented support for XML lecture files and ported some lecture files to XML
   * Implemented new lecture editor
