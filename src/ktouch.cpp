@@ -371,7 +371,7 @@ void KTouch::changeLecture(int num) {
     KStandardDirs *dirs=KGlobal::dirs();
     QString fileName = dirs->findResource("appdata",KTouchConfig().m_lectureList[num] + ".ktouch");
     KURL oldLecture = m_lecture->m_lectureURL;
-    if (!m_lecture->loadLecture(KURL::fromPathOrURL( fileName ))) {
+    if (!m_lecture->loadLecture(fileName)) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1.ktouch'!")
             .arg(KTouchConfig().m_lectureList[num]) );
         m_lecture->loadLecture(oldLecture);
@@ -399,7 +399,7 @@ void KTouch::readProperties(KConfig *config) {
         kdDebug() << "[KTouch::readProperties]  Reading modified lecture data..." << endl;
         QString tmpFile = config->readPathEntry("LectureTmpFile");
         kdDebug() << "[KTouch::readProperties]  from file " << tmpFile << endl;
-        m_lecture->loadLecture(KURL::fromPathOrURL( tmpFile )); // read the lecture
+        m_lecture->loadLecture(tmpFile); // read the lecture
         m_lecture->setModified(true);    // mark lecture as modified
         m_lecture->m_lectureURL = config->readPathEntry("Lecture"); // and set correct filename again
     }
