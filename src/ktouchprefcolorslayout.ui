@@ -427,7 +427,7 @@
                 <widget class="QComboBox">
                     <item>
                         <property name="text">
-                            <string>Black'n White</string>
+                            <string>Black &amp; White</string>
                         </property>
                     </item>
                     <item>
@@ -452,7 +452,7 @@
                         <string>Color scheme for displaying the keyboard</string>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>You can choose here the color scheme for displaying the keyboard. &lt;i&gt;Black'n White&lt;/i&gt; will display all keyboard letters black on white, &lt;i&gt;Classic&lt;/i&gt; will colorize the same color for each finger, &lt;i&gt;Deep Blue&lt;/i&gt; will display the keyboard in different deep blue colors and &lt;i&gt;Stripy&lt;/i&gt; will alternate blue and gray for letters corresponding to same finger.</string>
+                        <string>You can choose here the color scheme for displaying the keyboard. &lt;i&gt;Black &amp; White&lt;/i&gt; will display all keyboard letters black on white, &lt;i&gt;Classic&lt;/i&gt; will colorize the same color for each finger, &lt;i&gt;Deep Blue&lt;/i&gt; will display the keyboard in different deep blue colors and &lt;i&gt;Stripy&lt;/i&gt; will alternate blue and gray for letters corresponding to same finger.</string>
                     </property>
                 </widget>
             </hbox>
