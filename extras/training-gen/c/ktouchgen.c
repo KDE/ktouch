@@ -11,6 +11,7 @@
 #include <config.h>
 #endif
 
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -32,9 +33,7 @@ void *addWord(WordList first, char w[])
   struct WordNode *ptr;
 
   ptr=malloc(sizeof(struct WordNode));
-  ptr->word=malloc(sizeof(w)*strlen(w));
-
-  strcpy(ptr->word,w);
+  ptr->word=strdup(w);
   ptr->next=first;
   return ptr;
 }
@@ -42,7 +41,7 @@ void *addWord(WordList first, char w[])
 void printWordList(WordList l)
 {
   struct WordNode *ptr=l;
-  // loop throug the linked list
+  /* loop throug the linked list */
   while(ptr!=NULL)
   {
     printf("%s\n",ptr->word);
@@ -63,7 +62,7 @@ void printLevel(FILE *f,char *l[])
   }
 
   if (arrayMax == 0) return;
-  // loop throug the linked list
+  /* loop throug the linked list */
   while(line<30)
   {
     arrayPos=((float)rand()/RAND_MAX)*arrayMax;
@@ -93,11 +92,11 @@ void creatLevelList(WordList l,char *levelList[],char s_or[], char s_and[])
   bool or_failed;
   bool and_failed;
 
-  // loop throug the linked list
+  /* loop throug the linked list */
   while(ptr!=NULL)
   {
-    // loop through the word
-    //printf("%s\n",ptr->word);
+    /* loop through the word */
+    /* printf("%s\n",ptr->word); */
     i=strlen(ptr->word)-1;
     for(;i>=0;i--)
     {
@@ -133,7 +132,7 @@ void creatLevelList(WordList l,char *levelList[],char s_or[], char s_and[])
     {
       levelList[pos]=ptr->word;
       pos++;
-      //printf("%d\n",pos);
+      /* printf("%d\n",pos); */
     }
 
     ptr=ptr->next;
@@ -152,7 +151,6 @@ int main(int argc, char *argv[])
   char test[100];
   int i=0;
   char *s[50];
-  char *ptr;
 
   if(argc<4)
   {
@@ -173,11 +171,8 @@ int main(int argc, char *argv[])
   {
     fscanf(file,"%s",word);
 
-    ptr=malloc(sizeof(word)*strlen(word));
-
-    strcpy(ptr,word);
-    s[i]=ptr;
-    printf("%s\n",s[i],word);
+    s[i]=strdup(word);
+    printf("%s\n",s[i]);
     i++;
   }
   s[i]=NULL;
@@ -218,6 +213,11 @@ int main(int argc, char *argv[])
   i=0;
   while(s[i]!=NULL)
   {
+    if (strlen(test) + strlen(s[i]) + 1 > sizeof(test))
+    {
+       printf("Buffer overflow.\n");
+       exit(1);
+    }
     strcat(test,s[i]);
     fprintf(file,"# Level %d\n",i+1);
     fprintf(file,"%s\n", s[i]);
