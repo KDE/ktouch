@@ -116,7 +116,7 @@ int TouchLecture::save()
 	    t << "################################" << endl;
 	    t << "# Level: " << i << endl;
 	    t << "#" << endl;
-	    vector<QString> levelData=*levelVector[level];
+	    vector<QString> levelData=*levelVector[i];
 	    for(unsigned int j=0;j<levelData.size();j++)
 	    {
 		t << levelData[j] << endl;
