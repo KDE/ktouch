@@ -38,7 +38,12 @@ TouchStatus::TouchStatus(QWidget * parent, const char * name)
 
 	timer = new QTimer(this,"timer");
 
-	pauseButton->setFocusPolicy(QWidget::NoFocus);
+	// avoid the buttons to steal keypresses
+	pauseButton					-> setFocusPolicy(QWidget::NoFocus);
+	statButton						-> setFocusPolicy(QWidget::NoFocus);
+	pushButtonLevelUp		-> setFocusPolicy(QWidget::NoFocus);
+	pushButtonLevelDown 	-> setFocusPolicy(QWidget::NoFocus);
+
 	connect( timer, SIGNAL(timeout()), SLOT(calculate()));
 	timer->start(500,false);
 }
@@ -179,7 +184,8 @@ void TouchStatus::showStatChanged(int i)
 		hideStat();
 }
 
-/** Sets the speed limit for going to next or previous level.	Up should always bee higher then down.  */
+/** Sets the speed limit for going to next or previous level.	Up should always
+ bee higher then down.  */
 void TouchStatus::setSpeedLimit(int up, int down){
 	if(down>up)
 	{
