@@ -15,38 +15,44 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <stdlib.h>
+#include <stdio.h>
+
+#include <config.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
 #include <klocale.h>
 
-#include "ktouch.h"
+#include "ktouchapp.h"
 
 static const char *description =
 	I18N_NOOP("KTouch");
-// INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
-
 
 static KCmdLineOptions options[] =
 {
-  { 0, 0, 0 }
-  // INSERT YOUR COMMANDLINE OPTIONS HERE
+	{ 0, 0, 0 }
 };
 
 int main(int argc, char *argv[])
 {
+	KAboutData about( "ktouch",
+		I18N_NOOP("KTouch"),
+		VERSION,
+		I18N_NOOP("A touch-typing trainer"),
+		KAboutData::License_GPL,
+		"Copyright (c) 2001, Haavard Froeiland", 0, 0, "haavard@users.sourceforge.net");
+	about.addAuthor("Haavard Froeiland",0, "haavard@users.sourceforge.net");
 
-  KAboutData aboutData( "ktouch", I18N_NOOP("KTouch"),
-    VERSION, description, KAboutData::License_GPL,
-    "(c) 2001, Haavard Froeiland", 0, 0, "haavard@users.sourceforge.net");
-  aboutData.addAuthor("Haavard Froeiland",0, "haavard@users.sourceforge.net");
-  KCmdLineArgs::init( argc, argv, &aboutData );
-	  KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
+	KCmdLineArgs::init(argc, argv, &about);
+	KCmdLineArgs::addCmdLineOptions( options );
+	KUniqueApplication::addCmdLineOptions();
 
-  KApplication a;
-  KTouch *ktouch = new KTouch();
-  a.setMainWidget(ktouch);
-  ktouch->show();  
-
-  return a.exec();
+	if (!KTouchApp::start())
+	{
+		fprintf(stderr, "KTouch is already running!\n");
+		exit(0);
+	}
+	KTouchApp app;
+	app.exec();
 }
 

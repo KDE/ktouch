@@ -14,15 +14,10 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
+ 
 #ifndef KTOUCH_H
 #define KTOUCH_H
 
-
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <kapp.h>
 #include <kmainwindow.h>
 #include <kaccel.h>
 #include <kaction.h>
@@ -39,85 +34,83 @@
 
 class KTouch : public KMainWindow
 {
-  Q_OBJECT
+	Q_OBJECT
 
-  public:
-    /** construtor of KTouch2App, calls all init functions to create the application.
-     */
-    KTouch(QWidget* parent=0, const char* name=0);
-    TouchLecture *touchLecture;
-    TouchLine *touchLine;
-    TouchStatus *touchStatus;
-  	TouchKeyboard *touchKeyboard;
+	public:
+		KTouch();
+		TouchLecture *touchLecture;
+		TouchLine *touchLine;
+		TouchStatus *touchStatus;
+		TouchKeyboard *touchKeyboard;
 		TouchStat *touchStat;
 
-    /** opens a file specified by commandline option
-     */
-    void openDocumentFile(const KURL& url=0);
+		/** opens a file specified by commandline option
+		*/
+		void openDocumentFile(const KURL& url);
 
-  protected:
-    /** save general Options like all bar positions and status as well as the geometry and the recent file list to the configuration
-     * file
-     */ 	
-    void saveOptions();
-    /** read general Options again and initialize all variables like the recent file list
-     */
-    void readOptions();
-    /** initializes the KActions of the application
-    */
-    void initActions();
-    /** sets up the statusbar for the main window by initialzing a statuslabel.
-     */
-    void initStatusBar();
-    /** initializes the document object of the main window that is connected to the view in initView().
-     * @see initView();
-     */
+	protected:
+		/** save general Options like all bar positions and status as well as the geometry and the recent file list to the configuration
+		* file
+		*/
+		void saveOptions();
+		/** read general Options again and initialize all variables like the recent file list
+		*/
+		void readOptions();
+		/** initializes the KActions of the application
+		*/
+		void initActions();
+		/** sets up the statusbar for the main window by initialzing a statuslabel.
+		*/
+		void initStatusBar();
+		/** initializes the document object of the main window that is connected to the view in initView().
+		* @see initView();
+		*/
 
-    bool queryExit();
-    void keyPressEvent(QKeyEvent*e);
+		bool queryExit();
+		void keyPressEvent(QKeyEvent*e);
 
 
-  public slots:
-    void slotFileOpen();
-    /** opens a file from the recent files menu */
-    void slotFileOpenRecent(const KURL& url);
+	public slots:
+		void slotFileOpen();
+		/** opens a file from the recent files menu */
+		void slotFileOpenRecent(const KURL& url);
 
-    void slotFileQuit();
-    /** put the marked text/object into the clipboard and remove
-     *	it from the document
-     */
-    void slotViewToolBar();
-    /** toggles the statusbar
-     */
-    void slotViewStatusBar();
-    /** changes the statusbar contents for the standard label permanently, used to indicate current actions.
-     * @param text the text that is displayed in the statusbar
-     */
-    void slotStatusMsg(const QString &text);
+		void slotFileQuit();
+		/** put the marked text/object into the clipboard and remove
+		*	it from the document
+		*/
+		void slotViewToolBar();
+		/** toggles the statusbar
+		*/
+		void slotViewStatusBar();
+		/** changes the statusbar contents for the standard label permanently, used to indicate current actions.
+		* @param text the text that is displayed in the statusbar
+		*/
+		void slotStatusMsg(const QString &text);
 
-    void slotOptionKeyboard();
-    void slotOptionTraining();
-    void slotOptionGeneral();
+		void slotOptionKeyboard();
+		void slotOptionTraining();
+		void slotOptionGeneral();
 
-  private:
-    /** the configuration object of the application */
-    KConfig *config;
-    /** view is the main widget which represents your working area. The View
-     * class should handle all events of the view widget.  It is kept empty so
-     * you can create your view according to your application's needs by
-     * changing the view class.
-     */
+	private:
+		/** the configuration object of the application */
+		KConfig *config;
+		/** view is the main widget which represents your working area. The View
+		* class should handle all events of the view widget.  It is kept empty so
+		* you can create your view according to your application's needs by
+		* changing the view class.
+		*/
 
-    // KAction pointers to enable/disable actions
-    KAction* fileOpen;
-    KRecentFilesAction* fileOpenRecent;
-    KAction* fileClose;
-    KAction* fileQuit;
-    KToggleAction* viewToolBar;
-	  KToggleAction* viewStatusBar;
+		// KAction pointers to enable/disable actions
+		KAction* fileOpen;
+		KRecentFilesAction* fileOpenRecent;
+		KAction* fileClose;
+		KAction* fileQuit;
+		KToggleAction* viewToolBar;
+		KToggleAction* viewStatusBar;
 
-    KStandardDirs *dirs;
-    bool remember;
+		KStandardDirs *dirs;
+		bool remember;
 };
 
 #endif
