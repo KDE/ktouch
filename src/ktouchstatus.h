@@ -14,7 +14,7 @@
 #define KTOUCHSTATUS_H
 
 #include <qwidget.h>
-#include <ui/ktouchstatuslayout.h>
+#include <ktouchstatuslayout.h>
 
 /** This is the implementation of the status widget (at the top of the main view).
  *  It simply displays the status but does not have a functionality of its own.

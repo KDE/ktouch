@@ -12,7 +12,7 @@
 #ifndef KTOUCHPREFTRAINING_H
 #define KTOUCHPREFTRAINING_H
 
-#include <ui/ktouchpreftraininglayout.h>
+#include <ktouchpreftraininglayout.h>
 
 /** This is the implementation of the "Training options" page of the preferences dialog.
  *  This class only contains the functionality which is used "inside" this page (e.g.

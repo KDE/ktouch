@@ -12,7 +12,7 @@
 #ifndef KTOUCHPREFKEYBOARD_H
 #define KTOUCHPREFKEYBOARD_H
 
-#include <ui/ktouchprefkeyboardlayout.h>
+#include <ktouchprefkeyboardlayout.h>
 
 /** This is the implementation of the "Keyboard settings" page of the preferences dialog.
  *  This class only contains the functionality which is used "inside" this page (e.g.

@@ -12,7 +12,7 @@
 #ifndef KTOUCHPREFGENERAL_H
 #define KTOUCHPREFGENERAL_H
 
-#include "ui/ktouchprefgenerallayout.h"
+#include "ktouchprefgenerallayout.h"
 #include <qfont.h>
 
 /** This is the implementation of the "General options" page of the preferences dialog.

@@ -15,7 +15,7 @@
 
 #include <qwidget.h>
 
-#include "ui/ktoucheditorlayout.h"
+#include "ktoucheditorlayout.h"
 #include "ktouchleveldata.h"
 
 class KTouchLecture;

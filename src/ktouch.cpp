@@ -49,7 +49,7 @@
 #include "ktouchsettings.h"
 #include "ktouchtrainer.h"
 #include "ktouchkeyboardcolor.h"
-#include "ui/ktouchstartnewdialog.h"
+#include "ktouchstartnewdialog.h"
 #include "ktouchstatistics.h"
 
 KTouch::KTouch()
