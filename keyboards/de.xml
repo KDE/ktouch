@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<KeyboardLayout LanguageID="de" >
+  <KeyboardFont>Courier</KeyboardFont>
+  <KeyDefinitions>
+    <KeyDef Geometry="1 1 1 1" UpperChar="°" >^</KeyDef>
+    <KeyDef Geometry="2 1 2 1" UpperChar="!" >1</KeyDef>
+    <KeyDef Geometry="3 1 3 1" UpperChar="''" >2</KeyDef>
+    <KeyDef Geometry="2 3 2 3" FingerKey="yes" >A</KeyDef>
+    <KeyDef Geometry="3 3 3 3" FingerKey="yes" >S</KeyDef>
+    <KeyDef Geometry="4 3 4 3" FingerKey="yes" >D</KeyDef>
+    <KeyDef Geometry="5 3 5 3" FingerKey="yes" >F</KeyDef>
+    <KeyDef Geometry="6 3 6 3" >G</KeyDef>
+    <KeyDef Geometry="7 3 7 3" >H</KeyDef>
+    <KeyDef Geometry="8 3 8 3" FingerKey="yes" >J</KeyDef>
+    <KeyDef Geometry="9 3 9 3" FingerKey="yes" >K</KeyDef>
+    <KeyDef Geometry="10 3 10 3" FingerKey="yes" >L</KeyDef>
+    <KeyDef Geometry="11 3 11 3" FingerKey="yes" >Ö</KeyDef>
+    <KeyDef Geometry="12 3 12 3" >Ä</KeyDef>
+    <KeyDef Geometry="13 3 13 3" UpperChar="'" >#</KeyDef>
+    <ControlKeyDef Geometry="1 4 2 4" UpperChar="Shift" >LeftShift</ControlKeyDef>
+  </KeyDefinitions>
+  <KeyAccess>
+    <KeyPressCombo PressChar="^" KeyChar="^" />
+    <KeyPressCombo PressChar="°" KeyChar="^" ControlKeyChar="RightShift" />
+    <KeyPressCombo PressChar="a" KeyChar="A" />
+    <KeyPressCombo PressChar="A" KeyChar="A" ControlKeyChar="RightShift" />
+    <KeyPressCombo PressChar="s" KeyChar="S" />
+    <KeyPressCombo PressChar="S" KeyChar="S" ControlKeyChar="RightShift" />
+  </KeyAccess>
+</KeyboardLayout>
