@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouch.cpp                                                            *
  *   ----------                                                            *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -42,8 +42,6 @@
 
 KTouch::KTouch()
   : KMainWindow( 0, "KTouch" ),
-    m_toolbarAction(NULL),
-    m_statusbarAction(NULL),
     m_preferencesDlg(NULL),
     m_editorDlg(NULL),
     m_startNewDlg(NULL),
@@ -85,14 +83,9 @@ KTouch::KTouch()
     m_slideLineWidget->applyPreferences();
     m_keyboardWidget->applyPreferences(true);  // set preferences silently here
 
-    // apply the saved mainwindow settings, if any, and ask the mainwindow
-    // to automatically save settings if changed: window size, toolbar
-    // position, icon size, etc.
-    setAutoSaveSettings();
-
     // finally create the GUI reading the ui.rc file
     //createGUI("/home/kdeinstall/ktouch/src/ktouchui.rc");
-    createGUI();
+    setupGUI();
 
     // Add available lectures, keyboard layouts and colour schemes to the settings menu
     setupQuickSettings();
@@ -302,15 +295,6 @@ void KTouch::trainingLectureEdit() {
     };
 }
 
-void KTouch::optionsShowToolbar() {
-    if (!m_toolbarAction || m_toolbarAction->isChecked())       toolBar()->show();
-    else                                                        toolBar()->hide();
-}
-
-void KTouch::optionsShowStatusbar() {
-    if (!m_statusbarAction || m_statusbarAction->isChecked())   statusBar()->show();
-    else                                                        statusBar()->hide();
-}
 
 void KTouch::optionsPreferences() {
     trainingPause();
@@ -471,7 +455,6 @@ void KTouch::setupActions() {
     KStdAction::save(this, SLOT(fileSave()), actionCollection());
     KStdAction::saveAs(this, SLOT(fileSaveAs()), actionCollection());
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
-    KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
 
     // actions for the training menu
     new KAction(i18n("&Start New Training Session"), "launch", 0,
@@ -486,8 +469,6 @@ void KTouch::setupActions() {
         this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
 
     // actions for the settings menu
-    m_toolbarAction = KStdAction::showToolbar(this, SLOT(optionsShowToolbar()), actionCollection());
-    m_statusbarAction = KStdAction::showStatusbar(this, SLOT(optionsShowStatusbar()), actionCollection());
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
     // Finally the connections

@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouch.cpp                                                            *
  *   ----------                                                            *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -81,8 +81,6 @@ class KTouch : public KMainWindow {
     void trainingPause();               ///< The action Training->Pause training
     void trainingStatistics();          ///< The action Training->Show training statistics...
     void trainingLectureEdit();         ///< The action Training->Edit lecture...
-    void optionsShowToolbar();          ///< The action Settings->Show toolbar
-    void optionsShowStatusbar();        ///< The action Settings->Show statusbar
     void optionsPreferences();          ///< The action Settings->Configure KTouch...
 
     /// Updates the status bar text.
@@ -115,8 +113,6 @@ class KTouch : public KMainWindow {
     /// Returns 'false' if the user aborted the save request, otherwise 'true'.
     bool saveModified();
 
-    KToggleAction          *m_toolbarAction;        ///< Action for turning the toolbar on/off.
-    KToggleAction          *m_statusbarAction;      ///< Action for turning the status bar on/off.
     KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".
 
