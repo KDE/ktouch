@@ -52,6 +52,9 @@ private: // Private methods
 private: // Private methods
   /** Filles up the level list */
   void fillLevelList();
+private slots: // Private slots
+  /** The description of the active level has changed */
+  void descriptionChanged(const QString&);
 };
 
 #endif

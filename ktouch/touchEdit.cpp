@@ -109,7 +109,9 @@ void TouchEdit::swapLevel(int a,int b)
 
 	// fixing up view
   levelList->clear();
-	fillLevelList();
+	fillLevelList();  //fixme this takes to much computing
+	
+
   levelList->setCurrentItem(b);
 
 }
@@ -123,4 +125,17 @@ void TouchEdit::fillLevelList()
 			levelList->insertItem(levelData[0]);
 	}
 
+}
+/** The description of the active level has changed */
+void TouchEdit::descriptionChanged(const QString& d)
+{
+	//QString tmp=d.copy();
+	int current=levelList->currentItem();
+  if(current!=-1)
+  {
+    kdDebug() << "changing level description to " << d << endl;
+		//vector<QString> *levelTmp=lecture->levelVector[current];
+		//levelTmp[0]=d;
+    levelList->changeItem(QString(d),current);
+  }
 }

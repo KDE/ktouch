@@ -99,9 +99,7 @@ KTouch::~KTouch()
 {
   delete touchLecture;
   delete touchStat;
-//  delete touchStatus;
-//  delete touchLine;  
-//  delete touchKeyboard;
+
 }
 
 
