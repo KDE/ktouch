@@ -66,20 +66,47 @@ QColor FingerKey::getColor()
 
 void FingerKey::paint(QPainter *p)
 {
-	p->fillRect(x+1,y+1,width-2,height-2,getColor());
-	paintBase(p);
-	int s=getSmallest();
-	int x_tmp=x;
-	int y_tmp=y;
-	if(s<width)
-	  x_tmp=x_tmp+(width-s)/2;
-	else if(s<height)
-	  y_tmp=y_tmp+(height-s)/2;
+    p->fillRect(x+1,y+1,width-2,height-2,getColor());
+    paintBase(p);
+    int s=getSmallest();
+    int x_tmp=x;
+    int y_tmp=y;
+    if(s<width)
+	x_tmp=x_tmp+(width-s)/2;
+    else if(s<height)
+	y_tmp=y_tmp+(height-s)/2;
+    
+
+    if(isActive==true)
+    {
 	
-	if(isActive==true)
-	  p->drawEllipse(x_tmp,y_tmp,s,s);
-	{
-		p->drawEllipse(x_tmp+1,y_tmp+1,s-2,s-2);
+	switch(getShowAnimation()){
+	    case 0: // none
+		p->setPen( QPen(QColor(0,0,0),1) );
+		p->drawEllipse(x_tmp+2,y_tmp+2,s-4,s-4);
+		break;
+		
+	    case 1: // squered
+		p->setPen( QPen(QColor(255,0,0),4) );
+		p->drawEllipse(x_tmp+2,y_tmp+2,s-4,s-4);
+		break;
+		
+	    case 2: // shade
+		p->setPen( QPen(QColor(0,0,0),3, Qt::DashLine));
+		p->drawEllipse(x_tmp+2,y_tmp+2,s-4,s-4);
+		break;
+		
+	    case 3: // cross
+		p->setPen( QPen(QColor(255,0,0),4) );
+		p->drawEllipse(x_tmp+2,y_tmp+2,s-4,s-4);
+		
+		break;
 	}
+
+ 	p->setPen( QColor(0,0,0));
+    }
+    else
+	p->drawEllipse(x_tmp+2,y_tmp+2,s-4,s-4);
+    
 }
 

@@ -22,7 +22,7 @@
 NormalKey::NormalKey(const char *keyValue, int gridX, int gridY, TouchKey *f, int w , int h)
 					:TouchKey(keyValue, gridX, gridY, w, h)
 {
-  fingerKey=f;
+    fingerKey=f;
 }
 
 NormalKey::~NormalKey()
@@ -31,27 +31,27 @@ NormalKey::~NormalKey()
 
 void NormalKey::paint(QPainter *p)
 {
-  p->eraseRect(x,y,width,height);
-  p->fillRect(x,y,width,height,QBrush(QColor(fingerKey->getColor())));
-	paintBase(p);
-	if(state==true)
+    p->eraseRect(x,y,width,height);
+    p->fillRect(x,y,width,height,QBrush(QColor(fingerKey->getColor())));
+    paintBase(p);
+    if(state==true)
+    {
+	if(fingerKey)
 	{
-		if(fingerKey)
-		{
-			((FingerKey*)fingerKey)->setActive(true);
-			fingerKey->paint(p);
-		}
+	    ((FingerKey*)fingerKey)->setActive(true);
+	    fingerKey->paint(p);
+	}
 	
-	}
-	else
+    }
+    else
+    {
+	if(fingerKey)
 	{
-		if(fingerKey)
-		{
-			((FingerKey*)fingerKey)->setActive(false);
-     	fingerKey->paint(p);
-		}
-
+	    ((FingerKey*)fingerKey)->setActive(false);
+	    fingerKey->paint(p);
 	}
-
+	
+    }
+    
 }
 

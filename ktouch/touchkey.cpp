@@ -23,14 +23,14 @@ int TouchKey::showAnimation = 0;
 
 TouchKey::TouchKey(const char *k, int x, int y, int w, int h)
 {
-  keyValue=k;
-  gridX=x;
-  gridY=y;
-  gridWidth=w;
-  gridHeight=h;
-  state=false;
-  x=y=0;
-  width=height=0;
+    keyValue=k;
+    gridX=x;
+    gridY=y;
+    gridWidth=w;
+    gridHeight=h;
+    state=false;
+    x=y=0;
+    width=height=0;
 }
 
 TouchKey::~TouchKey()
@@ -38,22 +38,22 @@ TouchKey::~TouchKey()
 
 void TouchKey::setShowColor(bool show)
 {
-  showColor=show;
+    showColor=show;
 }
 
 bool TouchKey::getShowColor()
 {
-  return showColor;
+    return showColor;
 }
 
 void TouchKey::setShowAnimation(int show)
 {
-  showAnimation=show;
+    showAnimation=show;
 }
 
 int TouchKey::getShowAnimation()
 {
-  return showAnimation;
+    return showAnimation;
 }
 
 
@@ -82,9 +82,10 @@ void TouchKey::paintBase(QPainter *p)
 		break;
 		
 	    case 3:
-		p->setPen( QColor(255,255,255) );
-		p->drawLine(x,y,x+width,y+height);
-		p->drawLine(x,y+height,x+width,y);
+		p->setPen( QPen(QColor(255,0,0),4) );
+		p->drawLine(x+4,y+4,x+width-8,y+height-8);
+		p->drawLine(x+4,y+height-8,x+width-8,y+4);
+		p->setPen( QColor(0,0,0));
 		break;
 	}
     }
@@ -97,13 +98,13 @@ void TouchKey::paintBase(QPainter *p)
 
 QColor TouchKey::getColor()
 {
-   return QColor();
+    return QColor();
 }
 
 int TouchKey::getSmallest()
 {
-  if(width>height)
-    return height;
-  return width;
+    if(width>height)
+	return height;
+    return width;
 }
 
