@@ -17,7 +17,8 @@
 
 #include "touchStatus.h"
 #include "touchStatus.moc"
-#include <iostream.h>
+//#include <iostream.h>
+#include <qpushbutton.h>
 #include <qlabel.h>
 #include <qapplication.h>
 #include <qprogressbar.h>
@@ -30,10 +31,11 @@ TouchStatus::TouchStatus(QWidget * parent, const char * name)
   reset();
 
   speedLimitUp = 100;
-	speedLimitDown = 50;
+  speedLimitDown = 50;
 
   timer = new QTimer(this,"timer");
 
+  pauseButton->setFocusPolicy(QWidget::NoFocus);
   connect( timer, SIGNAL(timeout()), SLOT(calculate()));
   timer->start(500,false);
 }
