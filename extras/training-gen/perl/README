@@ -2,7 +2,7 @@
 #
 #  ktouch-gen.pl
 #
-#    written by: Steinar Theigman <steinart@incatel.no>
+#    written by: Steinar Theigmann <steinart@incatel.no>
 #                Håvard Frøiland  <havard.froiland@chello.no>
 #
 #    This file describes how to generate your own training files
@@ -16,22 +16,22 @@ The script needs a data file with words, one word on each line. You
 can create it in your editor, or you can get it generated (see
 below). You will also find some data files in cvs.
 
-Sugestion for creating your own data file using an excisting dictionary.
+Suggestion for creating your own data file using an excisting dictionary. See http://aspell.sourceforge.net for more info.
 
-  aspell dump master
+$ aspell dump master
 
 This will print out a looong list with words in the default
 language. If you have installed other languages that you want to use
 you can write:
 
-  aspell dump master norwegian
+$ aspell dump master norwegian
 
 This will print out all the norwegian words found in the norwegian
 ditionary.
 
 Since we don't want this word on the screen, but in a file we do this:
 
-  aspell dump master > ~/your-word-file
+$ aspell dump master > ~/your-word-file
 
 You will now have a file called your-word-file stored in your home directory.
 
@@ -61,7 +61,7 @@ yz
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 <---- the file ends here ---->
 
-The lengt of a line is set to be 20 characters, and each level should
+The length of a line is set to be 20 characters, and each level should
 be 10 lines loong. The first level will only contain combinations of
 "jf" and the next one will contain "jfkd" and so on.
 
@@ -72,9 +72,9 @@ Step 3: Generate your training file
 
 To test the script you should do this:
 
-  perl ktouch-gen.pl your-config-file < your-word-file 
+$ perl ktouch-gen.pl your-config-file < your-word-file 
 
 This will print out the newly generated training file to your screen,
 if you are happy with it, you could save it to file by doing this.
 
-  perl ktouch-gen.pl your-config-file < your-word-file > your-training-file.ktouch
+$ perl ktouch-gen.pl your-config-file < your-word-file > your-training-file.ktouch
