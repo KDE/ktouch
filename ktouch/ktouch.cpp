@@ -180,7 +180,7 @@ void KTouch::readOptions()
   config->setGroup("General Options");
 
   // bar status settings
-  bool bViewToolbar = config->readBoolEntry("Show Toolbar", true);
+  bool bViewToolbar = config->readBoolEntry("Show Toolbar", false);
   viewToolBar->setChecked(bViewToolbar);
   slotViewToolBar();
 
@@ -196,39 +196,41 @@ void KTouch::readOptions()
   // initialize the recent file list
   fileOpenRecent->loadEntries(config,"Recent Files");
 
-  QSize size=config->readSizeEntry("Geometry");
-  if(!size.isEmpty())
-  {
-    resize(size);
-  }
+  // set the size of KTouch
+  QSize size(550,420);
+  size=config->readSizeEntry("Geometry",&size);
+  resize(size);
 
   //** History ****************************************************************
   config->setGroup("History");
-  remember=config->readBoolEntry("Remember");
+
+  remember=config->readBoolEntry("Remember",false);
   if(remember)
   {
-     touchLecture->setLevel(config->readNumEntry("Level"));
-     touchStatus->setSpeed(config->readNumEntry("Speed"));
+     touchLecture->setLevel(config->readNumEntry("Level",1));
+     touchStatus->setSpeed(config->readNumEntry("Speed",0));
   }
   touchStatus->setSpeedLimit(config->readNumEntry("SpeedLimitUp"),config->readNumEntry("SpeedLimitDown"));
 
-  touchStatus->autoLevel=config->readBoolEntry("Auto Level");
+  // move this into touchStatus   setAutoLevel(bool b);
+  touchStatus->autoLevel=config->readBoolEntry("Auto Level",true);
   touchStatus->pushButtonLevelDown->setDisabled(touchStatus->autoLevel);
   touchStatus->pushButtonLevelUp->setDisabled(touchStatus->autoLevel);
 
 
   //** Keyboard ***************************************************************
   config->setGroup("Keyboard");
-  touchKeyboard->setShowColor(config->readBoolEntry("Show Color"));
-  touchKeyboard->setShowAnimation(config->readBoolEntry("Show Animation"));
-  QString lang=config->readEntry("Language");
-  if(lang.isEmpty()) lang="en";
-  touchKeyboard->loadKeyboard(config->readEntry("Language"));
+
+  touchKeyboard->setShowColor(config->readBoolEntry("Show Color",true));
+  touchKeyboard->setShowAnimation(config->readBoolEntry("Show Animation",true));
+  QString lang=config->readEntry("Language","en");
+  touchKeyboard->loadKeyboard(config->readEntry("Language","en"));
 
   //** General ***************************************************************
   config->setGroup("General");
-  touchStatus->errorSound=config->readBoolEntry("Beep on error");
-  touchLine->showError=config->readBoolEntry("Color on error");
+
+  touchStatus->errorSound=config->readBoolEntry("Beep on error",true);
+  touchLine->showError=config->readBoolEntry("Color on error",true);
 }
 
 bool KTouch::queryExit()
