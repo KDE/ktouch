@@ -48,8 +48,8 @@ public slots:
   void keyPressed(QChar);
 
 signals:
-  void isError();
-  void isOk();
+  void isError(QChar);
+  void isOk(QChar);
   void nextKey(const QChar&);
   void stopKTouch();
   void startKTouch();
@@ -63,8 +63,6 @@ private:
   TouchLecture *lecture;
   bool stopped;
   bool showError;
-
-
 };
 
 #endif

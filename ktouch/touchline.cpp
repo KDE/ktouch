@@ -44,14 +44,15 @@ void TouchLine::keyPressed(QChar e)
   if(!stopped)
   {
     //The character is a normal character
-    if ((e.unicode()>31 && e.unicode()<126) || (e.unicode()>127 && e.unicode()<256))
+    //if ((e.unicode()>31 && e.unicode()<126) || (e.unicode()>127 && e.unicode()<256))
+    if(e.isPrint())
     {
       studentLine+=(char)e.unicode();
       pos++;
 
      	if (teacherLine.left(pos)==studentLine)
   	  {
-        emit isOk();
+        emit isOk(e);
   			if (pos==teacherLine.length())
       	{
         	emit nextKey((char)13);
@@ -63,7 +64,7 @@ void TouchLine::keyPressed(QChar e)
       }
   	  else
       {
-        emit isError();
+        emit isError(e);
         if(showError)
           line->error=true;
         // Backspace
@@ -80,7 +81,7 @@ void TouchLine::keyPressed(QChar e)
         studentLine=studentLine.left(pos);
         if (teacherLine.left(pos)==studentLine)
   	    {
-          emit isOk();
+          emit isOk(e);
           line->error=false;
           emit nextKey(teacherLine[pos]);
         }
@@ -96,6 +97,7 @@ void TouchLine::keyPressed(QChar e)
       {
         emit endOfLine();
         setTeacherLine(lecture->getNextLine());
+        emit isOk(e);
         return;
       }
   	}

@@ -42,7 +42,8 @@ hiddenkey.cpp \
 normalkey.cpp \
 optionGeneral.cpp \
 optionTraining.cpp \
-main.cpp
+main.cpp \
+touchstat.cpp
 
 ktouch_METASOURCES = AUTO
 

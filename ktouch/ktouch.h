@@ -32,6 +32,7 @@
 #include "touchline.h"
 #include "touchStatus.h"
 #include "touchkeyboard.h"
+#include "touchstat.h"
 #include "optionKeyboard.h"
 #include "optionTraining.h"
 #include "optionGeneral.h"
@@ -48,6 +49,7 @@ class KTouch : public KMainWindow
     TouchLine *touchLine;
     TouchStatus *touchStatus;
   	TouchKeyboard *touchKeyboard;
+		TouchStat *touchStat;
 
     /** opens a file specified by commandline option
      */

@@ -17,9 +17,9 @@
 
 #include "touchlecture.h"
 
-TouchLecture::TouchLecture(QWidget *p)
+TouchLecture::TouchLecture()//QWidget *p)
 {
-  parent=p;
+//  parent=p;
   fileName="";
   level=0;
   pos=1;
@@ -94,7 +94,6 @@ void TouchLecture::loadLectureFile(QString f)
 
 QString TouchLecture::getNextLine()
 {
-  cout << pos << endl;
   if (levelVector.empty())
 	{
     return "No file loaded";

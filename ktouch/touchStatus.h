@@ -42,8 +42,8 @@ public:
   bool autoLevel;
 
 public slots:
-  void gotError();
-  void gotOk();
+  void gotError(QChar);
+  void gotOk(QChar);
   void reset();
   void setLevel(int);
   void levelForcedUp();
@@ -60,16 +60,17 @@ public slots:
 
 private:
   QTimer *timer;
-  double speed;
+  double charSpeed;
+  double wordSpeed;
 	int speedLimitUp;
 	int speedLimitDown;
   double correct;
   double wrong;
   double bufferError;
   double bufferOk;
+  int wordCount;
 
   int testLevelCount;
-
 
 
 private slots:

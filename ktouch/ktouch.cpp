@@ -45,7 +45,9 @@ KTouch::KTouch(QWidget* , const char* name):KMainWindow(0, name)
   config=kapp->config();
   dirs = KGlobal::dirs();
 
-	touchLecture = new TouchLecture( this );
+	touchLecture = new TouchLecture();
+
+  touchStat = new TouchStat();
 
   QVBox * view = new QVBox ( this );
 
@@ -62,25 +64,43 @@ KTouch::KTouch(QWidget* , const char* name):KMainWindow(0, name)
   setCentralWidget( view );
 
 
-	QObject::connect( touchLine,    SIGNAL(isError()),
-	                  touchStatus,  SLOT(gotError()));
-	QObject::connect( touchLine,    SIGNAL(isOk()),
-	                  touchStatus,  SLOT(gotOk()));
+	QObject::connect( touchLine,    SIGNAL(isError(QChar)),
+	                  touchStatus,  SLOT(gotError(QChar)));
+	QObject::connect( touchLine,    SIGNAL(isOk(QChar)),
+	                  touchStatus,  SLOT(gotOk(QChar)));
+
+
+	QObject::connect( touchLine,    SIGNAL(isError(QChar)),
+	                  touchStat,    SLOT(gotError(QChar)));
+	QObject::connect( touchLine,    SIGNAL(isOk(QChar)),
+	                  touchStat,    SLOT(gotOk(QChar)));
+
+
 	QObject::connect( touchStatus,  SIGNAL(levelUp()),
 	                  touchLecture, SLOT(levelUp()));
 	QObject::connect( touchStatus,  SIGNAL(levelDown()),
 	                  touchLecture, SLOT(levelDown()));
+
+
   QObject::connect( touchStatus,  SIGNAL(stop()),
                     touchLine,    SLOT(stop()));
   QObject::connect( touchStatus,  SIGNAL(start()),
                     touchLine,    SLOT(start()));
+
+  QObject::connect( touchStatus,  SIGNAL(stop()),
+                    touchStat,    SLOT(stop()));
+  QObject::connect( touchStatus,  SIGNAL(start()),
+                    touchStat,    SLOT(start()));
+
+
   QObject::connect( touchStatus,  SIGNAL(forceNextLine()),
                     touchLine,    SLOT(getNextLine()));
   QObject::connect( touchLecture, SIGNAL(levelMessage(const QString&)),
                     touchStatus,  SLOT(setLevelMessage(const QString&)));
 	QObject::connect( touchLecture, SIGNAL(levelChanged(int)),
 	                  touchStatus,  SLOT(setLevel(int)));
-	QObject::connect( touchLine,    SIGNAL(nextKey(const QChar&)), touchKeyboard, SLOT(newKey(const QChar&)));
+	QObject::connect( touchLine,    SIGNAL(nextKey(const QChar&)),
+						touchKeyboard, SLOT(newKey(const QChar&)));
 
 
 	///////////////////////////////////////////////////////////////////
@@ -291,9 +311,7 @@ void KTouch::slotFileOpenRecent(const KURL& url)
 
 void KTouch::slotFileQuit()
 {
-  cout << "exit" << endl;
   slotStatusMsg(i18n("Exiting..."));
-  //saveOptions();
   close();
 }
 

@@ -20,9 +20,6 @@
 #include <qlabel.h>
 #include <qapplication.h>
 #include <qprogressbar.h>
-//#include <kaudioplayer.h>
-
-#define forget=50;
 
 TouchStatus::TouchStatus(QWidget * parent, const char * name)
            : TouchStatusLayout( parent, name )
@@ -40,36 +37,43 @@ TouchStatus::TouchStatus(QWidget * parent, const char * name)
   timer->start(500,false);
 }
 
-void TouchStatus::gotError()
+void TouchStatus::gotError(QChar)
 {
   bufferError++;
   if(errorSound) QApplication::beep();
 }
 
-void TouchStatus::gotOk()
+void TouchStatus::gotOk(QChar c)
 {
   bufferOk++;
+  if(c==" " || c==13)
+     wordCount++;
 }
 
 void TouchStatus::reset()
 {
-  speed          = 0;
+  charSpeed      = 0;
+  wordSpeed      = 0;
   correct        = 1;
   wrong          = 0;
   bufferOk       = 0;
   bufferError    = 0;
   testLevelCount = 0;
+  wordCount      = 0;
 }
 
 void TouchStatus::calculate()
 {
-  speed=(speed*60+bufferOk*120)/61;
+  charSpeed=(charSpeed*60+bufferOk*120)/61;
+  wordSpeed=(wordSpeed*60+wordCount*120)/61;
   wrong=(wrong*60+bufferError)/61;
   correct=(correct*60+bufferOk)/61;
   bufferError=0;
   bufferOk=0;
+  wordCount=0;
 
-  LCDSpeed->display((int)speed);
+  LCDSpeed->display((int)charSpeed);
+
   if ((correct+wrong)>0)
   {
     LCDCorrect->setProgress((int)(correct/(correct+wrong)*100));
@@ -83,13 +87,13 @@ void TouchStatus::calculate()
   if (testLevelCount>50 && autoLevel)
   {
     testLevelCount=0;
-    if (speed>speedLimitUp)
+    if (charSpeed>speedLimitUp)
     {
       emit levelUp();
     }
     else
     {
-      if(speed<speedLimitDown){
+      if(charSpeed<speedLimitDown){
           emit levelDown();
 			}
     }
@@ -125,8 +129,8 @@ unsigned int TouchStatus::getLevel()
 
 void TouchStatus::setSpeed(int s)
 {
-  speed=s;
-	LCDSpeed->display(speed);
+  charSpeed=s;
+	LCDSpeed->display(charSpeed);
 }
 
 unsigned int TouchStatus::getSpeed()
@@ -139,7 +143,6 @@ void TouchStatus::startKTouch()
 {
 	timer->start(500);
   emit start();
-//  cout << "start" << endl;
 }
 
 /** Starts to calculate speed and correctness */
@@ -147,7 +150,6 @@ void TouchStatus::stopKTouch()
 {
 	timer->stop();
   emit stop();
-//  cout << "stop" << endl;
 }
 
 void TouchStatus::runningStateChanged(int i)
@@ -171,7 +173,6 @@ void TouchStatus::setSpeedLimit(int up, int down){
   }
 	speedLimitDown=down;
 	speedLimitUp=up;
-
 }
 
 /** Returns the limit to go to next level */

@@ -31,7 +31,7 @@ class TouchLecture : public QObject
 Q_OBJECT
 
 public:
-  TouchLecture(QWidget *parent=0);
+  TouchLecture();//QWidget *parent=0);
   QString getNextLine();
   void loadLectureFile(QString fileName);
   QString getName();
