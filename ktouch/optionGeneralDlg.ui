@@ -107,7 +107,7 @@
                         <cstring>setColorButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Set Color</string>
+                        <string>Set Color...</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">

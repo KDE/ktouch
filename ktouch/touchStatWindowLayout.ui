@@ -587,7 +587,7 @@
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Last 5 times</string>
+                    <string>Last 5 Times</string>
                 </attribute>
             </widget>
             <widget class="QWidget">
@@ -595,7 +595,7 @@
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Last 20 times</string>
+                    <string>Last 20 Times</string>
                 </attribute>
             </widget>
             <widget class="QWidget">
