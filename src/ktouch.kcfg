@@ -60,7 +60,7 @@
      <label>The font for the student and teacher lines</label>
       <default>KGlobalSettings::generalFont()</default>
     </entry>
-    <entry name="CurrentLectureFile" type="String">
+    <entry name="CurrentLectureFile" type="Path">
     <label>The currently loaded lecture file</label>
     <default>"default"</default>
     </entry>
