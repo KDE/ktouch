@@ -496,7 +496,7 @@ void KTouch::setupActions() {
 	// actions for the settings menu
 	KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
-	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
+	m_keyboardColorAction = new KSelectAction(i18n("Keyboard Color &Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
 	// actions for the Training menu
 	m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
 	// Finally the connections
