@@ -36,7 +36,7 @@ TouchEdit::TouchEdit( QWidget* parent, TouchLecture* l)
 
 TouchEdit::~TouchEdit()
 {
-
+    
 }
 
 void TouchEdit::fetchLevel()

@@ -41,7 +41,6 @@ void NormalKey::paint(QPainter *p)
 	    ((FingerKey*)fingerKey)->setActive(true);
 	    fingerKey->paint(p);
 	}
-	
     }
     else
     {
@@ -50,8 +49,6 @@ void NormalKey::paint(QPainter *p)
 	    ((FingerKey*)fingerKey)->setActive(false);
 	    fingerKey->paint(p);
 	}
-	
     }
-    
 }
 

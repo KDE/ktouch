@@ -31,6 +31,7 @@
 #include "touchTrainLayout.h"
 #include "touchkeyboard.h"
 #include "touchStatus.h"
+#include "touchstat.h"
 #include "touchlecture.h"
 
 class TouchTrain : public TouchTrainLayout {
@@ -38,7 +39,7 @@ class TouchTrain : public TouchTrainLayout {
 
 public:
 	/** constructor */
-	TouchTrain(QWidget* parent, TouchLecture* lecture);
+	TouchTrain(QWidget* parent, TouchLecture* lecture, TouchStat* status);
 
 	/** destructor */
 	~TouchTrain();
@@ -46,9 +47,10 @@ public:
 	void saveOptions();
 	void readOptions();
 
+	bool remember;
+
 private:
 	KConfig *config;
-	bool remember;
 	TouchLecture* lecture;
 };
 

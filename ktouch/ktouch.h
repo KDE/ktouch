@@ -25,7 +25,6 @@
 
 #include "touchlecture.h"
 #include "touchline.h"
-//#include "touchStatus.h"
 #include "touchkeyboard.h"
 #include "touchstat.h"
 #include "touchStatWindow.h"
@@ -64,14 +63,15 @@ class KTouch : public KMainWindow
 	/** initializes the KActions of the application
 	*/
 	void initActions();
-		/** sets up the statusbar for the main window by initialzing a statuslabel.
-		*/
-		void initStatusBar();
-		/** initializes the document object of the main window that is connected to the view in initView().
-		* @see initView();
-		*/
-
-		bool queryExit();
+	/** sets up the statusbar for the main window by initialzing a statuslabel.
+	 */
+	
+	void initStatusBar();
+	/** initializes the document object of the main window that is connected to the view in initView().
+	 * @see initView();
+	 */
+	
+	bool queryExit();
 
 
 
@@ -107,10 +107,8 @@ class KTouch : public KMainWindow
 		void slotOptionTraining();
 		void slotOptionGeneral();
 
-		void showStat();
-		void hideStat();
-
-
+		void slotViewStat();
+	
 	private:
 		/** the configuration object of the application */
 		KConfig *config;
@@ -125,6 +123,7 @@ class KTouch : public KMainWindow
 		KAction* fileQuit;
 		KToggleAction* viewToolBar;
 		KToggleAction* viewStatusBar;
+		KToggleAction* statShow;
 		KStandardDirs *dirs;
 		TouchStatWindow *touchStatWindow;
 };

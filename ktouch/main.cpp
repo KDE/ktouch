@@ -24,10 +24,9 @@
 
 #include "ktouchapp.h"
 
-static const char *description =
-	I18N_NOOP("Touch Typing Tutor");
+static const char *description = I18N_NOOP("Touch Typing Tutor");
 
-static const char *version = "1.1";
+static const char *version = "1.2";
 
 static KCmdLineOptions options[] =
 {
@@ -36,25 +35,24 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
-
-	KAboutData about( "ktouch",
-		I18N_NOOP("KTouch"),
-		version,
-		description,
-		KAboutData::License_GPL,
-		"Copyright (c) 2002, Håvard Frøiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
-	about.addAuthor("Håvard Frøiland",0, "haavard@users.sourceforge.net");
-
-	KCmdLineArgs::init(argc, argv, &about);
-	KCmdLineArgs::addCmdLineOptions( options );
-	KUniqueApplication::addCmdLineOptions();
-
-	if (!KTouchApp::start())
-	{
-		fprintf(stderr, "KTouch is already running!\n");
-		exit(0);
-	}
-	KTouchApp app;
-	app.exec();
-	}
+    KAboutData about( "ktouch",
+		      I18N_NOOP("KTouch"),
+		      version,
+		      description,
+		      KAboutData::License_GPL,
+		      "Copyright (c) 2002, Håvard Frøiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
+    about.addAuthor("Håvard Frøiland",0, "haavard@users.sourceforge.net");
+    
+    KCmdLineArgs::init(argc, argv, &about);
+    KCmdLineArgs::addCmdLineOptions( options );
+    KUniqueApplication::addCmdLineOptions();
+    
+    if (!KTouchApp::start())
+    {
+	fprintf(stderr, "KTouch is already running!\n");
+	exit(0);
+    }
+    KTouchApp app;
+    app.exec();
+}
 

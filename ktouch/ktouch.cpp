@@ -49,153 +49,132 @@
 
 KTouch::KTouch():KMainWindow()
 {
-	config=kapp->config();
-	dirs = KGlobal::dirs();
-
-	touchLecture = new TouchLecture();
-	touchStat    = new TouchStat();
-
-//Object::connect(	touchTrain->line,    SIGNAL(isError(QChar)),
-//				touchStat,    SLOT(gotError(QChar)));
-//Object::connect(	touchTrain->line,    SIGNAL(isOk(QChar)),
-//				touchStat,    SLOT(gotOk(QChar)));
-
-//Object::connect(	touchTrain->status,  SIGNAL(stop()),
-//				touchStat,    SLOT(stop()));
-//Object::connect(	touchTrain->status,  SIGNAL(start()),
-//				touchStat,    SLOT(start()));
-
-/*
-
-	QObject::connect(	touchTrain->line,    SIGNAL(nextKey(const QChar&)),
-						touchTrain->keyboard, SLOT(newKey(const QChar&)));
-
-	QObject::connect(	touchTrain->status,  SIGNAL(showStat()),
-						this,         SLOT(showStat()));
-	QObject::connect(	touchTrain->status,  SIGNAL(hideStat()),
-						this,         SLOT(hideStat()));
-*/
-
-
-	///////////////////////////////////////////////////////////////////
-	// call inits to invoke all other construction parts
-	initStatusBar();
-	initActions();
-
-	kdDebug() << "read option" << endl;
-	readOptions();
-	
-	slotModeTrain();
-
-//	touchLine->getNextLine();
+    config=kapp->config();
+    dirs = KGlobal::dirs();
+    
+    touchLecture = new TouchLecture();
+    touchStat    = new TouchStat();
+    
+    
+    ///////////////////////////////////////////////////////////////////
+    // call inits to invoke all other construction parts
+    initStatusBar();
+    initActions();
+    
+    kdDebug() << "read option" << endl;
+    readOptions();
+    
+    slotModeTrain();
 }
 
 KTouch::~KTouch()
 {
-  delete touchLecture;
-  delete touchStat;
-
+    delete touchLecture;
+    delete touchStat;
 }
-
 
 void KTouch::initActions()
 {
-	fileOpen = KStdAction::open(this, SLOT(slotFileOpen()), actionCollection());
-	fileSave = KStdAction::save(this, SLOT(slotFileSave()), actionCollection());
-	fileSaveAs = KStdAction::saveAs(this, SLOT(slotFileSaveAs()), actionCollection());
-	fileOpenRecent = KStdAction::openRecent(this, SLOT(slotFileOpenRecent(const KURL&)), actionCollection());
-	fileQuit = KStdAction::quit(this, SLOT(slotFileQuit()), actionCollection());
-	viewToolBar = KStdAction::showToolbar(this, SLOT(slotViewToolBar()), actionCollection());
-	viewStatusBar = KStdAction::showStatusbar(this, SLOT(slotViewStatusBar()), actionCollection());
-
-	new KAction(i18n("Keyboard..."),0,this,SLOT(slotOptionKeyboard()), actionCollection(),"optionKeyboard");
-	new KAction(i18n("Training..."),0,this,SLOT(slotOptionTraining()), actionCollection(),"optionTraining");
-	new KAction(i18n("General..."),0,this,SLOT(slotOptionGeneral()), actionCollection(),"optionGeneral");
-
-	new KAction(i18n("Train"),1,this,SLOT(slotModeTrain()), actionCollection(),"train");
-	new KAction(i18n("Edit"),2,this,SLOT(slotModeEdit()), actionCollection(),"edit");
-	new KAction(i18n("Test"),3,this,SLOT(slotModeTest()), actionCollection(),"test");
-
-	fileOpen->setStatusText(i18n("Opens an existing document"));
-	fileOpenRecent->setStatusText(i18n("Opens a recently used file"));
-
-	fileQuit->setStatusText(i18n("Quits the application"));
-	viewToolBar->setStatusText(i18n("Enables/disables the toolbar"));
-	viewStatusBar->setStatusText(i18n("Enables/disables the statusbar"));
-
-	// use the absolute path to your ktouchui.rc file for testing purpose in createGUI();
-	//createGUI("ktouchui.rc");
-	createGUI();
+    fileOpen = KStdAction::open(this, SLOT(slotFileOpen()), actionCollection());
+//	fileSave = KStdAction::save(this, SLOT(slotFileSave()), actionCollection());
+//	fileSaveAs = KStdAction::saveAs(this, SLOT(slotFileSaveAs()), actionCollection());
+    fileOpenRecent = KStdAction::openRecent(this, SLOT(slotFileOpenRecent(const KURL&)), actionCollection());
+    fileQuit = KStdAction::quit(this, SLOT(slotFileQuit()), actionCollection());
+    viewToolBar = KStdAction::showToolbar(this, SLOT(slotViewToolBar()), actionCollection());
+    viewStatusBar = KStdAction::showStatusbar(this, SLOT(slotViewStatusBar()), actionCollection());
+    
+    new KAction(i18n("Keyboard..."),0,this,SLOT(slotOptionKeyboard()), actionCollection(),"optionKeyboard");
+    new KAction(i18n("Training..."),0,this,SLOT(slotOptionTraining()), actionCollection(),"optionTraining");
+    new KAction(i18n("General..."),0,this,SLOT(slotOptionGeneral()), actionCollection(),"optionGeneral"); 
+    
+/*
+  new KAction(i18n("Train"),1,this,SLOT(slotModeTrain()), actionCollection(),"train");
+  new KAction(i18n("Edit"),2,this,SLOT(slotModeEdit()), actionCollection(),"edit");
+  new KAction(i18n("Test"),3,this,SLOT(slotModeTest()), actionCollection(),"test");
+*/
+    
+    statShow = new KToggleAction(i18n("Stat"),0,this,SLOT(slotViewStat()), actionCollection(),"stat");
+    
+    fileOpen->setStatusText(i18n("Opens an existing document"));
+    fileOpenRecent->setStatusText(i18n("Opens a recently used file"));
+    
+    fileQuit->setStatusText(i18n("Quits the application"));
+    viewToolBar->setStatusText(i18n("Enables/disables the toolbar"));
+    viewStatusBar->setStatusText(i18n("Enables/disables the statusbar"));
+    
+    // use the absolute path to your ktouchui.rc file for testing purpose in createGUI();
+    // createGUI("/home/haavard/cvs/kde/kdeedu/ktouch/ktouch/ktouchui.rc");
+    createGUI();
 }
 
 
 void KTouch::initStatusBar()
 {
-	///////////////////////////////////////////////////////////////////
-	// STATUSBAR
-	// TODO: add your own items you need for displaying current application status.
-
-	statusBar()->insertItem(i18n("Ready."), ID_STATUS_MSG);
+    ///////////////////////////////////////////////////////////////////
+    // STATUSBAR
+    // TODO: add your own items you need for displaying current application status.
+    
+    statusBar()->insertItem(i18n("Ready."), ID_STATUS_MSG);
 }
 
 void KTouch::openDocumentFile(const KURL& url)
 {
-	slotStatusMsg(i18n("Opening file..."));
-	if(!url.isEmpty())
-	{
-		touchLecture->load(url.directory(false) + url.fileName());
-		touchTrain->line->getNextLine();
-		setCaption(url.fileName(), false);
-		fileOpenRecent->addURL( url );
-	}
+    slotStatusMsg(i18n("Opening file..."));
+    if(!url.isEmpty())
+    {
+	touchLecture->load(url.directory(false) + url.fileName());
+	touchTrain->line->getNextLine();
+	setCaption(url.fileName(), false);
 	fileOpenRecent->addURL( url );
-	slotStatusMsg(i18n("Ready."));
+    }
+    fileOpenRecent->addURL( url );
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::saveOptions()
 {
-	//** General Options ********************************************************
-	config->setGroup("General Options");
-	config->writeEntry("Geometry", size());
-	config->writeEntry("Show Toolbar", viewToolBar->isChecked());
-	config->writeEntry("Show Statusbar",viewStatusBar->isChecked());
-	config->writeEntry("ToolBarPos", (int) toolBar("mainToolBar")->barPos());
-	fileOpenRecent->saveEntries(config,"Recent Files");
+    //** General Options ********************************************************
+    config->setGroup("General Options");
+    config->writeEntry("Geometry", size());
+    config->writeEntry("Show Toolbar", viewToolBar->isChecked());
+    config->writeEntry("Show Statusbar",viewStatusBar->isChecked());
+    config->writeEntry("ToolBarPos", (int) toolBar("mainToolBar")->barPos());
+    fileOpenRecent->saveEntries(config,"Recent Files");
 }
 
 void KTouch::readOptions()
 {
-	//** General Options ********************************************************
-	config->setGroup("General Options");
-
-	// bar status settings
-	bool bViewToolbar = config->readBoolEntry("Show Toolbar", false);
-	viewToolBar->setChecked(bViewToolbar);
-	slotViewToolBar();
-
-	bool bViewStatusbar = config->readBoolEntry("Show Statusbar", true);
-	viewStatusBar->setChecked(bViewStatusbar);
-	slotViewStatusBar();
-
-	// bar position settings
-	KToolBar::BarPosition toolBarPos;
-	toolBarPos=(KToolBar::BarPosition) config->readNumEntry("ToolBarPos", KToolBar::Top);
-	toolBar("mainToolBar")->setBarPos(toolBarPos);
-
-	// initialize the recent file list
-	fileOpenRecent->loadEntries(config,"Recent Files");
-
-	// set the size of KTouch
-	QSize size(550,420);
-	size=config->readSizeEntry("Geometry",&size);
-	resize(size);
-
-	// ** Recent files *******************************************************
-	config->setGroup("Recent Files");
-	KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
-
-	touchLecture->load(url.directory(false,true)+url.fileName());
-	
+    //** General Options ********************************************************
+    config->setGroup("General Options");
+    
+    // bar status settings
+    bool bViewToolbar = config->readBoolEntry("Show Toolbar", false);
+    viewToolBar->setChecked(bViewToolbar);
+    slotViewToolBar();
+    
+    bool bViewStatusbar = config->readBoolEntry("Show Statusbar", true);
+    viewStatusBar->setChecked(bViewStatusbar);
+    slotViewStatusBar();
+    
+    // bar position settings
+    KToolBar::BarPosition toolBarPos;
+    toolBarPos=(KToolBar::BarPosition) config->readNumEntry("ToolBarPos", KToolBar::Top);
+    toolBar("mainToolBar")->setBarPos(toolBarPos);
+    
+    // initialize the recent file list
+    fileOpenRecent->loadEntries(config,"Recent Files");
+    
+    // set the size of KTouch
+    QSize size(550,420);
+    size=config->readSizeEntry("Geometry",&size);
+    resize(size);
+    
+    // ** Recent files *******************************************************
+    config->setGroup("Recent Files");
+    KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
+    
+    touchLecture->load(url.directory(false,true)+url.fileName());
+    
 }
 
 bool KTouch::queryExit()
@@ -212,245 +191,238 @@ bool KTouch::queryExit()
 
 void KTouch::slotFileOpen()
 {
-	slotStatusMsg(i18n("Opening file..."));
-	KURL url=KFileDialog::getOpenURL(
-		dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
-		i18n("*.ktouch|KTouch training files"), this, i18n("Open File"));
-	if(!url.isEmpty())
-	{
-		touchLecture->load(url.directory(false) + url.fileName());
+    slotStatusMsg(i18n("Opening file..."));
+    KURL url=KFileDialog::getOpenURL(
+	dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
+	i18n("*.ktouch|KTouch training files"), this, i18n("Open File"));
+    if(!url.isEmpty())
+    {
+	touchLecture->load(url.directory(false) + url.fileName());
 // Emit newFileSignal here
-		touchTrain->line->getNextLine();
-		setCaption(url.fileName(), false);
-		fileOpenRecent->addURL( url );
-	}
-
-	slotStatusMsg(i18n("Ready."));
+	touchTrain->line->getNextLine();
+	setCaption(url.fileName(), false);
+	fileOpenRecent->addURL( url );
+    }
+    
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::slotFileOpenRecent(const KURL& url)
 {
-	slotStatusMsg(i18n("Opening file..."));
-
-	if(!url.isEmpty())
-	{
-		touchLecture->load(url.directory(false) + url.fileName());
+    slotStatusMsg(i18n("Opening file..."));
+    
+    if(!url.isEmpty())
+    {
+	touchLecture->load(url.directory(false) + url.fileName());
 // Emit newFileSignal here
-		touchTrain->line->getNextLine();
-
-		setCaption(url.fileName(), false);
-		fileOpenRecent->addURL( url );
-	}
-	slotStatusMsg(i18n("Ready."));
+	touchTrain->line->getNextLine();
+	
+	setCaption(url.fileName(), false);
+	fileOpenRecent->addURL( url );
+    }
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::slotFileSave()
 {
-	slotStatusMsg(i18n("saving..."));
-	if(touchLecture->save()!= 0 )
-	{
-		QMessageBox::information( this,i18n("Saving training file"),
-									i18n("Error when trying to save to file"));
-	}
-	slotStatusMsg(i18n("Ready."));
+    slotStatusMsg(i18n("saving..."));
+    if(touchLecture->save()!= 0 )
+    {
+	QMessageBox::information( this,i18n("Saving training file"),
+				  i18n("Error when trying to save to file"));
+    }
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::slotFileSaveAs()
 {
-	slotStatusMsg(i18n("Save file..."));
-	KURL url=KFileDialog::getOpenURL(
-		dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
-		i18n("*.ktouch|KTouch training files"), this, i18n("Save File"));
-	if(!url.isEmpty())
-	{
-		touchLecture->saveAs(url.directory(false) + url.fileName());
-		setCaption(url.fileName(), false);
-		fileOpenRecent->addURL( url );
-	}
-
-	slotStatusMsg(i18n("Ready."));
+    slotStatusMsg(i18n("Save file..."));
+    KURL url=KFileDialog::getOpenURL(
+	dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
+	i18n("*.ktouch|KTouch training files"), this, i18n("Save File"));
+    if(!url.isEmpty())
+    {
+	touchLecture->saveAs(url.directory(false) + url.fileName());
+	setCaption(url.fileName(), false);
+	fileOpenRecent->addURL( url );
+    }
+    
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::slotFileEdit()
 {
-	slotStatusMsg(i18n("editing..."));
-
+    slotStatusMsg(i18n("editing..."));
+    
 }
 
 void KTouch::slotFileQuit()
 {
-	slotStatusMsg(i18n("Exiting..."));
-	close();
+    slotStatusMsg(i18n("Exiting..."));
+    close();
 }
 
 void KTouch::slotViewToolBar()
 {
-	slotStatusMsg(i18n("Toggling toolbar..."));
-	///////////////////////////////////////////////////////////////////
-	// turn Toolbar on or off
-	if(!viewToolBar->isChecked())
-	{
-		toolBar("mainToolBar")->hide();
-	}
-	else
-	{
-		toolBar("mainToolBar")->show();
-	}
-
-	slotStatusMsg(i18n("Ready."));
+    slotStatusMsg(i18n("Toggling toolbar..."));
+    ///////////////////////////////////////////////////////////////////
+    // turn Toolbar on or off
+    if(!viewToolBar->isChecked())
+    {
+	toolBar("mainToolBar")->hide();
+    }
+    else
+    {
+	toolBar("mainToolBar")->show();
+    }
+    
+    slotStatusMsg(i18n("Ready."));
 }
 
 void KTouch::slotViewStatusBar()
 {
-	slotStatusMsg(i18n("Toggle the statusbar..."));
-	///////////////////////////////////////////////////////////////////
-	//turn Statusbar on or off
-	if(!viewStatusBar->isChecked())
-	{
-		statusBar()->hide();
-	}
-	else
-	{
-		statusBar()->show();
-	}
-
-	slotStatusMsg(i18n("Ready."));
+    slotStatusMsg(i18n("Toggle the statusbar..."));
+    ///////////////////////////////////////////////////////////////////
+    //turn Statusbar on or off
+    if(!viewStatusBar->isChecked())
+    {
+	statusBar()->hide();
+    }
+    else
+    {
+	statusBar()->show();
+    }
+    
+    slotStatusMsg(i18n("Ready."));
 }
 
 
 void KTouch::slotStatusMsg(const QString &text)
 {
-	///////////////////////////////////////////////////////////////////
-	// change status message permanently
-	statusBar()->clear();
-	statusBar()->changeItem(text, ID_STATUS_MSG);
+    ///////////////////////////////////////////////////////////////////
+    // change status message permanently
+    statusBar()->clear();
+    statusBar()->changeItem(text, ID_STATUS_MSG);
 }
 
 void KTouch::slotOptionKeyboard()
 {
-
-	// Set up dialog
-	OptionKeyboard *optionKeyboard=new OptionKeyboard(this,"keyboardOptionDialog",true);
-
-	optionKeyboard->showColor->setChecked(touchTrain->keyboard->getShowColor());
-	optionKeyboard->showAnimation->setCurrentItem(touchTrain->keyboard->getShowAnimation());
-
-	optionKeyboard->languageBox->setDisabled((touchTrain->keyboard->getLanguage()=="number"));
-	optionKeyboard->showKeypad->setChecked((touchTrain->keyboard->getLanguage()=="number"));
-
-	// need to load the keyboard files dynamically hear...
-
-	QStringList keyboardList=QDir(dirs->findResourceDir("data","ktouch/number.keyboard") + "ktouch/","*.keyboard").entryList();
-
-	keyboardList.sort();
-	for ( QStringList::Iterator it = keyboardList.begin(); it != keyboardList.end(); ++it )
+    
+    // Set up dialog
+    OptionKeyboard *optionKeyboard=new OptionKeyboard(this,"keyboardOptionDialog",true);
+    
+    optionKeyboard->showColor->setChecked(touchTrain->keyboard->getShowColor());
+    optionKeyboard->showAnimation->setCurrentItem(touchTrain->keyboard->getShowAnimation());
+    
+    optionKeyboard->languageBox->setDisabled((touchTrain->keyboard->getLanguage()=="number"));
+    optionKeyboard->showKeypad->setChecked((touchTrain->keyboard->getLanguage()=="number"));
+    
+    // need to load the keyboard files dynamically hear...
+    
+    QStringList keyboardList=QDir(dirs->findResourceDir("data","ktouch/number.keyboard") + "ktouch/","*.keyboard").entryList();
+    
+    keyboardList.sort();
+    for ( QStringList::Iterator it = keyboardList.begin(); it != keyboardList.end(); ++it )
+    {
+	QString keyboardName=*it;
+	optionKeyboard->language->insertItem(keyboardName.left(keyboardName.find(".keyboard")));
+    }
+    
+    
+    for(int i=0;optionKeyboard->language->count()>i;i++)
+    {
+	if(optionKeyboard->language->text(i)==touchTrain->keyboard->getLanguage())
 	{
-		QString keyboardName=*it;
-		optionKeyboard->language->insertItem(keyboardName.left(keyboardName.find(".keyboard")));
+	    optionKeyboard->language->setCurrentItem(i);
 	}
-
-
-	for(int i=0;optionKeyboard->language->count()>i;i++)
+    }
+    
+    if(optionKeyboard->exec())
+    {
+	// save changes made in dialog
+	touchTrain->keyboard->setShowColor(optionKeyboard->showColor->isChecked());
+	touchTrain->keyboard->setShowAnimation(optionKeyboard->showAnimation->currentItem());
+	if(optionKeyboard->showKeypad->isChecked())
 	{
-		if(optionKeyboard->language->text(i)==touchTrain->keyboard->getLanguage())
-		{
-			optionKeyboard->language->setCurrentItem(i);
-		}
+	    touchTrain->keyboard->loadKeyboard("number");
+	    KURL url(dirs->findResource("data","ktouch/number.keyboard"));
+	    openDocumentFile(url);
+	    slotFileOpenRecent(url);
 	}
-
-	if(optionKeyboard->exec())
+	else
 	{
-		// save changes made in dialog
-		touchTrain->keyboard->setShowColor(optionKeyboard->showColor->isChecked());
-		touchTrain->keyboard->setShowAnimation(optionKeyboard->showAnimation->currentItem());
-		if(optionKeyboard->showKeypad->isChecked())
-		{
-			touchTrain->keyboard->loadKeyboard("number");
-
-			//QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
-			//touchLecture->loadLectureFile(trainingFile);
-			KURL url(dirs->findResource("data","ktouch/number.keyboard"));
-			openDocumentFile(url);
-			slotFileOpenRecent(url);
-		}
-		else
-		{
-			touchTrain->keyboard->loadKeyboard(optionKeyboard->language->currentText());
-			//QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
-			//touchLecture->loadLectureFile(trainingFile);
-			KURL url(dirs->findResource("data","ktouch/english.ktouch"));
-			openDocumentFile(url);
-			slotFileOpenRecent(url);
-		}
-
+	    touchTrain->keyboard->loadKeyboard(optionKeyboard->language->currentText());
+	    KURL url(dirs->findResource("data","ktouch/english.ktouch"));
+	    openDocumentFile(url);
+	    slotFileOpenRecent(url);
 	}
-	delete optionKeyboard;
+    }
+    delete optionKeyboard;
 }
 
 void KTouch::slotOptionTraining()
 {
-
-	// Set up dialog
-	OptionTraining *optionTraining=new OptionTraining(this,"trainingOptionDialog",true);
-
-	optionTraining->limitUp->setValue(touchTrain->status->getSpeedLimitUp());
-	optionTraining->limitUp->setEnabled(touchTrain->status->autoLevel);
-	optionTraining->limitDown->setValue(touchTrain->status->getSpeedLimitDown());
-	optionTraining->limitDown->setEnabled(touchTrain->status->autoLevel);
-//	optionTraining->remember->setChecked(remember);
-	optionTraining->autoLevel->setChecked(touchTrain->status->autoLevel);
-
-	if(optionTraining->exec())
-	{
-		// Save dialog changes
-		touchTrain->status->setSpeedLimit(optionTraining->limitUp->value(),optionTraining->limitDown->value());
-//		remember=optionTraining->remember->isChecked();
-		touchTrain->status->autoLevel=optionTraining->autoLevel->isChecked();
-		touchTrain->status->pushButtonLevelDown->setDisabled(touchTrain->status->autoLevel);
-		touchTrain->status->pushButtonLevelUp->setDisabled(touchTrain->status->autoLevel);
-	}
-	delete optionTraining;
-
+    
+    // Set up dialog
+    OptionTraining *optionTraining=new OptionTraining(this,"trainingOptionDialog",true);
+    
+    optionTraining->limitUp->setValue(touchTrain->status->getSpeedLimitUp());
+    optionTraining->limitUp->setEnabled(touchTrain->status->autoLevel);
+    optionTraining->limitDown->setValue(touchTrain->status->getSpeedLimitDown());
+    optionTraining->limitDown->setEnabled(touchTrain->status->autoLevel);
+    optionTraining->remember->setChecked(touchTrain->remember);
+    optionTraining->autoLevel->setChecked(touchTrain->status->autoLevel);
+    
+    if(optionTraining->exec())
+    {
+	// Save dialog changes
+	touchTrain->status->setSpeedLimit(optionTraining->limitUp->value(),optionTraining->limitDown->value());
+	touchTrain->remember=optionTraining->remember->isChecked();
+	touchTrain->status->autoLevel=optionTraining->autoLevel->isChecked();
+	touchTrain->status->pushButtonLevelDown->setDisabled(touchTrain->status->autoLevel);
+	touchTrain->status->pushButtonLevelUp->setDisabled(touchTrain->status->autoLevel);
+    }
+    delete optionTraining;
+    
 }
 
 void KTouch::slotOptionGeneral()
 {
-
-	// Set up dialog
-	OptionGeneral *optionGeneral=new OptionGeneral(this,"generalOptionDialog",true);
-
-	optionGeneral->beepOnError->setChecked(touchTrain->status->errorSound);
-	optionGeneral->soundOnLevel->setChecked(touchTrain->status->levelSound);
-	optionGeneral->colorOnError->setChecked(touchTrain->line->getShowError());
-	optionGeneral->showColor->setPalette(QPalette(touchTrain->line->getErrorColor()));
-	optionGeneral->fontChooser->setFont(touchTrain->line->getFont());
-
-	if(optionGeneral->exec())
-	{
-		// Save dialog changes
-		touchTrain->status->errorSound=optionGeneral->beepOnError->isChecked();
-		touchTrain->status->levelSound=optionGeneral->soundOnLevel->isChecked();
-		touchTrain->line->setShowError(optionGeneral->colorOnError->isChecked());
-		touchTrain->line->setErrorColor(optionGeneral->showColor->backgroundColor());
-		touchTrain->line->setFont(optionGeneral->fontChooser->font());
-	}
-	delete optionGeneral;
-
+    
+    // Set up dialog
+    OptionGeneral *optionGeneral=new OptionGeneral(this,"generalOptionDialog",true);
+    
+    optionGeneral->beepOnError->setChecked(touchTrain->status->errorSound);
+    optionGeneral->soundOnLevel->setChecked(touchTrain->status->levelSound);
+    optionGeneral->colorOnError->setChecked(touchTrain->line->getShowError());
+    optionGeneral->showColor->setPalette(QPalette(touchTrain->line->getErrorColor()));
+    optionGeneral->fontChooser->setFont(touchTrain->line->getFont());
+    
+    if(optionGeneral->exec())
+    {
+	// Save dialog changes
+	touchTrain->status->errorSound=optionGeneral->beepOnError->isChecked();
+	touchTrain->status->levelSound=optionGeneral->soundOnLevel->isChecked();
+	touchTrain->line->setShowError(optionGeneral->colorOnError->isChecked());
+	touchTrain->line->setErrorColor(optionGeneral->showColor->backgroundColor());
+	touchTrain->line->setFont(optionGeneral->fontChooser->font());
+    }
+    delete optionGeneral;
 }
 
 
-void KTouch::showStat()
+void KTouch::slotViewStat()
 {
+    if(statShow->isChecked())
+    {
 	touchStatWindow = new TouchStatWindow(touchStat);
 	touchStatWindow->show();
-}
-
-
-void KTouch::hideStat()
-{
-	kdDebug() << "slotModeStat" << endl;
+    }
+    else
+    {
 	touchStatWindow->hide();
 	delete(touchStatWindow);
+    }
 }
 
 
@@ -459,41 +431,41 @@ void KTouch::slotModeTrain()
     QWidget *oldCentralWidget=centralWidget();
     
     kdDebug() << "slotModeTrain" << endl;
-    touchTrain = new TouchTrain(this,touchLecture);
+    touchTrain = new TouchTrain(this,touchLecture, touchStat);
     touchTrain->line->getNextLine();
     
     setCentralWidget(touchTrain);
     touchTrain->show();
-    touchTrain->setFocus();
+    //touchTrain->setFocus();
     
     delete(oldCentralWidget);
 }
 
 void KTouch::slotModeEdit()
 {
-	QWidget *oldCentralWidget=centralWidget();
-
-	kdDebug() << "slotModeEdit" << endl;
-	touchEdit = new TouchEdit(this, touchLecture);
-	setCentralWidget(touchEdit);
-	touchEdit->show();
-	touchEdit->setFocus();
-
-
-	delete(oldCentralWidget);
+    QWidget *oldCentralWidget=centralWidget();
+    
+    kdDebug() << "slotModeEdit" << endl;
+    touchEdit = new TouchEdit(this, touchLecture);
+    setCentralWidget(touchEdit);
+    touchEdit->show();
+    touchEdit->setFocus();
+    
+    
+    delete(oldCentralWidget);
 }
 
 void KTouch::slotModeTest()
 {
-	QWidget *oldCentralWidget=centralWidget();
-	kdDebug() << "slotModeTest" << endl;
-	touchTest = new TouchTest(this);
-	setCentralWidget(touchTest);
-	touchTest->show();
-	touchTest->setFocus();
-
-	delete(oldCentralWidget);
-
+    QWidget *oldCentralWidget=centralWidget();
+    kdDebug() << "slotModeTest" << endl;
+    touchTest = new TouchTest(this);
+    setCentralWidget(touchTest);
+    touchTest->show();
+    touchTest->setFocus();
+    
+    delete(oldCentralWidget);
+    
 }
 
 

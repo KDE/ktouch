@@ -34,35 +34,35 @@ HiddenKey::~HiddenKey()
 
 void HiddenKey::paint(QPainter *p)
 {
-	if(state)
+    if(state)
+    {
+	if(fingerKey)
 	{
-		if(fingerKey)
-		{
-			((FingerKey*)fingerKey)->setActive(true);
-			fingerKey->paint(p);
-		}
-		if(controlKey)
-		{
-			((ControlKey*)controlKey)->state=true;
-			controlKey->paint(p);
-		}
-		targetKey->state=true;
-		targetKey->paint(p);
+	    ((FingerKey*)fingerKey)->setActive(true);
+	    fingerKey->paint(p);
 	}
-	else
+	if(controlKey)
 	{
+	    ((ControlKey*)controlKey)->state=true;
+	    controlKey->paint(p);
+	}
+//	targetKey->state=true;
+	targetKey->paint(p);
+    }
+    else
+    {
   	if(fingerKey)
-		{
-			((FingerKey*)fingerKey)->setActive(false);
-			fingerKey->paint(p);
-		}
-		if(controlKey)
-		{
-			((ControlKey*)controlKey)->state=false;
-			controlKey->paint(p);
-		}
-		targetKey->state=false;
-		targetKey->paint(p);
+	{
+	    //  ((FingerKey*)fingerKey)->setActive(false);
+	    fingerKey->paint(p);
 	}
+	if(controlKey)
+	{
+	    ((ControlKey*)controlKey)->state=false;
+	    controlKey->paint(p);
+	}
+//	targetKey->state=false;
+	targetKey->paint(p);
+    }
 }
 

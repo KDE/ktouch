@@ -67,7 +67,7 @@ void TouchKey::setScale(float s)
 
 void TouchKey::paintBase(QPainter *p)
 {
-    if (state)
+    if(state)
     {
 	switch(getShowAnimation()){
 	    case 0:

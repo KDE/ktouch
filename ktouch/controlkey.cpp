@@ -27,19 +27,19 @@ ControlKey::~ControlKey()
 
 void ControlKey::paint(QPainter *p)
 {
-  if (state)
-  {
-    p->fillRect(x+width/4,y+2,width-width/2,height-height*2/3,QBrush( QColor(50,50,50)));
-  }
-	else
-	{
+    if(state)
+    {
+	p->fillRect(x+width/4,y+2,width-width/2,height-height*2/3,QBrush( QColor(50,50,50)));
+    }
+    else
+    {
    	p->fillRect(x,y,width,height,QColor(200,200,200));
-	}
- 	p->drawRect(x,y,width,height);
- 	p->drawRect(x+1,y+1,width-2,height-2);
-
-  //draw the text on the key
-  p->setFont(QFont("courier", getSmallest()/5));
-  p->drawText(x+4,y+height-6,keyValue);
+    }
+    p->drawRect(x,y,width,height);
+    p->drawRect(x+1,y+1,width-2,height-2);
+    
+    //draw the text on the key
+    p->setFont(QFont("courier", getSmallest()/5));
+    p->drawText(x+4,y+height-6,keyValue);
 }
 

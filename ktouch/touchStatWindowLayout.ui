@@ -40,7 +40,7 @@
                     <number>6</number>
                 </property>
                 <spacer>
-                    <property name="name">
+                    <property name="name" stdset="0">
                         <cstring>Spacer1</cstring>
                     </property>
                     <property name="orientation">
@@ -49,10 +49,16 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
                 </spacer>
                 <widget class="QPushButton">
                     <property name="name">
-                        <cstring>PushButton1</cstring>
+                        <cstring>close</cstring>
                     </property>
                     <property name="text">
                         <string>Close</string>
@@ -475,7 +481,7 @@
                                         </grid>
                                     </widget>
                                     <spacer>
-                                        <property name="name">
+                                        <property name="name" stdset="0">
                                             <cstring>Spacer21</cstring>
                                         </property>
                                         <property name="orientation">
@@ -484,6 +490,12 @@
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
                                         </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
                                     </spacer>
                                 </vbox>
                             </widget>
@@ -491,7 +503,7 @@
                                 <property name="name">
                                     <cstring>Line1</cstring>
                                 </property>
-                                <property name="frameShape">
+                                <property name="frameShape" stdset="0">
                                     <enum>VLine</enum>
                                 </property>
                                 <property name="frameShadow">
@@ -548,7 +560,7 @@
                                         </hbox>
                                     </widget>
                                     <spacer>
-                                        <property name="name">
+                                        <property name="name" stdset="0">
                                             <cstring>Spacer6</cstring>
                                         </property>
                                         <property name="orientation">
@@ -556,6 +568,12 @@
                                         </property>
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
                                         </property>
                                     </spacer>
                                 </vbox>
@@ -614,7 +632,7 @@
                         </property>
                     </widget>
                     <spacer row="0" column="1">
-                        <property name="name">
+                        <property name="name" stdset="0">
                             <cstring>Spacer3</cstring>
                         </property>
                         <property name="orientation">
@@ -623,9 +641,15 @@
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <spacer row="1" column="0">
-                        <property name="name">
+                        <property name="name" stdset="0">
                             <cstring>Spacer4</cstring>
                         </property>
                         <property name="orientation">
@@ -633,6 +657,12 @@
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
                         </property>
                     </spacer>
                 </grid>
@@ -642,7 +672,7 @@
 </widget>
 <connections>
     <connection>
-        <sender>PushButton1</sender>
+        <sender>close</sender>
         <signal>clicked()</signal>
         <receiver>TouchStatWindowLayout</receiver>
         <slot>reject()</slot>

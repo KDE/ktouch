@@ -21,7 +21,7 @@
 #include "touchline.h"
 #include <kdebug.h>
 
-TouchTrain::TouchTrain( QWidget* parent, TouchLecture* l)
+TouchTrain::TouchTrain( QWidget* parent, TouchLecture* l, TouchStat* stat)
     : TouchTrainLayout(parent)
 {
     lecture=l;
@@ -33,13 +33,17 @@ TouchTrain::TouchTrain( QWidget* parent, TouchLecture* l)
     connect(status,  SIGNAL(levelDown()),       lecture,    SLOT(levelDown()));
     connect(lecture, SIGNAL(levelChanged(int)), status,     SLOT(setLevel(int)));
     connect(status,  SIGNAL(forceNextLine()),   line,       SLOT(getNextLine()));
-    connect(lecture, SIGNAL(levelMessage(const QString&)), status, SLOT(setLevelMessage(const QString&)));
+    connect(lecture, SIGNAL(levelMessage(const QString&)), 
+                                                status,     SLOT(setLevelMessage(const QString&)));
+    connect(line,    SIGNAL(isError(QChar)),    stat,       SLOT(gotError(QChar)));
+    connect(line,    SIGNAL(isOk(QChar)),       stat,       SLOT(gotOk(QChar)));
 
-//	connect(status,  SIGNAL(showStat()),        this,       SLOT(showStat()));
-//	connect(status,  SIGNAL(hideStat()),        this,       SLOT(hideStat()));
+    connect(status,  SIGNAL(stop()),		stat,       SLOT(stop()));
+    connect(status,  SIGNAL(start()),           stat,       SLOT(start()));
 
-//	connect(line,    SIGNAL(isError(QChar)),    touchStat,  SLOT(gotError(QChar)));
-//	connect(line,    SIGNAL(isOk(QChar)),       touchStat,  SLOT(gotOk(QChar)));
+    connect(status,  SIGNAL(stop()),		line,       SLOT(stop()));
+    connect(status,  SIGNAL(start()),           line,       SLOT(start()));
+
 
 
     config=kapp->config();

@@ -473,20 +473,6 @@
                         <string>When you want to have a break, press this to stop KTouch from calculating speed and changing levels.</string>
                     </property>
                 </widget>
-                <widget class="QPushButton">
-                    <property name="name">
-                        <cstring>statButton</cstring>
-                    </property>
-                    <property name="focusPolicy">
-                        <enum>NoFocus</enum>
-                    </property>
-                    <property name="text">
-                        <string>Stat</string>
-                    </property>
-                    <property name="toggleButton">
-                        <bool>true</bool>
-                    </property>
-                </widget>
             </vbox>
         </widget>
     </hbox>
@@ -510,16 +496,7 @@
         <receiver>TouchStatusLayout</receiver>
         <slot>levelForcedUp()</slot>
     </connection>
-    <connection>
-        <sender>statButton</sender>
-        <signal>stateChanged(int)</signal>
-        <receiver>TouchStatusLayout</receiver>
-        <slot>showStatChanged(int)</slot>
-    </connection>
 </connections>
-<includes>
-    <include location="local" impldecl="in implementation">touchStatusLayout.ui.h</include>
-</includes>
 <slots>
     <slot>levelForcedDown()</slot>
     <slot>levelForcedUp()</slot>

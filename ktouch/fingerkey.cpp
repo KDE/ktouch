@@ -23,9 +23,9 @@ int FingerKey::numberOfKeys=0;
 FingerKey::FingerKey(const char *keyValue, int gridX, int gridY, int w, int h)
 					:TouchKey(keyValue, gridX, gridY, w, h)
 {
-	isActive=false;
-	++numberOfKeys;
-	keyColor=numberOfKeys;
+    isActive=false;
+    ++numberOfKeys;
+    keyColor=numberOfKeys;
 }
 
 FingerKey::~FingerKey()
@@ -34,7 +34,7 @@ FingerKey::~FingerKey()
 
 void FingerKey::setActive(bool b)
 {
- 	isActive=b;
+    isActive=b;
 }
 
 QColor FingerKey::getColor()

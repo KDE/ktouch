@@ -27,81 +27,81 @@
 
 TouchStat::TouchStat()
 {
-	dirs = KGlobal::dirs();
-	for(int i=0;i<512;i++)
-	{
-		arrayStat[i].ok=0;
-		arrayStat[i].error=0;
-	}
-	wordCount  = 0;
-	errorCount = 0;
-	okCount    = 0;
-	totalTime  = 1;
-	start();
+    dirs = KGlobal::dirs();
+    for(int i=0;i<512;i++)
+    {
+	arrayStat[i].ok=0;
+	arrayStat[i].error=0;
+    }
+    wordCount  = 0;
+    errorCount = 0;
+    okCount    = 0;
+    totalTime  = 1;
+    start();
 }
 
 TouchStat::~TouchStat(){
-  delete time;
+    delete time;
 }
 
 void TouchStat::gotError(QChar c)
 {
-	arrayStat[c].error++;
-	errorCount++;
+    arrayStat[c].error++;
+    errorCount++;
 }
 
 void TouchStat::gotOk(QChar c)
 {
-	arrayStat[c].ok++;
-	okCount++;
-	if(c==" " || c.digitValue()==13)
-		wordCount++;
+    arrayStat[c].ok++;
+    okCount++;
+    if(c==" " || c.digitValue()==13)
+	wordCount++;
 }
 
 void TouchStat::start()
 {
-	time = new QTime();
-	time->start();
+    time = new QTime();
+    time->start();
 }
 
 void TouchStat::stop()
 {
-	totalTime+=time->elapsed();
-	delete(time);
-	time=NULL;
+    totalTime+=time->elapsed();
+    delete(time);
+    time=NULL;
 }
 
 
 int TouchStat::getTotalTime()
 {
-	if(time!=NULL)
-	{
-		return totalTime+time->elapsed();
-	}
-	return totalTime;
+    if(time!=NULL)
+    {
+	return totalTime+time->elapsed();
+    }
+    return totalTime;
 }
 
 int TouchStat::getRatio()
 {
-	if(okCount+errorCount>0)
-	{
-		float f=((float)okCount/(okCount+errorCount))*100;
-		return (int)f;
-	}
-	else
-		return 100;
+    if(okCount+errorCount>0)
+    {
+	float f=((float)okCount/(okCount+errorCount))*100;
+	return (int)f;
+    }
+    else
+	return 100;
 }
 
 int TouchStat::getCharPerMin()
 {
-	float f=okCount*60000/getTotalTime();
-	return (int)f;
+    float f=okCount*60000/getTotalTime();
+    return (int)f;
 }
 
 int TouchStat::getWordPerMin()
 {
-	float f=wordCount*60000/getTotalTime();
-	return (int)f;
+    float f=wordCount*60000/getTotalTime();
+    return (int)f;
 }
 
 
@@ -109,24 +109,25 @@ int TouchStat::getWordPerMin()
 void TouchStat::saveStat()
 {
 
-	QFile f(dirs->saveLocation("appdata")+"stat.log");
-	if ( f.open(IO_Append | IO_WriteOnly ) )
+    QFile f(dirs->saveLocation("appdata")+"stat.log");
+    if ( f.open(IO_Append | IO_WriteOnly ) )
+    {
+	QTextStream t( &f );
+	
+	t << "Date:            " << QDateTime::currentDateTime().toString() << "\n";
+	t << "Time spent:      " << (getTotalTime()/1000) << "\n";
+	t << "Word per minute: " << getWordPerMin()       << "\n";
+	t << "Char per minute: " << getCharPerMin()       << "\n";
+	t << "Correctness:     " << getRatio()            << "\n";
+	
+	t << "Char stats:\n";
+	for(int i=0;i<512;i++)
 	{
-		QTextStream t( &f );
-
-		t << "Date:            " << QDateTime::currentDateTime().toString() << "\n";
-		t << "Time spent:      " << (getTotalTime()/1000) << "\n";
-		t << "Word per minute: " << getWordPerMin()       << "\n";
-		t << "Char per minute: " << getCharPerMin()       << "\n";
-		t << "Correctness:     " << getRatio()            << "\n";
-
-		t << "Char stats:\n";
-		for(int i=0;i<512;i++)
-		{
-			if(arrayStat[i].ok!=0 || arrayStat[i].error!=0)
-				t << i << " " << arrayStat[i].ok << " " << arrayStat[i].error << "\n";
-		}
-		t << "\n";
-		f.close();
+	    if(arrayStat[i].ok!=0 || arrayStat[i].error!=0)
+		t << i << " " << arrayStat[i].ok << " " << arrayStat[i].error << "\n";
 	}
+	t << "\n";
+	f.close();
+    }
 }
+

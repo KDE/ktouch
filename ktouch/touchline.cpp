@@ -22,151 +22,151 @@
 
 
 TouchLine::TouchLine(QWidget * parent, const char * name)
-         : TouchLineLayout( parent, name )
+    : TouchLineLayout( parent, name )
 {
-	teacherLine = "";
-	studentLine = "";
-	pos=0;
-	stopped=false;
+    teacherLine = "";
+    studentLine = "";
+    pos=0;
+    stopped=false;
 }
 
 TouchLine::~TouchLine()
 {
-
+    
 }
 
 void TouchLine::setLecture(TouchLecture *l)
 {
-	lecture =l;
+    lecture =l;
 }
 
 void TouchLine::getNextLine()
 {
-	setTeacherLine(lecture->getNextLine());
+    setTeacherLine(lecture->getNextLine());
 }
 
 void TouchLine::keyPressEvent(QKeyEvent *event)
 {
-	QChar e;
-	e=QString(event->text())[0];
-
-	if(!stopped)
+    QChar e;
+    e=QString(event->text())[0];
+    
+    if(!stopped)
+    {
+	//The character is a normal character
+	//if ((e.unicode()>31 && e.unicode()<126) || (e.unicode()>127 && e.unicode()<256))
+	if(e.isPrint())
 	{
-		//The character is a normal character
-		//if ((e.unicode()>31 && e.unicode()<126) || (e.unicode()>127 && e.unicode()<256))
-		if(e.isPrint())
+	    studentLine+=(char)e.unicode();
+	    pos++;
+	    
+	    if (teacherLine.left(pos)==studentLine)
+	    {
+		emit isOk(e);
+		if (pos==teacherLine.length())
 		{
-		studentLine+=(char)e.unicode();
-		pos++;
-
-		if (teacherLine.left(pos)==studentLine)
-		{
-			emit isOk(e);
-			if (pos==teacherLine.length())
-			{
-				emit nextKey((char)13);
-			}
-			else
-			{
-				emit nextKey(teacherLine.at(pos));
-			}
+		    emit nextKey((char)13);
 		}
 		else
 		{
-			emit isError(teacherLine.at(pos-1));
-			if(showError)
-				line->error=true;
-
-			// Next key must be backspace
-			emit nextKey((char)8);
+		    emit nextKey(teacherLine.at(pos));
 		}
+	    }
+	    else
+	    {
+		emit isError(teacherLine.at(pos-1));
+		if(showError)
+		    line->error=true;
+		
+		// Next key must be backspace
+		emit nextKey((char)8);
+	    }
 	}
-
+	
 	// The character is a back space
 	else if(e.unicode()==8)
+	{
+	    if (pos>0)
+	    {
+		pos--;
+		studentLine=studentLine.left(pos);
+		if (teacherLine.left(pos)==studentLine)
 		{
-		if (pos>0)
-		{
-			pos--;
-			studentLine=studentLine.left(pos);
-			if (teacherLine.left(pos)==studentLine)
-			{
-				emit isOk(e);
-				line->error=false;
-				emit nextKey(teacherLine[pos]);
-			}
-			else
-			{
-				emit nextKey((char)8);
-			}
+		    emit isOk(e);
+		    line->error=false;
+		    emit nextKey(teacherLine[pos]);
 		}
+		else
+		{
+		    emit nextKey((char)8);
+		}
+	    }
 	}
 	else if(e.unicode()==13)
 	{
-		if ((pos==teacherLine.length()) && (teacherLine.left(pos)==studentLine))
-		{
-			emit endOfLine();
-			setTeacherLine(lecture->getNextLine());
-			emit isOk(e);
-			return;
-		}
+	    if ((pos==teacherLine.length()) && (teacherLine.left(pos)==studentLine))
+	    {
+		emit endOfLine();
+		setTeacherLine(lecture->getNextLine());
+		emit isOk(e);
+		return;
+	    }
 	}
-		line->setStudentText(studentLine);
-		line->offset=pos/(float)teacherLine.length();
-	}
-	else QApplication::beep();
+	line->setStudentText(studentLine);
+	line->offset=pos/(float)teacherLine.length();
+    }
+    else QApplication::beep();
 }
 
 void TouchLine::setTeacherLine(const QString& t)
 {
-	teacherLine=t;
-	line->offset=0;
-	line->setTeacherText(teacherLine);
-
-	studentLine = "";
-	pos=0;
-
-	emit nextKey(teacherLine[pos]);
+    teacherLine=t;
+    line->offset=0;
+    line->setTeacherText(teacherLine);
+    
+    studentLine = "";
+    pos=0;
+    
+    emit nextKey(teacherLine[pos]);
 }
 
 void TouchLine::stop()
 {
-	stopped=true;
+    stopped=true;
 }
 
 void TouchLine::start()
 {
-	stopped=false;
+    stopped=false;
 }
 
 bool TouchLine::getShowError()
 {
-	return showError;
+    return showError;
 }
 
 void TouchLine::setShowError(bool s)
 {
-	showError=s;
+    showError=s;
 }
 
 QColor TouchLine::getErrorColor()
 {
-	return line->errorColor;
+    return line->errorColor;
 }
 
 void TouchLine::setErrorColor(QColor c)
 {
-	line->errorColor=c;
+    line->errorColor=c;
 }
 
 QFont TouchLine::getFont()
 {
-	return line->getFont();
+    return line->getFont();
 }
 
 void TouchLine::setFont(QFont f)
 {
-	line->setFont(f);
+    line->setFont(f);
 }
 
 

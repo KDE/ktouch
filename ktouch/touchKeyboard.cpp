@@ -32,303 +32,303 @@ using namespace std;
 TouchKeyboard::TouchKeyboard(QWidget *parent, const char *name)
              : QWidget( parent, name )
 {
-	dirs = KGlobal::dirs();
-	config=kapp->config();
-
-	trans=0;
-	lastKey=0;
-	maxWidth=0;
-	maxHight=0;
-
-	for (unsigned int i=0;i<512;i++)
-	{
-		keyArray[i]=0;
-	}
+    dirs = KGlobal::dirs();
+    config=kapp->config();
+    
+    trans=0;
+    lastKey=0;
+    maxWidth=0;
+    maxHight=0;
+    
+    for (unsigned int i=0;i<512;i++)
+    {
+	keyArray[i]=0;
+    }
 }
 
 void TouchKeyboard::setShowColor(bool show)
 {
-	TouchKey::setShowColor(show);
-	repaint(false);
+    TouchKey::setShowColor(show);
+    repaint(false);
 }
 
 void TouchKeyboard::setShowAnimation(int show)
 {
-	showAnimation=show;
-	TouchKey::setShowAnimation(show);
+    showAnimation=show;
+    TouchKey::setShowAnimation(show);
 }
 
 bool TouchKeyboard::getShowColor()
 {
-	return TouchKey::getShowColor();
+    return TouchKey::getShowColor();
 }
 
 int TouchKeyboard::getShowAnimation()
 {
-	return showAnimation;
+    return showAnimation;
 }
 
 void TouchKeyboard::paintEvent( QPaintEvent * )
 {
-	QPainter painter;
-	painter.begin (this);
-	painter.translate(trans,0);
-
-	for(int i=0;i<512;i++)
+    QPainter painter;
+    painter.begin (this);
+    painter.translate(trans,0);
+    
+    for(int i=0;i<512;i++)
+    {
+	if(keyArray[i])
 	{
-		if(keyArray[i])
-		{
-			keyArray[i]->paint(&painter);
-		}
+	    keyArray[i]->paint(&painter);
 	}
-	painter.end();
+    }
+    painter.end();
 }
 
 void TouchKeyboard::newKey(const QChar &nextKey)
 {
-  QPainter p(this);
-  p.translate(trans,0);
-  if (keyArray[lastKey])
+    QPainter p(this);
+    p.translate(trans,0);
+    if (keyArray[lastKey])
     {
-      keyArray[lastKey.unicode()]->state=false;
-      keyArray[lastKey.unicode()]->paint(&p);
+	keyArray[lastKey.unicode()]->state=false;
+	keyArray[lastKey.unicode()]->paint(&p);
     }
-  if (keyArray[nextKey.unicode()])
+    if (keyArray[nextKey.unicode()])
     {
-      keyArray[nextKey.unicode()]->state=true;
-      lastKey=nextKey;
-      
-      if(showAnimation > 0)
-	keyArray[nextKey.unicode()]->paint(&p);
+	keyArray[nextKey.unicode()]->state=true;
+	lastKey=nextKey;
+	
+	if(showAnimation > 0)
+	    keyArray[nextKey.unicode()]->paint(&p);
     }
 }
 
 void TouchKeyboard::resizeEvent (QResizeEvent *)
 {
-  calculateSize();
+    calculateSize();
 }
 
 void TouchKeyboard::calculateSize()
 {
-	float maxW;
-	float ratio=maxWidth/(float)maxHight;
-
-	if(width()>(height()*ratio))
-	{
-		maxW=(float)height()*ratio/maxWidth;
-		trans=(int)(width()-height()*ratio)/2;
-	}
-	else
-	{
-		trans=0;
-		maxW=(float)width()/maxWidth;
-	}
-
-	for (int i=0;i<512;i++)
-	{
-		if(keyArray[i]) keyArray[i]->setScale(maxW);
-	}
-
-	repaint(false);
+    float maxW;
+    float ratio=maxWidth/(float)maxHight;
+    
+    if(width()>(height()*ratio))
+    {
+	maxW=(float)height()*ratio/maxWidth;
+	trans=(int)(width()-height()*ratio)/2;
+    }
+    else
+    {
+	trans=0;
+	maxW=(float)width()/maxWidth;
+    }
+    
+    for (int i=0;i<512;i++)
+    {
+	if(keyArray[i]) keyArray[i]->setScale(maxW);
+    }
+    
+    repaint(false);
 }
 
 void TouchKeyboard::clearKeyboard()
 {
-	for (int i=0;i<512;i++)
+    for (int i=0;i<512;i++)
+    {
+	if(keyArray[i]!=0)
 	{
-		if(keyArray[i]!=0)
-		{
-			delete(keyArray[i]);
-		}
-		keyArray[i]=0;
+	    delete(keyArray[i]);
 	}
-	lastKey=0;
-	FingerKey::numberOfKeys=0;
-	maxWidth=0;
-	maxHight=0;
+	keyArray[i]=0;
+    }
+    lastKey=0;
+    FingerKey::numberOfKeys=0;
+    maxWidth=0;
+    maxHight=0;
 }
 
 QString TouchKeyboard::getLanguage()
 {
- 	return language;
+    return language;
 }
 
 void TouchKeyboard::loadKeyboard(QString lang)
 {
-	const int maxPara=10;
-	if(lang.isEmpty())
-		lang="en";
-	ifstream ifs(dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1(), ios::in);
-	if (!ifs)
-	{
-		kdDebug() << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1() << endl;
+    const int maxPara=10;
+    if(lang.isEmpty())
+	lang="en";
+    ifstream ifs(dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1(), ios::in);
+    if (!ifs)
+    {
+	kdDebug() << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1() << endl;
   	exit(1);
-  }
-	else
+    }
+    else
+    {
+	clearKeyboard();
+	language=lang;
+	char buffer[128];
+	int lineNumber=0;
+	string line;
+	
+	while (!ifs.eof())
 	{
-		clearKeyboard();
-		language=lang;
-		char buffer[128];
-		int lineNumber=0;
-		string line;
-
-		while (!ifs.eof())
+	    //kdDebug() << "Reading keyboard file line: " << lineNumber << endl;
+	    lineNumber++;
+	    ifs.getline(buffer, sizeof(buffer), '\n');
+	    if (!(ifs.eof() && strlen(buffer) == 0))
+	    {
+		if(!(buffer[0]=='#'))
 		{
-			//kdDebug() << "Reading keyboard file line: " << lineNumber << endl;
-			lineNumber++;
-			ifs.getline(buffer, sizeof(buffer), '\n');
-			if (!(ifs.eof() && strlen(buffer) == 0))
+		    line=buffer;
+		    string separators = " \t";
+		    unsigned int start=line.find_first_not_of(separators);
+		    unsigned int end=0;
+		    string keyBoardVector[maxPara];
+		    for(int i=0;i<maxPara;i++)
+		    {
+			keyBoardVector[i]="";
+		    }
+		    int para=0;
+		    while(start != string::npos && para<maxPara)
+		    {
+			end=line.find_first_of(separators, start +1);
+			if(end==string::npos)
+			    end = line.length();
+			keyBoardVector[para]=line.substr(start, end-start);
+			start = line.find_first_not_of(separators, end+1);
+			para++;
+		    }
+		    
+		    // Loads the Finger keys
+		    if(keyBoardVector[0]=="FingerKey")
+		    {
+			if(atoi(keyBoardVector[5].c_str())==0)
 			{
-				if(!(buffer[0]=='#'))
-				{
-					line=buffer;
-					string separators = " \t";
-					unsigned int start=line.find_first_not_of(separators);
-					unsigned int end=0;
-					string keyBoardVector[maxPara];
-					for(int i=0;i<maxPara;i++)
-					{
-						keyBoardVector[i]="";
-					}
-					int para=0;
-					while(start != string::npos && para<maxPara)
-					{
-						end=line.find_first_of(separators, start +1);
-						if(end==string::npos)
-							end = line.length();
-						keyBoardVector[para]=line.substr(start, end-start);
-						start = line.find_first_not_of(separators, end+1);
-						para++;
-					}
-
-					// Loads the Finger keys
-					if(keyBoardVector[0]=="FingerKey")
-					{
-						if(atoi(keyBoardVector[5].c_str())==0)
-						{
-							string *s;
-							s=new string(keyBoardVector[2]);
-							keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
-							s->c_str(),
-							atoi(keyBoardVector[3].c_str()),
-							atoi(keyBoardVector[4].c_str()));
-							setIfMax(atoi(keyBoardVector[3].c_str())+10,
-							atoi(keyBoardVector[4].c_str())+10);
-						}
-						else
-						{
-							string *s;
-							s=new string(keyBoardVector[2]);
-							keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
-									s->c_str(),
-									atoi(keyBoardVector[3].c_str()),
-									atoi(keyBoardVector[4].c_str()),
-									atoi(keyBoardVector[5].c_str()),
-									atoi(keyBoardVector[6].c_str()));
-							setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
-									atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
-						}
-					}
-
-					// Loads the control key
-					else if(keyBoardVector[0]=="ControlKey")
-					{
-						string *s;
-						s=new string(keyBoardVector[2]);
-						keyArray[atoi(keyBoardVector[1].c_str())]=new ControlKey(
-									s->c_str(),
-									atoi(keyBoardVector[3].c_str()),
-									atoi(keyBoardVector[4].c_str()),
-									atoi(keyBoardVector[5].c_str()),
-									atoi(keyBoardVector[6].c_str()));
-						setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
-								atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
-					}
-
-					// Loads the normal keys
-					else if(keyBoardVector[0]=="NormalKey")
-					{
-						if(!keyArray[atoi(keyBoardVector[5].c_str())])
-						{
-							cerr << "Error in line: " << lineNumber << " FingerKey " << keyBoardVector[5] << " key don't exists" << endl;
-						}
-
-						string *s;
-						s=new string(keyBoardVector[2]);
-
-						if(atoi(keyBoardVector[6].c_str())==0)
-						{
-							keyArray[atoi(keyBoardVector[1].c_str())]=new NormalKey(
-										s->c_str(),
-										atoi(keyBoardVector[3].c_str()),
-										atoi(keyBoardVector[4].c_str()),
-										keyArray[atoi(keyBoardVector[5].c_str())]);
-							setIfMax(atoi(keyBoardVector[3].c_str())+10,
-							atoi(keyBoardVector[4].c_str())+10);
-						}
-						else
-						{
-							keyArray[atoi(keyBoardVector[1].c_str())]=new NormalKey(
-										s->c_str(),
-										atoi(keyBoardVector[3].c_str()),
-										atoi(keyBoardVector[4].c_str()),
-										keyArray[atoi(keyBoardVector[5].c_str())],
-										atoi(keyBoardVector[6].c_str()),   // widht
-										atoi(keyBoardVector[7].c_str()));  // hight
-							setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[6].c_str()),
-										atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[7].c_str()));
-						}
-					}
-
-					// Loads the Hidden keys
-					else if(keyBoardVector[0]=="HiddenKey")
-					{
-						if(!keyArray[atoi(keyBoardVector[2].c_str())])
-						{
-							cerr << "Error in line: " << lineNumber << " TargetKey " << keyBoardVector[2] << " key don't exists" << endl;
-						}
-
-						if(!keyArray[atoi(keyBoardVector[3].c_str())])
-						{
-							cerr << "Error in line: " << lineNumber << " FingerKey " << keyBoardVector[3] << " key don't exists" << endl;
-						}
-
-						if(!keyArray[atoi(keyBoardVector[4].c_str())])
-						{
-							cerr << "Error in line: " << lineNumber << " ControlKey " << keyBoardVector[4] << " key don't exists" << endl;
-						}
-
-						keyArray[atoi(keyBoardVector[1].c_str())]=new HiddenKey(
-									keyArray[atoi(keyBoardVector[2].c_str())],
-									keyArray[atoi(keyBoardVector[3].c_str())],
-									keyArray[atoi(keyBoardVector[4].c_str())]);
-					}
-				}
+			    string *s;
+			    s=new string(keyBoardVector[2]);
+			    keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
+				s->c_str(),
+				atoi(keyBoardVector[3].c_str()),
+				atoi(keyBoardVector[4].c_str()));
+			    setIfMax(atoi(keyBoardVector[3].c_str())+10,
+				     atoi(keyBoardVector[4].c_str())+10);
 			}
+			else
+			{
+			    string *s;
+			    s=new string(keyBoardVector[2]);
+			    keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
+				s->c_str(),
+				atoi(keyBoardVector[3].c_str()),
+				atoi(keyBoardVector[4].c_str()),
+				atoi(keyBoardVector[5].c_str()),
+				atoi(keyBoardVector[6].c_str()));
+			    setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
+				     atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
+			}
+		    }
+		    
+		    // Loads the control key
+		    else if(keyBoardVector[0]=="ControlKey")
+		    {
+			string *s;
+			s=new string(keyBoardVector[2]);
+			keyArray[atoi(keyBoardVector[1].c_str())]=new ControlKey(
+			    s->c_str(),
+			    atoi(keyBoardVector[3].c_str()),
+			    atoi(keyBoardVector[4].c_str()),
+			    atoi(keyBoardVector[5].c_str()),
+			    atoi(keyBoardVector[6].c_str()));
+			setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
+				 atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
+		    }
+		    
+		    // Loads the normal keys
+		    else if(keyBoardVector[0]=="NormalKey")
+		    {
+			if(!keyArray[atoi(keyBoardVector[5].c_str())])
+			{
+			    cerr << "Error in line: " << lineNumber << " FingerKey " << keyBoardVector[5] << " key don't exists" << endl;
+			}
+			
+			string *s;
+			s=new string(keyBoardVector[2]);
+			
+			if(atoi(keyBoardVector[6].c_str())==0)
+			{
+			    keyArray[atoi(keyBoardVector[1].c_str())]=new NormalKey(
+				s->c_str(),
+				atoi(keyBoardVector[3].c_str()),
+				atoi(keyBoardVector[4].c_str()),
+				keyArray[atoi(keyBoardVector[5].c_str())]);
+			    setIfMax(atoi(keyBoardVector[3].c_str())+10,
+				     atoi(keyBoardVector[4].c_str())+10);
+			}
+			else
+			{
+			    keyArray[atoi(keyBoardVector[1].c_str())]=new NormalKey(
+				s->c_str(),
+				atoi(keyBoardVector[3].c_str()),
+				atoi(keyBoardVector[4].c_str()),
+				keyArray[atoi(keyBoardVector[5].c_str())],
+				atoi(keyBoardVector[6].c_str()),   // widht
+				atoi(keyBoardVector[7].c_str()));  // hight
+			    setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[6].c_str()),
+				     atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[7].c_str()));
+			}
+		    }
+		    
+		    // Loads the Hidden keys
+		    else if(keyBoardVector[0]=="HiddenKey")
+		    {
+			if(!keyArray[atoi(keyBoardVector[2].c_str())])
+			{
+			    cerr << "Error in line: " << lineNumber << " TargetKey " << keyBoardVector[2] << " key don't exists" << endl;
+			}
+			
+			if(!keyArray[atoi(keyBoardVector[3].c_str())])
+			{
+			    cerr << "Error in line: " << lineNumber << " FingerKey " << keyBoardVector[3] << " key don't exists" << endl;
+			}
+			
+			if(!keyArray[atoi(keyBoardVector[4].c_str())])
+			{
+			    cerr << "Error in line: " << lineNumber << " ControlKey " << keyBoardVector[4] << " key don't exists" << endl;
+			}
+			
+			keyArray[atoi(keyBoardVector[1].c_str())]=new HiddenKey(
+			    keyArray[atoi(keyBoardVector[2].c_str())],
+			    keyArray[atoi(keyBoardVector[3].c_str())],
+			    keyArray[atoi(keyBoardVector[4].c_str())]);
+		    }
 		}
+	    }
 	}
-	calculateSize();
-	repaint();
+    }
+    calculateSize();
+    repaint();
 }
 
 void TouchKeyboard::setIfMax(int w, int h)
 {
-	if(maxWidth<w) maxWidth=w;
-	if(maxHight<h) maxHight=h;
+    if(maxWidth<w) maxWidth=w;
+    if(maxHight<h) maxHight=h;
 }
 
 void TouchKeyboard::saveOptions()
 {
-	config->setGroup("Keyboard");
-	config->writeEntry("Show Color",getShowColor());
-	config->writeEntry("Show Animation",getShowAnimation());
-	config->writeEntry("Language",getLanguage());
+    config->setGroup("Keyboard");
+    config->writeEntry("Show Color",getShowColor());
+    config->writeEntry("Show Animation",getShowAnimation());
+    config->writeEntry("Language",getLanguage());
 }
 
 void TouchKeyboard::readOptions()
 {
-	config->setGroup("Keyboard");
-	setShowColor(config->readBoolEntry("Show Color",true));
-	setShowAnimation(config->readNumEntry("Show Animation",true));
-	loadKeyboard(config->readEntry("Language","en"));
+    config->setGroup("Keyboard");
+    setShowColor(config->readBoolEntry("Show Color",true));
+    setShowAnimation(config->readNumEntry("Show Animation",true));
+    loadKeyboard(config->readEntry("Language","en"));
 }
