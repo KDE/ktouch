@@ -1,0 +1,313 @@
+<!DOCTYPE UI><UI>
+<class>OptionKeyboardDlg</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>OptionKeyboardDlg</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>306</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Keyboard</string>
+    </property>
+    <property stdset="1">
+        <name>sizePolicy</name>
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>3</vsizetype>
+        </sizepolicy>
+    </property>
+    <property stdset="1">
+        <name>minimumSize</name>
+        <size>
+            <width>300</width>
+            <height>300</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>focusPolicy</name>
+        <enum>StrongFocus</enum>
+    </property>
+    <grid>
+        <property stdset="1">
+            <name>margin</name>
+            <number>11</number>
+        </property>
+        <property stdset="1">
+            <name>spacing</name>
+            <number>6</number>
+        </property>
+        <widget row="0"  column="0"  rowspan="1"  colspan="3" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox1</cstring>
+            </property>
+            <property stdset="1">
+                <name>frameShadow</name>
+                <enum>Sunken</enum>
+            </property>
+            <property stdset="1">
+                <name>frameShape</name>
+                <enum>Box</enum>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Color &amp; animation</string>
+            </property>
+            <property stdset="1">
+                <name>alignment</name>
+                <set>WordBreak|AlignLeft</set>
+            </property>
+            <property>
+                <name>wordwrap</name>
+            </property>
+            <widget>
+                <class>QCheckBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>showColor</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>20</x>
+                        <y>30</y>
+                        <width>230</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Use color on keyboard</string>
+                </property>
+                <property>
+                    <name>toolTip</name>
+                    <string>Paint keybord with colors</string>
+                </property>
+                <property>
+                    <name>whatsThis</name>
+                    <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                </property>
+            </widget>
+            <widget>
+                <class>QCheckBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>showAnimation</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>20</x>
+                        <y>60</y>
+                        <width>250</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Show next key to press on keyboard</string>
+                </property>
+                <property>
+                    <name>toolTip</name>
+                    <string>Animated keyboard</string>
+                </property>
+                <property>
+                    <name>whatsThis</name>
+                    <string>If you want KTouch to indicate whitch finger to move and where to press, you shold check this option</string>
+                </property>
+            </widget>
+        </widget>
+        <widget row="2"  column="2" >
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>PushButton1</cstring>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Done</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Close dialog and apply all changes.</string>
+            </property>
+        </widget>
+        <widget row="1"  column="0"  rowspan="1"  colspan="3" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox2</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Language</string>
+            </property>
+            <widget>
+                <class>QLabel</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>PixmapLabel1</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>20</x>
+                        <y>30</y>
+                        <width>48</width>
+                        <height>48</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>pixmap</name>
+                    <pixmap>image0</pixmap>
+                </property>
+                <property stdset="1">
+                    <name>scaledContents</name>
+                    <bool>true</bool>
+                </property>
+                <property stdset="1">
+                    <name>sizePolicy</name>
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                    </sizepolicy>
+                </property>
+            </widget>
+            <widget>
+                <class>QComboBox</class>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>de</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>en</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>fr</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>la</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>no</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
+                        <string>pt</string>
+                    </property>
+                </item>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>language</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>100</x>
+                        <y>60</y>
+                        <width>139</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+                <property>
+                    <name>toolTip</name>
+                    <string>Change keyboard layout.</string>
+                </property>
+                <property>
+                    <name>whatsThis</name>
+                    <string>Here you can change the keyboard layout. If you are from Germay you want to shose de.</string>
+                </property>
+            </widget>
+        </widget>
+        <widget row="2"  column="0" >
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>PushButton2</cstring>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Cancel</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Close dialog and discarge all changes.</string>
+            </property>
+        </widget>
+        <spacer row="2"  column="1" >
+            <property>
+                <name>name</name>
+                <cstring>Spacer1</cstring>
+            </property>
+            <property stdset="1">
+                <name>orientation</name>
+                <enum>Horizontal</enum>
+            </property>
+            <property stdset="1">
+                <name>sizeType</name>
+                <enum>Expanding</enum>
+            </property>
+            <property>
+                <name>sizeHint</name>
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </grid>
+</widget>
+<images>
+    <image>
+        <name>image0</name>
+        <data format="XPM.GZ" length="8958">789ccd99c76e24c91186eff314c4e66d21e4b6a9eaaa86a003876c7aef87820e116538f47e68167a77fdf947769243f60a1ccc2eb01d5aa03ea6099b51599adf7e9d3ad8589dfaf5b74fb77772775c4d555fe566ead7fafefcfce9dffff9d7ef9f7ec9ca29fcaf971753bd5ffef1e997cdbba96a6aedf2a209e01dc075f8234f8f7958924f126b605727ae39fe3c66e1e6be9738271f27aec89b63569bdf4f3c203f25a63eff75cc95cddf482ce48531d75df26362d37f94d8e6af27367b1ec6dcd8fa41e23eb94d6cfbed242ec8df120fc907896dff2671cbf89d8fb9357f523c5bfaef2431f773293fadedb79298fb691638eb0421339e590f42fb95f9c8b22ccf68bf323e5901a13eed2666beb5439620e443720561bef50bb90d42a6bf793708799fdc8764e43df22008798d5c42e89fee921562fa18dfbcce9bdcf46d93db4127377dccd7a01384bc45ee0521b3bea8cef45f928b2064d6cf4006c381e9cf2343c8ac8f8142186ff94cae83909f22379119cf411b844cfb8a4e10ee7745ee15ddc2ec3b8bdc8bccfc164c00d7337f45f859bc585f4519fec0f151e461c17cc93d590a2d68bf9c92eb2064d67fd90d42e67e652f08f71f92991032f72b8b20e4925c82ad3e6e2397717c9e3c0c12b8f2892d9e0559839059ff6515843c4b6e829019dfb20d427baf030f3b41781e68efb01784f3797e86591032f50f437ae98fb0fe87e167f1a2bea1424c3fcffbb00ec2f1bbc4660ffbdfb009c271d6d3b00d42a63dd20942e67ce90621b37f483f08f79b21b3e0e88f8d975a997d8ef993e1b81fbb6763adadff2aed13fe386e5ca7fe5d186b6bfe28eb575a88d9cffad34e10aea73fda1baf97aeb176d5cef34de45e644dccf83bd6b7f6abaef927ec1f9a41ccdf8bc4cc87b3fdf2a4cfc64303603c84fd467900399ff66b516562f9e3fb04c554a831eb49995032fbad4a10c663d7b8cac5fa29cf836ad2cff79d56aaf6be91e7c4ac0fb716b98ae375621bbf35ae0ab1fa61fcb5d6468d2b7213fe4266ffd43608ed3b35aecab89efdb4ea541d1b17f6d3aa1b84fa9e220f2d7f9ee7b34af9739183703debadea0721ef454643677e56c959951bbb2a7265f9129e0f8ce695e56737f2a0b27e319dd8f2c57c5683145ff6f3aa08c2f92b914b63ff39726df912f6fb306ae3524686707fd397ce876c190721b3ff5702b6fc2f466e2c7f6acc04723edf07157fdc9ff78daa49fbaf1b576d65f9633d80dadae26df16deb5e65fd9efdaaee84199c7f655c776dbe707f50d7ee2bc2f8d73db0dd07b6228ff3c5faaafb4138cef35b67e9bc9bbeacce63bc18df3a0f7fa13d0b91079159df818cdd59e481c55796c76ce3b244e60b85bc18b9aced7ec8fe57bff42b35ae0b8ba72c441eda7ce1fba296205ccffb4badb5587c5d1159ed7e26739151209ccf78d7a9dfb96fc69861e76310193ffabb9cd8f6e7fbbe6eeb267216b96d2c7fa7c64da7b6fb4635661b777c3f0732f63c4f4d37e5a36b8cfded3cf58c8390bb89edfdc5fedff412cf45ee1b3bbe8f411d8b9feb44cee2fd94fdb449f520997198c1f9ab91b3c8ecaf0dae578d9dd72f910776bf75bccf807a166f6d22e771fc20f220de7fd97f9b22e5e3c4b8e95bfc9d8f9c593cdd7ee432aee7fbb829d3fa6be3347f2f325690d97ff0322eedbeed76224b63fdc3e221e185cdf1edc4566face726f57f6ff154ec6ff1de8a0c21f37dd354c123f266e42a8e6f24b6fbb9e97b791f9bbf35f4dbf9fb1a19c271f6cb26f51bbf660c8b2d3f16ff16f698ffeb915bfb9ef0bc0fb62fdf6fcbc6b0c7ee07ec076d1762f15d8edc8bdf1fac8736bd3f7c6e8cfded7e746c0cb1fa5d8adcb7f58efd0094b5568fbc4fb42ffde9d6b88ddf3f9ee7bfcdd37e0b91b3d6ea6b3c9edbf790e77968537df97b63ccb7f75b1e398febe3fc20b4ff28322e945ccff3d0a67af357c6c102ce5f8a1cd78b462ee3f718eff7b8fc95715c220f5bab3f17596cbeb0fe5b5ec0a88ff735bcfce3b81b458650ff982b63379bd8ea8be7358cc6fdaac8751c377b523d69e4201c377ff80bbc79f7d7cadf4187773f271fd42110f595af7de35b7fe4bffa637f0239f567fedc5ff84b7ff566e4d85ffb1b8cdc7e588752cb9dbff7dffc837ff44ffed94fe3bfcf7ec6cffa919ff3f31c5948238b1859f2cb3fa063855a56b162cdaffb0dbf094ba761eb166cdd86176164e7d5c82efcdbf3fbf8ebc10fe858f15fb0d3a1eff82ee2d1a3ad7d9f452fe67cee07f42f8c14bef443e7e14503ef3eacc3392788c7c89f3b7595abb1530fbabad18b4bd79817ae76ad3b721871c7f0e10039fa011dc8f701d6ed61fdae6b11914dbfe14ea0f5125e1c62e431e41b1a4e7de9ce30b2432f063fa043dc39b39ab90b77899dae10974744ee3078e147ee1af9eefbc29dba1be4bb8bbd83173b58f1411df422d6a6bb7577b0f514b5b98e0a085e5cfa6d77cf9153c82d47c65e1c7d58c7d80b562dbcb88437df60fb32358cfc92fbe617f1d753f8b7088f1e30bba1170b1fd6f110aad63d22ce4f88c7336a730b9687da0c91ba402560c441fbab91dcef87151fce47a8daa5906f77035be1851fa6aa7d3d7217aa16277f64deb142bed3f1b37d093a42d5eea19e0f21dbd03584ceb73ac2595b799d6154e33362830cbb4764f8167de91691b8f167d82f64f80827fa861dcb85aa7deb853bfa031d6f337ce53fc70cdfe31c2ea36267dc34337ce9a6d99746d471032f02052f2e10cb61a8f3493aa217a9fb7c97c72bcb3d6c2f93177b3ceb87d081aac5bce0edb23bc6d316aaf979a20e09279addc7fa52e12a9c3cf3e21ed5828e3531c32ef5da71d55a0f7ea7c38dcf42ec3e7eda7d7633ec3e79f0c235eec4e9d88bef32ece86df029f4c7710f3e99a4e39517c7b0e204751fbacf1a32012fa0abeb662cdf6f32ecd0bf42af0dd419f76058f95ec738dfa1fb3cb3bb86eed3312f10e76bc4ad0add8419de7b9561877d07989787aa85aff626e9bdd5f1a66a6b5871fcaa6ac3c9b54c7e5fb523ec7a031dd6a542ddb13b872840d39f7a063f7267801fb36ee4e6fe8fcc275978238b9425b71c6585b2ead6dee958c7e8c677b2e9b628db901db7ebf6dc3ee5c07d7187d863d575205dd7737d4806c92103480129ddf09d8e7d77283edc7260697fe2938b4f99487cca45df3d0da4921a9f6cadbceb254107e60c60d9ae7cfd99276a389613399da0e30be2b38d982dcad9cf3cc939345cc8e5441d8772850cceb9915cffd4d30da2792b7772ff4ec7017454d07e2ddfe461c2d32362f0f6e9499ed3d3747cfa0c4f8e654666653441c7aaccc93c644116214bb22c2bb0e7565611e33559970dc826644bb6654776654f665c29fb72205f629e8fe5503ae02de94a4ffaef754886ca50372b3962dbc3fe83543fd9aba7499554488d13b285da5b9112162dc8306c35c18f8e0aacda0a7350eb07aa1faea46939777bb41f6bb582bdd75abfd7a10d3ee38ed2fe5ff5584f7ea892e6b176514fc35ab72c476ea867effc38d4d66d843958bbece6119cf30f57d2a15ec866b02dae1545fef5ea9d8e55f484815ecbbede480b4f6fa5ffd14ad20b5539d73bb984f5f7fa4d1ff4519fe461828ebe3ec74afa2a57df5552293b3a8d1a4025216356490574343c6d1d54d1997ed63bc88ccef0e3fa446727e8e8e869ea4d99ac851a4b5221228ac82c21fe1be88ef419d5b3025b3660c11e743688d88c5bb01d647e920e64237f5529eb6ec9abfdfb83af7484cf3545ec431f5f71ebc8ea0ebaf0a1ce217f03647b09be5fe9bccebcec30d18f9ecb5f550aa284f978a788c4ddc37b611dfd7e175d673558e40ad4e9024ee85af005b17c90f665873fd03178a9145d443e4597c21b498fdd0a2cdfc2ee3843aea7cbb07c11715a95755dd4155d45862a69740dbdf66587493a327492973ada947b19495f9d9ec1be275dd70dbdd44dddd26dddd15d5dd33dddd703fda287dad1aef6b4af990c5103dc41f3493a60553dae8c716d4086e80a277217fe5d095dae273d9440ad356af44967f55c0b64a144bd0e7508db5ecb6842ce67b86a962bb1b6c2673fff89f3de76e01e479053ca287a19e44cafe0eb0479fbfdf157dd4afe1eff9fcc9fa2e3bffffcf43fe746111d</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>PushButton2</sender>
+        <signal>released()</signal>
+        <receiver>OptionKeyboardDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>PushButton1</sender>
+        <signal>released()</signal>
+        <receiver>OptionKeyboardDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>showColor</tabstop>
+    <tabstop>showAnimation</tabstop>
+    <tabstop>language</tabstop>
+    <tabstop>PushButton2</tabstop>
+    <tabstop>PushButton1</tabstop>
+</tabstops>
+</UI>

@@ -1,0 +1,20 @@
+Begin3
+Title:          KTouch
+Version:        0.91
+Entered-date:   05April01
+Description:    A education program to learn to touch-type. It provieds
+                a training text, and shows the user how to place their
+                fingers on the keyboard. It also shows the user which finger
+                to move to press the next key. It automaticaly adjusts to
+                different levels depending on the speed. It has support
+                for different keyboard layouts(languages).
+Keywords:       touch typing education training
+Author:         haavard@users.sourceforge.net (Haavard Froeiland)
+Maintained-by:  haavard@users.sourceforge.net (Haavard Froeiland)
+Primary-site:   ktouch.sourceforge.net /pub/ktouch
+                0.5 MB ktouch-0.91.tar.gz
+Home-page:      http://KTouch.sourceforge.net
+Original-site:  
+Platforms:      Linux and other Unices running KDE 2.0
+Copying-policy: GNU Public License
+End

@@ -1,0 +1,12 @@
+# KDE Config File  
+[Desktop Entry]
+Type=Application
+Exec=ktouch -caption "%c" %i %m  
+Icon=ktouch.png
+MiniIcon=ktouch.png
+DocPath=ktouch/index.html
+Comment=
+Comment[de]=
+Terminal=0
+Name=KTouch
+Name[de]=KTouch

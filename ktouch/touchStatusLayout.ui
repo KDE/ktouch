@@ -1,0 +1,550 @@
+<!DOCTYPE UI><UI>
+<class>TouchStatusLayout</class>
+<widget>
+    <class>QWidget</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>TouchStatusLayout</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>632</width>
+            <height>89</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Form1</string>
+    </property>
+    <property stdset="1">
+        <name>iconText</name>
+        <string></string>
+    </property>
+    <property stdset="1">
+        <name>sizePolicy</name>
+        <sizepolicy>
+            <hsizetype>7</hsizetype>
+            <vsizetype>5</vsizetype>
+        </sizepolicy>
+    </property>
+    <property>
+        <name>layoutMargin</name>
+    </property>
+    <property>
+        <name>layoutSpacing</name>
+    </property>
+    <grid>
+        <property stdset="1">
+            <name>margin</name>
+            <number>4</number>
+        </property>
+        <property stdset="1">
+            <name>spacing</name>
+            <number>2</number>
+        </property>
+        <widget row="0"  column="4" >
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout4</cstring>
+            </property>
+            <vbox>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget>
+                    <class>QPushButton</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>pauseButton</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Pause</string>
+                    </property>
+                    <property stdset="1">
+                        <name>toggleButton</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>on</name>
+                        <bool>false</bool>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Press to have a break ;-)</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>When you want to have a break, press this to stopp KTouch from calculating speed and changeing levels.</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property>
+                        <name>name</name>
+                        <cstring>Spacer3</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>orientation</name>
+                        <enum>Vertical</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>sizeType</name>
+                        <enum>Expanding</enum>
+                    </property>
+                    <property>
+                        <name>sizeHint</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </vbox>
+        </widget>
+        <widget row="0"  column="0" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox1</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Level</string>
+            </property>
+            <property stdset="1">
+                <name>sizePolicy</name>
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>0</vsizetype>
+                </sizepolicy>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="1"  column="1" >
+                    <class>QPushButton</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>pushButtonLevelDown</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>-</string>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>maximumSize</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </widget>
+                <widget row="0"  column="1" >
+                    <class>QPushButton</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>pushButtonLevelUp</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>+</string>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>maximumSize</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </widget>
+                <widget row="0"  column="0"  rowspan="2"  colspan="1" >
+                    <class>QLCDNumber</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>LCDLevel</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>10</pointsize>
+                        </font>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>50</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property stdset="1">
+                        <name>segmentStyle</name>
+                        <enum>Flat</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>mode</name>
+                        <enum>DEC</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>numDigits</name>
+                        <number>3</number>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Raised</enum>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Current level</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>This shows witch level you are at.</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="2" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>TextLabel2</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Info:</string>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>7</vsizetype>
+                        </sizepolicy>
+                    </property>
+                </widget>
+                <widget row="1"  column="2" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>message</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string></string>
+                    </property>
+                    <property stdset="1">
+                        <name>alignment</name>
+                        <set>WordBreak|AlignCenter</set>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Plain</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>scaledContents</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>5</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>10</pointsize>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property>
+                        <name>hAlign</name>
+                    </property>
+                    <property>
+                        <name>wordwrap</name>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget row="0"  column="1" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox11</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Speed</string>
+            </property>
+            <property stdset="1">
+                <name>sizePolicy</name>
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                </sizepolicy>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLCDNumber</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>LCDSpeed</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>10</pointsize>
+                        </font>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>50</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property stdset="1">
+                        <name>segmentStyle</name>
+                        <enum>Flat</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>5</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>numDigits</name>
+                        <number>3</number>
+                    </property>
+                    <property stdset="1">
+                        <name>midLineWidth</name>
+                        <number>0</number>
+                    </property>
+                    <property stdset="1">
+                        <name>margin</name>
+                        <number>0</number>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Raised</enum>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Character/ Minute</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>This shows how fast you are typing. It messures it in characters pr. minute.</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget row="0"  column="2" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox12</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Correctnes</string>
+            </property>
+            <property stdset="1">
+                <name>sizePolicy</name>
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>5</vsizetype>
+                </sizepolicy>
+            </property>
+            <property stdset="1">
+                <name>frameShape</name>
+                <enum>Box</enum>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="1"  column="0" >
+                    <class>QProgressBar</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>LCDCorrect</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>maximumSize</name>
+                        <size>
+                            <width>300</width>
+                            <height>32767</height>
+                        </size>
+                    </property>
+                    <property stdset="1">
+                        <name>indicatorFollowsStyle</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>3</hsizetype>
+                            <vsizetype>5</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Plain</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>How mutch are you typing correct?</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>This chows how correct you are typing.</string>
+                    </property>
+                </widget>
+                <spacer row="0"  column="0" >
+                    <property>
+                        <name>name</name>
+                        <cstring>Spacer2</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>orientation</name>
+                        <enum>Vertical</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>sizeType</name>
+                        <enum>Expanding</enum>
+                    </property>
+                    <property>
+                        <name>sizeHint</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </grid>
+        </widget>
+        <spacer row="0"  column="3" >
+            <property>
+                <name>name</name>
+                <cstring>Spacer1</cstring>
+            </property>
+            <property stdset="1">
+                <name>orientation</name>
+                <enum>Horizontal</enum>
+            </property>
+            <property stdset="1">
+                <name>sizeType</name>
+                <enum>Fixed</enum>
+            </property>
+            <property>
+                <name>sizeHint</name>
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>pauseButton</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>TouchStatusLayout</receiver>
+        <slot>runningStateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonLevelDown</sender>
+        <signal>clicked()</signal>
+        <receiver>TouchStatusLayout</receiver>
+        <slot>levelForcedDown()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonLevelUp</sender>
+        <signal>clicked()</signal>
+        <receiver>TouchStatusLayout</receiver>
+        <slot>levelForcedUp()</slot>
+    </connection>
+    <slot access="public">levelForcedDown()</slot>
+    <slot access="public">levelForcedUp()</slot>
+    <slot access="public">runningStateChanged(int)</slot>
+    <slot access="public">startKTouch()</slot>
+    <slot access="public">stopKTouch()</slot>
+</connections>
+</UI>

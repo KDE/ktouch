@@ -1,0 +1,213 @@
+<!DOCTYPE UI><UI>
+<class>OptionGeneralDlg</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>OptionGeneralDlg</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>290</width>
+            <height>303</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>General options</string>
+    </property>
+    <widget>
+        <class>QLayoutWidget</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>Layout6</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>10</x>
+                <y>4</y>
+                <width>272</width>
+                <height>290</height>
+            </rect>
+        </property>
+        <grid>
+            <property stdset="1">
+                <name>margin</name>
+                <number>0</number>
+            </property>
+            <property stdset="1">
+                <name>spacing</name>
+                <number>6</number>
+            </property>
+            <widget row="0"  column="0" >
+                <class>QGroupBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>GroupBox1</cstring>
+                </property>
+                <property stdset="1">
+                    <name>title</name>
+                    <string>Sound</string>
+                </property>
+                <property stdset="1">
+                    <name>frameShadow</name>
+                    <enum>Sunken</enum>
+                </property>
+                <property stdset="1">
+                    <name>frameShape</name>
+                    <enum>Box</enum>
+                </property>
+                <property stdset="1">
+                    <name>alignment</name>
+                    <set>WordBreak|AlignLeft</set>
+                </property>
+                <property>
+                    <name>wordwrap</name>
+                </property>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>beepOnError</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>geometry</name>
+                        <rect>
+                            <x>20</x>
+                            <y>30</y>
+                            <width>230</width>
+                            <height>21</height>
+                        </rect>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Beep on error</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                    </property>
+                </widget>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>colorOnError</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>geometry</name>
+                        <rect>
+                            <x>20</x>
+                            <y>60</y>
+                            <width>230</width>
+                            <height>21</height>
+                        </rect>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Color on error</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Check this if you want your keyboard to show colors whitch indicates finger reginons</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget row="1"  column="0" >
+                <class>QLayoutWidget</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>Layout5</cstring>
+                </property>
+                <hbox>
+                    <property stdset="1">
+                        <name>margin</name>
+                        <number>0</number>
+                    </property>
+                    <property stdset="1">
+                        <name>spacing</name>
+                        <number>6</number>
+                    </property>
+                    <widget>
+                        <class>QPushButton</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>PushButton2</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>text</name>
+                            <string>Cancel</string>
+                        </property>
+                        <property>
+                            <name>whatsThis</name>
+                            <string>Close dialog and discarge all changes.</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property>
+                            <name>name</name>
+                            <cstring>Spacer1</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>orientation</name>
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property stdset="1">
+                            <name>sizeType</name>
+                            <enum>Expanding</enum>
+                        </property>
+                        <property>
+                            <name>sizeHint</name>
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget>
+                        <class>QPushButton</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>PushButton1</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>text</name>
+                            <string>Done</string>
+                        </property>
+                        <property>
+                            <name>whatsThis</name>
+                            <string>Close dialog and apply all changes.</string>
+                        </property>
+                    </widget>
+                </hbox>
+            </widget>
+        </grid>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>PushButton1</sender>
+        <signal>clicked()</signal>
+        <receiver>OptionGeneralDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>PushButton2</sender>
+        <signal>clicked()</signal>
+        <receiver>OptionGeneralDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+</UI>

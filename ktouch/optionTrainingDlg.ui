@@ -1,0 +1,282 @@
+<!DOCTYPE UI><UI>
+<class>OptionTrainingDlg</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>OptionTrainingDlg</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>300</width>
+            <height>401</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Training</string>
+    </property>
+    <property stdset="1">
+        <name>minimumSize</name>
+        <size>
+            <width>300</width>
+            <height>400</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>focusPolicy</name>
+        <enum>StrongFocus</enum>
+    </property>
+    <grid>
+        <property stdset="1">
+            <name>margin</name>
+            <number>11</number>
+        </property>
+        <property stdset="1">
+            <name>spacing</name>
+            <number>6</number>
+        </property>
+        <widget row="2"  column="2" >
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>PushButton1</cstring>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Done</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Close dialog and apply all changes.</string>
+            </property>
+        </widget>
+        <widget row="2"  column="0" >
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>PushButton2</cstring>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Cancel</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Close dialog and discarge all changes.</string>
+            </property>
+        </widget>
+        <spacer row="2"  column="1" >
+            <property>
+                <name>name</name>
+                <cstring>Spacer1</cstring>
+            </property>
+            <property stdset="1">
+                <name>orientation</name>
+                <enum>Horizontal</enum>
+            </property>
+            <property stdset="1">
+                <name>sizeType</name>
+                <enum>Expanding</enum>
+            </property>
+            <property>
+                <name>sizeHint</name>
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget row="0"  column="0"  rowspan="1"  colspan="3" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox1</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Level up/down limits</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>When training touch-typing the levels will go up if you are typing faster then the "Limit Up" and it will go down if you type slower then "Limit Down"</string>
+            </property>
+            <widget>
+                <class>QCheckBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>autoLevel</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>20</x>
+                        <y>30</y>
+                        <width>170</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Automati level adjustment</string>
+                </property>
+            </widget>
+            <widget>
+                <class>QLayoutWidget</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>Layout1</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>10</x>
+                        <y>60</y>
+                        <width>200</width>
+                        <height>100</height>
+                    </rect>
+                </property>
+                <property>
+                    <name>layoutMargin</name>
+                </property>
+                <grid>
+                    <property stdset="1">
+                        <name>margin</name>
+                        <number>10</number>
+                    </property>
+                    <property stdset="1">
+                        <name>spacing</name>
+                        <number>6</number>
+                    </property>
+                    <widget row="1"  column="0" >
+                        <class>QLabel</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>TextLabel2</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>text</name>
+                            <string>Limit Down:</string>
+                        </property>
+                    </widget>
+                    <widget row="0"  column="1" >
+                        <class>QSpinBox</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>limitUp</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>minValue</name>
+                            <number>10</number>
+                        </property>
+                        <property stdset="1">
+                            <name>maxValue</name>
+                            <number>300</number>
+                        </property>
+                        <property stdset="1">
+                            <name>buttonSymbols</name>
+                            <enum>PlusMinus</enum>
+                        </property>
+                    </widget>
+                    <widget row="1"  column="1" >
+                        <class>QSpinBox</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>limitDown</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>minValue</name>
+                            <number>10</number>
+                        </property>
+                        <property stdset="1">
+                            <name>maxValue</name>
+                            <number>300</number>
+                        </property>
+                        <property stdset="1">
+                            <name>buttonSymbols</name>
+                            <enum>PlusMinus</enum>
+                        </property>
+                    </widget>
+                    <widget row="0"  column="0" >
+                        <class>QLabel</class>
+                        <property stdset="1">
+                            <name>name</name>
+                            <cstring>TextLabel1</cstring>
+                        </property>
+                        <property stdset="1">
+                            <name>text</name>
+                            <string>Limit Up :</string>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+        </widget>
+        <widget row="1"  column="0"  rowspan="1"  colspan="3" >
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox2</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>History</string>
+            </property>
+            <property stdset="1">
+                <name>alignment</name>
+                <set>WordBreak|AlignLeft</set>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Check this if you want KTouch to start where you left last time training</string>
+            </property>
+            <property>
+                <name>wordwrap</name>
+            </property>
+            <widget>
+                <class>QCheckBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>remember</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>20</x>
+                        <y>30</y>
+                        <width>170</width>
+                        <height>21</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Remember speed &amp; level</string>
+                </property>
+            </widget>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>PushButton1</sender>
+        <signal>released()</signal>
+        <receiver>OptionTrainingDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>PushButton2</sender>
+        <signal>released()</signal>
+        <receiver>OptionTrainingDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>limitUp</tabstop>
+    <tabstop>limitDown</tabstop>
+    <tabstop>remember</tabstop>
+    <tabstop>PushButton2</tabstop>
+    <tabstop>PushButton1</tabstop>
+</tabstops>
+</UI>
