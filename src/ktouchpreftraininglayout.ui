@@ -159,7 +159,7 @@
                 </widget>
                 <widget class="KIntSpinBox" row="3" column="2">
                     <property name="name">
-                        <cstring>upSpeedLimit</cstring>
+                        <cstring>kcfg_UpSpeedLimit</cstring>
                     </property>
                     <property name="maxValue">
                         <number>500</number>
@@ -167,7 +167,7 @@
                 </widget>
                 <widget class="KIntSpinBox" row="4" column="2">
                     <property name="name">
-                        <cstring>upCorrectLimit</cstring>
+                        <cstring>kcfg_UpCorrectLimit</cstring>
                     </property>
                 </widget>
                 <spacer row="8" column="0">
@@ -222,7 +222,7 @@
                 </widget>
                 <widget class="KIntSpinBox" row="7" column="2">
                     <property name="name">
-                        <cstring>downSpeedLimit</cstring>
+                        <cstring>kcfg_DownSpeedLimit</cstring>
                     </property>
                     <property name="maxValue">
                         <number>500</number>
@@ -230,7 +230,7 @@
                 </widget>
                 <widget class="KIntSpinBox" row="8" column="2">
                     <property name="name">
-                        <cstring>downCorrectLimit</cstring>
+                        <cstring>kcfg_DownCorrectLimit</cstring>
                     </property>
                 </widget>
                 <widget class="QLabel" row="7" column="3">

@@ -77,6 +77,22 @@
     <label></label>
     <default code="true">true</default>
     </entry>
+    <entry name="UpSpeedLimit" type="Int">
+    <label></label>
+    <default code="true">120</default>
+    </entry>
+    <entry name="UpCorrectLimit" type="Int">
+    <label></label>
+    <default code="true">85</default>
+    </entry>
+    <entry name="DownSpeedLimit" type="Int">
+    <label></label>
+    <default code="true">60</default>
+    </entry>
+    <entry name="DownCorrectLimit" type="Int">
+    <label></label>
+    <default code="true">60</default>
+    </entry>
   </group>
   <!--<group name="TrainingState">
 

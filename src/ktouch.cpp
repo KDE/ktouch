@@ -184,7 +184,6 @@ bool KTouch::queryClose() {
 }
 
 bool KTouch::queryExit() {
-	KTouchConfig().saveSettings();          // saves preferences
 	saveTrainingState(kapp->config());      // saves training state
 	return true;
 }

@@ -58,15 +58,9 @@ void KTouchSettings::loadSettings() {
 	
 	// now we're reading the configuration
 	KConfig *config=kapp->config();
-	
-	// read general options
+
 	//TODO replace directly the values by the Prefs:: functions in the files where they are used
 	// read training options
-	config->setGroup("Training");
-	m_downCorrectLimit = config->readNumEntry("CorrectLimitDown", 60);
-	m_downSpeedLimit = config->readNumEntry("SpeedLimitDown", 60);
-	m_upCorrectLimit = config->readNumEntry("CorrectLimitUp", 85);
-	m_upSpeedLimit = config->readNumEntry("SpeedLimitUp", 120);
 	
 	// read keyboard settings
 	config->setGroup("Keyboard");
@@ -83,17 +77,6 @@ void KTouchSettings::loadSettings() {
 	// although the keyboard color scheme is selected in the color dialog, it is a property of
 	// the keyboard and thus it stays in the "Keybord" group
 	m_keyboardColorScheme = Prefs::colorScheme();
-}
-
-
-void KTouchSettings::saveSettings() {
-	KConfig *config=kapp->config();
-	// write training settings
-	config->setGroup("Training");
-	config->writeEntry("CorrectLimitDown",  m_downCorrectLimit);
-	config->writeEntry("SpeedLimitDown",    m_downSpeedLimit);
-	config->writeEntry("CorrectLimitUp",    m_upCorrectLimit);
-	config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
 }
 
 

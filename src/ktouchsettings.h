@@ -48,14 +48,6 @@ class KTouchSettings {
     /// Loads the program settings (preferences) from the config file.
     /// Apart from reading the configuration data it builds the list of keyboard layouts, that are available.
     void loadSettings();
-    /// Stores the program settings (preferences) in the config file
-    void saveSettings();
-
-    // training page
-    int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
-    int             m_downSpeedLimit;   ///< If user types slower, the level will be descreased.
-    int             m_upCorrectLimit;   ///< If user types more correct, the level will be increased.
-    int             m_upSpeedLimit;     ///< If user types faster, the level will be increased.
 
     // keyboard page
     int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.

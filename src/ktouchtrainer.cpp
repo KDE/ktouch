@@ -26,7 +26,6 @@
 #include "ktouchslideline.h"
 #include "ktouchkeyboard.h"
 #include "ktouchlecture.h"
-#include "ktouchsettings.h"
 #include "prefs.h"
 
 const int UPDATE_INTERVAL = 500;    // milli seconds between updates of the speed LCD
@@ -130,14 +129,14 @@ void KTouchTrainer::enterPressed() {
 
     if (Prefs::autoLevelChange()) {
         // if level increase criterion was fulfilled, increase line counter
-        if (KTouchConfig().m_upCorrectLimit <= m_session.correctness()*100 &&
-            KTouchConfig().m_upSpeedLimit <= m_session.charSpeed())
+        if (Prefs::upCorrectLimit() <= m_session.correctness()*100 &&
+            Prefs::upSpeedLimit() <= m_session.charSpeed())
         {
             m_decLinesCount=0;
             ++m_incLinesCount;
         }
-        else  if (KTouchConfig().m_downCorrectLimit > m_session.correctness()*100 ||
-                  KTouchConfig().m_downSpeedLimit > m_session.charSpeed())
+        else  if (Prefs::downCorrectLimit() > m_session.correctness()*100 ||
+                  Prefs::downSpeedLimit() > m_session.charSpeed())
         {
             m_incLinesCount=0;
             ++m_decLinesCount;
@@ -158,14 +157,14 @@ void KTouchTrainer::enterPressed() {
     if (m_line >= m_lecture->level(m_level).lineCount()) {
         if (Prefs::autoLevelChange()) {
             // adjust level if limits exceeded
-            if (KTouchConfig().m_upCorrectLimit<=m_session.correctness()*100 &&
-                KTouchConfig().m_upSpeedLimit<=m_session.charSpeed())
+            if (Prefs::upCorrectLimit()<=m_session.correctness()*100 &&
+                Prefs::upSpeedLimit()<=m_session.charSpeed())
             {
                 levelUp();
                 return;
             }
-            else  if (KTouchConfig().m_downCorrectLimit>m_session.correctness()*100 ||
-                    KTouchConfig().m_downSpeedLimit>m_session.charSpeed())
+            else  if (Prefs::downCorrectLimit()>m_session.correctness()*100 ||
+                    Prefs::downSpeedLimit()>m_session.charSpeed())
             {
                 levelDown();
                 return;
