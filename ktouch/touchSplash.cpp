@@ -1,5 +1,6 @@
 
 #include "touchSplash.h"
+#include "touchSplash.moc"
 #include <kapplication.h>
 #include <kstandarddirs.h>
 #include <qcursor.h>
