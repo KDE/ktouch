@@ -41,7 +41,7 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
                 m_comment = line.right(line.length() - 10).stripWhiteSpace();
             else if (line[0]!='#') {
                 // the first line is the new characters line
-                if (m_newChars == QString::null)  m_newChars = line;
+                if (m_newChars.isNull())  m_newChars = line;
                 else                              m_lines.push_back(line);
             }
         }
