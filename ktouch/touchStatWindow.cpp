@@ -27,9 +27,9 @@ TouchStatWindow::TouchStatWindow(TouchStat *s, QWidget *parent, const char *name
     updateFiveTimes();
     updateTwentyTimes();
     updateAllTimes();
-    
+
     timer = new QTimer(this,"timer");
-    
+
     connect( timer, SIGNAL(timeout()), SLOT(updateToday()));
     timer->start(1000,false);
 }
@@ -42,6 +42,7 @@ TouchStatWindow::~TouchStatWindow()
 void TouchStatWindow::reject()
 {
     emit statShowSetChecked(false);
+    QDialog::reject();
 }
 
 void TouchStatWindow::updateToday()
@@ -51,17 +52,17 @@ void TouchStatWindow::updateToday()
     totalOk    ->display(stat->okCount);
     totalError ->display(stat->errorCount);
     totalTime  ->display(stat->getTotalTime()/1000);
-    
+
     // typing rate
     wordMin    ->display(stat->getWordPerMin());
     charMin    ->display(stat->getCharPerMin());
-    
+
     // accurancy
     acc        ->setProgress(stat->getRatio());
-    
+
     // Proggress
     setFocuseChar();
-    
+
 }
 
 void TouchStatWindow::updateFiveTimes()
