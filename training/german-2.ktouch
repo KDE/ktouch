@@ -436,7 +436,7 @@ fenster. er war programmierer, doch er kannte linux nicht.
 nach der explosion war der saal leer. kafka las erstmal die
 verse nicht mehr weiter, bis sich die aufregung legte. text
 der text aus dem lexikon ist nicht ausreichend. deshalb las
-sie auch noch die entschrechenden seiten im internet. ende.
+sie auch noch die entsprechenden seiten im internet. ende.
 
 
 # Lektion 15: Zwischenübung
@@ -496,7 +496,7 @@ yeti - yak - synthetisches - synergetisch - sylt asyl typen
 yast - yet another setup tool 
 sympathisch sympathie hypothek lyon 
 als der pc noch nicht das standard-schreibmittel war, und
-förmliche texte in die schreibmaschiene gehackt wurden,
+förmliche texte in die schreibmaschine gehackt wurden,
 stellte man mittels bindestrich sicher, dass der rechte
 rand relativ einheitlich wurde. die wörter wurden nach sil-
 ben getrennt. der bindestrich kann aber auch zwischen zwei
@@ -508,7 +508,7 @@ verwendet, um zu zeigen, wer gegen wen spielt.
     herta bsc - fortuna köln
 in verbindungen wie gertrud-meier-platz oder 
 nord-ostsee-kanal wird der mittelstrich ohne leerzeichen
-verwendet. als gedankestrich taucht er auf, wenn man ein
+verwendet. als gedankenstrich taucht er auf, wenn man ein
 paar stichworte logisch voneinander absetzen möchte.
 
 
@@ -656,7 +656,7 @@ jeder weiß, inzwischen drin. Wie aber alles ganz genau be-
 gann, wissen die wenigsten. 
 In den späten sechziger Jahren begann die Advanced Research
 Projects Agency des amerikanischen Verteidigungsministeri-
-ums, kurz ARPA genannt, mit der Finanzierung ein experimen-
+ums, kurz ARPA genannt, mit der Finanzierung eines experimen-
 tellen Wide Area Network, kurz WAN, um damit wichtige For-
 schungsorganisationen in den Vereinigten Staaten von Ameri-
 ka zu verbinden. Dieses Computernetz wurde ARPAnet genannt.
@@ -752,14 +752,14 @@ Die Zeichen < und > werden als Operatoren benutzt.
 < ist der Eingabeoperator und > ist der Ausgabeoperator.
 Mit ls > dateiname kann ich unter Linux eine Dateiliste
 mit allen Dateien des akuellen Verzeichnisses anlegen.
-Will dich eine Datei nicht überschreiben sondern Daten
+Will ich eine Datei nicht überschreiben sondern Daten
 anhängen, benutze ich >> als Operator. 
 In HTML-Quellen spielen die Zeichen < und > eine wesent-
 liche Rolle. Alle Tags, gesprochen: Tägs, werden zwischen
 < und > eingeschlossen.
 Beispiele: <html> <head> <body> <a href... <img src...
 <table> <hr> <br> <p> <li> <ol> <ul>
-Auch in der XML-Syntax werden diese Zeichen verwendet um 
+Auch in der XML-Syntax werden diese Zeichen verwendet, um 
 die Tags von den normalen Texten abzugrenzen.
 Häufig werden die Zeichen auch verwendet, um Unterschiede
 darzustellen. Daher stammen auch die Bezeichnungen:
@@ -786,8 +786,8 @@ sätze oder normale Sätze, die mit dem Punkt abgeschlossen
 werden.
 Auf der Tastatur werden !?.<> als Sonderzeichen betrachtet,
 was eigentlich nur bedeuten soll, dass sie von den normalen
-Buchstaben unterscheiden werden müssen. Ebenfalls unter-
-schieden werden die Zahlzeichen, wie z.B. die 1. Aus Zahl-
+Buchstaben unterschieden werden müssen. Ebenfalls unter-
+schieden werden die Zahlzeichen, wie z. B. die 1. Aus Zahl-
 zeichen werden Zahlen gebildet:
 1 steht für eins, 11 für elf, 111 für einhundertundelf.
 Verwendet man das Wort ein in Texten, wird es für gewöhn-
@@ -798,7 +798,7 @@ Zahlwörter ein, zwei oder drei. In Aufzählungen oder bei
 der Festlegung von Reihenfolgen hingegen benutzt man gern
 die Zahlzeichen: 1.; 1. Platz; 1. Durchlauf; 1. Datensatz.
 In HTML wird das Ausrufezeichen übrigens verwendet, um
-Kommentare in die Quellen einzugügen, die dann später in
+Kommentare in die Quellen einzufügen, die dann später in
 der Internetseite nicht zu sehen sind.
 <!-- Dies ist ein Kommentar in einem HTML-Quelltext -->
 Willst Du noch mehr über die Bedeutung von ! und ? wissen?
@@ -816,7 +816,7 @@ Berechne:
 Grundwert zu berechnen.
 In Perl wird das %-Zeichen benutzt, um einen Hash festzu-
 legen. %namen wird dann eine z.B. zweispaltige Liste mit
-Vor- und Nachnamen zugeordnet, die dann in dem Program
+Vor- und Nachnamen zugeordnet, die dann in dem Programm
 ausgelesen werden kann.
 In der Bash ist % ein Operator für Modulus-Operationen.
 Das entspricht dem Rest bei einer ganzzahligen Division.
@@ -840,7 +840,7 @@ Standardfehlerausgabe umgeleitet.
 Der Slash / wird häufig als Zeichen für die Division ver-
 wendet. Unter LINUX ist es ein wesentliches Zeichen für
 die Organisation der Verzeichnisstruktur. So ist / (root)
-das Wurzelverzeichnis, von dem aus in Unterverseichnisse
+das Wurzelverzeichnis, von dem aus in Unterverzeichnisse
 verzweigt wird. /boot, /root, /opt, /usr, /var, /tmp,
 /etc, /bin sind Standardverzeichnisse in dieser Struktur.
 In HTML wird der Slash benutzt, um TAGs zu schließen.
@@ -858,7 +858,7 @@ sehr wenig Inhalt.
 4, $, 9 und )
 (49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
 Das $-Zeichen steht für Dollar. Jedem ist klar, dass dieses
-Zeichen für eine Währung steht, die den Weltmarkt beherrst.
+Zeichen für eine Währung steht, die den Weltmarkt beherrscht.
 Dies soll jetzt kein Text über Umrechnungskurse werden. Die
 wechseln ja doch regelmäßig. Stattdessen wollen wir auch
 für dieses $-Zeichen nach weiteren Bedeutungen fahnden.
@@ -933,7 +933,7 @@ Dies ist ein Text!
 zum Vorschein. Eingebaut als Warnungen in Scripte in der
 Form 
 echo "Konnte den User nicht anlegen!"
-Führt das zu sinnvollen Ausgaben, die zur rechten Zeit
+führt das zu sinnvollen Ausgaben, die zur rechten Zeit
 das richtige sagen.
 
 
@@ -983,7 +983,7 @@ ins Bett! Das ist echt unfair!') zu unterscheiden.
 So kann man sehr sinnreiche Texte formulieren, in denen
 man genau darauf achten muss, was gesagt und was nur ge-
 dacht wurde.
-"Ein schönes Kleid haben sie heute wiede an, Frau Meier!"
+"Ein schönes Kleid haben sie heute wieder an, Frau Meier!"
 'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'
 
 
@@ -1007,11 +1007,11 @@ Bedarf da ist." - "Na gut, wenn Du glaubst, dass das so
 machbar ist, dann gehen wir es an, ich bezweifle nur,
 dass du damit viele erreichen wirst." Felix grinste nun
 breit übers ganze Gesicht: "Warten wir es doch ab."
-Nun sah er aus, als hätte er ein As aus dem Ärmel gezogen.
+Nun sah er aus, als hätte er ein Ass aus dem Ärmel gezogen.
 "Wir haben bisher niemanden dazu überredet, sich einen
 Computer "anzutun", und selbst unter den älteren Kollegen
 wird die Zahl derjenigen, die diese Technik akzeptieren
-nun doch immer größer, warum soll sich dass denn mit dem
+nun doch immer größer, warum soll sich das denn mit dem
 interessantesten System, das die Branche zu bieten hat
 nicht bald ähnlich einstellen. Letztendlich setzt sich die
 Neugierde doch durch." Nun grinste auch Rainer, "Na gut,
@@ -1068,7 +1068,7 @@ Drittbelegung: Das sind die Zeichen ² ³ { [ ] } \ @ ~ |
     verbose on
 "Backslash":
   \ wir verwendet, um eine Befehlszeile in einem
-  Script auf der foldenden Zeile weiterzuführen. 
+  Script auf der folgenden Zeile weiterzuführen. 
 "Klammeraffe":
   @ kommt in E-Mailadressen vor.
   moritz@musterdomain.de
