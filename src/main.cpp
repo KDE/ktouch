@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouch.cpp                                                            *
  *   ----------                                                            *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -22,7 +22,7 @@ static const char description[] =
 static const char version[] = "1.3";
 
 static KCmdLineOptions options[] = {
-    { "+[URL]", I18N_NOOP( "Training file to open." ), 0 },
+    { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
     KCmdLineLastOption
 };
 
