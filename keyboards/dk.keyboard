@@ -1,68 +1,3 @@
-From gunner@gnuskole.dk Sat Apr 19 20:28:36 2003
-Return-Path: <gunner@gnuskole.dk>
-X-Original-To: hfroilan@broadpark.no
-Delivered-To: hfroilan@broadpark.no
-Received: from citicorp.hypnotech.no (citicorp.hypnotech.no [194.63.248.20])
-	by mail.broadpark.no (Postfix) with ESMTP id 84A757860D
-	for <hfroilan@broadpark.no>; Sat, 19 Apr 2003 21:29:51 +0200 (MEST)
-Received: from sc8-sf-list1.sourceforge.net (lists.sourceforge.net [66.35.250.206])
-	by citicorp.hypnotech.no (8.12.9/8.12.9) with ESMTP id h3JJTogU015584
-	for <haavard@solveien.net>; Sat, 19 Apr 2003 21:29:50 +0200
-Received: from 0x503feb52.abnxx3.adsl-dhcp.tele.dk ([80.63.235.82] helo=Guldbasse3)
-	by sc8-sf-list1.sourceforge.net with esmtp 
-	(Cipher TLSv1:DES-CBC3-SHA:168) (Exim 3.31-VA-mm2 #1 (Debian))
-	id 196y1V-0005IB-00
-	for <haavard@users.sourceforge.net>; Sat, 19 Apr 2003 12:29:18 -0700
-Received: from [127.0.0.1] (helo=gnuskole.dk)
-	by Guldbasse3 with esmtp (Exim 3.36 #1)
-	id 196y0q-0001HT-00; Sat, 19 Apr 2003 21:28:36 +0200
-Message-ID: <3EA1A364.1040807@gnuskole.dk>
-Date: Sat, 19 Apr 2003 21:28:36 +0200
-From: Gunner Poulsen <gunner@gnuskole.dk>
-User-Agent: Mozilla/5.0 (X11; U; Linux i686; da-DK; rv:1.3) Gecko/20030314
-X-Accept-Language: da,en
-MIME-Version: 1.0
-To: haavard@users.sourceforge.net
-Cc: "Erik K. Pedersen" <erik@binghamton.edu>
-Subject: New danish keyboard
-Content-Type: multipart/mixed;
-  boundary="------------040904090905090906020202"
-X-Spam-Status: No, hits=-5.8 required=5.0
-X-Spam-Report: -5.8 hits, 5.0 required;
-	*-5.8 -- User-Agent header indicates a non-spam MUA (Mozilla)
-X-Virus-Scanned: by moam (http://www.moam.net/)
-X-Moam-Version: 0.90
-Status: R 
-X-Status: N
-X-KMail-EncryptionState:  
-X-KMail-SignatureState:  
-
-This is a multi-part message in MIME format.
---------------040904090905090906020202
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 8bit
-
-Dear Haavard Froeiland.
-
-I send you the danish keyboardfile for Kde 3.1.x pleace put it into CVS 
-as soon as posible.
-The one used now is not right at all.
-
-Gunner Poulsen.
-
--- 
-Aktiv i projektet Gnuskole http://www.gnuskole.dk
-På grund af uheldige omstændigheder skal post til mig i påsken sendes til 
-gunner@gnuskole.dk
-
-
---------------040904090905090906020202
-Content-Type: text/plain;
- name="dk.keyboard"
-Content-Transfer-Encoding: 8bit
-Content-Disposition: inline;
- filename="dk.keyboard"
-
 ####################################################
 #    KTouch
 #    Keybord layout file for Danish kaybord
@@ -171,7 +106,3 @@ HiddenKey	90		122		97		258 	   #Z
 HiddenKey	216		39		230		258 	   #Æ
 HiddenKey	198		230		230		258 	   #Ø
 HiddenKey	197		91		230		258 	   #Å
-
---------------040904090905090906020202--
-
-
