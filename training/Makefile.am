@@ -7,5 +7,8 @@ french.ktouch \
 french-2.ktouch \
 german.ktouch \
 danish.ktouch \
-dvorak.ktouch
+danish-2.ktouch \
+dvorak.ktouch \
+portuguese.ktouch \
+spanish.ktouch
 
