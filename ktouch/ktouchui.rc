@@ -4,6 +4,7 @@
   <Menu name="option"><text>&amp;Option</text>
     <Action name="optionKeyboard"/>
     <Action name="optionTraining"/>
+    <Action name="optionGeneral"/>
   </Menu>
 </MenuBar>
 </kpartgui>
