@@ -42,24 +42,21 @@ void TouchEdit::fetchLevel()
 {
     int level = levelList->currentItem();
     kdDebug() << "TouchEdit::fetchLevel(" << level << ")" << endl;
-    if(level != -1)
+    QString res;
+
+    std::vector<QString> levelData=*(lecture->levelVector)[level];
+    
+    levelNumber->display(level+1);
+    
+    description->setText(levelData[0]);
+    
+    for(unsigned int j=1;j<levelData.size();j++)
     {
-	
-	QString res;
-	std::vector<QString> levelData=*(lecture->levelVector)[level];
-	
-	levelNumber->display(level+1);
-	
-	description->setText(levelData[0]);
-        
-	for(unsigned int j=1;j<levelData.size();j++)
-	{
-	    if(j>1) res.append("\n");
-	    res.append(levelData[j]);
-	}
-	
-	levelText->setText(res);
-    }   
+	if(j>1) res.append("\n");
+	res.append(levelData[j]);
+    }
+    
+    levelText->setText(res);
 }
 
 /** Moves level one place up */
