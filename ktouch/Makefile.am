@@ -58,31 +58,6 @@ ktouch_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 # that depend on the following ones.
 ktouch_LDADD   = $(LIB_KFILE)
 
-# this option you can leave out. Just, if you use "make dist", you need it
-#noinst_HEADERS = ktouch.h \
-controlkey.h \
-fingerkey.h \
-hiddenkey.h \
-ktouchapp.h \
-normalkey.h \
-optionGeneral.h \
-optionGeneralDlg.h \
-optionKeyboard.h \
-optionKeyboardDlg.h \
-optionTraining.h \
-optionTrainingDlg.h \
-slideLine.h \
-touchLineLayout.h \
-touchStatus.h \
-touchStatusLayout.h \
-touchkey.h \
-touchkeyboard.h \
-touchlecture.h \
-touchline.h \
-touchstat.h \
-touchStatWindow.h \
-touchSplash.h
-
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
 
