@@ -45,7 +45,9 @@ class KTouchLecture {
     /// Returns the number of levels in the lecture
     unsigned int levelCount()       const { return m_lectureData.count(); };
     /// Returns whether the lecture has been modified or not.
-    bool    isModified()            const { return m_modified; };
+    bool isModified()            const { return m_modified; };
+    /// Sets the modified flag
+    void setModified(bool flag)  { m_modified=flag; };
     /// Returns a reference to the data of the level.
     /// If the level number is out of range the function will always return
     /// the level 0.

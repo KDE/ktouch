@@ -134,8 +134,9 @@ void KTouchKeyboard::applyPreferences(bool silent) {
                 m_currentLayout=KTouchConfig().m_keyboardLayout;
         };
     };
-    updateColours();
-    resizeEvent(NULL);
+    updateColours();    // we recreate the colour connections,
+    resizeEvent(NULL);  // paint the keyboard
+    newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 };
 
 
@@ -167,6 +168,7 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
                 key->paint(painter);
         };
     };
+    m_nextKey = nextChar;
 };
 
 

@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>344</width>
-            <height>320</height>
+            <height>318</height>
         </rect>
     </property>
     <property name="caption">
@@ -256,7 +256,7 @@
                 <cstring>groupBox7</cstring>
             </property>
             <property name="title">
-                <string>History</string>
+                <string></string>
             </property>
             <vbox>
                 <property name="name">
@@ -267,7 +267,7 @@
                         <cstring>rememberLevelCheck</cstring>
                     </property>
                     <property name="text">
-                        <string>Remember speed, correctness and level</string>
+                        <string>Remember level for next program start</string>
                     </property>
                 </widget>
             </vbox>

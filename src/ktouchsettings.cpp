@@ -25,20 +25,16 @@ KTouchSettings& KTouchConfig() {
     return theSettings;
 };
 
-
-//    QStringList keyboardList=QDir(dirs->findResourceDir("data","ktouch/number.keyboard") + "ktouch/","*.keyboard").entryList();
-
 void KTouchSettings::loadSettings() {
     // First we need to find all keyboard layouts
     KStandardDirs *dirs = KGlobal::dirs();
-    m_keyboardLayouts = dirs->findAllResources("data","ktouch/*.keyboard");
+    m_keyboardLayouts = dirs->findAllResources("appdata","*.keyboard");
     if (!m_keyboardLayouts.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=m_keyboardLayouts.begin(); it!=m_keyboardLayouts.end(); ++it) {
             KURL url(*it);
             *it = url.filename().remove(".keyboard");
         };
-        // TODO : remove double entries
         // remove the number layout, since this is the necessary default layout and will be
         // added anyway
         QStringList::iterator it = m_keyboardLayouts.find("number");
@@ -48,7 +44,7 @@ void KTouchSettings::loadSettings() {
     m_keyboardLayouts.push_front("number");
 
     // Now lets find the lecture files.
-    m_lectureList = dirs->findAllResources("data","ktouch/*.ktouch");
+    m_lectureList = dirs->findAllResources("appdata","*.ktouch");
     if (!m_lectureList.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=m_lectureList.begin(); it!=m_lectureList.end(); ++it) {
@@ -66,16 +62,14 @@ void KTouchSettings::loadSettings() {
     m_useErrorColor = config->readBoolEntry("Color on error", true);
     QColor defaultColor(170,0,25);
     m_errorColor = config->readColorEntry("ErrorColor", &defaultColor);
-    QFont defaultFont = KGlobalSettings::generalFont();
+    QFont defaultFont = QFont("Courier 10 Pitch");
     m_font = config->readFontEntry("Font", &defaultFont);
-    m_slideSpeed = config->readNumEntry("Sliding speed", 2);
+    m_slideSpeed = config->readNumEntry("Sliding speed", 5);
 
     // read keyboard settings
     config->setGroup("Keyboard");
-    m_useColorKeys = config->readBoolEntry("Show color", true);
-    m_keyAnimationType = config->readNumEntry("Animation type", KA_SHADE);
+    m_keyboardColorScheme = config->readNumEntry("Colorscheme", 1);
     m_keyboardLayout = config->readEntry("Layout", "number");
-    m_keyboardColorScheme = config->readNumEntry("Colorscheme", 0);
     // if keyboard layout it not available (e.g. the layout file has been deleted) switch to default
     if (m_keyboardLayouts .contains(m_keyboardLayout)==0)
         m_keyboardLayout="number";
@@ -89,9 +83,9 @@ void KTouchSettings::loadSettings() {
     config->setGroup("Training");
     m_autoLevelChange = config->readBoolEntry("Auto Level", true);
     m_downCorrectLimit = config->readNumEntry("CorrectLimitDown", 80);
-    m_downSpeedLimit = config->readNumEntry("SpeedLimitDown", 70);
-    m_upCorrectLimit = config->readNumEntry("CorrectLimitUp", 95);
-    m_upSpeedLimit = config->readNumEntry("SpeedLimitUp", 120);
+    m_downSpeedLimit = config->readNumEntry("SpeedLimitDown", 100);
+    m_upCorrectLimit = config->readNumEntry("CorrectLimitUp", 93);
+    m_upSpeedLimit = config->readNumEntry("SpeedLimitUp", 150);
     m_rememberLevel = config->readBoolEntry("Remember level", true);
 };
 
@@ -100,31 +94,41 @@ void KTouchSettings::saveSettings() {
     KConfig *config=kapp->config();
     // write general options
     config->setGroup("General");
-    config->writeEntry("Beep on error",     m_errorBeep);
-    config->writeEntry("Sound on level",    m_levelBeep);
-    config->writeEntry("Color on error",    m_useErrorColor);
+    config->writeEntry("BeepOnError",       m_errorBeep);
+    config->writeEntry("SoundOnLevel",      m_levelBeep);
+    config->writeEntry("ColorOnError",      m_useErrorColor);
     config->writeEntry("ErrorColor",        m_errorColor);
     config->writeEntry("Font",              m_font);
-    config->writeEntry("Sliding speed",     m_slideSpeed);
+    config->writeEntry("SlidingSpeed",      m_slideSpeed);
     // write keyboard settings
     config->setGroup("Keyboard");
-    config->writeEntry("Show Color",        m_useColorKeys);
-    config->writeEntry("Animation type",    m_keyAnimationType);
-    config->writeEntry("Layout",            m_keyboardLayout);
     config->writeEntry("Colorscheme",       m_keyboardColorScheme);
+    config->writeEntry("Layout",            m_keyboardLayout);
     // write training settings
     config->setGroup("Training");
-    config->writeEntry("Auto Level",        m_autoLevelChange);
+    config->writeEntry("AutoLevelChange",   m_autoLevelChange);
     config->writeEntry("CorrectLimitDown",  m_downCorrectLimit);
     config->writeEntry("SpeedLimitDown",    m_downSpeedLimit);
     config->writeEntry("CorrectLimitUp",    m_upCorrectLimit);
     config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
-    config->writeEntry("Remember level",    m_rememberLevel);
+    config->writeEntry("RememberLevel",    m_rememberLevel);
 };
 
 
 void KTouchSettings::createDefaultKeyboardColors() {
     KTouchKeyboardColor color;
+    color.m_name = "Black'n White";
+    color.m_frame = Qt::black;
+    for (int i=0; i<8; ++i)
+        color.m_background[i] = Qt::white;
+    color.m_text = Qt::black;
+    color.m_backgroundH = Qt::black;
+    color.m_textH = Qt::white;
+    color.m_cBackground = Qt::gray;
+    color.m_cText = Qt::black;
+    color.m_cBackgroundH = Qt::white;
+    color.m_cTextH = Qt::black;
+    m_keyboardColors.append(color);
     color.m_name = "Classic";
     color.m_frame = Qt::black;
     color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
@@ -146,8 +150,8 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_background[2] = QColor(  4, 39, 53);     color.m_background[6] = QColor( 10, 82,158);
     color.m_background[3] = QColor( 40, 32,121);     color.m_background[7] = QColor( 43, 60,124);
     color.m_text = Qt::white;
-    color.m_backgroundH = QColor(118,173,255);
-    color.m_textH = Qt::black;
+    color.m_backgroundH = QColor(125,180,255);
+    color.m_textH = Qt::darkBlue;
     color.m_cBackground = Qt::black;
     color.m_cText = Qt::white;
     color.m_cBackgroundH = QColor(111,121,73);

@@ -119,7 +119,6 @@ KTouch::KTouch()
         readTrainingState(kapp->config());
         // Reload the last used training file.
         reloadLecture();
-        updateCaption();
         // If the user doesn't want to restart with his old level, reset it
         if (!KTouchConfig().m_rememberLevel)
             m_trainer->m_level=0;
@@ -127,9 +126,10 @@ KTouch::KTouch()
         m_trainer->goFirstLine();
         // the current training session is already started and the training will start on first keypress
         changeStatusbarMessage( i18n("Starting training session: Waiting for first keypress...") );
-        changeStatusbarStats( m_trainer->m_session.m_correctChars,
-            m_trainer->m_session.m_totalChars, m_trainer->m_session.m_words);
     };
+    changeStatusbarStats( m_trainer->m_session.m_correctChars,
+        m_trainer->m_session.m_totalChars, m_trainer->m_session.m_words);
+    updateCaption();
 };
 
 KTouch::~KTouch() {
@@ -146,7 +146,7 @@ KTouch::~KTouch() {
     m_startNewDlg=NULL;
     m_lecture=NULL;
     m_trainer=NULL;
-}
+};
 
 
 // ********************
@@ -157,7 +157,7 @@ void KTouch::applyPreferences() {
     // ok, just notify our widgets to update themselves, we don't need to know the details...
     m_statusWidget->applyPreferences();
     m_slideLineWidget->applyPreferences();
-    m_keyboardWidget->applyPreferences(false);  // noisy preferences please
+    m_keyboardWidget->applyPreferences(false);  // noisy preferences here
 };
 
 void KTouch::updateCaption() {
@@ -238,12 +238,13 @@ bool KTouch::fileSave() {
         KURL fileUrl = KFileDialog::getSaveURL();
         if (!fileUrl.isEmpty() && !fileUrl.isMalformed()) {
             m_lecture->m_lectureURL = fileUrl;
+            m_lecture->saveLecture();
+            updateCaption();
             return true;
         }
         else
             return false;
     };
-    m_lecture->saveLecture();
     updateCaption();
     return true;
 }
@@ -327,6 +328,7 @@ void KTouch::optionsShowStatusbar() {
 }
 
 void KTouch::optionsPreferences() {
+    trainingPause();
     // If the preferences dialog hasn't been used until now, create one on the heap
     // and store the pointer for later use. The memory will be freed upen destroying
     // the KTouch object.
@@ -369,7 +371,7 @@ void KTouch::changeLecture(int num) {
     trainingPause();
     if (!saveModified()) return;
     KStandardDirs *dirs=KGlobal::dirs();
-    QString fileName = dirs->findResource("data","ktouch/" + KTouchConfig().m_lectureList[num] + ".ktouch");
+    QString fileName = dirs->findResource("appdata",KTouchConfig().m_lectureList[num] + ".ktouch");
     KURL oldLecture = m_lecture->m_lectureURL;
     if (!m_lecture->loadLecture(fileName)) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1.ktouch'!")
@@ -386,19 +388,24 @@ void KTouch::changeLecture(int num) {
 // *******************************
 
 void KTouch::readProperties(KConfig *config) {
-    // The application is about to be restored, let's read all the stuff that was set
-    // when the application was terminated (during KDE logout).
-
-    // the 'config' object points to the session managed
-    // config file.  this function is automatically called whenever
-    // the app is being restored.  read in here whatever you wrote
-    // in 'saveProperties'
-    m_lecture->m_lectureURL = config->readEntry("Lecture", "");
-    m_trainer->m_level = config->readNumEntry("Level", 0);
+    // The application is about to be restored due to session management.
+    // Let's read all the stuff that was set when the application was terminated (during KDE logout).
     QString session = config->readEntry("Session", "");
     if (!session.isEmpty())
         m_trainer->m_session = KTouchTrainingSession(session);
-    // TODO: check if there was a modified lecture last time and restore it
+    m_trainer->m_level = config->readNumEntry("Level", 0);
+    m_trainer->m_line = config->readNumEntry("Line", 0);
+    bool lectureModified = config->readBoolEntry("LectureModified", false);
+    if (lectureModified) {
+        QString tmpFile = config->readEntry("LectureTmpFile", "");
+        m_lecture->loadLecture(tmpFile);
+        m_lecture->setModified(true);
+        m_lecture->m_lectureURL = config->readEntry("Lecture", "");
+    }
+    else {
+        m_lecture->m_lectureURL = config->readEntry("Lecture", "");
+        reloadLecture();
+    };
     m_trainer->readSessionHistory();
 }
 
@@ -407,12 +414,15 @@ void KTouch::saveProperties(KConfig *config) {
     // KDE logout). Let's save the current status so that we can restore it
     // next logon.
     config->writeEntry("Lecture", m_lecture->m_lectureURL.url());
+    config->writeEntry("LectureModified", m_lecture->isModified());
     if (m_lecture->isModified()) {
-        // TODO: if lecture was modified save the content in a temporary file
-        config->writeEntry("LectureModified", true);
-        config->writeEntry("LectureTmpFile", "crypticlecture.tmp");
+        QString tmpFile = KGlobal::dirs()->saveLocation("appdata")+"lecture_last_session";
+        config->writeEntry("LectureTmpFile", tmpFile);
+        m_lecture->m_lectureURL = tmpFile;
+        m_lecture->saveLecture();
     };
     config->writeEntry("Level", m_trainer->m_level);
+    config->writeEntry("Line", m_trainer->m_line);
     config->writeEntry("Session", m_trainer->m_session.asString() );
     m_trainer->writeSessionHistory();
 }

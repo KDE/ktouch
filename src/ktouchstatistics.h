@@ -17,6 +17,8 @@
 #include <ui/ktouchstatisticslayout.h>
 
 class QShowEvent;
+class QResizeEvent;
+class QPixmap;
 class KTouchTrainer;
 
 /// Implementation of the statistics widget
@@ -26,7 +28,7 @@ class KTouchStatistics : public KTouchStatisticsLayout {
     /// Constructor, takes a pointer to the trainer object.
     KTouchStatistics(QWidget *parent, KTouchTrainer* trainer);
     /// Destructor
-    ~KTouchStatistics() {};
+    ~KTouchStatistics();
 
   protected:
     /// Updates the tab pages.
@@ -37,14 +39,14 @@ class KTouchStatistics : public KTouchStatisticsLayout {
     void clearHistory();
     /// Updates the "averaged session statistics" (when session cound slider changes).
     void updateAverageTab();
+    /// Updates content of "charts" page (actually sets the chart type so that the widget can draw itself again).
+    void updateChartTab();
 
   private:
     /// Updates content of "current session statistics" page.
     void updateCurrentTab();
-    /// Updates content of "charts" page.
-    void updateChartTab();
 
-    KTouchTrainer  *m_trainer;  ///< Pointer to the trainer object of KTouch.
+    KTouchTrainer  *m_trainer;      ///< Pointer to the trainer object of KTouch.
 };
 
 #endif  // KTOUCHSTATISTICS_H

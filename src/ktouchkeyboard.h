@@ -78,7 +78,7 @@ class KTouchKeyboard : public QWidget {
     double              m_shift;            ///< The horizontal shift for the keyboard.
     QString             m_currentLayout;    ///< The name of the currently used layout.
 
-    QChar               m_currentKey;       ///< The current character (needed for resetting the key state).
+    QChar               m_nextKey;          ///< The next to be pressed character.
 };
 
 #endif  // KTOUCHKEYBOARD_H

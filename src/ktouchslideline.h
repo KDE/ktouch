@@ -121,9 +121,9 @@ class KTouchSlideLine : public QWidget {
     int         m_spaceCharWidth;   ///< The width of a space char - this is different to QFontMetrics::width(' ').
     int         m_frameWidth;       ///< The width of the frame that is copied from the pixmaps onto the widget.
     int         m_teacherTextWidth; ///< The length of the teacher line (in pixel) WITHOUT enter character.
-    int         m_teacherFrameX;    ///< The current X-position in the teachers pixmap (local coordinates).
+    double      m_teacherFrameX;    ///< The current X-position in the teachers pixmap (local coordinates).
     int         m_teacherFrameXEnd; ///< The final X-position in the teachers pixmap (local coordinates).
-    int         m_studentFrameX;    ///< The current X-position in the students pixmap (local coordinates).
+    double      m_studentFrameX;    ///< The current X-position in the students pixmap (local coordinates).
     int         m_studentFrameXEnd; ///< The final X-position in the student pixmap (local coordinates).
 
     bool        m_cursorVisible;    ///< Flag which indicates the current state of the cursor.

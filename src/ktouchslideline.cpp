@@ -20,7 +20,7 @@
 #include <kdebug.h>
 #include <kglobalsettings.h>
 
-//#include <utility> // for std::max and std::min
+#include <math.h>
 
 #include "ktouchsettings.h"
 #include "ktouchmacros.h"
@@ -39,17 +39,27 @@ KTouchSlideLine::KTouchSlideLine(QWidget *parent)
     m_teacherPixmap(NULL),
     m_studentPixmap(NULL),
     m_slideTimer(this),
+    m_shift(0),
+    m_enterCharWidth(0),
+    m_spaceCharWidth(0),
+    m_frameWidth(0),
+    m_teacherTextWidth(0),
     m_teacherFrameX(0),
     m_teacherFrameXEnd(0),
     m_studentFrameX(0),
     m_studentFrameXEnd(0),
-    m_cursorVisible(true),
-    m_cursorTimer(this)
+    m_cursorVisible(false),
+    m_cursorTimer(this),
+    m_cursorXPos(0),
+    m_cursorYPos(0),
+    m_cursorHeight(0)
 {
     // set widget defaults (note: teacher and student text is empty after creation)
     setMinimumHeight(50);
     setMaximumHeight(150);
     setCursorTimerEnabled(true);
+    QFont       m_font;             ///< Font for the slide line.
+
     connect( &m_cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()) );
     connect( &m_slideTimer, SIGNAL(timeout()), this, SLOT(slide()) );
 }
@@ -96,10 +106,11 @@ void KTouchSlideLine::setStudentText(const QString& text) {
 // *** Public slots
 
 void KTouchSlideLine::setCursorTimerEnabled(bool on) {
-    if (on)     m_cursorTimer.start(800);
+    if (on)     m_cursorTimer.start(600);
     else        m_cursorTimer.stop();
+    m_cursorVisible=false;
+    drawCursor();
 };
-
 
 
 // *** Private slots
@@ -110,28 +121,21 @@ void KTouchSlideLine::toggleCursor() {
 };
 
 void KTouchSlideLine::slide() {
-    // TODO: improve formula
+    if (m_studentPixmap==NULL || m_teacherPixmap==NULL) return;
+    // kdDebug() << "[KTouchSlideLine::slide]" << endl;
     // calculate new x positions depending on slide speed
     double speed = 1.0 + 0.2*KTouchConfig().m_slideSpeed;
-    int m_teacherDX = static_cast<int>( (m_teacherFrameXEnd - m_teacherFrameX)/speed);
-    int m_studentDX = static_cast<int>( (m_studentFrameXEnd - m_studentFrameX)/speed);
-    if (m_teacherDX!=0) {
-        if (m_teacherDX > 0)
-            m_teacherFrameX += max( 1, m_teacherDX );
-        else
-            m_teacherFrameX += min(-1, m_teacherDX );
-    }
-    if (m_studentDX!=0) {
-        if (m_studentDX > 0)
-            m_studentFrameX += max( 1, m_studentDX );
-        else
-            m_studentFrameX += min(-1, m_studentDX );
-    };
+    double m_teacherDX = (m_teacherFrameXEnd - m_teacherFrameX)/speed;
+    double m_studentDX = (m_studentFrameXEnd - m_studentFrameX)/speed;
+    if (fabs(m_teacherDX)<1.0)  m_teacherFrameX = m_teacherFrameXEnd;
+    else                        m_teacherFrameX += m_teacherDX;
+    if (fabs(m_studentDX)<1.0)  m_studentFrameX = m_studentFrameXEnd;
+    else                        m_studentFrameX += m_studentDX;
     // now simply copy the required parts of the teacher and student pixmaps onto the widget
     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
-           m_teacherPixmap, m_teacherFrameX, 0, m_frameWidth, m_teacherPixmap->height());
+           m_teacherPixmap, static_cast<int>(m_teacherFrameX), 0, m_frameWidth, m_teacherPixmap->height());
     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
-           m_studentPixmap, m_studentFrameX, 0, m_frameWidth, m_studentPixmap->height());
+           m_studentPixmap, static_cast<int>(m_studentFrameX), 0, m_frameWidth, m_studentPixmap->height());
     // restart slide timer if necessary
     if (m_teacherDX!=0 || m_studentDX!=0)
         m_slideTimer.start(100, true);  // start singleshot timer to slide again
@@ -144,12 +148,11 @@ void KTouchSlideLine::slide() {
 
 void KTouchSlideLine::paintEvent(QPaintEvent*) {
     slide();
-    drawCursor();
 };
 
 void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     if (m_teacherText.isEmpty()) return;  // can happen during startup
-    //kdDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
+    // kdDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
     resizeFont();
     // delete old pixmaps because we have to change its size
     delete m_teacherPixmap;
@@ -200,7 +203,7 @@ void KTouchSlideLine::drawCursor() {
     QPainter p(this);
     if (m_cursorVisible)    p.setPen( m_cursorColor );
     else                    p.setPen( m_cursorBackground );
-    int myX = m_cursorXPos + m_studentFrameXEnd - m_studentFrameX;
+    int myX = m_cursorXPos + m_studentFrameXEnd - static_cast<int>(m_studentFrameX);
     if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
         p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
 };

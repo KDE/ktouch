@@ -24,6 +24,7 @@
 #include <klocale.h>
 #include <kglobal.h>
 #include <kstandarddirs.h>
+#include <kaudioplayer.h>
 
 #include "ktouchstatus.h"
 #include "ktouchslideline.h"
@@ -50,6 +51,10 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     m_studentText="";
     m_session.reset();
 
+    m_levelUpSound = KGlobal::dirs()->findResource("appdata","up.wav");
+    m_levelDownSound = KGlobal::dirs()->findResource("appdata","down.wav");
+    m_typeWriterSound = KGlobal::dirs()->findResource("appdata","typewriter.wav");
+
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
     connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
     connect(m_trainingTimer, SIGNAL(timeout()), this, SLOT(timerTick()) );
@@ -62,6 +67,8 @@ KTouchTrainer::~KTouchTrainer() {
 void KTouchTrainer::goFirstLine() {
     m_statusWidget->setNewChars( m_lecture->level(m_level).newChars() );
     m_line=0;
+    m_incLinesCount=0;
+    m_decLinesCount=0;
     newLine();
 };
 
@@ -104,7 +111,6 @@ void KTouchTrainer::backspacePressed() {
         if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
             // we are removing a correctly typed char
             --m_session.m_correctChars;
-            --m_session.m_totalChars;
         };
         m_studentText = m_studentText.left(--len);
         m_slideLineWidget->setStudentText(m_studentText);
@@ -124,13 +130,51 @@ void KTouchTrainer::backspacePressed() {
 void KTouchTrainer::enterPressed() {
     if (!typingAllowed())  return;
     if (m_studentText!=m_teacherText)  return;
-    // TODO : Automatic level change after a number of lines
 
-    // let's increase the line
+    if (KTouchConfig().m_autoLevelChange) {
+        // if level increase criterion was fulfilled, increase line counter
+        if (KTouchConfig().m_upCorrectLimit <= m_session.correctness()*100 &&
+            KTouchConfig().m_upSpeedLimit <= m_session.charSpeed())
+        {
+            m_decLinesCount=0;
+            ++m_incLinesCount;
+        }
+        else  if (KTouchConfig().m_downCorrectLimit > m_session.correctness()*100 ||
+                  KTouchConfig().m_downSpeedLimit > m_session.charSpeed())
+        {
+            m_incLinesCount=0;
+            ++m_decLinesCount;
+        };
+        // Automatic level change after a number of lines can happen, if you fulfilled the
+        // requirements in the last 5 lines.
+        if (m_incLinesCount>=5) {
+            levelUp();
+            return;
+        }
+        if (m_decLinesCount>=5 && m_level!=0) {
+            levelDown();
+            return;
+        };
+    };
+    // Now let's increase the line
     ++m_line;
     if (m_line >= m_lecture->level(m_level).lineCount()) {
-        // TODO : Automatic level change after a level is completed
-        levelUp();
+        if (KTouchConfig().m_autoLevelChange) {
+            // adjust level if limits exceeded
+            if (KTouchConfig().m_upCorrectLimit<=m_session.correctness()*100 &&
+                KTouchConfig().m_upSpeedLimit<=m_session.charSpeed())
+            {
+                levelUp();
+                return;
+            }
+            else  if (KTouchConfig().m_downCorrectLimit>m_session.correctness()*100 ||
+                    KTouchConfig().m_downSpeedLimit>m_session.charSpeed())
+            {
+                levelDown();
+                return;
+            }
+        };
+        goFirstLine();  // otherwise restart level
     }
     else
         newLine();
@@ -169,31 +213,27 @@ void KTouchTrainer::writeSessionHistory() {
 };
 
 void KTouchTrainer::levelUp() {
+    KAudioPlayer::play(m_levelUpSound);
     ++m_level;  // increase the level
-    m_line=0;   // reset to first line
-    // TODO: play a sound for level increase
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
-        // TODO: play a sound for lecture completed.
         m_level=m_lecture->levelCount()-1;
     };
     goFirstLine();
 };
 
 void KTouchTrainer::levelDown() {
+    KAudioPlayer::play(m_levelUpSound);
     if (m_level>0) {
        --m_level;
-       // TODO: play a sound for level decrease
     }
-    else {
-       // TODO: play a sound for "already at first level"
-    };
     goFirstLine();
 };
 
 void KTouchTrainer::startNewTrainingSession(bool keepLevel) {
-    // store the old training session in the history
-    m_sessionHistory.push_back( m_session );
+    // store the old training session in the history (but only if the time was running)
+    if (m_session.m_elapsedTime>0)
+        m_sessionHistory.push_back( m_session );
     m_session.reset();  // reset session
     if (!keepLevel)
         m_level=0;
@@ -208,12 +248,14 @@ void KTouchTrainer::startNewTrainingSession(bool keepLevel) {
 void KTouchTrainer::pauseTraining() {
     m_trainingTimer->stop();
     m_trainingPaused=true;
+    m_slideLineWidget->setCursorTimerEnabled(false);
     emit statusbarMessageChanged(i18n("Training session paused.") );
 };
 
 void KTouchTrainer::continueTraining() {
     m_trainingPaused=false;
     m_waiting=true;
+    m_slideLineWidget->setCursorTimerEnabled(true);
     emit statusbarMessageChanged(i18n("Training session continues on next keypress...") );
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
 };
@@ -227,7 +269,6 @@ void KTouchTrainer::timerTick() {
 };
 
 void KTouchTrainer::newLine() {
-    //kdDebug() << "[KTouchTrainer::newLine]  Line=" << m_line << endl;
     m_teacherText = m_lecture->level(m_level).line(m_line);
     m_studentText="";
     m_statusWidget->updateStatus(m_level, m_session.correctness());

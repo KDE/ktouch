@@ -110,6 +110,12 @@ class KTouchTrainer : public QObject {
     KTouchSlideLine    *m_slideLineWidget;      ///< Pointer to the sliding line widget.
     KTouchKeyboard     *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchLecture      *m_lecture;              ///< Pointer to the lecture data.
+    unsigned int        m_incLinesCount;        ///< Number of lines for which the level increase criterion was fulfilled.
+    unsigned int        m_decLinesCount;        ///< Number of lines for which the level decrease criterion was fulfilled.
+
+    QString             m_levelUpSound;         ///< URL of the level up sound.
+    QString             m_levelDownSound;       ///< URL of the level down sound.
+    QString             m_typeWriterSound;      ///< URL of the typing sound.
 };
 
 #endif  // KTOUCHTRAINER_H

@@ -13,11 +13,15 @@
 #ifndef KTOUCHMACROS_H
 #define KTOUCHMACROS_H
 
+template <typename T>
+T min(T x, T y) {
+    return (x < y) ? x : y;
+};
 
-#define min(X, Y) ((X) < (Y) ? (X) : (Y))
-
-#define max(X, Y) ((X) > (Y) ? (X) : (Y))
-
+template <typename T>
+T max(T x, T y) {
+    return (x > y) ? x : y;
+};
 
 #endif
 

@@ -40,7 +40,6 @@
 #include "ktouchpreftraining.h"
 #include "ktouchsettings.h"
 
-
 KTouchPref::KTouchPref() : KDialogBase(IconList, i18n("KTouch Preferences"), Default|Ok|Apply|Cancel, Ok) {
     // adding page "General options"
     QFrame *frame = addPage(i18n("General"), i18n("General options"),
@@ -68,8 +67,7 @@ KTouchPref::KTouchPref() : KDialogBase(IconList, i18n("KTouch Preferences"), Def
     connect(m_pageGeneral->errorColorBtn, SIGNAL(changed(const QColor&)), this, SLOT(setModified()) );
     connect(m_pageGeneral, SIGNAL(fontChanged()), this, SLOT(setModified()) );
     connect(m_pageGeneral->slidingSpeedSlider, SIGNAL(valueChanged(int)), this, SLOT(setModified()) );
-    connect(m_pageKeyboard->colorKeysCheck, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
-    connect(m_pageKeyboard->animationCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
+    connect(m_pageKeyboard->colorSchemeCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
     connect(m_pageKeyboard->keyboardLayoutCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
     connect(m_pageTraining->levelChangeCheck, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
     connect(m_pageTraining->downCorrectLimit, SIGNAL(valueChanged(int)), this, SLOT(setModified()) );
@@ -93,8 +91,7 @@ void KTouchPref::setDefaults() {
     m_pageGeneral->updateFont( KGlobalSettings::generalFont() );
     m_pageGeneral->slidingSpeedSlider->setValue(5);
     // keyboard page
-    m_pageKeyboard->colorKeysCheck->setChecked(true);
-    m_pageKeyboard->animationCombo->setCurrentItem(1); // shade
+    m_pageKeyboard->colorSchemeCombo->setCurrentItem(1); // classic scheme
     m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(0);
     // training page
     m_pageTraining->levelChangeCheck->setChecked(true);
@@ -118,17 +115,7 @@ void KTouchPref::update(bool toDialog) {
         m_pageGeneral->updateFont(  KTouchConfig().m_font );
         m_pageGeneral->slidingSpeedSlider->setValue( KTouchConfig().m_slideSpeed );
         // keyboard page
-        m_pageKeyboard->colorKeysCheck->setChecked(KTouchConfig().m_useColorKeys);
-        m_pageKeyboard->animationCombo->setCurrentItem(KTouchConfig().m_keyAnimationType);
-        // fill keyboard combo
-        m_pageKeyboard->keyboardLayoutCombo->clear();
-
-        for (QStringList::const_iterator it=KTouchConfig().m_keyboardLayouts.begin();
-                                         it!=KTouchConfig().m_keyboardLayouts.end();
-                                         ++it)
-        {
-            m_pageKeyboard->keyboardLayoutCombo->insertItem(*it);
-        };
+        m_pageKeyboard->colorSchemeCombo->setCurrentItem(KTouchConfig().m_keyboardColorScheme);
         // set currently selected keyboard layout
         int itemIndex = KTouchConfig().m_keyboardLayouts.findIndex(KTouchConfig().m_keyboardLayout);
         if (itemIndex < m_pageKeyboard->keyboardLayoutCombo->count())
@@ -153,9 +140,8 @@ void KTouchPref::update(bool toDialog) {
         KTouchConfig().m_font               = m_pageGeneral->m_font;
         KTouchConfig().m_slideSpeed         = m_pageGeneral->slidingSpeedSlider->value();
         // keyboard page
-        KTouchConfig().m_useColorKeys       = m_pageKeyboard->colorKeysCheck->isChecked();
-        KTouchConfig().m_keyAnimationType   = m_pageKeyboard->animationCombo->currentItem();
-        KTouchConfig().m_keyboardLayout     = m_pageKeyboard->keyboardLayoutCombo->currentText();
+        KTouchConfig().m_keyboardColorScheme = m_pageKeyboard->colorSchemeCombo->currentItem();
+        KTouchConfig().m_keyboardLayout      = m_pageKeyboard->keyboardLayoutCombo->currentText();
         // training page
         KTouchConfig().m_autoLevelChange    = m_pageTraining->levelChangeCheck->isChecked();
         KTouchConfig().m_downCorrectLimit   = m_pageTraining->downCorrectLimit->value();

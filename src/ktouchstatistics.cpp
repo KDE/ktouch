@@ -17,6 +17,11 @@
 #include <qslider.h>
 #include <qlabel.h>
 #include <qprogressbar.h>
+#include <qpixmap.h>
+#include <qlabel.h>
+#include <qpainter.h>
+#include <qradiobutton.h>
+#include <qbuttongroup.h>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
@@ -29,6 +34,7 @@
 #include "ktouchtrainer.h"
 #include "ktouchtrainingsession.h"
 #include "ktouchcharstats.h"
+#include "ktouchchartwidget.h"
 using std::set;
 using std::list;
 
@@ -37,9 +43,15 @@ KTouchStatistics::KTouchStatistics(QWidget *parent, KTouchTrainer* trainer)
 {
     sessionCountSlider->setMaxValue(m_trainer->m_sessionHistory.count());
     sessionCountSlider->setValue(m_trainer->m_sessionHistory.count());
+    chartWidget->m_trainer = trainer;
+    chartWidget->setChartType( KTouchChartWidget::CharsPerMinute );
     connect(closeButton, SIGNAL(clicked()), this, SLOT(accept()) );
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
     connect(sessionCountSlider, SIGNAL(valueChanged(int)), this, SLOT(updateAverageTab()) );
+    connect(chartTypeButtonGroup, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+};
+
+KTouchStatistics::~KTouchStatistics() {
 };
 
 void KTouchStatistics::showEvent(QShowEvent*) {
@@ -103,6 +115,22 @@ void KTouchStatistics::updateCurrentTab() {
 };
 
 void KTouchStatistics::updateChartTab() {
+    if (m_trainer->m_sessionHistory.size()<2) {
+        chartTypeButtonGroup->setEnabled(false);
+        chartWidget->setEraseColor( Qt::gray );
+    }
+    else {
+        chartTypeButtonGroup->setEnabled(true);
+        chartWidget->setEraseColor( Qt::white );
+    };
+    if (charSpeedButton->isChecked())
+        chartWidget->setChartType( KTouchChartWidget::CharsPerMinute );
+    else if (wordSpeedButton->isChecked())
+        chartWidget->setChartType( KTouchChartWidget::WordsPerMinute );
+    else if (accuracyButton->isChecked())
+        chartWidget->setChartType( KTouchChartWidget::Accuracy );
+    else if (timeButton->isChecked())
+        chartWidget->setChartType( KTouchChartWidget::ElapsedTime );
 };
 
 void KTouchStatistics::clearHistory() {
@@ -111,6 +139,7 @@ void KTouchStatistics::clearHistory() {
         sessionCountSlider->setMaxValue(0);
         m_trainer->m_sessionHistory.clear();
         updateAverageTab();
+        updateChartTab();
     };
 };
 

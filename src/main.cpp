@@ -18,12 +18,12 @@
 #include <kcmdlineargs.h>
 #include <klocale.h>
 
-//#include "ktouchsplash.h"
+#include <kdebug.h>
 
 static const char *description =
     I18N_NOOP("A program that helps you to learn and practice touch typing.");
 
-static const char *version = "0.1";
+static const char *version = "1.3";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open." ), 0 }
@@ -47,8 +47,7 @@ int main(int argc, char **argv)
     KApplication app;
     KTouch *mainWin = 0;
 
-    if (app.isRestored())
-    {
+    if (app.isRestored()) {
         RESTORE(KTouch);
     }
     else

@@ -19,7 +19,7 @@ INCLUDES = $(all_includes)
 # SUBDIRS =
 
 # these are the headers for your project
-noinst_HEADERS = ktouch.h ktouchprefgeneral.h ktouchprefkeyboard.h ktouchkeyboardcolor.h ktouchtrainingsession.h ktouchpreftraining.h ktouchpref.h ktouchkeyconnector.h ktouchtrainer.h ktouchstatistics.h ktouchkeys.h ktoucheditor.h ktouchslideline.h ktouchstatus.h ktouchlecture.h ktouchleveldata.h
+noinst_HEADERS = ktouch.h ktouchchartwidget.h ktouchprefgeneral.h ktouchprefkeyboard.h ktouchkeyboardcolor.h ktouchtrainingsession.h ktouchpreftraining.h ktouchpref.h ktouchkeyconnector.h ktouchtrainer.h ktouchstatistics.h ktouchkeys.h ktoucheditor.h ktouchslideline.h ktouchstatus.h ktouchlecture.h ktouchleveldata.h
 
 # let automoc handle all of the meta source files (moc)
 ktouch_METASOURCES = AUTO
@@ -36,7 +36,7 @@ messages: rc.cpp
 bin_PROGRAMS = ktouch
 
 # the application source, library search path, and link libraries
-ktouch_SOURCES = main.cpp ktouch.cpp ktouchprefgeneral.cpp ktouchprefkeyboard.cpp ktouchpreftraining.cpp ktouchpref.cpp  ktouchstatus.cpp ktouchlecture.cpp ktouchleveldata.cpp ktoucheditor.cpp  ktouchslideline.cpp ktouchkeys.cpp ktouchkeyboard.cpp ktouchsettings.cpp ktouchtrainer.cpp ktouchtrainingsession.cpp  ktouchcharstats.cpp ui/ktouchstatisticslayout.ui ktouchstatistics.cpp ui/ktouchstatuslayout.ui ui/ktouchprefgenerallayout.ui ui/ktouchprefkeyboardlayout.ui ui/ktouchpreftraininglayout.ui ui/ktoucheditorlayout.ui ui/ktouchstartnewdialog.ui
+ktouch_SOURCES = main.cpp ktouch.cpp ktouchchartwidget.cpp  ktouchprefgeneral.cpp ktouchprefkeyboard.cpp ktouchpreftraining.cpp ktouchpref.cpp  ktouchstatus.cpp ktouchlecture.cpp ktouchleveldata.cpp ktoucheditor.cpp  ktouchslideline.cpp ktouchkeys.cpp ktouchkeyboard.cpp ktouchsettings.cpp ktouchtrainer.cpp ktouchtrainingsession.cpp  ktouchcharstats.cpp ui/ktouchstatisticslayout.ui ktouchstatistics.cpp ui/ktouchstatuslayout.ui ui/ktouchprefgenerallayout.ui ui/ktouchprefkeyboardlayout.ui ui/ktouchpreftraininglayout.ui ui/ktoucheditorlayout.ui ui/ktouchstartnewdialog.ui
 
 # the library search path.
 ktouch_LDFLAGS = $(KDE_RPATH) $(all_libraries)
