@@ -30,7 +30,7 @@ ControlKey	8		BackSpace			130		0		20    10
 
 #		Ascii	KeyText	x			y		FingerKey
 #
-NormalKey 	167		§				0		0		97
+NormalKey 	167		Â§				0		0		97
 NormalKey 	49		1				10		0		97
 NormalKey 	50		2				20		0		111
 NormalKey 	51		3				30		0		101
@@ -42,11 +42,11 @@ NormalKey 	56		8				80		0		116
 NormalKey 	57		9				90		0		110
 NormalKey 	48		0				100		0		115
 NormalKey 	223		+				110		0		115
-NormalKey 	180		´				120		0		115
+NormalKey 	180		Â´				120		0		115
 #
-NormalKey		246		Ö				15		10	97         
-NormalKey		229		Å				25		10	111
-NormalKey		239		Ä				35		10	101
+NormalKey		246		Ã–				15		10	97         
+NormalKey		229		Ã…				25		10	111
+NormalKey		239		Ã„				35		10	101
 NormalKey		112		P				45		10	117
 NormalKey		121		Y				55		10	117
 NormalKey		102		F				65		10	104
@@ -56,7 +56,7 @@ NormalKey		 99		C				85		10	116
 NormalKey		114		R				95		10	110
 NormalKey		108		L				105		10	115
 NormalKey		113		Q				115		10	115
-NormalKey		168		¨				125		10	115
+NormalKey		168		Â¨				125		10	115
 #
 NormalKey		105		I				58		20	117
 NormalKey		100		D				68		20	104
