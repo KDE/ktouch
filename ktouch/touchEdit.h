@@ -40,8 +40,8 @@ private:
 	TouchLecture* lecture;
 
 public slots: // Public slots
-  /** No descriptions */
-  void fetchLevel(int);
+ 
+  void fetchLevel();
   /** Moves level one place down */
   void moveDown();
   /** Moves level one place up */

@@ -38,22 +38,28 @@ TouchEdit::~TouchEdit()
 
 }
 
-void TouchEdit::fetchLevel(int level)
+void TouchEdit::fetchLevel()
 {
-    QString res;
-    std::vector<QString> levelData=*(lecture->levelVector)[level];
-    
-    levelNumber->display(level+1);
-    
-    description->setText(levelData[0]);
-    
-    for(unsigned int j=1;j<levelData.size();j++)
+    int level = levelList->currentItem();
+    kdDebug() << "TouchEdit::fetchLevel(" << level << ")" << endl;
+    if(level != -1)
     {
-	if(j>1) res.append("\n");
-	res.append(levelData[j]);
-    }
-    
-    levelText->setText(res);
+	
+	QString res;
+	std::vector<QString> levelData=*(lecture->levelVector)[level];
+	
+	levelNumber->display(level+1);
+	
+	description->setText(levelData[0]);
+        
+	for(unsigned int j=1;j<levelData.size();j++)
+	{
+	    if(j>1) res.append("\n");
+	    res.append(levelData[j]);
+	}
+	
+	levelText->setText(res);
+    }   
 }
 
 /** Moves level one place up */
@@ -96,6 +102,8 @@ void TouchEdit::moveDown()
 
 void TouchEdit::swapLevel(int a,int b)
 {
+    kdDebug() << "TouchEdit::swapLevel(" << a << "," << b << ")" << endl;
+
     // moving data around
     std::vector<QString> *levelTmp=lecture->levelVector[b];
     lecture->levelVector[b]=lecture->levelVector[a];
@@ -112,6 +120,7 @@ void TouchEdit::swapLevel(int a,int b)
 /** Filles up the level list */
 void TouchEdit::fillLevelList()
 {
+    kdDebug() << "TouchEdit::fillLevelList()" << endl;
     for(unsigned int i=0;i<lecture->levelVector.size();i++)
     {
 	std::vector<QString> levelData=*(lecture->levelVector)[i];
@@ -123,15 +132,15 @@ void TouchEdit::fillLevelList()
 void TouchEdit::descriptionChanged(const QString& d)
 {
     int current=levelList->currentItem();
+    
     if(current!=-1)
     {
-		
-	kdDebug() << "changing level description to " << d << endl;
+	// Change the internal data structure
 	std::vector<QString> *levelTmp=lecture->levelVector[current];
 	levelTmp->front()=d;
-	
-	levelList->changeItem(d,current);
-	
+	    
+	// Change the description in the level list
+	 levelList->changeItem(d,current);
     }
 }
 

@@ -201,12 +201,6 @@
 </widget>
 <connections>
     <connection>
-        <sender>levelList</sender>
-        <signal>highlighted(int)</signal>
-        <receiver>TouchEditLayout</receiver>
-        <slot>fetchLevel(int)</slot>
-    </connection>
-    <connection>
         <sender>upButtonff</sender>
         <signal>clicked()</signal>
         <receiver>TouchEditLayout</receiver>
@@ -224,12 +218,18 @@
         <receiver>TouchEditLayout</receiver>
         <slot>descriptionChanged(const QString&amp;)</slot>
     </connection>
+    <connection>
+        <sender>levelList</sender>
+        <signal>currentChanged(QListBoxItem*)</signal>
+        <receiver>TouchEditLayout</receiver>
+        <slot>fetchLevel()</slot>
+    </connection>
 </connections>
 <slots>
-    <slot>fetchLevel(int)</slot>
+    <slot>descriptionChanged( const QString &amp; )</slot>
+    <slot>fetchLevel()</slot>
     <slot>moveDown()</slot>
     <slot>moveUp()</slot>
-    <slot>descriptionChanged(const QString&amp;)</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>
