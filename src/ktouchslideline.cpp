@@ -66,7 +66,7 @@ KTouchSlideLine::~KTouchSlideLine() {
 }
 
 void KTouchSlideLine::applyPreferences() {
-    m_font = KTouchConfig().m_font;
+    m_font = Prefs::font();
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
     // note: resizeFont() will be called implicitly by resizeEvent()
 }

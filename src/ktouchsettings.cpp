@@ -88,10 +88,6 @@ void KTouchSettings::loadSettings() {
 
 void KTouchSettings::saveSettings() {
 	KConfig *config=kapp->config();
-	
-	// write general options
-	config->setGroup("General");
-	config->writeEntry("Font",              m_font);
 	// write training settings
 	config->setGroup("Training");
 	config->writeEntry("CorrectLimitDown",  m_downCorrectLimit);

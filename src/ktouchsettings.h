@@ -51,9 +51,6 @@ class KTouchSettings {
     /// Stores the program settings (preferences) in the config file
     void saveSettings();
 
-    // general options
-    QFont           m_font;             ///< The font to be used in the slide lines.
-
     // training page
     int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.
     int             m_downSpeedLimit;   ///< If user types slower, the level will be descreased.

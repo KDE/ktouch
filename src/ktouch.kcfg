@@ -45,11 +45,11 @@
       <label></label>
       <default code="true">5</default>
     </entry>
-    </group>
-     <!--<entry name="Font" type="Font">
-      <default></default>
+     <entry name="Font" type="Font">
+     <label>The font for the student and teacher lines</label>
+      <default code="true">KGlobalSettings::generalFont()</default>
     </entry>
-    </group>-->
+    </group>
   <group name="Keyboard">
     <entry name="ColorScheme" type="Int">
       <label></label>
@@ -64,7 +64,7 @@
     <default code="true">0</default>
     </entry>
       <entry name="KeysFont" type="Font">
-    <label></label>
+    <label>The font for the keys on the keyboard</label>
     <default code="true">KGlobalSettings::generalFont()</default>
     </entry>
   </group>

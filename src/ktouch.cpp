@@ -30,7 +30,7 @@
 #include <kconfigdialog.h>
 #include <kaction.h>
 #include <kcombobox.h>
-#include <kfontdialog.h>
+#include <kfontrequester.h>
 
 // Own header files
 //#include "ktouchpref.h"
@@ -310,6 +310,7 @@ void KTouch::optionsPreferences() {
 	//KConfigDialog didn't find an instance of this dialog, so lets create it :
 	KConfigDialog* dialog = new KConfigDialog( this, "settings",  Prefs::self() );
 	KTouchPrefGeneralLayout * m_pageGeneral = new KTouchPrefGeneralLayout(0, "General");
+	m_pageGeneral->kcfg_Font->setSampleText("Have a happy typing time!");
 	dialog->addPage(m_pageGeneral, i18n("General Options"), "style");
 	KTouchPrefTrainingLayout * m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
