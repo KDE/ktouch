@@ -220,7 +220,7 @@ void KTouch::fileNew() {
 void KTouch::fileOpen() {
     if (!saveModified()) return;
     trainingPause();
-    KURL url = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Open training file"));
+    KURL url = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Open Training File"));
     if (!url.isEmpty() && !url.isMalformed()) {
         if (!m_lecture->loadLecture(url))
             KMessageBox::information(this, i18n("Could not open the training file!"));
@@ -485,15 +485,15 @@ void KTouch::setupActions() {
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
 
     // actions for the training menu
-    new KAction(i18n("&Start new training session"), "launch", 0,
+    new KAction(i18n("&Start New Training Session"), "launch", 0,
         this, SLOT(trainingNewSession()), actionCollection(), "training_newsession");
-    m_trainingContinue = new KAction(i18n("&Continue training session"), "player_play", 0,
+    m_trainingContinue = new KAction(i18n("&Continue Training Session"), "player_play", 0,
         this, SLOT(trainingContinue()), actionCollection(), "training_run");
-    m_trainingPause = new KAction(i18n("&Pause training session"), "player_pause", 0,
+    m_trainingPause = new KAction(i18n("&Pause Training Session"), "player_pause", 0,
         this, SLOT(trainingPause()), actionCollection(), "training_pause");
-    new KAction(i18n("&Edit lecture..."), 0, this, SLOT(trainingLectureEdit()), actionCollection(), "lecture_edit");
+    new KAction(i18n("&Edit Lecture"), 0, this, SLOT(trainingLectureEdit()), actionCollection(), "lecture_edit");
     m_trainingContinue->setEnabled(false); // because the training session is running initially
-    new KAction(i18n("Show training s&tatistics..."), "frame_chart", 0,
+    new KAction(i18n("Show Training S&tatistics"), "frame_chart", 0,
         this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
 
     // actions for the settings menu
@@ -514,7 +514,7 @@ void KTouch::setupQuickSettings() {
     if (settingsMenu!=NULL && KTouchConfig().m_keyboardLayouts.count()>0) {
         QSignalMapper *signalMapper = new QSignalMapper( this );
         connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeKeyboard(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Keyboard layouts"), settingsMenu);
+        KActionMenu *menu = new KActionMenu(i18n("Keyboard Layouts"), settingsMenu);
         for (unsigned int i=0; i<KTouchConfig().m_keyboardLayouts.count(); ++i) {
             KAction *action = new KAction( KTouchConfig().m_keyboardLayouts[i]);
             menu->insert(action);
@@ -527,7 +527,7 @@ void KTouch::setupQuickSettings() {
     if (settingsMenu) {
         QSignalMapper *signalMapper = new QSignalMapper( this );
         connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeColor(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Keyboard color schemes"), settingsMenu);
+        KActionMenu *menu = new KActionMenu(i18n("Keyboard Color Schemes"), settingsMenu);
         for (unsigned int i=0; i<KTouchConfig().m_keyboardColors.count(); ++i) {
             KAction *action = new KAction( KTouchConfig().m_keyboardColors[i].m_name);
             menu->insert(action);
@@ -542,7 +542,7 @@ void KTouch::setupQuickSettings() {
     if (trainingMenu!=NULL && KTouchConfig().m_lectureList.count()>0) {
         QSignalMapper *signalMapper = new QSignalMapper( this );
         connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeLecture(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Default lectures"), trainingMenu);
+        KActionMenu *menu = new KActionMenu(i18n("Default Lectures"), trainingMenu);
         for (unsigned int i=0; i<KTouchConfig().m_lectureList.count(); ++i) {
             KAction *action = new KAction( KTouchConfig().m_lectureList[i]);
             menu->insert(action);
