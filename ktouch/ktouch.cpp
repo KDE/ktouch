@@ -333,7 +333,7 @@ void KTouch::slotOptionKeyboard()
 	OptionKeyboard *optionKeyboard=new OptionKeyboard(this,"keyboardOptionDialog",true);
 
 	optionKeyboard->showColor->setChecked(touchTrain->keyboard->getShowColor());
-	optionKeyboard->showAnimation->setChecked(touchTrain->keyboard->getShowAnimation());
+	optionKeyboard->showAnimation->setCurrentItem(touchTrain->keyboard->getShowAnimation());
 
 	optionKeyboard->languageBox->setDisabled((touchTrain->keyboard->getLanguage()=="number"));
 	optionKeyboard->showKeypad->setChecked((touchTrain->keyboard->getLanguage()=="number"));
@@ -362,7 +362,7 @@ void KTouch::slotOptionKeyboard()
 	{
 		// save changes made in dialog
 		touchTrain->keyboard->setShowColor(optionKeyboard->showColor->isChecked());
-		touchTrain->keyboard->setShowAnimation(optionKeyboard->showAnimation->isChecked());
+		touchTrain->keyboard->setShowAnimation(optionKeyboard->showAnimation->currentItem());
 		if(optionKeyboard->showKeypad->isChecked())
 		{
 			touchTrain->keyboard->loadKeyboard("number");

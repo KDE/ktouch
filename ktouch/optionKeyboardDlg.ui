@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>300</width>
-            <height>301</height>
+            <width>342</width>
+            <height>361</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -60,50 +60,64 @@
             </property>
             <property name="wordwrap" stdset="0">
             </property>
-            <widget class="QCheckBox">
+            <vbox>
                 <property name="name">
-                    <cstring>showColor</cstring>
+                    <cstring>unnamed</cstring>
                 </property>
-                <property name="geometry">
-                    <rect>
-                        <x>20</x>
-                        <y>30</y>
-                        <width>230</width>
-                        <height>21</height>
-                    </rect>
+                <property name="margin">
+                    <number>11</number>
                 </property>
-                <property name="text">
-                    <string>Use color on keyboard</string>
+                <property name="spacing">
+                    <number>6</number>
                 </property>
-                <property name="toolTip" stdset="0">
-                    <string>Paint keybord with colors</string>
-                </property>
-                <property name="whatsThis" stdset="0">
-                    <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
-                </property>
-            </widget>
-            <widget class="QCheckBox">
-                <property name="name">
-                    <cstring>showAnimation</cstring>
-                </property>
-                <property name="geometry">
-                    <rect>
-                        <x>20</x>
-                        <y>60</y>
-                        <width>250</width>
-                        <height>21</height>
-                    </rect>
-                </property>
-                <property name="text">
-                    <string>Show next key to press on keyboard</string>
-                </property>
-                <property name="toolTip" stdset="0">
-                    <string>Animated keyboard</string>
-                </property>
-                <property name="whatsThis" stdset="0">
-                    <string>If you want KTouch to indicate which finger to move and where to press, you should check this option</string>
-                </property>
-            </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>showColor</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Use color on keyboard</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>TextLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Select animation used on keyboard:</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>none</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>squer</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>shade</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>cross</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>showAnimation</cstring>
+                    </property>
+                </widget>
+            </vbox>
         </widget>
         <widget class="QPushButton" row="3" column="2">
             <property name="name">
@@ -128,7 +142,7 @@
             </property>
         </widget>
         <spacer row="3" column="1">
-            <property name="name">
+            <property name="name" stdset="0">
                 <cstring>Spacer1</cstring>
             </property>
             <property name="orientation">
@@ -136,6 +150,12 @@
             </property>
             <property name="sizeType">
                 <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
             </property>
         </spacer>
         <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="3">
@@ -145,52 +165,47 @@
             <property name="title">
                 <string>Language</string>
             </property>
-            <widget class="QLabel">
+            <hbox>
                 <property name="name">
-                    <cstring>PixmapLabel1</cstring>
+                    <cstring>unnamed</cstring>
                 </property>
-                <property name="geometry">
-                    <rect>
-                        <x>20</x>
-                        <y>30</y>
-                        <width>48</width>
-                        <height>48</height>
-                    </rect>
+                <property name="margin">
+                    <number>11</number>
                 </property>
-                <property name="sizePolicy">
-                    <sizepolicy>
-                        <hsizetype>0</hsizetype>
-                        <vsizetype>0</vsizetype>
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                    </sizepolicy>
+                <property name="spacing">
+                    <number>6</number>
                 </property>
-                <property name="pixmap">
-                    <pixmap>image0</pixmap>
-                </property>
-                <property name="scaledContents">
-                    <bool>true</bool>
-                </property>
-            </widget>
-            <widget class="QComboBox">
-                <property name="name">
-                    <cstring>language</cstring>
-                </property>
-                <property name="geometry">
-                    <rect>
-                        <x>100</x>
-                        <y>50</y>
-                        <width>139</width>
-                        <height>22</height>
-                    </rect>
-                </property>
-                <property name="toolTip" stdset="0">
-                    <string>Change keyboard layout.</string>
-                </property>
-                <property name="whatsThis" stdset="0">
-                    <string>Here you can change the keyboard layout. If you are from Germany you want to choose 'de'.</string>
-                </property>
-            </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>PixmapLabel1</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>image0</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>language</cstring>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Change keyboard layout.</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Here you can change the keyboard layout. If you are from Germany you want to choose 'de'.</string>
+                    </property>
+                </widget>
+            </hbox>
         </widget>
         <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="3">
             <property name="name">
@@ -229,7 +244,6 @@
 </connections>
 <tabstops>
     <tabstop>showColor</tabstop>
-    <tabstop>showAnimation</tabstop>
     <tabstop>showKeypad</tabstop>
     <tabstop>language</tabstop>
     <tabstop>PushButton2</tabstop>

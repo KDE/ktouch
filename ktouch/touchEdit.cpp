@@ -24,6 +24,7 @@
 #include <qlistbox.h>
 #include <qlcdnumber.h>
 
+
 TouchEdit::TouchEdit( QWidget* parent, TouchLecture* l)
          : TouchEditLayout(parent)
 {
