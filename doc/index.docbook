@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN"
+ "dtd/kdex.dtd" [
 <!ENTITY kappname "&ktouch;"><!-- replace kapp here -->
 <!ENTITY package "kdeedu">
 <!ENTITY % addindex "IGNORE">
@@ -173,7 +174,8 @@ line. </para>
 <para>My keyboard doesn't look like the keyboard on the screen?</para>
 </question>
 <answer>
-<para>It is possible to make your own keyboard file. See the <link linkend="contribute">How can I contribute</link> section.</para>
+<para>It is possible to make your own keyboard file. See the <link
+ linkend="contribute">How can I contribute</link> section.</para>
 </answer>
 </qandaentry>
 <qandaentry>
@@ -214,7 +216,8 @@ Get the latest &Linux;, and you will live on the edge.</para>
 </question>
 
 <answer>
-<para>Yes you can. See the <link linkend="make-training-file">answer in the <acronym>FAQ</acronym></link> for more information and an
+<para>Yes you can. See the <link linkend="make-training-file">answer in the
+ <acronym>FAQ</acronym></link> for more information and an
 example of the file format.</para>
 </answer>
 </qandaentry>
@@ -225,7 +228,8 @@ example of the file format.</para>
 </question>
 <answer>
 <para>You will find a complete keyboard file below with comments. Just
-edit the file <filename>keyboard.en</filename> and save it as <filename>keyboard.<replaceable>yourContryCode</replaceable></filename>.</para>
+edit the file <filename>keyboard.en</filename> and save it as
+ <filename>keyboard.<replaceable>yourContryCode</replaceable></filename>.</para>
 
 <para>Please let me know if you are making a new keyboard file, at
 <email>haavard@users.sourceforge.net</email></para>
@@ -383,14 +387,17 @@ improvements, please let me know.
 <title>Credits and License</title>
 <para>&ktouch;</para>
 <para>
-Program Copyright, 1999, 2000, 2001 Haavard Froeiland <email>haavard@users.sourceforge.net</email>
+Program Copyright, 1999, 2000, 2001 Haavard Froeiland
+ <email>haavard@users.sourceforge.net</email>
 </para>
 
 <para> Contributors:</para>
 
 <itemizedlist>
-<listitem><para>Frank Quotschalla, German keyboard and german training file and translation.</para></listitem>
-<listitem><para>Ernesto Hern&aacute;ndez-Novich, Latinamerican keyboard</para></listitem>
+<listitem><para>Frank Quotschalla, German keyboard and german training file and
+ translation.</para></listitem>
+<listitem><para>Ernesto Hern&aacute;ndez-Novich, Latinamerican
+ keyboard</para></listitem>
 <listitem><para>Jo&atilde;o Miguel Neves, Portuguese keyboard</para></listitem>
 <listitem><para>Henri Girard, Frence keyboard</para></listitem>
 </itemizedlist>
@@ -433,10 +440,11 @@ url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink></para>
 In order to successfully use &ktouch; (version > 0.7), you need &kde; > 2.0 .
 </para>
 
-<para>All required libraries as well as &ktouch; itself can be found
-on &kde-ftp; and <ulink url="ftp://ktouche.sourceforge.net">the
-&ktouch; &FTP; server</ulink>.
-</para>
+<para>
+&ktouch; itself can be found
+on <ulink url="http://edu.kde.org/ktouch">The &ktouch; home page</ulink>
+and is part of the KDE-Edu project and <ulink url="ftp://ktouch.sourceforge.net">the
+&ktouch; &FTP; server</ulink>. </para>
 
 <para>You can find a list of changes at <ulink
 url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.</para>
