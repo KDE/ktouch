@@ -71,13 +71,14 @@ void KTouchSettings::loadSettings() {
     // read keyboard settings
     config->setGroup("Keyboard");
     m_keyboardFont = config->readFontEntry("KeyboardFont", &defaultFont);
-    m_keyboardLayout = config->readEntry("Layout", "number");
+    m_keyboardLayout = m_keyboardLayouts[Prefs::layout()];
     // if keyboard layout it not available (e.g. the layout file has been deleted) switch to default
     if (m_keyboardLayouts .contains(m_keyboardLayout)==0)
         m_keyboardLayout="number";
     // switch to 'en' if available
     if (m_keyboardLayout=="number"  &&  (m_keyboardLayouts .contains("en")>0) )
         m_keyboardLayout="en";
+    Prefs::setLayout(m_keyboardLayouts.findIndex(m_keyboardLayout));
     // create some default colour schemes
     createDefaultKeyboardColors();
     // although the keyboard color scheme is selected in the color dialog, it is a property of
@@ -100,7 +101,6 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
     // write keyboard settings
     config->setGroup("Keyboard");
-    config->writeEntry("Layout",            m_keyboardLayout);
     config->writeEntry("KeyboardFont",      m_keyboardFont);
 
 }

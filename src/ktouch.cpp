@@ -29,6 +29,7 @@
 #include <kpopupmenu.h>
 #include <kconfigdialog.h>
 #include <kaction.h>
+#include <kcombobox.h>
 
 // Own header files
 //#include "ktouchpref.h"
@@ -313,6 +314,7 @@ void KTouch::optionsPreferences() {
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
 	KTouchPrefKeyboardLayout * m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
+	m_pageKeyboard->kcfg_Layout->insertStringList(KTouchConfig().m_keyboardLayouts);
 	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
 	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(updateSettings()));
@@ -324,6 +326,7 @@ void KTouch::updateSettings()
 	//TODO:test if this setting has changed
 	//This applies a new color scheme for the keyboard
 	changeColor(Prefs::colorScheme());
+	changeKeyboard(Prefs::layout());
 	//not sure if testing is required before applying all that or could that be done in any case?
 	m_statusWidget->applyPreferences();
     	m_slideLineWidget->applyPreferences();
@@ -342,6 +345,9 @@ void KTouch::changeStatusbarStats(unsigned int correctChars, unsigned int totalC
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardLayouts.count()) return;
     KTouchConfig().m_keyboardLayout = KTouchConfig().m_keyboardLayouts[num];
+    Prefs::setLayout(num);
+    Prefs::writeConfig();
+    m_keyboardLayoutAction->setCurrentItem(Prefs::layout());  
     m_keyboardWidget->applyPreferences(false);  // noisy, pop up an error if the chosen layout file is corrupt
 }
 
@@ -505,7 +511,7 @@ void KTouch::setupQuickSettings() {
      }
     m_keyboardLayoutAction->setItems(layouts_list);
     m_keyboardLayoutAction->setEnabled(true);
-    m_keyboardLayoutAction->setCurrentItem(KTouchConfig().m_keyboardLayouts.findIndex(KTouchConfig().m_keyboardLayout));  
+    m_keyboardLayoutAction->setCurrentItem(Prefs::layout());  
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
     // add the colour schemes
     QStringList schemes_list;

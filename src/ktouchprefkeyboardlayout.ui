@@ -89,13 +89,8 @@
                                     </property>
                                 </spacer>
                                 <widget class="KComboBox">
-                                    <item>
-                                        <property name="text">
-                                            <string>English</string>
-                                        </property>
-                                    </item>
                                     <property name="name">
-                                        <cstring>keyboardLayoutCombo</cstring>
+                                        <cstring>kcfg_Layout</cstring>
                                     </property>
                                 </widget>
                             </hbox>
@@ -175,7 +170,7 @@
     </connection>
 </connections>
 <tabstops>
-    <tabstop>keyboardLayoutCombo</tabstop>
+    <tabstop>kcfg_Layout</tabstop>
 </tabstops>
 <slots>
     <slot>fontChooseBtnClicked()</slot>

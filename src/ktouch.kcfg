@@ -59,6 +59,10 @@
     <label>Whether to use colours on the keys or not.</label>
     <default code="true">true</default>
     </entry>
+    <entry name="Layout" type="Int">
+    <label></label>
+    <default code="true">0</default>
+    </entry>
   </group>
   <group name="Training">
     <entry name="AutoLevelChange" type="Bool">
