@@ -15,23 +15,16 @@
 
 // QT Header
 #include <qlayout.h>
-#include <qlabel.h>
-#include <qpixmap.h>
-#include <qcolor.h>
 #include <qcheckbox.h>
-#include <qframe.h>
 #include <qslider.h>
 
 // KDE Header
 #include <klocale.h>
 #include <kiconloader.h>
-#include <kglobal.h>
 #include <kcolorbutton.h>
-#include <kpushbutton.h>
 #include <knuminput.h>
 #include <kcombobox.h>
 #include <kmessagebox.h>
-#include <kglobalsettings.h>
 #include <kdebug.h>
 
 // KTouch Header

@@ -12,7 +12,6 @@
 
 #include "ktouchleveldata.h"
 #include <klocale.h>
-#include <qiodevice.h>
 #include <kdebug.h>
 
 KTouchLevelData::KTouchLevelData() {

@@ -13,11 +13,7 @@
 #ifndef KTOUCHSETTINGS_H
 #define KTOUCHSETTINGS_H
 
-#include <kurl.h>
 #include <qcolor.h>
-#include <qstring.h>
-#include <qstringlist.h>
-#include <qvaluelist.h>
 #include <qfont.h>
 
 #include "ktouchkeyboardcolor.h"

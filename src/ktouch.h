@@ -19,7 +19,6 @@
 
 #include <kmainwindow.h>
 #include <kapplication.h>
-#include <kurl.h>
 
 class QLabel;
 class KToggleAction;

@@ -12,7 +12,6 @@
 #include "ktouchprefgeneral.h"
 #include "ktouchprefgeneral.moc"
 
-#include <qcheckbox.h>
 #include <qlabel.h>
 #include <kpushbutton.h>
 #include <kfontdialog.h>

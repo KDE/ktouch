@@ -13,7 +13,6 @@
 #define KTOUCHPREFKEYBOARD_H
 
 #include "ktouchprefkeyboardlayout.h"
-#include <qfont.h>
 
 /** This is the implementation of the "Keyboard settings" page of the preferences dialog.
  *  This class only contains the functionality which is used "inside" this page (e.g.

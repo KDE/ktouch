@@ -14,42 +14,30 @@
 #include "ktouch.moc"
 
 // QT Header
-#include <qlabel.h>
 #include <qvbox.h>
-#include <qsizepolicy.h>
-#include <qprogressbar.h>
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
 
 // KDE Header
 #include <klocale.h>
-#include <kiconloader.h>
-#include <kmenubar.h>
 #include <kstatusbar.h>
 #include <kfiledialog.h>
-#include <kconfig.h>
 #include <kaction.h>
-#include <kstdaction.h>
 #include <kstandarddirs.h>
-#include <kglobal.h>
 #include <kmessagebox.h>
 #include <kdebug.h>
-#include <kxmlguiclient.h>
-#include <kxmlguifactory.h>
 #include <kpopupmenu.h>
 #include <kkeydialog.h>
 
 // Own header files
 #include "ktouchpref.h"
 #include "ktouchlecture.h"
-#include "ktouchleveldata.h"
 #include "ktoucheditor.h"
 #include "ktouchstatus.h"
 #include "ktouchslideline.h"
 #include "ktouchkeyboard.h"
 #include "ktouchsettings.h"
 #include "ktouchtrainer.h"
-#include "ktouchkeyboardcolor.h"
 #include "ktouchstartnewdialog.h"
 #include "ktouchstatistics.h"
 

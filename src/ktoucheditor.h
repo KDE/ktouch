@@ -13,7 +13,6 @@
 #ifndef KTOUCHEDITOR_H
 #define KTOUCHEDITOR_H
 
-#include <qwidget.h>
 
 #include "ktoucheditorlayout.h"
 #include "ktouchleveldata.h"

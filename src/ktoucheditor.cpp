@@ -14,7 +14,6 @@
 #include "ktoucheditor.moc"
 
 #include <qlabel.h>
-#include <qstring.h>
 
 #include <kpushbutton.h>
 #include <klistview.h>

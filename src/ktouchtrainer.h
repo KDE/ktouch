@@ -13,10 +13,7 @@
 #ifndef KTOUCHTRAINER_H
 #define KTOUCHTRAINER_H
 
-#include <qstring.h>
 #include <qobject.h>
-#include <qdatetime.h>
-#include <qvaluelist.h>
 
 #include "ktouchtrainingsession.h"
 

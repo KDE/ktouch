@@ -17,9 +17,6 @@
 #include <qslider.h>
 #include <qlabel.h>
 #include <qprogressbar.h>
-#include <qpixmap.h>
-#include <qlabel.h>
-#include <qpainter.h>
 #include <qradiobutton.h>
 #include <qbuttongroup.h>
 
@@ -32,8 +29,6 @@
 #include <utility> // for std::min and std::max
 
 #include "ktouchtrainer.h"
-#include "ktouchtrainingsession.h"
-#include "ktouchcharstats.h"
 #include "ktouchchartwidget.h"
 using std::set;
 using std::list;

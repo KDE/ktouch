@@ -13,7 +13,6 @@
 #ifndef KTOUCHKEYCONNECTOR_H
 #define KTOUCHKEYCONNECTOR_H
 
-#include <qstring.h>
 
 #include "ktouchkeys.h"
 

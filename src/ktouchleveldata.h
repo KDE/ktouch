@@ -13,9 +13,7 @@
 #ifndef KTOUCHLEVELDATA_H
 #define KTOUCHLEVELDATA_H
 
-#include <qstring.h>
 #include <qvaluevector.h>
-#include <qtextstream.h>
 
 /** This class contains the data of one level in a lecture and provides
  *  access to the lines of that level.

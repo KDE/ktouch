@@ -13,11 +13,9 @@
 #include "ktouchlecture.h"
 
 #include <qfile.h>
-#include <qtextstream.h>
 
 #include <kdebug.h>
 #include <ktempfile.h>
-#include <klocale.h>
 #include <kio/netaccess.h>
 
 KTouchLecture::KTouchLecture() {

@@ -13,7 +13,6 @@
 #ifndef KTOUCHSTATISTICS_H
 #define KTOUCHSTATISTICS_H
 
-#include <qwidget.h>
 #include "ktouchstatisticslayout.h"
 
 class QShowEvent;

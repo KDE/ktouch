@@ -13,7 +13,6 @@
 #ifndef KTOUCHLECTURE_H
 #define KTOUCHLECTURE_H
 
-#include <qvaluevector.h>
 #include <kurl.h>
 #include "ktouchleveldata.h"
 

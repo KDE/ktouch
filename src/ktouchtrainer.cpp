@@ -13,16 +13,12 @@
 #include "ktouchtrainer.h"
 #include "ktouchtrainer.moc"
 
-#include <qapplication.h> // for QApplication::beep()
 #include <qlcdnumber.h>
-#include <qtimer.h>
 #include <qfile.h>
-#include <qtextstream.h>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
 #include <klocale.h>
-#include <kglobal.h>
 #include <kstandarddirs.h>
 #include <kaudioplayer.h>
 
@@ -30,7 +26,6 @@
 #include "ktouchslideline.h"
 #include "ktouchkeyboard.h"
 #include "ktouchlecture.h"
-#include "ktouchleveldata.h"
 #include "ktouchsettings.h"
 
 const int UPDATE_INTERVAL = 500;    // milli seconds between updates of the speed LCD

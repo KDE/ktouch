@@ -13,7 +13,6 @@
 #ifndef KTOUCHSTATUS_H
 #define KTOUCHSTATUS_H
 
-#include <qwidget.h>
 #include "ktouchstatuslayout.h"
 
 /** This is the implementation of the status widget (at the top of the main view).

@@ -14,9 +14,6 @@
 #define KTOUCHKEYS_H
 
 #include <qpainter.h>
-#include <qstring.h>
-#include <qrect.h>
-#include <qcolor.h>
 
 class KTouchFingerKey;
 class KTouchNormalKey;

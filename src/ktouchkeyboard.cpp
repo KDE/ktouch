@@ -14,13 +14,11 @@
 #include "ktouchkeyboard.moc"
 
 #include <qfile.h>
-#include <qtextstream.h>
 
 #include <kdebug.h>
 #include <ktempfile.h>
 #include <klocale.h>
 #include <kio/netaccess.h>
-#include <kglobal.h>
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
 

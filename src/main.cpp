@@ -11,12 +11,8 @@
  ***************************************************************************/
 
 #include "ktouch.h"
-#include <qobject.h>
-#include <qtimer.h>
-#include <kapplication.h>
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
-#include <klocale.h>
 
 #include <kdebug.h>
 

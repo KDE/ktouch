@@ -14,7 +14,6 @@
 #define KTOUCHSLIDELINE_H
 
 #include <qwidget.h>
-#include <qstring.h>
 #include <qtimer.h>
 class QPixmap;
 class QPainter;

@@ -13,10 +13,7 @@
 #include "ktouchprefkeyboard.moc"
 
 #include <kcombobox.h>
-#include <klocale.h>
-#include <qcheckbox.h>
 #include <kfontdialog.h>
-#include <kpushbutton.h>
 #include "ktouchsettings.h"
 
 KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags f)

@@ -14,11 +14,7 @@
 #define KTOUCHKEYBOARD_H
 
 #include <qwidget.h>
-#include <qpainter.h>
-#include <qptrlist.h>
-#include <qvaluelist.h>
 
-#include "ktouchkeys.h"
 #include "ktouchkeyconnector.h"
 
 class KURL;

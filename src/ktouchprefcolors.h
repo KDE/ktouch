@@ -12,7 +12,6 @@
 #ifndef KTOUCHPREFCOLORS_H
 #define KTOUCHPREFCOLORS_H
 
-#include <qwidget.h>
 #include "ktouchprefcolorslayout.h"
 
 /// Implementation of the "color settings" preferences page

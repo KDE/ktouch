@@ -13,12 +13,7 @@
 #include "ktouchchartwidget.h"
 #include "ktouchchartwidget.moc"
 
-#include <qwidget.h>
 #include <qpainter.h>
-#include <qrect.h>
-#include <qfont.h>
-#include <qstring.h>
-#include <qwmatrix.h>
 
 #include <klocale.h>
 
@@ -26,7 +21,6 @@
 #include <cmath>
 
 #include "ktouchtrainer.h"
-#include "ktouchtrainingsession.h"
 
 KTouchChartWidget::KTouchChartWidget(QWidget* parent, const char *name)
   : QFrame(parent, name), m_trainer(NULL)

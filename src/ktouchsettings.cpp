@@ -15,7 +15,6 @@
 #include <kconfig.h>
 #include <kapplication.h>
 #include <kglobalsettings.h>
-#include <kglobal.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
 #include <kdebug.h>

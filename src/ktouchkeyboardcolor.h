@@ -13,8 +13,6 @@
 #ifndef KTOUCHKEYBOARDCOLOR_H
 #define KTOUCHKEYBOARDCOLOR_H
 
-#include <qstring.h>
-#include <qcolor.h>
 
 /// This structure contains the data for a keyboard colour scheme.
 struct KTouchKeyboardColor {

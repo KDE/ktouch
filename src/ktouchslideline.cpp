@@ -15,10 +15,7 @@
 
 #include <qpainter.h>
 #include <qpixmap.h>
-#include <qpoint.h>
-#include <qfontmetrics.h>
 #include <kdebug.h>
-#include <kglobalsettings.h>
 
 #include <math.h>
 

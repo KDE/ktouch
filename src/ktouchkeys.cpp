@@ -11,8 +11,6 @@
  ***************************************************************************/
 
 #include "ktouchkeys.h"
-#include <qpen.h>
-#include <kglobalsettings.h>
 #include <kdebug.h>
 //#include <utility>  // for std::min
 
