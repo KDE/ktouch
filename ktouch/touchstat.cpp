@@ -17,7 +17,7 @@
 
 #include "touchstat.h"
 #include "touchstat.moc"
-#include "iostream.h"
+#include <kdebug.h>
 
 TouchStat::TouchStat(){
   for(int i=0;i<256;i++)
@@ -71,27 +71,23 @@ void TouchStat::printStat()
 {
   int totalError = 0;
   int totalOk = 0;
-  cout << "------------------------------------" << endl;
+  kdDebug() << "------------------------------------" << endl;
   for(int i=0;i<256;i++)
   {
     if((arrayStat[i].ok + arrayStat[i].error) != 0)
     {
-       cout << QChar(i) << " -> " << arrayStat[i].ok << "|" << arrayStat[i].error << endl;
+       kdDebug() << i << " -> " << arrayStat[i].ok << "|" << arrayStat[i].error << endl;
        totalError+=arrayStat[i].error;
        totalOk+=arrayStat[i].ok;
     }
   }
-  cout << endl;
-  cout << "Number of words: " << wordCount << endl;
-  cout << endl;
-  cout << "Number of words pr. minute: " << (float)wordCount*60000/getTotalTime() << endl;
-  cout << endl;
-  cout << "Total time: " << getTotalTime()/1000 << "s" << endl;
-  cout << endl;
-  cout << "Ratio : " << (float)totalError/(totalOk+totalError) << endl;
-  cout << endl;
-
-
-
-
+  kdDebug() << endl;
+  kdDebug() << "Number of words: " << wordCount << endl;
+  kdDebug() << endl;
+  kdDebug() << "Number of words pr. minute: " << (float)wordCount*60000/getTotalTime() << endl;
+  kdDebug() << endl;
+  kdDebug() << "Total time: " << getTotalTime()/1000 << "s" << endl;
+  kdDebug() << endl;
+  kdDebug() << "Ratio : " << (float)totalError/(totalOk+totalError) << endl;
+  kdDebug() << endl;
 }
