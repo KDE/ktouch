@@ -55,8 +55,8 @@ bool KTouchKeyboard::loadKeyboard(const KURL& url, QString* errorMsg) {
         if (errorMsg!=NULL)
             *errorMsg = i18n("Could not download/open keyboard layout file from '%1'!").arg(url.url());
         return false;
-    };
-};
+    }
+}
 
 
 void KTouchKeyboard::saveKeyboard(const KURL& url) {
@@ -73,7 +73,7 @@ void KTouchKeyboard::saveKeyboard(const KURL& url) {
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         return;
-    };
+    }
 
     QTextStream out( &outfile );
     out << "########################################## \n";
@@ -90,18 +90,18 @@ void KTouchKeyboard::saveKeyboard(const KURL& url) {
            case KTouchKey::NORMAL_KEY   : out << "NormalKey  "; break;
            case KTouchKey::CONTROL_KEY  : out << "ControlKey "; break;
            default : out << "NormalKey  "; break;
-        };
+        }
         QRect rect=key->frame();
         out << key->m_keyChar.unicode() << '\t' << key->m_keyText << '\t'
             << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
-    };
+    }
 
     if (temp) {
         KIO::NetAccess::upload(tmpFile, url);
         temp->unlink();
         delete temp;
     }
-};
+}
 
 void KTouchKeyboard::applyPreferences(bool silent) {
     // let's check whether the keyboard layout has changed
@@ -111,7 +111,7 @@ void KTouchKeyboard::applyPreferences(bool silent) {
             createDefaultKeyboard();
             resizeEvent(NULL);
             return;
-        };
+        }
         // ok, let's load this layout
         KStandardDirs *dirs=KGlobal::dirs();
         QString fileName = dirs->findResource("data","ktouch/" + KTouchConfig().m_keyboardLayout + ".keyboard");
@@ -132,15 +132,15 @@ void KTouchKeyboard::applyPreferences(bool silent) {
             }
             else
                 m_currentLayout=KTouchConfig().m_keyboardLayout;
-        };
-    };
+        }
+    }
     // set if we have animation or not.
     m_showAnimation = KTouchConfig().m_showAnimation;
 
     updateColours();    // we recreate the colour connections,
     resizeEvent(NULL);  // paint the keyboard
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
-};
+}
 
 
 void KTouchKeyboard::newKey(const QChar& nextChar) {
@@ -151,8 +151,8 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
         if (key->m_isActive || key->m_isNextKey) {
             key->m_isActive=key->m_isNextKey=false;
             key->paint(painter);
-        };
-    };
+        }
+    }
 
     if (m_showAnimation){ // only do this if we want to show animation.
         // find the key in the key connector list
@@ -171,11 +171,11 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
                 else if (key->m_keyChar==controlChar)  key->m_isActive=true;
                 if (key->m_isActive || key->m_isNextKey)
                     key->paint(painter);
-            };
-        };
+            }
+        }
         m_nextKey = nextChar;
     }
-};
+}
 
 
 void KTouchKeyboard::paintEvent(QPaintEvent *) {
@@ -184,7 +184,7 @@ void KTouchKeyboard::paintEvent(QPaintEvent *) {
     // just print all visible keys
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->paint(painter);
-};
+}
 
 
 void KTouchKeyboard::resizeEvent(QResizeEvent *) {
@@ -195,7 +195,7 @@ void KTouchKeyboard::resizeEvent(QResizeEvent *) {
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
     update();                   // and finally redraw the keyboard
-};
+}
 
 
 void KTouchKeyboard::createDefaultKeyboard() {
@@ -251,7 +251,7 @@ void KTouchKeyboard::createDefaultKeyboard() {
     m_connectorList.append( KTouchKeyConnector( 13,  13, '+', 0) );
     updateColours();
     m_currentLayout="number";
-};
+}
 
 
 bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
@@ -259,7 +259,7 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
     if ( !infile.open( IO_ReadOnly ) ) {
         errorMsg = i18n("Couldn't open file!");
         return false;
-    };
+    }
     QTextStream in( &infile );
     QString line;
     m_keyList.clear();          // empty the keyboard
@@ -308,14 +308,14 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
         else {
             errorMsg = i18n("Missing key type in line '%1'!").arg(line);
             return false;
-        };
+        }
         // calculate the maximum extent of the keyboard on the fly...
         m_keyboardWidth = max(m_keyboardWidth, x+w);
         m_keyboardHeight = max(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
     updateColours();
     return (!m_keyList.isEmpty());  // empty file means error
-};
+}
 
 
 void KTouchKeyboard::updateColours() {
@@ -330,18 +330,26 @@ void KTouchKeyboard::updateColours() {
         for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
             if (key->m_keyChar==targetChar) self=key;
             else if (key->m_keyChar==fingerChar) colorSource=key;
-        };
+        }
         if (self && colorSource) {
             if (self->type()!=KTouchKey::NORMAL_KEY)
                 continue;
+            KTouchNormalKey *nk = dynamic_cast<KTouchNormalKey*>(self);
             if (colorSource->type()!=KTouchKey::FINGER_KEY) {
                 kdDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
                           << "' is not a finger key!" << endl;
-                dynamic_cast<KTouchNormalKey*>(self)->m_colorIndex = 0;
+                if (nk) {
+                    nk->m_colorIndex = 0;
+                }
                 continue;
-            };
-            dynamic_cast<KTouchNormalKey*>(self)->m_colorIndex = dynamic_cast<KTouchFingerKey*>(colorSource)->m_colorIndex;
-        };
-    };
-};
+            }
+            if (nk) {
+                KTouchFingerKey *fk = dynamic_cast<KTouchFingerKey*>(colorSource);
+                if (fk) {
+                    nk->m_colorIndex = fk->m_colorIndex;
+                }
+            }
+        }
+    }
+}
 
