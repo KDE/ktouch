@@ -284,9 +284,9 @@ void KTouch::slotFileOpenRecent(const KURL& url)
     touchLecture->loadLectureFile(url.directory(false) + url.fileName());
     touchLine->getNextLine();
     setCaption(url.fileName(), false);
+    fileOpenRecent->addURL( url );
   }
   slotStatusMsg(i18n("Ready."));
-
 }
 
 void KTouch::slotFileQuit()
