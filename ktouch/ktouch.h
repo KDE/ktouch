@@ -28,6 +28,7 @@
 #include "touchStatus.h"
 #include "touchkeyboard.h"
 #include "touchstat.h"
+#include "touchStatWindow.h"
 #include "optionKeyboard.h"
 #include "optionTraining.h"
 #include "optionGeneral.h"
@@ -92,6 +93,9 @@ class KTouch : public KMainWindow
 		void slotOptionTraining();
 		void slotOptionGeneral();
 
+		void showStat();
+		void hideStat();
+
 	private:
 		/** the configuration object of the application */
 		KConfig *config;
@@ -111,6 +115,7 @@ class KTouch : public KMainWindow
 
 		KStandardDirs *dirs;
 		bool remember;
+		TouchStatWindow *touchStatWindow;
 };
 
 #endif

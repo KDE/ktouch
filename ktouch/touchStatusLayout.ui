@@ -11,9 +11,16 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>584</width>
+            <width>580</width>
             <height>83</height>
         </rect>
+    </property>
+    <property stdset="1">
+        <name>sizePolicy</name>
+        <sizepolicy>
+            <hsizetype>7</hsizetype>
+            <vsizetype>5</vsizetype>
+        </sizepolicy>
     </property>
     <property stdset="1">
         <name>caption</name>
@@ -22,13 +29,6 @@
     <property stdset="1">
         <name>iconText</name>
         <string></string>
-    </property>
-    <property stdset="1">
-        <name>sizePolicy</name>
-        <sizepolicy>
-            <hsizetype>7</hsizetype>
-            <vsizetype>5</vsizetype>
-        </sizepolicy>
     </property>
     <property>
         <name>layoutMargin</name>
@@ -39,11 +39,11 @@
     <hbox>
         <property stdset="1">
             <name>margin</name>
-            <number>5</number>
+            <number>4</number>
         </property>
         <property stdset="1">
             <name>spacing</name>
-            <number>5</number>
+            <number>2</number>
         </property>
         <widget>
             <class>QGroupBox</class>
@@ -52,15 +52,15 @@
                 <cstring>GroupBox1</cstring>
             </property>
             <property stdset="1">
-                <name>title</name>
-                <string>Level</string>
-            </property>
-            <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
                 </sizepolicy>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Level</string>
             </property>
             <grid>
                 <property stdset="1">
@@ -78,10 +78,6 @@
                         <cstring>pushButtonLevelDown</cstring>
                     </property>
                     <property stdset="1">
-                        <name>text</name>
-                        <string>-</string>
-                    </property>
-                    <property stdset="1">
                         <name>sizePolicy</name>
                         <sizepolicy>
                             <hsizetype>0</hsizetype>
@@ -94,6 +90,10 @@
                             <width>20</width>
                             <height>20</height>
                         </size>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>-</string>
                     </property>
                 </widget>
                 <widget row="0"  column="1" >
@@ -103,8 +103,11 @@
                         <cstring>pushButtonLevelUp</cstring>
                     </property>
                     <property stdset="1">
-                        <name>text</name>
-                        <string>+</string>
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                        </sizepolicy>
                     </property>
                     <property stdset="1">
                         <name>minimumSize</name>
@@ -114,18 +117,15 @@
                         </size>
                     </property>
                     <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>0</hsizetype>
-                            <vsizetype>0</vsizetype>
-                        </sizepolicy>
-                    </property>
-                    <property stdset="1">
                         <name>maximumSize</name>
                         <size>
                             <width>20</width>
                             <height>20</height>
                         </size>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>+</string>
                     </property>
                 </widget>
                 <widget row="0"  column="0"  rowspan="2"  colspan="1" >
@@ -135,11 +135,11 @@
                         <cstring>LCDLevel</cstring>
                     </property>
                     <property stdset="1">
-                        <name>font</name>
-                        <font>
-                            <family>adobe-helvetica</family>
-                            <pointsize>10</pointsize>
-                        </font>
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                        </sizepolicy>
                     </property>
                     <property stdset="1">
                         <name>minimumSize</name>
@@ -149,31 +149,31 @@
                         </size>
                     </property>
                     <property stdset="1">
-                        <name>segmentStyle</name>
-                        <enum>Flat</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>mode</name>
-                        <enum>DEC</enum>
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>10</pointsize>
+                        </font>
                     </property>
                     <property stdset="1">
                         <name>frameShape</name>
                         <enum>NoFrame</enum>
                     </property>
                     <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>0</hsizetype>
-                            <vsizetype>0</vsizetype>
-                        </sizepolicy>
+                        <name>frameShadow</name>
+                        <enum>Raised</enum>
                     </property>
                     <property stdset="1">
                         <name>numDigits</name>
                         <number>3</number>
                     </property>
                     <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Raised</enum>
+                        <name>mode</name>
+                        <enum>DEC</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>segmentStyle</name>
+                        <enum>Flat</enum>
                     </property>
                     <property>
                         <name>toolTip</name>
@@ -193,15 +193,15 @@
                 <cstring>GroupBox11</cstring>
             </property>
             <property stdset="1">
-                <name>title</name>
-                <string>Speed</string>
-            </property>
-            <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
                     <hsizetype>0</hsizetype>
                     <vsizetype>0</vsizetype>
                 </sizepolicy>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Speed</string>
             </property>
             <grid>
                 <property stdset="1">
@@ -219,11 +219,11 @@
                         <cstring>LCDSpeed</cstring>
                     </property>
                     <property stdset="1">
-                        <name>font</name>
-                        <font>
-                            <family>adobe-helvetica</family>
-                            <pointsize>10</pointsize>
-                        </font>
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>5</vsizetype>
+                        </sizepolicy>
                     </property>
                     <property stdset="1">
                         <name>minimumSize</name>
@@ -233,35 +233,35 @@
                         </size>
                     </property>
                     <property stdset="1">
-                        <name>segmentStyle</name>
-                        <enum>Flat</enum>
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>10</pointsize>
+                        </font>
                     </property>
                     <property stdset="1">
                         <name>frameShape</name>
                         <enum>NoFrame</enum>
                     </property>
                     <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>5</hsizetype>
-                            <vsizetype>5</vsizetype>
-                        </sizepolicy>
-                    </property>
-                    <property stdset="1">
-                        <name>numDigits</name>
-                        <number>3</number>
-                    </property>
-                    <property stdset="1">
-                        <name>midLineWidth</name>
-                        <number>0</number>
+                        <name>frameShadow</name>
+                        <enum>Raised</enum>
                     </property>
                     <property stdset="1">
                         <name>margin</name>
                         <number>0</number>
                     </property>
                     <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Raised</enum>
+                        <name>midLineWidth</name>
+                        <number>0</number>
+                    </property>
+                    <property stdset="1">
+                        <name>numDigits</name>
+                        <number>3</number>
+                    </property>
+                    <property stdset="1">
+                        <name>segmentStyle</name>
+                        <enum>Flat</enum>
                     </property>
                     <property>
                         <name>toolTip</name>
@@ -281,10 +281,6 @@
                 <cstring>GroupBox12</cstring>
             </property>
             <property stdset="1">
-                <name>title</name>
-                <string>Correctness</string>
-            </property>
-            <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
@@ -294,6 +290,10 @@
             <property stdset="1">
                 <name>frameShape</name>
                 <enum>Box</enum>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Correctness</string>
             </property>
             <grid>
                 <property stdset="1">
@@ -311,17 +311,6 @@
                         <cstring>LCDCorrect</cstring>
                     </property>
                     <property stdset="1">
-                        <name>maximumSize</name>
-                        <size>
-                            <width>300</width>
-                            <height>32767</height>
-                        </size>
-                    </property>
-                    <property stdset="1">
-                        <name>indicatorFollowsStyle</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
                         <name>sizePolicy</name>
                         <sizepolicy>
                             <hsizetype>3</hsizetype>
@@ -329,19 +318,30 @@
                         </sizepolicy>
                     </property>
                     <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Plain</enum>
+                        <name>minimumSize</name>
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property stdset="1">
+                        <name>maximumSize</name>
+                        <size>
+                            <width>300</width>
+                            <height>32767</height>
+                        </size>
                     </property>
                     <property stdset="1">
                         <name>frameShape</name>
                         <enum>NoFrame</enum>
                     </property>
                     <property stdset="1">
-                        <name>minimumSize</name>
-                        <size>
-                            <width>0</width>
-                            <height>50</height>
-                        </size>
+                        <name>frameShadow</name>
+                        <enum>Plain</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>indicatorFollowsStyle</name>
+                        <bool>true</bool>
                     </property>
                     <property>
                         <name>toolTip</name>
@@ -361,15 +361,15 @@
                 <cstring>GroupBox4</cstring>
             </property>
             <property stdset="1">
-                <name>title</name>
-                <string>New characters</string>
-            </property>
-            <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
                     <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
                 </sizepolicy>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>New characters</string>
             </property>
             <grid>
                 <property stdset="1">
@@ -387,31 +387,18 @@
                         <cstring>message</cstring>
                     </property>
                     <property stdset="1">
-                        <name>text</name>
-                        <string>Test</string>
-                    </property>
-                    <property stdset="1">
-                        <name>alignment</name>
-                        <set>AlignCenter</set>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Plain</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
-                        <enum>NoFrame</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>scaledContents</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
                         <name>sizePolicy</name>
                         <sizepolicy>
                             <hsizetype>3</hsizetype>
                             <vsizetype>5</vsizetype>
                         </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
                     </property>
                     <property stdset="1">
                         <name>font</name>
@@ -422,11 +409,24 @@
                         </font>
                     </property>
                     <property stdset="1">
-                        <name>minimumSize</name>
-                        <size>
-                            <width>0</width>
-                            <height>50</height>
-                        </size>
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Plain</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Test</string>
+                    </property>
+                    <property stdset="1">
+                        <name>scaledContents</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>alignment</name>
+                        <set>AlignCenter</set>
                     </property>
                     <property>
                         <name>hAlign</name>
@@ -462,7 +462,7 @@
             <class>QLayoutWidget</class>
             <property stdset="1">
                 <name>name</name>
-                <cstring>Layout4</cstring>
+                <cstring>Layout2</cstring>
             </property>
             <vbox>
                 <property stdset="1">
@@ -491,6 +491,14 @@
                         <name>on</name>
                         <bool>false</bool>
                     </property>
+                    <property stdset="1">
+                        <name>toggleButton</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>on</name>
+                        <bool>false</bool>
+                    </property>
                     <property>
                         <name>toolTip</name>
                         <string>Press to have a break ;-)</string>
@@ -500,27 +508,25 @@
                         <string>When you want to have a break, press this to stop KTouch from calculating speed and changing levels.</string>
                     </property>
                 </widget>
-                <spacer>
-                    <property>
+                <widget>
+                    <class>QPushButton</class>
+                    <property stdset="1">
                         <name>name</name>
-                        <cstring>Spacer3</cstring>
+                        <cstring>statButton</cstring>
                     </property>
                     <property stdset="1">
-                        <name>orientation</name>
-                        <enum>Vertical</enum>
+                        <name>text</name>
+                        <string>Stat</string>
                     </property>
                     <property stdset="1">
-                        <name>sizeType</name>
-                        <enum>Expanding</enum>
+                        <name>toggleButton</name>
+                        <bool>true</bool>
                     </property>
-                    <property>
-                        <name>sizeHint</name>
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
+                    <property stdset="1">
+                        <name>toggleButton</name>
+                        <bool>true</bool>
                     </property>
-                </spacer>
+                </widget>
             </vbox>
         </widget>
     </hbox>
@@ -544,8 +550,15 @@
         <receiver>TouchStatusLayout</receiver>
         <slot>levelForcedUp()</slot>
     </connection>
+    <connection>
+        <sender>statButton</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>TouchStatusLayout</receiver>
+        <slot>showStatChanged(int)</slot>
+    </connection>
     <slot access="public">levelForcedDown()</slot>
     <slot access="public">levelForcedUp()</slot>
+    <slot access="public">showStatChanged(int)</slot>
     <slot access="public">runningStateChanged(int)</slot>
     <slot access="public">startKTouch()</slot>
     <slot access="public">stopKTouch()</slot>

@@ -1,7 +1,7 @@
 /***************************************************************************
-                          optionTraining.h  -  description
+                          touchStatWindow.h  -  description
                              -------------------
-    begin                : Wed Mar 14 2001
+    begin                : Thu Sep 5 2001
     copyright            : (C) 2001 by Haavard Froeiland
     email                : haavard@users.sourceforge.net
  ***************************************************************************/
@@ -15,26 +15,41 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifndef OPTIONTRAINING_H
-#define OPTIONTRAINING_H
+#ifndef TOUCHSTATWINDOW_H
+#define TOUCHSTATWINDOW_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-#include "optionTrainingDlg.h"
+#include <qtimer.h>
+#include <qlcdnumber.h>
+#include <qprogressbar.h>
+#include <qtextview.h>
 
-class OptionTraining : public OptionTrainingDlg  {
+#include "touchStatWindowLayout.h"
+#include "touchstat.h"
+
+class TouchStatWindow : public TouchStatWindowLayout
+{
 	Q_OBJECT
 	public:
-		/** constructor */
-		OptionTraining(QWidget *parent=0, const char *name=0,bool modal=true);
-		/** destructor */
-		~OptionTraining();
+			/** constructor */
+		TouchStatWindow(TouchStat *stat, QWidget *parent=0, const char *name=0,bool modal=false);
+				/** destructor */
+		~TouchStatWindow();
 
-	protected:
-		virtual void keyPressEvent(QKeyEvent *);
+	private:
+		QTimer *timer;
+
+	private slots:
+		TouchStat *stat;
+		void updateToday();
+		void autoUpdate(int);
+		//void update5Times();
+		//void update20Times();
+		//void updateAllTimes();
+
 };
 
 #endif
-

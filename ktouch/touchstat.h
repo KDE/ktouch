@@ -25,31 +25,40 @@
 
 #include <qobject.h>
 #include <qdatetime.h>
+#include <iostream.h>
 
 class TouchStat : public QObject
 {
-  Q_OBJECT
-public: 
-	TouchStat();
-	~TouchStat();
-  void printStat();
-  int getTotalTime();
+	Q_OBJECT
 
-public slots:
-  void gotError(QChar);
-  void gotOk(QChar);
-  void start();
-  void stop();
+	public:
+		TouchStat();
+		~TouchStat();
 
-private:
-  struct charStat{
-     int ok;
-     int error;
-  };
-  struct charStat arrayStat[256];
-  int wordCount;
-  int totalTime;
-  QTime *time;
+		int getTotalTime();
+		int wordCount;
+		int errorCount;
+		int okCount;
+		int getRatio();
+		int getWordPerMin();
+		int getCharPerMin();
+		QString getProgText();
+
+	public slots:
+		void gotError(QChar);
+		void gotOk(QChar);
+		void start();
+		void stop();
+
+	private:
+		struct charStat{
+			int ok;
+			int error;
+		};
+		struct charStat arrayStat[256];
+
+		QTime *time;
+		int totalTime;
 };
 
 #endif

@@ -17,7 +17,6 @@
 
 #include "touchStatus.h"
 #include "touchStatus.moc"
-//#include <iostream.h>
 #include <qpushbutton.h>
 #include <qlabel.h>
 #include <qapplication.h>
@@ -26,81 +25,81 @@
 TouchStatus::TouchStatus(QWidget * parent, const char * name)
            : TouchStatusLayout( parent, name )
 {
-  errorSound=true;
-  autoLevel=true;
-  reset();
+	errorSound=true;
+	autoLevel=true;
+	reset();
 
-  speedLimitUp = 100;
-  speedLimitDown = 50;
+	speedLimitUp = 100;
+	speedLimitDown = 50;
 
-  timer = new QTimer(this,"timer");
+	timer = new QTimer(this,"timer");
 
-  pauseButton->setFocusPolicy(QWidget::NoFocus);
-  connect( timer, SIGNAL(timeout()), SLOT(calculate()));
-  timer->start(500,false);
+	pauseButton->setFocusPolicy(QWidget::NoFocus);
+	connect( timer, SIGNAL(timeout()), SLOT(calculate()));
+	timer->start(500,false);
 }
 
 void TouchStatus::gotError(QChar)
 {
-  bufferError++;
-  if(errorSound) QApplication::beep();
+	bufferError++;
+	if(errorSound) QApplication::beep();
 }
 
 void TouchStatus::gotOk(QChar c)
 {
-  bufferOk++;
-  if(c==" " || c.digitValue()==13)
-     wordCount++;
+	bufferOk++;
+	if(c==" " || c.digitValue()==13)
+		wordCount++;
 }
 
 void TouchStatus::reset()
 {
-  charSpeed      = 0;
-  wordSpeed      = 0;
-  correct        = 1;
-  wrong          = 0;
-  bufferOk       = 0;
-  bufferError    = 0;
-  testLevelCount = 0;
-  wordCount      = 0;
+	charSpeed      = 0;
+	wordSpeed      = 0;
+	correct        = 1;
+	wrong          = 0;
+	bufferOk       = 0;
+	bufferError    = 0;
+	testLevelCount = 0;
+	wordCount      = 0;
 }
 
 void TouchStatus::calculate()
 {
-  charSpeed=(charSpeed*60+bufferOk*120)/61;
-  wordSpeed=(wordSpeed*60+wordCount*120)/61;
-  wrong=(wrong*60+bufferError)/61;
-  correct=(correct*60+bufferOk)/61;
-  bufferError=0;
-  bufferOk=0;
-  wordCount=0;
+	charSpeed=(charSpeed*60+bufferOk*120)/61;
+	wordSpeed=(wordSpeed*60+wordCount*120)/61;
+	wrong=(wrong*60+bufferError)/61;
+	correct=(correct*60+bufferOk)/61;
+	bufferError=0;
+	bufferOk=0;
+	wordCount=0;
 
-  LCDSpeed->display((int)charSpeed);
+	LCDSpeed->display((int)charSpeed);
 
-  if ((correct+wrong)>0)
-  {
-    LCDCorrect->setProgress((int)(correct/(correct+wrong)*100));
-  }
-  else
-  {
-    LCDCorrect->setProgress(100);
-  }
+	if ((correct+wrong)>0)
+	{
+		LCDCorrect->setProgress((int)(correct/(correct+wrong)*100));
+	}
+	else
+	{
+		LCDCorrect->setProgress(100);
+	}
 
-  testLevelCount++;
-  if (testLevelCount>50 && autoLevel)
-  {
-    testLevelCount=0;
-    if (charSpeed>speedLimitUp)
-    {
-      emit levelUp();
-    }
-    else
-    {
-      if(charSpeed<speedLimitDown){
-          emit levelDown();
-			}
-    }
-  }
+	testLevelCount++;
+	if (testLevelCount>50 && autoLevel)
+	{
+		testLevelCount=0;
+		if (charSpeed>speedLimitUp)
+		{
+		emit levelUp();
+		}
+		else
+		{
+		if(charSpeed<speedLimitDown){
+			emit levelDown();
+				}
+		}
+	}
 }
 
 void TouchStatus::setLevel(int level)
@@ -110,19 +109,19 @@ void TouchStatus::setLevel(int level)
 
 void TouchStatus::levelForcedUp()
 {
-  if(!autoLevel)
-  {
-    emit levelUp();
-    emit forceNextLine();
-  }
+	if(!autoLevel)
+	{
+		emit levelUp();
+		emit forceNextLine();
+	}
 }
 void TouchStatus::levelForcedDown()
 {
-  if(!autoLevel)
-  {
-    emit levelDown();
-    emit forceNextLine();
-  }
+	if(!autoLevel)
+	{
+		emit levelDown();
+		emit forceNextLine();
+	}
 }
 
 unsigned int TouchStatus::getLevel()
@@ -132,7 +131,7 @@ unsigned int TouchStatus::getLevel()
 
 void TouchStatus::setSpeed(int s)
 {
-  charSpeed=s;
+	charSpeed=s;
 	LCDSpeed->display(charSpeed);
 }
 
@@ -145,22 +144,30 @@ unsigned int TouchStatus::getSpeed()
 void TouchStatus::startKTouch()
 {
 	timer->start(500);
-  emit start();
+	emit start();
 }
 
 /** Starts to calculate speed and correctness */
 void TouchStatus::stopKTouch()
 {
 	timer->stop();
-  emit stop();
+	emit stop();
 }
 
 void TouchStatus::runningStateChanged(int i)
 {
-  if(i)
-    stopKTouch();
-  else
-    startKTouch();
+	if(i)
+		stopKTouch();
+	else
+		startKTouch();
+}
+
+void TouchStatus::showStatChanged(int i)
+{
+	if(i)
+		showStat();
+	else
+		hideStat();
 }
 
 /** Sets the speed limit for going to next or previous level.	Up should always bee higher then down.  */
@@ -190,5 +197,5 @@ int TouchStatus::getSpeedLimitDown(){
 
 void TouchStatus::setLevelMessage(const QString& s)
 {
-  message->setText(s);
+	message->setText(s);
 }

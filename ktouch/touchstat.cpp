@@ -20,74 +20,98 @@
 #include <kdebug.h>
 
 TouchStat::TouchStat(){
-  for(int i=0;i<256;i++)
-  {
-    arrayStat[i].ok=0;
-    arrayStat[i].error=0;
-  }
-  wordCount = 0;
-  totalTime = 0;
-  start();
+	for(int i=0;i<256;i++)
+	{
+		arrayStat[i].ok=0;
+		arrayStat[i].error=0;
+	}
+	wordCount  = 0;
+	errorCount = 0;
+	okCount    = 0;
+	totalTime  = 1;
+
+	start();
 }
 
 TouchStat::~TouchStat(){
-  stop();
+	stop();
 }
 
 void TouchStat::gotError(QChar c)
 {
-  arrayStat[c].error++;
+	arrayStat[c].error++;
+	errorCount++;
 }
 
 void TouchStat::gotOk(QChar c)
 {
-  arrayStat[c].ok++;
-  if(c==" " || c.digitValue()==13)
-     wordCount++;
+	arrayStat[c].ok++;
+	okCount++;
+	if(c==" " || c.digitValue()==13)
+		wordCount++;
 }
 
 void TouchStat::start()
 {
-  time = new QTime();
-  time->start();
+	time = new QTime();
+	time->start();
 }
 
 void TouchStat::stop()
 {
-  totalTime+=time->elapsed();
-  delete(time);
+	totalTime+=time->elapsed();
+	delete(time);
 }
+
 
 int TouchStat::getTotalTime()
 {
-  if(time!=NULL)
-  {
-    return (totalTime+time->elapsed());
-  }
-  return totalTime;
+	if(time!=NULL)
+	{
+		return totalTime+time->elapsed();
+	}
+	return totalTime;
 }
 
-void TouchStat::printStat()
+int TouchStat::getRatio()
 {
-  int totalError = 0;
-  int totalOk = 0;
-  kdDebug() << "------------------------------------" << endl;
-  for(int i=0;i<256;i++)
-  {
-    if((arrayStat[i].ok + arrayStat[i].error) != 0)
-    {
-       kdDebug() << i << " -> " << arrayStat[i].ok << "|" << arrayStat[i].error << endl;
-       totalError+=arrayStat[i].error;
-       totalOk+=arrayStat[i].ok;
-    }
-  }
-  kdDebug() << endl;
-  kdDebug() << "Number of words: " << wordCount << endl;
-  kdDebug() << endl;
-  kdDebug() << "Number of words pr. minute: " << (float)wordCount*60000/getTotalTime() << endl;
-  kdDebug() << endl;
-  kdDebug() << "Total time: " << getTotalTime()/1000 << "s" << endl;
-  kdDebug() << endl;
-  kdDebug() << "Ratio : " << (float)totalError/(totalOk+totalError) << endl;
-  kdDebug() << endl;
+	if(okCount+errorCount>0)
+	{
+		float f=((float)okCount/(okCount+errorCount))*100;
+		return (int)f;
+	}
+	else
+		return 100;
+}
+
+int TouchStat::getCharPerMin()
+{
+	float f=okCount*60000/getTotalTime();
+	return (int)f;
+}
+
+int TouchStat::getWordPerMin()
+{
+	float f=wordCount*60000/getTotalTime();
+	return (int)f;
+}
+
+QString TouchStat::getProgText()
+{
+	QString s;
+	float max=0;
+	int bad=0;
+	for(int i=0;i<256;i++)
+	{
+		if((arrayStat[i].error+arrayStat[i].ok)>0)
+			if(((float)arrayStat[i].error/(arrayStat[i].ok))>max)
+			{
+				max=(float)arrayStat[i].error/arrayStat[i].ok;
+				bad=i;
+			}
+	}
+	s = "You should train on: ";
+	s += QChar(bad);
+
+	return s;
 }

@@ -26,62 +26,65 @@
 
 class TouchStatus: public TouchStatusLayout
 {
-  Q_OBJECT
+	Q_OBJECT
 
-public:
-  TouchStatus( QWidget *parent, const char *name=0);
+	public:
+		TouchStatus( QWidget *parent, const char *name=0);
 
-  /** Sets the speed limit for going to next or previous level.
-      Up should always bee higher then down.  */
-  void setSpeedLimit(int up, int down);
-  /** Returns the speed limit to go down one level */
-  int getSpeedLimitDown();
-  /** Returns the limit to go to next level */
-  int getSpeedLimitUp();
-  bool errorSound;
-  bool autoLevel;
+		/** Sets the speed limit for going to next or previous level.
+			Up should always bee higher then down.  */
+		void setSpeedLimit(int up, int down);
+		/** Returns the speed limit to go down one level */
+		int getSpeedLimitDown();
+		/** Returns the limit to go to next level */
+		int getSpeedLimitUp();
+		bool errorSound;
+		bool autoLevel;
 
-public slots:
-  void gotError(QChar);
-  void gotOk(QChar);
-  void reset();
-  void setLevel(int);
-  void levelForcedUp();
-  void levelForcedDown();
-	unsigned int getLevel();
-	void setSpeed(int);
-	unsigned int getSpeed();
-  /** Starts to calculate speed and correctness */
-  void startKTouch();
-  /** Stops calculating speed and correctness. */
-  void stopKTouch();
-  void runningStateChanged(int);
-  void setLevelMessage(const QString&);
+	public slots:
+		void gotError(QChar);
+		void gotOk(QChar);
+		void reset();
+		void setLevel(int);
+		void levelForcedUp();
+		void levelForcedDown();
+		unsigned int getLevel();
+		void setSpeed(int);
+		unsigned int getSpeed();
+		/** Starts to calculate speed and correctness */
+		void startKTouch();
+		/** Stops calculating speed and correctness. */
+		void stopKTouch();
+		void runningStateChanged(int);
+		void showStatChanged(int);
+		void setLevelMessage(const QString&);
 
-private:
-  QTimer *timer;
-  double charSpeed;
-  double wordSpeed;
-	int speedLimitUp;
-	int speedLimitDown;
-  double correct;
-  double wrong;
-  double bufferError;
-  double bufferOk;
-  int wordCount;
+	private:
+		QTimer *timer;
+		double charSpeed;
+		double wordSpeed;
+		int speedLimitUp;
+		int speedLimitDown;
+		double correct;
+		double wrong;
+		double bufferError;
+		double bufferOk;
+		int wordCount;
 
-  int testLevelCount;
+		int testLevelCount;
 
 
-private slots:
-  void calculate();
+	private slots:
+		void calculate();
 
-signals:
-  void levelUp();
-	void levelDown();
-  void stop();
-  void start();
-  void forceNextLine();
+	signals:
+		void levelUp();
+		void levelDown();
+		void stop();
+		void start();
+		void forceNextLine();
+		void showStat();
+		void hideStat();
 };
 
 #endif

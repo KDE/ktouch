@@ -48,8 +48,6 @@ KTouch::KTouch():KMainWindow()
 	config=kapp->config();
 	dirs = KGlobal::dirs();
 
-//	kapp->setMainWidget(this);
-
 	touchLecture = new TouchLecture();
 	touchStat    = new TouchStat();
 	QVBox * view = new QVBox ( this );
@@ -66,43 +64,45 @@ KTouch::KTouch():KMainWindow()
 	setCentralWidget( view );
 
 
-	QObject::connect( touchLine,    SIGNAL(isError(QChar)),
-	                  touchStatus,  SLOT(gotError(QChar)));
-	QObject::connect( touchLine,    SIGNAL(isOk(QChar)),
-	                  touchStatus,  SLOT(gotOk(QChar)));
+	QObject::connect(	touchLine,    SIGNAL(isError(QChar)),
+						touchStatus,  SLOT(gotError(QChar)));
+	QObject::connect(	touchLine,    SIGNAL(isOk(QChar)),
+						touchStatus,  SLOT(gotOk(QChar)));
 
+	QObject::connect(	touchLine,    SIGNAL(isError(QChar)),
+						touchStat,    SLOT(gotError(QChar)));
+	QObject::connect(	touchLine,    SIGNAL(isOk(QChar)),
+						touchStat,    SLOT(gotOk(QChar)));
 
-	QObject::connect( touchLine,    SIGNAL(isError(QChar)),
-	                  touchStat,    SLOT(gotError(QChar)));
-	QObject::connect( touchLine,    SIGNAL(isOk(QChar)),
-	                  touchStat,    SLOT(gotOk(QChar)));
+	QObject::connect(	touchStatus,  SIGNAL(levelUp()),
+						touchLecture, SLOT(levelUp()));
+	QObject::connect(	touchStatus,  SIGNAL(levelDown()),
+						touchLecture, SLOT(levelDown()));
 
-
-	QObject::connect( touchStatus,  SIGNAL(levelUp()),
-	                  touchLecture, SLOT(levelUp()));
-	QObject::connect( touchStatus,  SIGNAL(levelDown()),
-	                  touchLecture, SLOT(levelDown()));
-
-
-	QObject::connect( touchStatus,  SIGNAL(stop()),
+	QObject::connect(	touchStatus,  SIGNAL(stop()),
 						touchLine,    SLOT(stop()));
-	QObject::connect( touchStatus,  SIGNAL(start()),
+	QObject::connect(	touchStatus,  SIGNAL(start()),
 						touchLine,    SLOT(start()));
 
-	QObject::connect( touchStatus,  SIGNAL(stop()),
+	QObject::connect(	touchStatus,  SIGNAL(stop()),
 						touchStat,    SLOT(stop()));
-	QObject::connect( touchStatus,  SIGNAL(start()),
+	QObject::connect(	touchStatus,  SIGNAL(start()),
 						touchStat,    SLOT(start()));
 
-
-	QObject::connect( touchStatus,  SIGNAL(forceNextLine()),
+	QObject::connect(	touchStatus,  SIGNAL(forceNextLine()),
 						touchLine,    SLOT(getNextLine()));
-	QObject::connect( touchLecture, SIGNAL(levelMessage(const QString&)),
+	QObject::connect(	touchLecture, SIGNAL(levelMessage(const QString&)),
 						touchStatus,  SLOT(setLevelMessage(const QString&)));
-	QObject::connect( touchLecture, SIGNAL(levelChanged(int)),
-	                  touchStatus,  SLOT(setLevel(int)));
-	QObject::connect( touchLine,    SIGNAL(nextKey(const QChar&)),
+	QObject::connect(	touchLecture, SIGNAL(levelChanged(int)),
+						touchStatus,  SLOT(setLevel(int)));
+	QObject::connect(	touchLine,    SIGNAL(nextKey(const QChar&)),
 						touchKeyboard, SLOT(newKey(const QChar&)));
+
+	QObject::connect(	touchStatus,  SIGNAL(showStat()),
+						this,         SLOT(showStat()));
+	QObject::connect(	touchStatus,  SIGNAL(hideStat()),
+						this,         SLOT(hideStat()));
+
 
 
 	///////////////////////////////////////////////////////////////////
@@ -455,4 +455,17 @@ void KTouch::keyPressEvent(QKeyEvent*e)
 	touchLine->keyPressed(e->ascii());
 }
 
+
+void KTouch::showStat()
+{
+	touchStatWindow = new TouchStatWindow(touchStat);
+	touchStatWindow->show();
+}
+
+
+void KTouch::hideStat()
+{
+	touchStatWindow->hide();
+	delete(touchStatWindow);
+}
 

@@ -28,6 +28,7 @@ optionKeyboardDlg.ui \
 optionTrainingDlg.ui \
 touchLineLayout.ui \
 touchStatusLayout.ui \
+touchStatWindowLayout.ui \
 ktouch.cpp \
 touchKeyboard.cpp \
 touchStatus.cpp \
@@ -44,7 +45,8 @@ optionGeneral.cpp \
 optionTraining.cpp \
 main.cpp \
 ktouchapp.cpp \
-touchstat.cpp
+touchstat.cpp \
+touchStatWindow.cpp 
 
 ktouch_METASOURCES = AUTO
 
@@ -76,7 +78,8 @@ touchkey.h \
 touchkeyboard.h \
 touchlecture.h \
 touchline.h \
-touchstat.h
+touchstat.h \
+touchStatWindow.h
 
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
@@ -84,5 +87,4 @@ rc_DATA = ktouchui.rc
 # the -x is for skipping messages already translated in kdelibs
 messages: rc.cpp
 	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/ktouch.pot
-
 
