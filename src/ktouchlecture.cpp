@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchlecture.cpp                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2003 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,129 +13,283 @@
 #include "ktouchlecture.h"
 
 #include <qfile.h>
+#include <qtextstream.h>
+#include <qstringlist.h>
+#include <qdom.h>
 
 #include <kdebug.h>
+#include <klocale.h>
 #include <ktempfile.h>
 #include <kio/netaccess.h>
 
-KTouchLecture::KTouchLecture() {
-    createDefault();
-    // There must be always at least one level in the lecture since KTouch won't work
-    // without lecture data. Or at least it would require a hell of work to program
-    // everywhere exceptional behavior. And it's a LOT safer that way!!!
-}
-
-
-bool KTouchLecture::loadLecture(const KURL& lectureURL) {
-    //kdDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
+bool KTouchLecture::load(QWidget * window, const KURL& url) {
     // Ok, first download the contents as usual using the KIO lib
-    // NOTE: file is only downloaded if not local, otherwise it's just opened
+    // File is only downloaded if not local, otherwise it's just opened
     QString target;
-    if (KIO::NetAccess::download(lectureURL, target)) {
+    bool result = false;
+    if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
         if ( !infile.open( IO_ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
-        QString line, lastline;
-        // Empties the vector and create a default level so that when the reading fails at least
-        // one level remains. If the reading was ok, we simply remove that in the end :-)
-        createDefault();
-        // now loop until end of file is reached
-        do {
-            // skip all empty lines or lines containing a comment (starting with '#')
-            do {
-                lastline = line;
-                line = in.readLine();  }
-            while (!line.isNull() && (line.isEmpty() || line[0]=='#'));
-
-            // Check if end of file encountered and if that is the case -> bail out at next while
-            if (line.isNull())  continue;
-
-            // 'lastline' should now contain the optional level description
-            // 'line' should now contain the "new chars"-line
-            KTouchLevelData level;                          // create new level
-            if (!level.readLevel(in, line, lastline)) {     // read it
-                // uh oh, error while reading level data
-                return false;
-            };
-            m_lectureData.append(level);                    // add it (object will be deleted by the list)
-        } while (!in.atEnd() && !line.isNull());
-
-        // finally remove the temporary file (if the file was actually downloaded, otherwise there
-        // never was a temp file)
-        KIO::NetAccess::removeTempFile(target);
-
-        m_modified = false;
-        if (m_lectureData.count()>1) {
-            // Yippie, all went well... remove the default mini level
-            m_lectureData.erase(m_lectureData.begin());
-            m_lectureURL = lectureURL;
-            return true;
-        }
-        else {
-            // Hmm, no levels in the file. So we keep our default mini level and report an error.
-            m_lectureURL="";
-            return false;
-        };
-    }
-    else
-        return false;  // couldn't download -> couldn't read level and the current level didn't change!
+        result = readLecture(in);
+    };
+    KIO::NetAccess::removeTempFile(target);
+    return result;
 }
+// ----------------------------------------------------------------------------
+
+bool KTouchLecture::loadXML(QWidget * window, const KURL& url) {
+    // Ok, first download the contents as usual using the KIO lib
+    // File is only downloaded if not local, otherwise it's just opened
+    QString target;
+    bool result = false;
+    if (KIO::NetAccess::download(url, target, window)) {
+        // Ok, that was successful, store the lectureURL and read the file
+        QFile infile(target);
+        if ( !infile.open( IO_ReadOnly ) )
+            return false;   // Bugger it... couldn't open it...
+		QDomDocument doc;
+		doc.setContent( &infile );
+        result = readLecture(doc);
+    }
+    KIO::NetAccess::removeTempFile(target);
+    return result;
+}
+// ----------------------------------------------------------------------------
 
 
-void KTouchLecture::saveLecture() {
+bool KTouchLecture::saveXML(QWidget * window, const KURL& url) const {
+	// create the XML document
+	QDomDocument doc;
+	writeLecture(doc);
+
+	// and save it	
     QString tmpFile;
     KTempFile *temp=0;
-    if (m_lectureURL.isLocalFile())
-        tmpFile=m_lectureURL.path();    // for local files the path is sufficient
+    if (url.isLocalFile())
+        tmpFile=url.path();         // for local files the path is sufficient
     else {
-        temp=new KTempFile;             // for remote files create a temporary file first
+        temp=new KTempFile;         // for remote files create a temporary file first
+        temp->setAutoDelete(true);  // so we don't have to delete the file ourselves
         tmpFile=temp->name();
     }
 
     QFile outfile(tmpFile);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
-        return;
+        // kdDebug() << "Error creating lecture file!" << endl;
+        return false;
     };
-
+	
     QTextStream out( &outfile );
-    out << "################################## "  << endl;
-    out << "#                                # "  << endl;
-    out << "#  Trainingfile for KTouch       # "  << endl;
-    out << "#             (Håvard Frøiland)  # "  << endl;
-    out << "################################## "  << endl;
+    out << doc.toString();
+    outfile.close();
+    // if we have a temporary file, we still need to upload it
+    if (temp) {
+        KIO::NetAccess::upload(tmpFile, url, window);
+        delete temp;
+    }
+    return true;
+}
+// ----------------------------------------------------------------------------
+
+void KTouchLecture::createDefault() {
+    m_lectureData.clear();      // remove everything else
+    m_title = i18n("A new lecture...");
+    KTouchLevelData miniLevel;  // create the level which is by default a mini-level
+    m_lectureData.push_back( miniLevel );
+}
+// ----------------------------------------------------------------------------
+
+const KTouchLevelData& KTouchLecture::level(unsigned int levelNum) const {
+    if (levelNum>=m_lectureData.size())
+        levelNum=0;
+    return m_lectureData[levelNum];
+}
+// ----------------------------------------------------------------------------
+
+bool KTouchLecture::readLecture(QTextStream& in) {
+    //kdDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
+    QString line;
+    // remove everything else
+    m_lectureData.clear();      
+    // now loop until end of file is reached and break down the textfile into several strings containing the levels
+    QStringList slist;
+    QString current_level = QString::null;  // used to store the current level data
+    line = in.readLine();
+    bool in_level = false;
+    while (!in.atEnd() && !line.isNull()) {
+        // only consider non-empty lines
+        if (!line.isEmpty()) {
+            // lecture title?
+            if (line.find("# Title:") == 0)
+                m_title = line.right(line.length() - 8).stripWhiteSpace();
+            else if (line[0]!='#' || line.find("# Comment:")!=-1) {
+                // ok, after all those comment lines, we finally found the beginn of a level
+                in_level = true;
+                current_level += line + '\n';
+            }
+            else if (in_level) {
+                // ok, a new comment found, if we were reading a level, store it
+                slist.append(current_level);
+                current_level = QString::null;
+                in_level = false;
+            }
+        }
+        line = in.readLine();
+    };
+    if (!current_level.isEmpty() && in_level)
+        slist.append(current_level);
+
+    //kdDebug() << "Levels read = " << slist.count() << endl;
+                
+    // now read all the levels
+    for (QStringList::Iterator it = slist.begin(); it!=slist.end(); ++it) {
+        // create new level
+        KTouchLevelData level;
+        QTextStream t(&(*it), IO_ReadOnly);
+        // try to read it
+        if (!level.readLevel(t)) {
+            // uh oh, error while reading level data
+            createDefault();
+            return false;
+        };
+        // add it (object will be deleted by the list)
+        m_lectureData.push_back(level);
+    }
+        
+    if (m_lectureData.size()>1)
+        return true;  // all ok
+    else {
+        // Hmm, no levels in the file. So we create our default mini level and report an error.
+        createDefault();
+        return false;
+    };
+}
+// ----------------------------------------------------------------------------
+
+bool KTouchLecture::readLecture(QDomDocument& doc) {
+    QString line;
+    m_lectureData.clear();      // clean current data
+	// retrieve the title
+	QDomNodeList entries = doc.elementsByTagName("Title");
+	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
+	else						m_title = i18n("untitled lecture");
+	// retrieve the comment
+	entries = doc.elementsByTagName("Comment");
+	if (entries.count() >= 1)
+		m_comment = entries.item(0).firstChild().nodeValue();
+	// retrieve the font suggestion
+	entries = doc.elementsByTagName("FontSuggestions");
+	if (entries.count() >= 1)
+		m_fontSuggestions = entries.item(0).firstChild().nodeValue();
+	// retrieve the levels
+	entries = doc.elementsByTagName("Level");
+	for (unsigned int i=0; i<entries.count(); ++i) {
+        KTouchLevelData level;
+		level.readLevel(entries.item(i));
+        m_lectureData.push_back(level);
+	}
+    if (m_lectureData.size()>1)
+        return true;  // all ok
+    else {
+        // Hmm, no levels in the file. So we create our default mini level and report an error.
+        createDefault();
+        return false;
+    };
+}
+// ----------------------------------------------------------------------------
+
+void KTouchLecture::writeLecture(QDomDocument& doc) const {
+    QDomElement root = doc.createElement( "KTouchLecture" );
+    doc.appendChild(root);
+	// Store title and ensure that the file contains a title!
+	QDomElement title = doc.createElement("Title");
+	QDomText titleText;
+	if (m_title.isEmpty())	titleText = doc.createTextNode( i18n("untitled lecture") );
+	else					titleText = doc.createTextNode(m_title);
+	title.appendChild(titleText);
+	root.appendChild(title);
+	// Store comment if given
+	if (!m_comment.isEmpty()) {
+		QDomElement comment = doc.createElement("Comment");
+		QDomText commentText = doc.createTextNode(m_comment);
+		comment.appendChild(commentText);
+		root.appendChild(comment);
+	}
+	// Store font suggestion if given
+	if (!m_fontSuggestions.isEmpty()) {
+		QDomElement font = doc.createElement("FontSuggestions");
+		QDomText fontText = doc.createTextNode(m_fontSuggestions);
+		font.appendChild(fontText);
+		root.appendChild(font);
+	}
+	// Store levels
+	QDomElement levels = doc.createElement("Levels");
+	root.appendChild(levels);
+    for (QValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
+		it!=m_lectureData.end(); ++it) 
+	{
+		it->writeLevel(doc, levels);
+	}
+}
+// ----------------------------------------------------------------------------
+
+
+
+// OLD and deprecated stuff
+
+/*
+bool KTouchLecture::save(QWidget * window, const KURL& url) const {
+    QString tmpFile;
+    KTempFile *temp=0;
+    if (url.isLocalFile())
+        tmpFile=url.path();         // for local files the path is sufficient
+    else {
+        temp=new KTempFile;         // for remote files create a temporary file first
+        temp->setAutoDelete(true);  // so we don't have to delete the file ourselves
+        tmpFile=temp->name();
+    }
+
+    QFile outfile(tmpFile);
+    if ( !outfile.open( IO_WriteOnly ) ) {
+        if (temp)  delete temp;
+        // kdDebug() << "Error creating lecture file!" << endl;
+        return false;
+    };
+    QTextStream out( &outfile );
+    writeLecture(out);
+    // TODO : check stream status to see if save worked
+    outfile.close();
+    // if we have a temporary file, we still need to upload it
+    if (temp) {
+        KIO::NetAccess::upload(tmpFile, url, window);
+        delete temp;
+    }
+    return true;
+}
+// ----------------------------------------------------------------------------
+
+void KTouchLecture::writeLecture(QTextStream& out) const {
+    out << "###################################### "  << endl;
+    out << "#                                    # "  << endl;
+    out << "#  Training lecture file for KTouch  # "  << endl;
+    out << "#                                    # "  << endl;
+    out << "###################################### "  << endl << endl;
+    out << "# Title: " << m_title << endl;
     out << endl;
 
     int levelCounter=0;
     for (QValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); it!=m_lectureData.end(); ++it) {
         out << "################################" << endl;
         out << "# Level: " << ++levelCounter << endl;
-        out << "#" << endl;
+        out << "# " << endl;
         it->writeLevel(out);
     };
-
-    if (temp) {
-        KIO::NetAccess::upload(tmpFile, m_lectureURL);
-        temp->unlink();
-        delete temp;
-    }
-    m_modified = false;
+    out << endl;
 }
+// ----------------------------------------------------------------------------
 
-
-void KTouchLecture::createDefault() {
-    m_lectureURL = "";
-    m_lectureData.clear();      // remove everything else
-    KTouchLevelData miniLevel;  // create the level which is by default a mini-level
-    m_lectureData.append( miniLevel );
-    m_modified = false;
-}
-
-
-const KTouchLevelData& KTouchLecture::level(unsigned int levelNum) const {
-    if (levelNum>=m_lectureData.count())
-        levelNum=0;
-    return m_lectureData[levelNum];
-}
+*/

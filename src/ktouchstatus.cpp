@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchstatus.cpp                                                      *
  *   ----------------                                                      *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,7 +18,7 @@
 #include <qprogressbar.h>
 #include <kpushbutton.h>
 #include <kdebug.h>
-#include "ktouchsettings.h"
+#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 KTouchStatus::KTouchStatus(QWidget *parent)

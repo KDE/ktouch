@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchslideline.h                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,10 +17,10 @@
 #include <qpixmap.h>
 #include <kdebug.h>
 
-#include <math.h>
+#include <cmath>
+#include <utility>
 
-#include "ktouchsettings.h"
-#include "ktouchmacros.h"
+#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 // don't use defines here... most of the time they are pure evil :-)
@@ -66,17 +66,17 @@ KTouchSlideLine::~KTouchSlideLine() {
 }
 
 void KTouchSlideLine::applyPreferences() {
-    m_font = Prefs::font();
+	// TODO : only take font if "override lecture font" is set
+    m_font = KTouchConfig().m_font;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
     // note: resizeFont() will be called implicitly by resizeEvent()
 }
 
 void KTouchSlideLine::setNewText(const QString& teacherText, const QString& studentText) {
-   if(teacherText[0].direction()==QChar::DirR)
-    m_rightJustify=true;
-   else
-    m_rightJustify=false;
- 
+	if(teacherText[0].direction()==QChar::DirR)
+    	m_rightJustify=true;
+   	else
+    	m_rightJustify=false;
     m_teacherText=teacherText;
     m_studentText=studentText;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
@@ -85,6 +85,11 @@ void KTouchSlideLine::setNewText(const QString& teacherText, const QString& stud
 void KTouchSlideLine::setStudentText(const QString& text) {
     m_studentText=text;
     updateLines();
+}
+
+void KTouchSlideLine::setFont(const QFont& font) {
+	m_font = font;
+    resizeEvent(NULL); // because we need to recreate the pixmap sizes
 }
 
 
@@ -222,7 +227,7 @@ void KTouchSlideLine::drawCursor() {
 }
 
 void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth) {
-    int gap = min(2,static_cast<int>(0.2*enterWidth));
+    int gap = std::min(2,static_cast<int>(0.2*enterWidth));
     int enterHeight = static_cast<int>(0.4*enterWidth);
     int arrowSize = static_cast<int>(enterWidth/4.0);     // mind the difference between 4 and 4.0
     painter->drawLine(cursorPos+enterWidth, y, cursorPos+enterWidth, y-enterHeight);    // vertical line
@@ -299,12 +304,12 @@ void KTouchSlideLine::updateLines() {
     // calculate the relative cursor positions in the output line
     QString typedText = m_teacherText.left(studentLen);
     int typedTextLength=textWidth(fontMetrics, typedText);
-    double CPosFactor = min(1.0, static_cast<double>(typedTextLength)/m_teacherTextWidth);
+    double CPosFactor = std::min(1.0, static_cast<double>(typedTextLength)/m_teacherTextWidth);
     // calculate the local coordinate of the cursor in the teacher line
     int teacherCursorPos = INNER_MARGIN + typedTextLength;
     // now calculate the horizontal offset
     int xDistance = INNER_MARGIN + static_cast<int>( CPosFactor*(allowedWidth-2*INNER_MARGIN-m_enterCharWidth) );
-    m_cursorXPos = HORIZONTAL_MARGIN + m_shift + xDistance + min(2,static_cast<int>(fontMetrics.height()*0.1));
+    m_cursorXPos = HORIZONTAL_MARGIN + m_shift + xDistance + std::min(2,static_cast<int>(fontMetrics.height()*0.1));
     m_teacherFrameXEnd = teacherCursorPos - xDistance;
     m_studentFrameXEnd = studentCursorPos - xDistance;
     painter.end();

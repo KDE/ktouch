@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchkeyboard.h                                                      *
  *   ----------------                                                      *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -39,13 +39,13 @@ class KTouchKeyboard : public QWidget {
     /// Reads a keyboard layout from the given URL.
     /// The function returns 'true' when the reading was successful or 'false' if not. In this
     /// case the optional parameter errorMsg contains the error message.
-    bool loadKeyboard(const KURL& url, QString* errorMsg=NULL);
+    bool loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg=NULL);
     /// Saves the keyboard layout to the URL.
-    void saveKeyboard(const KURL& url);
+    void saveKeyboard(QWidget * window, const KURL& url);
     /// Applies preferences to the keyboard layout and the keys.
     /// This means that the layout is basically recreated and if the layout type/language
     /// changed it will be reloaded.
-    void applyPreferences(bool silent);
+    void applyPreferences(QWidget * window, bool silent);
 
   public slots:
     /// This function displays the next key (or key combination) the user has to press.

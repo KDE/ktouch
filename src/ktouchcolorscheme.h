@@ -1,8 +1,7 @@
 /***************************************************************************
- *   ktouchkeyboardcolor.h                                                 *
- *   ---------------------                                                 *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   ktouchcolorscheme.h                                                   *
+ *   -------------------                                                   *
+ *   Copyright (C) 2003 by Andreas Nicolai                                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -10,9 +9,31 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHKEYBOARDCOLOR_H
-#define KTOUCHKEYBOARDCOLOR_H
+#ifndef KTOUCHCOLORSCHEME_H
+#define KTOUCHCOLORSCHEME_H
 
+#include <qcolor.h>
+
+/// Contains all colours of the colour scheme.
+class KTouchColorScheme {
+  public:
+    /// Default constructor.
+    KTouchColorScheme() { createDefault(); };
+    /// Creates the default colour scheme.
+    void createDefault();
+    
+    QColor m_teacherTextColor;    ///< The text colour for the teachers line.
+    QColor m_teacherBackground;   ///< The background colour for the teachers line.
+    QColor m_studentTextColor;    ///< The text colour for the students line.
+    QColor m_studentBackground;   ///< The background colour for the students line.
+    QColor m_errorTextColor;      ///< The text colour for wrong text (students line).
+    QColor m_errorBackground;     ///< The background colour for wrong text (students line).
+    
+    /// This flag indicates (if 'true') that when the student typed a wrong character, the 
+    /// foreground and background colour will change.
+    bool   m_useErrorColor;       
+    
+};
 
 /// This structure contains the data for a keyboard colour scheme.
 struct KTouchKeyboardColor {
@@ -28,4 +49,4 @@ struct KTouchKeyboardColor {
     QColor      m_cTextH;               ///< The text/pen colour for activated control keys.
 };
 
-#endif  // KTOUCHKEYBOARDCOLOR_H
+#endif  // KTOUCHCOLORSCHEME_H

@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouch.cpp                                                            *
  *   ----------                                                            *
- *   Copyright (C) 2000 by H�ard Friland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,7 +19,7 @@
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");
 
-static const char version[] = "1.3";
+static const char version[] = "1.4";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
@@ -33,13 +33,15 @@ int main(int argc, char **argv)
                      version,
                      description,
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000 by Haavard Froeiland, 2003 by Andreas Nicolai",
+                     "Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai",
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");
-    about.addAuthor( "Haavard Froeiland", 0, "haavard@users.sourceforge.net" );
+    about.addAuthor( "Håvard Frøiland", 0, "haavard@users.sourceforge.net" );
     about.addAuthor( "Andreas Nicolai", 0, "Andreas.Nicolai@gmx.net" );
-    about.addCredit("David Vignoni", I18N_NOOP("svg icon"), "david80v@tin.it");
+    about.addCredit( "David Vignoni", I18N_NOOP("Creator of the SVG icon."), "david80v@tin.it");
+    about.addCredit( "Anne-Marie Mahfouf", I18N_NOOP("Lot's of patches, fixes, updates..."), "annma@kde.org");
+    about.addCredit( "All the creators of training and keyboard files...", 0, 0);
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
     KApplication app;

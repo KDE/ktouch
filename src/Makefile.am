@@ -19,7 +19,9 @@ INCLUDES = $(all_includes)
 # SUBDIRS =
 
 # these are the headers for your project
-noinst_HEADERS = ktouch.h ktouchcharstats.h ktouchchartwidget.h ktoucheditor.h ktouchkeyboard.h ktouchkeyboardcolor.h ktouchkeyconnector.h ktouchkeys.h ktouchlecture.h ktouchleveldata.h ktouchmacros.h ktouchsettings.h ktouchslideline.h ktouchstatistics.h ktouchstatus.h ktouchtrainer.h ktouchtrainingsession.h
+noinst_HEADERS = ktouch.h ktouchcharstats.h ktouchchartwidget.h ktouchkeyboard.h ktouchkeyconnector.h \
+	ktouchkeys.h ktouchlecture.h ktouchleveldata.h ktouchslideline.h ktouchstatistics.h \
+	ktouchstatus.h ktouchtrainer.h ktouchtrainingsession.h
 
 # let automoc handle all of the meta source files (moc)
 ktouch_METASOURCES = AUTO
@@ -36,9 +38,14 @@ messages: rc.cpp
 bin_PROGRAMS = ktouch
 
 # the application source, library search path, and link libraries
-ktouch_SOURCES = ktouch.cpp ktouchcharstats.cpp ktouchchartwidget.cpp ktoucheditor.cpp ktouchkeyboard.cpp ktouchkeys.cpp ktouchlecture.cpp ktouchleveldata.cpp ktouchsettings.cpp ktouchslideline.cpp ktouchstatistics.cpp ktouchstatus.cpp ktouchtrainer.cpp ktouchtrainingsession.cpp main.cpp \
-ktoucheditorlayout.ui ktouchprefcolorslayout.ui ktouchprefgenerallayout.ui ktouchprefkeyboardlayout.ui ktouchpreftraininglayout.ui ktouchstartnewdialog.ui ktouchstatisticslayout.ui ktouchstatuslayout.ui \
-prefs.kcfgc
+ktouch_SOURCES = ktouch.cpp ktouchcharstats.cpp ktouchchartwidget.cpp \
+	ktouchkeyboard.cpp ktouchkeys.cpp ktouchlecture.cpp ktouchleveldata.cpp \
+	ktouchslideline.cpp ktouchstatistics.cpp ktouchstatus.cpp ktouchtrainer.cpp \
+	ktouchtrainingsession.cpp main.cpp ktouchprefcolorslayout.ui ktouchprefgenerallayout.ui \
+	ktouchprefkeyboardlayout.ui ktouchpreftraininglayout.ui ktouchstartnewdialog.ui \
+	ktouchstatisticslayout.ui ktouchstatuslayout.ui ktouchlectureeditor.cpp \
+	ktouchopenrequest.cpp ktouchopenrequest_dlg.ui ktoucheditor_dlg.ui ktouchconfiguration.cpp \
+	ktouchcolorscheme.cpp ktouchutils.cpp prefs.kcfgc 
 
 # the library search path.
 ktouch_LDFLAGS = $(KDE_RPATH) $(all_libraries)

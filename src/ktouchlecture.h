@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchlecture.h                                                       *
  *   ---------------                                                       *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2003 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,54 +13,66 @@
 #ifndef KTOUCHLECTURE_H
 #define KTOUCHLECTURE_H
 
-#include <kurl.h>
+class QWidget;
+class QDomDocument;
+class KURL;
+
+#include <qvaluevector.h>
 #include "ktouchleveldata.h"
 
-/** This class handles the lecture data and provides the lines to type.
- *  The 'lecture' is actually the 'document' in the KTouch program. It
- *  contains the level data (see KTouchLevelData).A lecture object
- *  contains <b>ALWAYS</b> at least one lecture.<p>
- *  The lecture data (excluding the current training level)
- *  can be read and written using the member functions loadLecture() and
- *  saveLecture(). The currently assigned filename will be returned
- *  via fileName(). If you need the complete URL then access m_lectureURL
- *  directly.<p>
- *  During a training session the program will occasionally need a new
- *  line of text. You can retrieve the data of a certain level using
- *  the member function level().
- */
+/// This class handles the lecture data and provides the lines to type.
+///
+/// It contains the level data (see KTouchLevelData). A lecture object
+/// contains <b>ALWAYS</b> at least one lecture.<p>
+/// The lecture data can be read and written using the member functions 
+/// readLecture() and writeLecture().<p>
+/// During a training session the program will occasionally need a new
+/// line of text. You can retrieve the data of a certain level using
+/// the member function level() and then the line in this level (see
+/// KTouchLevelData).
 class KTouchLecture {
   public:
-    /// Constructor
-    KTouchLecture();
-    /// Loads a lecture from file
-    bool loadLecture(const KURL& lectureURL);
-    /// Saves the lecture data to the current lecture URL
-    void saveLecture();
+    /// Default Constructor
+    KTouchLecture() { createDefault(); };
     /// Creates a default mini-lecture.
     void createDefault();
-    /// Returns the filename of the current lecture file (convenience function).
-    QString fileName()              const { return m_lectureURL.fileName(); };
-    /// Returns the number of levels in the lecture
-    unsigned int levelCount()       const { return m_lectureData.count(); };
-    /// Returns whether the lecture has been modified or not.
-    bool isModified()            const { return m_modified; };
-    /// Sets the modified flag
-    void setModified(bool flag)  { m_modified=flag; };
+    /// Loads a lecture from file (returns true if successful).
+    bool load(QWidget * window, const KURL& url);
+    /// Loads a lecture (in XML format) from file (returns true if successful).
+    bool loadXML(QWidget * window, const KURL& url);
+    // /// Saves the lecture data to file (returns true if successful).
+    // bool save(QWidget * window, const KURL& url) const;
+    /// Saves the lecture data to file (returns true if successful).
+    bool saveXML(QWidget * window, const KURL& url) const;
+    /// Returns the number of levels in the lecture.
+    unsigned int levelCount()       const { return m_lectureData.size(); };
     /// Returns a reference to the data of the level.
     /// If the level number is out of range the function will always return
     /// the level 0.
     const KTouchLevelData& level(unsigned int levelNum) const;
+    /// Returns the title of the lecture.
+    const QString& title() const { return m_title; }
+    /// Sets the title of the lecture.
+    void setTitle(const QString& title) { m_title = title; }
 
-    KURL        m_lectureURL;   ///< The full URL of the lecture file.
+    QString                         m_title;        	///< The title of the lecture.
+    QString                         m_comment;      	///< A comment.
+    QString                         m_fontSuggestions;  ///< Font suggestions for this lecture.
 
   private:
-
-    QValueVector<KTouchLevelData>   m_lectureData;  ///< The lecture data.
-    bool                            m_modified;     ///< Indicates whether the lecture data has been modified.
-
+    /// Loads a lecture from file
+    bool readLecture(QTextStream& in);
+    /// Loads a lecture from file into an XML document
+    bool readLecture(QDomDocument& doc);
+    /// Saves the lecture data to the current lecture URL
+    void writeLecture(QTextStream& out) const;
+    /// Saves the lecture data in the XML document
+    void writeLecture(QDomDocument& doc) const;
+  
+    QValueVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
+    
     /// The editor should be able to handle the internal lecture data (it's for convenience actually).
-    friend class KTouchEditor;
+    friend class KTouchLectureEditor;
 };
 
 #endif  // KTOUCHLECTURE_H

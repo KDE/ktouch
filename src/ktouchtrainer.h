@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchtrainer.h                                                       *
  *   ---------------                                                       *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Hï¿½ard Friland, 2003 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -68,7 +68,8 @@ class KTouchTrainer : public QObject {
 
     unsigned int        m_level;                ///< Current level number (zero based).
     unsigned int        m_line;                 ///< Current line number (zero based).
-    QString             m_teacherText;          ///< The currently displayed teacher text.
+    
+	QString             m_teacherText;          ///< The currently displayed teacher text.
     QString             m_studentText;          ///< The currently typed student text.
 
     bool                m_waiting;              ///< Indicates when we are waiting for the first keypress after session start.

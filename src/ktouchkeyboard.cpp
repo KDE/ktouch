@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchkeyboard.cpp                                                    *
  *   ------------------                                                    *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,6 +13,8 @@
 #include "ktouchkeyboard.h"
 #include "ktouchkeyboard.moc"
 
+#include <utility>
+
 #include <qfile.h>
 
 #include <kdebug.h>
@@ -22,8 +24,7 @@
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
 
-#include "ktouchsettings.h"
-#include "ktouchmacros.h"
+#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 // the margin between keyboard and widget frame
@@ -40,10 +41,9 @@ KTouchKeyboard::KTouchKeyboard(QWidget *parent)
 }
 
 
-bool KTouchKeyboard::loadKeyboard(const KURL& url, QString* errorMsg) {
+bool KTouchKeyboard::loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg) {
     QString target;
-    //TODO for 3.4 fix deprecated
-    if (KIO::NetAccess::download(url, target)) {
+    if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
@@ -59,7 +59,7 @@ bool KTouchKeyboard::loadKeyboard(const KURL& url, QString* errorMsg) {
 }
 
 
-void KTouchKeyboard::saveKeyboard(const KURL& url) {
+void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
@@ -97,42 +97,39 @@ void KTouchKeyboard::saveKeyboard(const KURL& url) {
     }
 
     if (temp) {
-        //TODO for 3.4 fix deprecated
-        KIO::NetAccess::upload(tmpFile, url);
+        KIO::NetAccess::upload(tmpFile, url, window);
         temp->unlink();
         delete temp;
     }
 }
 
-void KTouchKeyboard::applyPreferences(bool silent) {
+void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
-    if (KTouchConfig().m_keyboardLayout!=m_currentLayout) {
+    if (KTouchConfig().m_currentKeyboardFile!=m_currentLayout) {
         // if the layout is the number layout just create it and we're done
-        if (KTouchConfig().m_keyboardLayout=="number") {
+        if (KTouchConfig().m_currentKeyboardFile=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
             return;
         }
         // ok, let's load this layout
-        KStandardDirs *dirs=KGlobal::dirs();
-        QString fileName = dirs->findResource("data","ktouch/" + KTouchConfig().m_keyboardLayout + ".keyboard");
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(KURL::fromPathOrURL( fileName )))
+            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile )))
                 createDefaultKeyboard();
             else
-                m_currentLayout=KTouchConfig().m_keyboardLayout;
+                m_currentLayout=KTouchConfig().m_currentKeyboardFile;
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(KURL::fromPathOrURL( fileName ), &errorMsg)) {
+            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
             }
             else
-                m_currentLayout=KTouchConfig().m_keyboardLayout;
+                m_currentLayout=KTouchConfig().m_currentKeyboardFile;
         }
     }
 
@@ -189,7 +186,7 @@ void KTouchKeyboard::paintEvent(QPaintEvent *) {
 void KTouchKeyboard::resizeEvent(QResizeEvent *) {
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
     double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
-    double scale = min(hScale, vScale);
+    double scale = std::min(hScale, vScale);
     m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
@@ -310,8 +307,8 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
             return false;
         }
         // calculate the maximum extent of the keyboard on the fly...
-        m_keyboardWidth = max(m_keyboardWidth, x+w);
-        m_keyboardHeight = max(m_keyboardHeight, y+h);
+        m_keyboardWidth = std::max(m_keyboardWidth, x+w);
+        m_keyboardHeight = std::max(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
     updateColours();
     return (!m_keyList.isEmpty());  // empty file means error

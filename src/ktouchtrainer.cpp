@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchtrainer.cpp                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by H�ard Friland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -26,6 +26,7 @@
 #include "ktouchslideline.h"
 #include "ktouchkeyboard.h"
 #include "ktouchlecture.h"
+#include "ktouchconfiguration.h"
 #include "prefs.h"
 
 const int UPDATE_INTERVAL = 500;    // milli seconds between updates of the speed LCD
@@ -154,17 +155,17 @@ void KTouchTrainer::enterPressed() {
     };
     // Now let's increase the line
     ++m_line;
-    if (m_line >= m_lecture->level(m_level).lineCount()) {
+    if (m_line >= m_lecture->level(m_level).count()) {
         if (Prefs::autoLevelChange()) {
             // adjust level if limits exceeded
-            if (Prefs::upCorrectLimit()<=m_session.correctness()*100 &&
-                Prefs::upSpeedLimit()<=m_session.charSpeed())
+            if (Prefs::upCorrectLimit() <= m_session.correctness()*100 &&
+                Prefs::upSpeedLimit() <= m_session.charSpeed())
             {
                 levelUp();
                 return;
             }
-            else  if (Prefs::downCorrectLimit()>m_session.correctness()*100 ||
-                    Prefs::downSpeedLimit()>m_session.charSpeed())
+            else  if (Prefs::downCorrectLimit() > m_session.correctness()*100 ||
+                    Prefs::downSpeedLimit() > m_session.charSpeed())
             {
                 levelDown();
                 return;

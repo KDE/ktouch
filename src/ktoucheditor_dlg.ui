@@ -1,0 +1,627 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>KTouchEditorDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KTouchEditorDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>569</width>
+            <height>449</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>KTouch Lecture Editor</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>layout28</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QTextEdit" row="2" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>lectureCommentEdit</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>4</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>32767</width>
+                            <height>70</height>
+                        </size>
+                    </property>
+                </widget>
+                <widget class="QFrame" row="3" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>frame5</cstring>
+                    </property>
+                    <property name="frameShape">
+                        <enum>HLine</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
+                    </property>
+                </widget>
+                <widget class="KLineEdit" row="0" column="1">
+                    <property name="name">
+                        <cstring>titleEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>titleLabel</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <family>Helvetica</family>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Lecture title:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="0">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Comment:</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QLayoutWidget" row="3" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>layout35</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>fontButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Change font ...</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer3</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>248</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>openButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Open...</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>saveButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Save</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>saveAsButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Save as...</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>quitButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Close</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QFrame" row="2" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>frame4</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget" row="1" column="1">
+            <property name="name">
+                <cstring>layout22</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>levelLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <family>Helvetica</family>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Level data of level 10</string>
+                    </property>
+                </widget>
+                <widget class="QFrame" row="1" column="0" rowspan="2" colspan="2">
+                    <property name="name">
+                        <cstring>frame3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                        <enum>HLine</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
+                    </property>
+                </widget>
+                <widget class="KTextEdit" row="7" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>linesTextEdit</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>3</hsizetype>
+                            <vsizetype>3</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <family>Courier 10 Pitch</family>
+                        </font>
+                    </property>
+                    <property name="wordWrap">
+                        <enum>NoWrap</enum>
+                    </property>
+                </widget>
+                <widget class="KLineEdit" row="2" column="1" rowspan="2" colspan="1">
+                    <property name="name">
+                        <cstring>newCharsEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="KLineEdit" row="4" column="1">
+                    <property name="name">
+                        <cstring>levelCommentEdit</cstring>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="3" column="0">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>New characters in this level:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="4" column="0">
+                    <property name="name">
+                        <cstring>commentLabel</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Level comment (optional):</string>
+                    </property>
+                </widget>
+                <spacer row="5" column="1">
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Fixed</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLabel" row="6" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>textLabel3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Level data:</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QLayoutWidget" row="1" column="0">
+            <property name="name">
+                <cstring>layout9</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KListView">
+                    <column>
+                        <property name="text">
+                            <string>Levels</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>false</bool>
+                        </property>
+                        <property name="resizable">
+                            <bool>false</bool>
+                        </property>
+                    </column>
+                    <property name="name">
+                        <cstring>levelListView</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>3</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="resizeMode">
+                        <enum>AllColumns</enum>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout8</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout7</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>upBtn</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>35</width>
+                                            <height>28</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="pixmap">
+                                        <pixmap>image0</pixmap>
+                                    </property>
+                                </widget>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>downBtn</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>35</width>
+                                            <height>28</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="pixmap">
+                                        <pixmap>image1</pixmap>
+                                    </property>
+                                </widget>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>newBtn</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>35</width>
+                                            <height>28</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="pixmap">
+                                        <pixmap>image2</pixmap>
+                                    </property>
+                                </widget>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>deleteBtn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>1</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>35</width>
+                                            <height>28</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                    <property name="pixmap">
+                                        <pixmap>image3</pixmap>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer3_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </grid>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="567">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000001fe49444154789c8d93318b134118869f0d5b6c446117ee200b0a062cbca44aae4b3a4bed2cf527d8dae9552222626171e55d77f7136c042d643785b029dc4904c14d7190850bcc4082337081b19824b7c6142e0c1f33dff73ef3ceb7339ec80418200065146110d2eab42c956f341879d57cb5de5f2f6e8ba7731897a0816645bc1d6bbbc4a34b2814346f42b980f359cbae77aed663a0b64b6c0c1cec4133864e03f0e1f422b66c3921c039588ba55c894388eaeefcdd189edc83308878ff3dfec7496d2d2e241406a200eab7405f3980be82d61de8dc86603fe2e893facb890fa0e7200dc440bc0fcc1da41a1f1d8032305cf668773d2b32e161a0063054ce7a1cc2546af06134d51ce7505cbaf9546a9ede87e61e3c3eb1b4bb6d4bb0028c4bd771bd80d0af339dc1695ee7ec4bc6595e472ab7ae17f0f02e18df1d4f19e500062894c4f8309e499ee7f0f96bcae0c5211fc79a97f975be50126d1c200c4207c84a08fc083583933c6238c818beea0330787683e14f38ff11a194fb1b6ab9baa206d7c442423193bc2e23b241c6e4cde1e61a5b6bf13c0ff5e1377259e74143c23272c960052817703c8928be654cde5d8b9334f11cc341f45b8b3111f2a2d8f4006bad1599a071f4cb029b91a4092213246982b5d626690260ab75221378221328a3e8f7fab6baf3f6ab5bcfdbbdf6a64ea4c2f39234d9f9cafe37fe0173b241f60bf094b80000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="571">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000020249444154789c75933168135118c77f174e780727bc400a151c3cc8e21587e8d43b5c1c333adacdb1ab3a392ab8d845c998319d3475ca6021dddaa12517b0b9042c24a07001857bd0e23d503887cb5def22bee5e37ddff7fffedffbf37f469aa629a51306a181060428ad9042820677dbfda74f69452d4f0ce759745b6e5a062bad2ae0de972ce6f55a19dc0dc0308c0ab3b7ed15e0d157b865c3eb23f03d3f45930d10406b131c092f3fa7f89e9fae330fe7206cb8db006dae92024c80488367c1a3db105dc1b3418aef19853ce137d8b4c1dd80e4376875fd8c6c0313a24be006b4ef80d380ddfeaf6b6d4c70ec0cb45490ac36283458fc0469029750bf094f9be0342cbaa7d970d706cbcaea42808a574fc835884d185c644c519c6009683713a4004724451e13fae710cd46550d1c01c3efa0ffc0e3a64572058e6de19880c8ee525874c6303c8d397af5a0aac1ce3d58c609dd00fab3046dc25cc595d81927f48e22066ffcc24c52486a61101a001f9f58680ddd85c5e002eaa28e5609755167ff1c06278ae9c173f4720ac0643431d050535a910f39de856594b017c070118380de2ca67318111ceea1cef60bb0d20a041893d184dcfb6e2b338efb0e8484f6061cff80e9c15b969f5e549873bbd7f249e54d3e3c0c8d683ca217c0c9fb9d0ab8dc2f85cc36287bbf5cdcbabf5558799d39ef37cbbf6e3de68cffab4b21f90b93ed2464db7c86070000000049454e44ae426082</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="635">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff610000024249444154789c7d933d6b144118c77f1b36302b5bcc8ac58ed85c61e105414e525c24c5592a7e80147e015b3f8558e71ab189123b2d94b310d284dc152109442e2902778ddc2e0899290677c083c762ef2512b19aff3333cfcbfc9e67a2e1f11002a0c005878a1b5278302914de62d28cabf6f9f7314fd61bd1fc7eec82432bcd7c1dbb82a79d165505adc4607f56dc5309e3b260e34e1308f4f6c7b2b199455a6956ae3a13c0a4067e43920015646952ef6bb3386fb51bf40fad10b85e41e10a583554551dc4da8a2c4d284b8b56191fbff520ce615ad2db47a27f31683d30b05a57400cf85a06571162287e38c234d0dbdf63c505b770d64ad33abc0d6f22aaaa8204acaf4041e92da409e3b2240045b010e73583e6604d362e1e09014801204912e846649f6f40803ccdc083569a30b534b481a9236e0ed68417390c4a9a27330dd08d6013b89f433762dc9990288d9b3af25b86d215e858130d8f87d4415e0239f0b80ec039d0839d5deca610e2aa9e0705c105508ab79f76eb2e9cb58751b3bb2675c623c0c0e0219cc0f8d9253a06eb1d26d558efc8b4a6f025c439f19cc1b28259f6f67b68efd1d8b989ed082635045f91a57a3699394cfb20db88482ed247165af25a9fb2d0a3d1442e2722476713998c7ec9d1e9485ebffa224b0629f4ef1e441b178f040f3c177817410ab623a0a07015994a60d6daed0f57182cc6d9d78f28bc456f09a5b76805ce1718a5297c41a6960caefd85e3f5096c0926cd96fd0fa0534308d40cc29c81233ae81ffcf51776bf0e643eeb3ace71d392ffd97f00fcfb5c2aac660b680000000049454e44ae426082</data>
+    </image>
+    <image name="image3">
+        <data format="PNG" length="533">89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff61000001dc49444154789c7d93b16b54411087bf0daf983d56d92721dca610ae0c76570839b048abd8a4f48fb3f41f10ae119222708285564920450e44f21e44b20b3eb2831c3c8b7d974434b7d54ef11bbef99831a75f4f4141a9fb461b82041a8520f0b03effb660b61f8c170f0a08244d5449135e3c4d6a7873302567985a88d7913d99b2fcd130f30198303f5ef6af0f305e3cebdcd6ba081200b016c850bb1aab10b6038d6682040e5fcd587c6efa751885ad3b026d00c819b010358383d43504b17cf834e7e86441db25e6c7a50902e6a183e97ea1200315d095afa68c02e7ed1251cbfce488776ff74dd254081884fd9f2082b32c7f2e112c8d467cf5980363b023531c3cb1d0817735f58e61f6f205a2c2c407dad5630efabe8c3032c4eb0c15d8670680c5974b645b4844642040280428852003bf4b937a67044f4bb839bb25f8316905131f6020f8d78185ac196e0712e0ece20a1cc4554b7042d4b4c141062b1646e6ae417081a810640c0ab51b6f706021a6ccc357ef1a8283a8097110b5dde0e0d7303b906f7ae2f7c1c7ee88daf972236ebcc1c1202ddff4b45d0481e5e55519e5f9a81c58d7fee5a0ba7730819b9e0ca0307635da8197c0d9c52db594cdac65ed600f94fb6b7cff71ced1b1a75d25a4f2e82a31ae1eafd7b93f8f8f32d982afdd9a0000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>openButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>openBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>saveButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>saveBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>saveAsButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>saveAsBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>quitButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>closeQuery()</slot>
+    </connection>
+    <connection>
+        <sender>titleEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>setModified()</slot>
+    </connection>
+    <connection>
+        <sender>levelCommentEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>setModified()</slot>
+    </connection>
+    <connection>
+        <sender>newCharsEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>setModified()</slot>
+    </connection>
+    <connection>
+        <sender>linesTextEdit</sender>
+        <signal>textChanged()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>setModified()</slot>
+    </connection>
+    <connection>
+        <sender>fontButton</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchEditorDlg</receiver>
+        <slot>fontBtnClicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>titleEdit</tabstop>
+    <tabstop>levelListView</tabstop>
+    <tabstop>upBtn</tabstop>
+    <tabstop>downBtn</tabstop>
+    <tabstop>newBtn</tabstop>
+    <tabstop>deleteBtn</tabstop>
+    <tabstop>levelCommentEdit</tabstop>
+    <tabstop>newCharsEdit</tabstop>
+    <tabstop>linesTextEdit</tabstop>
+    <tabstop>fontButton</tabstop>
+    <tabstop>openButton</tabstop>
+    <tabstop>saveButton</tabstop>
+    <tabstop>saveAsButton</tabstop>
+    <tabstop>quitButton</tabstop>
+</tabstops>
+<slots>
+    <slot>openBtnClicked()</slot>
+    <slot>saveBtnClicked()</slot>
+    <slot>saveAsBtnClicked()</slot>
+    <slot>closeQuery()</slot>
+    <slot>setModified()</slot>
+    <slot>fontBtnClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>ktextedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
+</UI>

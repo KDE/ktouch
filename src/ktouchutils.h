@@ -1,8 +1,8 @@
 /***************************************************************************
- *   ktouchlecture.h                                                       *
- *   ---------------                                                       *
- *   Copyright (C) 2003 by Håvard Frøiland                                 *
- *   haavard@users.sourceforge.net                                         *
+ *   ktouchutils.h                                                         *
+ *   -------------                                                         *
+ *   Copyright (C) 2000 by HÃ¥vard FrÃ¸iland, 2004 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -10,18 +10,11 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHMACROS_H
-#define KTOUCHMACROS_H
+#ifndef KTOUCHUTILS_H
+#define KTOUCHUTILS_H
+ 
+#include <qstring.h>
+ 
+QString format_speed(double speed);
 
-template <typename T>
-T min(T x, T y) {
-    return (x < y) ? x : y;
-}
-
-template <typename T>
-T max(T x, T y) {
-    return (x > y) ? x : y;
-}
-
-#endif
-
+#endif  // KTOUCHUTILS_H

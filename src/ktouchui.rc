@@ -1,14 +1,17 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
 <kpartgui name="ktouch" version="2">
 <MenuBar>
+  <Menu name="file"><text>F&amp;ile</text>
+    <Action name="file_editlecture" />
+    <Action name="file_edittest" />
+    <Action name="file_editkeyboard" />
+  </Menu>
   <Menu name="training"><text>T&amp;raining</text>
     <Action name="training_newsession" />
     <Action name="training_run" />
     <Action name="training_pause" />
     <Separator/>
     <Action name="training_stats" />
-    <Separator/>
-    <Action name="lecture_edit" />
     <Action name="default_lectures" />
   </Menu>
   <Menu name="settings"><text>&amp;Settings</text>
