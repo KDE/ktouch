@@ -60,10 +60,6 @@ KTouch::KTouch():KMainWindow()
 //Object::connect(	touchTrain->line,    SIGNAL(isOk(QChar)),
 //				touchStat,    SLOT(gotOk(QChar)));
 
-
-
-
-
 //Object::connect(	touchTrain->status,  SIGNAL(stop()),
 //				touchStat,    SLOT(stop()));
 //Object::connect(	touchTrain->status,  SIGNAL(start()),
@@ -158,8 +154,6 @@ void KTouch::openDocumentFile(const KURL& url)
 
 void KTouch::saveOptions()
 {
-	touchTrain->saveOptions();
-
 	//** General Options ********************************************************
 	config->setGroup("General Options");
 	config->writeEntry("Geometry", size());
@@ -167,8 +161,6 @@ void KTouch::saveOptions()
 	config->writeEntry("Show Statusbar",viewStatusBar->isChecked());
 	config->writeEntry("ToolBarPos", (int) toolBar("mainToolBar")->barPos());
 	fileOpenRecent->saveEntries(config,"Recent Files");
-
-
 }
 
 void KTouch::readOptions()
@@ -209,7 +201,8 @@ void KTouch::readOptions()
 bool KTouch::queryExit()
 {
     saveOptions();
-    //touchStat->saveStat();
+    touchStat->saveStat();
+    
     return true;
 }
 

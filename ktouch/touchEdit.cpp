@@ -35,100 +35,102 @@ TouchEdit::TouchEdit( QWidget* parent, TouchLecture* l)
 
 TouchEdit::~TouchEdit()
 {
+
 }
 
 void TouchEdit::fetchLevel(int level)
 {
-	QString res;
-	std::vector<QString> levelData=*(lecture->levelVector)[level];
-
-	levelNumber->display(level+1);
-
- 	description->setText(levelData[0]);
-
-			for(unsigned int j=1;j<levelData.size();j++)
-			{
-       	if(j>1) res.append("\n");
-				res.append(levelData[j]);
-			}
-		
-	levelText->setText(res);
+    QString res;
+    std::vector<QString> levelData=*(lecture->levelVector)[level];
+    
+    levelNumber->display(level+1);
+    
+    description->setText(levelData[0]);
+    
+    for(unsigned int j=1;j<levelData.size();j++)
+    {
+	if(j>1) res.append("\n");
+	res.append(levelData[j]);
+    }
+    
+    levelText->setText(res);
 }
 
 /** Moves level one place up */
 void TouchEdit::moveUp()
 {
-	int current=levelList->currentItem();
-	if(current==-1)
+    int current=levelList->currentItem();
+    if(current==-1)
   	kdDebug() << "No item selected " << current << endl;
-	else
-  {
-		if(current>0)
-	  {
-			kdDebug() << "moveing up " << current << endl;
- 		 	swapLevel(current,current-1);
- 	  }
+    else
+    {
+	if(current>0)
+	{
+	    kdDebug() << "moveing up " << current << endl;
+	    swapLevel(current,current-1);
+	}
   	else
-  		kdDebug() << "Can't performe move, this item is on the top!" << endl;
-  }
+	    kdDebug() << "Can't performe move, this item is on the top!" << endl;
+    }
 }
 
 /** Moves level one place down */
 void TouchEdit::moveDown()
 {
-	int current=levelList->currentItem();
- 	if(current==-1)
+    int current=levelList->currentItem();
+    if(current==-1)
   	kdDebug() << "No item selected " << current << endl;
-	else
-  {
-
-		if(current<(lecture->levelVector.size()-1))
+    else
     {
-		  kdDebug() << "moveing down " << current << endl;
-  	  swapLevel(current,current+1);
+	
+	if(current<(lecture->levelVector.size()-1))
+	{
+	    kdDebug() << "moveing down " << current << endl;
+	    swapLevel(current,current+1);
   	}
   	else
-  		kdDebug() << "Can't performe move, this item is on the bottom" << endl;
-  }
-
+	    kdDebug() << "Can't performe move, this item is on the bottom" << endl;
+    }
+    
 }
-/** No descriptions */
+
 void TouchEdit::swapLevel(int a,int b)
 {
-  // moving data around
-	std::vector<QString> *levelTmp=lecture->levelVector[b];
-	lecture->levelVector[b]=lecture->levelVector[a];
-	lecture->levelVector[a]=levelTmp;
-
-	// fixing up view
-  levelList->clear();
-	fillLevelList();  //fixme this takes to much computing
-	
-
-  levelList->setCurrentItem(b);
-
+    // moving data around
+    std::vector<QString> *levelTmp=lecture->levelVector[b];
+    lecture->levelVector[b]=lecture->levelVector[a];
+    lecture->levelVector[a]=levelTmp;
+    
+    // fixing up view
+    levelList->clear();
+    fillLevelList();  //fixme this takes to much computing
+    
+    
+    levelList->setCurrentItem(b);
 }
+
 /** Filles up the level list */
 void TouchEdit::fillLevelList()
 {
-	for(unsigned int i=0;i<lecture->levelVector.size();i++)
-	{
-		
-			std::vector<QString> levelData=*(lecture->levelVector)[i];
-			levelList->insertItem(levelData[0]);
-	}
-
+    for(unsigned int i=0;i<lecture->levelVector.size();i++)
+    {
+	std::vector<QString> levelData=*(lecture->levelVector)[i];
+	levelList->insertItem(levelData[0]);
+    }
 }
+
 /** The description of the active level has changed */
 void TouchEdit::descriptionChanged(const QString& d)
 {
-	//QString tmp=d.copy();
-	int current=levelList->currentItem();
-  if(current!=-1)
-  {
-    kdDebug() << "changing level description to " << d << endl;
-		//std::vector<QString> *levelTmp=lecture->levelVector[current];
-		//levelTmp[0]=d;
-    levelList->changeItem(QString(d),current);
-  }
+    int current=levelList->currentItem();
+    if(current!=-1)
+    {
+	QString tmp=d.copy();  
+	
+	kdDebug() << "changing level description to " << d << endl;
+	//std::vector<QString> *levelTmp=lecture->levelVector[current];
+	//levelTmp[0]=d;
+	levelList->changeItem(tmp,current);
+    }
 }
+
