@@ -51,6 +51,8 @@ class QPainter;
  */
 class KTouchSlideLine : public QWidget {
     Q_OBJECT
+  private:
+    bool m_rightJustify; // do we right align the widget-for langauges like hebrew which is written from right to left.
   public:
     /// Constructor
     KTouchSlideLine(QWidget *parent);
