@@ -51,6 +51,7 @@ class TouchLecture : public QObject
 		vector<vector<QString> *> levelVector;
 		QString fileName;
 		QWidget *parent;
+		bool levelHasChanged;
 };
 
 #endif

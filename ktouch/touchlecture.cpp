@@ -24,6 +24,7 @@ TouchLecture::TouchLecture()
 	fileName="";
 	level=0;
 	pos=1;
+	levelHasChanged=false;
 };
 
 QString TouchLecture::getName()
@@ -94,44 +95,48 @@ void TouchLecture::loadLectureFile(QString f)
 
 QString TouchLecture::getNextLine()
 {
-  if (levelVector.empty())
+	if(levelHasChanged)
 	{
-    return "No file loaded";
+		setLevel(level);
 	}
-  if(level<(levelVector.size()))
-  {
-     vector<QString> test=*levelVector[level];
 
-     if (pos>=(test.size()-1))
-	   {
-		   pos=1;
-	   }
-     return test[pos++];
-  }
-  return "Error in getNextLine()";
+	if (levelVector.empty())
+		{
+		return "No file loaded";
+		}
+	if(level<(levelVector.size()))
+	{
+		vector<QString> test=*levelVector[level];
+
+		if (pos>=(test.size()-1))
+		{
+			pos=1;
+		}
+		return test[pos++];
+	}
+	return "Error in getNextLine()";
 };
 
 
 void TouchLecture::levelUp()
 {
-	if(level<(levelVector.size()-1))
+	if(level<(levelVector.size()-1) && !levelHasChanged)
 	{
 		level++;
-
-		//is good to start at pos 0 every time you change level?
 		pos=1;
-		setLevel(level);
+		levelHasChanged=true;
+		//setLevel(level);
 	}
 };
 
 void TouchLecture::levelDown()
 {
-	if(level>0)
+	if(level>0 && !levelHasChanged)
 	{
 		level--;
-		//is good to start at pos 0 every time you change level?
 		pos=1;
-		setLevel(level);
+		levelHasChanged=true;
+		//setLevel(level);
 		}
 	};
 
