@@ -71,62 +71,54 @@
             <property>
                 <name>wordwrap</name>
             </property>
-            <widget>
-                <class>QCheckBox</class>
+            <vbox>
                 <property stdset="1">
-                    <name>name</name>
-                    <cstring>showColor</cstring>
-                </property>
-                <property stdset="1">
-                    <name>geometry</name>
-                    <rect>
-                        <x>20</x>
-                        <y>30</y>
-                        <width>230</width>
-                        <height>21</height>
-                    </rect>
+                    <name>margin</name>
+                    <number>11</number>
                 </property>
                 <property stdset="1">
-                    <name>text</name>
-                    <string>Use color on keyboard</string>
+                    <name>spacing</name>
+                    <number>6</number>
                 </property>
-                <property>
-                    <name>toolTip</name>
-                    <string>Paint keybord with colors</string>
-                </property>
-                <property>
-                    <name>whatsThis</name>
-                    <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
-                </property>
-            </widget>
-            <widget>
-                <class>QCheckBox</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>showAnimation</cstring>
-                </property>
-                <property stdset="1">
-                    <name>geometry</name>
-                    <rect>
-                        <x>20</x>
-                        <y>60</y>
-                        <width>250</width>
-                        <height>21</height>
-                    </rect>
-                </property>
-                <property stdset="1">
-                    <name>text</name>
-                    <string>Show next key to press on keyboard</string>
-                </property>
-                <property>
-                    <name>toolTip</name>
-                    <string>Animated keyboard</string>
-                </property>
-                <property>
-                    <name>whatsThis</name>
-                    <string>If you want KTouch to indicate which finger to move and where to press, you should check this option</string>
-                </property>
-            </widget>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>showColor</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Use color on keyboard</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
+                    </property>
+                </widget>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>showAnimation</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Show next key to press on keyboard</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Animated keyboard</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>If you want KTouch to indicate which finger to move and where to press, you should check this option</string>
+                    </property>
+                </widget>
+            </vbox>
         </widget>
         <widget row="3"  column="2" >
             <class>QPushButton</class>

@@ -16,15 +16,15 @@
         </rect>
     </property>
     <property stdset="1">
-        <name>caption</name>
-        <string>Training</string>
-    </property>
-    <property stdset="1">
         <name>minimumSize</name>
         <size>
             <width>300</width>
             <height>400</height>
         </size>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Training</string>
     </property>
     <property stdset="1">
         <name>focusPolicy</name>
@@ -104,123 +104,115 @@
                 <name>whatsThis</name>
                 <string>When touch-typing the levels will go up if you are typing faster than the "Limit Up", and it will go down if you type slower than the "Limit Down". Enable automatic adjustment by ticking the "Automatic level adjustment"</string>
             </property>
-            <widget>
-                <class>QLayoutWidget</class>
+            <vbox>
                 <property stdset="1">
-                    <name>name</name>
-                    <cstring>Layout1</cstring>
+                    <name>margin</name>
+                    <number>11</number>
                 </property>
                 <property stdset="1">
-                    <name>geometry</name>
-                    <rect>
-                        <x>10</x>
-                        <y>60</y>
-                        <width>200</width>
-                        <height>100</height>
-                    </rect>
+                    <name>spacing</name>
+                    <number>6</number>
                 </property>
-                <property>
-                    <name>layoutMargin</name>
-                </property>
-                <grid>
+                <widget>
+                    <class>QCheckBox</class>
                     <property stdset="1">
-                        <name>margin</name>
-                        <number>10</number>
+                        <name>name</name>
+                        <cstring>autoLevel</cstring>
                     </property>
                     <property stdset="1">
-                        <name>spacing</name>
-                        <number>6</number>
+                        <name>text</name>
+                        <string>Automatic level adjustment</string>
                     </property>
-                    <widget row="1"  column="0" >
-                        <class>QLabel</class>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Automatic level adjustment - changes depending on how fast you type.</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Enable this if you want to let KTouch adjust the levels for you automatically.</string>
+                    </property>
+                </widget>
+                <widget>
+                    <class>QLayoutWidget</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>Layout1</cstring>
+                    </property>
+                    <property>
+                        <name>layoutMargin</name>
+                    </property>
+                    <grid>
                         <property stdset="1">
-                            <name>name</name>
-                            <cstring>TextLabel2</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>text</name>
-                            <string>Limit Down:</string>
-                        </property>
-                    </widget>
-                    <widget row="0"  column="1" >
-                        <class>QSpinBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>limitUp</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>minValue</name>
+                            <name>margin</name>
                             <number>10</number>
                         </property>
                         <property stdset="1">
-                            <name>maxValue</name>
-                            <number>300</number>
+                            <name>spacing</name>
+                            <number>6</number>
                         </property>
-                        <property stdset="1">
-                            <name>buttonSymbols</name>
-                            <enum>UpDownArrows</enum>
-                        </property>
-                    </widget>
-                    <widget row="1"  column="1" >
-                        <class>QSpinBox</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>limitDown</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>minValue</name>
-                            <number>10</number>
-                        </property>
-                        <property stdset="1">
-                            <name>maxValue</name>
-                            <number>300</number>
-                        </property>
-                        <property stdset="1">
-                            <name>buttonSymbols</name>
-                            <enum>UpDownArrows</enum>
-                        </property>
-                    </widget>
-                    <widget row="0"  column="0" >
-                        <class>QLabel</class>
-                        <property stdset="1">
-                            <name>name</name>
-                            <cstring>TextLabel1</cstring>
-                        </property>
-                        <property stdset="1">
-                            <name>text</name>
-                            <string>Limit Up :</string>
-                        </property>
-                    </widget>
-                </grid>
-            </widget>
-            <widget>
-                <class>QCheckBox</class>
-                <property stdset="1">
-                    <name>name</name>
-                    <cstring>autoLevel</cstring>
-                </property>
-                <property stdset="1">
-                    <name>geometry</name>
-                    <rect>
-                        <x>20</x>
-                        <y>30</y>
-                        <width>170</width>
-                        <height>21</height>
-                    </rect>
-                </property>
-                <property stdset="1">
-                    <name>text</name>
-                    <string>Automatic level adjustment</string>
-                </property>
-                <property>
-                    <name>toolTip</name>
-                    <string>Automatic level adjustment - changes depending on how fast you type.</string>
-                </property>
-                <property>
-                    <name>whatsThis</name>
-                    <string>Enable this if you want to let KTouch adjust the levels for you automatically.</string>
-                </property>
-            </widget>
+                        <widget row="1"  column="0" >
+                            <class>QLabel</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>TextLabel2</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>text</name>
+                                <string>Limit Down:</string>
+                            </property>
+                        </widget>
+                        <widget row="0"  column="1" >
+                            <class>QSpinBox</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>limitUp</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>buttonSymbols</name>
+                                <enum>UpDownArrows</enum>
+                            </property>
+                            <property stdset="1">
+                                <name>maxValue</name>
+                                <number>300</number>
+                            </property>
+                            <property stdset="1">
+                                <name>minValue</name>
+                                <number>10</number>
+                            </property>
+                        </widget>
+                        <widget row="1"  column="1" >
+                            <class>QSpinBox</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>limitDown</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>buttonSymbols</name>
+                                <enum>UpDownArrows</enum>
+                            </property>
+                            <property stdset="1">
+                                <name>maxValue</name>
+                                <number>300</number>
+                            </property>
+                            <property stdset="1">
+                                <name>minValue</name>
+                                <number>10</number>
+                            </property>
+                        </widget>
+                        <widget row="0"  column="0" >
+                            <class>QLabel</class>
+                            <property stdset="1">
+                                <name>name</name>
+                                <cstring>TextLabel1</cstring>
+                            </property>
+                            <property stdset="1">
+                                <name>text</name>
+                                <string>Limit Up :</string>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+            </vbox>
         </widget>
         <widget row="1"  column="0"  rowspan="1"  colspan="3" >
             <class>QGroupBox</class>
@@ -243,34 +235,35 @@
             <property>
                 <name>wordwrap</name>
             </property>
-            <widget>
-                <class>QCheckBox</class>
+            <vbox>
                 <property stdset="1">
-                    <name>name</name>
-                    <cstring>remember</cstring>
-                </property>
-                <property stdset="1">
-                    <name>geometry</name>
-                    <rect>
-                        <x>20</x>
-                        <y>30</y>
-                        <width>220</width>
-                        <height>30</height>
-                    </rect>
+                    <name>margin</name>
+                    <number>11</number>
                 </property>
                 <property stdset="1">
-                    <name>text</name>
-                    <string>Remembers your speed and level</string>
+                    <name>spacing</name>
+                    <number>6</number>
                 </property>
-                <property>
-                    <name>toolTip</name>
-                    <string>Your speed and level will be recorded and brought back the next time you open KTouch.</string>
-                </property>
-                <property>
-                    <name>whatsThis</name>
-                    <string>An option letting you choose if you want your level and speed recorded when you quit.</string>
-                </property>
-            </widget>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>remember</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Remembers your speed and level</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Your speed and level will be recorded and brought back the next time you open KTouch.</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>An option letting you choose if you want your level and speed recorded when you quit.</string>
+                    </property>
+                </widget>
+            </vbox>
         </widget>
     </grid>
 </widget>
