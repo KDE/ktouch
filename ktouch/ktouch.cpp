@@ -49,8 +49,8 @@
 
 KTouch::KTouch():KMainWindow()
 {
-	config=kapp->config();
-	dirs = KGlobal::dirs();
+  config=kapp->config();
+  dirs = KGlobal::dirs();
 
 	touchLecture = new TouchLecture();
 	touchStat    = new TouchStat();
@@ -97,16 +97,16 @@ KTouch::KTouch():KMainWindow()
 
 	slotModeTrain();
 	readOptions();
-	touchLine->getNextLine();
+//	touchLine->getNextLine();
 }
 
 KTouch::~KTouch()
 {
   delete touchLecture;
   delete touchStat;
-  delete touchStatus;
-  delete touchLine;  
-  delete touchKeyboard;
+//  delete touchStatus;
+//  delete touchLine;  
+//  delete touchKeyboard;
 }
 
 
