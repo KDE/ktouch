@@ -47,7 +47,7 @@ void TouchStatus::gotError(QChar)
 void TouchStatus::gotOk(QChar c)
 {
   bufferOk++;
-  if(c==" " || c==13)
+  if(c==" " || c.digitValue()==13)
      wordCount++;
 }
 

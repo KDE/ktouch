@@ -160,3 +160,4 @@ void TouchLine::setFont(QFont f)
 }
 
 
+#include "touchline.moc"

@@ -42,7 +42,7 @@ void TouchStat::gotError(QChar c)
 void TouchStat::gotOk(QChar c)
 {
   arrayStat[c].ok++;
-  if(c==" " || c==13)
+  if(c==" " || c.digitValue()==13)
      wordCount++;
 }
 
