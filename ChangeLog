@@ -1,3 +1,8 @@
+2004-11-02 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Added the checks in the quick-select menues
+  * Now the current lecture is again saved and restored the next time 
+    KTouch is started.
+
 2004-11-01 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Moved all configuration data to Prefs (using KConfig XT) or
     to the KTouch Main Widget
@@ -16,18 +21,22 @@
   * Converted all not yet converted source files to UTF-8
 
 2004-09-30 Andreas Nicolai <andreas.nicolai@gmx.net>
-  * Implemented support for XML lecture files and ported some lecture files to XML
+  * Implemented support for XML lecture files and ported some lecture 
+    files to XML
   * Implemented new lecture editor
   * Added generic open request dialog (also used for all other editors)
   * Reordered KTouch main class and cleaned up startup code
-  * Added titles to lectures, so that file names do not appear in the context menu anylonger
+  * Added titles to lectures, so that file names do not appear in the 
+    context menu anylonger
   * Fixed the deprecated download/upload routines
-  * Revised the configuration class and added new config data (still to be syncronized with KConfig XT)
+  * Revised the configuration class and added new config data (still to 
+    be syncronized with KConfig XT)
   * plus much more...
 
 2004-09-30 Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
   * Port to KConfig XT 
-  * Port the Trainig ->Default Lectures, Settings->Keyboard Layouts, Settings->Keyboard Color Schemes to KSelectAction
+  * Port the Trainig ->Default Lectures, Settings->Keyboard Layouts, 
+    Settings->Keyboard Color Schemes to KSelectAction
   * Add tooltips and QWhatsThis help in Config dialogs
 
 2004-04-02  Andreas Nicolai <andreas.nicolai@gmx.net>

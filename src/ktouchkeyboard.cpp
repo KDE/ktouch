@@ -106,6 +106,7 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
+		kdDebug() << "[KTouchKeyboard::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
         if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
@@ -139,6 +140,7 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
 		else
 			key->m_font = Prefs::font();
 	}
+	// kdDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
     resizeEvent(NULL);  // paint the keyboard
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 }
@@ -189,9 +191,12 @@ void KTouchKeyboard::paintEvent(QPaintEvent *) {
 
 
 void KTouchKeyboard::resizeEvent(QResizeEvent *) {
+	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
+	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Keyboard = " << m_keyboardWidth << "x" << m_keyboardHeight << endl;
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
     double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
-    double scale = std::min(hScale, vScale);
+    double scale = std::max(1.0, std::min(hScale, vScale));
+	// kdDebug() << "[KTouchKeyboard::resizeEvent]  using scale = " << scale << endl;
     m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
@@ -251,7 +256,7 @@ void KTouchKeyboard::createDefaultKeyboard() {
     m_connectorList.append( KTouchKeyConnector(  8,   8,   0, 0) );
     m_connectorList.append( KTouchKeyConnector( 13,  13, '+', 0) );
     updateColours();
-    m_currentLayout="number";
+    m_currentLayout="number.keyboard";
 }
 
 
