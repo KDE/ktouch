@@ -496,7 +496,8 @@ void KTouch::setupActions() {
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
      m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
     m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
-    
+    // actions for the Training menu
+    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
     // Finally the connections
     connect( m_trainer, SIGNAL(statusbarMessageChanged(const QString&)), this, SLOT(changeStatusbarMessage(const QString&)) );
     connect( m_trainer, SIGNAL(statusbarStatsChanged(unsigned int, unsigned int, unsigned int)),
@@ -510,7 +511,6 @@ void KTouch::setupQuickSettings() {
             layouts_list.append( KTouchConfig().m_keyboardLayouts[i]);
      }
     m_keyboardLayoutAction->setItems(layouts_list);
-    m_keyboardLayoutAction->setEnabled(true);
     m_keyboardLayoutAction->setCurrentItem(Prefs::layout());  
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
     // add the colour schemes
@@ -519,25 +519,17 @@ void KTouch::setupQuickSettings() {
 		schemes_list.append(KTouchConfig().m_keyboardColors[i].m_name);
     }
     m_keyboardColorAction->setItems(schemes_list);
-    m_keyboardColorAction->setEnabled(true);
     m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());  
     connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
     
     // Then get the trainings menu
-    QPopupMenu *trainingMenu = static_cast<QPopupMenu*>(factory()->container("training",this));
-    // and add default lectures
-    if (trainingMenu!=NULL && KTouchConfig().m_lectureList.count()>0) {
-        QSignalMapper *signalMapper = new QSignalMapper( this );
-        connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeLecture(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Default Lectures"), trainingMenu);
-        for (unsigned int i=0; i<KTouchConfig().m_lectureList.count(); ++i) {
-            KAction *action = new KAction( KTouchConfig().m_lectureList[i]);
-            menu->insert(action);
-            connect( action, SIGNAL(activated()), signalMapper, SLOT(map()) );
-            signalMapper->setMapping(action, i);
-        };
-        menu->plug(trainingMenu);
-    };
+    QStringList lectures_list;
+    for (unsigned int i=0; i<KTouchConfig().m_lectureList.count(); ++i) {
+            lectures_list.append( KTouchConfig().m_lectureList[i]);
+     }
+    m_defaultLectureAction->setItems(lectures_list);
+    m_defaultLectureAction->setCurrentItem(Prefs::layout());  
+    connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
 }
 
 bool KTouch::saveModified() {

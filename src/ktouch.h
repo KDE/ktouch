@@ -120,6 +120,7 @@ class KTouch : public KMainWindow {
     
     KSelectAction        *m_keyboardLayoutAction;
     KSelectAction        *m_keyboardColorAction;
+    KSelectAction        *m_defaultLectureAction;
 
     KTouchEditor           *m_editorDlg;            ///< Pointer to the lecture editor dialog.
     KTouchStartNewDialog   *m_startNewDlg;          ///< Pointer to the "start new session" dialog.
