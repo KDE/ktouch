@@ -27,7 +27,6 @@
 #include <kmessagebox.h>
 #include <kdebug.h>
 #include <kpopupmenu.h>
-#include <kkeydialog.h>
 
 // Own header files
 #include "ktouchpref.h"
@@ -465,12 +464,6 @@ void KTouch::reloadLecture() {
     // so that the training won't crash.
 }
 
-
-void KTouch::slotConfigureKeys()
-{
-  KKeyDialog::configure( actionCollection(), this );
-}
-
 void KTouch::setupActions() {
     // actions for the file menu
     KStdAction::openNew(this, SLOT(fileNew()), actionCollection());
@@ -478,7 +471,7 @@ void KTouch::setupActions() {
     KStdAction::save(this, SLOT(fileSave()), actionCollection());
     KStdAction::saveAs(this, SLOT(fileSaveAs()), actionCollection());
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
-    KStdAction::keyBindings( this, SLOT( slotConfigureKeys() ), actionCollection() );
+    KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
 
     // actions for the training menu
     new KAction(i18n("&Start New Training Session"), "launch", 0,
