@@ -321,11 +321,11 @@ void KTouch::optionsPreferences() {
 void KTouch::updateSettings()
 {
 	//TODO:test if this setting has changed
+	//This applies a new color scheme for the keyboard
 	changeColor(Prefs::colorScheme());
 	//not sure if testing is required before applying all that or could that be done in any case?
 	m_statusWidget->applyPreferences();
     	m_slideLineWidget->applyPreferences();
-   	m_keyboardWidget->applyPreferences(true);  // set preferences silently here
 }
 
 
@@ -347,6 +347,8 @@ void KTouch::changeKeyboard(int num) {
 void KTouch::changeColor(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardColors.count()) return;
     KTouchConfig().m_keyboardColorScheme = num;
+    Prefs::setColorScheme(num);
+    Prefs::writeConfig();
     m_keyboardWidget->applyPreferences(false);
 }
 
@@ -509,7 +511,7 @@ void KTouch::setupQuickSettings() {
         menu->plug(settingsMenu);
     };
     // add the colour schemes
-    //TODO use a KSelectAction and connect to changeColors, write the scheme number in Prefs
+    //TODO use a KSelectAction and connect to changeColors
     if (settingsMenu) {
         QSignalMapper *signalMapper = new QSignalMapper( this );
         connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeColor(int)) );
