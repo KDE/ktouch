@@ -86,14 +86,9 @@ class KTouch : public KMainWindow
 
 		void slotFileEdit();
 
-		void slotFileQuit();
 		/** put the marked text/object into the clipboard and remove
 		*	it from the document
 		*/
-		void slotViewToolBar();
-		/** toggles the statusbar
-		*/
-		void slotViewStatusBar();
 		/** changes the statusbar contents for the standard label permanently, used to indicate current actions.
 		* @param text the text that is displayed in the statusbar
 		*/
@@ -121,8 +116,6 @@ class KTouch : public KMainWindow
 		KRecentFilesAction* fileOpenRecent;
 		KAction* fileClose;
 		KAction* fileQuit;
-		KToggleAction* viewToolBar;
-		KToggleAction* viewStatusBar;
 		KToggleAction* statShow;
 		KStandardDirs *dirs;
 		TouchStatWindow *touchStatWindow;

@@ -60,7 +60,8 @@ KTouch::KTouch():KMainWindow()
     // call inits to invoke all other construction parts
     initStatusBar();
     initActions();
-    
+    setAutoSaveSettings();
+
     kdDebug() << "read option" << endl;
     readOptions();
     
@@ -79,10 +80,10 @@ void KTouch::initActions()
 //	fileSave = KStdAction::save(this, SLOT(slotFileSave()), actionCollection());
 //	fileSaveAs = KStdAction::saveAs(this, SLOT(slotFileSaveAs()), actionCollection());
     fileOpenRecent = KStdAction::openRecent(this, SLOT(slotFileOpenRecent(const KURL&)), actionCollection());
-    fileQuit = KStdAction::quit(this, SLOT(slotFileQuit()), actionCollection());
-    viewToolBar = KStdAction::showToolbar(this, SLOT(slotViewToolBar()), actionCollection());
-    viewStatusBar = KStdAction::showStatusbar(this, SLOT(slotViewStatusBar()), actionCollection());
-    
+    fileQuit = KStdAction::quit(this, SLOT(close()), actionCollection());
+    createStandardStatusBarAction();
+    setStandardToolBarMenuEnabled(true);
+
     new KAction(i18n("Keyboard..."),0,this,SLOT(slotOptionKeyboard()), actionCollection(),"optionKeyboard");
     new KAction(i18n("Training..."),0,this,SLOT(slotOptionTraining()), actionCollection(),"optionTraining");
     new KAction(i18n("General..."),0,this,SLOT(slotOptionGeneral()), actionCollection(),"optionGeneral"); 
@@ -99,8 +100,6 @@ void KTouch::initActions()
     fileOpenRecent->setStatusText(i18n("Opens a recently used file"));
     
     fileQuit->setStatusText(i18n("Quits the application"));
-    viewToolBar->setStatusText(i18n("Enables/disables the toolbar"));
-    viewStatusBar->setStatusText(i18n("Enables/disables the statusbar"));
     
     // use the absolute path to your ktouchui.rc file for testing purpose in createGUI();
     // createGUI("/home/haavard/cvs/kde/kdeedu/ktouch/ktouch/ktouchui.rc");
@@ -133,48 +132,20 @@ void KTouch::openDocumentFile(const KURL& url)
 
 void KTouch::saveOptions()
 {
-    //** General Options ********************************************************
-    config->setGroup("General Options");
-    config->writeEntry("Geometry", size());
-    config->writeEntry("Show Toolbar", viewToolBar->isChecked());
-    config->writeEntry("Show Statusbar",viewStatusBar->isChecked());
-    config->writeEntry("ToolBarPos", (int) toolBar("mainToolBar")->barPos());
     fileOpenRecent->saveEntries(config,"Recent Files");
 }
 
 void KTouch::readOptions()
 {
-    //** General Options ********************************************************
-    config->setGroup("General Options");
-    
-    // bar status settings
-    bool bViewToolbar = config->readBoolEntry("Show Toolbar", false);
-    viewToolBar->setChecked(bViewToolbar);
-    slotViewToolBar();
-    
-    bool bViewStatusbar = config->readBoolEntry("Show Statusbar", true);
-    viewStatusBar->setChecked(bViewStatusbar);
-    slotViewStatusBar();
-    
-    // bar position settings
-    KToolBar::BarPosition toolBarPos;
-    toolBarPos=(KToolBar::BarPosition) config->readNumEntry("ToolBarPos", KToolBar::Top);
-    toolBar("mainToolBar")->setBarPos(toolBarPos);
-    
+    //** General Options ***************************************************
     // initialize the recent file list
     fileOpenRecent->loadEntries(config,"Recent Files");
-    
-    // set the size of KTouch
-    QSize size(550,420);
-    size=config->readSizeEntry("Geometry",&size);
-    resize(size);
     
     // ** Recent files *******************************************************
     config->setGroup("Recent Files");
     KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
     
     touchLecture->load(url.directory(false,true)+url.fileName());
-    
 }
 
 bool KTouch::queryExit()
@@ -255,47 +226,6 @@ void KTouch::slotFileEdit()
     slotStatusMsg(i18n("Editing..."));
     
 }
-
-void KTouch::slotFileQuit()
-{
-    slotStatusMsg(i18n("Exiting..."));
-    close();
-}
-
-void KTouch::slotViewToolBar()
-{
-    slotStatusMsg(i18n("Toggling toolbar..."));
-    ///////////////////////////////////////////////////////////////////
-    // turn Toolbar on or off
-    if(!viewToolBar->isChecked())
-    {
-	toolBar("mainToolBar")->hide();
-    }
-    else
-    {
-	toolBar("mainToolBar")->show();
-    }
-    
-    slotStatusMsg(i18n("Ready."));
-}
-
-void KTouch::slotViewStatusBar()
-{
-    slotStatusMsg(i18n("Toggle the statusbar..."));
-    ///////////////////////////////////////////////////////////////////
-    //turn Statusbar on or off
-    if(!viewStatusBar->isChecked())
-    {
-	statusBar()->hide();
-    }
-    else
-    {
-	statusBar()->show();
-    }
-    
-    slotStatusMsg(i18n("Ready."));
-}
-
 
 void KTouch::slotStatusMsg(const QString &text)
 {
