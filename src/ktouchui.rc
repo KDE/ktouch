@@ -11,8 +11,8 @@
     <Action name="lecture_edit" />
   </Menu>
   <Menu name="settings"><text>&amp;Settings</text>
-    <ActionList name="keyboard_layouts" />
-    <ActionList name="standard_lectures" />
+    <Action name="keyboard_layouts" />
+    <Action name="keyboard_schemes" />
   </Menu>
 </MenuBar>
 <ToolBar name="mainToolBar"><text>Main Toolbar</text>

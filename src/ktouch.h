@@ -32,6 +32,7 @@ class KTouchSlideLine;
 class KTouchKeyboard;
 class KTouchTrainer;
 class KTouchStartNewDialog;
+class KSelectAction;
 
 /** This is the main window of KTouch.
  *  It handles the lecture, training data, status and all other widgets that are
@@ -116,6 +117,9 @@ class KTouch : public KMainWindow {
 
     KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".
+    
+    KSelectAction        *m_keyboardLayoutAction;
+    KSelectAction        *m_keyboardColorAction;
 
     KTouchEditor           *m_editorDlg;            ///< Pointer to the lecture editor dialog.
     KTouchStartNewDialog   *m_startNewDlg;          ///< Pointer to the "start new session" dialog.

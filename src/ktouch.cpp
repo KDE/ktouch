@@ -28,6 +28,7 @@
 #include <kdebug.h>
 #include <kpopupmenu.h>
 #include <kconfigdialog.h>
+#include <kaction.h>
 
 // Own header files
 //#include "ktouchpref.h"
@@ -484,10 +485,12 @@ void KTouch::setupActions() {
     m_trainingContinue->setEnabled(false); // because the training session is running initially
     new KAction(i18n("Show Training S&tatistics"), "frame_chart", 0,
         this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
-
+ 
     // actions for the settings menu
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
-
+     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
+    m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
+    
     // Finally the connections
     connect( m_trainer, SIGNAL(statusbarMessageChanged(const QString&)), this, SLOT(changeStatusbarMessage(const QString&)) );
     connect( m_trainer, SIGNAL(statusbarStatsChanged(unsigned int, unsigned int, unsigned int)),
@@ -495,35 +498,25 @@ void KTouch::setupActions() {
 }
 
 void KTouch::setupQuickSettings() {
-    // First get the settings menu
-    QPopupMenu *settingsMenu = static_cast<QPopupMenu*>(factory()->container("settings",this));
-    // and add keyboard layouts
-    if (settingsMenu!=NULL && KTouchConfig().m_keyboardLayouts.count()>0) {
-        QSignalMapper *signalMapper = new QSignalMapper( this );
-        connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeKeyboard(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Keyboard Layouts"), settingsMenu);
-        for (unsigned int i=0; i<KTouchConfig().m_keyboardLayouts.count(); ++i) {
-            KAction *action = new KAction( KTouchConfig().m_keyboardLayouts[i]);
-            menu->insert(action);
-            connect( action, SIGNAL(activated()), signalMapper, SLOT(map()) );
-            signalMapper->setMapping(action, i);
-        };
-        menu->plug(settingsMenu);
-    };
+    //Add layouts
+    QStringList layouts_list;
+    for (unsigned int i=0; i<KTouchConfig().m_keyboardLayouts.count(); ++i) {
+            layouts_list.append( KTouchConfig().m_keyboardLayouts[i]);
+     }
+    m_keyboardLayoutAction->setItems(layouts_list);
+    m_keyboardLayoutAction->setEnabled(true);
+    m_keyboardLayoutAction->setCurrentItem(KTouchConfig().m_keyboardLayouts.findIndex(KTouchConfig().m_keyboardLayout));  
+    connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
     // add the colour schemes
-    //TODO use a KSelectAction and connect to changeColors
-    if (settingsMenu) {
-        QSignalMapper *signalMapper = new QSignalMapper( this );
-        connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(changeColor(int)) );
-        KActionMenu *menu = new KActionMenu(i18n("Keyboard Color Schemes"), settingsMenu);
-        for (unsigned int i=0; i<KTouchConfig().m_keyboardColors.count(); ++i) {
-            KAction *action = new KAction( KTouchConfig().m_keyboardColors[i].m_name);
-            menu->insert(action);
-            connect( action, SIGNAL(activated()), signalMapper, SLOT(map()) );
-            signalMapper->setMapping(action, i);
-        };
-        menu->plug(settingsMenu);
-    };
+    QStringList schemes_list;
+    for (unsigned int i=0; i<KTouchConfig().m_keyboardColors.count(); ++i) {
+		schemes_list.append(KTouchConfig().m_keyboardColors[i].m_name);
+    }
+    m_keyboardColorAction->setItems(schemes_list);
+    m_keyboardColorAction->setEnabled(true);
+    m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());  
+    connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
+    
     // Then get the trainings menu
     QPopupMenu *trainingMenu = static_cast<QPopupMenu*>(factory()->container("training",this));
     // and add default lectures
