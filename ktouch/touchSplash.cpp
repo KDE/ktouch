@@ -10,8 +10,9 @@ TouchSplash::TouchSplash(QWidget * parent, const char *name)
   pm.load(locate("appdata", "splash.png"));
   setBackgroundPixmap(pm);
   int screen = QApplication::desktop()->screenNumber(parent);
-  setGeometry(QApplication::desktop()->screenGeometry(screen).width()/2-pm.width()/2, 
-              QApplication::desktop()->screenGeometry(screen).height()/2-pm.height()/2, 
+  QRect geom = QApplication::desktop()->screenGeometry(screen);
+  setGeometry(geom.width()/2-pm.width()/2 + geom.x(), 
+              geom.height()/2-pm.height()/2 + geom.y(), 
 	      pm.width(),pm.height());
 }
 
