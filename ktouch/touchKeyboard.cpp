@@ -18,13 +18,14 @@
 #include "touchkeyboard.h"
 #include "touchkeyboard.moc"
 #include "touchkey.h"
-//#include <iostream.h>
-#include <fstream.h>
 #include <stdlib.h>
 #include <string>
 #include <kconfig.h>
 #include <kapp.h>
 #include <kdebug.h>
+
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
