@@ -19,6 +19,7 @@
 #include "touchlecture.moc"
 #include <kdebug.h>
 
+
 using namespace std;
 
 TouchLecture::TouchLecture()
@@ -170,6 +171,12 @@ void TouchLecture::levelUp()
 		pos=1;
 		levelHasChanged=true;
 	}
+	else if(level==(levelVector.size()-1)) // the user has finished this training file...
+	  {
+	    kdDebug() << "Finished" << endl;
+	    //	    emit pause;
+
+	  }
 };
 
 void TouchLecture::levelDown()
