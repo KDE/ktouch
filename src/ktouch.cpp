@@ -323,6 +323,7 @@ void KTouch::optionsPreferences() {
 	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
 	configAutoLevelChangeToggled(Prefs::autoLevelChange());
 	dialog->show();
+	m_trainer->continueTraining();
 }
 // ----------------------------------------------------------------------------
 
@@ -369,6 +370,7 @@ void KTouch::changeLecture(int num) {
     	m_defaultLectureAction->setCurrentItem(num);
 	}
     m_trainer->goFirstLevel();
+	m_trainer->continueTraining();
 }
 // ----------------------------------------------------------------------------
 

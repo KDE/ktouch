@@ -62,8 +62,7 @@ KTouchTrainer::~KTouchTrainer() {
 void KTouchTrainer::goFirstLine() {
     m_statusWidget->setNewChars( m_lecture->level(m_level).newChars() );
     m_line=0;
-    m_incLinesCount=0;
-    m_decLinesCount=0;
+	m_session.reset();
     newLine();
 }
 
@@ -72,9 +71,14 @@ void KTouchTrainer::keyPressed(QChar key) {
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
         // TODO : Flash the line
-        QApplication::beep();
+        if (Prefs::beepOnError())   QApplication::beep();
         return;
     };
+	// don´t allow excessive amounts of characters per line
+	if (m_studentText.length()> 150) {
+        if (Prefs::beepOnError())   QApplication::beep();
+        return;
+	}
     m_studentText+=key;
     // we need to find out, if the key was correct or not
     unsigned int len = m_studentText.length();
@@ -127,6 +131,7 @@ void KTouchTrainer::enterPressed() {
         return;
     };
 
+	/* auto level change inside level was removed due to popular request
     if (Prefs::autoLevelChange()) {
         // if level increase criterion was fulfilled, increase line counter
         if (Prefs::upCorrectLimit() <= m_session.correctness()*100 &&
@@ -152,6 +157,8 @@ void KTouchTrainer::enterPressed() {
             return;
         };
     };
+	*/
+	
     // Now let's increase the line
     ++m_line;
     if (m_line >= m_lecture->level(m_level).count()) {
@@ -231,7 +238,6 @@ void KTouchTrainer::writeSessionHistory() {
 
 void KTouchTrainer::levelUp() {
     KAudioPlayer::play(m_levelUpSound);
-    m_incLinesCount=m_decLinesCount=0;
     ++m_level;  // increase the level
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
@@ -242,7 +248,6 @@ void KTouchTrainer::levelUp() {
 
 void KTouchTrainer::levelDown() {
     KAudioPlayer::play(m_levelUpSound);
-    m_incLinesCount=m_decLinesCount=0;
     if (m_level>0) {
        --m_level;
     }

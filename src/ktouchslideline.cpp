@@ -223,7 +223,7 @@ void KTouchSlideLine::drawCursor() {
      /*the small distance between the beging of the pixmap and the cursor:*/
      int dx=myX/*location of cursor*/ - (HORIZONTAL_MARGIN + m_shift)/*start of pixmap*/;
      
-     myX=(HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx ;
+     myX=(HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx+3 ;
      }
     if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
         p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);

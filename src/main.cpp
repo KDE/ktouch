@@ -37,8 +37,8 @@ int main(int argc, char **argv)
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");
-    about.addAuthor( "Håvard Frøiland", 0, "haavard@users.sourceforge.net" );
     about.addAuthor( "Andreas Nicolai", 0, "Andreas.Nicolai@gmx.net" );
+    about.addAuthor( "Håvard Frøiland", 0, "haavard@users.sourceforge.net" );
     about.addCredit( "David Vignoni", I18N_NOOP("Creator of the SVG icon."), "david80v@tin.it");
     about.addCredit( "Anne-Marie Mahfouf", I18N_NOOP("Lots of patches, fixes, updates..."), "annma@kde.org");
     about.addCredit( "All the creators of training and keyboard files...", 0, 0);

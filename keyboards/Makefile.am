@@ -3,7 +3,7 @@ keyboarddir = $(kde_datadir)/ktouch
 keyboard_DATA = \
 be.keyboard \
 de.keyboard \
-de-ch.keyboard \
+de-ch2.keyboard \
 dk.keyboard \
 dvorak.keyboard \
 dvorak_se.keyboard \
