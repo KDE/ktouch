@@ -116,7 +116,7 @@ void KTouchLectureEditor::saveAsBtnClicked() {
         transfer_from_dialog();
         m_currentURL = tmp;
         m_lecture.saveXML(this, m_currentURL);
-        this->setCaption(m_currentURL.url());
+        setCaption(m_currentURL.url());
         setModified(false);
     }
 }
@@ -253,8 +253,8 @@ void KTouchLectureEditor::transfer_to_dialog() {
     // set the title and the filename of the lecture
     titleEdit->setText(m_lecture.title());
 	lectureCommentEdit->setText(m_lecture.m_comment);
-    if (m_currentURL.isEmpty()) this->setCaption(i18n("KTouch Lecture Editor - ") + i18n("<new unnamed lecture file>"));
-    else                        this->setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
+    if (m_currentURL.isEmpty()) setCaption(i18n("KTouch Lecture Editor - ") + i18n("<new unnamed lecture file>"));
+    else                        setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     // copy the 'new char' strings of the lectures into the list view
     levelListView->clear();
     QValueVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
@@ -400,8 +400,8 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
 void KTouchLectureEditor::setModified(bool flag) {
     m_modified = flag;
     if (!m_currentURL.isEmpty()) {
-        if (flag) this->setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName() + i18n(" (modified)"));
-        else      this->setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
+        if (flag) setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName() + i18n(" (modified)"));
+        else      setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     }        
 }
 // -----------------------------------------------------------------------------
