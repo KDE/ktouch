@@ -31,7 +31,7 @@ class SlideLine: public QWidget
 
 	public:
 		SlideLine(QWidget *parent=0, const char *name=0);
-
+	        ~SlideLine();
 		void setTeacherText(QString text);
 		void setStudentText(QString text);
 		float offset;

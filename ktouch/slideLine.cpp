@@ -37,6 +37,10 @@ SlideLine::SlideLine(QWidget *parent, const char *name)
   timer->start(100,false);
 }
 
+SlideLine::~SlideLine()
+{
+  delete pixmap;
+}
 void SlideLine::slide()
 {
   if(width()<pixmapSize)
