@@ -18,39 +18,39 @@
 #ifndef TOUCHLECTURE_H
 #define TOUCHLECTURE_H
 
+#include <vector>
+
 #include <qobject.h>
 #include <qstring.h>
 #include <qfile.h>
 #include <qtextstream.h>
 #include <qmessagebox.h>
 
-#include <vector>
-
 class TouchLecture : public QObject
 {
-Q_OBJECT
+	Q_OBJECT
 
-public:
-  TouchLecture();//QWidget *parent=0);
-  QString getNextLine();
-  void loadLectureFile(QString fileName);
-  QString getName();
+	public:
+		TouchLecture();//QWidget *parent=0);
+		QString getNextLine();
+		void loadLectureFile(QString fileName);
+		QString getName();
 
-public slots:
-  void levelUp();
-  void levelDown();
-  void setLevel(unsigned int level);
+	public slots:
+		void levelUp();
+		void levelDown();
+		void setLevel(unsigned int level);
 
-signals:
-  void levelChanged(int);
-  void levelMessage(const QString&);
+	signals:
+		void levelChanged(int);
+		void levelMessage(const QString&);
 
-private:
-  unsigned int pos;
-  unsigned int level;
-  vector<vector<QString> *> levelVector;
-  QString fileName;
-  QWidget *parent;
+	private:
+		unsigned int pos;
+		unsigned int level;
+		vector<vector<QString> *> levelVector;
+		QString fileName;
+		QWidget *parent;
 };
 
 #endif

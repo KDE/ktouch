@@ -35,22 +35,26 @@ class TouchStatWindow : public TouchStatWindowLayout
 {
 	Q_OBJECT
 	public:
-			/** constructor */
+		/** constructor */
 		TouchStatWindow(TouchStat *stat, QWidget *parent=0, const char *name=0,bool modal=false);
-				/** destructor */
+		/** destructor */
 		~TouchStatWindow();
 
 	private:
+		// timer used to call updateToday()
 		QTimer *timer;
 
 	private slots:
+		// pointer to the real statistic data
 		TouchStat *stat;
+
 		void updateToday();
 		void autoUpdate(int);
+		void updateFiveTimes();
+		void updateTwentyTimes();
+		void updateAllTimes();
+
 		void setFocuseChar();
-		//void update5Times();
-		//void update20Times();
-		//void updateAllTimes();
 
 };
 

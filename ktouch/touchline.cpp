@@ -61,8 +61,8 @@ void TouchLine::keyPressed(QChar e)
 			{
 				emit nextKey(teacherLine.at(pos));
 			}
-      }
-	  else
+		}
+		else
 		{
 			emit isError(teacherLine.at(pos-1));
 			if(showError)

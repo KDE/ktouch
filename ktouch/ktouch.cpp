@@ -275,6 +275,7 @@ bool KTouch::queryExit()
 {
 	printf("queryExit");
 	saveOptions();
+	touchStat->saveStat();
 	return true;
 }
 

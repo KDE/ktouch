@@ -2,7 +2,8 @@
 
    (develop)
    * added sound support for automatic level change
-   * and made option for it in the general dialog
+   * made option for it in the general dialog
+   * statistics are now saved to file
 
 2001-09-18  Haavard Froeiland <haavard@users.sourceforge.net>
 

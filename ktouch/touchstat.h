@@ -23,9 +23,12 @@
   *@author haavard
   */
 
+#include <iostream.h>
+
 #include <qobject.h>
 #include <qdatetime.h>
-#include <iostream.h>
+
+#include <kstddirs.h>
 
 class TouchStat : public QObject
 {
@@ -48,7 +51,7 @@ class TouchStat : public QObject
 			int error;
 		};
 
-		struct charStat arrayStat[256];
+		struct charStat arrayStat[512];
 
 
 	public slots:
@@ -56,11 +59,13 @@ class TouchStat : public QObject
 		void gotOk(QChar);
 		void start();
 		void stop();
+		void saveStat();
 
 	private:
-
+		KStandardDirs *dirs;
 		QTime *time;
 		int totalTime;
+
 };
 
 #endif

@@ -27,44 +27,44 @@
 
 class SlideLine: public QWidget
 {
-  Q_OBJECT
+	Q_OBJECT
 
-public:
- 	SlideLine(QWidget *parent=0, const char *name=0);
+	public:
+		SlideLine(QWidget *parent=0, const char *name=0);
 
-  void setTeacherText(QString text);
-  void setStudentText(QString text);
-  float offset;
-  bool error;
-  QColor errorColor;
+		void setTeacherText(QString text);
+		void setStudentText(QString text);
+		float offset;
+		bool error;
+		QColor errorColor;
 
-  void setFont(QFont f);
-  QFont getFont();
+		void setFont(QFont f);
+		QFont getFont();
 
-protected:
- 	void paintEvent  ( QPaintEvent * );
-	void resizeEvent ( QResizeEvent * );
+	protected:
+		void paintEvent  ( QPaintEvent * );
+		void resizeEvent ( QResizeEvent * );
 
 
-private:
-  bool needRecreate;
-  QString teacherText;
-  QString studentText;
-  QPixmap *pixmap;
-  int pixmapSize;
-  QTimer *timer;
-  int pos;
-  bool textChanged;
-  int cursorCount;
-  int cursorX;
-  int cursorY;
-  int cursorHight;
-  void calculateWidth();
-  void calculateCursor();
-  QFont font;
+	private:
+		bool needRecreate;
+		QString teacherText;
+		QString studentText;
+		QPixmap *pixmap;
+		int pixmapSize;
+		QTimer *timer;
+		int pos;
+		bool textChanged;
+		int cursorCount;
+		int cursorX;
+		int cursorY;
+		int cursorHight;
+		void calculateWidth();
+		void calculateCursor();
+		QFont font;
 
-private slots:
-  void slide();
+	private slots:
+		void slide();
 };
 
 #endif

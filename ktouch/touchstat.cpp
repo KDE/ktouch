@@ -15,12 +15,20 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "touchstat.h"
-#include "touchstat.moc"
+#include <qfile.h>
+#include <qtextstream.h>
+#include <qmessagebox.h>
+#include <qdatetime.h>
+
 #include <kdebug.h>
 
-TouchStat::TouchStat(){
-	for(int i=0;i<256;i++)
+#include "touchstat.h"
+#include "touchstat.moc"
+
+TouchStat::TouchStat()
+{
+	dirs = KGlobal::dirs();
+	for(int i=0;i<512;i++)
 	{
 		arrayStat[i].ok=0;
 		arrayStat[i].error=0;
@@ -29,12 +37,10 @@ TouchStat::TouchStat(){
 	errorCount = 0;
 	okCount    = 0;
 	totalTime  = 1;
-
 	start();
 }
 
 TouchStat::~TouchStat(){
-	stop();
 }
 
 void TouchStat::gotError(QChar c)
@@ -98,3 +104,28 @@ int TouchStat::getWordPerMin()
 }
 
 
+// add todays stat's to file
+void TouchStat::saveStat()
+{
+
+	QFile f(dirs->saveLocation("appdata")+"stat.log");
+	if ( f.open(IO_Append | IO_WriteOnly ) )
+	{
+		QTextStream t( &f );
+
+		t << "Date:            " << QDateTime::currentDateTime().toString() << "\n";
+		t << "Time spent:      " << (getTotalTime()/1000) << "\n";
+		t << "Word per minute: " << getWordPerMin()       << "\n";
+		t << "Char per minute: " << getCharPerMin()       << "\n";
+		t << "Correctness:     " << getRatio()            << "\n";
+
+		t << "Char stats:\n";
+		for(int i=0;i<512;i++)
+		{
+			if(arrayStat[i].ok!=0 || arrayStat[i].error!=0)
+				t << i << " " << arrayStat[i].ok << " " << arrayStat[i].error << "\n";
+		}
+		t << "\n";
+		f.close();
+	}
+}

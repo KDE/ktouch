@@ -24,17 +24,18 @@ TouchStatWindow::TouchStatWindow(TouchStat *s, QWidget *parent, const char *name
 {
 	stat=s;
 	updateToday();
+	updateFiveTimes();
+	updateTwentyTimes();
+	updateAllTimes();
 
 	timer = new QTimer(this,"timer");
 
 	connect( timer, SIGNAL(timeout()), SLOT(updateToday()));
 	timer->start(1000,false);
-
 }
 
 TouchStatWindow::~TouchStatWindow()
-{
-}
+{}
 
 void TouchStatWindow::updateToday()
 {
@@ -56,6 +57,21 @@ void TouchStatWindow::updateToday()
 
 }
 
+void TouchStatWindow::updateFiveTimes()
+{
+
+}
+
+void TouchStatWindow::updateTwentyTimes()
+{
+
+}
+
+void TouchStatWindow::updateAllTimes()
+{
+
+}
+
 void TouchStatWindow::autoUpdate(int i)
 {
 	if(i)
@@ -73,7 +89,7 @@ void TouchStatWindow::setFocuseChar()
 	int bad[]={0,0,0,0,0};
 	float badValue[]={0,0,0,0,0};
 
-	for(int i=0;i<256;i++)
+	for(int i=0;i<512;i++)
 	{
 		if((stat->arrayStat[i].error+stat->arrayStat[i].ok)>0)
 			ratio=((float)stat->arrayStat[i].error/(float)(stat->arrayStat[i].ok+stat->arrayStat[i].error))*100;
