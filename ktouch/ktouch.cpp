@@ -364,9 +364,13 @@ void KTouch::slotOptionTraining()
 {
   OptionTraining *optionTraining=new OptionTraining(this,"trainingOptionDialog",true);
   optionTraining->limitUp->setValue(touchStatus->getSpeedLimitUp());
+  optionTraining->limitUp->setEnabled(touchStatus->autoLevel);
   optionTraining->limitDown->setValue(touchStatus->getSpeedLimitDown());
+  optionTraining->limitDown->setEnabled(touchStatus->autoLevel);
   optionTraining->remember->setChecked(remember);
+
   optionTraining->autoLevel->setChecked(touchStatus->autoLevel);
+
 	
   int result = optionTraining->exec();
   if(result==1)

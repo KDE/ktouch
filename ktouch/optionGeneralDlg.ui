@@ -11,7 +11,7 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>384</width>
+            <width>372</width>
             <height>380</height>
         </rect>
     </property>
@@ -219,11 +219,11 @@
                     </property>
                     <property stdset="1">
                         <name>frameShape</name>
-                        <enum>NoFrame</enum>
+                        <enum>Box</enum>
                     </property>
                     <property stdset="1">
                         <name>lineWidth</name>
-                        <number>0</number>
+                        <number>2</number>
                     </property>
                 </widget>
                 <widget row="2"  column="0"  rowspan="1"  colspan="2" >
@@ -285,7 +285,6 @@
         <receiver>OptionGeneralDlg</receiver>
         <slot>setColor()</slot>
     </connection>
-    <slot access="protected">setFont()</slot>
     <slot access="protected">setColor()</slot>
 </connections>
 </UI>

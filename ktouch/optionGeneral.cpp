@@ -17,6 +17,8 @@
 
 #include "optionGeneral.h"
 
+#include <kcolordialog.h>
+
 OptionGeneral::OptionGeneral(QWidget *parent, const char *name, bool modal)
               : OptionGeneralDlg(parent, name, modal)
 {
@@ -43,3 +45,4 @@ void OptionGeneral::keyPressEvent(QKeyEvent *)
 {
   //just to stop the keyPressEvent to go to the main window.
 }
+

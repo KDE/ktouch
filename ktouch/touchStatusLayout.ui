@@ -11,8 +11,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>632</width>
-            <height>89</height>
+            <width>584</width>
+            <height>83</height>
         </rect>
     </property>
     <property stdset="1">
@@ -36,81 +36,16 @@
     <property>
         <name>layoutSpacing</name>
     </property>
-    <grid>
+    <hbox>
         <property stdset="1">
             <name>margin</name>
-            <number>4</number>
+            <number>5</number>
         </property>
         <property stdset="1">
             <name>spacing</name>
-            <number>2</number>
+            <number>5</number>
         </property>
-        <widget row="0"  column="4" >
-            <class>QLayoutWidget</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>Layout4</cstring>
-            </property>
-            <vbox>
-                <property stdset="1">
-                    <name>margin</name>
-                    <number>0</number>
-                </property>
-                <property stdset="1">
-                    <name>spacing</name>
-                    <number>6</number>
-                </property>
-                <widget>
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>pauseButton</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Pause</string>
-                    </property>
-                    <property stdset="1">
-                        <name>toggleButton</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
-                        <name>on</name>
-                        <bool>false</bool>
-                    </property>
-                    <property>
-                        <name>toolTip</name>
-                        <string>Press to have a break ;-)</string>
-                    </property>
-                    <property>
-                        <name>whatsThis</name>
-                        <string>When you want to have a break, press this to stopp KTouch from calculating speed and changeing levels.</string>
-                    </property>
-                </widget>
-                <spacer>
-                    <property>
-                        <name>name</name>
-                        <cstring>Spacer3</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>orientation</name>
-                        <enum>Vertical</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>sizeType</name>
-                        <enum>Expanding</enum>
-                    </property>
-                    <property>
-                        <name>sizeHint</name>
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-            </vbox>
-        </widget>
-        <widget row="0"  column="0" >
+        <widget>
             <class>QGroupBox</class>
             <property stdset="1">
                 <name>name</name>
@@ -123,7 +58,7 @@
             <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
-                    <hsizetype>7</hsizetype>
+                    <hsizetype>3</hsizetype>
                     <vsizetype>0</vsizetype>
                 </sizepolicy>
             </property>
@@ -249,75 +184,9 @@
                         <string>This shows witch level you are at.</string>
                     </property>
                 </widget>
-                <widget row="0"  column="2" >
-                    <class>QLabel</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>TextLabel2</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Info:</string>
-                    </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>7</hsizetype>
-                            <vsizetype>7</vsizetype>
-                        </sizepolicy>
-                    </property>
-                </widget>
-                <widget row="1"  column="2" >
-                    <class>QLabel</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>message</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string></string>
-                    </property>
-                    <property stdset="1">
-                        <name>alignment</name>
-                        <set>WordBreak|AlignCenter</set>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Plain</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
-                        <enum>NoFrame</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>scaledContents</name>
-                        <bool>true</bool>
-                    </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>5</hsizetype>
-                            <vsizetype>5</vsizetype>
-                        </sizepolicy>
-                    </property>
-                    <property stdset="1">
-                        <name>font</name>
-                        <font>
-                            <family>adobe-helvetica</family>
-                            <pointsize>10</pointsize>
-                            <bold>1</bold>
-                        </font>
-                    </property>
-                    <property>
-                        <name>hAlign</name>
-                    </property>
-                    <property>
-                        <name>wordwrap</name>
-                    </property>
-                </widget>
             </grid>
         </widget>
-        <widget row="0"  column="1" >
+        <widget>
             <class>QGroupBox</class>
             <property stdset="1">
                 <name>name</name>
@@ -405,7 +274,7 @@
                 </widget>
             </grid>
         </widget>
-        <widget row="0"  column="2" >
+        <widget>
             <class>QGroupBox</class>
             <property stdset="1">
                 <name>name</name>
@@ -413,13 +282,13 @@
             </property>
             <property stdset="1">
                 <name>title</name>
-                <string>Correctnes</string>
+                <string>Correctness</string>
             </property>
             <property stdset="1">
                 <name>sizePolicy</name>
                 <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>5</vsizetype>
+                    <hsizetype>3</hsizetype>
+                    <vsizetype>0</vsizetype>
                 </sizepolicy>
             </property>
             <property stdset="1">
@@ -467,6 +336,13 @@
                         <name>frameShape</name>
                         <enum>NoFrame</enum>
                     </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
+                    </property>
                     <property>
                         <name>toolTip</name>
                         <string>How mutch are you typing correct?</string>
@@ -476,30 +352,92 @@
                         <string>This chows how correct you are typing.</string>
                     </property>
                 </widget>
-                <spacer row="0"  column="0" >
-                    <property>
-                        <name>name</name>
-                        <cstring>Spacer2</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>orientation</name>
-                        <enum>Vertical</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>sizeType</name>
-                        <enum>Expanding</enum>
-                    </property>
-                    <property>
-                        <name>sizeHint</name>
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
             </grid>
         </widget>
-        <spacer row="0"  column="3" >
+        <widget>
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox4</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>New characters</string>
+            </property>
+            <property stdset="1">
+                <name>sizePolicy</name>
+                <sizepolicy>
+                    <hsizetype>3</hsizetype>
+                    <vsizetype>0</vsizetype>
+                </sizepolicy>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>message</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Test</string>
+                    </property>
+                    <property stdset="1">
+                        <name>alignment</name>
+                        <set>AlignCenter</set>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Plain</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>scaledContents</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>3</hsizetype>
+                            <vsizetype>5</vsizetype>
+                        </sizepolicy>
+                    </property>
+                    <property stdset="1">
+                        <name>font</name>
+                        <font>
+                            <family>adobe-helvetica</family>
+                            <pointsize>14</pointsize>
+                            <bold>1</bold>
+                        </font>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <property>
+                        <name>hAlign</name>
+                    </property>
+                    <property>
+                        <name>wordwrap</name>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <spacer>
             <property>
                 <name>name</name>
                 <cstring>Spacer1</cstring>
@@ -520,7 +458,72 @@
                 </size>
             </property>
         </spacer>
-    </grid>
+        <widget>
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout4</cstring>
+            </property>
+            <vbox>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget>
+                    <class>QPushButton</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>pauseButton</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Pause</string>
+                    </property>
+                    <property stdset="1">
+                        <name>toggleButton</name>
+                        <bool>true</bool>
+                    </property>
+                    <property stdset="1">
+                        <name>on</name>
+                        <bool>false</bool>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Press to have a break ;-)</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>When you want to have a break, press this to stopp KTouch from calculating speed and changeing levels.</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property>
+                        <name>name</name>
+                        <cstring>Spacer3</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>orientation</name>
+                        <enum>Vertical</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>sizeType</name>
+                        <enum>Expanding</enum>
+                    </property>
+                    <property>
+                        <name>sizeHint</name>
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </vbox>
+        </widget>
+    </hbox>
 </widget>
 <connections>
     <connection>

@@ -20,7 +20,9 @@
 #include <qlabel.h>
 #include <qapplication.h>
 #include <qprogressbar.h>
-#include <kaudioplayer.h>
+//#include <kaudioplayer.h>
+
+#define forget=50;
 
 TouchStatus::TouchStatus(QWidget * parent, const char * name)
            : TouchStatusLayout( parent, name )
@@ -61,9 +63,9 @@ void TouchStatus::reset()
 
 void TouchStatus::calculate()
 {
-  speed=(speed*30+bufferOk*120)/31;
-  wrong=(wrong*30+bufferError)/31;
-  correct=(correct*30+bufferOk)/31;
+  speed=(speed*60+bufferOk*120)/61;
+  wrong=(wrong*60+bufferError)/61;
+  correct=(correct*60+bufferOk)/61;
   bufferError=0;
   bufferOk=0;
 
@@ -78,7 +80,7 @@ void TouchStatus::calculate()
   }
 
   testLevelCount++;
-  if (testLevelCount>20 && autoLevel)
+  if (testLevelCount>50 && autoLevel)
   {
     testLevelCount=0;
     if (speed>speedLimitUp)

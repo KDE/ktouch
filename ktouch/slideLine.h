@@ -37,6 +37,7 @@ public:
   float offset;
   bool error;
   QColor errorColor;
+
   void setFont(QFont f);
   QFont getFont();
 

@@ -22,13 +22,9 @@
 #include <config.h>
 #endif
 
-#include <qcolor.h>
-#include <kcolordialog.h>
-#include <kfontdialog.h>
-#include <qlabel.h>
-
 #include "optionGeneralDlg.h"
 
+#include <kfontdialog.h>
 
 class OptionGeneral : public OptionGeneralDlg  {
    Q_OBJECT
@@ -46,4 +42,7 @@ protected:
 };
 
 #endif
+
+
+
 

@@ -156,3 +156,5 @@ void TouchLine::setFont(QFont f)
 {
   line->setFont(f);
 }
+
+
