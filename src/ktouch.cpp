@@ -355,7 +355,7 @@ void KTouch::changeStatusbarStats(unsigned int correctChars, unsigned int totalC
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardLayouts.count()) return;
     KTouchConfig().m_keyboardLayout = KTouchConfig().m_keyboardLayouts[num];
-    m_keyboardWidget->applyPreferences(false);  // noisy, pop up an error if the choosen layout file is corrupt
+    m_keyboardWidget->applyPreferences(false);  // noisy, pop up an error if the chosen layout file is corrupt
 };
 
 void KTouch::changeColor(int num) {

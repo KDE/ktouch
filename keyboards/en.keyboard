@@ -18,8 +18,8 @@ FingerKey	108		L		98	20
 FingerKey	59		;		108	20
 #
 #
-#  ControllKey: This class will represent all the
-#  controll keys that you are using. Theys keys
+#  ControlKey: This class will represent all the
+#  control keys that you are using. Theys keys
 #  will be used later when you want to use uppercase.
 #
 #			Assci	KeyText		x		y		Width	Height
@@ -92,7 +92,7 @@ NormalKey	47		/		113		30		59
 #
 #  HiddenKey: This is all the keys that
 #  you cant see. That means that you have
-#  to use an controll key to get them. Basicly
+#  to use an controll key to get them. Basically
 #  this is all the uppercase letters.
 #
 #			Ascii	Target	Finger	Contorll

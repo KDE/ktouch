@@ -28,7 +28,7 @@ class KTouchPrefGeneral : public KTouchPrefGeneralLayout {
     /// Updates the font m_font and the font display label.
     void updateFont(const QFont& font);
 
-    QFont m_font;   ///< The font that can be choosen for the sliding lines.
+    QFont m_font;   ///< The font that can be chosen for the sliding lines.
 
   public slots:
     /// Will be called when the choose font button has been pressed.

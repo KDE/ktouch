@@ -18,11 +18,11 @@ FingerKey  48		  0				 0		 40  20     10
 #  NormalKey: This class represent all the
 #  normal keys where you don't need to press
 #  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
+#  basically be all the numbers and the lowercase
 #  letters. For this class you have to indicate
-#  withc finger key you are going to use.
+#  which finger key you are going to use.
 #
-#					Assci	KeyText		x		y		FingerKey  Width Hight
+#					Assci	KeyText		x		y		FingerKey  Width Height
 #
 NormalKey 49		1					00	30		52	
 NormalKey 50		2					10	30		53

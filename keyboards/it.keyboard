@@ -40,7 +40,7 @@ ControlKey	8		<-		130		0		20	10
 #  NormalKey: This class represent all the
 #  normal keys where you don't need to press
 #  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
+#  basically be all the numbers and the lowercase
 #  letters. For this class you have to indicate
 #  withc finger key you are going to use.
 #
@@ -93,7 +93,7 @@ NormalKey 45		-					113	30	242
 #
 #  HiddenKey: This is all the keys that
 #  you cant see. That means that you have
-#  to use an controll key to get them. Basicly
+#  to use an control key to get them. Basically
 #  this is all the uppercase letters.
 #
 #	     Ascii             Target                  Finger                 Contorll

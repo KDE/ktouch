@@ -40,7 +40,7 @@ ControlKey	8		BackSpace	130		0		20	10
 #  NormalKey: This class represent all the
 #  normal keys where you don't need to press
 #  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
+#  basically be all the numbers and the lovercase
 #  letters. For this class you have to indicate
 #  withc finger key you are going to use.
 #

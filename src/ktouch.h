@@ -38,7 +38,7 @@ class KTouchStartNewDialog;
 /** This is the main window of KTouch.
  *  It handles the lecture, training data, status and all other widgets that are
  *  needed to get the program running. Since all special tasks are delegated to the
- *  apropriate widgets and classes, the remaining code in KTouch is basically the
+ *  appropriate widgets and classes, the remaining code in KTouch is basically the
  *  startup and KAction stuff.<p>
  *  A word about dialogs. Although we have only one preferences and one editor dialogs
  *  we don't create them by default. Instead they are create "on first use". This
