@@ -73,7 +73,7 @@ touch typing tutor, you learn typing with all the fingers without
 looking at the keys, in an step by step way. It is convenient for all
 ages, and the perfect typing tutor for schools, universities and
 individuals. It is free and licensed under the &GNU; Public License, so
-you will never have to pay anything for the programm, or any update.
+you will never have to pay anything for the program, or any update.
 </para>
 </chapter>
 
@@ -206,7 +206,7 @@ Get the latest &Linux;, and you will live on the edge.</para>
 </chapter>
 
 <chapter id="contribute">
-<title>How can I contiribute?</title>
+<title>How can I contribute?</title>
 
 <qandaset id="tasks">
 <qandaentry>
@@ -229,7 +229,7 @@ example of the file format.</para>
 <answer>
 <para>You will find a complete keyboard file below with comments. Just
 edit the file <filename>keyboard.en</filename> and save it as
- <filename>keyboard.<replaceable>yourContryCode</replaceable></filename>.</para>
+ <filename>keyboard.<replaceable>yourCountryCode</replaceable></filename>.</para>
 
 <para>Please let me know if you are making a new keyboard file, at
 <email>haavard@users.sourceforge.net</email></para>
@@ -277,7 +277,7 @@ ControlKey  259   Caps_L  0   20  18
 #  anything else than just one key. That would
 #  basically be all the numbers and the lowercase
 #  letters. For this class you have to indicate
-#  whitch finger key you are going to use.
+#  which finger key you are going to use.
 #
 #         ASCII KeyText   x   y   FingerKey
 #
@@ -360,7 +360,7 @@ HiddenKey 88    120     115     258 #X
 HiddenKey 89    121     106     258 #Y
 HiddenKey 90    122     97      258 #Z</screen>
 
-<para>If you need aditional help please send me an email at
+<para>If you need additional help please send me an email at
 <email>haavard@users.sourceforge.net</email>.</para>
 
 </answer>
