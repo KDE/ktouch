@@ -104,14 +104,13 @@
                     <string>If you want KTouch to indicate which finger to move and where to press, you should check this option</string>
                 </property>
             </widget>
-
         </widget>
         <widget class="QPushButton" row="3" column="2">
             <property name="name">
                 <cstring>PushButton1</cstring>
             </property>
             <property name="text">
-                <string>Done</string>
+                <string>&amp;Done</string>
             </property>
             <property name="whatsThis" stdset="0">
                 <string>Close dialog and apply all changes.</string>
@@ -122,14 +121,14 @@
                 <cstring>PushButton2</cstring>
             </property>
             <property name="text">
-                <string>Cancel</string>
+                <string>&amp;Cancel</string>
             </property>
             <property name="whatsThis" stdset="0">
                 <string>Close dialog and discarge all changes.</string>
             </property>
         </widget>
         <spacer row="3" column="1">
-            <property name="name" stdset="0">
+            <property name="name">
                 <cstring>Spacer1</cstring>
             </property>
             <property name="orientation">
@@ -137,12 +136,6 @@
             </property>
             <property name="sizeType">
                 <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>20</width>
-                    <height>20</height>
-                </size>
             </property>
         </spacer>
         <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="3">
