@@ -1,3 +1,7 @@
+2004-11-21 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Added: "Open lecture ..." menu entry in File menu to allow
+           users to open their own lecture files.
+
 2004-11-09 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Bugfixes: sliding line typing limit,
               removed mid-level advance (due to popular request)
@@ -5,7 +9,7 @@
   * Added: new keyboard layout for switzerland-german keyboards
 
 2004-11-02 Andreas Nicolai <andreas.nicolai@gmx.net>
-  * Added the checks in the quick-select menues
+  * Added: checks in the quick-select menues
   * Now the current lecture is again saved and restored the next time 
     KTouch is started.
 
