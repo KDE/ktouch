@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		VERSION,
 		description,
 		KAboutData::License_GPL,
-		"Copyright (c) 2001, Haavard Froeiland", 0, 0, "haavard@users.sourceforge.net");
+		"Copyright (c) 2001, Haavard Froeiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
 	about.addAuthor("Haavard Froeiland",0, "haavard@users.sourceforge.net");
 
 	KCmdLineArgs::init(argc, argv, &about);
