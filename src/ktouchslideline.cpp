@@ -171,8 +171,8 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     painter.begin (m_teacherPixmap, this);
     painter.setFont( m_font );
     //painter.setColor( KTouchConfig().m_teacherTextColor );
-    painter.fillRect( m_teacherPixmap->rect(), QBrush(KTouchConfig().m_teacherBackground) );
-    painter.setPen( KTouchConfig().m_teacherTextColor );
+    painter.fillRect( m_teacherPixmap->rect(), QBrush(Prefs::teacherBackgroundColor()) );
+    painter.setPen( Prefs::teacherTextColor() );
     // create a rectangle for the text drawing
     QRect textRect(INNER_MARGIN, 0, w-2*INNER_MARGIN, h);
     if(m_rightJustify==false)
@@ -254,23 +254,23 @@ void KTouchSlideLine::updateLines() {
     if (Prefs::colorOnError()) {
         // draw the student line depending on the colour settings
         if (error) {
-            m_cursorBackground = KTouchConfig().m_errorBackground;
+            m_cursorBackground = Prefs::errorBackgroundColor();
             painter.fillRect (m_studentPixmap->rect(), m_cursorBackground);
-            m_cursorColor = KTouchConfig().m_errorTextColor;
+            m_cursorColor = Prefs::errorTextColor();
             painter.setPen( m_cursorColor );
         }
         else {
-            m_cursorBackground = KTouchConfig().m_studentBackground;
+            m_cursorBackground = Prefs::studentBackgroundColor();
             painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground) );
-            m_cursorColor = KTouchConfig().m_studentTextColor;
+            m_cursorColor = Prefs::studentTextColor();
             painter.setPen( m_cursorColor );
         };
     }
     else {
         // use always student text colors
-        m_cursorColor = KTouchConfig().m_studentTextColor;
+        m_cursorColor = Prefs::studentTextColor();
         painter.setPen( m_cursorColor );
-        m_cursorBackground = KTouchConfig().m_studentBackground;
+        m_cursorBackground = Prefs::studentBackgroundColor();
         painter.fillRect( m_studentPixmap->rect(), QBrush(m_cursorBackground) );
     };
     // draw the text

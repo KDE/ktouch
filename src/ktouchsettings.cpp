@@ -83,13 +83,6 @@ void KTouchSettings::loadSettings() {
     // although the keyboard color scheme is selected in the color dialog, it is a property of
     // the keyboard and thus it stays in the "Keybord" group
     m_keyboardColorScheme = Prefs::colorScheme();
-    // read color options
-    m_teacherTextColor = Prefs::teacherTextColor();
-    m_teacherBackground = Prefs::teacherBackgroundColor();
-    m_studentTextColor = Prefs::studentTextColor();
-    m_studentBackground = Prefs::studentBackgroundColor();
-    m_errorTextColor = Prefs::errorTextColor();
-    m_errorBackground = Prefs::errorBackgroundColor();
 }
 
 

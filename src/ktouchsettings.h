@@ -61,19 +61,10 @@ class KTouchSettings {
     int             m_upSpeedLimit;     ///< If user types faster, the level will be increased.
 
     // keyboard page
-    bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
     int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
     QString         m_keyboardLayout;   ///< The currently chosen keyboard layout.
     QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
     QFont           m_keyboardFont;     ///< The keyboard font
-
-    // colors page
-    QColor          m_teacherTextColor;    ///< The text color for the teachers line.
-    QColor          m_teacherBackground;   ///< The background color for the teachers line.
-    QColor          m_studentTextColor;    ///< The text color for the students line.
-    QColor          m_studentBackground;   ///< The background color for the students line.
-    QColor          m_errorTextColor;      ///< The text color for wrong text (students line).
-    QColor          m_errorBackground;     ///< The background color for wrong text (students line).
 
     // other stuff not in the preferences dialog
     QStringList     m_lectureList;      ///< A list of all lecture files found in the standard dirs (filenames only).

@@ -4,19 +4,19 @@
   <kcfgfile name="ktouchrc"/>
     <group name="Colors">
     <entry name="TeacherBackgroundColor" type="Color">
-      <label></label>
+      <label>The background color for the teacher's line.</label>
       <default>#bebeff</default>
     </entry>     
     <entry name="TeacherTextColor" type="Color">
-      <label></label>
+      <label>The text color for the teacher's line</label>
       <default>#000032</default>
     </entry>
      <entry name="StudentBackgroundColor" type="Color">
-      <label></label>
+      <label>The background color for the student's line.</label>
       <default>#aoffao</default>
     </entry>
     <entry name="StudentTextColor" type="Color">
-      <label></label>
+      <label>The text color for the student's line</label>
       <default>#003200</default>
     </entry>
     <entry name="ColorOnError" type="Bool">
@@ -24,11 +24,11 @@
       <default code="true">true</default>
     </entry> 
     <entry name="ErrorBackgroundColor" type="Color">
-      <label></label>
+      <label>The background color for wrong text (students line).</label>
       <default>#ac0000</default>
     </entry>
     <entry name="ErrorTextColor" type="Color">
-      <label></label>
+      <label>The text color for wrong text (students line).</label>
       <default>#ffffff</default>
     </entry>
     </group>
@@ -56,7 +56,7 @@
       <default code="true">1</default>
     </entry>
     <entry name="ShowAnimation" type="Bool">
-    <label></label>
+    <label>Whether to use colours on the keys or not.</label>
     <default code="true">true</default>
     </entry>
   </group>
