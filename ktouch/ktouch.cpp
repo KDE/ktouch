@@ -87,12 +87,9 @@ KTouch::KTouch(QWidget* , const char* name):KMainWindow(0, name)
 	// call inits to invoke all other construction parts
 	initStatusBar();
 	initActions();
-  cout << dirs->localkdedir().latin1() << endl;
-  QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
-  touchLecture->loadLectureFile(trainingFile);
 
 	readOptions();
-  touchLine->getNextLine();
+	touchLine->getNextLine();
 }
 
 void KTouch::initActions()
@@ -152,6 +149,7 @@ void KTouch::saveOptions()
   config->writeEntry("Show Statusbar",viewStatusBar->isChecked());
   config->writeEntry("ToolBarPos", (int) toolBar("mainToolBar")->barPos());
   fileOpenRecent->saveEntries(config,"Recent Files");
+
 
   //** History ****************************************************************
   config->setGroup("History");
@@ -241,6 +239,12 @@ void KTouch::readOptions()
 
   QFont font("adobe-courier");
   touchLine->setFont(config->readFontEntry("Font",&font));
+
+  // ** Recent files *******************************************************
+  config->setGroup("Recent Files");
+  //QString trainingFile=dirs->findResource("data","ktouch/"+config->readEntry("Last Training File","english.ktouch"));
+  KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
+  touchLecture->loadLectureFile(url.directory(false,true)+url.fileName());
 }
 
 bool KTouch::queryExit()
@@ -257,9 +261,9 @@ bool KTouch::queryExit()
 void KTouch::slotFileOpen()
 {
   slotStatusMsg(i18n("Opening file..."));
-	
-  KURL url=KFileDialog::getOpenURL(QString::null,
-      i18n("*|All files"), this, i18n("Open File..."));
+  KURL url=KFileDialog::getOpenURL(
+      dirs->findResourceDir("data","ktouch/english.ktouch")+"ktouch/",
+      i18n("*.ktouch|KTouch training files"), this, i18n("Open File..."));
   if(!url.isEmpty())
   {
     touchLecture->loadLectureFile(url.directory(false) + url.fileName());
@@ -361,20 +365,26 @@ void KTouch::slotOptionKeyboard()
     if(optionKeyboard->showKeypad->isChecked())
     {
       touchKeyboard->loadKeyboard("number");
-      QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
-      touchLecture->loadLectureFile(trainingFile);
 
+      //QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
+      //touchLecture->loadLectureFile(trainingFile);
+      KURL url(dirs->findResource("data","ktouch/number.ktouch"));
+      openDocumentFile(url);
+      slotFileOpenRecent(url);
     }
     else
     {
       touchKeyboard->loadKeyboard(optionKeyboard->language->currentText());
-      QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
-      touchLecture->loadLectureFile(trainingFile);
+      //QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
+      //touchLecture->loadLectureFile(trainingFile);
+      KURL url(dirs->findResource("data","ktouch/english.ktouch"));
+      openDocumentFile(url);
+      slotFileOpenRecent(url);
     }
 
   }
   delete optionKeyboard;
-  touchLine->getNextLine();
+  //touchLine->getNextLine();
 }
 
 void KTouch::slotOptionTraining()
