@@ -89,7 +89,6 @@ KTouch::KTouch():KMainWindow()
 	kdDebug() << "read option" << endl;
 	readOptions();
 	
-
 	slotModeTrain();
 
 //	touchLine->getNextLine();
@@ -174,9 +173,6 @@ void KTouch::saveOptions()
 
 void KTouch::readOptions()
 {
-
-
-
 	//** General Options ********************************************************
 	config->setGroup("General Options");
 
@@ -208,15 +204,13 @@ void KTouch::readOptions()
 
 	touchLecture->load(url.directory(false,true)+url.fileName());
 	
-	//touchTrain->line->getNextLine();
-
 }
 
 bool KTouch::queryExit()
 {
-	saveOptions();
-	touchStat->saveStat();
-	return true;
+    saveOptions();
+    //touchStat->saveStat();
+    return true;
 }
 
 /////////////////////////////////////////////////////////////////////
@@ -469,19 +463,17 @@ void KTouch::hideStat()
 
 void KTouch::slotModeTrain()
 {
-	QWidget *oldCentralWidget=centralWidget();
-
-	kdDebug() << "slotModeTrain" << endl;
-	touchTrain = new TouchTrain(this,touchLecture);
-	touchTrain->readOptions();
-	//touchTrain->line->setLecture(touchLecture);
-	touchTrain->line->getNextLine();
-
-	setCentralWidget(touchTrain);
-	touchTrain->show();
-	touchTrain->setFocus();
-
-	delete(oldCentralWidget);
+    QWidget *oldCentralWidget=centralWidget();
+    
+    kdDebug() << "slotModeTrain" << endl;
+    touchTrain = new TouchTrain(this,touchLecture);
+    touchTrain->line->getNextLine();
+    
+    setCentralWidget(touchTrain);
+    touchTrain->show();
+    touchTrain->setFocus();
+    
+    delete(oldCentralWidget);
 }
 
 void KTouch::slotModeEdit()

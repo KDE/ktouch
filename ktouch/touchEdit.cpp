@@ -27,22 +27,15 @@
 TouchEdit::TouchEdit( QWidget* parent, TouchLecture* l)
          : TouchEditLayout(parent)
 {
-	lecture=l;
-
-
- 	fillLevelList();
-  levelList->setCurrentItem(0);
-	
+    lecture=l;
+    fillLevelList();
+    levelList->setCurrentItem(0);
 }
-
 
 
 TouchEdit::~TouchEdit()
 {
-
 }
-
-
 
 void TouchEdit::fetchLevel(int level)
 {

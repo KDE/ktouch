@@ -41,29 +41,29 @@ class KTouch : public KMainWindow
 	Q_OBJECT
 
 	public:
-		KTouch();
-		~KTouch();
-		TouchLecture *touchLecture;
-		TouchStat *touchStat;
-		TouchEdit *touchEdit;
-		TouchTrain *touchTrain;
-		TouchTest *touchTest;
+	KTouch();
+	~KTouch();
+	TouchLecture *touchLecture;
+	TouchStat *touchStat;
+	TouchEdit *touchEdit;
+	TouchTrain *touchTrain;
+	TouchTest *touchTest;
 
-		/** opens a file specified by commandline option
-		*/
-		void openDocumentFile(const KURL& url);
+	/** opens a file specified by commandline option
+	*/
+	void openDocumentFile(const KURL& url);
 
 	protected:
-		/** save general Options like all bar positions and status as well as the geometry and the recent file list to the configuration
-		* file
-		*/
-		void saveOptions();
-		/** read general Options again and initialize all variables like the recent file list
-		*/
-		void readOptions();
-		/** initializes the KActions of the application
-		*/
-		void initActions();
+	/** save general Options like all bar positions and status as well as the geometry and the recent file list to the configuration
+	* file
+	*/
+	void saveOptions();
+	/** read general Options again and initialize all variables like the recent file list
+	*/
+	void readOptions();
+	/** initializes the KActions of the application
+	*/
+	void initActions();
 		/** sets up the statusbar for the main window by initialzing a statuslabel.
 		*/
 		void initStatusBar();
@@ -125,9 +125,7 @@ class KTouch : public KMainWindow
 		KAction* fileQuit;
 		KToggleAction* viewToolBar;
 		KToggleAction* viewStatusBar;
-
 		KStandardDirs *dirs;
-
 		TouchStatWindow *touchStatWindow;
 };
 
