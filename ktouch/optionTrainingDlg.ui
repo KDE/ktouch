@@ -72,7 +72,7 @@
                 <cstring>GroupBox1</cstring>
             </property>
             <property name="title">
-                <string>Level up/down Limits</string>
+                <string>Level Up/Down Limits</string>
             </property>
             <property name="whatsThis" stdset="0">
                 <string>When touch-typing the levels will go up if you are typing faster than the "Limit Up", and it will go down if you type slower than the "Limit Down". Enable automatic adjustment by ticking the "Automatic level adjustment"</string>
