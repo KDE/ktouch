@@ -203,10 +203,16 @@ void KTouch::readOptions()
   size=config->readSizeEntry("Geometry",&size);
   resize(size);
 
+  // ** Recent files *******************************************************
+  config->setGroup("Recent Files");
+  //QString trainingFile=dirs->findResource("data","ktouch/"+config->readEntry("Last Training File","english.ktouch"));
+  KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
+  touchLecture->loadLectureFile(url.directory(false,true)+url.fileName());
+
   //** History ****************************************************************
   config->setGroup("History");
 
-  remember=config->readBoolEntry("Remember",false);
+  remember=config->readBoolEntry("Remember",true);
   if(remember)
   {
      touchLecture->setLevel(config->readNumEntry("Level",1));
@@ -239,12 +245,6 @@ void KTouch::readOptions()
 
   QFont font("adobe-courier");
   touchLine->setFont(config->readFontEntry("Font",&font));
-
-  // ** Recent files *******************************************************
-  config->setGroup("Recent Files");
-  //QString trainingFile=dirs->findResource("data","ktouch/"+config->readEntry("Last Training File","english.ktouch"));
-  KURL url=config->readEntry("File1",dirs->findResource("data","ktouch/english.ktouch"));
-  touchLecture->loadLectureFile(url.directory(false,true)+url.fileName());
 }
 
 bool KTouch::queryExit()
