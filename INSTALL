@@ -1,0 +1,13 @@
+Installation from CVS
+---------------------
+
+make -f Makefile.CVS
+(from parent directory for the kdeedu cvs tree)
+
+./configure
+(don't forget to add your options)
+
+make 
+
+make install
+(installs the program)
