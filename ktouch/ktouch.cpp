@@ -55,7 +55,6 @@ KTouch::KTouch():KMainWindow()
 	touchLecture = new TouchLecture();
 	touchStat    = new TouchStat();
 
-
 //Object::connect(	touchTrain->line,    SIGNAL(isError(QChar)),
 //				touchStat,    SLOT(gotError(QChar)));
 //Object::connect(	touchTrain->line,    SIGNAL(isOk(QChar)),
@@ -89,7 +88,7 @@ KTouch::KTouch():KMainWindow()
 
 	kdDebug() << "read option" << endl;
 	readOptions();
-	kdDebug() << "read option done" << endl;
+	
 
 	slotModeTrain();
 
@@ -454,11 +453,6 @@ void KTouch::slotOptionGeneral()
 
 }
 
-void KTouch::keyPressEvent(QKeyEvent*e)
-{
-	//touchTrain->line->keyPressed(e->ascii());
-}
-
 
 void KTouch::showStat()
 {
@@ -497,7 +491,7 @@ void KTouch::slotModeEdit()
 	QWidget *oldCentralWidget=centralWidget();
 
 	kdDebug() << "slotModeEdit" << endl;
-	touchEdit = new TouchEdit(this);
+	touchEdit = new TouchEdit(this, touchLecture);
 	setCentralWidget(touchEdit);
 	touchEdit->show();
 	touchEdit->setFocus();

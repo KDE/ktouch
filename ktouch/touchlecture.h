@@ -26,6 +26,7 @@
 #include <qtextstream.h>
 #include <qmessagebox.h>
 #include <kdebug.h>
+#include <qstringlist.h>
 
 class TouchLecture : public QObject
 {
@@ -39,6 +40,7 @@ class TouchLecture : public QObject
 		void load(QString fileName);
 		int save();
 		int saveAs(QString fileName);
+		std::vector<std::vector<QString> *> levelVector;
 
 
 	public slots:
@@ -53,7 +55,6 @@ class TouchLecture : public QObject
 	private:
 		unsigned int pos;
 		unsigned int level;
-		std::vector<std::vector<QString> *> levelVector;
 		QString fileName;
 		QWidget *parent;
 		bool levelHasChanged;

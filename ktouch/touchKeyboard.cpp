@@ -159,7 +159,10 @@ void TouchKeyboard::loadKeyboard(QString lang)
 		lang="en";
 	ifstream ifs(dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1(), ios::in);
 	if (!ifs)
+	{
 		kdDebug() << "Error: unable to open keyboard" << dirs->findResource("data","ktouch/" + lang + ".keyboard").latin1() << endl;
+  	exit(1);
+  }
 	else
 	{
 		clearKeyboard();

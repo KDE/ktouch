@@ -22,7 +22,7 @@
 #include <config.h>
 #endif
 
-
+#include "touchlecture.h"
 #include "touchEditLayout.h"
 
 class TouchEdit : public TouchEditLayout {
@@ -30,11 +30,28 @@ class TouchEdit : public TouchEditLayout {
 
 public:
 	/** constructor */
-	TouchEdit(QWidget* parent=0, const char* name=0);
+	TouchEdit(QWidget* parent, TouchLecture* lecture);
 
 	/** destructor */
 	~TouchEdit();
 	
+
+private:
+	TouchLecture* lecture;
+
+public slots: // Public slots
+  /** No descriptions */
+  void fetchLevel(int);
+  /** Moves level one place down */
+  void moveDown();
+  /** Moves level one place up */
+  void moveUp();
+private: // Private methods
+  /** No descriptions */
+  void swapLevel(int,int);
+private: // Private methods
+  /** Filles up the level list */
+  void fillLevelList();
 };
 
 #endif

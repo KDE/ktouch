@@ -1,15 +1,16 @@
-# adding keybords
+# adding keyboards
 keyboarddir = $(kde_datadir)/ktouch
-keyboard_DATA = de.keyboard\
+keyboard_DATA = \
+de.keyboard \
 de-ch.keyboard \
 dk.keyboard \
+dvorak.keyboard \
 en.keyboard \
+fi.keyboard \
 fr.keyboard \
+it.keyboard \
 la.keyboard \
 no.keyboard \
-pt.keyboard \
-it.keyboard \
-se.keyboard \
-fi.keyboard \
 number.keyboard \
-dvorak.keyboard
+pt.keyboard \
+se.keyboard

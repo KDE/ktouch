@@ -72,7 +72,7 @@ class KTouch : public KMainWindow
 		*/
 
 		bool queryExit();
-		void keyPressEvent(QKeyEvent*e);
+
 
 
 	public slots:
