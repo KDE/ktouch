@@ -14,4 +14,5 @@ la.keyboard \
 no.keyboard \
 number.keyboard \
 pt.keyboard \
-se.keyboard
+se.keyboard \
+he.keyboard

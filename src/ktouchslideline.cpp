@@ -33,7 +33,7 @@ const int INNER_MARGIN          = 20;   // the margin inside the line boxes
 const int DEAD_BORDER           = 40;   // the width of the no scrolling region near the border
 
 KTouchSlideLine::KTouchSlideLine(QWidget *parent)
-  : QWidget( parent ),
+  : QWidget( parent ),m_rightJustify(false),
     m_correctColor( 100, 255, 100),
     m_errorColor(255,100,100),
     m_teacherPixmap(NULL),
@@ -92,6 +92,11 @@ void KTouchSlideLine::setErrorColor(const QColor& color) {
 };
 
 void KTouchSlideLine::setNewText(const QString& teacherText, const QString& studentText) {
+   if(teacherText[0].direction()==QChar::DirR)
+    m_rightJustify=true;
+   else
+    m_rightJustify=false;
+ 
     m_teacherText=teacherText;
     m_studentText=studentText;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
@@ -132,10 +137,19 @@ void KTouchSlideLine::slide() {
     if (fabs(m_studentDX)<1.0)  m_studentFrameX = m_studentFrameXEnd;
     else                        m_studentFrameX += m_studentDX;
     // now simply copy the required parts of the teacher and student pixmaps onto the widget
-    bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
+    if(m_rightJustify==false){
+     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
            m_teacherPixmap, static_cast<int>(m_teacherFrameX), 0, m_frameWidth, m_teacherPixmap->height());
-    bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
+     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
            m_studentPixmap, static_cast<int>(m_studentFrameX), 0, m_frameWidth, m_studentPixmap->height());
+    }
+    else
+    {
+     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
+           m_teacherPixmap, m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, m_frameWidth, m_teacherPixmap->height());
+     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
+           m_studentPixmap,  m_studentPixmap->width()-static_cast<int>(m_studentFrameX)-m_frameWidth, 0, m_frameWidth, m_studentPixmap->height());
+    }
     // restart slide timer if necessary
     if (m_teacherDX!=0 || m_studentDX!=0)
         m_slideTimer.start(100, true);  // start singleshot timer to slide again
@@ -177,8 +191,16 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     painter.setPen( paletteForegroundColor() );
     // create a rectangle for the text drawing
     QRect textRect(INNER_MARGIN, 0, w-2*INNER_MARGIN, h);
-    painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_teacherText);
+    if(m_rightJustify==false)
+    {
+     painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_teacherText);
     drawEnterChar(&painter, w - INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
+    }
+    else
+    {
+     painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_teacherText);
+     drawEnterChar(&painter, INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
+    }
     painter.end();
     // Let's now create the students pixmap, which will be drawn in the paintEvent (because it changes frequently).
     // We use 5 times as much space as the teacher widget -> see paintEvent for explaination
@@ -204,6 +226,13 @@ void KTouchSlideLine::drawCursor() {
     if (m_cursorVisible)    p.setPen( m_cursorColor );
     else                    p.setPen( m_cursorBackground );
     int myX = m_cursorXPos + m_studentFrameXEnd - static_cast<int>(m_studentFrameX);
+    if(m_rightJustify==true )
+    {
+     /*the small distance between the beging of the pixmap and the cursor:*/
+     int dx=myX/*location of cursor*/ - (HORIZONTAL_MARGIN + m_shift)/*start of pixmap*/;
+     
+     myX=(HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx ;
+     }
     if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
         p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
 };
@@ -262,11 +291,14 @@ void KTouchSlideLine::updateLines() {
     painter.setFont( m_font );
     QFontMetrics fontMetrics = painter.fontMetrics();
     QRect textRect(INNER_MARGIN, 0, m_studentPixmap->width()-2*INNER_MARGIN, m_studentPixmap->height());
-    painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_studentText);
+    if(m_rightJustify)
+       painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_studentText);
+    else 
+       painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_studentText);
     // and calculate the cursor position (local coordinates) in the student pixmap
     // the cursor position is the distance from the beginning of the student pixmap (text margin included)
     int studentTextLength=textWidth(fontMetrics,m_studentText);
-    int studentCursorPos = INNER_MARGIN + studentTextLength;
+    int studentCursorPos = INNER_MARGIN + studentTextLength;    
     // Ok, the text is drawn, now let's calculate the information for the slide() function
     int allowedWidth = width() - 2*HORIZONTAL_MARGIN;   // the maximum width available in the widget
     if (m_teacherPixmap->width() <= allowedWidth) {
