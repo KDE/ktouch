@@ -77,6 +77,7 @@ class KTouchKeyboard : public QWidget {
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
     double              m_shift;            ///< The horizontal shift for the keyboard.
     QString             m_currentLayout;    ///< The name of the currently used layout.
+    bool								m_showAnimation;    ///< If the next key to use should be drawn or not.
 
     QChar               m_nextKey;          ///< The next to be pressed character.
 };

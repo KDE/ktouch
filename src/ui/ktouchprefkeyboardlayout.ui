@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>270</width>
-            <height>85</height>
+            <width>441</width>
+            <height>237</height>
         </rect>
     </property>
     <property name="caption">
@@ -29,76 +29,94 @@
             <property name="title">
                 <string></string>
             </property>
-            <grid>
+            <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="KComboBox" row="1" column="2">
-                    <item>
-                        <property name="text">
-                            <string>English</string>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout2</cstring>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
                         </property>
-                    </item>
-                    <property name="name">
-                        <cstring>keyboardLayoutCombo</cstring>
-                    </property>
+                        <spacer row="1" column="1">
+                            <property name="name">
+                                <cstring>spacer12</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel" row="0" column="0">
+                            <property name="name">
+                                <cstring>colorSchemeLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Select color scheme:</string>
+                            </property>
+                        </widget>
+                        <widget class="QComboBox" row="0" column="2">
+                            <property name="name">
+                                <cstring>colorSchemeCombo</cstring>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="0">
+                            <property name="name">
+                                <cstring>keyboardLayoutLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Select keyboard layout:</string>
+                            </property>
+                        </widget>
+                        <spacer row="0" column="1">
+                            <property name="name">
+                                <cstring>spacer5</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>161</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="KComboBox" row="1" column="2">
+                            <item>
+                                <property name="text">
+                                    <string>English</string>
+                                </property>
+                            </item>
+                            <property name="name">
+                                <cstring>keyboardLayoutCombo</cstring>
+                            </property>
+                        </widget>
+                    </grid>
                 </widget>
-                <spacer row="1" column="1">
+                <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>spacer12</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QComboBox" row="0" column="2">
-                    <property name="name">
-                        <cstring>colorSchemeCombo</cstring>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="0" column="0">
-                    <property name="name">
-                        <cstring>colorSchemeLabel</cstring>
+                        <cstring>showAnimationCheckBox</cstring>
                     </property>
                     <property name="text">
-                        <string>Select color scheme:</string>
+                        <string>Show animation on keyboard</string>
                     </property>
                 </widget>
-                <spacer row="0" column="1">
-                    <property name="name">
-                        <cstring>spacer5</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>60</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLabel" row="1" column="0">
-                    <property name="name">
-                        <cstring>keyboardLayoutLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Select keyboard layout:</string>
-                    </property>
-                </widget>
-            </grid>
+            </vbox>
         </widget>
         <spacer>
             <property name="name">

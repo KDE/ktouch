@@ -62,11 +62,14 @@ class KTouchSettings {
     QColor          m_errorColor;       ///< The background color for wrong text.
     QFont           m_font;             ///< The font to be used in the slide lines.
     int             m_slideSpeed;       ///< The sliding speed (must be greater or equal 1, which means 'immediatly')
+    
     // keyboard page
     bool            m_useColorKeys;     ///< Whether to use colours on the keys or not.
     int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
     QString         m_keyboardLayout;   ///< The currently choosen keyboard layout.
     QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
+    bool						m_showAnimation;    ///< If the keyboard shoud animate keys or not.
+    
     // training page
     bool            m_autoLevelChange;  ///< Whether to use automatic level change or not.
     int             m_downCorrectLimit; ///< If user types less correct, the level will be descreased.

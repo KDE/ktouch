@@ -14,6 +14,7 @@
 
 #include <kcombobox.h>
 #include <klocale.h>
+#include <qcheckbox.h>
 
 #include "ktouchsettings.h"
 
@@ -28,6 +29,8 @@ KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags
     {
         colorSchemeCombo->insertItem((*it).m_name);
     };
+
+    
     // fill keyboard combo
     keyboardLayoutCombo->clear();
     for (QStringList::const_iterator it=KTouchConfig().m_keyboardLayouts.begin();
@@ -36,4 +39,7 @@ KTouchPrefKeyboard::KTouchPrefKeyboard(QWidget *parent, const char *name, WFlags
     {
         keyboardLayoutCombo->insertItem(*it);
     };
+
+    // set if the keyboard used animation
+    showAnimationCheckBox->setChecked(KTouchConfig().m_showAnimation);
 }

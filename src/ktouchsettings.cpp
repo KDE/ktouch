@@ -28,7 +28,7 @@ KTouchSettings& KTouchConfig() {
 void KTouchSettings::loadSettings() {
     // First we need to find all keyboard layouts
     KStandardDirs *dirs = KGlobal::dirs();
-    m_keyboardLayouts = dirs->findAllResources("appdata","*.keyboard");
+    m_keyboardLayouts = dirs->findAllResources("data","ktouch/*.keyboard");
     if (!m_keyboardLayouts.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=m_keyboardLayouts.begin(); it!=m_keyboardLayouts.end(); ++it) {
@@ -44,7 +44,7 @@ void KTouchSettings::loadSettings() {
     m_keyboardLayouts.push_front("number");
 
     // Now lets find the lecture files.
-    m_lectureList = dirs->findAllResources("appdata","*.ktouch");
+    m_lectureList = dirs->findAllResources("data","ktouch/*.ktouch");
     if (!m_lectureList.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=m_lectureList.begin(); it!=m_lectureList.end(); ++it) {
@@ -55,6 +55,7 @@ void KTouchSettings::loadSettings() {
 
     // now we're reading the configuration
     KConfig *config=kapp->config();
+    
     // read general options
     config->setGroup("General");
     m_errorBeep = config->readBoolEntry("Beep on error", true);
@@ -78,6 +79,7 @@ void KTouchSettings::loadSettings() {
         m_keyboardLayout="en";
     // create some default colour schemes
     createDefaultKeyboardColors();
+    m_showAnimation = config->readBoolEntry("ShowAnimation", true);
 
     // read training options
     config->setGroup("Training");
@@ -92,6 +94,7 @@ void KTouchSettings::loadSettings() {
 
 void KTouchSettings::saveSettings() {
     KConfig *config=kapp->config();
+    
     // write general options
     config->setGroup("General");
     config->writeEntry("BeepOnError",       m_errorBeep);
@@ -100,10 +103,13 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("ErrorColor",        m_errorColor);
     config->writeEntry("Font",              m_font);
     config->writeEntry("SlidingSpeed",      m_slideSpeed);
+    
     // write keyboard settings
     config->setGroup("Keyboard");
     config->writeEntry("Colorscheme",       m_keyboardColorScheme);
     config->writeEntry("Layout",            m_keyboardLayout);
+    config->writeEntry("ShowAnimation",     m_showAnimation);
+    
     // write training settings
     config->setGroup("Training");
     config->writeEntry("AutoLevelChange",   m_autoLevelChange);
@@ -111,7 +117,7 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("SpeedLimitDown",    m_downSpeedLimit);
     config->writeEntry("CorrectLimitUp",    m_upCorrectLimit);
     config->writeEntry("SpeedLimitUp",      m_upSpeedLimit);
-    config->writeEntry("RememberLevel",    m_rememberLevel);
+    config->writeEntry("RememberLevel",     m_rememberLevel);
 };
 
 

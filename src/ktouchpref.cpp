@@ -69,6 +69,7 @@ KTouchPref::KTouchPref() : KDialogBase(IconList, i18n("KTouch Preferences"), Def
     connect(m_pageGeneral->slidingSpeedSlider, SIGNAL(valueChanged(int)), this, SLOT(setModified()) );
     connect(m_pageKeyboard->colorSchemeCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
     connect(m_pageKeyboard->keyboardLayoutCombo, SIGNAL(activated(int)), this, SLOT(setModified()) );
+    connect(m_pageKeyboard->showAnimationCheckBox, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
     connect(m_pageTraining->levelChangeCheck, SIGNAL(toggled(bool)), this, SLOT(setModified()) );
     connect(m_pageTraining->downCorrectLimit, SIGNAL(valueChanged(int)), this, SLOT(setModified()) );
     connect(m_pageTraining->downSpeedLimit, SIGNAL(valueChanged(int)), this, SLOT(setModified()) );
@@ -93,6 +94,7 @@ void KTouchPref::setDefaults() {
     // keyboard page
     m_pageKeyboard->colorSchemeCombo->setCurrentItem(1); // classic scheme
     m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(0);
+    m_pageKeyboard->showAnimationCheckBox->setChecked(true);
     // training page
     m_pageTraining->levelChangeCheck->setChecked(true);
     m_pageTraining->rememberLevelCheck->setChecked(true);
@@ -114,6 +116,7 @@ void KTouchPref::update(bool toDialog) {
         m_pageGeneral->errorColorBtn->setColor( KTouchConfig().m_errorColor );
         m_pageGeneral->updateFont(  KTouchConfig().m_font );
         m_pageGeneral->slidingSpeedSlider->setValue( KTouchConfig().m_slideSpeed );
+        
         // keyboard page
         m_pageKeyboard->colorSchemeCombo->setCurrentItem(KTouchConfig().m_keyboardColorScheme);
         // set currently selected keyboard layout
@@ -122,6 +125,8 @@ void KTouchPref::update(bool toDialog) {
             m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(itemIndex);
         else
             m_pageKeyboard->keyboardLayoutCombo->setCurrentItem(0); // select "number" by default
+				m_pageKeyboard->showAnimationCheckBox->setChecked(KTouchConfig().m_showAnimation);
+            
         // training page
         m_pageTraining->levelChangeCheck->setChecked(KTouchConfig().m_autoLevelChange);
         m_pageTraining->levelChangeToggled( KTouchConfig().m_autoLevelChange );
@@ -139,9 +144,12 @@ void KTouchPref::update(bool toDialog) {
         KTouchConfig().m_errorColor         = m_pageGeneral->errorColorBtn->color();
         KTouchConfig().m_font               = m_pageGeneral->m_font;
         KTouchConfig().m_slideSpeed         = m_pageGeneral->slidingSpeedSlider->value();
+        
         // keyboard page
         KTouchConfig().m_keyboardColorScheme = m_pageKeyboard->colorSchemeCombo->currentItem();
         KTouchConfig().m_keyboardLayout      = m_pageKeyboard->keyboardLayoutCombo->currentText();
+				KTouchConfig().m_showAnimation       = m_pageKeyboard->showAnimationCheckBox->isChecked();
+        
         // training page
         KTouchConfig().m_autoLevelChange    = m_pageTraining->levelChangeCheck->isChecked();
         KTouchConfig().m_downCorrectLimit   = m_pageTraining->downCorrectLimit->value();
