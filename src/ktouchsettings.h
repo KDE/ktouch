@@ -64,7 +64,6 @@ class KTouchSettings {
     int             m_keyAnimationType; ///< What kind of key highlighting would you like to have.
     QString         m_keyboardLayout;   ///< The currently chosen keyboard layout.
     QStringList     m_keyboardLayouts;  ///< The list of available keyboard layouts.
-    QFont           m_keyboardFont;     ///< The keyboard font
 
     // other stuff not in the preferences dialog
     QStringList     m_lectureList;      ///< A list of all lecture files found in the standard dirs (filenames only).

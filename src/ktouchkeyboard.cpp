@@ -42,6 +42,7 @@ KTouchKeyboard::KTouchKeyboard(QWidget *parent)
 
 bool KTouchKeyboard::loadKeyboard(const KURL& url, QString* errorMsg) {
     QString target;
+    //TODO for 3.4 fix deprecated
     if (KIO::NetAccess::download(url, target)) {
         QString msg;
         bool result = readKeyboard(target, msg);
@@ -96,6 +97,7 @@ void KTouchKeyboard::saveKeyboard(const KURL& url) {
     }
 
     if (temp) {
+        //TODO for 3.4 fix deprecated
         KIO::NetAccess::upload(tmpFile, url);
         temp->unlink();
         delete temp;

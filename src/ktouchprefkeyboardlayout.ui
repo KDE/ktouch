@@ -8,32 +8,49 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>566</width>
-            <height>236</height>
+            <width>498</width>
+            <height>149</height>
         </rect>
     </property>
     <property name="caption">
         <string>Keyboard Settings</string>
     </property>
-    <vbox>
+    <grid>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
         <property name="margin">
             <number>0</number>
         </property>
-        <widget class="QGroupBox">
+        <spacer row="1" column="0">
+            <property name="name">
+                <cstring>spacer14</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>30</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QGroupBox" row="0" column="0">
             <property name="name">
                 <cstring>groupBox1</cstring>
             </property>
             <property name="title">
                 <string></string>
             </property>
-            <grid>
+            <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLayoutWidget" row="0" column="0">
+                <widget class="QLayoutWidget">
                     <property name="name">
                         <cstring>layout9</cstring>
                     </property>
@@ -83,7 +100,7 @@
                                     </property>
                                     <property name="sizeHint">
                                         <size>
-                                            <width>31</width>
+                                            <width>90</width>
                                             <height>20</height>
                                         </size>
                                     </property>
@@ -91,6 +108,12 @@
                                 <widget class="KComboBox">
                                     <property name="name">
                                         <cstring>kcfg_Layout</cstring>
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>The keyboard layout for the language you want</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>Here you can change the keyboard layout for KTouch. This keyboard layout usually matches the lecture language.</string>
                                     </property>
                                 </widget>
                             </hbox>
@@ -123,52 +146,24 @@
                                     </property>
                                     <property name="sizeHint">
                                         <size>
-                                            <width>31</width>
+                                            <width>80</width>
                                             <height>21</height>
                                         </size>
                                     </property>
                                 </spacer>
-                                <widget class="KPushButton">
+                                <widget class="KFontRequester">
                                     <property name="name">
-                                        <cstring>fontChooseBtn</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Select Font...</string>
+                                        <cstring>kcfg_KeysFont</cstring>
                                     </property>
                                 </widget>
                             </hbox>
                         </widget>
                     </vbox>
                 </widget>
-            </grid>
+            </vbox>
         </widget>
-        <spacer>
-            <property name="name">
-                <cstring>spacer14</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <property name="sizeType">
-                <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>20</width>
-                    <height>30</height>
-                </size>
-            </property>
-        </spacer>
-    </vbox>
+    </grid>
 </widget>
-<connections>
-    <connection>
-        <sender>fontChooseBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchPrefKeyboardLayout</receiver>
-        <slot>fontChooseBtnClicked()</slot>
-    </connection>
-</connections>
 <tabstops>
     <tabstop>kcfg_Layout</tabstop>
 </tabstops>
@@ -178,6 +173,6 @@
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kcombobox.h</includehint>
-    <includehint>kpushbutton.h</includehint>
+    <includehint>kfontrequester.h</includehint>
 </includehints>
 </UI>
