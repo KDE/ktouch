@@ -17,7 +17,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <config.h>
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
@@ -35,6 +34,7 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char *argv[])
 {
+
 	KAboutData about( "ktouch",
 		I18N_NOOP("KTouch"),
 		VERSION,
@@ -54,5 +54,5 @@ int main(int argc, char *argv[])
 	}
 	KTouchApp app;
 	app.exec();
-}
+	}
 

@@ -46,7 +46,8 @@ optionTraining.cpp \
 main.cpp \
 ktouchapp.cpp \
 touchstat.cpp \
-touchStatWindow.cpp 
+touchStatWindow.cpp \
+touchSplash.cpp
 
 ktouch_METASOURCES = AUTO
 
@@ -79,7 +80,8 @@ touchkeyboard.h \
 touchlecture.h \
 touchline.h \
 touchstat.h \
-touchStatWindow.h
+touchStatWindow.h \
+touchSplash.h
 
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc

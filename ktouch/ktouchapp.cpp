@@ -15,6 +15,7 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <unistd.h>
 
 #include <kwin.h>
 #include <kdebug.h>
@@ -23,6 +24,8 @@
 
 #include "ktouchapp.h"
 #include "ktouch.h"
+#include "touchSplash.h"
+
 #include "ktouchapp.moc"
 
 KTouchApp::KTouchApp()
@@ -36,6 +39,12 @@ KTouchApp::~KTouchApp()
 
 int KTouchApp::newInstance()
 {
+	TouchSplash *splash = new TouchSplash();
+	splash->show();
+	splash->raise();
+	splash->setHideEnabled( true );
+	QApplication::flushX();
+
 	if (isRestored())
 	{
 		// There can only be one main window
@@ -60,6 +69,10 @@ int KTouchApp::newInstance()
 		}
 
 	}
+
+	sleep(2);
+	splash->hide();
+	delete(splash);
 
 	return 0;
 }
