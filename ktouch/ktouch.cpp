@@ -192,6 +192,7 @@ void KTouch::saveOptions()
 	//** General ****************************************************************
 	config->setGroup("General");
 	config->writeEntry("Beep on error",touchStatus->errorSound);
+	config->writeEntry("Sound on level",touchStatus->levelSound);
 	config->writeEntry("Color on error",touchLine->getShowError());
 
 	config->writeEntry("ErrorColor",(QColor)touchLine->getErrorColor());
@@ -260,6 +261,7 @@ void KTouch::readOptions()
 	config->setGroup("General");
 
 	touchStatus->errorSound=config->readBoolEntry("Beep on error",true);
+	touchStatus->levelSound=config->readBoolEntry("Sound on level",true);
 	touchLine->setShowError(config->readBoolEntry("Color on error",true));
 
 	QColor color(255,150,150);
@@ -362,6 +364,7 @@ void KTouch::slotStatusMsg(const QString &text)
 
 void KTouch::slotOptionKeyboard()
 {
+	// Set up dialog
 	OptionKeyboard *optionKeyboard=new OptionKeyboard(this,"keyboardOptionDialog",true);
 	optionKeyboard->showColor->setChecked(touchKeyboard->getShowColor());
 	optionKeyboard->showAnimation->setChecked(touchKeyboard->getShowAnimation());
@@ -373,33 +376,33 @@ void KTouch::slotOptionKeyboard()
 	{
 		if(optionKeyboard->language->text(i)==touchKeyboard->getLanguage())
 		{
-		optionKeyboard->language->setCurrentItem(i);
+			optionKeyboard->language->setCurrentItem(i);
 		}
 	}
 
-	int result = optionKeyboard->exec();
-	if(result==1)
+	if(optionKeyboard->exec())
 	{
+		// save changes made in dialog
 		touchKeyboard->setShowColor(optionKeyboard->showColor->isChecked());
 		touchKeyboard->setShowAnimation(optionKeyboard->showAnimation->isChecked());
 		if(optionKeyboard->showKeypad->isChecked())
 		{
-		touchKeyboard->loadKeyboard("number");
+			touchKeyboard->loadKeyboard("number");
 
-		//QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
-		//touchLecture->loadLectureFile(trainingFile);
-		KURL url(dirs->findResource("data","ktouch/number.ktouch"));
-		openDocumentFile(url);
-		slotFileOpenRecent(url);
+			//QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
+			//touchLecture->loadLectureFile(trainingFile);
+			KURL url(dirs->findResource("data","ktouch/number.ktouch"));
+			openDocumentFile(url);
+			slotFileOpenRecent(url);
 		}
 		else
 		{
-		touchKeyboard->loadKeyboard(optionKeyboard->language->currentText());
-		//QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
-		//touchLecture->loadLectureFile(trainingFile);
-		KURL url(dirs->findResource("data","ktouch/english.ktouch"));
-		openDocumentFile(url);
-		slotFileOpenRecent(url);
+			touchKeyboard->loadKeyboard(optionKeyboard->language->currentText());
+			//QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
+			//touchLecture->loadLectureFile(trainingFile);
+			KURL url(dirs->findResource("data","ktouch/english.ktouch"));
+			openDocumentFile(url);
+			slotFileOpenRecent(url);
 		}
 
 	}
@@ -409,22 +412,21 @@ void KTouch::slotOptionKeyboard()
 
 void KTouch::slotOptionTraining()
 {
+	// Set up dialog
 	OptionTraining *optionTraining=new OptionTraining(this,"trainingOptionDialog",true);
+
 	optionTraining->limitUp->setValue(touchStatus->getSpeedLimitUp());
 	optionTraining->limitUp->setEnabled(touchStatus->autoLevel);
 	optionTraining->limitDown->setValue(touchStatus->getSpeedLimitDown());
 	optionTraining->limitDown->setEnabled(touchStatus->autoLevel);
 	optionTraining->remember->setChecked(remember);
-
 	optionTraining->autoLevel->setChecked(touchStatus->autoLevel);
 
-
-	int result = optionTraining->exec();
-	if(result==1)
+	if(optionTraining->exec())
 	{
+		// Save dialog changes
 		touchStatus->setSpeedLimit(optionTraining->limitUp->value(),optionTraining->limitDown->value());
 		remember=optionTraining->remember->isChecked();
-
 		touchStatus->autoLevel=optionTraining->autoLevel->isChecked();
 		touchStatus->pushButtonLevelDown->setDisabled(touchStatus->autoLevel);
 		touchStatus->pushButtonLevelUp->setDisabled(touchStatus->autoLevel);
@@ -434,15 +436,20 @@ void KTouch::slotOptionTraining()
 
 void KTouch::slotOptionGeneral()
 {
+	// Set up dialog
 	OptionGeneral *optionGeneral=new OptionGeneral(this,"generalOptionDialog",true);
+
 	optionGeneral->beepOnError->setChecked(touchStatus->errorSound);
+	optionGeneral->soundOnLevel->setChecked(touchStatus->levelSound);
 	optionGeneral->colorOnError->setChecked(touchLine->getShowError());
 	optionGeneral->showColor->setPalette(QPalette(touchLine->getErrorColor()));
 	optionGeneral->fontChooser->setFont(touchLine->getFont());
-	int result = optionGeneral->exec();
-	if(result==1)
+
+	if(optionGeneral->exec())
 	{
+		// Save dialog changes
 		touchStatus->errorSound=optionGeneral->beepOnError->isChecked();
+		touchStatus->levelSound=optionGeneral->soundOnLevel->isChecked();
 		touchLine->setShowError(optionGeneral->colorOnError->isChecked());
 		touchLine->setErrorColor(optionGeneral->showColor->backgroundColor());
 		touchLine->setFont(optionGeneral->fontChooser->font());

@@ -11,15 +11,15 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>372</width>
-            <height>380</height>
+            <width>448</width>
+            <height>496</height>
         </rect>
     </property>
     <property stdset="1">
         <name>caption</name>
         <string>General options</string>
     </property>
-    <grid>
+    <vbox>
         <property stdset="1">
             <name>margin</name>
             <number>11</number>
@@ -28,7 +28,164 @@
             <name>spacing</name>
             <number>6</number>
         </property>
-        <widget row="2"  column="0" >
+        <widget>
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox1</cstring>
+            </property>
+            <property stdset="1">
+                <name>sizePolicy</name>
+                <sizepolicy>
+                    <hsizetype>3</hsizetype>
+                    <vsizetype>3</vsizetype>
+                </sizepolicy>
+            </property>
+            <property stdset="1">
+                <name>frameShape</name>
+                <enum>Box</enum>
+            </property>
+            <property stdset="1">
+                <name>frameShadow</name>
+                <enum>Sunken</enum>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Sound</string>
+            </property>
+            <property stdset="1">
+                <name>alignment</name>
+                <set>WordBreak|AlignLeft</set>
+            </property>
+            <property>
+                <name>wordwrap</name>
+            </property>
+            <vbox>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>beepOnError</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Beep on error</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
+                    </property>
+                </widget>
+                <widget>
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>soundOnLevel</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Sound on automatic level change</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget>
+            <class>QGroupBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>GroupBox2</cstring>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Visual</string>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>11</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="1"  column="1" >
+                    <class>QPushButton</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>setColorButton</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Set color</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="0"  rowspan="1"  colspan="2" >
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>colorOnError</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>Color on error</string>
+                    </property>
+                    <property>
+                        <name>toolTip</name>
+                        <string>Paint keybord with colors</string>
+                    </property>
+                    <property>
+                        <name>whatsThis</name>
+                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
+                    </property>
+                </widget>
+                <widget row="1"  column="0" >
+                    <class>QFrame</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>showColor</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShape</name>
+                        <enum>Box</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>frameShadow</name>
+                        <enum>Raised</enum>
+                    </property>
+                    <property stdset="1">
+                        <name>lineWidth</name>
+                        <number>2</number>
+                    </property>
+                </widget>
+                <widget row="2"  column="0"  rowspan="1"  colspan="2" >
+                    <class>KFontChooser</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>fontChooser</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>sizePolicy</name>
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>3</vsizetype>
+                        </sizepolicy>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget>
             <class>QLayoutWidget</class>
             <property stdset="1">
                 <name>name</name>
@@ -96,153 +253,7 @@
                 </widget>
             </hbox>
         </widget>
-        <widget row="0"  column="0" >
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>GroupBox1</cstring>
-            </property>
-            <property stdset="1">
-                <name>title</name>
-                <string>Sound</string>
-            </property>
-            <property stdset="1">
-                <name>frameShadow</name>
-                <enum>Sunken</enum>
-            </property>
-            <property stdset="1">
-                <name>frameShape</name>
-                <enum>Box</enum>
-            </property>
-            <property stdset="1">
-                <name>alignment</name>
-                <set>WordBreak|AlignLeft</set>
-            </property>
-            <property stdset="1">
-                <name>sizePolicy</name>
-                <sizepolicy>
-                    <hsizetype>3</hsizetype>
-                    <vsizetype>3</vsizetype>
-                </sizepolicy>
-            </property>
-            <property>
-                <name>wordwrap</name>
-            </property>
-            <grid>
-                <property stdset="1">
-                    <name>margin</name>
-                    <number>11</number>
-                </property>
-                <property stdset="1">
-                    <name>spacing</name>
-                    <number>6</number>
-                </property>
-                <widget row="0"  column="0" >
-                    <class>QCheckBox</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>beepOnError</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Beep on error</string>
-                    </property>
-                    <property>
-                        <name>toolTip</name>
-                        <string>Paint keybord with colors</string>
-                    </property>
-                    <property>
-                        <name>whatsThis</name>
-                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
-                    </property>
-                </widget>
-            </grid>
-        </widget>
-        <widget row="1"  column="0" >
-            <class>QGroupBox</class>
-            <property stdset="1">
-                <name>name</name>
-                <cstring>GroupBox2</cstring>
-            </property>
-            <property stdset="1">
-                <name>title</name>
-                <string>Visual</string>
-            </property>
-            <grid>
-                <property stdset="1">
-                    <name>margin</name>
-                    <number>11</number>
-                </property>
-                <property stdset="1">
-                    <name>spacing</name>
-                    <number>6</number>
-                </property>
-                <widget row="1"  column="1" >
-                    <class>QPushButton</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>setColorButton</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Set color</string>
-                    </property>
-                </widget>
-                <widget row="0"  column="0"  rowspan="1"  colspan="2" >
-                    <class>QCheckBox</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>colorOnError</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>text</name>
-                        <string>Color on error</string>
-                    </property>
-                    <property>
-                        <name>toolTip</name>
-                        <string>Paint keybord with colors</string>
-                    </property>
-                    <property>
-                        <name>whatsThis</name>
-                        <string>Check this if you want your keyboard to show colors which indicate finger regions</string>
-                    </property>
-                </widget>
-                <widget row="1"  column="0" >
-                    <class>QFrame</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>showColor</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShadow</name>
-                        <enum>Raised</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>frameShape</name>
-                        <enum>Box</enum>
-                    </property>
-                    <property stdset="1">
-                        <name>lineWidth</name>
-                        <number>2</number>
-                    </property>
-                </widget>
-                <widget row="2"  column="0"  rowspan="1"  colspan="2" >
-                    <class>KFontChooser</class>
-                    <property stdset="1">
-                        <name>name</name>
-                        <cstring>fontChooser</cstring>
-                    </property>
-                    <property stdset="1">
-                        <name>sizePolicy</name>
-                        <sizepolicy>
-                            <hsizetype>5</hsizetype>
-                            <vsizetype>3</vsizetype>
-                        </sizepolicy>
-                    </property>
-                </widget>
-            </grid>
-        </widget>
-    </grid>
+    </vbox>
 </widget>
 <customwidgets>
     <customwidget>
