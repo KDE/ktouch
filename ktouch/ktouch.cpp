@@ -38,6 +38,8 @@
 
 // application specific includes
 #include "ktouch.h"
+#include <kstatusbar.h>
+#include <qpushbutton.h>
 
 #define ID_STATUS_MSG 1
 
