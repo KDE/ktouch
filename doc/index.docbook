@@ -418,17 +418,9 @@ Program Copyright, 1999, 2000, 2001 Haavard Froeiland
 <!-- replace the following with the &install.intro.documentation; -->
 <!-- entity for KDE 3.x -->
 
-<!-- requires that packagename is defined in the documentation prologue -->
-<para>&kappname; is part of the &kde; project <ulink
-url="&kde-http;">&kde-http;</ulink>.</para>
-
-<para>&kappname; can be found in the &package; package on <ulink
-url="&kde-ftp;">&kde-ftp;</ulink>, the main &FTP; site of the &kde;
-project.</para>
-
 <!-- Stop replacing here -->
 
-<para>&ktouch; has it's own home page on Sourceforge <ulink
+<para>&ktouch; has its own home page on Sourceforge <ulink
 url="http://www.sourceforge.net">Sourceforge</ulink>, at <ulink
 url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink></para>
 </sect1>
@@ -443,11 +435,13 @@ In order to successfully use &ktouch; (version > 0.7), you need &kde; > 2.0 .
 <para>
 &ktouch; itself can be found
 on <ulink url="http://edu.kde.org/ktouch">The &ktouch; home page</ulink>
-and is part of the KDE-Edu project and <ulink url="ftp://ktouch.sourceforge.net">the
+and is part of the KDE-Edu project and <ulink
+ url="ftp://ktouch.sourceforge.net">the
 &ktouch; &FTP; server</ulink>. </para>
 
 <para>You can find a list of changes at <ulink
-url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.</para>
+url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.</para
+>
 
 </sect1>
 
