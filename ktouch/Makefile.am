@@ -60,7 +60,7 @@ rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
 
 # the -x is for skipping messages already translated in kdelibs
-messages:
-	$(XGETTEXT) $(ktouch_SOURCES) -o $(podir)/ktouch.pot
+messages: rc.cpp
+	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/ktouch.pot
 
 
