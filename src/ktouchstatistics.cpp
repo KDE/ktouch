@@ -18,7 +18,6 @@
 #include <qlabel.h>
 #include <qprogressbar.h>
 #include <qpixmap.h>
-#include <qlabel.h>
 #include <qpainter.h>
 #include <qradiobutton.h>
 #include <qbuttongroup.h>
