@@ -345,7 +345,7 @@ void KTouch::slotOptionKeyboard()
 	if(optionKeyboard->showKeypad->isChecked())
 	{
 	    touchTrain->keyboard->loadKeyboard("number");
-	    KURL url(dirs->findResource("data","ktouch/number.keyboard"));
+	    KURL url(dirs->findResource("data","ktouch/number.ktouch"));
 	    openDocumentFile(url);
 	    slotFileOpenRecent(url);
 	}
@@ -415,8 +415,9 @@ void KTouch::slotViewStat()
 {
     if(statShow->isChecked())
     {
-	touchStatWindow = new TouchStatWindow(touchStat);
+	touchStatWindow = new TouchStatWindow(touchStat,this);
 	touchStatWindow->show();
+	connect(touchStatWindow, SIGNAL(statShowSetChecked(bool)), statShow, SLOT(setChecked(bool)));
     }
     else
     {
@@ -447,6 +448,7 @@ void KTouch::slotModeEdit()
     
     kdDebug() << "slotModeEdit" << endl;
     touchEdit = new TouchEdit(this, touchLecture);
+
     setCentralWidget(touchEdit);
     touchEdit->show();
     touchEdit->setFocus();

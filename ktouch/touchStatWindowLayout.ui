@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>584</width>
-            <height>614</height>
+            <height>452</height>
         </rect>
     </property>
     <property name="caption">
@@ -25,47 +25,6 @@
         <property name="spacing">
             <number>6</number>
         </property>
-        <widget class="QLayoutWidget" row="1" column="0">
-            <property name="name">
-                <cstring>Layout1</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <property name="margin">
-                    <number>0</number>
-                </property>
-                <property name="spacing">
-                    <number>6</number>
-                </property>
-                <spacer>
-                    <property name="name" stdset="0">
-                        <cstring>Spacer1</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>20</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QPushButton">
-                    <property name="name">
-                        <cstring>close</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Close</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
         <widget class="QTabWidget" row="0" column="0">
             <property name="name">
                 <cstring>TabWidget2</cstring>
@@ -671,12 +630,6 @@
     </grid>
 </widget>
 <connections>
-    <connection>
-        <sender>close</sender>
-        <signal>clicked()</signal>
-        <receiver>TouchStatWindowLayout</receiver>
-        <slot>reject()</slot>
-    </connection>
     <connection>
         <sender>PushButton2</sender>
         <signal>clicked()</signal>

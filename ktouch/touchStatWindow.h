@@ -47,16 +47,18 @@ class TouchStatWindow : public TouchStatWindowLayout
     // pointer to the real statistic data
     TouchStat *stat;
     
-    private slots:
+private slots:
 	
-	
-	void updateToday();
+    void reject();
+    void updateToday();
     void autoUpdate(int);
     void updateFiveTimes();
     void updateTwentyTimes();
     void updateAllTimes();
-    
     void setFocuseChar();
+
+signals:
+    void statShowSetChecked(bool);
     
 };
 

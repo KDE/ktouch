@@ -22,39 +22,46 @@
 TouchStatWindow::TouchStatWindow(TouchStat *s, QWidget *parent, const char *name, bool modal)
                : TouchStatWindowLayout(parent, name, modal)
 {
-	stat=s;
-	updateToday();
-	updateFiveTimes();
-	updateTwentyTimes();
-	updateAllTimes();
-
-	timer = new QTimer(this,"timer");
-
-	connect( timer, SIGNAL(timeout()), SLOT(updateToday()));
-	timer->start(1000,false);
+    stat=s;
+    updateToday();
+    updateFiveTimes();
+    updateTwentyTimes();
+    updateAllTimes();
+    
+    timer = new QTimer(this,"timer");
+    
+    connect( timer, SIGNAL(timeout()), SLOT(updateToday()));
+    timer->start(1000,false);
 }
 
 TouchStatWindow::~TouchStatWindow()
-{}
+{
+
+}
+
+void TouchStatWindow::reject()
+{
+    emit statShowSetChecked(false);
+}
 
 void TouchStatWindow::updateToday()
 {
-	// total
-	totalWords ->display(stat->wordCount);
-	totalOk    ->display(stat->okCount);
-	totalError ->display(stat->errorCount);
-	totalTime  ->display(stat->getTotalTime()/1000);
-
-	// typing rate
-	wordMin    ->display(stat->getWordPerMin());
-	charMin    ->display(stat->getCharPerMin());
-
-	// accurancy
-	acc        ->setProgress(stat->getRatio());
-
-	// Proggress
-	setFocuseChar();
-
+    // total
+    totalWords ->display(stat->wordCount);
+    totalOk    ->display(stat->okCount);
+    totalError ->display(stat->errorCount);
+    totalTime  ->display(stat->getTotalTime()/1000);
+    
+    // typing rate
+    wordMin    ->display(stat->getWordPerMin());
+    charMin    ->display(stat->getCharPerMin());
+    
+    // accurancy
+    acc        ->setProgress(stat->getRatio());
+    
+    // Proggress
+    setFocuseChar();
+    
 }
 
 void TouchStatWindow::updateFiveTimes()
@@ -74,10 +81,11 @@ void TouchStatWindow::updateAllTimes()
 
 void TouchStatWindow::autoUpdate(int i)
 {
-	if(i)
-		timer->start(1000,false);
-	else
-		timer->stop();
+
+    if(i)
+	timer->start(1000,false);
+    else
+	timer->stop();
 }
 
 // This part should be changed, It's crap!!

@@ -32,40 +32,40 @@
 
 class TouchStat : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-		TouchStat();
-		~TouchStat();
-
-		int getTotalTime();
-		int wordCount;
-		int errorCount;
-		int okCount;
-		int getRatio();
-		int getWordPerMin();
-		int getCharPerMin();
-
-		struct charStat{
-			int ok;
-			int error;
-		};
-
-		struct charStat arrayStat[512];
-
-
-	public slots:
-		void gotError(QChar);
-		void gotOk(QChar);
-		void start();
-		void stop();
-		void saveStat();
-
-	private:
-		KStandardDirs *dirs;
-		QTime *time;
-		int totalTime;
-
+public:
+    TouchStat();
+    ~TouchStat();
+    
+    int getTotalTime();
+    int wordCount;
+    int errorCount;
+    int okCount;
+    int getRatio();
+    int getWordPerMin();
+    int getCharPerMin();
+    
+    struct charStat{
+	int ok;
+	int error;
+    };
+    
+    struct charStat arrayStat[512];
+    
+    
+public slots:
+    void gotError(QChar);
+    void gotOk(QChar);
+    void start();
+    void stop();
+    void saveStat();
+    
+private:
+    KStandardDirs *dirs;
+    QTime *time;
+    int totalTime;
+    
 };
 
 #endif
