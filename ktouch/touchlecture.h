@@ -25,6 +25,7 @@
 #include <qfile.h>
 #include <qtextstream.h>
 #include <qmessagebox.h>
+#include <kdebug.h>
 
 class TouchLecture : public QObject
 {

@@ -44,9 +44,6 @@ class KTouch : public KMainWindow
 		KTouch();
 		~KTouch();
 		TouchLecture *touchLecture;
-	//	TouchLine *touchLine;
-	//	TouchStatus *touchStatus;
-	//	TouchKeyboard *touchKeyboard;
 		TouchStat *touchStat;
 		TouchEdit *touchEdit;
 		TouchTrain *touchTrain;

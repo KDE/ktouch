@@ -49,8 +49,8 @@
 
 KTouch::KTouch():KMainWindow()
 {
-  config=kapp->config();
-  dirs = KGlobal::dirs();
+	config=kapp->config();
+	dirs = KGlobal::dirs();
 
 	touchLecture = new TouchLecture();
 	touchStat    = new TouchStat();
@@ -61,10 +61,7 @@ KTouch::KTouch():KMainWindow()
 //Object::connect(	touchTrain->line,    SIGNAL(isOk(QChar)),
 //				touchStat,    SLOT(gotOk(QChar)));
 
-//Object::connect(	touchTrain->status,  SIGNAL(levelUp()),
-//				touchLecture, SLOT(levelUp()));
-//Object::connect(	touchTrain->status,  SIGNAL(levelDown()),
-//				touchLecture, SLOT(levelDown()));
+
 
 
 
@@ -73,12 +70,8 @@ KTouch::KTouch():KMainWindow()
 //Object::connect(	touchTrain->status,  SIGNAL(start()),
 //				touchStat,    SLOT(start()));
 
-/*Object::connect(	touchTrain->status,  SIGNAL(forceNextLine()),
-						touchTrain->line,    SLOT(getNextLine()));
-	QObject::connect(	touchLecture, SIGNAL(levelMessage(const QString&)),
-						touchTrain->status,  SLOT(setLevelMessage(const QString&)));
-	QObject::connect(	touchLecture, SIGNAL(levelChanged(int)),
-						touchTrain->status,  SLOT(setLevel(int)));
+/*
+
 	QObject::connect(	touchTrain->line,    SIGNAL(nextKey(const QChar&)),
 						touchTrain->keyboard, SLOT(newKey(const QChar&)));
 
@@ -94,9 +87,12 @@ KTouch::KTouch():KMainWindow()
 	initStatusBar();
 	initActions();
 
+	kdDebug() << "read option" << endl;
+	readOptions();
+	kdDebug() << "read option done" << endl;
 
 	slotModeTrain();
-	readOptions();
+
 //	touchLine->getNextLine();
 }
 
@@ -181,7 +177,7 @@ void KTouch::saveOptions()
 
 void KTouch::readOptions()
 {
-	touchTrain->readOptions();
+
 
 
 	//** General Options ********************************************************
@@ -215,7 +211,7 @@ void KTouch::readOptions()
 
 	touchLecture->load(url.directory(false,true)+url.fileName());
 	
-	touchTrain->line->getNextLine();
+	//touchTrain->line->getNextLine();
 
 }
 
@@ -484,9 +480,9 @@ void KTouch::slotModeTrain()
 	QWidget *oldCentralWidget=centralWidget();
 
 	kdDebug() << "slotModeTrain" << endl;
-	touchTrain = new TouchTrain(this);
-
-	touchTrain->line->setLecture(touchLecture);
+	touchTrain = new TouchTrain(this,touchLecture);
+	touchTrain->readOptions();
+	//touchTrain->line->setLecture(touchLecture);
 	touchTrain->line->getNextLine();
 
 	setCentralWidget(touchTrain);

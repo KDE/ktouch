@@ -31,24 +31,25 @@
 #include "touchTrainLayout.h"
 #include "touchkeyboard.h"
 #include "touchStatus.h"
+#include "touchlecture.h"
 
 class TouchTrain : public TouchTrainLayout {
    Q_OBJECT
 
 public:
 	/** constructor */
-	TouchTrain(QWidget* parent=0, const char* name=0);
+	TouchTrain(QWidget* parent, TouchLecture* lecture);
 
 	/** destructor */
 	~TouchTrain();
 
 	void saveOptions();
 	void readOptions();
-	
+
 private:
 	KConfig *config;
 	bool remember;
-
+	TouchLecture* lecture;
 };
 
 #endif

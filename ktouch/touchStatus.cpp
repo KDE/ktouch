@@ -112,7 +112,8 @@ void TouchStatus::calculate()
 
 void TouchStatus::setLevel(int level)
 {
-  LCDLevel->display(level+1);
+	kdDebug() << "LCD Level " << (level + 1) << endl;
+	LCDLevel->display(level+1);
 }
 
 void TouchStatus::levelForcedUp()

@@ -36,6 +36,7 @@ QString TouchLecture::getName()
 
 void TouchLecture::load(QString f)
 {
+	kdDebug() << "Loading file" << endl;
 	QFile file(f);
 	if(file.exists())
 	{
@@ -50,7 +51,7 @@ void TouchLecture::load(QString f)
 			levelVector.insert(levelVector.end(),new vector<QString>);
 			while ( !t.eof() )
 			{             // until end of file...
-				s = t.readLine();              // line of text excluding '\n'
+				s = t.readLine().stripWhiteSpace();              // line of text excluding '\n'
 				if(s.at(0)!='#') // # means that it's a comment
 				{
 					if(s.isEmpty())
@@ -156,6 +157,7 @@ QString TouchLecture::getNextLine()
 
 void TouchLecture::levelUp()
 {
+	kdDebug() << "LevelUp" << endl;
 	if(level<(levelVector.size()-1) && !levelHasChanged)
 	{
 		level++;
@@ -166,13 +168,14 @@ void TouchLecture::levelUp()
 
 void TouchLecture::levelDown()
 {
+	kdDebug() << "LevelDown" << endl;
 	if(level>0 && !levelHasChanged)
 	{
 		level--;
 		pos=1;
 		levelHasChanged=true;
-		}
-	};
+	}
+};
 
 void TouchLecture::setLevel(unsigned int l)
 {
@@ -190,6 +193,7 @@ void TouchLecture::setLevel(unsigned int l)
 	else
 	{
 		level=levelVector.size()-1;
+		// WARNING: This will loop if .........
 		setLevel(level);
 	}
 	levelHasChanged=false;

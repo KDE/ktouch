@@ -21,11 +21,23 @@
 #include "touchline.h"
 #include <kdebug.h>
 
-TouchTrain::TouchTrain( QWidget* parent, const char* name)
-          : TouchTrainLayout(parent,name)
+TouchTrain::TouchTrain( QWidget* parent, TouchLecture* l)
+          : TouchTrainLayout(parent)
 {
+	lecture=l;
+
+	//FIXME this should be rewritten
+	line->setLecture(lecture);
+
+	connect(status,       SIGNAL(levelUp()),         lecture, SLOT(levelUp()));
+	connect(status,       SIGNAL(levelDown()),       lecture, SLOT(levelDown()));
+	connect(lecture,      SIGNAL(levelChanged(int)), status, SLOT(setLevel(int)));
+	connect(status,       SIGNAL(forceNextLine()),   line, SLOT(getNextLine()));
+	connect(lecture, SIGNAL(levelMessage(const QString&)), status, SLOT(setLevelMessage(const QString&)));
+
 	config=kapp->config();
 	readOptions();
+
 	status->pushButtonLevelDown->setDisabled(status->autoLevel);
 	status->pushButtonLevelUp->setDisabled(status->autoLevel);
 }
@@ -50,7 +62,7 @@ void TouchTrain::saveOptions()
 	config->setGroup("History");
 	config->writeEntry("Speed",status->getSpeed());
 	config->writeEntry("Level",status->getLevel());
-//	config->writeEntry("Remember",remember);
+	config->writeEntry("Remember",remember);
 	config->writeEntry("SpeedLimitUp",status->getSpeedLimitUp());
 	config->writeEntry("SpeedLimitDown",status->getSpeedLimitDown());
 	config->writeEntry("Auto Level",status->autoLevel);
@@ -80,7 +92,7 @@ void TouchTrain::readOptions()
 	remember=config->readBoolEntry("Remember",true);
 	if(remember)
 	{
-//		touchLecture->setLevel(config->readNumEntry("Level",1));
+		lecture->setLevel(config->readNumEntry("Level",1));
 		status->setSpeed(config->readNumEntry("Speed",0));
 	}
 	status->setSpeedLimit(config->readNumEntry("SpeedLimitUp"),config->readNumEntry("SpeedLimitDown"));

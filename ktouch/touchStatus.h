@@ -22,6 +22,7 @@
 #include <qlcdnumber.h>
 #include <qprogressbar.h>
 #include <kstandarddirs.h>
+#include <kdebug.h>
 
 #include "touchStatusLayout.h"
 
