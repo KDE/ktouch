@@ -36,7 +36,7 @@ messages: rc.cpp
 bin_PROGRAMS = ktouch
 
 # the application source, library search path, and link libraries
-ktouch_SOURCES = main.cpp ktouch.cpp ktouchchartwidget.cpp  ktouchprefgeneral.cpp ktouchprefkeyboard.cpp ktouchpreftraining.cpp ktouchpref.cpp  ktouchstatus.cpp ktouchlecture.cpp ktouchleveldata.cpp ktoucheditor.cpp  ktouchslideline.cpp ktouchkeys.cpp ktouchkeyboard.cpp ktouchsettings.cpp ktouchtrainer.cpp ktouchtrainingsession.cpp  ktouchcharstats.cpp ui/ktouchstatisticslayout.ui ktouchstatistics.cpp ui/ktouchstatuslayout.ui ui/ktouchprefgenerallayout.ui ui/ktouchprefkeyboardlayout.ui ui/ktouchpreftraininglayout.ui ui/ktoucheditorlayout.ui ui/ktouchstartnewdialog.ui
+ktouch_SOURCES = main.cpp ktouch.cpp ktouchchartwidget.cpp  ktouchprefgeneral.cpp ktouchprefkeyboard.cpp ktouchpreftraining.cpp ktouchpref.cpp  ktouchstatus.cpp ktouchlecture.cpp ktouchleveldata.cpp ktoucheditor.cpp  ktouchslideline.cpp ktouchkeys.cpp ktouchkeyboard.cpp ktouchsettings.cpp ktouchtrainer.cpp ktouchtrainingsession.cpp  ktouchcharstats.cpp ktouchstatisticslayout.ui ktouchstatistics.cpp ktouchstatuslayout.ui ktouchprefgenerallayout.ui ktouchprefkeyboardlayout.ui ktouchpreftraininglayout.ui ktoucheditorlayout.ui ktouchstartnewdialog.ui
 
 # the library search path.
 ktouch_LDFLAGS = $(KDE_RPATH) $(all_libraries)
