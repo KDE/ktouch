@@ -6,3 +6,5 @@ keyboard.fr \
 keyboard.la \
 keyboard.no \
 keyboard.pt \
+keyboard.it \
+keyboard.number \
