@@ -50,7 +50,6 @@ main.cpp \
 ktouchapp.cpp \
 touchstat.cpp \
 touchStatWindow.cpp \
-touchSplash.cpp \
 touchEdit.cpp \
 touchTrain.cpp \
 touchTest.cpp
@@ -87,7 +86,6 @@ touchlecture.h \
 touchline.h \
 touchstat.h \
 touchStatWindow.h \
-touchSplash.h \
 touchEditLayout.h \
 touchEdit.h \
 touchTrainLayout.h \

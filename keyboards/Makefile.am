@@ -9,9 +9,11 @@ en.keyboard \
 es.keyboard \
 fi.keyboard \
 fr.keyboard \
+fr_ch.keyboard \
 it.keyboard \
 la.keyboard \
 no.keyboard \
 number.keyboard \
 pt.keyboard \
-se.keyboard
+se.keyboard \
+he.keyboard

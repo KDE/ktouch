@@ -27,7 +27,7 @@ TouchLecture::TouchLecture()
     level=0;
     pos=1;
     levelHasChanged=false;
-};
+}
 
 QString TouchLecture::getName()
 {
@@ -158,7 +158,7 @@ QString TouchLecture::getNextLine()
 	return levelData[pos++];
     }
     return "Error in getNextLine()";
-};
+}
 
 
 void TouchLecture::levelUp()
@@ -170,7 +170,7 @@ void TouchLecture::levelUp()
 		pos=1;
 		levelHasChanged=true;
 	}
-};
+}
 
 void TouchLecture::levelDown()
 {
@@ -181,7 +181,7 @@ void TouchLecture::levelDown()
 		pos=1;
 		levelHasChanged=true;
 	}
-};
+}
 
 void TouchLecture::setLevel(unsigned int l)
 {
@@ -208,5 +208,5 @@ void TouchLecture::setLevel(unsigned int l)
 	    setLevel(level);
 	}
 	levelHasChanged=false;
-};
+}
 

@@ -34,7 +34,7 @@ TouchKey::TouchKey(const char *k, int x, int y, int w, int h)
 }
 
 TouchKey::~TouchKey()
-{};
+{}
 
 void TouchKey::setShowColor(bool show)
 {
