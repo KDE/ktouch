@@ -225,7 +225,7 @@ void KTouch::slotFileOpenRecent(const KURL& url)
 
 void KTouch::slotFileSave()
 {
-    slotStatusMsg(i18n("saving..."));
+    slotStatusMsg(i18n("Saving..."));
     if(touchLecture->save()!= 0 )
     {
 	QMessageBox::information( this,i18n("Saving training file"),
@@ -252,7 +252,7 @@ void KTouch::slotFileSaveAs()
 
 void KTouch::slotFileEdit()
 {
-    slotStatusMsg(i18n("editing..."));
+    slotStatusMsg(i18n("Editing..."));
     
 }
 
