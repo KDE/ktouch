@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>856</width>
-            <height>93</height>
+            <width>824</width>
+            <height>89</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -251,11 +251,17 @@
             </property>
             <property name="sizePolicy">
                 <sizepolicy>
-                    <hsizetype>3</hsizetype>
+                    <hsizetype>7</hsizetype>
                     <vsizetype>0</vsizetype>
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                 </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>0</height>
+                </size>
             </property>
             <property name="frameShape">
                 <enum>Box</enum>
@@ -271,7 +277,7 @@
                     <number>11</number>
                 </property>
                 <property name="spacing">
-                    <number>6</number>
+                    <number>2</number>
                 </property>
                 <spacer>
                     <property name="name" stdset="0">
@@ -315,13 +321,22 @@
                         </size>
                     </property>
                     <property name="frameShape">
-                        <enum>NoFrame</enum>
+                        <enum>ToolBarPanel</enum>
                     </property>
                     <property name="frameShadow">
                         <enum>Plain</enum>
                     </property>
+                    <property name="totalSteps">
+                        <number>100</number>
+                    </property>
+                    <property name="progress">
+                        <number>40</number>
+                    </property>
+                    <property name="centerIndicator">
+                        <bool>false</bool>
+                    </property>
                     <property name="indicatorFollowsStyle">
-                        <bool>true</bool>
+                        <bool>false</bool>
                     </property>
                     <property name="toolTip" stdset="0">
                         <string>How much are you typing correctly?</string>
@@ -502,6 +517,9 @@
         <slot>showStatChanged(int)</slot>
     </connection>
 </connections>
+<includes>
+    <include location="local" impldecl="in implementation">touchStatusLayout.ui.h</include>
+</includes>
 <slots>
     <slot>levelForcedDown()</slot>
     <slot>levelForcedUp()</slot>
