@@ -117,14 +117,14 @@ void KTouchKeyboard::applyPreferences(bool silent) {
         QString fileName = dirs->findResource("data","ktouch/" + KTouchConfig().m_keyboardLayout + ".keyboard");
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(fileName))
+            if (!loadKeyboard(KURL::fromPathOrURL( fileName )))
                 createDefaultKeyboard();
             else
                 m_currentLayout=KTouchConfig().m_keyboardLayout;
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(fileName, &errorMsg)) {
+            if (!loadKeyboard(KURL::fromPathOrURL( fileName ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout! The default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
