@@ -26,7 +26,7 @@ ControlKey	32		(Mellemrum)		30		40		90		10
 ControlKey	257		Shift		0		30		13		10
 ControlKey	259		Caps_Lock		0		20		18		10
 ControlKey   8 		<----			130		0		20		10
-ControlKey	138		Enter		128		20		22		10
+ControlKey	138		Enter		138		10		12	20	10
 
 #			Assci	KeyText		x	y	FingerKey
 #
@@ -59,7 +59,8 @@ NormalKey	168		"			125	10	230
 #
 NormalKey	103		G			58	20	102
 NormalKey	104		H			68	20	106
-NormalKey	39		Ø			118	20	230
+NormalKey	248		Ø			118	20	230
+NormalKey	39		'			128	20	230
 #
 NormalKey	60		<			13	30	97
 NormalKey	122		Z			23	30	97
