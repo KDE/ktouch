@@ -7,4 +7,6 @@ keyboard.la \
 keyboard.no \
 keyboard.pt \
 keyboard.it \
+keyboard.se \
+keyboard.fi \
 keyboard.number \
