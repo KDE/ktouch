@@ -15,12 +15,12 @@
 int KTouchCharStats::hitMissRatio() const {
     if (m_correctCount+m_wrongCount==0) return 0;
     return static_cast<int>(100.0*m_wrongCount/(m_correctCount+m_wrongCount));
-};
+}
 
 QTextStream& operator<<(QTextStream &out, const KTouchCharStats &ch) {
     return (out << ch.m_char.unicode() << " " << ch.m_correctCount << " " << ch.m_wrongCount);
-};
+}
 
 bool greaterHitMissRatio(const KTouchCharStats &lhs, const KTouchCharStats &rhs) {
     return (lhs.hitMissRatio() > rhs.hitMissRatio());
-};
+}

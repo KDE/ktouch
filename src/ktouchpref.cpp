@@ -189,7 +189,7 @@ void KTouchPref::update(bool toDialog) {
         KTouchConfig().m_keyboardColorScheme = m_pageColors->keyboardColorCombo->currentItem();
     };
     enableButtonApply(false);   // Disable apply button
-};
+}
 
 
 void KTouchPref::slotDefault() {
@@ -199,16 +199,16 @@ void KTouchPref::slotDefault() {
     {
         setDefaults();
     }
-};
+}
 
 
 void KTouchPref::slotApply() {
     update(false);              // transfer data from dialog into settings object
     emit applyPreferences();    // emit signal to update widgets
-};
+}
 
 
 void KTouchPref::setModified() {
     enableButtonApply(true);    // simply turn on the apply button
-};
+}
 

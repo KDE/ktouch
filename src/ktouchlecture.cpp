@@ -25,7 +25,7 @@ KTouchLecture::KTouchLecture() {
     // There must be always at least one level in the lecture since KTouch won't work
     // without lecture data. Or at least it would require a hell of work to program
     // everywhere exceptional behavior. And it's a LOT safer that way!!!
-};
+}
 
 
 bool KTouchLecture::loadLecture(const KURL& lectureURL) {
@@ -124,7 +124,7 @@ void KTouchLecture::saveLecture() {
         delete temp;
     }
     m_modified = false;
-};
+}
 
 
 void KTouchLecture::createDefault() {
@@ -133,11 +133,11 @@ void KTouchLecture::createDefault() {
     KTouchLevelData miniLevel;  // create the level which is by default a mini-level
     m_lectureData.append( miniLevel );
     m_modified = false;
-};
+}
 
 
 const KTouchLevelData& KTouchLecture::level(unsigned int levelNum) const {
     if (levelNum>=m_lectureData.count())
         levelNum=0;
     return m_lectureData[levelNum];
-};
+}

@@ -37,4 +37,4 @@ void KTouchPrefTraining::levelChangeToggled(bool on) {
     l8->setEnabled(on);
     l9->setEnabled(on);
     l10->setEnabled(on);
-};
+}

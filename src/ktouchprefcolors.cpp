@@ -41,4 +41,4 @@ void KTouchPrefColors::errorColorCheckToggled(bool on) {
     errorBackgroundLabel->setEnabled(on);
     errorTextBtn->setEnabled(on);
     errorBackgroundBtn->setEnabled(on);
-};
+}

@@ -128,7 +128,7 @@ KTouch::KTouch()
         updateCaption();
     };
     // when KTouch is restored this stuff is done in readProperties()
-};
+}
 
 KTouch::~KTouch() {
     // Note: The dialogs that are created as childs of KTouch will be deleted when the KTouch object
@@ -144,7 +144,7 @@ KTouch::~KTouch() {
     m_startNewDlg=NULL;
     m_lecture=NULL;
     m_trainer=NULL;
-};
+}
 
 
 // ********************
@@ -156,7 +156,7 @@ void KTouch::applyPreferences() {
     m_statusWidget->applyPreferences();
     m_slideLineWidget->applyPreferences();
     m_keyboardWidget->applyPreferences(false);  // noisy preferences here
-};
+}
 
 void KTouch::updateCaption() {
     // kdDebug() << "[KTouch::updateCaption]  URL = " << m_lecture->m_lectureURL << endl;
@@ -180,7 +180,7 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     else
         return; // unrecognised char -> don't accept it! Maybe the key is for somebody else?
     keyEvent->accept();
-};
+}
 
 
 // *********************************
@@ -195,13 +195,13 @@ bool KTouch::queryClose() {
         return true;
     };
     return saveModified();
-};
+}
 
 bool KTouch::queryExit() {
     KTouchConfig().saveSettings();          // saves preferences
     saveTrainingState(kapp->config());      // saves training state
     return true;
-};
+}
 
 
 // *****************************************************
@@ -216,7 +216,7 @@ void KTouch::fileNew() {
     m_trainer->goFirstLevel();
     // start lecture editor since the user will probably edit this default lecture
     trainingLectureEdit();
-};
+}
 
 void KTouch::fileOpen() {
     if (!saveModified()) return;
@@ -228,7 +228,7 @@ void KTouch::fileOpen() {
         updateCaption();
         m_trainer->goFirstLevel();
     };
-};
+}
 
 bool KTouch::fileSave() {
     // check if there is already a filename for the lecture, if not ask for it
@@ -261,7 +261,7 @@ void KTouch::fileSaveAs() {
 void KTouch::fileQuit() {
     if (saveModified())
         kapp->quit();
-};
+}
 
 void KTouch::trainingNewSession() {
     trainingPause();
@@ -274,19 +274,19 @@ void KTouch::trainingNewSession() {
     }
     else
         m_trainer->continueTraining();
-};
+}
 
 void KTouch::trainingContinue() {
     m_trainingPause->setEnabled(true);
     m_trainingContinue->setEnabled(false);
     m_trainer->continueTraining();
-};
+}
 
 void KTouch::trainingPause() {
     m_trainingPause->setEnabled(false);
     m_trainingContinue->setEnabled(true);
     m_trainer->pauseTraining();
-};
+}
 
 void KTouch::trainingStatistics() {
     bool sessionRunning = m_trainingPause->isEnabled();
@@ -296,7 +296,7 @@ void KTouch::trainingStatistics() {
     m_statsWidget->exec();
     if (sessionRunning)
         trainingContinue();
-};
+}
 
 void KTouch::trainingLectureEdit() {
     trainingPause();
@@ -313,7 +313,7 @@ void KTouch::trainingLectureEdit() {
         updateCaption();    // because update(false) sets the modified flag in the lecture (adds (modified) to the title)
         m_trainer->goFirstLevel();
     };
-};
+}
 
 void KTouch::optionsShowToolbar() {
     if (!m_toolbarAction || m_toolbarAction->isChecked())       toolBar()->show();
@@ -341,7 +341,7 @@ void KTouch::optionsPreferences() {
         m_preferencesDlg->update(false);        // store the changes in the settings object and save them
         applyPreferences();                     // apply the changes to the widgets
     };
-};
+}
 
 void KTouch::changeStatusbarMessage(const QString& text) {
     statusBar()->message(text);
@@ -350,19 +350,19 @@ void KTouch::changeStatusbarMessage(const QString& text) {
 void KTouch::changeStatusbarStats(unsigned int correctChars, unsigned int totalChars, unsigned int words) {
     m_barStatsLabel->setText( i18n( "   Correct chars: %1   Total chars: %1   Words: %1   ")
         .arg(correctChars).arg(totalChars).arg(words) );
-};
+}
 
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardLayouts.count()) return;
     KTouchConfig().m_keyboardLayout = KTouchConfig().m_keyboardLayouts[num];
     m_keyboardWidget->applyPreferences(false);  // noisy, pop up an error if the chosen layout file is corrupt
-};
+}
 
 void KTouch::changeColor(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_keyboardColors.count()) return;
     KTouchConfig().m_keyboardColorScheme = num;
     m_keyboardWidget->applyPreferences(false);
-};
+}
 
 void KTouch::changeLecture(int num) {
     if (static_cast<unsigned int>(num)>=KTouchConfig().m_lectureList.count()) return;
@@ -378,7 +378,7 @@ void KTouch::changeLecture(int num) {
     };
     updateCaption();
     m_trainer->goFirstLevel();
-};
+}
 
 
 // *******************************
@@ -449,7 +449,7 @@ void KTouch::readTrainingState(KConfig *config) {
     m_lecture->m_lectureURL = config->readPathEntry("LectureURL");
     m_trainer->m_level = config->readNumEntry("Level", 0);
     m_trainer->readSessionHistory();
-};
+}
 
 void KTouch::saveTrainingState(KConfig *config) {
     config->setGroup("TrainingState");
@@ -458,7 +458,7 @@ void KTouch::saveTrainingState(KConfig *config) {
     // during normal shutdown we finish the session and add it to the session history
     m_trainer->m_sessionHistory.append( m_trainer->m_session );
     m_trainer->writeSessionHistory();
-};
+}
 
 void KTouch::reloadLecture() {
     // normal startup: last used URL is already stored in m_lecture->m_lectureURL, or - when the program
@@ -475,7 +475,7 @@ void KTouch::reloadLecture() {
     // file cannot be opened or is corrupt? Whatever happens, the last called function
     // loadLecture() ensures, that there is at least the default mini-level in the lecture
     // so that the training won't crash.
-};
+}
 
 
 void KTouch::slotConfigureKeys()
@@ -559,7 +559,7 @@ void KTouch::setupQuickSettings() {
         };
         menu->plug(trainingMenu);
     };
-};
+}
 
 bool KTouch::saveModified() {
     if (m_lecture->isModified()) {
@@ -573,4 +573,4 @@ bool KTouch::saveModified() {
     }
     else
         return true;    // no changes -> no need to ask
-};
+}

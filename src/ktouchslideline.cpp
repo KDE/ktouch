@@ -65,13 +65,13 @@ KTouchSlideLine::KTouchSlideLine(QWidget *parent)
 KTouchSlideLine::~KTouchSlideLine() {
     delete m_teacherPixmap;
     delete m_studentPixmap;
-};
+}
 
 void KTouchSlideLine::applyPreferences() {
     m_font = KTouchConfig().m_font;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
     // note: resizeFont() will be called implicitly by resizeEvent()
-};
+}
 
 void KTouchSlideLine::setNewText(const QString& teacherText, const QString& studentText) {
    if(teacherText[0].direction()==QChar::DirR)
@@ -97,7 +97,7 @@ void KTouchSlideLine::setCursorTimerEnabled(bool on) {
     else        m_cursorTimer.stop();
     m_cursorVisible=false;
     drawCursor();
-};
+}
 
 
 // *** Private slots
@@ -105,7 +105,7 @@ void KTouchSlideLine::setCursorTimerEnabled(bool on) {
 void KTouchSlideLine::toggleCursor() {
     m_cursorVisible=!m_cursorVisible;
     drawCursor();
-};
+}
 
 void KTouchSlideLine::slide() {
     if (m_studentPixmap==NULL || m_teacherPixmap==NULL) return;
@@ -136,7 +136,7 @@ void KTouchSlideLine::slide() {
     if (m_teacherDX!=0 || m_studentDX!=0)
         m_slideTimer.start(100, true);  // start singleshot timer to slide again
     drawCursor();
-};
+}
 
 
 
@@ -147,7 +147,7 @@ void KTouchSlideLine::paintEvent(QPaintEvent*) {
         resizeEvent(NULL);
     else
         slide();
-};
+}
 
 void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     if (m_teacherText.isEmpty()) return;  // can happen during startup
@@ -196,7 +196,7 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     m_cursorYPos = height() - VERTICAL_MARGIN - (m_studentPixmap->height() + m_cursorHeight)/2;
     updateLines();
     update();  // here we need a full update!
-};
+}
 
 
 
@@ -205,7 +205,7 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
 void KTouchSlideLine::resizeFont() {
     // this formula sets the font height to 65% of the line height
     m_font.setPointSize(static_cast<int>( (height()-2*VERTICAL_MARGIN-LINE_SPACING)/2*0.65) );
-};
+}
 
 void KTouchSlideLine::drawCursor() {
     QPainter p(this);
@@ -221,7 +221,7 @@ void KTouchSlideLine::drawCursor() {
      }
     if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
         p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
-};
+}
 
 void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth) {
     int gap = min(2,static_cast<int>(0.2*enterWidth));
@@ -231,14 +231,14 @@ void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int
     painter->drawLine(cursorPos+gap, y, cursorPos+enterWidth, y);                       // arrow
     painter->drawLine(cursorPos+gap, y, cursorPos+gap+arrowSize, y+arrowSize);          // arrow
     painter->drawLine(cursorPos+gap, y, cursorPos+gap+arrowSize, y-arrowSize);          // arrow
-};
+}
 
 int KTouchSlideLine::textWidth(const QFontMetrics& fontMetrics, const QString& text) {
     int w=fontMetrics.boundingRect(text).width();
     if (text.length()>0 && text[text.length()-1]==' ')
         w += m_spaceCharWidth;
     return w;
-};
+}
 
 void KTouchSlideLine::updateLines() {
     if (m_teacherText.isEmpty()) return;  // can happen during startup, but we MUST NOT allow an empty teacher text here
@@ -314,4 +314,4 @@ void KTouchSlideLine::updateLines() {
     m_cursorVisible = true;
     m_cursorTimer.start(800);
     slide();
-};
+}

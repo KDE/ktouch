@@ -58,11 +58,11 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
     connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
     connect(m_trainingTimer, SIGNAL(timeout()), this, SLOT(timerTick()) );
-};
+}
 
 KTouchTrainer::~KTouchTrainer() {
     delete m_trainingTimer;
-};
+}
 
 void KTouchTrainer::goFirstLine() {
     m_statusWidget->setNewChars( m_lecture->level(m_level).newChars() );
@@ -70,7 +70,7 @@ void KTouchTrainer::goFirstLine() {
     m_incLinesCount=0;
     m_decLinesCount=0;
     newLine();
-};
+}
 
 void KTouchTrainer::keyPressed(QChar key) {
     if (!typingAllowed())  return;
@@ -97,7 +97,7 @@ void KTouchTrainer::keyPressed(QChar key) {
             m_session.addWrongChar(8);
     };
     updateWidgets(); // update all the other widgets (keyboard widget, status widget and statusbar
-};
+}
 
 void KTouchTrainer::backspacePressed() {
     if (!typingAllowed())  return;
@@ -123,7 +123,7 @@ void KTouchTrainer::backspacePressed() {
         QApplication::beep();
     };
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
-};
+}
 
 void KTouchTrainer::enterPressed() {
     if (!typingAllowed())  return;
@@ -179,7 +179,7 @@ void KTouchTrainer::enterPressed() {
     }
     else
         newLine();
-};
+}
 
 void KTouchTrainer::updateWidgets() {
     // update status widget
@@ -205,7 +205,7 @@ void KTouchTrainer::updateWidgets() {
         m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
     };
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
-};
+}
 
 void KTouchTrainer::readSessionHistory() {
     QFile historyFile(KGlobal::dirs()->saveLocation("appdata")+"sessions.txt");
@@ -217,7 +217,7 @@ void KTouchTrainer::readSessionHistory() {
             m_sessionHistory.append( KTouchTrainingSession(line) );
         line = in.readLine();
     };
-};
+}
 
 void KTouchTrainer::writeSessionHistory() {
     QFile historyFile(KGlobal::dirs()->saveLocation("appdata")+"sessions.txt");
@@ -237,7 +237,7 @@ void KTouchTrainer::writeSessionHistory() {
         if ((*it).m_elapsedTime==0) continue;   // don't save empty sessions
         out << (*it).asString() << endl;
     };
-};
+}
 
 void KTouchTrainer::levelUp() {
     KAudioPlayer::play(m_levelUpSound);
@@ -248,7 +248,7 @@ void KTouchTrainer::levelUp() {
         m_level=m_lecture->levelCount()-1;
     };
     goFirstLine();
-};
+}
 
 void KTouchTrainer::levelDown() {
     KAudioPlayer::play(m_levelUpSound);
@@ -257,7 +257,7 @@ void KTouchTrainer::levelDown() {
        --m_level;
     }
     goFirstLine();
-};
+}
 
 void KTouchTrainer::startNewTrainingSession(bool keepLevel) {
     // store the old training session in the history (but only if the time was running)
@@ -272,14 +272,14 @@ void KTouchTrainer::startNewTrainingSession(bool keepLevel) {
     m_trainingPaused=false;
     m_waiting=true;
     m_trainingTimer->stop();    // Training timer will be started on first keypress.
-};
+}
 
 void KTouchTrainer::pauseTraining() {
     m_trainingTimer->stop();
     m_trainingPaused=true;
     m_slideLineWidget->setCursorTimerEnabled(false);
     emit statusbarMessageChanged(i18n("Training session paused.") );
-};
+}
 
 void KTouchTrainer::continueTraining() {
     m_trainingPaused=false;
@@ -289,7 +289,7 @@ void KTouchTrainer::continueTraining() {
     emit statusbarStatsChanged(m_session.m_correctChars, m_session.m_totalChars, m_session.m_words);
     m_statusWidget->updateStatus(m_level, m_session.correctness());
     m_statusWidget->speedLCD->display( m_session.charSpeed() );
-};
+}
 
 void KTouchTrainer::timerTick() {
     if (m_trainingPaused) return;
@@ -297,7 +297,7 @@ void KTouchTrainer::timerTick() {
     // paused and continued... it's not a scientific calculation, isn't it?
     m_session.m_elapsedTime+=UPDATE_INTERVAL;
     m_statusWidget->speedLCD->display( m_session.charSpeed() );
-};
+}
 
 void KTouchTrainer::newLine() {
     m_teacherText = m_lecture->level(m_level).line(m_line);
@@ -305,7 +305,7 @@ void KTouchTrainer::newLine() {
     m_statusWidget->updateStatus(m_level, m_session.correctness());
     m_keyboardWidget->newKey(m_teacherText[0]);
     m_slideLineWidget->setNewText(m_teacherText, m_studentText);
-};
+}
 
 bool KTouchTrainer::typingAllowed() {
     if (m_trainingPaused) {
@@ -319,4 +319,4 @@ bool KTouchTrainer::typingAllowed() {
         emit statusbarMessageChanged(i18n("Training session! The time is running...") );
     };
     return true;
-};
+}

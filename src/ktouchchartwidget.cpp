@@ -35,16 +35,16 @@ KTouchChartWidget::KTouchChartWidget(QWidget* parent, const char *name)
     setFrameShadow( QFrame::Sunken );
     setLineWidth( 2 );
     setEraseColor( Qt::white );
-};
+}
 
 KTouchChartWidget::~KTouchChartWidget()
 {
-};
+}
 
 void KTouchChartWidget::setChartType(chart_t type) {
     m_chartType = type;
     update();
-};
+}
 
 void KTouchChartWidget::paintEvent(QPaintEvent *pe) {
     QFrame::paintEvent(pe); // let the base class draw the frame
@@ -232,4 +232,4 @@ void KTouchChartWidget::paintEvent(QPaintEvent *pe) {
         };
         break;
     };
-};
+}

@@ -29,7 +29,7 @@ void KTouchPrefGeneral::updateFont(const QFont& font) {
     m_font = font;
     m_font.setPointSize(14);
     fontDisplayLabel->setFont( m_font );
-};
+}
 
 void KTouchPrefGeneral::fontChooseBtnClicked() {
     QFont tmpFont(m_font);
@@ -38,4 +38,4 @@ void KTouchPrefGeneral::fontChooseBtnClicked() {
         updateFont(tmpFont);
         emit fontChanged();
     };
-};
+}

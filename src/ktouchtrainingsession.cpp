@@ -28,13 +28,13 @@ KTouchTrainingSession::KTouchTrainingSession(QString str) {
         m_charStats.insert( KTouchCharStats( QChar(charcode), correctCount, wrongCount) );
         textstrm >> charcode >> correctCount >> wrongCount;
     };
-};
+}
 
 void KTouchTrainingSession::reset() {
     m_totalChars=m_correctChars=m_words=m_elapsedTime=0;
     m_charStats.clear();
     m_wordBuffer="";
-};
+}
 
 QString KTouchTrainingSession::asString() const {
     // We store the session info as follows: elapsed time, total chars, correct chars, words,
@@ -44,7 +44,7 @@ QString KTouchTrainingSession::asString() const {
     for (set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
         tmp += QString(" %1 %2 %3").arg(it->m_char.unicode()).arg(it->m_correctCount).arg(it->m_wrongCount);
     return tmp;
-};
+}
 
 void KTouchTrainingSession::addCorrectChar(QChar ch) {
     ++m_correctChars;
@@ -67,7 +67,7 @@ void KTouchTrainingSession::addCorrectChar(QChar ch) {
     }
     else
         m_wordBuffer+=ch;
-};
+}
 
 void KTouchTrainingSession::addWrongChar(QChar missedChar) {
     ++m_totalChars;
@@ -77,11 +77,11 @@ void KTouchTrainingSession::addWrongChar(QChar missedChar) {
         m_charStats.insert( KTouchCharStats(missedChar,0,1) );
     else
         ++(const_cast<KTouchCharStats&>(*it).m_wrongCount);
-};
+}
 
 list<KTouchCharStats> KTouchTrainingSession::sortedCharStats() const {
     list<KTouchCharStats> tmpList;
     std::copy(m_charStats.begin(), m_charStats.end(), back_inserter(tmpList) );
     tmpList.sort(greaterHitMissRatio);
     return tmpList;
-};
+}

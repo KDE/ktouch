@@ -49,10 +49,10 @@ KTouchStatistics::KTouchStatistics(QWidget *parent, KTouchTrainer* trainer)
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
     connect(sessionCountSlider, SIGNAL(valueChanged(int)), this, SLOT(updateAverageTab()) );
     connect(chartTypeButtonGroup, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-};
+}
 
 KTouchStatistics::~KTouchStatistics() {
-};
+}
 
 void KTouchStatistics::showEvent(QShowEvent*) {
     // adjust slider range in case some sessions have been added
@@ -61,7 +61,7 @@ void KTouchStatistics::showEvent(QShowEvent*) {
     updateCurrentTab();
     updateAverageTab();
     updateChartTab();
-};
+}
 
 void KTouchStatistics::updateCurrentTab() {
     // general stats group
@@ -112,7 +112,7 @@ void KTouchStatistics::updateCurrentTab() {
           case 7 :  charLabel8->setText(" "); charProgress8->setProgress(0); charProgress8->setEnabled(false); break;
         };
     };
-};
+}
 
 void KTouchStatistics::updateChartTab() {
     if (m_trainer->m_sessionHistory.size()<2) {
@@ -131,7 +131,7 @@ void KTouchStatistics::updateChartTab() {
         chartWidget->setChartType( KTouchChartWidget::Accuracy );
     else if (timeButton->isChecked())
         chartWidget->setChartType( KTouchChartWidget::ElapsedTime );
-};
+}
 
 void KTouchStatistics::clearHistory() {
     if (KMessageBox::questionYesNo(0, i18n("Do you really want to clear the session history?"))==KMessageBox::Yes) {
@@ -141,7 +141,7 @@ void KTouchStatistics::clearHistory() {
         updateAverageTab();
         updateChartTab();
     };
-};
+}
 
 void KTouchStatistics::updateAverageTab() {
     if (sessionCountSlider->value()==0)
@@ -258,4 +258,4 @@ void KTouchStatistics::updateAverageTab() {
           case 5 :  charLabel6_2->setText(" "); charProgress6_2->setProgress(0); charProgress6_2->setEnabled(false); break;
         };
     };
-};
+}

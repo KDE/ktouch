@@ -17,24 +17,24 @@
 
 KTouchLevelData::KTouchLevelData() {
     createDefault();
-};
+}
 
 KTouchLevelData::KTouchLevelData(const QString& comment, const QString& newChars) : m_comment(comment), m_newChars(newChars) {
     createDefault();
-};
+}
 
 const QString& KTouchLevelData::line(unsigned int lineNumber) const {
     if (lineNumber>=m_lines.count())
         lineNumber=0;
     return m_lines[lineNumber];
-};
+}
 
 void KTouchLevelData::createDefault() {
     m_comment = i18n("This is a default mini level!");
     m_newChars = i18n("only a few");
     m_lines.clear();
     m_lines.append( i18n("This is the first line in the mini level!") );
-};
+}
 
 bool KTouchLevelData::readLevel(QTextStream& in, const QString& newChars, const QString& comment) {
     QString line;

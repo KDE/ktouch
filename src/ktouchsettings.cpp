@@ -23,7 +23,7 @@
 KTouchSettings& KTouchConfig() {
     static KTouchSettings theSettings;
     return theSettings;
-};
+}
 
 void KTouchSettings::loadSettings() {
     // First we need to find all keyboard layouts
@@ -107,7 +107,7 @@ void KTouchSettings::loadSettings() {
     m_errorBackground = config->readColorEntry("ErrorBackgroundColor", &defaultColor);
 
 
-};
+}
 
 
 void KTouchSettings::saveSettings() {
@@ -145,7 +145,7 @@ void KTouchSettings::saveSettings() {
     config->writeEntry("StudentBackgroundColor",    m_studentBackground);
     config->writeEntry("ErrorTextColor",            m_errorTextColor);
     config->writeEntry("ErrorBackgroundColor",      m_errorBackground);
-};
+}
 
 
 void KTouchSettings::createDefaultKeyboardColors() {
@@ -208,4 +208,4 @@ void KTouchSettings::createDefaultKeyboardColors() {
     color.m_cBackgroundH = QColor( 39, 70, 227);
     color.m_cTextH = Qt::black;
     m_keyboardColors.append(color);
-};
+}

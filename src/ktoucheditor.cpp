@@ -89,12 +89,12 @@ void KTouchEditor::update(bool toDialog) {
         m_lecture->m_modified = true;
     };
     applyButton->setEnabled(false);
-};
+}
 
 
 void KTouchEditor::setModified() {
     applyButton->setEnabled(true);
-};
+}
 
 
 void KTouchEditor::newSelection(QListViewItem* item) {
@@ -129,20 +129,20 @@ void KTouchEditor::newSelection(QListViewItem* item) {
         if (m_level==0)                 upBtn->setEnabled(false);
         else                            upBtn->setEnabled(true);
     };
-};
+}
 
 
 void KTouchEditor::newCharsChanged(const QString& text) {
     if (m_currentItem==0) return;  // shouldn't happen, but a little bit of paranoia...
     m_currentItem->setText(0, text);
     setModified();
-};
+}
 
 
 void KTouchEditor::okClicked() {
     update(false);
     accept();
-};
+}
 
 
 void KTouchEditor::applyClicked() {
@@ -158,7 +158,7 @@ void KTouchEditor::newLevel() {
     upBtn->setEnabled(true);
     downBtn->setEnabled(false);
     deleteBtn->setEnabled(true);
-};
+}
 
 
 void KTouchEditor::deleteLevel() {
@@ -186,7 +186,7 @@ void KTouchEditor::deleteLevel() {
         downBtn->setEnabled(false);
     if (m_level==0)
         upBtn->setEnabled(false);
-};
+}
 
 
 void KTouchEditor::moveUp() {
@@ -206,7 +206,7 @@ void KTouchEditor::moveUp() {
         upBtn->setEnabled(false);
     downBtn->setEnabled(true);
     setModified();
-};
+}
 
 
 void KTouchEditor::moveDown() {
@@ -226,7 +226,7 @@ void KTouchEditor::moveDown() {
         downBtn->setEnabled(false);
     upBtn->setEnabled(true);
     setModified();
-};
+}
 
 
 void KTouchEditor::showCurrentLevel() {
@@ -241,7 +241,7 @@ void KTouchEditor::showCurrentLevel() {
         text += *it + '\n';
     }
     linesTextEdit->setText(text);
-};
+}
 
 
 void KTouchEditor::storeCurrentLevel() {
@@ -267,7 +267,7 @@ void KTouchEditor::storeCurrentLevel() {
         if ((*it).isEmpty()) continue;
         m_data[m_level].m_lines.append(*it);
     }
-};
+}
 
 
 void KTouchEditor::createNewLevel() {
@@ -277,4 +277,4 @@ void KTouchEditor::createNewLevel() {
      newLevel.m_lines.clear();  // remove the lines of the default mini level
      newLevel.m_lines.append(i18n("Enter your lines here..."));
      m_data.append(newLevel);
-};
+}
