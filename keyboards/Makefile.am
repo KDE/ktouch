@@ -18,6 +18,7 @@ it.keyboard \
 la.keyboard \
 no.keyboard \
 number.keyboard \
+pl.keyboard \
 pt.keyboard \
 se.keyboard 
 
