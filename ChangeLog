@@ -1,3 +1,8 @@
+2004-10-29 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Moved some more configuration entries to the KConfig XT, 
+    fixed some bugs with the configuration dialog
+  * added font override buttons.
+
 2004-10-26 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Converted the remaining lecture files to XML format
 
