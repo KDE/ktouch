@@ -65,9 +65,12 @@ KTouch::KTouch()
 	// General initialization of the program, common for all start modes
 	init();
 	// Setup our actions and connections
-    setupActions();
-    // create the GUI reading the ui.rc file
-    setupGUI();
+	setupActions();
+	// create the GUI reading the ui.rc file
+	if (!initialGeometrySet())
+		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
+	setupGUI(ToolBar | Keys | StatusBar | Create);
+	setAutoSaveSettings();
 	// Init a training session
 	initTrainingSession();
 	
