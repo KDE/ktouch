@@ -38,7 +38,10 @@
                         <cstring>kcfg_AutoLevelChange</cstring>
                     </property>
                     <property name="text">
-                        <string>Automatic level adjustment</string>
+                        <string>A&amp;utomatic level adjustment</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+U</string>
                     </property>
                 </widget>
                 <spacer row="3" column="0">
@@ -267,7 +270,10 @@
                         <cstring>kcfg_RememberLevel</cstring>
                     </property>
                     <property name="text">
-                        <string>Remember level for next program start</string>
+                        <string>&amp;Remember level for next program start</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+R</string>
                     </property>
                 </widget>
             </vbox>

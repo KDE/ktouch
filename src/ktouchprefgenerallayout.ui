@@ -44,7 +44,10 @@
                         <cstring>kcfg_BeepOnError</cstring>
                     </property>
                     <property name="text">
-                        <string>Beep on error</string>
+                        <string>&amp;Beep on error</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+B</string>
                     </property>
                     <property name="toolTip" stdset="0">
                         <string>Emit a beep on each typing error</string>
@@ -58,7 +61,10 @@
                         <cstring>kcfg_SoundOnLevel</cstring>
                     </property>
                     <property name="text">
-                        <string>Sound on automatic level change</string>
+                        <string>&amp;Sound on automatic level change</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+S</string>
                     </property>
                     <property name="toolTip" stdset="0">
                         <string>Play a sound when the level automatically changes.</string>
