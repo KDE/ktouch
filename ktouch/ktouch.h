@@ -21,7 +21,7 @@
 #include <kmainwindow.h>
 #include <kaccel.h>
 #include <kaction.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 
 #include "touchlecture.h"
 #include "touchline.h"

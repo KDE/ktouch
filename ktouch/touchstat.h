@@ -28,7 +28,7 @@
 #include <qobject.h>
 #include <qdatetime.h>
 
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 
 class TouchStat : public QObject
 {

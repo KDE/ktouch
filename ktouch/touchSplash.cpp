@@ -1,7 +1,7 @@
 
 #include "touchSplash.h"
-#include <kapp.h>
-#include <kstddirs.h>
+#include <kapplication.h>
+#include <kstandarddirs.h>
 
 TouchSplash::TouchSplash(QWidget * parent, const char *name)
 	   : QWidget(parent,name, WStyle_NoBorderEx | WStyle_Customize | WDestructiveClose ), m_bReadyToHide( false )

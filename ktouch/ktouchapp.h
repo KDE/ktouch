@@ -19,7 +19,7 @@
 #ifndef KTOUCHAPP_H
 #define KTOUCHAPP_H
 
-#include <kuniqueapp.h>
+#include <kuniqueapplication.h>
 
 class KTouch;
 

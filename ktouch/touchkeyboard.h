@@ -22,7 +22,7 @@
 #include <qpainter.h>
 #include <vector>
 #include <qpixmap.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 
 #include "fingerkey.h"
 #include "normalkey.h"
