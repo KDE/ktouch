@@ -45,7 +45,7 @@ sub genlist
     my $all=$accum.$core;
 
 
-    print "$core\n";
+    #print "$core\n";
 
     foreach(@word_list)
     {
