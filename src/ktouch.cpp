@@ -67,7 +67,10 @@ KTouch::KTouch()
 	// Setup our actions and connections
     setupActions();
     // create the GUI reading the ui.rc file
-    setupGUI();
+	if (!initialGeometrySet())
+		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
+	setupGUI(ToolBar | Keys | StatusBar | Create);
+	setAutoSaveSettings();
 	// Init a training session
 	initTrainingSession();
 	
