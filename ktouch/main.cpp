@@ -27,6 +27,8 @@
 static const char *description =
 	I18N_NOOP("Touch Typing Tutor");
 
+static const char *version = "1.0";
+
 static KCmdLineOptions options[] =
 {
 	{ 0, 0, 0 }
@@ -37,7 +39,7 @@ int main(int argc, char *argv[])
 
 	KAboutData about( "ktouch",
 		I18N_NOOP("KTouch"),
-		VERSION,
+		version,
 		description,
 		KAboutData::License_GPL,
 		"Copyright (c) 2001, Haavard Froeiland", 0, "http://edu.kde.org/ktouch", "submit@bugs.kde.org");
