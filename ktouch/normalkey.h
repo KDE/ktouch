@@ -24,7 +24,7 @@
 class NormalKey: public TouchKey
 {
   public:
-  	NormalKey(const char *keyValue, int gridX, int gridY, TouchKey *fingerKey, int width=10);
+  	NormalKey(const char *keyValue, int gridX, int gridY, TouchKey *fingerKey, int w=10, int h=10);
   	~NormalKey();
 	  void paint(QPainter *p);
   private:

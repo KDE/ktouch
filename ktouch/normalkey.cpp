@@ -19,8 +19,8 @@
 #include"fingerkey.h"
 
 
-NormalKey::NormalKey(const char *keyValue, int gridX, int gridY, TouchKey *f, int w )
-					:TouchKey(keyValue, gridX, gridY, w)
+NormalKey::NormalKey(const char *keyValue, int gridX, int gridY, TouchKey *f, int w , int h)
+					:TouchKey(keyValue, gridX, gridY, w, h)
 {
   fingerKey=f;
 }

@@ -23,7 +23,7 @@
 class TouchKey
 {
 public:
-	TouchKey(const char *keyValue, int gridX, int gridY, int gridWidth=10);
+	TouchKey(const char *keyValue, int gridX, int gridY, int gridWidth=10,int gridHight=10);
 	TouchKey();
 	virtual ~TouchKey();
 	virtual void paint(QPainter *p)=0;
@@ -36,6 +36,7 @@ public:
 	int height;
 	const char *keyValue;
 	virtual QColor getColor();
+	int getSmallest();
 
   static void setShowColor(bool show);
   static bool getShowColor();

@@ -59,6 +59,9 @@ private:
 	bool showAnimation;
   int trans;
   KStandardDirs *dirs;
+  void setIfMax(int w, int h);
+  int maxWidth;
+  int maxHight;
 };
 
 

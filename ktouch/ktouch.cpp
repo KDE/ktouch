@@ -23,6 +23,7 @@
 #include <qcheckbox.h>
 #include <qspinbox.h>
 #include <qsizepolicy.h>
+#include <qgroupbox.h>
 
 // include files for KDE
 #include <kiconloader.h>
@@ -338,9 +339,12 @@ void KTouch::slotStatusMsg(const QString &text)
 void KTouch::slotOptionKeyboard()
 {
   OptionKeyboard *optionKeyboard=new OptionKeyboard(this,"keyboardOptionDialog",true);
-  optionKeyboard->grabKeyboard();
   optionKeyboard->showColor->setChecked(touchKeyboard->getShowColor());
   optionKeyboard->showAnimation->setChecked(touchKeyboard->getShowAnimation());
+
+  optionKeyboard->languageBox->setDisabled((touchKeyboard->getLanguage()=="number"));
+  optionKeyboard->showKeypad->setChecked((touchKeyboard->getLanguage()=="number"));
+
   for(int i=0;optionKeyboard->language->count()>i;i++)
   {
     if(optionKeyboard->language->text(i)==touchKeyboard->getLanguage())
@@ -354,10 +358,23 @@ void KTouch::slotOptionKeyboard()
   {
     touchKeyboard->setShowColor(optionKeyboard->showColor->isChecked());
     touchKeyboard->setShowAnimation(optionKeyboard->showAnimation->isChecked());
-    touchKeyboard->loadKeyboard(optionKeyboard->language->currentText());
+    if(optionKeyboard->showKeypad->isChecked())
+    {
+      touchKeyboard->loadKeyboard("number");
+      QString trainingFile=dirs->findResource("data","ktouch/number.ktouch");
+      touchLecture->loadLectureFile(trainingFile);
+
+    }
+    else
+    {
+      touchKeyboard->loadKeyboard(optionKeyboard->language->currentText());
+      QString trainingFile=dirs->findResource("data","ktouch/english.ktouch");
+      touchLecture->loadLectureFile(trainingFile);
+    }
+
   }
   delete optionKeyboard;
-  touchLine->grabKeyboard ();
+  touchLine->getNextLine();
 }
 
 void KTouch::slotOptionTraining()

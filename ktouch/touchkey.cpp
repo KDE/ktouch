@@ -20,13 +20,13 @@
 
 bool TouchKey::showColor=true;
 
-TouchKey::TouchKey(const char *k, int x, int y, int w)
+TouchKey::TouchKey(const char *k, int x, int y, int w, int h)
 {
   keyValue=k;
   gridX=x;
   gridY=y;
   gridWidth=w;
-  gridHeight=10;
+  gridHeight=h;
   state=false;
   x=y=0;
   width=height=0;
@@ -62,12 +62,19 @@ void TouchKey::paintBase(QPainter *p)
  	p->drawRect(x,y,width,height);
 
   //Draw text on keys
-  p->setFont(QFont("courier", height/2));
+  p->setFont(QFont("courier", getSmallest()/2));
   p->drawText(x,y,width,height,QPainter::AlignCenter,keyValue);
 }
 
 QColor TouchKey::getColor()
 {
    return QColor();
+}
+
+int TouchKey::getSmallest()
+{
+  if(width>height)
+    return height;
+  return width;
 }
 

@@ -12,7 +12,7 @@
             <x>0</x>
             <y>0</y>
             <width>300</width>
-            <height>306</height>
+            <height>301</height>
         </rect>
     </property>
     <property stdset="1">
@@ -53,16 +53,16 @@
                 <cstring>GroupBox1</cstring>
             </property>
             <property stdset="1">
+                <name>title</name>
+                <string>Color &amp; animation</string>
+            </property>
+            <property stdset="1">
                 <name>frameShadow</name>
                 <enum>Sunken</enum>
             </property>
             <property stdset="1">
                 <name>frameShape</name>
                 <enum>Box</enum>
-            </property>
-            <property stdset="1">
-                <name>title</name>
-                <string>Color &amp; animation</string>
             </property>
             <property stdset="1">
                 <name>alignment</name>
@@ -128,7 +128,7 @@
                 </property>
             </widget>
         </widget>
-        <widget row="2"  column="2" >
+        <widget row="3"  column="2" >
             <class>QPushButton</class>
             <property stdset="1">
                 <name>name</name>
@@ -143,11 +143,47 @@
                 <string>Close dialog and apply all changes.</string>
             </property>
         </widget>
-        <widget row="1"  column="0"  rowspan="1"  colspan="3" >
+        <widget row="3"  column="0" >
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>PushButton2</cstring>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Cancel</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Close dialog and discarge all changes.</string>
+            </property>
+        </widget>
+        <spacer row="3"  column="1" >
+            <property>
+                <name>name</name>
+                <cstring>Spacer1</cstring>
+            </property>
+            <property stdset="1">
+                <name>orientation</name>
+                <enum>Horizontal</enum>
+            </property>
+            <property stdset="1">
+                <name>sizeType</name>
+                <enum>Expanding</enum>
+            </property>
+            <property>
+                <name>sizeHint</name>
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget row="2"  column="0"  rowspan="1"  colspan="3" >
             <class>QGroupBox</class>
             <property stdset="1">
                 <name>name</name>
-                <cstring>GroupBox2</cstring>
+                <cstring>languageBox</cstring>
             </property>
             <property stdset="1">
                 <name>title</name>
@@ -230,7 +266,7 @@
                     <name>geometry</name>
                     <rect>
                         <x>100</x>
-                        <y>60</y>
+                        <y>50</y>
                         <width>139</width>
                         <height>22</height>
                     </rect>
@@ -245,42 +281,17 @@
                 </property>
             </widget>
         </widget>
-        <widget row="2"  column="0" >
-            <class>QPushButton</class>
+        <widget row="1"  column="0"  rowspan="1"  colspan="3" >
+            <class>QCheckBox</class>
             <property stdset="1">
                 <name>name</name>
-                <cstring>PushButton2</cstring>
+                <cstring>showKeypad</cstring>
             </property>
             <property stdset="1">
                 <name>text</name>
-                <string>Cancel</string>
-            </property>
-            <property>
-                <name>whatsThis</name>
-                <string>Close dialog and discarge all changes.</string>
+                <string>Show only keypad</string>
             </property>
         </widget>
-        <spacer row="2"  column="1" >
-            <property>
-                <name>name</name>
-                <cstring>Spacer1</cstring>
-            </property>
-            <property stdset="1">
-                <name>orientation</name>
-                <enum>Horizontal</enum>
-            </property>
-            <property stdset="1">
-                <name>sizeType</name>
-                <enum>Expanding</enum>
-            </property>
-            <property>
-                <name>sizeHint</name>
-                <size>
-                    <width>20</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </spacer>
     </grid>
 </widget>
 <images>
@@ -302,10 +313,17 @@
         <receiver>OptionKeyboardDlg</receiver>
         <slot>accept()</slot>
     </connection>
+    <connection>
+        <sender>showKeypad</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>languageBox</receiver>
+        <slot>setDisabled(bool)</slot>
+    </connection>
 </connections>
 <tabstops>
     <tabstop>showColor</tabstop>
     <tabstop>showAnimation</tabstop>
+    <tabstop>showKeypad</tabstop>
     <tabstop>language</tabstop>
     <tabstop>PushButton2</tabstop>
     <tabstop>PushButton1</tabstop>

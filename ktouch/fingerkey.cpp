@@ -20,8 +20,8 @@
 
 int FingerKey::numberOfKeys=0;
 
-FingerKey::FingerKey(const char *keyValue, int gridX, int gridY)
-					:TouchKey(keyValue, gridX, gridY)
+FingerKey::FingerKey(const char *keyValue, int gridX, int gridY, int w, int h)
+					:TouchKey(keyValue, gridX, gridY, w, h)
 {
 	isActive=false;
 	++numberOfKeys;
@@ -67,10 +67,19 @@ QColor FingerKey::getColor()
 void FingerKey::paint(QPainter *p)
 {
 	p->fillRect(x+1,y+1,width-2,height-2,getColor());
-	paintBase(p);	
+	paintBase(p);
+	int s=getSmallest();
+	int x_tmp=x;
+	int y_tmp=y;
+	if(s<width)
+	  x_tmp=x_tmp+(width-s)/2;
+	else if(s<height)
+	  y_tmp=y_tmp+(height-s)/2;
+	
 	if(isActive==true)
-	  p->drawEllipse(x,y,width,height);	{
-		p->drawEllipse(x+1,y+1,width-2,height-2);
+	  p->drawEllipse(x_tmp,y_tmp,s,s);
+	{
+		p->drawEllipse(x_tmp+1,y_tmp+1,s-2,s-2);
 	}
 }
 

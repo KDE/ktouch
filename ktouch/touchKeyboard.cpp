@@ -28,11 +28,15 @@ TouchKeyboard::TouchKeyboard(QWidget *parent, const char *name)
   dirs = KGlobal::dirs();
   trans=0;
   lastKey=0;
+  maxWidth=0;
+  maxHight=0;
   showAnimation=true;
+
   for (unsigned int i=0;i<512;i++)
   {
     keyArray[i]=0;
   }
+
 }
 
 void TouchKeyboard::setShowColor(bool show)
@@ -99,15 +103,17 @@ void TouchKeyboard::resizeEvent (QResizeEvent *)
 void TouchKeyboard::calculateSize()
 {
   float maxW;
-  if(width()>(height()*3))
+  float ratio=maxWidth/(float)maxHight;
+
+  if(width()>(height()*ratio))
   {
-    maxW=(float)height()*3/150;
-    trans=(width()-height()*3)/2;
+    maxW=(float)height()*ratio/maxWidth;
+    trans=(int)(width()-height()*ratio)/2;
   }
   else
   {
     trans=0;
-    maxW=(float)width()/150;
+    maxW=(float)width()/maxWidth;
   }
 
 	for (int i=0;i<512;i++)
@@ -130,6 +136,8 @@ void TouchKeyboard::clearKeyboard()
   }
 	lastKey=0;
   FingerKey::numberOfKeys=0;
+  maxWidth=0;
+  maxHight=0;
 }
 
 QString TouchKeyboard::getLanguage()
@@ -184,12 +192,30 @@ void TouchKeyboard::loadKeyboard(QString lang)
 					// Loads the Finger keys
           if(keyBoardVector[0]=="FingerKey")
 					{
-						string *s;
-						s=new string(keyBoardVector[2]);
-        		keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
-								s->c_str(),
-								atoi(keyBoardVector[3].c_str()),
-								atoi(keyBoardVector[4].c_str()));
+					  if(atoi(keyBoardVector[5].c_str())==0)
+					  {
+  						string *s;
+  						s=new string(keyBoardVector[2]);
+          		keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
+  								s->c_str(),
+  								atoi(keyBoardVector[3].c_str()),
+  								atoi(keyBoardVector[4].c_str()));
+  					  setIfMax(atoi(keyBoardVector[3].c_str())+10,
+  					           atoi(keyBoardVector[4].c_str())+10);
+  					}
+  					else
+  					{
+  					  string *s;
+  						s=new string(keyBoardVector[2]);
+          		keyArray[atoi(keyBoardVector[1].c_str())]=new FingerKey(
+  								s->c_str(),
+  								atoi(keyBoardVector[3].c_str()),
+  					  		atoi(keyBoardVector[4].c_str()),
+  					  		atoi(keyBoardVector[5].c_str()),
+  								atoi(keyBoardVector[6].c_str()));
+  					  setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
+  					           atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
+  					}
 	  	  	}
 
 					// Loads the control key
@@ -201,7 +227,10 @@ void TouchKeyboard::loadKeyboard(QString lang)
 								s->c_str(),
 								atoi(keyBoardVector[3].c_str()),
 								atoi(keyBoardVector[4].c_str()),
-								atoi(keyBoardVector[5].c_str()));
+								atoi(keyBoardVector[5].c_str()),
+								atoi(keyBoardVector[6].c_str()));
+					  setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[5].c_str()),
+					           atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[6].c_str()));
 	  	  	}
 
 					// Loads the normal keys
@@ -222,6 +251,8 @@ void TouchKeyboard::loadKeyboard(QString lang)
 									atoi(keyBoardVector[3].c_str()),
 									atoi(keyBoardVector[4].c_str()),
 									keyArray[atoi(keyBoardVector[5].c_str())]);
+						  setIfMax(atoi(keyBoardVector[3].c_str())+10,
+ 			           atoi(keyBoardVector[4].c_str())+10);
 						}
 						else
 						{
@@ -230,7 +261,10 @@ void TouchKeyboard::loadKeyboard(QString lang)
 									atoi(keyBoardVector[3].c_str()),
 									atoi(keyBoardVector[4].c_str()),
 									keyArray[atoi(keyBoardVector[5].c_str())],
-									atoi(keyBoardVector[6].c_str()));
+									atoi(keyBoardVector[6].c_str()),   // widht
+									atoi(keyBoardVector[7].c_str()));  // hight
+					    setIfMax(atoi(keyBoardVector[3].c_str())+atoi(keyBoardVector[6].c_str()),
+					        atoi(keyBoardVector[4].c_str())+atoi(keyBoardVector[7].c_str()));
 						}
 	  	  	}
 
@@ -265,4 +299,9 @@ void TouchKeyboard::loadKeyboard(QString lang)
   repaint();
 }
 
+void TouchKeyboard::setIfMax(int w, int h)
+{
+  if(maxWidth<w) maxWidth=w;
+  if(maxHight<h) maxHight=h;
+}
 

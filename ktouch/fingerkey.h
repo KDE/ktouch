@@ -24,7 +24,7 @@
 class FingerKey: public TouchKey
 {
 public:
-	FingerKey(const char *keyValue, int gridX, int gridY);
+	FingerKey(const char *keyValue, int gridX, int gridY, int w=10, int h=10);
 	~FingerKey();
 	void paint(QPainter *p);
 	void setActive(bool b);

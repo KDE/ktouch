@@ -23,7 +23,7 @@
 class ControlKey: public TouchKey
 {
   public:
-  	ControlKey(const char *keyValue, int gridX, int gridY, int gridWidth);
+  	ControlKey(const char *keyValue, int gridX, int gridY, int w=10, int h=10);
   	~ControlKey();
 	  void paint(QPainter *p);
   private:

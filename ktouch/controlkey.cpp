@@ -18,8 +18,8 @@
 
 #include"controlkey.h"
 
-ControlKey::ControlKey(const char *keyValue, int gridX, int gridY, int gridWidth)
-					:TouchKey(keyValue, gridX, gridY, gridWidth)
+ControlKey::ControlKey(const char *keyValue, int gridX, int gridY, int w, int h)
+					:TouchKey(keyValue, gridX, gridY, w, h)
 {}
 
 ControlKey::~ControlKey()
@@ -39,7 +39,7 @@ void ControlKey::paint(QPainter *p)
  	p->drawRect(x+1,y+1,width-2,height-2);
 
   //draw the text on the key
-  p->setFont(QFont("courier", height/5));
+  p->setFont(QFont("courier", getSmallest()/5));
   p->drawText(x+4,y+height-6,keyValue);
 }
 
