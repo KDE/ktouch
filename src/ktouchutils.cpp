@@ -18,4 +18,4 @@ QString format_speed(double speed) {
     unsigned int mins = static_cast<unsigned int>(speed);
     unsigned int secs = static_cast<unsigned int>(speed*60) - mins*60;
     return QString("%1' %2''").arg(mins).arg(secs);
-};
+}
