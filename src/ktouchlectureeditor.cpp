@@ -307,7 +307,7 @@ void KTouchLectureEditor::transfer_from_dialog() {
 
 void KTouchLectureEditor::showCurrentLevel() {
     if (m_level >= m_lecture.m_lectureData.size())  return;  // should not happen, but why running a risk here...
-    levelLabel->setText(i18n("Data of level %1").arg(m_level+1) );
+    levelLabel->setText(i18n("Data of Level %1").arg(m_level+1) );
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;
@@ -362,12 +362,12 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
     // Call the dialog
     KURL new_url;
     int result = dlg.requestFileToOpen(new_url,
-        i18n("Open lecture file ..."),
-        i18n("Which lecture file would you like to edit?"),
+        i18n("Open Lecture File"),
+        i18n("Which Lecture File Would You Like to Edit?"),
         i18n("Edit current lecture:"),
         i18n("Open a default lecture:"),
         i18n("Open a lecture file:"),
-        i18n("Create new lecture."),
+        i18n("Create new lecture"),
         url, KTouchPtr->lectureFiles(), i18n("<no lecture files available>"));
 
     if (result == QDialog::Accepted) {
