@@ -1,6 +1,7 @@
 # adding keybords
 keyboarddir = $(kde_datadir)/ktouch
 keyboard_DATA = keyboard.de \
+keyboard.dk \
 keyboard.en \
 keyboard.fr \
 keyboard.la \

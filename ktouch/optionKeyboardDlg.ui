@@ -231,6 +231,12 @@
                 <item>
                     <property>
                         <name>text</name>
+                        <string>dk</string>
+                    </property>
+                </item>
+                <item>
+                    <property>
+                        <name>text</name>
                         <string>en</string>
                     </property>
                 </item>

@@ -12,7 +12,7 @@ FingerKey  102		F				48  20
 FingerKey  106		J				78  20
 FingerKey  107		K				88  20
 FingerKey  108		L				98  20
-FingerKey  238		Ø				108 20
+FingerKey  230		Ø				108 20
 #
 #					Assci	KeyText		x		y		Width Height
 #
@@ -40,9 +40,9 @@ NormalKey 54		6					60	0		106
 NormalKey 55		7					70	0		106
 NormalKey 56		8					80	0		107
 NormalKey 57		9					90	0		108
-NormalKey 48		0					100	0		238
-NormalKey 43		+					110	0		238
-NormalKey 92		\					120	0		238
+NormalKey 48		0					100	0		230
+NormalKey 43		+					110	0		230
+NormalKey 92		\					120	0		230
 #
 NormalKey	113		Q					15	10	97
 NormalKey	119		W					25	10	115
@@ -53,13 +53,13 @@ NormalKey	121		Y					65	10	106
 NormalKey	117		U					75	10	106
 NormalKey	105		I					85	10	107
 NormalKey	111		O					95	10	108
-NormalKey	112		P					105	10	238
-NormalKey	91		Å					115	10	238
-NormalKey	93		~					125	10	238
+NormalKey	112		P					105	10	230
+NormalKey	91		Å					115	10	230
+NormalKey	93		~					125	10	230
 #
 NormalKey	103		G					58	20	102
 NormalKey	104		H					68	20	106
-NormalKey	39		Æ					118	20	238
+NormalKey	39		Æ					118	20	230
 #
 NormalKey	60		<					13	30	97
 NormalKey	122		Z					23	30	97
@@ -71,39 +71,36 @@ NormalKey	110		N					73	30	106
 NormalKey	109		M					83	30	106
 NormalKey	44		,					93	30	107
 NormalKey	46		.					103	30	108
-NormalKey	47		/					113	30	238
+NormalKey	47		/					113	30	230
 #
 #
-#					Ascii	Target	Finger	Contorll
-HiddenKey	65		97			97			258 		   #A
-HiddenKey	66		98			102			258 		   #B
-HiddenKey	67		99			100			258 		   #C
-HiddenKey	68		100			100			258 		   #D
-HiddenKey	69		101			100			258 		   #E
-HiddenKey	70		102			102			258 		   #F
-HiddenKey	71		103			102			258 		   #G
-HiddenKey	72		104			106			258 		   #H
-HiddenKey	73		105			107			258 		   #I
-HiddenKey	74		106			106			258 		   #J
-HiddenKey	75		107			107			258 		   #K
-HiddenKey	76		108			106			258 		   #L
-HiddenKey	77		109			106			258 		   #M
-HiddenKey	78		110			106			258 		   #N
-HiddenKey	79		111			108			258 		   #O
-HiddenKey	80		112			238			258 		   #P
-HiddenKey	81		113			97			258 		   #Q
-HiddenKey	82		114			102			258 		   #R
-HiddenKey	83		115			115			258 		   #S
-HiddenKey	84		116			102			258 		   #T
-HiddenKey	85		117			106			258 		   #U
-HiddenKey	86		118			102			258 		   #V
-HiddenKey	87		119			115			258 		   #W
-HiddenKey	88		120			115			258 		   #X
-HiddenKey	89		121			106			258 		   #Y
-HiddenKey	90		122			97			258 		   #Z
-
-
-#Hva i granskauen er ascii verdien for norsk ø
-#HiddenKey	238		238			238			258 		   #ø
-
-HiddenKey	143		238			238			258 		   #å
+#			Ascii	Target	Finger	Contorll
+HiddenKey	65		97		97		258 	   #A
+HiddenKey	66		98		102		258 	   #B
+HiddenKey	67		99		100		258 	   #C
+HiddenKey	68		100		100		258 	   #D
+HiddenKey	69		101		100		258 	   #E
+HiddenKey	70		102		102		258 	   #F
+HiddenKey	71		103		102		258 	   #G
+HiddenKey	72		104		106		258 	   #H
+HiddenKey	73		105		107		258 	   #I
+HiddenKey	74		106		106		258 	   #J
+HiddenKey	75		107		107		258 	   #K
+HiddenKey	76		108		106		258 	   #L
+HiddenKey	77		109		106		258 	   #M
+HiddenKey	78		110		106		258 	   #N
+HiddenKey	79		111		108		258 	   #O
+HiddenKey	80		112		230		258 	   #P
+HiddenKey	81		113		97		258 	   #Q
+HiddenKey	82		114		102		258 	   #R
+HiddenKey	83		115		115		258 	   #S
+HiddenKey	84		116		102		258 	   #T
+HiddenKey	85		117		106		258 	   #U
+HiddenKey	86		118		102		258 	   #V
+HiddenKey	87		119		115		258 	   #W
+HiddenKey	88		120		115		258 	   #X
+HiddenKey	89		121		106		258 	   #Y
+HiddenKey	90		122		97		258 	   #Z
+HiddenKey	216		39		230		258 	   #Æ
+HiddenKey	198		230		230		258 	   #ø
+HiddenKey	197		91		230		258 	   #Å
