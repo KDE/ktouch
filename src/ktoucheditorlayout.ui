@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KTouchEditorLayout</class>
 <widget class="QDialog">
     <property name="name">
@@ -9,11 +9,11 @@
             <x>0</x>
             <y>0</y>
             <width>653</width>
-            <height>442</height>
+            <height>444</height>
         </rect>
     </property>
     <property name="caption">
-        <string>KTouch Lecture Editor</string>
+        <string>Lecture Editor</string>
     </property>
     <grid>
         <property name="name">
@@ -205,7 +205,10 @@
                         </sizepolicy>
                     </property>
                     <property name="text">
-                        <string>Ok</string>
+                        <string>&amp;OK</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+O</string>
                     </property>
                     <property name="default">
                         <bool>true</bool>
@@ -216,7 +219,10 @@
                         <cstring>applyButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Apply</string>
+                        <string>&amp;Apply</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+A</string>
                     </property>
                 </widget>
                 <widget class="KPushButton">
@@ -224,7 +230,10 @@
                         <cstring>cancelButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Cancel</string>
+                        <string>&amp;Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+C</string>
                     </property>
                 </widget>
             </hbox>
@@ -366,6 +375,8 @@
         </widget>
     </grid>
 </widget>
+<customwidgets>
+</customwidgets>
 <images>
     <image name="image0">
         <data format="XPM.GZ" length="1885">789c7dd25953db301007f0f77c0a4ff4c67496d8f1399d3e80b98f907043a70fb224278184339c9d7ef74ada5d633a6d3126f979ff925712cb4bc1f9703f585aee3c2ee462aa0235910fc1927e9acfdfbefff8f6b3d30dd3c0fe66451075bf74baa345a082c1ed8d7180d242f4fc8fb3983b8779a6b5af8b2be7a897254a7b6b7241be46e785c1f90aef22d35437e822ac53ef2939a96b9fef39f7439b4f7c7d826ef2829ca061e45de4d40f8468ae0b688cf327ce7158145497681952fdc45b367e764ea2bcc07e60175d685c9f98a125cd2f1459d2f8dc5b36be241bf2ad731ac910f71756c99c1fa2ab88fce4edc663ff7563ac47e826efcf23eb57119dc70d9bf6ef909c52de9f6f5659637d4c96e42de7bc5ff1fb4ed18adfe7fbc92bc5f3ed381771e33d6fa5787d2bce3256349fa8bc6d9df6774c36d43fd535bfcffdf38a2ad63cbf22f3fcb1b7d6298d4fd9b49e0999f377645edf99b34a34f5036b64aecfd186fbc9bc7593bf2073ffc76c7abf411beebfefaced7c94df67537e93ccfdbf34c6f19acceb39f73686d77fc4a6f1db643edffbc6387e46e6f50e9ced6cbcbe03368ddf20f3fa24bae6fd59f7364dfd0d5df3faa6645ecfbb73fd31fe95ccf54732f7fbe05d3716e41a3d5af00502af8f27ee6a677c5d4205ea5f199fd0a0c0400de3bf65283181a9fd347005d77f667c626613923a9ac30ddcb63394b8837b788047ba17f004cf9f32d2265ee015deecfd4e9f2bb00a652ba3600dd661c3de9bb005dbf47d07765d8a327bb00f0338b07f8730824338b2df07700c27adcc299cc1395cc025f4a0841022e85bc790b432434821831c0a9bb097009bba8058888f8c90a2124a684cd831a530a21663316965a636758509daad525c8b997bc699d142cc3981bb6eef129fb5cea29568ceb8fc9cf9dfd5fdf5b5f31bdbd2ccfa</data>

@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KTouchPrefColorsLayout</class>
 <widget class="QWidget">
     <property name="name">
@@ -8,12 +8,12 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>466</width>
-            <height>434</height>
+            <width>467</width>
+            <height>436</height>
         </rect>
     </property>
     <property name="caption">
-        <string>Color settings</string>
+        <string>Color Settings</string>
     </property>
     <vbox>
         <property name="name">
@@ -27,7 +27,7 @@
                 <cstring>groupBox2</cstring>
             </property>
             <property name="title">
-                <string>Typing line colors</string>
+                <string>Typing Line Colors</string>
             </property>
             <vbox>
                 <property name="name">
@@ -138,7 +138,7 @@
                                 <cstring>textLabel1_2</cstring>
                             </property>
                             <property name="text">
-                                <string>background:</string>
+                                <string>Background:</string>
                             </property>
                         </widget>
                         <widget class="KColorButton" row="1" column="7">
@@ -160,7 +160,7 @@
                                 <cstring>textLabel1_4_2</cstring>
                             </property>
                             <property name="text">
-                                <string>text:</string>
+                                <string>Text:</string>
                             </property>
                         </widget>
                         <spacer row="1" column="5">
@@ -185,7 +185,7 @@
                                 <cstring>textLabel1_4</cstring>
                             </property>
                             <property name="text">
-                                <string>text:</string>
+                                <string>Text:</string>
                             </property>
                         </widget>
                         <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
@@ -218,7 +218,7 @@
                                 <cstring>textLabel1_2_2</cstring>
                             </property>
                             <property name="text">
-                                <string>background:</string>
+                                <string>Background:</string>
                             </property>
                         </widget>
                     </grid>
@@ -278,7 +278,7 @@
                                 <cstring>errorTextLabel</cstring>
                             </property>
                             <property name="text">
-                                <string>text:</string>
+                                <string>Text:</string>
                             </property>
                         </widget>
                         <widget class="KColorButton">
@@ -327,7 +327,7 @@
                                 <cstring>errorBackgroundLabel</cstring>
                             </property>
                             <property name="text">
-                                <string>background:</string>
+                                <string>Background:</string>
                             </property>
                         </widget>
                         <widget class="KColorButton">
@@ -363,7 +363,7 @@
                 <cstring>groupBox5</cstring>
             </property>
             <property name="title">
-                <string>Keyboard color scheme</string>
+                <string>Keyboard Color Scheme</string>
             </property>
             <hbox>
                 <property name="name">
@@ -374,7 +374,7 @@
                         <cstring>textLabel2</cstring>
                     </property>
                     <property name="text">
-                        <string>Select color scheme</string>
+                        <string>Select color scheme:</string>
                     </property>
                 </widget>
                 <spacer>
@@ -431,12 +431,4 @@
     <tabstop>keyboardColorCombo</tabstop>
 </tabstops>
 <layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kcolorbutton.h</includehint>
-    <includehint>kcolorbutton.h</includehint>
-    <includehint>kcolorbutton.h</includehint>
-    <includehint>kcolorbutton.h</includehint>
-    <includehint>kcolorbutton.h</includehint>
-    <includehint>kcolorbutton.h</includehint>
-</includehints>
 </UI>

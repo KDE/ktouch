@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KTouchPrefKeyboardLayout</class>
 <widget class="QWidget">
     <property name="name">
@@ -9,11 +9,11 @@
             <x>0</x>
             <y>0</y>
             <width>566</width>
-            <height>234</height>
+            <height>236</height>
         </rect>
     </property>
     <property name="caption">
-        <string>Keyboard settings</string>
+        <string>Keyboard Settings</string>
     </property>
     <vbox>
         <property name="name">
@@ -107,7 +107,7 @@
                                         <cstring>textLabel1</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Font for keys on keyboard</string>
+                                        <string>Font for keys on keyboard:</string>
                                     </property>
                                 </widget>
                                 <spacer>
@@ -132,7 +132,7 @@
                                         <cstring>fontChooseBtn</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Select font...</string>
+                                        <string>Select Font...</string>
                                     </property>
                                 </widget>
                             </hbox>
@@ -160,6 +160,8 @@
         </spacer>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <connections>
     <connection>
         <sender>fontChooseBtn</sender>
@@ -176,7 +178,6 @@
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
-    <includehint>kcombobox.h</includehint>
     <includehint>kpushbutton.h</includehint>
 </includehints>
 </UI>

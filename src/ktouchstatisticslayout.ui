@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KTouchStatisticsLayout</class>
 <widget class="QDialog">
     <property name="name">
@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>497</width>
-            <height>522</height>
+            <width>671</width>
+            <height>608</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -21,7 +21,7 @@
         </sizepolicy>
     </property>
     <property name="caption">
-        <string>KTouch - Training statistics</string>
+        <string>Training Statistics</string>
     </property>
     <vbox>
         <property name="name">
@@ -36,7 +36,7 @@
                     <cstring>currentTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Current training session</string>
+                    <string>Current Training Session</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -53,7 +53,7 @@
                             </font>
                         </property>
                         <property name="text">
-                            <string>Current training session statistics</string>
+                            <string>Current Training Session Statistics</string>
                         </property>
                     </widget>
                     <spacer>
@@ -86,7 +86,7 @@
                                     <cstring>groupBox4</cstring>
                                 </property>
                                 <property name="title">
-                                    <string>General statistics</string>
+                                    <string>General Statistics</string>
                                 </property>
                                 <grid>
                                     <property name="name">
@@ -195,7 +195,7 @@
                                             <cstring>groupBox5</cstring>
                                         </property>
                                         <property name="title">
-                                            <string>Typing rate</string>
+                                            <string>Typing Rate</string>
                                         </property>
                                         <grid>
                                             <property name="name">
@@ -274,7 +274,7 @@
                             <cstring>groupBox7</cstring>
                         </property>
                         <property name="title">
-                            <string>Character statistics (characters you need to focus on)</string>
+                            <string>Character Statistics (characters you need to focus on)</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -307,7 +307,7 @@
                                     <cstring>charLabel1</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>a</string>
+                                    <string>a:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -315,7 +315,7 @@
                                     <cstring>charLabel2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>b</string>
+                                    <string>b:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="0">
@@ -323,7 +323,7 @@
                                     <cstring>charLabel3</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>c</string>
+                                    <string>c:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="3" column="0">
@@ -331,7 +331,7 @@
                                     <cstring>charLabel4</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>d</string>
+                                    <string>d:</string>
                                 </property>
                             </widget>
                             <widget class="QProgressBar" row="1" column="1">
@@ -374,7 +374,7 @@
                                     <cstring>charLabel5</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>e</string>
+                                    <string>e:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="3">
@@ -382,7 +382,7 @@
                                     <cstring>charLabel6</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>f</string>
+                                    <string>f:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="3">
@@ -390,7 +390,7 @@
                                     <cstring>charLabel7</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>g</string>
+                                    <string>g:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="3" column="3">
@@ -398,7 +398,7 @@
                                     <cstring>charLabel8</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>h</string>
+                                    <string>h:</string>
                                 </property>
                             </widget>
                         </grid>
@@ -427,7 +427,7 @@
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Averaged stats</string>
+                    <string>Averaged Stats</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -444,7 +444,7 @@
                             </font>
                         </property>
                         <property name="text">
-                            <string>Averaged training statistics</string>
+                            <string>Averaged Training Statistics</string>
                         </property>
                     </widget>
                     <spacer>
@@ -503,7 +503,7 @@
                             <cstring>groupBox5_2</cstring>
                         </property>
                         <property name="title">
-                            <string>Typing rate</string>
+                            <string>Typing Rate</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -742,7 +742,7 @@
                                     </sizepolicy>
                                 </property>
                                 <property name="text">
-                                    <string>averaged typing accuracy</string>
+                                    <string>Averaged Typing Accuracy</string>
                                 </property>
                                 <property name="alignment">
                                     <set>AlignCenter</set>
@@ -755,7 +755,7 @@
                             <cstring>groupBox7_2</cstring>
                         </property>
                         <property name="title">
-                            <string>Character statistics (characters you need to focus on)</string>
+                            <string>Character Statistics (characters you need to focus on)</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -791,7 +791,7 @@
                                     <cstring>charLabel1_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>a</string>
+                                    <string>a:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -799,7 +799,7 @@
                                     <cstring>charLabel2_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>b</string>
+                                    <string>b:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="0">
@@ -807,7 +807,7 @@
                                     <cstring>charLabel3_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>c</string>
+                                    <string>c:</string>
                                 </property>
                             </widget>
                             <widget class="QProgressBar" row="1" column="1">
@@ -855,7 +855,7 @@
                                     <cstring>charLabel4_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>e</string>
+                                    <string>e:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="3">
@@ -863,7 +863,7 @@
                                     <cstring>charLabel5_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>f</string>
+                                    <string>f:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="3">
@@ -871,7 +871,7 @@
                                     <cstring>charLabel6_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>g</string>
+                                    <string>g:</string>
                                 </property>
                             </widget>
                         </grid>
@@ -925,7 +925,7 @@
                             </font>
                         </property>
                         <property name="text">
-                            <string>Training charts</string>
+                            <string>Training Charts</string>
                         </property>
                     </widget>
                     <widget class="KTouchChartWidget">
@@ -946,7 +946,7 @@
                             </sizepolicy>
                         </property>
                         <property name="title">
-                            <string>Statistics to show</string>
+                            <string>Statistics to Show</string>
                         </property>
                         <vbox>
                             <property name="name">
@@ -1005,7 +1005,7 @@
                         <cstring>clearButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Clear history</string>
+                        <string>Clear History</string>
                     </property>
                 </widget>
                 <spacer>
