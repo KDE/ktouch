@@ -1,25 +1,24 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN" "dtd/kdex.dtd" [
-<!ENTITY kappname "&touch;"><!-- replace kapp here -->
+<!ENTITY kappname "&ktouch;"><!-- replace kapp here -->
+<!ENTITY package "kdeedu">
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % English "INCLUDE"><!-- change language only here -->
-<!-- Do not define any other entities; instead, use the entities
-from kde-genent.entities and $LANG/user.entities. -->
 ]>
 
 <book lang="&language;">
 
 <bookinfo>
-<title>The KTouch Handbook</title>
+<title>The &ktouch; Handbook</title>
 
 <authorgroup>
-  <author>
-  <firstname>Haavard</firstname>
-  <surname>Froeiland</surname>
-  <affiliation>
-  <address><email>haavard@users.sourceforge.net</email></address>
-  </affiliation>
-  </author>
+<author>
+<firstname>Haavard</firstname>
+<surname>Froeiland</surname>
+<affiliation>
+<address><email>haavard@users.sourceforge.net</email></address>
+</affiliation>
+</author>
 
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 
@@ -34,25 +33,16 @@ from kde-genent.entities and $LANG/user.entities. -->
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>03/04/2001</date>
+<date>2001-04-03</date>
 <releaseinfo>1.0</releaseinfo>
 
 <abstract>
-  <para>
-  KTouch is a program for learning to touch type.
-  KTouch provides you with text to train on, and adjust to
-  different levels, depending on how good you are. It can
-  display which key to press next, and the correct finger
-  to use.
-	</para>
-	<para>
-	Since the programm is under the GPL (GNU Public License) it will be free for you, and will be free for ever! Updates and new versions will be under the GPL so you will allways get the latest version for free.
-	</para>
+<para>&ktouch; is a program for learning to touch type.  &ktouch;
+provides you with text to train on, and adjust to different levels,
+depending on how good you are. It can display which key to press next,
+and the correct finger to use.</para>
+	
 </abstract>
-
-<!-- This is a set of Keywords for indexing by search engines.
-Please at least include KDE, the KDE package it is in, the name
- of your application, and a few relevant keywords. -->
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -72,102 +62,112 @@ Please at least include KDE, the KDE package it is in, the name
 <chapter id="introduction">
 <title>Introduction</title>
 
-<para>
-KTouch is a program for learning to touch type.
-KTouch provides you with text to train on, and adjust to
-different levels, depending on how good you are. It can
-display which key to press next, and the correct finger
-to use. It's the perfekt touch typing tutor, your learn typing with all the fingers without looking at the keys, in an step by step way. It is convenient for all ages, and the perfect typing tutor for schools, universities and individuals. It is free and licensed under the GNU Public License, so you will never have to pay anything for the programm, or any update.
+<para>&ktouch; is a program for learning to touch type.</para>
+
+<para>&ktouch; provides you with text to train on, and adjust to
+different levels, depending on how good you are. It can display which
+key to press next, and the correct finger to use. It's the perfect
+touch typing tutor, you learn typing with all the fingers without
+looking at the keys, in an step by step way. It is convenient for all
+ages, and the perfect typing tutor for schools, universities and
+individuals. It is free and licensed under the &GNU; Public License, so
+you will never have to pay anything for the programm, or any update.
 </para>
 </chapter>
-
-<!-- ####################################################################################################### -->
 
 <chapter id="using-ktouch">
-<title>Using KTouch</title>
+<title>Using &ktouch;</title>
 
-<para>
-Here's a screenshot of KTouch in action
+<para>Here's a screenshot of &ktouch; in action:</para>
+
 <screenshot>
-<screeninfo>Here's a screenshot of KTouch;</screeninfo>
-	<mediaobject>
-	  <imageobject>
-	    <imagedata fileref="screenshot1.png" format="PNG"/>
-	  </imageobject>
-	  <textobject>
-	    <phrase>Screenshot</phrase>
-	  </textobject>
-	</mediaobject>
+<screeninfo>&ktouch; main screen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG" width="300"/>
+</imageobject>
+<textobject>
+<phrase>&ktouch; main screen</phrase>
+</textobject>
+</mediaobject>
 </screenshot>
 
-You see that using KTouch is easy to use, and even children can learn touch typing with it.
-</para>
-<para>
-Screenshot of KTouch Option -> Keyboard
+<para>You see that using &ktouch; is easy to use, and even children can
+learn touch typing with it.</para>
+
 <screenshot>
-<screeninfo>Here's a screenshot of KTouch;</screeninfo>
-	<mediaobject>
-	  <imageobject>
-	    <imagedata fileref="screenshot2.png" format="PNG"/>
-	  </imageobject>
-	  <textobject>
-	    <phrase>Screenshot</phrase>
-	  </textobject>
-	</mediaobject>
+<screeninfo>&ktouch; with keyboard option dialog</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG" width="300"/>
+</imageobject>
+<textobject>
+<phrase>&ktouch; with the keyboard option dialog visible.</phrase>
+</textobject>
+<caption>
+<para>Screenshot of &ktouch;'s keyboard option dialog.</para>
+</caption>
+</mediaobject>
 </screenshot>
-Change the layout of your keyboard, so people all over the world can use it!
-</para>
-<para>
-Here's a screenshot of KTouch Option -> Training
+
+
+<para>Change the layout of your keyboard, so people all over the world
+can use it!</para>
+
 <screenshot>
-<screeninfo>Here's a screenshot of KTouch;</screeninfo>
-	<mediaobject>
-	  <imageobject>
-	    <imagedata fileref="screenshot3.png" format="PNG"/>
-	  </imageobject>
-	  <textobject>
-	    <phrase>Screenshot</phrase>
-	  </textobject>
-	</mediaobject>
+<screeninfo>&ktouch; with the training option</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG" width="300"/>
+</imageobject>
+<textobject>
+<phrase>&ktouch; with the training option dialog visible</phrase>
+</textobject>
+<caption><para>Here is a screenshot of &ktouch;'s training dialog.</para> 
+</caption>
+</mediaobject>
 </screenshot>
-If you are too good for this world, you can change the level.
-</para>
+
+<para>If you are too good for this world, you can change the
+level.</para>
 
 </chapter>
-
-<!-- ####################################################################################################### -->
 
 <chapter id="faq">
 <title>Questions and Answers</title>
 
 <qandaset id="faqlist">
-<qandaentry>
+<qandaentry id="make-training-file">
 <question>
 <para>Can I make my own training files?</para>
 </question>
 <answer>
 <para>
-Yes you can. Make a file as described below and call it something like "myfile.ktouch" To use this file go to File-> Open and find your file.Another good way to make your own training files is just to modify the existing files. If you look at the top of the KTouch window, you should see the name of the training file in use.
-</para>
-<para>
-<screen width="40">
-  <userinput>---myTrainingFile.ktouch-----</userinput>
-  <userinput></userinput>
-  <userinput>#This is a example of a training file (and a comment)</userinput>
-  <userinput>#This will be level one</userinput>
-  <userinput>jf fj jf fjf jf jjf jf jfjf jfj</userinput>
-  <userinput>jfj fj fjfj jf fj fj fjf jf jf</userinput>
-  <userinput></userinput>
-  <userinput>#A blank line indicates then next level, so this is level two</userinput>
-  <userinput>lskdk djslk fjkdlskdjf lskdj f</userinput>
-  <userinput>kdfj lksjdl kjsldf lsdkksldslk</userinput>
+Yes you can. Make a file as described below and call it something like
+<filename>myfile.ktouch</filename> To use this file go to
+<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>
+and find your file.Another good way to make your own training files is
+just to modify the existing files. If you look at the top of the
+&ktouch; window, you should see the name of the training file in
+use.</para>
+
+<screen width="40">---myTrainingFile.ktouch-----
+#This is a example of a training file (and a comment)
+#This will be level one
+jf fj jf fjf jf jjf jf jfjf jfj
+jfj fj fjfj jf fj fj fjf jf jf
+
+#A blank line indicates then next level, so this is level two
+lskdk djslk fjkdlskdjf lskdj f
+kdfj lksjdl kjsldf lsdkksldslk
 </screen>
-</para>
-<para>
-To get more levels just make blank spaces between the levels. If you want to have comments in your file, use # at the beginning of the line.
-</para>
+
+<para>To add more levels just make blank spaces between the levels. If
+you want to have comments in your file, use # at the beginning of the
+line. </para>
 </answer>
 </qandaentry>
+
 <qandaentry>
 <question>
 <para>My keyboard doesn't look like the keyboard on the screen?</para>
@@ -178,25 +178,30 @@ To get more levels just make blank spaces between the levels. If you want to hav
 </qandaentry>
 <qandaentry>
 <question>
-<para>Will I ever have to pay for KTouch?</para>
+<para>Will I ever have to pay for &ktouch;?</para>
 </question>
 <answer>
-<para>No, never. But you can send a pizza voucher to the developer, so he gets fat and the only thing he can do, is code and code and code!!!!</para>
+<para>No, never. But you can send a pizza voucher to the developer, so
+he gets fat and the only thing he can do, is code and code and
+code!</para>
 </answer>
 </qandaentry>
 <qandaentry>
+
 <question>
-<para>Will there ever be a windows version?</para>
+<para>Will there ever be a &Windows; version?</para>
 </question>
 <answer>
-<para>No, at the moment not, but you can download the source and make your own windows version. It should not be a big problem, cause it is written with Trolltech's QT-libs. But for what do you need windows? Get the latest Linux, and you will live on the edge.</para>
+<para>No, at the moment not, but you can download the source and make
+your own windows version. It should not be a big problem, because it is
+written with Trolltech's &Qt; libs. But for what do you need &Windows;?
+Get the latest &Linux;, and you will live on the edge.</para>
+
 </answer>
 </qandaentry>
 
 </qandaset>
 </chapter>
-
-<!-- ####################################################################################################### -->
 
 <chapter id="contribute">
 <title>How can I contiribute?</title>
@@ -209,28 +214,8 @@ To get more levels just make blank spaces between the levels. If you want to hav
 </question>
 
 <answer>
-<para>
-Yes you can. Make a file as described below and call it something like "myfile.ktouch" To use this file go to File-> Open and find your file.Another good way to make your own training files is just to modify the existing files. If you look at the top of the KTouch window, you should see the name of the training file in use.
-</para>
-<para>
-<screen width="40">
-<userinput>
----myTrainingFile.ktouch-----
-
-#This is a example of a training file (and a comment)
-#This will be level one
-jf fj jf fjf jf jjf jf jfjf jfj
-jfj fj fjfj jf fj fj fjf jf jf
-
-#A blank line indicates then next level, so this is level two
-lskdk djslk fjkdlskdjf lskdj f
-kdfj lksjdl kjsldf lsdkksldslk
-</userinput>
-</screen>
-</para>
-<para>
-To get more levels just make blank spaces between the levels. If you want to have comments in your file, use # at the beginning of the line.
-</para>
+<para>Yes you can. See the <link linkend="make-training-file">answer in the <acronym>FAQ</acronym></link> for more information and an
+example of the file format.</para>
 </answer>
 </qandaentry>
 
@@ -239,14 +224,13 @@ To get more levels just make blank spaces between the levels. If you want to hav
 <para>Making a new keyboard file</para>
 </question>
 <answer>
-<para>
-You will find a complete keyboard file below with comments. Just edit the file "keyboard.en" and save it as "keyboard.yourContryCode".
+<para>You will find a complete keyboard file below with comments. Just
+edit the file <filename>keyboard.en</filename> and save it as <filename>keyboard.<replaceable>yourContryCode</replaceable></filename>.</para>
 
-Please let me know if you are making a new keyboard file.
-<email>haavard@users.sourceforge.net</email>
-<screen width="40">
-<userinput>
-####################################################
+<para>Please let me know if you are making a new keyboard file, at
+<email>haavard@users.sourceforge.net</email></para>
+
+<screen width="40">####################################################
 #    KTouch
 #    Keyboard layout file
 ####################################################
@@ -370,14 +354,11 @@ HiddenKey 86    118     102     258 #V
 HiddenKey 87    119     115     258 #W
 HiddenKey 88    120     115     258 #X
 HiddenKey 89    121     106     258 #Y
-HiddenKey 90    122     97      258 #Z
-</userinput>
-</screen>
-</para>
+HiddenKey 90    122     97      258 #Z</screen>
 
-<para>
-If you need aditional help please send me an email. <email>haavard@users.sourceforge.net</email>
-</para>
+<para>If you need aditional help please send me an email at
+<email>haavard@users.sourceforge.net</email>.</para>
+
 </answer>
 </qandaentry>
 
@@ -387,7 +368,8 @@ If you need aditional help please send me an email. <email>haavard@users.sourcef
 </question>
 <answer>
 <para>
-If you find some bugs in the program, or have some suggestions for improvements, please let me know.
+If you find some bugs in the program, or have some suggestions for
+improvements, please let me know. 
 </para>
 </answer>
 
@@ -396,106 +378,107 @@ If you find some bugs in the program, or have some suggestions for improvements,
 </qandaset>
 </chapter>
 
-
-
-<!-- ####################################################################################################### -->
-
 <chapter id="credits">
 
 <title>Credits and License</title>
-<para>KTouch</para>
+<para>&ktouch;</para>
 <para>
 Program Copyright, 1999, 2000, 2001 Haavard Froeiland <email>haavard@users.sourceforge.net</email>
 </para>
-<para> Contributors:
+
+<para> Contributors:</para>
+
 <itemizedlist>
 <listitem><para>Frank Quotschalla, German keyboard and german training file and translation.</para></listitem>
 <listitem><para>Ernesto Hern&aacute;ndez-Novich, Latinamerican keyboard</para></listitem>
 <listitem><para>Jo&atilde;o Miguel Neves, Portuguese keyboard</para></listitem>
 <listitem><para>Henri Girard, Frence keyboard</para></listitem>
 </itemizedlist>
-</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
 &underFDL;           <!-- FDL: do not remove -->
 &underGPL;        	 <!-- GPL License -->
 
 </chapter>
 
-<!-- ####################################################################################################### -->
-
 <appendix id="installation">
 <title>Installation</title>
 
 <sect1 id="getting-ktouch">
-<title>How to obtain KTouch</title>
+<title>How to obtain &ktouch;</title>
 
-<para>
-KTouch is atm not part of the KDE <ulink url="http://www.kde.org">http://www.kde.org</ulink> project.
-KTouch can be found on Sourceforge <ulink url="http://www.sourceforge.net">http://www.sourceforge.net</ulink> @ <ulink url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>
-<!--
-<para>
-KTouch is atm not part of the KDE project
-<ulink url="http://www.kde.org">http://www.kde.org</ulink>.
-KTouch can atm not be found in the kdeutils package on
-<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>, the
-main ftp site of the KDE project. </para>
--->
-</para>
+<!-- replace the following with the &install.intro.documentation; -->
+<!-- entity for KDE 3.x -->
+
+<!-- requires that packagename is defined in the documentation prologue -->
+<para>&kappname; is part of the &kde; project <ulink
+url="&kde-http;">&kde-http;</ulink>.</para>
+
+<para>&kappname; can be found in the &package; package on <ulink
+url="&kde-ftp;">&kde-ftp;</ulink>, the main &FTP; site of the &kde;
+project.</para>
+
+<!-- Stop replacing here -->
+
+<para>&ktouch; has it's own home page on Sourceforge <ulink
+url="http://www.sourceforge.net">Sourceforge</ulink>, at <ulink
+url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink></para>
 </sect1>
 
 <sect1 id="requirements">
 <title>Requirements</title>
 
 <para>
-In order to successfully use KTouch (version > 0.7), you need KDE > 2.0 .
+In order to successfully use &ktouch; (version > 0.7), you need &kde; > 2.0 .
 </para>
 
-<para>
-All required libraries as well as KTouch itself can be found
-on <ulink url="ftp://ftp.kde.org">The KDE ftp server</ulink> and <ulink url="ftp://ktouche.sourceforge.net">the ktouch ftp server</ulink>.
+<para>All required libraries as well as &ktouch; itself can be found
+on &kde-ftp; and <ulink url="ftp://ktouche.sourceforge.net">the
+&ktouch; &FTP; server</ulink>.
 </para>
 
-<!-- For a list of updates, you may refer to the application web site
-or the ChangeLog file, or ... -->
-<para>
-You can find a list of changes at <ulink
-url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.
-</para>
+<para>You can find a list of changes at <ulink
+url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.</para>
+
 </sect1>
 
 <sect1 id="compilation">
 <title>Compilation and Installation</title>
 
-<para>
-In order to compile and install KApp on your system, type the following in the base
-directory of the Icon Editor distribution:
-<screen width="40">
-<prompt>%</prompt> <userinput>./configure</userinput>
-<prompt>%</prompt> <userinput>make</userinput>
-<prompt>%</prompt> <userinput>make install</userinput>
+<!-- replace the following with the install.compile.documentation; -->
+<!-- entity for KDE 3.x -->
+
+<para>In order to compile and install &kappname; on your system, type the
+following in the base directory of the &kappname; distribution:</para>
+
+<screen><prompt>%</prompt> <userinput><command>./configure</command></userinput>
+<prompt>%</prompt> <userinput><command>make</command></userinput>
+<prompt>%</prompt> <userinput><command>make</command> install</userinput>
 </screen>
-</para>
 
-<para>Since KTouch uses autoconf and automake you should have not trouble compiling it.
-Should you run into problems please report them to <email>haavard@users.sourceforge.net</email>.</para>
-
-</sect1>
+<para>Since &kappname; uses <command>autoconf</command> and
+<command>automake</command> you should have no trouble compiling it. Should you
+run into problems please report them to the &kde; mailing lists.</para>
 
 
-<!--
-<sect1 id="configuration">
-<title>Configuration</title>
 
-<para>Don't forget to tell your system to start the <filename>dtd</filename>
-dicer-toaster daemon first, or KApp won't work !</para>
+<!-- stop replacing here -->
 
 </sect1>
--->
-
 
 </appendix>
 
-<!-- ####################################################################################################### -->
-
 &documentation.index;
 </book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->
