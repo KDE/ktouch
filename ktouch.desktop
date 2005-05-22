@@ -2,7 +2,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Exec=ktouch -caption "%c" %i %m  
+Exec=ktouch -caption "%c" %i %m
 Icon=ktouch
 DocPath=ktouch/index.html
 GenericName=Touch Typing Tutor
@@ -29,6 +29,7 @@ GenericName[it]=Istruttore di dattilografia
 GenericName[ja]=タッチタイプの練習
 GenericName[lt]=Aklo spausdinimo mokytojas
 GenericName[lv]=Ātrakstīšanas Skolotājs
+GenericName[mk]=Учител за пишување на машина
 GenericName[mn]=Бичгийн машины зааварлагч
 GenericName[ms]=Tutor Menaip Touch
 GenericName[nb]=Øving i touch-metoden
