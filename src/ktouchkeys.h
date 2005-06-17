@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchkeys.h                                                          *
  *   ------------                                                          *
- *   Copyright (C) 2000 by H�ard Friland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -12,6 +12,10 @@
 
 #ifndef KTOUCHKEYS_H
 #define KTOUCHKEYS_H
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 #include <qpainter.h>
 
@@ -24,17 +28,17 @@ class KTouchControlKey;
  *  KTouchKey class hierarchy contains only the information for painting the keys. The connectivity
  *  is handled using the KTouchKeyConnector.
  */
-class KTouchKey {
+class KTouchBaseKey {
   public:
     /// The possible types of the keys
     enum KeyType { FINGER_KEY, NORMAL_KEY, CONTROL_KEY };
 
     /// Constructor
-    KTouchKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
+    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
       : m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
         m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {};
     /// Destructor.
-    virtual ~KTouchKey() {};
+    virtual ~KTouchBaseKey() {};
     /// Paints the basic key shape using the painter p.
     virtual void paint(QPainter& p) const;
     /// Recalculates the scaled position and size properties of the key.
@@ -72,7 +76,7 @@ class KTouchKey {
  *  The background colour of the key will be taken from the current colour scheme using the
  *  colour index (this should be the same colour as used for the corresponding finger key).
  */
-class KTouchNormalKey : public KTouchKey {
+class KTouchNormalKey : public KTouchBaseKey {
   public:
     /// Constructor
     KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
@@ -115,7 +119,7 @@ class KTouchFingerKey : public KTouchNormalKey {
  *  different shape and painting routine then the normal keys. Therefore it is directly
  *  derived from KTouchKey.
  */
-class KTouchControlKey : public KTouchKey {
+class KTouchControlKey : public KTouchBaseKey {
   public:
     /// Constructor
     KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
@@ -123,5 +127,25 @@ class KTouchControlKey : public KTouchKey {
     void paint(QPainter& p) const;
 };
 // ------------------------------------------------------------------------------------
+
+
+/// This is the key connector which represents a key or key combination that can be pressed.
+ /// It associates a character with a target key and optionally a finger and/or control key.
+class KTouchKeyConnection {
+  public:
+    /// Default constructor
+    KTouchKeyConnection() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), m_controlKeyChar(0) {};
+    /// Constructor provided for convenience.
+    KTouchKeyConnection(const QChar& keyChar, const QChar& targetKeyChar, const QChar& fingerKeyChar,
+                       const QChar& controlKeyChar)
+      : m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), m_controlKeyChar(controlKeyChar) {};
+
+    /// This is the character that has to be pressed to access this key.
+    QChar               m_keyChar;
+
+    QChar               m_targetKeyChar;    ///< The target character (the key the user has to press).
+    QChar               m_fingerKeyChar;    ///< The finger key (where the used finger normally rests).
+    QChar               m_controlKeyChar;   ///< The modifier key the user has to press also (for example LeftShift).
+};
 
 #endif  // KTOUCHKEYS_H

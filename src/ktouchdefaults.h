@@ -1,7 +1,7 @@
 /***************************************************************************
- *   ktouchchartwidget.h                                                   *
+ *   ktouchdefaults.h                                                      *
  *   -------------------                                                   *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   Copyright (C) 2004 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -10,25 +10,19 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHCHARTWIDGET
-#define KTOUCHCHARTWIDGET
+#ifndef KTOUCHDEFAULTS_H
+#define KTOUCHDEFAULTS_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-#include "../../libkdeedu/kdeeduplot/kplotwidget.h"
+extern const unsigned int BEGINNER_SPEED;		///< Speed for rating in characters per minute.
+extern const unsigned int ADVANCED_SPEED;		///< Speed for rating in characters per minute.
+extern const unsigned int PROFESSIONAL_SPEED;	///< Speed for rating in characters per minute.
 
-class KTouchTrainer;
+extern const int KEYBOARD_MARGIN;				///< The margin around the keybaord layout.
 
-/// This is the chart widget and contains all chart drawing code.
-class KTouchChartWidget : public KPlotWidget {
-    Q_OBJECT
-  public:
-    /// Constructor.
-    KTouchChartWidget(QWidget* parent, const char *name=0);
-    /// Destructor.
-    ~KTouchChartWidget();
-};
+extern const int LCD_UPDATE_INTERVAL;    		///< Update interval for LCD display and statistics.
 
-#endif  // KTOUCHCHARTWIDGET
+#endif  // KTOUCHDEFAULTS_H

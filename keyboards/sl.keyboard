@@ -1,0 +1,175 @@
+####################################################
+#    KTouch
+#    Keybord layout file for slovenian keybord layout
+#    Code=UTF-8
+####################################################
+#
+#		Assci		KeyText				x		y
+#
+FingerKey  	97		A				18		20
+FingerKey  	115		S				28		20
+FingerKey  	100		D				38		20
+FingerKey  	102		F				48		20
+FingerKey  	106		J				78		20
+FingerKey  	107		K				88		20
+FingerKey  	108		L				98		20
+FingerKey  	269		Č				108		20
+#
+#		Assci		KeyText		x	y	Width Hight
+#
+ControlKey	260		Tab		0	10	15    10
+ControlKey	13		|		128	20	22    10
+ControlKey	13		Enter		135	10	15    20
+ControlKey	258		Shift		123	30	17    10
+ControlKey	0		Win		120	40	15    10
+ControlKey	0		WinM		105	40	15    10
+ControlKey	264		AltGr		90	40	15    10
+ControlKey	0		Ctrl		135	40	15    10 #265
+ControlKey	0		Alt		30	40	15    10 #263
+ControlKey	0		Ctrl		0	40	15    10 #262
+ControlKey	0		Win		15	40	15    10
+ControlKey	32		Preslednica	45	40	45    10
+ControlKey	257		Shift		0	30	13    10
+ControlKey	259		CapsLock	0	20	18    10
+ControlKey	8		BackSpace	130	0	20    10
+
+#			Assci		KeyText				x		y	FingerKey
+#
+NormalKey 		184		¸				0		0	97
+NormalKey 		49		1				10		0	97
+NormalKey 		50		2				20		0	115
+NormalKey 		51		3				30		0	100
+NormalKey 		52		4				40		0	102
+NormalKey 		53		5				50		0	102
+NormalKey 		54		6				60		0	106
+NormalKey 		55		7				70		0	106
+NormalKey 		56		8				80		0	107
+NormalKey 		57		9				90		0	108
+NormalKey 		48		0				100		0	269
+NormalKey 		39		'				110		0	269
+NormalKey 		43		+				120		0	269
+#
+NormalKey		113		Q				15		10	97
+NormalKey		119		W				25		10	115
+NormalKey		101		E				35		10	100
+NormalKey		114		R				45		10	102
+NormalKey		116		T				55		10	102
+NormalKey		122		Z				65		10	106
+#
+NormalKey		117		U				75		10	106
+NormalKey		105		I				85		10	107
+NormalKey		111		O				95		10	108
+NormalKey		112		P				105		10	269
+NormalKey		353		Š				115		10	269
+NormalKey		273		Đ				125		10	269
+#
+NormalKey		103		G				58		20	102
+NormalKey		104		H				68		20	106
+NormalKey		263		Ć				118		20	269
+NormalKey		60		<				13		30	97
+NormalKey		121		Y				23		30	97
+#
+NormalKey		120		X				33		30	115
+NormalKey		99		C				43		30	100
+NormalKey		118		V				53		30	102
+NormalKey		98		B				63		30	102
+NormalKey		110		N				73		30	106
+NormalKey		109		M				83		30	106
+NormalKey		44		,				93		30	107
+NormalKey		46		.				103		30	108
+NormalKey		45		-				113		30	269
+NormalKey		382		Ž				140		30	269
+#
+#
+#			Ascii			Target			Finger			Control
+HiddenKey		65			97			97			258 	 	#A
+HiddenKey		66			98			102			258 	 	#B
+HiddenKey		67			99			100			258 	 	#C
+
+HiddenKey		268			269			269			257 	 	#Č
+
+HiddenKey		262			263			269			257 	 	#Ć
+
+HiddenKey		68			100			100			258 	 	#D
+
+HiddenKey		272			273			269			257 	 	#Đ
+
+HiddenKey		69			101			100			258 	 	#E
+HiddenKey		70			102			102			258 	 	#F
+HiddenKey		71			103			102			258 	 	#G
+HiddenKey		72			104			106			257 	 	#H
+HiddenKey		73			105			107			257 	 	#I
+HiddenKey		74			106			106			257 	 	#J
+HiddenKey		75			107			107			257 	 	#K
+HiddenKey		76			108			108			257 	 	#L
+HiddenKey		77			109			106			257 	 	#M
+HiddenKey		78			110			106			257 	 	#N
+HiddenKey		79			111			108			257 	 	#O
+HiddenKey		80			112			269			257 	 	#P
+HiddenKey		81			113			97			258 	 	#Q
+HiddenKey		82			114			102			258 	 	#R
+HiddenKey		83			115			115			258 	 	#S
+
+HiddenKey		352			353			269			257 	 	#Š
+
+HiddenKey		84			116			102			258 	 	#T
+HiddenKey		85			117			106			257 	 	#U
+HiddenKey		86			118			102			258 	 	#V
+HiddenKey		87			119			115			258 	 	#W
+HiddenKey		88			120			115			258 	 	#X
+HiddenKey		89			121			97			258 	 	#Y
+HiddenKey		90			122			106			257 	 	#Z
+
+HiddenKey		381			382			269			257 	 	#Ž
+
+HiddenKey		62			60			97			258 	 	#>
+
+#HiddenKey		196			228			269			257 	 	#Ä
+#HiddenKey		214  	 		246			269  	 		257		#Ö
+#HiddenKey		220  		 	252	 		269  	 		257 	 	#Ü
+#HiddenKey		167  		 	51 	 	 	100  	 		258 	 	#§
+
+HiddenKey		33			49			97			258		#!
+HiddenKey		34  			50 			115 			258 	 	#"
+HiddenKey		35  			51 			100 			258 	 	##
+HiddenKey		36  			52 			102 			258 	 	#$
+HiddenKey		37  			53 			102 			258 	 	#%
+HiddenKey		38  			54 			106 			257 	 	#&
+HiddenKey		47  			55 			106 			257 	 	#/
+HiddenKey		41  			57 			108 			257 	 	#)
+HiddenKey		40  			56 			107			257 	 	#(
+HiddenKey		61  			48 			269 			257 	 	#=
+HiddenKey		63  			39			269 			257 	 	#?
+
+#HiddenKey		96  			180			269 			257 	 	#`
+
+HiddenKey		59  			44 			107 			257 	 	#;
+HiddenKey		58  			46 			108 			257 	 	#:
+HiddenKey		95  			45 			269 			257 	 	#_
+HiddenKey		42  			43 			269 			257 	 	#*
+#HiddenKey		39  			35 			269 			257 	 	#'
+
+#HiddenKey		92  			223			269 			264 	 	#\
+#HiddenKey		124  		 	60 	 	 	97 			264 	 	#|
+#HiddenKey		64  			113			97 			264 	 	#@
+
+#			Ascii			Target			Finger			Control
+HiddenKey		126  			49			97 			264 	 	#~
+HiddenKey		176 			53			102 			264 	 	#°
+HiddenKey		96 			55			106 			264 	 	#`
+HiddenKey		92 			113			97 			264 	 	#\
+HiddenKey		124 			119			115			264 	 	#|
+HiddenKey		247 			353			269 			264 	 	#÷
+HiddenKey		215 			273			269 			264 	 	#×
+HiddenKey		91 			102			102 			264 	 	#[
+HiddenKey		93 			103			102 			264 	 	#]
+#HiddenKey		179 			107			107 			264 	 	#ł
+#HiddenKey		179 			108			108 			264 	 	#ł
+HiddenKey		223 			263			269 			264 	 	#ß
+HiddenKey		64 			118			102 			264 	 	#@
+
+HiddenKey		123 			98			102 			264 	 	#{
+HiddenKey		125 			110			106 			264 	 	#}
+
+HiddenKey		167 			109			106 			264 	 	#§
+HiddenKey		164 			382			269 			264 	 	#¤

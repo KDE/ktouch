@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouch.cpp                                                            *
- *   ----------                                                            *
+ *   ktouch.h                                                              *
+ *   --------                                                              *
  *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,19 +10,20 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef _KTOUCH_H_
-#define _KTOUCH_H_
+#ifndef KTOUCH_H
+#define KTOUCH_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-#include <kmainwindow.h>
-#include <kapplication.h>
-#include <kurl.h>
 #include <qcolor.h>
 #include <qstringlist.h>
 #include <qvaluevector.h>
+
+#include <kmainwindow.h>
+#include <kapplication.h>
+#include <kurl.h>
 
 class QLabel;
 class KToggleAction;
@@ -31,7 +32,7 @@ class KSelectAction;
 
 class KTouchStatus;
 class KTouchSlideLine;
-class KTouchKeyboard;
+class KTouchKeyboardWidget;
 class KTouchTrainer;
 
 class KTouchPrefTrainingLayout;
@@ -40,6 +41,7 @@ class KTouchPrefGeneralLayout;
 
 #include "ktouchlecture.h"
 #include "ktouchcolorscheme.h"
+#include "ktouchstatisticsdata.h"
 
 /// This is the main window of KTouch.
 ///
@@ -47,11 +49,11 @@ class KTouchPrefGeneralLayout;
 /// needed to get the program running. Since all special tasks are delegated to the
 /// appropriate widgets and classes, the remaining code in KTouch is basically the
 /// startup and KAction stuff.<p>
-/// A word about dialogs. Although we have only one preferences and one editor dialogs
-/// we don't create them by default. Instead they are create "on first use". This
+/// A word about dialogs. All dialogs in this program are not created by default. 
+/// Instead they are created "on first use". This
 /// saves memory (because we don't need them always) and the startup speed increases.<p>
 /// One central function - the keyPressEvent() - is responsable for getting the actual
-/// typed char. But it does nothing else then delegating the character to the trainer
+/// typed char. It delegates the character to the trainer
 /// (KTouchTrainer), which will then process it. So the heavy work lies in the trainer
 /// object and all the widgets.
 class KTouch : public KMainWindow {
@@ -66,7 +68,16 @@ class KTouch : public KMainWindow {
 	const QValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
-	
+	/// Returns the statistics object for the current lecture (as reference)
+	KTouchLectureStats& getCurrentLectureStats();
+	/// Clears the statistics data.
+	void clearStatistics();
+    /// Updates the status bar text.
+    void changeStatusbarMessage(const QString& text);
+    /// Updates the status bar statistics.
+	void changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
+							  unsigned int session_correct, unsigned int session_total, unsigned int session_words);
+
   public slots:
     /// Will be called when the "Apply"-button has been pressed in the preferences
     /// dialog or when the user accepted the changes using the "OK"-button.
@@ -81,32 +92,27 @@ class KTouch : public KMainWindow {
 	/// Called from the configuration dialog.
 	void configAutoLevelChangeToggled(bool on);
 
-  protected:
-    /// Reimplementated to ask user whether he/she wants to abort the test
-    bool queryClose();
-    /// Reimplementated to save preferences and
-    bool queryExit();
-
-  public slots:
     void fileOpenLecture();             ///< The action File->Open lecture...
     void fileEditLecture();             ///< The action File->Edit lecture...
+    void fileEditKeyboard();            ///< The action File->Edit keyboard...
     void fileQuit();                    ///< The action File->Quit
     void trainingNewSession();          ///< The action Training->Start new training session...
-    void trainingContinue();            ///< The action Training->Continue training
     void trainingPause();               ///< The action Training->Pause training
     void trainingStatistics();          ///< The action Training->Show training statistics...
     void optionsPreferences();          ///< The action Settings->Configure KTouch...
 
-    /// Updates the status bar text.
-    void changeStatusbarMessage(const QString& text);
-    /// Updates the status bar statistics.
-    void changeStatusbarStats(unsigned int correctChars, unsigned int totalChars, unsigned int words);
     /// Quick-changes the keyboard layout (called from menu).
     void changeKeyboard(int num);
     /// Quick-changes the colour scheme used on the keyboard (called from menu).
     void changeColor(int num);
     /// Quick-changes the current training lecture file (called from menu).
     void changeLecture(int num);
+
+  protected:
+    /// Reimplementated to save preferences and
+    bool queryExit();
+    /// Some layout fixes here...
+	void resizeEvent(QResizeEvent *);
 
   private:
     // *** BEGIN - Session management ***
@@ -135,9 +141,11 @@ class KTouch : public KMainWindow {
 	/// Updates the check mark in the lecture-quick-selection menu depending on the 
 	/// lecture in Prefs::currentLectureFile().
 	void updateLectureActionCheck();
+	/// Updates the check mark in the keyboard-quick-selection menu depending on the 
+	/// lecture in Prefs::currentKeyboardFile().
+	void updateKeyboardActionCheck();
 	
     // *** Public member variables ***
-    KAction                *m_trainingContinue;     ///< Action for "continue training session".
     KAction                *m_trainingPause;        ///< Action for "pause training session".
 
     KSelectAction		   *m_keyboardLayoutAction;
@@ -146,7 +154,7 @@ class KTouch : public KMainWindow {
 
     KTouchStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
     KTouchSlideLine        *m_slideLineWidget;      ///< Pointer to the sliding line widget.
-    KTouchKeyboard         *m_keyboardWidget;       ///< Pointer to the keyboard widget.
+    KTouchKeyboardWidget   *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).
     KTouchLecture           m_lecture;              ///< The lecture data.
 
@@ -154,8 +162,6 @@ class KTouch : public KMainWindow {
 	KTouchPrefTrainingLayout * m_pageTraining;		///< The training configuration page.
 	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
 	
-    QLabel                 *m_barStatsLabel;        ///< The textlabel in the status bar displaying the correct number of typed chars.
-
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
 	
@@ -165,10 +171,12 @@ class KTouch : public KMainWindow {
     QStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
     QStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
 
-    QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
+	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
+	
+	QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).
 extern KTouch * KTouchPtr;
 
-#endif // _KTOUCH_H_
+#endif // KTOUCH_H

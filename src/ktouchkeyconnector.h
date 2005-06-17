@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchkeyconnetor.h                                                   *
  *   -------------------                                                   *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2004 by Andreas Nicolai                                 *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,26 +13,46 @@
 #ifndef KTOUCHKEYCONNECTOR_H
 #define KTOUCHKEYCONNECTOR_H
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
-#include "ktouchkeys.h"
+#include <qdom.h>
+#include <qvaluevector.h>
+#include "ktouchkey.h"
 
- /// This is the key connector which represents a key or key combination that can be pressed.
+ /// The KTouchKeyConnector class contains the information about the character that has to 
+ /// be pressed and the keys on the keyboard that should be highlighted.
  /// It associates a character with a target key and optionally a finger and/or control key.
 class KTouchKeyConnector {
   public:
     /// Default constructor
-    KTouchKeyConnector() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), m_controlKeyChar(0) {};
+    KTouchKeyConnector() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), 
+	    m_controlKeyId(""), m_targetKeyIndex(-1), m_fingerKeyIndex(-1), m_controlKeyIndex(-1)
+	 {};
     /// Constructor provided for convenience.
     KTouchKeyConnector(const QChar& keyChar, const QChar& targetKeyChar, const QChar& fingerKeyChar,
-                       const QChar& controlKeyChar)
-      : m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), m_controlKeyChar(controlKeyChar) {};
+                       const QString& controlKeyId)
+    	: m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), 
+	    m_controlKeyId(controlKeyId), m_targetKeyIndex(-1), m_fingerKeyIndex(-1), m_controlKeyIndex(-1)
+	{};
 
-    /// This is the character that has to be pressed to access this key.
-    QChar               m_keyChar;
+	/// Reads the key connector data from the DomElement
+	bool read(QDomNode node);
+	/// Creates a new DomElement, writes the key connector data into it and appends it to the root object.
+	void write(QDomDocument& doc, QDomElement& root) const;
+	/// Updates the indices for the keys
+	void updateConnections(const QValueVector<KTouchKey>& keyvector);
+	
+    QChar               m_keyChar;			///< This is the character that has to be pressed to access this key.
+    QChar               m_targetKeyChar;	///< The target key (the key that will be highlighted).
+    QChar               m_fingerKeyChar;	///< The finger key (where the used finger normally rests).
+    QString             m_controlKeyId;		///< The id string for the associated control key that should be highlighted.
 
-    QChar               m_targetKeyChar;    ///< The target character (the key the user has to press).
-    QChar               m_fingerKeyChar;    ///< The finger key (where the used finger normally rests).
-    QChar               m_controlKeyChar;   ///< The modifier key the user has to press also (for example LeftShift).
+	// these variables are set after the full keyboard layout was read
+    int					m_targetKeyIndex;	///< Index of the target key (-1 if none).
+    int					m_fingerKeyIndex;	///< Index of the finger key (-1 if none).
+	int					m_controlKeyIndex;	///< Index of the control key (-1 if none).
 };
 
 #endif  // KTOUCHKEYCONNECTOR_H

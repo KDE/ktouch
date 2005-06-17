@@ -24,14 +24,14 @@ int KTouchFingerKey::m_fingerKeyCount = 0;
 
 // ***** Implementation of class KTouchKey ****
 
-void KTouchKey::paint(QPainter& p) const {
+void KTouchBaseKey::paint(QPainter& p) const {
     // We simply paint the key using the current brush and pen, so the derived classes
     // will have to care about that
     p.fillRect(m_xS, m_yS, m_wS, m_hS, p.brush());
     p.drawRect(m_xS, m_yS, m_wS, m_hS);
 }
 
-void KTouchKey::resize(double scale) {
+void KTouchBaseKey::resize(double scale) {
     m_xS = static_cast<int>(scale*m_x);
     m_yS = static_cast<int>(scale*m_y);
     m_wS = static_cast<int>(scale*m_w);
@@ -47,7 +47,7 @@ void KTouchKey::resize(double scale) {
 // **** Implementation of class KTouchNormalKey ****
 
 KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-  : KTouchKey(keyChar, keyText, x, y, w, h), m_colorIndex(0)
+  : KTouchBaseKey(keyChar, keyText, x, y, w, h), m_colorIndex(0)
 {
     m_type = NORMAL_KEY;
     m_font_scale =2;
@@ -67,7 +67,7 @@ void KTouchNormalKey::paint(QPainter& p) const {
         p.setPen( colorScheme.m_frame );
         textColor = colorScheme.m_text;
     };
-    KTouchKey::paint(p);  // call the parents paint() function
+    KTouchBaseKey::paint(p);  // call the parents paint() function
     p.setPen(textColor);
    
     p.setFont( m_font );
@@ -98,7 +98,7 @@ void KTouchFingerKey::paint(QPainter& p) const {
     if (m_isActive) {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
         p.setPen( colorScheme.m_frame );
-        KTouchKey::paint(p);                                                    // draw background and frame
+        KTouchBaseKey::paint(p);                                                    // draw background and frame
         p.setPen( QPen(colorScheme.m_frame,3) );
         p.drawRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);                             // mark it as "active"
         p.setPen( colorScheme.m_text );
@@ -107,14 +107,14 @@ void KTouchFingerKey::paint(QPainter& p) const {
     else if (m_isNextKey) {
         p.setBrush( colorScheme.m_backgroundH );
         p.setPen( colorScheme.m_frame );
-        KTouchKey::paint(p);
+        KTouchBaseKey::paint(p);
         p.setPen( colorScheme.m_textH );
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
     }
     else {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
         p.setPen( colorScheme.m_frame );
-        KTouchKey::paint(p);
+        KTouchBaseKey::paint(p);
         p.drawRoundRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);
         p.setPen( colorScheme.m_text );
         p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
@@ -127,7 +127,7 @@ void KTouchFingerKey::paint(QPainter& p) const {
 // **** Implementation of class KTouchControlKey ****
 
 KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-  : KTouchKey(keyChar, keyText, x, y, w, h)
+  : KTouchBaseKey(keyChar, keyText, x, y, w, h)
 {
     m_type = CONTROL_KEY;
     m_font_scale = 4;
@@ -152,7 +152,7 @@ void KTouchControlKey::paint(QPainter& p) const {
         p.setPen( colorScheme.m_frame );
         textColor = colorScheme.m_cText;
     };
-    KTouchKey::paint(p);
+    KTouchBaseKey::paint(p);
     p.setPen( textColor );
     int h = std::min(m_wS, m_hS);
     int ch = static_cast<int>(h*0.5);   // the height for the special chars

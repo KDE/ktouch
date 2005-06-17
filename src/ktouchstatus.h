@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchstatus.h                                                        *
  *   --------------                                                        *
- *   Copyright (C) 2000 by H�ard Friland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -12,6 +12,10 @@
 
 #ifndef KTOUCHSTATUS_H
 #define KTOUCHSTATUS_H
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 #include "ktouchstatuslayout.h"
 

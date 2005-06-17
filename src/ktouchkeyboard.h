@@ -1,8 +1,8 @@
 /***************************************************************************
  *   ktouchkeyboard.h                                                      *
  *   ----------------                                                      *
- *   Copyright (C) 2000 by H�ard Friland, 2003 by Andreas Nicolai        *
- *   haavard@users.sourceforge.net                                         *
+ *   Copyright (C) 2004 by Andreas Nicolai                                 *
+ *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,67 +13,55 @@
 #ifndef KTOUCHKEYBOARD_H
 #define KTOUCHKEYBOARD_H
 
-#include <qwidget.h>
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <qvaluevector.h>
 
 #include "ktouchkeyconnector.h"
+#include "ktouchkey.h"
 
 class KURL;
 
-/** This is the keyboard widget at the bottom of the training screen.
- *  In addition to the painting functions this class has the member
- *  functions loadKeyboard() and saveKeyboard() which can read and write
- *  a keyboard layout from/into a file.<p>
- *  The keyboard is drawn in the paintEvent() member function. The
- *  resizing, that means the recalculation of m_shift is
- *  done in the resizeEvent() member function.<p>
- *  The state of keyboard and keys does not change while it is
- *  repainted or resized. Only when a new character has been typed
- *  and the newKey() slot is called the state changes (and thus the
- *  activated keys and finger key animations etc.)
- */
-class KTouchKeyboard : public QWidget {
-    Q_OBJECT
+/// This class stores the keyboard layout and the connectivity between characters 
+/// and the actual keys.
+class KTouchKeyboard  {
   public:
-    /// Constructor
-    KTouchKeyboard(QWidget *parent);
-    /// Reads a keyboard layout from the given URL.
-    /// The function returns 'true' when the reading was successful or 'false' if not. In this
-    /// case the optional parameter errorMsg contains the error message.
-    bool loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg=NULL);
-    /// Saves the keyboard layout to the URL.
-    void saveKeyboard(QWidget * window, const KURL& url);
-    /// Applies preferences to the keyboard layout and the keys.
-    /// This means that the layout is basically recreated and if the layout type/language
-    /// changed it will be reloaded.
-    void applyPreferences(QWidget * window, bool silent);
+	/// Default constructor, sets up the standard number keyboard.
+	KTouchKeyboard() { createDefault(); }
+	/// Clears the keyboard (resets all data)
+	void clear();
+    /// Loads a keyboard layout (old format) from file (returns true if successful).
+    bool load(QWidget * window, const KURL& url);
+    /// Loads a lecture (in XML format) from file (returns true if successful).
+    bool loadXML(QWidget * window, const KURL& url);
+    /// Saves the lecture data to file (returns true if successful).
+    bool saveXML(QWidget * window, const KURL& url) const;
+	/// Creates the default number keyboard.
+	void createDefault();
+	/// Updates the indices in the KTouchKeyConnector objects for faster access.
+	void updateConnections();
+	
+    QValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
+    QValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
+	
+	QString		m_title;			///< Title of the keyboard (to appear in the menu).
+	QString		m_comment;			///< Comments about the creator of the keyboard layout.
+	QString		m_language;			///< Language ID of keyboard
+	QString		m_fontSuggestions;	///< Suggestions of fonts to be used on the keys.
 
-  public slots:
-    /// This function displays the next key (or key combination) the user has to press.
-    void newKey(const QChar& nextChar);
-
-  protected:
-    /// Draws the keyboard.
-    void paintEvent(QPaintEvent *);
-    /// Resizes (recalculates m_shift and m_scale) and redraws the keyboard.
-    void resizeEvent(QResizeEvent *);
-
+	// These variables are recalculated after the keyboard was loaded.
+	int			m_width;		///< The width of the keyboard (maximum of the sums of all keywidths in each line).
+	int			m_height;		///< The height of the keyboard (sum of all key row heights).
+	
   private:
-    /// Does what the name says (create a default keyboard which is a number keypad).
-    /// This function is needed in case there no keyboard file could be found.
-    void createDefaultKeyboard();
-    /// Does the actual reading.
-    bool readKeyboard(const QString& fileName, QString& errorMsg);
-    /// Assigns the background colours to the normal keys, which have a finger key assigned.
-    void updateColours();
-
-    QPtrList<KTouchKey>             m_keyList;          ///< The pointer list with base class pointers to the keys.
-    QValueList<KTouchKeyConnector>  m_connectorList;    ///< Contains the character - key associations.
-
-    int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
-    int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
-    double              m_shift;            ///< The horizontal shift for the keyboard.
-    QString             m_currentLayout;    ///< The name of the currently used layout.
-    QChar               m_nextKey;          ///< The next to be pressed character.
+    /// Loads keyboard data from file
+    bool read(QTextStream& in);
+    /// Loads keyboard data from file into an XML document
+    bool read(const QDomDocument& doc);
+    /// Saves keyboard data in the XML document
+    void write(QDomDocument& doc) const;
 };
 
 #endif  // KTOUCHKEYBOARD_H

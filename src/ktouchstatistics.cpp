@@ -13,88 +13,171 @@
 #include "ktouchstatistics.h"
 #include "ktouchstatistics.moc"
 
-#include <qlcdnumber.h>
-#include <qslider.h>
-#include <qlabel.h>
+#include <list>
+#include <vector>
+#include <utility>
+
 #include <qprogressbar.h>
+#include <qlcdnumber.h>
+#include <qlabel.h>
 #include <qradiobutton.h>
 #include <qbuttongroup.h>
 
-#include <kdebug.h>
 #include <kpushbutton.h>
+#include <kcombobox.h>
+#include <kurl.h>
 #include <kmessagebox.h>
 #include <klocale.h>
+#include <kdebug.h>
+#include <ktabwidget.h>
 
-#include <list>
-#include <utility> // for std::min and std::max
-
-#include "ktouchtrainer.h"
+#include "ktouch.h"
 #include "ktouchchartwidget.h"
-using std::set;
-using std::list;
 
-KTouchStatistics::KTouchStatistics(QWidget *parent, KTouchTrainer* trainer)
-  : KTouchStatisticsLayout(parent), m_trainer(trainer)
+KTouchStatistics::KTouchStatistics(QWidget* parent)
+	: KTouchStatisticsDlg(parent)
 {
-    sessionCountSlider->setMaxValue(m_trainer->m_sessionHistory.count());
-    sessionCountSlider->setValue(m_trainer->m_sessionHistory.count());
-    chartWidget->m_trainer = trainer;
-    chartWidget->setChartType( KTouchChartWidget::CharsPerMinute );
+	sessionsRadio->setChecked(true);
+	WPMRadio->setChecked(true);
+	eventRadio->setChecked(true);
     connect(closeButton, SIGNAL(clicked()), this, SLOT(accept()) );
+	connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
-    connect(sessionCountSlider, SIGNAL(valueChanged(int)), this, SLOT(updateAverageTab()) );
-    connect(chartTypeButtonGroup, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+	// connect the radio buttons with the chart update function
+    connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+    connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+    connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+	
+	// TODO : temporarily remove detailed stats page and deactivate options
+	levelsRadio->setEnabled(false);
+	tabWidget->removePage(statsPage);
+	delete statsPage;
 }
+// ----------------------------------------------------------------------------
 
-KTouchStatistics::~KTouchStatistics() {
+void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsData& stats,
+	const KTouchLevelStats& currLevelStats,
+	const KTouchSessionStats& currSessionStats)
+{
+	// fill lecture combo with data
+	// loop over all lecturestatistics
+	lectureCombo->clear();
+	QMapConstIterator<KURL, KTouchLectureStats> it = stats.m_lectureStats.begin();
+	m_currentIndex = 0;
+	while (it != stats.m_lectureStats.end()) {
+		QString t = it.data().m_lectureTitle;
+		// if current lecture, remember index and adjust text
+		if (it.key() == currentLecture) {
+			m_currentIndex = lectureCombo->count();
+			t = i18n("***current***  ") + t;
+		}
+		lectureCombo->insertItem(t);
+		++it;
+	}
+	if (lectureCombo->count()==0) {
+		// this shouldn't happen if the dialog is run with proper data
+		KMessageBox::information(this, i18n("No statistics data available yet!"));
+		return;
+	}
+	// remember stats
+	m_allStats = stats;
+	m_currLevelStats = currLevelStats;
+	m_currSessionStats = currSessionStats;
+	// modify current lecture entry
+	lectureCombo->setCurrentItem(m_currentIndex);
+	lectureActivated(m_currentIndex);
+	m_lectureIndex = m_currentIndex;
+	// update the current tabs with current session/level data
+	updateCurrentSessionTab();
+	updateCurrentLevelTab();
+	// set current session as current tab
+	tabWidget->showPage(currentTab);
+	exec();
 }
+// ----------------------------------------------------------------------------
 
-void KTouchStatistics::showEvent(QShowEvent*) {
-    // adjust slider range in case some sessions have been added
-    sessionCountSlider->setMaxValue(m_trainer->m_sessionHistory.count());
-    // update the tabs
-    updateCurrentTab();
-    updateAverageTab();
-    updateChartTab();
+void KTouchStatistics::lectureActivated(int index) {
+	if (m_allStats.m_lectureStats.count()==0) {
+		// TODO : Reset all tabs to "empty" look
+		return;
+	}
+	if (index >= static_cast<int>(m_allStats.m_lectureStats.count())) {
+		kdDebug() << "Lecture index out of range: " << index << " >= " << m_allStats.m_lectureStats.count() << endl;
+		return;
+	}
+	m_lectureIndex = index;
+	//kdDebug() << "Lecture stats changed: " << it.data().m_lectureTitle << endl;
+	// update the tabs
+	updateChartTab();
 }
+// ----------------------------------------------------------------------------
 
-void KTouchStatistics::updateCurrentTab() {
+void KTouchStatistics::clearHistory() {
+	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?")) 
+		== KMessageBox::Yes)
+	{
+		KTouchPtr->clearStatistics(); // clear statistics data in KTouch
+		// clear and reset local copy
+		m_allStats.clear();
+		QString s = lectureCombo->text(m_currentIndex);
+		lectureCombo->clear();
+		lectureCombo->insertItem(s);
+		m_currentIndex = 0;
+		lectureCombo->setCurrentItem(m_currentIndex);
+		lectureActivated(m_currentIndex);
+		updateChartTab();
+	}
+}
+// ----------------------------------------------------------------------------
+
+
+void KTouchStatistics::updateCurrentSessionTab() {
     // general stats group
-    elapsedTimeLCD->display(static_cast<int>(m_trainer->m_session.m_elapsedTime/1000));
-    totalCharsLCD->display(static_cast<int>(m_trainer->m_session.m_totalChars) );
-    wrongCharsLCD->display(static_cast<int>(m_trainer->m_session.m_totalChars-m_trainer->m_session.m_correctChars) );
-    wordsLCD->display(static_cast<int>(m_trainer->m_session.m_words) );
+    elapsedTimeLCD->display(static_cast<int>(m_currSessionStats.m_elapsedTime));
+    totalCharsLCD->display(static_cast<int>(m_currSessionStats.m_totalChars) );
+    wrongCharsLCD->display(static_cast<int>(m_currSessionStats.m_totalChars-m_currSessionStats.m_correctChars) );
+    wordsLCD->display(static_cast<int>(m_currSessionStats.m_words) );
     // typing rate group
-    charSpeedLCD->display(static_cast<int>(m_trainer->m_session.charSpeed()) );
-    wordSpeedLCD->display(static_cast<int>(m_trainer->m_session.wordSpeed()) );
+	if (m_currSessionStats.m_elapsedTime == 0) {
+		charSpeedLCD->display(0);
+		wordSpeedLCD->display(0);
+	}
+	else {
+		charSpeedLCD->display(static_cast<int>(m_currSessionStats.m_correctChars/m_currSessionStats.m_elapsedTime*60.0) );
+		wordSpeedLCD->display(static_cast<int>(m_currSessionStats.m_words/m_currSessionStats.m_elapsedTime*60.0) );
+	}
     // accuracy
-    correctnessBar->setProgress(static_cast<int>(m_trainer->m_session.correctness()*100) );
-    // worst miss/hit ratio group
-    std::list<KTouchCharStats> charList( m_trainer->m_session.sortedCharStats() );
-    std::list<KTouchCharStats>::const_iterator it=charList.begin();
+    correctnessBar->setProgress(static_cast<int>(
+		(100.0*m_currSessionStats.m_correctChars)/m_currSessionStats.m_totalChars) );
+	// create sorted list of missed characters
+	std::list<KTouchCharStats> charList( m_currSessionStats.m_charStats.begin(), m_currSessionStats.m_charStats.end());
+	charList.sort(higher_miss_hit_ratio);
+	
+	std::list<KTouchCharStats>::const_iterator it=charList.begin();
     unsigned int i=0;
     for (; i<8 && it!=charList.end(); ++i, ++it) {
-        if (it->hitMissRatio()==0)
+        if (it->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
           case 0 :  charLabel1->setText( it->m_char ); charProgress1->setEnabled(true);
-                    charProgress1->setProgress( it->hitMissRatio() ); break;
+                    charProgress1->setProgress( it->missHitRatio() ); break;
           case 1 :  charLabel2->setText( it->m_char ); charProgress2->setEnabled(true);
-                    charProgress2->setProgress( it->hitMissRatio() ); break;
+                    charProgress2->setProgress( it->missHitRatio() ); break;
           case 2 :  charLabel3->setText( it->m_char ); charProgress3->setEnabled(true);
-                    charProgress3->setProgress( it->hitMissRatio() ); break;
+                    charProgress3->setProgress( it->missHitRatio() ); break;
           case 3 :  charLabel4->setText( it->m_char ); charProgress4->setEnabled(true);
-                    charProgress4->setProgress( it->hitMissRatio() ); break;
+                    charProgress4->setProgress( it->missHitRatio() ); break;
           case 4 :  charLabel5->setText( it->m_char ); charProgress5->setEnabled(true);
-                    charProgress5->setProgress( it->hitMissRatio() ); break;
+                    charProgress5->setProgress( it->missHitRatio() ); break;
           case 5 :  charLabel6->setText( it->m_char ); charProgress6->setEnabled(true);
-                    charProgress6->setProgress( it->hitMissRatio() ); break;
+                    charProgress6->setProgress( it->missHitRatio() ); break;
           case 6 :  charLabel7->setText( it->m_char ); charProgress7->setEnabled(true);
-                    charProgress7->setProgress( it->hitMissRatio() ); break;
+                    charProgress7->setProgress( it->missHitRatio() ); break;
           case 7 :  charLabel8->setText( it->m_char ); charProgress8->setEnabled(true);
-                    charProgress8->setProgress( it->hitMissRatio() ); break;
-        };
-    };
+                    charProgress8->setProgress( it->missHitRatio() ); break;
+        }
+    }
+	// set remaining char labels and progress bars to zero
     for(; i<8; ++i) {
         switch (i) {
           case 0 :  charLabel1->setText(" "); charProgress1->setProgress(0); charProgress1->setEnabled(false); break;
@@ -105,9 +188,222 @@ void KTouchStatistics::updateCurrentTab() {
           case 5 :  charLabel6->setText(" "); charProgress6->setProgress(0); charProgress6->setEnabled(false); break;
           case 6 :  charLabel7->setText(" "); charProgress7->setProgress(0); charProgress7->setEnabled(false); break;
           case 7 :  charLabel8->setText(" "); charProgress8->setProgress(0); charProgress8->setEnabled(false); break;
-        };
-    };
+        }
+    }
 }
+// ----------------------------------------------------------------------------
+
+void KTouchStatistics::updateCurrentLevelTab() {
+    // general stats group
+    elapsedTimeLCDLevel->display(static_cast<int>(m_currLevelStats.m_elapsedTime));
+    totalCharsLCDLevel->display(static_cast<int>(m_currLevelStats.m_totalChars) );
+    wrongCharsLCDLevel->display(static_cast<int>(m_currLevelStats.m_totalChars-m_currLevelStats.m_correctChars) );
+    wordsLCDLevel->display(static_cast<int>(m_currLevelStats.m_words) );
+    // typing rate group
+	if (m_currLevelStats.m_elapsedTime == 0) {
+		charSpeedLCDLevel->display(0);
+		wordSpeedLCDLevel->display(0);
+	}
+	else {
+		charSpeedLCDLevel->display(static_cast<int>(m_currLevelStats.m_correctChars/m_currLevelStats.m_elapsedTime*60.0) );
+		wordSpeedLCDLevel->display(static_cast<int>(m_currLevelStats.m_words/m_currLevelStats.m_elapsedTime*60.0) );
+	}
+    // accuracy
+    correctnessBarLevel->setProgress(static_cast<int>(
+		(100.0*m_currLevelStats.m_correctChars)/m_currLevelStats.m_totalChars) );
+	// create sorted list of missed characters
+	std::list<KTouchCharStats> charList( m_currLevelStats.m_charStats.begin(), m_currLevelStats.m_charStats.end());
+	charList.sort(higher_miss_hit_ratio);
+	
+	std::list<KTouchCharStats>::const_iterator it=charList.begin();
+    unsigned int i=0;
+    for (; i<8 && it!=charList.end(); ++i, ++it) {
+        if (it->missHitRatio()==0)
+            break;  // stop listing keys when their hit-miss-ration is zero
+        switch (i) {
+          case 0 :  charLabel1Level->setText( it->m_char ); charProgress1->setEnabled(true);
+                    charProgress1Level->setProgress( it->missHitRatio() ); break;
+          case 1 :  charLabel2Level->setText( it->m_char ); charProgress2->setEnabled(true);
+                    charProgress2Level->setProgress( it->missHitRatio() ); break;
+          case 2 :  charLabel3Level->setText( it->m_char ); charProgress3->setEnabled(true);
+                    charProgress3Level->setProgress( it->missHitRatio() ); break;
+          case 3 :  charLabel4Level->setText( it->m_char ); charProgress4->setEnabled(true);
+                    charProgress4Level->setProgress( it->missHitRatio() ); break;
+          case 4 :  charLabel5Level->setText( it->m_char ); charProgress5->setEnabled(true);
+                    charProgress5Level->setProgress( it->missHitRatio() ); break;
+          case 5 :  charLabel6Level->setText( it->m_char ); charProgress6->setEnabled(true);
+                    charProgress6Level->setProgress( it->missHitRatio() ); break;
+          case 6 :  charLabel7Level->setText( it->m_char ); charProgress7->setEnabled(true);
+                    charProgress7Level->setProgress( it->missHitRatio() ); break;
+          case 7 :  charLabel8Level->setText( it->m_char ); charProgress8->setEnabled(true);
+                    charProgress8Level->setProgress( it->missHitRatio() ); break;
+        }
+    }
+	// set remaining char labels and progress bars to zero
+    for(; i<8; ++i) {
+        switch (i) {
+          case 0 :  charLabel1Level->setText(" "); charProgress1Level->setProgress(0); charProgress1Level->setEnabled(false); break;
+          case 1 :  charLabel2Level->setText(" "); charProgress2Level->setProgress(0); charProgress2Level->setEnabled(false); break;
+          case 2 :  charLabel3Level->setText(" "); charProgress3Level->setProgress(0); charProgress3Level->setEnabled(false); break;
+          case 3 :  charLabel4Level->setText(" "); charProgress4Level->setProgress(0); charProgress4Level->setEnabled(false); break;
+          case 4 :  charLabel5Level->setText(" "); charProgress5Level->setProgress(0); charProgress5Level->setEnabled(false); break;
+          case 5 :  charLabel6Level->setText(" "); charProgress6Level->setProgress(0); charProgress6Level->setEnabled(false); break;
+          case 6 :  charLabel7Level->setText(" "); charProgress7Level->setProgress(0); charProgress7Level->setEnabled(false); break;
+          case 7 :  charLabel8Level->setText(" "); charProgress8Level->setProgress(0); charProgress8Level->setEnabled(false); break;
+        }
+    }
+}
+// ----------------------------------------------------------------------------
+
+void KTouchStatistics::updateChartTab() {
+	// remove all current chart objects
+	chartWidget->clearObjectList();
+	// what kind of chart is required?
+	if (levelsRadio->isChecked()) {
+		// TODO : nothing yet
+	}
+	else {
+		QMapConstIterator<KURL, KTouchLectureStats> it = m_allStats.m_lectureStats.begin();	
+		unsigned int index = m_lectureIndex;
+		while (index-- > 0) ++it;
+		std::vector< std::pair<double, double> > data;
+		QString caption = "Session data";
+		switch (buttonGroup2->selectedId()) {
+			case 0 : // words per minute
+				// loop over all session data entries in *it and store words per minute data
+				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+					session_it != (*it).m_sessionStats.end(); ++session_it)
+				{
+					double t = (*session_it).m_elapsedTime;
+					double wpm = (t == 0) ? 0 : (*session_it).m_words/t*60.0;
+					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, wpm) );
+				}
+				// add current session if selected lecture matches
+				if (m_currentIndex == m_lectureIndex && 
+					m_currSessionStats.m_elapsedTime != 0) 
+				{
+					double t = m_currSessionStats.m_elapsedTime;
+					double wpm = m_currSessionStats.m_words/t*60.0;
+					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, wpm) );
+				}
+				chartWidget->setYAxisLabel( i18n("Words per minute") );
+				break;
+
+
+			case 1 : // chars per minute
+				// loop over all session data entries in *it and store chars per minute data
+				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+					session_it != (*it).m_sessionStats.end(); ++session_it)
+				{
+					double t = (*session_it).m_elapsedTime;
+					double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
+					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, cpm) );
+				}
+				// add current session
+				if (m_currentIndex == m_lectureIndex && 
+					m_currSessionStats.m_elapsedTime != 0) 
+				{
+					double t = m_currSessionStats.m_elapsedTime;
+					double cpm = m_currSessionStats.m_correctChars/t*60.0;
+					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, cpm) );
+				}
+				chartWidget->setYAxisLabel( i18n("Characters per minute") );
+				break;
+
+
+			case 2 : // correctness
+				// loop over all session data entries in *it and store correctness data
+				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+					session_it != (*it).m_sessionStats.end(); ++session_it)
+				{
+					double tc = (*session_it).m_totalChars;
+					double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
+					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, corr) );
+				}
+				// add current session
+				if (m_currentIndex == m_lectureIndex && 
+					m_currSessionStats.m_totalChars != 0) 
+				{
+					double tc = m_currSessionStats.m_totalChars;
+					double corr = m_currSessionStats.m_correctChars/tc;
+					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, corr) );
+				}
+				chartWidget->setYAxisLabel( i18n("Correctness") );
+				break;
+
+
+			case 3 : // skill
+				// loop over all session data entries in *it and store correctness data
+				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+					session_it != (*it).m_sessionStats.end(); ++session_it)
+				{
+					double tc = (*session_it).m_totalChars;
+					double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
+					double t = (*session_it).m_elapsedTime;
+					double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
+					double skill = corr*cpm;
+					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, skill) );
+				}
+				// add current session
+				if (m_currentIndex == m_lectureIndex && 
+					m_currSessionStats.m_totalChars != 0 && 
+					m_currSessionStats.m_elapsedTime != 0)
+				{
+					double tc = m_currSessionStats.m_totalChars;
+					double corr = m_currSessionStats.m_correctChars/tc;
+					double t = m_currSessionStats.m_elapsedTime;
+					double cpm = m_currSessionStats.m_correctChars/t*60.0;
+					double skill = corr*cpm;
+					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					data.push_back(std::make_pair(tp, skill) );
+				}
+				chartWidget->setYAxisLabel( i18n("Skill") );
+				break;
+				
+			default : return;
+		}
+		// Create plot object for session statistics
+		KPlotObject * ob;
+		if (data.size() <= 1) return;
+		ob = new KPlotObject(caption, "red", KPlotObject::CURVE, 2, KPlotObject::SOLID);
+		
+		// Add some random points to the plot object
+		double min_x = 1e20;
+		double max_x = -1;
+		double max_y = -1;
+		for (unsigned int i=0; i<data.size(); ++i) {
+			double x;
+			if (timeRadio->isChecked()) {
+				x = data[i].first - data[0].first;
+				chartWidget->setXAxisLabel( i18n( "Time since first practice session in days" ));
+			}
+			else {	
+				x = i+1;
+				chartWidget->setXAxisLabel( i18n( "Sessions" ));
+			}
+			ob->addPoint( DPoint(x, data[i].second) );
+			min_x = std::min(x, min_x);
+			max_x = std::max(x, max_x);
+			max_y = std::max(data[i].second, max_y);
+		}
+		if (max_y == 0)  max_y = 1;
+		max_y *= 1.1;
+		chartWidget->setLimits( min_x, max_x, -0.1*max_y, max_y );
+//		kdDebug() << min_x << " " << max_x << "    " << max_y << endl;
+		// Add plot object to chart
+		chartWidget->addObject(ob);
+	}
+}
+// ----------------------------------------------------------------------------
+
+/*
 
 void KTouchStatistics::updateChartTab() {
     if (m_trainer->m_sessionHistory.size()<2) {
@@ -127,130 +423,6 @@ void KTouchStatistics::updateChartTab() {
     else if (timeButton->isChecked())
         chartWidget->setChartType( KTouchChartWidget::ElapsedTime );
 }
+// ----------------------------------------------------------------------------
 
-void KTouchStatistics::clearHistory() {
-    if (KMessageBox::questionYesNo(0, i18n("Do you really want to clear the session history?"))==KMessageBox::Yes) {
-        sessionCountSlider->setValue(0);
-        sessionCountSlider->setMaxValue(0);
-        m_trainer->m_sessionHistory.clear();
-        updateAverageTab();
-        updateChartTab();
-    };
-}
-
-void KTouchStatistics::updateAverageTab() {
-    if (sessionCountSlider->value()==0)
-        sessionCountLabel->setText( i18n("training session.") );
-    else
-        sessionCountLabel->setText( i18n("%1 training sessions.").arg(sessionCountSlider->value()+1));
-    KTouchTrainingSession sessionSum=m_trainer->m_session;
-    KTouchTrainingSession sessionMin=m_trainer->m_session;
-    KTouchTrainingSession sessionMax=m_trainer->m_session;
-    double charSpeedSum, charSpeedMin, charSpeedMax;
-    charSpeedSum=charSpeedMin=charSpeedMax=m_trainer->m_session.charSpeed();
-    double wordSpeedSum, wordSpeedMin, wordSpeedMax;
-    wordSpeedSum=wordSpeedMin=wordSpeedMax=m_trainer->m_session.wordSpeed();
-    double correctnessSum, correctnessMin, correctnessMax;
-    correctnessSum=correctnessMin=correctnessMax=m_trainer->m_session.correctness();
-    std::set<KTouchCharStats> charStatsSum = m_trainer->m_session.m_charStats;
-    unsigned int lastSession=m_trainer->m_sessionHistory.size()-1;
-    for (int i=0; i<sessionCountSlider->value(); ++i) {
-        const KTouchTrainingSession &session = m_trainer->m_sessionHistory[lastSession-i];
-        unsigned int elapsedTime = session.m_elapsedTime;
-        unsigned int totalChars = session.m_totalChars;
-        unsigned int correctChars = session.m_correctChars;
-        unsigned int words = session.m_words;
-        double charSpeed = session.charSpeed();
-        double wordSpeed = session.wordSpeed();
-        double correctness = session.correctness();
-        sessionSum.m_elapsedTime += elapsedTime;
-        sessionMin.m_elapsedTime = std::min(elapsedTime, sessionMin.m_elapsedTime);
-        sessionMax.m_elapsedTime = std::max(elapsedTime, sessionMax.m_elapsedTime);
-        sessionSum.m_totalChars += totalChars;
-        sessionMin.m_totalChars = std::min(totalChars, sessionMin.m_totalChars);
-        sessionMax.m_totalChars = std::max(totalChars, sessionMax.m_totalChars);
-        sessionSum.m_correctChars += correctChars;
-        sessionMin.m_correctChars = std::min(correctChars, sessionMin.m_correctChars);
-        sessionMax.m_correctChars = std::max(correctChars, sessionMax.m_correctChars);
-        sessionSum.m_words += words;
-        sessionMin.m_words = std::min(words, sessionMin.m_words);
-        sessionMax.m_words = std::max(words, sessionMax.m_words);
-        // sum up and store min/max of calculated stats
-        charSpeedSum += charSpeed;
-        charSpeedMin = std::min(charSpeed, charSpeedMin);
-        charSpeedMax = std::max(charSpeed, charSpeedMax);
-        wordSpeedSum += wordSpeed;
-        wordSpeedMin = std::min(wordSpeed, wordSpeedMin);
-        wordSpeedMax = std::max(wordSpeed, wordSpeedMax);
-        correctnessSum += correctness;
-        correctnessMin = std::min(correctness, correctnessMin);
-        correctnessMax = std::max(correctness, correctnessMax);
-        // store character stats
-        for (set<KTouchCharStats>::iterator srcIt = session.m_charStats.begin(); srcIt != session.m_charStats.end(); ++srcIt) {
-            set<KTouchCharStats>::iterator it = charStatsSum.find( KTouchCharStats(srcIt->m_char,0,0) );
-            if (it==charStatsSum.end())
-                charStatsSum.insert( *srcIt );
-            else {
-                const_cast<KTouchCharStats&>(*it).m_correctCount += srcIt->m_correctCount;
-                const_cast<KTouchCharStats&>(*it).m_wrongCount += srcIt->m_wrongCount;
-            };
-        };
-    };
-    // calculate averaged values
-    if (sessionCountSlider->value() > 0) {
-        unsigned int sessionCount = sessionCountSlider->value()+1;
-        // now calculate the average numbers
-        sessionSum.m_elapsedTime /= sessionCount;
-        sessionSum.m_totalChars /= sessionCount;
-        sessionSum.m_correctChars /= sessionCount;
-        sessionSum.m_words /= sessionCount;
-        charSpeedSum /= sessionCount;
-        wordSpeedSum /= sessionCount;
-        correctnessSum /= sessionCount;
-    };
-    // sort char stats (worst hit-miss-ratio first in list)
-    list<KTouchCharStats> charStatsList(charStatsSum.begin(), charStatsSum.end());
-    charStatsList.sort( greaterHitMissRatio );
-
-    // update widgets
-    charSpeedAverageLCD->display(static_cast<int>(charSpeedSum) );
-    charSpeedMinLCD->display(static_cast<int>(charSpeedMin) );
-    charSpeedMaxLCD->display(static_cast<int>(charSpeedMax) );
-    wordSpeedAverageLCD->display(static_cast<int>(wordSpeedSum) );
-    wordSpeedMinLCD->display(static_cast<int>(wordSpeedMin) );
-    wordSpeedMaxLCD->display(static_cast<int>(wordSpeedMax) );
-    correctnessAverageBar->setProgress(static_cast<int>(correctnessSum*100) );
-    correctnessMinLCD->display(static_cast<int>(correctnessMin*100) );
-    correctnessMaxLCD->display(static_cast<int>(correctnessMax*100) );
-    // update the focus characters
-    list<KTouchCharStats>::const_iterator it=charStatsList.begin();
-    unsigned int i=0;
-    for (; i<6 && it!=charStatsList.end(); ++i, ++it) {
-        if (it->hitMissRatio()==0)
-            break;  // stop listing keys when their hit-miss-ration is zero
-        switch (i) {
-          case 0 :  charLabel1_2->setText( it->m_char ); charProgress1_2->setEnabled(true);
-                    charProgress1_2->setProgress( it->hitMissRatio() ); break;
-          case 1 :  charLabel2_2->setText( it->m_char ); charProgress2_2->setEnabled(true);
-                    charProgress2_2->setProgress( it->hitMissRatio() ); break;
-          case 2 :  charLabel3_2->setText( it->m_char ); charProgress3_2->setEnabled(true);
-                    charProgress3_2->setProgress( it->hitMissRatio() ); break;
-          case 3 :  charLabel4_2->setText( it->m_char ); charProgress4_2->setEnabled(true);
-                    charProgress4_2->setProgress( it->hitMissRatio() ); break;
-          case 4 :  charLabel5_2->setText( it->m_char ); charProgress5_2->setEnabled(true);
-                    charProgress5_2->setProgress( it->hitMissRatio() ); break;
-          case 5 :  charLabel6_2->setText( it->m_char ); charProgress6_2->setEnabled(true);
-                    charProgress6_2->setProgress( it->hitMissRatio() ); break;
-        };
-    };
-    for(; i<6; ++i) {
-        switch (i) {
-          case 0 :  charLabel1_2->setText(" "); charProgress1_2->setProgress(0); charProgress1_2->setEnabled(false); break;
-          case 1 :  charLabel2_2->setText(" "); charProgress2_2->setProgress(0); charProgress2_2->setEnabled(false); break;
-          case 2 :  charLabel3_2->setText(" "); charProgress3_2->setProgress(0); charProgress3_2->setEnabled(false); break;
-          case 3 :  charLabel4_2->setText(" "); charProgress4_2->setProgress(0); charProgress4_2->setEnabled(false); break;
-          case 4 :  charLabel5_2->setText(" "); charProgress5_2->setProgress(0); charProgress5_2->setEnabled(false); break;
-          case 5 :  charLabel6_2->setText(" "); charProgress6_2->setProgress(0); charProgress6_2->setEnabled(false); break;
-        };
-    };
-}
+*/

@@ -1,0 +1,1222 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>KTouchStatisticsDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KTouchStatisticsDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>595</width>
+            <height>572</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>3</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>Training Statistics</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox8_2</cstring>
+            </property>
+            <property name="title">
+                <string>Select Lecture</string>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KComboBox">
+                    <property name="name">
+                        <cstring>lectureCombo</cstring>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Here you can select the lecture you want to obtain statistics for.</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tabWidget</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>7</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>currentTab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Current Training Session</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>currentTitleLabel</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>20</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Current Training Session Statistics</string>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout28</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QGroupBox" row="0" column="0" rowspan="2" colspan="1">
+                                <property name="name">
+                                    <cstring>groupBox4</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>General Statistics</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words typed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel5</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Mistyped characters:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Time (seconds) elapsed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>elapsedTimeLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>This shows the number of seconds you have typed in this training session.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>totalCharsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>The number of characters (correct and wrong) that you have typedso far.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>wrongCharsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Shows how many wrong characters you did type.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>wordsLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>The number of words typed so far.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters typed:</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>groupBox7</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Character Statistics (characters you need to focus on)</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed in total. Large numbers indicate that the key was missed a lot.</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QFrame" row="0" column="2" rowspan="4" colspan="1">
+                                        <property name="name">
+                                            <cstring>frame4</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>VLine</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Plain</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress1</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="0" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress5</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel1</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>a:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel5</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>e:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>b:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="1" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress6</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel6</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>f:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress2</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress3</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel7</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>g:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>c:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="2" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress7</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="3" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress8</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress4</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel8</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>h:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>d:</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>groupBox5</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Typing Rate</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel6</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters per minute:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel6_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words per minute:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>charSpeedLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>The number of correct characters you typed per minute.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>wordSpeedLCD</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>The number of words you typed per minute.</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>groupBox6</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Accuracy</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QProgressBar" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>correctnessBar</cstring>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>The ratio of correctly typed characters versus total number of characters typed.</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer22</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>currentLevelTab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Current Level Statistics</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>currentTitleLabel_3</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>20</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Current Level Statistics</string>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout28_2</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QGroupBox" row="0" column="0" rowspan="2" colspan="1">
+                                <property name="name">
+                                    <cstring>groupBox4_2</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>General Statistics</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel4_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words typed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel5_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Mistyped characters:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel2_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Time (seconds) elapsed:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>elapsedTimeLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>totalCharsLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>wrongCharsLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>wordsLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel3_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters typed:</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="2" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>groupBox7_2</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Character Statistics (characters you need to focus on)</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed correctly. Large numbers indicate that the key was missed a lot.</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QFrame" row="0" column="2" rowspan="4" colspan="1">
+                                        <property name="name">
+                                            <cstring>frame4_2</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>VLine</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Plain</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress1Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="0" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress5Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel1Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>a:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel5Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>e:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel2Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>b:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="1" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress6Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel6Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>f:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress2Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress3Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel7Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>g:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel3Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>c:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="2" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress7Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="3" column="4">
+                                        <property name="name">
+                                            <cstring>charProgress8Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>charProgress4Level</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="3">
+                                        <property name="name">
+                                            <cstring>charLabel8Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>h:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>charLabel4Level</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>d:</string>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>groupBox5_2</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Typing Rate</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel6_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters per minute:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>textLabel6_2_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words per minute:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>charSpeedLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLCDNumber" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>wordSpeedLCDLevel</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="segmentStyle">
+                                            <enum>Flat</enum>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <widget class="QGroupBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>groupBox6_3</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Accuracy</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QProgressBar" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>correctnessBarLevel</cstring>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer22_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>89</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>progressTab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Monitor Progress</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout5</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>currentTitleLabel_2</cstring>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <pointsize>20</pointsize>
+                                        <bold>1</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Your Typing Progress</string>
+                                </property>
+                            </widget>
+                            <widget class="KTouchChartWidget">
+                                <property name="name">
+                                    <cstring>chartWidget</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>2</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>groupBox6_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>4</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="title">
+                                    <string>Progress chart options</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QButtonGroup" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>buttonGroup1</cstring>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>NoFrame</enum>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1</cstring>
+                                                </property>
+                                                <property name="font">
+                                                    <font>
+                                                        <bold>1</bold>
+                                                    </font>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Chart data</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>levelsRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Level stats</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>sessionsRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Session stats</string>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name">
+                                                    <cstring>spacer6</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Vertical</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Expanding</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>20</width>
+                                                        <height>16</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </vbox>
+                                    </widget>
+                                    <widget class="QButtonGroup" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>buttonGroup2</cstring>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>NoFrame</enum>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel2_2</cstring>
+                                                </property>
+                                                <property name="font">
+                                                    <font>
+                                                        <bold>1</bold>
+                                                    </font>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Chart type</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>WPMRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Words per minute</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>CPMRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Characters per minute</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>correctRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Correctness</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>skillRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Skill</string>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                    <widget class="QButtonGroup" row="0" column="2">
+                                        <property name="name">
+                                            <cstring>buttonGroup3</cstring>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>NoFrame</enum>
+                                        </property>
+                                        <property name="title">
+                                            <string></string>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel3_2</cstring>
+                                                </property>
+                                                <property name="font">
+                                                    <font>
+                                                        <bold>1</bold>
+                                                    </font>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Time axis scaling</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>timeRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Time scaled</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QRadioButton">
+                                                <property name="name">
+                                                    <cstring>eventRadio</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Constant spacing</string>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name">
+                                                    <cstring>spacer7</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Vertical</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Expanding</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>20</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </vbox>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </vbox>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>statsPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Detailed statistics</string>
+                </attribute>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout4</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>currentTitleLabel_2_2</cstring>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <pointsize>20</pointsize>
+                                        <bold>1</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>Detailed Training Statistics</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer14_2_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>110</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </vbox>
+                    </widget>
+                </hbox>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>clearButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Clear History</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Pressing this button will erase the whole training statistics for the current user.</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer5</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="KPushButton">
+                    <property name="name">
+                        <cstring>closeButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Close</string>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<customwidgets>
+    <customwidget>
+        <class>KTouchChartWidget</class>
+        <header location="local">ktouchchartwidget.h</header>
+        <sizehint>
+            <width>200</width>
+            <height>200</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>7</hordata>
+            <verdata>3</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image0</pixmap>
+    </customwidget>
+</customwidgets>
+<images>
+    <image name="image0">
+        <data format="PNG" length="1627">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000062249444154789cb59651685bf715c67f6e952075ed9021ddac62076928c3162bb3d465449706aa0b7b51bb6ef370c7b4a7083a98df82c7a06cb08dad635d28ac90ac7478818c78e4c11623b4ea08f87a98f83a38b114dcf9ba78c6577384744984add99aac79d7397bb8b22c25961787ecfff271eef7ddef1c0ee77feeede0b0e79b5d831c61906e200f0dfc0f55acda596e94d70fed7988e447621712f74544563656a419cfcf8f092f7b7ffdff4b0ef05ad7674632632255714e13ae495538e57dffb0964f1d4eee269d4b8307b475ad05ff64a600f761f31fb2001ba27e85d17ba3043a030dfcc9e22ff943a508f6a1f3f3f4232b5fe9fa2a35d7ab765f29feed975ee7ea9dabe4bc16ef5cbfc0946b91fc4216fbb6fd4f8ebb8ff2b967372854d69e6801eede377ed5fdbdf25b9ed3369fac7e82cfeb23357f15fb05a8add67007546caff505d78bcfbd6e5f2fe528d56e3cd102eceef5abb5a58e80e779beecea87ec6a16d771379bab355c2f809d33a919ecd42e157fcaa7a5df023b4fb4007265b1974b7faedc8bdb5ffcac27f69dd3dfe8c8e66ea21e57f9fbb2496591adcaa5e2f759b27ec7634dc3231c81a704be9ef4779d8bbd3b60c7d7e2d2371516ef99be8de167dd3f13883f9671f24cb27f452b48f59a882c894c5c9b165992bd383d2197df1ebb215d5d6ba2afc9c4e898cc8d4e8bffad98847ffe0bb9fcc18888be26f2de8888cbfdf1b977ceffabe5fd26bfea92c8b9b7cf6dd17c03936f0efd715a9f135913999b757021b3e0c4751cf9e0f27d194cca5c664ee46e5db7f280be2032f1a5f07675befe5e411cfd037e554324fa95e86b345571540946d0ffa613f146e0368482210ccb20120c81056a4045a746241861ebd6163edb87b6ac11e98d80e5e8339681ea52c182487788f1c97122fe3dbee197075c781a05b8814cde40092a7cf4e947d00ba66512f287302d13fca0ddd1505c6e4ccbc413f4902967507bd5066f5a26117f080d0d4f100ccb40ed5331f24683dff5f304a166d79a66e0cde415d91011e7bb220b467dc7afec6161aa705f06130f3d6f414344faa3dbd3537307eaa6a7e664f8d4f0605307dc1879130250bc5324d4e7e06e4c00345307d7c3cf5b30081a35147fe4409de28fa0db7a730786aec8b68814ea95ee8305bd707ffabb89b6bc8888ac8a48fff0b6ccb6f71111915991e8a9e860cb0c14ad22f8606b736b5f4c65d328767b7e6b730b7a404383eeffa1f3efcd800ba0460d6fd9cbf88d7122c72268a6e64cbda9a304148c8a41d41786ad34e460343b8ad2a33478cdd488f7c5d14a1aaf02e3d7c751832aa96caac1effac5c371d2cb6954974a966cfd1adae4d2cb69e2bd718c9a41e26402a36630707200a366a07429a417d33b54d6d1721a03e181163e713241a69c41e956d0ade2bf239b11f4bcdec2efeaf5bc4e643342ba9cfe0740477d13ba956ee566a694f1aa7e152da7a1f815f49c7e54e9569ed6721a7df7faaef8962f7e3e7e6ce05b1a3a711bcc4a59424419f72e76a88056291370a9e7df3d51ec8bf7c65fd2721aaa5fddd6f3fa4edd0fd5af7271f2e26cfa2fe93738e88335f483a12bb254df74858771429b96e499a1bf9e7f6f64673f7e172f5f1a93e8a9a8ff513f0b8df3e18589a2cc4acb7a9679275e985f10b92b327cf6c71b6bf355275e15914c13bfab5f1289bd12fb61bb3c6d7fc926739a73af6f6b04dc010ccbd968866510f23b6b354a143d3f43c81f62fcd638045b79fca05b9903f31cd88105c3d95ed56b55e70f784944b6eb58753a50359cb86ad43bb1fd80ae20127b39f6a3c7ea40280826453c5ff3605a45380166be8e56115c3063e970022c7799d08ba13dbe8e997ca67ed90fdd810f8bb2dab4e1f6c1e1b3c31bb2d29e975511b9fbd81d98811e2816d7a107d6ebd81c475d31f4bcde96a7c79989833ad0b680983f0a45f0f93a611d3aebd81ccfd893848f8561737f9e4d0875850efc436c5bdb646e12a5a490fa3845d48e32694f1273c598b16750dd2ac6f30600a96c0ab5a292ba996af05197a31ff00e90f11c3c036d3b10f6864d6d5923713281d963923c9dc4ec31499c4e60f89cf5bc5e5abf1b3812908c9569e177f599e73204dc012ccb9a6997a7a31d913c93ecb08ad6fbc033fb0a6cb6b5ebdad9707ff8994e6fe76fda79154bc5e9ecadecef01d98fff2f14255b0c3fccf1840000000049454e44ae426082</data>
+    </image>
+</images>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kcombobox.h</includehint>
+    <includehint>ktouchchartwidget.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
+</UI>

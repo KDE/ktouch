@@ -13,6 +13,10 @@
 #ifndef KTOUCHOPENREQUEST_H
 #define KTOUCHOPENREQUEST_H
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "ktouchopenrequest_dlg.h"
 
 #include <kurl.h>

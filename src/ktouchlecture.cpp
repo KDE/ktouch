@@ -144,7 +144,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
         slist.append(current_level);
 
     //kdDebug() << "Levels read = " << slist.count() << endl;
-                
+
     // now read all the levels
     for (QStringList::Iterator it = slist.begin(); it!=slist.end(); ++it) {
         // create new level

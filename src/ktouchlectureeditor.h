@@ -13,11 +13,15 @@
 #ifndef KTOUCHLECTUREEDITOR_H
 #define KTOUCHLECTUREEDITOR_H
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <qwidget.h>
 #include <qfont.h>
 #include <kurl.h>
 
-#include "ktoucheditor_dlg.h"
+#include "ktouchlectureeditor_dlg.h"
 #include "ktouchlecture.h"
 
 /// This is the KTouch lecture editor dialog.
@@ -31,10 +35,11 @@
 /// @code
 ///  KTouchLectureEditor dlg;
 ///  bool ok = dlg.startEditor(current_lecture);
-///  // current_lecture should be the URL pointing to the current/default lecture or ""
+///  // current_lecture should be the URL pointing to the current/default 
+///  // lecture or an empty URL
 /// @endcode
-/// @see startLectureEditor() for details on the return value.
-class KTouchLectureEditor : public KTouchEditorDlg {
+/// @see startEditor() for details on the return value.
+class KTouchLectureEditor : public KTouchLectureEditorDlg {
     Q_OBJECT
   public:
     /// Constructor

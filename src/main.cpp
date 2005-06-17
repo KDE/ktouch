@@ -19,7 +19,7 @@
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");
 
-static const char version[] = "1.4";
+static const char version[] = "1.5";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
@@ -33,15 +33,15 @@ int main(int argc, char **argv)
                      version,
                      description,
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai",
+                     "Copyright (C) 2000-2005 by Håvard Frøiland and Andreas Nicolai",
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");
-    about.addAuthor( "Andreas Nicolai", 0, "Andreas.Nicolai@gmx.net" );
-    about.addAuthor( "Håvard Frøiland", 0, "haavard@users.sourceforge.net" );
-    about.addCredit( "David Vignoni", I18N_NOOP("Creator of the SVG icon."), "david80v@tin.it");
-    about.addCredit( "Anne-Marie Mahfouf", I18N_NOOP("Lots of patches, fixes, updates..."), "annma@kde.org");
-    about.addCredit( "All the creators of training and keyboard files...", 0, 0);
+    about.addAuthor( "Andreas Nicolai", I18N_NOOP("Current maintainer and programmer"), "Andreas.Nicolai@gmx.net" );
+    about.addAuthor( "Håvard Frøiland", I18N_NOOP("Original author, project admin"), "haavard@users.sourceforge.net" );
+    about.addCredit( "David Vignoni", I18N_NOOP("Creator of the SVG icon"), "david80v@tin.it");
+    about.addCredit( "Anne-Marie Mahfouf", I18N_NOOP("Lots of patches, fixes, updates"), "annma@kde.org");
+    about.addCredit( "All the creators of training and keyboard files", 0, 0);
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
     KApplication app;

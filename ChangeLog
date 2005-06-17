@@ -1,3 +1,13 @@
+2005-06-14 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * New version: 1.5
+  * Added: New statistics engine (compressed XML statistics,
+           level and session based statistics, chart widget now based
+           on kdeeduplot lib)
+  * Bugfixes: a lot of smaller fixes in various parts of KTouch
+              (strange behaviour, unexpected results etc.)
+  * Review: general code review and restructuring of many important
+            functions
+
 2004-11-21 Andreas Nicolai <andreas.nicolai@gmx.net>
   * Added: "Open lecture ..." menu entry in File menu to allow
            users to open their own lecture files.

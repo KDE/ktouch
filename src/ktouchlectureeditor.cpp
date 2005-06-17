@@ -42,7 +42,7 @@
 // **************************
 
 KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool modal, WFlags fl)
- : KTouchEditorDlg(parent, name, modal, fl)
+ : KTouchLectureEditorDlg(parent, name, modal, fl)
 {
     levelListView->setSorting(-1); // don't sort my level list view!
 
@@ -112,7 +112,7 @@ void KTouchLectureEditor::saveBtnClicked() {
 
 void KTouchLectureEditor::saveAsBtnClicked() {
     QString tmp = KFileDialog::getSaveFileName(QString::null, 
-        "*.ktouch.xml|KTouch Lecture Files\n*.*|All Files", this, i18n("Save Training Lecture") );
+        "*.ktouch.xml|KTouch Lecture Files(*.ktouch.xml)\n*.*|All Files", this, i18n("Save Training Lecture") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
         m_currentURL = tmp;

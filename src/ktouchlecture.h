@@ -13,6 +13,10 @@
 #ifndef KTOUCHLECTURE_H
 #define KTOUCHLECTURE_H
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 class QWidget;
 class QDomDocument;
 class KURL;

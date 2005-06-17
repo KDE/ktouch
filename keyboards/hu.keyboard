@@ -1,0 +1,177 @@
+####################################################
+#    KTouch
+#    Hungarian keybord layout file
+#    Code=UTF-8
+####################################################
+#
+#
+#  FingerKey: This category represents the base keys.
+#
+#		Ascii	KeyText	x	y
+FingerKey  	97	A	18	20
+FingerKey  	115	S	28	20
+FingerKey  	100	D	38	20
+FingerKey  	102	F	48	20
+FingerKey  	106	J	78	20
+FingerKey  	107	K	88	20
+FingerKey  	108	L	98	20
+FingerKey  	233	É	108	20
+#
+#
+#  NormalKey: This category represent the normal keys exccluding the base keys.
+#
+#		Ascii	KeyText	x	y	FingerKey
+#
+# numeric line
+NormalKey 	48	0	0	0	97
+NormalKey 	49	1	10	0	97
+NormalKey 	50	2	20	0	115
+NormalKey 	51	3	30	0	100
+NormalKey 	52	4	40	0	102
+NormalKey 	53	5	50	0	102
+NormalKey 	54	6	60	0	102
+NormalKey 	55	7	70	0	106
+NormalKey 	56	8	80	0	107
+NormalKey 	57	9	90	0	108
+NormalKey 	246	Ö	100	0	246
+NormalKey 	252	Ü	110	0	246
+NormalKey 	243	Ó	120	0	246
+# upper line
+NormalKey	113	Q	15	10	97
+NormalKey	119	W	25	10	115
+NormalKey	101	E	35	10	100
+NormalKey	114	R	45	10	102
+NormalKey	116	T	55	10	102
+NormalKey	122	Z	65	10	106
+NormalKey	117	U	75	10	106
+NormalKey	105	I	85	10	107
+NormalKey	111	O	95	10	108
+NormalKey	112	P	105	10	246
+NormalKey	245	Ő	115	10	246
+NormalKey	250	Ú	125	10	246
+# base line (excluding the base keys)
+NormalKey	103	G	58	20	102
+NormalKey	104	H	68	20	106
+NormalKey	225	Á	118	20	246
+NormalKey	251	Ű	128	20	246
+# lower line
+NormalKey	237	Í	13	30	97
+NormalKey	121	Y	23	30	97
+NormalKey	120	X	33	30	115
+NormalKey	99	C	43	30	100
+NormalKey	118	V	53	30	102
+NormalKey	98	B	63	30	102
+NormalKey	110	N	73	30	106
+NormalKey	109	M	83	30	106
+NormalKey	44	,	93	30	107
+NormalKey	46	.	103	30	108
+NormalKey	45	-	113	30	246
+#
+#
+#  ControlKey: This category represents the "gray" keys.
+#
+#		Ascii	KeyText		x	y	Width	Height
+#
+# numeric line
+ControlKey	8	BackSpace	130	0	20	10
+# upper line
+ControlKey	260	Tab		0	10	15	10
+ControlKey	13	Enter		138	20	12	10
+# base line
+ControlKey	259	CapsLock	0	20	18	10
+# lower line
+ControlKey	258	Shift		0	30	13	10
+ControlKey	257	Shift		123	30	27	10
+# control line
+ControlKey	262	Ctrl		0	40	15	10
+ControlKey	263	Alt		15	40	15	10
+ControlKey	32	Space		30	40	90	10
+ControlKey	264	AltGr		120	40	15	10
+ControlKey	265	Ctrl		135	40	15	10
+#
+#
+#  HiddenKey: This category represents the key combinations.
+#
+#		Ascii	Target	Finger	Control
+#
+# shift + numeric line
+HiddenKey	167	48	97	257	#§
+HiddenKey	39	49	97	257	#'
+HiddenKey	34	50	115	257	#"
+HiddenKey	43	51	100	257	#+
+HiddenKey	33	52	102	257	#!
+HiddenKey	37	53	102	257	#%
+HiddenKey	47	54	106	257	#/
+HiddenKey	61	55	106	258	#=
+HiddenKey	40	56	107	258	#(
+HiddenKey	41	57	108	258	#)
+HiddenKey	214	246	233	258	#Ö
+HiddenKey	220	252	233	258	#Ü
+HiddenKey	211	243	233	258	#Ó
+# shift + upper line
+HiddenKey	81	113	97	257	#Q
+HiddenKey	87	119	115	257	#W
+HiddenKey	69	101	100	257	#E
+HiddenKey	82	114	102	257	#R
+HiddenKey	84	116	102	257	#T
+HiddenKey	90	122	106	257	#Z
+HiddenKey	85	117	106	258	#U
+HiddenKey	73	105	107	258	#I
+HiddenKey	79	111	108	258	#O
+HiddenKey	80	112	233	258	#P
+HiddenKey	213	111	233	258	#Ő
+HiddenKey	218	112	223	258	#Ú
+# shift + base line
+HiddenKey	65	97	97	257	#A
+HiddenKey	83	115	115	257	#S
+HiddenKey	68	100	100	257	#D
+HiddenKey	70	102	102	257	#F
+HiddenKey	71	103	102	257	#G
+HiddenKey	72	104	106	258	#H
+HiddenKey	74	106	106	258	#J
+HiddenKey	75	107	107	258	#K
+HiddenKey	76	108	108	258	#L
+HiddenKey	201	233	233	258	#É
+HiddenKey	193	225	233	258	#Á
+HiddenKey	219	251	233	258	#Ű
+# shift + lower line
+HiddenKey	215	237	97	257	#Í
+HiddenKey	89	121	97	257	#Y
+HiddenKey	88	120	115	257	#X
+HiddenKey	67	99	100	257	#C
+HiddenKey	86	118	102	257	#V
+HiddenKey	66	98	102	257	#B
+HiddenKey	78	110	106	258	#N
+HiddenKey	77	109	106	258	#M
+HiddenKey	63	44	107	258	#?
+HiddenKey	58	46	108	258	#:
+HiddenKey	95	45	233	258	#_
+
+# alt + numeric line
+HiddenKey	126	49	97	264	#~
+HiddenKey	94	51	100	264	#^
+HiddenKey	96	55	106	264	#`
+# alt + upper line
+HiddenKey	92	113	97	264	#\
+HiddenKey	124	119	115	264	#|
+HiddenKey	247	111	233	264	#÷
+HiddenKey	215	112	223	264	#×
+# alt + base line
+HiddenKey	91	102	102	264	#[
+HiddenKey	93	103	102	264	#]
+HiddenKey	36	233	233	264	#$
+# alt + lower line
+HiddenKey	60	237	97	264	#<
+HiddenKey	62	121	97	264	#>
+HiddenKey	35	120	115	264	##
+HiddenKey	38	99	100	264	#&
+HiddenKey	64	118	102	264	#@
+HiddenKey	123	98	102	264	#{
+HiddenKey	125	110	106	264	#}
+HiddenKey	59	44	107	264	#;
+HiddenKey	42	45	233	264	#*
+
+
+
+
+

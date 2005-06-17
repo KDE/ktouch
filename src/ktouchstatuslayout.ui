@@ -7,9 +7,9 @@
     <property name="geometry">
         <rect>
             <x>0</x>
-            <y>4</y>
+            <y>0</y>
             <width>661</width>
-            <height>101</height>
+            <height>100</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -19,6 +19,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
         </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>KTouchStatusLayout</string>
     </property>
     <hbox>
         <property name="name">
@@ -275,7 +278,7 @@
                 <cstring>GroupBox4</cstring>
             </property>
             <property name="title">
-                <string>New Characters in This Level</string>
+                <string>New characters in this level</string>
             </property>
             <vbox>
                 <property name="name">
