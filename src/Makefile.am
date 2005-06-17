@@ -59,6 +59,4 @@ rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
 kde_kcfg_DATA = ktouch.kcfg
 
-# place KTouch in the start menu under utilities
-xdg_apps_DATA = ktouch.desktop
 
