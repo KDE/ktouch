@@ -17,7 +17,7 @@
 #include <config.h>
 #endif
 
-#include "../../libkdeedu/kdeeduplot/kplotwidget.h"
+#include <libkdeedu/kplotwidget.h>
 
 class KTouchTrainer;
 
