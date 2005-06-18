@@ -2,8 +2,10 @@
 keyboarddir = $(kde_datadir)/ktouch
 keyboard_DATA = \
 be.keyboard \
-de.keyboard \
+de-2.keyboard \
 de-ch2.keyboard \
+de-ch.keyboard \
+de.keyboard \
 dk.keyboard \
 dvorak.keyboard \
 dvorak_se.keyboard \
@@ -14,11 +16,13 @@ fi.keyboard \
 fr.keyboard \
 fr_ch.keyboard \
 he.keyboard \
+hu.keyboard \
 it.keyboard \
 la.keyboard \
 no.keyboard \
 number.keyboard \
 pl.keyboard \
 pt.keyboard \
-se.keyboard 
+se.keyboard \
+sl.keyboard 
 

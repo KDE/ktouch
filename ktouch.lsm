@@ -1,7 +1,7 @@
 Begin3
 Title:          KTouch
-Version:        1.3
-Entered-date:   22-Mai-2003
+Version:        1.5
+Entered-date:   14-June-2005
 Description:    A education program to learn to touch-type. It provieds
                 a training text, and shows the user how to place their
                 fingers on the keyboard. It also shows the user which finger
@@ -10,11 +10,10 @@ Description:    A education program to learn to touch-type. It provieds
                 for different keyboard layouts(languages).
 Keywords:       touch typing education training
 Author:         haavard@users.sourceforge.net (Haavard Froeiland)
-Maintained-by:  haavard@users.sourceforge.net (Haavard Froeiland)
-                ghorwin@users.sourceforge.net (Andreas Nicolai)
+Maintained-by:  ghorwin@users.sourceforge.net (Andreas Nicolai)
 Primary-site:   ktouch.sourceforge.net
 Home-page:      http://KTouch.sourceforge.net
 Original-site:  
-Platforms:      Linux and other Unices running KDE 3.0
+Platforms:      Linux and other Unices running KDE 3.4
 Copying-policy: GNU Public License
 End

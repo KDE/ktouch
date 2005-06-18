@@ -19,12 +19,30 @@ INCLUDES = $(all_includes)
 # SUBDIRS =
 
 # these are the headers for your project
-noinst_HEADERS = ktouch.h ktouchkeyconnector.h ktouchkeys.h ktouchlecture.h \
-	ktouchleveldata.h ktouchslideline.h ktouchstatistics.h ktouchstatus.h ktouchtrainer.h \
-	ktouchkeyboardwidget.h ktouchkeyboard.h ktouchkey.h
+noinst_HEADERS = \
+	ktouchchartwidget.h \
+	ktouchcolorscheme.h \
+	ktouchdefaults.h \
+	ktouch.h \
+	ktouchkeyboardeditor.h \
+	ktouchkeyboard.h \
+	ktouchkeyboardwidget.h \
+	ktouchkeyconnector.h \
+	ktouchkey.h \
+	ktouchkeys.h \
+	ktouchlectureeditor.h \
+	ktouchlecture.h \
+	ktouchleveldata.h \
+	ktouchopenrequest.h \
+	ktouchslideline.h \
+	ktouchstatisticsdata.h \
+	ktouchstatistics.h \
+	ktouchstatus.h \
+	ktouchtrainer.h \
+	ktouchutils.h
 
 # let automoc handle all of the meta source files (moc)
-METASOURCES = AUTO
+ktouch_METASOURCES = AUTO
 
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/ktouch.pot
@@ -38,15 +56,38 @@ messages: rc.cpp
 bin_PROGRAMS = ktouch
 
 # the application source, library search path, and link libraries
-ktouch_SOURCES = ktouch.cpp ktouchkeys.cpp ktouchlecture.cpp \
-		ktouchleveldata.cpp ktouchslideline.cpp ktouchstatistics.cpp ktouchstatus.cpp \
-		ktouchtrainer.cpp main.cpp ktouchprefcolorslayout.ui ktouchprefgenerallayout.ui ktoucheditor_dlg.ui \
-		ktouchprefkeyboardlayout.ui ktouchpreftraininglayout.ui ktouchlectureeditor_dlg.ui  ktouchlectureeditor.cpp \
-		ktouchopenrequest.cpp ktouchopenrequest_dlg.ui ktouchcolorscheme.cpp ktouchutils.cpp \
-		prefs.kcfgc ktouchkeyboardwidget.cpp ktouchkeyboardeditor_dlg.ui \
-		ktouchkeyboardeditor.cpp ktouchkeyboard.cpp ktouchkey.cpp \
-		ktouchkeyconnector.cpp ktouchstatistics_dlg.ui ktouchstatuslayout.ui ktouchstatisticsdata.cpp \
-		ktouchdefaults.cpp ktouchchartwidget.cpp
+ktouch_SOURCES = \
+	ktouchchartwidget.cpp \
+	ktouchcolorscheme.cpp \
+	ktouch.cpp \
+	ktouchdefaults.cpp \
+	ktouchkeyboard.cpp \
+	ktouchkeyboardeditor.cpp \
+	ktouchkeyboardeditor_dlg.ui \
+	ktouchkeyboardwidget.cpp \
+	ktouchkeyconnector.cpp \
+	ktouchkey.cpp \
+	ktouchkeys.cpp \
+	ktouchlecture.cpp \
+	ktouchlectureeditor.cpp \
+	ktouchlectureeditor_dlg.ui \
+	ktouchleveldata.cpp \
+	ktouchopenrequest.cpp \
+	ktouchopenrequest_dlg.ui \
+	ktouchprefcolorslayout.ui \
+	ktouchprefgenerallayout.ui \
+	ktouchprefkeyboardlayout.ui \
+	ktouchpreftraininglayout.ui \
+	ktouchslideline.cpp \
+	ktouchstatistics.cpp \
+	ktouchstatisticsdata.cpp \
+	ktouchstatistics_dlg.ui \
+	ktouchstatus.cpp \
+	ktouchstatuslayout.ui \
+	ktouchtrainer.cpp \
+	ktouchutils.cpp \
+	main.cpp \
+	prefs.kcfgc
 
 # the library search path.
 ktouch_LDFLAGS = $(KDE_RPATH) $(all_libraries)
@@ -58,5 +99,4 @@ ktouch_LDADD = -lkdeeduplot $(LIB_KIO)
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
 kde_kcfg_DATA = ktouch.kcfg
-
 

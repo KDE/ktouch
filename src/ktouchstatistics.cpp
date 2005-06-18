@@ -289,6 +289,7 @@ void KTouchStatistics::updateChartTab() {
 					data.push_back(std::make_pair(tp, wpm) );
 				}
 				chartWidget->setYAxisLabel( i18n("Words per minute") );
+				chartWidget->YAxis.setLabelFormat(0, 'f', 0);
 				break;
 
 
@@ -312,6 +313,7 @@ void KTouchStatistics::updateChartTab() {
 					data.push_back(std::make_pair(tp, cpm) );
 				}
 				chartWidget->setYAxisLabel( i18n("Characters per minute") );
+				chartWidget->YAxis.setLabelFormat(0, 'f', 0);
 				break;
 
 
@@ -334,7 +336,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, corr) );
 				}
-				chartWidget->setYAxisLabel( i18n("Correctness") );
+				chartWidget->YAxis.setLabel( i18n("Correctness") );
+				chartWidget->YAxis.setLabelFormat(0, 'g', 1);
 				break;
 
 
@@ -364,7 +367,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, skill) );
 				}
-				chartWidget->setYAxisLabel( i18n("Skill") );
+				chartWidget->YAxis.setLabel( i18n("Skill") );
+				chartWidget->YAxis.setLabelFormat(0, 'f', 0);
 				break;
 				
 			default : return;
@@ -382,11 +386,11 @@ void KTouchStatistics::updateChartTab() {
 			double x;
 			if (timeRadio->isChecked()) {
 				x = data[i].first - data[0].first;
-				chartWidget->setXAxisLabel( i18n( "Time since first practice session in days" ));
+				chartWidget->XAxis.setLabel( i18n( "Time since first practice session in days" ));
 			}
 			else {	
 				x = i+1;
-				chartWidget->setXAxisLabel( i18n( "Sessions" ));
+				chartWidget->XAxis.setLabel( i18n( "Sessions" ));
 			}
 			ob->addPoint( DPoint(x, data[i].second) );
 			min_x = std::min(x, min_x);

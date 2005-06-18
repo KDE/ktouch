@@ -1,22 +1,22 @@
 Retrieving the source
 ---------------------
 
-After a cvs checkout of the kdeedu module you will automatically have the
+After a subversion checkout of the kdeedu module you will automatically have the
 ktouch directory inside the kdeedu directory.
 
 If you want to update/checkout ktouch alone, use
 
-    cvs checkout -P kdeedu/ktouch
+    svn checkout -P kdeedu/ktouch
     
 or
 
-    cvs update -P kdeedu/ktouch
+    svn update -P kdeedu/ktouch
 
 The flag -P is recommanded so that empty directories left over from previous 
 versions are not transferred.
 
 
-Installation from CVS
+Installation from SVN
 ---------------------
 
 Enter the kdeedu directory and do a 
