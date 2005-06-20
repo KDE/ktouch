@@ -13,37 +13,42 @@
 <title>The &ktouch; Handbook</title>
 
 <authorgroup>
+
 <author>
-<firstname>Haavard</firstname>
-<surname>Froeiland</surname>
+<firstname>Håvard</firstname><surname>Frøiland</surname>
 <affiliation>
-<address><email>haavard@users.sourceforge.net</email></address>
+<address><email>haavard AT users DOT sourceforge DOT net</email></address>
 </affiliation>
 </author>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<author>
+<firstname>Andreas</firstname><surname>Nicolai</surname>
+<affiliation>
+<address><email>Andreas DOT nicolai AT gmx DOT net</email></address>
+</affiliation>
+</author>
 
 </authorgroup>
 
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+
 <copyright>
-<year>1999</year>
-<year>2000</year>
-<year>2001</year>
-<year>2002</year>
-<holder>Haavard Froeiland</holder>
+<year>1999-2005</year>
+<holder>Håvard Frøiland, Andreas Nicolai</holder>
 </copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2002-10-08</date>
-<releaseinfo>1.2</releaseinfo>
+<date>2005-06-19</date>
+<releaseinfo>1.5</releaseinfo>
 
 <abstract>
 <para>&ktouch; is a program for learning to touch type.  &ktouch;
-provides you with text to train on, and adjust to different levels,
-depending on how good you are. It can display which key to press next,
+provides you with text to train on and adjusts to different levels
+depending on how good you are. It displays which key to press next 
 and the correct finger to use.</para>
-	
+
 </abstract>
 
 <keywordset>
@@ -52,359 +57,295 @@ and the correct finger to use.</para>
 <keyword>touchtyping</keyword>
 <keyword>typing</keyword>
 <keyword>typewriting</keyword>
-<keyword>Froeiland</keyword>
 <keyword>education</keyword>
-<keyword>KTouch</keyword>
-<keyword>Touch</keyword>
-<keyword>Type</keyword>
+<keyword>ktouch</keyword>
+<keyword>touch</keyword>
+<keyword>type</keyword>
 </keywordset>
 
 </bookinfo>
 
-<chapter id="introduction">
-<title>Introduction</title>
-
-<para>&ktouch; is a program for learning to touch type.</para>
-
-<para>&ktouch; provides you with text to train on, and adjust to
-different levels, depending on how good you are. It can display which
-key to press next, and the correct finger to use. It's the perfect
-touch typing tutor, you learn typing with all the fingers without
-looking at the keys, in an step by step way. It is convenient for all
-ages, and the perfect typing tutor for schools, universities and
-individuals. It is free and licensed under the &GNU; Public License, so
-you will never have to pay anything for the program, or any update.
-</para>
-</chapter>
-
-<chapter id="using-ktouch">
+<chapter id="using_ktouch">
 <title>Using &ktouch;</title>
 
-<para>Here's a screenshot of &ktouch; in action:</para>
+<sect1 id="introduction">
+<title>Introduction</title>
+
+<sect2>
+<title>What is KTouch?</title>
+<para>&ktouch; is a program for learning to touch type.</para>
+<para>&ktouch; provides you with text to train on and adjusts to
+different levels depending on how good you are. It shows your keyboard 
+and indicates which key to press next and the correct finger to use.</para>
 
 <screenshot>
-<screeninfo>&ktouch; main screen</screeninfo>
+<screeninfo>The main screen of &ktouch;</screeninfo>
 <mediaobject>
 <imageobject>
-<imagedata fileref="screenshot1.png" format="PNG" width="300"/>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>&ktouch; main screen</phrase>
+<phrase>The main screen of &ktouch;</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para>You see that using &ktouch; is easy to use, and even children can
-learn touch typing with it.</para>
+<para>&ktouch; is an excellent touch typing tutor. You learn typing 
+with all fingers, step by step, without having to look down 
+at the keyboard all the time to find your keys (which slows you down a lot). 
+It is convenient for all ages 
+and the perfect typing tutor for schools, universities and individuals. 
+It is free and licensed under the &GNU; Public License, so you will 
+never have to pay anything for the program or any update.
+</para>
+</sect2>
 
-<screenshot>
-<screeninfo>&ktouch; with keyboard option dialog</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="screenshot2.png" format="PNG" width="300"/>
-</imageobject>
-<textobject>
-<phrase>&ktouch; with the keyboard option dialog visible.</phrase>
-</textobject>
-<caption>
-<para>Screenshot of &ktouch;'s keyboard option dialog.</para>
-</caption>
-</mediaobject>
-</screenshot>
+<sect2>
+<title>Features </title>
 
-<para>Change the layout of your keyboard, so people all over the world
-can use it!</para>
-
-<screenshot>
-<screeninfo>&ktouch; with the training option</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="screenshot3.png" format="PNG" width="300"/>
-</imageobject>
-<textobject>
-<phrase>&ktouch; with the training option dialog visible</phrase>
-</textobject>
-<caption><para>Here is a screenshot of &ktouch;'s training dialog.</para> 
-</caption>
-</mediaobject>
-</screenshot>
-
-<para>If you are too good for this world, you can change the
-level.</para>
-
-</chapter>
-
-<chapter id="faq">
-<title>Questions and Answers</title>
-
-<qandaset id="faqlist">
-<qandaentry id="make-training-file">
-<question>
-<para>Can I make my own training files?</para>
-</question>
-<answer>
+<para>In its current version, &ktouch; 1.5 has quite a number of helpful features, such as:</para>
+<itemizedlist>
+<listitem><simpara>Support for many different training lectures in many languages including language specific text fonts and a comfortable lecture editor</simpara></listitem>
+<listitem><simpara>Support for different keyboard layouts with the ability to use user-defined layouts</simpara></listitem>
+<listitem><simpara>During your training session comprehensive statistical information is obtained to help you (or your teacher) analyse your progress</simpara></listitem>
+</itemizedlist>
 <para>
-Yes you can. Make a file as described below and call it something like
-<filename>myfile.ktouch</filename> To use this file go to
-<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>
-and find your file.Another good way to make your own training files is
-just to modify the existing files. If you look at the top of the
-&ktouch; window, you should see the name of the training file in
-use.</para>
-
-<screen width="40">---myTrainingFile.ktouch-----
-#This is a example of a training file (and a comment)
-#This will be level one
-jf fj jf fjf jf jjf jf jfjf jfj
-jfj fj fjfj jf fj fj fjf jf jf
-
-#A blank line indicates then next level, so this is level two
-lskdk djslk fjkdlskdjf lskdj f
-kdfj lksjdl kjsldf lsdkksldslk
-</screen>
-
-<para>To add more levels just make blank spaces between the levels. If
-you want to have comments in your file, use # at the beginning of the
-line. </para>
-</answer>
-</qandaentry>
-
-<qandaentry>
-<question>
-<para>My keyboard doesn't look like the keyboard on the screen?</para>
-</question>
-<answer>
-<para>It is possible to make your own keyboard file. See the <link
- linkend="contribute">How can I contribute</link> section.</para>
-</answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para>Will I ever have to pay for &ktouch;?</para>
-</question>
-<answer>
-<para>No, never. But you can send a pizza voucher to the developer, so
-he gets fat and the only thing he can do, is code and code and
-code!</para>
-</answer>
-</qandaentry>
-<qandaentry>
-
-<question>
-<para>Will there ever be a &Windows; version?</para>
-</question>
-<answer>
-<para>No, at the moment not, but you can download the source and make
-your own windows version. It should not be a big problem, because it is
-written with Trolltech's &Qt; libs. But for what do you need &Windows;?
-Get the latest &Linux;, and you will live on the edge.</para>
-
-</answer>
-</qandaentry>
-
-</qandaset>
-</chapter>
-
-<chapter id="contribute">
-<title>How can I contribute?</title>
-
-<qandaset id="tasks">
-<qandaentry>
-
-<question>
-<para>Make a training file</para>
-</question>
-
-<answer>
-<para>Yes you can. See the <link linkend="make-training-file">answer in the
- <acronym>FAQ</acronym></link> for more information and an
-example of the file format.</para>
-</answer>
-</qandaentry>
-
-<qandaentry>
-<question>
-<para>Making a new keyboard file</para>
-</question>
-<answer>
-<para>You will find a complete keyboard file below with comments. Just
-edit the file <filename>keyboard.en</filename> and save it as
- <filename>keyboard.<replaceable>yourCountryCode</replaceable></filename>.</para>
-
-<para>Please let me know if you are making a new keyboard file, at
-<email>haavard@users.sourceforge.net</email></para>
-
-<screen width="40">####################################################
-#    KTouch
-#    Keyboard layout file
-####################################################
-#
-#
-#  FingerKey: This class represents the keys where
-#  your fingers should rest between typing.
-#
-#         ASCII KeyText x   y
-FingerKey 97    A       18  20
-FingerKey 115   S       28  20
-FingerKey 100   D       38  20
-FingerKey 102   F       48  20
-FingerKey 106   J       78  20
-FingerKey 107   K       88  20
-FingerKey 108   L       98  20
-FingerKey 59    ;       108 20
-#
-#
-#  ControlKey: This class will represent all the
-#  control keys that you are using. These keys
-#  will be used later when you want to use uppercase.
-#
-#           ASCII KeyText x   y   Width
-#
-ControlKey  260   Tab     0   10  15
-ControlKey  13    Enter   128 20  22
-ControlKey  258   Shift   123 30  27
-ControlKey  264   Alt     120 40  15
-ControlKey  265   Ctrl    135 40  15
-ControlKey  263   Alt     15  40  15
-ControlKey  262   Ctrl    0   40  15
-ControlKey  32    Space   30  40  90
-ControlKey  257   Shift   0   30  23
-ControlKey  259   Caps_L  0   20  18
-#
-#
-#  NormalKey: This class represents all the
-#  normal keys where you don't need to press
-#  anything else than just one key. That would
-#  basically be all the numbers and the lowercase
-#  letters. For this class you have to indicate
-#  which finger key you are going to use.
-#
-#         ASCII KeyText   x   y   FingerKey
-#
-NormalKey 96    `         0   0   97
-NormalKey 49    1         10  0   97
-NormalKey 50    2         20  0   115
-NormalKey 51    3         30  0   100
-NormalKey 52    4         40  0   102
-NormalKey 53    5         50  0   102
-NormalKey 54    6         60  0   106
-NormalKey 55    7         70  0   106
-NormalKey 56    8         80  0   107
-NormalKey 57    9         90  0   108
-NormalKey 48    0         100 0   59
-NormalKey 95    -         110 0   59
-NormalKey 61    =         120 0   59
-NormalKey 92    \         130 0   59
-NormalKey 8     &lt;-        140 0   59
-#
-NormalKey 113   Q         15  10  97
-NormalKey 119   W         25  10  115
-NormalKey 101   E         35  10  100
-NormalKey 114   R         45  10  102
-NormalKey 116   T         55  10  102
-NormalKey 121   Y         65  10  106
-NormalKey 117   U         75  10  106
-NormalKey 105   I         85  10  107
-NormalKey 111   O         95  10  108
-NormalKey 112   P         105 10  59
-NormalKey 91    [         115 10  59
-NormalKey 93    ]         125 10  59
-#
-NormalKey 103   G         58  20  102
-NormalKey 104   H         68  20  106
-NormalKey 39    '         118 20  59
-#
-NormalKey 122   Z         23  30  97
-NormalKey 120   X         33  30  115
-NormalKey 99    C         43  30  100
-NormalKey 118   V         53  30  102
-NormalKey 98    B         63  30  102
-NormalKey 110   N         73  30  106
-NormalKey 109   M         83  30  106
-NormalKey 44    ,         93  30  107
-NormalKey 46    .         103 30  108
-NormalKey 47    /         113 30  59
-#
-#
-#  HiddenKey: This are all the keys that
-#  you can't see. That means that you have
-#  to use a control key to get them. Basically
-#  these are all the uppercase letters.
-#
-#         ASCII Target  Finger  Control
-#
-HiddenKey 65    97      97      258 #A
-HiddenKey 66    98      102     258 #B
-HiddenKey 67    99      100     258 #C
-HiddenKey 68    100     100     258 #D
-HiddenKey 69    101     100     258 #E
-HiddenKey 70    102     102     258 #F
-HiddenKey 71    103     102     258 #G
-HiddenKey 72    104     106     258 #H
-HiddenKey 73    105     107     258 #I
-HiddenKey 74    106     106     258 #J
-HiddenKey 75    107     107     258 #K
-HiddenKey 76    108     106     258 #L
-HiddenKey 77    109     106     258 #M
-HiddenKey 78    110     106     258 #N
-HiddenKey 79    111     108     258 #O
-HiddenKey 80    112     59      258 #P
-HiddenKey 81    113     97      258 #Q
-HiddenKey 82    114     102     258 #R
-HiddenKey 83    115     115     258 #S
-HiddenKey 84    116     102     258 #T
-HiddenKey 85    117     106     258 #U
-HiddenKey 86    118     102     258 #V
-HiddenKey 87    119     115     258 #W
-HiddenKey 88    120     115     258 #X
-HiddenKey 89    121     106     258 #Y
-HiddenKey 90    122     97      258 #Z</screen>
-
-<para>Please be careful to save the new keyboard file as utf8.
+Many other features are included and will be discussed in the appropriate chapters of this manual.
 </para>
 
-<para>If you need additional help please send me an email at
-<email>haavard@users.sourceforge.net</email>.</para>
+</sect2>
+</sect1>
 
-</answer>
-</qandaentry>
 
-<qandaentry>
-<question>
-<para>Find some bugs or give some suggestions</para>
-</question>
-<answer>
-<para>
-If you find some bugs in the program, or have some suggestions for
-improvements, please let me know. 
+<sect1 id="learning">
+<title>Learnung touch typing with &ktouch;</title>
+
+<para>Here's another screenshot of &ktouch; in action, this time with a german keyboard and training lecture:</para>
+
+<screenshot>
+<screeninfo>Main screen of &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Main screen of &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para>Even though learning touch typing with &ktouch; and using the program should be very simple we will look a bit closer at &ktouch; in the following sections.</para>
+
+<sect2 id="getting_started">
+<title>Getting started</title>
+
+<para>When you start &ktouch; you can see the screen shown above. The main program window shows three main sections:
 </para>
-</answer>
+<orderedlist>
+<listitem><simpara>Some typing statistics in info boxes at the top</simpara></listitem>
+<listitem><simpara>The text you need to type (in the teacher's line) and the text that you have typed so far (in the student's line)</simpara></listitem>
+<listitem><simpara>The keyboard (that hopefully looks like yours)</simpara></listitem>
+</orderedlist>
+<para>We look at these sections later again.</para>
+<para>
+Ok, the first time you start &ktouch; it will open a default lecture and select a default keyboard layout.  Before you start typing you should adjust the keyboard layout so that it matches yours. Go to <menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Layouts...</guimenuitem></menuchoice> and select the country you're in (or some country which uses the same keyboard layout as you). If your keyboard is not included, you can always define your own keyboard (see <link linkend="create_keyboards">Creating your own keyboard</link>).
+</para>
+<para>
+Once you have your keyboard selected, choose your training lecture. The first line in your corrent lecture and level is shown in the teacher's line. You can select any of the default lectures via  <menuchoice><guimenu>Training</guimenu><guimenuitem>Default Lectures...</guimenuitem></menuchoice> or open a user defined lecture file (&eg; if your teacher gives you a special lecture to practice on) with <menuchoice><guimenu>File</guimenu><guimenuitem>Open Lecture...</guimenuitem></menuchoice>. You may even create your own lecture (see <link linkend="create_lectures">Creating your own lecture</link>). When you have selected keyboard and lecture you can start typing.
+</para>
+<para>
+Place your hand on the keyboard as indicated by the 8 marked finger keys (thumbs over the space bar) and start typing the text shown in the teacher's line. Each key you need to press is highlighted on the keyboard and if you need to move a finger from its resting position the target key and the appropriate finger key is highlighted. Try to move your hands as little as possible and after you typed a character always try to return your fingers to their resting positions.
+</para>
+<para>
+While you type you may make mistakes and hit the wrong key. In that case the student's line will change its color (per default to red) and you have to hit Backspace to erase the wrong character (or characters) again.
+</para>
+<para>
+When you have successfully completed a line of text you need to press the Enter key to advance to the next line. 
+</para>
+</sect2>
+
+<sect2 id="lectures_and_levels">
+<title>Lectures and levels</title>
+<para>
+As already mentioned above you need to select a training lecture which contains all the text you want to practice. Usually the difficulty of the text is gradually increasing and so most lectures contain various difficulty levels. However, some lectures may just contain a single level and text (&eg; a newspaper article to test your skills).
+</para>
+<para>
+In the info boxes at top of the &ktouch; main window you see the current level at the left. The small buttons to the right allow you to manually switch levels. Normally this happens automatically (more about this in the section <link linkend="training_options">Training Options</link>). The right info box shows a brief information text about the level. Usually it gives you a list of characters that are new in this level. The middle two info boxes show your current typing speed (in characters per minute) and your correctness. These values are Level Statistics and whenever you start a new level these values are resetted. However, the program still remembers your previous statistics (see section <link linkend="statistics">Statistics in &ktouch;</link>).
+</para>
+</sect2>
+
+<sect2 id="starting_stopping">
+<title>Starting and stopping a training session</title>
+<para>
+While you type the text of a training lecture you are in a practice session. You can start a new practice session using <menuchoice><guimenu>Training</guimenu><guimenuitem>Start New Session</guimenuitem></menuchoice> or the appropriate button in the toolbar. Level changes (automatic or manual) do not change your training session. You stay in this training session until you start a new training session, select a new lecture (which automatically starts a new training session) or quit the program. 
+</para>
+<para>
+If you open any dialog in &ktouch; while you are in a training session the training is paused and the timer is stopped until you hit the next key. You can manually pause the session using <menuchoice><guimenu>Training</guimenu><guimenuitem>Pause Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
+</para>
+</sect2>
+
+</sect1>
+
+<sect1 id="statistics">
+<title>Statistics in &ktouch;</title>
+<para>&ktouch; remembers you! Basically whatever you type is recorded and some useful (and sometimes just interesting) statistics are created. &ktouch; stores statistical data based on the lecture file you use for training. For every lecture file a separate history is kept. &ktouch; also distinguishes between level and practice session statistics. This is important to prevent cheating :-).
+</para>
+
+<sect2>
+<title>Training Session Statistics</title>
+<para>Whenever you start a new training session a new statistics record is started. &ktouch; remembers several things to assess your skill and to help you identify problem keys:
+</para>
+<itemizedlist>
+<listitem><simpara>How many keys were pressed in total?</simpara></listitem>
+<listitem><simpara>How many were correctly pressed?</simpara></listitem>
+<listitem><simpara>Which keys where missed and how often?</simpara></listitem>
+<listitem><simpara>How many correct words did you type?</simpara></listitem>
+<listitem><simpara>How much time did you need?</simpara></listitem>
+</itemizedlist>
+<para>Using training session statistics you and &ktouch; can evaluate your overall performance and skill in a certain training lecture.</para>
+</sect2>
+
+<sect2>
+<title>Level Statistics</title>
+<para>For each level in your training session (&ie; all levels you typed text in) the same statistics as for the training session are obtained. Using level statistics data you can investigate your progress in each level of a training lecture (and you will notice how your skill increases level by level and you can concentrate on the levels which still cause problems).
+</para>
+</sect2>
+
+<sect2>
+<title>The Statistics Dialog</title>
+<para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar opens the statistics dialog. It displays your current training and level statistics and shows a graphical history of previous training sessions.
+</para>
 
 
-</qandaentry>
-</qandaset>
+</sect2>
+
+
+
+</sect1>
+
 </chapter>
+
+<chapter id="ui_guide">
+<title>The &ktouch; main menu and program dialogs</title>
+<para>In this chapter we look at some of the details in the program.
+<tip><para>You can use the <quote>What's this?</quote> feature (the little question mark besides the minimize/maximize window buttons) in many dialogs of the program.</para></tip>
+</para>
+
+<sect1 id="program_settings">
+<title>Configuration options for &ktouch;</title>
+<para>You can customize &ktouch; quite a bit. The settings are always stored for the current user of the program. Open the configuration dialog via <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ktouch; ...</guimenuitem></menuchoice>.</para>
+
+<sect2 id="general_options">
+<title>General Options</title>
+<para>In this dialog you can change general options that control the behaviour of &ktouch;.
+</para>
+<screenshot>
+<screeninfo>General options</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="general_options.png" format="PNG"/></imageobject>
+<textobject><phrase>General options</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>First of all you can switch the sound on or off (might be useful in class rooms). You can also set the sliding speed of the teacher's and student's line.
+</para>
+<para>Most important, however, might be the selection of the lecture font. When showing the teacher's text &ktouch; will normally use the font specified in the lecture file. But if this font doesn't exist on your system or none has been specified, &ktouch; uses a default system font. What if this font does not contain all characters needed for your lecture? In such cases you can override the choice of the font and specify any font you like.
+<note><para>&ktouch; distinguishes between lecture and keyboard fonts. Overriding the lecture font does not automatically adjust the keyboard font as well. Use the appropriate option in the Keyboard Options configuration page.</para></note>
+</para>
+</sect2>
+
+<sect2 id="training_options">
+<title>Training Options</title>
+<para>In this dialog you can select the options that control how &ktouch; changes difficulty levels based on the user's skill.</para>
+<screenshot>
+<screeninfo>Training options</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="training_options.png" format="PNG"/></imageobject>
+<textobject><phrase>Training options</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>If <guibutton>Automatic level adjustment</guibutton> is enabled, &ktouch; checks the given limits at the end of each level and decides whether to increase or decrease the level or stay in the level for another run. Level changes occur always at the end of a level (&ie; when the user has finished the last line of a level). If the typing speed (in characters per seconds) and accuracy (correctness) are <emphasis>both</emphasis> above or equal to the <quote>Limits to increase level</quote> &ktouch; will jump to the next higher level. If <emphasis>either</emphasis> typing speed or accuracy falls below the <quote>Limits to decrease level</quote> &ktouch; will jump back to the previous lower level.
+</para>
+<para>
+On this configuration page you can also select that the program remembers your current level when you quit the program and jumps back to it when you restart &ktouch;.
+</para>
+</sect2>
+
+<sect2 id="keyboard_options">
+<title>Keyboard Options</title>
+<para>In this dialog you can select keyboard specific options.</para>
+<screenshot>
+<screeninfo>Keyboard options</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="keyboard_options.png" format="PNG"/></imageobject>
+<textobject><phrase>Keyboard options</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+This dialog controls the appearance and functionality of the keyboard. Similar to the <quote>Override lecture font</quote> option in the general settings configuration page, you can here specify your own keyboard font. The option <quote>Highlight keys on keyboard</quote> can be used to increase the difficulty of the training. <tip><para>Once you are familiar with the keyboard you may want to turn keyboard highlighting off so it won't distract you when you concentrate on the teacher's text.</para></tip>
+</para>
+</sect2>
+
+
+<sect2 id="color_options">
+<title>Color Options</title>
+<para>In this dialog you can tweak the appearance of &ktouch;.</para>
+<screenshot>
+<screeninfo>Color options</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="color_options.png" format="PNG"/></imageobject>
+<textobject><phrase>Color options</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+This configuration page does not need much explaination. You can choose among four predefined color schemes for the keyboard. Alternatively you can switch the color schemes <quote>on the fly</quote> using the menu option <menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Color Schemes</guimenuitem></menuchoice>.
+</para>
+</sect2>
+
+</sect1>
+</chapter>
+
+
+<chapter id="extending">
+<title>Extending &ktouch;</title>
+
+<sect1 id="create_lectures">
+<title>Creating your own lecture</title>
+<para>You can easily create your own training lecture using the built-in &ktouch; lecture editor.</para>
+<para>TODO : Explain Lecture Editor</para>
+</sect1>
+
+<sect1 id="create_keyboards">
+<title>Creating your own keyboard</title>
+<para>You can create your own keyboards by creating keyboard files. Currently &ktouch; doesn't have a keyboard editor but it is still pretty easy to define your own keyboard. It doesn't require much more than a little math to work out the geometry and some time.</para>
+<para>
+Best is to start with an existing keyboard file, create a copy for your keyboard layout and simply adjust the lines. TODO : Explain format of keyboard file.
+</para>
+</sect1>
+</chapter>
+
 
 <chapter id="credits">
 
 <title>Credits and License</title>
 <para>&ktouch;</para>
 <para>
-Program Copyright, 1999, 2000, 2001 Haavard Froeiland
- <email>haavard@users.sourceforge.net</email>
-</para>
-
-<para> Contributors:</para>
-
+&ktouch;, Copyright 1999-2005 by</para>
 <itemizedlist>
-<listitem><para>Frank Quotschalla, German keyboard and german training file and
- translation.</para></listitem>
-<listitem><para>Ernesto Hern&aacute;ndez-Novich, Latinamerican
- keyboard</para></listitem>
-<listitem><para>Jo&atilde;o Miguel Neves, Portuguese keyboard</para></listitem>
-<listitem><para>Henri Girard, Frence keyboard</para></listitem>
+<listitem><simpara>Håvard Frøiland <email>haavard AT users DOT sourceforge DOT net</email></simpara></listitem>
+<listitem><simpara>Andreas Nicolai <email>andreas DOT nicolai AT gmx DOT net</email></simpara></listitem>
 </itemizedlist>
 
+<para> Contributors:</para>
+<itemizedlist>
+<listitem><simpara>Frank Quotschalla, German keyboard and german training file and
+ translation.</simpara></listitem>
+<listitem><simpara>Ernesto Hern&aacute;ndez-Novich, Latinamerican
+ keyboard</simpara></listitem>
+<listitem><simpara>Jo&atilde;o Miguel Neves, Portuguese keyboard</simpara></listitem>
+<listitem><simpara>Henri Girard, Frence keyboard</simpara></listitem>
+</itemizedlist>
+<para><emphasis>Special thanks to all the other (here not mentioned) contributors of keyboard and lecture files.</emphasis>
+</para>
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
 &underFDL;           <!-- FDL: do not remove -->
@@ -413,43 +354,14 @@ Program Copyright, 1999, 2000, 2001 Haavard Froeiland
 </chapter>
 
 <appendix id="installation">
-<title>Installation</title>
+<title>How to obtain and install &ktouch;</title>
 
-<sect1 id="getting-ktouch">
-<title>How to obtain &ktouch;</title>
-
-&install.intro.documentation;
-
-<para>&ktouch; has its own home page on Sourceforge <ulink
-url="http://www.sourceforge.net">Sourceforge</ulink>, at <ulink
-url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink></para>
-</sect1>
-
-<sect1 id="requirements">
-<title>Requirements</title>
-
-<para>
-In order to successfully use &ktouch; (version > 0.7), you need &kde; > 2.0 .
+<para>&ktouch; has its own home page <ulink
+url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>. Please refer to the instructions on the home page since they will contain up-to-date information about how to obtain &ktouch;.
 </para>
-
-<para>
-&ktouch; itself can be found
-on <ulink url="http://edu.kde.org/ktouch">The &ktouch; home page</ulink>
-and is part of the KDE-Edu project and <ulink
- url="ftp://ktouch.sourceforge.net">the
-&ktouch; &FTP; server</ulink>. </para>
-
-<para>You can find a list of changes at <ulink
-url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>.</para>
-
-</sect1>
-
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-
-&install.compile.documentation;
-
-</sect1>
+<para>&ktouch; can also be found
+on <ulink url="http://edu.kde.org/ktouch">The KDE Edutainment - &ktouch; home page</ulink>
+and is part of the KDE-Edutainment project. </para>
 
 </appendix>
 
