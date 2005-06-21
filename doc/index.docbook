@@ -156,6 +156,7 @@ Once you have your keyboard selected, choose your training lecture. The first li
 <para>
 Place your hand on the keyboard as indicated by the 8 marked finger keys (thumbs over the space bar) and start typing the text shown in the teacher's line. Each key you need to press is highlighted on the keyboard and if you need to move a finger from its resting position the target key and the appropriate finger key is highlighted. Try to move your hands as little as possible and after you typed a character always try to return your fingers to their resting positions.
 </para>
+<tip><para>The key colors indicate which finger needs to press which key.</para></tip>
 <para>
 While you type you may make mistakes and hit the wrong key. In that case the student's line will change its color (per default to red) and you have to hit Backspace to erase the wrong character (or characters) again.
 </para>
@@ -193,6 +194,13 @@ If you open any dialog in &ktouch; while you are in a training session the train
 
 <sect2>
 <title>Training Session Statistics</title>
+<screenshot>
+<screeninfo>Current Training Statistics</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_dialog.png" format="PNG"/></imageobject>
+<textobject><phrase>Current Training Statistics</phrase></textobject>
+</mediaobject>
+</screenshot>
 <para>Whenever you start a new training session a new statistics record is started. &ktouch; remembers several things to assess your skill and to help you identify problem keys:
 </para>
 <itemizedlist>
@@ -215,13 +223,6 @@ If you open any dialog in &ktouch; while you are in a training session the train
 <title>The Statistics Dialog</title>
 <para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar opens the statistics dialog. It displays your current training and level statistics and shows a graphical history of previous training sessions.
 </para>
-<screenshot>
-<screeninfo>Current Training Statistics</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="statistics_dialog.png" format="PNG"/></imageobject>
-<textobject><phrase>Current Training Statistics</phrase></textobject>
-</mediaobject>
-</screenshot>
 <para>
 When you open the statistics dialog you can select a Session Statistics Page and a Level Statistics Page. The first page gives you a summary about everything you typed so far. The Level Statistics Page only contains the stats for the current level. This is useful to distinguish between overall performance and skill in certain levels.
 </para>
@@ -394,7 +395,7 @@ All lines starting with a hash character '#' are considered comments. After the 
 </para>
 <programlisting>
 #
-#          Unicode  KeyText  x    y
+#          Unicode  KeyChar  x    y
 #
 FingerKey  97       A        18   20
 FingerKey  115      S        28   20
@@ -405,125 +406,68 @@ FingerKey  107      K        88   20
 FingerKey  108      L        98   20
 FingerKey  246      Ö        108  20
 </programlisting>
-<para>Keys have the default dimensions of 8 units, so using a grid of 10 units gives a normal looking keyboard. The first number is the unicode character code as decimal number. The KeyText is the text printed on the key encoded as UTF-8 (automatic under newer Linux versions, just make sure your editor saves files as UTF-8 format)</para>
+<para>Keys have the default dimensions of 8 units, so using a grid of 10 units gives a normal looking keyboard. The first number is the unicode character code as decimal number. The KeyText is the text printed on the key encoded as UTF-8 (automatic under newer Linux versions, just make sure your editor saves files as UTF-8 format).</para>
+<para>The next section contains special keys, which are - apart from BackSpace and Enter - just decorative.</para>
 <programlisting>
 #
-#			Assci	KeyText	x			y		Width Hight
+#           Unicode  KeyText    x     y     Width Height
 #
-ControlKey	260		Tab			0			10	15    10
-ControlKey	13		Enter		138		20	12    10
-ControlKey	258		Shift		123		30	27    10
-ControlKey	264		AltGr	120		40	15    10
-ControlKey	265		Ctrl		135		40	15    10
-ControlKey	263		Alt			15		40	15    10
-ControlKey	262		Strg		0			40	15    10
-ControlKey	32		Leertaste		30		40	90    10
-ControlKey	257		Shift		0			30	13    10
-ControlKey	259		CapsLock	0			20	18    10
-ControlKey	8		BackSpace			130		0		20    10
-
-#						Assci	KeyText	x			y		FingerKey
-#
-NormalKey 	94		^				0			0		97
-NormalKey 	49		1				10		0		97
-NormalKey 	50		2				20		0		115
-NormalKey 	51		3				30		0		100
-NormalKey 	52		4				40		0		102
-NormalKey 	53		5				50		0		102
-NormalKey 	54		6				60		0		102
-NormalKey 	55		7				70		0		106
-NormalKey 	56		8				80		0		107
-NormalKey 	57		9				90		0		108
-NormalKey 	48		0				100		0		246
-NormalKey 	223		ß				110		0		246
-NormalKey 	180		´				120		0		246
-#
-NormalKey		113		Q				15		10	97
-NormalKey		119		W				25		10	115
-NormalKey		101		E				35		10	100
-NormalKey		114		R				45		10	102
-NormalKey		116		T				55		10	102
-NormalKey		122		Z				65		10	106
-#
-NormalKey		117		U				75		10	106
-NormalKey		105		I				85		10	107
-NormalKey		111		O				95		10	108
-NormalKey		112		P				105		10	246
-NormalKey		252		Ü				115		10	246
-NormalKey		43		+				125		10	246
-#
-NormalKey		103		G				58		20	102
-NormalKey		104		H				68		20	106
-NormalKey		228		Ä				118		20	246
-NormalKey		35		#				128		20	246
-NormalKey		60		&lt;				13		30	97
-NormalKey		121		Y				23		30	97
-#
-NormalKey		120		X				33		30	115
-NormalKey		99		C				43		30	100
-NormalKey		118		V				53		30	102
-NormalKey		98		B				63		30	102
-NormalKey		110		N				73		30	106
-NormalKey		109		M				83		30	106
-NormalKey		44		,				93		30	107
-NormalKey		46		.				103		30	108
-NormalKey		45		-				113		30	246
-#
-#
-#						Ascii		Target	Finger	Contorll
-HiddenKey		65			97			97			258 	 	#A
-HiddenKey		66			98			102			258 	 	#B
-HiddenKey		67			99			100			258 	 	#C
-HiddenKey		68			100			100			258 	 	#D
-HiddenKey		69			101			100			258 	 	#E
-HiddenKey		70			102			102			258 	 	#F
-HiddenKey		71			103			102			258 	 	#G
-HiddenKey		72			104			106			258 	 	#H
-HiddenKey		73			105			107			258 	 	#I
-HiddenKey		74			106			106			258 	 	#J
-HiddenKey		75			107			107			258 	 	#K
-HiddenKey		76			108			108			258 	 	#L
-HiddenKey		77			109			106			258 	 	#M
-HiddenKey		78			110			106			258 	 	#N
-HiddenKey		79			111			108			258 	 	#O
-HiddenKey		80			112			246			258 	 	#P
-HiddenKey		81			113			97			258 	 	#Q
-HiddenKey		82			114			102			258 	 	#R
-HiddenKey		83			115			115			258 	 	#S
-HiddenKey		84			116			102			258 	 	#T
-HiddenKey		85			117			106			258 	 	#U
-HiddenKey		86			118			102			258 	 	#V
-HiddenKey		87			119			115			258 	 	#W
-HiddenKey		88			120			115			258 	 	#X
-HiddenKey		89			121			97			258 	 	#Y
-HiddenKey		90			122			106			258 	 	#Z
-HiddenKey		62			60			97			258 	 	#>
-HiddenKey		196			228			246			257 	 	#Ä
-HiddenKey		214  	 	246	 		246  	 	257			#Ö
-HiddenKey		220  	 	252	 		246  	 	257 	 	#Ü
-HiddenKey		167  	 	51 	 	 	100  	 	258 	 	#§
-HiddenKey		176 		94			97			258			#°
-HiddenKey		34  		50 			115 		258 	 	#"
-HiddenKey		33  		49 			97 			258 	 	#!
-HiddenKey		36  		52 			102 		258 	 	#$
-HiddenKey		37  		53 			102 		258 	 	#%
-HiddenKey		38  		54 			106 		258 	 	#&amp;
-HiddenKey		47  		55 			106 		257 	 	#/
-HiddenKey		41  		57 			108 		257 	 	#)
-HiddenKey		40  		56 			107			257 	 	#(
-HiddenKey		61  		48 			246 		257 	 	#=
-HiddenKey		63  		223			246 		257 	 	#?
-HiddenKey		96  		180			246 		257 	 	#`
-HiddenKey		59  		44 			107 		257 	 	#;
-HiddenKey		58  		46 			108 		257 	 	#:
-HiddenKey		95  		45 			246 		257 	 	#_
-HiddenKey		42  		43 			246 		257 	 	#*
-HiddenKey		39  		35 			246 		257 	 	#'
-HiddenKey		92  		223			246 		264 	 	#\
-HiddenKey		124  	 	60 	 	 	97 	 	 	264  	  #|
-HiddenKey		64  		113			97 			264 	 	#@
-
+ControlKey  260      Tab        0     10    15    10
+ControlKey  13       Enter      138   20    12    10
+ControlKey  258      Shift      123   30    27    10
+ControlKey  264      AltGr      120   40    15    10
+ControlKey  265      Ctrl       135   40    15    10
+ControlKey  263      Alt        15    40    15    10
+ControlKey  262      Strg       0     40    15    10
+ControlKey  32       Leertaste  30    40    90    10
+ControlKey  257      Shift      0     30    13    10
+ControlKey  259      CapsLock   0     20    18    10
+ControlKey  8        BackSpace  130   0     20    10
 </programlisting>
+<para>
+ The text you specify for the key is printed completely on the keyboard. However, for the keytexts <quote>Shift</quote>, <quote>CapsLock</quote>, <quote>Tab</quote>, <quote>BackSpace</quote> and <quote>Enter</quote> &ktouch; draws the appropriate symbols. Hence you can use these keytexts regardless of the language. The other keytexts like Ctrl or Alt need to be translated though. The geometry of the control keys can be any rectangle, defined by upper left x and y coordinates and width and height.</para>
+<para>The next section contains all characters on the keyboard (except the already defined finger keys) that can be typed <emphasis>without</emphasis> pressing shift.</para>
+<programlisting>
+#
+#          Unicode  KeyChar   x    y      FingerKeyUnicode
+#
+NormalKey  94       ^         0    0      97
+NormalKey  49       1         10   0      97
+NormalKey  50       2         20   0      115
+NormalKey  51       3         30   0      100
+NormalKey  52       4         40   0      102
+NormalKey  53       5         50   0      102
+NormalKey  54       6         60   0      102
+.
+.
+.
+NormalKey  46       .         103  30     108
+NormalKey  45       -         113  30     246
+</programlisting>
+<para>The definition of these primary keys or chars is pretty much the same as for the finger keys, but they include an additional property. The last unicode character code identifies the associated finger key. Basically which finger has to be used to press this key.</para>
+<para>
+The next and last section in a keyboard layout defines all keys that are pressed by using a modifier key such as the shift key.
+</para>
+<programlisting>
+#
+#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode     Comment
+#
+HiddenKey   65        97              97              258                 #A
+HiddenKey   66        98              102             258                 #B
+HiddenKey   67        99              100             258                 #C
+HiddenKey   68        100             100             258                 #D
+.
+.
+.
+HiddenKey   124       60              97              264                 #|
+HiddenKey   64        113             97              264                 #@
+</programlisting>
+<para>The <quote>hidden keys</quote> are really controlling what should happen on the keyboard when you type a certain character. The first unicode number is the character code of the character you define. The second number is the character code of the key on the keyboard (one of the already defined normal keys). The third number indicates a finger key (where does the finger rest that is needed to type the key) and the last number indicates the modifier key you need to press to get this character.
+</para>
+<para>Let's look at an example:</para>
+<para>You want to define the upper case 'R' character. It has the unicode 82. The character obtained when the 'R' key is pressed without modifier is the small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key which has the unicode 102. And in order to get the 'R' you need to press the right (or left) shift key which has the code 264 (this is actually not a unicode but the code obtained from a keypress event of QT). Note that the identification of controll keys will likely change in the next version of &ktouch;.  But for now you can use the codes used in other keyboard files.
+</para>
+
 </sect1>
 </chapter>
 
