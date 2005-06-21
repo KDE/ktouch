@@ -215,14 +215,29 @@ If you open any dialog in &ktouch; while you are in a training session the train
 <title>The Statistics Dialog</title>
 <para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar opens the statistics dialog. It displays your current training and level statistics and shows a graphical history of previous training sessions.
 </para>
-
+<screenshot>
+<screeninfo>Current Training Statistics</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_dialog.png" format="PNG"/></imageobject>
+<textobject><phrase>Current Training Statistics</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+When you open the statistics dialog you can select a Session Statistics Page and a Level Statistics Page. The first page gives you a summary about everything you typed so far. The Level Statistics Page only contains the stats for the current level. This is useful to distinguish between overall performance and skill in certain levels.
+</para>
+<para>
+The third statistics page gives you a graphical overview of your typing skill by offering several choices. A note about the time scaling option. Whenever a session or level statistic is obtained, also the date is stored. So you can also see how your skill dropped in long training breaks and when you last practiced a certain lecture or level.
+</para>
+<screenshot>
+<screeninfo>Training Statistics Chart</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_dialog_chart.png" format="PNG"/></imageobject>
+<textobject><phrase>Training Statistics Chart</phrase></textobject>
+</mediaobject>
+</screenshot>
 
 </sect2>
-
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="ui_guide">
@@ -230,6 +245,11 @@ If you open any dialog in &ktouch; while you are in a training session the train
 <para>In this chapter we look at some of the details in the program.
 <tip><para>You can use the <quote>What's this?</quote> feature (the little question mark besides the minimize/maximize window buttons) in many dialogs of the program.</para></tip>
 </para>
+
+<sect1 id="main_menu">
+<title>The menu of &ktouch;</title>
+<para>Pretty much everything in the &ktouch; menu should be self-explanatory. The file menu contains options to load a user defined lecture and edit lectures. The training menu contains training options and the settings menu contains options to setup the program. The various options in the configuration dialog are explained in the next section.</para>
+</sect1>
 
 <sect1 id="program_settings">
 <title>Configuration options for &ktouch;</title>
@@ -310,16 +330,200 @@ This configuration page does not need much explaination. You can choose among fo
 
 <sect1 id="create_lectures">
 <title>Creating your own lecture</title>
-<para>You can easily create your own training lecture using the built-in &ktouch; lecture editor.</para>
-<para>TODO : Explain Lecture Editor</para>
+<para>You can easily create your own training lecture using the built-in &ktouch; lecture editor. When you select <menuchoice><guimenu>File</guimenu><guimenuitem>Edit Lecture...</guimenuitem></menuchoice> the <quote>Open Request Dialog</quote> will open and ask you to select a lecture. You can choose either edit the current lecture, any of the predefined lectures (if you have write access to the installation directoy) or create an empty lecture from scratch.</para>
+
+<sect2>
+<title>Creating a lecture</title>
+<para>
+Let's assume you want to create a new lecture. There are a few guidelines you may want to consider:
+</para>
+<itemizedlist>
+
+
+<listitem><para>
+For the first 20 keys or so, only add 2 keys at a time to a new level. Let the user practice the keys alone first in different combinations and then use the new keys in words and mixed with already known words.
+</para></listitem>
+
+<listitem><para>Add at least a few levels to the lecture in order to allow the user to see some progress while training</para></listitem>
+
+<listitem><para>
+Don't make the levels too long.
+</para></listitem>
+
+<listitem><para>
+Try to increase the difficulty of the text gradually and test your text yourself.
+</para></listitem>
+
+<listitem><para>
+After the first keys have been learned include a recap lecture.
+</para></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title>Things to know about lectures</title>
+<para>
+The lecture title is important for the quick-select menu entry in the training menu and for the statistics. The comment should be used to include information about the lecture author and source of lecture data if any.
+</para>
+<para>
+For each level you can specify the new characters/keys in the lecture. The text you enter there will be shown as level information text in the top right info box of the &ktouch; main window. 
+</para>
+<para>You can also specify a default font for the lecture which will be used in the teacher's and student's line and of course in the edit lecture dialog using the <guibutton>Change Font...</guibutton> button.
+</para>
+</sect2>
+
 </sect1>
 
 <sect1 id="create_keyboards">
 <title>Creating your own keyboard</title>
-<para>You can create your own keyboards by creating keyboard files. Currently &ktouch; doesn't have a keyboard editor but it is still pretty easy to define your own keyboard. It doesn't require much more than a little math to work out the geometry and some time.</para>
+<para>You can create your own keyboards by creating keyboard files. Currently &ktouch; doesn't have a keyboard editor but it is still pretty easy to define your own keyboard. It doesn't require much more than a little math to work out the geometry and some time. Best is to start with an existing keyboard file, create a copy for your keyboard layout and simply adjust the lines.</para>
 <para>
-Best is to start with an existing keyboard file, create a copy for your keyboard layout and simply adjust the lines. TODO : Explain format of keyboard file.
+Currently keyboard files are plain UTF-8 encoded text files. In one of the next version of &ktouch; keyboard data will be stored in XML files, too. Therefore I'll only briefly explain the structure of a keyboard file.
 </para>
+<para>A keyboard file usually starts with a header including some information about the author and type of the keyboard.</para>
+<programlisting>
+####################################################
+#    KTouch
+#    Keybord layout file for german keybord layout
+#    Code=UTF-8
+####################################################
+</programlisting>
+<para>
+All lines starting with a hash character '#' are considered comments. After the header section a block of so called <quote>finger keys</quote> follows, indicating the resting positions for all 8 fingers.
+</para>
+<programlisting>
+#
+#          Unicode  KeyText  x    y
+#
+FingerKey  97       A        18   20
+FingerKey  115      S        28   20
+FingerKey  100      D        38   20
+FingerKey  102      F        48   20
+FingerKey  106      J        78   20
+FingerKey  107      K        88   20
+FingerKey  108      L        98   20
+FingerKey  246      Ö        108  20
+</programlisting>
+<para>Keys have the default dimensions of 8 units, so using a grid of 10 units gives a normal looking keyboard. The first number is the unicode character code as decimal number. The KeyText is the text printed on the key encoded as UTF-8 (automatic under newer Linux versions, just make sure your editor saves files as UTF-8 format)</para>
+<programlisting>
+#
+#			Assci	KeyText	x			y		Width Hight
+#
+ControlKey	260		Tab			0			10	15    10
+ControlKey	13		Enter		138		20	12    10
+ControlKey	258		Shift		123		30	27    10
+ControlKey	264		AltGr	120		40	15    10
+ControlKey	265		Ctrl		135		40	15    10
+ControlKey	263		Alt			15		40	15    10
+ControlKey	262		Strg		0			40	15    10
+ControlKey	32		Leertaste		30		40	90    10
+ControlKey	257		Shift		0			30	13    10
+ControlKey	259		CapsLock	0			20	18    10
+ControlKey	8		BackSpace			130		0		20    10
+
+#						Assci	KeyText	x			y		FingerKey
+#
+NormalKey 	94		^				0			0		97
+NormalKey 	49		1				10		0		97
+NormalKey 	50		2				20		0		115
+NormalKey 	51		3				30		0		100
+NormalKey 	52		4				40		0		102
+NormalKey 	53		5				50		0		102
+NormalKey 	54		6				60		0		102
+NormalKey 	55		7				70		0		106
+NormalKey 	56		8				80		0		107
+NormalKey 	57		9				90		0		108
+NormalKey 	48		0				100		0		246
+NormalKey 	223		ß				110		0		246
+NormalKey 	180		´				120		0		246
+#
+NormalKey		113		Q				15		10	97
+NormalKey		119		W				25		10	115
+NormalKey		101		E				35		10	100
+NormalKey		114		R				45		10	102
+NormalKey		116		T				55		10	102
+NormalKey		122		Z				65		10	106
+#
+NormalKey		117		U				75		10	106
+NormalKey		105		I				85		10	107
+NormalKey		111		O				95		10	108
+NormalKey		112		P				105		10	246
+NormalKey		252		Ü				115		10	246
+NormalKey		43		+				125		10	246
+#
+NormalKey		103		G				58		20	102
+NormalKey		104		H				68		20	106
+NormalKey		228		Ä				118		20	246
+NormalKey		35		#				128		20	246
+NormalKey		60		&lt;				13		30	97
+NormalKey		121		Y				23		30	97
+#
+NormalKey		120		X				33		30	115
+NormalKey		99		C				43		30	100
+NormalKey		118		V				53		30	102
+NormalKey		98		B				63		30	102
+NormalKey		110		N				73		30	106
+NormalKey		109		M				83		30	106
+NormalKey		44		,				93		30	107
+NormalKey		46		.				103		30	108
+NormalKey		45		-				113		30	246
+#
+#
+#						Ascii		Target	Finger	Contorll
+HiddenKey		65			97			97			258 	 	#A
+HiddenKey		66			98			102			258 	 	#B
+HiddenKey		67			99			100			258 	 	#C
+HiddenKey		68			100			100			258 	 	#D
+HiddenKey		69			101			100			258 	 	#E
+HiddenKey		70			102			102			258 	 	#F
+HiddenKey		71			103			102			258 	 	#G
+HiddenKey		72			104			106			258 	 	#H
+HiddenKey		73			105			107			258 	 	#I
+HiddenKey		74			106			106			258 	 	#J
+HiddenKey		75			107			107			258 	 	#K
+HiddenKey		76			108			108			258 	 	#L
+HiddenKey		77			109			106			258 	 	#M
+HiddenKey		78			110			106			258 	 	#N
+HiddenKey		79			111			108			258 	 	#O
+HiddenKey		80			112			246			258 	 	#P
+HiddenKey		81			113			97			258 	 	#Q
+HiddenKey		82			114			102			258 	 	#R
+HiddenKey		83			115			115			258 	 	#S
+HiddenKey		84			116			102			258 	 	#T
+HiddenKey		85			117			106			258 	 	#U
+HiddenKey		86			118			102			258 	 	#V
+HiddenKey		87			119			115			258 	 	#W
+HiddenKey		88			120			115			258 	 	#X
+HiddenKey		89			121			97			258 	 	#Y
+HiddenKey		90			122			106			258 	 	#Z
+HiddenKey		62			60			97			258 	 	#>
+HiddenKey		196			228			246			257 	 	#Ä
+HiddenKey		214  	 	246	 		246  	 	257			#Ö
+HiddenKey		220  	 	252	 		246  	 	257 	 	#Ü
+HiddenKey		167  	 	51 	 	 	100  	 	258 	 	#§
+HiddenKey		176 		94			97			258			#°
+HiddenKey		34  		50 			115 		258 	 	#"
+HiddenKey		33  		49 			97 			258 	 	#!
+HiddenKey		36  		52 			102 		258 	 	#$
+HiddenKey		37  		53 			102 		258 	 	#%
+HiddenKey		38  		54 			106 		258 	 	#&amp;
+HiddenKey		47  		55 			106 		257 	 	#/
+HiddenKey		41  		57 			108 		257 	 	#)
+HiddenKey		40  		56 			107			257 	 	#(
+HiddenKey		61  		48 			246 		257 	 	#=
+HiddenKey		63  		223			246 		257 	 	#?
+HiddenKey		96  		180			246 		257 	 	#`
+HiddenKey		59  		44 			107 		257 	 	#;
+HiddenKey		58  		46 			108 		257 	 	#:
+HiddenKey		95  		45 			246 		257 	 	#_
+HiddenKey		42  		43 			246 		257 	 	#*
+HiddenKey		39  		35 			246 		257 	 	#'
+HiddenKey		92  		223			246 		264 	 	#\
+HiddenKey		124  	 	60 	 	 	97 	 	 	264  	  #|
+HiddenKey		64  		113			97 			264 	 	#@
+
+</programlisting>
 </sect1>
 </chapter>
 
