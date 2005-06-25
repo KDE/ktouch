@@ -12,7 +12,7 @@
 # kde_wallpaperdir  Where general wallpapers should go to.
 
 # set the include path for X, qt and KDE
-INCLUDES = $(all_includes)
+INCLUDES = $(all_includes) -I$(top_srcdir)
 
 # claim, which subdirectories you want to install
 # if you don't have subdirectories, comment it
