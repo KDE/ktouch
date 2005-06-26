@@ -94,7 +94,7 @@ ktouch_LDFLAGS = $(KDE_RPATH) $(all_libraries)
 
 # the libraries to link against. Be aware of the order. First the libraries,
 # that depend on the following ones.
-ktouch_LDADD = -lkdeeduplot $(LIB_KIO)
+ktouch_LDADD = ../../libkdeedu/kdeeduplot/libkdeeduplot.la $(LIB_KIO)
 
 rcdir = $(kde_datadir)/ktouch
 rc_DATA = ktouchui.rc
