@@ -9,3 +9,5 @@ AUTOMAKE_OPTIONS = foreign
 xdg_apps_DATA = ktouch.desktop
 
 
+
+include ../admin/Doxyfile.am
