@@ -18,7 +18,7 @@ The language id attribute helps sorting the available keyboard layouts and also 
 The KeyboardFont element definies which font should be used, several recommendations may be given, separated by | characters
 Example: 
 
-<KeyboardFont>Courier | Misc Console</KeyboardFont>
+<KeyboardFont>Courier | Misc Console | Monospace</KeyboardFont>
 
 
 The key definitions are used to draw the keyboard. First some examples:
