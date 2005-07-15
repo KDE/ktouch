@@ -6,6 +6,7 @@ de-2.keyboard \
 de-ch2.keyboard \
 de-ch.keyboard \
 de.keyboard \
+de_neo.keyboard \
 dk.keyboard \
 dvorak.keyboard \
 dvorak_se.keyboard \
@@ -14,6 +15,7 @@ en.keyboard \
 es.keyboard \
 fi.keyboard \
 fr.keyboard \
+fr_a.keyboard \
 fr_ch.keyboard \
 he.keyboard \
 hu.keyboard \

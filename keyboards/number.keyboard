@@ -1,41 +1,42 @@
-####################################################
-#    KTouch
-#    Keybord layout file
-####################################################
+#######################################################
+# KTouch
+# Keyboard Layout file for number on german keyboards
+# created by simon schaak <simonDOTschaakATgmxDOTde>
+#######################################################
+# N / * - #
+# 7 8 9 + #
+# 4 5 6 + #	My Keyboard
+# 1 2 3 E #
+# 000 , E #
+#######################################################
 #
+# FingerKeys
 #
-#  FingerKey: This class represents the keys where
-#  your fingers shold rest between typing.
-#
-#					 Assci	KeyText  x		 y   widht hight
-FingerKey  52			4				 0     20
-FingerKey  53 		5				 10    20
-FingerKey  54 		6				 20    20
-FingerKey  13     E        30    30  10     20
-FingerKey  48		  0				 0		 40  20     10
+#		ASCII	Text	X	Y	Width	Height
+FingerKey	52	4	00	20
+FingerKey	53	5	10	20
+FingerKey	54	6	20	20
+FingerKey	43	+	30	10	8	18
+FingerKey	48	0	00	40	18	8
 
 #
-#  NormalKey: This class represent all the
-#  normal keys where you don't need to press
-#  anything else then just one key. That would
-#  basically be all the numbers and the lowercase
-#  letters. For this class you have to indicate
-#  which finger key you are going to use.
+# ControlKeys: Num, Enter
 #
-#					Assci	KeyText		x		y		FingerKey  Width Height
+#		ASCII	Text	X	Y	Width	Height
+ControlKey	00	Num	00	00	10	10
+ControlKey	13	Enter	30	30	10	20
+
 #
-NormalKey 49		1					00	30		52	
-NormalKey 50		2					10	30		53
-NormalKey 51		3					20	30		54
-
-NormalKey 55		7					00	10		52
-NormalKey 56		8					10	10		53
-NormalKey 57		9					20	10		54
-
-NormalKey 0     N         0   0     52
-NormalKey	47		/					10	0  	  53
-NormalKey 42    *         20  0     54
-NormalKey 95		-					30  0 		13
-
-NormalKey	46		.					20	40  	54
-NormalKey	43		+					30	10  	13        10   20
+# NormalKeys
+#
+#		ASCII	Text	X	Y	FingerKey
+NormalKey	47	/	10	00	53
+NormalKey	42	*	20	00	54
+NormalKey	45	-	30	00	43
+NormalKey	55	7	00	10	52
+NormalKey	56	8	10	10	53
+NormalKey	57	9	20	10	54
+NormalKey	49	1	00	30	52
+NormalKey	50	2	10	30	53
+NormalKey	51	3	20	30	54
+NormalKey	44	,	20	40	54
