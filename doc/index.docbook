@@ -471,6 +471,184 @@ HiddenKey   64        113             97              264                 #@
 </sect1>
 </chapter>
 
+<chapter id="commands">
+<title>Command Reference</title>
+
+<sect1 id="ktouch-mainwindow">
+<title>Menus and shortcut keys</title>
+
+<sect2>
+<title>The <guimenu>File</guimenu> Menu</title>
+
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>File</guimenu>
+<guimenuitem>Open Lecture...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> a new training lecture file</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>File</guimenu>
+<guimenuitem>Edit Lecture...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> the lecture editor to allow you to change the current training file </para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Quit</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Quit</action> &ktouch;</para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+
+
+<sect2>
+<title>The <guimenu>Training</guimenu> Menu</title>
+
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Training</guimenu>
+<guimenuitem>Start New Session</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Start</action> a new typing session and ask you if you want to start at the same level</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Training</guimenu>
+<guimenuitem>Pause Session</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Pause</action> the current session: statistics are on hold</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Training</guimenu>
+<guimenuitem>Lecture Statistics</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> the current session statistics dialog</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Training</guimenu>
+<guisubmenu>Default Lectures</guisubmenu>
+<guimenuitem>English (auto-generated)</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> what languagee you want to learn touch typing in</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title>The <guimenu>Settings</guimenu> Menu</title>
+
+<variablelist>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Show /HideToolbar</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the  Toolbar</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Keyboard Layouts</guisubmenu>
+<guimenuitem>number.keyboard</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the keyboard layout you want to use, here the number keyboard</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guimenuitem>Black'n White</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the keyboard color layout in black in white: all keys are white and the one you should type is black</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guimenuitem>Classic</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the classic keyboard color layout: each column of keys has a different color</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guimenuitem>Deep Blue</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the deep blue keyboard color layout: each column of keys has a different color in a shade of blue</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guimenuitem>Stripy</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the stripy keyboard color layout: in blue and grey</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure Shortcuts...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Configure</action> the shortcuts you want to associate with some actions
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure Toolbars...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Configure</action> the items you want to put in the toolbar
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure &ktouch;...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Display</action> the &ktouch; settings dialog
+</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title>The <guimenu>Help</guimenu> Menu</title>
+&help.menu.documentation;
+</sect2>
+</sect1>
+</chapter>
 
 <chapter id="credits">
 
