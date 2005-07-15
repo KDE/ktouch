@@ -584,7 +584,7 @@ void KTouch::setupActions() {
         this, SLOT(trainingNewSession()), actionCollection(), "training_newsession");
     m_trainingPause = new KAction(i18n("&Pause Session"), "player_pause", 0,
         this, SLOT(trainingPause()), actionCollection(), "training_pause");
-    new KAction(i18n("&Lecture statistics"), "kalarm", 0,
+    new KAction(i18n("&Lecture Statistics"), "kalarm", 0,
         this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
  
     // Setup menu entries for the training lectures
