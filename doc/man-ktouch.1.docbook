@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+<!ENTITY % English "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title>KDE User's Manual</title>
+<author><personname>
+<firstname>Ben</firstname>
+<surname>Burton</surname>
+</personname>
+<email>bab@debian.org</email></author>
+<date>30 May, 2005</date>
+<productname>K Desktop Environment</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle><command>ktouch</command></refentrytitle>
+<manvolnum>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname><command>ktouch</command></refname>
+<refpurpose>a typing tutor for KDE</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis>
+<command>ktouch</command>
+<group choice="opt"><option>URL</option></group>
+<arg choice="opt">KDE Generic Options</arg>
+<arg choice="opt">Qt Generic Options</arg>
+</cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title>Description</title>
+<para>&ktouch; is a program for learning touch typing.  It helps you learn
+to type on a keyboard quickly and correctly.  Every finger has it's place on
+the keyboard with associated keys to press.</para> 
+<para>&ktouch; helps you learn to touch type by providing you with text to
+train on, and adjusts to different levels depending on how good you are.  It
+can display which key to press next, and correct finger to use.</para>
+<para>This application is part of the official &kde; edutainment
+module.</para>
+</refsect1>
+
+<refsect1>
+<title>Options</title>
+<variablelist>
+<varlistentry>
+<term><option>URL</option></term>
+<listitem><para>The training file to open</para></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title>See Also</title>
+<para>More detailed user documentation is available from <ulink
+url="help:/ktouch">help:/ktouch</ulink>
+(either enter this <acronym>URL</acronym> into &konqueror;, or run
+<userinput><command>khelpcenter</command>
+<parameter>help:/ktouch</parameter></userinput>).</para>
+
+<para>There is also further information available at the <ulink
+url="http://edu.kde.org/ktouch/">&kde; edutainment website</ulink>.</para>
+</refsect1>
+
+<refsect1>
+<title>Authors</title>
+<para>KTouch was written by <personname><firstname>Haavard</firstname><surname>Froeiland</surname></personname> <email>haavard@users.sourceforge.net</email> and <personname><firstname>Andreas</firstname><surname>Nicolai</surname></personname> <email>Andreas.Nicolai@gmx.net</email>.This manual page based on the one prepared for Debian by <personname>
+<firstname>Ben</firstname><surname>Burton</surname></personname>
+</para>
+</refsect1>
+
+</refentry>

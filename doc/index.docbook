@@ -17,14 +17,14 @@
 <author>
 <firstname>Håvard</firstname><surname>Frøiland</surname>
 <affiliation>
-<address><email>haavard AT users DOT sourceforge DOT net</email></address>
+<address><email>haavard@users.sourceforge.net</email></address>
 </affiliation>
 </author>
 
 <author>
 <firstname>Andreas</firstname><surname>Nicolai</surname>
 <affiliation>
-<address><email>Andreas DOT nicolai AT gmx DOT net</email></address>
+<address><email>Andreas.nicolai@gmx.net</email></address>
 </affiliation>
 </author>
 
@@ -103,14 +103,21 @@ never have to pay anything for the program or any update.
 <sect2>
 <title>Features </title>
 
-<para>In its current version, &ktouch; 1.5 has quite a number of helpful features, such as:</para>
+<para>In its current version, &ktouch; 1.5 has quite a number of helpful
+features, such as:</para>
 <itemizedlist>
-<listitem><simpara>Support for many different training lectures in many languages including language specific text fonts and a comfortable lecture editor</simpara></listitem>
-<listitem><simpara>Support for different keyboard layouts with the ability to use user-defined layouts</simpara></listitem>
-<listitem><simpara>During your training session comprehensive statistical information is obtained to help you (or your teacher) analyse your progress</simpara></listitem>
+<listitem><simpara>Support for many different training lectures in many
+languages including language specific text fonts and a comfortable lecture
+editor</simpara></listitem>
+<listitem><simpara>Support for different keyboard layouts with the ability to
+use user-defined layouts</simpara></listitem>
+<listitem><simpara>During your training session comprehensive statistical
+information is obtained to help you (or your teacher) analyse your
+progress</simpara></listitem>
 </itemizedlist>
 <para>
-Many other features are included and will be discussed in the appropriate chapters of this manual.
+Many other features are included and will be discussed in the appropriate
+chapters of this manual.
 </para>
 
 </sect2>
@@ -120,7 +127,8 @@ Many other features are included and will be discussed in the appropriate chapte
 <sect1 id="learning">
 <title>Learnung touch typing with &ktouch;</title>
 
-<para>Here's another screenshot of &ktouch; in action, this time with a german keyboard and training lecture:</para>
+<para>Here's another screenshot of &ktouch; in action, this time with a german
+keyboard and training lecture:</para>
 
 <screenshot>
 <screeninfo>Main screen of &ktouch;</screeninfo>
@@ -134,54 +142,110 @@ Many other features are included and will be discussed in the appropriate chapte
 </mediaobject>
 </screenshot>
 
-<para>Even though learning touch typing with &ktouch; and using the program should be very simple we will look a bit closer at &ktouch; in the following sections.</para>
+<para>Even though learning touch typing with &ktouch; and using the program
+should be very simple we will look a bit closer@&ktouch; in the following
+sections.</para>
 
 <sect2 id="getting_started">
 <title>Getting started</title>
 
-<para>When you start &ktouch; you can see the screen shown above. The main program window shows three main sections:
+<para>When you start &ktouch; you can see the screen shown above. The main
+program window shows three main sections:
 </para>
 <orderedlist>
-<listitem><simpara>Some typing statistics in info boxes at the top</simpara></listitem>
-<listitem><simpara>The text you need to type (in the teacher's line) and the text that you have typed so far (in the student's line)</simpara></listitem>
-<listitem><simpara>The keyboard (that hopefully looks like yours)</simpara></listitem>
+<listitem><simpara>Some typing statistics in info boxes@the
+top</simpara></listitem>
+<listitem><simpara>The text you need to type (in the teacher's line) and the
+text that you have typed so far (in the student's line)</simpara></listitem>
+<listitem><simpara>The keyboard (that hopefully looks like
+yours)</simpara></listitem>
 </orderedlist>
-<para>We look at these sections later again.</para>
+<para>We look@these sections later again.</para>
 <para>
-Ok, the first time you start &ktouch; it will open a default lecture and select a default keyboard layout.  Before you start typing you should adjust the keyboard layout so that it matches yours. Go to <menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Layouts...</guimenuitem></menuchoice> and select the country you're in (or some country which uses the same keyboard layout as you). If your keyboard is not included, you can always define your own keyboard (see <link linkend="create_keyboards">Creating your own keyboard</link>).
+Ok, the first time you start &ktouch; it will open a default lecture and
+select a default keyboard layout.  Before you start typing you should adjust
+the keyboard layout so that it matches yours. Go to
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard
+Layouts...</guimenuitem></menuchoice> and select the country you're in (or
+some country which uses the same keyboard layout as you). If your keyboard is
+not included, you can always define your own keyboard (see <link
+linkend="create_keyboards">Creating your own keyboard</link>).
 </para>
 <para>
-Once you have your keyboard selected, choose your training lecture. The first line in your corrent lecture and level is shown in the teacher's line. You can select any of the default lectures via  <menuchoice><guimenu>Training</guimenu><guimenuitem>Default Lectures...</guimenuitem></menuchoice> or open a user defined lecture file (&eg; if your teacher gives you a special lecture to practice on) with <menuchoice><guimenu>File</guimenu><guimenuitem>Open Lecture...</guimenuitem></menuchoice>. You may even create your own lecture (see <link linkend="create_lectures">Creating your own lecture</link>). When you have selected keyboard and lecture you can start typing.
+Once you have your keyboard selected, choose your training lecture. The first
+line in your corrent lecture and level is shown in the teacher's line. You can
+select any of the default lectures via 
+<menuchoice><guimenu>Training</guimenu><guimenuitem>Default
+Lectures...</guimenuitem></menuchoice> or open a user defined lecture file
+(&eg; if your teacher gives you a special lecture to practice on) with
+<menuchoice><guimenu>File</guimenu><guimenuitem>Open
+Lecture...</guimenuitem></menuchoice>. You may even create your own lecture
+(see <link linkend="create_lectures">Creating your own lecture</link>). When
+you have selected keyboard and lecture you can start typing.
 </para>
 <para>
-Place your hand on the keyboard as indicated by the 8 marked finger keys (thumbs over the space bar) and start typing the text shown in the teacher's line. Each key you need to press is highlighted on the keyboard and if you need to move a finger from its resting position the target key and the appropriate finger key is highlighted. Try to move your hands as little as possible and after you typed a character always try to return your fingers to their resting positions.
+Place your hand on the keyboard as indicated by the 8 marked finger keys
+(thumbs over the space bar) and start typing the text shown in the teacher's
+line. Each key you need to press is highlighted on the keyboard and if you
+need to move a finger from its resting position the target key and the
+appropriate finger key is highlighted. Try to move your hands as little as
+possible and after you typed a character always try to return your fingers to
+their resting positions.
 </para>
-<tip><para>The key colors indicate which finger needs to press which key.</para></tip>
+<tip><para>The key colors indicate which finger needs to press which
+key.</para></tip>
 <para>
-While you type you may make mistakes and hit the wrong key. In that case the student's line will change its color (per default to red) and you have to hit Backspace to erase the wrong character (or characters) again.
+While you type you may make mistakes and hit the wrong key. In that case the
+student's line will change its color (per default to red) and you have to hit
+Backspace to erase the wrong character (or characters) again.
 </para>
 <para>
-When you have successfully completed a line of text you need to press the Enter key to advance to the next line. 
+When you have successfully completed a line of text you need to press the
+Enter key to advance to the next line.
 </para>
 </sect2>
 
 <sect2 id="lectures_and_levels">
 <title>Lectures and levels</title>
 <para>
-As already mentioned above you need to select a training lecture which contains all the text you want to practice. Usually the difficulty of the text is gradually increasing and so most lectures contain various difficulty levels. However, some lectures may just contain a single level and text (&eg; a newspaper article to test your skills).
+As already mentioned above you need to select a training lecture which
+contains all the text you want to practice. Usually the difficulty of the text
+is gradually increasing and so most lectures contain various difficulty
+levels. However, some lectures may just contain a single level and text (&eg;
+a newspaper article to test your skills).
 </para>
 <para>
-In the info boxes at top of the &ktouch; main window you see the current level at the left. The small buttons to the right allow you to manually switch levels. Normally this happens automatically (more about this in the section <link linkend="training_options">Training Options</link>). The right info box shows a brief information text about the level. Usually it gives you a list of characters that are new in this level. The middle two info boxes show your current typing speed (in characters per minute) and your correctness. These values are Level Statistics and whenever you start a new level these values are resetted. However, the program still remembers your previous statistics (see section <link linkend="statistics">Statistics in &ktouch;</link>).
+In the info boxes@top of the &ktouch; main window you see the current
+level@the left. The small buttons to the right allow you to manually switch
+levels. Normally this happens automatically (more about this in the section
+<link linkend="training_options">Training Options</link>). The right info box
+shows a brief information text about the level. Usually it gives you a list of
+characters that are new in this level. The middle two info boxes show your
+current typing speed (in characters per minute) and your correctness. These
+values are Level Statistics and whenever you start a new level these values
+are resetted. However, the program still remembers your previous statistics
+(see section <link linkend="statistics">Statistics in &ktouch;</link>).
 </para>
 </sect2>
 
 <sect2 id="starting_stopping">
 <title>Starting and stopping a training session</title>
 <para>
-While you type the text of a training lecture you are in a practice session. You can start a new practice session using <menuchoice><guimenu>Training</guimenu><guimenuitem>Start New Session</guimenuitem></menuchoice> or the appropriate button in the toolbar. Level changes (automatic or manual) do not change your training session. You stay in this training session until you start a new training session, select a new lecture (which automatically starts a new training session) or quit the program. 
+While you type the text of a training lecture you are in a practice session.
+You can start a new practice session using
+<menuchoice><guimenu>Training</guimenu><guimenuitem>Start New
+Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
+Level changes (automatic or manual) do not change your training session. You
+stay in this training session until you start a new training session, select a
+new lecture (which automatically starts a new training session) or quit the
+program.
 </para>
 <para>
-If you open any dialog in &ktouch; while you are in a training session the training is paused and the timer is stopped until you hit the next key. You can manually pause the session using <menuchoice><guimenu>Training</guimenu><guimenuitem>Pause Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
+If you open any dialog in &ktouch; while you are in a training session the
+training is paused and the timer is stopped until you hit the next key. You
+can manually pause the session using
+<menuchoice><guimenu>Training</guimenu><guimenuitem>Pause
+Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
 </para>
 </sect2>
 
@@ -189,7 +253,12 @@ If you open any dialog in &ktouch; while you are in a training session the train
 
 <sect1 id="statistics">
 <title>Statistics in &ktouch;</title>
-<para>&ktouch; remembers you! Basically whatever you type is recorded and some useful (and sometimes just interesting) statistics are created. &ktouch; stores statistical data based on the lecture file you use for training. For every lecture file a separate history is kept. &ktouch; also distinguishes between level and practice session statistics. This is important to prevent cheating :-).
+<para>&ktouch; remembers you! Basically whatever you type is recorded and some
+useful (and sometimes just interesting) statistics are created. &ktouch;
+stores statistical data based on the lecture file you use for training. For
+every lecture file a separate history is kept. &ktouch; also distinguishes
+between level and practice session statistics. This is important to prevent
+cheating :-).
 </para>
 
 <sect2>
@@ -197,11 +266,14 @@ If you open any dialog in &ktouch; while you are in a training session the train
 <screenshot>
 <screeninfo>Current Training Statistics</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="statistics_dialog.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="statistics_dialog.png"
+format="PNG"/></imageobject>
 <textobject><phrase>Current Training Statistics</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>Whenever you start a new training session a new statistics record is started. &ktouch; remembers several things to assess your skill and to help you identify problem keys:
+<para>Whenever you start a new training session a new statistics record is
+started. &ktouch; remembers several things to assess your skill and to help
+you identify problem keys:
 </para>
 <itemizedlist>
 <listitem><simpara>How many keys were pressed in total?</simpara></listitem>
@@ -210,29 +282,46 @@ If you open any dialog in &ktouch; while you are in a training session the train
 <listitem><simpara>How many correct words did you type?</simpara></listitem>
 <listitem><simpara>How much time did you need?</simpara></listitem>
 </itemizedlist>
-<para>Using training session statistics you and &ktouch; can evaluate your overall performance and skill in a certain training lecture.</para>
+<para>Using training session statistics you and &ktouch; can evaluate your
+overall performance and skill in a certain training lecture.</para>
 </sect2>
 
 <sect2>
 <title>Level Statistics</title>
-<para>For each level in your training session (&ie; all levels you typed text in) the same statistics as for the training session are obtained. Using level statistics data you can investigate your progress in each level of a training lecture (and you will notice how your skill increases level by level and you can concentrate on the levels which still cause problems).
+<para>For each level in your training session (&ie; all levels you typed text
+in) the same statistics as for the training session are obtained. Using level
+statistics data you can investigate your progress in each level of a training
+lecture (and you will notice how your skill increases level by level and you
+can concentrate on the levels which still cause problems).
 </para>
 </sect2>
 
 <sect2>
 <title>The Statistics Dialog</title>
-<para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar opens the statistics dialog. It displays your current training and level statistics and shows a graphical history of previous training sessions.
+<para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture
+Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar
+opens the statistics dialog. It displays your current training and level
+statistics and shows a graphical history of previous training sessions.
 </para>
 <para>
-When you open the statistics dialog you can select a Session Statistics Page and a Level Statistics Page. The first page gives you a summary about everything you typed so far. The Level Statistics Page only contains the stats for the current level. This is useful to distinguish between overall performance and skill in certain levels.
+When you open the statistics dialog you can select a Session Statistics Page
+and a Level Statistics Page. The first page gives you a summary about
+everything you typed so far. The Level Statistics Page only contains the stats
+for the current level. This is useful to distinguish between overall
+performance and skill in certain levels.
 </para>
 <para>
-The third statistics page gives you a graphical overview of your typing skill by offering several choices. A note about the time scaling option. Whenever a session or level statistic is obtained, also the date is stored. So you can also see how your skill dropped in long training breaks and when you last practiced a certain lecture or level.
+The third statistics page gives you a graphical overview of your typing skill
+by offering several choices. A note about the time scaling option. Whenever a
+session or level statistic is obtained, also the date is stored. So you can
+also see how your skill dropped in long training breaks and when you last
+practiced a certain lecture or level.
 </para>
 <screenshot>
 <screeninfo>Training Statistics Chart</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="statistics_dialog_chart.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="statistics_dialog_chart.png"
+format="PNG"/></imageobject>
 <textobject><phrase>Training Statistics Chart</phrase></textobject>
 </mediaobject>
 </screenshot>
@@ -243,51 +332,85 @@ The third statistics page gives you a graphical overview of your typing skill by
 
 <chapter id="ui_guide">
 <title>The &ktouch; main menu and program dialogs</title>
-<para>In this chapter we look at some of the details in the program.
-<tip><para>You can use the <quote>What's this?</quote> feature (the little question mark besides the minimize/maximize window buttons) in many dialogs of the program.</para></tip>
+<para>In this chapter we look@some of the details in the program.
+<tip><para>You can use the <quote>What's this?</quote> feature (the little
+question mark besides the minimize/maximize window buttons) in many dialogs of
+the program.</para></tip>
 </para>
 
 <sect1 id="main_menu">
 <title>The menu of &ktouch;</title>
-<para>Pretty much everything in the &ktouch; menu should be self-explanatory. The file menu contains options to load a user defined lecture and edit lectures. The training menu contains training options and the settings menu contains options to setup the program. The various options in the configuration dialog are explained in the next section.</para>
+<para>Pretty much everything in the &ktouch; menu should be self-explanatory.
+The file menu contains options to load a user defined lecture and edit
+lectures. The training menu contains training options and the settings menu
+contains options to setup the program. The various options in the
+configuration dialog are explained in the next section.</para>
 </sect1>
 
 <sect1 id="program_settings">
 <title>Configuration options for &ktouch;</title>
-<para>You can customize &ktouch; quite a bit. The settings are always stored for the current user of the program. Open the configuration dialog via <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ktouch; ...</guimenuitem></menuchoice>.</para>
+<para>You can customize &ktouch; quite a bit. The settings are always stored
+for the current user of the program. Open the configuration dialog via
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ktouch;
+...</guimenuitem></menuchoice>.</para>
 
 <sect2 id="general_options">
 <title>General Options</title>
-<para>In this dialog you can change general options that control the behaviour of &ktouch;.
+<para>In this dialog you can change general options that control the behaviour
+of &ktouch;.
 </para>
 <screenshot>
 <screeninfo>General options</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="general_options.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="general_options.png"
+format="PNG"/></imageobject>
 <textobject><phrase>General options</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>First of all you can switch the sound on or off (might be useful in class rooms). You can also set the sliding speed of the teacher's and student's line.
+<para>First of all you can switch the sound on or off (might be useful in
+class rooms). You can also set the sliding speed of the teacher's and
+student's line.
 </para>
-<para>Most important, however, might be the selection of the lecture font. When showing the teacher's text &ktouch; will normally use the font specified in the lecture file. But if this font doesn't exist on your system or none has been specified, &ktouch; uses a default system font. What if this font does not contain all characters needed for your lecture? In such cases you can override the choice of the font and specify any font you like.
-<note><para>&ktouch; distinguishes between lecture and keyboard fonts. Overriding the lecture font does not automatically adjust the keyboard font as well. Use the appropriate option in the Keyboard Options configuration page.</para></note>
+<para>Most important, however, might be the selection of the lecture font.
+When showing the teacher's text &ktouch; will normally use the font specified
+in the lecture file. But if this font doesn't exist on your system or none has
+been specified, &ktouch; uses a default system font. What if this font does
+not contain all characters needed for your lecture? In such cases you can
+override the choice of the font and specify any font you like.
+<note><para>&ktouch; distinguishes between lecture and keyboard fonts.
+Overriding the lecture font does not automatically adjust the keyboard font as
+well. Use the appropriate option in the Keyboard Options configuration
+page.</para></note>
 </para>
 </sect2>
 
 <sect2 id="training_options">
 <title>Training Options</title>
-<para>In this dialog you can select the options that control how &ktouch; changes difficulty levels based on the user's skill.</para>
+<para>In this dialog you can select the options that control how &ktouch;
+changes difficulty levels based on the user's skill.</para>
 <screenshot>
 <screeninfo>Training options</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="training_options.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
 <textobject><phrase>Training options</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>If <guibutton>Automatic level adjustment</guibutton> is enabled, &ktouch; checks the given limits at the end of each level and decides whether to increase or decrease the level or stay in the level for another run. Level changes occur always at the end of a level (&ie; when the user has finished the last line of a level). If the typing speed (in characters per seconds) and accuracy (correctness) are <emphasis>both</emphasis> above or equal to the <quote>Limits to increase level</quote> &ktouch; will jump to the next higher level. If <emphasis>either</emphasis> typing speed or accuracy falls below the <quote>Limits to decrease level</quote> &ktouch; will jump back to the previous lower level.
+<para>If <guibutton>Automatic level adjustment</guibutton> is enabled,
+&ktouch; checks the given limits@the end of each level and decides whether to
+increase or decrease the level or stay in the level for another run. Level
+changes occur always@the end of a level (&ie; when the user has finished the
+last line of a level). If the typing speed (in characters per seconds) and
+accuracy (correctness) are <emphasis>both</emphasis> above or equal to the
+<quote>Limits to increase level</quote> &ktouch; will jump to the next higher
+level. If <emphasis>either</emphasis> typing speed or accuracy falls below the
+<quote>Limits to decrease level</quote> &ktouch; will jump back to the
+previous lower level.
 </para>
 <para>
-On this configuration page you can also select that the program remembers your current level when you quit the program and jumps back to it when you restart &ktouch;.
+On this configuration page you can also select that the program remembers your
+current level when you quit the program and jumps back to it when you restart
+&ktouch;.
 </para>
 </sect2>
 
@@ -297,12 +420,19 @@ On this configuration page you can also select that the program remembers your c
 <screenshot>
 <screeninfo>Keyboard options</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="keyboard_options.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="keyboard_options.png"
+format="PNG"/></imageobject>
 <textobject><phrase>Keyboard options</phrase></textobject>
 </mediaobject>
 </screenshot>
 <para>
-This dialog controls the appearance and functionality of the keyboard. Similar to the <quote>Override lecture font</quote> option in the general settings configuration page, you can here specify your own keyboard font. The option <quote>Highlight keys on keyboard</quote> can be used to increase the difficulty of the training. <tip><para>Once you are familiar with the keyboard you may want to turn keyboard highlighting off so it won't distract you when you concentrate on the teacher's text.</para></tip>
+This dialog controls the appearance and functionality of the keyboard. Similar
+to the <quote>Override lecture font</quote> option in the general settings
+configuration page, you can here specify your own keyboard font. The option
+<quote>Highlight keys on keyboard</quote> can be used to increase the
+difficulty of the training. <tip><para>Once you are familiar with the keyboard
+you may want to turn keyboard highlighting off so it won't distract you when
+you concentrate on the teacher's text.</para></tip>
 </para>
 </sect2>
 
@@ -313,12 +443,17 @@ This dialog controls the appearance and functionality of the keyboard. Similar t
 <screenshot>
 <screeninfo>Color options</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="color_options.png" format="PNG"/></imageobject>
+<imageobject><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
 <textobject><phrase>Color options</phrase></textobject>
 </mediaobject>
 </screenshot>
 <para>
-This configuration page does not need much explaination. You can choose among four predefined color schemes for the keyboard. Alternatively you can switch the color schemes <quote>on the fly</quote> using the menu option <menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Color Schemes</guimenuitem></menuchoice>.
+This configuration page does not need much explaination. You can choose among
+four predefined color schemes for the keyboard. Alternatively you can switch
+the color schemes <quote>on the fly</quote> using the menu option
+<menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Color
+Schemes</guimenuitem></menuchoice>.
 </para>
 </sect2>
 
@@ -331,28 +466,39 @@ This configuration page does not need much explaination. You can choose among fo
 
 <sect1 id="create_lectures">
 <title>Creating your own lecture</title>
-<para>You can easily create your own training lecture using the built-in &ktouch; lecture editor. When you select <menuchoice><guimenu>File</guimenu><guimenuitem>Edit Lecture...</guimenuitem></menuchoice> the <quote>Open Request Dialog</quote> will open and ask you to select a lecture. You can choose either edit the current lecture, any of the predefined lectures (if you have write access to the installation directoy) or create an empty lecture from scratch.</para>
+<para>You can easily create your own training lecture using the built-in
+&ktouch; lecture editor. When you select
+<menuchoice><guimenu>File</guimenu><guimenuitem>Edit
+Lecture...</guimenuitem></menuchoice> the <quote>Open Request Dialog</quote>
+will open and ask you to select a lecture. You can choose either edit the
+current lecture, any of the predefined lectures (if you have write access to
+the installation directoy) or create an empty lecture from scratch.</para>
 
 <sect2>
 <title>Creating a lecture</title>
 <para>
-Let's assume you want to create a new lecture. There are a few guidelines you may want to consider:
+Let's assume you want to create a new lecture. There are a few guidelines you
+may want to consider:
 </para>
 <itemizedlist>
 
 
 <listitem><para>
-For the first 20 keys or so, only add 2 keys at a time to a new level. Let the user practice the keys alone first in different combinations and then use the new keys in words and mixed with already known words.
+For the first 20 keys or so, only add 2 keys@a time to a new level. Let the
+user practice the keys alone first in different combinations and then use the
+new keys in words and mixed with already known words.
 </para></listitem>
 
-<listitem><para>Add at least a few levels to the lecture in order to allow the user to see some progress while training</para></listitem>
+<listitem><para>Add@least a few levels to the lecture in order to allow the
+user to see some progress while training</para></listitem>
 
 <listitem><para>
 Don't make the levels too long.
 </para></listitem>
 
 <listitem><para>
-Try to increase the difficulty of the text gradually and test your text yourself.
+Try to increase the difficulty of the text gradually and test your text
+yourself.
 </para></listitem>
 
 <listitem><para>
@@ -365,12 +511,18 @@ After the first keys have been learned include a recap lecture.
 <sect2>
 <title>Things to know about lectures</title>
 <para>
-The lecture title is important for the quick-select menu entry in the training menu and for the statistics. The comment should be used to include information about the lecture author and source of lecture data if any.
+The lecture title is important for the quick-select menu entry in the training
+menu and for the statistics. The comment should be used to include information
+about the lecture author and source of lecture data if any.
 </para>
 <para>
-For each level you can specify the new characters/keys in the lecture. The text you enter there will be shown as level information text in the top right info box of the &ktouch; main window. 
+For each level you can specify the new characters/keys in the lecture. The
+text you enter there will be shown as level information text in the top right
+info box of the &ktouch; main window.
 </para>
-<para>You can also specify a default font for the lecture which will be used in the teacher's and student's line and of course in the edit lecture dialog using the <guibutton>Change Font...</guibutton> button.
+<para>You can also specify a default font for the lecture which will be used
+in the teacher's and student's line and of course in the edit lecture dialog
+using the <guibutton>Change Font...</guibutton> button.
 </para>
 </sect2>
 
@@ -378,11 +530,18 @@ For each level you can specify the new characters/keys in the lecture. The text 
 
 <sect1 id="create_keyboards">
 <title>Creating your own keyboard</title>
-<para>You can create your own keyboards by creating keyboard files. Currently &ktouch; doesn't have a keyboard editor but it is still pretty easy to define your own keyboard. It doesn't require much more than a little math to work out the geometry and some time. Best is to start with an existing keyboard file, create a copy for your keyboard layout and simply adjust the lines.</para>
+<para>You can create your own keyboards by creating keyboard files. Currently
+&ktouch; doesn't have a keyboard editor but it is still pretty easy to define
+your own keyboard. It doesn't require much more than a little math to work out
+the geometry and some time. Best is to start with an existing keyboard file,
+create a copy for your keyboard layout and simply adjust the lines.</para>
 <para>
-Currently keyboard files are plain UTF-8 encoded text files. In one of the next version of &ktouch; keyboard data will be stored in XML files, too. Therefore I'll only briefly explain the structure of a keyboard file.
+Currently keyboard files are plain UTF-8 encoded text files. In one of the
+next version of &ktouch; keyboard data will be stored in XML files, too.
+Therefore I'll only briefly explain the structure of a keyboard file.
 </para>
-<para>A keyboard file usually starts with a header including some information about the author and type of the keyboard.</para>
+<para>A keyboard file usually starts with a header including some information
+about the author and type of the keyboard.</para>
 <programlisting>
 ####################################################
 #    KTouch
@@ -391,7 +550,9 @@ Currently keyboard files are plain UTF-8 encoded text files. In one of the next 
 ####################################################
 </programlisting>
 <para>
-All lines starting with a hash character '#' are considered comments. After the header section a block of so called <quote>finger keys</quote> follows, indicating the resting positions for all 8 fingers.
+All lines starting with a hash character '#' are considered comments. After
+the header section a block of so called <quote>finger keys</quote> follows,
+indicating the resting positions for all 8 fingers.
 </para>
 <programlisting>
 #
@@ -406,8 +567,13 @@ FingerKey  107      K        88   20
 FingerKey  108      L        98   20
 FingerKey  246      Ö        108  20
 </programlisting>
-<para>Keys have the default dimensions of 8 units, so using a grid of 10 units gives a normal looking keyboard. The first number is the unicode character code as decimal number. The KeyText is the text printed on the key encoded as UTF-8 (automatic under newer Linux versions, just make sure your editor saves files as UTF-8 format).</para>
-<para>The next section contains special keys, which are - apart from BackSpace and Enter - just decorative.</para>
+<para>Keys have the default dimensions of 8 units, so using a grid of 10 units
+gives a normal looking keyboard. The first number is the unicode character
+code as decimal number. The KeyText is the text printed on the key encoded as
+UTF-8 (automatic under newer Linux versions, just make sure your editor saves
+files as UTF-8 format).</para>
+<para>The next section contains special keys, which are - apart from BackSpace
+and Enter - just decorative.</para>
 <programlisting>
 #
 #           Unicode  KeyText    x     y     Width Height
@@ -425,8 +591,16 @@ ControlKey  259      CapsLock   0     20    18    10
 ControlKey  8        BackSpace  130   0     20    10
 </programlisting>
 <para>
- The text you specify for the key is printed completely on the keyboard. However, for the keytexts <quote>Shift</quote>, <quote>CapsLock</quote>, <quote>Tab</quote>, <quote>BackSpace</quote> and <quote>Enter</quote> &ktouch; draws the appropriate symbols. Hence you can use these keytexts regardless of the language. The other keytexts like Ctrl or Alt need to be translated though. The geometry of the control keys can be any rectangle, defined by upper left x and y coordinates and width and height.</para>
-<para>The next section contains all characters on the keyboard (except the already defined finger keys) that can be typed <emphasis>without</emphasis> pressing shift.</para>
+ The text you specify for the key is printed completely on the keyboard.
+However, for the keytexts <quote>Shift</quote>, <quote>CapsLock</quote>,
+<quote>Tab</quote>, <quote>BackSpace</quote> and <quote>Enter</quote> &ktouch;
+draws the appropriate symbols. Hence you can use these keytexts regardless of
+the language. The other keytexts like Ctrl or Alt need to be translated
+though. The geometry of the control keys can be any rectangle, defined by
+upper left x and y coordinates and width and height.</para>
+<para>The next section contains all characters on the keyboard (except the
+already defined finger keys) that can be typed <emphasis>without</emphasis>
+pressing shift.</para>
 <programlisting>
 #
 #          Unicode  KeyChar   x    y      FingerKeyUnicode
@@ -444,13 +618,18 @@ NormalKey  54       6         60   0      102
 NormalKey  46       .         103  30     108
 NormalKey  45       -         113  30     246
 </programlisting>
-<para>The definition of these primary keys or chars is pretty much the same as for the finger keys, but they include an additional property. The last unicode character code identifies the associated finger key. Basically which finger has to be used to press this key.</para>
+<para>The definition of these primary keys or chars is pretty much the same as
+for the finger keys, but they include an additional property. The last unicode
+character code identifies the associated finger key. Basically which finger
+has to be used to press this key.</para>
 <para>
-The next and last section in a keyboard layout defines all keys that are pressed by using a modifier key such as the shift key.
+The next and last section in a keyboard layout defines all keys that are
+pressed by using a modifier key such as the shift key.
 </para>
 <programlisting>
 #
-#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode     Comment
+#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode    
+Comment
 #
 HiddenKey   65        97              97              258                 #A
 HiddenKey   66        98              102             258                 #B
@@ -462,10 +641,23 @@ HiddenKey   68        100             100             258                 #D
 HiddenKey   124       60              97              264                 #|
 HiddenKey   64        113             97              264                 #@
 </programlisting>
-<para>The <quote>hidden keys</quote> are really controlling what should happen on the keyboard when you type a certain character. The first unicode number is the character code of the character you define. The second number is the character code of the key on the keyboard (one of the already defined normal keys). The third number indicates a finger key (where does the finger rest that is needed to type the key) and the last number indicates the modifier key you need to press to get this character.
+<para>The <quote>hidden keys</quote> are really controlling what should happen
+on the keyboard when you type a certain character. The first unicode number is
+the character code of the character you define. The second number is the
+character code of the key on the keyboard (one of the already defined normal
+keys). The third number indicates a finger key (where does the finger rest
+that is needed to type the key) and the last number indicates the modifier key
+you need to press to get this character.
 </para>
-<para>Let's look at an example:</para>
-<para>You want to define the upper case 'R' character. It has the unicode 82. The character obtained when the 'R' key is pressed without modifier is the small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key which has the unicode 102. And in order to get the 'R' you need to press the right (or left) shift key which has the code 264 (this is actually not a unicode but the code obtained from a keypress event of QT). Note that the identification of controll keys will likely change in the next version of &ktouch;.  But for now you can use the codes used in other keyboard files.
+<para>Let's look@an example:</para>
+<para>You want to define the upper case 'R' character. It has the unicode 82.
+The character obtained when the 'R' key is pressed without modifier is the
+small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key
+which has the unicode 102. And in order to get the 'R' you need to press the
+right (or left) shift key which has the code 264 (this is actually not a
+unicode but the code obtained from a keypress event of QT). Note that the
+identification of controll keys will likely change in the next version of
+&ktouch;.  But for now you can use the codes used in other keyboard files.
 </para>
 
 </sect1>
@@ -486,7 +678,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>File</guimenu>
 <guimenuitem>Open Lecture...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Open</action> a new training lecture file</para></listitem>
+<listitem><para><action>Open</action> a new training lecture
+file</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -494,7 +687,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>File</guimenu>
 <guimenuitem>Edit Lecture...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Open</action> the lecture editor to allow you to change the current training file </para></listitem>
+<listitem><para><action>Open</action> the lecture editor to allow you to
+change the current training file </para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -522,7 +716,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>Training</guimenu>
 <guimenuitem>Start New Session</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Start</action> a new typing session and ask you if you want to start at the same level</para></listitem>
+<listitem><para><action>Start</action> a new typing session and ask you if you
+want to start@the same level</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -530,7 +725,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>Training</guimenu>
 <guimenuitem>Pause Session</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Pause</action> the current session: statistics are on hold</para></listitem>
+<listitem><para><action>Pause</action> the current session: statistics are on
+hold</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -538,7 +734,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>Training</guimenu>
 <guimenuitem>Lecture Statistics</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Open</action> the current session statistics dialog</para></listitem>
+<listitem><para><action>Open</action> the current session statistics
+dialog</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -547,7 +744,8 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Default Lectures</guisubmenu>
 <guimenuitem>English (auto-generated)</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> what languagee you want to learn touch typing in</para></listitem>
+<listitem><para><action>Choose</action> what languagee you want to learn touch
+typing in</para></listitem>
 </varlistentry>
 
 </variablelist>
@@ -573,7 +771,8 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Keyboard Layouts</guisubmenu>
 <guimenuitem>number.keyboard</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the keyboard layout you want to use, here the number keyboard</para></listitem>
+<listitem><para><action>Choose</action> the keyboard layout you want to use,
+here the number keyboard</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -582,7 +781,9 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Keyboard Color Schemes</guisubmenu>
 <guimenuitem>Black'n White</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the keyboard color layout in black in white: all keys are white and the one you should type is black</para></listitem>
+<listitem><para><action>Choose</action> the keyboard color layout in black in
+white: all keys are white and the one you should type is
+black</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -591,7 +792,8 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Keyboard Color Schemes</guisubmenu>
 <guimenuitem>Classic</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the classic keyboard color layout: each column of keys has a different color</para></listitem>
+<listitem><para><action>Choose</action> the classic keyboard color layout:
+each column of keys has a different color</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -600,7 +802,8 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Keyboard Color Schemes</guisubmenu>
 <guimenuitem>Deep Blue</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the deep blue keyboard color layout: each column of keys has a different color in a shade of blue</para></listitem>
+<listitem><para><action>Choose</action> the deep blue keyboard color layout:
+each column of keys has a different color in a shade of blue</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -609,7 +812,8 @@ HiddenKey   64        113             97              264                 #@
 <guisubmenu>Keyboard Color Schemes</guisubmenu>
 <guimenuitem>Stripy</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the stripy keyboard color layout: in blue and grey</para></listitem>
+<listitem><para><action>Choose</action> the stripy keyboard color layout: in
+blue and grey</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -617,7 +821,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>Settings</guimenu>
 <guimenuitem>Configure Shortcuts...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Configure</action> the shortcuts you want to associate with some actions
+<listitem><para><action>Configure</action> the shortcuts you want to associate
+with some actions
 </para></listitem>
 </varlistentry>
 
@@ -626,7 +831,8 @@ HiddenKey   64        113             97              264                 #@
 <guimenu>Settings</guimenu>
 <guimenuitem>Configure Toolbars...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Configure</action> the items you want to put in the toolbar
+<listitem><para><action>Configure</action> the items you want to put in the
+toolbar
 </para></listitem>
 </varlistentry>
 
@@ -657,8 +863,10 @@ HiddenKey   64        113             97              264                 #@
 <para>
 &ktouch;, Copyright 1999-2005 by</para>
 <itemizedlist>
-<listitem><simpara>Håvard Frøiland <email>haavard AT users DOT sourceforge DOT net</email></simpara></listitem>
-<listitem><simpara>Andreas Nicolai <email>andreas DOT nicolai AT gmx DOT net</email></simpara></listitem>
+<listitem><simpara>Håvard Frøiland <email>haavard@users.sourceforge DOT
+net</email></simpara></listitem>
+<listitem><simpara>Andreas Nicolai <email>andreas.nicolai@gmx DOT
+net</email></simpara></listitem>
 </itemizedlist>
 
 <para> Contributors:</para>
