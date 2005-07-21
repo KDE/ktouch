@@ -8,15 +8,16 @@ de-ch.keyboard \
 de.keyboard \
 de_neo.keyboard \
 dk.keyboard \
+dvorak_es.keyboard \
 dvorak.keyboard \
 dvorak_se.keyboard \
 ee.keyboard \
 en.keyboard \
 es.keyboard \
 fi.keyboard \
-fr.keyboard \
 fr_a.keyboard \
 fr_ch.keyboard \
+fr.keyboard \
 he.keyboard \
 hu.keyboard \
 it.keyboard \
@@ -26,5 +27,4 @@ number.keyboard \
 pl.keyboard \
 pt.keyboard \
 se.keyboard \
-sl.keyboard 
-
+sl.keyboard

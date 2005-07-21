@@ -1,0 +1,149 @@
+####################################################
+#    KTouch
+#    Keybord layout file
+####################################################
+#
+#
+#  FingerKey: This class represents the keys where
+#  your fingers shold rest between typing.
+#
+#		Ascii	KeyText	x	y
+FingerKey	97	A	18	20
+FingerKey	111	O	28	20
+FingerKey	101	E	38	20
+FingerKey	117	U	48	20
+FingerKey	114	R	78	20
+FingerKey	116	T	88	20
+FingerKey	110	N	98	20
+FingerKey	115	S	108	20
+#
+#
+#  ControlKey: This class will represent all the
+#  control keys that you are using. These keys
+#  will be used later when you want to use uppercase.
+#
+#		Assci	KeyText		x	y	Width	Height
+#
+ControlKey	260	Tab		0	10	15	10
+ControlKey	13	Enter		138	10	12	20
+ControlKey	257	Shift		123	30	27	10
+ControlKey	264	AltGr		120	40	15	10
+ControlKey	265	Ctrl		135	40	15	10
+ControlKey	263	Alt		15	40	15	10
+ControlKey	262	Ctrl		0	40	15	10
+ControlKey	32	Space		30	40	90	10
+ControlKey	258	Shift		0	30	13	10
+ControlKey	259	CapsLock	0	20	18	10
+ControlKey	8 	BackSpace	130	0	20	10
+#
+#
+#  NormalKey: This class represent all the
+#  normal keys where you don't need to press
+#  anything else then just one key. That would
+#  basicly bee all the numbers and the lowercase
+#  letters. For this class you have to indicate
+#  which finger key you are going to use.
+#
+#		Assci	KeyText	x	y	FingerKey
+#
+NormalKey	186	º	0	0	97
+NormalKey	49	1	10	0	97
+NormalKey	50	2	20	0	111
+NormalKey	51	3	30	0	101
+NormalKey	52	4	40	0	117
+NormalKey	53	5	50	0	117
+NormalKey	54	6	60	0	114
+NormalKey	55	7	70	0	114
+NormalKey	56	8	80	0	116
+NormalKey	57	9	90	0	116
+NormalKey 	48	0	100	0	110
+NormalKey	39	'	110	0	115 
+NormalKey	161	¡	120	0	115
+#
+NormalKey	46	.	15	10	97
+NormalKey	44	,	25	10	111
+NormalKey	241	Ñ	35	10	101
+NormalKey	112	P	45	10	117
+NormalKey	121	Y	55	10	117
+NormalKey	102	F	65	10	114
+NormalKey	103	G	75	10	114
+NormalKey	99	C	85	10	116
+NormalKey	104	H	95	10	110
+NormalKey	108	L	105	10	115
+NormalKey	96	(`)	115	10	115
+NormalKey	43	+	125	10	115
+#
+NormalKey	105	I	58	20	117
+NormalKey	100	D	68	20	114
+NormalKey	180	(')	118	20	115
+NormalKey	231	Ç	128	20	115
+#
+NormalKey	60	<	13	30	97
+NormalKey	45	-	23	30	97
+NormalKey	113	Q	33	30	111
+NormalKey	106	J	43	30	101
+NormalKey	107	K	53	30	117
+NormalKey	120	X	63	30	117
+NormalKey	98	B	73	30	114
+NormalKey	109	M	83	30	114
+NormalKey	119	W	93	30	116
+NormalKey	118	V	103	30	110
+NormalKey	122	Z	113	30	115
+#
+#
+#  HiddenKey: This is all the keys that
+#  you cant see. That means that you have
+#  to use an control key to get them. Basically
+#  this is all the uppercase letters.
+#
+#		Ascii	Target	Finger	Control
+#
+HiddenKey	65	97	97	257 #A
+HiddenKey	66	98	114	257 #B
+HiddenKey	67	99	116	257 #C
+HiddenKey	68	100	114	257 #D
+HiddenKey	69	101	101	257 #E
+HiddenKey	70	102	114	257 #F
+HiddenKey	71	103	114	257 #G
+HiddenKey	72	104	110	258 #H
+HiddenKey	73	105	117	258 #I
+HiddenKey	74	106	101	258 #J
+HiddenKey	75	107	117	258 #K
+HiddenKey	76	108	115	258 #L
+HiddenKey	77	109	114	258 #M
+HiddenKey	78	110	110	258 #N
+HiddenKey	209	241	101	257 #Ñ
+HiddenKey	165	164	110	257 #N
+HiddenKey	79	111	111	258 #O
+HiddenKey	80	112	117	258 #P
+HiddenKey	81	113	111	257 #Q
+HiddenKey	82	114	114	257 #R
+HiddenKey	83	115	115	257 #S
+HiddenKey	84	116	116	257 #T
+HiddenKey	85	117	117	258 #U
+HiddenKey	86	118	110	257 #V
+HiddenKey	87	119	116	257 #W
+HiddenKey	88	120	117	257 #X
+HiddenKey	89	121	117	258 #Y
+HiddenKey	90	122	115	257 #Z
+HiddenKey	170	186	97	257 #ª
+HiddenKey	33	49	97	257 #!
+HiddenKey	34	50	111	257 #"
+HiddenKey	183	51	101	257 #·
+HiddenKey	36	52	117	257 #$
+HiddenKey	37	53	117	257 #%
+HiddenKey	38	54	114	257 #&
+HiddenKey	47	55	114	258 #/
+HiddenKey	40	56	116	258 #(
+HiddenKey	41	57	116	258 #)
+HiddenKey	61	48	110	258 #=
+HiddenKey	63	39	115	258 #?
+HiddenKey	191	161	115	258 #¿
+HiddenKey	58	46	97	257 #:
+HiddenKey	59	44	111	257 #;
+HiddenKey	136	96	115	258 #(^)
+HiddenKey	42	43	115	258 #*
+HiddenKey	168	180	115	258 #(")
+HiddenKey	199	231	115	258 #Ç
+HiddenKey	62	60	97	257 #>
+HiddenKey	95	45	97	257 #_
