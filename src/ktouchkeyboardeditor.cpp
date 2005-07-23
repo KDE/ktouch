@@ -234,7 +234,7 @@ bool KTouchKeyboardEditor::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The keyboard has been changed. Do you want to save the changes?"));
+        i18n("The keyboard has been changed. Do you want to save the changes?"),QString::null,KStdGuiItem::save(),KStdGuiItem::discard());
     if (result == KMessageBox::Cancel) return false; // User aborted
     if (result == KMessageBox::Yes) saveBtnClicked();
     // if successfully saved the modified flag will be resetted in the saveBtnClicked() function
