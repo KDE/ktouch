@@ -24,7 +24,7 @@
                 <cstring>groupBox2</cstring>
             </property>
             <property name="title">
-                <string>Lecture properties</string>
+                <string>Lecture Properties</string>
             </property>
             <vbox>
                 <property name="name">
@@ -101,7 +101,7 @@
                 <cstring>groupBox1</cstring>
             </property>
             <property name="title">
-                <string>Level editor</string>
+                <string>Level Editor</string>
             </property>
             <hbox>
                 <property name="name">
@@ -419,7 +419,7 @@
                                 </font>
                             </property>
                             <property name="text">
-                                <string>Level data of level 10</string>
+                                <string>Level Data of Level 10</string>
                             </property>
                         </widget>
                         <widget class="QLabel" row="2" column="0">
