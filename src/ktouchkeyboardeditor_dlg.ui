@@ -13,7 +13,7 @@
         </rect>
     </property>
     <property name="caption">
-        <string>KTouch Keyboard Layout Editor</string>
+        <string>Keyboard Layout Editor</string>
     </property>
     <grid>
         <property name="name">
@@ -32,7 +32,7 @@
                         <cstring>fontButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Change font...</string>
+                        <string>Change Font...</string>
                     </property>
                 </widget>
                 <spacer>
@@ -76,7 +76,7 @@
                         <cstring>saveAsButton</cstring>
                     </property>
                     <property name="text">
-                        <string>Save as...</string>
+                        <string>Save As...</string>
                     </property>
                 </widget>
                 <widget class="KPushButton">
@@ -102,7 +102,7 @@
                 </sizepolicy>
             </property>
             <property name="title">
-                <string>Keyboard layout</string>
+                <string>Keyboard Layout</string>
             </property>
             <vbox>
                 <property name="name">
@@ -148,7 +148,7 @@
                 <cstring>groupBox2</cstring>
             </property>
             <property name="title">
-                <string>Key definitions</string>
+                <string>Key Definitions</string>
             </property>
             <vbox>
                 <property name="name">
@@ -230,7 +230,7 @@
                         <cstring>textLabel1_2</cstring>
                     </property>
                     <property name="text">
-                        <string>Key definition data</string>
+                        <string>Key definition data:</string>
                     </property>
                 </widget>
                 <widget class="QTextEdit">
@@ -253,7 +253,7 @@
                 <cstring>groupBox3</cstring>
             </property>
             <property name="title">
-                <string>Keyboard identification data</string>
+                <string>Keyboard Identification Data</string>
             </property>
             <grid>
                 <property name="name">

@@ -275,7 +275,7 @@
                 <cstring>GroupBox4</cstring>
             </property>
             <property name="title">
-                <string>New characters in this level</string>
+                <string>New Characters in This Level</string>
             </property>
             <vbox>
                 <property name="name">

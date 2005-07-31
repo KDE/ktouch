@@ -877,7 +877,7 @@
                                     </sizepolicy>
                                 </property>
                                 <property name="title">
-                                    <string>Progress chart options</string>
+                                    <string>Progress Chart Options</string>
                                 </property>
                                 <grid>
                                     <property name="name">
@@ -910,7 +910,7 @@
                                                     </font>
                                                 </property>
                                                 <property name="text">
-                                                    <string>Chart data</string>
+                                                    <string>Chart Data</string>
                                                 </property>
                                             </widget>
                                             <widget class="QRadioButton">
@@ -975,7 +975,7 @@
                                                     </font>
                                                 </property>
                                                 <property name="text">
-                                                    <string>Chart type</string>
+                                                    <string>Chart Type</string>
                                                 </property>
                                             </widget>
                                             <widget class="QRadioButton">
@@ -1039,7 +1039,7 @@
                                                     </font>
                                                 </property>
                                                 <property name="text">
-                                                    <string>Time axis scaling</string>
+                                                    <string>Time Axis Scaling</string>
                                                 </property>
                                             </widget>
                                             <widget class="QRadioButton">
@@ -1088,7 +1088,7 @@
                     <cstring>statsPage</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Detailed statistics</string>
+                    <string>Detailed Statistics</string>
                 </attribute>
                 <hbox>
                     <property name="name">
