@@ -90,7 +90,7 @@ void KTouchKeyboardEditor::saveBtnClicked() {
 
 void KTouchKeyboardEditor::saveAsBtnClicked() {
     QString tmp = KFileDialog::getSaveFileName(QString::null, 
-        "*.keyboard.xml|KTouch keyboard files (*.keyboard.xml)\n*.*|All files", this, i18n("Save keyboard layout ...") );
+        i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
         m_currentURL = tmp;
