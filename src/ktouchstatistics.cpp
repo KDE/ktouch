@@ -155,7 +155,7 @@ void KTouchStatistics::updateAverageTab() {
     std::set<KTouchCharStats> charStatsSum = m_trainer->m_session.m_charStats;
     unsigned int lastSession=m_trainer->m_sessionHistory.size()-1;
     for (int i=0; i<sessionCountSlider->value(); ++i) {
-        const KTouchTrainingSession &session = m_trainer->m_sessionHistory[lastSession-i];
+        KTouchTrainingSession &session = m_trainer->m_sessionHistory[lastSession-i];
         unsigned int elapsedTime = session.m_elapsedTime;
         unsigned int totalChars = session.m_totalChars;
         unsigned int correctChars = session.m_correctChars;
