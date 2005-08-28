@@ -20,4 +20,6 @@ nederlands_junior.ktouch.xml \
 nederlands.ktouch.xml \
 norwegian.ktouch.xml \
 polish.ktouch.xml \
-spanish.ktouch.xml
+spanish.ktouch.xml \
+russian.ktouch.xml
+
