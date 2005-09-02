@@ -15,6 +15,7 @@ german3.ktouch.xml \
 german.ktouch.xml \
 german.neo.ktouch.xml \
 german.number.ktouch.xml \
+hungarian.ktouch.xml \
 italian.ktouch.xml \
 nederlands_junior.ktouch.xml \
 nederlands.ktouch.xml \

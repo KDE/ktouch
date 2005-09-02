@@ -26,7 +26,7 @@ no.keyboard \
 number.keyboard \
 pl.keyboard \
 pt.keyboard \
+ru.keyboard \
 se.keyboard \
-sl.keyboard \
-ru.keyboard
+sl.keyboard
 
