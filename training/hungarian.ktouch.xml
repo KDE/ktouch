@@ -3,7 +3,6 @@
  <Comment>Magyar gépírásra tanít - első, próbaverzió
 
  Csak a csüggedésünket el ne veszítsük</Comment>
- <FontSuggestions>Courier 10 Pitch</FontSuggestions>
  <Levels>
 
 <Level>
@@ -16,7 +15,7 @@
 
 <Level>
    
-<NewCharacters>d, k</NewCharacters>
+<NewCharacters>k, d</NewCharacters>
 <Line>dddd kkkk dddd kkkk dddd kkkk dddd kkkk dddd</Line>
 <Line>kkkk dddd kkkk dddd kkkk dddd kkkk dddd kkkk</Line>
 <Line>ffff jjjj ffff jjjj kkjj ffdd kkjj ddff ddkk</Line>
@@ -39,7 +38,7 @@
 
 <Level>
    
-<NewCharacters>a, �</NewCharacters>
+<NewCharacters>a, é</NewCharacters>
 <Line>aaaa éééé aaaa éééé aaaa éééé aaaa éééé aaaa</Line>
 <Line>éééé aaaa éééé aaaa éééé aaaa éééé aaaa éééé</Line>
 <Line>aaéé aaéé aaéé aaéé aaéé aaéé aaéé aaéé aaéé</Line>
@@ -57,7 +56,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>-</NewCharacters>
 <Line>gggg hhhh gggg hhhh gggg hhhh gggg hhhh gggg</Line>
 <Line>hhhh gggg hhhh gggg hhhh gggg hhhh gggg hhhh</Line>
 <Line>agag agag agag agag agag agag agag agag agag</Line>
@@ -70,7 +69,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>rrrr uuuu rrrr uuuu rrrr uuuu rrrr uuuu rrrr</Line>
 <Line>uuuu rrrr uuuu rrrr uuuu rrrr uuuu rrrr uuuu</Line>
 <Line>uurr uurr uurr uurr uurr uurr uurr uurr uurr</Line>
@@ -84,7 +83,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>eeee iiii eeee iiii eeee iiii eeee iiii eeee</Line>
 <Line>iiii eeee iiii eeee iiii eeee iiii eeee iiii</Line>
 <Line>eeii eeii eeii eeii eeii eeii eeii eeii eeii</Line>
@@ -99,7 +98,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>wwww oooo wwww oooo wwww oooo wwww oooo wwww</Line>
 <Line>oooo wwww oooo wwww oooo wwww oooo wwww oooo</Line>
 <Line>wwoo wwoo wwoo wwoo wwoo wwoo wwoo wwoo wwoo</Line>
@@ -112,7 +111,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>qqqq pppp qqqq pppp qqqq pppp qqqq pppp qqqq</Line>
 <Line>pppp qqqq pppp pppp qqqq pppp pppp qqqq pppp</Line>
 <Line>qqpp qqpp qqpp qqpp qqpp qqpp qqpp qqpp qqpp</Line>
@@ -124,7 +123,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>vvvv mmmm vvvv mmmm vvvv mmmm vvvv mmmm vvvv</Line>
 <Line>mmmm vvvv mmmm vvvv mmmm vvvv mmmm vvvv mmmm</Line>
 <Line>vvmm vvmm vvmm vvmm vvmm vvmm vvmm vvmm vvmm</Line>
@@ -137,7 +136,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>cccc ,,,, cccc ,,,, cccc ,,,, cccc ,,,, cccc</Line>
 <Line>,,,, cccc ,,,, cccc ,,,, cccc ,,,, cccc ,,,,</Line>
 <Line>cc,, cc,, cc,, cc,, cc,, cc,, cc,, cc,, cc,,</Line>
@@ -150,7 +149,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>xxxx .... xxxx .... xxxx .... xxxx .... xxxx</Line>
 <Line>.... xxxx .... xxxx .... xxxx .... xxxx ....</Line>
 <Line>xx.. xx.. xx.. xx.. xx.. xx.. xx.. xx.. xx..</Line>
@@ -161,7 +160,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>yyyy ---- yyyy ---- yyyy ---- yyyy ---- yyyy</Line>
 <Line>---- yyyy ---- yyyy ---- yyyy ---- yyyy ----</Line>
 <Line>yy-- yy-- yy-- yy-- yy-- yy-- yy-- yy-- yy--</Line>
@@ -172,7 +171,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>fakad valamerre és veres eme kerek mely él.</Line>
 <Line>megy és remél gyula, hogy elég vas fakad mely</Line>
 <Line>lopja, marja vedeli feri aki méri éli mi él.</Line>
@@ -187,7 +186,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>tttt zzzz tttt zzzz tttt zzzz tttt zzzz tttt</Line>
 <Line>zzzz tttt zzzz tttt zzzz tttt zzzz tttt zzzz</Line>
 <Line>ttzz ttzz ttzz ttzz ttzz ttzz ttzz ttzz ttzz</Line>
@@ -199,7 +198,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>nnnn bbbb nnnn bbbb nnnn bbbb nnnn bbbb nnnn</Line>
 <Line>bbbb nnnn bbbb nnnn bbbb nnnn bbbb nnnn bbbb</Line>
 <Line>nnbb nnbb nnbb nnbb nnbb nnbb nnbb nnbb nnbb</Line>
@@ -210,7 +209,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>áááá íííí áááá íííí áááá íííí áááá íííí áááá</Line>
 <Line>íííí áááá íííí áááá íííí áááá íííí áááá íííí</Line>
 <Line>ááíí ááíí ááíí ááíí ááíí ááíí ááíí ááíí ááíí</Line>
@@ -222,7 +221,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>öööö üüüü öööö üüüü öööö üüüü öööö üüüü öööö</Line>
 <Line>üüüü öööö üüüü öööö üüüü öööö üüüü öööö üüüü</Line>
 <Line>ööüü ööüü ööüü ööüü ööüü ööüü ööüü ööüü ööüü</Line>
@@ -233,7 +232,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>óóóó úúúú óóóó úúúú óóóó úúúú óóóó úúúú óóóó</Line>
 <Line>úúúú óóóó úúúú óóóó úúúú óóóó úúúú óóóó úúúú</Line>
 <Line>óóúú óóúú óóúú óóúú óóúú óóúú óóúú óóúú óóúú</Line>
@@ -244,7 +243,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>őőőő űűűű őőőő űűűű őőőő űűűű őőőő űűűű őőőő</Line>
 <Line>űűűű őőőő űűűű őőőő űűűű őőőő űűűű őőőő űűűű</Line>
 <Line>őőűű őőűű őőűű őőűű őőűű őőűű őőűű őőűű őőűű</Line>
@@ -256,7 +255,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>FFFF JJJJ FFFF JJJJ FFFF JJJJ FFFF JJJJ FFFF</Line>
 <Line>FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ</Line>
 <Line>AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ</Line>
@@ -271,7 +270,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>A főtér felöl a templomnak tartottunk.</Line>
 <Line>Végighaladtunk a parkon. Az öreg gimná-</Line>
 <Line>ziumi hittanárunk ott ült a rendes padján,</Line>
@@ -294,7 +293,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>Sajátos növényvilág tenyészett itt. Hosszú</Line>
 <Line>szárú, kürt alakú virágok, amelyek szirmai</Line>
 <Line>mintha fekete bársonyból volnának. A sarok-</Line>
@@ -319,7 +318,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>Elmondom önöknek, hogy miért, bár ha csak</Line>
 <Line>ráemlékszem is a dologra, reszkető félelem</Line>
 <Line>fog el, a gyomrom rémületes undorban vonaglik,</Line>
@@ -336,7 +335,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>Azon a napon, amikor a Linuxot valaki más</Line>
 <Line>jobban tudja szolgálni -- az FSF egy termé-</Line>
 <Line>szetes alternatíva --, félreállok. Nem gon-</Line>
@@ -364,7 +363,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>Volt idő amikor az ember teljes életet tudott élni</Line>
 <Line>számítógép nélkül. Sokan azt hiszik ez ma már lehetetlen,</Line>
 <Line>mert a számítógép annyira hétköznapjaink eszközeivé vált.</Line>
@@ -394,7 +393,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>A harmadrangú külvárosi kávéházban - ahová egy</Line>
 <Line>időben jártam - kezdettől fogva feltűnt nekem a</Line>
 <Line>sebész. Állandóan fekete, zöldre kopott, de tiszta</Line>
@@ -417,7 +416,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>Egyszer meghallotta, amikor egy orvosi lapot kértem.</Line>
 <Line>Megszólított. Dícsérte az orvosi foglalkozást,</Line>
 <Line>kérdezősködött az egyetemről. Elbeszélgettünk,</Line>
@@ -434,7 +433,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>4444 7777 4444 7777 4444 7777 4444 7777 4444 7777</Line>
 <Line>4477 4477 4477 4477 4477 4477 4477 4477 4477 4477</Line>
 <Line>7744 7744 7744 7744 7744 7744 7744 7744 7744 7744</Line>
@@ -445,7 +444,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>3333 8888 3333 8888 3333 8888 3333 8888 3333 8888 </Line>
 <Line>3388 3388 3388 3388 3388 3388 3388 3388 3388 3388</Line>
 <Line>8833 8833 8833 8833 8833 8833 8833 8833 8833 8833</Line>
@@ -457,7 +456,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>2222 9999 2222 9999 2222 9999 2222 9999 2222 9999</Line>
 <Line>9999 2222 9999 2222 9999 2222 9999 2222 9999 2222</Line>
 <Line>2299 2299 2299 2299 2299 2299 2299 2299 2299 2299</Line>
@@ -469,7 +468,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>1111 0000 1111 0000 1111 0000 1111 0000 1111</Line>
 <Line>0000 1111 0000 1111 0000 1111 0000 1111 0000</Line>
 <Line>1100 1100 1100 1100 1100 1100 1100 1100 1100</Line>
@@ -479,7 +478,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>5555 7777 5555 7777 5555 7777 5555 7777 5555</Line>
 <Line>7777 5555 7777 5555 7777 5555 7777 5555 7777</Line>
 <Line>5577 7755 5577 7755 5577 7755 5577 7755 5577</Line>
@@ -491,7 +490,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>!!!! ==== !!!! ==== !!!! ==== !!!! ==== !!!!</Line>
 <Line>==== !!!! ==== !!!! ==== !!!! ==== !!!! ====</Line>
 <Line>!!== !!== !!== !!== !!== !!== !!== !!== !!==</Line>
@@ -501,7 +500,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>++++ (((( ++++ (((( ++++ (((( ++++ (((( ++++</Line>
 <Line>(((( ++++ (((( ++++ (((( ++++ (((( ++++ ((((</Line>
 <Line>++(( ++(( ++(( ++(( ++(( ++(( ++(( ++(( ++((</Line>
@@ -511,7 +510,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>"""" )))) """" )))) """" )))) """" )))) """"</Line>
 <Line>)))) """" )))) """" )))) """" )))) """" ))))</Line>
 <Line>"")) "")) "")) "")) "")) "")) "")) "")) ""))</Line>
@@ -520,7 +519,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>'''' %%%% //// '''' %%%% //// '''' %%%% ////</Line>
 <Line>//// %%%% '''' //// %%%% '''' //// %%%% '''' </Line>
 <Line>/%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/</Line>
@@ -528,7 +527,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>[[[[ ]]]] $$$$ [[[[ ]]]] $$$$ [[[[ ]]]] $$$$</Line>
 <Line>]]]] [[[[ $$$$ ]]]] [[[[ $$$$ ]]]] [[[[ $$$$</Line>
 <Line>[[$$]] [[$$]] [[$$]] [[$$]] [[$$]] [[$$]]</Line>
@@ -536,7 +535,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>@@@@ {{{{ }}}} @@@@ {{{{ }}}} @@@@ {{{{ }}}}</Line>
 <Line>{{{{ }}}} @@@@ {{{{ }}}} @@@@ {{{{ }}}} @@@@</Line>
 <Line>{{@@}} {{@@}} {{@@}} {{@@}} {{@@}} {{@@}}</Line>
@@ -544,7 +543,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>**** ```` ~~~~ **** ```` ~~~~ **** ```` ~~~~</Line>
 <Line>```` **** ~~~~ ```` **** ~~~~ ```` **** ~~~~</Line>
 <Line>``**~~ ``**~~ ``**~~ ``**~~ ``**~~ ``**~~ </Line>
@@ -552,7 +551,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line>^^^^ #### &&&& ^^^^ #### &&&& ^^^^ #### &&&&</Line>
 <Line>&&&& #### ^^^^ &&&& #### ^^^^ &&&& #### ^^^^</Line>
 <Line>##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^</Line>
@@ -560,7 +559,7 @@
 
 <Level>
    
-<NewCharacters>Cseréld ki</NewCharacters>
+<NewCharacters>Ez-az</NewCharacters>
 <Line><<<< >>>> ;;;; <<<< >>>> ;;;; <<<< >>>> ;;;;</Line>
 <Line>;;;; >>>> <<<< ;;;; >>>> <<<< ;;;; >>>> <<<<</Line>
 <Line><<;;>> <<;;>> <<;;>> <<;;>> <<;;>> <<;;>></Line>
