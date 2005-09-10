@@ -10,6 +10,7 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+#include "config.h"
 #include "ktouchstatisticsdata.h"
 
 #include <qfile.h>
@@ -21,7 +22,11 @@
 #include <ktempfile.h>
 #include <kio/netaccess.h>
 
-#include <sstream>
+#ifdef HAVE_SSTREAM
+#  include <sstream>
+#else
+#  include <strstream>
+#endif
 
 // remove this define if XML output should be made uncompressed
 #define COMPRESSED_XML_STATISTICS
@@ -101,7 +106,11 @@ bool KTouchLevelStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kdDebug() << "'" << char_data << "'" << endl;
+#ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(char_data.local8Bit()));
+#else
+		std::istrstream strm(char_data.local8Bit(), char_data.local8Bit().length());
+#endif
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
@@ -242,7 +251,11 @@ bool KTouchSessionStats::read(QDomNode in) {
 	n = in.namedItem("LevelNums");
 	if (!n.isNull()) {
 		QString str = n.firstChild().nodeValue();
+#ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(str.local8Bit()));
+#else
+		std::istrstream strm(str.local8Bit(), str.local8Bit().length());
+#endif
 		int l;
 		while (strm >> l)
 			m_levelNums.insert(l);
@@ -252,7 +265,11 @@ bool KTouchSessionStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kdDebug() << "'" << char_data << "'" << endl;
+#ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(char_data.local8Bit()));
+#else
+		std::istrstream strm(char_data.local8Bit(), char_data.local8Bit().length());
+#endif
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
