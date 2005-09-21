@@ -126,7 +126,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, QIODevice::ReadOnly);
+        QTextStream lineStream(&line, QIODevice::ReadOnly);
         QString keyType;
         int keyAscII;
         QString keyText;

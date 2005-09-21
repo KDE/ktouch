@@ -63,7 +63,7 @@ KTouch::KTouch()
     m_keyboardWidget(NULL),
 	m_trainer(NULL)
 {
-	setFocusPolicy(StrongFocus);
+	setFocusPolicy(Qt::StrongFocus);
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
 	// General initialization of the program, common for all start modes
@@ -379,7 +379,7 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 // ----------------------------------------------------------------------------
 
 void KTouch::changeKeyboard(int num) {
-    if (static_cast<unsigned int>(num)>=m_keyboardFiles.count()) return;
+    if (num>=m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
 	//kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
@@ -389,14 +389,14 @@ void KTouch::changeKeyboard(int num) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeColor(int num) {
-    if (static_cast<unsigned int>(num)>=m_colorSchemes.count()) return;
+    if (num>=m_colorSchemes.count()) return;
     Prefs::setColorScheme(num);
     m_keyboardWidget->applyPreferences(this, false);
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::changeLecture(int num) {
-    if (static_cast<unsigned int>(num)>=m_lectureFiles.count()) return;
+    if (num>=m_lectureFiles.count()) return;
     trainingPause();
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
@@ -606,7 +606,7 @@ void KTouch::setupActions() {
 	// Setup menu entries for colour schemes
 	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
     QStringList schemes_list;
-    for (unsigned int i=0; i<m_colorSchemes.count(); ++i)
+    for (int i=0; i<m_colorSchemes.count(); ++i)
 		schemes_list.append(m_colorSchemes[i].m_name);
     m_keyboardColorAction->setItems(schemes_list);
     m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());  
