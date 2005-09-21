@@ -18,6 +18,11 @@
 #endif
 
 #include <qwidget.h>
+//Added by qt3to4:
+#include <Q3ValueList>
+#include <QResizeEvent>
+#include <QPaintEvent>
+#include <Q3PtrList>
 #include "ktouchkeys.h"
 
 class KURL;
@@ -69,8 +74,8 @@ class KTouchKeyboardWidget : public QWidget {
     /// Assigns the background colours to the normal keys, which have a finger key assigned.
     void updateColours();
 
-    QPtrList<KTouchBaseKey>          m_keyList;          ///< The pointer list with base class pointers to the keys.
-    QValueList<KTouchKeyConnection>  m_connectorList;    ///< Contains the character - key associations.
+    Q3PtrList<KTouchBaseKey>          m_keyList;          ///< The pointer list with base class pointers to the keys.
+    Q3ValueList<KTouchKeyConnection>  m_connectorList;    ///< Contains the character - key associations.
 
     int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).

@@ -71,7 +71,7 @@ void KTouchNormalKey::paint(QPainter& p) const {
     p.setPen(textColor);
    
     p.setFont( m_font );
-    p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
+    p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter, m_keyText);
 }
 // --------------------------------------------------------------
 
@@ -102,14 +102,14 @@ void KTouchFingerKey::paint(QPainter& p) const {
         p.setPen( QPen(colorScheme.m_frame,3) );
         p.drawRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);                             // mark it as "active"
         p.setPen( colorScheme.m_text );
-        p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
+        p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter, m_keyText);
     }
     else if (m_isNextKey) {
         p.setBrush( colorScheme.m_backgroundH );
         p.setPen( colorScheme.m_frame );
         KTouchBaseKey::paint(p);
         p.setPen( colorScheme.m_textH );
-        p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
+        p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter, m_keyText);
     }
     else {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
@@ -117,7 +117,7 @@ void KTouchFingerKey::paint(QPainter& p) const {
         KTouchBaseKey::paint(p);
         p.drawRoundRect(m_xS+2, m_yS+2, m_wS-4, m_hS-4);
         p.setPen( colorScheme.m_text );
-        p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter, m_keyText);
+        p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter, m_keyText);
     };
 }
 // --------------------------------------------------------------
@@ -212,10 +212,10 @@ void KTouchControlKey::paint(QPainter& p) const {
         p.drawLine(xleft, y, xleft+ch/3, y+static_cast<int>(ch*0.15));
     }
     else if (m_keyText=="AltGr") {
-        p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter | QPainter::AlignVCenter, "Alt Gr");
+        p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter | Qt::AlignVCenter, "Alt Gr");
     }
     else
-        p.drawText(m_xS, m_yS, m_wS, m_hS, QPainter::AlignCenter | QPainter::AlignVCenter, m_keyText);
+        p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter | Qt::AlignVCenter, m_keyText);
 }
 
 

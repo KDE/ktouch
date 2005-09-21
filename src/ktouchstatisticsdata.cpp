@@ -15,6 +15,8 @@
 #include <qfile.h>
 #include <qstringlist.h>
 #include <qdom.h>
+//Added by qt3to4:
+#include <QTextStream>
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -404,7 +406,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store level stats
 	QDomElement levelStatsElement = doc.createElement("AllLevelStats");
 	lecture.appendChild(levelStatsElement);
-	for (QValueVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
+	for (Q3ValueVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
 		it != m_levelStats.end(); ++it)
 	{
 		it->write(doc, levelStatsElement);
@@ -412,7 +414,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store session stats
 	QDomElement sessionStatsElement = doc.createElement("AllSessionStats");
 	lecture.appendChild(sessionStatsElement);
-	for (QValueVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
+	for (Q3ValueVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
 			it != m_sessionStats.end(); ++it)
 	{
 		it->write(doc, sessionStatsElement);
@@ -438,7 +440,7 @@ bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
 		QDomDocument doc;
 		
@@ -474,7 +476,7 @@ bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
         return false;
@@ -482,7 +484,7 @@ bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
 	
 #ifdef COMPRESSED_XML_STATISTICS
 	QByteArray array;
-	QTextStream out(array, IO_WriteOnly);
+	QTextStream out(array, QIODevice::WriteOnly);
 	out << doc.toString();
 	array = qCompress(array);
 	outfile.writeBlock(array);

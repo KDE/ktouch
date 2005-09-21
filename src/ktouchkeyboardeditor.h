@@ -23,6 +23,8 @@
 #include "ktouchkeyboard.h"
 
 #include <kurl.h>
+//Added by qt3to4:
+#include <QPaintEvent>
 
 /// This is the KTouch keyboard editor dialog.
 ///
@@ -44,7 +46,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
 
   public:
     /// Constructor.
-    KTouchKeyboardEditor(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+    KTouchKeyboardEditor(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, Qt::WFlags fl = 0 );
     /// Default destructor.
     ~KTouchKeyboardEditor() {}
     /// Shows and executes the dialog (argument is the url to the default or 
@@ -72,7 +74,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
     /// Called when the "Remove" button was clicked
     virtual void removeBtnClicked();
     /// Called when the selection in the key list box has changed
-	virtual void keySelectionChanged(QListBoxItem * item);
+	virtual void keySelectionChanged(Q3ListBoxItem * item);
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
 

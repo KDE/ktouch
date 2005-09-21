@@ -55,7 +55,7 @@ class KTouchOpenRequest : public KTouchOpenRequestDlg {
  
   public:
     /// Default constructor.
-    KTouchOpenRequest(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+    KTouchOpenRequest(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, Qt::WFlags fl = 0 );
     /// Default destructor.
     ~KTouchOpenRequest() {}
     /// Sets up the dialog and runs it.

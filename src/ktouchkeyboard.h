@@ -17,7 +17,9 @@
 #include <config.h>
 #endif
 
-#include <qvaluevector.h>
+#include <q3valuevector.h>
+//Added by qt3to4:
+#include <QTextStream>
 
 #include "ktouchkeyconnector.h"
 #include "ktouchkey.h"
@@ -43,8 +45,8 @@ class KTouchKeyboard  {
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
 	
-    QValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
-    QValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
+    Q3ValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
+    Q3ValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.

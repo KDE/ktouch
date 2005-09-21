@@ -19,7 +19,11 @@
 
 #include <qcolor.h>
 #include <qstringlist.h>
-#include <qvaluevector.h>
+#include <q3valuevector.h>
+//Added by qt3to4:
+#include <QLabel>
+#include <QKeyEvent>
+#include <QResizeEvent>
 
 #include <kmainwindow.h>
 #include <kapplication.h>
@@ -65,7 +69,7 @@ class KTouch : public KMainWindow {
     ~KTouch();
 
 	/// Returns the current color scheme
-	const QValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
+	const Q3ValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
@@ -173,7 +177,7 @@ class KTouch : public KMainWindow {
 
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
 	
-	QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
+	Q3ValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).

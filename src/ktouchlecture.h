@@ -1,3 +1,5 @@
+//Added by qt3to4:
+#include <QTextStream>
 /***************************************************************************
  *   ktouchlecture.h                                                       *
  *   ---------------                                                       *
@@ -21,7 +23,7 @@ class QWidget;
 class QDomDocument;
 class KURL;
 
-#include <qvaluevector.h>
+#include <q3valuevector.h>
 #include "ktouchleveldata.h"
 
 /// This class handles the lecture data and provides the lines to type.
@@ -73,7 +75,7 @@ class KTouchLecture {
     /// Saves the lecture data in the XML document
     void writeLecture(QDomDocument& doc) const;
   
-    QValueVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
+    Q3ValueVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
     
     /// The editor should be able to handle the internal lecture data (it's for convenience actually).
     friend class KTouchLectureEditor;

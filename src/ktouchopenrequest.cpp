@@ -12,7 +12,7 @@
 
 #include <qradiobutton.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 
 #include <kpushbutton.h>
 #include <klineedit.h>
@@ -26,7 +26,7 @@
 #include "ktouchopenrequest.h"
 #include "ktouchopenrequest.moc"
 
-KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, WFlags fl)
+KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
 : KTouchOpenRequestDlg(parent,name, modal,fl)
 {
 }

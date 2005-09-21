@@ -18,10 +18,12 @@
 #endif
 
 #include <qstring.h>
-#include <qvaluevector.h>
+#include <q3valuevector.h>
 #include <qmap.h>
 #include <qdom.h>
 #include <qdatetime.h>
+//Added by qt3to4:
+#include <QTextStream>
 
 #include <kurl.h>
 
@@ -174,8 +176,8 @@ class KTouchLectureStats {
 	QString								m_lectureTitle;	///< The descriptive title of the lecture.
 	KURL								m_lectureURL;	///< The descriptive title of the lecture.
 
-	QValueVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
-	QValueVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
+	Q3ValueVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
+	Q3ValueVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
 };
 
 

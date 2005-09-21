@@ -15,6 +15,8 @@
 
 #include <qlabel.h>
 #include <qfont.h>
+//Added by qt3to4:
+#include <QPaintEvent>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>
@@ -34,7 +36,7 @@
 // ***** Public functions ***
 // **************************
 
-KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bool modal, WFlags fl)
+KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
   : KTouchKeyboardEditorDlg(parent,name, modal,fl)
 {
 }
@@ -116,7 +118,7 @@ void KTouchKeyboardEditor::removeBtnClicked() {
 // -----------------------------------------------------------------------------
 
 /// Called when the selection in the key list box has changed
-void KTouchKeyboardEditor::keySelectionChanged(QListBoxItem * item) {
+void KTouchKeyboardEditor::keySelectionChanged(Q3ListBoxItem * item) {
 }
 // -----------------------------------------------------------------------------
 
@@ -151,7 +153,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 	}
 	kdDebug() << "Adding key definitions to key list" << endl;
 	keyListBox->clear();
-	QValueVector<KTouchKey>::iterator it;
+	Q3ValueVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
 	unsigned int min_y = 100000;

@@ -41,12 +41,12 @@
 // ***** Public functions ***
 // **************************
 
-KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool modal, WFlags fl)
+KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool modal, Qt::WFlags fl)
  : KTouchLectureEditorDlg(parent, name, modal, fl)
 {
     levelListView->setSorting(-1); // don't sort my level list view!
 
-    connect(levelListView, SIGNAL(selectionChanged(QListViewItem*)),this, SLOT(newSelection(QListViewItem*)) );
+    connect(levelListView, SIGNAL(selectionChanged(Q3ListViewItem*)),this, SLOT(newSelection(Q3ListViewItem*)) );
     connect(newCharsEdit, SIGNAL(textChanged(const QString&)), this, SLOT(newCharsChanged(const QString&)) );
     connect(newBtn, SIGNAL(clicked()), this, SLOT(newLevel()) );
     connect(deleteBtn, SIGNAL(clicked()), this, SLOT(deleteLevel()) );
@@ -123,13 +123,13 @@ void KTouchLectureEditor::saveAsBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
-void KTouchLectureEditor::newSelection(QListViewItem* item) {
+void KTouchLectureEditor::newSelection(Q3ListViewItem* item) {
     if (m_selecting) return;
     bool current_modified_flag = m_modified;  // remember our current status
     // first store the current level data
     storeCurrentLevel();
     // now we need to find the level which has been selected
-    QListViewItem *i = levelListView->firstChild();
+    Q3ListViewItem *i = levelListView->firstChild();
     unsigned int level=0;
     while (i!=0 && i!=item) {
         i = i->nextSibling();
@@ -167,7 +167,7 @@ void KTouchLectureEditor::newCharsChanged(const QString& text) {
 
 void KTouchLectureEditor::newLevel() {
     createNewLevel();
-    QListViewItem *newItem = new QListViewItem( levelListView, 
+    Q3ListViewItem *newItem = new Q3ListViewItem( levelListView, 
         levelListView->lastItem(), m_lecture.m_lectureData.back().m_newChars );
     newSelection(newItem);
     upBtn->setEnabled(true);
@@ -184,7 +184,7 @@ void KTouchLectureEditor::deleteLevel() {
     // first remove the item from the list view
     delete m_currentItem;
     // then remove the level data
-    QValueVector<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
+    Q3ValueVector<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
     std::advance(it, m_level);
     m_lecture.m_lectureData.erase(it);
     m_currentItem = levelListView->firstChild();
@@ -207,7 +207,7 @@ void KTouchLectureEditor::moveUp() {
     if (m_level==0) return;
     m_selecting=true;  // again, I don't want to process changeSelection() signals now
     storeCurrentLevel();
-    QListViewItem *upperItem = m_currentItem->itemAbove();
+    Q3ListViewItem *upperItem = m_currentItem->itemAbove();
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level-1]);
     upperItem->setText(0, m_lecture.m_lectureData[m_level-1].m_newChars);
     m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
@@ -227,7 +227,7 @@ void KTouchLectureEditor::moveDown() {
     if (m_level>=m_lecture.m_lectureData.size()-1) return;
     m_selecting=true;  // again, I don't want to process changeSelection() signals now
     storeCurrentLevel();
-    QListViewItem *lowerItem = m_currentItem->itemBelow();
+    Q3ListViewItem *lowerItem = m_currentItem->itemBelow();
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level+1]);
     m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
     lowerItem->setText(0, m_lecture.m_lectureData[m_level+1].m_newChars);
@@ -258,12 +258,12 @@ void KTouchLectureEditor::transfer_to_dialog() {
     else                        setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     // copy the 'new char' strings of the lectures into the list view
     levelListView->clear();
-    QValueVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
+    Q3ValueVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
     // add first item
-    QListViewItem *item=new QListViewItem( levelListView, (it++)->m_newChars );
+    Q3ListViewItem *item=new Q3ListViewItem( levelListView, (it++)->m_newChars );
     // add all the others
     for (;it!=m_lecture.m_lectureData.end(); ++it)
-        item = new QListViewItem( levelListView, item, it->m_newChars );
+        item = new Q3ListViewItem( levelListView, item, it->m_newChars );
     m_currentItem=levelListView->firstChild();
     m_selecting = true;  // prevent the selectionChanged() signal from interfering
     levelListView->setSelected(m_currentItem, true);
@@ -311,7 +311,7 @@ void KTouchLectureEditor::showCurrentLevel() {
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;
-    for (QValueVector<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
+    for (Q3ValueVector<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
                                                it!=m_lecture.m_lectureData[m_level].m_lines.end(); ++it)
     {
         text += *it + '\n';

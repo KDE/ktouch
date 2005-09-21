@@ -30,7 +30,7 @@ bool KTouchLecture::load(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
         result = readLecture(in);
@@ -48,7 +48,7 @@ bool KTouchLecture::loadXML(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
 		QDomDocument doc;
 		doc.setContent( &infile );
@@ -77,7 +77,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KURL& url) const {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
         return false;
@@ -149,7 +149,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     for (QStringList::Iterator it = slist.begin(); it!=slist.end(); ++it) {
         // create new level
         KTouchLevelData level;
-        QTextStream t(&(*it), IO_ReadOnly);
+        QTextStream t(&(*it), QIODevice::ReadOnly);
         // try to read it
         if (!level.readLevel(t)) {
             // uh oh, error while reading level data
@@ -229,7 +229,7 @@ void KTouchLecture::writeLecture(QDomDocument& doc) const {
 	// Store levels
 	QDomElement levels = doc.createElement("Levels");
 	root.appendChild(levels);
-    for (QValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
+    for (Q3ValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
 		it!=m_lectureData.end(); ++it) 
 	{
 		it->writeLevel(doc, levels);

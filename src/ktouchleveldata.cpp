@@ -13,6 +13,8 @@
 #include "ktouchleveldata.h"
 #include <qiodevice.h>
 #include <qdom.h>
+//Added by qt3to4:
+#include <QTextStream>
 #include <klocale.h>
 #include <kdebug.h>
 
@@ -76,7 +78,7 @@ bool KTouchLevelData::readLevel(QDomNode in) {
 void KTouchLevelData::writeLevel(QTextStream& out) const {
     out << "# Comment: " << m_comment << endl;   // comment line
     out << m_newChars << endl;                   // new characters line
-    for (QValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it)
+    for (Q3ValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it)
         out << *it << endl;
     out << endl;
 }
@@ -101,7 +103,7 @@ void KTouchLevelData::writeLevel(QDomDocument& doc, QDomElement& root) const {
 	newchars.appendChild(newcharsText);
 	level.appendChild(newchars);
 	// the lines
-    for (QValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it) {
+    for (Q3ValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it) {
 		QDomElement line = doc.createElement("Line");
 		QDomText lineText = doc.createTextNode(*it);
 		line.appendChild(lineText);

@@ -16,6 +16,11 @@
 #include <algorithm>
 
 #include <qfile.h>
+//Added by qt3to4:
+#include <Q3ValueList>
+#include <QTextStream>
+#include <QResizeEvent>
+#include <QPaintEvent>
 
 #include <kdebug.h>
 #include <ktempfile.h>
@@ -69,7 +74,7 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         return;
     }
@@ -159,7 +164,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
-        QValueList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
+        Q3ValueList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
@@ -263,7 +268,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
 
 bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorMsg) {
     QFile infile(fileName);
-    if ( !infile.open( IO_ReadOnly ) ) {
+    if ( !infile.open( QIODevice::ReadOnly ) ) {
         errorMsg = i18n("Could not open file.");
         return false;
     }
@@ -283,7 +288,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
+        QTextStream lineStream(&line, QIODevice::ReadOnly);
         QString keyType;
         int keyAscII;
         QString keyText;
@@ -328,7 +333,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
 void KTouchKeyboardWidget::updateColours() {
     // loop over all key connections
-    for (QValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
+    for (Q3ValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
         QChar fingerChar = (*it).m_fingerKeyChar;
         if (fingerChar == QChar(0)) continue;
         QChar targetChar = (*it).m_targetKeyChar;

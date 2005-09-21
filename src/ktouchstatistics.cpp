@@ -17,11 +17,11 @@
 #include <vector>
 #include <utility>
 
-#include <qprogressbar.h>
+#include <q3progressbar.h>
 #include <qlcdnumber.h>
 #include <qlabel.h>
 #include <qradiobutton.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 
 #include <kpushbutton.h>
 #include <kcombobox.h>
@@ -271,7 +271,7 @@ void KTouchStatistics::updateChartTab() {
 		switch (buttonGroup2->selectedId()) {
 			case 0 : // words per minute
 				// loop over all session data entries in *it and store words per minute data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -295,7 +295,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 1 : // chars per minute
 				// loop over all session data entries in *it and store chars per minute data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -319,7 +319,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 2 : // correctness
 				// loop over all session data entries in *it and store correctness data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -343,7 +343,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 3 : // skill
 				// loop over all session data entries in *it and store correctness data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;

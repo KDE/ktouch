@@ -15,7 +15,7 @@
 
 #include <qlcdnumber.h>
 #include <qlabel.h>
-#include <qprogressbar.h>
+#include <q3progressbar.h>
 #include <kdebug.h>
 
 KTouchStatus::KTouchStatus(QWidget *parent)

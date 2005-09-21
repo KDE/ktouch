@@ -19,7 +19,7 @@
 
 #include <qstring.h>
 #include <qtextstream.h>
-#include <qvaluevector.h>
+#include <q3valuevector.h>
 #include <qdom.h>
 
 class QDomDocument;
@@ -70,7 +70,7 @@ class KTouchLevelData {
 
     QString                 m_comment;      ///< A comment for the level.
     QString                 m_newChars;     ///< Contains the newly introduced characters in this level.
-    QValueVector<QString>   m_lines;        ///< The lines of the level.
+    Q3ValueVector<QString>   m_lines;        ///< The lines of the level.
 
     // so I don't have to allow access to read/write function to everybody :-)
     friend class KTouchLecture;

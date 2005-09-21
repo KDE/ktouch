@@ -13,6 +13,8 @@
 #include "ktouchkeyboard.h"
 
 #include <qfile.h>
+//Added by qt3to4:
+#include <QTextStream>
 
 #include <kdebug.h>
 #include <ktempfile.h>
@@ -44,7 +46,7 @@ bool KTouchKeyboard::load(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
         result = read(in);
@@ -63,7 +65,7 @@ bool KTouchKeyboard::loadXML(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
 		QDomDocument doc;
 		doc.setContent( &infile );
@@ -92,7 +94,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KURL& url) const {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
         return false;
@@ -124,7 +126,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
+        QTextStream lineStream(line, QIODevice::ReadOnly);
         QString keyType;
         int keyAscII;
         QString keyText;
@@ -263,12 +265,12 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	// Store keys
 	QDomElement keys = doc.createElement("KeyDefinitions");
 	root.appendChild(keys);
-    for (QValueVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
+    for (Q3ValueVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
 		it->write(doc, keys);
 	// Store connectors
 	QDomElement conns = doc.createElement("KeyConnections");
 	root.appendChild(conns);
-    for (QValueVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (Q3ValueVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
 		it->write(doc, conns);
 }
 // ----------------------------------------------------------------------------
@@ -337,7 +339,7 @@ void KTouchKeyboard::createDefault() {
 // ----------------------------------------------------------------------------
 
 void KTouchKeyboard::updateConnections() {
-	for (QValueVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
+	for (Q3ValueVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
 		(*it).updateConnections(m_keys);
 }
 // ----------------------------------------------------------------------------

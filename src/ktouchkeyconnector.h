@@ -18,7 +18,7 @@
 #endif
 
 #include <qdom.h>
-#include <qvaluevector.h>
+#include <q3valuevector.h>
 #include "ktouchkey.h"
 
  /// The KTouchKeyConnector class contains the information about the character that has to 
@@ -42,7 +42,7 @@ class KTouchKeyConnector {
 	/// Creates a new DomElement, writes the key connector data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root) const;
 	/// Updates the indices for the keys
-	void updateConnections(const QValueVector<KTouchKey>& keyvector);
+	void updateConnections(const Q3ValueVector<KTouchKey>& keyvector);
 	
     QChar               m_keyChar;			///< This is the character that has to be pressed to access this key.
     QChar               m_targetKeyChar;	///< The target key (the key that will be highlighted).

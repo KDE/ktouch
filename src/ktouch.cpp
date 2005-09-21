@@ -17,10 +17,13 @@
 #include <algorithm>
 
 // QT Header
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
+//Added by qt3to4:
+#include <QKeyEvent>
+#include <QResizeEvent>
 
 // KDE Header
 #include <klocale.h>
@@ -546,7 +549,7 @@ void KTouch::initTrainingSession() {
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of QSizePolicy)
-    QVBox * mainLayout = new QVBox( this );
+    Q3VBox * mainLayout = new Q3VBox( this );
     m_statusWidget = new KTouchStatus( mainLayout );
     m_slideLineWidget = new KTouchSlideLine( mainLayout );
     m_slideLineWidget->setSizePolicy( QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 1) );
