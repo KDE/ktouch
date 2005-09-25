@@ -1,40 +1,43 @@
 ####################################################
-#    KTouch
-#    Keybord layout file
+#
+#  Russian Windows keyboard layout file for KTouch.
+#
+#   Created by Alexander Pravdin <aledin@mail.ru>.
+#
 ####################################################
 #
 #
 #  FingerKey: This class represents the keys where
 #  your fingers shold rest between typing.
 #
-#			Assci	KeyText x	y
-FingerKey	97		Ф		18	20
-FingerKey	115		Ы		28	20
-FingerKey	100		В		38	20
-FingerKey	102		А		48	20
-FingerKey	106		О		78	20
-FingerKey	107		Л		88	20
-FingerKey	108		Д		98	20
-FingerKey	59		Ж		108	20
+#		Unicode		KeyText 	x	y
+FingerKey	1092		Ф		18	20
+FingerKey	1099		Ы		28	20
+FingerKey	1074		В		38	20
+FingerKey	1072		А		48	20
+FingerKey	1086		О		78	20
+FingerKey	1083		Л		88	20
+FingerKey	1076		Д		98	20
+FingerKey	1078		Ж		108	20
 #
 #
 #  ControlKey: This class will represent all the
 #  control keys that you are using. Theys keys
 #  will be used later when you want to use uppercase.
 #
-#			Assci	KeyText		x		y		Width	Height
+#		Unicode		KeyText		x		y		Width	Height
 #
-ControlKey	260		Tab			0		10		15		10
-ControlKey	13		Enter		128		20		22		10
-ControlKey	257		Shift		123		30		27		10
-ControlKey	264		AltGr		120		40		15		10
-ControlKey	265		Ctrl		135		40		15		10
-ControlKey	263		Alt			15		40		15		10
-ControlKey	262		Ctrl		0		40		15		10
-ControlKey	32		Space		30		40		90		10
-ControlKey	258		Shift		0		30		23		10
-ControlKey	259		Caps	0		20		18		10
-NormalKey	8 		<-		140		0		10      10
+ControlKey	260		Tab		0		10		15	10
+ControlKey	13		Enter		128		20		22	10
+ControlKey	257		Shift		123		30		27	10
+ControlKey	264		AltGr		120		40		15	10
+ControlKey	265		Ctrl		135		40		15	10
+ControlKey	263		Alt		15		40		15	10
+ControlKey	262		Ctrl		0		40		15	10
+ControlKey	32		Пробел		30		40		90	10
+ControlKey	258		Shift		0		30		23	10
+ControlKey	259		CapsLock	0		20		18	10
+ControlKey	8 		BackSpace	140		0		10      10
 #
 #
 #  NormalKey: This class represent all the
@@ -44,49 +47,50 @@ NormalKey	8 		<-		140		0		10      10
 #  letters. For this class you have to indicate
 #  withc finger key you are going to use.
 #
-#			Assci	KeyText	x		y		FingerKey
+#		Unicode		KeyText		x		y		FingerKey
 #
-NormalKey	96		`		0		0		97
-NormalKey	49		1		10		0		97
-NormalKey	50		2		20		0		115
-NormalKey	51		3		30		0		100
-NormalKey	52		4		40		0		102
-NormalKey	53		5		50		0		102
-NormalKey	54		6		60		0		106
-NormalKey	55		7		70		0		106
-NormalKey	56		8		80		0		107
-NormalKey	57		9		90		0		108
-NormalKey	48		0		100		0		59
-NormalKey	95		-		110		0		59
-NormalKey	61		=		120		0		59
-NormalKey	92		\		130		0		59
+NormalKey	1105		Ё		0		0		1092
+NormalKey	49		1		10		0		1092
+NormalKey	50		2		20		0		1099
+NormalKey	51		3		30		0		1074
+NormalKey	52		4		40		0		1072
+NormalKey	53		5		50		0		1072
+NormalKey	54		6		60		0		1086
+NormalKey	55		7		70		0		1086
+NormalKey	56		8		80		0		1083
+NormalKey	57		9		90		0		1076
+NormalKey	48		0		100		0		1078
+NormalKey	45		-		110		0		1078
+NormalKey	61		=		120		0		1078
+NormalKey	92		\		130		0		1078
 #
-NormalKey	113		Й		15		10		97
-NormalKey	119		Ц		25		10		115
-NormalKey	101		У		35		10		100
-NormalKey	114		К		45		10		102
-NormalKey	116		Е		55		10		102
-NormalKey	121		Н		65		10		106
-NormalKey	117		Г		75		10		106
-NormalKey	105		Ш		85		10		107
-NormalKey	111		Щ		95		10		108
-NormalKey	112		З		105		10		59
-NormalKey	91		Х		115		10		59
-NormalKey	93		Ъ		125		10		59
+NormalKey	1081		Й		15		10		1092
+NormalKey	1094		Ц		25		10		1099
+NormalKey	1091		У		35		10		1074
+NormalKey	1082		К		45		10		1072
+NormalKey	1077		Е		55		10		1072
+NormalKey	1085		Н		65		10		1086
+NormalKey	1075		Г		75		10		1086
+NormalKey	1096		Ш		85		10		1083
+NormalKey	1097		Щ		95		10		1076
+NormalKey	1079		З		105		10		1078
+NormalKey	1093		Х		115		10		1078
+NormalKey	1098		Ъ		125		10		1078
 #
-NormalKey	103		П 		58		20		102
-NormalKey	104		Р 		68		20		106
-NormalKey	39		Э		118		20		59
-NormalKey	122		Я		23		30		97
-NormalKey	120		Ч		33		30		115
-NormalKey	99		С		43		30		100
-NormalKey	118		М		53		30		102
-NormalKey	98		И		63		30		102
-NormalKey	110		Т		73		30		106
-NormalKey	109		Ь		83		30		106
-NormalKey	44		Б		93		30		107
-NormalKey	46		Ю		103		30		108
-NormalKey	47		.		113		30		59
+NormalKey	1087		П		58		20		1072
+NormalKey	1088		Р		68		20		1086
+NormalKey	1101		Э		118		20		1078
+#
+NormalKey	1103		Я		23		30		1092
+NormalKey	1095		Ч		33		30		1099
+NormalKey	1089		С		43		30		1074
+NormalKey	1084		М		53		30		1072
+NormalKey	1080		И		63		30		1072
+NormalKey	1090		Т		73		30		1086
+NormalKey	1100		Ь		83		30		1086
+NormalKey	1073		Б		93		30		1083
+NormalKey	1102		Ю		103		30		1076
+NormalKey	46		.		113		30		1078
 #
 #
 #  HiddenKey: This is all the keys that
@@ -94,31 +98,52 @@ NormalKey	47		.		113		30		59
 #  to use an controll key to get them. Basically
 #  this is all the uppercase letters.
 #
-#			Ascii	Target	Finger	Contorll
+#		Unicode		Target		Finger		Contorll
 #
-HiddenKey	65		97		97		257 #A
-HiddenKey	66		98		102		257 #B
-HiddenKey	67		99		100		257 #C
-HiddenKey	68		100		100		257 #D
-HiddenKey	69		101		100		257 #E
-HiddenKey	70		102		102		257 #F
-HiddenKey	71		103		102		257 #G
-HiddenKey	72		104		106		258 #H
-HiddenKey	73		105		107		258 #I
-HiddenKey	74		106		106		258 #J
-HiddenKey	75		107		107		258 #K
-HiddenKey	76		108		106		258 #L
-HiddenKey	77		109		106		258 #M
-HiddenKey	78		110		106		258 #N
-HiddenKey	79		111		108		258 #O
-HiddenKey	80		112		59		258 #P
-HiddenKey	81		113		97		257 #Q
-HiddenKey	82		114		102		257 #R
-HiddenKey	83		115		115		257 #S
-HiddenKey	84		116		102		257 #T
-HiddenKey	85		117		106		258 #U
-HiddenKey	86		118		102		257 #V
-HiddenKey	87		119		115		257 #W
-HiddenKey	88		120		115		257 #X
-HiddenKey	89		121		106		258 #Y
-HiddenKey	90		122		97		257 #Z
+HiddenKey	1060		1092		1092		257 #Ф A
+HiddenKey	1067		1099		1099		257 #Ы S
+HiddenKey	1042		1074		1074		257 #В D
+HiddenKey	1040		1072		1072		257 #А F
+HiddenKey	1055		1087		1072		257 #П G
+HiddenKey	1056		1088		1086		258 #Р H
+HiddenKey	1054		1086		1086		258 #О J
+HiddenKey	1051		1083		1083		258 #Л K
+HiddenKey	1044		1076		1076		258 #Д L
+HiddenKey	1046		1078		1078		258 #Ж
+HiddenKey	1069		1101		1078		258 #Э
+HiddenKey	1071		1103		1092		257 #Я Z
+HiddenKey	1063		1095		1099		257 #Ч X
+HiddenKey	1057		1089		1074		257 #С C
+HiddenKey	1052		1084		1072		257 #М V
+HiddenKey	1048		1080		1072		257 #И B
+HiddenKey	1058		1090		1086		258 #Т N
+HiddenKey	1068		1100		1086		258 #Ь M
+HiddenKey	1041		1073		1083		258 #Б
+HiddenKey	1070		1102		1076		258 #Ю
+HiddenKey	44		46		1078		258 #,
+HiddenKey	1049		1081		1092		257 #Й Q
+HiddenKey	1062		1094		1099		257 #Ц W
+HiddenKey	1059		1091		1074		257 #У E
+HiddenKey	1050		1082		1072		257 #К R
+HiddenKey	1045		1077		1072		257 #Е T
+HiddenKey	1053		1085		1086		258 #Н Y
+HiddenKey	1043		1075		1086		258 #Г U
+HiddenKey	1064		1096		1083		258 #Ш I
+HiddenKey	1065		1097		1076		258 #Щ O
+HiddenKey	1047		1079		1078		258 #З P
+HiddenKey	1061		1093		1078		258 #Х
+HiddenKey	1066		1098		1078		258 #Ъ
+HiddenKey	1025		1105		1092		257 #Ё
+HiddenKey	33		49		1092		257 #!
+HiddenKey	34		50		1099		257 #"
+HiddenKey	8470		51		1074		257 #
+HiddenKey	59		52		1072		257 #;
+HiddenKey	37		53		1072		257 #%
+HiddenKey	58		54		1086		258 #:
+HiddenKey	63		55		1086		258 #?
+HiddenKey	42		56		1083		258 #*
+HiddenKey	40		57		1076		258 #(
+HiddenKey	41		48		1078		258 #)
+HiddenKey	95		45		1078		258 #_
+HiddenKey	43		61		1078		258 #+
+HiddenKey	47		92		1078		258 #/
