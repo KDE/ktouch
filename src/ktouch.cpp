@@ -33,7 +33,7 @@
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
 #include <kdebug.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kconfigdialog.h>
 #include <kaction.h>
 #include <kcombobox.h>
@@ -85,7 +85,7 @@ KTouch::KTouch()
 	initTrainingSession();
 	
 	// If session was restored, the function readProperties() was already called
-    if (kapp->isRestored()) {
+    if (kapp->isSessionRestored()) {
 		kdDebug() << "[KTouch::KTouch]  restoring session..." << endl;
 		/// \todo Rewrite all the session management stuff.
 		///       For now we just do the same as for the standard startup.
