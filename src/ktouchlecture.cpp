@@ -125,7 +125,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
         if (!line.isEmpty()) {
             // lecture title?
             if (line.find("# Title:") == 0)
-                m_title = line.right(line.length() - 8).stripWhiteSpace();
+                m_title = line.right(line.length() - 8).trimmed();
             else if (line[0]!='#' || line.find("# Comment:")!=-1) {
                 // ok, after all those comment lines, we finally found the beginn of a level
                 in_level = true;

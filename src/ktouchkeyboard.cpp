@@ -120,7 +120,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
     // now loop until end of file is reached
     do {
         // skip all empty lines or lines containing a comment (starting with '#')
-        do {  line = in.readLine().stripWhiteSpace();  }
+        do {  line = in.readLine().trimmed();  }
         while (!line.isNull() && (line.isEmpty() || line[0]=='#'));
         // Check if end of file encountered and if that is the case -> bail out at next while
         if (line.isNull())  continue;
@@ -572,7 +572,7 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
     // now loop until end of file is reached
     do {
         // skip all empty lines or lines containing a comment (starting with '#')
-        do {  line = in.readLine().stripWhiteSpace();  }
+        do {  line = in.readLine().trimmed();  }
         while (!line.isNull() && (line.isEmpty() || line[0]=='#'));
         // Check if end of file encountered and if that is the case -> bail out at next while
         if (line.isNull())  continue;
