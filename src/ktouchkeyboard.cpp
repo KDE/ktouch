@@ -376,7 +376,7 @@ void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         return;
     }
@@ -558,7 +558,7 @@ void KTouchKeyboard::createDefaultKeyboard() {
 
 bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
     QFile infile(fileName);
-    if ( !infile.open( IO_ReadOnly ) ) {
+    if ( !infile.open( QIODevice::ReadOnly ) ) {
         errorMsg = i18n("Could not open file.");
         return false;
     }
@@ -578,7 +578,7 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
+        QTextStream lineStream(line, QIODevice::ReadOnly);
         QString keyType;
         int keyAscII;
         QString keyText;

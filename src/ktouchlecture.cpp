@@ -254,7 +254,7 @@ bool KTouchLecture::save(QWidget * window, const KURL& url) const {
     }
 
     QFile outfile(tmpFile);
-    if ( !outfile.open( IO_WriteOnly ) ) {
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
         return false;
