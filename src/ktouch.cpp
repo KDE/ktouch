@@ -347,7 +347,7 @@ void KTouch::optionsPreferences() {
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
 	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
-	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(applyPreferences()));
+	connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 	// TODO : Connect some other buttons/check boxes of the dialog
 	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
 		this, SLOT(configOverrideLectureFontToggled(bool)));
