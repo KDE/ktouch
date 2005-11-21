@@ -63,7 +63,7 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
-	QMapConstIterator<KURL, KTouchLectureStats> it = stats.m_lectureStats.begin();
+	QMap<KURL, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.begin();
 	m_currentIndex = 0;
 	while (it != stats.m_lectureStats.end()) {
 		QString t = it.data().m_lectureTitle;
@@ -160,21 +160,21 @@ void KTouchStatistics::updateCurrentSessionTab() {
         if (it->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
-          case 0 :  charLabel1->setText( it->m_char ); charProgress1->setEnabled(true);
+          case 0 :  charLabel1->setText( QString(it->m_char) ); charProgress1->setEnabled(true);
                     charProgress1->setProgress( it->missHitRatio() ); break;
-          case 1 :  charLabel2->setText( it->m_char ); charProgress2->setEnabled(true);
+          case 1 :  charLabel2->setText( QString(it->m_char) ); charProgress2->setEnabled(true);
                     charProgress2->setProgress( it->missHitRatio() ); break;
-          case 2 :  charLabel3->setText( it->m_char ); charProgress3->setEnabled(true);
+          case 2 :  charLabel3->setText( QString(it->m_char) ); charProgress3->setEnabled(true);
                     charProgress3->setProgress( it->missHitRatio() ); break;
-          case 3 :  charLabel4->setText( it->m_char ); charProgress4->setEnabled(true);
+          case 3 :  charLabel4->setText( QString(it->m_char) ); charProgress4->setEnabled(true);
                     charProgress4->setProgress( it->missHitRatio() ); break;
-          case 4 :  charLabel5->setText( it->m_char ); charProgress5->setEnabled(true);
+          case 4 :  charLabel5->setText( QString(it->m_char) ); charProgress5->setEnabled(true);
                     charProgress5->setProgress( it->missHitRatio() ); break;
-          case 5 :  charLabel6->setText( it->m_char ); charProgress6->setEnabled(true);
+          case 5 :  charLabel6->setText( QString(it->m_char) ); charProgress6->setEnabled(true);
                     charProgress6->setProgress( it->missHitRatio() ); break;
-          case 6 :  charLabel7->setText( it->m_char ); charProgress7->setEnabled(true);
+          case 6 :  charLabel7->setText( QString(it->m_char) ); charProgress7->setEnabled(true);
                     charProgress7->setProgress( it->missHitRatio() ); break;
-          case 7 :  charLabel8->setText( it->m_char ); charProgress8->setEnabled(true);
+          case 7 :  charLabel8->setText( QString(it->m_char) ); charProgress8->setEnabled(true);
                     charProgress8->setProgress( it->missHitRatio() ); break;
         }
     }
@@ -222,21 +222,21 @@ void KTouchStatistics::updateCurrentLevelTab() {
         if (it->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
-          case 0 :  charLabel1Level->setText( it->m_char ); charProgress1->setEnabled(true);
+          case 0 :  charLabel1Level->setText( QString(it->m_char) ); charProgress1->setEnabled(true);
                     charProgress1Level->setProgress( it->missHitRatio() ); break;
-          case 1 :  charLabel2Level->setText( it->m_char ); charProgress2->setEnabled(true);
+          case 1 :  charLabel2Level->setText( QString(it->m_char) ); charProgress2->setEnabled(true);
                     charProgress2Level->setProgress( it->missHitRatio() ); break;
-          case 2 :  charLabel3Level->setText( it->m_char ); charProgress3->setEnabled(true);
+          case 2 :  charLabel3Level->setText( QString(it->m_char) ); charProgress3->setEnabled(true);
                     charProgress3Level->setProgress( it->missHitRatio() ); break;
-          case 3 :  charLabel4Level->setText( it->m_char ); charProgress4->setEnabled(true);
+          case 3 :  charLabel4Level->setText( QString(it->m_char) ); charProgress4->setEnabled(true);
                     charProgress4Level->setProgress( it->missHitRatio() ); break;
-          case 4 :  charLabel5Level->setText( it->m_char ); charProgress5->setEnabled(true);
+          case 4 :  charLabel5Level->setText( QString(it->m_char) ); charProgress5->setEnabled(true);
                     charProgress5Level->setProgress( it->missHitRatio() ); break;
-          case 5 :  charLabel6Level->setText( it->m_char ); charProgress6->setEnabled(true);
+          case 5 :  charLabel6Level->setText( QString(it->m_char) ); charProgress6->setEnabled(true);
                     charProgress6Level->setProgress( it->missHitRatio() ); break;
-          case 6 :  charLabel7Level->setText( it->m_char ); charProgress7->setEnabled(true);
+          case 6 :  charLabel7Level->setText( QString(it->m_char) ); charProgress7->setEnabled(true);
                     charProgress7Level->setProgress( it->missHitRatio() ); break;
-          case 7 :  charLabel8Level->setText( it->m_char ); charProgress8->setEnabled(true);
+          case 7 :  charLabel8Level->setText( QString(it->m_char) ); charProgress8->setEnabled(true);
                     charProgress8Level->setProgress( it->missHitRatio() ); break;
         }
     }
@@ -264,7 +264,7 @@ void KTouchStatistics::updateChartTab() {
 		// TODO : nothing yet
 	}
 	else {
-		QMapConstIterator<KURL, KTouchLectureStats> it = m_allStats.m_lectureStats.begin();	
+		QMap<KURL, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.begin();	
 		unsigned int index = m_lectureIndex;
 		while (index-- > 0) ++it;
 		std::vector< std::pair<double, double> > data;
