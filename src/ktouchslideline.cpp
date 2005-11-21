@@ -188,12 +188,12 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     QRect textRect(INNER_MARGIN, 0, w-2*INNER_MARGIN, h);
     if(m_rightJustify==false)
     {
-     painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_teacherText);
+     painter.drawText(textRect, Qt::AlignLeft | Qt::AlignVCenter, m_teacherText);
     drawEnterChar(&painter, w - INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
     }
     else
     {
-     painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_teacherText);
+     painter.drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, m_teacherText);
      drawEnterChar(&painter, INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
     }
     painter.end();
@@ -289,9 +289,9 @@ void KTouchSlideLine::updateLines() {
     QFontMetrics fontMetrics = painter.fontMetrics();
     QRect textRect(INNER_MARGIN, 0, m_studentPixmap->width()-2*INNER_MARGIN, m_studentPixmap->height());
     if(m_rightJustify)
-       painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_studentText);
+       painter.drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, m_studentText);
     else 
-       painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_studentText);
+       painter.drawText(textRect, Qt::AlignLeft | Qt::AlignVCenter, m_studentText);
     // and calculate the cursor position (local coordinates) in the student pixmap
     // the cursor position is the distance from the beginning of the student pixmap (text margin included)
     int studentTextLength=textWidth(fontMetrics,m_studentText);

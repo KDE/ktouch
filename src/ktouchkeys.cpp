@@ -159,7 +159,15 @@ void KTouchControlKey::paint(QPainter& p) const {
     if (m_keyText=="Shift") {
         int x = m_xS+h/2;
         int y = m_yS+m_hS/2;
-        p.moveTo(x-ch/2, y);
+		p.drawLine(x-ch/2, y,x-ch/4, y);
+		p.drawLine(x-ch/4, y,x-ch/4, y+ch/2);
+		p.drawLine(x-ch/4, y+ch/2,x+ch/4, y+ch/2);
+		p.drawLine(x+ch/4, y+ch/2,x+ch/4, y);
+		p.drawLine(x+ch/4, y,x+ch/2, y);
+		p.drawLine(x+ch/2, y,x, y-ch/2);
+		p.drawLine(x, y-ch/2,x-ch/2, y);
+#if 0
+		p.moveTo(x-ch/2, y);
         p.lineTo(x-ch/4, y);
         p.lineTo(x-ch/4, y+ch/2);
         p.lineTo(x+ch/4, y+ch/2);
@@ -167,10 +175,19 @@ void KTouchControlKey::paint(QPainter& p) const {
         p.lineTo(x+ch/2, y);
         p.lineTo(x, y-ch/2);
         p.lineTo(x-ch/2, y);
+#endif
     }
     else if (m_keyText=="CapsLock") {
         int x = m_xS+h/2;
         int y = m_yS+m_hS/2;
+		p.drawLine(x-ch/2, y,x-ch/4, y);
+		p.drawLine(x-ch/4, y,x-ch/4, y-ch/2);
+		p.drawLine(x-ch/4, y-ch/2,x+ch/4, y-ch/2);
+		p.drawLine(x+ch/4, y-ch/2,x+ch/4, y);
+		p.drawLine(x+ch/4, y,x+ch/2, y);
+		p.drawLine(x+ch/2, y,x, y+ch/2);
+		p.drawLine(x, y+ch/2,x-ch/2, y);
+#if 0		
         p.moveTo(x-ch/2, y);
         p.lineTo(x-ch/4, y);
         p.lineTo(x-ch/4, y-ch/2);
@@ -179,6 +196,7 @@ void KTouchControlKey::paint(QPainter& p) const {
         p.lineTo(x+ch/2, y);
         p.lineTo(x, y+ch/2);
         p.lineTo(x-ch/2, y);
+#endif		
     }
     else if (m_keyText=="Tab") {
         int xleft = m_xS+h/2-ch/2;
