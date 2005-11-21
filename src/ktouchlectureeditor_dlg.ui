@@ -455,9 +455,6 @@
                                     <family>Courier 10 Pitch</family>
                                 </font>
                             </property>
-                            <property name="wordWrap">
-                                <enum>NoWrap</enum>
-                            </property>
                         </widget>
                         <widget class="QLabel" row="5" column="0" rowspan="1" colspan="2">
                             <property name="name">
