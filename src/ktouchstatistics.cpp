@@ -16,6 +16,7 @@
 #include <list>
 #include <vector>
 #include <utility>
+#include <kplotobject.h>
 
 #include <q3progressbar.h>
 #include <qlcdnumber.h>
