@@ -676,7 +676,7 @@ void KTouch::updateFileLists() {
 void KTouch::createDefaultColorSchemes() {
     KTouchColorScheme color;
 
-    color.m_name = "Black'n White";
+    color.m_name = i18n("Black'n White");
     color.m_frame = Qt::black;
     for (int i=0; i<8; ++i)
         color.m_background[i] = Qt::white;
@@ -689,7 +689,7 @@ void KTouch::createDefaultColorSchemes() {
     color.m_cTextH = Qt::black;
     m_colorSchemes.push_back(color);
 
-    color.m_name = "Classic";
+    color.m_name = i18n("Classic");
     color.m_frame = Qt::black;
     color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
     color.m_background[1] = QColor( 14,164,239);     color.m_background[5] = QColor(158,255,155);
@@ -704,7 +704,7 @@ void KTouch::createDefaultColorSchemes() {
     color.m_cTextH = Qt::black;
     m_colorSchemes.push_back(color);
 
-    color.m_name = "Deep Blue";
+    color.m_name = i18n("Deep Blue");
     color.m_frame = QColor(220,220,220);
     color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
     color.m_background[1] = QColor( 39, 59,127);     color.m_background[5] = QColor(  8, 44,124);
@@ -719,7 +719,7 @@ void KTouch::createDefaultColorSchemes() {
     color.m_cTextH = Qt::white;
     m_colorSchemes.push_back(color);
 
-    color.m_name = "Stripy";
+    color.m_name = i18n("Stripy");
     color.m_frame = Qt::black;
     for (int i=0; i<8; i=i+2)
         color.m_background[i] = QColor( 39, 70, 127);
