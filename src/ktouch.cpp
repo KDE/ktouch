@@ -679,7 +679,7 @@ void KTouch::updateFileLists() {
 void KTouch::createDefaultColorSchemes() {
     KTouchColorScheme color;
 
-    color.m_name = i18n("Black'n White");
+    color.m_name = i18n("Black && White");
     color.m_frame = Qt::black;
     for (int i=0; i<8; ++i)
         color.m_background[i] = Qt::white;
