@@ -508,7 +508,7 @@ bool KTouchStatisticsData::readStats(QDomDocument& doc) {
 	// retrieve the KTouchStatistics statistics
 	QDomNodeList entries = doc.elementsByTagName("LectureStats");
 	bool result = true;
-	unsigned int i=0;
+	int i=0;
 	while (result && i < entries.count()) {
 		KTouchLectureStats stats;
 		result = stats.read(entries.item(i));

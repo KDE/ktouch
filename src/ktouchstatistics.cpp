@@ -393,7 +393,7 @@ void KTouchStatistics::updateChartTab() {
 				x = i+1;
 				chartWidget->BottomAxis.setLabel( i18n( "Sessions" ));
 			}
-			ob->addPoint( DPoint(x, data[i].second) );
+			ob->addPoint( QPointF(x, data[i].second) );
 			min_x = std::min(x, min_x);
 			max_x = std::max(x, max_x);
 			max_y = std::max(data[i].second, max_y);

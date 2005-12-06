@@ -107,7 +107,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     bool saveModified();
     
     KTouchLecture                   m_lecture;         ///< The currently used lecture.
-    unsigned int                    m_level;           ///< The current level number.
+    int                    m_level;           ///< The current level number.
     Q3ListViewItem                  *m_currentItem;     ///< The currently selected item in the list view.
     bool                            m_selecting;       ///< Flag to prevent the selection slot from selecting twice.
     bool                            m_modified;        ///< Flag indicating whether the lecture has been modified.

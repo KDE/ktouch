@@ -130,7 +130,7 @@ void KTouchLectureEditor::newSelection(Q3ListViewItem* item) {
     storeCurrentLevel();
     // now we need to find the level which has been selected
     Q3ListViewItem *i = levelListView->firstChild();
-    unsigned int level=0;
+    int level=0;
     while (i!=0 && i!=item) {
         i = i->nextSibling();
         ++level;
@@ -188,7 +188,7 @@ void KTouchLectureEditor::deleteLevel() {
     std::advance(it, m_level);
     m_lecture.m_lectureData.erase(it);
     m_currentItem = levelListView->firstChild();
-    for (unsigned int i=0; i<m_level; ++i)
+    for (int i=0; i<m_level; ++i)
         m_currentItem = m_currentItem->nextSibling();
     levelListView->setSelected(m_currentItem, true);
     showCurrentLevel();
@@ -328,7 +328,7 @@ void KTouchLectureEditor::storeCurrentLevel() {
     QString text = linesTextEdit->text();
     QStringList lines;
     QString currentLine;
-    for (unsigned int i=0; i<text.length(); ++i) {
+    for (int i=0; i<text.length(); ++i) {
         QChar c = text[i];
         if (c=='\t')  c=' '; // replace tabs with spaces
         if (c=='\n') {
