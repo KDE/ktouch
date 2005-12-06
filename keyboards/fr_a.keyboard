@@ -45,17 +45,17 @@ ControlKey	259		Caps_L		0	20	18	10
 ##  withc finger key you are going to use.
 ##
 ##		Assci	KeyText		x	y	FingerKey
-NormalKey	178	²		0	0	113
+NormalKey	178	Â²		0	0	113
 NormalKey	38	& 		10	0	113
-NormalKey	233	é		20	0	115	#always "on"
+NormalKey	233	Ã©		20	0	115	#always "on"
 NormalKey	34	"		30	0	100
 NormalKey	39	'		40	0	102
 NormalKey	40	(		50	0	102
 NormalKey	45	-		60	0	102
-NormalKey	232	è		70	0	106
+NormalKey	232	Ã¨		70	0	106
 NormalKey	95	_		80	0	107
-NormalKey	231	ç		90	0	108	#always "on"
-NormalKey	224	à		100	0	109
+NormalKey	231	Ã§		90	0	108	#always "on"
+NormalKey	224	Ã 		100	0	109
 NormalKey	41	)		110	0	109
 NormalKey	61	=		120	0	109
 #NormalKey	92			130	0	109
@@ -76,7 +76,7 @@ NormalKey	36	$		125	10	109
 #
 NormalKey	103	G		58	20	102
 NormalKey	104	H		68	20	106
-NormalKey	249	ù		118	20	109
+NormalKey	249	Ã¹		118	20	109
 NormalKey	60	<		13	30	113
 NormalKey	119	W		23	30	113
 NormalKey	120	X		33	30	115

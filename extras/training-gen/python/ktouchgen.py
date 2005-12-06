@@ -225,7 +225,7 @@ def main(argv):
     outfile.write('#########################################################\n' +\
                   '# Trainingfile generaded ' + time.ctime(time.time()) + '\n' +\
                   '# Program written by Hendrik Naumann <hn75@gmx.de>\n' +\
-                  '# Inspired by Håvard Frøiland\'s version\n' +\
+                  '# Inspired by HÃ¥vard FrÃ¸iland\'s version\n' +\
                   '#########################################################\n')
     permit_chars = []
     Levelnum = 0

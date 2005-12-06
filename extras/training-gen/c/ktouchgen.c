@@ -205,7 +205,7 @@ int main(int argc, char *argv[])
   lt = time(NULL);
   fprintf(file,"#############################################################\n");
   fprintf(file,"# Rrainingfile genereated %s",ctime(&lt));
-  fprintf(file,"# Program written by Håvard Frøiland\n");
+  fprintf(file,"# Program written by HÃ¥vard FrÃ¸iland\n");
   fprintf(file,"#############################################################\n\n");
 
   strcpy(test,"");
