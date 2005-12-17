@@ -19,7 +19,6 @@
 
 #include <qcolor.h>
 #include <qstringlist.h>
-#include <q3valuevector.h>
 //Added by qt3to4:
 #include <QLabel>
 #include <QKeyEvent>

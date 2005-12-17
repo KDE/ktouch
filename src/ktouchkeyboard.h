@@ -17,7 +17,6 @@
 #include <config.h>
 #endif
 
-#include <q3valuevector.h>
 //Added by qt3to4:
 #include <QTextStream>
 

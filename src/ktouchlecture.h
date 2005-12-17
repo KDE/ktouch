@@ -1,5 +1,3 @@
-//Added by qt3to4:
-#include <QTextStream>
 /***************************************************************************
  *   ktouchlecture.h                                                       *
  *   ---------------                                                       *
@@ -23,8 +21,9 @@ class QWidget;
 class QDomDocument;
 class KURL;
 
-#include <q3valuevector.h>
 #include "ktouchleveldata.h"
+//Added by qt3to4:
+#include <QTextStream>
 
 /// This class handles the lecture data and provides the lines to type.
 ///

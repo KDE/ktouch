@@ -18,13 +18,12 @@
 #endif
 
 #include <qstring.h>
-#include <q3valuevector.h>
 #include <qmap.h>
 #include <qdom.h>
 #include <qdatetime.h>
 //Added by qt3to4:
 #include <QTextStream>
-
+#include <QVector>
 #include <kurl.h>
 
 #include <set>          // I'm using std::set here because QT is missing this container type

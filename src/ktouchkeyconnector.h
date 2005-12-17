@@ -18,7 +18,6 @@
 #endif
 
 #include <qdom.h>
-#include <q3valuevector.h>
 #include "ktouchkey.h"
 
  /// The KTouchKeyConnector class contains the information about the character that has to 

@@ -19,9 +19,8 @@
 
 #include <qstring.h>
 #include <qtextstream.h>
-#include <q3valuevector.h>
 #include <qdom.h>
-
+#include <QVector>
 class QDomDocument;
 class QDomElement;
 
