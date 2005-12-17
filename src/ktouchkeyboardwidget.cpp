@@ -17,7 +17,6 @@
 
 #include <qfile.h>
 //Added by qt3to4:
-#include <Q3ValueList>
 #include <QTextStream>
 #include <QResizeEvent>
 #include <QPaintEvent>
@@ -164,7 +163,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
-        Q3ValueList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
+        QList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
@@ -333,7 +332,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
 void KTouchKeyboardWidget::updateColours() {
     // loop over all key connections
-    for (Q3ValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
+    for (QList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
         QChar fingerChar = (*it).m_fingerKeyChar;
         if (fingerChar == QChar(0)) continue;
         QChar targetChar = (*it).m_targetKeyChar;
