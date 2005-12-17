@@ -45,7 +45,8 @@
                             <property name="font">
                                 <font>
                                     <family>Helvetica</family>
-                                    <bold>1</bold>
+				    <bold>1</bold>
+				    <pointsize>8</pointsize>
                                 </font>
                             </property>
                             <property name="text">
@@ -415,7 +416,8 @@
                             <property name="font">
                                 <font>
                                     <family>Helvetica</family>
-                                    <bold>1</bold>
+				    <bold>1</bold>
+				    <pointsize>8</pointsize>
                                 </font>
                             </property>
                             <property name="text">
@@ -452,7 +454,8 @@
                             </property>
                             <property name="font">
                                 <font>
-                                    <family>Courier 10 Pitch</family>
+					<family>Courier 10 Pitch</family>
+					<pointsize>10</pointsize>
                                 </font>
                             </property>
                         </widget>

@@ -219,7 +219,8 @@
                     </property>
                     <property name="font">
                         <font>
-                            <family>Courier 10 Pitch</family>
+				<family>Courier 10 Pitch</family>
+				<pointsize>20</pointsize>
                         </font>
                     </property>
                     <property name="toolTip" stdset="0">
