@@ -75,7 +75,7 @@ class KTouchLecture {
     /// Saves the lecture data in the XML document
     void writeLecture(QDomDocument& doc) const;
   
-    Q3ValueVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
+    QVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
     
     /// The editor should be able to handle the internal lecture data (it's for convenience actually).
     friend class KTouchLectureEditor;

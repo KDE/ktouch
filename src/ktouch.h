@@ -69,7 +69,7 @@ class KTouch : public KMainWindow {
     ~KTouch();
 
 	/// Returns the current color scheme
-	const Q3ValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
+	const QVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
@@ -177,7 +177,7 @@ class KTouch : public KMainWindow {
 
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
 	
-	Q3ValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
+	QVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).

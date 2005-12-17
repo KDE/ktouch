@@ -45,8 +45,8 @@ class KTouchKeyboard  {
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
 	
-    Q3ValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
-    Q3ValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
+    QVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
+    QVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.

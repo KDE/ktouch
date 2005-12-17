@@ -229,7 +229,7 @@ void KTouchLecture::writeLecture(QDomDocument& doc) const {
 	// Store levels
 	QDomElement levels = doc.createElement("Levels");
 	root.appendChild(levels);
-    for (Q3ValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
+    for (QVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
 		it!=m_lectureData.end(); ++it) 
 	{
 		it->writeLevel(doc, levels);

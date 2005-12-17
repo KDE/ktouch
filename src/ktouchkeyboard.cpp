@@ -265,12 +265,12 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	// Store keys
 	QDomElement keys = doc.createElement("KeyDefinitions");
 	root.appendChild(keys);
-    for (Q3ValueVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
+    for (QVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
 		it->write(doc, keys);
 	// Store connectors
 	QDomElement conns = doc.createElement("KeyConnections");
 	root.appendChild(conns);
-    for (Q3ValueVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (QVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
 		it->write(doc, conns);
 }
 // ----------------------------------------------------------------------------
@@ -339,7 +339,7 @@ void KTouchKeyboard::createDefault() {
 // ----------------------------------------------------------------------------
 
 void KTouchKeyboard::updateConnections() {
-	for (Q3ValueVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
+	for (QVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
 		(*it).updateConnections(m_keys);
 }
 // ----------------------------------------------------------------------------

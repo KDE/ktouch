@@ -46,7 +46,7 @@ void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
 	root.appendChild(element);
 }
 
-void KTouchKeyConnector::updateConnections(const Q3ValueVector<KTouchKey>& keyvector) {
+void KTouchKeyConnector::updateConnections(const QVector<KTouchKey>& keyvector) {
 	
 }
 

@@ -153,7 +153,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 	}
 	kdDebug() << "Adding key definitions to key list" << endl;
 	keyListBox->clear();
-	Q3ValueVector<KTouchKey>::iterator it;
+	QVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
 	unsigned int min_y = 100000;

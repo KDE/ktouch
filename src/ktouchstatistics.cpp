@@ -272,7 +272,7 @@ void KTouchStatistics::updateChartTab() {
 		switch (buttonGroup2->selectedId()) {
 			case 0 : // words per minute
 				// loop over all session data entries in *it and store words per minute data
-				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -296,7 +296,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 1 : // chars per minute
 				// loop over all session data entries in *it and store chars per minute data
-				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -320,7 +320,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 2 : // correctness
 				// loop over all session data entries in *it and store correctness data
-				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -344,7 +344,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 3 : // skill
 				// loop over all session data entries in *it and store correctness data
-				for (Q3ValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;

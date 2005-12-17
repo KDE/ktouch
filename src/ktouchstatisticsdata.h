@@ -176,8 +176,8 @@ class KTouchLectureStats {
 	QString								m_lectureTitle;	///< The descriptive title of the lecture.
 	KURL								m_lectureURL;	///< The descriptive title of the lecture.
 
-	Q3ValueVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
-	Q3ValueVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
+	QVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
+	QVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
 };
 
 

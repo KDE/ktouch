@@ -184,7 +184,7 @@ void KTouchLectureEditor::deleteLevel() {
     // first remove the item from the list view
     delete m_currentItem;
     // then remove the level data
-    Q3ValueVector<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
+    QVector<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
     std::advance(it, m_level);
     m_lecture.m_lectureData.erase(it);
     m_currentItem = levelListView->firstChild();
@@ -258,7 +258,7 @@ void KTouchLectureEditor::transfer_to_dialog() {
     else                        setCaption(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     // copy the 'new char' strings of the lectures into the list view
     levelListView->clear();
-    Q3ValueVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
+    QVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
     // add first item
     Q3ListViewItem *item=new Q3ListViewItem( levelListView, (it++)->m_newChars );
     // add all the others
@@ -311,7 +311,7 @@ void KTouchLectureEditor::showCurrentLevel() {
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;
-    for (Q3ValueVector<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
+    for (QVector<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
                                                it!=m_lecture.m_lectureData[m_level].m_lines.end(); ++it)
     {
         text += *it + '\n';

@@ -406,7 +406,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store level stats
 	QDomElement levelStatsElement = doc.createElement("AllLevelStats");
 	lecture.appendChild(levelStatsElement);
-	for (Q3ValueVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
+	for (QVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
 		it != m_levelStats.end(); ++it)
 	{
 		it->write(doc, levelStatsElement);
@@ -414,7 +414,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store session stats
 	QDomElement sessionStatsElement = doc.createElement("AllSessionStats");
 	lecture.appendChild(sessionStatsElement);
-	for (Q3ValueVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
+	for (QVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
 			it != m_sessionStats.end(); ++it)
 	{
 		it->write(doc, sessionStatsElement);
