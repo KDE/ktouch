@@ -32,7 +32,7 @@ void KTouchLevelData::createDefault() {
 
 bool KTouchLevelData::readLevel(QTextStream& in) {
     QString line;
-    m_comment = m_newChars = QString::null;
+    m_comment = m_newChars.clear();
     m_lines.clear();
     // now read all the lines of the level, until EOF or an empty line
     line = in.readLine();

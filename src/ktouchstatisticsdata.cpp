@@ -95,7 +95,7 @@ bool KTouchLevelStats::read(QDomNode in) {
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
 		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString::null) 
+		if (timestring != QString()) 
 			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read characters
@@ -237,7 +237,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
 		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString::null) 
+		if (timestring != QString()) 
 			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read level numbers
@@ -342,8 +342,8 @@ void KTouchSessionStats::addWrongChar(QChar key) {
 // *** KTouchLectureStats ***
 
 void KTouchLectureStats::clear() {
-	m_lectureTitle = QString::null;
-	m_lectureURL = QString::null;
+	m_lectureTitle.clear();
+	m_lectureURL.clear();
 	m_levelStats.clear();
 	m_sessionStats.clear();
 }

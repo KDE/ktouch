@@ -114,7 +114,7 @@ void KTouchStatistics::lectureActivated(int index) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatistics::clearHistory() {
-	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),QString::null,KStdGuiItem::del()) 
+	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),QString(),KStdGuiItem::del()) 
 		== KMessageBox::Continue)
 	{
 		KTouchPtr->clearStatistics(); // clear statistics data in KTouch

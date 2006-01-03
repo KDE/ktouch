@@ -117,7 +117,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     m_lectureData.clear();      
     // now loop until end of file is reached and break down the textfile into several strings containing the levels
     QStringList slist;
-    QString current_level = QString::null;  // used to store the current level data
+    QString current_level = QString();  // used to store the current level data
     line = in.readLine();
     bool in_level = false;
     while (!in.atEnd() && !line.isNull()) {
@@ -134,7 +134,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
             else if (in_level) {
                 // ok, a new comment found, if we were reading a level, store it
                 slist.append(current_level);
-                current_level = QString::null;
+                current_level.clear();
                 in_level = false;
             }
         }

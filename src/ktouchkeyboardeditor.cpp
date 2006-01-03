@@ -91,7 +91,7 @@ void KTouchKeyboardEditor::saveBtnClicked() {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditor::saveAsBtnClicked() {
-    QString tmp = KFileDialog::getSaveFileName(QString::null, 
+    QString tmp = KFileDialog::getSaveFileName(QString(), 
         i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
@@ -203,7 +203,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
 		    !m_keyboard.load(this, m_currentURL) && !m_keyboard.loadXML(this, m_currentURL)) 
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead!"));
-            m_currentURL = QString::null; // new keyboards haven't got a URL
+            m_currentURL.clear(); // new keyboards haven't got a URL
 			m_keyboard.clear();
         }
         // If we have no URL, we create a new keyboard - can happen if either the user
@@ -236,7 +236,7 @@ bool KTouchKeyboardEditor::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The keyboard has been changed. Do you want to save the changes?"),QString::null,KStdGuiItem::save(),KStdGuiItem::discard());
+        i18n("The keyboard has been changed. Do you want to save the changes?"),QString(),KStdGuiItem::save(),KStdGuiItem::discard());
     if (result == KMessageBox::Cancel) return false; // User aborted
     if (result == KMessageBox::Yes) saveBtnClicked();
     // if successfully saved the modified flag will be resetted in the saveBtnClicked() function

@@ -111,7 +111,7 @@ void KTouchLectureEditor::saveBtnClicked() {
 // -----------------------------------------------------------------------------
 
 void KTouchLectureEditor::saveAsBtnClicked() {
-    QString tmp = KFileDialog::getSaveFileName(QString::null, 
+    QString tmp = KFileDialog::getSaveFileName(QString(), 
         "*.ktouch.xml|KTouch Lecture Files(*.ktouch.xml)\n*.*|All Files", this, i18n("Save Training Lecture") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
@@ -349,7 +349,7 @@ void KTouchLectureEditor::storeCurrentLevel() {
 void KTouchLectureEditor::createNewLevel() {
      KTouchLevelData newLevel;
      newLevel.m_newChars = i18n("abcdefghijklmnopqrstuvwxyz");
-     newLevel.m_comment = QString();
+     newLevel.m_comment.clear();
      newLevel.m_lines.clear();  // remove the lines of the default mini level
      newLevel.m_lines.push_back(i18n("Enter your lines here..."));
      m_lecture.m_lectureData.push_back(newLevel);
@@ -379,7 +379,7 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
 			// try to read old format first then XML format
 			if (!m_lecture.load(this, m_currentURL) && !m_lecture.loadXML(this, m_currentURL)) {
             	KMessageBox::sorry(this, i18n("Could not open the lecture file, creating a new one instead."));
-            	m_currentURL = QString::null; // new lectures haven't got a URL
+            	m_currentURL.clear(); // new lectures haven't got a URL
 			}
         }
         // If we have no URL, we create a new lecture - can happen if either the user
@@ -411,7 +411,7 @@ bool KTouchLectureEditor::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The lecture has been changed. Do you want to save the changes?"),QString::null,KStdGuiItem::save(),KStdGuiItem::discard());
+        i18n("The lecture has been changed. Do you want to save the changes?"),QString(),KStdGuiItem::save(),KStdGuiItem::discard());
     if (result == KMessageBox::Cancel) return false; // User aborted
     if (result == KMessageBox::Yes) saveBtnClicked();
     // if successfully saved the modified flag will be resetted in the saveBtnClicked() function

@@ -79,7 +79,7 @@ void KTouchOpenRequest::okBtnClicked() {
     if (presetRadioBtn->isChecked())
         m_url = presetCombo->currentText();
     if (newRadioBtn->isChecked())
-        m_url = QString::null;
+        m_url.clear();
     if (openFileRadioBtn->isChecked()) {
         if (openFileEdit->text().isEmpty()) {
             KMessageBox::error(this, i18n("Please select or enter a file name."));
@@ -113,7 +113,7 @@ void KTouchOpenRequest::radioBtnChanged() {
 
 
 void KTouchOpenRequest::browseBtnClicked() {
-    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
+    KURL tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty())
         openFileEdit->setText(tmp.url());
 }

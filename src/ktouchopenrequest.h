@@ -62,7 +62,7 @@ class KTouchOpenRequest : public KTouchOpenRequestDlg {
     /// @return Returns the dialogs return code, QDialog::Accepted or QDialog::Rejected.
     int requestFileToOpen(KURL& url, const QString& caption, const QString& title, const QString& currentText,
         const QString& defaultText, const QString& openText, const QString& newText,
-        KURL current_url = KURL(), QStringList defaultList = QStringList(), QString emptyListText = QString::null);
+        KURL current_url = KURL(), QStringList defaultList = QStringList(), QString emptyListText = QString());
 
     /// After the dialog has been accepted the URL chosen by the user is stored herein.
     KURL m_url;    

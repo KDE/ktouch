@@ -29,10 +29,10 @@
 void KTouchKeyboard::clear() {
     m_keys.clear();
     m_connectors.clear();
-	m_title = QString::null;
-	m_comment = QString::null;
-	m_language = QString::null;
-	m_fontSuggestions = QString::null;
+	m_title.clear();
+	m_comment.clear();
+	m_language.clear();
+	m_fontSuggestions.clear();
 }
 // ----------------------------------------------------------------------------
 
@@ -181,7 +181,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
 	kdDebug() << "Reading new keyboard layout" << endl;
     m_keys.clear();
 	m_connectors.clear();
-	m_title = QString::null;
+	m_title.clear();
 	// retrieve the title
 	QDomNodeList entries = doc.elementsByTagName("Title");
 	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
@@ -330,7 +330,7 @@ void KTouchKeyboard::createDefault() {
 	
 	m_title = "Number keypad";
 	m_comment = "Predefined keyboard layout";
-	m_language = QString::null;
+	m_language.clear();
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Luxi Serif";
     m_width = 8*col;

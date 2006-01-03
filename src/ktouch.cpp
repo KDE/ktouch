@@ -102,7 +102,7 @@ KTouch::KTouch()
 		
 	    // Reload the last used training file.
 		if (!m_lecture.loadXML(this, Prefs::currentLectureFile() )) {
-			Prefs::setCurrentLectureFile(QString::null);
+			Prefs::setCurrentLectureFile(QString());
 			m_defaultLectureAction->setCurrentItem(-1);
 		}
 		else {
@@ -241,7 +241,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
 	trainingPause();
-	KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
+	KURL tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
 		// first store training statistics
 		m_trainer->storeTrainingStatistics();
