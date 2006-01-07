@@ -13,6 +13,8 @@
 #include "ktouchchartwidget.h"
 #include "ktouchchartwidget.moc"
 
+#include <libkdeedu/kdeeduplot/kplotaxis.h>
+
 #include <qpainter.h>
 
 #include <klocale.h>
@@ -21,16 +23,18 @@
 #include <cmath>
 
 KTouchChartWidget::KTouchChartWidget(QWidget* parent, const char *name)
-  : KPlotWidget(0.0, 1.0, 0.0, 1.0, parent)
+  : KPlotWidget(0.0, 120.0, 0.0, 240.0, parent)
 {
 	// temporary
 	setObjectName( name );
+	setUpdatesEnabled( false );
 	setShowGrid( false ); // no grid please
-	setBGColor( QColor( "white" ) );
-	setFGColor( QColor( "black" ) );
-	setLimits( 0.0, 120.0, 0.0, 240.0 );
-	setXAxisLabel( i18n( "Progress" ) );
-	setYAxisLabel( i18n( "Words per second" ) );
+	setBackgroundColor( Qt::white );
+	setForegroundColor( Qt::black );
+	axis( BottomAxis )->setLabel( i18n( "Progress" ) );
+	axis( LeftAxis )->setLabel( i18n( "Words per second" ) );
+	setUpdatesEnabled( true );
+	update();
 }
 
 KTouchChartWidget::~KTouchChartWidget()
