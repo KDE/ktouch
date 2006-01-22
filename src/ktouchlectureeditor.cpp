@@ -379,7 +379,7 @@ int KTouchLectureEditor::openLectureFile(const KURL& url) {
 			// try to read old format first then XML format
 			if (!m_lecture.load(this, m_currentURL) && !m_lecture.loadXML(this, m_currentURL)) {
             	KMessageBox::sorry(this, i18n("Could not open the lecture file, creating a new one instead."));
-            	m_currentURL.clear(); // new lectures haven't got a URL
+            	m_currentURL = ""; // new lectures haven't got a URL
 			}
         }
         // If we have no URL, we create a new lecture - can happen if either the user

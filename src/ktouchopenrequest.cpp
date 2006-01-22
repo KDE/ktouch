@@ -79,7 +79,7 @@ void KTouchOpenRequest::okBtnClicked() {
     if (presetRadioBtn->isChecked())
         m_url = presetCombo->currentText();
     if (newRadioBtn->isChecked())
-        m_url.clear();
+        m_url = "";
     if (openFileRadioBtn->isChecked()) {
         if (openFileEdit->text().isEmpty()) {
             KMessageBox::error(this, i18n("Please select or enter a file name."));

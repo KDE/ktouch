@@ -203,7 +203,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
 		    !m_keyboard.load(this, m_currentURL) && !m_keyboard.loadXML(this, m_currentURL)) 
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead!"));
-            m_currentURL.clear(); // new keyboards haven't got a URL
+            m_currentURL = ""; // new keyboards haven't got a URL
 			m_keyboard.clear();
         }
         // If we have no URL, we create a new keyboard - can happen if either the user
