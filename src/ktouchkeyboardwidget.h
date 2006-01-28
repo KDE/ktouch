@@ -24,7 +24,7 @@
 #include <Q3PtrList>
 #include "ktouchkeys.h"
 
-class KURL;
+class KUrl;
 
 /** This is the keyboard widget at the bottom of the training screen.
  *  In addition to the painting functions this class has the member
@@ -46,9 +46,9 @@ class KTouchKeyboardWidget : public QWidget {
     /// Reads a keyboard layout from the given URL.
     /// The function returns 'true' when the reading was successful or 'false' if not. In this
     /// case the optional parameter errorMsg contains the error message.
-    bool loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg=NULL);
+    bool loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg=NULL);
     /// Saves the keyboard layout to the URL.
-    void saveKeyboard(QWidget * window, const KURL& url);
+    void saveKeyboard(QWidget * window, const KUrl& url);
     /// Applies preferences to the keyboard layout and the keys.
     /// This means that the layout is basically recreated and if the layout type/language
     /// changed it will be reloaded.

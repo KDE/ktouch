@@ -22,7 +22,7 @@
 #include <ktempfile.h>
 #include <kio/netaccess.h>
 
-bool KTouchLecture::load(QWidget * window, const KURL& url) {
+bool KTouchLecture::load(QWidget * window, const KUrl& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -40,7 +40,7 @@ bool KTouchLecture::load(QWidget * window, const KURL& url) {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLecture::loadXML(QWidget * window, const KURL& url) {
+bool KTouchLecture::loadXML(QWidget * window, const KUrl& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -60,7 +60,7 @@ bool KTouchLecture::loadXML(QWidget * window, const KURL& url) {
 // ----------------------------------------------------------------------------
 
 
-bool KTouchLecture::saveXML(QWidget * window, const KURL& url) const {
+bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
 	// create the XML document
 	QDomDocument doc;
 	writeLecture(doc);
@@ -242,7 +242,7 @@ void KTouchLecture::writeLecture(QDomDocument& doc) const {
 // OLD and deprecated stuff
 
 /*
-bool KTouchLecture::save(QWidget * window, const KURL& url) const {
+bool KTouchLecture::save(QWidget * window, const KUrl& url) const {
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())

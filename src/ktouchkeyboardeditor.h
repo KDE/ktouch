@@ -54,7 +54,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
     ///         of the keyboard in KTouch is necessary) or 'false' if user canceled
     ///         the "Open request" dialog.
-    bool startEditor(const KURL& url);
+    bool startEditor(const KUrl& url);
 
   public slots:
     /// Called when the Font button was clicked.
@@ -98,7 +98,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
     /// creates a new, empty keyboard. 
     /// @return The function returns the return code from the open request dialog, so 
     ///         that one can react on a "cancel" choice.
-    int openKeyboardFile(const KURL& url);
+    int openKeyboardFile(const KUrl& url);
     /// Changes the state of the lecture file (flag==true means modified).
     void setModified(bool flag);
     /// If the keyboard is modified the user is prompted to save it or throw away the changes. 
@@ -109,7 +109,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
     KTouchKeyboard	m_keyboard;        ///< The keyboard data.
     bool            m_selecting;       ///< Flag to prevent the selection slot from being selected twice.
     bool            m_modified;        ///< Flag indicating whether the keyboard has been modified.
-    KURL            m_currentURL;      ///< URL of the current keyboard.
+    KUrl            m_currentURL;      ///< URL of the current keyboard.
 };
 
 #endif   // KTOUCHKEYBOARDEDITOR_H

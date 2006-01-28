@@ -63,7 +63,7 @@ KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool
 }
 // -----------------------------------------------------------------------------
 
-bool KTouchLectureEditor::startEditor(const KURL& url) {
+bool KTouchLectureEditor::startEditor(const KUrl& url) {
     // call open request dialog and load a lecture, and start the dialogs event loop if
     // the user did not cancel the open request dialog 
     if (openLectureFile(url)==QDialog::Accepted)  {
@@ -356,11 +356,11 @@ void KTouchLectureEditor::createNewLevel() {
 }
 // -----------------------------------------------------------------------------
 
-int KTouchLectureEditor::openLectureFile(const KURL& url) {
+int KTouchLectureEditor::openLectureFile(const KUrl& url) {
     // First setup the open request dialog
     KTouchOpenRequest dlg(this);
     // Call the dialog
-    KURL new_url;
+    KUrl new_url;
     int result = dlg.requestFileToOpen(new_url,
         i18n("Open Lecture File"),
         i18n("Which Lecture File Would You Like to Edit?"),

@@ -19,7 +19,7 @@
 
 class QWidget;
 class QDomDocument;
-class KURL;
+class KUrl;
 
 #include "ktouchleveldata.h"
 //Added by qt3to4:
@@ -42,13 +42,13 @@ class KTouchLecture {
     /// Creates a default mini-lecture.
     void createDefault();
     /// Loads a lecture from file (returns true if successful).
-    bool load(QWidget * window, const KURL& url);
+    bool load(QWidget * window, const KUrl& url);
     /// Loads a lecture (in XML format) from file (returns true if successful).
-    bool loadXML(QWidget * window, const KURL& url);
+    bool loadXML(QWidget * window, const KUrl& url);
     // /// Saves the lecture data to file (returns true if successful).
-    // bool save(QWidget * window, const KURL& url) const;
+    // bool save(QWidget * window, const KUrl& url) const;
     /// Saves the lecture data to file (returns true if successful).
-    bool saveXML(QWidget * window, const KURL& url) const;
+    bool saveXML(QWidget * window, const KUrl& url) const;
     /// Returns the number of levels in the lecture.
     unsigned int levelCount()       const { return m_lectureData.size(); };
     /// Returns a reference to the data of the level.

@@ -199,9 +199,9 @@ class KTouchStatisticsData {
 
     /// Reads the complete statistics from a XML file
     /// @return Returns 'true', when reading was successful or 'false' otherwise.
-    bool read(QWidget * window, const KURL& url);
+    bool read(QWidget * window, const KUrl& url);
     /// Writes the statistics data to the XML document.
-    bool write(QWidget * window, const KURL& url) const;
+    bool write(QWidget * window, const KUrl& url) const;
 	
 	LectureStatsMap		m_lectureStats;		///< All statistics of all lectures, stored based on their URLs.
 	

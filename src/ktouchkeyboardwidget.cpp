@@ -44,7 +44,7 @@ KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
 }
 
 
-bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg) {
+bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg) {
     QString target;
     if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
@@ -62,7 +62,7 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KURL& url, QStri
 }
 
 
-void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
+void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
@@ -119,14 +119,14 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
         // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() )))
+            if (!loadKeyboard(window, KUrl::fromPathOrURL( Prefs::currentKeyboardFile() )))
                 createDefaultKeyboard();
             else
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
+            if (!loadKeyboard(window, KUrl::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);

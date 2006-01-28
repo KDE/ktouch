@@ -37,7 +37,7 @@ void KTouchKeyboard::clear() {
 // ----------------------------------------------------------------------------
 
 // Loads a keyboard layout (old format) from file (returns true if successful).
-bool KTouchKeyboard::load(QWidget * window, const KURL& url) {
+bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -57,7 +57,7 @@ bool KTouchKeyboard::load(QWidget * window, const KURL& url) {
 // ----------------------------------------------------------------------------
 
 // Loads a lecture (in XML format) from file (returns true if successful).
-bool KTouchKeyboard::loadXML(QWidget * window, const KURL& url) {
+bool KTouchKeyboard::loadXML(QWidget * window, const KUrl& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -77,7 +77,7 @@ bool KTouchKeyboard::loadXML(QWidget * window, const KURL& url) {
 // ----------------------------------------------------------------------------
 
 // Saves the lecture data to file (returns true if successful).
-bool KTouchKeyboard::saveXML(QWidget * window, const KURL& url) const {
+bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 	// create the XML document
 	QDomDocument doc;
 	write(doc);
@@ -347,7 +347,7 @@ void KTouchKeyboard::updateConnections() {
 
 /*
 
-bool KTouchKeyboard::loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg) {
+bool KTouchKeyboard::loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg) {
     QString target;
     if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
@@ -365,7 +365,7 @@ bool KTouchKeyboard::loadKeyboard(QWidget * window, const KURL& url, QString* er
 }
 
 
-void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
+void KTouchKeyboard::saveKeyboard(QWidget * window, const KUrl& url) {
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
@@ -421,14 +421,14 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
         // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile )))
+            if (!loadKeyboard(window, KUrl::fromPathOrURL( KTouchConfig().m_currentKeyboardFile )))
                 createDefaultKeyboard();
             else
                 m_currentLayout=KTouchConfig().m_currentKeyboardFile;
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
+            if (!loadKeyboard(window, KUrl::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);

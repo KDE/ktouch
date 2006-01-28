@@ -56,7 +56,7 @@ KTouchStatistics::KTouchStatistics(QWidget* parent)
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsData& stats,
+void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsData& stats,
 	const KTouchLevelStats& currLevelStats,
 	const KTouchSessionStats& currSessionStats)
 {

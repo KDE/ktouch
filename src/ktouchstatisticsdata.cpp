@@ -431,7 +431,7 @@ void KTouchStatisticsData::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
+bool KTouchStatisticsData::read(QWidget * window, const KUrl& url) {
 	if (url.isEmpty()) return false;
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
@@ -459,7 +459,7 @@ bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
+bool KTouchStatisticsData::write(QWidget * window, const KUrl& url) const {
 	// create the XML document
 	QDomDocument doc;
 	writeStats(doc);

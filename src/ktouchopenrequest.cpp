@@ -31,9 +31,9 @@ KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool mod
 {
 }
 
-int KTouchOpenRequest::requestFileToOpen(KURL& url, const QString& caption, const QString& title, 
+int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, const QString& title, 
       const QString& currentText, const QString& defaultText, const QString& openText,
-      const QString& newText, KURL current_url, QStringList defaultList, QString emptyListText)
+      const QString& newText, KUrl current_url, QStringList defaultList, QString emptyListText)
 {
     setCaption(caption);
     openChoiceGroup->setTitle(title);
@@ -85,7 +85,7 @@ void KTouchOpenRequest::okBtnClicked() {
             KMessageBox::error(this, i18n("Please select or enter a file name."));
             return;
         }
-        KURL tmp = openFileEdit->text();
+        KUrl tmp = openFileEdit->text();
         if (!tmp.isValid()) {
             KMessageBox::error(this, i18n("The URL seems to be malformed; please correct it."));
             return;
@@ -113,7 +113,7 @@ void KTouchOpenRequest::radioBtnChanged() {
 
 
 void KTouchOpenRequest::browseBtnClicked() {
-    KURL tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
+    KUrl tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty())
         openFileEdit->setText(tmp.url());
 }

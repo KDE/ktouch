@@ -76,7 +76,7 @@ KTouch::KTouch()
 	setupGUI(ToolBar | Keys | StatusBar | Create);
 	setAutoSaveSettings();
 	// Read user statistics
-	KURL stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
+	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
 	//kdDebug() << "[KTouch::KTouch]  readings statistics from file '" << stat_file << "'" << endl;
 	if (!m_stats.read(this, stat_file))
 		m_stats.clear();	// if we can't read it, start with empty statistics
@@ -241,7 +241,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
 	trainingPause();
-	KURL tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
+	KUrl tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
 		// first store training statistics
 		m_trainer->storeTrainingStatistics();
@@ -400,7 +400,7 @@ void KTouch::changeLecture(int num) {
     trainingPause();
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
-    if (!l.loadXML(this, KURL::fromPathOrURL(fileName))) {
+    if (!l.loadXML(this, KUrl::fromPathOrURL(fileName))) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.").arg(fileName) );
     	m_defaultLectureAction->setCurrentItem(-1);
 	}
@@ -430,7 +430,7 @@ bool KTouch::queryExit() {
     Prefs::writeConfig();
 	// update and save statistics
 	m_trainer->storeTrainingStatistics();
-	KURL stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
+	KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
 	//kdDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
 	m_stats.write(this, stat_file);
     return true;
@@ -655,7 +655,7 @@ void KTouch::updateFileLists() {
     if (!lectureFiles.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=lectureFiles.begin(); it!=lectureFiles.end(); ++it) {
-            KURL url(*it);
+            KUrl url(*it);
 			KTouchLecture l;
 			// only add lecture if we can actually load it
 			if (l.loadXML(this, url)) {

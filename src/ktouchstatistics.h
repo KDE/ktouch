@@ -24,7 +24,7 @@
 
 class QShowEvent;
 class KTouch;
-class KURL;
+class KUrl;
 
 /// Implementation of the statistics widget
 class KTouchStatistics : public KTouchStatisticsDlg {
@@ -34,7 +34,7 @@ class KTouchStatistics : public KTouchStatisticsDlg {
     KTouchStatistics(QWidget* parent);
 
 	/// Fills the statistics dialog with data and executes it.
-	void run(const KURL& currentLecture, const KTouchStatisticsData& stats,
+	void run(const KUrl& currentLecture, const KTouchStatisticsData& stats,
 		const KTouchLevelStats& currLevelStats,
 		const KTouchSessionStats& currSessionStats);
 

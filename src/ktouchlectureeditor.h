@@ -51,7 +51,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
     ///         of the lecture in KTouch is necessary) or 'false' if user canceled
     ///         the "Open request" dialog.
-    bool startEditor(const KURL& url);
+    bool startEditor(const KUrl& url);
 
   private slots:
     /// Called when the Font button was clicked.
@@ -98,7 +98,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     /// creates a new lecture. 
     /// @return The function returns the return code from the open request dialog, so 
     ///         that one can react on a "cancel" choice.
-    int openLectureFile(const KURL& url);
+    int openLectureFile(const KUrl& url);
     /// Changes the state of the lecture file (flag==true means modified).
     void setModified(bool flag);
     /// If the lecture is modified the user is prompted to save it or throw away the changes. 
@@ -111,7 +111,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     Q3ListViewItem                  *m_currentItem;     ///< The currently selected item in the list view.
     bool                            m_selecting;       ///< Flag to prevent the selection slot from selecting twice.
     bool                            m_modified;        ///< Flag indicating whether the lecture has been modified.
-    KURL                            m_currentURL;      ///< URL of the current lecture.
+    KUrl                            m_currentURL;      ///< URL of the current lecture.
 };
 
 #endif

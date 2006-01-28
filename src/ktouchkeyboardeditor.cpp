@@ -42,7 +42,7 @@ KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bo
 }
 // -----------------------------------------------------------------------------
 
-bool KTouchKeyboardEditor::startEditor(const KURL& url) {
+bool KTouchKeyboardEditor::startEditor(const KUrl& url) {
     // call open request dialog and load a keyboard and start the dialogs event loop if
     // the user did not cancel the open request dialog 
     if (openKeyboardFile(url)==QDialog::Accepted)  {
@@ -181,11 +181,11 @@ void KTouchKeyboardEditor::transfer_from_dialog() {
 }
 // -----------------------------------------------------------------------------
 
-int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
+int KTouchKeyboardEditor::openKeyboardFile(const KUrl& url) {
     // First setup the open request dialog
     KTouchOpenRequest dlg(this);
     // Call the dialog
-    KURL new_url;
+    KUrl new_url;
     int result = dlg.requestFileToOpen(new_url,
         i18n("Open keyboard file ..."),
         i18n("Which keyboard file would you like to edit?"),

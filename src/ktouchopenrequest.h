@@ -33,7 +33,7 @@
 /// in the following example:
 /// @code
 /// KTouchOpenRequest dlg;
-/// KURL url;
+/// KUrl url;
 /// // current_lecture must hold the URL to the current/default lecture or ""
 /// // default_lectures must be a QStringList with the default lecture files.
 /// int result = dlg.requestFileToOpen(url, i18n("Open a lecture file"), 
@@ -60,12 +60,12 @@ class KTouchOpenRequest : public KTouchOpenRequestDlg {
     ~KTouchOpenRequest() {}
     /// Sets up the dialog and runs it.
     /// @return Returns the dialogs return code, QDialog::Accepted or QDialog::Rejected.
-    int requestFileToOpen(KURL& url, const QString& caption, const QString& title, const QString& currentText,
+    int requestFileToOpen(KUrl& url, const QString& caption, const QString& title, const QString& currentText,
         const QString& defaultText, const QString& openText, const QString& newText,
-        KURL current_url = KURL(), QStringList defaultList = QStringList(), QString emptyListText = QString());
+        KUrl current_url = KURL(), QStringList defaultList = QStringList(), QString emptyListText = QString());
 
     /// After the dialog has been accepted the URL chosen by the user is stored herein.
-    KURL m_url;    
+    KUrl m_url;    
      
   public slots:
     /// Called when user selects Ok (used to check whether the URL is well formed).

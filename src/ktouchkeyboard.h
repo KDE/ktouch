@@ -23,7 +23,7 @@
 #include "ktouchkeyconnector.h"
 #include "ktouchkey.h"
 
-class KURL;
+class KUrl;
 
 /// This class stores the keyboard layout and the connectivity between characters 
 /// and the actual keys.
@@ -34,11 +34,11 @@ class KTouchKeyboard  {
 	/// Clears the keyboard (resets all data)
 	void clear();
     /// Loads a keyboard layout (old format) from file (returns true if successful).
-    bool load(QWidget * window, const KURL& url);
+    bool load(QWidget * window, const KUrl& url);
     /// Loads a lecture (in XML format) from file (returns true if successful).
-    bool loadXML(QWidget * window, const KURL& url);
+    bool loadXML(QWidget * window, const KUrl& url);
     /// Saves the lecture data to file (returns true if successful).
-    bool saveXML(QWidget * window, const KURL& url) const;
+    bool saveXML(QWidget * window, const KUrl& url) const;
 	/// Creates the default number keyboard.
 	void createDefault();
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
