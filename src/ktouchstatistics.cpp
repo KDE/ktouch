@@ -289,8 +289,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, wpm) );
 				}
-				chartWidget->LeftAxis.setLabel( i18n("Words per minute") );
-				chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+				chartWidget->setXAxisLabel( i18n("Words per minute") );
+				//:chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
 				break;
 
 
@@ -313,8 +313,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, cpm) );
 				}
-				chartWidget->LeftAxis.setLabel( i18n("Characters per minute") );
-				chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+				chartWidget->setXAxisLabel( i18n("Characters per minute") );
+				//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
 				break;
 
 
@@ -337,8 +337,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, corr) );
 				}
-				chartWidget->LeftAxis.setLabel( i18n("Correctness") );
-				chartWidget->LeftAxis.setLabelFormat(0, 'g', 1);
+				chartWidget->setXAxisLabel( i18n("Correctness") );
+				//chartWidget->LeftAxis.setLabelFormat(0, 'g', 1);
 				break;
 
 
@@ -368,8 +368,8 @@ void KTouchStatistics::updateChartTab() {
 					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, skill) );
 				}
-				chartWidget->LeftAxis.setLabel( i18n("Skill") );
-				chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+				chartWidget->setXAxisLabel( i18n("Skill") );
+				//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
 				break;
 				
 			default : return;
@@ -387,11 +387,11 @@ void KTouchStatistics::updateChartTab() {
 			double x;
 			if (timeRadio->isChecked()) {
 				x = data[i].first - data[0].first;
-				chartWidget->BottomAxis.setLabel( i18n( "Time since first practice session in days" ));
+				chartWidget->setYAxisLabel( i18n( "Time since first practice session in days" ));
 			}
 			else {	
 				x = i+1;
-				chartWidget->BottomAxis.setLabel( i18n( "Sessions" ));
+				chartWidget->setYAxisLabel( i18n( "Sessions" ));
 			}
 			ob->addPoint( QPointF(x, data[i].second) );
 			min_x = std::min(x, min_x);

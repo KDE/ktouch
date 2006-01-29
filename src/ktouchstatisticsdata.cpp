@@ -343,7 +343,7 @@ void KTouchSessionStats::addWrongChar(QChar key) {
 
 void KTouchLectureStats::clear() {
 	m_lectureTitle.clear();
-	m_lectureURL.clear();
+	m_lectureURL ="";
 	m_levelStats.clear();
 	m_sessionStats.clear();
 }
