@@ -463,8 +463,8 @@ void KTouch::readProperties(KConfig *config) {
     QString session = config->readEntry("Session");
     if (!session.isEmpty())
         m_trainer->m_session = KTouchTrainingSession(session);
-    m_trainer->m_level = config->readNumEntry("Level", 0);
-    m_trainer->m_line = config->readNumEntry("Line", 0);
+    m_trainer->m_level = config->readEntry("Level", 0);
+    m_trainer->m_line = config->readEntry("Line", 0);
     m_currentLectureFile = config->readPathEntry("Lecture");
     m_trainer->readSessionHistory();    // read session history (excluding currently active session)
     // update the trainer object
@@ -479,7 +479,7 @@ void KTouch::readProperties(KConfig *config) {
 	// Read training state
     config->setGroup("TrainingState");
     m_currentLectureURL = config->readPathEntry("LectureURL");
-    m_trainer->m_level = config->readNumEntry("Level", 0);
+    m_trainer->m_level = config->readEntry("Level", 0);
 */
 }
 // ----------------------------------------------------------------------------
