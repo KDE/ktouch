@@ -84,7 +84,7 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
 {
     m_colorIndex = m_fingerKeyCount++;
     if (m_colorIndex>=8) {
-        kdDebug() << "[KTouchFingerKey::KTouchFingerKey]  Number of finger keys = "
+        kDebug() << "[KTouchFingerKey::KTouchFingerKey]  Number of finger keys = "
                   << m_colorIndex << "! Setting colour index to 0" << endl;
         m_colorIndex=0;
     };

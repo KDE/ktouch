@@ -118,7 +118,7 @@ void KTouchSlideLine::toggleCursor() {
 
 void KTouchSlideLine::slide() {
     if (m_studentPixmap==NULL || m_teacherPixmap==NULL) return;
-    // kdDebug() << "[KTouchSlideLine::slide]" << endl;
+    // kDebug() << "[KTouchSlideLine::slide]" << endl;
     // calculate new x positions depending on slide speed
     double speed = 1.0 + 0.2*Prefs::slidingSpeed();
     double m_teacherDX = (m_teacherFrameXEnd - m_teacherFrameX)/speed;
@@ -160,7 +160,7 @@ void KTouchSlideLine::paintEvent(QPaintEvent*) {
 
 void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     if (m_teacherText.isEmpty()) return;  // can happen during startup
-    // kdDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
+    // kDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
     resizeFont();
     // delete old pixmaps because we have to change its size
     delete m_teacherPixmap;

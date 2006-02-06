@@ -79,7 +79,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kdDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!" << endl;
         return false;
     };
 	
@@ -111,7 +111,7 @@ const KTouchLevelData& KTouchLecture::level(unsigned int levelNum) const {
 // ----------------------------------------------------------------------------
 
 bool KTouchLecture::readLecture(QTextStream& in) {
-    //kdDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
+    //kDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
     QString line;
     // remove everything else
     m_lectureData.clear();      
@@ -143,7 +143,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     if (!current_level.isEmpty() && in_level)
         slist.append(current_level);
 
-    //kdDebug() << "Levels read = " << slist.count() << endl;
+    //kDebug() << "Levels read = " << slist.count() << endl;
 
     // now read all the levels
     for (QStringList::Iterator it = slist.begin(); it!=slist.end(); ++it) {
@@ -256,7 +256,7 @@ bool KTouchLecture::save(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kdDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!" << endl;
         return false;
     };
     QTextStream out( &outfile );

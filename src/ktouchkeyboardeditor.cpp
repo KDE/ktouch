@@ -60,7 +60,7 @@ bool KTouchKeyboardEditor::startEditor(const KUrl& url) {
 
 
 void KTouchKeyboardEditor::fontBtnClicked() {
-	//kdDebug() << "Fontbutton clicked" << endl;
+	//kDebug() << "Fontbutton clicked" << endl;
     QFont f;
     if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
 		m_keyboard.m_fontSuggestions = f.toString();
@@ -143,7 +143,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 		keyboardCommentEdit->setText(m_keyboard.m_comment);
 	}
 	languageEdit->setText(m_keyboard.m_language);
-	kdDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
+	kDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
 	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
 		QFont f;
 		f.fromString(m_keyboard.m_fontSuggestions);
@@ -151,7 +151,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 		keyboardCommentEdit->setFont(f);
 		languageEdit->setFont(f);
 	}
-	kdDebug() << "Adding key definitions to key list" << endl;
+	kDebug() << "Adding key definitions to key list" << endl;
 	keyListBox->clear();
 	QVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;

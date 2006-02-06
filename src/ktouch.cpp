@@ -77,7 +77,7 @@ KTouch::KTouch()
 	setAutoSaveSettings();
 	// Read user statistics
 	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
-	//kdDebug() << "[KTouch::KTouch]  readings statistics from file '" << stat_file << "'" << endl;
+	//kDebug() << "[KTouch::KTouch]  readings statistics from file '" << stat_file << "'" << endl;
 	if (!m_stats.read(this, stat_file))
 		m_stats.clear();	// if we can't read it, start with empty statistics
 
@@ -86,12 +86,12 @@ KTouch::KTouch()
 	
 	// If session was restored, the function readProperties() was already called
     if (kapp->isSessionRestored()) {
-		kdDebug() << "[KTouch::KTouch]  restoring session..." << endl;
+		kDebug() << "[KTouch::KTouch]  restoring session..." << endl;
 		/// \todo Rewrite all the session management stuff.
 		///       For now we just do the same as for the standard startup.
 	}
 //	else {
-		//kdDebug() << "[KTouch::KTouch]  starting standard training..." << endl;
+		//kDebug() << "[KTouch::KTouch]  starting standard training..." << endl;
 		// A note about safety: In this function there are a lot of things that might go
 		// wrong. What happens if the training file can't be found? What if the
 		// file cannot be opened or is corrupt? Whatever happens, the function loadXML() 
@@ -109,7 +109,7 @@ KTouch::KTouch()
 			updateFontFromLecture();
 			// adjust check marks in quick-select menus
 			updateLectureActionCheck();
-			//kdDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
+			//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
 		}
 		
 		// Adjust check mark for the keyboard file
@@ -381,7 +381,7 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 void KTouch::changeKeyboard(int num) {
     if (num>=m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
-	//kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
+	//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
 	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
     m_keyboardWidget->applyPreferences(this, false);  
@@ -431,7 +431,7 @@ bool KTouch::queryExit() {
 	// update and save statistics
 	m_trainer->storeTrainingStatistics();
 	KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
-	//kdDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
+	//kDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
 	m_stats.write(this, stat_file);
     return true;
 }
@@ -453,7 +453,7 @@ void KTouch::resizeEvent(QResizeEvent * event) {
 // This function only stored the temperary data of the last session. All permanent
 // settings should be handled by the KTouchConfiguration object.
 void KTouch::readProperties(KConfig *config) {
-    kdDebug() << "[KTouch::readProperties]  Reading session data..." << endl;
+    kDebug() << "[KTouch::readProperties]  Reading session data..." << endl;
 	// TODO : Session management rewrite
     config->setGroup("TrainingState");
 	
@@ -486,7 +486,7 @@ void KTouch::readProperties(KConfig *config) {
 
 // Will be called when the app should save its state for session management purposes.
 void KTouch::saveProperties(KConfig *config) {
-    kdDebug() << "[KTouch::saveProperties]  Saving session data..." << endl;
+    kDebug() << "[KTouch::saveProperties]  Saving session data..." << endl;
     // We are going down because of session management (most likely because of
     // KDE logout). Let's save the current status so that we can restore it
     // next logon.
@@ -515,11 +515,11 @@ void KTouch::saveProperties(KConfig *config) {
 
 // Initialises the program during a normal startup
 void KTouch::init() {
-	//kdDebug() << "[KTouch::init]  populating file lists..." << endl;
+	//kDebug() << "[KTouch::init]  populating file lists..." << endl;
     updateFileLists();  // create lists with default lecture/keyboard/examination files/colour scheme files
-	//kdDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available" << endl;
-	//kdDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
-	//kdDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
+	//kDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available" << endl;
+	//kDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
+	//kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
 	/// \todo look up a default english lecture in the m_lectureFiles string list
 	QString default_lecture;
@@ -545,7 +545,7 @@ void KTouch::init() {
 
 // Creates the layout and GUI setup for a practice session
 void KTouch::initTrainingSession() {
-	//kdDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session..." << endl;
+	//kDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session..." << endl;
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of QSizePolicy)

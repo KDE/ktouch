@@ -102,12 +102,12 @@ bool KTouchLevelStats::read(QDomNode in) {
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
-		//kdDebug() << "'" << char_data << "'" << endl;
+		//kDebug() << "'" << char_data << "'" << endl;
 		std::stringstream strm(std::string(char_data.local8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
-		//kdDebug() << m_charStats.size() << endl;
+		//kDebug() << m_charStats.size() << endl;
 	}
 	return true;
 }
@@ -253,12 +253,12 @@ bool KTouchSessionStats::read(QDomNode in) {
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
-		//kdDebug() << "'" << char_data << "'" << endl;
+		//kDebug() << "'" << char_data << "'" << endl;
 		std::stringstream strm(std::string(char_data.local8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
-		//kdDebug() << m_charStats.size() << endl;
+		//kDebug() << m_charStats.size() << endl;
 	}
 
 	return true;
@@ -364,7 +364,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 		// loop over all childs and read levels
 		QDomNode levelNode = n.firstChild();
 		while (!levelNode.isNull()) {
-			//kdDebug() << "[KTouchLectureStats::read]  Reading level stats" << endl;
+			//kDebug() << "[KTouchLectureStats::read]  Reading level stats" << endl;
 			KTouchLevelStats tmp;
 			if (tmp.read(levelNode))  m_levelStats.push_back(tmp);
 			levelNode = levelNode.nextSibling();
@@ -376,7 +376,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 		// loop over all childs and read sessions
 		QDomNode sessionNode = n.firstChild();
 		while (!sessionNode.isNull()) {
-			//kdDebug() << "[KTouchLectureStats::read]  Reading session stats" << endl;
+			//kDebug() << "[KTouchLectureStats::read]  Reading session stats" << endl;
 			KTouchSessionStats tmp;
 			if (tmp.read(sessionNode))  m_sessionStats.push_back(tmp);
 			sessionNode = sessionNode.nextSibling();
@@ -478,7 +478,7 @@ bool KTouchStatisticsData::write(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kdDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!" << endl;
         return false;
     }
 	

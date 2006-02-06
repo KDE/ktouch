@@ -69,7 +69,7 @@ bool KTouchKey::read(QDomNode node) {
 		m_secondaryChar = charvalue[0];
 	else
 		m_secondaryChar = QChar(0);
-	kdDebug() << "H:" << m_h << " W:" << m_w << " X:" << m_x << " Y:" << m_y 
+	kDebug() << "H:" << m_h << " W:" << m_w << " X:" << m_x << " Y:" << m_y 
 	          << " Type:" << m_type << " SecondaryChar:" << m_secondaryChar 
 			  << "' PrimaryChar:" << m_primaryChar << "'" << endl;
 	return true;

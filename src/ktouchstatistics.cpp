@@ -103,11 +103,11 @@ void KTouchStatistics::lectureActivated(int index) {
 		return;
 	}
 	if (index >= static_cast<int>(m_allStats.m_lectureStats.count())) {
-		kdDebug() << "Lecture index out of range: " << index << " >= " << m_allStats.m_lectureStats.count() << endl;
+		kDebug() << "Lecture index out of range: " << index << " >= " << m_allStats.m_lectureStats.count() << endl;
 		return;
 	}
 	m_lectureIndex = index;
-	//kdDebug() << "Lecture stats changed: " << it.data().m_lectureTitle << endl;
+	//kDebug() << "Lecture stats changed: " << it.data().m_lectureTitle << endl;
 	// update the tabs
 	updateChartTab();
 }
@@ -401,7 +401,7 @@ void KTouchStatistics::updateChartTab() {
 		if (max_y == 0)  max_y = 1;
 		max_y *= 1.1;
 		chartWidget->setLimits( min_x, max_x, -0.1*max_y, max_y );
-//		kdDebug() << min_x << " " << max_x << "    " << max_y << endl;
+//		kDebug() << min_x << " " << max_x << "    " << max_y << endl;
 		// Add plot object to chart
 		chartWidget->addObject(ob);
 	}

@@ -42,7 +42,7 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
     bool result = false;
-    //kdDebug() << "[KTouchKeyboard::load]  " << url << endl;
+    //kDebug() << "[KTouchKeyboard::load]  " << url << endl;
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
@@ -96,7 +96,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kdDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!" << endl;
         return false;
     };
 	
@@ -140,14 +140,14 @@ bool KTouchKeyboard::read(QTextStream& in) {
             m_keys.push_back(key);
 			KTouchKeyConnector keycon(keyText[0], keyText[0], 0, 0); 
             m_connectors.push_back(keycon);
-            kdDebug() << "[KTouchKeyboard::read]  FingerKey '" << keyText[0] << "'" << endl;
+            kDebug() << "[KTouchKeyboard::read]  FingerKey '" << keyText[0] << "'" << endl;
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
 			KTouchKey key(KTouchKey::OTHER, 0, 0, x+1, y+1, w-2, h-2);
 			key.m_otherKeyText = keyText;
             m_keys.push_back(key);
-            kdDebug() << "[KTouchKeyboard::read]  ControlKey '" << keyText << "'" << endl;
+            kDebug() << "[KTouchKeyboard::read]  ControlKey '" << keyText << "'" << endl;
         }
         else if (keyType=="NormalKey") {
             int fingerCharCode;
@@ -157,7 +157,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
             m_keys.push_back(key);
 			KTouchKeyConnector keycon(keyText[0], keyText[0], fingerCharCode, 0); 
             m_connectors.push_back(keycon);
-            kdDebug() << "[KTouchKeyboard::read]  NormalKey '" << keyText[0] << "' f = '"<< fingerCharCode<< "'" << endl;
+            kDebug() << "[KTouchKeyboard::read]  NormalKey '" << keyText[0] << "' f = '"<< fingerCharCode<< "'" << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
@@ -178,7 +178,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
 // Loads keyboard data from file into an XML document
 bool KTouchKeyboard::read(const QDomDocument& doc) {
 	// clean current data
-	kdDebug() << "Reading new keyboard layout" << endl;
+	kDebug() << "Reading new keyboard layout" << endl;
     m_keys.clear();
 	m_connectors.clear();
 	m_title.clear();
@@ -186,7 +186,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
 	QDomNodeList entries = doc.elementsByTagName("Title");
 	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
 	else						m_title = i18n("untitled keyboard layout");
-	kdDebug() << "Title: " << m_title << endl;
+	kDebug() << "Title: " << m_title << endl;
 	// retrieve the comment
 	entries = doc.elementsByTagName("Comment");
 	if (entries.count() >= 1)
@@ -639,7 +639,7 @@ void KTouchKeyboard::updateColours() {
                 continue;
             KTouchNormalKey *nk = dynamic_cast<KTouchNormalKey*>(self);
             if (colorSource->type()!=KTouchKey::FINGER_KEY) {
-                kdDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
+                kDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
                           << "' is not a finger key!" << endl;
                 if (nk) {
                     nk->m_colorIndex = 0;

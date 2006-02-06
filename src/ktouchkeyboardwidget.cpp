@@ -110,7 +110,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
-		//kdDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
+		//kDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
         if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
@@ -144,7 +144,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 		else
 			key->m_font = Prefs::font();
 	}
-	// kdDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
+	// kDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
     resizeEvent(NULL);  // paint the keyboard
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 }
@@ -195,12 +195,12 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
 
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
-	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
-	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Keyboard = " << m_keyboardWidth << "x" << m_keyboardHeight << endl;
+	// kDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
+	// kDebug() << "[KTouchKeyboard::resizeEvent]  Keyboard = " << m_keyboardWidth << "x" << m_keyboardHeight << endl;
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
     double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
     double scale = std::max(1.0, std::min(hScale, vScale));
-	// kdDebug() << "[KTouchKeyboard::resizeEvent]  using scale = " << scale << endl;
+	// kDebug() << "[KTouchKeyboard::resizeEvent]  using scale = " << scale << endl;
     m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
@@ -348,7 +348,7 @@ void KTouchKeyboardWidget::updateColours() {
                 continue;
             KTouchNormalKey *nk = dynamic_cast<KTouchNormalKey*>(self);
             if (colorSource->type()!=KTouchBaseKey::FINGER_KEY) {
-                kdDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
+                kDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
                           << "' is not a finger key!" << endl;
                 if (nk) {
                     nk->m_colorIndex = 0;

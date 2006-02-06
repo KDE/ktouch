@@ -287,12 +287,12 @@ void KTouchTrainer::storeTrainingStatistics() {
 	m_sessionStats.m_words += m_wordsInCurrentLine;
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
-		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
+		//kDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
 		m_levelStats.m_timeRecorded = QDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
 	if (m_sessionStats.m_elapsedTime != 0) {
-	   //kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing session statistics!" << endl;
+	   //kDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing session statistics!" << endl;
 		m_sessionStats.m_timeRecorded = QDateTime::currentDateTime();
 		data.m_sessionStats.push_back( m_sessionStats );
 	}
@@ -422,17 +422,17 @@ void KTouchTrainer::statsAddTime(double dt) {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::statsChangeLevel() {
-	//kdDebug() << "[KTouchTrainer::statsChangeLevel]  First!" << endl;
+	//kDebug() << "[KTouchTrainer::statsChangeLevel]  First!" << endl;
 	// first update word count and store data in 
 	updateWordCount();
-	//kdDebug() << "[KTouchTrainer::statsChangeLevel]  Adding word count of " << m_wordsInCurrentLine << endl;
+	//kDebug() << "[KTouchTrainer::statsChangeLevel]  Adding word count of " << m_wordsInCurrentLine << endl;
 	m_levelStats.m_words += m_wordsInCurrentLine;
 	m_sessionStats.m_words += m_wordsInCurrentLine;
 	// get a reference to the statistics data of the current lecture
 	KTouchLectureStats& data = KTouchPtr->getCurrentLectureStats();
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
-		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
+		//kDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
 		m_levelStats.m_timeRecorded = QDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
