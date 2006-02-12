@@ -123,10 +123,10 @@
                                     <height>20</height>
                                 </size>
                             </property>
-                            <property name="minValue">
+                            <property name="minimum">
                                 <number>1</number>
                             </property>
-                            <property name="maxValue">
+                            <property name="maximum">
                                 <number>20</number>
                             </property>
                             <property name="orientation">

@@ -161,7 +161,7 @@
                     <property name="name">
                         <cstring>kcfg_UpSpeedLimit</cstring>
                     </property>
-                    <property name="maxValue">
+                    <property name="maximum">
                         <number>500</number>
                     </property>
                 </widget>
@@ -224,7 +224,7 @@
                     <property name="name">
                         <cstring>kcfg_DownSpeedLimit</cstring>
                     </property>
-                    <property name="maxValue">
+                    <property name="maximum">
                         <number>500</number>
                     </property>
                 </widget>
