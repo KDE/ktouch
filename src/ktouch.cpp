@@ -566,8 +566,8 @@ void KTouch::initTrainingSession() {
 
     // Setup status bar
     statusBar()->show();
-	statusBar()->insertItem("Level", 1, 0, true);
-	statusBar()->insertItem("Session", 2, 0, true);
+	statusBar()->insertPermanentItem("Level", 1, 0);
+	statusBar()->insertPermanentItem("Session", 2, 0);
 }
 // ----------------------------------------------------------------------------
 
