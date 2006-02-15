@@ -12,7 +12,7 @@
             <height>436</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>Color Settings</string>
     </property>
     <vbox>

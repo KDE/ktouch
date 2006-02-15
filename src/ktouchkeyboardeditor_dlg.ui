@@ -12,7 +12,7 @@
             <height>545</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>Keyboard Layout Editor</string>
     </property>
     <grid>

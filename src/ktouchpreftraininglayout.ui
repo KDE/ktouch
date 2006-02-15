@@ -12,7 +12,7 @@
             <height>354</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>Training Options</string>
     </property>
     <vbox>
