@@ -35,7 +35,7 @@ int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, cons
       const QString& currentText, const QString& defaultText, const QString& openText,
       const QString& newText, KUrl current_url, QStringList defaultList, QString emptyListText)
 {
-    setCaption(caption);
+    setWindowTitle(caption);
     openChoiceGroup->setTitle(title);
     currentRadioBtn->setText(currentText);
     presetRadioBtn->setText(defaultText);
