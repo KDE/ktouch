@@ -6,6 +6,7 @@ Exec=ktouch -caption "%c" %i %m
 Icon=ktouch
 DocPath=ktouch/index.html
 GenericName=Touch Typing Tutor
+GenericName[fr]=Logiciel d'apprentissage de la frappe au clavier
 GenericName[x-test]=xxTouch Typing Tutorxx
 Terminal=false
 Name=KTouch
