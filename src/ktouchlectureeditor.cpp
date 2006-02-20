@@ -96,7 +96,7 @@ void KTouchLectureEditor::fontBtnClicked() {
 
 void KTouchLectureEditor::openBtnClicked() {
     saveModified();  // save if modified
-    openLectureFile("");
+    openLectureFile(KUrl(""));
 }
 // -----------------------------------------------------------------------------
 

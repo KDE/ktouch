@@ -76,7 +76,7 @@ void KTouchKeyboardEditor::fontBtnClicked() {
 
 void KTouchKeyboardEditor::openBtnClicked() {
     saveModified();  // save if modified
-    openKeyboardFile("");
+    openKeyboardFile(KUrl(""));
 }
 // -----------------------------------------------------------------------------
 
