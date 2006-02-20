@@ -173,7 +173,7 @@ class KTouchLectureStats {
     void write(QDomDocument& doc, QDomElement& root) const;
 
 	QString								m_lectureTitle;	///< The descriptive title of the lecture.
-	KURL								m_lectureURL;	///< The descriptive title of the lecture.
+	KUrl								m_lectureURL;	///< The descriptive title of the lecture.
 
 	QVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
 	QVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
@@ -190,7 +190,7 @@ class KTouchLectureStats {
 /// session statistics is obtained by and stored in the KTouchTrainer object.
 class KTouchStatisticsData {
   public:
-	typedef QMap<KURL, KTouchLectureStats> 	LectureStatsMap;
+	typedef QMap<KUrl, KTouchLectureStats> 	LectureStatsMap;
 	  
 	/// Default constructor
 	KTouchStatisticsData() {}

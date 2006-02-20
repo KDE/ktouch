@@ -64,7 +64,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
-	QMap<KURL, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.begin();
+	QMap<KUrl, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.begin();
 	m_currentIndex = 0;
 	while (it != stats.m_lectureStats.end()) {
 		QString t = it.data().m_lectureTitle;
@@ -265,7 +265,7 @@ void KTouchStatistics::updateChartTab() {
 		// TODO : nothing yet
 	}
 	else {
-		QMap<KURL, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.begin();	
+		QMap<KUrl, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.begin();	
 		unsigned int index = m_lectureIndex;
 		while (index-- > 0) ++it;
 		std::vector< std::pair<double, double> > data;
