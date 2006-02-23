@@ -103,7 +103,7 @@ bool KTouchLevelStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kDebug() << "'" << char_data << "'" << endl;
-		std::stringstream strm(std::string(char_data.local8Bit()));
+		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
@@ -244,7 +244,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	n = in.namedItem("LevelNums");
 	if (!n.isNull()) {
 		QString str = n.firstChild().nodeValue();
-		std::stringstream strm(std::string(str.local8Bit()));
+		std::stringstream strm(std::string(str.toLocal8Bit()));
 		int l;
 		while (strm >> l)
 			m_levelNums.insert(l);
@@ -254,7 +254,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kDebug() << "'" << char_data << "'" << endl;
-		std::stringstream strm(std::string(char_data.local8Bit()));
+		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
