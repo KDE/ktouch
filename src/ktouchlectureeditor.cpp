@@ -16,7 +16,7 @@
 #include <qstringlist.h>
 
 #include <kpushbutton.h>
-#include <klistview.h>
+#include <k3listview.h>
 #include <klineedit.h>
 #include <ktextedit.h>
 #include <klocale.h>
