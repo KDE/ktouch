@@ -1,4 +1,5 @@
 kde4_header()
+project(ktouch)
 
 add_subdirectory( src ) 
 add_subdirectory( keyboards ) 
