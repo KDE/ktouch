@@ -45,7 +45,7 @@ kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 kde4_add_executable(ktouch ${ktouch_SRCS})
 
-target_link_libraries(ktouch  ${QT_AND_KDECORE_LIBS} kdeeduplot kio )
+target_link_libraries(ktouch  ${KDE4_KDECORE_LIBS} kdeeduplot kio )
 
 install_targets(/bin ktouch )
 
