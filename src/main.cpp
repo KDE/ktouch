@@ -19,7 +19,7 @@
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");
 
-static const char version[] = "1.5";
+static const char version[] = "1.5.1";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
                      version,
                      description,
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000-2005 by Håvard Frøiland and Andreas Nicolai",
+                     "Copyright (C) 2000-2006 by Håvard Frøiland and Andreas Nicolai",
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");

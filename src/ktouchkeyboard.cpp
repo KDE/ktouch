@@ -330,7 +330,7 @@ void KTouchKeyboard::createDefault() {
 	m_comment = "Predefined keyboard layout";
 	m_language = QString::null;
 	// language does not apply to numbers... that's one of the nice things with math :-)
-	m_fontSuggestions = "Luxi Serif";
+	m_fontSuggestions = "Monospace";
     m_width = 8*col;
     m_height = 5*row;
 }

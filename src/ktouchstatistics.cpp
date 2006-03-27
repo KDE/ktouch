@@ -99,6 +99,7 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 void KTouchStatistics::lectureActivated(int index) {
 	if (m_allStats.m_lectureStats.count()==0) {
 		// TODO : Reset all tabs to "empty" look
+		m_lectureIndex = 0;
 		return;
 	}
 	if (index >= static_cast<int>(m_allStats.m_lectureStats.count())) {
@@ -258,13 +259,16 @@ void KTouchStatistics::updateCurrentLevelTab() {
 void KTouchStatistics::updateChartTab() {
 	// remove all current chart objects
 	chartWidget->clearObjectList();
+	// if no lecture data is available, return
+	if (m_allStats.m_lectureStats.count()==0 || m_lectureIndex >= m_allStats.m_lectureStats.count())  return;
 	// what kind of chart is required?
 	if (levelsRadio->isChecked()) {
 		// TODO : nothing yet
 	}
 	else {
+		// find correct lecture index
 		QMapConstIterator<KURL, KTouchLectureStats> it = m_allStats.m_lectureStats.begin();	
-		unsigned int index = m_lectureIndex;
+		int index = m_lectureIndex;
 		while (index-- > 0) ++it;
 		std::vector< std::pair<double, double> > data;
 		QString caption = "Session data";

@@ -22,6 +22,8 @@
 #include <ktempfile.h>
 #include <kio/netaccess.h>
 
+#define HAVE_SSTREAM
+
 #ifdef HAVE_SSTREAM
 #  include <sstream>
 #else
