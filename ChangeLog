@@ -1,3 +1,8 @@
+2006-03-30 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Bugfix: Lectures with one level only were reported as broken
+  * Feature: Lines with spaces at the end are trimmed (whitespace removed)
+  * Feature: Line length limit increased to 300
+
 2006-03-27 Andreas Nicolai <andreas.nicolai@gmx.net>
   * New version: 1.5.1
   * Bugfixes: Statistics dialog used to hang on "clear history"

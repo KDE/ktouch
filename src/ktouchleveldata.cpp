@@ -63,7 +63,8 @@ bool KTouchLevelData::readLevel(QDomNode in) {
     m_lines.clear();
 	QDomNode line = in.namedItem("Line");
 	while ( !line.isNull() ) {
-		m_lines.push_back( line.firstChild().nodeValue() );
+        QString l = line.firstChild().nodeValue();
+		m_lines.push_back( l.stripWhiteSpace() );
         line = line.nextSibling();
     }
     if (m_lines.empty()) {

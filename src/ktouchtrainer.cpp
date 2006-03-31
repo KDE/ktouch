@@ -83,7 +83,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 	// remember length of student text without added character
     unsigned int len = m_studentText.length();
 	// don´t allow excessive amounts of characters per line
-	if (len > 150) {
+	if (len > 300) {
         if (Prefs::beepOnError())   QApplication::beep();
         return;
 	}

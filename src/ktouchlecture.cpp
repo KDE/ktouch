@@ -192,7 +192,7 @@ bool KTouchLecture::readLecture(QDomDocument& doc) {
 		level.readLevel(entries.item(i));
         m_lectureData.push_back(level);
 	}
-    if (m_lectureData.size()>1)
+    if (m_lectureData.size()>0)
         return true;  // all ok
     else {
         // Hmm, no levels in the file. So we create our default mini level and report an error.
