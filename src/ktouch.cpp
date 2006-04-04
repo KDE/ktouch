@@ -50,6 +50,7 @@
 #include "ktouchpreftraininglayout.h"
 #include "ktouchprefkeyboardlayout.h"
 #include "ktouchprefcolorslayout.h"
+#include "ktouchutils.h"
 #include "prefs.h"
 
 KTouch * KTouchPtr = NULL;
@@ -524,19 +525,34 @@ void KTouch::init() {
 	if (Prefs::currentLectureFile() == "default")
 		Prefs::setCurrentLectureFile( default_lecture );
 
-    // read keyboard layouts
-	QString default_keyboard = "number.keyboard";
-	// look up the default english keyboard file in the m_keyboardFiles string list
-	QStringList::iterator it = m_keyboardFiles.begin();
-	while (it != m_keyboardFiles.end()   &&   (*it).find("en.keyboard") == -1)  ++it;
-	if (it != m_keyboardFiles.end())   default_keyboard = *it;
     // if keyboard layout (loaded by Prefs is not available (e.g. the 
-	// layout file has been deleted) switch to default keyboard
-    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0)
-        Prefs::setCurrentKeyboardFile ( default_keyboard );
+    // layout file has been deleted) switch to default keyboard
+    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0) {
+        QString default_keyboard;
+        // determine locale
+        QString lang = KGlobal::locale()->language();
+        QString fname = lang + ".keyboard";
+        // try to find keyboard with current locale
+        QStringList::const_iterator it = m_keyboardFiles.constBegin();
+        while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+        if (it == m_keyboardFiles.constEnd()) {
+            fname = lang.left(2) + ".keyboard";
+            // try to find more general version 
+            it = m_keyboardFiles.constBegin();
+            while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+        }
 
-	// create some default colour schemes
-	createDefaultColorSchemes();
+        if (it != m_keyboardFiles.constEnd())
+            default_keyboard = *it;
+        else 
+            default_keyboard = "number.keyboard";
+        Prefs::setCurrentKeyboardFile ( default_keyboard );
+    }
+
+    // create some default colour schemes
+    createDefaultColorSchemes();
+    // read additional color schemes
+    // TODO : readExternalColorSchemes();
 }
 // ----------------------------------------------------------------------------
 
@@ -640,6 +656,9 @@ void KTouch::updateFileLists() {
     // added anyway
     QStringList::iterator it = m_keyboardFiles.find("number.keyboard");
 	if (it!=m_keyboardFiles.end())		m_keyboardFiles.remove(it);
+    // now sort the files and titles accordingly
+    sort_lists(m_keyboardTitles, m_keyboardFiles);
+    // and add the number keypad to the front
     m_keyboardFiles.push_front("number.keyboard");
     m_keyboardTitles.push_front(i18n("Keypad/Number block"));
 
@@ -665,6 +684,7 @@ void KTouch::updateFileLists() {
 					m_lectureTitles.push_back(l.m_title);
 			}
         }
+        sort_lists(m_lectureTitles, m_lectureFiles);
     }
 
 	// Now find predefined files with colour schemes
