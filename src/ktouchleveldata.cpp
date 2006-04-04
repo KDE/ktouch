@@ -15,6 +15,7 @@
 #include <qdom.h>
 #include <klocale.h>
 #include <kdebug.h>
+#include <qstringlist.h>
 
 const QString& KTouchLevelData::line(unsigned int lineNumber) const {
     if (lineNumber>=m_lines.size())
@@ -23,9 +24,16 @@ const QString& KTouchLevelData::line(unsigned int lineNumber) const {
 }
 
 void KTouchLevelData::createDefault() {
-    m_newChars = i18n("some");
+    m_newChars = i18n("Quite a lot");
     m_lines.clear();
-    m_lines.push_back( i18n("No training lecture loaded.") );
+    QString text = i18n("This is a small default text. If you want\n"
+                        "to start practicing touch typing, open\n"
+                        "a lecture/training file from the main menu.\n"
+                        "If you press enter after the next line you have\n"
+                        "successfully completed the default lecture. Hurray!!!");
+    QStringList l( QStringList::split(QChar('\n'), text) );
+    for (QStringList::const_iterator it = l.constBegin(); it != l.constEnd(); ++it)
+        m_lines.push_back( *it );
 }
 
 bool KTouchLevelData::readLevel(QTextStream& in) {
