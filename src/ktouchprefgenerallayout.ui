@@ -219,7 +219,8 @@
                     </property>
                     <property name="font">
                         <font>
-                            <family>Courier 10 Pitch</family>
+                            <family>Monospace</family>
+                            <pointsize>13</pointsize>
                         </font>
                     </property>
                     <property name="toolTip" stdset="0">
@@ -267,6 +268,8 @@
         </spacer>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kfontrequester.h</includehint>

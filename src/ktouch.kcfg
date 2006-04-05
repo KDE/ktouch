@@ -58,7 +58,7 @@
     </entry>
      <entry name="Font" type="Font">
      <label>The font for the student and teacher lines</label>
-      <default>KGlobalSettings::generalFont()</default>
+      <default>QFont("Monospace")</default>
     </entry>
     <entry name="CurrentLectureFile" type="Path">
     <label>The currently loaded lecture file</label>

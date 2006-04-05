@@ -452,7 +452,7 @@
                             </property>
                             <property name="font">
                                 <font>
-                                    <family>Courier 10 Pitch</family>
+                                    <family>Monospace</family>
                                 </font>
                             </property>
                             <property name="wordWrap">

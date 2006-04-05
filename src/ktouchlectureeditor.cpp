@@ -80,7 +80,7 @@ bool KTouchLectureEditor::startEditor(const KURL& url) {
 // *************************
 
 void KTouchLectureEditor::fontBtnClicked() {
-    QFont f;
+    QFont f(m_lecture.m_fontSuggestions);
     if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
         linesTextEdit->setFont(f);
         lectureCommentEdit->setFont(f);
@@ -88,8 +88,8 @@ void KTouchLectureEditor::fontBtnClicked() {
         newCharsEdit->setFont(f);
         titleEdit->setFont(f);
         levelListView->setFont(f);
-		m_lecture.m_fontSuggestions = f.toString();
-		setModified();
+        m_lecture.m_fontSuggestions = f.family();
+        setModified();
     }
 }
 // -----------------------------------------------------------------------------
@@ -283,7 +283,7 @@ void KTouchLectureEditor::transfer_to_dialog() {
     }
 	// finally the font
 	if (!m_lecture.m_fontSuggestions.isEmpty()) {
-    	QFont f;
+    	QFont f("Monospace");
 		// TODO : multiple font suggestions
 		f.fromString(m_lecture.m_fontSuggestions);
         linesTextEdit->setFont(f);

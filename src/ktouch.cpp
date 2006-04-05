@@ -636,7 +636,7 @@ void KTouch::updateFontFromLecture() {
 		// TODO : if multiple font suggestions are given, try one after another until a
 		// suggested font is found
 		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
-		else if (f.fromString("Courier 10 Pitch")) 		m_slideLineWidget->setFont(f);
+		else if (f.fromString("Monospace")) 		m_slideLineWidget->setFont(f);
 	}
 }
 // ----------------------------------------------------------------------------

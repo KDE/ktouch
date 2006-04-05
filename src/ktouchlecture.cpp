@@ -98,6 +98,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KURL& url) const {
 void KTouchLecture::createDefault() {
     m_lectureData.clear();      // remove everything else
     m_title = i18n("A default lecture...");
+    m_fontSuggestions = "Monospace";
     KTouchLevelData miniLevel;  // create the level which is by default a mini-level
     m_lectureData.push_back( miniLevel );
 }
