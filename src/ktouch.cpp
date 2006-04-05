@@ -379,7 +379,7 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
-	//kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
+//	kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
 	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
     m_keyboardWidget->applyPreferences(this, false);  
@@ -613,7 +613,7 @@ void KTouch::setupActions() {
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts    
     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
-    m_keyboardLayoutAction->setItems(m_keyboardFiles);
+    m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
@@ -648,14 +648,39 @@ void KTouch::updateFileLists() {
 	
     // first search for all installed keyboard files
 	// TODO : search in i18n() directories
-    QStringList keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
-	// TODO : extract titles from keyboard files and store them in the m_keyboardTitles string list
-	m_keyboardFiles = keyboardFiles;
+    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
 
     // remove the number layout, since this is the necessary default layout and will be
     // added anyway
     QStringList::iterator it = m_keyboardFiles.find("number.keyboard");
-	if (it!=m_keyboardFiles.end())		m_keyboardFiles.remove(it);
+    if (it!=m_keyboardFiles.end())      m_keyboardFiles.remove(it);
+
+    m_keyboardTitles.clear();
+    for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
+        cit != m_keyboardFiles.constEnd(); ++cit)
+    {
+        // extract titles from keyboard files and store them in the
+        // m_keyboardTitles string list
+
+        // get the filename alone
+        QString fname = KURL(*cit).fileName();
+        // get the filename without the .keyboard
+        fname.truncate(fname.length() - 9);
+        // get everything in front of the first .
+        QString lang_iso = fname.section('.',0,0);
+        // get language description of file names
+        QString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
+//        kdDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
+        if (lang_name.isEmpty())
+            lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
+        if (!lang_name.isEmpty())
+            lang_name += " (" + fname + ")";
+        else
+            lang_name = fname;
+        m_keyboardTitles.append( lang_name );
+//        kdDebug() << m_keyboardTitles.back() << endl;
+    }
+
     // now sort the files and titles accordingly
     sort_lists(m_keyboardTitles, m_keyboardFiles);
     // and add the number keypad to the front

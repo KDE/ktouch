@@ -29,19 +29,19 @@ ControlKey	257		Shift		0			30	13    10
 ControlKey	259		CapsLock	0			20	18    10
 ControlKey	8		BackSpace			130		0		20    10
 
-#						Assci	KeyText	x			y		FingerKey
+#			Assci	KeyText			x		y		FingerKey
 #
-NormalKey 	94		^				0			0		97
+NormalKey 	94		^				0		0		97
 NormalKey 	49		1				10		0		97
-NormalKey 	50		2				20		0		115
-NormalKey 	51		3				30		0		100
-NormalKey 	52		4				40		0		102
+NormalKey 	50		2				20		0		246
+NormalKey 	51		3				30		0		115
+NormalKey 	52		4				40		0		100
 NormalKey 	53		5				50		0		102
 NormalKey 	54		6				60		0		102
 NormalKey 	55		7				70		0		106
-NormalKey 	56		8				80		0		107
-NormalKey 	57		9				90		0		108
-NormalKey 	48		0				100		0		246
+NormalKey 	56		8				80		0		106
+NormalKey 	57		9				90		0		107
+NormalKey 	48		0				100		0		108
 NormalKey 	223		ß				110		0		246
 NormalKey 	180		´				120		0		246
 #
