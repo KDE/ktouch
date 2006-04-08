@@ -29,69 +29,22 @@
             <property name="title">
                 <string>Level Up/Down Limits</string>
             </property>
-            <grid>
+            <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="3">
+                <widget class="QCheckBox">
                     <property name="name">
                         <cstring>kcfg_AutoLevelChange</cstring>
                     </property>
                     <property name="text">
                         <string>A&amp;utomatic level adjustment</string>
                     </property>
-                </widget>
-                <spacer row="3" column="0">
-                    <property name="name">
-                        <cstring>spacer11</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>16</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLabel" row="3" column="3">
-                    <property name="name">
-                        <cstring>l4</cstring>
-                    </property>
-                    <property name="text">
-                        <string>chars/minute</string>
+                    <property name="accel">
+                        <string>Alt+U</string>
                     </property>
                 </widget>
-                <widget class="QLabel" row="4" column="3">
-                    <property name="name">
-                        <cstring>l5</cstring>
-                    </property>
-                    <property name="text">
-                        <string>%</string>
-                    </property>
-                </widget>
-                <spacer row="4" column="0">
-                    <property name="name">
-                        <cstring>spacer12</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>16</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <spacer row="1" column="1">
+                <spacer>
                     <property name="name">
                         <cstring>spacer13</cstring>
                     </property>
@@ -108,7 +61,104 @@
                         </size>
                     </property>
                 </spacer>
-                <spacer row="5" column="1">
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout1</cstring>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel" row="2" column="1">
+                            <property name="name">
+                                <cstring>l3</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Correctness:</string>
+                            </property>
+                        </widget>
+                        <widget class="KIntSpinBox" row="1" column="2">
+                            <property name="name">
+                                <cstring>kcfg_UpSpeedLimit</cstring>
+                            </property>
+                            <property name="maxValue">
+                                <number>500</number>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="1">
+                            <property name="name">
+                                <cstring>l2</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Typing speed:</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="2" column="3">
+                            <property name="name">
+                                <cstring>l5</cstring>
+                            </property>
+                            <property name="text">
+                                <string>%</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
+                            <property name="name">
+                                <cstring>l1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Limits to increase a level</string>
+                            </property>
+                        </widget>
+                        <widget class="KIntSpinBox" row="2" column="2">
+                            <property name="name">
+                                <cstring>kcfg_UpCorrectLimit</cstring>
+                            </property>
+                        </widget>
+                        <spacer row="2" column="0">
+                            <property name="name">
+                                <cstring>spacer12</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel" row="1" column="3">
+                            <property name="name">
+                                <cstring>l4</cstring>
+                            </property>
+                            <property name="text">
+                                <string>chars/minute</string>
+                            </property>
+                        </widget>
+                        <spacer row="1" column="0">
+                            <property name="name">
+                                <cstring>spacer11</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </grid>
+                </widget>
+                <spacer>
                     <property name="name">
                         <cstring>spacer13_2</cstring>
                     </property>
@@ -125,131 +175,112 @@
                         </size>
                     </property>
                 </spacer>
-                <widget class="QLabel" row="6" column="0" rowspan="1" colspan="2">
+                <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>l6</cstring>
+                        <cstring>layout2</cstring>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
+                            <property name="name">
+                                <cstring>l6</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Limits to decrease a level</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="2" column="3">
+                            <property name="name">
+                                <cstring>l10</cstring>
+                            </property>
+                            <property name="text">
+                                <string>%</string>
+                            </property>
+                        </widget>
+                        <widget class="KIntSpinBox" row="2" column="2">
+                            <property name="name">
+                                <cstring>kcfg_DownCorrectLimit</cstring>
+                            </property>
+                        </widget>
+                        <widget class="KIntSpinBox" row="1" column="2">
+                            <property name="name">
+                                <cstring>kcfg_DownSpeedLimit</cstring>
+                            </property>
+                            <property name="maxValue">
+                                <number>500</number>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="1">
+                            <property name="name">
+                                <cstring>l7</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Typing speed:</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel" row="1" column="3">
+                            <property name="name">
+                                <cstring>l9</cstring>
+                            </property>
+                            <property name="text">
+                                <string>chars/minute</string>
+                            </property>
+                        </widget>
+                        <spacer row="1" column="0">
+                            <property name="name">
+                                <cstring>spacer11_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <spacer row="2" column="0">
+                            <property name="name">
+                                <cstring>spacer12_2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLabel" row="2" column="1">
+                            <property name="name">
+                                <cstring>l8</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Correctness:</string>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>kcfg_DisableManualLevelChange</cstring>
                     </property>
                     <property name="text">
-                        <string>Limits to decrease a level</string>
+                        <string>Disable manual level change buttons</string>
                     </property>
                 </widget>
-                <widget class="QLabel" row="2" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>l1</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Limits to increase a level</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="3" column="1">
-                    <property name="name">
-                        <cstring>l2</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Typing speed:</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="4" column="1">
-                    <property name="name">
-                        <cstring>l3</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Correctness:</string>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="3" column="2">
-                    <property name="name">
-                        <cstring>kcfg_UpSpeedLimit</cstring>
-                    </property>
-                    <property name="maxValue">
-                        <number>500</number>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="4" column="2">
-                    <property name="name">
-                        <cstring>kcfg_UpCorrectLimit</cstring>
-                    </property>
-                </widget>
-                <spacer row="8" column="0">
-                    <property name="name">
-                        <cstring>spacer12_2</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>16</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <spacer row="7" column="0">
-                    <property name="name">
-                        <cstring>spacer11_2</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>16</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLabel" row="7" column="1">
-                    <property name="name">
-                        <cstring>l7</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Typing speed:</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="8" column="1">
-                    <property name="name">
-                        <cstring>l8</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Correctness:</string>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="7" column="2">
-                    <property name="name">
-                        <cstring>kcfg_DownSpeedLimit</cstring>
-                    </property>
-                    <property name="maxValue">
-                        <number>500</number>
-                    </property>
-                </widget>
-                <widget class="KIntSpinBox" row="8" column="2">
-                    <property name="name">
-                        <cstring>kcfg_DownCorrectLimit</cstring>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="7" column="3">
-                    <property name="name">
-                        <cstring>l9</cstring>
-                    </property>
-                    <property name="text">
-                        <string>chars/minute</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="8" column="3">
-                    <property name="name">
-                        <cstring>l10</cstring>
-                    </property>
-                    <property name="text">
-                        <string>%</string>
-                    </property>
-                </widget>
-            </grid>
+            </vbox>
         </widget>
         <widget class="QGroupBox">
             <property name="name">
@@ -285,12 +316,14 @@
             <property name="sizeHint">
                 <size>
                     <width>20</width>
-                    <height>40</height>
+                    <height>20</height>
                 </size>
             </property>
         </spacer>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>knuminput.h</includehint>

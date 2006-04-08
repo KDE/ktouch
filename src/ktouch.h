@@ -82,10 +82,8 @@ class KTouch : public KMainWindow {
     /// Will be called when the "Apply"-button has been pressed in the preferences
     /// dialog or when the user accepted the changes using the "OK"-button.
     void applyPreferences();
-    /// Accepts a typed char.
-    void keyPressEvent(QKeyEvent *keyEvent);
 
-	/// Called from the configuration dialog. 
+	/// Called from the configuration dialog.
 	void configOverrideLectureFontToggled(bool on);
 	/// Called from the configuration dialog. 
 	void configOverrideKeyboardFontToggled(bool on);
@@ -113,6 +111,8 @@ class KTouch : public KMainWindow {
     bool queryExit();
     /// Some layout fixes here...
 	void resizeEvent(QResizeEvent *);
+    /// Accepts a typed char.
+    void keyPressEvent(QKeyEvent *keyEvent);
 
   private:
     // *** BEGIN - Session management ***
@@ -172,6 +172,8 @@ class KTouch : public KMainWindow {
     QStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
 
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
+
+	QChar					m_lastDeadKey;			///< Temporary storage of last dead key.
 	
 	QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };

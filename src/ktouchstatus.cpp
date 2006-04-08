@@ -17,10 +17,23 @@
 #include <qlabel.h>
 #include <qprogressbar.h>
 #include <kdebug.h>
+#include <kpushbutton.h>
+#include "prefs.h"
 
 KTouchStatus::KTouchStatus(QWidget *parent)
  : KTouchStatusLayout(parent)
 {
+}
+
+void KTouchStatus::applyPreferences() {
+	if (Prefs::autoLevelChange()) {
+		levelUpBtn->setEnabled( !Prefs::disableManualLevelChange() );
+		levelDownBtn->setEnabled( !Prefs::disableManualLevelChange() );
+	}
+	else {
+		levelUpBtn->setEnabled( true );
+		levelDownBtn->setEnabled( true );
+	}
 }
 
 void KTouchStatus::setNewChars(const QString& newChars) {

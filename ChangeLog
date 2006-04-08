@@ -1,7 +1,41 @@
+2006-04-08 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * New version: 1.5.3
+  * Bugfix:  slideline algorithm reworked and enhanced, cleared bugs related
+             to improper cursor movement/size, wrong sliding etc.
+             (bug reports: #54329, #116838)
+  * Feature: configuration settings allow change of sliding widget height limit,
+             useful for large screen resolutions (feature request: #76666 )
+  * Feature: line length limit removed, teacher text can now be as long as
+             desired, wrong student line text is limited to size of
+             teacher lengths + some offset
+  * Feature: new default mini level with a few more lines
+             (bug report: 
+  * Feature: default keyboard is selected based on KDE locale 
+             (requests: #54379, #99947)
+  * Feature: quick select lists of training lectures/keyboard layouts are now
+             sorted alphabetically
+  * Bugfix:  trailing spaces are removed from lines when lecture is 
+             read (bug: #107080)
+  * Bugfix:  fixed freeze of appliation on click on "clear statistics" 
+             button (bug: #119568)
+  * Feature: added keyboard hiding feature in configuration (request: #104238)
+  * Added:   new slovenian training lecture
+  * Bugfix:  changed default lecture font from Courier to Monospace 
+             in KTouch and all lecture files (bug: #108690)
+  * Feature: show language names for keyboards in addition to file names in
+             quick selection menu
+  * Bugfix:  statistics are also stored for the mini-default level
+  * Feature: statistics dialog has been rearranged
+  * Feature: manual level change buttons can be disabled in automatic-level
+             change mode (request: #121598)
+
 2006-03-30 Andreas Nicolai <andreas.nicolai@gmx.net>
-  * Bugfix: Lectures with one level only were reported as broken
-  * Feature: Lines with spaces at the end are trimmed (whitespace removed)
-  * Feature: Line length limit increased to 300
+  * New version: 1.5.2
+  * Bugfix:  fixed false error on reading single-level-lectures (bug: #120414)
+  * Feature: lines with spaces at the end are trimmed (whitespace removed)
+  * Feature: line length limit increased to 300 (request: #116838)
+  * Added:   added new/fixed keyboard layouts 
+             (requests: #40962, #85584, #119670)
 
 2006-03-27 Andreas Nicolai <andreas.nicolai@gmx.net>
   * New version: 1.5.1

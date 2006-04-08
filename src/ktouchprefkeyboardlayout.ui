@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>498</width>
-            <height>162</height>
+            <height>249</height>
         </rect>
     </property>
     <property name="caption">
@@ -40,6 +40,9 @@
                     <property name="text">
                         <string>Highlight &amp;keys on keyboard</string>
                     </property>
+                    <property name="accel">
+                        <string>Alt+K</string>
+                    </property>
                     <property name="toolTip" stdset="0">
                         <string>Show on the keyboards the keys you have to type</string>
                     </property>
@@ -49,30 +52,65 @@
                 </widget>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>kcfg_OverrideKeyboardFont</cstring>
+                        <cstring>kcfg_HideKeyboard</cstring>
                     </property>
                     <property name="text">
-                        <string>Override keyboard fonts</string>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+                        <string>Hide keyboard</string>
                     </property>
                 </widget>
-                <widget class="QLabel">
+                <spacer>
                     <property name="name">
-                        <cstring>textLabel1</cstring>
+                        <cstring>spacer2</cstring>
                     </property>
-                    <property name="text">
-                        <string>Font for keys on keyboard:</string>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
                     </property>
-                </widget>
-                <widget class="KFontRequester">
+                    <property name="sizeType">
+                        <enum>Fixed</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>kcfg_KeyboardFont</cstring>
+                        <cstring>layout1</cstring>
                     </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>kcfg_OverrideKeyboardFont</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Override keyboard fonts</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Font for keys on keyboard:</string>
+                            </property>
+                        </widget>
+                        <widget class="KFontRequester">
+                            <property name="name">
+                                <cstring>kcfg_KeyboardFont</cstring>
+                            </property>
+                        </widget>
+                    </vbox>
                 </widget>
             </vbox>
         </widget>
@@ -95,6 +133,8 @@
         </spacer>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <slots>
     <slot>fontChooseBtnClicked()</slot>
 </slots>

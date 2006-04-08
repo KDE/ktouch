@@ -33,7 +33,8 @@ const int MARGIN = 10;
 
 
 KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
-  : QWidget(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout("")
+  : QWidget(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
+	m_hideKeyboard(false)
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
     m_keyList.setAutoDelete(true);  // the list is responsable for cleaning up
@@ -103,6 +104,11 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
 }
 
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
+	m_hideKeyboard = Prefs::hideKeyboard();
+	if (m_hideKeyboard) 
+    	setMaximumHeight(100);
+	else
+    	setMaximumHeight(10000);
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
@@ -147,6 +153,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
+	if (m_hideKeyboard) return;
     QPainter painter(this);
     painter.translate(m_shift, MARGIN);
     // first clean the markings on all keys
@@ -182,6 +189,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 
 
 void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
+	if (m_hideKeyboard) return;
     QPainter painter(this);
     painter.translate(m_shift, MARGIN);
     // just print all visible keys

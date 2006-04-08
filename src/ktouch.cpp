@@ -21,6 +21,7 @@
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
+//#include <qimevent.h>
 
 // KDE Header
 #include <klocale.h>
@@ -99,7 +100,9 @@ KTouch::KTouch()
 		// Load statistics data from statistics-file
 		
 	    // Reload the last used training file.
-		if (!m_lecture.loadXML(this, Prefs::currentLectureFile() )) {
+		if (Prefs::currentLectureFile().isNull() ||
+		    !m_lecture.loadXML(this, Prefs::currentLectureFile() ))
+		{
 			Prefs::setCurrentLectureFile(QString::null);
 			m_defaultLectureAction->setCurrentItem(-1);
 		}
@@ -129,10 +132,14 @@ KTouch::~KTouch() {
 // ----------------------------------------------------------------------------
 
 KTouchLectureStats& KTouch::getCurrentLectureStats() {
-	KTouchLectureStats& stat = m_stats.m_lectureStats[Prefs::currentLectureFile()];
+//	kdDebug() << "[KTouch::getCurrentLectureStats]  " << endl;
+	KURL lectureURL = Prefs::currentLectureFile();
+	if (lectureURL.url().isEmpty())  lectureURL = "default";
+//	kdDebug() << "  lectureURL = '" << lectureURL << "'" << endl;
+	KTouchLectureStats& stat = m_stats.m_lectureStats[lectureURL];
 	// add additional info to the statistics
 	if (stat.m_lectureURL.isEmpty())
-		stat.m_lectureURL = Prefs::currentLectureFile();
+		stat.m_lectureURL = lectureURL;
 	if (stat.m_lectureTitle.isEmpty())
 		stat.m_lectureTitle = m_lecture.m_title;
 	return stat;
@@ -153,17 +160,38 @@ void KTouch::applyPreferences() {
 	// changes for the keyboard widget
 	changeColor(Prefs::colorScheme());
 	m_slideLineWidget->applyPreferences();
+	m_statusWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     if (keyEvent->text().isEmpty()) return;
+
     // if we the training session is paused, continue training now
     if (m_trainer->m_trainingPaused)  {
 		m_trainingPause->setEnabled(true);
 		m_trainer->continueTraining();
 	}
+	if (keyEvent->text().length() > 1) {
+		kdDebug() << "[KTouch::keyPressEvent]  text = '" << keyEvent->text() << "'" << endl;
+	}
     QChar key = keyEvent->text().at(0); // get first unicode character
+	// HACK : manually filter out known dead keys
+	bool has_dead_key = true;
+	switch (key.unicode()) {
+		case 94   : m_lastDeadKey = QChar(uint(94)); break;
+		case 176  : m_lastDeadKey = QChar(uint(176)); break;
+		case 180  : m_lastDeadKey = QChar(uint(180)); break;
+		case 96   : m_lastDeadKey = QChar(uint(96)); break;
+		case 126  : m_lastDeadKey = QChar(uint(126)); break;
+		default   : m_lastDeadKey = QChar(uint(0));
+	}
+	if (m_lastDeadKey != QChar(uint(0)) && key == m_lastDeadKey) {
+//		kdDebug() << "Got dead key = " << m_lastDeadKey << endl;
+    	//keyEvent->accept();
+//		return;
+	}
+
     if (key.isPrint())
         m_trainer->keyPressed(key);
     else if (key==QChar(8))
@@ -175,6 +203,7 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     keyEvent->accept();
 }
 // ----------------------------------------------------------------------------
+
 
 void KTouch::configOverrideLectureFontToggled(bool on) {
 	if (on) {
@@ -216,6 +245,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(true);
 		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(true);
 		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(true);
+		m_pageTraining->kcfg_DisableManualLevelChange->setEnabled(true);
 	}
 	else {
 		m_pageTraining->l1->setEnabled(false);
@@ -232,6 +262,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(false);
 		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(false);
 		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(false);
+		m_pageTraining->kcfg_DisableManualLevelChange->setEnabled(false);
 	}	
 }
 // ----------------------------------------------------------------------------
@@ -519,11 +550,14 @@ void KTouch::init() {
 	//kdDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
 	//kdDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
-	/// \todo look up a default english lecture in the m_lectureFiles string list
-	QString default_lecture;
-	if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
-	if (Prefs::currentLectureFile() == "default")
+	if (Prefs::currentLectureFile() == "default") {
+		Prefs::setCurrentLectureFile(QString::null);
+//		/// \todo look up a lecture in the language of the KDE locale
+/*		QString default_lecture = "default";
+		if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
 		Prefs::setCurrentLectureFile( default_lecture );
+*/
+	}
 
     // if keyboard layout (loaded by Prefs is not available (e.g. the 
     // layout file has been deleted) switch to default keyboard
@@ -807,3 +841,31 @@ void KTouch::updateKeyboardActionCheck() {
 }
 // ----------------------------------------------------------------------------
 
+/*
+void KTouch::imStartEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+
+void KTouch::imComposeEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+
+void KTouch::imEndEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
+  if (!e->text().isEmpty()) {
+    if (e->text() == "^") {
+      QKeyEvent *ev = new QKeyEvent (QEvent::KeyPress,
+                                    Qt::Key_AsciiCircum, '^', 0,
+                                    QString("^"));
+      keyPressEvent(ev);
+      delete ev;
+    }
+  }
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+*/

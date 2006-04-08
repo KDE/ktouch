@@ -50,8 +50,6 @@ KTouchStatistics::KTouchStatistics(QWidget* parent)
 	
 	// TODO : temporarily remove detailed stats page and deactivate options
 	levelsRadio->setEnabled(false);
-	tabWidget->removePage(statsPage);
-	delete statsPage;
 }
 // ----------------------------------------------------------------------------
 
@@ -59,6 +57,9 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 	const KTouchLevelStats& currLevelStats,
 	const KTouchSessionStats& currSessionStats)
 {
+//	kdDebug() << "[KTouchStatistics::run]" << endl;
+//	kdDebug() << "  currentLecture = '" << currentLecture << "'" << endl;
+
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
@@ -67,8 +68,13 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 	while (it != stats.m_lectureStats.end()) {
 		QString t = it.data().m_lectureTitle;
 		// if current lecture, remember index and adjust text
-		if (it.key() == currentLecture) {
+		if (it.key() == currentLecture ||
+			currentLecture.isEmpty() && it.key().url()=="default")
+		{
 			m_currentIndex = lectureCombo->count();
+			if (t == "default")   t = i18n("Default level...");
+			lectureLabel1->setText(t);
+			lectureLabel2->setText(t);
 			t = i18n("***current***  ") + t;
 		}
 		lectureCombo->insertItem(t);
@@ -79,6 +85,7 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 		KMessageBox::information(this, i18n("No statistics data available yet!"));
 		return;
 	}
+
 	// remember stats
 	m_allStats = stats;
 	m_currLevelStats = currLevelStats;
@@ -87,6 +94,7 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 	lectureCombo->setCurrentItem(m_currentIndex);
 	lectureActivated(m_currentIndex);
 	m_lectureIndex = m_currentIndex;
+	
 	// update the current tabs with current session/level data
 	updateCurrentSessionTab();
 	updateCurrentLevelTab();
@@ -133,6 +141,35 @@ void KTouchStatistics::clearHistory() {
 
 
 void KTouchStatistics::updateCurrentSessionTab() {
+	// session/level/info
+	QString levelnums;
+    int last_level = -2;
+    int levels_count = 0;
+	std::set<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
+	--last_it;
+	for (std::set<unsigned int>::iterator it = m_currSessionStats.m_levelNums.begin();
+		it != m_currSessionStats.m_levelNums.end(); ++it)
+	{
+		// do we have a level number that is not a subsequent level of the
+		// previous?
+		
+		if ((static_cast<unsigned int>(last_level + 1) != *it) ||
+            (it == last_it))
+		{
+			if (it != m_currSessionStats.m_levelNums.begin()) {
+				if (levels_count > 1)	levelnums += "...";
+				else					levelnums += ",";
+			}
+			levels_count = 0;
+			levelnums += QString("%1").arg(*it+1);
+			
+		}
+		else {
+			++levels_count;  // increase level count
+		}
+		last_level = *it;
+	}
+	levelLabel1->setText(levelnums);
     // general stats group
     elapsedTimeLCD->display(static_cast<int>(m_currSessionStats.m_elapsedTime));
     totalCharsLCD->display(static_cast<int>(m_currSessionStats.m_totalChars) );
@@ -195,6 +232,8 @@ void KTouchStatistics::updateCurrentSessionTab() {
 // ----------------------------------------------------------------------------
 
 void KTouchStatistics::updateCurrentLevelTab() {
+	// level info
+	levelLabel2->setText( QString("%1").arg(m_currLevelStats.m_levelNum+1) );
     // general stats group
     elapsedTimeLCDLevel->display(static_cast<int>(m_currLevelStats.m_elapsedTime));
     totalCharsLCDLevel->display(static_cast<int>(m_currLevelStats.m_totalChars) );

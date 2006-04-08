@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>595</width>
-            <height>572</height>
+            <width>606</width>
+            <height>600</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -27,27 +27,6 @@
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QGroupBox">
-            <property name="name">
-                <cstring>groupBox8_2</cstring>
-            </property>
-            <property name="title">
-                <string>Select Lecture</string>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="KComboBox">
-                    <property name="name">
-                        <cstring>lectureCombo</cstring>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>Here you can select the lecture you want to obtain statistics for.</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
         <widget class="QTabWidget">
             <property name="name">
                 <cstring>tabWidget</cstring>
@@ -87,6 +66,64 @@
                         <property name="text">
                             <string>Current Training Session Statistics</string>
                         </property>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout7</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel4_3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Levels in this session:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="1">
+                                <property name="name">
+                                    <cstring>levelLabel1</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>levelLabel1</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel2_4_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Lecture:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="1">
+                                <property name="name">
+                                    <cstring>lectureLabel1</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>lectureLabel1</string>
+                                </property>
+                            </widget>
+                        </grid>
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
@@ -478,6 +515,64 @@
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
+                            <cstring>layout8</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="1">
+                                <property name="name">
+                                    <cstring>lectureLabel2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>lectureLabel2</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel4_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Level:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel2_4</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Lecture:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="1">
+                                <property name="name">
+                                    <cstring>levelLabel2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>levelLabel2</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
                             <cstring>layout28_2</cstring>
                         </property>
                         <grid>
@@ -829,313 +924,283 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>currentTitleLabel_2</cstring>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <pointsize>20</pointsize>
+                                <bold>1</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Your Typing Progress</string>
+                        </property>
+                    </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>layout5</cstring>
+                            <cstring>layout6</cstring>
                         </property>
-                        <vbox>
+                        <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <widget class="QLabel">
                                 <property name="name">
-                                    <cstring>currentTitleLabel_2</cstring>
-                                </property>
-                                <property name="font">
-                                    <font>
-                                        <pointsize>20</pointsize>
-                                        <bold>1</bold>
-                                    </font>
+                                    <cstring>textLabel1_2</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Your Typing Progress</string>
+                                    <string>Show progress in lecture:</string>
                                 </property>
                             </widget>
-                            <widget class="KTouchChartWidget">
+                            <widget class="KComboBox">
                                 <property name="name">
-                                    <cstring>chartWidget</cstring>
+                                    <cstring>lectureCombo</cstring>
                                 </property>
                                 <property name="sizePolicy">
                                     <sizepolicy>
-                                        <hsizetype>5</hsizetype>
-                                        <vsizetype>2</vsizetype>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>0</vsizetype>
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
                                 </property>
-                            </widget>
-                            <widget class="QGroupBox">
-                                <property name="name">
-                                    <cstring>groupBox6_2</cstring>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Here you can select the lecture you want to obtain statistics for.</string>
                                 </property>
-                                <property name="sizePolicy">
-                                    <sizepolicy>
-                                        <hsizetype>5</hsizetype>
-                                        <vsizetype>4</vsizetype>
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="KTouchChartWidget">
+                        <property name="name">
+                            <cstring>chartWidget</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>5</hsizetype>
+                                <vsizetype>2</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox6_2</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>5</hsizetype>
+                                <vsizetype>4</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="title">
+                            <string>Progress Chart Options</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QButtonGroup" row="0" column="0">
+                                <property name="name">
+                                    <cstring>buttonGroup1</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
                                 </property>
                                 <property name="title">
-                                    <string>Progress Chart Options</string>
+                                    <string></string>
                                 </property>
-                                <grid>
+                                <vbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <widget class="QButtonGroup" row="0" column="0">
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QLabel">
                                         <property name="name">
-                                            <cstring>buttonGroup1</cstring>
+                                            <cstring>textLabel1</cstring>
                                         </property>
-                                        <property name="frameShape">
-                                            <enum>NoFrame</enum>
+                                        <property name="font">
+                                            <font>
+                                                <bold>1</bold>
+                                            </font>
                                         </property>
-                                        <property name="title">
-                                            <string></string>
+                                        <property name="text">
+                                            <string>Chart Data</string>
                                         </property>
-                                        <vbox>
-                                            <property name="name">
-                                                <cstring>unnamed</cstring>
-                                            </property>
-                                            <property name="margin">
-                                                <number>0</number>
-                                            </property>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>textLabel1</cstring>
-                                                </property>
-                                                <property name="font">
-                                                    <font>
-                                                        <bold>1</bold>
-                                                    </font>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Chart Data</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>levelsRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Level stats</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>sessionsRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Session stats</string>
-                                                </property>
-                                            </widget>
-                                            <spacer>
-                                                <property name="name">
-                                                    <cstring>spacer6</cstring>
-                                                </property>
-                                                <property name="orientation">
-                                                    <enum>Vertical</enum>
-                                                </property>
-                                                <property name="sizeType">
-                                                    <enum>Expanding</enum>
-                                                </property>
-                                                <property name="sizeHint">
-                                                    <size>
-                                                        <width>20</width>
-                                                        <height>16</height>
-                                                    </size>
-                                                </property>
-                                            </spacer>
-                                        </vbox>
                                     </widget>
-                                    <widget class="QButtonGroup" row="0" column="1">
+                                    <widget class="QRadioButton">
                                         <property name="name">
-                                            <cstring>buttonGroup2</cstring>
+                                            <cstring>levelsRadio</cstring>
                                         </property>
-                                        <property name="frameShape">
-                                            <enum>NoFrame</enum>
+                                        <property name="text">
+                                            <string>Level stats</string>
                                         </property>
-                                        <property name="title">
-                                            <string></string>
-                                        </property>
-                                        <vbox>
-                                            <property name="name">
-                                                <cstring>unnamed</cstring>
-                                            </property>
-                                            <property name="margin">
-                                                <number>0</number>
-                                            </property>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>textLabel2_2</cstring>
-                                                </property>
-                                                <property name="font">
-                                                    <font>
-                                                        <bold>1</bold>
-                                                    </font>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Chart Type</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>WPMRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Words per minute</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>CPMRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Characters per minute</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>correctRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Correctness</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>skillRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Skill</string>
-                                                </property>
-                                            </widget>
-                                        </vbox>
                                     </widget>
-                                    <widget class="QButtonGroup" row="0" column="2">
+                                    <widget class="QRadioButton">
                                         <property name="name">
-                                            <cstring>buttonGroup3</cstring>
+                                            <cstring>sessionsRadio</cstring>
                                         </property>
-                                        <property name="frameShape">
-                                            <enum>NoFrame</enum>
+                                        <property name="text">
+                                            <string>Session stats</string>
                                         </property>
-                                        <property name="title">
-                                            <string></string>
-                                        </property>
-                                        <vbox>
-                                            <property name="name">
-                                                <cstring>unnamed</cstring>
-                                            </property>
-                                            <property name="margin">
-                                                <number>0</number>
-                                            </property>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>textLabel3_2</cstring>
-                                                </property>
-                                                <property name="font">
-                                                    <font>
-                                                        <bold>1</bold>
-                                                    </font>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Time Axis Scaling</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>timeRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Time scaled</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="QRadioButton">
-                                                <property name="name">
-                                                    <cstring>eventRadio</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Constant spacing</string>
-                                                </property>
-                                            </widget>
-                                            <spacer>
-                                                <property name="name">
-                                                    <cstring>spacer7</cstring>
-                                                </property>
-                                                <property name="orientation">
-                                                    <enum>Vertical</enum>
-                                                </property>
-                                                <property name="sizeType">
-                                                    <enum>Expanding</enum>
-                                                </property>
-                                                <property name="sizeHint">
-                                                    <size>
-                                                        <width>20</width>
-                                                        <height>20</height>
-                                                    </size>
-                                                </property>
-                                            </spacer>
-                                        </vbox>
                                     </widget>
-                                </grid>
+                                    <spacer>
+                                        <property name="name">
+                                            <cstring>spacer6</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>16</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </vbox>
                             </widget>
-                        </vbox>
+                            <widget class="QButtonGroup" row="0" column="1">
+                                <property name="name">
+                                    <cstring>buttonGroup2</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
+                                </property>
+                                <property name="title">
+                                    <string></string>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>textLabel2_2</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <bold>1</bold>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>Chart Type</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>WPMRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Words per minute</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>CPMRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Characters per minute</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>correctRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Correctness</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>skillRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Skill</string>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                            <widget class="QButtonGroup" row="0" column="2">
+                                <property name="name">
+                                    <cstring>buttonGroup3</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
+                                </property>
+                                <property name="title">
+                                    <string></string>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>textLabel3_2</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <bold>1</bold>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>Time Axis Scaling</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>timeRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Time scaled</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>eventRadio</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Constant spacing</string>
+                                        </property>
+                                    </widget>
+                                    <spacer>
+                                        <property name="name">
+                                            <cstring>spacer7</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Vertical</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </vbox>
+                            </widget>
+                        </grid>
                     </widget>
                 </vbox>
-            </widget>
-            <widget class="QWidget">
-                <property name="name">
-                    <cstring>statsPage</cstring>
-                </property>
-                <attribute name="title">
-                    <string>Detailed Statistics</string>
-                </attribute>
-                <hbox>
-                    <property name="name">
-                        <cstring>unnamed</cstring>
-                    </property>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>layout4</cstring>
-                        </property>
-                        <vbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <widget class="QLabel">
-                                <property name="name">
-                                    <cstring>currentTitleLabel_2_2</cstring>
-                                </property>
-                                <property name="font">
-                                    <font>
-                                        <pointsize>20</pointsize>
-                                        <bold>1</bold>
-                                    </font>
-                                </property>
-                                <property name="text">
-                                    <string>Detailed Training Statistics</string>
-                                </property>
-                            </widget>
-                            <spacer>
-                                <property name="name">
-                                    <cstring>spacer14_2_2</cstring>
-                                </property>
-                                <property name="orientation">
-                                    <enum>Vertical</enum>
-                                </property>
-                                <property name="sizeType">
-                                    <enum>Expanding</enum>
-                                </property>
-                                <property name="sizeHint">
-                                    <size>
-                                        <width>20</width>
-                                        <height>110</height>
-                                    </size>
-                                </property>
-                            </spacer>
-                        </vbox>
-                    </widget>
-                </hbox>
             </widget>
         </widget>
         <widget class="QLayoutWidget">
@@ -1209,7 +1274,7 @@
 </customwidgets>
 <images>
     <image name="image0">
-        <data format="PNG" length="1627">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af400000622494441545885b59651685bf715c67f6e952075ed9021ddac62076928c3162bb3d465449706aa0b7b51bb6ef370c7b4a7083a98df82c7a06cb08dad635d28ac90ac7478818c78e4c11623b4ea08f87a98f83a38b114dcf9ba78c6577384744984add99aac79d7397bb8b22c25961787ecfff271eef7ddef1c0ee77feeede0b0e79b5d831c61906e200f0dfc0f55acda596e94d70fed7988e447621712f74544563656a419cfcf8f092f7b7ffdff4b0ef05ad7674632632255714e13ae495538e57dffb0964f1d4eee269d4b8307b475ad05ff64a600f761f31fb2001ba27e85d17ba3043a030dfcc9e22ff943a508f6a1f3f3f4232b5fe9fa2a35d7ab765f29feed975ee7ea9dabe4bc16ef5cbfc0946b91fc4216fbb6fd4f8ebb8ff2b967372854d69e6801eede377ed5fdbdf25b9ed3369fac7e82cfeb23357f15fb05a8add67007546caff505d78bcfbd6e5f2fe528d56e3cd102eceef5abb5a58e80e779beecea87ec6a16d771379bab355c2f809d33a919ecd42e157fcaa7a5df023b4fb4007265b1974b7faedc8bdb5ffcac27f69dd3dfe8c8e66ea21e57f9fbb2496591adcaa5e2f759b27ec7634dc3231c81a704be9ef4779d8bbd3b60c7d7e2d2371516ef99be8de167dd3f13883f9671f24cb27f452b48f59a882c894c5c9b165992bd383d2197df1ebb215d5d6ba2afc9c4e898cc8d4e8bffad98847ffe0bb9fcc18888be26f2de8888cbfdf1b977ceffabe5fd26bfea92c8b9b7cf6dd17c03936f0efd715a9f135913999b757021b3e0c4751cf9e0f27d194cca5c664ee46e5db7f280be2032f1a5f07675befe5e411cfd037e554324fa95e86b345571540946d0ffa613f146e0368482210ccb20120c81056a4045a746241861ebd6163edb87b6ac11e98d80e5e8339681ea52c182487788f1c97122fe3dbee197075c781a05b8814cde40092a7cf4e947d00ba66512f287302d13fca0ddd1505c6e4ccbc413f4902967507bd5066f5a26117f080d0d4f100ccb40ed5331f24683dff5f304a166d79a66e0cde415d91011e7bb220b467dc7afec6161aa705f06130f3d6f414344faa3dbd3537307eaa6a7e664f8d4f0605307dc1879130250bc5324d4e7e06e4c00345307d7c3cf5b30081a35147fe4409de28fa0db7a730786aec8b68814ea95ee8305bd707ffabb89b6bc8888ac8a48fff0b6ccb6f71111915991e8a9e860cb0c14ad22f8606b736b5f4c65d328767b7e6b730b7a404383eeffa1f3efcd800ba0460d6fd9cbf88d7122c72268a6e64cbda9a304148c8a41d41786ad34e460343b8ad2a33478cdd488f7c5d14a1aaf02e3d7c751832aa96caac1effac5c371d2cb6954974a966cfd1adae4d2cb69e2bd718c9a41e26402a36630707200a366a07429a417d33b54d6d1721a03e181163e713241a69c41e956d0ade2bf239b11f4bcdec2efeaf5bc4e643342ba9cfe0740477d13ba956ee566a694f1aa7e152da7a1f815f49c7e54e9569ed6721a7df7faaef8962f7e3e7e6ce05b1a3a711bcc4a59424419f72e76a88056291370a9e7df3d51ec8bf7c65fd2721aaa5fddd6f3fa4edd0fd5af7271f2e26cfa2fe93738e88335f483a12bb254df74858771429b96e499a1bf9e7f6f64673f7e172f5f1a93e8a9a8ff513f0b8df3e18589a2cc4acb7a9679275e985f10b92b327cf6c71b6bf355275e15914c13bfab5f1289bd12fb61bb3c6d7fc926739a73af6f6b04dc010ccbd968866510f23b6b354a143d3f43c81f62fcd638045b79fca05b9903f31cd88105c3d95ed56b55e70f784944b6eb58753a50359cb86ad43bb1fd80ae20127b39f6a3c7ea40280826453c5ff3605a45380166be8e56115c3063e970022c7799d08ba13dbe8e997ca67ed90fdd810f8bb2dab4e1f6c1e1b3c31bb2d29e975511b9fbd81d98811e2816d7a107d6ebd81c475d31f4bcde96a7c79989833ad0b680983f0a45f0f93a611d3aebd81ccfd893848f8561737f9e4d0875850efc436c5bdb646e12a5a490fa3845d48e32694f1273c598b16750dd2ac6f30600a96c0ab5a292ba996af05197a31ff00e90f11c3c036d3b10f6864d6d5923713281d963923c9dc4ec31499c4e60f89cf5bc5e5abf1b3812908c9569e177f599e73204dc012ccb9a6997a7a31d913c93ecb08ad6fbc033fb0a6cb6b5ebdad9707ff8994e6fe76fda79154bc5e9ecadecef01d98fff2f14255b0c6b0acc090000000049454e44ae426082</data>
+        <data format="PNG" length="1525">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000005bc494441545885b596416823d719c77f0e0a8c0e0b12b860810533a0057bd88035642133908087e4a29ea2b087684fb1c9253db57b6b4ba125c9a15d07127613ca3a7bc93a812e524f514a4b9f601b3f85763d0e6d7676a1c623b0f00c8989442ca281085e0e23c9abeccab10dd1e5cfa7ff7fbef7f17fdffbde9b9152729a9ff3c7b2e249601e683f84df01518c7cab3e739a7c4f9c76f1e5175cd45f42767f2f27f0da1fae41ea34d9ce500003b86c97a10fc63963022b4f9560f053178046bd558734888e98c00f831aa0fdc4050cc0d61d36bedac0c81a63fcedfdd779bf179ec981999336a1f3ebb262a0b1fc2b93d75ffc0d624fd09d8d119f49c24c4cf77e4cfc5e07882106f94eed44cd78620734ad84fe4a96f8e90e6bff5b030dea77ebc4f3314431994517ede52cdacb39e8c5274d7bf2be8d6341743b4dfa1c68cf77a8b56a68058dce4e8ca643bc23a00df15f4378d03d7101277640bef9e18cf8ddfb33c1bb45d29fe4585d588528a654709385ff0ff1ed101e4448294f3c0b4e75726dc7517d60b53547358ac9bd92a3f185a0fb51cceaed80abbd98e6291687a103eb37d6d55cacaba59eadec595bf57b4ad9b3f651dcedabddc6be626e0ee4d75c7ee31a57e7aee0ffa98fd62873ed992b5cfdfb3ebcbd8efd9cab36ffe54d7eff50bea5595b6d363695e3382ab1564a565e7d4d6dca2da5be566aebdf09def3ee25f110d7ff7c4ba94b2b6acbdb52eacba16ef707fa7da5fe79a1a8befdeff0bb7d95e87f90ef5b5f29fb695b49298f7ac02958c82f2456c682cfc12c98f8918f55302102d77091c458058bfedd3eb9410eb123b0162c8812bd17f9b8291722b0e64daa8d2a967ec48ff3b58f36ff0948e697d7f6710a0e1f3ff818162088024cdd248802d041ec099c94461005a40b69bcae87bbe08ef9200ab0741381205d003ff271175dfcb63fe647f9d2058807c3a39a6cc18a52df28a57695524aa97b7e82a358ed2ab57f675fa94b9547fe9f405f29b564abcd3b5bc7ea36ef6ca92bcf5c39da020d0dbf1d8001e15e88b998e028c6001148483dfaff04164010e3e8d6b13a47b7900379b4053160160c082197cf3d16ddf30e92e97c2e9f4b7a85a4077e4cf7480f84510839e81ff61f8bb5ed3ace603adf3fec431e0402e67f44a71ff5402a712026d3cd50fdac8a356b210291747d20710c07bfe763e78ad0af430b36b63770f2ce981781a0b458421c087e0e543fade2165c6adbb5313fca572a96a8efd493d332728001d477ea94164af8b14fe562053ff6295f2ce3c73ece9c43fd7e1d7a1d444b502e9627f8cac50a5ed7c39977905188756821db72821fe9655b621d5ad4bb7560781dafdf5857cebc8377e0e1ea2ea225707407d99238f30ea22558fc6a91dcce4d4ab3650492d200825e17139b6ae63e2e207a5d8c94cbdaf990d24209d112b8ba8b6ccb713e5777b9d9b849fd6f75a4943353df03b73eb8a5aefff23a5ed7c39ab7f0da93281e48363ed8c05ab2f8c5a5d547f8116efca3caf5f7d6587b6bedb177c4d4dbb074e125e8825518262b587090c4fe818f7bc1219bc95259aee01ff85873c9c41bf123fd65fb25346dfa536d6a018d9648cef5e7024333f0a364a2f9918fa92763d5c646b69b98ba49f56e150a933c3ac8c89bbaf8b1052ceb2e7e04aeeea2451aa66e8e67fa089b3471f5e4dc97164af82d7f82274aee98e3de8ac73a6016202024fd429a200ae13c04ed214621a4a01949380f91d6c57cca3ce287e8b5bd635f1dc738604304869183bd2938887175673abf47721b9ecd8126e4210c3b9087ce101f8eedd432b22da7f2e4939e38bb0321e47259e84076880fc7cd4183e26c110e1fcf7308e69c79ac03536b6bb41a38070eb54f6ad8039bc6a0c1726a99e6a089abb9f83ff301a86dd7707b2eb5ffd4c6bc9d4af4e54c192f7dc61e28668a881d41e56285201fb0f2ec0a413ea0f26c053f978ce7ce4107e349032ff226f891de3be761680651144d2d60ea245cbfb1aea270fa870c407c2a282e15c966b25365e141c8f6ddeda94ff5ef018e80fecc25cb29330000000049454e44ae426082</data>
     </image>
 </images>
 <layoutdefaults spacing="6" margin="11"/>

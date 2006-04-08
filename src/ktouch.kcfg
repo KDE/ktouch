@@ -4,117 +4,132 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="ktouchrc"/>
-
-    <group name="Colors">
-    <entry name="TeacherBackgroundColor" type="Color">
-      <label>The background color for the teacher's line.</label>
-      <default>#bebeff</default>
-    </entry>     
-    <entry name="TeacherTextColor" type="Color">
-      <label>The text color for the teacher's line</label>
-      <default>#000032</default>
+  <group name="Colors" >
+    <entry type="Color" name="TeacherBackgroundColor" >
+      <label >The background color for the teacher's line.</label>
+      <default >#bebeff</default>
     </entry>
-     <entry name="StudentBackgroundColor" type="Color">
-      <label>The background color for the student's line.</label>
-      <default>#aoffao</default>
+    <entry type="Color" name="TeacherTextColor" >
+      <label >The text color for the teacher's line</label>
+      <default >#000032</default>
     </entry>
-    <entry name="StudentTextColor" type="Color">
-      <label>The text color for the student's line</label>
-      <default>#003200</default>
+    <entry type="Color" name="StudentBackgroundColor" >
+      <label >The background color for the student's line.</label>
+      <default >#aoffao</default>
     </entry>
-    <entry name="ColorOnError" type="Bool">
-      <label>Whether to use a different background for wrong text or not.</label>
-      <default code="true">true</default>
-    </entry> 
-    <entry name="ErrorBackgroundColor" type="Color">
-      <label>The background color for wrong text (students line).</label>
-      <default>#ac0000</default>
+    <entry type="Color" name="StudentTextColor" >
+      <label >The text color for the student's line</label>
+      <default >#003200</default>
     </entry>
-    <entry name="ErrorTextColor" type="Color">
-      <label>The text color for wrong text (students line).</label>
-      <default>#ffffff</default>
+    <entry type="Bool" name="ColorOnError" >
+      <label >Whether to use a different background for wrong text or not.</label>
+      <default code="true" >true</default>
     </entry>
-    <entry name="CurrentColorScheme" type="Int">
-      <label>The number of the current color scheme.</label>
-      <default>0</default>
+    <entry type="Color" name="ErrorBackgroundColor" >
+      <label >The background color for wrong text (students line).</label>
+      <default >#ac0000</default>
     </entry>
-    </group>
- <group name="General">
-    <entry name="BeepOnError" type="Bool">
-      <label>Emit a beep on each typing error</label>
-      <default code="true">true</default>
+    <entry type="Color" name="ErrorTextColor" >
+      <label >The text color for wrong text (students line).</label>
+      <default >#ffffff</default>
     </entry>
-    <entry name="SoundOnLevel" type="Bool">
-      <label>Play a sound on automatic level change</label>
-      <default code="true">true</default>
-    </entry>
-     <entry name="SlidingSpeed" type="Int">
-      <label>The sliding speed</label>
-      <default code="true">5</default>
-    </entry>
-    <entry name="OverrideLectureFont" type="Bool">
-      <label>Override the default/predefined lecture fonts.</label>
-      <default code="true">false</default>
-    </entry>
-     <entry name="Font" type="Font">
-     <label>The font for the student and teacher lines</label>
-      <default>QFont("Monospace")</default>
-    </entry>
-    <entry name="CurrentLectureFile" type="Path">
-    <label>The currently loaded lecture file</label>
-    <default>"default"</default>
-    </entry>
-    </group>
-  <group name="Keyboard">
-    <entry name="ColorScheme" type="Int">
-      <label>Select the color scheme</label>
-      <default code="true">1</default>
-    </entry>
-    <entry name="ShowAnimation" type="Bool">
-    <label>Whether to use colors on the keys or not.</label>
-    <default code="true">true</default>
-    </entry>
-    <entry name="OverrideKeyboardFont" type="Bool">
-    <label>Whether to override the default/predefined keyboard fonts.</label>
-    <default code="true">false</default>
-    </entry>
-    <entry name="KeyboardFont" type="Font">
-    <label>The font for the keys on the keyboard</label>
-    <default>KGlobalSettings::generalFont()</default>
-    </entry>
-    <entry name="CurrentKeyboardFile" type="Path">
-    <label>The currently loaded keyboard file</label>
-    <default>"number.keyboard"</default>
+    <entry type="Int" name="CurrentColorScheme" >
+      <label >The number of the current color scheme.</label>
+      <default >0</default>
     </entry>
   </group>
-  <group name="Training">
-    <entry name="AutoLevelChange" type="Bool">
-    <label>Allow automatic level adjustments</label>
-    <default code="true">true</default>
+  <group name="General" >
+    <entry type="Bool" name="BeepOnError" >
+      <label >Emit a beep on each typing error</label>
+      <default code="true" >true</default>
     </entry>
-    <entry name="RememberLevel" type="Bool">
-    <label>Remember the current level for the next KTouch start</label>
-    <default code="true">true</default>
+    <entry type="Bool" name="SoundOnLevel" >
+      <label >Play a sound on automatic level change</label>
+      <default code="true" >true</default>
     </entry>
-    <entry name="CurrentTrainingLevel" type="Int">
-    <label>The current training level</label>
-    <default>0</default>
+    <entry type="Int" name="SlidingSpeed" >
+      <label >The sliding speed</label>
+      <default code="true" >5</default>
     </entry>
-    <entry name="UpSpeedLimit" type="Int">
-    <label>Number of chars per minute to increase a level</label>
-    <default>120</default>
+    <entry type="Int" name="MaxSlidingWidgetHeight" >
+      <label >The maximum height of the sliding widget</label>
+      <default code="true" >200</default>
     </entry>
-    <entry name="UpCorrectLimit" type="Int">
-    <label>Percentage of correctness to increase a level</label>
-    <default>85</default>
+    <entry type="Bool" name="OverrideLectureFont" >
+      <label >Override the default/predefined lecture fonts.</label>
+      <default code="true" >false</default>
     </entry>
-    <entry name="DownSpeedLimit" type="Int">
-    <label>Number of chars per minute to decrease a level</label>
-    <default>60</default>
+    <entry type="Font" name="Font" >
+      <label >The font for the student and teacher lines</label>
+      <default code="true">QFont(&quot;Monospace&quot;)</default>
     </entry>
-    <entry name="DownCorrectLimit" type="Int">
-    <label>Percentage of correctness to decrease a level</label>
-    <default>60</default>
+    <entry type="Path" name="CurrentLectureFile" >
+      <label >The currently loaded lecture file</label>
+      <default code="true">&quot;default&quot;</default>
+    </entry>
+    <entry type="Bool" name="Right2LeftTyping" >
+      <label >Weather we use right-to-left typing.</label>
+      <default code="true">false</default>
+    </entry>
+  </group>
+  <group name="Keyboard" >
+    <entry type="Int" name="ColorScheme" >
+      <label >Select the color scheme</label>
+      <default code="true" >1</default>
+    </entry>
+    <entry type="Bool" name="ShowAnimation" >
+      <label >Whether to use colors on the keys or not.</label>
+      <default code="true" >true</default>
+    </entry>
+    <entry type="Bool" name="HideKeyboard" >
+      <label >Whether to hide the keyboard display.</label>
+      <default code="true" >false</default>
+    </entry>
+    <entry type="Bool" name="OverrideKeyboardFont" >
+      <label >Whether to override the default/predefined keyboard fonts.</label>
+      <default code="true" >false</default>
+    </entry>
+    <entry type="Font" name="KeyboardFont" >
+      <label >The font for the keys on the keyboard</label>
+      <default >KGlobalSettings::generalFont()</default>
+    </entry>
+    <entry type="Path" name="CurrentKeyboardFile" >
+      <label >The currently loaded keyboard file</label>
+      <default >&quot;number.keyboard&quot;</default>
+    </entry>
+  </group>
+  <group name="Training" >
+    <entry type="Bool" name="AutoLevelChange" >
+      <label >Allow automatic level adjustments</label>
+      <default code="true" >true</default>
+    </entry>
+    <entry type="Bool" name="DisableManualLevelChange" >
+      <label >Diable manual level adjustments when auto-level change is enabled</label>
+      <default code="true" >false</default>
+    </entry>
+    <entry type="Bool" name="RememberLevel" >
+      <label >Remember the current level for the next KTouch start</label>
+      <default code="true" >true</default>
+    </entry>
+    <entry type="Int" name="CurrentTrainingLevel" >
+      <label >The current training level</label>
+      <default >0</default>
+    </entry>
+    <entry type="Int" name="UpSpeedLimit" >
+      <label >Number of chars per minute to increase a level</label>
+      <default >120</default>
+    </entry>
+    <entry type="Int" name="UpCorrectLimit" >
+      <label >Percentage of correctness to increase a level</label>
+      <default >85</default>
+    </entry>
+    <entry type="Int" name="DownSpeedLimit" >
+      <label >Number of chars per minute to decrease a level</label>
+      <default >60</default>
+    </entry>
+    <entry type="Int" name="DownCorrectLimit" >
+      <label >Percentage of correctness to decrease a level</label>
+      <default >60</default>
     </entry>
   </group>
 </kcfg>

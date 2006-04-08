@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchslideline.h                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2006 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -26,105 +26,131 @@ class QPainter;
 /// 
 /// KTouchSlideLine is a fire-and-forget widget, so you don't have to care about any
 /// drawing details. After the initial setup (setting the font, colours etc.) you simple
-/// need to call setTeacherText() or setStudentText() and everything else (including the
-/// choice of the background colour) is done by the widget.<p>
-/// So, how does the sliding work. The basic idea is that when the teachers and the
-/// students text won't fit in the widgets width only part of the text is shown. Depending
-/// on the amount of text that has been already typed, both lines
-/// (the teachers and the students line) will move. However, if the student
-/// had entered a wrong text than the lines shouldn't move before he did not
-/// correct his mistake. This ensures that you will always start at the left side
-/// of the screen and end up at the right side.<p>
-/// The calculation is very simple. Both the teachers and the students line are drawn
-/// in pixmaps. Then you only need to calculate the parts of that pixmaps that have to be
-/// copied on the screen and you're done! ??? Well, not quite so simple....<P>
-/// The calculation is actually the tricky bit but here's the principle (
-/// If you really want to understand the code, better draw a sketch - I needed several
-/// sketches :-).<br>
-/// After drawing the text into the pixmaps (easy) we calculate the ratio between
-/// "typed text" and "total text per line" and multiply it with the horizontal space available.
-/// This has to be done three times: For the global widget coordinates, for the teacher line
-/// and for the student line. Then we simply convert from local to global coordinates and
-/// store the new coordinates.
-/// The timed function slide() will then slide the widgets into position.<p>
-/// The calculation and the drawing are made in the updateLines() member function. Since
-/// the teachers pixmap won't change when the students string changes it will only be renewed
-/// when it's size changes (or the teacher text changes). This is done in the resizeEvent().<br>
-/// The properties for the slide line: correctColor, errorColor, font can be manipulated
-/// using the usual access functions.
+/// need to call setNewText() when the teacher text changes or setStudentText() when
+/// only the student line has changed. Everything else (including the
+/// choice of the background colour) is done by the widget.
+///
+/// Please refer to the documentation 'sliding_line_widget.pdf' in the doc folder.
 class KTouchSlideLine : public QWidget {
     Q_OBJECT
-  private:
-    bool m_rightJustify; // do we right align the widget-for langauges like hebrew which is written from right to left.
   public:
     /// Constructor
     KTouchSlideLine(QWidget *parent);
     /// Destructor, free memory allocated for the line pixmap.
     ~KTouchSlideLine();
     /// Applies the preferences (font and colours).
+	/// This function calls setFont() which in turn results in a complete update
+	/// of the widget and its sliding lines.
+	/// @see setFont()
     void applyPreferences();
     /// Sets the teacher and student text (usually called when a new line is started).
-    void setNewText(const QString& teacherText, const QString& studentText);
+	/// This function calls updateSlidingLines().
+	/// @see updateSlidingLines()
+    void setNewText(const QString& teacher_text, const QString& student_text);
     /// Sets the student text (called whenever the student string changes).
+	/// This function calls updateStudentLine().
+	/// @see updateStudentLine()
     void setStudentText(const QString& text);
-	/// Change the font of the slide line widget.
+	/// Changes the font of the slide line widget and updates everything else.
+	/// This function is called when the font is changed. It updates the size
+	/// of the sliding lines and the font size accordingly. Then it updates
+	/// the widget.
+	/// This function calls resizeFont().
+	/// @see resizeFont()
 	void setFont(const QFont& font);
+
+	/// Returns true when the character can be added without problems.
+	/// This function checks if the new possibly wrong student line
+	/// would still fit into the student line pixmap and returns
+	/// false if not.
+	bool canAddCharacter(const QString& new_student_text);
 
   public slots:
     /// Starts or stops the cursor blinking timer.
     void setCursorTimerEnabled(bool on);
 
   private slots:
-    /// Turns the cursor on or off and triggers an update (this function triggered by the cursor timer).
+    /// Turns the cursor on or off (this function triggered by the cursor timer).
     void toggleCursor();
     /// Slides the lines into position (this function is triggered by the sliding timer).
     void slide();
 
   protected:
-    /// Simply updates the widget: calls updateLines() and slide()
+    /// Simply updates the widget.
+	/// This function calls updateSlidingLines() if necessary, otherwise just slide().
+	/// @see updateSlidingLines()
+	/// @see slide()
     void paintEvent( QPaintEvent * );
     /// Will be called when the widget is resized.
-    /// This event will first recalculate the font size. Then the teachers and the students widget
-    /// will be created and the teachers text will be drawn on the teachers pixmap. Finally update()
-    /// is called.
+    /// This event will first recalculate the geometry of the sliding lines.
+	/// Then the font size will be updated and through that, the sliding lines will be
+	/// updated.
     void resizeEvent ( QResizeEvent * );
 
   private:
-    /// Will recalculate the font size depending on the height of the widget.
+    /// Calculates the correct text length (in pixels) taking trailing spaces into account
+    int textLen(const QFontMetrics& fontMetrics, const QString& text);
+    /// Will recalculate the font size and related variables depending on the height of the widget.
+	/// This function calls updateSlidingLines().
+	/// @see updateSlidingLines()
     void resizeFont();
     /// Just draws the cursor (if visible)
     void drawCursor();
     /// Draws the "enter" character at the given position (y is the y-position of the arrow).
     void drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth);
-    /// Calculates the correct text length taking trailing spaces into account
-    int  textWidth(const QFontMetrics& fontMetrics, const QString& text);
-    /// Redraws the student pixmaps and updates the frame x positions
-    void updateLines();
+    /// Recreates the student and teacher pixmaps and updates all related variables.
+	/// In this function the teacher pixmap is drawn it will not be modified until the next
+	/// call of updateSlidingLines(). This function also calls updateStudentLine().
+	/// @see updateStudentLine()
+    void updateSlidingLines();
+	/// Redraws the student line alone and updates all related variables.
+    void updateStudentLine();
 
     QFont       m_font;             ///< The font for the sliding lines.
     QString     m_teacherText;      ///< The teachers text.
     QString     m_studentText;      ///< The students text.
-    QPixmap    *m_teacherPixmap;    ///< Pixmap used to draw the teacher sliding line.
-    QPixmap    *m_studentPixmap;    ///< Pixmap used to draw the student sliding line.
+    QPixmap    *m_teacherPixmap;    ///< Pixmap used to draw the teacher sliding line, created in updateSlidingLines().
+    QPixmap    *m_studentPixmap;    ///< Pixmap used to draw the student sliding line, created in updateSlidingLines().
 
     QTimer      m_slideTimer;       ///< This is the timer for the sliding of the lines.
-    int         m_shift;            ///< The horizontal shift of the slide lines (used for centering)
-    int         m_enterCharWidth;   ///< The width of the enter character (including the small gap).
-    int         m_spaceCharWidth;   ///< The width of a space char - this is different to QFontMetrics::width(' ').
-    int         m_frameWidth;       ///< The width of the frame that is copied from the pixmaps onto the widget.
-    int         m_teacherTextWidth; ///< The length of the teacher line (in pixel) WITHOUT enter character.
-    double      m_teacherFrameX;    ///< The current X-position in the teachers pixmap (local coordinates).
-    int         m_teacherFrameXEnd; ///< The final X-position in the teachers pixmap (local coordinates).
-    double      m_studentFrameX;    ///< The current X-position in the students pixmap (local coordinates).
-    int         m_studentFrameXEnd; ///< The final X-position in the student pixmap (local coordinates).
 
     bool        m_cursorVisible;    ///< Flag which indicates the current state of the cursor.
     QTimer      m_cursorTimer;      ///< This is the cursor on/off timer.
-    int         m_cursorXPos;       ///< The global X-coordinate of the cursor.
-    int         m_cursorYPos;       ///< The global Y-coordinate of the cursor (student line).
-    int         m_cursorHeight;     ///< The height of the cursor.
     QColor      m_cursorColor;      ///< Defines the colour of the cursor (when turned on).
     QColor      m_cursorBackground; ///< Defines the background colour of the cursor (when turned off).
+
+	// variables depending on size of widget, will be updated in resizeEvent()
+	int			m_marginVerWidget;	///< Vertical margin between widget boundary and sliding line in pixels.
+	int			m_slideLineDist;	///< Vertical distance between sliding lines in pixels.
+	int			m_slideLineHeight;	///< Height of a sliding line in pixels.
+	int			m_marginCursor;		///< The margin for cursor movement (minimum distance from left and right ends of slide line boundaries).
+
+	// variables depending on font face and size, will be updated in the resizeFont() function
+	int			m_xCharWidth;		///< The width (in pixel) of a small x (used to calculate space width and other stuff).
+	int			m_spaceCharWidth;	///< The width of a space character (in pixel).
+	int			m_cursorHeight;		///< Height of the cursor.
+	int			m_yCursorStudent;   ///< Cursor top y coordinate (from top of visible area) in the student line.
+
+	// newly defined variables, will be updated on the setNewText() and partially in setStudentText()
+	int			m_marginHorWidget;	///< Horizontal margin between widget boundary and sliding line in pixels.
+	int			m_slideLineWidth;	///< The length of the sliding line in pixels.
+    int			m_cursorRangeLen;	///< Length (in pixel) that the cursor can move between left and right margin.
+
+	int			m_teacherTextLen;   ///< The total length of the teacher line (in pixel) WITHOUT enter character.
+	int			m_correctTextLen;   ///< The length of correctly typed text so far (in pixel).
+	int			m_studentTextLen;	///< The total length of text typed (potentially wrong) in the student line (in pixel).
+
+	int			m_xCursorTeacher;   ///< Cursor position (from left side of visible area) in the teacher line.
+	int			m_xCursorTPixmap;   ///< Current cursor position in the teacher pixmap (from left in pixels).
+	int			m_xCursorStudent;   ///< Cursor position (from left side of visible area) in the student line.
+	int			m_xCursorSPixmap;   ///< Current cursor position in the student pixmap (from left in pixels).
+
+
+    int         m_xFrameTeacher;    		///< The final X-position (position after slide is done) for the copy-frame in the teachers pixmap.
+    double     	m_xFrameTeacherCurrent;   	///< The current X-position (position after slide is done) for the copy-frame in the teachers pixmap.
+
+    int         m_xFrameStudent;    		///< The final X-position (position after slide is done) for the copy-frame in the students pixmap.
+    double     	m_xFrameStudentCurrent;   	///< The current X-position (position after slide is done) for the copy-frame in the students pixmap.
 };
 
 #endif  // KTOUCHSLIDELINE_H

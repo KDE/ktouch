@@ -76,11 +76,11 @@
             <property name="title">
                 <string>Text Line Settings</string>
             </property>
-            <grid>
+            <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="2">
+                <widget class="QLayoutWidget">
                     <property name="name">
                         <cstring>layout2</cstring>
                     </property>
@@ -174,63 +174,7 @@
                         </widget>
                     </grid>
                 </widget>
-                <widget class="QCheckBox" row="2" column="0">
-                    <property name="name">
-                        <cstring>kcfg_OverrideLectureFont</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Override lecture font</string>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>If you want to override the font of the training lecture check this box and set your own font.</string>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>Most lectures suggest a font to use. This is necessary for not so common languages where characters may be displayed in a strange way and distort the sliding line. If you check this button you can choose your own font and override the lecture font.</string>
-                    </property>
-                </widget>
-                <spacer row="3" column="1">
-                    <property name="name">
-                        <cstring>spacer3</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>114</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLabel" row="3" column="0">
-                    <property name="name">
-                        <cstring>fontTextLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Font for displayed/typed text:</string>
-                    </property>
-                </widget>
-                <widget class="KFontRequester" row="4" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>kcfg_Font</cstring>
-                    </property>
-                    <property name="font">
-                        <font>
-                            <family>Monospace</family>
-                            <pointsize>13</pointsize>
-                        </font>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>Change the font for the student and teacher lines</string>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
-                    </property>
-                </widget>
-                <spacer row="1" column="0">
+                <spacer>
                     <property name="name">
                         <cstring>spacer5</cstring>
                     </property>
@@ -247,7 +191,127 @@
                         </size>
                     </property>
                 </spacer>
-            </grid>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout3</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Maximum height of sliding line widget:</string>
+                            </property>
+                        </widget>
+                        <widget class="QSpinBox">
+                            <property name="name">
+                                <cstring>kcfg_MaxSlidingWidgetHeight</cstring>
+                            </property>
+                            <property name="maxValue">
+                                <number>1000</number>
+                            </property>
+                            <property name="minValue">
+                                <number>50</number>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel2_2</cstring>
+                            </property>
+                            <property name="text">
+                                <string>in pixels</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer5_2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Fixed</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout2</cstring>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel" row="1" column="0">
+                            <property name="name">
+                                <cstring>fontTextLabel</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Font for displayed/typed text:</string>
+                            </property>
+                        </widget>
+                        <spacer row="1" column="1">
+                            <property name="name">
+                                <cstring>spacer3</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>114</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="KFontRequester" row="2" column="0" rowspan="1" colspan="2">
+                            <property name="name">
+                                <cstring>kcfg_Font</cstring>
+                            </property>
+                            <property name="font">
+                                <font>
+                                    <family>Monospace</family>
+                                    <pointsize>13</pointsize>
+                                </font>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Change the font for the student and teacher lines</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
+                            </property>
+                        </widget>
+                        <widget class="QCheckBox" row="0" column="0">
+                            <property name="name">
+                                <cstring>kcfg_OverrideLectureFont</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Override lecture font</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>If you want to override the font of the training lecture check this box and set your own font.</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Most lectures suggest a font to use. This is necessary for not so common languages where characters may be displayed in a strange way and distort the sliding line. If you check this button you can choose your own font and override the lecture font.</string>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+            </vbox>
         </widget>
         <spacer>
             <property name="name">
