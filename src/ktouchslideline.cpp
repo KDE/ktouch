@@ -21,6 +21,7 @@
 #include <algorithm>
 
 #include "prefs.h"
+#include "ktouchcolorscheme.h"
 
 // uncomment the following define to enable extended debugging
 //#define SLIDE_LINE_DEBUGGING
@@ -313,8 +314,15 @@ void KTouchSlideLine::drawCursor() {
     QPainter p(this);
 
 #ifdef DRAW_TEACHER_CURSOR
-    if (m_cursorVisible)    p.setPen( Prefs::teacherTextColor() );
-    else                    p.setPen( Prefs::teacherBackgroundColor() );
+	QColor col_tt = Prefs::commonTypingLineColors() ?
+			     Prefs::teacherTextColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherTextColor;
+	QColor col_tb = Prefs::commonTypingLineColors() ?
+			     Prefs::teacherBackgroundColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherBackground;
+
+    if (m_cursorVisible)    p.setPen( col_tt );
+    else                    p.setPen( col_tb );
 
 	int dx_teacher = static_cast<int>(m_xFrameTeacher - m_xFrameTeacherCurrent);
 	int cursor_x_teacher = m_marginHorWidget + m_xCursorTeacher + dx_teacher;
@@ -325,6 +333,7 @@ void KTouchSlideLine::drawCursor() {
 				   cursor_x_teacher, m_yCursorStudent + m_cursorHeight - m_slideLineDist - m_slideLineHeight);
 	}
 #endif
+
 
     if (m_cursorVisible)    p.setPen( m_cursorColor );
     else                    p.setPen( m_cursorBackground );
@@ -402,8 +411,16 @@ void KTouchSlideLine::updateSlidingLines() {
     QPainter painter;
     painter.begin (m_teacherPixmap, this);
     painter.setFont( m_font );
-    painter.fillRect( m_teacherPixmap->rect(), QBrush(Prefs::teacherBackgroundColor()) );
-    painter.setPen( Prefs::teacherTextColor() );
+
+	QColor col_tt = Prefs::commonTypingLineColors() ?
+			     Prefs::teacherTextColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherTextColor;
+	QColor col_tb = Prefs::commonTypingLineColors() ?
+			     Prefs::teacherBackgroundColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherBackground;
+
+    painter.fillRect( m_teacherPixmap->rect(), QBrush(col_tb) );
+    painter.setPen( col_tt );
     // create a rectangle for the text drawing
     QRect textRect(m_marginCursor, 0, w-2*m_marginCursor, h);
 	// left aligned
@@ -517,17 +534,21 @@ void KTouchSlideLine::updateStudentLine() {
     if (Prefs::colorOnError()) {
         // draw the student line depending on the colour settings
         if (error) {
-            m_cursorBackground = Prefs::errorBackgroundColor();
-            painter.fillRect (m_studentPixmap->rect(), m_cursorBackground);
-            m_cursorColor = Prefs::errorTextColor();
-            painter.setPen( m_cursorColor );
+			// determine colors depending on preferences settings
+			m_cursorBackground = Prefs::commonTypingLineColors() 	? 	Prefs::errorBackgroundColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_errorBackground;
+			m_cursorColor = Prefs::commonTypingLineColors() 		?	Prefs::errorTextColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_errorTextColor;
         }
         else {
-            m_cursorBackground = Prefs::studentBackgroundColor();
-            painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground) );
-            m_cursorColor = Prefs::studentTextColor();
-            painter.setPen( m_cursorColor );
+			// determine colors depending on preferences settings
+			m_cursorBackground = Prefs::commonTypingLineColors() 	? 	Prefs::studentBackgroundColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_studentBackground;
+			m_cursorColor = Prefs::commonTypingLineColors() 		? 	Prefs::studentTextColor() :
+				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_studentTextColor;
         }
+		painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground));
+		painter.setPen( m_cursorColor );
     }
     else {
         // use always student text colors

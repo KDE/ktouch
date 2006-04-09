@@ -14,8 +14,9 @@
 #include <kdebug.h>
 #include <algorithm>  // for std::min
 
-#include "ktouch.h"
+//#include "ktouch.h"
 #include "prefs.h"
+#include "ktouchcolorscheme.h"
 
 // Initialisation of static variables
 int KTouchFingerKey::m_fingerKeyCount = 0;
@@ -54,7 +55,7 @@ KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, i
 }
 
 void KTouchNormalKey::paint(QPainter& p) const {
-	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
+	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
     QColor textColor;
     if (m_isNextKey) {
         // mark the key as "next"
@@ -93,7 +94,7 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
 }
 
 void KTouchFingerKey::paint(QPainter& p) const {
-	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
+	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
 	p.setFont( m_font );
     if (m_isActive) {
         p.setBrush( colorScheme.m_background[m_colorIndex] );
@@ -134,7 +135,7 @@ KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText,
 }
 
 void KTouchControlKey::paint(QPainter& p) const {
-	const KTouchColorScheme& colorScheme = KTouchPtr->colorSchemes()[Prefs::colorScheme()];
+	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
     p.setFont( m_font );
     QColor textColor;
     if (m_isActive) {

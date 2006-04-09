@@ -1,3 +1,11 @@
+2006-04-09 Andreas Nicolai <andreas.nicolai@gmx.net>
+  * Bugfix:  color scheme entries in the main menu will be shown
+             without interpreting & as automatic accelerator
+  * Feature: color schemes can now be edited and saved, also a 
+             color scheme includes now keyboard and slide line
+             colors, new option to have common slide line colors
+             in configuration (request: #90548)
+
 2006-04-08 Andreas Nicolai <andreas.nicolai@gmx.net>
   * New version: 1.5.3
   * Bugfix:  slideline algorithm reworked and enhanced, cleared bugs related

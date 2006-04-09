@@ -38,9 +38,9 @@ class KTouchTrainer;
 class KTouchPrefTrainingLayout;
 class KTouchPrefKeyboardLayout;
 class KTouchPrefGeneralLayout;
+class KTouchPrefColorsLayout;
 
 #include "ktouchlecture.h"
-#include "ktouchcolorscheme.h"
 #include "ktouchstatisticsdata.h"
 
 /// This is the main window of KTouch.
@@ -64,8 +64,6 @@ class KTouch : public KMainWindow {
     /// Destructor, releases memory of KTouch trainer.
     ~KTouch();
 
-	/// Returns the current color scheme
-	const QValueVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
@@ -89,9 +87,12 @@ class KTouch : public KMainWindow {
 	void configOverrideKeyboardFontToggled(bool on);
 	/// Called from the configuration dialog.
 	void configAutoLevelChangeToggled(bool on);
+	/// Called from the configuration dialog.
+	void configCommonColorsToggled(bool on);
 
     void fileOpenLecture();             ///< The action File->Open lecture...
     void fileEditLecture();             ///< The action File->Edit lecture...
+    void fileEditColors();              ///< The action File->Edit colors...
     void fileEditKeyboard();            ///< The action File->Edit keyboard...
     void fileQuit();                    ///< The action File->Quit
     void trainingNewSession();          ///< The action Training->Start new training session...
@@ -136,9 +137,7 @@ class KTouch : public KMainWindow {
 	/// This function populates the file lists with the installed training, keyboard and 
 	/// examination files.
     void updateFileLists();
-    /// Creates some default color schemes.
-    void createDefaultColorSchemes();
-	/// Updates the check mark in the lecture-quick-selection menu depending on the 
+	/// Updates the check mark in the lecture-quick-selection menu depending on the
 	/// lecture in Prefs::currentLectureFile().
 	void updateLectureActionCheck();
 	/// Updates the check mark in the keyboard-quick-selection menu depending on the 
@@ -161,6 +160,7 @@ class KTouch : public KMainWindow {
 	KTouchPrefGeneralLayout  * m_pageGeneral;		///< The general configuration page.
 	KTouchPrefTrainingLayout * m_pageTraining;		///< The training configuration page.
 	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
+	KTouchPrefColorsLayout   * m_pageColors;		///< The color scheme configuration page.
 	
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
@@ -174,8 +174,6 @@ class KTouch : public KMainWindow {
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
 
 	QChar					m_lastDeadKey;			///< Temporary storage of last dead key.
-	
-	QValueVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).

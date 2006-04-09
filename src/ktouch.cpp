@@ -21,6 +21,7 @@
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
+#include <qgroupbox.h>
 //#include <qimevent.h>
 
 // KDE Header
@@ -44,7 +45,7 @@
 #include "ktouchstatus.h"
 #include "ktouchslideline.h"
 #include "ktouchkeyboardwidget.h"
-#include "ktouchkeyboardeditor.h"
+#include "ktouchcoloreditor.h"
 #include "ktouchtrainer.h"
 #include "ktouchstatistics.h"
 #include "ktouchprefgenerallayout.h"
@@ -53,6 +54,7 @@
 #include "ktouchprefcolorslayout.h"
 #include "ktouchutils.h"
 #include "prefs.h"
+#include "ktouchcolorscheme.h"
 
 KTouch * KTouchPtr = NULL;
 
@@ -158,7 +160,7 @@ void KTouch::clearStatistics() {
 void KTouch::applyPreferences() {
 	// This applies a new color scheme for the keyboard and also updates all other
 	// changes for the keyboard widget
-	changeColor(Prefs::colorScheme());
+	changeColor(Prefs::currentColorScheme());
 	m_slideLineWidget->applyPreferences();
 	m_statusWidget->applyPreferences();
 }
@@ -177,7 +179,7 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
 	}
     QChar key = keyEvent->text().at(0); // get first unicode character
 	// HACK : manually filter out known dead keys
-	bool has_dead_key = true;
+//	bool has_dead_key = true;
 	switch (key.unicode()) {
 		case 94   : m_lastDeadKey = QChar(uint(94)); break;
 		case 176  : m_lastDeadKey = QChar(uint(176)); break;
@@ -267,6 +269,11 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 }
 // ----------------------------------------------------------------------------
 
+void KTouch::configCommonColorsToggled(bool on) {
+	m_pageColors->colorsGroup->setEnabled(on);
+}
+// ----------------------------------------------------------------------------
+
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
 	trainingPause();
@@ -304,12 +311,52 @@ void KTouch::fileEditLecture() {
 }
 // ----------------------------------------------------------------------------
 
+// The action File->Edit colors...
+void KTouch::fileEditColors() {
+	trainingPause();
+	// Create a copy of the currently editable color schemes.
+	QValueList<KTouchColorScheme> tmp_list;
+	int default_schemes = 0;
+	for (QValueVector<KTouchColorScheme>::const_iterator it = KTouchColorScheme::m_colorSchemes.constBegin();
+		it != KTouchColorScheme::m_colorSchemes.constEnd(); ++it)
+	{
+		if (!it->m_default) 	tmp_list.append(*it);
+		else 					++default_schemes;
+	}
+	
+	KTouchColorEditor dlg(this);		// Create editor
+	// start editor
+	int selected;
+	dlg.startEditor( tmp_list, Prefs::currentColorScheme() - default_schemes, selected);
+	KTouchColorScheme::createDefaults();
+	for (QValueList<KTouchColorScheme>::const_iterator it = tmp_list.constBegin();
+		it != tmp_list.constEnd(); ++it)
+	{
+		KTouchColorScheme::m_colorSchemes.append(*it);
+	}
+	// update the quick select menu
+    QStringList schemes_list;
+    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
+    m_keyboardColorAction->setItems(schemes_list);
+	int index = selected + default_schemes;
+	if (index >=0 && index < static_cast<int>(KTouchColorScheme::m_colorSchemes.count())) {
+		Prefs::setCurrentColorScheme(index);
+	}
+	else {
+		Prefs::setCurrentColorScheme(1); // fall back on default in case active was deleted
+	}
+   	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
+	applyPreferences();
+}
+// ----------------------------------------------------------------------------
+
 // The action File->Edit keyboard...
 void KTouch::fileEditKeyboard() {
 	trainingPause();
 	// Create and execute editor
-    KTouchKeyboardEditor dlg(this);
-    dlg.startEditor( Prefs::currentKeyboardFile() );
+//    KTouchKeyboardEditor dlg(this);
+//    dlg.startEditor( Prefs::currentKeyboardFile() );
 	// Reload lecture in case it was modified
 	//m_keyboard.loadXML(this, Prefs::currentKeyboardFile() );
 	//updateFontFromLecture();
@@ -374,7 +421,7 @@ void KTouch::optionsPreferences() {
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
 	m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
-	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
+	m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
 	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(applyPreferences()));
 	// TODO : Connect some other buttons/check boxes of the dialog
@@ -384,10 +431,13 @@ void KTouch::optionsPreferences() {
 		this, SLOT(configOverrideKeyboardFontToggled(bool)));
 	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
 		this, SLOT(configAutoLevelChangeToggled(bool)));
+	connect(m_pageColors->kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
+		this, SLOT(configCommonColorsToggled(bool)));
 	// call the functions to enable/disable controls depending on settings
 	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
 	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
 	configAutoLevelChangeToggled(Prefs::autoLevelChange());
+	configCommonColorsToggled(Prefs::commonTypingLineColors());
 	dialog->show();
 }
 // ----------------------------------------------------------------------------
@@ -413,14 +463,15 @@ void KTouch::changeKeyboard(int num) {
 //	kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
 	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
-    m_keyboardWidget->applyPreferences(this, false);  
+    m_keyboardWidget->applyPreferences(this, false);
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::changeColor(int num) {
-    if (static_cast<unsigned int>(num)>=m_colorSchemes.count()) return;
-    Prefs::setColorScheme(num);
+    if (static_cast<unsigned int>(num)>=KTouchColorScheme::m_colorSchemes.count()) return;
+    Prefs::setCurrentColorScheme(num);
     m_keyboardWidget->applyPreferences(this, false);
+	m_slideLineWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
@@ -462,6 +513,8 @@ bool KTouch::queryExit() {
 	KURL stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
 	//kdDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
 	m_stats.write(this, stat_file);
+	KURL color_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "color_schemes.xml";
+	KTouchColorScheme::writeList(this, color_file);
     return true;
 }
 // ----------------------------------------------------------------------------
@@ -521,8 +574,8 @@ void KTouch::saveProperties(KConfig *config) {
     // next logon.
 
 	// TODO : Session management rewrite
-    config->setGroup("TrainingState");
 /*
+    config->setGroup("TrainingState");
     // first write the current lecture URL and the training position
     config->writePathEntry("Lecture", m_currentLectureURL.url());
     config->writeEntry("Level", m_trainer->m_level);
@@ -584,9 +637,10 @@ void KTouch::init() {
     }
 
     // create some default colour schemes
-    createDefaultColorSchemes();
+    KTouchColorScheme::createDefaults();
     // read additional color schemes
-    // TODO : readExternalColorSchemes();
+	KURL color_file = KGlobal::dirs()->findResource("data", "ktouch/color_schemes.xml");
+	KTouchColorScheme::readList(this, color_file);
 }
 // ----------------------------------------------------------------------------
 
@@ -621,10 +675,12 @@ void KTouch::initTrainingSession() {
 // Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
-    new KAction(i18n("&Open Lecture..."), "open_lecture", 0, 
+    new KAction(i18n("&Open lecture..."), "open_lecture", 0,
 		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
-    new KAction(i18n("&Edit Lecture..."), "edit_lecture", 0, 
+    new KAction(i18n("&Edit lecture..."), "edit_lecture", 0,
 		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
+    new KAction(i18n("&Edit color scheme..."), "edit_colors", 0,
+		this, SLOT(fileEditColors()), actionCollection(), "file_editcolors");
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0, 
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
@@ -639,6 +695,7 @@ void KTouch::setupActions() {
  
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
+	m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);  
     connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
@@ -647,16 +704,20 @@ void KTouch::setupActions() {
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts    
     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
+	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
-	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
+	m_keyboardColorAction = new KSelectAction(i18n("&Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
     QStringList schemes_list;
-    for (unsigned int i=0; i<m_colorSchemes.count(); ++i)
-		schemes_list.append(m_colorSchemes[i].m_name);
+    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
+	m_keyboardColorAction->setMenuAccelsEnabled(false);
     m_keyboardColorAction->setItems(schemes_list);
-    m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());  
+	if (static_cast<unsigned int>(Prefs::currentColorScheme()) >=  schemes_list.count())
+		Prefs::setCurrentColorScheme(1);
+   	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
     connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
 }
 // ----------------------------------------------------------------------------
@@ -752,68 +813,6 @@ void KTouch::updateFileLists() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::createDefaultColorSchemes() {
-    KTouchColorScheme color;
-
-    color.m_name = i18n("Black && White");
-    color.m_frame = Qt::black;
-    for (int i=0; i<8; ++i)
-        color.m_background[i] = Qt::white;
-    color.m_text = Qt::black;
-    color.m_backgroundH = Qt::black;
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = Qt::white;
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Classic");
-    color.m_frame = Qt::black;
-    color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
-    color.m_background[1] = QColor( 14,164,239);     color.m_background[5] = QColor(158,255,155);
-    color.m_background[2] = QColor(158,255,155);     color.m_background[6] = QColor( 14,164,239);
-    color.m_background[3] = QColor(252,138,138);     color.m_background[7] = QColor(255,238,  7);
-    color.m_text = Qt::black;
-    color.m_backgroundH = Qt::darkBlue;
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = Qt::white;
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Deep Blue");
-    color.m_frame = QColor(220,220,220);
-    color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
-    color.m_background[1] = QColor( 39, 59,127);     color.m_background[5] = QColor(  8, 44,124);
-    color.m_background[2] = QColor(  4, 39, 53);     color.m_background[6] = QColor( 10, 82,158);
-    color.m_background[3] = QColor( 40, 32,121);     color.m_background[7] = QColor( 43, 60,124);
-    color.m_text = Qt::white;
-    color.m_backgroundH = QColor(125,180,255);
-    color.m_textH = Qt::darkBlue;
-    color.m_cBackground = Qt::black;
-    color.m_cText = Qt::white;
-    color.m_cBackgroundH = QColor(111,121,73);
-    color.m_cTextH = Qt::white;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Stripy");
-    color.m_frame = Qt::black;
-    for (int i=0; i<8; i=i+2)
-        color.m_background[i] = QColor( 39, 70, 127);
-	for (int i=1; i<8; i=i+2)
-        color.m_background[i] = Qt::darkGray;
-    color.m_text = Qt::black;
-    color.m_backgroundH = QColor( 39, 70, 227);
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = QColor( 39, 70, 227);
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-}
-// ----------------------------------------------------------------------------
 
 void KTouch::updateLectureActionCheck() {
 	int num = 0;

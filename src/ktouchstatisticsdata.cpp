@@ -457,8 +457,10 @@ bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( IO_ReadOnly ) ) {
+    		KIO::NetAccess::removeTempFile(target);
             return false;   // Bugger it... couldn't open it...
+		}
 		QDomDocument doc;
 		
 #ifdef COMPRESSED_XML_STATISTICS

@@ -113,7 +113,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 			{
 				// add the key the student ought to press to the wrong character stats
 				int next_key_index = m_teacherText.length() - old_student_text_len;
-				kdDebug() << "Wrong key = " << m_teacherText[next_key_index] << endl;
+//				kdDebug() << "Wrong key = " << m_teacherText[next_key_index] << endl;
 				statsAddWrongChar( m_teacherText[next_key_index] );
 			}
         }

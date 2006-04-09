@@ -20,6 +20,30 @@
 #include <qpainter.h>
 #include <qdom.h>
 
+/// This class contains information about one character on a key.
+class KTouchKeyChar {
+  public:
+	/// Position of the character on the key.
+	enum position_t {
+      TOP_LEFT,
+      TOP_RIGHT,
+      BOTTOM_LEFT,
+      BOTTOM_RIGHT
+    };
+
+	/// Constructor.
+	KTouchKeyChar() {}
+	/// Constructor.
+	KTouchKeyChar(QChar ch, position_t p, bool bold = false) :
+		m_ch(ch), m_pos(p), m_bold(bold) {}
+
+    QChar 		m_ch;		///< The character to draw.
+	position_t 	m_pos;		///< The position of the character.
+    bool  		m_bold;		///< Whether this is a bold character.
+
+	QString		m_text;		///< The text to draw of m_ch == 0.
+};
+
 /// This class represents a key on the keyboard.
 /// The primary character is the identification character for the key and will
 /// be printed top left of the key (like normal character keys). If a secondary 
@@ -39,27 +63,33 @@ class KTouchKey {
 	};
  
 	/// Default constructor
-	KTouchKey() : m_type(NORMAL), m_primaryChar(0), m_secondaryChar(0), m_x(0), m_y(0), m_w(0), m_h(0) {}
-	/// Initialisation Constructor
-	KTouchKey(keytype_t type, const QChar& primaryChar, const QChar& secondaryChar,
-		int x, int y, int w, int h)
-		: m_type(type), m_primaryChar(primaryChar), m_secondaryChar(secondaryChar), 
-		  m_x(x), m_y(y), m_w(w), m_h(h) 
-	{};
-	
+	KTouchKey() : m_type(NORMAL), m_x(0), m_y(0), m_w(0), m_h(0) {}
+	/// Convenience constructor for a key with a single character (like before).
+	KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch);
+	/// Convenience constructor for a key with a text on it (type will be OTHER).
+	KTouchKey(int x, int y, int w, int h, QString text);
+
+	/// Resizes the key (this function will be obsolete soon)
+	void resize(double scale);
+
 	/// Reads the key data from the DomElement
 	bool read(QDomNode node);
 	/// Creates a new DomElement, writes the key data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root) const;
-	
-	keytype_t	m_type;
-	QChar		m_primaryChar;		///< The primary character printed on the key.
-	QChar		m_secondaryChar;	///< The (optional) secondary character printed on the key.
-	QString		m_otherKeyText;		///< The text for 'decorative' keys.
-	int			m_x;
-	int			m_y;
-	int			m_w;
-	int			m_h;
+
+	unsigned int	m_number;		///< The number of the key.
+	keytype_t		m_type;			///< The type of the key.
+	KTouchKeyChar	m_chars[4];		///< The key character information.
+	int				m_x;			///< The x-coordinate of the top-left corner of the key.
+	int				m_y;			///< The y-coordinate of the top-left corner of the key.
+	int				m_w;			///< The width.
+	int				m_h;			///< The height.
+
+	int				m_xS;			///< The scaled x-coordinate of the top-left corner of the key.
+	int				m_yS;			///< The scaled y-coordinate of the top-left corner of the key.
+	int				m_wS;			///< The scaled width.
+	int				m_hS;			///< The scaled height.
+
 };
 // ---------------------------------------------------------------------------------------
 

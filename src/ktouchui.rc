@@ -1,9 +1,11 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="ktouch" version="1.5.1">
+<kpartgui name="ktouch" version="1.5.3">
 <MenuBar>
   <Menu name="file"><text>F&amp;ile</text>
     <Action name="file_openlecture" />
     <Action name="file_editlecture" />
+    <Separator/>
+    <Action name="file_editcolors" />
     <Action name="file_editkeyboard" />
   </Menu>
   <Menu name="training"><text>T&amp;raining</text>

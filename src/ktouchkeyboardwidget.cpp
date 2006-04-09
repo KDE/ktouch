@@ -25,6 +25,7 @@
 #include <kmessagebox.h>
 
 #include "prefs.h"
+#include "ktouchkeyconnector.h"
 
 // the margin between keyboard and widget frame
 const int MARGIN = 10;
@@ -190,13 +191,45 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 
 void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
 	if (m_hideKeyboard) return;
-    QPainter painter(this);
-    painter.translate(m_shift, MARGIN);
+    QPainter p(this);
+    p.translate(m_shift, MARGIN);
     // just print all visible keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
-        key->paint(painter);
-}
+        key->paint(p);
+/*	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
+	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+		// determine colors
+    	QColor textColor;
+		if (it->m_type == KTouchKey::NORMAL || it->m_type == KTouchKey::FINGER) {
+			if (is_next_key) {
+				// mark the key as "next"
+				p.setBrush( colorScheme.m_backgroundH );
+				p.setPen( colorScheme.m_frame );
+				textColor = colorScheme.m_textH;
+			}
+			else {
+				p.setBrush( colorScheme.m_background[m_colorIndex] );
+				p.setPen( colorScheme.m_frame );
+				textColor = colorScheme.m_text;
+			};
+		}
+		else {
+    		p.setBrush( colorScheme.m_cBackground );
+			p.setPen( colorScheme.m_cText );
+		}
 
+    	p.setPen(textColor);
+    	p.fillRect(m_xS, m_xS, m_xS, m_xS, p.brush());
+    	p.drawRect(m_xS, m_xS, m_xS, m_xS);
+
+    	p.setFont( m_font );
+    	p.drawText(it->m_xS, it->m_yS, it->m_wS, it->m_hS,
+			QPainter::AlignCenter, m_keyText);
+
+	}
+*/
+	// TODO : later copy pre-rendered and pre-scaled characters to screen
+}
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
 	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
@@ -208,17 +241,20 @@ void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
+	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+        it->resize(scale);     // resize all keys
+	}
     update();                   // and finally redraw the keyboard
 }
 
 
 void KTouchKeyboardWidget::createDefaultKeyboard() {
     // let's create a default keyboard
-    const int keySpacing = 4;
-    const int keyHeight = 20;
-    const int keyWidth = 20;
-    const int col = keyWidth+keySpacing;
-    const int row = keyHeight+keySpacing;
+    int keySpacing = 4;
+    int keyHeight = 20;
+    int keyWidth = 20;
+    int col = keyWidth+keySpacing;
+    int row = keyHeight+keySpacing;
     // first let's create the "visible" keys, that means all keys that will be displayed
     // Note: purely decorative keys get a key char code of 0!
     m_keyList.clear();
@@ -242,6 +278,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     m_keyList.append( new KTouchControlKey(8, "BackSpace", 5*col, 0, 2*keyWidth+keySpacing, keyHeight) );
     m_keyboardWidth = 7*col;
     m_keyboardHeight = 5*row;
+
     // now we need to create the connections between the characters that can be typed and the
     // keys that need to be displayed on the keyboard
     // The arguments to the constructor are: keychar, targetkey, fingerkey, controlkey
@@ -266,6 +303,57 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     m_connectorList.append( KTouchKeyConnection( 13,  13, '+', 0) );
     updateColours();
     m_currentLayout="number.keyboard";
+
+	// create keyboard geometry for new keyboard data
+
+    int sp = 10;
+    int h = 50;
+    int w = 50;
+    col = w+sp;
+    row = h+sp;
+
+	m_keys.clear();
+	m_keys.append( KTouchKey(                           0,     0, w, h, QString("Num")) );		// 0
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col,     0, w, h, '/') );			// 1
+	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col,     0, w, h, '*') );			// 2
+	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	3*col,     0, w, h, '-') );			// 3
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0,   row, w, h, '7') );			// 4
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col,   row, w, h, '8') );			// 5
+	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col,   row, w, h, '9') );			// 6
+	m_keys.append( KTouchKey(KTouchKey::FINGER,     	0, 2*row, w, h, '4') );			// 7  ***
+	m_keys.append( KTouchKey(KTouchKey::FINGER,   	  col, 2*row, w, h, '5') );			// 8  ***
+	m_keys.append( KTouchKey(KTouchKey::FINGER, 	2*col, 2*row, w, h, '6') );			// 9  ***
+	m_keys.append( KTouchKey(KTouchKey::FINGER, 	3*col,   row, w, 2*h+sp, '+') ); 	// 10 ***
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0, 3*row, w, h, '1') );			// 11
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col, 3*row, w, h, '2') );			// 12
+	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col, 3*row, w, h, '3') );			// 13
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0, 4*row, 2*w+sp, h, '0') );	// 14
+	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	2*col, 4*row, w, h, '.') );			// 15
+	m_keys.append( KTouchKey(KTouchKey::ENTER,  	3*col, 3*row, w, 2*h+sp, 0) ); 		// 16
+	m_keys.append( KTouchKey(KTouchKey::BACKSPACE,  5*col, 0, 2*w+sp, h, 0) ); 			// 17
+	// number the keys for reference
+	for (unsigned int i=0; i<m_keys.size(); ++i)
+		m_keys[i].m_number = i;
+	// create key connections
+	m_keyConnections.clear();
+	// KTouchKeyConnector(char, target, finger, modifier)
+	m_keyConnections.append( KTouchKeyConnector('/',  1,  8, 0) );
+	m_keyConnections.append( KTouchKeyConnector('*',  2,  9, 0) );
+	m_keyConnections.append( KTouchKeyConnector('-',  3, 10, 0) );
+	m_keyConnections.append( KTouchKeyConnector('7',  4,  7, 0) );
+	m_keyConnections.append( KTouchKeyConnector('8',  5,  8, 0) );
+	m_keyConnections.append( KTouchKeyConnector('9',  6,  9, 0) );
+	m_keyConnections.append( KTouchKeyConnector('4',  7,  7, 0) ); // ***
+	m_keyConnections.append( KTouchKeyConnector('5',  8,  8, 0) ); // ***
+	m_keyConnections.append( KTouchKeyConnector('6',  9,  9, 0) ); // ***
+	m_keyConnections.append( KTouchKeyConnector('+', 10, 10, 0) ); // ***
+	m_keyConnections.append( KTouchKeyConnector('1', 11,  7, 0) );
+	m_keyConnections.append( KTouchKeyConnector('2', 12,  8, 0) );
+	m_keyConnections.append( KTouchKeyConnector('3', 13,  9, 0) );
+	m_keyConnections.append( KTouchKeyConnector('0', 14,  7, 0) );
+	m_keyConnections.append( KTouchKeyConnector('.', 15,  9, 0) );
+	m_keyConnections.append( KTouchKeyConnector(QChar(13), 16, 10, 0) );
+	m_keyConnections.append( KTouchKeyConnector(QChar(8), 17, 0, 0) );
 }
 
 
@@ -335,7 +423,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
 
 void KTouchKeyboardWidget::updateColours() {
-    // loop over all key connections
+    // old functionality : loop over all key connections
     for (QValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
         QChar fingerChar = (*it).m_fingerKeyChar;
         if (fingerChar == QChar(0)) continue;
@@ -367,5 +455,24 @@ void KTouchKeyboardWidget::updateColours() {
             }
         }
     }
+	// new functionality
+	m_keyMap.clear();
+	m_colorMap.clear();
+	for (unsigned int i=0; i<m_keys.size(); ++i)
+		m_keyMap[i] = -1;
+	int c_index = 0;
+    for (QValueVector<KTouchKeyConnector>::iterator it = m_keyConnections.begin();
+		it!=m_keyConnections.end(); ++it)
+	{
+		if (it->m_targetKeyIndex == -1) continue;
+		int n = it->m_targetKeyIndex;
+		switch (m_keys[n].m_type) {
+			case KTouchKey::NORMAL : m_keyMap[n] = it->m_fingerKeyIndex; break;
+			case KTouchKey::FINGER : m_keyMap[n] = it->m_fingerKeyIndex; 
+									 m_colorMap[n] = c_index++;
+									 c_index %= 8; break;
+			default : ;
+		}
+	}
 }
 

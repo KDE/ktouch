@@ -14,8 +14,38 @@
 #include <kdebug.h>
 #include <utility>  // for std::min
 
+KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
+	: m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
+{
+	m_chars[0].m_ch = ch;
+	m_chars[0].m_bold = true;
+	m_chars[0].m_pos = KTouchKeyChar::TOP_LEFT;
+}
+// ----------------------------------------------------------------------------
+
+KTouchKey::KTouchKey(int x, int y, int w, int h, QString text) :
+	m_x(x), m_y(y), m_w(w), m_h(h)
+{
+	m_type = OTHER;
+	m_chars[0].m_ch = 0;
+	m_chars[0].m_bold = true;
+	m_chars[0].m_pos = KTouchKeyChar::TOP_LEFT;
+	m_chars[0].m_text = text;
+}
+// ----------------------------------------------------------------------------
+
+void KTouchKey::resize(double scale) {
+    m_xS = static_cast<int>(scale*m_x);
+    m_yS = static_cast<int>(scale*m_y);
+    m_wS = static_cast<int>(scale*m_w);
+    m_hS = static_cast<int>(scale*m_h);
+}
+// -----------------------------------------------------------------------------
+
+
 // Reads the key data from the DomElement
 bool KTouchKey::read(QDomNode node) {
+/*
 	if (node.isNull()) 
 		return false;	// TODO : Error message
 	QString primaryCharText = node.firstChild().nodeValue();
@@ -72,11 +102,14 @@ bool KTouchKey::read(QDomNode node) {
 	kdDebug() << "H:" << m_h << " W:" << m_w << " X:" << m_x << " Y:" << m_y 
 	          << " Type:" << m_type << " SecondaryChar:" << m_secondaryChar 
 			  << "' PrimaryChar:" << m_primaryChar << "'" << endl;
+*/
 	return true;
 }
+// ----------------------------------------------------------------------------
 
 // Writes the key data into the DomElement
 void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
+/*
 	QDomElement element = doc.createElement("KeyDefinition");
 	switch (m_type) {
 		case NORMAL     : element.setAttribute("Type", "NORMAL"); break;
@@ -100,5 +133,7 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 	element.setAttribute("Width", m_w);
 	element.setAttribute("Height", m_h);
 	root.appendChild(element);
+*/
 }
+// ----------------------------------------------------------------------------
 

@@ -1,0 +1,827 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>KTouchColorEditorDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KTouchColorEditorDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>560</width>
+            <height>597</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Color Scheme Editor</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox2</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>1</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="title">
+                <string>User defined color schemes</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QListBox" row="0" column="0" rowspan="3" colspan="1">
+                    <property name="name">
+                        <cstring>schemeListBox</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>3</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                </widget>
+                <widget class="KPushButton" row="0" column="1">
+                    <property name="name">
+                        <cstring>addBtn</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Add</string>
+                    </property>
+                </widget>
+                <widget class="KPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>removeBtn</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>Remove</string>
+                    </property>
+                </widget>
+                <spacer row="2" column="1">
+                    <property name="name">
+                        <cstring>spacer13</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                </spacer>
+            </grid>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>editGroupBox</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>3</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="title">
+                <string>Edit color scheme:</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout18</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>nameL</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Name of color scheme:</string>
+                            </property>
+                        </widget>
+                        <widget class="KLineEdit">
+                            <property name="name">
+                                <cstring>nameEdit</cstring>
+                            </property>
+                        </widget>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>updateBtn</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Store data</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+S</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>groupBox3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="title">
+                        <string>Slide line colors</string>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout14</cstring>
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="KColorButton" row="1" column="1">
+                                    <property name="name">
+                                        <cstring>teacherBackBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="1" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Teacher background</string>
+                                    </property>
+                                </widget>
+                                <spacer row="2" column="0">
+                                    <property name="name">
+                                        <cstring>spacer8</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="KColorButton" row="0" column="1">
+                                    <property name="name">
+                                        <cstring>teacherTextBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Teacher text</string>
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer11</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Fixed</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>16</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout10</cstring>
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel" row="2" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3_5</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Student text on error</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="1" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3_4</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Student background</string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton" row="1" column="1">
+                                    <property name="name">
+                                        <cstring>studentBackBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton" row="3" column="1">
+                                    <property name="name">
+                                        <cstring>studentErrorBackBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3_3</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Student text</string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton" row="0" column="1">
+                                    <property name="name">
+                                        <cstring>studentTextBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton" row="2" column="1">
+                                    <property name="name">
+                                        <cstring>studentErrorTextBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel3_6</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Student background on error</string>
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer9</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>30</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>keyboardColorsGroup</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>3</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="title">
+                        <string>Keyboard colors</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout24</cstring>
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <spacer row="0" column="1">
+                                    <property name="name">
+                                        <cstring>spacer11_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Fixed</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>16</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <spacer row="0" column="3">
+                                    <property name="name">
+                                        <cstring>spacer9_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <spacer row="1" column="2">
+                                    <property name="name">
+                                        <cstring>spacer19</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>16</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLayoutWidget" row="0" column="0" rowspan="2" colspan="1">
+                                    <property name="name">
+                                        <cstring>layout22</cstring>
+                                    </property>
+                                    <grid>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLabel" row="4" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_9</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Highlighted text color</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="3" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_8</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Text color</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="4" column="1">
+                                            <property name="name">
+                                                <cstring>keyTextHighBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="0" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_7</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Key frame</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="2" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel2</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Normal key colors:</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="0" column="1">
+                                            <property name="name">
+                                                <cstring>keyFrameBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="3" column="1">
+                                            <property name="name">
+                                                <cstring>keyTextBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="5" column="1">
+                                            <property name="name">
+                                                <cstring>keyBackHighBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="5" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_10</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Highlighted background</string>
+                                            </property>
+                                        </widget>
+                                        <spacer row="1" column="0">
+                                            <property name="name">
+                                                <cstring>spacer16</cstring>
+                                            </property>
+                                            <property name="orientation">
+                                                <enum>Vertical</enum>
+                                            </property>
+                                            <property name="sizeType">
+                                                <enum>Expanding</enum>
+                                            </property>
+                                            <property name="sizeHint">
+                                                <size>
+                                                    <width>20</width>
+                                                    <height>16</height>
+                                                </size>
+                                            </property>
+                                        </spacer>
+                                    </grid>
+                                </widget>
+                                <widget class="QLayoutWidget" row="0" column="2">
+                                    <property name="name">
+                                        <cstring>layout20</cstring>
+                                    </property>
+                                    <grid>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QLabel" row="1" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_7_2</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Text color</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="2" column="1">
+                                            <property name="name">
+                                                <cstring>cBackgroundBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="3" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_9_2</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Highlighted text color</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="4" column="1">
+                                            <property name="name">
+                                                <cstring>cBackHighBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="4" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_10_2</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Highlighted background</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="1" column="1">
+                                            <property name="name">
+                                                <cstring>cTextBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="KColorButton" row="3" column="1">
+                                            <property name="name">
+                                                <cstring>cTextHighBtn</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string></string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
+                                            <property name="name">
+                                                <cstring>textLabel1</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Modifier/other keys:</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" row="2" column="0">
+                                            <property name="name">
+                                                <cstring>textLabel3_8_2</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Background</string>
+                                            </property>
+                                        </widget>
+                                    </grid>
+                                </widget>
+                            </grid>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel3_11</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Background colors for normal keys:</string>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout28</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back1Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back2Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back3Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back4Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back5Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back6Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back7Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                                <widget class="KColorButton">
+                                    <property name="name">
+                                        <cstring>back8Btn</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string></string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>addBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchColorEditorDlg</receiver>
+        <slot>addBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>removeBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchColorEditorDlg</receiver>
+        <slot>removeBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>schemeListBox</sender>
+        <signal>currentChanged(QListBoxItem*)</signal>
+        <receiver>KTouchColorEditorDlg</receiver>
+        <slot>colorSchemeChanged(QListBoxItem*)</slot>
+    </connection>
+    <connection>
+        <sender>updateBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KTouchColorEditorDlg</receiver>
+        <slot>updateClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>closeQuery()</slot>
+    <slot>addBtnClicked()</slot>
+    <slot>removeBtnClicked()</slot>
+    <slot>updateClicked()</slot>
+    <slot>colorSchemeChanged(QListBoxItem * item)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+    <includehint>kcolorbutton.h</includehint>
+</includehints>
+</UI>

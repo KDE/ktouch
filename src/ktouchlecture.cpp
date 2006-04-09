@@ -30,8 +30,10 @@ bool KTouchLecture::load(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( IO_ReadOnly ) ) {
+    		KIO::NetAccess::removeTempFile(target);
             return false;   // Bugger it... couldn't open it...
+		}
         QTextStream in( &infile );
         result = readLecture(in);
     };
@@ -48,8 +50,10 @@ bool KTouchLecture::loadXML(QWidget * window, const KURL& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( IO_ReadOnly ) )
+        if ( !infile.open( IO_ReadOnly ) ) {
+		    KIO::NetAccess::removeTempFile(target);
             return false;   // Bugger it... couldn't open it...
+		}
 		QDomDocument doc;
 		doc.setContent( &infile );
         result = readLecture(doc);

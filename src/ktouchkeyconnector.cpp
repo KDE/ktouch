@@ -35,7 +35,7 @@ bool KTouchKeyConnector::read(QDomNode node) {
 
 // Creates a new DomElement, writes the key connector data into it and appends it to the root object.
 void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
-	QDomElement element = doc.createElement("KeyConnector");
+/*	QDomElement element = doc.createElement("KeyConnector");
 	QDomText textnode = doc.createTextNode(QString(m_keyChar));
 	element.appendChild(textnode);
 	element.setAttribute("TargetKeyChar", QString(m_targetKeyChar));
@@ -44,9 +44,6 @@ void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
 	if (!m_controlKeyId.isEmpty())
 		element.setAttribute("ControlKeyId", m_controlKeyId);
 	root.appendChild(element);
-}
-
-void KTouchKeyConnector::updateConnections(const QValueVector<KTouchKey>& keyvector) {
-	
+*/
 }
 

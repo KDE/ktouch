@@ -18,7 +18,12 @@
 #endif
 
 #include <qwidget.h>
+#include <qvaluevector.h>
+#include <qmap.h>
 #include "ktouchkeys.h"
+
+#include "ktouchkey.h"  // new class
+#include "ktouchkeyconnector.h" // new class
 
 class KURL;
 
@@ -69,8 +74,15 @@ class KTouchKeyboardWidget : public QWidget {
     /// Assigns the background colours to the normal keys, which have a finger key assigned.
     void updateColours();
 
-    QPtrList<KTouchBaseKey>          m_keyList;          ///< The pointer list with base class pointers to the keys.
-    QValueList<KTouchKeyConnection>  m_connectorList;    ///< Contains the character - key associations.
+	// *** new data storage classes ***
+    QValueVector<KTouchKey>          	m_keys;        		///< The geometrical key data.
+    QValueVector<KTouchKeyConnector>	m_keyConnections;	///< Contains the character - key associations.
+	QMap<unsigned int, int> 			m_keyMap;			///< Links target keys with finger keys: m_colorMap[target_key] = finger_key
+	QMap<unsigned int, unsigned int>	m_colorMap;			///< Links finger keys with color indices: m_colorMapFinger[finger_key] = color_index in color scheme
+
+	// *** old data storage classes ***
+    QPtrList<KTouchBaseKey>          m_keyList;     	///< The pointer list with base class pointers to the keys.
+    QValueList<KTouchKeyConnection>  m_connectorList;	///< Contains the character - key associations.
 
     int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
