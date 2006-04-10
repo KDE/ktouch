@@ -307,7 +307,7 @@ void KTouchLectureEditor::transfer_from_dialog() {
 
 void KTouchLectureEditor::showCurrentLevel() {
     if (m_level >= m_lecture.m_lectureData.size())  return;  // should not happen, but why running a risk here...
-    levelLabel->setText(i18n("Data of Level %1").arg(m_level+1) );
+    levelLabel->setText(i18n("Data of Level %1", m_level+1) );
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;

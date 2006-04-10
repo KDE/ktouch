@@ -51,12 +51,12 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
-            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ").arg(url.url()) + msg;
+            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ", url.url()) + msg;
         return result;
     }
     else {
         if (errorMsg!=NULL)
-            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.").arg(url.url());
+            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.", url.url());
         return false;
     }
 }
@@ -318,7 +318,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             m_connectorList.append( KTouchKeyConnection(keyAscII, targetChar, fingerChar, controlChar) );
         }
         else {
-            errorMsg = i18n("Missing key type in line '%1'.").arg(line);
+            errorMsg = i18n("Missing key type in line '%1'.", line);
             return false;
         }
         // calculate the maximum extent of the keyboard on the fly...

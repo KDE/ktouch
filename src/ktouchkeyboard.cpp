@@ -288,7 +288,7 @@ void KTouchKeyboard::createDefault() {
     // Note: purely decorative keys get a key character code of 0!
     m_keys.clear();
 	m_keys.push_back( KTouchKey(KTouchKey::OTHER,    0, 0, 2*col+      0,     0, keyWidth, keyHeight) );
-	m_keys.back().m_otherKeyText = i18n("Num-lock", "Num");
+	m_keys.back().m_otherKeyText = i18nc("Num-lock", "Num");
 	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '/', 0, 2*col+    col,     0, keyWidth, keyHeight) );
 	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '*', 0, 2*col+  2*col,     0, keyWidth, keyHeight) );
 	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '-', 0, 2*col+  3*col,     0, keyWidth, keyHeight) );

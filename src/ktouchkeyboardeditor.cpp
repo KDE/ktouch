@@ -169,7 +169,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 		min_y = std::min<unsigned int>(min_y, it->m_y);
 		max_y = std::max<unsigned int>(max_y, it->m_y+it->m_h);
 	}
-	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2").arg(max_x - min_x).arg(max_y - min_y) );
+	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2", max_x - min_x, max_y - min_y) );
 }
 // -----------------------------------------------------------------------------
     

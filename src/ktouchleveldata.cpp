@@ -58,7 +58,7 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
 
 bool KTouchLevelData::readLevel(QDomNode in) {
 	QDomNode newChars = in.namedItem("NewCharacters");
-	if (newChars.isNull())  m_newChars = i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
+	if (newChars.isNull())  m_newChars = i18nc("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
 	else					m_newChars = newChars.firstChild().nodeValue();
 	QDomNode levelComment = in.namedItem("LevelComment");
 	if (!levelComment.isNull())  m_comment = levelComment.firstChild().nodeValue();
@@ -97,7 +97,7 @@ void KTouchLevelData::writeLevel(QDomDocument& doc, QDomElement& root) const {
 	QDomElement newchars = doc.createElement("NewCharacters");
 	QDomText newcharsText;
 	if (m_newChars.isEmpty())
-		newcharsText = doc.createTextNode(i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz"));
+		newcharsText = doc.createTextNode(i18nc("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz"));
 	else
 		newcharsText = doc.createTextNode(m_newChars);
 	newchars.appendChild(newcharsText);

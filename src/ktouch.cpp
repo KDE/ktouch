@@ -371,10 +371,10 @@ void KTouch::changeStatusbarMessage(const QString& text) {
 void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 	unsigned int session_correct, unsigned int session_total, unsigned int session_words) 
 {
-	statusBar()->changeItem(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3")
-			.arg(level_correct).arg(level_total).arg(level_words), 1);
-	statusBar()->changeItem(i18n( "Session: Correct/Total chars: %1/%2  Words: %3")
-			.arg(session_correct).arg(session_total).arg(session_words), 2);
+	statusBar()->changeItem(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3",
+			 level_correct, level_total, level_words), 1);
+	statusBar()->changeItem(i18n( "Session: Correct/Total chars: %1/%2  Words: %3",
+			 session_correct, session_total, session_words), 2);
 }
 // ----------------------------------------------------------------------------
 
@@ -401,7 +401,7 @@ void KTouch::changeLecture(int num) {
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
     if (!l.loadXML(this, KUrl::fromPathOrURL(fileName))) {
-        KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.").arg(fileName) );
+        KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.", fileName) );
     	m_defaultLectureAction->setCurrentItem(-1);
 	}
 	else {
