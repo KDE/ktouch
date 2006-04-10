@@ -10,26 +10,15 @@
 # 000 , E #
 #######################################################
 #
-# FingerKeys
-#
-#		ASCII	Text	X	Y	Width	Height
 FingerKey	52	4	00	20
 FingerKey	53	5	10	20
 FingerKey	54	6	20	20
 FingerKey	43	+	30	10	8	18
 FingerKey	48	0	00	40	18	8
 
-#
-# ControlKeys: Num, Enter
-#
-#		ASCII	Text	X	Y	Width	Height
 ControlKey	00	Num	00	00	10	10
 ControlKey	13	Enter	30	30	10	20
 
-#
-# NormalKeys
-#
-#		ASCII	Text	X	Y	FingerKey
 NormalKey	47	/	10	00	53
 NormalKey	42	*	20	00	54
 NormalKey	45	-	30	00	43

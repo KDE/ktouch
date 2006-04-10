@@ -1,9 +1,11 @@
 ####################################################
 #    KTouch
 #    Keybord layout file for Danish kaybord
-####################################################
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
 #
-#			Assci	KeyText	x		y
+#    Refer to file en.keyboard for details.
+####################################################
 #
 FingerKey	97		A		18  	20
 FingerKey	115		S		28  	20
@@ -14,8 +16,6 @@ FingerKey	107		K		88  	20
 FingerKey	108		L		98  	20
 FingerKey	230		Æ		108 	20
 #
-#			Assci	KeyText		x		y		Width Height
-#
 ControlKey	260		Tab			0		10		15		10
 ControlKey	258		Shift		123		30		27		10
 ControlKey	264		AltGr			120		40		15		10
@@ -25,11 +25,9 @@ ControlKey	262		Ctrl		0		40		15		10
 ControlKey	32		(Mellemrum)		30		40		90		10
 ControlKey	257		Shift		0		30		13		10
 ControlKey	259		CapsLock		0		20		18		10
-ControlKey   8 		BackSpace			130		0		20		10
-ControlKey	138		Enter		138		10		12	20	10
+ControlKey   	8 		BackSpace			130		0		20		10
+ControlKey	13		Enter		138		10		12	20	10
 
-#			Assci	KeyText		x	y	FingerKey
-#
 NormalKey	124		½			0	0	97
 NormalKey	49		1			10	0	97
 NormalKey	50		2			20	0	97
@@ -74,8 +72,6 @@ NormalKey	44		,			93	30	107
 NormalKey	46		.			103	30	108
 NormalKey	47		-			113	30	230
 #
-#
-#			Ascii	Target	Finger	Contorll
 HiddenKey	65		97		97		258 	   #A
 HiddenKey	66		98		102		258 	   #B
 HiddenKey	67		99		100		258 	   #C
@@ -102,7 +98,7 @@ HiddenKey	87		119		115		258 	   #W
 HiddenKey	88		120		115		258 	   #X
 HiddenKey	89		121		106		258 	   #Y
 HiddenKey	90		122		97		258 	   #Z
-
+#
 HiddenKey	216		39		230		258 	   #Æ
 HiddenKey	198		230		230		258 	   #Ø
 HiddenKey	197		91		230		258 	   #Å

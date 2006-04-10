@@ -2,9 +2,11 @@
 #    KTouch
 #    Keybord layout file for german kaybord layout
 #    Adaptiert für schweizedeutsche Tastatur 17.9.04 Hansueli Eggimann
-####################################################
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
 #
-#		Finger	KeyText	x	y
+#    Refer to file en.keyboard for details.
+####################################################
 #
 FingerKey  	97	A	18	20
 FingerKey  	115	S	28	20
@@ -14,8 +16,6 @@ FingerKey  	106	J	78	20
 FingerKey  	107	K	88	20
 FingerKey  	108	L	98	20
 FingerKey  	246	Ö	108	20
-#
-#		Assci	KeyText		x	y	Width Hight
 #
 ControlKey	260	Tab		0	10	15    10
 ControlKey	13	Enter		138	10	12    20
@@ -28,8 +28,6 @@ ControlKey	32	Leertaste	30	40	90    10
 ControlKey	257	Shift		0	30	13    10
 ControlKey	259	CapsLock	0	20	18    10
 ControlKey	8	BackSpace	130	0	20    10
-
-#		Assci	KeyText	x	y	FingerKey
 #
 NormalKey 	167	§	0	0	97
 NormalKey 	49	1	10	0	97
@@ -76,8 +74,6 @@ NormalKey	44	,	93	30	107
 NormalKey	46	.	103	30	108
 NormalKey	45	-	113	30	246
 #
-#
-#		Ascii	Target	Finger	Contorll
 HiddenKey	65	97	97	258 		#A
 HiddenKey	66	98	102	258 		#B
 HiddenKey	67	99	100	258 		#C

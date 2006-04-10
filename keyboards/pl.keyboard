@@ -2,14 +2,12 @@
 #    KTouch
 #    Keybord layout file for Polish (utf-8)
 #    Mikolaj Machowski
-#    Code=UTF-8
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
+#
+#    Refer to file en.keyboard for details.
 ####################################################
 #
-#
-#  FingerKey: This class represents the keys where
-#  your fingers shold rest between typing (aka home row).
-#
-#			Assci	KeyText x	y
 FingerKey	97		A		18	20
 FingerKey	115		S		28	20
 FingerKey	100		D		38	20
@@ -18,13 +16,6 @@ FingerKey	106		J		78	20
 FingerKey	107		K		88	20
 FingerKey	108		L		98	20
 FingerKey	59		;		108	20
-#
-#
-#  ControlKey: This class will represent all the
-#  control keys that you are using. Theys keys
-#  will be used later when you want to use uppercase.
-#
-#			Assci	KeyText		x		y		Width	Height
 #
 ControlKey	260		Tab			0		10		15		10
 ControlKey	13		Enter		128		20		22		10
@@ -36,17 +27,7 @@ ControlKey	262		Ctrl		0		40		15		10
 ControlKey	32		Space		30		40		90		10
 ControlKey	258		Shift		0		30		23		10
 ControlKey	259		CapsLock	0		20		18		10
-NormalKey	8 		BackSpace	140		0		10      10
-#
-#
-#  NormalKey: This class represent all the
-#  normal keys where you don't need to press
-#  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
-#  letters. For this class you have to indicate
-#  which finger key you are going to use.
-#
-#			Assci	KeyText	x		y		FingerKey
+ControlKey	8 		BackSpace	140		0		10      10
 #
 NormalKey	96		`		0		0		97
 NormalKey	49		1		10		0		97
@@ -90,14 +71,6 @@ NormalKey	109		M		83		30		106
 NormalKey	44		,		93		30		107
 NormalKey	46		.		103		30		108
 NormalKey	47		/		113		30		59
-#
-#
-#  HiddenKey: This is all the keys that
-#  you cant see. That means that you have
-#  to use an controll key to get them. Basically
-#  this is all the uppercase letters plus some punctuation
-#
-#			Ascii	Target	Finger	Control
 #
 HiddenKey	65		97		97		257 #A
 HiddenKey	66		98		102		257 #B

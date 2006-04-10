@@ -5,6 +5,11 @@
              color scheme includes now keyboard and slide line
              colors, new option to have common slide line colors
              in configuration (request: #90548)
+  * Bugfix:  several keyboard layouts were wrong (showing the
+             wrong colors and were therefore misleading), a few
+             have been already fixed and the others temporarily 
+             removed from the install section of the make files
+             (bug: #119189)
 
 2006-04-08 Andreas Nicolai <andreas.nicolai@gmx.net>
   * New version: 1.5.3

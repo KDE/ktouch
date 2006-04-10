@@ -1,13 +1,12 @@
 ####################################################
 #    KTouch
 #    Keybord layout file
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
+#
+#    Refer to file en.keyboard for details.
 ####################################################
 #
-#
-#  FingerKey: This class represents the keys where
-#  your fingers shold rest between typing.
-#
-#					 Assci	KeyText  x		 y
 FingerKey  117		U				 18    20
 FingerKey  105		I				 28    20
 FingerKey  97		A				 38    20
@@ -16,13 +15,6 @@ FingerKey  110		N				 78    20
 FingerKey  114		R				 88    20
 FingerKey  116		T				 98    20
 FingerKey  100		D				 108   20
-#          
-#          
-#  ControllKey: This class will represent all the
-#  controll keys that you are using. Theys keys
-#  will be used later when you want to use uppercase.
-#          
-#					Assci	KeyText		x		y		Width  Height
 #
 ControlKey	260		Tab			0		10	15     10
 ControlKey	13		Enter		138	10	12     20
@@ -34,17 +26,7 @@ ControlKey	262		Ctrl		0		40	15     10
 ControlKey	32		Space		30	40	90     10
 ControlKey	258		Shift		0		30	13     10
 ControlKey	259		CapsLock	0		20	18     10
-ControlKey  8 		BackSpace	130	0	20 10
-#
-#
-#  NormalKey: This class represent all the
-#  normal keys where you don't need to press
-#  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
-#  letters. For this class you have to indicate
-#  withc finger key you are going to use.
-#
-#					Assci	KeyText		x		y		FingerKey
+ControlKey  	8 		BackSpace	130	0	20 10
 #
 NormalKey 94		^					0	0		117
 NormalKey 49		1					10	0		117
@@ -89,14 +71,6 @@ NormalKey	109		M					83	30	110
 NormalKey	44		,					93	30	114
 NormalKey	46		.					103	30	116
 NormalKey	120		X					113	30	100
-#
-#
-#  HiddenKey: This is all the keys that
-#  you cant see. That means that you have
-#  to use an control key to get them. Basically
-#  this is all the uppercase letters.
-#
-#					Ascii	Target	Finger	Control
 #
 HiddenKey	65		97			97			257 #A
 HiddenKey	66		98			110			257 #B

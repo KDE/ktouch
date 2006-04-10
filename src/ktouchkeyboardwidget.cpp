@@ -14,6 +14,7 @@
 #include "ktouchkeyboardwidget.moc"
 
 #include <algorithm>
+#include <set>
 
 #include <qfile.h>
 
@@ -30,6 +31,7 @@
 // the margin between keyboard and widget frame
 const int MARGIN = 10;
 
+QMap<QChar, int>	 			KTouchKeyboardWidget::m_keyCharMap;
 // --------------------------------------------------------------------------
 
 
@@ -196,7 +198,10 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
     // just print all visible keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->paint(p);
-/*	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
+
+/*	// TODO : later
+
+	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
 	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
 		// determine colors
     	QColor textColor;
@@ -370,6 +375,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
     m_connectorList.clear();    // clear the connections
     m_keyboardWidth=0;
     m_keyboardHeight=0;
+	std::set<QChar>  keys;
     // now loop until end of file is reached
     do {
         // skip all empty lines or lines containing a comment (starting with '#')
@@ -391,11 +397,13 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
                 w=h=8; // default values for old keyboard files
             m_keyList.append( new KTouchFingerKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
+// 			kdDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
             m_keyList.append( new KTouchControlKey(keyAscII, keyText, x+1, y+1, w-2, h-2) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
+// 			kdDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText << endl;
         }
         else if (keyType=="NormalKey") {
             int fingerCharCode;
@@ -404,30 +412,65 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             // retrieve the finger key with the matching char
             m_keyList.append( new KTouchNormalKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, fingerCharCode, 0) );
+// 			kdDebug() << "read : N : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
             m_connectorList.append( KTouchKeyConnection(keyAscII, targetChar, fingerChar, controlChar) );
+//			kdDebug() << "read : H : unicode = " << keyAscII << " char = " << QChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
+			
         }
         else {
             errorMsg = i18n("Missing key type in line '%1'.").arg(line);
             return false;
         }
+		if (keys.find(keyAscII)!=keys.end()) {
+			kdDebug() << "WARNING: Duplicate entry for char '"+keyText+"' with Unicode " << keyAscII << endl;
+		}
+		else
+			keys.insert(keyAscII);
+
+		keys.insert(keyAscII);
+
+
         // calculate the maximum extent of the keyboard on the fly...
         m_keyboardWidth = std::max(m_keyboardWidth, x+w);
         m_keyboardHeight = std::max(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
+//	kdDebug() << "showing all unicode numbers in this file" << endl;
+/*	for (std::set<QChar>::iterator it = keys.begin(); it != keys.end(); ++it)
+		kdDebug() << *it << endl;
+*/
+//	kdDebug() << "num chars = " << keys.size() << endl;
+//	kdDebug() << "num key connections = " << m_connectorList.size() << endl;
+
     updateColours();
     return (!m_keyList.isEmpty());  // empty file means error
 }
 
 
 void KTouchKeyboardWidget::updateColours() {
+//	kdDebug() << "KTouchKeyboardWidget::updateColours()" << endl;
     // old functionality : loop over all key connections
+	m_keyCharMap.clear();
+	unsigned int counter = 0;
     for (QValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
+		// store finger and target characters
         QChar fingerChar = (*it).m_fingerKeyChar;
-        if (fingerChar == QChar(0)) continue;
-        QChar targetChar = (*it).m_targetKeyChar;
+        QChar targetChar = (*it).m_targetKeyChar; // this is the _base_ character of the key that needs to be highlighted
+        QChar ch = (*it).m_keyChar;
+
+/*		kdDebug() << "Key #"<<++counter<<": " << ch << "(" << ch.unicode() << ") " 
+				  << "target = " << targetChar << "(" << targetChar.unicode() << ") " 
+				  << "finger = " << fingerChar << "(" << fingerChar.unicode() << ")" << endl;
+*/
+		m_keyCharMap[ch] = -1;
+
+        if (fingerChar == QChar(0)) {
+//			kdDebug() << "skipped char = " << targetChar << endl;
+			continue; // skips keys that don't have finger keys assigned
+		}
+
         KTouchBaseKey * self=NULL;
         KTouchBaseKey * colorSource=NULL;
         // loop over all keys to find the key pointers
@@ -435,26 +478,36 @@ void KTouchKeyboardWidget::updateColours() {
             if (key->m_keyChar==targetChar) self=key;
             else if (key->m_keyChar==fingerChar) colorSource=key;
         }
+		// ok, by now we should have found a finger and target char pointer
         if (self && colorSource) {
-            if (self->type()!=KTouchBaseKey::NORMAL_KEY)
-                continue;
+// 			kdDebug() << "Key " << ++counter << " keychar = " << ch << " target = " << targetChar << "  finger = " << fingerChar << endl;
+			// skip target keys that are actually control, finger or hidden keys
+            if (self->type()!=KTouchBaseKey::NORMAL_KEY)  continue;
+			// try to downcast to get a normal key pointer
             KTouchNormalKey *nk = dynamic_cast<KTouchNormalKey*>(self);
+			// skip if we couldn't downcast
+			if (!nk) {
+				kdDebug() << "Couldn't downcast to normal key for targer char = " << targetChar << endl;
+				continue;
+			}
+			// if our color source is not a valid finger key, skip with a warning
             if (colorSource->type()!=KTouchBaseKey::FINGER_KEY) {
                 kdDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
                           << "' is not a finger key!" << endl;
-                if (nk) {
-                    nk->m_colorIndex = 0;
-                }
-                continue;
-            }
-            if (nk) {
-                KTouchFingerKey *fk = dynamic_cast<KTouchFingerKey*>(colorSource);
-                if (fk) {
-                    nk->m_colorIndex = fk->m_colorIndex;
-                }
+				continue;
+			}
+			// finally store the color code
+            KTouchFingerKey *fk = dynamic_cast<KTouchFingerKey*>(colorSource);
+            if (fk) {
+				nk->m_colorIndex = fk->m_colorIndex;
+				m_keyCharMap[ch] = fk->m_colorIndex;
+//				kdDebug() << "char = " << targetChar << " index = " << fk->m_colorIndex << endl;
             }
         }
     }
+//	kdDebug() << "Colormap has " << m_keyCharMap.count() << " entries" << endl;
+
+/*
 	// new functionality
 	m_keyMap.clear();
 	m_colorMap.clear();
@@ -474,5 +527,6 @@ void KTouchKeyboardWidget::updateColours() {
 			default : ;
 		}
 	}
+*/
 }
 

@@ -97,6 +97,8 @@ void KTouchSlideLine::applyPreferences() {
 	// set font face of we override the lecture font
 	if (Prefs::overrideLectureFont())
     	setFont(Prefs::font());
+	else
+		updateSlidingLines();
 		
 	// Note: The function setFont() in turn calls resizeFont() and through that
 	//       the whole widget gets updated.

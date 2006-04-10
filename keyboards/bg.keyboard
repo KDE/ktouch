@@ -1,13 +1,12 @@
 ####################################################
 #    KTouch
 #    Keybord layout file
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
+#
+#    Refer to file en.keyboard for details.
 ####################################################
 #
-#
-#  FingerKey: This class represents the keys where
-#  your fingers shold rest between typing.
-#
-#			Assci	KeyText x	y
 FingerKey	97		Ь		18	20
 FingerKey	115		Я		28	20
 FingerKey	100		А		38	20
@@ -16,13 +15,6 @@ FingerKey	106		Т		78	20
 FingerKey	107		Н		88	20
 FingerKey	108		В		98	20
 FingerKey	59		М		108	20
-#
-#
-#  ControlKey: This class will represent all the
-#  control keys that you are using. Theys keys
-#  will be used later when you want to use uppercase.
-#
-#			Assci	KeyText		x		y		Width	Height
 #
 ControlKey	260		Tab			0		10		15		10
 ControlKey	13		Enter		128		20		22		10
@@ -34,29 +26,19 @@ ControlKey	262		Ctrl		0		40		15		10
 ControlKey	32		Space		30		40		90		10
 ControlKey	258		Shift		0		30		23		10
 ControlKey	259		CapsLock	0		20		18		10
-NormalKey	8 		BackSpace	140		0		10      10
-#
-#
-#  NormalKey: This class represent all the
-#  normal keys where you don't need to press
-#  anything else then just one key. That would
-#  basicly bee all the numbers and the lovercase
-#  letters. For this class you have to indicate
-#  withc finger key you are going to use.
-#
-#			Assci	KeyText	x		y		FingerKey
+ControlKey	8 		BackSpace	140		0		10      10
 #
 NormalKey	96		(		0		0		97
 NormalKey	49		1		10		0		97
-NormalKey	50		2		20		0		115
-NormalKey	51		3		30		0		100
-NormalKey	52		4		40		0		102
+NormalKey	50		2		20		0		97
+NormalKey	51		3		30		0		115
+NormalKey	52		4		40		0		100
 NormalKey	53		5		50		0		102
-NormalKey	54		6		60		0		106
+NormalKey	54		6		60		0		102
 NormalKey	55		7		70		0		106
-NormalKey	56		8		80		0		107
-NormalKey	57		9		90		0		108
-NormalKey	48		0		100		0		59
+NormalKey	56		8		80		0		106
+NormalKey	57		9		90		0		107
+NormalKey	48		0		100		0		108
 NormalKey	95		-		110		0		59
 NormalKey	61		.		120		0		59
 NormalKey	92		'		130		0		59
@@ -88,14 +70,6 @@ NormalKey	109		П		83		30		106
 NormalKey	44		Р		93		30		107
 NormalKey	46		Л		103		30		108
 NormalKey	47		Б		113		30		59
-#
-#
-#  HiddenKey: This is all the keys that
-#  you cant see. That means that you have
-#  to use an controll key to get them. Basically
-#  this is all the uppercase letters.
-#
-#			Ascii	Target	Finger	Contorll
 #
 HiddenKey	65		97		97		257 #Ь
 HiddenKey	66		98		102		257 #Ф

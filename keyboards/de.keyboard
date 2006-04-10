@@ -1,10 +1,11 @@
 ####################################################
 #    KTouch
 #    Keybord layout file for german keybord layout
-#    Code=UTF-8
-####################################################
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
 #
-#						Assci	KeyText	x			y
+#    Refer to file en.keyboard for details.
+####################################################
 #
 FingerKey  	97		A				18		20
 FingerKey  	115		S				28		20
@@ -15,25 +16,21 @@ FingerKey  	107		K				88		20
 FingerKey  	108		L				98		20
 FingerKey  	246		Ö				108		20
 #
-#						Assci	KeyText	x			y		Width Hight
-#
-ControlKey	260		Tab			0			10	15    10
-ControlKey	13		Enter		138		20	12    10
-ControlKey	258		Shift		123		30	27    10
-ControlKey	264		AltGr	120		40	15    10
-ControlKey	265		Ctrl		135		40	15    10
-ControlKey	263		Alt			15		40	15    10
-ControlKey	262		Strg		0			40	15    10
-ControlKey	32		Leertaste		30		40	90    10
-ControlKey	257		Shift		0			30	13    10
-ControlKey	259		CapsLock	0			20	18    10
-ControlKey	8		BackSpace			130		0		20    10
+ControlKey	260		Tab				0	10	15    10
+ControlKey	13		Enter				138	10	12    20
+ControlKey	258		Shift				123	30	27    10
+ControlKey	264		AltGr				120	40	15    10
+ControlKey	265		Strg				135	40	15    10
+ControlKey	263		Alt				15	40	15    10
+ControlKey	262		Strg				0	40	15    10
+ControlKey	32		Leertaste			30	40	90    10
+ControlKey	257		Shift				0	30	13    10
+ControlKey	259		CapsLock			0	20	18    10
+ControlKey	8		BackSpace			130	0	20    10
 
-#			Assci	KeyText			x		y		FingerKey
-#
 NormalKey 	94		^				0		0		97
 NormalKey 	49		1				10		0		97
-NormalKey 	50		2				20		0		246
+NormalKey 	50		2				20		0		97
 NormalKey 	51		3				30		0		115
 NormalKey 	52		4				40		0		100
 NormalKey 	53		5				50		0		102
@@ -45,39 +42,36 @@ NormalKey 	48		0				100		0		108
 NormalKey 	223		ß				110		0		246
 NormalKey 	180		´				120		0		246
 #
-NormalKey		113		Q				15		10	97
-NormalKey		119		W				25		10	115
-NormalKey		101		E				35		10	100
-NormalKey		114		R				45		10	102
-NormalKey		116		T				55		10	102
-NormalKey		122		Z				65		10	106
+NormalKey	113		Q				15		10		97
+NormalKey	119		W				25		10		115
+NormalKey	101		E				35		10		100
+NormalKey	114		R				45		10		102
+NormalKey	116		T				55		10		102
+NormalKey	122		Z				65		10		106
+NormalKey	117		U				75		10		106
+NormalKey	105		I				85		10		107
+NormalKey	111		O				95		10		108
+NormalKey	112		P				105		10		246
+NormalKey	252		Ü				115		10		246
+NormalKey	43		+				125		10		246
 #
-NormalKey		117		U				75		10	106
-NormalKey		105		I				85		10	107
-NormalKey		111		O				95		10	108
-NormalKey		112		P				105		10	246
-NormalKey		252		Ü				115		10	246
-NormalKey		43		+				125		10	246
+NormalKey	103		G				58		20		102
+NormalKey	104		H				68		20		106
+NormalKey	228		Ä				118		20		246
+NormalKey	35		#				128		20		246
+
+NormalKey	60		<				13		30		97
+NormalKey	121		Y				23		30		97
+NormalKey	120		X				33		30		115
+NormalKey	99		C				43		30		100
+NormalKey	118		V				53		30		102
+NormalKey	98		B				63		30		102
+NormalKey	110		N				73		30		106
+NormalKey	109		M				83		30		106
+NormalKey	44		,				93		30		107
+NormalKey	46		.				103		30		108
+NormalKey	45		-				113		30		246
 #
-NormalKey		103		G				58		20	102
-NormalKey		104		H				68		20	106
-NormalKey		228		Ä				118		20	246
-NormalKey		35		#				128		20	246
-NormalKey		60		<				13		30	97
-NormalKey		121		Y				23		30	97
-#
-NormalKey		120		X				33		30	115
-NormalKey		99		C				43		30	100
-NormalKey		118		V				53		30	102
-NormalKey		98		B				63		30	102
-NormalKey		110		N				73		30	106
-NormalKey		109		M				83		30	106
-NormalKey		44		,				93		30	107
-NormalKey		46		.				103		30	108
-NormalKey		45		-				113		30	246
-#
-#
-#						Ascii		Target	Finger	Contorll
 HiddenKey		65			97			97			258 	 	#A
 HiddenKey		66			98			102			258 	 	#B
 HiddenKey		67			99			100			258 	 	#C
@@ -108,17 +102,17 @@ HiddenKey		62			60			97			258 	 	#>
 HiddenKey		196			228			246			257 	 	#Ä
 HiddenKey		214  	 	246	 		246  	 	257			#Ö
 HiddenKey		220  	 	252	 		246  	 	257 	 	#Ü
-HiddenKey		167  	 	51 	 	 	100  	 	258 	 	#§
 HiddenKey		176 		94			97			258			#°
-HiddenKey		34  		50 			115 		258 	 	#"
 HiddenKey		33  		49 			97 			258 	 	#!
-HiddenKey		36  		52 			102 		258 	 	#$
+HiddenKey		34  		50 			97	 		258 	 	#"
+HiddenKey		167  	 	51 	 	 	115  	 	258 	 	#§
+HiddenKey		36  		52 			100 		258 	 	#$
 HiddenKey		37  		53 			102 		258 	 	#%
-HiddenKey		38  		54 			106 		258 	 	#&
+HiddenKey		38  		54 			102 		258 	 	#&
 HiddenKey		47  		55 			106 		257 	 	#/
-HiddenKey		41  		57 			108 		257 	 	#)
-HiddenKey		40  		56 			107			257 	 	#(
-HiddenKey		61  		48 			246 		257 	 	#=
+HiddenKey		40  		56 			106			257 	 	#(
+HiddenKey		41  		57 			107 		257 	 	#)
+HiddenKey		61  		48 			108 		257 	 	#=
 HiddenKey		63  		223			246 		257 	 	#?
 HiddenKey		96  		180			246 		257 	 	#`
 HiddenKey		59  		44 			107 		257 	 	#;
@@ -127,7 +121,7 @@ HiddenKey		95  		45 			246 		257 	 	#_
 HiddenKey		42  		43 			246 		257 	 	#*
 HiddenKey		39  		35 			246 		257 	 	#'
 HiddenKey		92  		223			246 		264 	 	#\
-HiddenKey		124  	 	60 	 	 	97 	 	 	264  	  #|
+HiddenKey		124  	 	60 	 	 	97 	 	 	264  	  	#|
 HiddenKey		64  		113			97 			264 	 	#@
 
 
