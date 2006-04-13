@@ -40,9 +40,6 @@
                     <property name="text">
                         <string>A&amp;utomatic level adjustment</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+U</string>
-                    </property>
                 </widget>
                 <spacer>
                     <property name="name">

@@ -155,9 +155,6 @@
                             <property name="text">
                                 <string>&amp;Store data</string>
                             </property>
-                            <property name="accel">
-                                <string>Alt+S</string>
-                            </property>
                         </widget>
                     </hbox>
                 </widget>
