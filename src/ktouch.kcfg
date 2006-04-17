@@ -72,7 +72,7 @@
       <default code="true">&quot;default&quot;</default>
     </entry>
     <entry type="Bool" name="Right2LeftTyping" >
-      <label >Weather we use right-to-left typing.</label>
+      <label >Whether we use right-to-left typing.</label>
       <default code="true">false</default>
     </entry>
   </group>
