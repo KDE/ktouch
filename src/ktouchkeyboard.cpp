@@ -82,7 +82,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 	QDomDocument doc;
 	write(doc);
 
-	// and save it	
+	// and save it
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
@@ -99,7 +99,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
         // kDebug() << "Error creating lecture file!" << endl;
         return false;
     };
-	
+
     QTextStream out( &outfile );
     out << doc.toString();
     outfile.close();
@@ -114,7 +114,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 
 // Loads keyboard data from file, preserved for compatibility
 bool KTouchKeyboard::read(QTextStream& in) {
-    in.setEncoding(QTextStream::UnicodeUTF8);
+    in.setCodec( "UTF-8");
     QString line;
     clear();          // empty the keyboard
     // now loop until end of file is reached
@@ -138,7 +138,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
                 w=h=8; // default values for old keyboard files
 			KTouchKey key(KTouchKey::FINGER, keyText[0], 0, x+1, y+1, w, h);
             m_keys.push_back(key);
-			KTouchKeyConnector keycon(keyText[0], keyText[0], 0, 0); 
+			KTouchKeyConnector keycon(keyText[0], keyText[0], 0, 0);
             m_connectors.push_back(keycon);
             kDebug() << "[KTouchKeyboard::read]  FingerKey '" << keyText[0] << "'" << endl;
         }
@@ -155,13 +155,13 @@ bool KTouchKeyboard::read(QTextStream& in) {
             w=h=8; // default values for old keyboard files
 			KTouchKey key(KTouchKey::NORMAL, keyText[0], 0, x+1, y+1, w, h);
             m_keys.push_back(key);
-			KTouchKeyConnector keycon(keyText[0], keyText[0], fingerCharCode, 0); 
+			KTouchKeyConnector keycon(keyText[0], keyText[0], fingerCharCode, 0);
             m_connectors.push_back(keycon);
             kDebug() << "[KTouchKeyboard::read]  NormalKey '" << keyText[0] << "' f = '"<< fingerCharCode<< "'" << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
-			KTouchKeyConnector keycon(targetChar, targetChar, fingerChar, 0); 
+			KTouchKeyConnector keycon(targetChar, targetChar, fingerChar, 0);
             m_connectors.push_back(keycon);
         }
         else {
@@ -310,7 +310,7 @@ void KTouchKeyboard::createDefault() {
     // now we need to create the connections between the characters that can be typed and the
     // keys that need to be displayed on the keyboard
     // The arguments to the constructor are: keychar, targetkey, fingerkey, controlkeyid
-    
+
 	m_connectors.clear();
 	m_connectors.push_back( KTouchKeyConnector('/', '/','5', 0) );
 	m_connectors.push_back( KTouchKeyConnector('*', '*','6', 0) );
@@ -327,7 +327,7 @@ void KTouchKeyboard::createDefault() {
 	m_connectors.push_back( KTouchKeyConnector('8', '8','5', 0) );
 	m_connectors.push_back( KTouchKeyConnector('9', '9','6', 0) );
     m_connectors.push_back( KTouchKeyConnector('.', '.', '6', 0) );
-	
+
 	m_title = "Number keypad";
 	m_comment = "Predefined keyboard layout";
 	m_language.clear();

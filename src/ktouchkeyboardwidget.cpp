@@ -272,7 +272,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         return false;
     }
     QTextStream in( &infile );
-    in.setEncoding(QTextStream::UnicodeUTF8);
+    in.setCodec( "UTF-8" );
     QString line;
     m_keyList.clear();          // empty the keyboard
     m_connectorList.clear();    // clear the connections
