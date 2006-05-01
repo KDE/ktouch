@@ -15,8 +15,6 @@ include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_D
 
 install_files( ${XDG_APPS_DIR} FILES ktouch.desktop )
 
-kde4_create_doxygen_docs(  )
-
 kde4_footer()
 
 
