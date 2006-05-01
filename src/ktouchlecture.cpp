@@ -65,7 +65,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
 	QDomDocument doc;
 	writeLecture(doc);
 
-	// and save it	
+	// and save it
     QString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
@@ -82,7 +82,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
         // kDebug() << "Error creating lecture file!" << endl;
         return false;
     };
-	
+
     QTextStream out( &outfile );
     out << doc.toString();
     outfile.close();
@@ -114,7 +114,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     //kDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
     QString line;
     // remove everything else
-    m_lectureData.clear();      
+    m_lectureData.clear();
     // now loop until end of file is reached and break down the textfile into several strings containing the levels
     QStringList slist;
     QString current_level = QString();  // used to store the current level data
@@ -124,9 +124,9 @@ bool KTouchLecture::readLecture(QTextStream& in) {
         // only consider non-empty lines
         if (!line.isEmpty()) {
             // lecture title?
-            if (line.find("# Title:") == 0)
+            if (line.indexOf("# Title:") == 0)
                 m_title = line.right(line.length() - 8).trimmed();
-            else if (line[0]!='#' || line.find("# Comment:")!=-1) {
+            else if (line[0]!='#' || line.contains("# Comment:")) {
                 // ok, after all those comment lines, we finally found the beginn of a level
                 in_level = true;
                 current_level += line + '\n';
@@ -159,7 +159,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
         // add it (object will be deleted by the list)
         m_lectureData.push_back(level);
     }
-        
+
     if (m_lectureData.size()>1)
         return true;  // all ok
     else {
@@ -229,8 +229,8 @@ void KTouchLecture::writeLecture(QDomDocument& doc) const {
 	// Store levels
 	QDomElement levels = doc.createElement("Levels");
 	root.appendChild(levels);
-    for (QVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); 
-		it!=m_lectureData.end(); ++it) 
+    for (QVector<KTouchLevelData>::const_iterator it=m_lectureData.begin();
+		it!=m_lectureData.end(); ++it)
 	{
 		it->writeLevel(doc, levels);
 	}

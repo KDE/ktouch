@@ -39,7 +39,7 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
     while (!line.isNull()) {
         if (!line.isEmpty()) {
             // Do we have a comment here? And if yes, is a keyword in the line?
-            if (line.find("# Comment:")==0)
+            if (line.indexOf("# Comment:")==0)
                 m_comment = line.right(line.length() - 10).trimmed();
             else if (line[0]!='#') {
                 // the first line is the new characters line

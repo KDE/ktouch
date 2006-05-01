@@ -83,7 +83,7 @@ KTouch::KTouch()
 
 	// Init a training session
 	initTrainingSession();
-	
+
 	// If session was restored, the function readProperties() was already called
     if (kapp->isSessionRestored()) {
 		kDebug() << "[KTouch::KTouch]  restoring session..." << endl;
@@ -94,12 +94,12 @@ KTouch::KTouch()
 		//kDebug() << "[KTouch::KTouch]  starting standard training..." << endl;
 		// A note about safety: In this function there are a lot of things that might go
 		// wrong. What happens if the training file can't be found? What if the
-		// file cannot be opened or is corrupt? Whatever happens, the function loadXML() 
+		// file cannot be opened or is corrupt? Whatever happens, the function loadXML()
 		// ensures, that there is at least the default mini-level in the lecture
 		// so that the training won't crash.
 
 		// Load statistics data from statistics-file
-		
+
 	    // Reload the last used training file.
 		if (!m_lecture.loadXML(this, Prefs::currentLectureFile() )) {
 			Prefs::setCurrentLectureFile(QString());
@@ -111,7 +111,7 @@ KTouch::KTouch()
 			updateLectureActionCheck();
 			//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
 		}
-		
+
 		// Adjust check mark for the keyboard file
 		updateKeyboardActionCheck();
 		// If the user doesn't want to restart with his old level, start from 0 (level 1)
@@ -186,7 +186,7 @@ void KTouch::configOverrideLectureFontToggled(bool on) {
 	else {
 		m_pageGeneral->fontTextLabel->setEnabled(false);
 		m_pageGeneral->kcfg_Font->setEnabled(false);
-	}	
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -198,7 +198,7 @@ void KTouch::configOverrideKeyboardFontToggled(bool on) {
 	else {
 		m_pageKeyboard->textLabel1->setEnabled(false);
 		m_pageKeyboard->kcfg_KeyboardFont->setEnabled(false);
-	}	
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -234,7 +234,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(false);
 		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(false);
 		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(false);
-	}	
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -296,7 +296,7 @@ void KTouch::fileQuit() {
 
 void KTouch::trainingNewSession() {
     trainingPause();
-	int result = KMessageBox::questionYesNoCancel(this, 
+	int result = KMessageBox::questionYesNoCancel(this,
 		i18n("Would you like to keep the current level for the new training session?"),
 		i18n("Start New Training Session"),i18n("Keep Current Level"),i18n("Do Not Keep"));
 	if (result == KMessageBox::Cancel) return;
@@ -326,7 +326,7 @@ void KTouch::trainingStatistics() {
 	KTouchLevelStats kls = m_trainer->m_levelStats;
 	kss.m_words += m_trainer->wordsInCurrentLine();
 	kls.m_words += m_trainer->wordsInCurrentLine();
-	// by calling getCurrentLectureStats we ensure that there is 
+	// by calling getCurrentLectureStats we ensure that there is
     // data for the current lecture present for the dialog to function
 	// properly
 	getCurrentLectureStats();
@@ -345,15 +345,15 @@ void KTouch::optionsPreferences() {
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
 	m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
-	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
+	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors");
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 	// TODO : Connect some other buttons/check boxes of the dialog
-	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
+	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
 		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
+	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
 		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
+	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
 		this, SLOT(configAutoLevelChangeToggled(bool)));
 	// call the functions to enable/disable controls depending on settings
 	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
@@ -369,7 +369,7 @@ void KTouch::changeStatusbarMessage(const QString& text) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
-	unsigned int session_correct, unsigned int session_total, unsigned int session_words) 
+	unsigned int session_correct, unsigned int session_total, unsigned int session_words)
 {
 	statusBar()->changeItem(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3",
 			 level_correct, level_total, level_words), 1);
@@ -384,7 +384,7 @@ void KTouch::changeKeyboard(int num) {
 	//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
 	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
-    m_keyboardWidget->applyPreferences(this, false);  
+    m_keyboardWidget->applyPreferences(this, false);
 }
 // ----------------------------------------------------------------------------
 
@@ -456,7 +456,7 @@ void KTouch::readProperties(KConfig *config) {
     kDebug() << "[KTouch::readProperties]  Reading session data..." << endl;
 	// TODO : Session management rewrite
     config->setGroup("TrainingState");
-	
+
 /*
 	// The application is about to be restored due to session management.
     // Let's read all the stuff that was set when the application was terminated (during KDE logout).
@@ -502,7 +502,7 @@ void KTouch::saveProperties(KConfig *config) {
     config->writeEntry("Session", m_trainer->m_session.asString() );
 	// store the session history so far
     m_trainer->writeSessionHistory();
-    
+
 	config->setGroup("TrainingState");
     config->writePathEntry("LectureURL", m_currentLectureURL.url());
     config->writeEntry("Level", m_trainer->m_level);
@@ -531,9 +531,9 @@ void KTouch::init() {
 	QString default_keyboard = "number.keyboard";
 	// look up the default english keyboard file in the m_keyboardFiles string list
 	QStringList::iterator it = m_keyboardFiles.begin();
-	while (it != m_keyboardFiles.end()   &&   (*it).find("en.keyboard") == -1)  ++it;
+	while (it != m_keyboardFiles.end()   &&   !(*it).contains("en.keyboard"))  ++it;
 	if (it != m_keyboardFiles.end())   default_keyboard = *it;
-    // if keyboard layout (loaded by Prefs is not available (e.g. the 
+    // if keyboard layout (loaded by Prefs is not available (e.g. the
 	// layout file has been deleted) switch to default keyboard
     if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0)
         Prefs::setCurrentKeyboardFile ( default_keyboard );
@@ -574,11 +574,11 @@ void KTouch::initTrainingSession() {
 // Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
-    new KAction(i18n("&Open Lecture..."), "open_lecture", 0, 
+    new KAction(i18n("&Open Lecture..."), "open_lecture", 0,
 		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
-    new KAction(i18n("&Edit Lecture..."), "edit_lecture", 0, 
+    new KAction(i18n("&Edit Lecture..."), "edit_lecture", 0,
 		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
-//    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0, 
+//    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
 
@@ -589,16 +589,16 @@ void KTouch::setupActions() {
         this, SLOT(trainingPause()), actionCollection(), "training_pause");
     new KAction(i18n("&Lecture Statistics"), "kalarm", 0,
         this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
- 
+
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
     m_defaultLectureAction->setItems(m_lectureTitles);
-    m_defaultLectureAction->setCurrentItem(0);  
+    m_defaultLectureAction->setCurrentItem(0);
     connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
 
-	// *** Settings menu ***    
+	// *** Settings menu ***
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
-    // Setup menu entries for keyboard layouts    
+    // Setup menu entries for keyboard layouts
     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
     m_keyboardLayoutAction->setItems(m_keyboardFiles);
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
@@ -609,7 +609,7 @@ void KTouch::setupActions() {
     for (int i=0; i<m_colorSchemes.count(); ++i)
 		schemes_list.append(m_colorSchemes[i].m_name);
     m_keyboardColorAction->setItems(schemes_list);
-    m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());  
+    m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());
     connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
 }
 // ----------------------------------------------------------------------------
@@ -617,7 +617,7 @@ void KTouch::setupActions() {
 // This function updates the font used in the sliding line of a font suggestions was
 // made for the current lecture.
 void KTouch::updateFontFromLecture() {
-	// if the lecture requires a font, try this 
+	// if the lecture requires a font, try this
 	if (!m_lecture.m_fontSuggestions.isEmpty()) {
 		QFont f;
 		// TODO : if multiple font suggestions are given, try one after another until a
@@ -628,11 +628,11 @@ void KTouch::updateFontFromLecture() {
 }
 // ----------------------------------------------------------------------------
 
-// This function populates the file lists with the installed training, keyboard and 
+// This function populates the file lists with the installed training, keyboard and
 // examination files.
 void KTouch::updateFileLists() {
     KStandardDirs *dirs = KGlobal::dirs();
-	
+
     // first search for all installed keyboard files
 	// TODO : search in i18n() directories
     QStringList keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
@@ -660,7 +660,7 @@ void KTouch::updateFileLists() {
 			// only add lecture if we can actually load it
 			if (l.loadXML(this, url)) {
 				// since we could read the lecture, we remember the URL
-				m_lectureFiles.push_back(*it);	
+				m_lectureFiles.push_back(*it);
 				// store the title of the lecture
 				if (l.m_title.isEmpty())
 					m_lectureTitles.push_back(i18n("untitled lecture") + " - (" + url.fileName() + ")");
@@ -742,8 +742,8 @@ void KTouch::createDefaultColorSchemes() {
 void KTouch::updateLectureActionCheck() {
 	int num = 0;
 	QStringList::iterator it = m_lectureFiles.begin();
-	QString fname = Prefs::currentLectureFile(); 
-	while (it != m_lectureFiles.end()   &&   (*it).find(fname) == -1) {
+	QString fname = Prefs::currentLectureFile();
+	while (it != m_lectureFiles.end()   &&   !(*it).contains(fname)) {
 		++it;
 		++num;
 	}
@@ -755,8 +755,8 @@ void KTouch::updateLectureActionCheck() {
 void KTouch::updateKeyboardActionCheck() {
 	int num = 0;
 	QStringList::iterator it = m_keyboardFiles.begin();
-	QString fname = Prefs::currentKeyboardFile(); 
-	while (it != m_keyboardFiles.end()   &&   (*it).find(fname) == -1) {
+	QString fname = Prefs::currentKeyboardFile();
+	while (it != m_keyboardFiles.end()   &&   !(*it).contains(fname)) {
 		++it;
 		++num;
 	}
