@@ -44,8 +44,6 @@ noinst_HEADERS = \
 # let automoc handle all of the meta source files (moc)
 ktouch_METASOURCES = AUTO
 
-messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/ktouch.pot
 
 
 #########################################################################
