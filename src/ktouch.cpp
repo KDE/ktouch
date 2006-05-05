@@ -574,21 +574,21 @@ void KTouch::initTrainingSession() {
 // Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
-    new KAction(i18n("&Open Lecture..."), "open_lecture", 0,
-		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
-    new KAction(i18n("&Edit Lecture..."), "edit_lecture", 0,
-		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
+    KAction *action = new KAction(KIcon("open_lecture"), i18n("&Open Lecture..."), actionCollection(), "file_openlecture");
+    connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
+    action = new KAction(KIcon("edit_lecture"), i18n("&Edit Lecture..."), actionCollection(), "file_editlecture");
+    connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***
-    new KAction(i18n("&Start New Session"), "launch", 0,
-        this, SLOT(trainingNewSession()), actionCollection(), "training_newsession");
-    m_trainingPause = new KAction(i18n("&Pause Session"), "player_pause", 0,
-        this, SLOT(trainingPause()), actionCollection(), "training_pause");
-    new KAction(i18n("&Lecture Statistics"), "kalarm", 0,
-        this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
+    action = new KAction(KIcon("launch"), i18n("&Start New Session"), actionCollection(), "training_newsession");
+    connect(action, SIGNAL(triggered(bool)), SLOT(trainingNewSession()));
+    m_trainingPause = new KAction(KIcon("player_pause"), i18n("&Pause Session"), actionCollection(), "training_pause");
+    connect(m_trainingPause, SIGNAL(triggered(bool)), SLOT(trainingPause()));
+    action = new KAction(KIcon("kalarm"), i18n("&Lecture Statistics"), actionCollection(), "training_stats");
+    connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
