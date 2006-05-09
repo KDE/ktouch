@@ -20,7 +20,6 @@
 #include <kpushbutton.h>
 #include <klocale.h>
 #include <kstandarddirs.h>
-#include <kaudioplayer.h>
 
 #include "ktouch.h"
 #include "ktouchstatus.h"
@@ -29,6 +28,7 @@
 #include "ktouchlecture.h"
 #include "ktouchdefaults.h"
 #include "prefs.h"
+#include <phonon/simpleplayer.h>
 
 KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : QObject(),
@@ -44,6 +44,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     m_trainingPaused=true;    // we start in pause mode
     m_teacherText=m_lecture->level(0).line(0);
     m_studentText="";
+	mplayer = new Phonon::SimplePlayer(this);
 	
 	// reset statistics
     m_levelStats.clear();
@@ -309,7 +310,7 @@ bool KTouchTrainer::studentLineCorrect() const {
 // *** Public slots ***
 
 void KTouchTrainer::levelUp() {
-    KAudioPlayer::play(m_levelUpSound.url());
+	mplayer->play(m_levelUpSound.url());
     ++m_level;  // increase the level
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
@@ -325,7 +326,7 @@ void KTouchTrainer::levelUp() {
 void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
-	   KAudioPlayer::play(m_levelDownSound.url());
+	   mplayer->play(m_levelDownSound.url());
 	}
 	// Store level statistics if level is increased
 	statsChangeLevel();

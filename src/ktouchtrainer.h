@@ -28,6 +28,11 @@ class KTouchSlideLine;
 class KTouchKeyboardWidget;
 class KTouchLecture;
 
+namespace Phonon
+{
+      class SimplePlayer;
+}
+
 /// This is the master trainer object and does all the heavy work.
 /// 
 /// The training object gets the already filtered "new key pressed" events from the main window
@@ -156,6 +161,7 @@ class KTouchTrainer : public QObject {
 	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
+	Phonon::SimplePlayer *mplayer;
 };
 
 #endif  // KTOUCHTRAINER_H
