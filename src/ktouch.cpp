@@ -24,6 +24,7 @@
 //Added by qt3to4:
 #include <QKeyEvent>
 #include <QResizeEvent>
+#include <kselectaction.h>
 #include <kstdaction.h>
 
 // KDE Header
