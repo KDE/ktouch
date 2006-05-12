@@ -1,4 +1,3 @@
-kde4_header()
 project(ktouch)
 
 add_subdirectory( src ) 
@@ -15,7 +14,6 @@ add_subdirectory( icons )
 
 install_files( ${XDG_APPS_DIR} FILES ktouch.desktop )
 
-kde4_footer()
 
 
 

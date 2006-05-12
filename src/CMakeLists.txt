@@ -1,4 +1,3 @@
-kde4_header()
 
 include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/  )
 
@@ -55,7 +54,6 @@ install_targets(/bin ktouch )
 install_files( ${KCFG_INSTALL_DIR} FILES ktouch.kcfg )
 install_files( ${DATA_INSTALL_DIR}/ktouch FILES ktouchui.rc )
 
-kde4_footer()
 
 
 
