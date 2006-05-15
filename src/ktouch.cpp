@@ -657,7 +657,7 @@ void KTouch::updateFileLists() {
     if (!lectureFiles.isEmpty()) {
         // extract the prefixes
         for (QStringList::iterator it=lectureFiles.begin(); it!=lectureFiles.end(); ++it) {
-            KUrl url(*it);
+            KUrl url(KUrl::fromPath(*it));
 			KTouchLecture l;
 			// only add lecture if we can actually load it
 			if (l.loadXML(this, url)) {
