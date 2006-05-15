@@ -432,7 +432,7 @@ bool KTouch::queryExit() {
     Prefs::writeConfig();
 	// update and save statistics
 	m_trainer->storeTrainingStatistics();
-	KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
+	KUrl stat_file = KUrl::fromPath(KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml");
 	//kDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
 	m_stats.write(this, stat_file);
     return true;
