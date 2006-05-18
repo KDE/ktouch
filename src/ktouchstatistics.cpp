@@ -78,7 +78,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 	}
 	if (lectureCombo->count()==0) {
 		// this shouldn't happen if the dialog is run with proper data
-		KMessageBox::information(this, i18n("No statistics data available yet!"));
+		KMessageBox::information(this, i18n("No statistics data available yet."));
 		return;
 	}
 	// remember stats

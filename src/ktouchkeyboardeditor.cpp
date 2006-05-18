@@ -192,7 +192,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KUrl& url) {
         i18n("Edit current keyboard:"),
         i18n("Open a default keyboard:"),
         i18n("Open a keyboard file:"),
-        i18n("Create new keyboard!"),
+        i18n("Create new keyboard"),
         url, KTouchPtr->lectureFiles(), i18n("<no keyboard files available>"));
 
     if (result == QDialog::Accepted) {
@@ -202,7 +202,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KUrl& url) {
         if (!m_currentURL.isEmpty() && 
 		    !m_keyboard.load(this, m_currentURL) && !m_keyboard.loadXML(this, m_currentURL)) 
 		{
-            KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead!"));
+            KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead."));
             m_currentURL = ""; // new keyboards haven't got a URL
 			m_keyboard.clear();
         }

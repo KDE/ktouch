@@ -39,7 +39,7 @@
 /// int result = dlg.requestFileToOpen(url, i18n("Open a lecture file"), 
 ///     i18n("Which lecture would you like to open?"), i18n("Current lecture:"), 
 ///     i18n("Open a default lecture:"), i18n("Open a lecture file:"), 
-///     i18n("Create a new lecture!"), current_lecture, 
+///     i18n("Create a new lecture:"), current_lecture, 
 ///     default_lectures, i18n("<no lecture files available>"));
 ///
 /// if (result==QDialog::Accepted) {

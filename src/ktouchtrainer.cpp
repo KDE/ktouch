@@ -272,7 +272,7 @@ void KTouchTrainer::continueTraining() {
 	m_slideLineWidget->setCursorTimerEnabled(true);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness() );
 	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
-	updateStatusBarMessage(i18n("Training session! The time is running...") );
+	updateStatusBarMessage(i18n("Training session. The time is running...") );
 	updateStatusBar();
 	m_trainingTimer->start(LCD_UPDATE_INTERVAL);    // start the timer
 }
