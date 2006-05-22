@@ -119,14 +119,14 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
         // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(window, KUrl::fromPathOrURL( Prefs::currentKeyboardFile() )))
+            if (!loadKeyboard(window, KUrl::fromPathOrUrl( Prefs::currentKeyboardFile() )))
                 createDefaultKeyboard();
             else
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
         else {
             QString errorMsg;
-            if (!loadKeyboard(window, KUrl::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
+            if (!loadKeyboard(window, KUrl::fromPathOrUrl( Prefs::currentKeyboardFile() ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);

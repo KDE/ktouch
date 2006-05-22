@@ -402,7 +402,7 @@ void KTouch::changeLecture(int num) {
     trainingPause();
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
-    if (!l.loadXML(this, KUrl::fromPathOrURL(fileName))) {
+    if (!l.loadXML(this, KUrl::fromPathOrUrl(fileName))) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.", fileName) );
     	m_defaultLectureAction->setCurrentItem(-1);
 	}
