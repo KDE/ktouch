@@ -1,0 +1,106 @@
+####################################################
+#    KTouch
+#    Keybord layout file for Norwegian kaybord
+####################################################
+#
+#						Assci	KeyText	x		y
+#
+FingerKey  97			A				18  20
+FingerKey  115		S				28  20
+FingerKey  100		D				38  20
+FingerKey  102		F				48  20
+FingerKey  106		J				78  20
+FingerKey  107		K				88  20
+FingerKey  108		L				98  20
+FingerKey  230		Ø				108 20
+#
+#					Assci	KeyText		x		y		Width Height
+#
+ControlKey	260		Tab			0		10	15    10
+ControlKey	258		Shift		123	30	27    10
+ControlKey	264		Alt			120	40	15    10
+ControlKey	265		Ctrl		135	40	15    10
+ControlKey	263		Alt			15	40	15    10
+ControlKey	262		Ctrl		0		40	15    10
+ControlKey	32		Space		30	40	90    10
+ControlKey	257		Shift		0		30	13    10
+ControlKey	259		Caps_L	0		20	18    10
+ControlKey  8 		<-			130	0		20    10
+ControlKey	13		Enter		128	20	22    10
+
+#					Assci	KeyText		x		y		FingerKey
+#
+NormalKey 124		|					0		0		97	
+NormalKey 49		1					10	0		97	
+NormalKey 50		2					20	0		115
+NormalKey 51		3					30	0		100
+NormalKey 52		4					40	0		102
+NormalKey 53		5					50	0		102
+NormalKey 54		6					60	0		106
+NormalKey 55		7					70	0		106
+NormalKey 56		8					80	0		107
+NormalKey 57		9					90	0		108
+NormalKey 48		0					100	0		230
+NormalKey 43		+					110	0		230
+NormalKey 92		\					120	0		230
+#
+NormalKey	113		Q					15	10	97
+NormalKey	119		W					25	10	115
+NormalKey	101		E					35	10	100
+NormalKey	114		R					45	10	102
+NormalKey	116		T					55	10	102
+NormalKey	121		Y					65	10	106
+NormalKey	117		U					75	10	106
+NormalKey	105		I					85	10	107
+NormalKey	111		O					95	10	108
+NormalKey	112		P					105	10	230
+NormalKey	91		Å					115	10	230
+NormalKey	93		~					125	10	230
+#
+NormalKey	103		G					58	20	102
+NormalKey	104		H					68	20	106
+NormalKey	39		Æ					118	20	230
+#
+NormalKey	60		<					13	30	97
+NormalKey	122		Z					23	30	97
+NormalKey	120		X					33	30	115
+NormalKey	99		C					43	30	100
+NormalKey	118		V					53	30	102
+NormalKey	98		B					63	30	102
+NormalKey	110		N					73	30	106
+NormalKey	109		M					83	30	106
+NormalKey	44		,					93	30	107
+NormalKey	46		.					103	30	108
+NormalKey	47		/					113	30	230
+#
+#
+#			Ascii	Target	Finger	Contorll
+HiddenKey	65		97		97		258 	   #A
+HiddenKey	66		98		102		258 	   #B
+HiddenKey	67		99		100		258 	   #C
+HiddenKey	68		100		100		258 	   #D
+HiddenKey	69		101		100		258 	   #E
+HiddenKey	70		102		102		258 	   #F
+HiddenKey	71		103		102		258 	   #G
+HiddenKey	72		104		106		258 	   #H
+HiddenKey	73		105		107		258 	   #I
+HiddenKey	74		106		106		258 	   #J
+HiddenKey	75		107		107		258 	   #K
+HiddenKey	76		108		106		258 	   #L
+HiddenKey	77		109		106		258 	   #M
+HiddenKey	78		110		106		258 	   #N
+HiddenKey	79		111		108		258 	   #O
+HiddenKey	80		112		230		258 	   #P
+HiddenKey	81		113		97		258 	   #Q
+HiddenKey	82		114		102		258 	   #R
+HiddenKey	83		115		115		258 	   #S
+HiddenKey	84		116		102		258 	   #T
+HiddenKey	85		117		106		258 	   #U
+HiddenKey	86		118		102		258 	   #V
+HiddenKey	87		119		115		258 	   #W
+HiddenKey	88		120		115		258 	   #X
+HiddenKey	89		121		106		258 	   #Y
+HiddenKey	90		122		97		258 	   #Z
+HiddenKey	216		39		230		258 	   #Æ
+HiddenKey	198		230		230		258 	   #ø
+HiddenKey	197		91		230		258 	   #Å

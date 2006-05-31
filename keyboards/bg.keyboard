@@ -1,0 +1,99 @@
+####################################################
+#    KTouch
+#    Keybord layout file
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Edit this file with tabs set to 8 characters.
+#
+#    Refer to file en.keyboard for details.
+####################################################
+#
+FingerKey	97		Ь		18	20
+FingerKey	115		Я		28	20
+FingerKey	100		А		38	20
+FingerKey	102		О		48	20
+FingerKey	106		Т		78	20
+FingerKey	107		Н		88	20
+FingerKey	108		В		98	20
+FingerKey	59		М		108	20
+#
+ControlKey	260		Tab			0		10		15		10
+ControlKey	13		Enter		128		20		22		10
+ControlKey	257		Shift		123		30		27		10
+ControlKey	264		AltGr		120		40		15		10
+ControlKey	265		Ctrl		135		40		15		10
+ControlKey	263		Alt			15		40		15		10
+ControlKey	262		Ctrl		0		40		15		10
+ControlKey	32		Space		30		40		90		10
+ControlKey	258		Shift		0		30		23		10
+ControlKey	259		CapsLock	0		20		18		10
+ControlKey	8 		BackSpace	140		0		10      10
+#
+NormalKey	96		(		0		0		97
+NormalKey	49		1		10		0		97
+NormalKey	50		2		20		0		97
+NormalKey	51		3		30		0		115
+NormalKey	52		4		40		0		100
+NormalKey	53		5		50		0		102
+NormalKey	54		6		60		0		102
+NormalKey	55		7		70		0		106
+NormalKey	56		8		80		0		106
+NormalKey	57		9		90		0		107
+NormalKey	48		0		100		0		108
+NormalKey	95		-		110		0		59
+NormalKey	61		.		120		0		59
+NormalKey	92		'		130		0		59
+#
+NormalKey	113		,		15		10		97
+NormalKey	119		У		25		10		115
+NormalKey	101		Е		35		10		100
+NormalKey	114		И		45		10		102
+NormalKey	116		Ш		55		10		102
+NormalKey	121		Щ		65		10		106
+NormalKey	117		К		75		10		106
+NormalKey	105		С		85		10		107
+NormalKey	111		Д		95		10		108
+NormalKey	112		З		105		10		59
+NormalKey	91		Ц		115		10		59
+NormalKey	93		;		125		10		59
+#
+NormalKey	103		Ж		58		20		102
+NormalKey	104		Г		68		20		106
+NormalKey	39		Ч		118		20		59
+#
+NormalKey	122		Ю		23		30		97
+NormalKey	120		Й		33		30		115
+NormalKey	99		Ъ		43		30		100
+NormalKey	118		Э		53		30		102
+NormalKey	98		Ф		63		30		102
+NormalKey	110		Х		73		30		106
+NormalKey	109		П		83		30		106
+NormalKey	44		Р		93		30		107
+NormalKey	46		Л		103		30		108
+NormalKey	47		Б		113		30		59
+#
+HiddenKey	65		97		97		257 #Ь
+HiddenKey	66		98		102		257 #Ф
+HiddenKey	67		99		100		257 #Ъ
+HiddenKey	68		100		100		257 #А
+HiddenKey	69		101		100		257 #Е
+HiddenKey	70		102		102		257 #О
+HiddenKey	71		103		102		257 #Ж
+HiddenKey	72		104		106		258 #Г
+HiddenKey	73		105		107		258 #С
+HiddenKey	74		106		106		258 #Т
+HiddenKey	75		107		107		258 #Н
+HiddenKey	76		108		106		258 #В
+HiddenKey	77		109		106		258 #М
+HiddenKey	78		110		106		258 #Х
+HiddenKey	79		111		108		258 #Д
+HiddenKey	80		112		59		258 #З
+HiddenKey	81		113		97		257 #ы
+HiddenKey	82		114		102		257 #И
+HiddenKey	83		115		115		257 #Я
+HiddenKey	84		116		102		257 #Ш
+HiddenKey	85		117		106		258 #К
+HiddenKey	86		118		102		257 #Э
+HiddenKey	87		119		115		257 #У
+HiddenKey	88		120		115		257 #Й
+HiddenKey	89		121		106		258 #Щ
+HiddenKey	90		122		97		257 #Ю

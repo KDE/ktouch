@@ -1,0 +1,150 @@
+####################################################
+#    KTouch
+#    Keybord layout file for brazilian keyboard
+####################################################
+#
+#
+#  FingerKey: Esta classe representa as teclas onde
+#  os seus dedos deverão ficar descansando entre escritas.
+#
+#
+#		Ascii		KeyText		x	y
+#
+FingerKey  	97		A		18	20
+FingerKey  	115		S		28	20
+FingerKey  	100		D		38  	20
+FingerKey  	102		F		48  	20
+FingerKey  	106		J		78  	20
+FingerKey  	107		K		88  	20
+FingerKey  	108		L		98  	20
+FingerKey  	231		Ç	       108    	20
+#
+#
+#  ControlKey: Esta classe irá representar todas as teclas
+#  de controle que está usando. Estas teclas serão usadas
+#  posteriormente quando você quiser usar as maiúsculas.
+#
+#		Ascii		KeyText		x	y	Width	Height
+#
+ControlKey	8 		BackSpace	140	0	10	10
+ControlKey	260		Tab		0	10	15	10
+ControlKey	13		Enter		138	10	12	20
+ControlKey	259		CapsLock	0	20	18	10
+ControlKey	258		Shift		0	30	15	10
+ControlKey	257		Shift		125	30	25	10
+ControlKey	262		Ctrl		0	40	15	10
+ControlKey	263		Alt		15	40	15	10
+ControlKey	32		Espaço		30	40	90	10
+ControlKey	264		AltG		120	40	15	10
+ControlKey	265		Ctrl		135	40	15	10
+#
+#
+#  NormalKey: Esta classe representa todas as teclas
+#  normais onde não precisa pressionar em mais nada
+#  a não ser numa única tecla. Estes serão basicamente
+#  todos os números e as letras minúsculas. Para esta classe
+#  você terá que indicar qual a tecla de dedos que irá usar.
+#
+#		Ascii		KeyText		x	y	FingerKey
+#
+NormalKey 	39		'		0	0	97	
+NormalKey 	49		1		10	0	97	
+NormalKey 	50		2		20	0	115
+NormalKey 	51		3		30	0	100
+NormalKey 	52		4		40	0	102
+NormalKey 	53		5		50	0	102
+NormalKey 	54		6		60	0	106
+NormalKey 	55		7		70	0	106
+NormalKey 	56		8		80	0	107
+NormalKey 	57		9		90	0	108
+NormalKey 	48		0		100	0	231
+NormalKey 	45		-	 	110	0	231
+NormalKey	61		=		120	0	231
+NormalKey	93		]		130	0	231
+#
+NormalKey	113		Q		15	10	97
+NormalKey	119		W		25	10	115
+NormalKey	101		E		35	10	100
+NormalKey	114		R		45	10	102
+NormalKey	116		T		55	10	102
+NormalKey	121		Y		65	10	106
+NormalKey	117		U		75	10	106
+NormalKey	105		I		85	10	107
+NormalKey	111		O		95	10	108
+NormalKey	112		P		105	10	231
+NormalKey	180		´		115	10	231
+NormalKey	91		[		125	10	231
+#
+NormalKey	103		G		58	20	102
+NormalKey	104		H		68	20	106
+NormalKey	126		~		118	20	231
+NormalKey	47		/		128	20	231
+#
+NormalKey	92		\		15	30	97
+NormalKey	122		Z		25	30	97
+NormalKey	120		X		35	30	115
+NormalKey	99		C		45	30	100
+NormalKey	118		V		55	30	102
+NormalKey	98		B		65	30	102
+NormalKey	110		N		75	30	106
+NormalKey	109		M		85	30	106
+NormalKey	44		,		95	30	107
+NormalKey	46		.		105	30	108
+NormalKey	59		;		115	30	231
+#
+#
+#  HiddenKey: Estas s� as teclas que você não
+#  poderá ver. Isto significa que você terá que
+#  usar uma tecla de controle para usá-las.
+#  Basicamente são todas as letras maiúsculas.
+#
+#		Ascii		Target		Finger		Control
+#
+HiddenKey	65		97		97		258 #A
+HiddenKey	66		98		102		258 #B
+HiddenKey	67		99		100		258 #C
+HiddenKey	68		100		100		258 #D
+HiddenKey	69		101		100		258 #E
+HiddenKey	70		102		102		258 #F
+HiddenKey	71		103		102		258 #G
+HiddenKey	72		104		106		258 #H
+HiddenKey	73		105		107		258 #I
+HiddenKey	74		106		106		258 #J
+HiddenKey	75		107		107		258 #K
+HiddenKey	76		108		108		258 #L
+HiddenKey	77		109		106		258 #M
+HiddenKey	78		110		106		258 #N
+HiddenKey	79		111		108		258 #O
+HiddenKey	80		112		231		258 #P
+HiddenKey	81		113		97		258 #Q
+HiddenKey	82		114		102		258 #R
+HiddenKey	83		115		115		258 #S
+HiddenKey	84		116		102		258 #T
+HiddenKey	85		117		106		258 #U
+HiddenKey	86		118		102		258 #V
+HiddenKey	87		119		115		258 #W
+HiddenKey	88		120		115		258 #X
+HiddenKey	89		121		106		258 #Y
+HiddenKey	90		122		97		258 #Z
+HiddenKey	34		39		97		258 #"
+HiddenKey	33		49		97		258 #!
+HiddenKey 	64		50		115		258 #@	
+HiddenKey 	35		51		100		258 ##
+HiddenKey 	36		52		102		258 #$
+HiddenKey 	37		53		102		258 #%
+HiddenKey 	168		54		106		258 #
+HiddenKey 	38		55		106		258 #&
+HiddenKey 	42		56		107		258 #*
+HiddenKey 	40		57		108		258 #(
+HiddenKey 	41		48		231		258 #)
+HiddenKey 	95		45		231		258 #_	
+HiddenKey	43		61		231		258 #+
+HiddenKey	125		93		231		258 #}
+HiddenKey	96		180		231		258 #`
+HiddenKey	123		91		231		258 #{
+HiddenKey	94		126		231		258 #^
+HiddenKey	63		47		231		258 #?
+HiddenKey	124		92		97		258 #|
+HiddenKey 	60		44		107		258 #<
+HiddenKey 	62		46		108		258 #>
+HiddenKey 	58		59		231		258 #:
