@@ -1,0 +1,932 @@
+<KTouchLecture>
+ <Title>Hungarian (auto-generated)</Title>
+ <Comment>KTouch training file generated Tue Aug 30 23:23:54 2005.
+Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.
+</Comment>
+ <Levels>
+  <Level>
+   <NewCharacters>jf</NewCharacters>
+   <Line>f j fjf jj j f fjf j j jj jj jj jj jj j f jj jj ff ff jj f jj</Line>
+   <Line>fjf fjf ff ff f jf jj fjf ff j f ffjf ff j ff jjf fjf ff fjf jj</Line>
+   <Line>ff jj ff jj jj jf f jf jj jj jj jf f jjf jfjj jf jj jf f jj fjf</Line>
+   <Line>ff jfjj jj f j jjf ff jf jj fjf f jj jjf jf fjf ffjf j jf jj fjf</Line>
+   <Line>f ff jf fjf jj jjf jf f j fjf fjf f j ff jf fjf j f ff j jjf jfjj</Line>
+   <Line>j jf ff f jfjj jj jj jjf f jjf ff ff f j jjf jjf ffj j j fjf jj</Line>
+   <Line>f f ffj f fjf jj fjf f jjf f jj j j jjf fjf j ff ff ffj j jfjj</Line>
+   <Line>jj j j fjf f jj j ff j jf f jjf jj jjf jf fjf fjf jjf jj ff jjf</Line>
+   <Line>jj jf jfjj fjf ff j jj ffjf jf jf j jf ff jf fjf jjf jf jj jj jjf</Line>
+   <Line>fjf f j fjf jj j fjf ff jj jj j fjf fjf jj jf j jjf ff ff jj ff</Line>
+   <Line>j ff fjf jj fjf jj fjf jj ff fjf j f fjf fjf jj jj ff ff j ff</Line>
+   <Line>ff jjf jj jjf jjf fjf jf j jj jf jj fjf jj f ff j jj fjf ff fjf</Line>
+   <Line>jj jj j jj jjf jj jjf jj j ffjf fjf j ff j f jf fjf jjf jjf j jj</Line>
+   <Line>f ff ff f f ff ff jfjj jjf ff ff ff ff jj ffj fjf jjf fjf f fjf</Line>
+   <Line>fjf jj jjf j ff fjf j jj jjf jf j jj fjf jj ff jj f jjf jj jj j</Line>
+   <Line>ff jjf jj jf jf ff jj j jj fjf fjf ff ff jfjj jf f jf j j ffj jfjj</Line>
+   <Line>ff j j jjf jf jj fjf j fjf fjf j ffjf jj f jf j jj ff fjf ff fjf</Line>
+   <Line>jjf jf jj jj j ff fjf fjf ffjf j fjf jj jfjj jj jfjj j jjf ffj jj</Line>
+   <Line>ff f fjf j f ffjf fjf jj jf jj jf jj ff jj fjf jj ff fjf f jf j</Line>
+   <Line>ff j f fjf jj ffjf ff j j jf j ffj jj ff jj ffj f jj fjf jj jjf</Line>
+   <Line>jf ff jj j ffj jjf jjf j f j jjf jf ffj ff fjf j ff jj jj jf ff</Line>
+   <Line>j jjf jj ff jf jj fjf f jf jj jf ff jj f jj jj ff jj ff j jj jjf</Line>
+   <Line>jjf j j j j jj jf jj fjf fjf jj j j jj jf j jfjj f f ffjf ffj f</Line>
+   <Line>fjf fjf fjf jf jf jj f ff ffjf f jf jf j ff ff j jj f j fjf j fjf</Line>
+   <Line>fjf ff ff f jj f ff fjf fjf ff j j j jj j jjf jj jjf fjf ff jj ff</Line>
+   <Line>f fjf jj fjf jj jj jf j jj jj jjf jf j fjf f jf jf j fjf jj f</Line>
+   <Line>j ff fjf fjf j jf jj f ff f ffj f f fjf ff fjf f f j fjf jfjj</Line>
+   <Line>jj jj jj jj jj jj ff jf fjf j ffj j ff jf j jj ffjf f ff fjf jjf</Line>
+   <Line>jj jf fjf j j jjf fjf jf jj ff jj f jjf j jjf ffjf jj ff ffj j</Line>
+   <Line>jfjj jf j ff ff jj j j ff jfjj ff ffjf j ffjf j ffjf jf ff jf jf</Line>
+  </Level>
+  <Level>
+   <NewCharacters>kd</NewCharacters>
+   <Line>jd d fdd d d fk dkk k df k fdf fdk fkk kdf df jk kfk jd kd kfk</Line>
+   <Line>fkk jd jkj dk jkj kfk fk fk dkd dk d d kdf df dd kfk k df kkjd fdd</Line>
+   <Line>kd d k fk kfk k k kd k dd jkj kdf df dk fdf dkk jk kdf k dk dkd</Line>
+   <Line>fdd d fk dk kkjd kfk jd d dkd jd k dfj jd k k fk dk kfk k d dkd</Line>
+   <Line>d dfj kfk df kfk df d dk dk df dd k kd jk fdf kd d fk fk fk kkfk</Line>
+   <Line>kkjd d kdf fdk d jk df d dkd dk k kfk dk dd kfk dk kkfk kd d df dk</Line>
+   <Line>k jkj d d fkk dk d k jkj d dkk kd kfk d dkk dk jd k df jd df dfj</Line>
+   <Line>d fdk k k dkd d fk jd jk fk kkjd d dkk k fk jkj fk d d dkk dk</Line>
+   <Line>d kdf dfj df df df fk k kdf dkk jkj k d d d df k k dkk kkfk dfj</Line>
+   <Line>k d fk k fdk kkfk k fk kkfk d fkk d kkjd fk jk dkk fkk d d dk</Line>
+   <Line>jd kd fdd k fdd k jk k dk dd fk k jd kkfk kdf d fdf k dkd dk fdk</Line>
+   <Line>d dkk d jd d d kkfk d dkd d fdf k dk kdf kfk dkk k dd d kd df</Line>
+   <Line>k jd fk kkfk kkfk kkfk d jk df k dkk d kd fkk df dkk kd kd jd</Line>
+   <Line>fk k dkk d k d jd dfj fkk kdf d jd df fdf jk kd k fk df d jkj k</Line>
+   <Line>dfj k kd kfk fdd d k kfk dkk jkj d jd fkk dkd d fdd dkk kdf fkk</Line>
+   <Line>dkk kkjd d kkfk k df fk fdf kkfk dfj kkfk kkfk df dkk dkk kdf d</Line>
+   <Line>k fk jd df df kdf jkj d k fdk kkfk d d jk df d df d df k dkk kd</Line>
+   <Line>fdk dkd dkk kkfk d kd fdf fk fkk fkk fk k d dkd fdf fk fdf df fk</Line>
+   <Line>df jkj kkjd kfk d d df dkd jd fdk kkjd fdd d fk kkjd jkj k dd fdk</Line>
+   <Line>jd fk df d fdk d jkj kdf kfk d fk dfj dkd fdd kdf k dkk fk fk kfk</Line>
+   <Line>dd kfk fkk k jk dd jd dfj dkk fdf kkfk k d jd kfk jd fk d fdd d</Line>
+   <Line>d d fdk d jd jk df dk kkjd kkfk d dd fk dk fdd fk df d fdd k dkk</Line>
+   <Line>dkd fkk fdd dd dk fk kd k fk fk kfk jkj fdk kkfk d d dkk d dk k</Line>
+   <Line>dd fdf k kkfk dk d jkj jd k fkk k kdf kdf fdk k kfk fkk kkjd dfj</Line>
+   <Line>d fk d d d d fk fk k df d jd d dd kkfk df k kfk fkk jd dkd kkfk</Line>
+   <Line>dk d jkj fk d dk k fkk d dkk jk d d k jk kd fk kdf dk dk d dk k</Line>
+   <Line>fkk kkjd kkfk dfj k fkk k dk fkk k k jk kkfk fdf jkj k d fk dfj</Line>
+   <Line>fdk k fdd d jd kd jk dkk fdk d df k k fdf fdk fdd d k df kd fdf</Line>
+   <Line>dk dfj kd kd df kd kd kfk jd df fk kkfk jd jd d k k fk fdk dk dkk</Line>
+   <Line>kdf k jkj d kd df fk k fdd dkk kkjd fk dk d dd fkk k kkjd df k fdd</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ls</NewCharacters>
+   <Line>sfl jsdd ljl lf dl skd s fsj sl sd lj flf lf sd fl lj lj kljf s</Line>
+   <Line>s fsj l lf ds jsdd ds fl s sd l lj skd dflj l s fl kfsk s dl sfl</Line>
+   <Line>l sd ds jsdd lf fl lsl dl jsdd sd sfl s ls skd lj ljl kljf ls</Line>
+   <Line>sl ksf fl dl sl jsdd sfl ds sk sd sd fl l sl lj ls sd ds dl lf</Line>
+   <Line>ds l l ljl l sl flf s lj ds jsdd fsj jsdd ljl kfsk dflj lj flf</Line>
+   <Line>lf ljl flf dflj dl sk lf ljl l dl lsl dl dl ljl kljf l fsj ljl</Line>
+   <Line>lj flf jsdd dl lj fsj lf l dl lf lsl s dflj s kfsk lf ksf lsl dl</Line>
+   <Line>ljl skd l ls kfsk dflj fl lj sfl sl kfsk dflj kss ls lj dflj dl</Line>
+   <Line>sd jsdd sl ljl kfsk ds flf jsdd lf ls sk s sl lf lsl fsj lsl kljf</Line>
+   <Line>dl kljf kss s dl ls dl l s flf l sd kljf skd jsdd s dl ksf kss</Line>
+   <Line>kfsk s fl fl dflj sd s ls flf sl sfl fsj lf dl kfsk lf ksf ds kfsk</Line>
+   <Line>skd sk sd jsdd ksf kfsk lsl sfl lf lj ljl ls jsdd l sd ksf lj fl</Line>
+   <Line>lj lj flf skd kfsk sl ksf jsdd jsdd jsdd ls dflj dl flf ls sk fl</Line>
+   <Line>kljf skd dl lj l ds sd lsl dflj l s sd fl l s sfl sfl sk s sl l lj</Line>
+   <Line>lj dl ksf dl l ds kljf sl l flf dl fl dl l jsdd jsdd s dl sd fl</Line>
+   <Line>skd flf ksf ksf sfl lj sl s dflj s flf fsj ksf l ds dflj kss ksf</Line>
+   <Line>lj l ljl dl lsl s jsdd ds s kfsk lj sl lj l lf flf kss skd sd lf</Line>
+   <Line>kss l ds lsl lj skd sl ksf s l kss sl sfl sd dl sl s lf l l sd kfsk</Line>
+   <Line>ksf ksf kss flf sd kss dl l jsdd lj s dl lf l lsl ls l lsl ds sd</Line>
+   <Line>dl kfsk lsl fsj dl l sl fsj ls sd lj sfl kljf dflj dl flf kljf</Line>
+   <Line>ksf sl sd kfsk s kfsk kfsk sl lf ds s fl lj sk kfsk l ljl lf sl</Line>
+   <Line>lj ksf lsl dflj dflj s dflj kljf kfsk sl dflj sl lj kfsk l jsdd</Line>
+   <Line>kljf kss s sd dl lj kljf sk lf sl lj sd ljl sfl ds ls sl sl l sfl</Line>
+   <Line>ls lj s ls kss lf dl kss ls ls sd sfl lj ds s dflj flf ksf fl s</Line>
+   <Line>dl kfsk ls sfl kljf lf kljf lj dl sd dl sfl skd l dl lf jsdd sfl</Line>
+   <Line>skd ksf fl sd ljl fl fsj lj l ljl lj fl dl s fsj l skd ls sd kfsk</Line>
+   <Line>kljf lj dl sd dl ds sl sd lj l ds dflj ds sd kfsk s ljl flf sfl sl</Line>
+   <Line>ksf kss l dl dflj jsdd sl dl dl sl l lsl sk kfsk ds sd l ls dl kfsk</Line>
+   <Line>sk ljl kss lsl dflj dl lj fl s ksf kfsk jsdd skd fsj s lf skd fl</Line>
+   <Line>kfsk sfl sd ds sl lsl fl ls kfsk sl fl l fl lsl lj lj sd lj kfsk</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ca</NewCharacters>
+   <Line>kcja slad assal rasa csak ajjaj kcal slad kjldc cdj sa c aj ja assal</Line>
+   <Line>rasa a rad kcal cal laka rasa cs ja ja cs laka csak lafk ajjaj rasa</Line>
+   <Line>laka assal kcal rasa cs cs kcja ckds a rasa cl ajjaj laka a a lafk</Line>
+   <Line>css a cfc ajjaj lafk a sa lafk csak fa slad laka jaj laka lafk laka</Line>
+   <Line>slad cfc css cl ajjaj aj a assal rasa a kcal cl ajjaj kcja ca cal</Line>
+   <Line>ca a aj kcja kcja cal aj kcal css kcja jaj css ckds laka css rasa</Line>
+   <Line>assal aj kjldc ca css kjldc lafk kjldc laka a jaj cs cal a cs a cs</Line>
+   <Line>ja a cal fa ja jaj jaj cs cal jaj cs css laka cs laka assal lafk</Line>
+   <Line>kjldc kcja a assal sa aj ca kcal cal cdj c jaj ja ca cfc a sa a ca</Line>
+   <Line>cdj a kcal css a jaj laka a rad a lafk fa kjldc sa cal ajjaj ca</Line>
+   <Line>jaj cs a kjldc ca lafk a rasa ajjaj ca a aj kcal a ckds cdj dlaj</Line>
+   <Line>kcal a slad rasa kjldc cdj ckds a slad rad csak laka cfc kjldc assal</Line>
+   <Line>ca a ckds sa kcal a fa laka c a assal fa css fa fa aj cs sa a a</Line>
+   <Line>slad ckds css ca jaj fa jaj a kcal slad cfc ja cfc a slad cal laka</Line>
+   <Line>css csak kcja ajjaj cs dlaj cfc csak cl ja ja rasa a lafk ja cdj</Line>
+   <Line>csak kcja kcja ja kcal cs cfc ja kjldc cl cs c jaj kcja cs cal sa</Line>
+   <Line>css c css a aj aj ajjaj cl ajjaj ja a ca a kjldc fa a fa cfc cal</Line>
+   <Line>kjldc css kjldc kcal cfc aj cfc dlaj rasa a slad kjldc kjldc cfc cfc</Line>
+   <Line>laka laka css kjldc laka css fa kjldc cal cal kcal ckds cs cfc css</Line>
+   <Line>kjldc laka kjldc cfc assal csak cal ja cl a a a a csak a kcja csak</Line>
+   <Line>sa cs laka kjldc slad jaj rasa csak cfc rad dlaj rad aj laka jaj</Line>
+   <Line>ajjaj a csak fa ckds rad aj rasa assal aj laka c slad cal fa a fa</Line>
+   <Line>a cdj slad sa sa sa ckds rasa ajjaj ajjaj cl rasa csak a kcja</Line>
+   <Line>cal lafk sa kjldc cal cfc rad rasa lafk cdj a a assal ja fa rad</Line>
+   <Line>sa a aj aj ca kjldc cl css ckds rad cfc kjldc rasa kcal a aj csak</Line>
+   <Line>ja assal cal a jaj ca sa a rad kjldc kcal a a rad slad jaj laka</Line>
+   <Line>cal dlaj laka kcja cal kcja a css aj ckds cl c ja cs cfc cdj a a</Line>
+   <Line>ckds ckds dlaj ja c sa fa cal kjldc rad a css ckds kcja cl lafk jaj</Line>
+   <Line>a cal fa kcal fa a kjldc cl a cs fa jaj laka cs kcja kcal cfc</Line>
+   <Line>kcal a fa fa a a ja ca a cl lafk ckds cl kcal ajjaj fa ckds fa ca</Line>
+  </Level>
+  <Level>
+   <NewCharacters>nt</NewCharacters>
+   <Line>alatta nana alattad annak dkt rajta taj tc ts t atd rajta rajtad akn</Line>
+   <Line>ln tl alatta katlana na csatt lassan alattad ln jna rajta taj taj</Line>
+   <Line>taj katlana n rajtad dndnc n dkt n katlana rajtad kattantsa rajtad</Line>
+   <Line>rajta atd dndnc alatt ln annak n na atd alattad adsn nana annak sajna</Line>
+   <Line>ln annak jna lassan annak na dndnc t rajta akn nana t t ts t alatt</Line>
+   <Line>alatt nana ljst ljst sajna jna annak taj ln dndnc nana dkt kattantsa</Line>
+   <Line>dkt tl na dndnc sajna n rajtad dndnc csatt annak rajta dndnc adsn</Line>
+   <Line>kattantsa adsn tl kattantsa tl kattantsa ts jna csatt alatt nd sajna lassan</Line>
+   <Line>lassan alatt jna ljst n alatt na annak jna lassan akn atd t csatt alatt</Line>
+   <Line>csatt alatta annak nana nana adsn alatt nana ln nana kattantsa csatt</Line>
+   <Line>nana tc n rajta taj katlana alatta ljst alatt kattantsa taj dkt kattantsa</Line>
+   <Line>alatt rajtad n t tc atd alatta n alattad n alatt jna alattad na n</Line>
+   <Line>rajta akn akn alatt kattantsa nana alattad nd adsn alatt t atd alatt</Line>
+   <Line>akn alatt n rajtad annak ts katlana rajtad alatt sajna alatta ts</Line>
+   <Line>na nana t katlana dndnc n dndnc rajtad taj alattad nana na ljst</Line>
+   <Line>kattantsa akn nana taj tc n n t alatt ts rajtad taj n lassan rajtad dndnc</Line>
+   <Line>sajna nana akn tc tl t n atd atd alatt na rajtad nana katlana alattad</Line>
+   <Line>alattad n alatta csatt ljst rajtad nd alattad kattantsa nd ts tc ljst</Line>
+   <Line>dndnc n atd ln sajna dkt alatta atd n ljst kattantsa alattad csatt</Line>
+   <Line>sajna na tc katlana atd annak n akn dndnc tc kattantsa ts kattantsa</Line>
+   <Line>tl rajta tc rajta sajna csatt nana kattantsa rajtad adsn akn ljst</Line>
+   <Line>tl katlana dndnc annak rajtad taj n rajta n atd rajta tc csatt</Line>
+   <Line>tc alatt ts nana akn n sajna na csatt n rajtad rajta ln nd rajta</Line>
+   <Line>atd katlana atd alatt ljst alatt alatt alattad ljst adsn tc rajta</Line>
+   <Line>adsn n sajna annak annak ts katlana dkt alattad rajtad nana taj ljst</Line>
+   <Line>dndnc kattantsa akn katlana tl alatt dkt ln na katlana sajna atd ts</Line>
+   <Line>akn atd n taj atd atd lassan dndnc ts na sajna ln sajna alatta jna</Line>
+   <Line>alatta jna sajna ts rajtad akn ts alattad sajna ljst t alatt nd n taj</Line>
+   <Line>ts lassan dndnc taj annak jna annak katlana rajtad n adsn sajna</Line>
+   <Line>lassan katlana rajtad adsn t rajta t nd ln alatt sajna lassan akn katlana</Line>
+  </Level>
+  <Level>
+   <NewCharacters>éi</NewCharacters>
+   <Line>kisfiadékat alattit fiainkat é illatja ni ifjan nini fiainkat is nénjét</Line>
+   <Line>kissé né nékik é fiakat kisfiait fiaidat kissé akként alakit ti tanit</Line>
+   <Line>kiskés alattit sandit kandiak kiskésit csakis ifjait infantilisan kisfiaidat</Line>
+   <Line>néki kinn fiaidat indit ifjaikat kisfiaidat nincs kisfiainkat csitt</Line>
+   <Line>aléltan sincs kilétét kékit indit illatja kintit kintit kétli ajtajait</Line>
+   <Line>sincs illa kétli akként ékit kiskésit kétlik é fiakat illatja ifjat</Line>
+   <Line>ifjan ti tanit lassanként sandit alakit kisfiait kisfiait kicsit kétlik</Line>
+   <Line>néki nékik kétli kint jé sincs fiakat idén alakit kinn nénjét kisfiadat</Line>
+   <Line>innét ajtajaikat fiaidat ajtajaikat kicsit itt is délit kilétét illatja</Line>
+   <Line>nincs fiait kicsit ifjat kisfiadékat kisfiadat ékit ifjait alattiakat</Line>
+   <Line>kétli fait télit lassanként indit kiskés fiainkat ifjat ékit fiakat</Line>
+   <Line>fiainkat jé ajtajaikat csakis ajtajaikat télit ifjakat kisfiadékat aléltan</Line>
+   <Line>és innét illatja és ajtajaikat kissé sin sincs itt kisfiadat fiakat</Line>
+   <Line>i kétlik indit kékit kisfiait kiskés akként kétlik innét délit</Line>
+   <Line>télit lassanként ifjait és i fiadékat nincs kinn innét tanit ifjainkat</Line>
+   <Line>i is innét aljit falit kisfiaidat ajtajaikat ajtajaikat akként</Line>
+   <Line>ifjait nincs ajtajait kicsit é ti fait kint aléltan lassanként ajtajait</Line>
+   <Line>kisfiainkat falit kisfiaikat néki alakit fait alias fait alattiakat kinn</Line>
+   <Line>akként jé kisfiaidat és innét kissé csitt kintit akként télit kisfiaidat</Line>
+   <Line>i tanit illa alias fiadat ifjaikat fiadékat fiakat sin kintit</Line>
+   <Line>fait fiainkat nénjét kétli sincs kétli aléltan csitt nini lassanként</Line>
+   <Line>idén nénjét innét falit é ajtajait ifjaikat ékit fiakat fiadat ifjan</Line>
+   <Line>indit indit ajtajaikat ifjat nénjét alias ni nénjét ajtajait illatja</Line>
+   <Line>kissé itt ifjait kinn alias kiskésit és kisfiadékat nékik kétlik kisfiait</Line>
+   <Line>indit kiskés né kétli alattit fait indit néki jé aléltan fait nénjét</Line>
+   <Line>fiaikat csitt illa fiadékat fiadékat lassanként kissé i tanit kiskésit</Line>
+   <Line>kinn itt fiait infantilisan kisfiaikat ajtajaikat i kilétét sin nénét</Line>
+   <Line>ni kisfiadékat nékik ti kisfiadat innét nénjét kinn sincs infantilisan</Line>
+   <Line>kisfiadékat kékit jé nénjét i tanit alattit nincs ifjan kisfiadat nénét</Line>
+   <Line>fait sicc is nénét ajtajait fait is fait csitt fiakat nékik kintit</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ve</NewCharacters>
+   <Line>félévenként vakit teljét fel idefenn tiédet kétlenie reccs eleinket lenn</Line>
+   <Line>se néked vele kétlette lettél vasit kétévenként kellenek tiedet</Line>
+   <Line>eleiteket kifejletté sincsen ellent kilencvenkilencfelé kevesen evettel</Line>
+   <Line>kellek tefeléd kellek teveled kevéssé felénk kilencévente ne ellened</Line>
+   <Line>éjjelente lennének le kettejét lenn kétletted kevesen efelett kétlené</Line>
+   <Line>esettel kétlenéd kilencedfél ellened recece évenként lennetek kivan</Line>
+   <Line>tente lennének tenéked kellett kiléteteket kellenek teellened kétlenie</Line>
+   <Line>kilencévente kevesli evettel e afelé kétleni kellettek levet fentit kétlenék</Line>
+   <Line>kétlettétek teljét idefel eleinket keveslene kilencvenévenként teneked kétlettétek</Line>
+   <Line>nincsen telente tiveletek kelleténél nejét elé fenn vice tv keveslitek</Line>
+   <Line>tivéletek nejeit vala kivannak lennének ellent kétletted ne ketté cselekedettel</Line>
+   <Line>kellenek rétese tivéletek eleiket kellenek félévente kellene nejét elsejét</Line>
+   <Line>tekintettel lenned esettel tavit tiellenetek jade léleken teveled idefel</Line>
+   <Line>reccs csendit kéne tekintetté eleit veletek veled velejét lettetek</Line>
+   <Line>kintieket kétleni kéne kellenél keveslened elejét tiellenetek idefenn</Line>
+   <Line>lentit fennen kevesen tekintetté kenekedtek kétletted vala csendesit</Line>
+   <Line>fennen ide istenveledet kellenénk nincsenek rétese kellenél lentit</Line>
+   <Line>kelleni lenn késeiek avval neki kétlenétek esetenkénti kétlitek tiveletek</Line>
+   <Line>kétlenéd lennénk keveslenie kellenél cselekedettel feléd ej cselekedetté</Line>
+   <Line>el ellene neked levelit tiéteket kétlenék eleidet kevesli telente</Line>
+   <Line>fennen elejét feletted elsejét avval veled innen kenekedtek idefel</Line>
+   <Line>tiveletek tekintetté elénk reteken kétlened éjjelente kettejét rétese</Line>
+   <Line>lékje kétlenetek avval evviva kenekedik kilencvenfelé kivéve kétlenék</Line>
+   <Line>kifejlettel csaléteken tieiteket ranettel teljét keveslenénk teveled tefeléd</Line>
+   <Line>reccs kétévente afelett kiléteteket kétlenénk ellened lent levet tiedet</Line>
+   <Line>levelit jelet sec félévente kilencvenetfelé kenekedik vidit ellened</Line>
+   <Line>lettetek félévente évenként nektek kvittek véletek sincsenek cselekedetté</Line>
+   <Line>nénjeit kétlené kevesli annalessé véteken kilencedfél éjente kilencvenévenként</Line>
+   <Line>kelleténél idefelé késeiek idelent tavit tiédet kevesen elénk felett veletek</Line>
+   <Line>nincsenek keveslettétek kétleni tetejét ellentestek léleken eleidet itten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>mh</NewCharacters>
+   <Line>kéthetenként valaha fejedelemen félhetente kilétemet hatévente missé kisfiaimat</Line>
+   <Line>valamint ihaj kevesleném hetvenhétfelé kevesleném nejeimet hiedelemen</Line>
+   <Line>héthetenként heli velem hatvanévenként ellenem miattam ejhaj hajdan kisfiamat</Line>
+   <Line>mecsetje vajmi missé elvénhedt hajdan lennem nemcsak miénket hej rejtelemen</Line>
+   <Line>emellett elhallik kelmed mintha ficamit kétlem énmellettem kilencvenhetenként</Line>
+   <Line>hah fiaimat semmisem kihalta mindannak hetvenfelé hathetente majdan</Line>
+   <Line>miattad hatvanévente méhese makettal héthetente kilencvenhétfelé félhetente</Line>
+   <Line>hetvenhetenként hetest kétlettem kehvé makettja temiattad kilencvenhetenként</Line>
+   <Line>hatvanhetente félelemen hah mellettem hanem ehetnékem amannak rejtelemen miatta</Line>
+   <Line>mint m kehhé mellette csaknem éhvel kihallik mialatt amiatt nejeimet</Line>
+   <Line>semmint alkalmasint majdcsak kilencvenhetenként imitt mindevvel mialatt</Line>
+   <Line>haséja makettja ficamit emitt almanacht miattam hajasak lennem hallik</Line>
+   <Line>héthetente hajdan emiatt m emiatt hathetenként hatvanan mellénk majdan</Line>
+   <Line>eleimet mentiek hetvenhetente ellenem hetvenkilencfelé amavval mellékneven</Line>
+   <Line>ml fiamékat mellette emide énmellém majdani majdcsak hajdanta kehhel</Line>
+   <Line>hivatva almanacht ellenem hadit miénket hatévente védelemen limessé</Line>
+   <Line>keveslenem mellet mettlachi miatti alkalmasint rekviemje kilenchetenként</Line>
+   <Line>miattad mindevvel élelemen amellett melléje mindenekfelett ama elemien</Line>
+   <Line>hatévenként havit melléje sejtelemen lm kéthetente félhetente mellette mentelemen</Line>
+   <Line>kilencvenhatfelé amint hivatva mettlachi ha emide ah imitt makettja hathetenként</Line>
+   <Line>alhatnékja temiattad vajha nemcsak ifjaimat temelletted késedelemen mellé</Line>
+   <Line>méhese majdaniak hetenként mellettit nejeimet ifjaimat kevesleném felnevelhetett</Line>
+   <Line>hatvanfelé halastavit ifjaimat ml makettja timellettetek keveslem majdani</Line>
+   <Line>amint lennem felettem kilencvenhatfelé madame kehvé hatfelé lm elmenetele</Line>
+   <Line>hatvanhetenként ejhaj eleimet mellékneven majdani nm majd énellenem felvehetett</Line>
+   <Line>mentesit majdcsak heven majdani min alhatnékja lennem mellékneven mivel</Line>
+   <Line>kilenchetenként mellétek emide temiattad kilétemet hatévenként haha énmiattam</Line>
+   <Line>havit hadd sem miénket hetvenévenként élelemen temelléd kihallik héthetenként</Line>
+   <Line>lm rejtelemen énmiattam limessé mettlachi hatvanhétfelé ihaj hetekfelé</Line>
+   <Line>hajasak kisfiamat fiamékat elmenetele menetele nm felvehetett alattam</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ro</NewCharacters>
+   <Line>jodidok carte ahova komondora halomon mocsokon cariessel mikorit érettetek</Line>
+   <Line>mivoltomat cos halottai mostanra cosec hatalomon akkoron héthavonta comtesse</Line>
+   <Line>no hajdanvolt odafenn calvadossal dalolta arrafelé érit derékit</Line>
+   <Line>hetvenhavonta koromja voltatok sakterja olefinek odalennének klorofillja hova</Line>
+   <Line>fiatokat citromleven holott lovasit rajtatok traktorosa kertesit rokonléleken</Line>
+   <Line>nofene rajtam trade narancsleven soha marokon falsarokon mellcsokoron</Line>
+   <Line>traktorosa carte vonalit akkor rétese sohse derékit csereteket oromon cirkalomon</Line>
+   <Line>teérted komondora mericskél volna villamosit melléirt sehonnan hintalovon</Line>
+   <Line>dartscal csakhamar amonnan fennhordja idestova veremen cariessel sokhavonként</Line>
+   <Line>odalennék klorofillal harmincévenként ifjaitokat ellenére fiaitokat hatvanhavonta</Line>
+   <Line>ikeren mostanra raviolija minderre krakélere férfiakat hétrét kertiek</Line>
+   <Line>monetarista teheren mindenhonnan kéthavonként timiattatok cseredet akkorra</Line>
+   <Line>volnék éretted ahol énértem elterjedhetett mikor merre monostora siralomon</Line>
+   <Line>sokévente terajtad ifjaitokat odairt érte karhatalomon tiértetek sorsot</Line>
+   <Line>harminchetente videojelet odavolna fillérje art ajakon alhatnékod amakkorra</Line>
+   <Line>facto teleirt éhomra emerre tilalomon teleholda calvadossal harmadévenként</Line>
+   <Line>kontinenset eredetté merrefelé cserekereskedelemen koktélje kiskereskedelemen</Line>
+   <Line>érettetek raviolijai sohasem diner raviolii ihatnékotok coki terajtad</Line>
+   <Line>amikorra rajta teremen olajit fiaitokat hajdanvolt ellenemre verset konform</Line>
+   <Line>odalettek sehonnaiak comtesse ahonnan stroke mistressé erdeinket fiaitokat</Line>
+   <Line>eredettel cos konstansot vederen idomit raviolii kétrét akkoron valamikorit</Line>
+   <Line>dalolta koktélje emekkorra torja mostanra sehonnét ekkori éterien fenomének</Line>
+   <Line>honnan recece anno akrilsavon ladikosa onnan amerre ellenetekre mellékvonalit</Line>
+   <Line>néhol karhatalomon hatvanhavonként honfiakat ahova alhatnékotok ihatnékom</Line>
+   <Line>kilenchavonként kéthavonként ahova kilencvenhavonként sokhavonta alhatnékod</Line>
+   <Line>jer sehonnan tonnatartalomon krotonsavon amarra éterien harmincévesforma</Line>
+   <Line>valahonnan halomon marsol mocsokon emekkorra coki lovasit amonnan énértem</Line>
+   <Line>amarra konkréten krakélere frissit forradalomon fintorit odalettem</Line>
+   <Line>koromja ikeren tialattatok kilencvenhavonta honn koromja erdeit eredetté</Line>
+   <Line>mindenesetre fékomadta sarokon vacokon kétrét raviolija honn ahol teleholda</Line>
+  </Level>
+  <Level>
+   <NewCharacters>gá</NewCharacters>
+   <Line>emeddig illojálisan meglenni igencsak lovagiaskodtak háromhavonként</Line>
+   <Line>meglenne sátora fogcsikorgatva nálamnál alkalomadtán mámorit hallatára</Line>
+   <Line>hidegétel igeneven integer image akárcsak videogenerátor rétegje sokadmagával</Line>
+   <Line>ámde meglennem hallatán mindmáig hatmilliárdan lg eleget égadta inadekvátan</Line>
+   <Line>máshová ringje koccintgat netalán rég volnánk ajakát tiirántatok meglenni</Line>
+   <Line>terád háromfelé mialánk ottjártakor látra meglennétek mégsem nemritkán</Line>
+   <Line>kelléktárit nálánál mégis meglennénk árokon sehová háromhavonta raktárit</Line>
+   <Line>magamagának máshonnét másodlata másmikor kontingenset avégett koccintgasson</Line>
+   <Line>netalán magatokforma látra lassacskán holtáiglan hátravoltatok magamaga</Line>
+   <Line>hatvanháromfelé fakéregen meglennénk lám hálaistennek másodlata némileg naivája</Line>
+   <Line>megvetettsége mindmostanáig legtetejét államkincstárit hátravoltam raktárit</Line>
+   <Line>tereád legeslegtetejét hátravolnál vállvonogatva mégiscsak ergo tarkállottak</Line>
+   <Line>háromévente megvoltak ameddig reátok ahová tárit manganátok kincstárit társit</Line>
+   <Line>ránk kvadránsan teáltalad megvoltak magát hátravoltam legeslegalját</Line>
+   <Line>annál nemritkán eladdig nálatok ideig kontingenset naivái hátit volnátok</Line>
+   <Line>vigalomon harmadjára államférfiakat ám kontingentál kontingentálja tarkállottak</Line>
+   <Line>tiirántatok forgottan kadávere hátra marginálisan koránt etnikailag reáliák</Line>
+   <Line>háromhavonta sikkantgasson eleddig megvetettsége almával ringje tinálatok</Line>
+   <Line>nemsokára mindhárman image kishatárforgalomon mindenhová háromhavonta</Line>
+   <Line>alját klorátok milliárdhavonta fennhangon ahová tarkálljanak sáncárokon</Line>
+   <Line>másvalamit virágcsokoron tealád sátoron névleg machinálja rágalomon mindenáron</Line>
+   <Line>égit rátok mostanáig kalcinálja volnál mindég akármint sikkantgat</Line>
+   <Line>villámoljon leghátra hátravolna mindig mindmostanáig tg sokadmagával ragtime</Line>
+   <Line>megvetettség nálánál mégse mégis reggelente aggodalomon mégiscsak odavolnánk</Line>
+   <Line>akkortájt lassacskán megvolnátok volnál istenáldottát nemrégen magamagának</Line>
+   <Line>általatok mindenáron méregen méltán hallatára megvetettség tájit nálatoknál</Line>
+   <Line>nohát netán nálánál legesleghátra meglennék iránta meglenned iránt</Line>
+   <Line>csillagja integráltsága dartscá hátraarcot nálatok vigalomon korrelál</Line>
+   <Line>villámoljon kvadránsot esetleg legkivált vállit nádora valahová hátravannak</Line>
+   <Line>regálé hatvanháromfelé tarkás legvégén náladnál másmikor eddigelé már</Line>
+  </Level>
+  <Level>
+   <NewCharacters>bp</NewCharacters>
+   <Line>polaroid legesleghamarábbit legesleglentebb sipogjanak leglassabbikat</Line>
+   <Line>camembert hetvennaponként beh legeslegbátrabbikat ropi pamfletja legeslegkevesebbet</Line>
+   <Line>bent bele legeslegderekabbikat továbbá alább verébfiakat lassabbakat</Line>
+   <Line>emerébb távolabb akképp stampedlije legesleglentebbit bátoron lopdossa</Line>
+   <Line>betegit legesleghamarább projektora billiomod legtovább legbeljebbieket</Line>
+   <Line>minap permanganát legkeletebbieket potroht legeslegbeljebbre kijjebbit</Line>
+   <Line>botcsinálta távolabb továbbra hétnaponta porhadtak korábbiakat ropija bereken</Line>
+   <Line>régebbieket abban elémbe sokpercenként bentieket pontoskodjanak legrégebbieket</Line>
+   <Line>elibétek hatpercenként alattomban pedofil pá legtávolabb placebo borit</Line>
+   <Line>harmincnaponta régebben legeslegtávolabbra gépiesit bármint legkorább minapit</Line>
+   <Line>emebbe félnaponta almába legeslegkevesebbet legrégebb belénk alapit</Line>
+   <Line>legeslegkevesebbiket legkisebbet elibé tibennetek elibénk bérmentve legbeljebbre</Line>
+   <Line>hamarább prorektora idébb patogén legeslegkeletebbieket blindre bátrabbat</Line>
+   <Line>legeslegkeletebbieket bárhonnét paskolja néhanapján tbc almába legeslegkeletebbieket</Line>
+   <Line>implicite meglepetve pianissimo pamlagja amodább keletebbit legkevesebbet</Line>
+   <Line>tibenneteket holocénban lassabbodjanak némiképp beleértve almában dédapát</Line>
+   <Line>ab nobilisan legkeletebbit legeslegbeljebbre kalaplevéve legeslegfeljebb</Line>
+   <Line>régebb legbátrabbakat párásodik partvonalit pallérja kebelen permeabilitása</Line>
+   <Line>bármeddig hamarabbiakat elibe sipogtak permeábilisan balfenéken mbar legeslegtovább</Line>
+   <Line>meglepetve háromnaponként párásodjanak énelébem régebb kompléja teelédbe</Line>
+   <Line>elibéd nemrégiben legfeljebbre párásodjanak verbálisan legjobbakat</Line>
+   <Line>hétnaponként chipssé mindebbe bárhonnét postalovon lejjebbit bárhonnét baloldalt</Line>
+   <Line>keletebbre partvonalit párverset semmiképp beh lappá empire legkorább arrébb</Line>
+   <Line>kábé naponként plakkal legeslegtávolabbiakat elémbe salabakterja</Line>
+   <Line>borsot provinciálisan elibéd mielibénk legeslegbeljebbit kempingel</Line>
+   <Line>arrébb legeslegbeljebbit baronesse baromon régebben világéletetekben</Line>
+   <Line>legesleghamarábbiakat kismértékben kisebbet idább borsot bátrabbat lentebbieket piff</Line>
+   <Line>krapekja legkevesebbet leghamarabbiakat milliárdpercenként bentit legtávolabbiakat</Line>
+   <Line>blindre legeslegkorábban édesapát befelé nemhiába inkább speciel monopoláris</Line>
+   <Line>bennetek primo kempingeljen sipogtak lábit birkaakolon palackolja librissel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>uq</NewCharacters>
+   <Line>juhhal magunkféle durr miau legutolját mániákusan turini magburokon</Line>
+   <Line>altocumulussal teremburáját q ruhatárit adieu paukolja laurinsavon naturáliák</Line>
+   <Line>rumbái coitussal kupeckodtak apjukat hurokon q bundermajomon aludttejet</Line>
+   <Line>stratocumulussal kutacskája fujj mialattunk hátul utasit streptococcussá bruhaha</Line>
+   <Line>legeslegalulra musicallel ablativussal utánig leghátulra orvul alhatnékjuk</Line>
+   <Line>mániákusan voltukat dédapjukat cirrussal orvul cumulonimbussal flottul</Line>
+   <Line>legaljukat joule legaljukat alattuk uralomon tanárurakat multipoláris tudtul</Line>
+   <Line>hidegmegmunkálás multikulturális megvoltunk legalul cumulonimbussal utánunk apjukom</Line>
+   <Line>nimbostratussal cirrocumulussá apámuram utol kutacskája fulminsavon nimbostratussá</Line>
+   <Line>legalulra uramfia után nálunknál utánuk purgál delirium streptococcussá</Line>
+   <Line>hátulját fondue árusit barbitursavon dauerja melegmegmunkálás cukrosit</Line>
+   <Line>apámuram alattunk fiamuram leghátul miattunk apjukom aljukat ugarja alul</Line>
+   <Line>kutacskái idusán csurig coccussal paukol csurig cum utánuk quattrocento</Line>
+   <Line>bujik rájuk ukmukfukk quattrocento adieu virágburokon turini figurácskák</Line>
+   <Line>adieu alhatnékunk ruhakapocson melegmegmunkálás stratussá polgárosuljon</Line>
+   <Line>legeslegalulra utánam hátulját stimulánsot cirrussal ruhatárit fordultában</Line>
+   <Line>utolját virágburokon q u bundermajomon korláttalanul pitbull uradalomon</Line>
+   <Line>legesleghátuljukat dauerja turini hátuljukat melegmegmunkálás kukucs uramfia cirrussá</Line>
+   <Line>juhhal dugig alájuk legesleghátuljukat legesleghátul hátuljukat rajtuk</Line>
+   <Line>megvoltunk nimbussá kupeckodjanak irántunk bajbajutottakat általunk kurjantgasson</Line>
+   <Line>purparléja paukol alájuk turini undorit pitbull rajtunk coccussal orvul</Line>
+   <Line>kukucs jutalomon csurom rájuk stratussá idusán paralitikusan kurjantgasson</Line>
+   <Line>undorit hátulra pfuj cumulussá aprajukat magburokon accusativussal juhhal</Line>
+   <Line>barbitursavon vanillincukoron unalomon ihatnékjuk opussal maradéktalanul alhatnékjuk</Line>
+   <Line>gaussal pocsékul aluliakat hátul alhatnékjuk miirántunk interruptussal</Line>
+   <Line>miattunk miutánunk trochaikusan kutacskája tudtul papundeklije indultában</Line>
+   <Line>kutacskája streptococcussal denique miután nubukja interruptussá aprajukat</Line>
+   <Line>ruhakapocson vanillincukoron kupeckodtak odavoltunk pfuj utolját mialattunk</Line>
+   <Line>ultima apjukat accusativussal parancsuralomon fuvolások lukacska purgálja</Line>
+   <Line>rajtuk általunk hurrá kukucs nubukja eljuthatott hidegmegmunkálás légiutas</Line>
+  </Level>
+  <Level>
+   <NewCharacters>íó</NewCharacters>
+   <Line>pulóverja hajóorrot legutóbb stíriai jóvátennie mócsinggal góóóóóól itthonról</Line>
+   <Line>bíránkat dettó lóttam rósejbnije milói kívántatik sodorítsa trillióévente</Line>
+   <Line>ím quattrocentóban módosit metabórsavon amattól hófedte trógerja</Line>
+   <Line>prímje kutatóteremen marósa rólad klinikopatológia harmincóránként</Line>
+   <Line>hónukat hátulról lóttunk jóvátetted amabból legutóbbit jóvoltát jóvoltukat</Line>
+   <Line>hínarasokat drótkapocson odaátról milliópercenként pedofília hármójukat</Line>
+   <Line>amattól almától savtalanít lótva csaó alól quattrocentóban íratik jókorákat</Line>
+   <Line>góóóóóóóóóóóóóóóóóól légifuvardíj ólomon góóóóóóóóóóóóóóóól magánosítása olcsóbbodik</Line>
+   <Line>akkortájtól ohó alóluk távolból góóóóóóóóóóól pótlékja lótunk millióhavonként</Line>
+   <Line>trillióan jóvátennél jóvátett ólomon októbristák abból jóvátenném csicsí</Line>
+   <Line>láthatólag millióóránként rólunk rólunk kóserul góóóól lóssál pácolódjanak</Line>
+   <Line>sombrerója amakkortól jóvoltodat alulról legeslegutóbb góóóóóóóóól trillióévente</Line>
+   <Line>taposómalomon utójáig pótlólag rósejbnije írel jóvoltunkat alólunk pentódája</Line>
+   <Line>órása lóttál bíráimat góóóóóóóóóól legutóbbit savtalanítja placebója</Line>
+   <Line>hidratálódása legeslegalulról hidratálódása pentóda távolról manírja borsóféregen</Line>
+   <Line>góóóóóóóóóóóóóóóóóóóóól fogadóteremen hajóvonták góóóóóóóóól góól lótnának futólag almáról</Line>
+   <Line>hónaljit billióóránként ától utólag ekkortól savtalanít lótnunk kísértettel</Line>
+   <Line>jóvoltából tartópeceken góóóóóóóóóóóól jól góóóóóóóóóóóóól góóóóóóól feloldódhatott</Line>
+   <Line>góóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóól magánosítása tartóhorogon órása lóttak trillióévenként góóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóól</Line>
+   <Line>lótnál utóbbit telkesítése ólit tialólatok jókorák mindattól góóóóóóóóóóóóóóóóóóóóóóóóóóóóóól</Line>
+   <Line>légiósbetegség millióévente énrólam hólepte pedofíliája sodorítja mócsingja</Line>
+   <Line>góóóóóóóóóóóóóóóóóóóól hónunkat kurírja kívántatik utóbb mindabból óránként kéntelenít</Line>
+   <Line>legeslegkorábbról prímje lóttunk bíránkat hajóhídit róluk mostantól nefrológia</Line>
+   <Line>ólomon góóóóóóóóóóóóóóóóóóóóóól pentóda dó billióévenként góóóóóóóóóóóól</Line>
+   <Line>jóvátennél góóóóóóóóóóóóóóóóóóóóóóóól mondhatnók pulóvere belevalóbb jóvátenni</Line>
+   <Line>jóvoltomat rugódjanak jóvoltomat hatóránként legeslegalulról alóla kreatívan</Line>
+   <Line>trillióévente millióhavonta í góóóóóóóóóóóól millióhavonta góóóóóóóóóóóóóóóóóóóóól</Line>
+   <Line>jóvátetted olcsóbbodjanak lívek improduktívan hohó jóvátette magánforrásból</Line>
+   <Line>énalólam lóttatok kutatnivaló millióévente kétpólusosság kétóránként</Line>
+   <Line>magánforrásból pianissimóban trilliópercenként millióévente lótna tímára híven</Line>
+  </Level>
+  <Level>
+   <NewCharacters>wn</NewCharacters>
+   <Line>mindvégig legeslegfentebbre trochaikusan kombinéja tanulóteremen oleanderja</Line>
+   <Line>máshonnét nemde magunkat keveslened általunk legeslegfentebbieket mindarról</Line>
+   <Line>leglentebb csupán paranoidan ennélfogva álltában nono keveslené nejeit</Line>
+   <Line>predestinálja félnaponta tinéktek vélelemen miután inklináljon énmellém nejét</Line>
+   <Line>mindhárman reggelente lótnia hétévente unionista igeneven legeslegkorábban</Line>
+   <Line>siettében kellenék magánerejét hatévenként kommutatívan ottan fejedelmien</Line>
+   <Line>legfentebbit mindabból husángja akkoron hárompercenként lassanként alássan</Line>
+   <Line>utánuk apránként nálatoknál koránt hétnaponta fertelemen permeábilisan</Line>
+   <Line>sehonnaiak kellenek predestinál lentieket mintha csirátlan vonalit énalám</Line>
+   <Line>mócsinggal almanacht borsóféregen mindhiába tanárurakat netán bátoron virágcsokoron</Line>
+   <Line>nimbostratussal harminckilencfelé donora nemrég tanulóteremen utánunk olvasóteremen</Line>
+   <Line>idefenn fenomének idefenn segedelemen pácienset annalessel konform harminckétfelé</Line>
+   <Line>mindenfelé kintre ehetnékje legeslegfentebbieket sipákoljon sokóránként</Line>
+   <Line>hátravolnánk narancsleven hétpercenként proletáruralomon precedenset holtáiglan</Line>
+   <Line>minduntalan néhanap siralomon felnevelhetett bérmentve elemien mikrotechnika</Line>
+   <Line>csupán magunkféle átellen kalcinál pontoskodik koránt meglennének megvolnék</Line>
+   <Line>metabórsavon megoldanivalónk nimbostratussá hathetenként ahonnan ólomon nékik</Line>
+   <Line>kismértékben étteremen mellénk pentatonikusan vajon sincsenek jókorán addiginál</Line>
+   <Line>meglennének fektében mindinkább tiellenetek étteremen immobilisan abban</Line>
+   <Line>hátravolna énfelettem kontóra hálóteremen fogadalomon hajdanán nono fertelemen</Line>
+   <Line>guillotine odakinn jelenlegit reggelente fentit permeábilisan premontreiek</Line>
+   <Line>hatnaponta holocénban vonóhorogon náluknál titokon megtanulnivalód fogadjisten</Line>
+   <Line>odalennék mindkét milliárdóránként neven technofóbia kéregen általunk</Line>
+   <Line>milliárdan sodoron karhatalomon neked momentán éterien ringje hétóránként</Line>
+   <Line>legfentebbre hetente hajdanta fuvalomon engem védelemen levélnek mindenhová</Line>
+   <Line>nimbussá jóvátenni véglegesen pártvonalit mindhárman stewardessé énvelem</Line>
+   <Line>ápertén sáncárokon kismértékben nincsen hatnaponta énalám gradienset</Line>
+   <Line>kendere megvolna hatévente alélhatatlan milliárdpercenként hetvenfelé</Line>
+   <Line>keveslenéd harmincévesforma énnálam nahát hátravannak nékem kalandora lentebbieket</Line>
+   <Line>holtomiglan csirátlan mellékneven hasmánt tenéked mindig lennék kontingentál</Line>
+  </Level>
+  <Level>
+   <NewCharacters>xö</NewCharacters>
+   <Line>jáspiskövön elfövöd pördít kölönce elfövi kifövöd mögöttetek benövök röntgene</Line>
+   <Line>tikörétek létrejönnöm görgetegkövön öcséteket létrejönnötök öregit létrejönnétek</Line>
+   <Line>ötvenfelé kemencekövön tönkremenne légcsövön mimögénk átnövitek végignövik</Line>
+   <Line>hatökörön kinövök legföntebb ötévenként följebb örömen körmöci tönkretennél</Line>
+   <Line>rubintkövön örven ötcentis elektroncsövön bérjövedelemen ötvenháromfelé</Line>
+   <Line>legeslegföntebbieket ötvenkilencfelé sötétell felfövöd mögétek turmixa tönkrementél</Line>
+   <Line>pöcökje röptét timfölden fölöttieket fölöttetek legföntebbit boltkövön</Line>
+   <Line>tönkretennék fövik öccseit markeráramkör öcséidet lenövöd mixere öcsök malomkövön</Line>
+   <Line>mögöttetek bergmanncsövön tönkremennem ötvenetfelé ötvennaponként körötte</Line>
+   <Line>létrejövök boltkövön ö temögéd köré határkövön kilencvenötfelé föléd öcséiteket</Line>
+   <Line>odanövöm sötétellje öcséimet ötvenóránként fölöttébb sötétellene lexikográffája</Line>
+   <Line>legeslegföntebbre föntebb tönkremennék növöm többhavonta ötvenháromfelé megnövök</Line>
+   <Line>végignövöd öccseiket lábujjkörömön macskakövön ördögadta égöven körötte</Line>
+   <Line>elfövik fölnövök csöppön átnövik övéiket pöfetegje tönkretenném ötvenötfelé</Line>
+   <Line>öccsét boltkövön sötétellje felnövöd körforgalomon ötcentis önmagát</Line>
+   <Line>föntebb sírkövön lenövöd létrejöttét fogkövön öccseit temögötted legföntebbre</Line>
+   <Line>legeslegföljebb önuralomon önmagukat föl létrejöttél köré jöve történelemen</Line>
+   <Line>tönkretenne elölit mögöttieket tönkretenne létrejöttem létrejöttetek kémcsövön</Line>
+   <Line>gödörön efölött legeslegföljebbit létrejöjj benövök elölit fölnövöm</Line>
+   <Line>öccseimet benövitek aköré földecskéik ötvenfelé lenövöd ötvenkétfelé többhavonta</Line>
+   <Line>mimögénk betölthetett tönkretenned sötétellte mixere föntieket felnövök</Line>
+   <Line>elnövitek tövit fölibéje öcsénket mellénövök legeslegföljebbit elölit</Line>
+   <Line>karöltve rövidtávon énmögöttem létrejönnél körbeirt önmagukat tönkremennénk</Line>
+   <Line>benövitek gödörön ránövök fölibétek legeslegelöl öcsédéket felfövi feketejövedelemen</Line>
+   <Line>tönkrementem növöm önnönmagukat öven öccseidet örömrepesve legeslegföntebb</Line>
+   <Line>többit fölnövök földen legelöl föl rövidell fölnövöm ötvennaponként</Line>
+   <Line>önmagunkat kölönc hatökörön tikörétek növöd pördít tifölibétek megfövik</Line>
+   <Line>kinövöd afölött tönkrementetek fölfövöm végignövitek ö békakövön hatökörön</Line>
+   <Line>górcsövön körtebokoron végignövi tönkretennék fölfövöm odanövöd létrejöjjek</Line>
+   <Line>fölém ötödfél látcsövön röntgene mögénk átnövik állatöven mögé legföljebb</Line>
+  </Level>
+  <Level>
+   <NewCharacters>õ\,</NewCharacters>
+   <Line>végignõj lentrõl felnõdd õalájuk fõleg körbenõjétek kinõne õmögéje õreájuk</Line>
+   <Line>ránõtted lenõvén fõnötök belefõjétek ránõtt mellõlieket lenõnöd kinõjetek</Line>
+   <Line>körbenõttelek megnõttél nõjél ebbõl elnõttek lenõnénk odanõnöm mellénõttem</Line>
+   <Line>fölfõttelek költõien kifõttetek alánõnél védõburokon tielõttetek felfõnek</Line>
+   <Line>elnõjed kifõjed benõjék fõném fölfõne felfõnétek kinõjetek fölfõnél</Line>
+   <Line>felfõttél belefõttétek õreá megnõnék fölfõttél legdélebbrõl másfelõl jövõbeni</Line>
+   <Line>odanõjem odanõtték benõjem nõné benõ kifõtték kifõve legfõképp átfõtted</Line>
+   <Line>emebbõl õirántuk átnõttétek mellõletek megfõjék odanõném belenõnék ettõl</Line>
+   <Line>lenõtte elnõtték elnõdd alánõnék tõletek felfõnöm felfõném átfõném átfõj</Line>
+   <Line>felfõne magánerõt elõl megnõjön alánõném átfõjön elnõj végignõje belenõttek</Line>
+   <Line>belenõj belenõjék megnõve megnõjék lenõj benõjem õfelségét felnõttetek</Line>
+   <Line>felnõném belefõttétek legkésõbbieket fölfõtte lefõjem felõlieket õstulokon</Line>
+   <Line>elnõnöd körbenõjél fölnõtték felnõdd felnõtted illetõleg fölfõvén odanõnétek</Line>
+   <Line>belefõnie mellénõjed lenõnénk elfõve végignõnöd elnõnék felnõné körbenõtték</Line>
+   <Line>fölnõjem ránõnétek belenõjél körbenõnéd benõnélek megnõné elõl felnõttem</Line>
+   <Line>kifõtt belõlem nõnötök felõlit lenõjetek legeslegbõvebbiket végignõnétek</Line>
+   <Line>odanõni elnõjed mellénõné lefõdd régtõl legeslegelõbbre átfõve odanõném</Line>
+   <Line>elnõnél fölfõnél felfõjenek átfõttetek vélhetõleg lenõjétek felnõttetek</Line>
+   <Line>ránõjem kifõnél tielõletek belenõjetek belefõjél megnõnélek körbenõtték</Line>
+   <Line>odanõjed végignõném nõtök elnõni felfõtök mettõl megfõjed végignõj õáltala</Line>
+   <Line>belenõnétek nõvén végignõnéd kinõje megfõjetek odanõjön odanõjem legelõbbrõl</Line>
+   <Line>kifõtte belefõnöm elfõnéd mellénõtök elnõjél felfõnöd fõjetek elfõjed</Line>
+   <Line>lenõnétek alánõve belenõné mellénõj belefõtök odanõnöd lefõjétek megfõnének</Line>
+   <Line>belefõtték õnálánál belenõttelek fölfõtök átnõnének legkésõbbieket körbenõj</Line>
+   <Line>kinõjétek belefõtök elfõném felnõnéd felfõvén õreája elfõjél elfõnéd alánõve</Line>
+   <Line>belefõjétek alánõnek fõnöm fölnõttem végignõnek lenõttetek alánõnek megfõjetek</Line>
+   <Line>végignõj elnõve átnõni megfõttek fölnõttelek felfõttetek benõné körbenõjön</Line>
+   <Line>fölfõnek átnõjön átfõjétek elfõnének fölnõttem ránõni elõfordulhatott</Line>
+   <Line>kinõnék felnõve felnõje legeslegbõvebben belenõjék odanõjem benõjem</Line>
+   <Line>átfõjetek bõvebben körbenõttetek megnõnének elfõjétek megnõdd átnõve tõkésit</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü\.</NewCharacters>
+   <Line>nélkül tüntetõleg körülnõnie felületet ühüm büdöskövön röhögtetjük</Line>
+   <Line>felnõjük körülnõjétek belülit borsfüvön kilétünket mögületek különmegállapodás</Line>
+   <Line>kéntelenítsük rostonsülten legeslegbelülrõl benõnünk végignõttük mimögülünk</Line>
+   <Line>elébük legfelülre körülnõtte fölfõjük alánõnünk röhögtessük kinõniük</Line>
+   <Line>legbelül õelõlük odalenniük külsõleg kívülre aggófüvön kifõniük körülnõjétek</Line>
+   <Line>felfõttük fölülrõl õmögülük mellénövünk felfõttünk küretje legeslegkívül</Line>
+   <Line>kifõttünk ekörül odanõttük fövünk kültérit megfõjük õmögüle legfölülrõl</Line>
+   <Line>õmögüle körülit belenõniük körülöttük fõttünk kéntelenítjük õmögülük</Line>
+   <Line>fölfõnünk lenõttünk tüdejét körbenõttünk ühüm mitõlünk megnövünk legvégül</Line>
+   <Line>felõlük függelemen elnövünk mielõttünk körülit körülnõjetek körülnõttem</Line>
+   <Line>fölnõttünk erdejüket tüdejét elõttünk átfövünk tönkretettük mindenüvé legeslegfölül</Line>
+   <Line>mellõlünk mögülieket õmögöttük körülnövünk mögül ránõttük felfõjük legkívülieket</Line>
+   <Line>tetõtlenül pördítjük mikrosütõ külkereskedelemen söprögetjük minekünk föléjük</Line>
+   <Line>düht elébük odalenniük mitõlünk körülnövöd mögüle körbenõnünk odalennünk</Line>
+   <Line>nénjüket lenõniük legbelülrõl átfõttünk ránõttünk legtetejüket mellénövünk</Line>
+   <Line>legeslegfelülrõl belenõttünk fölibéjük felnõjük õfelõlük nélkülünk nõttünk rüht</Line>
+   <Line>feléjük mögülük ránõnünk belülre különben fölülrõl megfõjük felnõnünk</Line>
+   <Line>fölibéjük körülnõnötök külsejüket söprögetjük elnövünk lívül eléjük legbelülre</Line>
+   <Line>kifõttünk körülnõjék átnövünk körülnõttél odanõttük parlagfüvön malacsülten</Line>
+   <Line>ígérgetjük fölöttünk pördítjük körülnõjetek kéntelenítsük tenélküled odalettünk</Line>
+   <Line>költögetjük végignõttünk mibennünk nõttünk nõnünk mellettük kellettünk körülnövik</Line>
+   <Line>elfõjük tücsökön kétlenünk ellenükre nélküled elfõttünk jóvátettünk</Line>
+   <Line>mögöttük legeslegkívülieket fõttünk odanõttük körülnõjed kellünk odalenniük</Line>
+   <Line>fõjük õfeléjük legeslegbelül végignövünk odanõjük tikörülöttetek tönkretenniük</Line>
+   <Line>jóvátettünk mögöttünk végignõniük legfelülre külteleken ehetnékjük tenélküled</Line>
+   <Line>átfõttünk õelibéjük fölfõttük elegünk mifelõlünk fölülirt mellénõnünk</Line>
+   <Line>tétessük odanövünk belülieket õfeléjük fövünk belsejüket füstcsövön megfõjük</Line>
+   <Line>körülnõnie jóvátettünk lefõttük õfölöttük legeslegbelül megnõttünk belülre</Line>
+   <Line>velejüket belenõniük megnõttünk körülnõ elfövünk tüdejét felfõttünk létrejönniük</Line>
+   <Line>körülnõttetek kétleniük körülnõttél õmögülük kifõnünk õérettük legkívülrõl</Line>
+  </Level>
+  <Level>
+   <NewCharacters>úy</NewCharacters>
+   <Line>világcsúfját nyilván nyolcvanhetenként ahelyett egybefõni egybefõje nagynénédéket</Line>
+   <Line>útit legmélyét nagybátyjaikat bátyjait túlnövi display toronyiránt</Line>
+   <Line>túlnõj málhanyeregen túlfõje soktrilliónyit nyélit akármelyeket túlfõne</Line>
+   <Line>harangtoronyon egyfelõl nyugatabbra lyukacskája egybenõném mindenhogyan hogymint</Line>
+   <Line>bátyámékat félennyi nyílsebesen sulyokon toronyiránt túlfõtök egybenõném</Line>
+   <Line>egybenõnötök ugyanettõl kanyarit lánykorában savanyúleves nagybátyáitokat</Line>
+   <Line>félennyi bátyáikat bátyádékat bátyáidat nyápican túlnõnétek nyolcvanhetenként</Line>
+   <Line>gyorsteheren jóvátegyél ugyanott súlyosodtak túlnõné megvagyok jóvátegyek</Line>
+   <Line>mindnyájukat újakéit kicsinylõleg egybefõjél gyapjainkat mindannyian túlfõnétek</Line>
+   <Line>egybenõnélek nyolcvanhavonta parittyakövön súlyosodtak ugyanennél nagyot</Line>
+   <Line>kegyelemen eredményeképp nyugatabbra egybenõtték amannyiunkat évkönyven</Line>
+   <Line>hányfelé legnyugatabbról hogyan nyitjukat egybefövünk túlfõnél nagybátyámékat</Line>
+   <Line>melyet évkönyven versenylovon újfundlandi éppolyat mihelyettünk tönkretegyük</Line>
+   <Line>édesanyát kétannyit málhanyeregen nagynénjeit antennatoronyon melyikünket</Line>
+   <Line>túlnõnöm legnagyobbikat akármelyikõnket hegyesit tönkretegyed cigánygyerekek</Line>
+   <Line>gyapját egybefõni gyakorlótanárjelölten túlnõjétek enyéimet body hatannyian</Line>
+   <Line>gyakorlótanárjelölten különágy nyálit negyedrét figyelemen tölgyen egyhangúlag túlfõnöm</Line>
+   <Line>anyjukom telephelyet kilencvennégyfelé ugyanekkor ugyaneddig félselyemen</Line>
+   <Line>hányasa ugyanannyiunkat amelyiküket körútit gyermekláncfüvön nagybátyáitokat</Line>
+   <Line>agyit egyfelé nyolcvanévente nagybátyádékat amily negyvennaponként</Line>
+   <Line>golyócskái legnagyobbacskát ehelyütt nyugatabbról atyjafiát ellenirányban</Line>
+   <Line>ugyanebben gyümölcsleven enyhén kölyökön múltkorában akárhányan menyeinket</Line>
+   <Line>nyélit túlfõjétek olyanabbat egybenõnöm latinkönyven négynaponta egybefõjön</Line>
+   <Line>nagyobbikat épphogy kicsinyleni amilyet túlnövitek egymásután semelyikõnket</Line>
+   <Line>enyhén gy együtt nagyritkán némelyikünket csekélylenünk negyedjére</Line>
+   <Line>amelyikõtöket akármennyiüket fogolyon kortyintson kilobyte túlfõnöm bármennyien</Line>
+   <Line>fátyolon nagybátyádékat agyit edényfülen ükanyját egybefövünk nyolcpercenként</Line>
+   <Line>hogymint lyukit túlnõttétek táborhelyet néhányat túlfõttük gyomortartalomon</Line>
+   <Line>akárhogyan egybefõjek évkönyven folyton királyfiakat aknatoronyon dédnagyanyát</Line>
+   <Line>ugyanebbõl gyárit negyvenkilencfelé túlfõnél nagynénémet átkelõhelyet pillanatnyilag</Line>
+  </Level>
+  <Level>
+   <NewCharacters>zû</NewCharacters>
+   <Line>szuperhatalomon tizenegyfelé véghezvinném hatszázan mindezét összenõném keresztirányban</Line>
+   <Line>közzétegyetek körömszakadtig beszédközben karamellizációja összenövöd paternalizmus</Line>
+   <Line>stratusszá megleszel szatyorja háromszólamúság szerintit vezetékneven visszanõni</Line>
+   <Line>egészségügyen koszekánsot negyvenedszeri tizenkilencfelé huszadjára elõnyöshez</Line>
+   <Line>szügyen ezóta monetarizmus észreveszitek mindezeket bluesszá pároztak</Line>
+   <Line>intézettel közzétenni lövészárokon egészségügyhez nyugtakönyvhez szeánszot</Line>
+   <Line>légideszant színtérit forrásmûvön konszignál huszonnyolcfelé véghezviszem</Line>
+   <Line>mozivászonon dédszüleinket közibé véghezvinnéd véghezvinnél mágnesezettsége</Line>
+   <Line>meggörbülthez útközben õrizetté visszanõnél legeslegészakabbra észrevesszük</Line>
+   <Line>televényföldhez égövhez magánszorgalomból legharcrakészebbet sertéssülthez szélesbítjük</Line>
+   <Line>megkövülthez dédszüleinket záróizomon szétfõvén mindezért mázit széjjelfõdd</Line>
+   <Line>szeretteimet malacsülthez szédülthez szûkkörûen mozivászonon szabadstílusú</Line>
+   <Line>liposzómája négyszöghez veszteg légzek kockáz pfujozzák szülõanyja terjengõshez</Line>
+   <Line>észrevesznek keresztülnõvén leghasznothajtóbbikat közénk leghosszabbikat</Line>
+   <Line>kilégzel pödrötthez ugyanazóta hozzánõnie mindezen szögen tiköztetek</Line>
+   <Line>szégyenlõsködik végzettel hatszázfelé végezetté számolókönyvhez hozzánõjél pipaszutyokon</Line>
+   <Line>kartonvászonon összenõném leszen keresztülnõjön dz többször visszanõttünk szakácskönyvhez</Line>
+   <Line>keresztülnõttelek véghezvitt tiköztetek kevésszer hozzánõnöd mûvit szerencsefiát</Line>
+   <Line>szûkkörûen kényszerit bõszhez uzsgyi széjjelfövünk orosztankönyven szemeregjen</Line>
+   <Line>szerelékje nimbostratusszá monetarizmusa húszhavonként sziromon széjjelfõnöm</Line>
+   <Line>szétfõnöm összenõttünk fatörzshez nyilvánosházit visszafele ötvenedszeri</Line>
+   <Line>oroszosítsa színtérit exitusszal összegyûjtötthez feltûnhetett leszel németkönyvhez</Line>
+   <Line>elemzéseképpen visszanõni vértezetté rohasztja gyászfátyolon érzettel kokszosítják</Line>
+   <Line>visszanõtted szemszögen azokat tõkeerõshez szárazfölden visszájáról közelebbieket</Line>
+   <Line>azonképpen visszanövöm hozzájárulhatott tönkretesz skanzene számat miniatürizálja</Line>
+   <Line>szájit záróizomon keresztülnõni vázlatkönyven hetvenedszerre tehozzádig</Line>
+   <Line>összenõdd környezetté visszanõnétek megesz szülõföldhez ezzé végignõsz</Line>
+   <Line>konszignálja porszenet legeslegszörnyebbiket nyûnél kazánkövön szexttel századszorra</Line>
+   <Line>közém káderoz térdeplõhelyzet szurokja émelygõshez legészakabbiakat</Line>
+   <Line>disznónyíró lebasz akármennyiszer bronzot felépülthez fuzzy leghaladószellemûbbet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>6758\-</NewCharacters>
+   <Line>zh-vá olykor-olykor dag-má km-rel mm-et q-val disc-jockey-vá h-vá</Line>
+   <Line>joule-lal kilenc-tíznaponta így-úgy sans-culotte-tá nm-rel szünös-szüntelen</Line>
+   <Line>össze-vissza s-et testestül-lelkestül három-négynaponta j-vé messze-messze</Line>
+   <Line>guillotine-ná km-ré sneff-féle réges-régi madame-má mademoiselle-lel k-val</Line>
+   <Line>kultúr- tsz-szel csinn-bumm gloire-ral lx-szal nyolc-kilencnaponta ki-ki</Line>
+   <Line>û-vé comtesse-szé l-t fondue-vé sz-t ha-rá dkg-mal empire-ral egy-kéthavonként</Line>
+   <Line>nyolc-kilencnaponként nyakra-fõre km-t rad-ná disc-jockey-val cal-val griff-féle sans-culotte-tal</Line>
+   <Line>törik-szakad közbe-közbe fireg-forog szõröstül-bõröstül cg-má dg-má ü-vel</Line>
+   <Line>mg-má kézzel-lábbal három-négynaponként öt-hathavonta nyolc-kilencnaponként</Line>
+   <Line>gouache-sal éhen-szomjan kilenc-tízhavonként már-már baronesse-szé három-négyhavonként</Line>
+   <Line>ml-ré sz-szé s-má öt-hathetenként nyolc-kilencévenként sz-szel icit-picit</Line>
+   <Line>hinta-palintát ny-t körbe-körbe véges-végig girbén-görbén kg-mal jóban-rosszban</Line>
+   <Line>fireg-forog on-line-nal pót- szja-val gmk-vá r-t curie-vé û-vé spray-vel</Line>
+   <Line>paff-féle griff-féle mm-ré kultúr- e-vé video- két-háromhavonként többé-kevésbé</Line>
+   <Line>l-lel s-sel ny-nyé comtesse-szé cal-val csicsíja-babája s-má alig-alig</Line>
+   <Line>firegtek-forogtak gy-vé s-t dkg-mal treff-féle zh-val miss-szel õ-vel sans-culotte-tá</Line>
+   <Line>dl-t öt-hathetenként mm-et empire-ral lm-né cl-ré ln-né dzs-vel diktum-faktum</Line>
+   <Line>d-vé hét-nyolcévente négy-ötnaponként s-sel öt-hatévente diktum-faktum</Line>
+   <Line>egy-kéthavonként cosec-sal u-vá csínját-bínját cos-szá s-má diribre-darabra kilenc-tíznaponként</Line>
+   <Line>kézzel-lábbal már-már gironde-dá szegrõl-végre nyolc-kilencévenként tél-túl</Line>
+   <Line>oeuvre-rel e-vel sz-szel s-sé empire-rá ingó-bingót ripegett-ropogott két-háromévente</Line>
+   <Line>lg-sal három-négyhavonta ripegnek-ropognak más-más egy-kéthavonként</Line>
+   <Line>gyógy- mikro- ty-vé kurtán-furcsán spray-vé egy-kéthetenként vitae-vel</Line>
+   <Line>sülve-fõve öt-hatnaponta tól-ig-gá kinek-kinek guillotine-nal z-vel iciukie-picike</Line>
+   <Line>gauss-szá öt-hathavonta stroke-kal s-sé nm-t cs-vel csára-hajszra síttak-ríttak</Line>
+   <Line>x-szé rad-ná v-vé pitteg-pattog guillotine-ná megabyte-tal camembert-ré</Line>
+   <Line>ny-nyel cs-vé tsz-t télen-nyáron egyedem-begyedem nm-t mm-ré kg-mal</Line>
+   <Line>kilobyte-tal zh-vá szkiff-féle w-vel négy-öthetente cal-vá ly-nal csínja-bínja</Line>
+   <Line>é-vé cm-t tyúkom-búkom szõröstül-bõröstül ész-szerû j-vel négy-ötnaponként</Line>
+   <Line>menet-jövet négy-ötnaponta ty-vel kézen-közön reggel-este éhen-szomjan rissz-rossz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>493210</NewCharacters>
+   <Line>0y 1rû ái1 z-\1 0ay 09\ 0ay 09\ 0ay 9f xí2 0 n1gch w1 4jó \x09</Line>
+   <Line>.3f 9f n1gch 0ay \h4 c-ö2 59y 0 o9g z-\1 70q \x09 z-\1 ú0h o9g c-ö2</Line>
+   <Line>o9g ú0h 09\ o9g bt1p ú0h bt1p 59y 4jó \x09 z-\1 1rû \3b 0 xí2 70q</Line>
+   <Line>v0 v0 09\ n1gch 9f xí2 ái1 o9g u3 09\ 70q 9f v0 1hó \x09 ái1 0y</Line>
+   <Line>70q u3 úp2 0ay 1rû z-\1 4t2 o9g .3f 1hó w1 0ay o9g 4jó 1hó 0ay ái1</Line>
+   <Line>\x09 ái1 xí2 0y \x09 o9g .í9 ái1 09\ o9g 09\ n1gch 9f 1hó ú0h 09\</Line>
+   <Line>úp2 1rû 4jó \x09 \h4 z-\1 \h4 09\ z-\1 09\ 0 úp2 bt1p 0ay .í9 \h4</Line>
+   <Line>ái1 .í9 4jó w1 ái1 \3b .í9 c-ö2 w1 1hó 0ay ái1 0y v0 ái1 o9g w1</Line>
+   <Line>0y ú0h w1 ái1 v0 xí2 1rû 9f 1rû c-ö2 2 n1gch ái1 c-ö2 09\ 09\ 2</Line>
+   <Line>u3 c-ö2 c-ö2 .3f xí2 \x09 0 0ay u3 bt1p ái1 0ay 0 2 1hó 1rû .í9</Line>
+   <Line>4jó c-ö2 xí2 \3b c-ö2 ú0h úp2 \3b u3 0 ái1 1hó úp2 v0 xí2 70q 4jó</Line>
+   <Line>1rû w1 0ay 70q o9g úp2 4t2 9f .í9 o9g 1hó n1gch úp2 4t2 c-ö2 ái1</Line>
+   <Line>0y 2 ú0h .í9 ái1 2 2 bt1p ái1 0y 0 ái1 0ay bt1p 0ay z-\1 o9g 9f</Line>
+   <Line>ái1 1hó ái1 úp2 1rû xí2 59y .í9 .3f 0 ái1 9f ái1 \3b 0 u3 4t2 ái1</Line>
+   <Line>úp2 9f .3f .í9 ái1 .í9 9f \x09 4jó z-\1 w1 ú0h 0y 0ay w1 09\ 1hó</Line>
+   <Line>o9g \x09 n1gch \x09 ái1 .í9 0y 59y o9g \x09 .í9 0y n1gch v0 70q</Line>
+   <Line>z-\1 c-ö2 0 70q o9g c-ö2 59y \x09 \x09 2 4jó c-ö2 09\ \h4 ái1 2 bt1p</Line>
+   <Line>ái1 c-ö2 c-ö2 59y ú0h \x09 ái1 0ay úp2 \x09 u3 ái1 v0 4t2 .3f 9f</Line>
+   <Line>0ay v0 n1gch u3 \x09 1hó ú0h xí2 xí2 z-\1 4t2 ú0h c-ö2 w1 1hó 0y</Line>
+   <Line>0y xí2 \h4 \x09 70q 0y xí2 \3b .3f 09\ w1 0 ú0h 0 v0 \h4 2 1hó</Line>
+   <Line>v0 \x09 59y 9f xí2 n1gch 0ay 09\ \x09 1rû w1 c-ö2 u3 .í9 u3 70q</Line>
+   <Line>4t2 70q ú0h \x09 ú0h 4jó bt1p o9g ái1 0y úp2 \3b 2 .í9 úp2 z-\1</Line>
+   <Line>úp2 4jó n1gch o9g 1rû 0y \3b z-\1 9f n1gch c-ö2 1rû v0 9f bt1p úp2</Line>
+   <Line>70q w1 n1gch ái1 xí2 2 0 09\ o9g 0 \3b .í9 0y 0 0y w1 70q 9f 0 0</Line>
+   <Line>4t2 u3 4t2 \3b u3 \h4 ái1 4jó c-ö2 u3 ú0h 4t2 \x09 v0 w1 u3 4t2</Line>
+   <Line>9f 2 n1gch c-ö2 \h4 2 09\ n1gch .3f v0 úp2 4t2 1hó \3b bt1p .3f</Line>
+   <Line>\h4 c-ö2 ú0h o9g n1gch 09\ z-\1 1rû 0ay v0 ái1 w1 úp2 4t2 úp2 \h4</Line>
+   <Line>1rû ái1 z-\1 59y 70q 1rû \h4 o9g 9f 9f 0ay 4t2 0ay 0y 0y 9f .3f</Line>
+   <Line>0y z-\1 09\ z-\1 n1gch ái1 9f 0 xí2 4jó u3 w1 ú0h úp2 xí2 09\ \h4</Line>
+   <Line>1hó u3 70q o9g .í9 xí2 9f w1 4t2 \h4 n1gch \x09 2 o9g .í9 0y 0y</Line>
+  </Level>
+  <Level>
+   <NewCharacters>AÁBCDE</NewCharacters>
+   <Line>Cézanne-nal Bell-lé Deutschhá Benzzé Cervantessel Diderot-vá Cervantes-szel</Line>
+   <Line>Dunaferré CD Dürrenmattal Bonn-nál Apollinaire Csecsenfölden Apollinaire-rel</Line>
+   <Line>Anonymusszá Básthy Deutschcsal Churchillel Damjanichhal Apple-t Bajkál-tavit</Line>
+   <Line>Airessé Apple-et Dunaferré Bangladesszé Cambridge Diderot Diderot-vá</Line>
+   <Line>Brahmssá Boole-lá Cambridge Camus-vé BBC Apache-csá Aral-tavit Berkeley</Line>
+   <Line>Accessel Benzcé Bordeaux-val Beatlessel Cromwell-lel Bretagne-nyal Apple</Line>
+   <Line>Bastille-jal Barossal Amazonassal Boyle Cannes-nel Celsiussá Clemenceau Báthory</Line>
+   <Line>Balzaccal Básthy Cambridge-t Baross-sal Apollinaire-t Apple-lel Debussy</Line>
+   <Line>Airesszé Brahmsszal Bézier Comeniusszal Böllé Baudelaire-t Arkansassal</Line>
+   <Line>Engelssel Allaht Adobe Dürrenmattól Cromwell-lel Dallasszá Benzcé Erazmusszá</Line>
+   <Line>Apple-lel Candide-dá Caracassal Appalache-t Antoniusszal Beckett-té Basické</Line>
+   <Line>Beckett-té Beckett-té Braille-já Basickel Antall-lá Debussy Accessel Antoniussal</Line>
+   <Line>Dessewffy Bangladessel Anonymusszá Cervantesszé Bonn-nál Cervantessel</Line>
+   <Line>Arkansassá Berkeley Cerberussal Erazmusszal Bordeaux-val Erasmusszal Apple-et</Line>
+   <Line>Amazonasszal Appalache-csel Candide-dal Bonn-nak Catullussá Appalache-csel</Line>
+   <Line>Babitscsal Brahmsszal Aral-tavit Damjanichcsá Baudelaire-rel Deutschcsá</Line>
+   <Line>Cousteau-val Brahmssá Damjanichcsal Claudiussá Basické Adobe-vá Clemenceau-val</Line>
+   <Line>Benzzé Delaware Dallassal Böll-lé Angelesszé Dunaferrel Bastille Cauchy</Line>
+   <Line>Broadway Esterházy Danubiusszá Apache Dallasszá Dessewffy Caracasszá</Line>
+   <Line>Cambridge-dzsé Bell-lel Dickenssé Antoniusszá Candide-dá Diderot-val Baross-sá</Line>
+   <Line>Baltimore-ral Bézier-vé Bordeaux Adobe Caracassá Apollinaire-rel Csecsenfölden</Line>
+   <Line>Corneille Anonymusszá Dickensszé Broadway ABC Apache-vel Dürrenmattá BBC</Line>
+   <Line>Bush-sal Babits-csal Airessé Dürrenmatt-tal Babits-csal Corneille-jé</Line>
+   <Line>Anonymussal Appalache-csé Angelessel Apollinaire Dunaferrel Comeniussá Dunaferr-ré</Line>
+   <Line>Catullusszal Disney Batthyány Dickenssé Balzaccal Cervantessel Bonaparte</Line>
+   <Line>Böllé Boole-lá Baudelaire-ré Diderot-vá Bangladessé Antoniusszal Barossal</Line>
+   <Line>Bacchussá Caracassá Apollinaire-et Buday Claudiussá Becketté Churchill-lel</Line>
+   <Line>Corneille-jel Apple-lel Cervantesszé Básthy Baltimore Deutschcsá Apache Dante</Line>
+   <Line>Celsiusszal Achilles-ínit Balzacká Candide-dá Descartes-tal Csáky Cadillackel</Line>
+   <Line>Comeniusszá Cervantessé Corneille-jel Appalache-t Dallasszal Dürrenmattól</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ÉFGHI</NewCharacters>
+   <Line>Falstaff-fá Hadrianusszal Grimmé Fayette Hertzzel Illinoissal Huron-tavit</Line>
+   <Line>Hendricks FBI Grazzal Ft Falstaff-fal Ikarussal kHz-cé Ferenczy Holmessal</Line>
+   <Line>GIF-fel Ft-tá Grazcá Hz-cé Holmessal Hermannak Hermannal Hz-cé CIA-vá</Line>
+   <Line>pH-val Grazzal Horthy Horatiussal BCG Huron-tavit Falstaffá Grazzal</Line>
+   <Line>Ikarussal Hadrianussá Hoffmann-ná Flaubert-et Hoffmann-nal GIF Hunspell-lé</Line>
+   <Line>FBI Hz GB-tal GIF-fé Hadrianussá Hermannal I Fourier FBI-t Hermite</Line>
+   <Line>Gaulle-lal Hoffmanná Godó FBI-jal Hoffmann-nal Hermanná Hermannak Hermann-nal</Line>
+   <Line>EEG Gaulle Ikarusszá Fayette-té Hoffmann-ná Fermat-vá Hunspell-lé</Line>
+   <Line>Glasgow-val Hadrianusszá CGI Falstaffal Hoffmannal Faraday BCG CGI-vel Illinoisszá</Line>
+   <Line>Ikarusszá Ganzcá Hadrianusszal Horatiusszá Faraday Galápagosszal GB-tá</Line>
+   <Line>BCG-vé Gyulay Flaubert-et Horatiusszal Horatiusszá Gyõrött GB Galápagossal</Line>
+   <Line>Hilzinger Fermat FBI-já Grazcal Hoffmanná Hermann-nál Illinoissá Goldman</Line>
+   <Line>Ganzzal Flaubert-rel Greenwichcsel Galápagosszal Gaulle-lá Hermann-ná</Line>
+   <Line>I Hermann-nál kHz-cé Hertzzé Flaubert Illinoissal Greenwichcsé</Line>
+   <Line>Glasgow-vá Hermanná Ganzcal Falstaffal Fayette Illinoisszá Greenwichcsel</Line>
+   <Line>CGI-vé Illinoissá Hoffmann-ná FBI-já Fourier-val Goldman Halácsy Greenwichcsé</Line>
+   <Line>Glasgow-val Hampshire Francisco- CIA GB-tal EEG-vel Gyõrött kHz-cel Fontaine-nel</Line>
+   <Line>Hadrianussal I Flaubert-rel Holmessal Hadrianussal Galápagosszá Fourier Goldman</Line>
+   <Line>GB Ganzcá I GB-tá Falstaffal Greenwichhel Geiger Hadrianussá Fayette-tel</Line>
+   <Line>Falstaff-fal CGI-vel Ft-tá Hermannál Hunspellé Hz Hunspell-lel Fayette Galápagossal</Line>
+   <Line>Holop Ikarussal Ikarusszá Flaubert-ré Illinoisszal Ganzzal Grimm-mé</Line>
+   <Line>Hermann-ná Fontaine Ganzzá CGI Grazcá Fejérmegyei Ganzcal Greenwichhé Flaubert-t</Line>
+   <Line>Fontaine Flaubert-et Fontaine-né Ganzzá Franciscói EEG-vé Havasalföldhez</Line>
+   <Line>Ganzzá Holmesszal Huxley Fourier-vá Falstaffal Falstaffal Fontaine</Line>
+   <Line>EEG Ganzcal Greenwichcsé Halácsy Galápagossal kHz-cé Hunspellé Gaulle-lá</Line>
+   <Line>Ikarusszá Galápagossal CIA-vá Franciscói Grazzal Illinoisszá Hoffmann-ná</Line>
+   <Line>GB Hertzzel Huron-tavit Hampshire Gyõrött Havasalfölden FBI-t Hermite</Line>
+   <Line>Ferenczy Ganzcá Huron-tavit Grimmé Hertzzel Ganzcá CIA-val Hadrianussal</Line>
+   <Line>Hz-cel Grazzá Hunspell-lé EEG-vé Hermann-ná Illinoissá Ferenczy Flaubert-et</Line>
+   <Line>Hermite Greenwichcsel Fehérvárott Glasgow-val GIF-fé Grimmé Ikarussá</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ÍJKLM</NewCharacters>
+   <Line>Macintosh-sal Maxwell-lel MDF-fel Mac Los FM-mé Mercedessel Mlle Matolcsy</Line>
+   <Line>Lagrange hL-t BM hL Lagosszal Janusszal Mrd Marseille-jé Möbiusszal Julianusszá</Line>
+   <Line>Leibnizcel Manná Mandrake-ké Kirchhoffal Manche Manná KFKI-vá Gay-Lussackal</Line>
+   <Line>Keatsszel La Mannak Laplace-szá Lucullusszá Mercedessé J-lal KDE-vel Marseillaise</Line>
+   <Line>Julianussá Lucullusszá Joyce-szal Lagrange-zsal MDF Lucullusszá Lagosszá</Line>
+   <Line>Monet-val GM-mel Marshall-lá Monet-vá IM EKG-vá Leibnizcé Mac Gay-Lussaccal</Line>
+   <Line>Macintosh-sá Macintosh-sá ECDL Maine Malthussal LIII Lagrange-zsá Macintosh</Line>
+   <Line>Julianusszá IM-mel Lagrange hL-ré Janus-szal hL-et J-lá Lagossá Maupassant-ná</Line>
+   <Line>Lagossá Madáchhá Matolcsy Janussal Marino- Manche-sá Mrd Kölcsey Mauritiussá</Line>
+   <Line>MEK-ké Malthussal Madáchhá Livingstone BM Mona Malájfölden EKG Melbourne-t</Line>
+   <Line>Gay-Lussaccal Manet Manet-vá Myspellé Malthussal ECDL-lé J-lal MDF-fé Gay-Lussaccal</Line>
+   <Line>IBM-mel Laplace-szal Macintosh-ot KGB-vé Karinthy MB-tá J-lá Maxwell-lel</Line>
+   <Line>Manet MEK-kel Mann-nál FÁK Kováchcsá Joyce-szal IBM Janus-szal Kaposvárott</Line>
+   <Line>Marseille-jel Mezõfölden LIII KFKI-val LE-vé Melbourne Lebesgue Matolcsy Massachusettssé</Line>
+   <Line>Jamessel ECDL Kováchhal FÁK-kal Maupassant KDE-vel Marseille-jé Mann-ná</Line>
+   <Line>Marseillaise Melbourne-nel Madáchhal Marshallá Mindszenty Mariotte IBM Gay-Lussackal</Line>
+   <Line>Marseille-jé KDE-vel Kaposvárott Myspellel Manná GM-mé BM Julianusszal Mayer</Line>
+   <Line>Mercedessé Lagosszá Jamessel La Lagrange GM-mel Livingstone-ná Kaposvárott</Line>
+   <Line>Loire Melbourne-t IM KDE Malájfölden Matolcsy Mann-nál Maupassant-ná</Line>
+   <Line>Mac Mac-kel Mauritiussal Liviussá Maxwell-lé Möbiusszal Mannak Lappfölden</Line>
+   <Line>Linzzel Lavoisier-val Malthussal Melbourne-nel MHz Marshallal Julianusszal</Line>
+   <Line>Livingstone-ná Marinói Lappföldhez Mannal Mannál Kiss-sé Linzcel MHz-cel Marseille-t</Line>
+   <Line>Maine Malájfölden Mona Larousse Leone Marshall-lá Mann-ná MEK-kel</Line>
+   <Line>Monte Komensky Manet BME-vel Janeirói Macintosh-sá Joyce Manche FÁK</Line>
+   <Line>Maxwell-lel Montaigne ÉK KFKI-val Lagrange-zsal Malthusszal Janus-szal kJ</Line>
+   <Line>Lucullussal IBM-mel Mannal Mauritiussal Mariotte Mylord Linzzé Montesquieu</Line>
+   <Line>Louvre-ral Manche-sá MÉH IBM-mel Montesquieu Mrd MEK-ké FÁK-kal GM-mel</Line>
+   <Line>Mauritiussal ECDL-lé Manná Madáchcsá Myspellé J-lal Lagossal Möbiussá Mercedesszé</Line>
+   <Line>hL-et Liviussal Möbiussá FÁK Gay-Lussaccá BME hL-ré Mac Macintosh-sá</Line>
+   <Line>Mandrake-kel Joyce-t ECDL-lé Lagrange KFKI MHz-cé Melbourne Macintosh-t BME</Line>
+  </Level>
+  <Level>
+   <NewCharacters>NOÓÖÕ</NewCharacters>
+   <Line>OpenOffice Ovidiusszá DNy Nautilussá Ny MOL Onyega-tavit Onyega-tavit Naszódi</Line>
+   <Line>Neumann-nak MOL Ovidiussá OOo KOffice-t KÖM Office OpenOffice-t DNy DNy-tal</Line>
+   <Line>GNOME-má ÉNy Nautilusszal Ovidiusszá MOL-lá Ovidiusszal Netscape-pel</Line>
+   <Line>Ny MNB-vé KÖM-mel DNy Ontario-tavit Nautilussal KOffice-szal ÉNy-tal</Line>
+   <Line>Nautilusszal Neumanná Netscape-pé KOffice MNB Office-szá OpenOffice-szal</Line>
+   <Line>OOo-vá OpenOffice-t KOffice-ot Ny MOL Ny MNB-vé Ovidiusszá MOL-lá OpenOffice-ot</Line>
+   <Line>KOffice-ot MOL-lá Nádasdy Nautilusszá KÖM-mé Netscape-pé DNy-tal MNB-vé</Line>
+   <Line>Neumann-nak Noll Ny-tal OKJ-val Ovidiusszal Neumanná MNB-vé Netscape Office-t</Line>
+   <Line>Nautilussal Ovidiusszá Nautilussal MNB-vé Neumann-ná OKJ-vá HÖK-ké OKJ-vá</Line>
+   <Line>Nautilussá Neumannal NDK KÖM-mé Ovidiusszal N-ná OpenOffice-szá MNB Ovidiussá</Line>
+   <Line>OpenOffice-ot N DNy OOo- DNy-tal KÖM-mé N-ná OOo KOffice-ot MNB-vé GNOME-mal</Line>
+   <Line>KOffice-szá NDK N Nautilussá KÖM Ny DNy NDK-val N-ná OpenOffice-ot ÉNy-tal</Line>
+   <Line>Office-ot Netscape OpenOffice-szal Nautilussal OKJ OM Netscape Nautilussal</Line>
+   <Line>KOffice-t OpenOffice Neumannál KOffice-szá OM NumLock KÖM-mé OOo-val Office</Line>
+   <Line>Netscape Neumannal DNy ÉNy Németalfölden Ny-tá Otto-féle Ny-tá HÖK-kel</Line>
+   <Line>Neumannak Ovidiusszal KOffice-szal Németalfölden KOffice Ny-tá Nautilusszá</Line>
+   <Line>Neumannal N-ná KÖM Németalfölden KOffice Nautilusszá N-ná OKJ-val Neumann-nal</Line>
+   <Line>Netscape-pel KOffice-t Netscape OM-mel MNB OOo- Office-t HÖK-kel MNB-vel</Line>
+   <Line>Ovidiusszal Office-szá OKJ-val Naszódi Naszódi Ontario-tavit MNB-vé OpenOffice</Line>
+   <Line>ÉNy-tal MOL-lal Németalföldhez Neumannak Ontario-tavit DNy HÖK-ké GNOME</Line>
+   <Line>NumLock OM-mel Onyega-tavit Nautilussal Office-szá OpenOffice-t MNB-vé</Line>
+   <Line>Office-ot MOL ÉNy-tal HÖK-ké OOo MOL-lá MOL NDK-vá Noll Office Ny OpenOffice-t</Line>
+   <Line>GNOME Neumannal NDK NumLock Ovidiussá Nádasdy Netscape Németalföldhez</Line>
+   <Line>DNy-tal Office-ot HÖK-kel KOffice-szá Neumanná OpenOffice-szá Office-szá</Line>
+   <Line>Neumann-nal KOffice OM-mel MOL Office-szá MNB-vel MOL-lá OKJ-vá OOo Office-szal</Line>
+   <Line>OKJ ÉNy Németalfölden OOo- KÖM OpenOffice Ovidiussá HÖK-kel Ovidiussá</Line>
+   <Line>Ovidiussal Neumannal Ny-tá OpenOffice-ot OM-mel OOo-val Noll MNB-vel KÖM</Line>
+   <Line>DNy KOffice-ot KOffice Neumann-nál GNOME-mal Neumannal HÖK-kel MNB-vel</Line>
+   <Line>OpenOffice-szá OOo OpenOffice OM-mé OOo Neumann-ná NDK-val OOo-val ÉNy Ny-tal</Line>
+   <Line>OM-mel N GNOME Neumanná Netscape-pé OKJ-vá KÖM OOo-vá Netscape-pel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>PQRST</NewCharacters>
+   <Line>Rubenssé LGPL-t Rabelais-vá Pliniussal HTML-lé Tallinn-nál API-val Rimbaud-vá</Line>
+   <Line>Texassal SMS-sel StarOffice Provence-szal Pannonius-szal Tacitusszal</Line>
+   <Line>Rabelais-val Scottól ASCII DNS Philipssel OTP SOS-sel DOS-szal Tellé Széll-lel</Line>
+   <Line>Philipssé Suriname-mal Rimbaud-vá PHP-val ISDN Panasoniccá Provence ASCII-val</Line>
+   <Line>JATE-vá Sztevanovity Slackware-ré Sienkiewiczcsé ISBN-nel Peugeot-vá</Line>
+   <Line>Rimbaud Rimbaud-vá Rolls-Royce-szal Riemannak BTK-vá Rousseau-vá Timesszá</Line>
+   <Line>OOP-vé APEH-há Philipssel Richelieu-vé ORFK BRFK-val HTML-t Paulói</Line>
+   <Line>Remussá Richelieu MIÉP-pel Paracelsusszá Pannoniussá ANSI-val RAM APEH-hel</Line>
+   <Line>ISDN-né ISDN-nel LSD FreeBSD-vel Slackware-ré Traianussá Remusszal OTKA-vá</Line>
+   <Line>SuSE-vá GPL-lé Tellé Riemanná NATO Seychelle FreeBSD-vel Tiberusszá</Line>
+   <Line>Pa-lal CSS-et GPL-lé FKGP-vé Rico- OTP-vé DDT SI-vé APEH-t RNS Riemann-nal</Line>
+   <Line>Tacitusszá Straussal DNS-sel Rabelais-vá DTD-vé Richelieu Rolls-Royce-t</Line>
+   <Line>Québeccé Pilinszky Pa-lal Paracelsussá Québeckel Pétervárott PhD-val</Line>
+   <Line>LGPL-t KTM-mé Tiberusszá NAT-tal Texasszá Tallinn-nak Sorbonne-nal</Line>
+   <Line>OTKA-vá TDK-val ISO-val GATE GATE-vá Qt Sienkiewiczcsé KGST-vé GPL-lé</Line>
+   <Line>ADSL OOP Sorbonne SQL-t CD-ROM-mal Sydney ORFK APEH-hal ANSI FreeBSD-vé</Line>
+   <Line>Riemann-ná Russell-lal Sienkiewiczcsé ASCII-val Tallinn-nal Talinnál GTK</Line>
+   <Line>Shaw Slackware Shaw-vá Poe-vá DDT Renault-val Toulouse Texassá Sir</Line>
+   <Line>TIT-té Tallinnal Scott-tá Székesfehérvárott Titaniccá Peugeot-vá Robespierre-rel</Line>
+   <Line>API Philipssel Texassá MTI-vé Renault-vá CSS-et SOS-sel CSS-et GDP-vé</Line>
+   <Line>KDNP-vé Tallinnal TIT-té Spartacusszal Qt-vel Russellal Texasszal TBC-vé</Line>
+   <Line>HTML-t GPL-t ELTE Renault-val Rico- ORFK API-vá SOS Quijote Pannoniusszal</Line>
+   <Line>NASA-val ANSI Russellal Paraguay FKGP Riemann-nal Timesszá Sienkiewiczcé</Line>
+   <Line>Phare Tiberussal LGPL-t PIN-nel KDNP-vel BRFK-vá Rico- TIT-tel Paracelsussá</Line>
+   <Line>ISDN-né Sierra Paterson Siemensszel JPG SQL-lel ISBN TB Sao Russellá</Line>
+   <Line>OTP-vé Racine-nal Rubenssel GTK-val Rico- Tellel PDF-fel Phare CSS-sé</Line>
+   <Line>Pannoniussal Renault-vá JPG-vé Tallinn-nál Scottól Traianussá Seattle-lel</Line>
+   <Line>Shakespeare-t Timesszal Timessal MTI APEH Tallinnal Romulusszal PhD Paulói</Line>
+   <Line>tRNS tRNS BMP HTML-et GPS-szel RAM-má Spartacussal BTK Renault-val</Line>
+   <Line>GPL-lé GDP Panasoniccá Tartuffe-fé DNS-sel ELTE-vel Siemensszel Russell-lal</Line>
+  </Level>
+  <Level>
+   <NewCharacters>UÚÜÛV</NewCharacters>
+   <Line>EU UltraSPARC V V-tal UltraSPARC UNICEF-fel Versailles-t UNICODE</Line>
+   <Line>Voltaire-rel ÁVH-vá URH-val BKV MÁV HÉV Vilniussá MALÉV-vá MALÉV-val BNV-vel</Line>
+   <Line>VIT MÁV-vá EU-val UltraSPARC-ká EU-vá DVD-vé HÉV-vel Vámbéry USA-val</Line>
+   <Line>eV Vergiliusszá BNV-vé Versailles MALÉV-val HVG ÁVH-vá Vass-sal</Line>
+   <Line>ÁVH-val Voltaire-ré eV-tal Vilniusszá LVII Versailles-jal MÁV-vá DVD-vel</Line>
+   <Line>UEFA-vá Versailles-já UEFA IV USA-val GUI SVG-vel IV UEFA-vá BKV-vá</Line>
+   <Line>MTV UNESCO-vá LVIII ÁVH-val SVG-vé eV-tá UEFA Virgin-szigetekit</Line>
+   <Line>Vilniussal Voltaire UNESCO-vá IV UNICODE-dal MÁV-vá Vary ÁVH-val eV-tal</Line>
+   <Line>MÁV-vá Vilniussal BKV VI Voltaire Valéry Vesta-szûzit MÁV-vá V-tá VIT-té</Line>
+   <Line>DVD-vel USA-val UEFA-val eV-tal VIT-tel UNESCO-vá UEFA-val ÁVH-vá UltraSPARC</Line>
+   <Line>BKV ÁVH-val EU-vá MALÉV-val SVG Versailles-jal GUI-val UNICODE-dá</Line>
+   <Line>MALÉV-val HIV BNV-vé BNV Versailles-t PVC-vel Valéry HVG-vel Vass-sal</Line>
+   <Line>Verlaine-nel EU-val Vilniusszal Voltaire-rel PVC-vé BKV-val Voltaire-rel</Line>
+   <Line>BNV Verlaine Versailles-já Vörösmarty SVG-vel GUI Vilniusszal Vörösmarty</Line>
+   <Line>MALÉV EU-vá Voltaire-rel UHU HIV UNICEF-fel ÁVH eV Voltaire-ré PVC-vel</Line>
+   <Line>UltraSPARC-ká Voltaire-et USA-vá MALÉV MALÉV-val MALÉV-val DVD USA-val MÁV</Line>
+   <Line>BNV-vé MALÉV Vergiliusszá Vergiliussá URH-val Versailles-jal LV HÉV-vel</Line>
+   <Line>MTV-vel EU-val Voltaire-ré Vilniusszal UNICEF-fé BNV-vé Vergiliussá</Line>
+   <Line>kV-tal UNICODE-dá kV Voltaire-ré VIII UHU LVI LVI Voltaire-et VI LVII</Line>
+   <Line>BKV-vá URH Vilniusszá SVG-vel EU Verlaine Vesta-szûzit BNV-vel Voltaire</Line>
+   <Line>V-tal UltraSPARC-ká GUI-val URH-vá GUI-val VIII Vácott MALÉV-vá Voltaire-rel</Line>
+   <Line>USA-vá MTV PVC-vel kV-tal UNICEF-fé Vilniusszal MTV-vel BKV-val Vilniussá</Line>
+   <Line>Vilniusszá UNICODE-dal Vass-sal Verlaine-nel Versailles-t USA Vácott Uruguay</Line>
+   <Line>HÉV BNV-vé HVG V GUI MÁV-val Vergiliusszal EU-vá EU MALÉV-vá LVI</Line>
+   <Line>URH-vá kV Uruguay LVI URH kV BKV MTV SVG-vel VIT-té UNICEF-fel HVG-vel</Line>
+   <Line>MÁV-vá BNV-vé ÁVH-vá ÁVH-val Verlaine-né Vergiliussá eV-tá USA UNESCO-val</Line>
+   <Line>Voltaire V-tal UNICEF UNICODE-dal VII UltraSPARC-kal UEFA GUI-vá Versailles-já</Line>
+   <Line>Verlaine-nel HIV UHU Voltaire-rel Vörösmarty kV-tal LIV VII BKV EU LVIII</Line>
+   <Line>Verlaine GNU-vá Voltaire-et UHU Uruguay Uruguay Versailles-jal Vergiliusszá</Line>
+   <Line>HÉV-vé BNV-vé USA-vá ÁVH URH-val MTV-vel UEFA-vá Vandermonde USA Vergiliusszal</Line>
+  </Level>
+  <Level>
+   <NewCharacters>WXYZ</NewCharacters>
+   <Line>XCIII LXXII SZTE XLIV HOGYAN-t SZDSZ XXXV LXII Windows-zá XXL-lé KRESZ-szel</Line>
+   <Line>XML-et XCIII Züricht Bajcsy-Zsilinszky XXIII XCII NSZK-vá XXXL-lel</Line>
+   <Line>XXXVIII XVII kW-tal XXL-lé XXXII MSZMP IBUSZ NSZK-vá LXIV XXXL-lé Záchcsal</Line>
+   <Line>XXX LXXIV BMW Windowssal XCVI SZDSZ-szé IBUSZ-szá TypoTeX LXIII</Line>
+   <Line>SZTE-vé TXT-vé LXVIII LX MSZP-vel LXXV IX Wilde RMDSZ-szé ENSZ-szel</Line>
+   <Line>XXXII GYIK XLVII XXI SZU-val XIII LXXI LXIV XLIX IBUSZ-szá LXIII SZU-val</Line>
+   <Line>Zeissel XIX SZTE-vé Záchhal Wilde-dá Weierstrass-szal MLSZ-szel Weierstrassá</Line>
+   <Line>XC LaTeX-hé XXL-lé Záchhal ENSZ-t Werbõczy LXIV RMDSZ-szé Bajcsy-Zsilinszky</Line>
+   <Line>XLV RMDSZ-szel LXI LXVIII SZTE-vé HOGYAN-ot Wilde Záchcsal ENSZ</Line>
+   <Line>LXXXIII XVII LXXXII XL XV XCVII XXXVI ENSZ-t IBUSZ-szá XML-lel W LXII</Line>
+   <Line>IBUSZ WHO-val TXT-vel Wellsszé XML-lel kW LXX XXVI LXIV ÁNTSZ-szel</Line>
+   <Line>IBUSZ-szal TXT-vé XXIX HOGYAN-ot HOGYAN-ot SZU-val WC-vé XXIX Zichy KISZ</Line>
+   <Line>XIV LXXXVI MLSZ-szel MSZMP-vel XCVII HOGYAN-ná LXXXV XCV KISZ XCVII</Line>
+   <Line>Weierstrass-szal TeX-hel XL-lel ÁNTSZ-szel XXX Zsolnay Windows-zá Wellsszel Yucatán-szigetekit</Line>
+   <Line>LaTeX-hel XXIX RMDSZ-szel XXIX XXXL kW-tá SZDSZ-szel XX GYIK-kal XVI TXT-vel</Line>
+   <Line>Zichy GYIK-kal W-tal IBUSZ-szal XXXIX XXI Weierstrass-szá WC XVI XXL-lé</Line>
+   <Line>XLVI ENSZ X XXXV WC-vé WC XXXI XXL LX RMDSZ-szé LXXIII HOGYAN-t XC</Line>
+   <Line>LX LXXXIII XXI Werbõczy LXXVIII XLIII Wellssel XXV SZDSZ-szel HOGYAN</Line>
+   <Line>MSZP-vé WC-vé XLVII XLIV XXIX SZU-val LXV kW-tal LXXII LaTeX MSZMP-vé</Line>
+   <Line>LXXXI XXIV RMDSZ-szel XML LaTeX-hé Záchcsá Zeiss-szel MLSZ-szel LaTeX-hel</Line>
+   <Line>XXXI XCVII XXXVIII SZU-vá Watt-tá SZTE MSZP-vé XLI XVI Zsolnay XLVII</Line>
+   <Line>BMW LXXXVIII Yellowstone LXXXVI KRESZ-szé XCII TXT-vel XCVIII LaTeX-kel</Line>
+   <Line>MLSZ-szel XXL-lé IX ENSZ-szé XLIII Yucatán-szigetekit LXV XXXL Wellsséw</Line>
+   <Line>Windowssá Weierstrass-szá RMDSZ LaTeX-hel TeX-hel XVII XML-et TeX-hé kW-tal</Line>
+   <Line>ENSZ-t XX ENSZ-szé Wattal XCIX XLIX Bajcsy-Zsilinszky ÁNTSZ XXXVIII</Line>
+   <Line>XXL-lé Wattal ENSZ-szel XX LXII HOGYAN-t GYIK-ká XLV LXXIX Windowszal</Line>
+   <Line>Bajcsy-Zsilinszky XLI LaTeX XIV Weierstrassal XCI MSZP XL-lel XII XXXL-lé XXV</Line>
+   <Line>WHO LaTeX XXL KISZ-szé kW Werbõczy TeX XXXIV LXXXI Bajcsy-Zsilinszky</Line>
+   <Line>Windowszá MSZP-vel LXXXV MSZP ÁNTSZ XL LXIV MSZP-vel LXXXVIII RMDSZ-szel</Line>
+   <Line>IBUSZ XLI XIX XIV Weierstrass-szá XCVI Záchcsá KRESZ-szel XXXL-lel</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

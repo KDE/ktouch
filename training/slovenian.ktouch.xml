@@ -1,0 +1,654 @@
+<KTouchLecture>
+ <Title>Slovenian</Title>
+ <FontSuggestions>Monospace,10,-1,5,50,0,0,0,0,0</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>ak</NewCharacters>
+   <Line>a kak a a a kaka kak a kak k kak k kak k a</Line>
+   <Line>a k k kaka k kaka kaka kaka a kaka kak kaka</Line>
+   <Line>kaka a kaka k a k kak k k kak a kak a k a</Line>
+   <Line>kak a kak kak a a kaka a k kaka kaka k a kak</Line>
+   <Line>kaka kaka kak kaka kaka a a a kak k kak a</Line>
+   <Line>k k k kaka kak a a k kak k k kak k kaka kak</Line>
+   <Line>a a kak kaka a kak k a k k a kak a kak a k</Line>
+   <Line>a kak kaka a a kaka a k kak k kak a kak kak</Line>
+   <Line>kaka kaka kak k kak kaka a kaka kaka kak a</Line>
+   <Line>a a k kak k kak kak kaka k kaka kaka k kaka</Line>
+   <Line>a kaka k kaka a kaka k kaka kaka a k k a k</Line>
+   <Line>a kaka kaka k kaka kaka kaka kak a k a kaka</Line>
+   <Line>kaka a kaka a kaka a kaka a kaka kaka a k</Line>
+   <Line>kaka kaka kak a a kak k k kak k kaka k a kak</Line>
+   <Line>a k a k k kaka k a a a a a k a a k kak kaka</Line>
+   <Line>a a kaka k kaka k kaka k kak kak kaka kaka</Line>
+   <Line>k kaka k k a kak k k kaka kak k a kak kak</Line>
+   <Line>a kak kaka kak k a kaka k kak kak kak k kaka</Line>
+   <Line>k kaka kak k k k kak kaka k k k kak k kaka</Line>
+   <Line>a k k kak k kaka kak a k kaka kaka kak k k</Line>
+   <Line>k kak a kak kak kaka a kaka a kak kaka kak</Line>
+   <Line>a a a k kaka k kak a a a a kaka a k kak a</Line>
+   <Line>a a kak k kaka kak a kak kak a kak kak kaka</Line>
+   <Line>k k kaka k kak a k kaka kaka kak kaka kaka</Line>
+   <Line>kak kak a a k a a kak kak kak k k kak kaka</Line>
+   <Line>kaka kaka k kak kak kak kaka kak a k kak k</Line>
+   <Line>a kak kaka a k k kaka k kak a kak kaka kak</Line>
+   <Line>k k a kak a kaka kak kaka a a kak kaka a k</Line>
+   <Line>kaka kak a k kaka kak a kaka kaka kak kak</Line>
+   <Line>k a kaka kaka kaka kak a k kak kaka k k k</Line>
+  </Level>
+  <Level>
+   <NewCharacters>lj</NewCharacters>
+   <Line>laja laka lajaj la lajal lakaj laja jaka laja</Line>
+   <Line>laja lakaj lak lakaja lajala l lakaj lajal</Line>
+   <Line>lakaj lak lajaj laka la laka lak laja lakaja</Line>
+   <Line>lajaj lak laja la lajaj lakaj lakaj laja lajala</Line>
+   <Line>jak lak jak lakaj laka lajaj lajal lakaj laka</Line>
+   <Line>jaka lajala jaka lakaja laka laka lajaj jak</Line>
+   <Line>lajaj laja jaka l jak lak jak lajaj laja lakaja</Line>
+   <Line>jaka la laja laja jaka laka laka jak lak jak</Line>
+   <Line>lajala lakaja lakaja jak lakaj laja jak jaka</Line>
+   <Line>lakaja lakaja lajaj lajaj laja la lakaj laka</Line>
+   <Line>jak la laja lajaj la lakaj lajala jaka lak</Line>
+   <Line>jak la lakaj laka jak la jaka jak l lakaj</Line>
+   <Line>l jaka l lajal jaka l lak lak laja laja l</Line>
+   <Line>l lajaj la laja laja lak lak lak lajaj laja</Line>
+   <Line>lajal lakaj lak la la laja laka laja laja</Line>
+   <Line>laja jaka lajala jaka lakaja jak jaka lak</Line>
+   <Line>jaka lajala lajal jaka lakaja lak laka laja</Line>
+   <Line>lajal lajala laka lakaj laka lakaja jak jaka</Line>
+   <Line>lak jaka lajal lajal l lakaja lakaja laja</Line>
+   <Line>laja lakaj lakaj laja l jak lajal lajal la</Line>
+   <Line>l l la lak laka jaka lakaj lajal l lajal la</Line>
+   <Line>l lakaj lajal lak lak la lajaj lak l lajaj</Line>
+   <Line>laka jaka jaka laja lakaj lajal laka laja</Line>
+   <Line>la lakaj laja la lajala laka lakaj laja laja</Line>
+   <Line>jak laja lakaja jaka jaka lakaj lakaja laka</Line>
+   <Line>lakaja l laja lak la l lakaj lajal lajal lak</Line>
+   <Line>laja l lajala lajaj la laka la jak lajal lajaj</Line>
+   <Line>l lajala la laja jak l lakaj lajaj lakaj lakaj</Line>
+   <Line>laja lakaj lajala lakaj l lakaja lajala lajala</Line>
+   <Line>lajal laja la lajala laja lakaja laka lajal</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s�saka slaka �kala saj sklal skakaj skakljala</NewCharacters>
+   <Line>saka sla �ka skaka s skakljala skaka� skakaj</Line>
+   <Line>��a skaj skala sak �kaj skala skakljala</Line>
+   <Line>skal sla skaj ��a saj slaka �ka slaka sla</Line>
+   <Line>skakaj skaja skakljal skakalka sklala �kala</Line>
+   <Line>sklala skaja skakljal sak �s skakljal �s</Line>
+   <Line>skaklja �kala skaja skakal skaja skakala</Line>
+   <Line>sla �s slak skaja �sa skaka��j�a �kaj</Line>
+   <Line>slak skakljaj �s skaka skakaj skaka� sala</Line>
+   <Line>slaka ��a �kaj saka �j�a skaj skala skaka��ka �kala ��a skakljaj �� �� skaja</Line>
+   <Line>skala ��a slak �� �kala �kala skakljal</Line>
+   <Line>skaka� sak �kal slak �ja �j �sa skaka</Line>
+   <Line>skaka skakljala skakljaj skakljaj skakala</Line>
+   <Line>slaka skaj �ja skaka� skaklja skakljal skakaj</Line>
+   <Line>skakala �s skakljala skakalka �kala �sa</Line>
+   <Line>�kal skakalka �j �� skakal skakala �ka</Line>
+   <Line>skal skakljaj sklal �sa �ka �s skakalka</Line>
+   <Line>skal �s skakalka �j�a �kala sla skakalka</Line>
+   <Line>�ka �j�a skakal �s �ka skakalka s ��</Line>
+   <Line>skala skaj skaklja saka �kaj skala skaja</Line>
+   <Line>skakalk skakalka salsa sklala ��a skakalk</Line>
+   <Line>sak skaja skaka���a slak slaka �s skal</Line>
+   <Line>skakalk skakljala skaka� sala skaka�skaklja</Line>
+   <Line>skakal slaka saka skakljaj �kaj skakalk skaklja</Line>
+   <Line>skakalka skal skal skaj saj �� skakljal</Line>
+   <Line>skakljala slak skakal �s skakalk salsa skaja</Line>
+   <Line>�kaj skaj slak sala �ja sklal �s skaka�skal salsa salsa skakalka sla salsa �ka �s</Line>
+   <Line>�� �ja �sa �kaj skaka� �kal skaka�</Line>
+  </Level>
+  <Level>
+   <NewCharacters>df</NewCharacters>
+   <Line>dajal dala dajalka da� dajal fasada fasada</Line>
+   <Line>dajalk da� dal faks dajalk dala dalja fasada</Line>
+   <Line>daj fasada faksa dajaj dajalk dajaj dala da�dajala dlaka da� da�fasada dajaj dajal dalj</Line>
+   <Line>daj dajala dala dalj dal dal da� dajalka</Line>
+   <Line>dajal dalj da� da� dajaj falska daj dajalk</Line>
+   <Line>dajalk dlak fasad dlak dalj fasada dalja daj</Line>
+   <Line>dalj fasada dal faks dlak dlak dlak dajaj</Line>
+   <Line>dajal falska da�fasad daj dala faksa faksa</Line>
+   <Line>dajaj dajala dajala dajal dalja fasada faks</Line>
+   <Line>faksa faksa dajalk daj fasada dajaj dajalk</Line>
+   <Line>dajalka da�dajaj dal dala dala dajalk dajalka</Line>
+   <Line>da da� fasada daj dajala da dlaka dala faksa</Line>
+   <Line>dal daj faks fasad dajalk dal dajalk dala</Line>
+   <Line>dalja dalja dlaka faksa dalj faks faksa dlaka</Line>
+   <Line>dajalka dajaj dajalk dala fasad dajala dala</Line>
+   <Line>dajala dalja dlaka fasad dalja falska falska</Line>
+   <Line>dal daj da dlaka dajaj dajalk dlak fasad daj</Line>
+   <Line>dala da� dlak fasada fasad fasada dalj da</Line>
+   <Line>fasada daj dajalk dal dalja dlak faksa dlaka</Line>
+   <Line>faks da da falska dajalka falska daj daj dajalka</Line>
+   <Line>fasad dajalk dajala da� dalj falska faksa</Line>
+   <Line>fasad faksa dalj dal dajal dajala dal dala</Line>
+   <Line>falska da faksa dlak dlak da�da�fasada da�daj dajalk da�da�falska dal da dlaka dajalka</Line>
+   <Line>dajalk dajaj dalj dajaj faks dajalka faks</Line>
+   <Line>dlak daj dajaj dajal dala da dalj dalj fasad</Line>
+   <Line>dajalka da dlak da�falska dajaj dal dajaj</Line>
+   <Line>dajalk faks dlak dajalka dala daj dajalka</Line>
+   <Line>daj dajalk dalj fasada da�dala daj dajaj</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ie</NewCharacters>
+   <Line>ideale edafski ideje idilike idiliki iskala</Line>
+   <Line>ideja ideale iskala ideja esej iskali idil</Line>
+   <Line>edafske edafska idilike idile esej idila idile</Line>
+   <Line>idili ideali iskali ideali eseja iskalki idila</Line>
+   <Line>idili eseja ideali ideal idilike eseji eseje</Line>
+   <Line>iskala ideji edafske iskalk iskalk idila edafske</Line>
+   <Line>idilike iskalki edafski iskale edafska iskali</Line>
+   <Line>iskal edafski iskalki edafski eseje ideali</Line>
+   <Line>ideali idilike idilike ideale ideal ideja</Line>
+   <Line>idilike iskale eseje idilik iskalka iskala</Line>
+   <Line>idil ideal idila idilika edafska idilika iskala</Line>
+   <Line>iskala iskaje ideala ideal ideali idej idila</Line>
+   <Line>idila idej ideji iskali ideali iskalk idila</Line>
+   <Line>eseje ideja ideale ideala idiliki idil iskalk</Line>
+   <Line>ideala iskalke ideji ideali esej iskale ideji</Line>
+   <Line>edafski eseja idilike idili iskalki ideje</Line>
+   <Line>idilik ideali ideji edafski edafske iskal</Line>
+   <Line>esej ideale iskaje idilike edafska iskalke</Line>
+   <Line>idiliki eseje idili edafska eseji idil ideji</Line>
+   <Line>eseje eseje iskaje idila edafski iskalka ideji</Line>
+   <Line>ideja iskalk iskali ideja edafski ideja iskali</Line>
+   <Line>esej idej ideale eseja esej idiliki iskalki</Line>
+   <Line>edafski iskaje iskalke idilika iskalke idila</Line>
+   <Line>idilik eseja ideala idilika iskale iskalk</Line>
+   <Line>ideala iskalka iskala eseji ideja iskalk idej</Line>
+   <Line>idilike edafska edafski idiliki ideala iskalke</Line>
+   <Line>iskalka edafski iskal idej idilika iskal edafski</Line>
+   <Line>ideala ideji iskale idili iskala ideal iskaje</Line>
+   <Line>iskalke edafske eseje idile eseje ideje ideje</Line>
+   <Line>iskali eseja edafski iskali idil iskalk ideali</Line>
+  </Level>
+  <Level>
+   <NewCharacters>no</NewCharacters>
+   <Line>nesklenjeni ne�dno neokisan noslja nakisa</Line>
+   <Line>neodlo�o nedosojen nenadejani oklenjeno odisejadi</Line>
+   <Line>naklonin odsesan na�lniki naslajaje odklanjajo�na�e osen�n olje� neonska olika nadejale</Line>
+   <Line>osli�ni naklonsko nadse oksidna nakisa odklanjanje</Line>
+   <Line>oksida nedeljnika nedeljni�n nasedal naslonjeno</Line>
+   <Line>na�kane naslikala nenadejan neodlo�i�na</Line>
+   <Line>odlo�ni nasilni�na ni�n nadejalo naseljenko</Line>
+   <Line>naslad njeno nena�lni�na ni�nje oson�nja</Line>
+   <Line>nadelale oklenjen nose� naslednji nedosledni�na</Line>
+   <Line>odskakljal oddelka osen�no naslajaj osini</Line>
+   <Line>olj�iki nosa� na�nja olesenel na�na neonkina</Line>
+   <Line>nali�ana odnesi okoli�nki oken�i nedeljeni</Line>
+   <Line>odejo ne�kinjin na��ajo oljili oskalek</Line>
+   <Line>naslednika na�njajo� noska oson�a neodlo�i�ne</Line>
+   <Line>nalijejo neolikank nanos oslinjeni ni�li</Line>
+   <Line>ojekleni nenadni ondi nadela neonkine okajen</Line>
+   <Line>ni�a nasekala naslada one�dena neonka neidili�n</Line>
+   <Line>nasi�nje na�ne odsko�le na�kana osedlalo</Line>
+   <Line>naslonijo oken�a naslonilo okisalo odnosni</Line>
+   <Line>naseljenkina odlo�la nasilnik nedojena nenaklonjeni</Line>
+   <Line>najdlje oda onikajo�odsekane oklenila nenadejana</Line>
+   <Line>olikankine oson�a nadejanj odselijo osoljeni</Line>
+   <Line>na�lnika oljni oddajani osa odseka nena�lni�n</Line>
+   <Line>nakali nasedajo� nanesli najdenin odselijo</Line>
+   <Line>nissani ose naslonilo olj�iki nasekali nali�ale</Line>
+   <Line>nali�anje olikankini nasoljeno naslonja�</Line>
+   <Line>oslinjene odlo�li olj�o na�e najdenino</Line>
+   <Line>naselila nekon�na naslanja�odlo�lno nadanjska</Line>
+   <Line>nenaseljena nedolo�ni neidili�i naslonjena</Line>
+  </Level>
+  <Level>
+   <NewCharacters>rm</NewCharacters>
+   <Line>mla�imi rokokojskem maksimirani ra�nskimi</Line>
+   <Line>rodenske me�a� rafal malijske medijem rokerskem</Line>
+   <Line>misijo rde�nj rde�laskami manekenkinima</Line>
+   <Line>rode� riodejaneirskim redil rafiji mamoljske</Line>
+   <Line>reklamiranem mjanmarska milijonarja menjalkin</Line>
+   <Line>markirajo� medi�jskima mro�mirjanskimi</Line>
+   <Line>marmeladama mormonki menija re�nskem resama</Line>
+   <Line>mi�eno resni�im misli realka radi�m mlaskajo�</Line>
+   <Line>milijardnem reformirajo� mile�ma mese�em</Line>
+   <Line>radiji marinke mladinkinim reliefnimi mlaki</Line>
+   <Line>malokorinjska milarnami modelni mla�nsko</Line>
+   <Line>mladikami ran� mandolinam mesojed mlinarje</Line>
+   <Line>mansardnima refrenskim mesarka mo�ril mamk</Line>
+   <Line>maksimalen mirenskem reinkarnirajo�mi majskima</Line>
+   <Line>rejska malo�sa reklo mol�nji rolkajo�ma</Line>
+   <Line>milosr�im risarjema morali mesare� mo�janskem</Line>
+   <Line>miljena morilske mladij mekinjskima radirankami</Line>
+   <Line>rejnika modom mornarko markiranem reklamami</Line>
+   <Line>mle�a rijo�meliranimi mol�� milarna misijonarka</Line>
+   <Line>menim manekene modemske mamilo merilkinima</Line>
+   <Line>rima�o makedonskimi medanskimi melodramskima</Line>
+   <Line>rose�medijskima mladi radiofonske rimarkinem</Line>
+   <Line>marinado marsikje medi�rkine mornarski ro�ik</Line>
+   <Line>momljaje risanje mame�m roja medaljerko manjkanjema</Line>
+   <Line>mariniranji menijskim rolkar mlaskanje mirilo</Line>
+   <Line>rokerskim med mle�a romskimi rojski rolke</Line>
+   <Line>moljene rima mokre�m momljanjema reden mikanj</Line>
+   <Line>rolkarkinem rolkark mikenske mol��i�nem</Line>
+   <Line>mrke ra�eselskem rafinirajo�ma ma�one ra�nskem</Line>
+   <Line>maserja mjanmarske meridianoma milj marmeladam</Line>
+  </Level>
+  <Level>
+   <NewCharacters>vt</NewCharacters>
+   <Line>vro�jo� taoiste tridesetkratna vasoval�vimi</Line>
+   <Line>tekmi�na vsr�va trinajstinami vsko�m talarji</Line>
+   <Line>vrsti�ikom volovima vijva trnkarim velikankinimi</Line>
+   <Line>tirnem vsrkata valovile vrelno vlivajo�mi</Line>
+   <Line>vrvi�stim telefoniral trosovko valoven tonalni</Line>
+   <Line>tinjskem vtisnila tokave vokala tetoviranjem</Line>
+   <Line>vatnima tekmovalnima teoreme vnetljivostim</Line>
+   <Line>valovjema to�j vodniki veterankinimi teistov</Line>
+   <Line>tesnostjo velikora�nska veli�stnost teorija</Line>
+   <Line>vtka voli�nsko vetri� vsiljenkine vodovarstven</Line>
+   <Line>tokratnimi testoma vodi�triinsedemdesetero</Line>
+   <Line>terjalke vedrijanske tlakoma to�jkine vlekama</Line>
+   <Line>taki vsiljenkinima termometre totalitarnostjo</Line>
+   <Line>ventilirajo�troj��ne valdorfski volarjev</Line>
+   <Line>tajati triindevetdesetmese�a treskajo�mi</Line>
+   <Line>vodarja vodarnami videofon tleskajo�m vretenske</Line>
+   <Line>veveri�ake vsevedni�na triinosemdesetmestna</Line>
+   <Line>traktorskim tovorjeni tenden�ost trkate trkljaj</Line>
+   <Line>vrvi�stima tonikama ve�etnem tiso�elnimi</Line>
+   <Line>vodarnam teko�ostjo vsekanima terminala violinistkinim</Line>
+   <Line>vstavitvena vtikajo� trame tlesknete vsrkalo</Line>
+   <Line>vlamljale vijoli�em tvrdkama triindevetdesetdelnem</Line>
+   <Line>to�l�vimi veliki to�t tleskam veleslalomistkinim</Line>
+   <Line>trn trdnino vojvoda veseli vratolomnostjo</Line>
+   <Line>trkljajte vrtino triinsedemdeseto tresljavi</Line>
+   <Line>triinsedemdesetkilometrsko vini�rkinim vlivnima</Line>
+   <Line>tele�jakom valite vija� tridnevne triindvajseternosti</Line>
+   <Line>tlorisno travna valjenj tesne� testiran�v</Line>
+   <Line>tvida vdeli verovanjema triodstotnimi testiran�vo</Line>
+   <Line>tiral tesanj tajat vdajmo vaflje vro�nske</Line>
+  </Level>
+  <Level>
+   <NewCharacters>pu</NewCharacters>
+   <Line>posredni�nima preklapljajo� pasne pokarali</Line>
+   <Line>protju usmerjena preiskovankama prekrokam</Line>
+   <Line>predsino�ja po�te podajalnimi priprte upokojujeta</Line>
+   <Line>pletle praslovanskemu poostrovanji petnajsterna</Line>
+   <Line>podpiran�va udejanjim pitna plutokratk poredni�nim</Line>
+   <Line>premo�emu upepelil postojnskem patentirale</Line>
+   <Line>potilnemu protipravnostim periodikami prestopkov</Line>
+   <Line>prometni�no poplesati poustvarila priklju�nem</Line>
+   <Line>preluknjajte poljskim paj�lanastem peklenske</Line>
+   <Line>prenavljalo pretovarjanja ute�nosti poslikavajo�mi</Line>
+   <Line>postavka udenskem polomu priu� planinski</Line>
+   <Line>pelji pal�ikov premlatita predeljeno prevedenim</Line>
+   <Line>pritavata plapolali pritepen�vim polnjenima</Line>
+   <Line>polfinalistkinem prekrvavljenostmi utelesilo</Line>
+   <Line>pianom upijanjeni petdesetkratniki uvajalni</Line>
+   <Line>prisodili prestolonasledni�ni poudariti petelinjenjem</Line>
+   <Line>pireji plodovitemu uteko�njenemu prepisu</Line>
+   <Line>ustavljat plove�mi podarjena prekrvavljenima</Line>
+   <Line>privatnostim porumenelostma preskusita posvojiteljeva</Line>
+   <Line>uvajali potuj�nostjo usklajevala padavinskem</Line>
+   <Line>prilastil pla�vaje petodstotnima presadite</Line>
+   <Line>pomorijo prijetnost uniformami prikrijete</Line>
+   <Line>posve�val�vima platinaste puljska pasivnostmi</Line>
+   <Line>ustoli�jo�mu pretla�m parodiranju pla�nkami</Line>
+   <Line>pripona utrtemu ple�ta pomenskosti utore</Line>
+   <Line>preiskovati petinosemdesetnadstropnem polprofesionalnemu</Line>
+   <Line>prepeli�ami prijavljen�vima prikolovratili</Line>
+   <Line>petinosemdeseternim prijateljeval pekliti</Line>
+   <Line>pouli�o uni�valo privla�vanjem poveljujejo</Line>
+   <Line>prostornim psalmistovem ukrojijo posute podprvakom</Line>
+  </Level>
+  <Level>
+   <NewCharacters>zg</NewCharacters>
+   <Line>zvon�ljate zapravljajo� gaza zakrivim zidani</Line>
+   <Line>grizljanju zatezale zmajalo gomoljnat zagospodarjenima</Line>
+   <Line>godemarskima zaletavanjema zalijta geometriziranemu</Line>
+   <Line>zelenima zemljankine zadevale giljotiniranem</Line>
+   <Line>znalkinemu zamor�ovima za�la geometrizirajo�mi</Line>
+   <Line>zgodovinarkini grlne zadovoljitvami zadelale</Line>
+   <Line>graviraj gostoti golenma goskam geodeta zavijalna</Line>
+   <Line>zamejevalo zaupljiva zastavljenega zastarevajo�zlatilo zapazit gledljivi zaustavljivemu zataljene</Line>
+   <Line>zaslepljenima zve�nima zdrgniti grizonovimi</Line>
+   <Line>zlodejke zveden zazankaj geometri�e zaro�n�v</Line>
+   <Line>gorati zmije zazimljenima gospodovat zverjadjo</Line>
+   <Line>zgrinjam zastavama gneteta zgarajta zamomljat</Line>
+   <Line>grome zasegajta zapakirajte gojevska zgodni</Line>
+   <Line>zamorimo zaslonite zazven�va gardnimi zaprosilom</Line>
+   <Line>galaksij geometrinjinimi zape�nosti grafikovega</Line>
+   <Line>generalpolkovnike zvitorepkine zalivana zarezanega</Line>
+   <Line>zaro�ti zjed zasanjajva gostilni�rskem gametofita</Line>
+   <Line>glasnostjo zapenjanju gozdarstvom gomilnega</Line>
+   <Line>zavetrnem zvrta gostotam gojevskemu zaspan�vega</Line>
+   <Line>generalporo�i�nega zmernostmi zoperstavljenim</Line>
+   <Line>zaje�va zapenjajo�mu zgornjepartinjskemu</Line>
+   <Line>zoonozami zjezi gornjeustni�n zavarovan�vimi</Line>
+   <Line>goliti zavla�val zamrznejo zvenet zaplata</Line>
+   <Line>zakostenelostjo genetskima zmazanim galanterijskega</Line>
+   <Line>zaostritvama zalikane zadovoljenja gru�stimi</Line>
+   <Line>zmotile gramoma galanteristkinem zgrizena</Line>
+   <Line>gazelje zaiskrimo zapisni zmletka zvezdoslov�vem</Line>
+   <Line>zvon�ljajte zapisni�rkama zavidljiv geodetovima</Line>
+   <Line>zloslutnem zaupna gladilkin zaposlujeva galunova</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>�tarjevimi ansonjerjema esttedenskemu</Line>
+   <Line>oferkah estindevetdesetdnevnima hrzajo�</Line>
+   <Line>kodovanja tiriinsedemdesetih tiriinsedemdesetminutnega</Line>
+   <Line>tiriindvajsetmese�ih havanka paget tiriindevetdesetminutnemu</Line>
+   <Line>ipon hlastnost arlatanovo epav�vima krlatni</Line>
+   <Line>tangarskopoljanskima hermelinastemu estnajstdelnemu</Line>
+   <Line>hlevike epetamo ifriranim hipnotiziralo</Line>
+   <Line>hmeljarjevima estnajstnadstropne hemoragi�ega</Line>
+   <Line>hidroenergiji �tenj hipokrizijo hamitov</Line>
+   <Line>estdesetdelnim hinika hikori oferkinega</Line>
+   <Line>efovega tiriinsedemdesetodstotni hranilnikoma</Line>
+   <Line>estinpetdesetinam �rkova ifriraj olniki</Line>
+   <Line>tiriinsedemdesetkraten hmeljarjevi rafirala</Line>
+   <Line>tiriintridesetnadstropnimi tirikratnimi</Line>
+   <Line>tiriperesno homogenizirajo� hamitkin inejo</Line>
+   <Line>hudejskim tiriindvajsetleten tiriindevetdesetdelna</Line>
+   <Line>herkulskim tiriindvajsetodstotnimi tiriinestdeseturni</Line>
+   <Line>ivata estkratnikih tiriindvajsetkrat hruovsko</Line>
+   <Line>hoduljam hlap�vimi hidre karpnim honorarnega</Line>
+   <Line>alamensko estnajstdelnemu irokopotezno</Line>
+   <Line>ahist markemu ahiral harmonikast estinestdesetini</Line>
+   <Line>eststoternem homeostazama humanisti�a tiriinestdesettedenski</Line>
+   <Line>tiriodstotne hupal hegeljanka tokav�vi</Line>
+   <Line>vedskem hedonistovem eststomese�i hlapilnost</Line>
+   <Line>tefanskim hotelirkinemu ejkati �tkarskega</Line>
+   <Line>tokav�vo tiriinestdesetemu ikolskih estindevetdesetnadstropni</Line>
+   <Line>herojstvoma estinpetdeset�anske estdesetmestnim</Line>
+   <Line>hiami histeri�im humanost hmeljnemu pekulira</Line>
+   <Line>hlepimo hlinjen hote�h tiriinsedemdeseturnim</Line>
+   <Line>pilje otaste tirikapno tipendistkinem</Line>
+  </Level>
+  <Level>
+   <NewCharacters>bc</NewCharacters>
+   <Line>basovska cizama copatkama banovinah cunjastemu</Line>
+   <Line>boksite baronetovima benzenov biserovinastega</Line>
+   <Line>bledicah banditovemu bedakinje balzamirana</Line>
+   <Line>brigadirstvu barokizirali capljanju blatnovrkih</Line>
+   <Line>bojevnikovi brzojavnima bogatinska bagdadskim</Line>
+   <Line>brblja�vih blagajni�rkinih britij bojevni�nima</Line>
+   <Line>cepali biljanskih bolzanskem balearskem bifeji</Line>
+   <Line>bibliografinjini bibli�ega cikavskega bednikovim</Line>
+   <Line>bistroglavost bahakimi brezupe brestom bolehanju</Line>
+   <Line>banovskih bolzanskima buhte�m bordojska bakroreze</Line>
+   <Line>bakrastih blazinil bigamistu brste�m bukasti</Line>
+   <Line>binarnem capinovemu bednostim bogaboje�emu</Line>
+   <Line>burkajta cepita bencin brezsnovnemu bojujo�mi</Line>
+   <Line>brejostjo bazirani chemniko cipresasta brle�ma</Line>
+   <Line>comske balini� blagovolit begunovim brazdalnikov</Line>
+   <Line>baltidkin cilindrskimi briljantnem beneficirale</Line>
+   <Line>cunkovska bobnarkine brezgotovinskimi bobni�n</Line>
+   <Line>bruse�mi begunjskemu balerinini bilijone</Line>
+   <Line>cerkovnikovi cefedranim bezajo� centrifugirano</Line>
+   <Line>barabonova bren�nje brdskemu cvetoberoma</Line>
+   <Line>bosonogih bubonskih cibetovkinih brdavse belkastem</Line>
+   <Line>cerknikih bikastega bedakinji beneficirano</Line>
+   <Line>bradavi�e barvasti bleskih brdanskega civilizirankinima</Line>
+   <Line>barvitostma cezijeve baranta�vim brezrazredne</Line>
+   <Line>bori� brljankah cikli�osti brezkrajnemu</Line>
+   <Line>cirilskimi basovskega blatnobrezovikimi brenkajo�</Line>
+   <Line>begun�ve bergamskima budganjskega brisanje</Line>
+   <Line>cedilke ban�o brindisijsko celotnostim bi�le</Line>
+   <Line>bodo�h cveto�mi bistroje belilih bedru brezskrben</Line>
+   <Line>blazinilo boljevik bitumnu buharsko centralisti�o</Line>
+  </Level>
+  <Level>
+   <NewCharacters>reb�vi igosali arit ive�m ogobr�va</NewCharacters>
+   <Line>ge�ljivimi aloigram afranastega ukovega</Line>
+   <Line>arkejim elezni�rkini vabskim ivotarita</Line>
+   <Line>agastih altavima uelkinega li�ika reb�va</Line>
+   <Line>aboustim elezarnikima go�ga go�mi gana</Line>
+   <Line>ice elvovinastimi ve�lo arkovjih alovanje</Line>
+   <Line>vrgoli upanjinima veplaste ebranje agajo�</Line>
+   <Line>rebal i�i�rjih i�i�rko viganjem ilasta</Line>
+   <Line>lahtneji aljena elodoma amet ivopisna</Line>
+   <Line>eljnostma li�rjevo etvam elimeljskim</Line>
+   <Line>vigam ulili ivcema ab�ve lahtnejem</Line>
+   <Line>venketajo�m ejnim irovske lebe� reb�rnah</Line>
+   <Line>epasti eleznima igonski el rtvujo�ga</Line>
+   <Line>epovsko lebi�nji irantkinih upanovanjih</Line>
+   <Line>ebljicam venketanj eleza lobudrala arkostjo</Line>
+   <Line>rete ilicam rtvuj lebi�m arometov eni�am</Line>
+   <Line>agajo�ivahnim anjemo aloval�vi ve�ne</Line>
+   <Line>veplast li�rjevemu alovika vigam eljnemu</Line>
+   <Line>agarskimi adovinski eleznica enskini agari�ne</Line>
+   <Line>ivilskega ejnski ubinskemu ivalcam ganica</Line>
+   <Line>eleznati ebrajte erke aarskem elezokrivkama</Line>
+   <Line>upnijama en�ni uniko argonskima alujo�</Line>
+   <Line>ivalskostjo argonskem andarskemu elezni�rkinih</Line>
+   <Line>onglerka afranovega ivinozdravnikovega</Line>
+   <Line>ol�vodih rebet agico alovalcev erovinski</Line>
+   <Line>andarjih ivela ele� andarske alskega</Line>
+   <Line>ebljarjema aginemu vepleni vigavkina</Line>
+   <Line>abjega viga�vih altavost emljica venkljajo�mu</Line>
+   <Line>irovniko ukoslov�vih ivavov ikimi</Line>
+   <Line>ivorojene eparstva argonsko ivin�t agicam</Line>
+  </Level>
+  <Level>
+   <NewCharacters>AKLJ</NewCharacters>
+   <Line>Liben�novima Kambreanovem Kremberka Ladislavoma</Line>
+   <Line>Leni�nko Klan�rjev Kordi�Kastiljkah Liechtenstein�v</Line>
+   <Line>Liberanovimi Janevce Koblarjema Kauna�n</Line>
+   <Line>Klenov�na Kureten�nkina Lombardovem Jeenca</Line>
+   <Line>Kostanjev�novem Karlov�vima Kompol�nih</Line>
+   <Line>Ambroi� Krnicah Klemetu Avstral�va Javornikovim</Line>
+   <Line>Jeran��vega Arafatom Labor�vih Ladihove</Line>
+   <Line>Jung Jagod�nkami Lisja�nk Katovi�na Ljubi�vima</Line>
+   <Line>Krncem Anton��vega Avberkina Karlovcema</Line>
+   <Line>Jevni�nkinih Jevkovemu Jesenkovem Krkav�nko</Line>
+   <Line>Kre�vem Jeralovemu Jagod�nk Konj�nkini</Line>
+   <Line>Kongovki Antonovimi Kvasi�nko Konstantinopel�nkah</Line>
+   <Line>Jarmov�nove Leiden�nkina Jarovega Kleme</Line>
+   <Line>Andromedo Liburnkinim Jugovi�Lukanj�nkinih</Line>
+   <Line>Levarte Kriman��vima Kaniari�nke Koloema</Line>
+   <Line>Kurentu Lanianke Lutmanovem Kati� Jer�n�nkinemu</Line>
+   <Line>Kra�lcu Lisja�nom Liankami Kazan�noma</Line>
+   <Line>Krolinovim Kosmatin Lebanu Jamen�nkinega</Line>
+   <Line>Kumljan�vima Jobstova Alenkinima Andri�vima</Line>
+   <Line>Avignon�novemu Krnca Juvan��vo Kovkov�novo</Line>
+   <Line>Koncilijama Leilerje Li�n�nova Koritni�nki</Line>
+   <Line>Kmeclova Kropivkovem Leningraj�novega Kolenikovima</Line>
+   <Line>Korvovima Kauna�nko Junoafri�nke Jermoli</Line>
+   <Line>Lapork Lancovljan Johani Arizonce Kal��</Line>
+   <Line>Kopini�vim Leverkusen�novim Aderga�nove</Line>
+   <Line>Lazen�novima Loin�nko Kan�v�nkine Kolovratu</Line>
+   <Line>Knafli�ma Kog Anitini Karlininem Lue�nkinega</Line>
+   <Line>Jerihe Janovim Jobi Kurin��Kennethovem Kranji�no</Line>
+   <Line>Lambergerjih Jeremijami Juanovem Kogojeve</Line>
+   <Line>Letonjeve Jurin�nkinem Jev�novim Karlsruhejem</Line>
+  </Level>
+  <Level>
+   <NewCharacters>S�F</NewCharacters>
+   <Line>Doljanovih �bularjevih Sean�nova Dachau�novimi</Line>
+   <Line>Dreni�nkinega Stavropol�nkine Slivljanko</Line>
+   <Line>Dol�novima Drganj�vo Skubi�vemu Salmi�m</Line>
+   <Line>Stephensonovi Sadnikov Sandiegov�novemu Dobjeva�nkinega</Line>
+   <Line>Santorin�n Form�nkami Seban�vemu Suholeniku</Line>
+   <Line>�farjev Dr�novih Starogor�v �koslovakega</Line>
+   <Line>Domal�nkinim �povana Sevastopol �lenikom</Line>
+   <Line>Senadolcev Slan�noma Sovja�novima Faleti�</Line>
+   <Line>Slovenjgrad�nkina Simplonom �hovinkami Dednodol�nkinem</Line>
+   <Line>Davida Darjanovim Studeni�nkami Simonin Strela�n</Line>
+   <Line>Smeltov Fabjan��ma Fabianovega Danijelini</Line>
+   <Line>Sevill�nk Stolni�nova Dobravcema Senjurjema</Line>
+   <Line>Sredenj�nih Soldatovega Debeljakoma Soro</Line>
+   <Line>Slapljanki Studorkina Dukova Stojanovem Davoanka</Line>
+   <Line>Skorinja�nka �niv�n Saksidov Saturnusovo</Line>
+   <Line>Slavinjkama Savin�noma �lpaanov Sel�nov</Line>
+   <Line>Draenkam Strojevemu Skaru�nove Skvar�ma</Line>
+   <Line>Stanovi�nkinega Dobrievljankami Froleh�nkinim</Line>
+   <Line>Duankinimi Dobr�ni �etnikovemu Savlovo</Line>
+   <Line>Doropolj�nom Skoberneti Samotori�ne Staroseljanovimi</Line>
+   <Line>�nekogor�nkinim Dobr�nkinima Dolgonjiv�novim</Line>
+   <Line>Slokarjem Slovanu Stenmarkom Sobra�nkina</Line>
+   <Line>Strjan�nkinimi Sodiin�nkinimi Sinieve</Line>
+   <Line>Svinjskem Sodiin�nu Slamnja�nkinemu Dobrav�ve</Line>
+   <Line>Sredozemk Sepeta Samsonovem Dakart�novemu</Line>
+   <Line>Feni�nkam Dolankinem Srednjeva�nkama Dolgora�nki</Line>
+   <Line>Dvorjanov Dekan�novo Starogor�nkinih Forti�Dvorjan�nka Starogor�novim Sofijinemu Svetolucijcema</Line>
+   <Line>Skvar�vima Did�novem �nova�nkinega Doberdob�nkinega</Line>
+   <Line>Deisingerjevega Drenjkinemu Slome Dobami Dolgovakogori�nkinim</Line>
+  </Level>
+  <Level>
+   <NewCharacters>IENO</NewCharacters>
+   <Line>Natla�ne Inkretov Oskarjeva Opatjeselcem</Line>
+   <Line>Eliasih Impolovim Osovnikarjevega Indiankina</Line>
+   <Line>Ekarjeve O�slav�novem Ivkova Orei�vih</Line>
+   <Line>Oluji�vim Izlakarji Osetijkah Oliverina Oplove</Line>
+   <Line>Osred�nih Erevan�nov Nikaragovkina Njiver�nova</Line>
+   <Line>O�slav�novemu Ozeljankah Nebel�vi Izol�nkini</Line>
+   <Line>Nobelovo Okrogli�nkinima Nadle�nkinima</Line>
+   <Line>Islandcema Natalkini Oskoranko Osoletove</Line>
+   <Line>Novolazen�vih Interpolovimi Imenj Nimnemu</Line>
+   <Line>Novokotarki Nedeljkovih Novogori�novimi Evgenijevi</Line>
+   <Line>Epikurjem Otov�nkini Obr�ne Oblo�novi</Line>
+   <Line>Obsotelj�nk Iskrini Ivan�nka Ivovima Iren</Line>
+   <Line>Orona Njiver�nkami Osredkarkinem Erzeljcev</Line>
+   <Line>Nikino Istrabenzovega Ivanjev�novimi Izgor�nkinima</Line>
+   <Line>Intiharje Ivi�vem Otale�ve Orehov�nkinim</Line>
+   <Line>Novgorodom Obrnikarkama Omoti Obreja Oljankami</Line>
+   <Line>Nagli�vo Ivan�novimi Nedovi�m Novgorod�ne</Line>
+   <Line>Edgarjevih Indiankah Nadlerjevim Oklahomce</Line>
+   <Line>Ohnjecem Osim�nih Ovsenikovi Ojnikova Ivanjegrajcev</Line>
+   <Line>Neapelj�nkina Evklidov Ojstr�novega Omanom</Line>
+   <Line>Oto�nkah Obrnikarkin Ojdani�h Elijami Oplotni�nke</Line>
+   <Line>Osojni�nk Omarjevih Novincih Osolni�nki</Line>
+   <Line>Novosui�novo Ostoji�v Obrovnikov Ihanke</Line>
+   <Line>Elesovo Elijo Oparove Eritrejcema Nem�v�nkina</Line>
+   <Line>Efeanke Novi�ve Nepalkinih Nadle�novega</Line>
+   <Line>Izla�nova Osim�nkami Nickova Obalt�ni</Line>
+   <Line>Ornika Nori�nkino Elsnerjeva Ivan�nke Ita�nk</Line>
+   <Line>Illinoisa Osmanih Naksoankinimi Imljan�nkinim</Line>
+   <Line>Normandij�vih Esade Osre�iju Niev�n Neslovencih</Line>
+   <Line>Orli�nkini Ornuane Igorjevo Niev�novo</Line>
+  </Level>
+  <Level>
+   <NewCharacters>RMVT</NewCharacters>
+   <Line>Mogadiankah Teheran�vim Vele�nkinem Vu�kov</Line>
+   <Line>Majeri�vem Radan�nkinim Maksimilijanove</Line>
+   <Line>Vrhah Tomislavovem Vrati�m Vrben�nki Rifni�novim</Line>
+   <Line>Male�i�nove Tonetovo Vodran�novem Medvod�nkama</Line>
+   <Line>Transvaal�nkinem Rajnkovljanih Rajpovih</Line>
+   <Line>Mohorku Velikokamen�novih Radoslavci Va�Toma�v�vih Repi�Roboma Mercatorjevem Vidoi�na</Line>
+   <Line>Tassoma Mantov�nov Marezianu Tarent�nkina</Line>
+   <Line>Vievljane Rafol�novo Tver�novimi Valburankini</Line>
+   <Line>Majevimi Rianki Vosperniku Milovanovi�ve</Line>
+   <Line>Tisov�nih Malezij�vimi Riglerjeve Magreb�novemu</Line>
+   <Line>Tanjini Melanijam Modrijani Martanovi Mojan�novimi</Line>
+   <Line>Rostovom Matetovo Mohorjevimi Medin�nkam</Line>
+   <Line>Mati�a Remetovem Tabor�v Vitnova�ne Matenj�vo</Line>
+   <Line>Tolmincih Radegund�ni Trimlin�nkina Voroneankinima</Line>
+   <Line>Vnajnar�vi Marmont Vanih Rudeeva Malola�novega</Line>
+   <Line>Malezij�ve Matejina Robinsonovemu Vr�v</Line>
+   <Line>Makov�vi Tol�nah Toli� Topljankinem Tomiljanove</Line>
+   <Line>Rochestr�nih Morav�novi Magdeburgu Vrbov�novo</Line>
+   <Line>Rodokove Varadince Rakovkami Verbincem Milovanovi�Vera�nkinih Rebercem Majnikovo Richterjevih</Line>
+   <Line>Vrhen�nke Vitovimi Vakslje Vuzmetin�nkinima</Line>
+   <Line>Mojstran�nom Ravljank Timurlenkoma Vodenov�novima</Line>
+   <Line>Vanov Razbor�nom Vrenkove Veeni�n Tartuj�nke</Line>
+   <Line>Tekal�vi Vukovskodol�nom Metav�nkah Reaganovo</Line>
+   <Line>Titovek Venianko Magajnove Verzelu Rin�tovograb�nkina</Line>
+   <Line>Modrov Volavelj�nkinimi Vol�edraankama</Line>
+   <Line>Tuta Verhovniki Toskanci Riedla Venigerjevem</Line>
+   <Line>Rossiniji Malaji Tanjugov Malokorinj�nkam</Line>
+   <Line>Vinjanovemu Vuki�vo Malei� Volaji Vini�nu</Line>
+  </Level>
+  <Level>
+   <NewCharacters>PUZG</NewCharacters>
+   <Line>Petrino Gambergerjema Plotovimi Zofijinih</Line>
+   <Line>Passau�novo Pahovnikih Zelanovi Ulmu Grdadolniki</Line>
+   <Line>Gomil�nih Gatincem Polj�nkah Gozde�nkam</Line>
+   <Line>Paragvaj�v Perovkovima Preanki Zaklen�ve</Line>
+   <Line>Zabri�ve Pie�nkin Pluno Grahov�nova Pinochetova</Line>
+   <Line>Puharjevem Poznanov�nkinimi Pame�nova Zadraanovega</Line>
+   <Line>Gere�nk Pahovljanu Pileti�vimi Partizanskovrhov�va</Line>
+   <Line>Ponovi�novi Polom�novi Pu�v�na Gorenjakovemu</Line>
+   <Line>Pivol�nkini Zalobreankah Grini�vima Pustopoljk</Line>
+   <Line>Puharjev Polanov Pudob�ve Glii�va Zori�h</Line>
+   <Line>Goste�nov Pariljanovo Poto�ikovimi Pesni�novi</Line>
+   <Line>Grabarjevim Pjongjang Gruzincem Preba�vo</Line>
+   <Line>Zmagoslavini Golobinkom Polenanki Placerov�nkinemu</Line>
+   <Line>Pavlini�vega Zabukovljana Pescar�nke Urinimi</Line>
+   <Line>Zavr�nkah Golovrharkina Galilej�vih Gezi</Line>
+   <Line>Zupan��vega Precetin�nka Zavinkom Podklotrjankinemu</Line>
+   <Line>Puciharjeva Paoloma Grandi�vima Zapoto�nkinima</Line>
+   <Line>Gmajne Pekel�nkinimi Pijavi�novim Gorelj�nka</Line>
+   <Line>Zenkov�ne Uncu Peterkovih Znojilkovo Zasipljanovega</Line>
+   <Line>Gerlancema Presladol�nu Pijav�novega Peklenikovi</Line>
+   <Line>Polj�vi Podpre�nova Geigerje Protegi Go�nkini</Line>
+   <Line>Porabec Zdol�nkin Pirevke Grinjankinih Prihov�vi</Line>
+   <Line>Gmajn�nkini Gori�nce Grosupelj�nov Zrkov�ne</Line>
+   <Line>Go�v�nki Grmovelj�nki Gavranov Potokarjevemu</Line>
+   <Line>Pileti� Greakove Prem�vih Petrov�nka Pulj�nkine</Line>
+   <Line>Plesu Podgornikove Globo��nk Pod�trt�nkinemu</Line>
+   <Line>Plohlovih Udirjih Glihovimi Zapuanovemu Genov�nova</Line>
+   <Line>Zalarjeve Pohorec Pe�uerjevim Gagerne Principovemu</Line>
+   <Line>Zaragoankinim Prad�nkah Gorenci Premkovi</Line>
+   <Line>Podpe�nkama Gav�nkine Zapoge Prilep�nkin</Line>
+  </Level>
+  <Level>
+   <NewCharacters>HBC</NewCharacters>
+   <Line>Hramanoma Bor��ma Bodon�nkine Brindisij�novem</Line>
+   <Line>pendala Harijki ekovo Bul�va Heferletoma</Line>
+   <Line>Bravni�rjevemu traklova Celestinam Brdov�vi</Line>
+   <Line>Bloudkovem Hom�nkinega Helenovima Cen��vima</Line>
+   <Line>Bregarkinega Buzet�novega Boinima Hanka</Line>
+   <Line>Cerkljanih Hrovatov Brenikom Caraca�nkini</Line>
+   <Line>pitalkami Begi�vim Buzet�nkin Borov�nka</Line>
+   <Line>kriljana Brozovi�vima entruper�nkine Helsin�nka</Line>
+   <Line>Belgijkinega terkovo Caravaggii Bogoljubovim</Line>
+   <Line>Hudojam�novemu elige Bukov�novega Hrpeljkini</Line>
+   <Line>Ba�ni Bervarjem Hajf�nkinem Cleveland�nkinimi</Line>
+   <Line>varci Handanovi�vega kerlakoma trusovima</Line>
+   <Line>Cubr�noma etincev Canberr�novo pi�i�nkami</Line>
+   <Line>Bacone Bokra�nka tromajerjevima Cipr�nkinih</Line>
+   <Line>Bujanovima antlu tal�vi Heliosovim Cetorankama</Line>
+   <Line>Cousteaujev alkova�nom Bonn�nkinima Bratinom</Line>
+   <Line>Habi�ma Branoslav�noma Cerej�nkama Bugojnkam</Line>
+   <Line>Cirjankami Brestrni�na Bodon�nk Cikav�ne</Line>
+   <Line>Bori�vem Barbari�vima entur�nkinimi</Line>
+   <Line>Bue�nk Burovim Bavice mar�nke Hraam</Line>
+   <Line>umcem Brezarjevo Balkankino vaganovemu Braslov�nkami</Line>
+   <Line>Bravni�r Havrankova Bitnjanove Honoluluj�nih</Line>
+   <Line>Brani�rjevemu Hleven�vim marje�ni Beseni�rjevim</Line>
+   <Line>Br�nkinim e�novega Bov�nkino Hudobivnikov</Line>
+   <Line>Beni� Cverletovima Cvare Hudojam�nka kerljevi</Line>
+   <Line>Brozovem Hillov Bovanova Bajuku kerjan�vega</Line>
+   <Line>marten�novim Beringovi Charlesovih Hribovljanov</Line>
+   <Line>Chaucerjevega Cimermani Christianovim Begi�vima</Line>
+   <Line>Hinduj�vi Cviji�vih Betrovih imni�ve</Line>
+   <Line>Brato arfove Bori�ve Blagi� Cortes Ben��ma</Line>
+  </Level>
+  <Level>
+   <NewCharacters>irki usem itkov�nkam argija onti el�ni</NewCharacters>
+   <Line>urki idana arkovem enovi olnirjev laborankini</Line>
+   <Line>ulovce emvovo urkovodol�nki mukova ibrankin</Line>
+   <Line>enevi ebni�nkinima abni�novi irovskarjema</Line>
+   <Line>igon�nkinima ajdelami imari�ne enavelj�novo</Line>
+   <Line>iten�nov varulj�novimi unkovimi etal�nka</Line>
+   <Line>gajnarjevemu al�nkinima ikov�ve elebej�novih</Line>
+   <Line>ab�nova varovima upan��va ukove etinca</Line>
+   <Line>urajevemu abote elezanovih ejn�nkinim</Line>
+   <Line>epov�novim ekarjema iten�nki itkoma</Line>
+   <Line>nideri�v abotoma eljeva uli�amen�noma</Line>
+   <Line>urbijih abjekovimi apu�vega unkovo ab�n</Line>
+   <Line>upani� ibertoma irovni�rkinega ebniku</Line>
+   <Line>al�vemu al�nkini irovni�rjev iberta</Line>
+   <Line>ge� bogarjevo irovni�nkah abni�n enja�novega</Line>
+   <Line>ejcema upanjenjivcu itkov�novih irovkina</Line>
+   <Line>adovin�v erjavovemu nidari�vimi ikar�novi</Line>
+   <Line>urkovodol�novega eljn�nkinih upelevljankinih</Line>
+   <Line>imari�nih lindrama vir�nkinima bogarjevi</Line>
+   <Line>i�rkah amen�novem abkar irovni�nkinem</Line>
+   <Line>agarjevimi uni�ve iten�nkinim iganjcev</Line>
+   <Line>ej�vemu epov�nkinega erovnikovih enj�nih</Line>
+   <Line>epov�nkinimi ilav�vimi ajdelovimi enj�nko</Line>
+   <Line>upan�� anami upetin�novo eljkovim epljankina</Line>
+   <Line>icami alarjih al�nkine igon�noma el�nkinega</Line>
+   <Line>abljankinimi ihlav�nova vokljem uember�nkam</Line>
+   <Line>ihlav�novo igrskovrhovka un�vemu aberlovima</Line>
+   <Line>ibretova vanutov apuami urajevim erovcev</Line>
+   <Line>ano varulj�novem eljkove uni�novi mitkovemu</Line>
+   <Line>laboranovimi lendrovem nidari�ve emvovemu</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

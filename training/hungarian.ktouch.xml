@@ -1,0 +1,569 @@
+<KTouchLecture>
+ <Title>Magyar gépírótanfolyam</Title>
+ <Comment>Magyar gépírásra tanít - első, próbaverzió
+
+ Csak a csüggedésünket el ne veszítsük</Comment>
+ <Levels>
+
+<Level>
+   
+<NewCharacters>f, j</NewCharacters>
+<Line>ffff jjjj ffff jjjj ffff jjjj ffff jjjj ffff</Line>
+<Line>ffjj jjff ffjj jjff jjff ffjj ffjj ffjj ffjj</Line>
+<Line>fjfj fjfj fjfj fjfj jfjf jfjf jfjf jfjf jfjf</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>k, d</NewCharacters>
+<Line>dddd kkkk dddd kkkk dddd kkkk dddd kkkk dddd</Line>
+<Line>kkkk dddd kkkk dddd kkkk dddd kkkk dddd kkkk</Line>
+<Line>ffff jjjj ffff jjjj kkjj ffdd kkjj ddff ddkk</Line>
+<Line>dfjk dfkj dfjk dfjk dfjk dfjk dfjk dfjk dfjk</Line>
+<Line>kjfd kjfd kjfd kjfd kjfd kjfd kjfd kjfd kjfd</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>s, l</NewCharacters>
+<Line>ssss llll ssss llll ssss llll ssss llll ssss</Line>
+<Line>llll ssss llll ssss llll ssss ssss llll ssss</Line>
+<Line>ssll ssll ssll ssll ssll llss llss llss llss</Line>
+<Line>lsls lsls lsls lsls lsls slsl slsl slsl slsl</Line>
+<Line>sdfj sdfj lkjf lkjf lkjf lkjf lkjf lkjf lkjf </Line>
+<Line>sdkl sdkl sdkl sdkl sdkl sdkl sdkl sdkl sdkl</Line>
+<Line>klsd klsd klsd klsd klsd klsd klsd klsd klsd</Line>
+<Line>sflj sflj sflj sflj sflj sflj sflj sflj sflj</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>a, é</NewCharacters>
+<Line>aaaa éééé aaaa éééé aaaa éééé aaaa éééé aaaa</Line>
+<Line>éééé aaaa éééé aaaa éééé aaaa éééé aaaa éééé</Line>
+<Line>aaéé aaéé aaéé aaéé aaéé aaéé aaéé aaéé aaéé</Line>
+<Line>ééaa ééaa ééaa ééaa ééaa ééaa ééaa ééaa ééaa</Line>
+<Line>aéaé aéaé aéaé aéaé aéaé aéaé aéaé aéaé aéaé</Line>
+<Line>éaéa éaéa éaéa éaéa éaéa éaéa éaéa éaéa éaéa</Line>
+<Line>aféj aféj aféj aféj aféj aféj aféj aféj aféj</Line>
+<Line>élas élas élas élas élas élas élas élas élas</Line>
+<Line>adék adék adék adék adék adék adék adék adék</Line>
+<Line>asdf asdf asdf asdf asdf asdf asdf asdf asdf</Line>
+<Line>élkj élkj élkj élkj élkj élkj élkj élkj élkj</Line>
+<Line>fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa</Line>
+<Line>jklé jklé jklé jklé jklé jklé jklé jklé jklé</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>-</NewCharacters>
+<Line>gggg hhhh gggg hhhh gggg hhhh gggg hhhh gggg</Line>
+<Line>hhhh gggg hhhh gggg hhhh gggg hhhh gggg hhhh</Line>
+<Line>agag agag agag agag agag agag agag agag agag</Line>
+<Line>fgfg fgfg fgfg fgfg fgfg fgfg fgfg fgfg fgfg</Line>
+<Line>éhéh éhéh éhéh éhéh éhéh éhéh éhéh éhéh éhéh</Line>
+<Line>jhjh jhjh jhjh jhjh jhjh jhjh jhjh jhjh jhjh</Line>
+<Line>asdf ghjk léas dfgh jklé asdf ghjk léas dfgh</Line>
+<Line>gfds hjkl gfds hjkl gfds hjkl gfds hjkl hjkl</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>rrrr uuuu rrrr uuuu rrrr uuuu rrrr uuuu rrrr</Line>
+<Line>uuuu rrrr uuuu rrrr uuuu rrrr uuuu rrrr uuuu</Line>
+<Line>uurr uurr uurr uurr uurr uurr uurr uurr uurr</Line>
+<Line>rruu rruu rruu rruu rruu rruu rruu rruu rruu</Line>
+<Line>sdfr sdfr sdfr sdfr sdfr sdfr sdfr sdfr sdfr</Line>
+<Line>lkju lkju lkju lkju lkju lkju lkju lkju lkju</Line>
+<Line>raué raué raué raué raué raué raué raué raué</Line>
+<Line>ukrd ukrd ukrd ukrd ukrd ukrd ukrd ukrd ukrd</Line>
+<Line>ragu alku réka ragu alku réka ragu alku réka</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>eeee iiii eeee iiii eeee iiii eeee iiii eeee</Line>
+<Line>iiii eeee iiii eeee iiii eeee iiii eeee iiii</Line>
+<Line>eeii eeii eeii eeii eeii eeii eeii eeii eeii</Line>
+<Line>iiee iiee iiee iiee iiee iiee iiee iiee iiee</Line>
+<Line>ieie ieie ieie ieie ieie ieie ieie ieie ieie</Line>
+<Line>asre asre asre asre asre asre asre asre asre</Line>
+<Line>élui élui élui élui élui élui élui élui élui</Line>
+<Line>erui erui erui erui erui erui erui erui erui</Line>
+<Line>iure iure iure iure iure iure iure iure iure</Line>
+<Line>relé irak relé irak relé irak relé irak relé</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>wwww oooo wwww oooo wwww oooo wwww oooo wwww</Line>
+<Line>oooo wwww oooo wwww oooo wwww oooo wwww oooo</Line>
+<Line>wwoo wwoo wwoo wwoo wwoo wwoo wwoo wwoo wwoo</Line>
+<Line>ooww ooww ooww ooww ooww ooww ooww ooww ooww</Line>
+<Line>rewa uioé rewa uioé rewa uioé rewa uioé rewa</Line>
+<Line>wera oiué wera oiué wera oiué wera oiué wera</Line>
+<Line>rwas uoél rwas uoél rwas uoél rwas uoél rwas </Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>qqqq pppp qqqq pppp qqqq pppp qqqq pppp qqqq</Line>
+<Line>pppp qqqq pppp pppp qqqq pppp pppp qqqq pppp</Line>
+<Line>qqpp qqpp qqpp qqpp qqpp qqpp qqpp qqpp qqpp</Line>
+<Line>ppqq ppqq ppqq ppqq ppqq ppqq ppqq ppqq ppqq</Line>
+<Line>qwer poiu qwer poiu qwer poiu qwer poiu qwer</Line>
+<Line>frde swaq juki loép frde swaq juki loép frde</Line>
+<Line>swaq juki loép frde swaq juki loép frde swaq</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>vvvv mmmm vvvv mmmm vvvv mmmm vvvv mmmm vvvv</Line>
+<Line>mmmm vvvv mmmm vvvv mmmm vvvv mmmm vvvv mmmm</Line>
+<Line>vvmm vvmm vvmm vvmm vvmm vvmm vvmm vvmm vvmm</Line>
+<Line>mmvv mmvv mmvv mmvv mmvv mmvv mmvv mmvv mmvv</Line>
+<Line>vfra mjué vfra mjué vfra mjué vfra mjué vfra</Line>
+<Line>asvf élmj asvf élmj asvf élmj asvf élmj asvf</Line>
+<Line>mjkl vfds mjkl vfds mjkl vfds mjkl vfds mjkl</Line>
+<Line>mjhk vfgd mjhk vfgd mjhk vfgd mjhk vfgd mjhk</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>cccc ,,,, cccc ,,,, cccc ,,,, cccc ,,,, cccc</Line>
+<Line>,,,, cccc ,,,, cccc ,,,, cccc ,,,, cccc ,,,,</Line>
+<Line>cc,, cc,, cc,, cc,, cc,, cc,, cc,, cc,, cc,,</Line>
+<Line>,,cc ,,cc ,,cc ,,cc ,,cc ,,cc ,,cc ,,cc ,,cc</Line>
+<Line>hjm, gfvc hjm, gfvc hjm, gfvc hjm, gfvc hjm,</Line>
+<Line>,mjh cvfg ,mjh cvfg ,mjh cvfg ,mjh cvfg ,mjh</Line>
+<Line>,,,, cccc mmmm vvvv ,,,, cccc mmmm vvvv ,,,,</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>xxxx .... xxxx .... xxxx .... xxxx .... xxxx</Line>
+<Line>.... xxxx .... xxxx .... xxxx .... xxxx ....</Line>
+<Line>xx.. xx.. xx.. xx.. xx.. xx.. xx.. xx.. xx..</Line>
+<Line>vcxr m,.u vcxr m,.u vcxr m,.u vcxr m,.u vcxr</Line>
+<Line>.olé xwsa .olé xwsa .olé xwsa .olé xwsa .olé</Line>
+<Line>jm,. fvcx jm,. fvcx jm,. fvcx jm,. fvcx jm,.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>yyyy ---- yyyy ---- yyyy ---- yyyy ---- yyyy</Line>
+<Line>---- yyyy ---- yyyy ---- yyyy ---- yyyy ----</Line>
+<Line>yy-- yy-- yy-- yy-- yy-- yy-- yy-- yy-- yy--</Line>
+<Line>--yy --yy --yy --yy --yy --yy --yy --yy --yy </Line>
+<Line>m,.- vcxy m,.- vcxy m,.- vcxy m,.- vcxy m,.- </Line>
+<Line>muj- vrfy muj- vrfy muj- vrfy muj- vrfy muj- </Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>fakad valamerre és veres eme kerek mely él.</Line>
+<Line>megy és remél gyula, hogy elég vas fakad mely</Line>
+<Line>lopja, marja vedeli feri aki méri éli mi él.</Line>
+<Line>ropom és lopok, valamerre, adok kapom élek is.</Line>
+<Line>ha kapok egy kuka alapos, adok remek adag.</Line>
+<Line>remélem kimélem ama egyede, és élek még ideig.</Line>
+<Line>ha kell egy olyas ismeret ami piros, akkor gyere.</Line>
+<Line>mikor vedel még, gyere velem, megverlek csak</Line>
+<Line>ismerd eme eleme. csavarom, remeg, verem és</Line>
+<Line>ropog. fedem és piros, emelem és kék.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>tttt zzzz tttt zzzz tttt zzzz tttt zzzz tttt</Line>
+<Line>zzzz tttt zzzz tttt zzzz tttt zzzz tttt zzzz</Line>
+<Line>ttzz ttzz ttzz ttzz ttzz ttzz ttzz ttzz ttzz</Line>
+<Line>zztt zztt zztt zztt zztt zztt zztt zztt zztt</Line>
+<Line>kjzh dftg kjzh dftg kjzh dftg kjzh dftg kjzh</Line>
+<Line>atfg ézjh atfg ézjh atfg ézjh atfg ézjh atfg</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>nnnn bbbb nnnn bbbb nnnn bbbb nnnn bbbb nnnn</Line>
+<Line>bbbb nnnn bbbb nnnn bbbb nnnn bbbb nnnn bbbb</Line>
+<Line>nnbb nnbb nnbb nnbb nnbb nnbb nnbb nnbb nnbb</Line>
+<Line>bbnn bbnn bbnn bbnn bbnn bbnn bbnn bbnn bbnn</Line>
+<Line>jnkm fbdv jnkm fbdv jnkm fbdv jnkm fbdv jnkm</Line>
+<Line>jnjm fbfv jnjm fbfv jnjm fbfv jnjm fbfv jnjm</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>áááá íííí áááá íííí áááá íííí áááá íííí áááá</Line>
+<Line>íííí áááá íííí áááá íííí áááá íííí áááá íííí</Line>
+<Line>ááíí ááíí ááíí ááíí ááíí ááíí ááíí ááíí ááíí</Line>
+<Line>ííáá ííáá ííáá ííáá ííáá ííáá ííáá ííáá ííáá</Line>
+<Line>kléá dsaí kléá dsaí kléá dsaí kléá dsaí kléá</Line>
+<Line>áéjh íafg áéjh íafg áéjh íafg áéjh íafg áéjh</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>öööö üüüü öööö üüüü öööö üüüü öööö üüüü öööö</Line>
+<Line>üüüü öööö üüüü öööö üüüü öööö üüüü öööö üüüü</Line>
+<Line>ööüü ööüü ööüü ööüü ööüü ööüü ööüü ööüü ööüü</Line>
+<Line>éöéü éöéü éöéü éöéü éöéü éöéü éöéü éöéü éöéü</Line>
+<Line>aöéü aöéü aöéü aöéü aöéü aöéü aöéü aöéü aöéü</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>óóóó úúúú óóóó úúúú óóóó úúúú óóóó úúúú óóóó</Line>
+<Line>úúúú óóóó úúúú óóóó úúúú óóóó úúúú óóóó úúúú</Line>
+<Line>óóúú óóúú óóúú óóúú óóúú óóúú óóúú óóúú óóúú</Line>
+<Line>úúóó úúóó úúóó úúóó úúóó úúóó úúóó úúóó úúóó</Line>
+<Line>öóúü öóúü öóúü öóúü öóúü öóúü öóúü öóúü öóúü</Line>
+<Line>éóéú éóéú éóéú éóéú éóéú éóéú éóéú éóéú éóéú</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>őőőő űűűű őőőő űűűű őőőő űűűű őőőő űűűű őőőő</Line>
+<Line>űűűű őőőő űűűű őőőő űűűű őőőő űűűű őőőő űűűű</Line>
+<Line>őőűű őőűű őőűű őőűű őőűű őőűű őőűű őőűű őőűű</Line>
+<Line>űűőő űűőő űűőő űűőő űűőő űűőő űűőő űűőő űűőő</Line>
+<Line>éűéő éűéő éűéő éűéő éűéő éűéő éűéő éűéő éűéő</Line>
+<Line>jűéő aőéh jűéő aőéh jűéő aőéh jűéő aőéh jűéő</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>FFFF JJJJ FFFF JJJJ FFFF JJJJ FFFF JJJJ FFFF</Line>
+<Line>FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ FJFJ</Line>
+<Line>AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ AÉAÉ</Line>
+<Line>DKDK DKDK DKDK DKDK DKDK DKDK DKDK DKDK DKDK</Line>
+<Line>SLSL SLSL SLSL SLSL SLSL SLSL SLSL SLSL SLSL</Line>
+<Line>AJSL DKFJ AJSL DKFJ AJSL DKFJ AJSL DKFJ AJSL </Line>
+<Line>AÉJF AÉJF AÉJF AÉJF AÉJF AÉJF AÉJF AÉJF AÉJF</Line>
+<Line>GGHH GGHH GGHH GGHH GGHH GGHH GGHH GGHH GGHH</Line>
+<Line>GFDA HJKÉ GFDA HJKÉ GFDA HJKÉ GFDA HJKÉ GFDA</Line>
+
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>A főtér felöl a templomnak tartottunk.</Line>
+<Line>Végighaladtunk a parkon. Az öreg gimná-</Line>
+<Line>ziumi hittanárunk ott ült a rendes padján,</Line>
+<Line>egy könyv olvasásába merülve. Köszöntünk</Line>
+<Line>neki. Barátságosan integetett. Azután</Line>
+<Line>megkerültük a templomot. A fiúk egy vak</Line>
+<Line>utcába vezettek, amelyről eddig semmit</Line>
+<Line>sem tudtam. Az utca szűk volt, és körül-</Line>
+<Line>belül kétszáz lépés hosszú. Sajátságos!</Line>
+<Line>- ilyen házakat, mint itt, sohase láttam</Line>
+<Line>a városban. Alacsonyak és kezdetlegesek</Line>
+<Line>voltak, de vagy az ablakok hajlásában,</Line>
+<Line>vagy a kapuk faragásában és formájában </Line>
+<Line>volt valami ósdi. Az utcán padokon és</Line>
+<Line>székeken öreg emberek és bánatos arcú,</Line>
+<Line>sápadt asszonyok ültek, apró lányok</Line>
+<Line>söpörték és öntözték a földet. Kocsi-</Line>
+<Line>keréknek nyoma se látszott.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>Sajátos növényvilág tenyészett itt. Hosszú</Line>
+<Line>szárú, kürt alakú virágok, amelyek szirmai</Line>
+<Line>mintha fekete bársonyból volnának. A sarok-</Line>
+<Line>ban liliombokor, óriási kelyh? fehér lilio-</Line>
+<Line>mokkal megrakodva. Mindenütt elszórva ala-</Line>
+<Line>csony, vékony szárú fehér virágok, amelyek-</Line>
+<Line>nek egy szirma, csak egy szirma, gyenge</Line>
+<Line>piros színű volt. Úgy tetszett, hogy ezek</Line>
+<Line>bocsátják azt az ismeretlen, édes illatot,</Line>
+<Line>amelyet szagolva az ember azt hiszi, elakad</Line>
+<Line>a lélegzete. A kert közepén egy csomó bíbor-</Line>
+<Line>piros, kövér virág terpeszkedett. Húsos,</Line>
+<Line>selymes fényű szirmaik hosszan lógtak le </Line>
+<Line>egészen a magasra n?tt haragoszöld színű</Line>
+<Line>főbe. Mint egy kaleidoszkóp, úgy hatott</Line>
+<Line>ez a kis csodakert. Közvetlen előttem a</Line>
+<Line>nőszirom lila virágai nyíltak. Százféle</Line>
+<Line>virágillat tevődött össze a bódító szagában,</Line>
+<Line>s a szivárvány minden színét megtalálhattad</Line>
+<Line>a virágok színében.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>Elmondom önöknek, hogy miért, bár ha csak</Line>
+<Line>ráemlékszem is a dologra, reszkető félelem</Line>
+<Line>fog el, a gyomrom rémületes undorban vonaglik,</Line>
+<Line>a szemeim előtt és a torkomon hideg, nedves</Line>
+<Line>varangyok mászkálnak, a füleimben egy béka-</Line>
+<Line>nyálszagú hang vartyog, és gerincoszlopomban</Line>
+<Line>görcsös, jéghideg iszonyat szaladgál. És én</Line>
+<Line>ma éjjel nem fogok aludni. Mégis elmondom,</Line>
+<Line>hogy miért iszonyodom a kicsiny békától,</Line>
+<Line>miért merednek meg az izmaim halálos izga-</Line>
+<Line>lomban, amikor két békaszem pislogó, rohadt</Line>
+<Line>fényét látom a múltból az agyvelőmbe világolni.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>Azon a napon, amikor a Linuxot valaki más</Line>
+<Line>jobban tudja szolgálni -- az FSF egy termé-</Line>
+<Line>szetes alternatíva --, félreállok. Nem gon-</Line>
+<Line>dolom, hogy emiatt valakinek aggódni kel-</Line>
+<Line>lene, és nem is gondolom, hogy ez a közel-</Line>
+<Line>jövőben bekövetkezik. Szeretek a Linuxszal</Line>
+<Line>foglalkozni, még ha ez egy kis munkával</Line>
+<Line>jár is, és még senkitől sem kaptam panaszt.</Line>
+<Line>Csak néhány, majdhogynem szégyenlős emlé-</Line>
+<Line>keztetőt arról, hogy egy foltot elfelejtet-</Line>
+<Line>tem, vagy nem vettem figyelembe, de eddig</Line>
+<Line>semmi negatívot.</Line>
+<Line>Ne vegyétek úgy a fentieket, hogy azon a</Line>
+<Line>napon, amikor valaki ellenkezik, abbahagyom</Line>
+<Line>elég keményfejű vagyok. Lasu, aki ezt a vállam</Line>
+<Line>felett olvassa, megjegyezte, hogy a FAfejű</Line>
+<Line>közelebb van az igazsághoz egy kis mocsko-</Line>
+<Line>lódáshoz. Ha nem lennék az, abbahagytam volna</Line>
+<Line>a Linux fejlesztését, amikor a comp.os.minix-en</Line>
+<Line>nevetségessé tettek. Csak arra gondoltam, hogy</Line>
+<Line>bár a Linux eddig az én gyermekem volt, nem</Line>
+<Line>akarok útban lenni, ha az emberek jobbat</Line>
+<Line>szeretnének csinálni.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>Volt idő amikor az ember teljes életet tudott élni</Line>
+<Line>számítógép nélkül. Sokan azt hiszik ez ma már lehetetlen,</Line>
+<Line>mert a számítógép annyira hétköznapjaink eszközeivé vált.</Line>
+<Line>Arról beszélnek, hogy ma információs társadalomban élünk,</Line>
+<Line>és nem látják, hogy sokan élnek -- többek között vidéken --</Line>
+<Line>úgy, hogy sosem láttak még számítógépet és mégis boldogak.</Line>
+<Line>Civilizációnak és fejlődésnek titulálják a technika</Line>
+<Line>és a tudomány által létrehozott eszközöket, miközben </Line>
+<Line>nem vesszük észre, hogy mekkor tömegű hulladék termeléssel</Line>
+<Line>jár mindez. Ez a hulladék pedig nem is akármilyen. </Line>
+<Line>Évezredek alatt sem tünnek el az életünkből, és csak</Line>
+<Line>gyűlnek meg gyűlnek. Nagy szemétlerakok épülnek, majd</Line>
+<Line>beföldelik őket, és újabbakat nyitnak. Unokáinknak már</Line>
+<Line>nem lesz egy talpalattnyi helye sem szemét nélkül. </Line>
+<Line>Az ember egy olyan állatfaj amely hiába látja szörnyű</Line>
+<Line>jövőjét, ahhoz, hogy cselekvésig eljusson át kell </Line>
+<Line>élnie szörnyű bukását, tévedését.</Line>
+<Line>Milyen szép lehet egy nap amikor nem egy szobában vagy</Line>
+<Line>irádában töltöm számítógép előtt az időmet, hanem </Line>
+<Line>felmegyek egy hegyre, és az erdőben sétálok. Hallgatom </Line>
+<Line>amint csiripelnek a madarak, érzem a fák és a leveleik</Line>
+<Line>illatát. Látom amint a nap megvilágítja a közelben</Line>
+<Line>lévő tisztást, és aranyba borítja az ott növő növényeket.</Line>
+<Line>Érzem a lábaimban az izmok enyhe fáradságát, a tüdömben</Line>
+<Line>a friss levegő be és kiáramlását. </Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>A harmadrangú külvárosi kávéházban - ahová egy</Line>
+<Line>időben jártam - kezdettől fogva feltűnt nekem a</Line>
+<Line>sebész. Állandóan fekete, zöldre kopott, de tiszta</Line>
+<Line>szalonkabátot viselt. Sápadt arcához különösen illett</Line>
+<Line>a kuszált, őszbe vegyülő gesztenyeszín bajsza és nagy,</Line>
+<Line>mély fekvésű, fekete szemei. Ezekben a szemekben -</Line>
+<Line>mintha mindig könnyesek lettek volna - valami éjszakás,</Line>
+<Line>bohém csillogás volt. Csendesen, csaknem suttogva</Line>
+<Line>beszélt, amint az orvosok szoktak a konzíliumokon.</Line>
+<Line>A leglényegtelenebb beszélgetéseknél is, amelyeket a</Line>
+<Line>kávéházi vendégekkel az újságok tartalma felől</Line>
+<Line>folytatott, mélyen belenézett annak a szemébe, akivel</Line>
+<Line>beszélt. Mintha nagyon érdekelte volna őt az illető.</Line>
+<Line>A véleményét mindig olyan tökéletes, értelmes</Line>
+<Line>mondatokban mondta el, mintha a betegének adná ki</Line>
+<Line>rendeléseit. Ennek a kopott embernek nemes eleganciája</Line>
+<Line>olyanféleképpen hatott rám, mint a fakó, de igen finom</Line>
+<Line>bársonyszövetek, amelyeket ódon f?nemesi kastélyokban láttam.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>Egyszer meghallotta, amikor egy orvosi lapot kértem.</Line>
+<Line>Megszólított. Dícsérte az orvosi foglalkozást,</Line>
+<Line>kérdezősködött az egyetemről. Elbeszélgettünk,</Line>
+<Line>és eközben nagy tudást árult el. Különösen feltűnt</Line>
+<Line>néhány pszichofizikai dolog, amelyet sehol se</Line>
+<Line>olvastam. Nagyon lebilincselt az az éles elméjű és</Line>
+<Line>fantáziára hajló aprólékossága, amellyel igen</Line>
+<Line>jelentéktelen dolgokról is nagy érdekl?déssel</Line>
+<Line>beszélt. Bámultam, hogy mennyire számolni tud a</Line>
+<Line>körülményekkel, menyire megalkuszik az élettel,</Line>
+<Line>és hogy mennyire jól érzi magát benne. De hamarosan</Line>
+<Line>elbúcsúztunk a délutáni feketekávé után.</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>4444 7777 4444 7777 4444 7777 4444 7777 4444 7777</Line>
+<Line>4477 4477 4477 4477 4477 4477 4477 4477 4477 4477</Line>
+<Line>7744 7744 7744 7744 7744 7744 7744 7744 7744 7744</Line>
+<Line>7474 7474 7474 7474 7474 7474 7474 7474 7474 7474</Line>
+<Line>4747 4747 4747 4747 4747 4747 4747 4747 4747 4747</Line>
+<Line>47 74 47 74 47 74 47 74 47 74 47 74 47 74 47 74</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>3333 8888 3333 8888 3333 8888 3333 8888 3333 8888 </Line>
+<Line>3388 3388 3388 3388 3388 3388 3388 3388 3388 3388</Line>
+<Line>8833 8833 8833 8833 8833 8833 8833 8833 8833 8833</Line>
+<Line>8383 8383 8383 8383 8383 8383 8383 8383 8383 8383</Line>
+<Line>3838 3838 3838 3838 3838 3838 3838 3838 3838 3838</Line>
+<Line>38 83 38 83 38 83 38 83 38 83 38 83 38 83 38 83</Line>
+<Line>4378 3487 4378 3487 4378 3487 4378 3487 4378 3487</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>2222 9999 2222 9999 2222 9999 2222 9999 2222 9999</Line>
+<Line>9999 2222 9999 2222 9999 2222 9999 2222 9999 2222</Line>
+<Line>2299 2299 2299 2299 2299 2299 2299 2299 2299 2299</Line>
+<Line>9922 9922 9922 9922 9922 9922 9922 9922 9922 9922</Line>
+<Line>9229 2992 9229 2992 9229 2992 9229 2992 9229 2992</Line>
+<Line>432789 234789 987432 432789 234789 987432 987432</Line>
+<Line>2748293 2748293 2748293 2748293 2748293 2748293</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>1111 0000 1111 0000 1111 0000 1111 0000 1111</Line>
+<Line>0000 1111 0000 1111 0000 1111 0000 1111 0000</Line>
+<Line>1100 1100 1100 1100 1100 1100 1100 1100 1100</Line>
+<Line>0011 0011 0011 0011 0011 0011 0011 0011 0011</Line>
+<Line>01234789 01234789 01234789 01234789 01234789</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>5555 7777 5555 7777 5555 7777 5555 7777 5555</Line>
+<Line>7777 5555 7777 5555 7777 5555 7777 5555 7777</Line>
+<Line>5577 7755 5577 7755 5577 7755 5577 7755 5577</Line>
+<Line>55 77 55 77 55 77 55 77 55 77 55 77 55 77 55</Line>
+<Line>0123456789 0123456789 0123456789 0123456789</Line>
+<Line>9876543210 9876543210 9876543210 9876543210</Line>
+<Line>2004.05.23 1998.07.31 1516.11.25 1848.02.15 </Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>!!!! ==== !!!! ==== !!!! ==== !!!! ==== !!!!</Line>
+<Line>==== !!!! ==== !!!! ==== !!!! ==== !!!! ====</Line>
+<Line>!!== !!== !!== !!== !!== !!== !!== !!== !!==</Line>
+<Line>==!! ==!! ==!! ==!! ==!! ==!! ==!! ==!! ==!!</Line>
+<Line>!=!= !=!= !=!= !=!= !=!= !=!= !=!= !=!= !=!=</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>++++ (((( ++++ (((( ++++ (((( ++++ (((( ++++</Line>
+<Line>(((( ++++ (((( ++++ (((( ++++ (((( ++++ ((((</Line>
+<Line>++(( ++(( ++(( ++(( ++(( ++(( ++(( ++(( ++((</Line>
+<Line>((++ ((++ ((++ ((++ ((++ ((++ ((++ ((++ ((++</Line>
+<Line>(+(+ +(+( (+(+ +(+( (+(+ +(+( (+(+ +(+( (+(+</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>"""" )))) """" )))) """" )))) """" )))) """"</Line>
+<Line>)))) """" )))) """" )))) """" )))) """" ))))</Line>
+<Line>"")) "")) "")) "")) "")) "")) "")) "")) ""))</Line>
+<Line>))"" ))"" ))"" ))"" ))"" ))"" ))"" ))"" ))""</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>'''' %%%% //// '''' %%%% //// '''' %%%% ////</Line>
+<Line>//// %%%% '''' //// %%%% '''' //// %%%% '''' </Line>
+<Line>/%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/ /%1/</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>[[[[ ]]]] $$$$ [[[[ ]]]] $$$$ [[[[ ]]]] $$$$</Line>
+<Line>]]]] [[[[ $$$$ ]]]] [[[[ $$$$ ]]]] [[[[ $$$$</Line>
+<Line>[[$$]] [[$$]] [[$$]] [[$$]] [[$$]] [[$$]]</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>@@@@ {{{{ }}}} @@@@ {{{{ }}}} @@@@ {{{{ }}}}</Line>
+<Line>{{{{ }}}} @@@@ {{{{ }}}} @@@@ {{{{ }}}} @@@@</Line>
+<Line>{{@@}} {{@@}} {{@@}} {{@@}} {{@@}} {{@@}}</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>**** ```` ~~~~ **** ```` ~~~~ **** ```` ~~~~</Line>
+<Line>```` **** ~~~~ ```` **** ~~~~ ```` **** ~~~~</Line>
+<Line>``**~~ ``**~~ ``**~~ ``**~~ ``**~~ ``**~~ </Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line>^^^^ #### &&&& ^^^^ #### &&&& ^^^^ #### &&&&</Line>
+<Line>&&&& #### ^^^^ &&&& #### ^^^^ &&&& #### ^^^^</Line>
+<Line>##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^</Line>
+</Level>
+
+<Level>
+   
+<NewCharacters>Ez-az</NewCharacters>
+<Line><<<< >>>> ;;;; <<<< >>>> ;;;; <<<< >>>> ;;;;</Line>
+<Line>;;;; >>>> <<<< ;;;; >>>> <<<< ;;;; >>>> <<<<</Line>
+<Line><<;;>> <<;;>> <<;;>> <<;;>> <<;;>> <<;;>></Line>
+</Level>
+
+ </Levels>
+</KTouchLecture>
