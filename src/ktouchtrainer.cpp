@@ -44,7 +44,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     m_trainingPaused=true;    // we start in pause mode
     m_teacherText=m_lecture->level(0).line(0);
     m_studentText="";
-	mplayer = new Phonon::SimplePlayer(this);
+	mplayer = new Phonon::SimplePlayer(Phonon::GameCategory, this);
 	
 	// reset statistics
     m_levelStats.clear();
