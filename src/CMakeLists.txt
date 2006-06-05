@@ -44,7 +44,7 @@ kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 kde4_add_executable(ktouch ${ktouch_SRCS})
 
-target_link_libraries(ktouch  ${KDE4_KIO_LIBS} kdeeduplot phononcore)
+target_link_libraries(ktouch  ${KDE4_KIO_LIBS} kdeeduplot ${KDE4_PHONONCORE_LIBS})
 
 install_targets(/bin ktouch )
 
