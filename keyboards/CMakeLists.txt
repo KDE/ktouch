@@ -4,7 +4,7 @@
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/ktouch FILES 
+install( FILES 
   be.keyboard
   bg.keyboard
   de-2.keyboard
@@ -43,7 +43,7 @@ install_files( ${DATA_INSTALL_DIR}/ktouch FILES
   sl.keyboard
   uk.basic.keyboard
   uk.typewriter.keyboard
-  uk.winkeys.keyboard
+  uk.winkeys.keyboard DESTINATION ${DATA_INSTALL_DIR}/ktouch
 )
 
 
