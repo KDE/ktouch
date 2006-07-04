@@ -12,7 +12,7 @@ add_subdirectory( icons )
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES ktouch.desktop )
+install( FILES ktouch.desktop  DESTINATION  ${XDG_APPS_DIR} )
 
 
 

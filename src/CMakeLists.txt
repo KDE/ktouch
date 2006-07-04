@@ -51,8 +51,8 @@ install_targets(/bin ktouch )
 
 ########### install files ###############
 
-install_files( ${KCFG_INSTALL_DIR} FILES ktouch.kcfg )
-install_files( ${DATA_INSTALL_DIR}/ktouch FILES ktouchui.rc )
+install( FILES ktouch.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES ktouchui.rc  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
 
 
 

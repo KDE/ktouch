@@ -4,7 +4,7 @@
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/ktouch FILES up.wav down.wav )
+install( FILES up.wav down.wav  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
 
 
 
