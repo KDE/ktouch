@@ -243,7 +243,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
 	trainingPause();
-	KUrl tmp = KFileDialog::getOpenURL(QString(), QString(), this, i18n("Select Training Lecture File") );
+	KUrl tmp = KFileDialog::getOpenUrl(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
 		// first store training statistics
 		m_trainer->storeTrainingStatistics();
