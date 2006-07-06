@@ -46,7 +46,7 @@ kde4_add_executable(ktouch ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} kdeeduplot ${KDE4_PHONONCORE_LIBRARY})
 
-install_targets(/bin ktouch )
+install(TARGETS ktouch  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
