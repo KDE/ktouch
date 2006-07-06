@@ -4,7 +4,7 @@
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/ktouch FILES 
+install(FILES 
   bulgarian.ktouch.xml
   bulgarian_long.ktouch.xml
   catalan.ktouch.xml  
@@ -36,7 +36,7 @@ install_files( ${DATA_INSTALL_DIR}/ktouch FILES
   russian_long.ktouch.xml
   slovenian.ktouch.xml
   spanish.ktouch.xml 
-)
+  DESTINATION ${DATA_INSTALL_DIR}/ktouch)
 
 
 
