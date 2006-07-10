@@ -28,7 +28,7 @@
 #include "ktouchlecture.h"
 #include "ktouchdefaults.h"
 #include "prefs.h"
-#include <phonon/simpleplayer.h>
+#include <phonon/audioplayer.h>
 
 KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : QObject(),
@@ -44,8 +44,8 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     m_trainingPaused=true;    // we start in pause mode
     m_teacherText=m_lecture->level(0).line(0);
     m_studentText="";
-	mplayer = new Phonon::SimplePlayer(Phonon::GameCategory, this);
-	
+    mplayer = new Phonon::AudioPlayer(Phonon::GameCategory, this);
+
 	// reset statistics
     m_levelStats.clear();
 	m_sessionStats.clear();
@@ -138,9 +138,9 @@ void KTouchTrainer::enterPressed() {
         return;
     };
 
-	/* 
+	/*
 	// NOTE : auto level change inside level was removed due to popular request
-	
+
     if (Prefs::autoLevelChange()) {
         // if level increase criterion was fulfilled, increase line counter
         if (Prefs::upCorrectLimit() <= m_session.correctness()*100 &&
@@ -181,7 +181,7 @@ void KTouchTrainer::enterPressed() {
                 return;
             }
 			else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 ||
-				Prefs::downSpeedLimit() > m_levelStats.charSpeed()) 
+				Prefs::downSpeedLimit() > m_levelStats.charSpeed())
             {
                 levelDown();	// level change takes care of updating word count
                 return;
@@ -221,14 +221,14 @@ void KTouchTrainer::updateWidgets() {
     else {
         m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
     }
-	updateWordCount();	// here we first update the word count 
+	updateWordCount();	// here we first update the word count
 	updateStatusBar();	// and then the status bar
 }
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::startTraining(bool keepLevel) {
 	// Here we start a new training session.
-	
+
 	// keep the current level if flag is set
 	if (!keepLevel)
 		m_level=0;
@@ -265,7 +265,7 @@ void KTouchTrainer::pauseTraining() {
 // ----------------------------------------------------------------------------
 
 // Continues the current training session.
-// This function is called from class KTouch when a user presses a normal key 
+// This function is called from class KTouch when a user presses a normal key
 // while the training is in pause mode.
 void KTouchTrainer::continueTraining() {
 	m_trainingPaused=false;
@@ -300,9 +300,9 @@ void KTouchTrainer::storeTrainingStatistics() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchTrainer::studentLineCorrect() const { 
+bool KTouchTrainer::studentLineCorrect() const {
 	unsigned int len = m_studentText.length();
-	return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len); 
+	return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len);
 }
 // ----------------------------------------------------------------------------
 
@@ -351,7 +351,7 @@ void KTouchTrainer::timerTick() {
 void KTouchTrainer::newLine() {
     m_teacherText = m_lecture->level(m_level).line(m_line);
     m_studentText="";
-	m_wordsInCurrentLine = 0; 
+	m_wordsInCurrentLine = 0;
     m_keyboardWidget->newKey(m_teacherText[0]);
     m_slideLineWidget->setNewText(m_teacherText, m_studentText);
 	updateStatusBar();	// update status bar
@@ -359,9 +359,9 @@ void KTouchTrainer::newLine() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::updateStatusBar() const {
-	KTouchPtr->changeStatusbarStats(m_levelStats.m_correctChars, m_levelStats.m_totalChars, 
+	KTouchPtr->changeStatusbarStats(m_levelStats.m_correctChars, m_levelStats.m_totalChars,
 		m_levelStats.m_words + m_wordsInCurrentLine,
-		m_sessionStats.m_correctChars, m_sessionStats.m_totalChars, 
+		m_sessionStats.m_correctChars, m_sessionStats.m_totalChars,
 		m_sessionStats.m_words + m_wordsInCurrentLine);
 }
 // ----------------------------------------------------------------------------
@@ -424,7 +424,7 @@ void KTouchTrainer::statsAddTime(double dt) {
 
 void KTouchTrainer::statsChangeLevel() {
 	//kDebug() << "[KTouchTrainer::statsChangeLevel]  First!" << endl;
-	// first update word count and store data in 
+	// first update word count and store data in
 	updateWordCount();
 	//kDebug() << "[KTouchTrainer::statsChangeLevel]  Adding word count of " << m_wordsInCurrentLine << endl;
 	m_levelStats.m_words += m_wordsInCurrentLine;
@@ -444,6 +444,6 @@ void KTouchTrainer::statsChangeLevel() {
 	// remember level in session stats
 	m_sessionStats.m_levelNums.insert(m_level);
 	// show new level (in status widet) and 100% correctness
-	m_statusWidget->updateStatus(m_level, 1); 
+	m_statusWidget->updateStatus(m_level, 1);
 }
 // ----------------------------------------------------------------------------

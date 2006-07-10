@@ -30,7 +30,7 @@ class KTouchLecture;
 
 namespace Phonon
 {
-      class SimplePlayer;
+      class AudioPlayer;
 }
 
 /// This is the master trainer object and does all the heavy work.
@@ -161,7 +161,7 @@ class KTouchTrainer : public QObject {
 	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
-	Phonon::SimplePlayer *mplayer;
+	Phonon::AudioPlayer *mplayer;
 };
 
 #endif  // KTOUCHTRAINER_H
