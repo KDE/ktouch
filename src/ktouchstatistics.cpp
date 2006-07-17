@@ -73,7 +73,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 			m_currentIndex = lectureCombo->count();
 			t = i18n("***current***  ") + t;
 		}
-		lectureCombo->insertItem(t);
+		lectureCombo->addItem(t);
 		++it;
 	}
 	if (lectureCombo->count()==0) {
@@ -123,7 +123,7 @@ void KTouchStatistics::clearHistory() {
 		m_allStats.clear();
 		QString s = lectureCombo->text(m_currentIndex);
 		lectureCombo->clear();
-		lectureCombo->insertItem(s);
+		lectureCombo->addItem(s);
 		m_currentIndex = 0;
 		lectureCombo->setCurrentItem(m_currentIndex);
 		lectureActivated(m_currentIndex);

@@ -61,7 +61,7 @@ int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, cons
     }
     else {
         for (QStringList::Iterator it = defaultList.begin(); it != defaultList.end(); ++it )
-            presetCombo->insertItem(*it);
+            presetCombo->addItem(*it);
         presetRadioBtn->setEnabled(true);
     }
     presetCombo->setCurrentItem(0);
