@@ -55,8 +55,8 @@ int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, cons
     // Fill preset combo with lecture files from the configuration object
     presetCombo->clear();
     if (defaultList.isEmpty()) {
-        if (emptyListText.isEmpty())  presetCombo->insertItem(i18n("<no default files available>"));
-        else                          presetCombo->insertItem(emptyListText);
+        if (emptyListText.isEmpty())  presetCombo->addItem(i18n("<no default files available>"));
+        else                          presetCombo->addItem(emptyListText);
         presetRadioBtn->setEnabled(false);
     }
     else {
