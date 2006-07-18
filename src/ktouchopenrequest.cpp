@@ -64,7 +64,7 @@ int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, cons
             presetCombo->addItem(*it);
         presetRadioBtn->setEnabled(true);
     }
-    presetCombo->setCurrentItem(0);
+    presetCombo->setCurrentIndex(0);
     radioBtnChanged();
     
     // Finally executre the dialog

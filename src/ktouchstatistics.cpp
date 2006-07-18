@@ -86,7 +86,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 	m_currLevelStats = currLevelStats;
 	m_currSessionStats = currSessionStats;
 	// modify current lecture entry
-	lectureCombo->setCurrentItem(m_currentIndex);
+	lectureCombo->setCurrentIndex(m_currentIndex);
 	lectureActivated(m_currentIndex);
 	m_lectureIndex = m_currentIndex;
 	// update the current tabs with current session/level data
@@ -125,7 +125,7 @@ void KTouchStatistics::clearHistory() {
 		lectureCombo->clear();
 		lectureCombo->addItem(s);
 		m_currentIndex = 0;
-		lectureCombo->setCurrentItem(m_currentIndex);
+		lectureCombo->setCurrentIndex(m_currentIndex);
 		lectureActivated(m_currentIndex);
 		updateChartTab();
 	}
