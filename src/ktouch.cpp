@@ -593,7 +593,7 @@ void KTouch::setupActions() {
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
-    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
+    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), actionCollection(), "default_lectures");
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
     connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
@@ -601,12 +601,12 @@ void KTouch::setupActions() {
 	// *** Settings menu ***
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts
-    m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
+    m_keyboardLayoutAction = new KSelectAction(i18n("&Keyboard Layouts"), actionCollection(), "keyboard_layouts");
     m_keyboardLayoutAction->setItems(m_keyboardFiles);
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
-	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
+	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), actionCollection(), "keyboard_schemes");
     QStringList schemes_list;
     for (int i=0; i<m_colorSchemes.count(); ++i)
 		schemes_list.append(m_colorSchemes[i].m_name);
