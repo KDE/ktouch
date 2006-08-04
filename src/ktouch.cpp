@@ -41,6 +41,7 @@
 #include <kcombobox.h>
 #include <kfontrequester.h>
 #include <knuminput.h>
+#include <kicon.h>
 
 // Own header files
 #include "ktouchlecture.h"
