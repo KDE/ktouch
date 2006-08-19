@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
- "dtd/kdex.dtd" [
-<!ENTITY kappname "&ktouch;"><!-- replace kapp here -->
-<!ENTITY package "kdeedu">
-<!ENTITY % addindex "IGNORE">
-<!ENTITY % English "INCLUDE"><!-- change language only here -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+ <!ENTITY ktouch "<application>KTouch</application>">
+ <!ENTITY kappname "&ktouch;"><!-- replace kapp here -->
+ <!ENTITY package "kdeedu">
+ <!ENTITY % addindex "IGNORE">
+ <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
 
 <book lang="&language;">
@@ -13,7 +13,6 @@
 <title>The &ktouch; Handbook</title>
 
 <authorgroup>
-
 <author>
 <firstname>Håvard</firstname><surname>Frøiland</surname>
 <affiliation>
@@ -27,11 +26,8 @@
 <address><email>Andreas.nicolai@gmx.net</email></address>
 </affiliation>
 </author>
-
-</authorgroup>
-
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
-
+</authorgroup>
 
 <copyright>
 <year>1999-2005</year>
@@ -72,7 +68,7 @@ and the correct finger to use.</para>
 <title>Introduction</title>
 
 <sect2>
-<title>What is KTouch?</title>
+<title>What is &ktouch;?</title>
 <para>&ktouch; is a program for learning to touch type.</para>
 <para>&ktouch; provides you with text to train on and adjusts to
 different levels depending on how good you are. It shows your keyboard 
@@ -537,7 +533,7 @@ the geometry and some time. Best is to start with an existing keyboard file,
 create a copy for your keyboard layout and simply adjust the lines.</para>
 <para>
 Currently keyboard files are plain UTF-8 encoded text files. In one of the
-next version of &ktouch; keyboard data will be stored in XML files, too.
+next version of &ktouch; keyboard data will be stored in &XML; files, too.
 Therefore I'll only briefly explain the structure of a keyboard file.
 </para>
 <para>A keyboard file usually starts with a header including some information
@@ -570,7 +566,7 @@ FingerKey  246      Ö        108  20
 <para>Keys have the default dimensions of 8 units, so using a grid of 10 units
 gives a normal looking keyboard. The first number is the unicode character
 code as decimal number. The KeyText is the text printed on the key encoded as
-UTF-8 (automatic under newer Linux versions, just make sure your editor saves
+UTF-8 (automatic under newer &Linux; versions, just make sure your editor saves
 files as UTF-8 format).</para>
 <para>The next section contains special keys, which are - apart from BackSpace
 and Enter - just decorative.</para>
@@ -650,7 +646,7 @@ that is needed to type the key) and the last number indicates the modifier key
 you need to press to get this character.
 </para>
 <para>Let's look@an example:</para>
-<para>You want to define the upper case 'R' character. It has the unicode 82.
+<para>You want to define the uppercase 'R' character. It has the unicode 82.
 The character obtained when the 'R' key is pressed without modifier is the
 small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key
 which has the unicode 102. And in order to get the 'R' you need to press the
@@ -894,8 +890,8 @@ net</email></simpara></listitem>
 url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>. Please refer to the instructions on the home page since they will contain up-to-date information about how to obtain &ktouch;.
 </para>
 <para>&ktouch; can also be found
-on <ulink url="http://edu.kde.org/ktouch">The KDE Edutainment - &ktouch; home page</ulink>
-and is part of the KDE-Edutainment project. </para>
+on <ulink url="http://edu.kde.org/ktouch">The &kde; Edutainment - &ktouch; home page</ulink>
+and is part of the &kde;-Edutainment project. </para>
 
 </appendix>
 
