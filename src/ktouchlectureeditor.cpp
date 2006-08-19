@@ -230,8 +230,10 @@ void KTouchLectureEditor::moveDown() {
     Q3ListViewItem *lowerItem = m_currentItem->itemBelow();
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level+1]);
     m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
-    lowerItem->setText(0, m_lecture.m_lectureData[m_level+1].m_newChars);
-    m_currentItem=lowerItem;
+    if(lowerItem) {
+        lowerItem->setText(0, m_lecture.m_lectureData[m_level+1].m_newChars);
+        m_currentItem=lowerItem;
+    }
     ++m_level;
     levelListView->setSelected(m_currentItem, true);
     showCurrentLevel();
