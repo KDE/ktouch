@@ -129,17 +129,19 @@ void KTouchSlideLine::slide() {
         m_studentFrameX=m_teacherFrameX;
     // now simply copy the required parts of the teacher and student pixmaps onto the widget
     if(m_rightJustify==false){
-     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
-           m_teacherPixmap, static_cast<int>(m_teacherFrameX), 0, m_frameWidth, m_teacherPixmap->height());
-     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
-           m_studentPixmap, static_cast<int>(m_studentFrameX), 0, m_frameWidth, m_studentPixmap->height());
+// FIXME
+//     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
+//           m_teacherPixmap, static_cast<int>(m_teacherFrameX), 0, m_frameWidth, m_teacherPixmap->height());
+//     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
+//           m_studentPixmap, static_cast<int>(m_studentFrameX), 0, m_frameWidth, m_studentPixmap->height());
     }
     else
     {
-     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
-           m_teacherPixmap, m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, m_frameWidth, m_teacherPixmap->height());
-     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
-           m_studentPixmap,  m_studentPixmap->width()-static_cast<int>(m_studentFrameX)-m_frameWidth, 0, m_frameWidth, m_studentPixmap->height());
+// FIXME
+//     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
+//           m_teacherPixmap, m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, m_frameWidth, m_teacherPixmap->height());
+//     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
+//           m_studentPixmap,  m_studentPixmap->width()-static_cast<int>(m_studentFrameX)-m_frameWidth, 0, m_frameWidth, m_studentPixmap->height());
     }
     // restart slide timer if necessary
     if (m_teacherDX!=0 || m_studentDX!=0)
@@ -228,8 +230,9 @@ void KTouchSlideLine::drawCursor() {
      
      myX=(HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx+3 ;
      }
-    if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
-        p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
+// FIXME
+//    if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
+//        p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
 }
 
 void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth) {
