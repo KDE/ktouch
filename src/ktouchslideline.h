@@ -81,12 +81,12 @@ class KTouchSlideLine : public QWidget {
   private slots:
     /// Turns the cursor on or off and triggers an update (this function triggered by the cursor timer).
     void toggleCursor();
-    /// Slides the lines into position (this function is triggered by the sliding timer).
-    void slide();
+    /// Slides the lines into position.
+    void slide(QPainter * p);
 
   protected:
     /// Simply updates the widget: calls updateLines() and slide()
-    void paintEvent( QPaintEvent * );
+    void paintEvent( QPaintEvent * p );
     /// Will be called when the widget is resized.
     /// This event will first recalculate the font size. Then the teachers and the students widget
     /// will be created and the teachers text will be drawn on the teachers pixmap. Finally update()
@@ -97,13 +97,15 @@ class KTouchSlideLine : public QWidget {
     /// Will recalculate the font size depending on the height of the widget.
     void resizeFont();
     /// Just draws the cursor (if visible)
-    void drawCursor();
+    void drawCursor(QPainter * p);
     /// Draws the "enter" character at the given position (y is the y-position of the arrow).
     void drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth);
     /// Calculates the correct text length taking trailing spaces into account
     int  textWidth(const QFontMetrics& fontMetrics, const QString& text);
-    /// Redraws the student pixmaps and updates the frame x positions
-    void updateLines();
+    /// Redraws the student pixmaps and updates the frame x positions (called when the student line changed)
+    void updateStudentLine();
+	/// Rebuilds the sliding lines (called from paintEvent() whenever m_teacherPixmap or m_studentPixmap are NULL pointers).
+	void rebuildLines();
 
     QFont       m_font;             ///< The font for the sliding lines.
     QString     m_teacherText;      ///< The teachers text.

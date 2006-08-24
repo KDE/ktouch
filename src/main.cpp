@@ -44,14 +44,18 @@ int main(int argc, char **argv)
     about.addCredit( "All the creators of training and keyboard files", 0, 0);
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
+	kDebug() << "Starting KTouch" << endl;
     KApplication app;
     KTouch *mainWin = 0;
+
+	kDebug() << "Starting KTouch" << endl;
 
     if (app.isSessionRestored()) {
         RESTORE(KTouch);
     }
     else
     {
+		kDebug() << "normal session start" << endl;
         // no session.. just start up normally
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         // TODO: check the command line for a training file and set this as the new to open training file

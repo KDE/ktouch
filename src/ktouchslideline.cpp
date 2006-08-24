@@ -56,10 +56,12 @@ KTouchSlideLine::KTouchSlideLine(QWidget *parent)
     // set widget defaults (note: teacher and student text is empty after creation)
     setMinimumHeight(50);
     setMaximumHeight(150);
+	m_slideTimer.setSingleShot(true);
+
     setCursorTimerEnabled(true);
 
     connect( &m_cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()) );
-    connect( &m_slideTimer, SIGNAL(timeout()), this, SLOT(slide()) );
+    connect( &m_slideTimer, SIGNAL(timeout()), this, SLOT(update()) );
 }
 
 KTouchSlideLine::~KTouchSlideLine() {
@@ -71,11 +73,13 @@ void KTouchSlideLine::applyPreferences() {
 	// only take font if "override lecture font" is set
 	if (Prefs::overrideLectureFont())
     	m_font = Prefs::font();
-    resizeEvent(NULL); // because we need to recreate the pixmap sizes
-    // note: resizeFont() will be called implicitly by resizeEvent()
+    resizeEvent(NULL); // causes a call to rebuildLines() during next paintEvent()
+    update();
+	// NOTE: resizeFont() will be called in rebuildLines()
 }
 
 void KTouchSlideLine::setNewText(const QString& teacherText, const QString& studentText) {
+	kDebug() << "[KTouchSlideLine::setNewText]" << teacherText << "|" << studentText << "|" << endl;
 	if(teacherText[0].direction()==QChar::DirR)
     	m_rightJustify=true;
    	else
@@ -83,11 +87,15 @@ void KTouchSlideLine::setNewText(const QString& teacherText, const QString& stud
     m_teacherText=teacherText;
     m_studentText=studentText;
     resizeEvent(NULL); // because we need to recreate the pixmap sizes
+    update();
 }
 
 void KTouchSlideLine::setStudentText(const QString& text) {
     m_studentText=text;
-    updateLines();
+    m_cursorVisible = true;
+    m_cursorTimer.start(800);
+	updateStudentLine();
+	update();
 }
 
 void KTouchSlideLine::setFont(const QFont& font) {
@@ -104,21 +112,21 @@ void KTouchSlideLine::setFont(const QFont& font) {
 void KTouchSlideLine::setCursorTimerEnabled(bool on) {
     if (on)     m_cursorTimer.start(600);
     else        m_cursorTimer.stop();
-    m_cursorVisible=false;
-    drawCursor();
+    m_cursorVisible = false;
+    update(); // cause an update which calls paintEvent() and there drawCursor()
 }
 
 
 // *** Private slots
 
 void KTouchSlideLine::toggleCursor() {
-    m_cursorVisible=!m_cursorVisible;
-    drawCursor();
+    m_cursorVisible = !m_cursorVisible;
+    update(); // cause an update which calls paintEvent() and there drawCursor()
 }
 
-void KTouchSlideLine::slide() {
+void KTouchSlideLine::slide(QPainter * p) {
     if (m_studentPixmap==NULL || m_teacherPixmap==NULL) return;
-    // kDebug() << "[KTouchSlideLine::slide]" << endl;
+	kDebug() << "[KTouchSlideLine::slide]" << endl;
     // calculate new x positions depending on slide speed
     double speed = 1.0 + 0.2*Prefs::slidingSpeed();
     double m_teacherDX = (m_teacherFrameXEnd - m_teacherFrameX)/speed;
@@ -129,42 +137,78 @@ void KTouchSlideLine::slide() {
         m_studentFrameX=m_teacherFrameX;
     // now simply copy the required parts of the teacher and student pixmaps onto the widget
     if(m_rightJustify==false){
-// FIXME
 //     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
 //           m_teacherPixmap, static_cast<int>(m_teacherFrameX), 0, m_frameWidth, m_teacherPixmap->height());
+		QRectF teacher_source(static_cast<int>(m_teacherFrameX), 0, 
+							  m_frameWidth, m_teacherPixmap->height());
+		QRectF teacher_target(HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN, 
+                              m_frameWidth, m_teacherPixmap->height());
+		kDebug() << teacher_source << endl;
+		kDebug() << teacher_target << endl;
+		p->drawPixmap(teacher_target, *m_teacherPixmap, teacher_source);
+
 //     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
 //           m_studentPixmap, static_cast<int>(m_studentFrameX), 0, m_frameWidth, m_studentPixmap->height());
+		QRectF student_source(static_cast<int>(m_studentFrameX), 0, 
+                              m_frameWidth, m_studentPixmap->height());
+		QRectF student_target(HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
+                              m_frameWidth, m_studentPixmap->height());
+		p->drawPixmap(student_target, *m_studentPixmap, student_source);
     }
     else
     {
-// FIXME
-//     bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
-//           m_teacherPixmap, m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, m_frameWidth, m_teacherPixmap->height());
+     //bitBlt(this, HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN,
+     //      m_teacherPixmap, m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, m_frameWidth, m_teacherPixmap->height());
+		QRectF teacher_source(m_teacherPixmap->width()-static_cast<int>(m_teacherFrameX)-m_frameWidth, 0, 
+                              m_frameWidth, m_teacherPixmap->height() );
+		QRectF teacher_target(HORIZONTAL_MARGIN + m_shift, VERTICAL_MARGIN, 
+                              m_frameWidth, m_teacherPixmap->height());
+		p->drawPixmap(teacher_target, *m_teacherPixmap, teacher_source);
+
 //     bitBlt(this, HORIZONTAL_MARGIN + m_shift, height() - VERTICAL_MARGIN - m_studentPixmap->height(),
 //           m_studentPixmap,  m_studentPixmap->width()-static_cast<int>(m_studentFrameX)-m_frameWidth, 0, m_frameWidth, m_studentPixmap->height());
     }
     // restart slide timer if necessary
     if (m_teacherDX!=0 || m_studentDX!=0)
-        m_slideTimer.start(100, true);  // start singleshot timer to slide again
-    drawCursor();
+        m_slideTimer.start(100);  // start singleshot timer to slide again
+    drawCursor(p);
 }
-
 
 
 // *** Protected member functions (event implementation)
 
 void KTouchSlideLine::paintEvent(QPaintEvent*) {
-    if (m_studentPixmap==NULL || m_teacherPixmap==NULL)
-        resizeEvent(NULL);
-    else
-        slide();
+//	kDebug() << "[KTouchSlideLine::paintEvent]" << endl;
+	
+	QPainter painter(this); // only here we can create a painter
+
+    if (m_studentPixmap==NULL || m_teacherPixmap==NULL) {
+        rebuildLines();
+	}
+
+	slide(&painter);
+	//drawCursor(&painter);
 }
 
 void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
+	kDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
+    // delete old pixmaps because we have to change their sizes
+    delete m_teacherPixmap;
+    delete m_studentPixmap;
+	// set pointers to zero so that the paintEvent() knows that
+	// the lines have to be rebuilt
+	m_teacherPixmap = NULL;
+	m_studentPixmap = NULL;
+
+	// Qt calls the paintEvent() automatically after the resize event is processed
+	// so we don't have to worry about rebuilding the lines etc.
+}
+
+void KTouchSlideLine::rebuildLines() {
+	kDebug() << "[KTouchSlideLine::rebuildLines]" << endl;
     if (m_teacherText.isEmpty()) return;  // can happen during startup
-    // kDebug() << "[KTouchSlideLine::resizeEvent]" << endl;
     resizeFont();
-    // delete old pixmaps because we have to change its size
+    // delete old pixmaps (should not be necessary, but just to be sure)
     delete m_teacherPixmap;
     delete m_studentPixmap;
     int h = (height() - 2*VERTICAL_MARGIN - LINE_SPACING)/2;
@@ -180,35 +224,31 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
     // Now let's create the teachers pixmap and print the text into. We have to do this only when the teacher
     // text changes or the widget is resized, so we can safely do this outside the paintEvent() function.
     m_teacherPixmap = new QPixmap(w,h);
-    QPainter painter;
-    painter.begin (m_teacherPixmap, this);
+    QPainter painter(m_teacherPixmap);
     painter.setFont( m_font );
     //painter.setColor( KTouchConfig().m_teacherTextColor );
     painter.fillRect( m_teacherPixmap->rect(), QBrush(Prefs::teacherBackgroundColor()) );
     painter.setPen( Prefs::teacherTextColor() );
     // create a rectangle for the text drawing
     QRect textRect(INNER_MARGIN, 0, w-2*INNER_MARGIN, h);
-    if(m_rightJustify==false)
-    {
-     painter.drawText(textRect, Qt::AlignLeft | Qt::AlignVCenter, m_teacherText);
-    drawEnterChar(&painter, w - INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
+    if (m_rightJustify==false) {
+		painter.drawText(textRect, Qt::AlignLeft | Qt::AlignVCenter, m_teacherText);
+		drawEnterChar(&painter, w - INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
     }
-    else
-    {
-     painter.drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, m_teacherText);
-     drawEnterChar(&painter, INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
+    else {
+		painter.drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, m_teacherText);
+		drawEnterChar(&painter, INNER_MARGIN - m_enterCharWidth, h/2, m_enterCharWidth);
     }
-    painter.end();
     // Let's now create the students pixmap, which will be drawn in the paintEvent (because it changes frequently).
     // We use 5 times as much space as the teacher widget -> see paintEvent for explaination
     m_studentPixmap = new QPixmap(5*w,h);
     // And finally calculate and store the vertical cursor information
     m_cursorHeight = fontMetrics.height();
     m_cursorYPos = height() - VERTICAL_MARGIN - (m_studentPixmap->height() + m_cursorHeight)/2;
-    updateLines();
-    update();  // here we need a full update!
+	// finally update the student line and the frame coordinates
+	// so that we can call slide() to slide the lines in place
+    updateStudentLine();
 }
-
 
 
 // *** Private member functions (event implementation)
@@ -218,21 +258,18 @@ void KTouchSlideLine::resizeFont() {
     m_font.setPointSize(static_cast<int>( (height()-2*VERTICAL_MARGIN-LINE_SPACING)/2*0.65) );
 }
 
-void KTouchSlideLine::drawCursor() {
-    QPainter p(this);
-    if (m_cursorVisible)    p.setPen( m_cursorColor );
-    else                    p.setPen( m_cursorBackground );
+void KTouchSlideLine::drawCursor(QPainter * p) {
+//	kDebug() << "[KTouchSlideLine::drawCursor]" << endl;
+    if (m_cursorVisible)    p->setPen( m_cursorColor );
+    else                    p->setPen( m_cursorBackground );
     int myX = m_cursorXPos + m_studentFrameXEnd - static_cast<int>(m_studentFrameX);
-    if(m_rightJustify==true )
-    {
-     /*the small distance between the beging of the pixmap and the cursor:*/
-     int dx=myX/*location of cursor*/ - (HORIZONTAL_MARGIN + m_shift)/*start of pixmap*/;
-     
-     myX=(HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx+3 ;
-     }
-// FIXME
-//    if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
-//        p.drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
+    if (m_rightJustify==true) {
+		// the small distance between the beging of the pixmap and the cursor:
+     	int dx=myX /*location of cursor*/ - (HORIZONTAL_MARGIN + m_shift) /*start of pixmap*/;
+     	myX = (HORIZONTAL_MARGIN + m_shift/*start of pixmap*/)+ m_frameWidth-dx+3 ;
+	}
+    if (myX>HORIZONTAL_MARGIN && myX<width()-HORIZONTAL_MARGIN)
+        p->drawLine(myX, m_cursorYPos, myX, m_cursorYPos + m_cursorHeight);
 }
 
 void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth) {
@@ -252,7 +289,8 @@ int KTouchSlideLine::textWidth(const QFontMetrics& fontMetrics, const QString& t
     return w;
 }
 
-void KTouchSlideLine::updateLines() {
+void KTouchSlideLine::updateStudentLine() {
+	kDebug() << "[KTouchSlideLine::updateLines]" << endl;
     if (m_teacherText.isEmpty()) return;  // can happen during startup, but we MUST NOT allow an empty teacher text here
     int teacherLen = m_teacherText.length();
     int studentLen = m_studentText.length();
@@ -263,8 +301,7 @@ void KTouchSlideLine::updateLines() {
     if (teacherLen>=studentLen && m_teacherText.left(studentLen)==m_studentText)    error=false;
     else                                                                            error=true;
     // now let's draw the students pixmap
-    QPainter painter;
-    painter.begin (m_studentPixmap, this);
+    QPainter painter(m_studentPixmap);
     if (Prefs::colorOnError()) {
         // draw the student line depending on the colour settings
         if (error) {
@@ -278,7 +315,7 @@ void KTouchSlideLine::updateLines() {
             painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground) );
             m_cursorColor = Prefs::studentTextColor();
             painter.setPen( m_cursorColor );
-        };
+        }
     }
     else {
         // use always student text colors
@@ -286,7 +323,7 @@ void KTouchSlideLine::updateLines() {
         painter.setPen( m_cursorColor );
         m_cursorBackground = Prefs::studentBackgroundColor();
         painter.fillRect( m_studentPixmap->rect(), QBrush(m_cursorBackground) );
-    };
+    }
     // draw the text
     painter.setFont( m_font );
     QFontMetrics fontMetrics = painter.fontMetrics();
@@ -321,9 +358,4 @@ void KTouchSlideLine::updateLines() {
     m_cursorXPos = HORIZONTAL_MARGIN + m_shift + xDistance + std::min(2,static_cast<int>(fontMetrics.height()*0.1));
     m_teacherFrameXEnd = teacherCursorPos - xDistance;
     m_studentFrameXEnd = studentCursorPos - xDistance;
-    painter.end();
-
-    m_cursorVisible = true;
-    m_cursorTimer.start(800);
-    slide();
 }
