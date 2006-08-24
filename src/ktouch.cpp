@@ -17,7 +17,7 @@
 #include <algorithm>
 
 // QT Header
-#include <q3vbox.h>
+#include <QVBoxLayout>
 #include <qsignalmapper.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
@@ -52,10 +52,12 @@
 #include "ktouchkeyboardeditor.h"
 #include "ktouchtrainer.h"
 #include "ktouchstatistics.h"
-#include "ktouchprefgenerallayout.h"
-#include "ktouchpreftraininglayout.h"
-#include "ktouchprefkeyboardlayout.h"
-#include "ktouchprefcolorslayout.h"
+#include "ktouchprefgeneral.h"
+
+#include "ktouchpreftraining.h"
+#include "ktouchprefkeyboard.h"
+#include "ktouchprefcolors.h"
+
 #include "prefs.h"
 
 KTouch * KTouchPtr = NULL;
@@ -64,9 +66,9 @@ KTouch::KTouch()
   : KMainWindow( 0, "KTouch" ),
     m_statusWidget(NULL),
     m_keyboardWidget(NULL),
-	m_trainer(NULL)
+    m_trainer(NULL)
 {
-	setFocusPolicy(Qt::StrongFocus);
+    setFocusPolicy(Qt::StrongFocus);
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
 	// General initialization of the program, common for all start modes
@@ -86,7 +88,6 @@ KTouch::KTouch()
 
 	// Init a training session
 	initTrainingSession();
-
 	// If session was restored, the function readProperties() was already called
     if (kapp->isSessionRestored()) {
 		kDebug() << "[KTouch::KTouch]  restoring session..." << endl;
@@ -183,61 +184,48 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
 
 void KTouch::configOverrideLectureFontToggled(bool on) {
 	if (on) {
-		m_pageGeneral->fontTextLabel->setEnabled(true);
-		m_pageGeneral->kcfg_Font->setEnabled(true);
+		m_pageGeneral->ui.fontTextLabel->setEnabled(true);
+		m_pageGeneral->ui.kcfg_Font->setEnabled(true);
 	}
 	else {
-		m_pageGeneral->fontTextLabel->setEnabled(false);
-		m_pageGeneral->kcfg_Font->setEnabled(false);
+		m_pageGeneral->ui.fontTextLabel->setEnabled(false);
+		m_pageGeneral->ui.kcfg_Font->setEnabled(false);
 	}
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::configOverrideKeyboardFontToggled(bool on) {
 	if (on) {
-		m_pageKeyboard->textLabel1->setEnabled(true);
-		m_pageKeyboard->kcfg_KeyboardFont->setEnabled(true);
+		m_pageKeyboard->ui.textLabel1->setEnabled(true);
+		m_pageKeyboard->ui.kcfg_KeyboardFont->setEnabled(true);
 	}
 	else {
-		m_pageKeyboard->textLabel1->setEnabled(false);
-		m_pageKeyboard->kcfg_KeyboardFont->setEnabled(false);
+		m_pageKeyboard->ui.textLabel1->setEnabled(false);
+		m_pageKeyboard->ui.kcfg_KeyboardFont->setEnabled(false);
 	}
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::configAutoLevelChangeToggled(bool on) {
-	if (on) {
-		m_pageTraining->l1->setEnabled(true);
-		m_pageTraining->l2->setEnabled(true);
-		m_pageTraining->l3->setEnabled(true);
-		m_pageTraining->l4->setEnabled(true);
-		m_pageTraining->l5->setEnabled(true);
-		m_pageTraining->l6->setEnabled(true);
-		m_pageTraining->l7->setEnabled(true);
-		m_pageTraining->l8->setEnabled(true);
-		m_pageTraining->l9->setEnabled(true);
-		m_pageTraining->l10->setEnabled(true);
-		m_pageTraining->kcfg_UpSpeedLimit->setEnabled(true);
-		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(true);
-		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(true);
-		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(true);
-	}
-	else {
-		m_pageTraining->l1->setEnabled(false);
-		m_pageTraining->l2->setEnabled(false);
-		m_pageTraining->l3->setEnabled(false);
-		m_pageTraining->l4->setEnabled(false);
-		m_pageTraining->l5->setEnabled(false);
-		m_pageTraining->l6->setEnabled(false);
-		m_pageTraining->l7->setEnabled(false);
-		m_pageTraining->l8->setEnabled(false);
-		m_pageTraining->l9->setEnabled(false);
-		m_pageTraining->l10->setEnabled(false);
-		m_pageTraining->kcfg_UpSpeedLimit->setEnabled(false);
-		m_pageTraining->kcfg_UpCorrectLimit->setEnabled(false);
-		m_pageTraining->kcfg_DownSpeedLimit->setEnabled(false);
-		m_pageTraining->kcfg_DownCorrectLimit->setEnabled(false);
-	}
+  m_pageTraining->ui.l1->setEnabled(on);
+  m_pageTraining->ui.l2->setEnabled(on);
+  m_pageTraining->ui.l3->setEnabled(on);
+  m_pageTraining->ui.l4->setEnabled(on);
+  m_pageTraining->ui.l5->setEnabled(on);
+  m_pageTraining->ui.l6->setEnabled(on);
+  m_pageTraining->ui.l7->setEnabled(on);
+  m_pageTraining->ui.l8->setEnabled(on);
+  m_pageTraining->ui.l9->setEnabled(on);
+  m_pageTraining->ui.l10->setEnabled(on);
+  m_pageTraining->ui.l11->setEnabled(on);
+  m_pageTraining->ui.l12->setEnabled(on);
+  m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(on);
+  m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(on);
+  m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(on);
+  m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(on);
+  m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(on);
+  m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(on);
+  m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(on);
 }
 // ----------------------------------------------------------------------------
 
@@ -338,31 +326,43 @@ void KTouch::trainingStatistics() {
 // ----------------------------------------------------------------------------
 
 void KTouch::optionsPreferences() {
+
     trainingPause();
-	if ( KConfigDialog::showDialog( "settings" ) )	return;
-	// KConfigDialog didn't find an instance of this dialog, so lets create it :
-	KConfigDialog* dialog = new KConfigDialog( this, "settings",  Prefs::self() );
-	m_pageGeneral = new KTouchPrefGeneralLayout(0, "General");
-	dialog->addPage(m_pageGeneral, i18n("General Options"), "style");
-	m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
-	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
-	m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
-	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
-	KTouchPrefColorsLayout *m_pageColors = new KTouchPrefColorsLayout(0, "Colors");
-	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
-	connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
-	// TODO : Connect some other buttons/check boxes of the dialog
-	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
-		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
-		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
-		this, SLOT(configAutoLevelChangeToggled(bool)));
-	// call the functions to enable/disable controls depending on settings
-	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
-	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
-	configAutoLevelChangeToggled(Prefs::autoLevelChange());
-	dialog->show();
+    if ( KConfigDialog::showDialog( "settings" ) )
+        return;
+
+    // KConfigDialog didn't find an instance of this dialog, so lets create it :
+    KConfigDialog* dialog = new KConfigDialog(this, "settings",  Prefs::self());
+
+    m_pageGeneral = new KTouchPrefGeneral(dialog);
+    dialog->addPage(m_pageGeneral, i18n("General Options"), "style","","");
+
+    m_pageTraining = new KTouchPrefTraining(dialog);
+    dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
+
+    m_pageKeyboard = new KTouchPrefKeyboard(dialog);
+    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
+
+    KTouchPrefColors *m_pageColors = new KTouchPrefColors(dialog);
+    dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
+
+    connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
+    // TODO : Connect some other buttons/check boxes of the dialog
+//    connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
+//    this, SLOT(configOverrideLectureFontToggled(bool)));
+//    connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
+//    this, SLOT(configOverrideKeyboardFontToggled(bool)));
+//    connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
+//    this, SLOT(configAutoLevelChangeToggled(bool)));
+
+    // call the functions to enable/disable controls depending on settings
+//    configOverrideLectureFontToggled(Prefs::overrideLectureFont());
+//    configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
+//    configAutoLevelChangeToggled(Prefs::autoLevelChange());
+
+    dialog->show();
+
+
 }
 // ----------------------------------------------------------------------------
 
@@ -552,25 +552,35 @@ void KTouch::initTrainingSession() {
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of QSizePolicy)
-    Q3VBox * mainLayout = new Q3VBox( this );
-    m_statusWidget = new KTouchStatus( mainLayout );
-    m_slideLineWidget = new KTouchSlideLine( mainLayout );
+
+    QWidget *main = new QWidget();
+    QVBoxLayout * layout = new QVBoxLayout( this );
+    main->setLayout(layout);
+
+    m_statusWidget = new KTouchStatus( this );
+    m_slideLineWidget = new KTouchSlideLine( this );
     m_slideLineWidget->setSizePolicy( QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 1) );
-    m_keyboardWidget = new KTouchKeyboardWidget( mainLayout );
+    m_keyboardWidget = new KTouchKeyboardWidget( this );
     m_keyboardWidget->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 3) );
-    setCentralWidget(mainLayout);
-	// apply the settings to the widgets
+
+    layout->addWidget(m_statusWidget);
+    layout->addWidget(m_slideLineWidget);
+    layout->addWidget(m_keyboardWidget);
+
+    // apply the settings to the widgets
     m_slideLineWidget->applyPreferences();
     m_keyboardWidget->applyPreferences(this, true);  // set preferences silently here
 
     // create our trainer, the master object for the training stuff...
-	if (m_trainer != NULL)  delete m_trainer;
+    if (m_trainer != NULL)  delete m_trainer;
     m_trainer = new KTouchTrainer(m_statusWidget, m_slideLineWidget, m_keyboardWidget, &m_lecture);
 
     // Setup status bar
     statusBar()->show();
-	statusBar()->insertPermanentItem("Level", 1, 0);
-	statusBar()->insertPermanentItem("Session", 2, 0);
+    statusBar()->insertPermanentItem("Level", 1, 0);
+    statusBar()->insertPermanentItem("Session", 2, 0);
+
+    this->setCentralWidget(main);
 }
 // ----------------------------------------------------------------------------
 

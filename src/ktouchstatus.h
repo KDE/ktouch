@@ -17,7 +17,9 @@
 #include <config.h>
 #endif
 
-#include "ktouchstatuslayout.h"
+#include <QWidget>
+
+#include "ui_ktouchstatuslayout.h"
 
 /** This is the implementation of the status widget (at the top of the main view).
  *  It simply displays the status but does not have a functionality of its own.
@@ -25,7 +27,7 @@
  *  using the updateStatus() member function.
  *  The "new characters" string is set using the member function setNewChars().
  */
-class KTouchStatus : public KTouchStatusLayout {
+class KTouchStatus : public QWidget, public Ui_KTouchStatusLayout {
     Q_OBJECT
   public:
     /// Constructor

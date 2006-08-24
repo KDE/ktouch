@@ -66,7 +66,6 @@ int main(int argc, char **argv)
         */
 
         mainWin = new KTouch();
-        app.setMainWidget( mainWin );
 
         mainWin->show();
         args->clear();

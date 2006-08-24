@@ -37,7 +37,7 @@
 // **************************
 
 KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
-  : KTouchKeyboardEditorDlg(parent,name, modal,fl)
+  : QDialog(parent,name, modal,fl)
 {
 }
 // -----------------------------------------------------------------------------

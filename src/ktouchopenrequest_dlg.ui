@@ -1,289 +1,255 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
-<class>KTouchOpenRequestDlg</class>
-<widget class="QDialog">
-    <property name="name">
-        <cstring>KTouchOpenRequestDlg</cstring>
-    </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>436</width>
-            <height>236</height>
-        </rect>
-    </property>
-    <property name="windowTitle">
-        <string>Open Something in Editor</string>
-    </property>
-    <vbox>
-        <property name="name">
-            <cstring>unnamed</cstring>
+<ui version="4.0" >
+ <class>KTouchOpenRequestDlg</class>
+ <widget class="QDialog" name="KTouchOpenRequestDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>436</width>
+    <height>236</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Open Something in Editor</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>11</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="Q3ButtonGroup" name="openChoiceGroup" >
+     <property name="sizePolicy" >
+      <sizepolicy>
+       <hsizetype>5</hsizetype>
+       <vsizetype>1</vsizetype>
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Select File to Open</string>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="0" column="0" >
+       <widget class="QRadioButton" name="currentRadioBtn" >
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
         </property>
-        <widget class="QButtonGroup">
-            <property name="name">
-                <cstring>openChoiceGroup</cstring>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>1</vsizetype>
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="title">
-                <string>Select File to Open</string>
-            </property>
-            <grid>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QRadioButton" row="0" column="0">
-                    <property name="name">
-                        <cstring>currentRadioBtn</cstring>
-                    </property>
-                    <property name="minimumSize">
-                        <size>
-                            <width>0</width>
-                            <height>28</height>
-                        </size>
-                    </property>
-                    <property name="text">
-                        <string>Current something</string>
-                    </property>
-                </widget>
-                <widget class="QRadioButton" row="1" column="0">
-                    <property name="name">
-                        <cstring>presetRadioBtn</cstring>
-                    </property>
-                    <property name="minimumSize">
-                        <size>
-                            <width>0</width>
-                            <height>28</height>
-                        </size>
-                    </property>
-                    <property name="text">
-                        <string>Preset something:</string>
-                    </property>
-                </widget>
-                <widget class="QComboBox" row="1" column="1">
-                    <property name="name">
-                        <cstring>presetCombo</cstring>
-                    </property>
-                </widget>
-                <widget class="QRadioButton" row="4" column="0">
-                    <property name="name">
-                        <cstring>newRadioBtn</cstring>
-                    </property>
-                    <property name="text">
-                        <string>New something</string>
-                    </property>
-                </widget>
-                <spacer row="3" column="0">
-                    <property name="name">
-                        <cstring>spacer1</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Vertical</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Fixed</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>20</width>
-                            <height>16</height>
-                        </size>
-                    </property>
-                </spacer>
-                <spacer row="5" column="0">
-                    <property name="name">
-                        <cstring>spacer3</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Vertical</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>20</width>
-                            <height>16</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QLayoutWidget" row="2" column="1">
-                    <property name="name">
-                        <cstring>layout3</cstring>
-                    </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="KLineEdit">
-                            <property name="name">
-                                <cstring>openFileEdit</cstring>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>browseBtn</cstring>
-                            </property>
-                            <property name="text">
-                                <string>Browse...</string>
-                            </property>
-                            <property name="flat">
-                                <bool>false</bool>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="KSqueezedTextLabel" row="0" column="1">
-                    <property name="name">
-                        <cstring>currentLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Current something file</string>
-                    </property>
-                </widget>
-                <widget class="QRadioButton" row="2" column="0">
-                    <property name="name">
-                        <cstring>openFileRadioBtn</cstring>
-                    </property>
-                    <property name="minimumSize">
-                        <size>
-                            <width>0</width>
-                            <height>28</height>
-                        </size>
-                    </property>
-                    <property name="text">
-                        <string>Open file:</string>
-                    </property>
-                </widget>
-            </grid>
-        </widget>
-        <widget class="QLayoutWidget">
-            <property name="name">
-                <cstring>layout1</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer2</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>40</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>okBtn</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>5</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="text">
-                        <string>&amp;OK</string>
-                    </property>
-                    <property name="autoDefault">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>cancelBtn</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Cancel</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-    </vbox>
-</widget>
-<connections>
-    <connection>
-        <sender>okBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>okBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>cancelBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>reject()</slot>
-    </connection>
-    <connection>
-        <sender>currentRadioBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>radioBtnChanged()</slot>
-    </connection>
-    <connection>
-        <sender>presetRadioBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>radioBtnChanged()</slot>
-    </connection>
-    <connection>
-        <sender>openFileRadioBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>radioBtnChanged()</slot>
-    </connection>
-    <connection>
-        <sender>newRadioBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>radioBtnChanged()</slot>
-    </connection>
-    <connection>
-        <sender>browseBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchOpenRequestDlg</receiver>
-        <slot>browseBtnClicked()</slot>
-    </connection>
-</connections>
-<tabstops>
-    <tabstop>currentRadioBtn</tabstop>
-    <tabstop>presetRadioBtn</tabstop>
-    <tabstop>presetCombo</tabstop>
-    <tabstop>openFileRadioBtn</tabstop>
-    <tabstop>browseBtn</tabstop>
-    <tabstop>newRadioBtn</tabstop>
-    <tabstop>okBtn</tabstop>
-    <tabstop>cancelBtn</tabstop>
-</tabstops>
-<slots>
-    <slot>okBtnClicked()</slot>
-    <slot>radioBtnChanged()</slot>
-    <slot>browseBtnClicked()</slot>
-</slots>
-<layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>klineedit.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>ksqueezedtextlabel.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-</includehints>
-</UI>
+        <property name="text" >
+         <string>Current something</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QRadioButton" name="presetRadioBtn" >
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string>Preset something:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QComboBox" name="presetCombo" />
+      </item>
+      <item row="4" column="0" >
+       <widget class="QRadioButton" name="newRadioBtn" >
+        <property name="text" >
+         <string>New something</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>16</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="5" column="0" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType" >
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>16</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="1" >
+       <layout class="QHBoxLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="KLineEdit" name="openFileEdit" />
+        </item>
+        <item>
+         <widget class="KPushButton" name="browseBtn" />
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1" >
+       <widget class="KSqueezedTextLabel" name="currentLabel" />
+      </item>
+      <item row="2" column="0" >
+       <widget class="QRadioButton" name="openFileRadioBtn" >
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>28</height>
+         </size>
+        </property>
+        <property name="text" >
+         <string>Open file:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KPushButton" name="okBtn" >
+       <property name="sizePolicy" >
+        <sizepolicy>
+         <hsizetype>1</hsizetype>
+         <vsizetype>5</vsizetype>
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="cancelBtn" />
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QWidget</extends>
+   <header>klineedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QWidget</extends>
+   <header>kpushbutton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3ButtonGroup</class>
+   <extends>Q3GroupBox</extends>
+   <header>Qt3Support/Q3ButtonGroup</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KSqueezedTextLabel</class>
+   <extends>QWidget</extends>
+   <header>ksqueezedtextlabel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>currentRadioBtn</tabstop>
+  <tabstop>presetRadioBtn</tabstop>
+  <tabstop>presetCombo</tabstop>
+  <tabstop>openFileRadioBtn</tabstop>
+  <tabstop>browseBtn</tabstop>
+  <tabstop>newRadioBtn</tabstop>
+  <tabstop>okBtn</tabstop>
+  <tabstop>cancelBtn</tabstop>
+ </tabstops>
+ <includes>
+  <include location="local" >klineedit.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >ksqueezedtextlabel.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+ </includes>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancelBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>KTouchOpenRequestDlg</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

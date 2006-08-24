@@ -17,11 +17,11 @@
 #include <config.h>
 #endif
 
-#include <qwidget.h>
 #include <qfont.h>
 #include <kurl.h>
+#include <QDialog>
 
-#include "ktouchlectureeditor_dlg.h"
+#include "ui_ktouchlectureeditor_dlg.h"
 #include "ktouchlecture.h"
 
 /// This is the KTouch lecture editor dialog.
@@ -39,7 +39,7 @@
 ///  // lecture or an empty URL
 /// @endcode
 /// @see startEditor() for details on the return value.
-class KTouchLectureEditor : public KTouchLectureEditorDlg {
+class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
     Q_OBJECT
   public:
     /// Constructor

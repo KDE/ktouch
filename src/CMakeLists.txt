@@ -4,7 +4,7 @@ include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/  )
 
 ########### next target ###############
 
-set(ktouch_SRCS 
+set(ktouch_SRCS
    ktouchchartwidget.cpp 
    ktouchcolorscheme.cpp 
    ktouch.cpp 
@@ -29,7 +29,7 @@ set(ktouch_SRCS
 
 kde4_automoc(${ktouch_SRCS})
 
-kde4_add_ui3_files(ktouch_SRCS 
+kde4_add_ui_files(ktouch_SRCS 
    ktouchkeyboardeditor_dlg.ui 
    ktouchlectureeditor_dlg.ui 
    ktouchopenrequest_dlg.ui 

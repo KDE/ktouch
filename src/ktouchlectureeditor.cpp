@@ -42,8 +42,10 @@
 // **************************
 
 KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool modal, Qt::WFlags fl)
- : KTouchLectureEditorDlg(parent, name, modal, fl)
+ : QDialog(parent, name, modal, fl)
 {
+    setupUi(this);
+
     levelListView->setSorting(-1); // don't sort my level list view!
 
     connect(levelListView, SIGNAL(selectionChanged(Q3ListViewItem*)),this, SLOT(newSelection(Q3ListViewItem*)) );

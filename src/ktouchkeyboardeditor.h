@@ -18,11 +18,12 @@
 #endif
 
 #include "ktouchkeyboardwidget.h"
-#include "ktouchkeyboardeditor_dlg.h"
+#include "ui_ktouchkeyboardeditor_dlg.h"
 
 #include "ktouchkeyboard.h"
 
 #include <kurl.h>
+#include <QDialog>
 //Added by qt3to4:
 #include <QPaintEvent>
 
@@ -41,7 +42,7 @@
 ///  // keyboard or an empty URL
 /// @endcode
 /// @see startEditor() for details on the return value.
-class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
+class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
     Q_OBJECT
 
   public:

@@ -1,105 +1,115 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>KTouchPrefKeyboardLayout</class>
-<widget class="QWidget">
-    <property name="name">
-        <cstring>KTouchPrefKeyboardLayout</cstring>
-    </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>498</width>
-            <height>162</height>
-        </rect>
-    </property>
-    <property name="windowTitle">
-        <string>Keyboard Settings</string>
-    </property>
-    <vbox>
-        <property name="name">
-            <cstring>unnamed</cstring>
+<ui version="4.0" >
+ <class>KTouchPrefKeyboardLayout</class>
+ <widget class="QWidget" name="KTouchPrefKeyboardLayout" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>162</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Keyboard Settings</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>0</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="Q3GroupBox" name="groupBox1" >
+     <property name="title" >
+      <string/>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="kcfg_ShowAnimation" >
+        <property name="toolTip" >
+         <string>Show on the keyboards the keys you have to type</string>
         </property>
-        <property name="margin">
-            <number>0</number>
+        <property name="whatsThis" >
+         <string>This highlights on the keyboard the key you have to type next. It is easier to type when this is checked.</string>
         </property>
-        <widget class="QGroupBox">
-            <property name="name">
-                <cstring>groupBox1</cstring>
-            </property>
-            <property name="title">
-                <string></string>
-            </property>
-            <vbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QCheckBox">
-                    <property name="name">
-                        <cstring>kcfg_ShowAnimation</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Highlight &amp;keys on keyboard</string>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>Show on the keyboards the keys you have to type</string>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>This highlights on the keyboard the key you have to type next. It is easier to type when this is checked.</string>
-                    </property>
-                </widget>
-                <widget class="QCheckBox">
-                    <property name="name">
-                        <cstring>kcfg_OverrideKeyboardFont</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Override keyboard fonts</string>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
-                    </property>
-                </widget>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>textLabel1</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Font for keys on keyboard:</string>
-                    </property>
-                </widget>
-                <widget class="KFontRequester">
-                    <property name="name">
-                        <cstring>kcfg_KeyboardFont</cstring>
-                    </property>
-                </widget>
-            </vbox>
-        </widget>
-        <spacer>
-            <property name="name">
-                <cstring>spacer14</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <property name="sizeType">
-                <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>20</width>
-                    <height>30</height>
-                </size>
-            </property>
-        </spacer>
-    </vbox>
-</widget>
-<slots>
-    <slot>fontChooseBtnClicked()</slot>
-</slots>
-<layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kfontrequester.h</includehint>
-</includehints>
-</UI>
+        <property name="text" >
+         <string>Highlight &amp;keys on keyboard</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_OverrideKeyboardFont" >
+        <property name="toolTip" >
+         <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+        </property>
+        <property name="text" >
+         <string>Override keyboard fonts</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="textLabel1" >
+        <property name="text" >
+         <string>Font for keys on keyboard:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KFontRequester" name="kcfg_KeyboardFont" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>Q3GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>Qt3Support/Q3GroupBox</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KFontRequester</class>
+   <extends>QWidget</extends>
+   <header>kfontrequester.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="local" >kfontrequester.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

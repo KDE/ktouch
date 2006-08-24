@@ -17,10 +17,11 @@
 #include <config.h>
 #endif
 
-#include "ktouchopenrequest_dlg.h"
+#include "ui_ktouchopenrequest_dlg.h"
 
 #include <kurl.h>
 #include <qstringlist.h>
+#include <QDialog>
 
 /// Dialog for selecting a file to open.
 ///
@@ -50,7 +51,7 @@
 /// url is stored in the member variable m_url (if the dialog was accepted by 
 /// the user).
 /// 
-class KTouchOpenRequest : public KTouchOpenRequestDlg {
+class KTouchOpenRequest : public QDialog, public Ui_KTouchOpenRequestDlg {
   Q_OBJECT
  
   public:

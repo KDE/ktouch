@@ -38,9 +38,9 @@ class KTouchSlideLine;
 class KTouchKeyboardWidget;
 class KTouchTrainer;
 
-class KTouchPrefTrainingLayout;
-class KTouchPrefKeyboardLayout;
-class KTouchPrefGeneralLayout;
+class KTouchPrefTraining;
+class KTouchPrefKeyboard;
+class KTouchPrefGeneral;
 
 #include "ktouchlecture.h"
 #include "ktouchcolorscheme.h"
@@ -161,9 +161,9 @@ class KTouch : public KMainWindow {
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).
     KTouchLecture           m_lecture;              ///< The lecture data.
 
-	KTouchPrefGeneralLayout  * m_pageGeneral;		///< The general configuration page.
-	KTouchPrefTrainingLayout * m_pageTraining;		///< The training configuration page.
-	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
+	KTouchPrefGeneral      *m_pageGeneral;          ///< The general configuration page.
+	KTouchPrefTraining     *m_pageTraining;         ///< The training configuration page.
+	KTouchPrefKeyboard     *m_pageKeyboard;         ///< The keyboard configuration page.
 	
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.

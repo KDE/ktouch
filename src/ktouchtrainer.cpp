@@ -40,23 +40,29 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
 {
     m_level = 0;              // level 1, but we're storing it zero based
     m_line  = 0;
-	m_wordsInCurrentLine = 0;
+    m_wordsInCurrentLine = 0;
     m_trainingPaused=true;    // we start in pause mode
     m_teacherText=m_lecture->level(0).line(0);
     m_studentText="";
-    mplayer = new Phonon::AudioPlayer(Phonon::GameCategory, this);
 
-	// reset statistics
+    m_decLinesCount=0;
+    m_incLinesCount=0;
+
+    // FIXME 
+    //mplayer = new Phonon::AudioPlayer(Phonon::GameCategory, this);
+
+    // reset statistics
     m_levelStats.clear();
-	m_sessionStats.clear();
+    m_sessionStats.clear();
 
-	/// \todo preload sounds and improve sound playback system
+    /// \todo preload sounds and improve sound playback system
     m_levelUpSound = KGlobal::dirs()->findResource("appdata","up.wav");
     m_levelDownSound = KGlobal::dirs()->findResource("appdata","down.wav");
     m_typeWriterSound = KGlobal::dirs()->findResource("appdata","typewriter.wav");
 
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
     connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
+kDebug() << "Ktouch started" << endl;
     connect(m_trainingTimer, SIGNAL(timeout()), this, SLOT(timerTick()) );
 }
 // ----------------------------------------------------------------------------
@@ -132,76 +138,65 @@ void KTouchTrainer::backspacePressed() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::enterPressed() {
-	if (m_trainingPaused)  continueTraining();
-    if (m_studentText!=m_teacherText) {
-        QApplication::beep();
-        return;
-    };
-
-	/*
-	// NOTE : auto level change inside level was removed due to popular request
-
-    if (Prefs::autoLevelChange()) {
-        // if level increase criterion was fulfilled, increase line counter
-        if (Prefs::upCorrectLimit() <= m_session.correctness()*100 &&
-            Prefs::upSpeedLimit() <= m_session.charSpeed())
-        {
-            m_decLinesCount=0;
-            ++m_incLinesCount;
-        }
-        else  if (Prefs::downCorrectLimit() > m_session.correctness()*100 ||
-                  Prefs::downSpeedLimit() > m_session.charSpeed())
-        {
-            m_incLinesCount=0;
-            ++m_decLinesCount;
-        };
-        // Automatic level change after a number of lines can happen, if you fulfilled the
-        // requirements in the last 5 lines.
-        if (m_incLinesCount>=2) {
-            levelUp();
-            return;
-        }
-        if (m_decLinesCount>=2 && m_level!=0) {
-            levelDown();
-            return;
-        };
-    };
-	*/
+  if (m_trainingPaused)  continueTraining();
+  if (m_studentText != m_teacherText) {
 
 
-	// Check if we are in the last line
-    if (m_line+1 >= m_lecture->level(m_level).count()) {
-        if (Prefs::autoLevelChange()) {
-            // adjust level if limits exceeded
-            if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 &&
-				Prefs::upSpeedLimit() <= m_levelStats.charSpeed())
-            {
-				/// \todo	Test if last level is done and show message, stop training, show statistics etc.
-                levelUp();	// level change takes care of updating word count
-                return;
-            }
-			else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 ||
-				Prefs::downSpeedLimit() > m_levelStats.charSpeed())
-            {
-                levelDown();	// level change takes care of updating word count
-                return;
-            }
-        }
-		// we have to store the word count before continuing in the first line
-		updateWordCount();
-		m_levelStats.m_words += m_wordsInCurrentLine;
-		m_sessionStats.m_words += m_wordsInCurrentLine;
-		gotoFirstLine();  // restart in the new/current level
+// FIXME
+//  if (Prefs::playSounds())
+//      playSound(m_errorSound);
+//    else
+//      QApplication::beep();
+//    return;
+  }
+//  playSound(m_lineEndSound);
+
+  updateWordCount();
+  m_levelStats.m_words += m_wordsInCurrentLine;
+  m_sessionStats.m_words += m_wordsInCurrentLine;
+
+  
+  if (Prefs::autoLevelChange()) {
+    // if level increase criterion was fulfilled, increase line counter
+    if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 &&
+	Prefs::upSpeedLimit() <= m_levelStats.charSpeed())
+      {
+	m_decLinesCount=0;
+	++m_incLinesCount;
+      }
+    else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 ||
+	      Prefs::downSpeedLimit() > m_levelStats.charSpeed())
+      {
+	m_incLinesCount=0;
+	++m_decLinesCount;
+      };
+
+    
+
+    // Automatic level change after a number of lines can happen, if you fulfilled the
+    // requirements in the last 5 lines.
+    if (m_incLinesCount>=Prefs::numberOfLinesWorkload() && (!Prefs::completeWholeTrainingLevel()  || m_incLinesCount>= m_lecture->level(m_level).count())) {
+      levelUp();
+      return;
     }
-    else {
-		// store the word count
-		updateWordCount();
-		m_levelStats.m_words += m_wordsInCurrentLine;
-		m_sessionStats.m_words += m_wordsInCurrentLine;
-    	++m_line;
-		newLine(); // otherwise show next line
-	}
+    if (m_decLinesCount>=2 && m_level!=0) {
+      levelDown();
+      return;
+    };
+  };
+
+  // Check if we are in the last line
+  if (m_line+1 >= m_lecture->level(m_level).count()) {
+    m_line=0;
+  }
+  else {
+    ++m_line;
+  }
+  newLine();
 }
+
+
+
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::updateWidgets() {
@@ -317,9 +312,12 @@ void KTouchTrainer::levelUp() {
         m_level=m_lecture->levelCount()-1;
 		/// \todo Do something when last level is completed
     }
-	// Store level statistics if level is increased
-	statsChangeLevel();
-	gotoFirstLine();
+
+    m_incLinesCount = 0;
+    m_decLinesCount = 0;
+    // Store level statistics if level is increased
+    statsChangeLevel();
+    gotoFirstLine();
 }
 // ----------------------------------------------------------------------------
 
@@ -328,6 +326,9 @@ void KTouchTrainer::levelDown() {
        --m_level;
 	   mplayer->play(m_levelDownSound.url());
 	}
+	m_incLinesCount = 0;
+	m_decLinesCount = 0;
+
 	// Store level statistics if level is increased
 	statsChangeLevel();
 	gotoFirstLine();

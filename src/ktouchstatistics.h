@@ -17,17 +17,19 @@
 #include <config.h>
 #endif
 
-#include "ktouchstatistics_dlg.h"
+#include "ui_ktouchstatistics_dlg.h"
 #include "ktouchstatisticsdata.h"
+#include <QDialog>
 //Added by qt3to4:
 #include <QShowEvent>
+
 
 class QShowEvent;
 class KTouch;
 class KUrl;
 
 /// Implementation of the statistics widget
-class KTouchStatistics : public KTouchStatisticsDlg {
+class KTouchStatistics : public QDialog, public Ui_KTouchStatisticsDlg {
     Q_OBJECT
   public:
     /// Constructor, takes a pointer to the trainer object.

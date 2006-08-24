@@ -19,8 +19,9 @@
 #include <kdebug.h>
 
 KTouchStatus::KTouchStatus(QWidget *parent)
- : KTouchStatusLayout(parent)
+ : QWidget(parent)
 {
+    setupUi(this);
 }
 
 void KTouchStatus::setNewChars(const QString& newChars) {

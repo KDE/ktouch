@@ -24,6 +24,7 @@
 #include <qlabel.h>
 #include <qradiobutton.h>
 #include <q3buttongroup.h>
+#include <QDialog>
 
 #include <kpushbutton.h>
 #include <kcombobox.h>
@@ -33,27 +34,29 @@
 #include <kdebug.h>
 #include <ktabwidget.h>
 
+
 #include "ktouch.h"
 #include "ktouchchartwidget.h"
 
 KTouchStatistics::KTouchStatistics(QWidget* parent)
-	: KTouchStatisticsDlg(parent)
+	: QDialog(parent)
 {
-	sessionsRadio->setChecked(true);
-	WPMRadio->setChecked(true);
-	eventRadio->setChecked(true);
+    setupUi(this);
+    sessionsRadio->setChecked(true);
+    WPMRadio->setChecked(true);
+    eventRadio->setChecked(true);
     connect(closeButton, SIGNAL(clicked()), this, SLOT(accept()) );
-	connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
+    connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
-	// connect the radio buttons with the chart update function
+    // connect the radio buttons with the chart update function
     connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
     connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
     connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-	
-	// TODO : temporarily remove detailed stats page and deactivate options
-	levelsRadio->setEnabled(false);
-	tabWidget->removePage(statsPage);
-	delete statsPage;
+
+    // TODO : temporarily remove detailed stats page and deactivate options
+    levelsRadio->setEnabled(false);
+    tabWidget->removePage(statsPage);
+    delete statsPage;
 }
 // ----------------------------------------------------------------------------
 

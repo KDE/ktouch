@@ -110,6 +110,9 @@ class KTouchTrainer : public QObject {
     unsigned int        m_level;                ///< Current level number (zero based).
     unsigned int        m_line;                 ///< Current line number (zero based).
 
+    int                 m_decLinesCount;
+    int                 m_incLinesCount;
+
     QString             m_teacherText;          ///< The currently displayed teacher text.
     QString             m_studentText;          ///< The currently typed student text.
 

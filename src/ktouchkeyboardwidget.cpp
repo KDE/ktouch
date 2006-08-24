@@ -146,25 +146,33 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 	}
 	// kDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
     resizeEvent(NULL);  // paint the keyboard
+
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
+   
 }
 
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
+    update();
+}
+
+
+void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
     QPainter painter(this);
+
     painter.translate(m_shift, MARGIN);
     // first clean the markings on all keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next()) {
         if (key->m_isActive || key->m_isNextKey) {
             key->m_isActive=key->m_isNextKey=false;
-            key->paint(painter);
         }
+    key->paint(painter);
     }
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
         QList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
-        while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
+        while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=m_nextKey)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
             QChar targetChar = (*keyIt).m_targetKeyChar;
@@ -180,17 +188,8 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
                     key->paint(painter);
             }
         }
-        m_nextKey = nextChar;
+       // m_nextKey = nextChar;
     }
-}
-
-
-void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
-    QPainter painter(this);
-    painter.translate(m_shift, MARGIN);
-    // just print all visible keys
-    for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
-        key->paint(painter);
 }
 
 

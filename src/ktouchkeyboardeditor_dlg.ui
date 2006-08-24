@@ -1,406 +1,341 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>KTouchKeyboardEditorDlg</class>
-<widget class="QDialog">
-    <property name="name">
-        <cstring>KTouchKeyboardEditorDlg</cstring>
-    </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>779</width>
-            <height>545</height>
-        </rect>
-    </property>
-    <property name="windowTitle">
-        <string>Keyboard Layout Editor</string>
-    </property>
-    <grid>
-        <property name="name">
-            <cstring>unnamed</cstring>
+<ui version="4.0" >
+ <class>KTouchKeyboardEditorDlg</class>
+ <widget class="QDialog" name="KTouchKeyboardEditorDlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>779</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Keyboard Layout Editor</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>11</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="2" column="0" colspan="2" >
+    <layout class="QHBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="KPushButton" name="fontButton" />
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType" >
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KPushButton" name="openButton" />
+     </item>
+     <item>
+      <widget class="KPushButton" name="saveButton" />
+     </item>
+     <item>
+      <widget class="KPushButton" name="saveAsButton" />
+     </item>
+     <item>
+      <widget class="KPushButton" name="quitButton" />
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" >
+    <widget class="Q3GroupBox" name="groupBox5" >
+     <property name="sizePolicy" >
+      <sizepolicy>
+       <hsizetype>5</hsizetype>
+       <vsizetype>1</vsizetype>
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Keyboard Layout</string>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="dimensionsLabel" >
+        <property name="text" >
+         <string>Keyboard dimensions:</string>
         </property>
-        <widget class="QLayoutWidget" row="2" column="0" rowspan="1" colspan="2">
-            <property name="name">
-                <cstring>layout3</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>fontButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Change Font...</string>
-                    </property>
-                </widget>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer1</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>40</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>openButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Open...</string>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>saveButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Save</string>
-                    </property>
-                    <property name="default">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>saveAsButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Save As...</string>
-                    </property>
-                </widget>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>quitButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Close</string>
-                    </property>
-                </widget>
-            </hbox>
-        </widget>
-        <widget class="QGroupBox" row="1" column="0">
-            <property name="name">
-                <cstring>groupBox5</cstring>
-            </property>
-            <property name="sizePolicy">
-                <sizepolicy>
-                    <hsizetype>5</hsizetype>
-                    <vsizetype>1</vsizetype>
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="title">
-                <string>Keyboard Layout</string>
-            </property>
-            <vbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>dimensionsLabel</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Keyboard dimensions:</string>
-                    </property>
-                </widget>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>keyboardPreviewLabel</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>7</hsizetype>
-                            <vsizetype>7</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                        <size>
-                            <width>0</width>
-                            <height>100</height>
-                        </size>
-                    </property>
-                    <property name="frameShape">
-                        <enum>GroupBoxPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                        <enum>Sunken</enum>
-                    </property>
-                </widget>
-            </vbox>
-        </widget>
-        <widget class="QGroupBox" row="0" column="1" rowspan="2" colspan="1">
-            <property name="name">
-                <cstring>groupBox2</cstring>
-            </property>
-            <property name="title">
-                <string>Key Definitions</string>
-            </property>
-            <vbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QListBox">
-                    <property name="name">
-                        <cstring>keyListBox</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>7</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                </widget>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout3</cstring>
-                    </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>addButton</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>1</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Add...</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>editButton</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>1</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Edit...</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>removeButton</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>5</hsizetype>
-                                    <vsizetype>1</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="text">
-                                <string>Remove</string>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QLabel">
-                    <property name="name">
-                        <cstring>textLabel1_2</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Key definition data:</string>
-                    </property>
-                </widget>
-                <widget class="QTextEdit">
-                    <property name="name">
-                        <cstring>keyInfoText</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>1</hsizetype>
-                            <vsizetype>1</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                </widget>
-            </vbox>
-        </widget>
-        <widget class="QGroupBox" row="0" column="0">
-            <property name="name">
-                <cstring>groupBox3</cstring>
-            </property>
-            <property name="title">
-                <string>Keyboard Identification Data</string>
-            </property>
-            <grid>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLabel" row="0" column="0" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>titleLabel</cstring>
-                    </property>
-                    <property name="font">
-                        <font>
-                            <family>Helvetica</family>
-                            <bold>1</bold>
-                        </font>
-                    </property>
-                    <property name="text">
-                        <string>Keyboard title:</string>
-                    </property>
-                </widget>
-                <widget class="KLineEdit" row="0" column="2">
-                    <property name="name">
-                        <cstring>titleEdit</cstring>
-                    </property>
-                </widget>
-                <widget class="KTextEdit" row="2" column="0" rowspan="1" colspan="3">
-                    <property name="name">
-                        <cstring>keyboardCommentEdit</cstring>
-                    </property>
-                    <property name="sizePolicy">
-                        <sizepolicy>
-                            <hsizetype>7</hsizetype>
-                            <vsizetype>4</vsizetype>
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="maximumSize">
-                        <size>
-                            <width>32767</width>
-                            <height>70</height>
-                        </size>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="1" column="0" rowspan="1" colspan="3">
-                    <property name="name">
-                        <cstring>textLabel1</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Comments:</string>
-                    </property>
-                </widget>
-                <widget class="QLabel" row="3" column="0">
-                    <property name="name">
-                        <cstring>textLabel2</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Language id:</string>
-                    </property>
-                </widget>
-                <widget class="KLineEdit" row="3" column="1" rowspan="1" colspan="2">
-                    <property name="name">
-                        <cstring>languageEdit</cstring>
-                    </property>
-                </widget>
-            </grid>
-        </widget>
-    </grid>
-</widget>
-<connections>
-    <connection>
-        <sender>fontButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>fontBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>openButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>openBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>saveAsButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>saveAsBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>saveButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>saveBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>quitButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>closeQuery()</slot>
-    </connection>
-    <connection>
-        <sender>addButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>addBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>editButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>editBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>removeButton</sender>
-        <signal>clicked()</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>removeBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>keyListBox</sender>
-        <signal>selectionChanged(QListBoxItem*)</signal>
-        <receiver>KTouchKeyboardEditorDlg</receiver>
-        <slot>keySelectionChanged(QListBoxItem*)</slot>
-    </connection>
-</connections>
-<slots>
-    <slot>openBtnClicked()</slot>
-    <slot>saveBtnClicked()</slot>
-    <slot>saveAsBtnClicked()</slot>
-    <slot>closeQuery()</slot>
-    <slot>fontBtnClicked()</slot>
-    <slot>addBtnClicked()</slot>
-    <slot>editBtnClicked()</slot>
-    <slot>removeBtnClicked()</slot>
-    <slot>keySelectionChanged(QListBoxItem*)</slot>
-</slots>
-<layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>klineedit.h</includehint>
-    <includehint>ktextedit.h</includehint>
-    <includehint>klineedit.h</includehint>
-</includehints>
-</UI>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="keyboardPreviewLabel" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>7</hsizetype>
+          <vsizetype>7</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="frameShadow" >
+         <enum>QFrame::Sunken</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item rowspan="2" row="0" column="1" >
+    <widget class="Q3GroupBox" name="groupBox2" >
+     <property name="title" >
+      <string>Key Definitions</string>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="Q3ListBox" name="keyListBox" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>1</hsizetype>
+          <vsizetype>7</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="KPushButton" name="addButton" >
+          <property name="sizePolicy" >
+           <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="KPushButton" name="editButton" >
+          <property name="sizePolicy" >
+           <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="KPushButton" name="removeButton" >
+          <property name="sizePolicy" >
+           <sizepolicy>
+            <hsizetype>5</hsizetype>
+            <vsizetype>1</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="textLabel1_2" >
+        <property name="text" >
+         <string>Key definition data:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Q3TextEdit" name="keyInfoText" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>1</hsizetype>
+          <vsizetype>1</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="Q3GroupBox" name="groupBox3" >
+     <property name="title" >
+      <string>Keyboard Identification Data</string>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>0</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="0" column="0" colspan="2" >
+       <widget class="QLabel" name="titleLabel" >
+        <property name="font" >
+         <font>
+          <family>Helvetica</family>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Keyboard title:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" >
+       <widget class="KLineEdit" name="titleEdit" />
+      </item>
+      <item row="2" column="0" colspan="3" >
+       <widget class="KTextEdit" name="keyboardCommentEdit" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>7</hsizetype>
+          <vsizetype>4</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>32767</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3" >
+       <widget class="QLabel" name="textLabel1" >
+        <property name="text" >
+         <string>Comments:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QLabel" name="textLabel2" >
+        <property name="text" >
+         <string>Language id:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2" >
+       <widget class="KLineEdit" name="languageEdit" />
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QWidget</extends>
+   <header>klineedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3ListBox</class>
+   <extends>Q3Frame</extends>
+   <header>q3listbox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTextEdit</class>
+   <extends>QWidget</extends>
+   <header>ktextedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>Qt3Support/Q3GroupBox</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Q3TextEdit</class>
+   <extends>Q3Frame</extends>
+   <header>q3textedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QWidget</extends>
+   <header>kpushbutton.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >kpushbutton.h</include>
+  <include location="local" >klineedit.h</include>
+  <include location="local" >ktextedit.h</include>
+  <include location="local" >klineedit.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

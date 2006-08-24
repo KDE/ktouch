@@ -27,7 +27,7 @@
 #include "ktouchopenrequest.moc"
 
 KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
-: KTouchOpenRequestDlg(parent,name, modal,fl)
+: QDialog(parent,name, modal,fl)
 {
 }
 
