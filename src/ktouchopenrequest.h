@@ -75,7 +75,6 @@ class KTouchOpenRequest : public QDialog, public Ui_KTouchOpenRequestDlg {
     void radioBtnChanged();
     /// Called when the user clicks on the "Browse" button and opens the file select dialog.
     void browseBtnClicked();
-
 };
 
 #endif

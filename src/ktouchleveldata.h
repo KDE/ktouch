@@ -13,16 +13,12 @@
 #ifndef KTOUCHLEVELDATA_H
 #define KTOUCHLEVELDATA_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+#include <QStringList>
 
-#include <qstring.h>
-#include <qtextstream.h>
-#include <qdom.h>
-#include <QVector>
 class QDomDocument;
 class QDomElement;
+class QDomNode;
+class QTextStream;
 
 /// This class contains the data of one level in a lecture and provides
 /// access to the lines of that level.
@@ -52,6 +48,8 @@ class KTouchLevelData {
     const QString& line(unsigned int lineNumber) const;
     /// Returns the number of lines.
     unsigned int count() const { return m_lines.size(); };
+	/// Sets the lines of this level.
+	void setLines(const QStringList & lines);
 
   private:
     /// Creates a default level.
@@ -61,15 +59,13 @@ class KTouchLevelData {
     bool readLevel(QTextStream& in);
     /// Reads a level from a XML Dom Node.
     /// @return Returns 'true', when a level could be read successfully, or 'false' otherwise.
-    bool readLevel(QDomNode in);
+    bool readLevelXML(QDomNode in);
     /// Writes the level data into the output stream.
-    void writeLevel(QTextStream& out) const;
-    /// Writes the level data into the output stream.
-    void writeLevel(QDomDocument& doc, QDomElement& root) const;
+    void writeLevelXML(QDomDocument& doc, QDomElement& root) const;
 
     QString                 m_comment;      ///< A comment for the level.
     QString                 m_newChars;     ///< Contains the newly introduced characters in this level.
-    QVector<QString>   m_lines;        ///< The lines of the level.
+    QStringList	        	m_lines;        ///< The lines of the level.
 
     // so I don't have to allow access to read/write function to everybody :-)
     friend class KTouchLecture;

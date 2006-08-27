@@ -13,10 +13,6 @@
 #ifndef KTOUCHSTATUS_H
 #define KTOUCHSTATUS_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <QWidget>
 
 #include "ui_ktouchstatuslayout.h"
@@ -32,6 +28,8 @@ class KTouchStatus : public QWidget, public Ui_KTouchStatusLayout {
   public:
     /// Constructor
     KTouchStatus(QWidget *parent);
+	/// Called when the preferences have changed in the configuration dialog.
+	void applyPreferences();
     /// Sets the new characters text.
     void setNewChars(const QString& newChars);
     /// Updates the level LCD and the correctness progress bar

@@ -19,7 +19,7 @@
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");
 
-static const char version[] = "1.5";
+static const char version[] = "1.6.2";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
                      version,
                      description,
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000-2005 by Håvard Frøiland and Andreas Nicolai",
+                     "Copyright (C) 2000-2006 by Håvard Frøiland and Andreas Nicolai",
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");
@@ -44,18 +44,14 @@ int main(int argc, char **argv)
     about.addCredit( "All the creators of training and keyboard files", 0, 0);
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions( options );
-	kDebug() << "Starting KTouch" << endl;
     KApplication app;
     KTouch *mainWin = 0;
-
-	kDebug() << "Starting KTouch" << endl;
 
     if (app.isSessionRestored()) {
         RESTORE(KTouch);
     }
     else
     {
-		kDebug() << "normal session start" << endl;
         // no session.. just start up normally
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         // TODO: check the command line for a training file and set this as the new to open training file

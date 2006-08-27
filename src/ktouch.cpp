@@ -18,16 +18,15 @@
 
 // QT Header
 #include <QVBoxLayout>
-#include <qsignalmapper.h>
-#include <qcheckbox.h>
-#include <qlabel.h>
-//Added by qt3to4:
+#include <QSignalMapper>
+#include <QCheckBox>
+#include <QLabel>
 #include <QKeyEvent>
 #include <QResizeEvent>
-#include <kselectaction.h>
-#include <kstdaction.h>
 
 // KDE Header
+#include <kselectaction.h>
+#include <kstdaction.h>
 #include <klocale.h>
 #include <kstatusbar.h>
 #include <kfiledialog.h>
@@ -42,6 +41,7 @@
 #include <kfontrequester.h>
 #include <knuminput.h>
 #include <kicon.h>
+#include <kio/netaccess.h>
 
 // Own header files
 #include "ktouchlecture.h"
@@ -49,7 +49,7 @@
 #include "ktouchstatus.h"
 #include "ktouchslideline.h"
 #include "ktouchkeyboardwidget.h"
-#include "ktouchkeyboardeditor.h"
+#include "ktouchcoloreditor.h"
 #include "ktouchtrainer.h"
 #include "ktouchstatistics.h"
 #include "ktouchprefgeneral.h"
@@ -59,6 +59,9 @@
 #include "ktouchprefcolors.h"
 
 #include "prefs.h"
+#include "ktouchcolorscheme.h"
+#include "ktouchusersetup.h"
+#include "ktouchutils.h"
 
 KTouch * KTouchPtr = NULL;
 
@@ -68,11 +71,19 @@ KTouch::KTouch()
     m_keyboardWidget(NULL),
     m_trainer(NULL)
 {
+	m_duringStartup = true;
     setFocusPolicy(Qt::StrongFocus);
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
 	// General initialization of the program, common for all start modes
 	init();
+	// Read user statistics
+	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
+	m_userStats.clear(); // make sure our mapping contains the "default" user
+	// read previous stats from file
+	// FIXME: find the source code for this function or reimplement it
+	// KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
+	//	kdDebug() << "[KTouch::KTouch] users = " << m_userStats.count() << endl;
 	// Setup our actions and connections
 	setupActions();
 	// create the GUI reading the ui.rc file
@@ -80,11 +91,6 @@ KTouch::KTouch()
 		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
 	setupGUI(ToolBar | Keys | StatusBar | Create);
 	setAutoSaveSettings();
-	// Read user statistics
-	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
-	//kDebug() << "[KTouch::KTouch]  readings statistics from file '" << stat_file << "'" << endl;
-	if (!m_stats.read(this, stat_file))
-		m_stats.clear();	// if we can't read it, start with empty statistics
 
 	// Init a training session
 	initTrainingSession();
@@ -105,7 +111,9 @@ KTouch::KTouch()
 		// Load statistics data from statistics-file
 
 	    // Reload the last used training file.
-		if (!m_lecture.loadXML(this, Prefs::currentLectureFile() )) {
+		if (Prefs::currentLectureFile().isNull() ||
+		    !m_lecture.loadXML(this, Prefs::currentLectureFile() ))
+		{
 			Prefs::setCurrentLectureFile(QString());
 			m_defaultLectureAction->setCurrentItem(-1);
 		}
@@ -124,6 +132,7 @@ KTouch::KTouch()
         // now let's start the training in the current level
 		m_trainer->startTraining(true);
 //	}
+	m_duringStartup = false;
 }
 // ----------------------------------------------------------------------------
 
@@ -135,18 +144,21 @@ KTouch::~KTouch() {
 // ----------------------------------------------------------------------------
 
 KTouchLectureStats& KTouch::getCurrentLectureStats() {
-	KTouchLectureStats& stat = m_stats.m_lectureStats[Prefs::currentLectureFile()];
+//	kDebug() << "[KTouch::getCurrentLectureStats]  " << endl;
+	KUrl lectureURL = Prefs::currentLectureFile();
+	if (lectureURL.url().isEmpty())  lectureURL = "default";
+//	kdDebug() << "  lectureURL = '" << lectureURL << "'" << endl;
+	KTouchLectureStats& stat = m_userStats[Prefs::currentUserName()].m_lectureStats[lectureURL];
 	// add additional info to the statistics
-	if (stat.m_lectureURL.isEmpty())
-		stat.m_lectureURL = Prefs::currentLectureFile();
-	if (stat.m_lectureTitle.isEmpty())
-		stat.m_lectureTitle = m_lecture.m_title;
+	stat.m_lectureURL = lectureURL;
+	stat.m_lectureTitle = m_lecture.title();
 	return stat;
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::clearStatistics() {
-	m_stats.clear();
+	m_userStats.clear();
+	m_userStats[Prefs::currentUserName()].m_userName = i18n("default user");
 }
 // ----------------------------------------------------------------------------
 
@@ -157,19 +169,25 @@ void KTouch::clearStatistics() {
 void KTouch::applyPreferences() {
 	// This applies a new color scheme for the keyboard and also updates all other
 	// changes for the keyboard widget
-	changeColor(Prefs::colorScheme());
+	changeColor(Prefs::currentColorScheme());
 	m_slideLineWidget->applyPreferences();
+	m_statusWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     if (keyEvent->text().isEmpty()) return;
+
     // if we the training session is paused, continue training now
     if (m_trainer->m_trainingPaused)  {
 		m_trainingPause->setEnabled(true);
 		m_trainer->continueTraining();
 	}
+	if (keyEvent->text().length() > 1) {
+		kDebug() << "[KTouch::keyPressEvent]  text = '" << keyEvent->text() << "'" << endl;
+	}
     QChar key = keyEvent->text().at(0); // get first unicode character
+
     if (key.isPrint())
         m_trainer->keyPressed(key);
     else if (key==QChar(8))
@@ -181,6 +199,7 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     keyEvent->accept();
 }
 // ----------------------------------------------------------------------------
+
 
 void KTouch::configOverrideLectureFontToggled(bool on) {
 	if (on) {
@@ -207,25 +226,99 @@ void KTouch::configOverrideKeyboardFontToggled(bool on) {
 // ----------------------------------------------------------------------------
 
 void KTouch::configAutoLevelChangeToggled(bool on) {
-  m_pageTraining->ui.l1->setEnabled(on);
-  m_pageTraining->ui.l2->setEnabled(on);
-  m_pageTraining->ui.l3->setEnabled(on);
-  m_pageTraining->ui.l4->setEnabled(on);
-  m_pageTraining->ui.l5->setEnabled(on);
-  m_pageTraining->ui.l6->setEnabled(on);
-  m_pageTraining->ui.l7->setEnabled(on);
-  m_pageTraining->ui.l8->setEnabled(on);
-  m_pageTraining->ui.l9->setEnabled(on);
-  m_pageTraining->ui.l10->setEnabled(on);
-  m_pageTraining->ui.l11->setEnabled(on);
-  m_pageTraining->ui.l12->setEnabled(on);
-  m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(on);
-  m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(on);
-  m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(on);
-  m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(on);
-  m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(on);
-  m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(on);
-  m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(on);
+	if (on) {
+		m_pageTraining->ui.l1->setEnabled(true);
+		m_pageTraining->ui.l2->setEnabled(true);
+		m_pageTraining->ui.l3->setEnabled(true);
+		m_pageTraining->ui.l4->setEnabled(true);
+		m_pageTraining->ui.l5->setEnabled(true);
+		m_pageTraining->ui.l6->setEnabled(true);
+		m_pageTraining->ui.l7->setEnabled(true);
+		m_pageTraining->ui.l8->setEnabled(true);
+		m_pageTraining->ui.l9->setEnabled(true);
+		m_pageTraining->ui.l10->setEnabled(true);
+		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(true);
+		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(true);
+		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(true);
+		m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(true);
+		m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(true);
+        m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(true);
+        m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(true);
+	}
+	else {
+		m_pageTraining->ui.l1->setEnabled(false);
+		m_pageTraining->ui.l2->setEnabled(false);
+		m_pageTraining->ui.l3->setEnabled(false);
+		m_pageTraining->ui.l4->setEnabled(false);
+		m_pageTraining->ui.l5->setEnabled(false);
+		m_pageTraining->ui.l6->setEnabled(false);
+		m_pageTraining->ui.l7->setEnabled(false);
+		m_pageTraining->ui.l8->setEnabled(false);
+		m_pageTraining->ui.l9->setEnabled(false);
+		m_pageTraining->ui.l10->setEnabled(false);
+		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(false);
+		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(false);
+		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(false);
+		m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(false);
+		m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(false);
+        m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(false);
+        m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(false);
+	}	
+}
+// ----------------------------------------------------------------------------
+
+void KTouch::configCommonColorsToggled(bool on) {
+	m_pageColors->ui.colorsGroup->setEnabled(on);
+}
+// ----------------------------------------------------------------------------
+
+// The action File->Open text...
+void KTouch::fileOpenText() {
+	trainingPause();
+	KUrl tmp = KFileDialog::getOpenUrl(QString(), i18n("*.txt|Text files\n*.*|All files"), this, i18n("Select Practice Text") );
+    if (!tmp.isEmpty()) {
+		// TODO : ask user for training options
+		// create a default lecture
+		KTouchLecture lec;
+		// now read the file and replace the default mini level with the text in the file
+		QString target;
+		if (KIO::NetAccess::download(tmp, target, this)) {
+			// Ok, that was successful, read the file into the first level of the lecture
+			QFile infile(target);
+			if ( !infile.open( QIODevice::ReadOnly ) ) {
+				// FIXME : KIO::NetAccess::removeTempFile(target);
+				return;
+			}
+			QTextStream in(&infile);
+			// read text in stringlist
+			int max_len = 0;
+			int max_lines = 0;
+			QString line = in.readLine();
+			QStringList lines;
+			while (!line.isNull() && ++max_lines < 1000) {
+				lines.append(line.trimmed());
+				max_len = QMAX(max_len, line.length());
+				line = in.readLine();
+			}
+			// store the lecture data
+			lec.setTitle(i18n("Imported text from file '%1'").arg(tmp.fileName()));
+			KTouchLevelData dat(i18n("generated from text file"), i18n("all available"));
+			dat.setLines(lines);
+			lec.setLevel(0, dat);
+		
+			// first store training statistics
+			m_trainer->storeTrainingStatistics();
+			Prefs::setCurrentLectureFile(tmp.url());
+			m_lecture = lec;
+			updateFontFromLecture();
+			// adjust check marks in quick-select menus
+			updateLectureActionCheck();
+			// restart training session from level 1 here...
+			m_trainer->startTraining(false);
+			m_trainingPause->setEnabled(true);
+		}
+		KIO::NetAccess::removeTempFile(target);
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -266,12 +359,52 @@ void KTouch::fileEditLecture() {
 }
 // ----------------------------------------------------------------------------
 
+// The action File->Edit colors...
+void KTouch::fileEditColors() {
+	trainingPause();
+	// Create a copy of the currently editable color schemes.
+	QList<KTouchColorScheme> tmp_list;
+	int default_schemes = 0;
+	for (QList<KTouchColorScheme>::const_iterator it = KTouchColorScheme::m_colorSchemes.constBegin();
+		it != KTouchColorScheme::m_colorSchemes.constEnd(); ++it)
+	{
+		if (!it->m_default) 	tmp_list.append(*it);
+		else 					++default_schemes;
+	}
+	
+	KTouchColorEditor dlg(this);		// Create editor
+	// start editor
+	int selected;
+	dlg.startEditor( tmp_list, Prefs::currentColorScheme() - default_schemes, selected);
+	KTouchColorScheme::createDefaults();
+	for (QList<KTouchColorScheme>::const_iterator it = tmp_list.constBegin();
+		it != tmp_list.constEnd(); ++it)
+	{
+		KTouchColorScheme::m_colorSchemes.append(*it);
+	}
+	// update the quick select menu
+    QStringList schemes_list;
+    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
+    m_keyboardColorAction->setItems(schemes_list);
+	int index = selected + default_schemes;
+	if (index >=0 && index < static_cast<int>(KTouchColorScheme::m_colorSchemes.count())) {
+		Prefs::setCurrentColorScheme(index);
+	}
+	else {
+		Prefs::setCurrentColorScheme(1); // fall back on default in case active was deleted
+	}
+   	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
+	applyPreferences();
+}
+// ----------------------------------------------------------------------------
+
 // The action File->Edit keyboard...
 void KTouch::fileEditKeyboard() {
 	trainingPause();
 	// Create and execute editor
-    KTouchKeyboardEditor dlg(this);
-    dlg.startEditor( Prefs::currentKeyboardFile() );
+//    KTouchKeyboardEditor dlg(this);
+//    dlg.startEditor( Prefs::currentKeyboardFile() );
 	// Reload lecture in case it was modified
 	//m_keyboard.loadXML(this, Prefs::currentKeyboardFile() );
 	//updateFontFromLecture();
@@ -321,7 +454,7 @@ void KTouch::trainingStatistics() {
     // data for the current lecture present for the dialog to function
 	// properly
 	getCurrentLectureStats();
-    dlg.run(Prefs::currentLectureFile(), m_stats, kls, kss);
+    dlg.run(Prefs::currentLectureFile(), m_userStats[Prefs::currentUserName()], kls, kss);
 }
 // ----------------------------------------------------------------------------
 
@@ -348,21 +481,43 @@ void KTouch::optionsPreferences() {
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
     // TODO : Connect some other buttons/check boxes of the dialog
-//    connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
-//    this, SLOT(configOverrideLectureFontToggled(bool)));
-//    connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
-//    this, SLOT(configOverrideKeyboardFontToggled(bool)));
-//    connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
-//    this, SLOT(configAutoLevelChangeToggled(bool)));
+/*
+	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
+		this, SLOT(configOverrideLectureFontToggled(bool)));
+	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
+		this, SLOT(configOverrideKeyboardFontToggled(bool)));
+	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
+		this, SLOT(configAutoLevelChangeToggled(bool)));
+	connect(m_pageColors->kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
+		this, SLOT(configCommonColorsToggled(bool)));
+*/
 
     // call the functions to enable/disable controls depending on settings
 //    configOverrideLectureFontToggled(Prefs::overrideLectureFont());
 //    configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
 //    configAutoLevelChangeToggled(Prefs::autoLevelChange());
+//	configCommonColorsToggled(Prefs::commonTypingLineColors());
 
     dialog->show();
+}
+// ----------------------------------------------------------------------------
 
-
+void KTouch::optionsSetupUsers() {
+	KTouchUserSetup dlg(this);
+	QStringList users = m_userStats.keys();
+	// call setup users dialog
+	dlg.showDialog(users);
+	// loop over all users and store only the statistics data already present in our
+	// statistics map
+	QMap<QString, KTouchStatisticsData> new_stats;
+	for (QStringList::const_iterator it = users.constBegin(); it != users.constEnd(); ++it) {
+		new_stats[*it] = m_userStats[*it];
+		new_stats[*it].m_userName = *it;
+//		kdDebug() << "User = " << *it << endl;
+	}
+	m_userStats = new_stats;
+    m_currentUserAction->setItems(m_userStats.keys());
+	updateCurrentUserActionCheck();
 }
 // ----------------------------------------------------------------------------
 
@@ -382,7 +537,7 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 // ----------------------------------------------------------------------------
 
 void KTouch::changeKeyboard(int num) {
-    if (num>=m_keyboardFiles.count()) return;
+    if (static_cast<unsigned int>(num)>=m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
 	//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
@@ -392,14 +547,15 @@ void KTouch::changeKeyboard(int num) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeColor(int num) {
-    if (num>=m_colorSchemes.count()) return;
-    Prefs::setColorScheme(num);
+    if (static_cast<unsigned int>(num)>=KTouchColorScheme::m_colorSchemes.count()) return;
+    Prefs::setCurrentColorScheme(num);
     m_keyboardWidget->applyPreferences(this, false);
+	m_slideLineWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::changeLecture(int num) {
-    if (num>=m_lectureFiles.count()) return;
+    if (static_cast<unsigned int>(num)>=m_lectureFiles.count()) return;
     trainingPause();
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
@@ -422,20 +578,37 @@ void KTouch::changeLecture(int num) {
 }
 // ----------------------------------------------------------------------------
 
+void KTouch::changeUser(int num) {
+    if (static_cast<unsigned int>(num)>=m_userStats.keys().count()) return;
+    trainingPause();
+	m_trainer->storeTrainingStatistics();
+	QString new_name = m_userStats.keys()[num];
+	Prefs::setCurrentUserName(new_name);
+    KMessageBox::information(this, i18n("Changing user to '%1'. Restarting training session at current level.").arg(new_name) );
+	m_trainer->startTraining(true);
+}
+// ----------------------------------------------------------------------------
+
 
 // *********************************
 // *** Protected member function ***
 // *********************************
 
 bool KTouch::queryExit() {
+	if (m_duringStartup) return true;
 	// store config data
 	Prefs::setCurrentTrainingLevel( m_trainer->m_level );
     Prefs::writeConfig();
 	// update and save statistics
 	m_trainer->storeTrainingStatistics();
-	KUrl stat_file = KUrl::fromPath(KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml");
-	//kDebug() << "[KTouch::queryExit]  Writing statistics to file: '" << stat_file << "'" << endl;
-	m_stats.write(this, stat_file);
+	KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
+	// make sure all stats have the user names
+//	for (QStringList::iterator it = m_userStats.keys().begin(); it != m_userStats.keys().end(); ++it)
+//		m_userStats[*it].m_userName = *it;
+	KTouchStatisticsData::writeUserStats(this, stat_file, m_userStats);
+	//m_userStats[Prefs::currentUserName()].write(this, stat_file);
+	KUrl color_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "color_schemes.xml";
+	KTouchColorScheme::writeList(this, color_file);
     return true;
 }
 // ----------------------------------------------------------------------------
@@ -466,8 +639,8 @@ void KTouch::readProperties(KConfig *config) {
     QString session = config->readEntry("Session");
     if (!session.isEmpty())
         m_trainer->m_session = KTouchTrainingSession(session);
-    m_trainer->m_level = config->readEntry("Level", 0);
-    m_trainer->m_line = config->readEntry("Line", 0);
+    m_trainer->m_level = config->readNumEntry("Level", 0);
+    m_trainer->m_line = config->readNumEntry("Line", 0);
     m_currentLectureFile = config->readPathEntry("Lecture");
     m_trainer->readSessionHistory();    // read session history (excluding currently active session)
     // update the trainer object
@@ -482,7 +655,7 @@ void KTouch::readProperties(KConfig *config) {
 	// Read training state
     config->setGroup("TrainingState");
     m_currentLectureURL = config->readPathEntry("LectureURL");
-    m_trainer->m_level = config->readEntry("Level", 0);
+    m_trainer->m_level = config->readNumEntry("Level", 0);
 */
 }
 // ----------------------------------------------------------------------------
@@ -524,25 +697,44 @@ void KTouch::init() {
 	//kDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
 	//kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
-	/// \todo look up a default english lecture in the m_lectureFiles string list
-	QString default_lecture;
-	if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
-	if (Prefs::currentLectureFile() == "default")
+	if (Prefs::currentLectureFile() == "default") {
+		Prefs::setCurrentLectureFile(QString::null);
+//		/// \todo look up a lecture in the language of the KDE locale
+/*		QString default_lecture = "default";
+		if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
 		Prefs::setCurrentLectureFile( default_lecture );
+*/
+	}
 
-    // read keyboard layouts
-	QString default_keyboard = "number.keyboard";
-	// look up the default english keyboard file in the m_keyboardFiles string list
-	QStringList::iterator it = m_keyboardFiles.begin();
-	while (it != m_keyboardFiles.end()   &&   !(*it).contains("en.keyboard"))  ++it;
-	if (it != m_keyboardFiles.end())   default_keyboard = *it;
-    // if keyboard layout (loaded by Prefs is not available (e.g. the
-	// layout file has been deleted) switch to default keyboard
-    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0)
+    // if keyboard layout (loaded by Prefs is not available (e.g. the 
+    // layout file has been deleted) switch to default keyboard
+    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0) {
+        QString default_keyboard;
+        // determine locale
+        QString lang = KGlobal::locale()->language();
+        QString fname = lang + ".keyboard";
+        // try to find keyboard with current locale
+        QStringList::const_iterator it = m_keyboardFiles.constBegin();
+        while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+        if (it == m_keyboardFiles.constEnd()) {
+            fname = lang.left(2) + ".keyboard";
+            // try to find more general version 
+            it = m_keyboardFiles.constBegin();
+            while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+        }
+
+        if (it != m_keyboardFiles.constEnd())
+            default_keyboard = *it;
+        else 
+            default_keyboard = "number.keyboard";
         Prefs::setCurrentKeyboardFile ( default_keyboard );
+    }
 
-	// create some default colour schemes
-	createDefaultColorSchemes();
+    // create some default colour schemes
+    KTouchColorScheme::createDefaults();
+    // read additional color schemes
+	KUrl color_file = KGlobal::dirs()->findResource("data", "ktouch/color_schemes.xml");
+	KTouchColorScheme::readList(this, color_file);
 }
 // ----------------------------------------------------------------------------
 
@@ -587,10 +779,14 @@ void KTouch::initTrainingSession() {
 // Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
 	// *** File menu ***
-    KAction *action = new KAction(KIcon("open_lecture"), i18n("&Open Lecture..."), actionCollection(), "file_openlecture");
+    KAction *action = new KAction(KIcon("open_plaintext"), i18n("&Open plain text file..."), actionCollection(), "file_opentext");
+    connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
+    action = new KAction(KIcon("open_lecture"), i18n("&Open lecture..."), actionCollection(), "file_openlecture");
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
-    action = new KAction(KIcon("edit_lecture"), i18n("&Edit Lecture..."), actionCollection(), "file_editlecture");
+    action = new KAction(KIcon("edit_lecture"), i18n("&Edit lecture..."), actionCollection(), "file_editlecture");
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
+    action = new KAction(KIcon("edit_colors"), i18n("&Edit color scheme..."), actionCollection(), "file_editcolors");
+    connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
     KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
@@ -605,25 +801,40 @@ void KTouch::setupActions() {
 
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), actionCollection(), "default_lectures");
+	m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
     connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
 
-	// *** Settings menu ***
+	// *** Options menu ***
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts
     m_keyboardLayoutAction = new KSelectAction(i18n("&Keyboard Layouts"), actionCollection(), "keyboard_layouts");
-    m_keyboardLayoutAction->setItems(m_keyboardFiles);
+	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
+    m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
 	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), actionCollection(), "keyboard_schemes");
     QStringList schemes_list;
-    for (int i=0; i<m_colorSchemes.count(); ++i)
-		schemes_list.append(m_colorSchemes[i].m_name);
+    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
+	m_keyboardColorAction->setMenuAccelsEnabled(false);
     m_keyboardColorAction->setItems(schemes_list);
-    m_keyboardColorAction->setCurrentItem(Prefs::colorScheme());
+	if (static_cast<unsigned int>(Prefs::currentColorScheme()) >=  schemes_list.count())
+		Prefs::setCurrentColorScheme(1);
+   	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
     connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
+
+    // *** User settings ***
+    action = new KAction(KIcon("kdmconfig"), i18n("&Setup users..."), actionCollection(), "settings_setup_users");
+    connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
+
+	m_currentUserAction = new KSelectAction(i18n("&Current user"), actionCollection(), "settings_current_user");
+	m_currentUserAction->setMenuAccelsEnabled(false);
+    m_currentUserAction->setItems(m_userStats.keys());
+	updateCurrentUserActionCheck();
+    connect (m_currentUserAction, SIGNAL(activated(int)), this, SLOT(changeUser(int)));
 }
 // ----------------------------------------------------------------------------
 
@@ -636,7 +847,7 @@ void KTouch::updateFontFromLecture() {
 		// TODO : if multiple font suggestions are given, try one after another until a
 		// suggested font is found
 		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
-		else if (f.fromString("Courier 10 Pitch")) 		m_slideLineWidget->setFont(f);
+		else if (f.fromString("Monospace")) 		m_slideLineWidget->setFont(f);
 	}
 }
 // ----------------------------------------------------------------------------
@@ -648,14 +859,42 @@ void KTouch::updateFileLists() {
 
     // first search for all installed keyboard files
 	// TODO : search in i18n() directories
-    QStringList keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
-	// TODO : extract titles from keyboard files and store them in the m_keyboardTitles string list
-	m_keyboardFiles = keyboardFiles;
+    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
 
     // remove the number layout, since this is the necessary default layout and will be
     // added anyway
     QStringList::iterator it = m_keyboardFiles.find("number.keyboard");
 	if (it!=m_keyboardFiles.end())		m_keyboardFiles.remove(it);
+
+    m_keyboardTitles.clear();
+    for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
+        cit != m_keyboardFiles.constEnd(); ++cit)
+    {
+        // extract titles from keyboard files and store them in the
+        // m_keyboardTitles string list
+
+        // get the filename alone
+        QString fname = KUrl(*cit).fileName();
+        // get the filename without the .keyboard
+        fname.truncate(fname.length() - 9);
+        // get everything in front of the first .
+        QString lang_iso = fname.section('.',0,0);
+        // get language description of file names
+        QString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
+//        kdDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
+        if (lang_name.isEmpty())
+            lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
+        if (!lang_name.isEmpty())
+            lang_name += " (" + fname + ")";
+        else
+            lang_name = fname;
+        m_keyboardTitles.append( lang_name );
+//        kdDebug() << m_keyboardTitles.back() << endl;
+    }
+
+    // now sort the files and titles accordingly
+    sort_lists(m_keyboardTitles, m_keyboardFiles);
+    // and add the number keypad to the front
     m_keyboardFiles.push_front("number.keyboard");
     m_keyboardTitles.push_front(i18n("Keypad/Number block"));
 
@@ -675,12 +914,13 @@ void KTouch::updateFileLists() {
 				// since we could read the lecture, we remember the URL
 				m_lectureFiles.push_back(*it);
 				// store the title of the lecture
-				if (l.m_title.isEmpty())
+				if (l.title().isEmpty())
 					m_lectureTitles.push_back(i18n("untitled lecture") + " - (" + url.fileName() + ")");
             	else
-					m_lectureTitles.push_back(l.m_title);
+					m_lectureTitles.push_back(l.title());
 			}
         }
+        sort_lists(m_lectureTitles, m_lectureFiles);
     }
 
 	// Now find predefined files with colour schemes
@@ -689,73 +929,11 @@ void KTouch::updateFileLists() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::createDefaultColorSchemes() {
-    KTouchColorScheme color;
-
-    color.m_name = i18n("Black && White");
-    color.m_frame = Qt::black;
-    for (int i=0; i<8; ++i)
-        color.m_background[i] = Qt::white;
-    color.m_text = Qt::black;
-    color.m_backgroundH = Qt::black;
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = Qt::white;
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Classic");
-    color.m_frame = Qt::black;
-    color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
-    color.m_background[1] = QColor( 14,164,239);     color.m_background[5] = QColor(158,255,155);
-    color.m_background[2] = QColor(158,255,155);     color.m_background[6] = QColor( 14,164,239);
-    color.m_background[3] = QColor(252,138,138);     color.m_background[7] = QColor(255,238,  7);
-    color.m_text = Qt::black;
-    color.m_backgroundH = Qt::darkBlue;
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = Qt::white;
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Deep Blue");
-    color.m_frame = QColor(220,220,220);
-    color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
-    color.m_background[1] = QColor( 39, 59,127);     color.m_background[5] = QColor(  8, 44,124);
-    color.m_background[2] = QColor(  4, 39, 53);     color.m_background[6] = QColor( 10, 82,158);
-    color.m_background[3] = QColor( 40, 32,121);     color.m_background[7] = QColor( 43, 60,124);
-    color.m_text = Qt::white;
-    color.m_backgroundH = QColor(125,180,255);
-    color.m_textH = Qt::darkBlue;
-    color.m_cBackground = Qt::black;
-    color.m_cText = Qt::white;
-    color.m_cBackgroundH = QColor(111,121,73);
-    color.m_cTextH = Qt::white;
-    m_colorSchemes.push_back(color);
-
-    color.m_name = i18n("Stripy");
-    color.m_frame = Qt::black;
-    for (int i=0; i<8; i=i+2)
-        color.m_background[i] = QColor( 39, 70, 127);
-	for (int i=1; i<8; i=i+2)
-        color.m_background[i] = Qt::darkGray;
-    color.m_text = Qt::black;
-    color.m_backgroundH = QColor( 39, 70, 227);
-    color.m_textH = Qt::white;
-    color.m_cBackground = Qt::gray;
-    color.m_cText = Qt::black;
-    color.m_cBackgroundH = QColor( 39, 70, 227);
-    color.m_cTextH = Qt::black;
-    m_colorSchemes.push_back(color);
-}
-// ----------------------------------------------------------------------------
 
 void KTouch::updateLectureActionCheck() {
 	int num = 0;
 	QStringList::iterator it = m_lectureFiles.begin();
-	QString fname = Prefs::currentLectureFile();
+	QString fname = Prefs::currentLectureFile(); 
 	while (it != m_lectureFiles.end()   &&   !(*it).contains(fname)) {
 		++it;
 		++num;
@@ -777,4 +955,59 @@ void KTouch::updateKeyboardActionCheck() {
 	else					    		m_keyboardLayoutAction->setCurrentItem(num);
 }
 // ----------------------------------------------------------------------------
+
+void KTouch::updateCurrentUserActionCheck() {
+    QStringList user_list = m_userStats.keys();
+	QStringList::const_iterator it = user_list.find(Prefs::currentUserName());
+	// if not found, fall back on default user
+	if (it == user_list.end()) {
+		Prefs::setCurrentUserName(i18n("default user"));
+		it = user_list.find(Prefs::currentUserName());
+	}
+	QStringList::const_iterator it2 = user_list.begin();
+	// find index
+	unsigned int index = 0;
+	while (it2 != it) {
+		++index;
+		++it2;
+	}
+	if (index >= user_list.count()) {
+		// we must be missing the default user in the list,
+		// this shouldn't happen, though...
+		kdDebug() << "Missing default user in list..." << endl;
+		user_list.append(i18n("default user"));
+		index = user_list.count() -1;
+	}
+   	m_currentUserAction->setCurrentItem(index);
+}
+// ----------------------------------------------------------------------------
+
+/*
+void KTouch::imStartEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+
+void KTouch::imComposeEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+
+void KTouch::imEndEvent(QIMEvent *e) {
+	kdDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
+  if (!e->text().isEmpty()) {
+    if (e->text() == "^") {
+      QKeyEvent *ev = new QKeyEvent (QEvent::KeyPress,
+                                    Qt::Key_AsciiCircum, '^', 0,
+                                    QString("^"));
+      keyPressEvent(ev);
+      delete ev;
+    }
+  }
+  e->accept();
+}
+// ----------------------------------------------------------------------------
+*/
 

@@ -10,10 +10,12 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+#include "ktouchlectureeditor.h"
+#include "ktouchlectureeditor.moc"
 
-#include <qlabel.h>
-#include <qstring.h>
-#include <qstringlist.h>
+#include <QLabel>
+#include <QString>
+#include <QStringList>
 
 #include <kpushbutton.h>
 #include <k3listview.h>
@@ -28,9 +30,6 @@
 #include <kfiledialog.h>
 
 #include <algorithm>  // for std::swap
-
-#include "ktouchlectureeditor.h"
-#include "ktouchlectureeditor.moc"
 
 #include "ktouchlecture.h"
 #include "ktouchopenrequest.h"
@@ -60,7 +59,7 @@ KTouchLectureEditor::KTouchLectureEditor(QWidget *parent, const char* name, bool
     connect(lectureCommentEdit, SIGNAL(textChanged()), this, SLOT(setModified()) );
     connect(levelCommentEdit, SIGNAL(textChanged(const QString&)), this, SLOT(setModified()) );
     connect(linesTextEdit, SIGNAL(textChanged()), this, SLOT(setModified()) );
-    
+
     // The font, open, save, saveas and close buttons are already connected
 }
 // -----------------------------------------------------------------------------
@@ -82,7 +81,7 @@ bool KTouchLectureEditor::startEditor(const KUrl& url) {
 // *************************
 
 void KTouchLectureEditor::fontBtnClicked() {
-    QFont f;
+    QFont f(m_lecture.m_fontSuggestions);
     if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
         linesTextEdit->setFont(f);
         lectureCommentEdit->setFont(f);
@@ -90,8 +89,8 @@ void KTouchLectureEditor::fontBtnClicked() {
         newCharsEdit->setFont(f);
         titleEdit->setFont(f);
         levelListView->setFont(f);
-		m_lecture.m_fontSuggestions = f.toString();
-		setModified();
+        m_lecture.m_fontSuggestions = f.family();
+        setModified();
     }
 }
 // -----------------------------------------------------------------------------
@@ -136,7 +135,7 @@ void KTouchLectureEditor::newSelection(Q3ListViewItem* item) {
     while (i!=0 && i!=item) {
         i = i->nextSibling();
         ++level;
-    };
+    }
     if (i!=0) {
         m_currentItem = i;
         m_level = level;
@@ -155,7 +154,7 @@ void KTouchLectureEditor::newSelection(Q3ListViewItem* item) {
         else                            downBtn->setEnabled(true);
         if (m_level==0)                 upBtn->setEnabled(false);
         else                            upBtn->setEnabled(true);
-    };
+    }
     setModified(current_modified_flag);
 }
 // -----------------------------------------------------------------------------
@@ -186,11 +185,11 @@ void KTouchLectureEditor::deleteLevel() {
     // first remove the item from the list view
     delete m_currentItem;
     // then remove the level data
-    QVector<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
+    QList<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
     std::advance(it, m_level);
     m_lecture.m_lectureData.erase(it);
     m_currentItem = levelListView->firstChild();
-    for (int i=0; i<m_level; ++i)
+    for (unsigned int i=0; i<m_level; ++i)
         m_currentItem = m_currentItem->nextSibling();
     levelListView->setSelected(m_currentItem, true);
     showCurrentLevel();
@@ -232,7 +231,7 @@ void KTouchLectureEditor::moveDown() {
     Q3ListViewItem *lowerItem = m_currentItem->itemBelow();
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level+1]);
     m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
-    if(lowerItem) {
+    if (lowerItem) {
         lowerItem->setText(0, m_lecture.m_lectureData[m_level+1].m_newChars);
         m_currentItem=lowerItem;
     }
@@ -262,7 +261,7 @@ void KTouchLectureEditor::transfer_to_dialog() {
     else                        setWindowTitle(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     // copy the 'new char' strings of the lectures into the list view
     levelListView->clear();
-    QVector<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
+    QList<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
     // add first item
     Q3ListViewItem *item=new Q3ListViewItem( levelListView, (it++)->m_newChars );
     // add all the others
@@ -287,7 +286,7 @@ void KTouchLectureEditor::transfer_to_dialog() {
     }
 	// finally the font
 	if (!m_lecture.m_fontSuggestions.isEmpty()) {
-    	QFont f;
+    	QFont f("Monospace");
 		// TODO : multiple font suggestions
 		f.fromString(m_lecture.m_fontSuggestions);
         linesTextEdit->setFont(f);
@@ -315,8 +314,8 @@ void KTouchLectureEditor::showCurrentLevel() {
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;
-    for (QVector<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
-                                               it!=m_lecture.m_lectureData[m_level].m_lines.end(); ++it)
+    for (QList<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
+                                         it!=m_lecture.m_lectureData[m_level].m_lines.end(); ++it)
     {
         text += *it + '\n';
     }
@@ -332,7 +331,7 @@ void KTouchLectureEditor::storeCurrentLevel() {
     QString text = linesTextEdit->text();
     QStringList lines;
     QString currentLine;
-    for (int i=0; i<text.length(); ++i) {
+    for (unsigned int i=0; i<text.length(); ++i) {
         QChar c = text[i];
         if (c=='\t')  c=' '; // replace tabs with spaces
         if (c=='\n') {
@@ -351,12 +350,12 @@ void KTouchLectureEditor::storeCurrentLevel() {
 // -----------------------------------------------------------------------------
 
 void KTouchLectureEditor::createNewLevel() {
-     KTouchLevelData newLevel;
-     newLevel.m_newChars = i18n("abcdefghijklmnopqrstuvwxyz");
-     newLevel.m_comment.clear();
-     newLevel.m_lines.clear();  // remove the lines of the default mini level
-     newLevel.m_lines.push_back(i18n("Enter your lines here..."));
-     m_lecture.m_lectureData.push_back(newLevel);
+    KTouchLevelData newLevel;
+    newLevel.m_newChars = i18n("abcdefghijklmnopqrstuvwxyz");
+    newLevel.m_comment.clear();
+    newLevel.m_lines.clear();  // remove the lines of the default mini level
+    newLevel.m_lines.push_back(i18n("Enter your lines here..."));
+    m_lecture.m_lectureData.push_back(newLevel);
 }
 // -----------------------------------------------------------------------------
 
@@ -383,7 +382,7 @@ int KTouchLectureEditor::openLectureFile(const KUrl& url) {
 			// try to read old format first then XML format
 			if (!m_lecture.load(this, m_currentURL) && !m_lecture.loadXML(this, m_currentURL)) {
             	KMessageBox::sorry(this, i18n("Could not open the lecture file, creating a new one instead."));
-            	m_currentURL = ""; // new lectures haven't got a URL
+            	m_currentURL.clear(); // new lectures haven't got a URL
 			}
         }
         // If we have no URL, we create a new lecture - can happen if either the user

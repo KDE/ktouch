@@ -12,9 +12,9 @@
 
 #include "ktouchkeyboard.h"
 
-#include <qfile.h>
-//Added by qt3to4:
+#include <QFile>
 #include <QTextStream>
+#include <QtXml>
 
 #include <kdebug.h>
 #include <ktempfile.h>
@@ -98,7 +98,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
         if (temp)  delete temp;
         // kDebug() << "Error creating lecture file!" << endl;
         return false;
-    };
+    }
 
     QTextStream out( &outfile );
     out << doc.toString();
@@ -114,7 +114,6 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 
 // Loads keyboard data from file, preserved for compatibility
 bool KTouchKeyboard::read(QTextStream& in) {
-    in.setCodec( "UTF-8");
     QString line;
     clear();          // empty the keyboard
     // now loop until end of file is reached
@@ -332,7 +331,7 @@ void KTouchKeyboard::createDefault() {
 	m_comment = "Predefined keyboard layout";
 	m_language.clear();
 	// language does not apply to numbers... that's one of the nice things with math :-)
-	m_fontSuggestions = "Luxi Serif";
+	m_fontSuggestions = "Monospace";
     m_width = 8*col;
     m_height = 5*row;
 }

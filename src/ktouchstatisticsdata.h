@@ -13,22 +13,23 @@
 #ifndef KTOUCHSTATISTICSDATA_H
 #define KTOUCHSTATISTICSDATA_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
+// QT includes
 
-#include <qstring.h>
-#include <qmap.h>
-#include <qdom.h>
-#include <qdatetime.h>
-//Added by qt3to4:
+#include <QString>
+#include <QMap>
+#include <QDateTime>
 #include <QTextStream>
-#include <QVector>
+#include <QSet>
+#include <QModelIndex>
+
+// KDE includes
+
 #include <kurl.h>
 
-#include <set>          // I'm using std::set here because QT is missing this container type
-
 class QWidget;
+class QDomNode;
+class QDomDocument;
+class QDomElement;
 
 
 // This file contains all class declarations dealing with the statistics obtained in KTouch. 
@@ -43,13 +44,16 @@ class QWidget;
 /// which allows to calculate a relative "hit-miss-ratio".
 /// Character statistics are created for every character that has been missed at some time in the
 /// training session.
-class KTouchCharStats {
+class KTouchCharStats : public QModelIndex {
   public:
     /// Default constructor.
     KTouchCharStats() : m_char(0), m_correctCount(0), m_wrongCount(0) {};
     /// Constructor with parameters.
     KTouchCharStats(QChar ch, unsigned int correct, unsigned int wrong)
       : m_char(ch), m_correctCount(correct), m_wrongCount(wrong) {};
+	/// Destructor
+	virtual ~KTouchCharStats() {};
+
     /// Reads the character statistics from a XML Dom Node.
     /// @return Returns 'true', when reading was successful or 'false' otherwise.
     bool read(QDomNode in);
@@ -57,6 +61,10 @@ class KTouchCharStats {
     void write(QDomDocument& doc, QDomElement& root) const;
     /// Returns the miss-hit ratio (a value between 0-all correct and 100-all wrong).
     int missHitRatio() const;
+
+    // reimplemented functions from QModelIndex for use in QSet
+    virtual int row() const { return m_char.unicode(); } // use this to identify a KTouchCharStats object
+    virtual int column() const { return 0; } // always "column" 1
 
     QChar           m_char;         ///< The character for which statistics are kept.
     unsigned int    m_correctCount; ///< How often the character has been typed correctly.
@@ -67,14 +75,17 @@ class KTouchCharStats {
 inline bool higher_miss_hit_ratio(const KTouchCharStats & lhs, const KTouchCharStats & rhs) {
 	return lhs.missHitRatio() > rhs.missHitRatio();
 }
+
 /// Comparison operator "less", returns 'true' when the char-code of 'lhs' is less then the one of 'rhs'
-inline bool operator<(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char<rhs.m_char; }
+//inline bool operator<(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char<rhs.m_char; }
 /// Comparison operator "greater", returns 'true' when the char-code of 'lhs' is greater then the one of 'rhs'
-inline bool operator>(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char>rhs.m_char; }
+//inline bool operator>(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char>rhs.m_char; }
 /// Comparison operator == : returns 'true' when the char-code of 'lhs' is equal to then the one of 'rhs'
-inline bool operator==(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char==rhs.m_char; }
+//inline bool operator==(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char==rhs.m_char; }
 /// Writes the content of a KTouchCharStats object into the text stream.
 QTextStream& operator<<(QTextStream &out, const KTouchCharStats &ch);
+
+
 
 // *** KTouchLevelStats ***
 
@@ -108,7 +119,7 @@ class KTouchLevelStats {
     /// Returns the average typing speed in words per minute.
 	double wordSpeed() const;
 
-    std::set<KTouchCharStats>   m_charStats;        ///< Holds the statistics for mistyped characters.
+    QSet<KTouchCharStats>   	m_charStats;        ///< Holds the statistics for mistyped characters.
 	int							m_levelNum;			///< Number of the level in the lecture.
     double                		m_elapsedTime;      ///< Typing time in this level in seconds.
     unsigned int                m_words;            ///< The number of typed words.
@@ -143,8 +154,8 @@ class KTouchSessionStats {
 	/// Adds a wrong character count to the current statistics
 	void addWrongChar(QChar key);
 
-	std::set<unsigned int>		m_levelNums;		///< Numbers of the levels in this session.
-	std::set<KTouchCharStats>   m_charStats;        ///< Holds the statistics for mistyped characters.
+	QSet<unsigned int>			m_levelNums;		///< Numbers of the levels in this session.
+	QSet<KTouchCharStats>   	m_charStats;        ///< Holds the statistics for mistyped characters.
 	double                		m_elapsedTime;      ///< Typing time in this session in seconds.
 	unsigned int                m_words;            ///< The number of typed words.
 	unsigned int                m_totalChars;       ///< The total number of chars typed this session.
@@ -172,11 +183,11 @@ class KTouchLectureStats {
     /// Writes the lecture statistics to the XML document.
     void write(QDomDocument& doc, QDomElement& root) const;
 
-	QString								m_lectureTitle;	///< The descriptive title of the lecture.
-	KUrl								m_lectureURL;	///< The descriptive title of the lecture.
+	QString						m_lectureTitle;	///< The descriptive title of the lecture.
+	KUrl						m_lectureURL;	///< The descriptive title of the lecture.
 
-	QVector<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
-	QVector<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
+	QList<KTouchLevelStats>  	m_levelStats;	///< The statistics for all levels in this lecture.
+	QList<KTouchSessionStats>  	m_sessionStats;	///< The statistics for all session for in this lecture.
 };
 
 
@@ -203,13 +214,19 @@ class KTouchStatisticsData {
     /// Writes the statistics data to the XML document.
     bool write(QWidget * window, const KUrl& url) const;
 	
+	/// Reads all user statistics into the map 'stats'.
+	static bool readUserStats(QWidget * window, const KUrl& url, QMap<QString, KTouchStatisticsData>& stats);
+	/// Writes all user statistics in the map 'stats'.
+	static bool writeUserStats(QWidget * window, const KUrl& url, const QMap<QString, KTouchStatisticsData>& stats);
+
+	QString				m_userName;			///< The user name that this set of statistics belongs to.
 	LectureStatsMap		m_lectureStats;		///< All statistics of all lectures, stored based on their URLs.
 	
   private:
     /// Reads the statistics data from file into an XML document
-	bool readStats(QDomDocument& doc);
+	bool readStats(QDomNode doc);
     /// Saves the statistics data in the XML document
-	void writeStats(QDomDocument& doc) const;
+	void writeStats(QDomDocument& doc, QDomElement& root) const;
 };
 
 #endif  // KTOUCHSTATISTICSDATA_H

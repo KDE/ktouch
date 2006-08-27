@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouch.h                                                              *
  *   --------                                                              *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2003-2006 by Andreas Nicolai   *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -13,13 +13,8 @@
 #ifndef KTOUCH_H
 #define KTOUCH_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <qcolor.h>
-#include <qstringlist.h>
-//Added by qt3to4:
+#include <QColor>
+#include <QStringList>
 #include <QLabel>
 #include <QKeyEvent>
 #include <QResizeEvent>
@@ -28,7 +23,6 @@
 #include <kapplication.h>
 #include <kurl.h>
 
-class QLabel;
 class KToggleAction;
 class KActionMenu;
 class KSelectAction;
@@ -41,9 +35,9 @@ class KTouchTrainer;
 class KTouchPrefTraining;
 class KTouchPrefKeyboard;
 class KTouchPrefGeneral;
+class KTouchPrefColors;
 
 #include "ktouchlecture.h"
-#include "ktouchcolorscheme.h"
 #include "ktouchstatisticsdata.h"
 
 /// This is the main window of KTouch.
@@ -67,8 +61,6 @@ class KTouch : public KMainWindow {
     /// Destructor, releases memory of KTouch trainer.
     ~KTouch();
 
-	/// Returns the current color scheme
-	const QVector<KTouchColorScheme>& colorSchemes() const { return m_colorSchemes; }
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
@@ -94,15 +86,20 @@ class KTouch : public KMainWindow {
 	void configOverrideKeyboardFontToggled(bool on);
 	/// Called from the configuration dialog.
 	void configAutoLevelChangeToggled(bool on);
+	/// Called from the configuration dialog.
+	void configCommonColorsToggled(bool on);
 
+	void fileOpenText();                ///< The action File->Open text...
     void fileOpenLecture();             ///< The action File->Open lecture...
     void fileEditLecture();             ///< The action File->Edit lecture...
+    void fileEditColors();              ///< The action File->Edit colors...
     void fileEditKeyboard();            ///< The action File->Edit keyboard...
     void fileQuit();                    ///< The action File->Quit
     void trainingNewSession();          ///< The action Training->Start new training session...
     void trainingPause();               ///< The action Training->Pause training
     void trainingStatistics();          ///< The action Training->Show training statistics...
-    void optionsPreferences();          ///< The action Settings->Configure KTouch...
+    void optionsPreferences();          ///< The action Options->Configure KTouch...
+	void optionsSetupUsers();           ///< The action Options->Setup users...
 
     /// Quick-changes the keyboard layout (called from menu).
     void changeKeyboard(int num);
@@ -110,6 +107,8 @@ class KTouch : public KMainWindow {
     void changeColor(int num);
     /// Quick-changes the current training lecture file (called from menu).
     void changeLecture(int num);
+    /// Quick-changes the current user (called from menu).
+    void changeUser(int num);
 
   protected:
     /// Reimplementated to save preferences and
@@ -139,21 +138,24 @@ class KTouch : public KMainWindow {
 	/// This function populates the file lists with the installed training, keyboard and 
 	/// examination files.
     void updateFileLists();
-    /// Creates some default color schemes.
-    void createDefaultColorSchemes();
 	/// Updates the check mark in the lecture-quick-selection menu depending on the 
 	/// lecture in Prefs::currentLectureFile().
 	void updateLectureActionCheck();
 	/// Updates the check mark in the keyboard-quick-selection menu depending on the 
 	/// lecture in Prefs::currentKeyboardFile().
 	void updateKeyboardActionCheck();
-	
+	/// Updates the check mark in the user-quick-selection menu depending on the
+	/// user name in Prefs::currentUserName().
+	void updateCurrentUserActionCheck();
+
+
     // *** Public member variables ***
     KAction                *m_trainingPause;        ///< Action for "pause training session".
 
     KSelectAction		   *m_keyboardLayoutAction;
     KSelectAction		   *m_keyboardColorAction;
     KSelectAction		   *m_defaultLectureAction;
+    KSelectAction		   *m_currentUserAction;
 
     KTouchStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
     KTouchSlideLine        *m_slideLineWidget;      ///< Pointer to the sliding line widget.
@@ -164,6 +166,7 @@ class KTouch : public KMainWindow {
 	KTouchPrefGeneral      *m_pageGeneral;          ///< The general configuration page.
 	KTouchPrefTraining     *m_pageTraining;         ///< The training configuration page.
 	KTouchPrefKeyboard     *m_pageKeyboard;         ///< The keyboard configuration page.
+	KTouchPrefColors       *m_pageColors;		    ///< The color scheme configuration page.
 	
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
@@ -174,9 +177,10 @@ class KTouch : public KMainWindow {
     QStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
     QStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
 
-	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
-	
-	QVector<KTouchColorScheme>	m_colorSchemes; ///< Contains all colour schemes.
+    QStringList    							m_userList; 		///< A list of user names.
+	QMap<QString, KTouchStatisticsData>		m_userStats;		///< A map with statistics for each user.
+
+	bool									m_duringStartup;	///< Flag used to supress initial writing of statistics data.
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).

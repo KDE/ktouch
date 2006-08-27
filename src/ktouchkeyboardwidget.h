@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchkeyboardwidget.h                                                *
  *   ----------------------                                                *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2006 by Andreas Nicolai        *
  *   haavard@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -13,16 +13,17 @@
 #ifndef KTOUCHKEYBOARDWIDGET_H
 #define KTOUCHKEYBOARDWIDGET_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <qwidget.h>
-//Added by qt3to4:
+#include <QWidget>
 #include <QResizeEvent>
 #include <QPaintEvent>
-#include <Q3PtrList>
+#include <QList>
+#include <QVector>
+#include <QMap>
+
 #include "ktouchkeys.h"
+
+#include "ktouchkey.h"  // new class
+#include "ktouchkeyconnector.h" // new class
 
 class KUrl;
 
@@ -43,6 +44,8 @@ class KTouchKeyboardWidget : public QWidget {
   public:
     /// Constructor
     KTouchKeyboardWidget(QWidget *parent);
+	/// Destructor (frees allocated data).
+    ~KTouchKeyboardWidget();
     /// Reads a keyboard layout from the given URL.
     /// The function returns 'true' when the reading was successful or 'false' if not. In this
     /// case the optional parameter errorMsg contains the error message.
@@ -73,14 +76,25 @@ class KTouchKeyboardWidget : public QWidget {
     /// Assigns the background colours to the normal keys, which have a finger key assigned.
     void updateColours();
 
-    Q3PtrList<KTouchBaseKey>          m_keyList;          ///< The pointer list with base class pointers to the keys.
-    QList<KTouchKeyConnection>  m_connectorList;    ///< Contains the character - key associations.
+	// *** new data storage classes ***
+    QVector<KTouchKey>          		m_keys;        		///< The geometrical key data.
+    QVector<KTouchKeyConnector>			m_keyConnections;	///< Contains the character - key associations.
+	QMap<unsigned int, int> 			m_keyMap;			///< Links target keys with finger keys: m_keyMap[target_key] = finger_key
+	QMap<unsigned int, unsigned int>	m_colorMap;			///< Links finger keys with color indices: m_colorMap[finger_key] = color_index in color scheme
+
+	// *** old data storage classes ***
+    QList<KTouchBaseKey*>         	    m_keyList;     		///< The pointer list with base class pointers to the keys.
+    QList<KTouchKeyConnection> 			m_connectorList;	///< Contains the character - key associations.
+
+	static QMap<QChar, int>	 			m_keyCharMap;		///< Links target keys with finger keys: m_keyCharMap[target_key_char] = color_index
 
     int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
     double              m_shift;            ///< The horizontal shift for the keyboard.
     QString             m_currentLayout;    ///< The name of the currently used layout.
     QChar               m_nextKey;          ///< The next to be pressed character.
+
+	bool				m_hideKeyboard;		///< If true, the keyboard won't be shown.
 };
 
 #endif  // KTOUCHKEYBOARDWIDGET_H

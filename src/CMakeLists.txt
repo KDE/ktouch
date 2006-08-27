@@ -6,11 +6,9 @@ include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/  )
 
 set(ktouch_SRCS
    ktouchchartwidget.cpp 
+   ktouchcoloreditor.cpp 
    ktouchcolorscheme.cpp 
-   ktouch.cpp 
    ktouchdefaults.cpp 
-   ktouchkeyboard.cpp 
-   ktouchkeyboardeditor.cpp 
    ktouchkeyboardwidget.cpp 
    ktouchkeyconnector.cpp 
    ktouchkey.cpp 
@@ -23,14 +21,17 @@ set(ktouch_SRCS
    ktouchstatistics.cpp 
    ktouchstatisticsdata.cpp 
    ktouchstatus.cpp 
-   ktouchtrainer.cpp 
+   ktouchtrainer.cpp
+   ktouchusersetup.cpp 
    ktouchutils.cpp 
-   main.cpp )
+   ktouch.cpp
+   main.cpp
+)
 
 kde4_automoc(${ktouch_SRCS})
 
 kde4_add_ui_files(ktouch_SRCS 
-   ktouchkeyboardeditor_dlg.ui 
+   ktouchcoloreditor_dlg.ui 
    ktouchlectureeditor_dlg.ui 
    ktouchopenrequest_dlg.ui 
    ktouchprefcolorslayout.ui 
@@ -38,7 +39,9 @@ kde4_add_ui_files(ktouch_SRCS
    ktouchprefkeyboardlayout.ui 
    ktouchpreftraininglayout.ui 
    ktouchstatistics_dlg.ui 
-   ktouchstatuslayout.ui )
+   ktouchstatuslayout.ui
+   ktouchusersetup_dlg.ui
+)
 
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 

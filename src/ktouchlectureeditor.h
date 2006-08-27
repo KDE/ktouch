@@ -13,13 +13,10 @@
 #ifndef KTOUCHLECTUREEDITOR_H
 #define KTOUCHLECTUREEDITOR_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <qfont.h>
-#include <kurl.h>
+#include <QFont>
 #include <QDialog>
+
+#include <kurl.h>
 
 #include "ui_ktouchlectureeditor_dlg.h"
 #include "ktouchlecture.h"
@@ -105,10 +102,10 @@ class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
     /// If the user accepts the dialog the file is saved. 
     /// @return The function returns 'false' if the user aborted the save request, otherwise true.
     bool saveModified();
-    
+
     KTouchLecture                   m_lecture;         ///< The currently used lecture.
-    int                    m_level;           ///< The current level number.
-    Q3ListViewItem                  *m_currentItem;     ///< The currently selected item in the list view.
+    unsigned int                    m_level;           ///< The current level number.
+    Q3ListViewItem                 *m_currentItem;     ///< The currently selected item in the list view.
     bool                            m_selecting;       ///< Flag to prevent the selection slot from selecting twice.
     bool                            m_modified;        ///< Flag indicating whether the lecture has been modified.
     KUrl                            m_currentURL;      ///< URL of the current lecture.

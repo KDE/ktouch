@@ -10,6 +10,9 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+#include "ktouchopenrequest.h"
+#include "ktouchopenrequest.moc"
+
 #include <qradiobutton.h>
 #include <qlabel.h>
 #include <q3buttongroup.h>
@@ -23,8 +26,6 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 
-#include "ktouchopenrequest.h"
-#include "ktouchopenrequest.moc"
 
 KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
 : QDialog(parent,name, modal,fl)
@@ -79,7 +80,7 @@ void KTouchOpenRequest::okBtnClicked() {
     if (presetRadioBtn->isChecked())
         m_url = presetCombo->currentText();
     if (newRadioBtn->isChecked())
-        m_url = "";
+        m_url = QString();
     if (openFileRadioBtn->isChecked()) {
         if (openFileEdit->text().isEmpty()) {
             KMessageBox::error(this, i18n("Please select or enter a file name."));

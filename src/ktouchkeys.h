@@ -13,11 +13,7 @@
 #ifndef KTOUCHKEYS_H
 #define KTOUCHKEYS_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <qpainter.h>
+#include <QPainter>
 
 class KTouchFingerKey;
 class KTouchNormalKey;

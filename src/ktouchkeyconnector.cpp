@@ -1,5 +1,5 @@
 /***************************************************************************
- *   ktouchkeyconnetor.cpp                                                 *
+ *   ktouchkeyconnector.cpp                                                *
  *   ---------------------                                                 *
  *   Copyright (C) 2004 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
@@ -13,7 +13,7 @@
 #include "ktouchkeyconnector.h"
 
 // Reads the key connector data from the DomElement
-bool KTouchKeyConnector::read(QDomNode node) {
+bool KTouchKeyConnector::read(QDomNode& node) {
 /*	QDomNode newChars = in.namedItem("NewCharacters");
 	if (newChars.isNull())  m_newChars = i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
 	else					m_newChars = newChars.firstChild().nodeValue();
@@ -35,7 +35,7 @@ bool KTouchKeyConnector::read(QDomNode node) {
 
 // Creates a new DomElement, writes the key connector data into it and appends it to the root object.
 void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
-	QDomElement element = doc.createElement("KeyConnector");
+/*	QDomElement element = doc.createElement("KeyConnector");
 	QDomText textnode = doc.createTextNode(QString(m_keyChar));
 	element.appendChild(textnode);
 	element.setAttribute("TargetKeyChar", QString(m_targetKeyChar));
@@ -44,9 +44,6 @@ void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
 	if (!m_controlKeyId.isEmpty())
 		element.setAttribute("ControlKeyId", m_controlKeyId);
 	root.appendChild(element);
-}
-
-void KTouchKeyConnector::updateConnections(const QVector<KTouchKey>& keyvector) {
-	
+*/
 }
 

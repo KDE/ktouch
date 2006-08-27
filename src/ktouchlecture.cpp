@@ -12,10 +12,10 @@
 
 #include "ktouchlecture.h"
 
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qstringlist.h>
-#include <qdom.h>
+#include <QFile>
+#include <QTextStream>
+#include <QStringList>
+#include <QtXml>
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -31,6 +31,7 @@ bool KTouchLecture::load(QWidget * window, const KUrl& url) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
         if ( !infile.open( QIODevice::ReadOnly ) )
+            // FIXME : what about removing the tempfile?
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
         result = readLecture(in);
@@ -49,10 +50,11 @@ bool KTouchLecture::loadXML(QWidget * window, const KUrl& url) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
         if ( !infile.open( QIODevice::ReadOnly ) )
+            // FIXME : What about removing the tempfile?
             return false;   // Bugger it... couldn't open it...
 		QDomDocument doc;
 		doc.setContent( &infile );
-        result = readLecture(doc);
+        result = readLectureXML(doc);
     }
     KIO::NetAccess::removeTempFile(target);
     return result;
@@ -63,7 +65,7 @@ bool KTouchLecture::loadXML(QWidget * window, const KUrl& url) {
 bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
 	// create the XML document
 	QDomDocument doc;
-	writeLecture(doc);
+	writeLectureXML(doc);
 
 	// and save it
     QString tmpFile;
@@ -97,16 +99,25 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
 
 void KTouchLecture::createDefault() {
     m_lectureData.clear();      // remove everything else
-    m_title = i18n("A new lecture...");
+    m_title = i18n("A default lecture...");
+    m_fontSuggestions = "Monospace";
     KTouchLevelData miniLevel;  // create the level which is by default a mini-level
     m_lectureData.push_back( miniLevel );
 }
 // ----------------------------------------------------------------------------
 
-const KTouchLevelData& KTouchLecture::level(unsigned int levelNum) const {
-    if (levelNum>=m_lectureData.size())
-        levelNum=0;
-    return m_lectureData[levelNum];
+const KTouchLevelData& KTouchLecture::level(unsigned int level_num) const {
+    if (level_num >= static_cast<unsigned int>(m_lectureData.size()))
+        level_num=0;
+    return m_lectureData[level_num];
+}
+// ----------------------------------------------------------------------------
+
+void KTouchLecture::setLevel(unsigned int level_num, const KTouchLevelData& level) {
+    if (level_num >= static_cast<unsigned int>(m_lectureData.size()))
+		m_lectureData.append(level);
+	else
+		m_lectureData[level_num] = level;
 }
 // ----------------------------------------------------------------------------
 
@@ -117,7 +128,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     m_lectureData.clear();
     // now loop until end of file is reached and break down the textfile into several strings containing the levels
     QStringList slist;
-    QString current_level = QString();  // used to store the current level data
+    QString current_level;  // used to store the current level data
     line = in.readLine();
     bool in_level = false;
     while (!in.atEnd() && !line.isNull()) {
@@ -139,7 +150,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
             }
         }
         line = in.readLine();
-    };
+    }
     if (!current_level.isEmpty() && in_level)
         slist.append(current_level);
 
@@ -155,7 +166,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
             // uh oh, error while reading level data
             createDefault();
             return false;
-        };
+        }
         // add it (object will be deleted by the list)
         m_lectureData.push_back(level);
     }
@@ -166,11 +177,11 @@ bool KTouchLecture::readLecture(QTextStream& in) {
         // Hmm, no levels in the file. So we create our default mini level and report an error.
         createDefault();
         return false;
-    };
+    }
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLecture::readLecture(QDomDocument& doc) {
+bool KTouchLecture::readLectureXML(QDomDocument& doc) {
     QString line;
     m_lectureData.clear();      // clean current data
 	// retrieve the title
@@ -187,12 +198,12 @@ bool KTouchLecture::readLecture(QDomDocument& doc) {
 		m_fontSuggestions = entries.item(0).firstChild().nodeValue();
 	// retrieve the levels
 	entries = doc.elementsByTagName("Level");
-	for (unsigned int i=0; i<entries.count(); ++i) {
+	for (int i=0; i<entries.count(); ++i) {
         KTouchLevelData level;
-		level.readLevel(entries.item(i));
+		level.readLevelXML(entries.item(i));
         m_lectureData.push_back(level);
 	}
-    if (m_lectureData.size()>1)
+    if (m_lectureData.size()>0)
         return true;  // all ok
     else {
         // Hmm, no levels in the file. So we create our default mini level and report an error.
@@ -202,7 +213,7 @@ bool KTouchLecture::readLecture(QDomDocument& doc) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchLecture::writeLecture(QDomDocument& doc) const {
+void KTouchLecture::writeLectureXML(QDomDocument& doc) const {
     QDomElement root = doc.createElement( "KTouchLecture" );
     doc.appendChild(root);
 	// Store title and ensure that the file contains a title!
@@ -229,67 +240,11 @@ void KTouchLecture::writeLecture(QDomDocument& doc) const {
 	// Store levels
 	QDomElement levels = doc.createElement("Levels");
 	root.appendChild(levels);
-    for (QVector<KTouchLevelData>::const_iterator it=m_lectureData.begin();
+    for (QList<KTouchLevelData>::const_iterator it=m_lectureData.begin();
 		it!=m_lectureData.end(); ++it)
 	{
-		it->writeLevel(doc, levels);
+		it->writeLevelXML(doc, levels);
 	}
 }
 // ----------------------------------------------------------------------------
 
-
-
-// OLD and deprecated stuff
-
-/*
-bool KTouchLecture::save(QWidget * window, const KUrl& url) const {
-    QString tmpFile;
-    KTempFile *temp=0;
-    if (url.isLocalFile())
-        tmpFile=url.path();         // for local files the path is sufficient
-    else {
-        temp=new KTempFile;         // for remote files create a temporary file first
-        temp->setAutoDelete(true);  // so we don't have to delete the file ourselves
-        tmpFile=temp->name();
-    }
-
-    QFile outfile(tmpFile);
-    if ( !outfile.open( QIODevice::WriteOnly ) ) {
-        if (temp)  delete temp;
-        // kDebug() << "Error creating lecture file!" << endl;
-        return false;
-    };
-    QTextStream out( &outfile );
-    writeLecture(out);
-    // TODO : check stream status to see if save worked
-    outfile.close();
-    // if we have a temporary file, we still need to upload it
-    if (temp) {
-        KIO::NetAccess::upload(tmpFile, url, window);
-        delete temp;
-    }
-    return true;
-}
-// ----------------------------------------------------------------------------
-
-void KTouchLecture::writeLecture(QTextStream& out) const {
-    out << "###################################### "  << endl;
-    out << "#                                    # "  << endl;
-    out << "#  Training lecture file for KTouch  # "  << endl;
-    out << "#                                    # "  << endl;
-    out << "###################################### "  << endl << endl;
-    out << "# Title: " << m_title << endl;
-    out << endl;
-
-    int levelCounter=0;
-    for (QValueVector<KTouchLevelData>::const_iterator it=m_lectureData.begin(); it!=m_lectureData.end(); ++it) {
-        out << "################################" << endl;
-        out << "# Level: " << ++levelCounter << endl;
-        out << "# " << endl;
-        it->writeLevel(out);
-    };
-    out << endl;
-}
-// ----------------------------------------------------------------------------
-
-*/

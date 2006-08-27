@@ -13,15 +13,31 @@
 #include "ktouchstatus.h"
 #include "ktouchstatus.moc"
 
-#include <qlcdnumber.h>
-#include <qlabel.h>
+#include <QLCDNumber>
+#include <QLabel>
+
 #include <q3progressbar.h>
+
 #include <kdebug.h>
+#include <kpushbutton.h>
+
+#include "prefs.h"
 
 KTouchStatus::KTouchStatus(QWidget *parent)
  : QWidget(parent)
 {
     setupUi(this);
+}
+
+void KTouchStatus::applyPreferences() {
+	if (Prefs::autoLevelChange()) {
+		levelUpBtn->setEnabled( !Prefs::disableManualLevelChange() );
+		levelDownBtn->setEnabled( !Prefs::disableManualLevelChange() );
+	}
+	else {
+		levelUpBtn->setEnabled( true );
+		levelDownBtn->setEnabled( true );
+	}
 }
 
 void KTouchStatus::setNewChars(const QString& newChars) {

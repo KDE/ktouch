@@ -13,10 +13,6 @@
 #ifndef KTOUCHCHARTWIDGET
 #define KTOUCHCHARTWIDGET
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <libkdeedu/kdeeduplot/kplotwidget.h>
 
 class KTouchTrainer;

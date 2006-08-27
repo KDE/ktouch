@@ -11,11 +11,9 @@
  ***************************************************************************/
 
 #include "ktouchkeyboardeditor.h"
-#include "ktouchkeyboardeditor.moc"
 
-#include <qlabel.h>
-#include <qfont.h>
-//Added by qt3to4:
+#include <QLabel>
+#include <QFont>
 #include <QPaintEvent>
 
 #include <kmessagebox.h>

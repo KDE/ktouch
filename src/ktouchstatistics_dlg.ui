@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>595</width>
-    <height>572</height>
+    <width>606</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy" >
@@ -28,31 +28,6 @@
     <number>6</number>
    </property>
    <item>
-    <widget class="Q3GroupBox" name="groupBox8_2" >
-     <property name="title" >
-      <string>Select Lecture</string>
-     </property>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
-     <layout class="QHBoxLayout" >
-      <property name="margin" >
-       <number>0</number>
-      </property>
-      <property name="spacing" >
-       <number>6</number>
-      </property>
-      <item>
-       <widget class="KComboBox" name="lectureCombo" >
-        <property name="whatsThis" >
-         <string>Here you can select the lecture you want to obtain statistics for.</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QTabWidget" name="tabWidget" >
      <property name="enabled" >
       <bool>true</bool>
@@ -64,6 +39,9 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="currentIndex" >
+      <number>0</number>
      </property>
      <widget class="QWidget" name="currentTab" >
       <attribute name="title" >
@@ -93,6 +71,60 @@
           <string>Current Training Session Statistics</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="textLabel4_3_2" >
+           <property name="text" >
+            <string>Levels in this session:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" >
+          <widget class="QLabel" name="levelLabel1" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>3</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text" >
+            <string>levelLabel1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="textLabel2_4_2" >
+           <property name="text" >
+            <string>Lecture:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" >
+          <widget class="QLabel" name="lectureLabel1" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>3</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text" >
+            <string>lectureLabel1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <layout class="QGridLayout" >
@@ -160,7 +192,7 @@
                </size>
               </property>
               <property name="whatsThis" >
-               <string>The number of characters (correct and wrong) that you have typedso far.</string>
+               <string>The number of characters (correct and wrong) that you have typed so far.</string>
               </property>
               <property name="segmentStyle" >
                <enum>QLCDNumber::Flat</enum>
@@ -454,6 +486,60 @@
           <string>Current Level Statistics</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="0" column="1" >
+          <widget class="QLabel" name="lectureLabel2" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>3</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text" >
+            <string>lectureLabel2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="textLabel4_3" >
+           <property name="text" >
+            <string>Level:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="textLabel2_4" >
+           <property name="text" >
+            <string>Lecture:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" >
+          <widget class="QLabel" name="levelLabel2" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>3</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text" >
+            <string>levelLabel2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
         <layout class="QGridLayout" >
@@ -777,7 +863,25 @@
         <number>6</number>
        </property>
        <item>
-        <layout class="QVBoxLayout" >
+        <widget class="QLabel" name="currentTitleLabel_2" >
+         <property name="font" >
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="text" >
+          <string>Your Typing Progress</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" >
          <property name="margin" >
           <number>0</number>
          </property>
@@ -785,303 +889,250 @@
           <number>6</number>
          </property>
          <item>
-          <widget class="QLabel" name="currentTitleLabel_2" >
-           <property name="font" >
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>20</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-             <underline>false</underline>
-             <strikeout>false</strikeout>
-            </font>
-           </property>
+          <widget class="QLabel" name="textLabel1_2" >
            <property name="text" >
-            <string>Your Typing Progress</string>
+            <string>Show progress in lecture:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="KTouchChartWidget" name="chartWidget" >
+          <widget class="KComboBox" name="lectureCombo" >
            <property name="sizePolicy" >
             <sizepolicy>
-             <hsizetype>5</hsizetype>
-             <vsizetype>2</vsizetype>
+             <hsizetype>3</hsizetype>
+             <vsizetype>0</vsizetype>
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="Q3GroupBox" name="groupBox6_2" >
-           <property name="sizePolicy" >
-            <sizepolicy>
-             <hsizetype>5</hsizetype>
-             <vsizetype>4</vsizetype>
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+           <property name="whatsThis" >
+            <string>Here you can select the lecture you want to obtain statistics for.</string>
            </property>
-           <property name="title" >
-            <string>Progress Chart Options</string>
-           </property>
-           <layout class="QGridLayout" >
-            <property name="margin" >
-             <number>0</number>
-            </property>
-            <property name="spacing" >
-             <number>6</number>
-            </property>
-            <item row="0" column="0" >
-             <widget class="Q3ButtonGroup" name="buttonGroup1" >
-              <property name="title" >
-               <string/>
-              </property>
-              <layout class="QVBoxLayout" >
-               <property name="margin" >
-                <number>0</number>
-               </property>
-               <property name="spacing" >
-                <number>6</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="textLabel1" >
-                 <property name="font" >
-                  <font>
-                   <family>Sans Serif</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <italic>false</italic>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Chart Data</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="levelsRadio" >
-                 <property name="text" >
-                  <string>Level stats</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="sessionsRadio" >
-                 <property name="text" >
-                  <string>Session stats</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer>
-                 <property name="orientation" >
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeType" >
-                  <enum>QSizePolicy::Expanding</enum>
-                 </property>
-                 <property name="sizeHint" >
-                  <size>
-                   <width>20</width>
-                   <height>16</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="0" column="1" >
-             <widget class="Q3ButtonGroup" name="buttonGroup2" >
-              <property name="title" >
-               <string/>
-              </property>
-              <layout class="QVBoxLayout" >
-               <property name="margin" >
-                <number>0</number>
-               </property>
-               <property name="spacing" >
-                <number>6</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="textLabel2_2" >
-                 <property name="font" >
-                  <font>
-                   <family>Sans Serif</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <italic>false</italic>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Chart Type</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="WPMRadio" >
-                 <property name="text" >
-                  <string>Words per minute</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="CPMRadio" >
-                 <property name="text" >
-                  <string>Characters per minute</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="correctRadio" >
-                 <property name="text" >
-                  <string>Correctness</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="skillRadio" >
-                 <property name="text" >
-                  <string>Skill</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="0" column="2" >
-             <widget class="Q3ButtonGroup" name="buttonGroup3" >
-              <property name="title" >
-               <string/>
-              </property>
-              <layout class="QVBoxLayout" >
-               <property name="margin" >
-                <number>0</number>
-               </property>
-               <property name="spacing" >
-                <number>6</number>
-               </property>
-               <item>
-                <widget class="QLabel" name="textLabel3_2" >
-                 <property name="font" >
-                  <font>
-                   <family>Sans Serif</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <italic>false</italic>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="text" >
-                  <string>Time Axis Scaling</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="timeRadio" >
-                 <property name="text" >
-                  <string>Time scaled</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="eventRadio" >
-                 <property name="text" >
-                  <string>Constant spacing</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer>
-                 <property name="orientation" >
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeType" >
-                  <enum>QSizePolicy::Expanding</enum>
-                 </property>
-                 <property name="sizeHint" >
-                  <size>
-                   <width>20</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
           </widget>
          </item>
         </layout>
        </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="statsPage" >
-      <attribute name="title" >
-       <string>Detailed Statistics</string>
-      </attribute>
-      <layout class="QHBoxLayout" >
-       <property name="margin" >
-        <number>0</number>
-       </property>
-       <property name="spacing" >
-        <number>6</number>
-       </property>
        <item>
-        <layout class="QVBoxLayout" >
-         <property name="margin" >
-          <number>0</number>
+        <widget class="KTouchChartWidget" name="chartWidget" >
+         <property name="sizePolicy" >
+          <sizepolicy>
+           <hsizetype>5</hsizetype>
+           <vsizetype>2</vsizetype>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="spacing" >
-          <number>6</number>
+        </widget>
+       </item>
+       <item>
+        <widget class="Q3GroupBox" name="groupBox6_2" >
+         <property name="sizePolicy" >
+          <sizepolicy>
+           <hsizetype>5</hsizetype>
+           <vsizetype>4</vsizetype>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <item>
-          <widget class="QLabel" name="currentTitleLabel_2_2" >
-           <property name="font" >
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>20</pointsize>
-             <weight>75</weight>
-             <italic>false</italic>
-             <bold>true</bold>
-             <underline>false</underline>
-             <strikeout>false</strikeout>
-            </font>
-           </property>
-           <property name="text" >
-            <string>Detailed Training Statistics</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer>
-           <property name="orientation" >
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType" >
-            <enum>QSizePolicy::Expanding</enum>
-           </property>
-           <property name="sizeHint" >
-            <size>
-             <width>20</width>
-             <height>110</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+         <property name="title" >
+          <string>Progress Chart Options</string>
+         </property>
+         <layout class="QGridLayout" >
+          <property name="margin" >
+           <number>0</number>
+          </property>
+          <property name="spacing" >
+           <number>6</number>
+          </property>
+          <item row="0" column="0" >
+           <widget class="Q3ButtonGroup" name="buttonGroup1" >
+            <property name="title" >
+             <string/>
+            </property>
+            <layout class="QVBoxLayout" >
+             <property name="margin" >
+              <number>0</number>
+             </property>
+             <property name="spacing" >
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="textLabel1" >
+               <property name="font" >
+                <font>
+                 <family>Sans Serif</family>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                 <strikeout>false</strikeout>
+                </font>
+               </property>
+               <property name="text" >
+                <string>Chart Data</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="levelsRadio" >
+               <property name="text" >
+                <string>Level stats</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="sessionsRadio" >
+               <property name="text" >
+                <string>Session stats</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer>
+               <property name="orientation" >
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType" >
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" >
+                <size>
+                 <width>20</width>
+                 <height>16</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="Q3ButtonGroup" name="buttonGroup2" >
+            <property name="title" >
+             <string/>
+            </property>
+            <layout class="QVBoxLayout" >
+             <property name="margin" >
+              <number>0</number>
+             </property>
+             <property name="spacing" >
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="textLabel2_2" >
+               <property name="font" >
+                <font>
+                 <family>Sans Serif</family>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                 <strikeout>false</strikeout>
+                </font>
+               </property>
+               <property name="text" >
+                <string>Chart Type</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="WPMRadio" >
+               <property name="text" >
+                <string>Words per minute</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="CPMRadio" >
+               <property name="text" >
+                <string>Characters per minute</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="correctRadio" >
+               <property name="text" >
+                <string>Correctness</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="skillRadio" >
+               <property name="text" >
+                <string>Skill</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2" >
+           <widget class="Q3ButtonGroup" name="buttonGroup3" >
+            <property name="title" >
+             <string/>
+            </property>
+            <layout class="QVBoxLayout" >
+             <property name="margin" >
+              <number>0</number>
+             </property>
+             <property name="spacing" >
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="textLabel3_2" >
+               <property name="font" >
+                <font>
+                 <family>Sans Serif</family>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                 <strikeout>false</strikeout>
+                </font>
+               </property>
+               <property name="text" >
+                <string>Time Axis Scaling</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="timeRadio" >
+               <property name="text" >
+                <string>Time scaled</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="eventRadio" >
+               <property name="text" >
+                <string>Constant spacing</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer>
+               <property name="orientation" >
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType" >
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" >
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1099,6 +1150,9 @@
       <widget class="KPushButton" name="clearButton" >
        <property name="toolTip" >
         <string>Pressing this button will erase the whole training statistics for the current user.</string>
+       </property>
+       <property name="text" >
+        <string>Clear History</string>
        </property>
       </widget>
      </item>
@@ -1119,7 +1173,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="KPushButton" name="closeButton" />
+      <widget class="KPushButton" name="closeButton" >
+       <property name="text" >
+        <string>Close</string>
+       </property>
+       <property name="default" >
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -1128,31 +1189,14 @@
  <layoutdefault spacing="6" margin="11" />
  <customwidgets>
   <customwidget>
-   <class>KTouchChartWidget</class>
-   <extends>QWidget</extends>
-   <header>ktouchchartwidget.h</header>
+   <class>Q3ProgressBar</class>
+   <extends>QFrame</extends>
+   <header>Qt3Support/Q3ProgressBar</header>
   </customwidget>
   <customwidget>
    <class>Q3Frame</class>
    <extends>QFrame</extends>
    <header>Qt3Support/Q3Frame</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
-   <class>Q3GroupBox</class>
-   <extends>QGroupBox</extends>
-   <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QWidget</extends>
-   <header>kpushbutton.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
@@ -1162,9 +1206,25 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Q3ProgressBar</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3ProgressBar</header>
+   <class>KTouchChartWidget</class>
+   <extends>QWidget</extends>
+   <header>ktouchchartwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Q3GroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>Qt3Support/Q3GroupBox</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
   </customwidget>
  </customwidgets>
  <includes>

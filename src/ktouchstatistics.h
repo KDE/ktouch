@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchstatistics.h                                                    *
  *   ------------------                                                    *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2006 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -13,18 +13,11 @@
 #ifndef KTOUCHSTATISTICS_H
 #define KTOUCHSTATISTICS_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include "ui_ktouchstatistics_dlg.h"
 #include "ktouchstatisticsdata.h"
+
 #include <QDialog>
-//Added by qt3to4:
-#include <QShowEvent>
 
-
-class QShowEvent;
 class KTouch;
 class KUrl;
 

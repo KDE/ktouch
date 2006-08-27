@@ -13,11 +13,7 @@
 #ifndef KTOUCHTRAINER_H
 #define KTOUCHTRAINER_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#include <qobject.h>
+#include <QObject>
 
 #include "ktouchstatisticsdata.h"
 

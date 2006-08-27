@@ -15,7 +15,7 @@
 
 #include <libkdeedu/kdeeduplot/kplotaxis.h>
 
-#include <qpainter.h>
+#include <QPainter>
 
 #include <klocale.h>
 

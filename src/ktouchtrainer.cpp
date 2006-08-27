@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchtrainer.cpp                                                     *
  *   -----------------                                                     *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2006 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -13,8 +13,8 @@
 #include "ktouchtrainer.h"
 #include "ktouchtrainer.moc"
 
-#include <qlcdnumber.h>
-#include <qfile.h>
+#include <QLCDNumber>
+#include <QFile>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
@@ -28,6 +28,7 @@
 #include "ktouchlecture.h"
 #include "ktouchdefaults.h"
 #include "prefs.h"
+
 #include <phonon/audioplayer.h>
 
 KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
@@ -62,7 +63,6 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
 
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
     connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
-kDebug() << "Ktouch started" << endl;
     connect(m_trainingTimer, SIGNAL(timeout()), this, SLOT(timerTick()) );
 }
 // ----------------------------------------------------------------------------
@@ -80,6 +80,9 @@ void KTouchTrainer::gotoFirstLine() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::keyPressed(QChar key) {
+	// NOTE : In this function we need to distinguish between left and right
+	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
+
 	if (m_trainingPaused)  continueTraining();
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
@@ -88,13 +91,21 @@ void KTouchTrainer::keyPressed(QChar key) {
         return;
     }
 	// remember length of student text without added character
-    unsigned int len = m_studentText.length();
+    unsigned int old_student_text_len = m_studentText.length();
+    // compose new student text depending in typing direction
+    QString new_student_text = m_studentText;
+    if (Prefs::right2LeftTyping())
+        new_student_text = key + new_student_text;
+    else
+        new_student_text += key;
+
 	// don´t allow excessive amounts of characters per line
-	if (len > 150) {
-        if (Prefs::beepOnError())   QApplication::beep();
+	if (!m_slideLineWidget->canAddCharacter(new_student_text)) {
+        if (Prefs::beepOnError())			QApplication::beep();
         return;
 	}
-    m_studentText += key;
+    // store the new student text
+    m_studentText = new_student_text;
     // we need to find out, if the key was correct or not
     if (studentLineCorrect())
 		statsAddCorrectChar(key);	// ok, all student text is correct
@@ -103,8 +114,24 @@ void KTouchTrainer::keyPressed(QChar key) {
         if (Prefs::beepOnError())  QApplication::beep();
         // check if the key is the first wrong key that was mistyped. Only then add it
 		// to the wrong char statistics.
-		if (m_teacherText.left(len)==m_studentText.left(len) && m_teacherText.length()>len) {
-			statsAddWrongChar(m_teacherText[len]);  // add the key the student ought to press
+        if (Prefs::right2LeftTyping()) {
+			if (m_teacherText.right(old_student_text_len)==m_studentText.right(old_student_text_len) &&
+			    m_teacherText.length() > old_student_text_len)
+			{
+				// add the key the student ought to press to the wrong character stats
+				int next_key_index = m_teacherText.length() - old_student_text_len;
+//				kDebug() << "Wrong key = " << m_teacherText[next_key_index] << endl;
+				statsAddWrongChar( m_teacherText[next_key_index] );
+			}
+        }
+        else {
+			if (m_teacherText.left(old_student_text_len)==m_studentText.left(old_student_text_len) &&
+				m_teacherText.length() > old_student_text_len)
+			{
+				// add the key the student ought to press to the wrong character stats
+				int next_key_index = old_student_text_len;
+				statsAddWrongChar( m_teacherText[next_key_index] );
+			}
 		}
 		/// \todo 	Implement option whether subsequent mistyped keys should be remembered as missed
 		///			keys as well.
@@ -138,8 +165,8 @@ void KTouchTrainer::backspacePressed() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::enterPressed() {
-  if (m_trainingPaused)  continueTraining();
-  if (m_studentText != m_teacherText) {
+	if (m_trainingPaused)  continueTraining();
+    if (m_studentText != m_teacherText) {
 
 
 // FIXME
@@ -267,7 +294,7 @@ void KTouchTrainer::continueTraining() {
 	m_slideLineWidget->setCursorTimerEnabled(true);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness() );
 	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
-	updateStatusBarMessage(i18n("Training session. The time is running...") );
+	updateStatusBarMessage(i18n("Training session! The time is running...") );
 	updateStatusBar();
 	m_trainingTimer->start(LCD_UPDATE_INTERVAL);    // start the timer
 }
@@ -296,8 +323,14 @@ void KTouchTrainer::storeTrainingStatistics() {
 // ----------------------------------------------------------------------------
 
 bool KTouchTrainer::studentLineCorrect() const {
+    if (m_teacherText.isEmpty())
+        return m_studentText.isEmpty();
 	unsigned int len = m_studentText.length();
-	return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len);
+    // different check for left and right writing
+    if (Prefs::right2LeftTyping())
+        return m_teacherText.right(len)==m_studentText && m_teacherText.length()>=len;
+    else
+	   return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len); 
 }
 // ----------------------------------------------------------------------------
 
@@ -305,7 +338,7 @@ bool KTouchTrainer::studentLineCorrect() const {
 // *** Public slots ***
 
 void KTouchTrainer::levelUp() {
-	mplayer->play(m_levelUpSound.url());
+	// FIXME : mplayer->play(m_levelUpSound.url());
     ++m_level;  // increase the level
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
@@ -324,7 +357,7 @@ void KTouchTrainer::levelUp() {
 void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
-	   mplayer->play(m_levelDownSound.url());
+	   // FIXME : mplayer->play(m_levelDownSound.url());
 	}
 	m_incLinesCount = 0;
 	m_decLinesCount = 0;

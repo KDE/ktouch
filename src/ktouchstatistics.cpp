@@ -13,18 +13,20 @@
 #include "ktouchstatistics.h"
 #include "ktouchstatistics.moc"
 
-#include <list>
-#include <vector>
 #include <utility>
+#include <iterator>
+
 #include <kplotobject.h>
 #include <kplotaxis.h>
 
 #include <q3progressbar.h>
-#include <qlcdnumber.h>
-#include <qlabel.h>
-#include <qradiobutton.h>
 #include <q3buttongroup.h>
+
+#include <QtAlgorithms>
+#include <QLabel>
+#include <QRadioButton>
 #include <QDialog>
+#include <QLCDNumber>
 
 #include <kpushbutton.h>
 #include <kcombobox.h>
@@ -33,7 +35,6 @@
 #include <klocale.h>
 #include <kdebug.h>
 #include <ktabwidget.h>
-
 
 #include "ktouch.h"
 #include "ktouchchartwidget.h"
@@ -55,8 +56,8 @@ KTouchStatistics::KTouchStatistics(QWidget* parent)
 
     // TODO : temporarily remove detailed stats page and deactivate options
     levelsRadio->setEnabled(false);
-    tabWidget->removePage(statsPage);
-    delete statsPage;
+//	tabWidget->removeTab(tabWidget->indexOf(statsPage));
+//    delete statsPage;
 }
 // ----------------------------------------------------------------------------
 
@@ -70,7 +71,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 	QMap<KUrl, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.begin();
 	m_currentIndex = 0;
 	while (it != stats.m_lectureStats.end()) {
-		QString t = it.data().m_lectureTitle;
+		QString t = it.value().m_lectureTitle;
 		// if current lecture, remember index and adjust text
 		if (it.key() == currentLecture) {
 			m_currentIndex = lectureCombo->count();
@@ -92,11 +93,12 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 	lectureCombo->setCurrentIndex(m_currentIndex);
 	lectureActivated(m_currentIndex);
 	m_lectureIndex = m_currentIndex;
+	
 	// update the current tabs with current session/level data
 	updateCurrentSessionTab();
 	updateCurrentLevelTab();
 	// set current session as current tab
-	tabWidget->showPage(currentTab);
+	tabWidget->setCurrentWidget(currentTab);
 	exec();
 }
 // ----------------------------------------------------------------------------
@@ -104,6 +106,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 void KTouchStatistics::lectureActivated(int index) {
 	if (m_allStats.m_lectureStats.count()==0) {
 		// TODO : Reset all tabs to "empty" look
+		m_lectureIndex = 0;
 		return;
 	}
 	if (index >= static_cast<int>(m_allStats.m_lectureStats.count())) {
@@ -124,7 +127,7 @@ void KTouchStatistics::clearHistory() {
 		KTouchPtr->clearStatistics(); // clear statistics data in KTouch
 		// clear and reset local copy
 		m_allStats.clear();
-		QString s = lectureCombo->text(m_currentIndex);
+		QString s = lectureCombo->currentText();
 		lectureCombo->clear();
 		lectureCombo->addItem(s);
 		m_currentIndex = 0;
@@ -137,6 +140,35 @@ void KTouchStatistics::clearHistory() {
 
 
 void KTouchStatistics::updateCurrentSessionTab() {
+	// session/level/info
+	QString levelnums;
+    int last_level = -2;
+    int levels_count = 0;
+	QSet<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
+	--last_it;
+	for (QSet<unsigned int>::iterator it = m_currSessionStats.m_levelNums.begin();
+		it != m_currSessionStats.m_levelNums.end(); ++it)
+	{
+		// do we have a level number that is not a subsequent level of the
+		// previous?
+		
+		if ((static_cast<unsigned int>(last_level + 1) != *it) ||
+            (it == last_it))
+		{
+			if (it != m_currSessionStats.m_levelNums.begin()) {
+				if (levels_count > 1)	levelnums += "...";
+				else					levelnums += ",";
+			}
+			levels_count = 0;
+			levelnums += QString("%1").arg(*it+1);
+			
+		}
+		else {
+			++levels_count;  // increase level count
+		}
+		last_level = *it;
+	}
+	levelLabel1->setText(levelnums);
     // general stats group
     elapsedTimeLCD->display(static_cast<int>(m_currSessionStats.m_elapsedTime));
     totalCharsLCD->display(static_cast<int>(m_currSessionStats.m_totalChars) );
@@ -155,10 +187,11 @@ void KTouchStatistics::updateCurrentSessionTab() {
     correctnessBar->setProgress(static_cast<int>(
 		(100.0*m_currSessionStats.m_correctChars)/m_currSessionStats.m_totalChars) );
 	// create sorted list of missed characters
-	std::list<KTouchCharStats> charList( m_currSessionStats.m_charStats.begin(), m_currSessionStats.m_charStats.end());
-	charList.sort(higher_miss_hit_ratio);
+	QList<KTouchCharStats> charList;
+	qCopy(m_currSessionStats.m_charStats.begin(), m_currSessionStats.m_charStats.end(), std::back_inserter(charList));
+	qSort(charList.begin(), charList.end(), higher_miss_hit_ratio);
 	
-	std::list<KTouchCharStats>::const_iterator it=charList.begin();
+	QList<KTouchCharStats>::const_iterator it=charList.begin();
     unsigned int i=0;
     for (; i<8 && it!=charList.end(); ++i, ++it) {
         if (it->missHitRatio()==0)
@@ -199,6 +232,8 @@ void KTouchStatistics::updateCurrentSessionTab() {
 // ----------------------------------------------------------------------------
 
 void KTouchStatistics::updateCurrentLevelTab() {
+	// level info
+	levelLabel2->setText( QString("%1").arg(m_currLevelStats.m_levelNum+1) );
     // general stats group
     elapsedTimeLCDLevel->display(static_cast<int>(m_currLevelStats.m_elapsedTime));
     totalCharsLCDLevel->display(static_cast<int>(m_currLevelStats.m_totalChars) );
@@ -217,10 +252,11 @@ void KTouchStatistics::updateCurrentLevelTab() {
     correctnessBarLevel->setProgress(static_cast<int>(
 		(100.0*m_currLevelStats.m_correctChars)/m_currLevelStats.m_totalChars) );
 	// create sorted list of missed characters
-	std::list<KTouchCharStats> charList( m_currLevelStats.m_charStats.begin(), m_currLevelStats.m_charStats.end());
-	charList.sort(higher_miss_hit_ratio);
+	QList<KTouchCharStats> charList;
+	qCopy(m_currLevelStats.m_charStats.begin(), m_currLevelStats.m_charStats.end(), std::back_inserter(charList) );
+	qSort(charList.begin(), charList.end(), higher_miss_hit_ratio);
 	
-	std::list<KTouchCharStats>::const_iterator it=charList.begin();
+	QList<KTouchCharStats>::const_iterator it=charList.begin();
     unsigned int i=0;
     for (; i<8 && it!=charList.end(); ++i, ++it) {
         if (it->missHitRatio()==0)
@@ -263,6 +299,9 @@ void KTouchStatistics::updateCurrentLevelTab() {
 void KTouchStatistics::updateChartTab() {
 	// remove all current chart objects
 	chartWidget->clearObjectList();
+	// if no lecture data is available, return
+	if (m_allStats.m_lectureStats.count()== 0 || 
+        m_lectureIndex >= static_cast<unsigned int>(m_allStats.m_lectureStats.count()))  return;
 	// what kind of chart is required?
 	if (levelsRadio->isChecked()) {
 		// TODO : nothing yet
@@ -271,12 +310,12 @@ void KTouchStatistics::updateChartTab() {
 		QMap<KUrl, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.begin();	
 		unsigned int index = m_lectureIndex;
 		while (index-- > 0) ++it;
-		std::vector< std::pair<double, double> > data;
+		QList< std::pair<double, double> > data;
 		QString caption = "Session data";
 		switch (buttonGroup2->selectedId()) {
 			case 0 : // words per minute
 				// loop over all session data entries in *it and store words per minute data
-				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -300,7 +339,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 1 : // chars per minute
 				// loop over all session data entries in *it and store chars per minute data
-				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -324,7 +363,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 2 : // correctness
 				// loop over all session data entries in *it and store correctness data
-				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -348,7 +387,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 3 : // skill
 				// loop over all session data entries in *it and store correctness data
-				for (QVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -387,7 +426,7 @@ void KTouchStatistics::updateChartTab() {
 		double min_x = 1e20;
 		double max_x = -1;
 		double max_y = -1;
-		for (unsigned int i=0; i<data.size(); ++i) {
+		for (int i=0; i<data.size(); ++i) {
 			double x;
 			if (timeRadio->isChecked()) {
 				x = data[i].first - data[0].first;

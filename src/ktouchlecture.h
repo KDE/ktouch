@@ -13,17 +13,15 @@
 #ifndef KTOUCHLECTURE_H
 #define KTOUCHLECTURE_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 class QWidget;
 class QDomDocument;
+
+#include <QList>
+#include <QTextStream>
+
 class KUrl;
 
 #include "ktouchleveldata.h"
-//Added by qt3to4:
-#include <QTextStream>
 
 /// This class handles the lecture data and provides the lines to type.
 ///
@@ -41,40 +39,39 @@ class KTouchLecture {
     KTouchLecture() { createDefault(); };
     /// Creates a default mini-lecture.
     void createDefault();
-    /// Loads a lecture from file (returns true if successful).
+    /// Loads a lecture from old file format (returns true if successful).
     bool load(QWidget * window, const KUrl& url);
     /// Loads a lecture (in XML format) from file (returns true if successful).
     bool loadXML(QWidget * window, const KUrl& url);
-    // /// Saves the lecture data to file (returns true if successful).
-    // bool save(QWidget * window, const KUrl& url) const;
     /// Saves the lecture data to file (returns true if successful).
     bool saveXML(QWidget * window, const KUrl& url) const;
     /// Returns the number of levels in the lecture.
-    unsigned int levelCount()       const { return m_lectureData.size(); };
+    unsigned int levelCount() const { return m_lectureData.size(); };
     /// Returns a reference to the data of the level.
     /// If the level number is out of range the function will always return
     /// the level 0.
-    const KTouchLevelData& level(unsigned int levelNum) const;
+    const KTouchLevelData& level(unsigned int level_num) const;
     /// Returns the title of the lecture.
     const QString& title() const { return m_title; }
     /// Sets the title of the lecture.
     void setTitle(const QString& title) { m_title = title; }
+    /// Sets the level data
+    void setLevel(unsigned int level_num, const KTouchLevelData& level);
 
-    QString                         m_title;        	///< The title of the lecture.
-    QString                         m_comment;      	///< A comment.
-    QString                         m_fontSuggestions;  ///< Font suggestions for this lecture.
+	QString		m_fontSuggestions;  ///< Font suggestions for this lecture.
 
   private:
     /// Loads a lecture from file
     bool readLecture(QTextStream& in);
     /// Loads a lecture from file into an XML document
-    bool readLecture(QDomDocument& doc);
-    /// Saves the lecture data to the current lecture URL
-    void writeLecture(QTextStream& out) const;
+    bool readLectureXML(QDomDocument& doc);
     /// Saves the lecture data in the XML document
-    void writeLecture(QDomDocument& doc) const;
+    void writeLectureXML(QDomDocument& doc) const;
   
-    QVector<KTouchLevelData>   m_lectureData;  	///< The lecture data.
+    QList<KTouchLevelData>       	m_lectureData;  	///< The lecture data.
+    QString                         m_title;        	///< The title of the lecture.
+    QString                         m_comment;      	///< A comment.
+
     
     /// The editor should be able to handle the internal lecture data (it's for convenience actually).
     friend class KTouchLectureEditor;

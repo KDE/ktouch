@@ -12,11 +12,14 @@
 
 #include "ktouchstatisticsdata.h"
 
-#include <qfile.h>
-#include <qstringlist.h>
-#include <qdom.h>
-//Added by qt3to4:
+// QT includes
+
+#include <QFile>
+#include <QStringList>
 #include <QTextStream>
+#include <QtXml>
+
+// KDE includes
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -25,7 +28,7 @@
 
 #include <sstream>
 
-// remove this define if XML output should be made uncompressed
+// remove this define if XML output should not be compressed (for debug purposes only)
 #define COMPRESSED_XML_STATISTICS
 
 
@@ -103,6 +106,7 @@ bool KTouchLevelStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kDebug() << "'" << char_data << "'" << endl;
+		// FIXME : get rid of stringstream here
 		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
@@ -129,7 +133,7 @@ void KTouchLevelStats::write(QDomDocument& doc, QDomElement& root) const {
 	// add char stats
 	QString char_data;
     // we append for each missed char the char-unicode and the counters
-	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
+	for (QSet<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
 		char_data += QString(" %1 %2 %3").arg(it->m_char.unicode())
 										 .arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
@@ -144,7 +148,7 @@ void KTouchLevelStats::addCorrectChar(QChar key) {
 	++m_totalChars;
     // we only count non-space characters
 	if (key!=QChar(' ')) {
-		std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
+		QSet<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 		if (it==m_charStats.end())
 			m_charStats.insert( KTouchCharStats(key,1,0) );
 		else
@@ -166,7 +170,7 @@ void KTouchLevelStats::addWrongChar(QChar key) {
 	++m_totalChars;
 	if (key==QChar(8) || key==QChar(' ')) 
 		return; // don't remember wrong backspaces or spaces
-	std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
+	QSet<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 	if (it==m_charStats.end())
 		m_charStats.insert( KTouchCharStats(key,0,1) );
 	else
@@ -244,6 +248,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	n = in.namedItem("LevelNums");
 	if (!n.isNull()) {
 		QString str = n.firstChild().nodeValue();
+		// FIXME: get rid of stringstream here
 		std::stringstream strm(std::string(str.toLocal8Bit()));
 		int l;
 		while (strm >> l)
@@ -254,6 +259,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
 		//kDebug() << "'" << char_data << "'" << endl;
+		// FIXME: get rid of stringstream here
 		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
@@ -279,7 +285,7 @@ void KTouchSessionStats::write(QDomDocument& doc, QDomElement& root) const {
 	session.appendChild(e);
 	// add levels
 	QString level_nums;
-	for (std::set<unsigned int>::const_iterator it = m_levelNums.begin(); it != m_levelNums.end(); ++it)
+	for (QSet<unsigned int>::const_iterator it = m_levelNums.begin(); it != m_levelNums.end(); ++it)
 		level_nums += QString( " %1").arg(*it);
 	e = doc.createElement("LevelNums");
 	tn = doc.createTextNode(level_nums);
@@ -288,7 +294,7 @@ void KTouchSessionStats::write(QDomDocument& doc, QDomElement& root) const {
 	// add char data
 	QString char_data;
     // we append for each missed char the char-unicode and the counters
-	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
+	for (QSet<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
 		char_data += QString(" %1 %2 %3").arg(it->m_char.unicode())
 				.arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
@@ -303,7 +309,7 @@ void KTouchSessionStats::addCorrectChar(QChar key) {
 	++m_totalChars;
     // we only count non-space characters
 	if (key!=QChar(' ')) {
-		std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
+		QSet<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 		if (it==m_charStats.end())
 			m_charStats.insert( KTouchCharStats(key,1,0) );
 		else
@@ -325,7 +331,7 @@ void KTouchSessionStats::addWrongChar(QChar key) {
 	++m_totalChars;
 	if (key==QChar(8) || key==QChar(' ')) 
 		return; // don't remember wrong backspaces or spaces
-	std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
+	QSet<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 	if (it==m_charStats.end())
 		m_charStats.insert( KTouchCharStats(key,0,1) );
 	else
@@ -343,7 +349,7 @@ void KTouchSessionStats::addWrongChar(QChar key) {
 
 void KTouchLectureStats::clear() {
 	m_lectureTitle.clear();
-	m_lectureURL ="";
+	m_lectureURL = "";
 	m_levelStats.clear();
 	m_sessionStats.clear();
 }
@@ -406,7 +412,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store level stats
 	QDomElement levelStatsElement = doc.createElement("AllLevelStats");
 	lecture.appendChild(levelStatsElement);
-	for (QVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
+	for (QList<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
 		it != m_levelStats.end(); ++it)
 	{
 		it->write(doc, levelStatsElement);
@@ -414,7 +420,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 	// store session stats
 	QDomElement sessionStatsElement = doc.createElement("AllSessionStats");
 	lecture.appendChild(sessionStatsElement);
-	for (QVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
+	for (QList<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
 			it != m_sessionStats.end(); ++it)
 	{
 		it->write(doc, sessionStatsElement);
@@ -427,12 +433,18 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 // *** KTouchStatisticsData ***
 
 void KTouchStatisticsData::clear() {
+	m_userName = i18n("default user");
 	m_lectureStats.clear();
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::read(QWidget * window, const KUrl& url) {
+// Reads all user statistics into the map 'stats'.
+bool KTouchStatisticsData::readUserStats(QWidget * window, const KUrl& url, 
+	QMap<QString, KTouchStatisticsData>& stats)
+{
+//	kdDebug() << "[KTouchStatisticsData::readUserStats]" << endl;
 	if (url.isEmpty()) return false;
+
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -440,8 +452,10 @@ bool KTouchStatisticsData::read(QWidget * window, const KUrl& url) {
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
-        if ( !infile.open( QIODevice::ReadOnly ) )
+        if ( !infile.open( QIODevice::ReadOnly ) ) {
+			// FIXME : what about removing the temp file?
             return false;   // Bugger it... couldn't open it...
+		}
 		QDomDocument doc;
 		
 #ifdef COMPRESSED_XML_STATISTICS
@@ -452,17 +466,50 @@ bool KTouchStatisticsData::read(QWidget * window, const KUrl& url) {
 #else
 		doc.setContent( &infile );
 #endif // COMPRESSED_XML_STATISTICS
-		result = readStats(doc);
+
+//		kdDebug() << "[KTouchStatisticsData::readUserStats]  reading user stats..." << endl;
+
+		// here we read all available statistics store in the file
+		QDomNode n = doc.namedItem("KTouchStatisticsData");
+		if (!n.isNull()) {
+//			kdDebug() << "Entries = " << doc.elementsByTagName("KTouchStatistics").count() << endl;
+			n = n.namedItem("KTouchStatistics");
+		}
+		else
+			n = doc.namedItem("KTouchStatistics"); // read in old statistics
+		// loop over all entries
+		result = true;
+		while (result && !n.isNull()) {
+			KTouchStatisticsData userstats;
+			result = userstats.readStats(n);
+			// only add if reading stat data worked
+//			kdDebug() << "result = " << result << endl;
+			if (result) {
+				stats[userstats.m_userName] = userstats;
+			}
+			n = n.nextSibling();
+		}
 	}
     KIO::NetAccess::removeTempFile(target);
     return result;
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::write(QWidget * window, const KUrl& url) const {
+// Writes all user statistics in the map 'stats'.
+bool KTouchStatisticsData::writeUserStats(QWidget * window, const KUrl& url, 
+	const QMap<QString, KTouchStatisticsData>& stats) 
+{
 	// create the XML document
 	QDomDocument doc;
-	writeStats(doc);
+	// add root node
+	QDomElement root = doc.createElement( "KTouchStatisticsData" );
+	doc.appendChild(root);
+
+	for (QMap<QString, KTouchStatisticsData>::const_iterator it = stats.constBegin();
+		it != stats.constEnd(); ++it) 
+	{
+		(*it).writeStats(doc, root);
+	}
 
 	// and save it
     QString tmpFile;
@@ -478,16 +525,16 @@ bool KTouchStatisticsData::write(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kDebug() << "Error creating lecture file!" << endl;
+        // kdDebug() << "Error creating lecture file!" << endl;
         return false;
     }
 	
 #ifdef COMPRESSED_XML_STATISTICS
 	QByteArray array;
-	QTextStream out(array, QIODevice::WriteOnly);
+	QTextStream out(array, IO_WriteOnly);
 	out << doc.toString();
 	array = qCompress(array);
-	outfile.writeBlock(array);
+	outfile.write(array);
 #else
 	QTextStream out( &outfile );
     out << doc.toString();
@@ -503,34 +550,53 @@ bool KTouchStatisticsData::write(QWidget * window, const KUrl& url) const {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::readStats(QDomDocument& doc) {
+bool KTouchStatisticsData::readStats(QDomNode in) {
 	clear(); // clear current data
+
+	QDomNode n = in.namedItem("User");
+	if (!n.isNull()) 	m_userName = n.firstChild().nodeValue();
+	else 				m_userName = i18n("default user");
+	if (m_userName.isEmpty())	m_userName = i18n("default user");
+
+//	kDebug() << "[KTouchStatisticsData::readStats]  reading user stats..." << endl;
+	kDebug() << "[KTouchStatisticsData::readStats]  User = '" << m_userName << "'" << endl;
+
 	// retrieve the KTouchStatistics statistics
-	QDomNodeList entries = doc.elementsByTagName("LectureStats");
+	n = in.namedItem("LectureStats");
 	bool result = true;
-	int i=0;
-	while (result && i < entries.count()) {
-		KTouchLectureStats stats;
-		result = stats.read(entries.item(i));
+	while (result && !n.isNull()) {
+		KTouchLectureStats tmp;
+		result = tmp.read(n);
 		// do we have a valid URL?
-		if (stats.m_lectureURL.isEmpty())  result = false;
+		if (tmp.m_lectureURL.isEmpty())  result = false;
 		if (result)
-			m_lectureStats[stats.m_lectureURL] = stats;
-		++i;
+			m_lectureStats[tmp.m_lectureURL] = tmp;
+		n = n.nextSibling();
 	}
+
 	return result;
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatisticsData::writeStats(QDomDocument& doc) const {
-	QDomElement root = doc.createElement( "KTouchStatistics" );
-	doc.appendChild(root);
-	// Store Lecture statistics
+void KTouchStatisticsData::writeStats(QDomDocument& doc, QDomElement& root) const {
+	kDebug() << "[KTouchStatisticsData::writeStats]  user = '" << m_userName << "'" << endl;
+
+	QDomElement user_data = doc.createElement( "KTouchStatistics" );
+	root.appendChild(user_data);
+
+	// store user name
+	QString username = m_userName;
+	if (username.isEmpty()) 	username = i18n("default user");
+	QDomElement userElement = doc.createElement("User");
+	QDomText userText = doc.createTextNode(username);
+	userElement.appendChild(userText);
+	user_data.appendChild(userElement);
+
+	// store lecture statistics
 	LectureStatsMap::ConstIterator it = m_lectureStats.begin();
 	while (it != m_lectureStats.end()) {
-		it.data().write(doc, root);
+		it.value().write(doc, user_data);
 		++it;
 	}
 }
 // ----------------------------------------------------------------------------
-
