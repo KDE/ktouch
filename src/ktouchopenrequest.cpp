@@ -30,6 +30,7 @@
 KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
 : QDialog(parent,name, modal,fl)
 {
+    setupUi(this);
 }
 
 int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, const QString& title, 
