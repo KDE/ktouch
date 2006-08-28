@@ -221,8 +221,8 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
 		KTouchBaseKey * key = *it;
         if (key->m_isActive || key->m_isNextKey) {
             key->m_isActive = key->m_isNextKey = false;
-            key->paint(painter);
         }
+        key->paint(painter);
     }
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
