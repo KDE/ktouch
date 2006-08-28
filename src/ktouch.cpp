@@ -83,7 +83,7 @@ KTouch::KTouch()
 	// read previous stats from file
 	// FIXME: find the source code for this function or reimplement it
 	// KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
-	//	kdDebug() << "[KTouch::KTouch] users = " << m_userStats.count() << endl;
+	//	kDebug() << "[KTouch::KTouch] users = " << m_userStats.count() << endl;
 	// Setup our actions and connections
 	setupActions();
 	// create the GUI reading the ui.rc file
@@ -147,7 +147,7 @@ KTouchLectureStats& KTouch::getCurrentLectureStats() {
 //	kDebug() << "[KTouch::getCurrentLectureStats]  " << endl;
 	KUrl lectureURL = Prefs::currentLectureFile();
 	if (lectureURL.url().isEmpty())  lectureURL = "default";
-//	kdDebug() << "  lectureURL = '" << lectureURL << "'" << endl;
+//	kDebug() << "  lectureURL = '" << lectureURL << "'" << endl;
 	KTouchLectureStats& stat = m_userStats[Prefs::currentUserName()].m_lectureStats[lectureURL];
 	// add additional info to the statistics
 	stat.m_lectureURL = lectureURL;
@@ -513,7 +513,7 @@ void KTouch::optionsSetupUsers() {
 	for (QStringList::const_iterator it = users.constBegin(); it != users.constEnd(); ++it) {
 		new_stats[*it] = m_userStats[*it];
 		new_stats[*it].m_userName = *it;
-//		kdDebug() << "User = " << *it << endl;
+//		kDebug() << "User = " << *it << endl;
 	}
 	m_userStats = new_stats;
     m_currentUserAction->setItems(m_userStats.keys());
@@ -881,7 +881,7 @@ void KTouch::updateFileLists() {
         QString lang_iso = fname.section('.',0,0);
         // get language description of file names
         QString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
-//        kdDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
+//        kDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
         if (lang_name.isEmpty())
             lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
         if (!lang_name.isEmpty())
@@ -889,7 +889,7 @@ void KTouch::updateFileLists() {
         else
             lang_name = fname;
         m_keyboardTitles.append( lang_name );
-//        kdDebug() << m_keyboardTitles.back() << endl;
+//        kDebug() << m_keyboardTitles.back() << endl;
     }
 
     // now sort the files and titles accordingly
@@ -974,7 +974,7 @@ void KTouch::updateCurrentUserActionCheck() {
 	if (index >= user_list.count()) {
 		// we must be missing the default user in the list,
 		// this shouldn't happen, though...
-		kdDebug() << "Missing default user in list..." << endl;
+		kDebug() << "Missing default user in list..." << endl;
 		user_list.append(i18n("default user"));
 		index = user_list.count() -1;
 	}
@@ -984,19 +984,19 @@ void KTouch::updateCurrentUserActionCheck() {
 
 /*
 void KTouch::imStartEvent(QIMEvent *e) {
-	kdDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
+	kDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
   e->accept();
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::imComposeEvent(QIMEvent *e) {
-	kdDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
+	kDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
   e->accept();
 }
 // ----------------------------------------------------------------------------
 
 void KTouch::imEndEvent(QIMEvent *e) {
-	kdDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
+	kDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
   if (!e->text().isEmpty()) {
     if (e->text() == "^") {
       QKeyEvent *ev = new QKeyEvent (QEvent::KeyPress,
