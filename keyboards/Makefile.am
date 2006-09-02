@@ -9,7 +9,9 @@ de.swiss.keyboard \
 dk.keyboard \
 en.dvorak.keyboard \
 en.keyboard \
-pl.keyboard
+hu.keyboard \
+pl.keyboard 
+
 
 
 #sv.dvorak.keyboard \
