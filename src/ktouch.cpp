@@ -422,7 +422,7 @@ void KTouch::trainingNewSession() {
     trainingPause();
 	int result = KMessageBox::questionYesNoCancel(this,
 		i18n("Would you like to keep the current level for the new training session?"),
-		i18n("Start New Training Session"),i18n("Keep Current Level"),i18n("Do Not Keep"));
+		i18n("Start New Training Session"),KGuiItem(i18n("Keep Current Level")),KGuiItem(i18n("Do Not Keep")));
 	if (result == KMessageBox::Cancel) return;
 	// store the statistics obtained so far in the trainer object
 	m_trainer->storeTrainingStatistics();
