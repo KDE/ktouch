@@ -157,7 +157,7 @@ void KTouchStatistics::updateCurrentSessionTab() {
 		{
 			if (it != m_currSessionStats.m_levelNums.begin()) {
 				if (levels_count > 1)	levelnums += "...";
-				else					levelnums += ",";
+				else					levelnums += ',';
 			}
 			levels_count = 0;
 			levelnums += QString("%1").arg(*it+1);

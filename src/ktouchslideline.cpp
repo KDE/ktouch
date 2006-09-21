@@ -355,9 +355,9 @@ int KTouchSlideLine::textLen(const QFontMetrics& fontMetrics, const QString& tex
 	// so that in case of "blablabla   " still the correct size is returned
     int w;
 	if (!Prefs::right2LeftTyping())
-		w = fontMetrics.boundingRect(text + "x").width() - m_xCharWidth;
+		w = fontMetrics.boundingRect(text + 'x').width() - m_xCharWidth;
 	else
-		w = fontMetrics.boundingRect("x" + text).width() - m_xCharWidth;
+		w = fontMetrics.boundingRect('x' + text).width() - m_xCharWidth;
     return w;
 }
 // ----------------------------------------------------------------------------
