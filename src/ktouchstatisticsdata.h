@@ -196,7 +196,7 @@ class KTouchLectureStats {
 /// Contains the complete statistics for a certain user of KTouch.
 ///
 /// All user statistics is kept in this class. The statistics data is read when KTouch is started. New 
-/// statistics data is added when the lecture is changed or when the programm is closed. During
+/// statistics data is added when the lecture is changed or when the program is closed. During
 /// normal training sessions the statistics remains unchanged. During training the current level and 
 /// session statistics is obtained by and stored in the KTouchTrainer object.
 class KTouchStatisticsData {

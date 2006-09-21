@@ -367,7 +367,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 	// read the level stats
 	n = in.namedItem("AllLevelStats");
 	if (!n.isNull()) {
-		// loop over all childs and read levels
+		// loop over all children and read levels
 		QDomNode levelNode = n.firstChild();
 		while (!levelNode.isNull()) {
 			//kDebug() << "[KTouchLectureStats::read]  Reading level stats" << endl;
@@ -379,7 +379,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 	// read the session stats
 	n = in.namedItem("AllSessionStats");
 	if (!n.isNull()) {
-		// loop over all childs and read sessions
+		// loop over all children and read sessions
 		QDomNode sessionNode = n.firstChild();
 		while (!sessionNode.isNull()) {
 			//kDebug() << "[KTouchLectureStats::read]  Reading session stats" << endl;

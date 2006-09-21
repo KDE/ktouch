@@ -51,7 +51,7 @@ namespace Phonon
 /// therefore storeTrainingStatistics() (for level and session stats) and statsChangeLevel() (stores only
 /// level stats).
 /// <p>
-/// The trainer keeps record of the current level and session stats seperately and
+/// The trainer keeps record of the current level and session stats separately and
 /// stores them in the m_levelStats and m_sessionStats member variables. However, the word count is only
 /// updated in these variables, once a slide line is completed (or a level/session/lecture is changed).
 /// <p>
