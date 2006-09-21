@@ -463,7 +463,7 @@ void KTouchSlideLine::updateStudentLine() {
     int teacherLen = m_teacherText.length();
     int studentLen = m_studentText.length();
 
-	int min_len = QMIN(teacherLen, studentLen);
+	int min_len = qMin(teacherLen, studentLen);
 
 	QString correctText;
 	if (!Prefs::right2LeftTyping()) {

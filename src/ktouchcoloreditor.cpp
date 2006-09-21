@@ -40,7 +40,7 @@ KTouchColorEditor::~KTouchColorEditor()
 
 void KTouchColorEditor::startEditor(QList<KTouchColorScheme>& schemes, int active, int & selected) {
 	m_schemes = schemes;
-	m_currentItem = QMAX(0, active);
+	m_currentItem = qMax(0, active);
 	updateListBox();
 
 	if (active >= 0)	m_currentItem = active;
@@ -111,7 +111,7 @@ void KTouchColorEditor::updateClicked() {
     (*it).m_background[7] = back8Btn->color();
 
 	updateListBox();
-	schemeListBox->setCurrentItem( QMIN(old_num, static_cast<int>(m_schemes.count())-1) );
+	schemeListBox->setCurrentItem( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
 	colorSchemeChanged(NULL);
 }
 // ----------------------------------------------------------------------------
@@ -125,7 +125,7 @@ void KTouchColorEditor::removeBtnClicked() {
 		m_schemes.erase(it);
 	}
 	updateListBox();
-	schemeListBox->setCurrentItem( QMIN(old_num, static_cast<int>(m_schemes.count())-1) );
+	schemeListBox->setCurrentItem( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
 	colorSchemeChanged(NULL);
 }
 // ----------------------------------------------------------------------------

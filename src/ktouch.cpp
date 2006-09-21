@@ -297,7 +297,7 @@ void KTouch::fileOpenText() {
 			QStringList lines;
 			while (!line.isNull() && ++max_lines < 1000) {
 				lines.append(line.trimmed());
-				max_len = QMAX(max_len, line.length());
+				max_len = qMax(max_len, line.length());
 				line = in.readLine();
 			}
 			// store the lecture data
