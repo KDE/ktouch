@@ -158,9 +158,9 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 	unsigned int max_y = 0;
 	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
 		switch (it->m_type) {
-			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + QString(it->m_primaryChar) + "'"); break;
-			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + QString(it->m_primaryChar) + "'"); break;
-			default                : keyListBox->insertItem("O  '" + it->m_otherKeyText + "'"); break;
+			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + QString(it->m_primaryChar) + '\''); break;
+			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + QString(it->m_primaryChar) + '\''); break;
+			default                : keyListBox->insertItem("O  '" + it->m_otherKeyText + '\''); break;
 		}
 		min_x = std::min<unsigned int>(min_x, it->m_x);
 		max_x = std::max<unsigned int>(max_x, it->m_x+it->m_w);
