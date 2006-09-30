@@ -28,7 +28,7 @@ class KTouchColorEditor : public QDialog, public Ui_KTouchColorEditorDlg {
 
 public:
 	/// Constructor
-	KTouchColorEditor(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, Qt::WFlags fl = 0 );
+	KTouchColorEditor(QWidget* parent = 0, const char* name = 0, bool modal = false, Qt::WFlags fl = 0 );
 	/// Destructor
 	~KTouchColorEditor();
 
