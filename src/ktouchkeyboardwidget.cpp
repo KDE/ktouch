@@ -22,7 +22,7 @@
 #include <QSet>
 
 #include <kdebug.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 #include <klocale.h>
 #include <kio/netaccess.h>
 #include <kstandarddirs.h>
@@ -71,12 +71,13 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
 
 void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
     QString tmpFile;
-    KTempFile *temp=0;
+    KTemporaryFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();             // for local files the path is sufficient
     else {
-        temp=new KTempFile;             // for remote files create a temporary file first
-        tmpFile=temp->name();
+        temp=new KTemporaryFile;             // for remote files create a temporary file first
+        temp->open();
+        tmpFile=temp->fileName();
     }
 
     QFile outfile(tmpFile);
@@ -108,7 +109,6 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
 
     if (temp) {
         KIO::NetAccess::upload(tmpFile, url, window);
-        temp->unlink();
         delete temp;
     }
 }

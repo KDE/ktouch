@@ -17,7 +17,7 @@
 #include <QtXml>
 
 #include <kdebug.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
 
@@ -84,13 +84,13 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 
 	// and save it
     QString tmpFile;
-    KTempFile *temp=0;
+    KTemporaryFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();         // for local files the path is sufficient
     else {
-        temp=new KTempFile;         // for remote files create a temporary file first
-        temp->setAutoDelete(true);  // so we don't have to delete the file ourselves
-        tmpFile=temp->name();
+        temp=new KTemporaryFile;         // for remote files create a temporary file first
+        temp->open();
+        tmpFile=temp->fileName();
     }
 
     QFile outfile(tmpFile);
