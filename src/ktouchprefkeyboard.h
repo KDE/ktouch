@@ -19,7 +19,7 @@
 class KTouchPrefKeyboard : public QWidget {
 
 public:
-    KTouchPrefKeyboard(QWidget *parent)
+    explicit KTouchPrefKeyboard(QWidget *parent)
     : QWidget( parent )
     {
         ui.setupUi(this);

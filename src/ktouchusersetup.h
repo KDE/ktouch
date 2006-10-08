@@ -25,7 +25,7 @@ class KTouchUserSetup : public QDialog, public Ui_KTouchUserSetupDlg {
 
 public:
 	/// Default constructor.
-	KTouchUserSetup(QWidget* parent);
+	explicit KTouchUserSetup(QWidget* parent);
 	/// Default destructor.
 	~KTouchUserSetup();
 

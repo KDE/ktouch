@@ -26,7 +26,7 @@ class KTouchStatistics : public QDialog, public Ui_KTouchStatisticsDlg {
     Q_OBJECT
   public:
     /// Constructor, takes a pointer to the trainer object.
-    KTouchStatistics(QWidget* parent);
+    explicit KTouchStatistics(QWidget* parent);
 
 	/// Fills the statistics dialog with data and executes it.
 	void run(const KUrl& currentLecture, const KTouchStatisticsData& stats,

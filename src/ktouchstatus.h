@@ -27,7 +27,7 @@ class KTouchStatus : public QWidget, public Ui_KTouchStatusLayout {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchStatus(QWidget *parent);
+    explicit KTouchStatus(QWidget *parent);
 	/// Called when the preferences have changed in the configuration dialog.
 	void applyPreferences();
     /// Sets the new characters text.

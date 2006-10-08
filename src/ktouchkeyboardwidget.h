@@ -43,7 +43,7 @@ class KTouchKeyboardWidget : public QWidget {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchKeyboardWidget(QWidget *parent);
+    explicit KTouchKeyboardWidget(QWidget *parent);
 	/// Destructor (frees allocated data).
     ~KTouchKeyboardWidget();
     /// Reads a keyboard layout from the given URL.

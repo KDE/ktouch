@@ -40,7 +40,7 @@ class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchLectureEditor(QWidget *parent, const char* name = 0, bool modal = false, Qt::WFlags fl = 0);
+    explicit KTouchLectureEditor(QWidget *parent, const char* name = 0, bool modal = false, Qt::WFlags fl = 0);
     /// Destructor
     ~KTouchLectureEditor() {};
     /// Shows and executes the dialog (argument is the url to the default or 

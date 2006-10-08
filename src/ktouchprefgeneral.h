@@ -19,7 +19,7 @@
 class KTouchPrefGeneral : public QWidget {
 
 public:
-    KTouchPrefGeneral(QWidget *parent)
+    explicit KTouchPrefGeneral(QWidget *parent)
     : QWidget( parent )
     {
         ui.setupUi(this);

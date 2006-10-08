@@ -32,7 +32,7 @@ class KTouchSlideLine : public QWidget {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchSlideLine(QWidget *parent);
+    explicit KTouchSlideLine(QWidget *parent);
     /// Destructor, free memory allocated for the line pixmap.
     ~KTouchSlideLine();
     /// Applies the preferences (font and colours).

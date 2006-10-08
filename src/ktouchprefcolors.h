@@ -19,7 +19,7 @@
 class KTouchPrefColors : public QWidget {
 
 public:
-    KTouchPrefColors(QWidget *parent)
+    explicit KTouchPrefColors(QWidget *parent)
     : QWidget( parent )
     {
         ui.setupUi(this);

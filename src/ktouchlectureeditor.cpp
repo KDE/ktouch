@@ -319,7 +319,7 @@ void KTouchLectureEditor::showCurrentLevel() {
     {
         text += *it + '\n';
     }
-    linesTextEdit->setText(text);
+    linesTextEdit->setPlainText(text);
 }
 // -----------------------------------------------------------------------------
 
@@ -328,7 +328,7 @@ void KTouchLectureEditor::storeCurrentLevel() {
     m_lecture.m_lectureData[m_level].m_comment = levelCommentEdit->text();
     m_lecture.m_lectureData[m_level].m_newChars = newCharsEdit->text();
     m_lecture.m_lectureData[m_level].m_lines.clear();
-    QString text = linesTextEdit->text();
+    QString text = linesTextEdit->toPlainText();
     QStringList lines;
     QString currentLine;
     for (unsigned int i=0; i<text.length(); ++i) {

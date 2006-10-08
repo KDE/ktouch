@@ -19,7 +19,7 @@
 class KTouchPrefTraining : public QWidget {
 
 public:
-    KTouchPrefTraining(QWidget *parent)
+    explicit KTouchPrefTraining(QWidget *parent)
     : QWidget( parent )
     {
         ui.setupUi(this);
