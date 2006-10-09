@@ -296,7 +296,7 @@
   </customwidget>
   <customwidget>
    <class>Q3ListBox</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3listbox.h</header>
   </customwidget>
   <customwidget>
@@ -313,7 +313,7 @@
   </customwidget>
   <customwidget>
    <class>Q3TextEdit</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3textedit.h</header>
   </customwidget>
   <customwidget>

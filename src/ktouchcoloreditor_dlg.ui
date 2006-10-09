@@ -743,7 +743,7 @@
   </customwidget>
   <customwidget>
    <class>Q3ListBox</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3listbox.h</header>
   </customwidget>
   <customwidget>

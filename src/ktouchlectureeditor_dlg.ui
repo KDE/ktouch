@@ -261,7 +261,7 @@
          <widget class="KLineEdit" name="newCharsEdit" />
         </item>
         <item row="1" column="0" colspan="2" >
-         <widget class="Q3Frame" name="frame3" >
+         <widget class="QFrame" name="frame3" >
           <property name="sizePolicy" >
            <sizepolicy>
             <hsizetype>5</hsizetype>
@@ -501,12 +501,6 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Q3Frame</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3Frame</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>K3ListView</class>
    <extends>Q3ListView</extends>
    <header>k3listview.h</header>
@@ -519,12 +513,12 @@
   </customwidget>
   <customwidget>
    <class>Q3ListView</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3listview.h</header>
   </customwidget>
   <customwidget>
    <class>Q3TextEdit</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3textedit.h</header>
   </customwidget>
   <customwidget>

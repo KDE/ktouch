@@ -96,13 +96,11 @@
   </customwidget>
   <customwidget>
    <class>Q3ListBox</class>
-   <extends>Q3Frame</extends>
+   <extends>QFrame</extends>
    <header>q3listbox.h</header>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="local" >kpushbutton.h</include>
-  <include location="local" >kpushbutton.h</include>
   <include location="local" >kpushbutton.h</include>
  </includes>
  <resources/>
