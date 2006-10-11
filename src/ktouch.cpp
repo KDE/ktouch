@@ -301,7 +301,7 @@ void KTouch::fileOpenText() {
 				line = in.readLine();
 			}
 			// store the lecture data
-			lec.setTitle(i18n("Imported text from file '%1'").arg(tmp.fileName()));
+			lec.setTitle(i18n("Imported text from file '%1'", tmp.fileName()));
 			KTouchLevelData dat(i18n("generated from text file"), i18n("all available"));
 			dat.setLines(lines);
 			lec.setLevel(0, dat);
@@ -584,7 +584,7 @@ void KTouch::changeUser(int num) {
 	m_trainer->storeTrainingStatistics();
 	QString new_name = m_userStats.keys()[num];
 	Prefs::setCurrentUserName(new_name);
-    KMessageBox::information(this, i18n("Changing user to '%1'. Restarting training session at current level.").arg(new_name) );
+    KMessageBox::information(this, i18n("Changing user to '%1'. Restarting training session at current level.", new_name) );
 	m_trainer->startTraining(true);
 }
 // ----------------------------------------------------------------------------
