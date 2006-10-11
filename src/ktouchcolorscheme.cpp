@@ -2,6 +2,7 @@
  *   ktouchcolorscheme.cpp                                                 *
  *   ---------------------                                                 *
  *   Copyright (C) 2003-2006 by Andreas Nicolai                            *
+ *   <ghorwin@users.sourceforge.net>                                       * 
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

@@ -1,10 +1,14 @@
 /***************************************************************************
-                          main.c  -  description
-                             -------------------
-    begin                : Wed Mar 21 21:39:53 EST 2001
-    copyright            : (C) 2001 by Haavard Froeiland 2264228
-    email                : havard@student.unsw.edu.au
-
+ *                         main.c  -  description                          *
+ *                             -------------------                         *
+ *   begin                : Wed Mar 21 21:39:53 EST 2001                   *
+ *   copyright            : (C) 2001 by Haavard Froeiland 2264228          *
+ *   email                : havard@student.unsw.edu.au                     *
+ *									   *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
  ***************************************************************************/
 
 #ifdef HAVE_CONFIG_H
