@@ -28,7 +28,7 @@ set(ktouch_SRCS
    main.cpp
 )
 
-kde4_automoc(${ktouch_SRCS})
+kde4_automoc(ktouch ${ktouch_SRCS})
 
 kde4_add_ui_files(ktouch_SRCS 
    ktouchcoloreditor_dlg.ui 
