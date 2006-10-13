@@ -552,17 +552,17 @@
 <Level>
    
 <NewCharacters>Ez-az</NewCharacters>
-<Line>^^^^ #### &&&& ^^^^ #### &&&& ^^^^ #### &&&&</Line>
-<Line>&&&& #### ^^^^ &&&& #### ^^^^ &&&& #### ^^^^</Line>
-<Line>##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^ ##&&^^</Line>
+<Line>^^^^ #### &amp;&amp;&amp;&amp; ^^^^ #### &amp;&amp;&amp;&amp; ^^^^ #### &amp;&amp;&amp;&amp;</Line>
+<Line>&amp;&amp;&amp;&amp; #### ^^^^ &amp;&amp;&amp;&amp; #### ^^^^ &amp;&amp;&amp;&amp; #### ^^^^</Line>
+<Line>##&amp;&amp;^^ ##&amp;&amp;^^ ##&amp;&amp;^^ ##&amp;&amp;^^ ##&amp;&amp;^^ ##&amp;&amp;^^</Line>
 </Level>
 
 <Level>
    
 <NewCharacters>Ez-az</NewCharacters>
-<Line><<<< >>>> ;;;; <<<< >>>> ;;;; <<<< >>>> ;;;;</Line>
-<Line>;;;; >>>> <<<< ;;;; >>>> <<<< ;;;; >>>> <<<<</Line>
-<Line><<;;>> <<;;>> <<;;>> <<;;>> <<;;>> <<;;>></Line>
+<Line>&lt;&lt;&lt;&lt; &gt;&gt;&gt;&gt; ;;;; &lt;&lt;&lt;&lt; &gt;&gt;&gt;&gt; ;;;; &lt;&lt;&lt;&lt; &gt;&gt;&gt;&gt; ;;;;</Line>
+<Line>;;;; &gt;&gt;&gt;&gt; &lt;&lt;&lt;&lt; ;;;; &gt;&gt;&gt;&gt; &lt;&lt;&lt;&lt; ;;;; &gt;&gt;&gt;&gt; &lt;&lt;&lt;&lt;</Line>
+<Line>&lt;&lt;;;&gt;&gt; &lt;&lt;;;&gt;&gt; &lt;&lt;;;&gt;&gt; &lt;&lt;;;&gt;&gt; &lt;&lt;;;&gt;&gt; &lt;&lt;;;&gt;&gt;</Line>
 </Level>
 
  </Levels>
