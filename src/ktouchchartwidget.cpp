@@ -23,7 +23,7 @@
 #include <cmath>
 
 KTouchChartWidget::KTouchChartWidget(QWidget* parent, const char *name)
-  : KPlotWidget(0.0, 120.0, 0.0, 240.0, parent)
+  : KPlotWidget(parent,0.0, 120.0, 0.0, 240.0)
 {
 	// temporary
 	setObjectName( name );
