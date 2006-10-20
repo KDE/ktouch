@@ -245,7 +245,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="Q3ProgressBar" name="correctnessBar" >
+       <widget class="QProgressBar" name="correctnessBar" >
         <property name="toolTip" >
          <string>How much are you typing correctly?</string>
         </property>
@@ -365,11 +365,6 @@
    <extends>QGroupBox</extends>
    <header>Qt3Support/Q3GroupBox</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Q3ProgressBar</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3ProgressBar</header>
   </customwidget>
  </customwidgets>
  <resources/>

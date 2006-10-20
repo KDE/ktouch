@@ -46,5 +46,5 @@ void KTouchStatus::setNewChars(const QString& newChars) {
 
 void KTouchStatus::updateStatus(unsigned int level, double correctness) {
     levelLCD->display(static_cast<int>(level)+1); // +1 because our level variable ranges from 0...n-1
-    correctnessBar->setProgress(static_cast<int>(correctness*100) );
+    correctnessBar->setValue(static_cast<int>(correctness*100) );
 }

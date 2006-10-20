@@ -273,10 +273,10 @@
              </widget>
             </item>
             <item row="0" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress1" />
+             <widget class="QProgressBar" name="charProgress1" />
             </item>
             <item row="0" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress5" />
+             <widget class="QProgressBar" name="charProgress5" />
             </item>
             <item row="0" column="0" >
              <widget class="QLabel" name="charLabel1" >
@@ -300,7 +300,7 @@
              </widget>
             </item>
             <item row="1" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress6" />
+             <widget class="QProgressBar" name="charProgress6" />
             </item>
             <item row="1" column="3" >
              <widget class="QLabel" name="charLabel6" >
@@ -310,10 +310,10 @@
              </widget>
             </item>
             <item row="1" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress2" />
+             <widget class="QProgressBar" name="charProgress2" />
             </item>
             <item row="2" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress3" />
+             <widget class="QProgressBar" name="charProgress3" />
             </item>
             <item row="2" column="3" >
              <widget class="QLabel" name="charLabel7" >
@@ -330,13 +330,13 @@
              </widget>
             </item>
             <item row="2" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress7" />
+             <widget class="QProgressBar" name="charProgress7" />
             </item>
             <item row="3" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress8" />
+             <widget class="QProgressBar" name="charProgress8" />
             </item>
             <item row="3" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress4" />
+             <widget class="QProgressBar" name="charProgress4" />
             </item>
             <item row="3" column="3" >
              <widget class="QLabel" name="charLabel8" >
@@ -429,7 +429,7 @@
              <number>6</number>
             </property>
             <item row="0" column="0" >
-             <widget class="Q3ProgressBar" name="correctnessBar" >
+             <widget class="QProgressBar" name="correctnessBar" >
               <property name="whatsThis" >
                <string>The ratio of correctly typed characters versus total number of characters typed.</string>
               </property>
@@ -676,10 +676,10 @@
              </widget>
             </item>
             <item row="0" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress1Level" />
+             <widget class="QProgressBar" name="charProgress1Level" />
             </item>
             <item row="0" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress5Level" />
+             <widget class="QProgressBar" name="charProgress5Level" />
             </item>
             <item row="0" column="0" >
              <widget class="QLabel" name="charLabel1Level" >
@@ -703,7 +703,7 @@
              </widget>
             </item>
             <item row="1" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress6Level" />
+             <widget class="QProgressBar" name="charProgress6Level" />
             </item>
             <item row="1" column="3" >
              <widget class="QLabel" name="charLabel6Level" >
@@ -713,10 +713,10 @@
              </widget>
             </item>
             <item row="1" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress2Level" />
+             <widget class="QProgressBar" name="charProgress2Level" />
             </item>
             <item row="2" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress3Level" />
+             <widget class="QProgressBar" name="charProgress3Level" />
             </item>
             <item row="2" column="3" >
              <widget class="QLabel" name="charLabel7Level" >
@@ -733,13 +733,13 @@
              </widget>
             </item>
             <item row="2" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress7Level" />
+             <widget class="QProgressBar" name="charProgress7Level" />
             </item>
             <item row="3" column="4" >
-             <widget class="Q3ProgressBar" name="charProgress8Level" />
+             <widget class="QProgressBar" name="charProgress8Level" />
             </item>
             <item row="3" column="1" >
-             <widget class="Q3ProgressBar" name="charProgress4Level" />
+             <widget class="QProgressBar" name="charProgress4Level" />
             </item>
             <item row="3" column="3" >
              <widget class="QLabel" name="charLabel8Level" >
@@ -826,7 +826,7 @@
              <number>6</number>
             </property>
             <item row="0" column="0" >
-             <widget class="Q3ProgressBar" name="correctnessBarLevel" />
+             <widget class="QProgressBar" name="correctnessBarLevel" />
             </item>
            </layout>
           </widget>
@@ -1188,11 +1188,6 @@
  </widget>
  <layoutdefault spacing="6" margin="11" />
  <customwidgets>
-  <customwidget>
-   <class>Q3ProgressBar</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3ProgressBar</header>
-  </customwidget>
   <customwidget>
    <class>Q3ButtonGroup</class>
    <extends>Q3GroupBox</extends>

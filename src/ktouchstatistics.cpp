@@ -184,7 +184,7 @@ void KTouchStatistics::updateCurrentSessionTab() {
 		wordSpeedLCD->display(static_cast<int>(m_currSessionStats.m_words/m_currSessionStats.m_elapsedTime*60.0) );
 	}
     // accuracy
-    correctnessBar->setProgress(static_cast<int>(
+    correctnessBar->setValue(static_cast<int>(
 		(100.0*m_currSessionStats.m_correctChars)/m_currSessionStats.m_totalChars) );
 	// create sorted list of missed characters
 	QList<KTouchCharStats> charList;
@@ -198,34 +198,34 @@ void KTouchStatistics::updateCurrentSessionTab() {
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
           case 0 :  charLabel1->setText( QString(it->m_char) ); charProgress1->setEnabled(true);
-                    charProgress1->setProgress( it->missHitRatio() ); break;
+                    charProgress1->setValue( it->missHitRatio() ); break;
           case 1 :  charLabel2->setText( QString(it->m_char) ); charProgress2->setEnabled(true);
-                    charProgress2->setProgress( it->missHitRatio() ); break;
+                    charProgress2->setValue( it->missHitRatio() ); break;
           case 2 :  charLabel3->setText( QString(it->m_char) ); charProgress3->setEnabled(true);
-                    charProgress3->setProgress( it->missHitRatio() ); break;
+                    charProgress3->setValue( it->missHitRatio() ); break;
           case 3 :  charLabel4->setText( QString(it->m_char) ); charProgress4->setEnabled(true);
-                    charProgress4->setProgress( it->missHitRatio() ); break;
+                    charProgress4->setValue( it->missHitRatio() ); break;
           case 4 :  charLabel5->setText( QString(it->m_char) ); charProgress5->setEnabled(true);
-                    charProgress5->setProgress( it->missHitRatio() ); break;
+                    charProgress5->setValue( it->missHitRatio() ); break;
           case 5 :  charLabel6->setText( QString(it->m_char) ); charProgress6->setEnabled(true);
-                    charProgress6->setProgress( it->missHitRatio() ); break;
+                    charProgress6->setValue( it->missHitRatio() ); break;
           case 6 :  charLabel7->setText( QString(it->m_char) ); charProgress7->setEnabled(true);
-                    charProgress7->setProgress( it->missHitRatio() ); break;
+                    charProgress7->setValue( it->missHitRatio() ); break;
           case 7 :  charLabel8->setText( QString(it->m_char) ); charProgress8->setEnabled(true);
-                    charProgress8->setProgress( it->missHitRatio() ); break;
+                    charProgress8->setValue( it->missHitRatio() ); break;
         }
     }
 	// set remaining char labels and progress bars to zero
     for(; i<8; ++i) {
         switch (i) {
-          case 0 :  charLabel1->setText(" "); charProgress1->setProgress(0); charProgress1->setEnabled(false); break;
-          case 1 :  charLabel2->setText(" "); charProgress2->setProgress(0); charProgress2->setEnabled(false); break;
-          case 2 :  charLabel3->setText(" "); charProgress3->setProgress(0); charProgress3->setEnabled(false); break;
-          case 3 :  charLabel4->setText(" "); charProgress4->setProgress(0); charProgress4->setEnabled(false); break;
-          case 4 :  charLabel5->setText(" "); charProgress5->setProgress(0); charProgress5->setEnabled(false); break;
-          case 5 :  charLabel6->setText(" "); charProgress6->setProgress(0); charProgress6->setEnabled(false); break;
-          case 6 :  charLabel7->setText(" "); charProgress7->setProgress(0); charProgress7->setEnabled(false); break;
-          case 7 :  charLabel8->setText(" "); charProgress8->setProgress(0); charProgress8->setEnabled(false); break;
+          case 0 :  charLabel1->setText(" "); charProgress1->setValue(0); charProgress1->setEnabled(false); break;
+          case 1 :  charLabel2->setText(" "); charProgress2->setValue(0); charProgress2->setEnabled(false); break;
+          case 2 :  charLabel3->setText(" "); charProgress3->setValue(0); charProgress3->setEnabled(false); break;
+          case 3 :  charLabel4->setText(" "); charProgress4->setValue(0); charProgress4->setEnabled(false); break;
+          case 4 :  charLabel5->setText(" "); charProgress5->setValue(0); charProgress5->setEnabled(false); break;
+          case 5 :  charLabel6->setText(" "); charProgress6->setValue(0); charProgress6->setEnabled(false); break;
+          case 6 :  charLabel7->setText(" "); charProgress7->setValue(0); charProgress7->setEnabled(false); break;
+          case 7 :  charLabel8->setText(" "); charProgress8->setValue(0); charProgress8->setEnabled(false); break;
         }
     }
 }
@@ -249,7 +249,7 @@ void KTouchStatistics::updateCurrentLevelTab() {
 		wordSpeedLCDLevel->display(static_cast<int>(m_currLevelStats.m_words/m_currLevelStats.m_elapsedTime*60.0) );
 	}
     // accuracy
-    correctnessBarLevel->setProgress(static_cast<int>(
+    correctnessBarLevel->setValue(static_cast<int>(
 		(100.0*m_currLevelStats.m_correctChars)/m_currLevelStats.m_totalChars) );
 	// create sorted list of missed characters
 	QList<KTouchCharStats> charList;
@@ -263,34 +263,34 @@ void KTouchStatistics::updateCurrentLevelTab() {
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
           case 0 :  charLabel1Level->setText( QString(it->m_char) ); charProgress1->setEnabled(true);
-                    charProgress1Level->setProgress( it->missHitRatio() ); break;
+                    charProgress1Level->setValue( it->missHitRatio() ); break;
           case 1 :  charLabel2Level->setText( QString(it->m_char) ); charProgress2->setEnabled(true);
-                    charProgress2Level->setProgress( it->missHitRatio() ); break;
+                    charProgress2Level->setValue( it->missHitRatio() ); break;
           case 2 :  charLabel3Level->setText( QString(it->m_char) ); charProgress3->setEnabled(true);
-                    charProgress3Level->setProgress( it->missHitRatio() ); break;
+                    charProgress3Level->setValue( it->missHitRatio() ); break;
           case 3 :  charLabel4Level->setText( QString(it->m_char) ); charProgress4->setEnabled(true);
-                    charProgress4Level->setProgress( it->missHitRatio() ); break;
+                    charProgress4Level->setValue( it->missHitRatio() ); break;
           case 4 :  charLabel5Level->setText( QString(it->m_char) ); charProgress5->setEnabled(true);
-                    charProgress5Level->setProgress( it->missHitRatio() ); break;
+                    charProgress5Level->setValue( it->missHitRatio() ); break;
           case 5 :  charLabel6Level->setText( QString(it->m_char) ); charProgress6->setEnabled(true);
-                    charProgress6Level->setProgress( it->missHitRatio() ); break;
+                    charProgress6Level->setValue( it->missHitRatio() ); break;
           case 6 :  charLabel7Level->setText( QString(it->m_char) ); charProgress7->setEnabled(true);
-                    charProgress7Level->setProgress( it->missHitRatio() ); break;
+                    charProgress7Level->setValue( it->missHitRatio() ); break;
           case 7 :  charLabel8Level->setText( QString(it->m_char) ); charProgress8->setEnabled(true);
-                    charProgress8Level->setProgress( it->missHitRatio() ); break;
+                    charProgress8Level->setValue( it->missHitRatio() ); break;
         }
     }
 	// set remaining char labels and progress bars to zero
     for(; i<8; ++i) {
         switch (i) {
-          case 0 :  charLabel1Level->setText(" "); charProgress1Level->setProgress(0); charProgress1Level->setEnabled(false); break;
-          case 1 :  charLabel2Level->setText(" "); charProgress2Level->setProgress(0); charProgress2Level->setEnabled(false); break;
-          case 2 :  charLabel3Level->setText(" "); charProgress3Level->setProgress(0); charProgress3Level->setEnabled(false); break;
-          case 3 :  charLabel4Level->setText(" "); charProgress4Level->setProgress(0); charProgress4Level->setEnabled(false); break;
-          case 4 :  charLabel5Level->setText(" "); charProgress5Level->setProgress(0); charProgress5Level->setEnabled(false); break;
-          case 5 :  charLabel6Level->setText(" "); charProgress6Level->setProgress(0); charProgress6Level->setEnabled(false); break;
-          case 6 :  charLabel7Level->setText(" "); charProgress7Level->setProgress(0); charProgress7Level->setEnabled(false); break;
-          case 7 :  charLabel8Level->setText(" "); charProgress8Level->setProgress(0); charProgress8Level->setEnabled(false); break;
+          case 0 :  charLabel1Level->setText(" "); charProgress1Level->setValue(0); charProgress1Level->setEnabled(false); break;
+          case 1 :  charLabel2Level->setText(" "); charProgress2Level->setValue(0); charProgress2Level->setEnabled(false); break;
+          case 2 :  charLabel3Level->setText(" "); charProgress3Level->setValue(0); charProgress3Level->setEnabled(false); break;
+          case 3 :  charLabel4Level->setText(" "); charProgress4Level->setValue(0); charProgress4Level->setEnabled(false); break;
+          case 4 :  charLabel5Level->setText(" "); charProgress5Level->setValue(0); charProgress5Level->setEnabled(false); break;
+          case 5 :  charLabel6Level->setText(" "); charProgress6Level->setValue(0); charProgress6Level->setEnabled(false); break;
+          case 6 :  charLabel7Level->setText(" "); charProgress7Level->setValue(0); charProgress7Level->setEnabled(false); break;
+          case 7 :  charLabel8Level->setText(" "); charProgress8Level->setValue(0); charProgress8Level->setEnabled(false); break;
         }
     }
 }
