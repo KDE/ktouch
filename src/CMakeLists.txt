@@ -28,7 +28,7 @@ set(ktouch_SRCS
    main.cpp
 )
 
-kde4_automoc(ktouch ${ktouch_SRCS})
+kde4_automoc(${ktouch_SRCS})
 
 kde4_add_ui_files(ktouch_SRCS 
    ktouchcoloreditor_dlg.ui 
@@ -43,7 +43,7 @@ kde4_add_ui_files(ktouch_SRCS
    ktouchusersetup_dlg.ui
 )
 
-kde4_add_kcfg_files(ktouch ktouch_SRCS prefs.kcfgc )
+kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 kde4_add_executable(ktouch ${ktouch_SRCS})
 
