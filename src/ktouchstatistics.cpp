@@ -420,7 +420,7 @@ void KTouchStatistics::updateChartTab() {
 		// Create plot object for session statistics
 		KPlotObject * ob;
 		if (data.size() <= 1) return;
-		ob = new KPlotObject(caption, "red", KPlotObject::CURVE, 2, KPlotObject::SOLID);
+		ob = new KPlotObject( Qt::red, KPlotObject::LINES, 2 );
 		
 		// Add some random points to the plot object
 		double min_x = 1e20;
@@ -436,7 +436,7 @@ void KTouchStatistics::updateChartTab() {
 				x = i+1;
 				chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Sessions" ));
 			}
-			ob->addPoint( QPointF(x, data[i].second) );
+			ob->addPoint( x, data[i].second );
 			min_x = std::min(x, min_x);
 			max_x = std::max(x, max_x);
 			max_y = std::max(data[i].second, max_y);
