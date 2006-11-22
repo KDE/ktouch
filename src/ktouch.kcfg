@@ -7,7 +7,7 @@
   <group name="Colors" >
     <entry type="Int" name="CurrentColorScheme" >
       <label >The number of the current color scheme.</label>
-      <default >0</default>
+      <default >1</default>
     </entry>
     <entry type="Bool" name="CommonTypingLineColors" >
       <label >Use the same typing line colors independent of color scheme.</label>
