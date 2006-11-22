@@ -125,7 +125,7 @@ chapters of this manual.
 
 
 <sect1 id="learning">
-<title>Learnung touch typing with &ktouch;</title>
+<title>Learning touch typing with &ktouch;</title>
 
 <para>Here's another screenshot of &ktouch; in action, this time with a german
 keyboard and training lecture:</para>
@@ -143,7 +143,7 @@ keyboard and training lecture:</para>
 </screenshot>
 
 <para>Even though learning touch typing with &ktouch; and using the program
-should be very simple we will look a bit closer@&ktouch; in the following
+should be very simple we will look a bit closer at &ktouch; in the following
 sections.</para>
 
 <sect2 id="getting_started">
@@ -153,14 +153,14 @@ sections.</para>
 program window shows three main sections:
 </para>
 <orderedlist>
-<listitem><simpara>Some typing statistics in info boxes@the
+<listitem><simpara>Some typing statistics in info boxes at the
 top</simpara></listitem>
 <listitem><simpara>The text you need to type (in the teacher's line) and the
 text that you have typed so far (in the student's line)</simpara></listitem>
 <listitem><simpara>The keyboard (that hopefully looks like
 yours)</simpara></listitem>
 </orderedlist>
-<para>We look@these sections later again.</para>
+<para>We look at these sections later again.</para>
 <para>
 Ok, the first time you start &ktouch; it will open a default lecture and
 select a default keyboard layout.  Before you start typing you should adjust
@@ -215,8 +215,8 @@ levels. However, some lectures may just contain a single level and text (&eg;
 a newspaper article to test your skills).
 </para>
 <para>
-In the info boxes@top of the &ktouch; main window you see the current
-level@the left. The small buttons to the right allow you to manually switch
+In the info boxes on top of the &ktouch; main window you see the current
+level on the left. The small buttons to the right allow you to manually switch
 levels. Normally this happens automatically (more about this in the section
 <link linkend="training_options">Training Options</link>). The right info box
 shows a brief information text about the level. Usually it gives you a list of
@@ -332,7 +332,7 @@ format="PNG"/></imageobject>
 
 <chapter id="ui_guide">
 <title>The &ktouch; main menu and program dialogs</title>
-<para>In this chapter we look@some of the details in the program.
+<para>In this chapter we look at some of the details in the program.
 <tip><para>You can use the <quote>What's this?</quote> feature (the little
 question mark besides the minimize/maximize window buttons) in many dialogs of
 the program.</para></tip>
@@ -397,9 +397,9 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para>If <guibutton>Automatic level adjustment</guibutton> is enabled,
-&ktouch; checks the given limits@the end of each level and decides whether to
+&ktouch; checks the given limits at the end of each level and decides whether to
 increase or decrease the level or stay in the level for another run. Level
-changes occur always@the end of a level (&ie; when the user has finished the
+changes occur always at the end of a level (&ie; when the user has finished the
 last line of a level). If the typing speed (in characters per seconds) and
 accuracy (correctness) are <emphasis>both</emphasis> above or equal to the
 <quote>Limits to increase level</quote> &ktouch; will jump to the next higher
@@ -484,12 +484,12 @@ may want to consider:
 
 
 <listitem><para>
-For the first 20 keys or so, only add 2 keys@a time to a new level. Let the
+For the first 20 keys or so, only add 2 keys at a time to a new level. Let the
 user practice the keys alone first in different combinations and then use the
 new keys in words and mixed with already known words.
 </para></listitem>
 
-<listitem><para>Add@least a few levels to the lecture in order to allow the
+<listitem><para>Add at least a few levels to the lecture in order to allow the
 user to see some progress while training</para></listitem>
 
 <listitem><para>
@@ -649,7 +649,7 @@ keys). The third number indicates a finger key (where does the finger rest
 that is needed to type the key) and the last number indicates the modifier key
 you need to press to get this character.
 </para>
-<para>Let's look@an example:</para>
+<para>Let's look at an example:</para>
 <para>You want to define the upper case 'R' character. It has the unicode 82.
 The character obtained when the 'R' key is pressed without modifier is the
 small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key
@@ -717,7 +717,7 @@ change the current training file </para></listitem>
 <guimenuitem>Start New Session</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Start</action> a new typing session and ask you if you
-want to start@the same level</para></listitem>
+want to start at the same level</para></listitem>
 </varlistentry>
 
 <varlistentry>
