@@ -801,11 +801,11 @@ void KTouch::setupActions() {
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
-    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), actionCollection(), "default_lectures");
+    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), actionCollection(), "training_default_lectures");
 	m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
-    connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
+    connect (m_defaultLectureAction, SIGNAL(triggered(int)), this, SLOT(changeLecture(int)));
 
 	// *** Options menu ***
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
@@ -813,7 +813,7 @@ void KTouch::setupActions() {
     m_keyboardLayoutAction = new KSelectAction(i18n("&Keyboard Layouts"), actionCollection(), "keyboard_layouts");
 	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
-    connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
+    connect (m_keyboardLayoutAction, SIGNAL(triggered(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
 	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), actionCollection(), "keyboard_schemes");
@@ -825,7 +825,7 @@ void KTouch::setupActions() {
 	if (static_cast<unsigned int>(Prefs::currentColorScheme()) >=  schemes_list.count())
 		Prefs::setCurrentColorScheme(1);
    	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
-    connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
+    connect (m_keyboardColorAction, SIGNAL(triggered(int)), this, SLOT(changeColor(int)));
 
     // *** User settings ***
     action = new KAction(KIcon("kdmconfig"), i18n("&Setup users..."), actionCollection(), "settings_setup_users");
@@ -835,7 +835,7 @@ void KTouch::setupActions() {
 	m_currentUserAction->setMenuAccelsEnabled(false);
     m_currentUserAction->setItems(m_userStats.keys());
 	updateCurrentUserActionCheck();
-    connect (m_currentUserAction, SIGNAL(activated(int)), this, SLOT(changeUser(int)));
+    connect (m_currentUserAction, SIGNAL(triggered(int)), this, SLOT(changeUser(int)));
 }
 // ----------------------------------------------------------------------------
 
