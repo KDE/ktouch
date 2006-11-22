@@ -89,7 +89,7 @@ KTouch::KTouch()
 	// create the GUI reading the ui.rc file
 	if (!initialGeometrySet())
 		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
-	setupGUI(ToolBar | Keys | StatusBar | Create);
+	
 	setAutoSaveSettings();
 
 	// Init a training session
@@ -133,6 +133,7 @@ KTouch::KTouch()
 		m_trainer->startTraining(true);
 //	}
 	m_duringStartup = false;
+    setupGUI(ToolBar | Keys | StatusBar | Create);
 }
 // ----------------------------------------------------------------------------
 
