@@ -10,8 +10,8 @@ dk.keyboard \
 en.dvorak.keyboard \
 en.keyboard \
 hu.keyboard \
-pl.keyboard 
-
+he.keyboard \
+pl.keyboard
 
 
 #sv.dvorak.keyboard \
@@ -38,5 +38,4 @@ pl.keyboard
 #es.keyboard \
 #fr.a.keyboard \
 #fr.keyboard \
-#fr.swiss.keyboard \
-#he.keyboard 
+#fr.swiss.keyboard 
