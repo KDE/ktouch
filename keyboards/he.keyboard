@@ -1,39 +1,39 @@
 ####################################################
 #    KTouch
-#    Keybord layout file
+#    Keybord layout file for Hebrew
 ####################################################
 #
 #
 #  FingerKey: This class represents the keys where
 #  your fingers shold rest between typing.
 #
-#		UNICODE		KeyText 	x	y
-FingerKey	1513		ù		18	20
-FingerKey	1491		ã		28	20
-FingerKey	1490		â		38	20
-FingerKey	1499		ë		48	20
-FingerKey	1495		ç		78	20
-FingerKey	1500		ì		88	20
-FingerKey	1498		ê		98	20
-FingerKey	1507		ó		108	20
+#		UNICODE		KeyText		x	y
+FingerKey	1513		ש		18	20
+FingerKey	1491		ד		28	20
+FingerKey	1490		ג		38	20
+FingerKey	1499		כ		48	20
+FingerKey	1495		ח		78	20
+FingerKey	1500		ל		88	20
+FingerKey	1498		ך		98	20
+FingerKey	1507		ף		108	20
 #
 #
 #  ControllKey: This class will represent all the
 #  controll keys that you are using. Theys keys
 #  will be used later when you want to use uppercase.
 #
-#		UNICODE		KeyText		x		y		Width	Height
+#		UNICODE		KeyText		x	y	Width	Height
 #
-ControlKey	260		Tab		0		10		15		10
-ControlKey	13		Enter		128		20		22		10
-ControlKey	257		Shift		123		30		27		10
-ControlKey	264		Alt		120		40		15		10
-ControlKey	265		Ctrl		135		40		15		10
-ControlKey	263		Alt		15		40		15		10
-ControlKey	262		Ctrl		0		40		15		10
-ControlKey	32		Space		30		40		90		10
-ControlKey	258		Shift		0		30		23		10
-ControlKey	259		CapsLock	0		20		18		10
+ControlKey	260		Tab		0	10	15	10
+ControlKey	13		Enter		128	20	22	10
+ControlKey	257		Shift		123	30	27	10
+ControlKey	264		Alt		120	40	15	10
+ControlKey	265		Ctrl		135	40	15	10
+ControlKey	263		Alt		15	40	15	10
+ControlKey	262		Ctrl		0	40	15	10
+ControlKey	32		Space		30	40	90	10
+ControlKey	258		Shift		0	30	23	10
+ControlKey	259		CapsLock	0	20	18	10
 #
 #
 #  NormalKey: This class represent all the
@@ -43,51 +43,51 @@ ControlKey	259		CapsLock	0		20		18		10
 #  letters. For this class you have to indicate
 #  withc finger key you are going to use.
 #
-#		UNICODE		KeyText	x		y		FingerKey
+#		UNICODE		KeyText		x	y	FingerKey
 #
-NormalKey	96		`		0		0		1513
-NormalKey	49		1		10		0		1513
-NormalKey	50		2		20		0		1491
-NormalKey	51		3		30		0		1490
-NormalKey	52		4		40		0		1499
-NormalKey	53		5		50		0		1499
-NormalKey	54		6		60		0		1495
-NormalKey	55		7		70		0		1495
-NormalKey	56		8		80		0		1500
-NormalKey	57		9		90		0		1498
-NormalKey	48		0		100		0		1507
-NormalKey	95		-		110		0		1507
-NormalKey	61		=		120		0		1507
-NormalKey	92		\		130		0		1507
-NormalKey	8 		<-		140		0		1507
+NormalKey	59		;		0	0	1513
+NormalKey	49		1		10	0	1513
+NormalKey	50		2		20	0	1491
+NormalKey	51		3		30	0	1490
+NormalKey	52		4		40	0	1499
+NormalKey	53		5		50	0	1499
+NormalKey	54		6		60	0	1495
+NormalKey	55		7		70	0	1495
+NormalKey	56		8		80	0	1500
+NormalKey	57		9		90	0	1498
+NormalKey	48		0		100	0	1507
+NormalKey	95		-		110	0	1507
+NormalKey	61		=		120	0	1507
+NormalKey	92		\		130	0	1507
+NormalKey	8		<-		140	0	1507
 #
-NormalKey	113		/		15		10		1513
-NormalKey	119		'		25		10		1491
-NormalKey	1511		÷		35		10		1490
-NormalKey	1512		ø		45		10		1499
-NormalKey	1488		à		55		10		1499
-NormalKey	1496		è		65		10		1495
-NormalKey	1493		å		75		10		1495
-NormalKey	1503		ï		85		10		1500
-NormalKey	1501		í		95		10		1498
-NormalKey	1508		ô		105		10		1507
-NormalKey	91		[		115		10		1507
-NormalKey	93		]		125		10		1507
+NormalKey	47		/		15	10	1513
+NormalKey	39		'		25	10	1491
+NormalKey	1511		ק		35	10	1490
+NormalKey	1512		ר		45	10	1499
+NormalKey	1488		א		55	10	1499
+NormalKey	1496		ט		65	10	1495
+NormalKey	1493		ו		75	10	1495
+NormalKey	1503		ן		85	10	1500
+NormalKey	1501		ם		95	10	1498
+NormalKey	1508		פ		105	10	1507
+NormalKey	91		[		115	10	1507
+NormalKey	93		]		125	10	1507
 #
-NormalKey	1506		ò		58		20		1499
-NormalKey	1497		é		68		20		1495
-NormalKey	39		'		118		20		1507
+NormalKey	1506		ע		58	20	1499
+NormalKey	1497		י		68	20	1495
+NormalKey	44		,		118	20	1507
 #
-NormalKey	1494		æ		23		30		1513
-NormalKey	1505		ñ		33		30		1491
-NormalKey	1489		á		43		30		1490
-NormalKey	1492		ä		53		30		1499
-NormalKey	1504		ð		63		30		1499
-NormalKey	1502		î		73		30		1495
-NormalKey	1510		ö		83		30		1495
-NormalKey	1514		ú		93		30		1500
-NormalKey	1509		õ		103		30		1498
-NormalKey	47		.		113		30		1507
+NormalKey	1494		ז		23	30	1513
+NormalKey	1505		ס		33	30	1491
+NormalKey	1489		ב		43	30	1490
+NormalKey	1492		ה		53	30	1499
+NormalKey	1504		נ		63	30	1499
+NormalKey	1502		מ		73	30	1495
+NormalKey	1510		צ		83	30	1495
+NormalKey	1514		ת		93	30	1500
+NormalKey	1509		ץ		103	30	1498
+NormalKey	47		.		113	30	1507
 #
 #
 #  HiddenKey: This is all the keys that
@@ -97,29 +97,53 @@ NormalKey	47		.		113		30		1507
 #
 #		UNICODE		Target	Finger	Contorll
 #
-HiddenKey	65		97		97			257 #A
-HiddenKey	66		98		102		257 #B
-HiddenKey	67		99		100		257 #C
-HiddenKey	68		100		100		257 #D
-HiddenKey	69		101		100		257 #E
-HiddenKey	70		102		102		257 #F
-HiddenKey	71		103		102		257 #G
-HiddenKey	72		104		106		258 #H
-HiddenKey	73		105		107		258 #I
-HiddenKey	74		106		106		258 #J
-HiddenKey	75		107		107		258 #K
-HiddenKey	76		108		106		258 #L
-HiddenKey	77		109		106		258 #M
-HiddenKey	78		110		106		258 #N
-HiddenKey	79		111		108		258 #O
-HiddenKey	80		112		59		258 #P
-HiddenKey	81		113		97		257 #Q
-HiddenKey	82		114		102		257 #R
-HiddenKey	83		115		115		257 #S
-HiddenKey	84		116		102		257 #T
-HiddenKey	85		117		106		258 #U
-HiddenKey	86		118		102		257 #V
-HiddenKey	87		119		115		257 #W
-HiddenKey	88		120		115		257 #X
-HiddenKey	89		121		106		258 #Y
-HiddenKey	90		122		97		257 #Z
+HiddenKey	126		59	1513	257 #~
+HiddenKey	33		49	1513	257 #!
+HiddenKey	64		50	1491	257 #@
+HiddenKey	35		51	1490	257 ##
+HiddenKey	36		52	1499	257 #$
+HiddenKey	37		53	1499	257 #%
+HiddenKey	94		54	1495	258 #^
+HiddenKey	38		55	1495	258 #&
+HiddenKey	42		56	1500	258 #*
+HiddenKey	40		57	1498	258 #(
+HiddenKey	41		48	1507	258 #)
+HiddenKey	95		45	1507	258 #_
+HiddenKey	43		61	1507	258 #+
+HiddenKey	124		92	1507	258 #|
+#
+HiddenKey	81		47	1513	257 #Q
+HiddenKey	87		39	1491	257 #W
+HiddenKey	69		1511	1490	257 #E
+HiddenKey	82		1512	1499	257 #R
+HiddenKey	84		1488	1499	257 #T
+HiddenKey	89		1496	1495	258 #Y
+HiddenKey	85		1493	1495	258 #U
+HiddenKey	73		1503	1500	258 #I
+HiddenKey	79		1501	1498	258 #O
+HiddenKey	80		1508	1507	258 #P
+HiddenKey	123		91	1507	258 #{
+HiddenKey	125		93	1507	258 #}
+#
+HiddenKey	65		1513	1513	257 #A
+HiddenKey	83		1491	1491	257 #S
+HiddenKey	68		1490	1490	257 #D
+HiddenKey	70		1499	1499	257 #F
+HiddenKey	71		1506	1499	257 #G
+HiddenKey	72		1497	1495	258 #H
+HiddenKey	74		44	1495	258 #J
+HiddenKey	75		1495	1500	258 #K
+HiddenKey	76		1500	1498	258 #L
+HiddenKey	58		1498	1507	258 #:
+HiddenKey	34		1507	1507	258 #"
+#
+HiddenKey	90		1494	1513	257 #Z
+HiddenKey	88		1505	1491	257 #X
+HiddenKey	67		1489	1490	257 #C
+HiddenKey	86		1492	1499	257 #V
+HiddenKey	66		1504	1499	257 #B
+HiddenKey	78		1502	1495	258 #N
+HiddenKey	77		1510	1495	258 #M
+HiddenKey	60		1514	1500	258 #<
+HiddenKey	62		1509	1498	258 #>
+HiddenKey	63		47	1507	258 #?
