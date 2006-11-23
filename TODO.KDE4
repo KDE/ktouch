@@ -1,0 +1,12 @@
+KTouch for KDE4 TODO
+
+annma - November 2006
+
+- right to left support (KTouchSlideLine)
+- set color scheme is in 2 places (in Settings as a menu item and in Settings/Configure KTouch) Those 2 locations are not synched when 1 changes.
+
+- clean the code a lot
+
+- fixe the wrong keyboard layout files and readd them
+
+
