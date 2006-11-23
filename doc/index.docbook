@@ -870,12 +870,12 @@ net</email></simpara></listitem>
 
 <para> Contributors:</para>
 <itemizedlist>
-<listitem><simpara>Frank Quotschalla, German keyboard and german training file and
+<listitem><simpara>Frank Quotschalla, German keyboard and German training file and
  translation.</simpara></listitem>
-<listitem><simpara>Ernesto Hern&aacute;ndez-Novich, Latinamerican
+<listitem><simpara>Ernesto Hern&aacute;ndez-Novich, Latin American
  keyboard</simpara></listitem>
 <listitem><simpara>Jo&atilde;o Miguel Neves, Portuguese keyboard</simpara></listitem>
-<listitem><simpara>Henri Girard, Frence keyboard</simpara></listitem>
+<listitem><simpara>Henri Girard, French keyboard</simpara></listitem>
 </itemizedlist>
 <para><emphasis>Special thanks to all the other (here not mentioned) contributors of keyboard and lecture files.</emphasis>
 </para>
@@ -889,12 +889,7 @@ net</email></simpara></listitem>
 <appendix id="installation">
 <title>How to obtain and install &ktouch;</title>
 
-<para>&ktouch; has its own home page <ulink
-url="http://ktouch.sourceforge.net">http://ktouch.sourceforge.net</ulink>. Please refer to the instructions on the home page since they will contain up-to-date information about how to obtain &ktouch;.
-</para>
-<para>&ktouch; can also be found
-on <ulink url="http://edu.kde.org/ktouch">The KDE Edutainment - &ktouch; home page</ulink>
-and is part of the KDE-Edutainment project. </para>
+ &install.intro.documentation;
 
 </appendix>
 
