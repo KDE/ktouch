@@ -13,6 +13,8 @@ install(FILES
   dvorak_ABCD.ktouch.xml  
   dvorak_es.ktouch.xml  
   dvorak.ktouch.xml  
+  dvorak-fr-1.ktouch.xml
+  dvorak-fr-2.ktouch.xml
   english.ktouch.xml  
   finnish_for_kids.ktouch.xml
   finnish.ktouch.xml

@@ -115,6 +115,7 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
+    kDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
 	m_hideKeyboard = Prefs::hideKeyboard();
 	if (m_hideKeyboard) 
     	setMaximumHeight(100);
@@ -461,7 +462,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::updateColours() {
-//	kdDebug() << "KTouchKeyboardWidget::updateColours()" << endl;
+	kDebug() << "KTouchKeyboardWidget::updateColours()" << endl;
     // old functionality : loop over all key connections
 	m_keyCharMap.clear();
     for (QList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {

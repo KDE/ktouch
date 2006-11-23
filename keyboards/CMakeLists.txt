@@ -14,6 +14,7 @@ install( FILES
   de_neo.keyboard
   dk.keyboard
   dvorak_es.keyboard
+  dvorak_fr.keyboard
   dvorak.keyboard
   dvorak_se.keyboard
   ee.keyboard
