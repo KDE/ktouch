@@ -1,0 +1,257 @@
+<KTouchLecture>
+  <Title>French - Dvorak 2nd part</Title>
+ <Comment>30 mai 2002 - Francis Leboutte, www.algo.be
+7 décembre 2004 - Passage au format ktouch par Matthieu MOY
+14 septembre 2005 - Passage au format ktouch XML par Stéphane Raimbault</Comment>
+ <Levels>
+  <Level>
+   <LevelComment>Voyelles accentuées (accent grave et tréma) et c cédille</LevelComment>
+   <NewCharacters>èùâêûîôïç</NewCharacters>
+   <Line>père père père père</Line>
+   <Line>où où où où où où</Line>
+   <Line>pâle pâle pâle pâle</Line>
+   <Line>tôt tôt tôt tôt tôt</Line>
+   <Line>août août août août</Line>
+   <Line>naître naître naître naître</Line>
+   <Line>caïd caïd caïd caïd</Line>
+   <Line>ça ça ça ça ça</Line>
+   <Line>sittèle sittèle sittèle sittèle</Line>
+   <Line>mât mât mât mât mât mât mât mât</Line>
+   <Line>pèse-moût pèse-moût pèse-moût pèse-moût pèse-moût</Line>
+   <Line>l'évêque l'évêque l'évêque l'évêque l'évêque l'évêque l'évêque</Line>
+  </Level>
+  <Level>
+   <LevelComment>Index vers le centre</LevelComment>
+   <NewCharacters>bf</NewCharacters>
+   <Line>bel bel bel bel bel bel bel bel bel bel bel bel bel</Line>
+   <Line>fus fus fus fus fus fus fus fus fus fus fus</Line>
+   <Line>fils fils fils fils fils fils fils fils fils fils</Line>
+   <Line>becs becs becs becs becs becs becs becs becs becs</Line>
+   <Line>beau beau beau beau beau beau beau beau beau beau</Line>
+   <Line>butée butée butée butée butée  bête bête bête bête bête</Line>
+   <Line>bègue bègue bègue bègue bègue</Line>
+   <Line>fente fente fente fente fente fente</Line>
+   <Line>facs facs facs facs facs facs facs</Line>
+   <Line>fisc fisc fisc fisc fisc fisc fisc</Line>
+   <Line>fesse fesse fesse fesse fesse fesse</Line>
+   <Line>buse buse buse buse</Line>
+   <Line>rubis rubis rubis rubis</Line>
+   <Line>billets billets billets billets</Line>
+   <Line>bât bât bât bât</Line>
+  </Level>
+  <Level>
+   <LevelComment>Index vers le centre et le bas</LevelComment>
+   <NewCharacters>yx</NewCharacters>
+   <Line>ye ye ye ye ye ye ye ye ye ye</Line>
+   <Line>xs xs xs xs xs xs xs xs xs xs</Line>
+   <Line>yen yen yen yen yen yen yen yen yen yen yen</Line>
+   <Line>axes axes axes axes axes axes axes axes axes</Line>
+   <Line>yin yin yin yin yin yin yin yin yin yin yin</Line>
+   <Line>taxes taxes taxes taxes taxes taxes taxes taxes taxes</Line>
+   <Line>tyran tyran tyran tyran</Line>
+   <Line>satyre satyre satyre satyre</Line>
+   <Line>sixième sixième sixième sixième sixième</Line>
+  </Level>
+  <Level>
+   <LevelComment>Index vers le centre et le haut</LevelComment>
+   <NewCharacters>.h</NewCharacters>
+   <Line>hs hs hs hs hs hs hs hs hs</Line>
+   <Line>.e .e .e .e .e .e .e .e .e</Line>
+   <Line>hottes hottes hottes hottes hottes hottes hottes hottes</Line>
+   <Line>hommes hommes hommes hommes hommes hommes hommes hommes</Line>
+   <Line>hausse hausse hausse hausse hausse</Line>
+   <Line>houx. houx. houx. houx. houx. houx. houx. houx. houx. houx. houx.</Line>
+   <Line>hiboux hiboux hiboux hiboux hiboux hiboux hiboux hiboux hiboux</Line>
+   <Line>cahots cahots cahots cahots cahots cahots cahots cahots</Line>
+   <Line>hase. hase. hase. hase. hase. hase. hase. hase. hase. hase.</Line>
+   <Line>mèches mèches mèches mèches</Line>
+   <Line>hase. hase. hase. hase. hase. hase. hase. hase. hase. hase.</Line>
+   <Line>haies. haies. haies. haies. haies. haies. haies. haies.</Line>
+   <Line>boxes boxes boxes boxes boxes boxes boxes boxes boxes boxes</Line>
+   <Line>beaux beaux beaux beaux beaux beaux beaux beaux beaux beaux</Line>
+   <Line>faxes faxes faxes faxes faxes faxes</Line>
+   <Line>xérès xérès xérès xérès xérès</Line>
+   <Line>foyers foyers foyers foyers foyers foyers foyers foyers</Line>
+   <Line>fayot fayot fayot fayot fayot fayot fayot fayot fayot</Line>
+   <Line>l'homme l'homme l'homme l'homme l'homme l'homme</Line>
+   <Line>fraye fraye fraye fraye fraye fraye fraye fraye fraye</Line>
+   <Line>acheté acheté acheté acheté acheté acheté acheté</Line>
+   <Line>fuyant fuyant fuyant fuyant fuyant fuyant fuyant fuyant</Line>
+   <Line>frayeur frayeur frayeur frayeur frayeur frayeur frayeur</Line>
+   <Line>festoyer festoyer festoyer festoyer festoyer festoyer</Line>
+  </Level>
+  <Level>
+   <LevelComment>Auriculaires vers le bas</LevelComment>
+   <NewCharacters>;j</NewCharacters>
+   <Line>judo judo judo judo judo judo judo judo judo judo</Line>
+   <Line>o; o; o; o; o; o; o; o; o; o;</Line>
+   <Line>judo; judo; judo; judo; judo; judo; judo; judo; judo;</Line>
+   <Line>judas; judas; judas; judas; judas; judas; judas; judas;</Line>
+   <Line>bijou; bijou; bijou; bijou; bijou; bijou; bijou; bijou;</Line>
+   <Line>ajouté; ajouté; ajouté; ajouté; ajouté; ajouté; ajouté;</Line>
+   <Line>bijoux; bijoux; bijoux; bijoux; bijoux; bijoux; bijoux;</Line>
+   <Line>jiu-jitsu; jiu-jitsu; jiu-jitsu; jiu-jitsu; jiu-jitsu;</Line>
+  </Level>
+  <Level>
+   <LevelComment>Auriculaires vers le haut</LevelComment>
+   <NewCharacters>:k</NewCharacters>
+   <Line>kid kid kid kid kid kid kid kid kid kid kid kid</Line>
+   <Line>o: o: o: o: o: o: o: o: o: o:</Line>
+   <Line>o:o:o:o;o;o:o;o;o:o:o:o;o:o;o;o:o;o;</Line>
+   <Line>kid: kid: kid: kid: kid: kid: kid: kid: kid: kid: kid:</Line>
+   <Line>kodiak: kodiak: kodiak: kodiak: kodiak: kodiak: kodiak:</Line>
+   <Line>ski: ski: ski: ski: ski:  skaï: skaï: skaï: skaï: skaï:</Line>
+   <Line>kurde: kurde: kurde: kurde: kurde: kurde: kurde: kurde:</Line>
+  </Level>
+  <Level>
+   <LevelComment>Auriculaires vers la droite</LevelComment>
+   <NewCharacters>w</NewCharacters>
+   <Line>world world world world world world world world</Line>
+   <Line>wide wide wide wide wide wide wide wide wide wide</Line>
+   <Line>web web web web web web web web web web web web</Line>
+   <Line>watt watt watt watt</Line>
+   <Line>world wide web. world wide web. world wide web.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Auriculaires vers le haut et la droite</LevelComment>
+   <NewCharacters>z</NewCharacters>
+   <Line>zen zen zen zen zen zen zen zen zen zen zen zen</Line>
+   <Line>zone zone zone zone zone zone zone zone zone zone</Line>
+   <Line>zut zut zut zut zut zut zut zut zut zut zut zut</Line>
+   <Line>demandez demandez demandez demandez demandez</Line>
+   <Line>zazou zazou zazou zazou</Line>
+   <Line>barzoï barzoï barzoï barzoï</Line>
+  </Level>
+  <Level>
+   <LevelComment>Pangramme : une phrase qui contient toutes les lettres de l'alphabet</LevelComment>
+   <NewCharacters>pangramme</NewCharacters>
+   <Line>portez ce vieux whisky au juge blond qui fume</Line>
+   <Line>voyez ce bon fakir moqueur pousser un wagon en jouant du xylophone</Line>
+   <Line>Zoé ma grande fille veut que je boive ce whisky dont je ne veux pas</Line>
+   <Line>the quick brown fox jumps over the lazy dog</Line>
+  </Level>
+  <Level>
+   <LevelComment>Entraînement à la vitesse</LevelComment>
+   <NewCharacters>vitesse</NewCharacters>
+   <Line>Digrammes et trigrammes les plus fréquents. Exercez-vous en</Line>
+   <Line>particulier aux digrammes à une main, dont certains sont parmi les</Line>
+   <Line>plus difficiles à taper.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Digrammes de la main droite</LevelComment>
+   <NewCharacters>digramme droite</NewCharacters>
+   <Line>nt nt nt nt nt nt nt nt nt</Line>
+   <Line>ns ns ns ns ns ns ns ns ns</Line>
+   <Line>nt nt ns nt ns ns ns nt ns nt nt ns nt ns nt ns nt nt</Line>
+   <Line>pr ns pr ns pr ns pr ns pr ns pr ns pr ns</Line>
+   <Line>st st st st st st st st</Line>
+   <Line>tr st tr st tr st tr st tr st tr st tr st</Line>
+   <Line>nc t nc t nc t nc t nc t nc t nc t</Line>
+   <Line>rt s rt s rt s rt s rt s rt s rt s</Line>
+   <Line>pl nt pl nt pl nt pl nt pl nt pl nt</Line>
+   <Line>rs rs rs rs rs rs rs rs rs</Line>
+   <Line>ts ts ts ts ts ts ts ts ts</Line>
+   <Line>ch ts ch ts ch ts ch ts ch ts ch ts</Line>
+   <Line>ct ct ct ct ct ct ct ct ct ct ct ct</Line>
+   <Line>nd nd nd nd nd nd nd nd nd</Line>
+   <Line>mp n mp n mp n mp n mp n mp n mp n</Line>
+  </Level>
+  <Level>
+   <LevelComment>Digrammes de la main gauche</LevelComment>
+   <NewCharacters>digramme gauche</NewCharacters>
+   <Line>qu a qu a qu a qu a qu a qu a qu a</Line>
+   <Line>ue ue ue ue ue ue ue ue ue</Line>
+   <Line>io e io e io e io e io e io e io e</Line>
+   <Line>ou ou ou ou ou ou ou ou ou</Line>
+   <Line>ai e ai e ai e ai e ai e ai e ai e</Line>
+   <Line>ie ie ie ie ie ie ie ie ie</Line>
+   <Line>au au au au au au au au au</Line>
+   <Line>eu eu eu eu eu eu eu eu eu</Line>
+   <Line>au ou ou au au au ou au ou ou ou ou au ou ou au ou ou</Line>
+   <Line>oi e oi e oi e oi e oi e oi e oi e</Line>
+   <Line>ui e ui e ui e ui e ui e ui e ui e</Line>
+   <Line>ée u ée u ée u ée u ée u ée u ée u</Line>
+   <Line>ei ei ei ei ei ei ei ei ei</Line>
+   <Line>e, ue e, ue e, ue e, ue e, ue e, ue</Line>
+  </Level>
+  <Level>
+   <LevelComment>Digrammes à 2 mains</LevelComment>
+   <NewCharacters>digramme double</NewCharacters>
+   <Line>es es es es es es es es es</Line>
+   <Line>en en en en en en en en en</Line>
+   <Line>le t le t le t le t le t le t le t</Line>
+   <Line>de de de de de de de de de</Line>
+   <Line>on on on on on on on on on</Line>
+   <Line>re s re s re s re s re s re s re s</Line>
+   <Line>ti e ti e ti e ti e ti e ti e ti e</Line>
+   <Line>er s er s er s er s er s er s er s</Line>
+   <Line>co t co t co t co t co t co t co t</Line>
+   <Line>an an an an an an an an an</Line>
+   <Line>te te te te te te te te te</Line>
+   <Line>la t la t la t la t la t la t la t</Line>
+   <Line>et et et et et et et et et</Line>
+   <Line>me n me n me n me n me n me n me n</Line>
+   <Line>ur s ur s ur s ur s ur s ur s ur s</Line>
+   <Line>at at at at at at at at at</Line>
+  </Level>
+  <Level>
+   <LevelComment>Ca continue...</LevelComment>
+   <NewCharacters>suite</NewCharacters>
+   <Line>ra s ra s ra s ra s ra s ra s ra s</Line>
+   <Line>ce t ce t ce t ce t ce t ce t ce t</Line>
+   <Line>tr s tr s tr s tr s tr s tr s tr s</Line>
+   <Line>ve s ve s ve s ve s ve s ve s ve s</Line>
+   <Line>un un un un un un un un un</Line>
+   <Line>ir es ir es ir es ir es ir es ir es</Line>
+   <Line>l' ta l' ta l' ta l' ta l' ta l' ta</Line>
+   <Line>ri se ri se ri se ri se ri se ri se</Line>
+   <Line>si e si e si e si e si e si e si e</Line>
+   <Line>or s or s or s or s or s or s or s</Line>
+   <Line>li te li te li te li te li te li te</Line>
+   <Line>ar s ar s ar s ar s ar s ar s ar s</Line>
+   <Line>pa n pa n pa n pa n pa n pa n pa n</Line>
+   <Line>iq eau iq eau iq eau iq eau iq eau</Line>
+   <Line>ro s ro s ro s ro s ro s ro s ro s</Line>
+   <Line>el t el t el t el t el t el t el t</Line>
+   <Line>il et il et il et il et il et il et</Line>
+   <Line>em n em n em n em n em n em n em n</Line>
+   <Line>ma n ma n ma n ma n ma n ma n ma n</Line>
+   <Line>om n om n om n om n om n om n om n</Line>
+   <Line>al t al t al t al t al t al t al t</Line>
+   <Line>té u té u té u té u té u té u té u</Line>
+  </Level>
+  <Level>
+   <LevelComment>Trigrammes les plus fréquents</LevelComment>
+   <NewCharacters>trigramme</NewCharacters>
+   <Line>ent ent ent ent ent ent</Line>
+   <Line>les t les t les t les t les t les t les t</Line>
+   <Line>ion e ion e ion e ion e ion e ion e ion e</Line>
+   <Line>que a que a que a que a que a que a que a</Line>
+   <Line>tio e tio e tio e tio e tio e tio e tio e</Line>
+   <Line>des des des des des des</Line>
+   <Line>ati e ati e ati e ati e ati e ati e ati e</Line>
+   <Line>men men men men men men</Line>
+   <Line>iqu eau iqu eau iqu eau iqu eau iqu eau iqu eau</Line>
+   <Line>res res res res res res</Line>
+   <Line>ire s ire s ire s ire s ire s ire s ire s ire s</Line>
+   <Line>con t con t con t con t con t con t con t con t</Line>
+   <Line>ons ons ons ons ons ons</Line>
+   <Line>eme n eme n eme n eme n eme n eme n eme n eme n</Line>
+   <Line>par ans par ans par ans par ans par ans par ans</Line>
+   <Line>ent ent ent ent ent ent</Line>
+   <Line>eur est eur est eur est eur est eur est eur est</Line>
+   <Line>pro ens pro ens pro ens pro ens pro ens pro ens</Line>
+   <Line>com ent com ent com ent com ent com ent com ent</Line>
+   <Line>ues ues ues ues ues ues</Line>
+   <Line>tre s tre s tre s tre s tre s tre s tre s tre s</Line>
+   <Line>ont ont ont ont ont ont</Line>
+   <Line>ren se ren se ren se ren se ren se ren se ren se</Line>
+   <Line>our se our se our se our se our se our se our se</Line>
+   <Line>nce tes nce tes nce tes nce tes nce tes nce tes</Line>
+   <Line>lle t lle t lle t lle t lle t lle t lle t lle t</Line>
+   <Line>ité une ité une ité une ité une ité une ité une</Line>
+   <Line>air nte elle ure ien</Line>
+   <Line>ces enc art dan onn</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>

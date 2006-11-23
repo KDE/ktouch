@@ -8,6 +8,8 @@ danish2.ktouch.xml \
 danish.ktouch.xml \
 dvorak_ABCD.ktouch.xml \
 dvorak_es.ktouch.xml \
+dvorak-fr-1.ktouch.xml \
+dvorak-fr-2.ktouch.xml \
 dvorak.ktouch.xml \
 english.ktouch.xml \
 finnish.ktouch.xml \

@@ -9,8 +9,13 @@ de.swiss.keyboard \
 dk.keyboard \
 en.dvorak.keyboard \
 en.keyboard \
+fr.a.keyboard \
+fr.keyboard \
+fr.swiss.keyboard \
+dvorak_fr.keyboard \
 hu.keyboard \
 he.keyboard \
+sl.keyboard \
 pl.keyboard
 
 
@@ -19,7 +24,6 @@ pl.keyboard
 #uk.basic.keyboard \
 #uk.typewriter.keyboard \
 #uk.winkeys.keyboard
-#sl.keyboard \
 #ru.winkeys.keyboard \
 #ru.2.keyboard \
 #ru.3.keyboard \
@@ -35,7 +39,4 @@ pl.keyboard
 #ee.keyboard \
 #fi.keyboard \
 #es.dvorak.keyboard \
-#es.keyboard \
-#fr.a.keyboard \
-#fr.keyboard \
-#fr.swiss.keyboard 
+#es.keyboard 

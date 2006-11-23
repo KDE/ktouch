@@ -1,0 +1,299 @@
+<KTouchLecture>
+ <Title>French - Dvorak 1st part</Title>
+ <Comment>Apprentissage du clavier Dvorak-fr
+Partie 1
+30 mai 2002 - Francis Leboutte, www.algo.be
+7 décembre 2004 - Passage au format ktouch par Matthieu MOY
+14 septembre 2005 - Passage au format ktouch XML par Stéphane Raimbault</Comment>
+ <Levels>
+  <Level>
+   <LevelComment>Touches de base</LevelComment>
+   <NewCharacters>es</NewCharacters>
+   <Line>eeee ssss eeee ssss eeee ssss eeee ssss</Line>
+   <Line>eee ee s ee ssss ss</Line>
+   <Line>es es se se se es se es</Line>
+   <Line>s e se es ess see</Line>
+   <Line>e s es se see ess</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ut</NewCharacters>
+   <Line>uuuu tttt uuuu tttt uuuu tttt uuuu tttt</Line>
+   <Line>uuu uu t uu tttt tt</Line>
+   <Line>ut ut tu tu</Line>
+   <Line>tu ut tu ut</Line>
+   <Line>t u tu ut utt tuu</Line>
+   <Line>u t ut tu tuu utt</Line>
+   <Line>eeee ssss uuuu tttt</Line>
+   <Line>tu tu tu tu  et et et et  te te te te  es es es es</Line>
+   <Line>su su su su</Line>
+   <Line>tes tes tes tes tes tes tes tes tes tes</Line>
+   <Line>tues tues tues tues tues tues tues tues</Line>
+   <Line>est est est est  sus sus sus sus  set set set set</Line>
+   <Line>test test test test  tues tues tues tues  sets sets sets sets</Line>
+  </Level>
+  <Level>
+   <NewCharacters>an</NewCharacters>
+   <Line>aaaa nnnn aaaa nnnn aaaa nnnn aaaa nnnn</Line>
+   <Line>aaa aa n aa nnnn nn</Line>
+   <Line>an an na na</Line>
+   <Line>na an na an</Line>
+   <Line>n a na an ann naa</Line>
+   <Line>a n an na naa ann</Line>
+   <Line>eeee ssss nnnn uuuu tttt aaaa</Line>
+   <Line>en en en en  su su su su  ne ne ne ne</Line>
+   <Line>ne ne ne ne  us us us us  tu tu tu tu</Line>
+   <Line>nu nu nu nu  an an an an  sa sa sa sa</Line>
+   <Line>ta ta ta ta  es es es es  te te te te</Line>
+   <Line>tas tas tas tas  nue nue nue nue</Line>
+   <Line>ans ans ans ans  sue sue sue sue</Line>
+   <Line>sut sut sut sut  eut eut eut eut</Line>
+   <Line>tue tue tue tue  set set set set</Line>
+   <Line>tau tau tau tau tau tau tau</Line>
+   <Line>use use use use  uns uns uns uns  eau eau eau eau</Line>
+   <Line>saut saut saut saut  anus anus anus anus</Line>
+   <Line>anse anse anse anse</Line>
+   <Line>tenu tenu tenu tenu  tant tant tant tant</Line>
+  </Level>
+  <Level>
+   <LevelComment>Mots</LevelComment>
+   <NewCharacters></NewCharacters>
+   <Line>tasse tasse tasse tasse  usent usent usent usent</Line>
+   <Line>tenus tenus tenus tenus</Line>
+   <Line>nasse nasse nasse nasse  tante tante tante tante</Line>
+   <Line>suent suent suent suent</Line>
+   <Line>tente tente tente tente  saute saute saute saute</Line>
+   <Line>suant suant suant suant</Line>
+   <Line>aunes aunes aunes aunes</Line>
+   <Line>usante usante usante usante  naseau naseau naseau naseau</Line>
+   <Line>ananas ananas ananas ananas</Line>
+   <Line>ententes ententes ententes ententes ententes</Line>
+   <Line>ententes ententes ententes</Line>
+  </Level>
+  <Level>
+   <NewCharacters>od</NewCharacters>
+   <Line>oooo ddddd oooo ddddd oooo ddddd oooo ddddd</Line>
+   <Line>ooo oo d oo dddd dd</Line>
+   <Line>od od do do do od do od</Line>
+   <Line>d o do od odd doo o d od do doo odd</Line>
+   <Line>oooo uuuu ssss nnnn aaaa dddd tttt eeee</Line>
+   <Line>os os os os  on on on on  tu tu tu tu</Line>
+   <Line>ta ta ta ta  de de de de  ne ne ne ne</Line>
+   <Line>do do do do  sa sa sa sa  na na na na</Line>
+   <Line>ad ad ad ad  us us us us  ut ut ut ut</Line>
+   <Line>nu nu nu nu  un un un un  du du du du</Line>
+   <Line>se se se se  es es es es  te te te te</Line>
+   <Line>dos dos dos dos</Line>
+  </Level>
+  <Level>
+   <LevelComment>Mots</LevelComment>
+   <NewCharacters></NewCharacters>
+   <Line>ton ton ton ton  ose ose ose ose</Line>
+   <Line>des des des des des des des des des des</Line>
+   <Line>dettes dettes dettes dettes dettes dettes dettes dettes</Line>
+   <Line>nues nues nues nues nues nues nues nues nues nues nues</Line>
+   <Line>nous nous nous nous nous nous nous nous nous nous nous</Line>
+   <Line>dans dans dans dans dans dans dans dans</Line>
+   <Line>dont dont dont dont dont dont dont dont</Line>
+   <Line>oses oses oses oses  unes unes unes unes  date date date date</Line>
+   <Line>tout tout tout tout  dose dose dose dose</Line>
+   <Line>dune dune dune dune  anse anse anse anse</Line>
+   <Line>aune aune aune aune</Line>
+   <Line>notes notes notes notes notes notes notes notes</Line>
+   <Line>tons tons tons tons tons tons tons tons tons</Line>
+   <Line>dents dents dents dents dents dents dents dents</Line>
+   <Line>sautons sautons sautons sautons sautons sautons</Line>
+   <Line>dansons dansons dansons dansons dansons dansons</Line>
+   <Line>soute soute soute soute  doute doute doute doute  natte natte natte natte</Line>
+   <Line>tasse tasse tasse tasse  anode anode anode anode  atone atone atone atone</Line>
+   <Line>saute saute saute saute  ouest ouest ouest ouest</Line>
+   <Line>suant suant suant suant  sonde sonde sonde sonde  soude soude soude soude</Line>
+   <Line>sonate sonate sonate sonate  tondue tondue tondue tondue</Line>
+   <Line>usante usante usante usante  anodes anodes anodes anodes</Line>
+   <Line>tondues tondues tondues tondues  soudent soudent soudent soudent</Line>
+   <Line>usantes usantes usantes usantes</Line>
+  </Level>
+  <Level>
+   <LevelComment>Index, majeurs et annuaires vers le bas et le haut</LevelComment>
+   <NewCharacters>ir</NewCharacters>
+   <Line>ie ie ie ie ie ie ie ie ie ie ie ie ie ie</Line>
+   <Line>rs rs rs rs rs rs rs rs rs rs rs rs rs rs</Line>
+   <Line>ie ie ie rs rs ie rs ie ie rs rs rs ie rs</Line>
+   <Line>ie rs ie ie rs rs rs ie rs ie ie rs ie ie</Line>
+   <Line>ras ras ras ras ras ras ras ras ras ras ras</Line>
+   <Line>ide ide ide ide ide ide ide ide ide ide ide</Line>
+   <Line>sieurs sieurs sieurs sieurs sieurs sieurs</Line>
+   <Line>ries ries ries ries ries ries ries ries ries ries</Line>
+   <Line>sires sires sires sires sires sires sires sires</Line>
+   <Line>tait tait tait tait tais tais tais tais tais tais</Line>
+   <Line>rites rites rites rites rites rites rites rites</Line>
+   <Line>nions nions nions nions nions nions nions nions nions</Line>
+   <Line>rides rides rides rides rides rides rides rides</Line>
+   <Line>suer suer suer suer  ruer ruer ruer ruer</Line>
+  </Level>
+  <Level>
+   <LevelComment>Mots plus longs</LevelComment>
+   <NewCharacters></NewCharacters>
+   <Line>nouer nouer nouer nouer  noter noter noter noter  ruade ruade ruade ruade</Line>
+   <Line>droite droite droite droite  sonder sonder sonder sonder</Line>
+   <Line>ardent ardent ardent ardent  adroit adroit adroit adroit</Line>
+   <Line>danseur danseur danseur danseur  adroite adroite adroite adroite</Line>
+   <Line>suinter suinter suinter suinter  renouer renouer renouer renouer</Line>
+   <Line>notaire notaire notaire notaire  noiraud noiraud noiraud noiraud</Line>
+   <Line>soutien soutien soutien soutien  endroit endroit endroit endroit</Line>
+   <Line>sourdine sourdine sourdine sourdine  sudation sudation sudation sudation</Line>
+   <Line>outsider outsider outsider outsider  noterais noterais noterais noterais</Line>
+   <Line>soutenir soutenir soutenir soutenir  adroites adroites adroites adroites</Line>
+   <Line>aiderons aiderons aiderons aiderons  risettes risettes risettes risettes</Line>
+   <Line>nous autres nous autres nous autres nous autres nous autres nous autres</Line>
+   <Line>nourrirons nourrirons nourrirons nourrirons nourrirons nourrirons</Line>
+   <Line>soutiendra soutiendra soutiendra soutiendra</Line>
+  </Level>
+  <Level>
+   <LevelComment>Majeurs vers le bas</LevelComment>
+   <NewCharacters>,l</NewCharacters>
+   <Line>let let let let let let let let let let</Line>
+   <Line>u, u, u, u, u, u, u, u,</Line>
+   <Line>lutte, lutte, lutte, lutte, lutte, lutte, lutte, lutte,</Line>
+   <Line>let, let, let, let, let, let, let, let,</Line>
+   <Line>lut lut lut lut lut lut lut lut lut lut</Line>
+   <Line>lut, lut, lut, lut, lut, lut, lut, lut,</Line>
+   <Line>lait lait lait lait</Line>
+   <Line>lait, lait, lait, lait, lait, lait, lait,</Line>
+   <Line>ailette ailette ailette</Line>
+   <Line>ailette, ailette, ailette, ailette, ailette,</Line>
+   <Line>lots lots lots lots</Line>
+   <Line>lots, lots, lots, lots, lots, lots,</Line>
+   <Line>allure allure allure allure</Line>
+   <Line>allure, allure, allure, allure, allure, allure, allure,</Line>
+   <Line>silure silure silure</Line>
+   <Line>silure, silure, silure, silure, silure,</Line>
+  </Level>
+  <Level>
+   <LevelComment>Majeurs vers le haut</LevelComment>
+   <NewCharacters>éc</NewCharacters>
+   <Line>ténu ténu ténu ténu ténu ténu ténu ténu ténu ténu</Line>
+   <Line>cet cet cet cet cet cet cet cet cet cet cet cet</Line>
+   <Line>ce ténu ce ténu ce ténu ce ténu ce ténu ce ténu ce ténu</Line>
+   <Line>suée suée suée suée suée suée suée suée</Line>
+   <Line>cote cote cote cote cote cote cote cote</Line>
+   <Line>écoute écoute écoute écoute écoute écoute</Line>
+   <Line>décrut décrut décrut décrut décrut décrut</Line>
+   <Line>racé racé racé racé racé racé</Line>
+   <Line>écrété écrété écrété écrété</Line>
+   <Line>acte acte acte acte acte acte acte</Line>
+   <Line>raclée raclée raclée raclée</Line>
+   <Line>écru écru écru écru écru écru</Line>
+   <Line>calé calé calé calé  lacé lacé lacé lacé</Line>
+   <Line>codétenu codétenu codétenu codétenu codétenu</Line>
+   <Line>déci déci déci déci déci déci déci déci</Line>
+   <Line>tuée tuée tuée tuée</Line>
+   <Line>luné luné luné luné  lancé lancé lancé lancé</Line>
+   <Line>éclaté éclaté éclaté éclaté  lactée lactée lactée lactée</Line>
+   <Line>assuétude assuétude assuétude assuétude</Line>
+  </Level>
+  <Level>
+   <LevelComment>Annulaires vers le haut</LevelComment>
+   <NewCharacters>´m</NewCharacters>
+   <Line>mon mon mon mon mon mon mon mon mon mon mon</Line>
+   <Line>'a 'a 'a 'a 'a 'a 'a 'a 'a</Line>
+   <Line>mon mon 'a mon 'a 'a mon 'a 'a 'a mon 'a mon 'a mon 'a mon</Line>
+   <Line>l´air l´air l´air l´air l´air l´air l´air l´air</Line>
+   <Line>ment ment ment ment ment ment ment</Line>
+   <Line>d´une d´une d´une d´une d´une d´une</Line>
+   <Line>armée armée armée armée armée armée</Line>
+   <Line>l´amont l´amont l´amont l´amont l´amont</Line>
+   <Line>sommes sommes sommes sommes sommes</Line>
+   <Line>mains mains mains mains mains mains</Line>
+   <Line>enmena enmena enmena enmena enmena</Line>
+   <Line>écumait écumait écumait écumait écumait</Line>
+   <Line>l´allure l´allure l´allure l´allure l´allure l´allure</Line>
+   <Line>ma maman m'a donné une tomme</Line>
+  </Level>
+  <Level>
+   <LevelComment>Annulaires vers le bas</LevelComment>
+   <NewCharacters>pq</NewCharacters>
+   <Line>que que que que que que que que que que que</Line>
+   <Line>pan pan pan pan pan pan pan pan pan pan pan</Line>
+   <Line>pan que que pan pan que pan que pan pan que que pan que</Line>
+   <Line>quand quand quand quand quand quand quand</Line>
+   <Line>pente pente pente pente pente pente pente</Line>
+   <Line>quota quota quota quota quota quota quota quota quota</Line>
+   <Line>pain pain pain pain pain pain pain pain pain pain</Line>
+   <Line>prune prune prune prune prune prune</Line>
+   <Line>qui qui qui qui qui qui</Line>
+   <Line>plaque plaque plaque plaque plaque plaque plaque</Line>
+   <Line>temps temps temps temps temps temps</Line>
+   <Line>plouc plouc plouc plouc</Line>
+   <Line>pétal pétal pétal pétal</Line>
+   <Line>qualité qualité qualité qualité qualité</Line>
+   <Line>quiproquo quiproquo quiproquo quiproquo</Line>
+   <Line>auquel auquel auquel auquel auquel auquel</Line>
+   <Line>piquet piquet piquet piquet piquet</Line>
+   <Line>capé capé capé  placé placé placé</Line>
+  </Level>
+  <Level>
+   <LevelComment>Mots plus longs</LevelComment>
+   <NewCharacters></NewCharacters>
+   <Line>quoique quoique quoique quoique quoique quoique</Line>
+   <Line>pourquoi pourquoi pourquoi pourquoi pourquoi pourquoi</Line>
+   <Line>piqure piqure piqure piqure</Line>
+   <Line>plaquer plaquer plaquer plaquer</Line>
+   <Line>quasar quasar quasar quasar quasar quasar quasar</Line>
+   <Line>pommes pommes pommes pommes pommes pommes pommes</Line>
+   <Line>parques parques parques parques parques parques</Line>
+   <Line>pataras pataras pataras pataras pataras pataras</Line>
+   <Line>lunatique lunatique lunatique lunatique lunatique</Line>
+   <Line>quadrillerait quadrillerait quadrillerait quadrillerait</Line>
+   <Line>quenouille quenouille quenouille quenouille quenouille</Line>
+   <Line>atlantique atlantique atlantique atlantique atlantique</Line>
+   <Line>l´aptitude l´aptitude l´aptitude l´aptitude l´aptitude</Line>
+   <Line>pire pire pire pire  plus plus plus plus</Line>
+   <Line>parts parts parts parts parts parts parts parts</Line>
+   <Line>partie partie partie partie  glapir glapir glapir glapir</Line>
+   <Line>parie parie parie parie  paire paire paire paire</Line>
+   <Line>pirate pirate pirate pirate</Line>
+   <Line>préemption préemption préemption préemption</Line>
+  </Level>
+  <Level>
+   <LevelComment>Index vers le haut</LevelComment>
+   <NewCharacters>gv</NewCharacters>
+   <Line>gens gens gens gens gens gens gens gens gens gens</Line>
+   <Line>vus vus vus vus vus vus vus vus vus vus vus vus</Line>
+   <Line>age age age age age age age age age age</Line>
+   <Line>visses visses visses visses visses visses visses</Line>
+   <Line>givres givres givres givres givres givres givres</Line>
+   <Line>genou genou genou genou genou genou</Line>
+   <Line>page page page page</Line>
+   <Line>vanne vanne vanne vanne vanne vanne</Line>
+   <Line>auge auge auge auge auge auge auge auge</Line>
+   <Line>vagues vagues vagues vagues vagues vagues</Line>
+   <Line>agaves agaves agaves agaves agaves</Line>
+   <Line>gelées gelées gelées gelées</Line>
+   <Line>vider vider vider vider vider vider</Line>
+  </Level>
+  <Level>
+   <LevelComment>Mots plus longs</LevelComment>
+   <NewCharacters></NewCharacters>
+   <Line>usage usage usage usage usage usage usage usage usage</Line>
+   <Line>vendre vendre vendre vendre vendre vendre vendre</Line>
+   <Line>gemmes gemmes gemmes gemmes gemmes gemmes gemmes</Line>
+   <Line>valvule valvule valvule valvule valvule valvule valvule</Line>
+   <Line>mages mages mages mages mages mages mages mages</Line>
+   <Line>gommes gommes gommes gommes gommes gommes gommes</Line>
+   <Line>grammes grammes grammes grammes grammes</Line>
+   <Line>agrumes agrumes agrumes agrumes agrumes agrumes agrumes</Line>
+   <Line>messager messager messager messager messager messager messager</Line>
+   <Line>gourmets gourmets gourmets gourmets gourmets gourmets gourmets</Line>
+   <Line>guider guider guider guider  gourde gourde gourde gourde</Line>
+   <Line>gradin gradin gradin gradin  gredin gredin gredin gredin</Line>
+   <Line>ergoter ergoter ergoter ergoter endroit endroit endroit endroit</Line>
+   <Line>graduer graduer graduer graduer</Line>
+   <Line>guéridon guéridon guéridon guéridon</Line>
+   <Line>grandiose grandiose grandiose grandiose</Line>
+   <Line>nouveau nouveau nouveau nouveau nouveau nouveau nouveau nouveau</Line>
+   <Line>l´allumage l´allumage l´allumage l´allumage l´allumage</Line>
+   <Line>l´alunissage l´alunissage l´alunissage l´alunissage</Line>
+   <Line>avogadro avogadro avogadro avogadro</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
