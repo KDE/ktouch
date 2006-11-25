@@ -21,6 +21,7 @@ install( FILES
   en.dvorak.keyboard
   en.keyboard
   es.keyboard
+  es2.keyboard
   fi.keyboard
   fr_a.keyboard
   fr_ch.keyboard

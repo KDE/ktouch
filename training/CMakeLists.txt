@@ -16,6 +16,8 @@ install(FILES
   dvorak-fr-1.ktouch.xml
   dvorak-fr-2.ktouch.xml
   english.ktouch.xml  
+  espanol.ktouch.xml
+  espanol2.ktouch.xml
   finnish_for_kids.ktouch.xml
   finnish.ktouch.xml
   french2.ktouch.xml  
@@ -29,6 +31,7 @@ install(FILES
   hungarian_expert.ktouch.xml
   hungarian.ktouch.xml
   italian.ktouch.xml  
+  latin.ktouch.xml
   nederlands_junior.ktouch.xml  
   nederlands.ktouch.xml  
   norwegian.ktouch.xml  
@@ -38,5 +41,6 @@ install(FILES
   russian_long.ktouch.xml
   slovenian.ktouch.xml
   spanish.ktouch.xml 
+  ukrainian.ktouch.xml
   DESTINATION ${DATA_INSTALL_DIR}/ktouch)
 
