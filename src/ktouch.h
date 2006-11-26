@@ -27,7 +27,7 @@ class KToggleAction;
 class KActionMenu;
 class KSelectAction;
 
-class KTouchStatus;
+class KTouchStatusWidget;
 class KTouchSlideLine;
 class KTouchKeyboardWidget;
 class KTouchTrainer;
@@ -157,7 +157,7 @@ class KTouch : public KMainWindow {
     KSelectAction		   *m_defaultLectureAction;
     KSelectAction		   *m_currentUserAction;
 
-    KTouchStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
+    KTouchStatusWidget     *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
     KTouchSlideLine        *m_slideLineWidget;      ///< Pointer to the sliding line widget.
     KTouchKeyboardWidget   *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).

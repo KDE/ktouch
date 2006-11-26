@@ -74,7 +74,7 @@ class KTouchLecture {
 
     
     /// The editor should be able to handle the internal lecture data (it's for convenience actually).
-    friend class KTouchLectureEditor;
+    friend class KTouchLectureEditorDialog;
 };
 
 #endif  // KTOUCHLECTURE_H

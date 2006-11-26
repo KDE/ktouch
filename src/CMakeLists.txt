@@ -1,12 +1,28 @@
+# CMakeList.txt for the KTouch source directory
 
-include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/  )
+# set include directories
+include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/ )
 
+# add ui files, all files in directory ui are Qt4 only
+kde4_add_ui_files(ktouch_UIS
+   ui/ktouchcoloreditordialog.ui 
+   ui/ktouchopenrequestdialog.ui 
+   ui/ktouchprefgeneralpage.ui 
+   ui/ktouchstatuswidget.ui
+   ui/ktouchlectureeditordialog.ui 
+   ktouchprefcolorslayout.ui 
+   ktouchprefkeyboardlayout.ui 
+   ktouchpreftraininglayout.ui 
+   ktouchstatistics_dlg.ui 
+   ktouchusersetup_dlg.ui
+)
 
-########### next target ###############
-
+# set the source code files from which KTouch is compiled
 set(ktouch_SRCS
+   ktouchcoloreditordialog.cpp 
+   ktouchopenrequestdialog.cpp 
+   ktouchlectureeditordialog.cpp 
    ktouchchartwidget.cpp 
-   ktouchcoloreditor.cpp 
    ktouchcolorscheme.cpp 
    ktouchdefaults.cpp 
    ktouchkeyboardwidget.cpp 
@@ -14,13 +30,11 @@ set(ktouch_SRCS
    ktouchkey.cpp 
    ktouchkeys.cpp 
    ktouchlecture.cpp 
-   ktouchlectureeditor.cpp 
    ktouchleveldata.cpp 
-   ktouchopenrequest.cpp 
    ktouchslideline.cpp 
    ktouchstatistics.cpp 
    ktouchstatisticsdata.cpp 
-   ktouchstatus.cpp 
+   ktouchstatuswidget.cpp 
    ktouchtrainer.cpp
    ktouchusersetup.cpp 
    ktouchutils.cpp 
@@ -28,24 +42,12 @@ set(ktouch_SRCS
    main.cpp
 )
 
-kde4_automoc(${ktouch_SRCS})
-
-kde4_add_ui_files(ktouch_SRCS 
-   ktouchcoloreditor_dlg.ui 
-   ktouchlectureeditor_dlg.ui 
-   ktouchopenrequest_dlg.ui 
-   ktouchprefcolorslayout.ui 
-   ktouchprefgenerallayout.ui 
-   ktouchprefkeyboardlayout.ui 
-   ktouchpreftraininglayout.ui 
-   ktouchstatistics_dlg.ui 
-   ktouchstatuslayout.ui
-   ktouchusersetup_dlg.ui
-)
+# create moc files automatically, requires that moc files are included into the cpp files
+kde4_automoc( ${ktouch_UIS} ${ktouch_SRCS} )
 
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
-kde4_add_executable(ktouch ${ktouch_SRCS})
+kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} kdeeduplot ${KDE4_PHONONCORE_LIBRARY})
 

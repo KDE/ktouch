@@ -16,13 +16,8 @@
 // Standard files
 #include <algorithm>
 
-// QT Header
-#include <QVBoxLayout>
-#include <QSignalMapper>
-#include <QCheckBox>
-#include <QLabel>
-#include <QKeyEvent>
-#include <QResizeEvent>
+// Qt Header
+#include <QtGui>
 
 // KDE Header
 #include <kselectaction.h>
@@ -43,17 +38,19 @@
 #include <kicon.h>
 #include <kio/netaccess.h>
 
-// Own header files
+// KTouch Header
 #include "ktouchlecture.h"
-#include "ktouchlectureeditor.h"
-#include "ktouchstatus.h"
+#include "ktouchtrainer.h"
+
+#include "ktouchstatuswidget.h"
 #include "ktouchslideline.h"
 #include "ktouchkeyboardwidget.h"
-#include "ktouchcoloreditor.h"
-#include "ktouchtrainer.h"
-#include "ktouchstatistics.h"
-#include "ktouchprefgeneral.h"
 
+#include "ktouchlectureeditordialog.h"
+#include "ktouchcoloreditordialog.h"
+//#include "ktouchstatistics.h"
+
+#include "ktouchprefgeneral.h"
 #include "ktouchpreftraining.h"
 #include "ktouchprefkeyboard.h"
 #include "ktouchprefcolors.h"
@@ -81,9 +78,9 @@ KTouch::KTouch()
 	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
 	m_userStats.clear(); // make sure our mapping contains the "default" user
 	// read previous stats from file
-	// FIXME: find the source code for this function or reimplement it
-	// KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
+	KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
 	//	kDebug() << "[KTouch::KTouch] users = " << m_userStats.count() << endl;
+
 	// Setup our actions and connections
 	setupActions();
 	// create the GUI reading the ui.rc file
@@ -347,7 +344,7 @@ void KTouch::fileEditLecture() {
 	trainingPause();
 	m_trainer->storeTrainingStatistics();
 	// Create and execute editor
-    KTouchLectureEditor dlg(this);
+    KTouchLectureEditorDialog dlg(this);
     dlg.startEditor( Prefs::currentLectureFile() );
 	// Reload lecture in case it was modified
 	m_lecture.loadXML(this, Prefs::currentLectureFile() );
@@ -373,7 +370,7 @@ void KTouch::fileEditColors() {
 		else 					++default_schemes;
 	}
 	
-	KTouchColorEditor dlg(this);		// Create editor
+	KTouchColorEditorDialog dlg(this);		// Create editor
 	// start editor
 	int selected;
 	dlg.startEditor( tmp_list, Prefs::currentColorScheme() - default_schemes, selected);
@@ -441,7 +438,7 @@ void KTouch::trainingPause() {
 
 void KTouch::trainingStatistics() {
     trainingPause();
-	KTouchStatistics dlg(this);
+	//KTouchStatistics dlg(this);
 	// TODO : this is somewhat messy: we have to get the words in the
     //        current line (since they are not stored in the current
     //        level and session stats, because the student may delete
@@ -455,7 +452,7 @@ void KTouch::trainingStatistics() {
     // data for the current lecture present for the dialog to function
 	// properly
 	getCurrentLectureStats();
-    dlg.run(Prefs::currentLectureFile(), m_userStats[Prefs::currentUserName()], kls, kss);
+    //dlg.run(Prefs::currentLectureFile(), m_userStats[Prefs::currentUserName()], kls, kss);
 }
 // ----------------------------------------------------------------------------
 
@@ -523,7 +520,8 @@ void KTouch::optionsSetupUsers() {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeStatusbarMessage(const QString& text) {
-    statusBar()->message(text);
+	// FIXME
+    //statusBar()->message(text);
 }
 // ----------------------------------------------------------------------------
 
@@ -747,10 +745,10 @@ void KTouch::initTrainingSession() {
     // of QSizePolicy)
 
     QWidget *main = new QWidget();
-    QVBoxLayout * layout = new QVBoxLayout( this );
+    QVBoxLayout * layout = new QVBoxLayout(main);
     main->setLayout(layout);
 
-    m_statusWidget = new KTouchStatus( this );
+    m_statusWidget = new KTouchStatusWidget( this );
     m_slideLineWidget = new KTouchSlideLine( this );
     m_slideLineWidget->setSizePolicy( QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 1) );
     m_keyboardWidget = new KTouchKeyboardWidget( this );
@@ -773,12 +771,15 @@ void KTouch::initTrainingSession() {
     statusBar()->insertPermanentItem("Level", 1, 0);
     statusBar()->insertPermanentItem("Session", 2, 0);
 
-    this->setCentralWidget(main);
+    this->setCentralWidget(main);	
 }
 // ----------------------------------------------------------------------------
 
 // Creates the (standard) actions and entries in the menu.
 void KTouch::setupActions() {
+	// here we create actions for the menu and toolbar
+	// the placement is defined in the ktouchui.rc file
+
 	// *** File menu ***
     KAction *action = new KAction(KIcon("open_plaintext"), i18n("&Open plain text file..."), actionCollection(), "file_opentext");
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
@@ -982,33 +983,3 @@ void KTouch::updateCurrentUserActionCheck() {
    	m_currentUserAction->setCurrentItem(index);
 }
 // ----------------------------------------------------------------------------
-
-/*
-void KTouch::imStartEvent(QIMEvent *e) {
-	kDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
-  e->accept();
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::imComposeEvent(QIMEvent *e) {
-	kDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
-  e->accept();
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::imEndEvent(QIMEvent *e) {
-	kDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
-  if (!e->text().isEmpty()) {
-    if (e->text() == "^") {
-      QKeyEvent *ev = new QKeyEvent (QEvent::KeyPress,
-                                    Qt::Key_AsciiCircum, '^', 0,
-                                    QString("^"));
-      keyPressEvent(ev);
-      delete ev;
-    }
-  }
-  e->accept();
-}
-// ----------------------------------------------------------------------------
-*/
-

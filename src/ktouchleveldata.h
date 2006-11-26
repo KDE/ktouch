@@ -69,7 +69,7 @@ class KTouchLevelData {
 
     // so I don't have to allow access to read/write function to everybody :-)
     friend class KTouchLecture;
-    friend class KTouchLectureEditor;
+    friend class KTouchLectureEditorDialog;
 };
 
 #endif // KTOUCHLEVELDATA_H

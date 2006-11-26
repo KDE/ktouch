@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchstatus.h                                                        *
- *   --------------                                                        *
+ *   ktouchstatuswidget.h                                                  *
+ *   --------------------                                                  *
  *   Copyright (C) 2000 by Håvard Frøiland, 2003 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,24 +10,24 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHSTATUS_H
-#define KTOUCHSTATUS_H
+#ifndef KTOUCHSTATUSWIDGET_H
+#define KTOUCHSTATUSWIDGET_H
 
 #include <QWidget>
 
-#include "ui_ktouchstatuslayout.h"
+#include "ui_ktouchstatuswidget.h"
 
 /** This is the implementation of the status widget (at the top of the main view).
  *  It simply displays the status but does not have a functionality of its own.
- *  Everythings is calculated in the trainer (see KTouchTrainer)and then displayed
+ *  Everythings is calculated in the trainer (see KTouchTrainer) and then displayed
  *  using the updateStatus() member function.
  *  The "new characters" string is set using the member function setNewChars().
  */
-class KTouchStatus : public QWidget, public Ui_KTouchStatusLayout {
+class KTouchStatusWidget : public QWidget, public Ui_KTouchStatusWidget {
     Q_OBJECT
   public:
     /// Constructor
-    explicit KTouchStatus(QWidget *parent);
+    KTouchStatusWidget(QWidget *parent);
 	/// Called when the preferences have changed in the configuration dialog.
 	void applyPreferences();
     /// Sets the new characters text.
@@ -36,4 +36,4 @@ class KTouchStatus : public QWidget, public Ui_KTouchStatusLayout {
     void updateStatus(unsigned int level, double correctness);
 };
 
-#endif  // KTOUCHSTATUS_H
+#endif  // KTOUCHSTATUSWIDGET_H

@@ -10,15 +10,15 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHLECTUREEDITOR_H
-#define KTOUCHLECTUREEDITOR_H
+#ifndef KTOUCHLECTUREEDITORDIALOG_H
+#define KTOUCHLECTUREEDITORDIALOG_H
 
 #include <QFont>
 #include <QDialog>
 
 #include <kurl.h>
 
-#include "ui_ktouchlectureeditor_dlg.h"
+#include "ui_ktouchlectureeditordialog.h"
 #include "ktouchlecture.h"
 
 /// This is the KTouch lecture editor dialog.
@@ -36,13 +36,13 @@
 ///  // lecture or an empty URL
 /// @endcode
 /// @see startEditor() for details on the return value.
-class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
+class KTouchLectureEditorDialog : public QDialog, public Ui_KTouchLectureEditorDialog {
     Q_OBJECT
   public:
     /// Constructor
-    explicit KTouchLectureEditor(QWidget *parent, const char* name = 0, bool modal = false, Qt::WFlags fl = 0);
+    KTouchLectureEditorDialog(QWidget *parent = 0);
     /// Destructor
-    ~KTouchLectureEditor() {};
+    ~KTouchLectureEditorDialog() {};
     /// Shows and executes the dialog (argument is the url to the default or 
     /// current lecture file).
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
@@ -66,7 +66,7 @@ class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
     /// Will be called whenever another level has been selected.
-    void newSelection(Q3ListViewItem* item);
+    void newSelection(int row);
     /// Will be called whenever the new chars description is changed.
     void newCharsChanged(const QString& text);
     /// Will be called when the "New Level" button has been clicked.
@@ -103,12 +103,10 @@ class KTouchLectureEditor : public QDialog, public Ui_KTouchLectureEditorDlg {
     /// @return The function returns 'false' if the user aborted the save request, otherwise true.
     bool saveModified();
 
-    KTouchLecture                   m_lecture;         ///< The currently used lecture.
-    unsigned int                    m_level;           ///< The current level number.
-    Q3ListViewItem                 *m_currentItem;     ///< The currently selected item in the list view.
-    bool                            m_selecting;       ///< Flag to prevent the selection slot from selecting twice.
-    bool                            m_modified;        ///< Flag indicating whether the lecture has been modified.
-    KUrl                            m_currentURL;      ///< URL of the current lecture.
+    KTouchLecture	m_lecture;         ///< The currently used lecture.
+    int             m_level;           ///< The current level number, corresponds to the row.
+    bool            m_modified;        ///< Flag indicating whether the lecture has been modified.
+    KUrl            m_currentURL;      ///< URL of the current lecture.
 };
 
-#endif
+#endif // KTOUCHLECTUREEDITORDIALOG_H

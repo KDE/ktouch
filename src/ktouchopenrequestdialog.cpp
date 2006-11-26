@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchopenrequest.cpp                                                 *
- *   ---------------------                                                 *
+ *   ktouchopenrequestdialog.cpp                                           *
+ *   ---------------------------                                           *
  *   Copyright (C) 2004 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,12 +10,11 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchopenrequest.h"
-#include "ktouchopenrequest.moc"
+#include "ktouchopenrequestdialog.h"
+#include "ktouchopenrequestdialog.moc"
 
 #include <qradiobutton.h>
 #include <qlabel.h>
-#include <q3buttongroup.h>
 
 #include <kpushbutton.h>
 #include <klineedit.h>
@@ -27,13 +26,20 @@
 #include <klocale.h>
 
 
-KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
-: QDialog(parent,name, modal,fl)
+KTouchOpenRequestDialog::KTouchOpenRequestDialog(QWidget* parent)
+: QDialog(parent)
 {
     setupUi(this);
+
+	connect(okBtn, SIGNAL(clicked()), this, SLOT(okBtnClicked()) );
+	connect(currentRadioBtn, SIGNAL(clicked()), this, SLOT(radioBtnChanged()) );
+	connect(presetRadioBtn, SIGNAL(clicked()), this, SLOT(radioBtnChanged()) );
+	connect(openFileRadioBtn, SIGNAL(clicked()), this, SLOT(radioBtnChanged()) );
+	connect(newRadioBtn, SIGNAL(clicked()), this, SLOT(radioBtnChanged()) );
+	connect(browseBtn, SIGNAL(clicked()), this, SLOT(browseBtnClicked()) );
 }
 
-int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, const QString& title, 
+int KTouchOpenRequestDialog::requestFileToOpen(KUrl& url, const QString& caption, const QString& title, 
       const QString& currentText, const QString& defaultText, const QString& openText,
       const QString& newText, KUrl current_url, QStringList defaultList, QString emptyListText)
 {
@@ -75,7 +81,7 @@ int KTouchOpenRequest::requestFileToOpen(KUrl& url, const QString& caption, cons
     return result;
 }
 
-void KTouchOpenRequest::okBtnClicked() {
+void KTouchOpenRequestDialog::okBtnClicked() {
     if (currentRadioBtn->isChecked())
         m_url = currentLabel->text();
     if (presetRadioBtn->isChecked())
@@ -98,7 +104,7 @@ void KTouchOpenRequest::okBtnClicked() {
 }
 
 
-void KTouchOpenRequest::radioBtnChanged() {
+void KTouchOpenRequestDialog::radioBtnChanged() {
     if (currentRadioBtn->isChecked())   currentLabel->setEnabled(true);
     else                                currentLabel->setEnabled(false);
     if (presetRadioBtn->isChecked())    presetCombo->setEnabled(true);
@@ -114,7 +120,7 @@ void KTouchOpenRequest::radioBtnChanged() {
 }
 
 
-void KTouchOpenRequest::browseBtnClicked() {
+void KTouchOpenRequestDialog::browseBtnClicked() {
     KUrl tmp = KFileDialog::getOpenUrl(QString(), QString(), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty())
         openFileEdit->setText(tmp.url());

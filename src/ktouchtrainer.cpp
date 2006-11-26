@@ -22,7 +22,7 @@
 #include <kstandarddirs.h>
 
 #include "ktouch.h"
-#include "ktouchstatus.h"
+#include "ktouchstatuswidget.h"
 #include "ktouchslideline.h"
 #include "ktouchkeyboardwidget.h"
 #include "ktouchlecture.h"
@@ -31,7 +31,7 @@
 
 #include <phonon/audioplayer.h>
 
-KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
+KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : QObject(),
     m_trainingTimer(new QTimer),
     m_statusWidget(status),

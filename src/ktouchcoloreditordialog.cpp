@@ -10,13 +10,9 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchcoloreditor.h"
-#include "ktouchcoloreditor.moc"
+#include "ktouchcoloreditordialog.h"
+#include "ktouchcoloreditordialog.moc"
 
-#include <q3listbox.h>
-#include <q3groupbox.h>
-//Added by qt3to4:
-#include <Q3ValueList>
 #include <QCloseEvent>
 
 #include <kcolorbutton.h>
@@ -26,22 +22,22 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 
-KTouchColorEditor::KTouchColorEditor(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
-: QDialog(parent, name, modal, fl)
+KTouchColorEditorDialog::KTouchColorEditorDialog(QWidget* parent)
+: QDialog(parent)
 {
 	setupUi(this);
 }
 // ----------------------------------------------------------------------------
 
-KTouchColorEditor::~KTouchColorEditor()
+KTouchColorEditorDialog::~KTouchColorEditorDialog()
 {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::startEditor(QList<KTouchColorScheme>& schemes, int active, int & selected) {
+void KTouchColorEditorDialog::startEditor(QList<KTouchColorScheme>& schemes, int active, int & selected) {
 	m_schemes = schemes;
 	m_currentItem = qMax(0, active);
-	updateListBox();
+	updateListWidget();
 
 	if (active >= 0)	m_currentItem = active;
 	else				m_currentItem = -1;
@@ -58,9 +54,9 @@ void KTouchColorEditor::startEditor(QList<KTouchColorScheme>& schemes, int activ
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::colorSchemeChanged(Q3ListBoxItem *) {
+void KTouchColorEditorDialog::colorSchemeChanged(QListWidgetItem *) {
 //	kdDebug() << "[KTouchColorEditor::colorSchemeChanged]" << endl;
-    int num = schemeListBox->currentItem();
+    int num = schemeListWidget->currentRow();
 	if (num < 0 || num >= static_cast<int>(m_schemes.count())) {
 		updateControls(NULL);
 		return;
@@ -71,12 +67,12 @@ void KTouchColorEditor::colorSchemeChanged(Q3ListBoxItem *) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::updateClicked() {
+void KTouchColorEditorDialog::updateClicked() {
 	// first check that we have a valid color scheme selected
-    int num = schemeListBox->currentItem();
+    int num = schemeListWidget->currentRow();
 	int old_num = num;
 	if (num < 0 || num >= static_cast<int>(m_schemes.count())) {
-		updateListBox();
+		updateListWidget();
 		return;
 	}
 	QList<KTouchColorScheme>::iterator it = m_schemes.begin();
@@ -110,43 +106,43 @@ void KTouchColorEditor::updateClicked() {
     (*it).m_background[6] = back7Btn->color();
     (*it).m_background[7] = back8Btn->color();
 
-	updateListBox();
-	schemeListBox->setCurrentItem( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
+	updateListWidget();
+	schemeListWidget->setCurrentRow( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
 	colorSchemeChanged(NULL);
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::removeBtnClicked() {
-    int num = schemeListBox->currentItem();
+void KTouchColorEditorDialog::removeBtnClicked() {
+    int num = schemeListWidget->currentRow();
 	int old_num = num;
 	if (num >=0 && num < static_cast<int>(m_schemes.count())) {
 		QList<KTouchColorScheme>::iterator it = m_schemes.begin();
 		while (--num >= 0) ++it;
 		m_schemes.erase(it);
 	}
-	updateListBox();
-	schemeListBox->setCurrentItem( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
+	updateListWidget();
+	schemeListWidget->setCurrentRow( qMin(old_num, static_cast<int>(m_schemes.count())-1) );
 	colorSchemeChanged(NULL);
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::addBtnClicked() {
+void KTouchColorEditorDialog::addBtnClicked() {
 	KTouchColorScheme s;
 	s.m_name = i18n("New color scheme");
 	m_schemes.append(s);
-	updateListBox();
-	schemeListBox->setCurrentItem( m_schemes.count() - 1 );
+	updateListWidget();
+	schemeListWidget->setCurrentRow( m_schemes.count() - 1 );
 	colorSchemeChanged(NULL);
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::closeEvent( QCloseEvent* ce ) {
+void KTouchColorEditorDialog::closeEvent( QCloseEvent* ce ) {
 	int result = KMessageBox::questionYesNoCancel(this,
 		i18n("Save modified color schemes?"));
 	switch (result) {
 	  case KMessageBox::Cancel : m_saveChanges = false; ce->ignore(); return;
 	  case KMessageBox::Yes :
-		m_currentItem = schemeListBox->currentItem();
+		m_currentItem = schemeListWidget->currentRow();
 		updateClicked();
 		m_saveChanges = true; break;
 	  default : m_saveChanges = false; break;
@@ -155,13 +151,13 @@ void KTouchColorEditor::closeEvent( QCloseEvent* ce ) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::updateListBox() {
+void KTouchColorEditorDialog::updateListWidget() {
 //	kdDebug() << "[KTouchColorEditor::updateListBox]" << endl;
-	schemeListBox->clear();
+	schemeListWidget->clear();
 	for (QList<KTouchColorScheme>::const_iterator it = m_schemes.constBegin();
 		it != m_schemes.constEnd(); ++it)
 	{
-    	schemeListBox->insertItem( (*it).m_name );
+		schemeListWidget->addItem( (*it).m_name );
 	}
 	if (m_schemes.isEmpty()) {
 		editGroupBox->setEnabled(false);
@@ -175,7 +171,7 @@ void KTouchColorEditor::updateListBox() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorEditor::updateControls(const KTouchColorScheme * cs) {
+void KTouchColorEditorDialog::updateControls(const KTouchColorScheme * cs) {
 //	kdDebug() << "[KTouchColorEditor::updateControls]" << endl;
 	if (cs==NULL) {
 		// TODO : also set all colors back to defaults

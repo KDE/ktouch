@@ -14,7 +14,7 @@
 
 #include <QWidget>
 
-#include "ui_ktouchprefgenerallayout.h"
+#include "ui_ktouchprefgeneralpage.h"
 
 class KTouchPrefGeneral : public QWidget {
 
@@ -25,7 +25,7 @@ public:
         ui.setupUi(this);
     };
 
-    Ui_KTouchPrefGeneralLayout ui;
+    Ui_KTouchPrefGeneralPage ui;
 };
 
 #endif

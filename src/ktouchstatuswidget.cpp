@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchstatus.cpp                                                      *
- *   ----------------                                                      *
+ *   ktouchstatuswidget.cpp                                                *
+ *   ----------------------                                                *
  *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,26 +10,23 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchstatus.h"
-#include "ktouchstatus.moc"
+#include "ktouchstatuswidget.h"
+#include "ktouchstatuswidget.moc"
 
-#include <QLCDNumber>
-#include <QLabel>
-
-#include <q3progressbar.h>
+#include <QtGui>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
 
 #include "prefs.h"
 
-KTouchStatus::KTouchStatus(QWidget *parent)
+KTouchStatusWidget::KTouchStatusWidget(QWidget *parent)
  : QWidget(parent)
 {
     setupUi(this);
 }
 
-void KTouchStatus::applyPreferences() {
+void KTouchStatusWidget::applyPreferences() {
 	if (Prefs::autoLevelChange()) {
 		levelUpBtn->setEnabled( !Prefs::disableManualLevelChange() );
 		levelDownBtn->setEnabled( !Prefs::disableManualLevelChange() );
@@ -40,11 +37,11 @@ void KTouchStatus::applyPreferences() {
 	}
 }
 
-void KTouchStatus::setNewChars(const QString& newChars) {
+void KTouchStatusWidget::setNewChars(const QString& newChars) {
     newCharsLabel->setText(newChars);
 }
 
-void KTouchStatus::updateStatus(unsigned int level, double correctness) {
+void KTouchStatusWidget::updateStatus(unsigned int level, double correctness) {
     levelLCD->display(static_cast<int>(level)+1); // +1 because our level variable ranges from 0...n-1
     correctnessBar->setValue(static_cast<int>(correctness*100) );
 }

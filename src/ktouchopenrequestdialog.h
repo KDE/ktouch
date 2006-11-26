@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchopenrequest.h                                                   *
- *   -------------------                                                   *
+ *   ktouchopenrequestdialog.h                                             *
+ *   -------------------------                                             *
  *   Copyright (C) 2004 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,14 +10,14 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHOPENREQUEST_H
-#define KTOUCHOPENREQUEST_H
+#ifndef KTOUCHOPENREQUESTDIALOG_H
+#define KTOUCHOPENREQUESTDIALOG_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-#include "ui_ktouchopenrequest_dlg.h"
+#include "ui_ktouchopenrequestdialog.h"
 
 #include <kurl.h>
 #include <qstringlist.h>
@@ -51,14 +51,14 @@
 /// url is stored in the member variable m_url (if the dialog was accepted by 
 /// the user).
 /// 
-class KTouchOpenRequest : public QDialog, public Ui_KTouchOpenRequestDlg {
+class KTouchOpenRequestDialog : public QDialog, public Ui_KTouchOpenRequestDialog {
   Q_OBJECT
  
   public:
     /// Default constructor.
-    KTouchOpenRequest(QWidget* parent = 0, const char* name = 0, bool modal = false, Qt::WFlags fl = 0 );
+    KTouchOpenRequestDialog(QWidget* parent = 0);
     /// Default destructor.
-    ~KTouchOpenRequest() {}
+    ~KTouchOpenRequestDialog() {}
     /// Sets up the dialog and runs it.
     /// @return Returns the dialogs return code, QDialog::Accepted or QDialog::Rejected.
     int requestFileToOpen(KUrl& url, const QString& caption, const QString& title, const QString& currentText,
@@ -71,11 +71,11 @@ class KTouchOpenRequest : public QDialog, public Ui_KTouchOpenRequestDlg {
   public slots:
     /// Called when user selects Ok (used to check whether the URL is well formed).
     void okBtnClicked();
-    /// Called when user switches to another radiobutton.
+    /// Called when user switches to another radio button.
     void radioBtnChanged();
     /// Called when the user clicks on the "Browse" button and opens the file select dialog.
     void browseBtnClicked();
 };
 
-#endif
+#endif // KTOUCHOPENREQUESTDIALOG_H
 
