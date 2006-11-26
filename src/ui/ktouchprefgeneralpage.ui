@@ -1,0 +1,237 @@
+<ui version="4.0" >
+ <class>KTouchPrefGeneralPage</class>
+ <widget class="QWidget" name="KTouchPrefGeneralPage" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>497</width>
+    <height>304</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>General Options</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBox1" >
+     <property name="title" >
+      <string>Sound</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QCheckBox" name="kcfg_BeepOnError" >
+        <property name="toolTip" >
+         <string>Emit a beep on each typing error</string>
+        </property>
+        <property name="whatsThis" >
+         <string>If checked (default) this will emit a beep each time you make a typing error.</string>
+        </property>
+        <property name="text" >
+         <string>&amp;Beep on error</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_SoundOnLevel" >
+        <property name="toolTip" >
+         <string>Play a sound when the level automatically changes.</string>
+        </property>
+        <property name="whatsThis" >
+         <string>If this is checked (default) a sound will be played each time you automatically change of level.</string>
+        </property>
+        <property name="text" >
+         <string>&amp;Sound on automatic level change</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox3" >
+     <property name="title" >
+      <string>Text Line Settings</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <property name="margin" >
+       <number>9</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="margin" >
+         <number>0</number>
+        </property>
+        <property name="spacing" >
+         <number>6</number>
+        </property>
+        <item row="1" column="0" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3" >
+         <widget class="QLabel" name="textLabel3" >
+          <property name="text" >
+           <string>Slow: 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="textLabel2" >
+          <property name="text" >
+           <string>20: Fast</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3" >
+         <widget class="QSlider" name="kcfg_SlidingSpeed" >
+          <property name="maximumSize" >
+           <size>
+            <width>32767</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="minimum" >
+           <number>1</number>
+          </property>
+          <property name="maximum" >
+           <number>20</number>
+          </property>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickInterval" >
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>227</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="textLabel1_2" >
+          <property name="text" >
+           <string>Sliding speed:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_OverrideLectureFont" >
+        <property name="toolTip" >
+         <string>If you want to override the font of the training lecture check this box and set your own font.</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Most lectures suggest a font to use. This is necessary for not so common languages where characters may be displayed in a strange way and distort the sliding line. If you check this button you can choose your own font and override the lecture font.</string>
+        </property>
+        <property name="text" >
+         <string>Override lecture font</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fontTextLabel" >
+        <property name="text" >
+         <string>Font for displayed/typed text:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KFontRequester" native="1" name="kcfg_Font" >
+        <property name="minimumSize" >
+         <size>
+          <width>0</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <family>Courier 10 Pitch</family>
+          <pointsize>20</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="whatsThis" >
+         <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>21</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KFontRequester</class>
+   <extends>QWidget</extends>
+   <header>kfontrequester.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="local" >kfontrequester.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>
