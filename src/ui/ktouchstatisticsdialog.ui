@@ -1,11 +1,11 @@
 <ui version="4.0" >
- <class>KTouchStatisticsDlg</class>
- <widget class="QDialog" name="KTouchStatisticsDlg" >
+ <class>KTouchStatisticsDialog</class>
+ <widget class="QDialog" name="KTouchStatisticsDialog" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
+    <width>694</width>
     <height>600</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
   </property>
   <layout class="QVBoxLayout" >
    <property name="margin" >
-    <number>11</number>
+    <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
@@ -49,7 +49,7 @@
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
-        <number>0</number>
+        <number>9</number>
        </property>
        <property name="spacing" >
         <number>6</number>
@@ -80,10 +80,10 @@
          <property name="spacing" >
           <number>6</number>
          </property>
-         <item row="1" column="0" >
-          <widget class="QLabel" name="textLabel4_3_2" >
+         <item row="0" column="0" >
+          <widget class="QLabel" name="textLabel2_4_2" >
            <property name="text" >
-            <string>Levels in this session:</string>
+            <string>Lecture:</string>
            </property>
           </widget>
          </item>
@@ -102,10 +102,10 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="0" >
-          <widget class="QLabel" name="textLabel2_4_2" >
+         <item row="1" column="0" >
+          <widget class="QLabel" name="textLabel4_3_2" >
            <property name="text" >
-            <string>Lecture:</string>
+            <string>Levels in this session:</string>
            </property>
           </widget>
          </item>
@@ -135,40 +135,26 @@
           <number>6</number>
          </property>
          <item rowspan="2" row="0" column="0" >
-          <widget class="Q3GroupBox" name="groupBox4" >
+          <widget class="QGroupBox" name="groupBox4" >
            <property name="title" >
             <string>General Statistics</string>
            </property>
            <layout class="QGridLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item row="3" column="0" >
-             <widget class="QLabel" name="textLabel4" >
+            <item row="1" column="0" >
+             <widget class="QLabel" name="textLabel3" >
               <property name="text" >
-               <string>Words typed:</string>
+               <string>Characters typed:</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0" >
-             <widget class="QLabel" name="textLabel5" >
-              <property name="text" >
-               <string>Mistyped characters:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="textLabel2" >
-              <property name="text" >
-               <string>Time (seconds) elapsed:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1" >
-             <widget class="QLCDNumber" name="elapsedTimeLCD" >
+            <item row="3" column="1" >
+             <widget class="QLCDNumber" name="wordsLCD" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -176,23 +162,7 @@
                </size>
               </property>
               <property name="whatsThis" >
-               <string>This shows the number of seconds you have typed in this training session.</string>
-              </property>
-              <property name="segmentStyle" >
-               <enum>QLCDNumber::Flat</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" >
-             <widget class="QLCDNumber" name="totalCharsLCD" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>32767</height>
-               </size>
-              </property>
-              <property name="whatsThis" >
-               <string>The number of characters (correct and wrong) that you have typed so far.</string>
+               <string>The number of words typed so far.</string>
               </property>
               <property name="segmentStyle" >
                <enum>QLCDNumber::Flat</enum>
@@ -215,8 +185,8 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="1" >
-             <widget class="QLCDNumber" name="wordsLCD" >
+            <item row="1" column="1" >
+             <widget class="QLCDNumber" name="totalCharsLCD" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -224,131 +194,72 @@
                </size>
               </property>
               <property name="whatsThis" >
-               <string>The number of words typed so far.</string>
+               <string>The number of characters (correct and wrong) that you have typed so far.</string>
               </property>
               <property name="segmentStyle" >
                <enum>QLCDNumber::Flat</enum>
               </property>
              </widget>
             </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="textLabel3" >
+            <item row="0" column="1" >
+             <widget class="QLCDNumber" name="elapsedTimeLCD" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>32767</height>
+               </size>
+              </property>
+              <property name="whatsThis" >
+               <string>This shows the number of seconds you have typed in this training session.</string>
+              </property>
+              <property name="segmentStyle" >
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" >
+             <widget class="QLabel" name="textLabel2" >
               <property name="text" >
-               <string>Characters typed:</string>
+               <string>Time (seconds) elapsed:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" >
+             <widget class="QLabel" name="textLabel5" >
+              <property name="text" >
+               <string>Mistyped characters:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" >
+             <widget class="QLabel" name="textLabel4" >
+              <property name="text" >
+               <string>Words typed:</string>
               </property>
              </widget>
             </item>
            </layout>
           </widget>
          </item>
-         <item row="2" column="0" colspan="2" >
-          <widget class="Q3GroupBox" name="groupBox7" >
-           <property name="whatsThis" >
-            <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed in total. Large numbers indicate that the key was missed a lot.</string>
-           </property>
+         <item row="1" column="1" >
+          <widget class="QGroupBox" name="groupBox6" >
            <property name="title" >
-            <string>Character Statistics (characters you need to focus on)</string>
+            <string>Accuracy</string>
            </property>
-           <layout class="QGridLayout" >
+           <layout class="QVBoxLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item rowspan="4" row="0" column="2" >
-             <widget class="QFrame" name="frame4" >
-              <property name="minimumSize" >
-               <size>
-                <width>20</width>
-                <height>0</height>
-               </size>
+            <item>
+             <widget class="QProgressBar" name="correctnessBar" >
+              <property name="whatsThis" >
+               <string>The ratio of correctly typed characters versus total number of characters typed.</string>
               </property>
-              <property name="frameShape" >
-               <enum>QFrame::VLine</enum>
-              </property>
-              <property name="frameShadow" >
-               <enum>QFrame::Plain</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1" >
-             <widget class="QProgressBar" name="charProgress1" />
-            </item>
-            <item row="0" column="4" >
-             <widget class="QProgressBar" name="charProgress5" />
-            </item>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="charLabel1" >
-              <property name="text" >
-               <string>a:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="3" >
-             <widget class="QLabel" name="charLabel5" >
-              <property name="text" >
-               <string>e:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="charLabel2" >
-              <property name="text" >
-               <string>b:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="4" >
-             <widget class="QProgressBar" name="charProgress6" />
-            </item>
-            <item row="1" column="3" >
-             <widget class="QLabel" name="charLabel6" >
-              <property name="text" >
-               <string>f:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" >
-             <widget class="QProgressBar" name="charProgress2" />
-            </item>
-            <item row="2" column="1" >
-             <widget class="QProgressBar" name="charProgress3" />
-            </item>
-            <item row="2" column="3" >
-             <widget class="QLabel" name="charLabel7" >
-              <property name="text" >
-               <string>g:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0" >
-             <widget class="QLabel" name="charLabel3" >
-              <property name="text" >
-               <string>c:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="4" >
-             <widget class="QProgressBar" name="charProgress7" />
-            </item>
-            <item row="3" column="4" >
-             <widget class="QProgressBar" name="charProgress8" />
-            </item>
-            <item row="3" column="1" >
-             <widget class="QProgressBar" name="charProgress4" />
-            </item>
-            <item row="3" column="3" >
-             <widget class="QLabel" name="charLabel8" >
-              <property name="text" >
-               <string>h:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" >
-             <widget class="QLabel" name="charLabel4" >
-              <property name="text" >
-               <string>d:</string>
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
@@ -356,28 +267,30 @@
           </widget>
          </item>
          <item row="0" column="1" >
-          <widget class="Q3GroupBox" name="groupBox5" >
+          <widget class="QGroupBox" name="groupBox5" >
            <property name="title" >
             <string>Typing Rate</string>
            </property>
            <layout class="QGridLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="textLabel6" >
-              <property name="text" >
-               <string>Characters per minute:</string>
+            <item row="1" column="1" >
+             <widget class="QLCDNumber" name="wordSpeedLCD" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>32767</height>
+               </size>
               </property>
-             </widget>
-            </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="textLabel6_2" >
-              <property name="text" >
-               <string>Words per minute:</string>
+              <property name="whatsThis" >
+               <string>The number of words you typed per minute.</string>
+              </property>
+              <property name="segmentStyle" >
+               <enum>QLCDNumber::Flat</enum>
               </property>
              </widget>
             </item>
@@ -397,41 +310,17 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="1" >
-             <widget class="QLCDNumber" name="wordSpeedLCD" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>32767</height>
-               </size>
-              </property>
-              <property name="whatsThis" >
-               <string>The number of words you typed per minute.</string>
-              </property>
-              <property name="segmentStyle" >
-               <enum>QLCDNumber::Flat</enum>
+            <item row="1" column="0" >
+             <widget class="QLabel" name="textLabel6_2" >
+              <property name="text" >
+               <string>Words per minute:</string>
               </property>
              </widget>
             </item>
-           </layout>
-          </widget>
-         </item>
-         <item row="1" column="1" >
-          <widget class="Q3GroupBox" name="groupBox6" >
-           <property name="title" >
-            <string>Accuracy</string>
-           </property>
-           <layout class="QGridLayout" >
-            <property name="margin" >
-             <number>0</number>
-            </property>
-            <property name="spacing" >
-             <number>6</number>
-            </property>
             <item row="0" column="0" >
-             <widget class="QProgressBar" name="correctnessBar" >
-              <property name="whatsThis" >
-               <string>The ratio of correctly typed characters versus total number of characters typed.</string>
+             <widget class="QLabel" name="textLabel6" >
+              <property name="text" >
+               <string>Characters per minute:</string>
               </property>
              </widget>
             </item>
@@ -441,12 +330,155 @@
         </layout>
        </item>
        <item>
+        <widget class="QGroupBox" name="groupBox7" >
+         <property name="whatsThis" >
+          <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed in total. Large numbers indicate that the key was missed a lot.</string>
+         </property>
+         <property name="title" >
+          <string>Character Statistics (characters you need to focus on)</string>
+         </property>
+         <layout class="QGridLayout" >
+          <property name="margin" >
+           <number>9</number>
+          </property>
+          <property name="spacing" >
+           <number>6</number>
+          </property>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="charLabel4" >
+            <property name="text" >
+             <string>d:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3" >
+           <widget class="QLabel" name="charLabel8" >
+            <property name="text" >
+             <string>h:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" >
+           <widget class="QProgressBar" name="charProgress4" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4" >
+           <widget class="QProgressBar" name="charProgress8" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4" >
+           <widget class="QProgressBar" name="charProgress7" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="charLabel3" >
+            <property name="text" >
+             <string>c:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3" >
+           <widget class="QLabel" name="charLabel7" >
+            <property name="text" >
+             <string>g:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QProgressBar" name="charProgress3" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" >
+           <widget class="QProgressBar" name="charProgress2" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" >
+           <widget class="QLabel" name="charLabel6" >
+            <property name="text" >
+             <string>f:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4" >
+           <widget class="QProgressBar" name="charProgress6" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="charLabel2" >
+            <property name="text" >
+             <string>b:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3" >
+           <widget class="QLabel" name="charLabel5" >
+            <property name="text" >
+             <string>e:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" >
+           <widget class="QLabel" name="charLabel1" >
+            <property name="text" >
+             <string>a:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4" >
+           <widget class="QProgressBar" name="charProgress5" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="QProgressBar" name="charProgress1" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="4" row="0" column="2" >
+           <widget class="QFrame" name="frame4" >
+            <property name="minimumSize" >
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="frameShape" >
+             <enum>QFrame::VLine</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Plain</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <spacer>
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType" >
-          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" >
           <size>
@@ -464,7 +496,7 @@
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
-        <number>0</number>
+        <number>9</number>
        </property>
        <property name="spacing" >
         <number>6</number>
@@ -510,20 +542,6 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="0" >
-          <widget class="QLabel" name="textLabel4_3" >
-           <property name="text" >
-            <string>Level:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0" >
-          <widget class="QLabel" name="textLabel2_4" >
-           <property name="text" >
-            <string>Lecture:</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="1" >
           <widget class="QLabel" name="levelLabel2" >
            <property name="sizePolicy" >
@@ -539,6 +557,20 @@
            </property>
           </widget>
          </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="textLabel2_4" >
+           <property name="text" >
+            <string>Lecture:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLabel" name="textLabel4_3" >
+           <property name="text" >
+            <string>Level:</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -550,53 +582,26 @@
           <number>6</number>
          </property>
          <item rowspan="2" row="0" column="0" >
-          <widget class="Q3GroupBox" name="groupBox4_2" >
+          <widget class="QGroupBox" name="groupBox4_2" >
            <property name="title" >
             <string>General Statistics</string>
            </property>
            <layout class="QGridLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item row="3" column="0" >
-             <widget class="QLabel" name="textLabel4_2" >
+            <item row="1" column="0" >
+             <widget class="QLabel" name="textLabel3_3" >
               <property name="text" >
-               <string>Words typed:</string>
+               <string>Characters typed:</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0" >
-             <widget class="QLabel" name="textLabel5_2" >
-              <property name="text" >
-               <string>Mistyped characters:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="textLabel2_3" >
-              <property name="text" >
-               <string>Time (seconds) elapsed:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1" >
-             <widget class="QLCDNumber" name="elapsedTimeLCDLevel" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>32767</height>
-               </size>
-              </property>
-              <property name="segmentStyle" >
-               <enum>QLCDNumber::Flat</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" >
-             <widget class="QLCDNumber" name="totalCharsLCDLevel" >
+            <item row="3" column="1" >
+             <widget class="QLCDNumber" name="wordsLCDLevel" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -621,8 +626,8 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="1" >
-             <widget class="QLCDNumber" name="wordsLCDLevel" >
+            <item row="1" column="1" >
+             <widget class="QLCDNumber" name="totalCharsLCDLevel" >
               <property name="maximumSize" >
                <size>
                 <width>50</width>
@@ -634,124 +639,59 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="textLabel3_3" >
+            <item row="0" column="1" >
+             <widget class="QLCDNumber" name="elapsedTimeLCDLevel" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>32767</height>
+               </size>
+              </property>
+              <property name="segmentStyle" >
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" >
+             <widget class="QLabel" name="textLabel2_3" >
               <property name="text" >
-               <string>Characters typed:</string>
+               <string>Time (seconds) elapsed:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" >
+             <widget class="QLabel" name="textLabel5_2" >
+              <property name="text" >
+               <string>Mistyped characters:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" >
+             <widget class="QLabel" name="textLabel4_2" >
+              <property name="text" >
+               <string>Words typed:</string>
               </property>
              </widget>
             </item>
            </layout>
           </widget>
          </item>
-         <item row="2" column="0" colspan="2" >
-          <widget class="Q3GroupBox" name="groupBox7_2" >
-           <property name="whatsThis" >
-            <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed correctly. Large numbers indicate that the key was missed a lot.</string>
-           </property>
+         <item row="1" column="1" >
+          <widget class="QGroupBox" name="groupBox6_3" >
            <property name="title" >
-            <string>Character Statistics (characters you need to focus on)</string>
+            <string>Accuracy</string>
            </property>
-           <layout class="QGridLayout" >
+           <layout class="QVBoxLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item rowspan="4" row="0" column="2" >
-             <widget class="QFrame" name="frame4_2" >
-              <property name="minimumSize" >
-               <size>
-                <width>20</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="frameShape" >
-               <enum>QFrame::VLine</enum>
-              </property>
-              <property name="frameShadow" >
-               <enum>QFrame::Plain</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1" >
-             <widget class="QProgressBar" name="charProgress1Level" />
-            </item>
-            <item row="0" column="4" >
-             <widget class="QProgressBar" name="charProgress5Level" />
-            </item>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="charLabel1Level" >
-              <property name="text" >
-               <string>a:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="3" >
-             <widget class="QLabel" name="charLabel5Level" >
-              <property name="text" >
-               <string>e:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="charLabel2Level" >
-              <property name="text" >
-               <string>b:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="4" >
-             <widget class="QProgressBar" name="charProgress6Level" />
-            </item>
-            <item row="1" column="3" >
-             <widget class="QLabel" name="charLabel6Level" >
-              <property name="text" >
-               <string>f:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" >
-             <widget class="QProgressBar" name="charProgress2Level" />
-            </item>
-            <item row="2" column="1" >
-             <widget class="QProgressBar" name="charProgress3Level" />
-            </item>
-            <item row="2" column="3" >
-             <widget class="QLabel" name="charLabel7Level" >
-              <property name="text" >
-               <string>g:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0" >
-             <widget class="QLabel" name="charLabel3Level" >
-              <property name="text" >
-               <string>c:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="4" >
-             <widget class="QProgressBar" name="charProgress7Level" />
-            </item>
-            <item row="3" column="4" >
-             <widget class="QProgressBar" name="charProgress8Level" />
-            </item>
-            <item row="3" column="1" >
-             <widget class="QProgressBar" name="charProgress4Level" />
-            </item>
-            <item row="3" column="3" >
-             <widget class="QLabel" name="charLabel8Level" >
-              <property name="text" >
-               <string>h:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" >
-             <widget class="QLabel" name="charLabel4Level" >
-              <property name="text" >
-               <string>d:</string>
+            <item>
+             <widget class="QProgressBar" name="correctnessBarLevel" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
               </property>
              </widget>
             </item>
@@ -759,28 +699,27 @@
           </widget>
          </item>
          <item row="0" column="1" >
-          <widget class="Q3GroupBox" name="groupBox5_2" >
+          <widget class="QGroupBox" name="groupBox5_2" >
            <property name="title" >
             <string>Typing Rate</string>
            </property>
            <layout class="QGridLayout" >
             <property name="margin" >
-             <number>0</number>
+             <number>9</number>
             </property>
             <property name="spacing" >
              <number>6</number>
             </property>
-            <item row="0" column="0" >
-             <widget class="QLabel" name="textLabel6_3" >
-              <property name="text" >
-               <string>Characters per minute:</string>
+            <item row="1" column="1" >
+             <widget class="QLCDNumber" name="wordSpeedLCDLevel" >
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>32767</height>
+               </size>
               </property>
-             </widget>
-            </item>
-            <item row="1" column="0" >
-             <widget class="QLabel" name="textLabel6_2_2" >
-              <property name="text" >
-               <string>Words per minute:</string>
+              <property name="segmentStyle" >
+               <enum>QLCDNumber::Flat</enum>
               </property>
              </widget>
             </item>
@@ -797,36 +736,19 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="1" >
-             <widget class="QLCDNumber" name="wordSpeedLCDLevel" >
-              <property name="maximumSize" >
-               <size>
-                <width>50</width>
-                <height>32767</height>
-               </size>
-              </property>
-              <property name="segmentStyle" >
-               <enum>QLCDNumber::Flat</enum>
+            <item row="1" column="0" >
+             <widget class="QLabel" name="textLabel6_2_2" >
+              <property name="text" >
+               <string>Words per minute:</string>
               </property>
              </widget>
             </item>
-           </layout>
-          </widget>
-         </item>
-         <item row="1" column="1" >
-          <widget class="Q3GroupBox" name="groupBox6_3" >
-           <property name="title" >
-            <string>Accuracy</string>
-           </property>
-           <layout class="QGridLayout" >
-            <property name="margin" >
-             <number>0</number>
-            </property>
-            <property name="spacing" >
-             <number>6</number>
-            </property>
             <item row="0" column="0" >
-             <widget class="QProgressBar" name="correctnessBarLevel" />
+             <widget class="QLabel" name="textLabel6_3" >
+              <property name="text" >
+               <string>Characters per minute:</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -834,17 +756,160 @@
         </layout>
        </item>
        <item>
+        <widget class="QGroupBox" name="groupBox7_2" >
+         <property name="whatsThis" >
+          <string>Here the characters are listed that you have missed during the typing test. The percentage shows the ratio of how often a key was missed versus how often the key was pressed correctly. Large numbers indicate that the key was missed a lot.</string>
+         </property>
+         <property name="title" >
+          <string>Character Statistics (characters you need to focus on)</string>
+         </property>
+         <layout class="QGridLayout" >
+          <property name="margin" >
+           <number>9</number>
+          </property>
+          <property name="spacing" >
+           <number>6</number>
+          </property>
+          <item row="3" column="0" >
+           <widget class="QLabel" name="charLabel4Level" >
+            <property name="text" >
+             <string>d:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3" >
+           <widget class="QLabel" name="charLabel8Level" >
+            <property name="text" >
+             <string>h:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" >
+           <widget class="QProgressBar" name="charProgress4Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4" >
+           <widget class="QProgressBar" name="charProgress8Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4" >
+           <widget class="QProgressBar" name="charProgress7Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" >
+           <widget class="QLabel" name="charLabel3Level" >
+            <property name="text" >
+             <string>c:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3" >
+           <widget class="QLabel" name="charLabel7Level" >
+            <property name="text" >
+             <string>g:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" >
+           <widget class="QProgressBar" name="charProgress3Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" >
+           <widget class="QProgressBar" name="charProgress2Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" >
+           <widget class="QLabel" name="charLabel6Level" >
+            <property name="text" >
+             <string>f:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4" >
+           <widget class="QProgressBar" name="charProgress6Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" >
+           <widget class="QLabel" name="charLabel2Level" >
+            <property name="text" >
+             <string>b:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3" >
+           <widget class="QLabel" name="charLabel5Level" >
+            <property name="text" >
+             <string>e:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" >
+           <widget class="QLabel" name="charLabel1Level" >
+            <property name="text" >
+             <string>a:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4" >
+           <widget class="QProgressBar" name="charProgress5Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" >
+           <widget class="QProgressBar" name="charProgress1Level" >
+            <property name="orientation" >
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item rowspan="4" row="0" column="2" >
+           <widget class="QFrame" name="frame4_2" >
+            <property name="minimumSize" >
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="frameShape" >
+             <enum>QFrame::VLine</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Plain</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <spacer>
          <property name="orientation" >
           <enum>Qt::Vertical</enum>
          </property>
-         <property name="sizeType" >
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
          <property name="sizeHint" >
           <size>
            <width>20</width>
-           <height>89</height>
+           <height>40</height>
           </size>
          </property>
         </spacer>
@@ -857,7 +922,7 @@
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
-        <number>0</number>
+        <number>9</number>
        </property>
        <property name="spacing" >
         <number>6</number>
@@ -913,11 +978,11 @@
         </layout>
        </item>
        <item>
-        <widget class="KTouchChartWidget" name="chartWidget" >
+        <widget class="KTouchChartWidget" native="1" name="chartWidget" >
          <property name="sizePolicy" >
           <sizepolicy>
            <hsizetype>5</hsizetype>
-           <vsizetype>2</vsizetype>
+           <vsizetype>7</vsizetype>
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -925,7 +990,7 @@
         </widget>
        </item>
        <item>
-        <widget class="Q3GroupBox" name="groupBox6_2" >
+        <widget class="QGroupBox" name="groupBox6_2" >
          <property name="sizePolicy" >
           <sizepolicy>
            <hsizetype>5</hsizetype>
@@ -937,21 +1002,24 @@
          <property name="title" >
           <string>Progress Chart Options</string>
          </property>
-         <layout class="QGridLayout" >
+         <layout class="QHBoxLayout" >
           <property name="margin" >
            <number>0</number>
           </property>
           <property name="spacing" >
-           <number>6</number>
+           <number>0</number>
           </property>
-          <item row="0" column="0" >
-           <widget class="Q3ButtonGroup" name="buttonGroup1" >
-            <property name="title" >
-             <string/>
+          <item>
+           <widget class="QFrame" name="frame" >
+            <property name="frameShape" >
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" >
              <property name="margin" >
-              <number>0</number>
+              <number>9</number>
              </property>
              <property name="spacing" >
               <number>6</number>
@@ -961,7 +1029,7 @@
                <property name="font" >
                 <font>
                  <family>Sans Serif</family>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>75</weight>
                  <italic>false</italic>
                  <bold>true</bold>
@@ -993,13 +1061,10 @@
                <property name="orientation" >
                 <enum>Qt::Vertical</enum>
                </property>
-               <property name="sizeType" >
-                <enum>QSizePolicy::Expanding</enum>
-               </property>
                <property name="sizeHint" >
                 <size>
                  <width>20</width>
-                 <height>16</height>
+                 <height>0</height>
                 </size>
                </property>
               </spacer>
@@ -1007,14 +1072,17 @@
             </layout>
            </widget>
           </item>
-          <item row="0" column="1" >
-           <widget class="Q3ButtonGroup" name="buttonGroup2" >
-            <property name="title" >
-             <string/>
+          <item>
+           <widget class="QFrame" name="frame_2" >
+            <property name="frameShape" >
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" >
              <property name="margin" >
-              <number>0</number>
+              <number>9</number>
              </property>
              <property name="spacing" >
               <number>6</number>
@@ -1024,7 +1092,7 @@
                <property name="font" >
                 <font>
                  <family>Sans Serif</family>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>75</weight>
                  <italic>false</italic>
                  <bold>true</bold>
@@ -1065,17 +1133,33 @@
                </property>
               </widget>
              </item>
+             <item>
+              <spacer>
+               <property name="orientation" >
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" >
+                <size>
+                 <width>20</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
            </widget>
           </item>
-          <item row="0" column="2" >
-           <widget class="Q3ButtonGroup" name="buttonGroup3" >
-            <property name="title" >
-             <string/>
+          <item>
+           <widget class="QFrame" name="frame_3" >
+            <property name="frameShape" >
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow" >
+             <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" >
              <property name="margin" >
-              <number>0</number>
+              <number>9</number>
              </property>
              <property name="spacing" >
               <number>6</number>
@@ -1085,7 +1169,7 @@
                <property name="font" >
                 <font>
                  <family>Sans Serif</family>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>75</weight>
                  <italic>false</italic>
                  <bold>true</bold>
@@ -1123,7 +1207,7 @@
                <property name="sizeHint" >
                 <size>
                  <width>20</width>
-                 <height>20</height>
+                 <height>0</height>
                 </size>
                </property>
               </spacer>
@@ -1161,9 +1245,6 @@
        <property name="orientation" >
         <enum>Qt::Horizontal</enum>
        </property>
-       <property name="sizeType" >
-        <enum>QSizePolicy::Expanding</enum>
-       </property>
        <property name="sizeHint" >
         <size>
          <width>40</width>
@@ -1189,26 +1270,14 @@
  <layoutdefault spacing="6" margin="11" />
  <customwidgets>
   <customwidget>
-   <class>Q3ButtonGroup</class>
-   <extends>Q3GroupBox</extends>
-   <header>Qt3Support/Q3ButtonGroup</header>
-   <container>1</container>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KTouchChartWidget</class>
    <extends>QWidget</extends>
    <header>ktouchchartwidget.h</header>
-  </customwidget>
-  <customwidget>
-   <class>Q3GroupBox</class>
-   <extends>QGroupBox</extends>
-   <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KPushButton</class>
@@ -1219,7 +1288,6 @@
  <includes>
   <include location="local" >kcombobox.h</include>
   <include location="local" >ktouchchartwidget.h</include>
-  <include location="local" >kpushbutton.h</include>
   <include location="local" >kpushbutton.h</include>
  </includes>
  <resources/>

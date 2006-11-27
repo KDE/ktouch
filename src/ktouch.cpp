@@ -48,7 +48,7 @@
 
 #include "ktouchlectureeditordialog.h"
 #include "ktouchcoloreditordialog.h"
-//#include "ktouchstatistics.h"
+#include "ktouchstatisticsdialog.h"
 
 #include "ktouchprefgeneral.h"
 #include "ktouchpreftraining.h"
@@ -197,7 +197,6 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     keyEvent->accept();
 }
 // ----------------------------------------------------------------------------
-
 
 void KTouch::configOverrideLectureFontToggled(bool on) {
 	if (on) {
@@ -438,7 +437,7 @@ void KTouch::trainingPause() {
 
 void KTouch::trainingStatistics() {
     trainingPause();
-	//KTouchStatistics dlg(this);
+	KTouchStatisticsDialog dlg(this);
 	// TODO : this is somewhat messy: we have to get the words in the
     //        current line (since they are not stored in the current
     //        level and session stats, because the student may delete
@@ -452,7 +451,7 @@ void KTouch::trainingStatistics() {
     // data for the current lecture present for the dialog to function
 	// properly
 	getCurrentLectureStats();
-    //dlg.run(Prefs::currentLectureFile(), m_userStats[Prefs::currentUserName()], kls, kss);
+    dlg.run(Prefs::currentLectureFile(), m_userStats[Prefs::currentUserName()], kls, kss);
 }
 // ----------------------------------------------------------------------------
 

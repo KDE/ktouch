@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchstatistics.h                                                    *
- *   ------------------                                                    *
+ *   ktouchstatisticsdialog.h                                              *
+ *   ------------------------                                              *
  *   Copyright (C) 2000 by Håvard Frøiland, 2006 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,10 +10,10 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHSTATISTICS_H
-#define KTOUCHSTATISTICS_H
+#ifndef KTOUCHSTATISTICSDIALOG_H
+#define KTOUCHSTATISTICSDIALOG_H
 
-#include "ui_ktouchstatistics_dlg.h"
+#include "ui_ktouchstatisticsdialog.h"
 #include "ktouchstatisticsdata.h"
 
 #include <QDialog>
@@ -22,11 +22,11 @@ class KTouch;
 class KUrl;
 
 /// Implementation of the statistics widget
-class KTouchStatistics : public QDialog, public Ui_KTouchStatisticsDlg {
+class KTouchStatisticsDialog : public QDialog, public Ui_KTouchStatisticsDialog {
     Q_OBJECT
   public:
     /// Constructor, takes a pointer to the trainer object.
-    explicit KTouchStatistics(QWidget* parent);
+    explicit KTouchStatisticsDialog(QWidget* parent);
 
 	/// Fills the statistics dialog with data and executes it.
 	void run(const KUrl& currentLecture, const KTouchStatisticsData& stats,
@@ -54,4 +54,4 @@ class KTouchStatistics : public QDialog, public Ui_KTouchStatisticsDlg {
 	KTouchSessionStats		m_currSessionStats;	///< Contains current session stats (not yet stored in allStats).
 };
 
-#endif  // KTOUCHSTATISTICS_H
+#endif  // KTOUCHSTATISTICSDIALOG_H

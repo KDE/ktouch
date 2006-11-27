@@ -10,10 +10,10 @@ kde4_add_ui_files(ktouch_UIS
    ui/ktouchprefgeneralpage.ui 
    ui/ktouchstatuswidget.ui
    ui/ktouchlectureeditordialog.ui 
+   ui/ktouchstatisticsdialog.ui 
    ktouchprefcolorslayout.ui 
    ktouchprefkeyboardlayout.ui 
    ktouchpreftraininglayout.ui 
-   ktouchstatistics_dlg.ui 
    ktouchusersetup_dlg.ui
 )
 
@@ -32,7 +32,7 @@ set(ktouch_SRCS
    ktouchlecture.cpp 
    ktouchleveldata.cpp 
    ktouchslideline.cpp 
-   ktouchstatistics.cpp 
+   ktouchstatisticsdialog.cpp 
    ktouchstatisticsdata.cpp 
    ktouchstatuswidget.cpp 
    ktouchtrainer.cpp

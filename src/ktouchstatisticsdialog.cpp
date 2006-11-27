@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchstatistics.cpp                                                  *
- *   --------------------                                                  *
+ *   ktouchstatisticsdialog.cpp                                            *
+ *   --------------------------                                            *
  *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,17 +10,14 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchstatistics.h"
-#include "ktouchstatistics.moc"
+#include "ktouchstatisticsdialog.h"
+#include "ktouchstatisticsdialog.moc"
 
 #include <utility>
 #include <iterator>
 
 #include <kplotobject.h>
 #include <kplotaxis.h>
-
-#include <q3progressbar.h>
-#include <q3buttongroup.h>
 
 #include <QtAlgorithms>
 #include <QLabel>
@@ -39,7 +36,7 @@
 #include "ktouch.h"
 #include "ktouchchartwidget.h"
 
-KTouchStatistics::KTouchStatistics(QWidget* parent)
+KTouchStatisticsDialog::KTouchStatisticsDialog(QWidget* parent)
 	: QDialog(parent)
 {
     setupUi(this);
@@ -50,18 +47,15 @@ KTouchStatistics::KTouchStatistics(QWidget* parent)
     connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
     // connect the radio buttons with the chart update function
-    connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-    connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-    connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+//    connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+//    connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+//    connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
 
-    // TODO : temporarily remove detailed stats page and deactivate options
     levelsRadio->setEnabled(false);
-//	tabWidget->removeTab(tabWidget->indexOf(statsPage));
-//    delete statsPage;
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsData& stats,
+void KTouchStatisticsDialog::run(const KUrl& currentLecture, const KTouchStatisticsData& stats,
 	const KTouchLevelStats& currLevelStats,
 	const KTouchSessionStats& currSessionStats)
 {
@@ -103,7 +97,7 @@ void KTouchStatistics::run(const KUrl& currentLecture, const KTouchStatisticsDat
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::lectureActivated(int index) {
+void KTouchStatisticsDialog::lectureActivated(int index) {
 	if (m_allStats.m_lectureStats.count()==0) {
 		// TODO : Reset all tabs to "empty" look
 		m_lectureIndex = 0;
@@ -120,7 +114,7 @@ void KTouchStatistics::lectureActivated(int index) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::clearHistory() {
+void KTouchStatisticsDialog::clearHistory() {
 	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),QString(),KStdGuiItem::del()) 
 		== KMessageBox::Continue)
 	{
@@ -139,7 +133,7 @@ void KTouchStatistics::clearHistory() {
 // ----------------------------------------------------------------------------
 
 
-void KTouchStatistics::updateCurrentSessionTab() {
+void KTouchStatisticsDialog::updateCurrentSessionTab() {
 	// session/level/info
 	QString levelnums;
     int last_level = -2;
@@ -231,7 +225,7 @@ void KTouchStatistics::updateCurrentSessionTab() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::updateCurrentLevelTab() {
+void KTouchStatisticsDialog::updateCurrentLevelTab() {
 	// level info
 	levelLabel2->setText( QString("%1").arg(m_currLevelStats.m_levelNum+1) );
     // general stats group
@@ -296,7 +290,7 @@ void KTouchStatistics::updateCurrentLevelTab() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatistics::updateChartTab() {
+void KTouchStatisticsDialog::updateChartTab() {
 	// remove all current chart objects
 	chartWidget->clearObjectList();
 	// if no lecture data is available, return
@@ -312,6 +306,7 @@ void KTouchStatistics::updateChartTab() {
 		while (index-- > 0) ++it;
 		QList< std::pair<double, double> > data;
 		QString caption = "Session data";
+/*
 		switch (buttonGroup2->selectedId()) {
 			case 0 : // words per minute
 				// loop over all session data entries in *it and store words per minute data
@@ -447,6 +442,7 @@ void KTouchStatistics::updateChartTab() {
 //		kDebug() << min_x << " " << max_x << "    " << max_y << endl;
 		// Add plot object to chart
 		chartWidget->addObject(ob);
+*/
 	}
 }
 // ----------------------------------------------------------------------------
