@@ -164,7 +164,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
             m_connectors.push_back(keycon);
         }
         else {
-            //errorMsg = i18n("Missing key type in line '%1'.").arg(line);
+            //errorMsg = i18n("Missing key type in line '%1'.",line);
             return false;
         }
         // calculate the maximum extent of the keyboard on the fly...
