@@ -557,6 +557,7 @@ bool KTouchStatisticsData::readStats(QDomNode in) {
 	if (!n.isNull()) 	m_userName = n.firstChild().nodeValue();
 	else 				m_userName = i18n("default user");
 	if (m_userName.isEmpty())	m_userName = i18n("default user");
+	if (m_userName.isEmpty())	m_userName = "default user";
 
 //	kDebug() << "[KTouchStatisticsData::readStats]  reading user stats..." << endl;
 	kDebug() << "[KTouchStatisticsData::readStats]  User = '" << m_userName << "'" << endl;

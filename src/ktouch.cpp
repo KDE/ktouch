@@ -49,6 +49,7 @@
 #include "ktouchlectureeditordialog.h"
 #include "ktouchcoloreditordialog.h"
 #include "ktouchstatisticsdialog.h"
+#include "ktouchusersetupdialog.h"
 
 #include "ktouchprefgeneral.h"
 #include "ktouchpreftraining.h"
@@ -57,7 +58,6 @@
 
 #include "prefs.h"
 #include "ktouchcolorscheme.h"
-#include "ktouchusersetup.h"
 #include "ktouchutils.h"
 
 KTouch * KTouchPtr = NULL;
@@ -70,16 +70,21 @@ KTouch::KTouch()
 {
 	m_duringStartup = true;
     setFocusPolicy(Qt::StrongFocus);
+
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
+
 	// General initialization of the program, common for all start modes
 	init();
-	// Read user statistics
+
+	// *** Read and initialize user statistics ***
+
+	// first clear statistics data (also make sure our mapping contains 
+	// the "default" user)
+	clearStatistics();
 	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
-	m_userStats.clear(); // make sure our mapping contains the "default" user
 	// read previous stats from file
 	KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
-	//	kDebug() << "[KTouch::KTouch] users = " << m_userStats.count() << endl;
 
 	// Setup our actions and connections
 	setupActions();
@@ -500,7 +505,7 @@ void KTouch::optionsPreferences() {
 // ----------------------------------------------------------------------------
 
 void KTouch::optionsSetupUsers() {
-	KTouchUserSetup dlg(this);
+	KTouchUserSetupDialog dlg(this);
 	QStringList users = m_userStats.keys();
 	// call setup users dialog
 	dlg.showDialog(users);
@@ -510,7 +515,6 @@ void KTouch::optionsSetupUsers() {
 	for (QStringList::const_iterator it = users.constBegin(); it != users.constEnd(); ++it) {
 		new_stats[*it] = m_userStats[*it];
 		new_stats[*it].m_userName = *it;
-//		kDebug() << "User = " << *it << endl;
 	}
 	m_userStats = new_stats;
     m_currentUserAction->setItems(m_userStats.keys());

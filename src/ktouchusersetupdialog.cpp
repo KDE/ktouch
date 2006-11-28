@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchusersetup.cpp                                                   *
- *   -------------------                                                   *
+ *   ktouchusersetupdialog.cpp                                             *
+ *   -------------------------                                             *
  *   Copyright (C) 2006 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,8 +10,8 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchusersetup.h"
-#include "ktouchusersetup.moc"
+#include "ktouchusersetupdialog.h"
+#include "ktouchusersetupdialog.moc"
 
 #include <kinputdialog.h>
 #include <klocale.h>
@@ -21,29 +21,31 @@
 
 #include <QCloseEvent>
 
-KTouchUserSetup::KTouchUserSetup(QWidget* parent)
+KTouchUserSetupDialog::KTouchUserSetupDialog(QWidget* parent)
 : QDialog(parent)
 {
+	setupUi(this);
+	connect(addBtn, SIGNAL(clicked()), this, SLOT(addBtnClicked()));
+	connect(removeBtn, SIGNAL(clicked()), this, SLOT(removeBtnClicked()));
+	connect(closeBtn, SIGNAL(clicked()), this, SLOT(close()));
+	connect(userListWidget, SIGNAL(currentRowChanged(int)), this, SLOT(userSelected(int)));
 }
 // ----------------------------------------------------------------------------
 
-KTouchUserSetup::~KTouchUserSetup() {
+KTouchUserSetupDialog::~KTouchUserSetupDialog() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchUserSetup::showDialog(QStringList & user_names) {
+void KTouchUserSetupDialog::showDialog(QStringList & user_names) {
 	m_userNames = &user_names;
-	userListBox->clear();
-	userListBox->insertStringList(user_names);
+	userListWidget->clear();
+	userListWidget->insertItems(0, user_names);
 	exec();
 }
 // ----------------------------------------------------------------------------
 
-
-void KTouchUserSetup::userSelected(int index) {
-	if (index == -1 || userListBox->count()<=1 ||
-		userListBox->selectedItem()==0 ||
-		userListBox->selectedItem()->text()==i18n("default user") )	
+void KTouchUserSetupDialog::userSelected(int index) {
+	if (index == -1 || userListWidget->count()<=1)
 	{
 		removeBtn->setEnabled(false);
 	}
@@ -53,7 +55,7 @@ void KTouchUserSetup::userSelected(int index) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchUserSetup::addBtnClicked() {
+void KTouchUserSetupDialog::addBtnClicked() {
 	bool ok_pressed;
 	QString new_name = KInputDialog::getText(i18n("New user..."), 
 						i18n("Please enter a unique user name!"),
@@ -65,28 +67,27 @@ void KTouchUserSetup::addBtnClicked() {
 						QString::null /*const QString &   mask = QString::null*/
 					);
 	if (ok_pressed) {
-		Q3ListBoxItem * lbi = userListBox->findItem(new_name, Q3ListBox::ExactMatch);
-		if (lbi) {
+		QList<QListWidgetItem *> itemlist = userListWidget->findItems(new_name, Qt::MatchExactly);
+		if (!itemlist.isEmpty()) {
 			KMessageBox::sorry(this, i18n("This is not a valid (unique) user name!"));
 		}
 		else {
-			userListBox->insertItem(new_name);
-			userListBox->setCurrentItem(userListBox->count()-1);
+			userListWidget->addItem(new_name);
+			userListWidget->setCurrentRow(userListWidget->count()-1);
 		}
 	}
 }
 // ----------------------------------------------------------------------------
 
-void KTouchUserSetup::removeBtnClicked() {
-	Q3ListBoxItem * lbi = userListBox->selectedItem();
-	if (!lbi) return;
-	int index = userListBox->index(lbi);
-	userListBox->removeItem(index);
+void KTouchUserSetupDialog::removeBtnClicked() {
+	int index = userListWidget->currentRow();
+	if (index == -1) return;
+	userListWidget->takeItem(index);
 }
 // ----------------------------------------------------------------------------
 
 // Called when the users pressed close, confirms the changes.
-void KTouchUserSetup::closeEvent( QCloseEvent* ce ) {
+void KTouchUserSetupDialog::closeEvent( QCloseEvent* ce ) {
 	int result = KMessageBox::questionYesNoCancel(this,
 		i18n("Save user list?"));
 	switch (result) {
@@ -94,10 +95,8 @@ void KTouchUserSetup::closeEvent( QCloseEvent* ce ) {
 
 	  case KMessageBox::Yes : {
 		m_userNames->clear();
-		Q3ListBoxItem * i = userListBox->firstItem();
-		while (i) {
-			m_userNames->append(i->text());
-			i = i->next();
+		for (int i=0; i<userListWidget->count(); ++i) {
+			m_userNames->append(userListWidget->item(i)->text() );
 		}
 	  }
 	  break;

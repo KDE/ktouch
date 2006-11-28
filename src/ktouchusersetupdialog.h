@@ -1,6 +1,6 @@
 /***************************************************************************
- *   ktouchusersetup.h                                                     *
- *   -----------------                                                     *
+ *   ktouchusersetupdialog.h                                               *
+ *   -----------------------                                               *
  *   Copyright (C) 2006 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
@@ -10,24 +10,23 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHUSERSETUP_H
-#define KTOUCHUSERSETUP_H
+#ifndef KTOUCHUSERSETUPDIALOG_H
+#define KTOUCHUSERSETUPDIALOG_H
 
-#include "ui_ktouchusersetup_dlg.h"
+#include "ui_ktouchusersetupdialog.h"
 
 #include <QDialog>
-
-class QStringList;
+#include <QStringList>
 
 /// Implementation of the "Setup Users" dialog.
-class KTouchUserSetup : public QDialog, public Ui_KTouchUserSetupDlg {
+class KTouchUserSetupDialog : public QDialog, public Ui_KTouchUserSetupDialog {
 	Q_OBJECT
 
 public:
 	/// Default constructor.
-	explicit KTouchUserSetup(QWidget* parent);
+	explicit KTouchUserSetupDialog(QWidget* parent);
 	/// Default destructor.
-	~KTouchUserSetup();
+	~KTouchUserSetupDialog();
 
 	/// Use this function to show the dialog.
 	/// @param user_names A string list with user names. When the dialog is closed
@@ -50,5 +49,5 @@ private:
 	QStringList		*m_userNames;	///< Contains the list with user names.
 };
 
-#endif
+#endif // KTOUCHUSERSETUPDIALOG_H
 

@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>KTouchUserSetupDlg</class>
- <widget class="QDialog" name="KTouchUserSetupDlg" >
+ <class>KTouchUserSetupDialog</class>
+ <widget class="QDialog" name="KTouchUserSetupDialog" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -17,13 +17,13 @@
   </property>
   <layout class="QHBoxLayout" >
    <property name="margin" >
-    <number>11</number>
+    <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
    </property>
    <item>
-    <widget class="Q3ListBox" name="userListBox" />
+    <widget class="QListWidget" name="userListWidget" />
    </item>
    <item>
     <layout class="QVBoxLayout" >
@@ -94,32 +94,10 @@
    <extends>QPushButton</extends>
    <header>kpushbutton.h</header>
   </customwidget>
-  <customwidget>
-   <class>Q3ListBox</class>
-   <extends>QFrame</extends>
-   <header>q3listbox.h</header>
-  </customwidget>
  </customwidgets>
  <includes>
   <include location="local" >kpushbutton.h</include>
  </includes>
  <resources/>
- <connections>
-  <connection>
-   <sender>closeBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>KTouchUserSetupDlg</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>20</x>
-     <y>20</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>20</x>
-     <y>20</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
