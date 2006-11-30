@@ -170,6 +170,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
 
     return (!m_keys.isEmpty());  // empty file means error
 */
+    return false;
 }
 // ----------------------------------------------------------------------------
 
@@ -225,8 +226,8 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
         createDefault();
         return false;
     };
-	return false;
 */
+	return false;
 }
 // ----------------------------------------------------------------------------
 
