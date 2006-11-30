@@ -91,7 +91,7 @@ void KTouchTrainer::keyPressed(QChar key) {
         return;
     }
 	// remember length of student text without added character
-    unsigned int old_student_text_len = m_studentText.length();
+    int old_student_text_len = m_studentText.length();
     // compose new student text depending in typing direction
     QString new_student_text = m_studentText;
     if (Prefs::right2LeftTyping())
@@ -144,7 +144,7 @@ void KTouchTrainer::backspacePressed() {
 	if (m_trainingPaused)  continueTraining();
 	/// \todo Implement the "remove space character = remove word count" feature
 
-    unsigned int len = m_studentText.length();
+    int len = m_studentText.length();
     if (len) {
         if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
             // we are removing a correctly typed char
@@ -202,7 +202,12 @@ void KTouchTrainer::enterPressed() {
 
     // Automatic level change after a number of lines can happen, if you fulfilled the
     // requirements in the last 5 lines.
-    if (m_incLinesCount>=Prefs::numberOfLinesWorkload() && (!Prefs::completeWholeTrainingLevel()  || m_incLinesCount>= m_lecture->level(m_level).count())) {
+    if (m_incLinesCount >= Prefs::numberOfLinesWorkload() && 
+        (!Prefs::completeWholeTrainingLevel()  || 
+         m_incLinesCount >= static_cast<int>(m_lecture->level(m_level).count())
+        )
+       ) 
+    {
       levelUp();
       return;
     }
@@ -325,7 +330,7 @@ void KTouchTrainer::storeTrainingStatistics() {
 bool KTouchTrainer::studentLineCorrect() const {
     if (m_teacherText.isEmpty())
         return m_studentText.isEmpty();
-	unsigned int len = m_studentText.length();
+	int len = m_studentText.length();
     // different check for left and right writing
     if (Prefs::right2LeftTyping())
         return m_teacherText.right(len)==m_studentText && m_teacherText.length()>=len;
@@ -410,7 +415,7 @@ void KTouchTrainer::updateWordCount() {
 	if (!studentLineCorrect()) return;	// if error, don't update
 	int words = 0;
 	bool space = true;
-	for (unsigned int i=0; i<m_studentText.length(); ++i) {
+	for (int i=0; i<m_studentText.length(); ++i) {
 		bool is_space = (m_studentText[i] == QChar(' '));
 		if (is_space) {
 		 	if (space) continue; // two spaces after each other... ignore

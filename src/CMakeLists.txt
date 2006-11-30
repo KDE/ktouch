@@ -25,6 +25,7 @@ set(ktouch_SRCS
    ktouchchartwidget.cpp 
    ktouchcolorscheme.cpp 
    ktouchdefaults.cpp 
+   ktouchkeyboard.cpp
    ktouchkeyboardwidget.cpp 
    ktouchkeyconnector.cpp 
    ktouchkey.cpp 

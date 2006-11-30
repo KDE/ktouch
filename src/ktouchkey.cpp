@@ -13,17 +13,17 @@
 #include "ktouchkey.h"
 
 #include <QtXml>
+#include <QtCore>
 
 #include <kdebug.h>
-
-#include <utility>  // for std::min
 
 KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 	: m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
 {
-	m_chars[0].m_ch = ch;
-	m_chars[0].m_bold = true;
-	m_chars[0].m_pos = KTouchKeyChar::TOP_LEFT;
+	m_keyChar[0] = ch;
+	m_keyChar[1] = QChar();
+	m_keyChar[2] = QChar();
+	m_keyChar[3] = QChar();
 }
 // ----------------------------------------------------------------------------
 
@@ -31,21 +31,10 @@ KTouchKey::KTouchKey(int x, int y, int w, int h, QString text) :
 	m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_type = OTHER;
-	m_chars[0].m_ch = 0;
-	m_chars[0].m_bold = true;
-	m_chars[0].m_pos = KTouchKeyChar::TOP_LEFT;
-	m_chars[0].m_text = text;
+	m_keyChar[0] = QChar();
+	m_keyText = text;
 }
 // ----------------------------------------------------------------------------
-
-void KTouchKey::resize(double scale) {
-    m_xS = static_cast<int>(scale*m_x);
-    m_yS = static_cast<int>(scale*m_y);
-    m_wS = static_cast<int>(scale*m_w);
-    m_hS = static_cast<int>(scale*m_h);
-}
-// -----------------------------------------------------------------------------
-
 
 // Reads the key data from the DomElement
 bool KTouchKey::read(QDomNode node) {

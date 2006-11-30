@@ -70,6 +70,7 @@ KTouch::KTouch()
 {
 	m_duringStartup = true;
     setFocusPolicy(Qt::StrongFocus);
+	grabKeyboard();
 
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;

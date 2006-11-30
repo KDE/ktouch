@@ -14,12 +14,9 @@
 #include "ktouchkeyboardwidget.moc"
 
 #include <algorithm>
+#include <cmath>
 
-#include <QFile>
-#include <QTextStream>
-#include <QResizeEvent>
-#include <QPaintEvent>
-#include <QSet>
+#include <QtGui>
 
 #include <kdebug.h>
 #include <ktemporaryfile.h>
@@ -27,6 +24,8 @@
 #include <kio/netaccess.h>
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
+
+// #define USE_NEW_KEYBOARD
 
 #include "prefs.h"
 
@@ -48,6 +47,8 @@ KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
 KTouchKeyboardWidget::~KTouchKeyboardWidget() {
 	qDeleteAll(m_keyList);
 	m_keyList.clear();
+	qDeleteAll(m_keyPixmapsNormal);
+	m_keyPixmapsNormal.clear();
 }
 // --------------------------------------------------------------------------
 
@@ -69,50 +70,6 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
 }
 // --------------------------------------------------------------------------
 
-void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
-    QString tmpFile;
-    KTemporaryFile *temp=0;
-    if (url.isLocalFile())
-        tmpFile=url.path();             // for local files the path is sufficient
-    else {
-        temp=new KTemporaryFile;             // for remote files create a temporary file first
-        temp->open();
-        tmpFile=temp->fileName();
-    }
-
-    QFile outfile(tmpFile);
-    if ( !outfile.open( QIODevice::WriteOnly ) ) {
-        if (temp)  delete temp;
-        return;
-    }
-
-    QTextStream out( &outfile );
-    out << "########################################## \n";
-    out << "#                                        # \n";
-    out << "#  Keyboard layout file for KTouch       # \n";
-    out << "#                                        # \n";
-    out << "########################################## \n";
-    out << "#\n";
-    out << endl;
-
-	for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-        switch ((*it)->type()) {
-           case KTouchBaseKey::FINGER_KEY   : out << "FingerKey  "; break;
-           case KTouchBaseKey::NORMAL_KEY   : out << "NormalKey  "; break;
-           case KTouchBaseKey::CONTROL_KEY  : out << "ControlKey "; break;
-           default : out << "NormalKey  "; break;
-        }
-        QRect rect=(*it)->frame();
-        out << (*it)->m_keyChar.unicode() << '\t' << (*it)->m_keyText << '\t'
-            << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
-    }
-
-    if (temp) {
-        KIO::NetAccess::upload(tmpFile, url, window);
-        delete temp;
-    }
-}
-// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
     kDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
@@ -168,8 +125,11 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 	if (m_hideKeyboard) return;
-    update();
+	// store next to be pressed character, the corresponding key and
+	// the finger key will be highlighted
 	m_nextKey = nextChar;
+	// update the keyboard
+	update();
 }
 // --------------------------------------------------------------------------
 
@@ -177,12 +137,38 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
     QPainter painter(this);
     painter.translate(m_shift, MARGIN);
 
+	//const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
+
+
+#ifdef USE_NEW_KEYBOARD
+	// check if we have to create key pixmaps
+	if (m_keyPixmapsNormal.isEmpty() && !m_keyboard.m_keys.isEmpty()) {
+		// loop over all keys defines in the keyboard and create pixmaps
+		// for each key and draw the keys.
+		for (int i=0; i<m_keyboard.m_keys.count(); ++i)
+			drawKey(&m_keyboard.m_keys[i]);
+	}
+
+	// now draw the keyboard by copying the key pixmaps onto the widget
+	for (int i=0; i<m_keyboard.m_keys.count(); ++i) {
+		if (i >= m_keyPixmapsNormal.count() || m_keyPixmapsNormal[i] == 0) continue;
+		KTouchKey * k = &m_keyboard.m_keys[i];
+		// calculate placement of keys
+		int x = static_cast<int>(k->m_x*m_scale);
+		int y = static_cast<int>(k->m_y*m_scale);
+		// copy prerendered pixmap over to screen
+		QRect source(0, 0, m_keyPixmapsNormal[i]->width(), m_keyPixmapsNormal[i]->height());
+		QRect target(x, y, m_keyPixmapsNormal[i]->width(), m_keyPixmapsNormal[i]->height());
+		painter.drawPixmap(target, *m_keyPixmapsNormal[i], source);
+	}
+#else
+
+
 /*    // just print all visible keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->paint(p);
 	// TODO : later
 
-	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
 	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
 		// determine colors
     	QColor textColor;
@@ -247,22 +233,29 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
             }
         }
     }
+#endif // USE_NEW_KEYBOARD
 }
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
-	// kDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
-	// kDebug() << "[KTouchKeyboard::resizeEvent]  Keyboard = " << m_keyboardWidth << "x" << m_keyboardHeight << endl;
+#ifdef USE_NEW_KEYBOARD
+	// recalculate the scaling factor
+    double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboard.m_width;
+    double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboard.m_height;
+    m_scale = std::max(1.0, std::min(hScale, vScale));
+    m_shift = (width() - static_cast<int>(m_keyboard.m_width*m_scale))/2;
+	// erase prerendered pixmaps so that they get recreated on next update
+	qDeleteAll(m_keyPixmapsNormal);
+	m_keyPixmapsNormal.clear();
+#else
+	// recalculate the scaling factor
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
     double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
-    double scale = std::max(1.0, std::min(hScale, vScale));
-	// kDebug() << "[KTouchKeyboard::resizeEvent]  using scale = " << scale << endl;
-    m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
+    m_scale = std::max(1.0, std::min(hScale, vScale));
+    m_shift = (width() - static_cast<int>(m_keyboardWidth*m_scale))/2;
 	for (QList<KTouchBaseKey*>::iterator key = m_keyList.begin(); key != m_keyList.end(); ++key)
-        (*key)->resize(scale);     // resize all keys
-	for (QVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
-        (*it).resize(scale);       // resize all keys
-	}
+        (*key)->resize(m_scale);     // resize all keys
+#endif
     update();                      // and finally redraw the keyboard
 }
 // --------------------------------------------------------------------------
@@ -322,6 +315,8 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     updateColours();
     m_currentLayout="number.keyboard";
 
+/*
+
 	// create keyboard geometry for new keyboard data
 
     int sp = 10;
@@ -372,6 +367,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
 	m_keyConnections.append( KTouchKeyConnector('.', 15,  9, 0) );
 	m_keyConnections.append( KTouchKeyConnector(QChar(13), 16, 10, 0) );
 	m_keyConnections.append( KTouchKeyConnector(QChar(8), 17, 0, 0) );
+*/
 }
 // --------------------------------------------------------------------------
 
@@ -543,3 +539,85 @@ void KTouchKeyboardWidget::updateColours() {
 }
 // --------------------------------------------------------------------------
 
+void KTouchKeyboardWidget::drawKey(KTouchKey * k) {
+	// generate pixmap for key
+	int w = static_cast<int>(k->m_w*m_scale);
+	int h = static_cast<int>(k->m_h*m_scale);
+	if (w == 0 || h == 0) {
+		m_keyPixmapsNormal.append(NULL);
+	}
+	else {
+		// TODO : create here pixmaps for normally visible keys,
+		//        for keys in highlighed state and for 
+		//        for inactive/greyed out keys.
+		QPixmap * p = new QPixmap(w,h);
+		m_keyPixmapsNormal.append(p);
+		// draw key
+		QPainter pixp(p);
+		pixp.initFrom(this);
+		// erase background
+		pixp.eraseRect( QRect(0,0,w,h) );
+		//pixp.setBrush( colorScheme.m_cBackground );
+		//pixp.drawRoundRect(0,0,w,h);
+
+		// create a gradient for the keys
+		QLinearGradient linearGrad(QPointF(0, 0), QPointF(w, h));
+		linearGrad.setColorAt(0, QColor(221,224,244));
+		linearGrad.setColorAt(1, QColor(145,167,195));
+
+		pixp.setPen(QColor(56,65,82));
+		pixp.setBrush( linearGrad );
+		pixp.drawRect(0,0,w-1,h-1);
+	}
+}
+// --------------------------------------------------------------------------
+
+
+/*
+removed functions
+
+void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
+    QString tmpFile;
+    KTemporaryFile *temp=0;
+    if (url.isLocalFile())
+        tmpFile=url.path();             // for local files the path is sufficient
+    else {
+        temp=new KTemporaryFile;             // for remote files create a temporary file first
+        temp->open();
+        tmpFile=temp->fileName();
+    }
+
+    QFile outfile(tmpFile);
+    if ( !outfile.open( QIODevice::WriteOnly ) ) {
+        if (temp)  delete temp;
+        return;
+    }
+
+    QTextStream out( &outfile );
+    out << "########################################## \n";
+    out << "#                                        # \n";
+    out << "#  Keyboard layout file for KTouch       # \n";
+    out << "#                                        # \n";
+    out << "########################################## \n";
+    out << "#\n";
+    out << endl;
+
+	for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
+        switch ((*it)->type()) {
+           case KTouchBaseKey::FINGER_KEY   : out << "FingerKey  "; break;
+           case KTouchBaseKey::NORMAL_KEY   : out << "NormalKey  "; break;
+           case KTouchBaseKey::CONTROL_KEY  : out << "ControlKey "; break;
+           default : out << "NormalKey  "; break;
+        }
+        QRect rect=(*it)->frame();
+        out << (*it)->m_keyChar.unicode() << '\t' << (*it)->m_keyText << '\t'
+            << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
+    }
+
+    if (temp) {
+        KIO::NetAccess::upload(tmpFile, url, window);
+        delete temp;
+    }
+}
+// --------------------------------------------------------------------------
+*/

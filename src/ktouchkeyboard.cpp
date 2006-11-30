@@ -114,7 +114,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 
 // Loads keyboard data from file, preserved for compatibility
 bool KTouchKeyboard::read(QTextStream& in) {
-    QString line;
+/*    QString line;
     clear();          // empty the keyboard
     // now loop until end of file is reached
     do {
@@ -171,11 +171,13 @@ bool KTouchKeyboard::read(QTextStream& in) {
     } while (!in.atEnd() && !line.isNull());
 
     return (!m_keys.isEmpty());  // empty file means error
+*/
 }
 // ----------------------------------------------------------------------------
 
 // Loads keyboard data from file into an XML document
 bool KTouchKeyboard::read(const QDomDocument& doc) {
+/*
 	// clean current data
 	kDebug() << "Reading new keyboard layout" << endl;
     m_keys.clear();
@@ -226,6 +228,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
         return false;
     };
 	return false;
+*/
 }
 // ----------------------------------------------------------------------------
 
@@ -264,18 +267,19 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	// Store keys
 	QDomElement keys = doc.createElement("KeyDefinitions");
 	root.appendChild(keys);
-    for (QVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
+    for (QList<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
 		it->write(doc, keys);
 	// Store connectors
 	QDomElement conns = doc.createElement("KeyConnections");
 	root.appendChild(conns);
-    for (QVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (QList<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
 		it->write(doc, conns);
 }
 // ----------------------------------------------------------------------------
 
 // Creates the default number keyboard.
 void KTouchKeyboard::createDefault() {
+
     // let's create a default keyboard
     const int keySpacing = 4;
     const int keyHeight = 20;
@@ -286,26 +290,25 @@ void KTouchKeyboard::createDefault() {
 	// This means we have to create all keys that will be displayed.
     // Note: purely decorative keys get a key character code of 0!
     m_keys.clear();
-	m_keys.push_back( KTouchKey(KTouchKey::OTHER,    0, 0, 2*col+      0,     0, keyWidth, keyHeight) );
-	m_keys.back().m_otherKeyText = i18nc("Num-lock", "Num");
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '/', 0, 2*col+    col,     0, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '*', 0, 2*col+  2*col,     0, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '-', 0, 2*col+  3*col,     0, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '7', 0, 2*col+      0,   row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '8', 0, 2*col+  1*col,   row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '9', 0, 2*col+  2*col,   row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::FINGER, '4', 0, 2*col+  	 0, 2*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::FINGER, '5', 0, 2*col+  1*col, 2*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::FINGER, '6', 0, 2*col+  2*col, 2*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '1', 0, 2*col+  	 0, 3*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '2', 0, 2*col+  1*col, 3*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '3', 0, 2*col+  2*col, 3*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '0', 0, 2*col+  	 0, 4*row, 2*keyWidth+keySpacing, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, '.', 0, 2*col+  2*col, 4*row, keyWidth, keyHeight) );
-	m_keys.push_back( KTouchKey(KTouchKey::FINGER, '+', 0, 2*col+  3*col,   row, keyWidth, 2*keyHeight+keySpacing) );
-	m_keys.push_back( KTouchKey(KTouchKey::ENTER,    0, 0, 2*col+  3*col, 3*row, keyWidth, 2*keyHeight+keySpacing) );
-	m_keys.push_back( KTouchKey(KTouchKey::BACKSPACE,0, 0, 2*col+  5*col,     0, keyWidth, keyHeight) );
-
+	m_keys.push_back( KTouchKey(2*col+      0,     0, keyWidth, keyHeight, i18nc("Num-lock", "Num")) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+    col,     0, keyWidth, keyHeight, QChar('/') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  2*col,     0, keyWidth, keyHeight, QChar('*') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  3*col,     0, keyWidth, keyHeight, QChar('-') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+      0,   row, keyWidth, keyHeight, QChar('7') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  1*col,   row, keyWidth, keyHeight, QChar('8') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  2*col,   row, keyWidth, keyHeight, QChar('9') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::FINGER, 2*col+  	 0, 2*row, keyWidth, keyHeight, QChar('4') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::FINGER, 2*col+  1*col, 2*row, keyWidth, keyHeight, QChar('5') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::FINGER, 2*col+  2*col, 2*row, keyWidth, keyHeight, QChar('6') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  	 0, 3*row, keyWidth, keyHeight, QChar('1') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  1*col, 3*row, keyWidth, keyHeight, QChar('2') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  2*col, 3*row, keyWidth, keyHeight, QChar('3') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  	 0, 4*row, 2*keyWidth+keySpacing, keyHeight, QChar('0') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::NORMAL, 2*col+  2*col, 4*row, keyWidth, keyHeight, QChar('.') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::FINGER, 2*col+  3*col,   row, keyWidth, 2*keyHeight+keySpacing, QChar('+') ) );
+	m_keys.push_back( KTouchKey(KTouchKey::ENTER,     2*col+  3*col, 3*row, keyWidth, 2*keyHeight+keySpacing, QChar() ) );
+	m_keys.push_back( KTouchKey(KTouchKey::BACKSPACE, 2*col+  5*col,     0, keyWidth, keyHeight, QChar() ) );
+/*
     // now we need to create the connections between the characters that can be typed and the
     // keys that need to be displayed on the keyboard
     // The arguments to the constructor are: keychar, targetkey, fingerkey, controlkeyid
@@ -326,7 +329,7 @@ void KTouchKeyboard::createDefault() {
 	m_connectors.push_back( KTouchKeyConnector('8', '8','5', 0) );
 	m_connectors.push_back( KTouchKeyConnector('9', '9','6', 0) );
     m_connectors.push_back( KTouchKeyConnector('.', '.', '6', 0) );
-
+*/
 	m_title = "Number keypad";
 	m_comment = "Predefined keyboard layout";
 	m_language.clear();
@@ -338,8 +341,8 @@ void KTouchKeyboard::createDefault() {
 // ----------------------------------------------------------------------------
 
 void KTouchKeyboard::updateConnections() {
-	for (QVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
-		(*it).updateConnections(m_keys);
+//	for (QList<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
+//		(*it).updateConnections(m_keys);
 }
 // ----------------------------------------------------------------------------
 
