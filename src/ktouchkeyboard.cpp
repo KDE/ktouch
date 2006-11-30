@@ -21,8 +21,6 @@
 #include <kio/netaccess.h>
 #include <klocale.h>
 
-#include "prefs.h"
-
 // --------------------------------------------------------------------------
 
 // Clears the keyboard data

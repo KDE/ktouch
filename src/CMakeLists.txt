@@ -7,14 +7,14 @@ include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/ )
 kde4_add_ui_files(ktouch_UIS
    ui/ktouchcoloreditordialog.ui 
    ui/ktouchopenrequestdialog.ui 
-   ui/ktouchprefgeneralpage.ui 
    ui/ktouchstatuswidget.ui
    ui/ktouchlectureeditordialog.ui 
    ui/ktouchstatisticsdialog.ui 
    ui/ktouchusersetupdialog.ui
-   ktouchprefcolorslayout.ui 
-   ktouchprefkeyboardlayout.ui 
-   ktouchpreftraininglayout.ui 
+   ui/ktouchprefgeneralpage.ui 
+   ui/ktouchprefcolorspage.ui 
+   ui/ktouchprefkeyboardpage.ui 
+   ui/ktouchpreftrainingpage.ui 
 )
 
 # set the source code files from which KTouch is compiled

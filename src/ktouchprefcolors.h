@@ -14,7 +14,7 @@
 
 #include <QWidget>
 
-#include "ui_ktouchprefcolorslayout.h"
+#include "ui_ktouchprefcolorspage.h"
 
 class KTouchPrefColors : public QWidget {
 
@@ -25,7 +25,7 @@ public:
         ui.setupUi(this);
     };
 
-    Ui_KTouchPrefColorsLayout ui;
+    Ui_KTouchPrefColorsPage ui;
 };
 
 #endif

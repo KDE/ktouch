@@ -1,12 +1,12 @@
 <ui version="4.0" >
- <class>KTouchPrefKeyboardLayout</class>
- <widget class="QWidget" name="KTouchPrefKeyboardLayout" >
+ <class>KTouchPrefKeyboardPage</class>
+ <widget class="QWidget" name="KTouchPrefKeyboardPage" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>498</width>
-    <height>162</height>
+    <width>516</width>
+    <height>217</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -14,22 +14,19 @@
   </property>
   <layout class="QVBoxLayout" >
    <property name="margin" >
-    <number>0</number>
+    <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
    </property>
    <item>
-    <widget class="Q3GroupBox" name="groupBox1" >
+    <widget class="QGroupBox" name="groupBox1" >
      <property name="title" >
       <string/>
      </property>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
      <layout class="QVBoxLayout" >
       <property name="margin" >
-       <number>0</number>
+       <number>9</number>
       </property>
       <property name="spacing" >
        <number>6</number>
@@ -68,7 +65,16 @@
        </widget>
       </item>
       <item>
-       <widget class="KFontRequester" name="kcfg_KeyboardFont" />
+       <widget class="KFontRequester" name="kcfg_KeyboardFont" >
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>7</hsizetype>
+          <vsizetype>5</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -83,8 +89,8 @@
      </property>
      <property name="sizeHint" >
       <size>
-       <width>20</width>
-       <height>30</height>
+       <width>498</width>
+       <height>31</height>
       </size>
      </property>
     </spacer>
@@ -95,16 +101,9 @@
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
   <customwidget>
-   <class>Q3GroupBox</class>
-   <extends>QGroupBox</extends>
-   <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>KFontRequester</class>
    <extends>QWidget</extends>
    <header>kfontrequester.h</header>
-   <container>1</container>
   </customwidget>
  </customwidgets>
  <includes>

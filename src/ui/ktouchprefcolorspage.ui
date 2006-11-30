@@ -1,12 +1,12 @@
 <ui version="4.0" >
- <class>KTouchPrefColorsLayout</class>
- <widget class="QWidget" name="KTouchPrefColorsLayout" >
+ <class>KTouchPrefColorsPage</class>
+ <widget class="QWidget" name="KTouchPrefColorsPage" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>467</width>
-    <height>375</height>
+    <width>590</width>
+    <height>431</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -14,22 +14,19 @@
   </property>
   <layout class="QVBoxLayout" >
    <property name="margin" >
-    <number>0</number>
+    <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
    </property>
    <item>
-    <widget class="Q3GroupBox" name="groupBox5" >
+    <widget class="QGroupBox" name="groupBox5" >
      <property name="title" >
       <string>Color Scheme</string>
      </property>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
      <layout class="QVBoxLayout" >
       <property name="margin" >
-       <number>0</number>
+       <number>9</number>
       </property>
       <property name="spacing" >
        <number>6</number>
@@ -66,7 +63,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QComboBox" name="kcfg_CurrentColorScheme" >
+         <widget class="KComboBox" name="kcfg_CurrentColorScheme" >
           <property name="toolTip" >
            <string>Color scheme for displaying the keyboard</string>
           </property>
@@ -105,16 +102,13 @@
        </widget>
       </item>
       <item>
-       <widget class="Q3GroupBox" name="colorsGroup" >
+       <widget class="QGroupBox" name="colorsGroup" >
         <property name="title" >
          <string>Typing Line Colors</string>
         </property>
-        <property name="orientation" >
-         <enum>Qt::Vertical</enum>
-        </property>
         <layout class="QVBoxLayout" >
          <property name="margin" >
-          <number>0</number>
+          <number>9</number>
          </property>
          <property name="spacing" >
           <number>6</number>
@@ -127,32 +121,6 @@
            <property name="spacing" >
             <number>6</number>
            </property>
-           <item row="0" column="7" >
-            <widget class="KColorButton" name="kcfg_TeacherBackgroundColor" >
-             <property name="minimumSize" >
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip" >
-              <string>The background for the teacher's line</string>
-             </property>
-             <property name="whatsThis" >
-              <string>You can change here the background color for the teacher's line (the line of letters you have to type.)</string>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" >
-            <widget class="QLabel" name="textLabel1_3" >
-             <property name="text" >
-              <string>Typing line</string>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="4" >
             <widget class="KColorButton" name="kcfg_TeacherTextColor" >
              <property name="sizePolicy" >
@@ -184,6 +152,43 @@
              </property>
              <property name="sizeType" >
               <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" >
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0" colspan="2" >
+            <widget class="QLabel" name="textLabel1" >
+             <property name="text" >
+              <string>Teacher's line</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" >
+            <widget class="QLabel" name="textLabel1_4" >
+             <property name="text" >
+              <string>Text:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3" >
+            <widget class="QLabel" name="textLabel1_4_2" >
+             <property name="text" >
+              <string>Text:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5" >
+            <spacer>
+             <property name="orientation" >
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType" >
+              <enum>QSizePolicy::Fixed</enum>
              </property>
              <property name="sizeHint" >
               <size>
@@ -228,6 +233,13 @@
              </property>
             </widget>
            </item>
+           <item row="1" column="6" >
+            <widget class="QLabel" name="textLabel1_2_2" >
+             <property name="text" >
+              <string>Background:</string>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="6" >
             <widget class="QLabel" name="textLabel1_2" >
              <property name="text" >
@@ -248,43 +260,6 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="3" >
-            <widget class="QLabel" name="textLabel1_4_2" >
-             <property name="text" >
-              <string>Text:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5" >
-            <spacer>
-             <property name="orientation" >
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType" >
-              <enum>QSizePolicy::Fixed</enum>
-             </property>
-             <property name="sizeHint" >
-              <size>
-               <width>20</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="0" column="3" >
-            <widget class="QLabel" name="textLabel1_4" >
-             <property name="text" >
-              <string>Text:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0" colspan="2" >
-            <widget class="QLabel" name="textLabel1" >
-             <property name="text" >
-              <string>Teacher's line</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="1" colspan="2" >
             <spacer>
              <property name="orientation" >
@@ -301,10 +276,29 @@
              </property>
             </spacer>
            </item>
-           <item row="1" column="6" >
-            <widget class="QLabel" name="textLabel1_2_2" >
+           <item row="0" column="7" >
+            <widget class="KColorButton" name="kcfg_TeacherBackgroundColor" >
+             <property name="minimumSize" >
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="toolTip" >
+              <string>The background for the teacher's line</string>
+             </property>
+             <property name="whatsThis" >
+              <string>You can change here the background color for the teacher's line (the line of letters you have to type.)</string>
+             </property>
              <property name="text" >
-              <string>Background:</string>
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" >
+            <widget class="QLabel" name="textLabel1_3" >
+             <property name="text" >
+              <string>Typing line</string>
              </property>
             </widget>
            </item>
@@ -337,14 +331,14 @@
           </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" >
+          <layout class="QGridLayout" >
            <property name="margin" >
             <number>0</number>
            </property>
            <property name="spacing" >
             <number>6</number>
            </property>
-           <item>
+           <item row="0" column="0" >
             <spacer>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
@@ -360,43 +354,7 @@
              </property>
             </spacer>
            </item>
-           <item>
-            <widget class="QLabel" name="errorTextLabel" >
-             <property name="text" >
-              <string>Text:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="KColorButton" name="kcfg_ErrorTextColor" >
-             <property name="enabled" >
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize" >
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip" >
-              <string>Choose the text color for error in typing line</string>
-             </property>
-             <property name="whatsThis" >
-              <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the text of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
-             </property>
-             <property name="text" >
-              <string/>
-             </property>
-             <property name="color" >
-              <color>
-               <red>170</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </property>
-            </widget>
-           </item>
-           <item>
+           <item row="0" column="3" >
             <spacer>
              <property name="orientation" >
               <enum>Qt::Horizontal</enum>
@@ -412,14 +370,14 @@
              </property>
             </spacer>
            </item>
-           <item>
+           <item row="0" column="4" >
             <widget class="QLabel" name="errorBackgroundLabel" >
              <property name="text" >
               <string>Background:</string>
              </property>
             </widget>
            </item>
-           <item>
+           <item row="0" column="5" >
             <widget class="KColorButton" name="kcfg_ErrorBackgroundColor" >
              <property name="enabled" >
               <bool>true</bool>
@@ -439,12 +397,34 @@
              <property name="text" >
               <string/>
              </property>
-             <property name="color" >
-              <color>
-               <red>175</red>
-               <green>0</green>
-               <blue>55</blue>
-              </color>
+            </widget>
+           </item>
+           <item row="0" column="2" >
+            <widget class="KColorButton" name="kcfg_ErrorTextColor" >
+             <property name="enabled" >
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize" >
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="toolTip" >
+              <string>Choose the text color for error in typing line</string>
+             </property>
+             <property name="whatsThis" >
+              <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the text of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
+             </property>
+             <property name="text" >
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" >
+            <widget class="QLabel" name="errorTextLabel" >
+             <property name="text" >
+              <string>Text:</string>
              </property>
             </widget>
            </item>
@@ -477,12 +457,11 @@
  <layoutdefault spacing="6" margin="11" />
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
-  <customwidget>
-   <class>Q3GroupBox</class>
-   <extends>QGroupBox</extends>
-   <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
+	 <customwidget>
+		 <class>KComboBox</class>
+		 <extends>QComboBox</extends>
+		 <header>kcombobox.h</header>
+	 </customwidget>
   <customwidget>
    <class>KColorButton</class>
    <extends>QPushButton</extends>
@@ -500,11 +479,6 @@
   <tabstop>kcfg_CurrentColorScheme</tabstop>
  </tabstops>
  <includes>
-  <include location="local" >kcolorbutton.h</include>
-  <include location="local" >kcolorbutton.h</include>
-  <include location="local" >kcolorbutton.h</include>
-  <include location="local" >kcolorbutton.h</include>
-  <include location="local" >kcolorbutton.h</include>
   <include location="local" >kcolorbutton.h</include>
  </includes>
  <resources/>

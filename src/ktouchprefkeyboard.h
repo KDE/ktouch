@@ -14,7 +14,7 @@
 
 #include <QWidget>
 
-#include "ui_ktouchprefkeyboardlayout.h"
+#include "ui_ktouchprefkeyboardpage.h"
 
 class KTouchPrefKeyboard : public QWidget {
 
@@ -25,7 +25,7 @@ public:
         ui.setupUi(this);
     };
 
-    Ui_KTouchPrefKeyboardLayout ui;
+    Ui_KTouchPrefKeyboardPage ui;
 };
 
 #endif

@@ -14,7 +14,7 @@
 
 #include <QWidget>
 
-#include "ui_ktouchpreftraininglayout.h"
+#include "ui_ktouchpreftrainingpage.h"
 
 class KTouchPrefTraining : public QWidget {
 
@@ -25,7 +25,7 @@ public:
         ui.setupUi(this);
     };
 
-    Ui_KTouchPrefTrainingLayout ui;
+    Ui_KTouchPrefTrainingPage ui;
 };
 
 #endif
