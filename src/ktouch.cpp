@@ -62,15 +62,13 @@
 
 KTouch * KTouchPtr = NULL;
 
-KTouch::KTouch()
-  : KMainWindow( 0, "KTouch" ),
+KTouch::KTouch() :
     m_statusWidget(NULL),
     m_keyboardWidget(NULL),
     m_trainer(NULL)
 {
 	m_duringStartup = true;
     setFocusPolicy(Qt::StrongFocus);
-	grabKeyboard();
 
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
@@ -240,6 +238,8 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->ui.l8->setEnabled(true);
 		m_pageTraining->ui.l9->setEnabled(true);
 		m_pageTraining->ui.l10->setEnabled(true);
+		m_pageTraining->ui.l11->setEnabled(true);
+		m_pageTraining->ui.l12->setEnabled(true);
 		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(true);
 		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(true);
 		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(true);
@@ -259,6 +259,8 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->ui.l8->setEnabled(false);
 		m_pageTraining->ui.l9->setEnabled(false);
 		m_pageTraining->ui.l10->setEnabled(false);
+		m_pageTraining->ui.l11->setEnabled(false);
+		m_pageTraining->ui.l12->setEnabled(false);
 		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(false);
 		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(false);
 		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(false);
@@ -271,7 +273,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 // ----------------------------------------------------------------------------
 
 void KTouch::configCommonColorsToggled(bool on) {
-	m_pageColors->ui.colorsGroup->setEnabled(on);
+	m_pageColors->ui.colorsGroupBox->setEnabled(on);
 }
 // ----------------------------------------------------------------------------
 
@@ -387,11 +389,11 @@ void KTouch::fileEditColors() {
 	}
 	// update the quick select menu
     QStringList schemes_list;
-    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+    for (int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
 		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
     m_keyboardColorAction->setItems(schemes_list);
 	int index = selected + default_schemes;
-	if (index >=0 && index < static_cast<int>(KTouchColorScheme::m_colorSchemes.count())) {
+	if (index >=0 && index < KTouchColorScheme::m_colorSchemes.count()) {
 		Prefs::setCurrentColorScheme(index);
 	}
 	else {
@@ -479,27 +481,26 @@ void KTouch::optionsPreferences() {
     m_pageKeyboard = new KTouchPrefKeyboard(dialog);
     dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
 
-    KTouchPrefColors *m_pageColors = new KTouchPrefColors(dialog);
+    m_pageColors = new KTouchPrefColors(dialog);
     dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
-    // TODO : Connect some other buttons/check boxes of the dialog
-/*
-	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
+
+    // Connect some other buttons/check boxes of the dialog
+	connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
 		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
+	connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
 		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
+	connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
 		this, SLOT(configAutoLevelChangeToggled(bool)));
-	connect(m_pageColors->kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
+	connect(m_pageColors->ui.kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
 		this, SLOT(configCommonColorsToggled(bool)));
-*/
 
     // call the functions to enable/disable controls depending on settings
-//    configOverrideLectureFontToggled(Prefs::overrideLectureFont());
-//    configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
-//    configAutoLevelChangeToggled(Prefs::autoLevelChange());
-//	configCommonColorsToggled(Prefs::commonTypingLineColors());
+	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
+	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
+	configAutoLevelChangeToggled(Prefs::autoLevelChange());
+	configCommonColorsToggled(Prefs::commonTypingLineColors());
 
     dialog->show();
 }
@@ -540,7 +541,7 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 // ----------------------------------------------------------------------------
 
 void KTouch::changeKeyboard(int num) {
-    if (static_cast<unsigned int>(num)>=m_keyboardFiles.count()) return;
+    if (num >= m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
 	//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
@@ -550,7 +551,7 @@ void KTouch::changeKeyboard(int num) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeColor(int num) {
-    if (static_cast<unsigned int>(num)>=KTouchColorScheme::m_colorSchemes.count()) return;
+    if (num >= KTouchColorScheme::m_colorSchemes.count()) return;
     Prefs::setCurrentColorScheme(num);
     m_keyboardWidget->applyPreferences(this, false);
 	m_slideLineWidget->applyPreferences();
@@ -558,11 +559,11 @@ void KTouch::changeColor(int num) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeLecture(int num) {
-    if (static_cast<unsigned int>(num)>=m_lectureFiles.count()) return;
+    if (num >= m_lectureFiles.count()) return;
     trainingPause();
 	KTouchLecture l;
 	QString fileName = m_lectureFiles[num];
-    if (!l.loadXML(this, KUrl::fromPathOrUrl(fileName))) {
+    if (!l.loadXML(this, KUrl(fileName))) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.", fileName) );
     	m_defaultLectureAction->setCurrentItem(-1);
 	}
@@ -582,7 +583,7 @@ void KTouch::changeLecture(int num) {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeUser(int num) {
-    if (static_cast<unsigned int>(num)>=m_userStats.keys().count()) return;
+    if (num >= m_userStats.keys().count()) return;
     trainingPause();
 	m_trainer->storeTrainingStatistics();
 	QString new_name = m_userStats.keys()[num];
@@ -754,9 +755,12 @@ void KTouch::initTrainingSession() {
 
     m_statusWidget = new KTouchStatusWidget( this );
     m_slideLineWidget = new KTouchSlideLine( this );
-    m_slideLineWidget->setSizePolicy( QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 1) );
+	QSizePolicy sp(QSizePolicy::Preferred, QSizePolicy::Expanding);
+	sp.setVerticalStretch(1);
+    m_slideLineWidget->setSizePolicy( sp );
     m_keyboardWidget = new KTouchKeyboardWidget( this );
-    m_keyboardWidget->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 3) );
+	sp.setVerticalStretch(3);
+    m_keyboardWidget->setSizePolicy( sp );
 
     layout->addWidget(m_statusWidget);
     layout->addWidget(m_slideLineWidget);
@@ -823,11 +827,11 @@ void KTouch::setupActions() {
 	// Setup menu entries for colour schemes
 	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), actionCollection(), "keyboard_schemes");
     QStringList schemes_list;
-    for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
+    for (int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
 		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
 	m_keyboardColorAction->setMenuAccelsEnabled(false);
     m_keyboardColorAction->setItems(schemes_list);
-	if (static_cast<unsigned int>(Prefs::currentColorScheme()) >=  schemes_list.count())
+	if (Prefs::currentColorScheme() >=  schemes_list.count())
 		Prefs::setCurrentColorScheme(1);
    	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
     connect (m_keyboardColorAction, SIGNAL(triggered(int)), this, SLOT(changeColor(int)));
@@ -853,7 +857,7 @@ void KTouch::updateFontFromLecture() {
 		// TODO : if multiple font suggestions are given, try one after another until a
 		// suggested font is found
 		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
-		else if (f.fromString("Monospace")) 		m_slideLineWidget->setFont(f);
+		else if (f.fromString("Monospace")) 			m_slideLineWidget->setFont(f);
 	}
 }
 // ----------------------------------------------------------------------------
@@ -869,8 +873,8 @@ void KTouch::updateFileLists() {
 
     // remove the number layout, since this is the necessary default layout and will be
     // added anyway
-    QStringList::iterator it = m_keyboardFiles.find("number.keyboard");
-	if (it!=m_keyboardFiles.end())		m_keyboardFiles.remove(it);
+    int index = m_keyboardFiles.indexOf("number.keyboard");
+	if (index != -1)	m_keyboardFiles.removeAt(index);
 
     m_keyboardTitles.clear();
     for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
@@ -964,23 +968,16 @@ void KTouch::updateKeyboardActionCheck() {
 
 void KTouch::updateCurrentUserActionCheck() {
     QStringList user_list = m_userStats.keys();
-	QStringList::const_iterator it = user_list.find(Prefs::currentUserName());
+	int index = user_list.indexOf(Prefs::currentUserName());
 	// if not found, fall back on default user
-	if (it == user_list.end()) {
+	if (index == -1) {
 		Prefs::setCurrentUserName(i18n("default user"));
-		it = user_list.find(Prefs::currentUserName());
+		index = user_list.indexOf(Prefs::currentUserName());
 	}
-	QStringList::const_iterator it2 = user_list.begin();
-	// find index
-	unsigned int index = 0;
-	while (it2 != it) {
-		++index;
-		++it2;
-	}
-	if (index >= user_list.count()) {
+	if (index == -1) {
 		// we must be missing the default user in the list,
 		// this shouldn't happen, though...
-		kDebug() << "Missing default user in list..." << endl;
+		kDebug() << "Missing default user in list. Adding default user to list." << endl;
 		user_list.append(i18n("default user"));
 		index = user_list.count() -1;
 	}

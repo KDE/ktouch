@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>590</width>
-    <height>431</height>
+    <width>448</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -32,69 +32,6 @@
        <number>6</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" >
-        <property name="margin" >
-         <number>0</number>
-        </property>
-        <property name="spacing" >
-         <number>6</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="textLabel2" >
-          <property name="text" >
-           <string>Select color scheme:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer>
-          <property name="orientation" >
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType" >
-           <enum>QSizePolicy::Expanding</enum>
-          </property>
-          <property name="sizeHint" >
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="KComboBox" name="kcfg_CurrentColorScheme" >
-          <property name="toolTip" >
-           <string>Color scheme for displaying the keyboard</string>
-          </property>
-          <property name="whatsThis" >
-           <string>You can choose here the color scheme for displaying the keyboard. &lt;i>Black &amp; White&lt;/i> will display all keyboard letters black on white, &lt;i>Classic&lt;/i> will colorize the same color for each finger, &lt;i>Deep Blue&lt;/i> will display the keyboard in different deep blue colors and &lt;i>Stripy&lt;/i> will alternate blue and gray for letters corresponding to same finger.</string>
-          </property>
-          <item>
-           <property name="text" >
-            <string>Black &amp; White</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Classic</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Deep Blue</string>
-           </property>
-          </item>
-          <item>
-           <property name="text" >
-            <string>Stripy</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
        <widget class="QCheckBox" name="kcfg_CommonTypingLineColors" >
         <property name="text" >
          <string>Use common typing line colors independent of color scheme</string>
@@ -102,9 +39,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="colorsGroup" >
+       <widget class="QGroupBox" name="colorsGroupBox" >
         <property name="title" >
-         <string>Typing Line Colors</string>
+         <string>Typing line colors</string>
         </property>
         <layout class="QVBoxLayout" >
          <property name="margin" >
@@ -162,21 +99,21 @@
             </spacer>
            </item>
            <item row="0" column="0" colspan="2" >
-            <widget class="QLabel" name="textLabel1" >
+            <widget class="QLabel" name="l1" >
              <property name="text" >
               <string>Teacher's line</string>
              </property>
             </widget>
            </item>
            <item row="0" column="3" >
-            <widget class="QLabel" name="textLabel1_4" >
+            <widget class="QLabel" name="l3" >
              <property name="text" >
               <string>Text:</string>
              </property>
             </widget>
            </item>
            <item row="1" column="3" >
-            <widget class="QLabel" name="textLabel1_4_2" >
+            <widget class="QLabel" name="l4" >
              <property name="text" >
               <string>Text:</string>
              </property>
@@ -234,14 +171,14 @@
             </widget>
            </item>
            <item row="1" column="6" >
-            <widget class="QLabel" name="textLabel1_2_2" >
+            <widget class="QLabel" name="l6" >
              <property name="text" >
               <string>Background:</string>
              </property>
             </widget>
            </item>
            <item row="0" column="6" >
-            <widget class="QLabel" name="textLabel1_2" >
+            <widget class="QLabel" name="l5" >
              <property name="text" >
               <string>Background:</string>
              </property>
@@ -296,7 +233,7 @@
             </widget>
            </item>
            <item row="1" column="0" >
-            <widget class="QLabel" name="textLabel1_3" >
+            <widget class="QLabel" name="l2" >
              <property name="text" >
               <string>Typing line</string>
              </property>
@@ -441,9 +378,6 @@
      <property name="orientation" >
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeType" >
-      <enum>QSizePolicy::Expanding</enum>
-     </property>
      <property name="sizeHint" >
       <size>
        <width>20</width>
@@ -457,11 +391,6 @@
  <layoutdefault spacing="6" margin="11" />
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
-	 <customwidget>
-		 <class>KComboBox</class>
-		 <extends>QComboBox</extends>
-		 <header>kcombobox.h</header>
-	 </customwidget>
   <customwidget>
    <class>KColorButton</class>
    <extends>QPushButton</extends>
@@ -476,7 +405,6 @@
   <tabstop>kcfg_ColorOnError</tabstop>
   <tabstop>kcfg_ErrorTextColor</tabstop>
   <tabstop>kcfg_ErrorBackgroundColor</tabstop>
-  <tabstop>kcfg_CurrentColorScheme</tabstop>
  </tabstops>
  <includes>
   <include location="local" >kcolorbutton.h</include>

@@ -117,7 +117,7 @@
         <item row="2" column="0" >
          <widget class="QLabel" name="l11" >
           <property name="text" >
-           <string>Workload</string>
+           <string>Workload:</string>
           </property>
          </widget>
         </item>
