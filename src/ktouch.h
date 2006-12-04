@@ -23,6 +23,7 @@
 #include <kapplication.h>
 #include <kurl.h>
 
+class KAction;
 class KToggleAction;
 class KActionMenu;
 class KSelectAction;
