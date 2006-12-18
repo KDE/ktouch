@@ -21,7 +21,7 @@
 
 // KDE Header
 #include <kselectaction.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <klocale.h>
 #include <kstatusbar.h>
 #include <kfiledialog.h>
@@ -799,7 +799,7 @@ void KTouch::setupActions() {
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
-    KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
+    KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***
     action = new KAction(KIcon("launch"), i18n("&Start New Session"), actionCollection(), "training_newsession");
@@ -817,7 +817,7 @@ void KTouch::setupActions() {
     connect (m_defaultLectureAction, SIGNAL(triggered(int)), this, SLOT(changeLecture(int)));
 
 	// *** Options menu ***
-    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts
     m_keyboardLayoutAction = new KSelectAction(i18n("&Keyboard Layouts"), actionCollection(), "keyboard_layouts");
 	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
