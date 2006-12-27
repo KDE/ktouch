@@ -46,7 +46,7 @@ class KTouchKey {
 	/// Convenience constructor for a key with a single character.
 	KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch);
 	/// Convenience constructor for a key with a text on it (type will be OTHER).
-	KTouchKey(int x, int y, int w, int h, QString text);
+	KTouchKey(int x, int y, int w, int h, const QString &text);
 
 	/// Reads the key data from the DomElement
 	bool read(QDomNode node);

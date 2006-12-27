@@ -27,7 +27,7 @@ KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 }
 // ----------------------------------------------------------------------------
 
-KTouchKey::KTouchKey(int x, int y, int w, int h, QString text) :
+KTouchKey::KTouchKey(int x, int y, int w, int h, const QString &text) :
 	m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_type = OTHER;

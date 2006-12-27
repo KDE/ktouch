@@ -41,7 +41,7 @@ KTouchOpenRequestDialog::KTouchOpenRequestDialog(QWidget* parent)
 
 int KTouchOpenRequestDialog::requestFileToOpen(KUrl& url, const QString& caption, const QString& title, 
       const QString& currentText, const QString& defaultText, const QString& openText,
-      const QString& newText, KUrl current_url, QStringList defaultList, QString emptyListText)
+      const QString& newText, const KUrl &current_url, const QStringList &defaultList, const QString &emptyListText)
 {
     setWindowTitle(caption);
     openChoiceGroup->setTitle(title);
@@ -68,7 +68,7 @@ int KTouchOpenRequestDialog::requestFileToOpen(KUrl& url, const QString& caption
         presetRadioBtn->setEnabled(false);
     }
     else {
-        for (QStringList::Iterator it = defaultList.begin(); it != defaultList.end(); ++it )
+        for (QStringList::ConstIterator it = defaultList.begin(); it != defaultList.end(); ++it )
             presetCombo->addItem(*it);
         presetRadioBtn->setEnabled(true);
     }

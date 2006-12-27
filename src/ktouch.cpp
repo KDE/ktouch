@@ -895,7 +895,7 @@ void KTouch::updateFileLists() {
         if (lang_name.isEmpty())
             lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
         if (!lang_name.isEmpty())
-            lang_name += " (" + fname + ")";
+            lang_name += " (" + fname + ')';
         else
             lang_name = fname;
         m_keyboardTitles.append( lang_name );
@@ -925,7 +925,7 @@ void KTouch::updateFileLists() {
 				m_lectureFiles.push_back(*it);
 				// store the title of the lecture
 				if (l.title().isEmpty())
-					m_lectureTitles.push_back(i18n("untitled lecture") + " - (" + url.fileName() + ")");
+					m_lectureTitles.push_back(i18n("untitled lecture") + " - (" + url.fileName() + ')');
             	else
 					m_lectureTitles.push_back(l.title());
 			}
