@@ -151,7 +151,7 @@ class KTouch : public KMainWindow {
 
 
     // *** Public member variables ***
-    KAction                *m_trainingPause;        ///< Action for "pause training session".
+    QAction                *m_trainingPause;        ///< Action for "pause training session".
 
     KSelectAction		   *m_keyboardLayoutAction;
     KSelectAction		   *m_keyboardColorAction;

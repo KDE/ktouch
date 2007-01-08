@@ -21,6 +21,7 @@
 
 // KDE Header
 #include <kselectaction.h>
+#include <kactioncollection.h>
 #include <kstandardaction.h>
 #include <klocale.h>
 #include <kstatusbar.h>
@@ -78,7 +79,7 @@ KTouch::KTouch() :
 
 	// *** Read and initialize user statistics ***
 
-	// first clear statistics data (also make sure our mapping contains 
+	// first clear statistics data (also make sure our mapping contains
 	// the "default" user)
 	clearStatistics();
 	KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
@@ -90,7 +91,7 @@ KTouch::KTouch() :
 	// create the GUI reading the ui.rc file
 	if (!initialGeometrySet())
 		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
-	
+
 	setAutoSaveSettings();
 
 	// Init a training session
@@ -268,7 +269,7 @@ void KTouch::configAutoLevelChangeToggled(bool on) {
 		m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(false);
         m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(false);
         m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(false);
-	}	
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -310,7 +311,7 @@ void KTouch::fileOpenText() {
 			KTouchLevelData dat(i18n("generated from text file"), i18n("all available"));
 			dat.setLines(lines);
 			lec.setLevel(0, dat);
-		
+
 			// first store training statistics
 			m_trainer->storeTrainingStatistics();
 			Prefs::setCurrentLectureFile(tmp.url());
@@ -376,7 +377,7 @@ void KTouch::fileEditColors() {
 		if (!it->m_default) 	tmp_list.append(*it);
 		else 					++default_schemes;
 	}
-	
+
 	KTouchColorEditorDialog dlg(this);		// Create editor
 	// start editor
 	int selected;
@@ -487,11 +488,11 @@ void KTouch::optionsPreferences() {
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 
     // Connect some other buttons/check boxes of the dialog
-	connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
+	connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
 		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
+	connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
 		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
+	connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
 		this, SLOT(configAutoLevelChangeToggled(bool)));
 	connect(m_pageColors->ui.kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
 		this, SLOT(configCommonColorsToggled(bool)));
@@ -710,7 +711,7 @@ void KTouch::init() {
 */
 	}
 
-    // if keyboard layout (loaded by Prefs is not available (e.g. the 
+    // if keyboard layout (loaded by Prefs is not available (e.g. the
     // layout file has been deleted) switch to default keyboard
     if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0) {
         QString default_keyboard;
@@ -722,14 +723,14 @@ void KTouch::init() {
         while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
         if (it == m_keyboardFiles.constEnd()) {
             fname = lang.left(2) + ".keyboard";
-            // try to find more general version 
+            // try to find more general version
             it = m_keyboardFiles.constBegin();
             while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
         }
 
         if (it != m_keyboardFiles.constEnd())
             default_keyboard = *it;
-        else 
+        else
             default_keyboard = "number.keyboard";
         Prefs::setCurrentKeyboardFile ( default_keyboard );
     }
@@ -779,7 +780,7 @@ void KTouch::initTrainingSession() {
     statusBar()->insertPermanentItem("Level", 1, 0);
     statusBar()->insertPermanentItem("Session", 2, 0);
 
-    this->setCentralWidget(main);	
+    this->setCentralWidget(main);
 }
 // ----------------------------------------------------------------------------
 
@@ -789,29 +790,50 @@ void KTouch::setupActions() {
 	// the placement is defined in the ktouchui.rc file
 
 	// *** File menu ***
-    KAction *action = new KAction(KIcon("open_plaintext"), i18n("&Open plain text file..."), actionCollection(), "file_opentext");
+    QAction *action;
+    action = actionCollection()->addAction( "file_opentext" );
+    action->setText( i18n("&Open plain text file...") );
+    action->setIcon( KIcon("open_plaintext") );
+
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
-    action = new KAction(KIcon("open_lecture"), i18n("&Open lecture..."), actionCollection(), "file_openlecture");
+    action = actionCollection()->addAction( "file_openlecture" );
+    action->setText( i18n("&Open lecture...") );
+    action->setIcon( KIcon("open_lecture") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
-    action = new KAction(KIcon("edit_lecture"), i18n("&Edit lecture..."), actionCollection(), "file_editlecture");
+
+    action = actionCollection()->addAction( "file_editlecture" );
+    action->setText( i18n("&Edit lecture...") );
+    action->setIcon( KIcon("edit_lecture") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
-    action = new KAction(KIcon("edit_colors"), i18n("&Edit color scheme..."), actionCollection(), "file_editcolors");
+
+    action = actionCollection()->addAction( "file_editcolors" );
+    action->setText( i18n("&Edit color scheme...") );
+    action->setIcon( KIcon("edit_colors") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
     KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***
-    action = new KAction(KIcon("launch"), i18n("&Start New Session"), actionCollection(), "training_newsession");
+    action = actionCollection()->addAction( "training_newsession" );
+    action->setText( i18n("&Start New Session") );
+    action->setIcon( KIcon("launch") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingNewSession()));
-    m_trainingPause = new KAction(KIcon("player_pause"), i18n("&Pause Session"), actionCollection(), "training_pause");
+
+    m_trainingPause=actionCollection()->addAction( "training_pause" );
+    m_trainingPause->setText( i18n("&Pause Session") );
+    m_trainingPause->setIcon(KIcon("player_pause") );
     connect(m_trainingPause, SIGNAL(triggered(bool)), SLOT(trainingPause()));
-    action = new KAction(KIcon("kalarm"), i18n("&Lecture Statistics"), actionCollection(), "training_stats");
+
+    action = actionCollection()->addAction("training_stats" );
+    action->setText( i18n("&Lecture Statistics") );
+    action->setIcon( KIcon("kalarm") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
-    m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), actionCollection(), "training_default_lectures");
-	m_defaultLectureAction->setMenuAccelsEnabled(false);
+    m_defaultLectureAction =  actionCollection()->add<KSelectAction>( "training_default_lectures" );
+    m_defaultLectureAction->setText( i18n("Default &Lectures") );
+    m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
     connect (m_defaultLectureAction, SIGNAL(triggered(int)), this, SLOT(changeLecture(int)));
@@ -819,13 +841,15 @@ void KTouch::setupActions() {
 	// *** Options menu ***
     KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts
-    m_keyboardLayoutAction = new KSelectAction(i18n("&Keyboard Layouts"), actionCollection(), "keyboard_layouts");
-	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
+    m_keyboardLayoutAction= actionCollection()->add<KSelectAction>( "keyboard_layouts" );
+    m_keyboardLayoutAction->setText( i18n("&Keyboard Layouts") );
+    m_keyboardLayoutAction->setMenuAccelsEnabled(false);
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(triggered(int)), this, SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
-	m_keyboardColorAction = new KSelectAction(i18n("Keyboards &Color Schemes"), actionCollection(), "keyboard_schemes");
+    m_keyboardColorAction = actionCollection()->add<KSelectAction>( "keyboard_schemes" );
+    m_keyboardColorAction->setText( i18n("Keyboards &Color Schemes") );
     QStringList schemes_list;
     for (int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
 		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
@@ -837,10 +861,13 @@ void KTouch::setupActions() {
     connect (m_keyboardColorAction, SIGNAL(triggered(int)), this, SLOT(changeColor(int)));
 
     // *** User settings ***
-    action = new KAction(KIcon("kdmconfig"), i18n("&Setup users..."), actionCollection(), "settings_setup_users");
+    action = actionCollection()->addAction( "settings_setup_users" );
+    action->setText( i18n("&Setup users...") );
+    action->setIcon( KIcon("kdmconfig") );
     connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
 
-	m_currentUserAction = new KSelectAction(i18n("&Current user"), actionCollection(), "settings_current_user");
+    m_currentUserAction = actionCollection()->add<KSelectAction>( "settings_current_user" );
+    m_currentUserAction->setText( i18n("&Current user") );
 	m_currentUserAction->setMenuAccelsEnabled(false);
     m_currentUserAction->setItems(m_userStats.keys());
 	updateCurrentUserActionCheck();
@@ -943,7 +970,7 @@ void KTouch::updateFileLists() {
 void KTouch::updateLectureActionCheck() {
 	int num = 0;
 	QStringList::iterator it = m_lectureFiles.begin();
-	QString fname = Prefs::currentLectureFile(); 
+	QString fname = Prefs::currentLectureFile();
 	while (it != m_lectureFiles.end()   &&   !(*it).contains(fname)) {
 		++it;
 		++num;
