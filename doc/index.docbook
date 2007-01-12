@@ -34,14 +34,14 @@
 
 
 <copyright>
-<year>1999-2005</year>
+<year>1999-2007</year>
 <holder>Håvard Frøiland, Andreas Nicolai</holder>
 </copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-06-19</date>
-<releaseinfo>1.5</releaseinfo>
+<date>2007-01-11</date>
+<releaseinfo>1.5.3</releaseinfo>
 
 <abstract>
 <para>&ktouch; is a program for learning to touch type.  &ktouch;
@@ -162,11 +162,11 @@ yours)</simpara></listitem>
 </orderedlist>
 <para>We look at these sections later again.</para>
 <para>
-Ok, the first time you start &ktouch; it will open a default lecture and
-select a default keyboard layout.  Before you start typing you should adjust
-the keyboard layout so that it matches yours. Go to
-<menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard
-Layouts...</guimenuitem></menuchoice> and select the country you're in (or
+Ok, the first time you start &ktouch; it will open a lecture and
+select a keyboard layout for the locale and keybord defined in the &kcontrolcenter;.
+To adjust the keyboard layout go to
+<menuchoice><guimenu>Settings</guimenu><guisubmenu>Keyboard
+Layouts...</guisubmenu></menuchoice> and select the country you're in (or
 some country which uses the same keyboard layout as you). If your keyboard is
 not included, you can always define your own keyboard (see <link
 linkend="create_keyboards">Creating your own keyboard</link>).
@@ -175,8 +175,8 @@ linkend="create_keyboards">Creating your own keyboard</link>).
 Once you have your keyboard selected, choose your training lecture. The first
 line in your corrent lecture and level is shown in the teacher's line. You can
 select any of the default lectures via 
-<menuchoice><guimenu>Training</guimenu><guimenuitem>Default
-Lectures...</guimenuitem></menuchoice> or open a user defined lecture file
+<menuchoice><guimenu>Training</guimenu><guisubmenu>Default
+Lectures...</guisubmenu></menuchoice> or open a user defined lecture file
 (&eg; if your teacher gives you a special lecture to practice on) with
 <menuchoice><guimenu>File</guimenu><guimenuitem>Open
 Lecture...</guimenuitem></menuchoice>. You may even create your own lecture
@@ -201,7 +201,7 @@ Backspace to erase the wrong character (or characters) again.
 </para>
 <para>
 When you have successfully completed a line of text you need to press the
-Enter key to advance to the next line.
+&Enter; key to advance to the next line.
 </para>
 </sect2>
 
@@ -304,9 +304,10 @@ opens the statistics dialog. It displays your current training and level
 statistics and shows a graphical history of previous training sessions.
 </para>
 <para>
-When you open the statistics dialog you can select a Session Statistics Page
-and a Level Statistics Page. The first page gives you a summary about
-everything you typed so far. The Level Statistics Page only contains the stats
+When you open the statistics dialog you can select a <guilabel>Current Training 
+Session</guilabel> statistics page and a <guilabel>Current Level Statistics</guilabel>
+page. The first page gives you a summary about everything you typed so far.
+The <guilabel>Current Level Statistics</guilabel> page only contains the stats
 for the current level. This is useful to distinguish between overall
 performance and skill in certain levels.
 </para>
@@ -341,8 +342,9 @@ the program.</para></tip>
 <sect1 id="main_menu">
 <title>The menu of &ktouch;</title>
 <para>Pretty much everything in the &ktouch; menu should be self-explanatory.
-The file menu contains options to load a user defined lecture and edit
-lectures. The training menu contains training options and the settings menu
+The <guimenu>File</guimenu> menu contains options to load a user defined lecture 
+and edit lectures. The <guimenu>Training</guimenu> menu contains training 
+options and the <guimenu>settings</guimenu> menu
 contains options to setup the program. The various options in the
 configuration dialog are explained in the next section.</para>
 </sect1>
@@ -396,15 +398,15 @@ format="PNG"/></imageobject>
 <textobject><phrase>Training options</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>If <guibutton>Automatic level adjustment</guibutton> is enabled,
+<para>If <guilabel>Automatic level adjustment</guilabel> is enabled,
 &ktouch; checks the given limits at the end of each level and decides whether to
 increase or decrease the level or stay in the level for another run. Level
 changes occur always at the end of a level (&ie; when the user has finished the
 last line of a level). If the typing speed (in characters per seconds) and
 accuracy (correctness) are <emphasis>both</emphasis> above or equal to the
-<quote>Limits to increase level</quote> &ktouch; will jump to the next higher
+<guilabel>Limits to increase a level</guilabel> &ktouch; will jump to the next higher
 level. If <emphasis>either</emphasis> typing speed or accuracy falls below the
-<quote>Limits to decrease level</quote> &ktouch; will jump back to the
+<guilabel>Limits to decrease a level</guilabel> &ktouch; will jump back to the
 previous lower level.
 </para>
 <para>
@@ -415,21 +417,21 @@ current level when you quit the program and jumps back to it when you restart
 </sect2>
 
 <sect2 id="keyboard_options">
-<title>Keyboard Options</title>
+<title>Keyboard Settings</title>
 <para>In this dialog you can select keyboard specific options.</para>
 <screenshot>
-<screeninfo>Keyboard options</screeninfo>
+<screeninfo>Keyboard settings</screeninfo>
 <mediaobject>
 <imageobject><imagedata fileref="keyboard_options.png"
 format="PNG"/></imageobject>
-<textobject><phrase>Keyboard options</phrase></textobject>
+<textobject><phrase>Keyboard settings</phrase></textobject>
 </mediaobject>
 </screenshot>
 <para>
 This dialog controls the appearance and functionality of the keyboard. Similar
-to the <quote>Override lecture font</quote> option in the general settings
+to the <guilabel>Override lecture font</guilabel> option in the <guilabel>General Options</guilabel>
 configuration page, you can here specify your own keyboard font. The option
-<quote>Highlight keys on keyboard</quote> can be used to increase the
+<guilabel>Highlight keys on keyboard</guilabel> can be used to increase the
 difficulty of the training. <tip><para>Once you are familiar with the keyboard
 you may want to turn keyboard highlighting off so it won't distract you when
 you concentrate on the teacher's text.</para></tip>
@@ -438,22 +440,22 @@ you concentrate on the teacher's text.</para></tip>
 
 
 <sect2 id="color_options">
-<title>Color Options</title>
+<title>Color Settings</title>
 <para>In this dialog you can tweak the appearance of &ktouch;.</para>
 <screenshot>
-<screeninfo>Color options</screeninfo>
+<screeninfo>Color settings</screeninfo>
 <mediaobject>
 <imageobject><imagedata fileref="color_options.png"
 format="PNG"/></imageobject>
-<textobject><phrase>Color options</phrase></textobject>
+<textobject><phrase>Color settings</phrase></textobject>
 </mediaobject>
 </screenshot>
 <para>
 This configuration page does not need much explaination. You can choose among
 four predefined color schemes for the keyboard. Alternatively you can switch
 the color schemes <quote>on the fly</quote> using the menu option
-<menuchoice><guimenu>Settings</guimenu><guimenuitem>Keyboard Color
-Schemes</guimenuitem></menuchoice>.
+<menuchoice><guimenu>Settings</guimenu><guisubmenu>Color
+Schemes</guisubmenu></menuchoice>.
 </para>
 </sect2>
 
@@ -469,8 +471,8 @@ Schemes</guimenuitem></menuchoice>.
 <para>You can easily create your own training lecture using the built-in
 &ktouch; lecture editor. When you select
 <menuchoice><guimenu>File</guimenu><guimenuitem>Edit
-Lecture...</guimenuitem></menuchoice> the <quote>Open Request Dialog</quote>
-will open and ask you to select a lecture. You can choose either edit the
+Lecture...</guimenuitem></menuchoice> the <guilabel>Open Lecture File</guilabel>
+dialog will open and ask you to select a lecture. You can choose either edit the
 current lecture, any of the predefined lectures (if you have write access to
 the installation directoy) or create an empty lecture from scratch.</para>
 
@@ -650,7 +652,7 @@ that is needed to type the key) and the last number indicates the modifier key
 you need to press to get this character.
 </para>
 <para>Let's look at an example:</para>
-<para>You want to define the upper case 'R' character. It has the unicode 82.
+<para>You want to define the uppercase 'R' character. It has the unicode 82.
 The character obtained when the 'R' key is pressed without modifier is the
 small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key
 which has the unicode 102. And in order to get the 'R' you need to press the
@@ -689,6 +691,15 @@ file</para></listitem>
 </menuchoice></term>
 <listitem><para><action>Open</action> the lecture editor to allow you to
 change the current training file </para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>File</guimenu>
+<guimenuitem>Edit color scheme...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> the color scheme editor to allow you to
+define new color schemes</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -744,7 +755,7 @@ dialog</para></listitem>
 <guisubmenu>Default Lectures</guisubmenu>
 <guimenuitem>English (auto-generated)</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> what languagee you want to learn touch
+<listitem><para><action>Choose</action> what language you want to learn touch
 typing in</para></listitem>
 </varlistentry>
 
@@ -760,7 +771,7 @@ typing in</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guimenuitem>Show /HideToolbar</guimenuitem>
+<guimenuitem>Show/HideToolbar</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Toggle</action> the  Toolbar</para></listitem>
 </varlistentry>
@@ -769,7 +780,7 @@ typing in</para></listitem>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
 <guisubmenu>Keyboard Layouts</guisubmenu>
-<guimenuitem>number.keyboard</guimenuitem>
+<guimenuitem>Keypad/Number block</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the keyboard layout you want to use,
 here the number keyboard</para></listitem>
@@ -778,8 +789,8 @@ here the number keyboard</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Keyboard Color Schemes</guisubmenu>
-<guimenuitem>Black'n White</guimenuitem>
+<guisubmenu>Color Schemes</guisubmenu>
+<guimenuitem>Black &amp; White</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the keyboard color layout in black in
 white: all keys are white and the one you should type is
@@ -789,7 +800,7 @@ black</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guisubmenu>Color Schemes</guisubmenu>
 <guimenuitem>Classic</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the classic keyboard color layout:
@@ -799,7 +810,7 @@ each column of keys has a different color</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guisubmenu>Color Schemes</guisubmenu>
 <guimenuitem>Deep Blue</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the deep blue keyboard color layout:
@@ -809,7 +820,7 @@ each column of keys has a different color in a shade of blue</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Keyboard Color Schemes</guisubmenu>
+<guisubmenu>Color Schemes</guisubmenu>
 <guimenuitem>Stripy</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the stripy keyboard color layout: in
@@ -861,7 +872,7 @@ toolbar
 <title>Credits and License</title>
 <para>&ktouch;</para>
 <para>
-&ktouch;, Copyright 1999-2005 by</para>
+&ktouch;, Copyright 1999-2007 by</para>
 <itemizedlist>
 <listitem><simpara>Håvard Frøiland &Haavard.Froeiland.mail;</simpara></listitem>
 <listitem><simpara>Andreas Nicolai <email>andreas.nicolai@gmx DOT
