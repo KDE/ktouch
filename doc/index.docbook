@@ -173,10 +173,10 @@ linkend="create_keyboards">Creating your own keyboard</link>).
 </para>
 <para>
 Once you have your keyboard selected, choose your training lecture. The first
-line in your corrent lecture and level is shown in the teacher's line. You can
+line in your current lecture and level is shown in the teacher's line. You can
 select any of the default lectures via 
 <menuchoice><guimenu>Training</guimenu><guisubmenu>Default
-Lectures...</guisubmenu></menuchoice> or open a user defined lecture file
+Lectures</guisubmenu></menuchoice> or open a user defined lecture file
 (&eg; if your teacher gives you a special lecture to practice on) with
 <menuchoice><guimenu>File</guimenu><guimenuitem>Open
 Lecture...</guimenuitem></menuchoice>. You may even create your own lecture
@@ -402,7 +402,7 @@ format="PNG"/></imageobject>
 &ktouch; checks the given limits at the end of each level and decides whether to
 increase or decrease the level or stay in the level for another run. Level
 changes occur always at the end of a level (&ie; when the user has finished the
-last line of a level). If the typing speed (in characters per seconds) and
+last line of a level). If the typing speed (in characters per minute) and
 accuracy (correctness) are <emphasis>both</emphasis> above or equal to the
 <guilabel>Limits to increase a level</guilabel> &ktouch; will jump to the next higher
 level. If <emphasis>either</emphasis> typing speed or accuracy falls below the
@@ -431,7 +431,7 @@ format="PNG"/></imageobject>
 This dialog controls the appearance and functionality of the keyboard. Similar
 to the <guilabel>Override lecture font</guilabel> option in the <guilabel>General Options</guilabel>
 configuration page, you can here specify your own keyboard font. The option
-<guilabel>Highlight keys on keyboard</guilabel> can be used to increase the
+<guilabel>Highlight keys on keyboard</guilabel> can be used to decrease the
 difficulty of the training. <tip><para>Once you are familiar with the keyboard
 you may want to turn keyboard highlighting off so it won't distract you when
 you concentrate on the teacher's text.</para></tip>
