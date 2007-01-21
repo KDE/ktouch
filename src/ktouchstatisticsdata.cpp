@@ -531,7 +531,7 @@ bool KTouchStatisticsData::writeUserStats(QWidget * window, const KUrl& url,
 	
 #ifdef COMPRESSED_XML_STATISTICS
 	QByteArray array;
-	QTextStream out(array, IO_WriteOnly);
+	QTextStream out(array, QIODevice::WriteOnly);
 	out << doc.toString();
 	array = qCompress(array);
 	outfile.write(array);
