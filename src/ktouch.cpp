@@ -720,12 +720,12 @@ void KTouch::init() {
         QString fname = lang + ".keyboard";
         // try to find keyboard with current locale
         QStringList::const_iterator it = m_keyboardFiles.constBegin();
-        while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+        while (it != m_keyboardFiles.constEnd()   &&   (*it).indexOf(fname) == -1)  ++it;
         if (it == m_keyboardFiles.constEnd()) {
             fname = lang.left(2) + ".keyboard";
             // try to find more general version
             it = m_keyboardFiles.constBegin();
-            while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
+            while (it != m_keyboardFiles.constEnd()   &&   (*it).indexOf(fname) == -1)  ++it;
         }
 
         if (it != m_keyboardFiles.constEnd())

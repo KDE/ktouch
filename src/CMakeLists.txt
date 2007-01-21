@@ -1,7 +1,5 @@
 # CMakeList.txt for the KTouch source directory
 
-add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
-
 # set include directories
 include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/ )
 
