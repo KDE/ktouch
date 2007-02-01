@@ -46,7 +46,7 @@ KTouchLectureEditorDialog::KTouchLectureEditorDialog(QWidget *parent)
 
     levelListWidget->setSortingEnabled(false); // don't sort my level list view!
 
-    connect(levelListWidget, SIGNAL(itemChanged(QListWidgetItem*)),this, SLOT(newSelection(QListWidgetItem*)) );
+    connect(levelListWidget, SIGNAL(currentRowChanged(int)),this, SLOT(newSelection(int)) );
     connect(newCharsEdit, SIGNAL(textChanged(const QString&)), this, SLOT(newCharsChanged(const QString&)) );
     connect(newBtn, SIGNAL(clicked()), this, SLOT(newLevel()) );
     connect(deleteBtn, SIGNAL(clicked()), this, SLOT(deleteLevel()) );
@@ -254,7 +254,7 @@ void KTouchLectureEditorDialog::transfer_to_dialog() {
 		it!=m_lecture.m_lectureData.end(); ++it)
 	{
     	// add item
-		levelListWidget->addItem( (it++)->m_newChars );
+		levelListWidget->addItem( it->m_newChars );
 	}
     m_level = 0;
     levelListWidget->setCurrentRow(0);
