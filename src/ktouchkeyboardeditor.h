@@ -13,10 +13,6 @@
 #ifndef KTOUCHKEYBOARDEDITOR_H
 #define KTOUCHKEYBOARDEDITOR_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include "ktouchkeyboardwidget.h"
 #include "ui_ktouchkeyboardeditor_dlg.h"
 

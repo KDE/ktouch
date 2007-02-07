@@ -13,10 +13,6 @@
 #ifndef KTOUCHDEFAULTS_H
 #define KTOUCHDEFAULTS_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 extern const unsigned int BEGINNER_SPEED;		///< Speed for rating in characters per minute.
 extern const unsigned int ADVANCED_SPEED;		///< Speed for rating in characters per minute.
 extern const unsigned int PROFESSIONAL_SPEED;	///< Speed for rating in characters per minute.

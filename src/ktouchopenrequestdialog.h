@@ -13,10 +13,6 @@
 #ifndef KTOUCHOPENREQUESTDIALOG_H
 #define KTOUCHOPENREQUESTDIALOG_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include "ui_ktouchopenrequestdialog.h"
 
 #include <kurl.h>

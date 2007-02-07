@@ -13,10 +13,6 @@
 #ifndef KTOUCHUTILS_H
 #define KTOUCHUTILS_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <qstring.h>
 
 /// Formats the speed (given in chars/min) and creates a nice looking text.
