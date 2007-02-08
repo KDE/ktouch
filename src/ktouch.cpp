@@ -474,16 +474,16 @@ void KTouch::optionsPreferences() {
     KConfigDialog* dialog = new KConfigDialog(this, "settings",  Prefs::self());
 
     m_pageGeneral = new KTouchPrefGeneral(dialog);
-    dialog->addPage(m_pageGeneral, i18n("General Options"), "style","","");
+    dialog->addPage(m_pageGeneral, i18n("General Options"), "make","","");
 
     m_pageTraining = new KTouchPrefTraining(dialog);
-    dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
+    dialog->addPage(m_pageTraining, i18n("Training Options"), "make");
 
     m_pageKeyboard = new KTouchPrefKeyboard(dialog);
-    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
+    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "font");
 
     m_pageColors = new KTouchPrefColors(dialog);
-    dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
+    dialog->addPage(m_pageColors, i18n("Color Settings"), "colorscm");
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 
@@ -526,8 +526,7 @@ void KTouch::optionsSetupUsers() {
 // ----------------------------------------------------------------------------
 
 void KTouch::changeStatusbarMessage(const QString& text) {
-	// FIXME
-    //statusBar()->message(text);
+    statusBar()->showMessage(text);
 }
 // ----------------------------------------------------------------------------
 
@@ -793,22 +792,22 @@ void KTouch::setupActions() {
     QAction *action;
     action = actionCollection()->addAction( "file_opentext" );
     action->setText( i18n("&Open plain text file...") );
-    action->setIcon( KIcon("open_plaintext") );
+    action->setIcon( KIcon("fileopen") );
 
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
     action = actionCollection()->addAction( "file_openlecture" );
     action->setText( i18n("&Open lecture...") );
-    action->setIcon( KIcon("open_lecture") );
+    action->setIcon( KIcon("fileopen") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
 
     action = actionCollection()->addAction( "file_editlecture" );
     action->setText( i18n("&Edit lecture...") );
-    action->setIcon( KIcon("edit_lecture") );
+    action->setIcon( KIcon("edit") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
 
     action = actionCollection()->addAction( "file_editcolors" );
     action->setText( i18n("&Edit color scheme...") );
-    action->setIcon( KIcon("edit_colors") );
+    action->setIcon( KIcon("colorize") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
@@ -817,7 +816,7 @@ void KTouch::setupActions() {
 	// *** Training menu ***
     action = actionCollection()->addAction( "training_newsession" );
     action->setText( i18n("&Start New Session") );
-    action->setIcon( KIcon("launch") );
+    action->setIcon( KIcon("player_play") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingNewSession()));
 
     m_trainingPause=actionCollection()->addAction( "training_pause" );
@@ -827,12 +826,13 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction("training_stats" );
     action->setText( i18n("&Lecture Statistics") );
-    action->setIcon( KIcon("kalarm") );
+    action->setIcon( KIcon("kchart_chrt") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
     m_defaultLectureAction =  actionCollection()->add<KSelectAction>( "training_default_lectures" );
     m_defaultLectureAction->setText( i18n("Default &Lectures") );
+    m_defaultLectureAction->setIcon( KIcon("bookmark_folder") );
     m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
@@ -863,7 +863,7 @@ void KTouch::setupActions() {
     // *** User settings ***
     action = actionCollection()->addAction( "settings_setup_users" );
     action->setText( i18n("&Setup users...") );
-    action->setIcon( KIcon("kdmconfig") );
+    action->setIcon( KIcon("switchuser") );
     connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
 
     m_currentUserAction = actionCollection()->add<KSelectAction>( "settings_current_user" );
