@@ -45,7 +45,9 @@ install( FILES
   sl.keyboard
   uk.basic.keyboard
   uk.typewriter.keyboard
-  uk.winkeys.keyboard DESTINATION ${DATA_INSTALL_DIR}/ktouch
+  uk.winkeys.keyboard 
+  pt.br.abnt.keyboard
+  DESTINATION ${DATA_INSTALL_DIR}/ktouch
 )
 
 
