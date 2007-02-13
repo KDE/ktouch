@@ -53,6 +53,7 @@ KTouchKeyboardWidget::~KTouchKeyboardWidget() {
 // --------------------------------------------------------------------------
 
 bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg) {
+    qDeleteAll(m_keyList);
     QString target;
     if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
@@ -459,6 +460,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 void KTouchKeyboardWidget::updateColours() {
 //	kDebug() << "KTouchKeyboardWidget::updateColours()" << endl;
     // old functionality : loop over all key connections
+
 	m_keyCharMap.clear();
     for (QList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
 		// store finger and target characters
