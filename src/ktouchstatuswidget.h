@@ -34,6 +34,8 @@ class KTouchStatusWidget : public QWidget, public Ui_KTouchStatusWidget {
     void setNewChars(const QString& newChars);
     /// Updates the level LCD and the correctness progress bar
     void updateStatus(unsigned int level, double correctness);
+
+    void updateSpeed(int speed);
 };
 
 #endif  // KTOUCHSTATUSWIDGET_H

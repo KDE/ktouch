@@ -68,7 +68,6 @@ KTouch::KTouch() :
     m_keyboardWidget(NULL),
     m_trainer(NULL)
 {
-	m_duringStartup = true;
     setFocusPolicy(Qt::StrongFocus);
 
 	// Set global KTouchPtr to the main KTouch Object
@@ -88,54 +87,41 @@ KTouch::KTouch() :
 
 	// Setup our actions and connections
 	setupActions();
-	// create the GUI reading the ui.rc file
-	if (!initialGeometrySet())
-		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
-
-	setAutoSaveSettings();
 
 	// Init a training session
 	initTrainingSession();
-	// If session was restored, the function readProperties() was already called
-    if (kapp->isSessionRestored()) {
-		kDebug() << "[KTouch::KTouch]  restoring session..." << endl;
-		/// \todo Rewrite all the session management stuff.
-		///       For now we just do the same as for the standard startup.
+
+	// Reload the last used training file.
+	if (Prefs::currentLectureFile().isNull() ||
+		!m_lecture.loadXML(this, Prefs::currentLectureFile() ))
+	{
+		Prefs::setCurrentLectureFile(QString());
+		m_defaultLectureAction->setCurrentItem(-1);
 	}
-//	else {
-		//kDebug() << "[KTouch::KTouch]  starting standard training..." << endl;
-		// A note about safety: In this function there are a lot of things that might go
-		// wrong. What happens if the training file can't be found? What if the
-		// file cannot be opened or is corrupt? Whatever happens, the function loadXML()
-		// ensures, that there is at least the default mini-level in the lecture
-		// so that the training won't crash.
+	else {
+		updateFontFromLecture();
+		// adjust check marks in quick-select menus
+		updateLectureActionCheck();
+		//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
+	}
 
-		// Load statistics data from statistics-file
+    statusBarLevel = new QLabel(this);
+    statusBar()->addPermanentWidget(statusBarLevel);
 
-	    // Reload the last used training file.
-		if (Prefs::currentLectureFile().isNull() ||
-		    !m_lecture.loadXML(this, Prefs::currentLectureFile() ))
-		{
-			Prefs::setCurrentLectureFile(QString());
-			m_defaultLectureAction->setCurrentItem(-1);
-		}
-		else {
-			updateFontFromLecture();
-			// adjust check marks in quick-select menus
-			updateLectureActionCheck();
-			//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
-		}
+    statusBarSession = new QLabel(this);
+    statusBar()->addPermanentWidget(statusBarSession);
 
-		// Adjust check mark for the keyboard file
-		updateKeyboardActionCheck();
-		// If the user doesn't want to restart with his old level, start from 0 (level 1)
-        if (!Prefs::rememberLevel())	m_trainer->m_level = 0;
-		else							m_trainer->m_level = Prefs::currentTrainingLevel();
-        // now let's start the training in the current level
-		m_trainer->startTraining(true);
-//	}
-	m_duringStartup = false;
-    setupGUI(ToolBar | Keys | StatusBar | Create);
+    setupGUI();
+
+    // Adjust check mark for the keyboard file
+    updateKeyboardActionCheck();
+    // If the user doesn't want to restart with his old level, start from 0 (level 1)
+    if (!Prefs::rememberLevel())
+        m_trainer->m_level = 0;
+    else
+        m_trainer->m_level = Prefs::currentTrainingLevel();
+    // now let's start the training in the current level
+    m_trainer->startTraining(true);
 }
 // ----------------------------------------------------------------------------
 
@@ -533,10 +519,8 @@ void KTouch::changeStatusbarMessage(const QString& text) {
 void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 	unsigned int session_correct, unsigned int session_total, unsigned int session_words)
 {
-	statusBar()->changeItem(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3",
-			 level_correct, level_total, level_words), 1);
-	statusBar()->changeItem(i18n( "Session: Correct/Total chars: %1/%2  Words: %3",
-			 session_correct, session_total, session_words), 2);
+    statusBarLevel->setText(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3", level_correct, level_total, level_words));
+    statusBarSession->setText(i18n( "Session: Correct/Total chars: %1/%2  Words: %3", session_correct, session_total, session_words));
 }
 // ----------------------------------------------------------------------------
 
@@ -599,7 +583,6 @@ void KTouch::changeUser(int num) {
 // *********************************
 
 bool KTouch::queryExit() {
-	if (m_duringStartup) return true;
 	// store config data
 	Prefs::setCurrentTrainingLevel( m_trainer->m_level );
     Prefs::writeConfig();
@@ -749,16 +732,15 @@ void KTouch::initTrainingSession() {
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of QSizePolicy)
 
-    QWidget *main = new QWidget();
-    QVBoxLayout * layout = new QVBoxLayout(main);
-    main->setLayout(layout);
+    QWidget *main = new QWidget(this);
+    QVBoxLayout *layout = new QVBoxLayout(main);
 
-    m_statusWidget = new KTouchStatusWidget( this );
-    m_slideLineWidget = new KTouchSlideLine( this );
+    m_statusWidget = new KTouchStatusWidget( main );
+    m_slideLineWidget = new KTouchSlideLine( main );
 	QSizePolicy sp(QSizePolicy::Preferred, QSizePolicy::Expanding);
 	sp.setVerticalStretch(1);
     m_slideLineWidget->setSizePolicy( sp );
-    m_keyboardWidget = new KTouchKeyboardWidget( this );
+    m_keyboardWidget = new KTouchKeyboardWidget( main );
 	sp.setVerticalStretch(3);
     m_keyboardWidget->setSizePolicy( sp );
 
@@ -774,12 +756,7 @@ void KTouch::initTrainingSession() {
     if (m_trainer != NULL)  delete m_trainer;
     m_trainer = new KTouchTrainer(m_statusWidget, m_slideLineWidget, m_keyboardWidget, &m_lecture);
 
-    // Setup status bar
-    statusBar()->show();
-    statusBar()->insertPermanentItem("Level", 1, 0);
-    statusBar()->insertPermanentItem("Session", 2, 0);
-
-    this->setCentralWidget(main);
+    setCentralWidget(main);
 }
 // ----------------------------------------------------------------------------
 

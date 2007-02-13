@@ -33,7 +33,7 @@ int main(int argc, char **argv)
                      version,
                      description,
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000-2006 by Håvard Frøiland and Andreas Nicolai",
+                     "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai",
                      0,
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");

@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>497</width>
-    <height>304</height>
+    <height>351</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -41,6 +41,19 @@
         </property>
         <property name="text" >
          <string>&amp;Beep on error</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_SoundOnKeypress" >
+        <property name="toolTip" >
+         <string>Make a typewriter sound for each key pressed</string>
+        </property>
+        <property name="whatsThis" >
+         <string>If checked this will play a typewriter sound for every key pressed.</string>
+        </property>
+        <property name="text" >
+         <string>&amp;Typewriter sound when typing</string>
         </property>
        </widget>
       </item>
@@ -178,12 +191,15 @@
        </widget>
       </item>
       <item>
-       <widget class="KFontRequester" native="1" name="kcfg_Font" >
+       <widget class="KFontRequester" name="kcfg_Font" >
         <property name="minimumSize" >
          <size>
           <width>0</width>
           <height>21</height>
          </size>
+        </property>
+        <property name="whatsThis" >
+         <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
         </property>
         <property name="font" >
          <font>
@@ -195,9 +211,6 @@
           <underline>false</underline>
           <strikeout>false</strikeout>
          </font>
-        </property>
-        <property name="whatsThis" >
-         <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
         </property>
        </widget>
       </item>
@@ -226,7 +239,6 @@
    <class>KFontRequester</class>
    <extends>QWidget</extends>
    <header>kfontrequester.h</header>
-   <container>1</container>
   </customwidget>
  </customwidgets>
  <includes>

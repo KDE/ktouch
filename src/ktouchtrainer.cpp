@@ -29,7 +29,6 @@
 #include "ktouchdefaults.h"
 #include "prefs.h"
 
-#include <phonon/audioplayer.h>
 
 KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : QObject(),
@@ -49,8 +48,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchSlideLine *slideL
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-    // FIXME 
-    //mplayer = new Phonon::AudioPlayer(Phonon::GameCategory, this);
+    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
 
     // reset statistics
     m_levelStats.clear();
@@ -82,7 +80,9 @@ void KTouchTrainer::gotoFirstLine() {
 void KTouchTrainer::keyPressed(QChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
-
+    if(Prefs::soundOnKeypress()){
+        player->play(m_typeWriterSound.url());
+    }
 	if (m_trainingPaused)  continueTraining();
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
@@ -141,6 +141,9 @@ void KTouchTrainer::keyPressed(QChar key) {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::backspacePressed() {
+    if(Prefs::soundOnKeypress()){
+        player->play(m_typeWriterSound.url());
+    }
 	if (m_trainingPaused)  continueTraining();
 	/// \todo Implement the "remove space character = remove word count" feature
 
@@ -148,6 +151,9 @@ void KTouchTrainer::backspacePressed() {
     if (len) {
         if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
             // we are removing a correctly typed char
+            if(Prefs::beepOnError){
+                QApplication::beep();
+            }
 			statsRemoveCorrectChar(m_studentText[len-1]);
         }
         m_studentText = m_studentText.left(--len);
@@ -159,24 +165,23 @@ void KTouchTrainer::backspacePressed() {
     }
     else {
         /// \todo Flash line when Backspace on empty line
-        QApplication::beep();
+        if(Prefs::beepOnError)
+            QApplication::beep();
 	}
 }
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::enterPressed() {
-	if (m_trainingPaused)  continueTraining();
+    if(Prefs::soundOnKeypress()){
+        player->play(m_typeWriterSound.url());
+    }
+    if (m_trainingPaused)  continueTraining();
     if (m_studentText != m_teacherText) {
 
-
-// FIXME
-//  if (Prefs::playSounds())
-//      playSound(m_errorSound);
-//    else
-//      QApplication::beep();
-//    return;
-  }
-//  playSound(m_lineEndSound);
+        if (Prefs::beepOnError()){
+            QApplication::beep();
+        }
+    }
 
   updateWordCount();
   m_levelStats.m_words += m_wordsInCurrentLine;
@@ -271,7 +276,7 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	updateStatusBarMessage(i18n("Starting training session: Waiting for first keypress...") );
 	updateStatusBar();
 	m_statusWidget->updateStatus(m_level, 1);
-	m_statusWidget->speedLCD->display( 0 );
+	m_statusWidget->updateSpeed( 0 );
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
 	m_slideLineWidget->setCursorTimerEnabled(true); // Curser will blink
@@ -285,7 +290,7 @@ void KTouchTrainer::pauseTraining() {
 	m_trainingTimer->stop();
 	m_slideLineWidget->setCursorTimerEnabled(false);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness());
-	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
+	m_statusWidget->updateSpeed((int) m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session paused. Training continues on next keypress...") );
 	updateStatusBar();
 }
@@ -298,7 +303,7 @@ void KTouchTrainer::continueTraining() {
 	m_trainingPaused=false;
 	m_slideLineWidget->setCursorTimerEnabled(true);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness() );
-	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
+	m_statusWidget->updateSpeed((int) m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session! The time is running...") );
 	updateStatusBar();
 	m_trainingTimer->start(LCD_UPDATE_INTERVAL);    // start the timer
@@ -343,7 +348,10 @@ bool KTouchTrainer::studentLineCorrect() const {
 // *** Public slots ***
 
 void KTouchTrainer::levelUp() {
-	// FIXME : mplayer->play(m_levelUpSound.url());
+    if(Prefs::soundOnLevel()){
+        player->play(m_levelUpSound.url());
+    }
+
     ++m_level;  // increase the level
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
@@ -362,7 +370,9 @@ void KTouchTrainer::levelUp() {
 void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
-	   // FIXME : mplayer->play(m_levelDownSound.url());
+        if(Prefs::soundOnLevel()){
+            player->play(m_levelDownSound.url());
+        }
 	}
 	m_incLinesCount = 0;
 	m_decLinesCount = 0;
@@ -379,7 +389,7 @@ void KTouchTrainer::timerTick() {
     // paused and continued... it's not a scientific calculation, isn't it?
 	statsAddTime(LCD_UPDATE_INTERVAL*0.001);
 	// update only the widgets that are affected by progressing time
-    m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
+    m_statusWidget->updateSpeed((int) m_levelStats.charSpeed() );
 }
 // ----------------------------------------------------------------------------
 

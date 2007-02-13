@@ -47,7 +47,7 @@
       <label >Emit a beep on each typing error</label>
       <default code="true" >true</default>
     </entry>
-    <entry type="Bool" name="PlaySounds" >
+    <entry type="Bool" name="SoundOnKeypress" >
       <label >Play sounds for typing.</label>
       <default code="false" >false</default>
     </entry>

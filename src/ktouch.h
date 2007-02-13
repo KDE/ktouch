@@ -181,7 +181,8 @@ class KTouch : public KMainWindow {
     QStringList    							m_userList; 		///< A list of user names.
 	QMap<QString, KTouchStatisticsData>		m_userStats;		///< A map with statistics for each user.
 
-	bool									m_duringStartup;	///< Flag used to suppress initial writing of statistics data.
+    QLabel* statusBarLevel;
+    QLabel* statusBarSession;
 };
 
 /// A global pointer to the main widget (actually only used to retrieve some data).

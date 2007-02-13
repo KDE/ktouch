@@ -24,6 +24,7 @@ KTouchStatusWidget::KTouchStatusWidget(QWidget *parent)
  : QWidget(parent)
 {
     setupUi(this);
+    applyPreferences();
 }
 
 void KTouchStatusWidget::applyPreferences() {
@@ -43,5 +44,31 @@ void KTouchStatusWidget::setNewChars(const QString& newChars) {
 
 void KTouchStatusWidget::updateStatus(unsigned int level, double correctness) {
     levelLCD->display(static_cast<int>(level)+1); // +1 because our level variable ranges from 0...n-1
-    correctnessBar->setValue(static_cast<int>(correctness*100) );
+
+    int correctnessProcent = static_cast<int>(correctness*100);
+    if(Prefs::upCorrectLimit() < correctnessProcent)
+	correctnessLedGreen->on();
+    else
+	correctnessLedGreen->off();
+
+    if(Prefs::downCorrectLimit() > correctnessProcent)
+	correctnessLedRed->on();
+    else
+	correctnessLedRed->off();
+
+    correctnessBar->setValue(correctnessProcent);
+}
+
+void KTouchStatusWidget::updateSpeed(int speed) {
+    if(Prefs::upSpeedLimit() < speed)
+	speedLedGreen->on();
+    else
+	speedLedGreen->off();
+
+    if(Prefs::downSpeedLimit() > speed)
+	speedLedRed->on();
+    else
+	speedLedRed->off();
+
+    speedLCD->display(speed);
 }
