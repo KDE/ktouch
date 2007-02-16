@@ -23,11 +23,12 @@
 #include <cmath>
 
 KTouchChartWidget::KTouchChartWidget(QWidget* parent, const char *name)
-  : KPlotWidget(parent,0.0, 120.0, 0.0, 240.0)
+  : KPlotWidget(parent)
 {
 	// temporary
 	setObjectName( name );
 	setUpdatesEnabled( false );
+	setLimits(0.0, 120.0, 0.0, 240.0);
 	setShowGrid( false ); // no grid please
 	setBackgroundColor( Qt::white );
 	setForegroundColor( Qt::black );
