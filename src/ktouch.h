@@ -120,9 +120,9 @@ class KTouch : public KMainWindow {
   private:
     // *** BEGIN - Session management ***
     /// Will be called when this app is restored due to session management.
-    void readProperties(KConfig *config);
+    void readProperties(const KConfigGroup &config);
     /// Will be called when the app should save its state for session management purposes.
-    void saveProperties(KConfig *config);
+    void saveProperties(KConfigGroup &config);
     // *** END - Session management ***
 	
     /// Initialises the program during a normal startup
