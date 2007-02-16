@@ -292,7 +292,7 @@ void KTouchStatisticsDialog::updateCurrentLevelTab() {
 
 void KTouchStatisticsDialog::updateChartTab() {
 	// remove all current chart objects
-	chartWidget->clearObjectList();
+	chartWidget->removeAllPlotObjects();
 	// if no lecture data is available, return
 	if (m_allStats.m_lectureStats.count()== 0 || 
         m_lectureIndex >= static_cast<unsigned int>(m_allStats.m_lectureStats.count()))  return;
