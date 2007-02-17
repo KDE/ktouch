@@ -81,7 +81,7 @@ inline bool higher_miss_hit_ratio(const KTouchCharStats & lhs, const KTouchCharS
 /// Comparison operator "greater", returns 'true' when the char-code of 'lhs' is greater then the one of 'rhs'
 //inline bool operator>(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char>rhs.m_char; }
 /// Comparison operator == : returns 'true' when the char-code of 'lhs' is equal to then the one of 'rhs'
-//inline bool operator==(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char==rhs.m_char; }
+inline bool operator==(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char==rhs.m_char; }
 /// Writes the content of a KTouchCharStats object into the text stream.
 QTextStream& operator<<(QTextStream &out, const KTouchCharStats &ch);
 
