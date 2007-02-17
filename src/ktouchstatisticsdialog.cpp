@@ -423,7 +423,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 	    // Create plot object for session statistics
 	    KPlotObject * ob;
 	    if (data.size() <= 1) return;
-	    ob = new KPlotObject( Qt::red, KPlotObject::LINES, 2 );
+	    ob = new KPlotObject( Qt::red, KPlotObject::Lines, 2 );
 
 	    // Add some random points to the plot object
 	    double min_x = 1e20;
