@@ -458,7 +458,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 
 
 void KTouchStatisticsDialog::init() {
-    if (m_trainer->m_sessionHistory.size()<2) {
+    /*if (m_trainer->m_sessionHistory.size()<2) {
         chartTypeButtonGroup->setEnabled(false);
         chartWidget->setEraseColor( Qt::gray );
     }
@@ -473,7 +473,7 @@ void KTouchStatisticsDialog::init() {
     else if (accuracyButton->isChecked())
         chartWidget->setChartType( KTouchChartWidget::Accuracy );
     else if (timeButton->isChecked())
-        chartWidget->setChartType( KTouchChartWidget::ElapsedTime );
+        chartWidget->setChartType( KTouchChartWidget::ElapsedTime );*/
 }
 
 // ----------------------------------------------------------------------------
