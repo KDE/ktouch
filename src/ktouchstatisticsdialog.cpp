@@ -46,12 +46,23 @@ KTouchStatisticsDialog::KTouchStatisticsDialog(QWidget* parent)
     connect(closeButton, SIGNAL(clicked()), this, SLOT(accept()) );
     connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
     connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
+
     // connect the radio buttons with the chart update function
-//    connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-//    connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-//    connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+    connect(CPMRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+    connect(WPMRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+    connect(correctRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+    connect(skillRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+
+    connect(levelsRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+    connect(sessionsRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+
+    connect(eventRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+    connect(timeRadio, SIGNAL(toggled(bool)), this, SLOT(updateChartTab()) );
+
 
     levelsRadio->setEnabled(false);
+
+    init();
 }
 // ----------------------------------------------------------------------------
 
@@ -291,6 +302,9 @@ void KTouchStatisticsDialog::updateCurrentLevelTab() {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::updateChartTab() {
+
+    kDebug() << "[KTouchStatisticsDialog::updateChartTab]" << endl;
+
 	// remove all current chart objects
 	chartWidget->removeAllPlotObjects();
 	// if no lecture data is available, return
@@ -306,150 +320,144 @@ void KTouchStatisticsDialog::updateChartTab() {
 		while (index-- > 0) ++it;
 		QList< std::pair<double, double> > data;
 		QString caption = "Session data";
-/*
-		switch (buttonGroup2->selectedId()) {
-			case 0 : // words per minute
-				// loop over all session data entries in *it and store words per minute data
-				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-					session_it != (*it).m_sessionStats.end(); ++session_it)
-				{
-					double t = (*session_it).m_elapsedTime;
-					double wpm = (t == 0) ? 0 : (*session_it).m_words/t*60.0;
-					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, wpm) );
-				}
-				// add current session if selected lecture matches
-				if (m_currentIndex == m_lectureIndex && 
-					m_currSessionStats.m_elapsedTime != 0) 
-				{
-					double t = m_currSessionStats.m_elapsedTime;
-					double wpm = m_currSessionStats.m_words/t*60.0;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, wpm) );
-				}
-				chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Words per minute") );
-				//:chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
-				break;
 
-
-			case 1 : // chars per minute
-				// loop over all session data entries in *it and store chars per minute data
-				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-					session_it != (*it).m_sessionStats.end(); ++session_it)
-				{
-					double t = (*session_it).m_elapsedTime;
-					double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
-					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, cpm) );
-				}
-				// add current session
-				if (m_currentIndex == m_lectureIndex && 
-					m_currSessionStats.m_elapsedTime != 0) 
-				{
-					double t = m_currSessionStats.m_elapsedTime;
-					double cpm = m_currSessionStats.m_correctChars/t*60.0;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, cpm) );
-				}
-				chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Characters per minute") );
-				//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
-				break;
-
-
-			case 2 : // correctness
-				// loop over all session data entries in *it and store correctness data
-				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-					session_it != (*it).m_sessionStats.end(); ++session_it)
-				{
-					double tc = (*session_it).m_totalChars;
-					double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
-					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, corr) );
-				}
-				// add current session
-				if (m_currentIndex == m_lectureIndex && 
-					m_currSessionStats.m_totalChars != 0) 
-				{
-					double tc = m_currSessionStats.m_totalChars;
-					double corr = m_currSessionStats.m_correctChars/tc;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, corr) );
-				}
-				chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Correctness") );
-				//chartWidget->LeftAxis.setLabelFormat(0, 'g', 1);
-				break;
-
-
-			case 3 : // skill
-				// loop over all session data entries in *it and store correctness data
-				for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-					session_it != (*it).m_sessionStats.end(); ++session_it)
-				{
-					double tc = (*session_it).m_totalChars;
-					double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
-					double t = (*session_it).m_elapsedTime;
-					double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
-					double skill = corr*cpm;
-					double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, skill) );
-				}
-				// add current session
-				if (m_currentIndex == m_lectureIndex && 
-					m_currSessionStats.m_totalChars != 0 && 
-					m_currSessionStats.m_elapsedTime != 0)
-				{
-					double tc = m_currSessionStats.m_totalChars;
-					double corr = m_currSessionStats.m_correctChars/tc;
-					double t = m_currSessionStats.m_elapsedTime;
-					double cpm = m_currSessionStats.m_correctChars/t*60.0;
-					double skill = corr*cpm;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
-					data.push_back(std::make_pair(tp, skill) );
-				}
-				chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Skill") );
-				//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
-				break;
-				
-			default : return;
-		}
-		// Create plot object for session statistics
-		KPlotObject * ob;
-		if (data.size() <= 1) return;
-		ob = new KPlotObject( Qt::red, KPlotObject::LINES, 2 );
-		
-		// Add some random points to the plot object
-		double min_x = 1e20;
-		double max_x = -1;
-		double max_y = -1;
-		for (int i=0; i<data.size(); ++i) {
-			double x;
-			if (timeRadio->isChecked()) {
-				x = data[i].first - data[0].first;
-				chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Time since first practice session in days" ));
+		if(WPMRadio->isChecked()){ // words per minute
+			// loop over all session data entries in *it and store words per minute data
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				session_it != (*it).m_sessionStats.end(); ++session_it)
+			{
+				double t = (*session_it).m_elapsedTime;
+				double wpm = (t == 0) ? 0 : (*session_it).m_words/t*60.0;
+				double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, wpm) );
 			}
-			else {	
-				x = i+1;
-				chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Sessions" ));
+			// add current session if selected lecture matches
+			if (m_currentIndex == m_lectureIndex && 
+				m_currSessionStats.m_elapsedTime != 0) 
+			{
+				double t = m_currSessionStats.m_elapsedTime;
+				double wpm = m_currSessionStats.m_words/t*60.0;
+				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, wpm) );
 			}
-			ob->addPoint( x, data[i].second );
-			min_x = std::min(x, min_x);
-			max_x = std::max(x, max_x);
-			max_y = std::max(data[i].second, max_y);
+			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Words per minute") );
+			//:chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
 		}
-		if (max_y == 0)  max_y = 1;
-		max_y *= 1.1;
-		chartWidget->setLimits( min_x, max_x, -0.1*max_y, max_y );
-//		kDebug() << min_x << " " << max_x << "    " << max_y << endl;
-		// Add plot object to chart
-		chartWidget->addObject(ob);
-*/
-	}
+        else if(CPMRadio->isChecked()){ // chars per minute
+			// loop over all session data entries in *it and store chars per minute data
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				session_it != (*it).m_sessionStats.end(); ++session_it)
+			{
+				double t = (*session_it).m_elapsedTime;
+				double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
+				double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, cpm) );
+			}
+			// add current session
+			if (m_currentIndex == m_lectureIndex && 
+				m_currSessionStats.m_elapsedTime != 0) 
+			{
+				double t = m_currSessionStats.m_elapsedTime;
+				double cpm = m_currSessionStats.m_correctChars/t*60.0;
+				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, cpm) );
+			}
+			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Characters per minute") );
+			//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+        }
+        else if (correctRadio->isChecked()){ // correctness
+			// loop over all session data entries in *it and store correctness data
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				session_it != (*it).m_sessionStats.end(); ++session_it)
+			{
+				double tc = (*session_it).m_totalChars;
+				double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
+				double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, corr) );
+			}
+			// add current session
+			if (m_currentIndex == m_lectureIndex && 
+				m_currSessionStats.m_totalChars != 0) 
+			{
+				double tc = m_currSessionStats.m_totalChars;
+				double corr = m_currSessionStats.m_correctChars/tc;
+				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, corr) );
+			}
+			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Correctness") );
+			//chartWidget->LeftAxis.setLabelFormat(0, 'g', 1);
+        }
+        else if (skillRadio->isChecked()){
+			// loop over all session data entries in *it and store correctness data
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				session_it != (*it).m_sessionStats.end(); ++session_it)
+			{
+				double tc = (*session_it).m_totalChars;
+				double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
+				double t = (*session_it).m_elapsedTime;
+				double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
+				double skill = corr*cpm;
+				double tp = (*session_it).m_timeRecorded.toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, skill) );
+			}
+			// add current session
+			if (m_currentIndex == m_lectureIndex && 
+				m_currSessionStats.m_totalChars != 0 && 
+				m_currSessionStats.m_elapsedTime != 0)
+			{
+				double tc = m_currSessionStats.m_totalChars;
+				double corr = m_currSessionStats.m_correctChars/tc;
+				double t = m_currSessionStats.m_elapsedTime;
+				double cpm = m_currSessionStats.m_correctChars/t*60.0;
+				double skill = corr*cpm;
+				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+				data.push_back(std::make_pair(tp, skill) );
+			}
+			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Skill") );
+			//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+        }
+        else{
+            return;
+		}
+
+	    // Create plot object for session statistics
+	    KPlotObject * ob;
+	    if (data.size() <= 1) return;
+	    ob = new KPlotObject( Qt::red, KPlotObject::LINES, 2 );
+
+	    // Add some random points to the plot object
+	    double min_x = 1e20;
+	    double max_x = -1;
+	    double max_y = -1;
+	    for (int i=0; i<data.size(); ++i) {
+		    double x;
+		    if (timeRadio->isChecked()) {
+			    x = data[i].first - data[0].first;
+			    chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Time since first practice session in days" ));
+		    }
+		    else {	
+			    x = i+1;
+			    chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Sessions" ));
+		    }
+		    ob->addPoint( x, data[i].second );
+		    min_x = std::min(x, min_x);
+		    max_x = std::max(x, max_x);
+		    max_y = std::max(data[i].second, max_y);
+	    }
+	    if (max_y == 0)
+            max_y = 1;
+    
+	    max_y *= 1.1;
+	    chartWidget->setLimits( min_x, max_x, -0.1*max_y, max_y );
+        // kDebug() << min_x << " " << max_x << "    " << max_y << endl;
+	    // Add plot object to chart
+	    chartWidget->addPlotObject(ob);
+    }
 }
 // ----------------------------------------------------------------------------
 
-/*
 
-void KTouchStatistics::updateChartTab() {
+void KTouchStatisticsDialog::init() {
     if (m_trainer->m_sessionHistory.size()<2) {
         chartTypeButtonGroup->setEnabled(false);
         chartWidget->setEraseColor( Qt::gray );
@@ -467,6 +475,7 @@ void KTouchStatistics::updateChartTab() {
     else if (timeButton->isChecked())
         chartWidget->setChartType( KTouchChartWidget::ElapsedTime );
 }
+
 // ----------------------------------------------------------------------------
 
-*/
+
