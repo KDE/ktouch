@@ -47,8 +47,6 @@ class KTouchStatisticsDialog : public QDialog, public Ui_KTouchStatisticsDialog 
 	/// Updates the data in the current tab, using the data stored in m_currLevelStats.
 	void updateCurrentLevelTab();
 
-    void init();
-
 	unsigned int			m_currentIndex;		///< Index in lecture combo of the current lecture.
 	unsigned int			m_lectureIndex;		///< Index of currently selected lecture.
 	KTouchStatisticsData 	m_allStats;			///< Contains all lecture statistics.

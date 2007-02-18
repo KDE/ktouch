@@ -61,8 +61,6 @@ KTouchStatisticsDialog::KTouchStatisticsDialog(QWidget* parent)
 
 
     levelsRadio->setEnabled(false);
-
-    init();
 }
 // ----------------------------------------------------------------------------
 
@@ -454,28 +452,6 @@ void KTouchStatisticsDialog::updateChartTab() {
 	    chartWidget->addPlotObject(ob);
     }
 }
-// ----------------------------------------------------------------------------
-
-
-void KTouchStatisticsDialog::init() {
-    /*if (m_trainer->m_sessionHistory.size()<2) {
-        chartTypeButtonGroup->setEnabled(false);
-        chartWidget->setEraseColor( Qt::gray );
-    }
-    else {
-        chartTypeButtonGroup->setEnabled(true);
-        chartWidget->setEraseColor( Qt::white );
-    };
-    if (charSpeedButton->isChecked())
-        chartWidget->setChartType( KTouchChartWidget::CharsPerMinute );
-    else if (wordSpeedButton->isChecked())
-        chartWidget->setChartType( KTouchChartWidget::WordsPerMinute );
-    else if (accuracyButton->isChecked())
-        chartWidget->setChartType( KTouchChartWidget::Accuracy );
-    else if (timeButton->isChecked())
-        chartWidget->setChartType( KTouchChartWidget::ElapsedTime );*/
-}
-
 // ----------------------------------------------------------------------------
 
 
