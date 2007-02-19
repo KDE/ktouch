@@ -163,33 +163,30 @@ void KTouchControlKey::paint(QPainter& p) const {
         int x = m_xS+h/2;
         int y = m_yS+m_hS/2;
         p.drawLine(x-ch/2, y, x-ch/4, y);
-		p.drawLine(x-ch/4, y, x-ch/4, y+ch/2);
-		p.drawLine(x-ch/4, y+ch/2, x+ch/4, y+ch/2);
-		p.drawLine(x+ch/4, y+ch/2, x+ch/4, y);
-		p.drawLine(x+ch/4, y, x+ch/2, y);
-		p.drawLine(x+ch/2, y, x, y-ch/2);
-		p.drawLine(x, y-ch/2, x-ch/2, y);
+        p.drawLine(x-ch/4, y, x-ch/4, y+ch/2);
+        p.drawLine(x-ch/4, y+ch/2, x+ch/4, y+ch/2);
+        p.drawLine(x+ch/4, y+ch/2, x+ch/4, y);
+        p.drawLine(x+ch/4, y, x+ch/2, y);
+        p.drawLine(x+ch/2, y, x, y-ch/2);
+        p.drawLine(x, y-ch/2, x-ch/2, y);
     }
     else if (m_keyText=="CapsLock") {
         int x = m_xS+h/2;
         int y = m_yS+m_hS/2;
-		// FIXME
-/*        p.moveTo(x-ch/2, y);
-        p.lineTo(x-ch/4, y);
-        p.lineTo(x-ch/4, y-ch/2);
-        p.lineTo(x+ch/4, y-ch/2);
-        p.lineTo(x+ch/4, y);
-        p.lineTo(x+ch/2, y);
-        p.lineTo(x, y+ch/2);
-        p.lineTo(x-ch/2, y);
-*/
+
+        p.drawLine(x-ch/2, y, x-ch/4, y);
+        p.drawLine(x-ch/4, y, x-ch/4, y-ch/2);
+        p.drawLine(x-ch/4, y-ch/2, x+ch/4, y-ch/2);
+        p.drawLine(x+ch/4, y-ch/2, x+ch/4, y);
+        p.drawLine(x+ch/4, y, x+ch/2, y);
+        p.drawLine(x+ch/2, y, x, y+ch/2);
+        p.drawLine(x, y+ch/2, x-ch/2, y);
     }
     else if (m_keyText=="Tab") {
         int xleft = m_xS+h/2-ch/2;
         int xright = m_xS + std::min(m_wS-h/2+ch/2,h);
         int y = m_yS+m_hS/2;
-		// FIXME
-/*
+
         p.drawLine(xleft, y,xleft, y-ch/2);
         p.drawLine(xleft, y-ch/4, xright, y-ch/4);
         p.drawLine(xleft, y-ch/4, xleft+ch/2, y-static_cast<int>(ch*0.10));
@@ -198,30 +195,28 @@ void KTouchControlKey::paint(QPainter& p) const {
         p.drawLine(xleft,  y+ch/4, xright, y+ch/4);
         p.drawLine(xright, y+ch/4, xright-ch/2, y+static_cast<int>(ch*0.10));
         p.drawLine(xright, y+ch/4, xright-ch/2, y+static_cast<int>(ch*0.40));
-*/
+
     }
     else if (m_keyText=="BackSpace") {
         int xleft = m_xS+h/2-ch/2;
         int xright = m_xS + std::min(m_wS-h/2+ch/2,h);
         int y = m_yS+m_hS/2;
-/*
-		FIXME
+
         p.drawLine(xleft, y,xright, y);
         p.drawLine(xleft, y, xleft+ch/2, y-static_cast<int>(ch*0.15));
         p.drawLine(xleft, y, xleft+ch/2, y+static_cast<int>(ch*0.15));
-*/
+
     }
     else if (m_keyText=="Enter") {
         int xleft = m_xS+h/2-ch/2;
         int xright = m_xS + std::min(m_wS-h/2+ch/2,h);
         int y = m_yS+m_hS/2;
-/*
-		FIXME
+
         p.drawLine(xright, y-ch/2,xright, y);
         p.drawLine(xleft, y,xright, y);
         p.drawLine(xleft, y, xleft+ch/3, y-static_cast<int>(ch*0.15));
         p.drawLine(xleft, y, xleft+ch/3, y+static_cast<int>(ch*0.15));
-*/
+
     }
     else if (m_keyText=="AltGr") {
         p.drawText(m_xS, m_yS, m_wS, m_hS, Qt::AlignCenter | Qt::AlignVCenter, "Alt Gr");
