@@ -11,7 +11,7 @@
     </entry>
     <entry type="Bool" name="CommonTypingLineColors" >
       <label >Use the same typing line colors independent of color scheme.</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Color" name="TeacherBackgroundColor" >
       <label >The background color for the teacher's line.</label>
@@ -31,7 +31,7 @@
     </entry>
     <entry type="Bool" name="ColorOnError" >
       <label >Whether to use a different background for wrong text or not.</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Color" name="ErrorBackgroundColor" >
       <label >The background color for wrong text (students line).</label>
@@ -45,27 +45,27 @@
   <group name="General" >
     <entry type="Bool" name="BeepOnError" >
       <label >Emit a beep on each typing error</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Bool" name="SoundOnKeypress" >
       <label >Play sounds for typing.</label>
-      <default code="false" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Bool" name="SoundOnLevel" >
       <label >Play a sound on automatic level change</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Int" name="SlidingSpeed" >
       <label >The sliding speed</label>
-      <default code="true" >5</default>
+      <default>5</default>
     </entry>
     <entry type="Int" name="MaxSlidingWidgetHeight" >
       <label >The maximum height of the sliding widget</label>
-      <default code="true" >200</default>
+      <default>200</default>
     </entry>
     <entry type="Bool" name="OverrideLectureFont" >
       <label >Override the default/predefined lecture fonts.</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Font" name="Font" >
       <label >The font for the student and teacher lines</label>
@@ -77,21 +77,21 @@
     </entry>
     <entry type="Bool" name="Right2LeftTyping" >
       <label>Whether we use right-to-left typing.</label>
-      <default code="true">false</default>
+      <default>false</default>
     </entry>
   </group>
   <group name="Keyboard" >
     <entry type="Bool" name="ShowAnimation" >
       <label >Whether to use colors on the keys or not.</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Bool" name="HideKeyboard" >
       <label >Whether to hide the keyboard display.</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Bool" name="OverrideKeyboardFont" >
       <label >Whether to override the default/predefined keyboard fonts.</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Font" name="KeyboardFont" >
       <label >The font for the keys on the keyboard</label>
@@ -105,15 +105,15 @@
   <group name="Training" >
     <entry type="Bool" name="AutoLevelChange" >
       <label >Allow automatic level adjustments</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Bool" name="DisableManualLevelChange" >
       <label >Diable manual level adjustments when auto-level change is enabled</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="Bool" name="RememberLevel" >
       <label >Remember the current level for the next KTouch start</label>
-      <default code="true" >true</default>
+      <default>true</default>
     </entry>
     <entry type="Int" name="CurrentTrainingLevel" >
       <label >The current training level</label>
@@ -137,17 +137,17 @@
     </entry>
     <entry type="Int" name="NumberOfLinesWorkload" >
       <label >How many lines that must be typed before level can change</label>
-      <default >0</default>
+      <default >5</default>
     </entry>
     <entry type="Bool" name="CompleteWholeTrainingLevel" >
       <label >Run minimum one complete level before going up</label>
-      <default code="true" >true</default>
+      <default>false</default>
     </entry>
   </group>
   <group name="Users" >
     <entry type="Bool" name="MultipleUsers" >
       <label >Allow multiple KTouch users for single user account</label>
-      <default code="true" >false</default>
+      <default>false</default>
     </entry>
     <entry type="String" name="CurrentUserName" >
       <label >The user name of the current user.</label>
