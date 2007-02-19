@@ -175,61 +175,57 @@ void KTouchTrainer::enterPressed() {
     if(Prefs::soundOnKeypress()){
         player->play(m_typeWriterSound.url());
     }
-    if (m_trainingPaused)  continueTraining();
-    if (m_studentText != m_teacherText) {
 
+    if (m_trainingPaused)
+        continueTraining();
+
+    if (m_studentText != m_teacherText) {
         if (Prefs::beepOnError()){
             QApplication::beep();
         }
+        return;
     }
 
-  updateWordCount();
-  m_levelStats.m_words += m_wordsInCurrentLine;
-  m_sessionStats.m_words += m_wordsInCurrentLine;
+    updateWordCount();
+    m_levelStats.m_words += m_wordsInCurrentLine;
+    m_sessionStats.m_words += m_wordsInCurrentLine;
 
-  
-  if (Prefs::autoLevelChange()) {
-    // if level increase criterion was fulfilled, increase line counter
-    if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 &&
-	Prefs::upSpeedLimit() <= m_levelStats.charSpeed())
-      {
-	m_decLinesCount=0;
-	++m_incLinesCount;
-      }
-    else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 ||
-	      Prefs::downSpeedLimit() > m_levelStats.charSpeed())
-      {
-	m_incLinesCount=0;
-	++m_decLinesCount;
-      };
+    if (Prefs::autoLevelChange()) {
+        // if level increase criterion was fulfilled, increase line counter
+        if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 && Prefs::upSpeedLimit() <= m_levelStats.charSpeed())
+        {
+            m_decLinesCount=0;
+            ++m_incLinesCount;
+        }
+        else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 || Prefs::downSpeedLimit() > m_levelStats.charSpeed())
+        {
+            m_incLinesCount=0;
+            ++m_decLinesCount;
+        };
 
-    
+        // Automatic level change after a number of lines can happen, if you fulfilled the
+        // requirements in the last 5 lines.
+        if (m_incLinesCount >= Prefs::numberOfLinesWorkload() && 
+            (!Prefs::completeWholeTrainingLevel()  || m_incLinesCount >= static_cast<int>(m_lecture->level(m_level).count())))
+        {
+            levelUp();
+            return;
+        }
 
-    // Automatic level change after a number of lines can happen, if you fulfilled the
-    // requirements in the last 5 lines.
-    if (m_incLinesCount >= Prefs::numberOfLinesWorkload() && 
-        (!Prefs::completeWholeTrainingLevel()  || 
-         m_incLinesCount >= static_cast<int>(m_lecture->level(m_level).count())
-        )
-       ) 
-    {
-      levelUp();
-      return;
-    }
-    if (m_decLinesCount>=2 && m_level!=0) {
-      levelDown();
-      return;
+        if (m_decLinesCount>=2 && m_level!=0) {
+            levelDown();
+            return;
+        };
     };
-  };
 
-  // Check if we are in the last line
-  if (m_line+1 >= m_lecture->level(m_level).count()) {
-    m_line=0;
-  }
-  else {
-    ++m_line;
-  }
-  newLine();
+    // Check if we are in the last line
+    if (m_line+1 >= m_lecture->level(m_level).count()) {
+        m_line=0;
+    }
+    else {
+        ++m_line;
+    }
+    newLine();
 }
 
 
