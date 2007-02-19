@@ -44,6 +44,17 @@ KTouchLectureEditorDialog::KTouchLectureEditorDialog(QWidget *parent)
 {
     setupUi(this);
 
+    upBtn->setIcon( KIcon("up") );
+    downBtn->setIcon( KIcon("down") );
+    deleteBtn->setIcon( KIcon("remove") );
+    newBtn->setIcon( KIcon("add") );
+
+    fontButton->setIcon( KIcon("font") );
+    openButton->setIcon( KIcon("fileopen") );
+    quitButton->setIcon( KIcon("exit") );
+    saveButton->setIcon( KIcon("filesave") );
+    saveAsButton->setIcon( KIcon("filesaveas") );
+
     levelListWidget->setSortingEnabled(false); // don't sort my level list view!
 
     connect(levelListWidget, SIGNAL(currentRowChanged(int)),this, SLOT(newSelection(int)) );
