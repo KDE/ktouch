@@ -70,7 +70,11 @@ KTouchLectureEditorDialog::KTouchLectureEditorDialog(QWidget *parent)
     connect(levelCommentEdit, SIGNAL(textChanged(const QString&)), this, SLOT(setModified()) );
     connect(linesEdit, SIGNAL(textChanged()), this, SLOT(setModified()) );
 
-    // The font, open, save, saveas and close buttons are already connected
+    connect(fontButton, SIGNAL(clicked()), this, SLOT(fontBtnClicked()) );
+    connect(openButton, SIGNAL(clicked()), this, SLOT(openBtnClicked()) );
+    connect(quitButton, SIGNAL(clicked()), this, SLOT(close()) );
+    connect(saveButton, SIGNAL(clicked()), this, SLOT(saveBtnClicked()) );
+    connect(saveAsButton, SIGNAL(clicked()), this, SLOT(saveAsBtnClicked()) );
 }
 // -----------------------------------------------------------------------------
 
@@ -181,15 +185,17 @@ void KTouchLectureEditorDialog::newLevel() {
 // -----------------------------------------------------------------------------
 
 void KTouchLectureEditorDialog::deleteLevel() {
-/*    // Open for discussion: Should there be a message box to confirm the delete?
-    if (m_level >= m_lecture.m_lectureData.size()) return; // paranoia check
+    // Open for discussion: Should there be a message box to confirm the delete?
+    if (m_level >= m_lecture.m_lectureData.size())
+        return; // paranoia check
+
     // first remove the item from the list widget
     levelListWidget->takeItem(m_level);
     // then remove the level data
     QList<KTouchLevelData>::iterator it=m_lecture.m_lectureData.begin();
     std::advance(it, m_level);
     m_lecture.m_lectureData.erase(it);
-    m_currentItem = levelListWidget->item(m_level);
+    QListWidgetItem *m_currentItem = levelListWidget->item(m_level);
     levelListWidget->setCurrentItem(m_currentItem);
     showCurrentLevel();
     if (m_lecture.m_lectureData.size()==1)
@@ -199,50 +205,50 @@ void KTouchLectureEditorDialog::deleteLevel() {
     if (m_level==0)
         upBtn->setEnabled(false);
     setModified();
-*/
 }
 // -----------------------------------------------------------------------------
 
 void KTouchLectureEditorDialog::moveUp() {
-/*    if (m_level==0) return;
+    if (m_level==0)
+        return;
+
     storeCurrentLevel();
-    QListWidgetItem *upperItem = m_currentItem->itemAbove();
+    QListWidgetItem *m_currentItem = levelListWidget->currentItem();
+    QListWidgetItem *upperItem = levelListWidget->item(m_level-1);
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level-1]);
-    upperItem->setText(0, m_lecture.m_lectureData[m_level-1].m_newChars);
-    m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
+    upperItem->setText(m_lecture.m_lectureData[m_level-1].m_newChars);
+    m_currentItem->setText(m_lecture.m_lectureData[m_level].m_newChars);
     m_currentItem=upperItem;
     --m_level;
-    levelListView->setSelected(m_currentItem, true);
+    levelListWidget->setCurrentItem(m_currentItem);
     showCurrentLevel();
-    m_selecting = false;
     if (m_level==0)
         upBtn->setEnabled(false);
     downBtn->setEnabled(true);
     setModified();
-*/
 }
 // -----------------------------------------------------------------------------
 
 void KTouchLectureEditorDialog::moveDown() {
-/*    if (m_level>=m_lecture.m_lectureData.size()-1) return;
-    m_selecting=true;  // again, I don't want to process changeSelection() signals now
+    if (m_level>=m_lecture.m_lectureData.size()-1)
+        return;
+
     storeCurrentLevel();
-    Q3ListViewItem *lowerItem = m_currentItem->itemBelow();
+    QListWidgetItem *m_currentItem = levelListWidget->currentItem();
+    QListWidgetItem *lowerItem = levelListWidget->item(m_level+1);
     std::swap(m_lecture.m_lectureData[m_level], m_lecture.m_lectureData[m_level+1]);
-    m_currentItem->setText(0, m_lecture.m_lectureData[m_level].m_newChars);
+    m_currentItem->setText(m_lecture.m_lectureData[m_level].m_newChars);
     if (lowerItem) {
-        lowerItem->setText(0, m_lecture.m_lectureData[m_level+1].m_newChars);
+        lowerItem->setText(m_lecture.m_lectureData[m_level+1].m_newChars);
         m_currentItem=lowerItem;
     }
     ++m_level;
-    levelListView->setSelected(m_currentItem, true);
+    levelListWidget->setCurrentItem(m_currentItem);
     showCurrentLevel();
-    m_selecting = false;
     if (m_level==m_lecture.m_lectureData.size()-1)
         downBtn->setEnabled(false);
     upBtn->setEnabled(true);
     setModified();
-*/
 }
 // -----------------------------------------------------------------------------
 
@@ -402,7 +408,7 @@ void KTouchLectureEditorDialog::setModified(bool flag) {
     if (!m_currentURL.isEmpty()) {
         if (flag) setWindowTitle(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName() + i18n(" (modified)"));
         else      setWindowTitle(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
-    }        
+    }
 }
 // -----------------------------------------------------------------------------
 
