@@ -615,12 +615,12 @@ void KTouch::resizeEvent(QResizeEvent * event) {
 // Will be called when this app is restored due to session management.
 // This function only stored the temperary data of the last session. All permanent
 // settings should be handled by the KTouchConfiguration object.
-void KTouch::readProperties(KConfig *config) {
+void KTouch::readProperties(const KConfigGroup &config) {
     kDebug() << "[KTouch::readProperties]  Reading session data..." << endl;
 	// TODO : Session management rewrite
+    /*
     config->setGroup("TrainingState");
 
-/*
 	// The application is about to be restored due to session management.
     // Let's read all the stuff that was set when the application was terminated (during KDE logout).
     QString session = config->readEntry("Session");
@@ -648,14 +648,14 @@ void KTouch::readProperties(KConfig *config) {
 // ----------------------------------------------------------------------------
 
 // Will be called when the app should save its state for session management purposes.
-void KTouch::saveProperties(KConfig *config) {
+void KTouch::saveProperties(KConfigGroup &config) {
     kDebug() << "[KTouch::saveProperties]  Saving session data..." << endl;
     // We are going down because of session management (most likely because of
     // KDE logout). Let's save the current status so that we can restore it
     // next logon.
 
 	// TODO : Session management rewrite
-    config->setGroup("TrainingState");
+    //config->setGroup("TrainingState");
 /*
     // first write the current lecture URL and the training position
     config->writePathEntry("Lecture", m_currentLectureURL.url());
