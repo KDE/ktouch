@@ -18,6 +18,7 @@ install( FILES
   dvorak.keyboard
   dvorak_se.keyboard
   ee.keyboard
+  el.keyboard
   en.dvorak.keyboard
   en.keyboard
   es.keyboard

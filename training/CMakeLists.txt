@@ -15,6 +15,7 @@ install(FILES
   dvorak.ktouch.xml  
   dvorak-fr-1.ktouch.xml
   dvorak-fr-2.ktouch.xml
+  el.ktouch.xml
   english.ktouch.xml  
   espanol.ktouch.xml
   espanol2.ktouch.xml
