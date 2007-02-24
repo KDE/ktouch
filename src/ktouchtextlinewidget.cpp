@@ -45,6 +45,8 @@ KTouchTextLineWidget::KTouchTextLineWidget(QWidget *parent)
     connect(animationTimer, SIGNAL(timeout()), this, SLOT(recalculatePosition()));
     connect(cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()));
 
+    direction = parent->layoutDirection();
+
     applyPreferences();
 }
 
@@ -76,7 +78,13 @@ void KTouchTextLineWidget::setTeacherText(const QString& text) {
 void KTouchTextLineWidget::setStudentText(const QString& text) {
     student->setText(text);
 
-    cursor->setPos(student->boundingRect().width(), 0);
+    if(direction == Qt::LeftToRight)
+        cursor->setPos(student->boundingRect().width(), 0);
+    else
+    {
+        cursor->setPos(teacher->boundingRect().width() - student->boundingRect().width(), 0);
+        student->setPos(teacher->boundingRect().width() - student->boundingRect().width(), teacher->boundingRect().height() + 5);
+    }
 
     if(teacher->text().startsWith(text)){
         studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
@@ -118,8 +126,11 @@ void KTouchTextLineWidget::recalculateSize(){
     studentRect->setPath(roundedRectPathFactory(rect.x()-5, rect.y(), rect.width()+10, rect.height(), qMin(rect.height(), rect.width())/2));
     teacherRect->setPath(roundedRectPathFactory(rect.x()-5, rect.y(), rect.width()+10, rect.height(), qMin(rect.height(), rect.width())/2));
 
-    cursor->setLine(1,rect.height() + 5  + 5, 1,rect.height() * 2 + 5 - 10);
-    cursor->setPos(student->boundingRect().width(), 0);
+    cursor->setLine(2,rect.height() + 5  + 5, 2,rect.height() * 2 + 5 - 10);
+    if(direction == Qt::LeftToRight)
+        cursor->setPos(0, 0);
+    else
+        cursor->setPos(teacher->boundingRect().width() - student->boundingRect().width(), 0);
 
     studentRect->setPos(0, rect.height() + 5);
 
@@ -140,7 +151,10 @@ void KTouchTextLineWidget::recalculatePosition() {
         wantedPos = diff/2;
     }
     else{
-        wantedPos = diff * ration - (padding * (1 - (2*ration)));
+        if(direction == Qt::LeftToRight)
+            wantedPos = diff * ration - (padding * (1 - (2*ration)));
+        else
+            wantedPos = diff - (diff * ration - (padding * (1 - (2*ration))));
     }
     pos = pos + (wantedPos - pos) / 4;
     scene->setSceneRect(pos, 0 , width(), height());

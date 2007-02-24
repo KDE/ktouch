@@ -16,6 +16,7 @@
 #include <QGraphicsLineItem>
 #include <QGraphicsPathItem>
 #include <QTimer>
+#include <Qt>
 
 class KTouchTextLineWidget : public QWidget {
     Q_OBJECT
@@ -55,6 +56,8 @@ class KTouchTextLineWidget : public QWidget {
     QTimer *cursorTimer;
 
     double pos;
+
+    Qt::LayoutDirection direction;
 };
 
 #endif
