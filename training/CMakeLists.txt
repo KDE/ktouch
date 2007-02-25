@@ -8,6 +8,7 @@ install(FILES
   bulgarian.ktouch.xml
   bulgarian_long.ktouch.xml
   catalan.ktouch.xml  
+  czech.ktouch.xml
   danish2.ktouch.xml  
   danish.ktouch.xml  
   dvorak_ABCD.ktouch.xml  

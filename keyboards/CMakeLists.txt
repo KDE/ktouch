@@ -7,6 +7,7 @@
 install( FILES 
   be.keyboard
   bg.keyboard
+  cz.keyboard
   de-2.keyboard
   de-ch2.keyboard
   de-ch.keyboard
