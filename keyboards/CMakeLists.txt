@@ -45,6 +45,8 @@ install( FILES
   ru.winkeys.keyboard
   se.keyboard
   sl.keyboard
+  turkish_f.keyboard
+  turkish_q.keyboard
   uk.basic.keyboard
   uk.typewriter.keyboard
   uk.winkeys.keyboard 
