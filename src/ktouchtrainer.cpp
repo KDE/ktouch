@@ -248,8 +248,9 @@ void KTouchTrainer::updateWidgets() {
         // ok, all student text is correct
         if (m_teacherText.length()==m_studentText.length())
             m_keyboardWidget->newKey(QChar(13));        // we have reached the end of the line
-        else
-            m_keyboardWidget->newKey(m_teacherText[m_studentText.length()]);
+        else{
+            m_keyboardWidget->newKey(m_teacherText[(m_textLineWidget->layoutDirection() == Qt::LeftToRight) ? m_studentText.length() : m_teacherText.length() - m_studentText.length() - 1]);
+        }
     }
     else {
         m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
