@@ -77,16 +77,18 @@ void KTouchTextLineWidget::setTeacherText(const QString& text) {
 
 void KTouchTextLineWidget::setStudentText(const QString& text) {
     student->setText(text);
+    double studentTextWidth = student->boundingRect().width();
+    double teacherTextWidth = teacher->boundingRect().width();
 
     if(direction == Qt::LeftToRight)
-        cursor->setPos(student->boundingRect().width(), 0);
+        cursor->setPos(studentTextWidth, 0);
     else
     {
-        cursor->setPos(teacher->boundingRect().width() - student->boundingRect().width(), 0);
-        student->setPos(teacher->boundingRect().width() - student->boundingRect().width(), teacher->boundingRect().height() + 5);
+        cursor->setPos(teacherTextWidth - studentTextWidth, 0);
+        student->setPos(teacherTextWidth - studentTextWidth, teacher->boundingRect().height() + 5);
     }
 
-    if(teacher->text().startsWith(text)){
+    if(direction == Qt::LeftToRight ? teacher->text().startsWith(text) : teacher->text().endsWith(text)){
         studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
         student->setBrush(QBrush(Prefs::studentTextColor()));
     }
@@ -121,16 +123,20 @@ void KTouchTextLineWidget::recalculateSize(){
     QRectF rect = teacher->boundingRect();
 
     student->setFont(font);
-    student->setPos(0, rect.height() + 5);
 
     studentRect->setPath(roundedRectPathFactory(rect.x()-5, rect.y(), rect.width()+10, rect.height(), qMin(rect.height(), rect.width())/2));
     teacherRect->setPath(roundedRectPathFactory(rect.x()-5, rect.y(), rect.width()+10, rect.height(), qMin(rect.height(), rect.width())/2));
 
-    cursor->setLine(2,rect.height() + 5  + 5, 2,rect.height() * 2 + 5 - 10);
-    if(direction == Qt::LeftToRight)
-        cursor->setPos(0, 0);
-    else
+    if(direction == Qt::LeftToRight){
+        cursor->setLine(2,rect.height() + 5  + 5, 2,rect.height() * 2 + 5 - 10);
+        cursor->setPos(student->boundingRect().width(), 0);
+        student->setPos(0, rect.height() + 5);
+    }
+    else{
+        cursor->setLine(-2,rect.height() + 5  + 5, -2,rect.height() * 2 + 5 - 10);
         cursor->setPos(teacher->boundingRect().width() - student->boundingRect().width(), 0);
+        student->setPos(teacher->boundingRect().width() - student->boundingRect().width(), rect.height() + 5);
+    }
 
     studentRect->setPos(0, rect.height() + 5);
 

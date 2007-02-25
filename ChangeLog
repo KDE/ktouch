@@ -1,7 +1,12 @@
-2007-02-25 Håvard Frøiland <haavard@solveien.net>
+2007-02-26 Håvard Frøiland <haavard@solveien.net>
+  * Fixed: LeftToRight and RightToLeft should now work. there are still
+           some known problems with RightToLeft, but I am not sure if the
+           but is in KTouch. Use ktouch --reverse to test it.
+
+2007-02-24 Håvard Frøiland <haavard@solveien.net>
   * Fixed: Use of dead keys now works. (Bug: 118862, 134371)
 
-2007-02-25 Håvard Frøiland <haavard@solveien.net>
+2007-02-22 Håvard Frøiland <haavard@solveien.net>
   * Rewrote the sliding line using the graphicsview framework.
   * Lots of small fixes to get the kde 4 versjon more usable
 

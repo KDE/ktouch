@@ -95,10 +95,10 @@ void KTouchTrainer::keyPressed(QChar key) {
     int old_student_text_len = m_studentText.length();
     // compose new student text depending in typing direction
     QString new_student_text = m_studentText;
-    if (Prefs::right2LeftTyping())
-        new_student_text = key + new_student_text;
-    else
+    if (m_textLineWidget->layoutDirection() == Qt::LeftToRight)
         new_student_text += key;
+    else
+        new_student_text = key + new_student_text;
 
 	// don´t allow excessive amounts of characters per line
 	if (new_student_text.length() > m_teacherText.length()) {
@@ -115,28 +115,28 @@ void KTouchTrainer::keyPressed(QChar key) {
         // nope, the key was wrong : beep !!!
         if (Prefs::beepOnError())  QApplication::beep();
         // check if the key is the first wrong key that was mistyped. Only then add it
-		// to the wrong char statistics.
-        if (Prefs::right2LeftTyping()) {
-			if (m_teacherText.right(old_student_text_len)==m_studentText.right(old_student_text_len) &&
-			    m_teacherText.length() > old_student_text_len)
-			{
-				// add the key the student ought to press to the wrong character stats
-				int next_key_index = m_teacherText.length() - old_student_text_len;
-//				kDebug() << "Wrong key = " << m_teacherText[next_key_index] << endl;
-				statsAddWrongChar( m_teacherText[next_key_index] );
-			}
+        // to the wrong char statistics.
+        if (m_textLineWidget->layoutDirection() == Qt::LeftToRight){
+            if (m_teacherText.left(old_student_text_len)==m_studentText.left(old_student_text_len) &&
+                m_teacherText.length() > old_student_text_len)
+            {
+                // add the key the student ought to press to the wrong character stats
+                int next_key_index = old_student_text_len;
+                statsAddWrongChar( m_teacherText[next_key_index] );
+            }
         }
+        /// \todo   Implement option whether subsequent mistyped keys should be remembered as missed
+        ///         keys as well.
         else {
-			if (m_teacherText.left(old_student_text_len)==m_studentText.left(old_student_text_len) &&
-				m_teacherText.length() > old_student_text_len)
-			{
-				// add the key the student ought to press to the wrong character stats
-				int next_key_index = old_student_text_len;
-				statsAddWrongChar( m_teacherText[next_key_index] );
-			}
-		}
-		/// \todo 	Implement option whether subsequent mistyped keys should be remembered as missed
-		///			keys as well.
+            if (m_teacherText.right(old_student_text_len)==m_studentText.right(old_student_text_len) &&
+                m_teacherText.length() > old_student_text_len)
+            {
+                // add the key the student ought to press to the wrong character stats
+                int next_key_index = m_teacherText.length() - old_student_text_len;
+//              kDebug() << "Wrong key = " << m_teacherText[next_key_index] << endl;
+                statsAddWrongChar( m_teacherText[next_key_index] );
+            }
+        }
 	}
     updateWidgets(); // update all the other widgets (keyboard widget, status widget and statusbar)
 }
@@ -151,14 +151,18 @@ void KTouchTrainer::backspacePressed() {
 
     int len = m_studentText.length();
     if (len) {
-        if (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len) {
-            // we are removing a correctly typed char
-            if(Prefs::beepOnError){
+        if(Prefs::beepOnError){
+            if ((m_textLineWidget->layoutDirection() == Qt::LeftToRight) ? m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len : m_teacherText.right(len)==m_studentText && m_teacherText.length()>=len) {
+                // we are removing a correctly typed char
                 QApplication::beep();
             }
-			statsRemoveCorrectChar(m_studentText[len-1]);
         }
-        m_studentText = m_studentText.left(--len);
+        if (m_textLineWidget->layoutDirection() == Qt::LeftToRight){
+            m_studentText = m_studentText.left(--len);
+        }
+        else{
+            m_studentText = m_studentText.right(--len);
+        }
         updateWidgets(); // update all the widgets and the word count
         if (m_teacherText.left(len)==m_studentText)
             m_keyboardWidget->newKey(m_teacherText[len]);
@@ -166,7 +170,6 @@ void KTouchTrainer::backspacePressed() {
             m_keyboardWidget->newKey(QChar(8));
     }
     else {
-        /// \todo Flash line when Backspace on empty line
         if(Prefs::beepOnError)
             QApplication::beep();
 	}
@@ -335,10 +338,10 @@ bool KTouchTrainer::studentLineCorrect() const {
         return m_studentText.isEmpty();
 	int len = m_studentText.length();
     // different check for left and right writing
-    if (Prefs::right2LeftTyping())
-        return m_teacherText.right(len)==m_studentText && m_teacherText.length()>=len;
+    if (m_textLineWidget->layoutDirection() == Qt::LeftToRight)
+        return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len);
     else
-	   return (m_teacherText.left(len)==m_studentText && m_teacherText.length()>=len); 
+        return m_teacherText.right(len)==m_studentText && m_teacherText.length()>=len;
 }
 // ----------------------------------------------------------------------------
 
