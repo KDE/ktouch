@@ -127,6 +127,8 @@ KTouch::KTouch() :
         m_trainer->m_level = Prefs::currentTrainingLevel();
     // now let's start the training in the current level
     m_trainer->startTraining(true);
+
+    setFocus();
 }
 // ----------------------------------------------------------------------------
 
