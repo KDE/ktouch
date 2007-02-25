@@ -1,3 +1,15 @@
+2007-02-25 Håvard Frøiland <haavard@solveien.net>
+  * Fixed: Use of dead keys now works. (Bug: 118862, 134371)
+
+2007-02-25 Håvard Frøiland <haavard@solveien.net>
+  * Rewrote the sliding line using the graphicsview framework.
+  * Lots of small fixes to get the kde 4 versjon more usable
+
+2006-04-18 Håvard Frøiland <haavard@solveien.net>
+  * Fixed: auto-level advancing works again, two new
+           options to control the behaviour are added to
+           the training configuration page (bug: #118622)
+
 2005-06-14 Andreas Nicolai <andreas.nicolai@gmx.net>
   * New version: 1.5
   * Added: New statistics engine (compressed XML statistics,
