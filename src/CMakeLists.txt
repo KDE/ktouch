@@ -32,7 +32,7 @@ set(ktouch_SRCS
    ktouchkeys.cpp 
    ktouchlecture.cpp 
    ktouchleveldata.cpp 
-   ktouchslideline.cpp 
+   ktouchtextlinewidget.cpp 
    ktouchstatisticsdialog.cpp 
    ktouchstatisticsdata.cpp 
    ktouchstatuswidget.cpp 

@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouch.h                                                              *
  *   --------                                                              *
- *   Copyright (C) 2000 by Håvard Frøiland, 2003-2006 by Andreas Nicolai   *
+ *   Copyright (C) 2000 by Håvard Frøiland, 2003-2007 by Andreas Nicolai   *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,7 +29,7 @@ class KActionMenu;
 class KSelectAction;
 
 class KTouchStatusWidget;
-class KTouchSlideLine;
+class KTouchTextLineWidget;
 class KTouchKeyboardWidget;
 class KTouchTrainer;
 
@@ -115,7 +115,9 @@ class KTouch : public KMainWindow {
     /// Reimplementated to save preferences and
     bool queryExit();
     /// Some layout fixes here...
-	void resizeEvent(QResizeEvent *);
+    void resizeEvent(QResizeEvent *);
+
+    void inputMethodEvent( QInputMethodEvent* m );
 
   private:
     // *** BEGIN - Session management ***
@@ -159,7 +161,7 @@ class KTouch : public KMainWindow {
     KSelectAction		   *m_currentUserAction;
 
     KTouchStatusWidget     *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
-    KTouchSlideLine        *m_slideLineWidget;      ///< Pointer to the sliding line widget.
+    KTouchTextLineWidget   *m_textLineWidget;       ///< Pointer to the sliding line widget.
     KTouchKeyboardWidget   *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).
     KTouchLecture           m_lecture;              ///< The lecture data.

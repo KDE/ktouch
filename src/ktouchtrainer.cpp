@@ -15,6 +15,7 @@
 
 #include <QLCDNumber>
 #include <QFile>
+#include <QTimer>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
@@ -23,18 +24,18 @@
 
 #include "ktouch.h"
 #include "ktouchstatuswidget.h"
-#include "ktouchslideline.h"
+#include "ktouchtextlinewidget.h"
 #include "ktouchkeyboardwidget.h"
 #include "ktouchlecture.h"
 #include "ktouchdefaults.h"
 #include "prefs.h"
 
 
-KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
+KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *textLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : QObject(),
     m_trainingTimer(new QTimer),
     m_statusWidget(status),
-    m_slideLineWidget(slideLine),
+    m_textLineWidget(textLine),
     m_keyboardWidget(keyboard),
     m_lecture(lecture)
 {
@@ -100,8 +101,9 @@ void KTouchTrainer::keyPressed(QChar key) {
         new_student_text += key;
 
 	// don´t allow excessive amounts of characters per line
-	if (!m_slideLineWidget->canAddCharacter(new_student_text)) {
-        if (Prefs::beepOnError())			QApplication::beep();
+	if (new_student_text.length() > m_teacherText.length()) {
+        if (Prefs::beepOnError())
+            QApplication::beep();
         return;
 	}
     // store the new student text
@@ -236,7 +238,7 @@ void KTouchTrainer::updateWidgets() {
     // update status widget
     m_statusWidget->updateStatus(m_level, m_levelStats.correctness());
     // update slide line widget
-    m_slideLineWidget->setStudentText(m_studentText);
+    m_textLineWidget->setStudentText(m_studentText);
     // update keyboard widget -> show next to be pressed char.
     // we have to find out first whether the student text is correct or not.
     if (studentLineCorrect()) {
@@ -275,7 +277,7 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	m_statusWidget->updateSpeed( 0 );
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
-	m_slideLineWidget->setCursorTimerEnabled(true); // Curser will blink
+	m_textLineWidget->setActive(true); // Curser will blink
 }
 // ----------------------------------------------------------------------------
 
@@ -284,7 +286,7 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 void KTouchTrainer::pauseTraining() {
 	m_trainingPaused=true;
 	m_trainingTimer->stop();
-	m_slideLineWidget->setCursorTimerEnabled(false);
+	m_textLineWidget->setActive(false);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness());
 	m_statusWidget->updateSpeed((int) m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session paused. Training continues on next keypress...") );
@@ -297,7 +299,7 @@ void KTouchTrainer::pauseTraining() {
 // while the training is in pause mode.
 void KTouchTrainer::continueTraining() {
 	m_trainingPaused=false;
-	m_slideLineWidget->setCursorTimerEnabled(true);
+	m_textLineWidget->setActive(true);
 	m_statusWidget->updateStatus(m_level, m_levelStats.correctness() );
 	m_statusWidget->updateSpeed((int) m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session! The time is running...") );
@@ -398,7 +400,7 @@ void KTouchTrainer::newLine() {
     m_studentText="";
 	m_wordsInCurrentLine = 0;
     m_keyboardWidget->newKey(m_teacherText[0]);
-    m_slideLineWidget->setNewText(m_teacherText, m_studentText);
+    m_textLineWidget->setTeacherText(m_teacherText);
 	updateStatusBar();	// update status bar
 }
 // ----------------------------------------------------------------------------

@@ -44,8 +44,8 @@
 #include "ktouchtrainer.h"
 
 #include "ktouchstatuswidget.h"
-#include "ktouchslideline.h"
 #include "ktouchkeyboardwidget.h"
+#include "ktouchtextlinewidget.h"
 
 #include "ktouchlectureeditordialog.h"
 #include "ktouchcoloreditordialog.h"
@@ -69,6 +69,11 @@ KTouch::KTouch() :
     m_trainer(NULL)
 {
     setFocusPolicy(Qt::StrongFocus);
+
+    setAttribute(Qt::WA_InputMethodEnabled, true);
+ //   setAttribute(Qt::WA_KeyCompression );
+
+    resetInputContext ();
 
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
@@ -159,22 +164,22 @@ void KTouch::applyPreferences() {
 	// This applies a new color scheme for the keyboard and also updates all other
 	// changes for the keyboard widget
 	changeColor(Prefs::currentColorScheme());
-	m_slideLineWidget->applyPreferences();
+	m_textLineWidget->applyPreferences();
 	m_statusWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
+
+
 
 void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     if (keyEvent->text().isEmpty()) return;
 
     // if we the training session is paused, continue training now
     if (m_trainer->m_trainingPaused)  {
-		m_trainingPause->setEnabled(true);
-		m_trainer->continueTraining();
-	}
-	if (keyEvent->text().length() > 1) {
-		kDebug() << "[KTouch::keyPressEvent]  text = '" << keyEvent->text() << "'" << endl;
-	}
+        m_trainingPause->setEnabled(true);
+        m_trainer->continueTraining();
+    }
+
     QChar key = keyEvent->text().at(0); // get first unicode character
 
     if (key.isPrint())
@@ -184,10 +189,17 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     else if (key==QChar(13))
         m_trainer->enterPressed();
     else
-        return; // unrecognised char -> don't accept it! Maybe the key is for somebody else?
+    {
+        keyEvent->ignore(); // unrecognised char -> don't accept it! Maybe the key is for somebody else?
+        return;
+    }
     keyEvent->accept();
 }
-// ----------------------------------------------------------------------------
+
+void KTouch::inputMethodEvent( QInputMethodEvent* m ){
+    m_trainer->keyPressed(m->commitString().at(0));
+    m->accept();
+}
 
 void KTouch::configOverrideLectureFontToggled(bool on) {
 	if (on) {
@@ -538,7 +550,7 @@ void KTouch::changeColor(int num) {
     if (num >= KTouchColorScheme::m_colorSchemes.count()) return;
     Prefs::setCurrentColorScheme(num);
     m_keyboardWidget->applyPreferences(this, false);
-	m_slideLineWidget->applyPreferences();
+	m_textLineWidget->applyPreferences();
 }
 // ----------------------------------------------------------------------------
 
@@ -636,7 +648,7 @@ void KTouch::readProperties(const KConfigGroup &config) {
     m_trainer->continueTraining();
     changeStatusbarMessage( i18n("Restarting training session: Waiting for first keypress...") );
     // update the slide line widget
-    m_slideLineWidget->setNewText(m_trainer->m_teacherText, m_trainer->m_studentText);
+    m_textLineWidget->setNewText(m_trainer->m_teacherText, m_trainer->m_studentText);
     // update all the other widgets
     m_trainer->updateWidgets();
 	// Read training state
@@ -736,25 +748,26 @@ void KTouch::initTrainingSession() {
     QVBoxLayout *layout = new QVBoxLayout(main);
 
     m_statusWidget = new KTouchStatusWidget( main );
-    m_slideLineWidget = new KTouchSlideLine( main );
+    m_textLineWidget = new KTouchTextLineWidget( main );
 	QSizePolicy sp(QSizePolicy::Preferred, QSizePolicy::Expanding);
 	sp.setVerticalStretch(1);
-    m_slideLineWidget->setSizePolicy( sp );
+    sp.setHorizontalStretch(10);
+    m_textLineWidget->setSizePolicy( sp );
     m_keyboardWidget = new KTouchKeyboardWidget( main );
 	sp.setVerticalStretch(3);
     m_keyboardWidget->setSizePolicy( sp );
 
     layout->addWidget(m_statusWidget);
-    layout->addWidget(m_slideLineWidget);
+    layout->addWidget(m_textLineWidget);
     layout->addWidget(m_keyboardWidget);
 
     // apply the settings to the widgets
-    m_slideLineWidget->applyPreferences();
+    m_textLineWidget->applyPreferences();
     m_keyboardWidget->applyPreferences(this, true);  // set preferences silently here
 
     // create our trainer, the master object for the training stuff...
     if (m_trainer != NULL)  delete m_trainer;
-    m_trainer = new KTouchTrainer(m_statusWidget, m_slideLineWidget, m_keyboardWidget, &m_lecture);
+    m_trainer = new KTouchTrainer(m_statusWidget, m_textLineWidget, m_keyboardWidget, &m_lecture);
 
     setCentralWidget(main);
 }
@@ -860,8 +873,8 @@ void KTouch::updateFontFromLecture() {
 		QFont f;
 		// TODO : if multiple font suggestions are given, try one after another until a
 		// suggested font is found
-		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
-		else if (f.fromString("Monospace")) 			m_slideLineWidget->setFont(f);
+		if (f.fromString(m_lecture.m_fontSuggestions))	m_textLineWidget->setFont(f);
+		else if (f.fromString("Monospace")) 			m_textLineWidget->setFont(f);
 	}
 }
 // ----------------------------------------------------------------------------

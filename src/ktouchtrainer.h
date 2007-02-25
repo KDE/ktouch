@@ -21,7 +21,7 @@
 class QTimer;
 
 class KTouchStatusWidget;
-class KTouchSlideLine;
+class KTouchTextLineWidget;
 class KTouchKeyboardWidget;
 class KTouchLecture;
 
@@ -63,7 +63,7 @@ class KTouchTrainer : public QObject {
     Q_OBJECT
   public:
     /// Constructor.
-    KTouchTrainer(KTouchStatusWidget *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture);
+    KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture);
     /// Destructor
     virtual ~KTouchTrainer();
     /// Jumps to the first line in the current level (m_level) (Note: has no effect on the training statistics).
@@ -152,7 +152,7 @@ class KTouchTrainer : public QObject {
 	void statsChangeLevel();
 	
     KTouchStatusWidget     *m_statusWidget;         ///< Pointer to the status widget on top of the main window.
-    KTouchSlideLine    	   *m_slideLineWidget;      ///< Pointer to the sliding line widget.
+    KTouchTextLineWidget   *m_textLineWidget;       ///< Pointer to the sliding line widget.
     KTouchKeyboardWidget   *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchLecture      	   *m_lecture;              ///< Pointer to the lecture data.
 
