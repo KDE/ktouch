@@ -29,7 +29,7 @@
 #include <sstream>
 
 // remove this define if XML output should not be compressed (for debug purposes only)
-#define COMPRESSED_XML_STATISTICS
+// #define COMPRESSED_XML_STATISTICS  << dosn't work for me
 
 
 // *** KTouchCharStats ***
