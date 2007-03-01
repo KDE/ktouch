@@ -65,6 +65,8 @@ KTouch::KTouch()
 	m_trainer(NULL)
 {
 	setFocusPolicy(StrongFocus);
+	setInputMethodEnabled(true);
+
 	// Set global KTouchPtr to the main KTouch Object
 	KTouchPtr = this;
 	// General initialization of the program, common for all start modes
@@ -205,6 +207,12 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     keyEvent->accept();
 }
 // ----------------------------------------------------------------------------
+
+
+void KTouch::imEndEvent ( QIMEvent * e ){
+    m_trainer->keyPressed(e->text().at(0));
+    e->accept();
+}
 
 
 void KTouch::configOverrideLectureFontToggled(bool on) {

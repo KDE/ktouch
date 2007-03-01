@@ -115,6 +115,8 @@ class KTouch : public KMainWindow {
     /// Accepts a typed char.
     void keyPressEvent(QKeyEvent *keyEvent);
 
+    void imEndEvent (QIMEvent *e);
+
   private:
     // *** BEGIN - Session management ***
     /// Will be called when this app is restored due to session management.
