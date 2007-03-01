@@ -20,6 +20,7 @@
 #include <QtGui>
 
 // KDE Header
+#include <kapplication.h>
 #include <kselectaction.h>
 #include <kactioncollection.h>
 #include <kstandardaction.h>

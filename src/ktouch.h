@@ -20,7 +20,6 @@
 #include <QResizeEvent>
 
 #include <kmainwindow.h>
-#include <kapplication.h>
 #include <kurl.h>
 
 class KAction;
