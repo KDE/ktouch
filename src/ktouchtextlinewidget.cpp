@@ -15,7 +15,7 @@
 #include <QPainter>
 
 KTouchTextLineWidget::KTouchTextLineWidget(QWidget *parent)
-  : QWidget( parent )
+  : QGraphicsView( parent )
 {
     scene = new QGraphicsScene(parent);
 
@@ -34,6 +34,8 @@ KTouchTextLineWidget::KTouchTextLineWidget(QWidget *parent)
     scene->addItem(studentRect);
 
     cursor = new QGraphicsLineItem();
+    cursor->setZValue(1);
+    cursor->setPen(QPen(QBrush(Qt::black), 2));
     scene->addItem(cursor);
 
     animationTimer = new QTimer(this);
@@ -41,6 +43,14 @@ KTouchTextLineWidget::KTouchTextLineWidget(QWidget *parent)
 
     cursorTimer = new QTimer(this);
     cursorTimer->setInterval(500);
+
+    setScene(scene);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setRenderHint(QPainter::Antialiasing);
+
+    setBackgroundBrush(palette().brush(QPalette::Window));
+    setFrameStyle(QFrame::NoFrame);
 
     connect(animationTimer, SIGNAL(timeout()), this, SLOT(recalculatePosition()));
     connect(cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()));
@@ -97,7 +107,6 @@ void KTouchTextLineWidget::setStudentText(const QString& text) {
         student->setBrush(QBrush(Prefs::errorTextColor()));
     }
     animationTimer->start();
-    repaint();
 }
 
 void KTouchTextLineWidget::setFont(const QFont& f) {
@@ -106,15 +115,6 @@ void KTouchTextLineWidget::setFont(const QFont& f) {
     else
         font= f;
 }
-
-void KTouchTextLineWidget::paintEvent(QPaintEvent*) {
-    QPainter painter;
-    painter.begin(this);
-    painter.setRenderHint(QPainter::Antialiasing);
-    scene->render(&painter);
-    painter.end();
-}
-
 
 void KTouchTextLineWidget::recalculateSize(){
     font.setPointSize(height()/4);
@@ -163,12 +163,11 @@ void KTouchTextLineWidget::recalculatePosition() {
             wantedPos = diff - (diff * ration - (padding * (1 - (2*ration))));
     }
     pos = pos + (wantedPos - pos) / 4;
-    scene->setSceneRect(pos, 0 , width(), height());
+
+    setSceneRect(pos, 0 , width(), height());
 
     if(qAbs(wantedPos - pos)<1)
         animationTimer->stop();
-
-    repaint();
 }
 
 void KTouchTextLineWidget::setActive(bool active){
@@ -178,13 +177,11 @@ void KTouchTextLineWidget::setActive(bool active){
     {
         cursorTimer->stop();
         cursor->setVisible(true);
-        repaint();
     }
 }
 
 void KTouchTextLineWidget::toggleCursor(){
     cursor->setVisible(!cursor->isVisible());
-    repaint();
 }
 
 QPainterPath KTouchTextLineWidget::roundedRectPathFactory(double x, double y, double width, double height, double rounded){

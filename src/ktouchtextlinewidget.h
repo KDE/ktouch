@@ -10,15 +10,15 @@
 #ifndef KTOUCHTEXTLINEWIDGET_H
 #define KTOUCHTEXTLINEWIDGET_H
 
-#include <QWidget>
 #include <QGraphicsScene>
+#include <QGraphicsView>
 #include <QGraphicsSimpleTextItem>
 #include <QGraphicsLineItem>
 #include <QGraphicsPathItem>
 #include <QTimer>
 #include <Qt>
 
-class KTouchTextLineWidget : public QWidget {
+class KTouchTextLineWidget : public QGraphicsView {
     Q_OBJECT
 
   public:
@@ -35,11 +35,11 @@ class KTouchTextLineWidget : public QWidget {
     void recalculatePosition();
 
   protected:
-    void paintEvent(QPaintEvent *);
     void resizeEvent(QResizeEvent *){
         recalculateSize();
     }
     void recalculateSize();
+
     QPainterPath roundedRectPathFactory(double x, double y, double width, double height, double rounded);
 
   private:
