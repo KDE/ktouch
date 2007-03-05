@@ -98,14 +98,14 @@ void KTouchTextLineWidget::setStudentText(const QString& text) {
         student->setPos(teacherTextWidth - studentTextWidth, teacher->boundingRect().height() + 5);
     }
 
-    if(direction == Qt::LeftToRight ? teacher->text().startsWith(text) : teacher->text().endsWith(text)){
+    if(teacher->text().startsWith(text)){
         studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
         student->setBrush(QBrush(Prefs::studentTextColor()));
     }
     else{
         studentRect->setBrush(QBrush(Prefs::errorBackgroundColor()));
         student->setBrush(QBrush(Prefs::errorTextColor()));
-    }
+   }
     animationTimer->start();
 }
 
