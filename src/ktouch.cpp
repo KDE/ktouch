@@ -785,12 +785,12 @@ void KTouch::setupActions() {
     QAction *action;
     action = actionCollection()->addAction( "file_opentext" );
     action->setText( i18n("&Open plain text file...") );
-    action->setIcon( KIcon("fileopen") );
+    action->setIcon( KIcon("document-open") );
 
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
     action = actionCollection()->addAction( "file_openlecture" );
     action->setText( i18n("&Open lecture...") );
-    action->setIcon( KIcon("fileopen") );
+    action->setIcon( KIcon("document-open") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
 
     action = actionCollection()->addAction( "file_editlecture" );
@@ -809,12 +809,12 @@ void KTouch::setupActions() {
 	// *** Training menu ***
     action = actionCollection()->addAction( "training_newsession" );
     action->setText( i18n("&Start New Session") );
-    action->setIcon( KIcon("player_play") );
+    action->setIcon( KIcon("media-playback-start") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingNewSession()));
 
     m_trainingPause=actionCollection()->addAction( "training_pause" );
     m_trainingPause->setText( i18n("&Pause Session") );
-    m_trainingPause->setIcon(KIcon("player_pause") );
+    m_trainingPause->setIcon(KIcon("media-playback-pause") );
     connect(m_trainingPause, SIGNAL(triggered(bool)), SLOT(trainingPause()));
 
     action = actionCollection()->addAction("training_stats" );
