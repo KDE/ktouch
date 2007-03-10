@@ -121,7 +121,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
             (*it)->m_font = Prefs::font();
         }
 
-        (*it)->m_font.setPointSizeF(4);
+        (*it)->m_font.setPointSizeF(8/(*it)->m_font_scale);
 
         (*it)->update();
     }
