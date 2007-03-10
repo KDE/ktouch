@@ -230,7 +230,7 @@ void KTouchTrainer::updateWidgets() {
         if (m_teacherText.length()==m_studentText.length())
             m_keyboardWidget->newKey(QChar(13));        // we have reached the end of the line
         else{
-            m_keyboardWidget->newKey(m_studentText.length());
+            m_keyboardWidget->newKey(m_teacherText[m_studentText.length()]);
         }
     }
     else {

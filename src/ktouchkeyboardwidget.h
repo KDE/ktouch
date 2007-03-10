@@ -13,7 +13,7 @@
 #ifndef KTOUCHKEYBOARDWIDGET_H
 #define KTOUCHKEYBOARDWIDGET_H
 
-#include <QWidget>
+#include <QGraphicsView>
 #include <QResizeEvent>
 #include <QPaintEvent>
 #include <QList>
@@ -40,7 +40,7 @@ class KUrl;
  *  and the newKey() slot is called the state changes (and thus the
  *  activated keys and finger key animations etc.)
  */
-class KTouchKeyboardWidget : public QWidget {
+class KTouchKeyboardWidget : public QGraphicsView {
     Q_OBJECT
   public:
     /// Constructor
@@ -61,8 +61,7 @@ class KTouchKeyboardWidget : public QWidget {
     void newKey(const QChar& nextChar);
 
   protected:
-    /// Draws the keyboard.
-    void paintEvent(QPaintEvent *);
+
     /// Resizes (recalculates m_shift and m_scale) and redraws the keyboard.
     void resizeEvent(QResizeEvent *);
 
@@ -70,22 +69,12 @@ class KTouchKeyboardWidget : public QWidget {
     /// Does what the name says (create a default keyboard which is a number keypad).
     /// This function is needed in case there no keyboard file could be found.
     void createDefaultKeyboard();
+
     /// Does the actual reading.
     bool readKeyboard(const QString& fileName, QString& errorMsg);
-    /// Assigns the background colours to the normal keys, which have a finger key assigned.
-    void updateColours();
-	/// Creates pixmaps, draws a key in the differen states onto the pixmaps and
-	/// adds the pixmaps to the pixmap lists.
-	void drawKey(KTouchKey * k);
 
 	// *** new data storage classes ***
 	KTouchKeyboard						m_keyboard;			///< Data defining a keyboard.
-	QList<QPixmap*>						m_keyPixmapsNormal;	///< Pixmaps for normal keys.
-
-//    QVector<KTouchKey>          		m_keys;        		///< The geometrical key data.
-//    QVector<KTouchKeyConnector>			m_keyConnections;	///< Contains the character - key associations.
-//	QMap<unsigned int, int> 			m_keyMap;			///< Links target keys with finger keys: m_keyMap[target_key] = finger_key
-//	QMap<unsigned int, unsigned int>	m_colorMap;			///< Links finger keys with color indices: m_colorMap[finger_key] = color_index in color scheme
 
 	// *** old data storage classes ***
     QList<KTouchBaseKey*>         	    m_keyList;     		///< The pointer list with base class pointers to the keys.
@@ -101,6 +90,8 @@ class KTouchKeyboardWidget : public QWidget {
     QChar               m_nextKey;          ///< The next to be pressed character.
 
 	bool				m_hideKeyboard;		///< If true, the keyboard won't be shown.
+
+    QGraphicsScene *scene;
 };
 
 #endif  // KTOUCHKEYBOARDWIDGET_H

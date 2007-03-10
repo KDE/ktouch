@@ -13,9 +13,6 @@
 #include "ktouchkeyboardwidget.h"
 #include "ktouchkeyboardwidget.moc"
 
-#include <algorithm>
-#include <cmath>
-
 #include <QtGui>
 
 #include <kdebug.h>
@@ -32,23 +29,29 @@
 // the margin between keyboard and widget frame
 const int MARGIN = 10;
 
-QMap<QChar, int>	 			KTouchKeyboardWidget::m_keyCharMap;
-// --------------------------------------------------------------------------
-
-
 KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
-  : QWidget(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
+  : QGraphicsView(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
 	m_hideKeyboard(false)
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
+
+    scene = new QGraphicsScene(parent);
+
+    setScene(scene);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setRenderHint(QPainter::Antialiasing);
+
+    setBackgroundBrush(palette().brush(QPalette::Window));
+    setFrameStyle(QFrame::NoFrame);
+
+//    applyPreferences();
 }
 // --------------------------------------------------------------------------
 
 KTouchKeyboardWidget::~KTouchKeyboardWidget() {
 	qDeleteAll(m_keyList);
 	m_keyList.clear();
-	qDeleteAll(m_keyPixmapsNormal);
-	m_keyPixmapsNormal.clear();
 }
 // --------------------------------------------------------------------------
 
@@ -107,109 +110,41 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
     }
-    updateColours();    // we recreate the colour connections
-	// assign keyboard font to keys
-	for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-		if (Prefs::overrideKeyboardFont())
-			(*it)->m_font = Prefs::keyboardFont();
-		else
-			(*it)->m_font = Prefs::font();
-	}
-	// kDebug() << "[KTouchKeyboard::applyPreferences]  Assigned key font" << endl;
-    resizeEvent(NULL);  // paint the keyboard
+
+    // assign keyboard font to keys
+    for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
+
+        if (Prefs::overrideKeyboardFont()) {
+            (*it)->m_font = Prefs::keyboardFont();
+        }
+        else  {
+            (*it)->m_font = Prefs::font();
+        }
+
+        (*it)->m_font.setPointSizeF(4);
+
+        (*it)->update();
+    }
 
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
-   
 }
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
-	if (m_hideKeyboard) return;
-	// store next to be pressed character, the corresponding key and
-	// the finger key will be highlighted
-	m_nextKey = nextChar;
-	// update the keyboard
-	update();
-}
-// --------------------------------------------------------------------------
+    if (m_hideKeyboard)
+        return;
 
-void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
-    QPainter painter(this);
-    painter.translate(m_shift, MARGIN);
-
-	//const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
-
-
-#ifdef USE_NEW_KEYBOARD
-	// check if we have to create key pixmaps
-	if (m_keyPixmapsNormal.isEmpty() && !m_keyboard.m_keys.isEmpty()) {
-		// loop over all keys defines in the keyboard and create pixmaps
-		// for each key and draw the keys.
-		for (int i=0; i<m_keyboard.m_keys.count(); ++i)
-			drawKey(&m_keyboard.m_keys[i]);
-	}
-
-	// now draw the keyboard by copying the key pixmaps onto the widget
-	for (int i=0; i<m_keyboard.m_keys.count(); ++i) {
-		if (i >= m_keyPixmapsNormal.count() || m_keyPixmapsNormal[i] == 0) continue;
-		KTouchKey * k = &m_keyboard.m_keys[i];
-		// calculate placement of keys
-		int x = static_cast<int>(k->m_x*m_scale);
-		int y = static_cast<int>(k->m_y*m_scale);
-		// copy prerendered pixmap over to screen
-		QRect source(0, 0, m_keyPixmapsNormal[i]->width(), m_keyPixmapsNormal[i]->height());
-		QRect target(x, y, m_keyPixmapsNormal[i]->width(), m_keyPixmapsNormal[i]->height());
-		painter.drawPixmap(target, *m_keyPixmapsNormal[i], source);
-	}
-#else
-
-
-/*    // just print all visible keys
-    for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
-        key->paint(p);
-	// TODO : later
-
-	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
-		// determine colors
-    	QColor textColor;
-		if (it->m_type == KTouchKey::NORMAL || it->m_type == KTouchKey::FINGER) {
-			if (is_next_key) {
-				// mark the key as "next"
-				p.setBrush( colorScheme.m_backgroundH );
-				p.setPen( colorScheme.m_frame );
-				textColor = colorScheme.m_textH;
-			}
-			else {
-				p.setBrush( colorScheme.m_background[m_colorIndex] );
-				p.setPen( colorScheme.m_frame );
-				textColor = colorScheme.m_text;
-			};
-		}
-		else {
-    		p.setBrush( colorScheme.m_cBackground );
-			p.setPen( colorScheme.m_cText );
-		}
-
-    	p.setPen(textColor);
-    	p.fillRect(m_xS, m_xS, m_xS, m_xS, p.brush());
-    	p.drawRect(m_xS, m_xS, m_xS, m_xS);
-
-    	p.setFont( m_font );
-    	p.drawText(it->m_xS, it->m_yS, it->m_wS, it->m_hS,
-			QPainter::AlignCenter, m_keyText);
-
-	}
-*/
-	// TODO : later copy pre-rendered and pre-scaled characters to screen
-
+    // store next to be pressed character, the corresponding key and
+    // the finger key will be highlighted
+    m_nextKey = nextChar;
 
     // first clean the markings on all keys
-	for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-		KTouchBaseKey * key = *it;
+    for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
+        KTouchBaseKey * key = *it;
         if (key->m_isActive || key->m_isNextKey) {
             key->m_isActive = key->m_isNextKey = false;
+            key->update();
         }
-        key->paint(painter);
     }
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
@@ -222,43 +157,27 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
             QChar fingerChar = (*keyIt).m_fingerKeyChar;
             QChar controlChar = (*keyIt).m_controlKeyChar;
             // find the keys in the keylist
-			for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-				KTouchBaseKey * key = *it;
+            for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
+                KTouchBaseKey * key = *it;
                 if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
                 if (key->m_keyChar==targetChar) key->m_isNextKey=true;
                 else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
                 else if (key->m_keyChar==controlChar)  key->m_isActive=true;
-                if (key->m_isActive || key->m_isNextKey)
-                    key->paint(painter);
+                if (key->m_isActive || key->m_isNextKey){
+                    key->update();
+                }
             }
         }
     }
-#endif // USE_NEW_KEYBOARD
 }
-// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
-#ifdef USE_NEW_KEYBOARD
-	// recalculate the scaling factor
-    double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboard.m_width;
-    double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboard.m_height;
-    m_scale = std::max(1.0, std::min(hScale, vScale));
-    m_shift = (width() - static_cast<int>(m_keyboard.m_width*m_scale))/2;
-	// erase prerendered pixmaps so that they get recreated on next update
-	qDeleteAll(m_keyPixmapsNormal);
-	m_keyPixmapsNormal.clear();
-#else
-	// recalculate the scaling factor
-    double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
-    double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
-    m_scale = std::max(1.0, std::min(hScale, vScale));
-    m_shift = (width() - static_cast<int>(m_keyboardWidth*m_scale))/2;
-	for (QList<KTouchBaseKey*>::iterator key = m_keyList.begin(); key != m_keyList.end(); ++key)
-        (*key)->resize(m_scale);     // resize all keys
-#endif
-    update();                      // and finally redraw the keyboard
+    qreal scale = qMax(static_cast<qreal>(width()-2*MARGIN)/m_keyboard.m_width, static_cast<qreal>(height()-2*MARGIN)/m_keyboard.m_height);
+
+    QMatrix matrix;
+    matrix.scale(scale, scale);
+    setMatrix(matrix);
 }
-// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::createDefaultKeyboard() {
     // let's create a default keyboard
@@ -312,7 +231,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     m_connectorList.append( KTouchKeyConnection('0', '0',   0, 0) );
     m_connectorList.append( KTouchKeyConnection(  8,   8,   0, 0) );
     m_connectorList.append( KTouchKeyConnection( 13,  13, '+', 0) );
-    updateColours();
+
     m_currentLayout="number.keyboard";
 
 /*
@@ -399,17 +318,25 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         QString keyText;
         int x(0), y(0), w(0), h(0);
         lineStream >> keyType >> keyAscII;
+
+        KTouchBaseKey *key;
+
         if (keyType=="FingerKey") {
             lineStream >> keyText >> x >> y >> w >> h;
             if (w==0 || h==0)
                 w=h=8; // default values for old keyboard files
-            m_keyList.append( new KTouchFingerKey(keyAscII, keyText, x+1, y+1, w, h) );
+
+            key = new KTouchFingerKey(keyAscII, keyText, x+1, y+1, w, h);
+            scene->addItem(key);
+            m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
 // 			kDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
-            m_keyList.append( new KTouchControlKey(keyAscII, keyText, x+1, y+1, w-2, h-2) );
+            key = new KTouchControlKey(keyAscII, keyText, x+1, y+1, w-2, h-2);
+            scene->addItem(key);
+            m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
 // 			kDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText << endl;
         }
@@ -418,160 +345,48 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             lineStream >> keyText >> x >> y >> fingerCharCode;
             w=h=8; // default values for old keyboard files
             // retrieve the finger key with the matching char
-            m_keyList.append( new KTouchNormalKey(keyAscII, keyText, x+1, y+1, w, h) );
+
+            key = new KTouchNormalKey(keyAscII, keyText, x+1, y+1, w, h);
+            scene->addItem(key);
+
+            m_keyList.append( key );
+
+            for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
+                KTouchBaseKey *other = *it;
+                if (other->m_keyChar == fingerCharCode){
+                    key->m_colorIndex = other->m_colorIndex;
+                }
+            }
+
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, fingerCharCode, 0) );
-// 			kDebug() << "read : N : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
             m_connectorList.append( KTouchKeyConnection(keyAscII, targetChar, fingerChar, controlChar) );
-//			kDebug() << "read : H : unicode = " << keyAscII << " char = " << QChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
-			
+
         }
         else {
             errorMsg = i18n("Missing key type in line '%1'.", line);
             return false;
         }
-		if (keys.find(keyAscII)!=keys.end()) {
-			kDebug() << "WARNING: Duplicate entry for char '"+keyText+"' with Unicode " << keyAscII << endl;
-		}
-		else
-			keys.insert(keyAscII);
 
-		keys.insert(keyAscII);
+        if (keys.find(keyAscII)!=keys.end()) {
+            kDebug() << "WARNING: Duplicate entry for char '"+keyText+"' with Unicode " << keyAscII << endl;
+        }
+        else
+            keys.insert(keyAscII);
+
+        keys.insert(keyAscII);
 
 
         // calculate the maximum extent of the keyboard on the fly...
-        m_keyboardWidth = std::max(m_keyboardWidth, x+w);
-        m_keyboardHeight = std::max(m_keyboardHeight, y+h);
+        m_keyboardWidth = qMax(m_keyboardWidth, x+w);
+        m_keyboardHeight = qMax(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
-//	kdDebug() << "showing all unicode numbers in this file" << endl;
-/*	for (std::set<QChar>::iterator it = keys.begin(); it != keys.end(); ++it)
-		kdDebug() << *it << endl;
-*/
-//	kdDebug() << "num chars = " << keys.size() << endl;
-//	kdDebug() << "num key connections = " << m_connectorList.size() << endl;
 
-    updateColours();
     return (!m_keyList.isEmpty());  // empty file means error
 }
-// --------------------------------------------------------------------------
 
-void KTouchKeyboardWidget::updateColours() {
-//	kDebug() << "KTouchKeyboardWidget::updateColours()" << endl;
-    // old functionality : loop over all key connections
-
-	m_keyCharMap.clear();
-    for (QList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
-		// store finger and target characters
-        QChar fingerChar = (*it).m_fingerKeyChar;
-        QChar targetChar = (*it).m_targetKeyChar; // this is the _base_ character of the key that needs to be highlighted
-        QChar ch = (*it).m_keyChar;
-
-/*		kdDebug() << "Key #"<<++counter<<": " << ch << "(" << ch.unicode() << ") " 
-				  << "target = " << targetChar << "(" << targetChar.unicode() << ") " 
-				  << "finger = " << fingerChar << "(" << fingerChar.unicode() << ")" << endl;
-*/
-		m_keyCharMap[ch] = -1;
-
-        if (fingerChar == QChar(0)) {
-//			kdDebug() << "skipped char = " << targetChar << endl;
-			continue; // skips keys that don't have finger keys assigned
-		}
-
-        KTouchBaseKey * self=NULL;
-        KTouchBaseKey * colorSource=NULL;
-        // loop over all keys to find the key pointers
-		for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-			KTouchBaseKey * key = *it;
-            if (key->m_keyChar==targetChar) self=key;
-            else if (key->m_keyChar==fingerChar) colorSource=key;
-        }
-		// ok, by now we should have found a finger and target char pointer
-        if (self && colorSource) {
-// 			kdDebug() << "Key " << ++counter << " keychar = " << ch << " target = " << targetChar << "  finger = " << fingerChar << endl;
-			// skip target keys that are actually control, finger or hidden keys
-            if (self->type()!=KTouchBaseKey::NORMAL_KEY)  continue;
-			// try to downcast to get a normal key pointer
-            KTouchNormalKey *nk = dynamic_cast<KTouchNormalKey*>(self);
-			// skip if we couldn't downcast
-			if (!nk) {
-				kDebug() << "Couldn't downcast to normal key for targer char = " << targetChar << endl;
-				continue;
-			}
-			// if our color source is not a valid finger key, skip with a warning
-            if (colorSource->type()!=KTouchBaseKey::FINGER_KEY) {
-                kDebug() << "[KTouchKeyboard::updateColours]  Colour source key '" << colorSource->m_keyText
-                          << "' is not a finger key!" << endl;
-				continue;
-			}
-			// finally store the color code
-            KTouchFingerKey *fk = dynamic_cast<KTouchFingerKey*>(colorSource);
-            if (fk) {
-				nk->m_colorIndex = fk->m_colorIndex;
-				m_keyCharMap[ch] = fk->m_colorIndex;
-//				kdDebug() << "char = " << targetChar << " index = " << fk->m_colorIndex << endl;
-            }
-        }
-    }
-//	kdDebug() << "Colormap has " << m_keyCharMap.count() << " entries" << endl;
-
-/*
-	// new functionality
-	m_keyMap.clear();
-	m_colorMap.clear();
-	for (unsigned int i=0; i<m_keys.size(); ++i)
-		m_keyMap[i] = -1;
-	int c_index = 0;
-    for (QValueVector<KTouchKeyConnector>::iterator it = m_keyConnections.begin();
-		it!=m_keyConnections.end(); ++it)
-	{
-		if (it->m_targetKeyIndex == -1) continue;
-		int n = it->m_targetKeyIndex;
-		switch (m_keys[n].m_type) {
-			case KTouchKey::NORMAL : m_keyMap[n] = it->m_fingerKeyIndex; break;
-			case KTouchKey::FINGER : m_keyMap[n] = it->m_fingerKeyIndex; 
-									 m_colorMap[n] = c_index++;
-									 c_index %= 8; break;
-			default : ;
-		}
-	}
-*/
-}
-// --------------------------------------------------------------------------
-
-void KTouchKeyboardWidget::drawKey(KTouchKey * k) {
-	// generate pixmap for key
-	int w = static_cast<int>(k->m_w*m_scale);
-	int h = static_cast<int>(k->m_h*m_scale);
-	if (w == 0 || h == 0) {
-		m_keyPixmapsNormal.append(NULL);
-	}
-	else {
-		// TODO : create here pixmaps for normally visible keys,
-		//        for keys in highlighed state and for 
-		//        for inactive/greyed out keys.
-		QPixmap * p = new QPixmap(w,h);
-		m_keyPixmapsNormal.append(p);
-		// draw key
-		QPainter pixp(p);
-		pixp.initFrom(this);
-		// erase background
-		pixp.eraseRect( QRect(0,0,w,h) );
-		//pixp.setBrush( colorScheme.m_cBackground );
-		//pixp.drawRoundRect(0,0,w,h);
-
-		// create a gradient for the keys
-		QLinearGradient linearGrad(QPointF(0, 0), QPointF(w, h));
-		linearGrad.setColorAt(0, QColor(221,224,244));
-		linearGrad.setColorAt(1, QColor(145,167,195));
-
-		pixp.setPen(QColor(56,65,82));
-		pixp.setBrush( linearGrad );
-		pixp.drawRect(0,0,w-1,h-1);
-	}
-}
-// --------------------------------------------------------------------------
 
 
 /*

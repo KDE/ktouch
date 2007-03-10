@@ -14,55 +14,60 @@
 #define KTOUCHKEYS_H
 
 #include <QPainter>
+#include <QGraphicsItem>
+#include <KDebug>
 
 class KTouchFingerKey;
 class KTouchNormalKey;
 class KTouchControlKey;
+class KTouchKeyboardWidget;
 
 /** This is the base class for all keys (KTouchFingerKey, KTouchNormalKey and KTouchControlKey).
  *  Do not create instances of KTouchKey itself or you will get only blank keys. Note that the
  *  KTouchKey class hierarchy contains only the information for painting the keys. The connectivity
  *  is handled using the KTouchKeyConnector.
  */
-class KTouchBaseKey {
+class KTouchBaseKey : public QGraphicsItem{
   public:
     /// The possible types of the keys
     enum KeyType { FINGER_KEY, NORMAL_KEY, CONTROL_KEY };
 
     /// Constructor
     KTouchBaseKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-      : m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
-        m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {};
+      : m_colorIndex(0), m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
+        m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {
+    };
+
     /// Destructor.
     virtual ~KTouchBaseKey() {};
-    /// Paints the basic key shape using the painter p.
-    virtual void paint(QPainter& p) const;
-    /// Recalculates the scaled position and size properties of the key.
-    void resize(double scale);
-    /// Returns the boundary frame of the key.
-    QRect frame()  const { return QRect(m_x, m_y, m_w, m_h); };
+
+    QRectF boundingRect() const
+    {
+        qreal penWidth = 1;
+        return QRectF(m_x - penWidth / 2, m_y - penWidth / 2,
+                       m_w + penWidth / 2, m_h + penWidth / 2);
+    }
+
     /// Returns the key type.
-    KeyType type() const { return m_type; };
+    KeyType keyType() const { return m_type; };
+
+    unsigned int m_colorIndex;
 
     QChar   m_keyChar;      ///< The character that needs to be pressed to access this char.
     QString m_keyText;      ///< The text on the key (may be a single char only).
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
-	QFont   m_font;
-	float   m_font_scale;
-    
+    QFont   m_font;
+    float   m_font_scale;
+
   protected:
     int     m_x;        ///< The x position of the key.
     int     m_y;        ///< The y position of the key.
     int     m_w;        ///< The width of the key.
     int     m_h;        ///< The height of the key.
 
-    int     m_xS;       ///< The scaled x position of the key.
-    int     m_yS;       ///< The scaled y position of the key.
-    int     m_wS;       ///< The scaled width of the key.
-    int     m_hS;       ///< The scaled height of the key.
-
     KeyType m_type;     ///< Stores the type of the key (convenience for saving of the keyboard layout).
+
 };
 // ---------------------------------------------------------------------------------------
 
@@ -78,11 +83,10 @@ class KTouchNormalKey : public KTouchBaseKey {
     KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
     /// Destructor
     virtual ~KTouchNormalKey() {};
+
     /// Extends the painting routine of KTouchKey (adds the text).
-    void paint(QPainter& p) const;
-    /// Indicates the colour index in the colour scheme, that has to be used for this key
-    /// and will be set in KTouchKeyboard::updateColors().
-    unsigned int m_colorIndex;
+   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
 };
 // ------------------------------------------------------------------------------------
 
@@ -101,7 +105,7 @@ class KTouchFingerKey : public KTouchNormalKey {
     /// Destructor
     ~KTouchFingerKey() { --m_fingerKeyCount; };
     /// Extends the painting algoritm of KTouchNormalKey when marked.
-    void paint(QPainter& p) const;
+   void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
   private:
     static int m_fingerKeyCount;    ///< Contains the number of created finger keys (for colour generation).
@@ -120,7 +124,7 @@ class KTouchControlKey : public KTouchBaseKey {
     /// Constructor
     KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
     /// Extends the parents paint routine (draws the text or other fancy stuff).
-    void paint(QPainter& p) const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };
 // ------------------------------------------------------------------------------------
 
