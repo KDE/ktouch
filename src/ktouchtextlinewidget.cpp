@@ -153,7 +153,7 @@ void KTouchTextLineWidget::recalculatePosition() {
     double diff = maxPos - width();
 
     double wantedPos;
-    if(diff < padding){
+    if(diff < -padding){
         wantedPos = diff/2;
     }
     else{
