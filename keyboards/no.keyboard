@@ -3,16 +3,16 @@
 #    Keybord layout file for Norwegian kaybord
 ####################################################
 #
-#						Assci	KeyText	x		y
+#			Assci	KeyText	x		y
 #
-FingerKey  97			A				18  20
+FingerKey  97		A				18  20
 FingerKey  115		S				28  20
 FingerKey  100		D				38  20
 FingerKey  102		F				48  20
 FingerKey  106		J				78  20
 FingerKey  107		K				88  20
 FingerKey  108		L				98  20
-FingerKey  230		Ø				108 20
+FingerKey  248		Ø				108 20
 #
 #					Assci	KeyText		x		y		Width Height
 #
