@@ -26,12 +26,8 @@
 
 #include "prefs.h"
 
-// the margin between keyboard and widget frame
-const int MARGIN = 10;
-
 KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
-  : QGraphicsView(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
-	m_hideKeyboard(false)
+  : QGraphicsView(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout("")
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
 
@@ -44,8 +40,6 @@ KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
 
     setBackgroundBrush(palette().brush(QPalette::Window));
     setFrameStyle(QFrame::NoFrame);
-
-//    applyPreferences();
 }
 // --------------------------------------------------------------------------
 
@@ -76,18 +70,14 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
 
 
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
-	m_hideKeyboard = Prefs::hideKeyboard();
-	if (m_hideKeyboard) 
-    	setMaximumHeight(100);
-	else
-    	setMaximumHeight(10000);
+    setVisible(!Prefs::hideKeyboard());
+
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
 		//kDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
         if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
-            resizeEvent(NULL);
             return;
         }
         // ok, let's load this layout
@@ -131,12 +121,12 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
-    if (m_hideKeyboard)
-        return;
-
     // store next to be pressed character, the corresponding key and
     // the finger key will be highlighted
     m_nextKey = nextChar;
+
+    if(Prefs::hideKeyboard())
+        return;
 
     // first clean the markings on all keys
     for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
@@ -172,7 +162,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 }
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
-    qreal scale = qMax(static_cast<qreal>(width()-2*MARGIN)/m_keyboard.m_width, static_cast<qreal>(height()-2*MARGIN)/m_keyboard.m_height);
+    qreal scale = qMax(static_cast<qreal>(width())/m_keyboard.m_width, static_cast<qreal>(height())/m_keyboard.m_height);
 
     QMatrix matrix;
     matrix.scale(scale, scale);

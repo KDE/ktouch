@@ -5,33 +5,92 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>516</width>
-    <height>217</height>
+    <width>570</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Keyboard Settings</string>
   </property>
-  <layout class="QVBoxLayout" >
+  <layout class="QGridLayout" >
    <property name="margin" >
     <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
    </property>
-   <item>
+   <item row="1" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>552</width>
+       <height>31</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" >
     <widget class="QGroupBox" name="groupBox1" >
      <property name="title" >
       <string/>
      </property>
-     <layout class="QVBoxLayout" >
+     <layout class="QGridLayout" >
       <property name="margin" >
        <number>9</number>
       </property>
       <property name="spacing" >
        <number>6</number>
       </property>
-      <item>
+      <item row="2" column="0" >
+       <widget class="QGroupBox" name="kcfg_OverrideKeyboardFont" >
+        <property name="toolTip" >
+         <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+        </property>
+        <property name="title" >
+         <string>Override keyboard fonts</string>
+        </property>
+        <property name="checkable" >
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>9</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="textLabel1" >
+           <property name="text" >
+            <string>Font for keys on keyboard:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="KFontRequester" name="kcfg_KeyboardFont" >
+           <property name="sizePolicy" >
+            <sizepolicy>
+             <hsizetype>7</hsizetype>
+             <vsizetype>5</vsizetype>
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0" >
        <widget class="QCheckBox" name="kcfg_ShowAnimation" >
         <property name="toolTip" >
          <string>Show on the keyboards the keys you have to type</string>
@@ -44,56 +103,21 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QCheckBox" name="kcfg_OverrideKeyboardFont" >
+      <item row="0" column="0" >
+       <widget class="QCheckBox" name="kcfg_HideKeyboard" >
         <property name="toolTip" >
-         <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
+         <string>Hide the keyboard</string>
         </property>
         <property name="whatsThis" >
-         <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+         <string>This will hide the keyboard</string>
         </property>
         <property name="text" >
-         <string>Override keyboard fonts</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="textLabel1" >
-        <property name="text" >
-         <string>Font for keys on keyboard:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="KFontRequester" name="kcfg_KeyboardFont" >
-        <property name="sizePolicy" >
-         <sizepolicy>
-          <hsizetype>7</hsizetype>
-          <vsizetype>5</vsizetype>
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+         <string>Hide keyboard</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
-   </item>
-   <item>
-    <spacer>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType" >
-      <enum>QSizePolicy::Expanding</enum>
-     </property>
-     <property name="sizeHint" >
-      <size>
-       <width>498</width>
-       <height>31</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>

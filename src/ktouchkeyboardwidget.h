@@ -80,16 +80,11 @@ class KTouchKeyboardWidget : public QGraphicsView {
     QList<KTouchBaseKey*>         	    m_keyList;     		///< The pointer list with base class pointers to the keys.
     QList<KTouchKeyConnection> 			m_connectorList;	///< Contains the character - key associations.
 
-	static QMap<QChar, int>	 			m_keyCharMap;		///< Links target keys with finger keys: m_keyCharMap[target_key_char] = color_index
-
     int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
-    double              m_shift;            ///< The horizontal shift for the keyboard.
-	double				m_scale;			///< The current scaling factor.
+
     QString             m_currentLayout;    ///< The name of the currently used layout.
     QChar               m_nextKey;          ///< The next to be pressed character.
-
-	bool				m_hideKeyboard;		///< If true, the keyboard won't be shown.
 
     QGraphicsScene *scene;
 };
