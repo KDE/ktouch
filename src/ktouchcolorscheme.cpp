@@ -277,11 +277,11 @@ void KTouchColorScheme::createDefaults() {
     color.m_background[2] = QColor(  4, 39, 53);     color.m_background[6] = QColor( 10, 82,158);
     color.m_background[3] = QColor( 40, 32,121);     color.m_background[7] = QColor( 43, 60,124);
     color.m_text = Qt::white;
-    color.m_backgroundH = QColor(125,180,255);
+    color.m_backgroundH = QColor(125,180,255,50);
     color.m_textH = Qt::darkBlue;
     color.m_cBackground = Qt::black;
     color.m_cText = Qt::white;
-    color.m_cBackgroundH = QColor(111,121,73);
+    color.m_cBackgroundH = QColor(111,121,73,100);
     color.m_cTextH = Qt::white;
     m_colorSchemes.push_back(color);
 

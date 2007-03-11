@@ -32,7 +32,7 @@ void KTouchNormalKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
         painter->setBrush( colorScheme.m_backgroundH );
         painter->setPen( colorScheme.m_frame );
         painter->drawRoundRect(m_x, m_y, m_w, m_h);
-        painter->setBrush( Qt::white );
+        painter->setBrush(colorScheme.m_cBackgroundH );
         painter->drawEllipse(m_x, m_y, m_w, m_h);
     }
     else {
@@ -77,7 +77,7 @@ void KTouchFingerKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
         painter->setPen( colorScheme.m_frame );
         painter->drawRoundRect(m_x, m_y, m_w, m_h);
-        painter->setBrush( Qt::white );
+        painter->setBrush( colorScheme.m_cBackgroundH  );
         painter->drawEllipse(m_x, m_y, m_w, m_h);
         painter->setPen( colorScheme.m_text );
 
