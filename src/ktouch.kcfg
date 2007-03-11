@@ -57,7 +57,7 @@
     </entry>
     <entry type="Int" name="SlidingSpeed" >
       <label >The sliding speed</label>
-      <default>5</default>
+      <default>50</default>
     </entry>
     <entry type="Int" name="MaxSlidingWidgetHeight" >
       <label >The maximum height of the sliding widget</label>

@@ -39,7 +39,6 @@ KTouchTextLineWidget::KTouchTextLineWidget(QWidget *parent)
     scene->addItem(cursor);
 
     animationTimer = new QTimer(this);
-    animationTimer->setInterval(50);
 
     cursorTimer = new QTimer(this);
     cursorTimer->setInterval(500);
@@ -73,6 +72,8 @@ void KTouchTextLineWidget::applyPreferences() {
     teacher->setBrush(QBrush(Prefs::teacherTextColor()));
     teacherRect->setBrush(QBrush(Prefs::teacherBackgroundColor()));
     studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
+
+    animationTimer->setInterval(100 - Prefs::slidingSpeed());
 
     recalculateSize();
 }
@@ -162,7 +163,7 @@ void KTouchTextLineWidget::recalculatePosition() {
         else
             wantedPos = diff - (diff * ration - (padding * (1 - (2*ration))));
     }
-    pos = pos + (wantedPos - pos) / 4;
+    pos = pos + (wantedPos - pos) / 5;
 
     setSceneRect(pos, 0 , width(), height());
 
