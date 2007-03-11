@@ -18,7 +18,7 @@ FingerKey  241		Ñ				108 20
 #
 #					Assci	KeyText		x		y		Width Height
 #
-ControlKey	8 		<-			130	0		20    10
+ControlKey	8 		BackSpace	130	0		20    10
 ControlKey	260		Tab			0		10	15    10
 ControlKey	13		Enter		138	20	12    10
 ControlKey	258		Shift		133	30	17    10
@@ -28,7 +28,7 @@ ControlKey	263		Alt			15	40	15    10
 ControlKey	262		Ctrl		0		40	15    10
 ControlKey	32		Space		30	40	90    10
 ControlKey	257		Shift		0		30	23    10
-ControlKey	259		Caps_Lk	0		20	18    10
+ControlKey	259		CapsLock	0		20	18    10
 #
 #
 #					Assci	KeyText		x		y		FingerKey
