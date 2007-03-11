@@ -472,16 +472,16 @@ void KTouch::optionsPreferences() {
     KConfigDialog* dialog = new KConfigDialog(this, "settings",  Prefs::self());
 
     m_pageGeneral = new KTouchPrefGeneral(dialog);
-    dialog->addPage(m_pageGeneral, i18n("General Options"), "make","","");
+    dialog->addPage(m_pageGeneral, i18n("General Options"), "configure-toolbars","","");
 
     m_pageTraining = new KTouchPrefTraining(dialog);
-    dialog->addPage(m_pageTraining, i18n("Training Options"), "make");
+    dialog->addPage(m_pageTraining, i18n("Training Options"), "chronometer");
 
     m_pageKeyboard = new KTouchPrefKeyboard(dialog);
-    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "font");
+    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "system");
 
     m_pageColors = new KTouchPrefColors(dialog);
-    dialog->addPage(m_pageColors, i18n("Color Settings"), "colorscm");
+    dialog->addPage(m_pageColors, i18n("Color Settings"), "color-fill");
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 
@@ -797,7 +797,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editcolors" );
     action->setText( i18n("&Edit color scheme...") );
-    action->setIcon( KIcon("colorize") );
+    action->setIcon( KIcon("color-fill") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
 //		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
@@ -816,13 +816,12 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction("training_stats" );
     action->setText( i18n("&Lecture Statistics") );
-    action->setIcon( KIcon("kchart_chrt") );
+    action->setIcon( KIcon("datashowchart") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
     m_defaultLectureAction =  actionCollection()->add<KSelectAction>( "training_default_lectures" );
     m_defaultLectureAction->setText( i18n("Default &Lectures") );
-    m_defaultLectureAction->setIcon( KIcon("bookmark_folder") );
     m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);
@@ -853,7 +852,7 @@ void KTouch::setupActions() {
     // *** User settings ***
     action = actionCollection()->addAction( "settings_setup_users" );
     action->setText( i18n("&Setup users...") );
-    action->setIcon( KIcon("switchuser") );
+    action->setIcon( KIcon("users") );
     connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
 
     m_currentUserAction = actionCollection()->add<KSelectAction>( "settings_current_user" );
