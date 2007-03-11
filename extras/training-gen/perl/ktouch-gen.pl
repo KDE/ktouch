@@ -2,7 +2,7 @@
 
 # default values
 $length_of_line = 60;
-$number_of_line = 30;
+$number_of_line = 10;
 
 
 # genword( accumulated, core )
@@ -69,25 +69,27 @@ sub genlist
 sub genlevel
 {
     ($accum, $core) = @_;
-    my $res = "";
+    my @res = ();
     my @list = genlist($accum,$core);
     my $max_lines = $number_of_line;
     my $max_length = $length_of_line;
     while($max_lines >0)
     {
+	my $line = "";
 	my $tmp=$list[rand(@list)-1];
-	$res = $res.$tmp; # first word on line should not have space 
+	$line = $line.$tmp; # first word on line should not have space 
 	while($max_length >0)
 	{
 	    my $tmp=$list[rand(@list)-1];
-	    $res = $res." ".$tmp; 
+	    $line = $line." ".$tmp; 
 	    $max_length = $max_length - (length($tmp) + 1); # +1 is for counting one extra space for each word
 	}
-	$res = $res."\n";
 	$max_length = $length_of_line;
 	$max_lines = $max_lines - 1;
+	
+	push @res, $line;
     }	
-    return $res;
+    return @res;
 }
 
 sub rrr
@@ -102,12 +104,10 @@ sub rrr
 sub heading
 {
     return
-	"######################################################################\n".
-	"##\n".
-	"# KTouch training file generated ".localtime(time())."\n".
-	"#\n".
-	"# Perl Script written by Steinar Theigmann & Håvard Frøiland.\n".
-	"#\n";
+	"<KTouchLecture>\n".
+	"    <Title>Put your title here</Title>\n".
+	"    <Comment>KTouch training file generated ".localtime(time())."\n".
+	"Perl Script written by Steinar Theigmann &amp; HÃ¥vard FrÃ¸iland.</Comment>\n\n";
 }
 
 sub usage
@@ -167,14 +167,17 @@ while (<STDIN>)
 print heading;
 
 $accum="";
-$count=0;
+
 foreach(@config)
 {
-    $count++;
-    print "# Level $count\n";
-    print "$_\n";
-    print genlevel($accum,$_);
+    print "    <Level>\n";
+    print "        <NewCharacters>$_</NewCharacters>\n";
+    foreach(genlevel($accum,$_)){
+	print "        <Line>".$_."</Line>\n";
+    }
     $accum=$accum.$_;
-    print "\n\n";
+    print "    </Level>\n\n";
 }
 
+
+print "<KTouchLecture>\n";
