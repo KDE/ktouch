@@ -64,6 +64,7 @@ class KTouchKeyboardWidget : public QGraphicsView {
 
     /// Resizes (recalculates m_shift and m_scale) and redraws the keyboard.
     void resizeEvent(QResizeEvent *);
+    void reset();
 
   private:
     /// Does what the name says (create a default keyboard which is a number keypad).
@@ -79,9 +80,6 @@ class KTouchKeyboardWidget : public QGraphicsView {
 	// *** old data storage classes ***
     QList<KTouchBaseKey*>         	    m_keyList;     		///< The pointer list with base class pointers to the keys.
     QList<KTouchKeyConnection> 			m_connectorList;	///< Contains the character - key associations.
-
-    int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
-    int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
 
     QString             m_currentLayout;    ///< The name of the currently used layout.
     QChar               m_nextKey;          ///< The next to be pressed character.

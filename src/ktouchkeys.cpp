@@ -17,11 +17,8 @@
 
 #include "prefs.h"
 
-// Initialisation of static variables
-int KTouchFingerKey::m_fingerKeyCount = 0;
-
-KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-  : KTouchBaseKey(keyChar, keyText, x, y, w, h)
+KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
+  : KTouchBaseKey(keyChar, keyText, colorIndex, x, y, w, h)
 {
     m_type = NORMAL_KEY;
     m_font_scale =2;
@@ -50,15 +47,9 @@ void KTouchNormalKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 }
 
 
-KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-  : KTouchNormalKey(keyChar, keyText, x, y, w, h)
+KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
+  : KTouchNormalKey(keyChar, keyText, colorIndex, x, y, w, h)
 {
-    m_colorIndex = m_fingerKeyCount++;
-    if (m_colorIndex>=8) {
-        kDebug() << "[KTouchFingerKey::KTouchFingerKey]  Number of finger keys = "
-                  << m_colorIndex << "! Setting colour index to 0" << endl;
-        m_colorIndex=0;
-    }
     m_type = FINGER_KEY;
     m_font_scale =2;
 }
@@ -97,7 +88,7 @@ void KTouchFingerKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 
 KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-  : KTouchBaseKey(keyChar, keyText, x, y, w, h)
+  : KTouchBaseKey(keyChar, keyText, 0, x, y, w, h)
 {
     m_type = CONTROL_KEY;
     m_font_scale = 4;

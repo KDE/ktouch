@@ -15,7 +15,6 @@
 
 #include <QPainter>
 #include <QGraphicsItem>
-#include <KDebug>
 
 class KTouchFingerKey;
 class KTouchNormalKey;
@@ -33,8 +32,8 @@ class KTouchBaseKey : public QGraphicsItem{
     enum KeyType { FINGER_KEY, NORMAL_KEY, CONTROL_KEY };
 
     /// Constructor
-    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
-      : m_colorIndex(0), m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
+    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
+      : m_colorIndex(colorIndex), m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
         m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {
     };
 
@@ -47,9 +46,6 @@ class KTouchBaseKey : public QGraphicsItem{
         return QRectF(m_x - penWidth / 2, m_y - penWidth / 2,
                        m_w + penWidth / 2, m_h + penWidth / 2);
     }
-
-    /// Returns the key type.
-    KeyType keyType() const { return m_type; };
 
     unsigned int m_colorIndex;
 
@@ -80,7 +76,7 @@ class KTouchBaseKey : public QGraphicsItem{
 class KTouchNormalKey : public KTouchBaseKey {
   public:
     /// Constructor
-    KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
+    KTouchNormalKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h);
     /// Destructor
     virtual ~KTouchNormalKey() {};
 
@@ -101,14 +97,11 @@ class KTouchNormalKey : public KTouchBaseKey {
 class KTouchFingerKey : public KTouchNormalKey {
   public:
     /// Constructor
-    KTouchFingerKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
+    KTouchFingerKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h);
     /// Destructor
-    ~KTouchFingerKey() { --m_fingerKeyCount; };
+    ~KTouchFingerKey() {};
     /// Extends the painting algoritm of KTouchNormalKey when marked.
    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-
-  private:
-    static int m_fingerKeyCount;    ///< Contains the number of created finger keys (for colour generation).
 };
 // ------------------------------------------------------------------------------------
 
