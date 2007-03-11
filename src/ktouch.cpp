@@ -13,9 +13,6 @@
 #include "ktouch.h"
 #include "ktouch.moc"
 
-// Standard files
-#include <algorithm>
-
 // Qt Header
 #include <QtGui>
 
