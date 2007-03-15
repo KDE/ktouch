@@ -13,8 +13,10 @@
 #ifndef KTOUCHKEYS_H
 #define KTOUCHKEYS_H
 
+#include <QObject>
 #include <QPainter>
 #include <QGraphicsItem>
+#include <QTimer>
 
 class KTouchFingerKey;
 class KTouchNormalKey;
@@ -26,43 +28,89 @@ class KTouchKeyboardWidget;
  *  KTouchKey class hierarchy contains only the information for painting the keys. The connectivity
  *  is handled using the KTouchKeyConnector.
  */
-class KTouchBaseKey : public QGraphicsItem{
+class KTouchBaseKey : public QObject, public QGraphicsItem {
+
+  Q_OBJECT
+
   public:
     /// The possible types of the keys
     enum KeyType { FINGER_KEY, NORMAL_KEY, CONTROL_KEY };
 
     /// Constructor
-    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
-      : m_colorIndex(colorIndex), m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
-        m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {
-    };
-
-    /// Destructor.
-    virtual ~KTouchBaseKey() {};
+    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h);
 
     QRectF boundingRect() const
     {
         qreal penWidth = 1;
-        return QRectF(m_x - penWidth / 2, m_y - penWidth / 2,
+        return QRectF(0 - penWidth / 2, 0 - penWidth / 2,
                        m_w + penWidth / 2, m_h + penWidth / 2);
     }
 
     unsigned int m_colorIndex;
 
+    void setActive(bool active){
+        if(m_isActive!=active){
+            m_isActive = active;
+            update();
+        }
+    }
+
+    void setNextKey(bool next){
+        if(m_isNextKey!=next){
+            m_isNextKey = next;
+            startAnimation();
+        }
+    }
+
+    void reset(){
+        if(m_isActive)
+            setActive(false);
+        if(m_isNextKey);
+            setNextKey(false);
+    }
+
+    QFont   m_font;
     QChar   m_keyChar;      ///< The character that needs to be pressed to access this char.
+
+    float   m_font_scale;
+
+  public slots:
+    void startAnimation(){
+        animate();
+        timer.start(20);
+    }
+
+    void animate(){
+        if(m_isNextKey && stage<5) {
+            stage++;
+        }
+        else if(!m_isNextKey && stage>0) {
+            stage--;
+        }
+        else
+            timer.stop();
+
+        qreal s = qreal(stage)/30;
+        resetMatrix();
+        translate(m_w*s/2, m_h*s/2);
+        scale(1-s,1-s);
+    }
+
+
+  protected:
+
     QString m_keyText;      ///< The text on the key (may be a single char only).
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
-    QFont   m_font;
-    float   m_font_scale;
 
-  protected:
-    int     m_x;        ///< The x position of the key.
-    int     m_y;        ///< The y position of the key.
     int     m_w;        ///< The width of the key.
     int     m_h;        ///< The height of the key.
 
     KeyType m_type;     ///< Stores the type of the key (convenience for saving of the keyboard layout).
+    int stage;
+
+  private:
+    QTimer timer;
 
 };
 // ---------------------------------------------------------------------------------------
@@ -77,8 +125,6 @@ class KTouchNormalKey : public KTouchBaseKey {
   public:
     /// Constructor
     KTouchNormalKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h);
-    /// Destructor
-    virtual ~KTouchNormalKey() {};
 
     /// Extends the painting routine of KTouchKey (adds the text).
    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -98,8 +144,7 @@ class KTouchFingerKey : public KTouchNormalKey {
   public:
     /// Constructor
     KTouchFingerKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h);
-    /// Destructor
-    ~KTouchFingerKey() {};
+
     /// Extends the painting algoritm of KTouchNormalKey when marked.
    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 };

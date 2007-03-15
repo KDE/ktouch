@@ -132,10 +132,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
     // first clean the markings on all keys
     for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
         KTouchBaseKey * key = *it;
-        if (key->m_isActive || key->m_isNextKey) {
-            key->m_isActive = key->m_isNextKey = false;
-            key->update();
-        }
+        key->reset();
     }
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
@@ -151,12 +148,9 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
             for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
                 KTouchBaseKey * key = *it;
                 if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
-                if (key->m_keyChar==targetChar) key->m_isNextKey=true;
-                else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
-                else if (key->m_keyChar==controlChar)  key->m_isActive=true;
-                if (key->m_isActive || key->m_isNextKey){
-                    key->update();
-                }
+                if (key->m_keyChar==targetChar) key->setNextKey(true);
+                else if (key->m_keyChar==fingerChar) key->setActive(true);
+                else if (key->m_keyChar==controlChar)  key->setActive(true);
             }
         }
     }

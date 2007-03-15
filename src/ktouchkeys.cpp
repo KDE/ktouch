@@ -11,11 +11,21 @@
  ***************************************************************************/
 
 #include "ktouchkeys.h"
+#include "ktouchkeys.moc"
 
 #include <kdebug.h>
 #include "ktouchcolorscheme.h"
 
 #include "prefs.h"
+
+KTouchBaseKey::KTouchBaseKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
+      : m_colorIndex(colorIndex), m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
+        m_w(w), m_h(h), m_type(NORMAL_KEY), stage(0), timer()
+    {
+        setPos(x, y);
+        connect(&timer, SIGNAL(timeout()), this, SLOT(animate()));
+    };
+
 
 KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
   : KTouchBaseKey(keyChar, keyText, colorIndex, x, y, w, h)
@@ -31,19 +41,19 @@ void KTouchNormalKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
     if (m_isNextKey) {
         painter->setBrush( colorScheme.m_backgroundH );
         painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(m_x, m_y, m_w, m_h);
+        painter->drawRoundRect(0, 0, m_w, m_h);
         painter->setBrush(colorScheme.m_cBackgroundH );
-        painter->drawEllipse(m_x, m_y, m_w, m_h);
+        painter->drawEllipse(0, 0, m_w, m_h);
     }
     else {
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
         painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(m_x, m_y, m_w, m_h);
+        painter->drawRoundRect(0, 0, m_w, m_h);
     };
 
     painter->setPen( colorScheme.m_text );
     painter->setFont( m_font );
-    painter->drawText(m_x, m_y+1, m_w, m_h, Qt::AlignCenter, m_keyText);
+    painter->drawText(0, 0+1, m_w, m_h, Qt::AlignCenter, m_keyText);
 }
 
 
@@ -61,29 +71,30 @@ void KTouchFingerKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
     if (m_isActive) {
         painter->setPen( colorScheme.m_frame );
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
-        painter->drawRoundRect(m_x, m_y, m_w, m_h);
-        painter->drawEllipse(m_x, m_y, m_w, m_h);
+        painter->drawRoundRect(0, 0, m_w, m_h);
+        painter->drawEllipse(0, 0, m_w, m_h);
         painter->setPen( colorScheme.m_text );
 
     }
     else if (m_isNextKey) {
+
         painter->setBrush( colorScheme.m_backgroundH );
         painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(m_x, m_y, m_w, m_h);
+        painter->drawRoundRect(0, 0, m_w, m_h);
         painter->setPen( colorScheme.m_textH );
 
     }
     else {
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
         painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(m_x, m_y, m_w, m_h);
+        painter->drawRoundRect(0, 0, m_w, m_h);
         painter->setBrush( colorScheme.m_cBackgroundH  );
-        painter->drawEllipse(m_x, m_y, m_w, m_h);
+        painter->drawEllipse(0, 0, m_w, m_h);
         painter->setPen( colorScheme.m_text );
 
     };
     painter->setFont( m_font );
-    painter->drawText(QRectF(m_x, m_y+1, m_w, m_h), Qt::AlignCenter, m_keyText);
+    painter->drawText(QRectF(0, 0+1, m_w, m_h), Qt::AlignCenter, m_keyText);
 }
 
 
@@ -116,14 +127,14 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
         textColor = colorScheme.m_cText;
     };
 
-    painter->drawRoundRect(m_x, m_y, m_w, m_h);
+    painter->drawRoundRect(0, 0, m_w, m_h);
 
     painter->setPen( QPen(textColor,0.2) );
     qreal h = qMin(m_w, m_h);
     qreal ch = h*0.5;   // the height for the special chars
     if (m_keyText=="Shift") {
-        qreal x = m_x+h/2;
-        qreal y = m_y+m_h/2;
+        qreal x = 0+h/2;
+        qreal y = 0+m_h/2;
         painter->drawLine(QLineF(x-ch/2, y, x-ch/4, y));
         painter->drawLine(QLineF(x-ch/4, y, x-ch/4, y+ch/2));
         painter->drawLine(QLineF(x-ch/4, y+ch/2, x+ch/4, y+ch/2));
@@ -133,8 +144,8 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
         painter->drawLine(QLineF(x, y-ch/2, x-ch/2, y));
     }
     else if (m_keyText=="CapsLock") {
-        qreal x = m_x+h/2;
-        qreal y = m_y+m_h/2;
+        qreal x = 0+h/2;
+        qreal y = 0+m_h/2;
 
         painter->drawLine(QLineF(x-ch/2, y, x-ch/4, y));
         painter->drawLine(QLineF(x-ch/4, y, x-ch/4, y-ch/2));
@@ -145,9 +156,9 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
         painter->drawLine(QLineF(x, y+ch/2, x-ch/2, y));
     }
     else if (m_keyText=="Tab") {
-        qreal xleft = m_x+h/2-ch/2;
-        qreal xright = m_x + qMin(m_w-h/2+ch/2,h);
-        qreal y = m_y+m_h/2;
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
 
         painter->drawLine(QLineF(xleft, y,xleft, y-ch/2));
         painter->drawLine(QLineF(xleft, y-ch/4, xright, y-ch/4));
@@ -160,9 +171,9 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
 
     }
     else if (m_keyText=="BackSpace") {
-        qreal xleft = m_x+h/2-ch/2;
-        qreal xright = m_x + qMin(m_w-h/2+ch/2,h);
-        qreal y = m_y+m_h/2;
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
 
         painter->drawLine(QLineF(xleft, y,xright, y));
         painter->drawLine(QLineF(xleft, y, xleft+ch/2, y-ch*0.15));
@@ -170,9 +181,9 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
 
     }
     else if (m_keyText=="Enter") {
-        qreal xleft = m_x+h/2-ch/2;
-        qreal xright = m_x + qMin(m_w-h/2+ch/2,h);
-        qreal y = m_y+m_h/2;
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
 
         painter->drawLine(QLineF(xright, y-ch/2,xright, y));
         painter->drawLine(QLineF(xleft, y,xright, y));
@@ -182,11 +193,11 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
     }
     else if (m_keyText=="AltGr") {
         painter->setFont( m_font );
-        painter->drawText(m_x, m_y, m_w, m_h, Qt::AlignCenter | Qt::AlignVCenter, "Alt Gr");
+        painter->drawText(0, 0, m_w, m_h, Qt::AlignCenter | Qt::AlignVCenter, "Alt Gr");
     }
     else {
         painter->setFont( m_font );
-        painter->drawText(m_x, m_y, m_w, m_h, Qt::AlignCenter | Qt::AlignVCenter, m_keyText);
+        painter->drawText(0, 0, m_w, m_h, Qt::AlignCenter | Qt::AlignVCenter, m_keyText);
     }
 }
 
