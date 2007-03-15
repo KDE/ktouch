@@ -1,3 +1,6 @@
+2007-03-15 Håvard Frøiland <haavard@solveien.net>
+  * Added keyboard animations
+
 2007-03-10 Håvard Frøiland <haavard@solveien.net>
   * Rewrote the keyboard widget and keys to use the new graphics view system
     in Qt. Lot's of old spagetti code got removed. Will probably be faster
