@@ -24,7 +24,7 @@ KTouchBaseKey::KTouchBaseKey(const QChar& keyChar, const QString& keyText, int c
     {
         setPos(x, y);
         connect(&timer, SIGNAL(timeout()), this, SLOT(animate()));
-    };
+    }
 
 
 KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, int colorIndex, int x, int y, int w, int h)
@@ -49,7 +49,7 @@ void KTouchNormalKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
         painter->setPen( colorScheme.m_frame );
         painter->drawRoundRect(0, 0, m_w, m_h);
-    };
+    }
 
     painter->setPen( colorScheme.m_text );
     painter->setFont( m_font );
@@ -125,7 +125,7 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
         painter->setBrush( colorScheme.m_cBackground );
         painter->setPen( colorScheme.m_frame );
         textColor = colorScheme.m_cText;
-    };
+    }
 
     painter->drawRoundRect(0, 0, m_w, m_h);
 
