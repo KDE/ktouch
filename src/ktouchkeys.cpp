@@ -37,6 +37,8 @@ KTouchNormalKey::KTouchNormalKey(const QChar& keyChar, const QString& keyText, i
 
 void KTouchNormalKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 
     if (m_isNextKey) {
         painter->setBrush( colorScheme.m_backgroundH );
@@ -67,6 +69,8 @@ KTouchFingerKey::KTouchFingerKey(const QChar& keyChar, const QString& keyText, i
 
 void KTouchFingerKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 
     if (m_isActive) {
         painter->setPen( colorScheme.m_frame );
@@ -108,6 +112,8 @@ KTouchControlKey::KTouchControlKey(const QChar& keyChar, const QString& keyText,
 
 void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 
     QColor textColor;
 
