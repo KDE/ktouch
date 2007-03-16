@@ -1,0 +1,78 @@
+<ui version="4.0" >
+ <class>KTouchPrefSoundPage</class>
+ <widget class="QWidget" name="KTouchPrefSoundPage" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>514</width>
+    <height>134</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox1" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>479</width>
+     <height>102</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Sound</string>
+   </property>
+   <layout class="QVBoxLayout" >
+    <property name="margin" >
+     <number>9</number>
+    </property>
+    <property name="spacing" >
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QCheckBox" name="kcfg_BeepOnError" >
+      <property name="toolTip" >
+       <string>Emit a beep on each typing error</string>
+      </property>
+      <property name="whatsThis" >
+       <string>If checked (default) this will emit a beep each time you make a typing error.</string>
+      </property>
+      <property name="text" >
+       <string>&amp;Beep on error</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="kcfg_SoundOnKeypress" >
+      <property name="toolTip" >
+       <string>Make a typewriter sound for each key pressed</string>
+      </property>
+      <property name="whatsThis" >
+       <string>If checked this will play a typewriter sound for every key pressed.</string>
+      </property>
+      <property name="text" >
+       <string>&amp;Typewriter sound when typing</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="kcfg_SoundOnLevel" >
+      <property name="toolTip" >
+       <string>Play a sound when the level automatically changes.</string>
+      </property>
+      <property name="whatsThis" >
+       <string>If this is checked (default) a sound will be played each time you automatically change of level.</string>
+      </property>
+      <property name="text" >
+       <string>&amp;Sound on automatic level change</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

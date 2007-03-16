@@ -5,8 +5,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>576</width>
-    <height>447</height>
+    <width>639</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -20,9 +20,12 @@
     <number>6</number>
    </property>
    <item>
-    <widget class="QGroupBox" name="groupBox1" >
+    <widget class="QGroupBox" name="kcfg_AutoLevelChange" >
      <property name="title" >
-      <string>Level Up/Down Limits</string>
+      <string>A&amp;utomatic level adjustment</string>
+     </property>
+     <property name="checkable" >
+      <bool>true</bool>
      </property>
      <layout class="QGridLayout" >
       <property name="margin" >
@@ -254,16 +257,6 @@
         <property name="spacing" >
          <number>6</number>
         </property>
-        <item>
-         <widget class="QCheckBox" name="kcfg_AutoLevelChange" >
-          <property name="text" >
-           <string>A&amp;utomatic level adjustment</string>
-          </property>
-          <property name="shortcut" >
-           <string>Alt+U</string>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QCheckBox" name="kcfg_DisableManualLevelChange" >
           <property name="text" >

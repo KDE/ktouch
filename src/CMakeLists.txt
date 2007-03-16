@@ -14,7 +14,8 @@ kde4_add_ui_files(ktouch_UIS
    ui/ktouchprefgeneralpage.ui 
    ui/ktouchprefcolorspage.ui 
    ui/ktouchprefkeyboardpage.ui 
-   ui/ktouchpreftrainingpage.ui 
+   ui/ktouchpreftrainingpage.ui
+   ui/ktouchprefsoundpage.ui
 )
 
 # set the source code files from which KTouch is compiled

@@ -36,6 +36,7 @@ class KTouchPrefTraining;
 class KTouchPrefKeyboard;
 class KTouchPrefGeneral;
 class KTouchPrefColors;
+class KTouchPrefSound;
 
 #include "ktouchlecture.h"
 #include "ktouchstatisticsdata.h"
@@ -80,15 +81,6 @@ class KTouch : public KMainWindow {
     /// Accepts a typed char.
     void keyPressEvent(QKeyEvent *keyEvent);
 
-	/// Called from the configuration dialog. 
-	void configOverrideLectureFontToggled(bool on);
-	/// Called from the configuration dialog. 
-	void configOverrideKeyboardFontToggled(bool on);
-	/// Called from the configuration dialog.
-	void configAutoLevelChangeToggled(bool on);
-	/// Called from the configuration dialog.
-	void configCommonColorsToggled(bool on);
-
 	void fileOpenText();                ///< The action File->Open text...
     void fileOpenLecture();             ///< The action File->Open lecture...
     void fileEditLecture();             ///< The action File->Edit lecture...
@@ -119,13 +111,6 @@ class KTouch : public KMainWindow {
     void inputMethodEvent( QInputMethodEvent* m );
 
   private:
-    // *** BEGIN - Session management ***
-    /// Will be called when this app is restored due to session management.
-    void readProperties(const KConfigGroup &config);
-    /// Will be called when the app should save its state for session management purposes.
-    void saveProperties(KConfigGroup &config);
-    // *** END - Session management ***
-	
     /// Initialises the program during a normal startup
 	void init();
 	/// Creates the layout and GUI setup for a practice session
@@ -169,7 +154,8 @@ class KTouch : public KMainWindow {
 	KTouchPrefTraining     *m_pageTraining;         ///< The training configuration page.
 	KTouchPrefKeyboard     *m_pageKeyboard;         ///< The keyboard configuration page.
 	KTouchPrefColors       *m_pageColors;		    ///< The color scheme configuration page.
-	
+    KTouchPrefSound        *m_pageSound;
+
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
 	

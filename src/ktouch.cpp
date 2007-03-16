@@ -54,6 +54,7 @@
 #include "ktouchpreftraining.h"
 #include "ktouchprefkeyboard.h"
 #include "ktouchprefcolors.h"
+#include "ktouchprefsound.h"
 
 #include "prefs.h"
 #include "ktouchcolorscheme.h"
@@ -200,81 +201,6 @@ void KTouch::inputMethodEvent( QInputMethodEvent* m ){
     m_trainer->keyPressed(m->commitString().at(0));
     m->accept();
 }
-
-void KTouch::configOverrideLectureFontToggled(bool on) {
-	if (on) {
-		m_pageGeneral->ui.fontTextLabel->setEnabled(true);
-		m_pageGeneral->ui.kcfg_Font->setEnabled(true);
-	}
-	else {
-		m_pageGeneral->ui.fontTextLabel->setEnabled(false);
-		m_pageGeneral->ui.kcfg_Font->setEnabled(false);
-	}
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::configOverrideKeyboardFontToggled(bool on) {
-	if (on) {
-		m_pageKeyboard->ui.textLabel1->setEnabled(true);
-		m_pageKeyboard->ui.kcfg_KeyboardFont->setEnabled(true);
-	}
-	else {
-		m_pageKeyboard->ui.textLabel1->setEnabled(false);
-		m_pageKeyboard->ui.kcfg_KeyboardFont->setEnabled(false);
-	}
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::configAutoLevelChangeToggled(bool on) {
-	if (on) {
-		m_pageTraining->ui.l1->setEnabled(true);
-		m_pageTraining->ui.l2->setEnabled(true);
-		m_pageTraining->ui.l3->setEnabled(true);
-		m_pageTraining->ui.l4->setEnabled(true);
-		m_pageTraining->ui.l5->setEnabled(true);
-		m_pageTraining->ui.l6->setEnabled(true);
-		m_pageTraining->ui.l7->setEnabled(true);
-		m_pageTraining->ui.l8->setEnabled(true);
-		m_pageTraining->ui.l9->setEnabled(true);
-		m_pageTraining->ui.l10->setEnabled(true);
-		m_pageTraining->ui.l11->setEnabled(true);
-		m_pageTraining->ui.l12->setEnabled(true);
-		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(true);
-		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(true);
-		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(true);
-		m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(true);
-		m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(true);
-        m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(true);
-        m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(true);
-	}
-	else {
-		m_pageTraining->ui.l1->setEnabled(false);
-		m_pageTraining->ui.l2->setEnabled(false);
-		m_pageTraining->ui.l3->setEnabled(false);
-		m_pageTraining->ui.l4->setEnabled(false);
-		m_pageTraining->ui.l5->setEnabled(false);
-		m_pageTraining->ui.l6->setEnabled(false);
-		m_pageTraining->ui.l7->setEnabled(false);
-		m_pageTraining->ui.l8->setEnabled(false);
-		m_pageTraining->ui.l9->setEnabled(false);
-		m_pageTraining->ui.l10->setEnabled(false);
-		m_pageTraining->ui.l11->setEnabled(false);
-		m_pageTraining->ui.l12->setEnabled(false);
-		m_pageTraining->ui.kcfg_UpSpeedLimit->setEnabled(false);
-		m_pageTraining->ui.kcfg_UpCorrectLimit->setEnabled(false);
-		m_pageTraining->ui.kcfg_DownSpeedLimit->setEnabled(false);
-		m_pageTraining->ui.kcfg_DownCorrectLimit->setEnabled(false);
-		m_pageTraining->ui.kcfg_DisableManualLevelChange->setEnabled(false);
-        m_pageTraining->ui.kcfg_NumberOfLinesWorkload->setEnabled(false);
-        m_pageTraining->ui.kcfg_CompleteWholeTrainingLevel->setEnabled(false);
-	}
-}
-// ----------------------------------------------------------------------------
-
-void KTouch::configCommonColorsToggled(bool on) {
-	m_pageColors->ui.colorsGroupBox->setEnabled(on);
-}
-// ----------------------------------------------------------------------------
 
 // The action File->Open text...
 void KTouch::fileOpenText() {
@@ -483,23 +409,10 @@ void KTouch::optionsPreferences() {
     m_pageColors = new KTouchPrefColors(dialog);
     dialog->addPage(m_pageColors, i18n("Color Settings"), "color-fill");
 
+    m_pageSound = new KTouchPrefSound(dialog);
+    dialog->addPage(m_pageSound, i18n("Sound Settings"), "sound");
+
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
-
-    // Connect some other buttons/check boxes of the dialog
-	connect(m_pageGeneral->ui.kcfg_OverrideLectureFont, SIGNAL(toggled(bool)),
-		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->ui.kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)),
-		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->ui.kcfg_AutoLevelChange, SIGNAL(toggled(bool)),
-		this, SLOT(configAutoLevelChangeToggled(bool)));
-	connect(m_pageColors->ui.kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
-		this, SLOT(configCommonColorsToggled(bool)));
-
-    // call the functions to enable/disable controls depending on settings
-	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
-	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
-	configAutoLevelChangeToggled(Prefs::autoLevelChange());
-	configCommonColorsToggled(Prefs::commonTypingLineColors());
 
     dialog->show();
 }
@@ -624,69 +537,6 @@ void KTouch::resizeEvent(QResizeEvent * event) {
 // *** Private member function ***
 // *******************************
 
-// Will be called when this app is restored due to session management.
-// This function only stored the temperary data of the last session. All permanent
-// settings should be handled by the KTouchConfiguration object.
-void KTouch::readProperties(const KConfigGroup &config) {
-    kDebug() << "[KTouch::readProperties]  Reading session data..." << endl;
-	// TODO : Session management rewrite
-    /*
-    config->setGroup("TrainingState");
-
-	// The application is about to be restored due to session management.
-    // Let's read all the stuff that was set when the application was terminated (during KDE logout).
-    QString session = config->readEntry("Session");
-    if (!session.isEmpty())
-        m_trainer->m_session = KTouchTrainingSession(session);
-    m_trainer->m_level = config->readNumEntry("Level", 0);
-    m_trainer->m_line = config->readNumEntry("Line", 0);
-    m_currentLectureFile = config->readPathEntry("Lecture");
-    m_trainer->readSessionHistory();    // read session history (excluding currently active session)
-    // update the trainer object
-    m_trainer->m_teacherText = m_lecture.level(m_trainer->m_level).line(m_trainer->m_line);
-    m_trainer->m_studentText = config->readEntry("StudentText");
-    m_trainer->continueTraining();
-    changeStatusbarMessage( i18n("Restarting training session: Waiting for first keypress...") );
-    // update the slide line widget
-    m_textLineWidget->setNewText(m_trainer->m_teacherText, m_trainer->m_studentText);
-    // update all the other widgets
-    m_trainer->updateWidgets();
-	// Read training state
-    config->setGroup("TrainingState");
-    m_currentLectureURL = config->readPathEntry("LectureURL");
-    m_trainer->m_level = config->readNumEntry("Level", 0);
-*/
-}
-// ----------------------------------------------------------------------------
-
-// Will be called when the app should save its state for session management purposes.
-void KTouch::saveProperties(KConfigGroup &config) {
-    kDebug() << "[KTouch::saveProperties]  Saving session data..." << endl;
-    // We are going down because of session management (most likely because of
-    // KDE logout). Let's save the current status so that we can restore it
-    // next logon.
-
-	// TODO : Session management rewrite
-    //config->setGroup("TrainingState");
-/*
-    // first write the current lecture URL and the training position
-    config->writePathEntry("Lecture", m_currentLectureURL.url());
-    config->writeEntry("Level", m_trainer->m_level);
-    config->writeEntry("Line", m_trainer->m_line);
-    config->writeEntry("StudentText", m_trainer->m_studentText);
-    config->writeEntry("Session", m_trainer->m_session.asString() );
-	// store the session history so far
-    m_trainer->writeSessionHistory();
-
-	config->setGroup("TrainingState");
-    config->writePathEntry("LectureURL", m_currentLectureURL.url());
-    config->writeEntry("Level", m_trainer->m_level);
-    // during normal shutdown we finish the session and add it to the session history
-    m_trainer->m_sessionHistory.append( m_trainer->m_session );
-    m_trainer->writeSessionHistory();
-*/
-}
-// ----------------------------------------------------------------------------
 
 // Initialises the program during a normal startup
 void KTouch::init() {
