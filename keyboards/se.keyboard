@@ -33,7 +33,7 @@ ControlKey	263		Alt			15		40		15		10
 ControlKey	262		Ctrl		0		40		15		10
 ControlKey	32		Space		30		40		90		10
 ControlKey	258		Shift		0		30		23		10
-ControlKey	259		Caps_L		0		20		18		10
+ControlKey	259		CapsLock	0		20		18		10
 #
 #
 #  NormalKey: This class represent all the
