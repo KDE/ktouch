@@ -24,8 +24,8 @@ ControlKey	263		Alt			15	40	15    10
 ControlKey	262		Ctrl		0		40	15    10
 ControlKey	32		Space		30	40	90    10
 ControlKey	257		Shift		0		30	13    10
-ControlKey	259		Caps_L	0		20	18    10
-ControlKey  8 		<-			130	0		20    10
+ControlKey	259		CapsLock	0		20	18    10
+ControlKey  8 		BackSpace	130	0		20    10
 ControlKey	13		Enter		128	20	22    10
 
 #					Assci	KeyText		x		y		FingerKey
