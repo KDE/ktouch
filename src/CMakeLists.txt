@@ -1,7 +1,7 @@
 # CMakeList.txt for the KTouch source directory
 
 # set include directories
-include_directories( ${CMAKE_SOURCE_DIR}/libkdeedu/kdeeduplot/ )
+#include_directories( )
 
 # add ui files, all files in directory ui are Qt4 only
 kde4_add_ui_files(ktouch_UIS
@@ -51,7 +51,7 @@ kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
-target_link_libraries(ktouch  ${KDE4_KIO_LIBS} kdeeduplot ${KDE4_PHONONCORE_LIBRARY})
+target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONONCORE_LIBRARY})
 
 install(TARGETS ktouch  DESTINATION ${BIN_INSTALL_DIR} )
 
