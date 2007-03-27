@@ -13,7 +13,7 @@
 #include "ktouchchartwidget.h"
 #include "ktouchchartwidget.moc"
 
-#include <libkdeedu/kdeeduplot/kplotaxis.h>
+#include <kplotaxis.h>
 
 #include <QPainter>
 
