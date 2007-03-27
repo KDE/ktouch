@@ -23,7 +23,7 @@ public:
     : QWidget( parent )
     {
         ui.setupUi(this);
-    };
+    }
 
     Ui_KTouchPrefGeneralPage ui;
 };

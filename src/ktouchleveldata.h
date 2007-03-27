@@ -39,15 +39,15 @@ class KTouchLevelData {
     KTouchLevelData(const QString& comment, const QString& newChars)
         : m_comment(comment), m_newChars(newChars) { createDefault(); }
     /// Returns the level description (comment).
-    const QString& comment() const { return m_comment; };
+    const QString& comment() const { return m_comment; }
     /// Returns the new characters string.
-    const QString& newChars() const { return m_newChars; };
+    const QString& newChars() const { return m_newChars; }
     /// Returns the line with number 'lineNumber' (0 means first line).
     ///
     /// If the line number is out of range, the first line will be returned.
     const QString& line(unsigned int lineNumber) const;
     /// Returns the number of lines.
-    unsigned int count() const { return m_lines.size(); };
+    unsigned int count() const { return m_lines.size(); }
 	/// Sets the lines of this level.
 	void setLines(const QStringList & lines);
 

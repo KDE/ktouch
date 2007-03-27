@@ -172,11 +172,11 @@ class KTouchControlKey : public KTouchBaseKey {
 class KTouchKeyConnection {
   public:
     /// Default constructor
-    KTouchKeyConnection() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), m_controlKeyChar(0) {};
+    KTouchKeyConnection() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), m_controlKeyChar(0) {}
     /// Constructor provided for convenience.
     KTouchKeyConnection(const QChar& keyChar, const QChar& targetKeyChar, const QChar& fingerKeyChar,
                        const QChar& controlKeyChar)
-      : m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), m_controlKeyChar(controlKeyChar) {};
+      : m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), m_controlKeyChar(controlKeyChar) {}
 
     /// This is the character that has to be pressed to access this key.
     QChar               m_keyChar;

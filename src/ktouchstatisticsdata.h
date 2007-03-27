@@ -47,12 +47,12 @@ class QDomElement;
 class KTouchCharStats : public QModelIndex {
   public:
     /// Default constructor.
-    KTouchCharStats() : m_char(0), m_correctCount(0), m_wrongCount(0) {};
+    KTouchCharStats() : m_char(0), m_correctCount(0), m_wrongCount(0) {}
     /// Constructor with parameters.
     KTouchCharStats(QChar ch, unsigned int correct, unsigned int wrong)
-      : m_char(ch), m_correctCount(correct), m_wrongCount(wrong) {};
+      : m_char(ch), m_correctCount(correct), m_wrongCount(wrong) {}
 	/// Destructor
-	virtual ~KTouchCharStats() {};
+	virtual ~KTouchCharStats() {}
 
     /// Reads the character statistics from a XML Dom Node.
     /// @return Returns 'true', when reading was successful or 'false' otherwise.

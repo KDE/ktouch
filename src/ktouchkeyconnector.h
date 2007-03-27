@@ -24,13 +24,13 @@ class KTouchKeyConnector {
   public:
     /// Default constructor
     KTouchKeyConnector() : m_keyChar(0), m_targetKeyIndex(-1), m_fingerKeyIndex(-1), m_modifierKeyIndex(-1)
-	{};
+	{}
     /// Constructor provided for convenience.
     KTouchKeyConnector(QChar keyChar, unsigned int target_key, unsigned int finger_key,
 		               unsigned int modifier_key)
 	  : m_keyChar(keyChar), m_targetKeyIndex(target_key), m_fingerKeyIndex(finger_key),
 		m_modifierKeyIndex(modifier_key)
-	{};
+	{}
 
 	/// Reads the key connector data from the DomElement
 	bool read(QDomNode& node);
