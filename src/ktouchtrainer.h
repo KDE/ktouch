@@ -150,6 +150,9 @@ class KTouchTrainer : public QObject {
 	/// Stores level stats and resets level stats (this function is called from levelUp() and levelDown()
 	/// right before a new level and new line is started).
 	void statsChangeLevel();
+
+    void updateLevelChangeButtons();
+    void levelAllComplete();
 	
     KTouchStatusWidget     *m_statusWidget;         ///< Pointer to the status widget on top of the main window.
     KTouchTextLineWidget   *m_textLineWidget;       ///< Pointer to the sliding line widget.

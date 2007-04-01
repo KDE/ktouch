@@ -16,6 +16,7 @@
 #include <QLCDNumber>
 #include <QFile>
 #include <QTimer>
+#include <QMessageBox>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
@@ -262,6 +263,8 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	m_statusWidget->updateSpeed( 0 );
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
+
+    updateLevelChangeButtons();
 }
 // ----------------------------------------------------------------------------
 
@@ -291,6 +294,11 @@ void KTouchTrainer::continueTraining() {
 	m_trainingTimer->start(LCD_UPDATE_INTERVAL);    // start the timer
 }
 // ----------------------------------------------------------------------------
+
+void KTouchTrainer::updateLevelChangeButtons() {
+    m_statusWidget->levelUpBtn->setEnabled(m_level < m_lecture->levelCount() - 1);
+    m_statusWidget->levelDownBtn->setEnabled(m_level > 0);
+}
 
 void KTouchTrainer::storeTrainingStatistics() {
 	// at first get a reference to the statistics data of the current lecture
@@ -330,18 +338,20 @@ void KTouchTrainer::levelUp() {
         player->play(m_levelUpSound.url());
     }
 
-    ++m_level;  // increase the level
-    if (m_level>=m_lecture->levelCount()) {
-        // already at max level? Let's stay there
-        m_level=m_lecture->levelCount()-1;
-		/// \todo Do something when last level is completed
+    if (m_level < m_lecture->levelCount() - 1) {
+        m_level++;
+    }
+    else {
+        levelAllComplete();
     }
 
     m_incLinesCount = 0;
     m_decLinesCount = 0;
+
     // Store level statistics if level is increased
     statsChangeLevel();
     gotoFirstLine();
+    updateLevelChangeButtons();
 }
 // ----------------------------------------------------------------------------
 
@@ -351,15 +361,23 @@ void KTouchTrainer::levelDown() {
         if(Prefs::soundOnLevel()){
             player->play(m_levelDownSound.url());
         }
-	}
-	m_incLinesCount = 0;
-	m_decLinesCount = 0;
+    }
+    m_incLinesCount = 0;
+    m_decLinesCount = 0;
 
-	// Store level statistics if level is increased
-	statsChangeLevel();
-	gotoFirstLine();
+    // Store level statistics if level is increased
+    statsChangeLevel();
+    gotoFirstLine();
+    updateLevelChangeButtons();
 }
-// ----------------------------------------------------------------------------
+
+void KTouchTrainer::levelAllComplete() {
+    QMessageBox::information(0, tr("You rock!"),
+                   tr("You have finished this training exercise.\n"
+                      "This training session will start from the beginning."));
+    statsChangeLevel();
+    startTraining(false);
+}
 
 void KTouchTrainer::timerTick() {
     if (m_trainingPaused) return;
