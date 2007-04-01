@@ -39,6 +39,7 @@ class KTouchTextLineWidget : public QGraphicsView {
         recalculateSize();
     }
     void recalculateSize();
+    void updateColor();
 
     QPainterPath roundedRectPathFactory(double x, double y, double width, double height, double rounded);
 

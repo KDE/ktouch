@@ -71,7 +71,7 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
 
 
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
-    setVisible(!Prefs::hideKeyboard());
+    setVisible(Prefs::showKeyboard());
 
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
@@ -126,7 +126,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
     // the finger key will be highlighted
     m_nextKey = nextChar;
 
-    if(Prefs::hideKeyboard())
+    if(!Prefs::showKeyboard())
         return;
 
     // first clean the markings on all keys

@@ -68,10 +68,7 @@ void KTouchTextLineWidget::applyPreferences() {
     if (Prefs::overrideLectureFont())
         font = Prefs::font();
 
-    student->setBrush(QBrush(Prefs::studentTextColor()));
-    teacher->setBrush(QBrush(Prefs::teacherTextColor()));
-    teacherRect->setBrush(QBrush(Prefs::teacherBackgroundColor()));
-    studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
+    updateColor();
 
     animationTimer->setInterval(100 - Prefs::slidingSpeed());
 
@@ -99,15 +96,38 @@ void KTouchTextLineWidget::setStudentText(const QString& text) {
         student->setPos(teacherTextWidth - studentTextWidth, teacher->boundingRect().height() + 5);
     }
 
-    if(teacher->text().startsWith(text)){
-        studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
-        student->setBrush(QBrush(Prefs::studentTextColor()));
-    }
-    else{
-        studentRect->setBrush(QBrush(Prefs::errorBackgroundColor()));
-        student->setBrush(QBrush(Prefs::errorTextColor()));
-   }
+    updateColor();
     animationTimer->start();
+}
+
+void KTouchTextLineWidget::updateColor() {
+
+   if (Prefs::commonTypingLineColors()) {
+        teacher->setBrush(QBrush(Prefs::teacherTextColor()));
+        teacherRect->setBrush(QBrush(Prefs::teacherBackgroundColor()));
+
+        if(Prefs::colorOnError() && !teacher->text().startsWith(student->text())){
+            studentRect->setBrush(QBrush(Prefs::errorBackgroundColor()));
+            student->setBrush(QBrush(Prefs::errorTextColor()));
+        }
+        else{
+            studentRect->setBrush(QBrush(Prefs::studentBackgroundColor()));
+            student->setBrush(QBrush(Prefs::studentTextColor()));
+        }
+    }
+    else {
+        teacher->setBrush(QBrush(Qt::black));
+        teacherRect->setBrush(QBrush(Qt::white));
+
+        if(Prefs::colorOnError() && !teacher->text().startsWith(student->text())){
+            studentRect->setBrush(QBrush(Prefs::errorBackgroundColor()));
+            student->setBrush(QBrush(Prefs::errorTextColor()));
+        }
+        else{
+            studentRect->setBrush(QBrush(Qt::white));
+            student->setBrush(QBrush(Qt::blue));
+        }
+    }
 }
 
 void KTouchTextLineWidget::setFont(const QFont& f) {

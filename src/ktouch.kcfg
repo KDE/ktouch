@@ -23,7 +23,7 @@
     </entry>
     <entry type="Color" name="StudentBackgroundColor" >
       <label >The background color for the student's line.</label>
-      <default >#aoffao</default>
+      <default >#fff16b</default>
     </entry>
     <entry type="Color" name="StudentTextColor" >
       <label >The text color for the student's line</label>
@@ -85,9 +85,9 @@
       <label >Whether to use colors on the keys or not.</label>
       <default>true</default>
     </entry>
-    <entry type="Bool" name="HideKeyboard" >
-      <label >Whether to hide the keyboard display.</label>
-      <default>false</default>
+    <entry type="Bool" name="ShowKeyboard" >
+      <label >Whether to show the keyboard display.</label>
+      <default>true</default>
     </entry>
     <entry type="Bool" name="OverrideKeyboardFont" >
       <label >Whether to override the default/predefined keyboard fonts.</label>
