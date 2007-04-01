@@ -49,7 +49,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-//    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
+    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
 
     // reset statistics
     m_levelStats.clear();
