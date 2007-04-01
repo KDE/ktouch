@@ -49,7 +49,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
+//    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
 
     // reset statistics
     m_levelStats.clear();
@@ -262,7 +262,6 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	m_statusWidget->updateSpeed( 0 );
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
-	m_textLineWidget->setActive(true); // Curser will blink
 }
 // ----------------------------------------------------------------------------
 
