@@ -96,7 +96,7 @@ bool KTouchLectureEditorDialog::startEditor(const KUrl& url) {
 
 void KTouchLectureEditorDialog::fontBtnClicked() {
     QFont f(m_lecture.m_fontSuggestions);
-    if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
+    if (KFontDialog::getFont(f, KFontChooser::DisplayFrame, this)==QDialog::Accepted) {
         linesEdit->setFont(f);
         lectureCommentEdit->setFont(f);
         levelCommentEdit->setFont(f);
