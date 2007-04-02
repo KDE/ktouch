@@ -128,6 +128,8 @@ class KTouchTrainer : public QObject {
     /// Sets up a new teacher line (depending on m_level and m_line).
 	/// The function resets the word count.
     void newLine();
+    void levelAllComplete();
+    void updateLevelChangeButtons();
 	/// Updates the statusbar of the main window.
 	void updateStatusBar() const;
 	/// Updates the message in the statusbar of the main window.

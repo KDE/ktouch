@@ -21,6 +21,7 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kaudioplayer.h>
+#include <qmessagebox.h>
 
 #include "ktouch.h"
 #include "ktouchstatus.h"
@@ -274,6 +275,7 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
 	m_slideLineWidget->setCursorTimerEnabled(true); // Curser will blink
+	updateLevelChangeButtons();
 }
 // ----------------------------------------------------------------------------
 
@@ -347,12 +349,16 @@ void KTouchTrainer::levelUp() {
     if (m_level>=m_lecture->levelCount()) {
         // already at max level? Let's stay there
         m_level=m_lecture->levelCount()-1;
+	levelAllComplete();
 		/// \todo Do something when last level is completed
     }
 	// Store level statistics if level is increased
 	statsChangeLevel();
 	gotoFirstLine();
+	updateLevelChangeButtons();
 }
+
+
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::levelDown() {
@@ -363,6 +369,7 @@ void KTouchTrainer::levelDown() {
 	// Store level statistics if level is increased
 	statsChangeLevel();
 	gotoFirstLine();
+	updateLevelChangeButtons();
 }
 // ----------------------------------------------------------------------------
 
@@ -380,6 +387,18 @@ void KTouchTrainer::timerTick() {
 
 // *** Private functions ***
 
+void KTouchTrainer::levelAllComplete() {
+    QMessageBox::information(0, tr("You rock!"),
+                   tr("You have finished this training exercise.\n"
+                      "This training session will start from the beginning."));
+    statsChangeLevel();
+    startTraining(false);
+}
+
+void KTouchTrainer::updateLevelChangeButtons() {
+    m_statusWidget->levelUpBtn->setEnabled(m_level < m_lecture->levelCount() - 1);
+    m_statusWidget->levelDownBtn->setEnabled(m_level > 0);
+}
 void KTouchTrainer::newLine() {
     m_teacherText = m_lecture->level(m_level).line(m_line);
     m_studentText="";
