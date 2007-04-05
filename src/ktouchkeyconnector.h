@@ -32,7 +32,7 @@ class KTouchKeyConnector {
 		               unsigned int modifier_key)
 	  : m_keyChar(keyChar), m_targetKeyIndex(target_key), m_fingerKeyIndex(finger_key),
 		m_modifierKeyIndex(modifier_key)
-	{};
+	{}
 
 	/// Reads the key connector data from the DomElement
 	bool read(QDomNode node);

@@ -31,7 +31,7 @@ class QDomNode;
 class KTouchColorScheme {
   public:
     /// Default constructor.
-    KTouchColorScheme() { clear(); };
+    KTouchColorScheme() { clear(); }
     /// Creates the default colour scheme.
     void clear();
 

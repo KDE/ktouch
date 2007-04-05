@@ -45,7 +45,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     /// Constructor
     KTouchLectureEditor(QWidget *parent, const char* name = 0, bool modal = FALSE, WFlags fl = 0);
     /// Destructor
-    ~KTouchLectureEditor() {};
+    ~KTouchLectureEditor() {}
     /// Shows and executes the dialog (argument is the url to the default or 
     /// current lecture file).
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
@@ -63,9 +63,9 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     /// Called when the Save As button was clicked.
     void saveAsBtnClicked();
     /// Called when the editor is closed.
-    void closeQuery() { if (saveModified()) accept(); };
+    void closeQuery() { if (saveModified()) accept(); }
     /// Called when the editor is rejected (x clicked).
-    void reject()     { closeQuery(); };
+    void reject()     { closeQuery(); }
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
     /// Will be called whenever another level has been selected.

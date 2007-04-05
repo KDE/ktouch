@@ -37,7 +37,7 @@ class KURL;
 class KTouchLecture {
   public:
     /// Default Constructor
-    KTouchLecture() { createDefault(); };
+    KTouchLecture() { createDefault(); }
     /// Creates a default mini-lecture.
     void createDefault();
     /// Loads a lecture from file (returns true if successful).
@@ -49,7 +49,7 @@ class KTouchLecture {
     /// Saves the lecture data to file (returns true if successful).
     bool saveXML(QWidget * window, const KURL& url) const;
     /// Returns the number of levels in the lecture.
-    unsigned int levelCount()       const { return m_lectureData.size(); };
+    unsigned int levelCount()       const { return m_lectureData.size(); }
     /// Returns a reference to the data of the level.
     /// If the level number is out of range the function will always return
     /// the level 0.
