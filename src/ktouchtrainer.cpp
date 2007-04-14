@@ -388,8 +388,8 @@ void KTouchTrainer::timerTick() {
 // *** Private functions ***
 
 void KTouchTrainer::levelAllComplete() {
-    QMessageBox::information(0, tr("You rock!"),
-                   tr("You have finished this training exercise.\n"
+    QMessageBox::information(0, i18n("You rock!"),
+                   i18n("You have finished this training exercise.\n"
                       "This training session will start from the beginning."));
     statsChangeLevel();
     startTraining(false);
