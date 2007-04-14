@@ -372,6 +372,7 @@ void KTouchTrainer::levelDown() {
 }
 
 void KTouchTrainer::levelAllComplete() {
+    pauseTraining();
     QMessageBox::information(0, i18n("You rock!"),
                    i18n("You have finished this training exercise.\n"
                         "This training session will start from the beginning."));
