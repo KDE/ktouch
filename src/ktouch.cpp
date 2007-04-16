@@ -527,7 +527,7 @@ bool KTouch::queryExit() {
 void KTouch::resizeEvent(QResizeEvent * event) {
 	changeStatusbarStats(m_trainer->m_levelStats.m_correctChars, m_trainer->m_levelStats.m_totalChars, m_trainer->m_levelStats.m_words,
 		m_trainer->m_sessionStats.m_correctChars, m_trainer->m_sessionStats.m_totalChars, m_trainer->m_sessionStats.m_words);
-	KMainWindow::resizeEvent(event);
+	KXmlGuiWindow::resizeEvent(event);
 }
 // ----------------------------------------------------------------------------
 

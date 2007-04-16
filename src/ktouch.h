@@ -19,7 +19,7 @@
 #include <QKeyEvent>
 #include <QResizeEvent>
 
-#include <kmainwindow.h>
+#include <kxmlguiwindow.h>
 #include <kurl.h>
 
 class KAction;
@@ -54,7 +54,7 @@ class KTouchPrefSound;
 /// typed char. It delegates the character to the trainer
 /// (KTouchTrainer), which will then process it. So the heavy work lies in the trainer
 /// object and all the widgets.
-class KTouch : public KMainWindow {
+class KTouch : public KXmlGuiWindow {
     Q_OBJECT
   public:
     /// Constructor, creates the KTouch proggy.
