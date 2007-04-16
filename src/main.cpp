@@ -11,11 +11,11 @@
  ***************************************************************************/
 
 #include "ktouch.h"
-#include <kapplication.h>
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
 #include <kdebug.h>
+#include <kapplication.h>
 
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");

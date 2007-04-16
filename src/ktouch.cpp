@@ -17,7 +17,6 @@
 #include <QtGui>
 
 // KDE Header
-#include <kapplication.h>
 #include <kselectaction.h>
 #include <kactioncollection.h>
 #include <kstandardaction.h>
@@ -344,7 +343,7 @@ void KTouch::fileEditKeyboard() {
 // ----------------------------------------------------------------------------
 
 void KTouch::fileQuit() {
-    kapp->quit();
+    qApp->quit();
 }
 // ----------------------------------------------------------------------------
 
