@@ -197,6 +197,8 @@ void KTouchControlKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *
         painter->drawLine(QLineF(xleft, y, xleft+ch/3, y+static_cast<qreal>(ch*0.15)));
 
     }
+    else if (m_keyText=="Space") {
+    }
     else if (m_keyText=="AltGr") {
         painter->setFont( m_font );
         painter->drawText(0, 0, m_w, m_h, Qt::AlignCenter | Qt::AlignVCenter, "Alt Gr");
