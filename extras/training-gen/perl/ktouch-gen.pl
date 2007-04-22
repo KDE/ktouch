@@ -1,7 +1,10 @@
 #!/usr/bin/perl -w --strict
+use utf8;
+binmode STDOUT, ":utf8";
+binmode STDIN, ":utf8";
 
 # default values
-$length_of_line = 60;
+$length_of_line = 40;
 $number_of_line = 10;
 
 

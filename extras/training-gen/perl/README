@@ -2,8 +2,8 @@
 #
 #  ktouch-gen.pl
 #
-#    written by: Steinar Theigmann <steinart@incatel.no>
-#                Håvard Frøiland  <havard.froiland@chello.no>
+#    written by: Steinar Theigmann
+#                HÃ¥vard FrÃ¸iland  <haavard@solveien.net>
 #
 #    This file describes how to generate your own training files
 #    in 3. steps.
@@ -34,11 +34,11 @@ Since we don't want this word on the screen, but in a file we do this:
 $ aspell dump master > ~/your-word-file
 
 You will now have a file called your-word-file stored in your home directory.
-
+(This file should be in utf-8 encoding)
 
 Step 2: Creat a configuration file
 
-The config file is shown below.
+The config file is shown below. (Save file using utf-8 encoding)
 
 <---- the file starts here ---->
 length-of-line 20
