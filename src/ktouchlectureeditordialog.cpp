@@ -14,7 +14,7 @@
 #include "ktouchlectureeditordialog.moc"
 
 #include <QLabel>
-#include <QString>
+
 #include <QStringList>
 
 #include <kpushbutton.h>

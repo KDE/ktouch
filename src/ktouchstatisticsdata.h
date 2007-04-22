@@ -15,7 +15,7 @@
 
 // QT includes
 
-#include <QString>
+
 #include <QMap>
 #include <QDateTime>
 #include <QTextStream>
