@@ -22,8 +22,6 @@
 #include <kstandarddirs.h>
 #include <kmessagebox.h>
 
-// #define USE_NEW_KEYBOARD
-
 #include "prefs.h"
 
 KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
@@ -31,9 +29,9 @@ KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
 
-    scene = new QGraphicsScene(this);
+    m_scene = new QGraphicsScene(this);
 
-    setScene(scene);
+    setScene(m_scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setRenderHint(QPainter::Antialiasing);
@@ -157,7 +155,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 }
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
-    QRectF sbr = scene->itemsBoundingRect();
+    QRectF sbr = m_scene->itemsBoundingRect();
     qreal scale = qMin(width()/sbr.width(),height()/sbr.height()) * 0.9;
 
     QMatrix matrix;
@@ -169,10 +167,10 @@ void KTouchKeyboardWidget::reset() {
     m_keyList.clear();
 
     setScene(0);
-    delete(scene);
-    scene = new QGraphicsScene(this);
+    delete(m_scene);
+    m_scene = new QGraphicsScene(this);
 
-    setScene(scene);
+    setScene(m_scene);
 }
 
 void KTouchKeyboardWidget::createDefaultKeyboard() {
@@ -209,7 +207,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
 
     for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
         KTouchBaseKey * key = *it;
-        scene->addItem(key);
+        m_scene->addItem(key);
     }
 
     // now we need to create the connections between the characters that can be typed and the
@@ -238,59 +236,6 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     m_currentLayout="number.keyboard";
 
     resizeEvent(0);
-/*
-
-	// create keyboard geometry for new keyboard data
-
-    int sp = 10;
-    int h = 50;
-    int w = 50;
-    col = w+sp;
-    row = h+sp;
-
-	m_keys.clear();
-	m_keys.append( KTouchKey(                           0,     0, w, h, QString("Num")) );		// 0
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col,     0, w, h, '/') );			// 1
-	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col,     0, w, h, '*') );			// 2
-	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	3*col,     0, w, h, '-') );			// 3
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0,   row, w, h, '7') );			// 4
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col,   row, w, h, '8') );			// 5
-	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col,   row, w, h, '9') );			// 6
-	m_keys.append( KTouchKey(KTouchKey::FINGER,     	0, 2*row, w, h, '4') );			// 7  ***
-	m_keys.append( KTouchKey(KTouchKey::FINGER,   	  col, 2*row, w, h, '5') );			// 8  ***
-	m_keys.append( KTouchKey(KTouchKey::FINGER, 	2*col, 2*row, w, h, '6') );			// 9  ***
-	m_keys.append( KTouchKey(KTouchKey::FINGER, 	3*col,   row, w, 2*h+sp, '+') ); 	// 10 ***
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0, 3*row, w, h, '1') );			// 11
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col, 3*row, w, h, '2') );			// 12
-	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col, 3*row, w, h, '3') );			// 13
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,     	0, 4*row, 2*w+sp, h, '0') );	// 14
-	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	2*col, 4*row, w, h, '.') );			// 15
-	m_keys.append( KTouchKey(KTouchKey::ENTER,  	3*col, 3*row, w, 2*h+sp, 0) ); 		// 16
-	m_keys.append( KTouchKey(KTouchKey::BACKSPACE,  5*col, 0, 2*w+sp, h, 0) ); 			// 17
-	// number the keys for reference
-	for (int i=0; i<m_keys.size(); ++i)
-		m_keys[i].m_number = i;
-	// create key connections
-	m_keyConnections.clear();
-	// KTouchKeyConnector(char, target, finger, modifier)
-	m_keyConnections.append( KTouchKeyConnector('/',  1,  8, 0) );
-	m_keyConnections.append( KTouchKeyConnector('*',  2,  9, 0) );
-	m_keyConnections.append( KTouchKeyConnector('-',  3, 10, 0) );
-	m_keyConnections.append( KTouchKeyConnector('7',  4,  7, 0) );
-	m_keyConnections.append( KTouchKeyConnector('8',  5,  8, 0) );
-	m_keyConnections.append( KTouchKeyConnector('9',  6,  9, 0) );
-	m_keyConnections.append( KTouchKeyConnector('4',  7,  7, 0) ); // ***
-	m_keyConnections.append( KTouchKeyConnector('5',  8,  8, 0) ); // ***
-	m_keyConnections.append( KTouchKeyConnector('6',  9,  9, 0) ); // ***
-	m_keyConnections.append( KTouchKeyConnector('+', 10, 10, 0) ); // ***
-	m_keyConnections.append( KTouchKeyConnector('1', 11,  7, 0) );
-	m_keyConnections.append( KTouchKeyConnector('2', 12,  8, 0) );
-	m_keyConnections.append( KTouchKeyConnector('3', 13,  9, 0) );
-	m_keyConnections.append( KTouchKeyConnector('0', 14,  7, 0) );
-	m_keyConnections.append( KTouchKeyConnector('.', 15,  9, 0) );
-	m_keyConnections.append( KTouchKeyConnector(QChar(13), 16, 10, 0) );
-	m_keyConnections.append( KTouchKeyConnector(QChar(8), 17, 0, 0) );
-*/
 }
 // --------------------------------------------------------------------------
 
@@ -331,7 +276,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
             key = new KTouchFingerKey(keyAscII, keyText, colorIndex, x+1, y+1, w, h);
             colorIndex ++;
-            scene->addItem(key);
+            m_scene->addItem(key);
             m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
 // 			kDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
@@ -339,7 +284,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
             key = new KTouchControlKey(keyAscII, keyText, x+1, y+1, w-2, h-2);
-            scene->addItem(key);
+            m_scene->addItem(key);
             m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
 // 			kDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText << endl;
@@ -360,7 +305,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
             key = new KTouchNormalKey(keyAscII, keyText, colorIndexForFingerKey, x+1, y+1, w, h);
 
-            scene->addItem(key);
+            m_scene->addItem(key);
 
             m_keyList.append( key );
 
@@ -391,53 +336,3 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
     return (!m_keyList.isEmpty());  // empty file means error
 }
 
-
-
-/*
-removed functions
-
-void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KUrl& url) {
-    QString tmpFile;
-    KTemporaryFile *temp=0;
-    if (url.isLocalFile())
-        tmpFile=url.path();             // for local files the path is sufficient
-    else {
-        temp=new KTemporaryFile;             // for remote files create a temporary file first
-        temp->open();
-        tmpFile=temp->fileName();
-    }
-
-    QFile outfile(tmpFile);
-    if ( !outfile.open( QIODevice::WriteOnly ) ) {
-        if (temp)  delete temp;
-        return;
-    }
-
-    QTextStream out( &outfile );
-    out << "########################################## \n";
-    out << "#                                        # \n";
-    out << "#  Keyboard layout file for KTouch       # \n";
-    out << "#                                        # \n";
-    out << "########################################## \n";
-    out << "#\n";
-    out << endl;
-
-	for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-        switch ((*it)->type()) {
-           case KTouchBaseKey::FINGER_KEY   : out << "FingerKey  "; break;
-           case KTouchBaseKey::NORMAL_KEY   : out << "NormalKey  "; break;
-           case KTouchBaseKey::CONTROL_KEY  : out << "ControlKey "; break;
-           default : out << "NormalKey  "; break;
-        }
-        QRect rect=(*it)->frame();
-        out << (*it)->m_keyChar.unicode() << '\t' << (*it)->m_keyText << '\t'
-            << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
-    }
-
-    if (temp) {
-        KIO::NetAccess::upload(tmpFile, url, window);
-        delete temp;
-    }
-}
-// --------------------------------------------------------------------------
-*/

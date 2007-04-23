@@ -20,11 +20,8 @@
 #include <QVector>
 #include <QMap>
 
-#include "ktouchkeys.h" // old class
-
-//#include "ktouchkey.h"  // new class
-//#include "ktouchkeyconnector.h" // new class
-#include "ktouchkeyboard.h"	// contains all keyboard data
+#include "ktouchkeys.h"
+#include "ktouchkeyboard.h"	// (new) contains all keyboard data
 
 class KUrl;
 
@@ -75,16 +72,16 @@ class KTouchKeyboardWidget : public QGraphicsView {
     bool readKeyboard(const QString& fileName, QString& errorMsg);
 
 	// *** new data storage classes ***
-	KTouchKeyboard						m_keyboard;			///< Data defining a keyboard.
+	KTouchKeyboard				m_keyboard;			///< Data defining a keyboard.
 
 	// *** old data storage classes ***
-    QList<KTouchBaseKey*>         	    m_keyList;     		///< The pointer list with base class pointers to the keys.
-    QList<KTouchKeyConnection> 			m_connectorList;	///< Contains the character - key associations.
+	QList<KTouchBaseKey*>		m_keyList;     		///< The pointer list with base class pointers to the keys.
+    QList<KTouchKeyConnection> 	m_connectorList;	///< Contains the character - key associations.
 
-    QString             m_currentLayout;    ///< The name of the currently used layout.
-    QChar               m_nextKey;          ///< The next to be pressed character.
+    QString						m_currentLayout;    ///< The name of the currently used layout.
+    QChar						m_nextKey;          ///< The next to be pressed character.
 
-    QGraphicsScene *scene;
+    QGraphicsScene				*m_scene;			///< The graphics scene 
 };
 
 #endif  // KTOUCHKEYBOARDWIDGET_H
