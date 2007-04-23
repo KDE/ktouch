@@ -5,181 +5,210 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>497</width>
-    <height>285</height>
+    <width>467</width>
+    <height>255</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>General Options</string>
   </property>
-  <widget class="QGroupBox" name="groupBox3" >
-   <property name="geometry" >
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>479</width>
-     <height>232</height>
-    </rect>
-   </property>
-   <property name="title" >
-    <string>Text Line Settings</string>
-   </property>
-   <layout class="QVBoxLayout" >
-    <property name="margin" >
-     <number>9</number>
-    </property>
-    <property name="spacing" >
-     <number>6</number>
-    </property>
-    <item>
-     <layout class="QGridLayout" >
-      <property name="margin" >
-       <number>0</number>
-      </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QGroupBox" name="groupBox3" >
+     <property name="title" >
+      <string>Text Line Settings</string>
+     </property>
+     <layout class="QVBoxLayout" >
       <property name="spacing" >
        <number>6</number>
       </property>
-      <item row="1" column="0" >
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeType" >
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>20</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="1" column="3" >
-       <widget class="QLabel" name="textLabel3" >
-        <property name="text" >
-         <string>Fast</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1" >
-       <widget class="QLabel" name="textLabel2" >
-        <property name="text" >
-         <string>Slow</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1" colspan="3" >
-       <widget class="QSlider" name="kcfg_SlidingSpeed" >
-        <property name="maximumSize" >
-         <size>
-          <width>32767</width>
-          <height>20</height>
-         </size>
-        </property>
-        <property name="minimum" >
+      <property name="leftMargin" >
+       <number>9</number>
+      </property>
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" >
+        <property name="leftMargin" >
          <number>0</number>
         </property>
-        <property name="maximum" >
-         <number>100</number>
+        <property name="topMargin" >
+         <number>0</number>
         </property>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
+        <property name="rightMargin" >
+         <number>0</number>
         </property>
-        <property name="tickInterval" >
-         <number>1</number>
+        <property name="bottomMargin" >
+         <number>0</number>
         </property>
-       </widget>
+        <property name="horizontalSpacing" >
+         <number>6</number>
+        </property>
+        <property name="verticalSpacing" >
+         <number>6</number>
+        </property>
+        <item row="1" column="0" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3" >
+         <widget class="QLabel" name="textLabel3" >
+          <property name="text" >
+           <string>Fast</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLabel" name="textLabel2" >
+          <property name="text" >
+           <string>Slow</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3" >
+         <widget class="QSlider" name="kcfg_SlidingSpeed" >
+          <property name="maximumSize" >
+           <size>
+            <width>32767</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="minimum" >
+           <number>0</number>
+          </property>
+          <property name="maximum" >
+           <number>100</number>
+          </property>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickInterval" >
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" >
+         <spacer>
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType" >
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" >
+           <size>
+            <width>227</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" >
+         <widget class="QLabel" name="textLabel1_2" >
+          <property name="text" >
+           <string>Sliding speed:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="1" column="2" >
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Horizontal</enum>
+      <item>
+       <widget class="QGroupBox" name="kcfg_OverrideLectureFont" >
+        <property name="title" >
+         <string>Override lecture font</string>
         </property>
-        <property name="sizeType" >
-         <enum>QSizePolicy::Expanding</enum>
+        <property name="checkable" >
+         <bool>true</bool>
         </property>
-        <property name="sizeHint" >
-         <size>
-          <width>227</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="0" >
-       <widget class="QLabel" name="textLabel1_2" >
-        <property name="text" >
-         <string>Sliding speed:</string>
-        </property>
+        <layout class="QGridLayout" >
+         <property name="leftMargin" >
+          <number>9</number>
+         </property>
+         <property name="topMargin" >
+          <number>9</number>
+         </property>
+         <property name="rightMargin" >
+          <number>9</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>9</number>
+         </property>
+         <property name="horizontalSpacing" >
+          <number>6</number>
+         </property>
+         <property name="verticalSpacing" >
+          <number>6</number>
+         </property>
+         <item row="2" column="0" >
+          <spacer>
+           <property name="orientation" >
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" >
+            <size>
+             <width>341</width>
+             <height>21</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="fontTextLabel" >
+           <property name="text" >
+            <string>Font for displayed/typed text:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="KFontRequester" name="kcfg_Font" >
+           <property name="minimumSize" >
+            <size>
+             <width>0</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="whatsThis" >
+            <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
+           </property>
+           <property name="font" >
+            <font>
+             <family>Courier 10 Pitch</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+             <underline>false</underline>
+             <strikeout>false</strikeout>
+            </font>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="kcfg_OverrideLectureFont" >
-      <property name="title" >
-       <string>Override lecture font</string>
-      </property>
-      <property name="checkable" >
-       <bool>true</bool>
-      </property>
-      <layout class="QGridLayout" >
-       <property name="margin" >
-        <number>9</number>
-       </property>
-       <property name="spacing" >
-        <number>6</number>
-       </property>
-       <item row="2" column="0" >
-        <spacer>
-         <property name="orientation" >
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" >
-          <size>
-           <width>341</width>
-           <height>21</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0" >
-        <widget class="QLabel" name="fontTextLabel" >
-         <property name="text" >
-          <string>Font for displayed/typed text:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" >
-        <widget class="KFontRequester" name="kcfg_Font" >
-         <property name="minimumSize" >
-          <size>
-           <width>0</width>
-           <height>21</height>
-          </size>
-         </property>
-         <property name="whatsThis" >
-          <string>This button will display a font dialog where you can change the font for the student and the teacher lines. When you leave the font dialog, the new font is previewed in the line below and only applied when you click the Apply button below.</string>
-         </property>
-         <property name="font" >
-          <font>
-           <family>Courier 10 Pitch</family>
-           <pointsize>20</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-           <underline>false</underline>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <layoutdefault spacing="6" margin="11" />
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
