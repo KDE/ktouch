@@ -15,14 +15,30 @@
 
 #include <QTextStream>
 #include <QList>
+#include <QMap>
 
 #include "ktouchkeyconnector.h"
-#include "ktouchkey.h"
+class KTouchKey;
 
 class KUrl;
 
-/// This class stores the keyboard layout and the connectivity between characters 
-/// and the actual keys.
+/// @brief This class stores the keyboard layout and the connectivity between 
+///        characters and the actual keys.
+///
+/// For any given character the mapping m_connectors can be used to obtain
+/// the indices for the keys to highlight on the keyboard. This information
+/// can be used by the keyboard widget to change the state of the appropriate
+/// keys.
+/// @code
+/// QChar keyToPress = 'H';
+/// KTouchKeyConnector c = m_connectors[keyToPress];
+/// KTouchKey * targetKey = m_keys[ c.m_targetKeyIndex ];
+/// KTouchKey * fingerKey = m_keys[ c.m_fingerKeyIndex ];
+/// KTouchKey * modifiedKey = m_keys[ c.m_modifierKeyIndex ];
+/// if (targetKey != NULL) {
+/// 	// ...
+/// }
+/// @endcode
 class KTouchKeyboard  {
   public:
 	/// Default constructor, sets up the standard number keyboard.
@@ -40,8 +56,8 @@ class KTouchKeyboard  {
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
 	
-    QList<KTouchKey>         		m_keys;      	///< List with key definitions.
-    QList<KTouchKeyConnector>		m_connectors;	///< List with connectivity data.
+    QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
+    QMap<QChar, KTouchKeyConnector>		m_connectors;	///< Mapping with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.
