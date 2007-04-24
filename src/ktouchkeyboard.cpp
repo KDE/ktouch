@@ -125,7 +125,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, QString type, QString& warnings) {
 	if (m_connectors.find(keyUnicode) != m_connectors.end()) {
 		warnings += i18n("%1 with display character '%2' and unicode '%3' "
-			"has been already defined and is skipped.\n").arg(type).arg(QChar(keyUnicode)).arg(keyUnicode);
+			"has been already defined and is skipped.\n", type, QChar(keyUnicode), keyUnicode);
 		return true;
 	}
 	else return false;
@@ -183,7 +183,7 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			KTouchKeyConnector & fingerKeyConn = m_connectors[ fingerUnicode ];
 			if (fingerKeyConn.m_targetKeyIndex == -1) {
 				warnings += i18n("Unknown finger key with unicode '%1'. Normal key with "
-					"display character '%2' and unicode '%3' skipped.\n").arg(fingerUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+					"display character '%2' and unicode '%3' skipped.\n", fingerUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
     		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
@@ -202,17 +202,17 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 
 			if (targetKeyConn.m_targetKeyIndex == -1) {
 				warnings += i18n("Unknown target key with unicode '%1'. Hidden key with "
-					"display character '%2' and unicode '%3' skipped.\n").arg(targetUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+					"display character '%2' and unicode '%3' skipped.\n", targetUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
 			if (fingerKeyConn.m_targetKeyIndex == -1) {
 				warnings += i18n("Unknown finger key with unicode '%1'. Hidden key with "
-					"display character '%2' and unicode '%3' skipped.\n").arg(fingerUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+					"display character '%2' and unicode '%3' skipped.\n", fingerUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
 			if (modifierUnicode != -1 && modifierKeyConn.m_targetKeyIndex == -1) {
 				warnings += i18n("Unknown modifier/control key with unicode '%1'. Hidden key with "
-					"display character '%2' and unicode '%3' skipped.\n").arg(modifierUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+					"display character '%2' and unicode '%3' skipped.\n", modifierUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, 
