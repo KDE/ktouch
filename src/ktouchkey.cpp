@@ -11,11 +11,17 @@
  ***************************************************************************/
 
 #include "ktouchkey.h"
+#include "ktouchkey.moc"
 
 #include <QtXml>
 #include <QtCore>
 
 #include <kdebug.h>
+
+#include "ktouchcolorscheme.h"
+#include "prefs.h"
+
+const double PEN_WIDTH = 1.0;
 
 KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 	: m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
@@ -24,6 +30,7 @@ KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 	m_keyChar[1] = QChar();
 	m_keyChar[2] = QChar();
 	m_keyChar[3] = QChar();
+	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------
 
@@ -33,6 +40,7 @@ KTouchKey::KTouchKey(int x, int y, int w, int h, const QString &text) :
 	m_type = OTHER;
 	m_keyChar[0] = QChar();
 	m_keyText = text;
+	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------
 
@@ -102,8 +110,7 @@ bool KTouchKey::read(QDomNode node) {
 
 // Writes the key data into the DomElement
 void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
-/*
-	QDomElement element = doc.createElement("KeyDefinition");
+	QDomElement element = doc.createElement("Key");
 	switch (m_type) {
 		case NORMAL     : element.setAttribute("Type", "NORMAL"); break;
 		case FINGER     : element.setAttribute("Type", "FINGER"); break;
@@ -113,10 +120,10 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 		case SPACE 		: element.setAttribute("Type", "SPACE"); break;
 		case OTHER 		: 
 			element.setAttribute("Type", "OTHER"); 
-			element.setAttribute("OtherKeyText", m_otherKeyText);
+			element.setAttribute("KeyText", m_keyText);
 			break;
 	}
-	QDomText charnode = doc.createTextNode(QString(m_primaryChar));
+/*	QDomText charnode = doc.createTextNode(QString(m_primaryChar));
 	element.appendChild(charnode);
 //	element.setAttribute("PrimaryChar", QString(m_primaryChar));
 	if (m_secondaryChar!=QChar(0))
@@ -130,3 +137,40 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 }
 // ----------------------------------------------------------------------------
 
+void KTouchKey::setState(state_t state) {
+	
+}
+// ----------------------------------------------------------------------------
+
+QRectF KTouchKey::boundingRect() const {
+	return QRectF(0 - PEN_WIDTH/2.0, 0 - PEN_WIDTH/2.0, 
+		m_w + PEN_WIDTH/2.0, m_h + PEN_WIDTH/2.0);
+}
+// ----------------------------------------------------------------------------
+
+void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
+
+	// get the colorscheme from the configuration
+    const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
+
+	// TODO : painting
+/*    if (m_isNextKey) {
+        painter->setBrush( colorScheme.m_backgroundH );
+        painter->setPen( colorScheme.m_frame );
+        painter->drawRoundRect(0, 0, m_w, m_h);
+        painter->setBrush(colorScheme.m_cBackgroundH );
+        painter->drawEllipse(0, 0, m_w, m_h);
+    }
+    else {
+        painter->setBrush( colorScheme.m_background[m_colorIndex] );
+        painter->setPen( colorScheme.m_frame );
+        painter->drawRoundRect(0, 0, m_w, m_h);
+    }
+
+    painter->setPen( colorScheme.m_text );
+    painter->setFont( m_font );
+    painter->drawText(0, 0+1, m_w, m_h, Qt::AlignCenter, m_keyText);
+*/
+}

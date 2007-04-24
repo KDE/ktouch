@@ -51,8 +51,12 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
         if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
-        result = read(in);
-    };
+		QString warnings;
+        result = read(in, warnings);
+		if (!warnings.isEmpty()) {
+			// TODO : show message box with warnings
+		}
+    }
     KIO::NetAccess::removeTempFile(target);
     return result;
 }
@@ -71,7 +75,11 @@ bool KTouchKeyboard::loadXML(QWidget * window, const KUrl& url) {
             return false;   // Bugger it... couldn't open it...
 		QDomDocument doc;
 		doc.setContent( &infile );
-        result = read(doc);
+		QString warnings;
+        result = read(doc, warnings);
+		if (!warnings.isEmpty()) {
+			// TODO : show message box with warnings
+		}
     }
     KIO::NetAccess::removeTempFile(target);
     return result;
@@ -114,8 +122,17 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 }
 // ----------------------------------------------------------------------------
 
+bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, QString type, QString& warnings) {
+	if (m_connectors.find(keyUnicode) != m_connectors.end()) {
+		warnings += i18n("%1 with display character '%2' and unicode '%3' "
+			"has been already defined and is skipped.\n").arg(type).arg(QChar(keyUnicode)).arg(keyUnicode);
+		return true;
+	}
+	else return false;
+}
+
 // Loads keyboard data from file, preserved for compatibility
-bool KTouchKeyboard::read(QTextStream& in) {
+bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
     QString line;
     clear();          // empty the keyboard
 
@@ -130,40 +147,81 @@ bool KTouchKeyboard::read(QTextStream& in) {
         // 'line' should now contain a key specification
         QTextStream lineStream(&line, QIODevice::ReadOnly);
         QString keyType;
-        int keyAscII;
+        int keyUnicode;
         QString keyText;
         int x(0), y(0), w(0), h(0);
-        lineStream >> keyType >> keyAscII;
+        lineStream >> keyType >> keyUnicode;
         if (keyType=="FingerKey") {
+			if (keyAlreadyExists(keyUnicode, i18n("Finger key"), warnings))   continue;
             lineStream >> keyText >> x >> y >> w >> h;
 			if (keyText.isEmpty()) continue;
             w=h=8; // set default values for finger keys
-			KTouchKey * key = new KTouchKey(KTouchKey::FINGER, x+1, y+1, w, h, keyText[0]);
+			// add a key connector
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), m_keys.count(), -1);
+			// finally add the key
+			KTouchKey * key = new KTouchKey(KTouchKey::FINGER, x+1, y+1, w, h, QChar(keyUnicode));
             m_keys.push_back(key);
         }
         else if (keyType=="ControlKey") {
+			if (keyAlreadyExists(keyUnicode, i18n("Control key"), warnings))   continue;
             lineStream >> keyText >> x >> y >> w >> h;
 			if (keyText.isEmpty()) continue;
+			// add a key connector
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1, -1);
 			KTouchKey * key = new KTouchKey(x+1, y+1, w-2, h-2, keyText);
             m_keys.push_back(key);
         }
         else if (keyType=="NormalKey") {
-            int fingerCharCode;
-            lineStream >> keyText >> x >> y >> fingerCharCode;
+			if (keyAlreadyExists(keyUnicode, i18n("Normal key"), warnings))   continue;
+            int fingerUnicode;
+            lineStream >> keyText >> x >> y >> fingerUnicode;
 			if (keyText.isEmpty()) continue;
             w=h=8; // set default values for normal keys
-			KTouchKey * key = new KTouchKey(KTouchKey::NORMAL, x+1, y+1, w, h, keyText[0]);
+			// lookup the finger key index
+			KTouchKeyConnector & fingerKeyConn = m_connectors[ fingerUnicode ];
+			if (fingerKeyConn.m_targetKeyIndex == -1) {
+				warnings += i18n("Unknown finger key with unicode '%1'. Normal key with "
+					"display character '%2' and unicode '%3' skipped.\n").arg(fingerUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+				continue;
+			}
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), fingerKeyConn.m_targetKeyIndex, -1);
+			// at last add the key
+			KTouchKey * key = new KTouchKey(KTouchKey::NORMAL, x+1, y+1, w, h, QChar(keyUnicode));
             m_keys.push_back(key);
-			//character_map[keyText[0]] = fingerCharCode;
         } else if (keyType=="HiddenKey") {
-            int targetChar, fingerChar, controlChar;
-            lineStream >> targetChar >> fingerChar >> controlChar;
-			//KTouchKeyConnector keycon(targetChar, targetChar, fingerChar, 0);
-            //m_connectors.push_back(keycon);
+			if (keyAlreadyExists(keyUnicode, i18n("Hidden key"), warnings))   continue;
+            int targetUnicode, fingerUnicode, modifierUnicode;
+            lineStream >> targetUnicode >> fingerUnicode >> modifierUnicode;
+			// lookup the associated keys
+			KTouchKeyConnector & targetKeyConn 		= m_connectors[ targetUnicode ];
+			KTouchKeyConnector & fingerKeyConn 		= m_connectors[ fingerUnicode ];
+			KTouchKeyConnector & modifierKeyConn 	= m_connectors[ modifierUnicode ];
+
+			if (targetKeyConn.m_targetKeyIndex == -1) {
+				warnings += i18n("Unknown target key with unicode '%1'. Hidden key with "
+					"display character '%2' and unicode '%3' skipped.\n").arg(targetUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+				continue;
+			}
+			if (fingerKeyConn.m_targetKeyIndex == -1) {
+				warnings += i18n("Unknown finger key with unicode '%1'. Hidden key with "
+					"display character '%2' and unicode '%3' skipped.\n").arg(fingerUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+				continue;
+			}
+			if (modifierUnicode != -1 && modifierKeyConn.m_targetKeyIndex == -1) {
+				warnings += i18n("Unknown modifier/control key with unicode '%1'. Hidden key with "
+					"display character '%2' and unicode '%3' skipped.\n").arg(modifierUnicode).arg(QChar(keyUnicode)).arg(keyUnicode);
+				continue;
+			}
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, 
+														  targetKeyConn.m_targetKeyIndex, 
+														  fingerKeyConn.m_targetKeyIndex, 
+														  modifierKeyConn.m_targetKeyIndex);	
         }
         else {
             //qdebug() << i18n("Missing key type in line '%1'.",line);
-            return false;
         }
         // TODO : calculate the maximum extent of the keyboard on the fly...
     } while (!in.atEnd() && !line.isNull());
@@ -175,7 +233,7 @@ bool KTouchKeyboard::read(QTextStream& in) {
 // ----------------------------------------------------------------------------
 
 // Loads keyboard data from file into an XML document
-bool KTouchKeyboard::read(const QDomDocument& doc) {
+bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 /*
 	// clean current data
 	kDebug() << "Reading new keyboard layout" << endl;
@@ -271,7 +329,7 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	// Store connectors
 	QDomElement conns = doc.createElement("Connections");
 	root.appendChild(conns);
-    for (QMap<QChar, KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (QMap<int, KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
 		it->write(doc, conns);
 }
 // ----------------------------------------------------------------------------

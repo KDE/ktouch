@@ -23,11 +23,10 @@
 class KTouchKeyConnector {
   public:
     /// Default constructor
-    KTouchKeyConnector() : m_keyChar(0), m_targetKeyIndex(-1), m_fingerKeyIndex(-1), m_modifierKeyIndex(-1)
+    KTouchKeyConnector() : m_keyChar(-1), m_targetKeyIndex(-1), m_fingerKeyIndex(-1), m_modifierKeyIndex(-1)
 	{}
     /// Constructor provided for convenience.
-    KTouchKeyConnector(QChar keyChar, unsigned int target_key, unsigned int finger_key,
-		               unsigned int modifier_key)
+    KTouchKeyConnector(int keyChar, int target_key, int finger_key, int modifier_key)
 	  : m_keyChar(keyChar), m_targetKeyIndex(target_key), m_fingerKeyIndex(finger_key),
 		m_modifierKeyIndex(modifier_key)
 	{}
@@ -37,10 +36,10 @@ class KTouchKeyConnector {
 	/// Creates a new DomElement, writes the key connector data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root) const;
 
-    QChar               m_keyChar;			///< This is the character that has to be pressed to access this key.
-    int					m_targetKeyIndex;	///< Index of the target key (-1 if none).
-    int					m_fingerKeyIndex;	///< Index of the finger key (-1 if none).
-	int					m_modifierKeyIndex;	///< Index of the modifier key (-1 if none).
+    int               	m_keyChar;				///< This is the unicode number for the character that has to be pressed to access this key.
+    int					m_targetKeyIndex;		///< Index of the target key (-1 if none).
+    int					m_fingerKeyIndex;		///< Index of the finger key (-1 if none).
+	int					m_modifierKeyIndex;		///< Index of the modifier key (-1 if none).
 };
 
 #endif  // KTOUCHKEYCONNECTOR_H

@@ -31,7 +31,7 @@ class KUrl;
 /// keys.
 /// @code
 /// QChar keyToPress = 'H';
-/// KTouchKeyConnector c = m_connectors[keyToPress];
+/// KTouchKeyConnector & c = m_connectors[keyToPress.unicode()];
 /// KTouchKey * targetKey = m_keys[ c.m_targetKeyIndex ];
 /// KTouchKey * fingerKey = m_keys[ c.m_fingerKeyIndex ];
 /// KTouchKey * modifiedKey = m_keys[ c.m_modifierKeyIndex ];
@@ -57,7 +57,7 @@ class KTouchKeyboard  {
 	void updateConnections();
 	
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
-    QMap<QChar, KTouchKeyConnector>		m_connectors;	///< Mapping with connectivity data.
+    QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.
@@ -69,10 +69,13 @@ class KTouchKeyboard  {
 	int			m_height;		///< The height of the keyboard (sum of all key row heights).
 	
   private:
+	/// Tests, whether a key with the given unicode number already exists in the keylist and
+	/// appends a warning message if it does.
+	bool keyAlreadyExists(int keyUnicode, QString type, QString& warnings);
     /// Loads keyboard data from file
-    bool read(QTextStream& in);
+    bool read(QTextStream& in, QString& warnings);
     /// Loads keyboard data from file into an XML document
-    bool read(const QDomDocument& doc);
+    bool read(const QDomDocument& doc, QString& warnings);
     /// Saves keyboard data in the XML document
     void write(QDomDocument& doc) const;
 };
