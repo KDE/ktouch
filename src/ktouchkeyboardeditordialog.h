@@ -1,7 +1,7 @@
 /***************************************************************************
- *   ktouchkeyboardeditor.h                                                *
- *   ----------------------                                                *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   ktouchkeyboardeditordialog.h                                          *
+ *   ----------------------------                                          *
+ *   Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai        *
  *   haavard@users.sourceforge.net, ghorwin@users.sourceforge.net          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -10,11 +10,10 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#ifndef KTOUCHKEYBOARDEDITOR_H
-#define KTOUCHKEYBOARDEDITOR_H
+#ifndef KTOUCHKEYBOARDEDITORDIALOG_H
+#define KTOUCHKEYBOARDEDITORDIALOG_H
 
-#include "ktouchkeyboardwidget.h"
-#include "ui_ktouchkeyboardeditor_dlg.h"
+#include "ui_ktouchkeyboardeditordialog.h"
 
 #include "ktouchkeyboard.h"
 
@@ -36,14 +35,14 @@
 ///  // keyboard or an empty URL
 /// @endcode
 /// @see startEditor() for details on the return value.
-class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
-    Q_OBJECT
+class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEditorDialog {
+	Q_OBJECT
 
   public:
     /// Constructor.
-    KTouchKeyboardEditor(QWidget* parent = 0, Qt::WFlags fl = 0 );
+    KTouchKeyboardEditorDialog(QWidget* parent = 0, Qt::WFlags fl = 0 );
     /// Default destructor.
-    virtual ~KTouchKeyboardEditor() {}
+    virtual ~KTouchKeyboardEditorDialog() {}
     /// Shows and executes the dialog (argument is the url to the default or 
     /// current keyboard file).
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
@@ -68,8 +67,6 @@ class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
     virtual void editBtnClicked();
     /// Called when the "Remove" button was clicked
     virtual void removeBtnClicked();
-    /// Called when the selection in the key list box has changed
-	virtual void keySelectionChanged(Q3ListBoxItem * item);
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
 
@@ -97,9 +94,8 @@ class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
     bool saveModified();
    
     KTouchKeyboard	m_keyboard;        ///< The keyboard data.
-    bool            m_selecting;       ///< Flag to prevent the selection slot from being selected twice.
     bool            m_modified;        ///< Flag indicating whether the keyboard has been modified.
     KUrl            m_currentURL;      ///< URL of the current keyboard.
 };
 
-#endif   // KTOUCHKEYBOARDEDITOR_H
+#endif   // KTOUCHKEYBOARDEDITORDIALOG_H

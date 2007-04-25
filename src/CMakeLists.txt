@@ -24,6 +24,7 @@ set(ktouch_SRCS
    ktouchcoloreditordialog.cpp 
    ktouchopenrequestdialog.cpp 
    ktouchlectureeditordialog.cpp 
+   ktouchkeyboardeditordialog.cpp 
    ktouchchartwidget.cpp 
    ktouchcolorscheme.cpp 
    ktouchdefaults.cpp 

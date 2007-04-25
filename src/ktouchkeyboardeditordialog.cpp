@@ -1,7 +1,7 @@
 /***************************************************************************
- *   ktouchkeyboardeditor.cpp                                              *
- *   ------------------------                                              *
- *   Copyright (C) 2000 by Håvard Frøiland, 2004 by Andreas Nicolai        *
+ *   ktouchkeyboardeditordialog.cpp                                        *
+ *   ------------------------------                                        *
+ *   Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai        *
  *   haavard@users.sourceforge.net, ghorwin@users.sourceforge.net          *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -10,38 +10,36 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "ktouchkeyboardeditor.h"
+#include "ktouchkeyboardeditordialog.h"
+#include "ktouchkeyboardeditordialog.moc"
 
 #include <QLabel>
 #include <QFont>
-#include <QPaintEvent>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>
 #include <klocale.h>
-#include <ksqueezedtextlabel.h>
-#include <klineedit.h>
-#include <ktextedit.h>
 #include <kfontdialog.h>
 #include <kdebug.h>
 
-#include <utility>
-
 #include "ktouch.h"
-#include "ktouchopenrequest.h"
+#include "ktouchopenrequestdialog.h"
 
 // **************************
 // ***** Public functions ***
 // **************************
 
-KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, Qt::WFlags fl)
+KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFlags fl)
   : QDialog(parent,fl)
 {
 	setupUi(this);
+
+    connect(openButton, SIGNAL(clicked()), this, SLOT(openBtnClicked()) );
+    connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
 }
 // -----------------------------------------------------------------------------
 
-bool KTouchKeyboardEditor::startEditor(const KUrl& url) {
+bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
     // call open request dialog and load a keyboard and start the dialogs event loop if
     // the user did not cancel the open request dialog 
     if (openKeyboardFile(url)==QDialog::Accepted)  {
@@ -58,28 +56,28 @@ bool KTouchKeyboardEditor::startEditor(const KUrl& url) {
 // ************************
 
 
-void KTouchKeyboardEditor::fontBtnClicked() {
+void KTouchKeyboardEditorDialog::fontBtnClicked() {
 	//kDebug() << "Fontbutton clicked" << endl;
     QFont f;
-    if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
+    if (KFontDialog::getFont(f)==QDialog::Accepted) {
 		m_keyboard.m_fontSuggestions = f.toString();
 		// update font and keyboard display
 		titleEdit->setFont(f);  
-		keyboardCommentEdit->setFont(f);  
-		languageEdit->setFont(f);  
+		commentEdit->setFont(f);  
+		langIDEdit->setFont(f);  
 		update();	// trigger repaint of the keyboard.
 		setModified();
     }
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditor::openBtnClicked() {
+void KTouchKeyboardEditorDialog::openBtnClicked() {
     saveModified();  // save if modified
     openKeyboardFile(KUrl(""));
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditor::saveBtnClicked() {
+void KTouchKeyboardEditorDialog::saveBtnClicked() {
     if (m_currentURL.isEmpty()) saveAsBtnClicked();
     else {
         transfer_from_dialog();
@@ -89,7 +87,7 @@ void KTouchKeyboardEditor::saveBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditor::saveAsBtnClicked() {
+void KTouchKeyboardEditorDialog::saveAsBtnClicked() {
     QString tmp = KFileDialog::getSaveFileName(QString(), 
         i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
@@ -102,22 +100,17 @@ void KTouchKeyboardEditor::saveAsBtnClicked() {
 // -----------------------------------------------------------------------------
 
 /// Called when the "Add..." button was clicked
-void KTouchKeyboardEditor::addBtnClicked() {
+void KTouchKeyboardEditorDialog::addBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
 /// Called when the "Edit..." button was clicked
-void KTouchKeyboardEditor::editBtnClicked() {
+void KTouchKeyboardEditorDialog::editBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
 /// Called when the "Remove" button was clicked
-void KTouchKeyboardEditor::removeBtnClicked() {
-}
-// -----------------------------------------------------------------------------
-
-/// Called when the selection in the key list box has changed
-void KTouchKeyboardEditor::keySelectionChanged(Q3ListBoxItem * item) {
+void KTouchKeyboardEditorDialog::removeBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
@@ -125,7 +118,7 @@ void KTouchKeyboardEditor::keySelectionChanged(Q3ListBoxItem * item) {
 // ***** Private functions ****
 // ****************************
 
-void KTouchKeyboardEditor::transfer_to_dialog() {
+void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	if (m_currentURL.isEmpty()) {
 		titleEdit->setText( i18n("untitled keyboard layout") );
 		commentEdit->setText("");
@@ -166,17 +159,17 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 }
 // -----------------------------------------------------------------------------
     
-void KTouchKeyboardEditor::transfer_from_dialog() {
+void KTouchKeyboardEditorDialog::transfer_from_dialog() {
 	m_keyboard.m_title = titleEdit->text();
 	if (m_keyboard.m_title.isEmpty())  m_keyboard.m_title = i18n("untitled keyboard layout");
-	m_keyboard.m_comment = commentEdit->text();
+	m_keyboard.m_comment = commentEdit->toPlainText();
 	m_keyboard.m_language = langIDEdit->text();
 }
 // -----------------------------------------------------------------------------
 
-int KTouchKeyboardEditor::openKeyboardFile(const KUrl& url) {
+int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
     // First setup the open request dialog
-    KTouchOpenRequest dlg(this);
+    KTouchOpenRequestDialog dlg(this);
     // Call the dialog
     KUrl new_url;
     int result = dlg.requestFileToOpen(new_url,
@@ -214,7 +207,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KUrl& url) {
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditor::setModified(bool flag) {
+void KTouchKeyboardEditorDialog::setModified(bool flag) {
     m_modified = flag;
     if (!m_currentURL.isEmpty()) {
         if (flag) this->setWindowTitle("KTouch Keyboard Editor - " + m_currentURL.url() + i18n(" (modified)"));
@@ -225,13 +218,15 @@ void KTouchKeyboardEditor::setModified(bool flag) {
 }
 // -----------------------------------------------------------------------------
 
-bool KTouchKeyboardEditor::saveModified() {
+bool KTouchKeyboardEditorDialog::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The keyboard has been changed. Do you want to save the changes?"),QString(),KStdGuiItem::save(),KStdGuiItem::discard());
-    if (result == KMessageBox::Cancel) return false; // User aborted
-    if (result == KMessageBox::Yes) saveBtnClicked();
+        i18n("The keyboard has been changed. Do you want to save the changes?"),QString(),KStandardGuiItem::save(),KStandardGuiItem::discard());
+    if (result == KMessageBox::Cancel) 
+		return false; // User aborted
+    if (result == KMessageBox::Yes) 
+		saveBtnClicked();
     // if successfully saved the modified flag will be reset in the saveBtnClicked() function
     return true; // User acknowledged
 }
