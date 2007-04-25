@@ -58,7 +58,7 @@ public:
 	};
 
 	/// Default constructor.
-	KTouchKey() : m_type(NORMAL), m_x(0), m_y(0), m_w(0), m_h(0) {}
+	KTouchKey();
 	/// Convenience constructor for a key with a single character.
 	KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch);
 	/// Convenience constructor for a key with a text on it (type will be OTHER).
@@ -85,6 +85,9 @@ public:
 
 
 	// *** member variables ***
+
+	state_t			m_state;		///< The current state of the key (normal, highlighted etc.)
+	unsigned int	m_colorIndex;	///< The color index of the key (corresponds to the assigned finger key).
 
 	unsigned int	m_number;		///< The number of the key.
 	keytype_t		m_type;			///< The type of the key.

@@ -21,6 +21,7 @@
 #include <ktemporaryfile.h>
 #include <kio/netaccess.h>
 #include <klocale.h>
+#include <kmessagebox.h>
 
 #include "ktouchkey.h"
 
@@ -54,7 +55,10 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
 		QString warnings;
         result = read(in, warnings);
 		if (!warnings.isEmpty()) {
-			// TODO : show message box with warnings
+			KMessageBox::warningContinueCancel(window,
+				i18n("There were warnings while reading the keyboard file '%1':\n%2").arg(url.path()).arg(warnings),
+				i18n("Reading keyboard layout..."));
+			// TODO : handle dialog return codes appropriately
 		}
     }
     KIO::NetAccess::removeTempFile(target);

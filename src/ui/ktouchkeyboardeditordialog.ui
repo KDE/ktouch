@@ -65,17 +65,6 @@
         </property>
         <item row="0" column="0" >
          <widget class="QLabel" name="titleLabel" >
-          <property name="font" >
-           <font>
-            <family>Helvetica</family>
-            <pointsize>9</pointsize>
-            <weight>75</weight>
-            <italic>false</italic>
-            <bold>true</bold>
-            <underline>false</underline>
-            <strikeout>false</strikeout>
-           </font>
-          </property>
           <property name="text" >
            <string>Keyboard title:</string>
           </property>

@@ -23,23 +23,36 @@
 
 const double PEN_WIDTH = 1.0;
 
+KTouchKey::KTouchKey() : 
+	m_state(NORMAL_STATE), m_type(NORMAL), m_x(0), m_y(0), m_w(0), m_h(0) 
+{
+	m_keyChar[0] = QChar();
+	m_keyChar[1] = QChar();
+	m_keyChar[2] = QChar();
+	m_keyChar[3] = QChar();
+	m_colorIndex = 0;
+	setPos(m_x, m_y);
+}
+
 KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
-	: m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
+	: m_state(NORMAL_STATE), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_keyChar[0] = ch;
 	m_keyChar[1] = QChar();
 	m_keyChar[2] = QChar();
 	m_keyChar[3] = QChar();
+	m_colorIndex = 0;
 	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------
 
 KTouchKey::KTouchKey(int x, int y, int w, int h, const QString &text) :
-	m_x(x), m_y(y), m_w(w), m_h(h)
+	m_state(NORMAL_STATE), m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_type = OTHER;
 	m_keyChar[0] = QChar();
 	m_keyText = text;
+	m_colorIndex = 0;
 	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------
@@ -138,13 +151,14 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 // ----------------------------------------------------------------------------
 
 void KTouchKey::setState(state_t state) {
-	
+	m_state = state;
+	update();	
 }
 // ----------------------------------------------------------------------------
 
 QRectF KTouchKey::boundingRect() const {
-	return QRectF(0 - PEN_WIDTH/2.0, 0 - PEN_WIDTH/2.0, 
-		m_w + PEN_WIDTH/2.0, m_h + PEN_WIDTH/2.0);
+	return QRectF(- PEN_WIDTH/2.0, - PEN_WIDTH/2.0, 
+		m_w + PEN_WIDTH, m_h + PEN_WIDTH);
 }
 // ----------------------------------------------------------------------------
 
@@ -155,22 +169,36 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	// get the colorscheme from the configuration
     const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()];
 
-	// TODO : painting
-/*    if (m_isNextKey) {
+	// first draw the background
+	switch (m_state) {
+	  case NORMAL_STATE : 
+        painter->setBrush( colorScheme.m_background[m_colorIndex] );
+        painter->setPen( colorScheme.m_frame );
+        painter->drawRoundRect(0, 0, m_w, m_h);
+	  break;
+
+	  default:
         painter->setBrush( colorScheme.m_backgroundH );
         painter->setPen( colorScheme.m_frame );
         painter->drawRoundRect(0, 0, m_w, m_h);
         painter->setBrush(colorScheme.m_cBackgroundH );
         painter->drawEllipse(0, 0, m_w, m_h);
-    }
-    else {
-        painter->setBrush( colorScheme.m_background[m_colorIndex] );
-        painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(0, 0, m_w, m_h);
-    }
+	  break;
+	};
 
     painter->setPen( colorScheme.m_text );
-    painter->setFont( m_font );
-    painter->drawText(0, 0+1, m_w, m_h, Qt::AlignCenter, m_keyText);
-*/
+    QFont f("Monospace");
+    f.setPointSizeF(3.0);
+    painter->setFont( f );
+	switch (m_type) {
+	  case NORMAL :
+	  case FINGER :
+		if (m_keyChar[0] == QChar()) return;
+		painter->drawText(1, 1, m_w-2, m_h-2, Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
+		break;
+
+	  case OTHER :
+		painter->drawText(1, 1, m_w-2, m_h-2, Qt::AlignCenter, m_keyText);
+		break;
+	}
 }

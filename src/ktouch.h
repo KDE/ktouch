@@ -64,6 +64,8 @@ class KTouch : public KXmlGuiWindow {
 
 	/// Returns the available lecture files
 	const QStringList& lectureFiles() const { return m_lectureFiles; }
+	/// Returns the available keyboard files
+	const QStringList& keyboardFiles() const { return m_keyboardFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
 	KTouchLectureStats& getCurrentLectureStats();
 	/// Clears the statistics data.

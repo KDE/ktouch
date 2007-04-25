@@ -13,12 +13,15 @@
 #ifndef KTOUCHKEYBOARDEDITORDIALOG_H
 #define KTOUCHKEYBOARDEDITORDIALOG_H
 
+#include <QDialog>
+#include <QGraphicsView>
+#include <QResizeEvent>
+
+#include <kurl.h>
+
 #include "ui_ktouchkeyboardeditordialog.h"
 
 #include "ktouchkeyboard.h"
-
-#include <kurl.h>
-#include <QDialog>
 
 /// This is the KTouch keyboard editor dialog.
 ///
@@ -70,10 +73,14 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
 
+  protected:
+    /// Resizes the keyboard.
+    void resizeEvent(QResizeEvent *);
+
   protected slots:
     /// Called when the editor is rejected (x clicked).
     void reject() { closeQuery(); };
-  
+
   private:    
     /// Transfers data from the keyboard object to the dialog.
     void transfer_to_dialog();
@@ -92,10 +99,13 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     /// If the user accepts the dialog the file is saved. 
     /// @return The function returns 'false' if the user aborted the save request, otherwise true.
     bool saveModified();
-   
-    KTouchKeyboard	m_keyboard;        ///< The keyboard data.
-    bool            m_modified;        ///< Flag indicating whether the keyboard has been modified.
-    KUrl            m_currentURL;      ///< URL of the current keyboard.
+
+    KTouchKeyboard	m_keyboard;			///< The keyboard data.
+    bool            m_modified;			///< Flag indicating whether the keyboard has been modified.
+    KUrl            m_currentURL;		///< URL of the current keyboard.
+
+    QGraphicsScene	*m_scene;			///< The graphics scene 
+
 };
 
 #endif   // KTOUCHKEYBOARDEDITORDIALOG_H

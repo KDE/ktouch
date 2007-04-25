@@ -45,6 +45,7 @@
 #include "ktouchtextlinewidget.h"
 
 #include "ktouchlectureeditordialog.h"
+#include "ktouchkeyboardeditordialog.h"
 #include "ktouchcoloreditordialog.h"
 #include "ktouchstatisticsdialog.h"
 #include "ktouchusersetupdialog.h"
@@ -169,8 +170,6 @@ void KTouch::applyPreferences() {
 }
 // ----------------------------------------------------------------------------
 
-
-
 void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     if (keyEvent->text().isEmpty()) return;
 
@@ -195,11 +194,13 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
     }
     keyEvent->accept();
 }
+// -----------------------------------------------------------------------------
 
 void KTouch::inputMethodEvent( QInputMethodEvent* m ){
     m_trainer->keyPressed(m->commitString().at(0));
     m->accept();
 }
+// -----------------------------------------------------------------------------
 
 // The action File->Open text...
 void KTouch::fileOpenText() {
@@ -332,13 +333,13 @@ void KTouch::fileEditColors() {
 void KTouch::fileEditKeyboard() {
 	trainingPause();
 	// Create and execute editor
-//    KTouchKeyboardEditor dlg(this);
-//    dlg.startEditor( Prefs::currentKeyboardFile() );
-	// Reload lecture in case it was modified
-	//m_keyboard.loadXML(this, Prefs::currentKeyboardFile() );
-	//updateFontFromLecture();
-	// adjust check marks in quick-select menus
-	//updateKeyboardActionCheck();
+    KTouchKeyboardEditorDialog dlg(this);
+    if (dlg.startEditor( Prefs::currentKeyboardFile() )) {
+		// Reload keyboard in case it was modified
+		m_keyboardWidget->applyPreferences(this, false);
+		// adjust check marks in quick-select menus
+		updateKeyboardActionCheck();
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -351,7 +352,7 @@ void KTouch::trainingNewSession() {
     trainingPause();
 	int result = KMessageBox::questionYesNoCancel(this,
 		i18n("Would you like to keep the current level for the new training session?"),
-		i18n("Start New Training Session"),KGuiItem(i18n("Keep Current Level")),KGuiItem(i18n("Do Not Keep")));
+		i18n("Start new training session"),KGuiItem(i18n("Keep current level")),KGuiItem(i18n("Start from first level")));
 	if (result == KMessageBox::Cancel) return;
 	// store the statistics obtained so far in the trainer object
 	m_trainer->storeTrainingStatistics();
@@ -648,8 +649,12 @@ void KTouch::setupActions() {
     action->setText( i18n("&Edit color scheme...") );
     action->setIcon( KIcon("color-fill") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
-//    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0,
-//		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
+
+    action = actionCollection()->addAction( "file_editkeyboard" );
+    action->setText( i18n("&Edit keyboard layout...") );
+    action->setIcon( KIcon("edit") );
+    connect(action, SIGNAL(triggered(bool)), SLOT(fileEditKeyboard()));
+
     KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***

@@ -20,6 +20,7 @@
 #include <QVector>
 #include <QMap>
 
+
 #include "ktouchkeys.h"
 #include "ktouchkeyboard.h"	// (new) contains all keyboard data
 
@@ -59,7 +60,7 @@ class KTouchKeyboardWidget : public QGraphicsView {
 
   protected:
 
-    /// Resizes (recalculates m_shift and m_scale) and redraws the keyboard.
+    /// Resizes the keyboard.
     void resizeEvent(QResizeEvent *);
     void reset();
 

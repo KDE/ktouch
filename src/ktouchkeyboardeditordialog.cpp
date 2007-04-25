@@ -34,6 +34,14 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 {
 	setupUi(this);
 
+    m_scene = new QGraphicsScene(this);
+	keyboardView->setScene(m_scene);
+    keyboardView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    keyboardView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    keyboardView->setRenderHint(QPainter::Antialiasing);
+    keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
+    keyboardView->setFrameStyle(QFrame::NoFrame);
+
     connect(openButton, SIGNAL(clicked()), this, SLOT(openBtnClicked()) );
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
 }
@@ -44,7 +52,10 @@ bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
     // the user did not cancel the open request dialog 
     if (openKeyboardFile(url)==QDialog::Accepted)  {
         exec();
-        return true;
+		// Even if the user cancels the dialog we must assume that a keyboard layout 
+		// was changed and save to disk. Thus, to be save, we return 'true' and
+		// indicate that the keyboard has to be updated.
+        return true; 
     }
     else  return false;
 }
@@ -114,6 +125,16 @@ void KTouchKeyboardEditorDialog::removeBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
+void KTouchKeyboardEditorDialog::resizeEvent(QResizeEvent *) {
+    QRectF sbr = m_scene->itemsBoundingRect();
+    qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
+
+    QMatrix matrix;
+    matrix.scale(scale, scale);
+    keyboardView->setMatrix(matrix);
+}
+// -----------------------------------------------------------------------------
+
 // ****************************
 // ***** Private functions ****
 // ****************************
@@ -129,33 +150,38 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	}
 	langIDEdit->setText(m_keyboard.m_language);
 	kDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
+	m_keyboard.m_fontSuggestions = "Monospace";
 	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
 		QFont f;
 		f.fromString(m_keyboard.m_fontSuggestions);
-		titleEdit->setFont(f);  
+		titleEdit->setFont(f);
 		commentEdit->setFont(f);
 		langIDEdit->setFont(f);
 	}
-//	kDebug() << "Adding key definitions to key list" << endl;
-/*	keyListBox->clear();
-	QVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
 	unsigned int min_y = 100000;
 	unsigned int max_y = 0;
+	QList<KTouchKey*>::iterator it;
 	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
-		switch (it->m_type) {
+		KTouchKey * key = *it;
+        m_scene->addItem(key);
+
+		//kDebug() << "x:y = " << key->m_x << ":" << key->m_y << endl;
+
+/*		switch (it->m_type) {
 			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + QString(it->m_primaryChar) + '\''); break;
 			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + QString(it->m_primaryChar) + '\''); break;
 			default                : keyListBox->insertItem("O  '" + it->m_otherKeyText + '\''); break;
 		}
-		min_x = std::min<unsigned int>(min_x, it->m_x);
-		max_x = std::max<unsigned int>(max_x, it->m_x+it->m_w);
-		min_y = std::min<unsigned int>(min_y, it->m_y);
-		max_y = std::max<unsigned int>(max_y, it->m_y+it->m_h);
+*/
+		min_x = qMin<unsigned int>(min_x, (*it)->m_x);
+		max_x = qMax<unsigned int>(max_x, (*it)->m_x+(*it)->m_w);
+		min_y = qMin<unsigned int>(min_y, (*it)->m_y);
+		max_y = qMax<unsigned int>(max_y, (*it)->m_y+(*it)->m_h);
 	}
 	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2", max_x - min_x, max_y - min_y) );
-*/
+	resize(width(), height());
 }
 // -----------------------------------------------------------------------------
     
@@ -179,7 +205,7 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
         i18n("Open a default keyboard:"),
         i18n("Open a keyboard file:"),
         i18n("Create new keyboard"),
-        url, KTouchPtr->lectureFiles(), i18n("<no keyboard files available>"));
+        url, KTouchPtr->keyboardFiles(), i18n("<no keyboard files available>"));
 
     if (result == QDialog::Accepted) {
         // Ok, user confirmed the dialog, now lets get the url
