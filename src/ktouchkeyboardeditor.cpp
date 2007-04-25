@@ -34,9 +34,10 @@
 // ***** Public functions ***
 // **************************
 
-KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bool modal, Qt::WFlags fl)
-  : QDialog(parent,name, modal,fl)
+KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, Qt::WFlags fl)
+  : QDialog(parent,fl)
 {
+	setupUi(this);
 }
 // -----------------------------------------------------------------------------
 
@@ -120,13 +121,6 @@ void KTouchKeyboardEditor::keySelectionChanged(Q3ListBoxItem * item) {
 }
 // -----------------------------------------------------------------------------
 
-
-
-void KTouchKeyboardEditor::paintEvent(QPaintEvent *) {
-	
-}
-// -----------------------------------------------------------------------------
-
 // ****************************
 // ***** Private functions ****
 // ****************************
@@ -134,23 +128,23 @@ void KTouchKeyboardEditor::paintEvent(QPaintEvent *) {
 void KTouchKeyboardEditor::transfer_to_dialog() {
 	if (m_currentURL.isEmpty()) {
 		titleEdit->setText( i18n("untitled keyboard layout") );
-		keyboardCommentEdit->setText("");
+		commentEdit->setText("");
 	}
 	else {
 		titleEdit->setText(m_keyboard.m_title);
-		keyboardCommentEdit->setText(m_keyboard.m_comment);
+		commentEdit->setText(m_keyboard.m_comment);
 	}
-	languageEdit->setText(m_keyboard.m_language);
+	langIDEdit->setText(m_keyboard.m_language);
 	kDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
 	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
 		QFont f;
 		f.fromString(m_keyboard.m_fontSuggestions);
 		titleEdit->setFont(f);  
-		keyboardCommentEdit->setFont(f);
-		languageEdit->setFont(f);
+		commentEdit->setFont(f);
+		langIDEdit->setFont(f);
 	}
-	kDebug() << "Adding key definitions to key list" << endl;
-	keyListBox->clear();
+//	kDebug() << "Adding key definitions to key list" << endl;
+/*	keyListBox->clear();
 	QVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
@@ -168,14 +162,15 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 		max_y = std::max<unsigned int>(max_y, it->m_y+it->m_h);
 	}
 	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2", max_x - min_x, max_y - min_y) );
+*/
 }
 // -----------------------------------------------------------------------------
     
 void KTouchKeyboardEditor::transfer_from_dialog() {
 	m_keyboard.m_title = titleEdit->text();
 	if (m_keyboard.m_title.isEmpty())  m_keyboard.m_title = i18n("untitled keyboard layout");
-	m_keyboard.m_comment = keyboardCommentEdit->text();
-	m_keyboard.m_language = languageEdit->text();
+	m_keyboard.m_comment = commentEdit->text();
+	m_keyboard.m_language = langIDEdit->text();
 }
 // -----------------------------------------------------------------------------
 

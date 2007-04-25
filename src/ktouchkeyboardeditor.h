@@ -20,8 +20,6 @@
 
 #include <kurl.h>
 #include <QDialog>
-//Added by qt3to4:
-#include <QPaintEvent>
 
 /// This is the KTouch keyboard editor dialog.
 ///
@@ -43,9 +41,9 @@ class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
 
   public:
     /// Constructor.
-    KTouchKeyboardEditor(QWidget* parent = 0, const char* name = 0, bool modal = false, Qt::WFlags fl = 0 );
+    KTouchKeyboardEditor(QWidget* parent = 0, Qt::WFlags fl = 0 );
     /// Default destructor.
-    ~KTouchKeyboardEditor() {}
+    virtual ~KTouchKeyboardEditor() {}
     /// Shows and executes the dialog (argument is the url to the default or 
     /// current keyboard file).
     /// @return Returns 'true' if the dialog was properly executed (thus reloading 
@@ -78,11 +76,6 @@ class KTouchKeyboardEditor : public QDialog, public Ui_KTouchKeyboardEditorDlg {
   protected slots:
     /// Called when the editor is rejected (x clicked).
     void reject() { closeQuery(); };
-
-
-  protected:
-    /// Draws the keyboard in the keyboardPreviewLabel.
-    void paintEvent(QPaintEvent *);
   
   private:    
     /// Transfers data from the keyboard object to the dialog.
