@@ -11,6 +11,7 @@ kde4_add_ui_files(ktouch_UIS
    ui/ktouchlectureeditordialog.ui 
    ui/ktouchstatisticsdialog.ui 
    ui/ktouchusersetupdialog.ui
+   ui/ktouchkeyboardeditordialog.ui
    ui/ktouchprefgeneralpage.ui 
    ui/ktouchprefcolorspage.ui 
    ui/ktouchprefkeyboardpage.ui 
