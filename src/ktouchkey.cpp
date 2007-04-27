@@ -69,6 +69,8 @@ bool KTouchKey::read(QDomElement e) {
 		else if (typetext=="ENTER")  	m_type = Enter;
 		else if (typetext=="BACKSPACE")	m_type = Backspace;
 		else if (typetext=="SHIFT")  	m_type = Shift;
+		else if (typetext=="CAPSLOCK")  m_type = CapsLock;
+		else if (typetext=="TAB")  		m_type = Tab;
 		else if (typetext=="SPACE")  	m_type = Space;
 		else if (typetext=="OTHER") {
 			m_type = Other;
@@ -117,6 +119,8 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 		case Enter		: element.setAttribute("Type", "ENTER"); break;
 		case Backspace 	: element.setAttribute("Type", "BACKSPACE"); break;
 		case Shift		: element.setAttribute("Type", "SHIFT"); break;
+		case CapsLock	: element.setAttribute("Type", "CAPSLOCK"); break;
+		case Tab		: element.setAttribute("Type", "TAB"); break;
 		case Space 		: element.setAttribute("Type", "SPACE"); break;
 		case Other 		: 
 			element.setAttribute("Type", "OTHER"); 
@@ -183,7 +187,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
 				QColor c = colorScheme.m_background[m_colorIndex];
 				grad.setColorAt(0,c);
-				double h, s, v, a;
+				qreal h, s, v, a;
 				c.getHsvF(&h, &s, &v, &a);
 				c.setHsvF(h, s, v*0.8, a);
 				grad.setColorAt(1,c);
@@ -194,16 +198,12 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 				painter->drawRect(0, 0, m_w, m_h);
 			} break;
 			
-			case Enter : ;
-			case Backspace : ;
-			case Shift : ;
-			case Space : ;
-			case Other : 
+			default :
 			{
 				QLinearGradient grad(QPointF(0,0), QPointF(0,m_h));
 				QColor c = colorScheme.m_cBackground;
 				grad.setColorAt(0,c);
-				double h, s, v, a;
+				qreal h, s, v, a;
 				c.getHsvF(&h, &s, &v, &a);
 				c.setHsvF(h, s, v*0.7, a);
 				grad.setColorAt(1,c);
@@ -218,20 +218,123 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	  } break; // NormalState
 	}
 
-    painter->setPen( colorScheme.m_text );
+	// draw text/decoration
     KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());
     QFont f = kb->font();
-    f.setPointSizeF( qMax(0.01, m_h*0.5) );
-    painter->setFont( f );
+	
+    painter->setRenderHint(QPainter::Antialiasing);
+
+	QPen p(colorScheme.m_text);
+	p.setWidthF(m_h*0.05);
+    painter->setPen( p );
+
+   	qreal h = qMin(m_w, m_h);
+   	qreal ch = h*0.5;   // the height for the special chars
 	switch (m_type) {
 	  case Normal :
-	  case Finger :
-		if (m_keyChar[0] == QChar()) return;
-		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
-		break;
+	  case Finger : 
+	  {
+	  	// only one topleft character?
+	  	if (m_keyChar[0] != QChar() && 
+	  		m_keyChar[1] == QChar() && m_keyChar[2] == QChar() && m_keyChar[3] == QChar())
+	  	{ 
+	  		// print the character a little bit bigger
+    		f.setPointSizeF( qMax(0.01, m_h*0.4) );
+    		painter->setFont( f );
+			painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
+		}
+		else {
+    		f.setPointSizeF( qMax(0.01, m_h*0.3) );
+    		painter->setFont( f );
+    		// print each character in one corner
+    		if (m_keyChar[KTouchKey::TopLeft] != QChar()) {
+				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+								  Qt::AlignLeft | Qt::AlignTop, m_keyChar[KTouchKey::TopLeft]);
+    		}
+    		if (m_keyChar[KTouchKey::TopRight] != QChar()) {
+				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+								  Qt::AlignRight | Qt::AlignTop, m_keyChar[KTouchKey::TopRight]);
+    		}
+    		if (m_keyChar[KTouchKey::BottomLeft] != QChar()) {
+				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+								  Qt::AlignLeft | Qt::AlignBottom, m_keyChar[KTouchKey::BottomLeft]);
+    		}
+    		if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
+				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
+    		}
+		}
+		
+	  } break;
 
+	  case Enter : {
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
+
+        painter->drawLine(QLineF(xright, y-ch/2,xright, y));
+        painter->drawLine(QLineF(xleft, y,xright, y));
+        painter->drawLine(QLineF(xleft, y, xleft+ch/3, y-static_cast<qreal>(ch*0.15)));
+        painter->drawLine(QLineF(xleft, y, xleft+ch/3, y+static_cast<qreal>(ch*0.15)));
+	  } break;
+		
+	  case Backspace : {
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
+
+        painter->drawLine(QLineF(xleft, y,xright, y));
+        painter->drawLine(QLineF(xleft, y, xleft+ch/2, y-ch*0.15));
+        painter->drawLine(QLineF(xleft, y, xleft+ch/2, y+ch*0.15));
+	  } break;
+	  
+	  case Shift : {
+        qreal x = 0+h/2;
+        qreal y = 0+m_h/2;
+        painter->drawLine(QLineF(x-ch/2, y, x-ch/4, y));
+        painter->drawLine(QLineF(x-ch/4, y, x-ch/4, y+ch/2));
+        painter->drawLine(QLineF(x-ch/4, y+ch/2, x+ch/4, y+ch/2));
+        painter->drawLine(QLineF(x+ch/4, y+ch/2, x+ch/4, y));
+        painter->drawLine(QLineF(x+ch/4, y, x+ch/2, y));
+        painter->drawLine(QLineF(x+ch/2, y, x, y-ch/2));
+        painter->drawLine(QLineF(x, y-ch/2, x-ch/2, y));
+	  } break;
+	  
+	  case CapsLock : {
+        qreal x = 0+h/2;
+        qreal y = 0+m_h/2;
+
+        painter->drawLine(QLineF(x-ch/2, y, x-ch/4, y));
+        painter->drawLine(QLineF(x-ch/4, y, x-ch/4, y-ch/2));
+        painter->drawLine(QLineF(x-ch/4, y-ch/2, x+ch/4, y-ch/2));
+        painter->drawLine(QLineF(x+ch/4, y-ch/2, x+ch/4, y));
+        painter->drawLine(QLineF(x+ch/4, y, x+ch/2, y));
+        painter->drawLine(QLineF(x+ch/2, y, x, y+ch/2));
+        painter->drawLine(QLineF(x, y+ch/2, x-ch/2, y));
+	  } break;
+
+	  case Tab : {
+        qreal xleft = 0+h/2-ch/2;
+        qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
+        qreal y = 0+m_h/2;
+
+        painter->drawLine(QLineF(xleft, y,xleft, y-ch/2));
+        painter->drawLine(QLineF(xleft, y-ch/4, xright, y-ch/4));
+        painter->drawLine(QLineF(xleft, y-ch/4, xleft+ch/2, y- ch*0.10));
+        painter->drawLine(QLineF(xleft, y-ch/4, xleft+ch/2, y- ch*0.40));
+        painter->drawLine(QLineF(xright, y, xright, y+ch/2));
+        painter->drawLine(QLineF(xleft,  y+ch/4, xright, y+ch/4));
+        painter->drawLine(QLineF(xright, y+ch/4, xright-ch/2, y+ch*0.10));
+        painter->drawLine(QLineF(xright, y+ch/4, xright-ch/2, y+ch*0.40));
+	  } break;
+	  
+	  case Space : ; break; // nothing on space key
+	  
 	  case Other :
-		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignCenter, m_keyText);
+   		f.setPointSizeF( qMax(0.01, m_h*0.4) );
+   		painter->setFont( f );
+		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignCenter | Qt::AlignVCenter, m_keyText);
 		break;
 	}
+    painter->setRenderHint(QPainter::Antialiasing, false);
 }

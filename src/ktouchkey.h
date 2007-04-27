@@ -46,6 +46,8 @@ public:
 	  Backspace,
 	  Shift,
 	  Space,
+	  CapsLock,
+	  Tab,
 	  Other
 	};
  

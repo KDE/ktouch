@@ -180,7 +180,15 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			// add a key connector
     		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1, -1);
+			KTouchKey::keytype_t type = KTouchKey::Other;
+			if (keyText.compare("Enter",Qt::CaseInsensitive)==0)			type = KTouchKey::Enter;
+			else if (keyText.compare("Space",Qt::CaseInsensitive)==0)		type = KTouchKey::Space;
+			else if (keyText.compare("BackSpace",Qt::CaseInsensitive)==0)	type = KTouchKey::Backspace;
+			else if (keyText.compare("Shift",Qt::CaseInsensitive)==0)		type = KTouchKey::Shift;
+			else if (keyText.compare("CapsLock",Qt::CaseInsensitive)==0)	type = KTouchKey::CapsLock;
+			else if (keyText.compare("Tab",Qt::CaseInsensitive)==0)			type = KTouchKey::Tab;
 			KTouchKey * key = new KTouchKey(this, x, y, w, h, keyText);
+			key->m_type = type;
             m_keys.push_back(key);
         }
         else if (keyType=="NormalKey") {
@@ -430,6 +438,8 @@ void KTouchKeyboard::updateKeyColors() {
 			case KTouchKey::Enter : ;
 			case KTouchKey::Backspace : ;
 			case KTouchKey::Shift : ;
+			case KTouchKey::CapsLock : ;
+			case KTouchKey::Tab : ;
 			case KTouchKey::Space : ;
 			case KTouchKey::Other : (*it)->m_colorIndex = -1; break;
 			
