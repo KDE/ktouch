@@ -15,6 +15,7 @@
 
 #include <QtXml>
 #include <QtCore>
+#include <QColor>
 
 #include <kdebug.h>
 
@@ -171,20 +172,51 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 
 	// first draw the background
 	switch (m_state) {
-	  case NormalState : 
-        painter->setBrush( colorScheme.m_background[m_colorIndex] );
-        painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(0, 0, m_w, m_h);
-	  break;
-
-	  default:
-        painter->setBrush( colorScheme.m_backgroundH );
-        painter->setPen( colorScheme.m_frame );
-        painter->drawRoundRect(0, 0, m_w, m_h);
-        painter->setBrush(colorScheme.m_cBackgroundH );
-        painter->drawEllipse(0, 0, m_w, m_h);
-	  break;
-	};
+	  case NormalState :
+	  {
+	  
+		switch (m_type) {
+			case Normal :
+			case Finger :
+			{
+				Q_ASSERT(m_colorIndex < 8);
+				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
+				QColor c = colorScheme.m_background[m_colorIndex];
+				grad.setColorAt(0,c);
+				double h, s, v, a;
+				c.getHsvF(&h, &s, &v, &a);
+				c.setHsvF(h, s, v*0.8, a);
+				grad.setColorAt(1,c);
+				painter->setBrush( QBrush(grad) );
+				QPen p(colorScheme.m_frame);
+				p.setWidth(0); // only one pixel!
+				painter->setPen( p );
+				painter->drawRect(0, 0, m_w, m_h);
+			} break;
+			
+			case Enter : ;
+			case Backspace : ;
+			case Shift : ;
+			case Space : ;
+			case Other : 
+			{
+				QLinearGradient grad(QPointF(0,0), QPointF(0,m_h));
+				QColor c = colorScheme.m_cBackground;
+				grad.setColorAt(0,c);
+				double h, s, v, a;
+				c.getHsvF(&h, &s, &v, &a);
+				c.setHsvF(h, s, v*0.7, a);
+				grad.setColorAt(1,c);
+				painter->setBrush( QBrush(grad) );
+				QPen p(colorScheme.m_frame);
+				p.setWidth(0); // only one pixel!
+				painter->setPen( p );
+				painter->drawRect(0, 0, m_w, m_h);
+			} break;
+		}; // switch 
+		
+	  } break; // NormalState
+	}
 
     painter->setPen( colorScheme.m_text );
     KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());

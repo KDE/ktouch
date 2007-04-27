@@ -237,9 +237,9 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
         // TODO : calculate the maximum extent of the keyboard on the fly...
     } while (!in.atEnd() && !line.isNull());
 
-    return (!m_keys.isEmpty());  // empty file means error
+	updateKeyColors();
 
-    return false;
+    return (!m_keys.isEmpty());  // empty file means error
 }
 // ----------------------------------------------------------------------------
 
@@ -290,6 +290,8 @@ bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 		}
 	}
 	kDebug() << "Read keyboard '"<< m_title << "' with " << m_keys.count() << " keys and " << m_connectors.count() << " characters" << endl; 
+
+	updateKeyColors();
 
 	// TODO : test if the keyboard was read correctly
 	return true;
@@ -400,12 +402,59 @@ void KTouchKeyboard::createDefault() {
 	m_language.clear();
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Monospace";
+	updateKeyColors();
 }
 // ----------------------------------------------------------------------------
 
 void KTouchKeyboard::updateConnections() {
 //	for (QList<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
 //		(*it).updateConnections(m_keys);
+}
+// ----------------------------------------------------------------------------
+
+void KTouchKeyboard::updateKeyColors() {
+	// loop over all keys and number the finger keys
+	int fingerKeyIndex = 0;
+	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+		if ((*it)->m_type == KTouchKey::Finger) {
+			if (fingerKeyIndex == 8) {
+				kDebug() << "Too many finger keys in keyboard!" << endl;
+				fingerKeyIndex = 7;
+			}
+			(*it)->m_colorIndex = fingerKeyIndex++;
+		}
+	}
+	// loop over all keys
+	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+		switch ((*it)->m_type) {
+			case KTouchKey::Enter : ;
+			case KTouchKey::Backspace : ;
+			case KTouchKey::Shift : ;
+			case KTouchKey::Space : ;
+			case KTouchKey::Other : (*it)->m_colorIndex = -1; break;
+			
+			case KTouchKey::Finger : break; // nothing to do
+			
+			case KTouchKey::Normal : 
+				// lookup the keyconnector for any of the characters on the keys
+				QChar keyChar;
+				for (int i=0; i<4; ++i) {
+					if ((*it)->m_keyChar[i] != QChar()) {
+						keyChar = (*it)->m_keyChar[i];
+						// try to find a key connector for this character
+						if (m_connectors.contains(keyChar.unicode())) {
+							int fingerkeyindex = m_connectors[keyChar.unicode()].m_fingerKeyIndex;
+							if (fingerkeyindex >= m_keys.count()) {
+								kDebug() << "Invalid finger key index " << fingerkeyindex << " of connector for unicode " << keyChar.unicode() << endl;
+								continue;
+							}
+							(*it)->m_colorIndex = m_keys[fingerkeyindex]->m_colorIndex;
+						}
+					}
+				}
+			break;
+		}
+	}
 }
 // ----------------------------------------------------------------------------
 

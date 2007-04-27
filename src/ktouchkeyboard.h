@@ -58,6 +58,8 @@ public:
 	void createDefault();
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
+	/// Updates the color indices of the keys based on the key connectivity to finger keys.
+	void updateKeyColors();
 	/// Sets the font in all keys of the keyboard.
 	void setFont(const QFont& f);
 	/// Returns the current keyboard font.

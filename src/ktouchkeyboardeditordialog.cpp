@@ -41,7 +41,7 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 	keyboardView->setScene(m_scene);
     keyboardView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     keyboardView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    keyboardView->setRenderHint(QPainter::Antialiasing);
+    //keyboardView->setRenderHint(QPainter::Antialiasing);
     keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
