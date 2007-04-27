@@ -167,8 +167,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			// add a key connector
     		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), m_keys.count(), -1);
-			// finally add the key
-			KTouchKey * key = new KTouchKey(this, KTouchKey::Finger, x, y, w, h, QChar(keyUnicode));
+			// finally add the key - in uppercase
+			KTouchKey * key = new KTouchKey(this, KTouchKey::Finger, x, y, w, h, QChar(keyUnicode).toUpper());
             m_keys.push_back(key);
         }
         else if (keyType=="ControlKey") {
@@ -206,8 +206,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			}
     		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), fingerKeyConn.m_targetKeyIndex, -1);
-			// at last add the key
-			KTouchKey * key = new KTouchKey(this, KTouchKey::Normal, x, y, w, h, QChar(keyUnicode));
+			// at last add the key - uppercase display character
+			KTouchKey * key = new KTouchKey(this, KTouchKey::Normal, x, y, w, h, QChar(keyUnicode).toUpper());
             m_keys.push_back(key);
         } 
         else if (keyType=="HiddenKey") {

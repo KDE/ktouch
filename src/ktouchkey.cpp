@@ -235,32 +235,32 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	  case Finger : 
 	  {
 	  	// only one topleft character?
-	  	if (m_keyChar[0] != QChar() && 
-	  		m_keyChar[1] == QChar() && m_keyChar[2] == QChar() && m_keyChar[3] == QChar())
+	  	if (m_keyChar[KTouchKey::TopLeft] != QChar() && 
+	  		m_keyChar[KTouchKey::BottomLeft] == QChar())
 	  	{ 
 	  		// print the character a little bit bigger
     		f.setPointSizeF( qMax(0.01, m_h*0.4) );
     		painter->setFont( f );
-			painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
+			painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_h*0.6, m_h*0.6), Qt::AlignCenter | Qt::AlignVCenter, m_keyChar[0]);
 		}
 		else {
     		f.setPointSizeF( qMax(0.01, m_h*0.3) );
     		painter->setFont( f );
     		// print each character in one corner
     		if (m_keyChar[KTouchKey::TopLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
 								  Qt::AlignLeft | Qt::AlignTop, m_keyChar[KTouchKey::TopLeft]);
     		}
     		if (m_keyChar[KTouchKey::TopRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
 								  Qt::AlignRight | Qt::AlignTop, m_keyChar[KTouchKey::TopRight]);
     		}
     		if (m_keyChar[KTouchKey::BottomLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
 								  Qt::AlignLeft | Qt::AlignBottom, m_keyChar[KTouchKey::BottomLeft]);
     		}
     		if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_w - m_h*0.2, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
 								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
     		}
 		}
