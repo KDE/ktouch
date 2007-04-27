@@ -19,12 +19,14 @@
 #include <kdebug.h>
 
 #include "ktouchcolorscheme.h"
+#include "ktouchkeyboard.h"
+
 #include "prefs.h"
 
 const double PEN_WIDTH = 1.0;
 
-KTouchKey::KTouchKey() : 
-	m_state(NORMAL_STATE), m_type(NORMAL), m_x(0), m_y(0), m_w(0), m_h(0) 
+KTouchKey::KTouchKey(QObject * parent) 
+	: QObject(parent), m_state(NormalState), m_type(Normal), m_x(0), m_y(0), m_w(0), m_h(0) 
 {
 	m_keyChar[0] = QChar();
 	m_keyChar[1] = QChar();
@@ -34,8 +36,8 @@ KTouchKey::KTouchKey() :
 	setPos(m_x, m_y);
 }
 
-KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
-	: m_state(NORMAL_STATE), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
+KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch)
+	: QObject(parent), m_state(NormalState), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_keyChar[0] = ch;
 	m_keyChar[1] = QChar();
@@ -46,10 +48,10 @@ KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 }
 // ----------------------------------------------------------------------------
 
-KTouchKey::KTouchKey(int x, int y, int w, int h, const QString &text) :
-	m_state(NORMAL_STATE), m_x(x), m_y(y), m_w(w), m_h(h)
+KTouchKey::KTouchKey(QObject * parent, int x, int y, int w, int h, const QString &text) 
+	: QObject(parent), m_state(NormalState), m_x(x), m_y(y), m_w(w), m_h(h)
 {
-	m_type = OTHER;
+	m_type = Other;
 	m_keyChar[0] = QChar();
 	m_keyText = text;
 	m_colorIndex = 0;
@@ -58,65 +60,49 @@ KTouchKey::KTouchKey(int x, int y, int w, int h, const QString &text) :
 // ----------------------------------------------------------------------------
 
 // Reads the key data from the DomElement
-bool KTouchKey::read(QDomNode node) {
-/*
-	if (node.isNull()) 
-		return false;	// TODO : Error message
-	QString primaryCharText = node.firstChild().nodeValue();
-	if (primaryCharText.length() >= 1)
-		m_primaryChar = primaryCharText[0];
-	else
-		return false; // TODO : Error message
-	QDomNamedNodeMap nmap = node.attributes();
-	// Get height, widht, x and y
-	node = nmap.namedItem("Height");
-	if (node.isNull())
-		return false; // TODO : Error message
-	m_h = node.nodeValue().toInt();
-	node = nmap.namedItem("Width");
-	if (node.isNull())
-		return false; // TODO : Error message
-	m_w = node.nodeValue().toInt();
-	node = nmap.namedItem("X");
-	if (node.isNull())
-		return false; // TODO : Error message
-	m_x = node.nodeValue().toInt();
-	node = nmap.namedItem("Y");
-	if (node.isNull())
-		return false; // TODO : Error message
-	m_y = node.nodeValue().toInt();
-	// read type of key
-	node = nmap.namedItem("Type");
-	if (node.isNull())
-		return false; // TODO : Error message
-	QString typetext = node.nodeValue();
-	if (typetext=="NORMAL")  		m_type = NORMAL;
-	else if (typetext=="FINGER")  	m_type = FINGER;
-	else if (typetext=="ENTER")  	m_type = ENTER;
-	else if (typetext=="BACKSPACE")	m_type = BACKSPACE;
-	else if (typetext=="SHIFT")  	m_type = SHIFT;
-	else if (typetext=="SPACE")  	m_type = SPACE;
-	else if (typetext=="OTHER") {
-	  	m_type = OTHER;
-		node = nmap.namedItem("OtherKeyText");
-		if (!node.isNull())
-			m_otherKeyText = node.nodeValue();
+bool KTouchKey::read(QDomElement e) {
+	if (e.hasAttribute("Type")) {
+		QString typetext = e.attribute("Type");
+		if (typetext=="NORMAL")  		m_type = Normal;
+		else if (typetext=="FINGER")  	m_type = Finger;
+		else if (typetext=="ENTER")  	m_type = Enter;
+		else if (typetext=="BACKSPACE")	m_type = Backspace;
+		else if (typetext=="SHIFT")  	m_type = Shift;
+		else if (typetext=="SPACE")  	m_type = Space;
+		else if (typetext=="OTHER") {
+			m_type = Other;
+			if (e.hasAttribute("KeyText"))
+				m_keyText = e.attribute("KeyText");
+		}
+		else
+			return false; // TODO : Error message
 	}
-	else
-		return false; // TODO : Error message
-	// read optional secondary character
-	node = nmap.namedItem("SecondaryChar");
-	QString charvalue;
-	if (!node.isNull())
-		charvalue = node.nodeValue();
-	if (charvalue.length() >= 1)
-		m_secondaryChar = charvalue[0];
-	else
-		m_secondaryChar = QChar(0);
-	kDebug() << "H:" << m_h << " W:" << m_w << " X:" << m_x << " Y:" << m_y 
-	          << " Type:" << m_type << " SecondaryChar:" << m_secondaryChar 
-			  << "' PrimaryChar:" << m_primaryChar << "'" << endl;
-*/
+	QDomElement charElement = e.firstChildElement("Char");
+	while (!charElement.isNull()) {
+		position_t pos = TopLeft;
+		if (charElement.hasAttribute("Position")) {
+			QString position = charElement.attribute("Position");
+			if (position == "TopLeft")  			pos = TopLeft;
+			else if  (position == "TopRight")		pos = TopRight;
+			else if  (position == "BottomLeft")		pos = BottomLeft;
+			else if  (position == "BottomRight")	pos = BottomRight;
+		}
+		if (charElement.hasAttribute("Unicode"))
+			m_keyChar[pos] = QChar(charElement.attribute("Unicode").toInt());
+		charElement = charElement.nextSiblingElement("Char");
+	}
+
+	if (e.hasAttribute("Width")) 
+		m_w = e.attribute("Width").toInt();
+	if (e.hasAttribute("Height")) 
+		m_h = e.attribute("Height").toInt();
+	if (e.hasAttribute("X")) 
+		m_x = e.attribute("X").toInt();
+	if (e.hasAttribute("Y")) 
+		m_y = e.attribute("Y").toInt();
+	
+	setPos(m_x, m_y);
+	//kDebug() << "Key = " << m_keyChar[TopLeft] << " " << m_x << " " << m_y << " " << m_w << " " << m_h << endl;
 	return true;
 }
 // ----------------------------------------------------------------------------
@@ -125,28 +111,42 @@ bool KTouchKey::read(QDomNode node) {
 void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 	QDomElement element = doc.createElement("Key");
 	switch (m_type) {
-		case NORMAL     : element.setAttribute("Type", "NORMAL"); break;
-		case FINGER     : element.setAttribute("Type", "FINGER"); break;
-		case ENTER 		: element.setAttribute("Type", "ENTER"); break;
-		case BACKSPACE 	: element.setAttribute("Type", "BACKSPACE"); break;
-		case SHIFT 		: element.setAttribute("Type", "SHIFT"); break;
-		case SPACE 		: element.setAttribute("Type", "SPACE"); break;
-		case OTHER 		: 
+		case Normal     : element.setAttribute("Type", "NORMAL"); break;
+		case Finger     : element.setAttribute("Type", "FINGER"); break;
+		case Enter		: element.setAttribute("Type", "ENTER"); break;
+		case Backspace 	: element.setAttribute("Type", "BACKSPACE"); break;
+		case Shift		: element.setAttribute("Type", "SHIFT"); break;
+		case Space 		: element.setAttribute("Type", "SPACE"); break;
+		case Other 		: 
 			element.setAttribute("Type", "OTHER"); 
 			element.setAttribute("KeyText", m_keyText);
 			break;
 	}
-/*	QDomText charnode = doc.createTextNode(QString(m_primaryChar));
-	element.appendChild(charnode);
-//	element.setAttribute("PrimaryChar", QString(m_primaryChar));
-	if (m_secondaryChar!=QChar(0))
-		element.setAttribute("SecondaryChar", QString(m_secondaryChar));
+	// write the characters
+	for (int i=0; i<4; ++i) {
+		if (m_keyChar[i] != QChar()) {
+			QDomElement char_element = doc.createElement("Char");
+			char_element.setAttribute("Unicode", m_keyChar[i].unicode());
+			QString position;
+			switch (i) {
+				case 0 : position = "TopLeft"; break;
+				case 1 : position = "TopRight"; break;
+				case 2 : position = "BottomLeft"; break;
+				case 3 : position = "BottomRight"; break;
+			}
+			char_element.setAttribute("Unicode", m_keyChar[i].unicode());
+			char_element.setAttribute("Position", position);
+			QDomText t = doc.createTextNode(QString(m_keyChar[i]));
+			char_element.appendChild(t);
+			element.appendChild(char_element);
+		}
+	}
+	
 	element.setAttribute("X", m_x);
 	element.setAttribute("Y", m_y);
 	element.setAttribute("Width", m_w);
 	element.setAttribute("Height", m_h);
 	root.appendChild(element);
-*/
 }
 // ----------------------------------------------------------------------------
 
@@ -171,7 +171,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 
 	// first draw the background
 	switch (m_state) {
-	  case NORMAL_STATE : 
+	  case NormalState : 
         painter->setBrush( colorScheme.m_background[m_colorIndex] );
         painter->setPen( colorScheme.m_frame );
         painter->drawRoundRect(0, 0, m_w, m_h);
@@ -187,18 +187,19 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	};
 
     painter->setPen( colorScheme.m_text );
-    QFont f("Monospace");
-    f.setPointSizeF(3.0);
+    KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());
+    QFont f = kb->font();
+    f.setPointSizeF( qMax(0.01, m_h*0.5) );
     painter->setFont( f );
 	switch (m_type) {
-	  case NORMAL :
-	  case FINGER :
+	  case Normal :
+	  case Finger :
 		if (m_keyChar[0] == QChar()) return;
-		painter->drawText(1, 1, m_w-2, m_h-2, Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
+		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignLeft | Qt::AlignTop, m_keyChar[0]);
 		break;
 
-	  case OTHER :
-		painter->drawText(1, 1, m_w-2, m_h-2, Qt::AlignCenter, m_keyText);
+	  case Other :
+		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignCenter, m_keyText);
 		break;
 	}
 }

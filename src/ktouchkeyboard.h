@@ -16,6 +16,8 @@
 #include <QTextStream>
 #include <QList>
 #include <QMap>
+#include <QObject>
+#include <QFont>
 
 #include "ktouchkeyconnector.h"
 class KTouchKey;
@@ -39,10 +41,11 @@ class KUrl;
 /// 	// ...
 /// }
 /// @endcode
-class KTouchKeyboard  {
-  public:
+class KTouchKeyboard : public QObject {
+  Q_OBJECT
+public:
 	/// Default constructor, sets up the standard number keyboard.
-	KTouchKeyboard() { createDefault(); }
+	KTouchKeyboard(QObject * parent=0) : QObject(parent) { createDefault(); }
 	/// Clears the keyboard (resets all data)
 	void clear();
     /// Loads a keyboard layout (old format) from file (returns true if successful).
@@ -55,6 +58,10 @@ class KTouchKeyboard  {
 	void createDefault();
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
+	/// Sets the font in all keys of the keyboard.
+	void setFont(const QFont& f);
+	/// Returns the current keyboard font.
+	const QFont& font() const { return m_font; }
 	
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
     QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with connectivity data.
@@ -64,10 +71,6 @@ class KTouchKeyboard  {
 	QString		m_language;			///< Language ID of keyboard
 	QString		m_fontSuggestions;	///< Suggestions of fonts to be used on the keys.
 
-	// These variables are recalculated after the keyboard was loaded.
-	int			m_width;		///< The width of the keyboard (maximum of the sums of all keywidths in each line).
-	int			m_height;		///< The height of the keyboard (sum of all key row heights).
-	
   private:
 	/// Tests, whether a key with the given unicode number already exists in the keylist and
 	/// appends a warning message if it does.
@@ -78,6 +81,12 @@ class KTouchKeyboard  {
     bool read(const QDomDocument& doc, QString& warnings);
     /// Saves keyboard data in the XML document
     void write(QDomDocument& doc) const;
+    
+    
+    /// The font that is used to draw the keyboard.
+    ///
+    /// The keys access this member variable when they draw themselves.
+	QFont		m_font;	
 };
 
 #endif  // KTOUCHKEYBOARD_H

@@ -6,31 +6,13 @@
     <x>0</x>
     <y>0</y>
     <width>779</width>
-    <height>545</height>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Keyboard Layout Editor</string>
   </property>
   <layout class="QGridLayout" >
-   <property name="leftMargin" >
-    <number>9</number>
-   </property>
-   <property name="topMargin" >
-    <number>9</number>
-   </property>
-   <property name="rightMargin" >
-    <number>9</number>
-   </property>
-   <property name="bottomMargin" >
-    <number>9</number>
-   </property>
-   <property name="horizontalSpacing" >
-    <number>6</number>
-   </property>
-   <property name="verticalSpacing" >
-    <number>6</number>
-   </property>
    <item row="0" column="0" >
     <widget class="QGroupBox" name="groupBox3" >
      <property name="sizePolicy" >
@@ -42,8 +24,8 @@
      <property name="title" >
       <string>Keyboard Identification Data</string>
      </property>
-     <layout class="QVBoxLayout" >
-      <item>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
        <layout class="QGridLayout" >
         <property name="leftMargin" >
          <number>0</number>
@@ -85,14 +67,14 @@
         </item>
        </layout>
       </item>
-      <item>
+      <item row="1" column="0" >
        <widget class="QLabel" name="textLabel1" >
         <property name="text" >
          <string>Comments:</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="2" column="0" >
        <widget class="QTextEdit" name="commentEdit" >
         <property name="sizePolicy" >
          <sizepolicy vsizetype="Maximum" hsizetype="Expanding" >
@@ -105,6 +87,82 @@
           <width>16777215</width>
           <height>100</height>
          </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" >
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Keyboard edit options....</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="0" >
+       <widget class="QPushButton" name="setFontButton" >
+        <property name="text" >
+         <string>Set keyboard font ...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QPushButton" name="openButton" >
+        <property name="text" >
+         <string>Open keyboard ...</string>
+        </property>
+       </widget>
+      </item>
+      <item rowspan="4" row="1" column="0" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>133</width>
+          <height>131</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QPushButton" name="saveButton" >
+        <property name="text" >
+         <string>Save keyboard ...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QPushButton" name="saveAsButton" >
+        <property name="text" >
+         <string>Save keyboard as ...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" >
+         <size>
+          <width>20</width>
+          <height>31</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="1" >
+       <widget class="QPushButton" name="closeButton" >
+        <property name="text" >
+         <string>Close</string>
         </property>
        </widget>
       </item>
@@ -136,62 +194,21 @@
      </layout>
     </widget>
    </item>
-   <item row="0" column="1" >
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
-       <horstretch>0</horstretch>
-       <verstretch>1</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="title" >
-      <string>Keyboard edit options....</string>
-     </property>
-     <layout class="QGridLayout" >
-      <property name="verticalSpacing" >
-       <number>6</number>
-      </property>
-      <item row="2" column="0" >
-       <spacer>
-        <property name="orientation" >
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" >
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="0" >
-       <widget class="QPushButton" name="openButton" >
-        <property name="text" >
-         <string>Open keyboard file ...</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" >
-       <widget class="QPushButton" name="saveButton" >
-        <property name="text" >
-         <string>Save keyboard file...</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1" >
-       <widget class="QPushButton" name="closeButton" >
-        <property name="text" >
-         <string>Close</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11" />
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>titleEdit</tabstop>
+  <tabstop>langIDEdit</tabstop>
+  <tabstop>commentEdit</tabstop>
+  <tabstop>setFontButton</tabstop>
+  <tabstop>openButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>saveAsButton</tabstop>
+  <tabstop>closeButton</tabstop>
+  <tabstop>keyboardView</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

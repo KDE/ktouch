@@ -15,6 +15,7 @@
 
 #include <QLabel>
 #include <QFont>
+#include <QTimer>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>
@@ -24,6 +25,8 @@
 
 #include "ktouch.h"
 #include "ktouchopenrequestdialog.h"
+#include "ktouchkey.h"
+#include "ktouchkeyconnector.h"
 
 // **************************
 // ***** Public functions ***
@@ -42,7 +45,6 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
     keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
-    connect(openButton, SIGNAL(clicked()), this, SLOT(openBtnClicked()) );
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
 }
 // -----------------------------------------------------------------------------
@@ -67,12 +69,13 @@ bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
 // ************************
 
 
-void KTouchKeyboardEditorDialog::fontBtnClicked() {
+void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
 	//kDebug() << "Fontbutton clicked" << endl;
     QFont f;
     if (KFontDialog::getFont(f)==QDialog::Accepted) {
 		m_keyboard.m_fontSuggestions = f.toString();
-		// update font and keyboard display
+		m_keyboard.setFont(f);
+		// update font
 		titleEdit->setFont(f);  
 		commentEdit->setFont(f);  
 		langIDEdit->setFont(f);  
@@ -82,56 +85,50 @@ void KTouchKeyboardEditorDialog::fontBtnClicked() {
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditorDialog::openBtnClicked() {
+void KTouchKeyboardEditorDialog::on_openButton_clicked() {
     saveModified();  // save if modified
     openKeyboardFile(KUrl(""));
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditorDialog::saveBtnClicked() {
-    if (m_currentURL.isEmpty()) saveAsBtnClicked();
+void KTouchKeyboardEditorDialog::on_saveButton_clicked() {
+    if (m_currentURL.isEmpty()) on_saveAsButton_clicked();
     else {
         transfer_from_dialog();
-        //m_keyboard.saveXML(this, m_currentURL);
+        m_keyboard.saveXML(this, m_currentURL);
         setModified(false);
     }
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditorDialog::saveAsBtnClicked() {
-    QString tmp = KFileDialog::getSaveFileName(QString(), 
+void KTouchKeyboardEditorDialog::on_saveAsButton_clicked() {
+    QString tmp = KFileDialog::getSaveFileName(m_currentURL, 
         i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
         m_currentURL = tmp;
-        //m_keyboard.saveXML(this, m_currentURL);
+        m_keyboard.saveXML(this, m_currentURL);
         setModified(false);
     }
 }
 // -----------------------------------------------------------------------------
 
-/// Called when the "Add..." button was clicked
-void KTouchKeyboardEditorDialog::addBtnClicked() {
-}
-// -----------------------------------------------------------------------------
-
-/// Called when the "Edit..." button was clicked
-void KTouchKeyboardEditorDialog::editBtnClicked() {
-}
-// -----------------------------------------------------------------------------
-
-/// Called when the "Remove" button was clicked
-void KTouchKeyboardEditorDialog::removeBtnClicked() {
-}
-// -----------------------------------------------------------------------------
-
-void KTouchKeyboardEditorDialog::resizeEvent(QResizeEvent *) {
+void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QRectF sbr = m_scene->itemsBoundingRect();
     qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
 
     QMatrix matrix;
     matrix.scale(scale, scale);
     keyboardView->setMatrix(matrix);
+}
+// -----------------------------------------------------------------------------
+
+// ********************************
+// ***** Event implementations ****
+// ********************************
+
+void KTouchKeyboardEditorDialog::resizeEvent(QResizeEvent *) {
+	resizeKeyboard();
 }
 // -----------------------------------------------------------------------------
 
@@ -145,12 +142,17 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 		commentEdit->setText("");
 	}
 	else {
+		// check if we have an xml extension
+		QString fname = m_currentURL.fileName();
+		if (!fname.endsWith(".xml")) {
+			int pos = fname.indexOf('.');
+			m_keyboard.m_language = fname.left(pos);
+			m_keyboard.m_title = fname;
+		}
 		titleEdit->setText(m_keyboard.m_title);
 		commentEdit->setText(m_keyboard.m_comment);
 	}
 	langIDEdit->setText(m_keyboard.m_language);
-	kDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
-	m_keyboard.m_fontSuggestions = "Monospace";
 	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
 		QFont f;
 		f.fromString(m_keyboard.m_fontSuggestions);
@@ -181,7 +183,7 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 		max_y = qMax<unsigned int>(max_y, (*it)->m_y+(*it)->m_h);
 	}
 	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2", max_x - min_x, max_y - min_y) );
-	resize(width(), height());
+	QTimer::singleShot(10, this, SLOT(resizeKeyboard()));
 }
 // -----------------------------------------------------------------------------
     
@@ -252,7 +254,7 @@ bool KTouchKeyboardEditorDialog::saveModified() {
     if (result == KMessageBox::Cancel) 
 		return false; // User aborted
     if (result == KMessageBox::Yes) 
-		saveBtnClicked();
+		on_saveButton_clicked();
     // if successfully saved the modified flag will be reset in the saveBtnClicked() function
     return true; // User acknowledged
 }

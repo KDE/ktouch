@@ -55,23 +55,19 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
 
   public slots:
     /// Called when the Font button was clicked.
-    virtual void fontBtnClicked();
+    virtual void on_setFontButton_clicked();
     /// Called when the Open button was clicked.
-    virtual void openBtnClicked();
+    virtual void on_openButton_clicked();
     /// Called when the Save button was clicked.
-    virtual void saveBtnClicked();
+    virtual void on_saveButton_clicked();
     /// Called when the Save As button was clicked.
-    virtual void saveAsBtnClicked();
+    virtual void on_saveAsButton_clicked();
     /// Called when the editor is closed.
     virtual void closeQuery() { if (saveModified()) accept(); };
-    /// Called when the "Add..." button was clicked
-    virtual void addBtnClicked();
-    /// Called when the "Edit..." button was clicked
-    virtual void editBtnClicked();
-    /// Called when the "Remove" button was clicked
-    virtual void removeBtnClicked();
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
+    /// Resizes the keyboard based on the size of the graphics view.
+    void resizeKeyboard();
 
   protected:
     /// Resizes the keyboard.

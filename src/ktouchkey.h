@@ -32,42 +32,42 @@ public:
 
 	/// Position of a character on the key.
 	enum position_t {
-      TOP_LEFT,
-      TOP_RIGHT,
-      BOTTOM_LEFT,
-      BOTTOM_RIGHT
+      TopLeft,
+      TopRight,
+      BottomLeft,
+      BottomRight
     };
 
 	/// Type of a key
     enum keytype_t {
-	  NORMAL,
-	  FINGER,
-	  ENTER,
-	  BACKSPACE,
-	  SHIFT,
-	  SPACE,
-	  OTHER
+	  Normal,
+	  Finger,
+	  Enter,
+	  Backspace,
+	  Shift,
+	  Space,
+	  Other
 	};
  
 	/// The (highlighting, marking) state of a key
 	enum state_t {
-		NORMAL_STATE,			// normal key appearance on the keyboard
-		HIGH_LIGHTED_STATE,		// when indicating the next target key
-		FINGER_KEY_STATE,		// when indicating the origin key of the finger to be used
-		MODIFIER_STATE			// when indicating a certain modifier key
+		NormalState,			// normal key appearance on the keyboard
+		HighlightedState,		// when indicating the next target key
+		FingerKeyState,			// when indicating the origin key of the finger to be used
+		ModifierState			// when indicating a certain modifier key
 	};
 
 	/// Default constructor.
-	KTouchKey();
+	KTouchKey(QObject * parent);
 	/// Convenience constructor for a key with a single character.
-	KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch);
+	KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch);
 	/// Convenience constructor for a key with a text on it (type will be OTHER).
-	KTouchKey(int x, int y, int w, int h, const QString &text);
+	KTouchKey(QObject * parent, int x, int y, int w, int h, const QString &text);
 	/// Default destructor.
 	virtual ~KTouchKey() {}
 
 	/// Reads the key data from the DomElement
-	bool read(QDomNode node);
+	bool read(QDomElement e);
 	/// Creates a new DomElement, writes the key data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root) const;
 
@@ -89,7 +89,6 @@ public:
 	state_t			m_state;		///< The current state of the key (normal, highlighted etc.)
 	unsigned int	m_colorIndex;	///< The color index of the key (corresponds to the assigned finger key).
 
-	unsigned int	m_number;		///< The number of the key.
 	keytype_t		m_type;			///< The type of the key.
 	QChar			m_keyChar[4];	///< The characters on each key, one for each possible position.
 	QString			m_keyText;		///< The alternative text for decorative keys.
