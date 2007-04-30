@@ -64,10 +64,18 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     virtual void on_saveAsButton_clicked();
     /// Called when the editor is closed.
     virtual void closeQuery() { if (saveModified()) accept(); };
+	/// Called when user edits the topleft character
+	virtual void on_topLeftChar_textEdited(const QString & text); 
+	virtual void on_topRightChar_textEdited(const QString & text);
+	virtual void on_bottomLeftChar_textEdited(const QString & text);
+	virtual void on_bottomRightChar_textEdited(const QString & text);
+
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
     /// Resizes the keyboard based on the size of the graphics view.
     void resizeKeyboard();
+	/// Connected to the key-graphicsview items
+	void keyClicked(KTouchKey * k);
 
   protected:
     /// Resizes the keyboard.
@@ -99,6 +107,8 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     KTouchKeyboard	m_keyboard;			///< The keyboard data.
     bool            m_modified;			///< Flag indicating whether the keyboard has been modified.
     KUrl            m_currentURL;		///< URL of the current keyboard.
+
+	KTouchKey		*m_currentEditKey;	///< The key that is currently selected for editing.
 
     QGraphicsScene	*m_scene;			///< The graphics scene 
 

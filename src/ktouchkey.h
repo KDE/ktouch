@@ -21,6 +21,8 @@ class QDomElement;
 class QDomNode;
 class QDomDocument;
 
+class QGraphicsSceneMouseEvent;
+
 /// This class represents a key on the keyboard.
 ///
 /// This class contains all the geometrical information for a key to be drawn
@@ -85,7 +87,6 @@ public:
 	/// Draws the key onto the graphics scene using the provided painter.
 	virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
-
 	// *** member variables ***
 
 	state_t			m_state;		///< The current state of the key (normal, highlighted etc.)
@@ -98,6 +99,14 @@ public:
 	int				m_y;			///< The y-coordinate of the top-left corner of the key.
 	int				m_w;			///< The width.
 	int				m_h;			///< The height.
+
+protected :
+	virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+
+signals:
+	/// Emitted when the user left-clicks a key.
+	void clicked(KTouchKey * me);
+
 };
 // ---------------------------------------------------------------------------------------
 

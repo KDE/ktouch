@@ -14,8 +14,7 @@
 #include "ktouchkey.moc"
 
 #include <QtXml>
-#include <QtCore>
-#include <QColor>
+#include <QtGui>
 
 #include <kdebug.h>
 
@@ -229,10 +228,51 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 				p.setWidth(0); // only one pixel!
 				painter->setPen( p );
 				painter->drawRect(0, 0, m_w, m_h);
-			} break;
-		}; // switch 
+			}
+		} // switch 
 		
 	  } break; // NormalState
+
+	  case HighlightedState :
+	  {
+	  
+		switch (m_type) {
+			case Normal :
+			case Finger :
+			{
+				Q_ASSERT(m_colorIndex < 8);
+				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
+				QColor c = colorScheme.m_backgroundH;
+				grad.setColorAt(0,c);
+				qreal h, s, v, a;
+				c.getHsvF(&h, &s, &v, &a);
+				c.setHsvF(h, s, v*0.8, a);
+				grad.setColorAt(1,c);
+				painter->setBrush( QBrush(grad) );
+				QPen p(colorScheme.m_frame);
+				p.setWidth(0); // only one pixel!
+				painter->setPen( p );
+				painter->drawRect(0, 0, m_w, m_h);
+			} break;
+			
+			default :
+			{
+				QLinearGradient grad(QPointF(0,0), QPointF(0,m_h));
+				QColor c = colorScheme.m_cBackgroundH;
+				grad.setColorAt(0,c);
+				qreal h, s, v, a;
+				c.getHsvF(&h, &s, &v, &a);
+				c.setHsvF(h, s, v*0.7, a);
+				grad.setColorAt(1,c);
+				painter->setBrush( QBrush(grad) );
+				QPen p(colorScheme.m_frame);
+				p.setWidth(0); // only one pixel!
+				painter->setPen( p );
+				painter->drawRect(0, 0, m_w, m_h);
+			}
+		} // switch 
+		
+	  } break; // HighlightedState
 	}
 
 	// draw text/decoration
@@ -241,7 +281,40 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	
     painter->setRenderHint(QPainter::Antialiasing);
 
-	QPen p(colorScheme.m_text);
+	QPen p;
+	switch (m_state) {
+		case HighlightedState : {
+			switch (m_type) {
+				case Normal :
+				case Finger :
+				{
+					p.setColor(colorScheme.m_textH);
+				} break;
+
+				default :
+				{
+					p.setColor(colorScheme.m_cTextH);
+				}
+			}
+		} break;
+
+		default : 
+		{
+			switch (m_type) {
+				case Normal :
+				case Finger :
+				{
+					p.setColor(colorScheme.m_text);
+				} break;
+
+				default :
+				{
+					p.setColor(colorScheme.m_cText);
+				}
+			}
+		}
+	}
+
 	p.setWidthF(m_h*0.05);
     painter->setPen( p );
 
@@ -354,4 +427,10 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 		break;
 	}
     painter->setRenderHint(QPainter::Antialiasing, false);
+}
+
+void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
+	if (event->button() | Qt::LeftButton) {
+		emit clicked(this);
+	}
 }

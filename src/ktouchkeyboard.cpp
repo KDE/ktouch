@@ -30,6 +30,10 @@
 
 // Clears the keyboard data
 void KTouchKeyboard::clear() {
+	// disconnect all key events
+	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+		(*it)->disconnect();
+	}
 	qDeleteAll(m_keys);
     m_keys.clear();
     m_connectors.clear();

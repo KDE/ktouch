@@ -46,6 +46,7 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
+	// TODO : setup context menu
 }
 // -----------------------------------------------------------------------------
 
@@ -53,6 +54,7 @@ bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
     // call open request dialog and load a keyboard and start the dialogs event loop if
     // the user did not cancel the open request dialog 
     if (openKeyboardFile(url)==QDialog::Accepted)  {
+		m_currentEditKey = NULL;
         exec();
 		// Even if the user cancels the dialog we must assume that a keyboard layout 
 		// was changed and save to disk. Thus, to be save, we return 'true' and
@@ -113,6 +115,50 @@ void KTouchKeyboardEditorDialog::on_saveAsButton_clicked() {
 }
 // -----------------------------------------------------------------------------
 
+void KTouchKeyboardEditorDialog::on_topLeftChar_textEdited(const QString & text) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		if (!text.isEmpty())
+			m_currentEditKey->m_keyChar[KTouchKey::TopLeft] = text[0];
+		else
+			m_currentEditKey->m_keyChar[KTouchKey::TopLeft] = QChar();
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_topRightChar_textEdited(const QString & text) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		if (!text.isEmpty())
+			m_currentEditKey->m_keyChar[KTouchKey::TopRight] = text[0];
+		else
+			m_currentEditKey->m_keyChar[KTouchKey::TopRight] = QChar();
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_bottomLeftChar_textEdited(const QString & text) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		if (!text.isEmpty())
+			m_currentEditKey->m_keyChar[KTouchKey::BottomLeft] = text[0];
+		else
+			m_currentEditKey->m_keyChar[KTouchKey::BottomLeft] = QChar();
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_bottomRightChar_textEdited(const QString & text) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		if (!text.isEmpty())
+			m_currentEditKey->m_keyChar[KTouchKey::BottomRight] = text[0];
+		else
+			m_currentEditKey->m_keyChar[KTouchKey::BottomRight] = QChar();
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
 void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QRectF sbr = m_scene->itemsBoundingRect();
     qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
@@ -120,6 +166,37 @@ void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QMatrix matrix;
     matrix.scale(scale, scale);
     keyboardView->setMatrix(matrix);
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
+	// update the character edits
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		m_currentEditKey->m_state = KTouchKey::NormalState;
+		m_currentEditKey->update();
+	}
+	m_currentEditKey = k;
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		m_currentEditKey->m_state = KTouchKey::HighlightedState;
+		m_currentEditKey->update();
+		// fill in the keys in the edit lines
+		if (m_currentEditKey->m_keyChar[KTouchKey::TopLeft] != QChar())
+			topLeftChar->setText( m_currentEditKey->m_keyChar[KTouchKey::TopLeft] );
+		else
+			topLeftChar->clear();
+		if (m_currentEditKey->m_keyChar[KTouchKey::TopRight] != QChar())
+			topRightChar->setText( m_currentEditKey->m_keyChar[KTouchKey::TopRight] );
+		else
+			topRightChar->clear();
+		if (m_currentEditKey->m_keyChar[KTouchKey::BottomLeft] != QChar())
+			bottomLeftChar->setText( m_currentEditKey->m_keyChar[KTouchKey::BottomLeft] );
+		else
+			bottomLeftChar->clear();
+		if (m_currentEditKey->m_keyChar[KTouchKey::BottomRight] != QChar())
+			bottomRightChar->setText( m_currentEditKey->m_keyChar[KTouchKey::BottomRight] );
+		else
+			bottomRightChar->clear();
+	}
 }
 // -----------------------------------------------------------------------------
 
@@ -168,21 +245,13 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
 		KTouchKey * key = *it;
         m_scene->addItem(key);
+		connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
 
-		//kDebug() << "x:y = " << key->m_x << ":" << key->m_y << endl;
-
-/*		switch (it->m_type) {
-			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + QString(it->m_primaryChar) + '\''); break;
-			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + QString(it->m_primaryChar) + '\''); break;
-			default                : keyListBox->insertItem("O  '" + it->m_otherKeyText + '\''); break;
-		}
-*/
 		min_x = qMin<unsigned int>(min_x, (*it)->m_x);
 		max_x = qMax<unsigned int>(max_x, (*it)->m_x+(*it)->m_w);
 		min_y = qMin<unsigned int>(min_y, (*it)->m_y);
 		max_y = qMax<unsigned int>(max_y, (*it)->m_y+(*it)->m_h);
 	}
-	dimensionsLabel->setText( i18n("Keyboard dimensions: %1 x %2", max_x - min_x, max_y - min_y) );
 	QTimer::singleShot(10, this, SLOT(resizeKeyboard()));
 }
 // -----------------------------------------------------------------------------
