@@ -92,6 +92,23 @@ bool KTouchKey::read(QDomElement e) {
 		}
 		if (charElement.hasAttribute("Unicode"))
 			m_keyChar[pos] = QChar(charElement.attribute("Unicode").toInt());
+		else
+			m_keyChar[pos] = QChar();
+		// do we have a character?
+		QDomNode chNode = charElement.firstChild();
+		if (!chNode.isNull()) {
+			QString chstr = chNode.nodeValue();
+			if (chstr.count() > 0) {
+				QChar ch = chstr[0];
+				if (m_keyChar[pos]!=QChar() && m_keyChar[pos]!=ch.unicode()) {
+					kDebug() << "Character '" << ch << "' is defined with different unicode, the given unicode "
+						"value is used and the display character. is discarted. If you want to use the display "
+						"character, delete the unicode property." << endl;
+				}
+				if (m_keyChar[pos]==QChar())
+					m_keyChar[pos] = ch.unicode();
+			}
+		}
 		charElement = charElement.nextSiblingElement("Char");
 	}
 
@@ -248,19 +265,19 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     		painter->setFont( f );
     		// print each character in one corner
     		if (m_keyChar[KTouchKey::TopLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
 								  Qt::AlignLeft | Qt::AlignTop, m_keyChar[KTouchKey::TopLeft]);
     		}
     		if (m_keyChar[KTouchKey::TopRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
 								  Qt::AlignRight | Qt::AlignTop, m_keyChar[KTouchKey::TopRight]);
     		}
     		if (m_keyChar[KTouchKey::BottomLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
 								  Qt::AlignLeft | Qt::AlignBottom, m_keyChar[KTouchKey::BottomLeft]);
     		}
     		if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.1, m_w - m_h*0.4, m_h*0.8), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
 								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
     		}
 		}
