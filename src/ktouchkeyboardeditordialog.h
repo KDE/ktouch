@@ -64,11 +64,18 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     virtual void on_saveAsButton_clicked();
     /// Called when the editor is closed.
     virtual void closeQuery() { if (saveModified()) accept(); };
-	/// Called when user edits the topleft character
+	/// Called when user edits the top left character
 	virtual void on_topLeftChar_textEdited(const QString & text); 
+	/// Called when user edits the top right character
 	virtual void on_topRightChar_textEdited(const QString & text);
+	/// Called when user edits the bottom left character
 	virtual void on_bottomLeftChar_textEdited(const QString & text);
+	/// Called when user edits the bottom right character
 	virtual void on_bottomRightChar_textEdited(const QString & text);
+	/// Called when user selects a keytype.
+	virtual void on_keyTypeCombo_currentIndexChanged(int index);
+	/// Called when user edits the key text
+	virtual void on_keyTextEdit_textEdited(const QString & text);
 
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }

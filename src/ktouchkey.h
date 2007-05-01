@@ -100,6 +100,9 @@ public:
 	int				m_w;			///< The width.
 	int				m_h;			///< The height.
 
+	static QString keyTypeString(keytype_t t);
+	static keytype_t keyType(const QString& str);
+
 protected :
 	virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
 

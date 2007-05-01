@@ -45,6 +45,12 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
     keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
+	// setup the key edit fields
+	keyTypeCombo->clear();
+	for (int i=0; i<=KTouchKey::Other; ++i) {
+		keyTypeCombo->addItem(KTouchKey::keyTypeString(static_cast<KTouchKey::keytype_t>(i)));
+	}
+
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
 	// TODO : setup context menu
 }
@@ -159,6 +165,30 @@ void KTouchKeyboardEditorDialog::on_bottomRightChar_textEdited(const QString & t
 }
 // -----------------------------------------------------------------------------
 
+void KTouchKeyboardEditorDialog::on_keyTypeCombo_currentIndexChanged(int index) {
+	if (index == KTouchKey::Other) {
+		keyTextLabel->setEnabled(true);
+		keyTextEdit->setEnabled(true);
+	}
+	else {
+		keyTextLabel->setEnabled(false);
+		keyTextEdit->setEnabled(false);
+	}
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		m_currentEditKey->m_type = static_cast<KTouchKey::keytype_t>(index);
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_keyTextEdit_textEdited(const QString & text) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+		m_currentEditKey->m_keyText = text;
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
 void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QRectF sbr = m_scene->itemsBoundingRect();
     qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
@@ -179,6 +209,15 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
 		m_currentEditKey->m_state = KTouchKey::HighlightedState;
 		m_currentEditKey->update();
+		
+		// set correct combo type
+		if (m_currentEditKey->m_type > KTouchKey::Other) 
+			keyTypeCombo->setCurrentIndex( KTouchKey::Other );
+		else 
+			keyTypeCombo->setCurrentIndex( m_currentEditKey->m_type );
+		if (m_currentEditKey->m_type == KTouchKey::Other)
+			keyTextEdit->setText( m_currentEditKey->m_keyText );
+		on_keyTypeCombo_currentIndexChanged( keyTypeCombo->currentIndex() );
 		// fill in the keys in the edit lines
 		if (m_currentEditKey->m_keyChar[KTouchKey::TopLeft] != QChar())
 			topLeftChar->setText( m_currentEditKey->m_keyChar[KTouchKey::TopLeft] );

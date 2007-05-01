@@ -25,6 +25,10 @@
 
 const double PEN_WIDTH = 1.0;
 
+// **************************
+// ***** Public functions ***
+// **************************
+
 KTouchKey::KTouchKey(QObject * parent) 
 	: QObject(parent), m_state(NormalState), m_type(Normal), m_x(0), m_y(0), m_w(0), m_h(0) 
 {
@@ -63,21 +67,11 @@ KTouchKey::KTouchKey(QObject * parent, int x, int y, int w, int h, const QString
 bool KTouchKey::read(QDomElement e) {
 	if (e.hasAttribute("Type")) {
 		QString typetext = e.attribute("Type");
-		if (typetext=="NORMAL")  		m_type = Normal;
-		else if (typetext=="FINGER")  	m_type = Finger;
-		else if (typetext=="ENTER")  	m_type = Enter;
-		else if (typetext=="BACKSPACE")	m_type = Backspace;
-		else if (typetext=="SHIFT")  	m_type = Shift;
-		else if (typetext=="CAPSLOCK")  m_type = CapsLock;
-		else if (typetext=="TAB")  		m_type = Tab;
-		else if (typetext=="SPACE")  	m_type = Space;
-		else if (typetext=="OTHER") {
-			m_type = Other;
+		m_type = keyType(typetext);
+		if (m_type == Other) {
 			if (e.hasAttribute("KeyText"))
 				m_keyText = e.attribute("KeyText");
 		}
-		else
-			return false; // TODO : Error message
 	}
 	QDomElement charElement = e.firstChildElement("Char");
 	while (!charElement.isNull()) {
@@ -129,20 +123,9 @@ bool KTouchKey::read(QDomElement e) {
 // Writes the key data into the DomElement
 void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 	QDomElement element = doc.createElement("Key");
-	switch (m_type) {
-		case Normal     : element.setAttribute("Type", "NORMAL"); break;
-		case Finger     : element.setAttribute("Type", "FINGER"); break;
-		case Enter		: element.setAttribute("Type", "ENTER"); break;
-		case Backspace 	: element.setAttribute("Type", "BACKSPACE"); break;
-		case Shift		: element.setAttribute("Type", "SHIFT"); break;
-		case CapsLock	: element.setAttribute("Type", "CAPSLOCK"); break;
-		case Tab		: element.setAttribute("Type", "TAB"); break;
-		case Space 		: element.setAttribute("Type", "SPACE"); break;
-		case Other 		: 
-			element.setAttribute("Type", "OTHER"); 
-			element.setAttribute("KeyText", m_keyText);
-			break;
-	}
+	element.setAttribute("Type", keyTypeString(m_type));
+	if (m_type == Other)
+		element.setAttribute("KeyText", m_keyText);
 	// write the characters
 	for (int i=0; i<4; ++i) {
 		if (m_keyChar[i] != QChar()) {
@@ -332,25 +315,32 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     		f.setPointSizeF( qMax(0.01, m_h*0.4) );
     		painter->setFont( f );
 			painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_h*0.6, m_h*0.6), Qt::AlignCenter | Qt::AlignVCenter, m_keyChar[0]);
+			// if we also have a bottom right character, print it small 
+			if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
+				f.setPointSizeF( qMax(0.01, m_h*0.3) );
+				painter->setFont( f );
+				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.3, m_h*0.95), 
+								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
+			}
 		}
 		else {
     		f.setPointSizeF( qMax(0.01, m_h*0.3) );
     		painter->setFont( f );
     		// print each character in one corner
     		if (m_keyChar[KTouchKey::TopLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.4, m_h*0.92), 
 								  Qt::AlignLeft | Qt::AlignTop, m_keyChar[KTouchKey::TopLeft]);
     		}
     		if (m_keyChar[KTouchKey::TopRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.3, m_h*0.92), 
 								  Qt::AlignRight | Qt::AlignTop, m_keyChar[KTouchKey::TopRight]);
     		}
     		if (m_keyChar[KTouchKey::BottomLeft] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.4, m_h*0.92), 
 								  Qt::AlignLeft | Qt::AlignBottom, m_keyChar[KTouchKey::BottomLeft]);
     		}
     		if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
-				painter->drawText(QRectF(m_h*0.2, m_h*0.02, m_w - m_h*0.4, m_h*0.95), 
+				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.3, m_h*0.92), 
 								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
     		}
 		}
@@ -428,6 +418,40 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	}
     painter->setRenderHint(QPainter::Antialiasing, false);
 }
+
+// **************************
+// ***** Static functions ***
+// **************************
+
+QString KTouchKey::keyTypeString(KTouchKey::keytype_t t) {
+	switch (t) {
+		case Normal     : return "NORMAL";
+		case Finger     : return "FINGER";
+		case Enter		: return "ENTER";
+		case Backspace 	: return "BACKSPACE";
+		case Shift		: return "SHIFT";
+		case CapsLock	: return "CAPSLOCK";
+		case Tab		: return "TAB";
+		case Space 		: return "SPACE";
+		default			: return "OTHER";
+	}
+}
+
+KTouchKey::keytype_t KTouchKey::keyType(const QString& str) {
+	if (str=="NORMAL")  		return Normal;
+	else if (str=="FINGER")  	return Finger;
+	else if (str=="ENTER")  	return Enter;
+	else if (str=="BACKSPACE")	return Backspace;
+	else if (str=="SHIFT")  	return Shift;
+	else if (str=="CAPSLOCK")	return CapsLock;
+	else if (str=="TAB")  		return Tab;
+	else if (str=="SPACE")  	return Space;
+	else return Other;	
+}
+
+// *****************************
+// ***** Protected functions ***
+// *****************************
 
 void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 	if (event->button() | Qt::LeftButton) {

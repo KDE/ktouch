@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>812</width>
-    <height>586</height>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -102,10 +102,34 @@
       <string>Key properties</string>
      </property>
      <layout class="QGridLayout" >
-      <item row="0" column="0" >
+      <item row="0" column="0" colspan="2" >
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <widget class="QLabel" name="label_6" >
+          <property name="text" >
+           <string>Key type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QComboBox" name="keyTypeCombo" />
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="keyTextLabel" >
+          <property name="text" >
+           <string>Key text</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QLineEdit" name="keyTextEdit" />
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0" >
        <layout class="QGridLayout" >
         <item row="0" column="0" colspan="2" >
-         <widget class="QLabel" name="label" >
+         <widget class="QLabel" name="keyCharLabel" >
           <property name="sizePolicy" >
            <sizepolicy vsizetype="Preferred" hsizetype="Minimum" >
             <horstretch>0</horstretch>
@@ -217,7 +241,7 @@
         </item>
        </layout>
       </item>
-      <item row="0" column="1" >
+      <item rowspan="2" row="1" column="1" >
        <spacer>
         <property name="orientation" >
          <enum>Qt::Horizontal</enum>
@@ -230,15 +254,15 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="0" >
+      <item row="2" column="0" >
        <spacer>
         <property name="orientation" >
          <enum>Qt::Vertical</enum>
         </property>
         <property name="sizeHint" >
          <size>
-          <width>20</width>
-          <height>21</height>
+          <width>104</width>
+          <height>20</height>
          </size>
         </property>
        </spacer>
