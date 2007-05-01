@@ -182,9 +182,9 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			case Normal :
 			case Finger :
 			{
-				Q_ASSERT(m_colorIndex < 8);
+				//Q_ASSERT(m_colorIndex < 8);
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
-				QColor c = colorScheme.m_background[m_colorIndex];
+				QColor c = colorScheme.m_background[qMin<unsigned int>(7,m_colorIndex)];
 				grad.setColorAt(0,c);
 				qreal h, s, v, a;
 				c.getHsvF(&h, &s, &v, &a);
@@ -223,7 +223,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			case Normal :
 			case Finger :
 			{
-				Q_ASSERT(m_colorIndex < 8);
+				//Q_ASSERT(m_colorIndex < 8);
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
 				QColor c = colorScheme.m_backgroundH;
 				grad.setColorAt(0,c);
@@ -299,10 +299,10 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	}
 
 	p.setWidthF(m_h*0.05);
-    painter->setPen( p );
+	painter->setPen( p );
 
-   	qreal h = qMin(m_w, m_h);
-   	qreal ch = h*0.5;   // the height for the special chars
+	qreal h = qMin(m_w, m_h);
+	qreal ch = h*0.5;   // the height for the special chars
 	switch (m_type) {
 	  case Normal :
 	  case Finger : 

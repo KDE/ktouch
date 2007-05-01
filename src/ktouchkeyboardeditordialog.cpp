@@ -52,6 +52,7 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 	}
 
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
+
 	// TODO : setup context menu
 }
 // -----------------------------------------------------------------------------
@@ -189,6 +190,45 @@ void KTouchKeyboardEditorDialog::on_keyTextEdit_textEdited(const QString & text)
 }
 // -----------------------------------------------------------------------------
 
+void KTouchKeyboardEditorDialog::on_connectionsButton_clicked() {
+	
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_leftSpinBox_valueChanged(int val) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_x) {
+		m_currentEditKey->m_x = val;
+		m_currentEditKey->setPos(m_currentEditKey->m_x, m_currentEditKey->m_y);
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_topSpinBox_valueChanged(int val) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_y) {
+		m_currentEditKey->m_y = val;
+		m_currentEditKey->setPos(m_currentEditKey->m_x, m_currentEditKey->m_y);
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_widthSpinBox_valueChanged(int val) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_w) {
+		m_currentEditKey->m_w = val;
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_heightSpinBox_valueChanged(int val) {
+	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_h) {
+		m_currentEditKey->m_h = val;
+		m_currentEditKey->update();
+	}
+}
+// -----------------------------------------------------------------------------
+
 void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QRectF sbr = m_scene->itemsBoundingRect();
     qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
@@ -218,6 +258,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 		if (m_currentEditKey->m_type == KTouchKey::Other)
 			keyTextEdit->setText( m_currentEditKey->m_keyText );
 		on_keyTypeCombo_currentIndexChanged( keyTypeCombo->currentIndex() );
+
 		// fill in the keys in the edit lines
 		if (m_currentEditKey->m_keyChar[KTouchKey::TopLeft] != QChar())
 			topLeftChar->setText( m_currentEditKey->m_keyChar[KTouchKey::TopLeft] );
@@ -235,6 +276,12 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 			bottomRightChar->setText( m_currentEditKey->m_keyChar[KTouchKey::BottomRight] );
 		else
 			bottomRightChar->clear();
+
+		// set the geometry
+		leftSpinBox->setValue(m_currentEditKey->m_x);
+		topSpinBox->setValue(m_currentEditKey->m_y);
+		widthSpinBox->setValue(m_currentEditKey->m_w);
+		heightSpinBox->setValue(m_currentEditKey->m_h);
 	}
 }
 // -----------------------------------------------------------------------------
