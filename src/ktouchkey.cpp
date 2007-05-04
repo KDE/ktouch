@@ -455,6 +455,21 @@ KTouchKey::keytype_t KTouchKey::keyType(const QString& str) {
 
 void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 	if (event->button() | Qt::LeftButton) {
+		QPointF scene_pos = event->scenePos();
+		m_dragXOffset = scene_pos.x() - m_x;
+		m_dragYOffset = scene_pos.y() - m_y;
 		emit clicked(this);
 	}
+}
+
+void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
+	QPointF scene_pos = event->scenePos();
+	m_x = int( (scene_pos.x() - m_dragXOffset + 5)/10 )*10;
+	m_y = int( (scene_pos.y() - m_dragYOffset + 5)/10 )*10;
+	setPos(m_x, m_y);
+}
+
+void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent * event) {
+//	m_x = event->scenePos().x();
+//	m_y = event->scenePos().y();
 }

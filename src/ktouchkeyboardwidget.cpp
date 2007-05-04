@@ -67,7 +67,6 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
 }
 // --------------------------------------------------------------------------
 
-
 void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
     setVisible(Prefs::showKeyboard());
 
@@ -153,6 +152,7 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
         }
     }
 }
+// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     QRectF sbr = m_scene->itemsBoundingRect();
@@ -162,6 +162,7 @@ void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     matrix.scale(scale, scale);
     setMatrix(matrix);
 }
+// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::reset() {
     m_keyList.clear();
@@ -172,6 +173,7 @@ void KTouchKeyboardWidget::reset() {
 
     setScene(m_scene);
 }
+// --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::createDefaultKeyboard() {
     reset();
@@ -335,4 +337,5 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
 
     return (!m_keyList.isEmpty());  // empty file means error
 }
+// --------------------------------------------------------------------------
 

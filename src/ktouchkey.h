@@ -103,13 +103,18 @@ public:
 	static QString keyTypeString(keytype_t t);
 	static keytype_t keyType(const QString& str);
 
-protected :
+protected:
 	virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+	virtual void mouseMoveEvent(QGraphicsSceneMouseEvent * event);
+	virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent * event);
 
 signals:
 	/// Emitted when the user left-clicks a key.
 	void clicked(KTouchKey * me);
 
+private:
+	double m_dragXOffset;
+	double m_dragYOffset;
 };
 // ---------------------------------------------------------------------------------------
 

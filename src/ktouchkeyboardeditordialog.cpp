@@ -331,6 +331,7 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
 		KTouchKey * key = *it;
         m_scene->addItem(key);
+		key->setFlag(QGraphicsItem::ItemIsMovable, true);
 		connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
 
 		min_x = qMin<unsigned int>(min_x, (*it)->m_x);
