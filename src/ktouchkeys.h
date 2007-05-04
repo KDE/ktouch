@@ -65,7 +65,7 @@ class KTouchBaseKey : public QObject, public QGraphicsItem {
     void reset(){
         if(m_isActive)
             setActive(false);
-        if(m_isNextKey);
+        if(m_isNextKey)
             setNextKey(false);
     }
 
