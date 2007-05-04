@@ -38,6 +38,7 @@ KTouchKey::KTouchKey(QObject * parent)
 	m_keyChar[3] = QChar();
 	m_colorIndex = 0;
 	setPos(m_x, m_y);
+	setZValue(0);
 }
 
 KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch)
@@ -459,6 +460,7 @@ void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 		m_dragXOffset = scene_pos.x() - m_x;
 		m_dragYOffset = scene_pos.y() - m_y;
 		emit clicked(this);
+		setZValue(1);
 	}
 }
 
@@ -470,6 +472,6 @@ void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
 }
 
 void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent * event) {
-//	m_x = event->scenePos().x();
-//	m_y = event->scenePos().y();
+	emit clicked(this);
+	setZValue(0);
 }
