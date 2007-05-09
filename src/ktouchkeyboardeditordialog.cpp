@@ -13,9 +13,7 @@
 #include "ktouchkeyboardeditordialog.h"
 #include "ktouchkeyboardeditordialog.moc"
 
-#include <QLabel>
-#include <QFont>
-#include <QTimer>
+#include <QtGui>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>
@@ -47,6 +45,11 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
     keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
+	connectorList->setMaximumSize(200000, 70);
+	connectorList->setColumnCount(2);
+	QHeaderView * hv = connectorList->horizontalHeader();
+	hv->setMaximumSize(20000, 20);
+
 	// setup the key edit fields
 	keyTypeCombo->clear();
 	for (int i=0; i<=KTouchKey::Other; ++i) {
@@ -54,8 +57,6 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 	}
 
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
-
-	// TODO : setup context menu
 }
 // -----------------------------------------------------------------------------
 
@@ -208,6 +209,33 @@ void KTouchKeyboardEditorDialog::on_deleteKeyButton_clicked(bool) {
 		m_scene->update();
 	}
 }
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_addKeyButton_clicked(bool) {
+	// add a new key at coordinates 0,0
+	int x = int(m_scene->sceneRect().left() + m_scene->sceneRect().width()/2);
+	int y = int(m_scene->sceneRect().top() + m_scene->sceneRect().height()/2);
+	KTouchKey * key = new KTouchKey(m_keyboard, KTouchKey::Normal, x, y, 80, 80, 'X');
+	key->setZValue(0.1);
+	m_keyboard->m_keys.append(key);
+	m_scene->addItem(key);
+	key->setFlag(QGraphicsItem::ItemIsMovable, true);
+	connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
+	connect(key, SIGNAL(positionChanged(KTouchKey *)), this, SLOT(keyPositionChanged(KTouchKey *)));	
+	// select key
+	keyClicked(key);
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
+	
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
+	
+}
+// -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_leftSpinBox_valueChanged(int val) {
 	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_x) {
@@ -283,6 +311,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		keyPropertiesBox->setEnabled(true);
 		keyGeometryBox->setEnabled(true);
+		keyConnectorEditBox->setEnabled(true);
 		m_currentEditKey->m_state = KTouchKey::HighlightedState;
 		m_currentEditKey->update();
 		
@@ -315,11 +344,54 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 
 		// update geometry
 		keyPositionChanged(k);
+		
+		// update key connector information
+		connectorList->clear();
+		int r = 0;
+		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin();
+			it != m_keyboard->m_connectors.end(); ++it)
+		{
+			// ignore connectors with different target character
+			if ((*it).m_targetKey != m_currentEditKey) continue;
+
+			QChar c(it.key()); // access character
+			QString str;
+			if (c.isPrint()) 
+				str = QString("'%1' (%2)").arg(c).arg(c.unicode());
+			else
+				str = QString(" (%1)").arg(c.unicode());
+
+			// do we have a modifier key?
+			KTouchKey * mk = (*it).m_modifierKey;
+			QString modstr;
+			if (mk != NULL) {
+				if (mk->m_type == KTouchKey::Other)
+					modstr = mk->m_keyText;
+				else
+					modstr = KTouchKey::keyTypeString(mk->m_type);
+			}
+			connectorList->insertRow(r);
+			QTableWidgetItem * w = new QTableWidgetItem(str);
+			w->setFlags(Qt::ItemIsEnabled);
+			connectorList->setItem(r, 0, w);
+			w = new QTableWidgetItem(modstr);
+			w->setFlags(Qt::ItemIsEnabled);
+			connectorList->setItem(r, 1, w);
+			++r;
+		}
+		connectorList->setRowCount(r);
+		for (int i=0; i<r; ++i)
+			connectorList->setRowHeight(i, 20);
+		QStringList headers; headers << i18n("Character") << i18n("Modifier key");
+		connectorList->setHorizontalHeaderLabels(headers);
+		QHeaderView * hv = connectorList->horizontalHeader();
+		hv->setMaximumSize(20000, 20);
 	}
 	else {
 		// not a valid selection, disable the controls
 		keyPropertiesBox->setEnabled(false);
 		keyGeometryBox->setEnabled(false);
+		keyConnectorEditBox->setEnabled(false);
 	}
 }
 // -----------------------------------------------------------------------------
@@ -336,7 +408,6 @@ void KTouchKeyboardEditorDialog::keyPositionChanged(KTouchKey * k) {
 	}
 }
 // -----------------------------------------------------------------------------
-
 
 // ********************************
 // ***** Event implementations ****

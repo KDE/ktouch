@@ -30,40 +30,38 @@ const double PEN_WIDTH = 1.0;
 // **************************
 
 KTouchKey::KTouchKey(QObject * parent) 
-	: QObject(parent), m_state(NormalState), m_type(Normal), m_x(0), m_y(0), m_w(0), m_h(0), 
-	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
+	: QObject(parent), m_state(NormalState), m_colorIndex(-1), m_type(Normal), 
+	  m_x(0), m_y(0), m_w(0), m_h(0), m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_keyChar[0] = QChar();
 	m_keyChar[1] = QChar();
 	m_keyChar[2] = QChar();
 	m_keyChar[3] = QChar();
-	m_colorIndex = 0;
 	setPos(m_x, m_y);
 	setZValue(0);
 }
 // -----------------------------------------------------------------------------
 
 KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch)
-	: QObject(parent), m_state(NormalState), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h),
-	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
+	: QObject(parent), m_state(NormalState), m_colorIndex(-1), m_type(type), 
+	  m_x(x), m_y(y), m_w(w), m_h(h), m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_keyChar[0] = ch;
 	m_keyChar[1] = QChar();
 	m_keyChar[2] = QChar();
 	m_keyChar[3] = QChar();
-	m_colorIndex = 0;
 	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------
 
 KTouchKey::KTouchKey(QObject * parent, int x, int y, int w, int h, const QString &text) 
-	: QObject(parent), m_state(NormalState), m_x(x), m_y(y), m_w(w), m_h(h),
+	: QObject(parent), m_state(NormalState), m_colorIndex(-1), m_x(x), m_y(y), m_w(w), m_h(h),
 	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_type = Other;
 	m_keyChar[0] = QChar();
 	m_keyText = text;
-	m_colorIndex = 0;
+	
 	setPos(m_x, m_y);
 }
 // ----------------------------------------------------------------------------

@@ -135,7 +135,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, QString type, QString& warnings) {
 	if (m_connectors.find(keyUnicode) != m_connectors.end()) {
 		warnings += i18n("%1 with display character '%2' and unicode '%3' "
-			"has been already defined and is skipped.\n").arg(type).arg(QChar(keyUnicode)).arg(keyUnicode);
+			"has been already defined and is skipped.\n", type, QChar(keyUnicode), keyUnicode);
 		return true;
 	}
 	else return false;
