@@ -84,6 +84,10 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
 	virtual void on_addConnectorButton_clicked(bool);
 	/// Called when user clears all connectors for a certain key.
 	virtual void on_clearConnectorButton_clicked(bool);
+	/// Called when checks the select finger key button.
+	virtual void on_selectFingerKeyButton_clicked(bool);
+	/// Called when checks the select modifier key button.
+	virtual void on_selectModifierKeyButton_clicked(bool);
 
 	/// Called whenever the user modified the key geometry.
 	virtual void on_leftSpinBox_valueChanged(int);
@@ -132,6 +136,7 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     KUrl            m_currentURL;		///< URL of the current keyboard.
 
 	KTouchKey		*m_currentEditKey;	///< The key that is currently selected for editing.
+	KTouchKey		*m_currentModifierKey;	///< The modifier key that is currently selected for the connector.
 
     QGraphicsScene	*m_scene;			///< The graphics scene 
 

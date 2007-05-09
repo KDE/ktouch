@@ -228,12 +228,72 @@ void KTouchKeyboardEditorDialog::on_addKeyButton_clicked(bool) {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
-	
+	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return;
+	// check that we have either a character or a unicode number given
+	bool error = false;
+	int unicode;
+	if (!conCharEdit->text().isEmpty()) {
+		if (!conUnicodeEdit->text().isEmpty())
+			error = true;
+		else
+			unicode = conCharEdit->text()[0].unicode();
+	}
+	else if (!conUnicodeEdit->text().isEmpty()) {
+		bool ok;
+		unicode = conUnicodeEdit->text().toInt(&ok,10);
+		if (!ok) {
+			QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("This is not a valid unicode number. Please correct the number or enter a character."));
+			return;
+		}
+	}
+	else {
+		error = true;
+	}
+	if (error) {
+		QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number!"));
+		return;
+	}
+	m_keyboard->m_connectors[unicode] = KTouchKeyConnector(unicode, m_currentEditKey, m_currentModifierKey);
+	// update info
+	keyClicked(m_currentEditKey);
+	// clear input line edits to avoid accidental overwriting
+	conCharEdit->clear();
+	conUnicodeEdit->clear();
 }
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
-	
+	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return;
+	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Delete all key connections for this key?"), 
+		QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+	{
+		QList<int> connectorsToRemove;
+		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin(); 
+			it != m_keyboard->m_connectors.end(); ++it) 
+		{
+			if ((*it).m_targetKey == m_currentEditKey) {
+				connectorsToRemove.append(it.key());
+				continue;
+			}
+		}
+		for (int i=0; i<connectorsToRemove.count(); ++i) {
+			//kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
+			m_keyboard->m_connectors.remove(connectorsToRemove[i]);
+		}
+	}
+	keyClicked(m_currentEditKey);
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_selectFingerKeyButton_clicked(bool checked) {
+	if (checked)
+		selectModifierKeyButton->setChecked(false);
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::on_selectModifierKeyButton_clicked(bool checked) {
+	if (checked)
+		selectFingerKeyButton->setChecked(false);
 }
 // -----------------------------------------------------------------------------
 
@@ -283,21 +343,34 @@ void KTouchKeyboardEditorDialog::resizeKeyboard() {
 
 void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	// are we currently selecting a finger key character?
-	if (selectFingerKeyButton->isChecked()) {
+	if (selectFingerKeyButton->isChecked() || selectModifierKeyButton->isChecked()) {
 		// bail out if no key is currently selected
 		if (!m_keyboard->m_keys.contains(m_currentEditKey)) 
 			return;
 		// check if the clicked key exists
 		if (m_keyboard->m_keys.contains(k)) {
-			// check if the key is actually a finger key
-			if (k->m_type != KTouchKey::Finger) {
-				QMessageBox::warning(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
-				return;
+			// different treatment if finger key or modifier key is selected
+			if (selectFingerKeyButton->isChecked()) {
+				// check if the key is actually a finger key
+				if (k->m_type != KTouchKey::Finger) {
+					QMessageBox::warning(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
+					return;
+				}
+				else {
+					m_currentEditKey->m_fingerKey = k;
+					m_currentEditKey->m_colorIndex = k->m_colorIndex;
+					selectFingerKeyButton->setChecked(false);
+				}
 			}
 			else {
-				m_currentEditKey->m_fingerKey = k;
-				m_currentEditKey->m_colorIndex = k->m_colorIndex;
-				selectFingerKeyButton->setChecked(false);
+				m_currentModifierKey = k;
+				QString modstr;
+				if (k->m_type == KTouchKey::Other)
+					modstr = k->m_keyText;
+				else
+					modstr = KTouchKey::keyTypeString(k->m_type);
+				selectModifierKeyButton->setText( modstr );
+				selectModifierKeyButton->setChecked(false);
 			}
 		}
 		return; // stop here, don't select the key
@@ -386,6 +459,9 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 		connectorList->setHorizontalHeaderLabels(headers);
 		QHeaderView * hv = connectorList->horizontalHeader();
 		hv->setMaximumSize(20000, 20);
+
+		selectModifierKeyButton->setText( i18n("<modifier key>") );
+		m_currentModifierKey = NULL;
 	}
 	else {
 		// not a valid selection, disable the controls

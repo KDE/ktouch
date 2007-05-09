@@ -441,7 +441,9 @@ void KTouchKeyboard::setFont(const QFont& f) {
 bool KTouchKeyboard::allowKeyClicks() const {
 	// check if the keyboard editor allows us to click
 	KTouchKeyboardEditorDialog * kbed = dynamic_cast<KTouchKeyboardEditorDialog *>(parent());
-	if (kbed != NULL && !kbed->selectFingerKeyButton->isChecked()) return true;
+	if (kbed != NULL && 
+        !kbed->selectFingerKeyButton->isChecked() && 
+        !kbed->selectModifierKeyButton->isChecked()) return true;
 	else return false;
 }
 // ----------------------------------------------------------------------------
@@ -475,7 +477,7 @@ void KTouchKeyboard::deleteKey(KTouchKey * k) {
 			(*it).m_modifierKey = NULL;
 	}
 	for (int i=0; i<connectorsToRemove.count(); ++i) {
-		kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
+		//kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
 		m_connectors.remove(connectorsToRemove[i]);
 	}
 }
