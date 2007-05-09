@@ -27,27 +27,9 @@
      <property name="title" >
       <string>Keyboard Identification Data</string>
      </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="0" >
+     <layout class="QVBoxLayout" >
+      <item>
        <layout class="QGridLayout" >
-        <property name="leftMargin" >
-         <number>0</number>
-        </property>
-        <property name="topMargin" >
-         <number>0</number>
-        </property>
-        <property name="rightMargin" >
-         <number>0</number>
-        </property>
-        <property name="bottomMargin" >
-         <number>0</number>
-        </property>
-        <property name="horizontalSpacing" >
-         <number>6</number>
-        </property>
-        <property name="verticalSpacing" >
-         <number>6</number>
-        </property>
         <item row="0" column="0" >
          <widget class="QLabel" name="titleLabel" >
           <property name="text" >
@@ -55,8 +37,8 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1" >
-         <widget class="QLineEdit" name="langIDEdit" />
+        <item row="0" column="1" >
+         <widget class="QLineEdit" name="titleEdit" />
         </item>
         <item row="1" column="0" >
          <widget class="QLabel" name="textLabel2" >
@@ -65,12 +47,16 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="1" >
-         <widget class="QLineEdit" name="titleEdit" />
+        <item row="1" column="1" >
+         <widget class="KComboBox" name="langIDCombo" >
+          <property name="editable" >
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
-      <item row="1" column="0" >
+      <item>
        <widget class="QLabel" name="textLabel1" >
         <property name="sizePolicy" >
          <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
@@ -83,7 +69,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0" >
+      <item>
        <widget class="QTextEdit" name="commentEdit" >
         <property name="sizePolicy" >
          <sizepolicy vsizetype="Maximum" hsizetype="Expanding" >
@@ -713,6 +699,11 @@
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <customwidgets>
   <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
    <class>KIntSpinBox</class>
    <extends>QSpinBox</extends>
    <header>knuminput.h</header>
@@ -730,7 +721,6 @@
  </customwidgets>
  <tabstops>
   <tabstop>titleEdit</tabstop>
-  <tabstop>langIDEdit</tabstop>
   <tabstop>commentEdit</tabstop>
   <tabstop>setFontButton</tabstop>
   <tabstop>openButton</tabstop>

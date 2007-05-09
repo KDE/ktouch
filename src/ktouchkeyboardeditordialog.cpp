@@ -56,6 +56,14 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 		keyTypeCombo->addItem(KTouchKey::keyTypeString(static_cast<KTouchKey::keytype_t>(i)));
 	}
 
+	// loop over all languages supported in KDE and add the language code and language name 
+	// to the langIDCombo box
+	QStringList langlist = KGlobal::locale()->allLanguagesTwoAlpha();
+	for (int i=0; i<langlist.count(); ++i) {
+		QString langname = QString("%1 (%2)").arg(langlist[i]).arg(KGlobal::locale()->twoAlphaToLanguageName(langlist[i]));
+		langIDCombo->addItem(langname);
+	}
+
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()) );
 }
 // -----------------------------------------------------------------------------
@@ -89,9 +97,10 @@ void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
 		m_keyboard->m_fontSuggestions = f.toString();
 		m_keyboard->setFont(f);
 		// update font
-		titleEdit->setFont(f);  
+/*		titleEdit->setFont(f);  
 		commentEdit->setFont(f);  
-		langIDEdit->setFont(f);  
+		langIDCombo->setFont(f);  
+*/
 		update();	// trigger repaint of the keyboard.
 		setModified();
     }
@@ -514,14 +523,20 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 		titleEdit->setText(m_keyboard->m_title);
 		commentEdit->setText(m_keyboard->m_comment);
 	}
-	langIDEdit->setText(m_keyboard->m_language);
-	if (!m_keyboard->m_fontSuggestions.isEmpty()) {
+	int index = langIDCombo->findText(m_keyboard->m_language);
+	if (index == -1) {
+		langIDCombo->addItem(m_keyboard->m_language);
+		index = langIDCombo->count()-1;
+	}
+	langIDCombo->setCurrentIndex(index);
+/*	if (!m_keyboard->m_fontSuggestions.isEmpty()) {
 		QFont f;
 		f.fromString(m_keyboard->m_fontSuggestions);
 		titleEdit->setFont(f);
 		commentEdit->setFont(f);
-		langIDEdit->setFont(f);
+		langIDCombo->setFont(f);
 	}
+*/
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
 	unsigned int min_y = 100000;
@@ -542,13 +557,13 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	QTimer::singleShot(10, this, SLOT(resizeKeyboard()));
 }
 // -----------------------------------------------------------------------------
-    
+
 void KTouchKeyboardEditorDialog::transfer_from_dialog() {
 	m_keyboard->m_title = titleEdit->text();
 	if (m_keyboard->m_title.isEmpty())  
 		m_keyboard->m_title = i18n("untitled keyboard layout");
 	m_keyboard->m_comment = commentEdit->toPlainText();
-	m_keyboard->m_language = langIDEdit->text();
+	m_keyboard->m_language = langIDCombo->currentText();
 }
 // -----------------------------------------------------------------------------
 
