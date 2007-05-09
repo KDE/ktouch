@@ -37,6 +37,8 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 {
 	setupUi(this);
 
+	m_keyboard = new KTouchKeyboard(this);
+
     m_scene = new QGraphicsScene(this);
 	keyboardView->setScene(m_scene);
     keyboardView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -82,8 +84,8 @@ void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
 	//kDebug() << "Fontbutton clicked" << endl;
     QFont f;
     if (KFontDialog::getFont(f)==QDialog::Accepted) {
-		m_keyboard.m_fontSuggestions = f.toString();
-		m_keyboard.setFont(f);
+		m_keyboard->m_fontSuggestions = f.toString();
+		m_keyboard->setFont(f);
 		// update font
 		titleEdit->setFont(f);  
 		commentEdit->setFont(f);  
@@ -104,7 +106,7 @@ void KTouchKeyboardEditorDialog::on_saveButton_clicked() {
     if (m_currentURL.isEmpty()) on_saveAsButton_clicked();
     else {
         transfer_from_dialog();
-        m_keyboard.saveXML(this, m_currentURL);
+        m_keyboard->saveXML(this, m_currentURL);
         setModified(false);
     }
 }
@@ -116,14 +118,14 @@ void KTouchKeyboardEditorDialog::on_saveAsButton_clicked() {
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
         m_currentURL = tmp;
-        m_keyboard.saveXML(this, m_currentURL);
+        m_keyboard->saveXML(this, m_currentURL);
         setModified(false);
     }
 }
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_topLeftChar_textEdited(const QString & text) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		if (!text.isEmpty())
 			m_currentEditKey->m_keyChar[KTouchKey::TopLeft] = text[0];
 		else
@@ -134,7 +136,7 @@ void KTouchKeyboardEditorDialog::on_topLeftChar_textEdited(const QString & text)
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_topRightChar_textEdited(const QString & text) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		if (!text.isEmpty())
 			m_currentEditKey->m_keyChar[KTouchKey::TopRight] = text[0];
 		else
@@ -145,7 +147,7 @@ void KTouchKeyboardEditorDialog::on_topRightChar_textEdited(const QString & text
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_bottomLeftChar_textEdited(const QString & text) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		if (!text.isEmpty())
 			m_currentEditKey->m_keyChar[KTouchKey::BottomLeft] = text[0];
 		else
@@ -156,7 +158,7 @@ void KTouchKeyboardEditorDialog::on_bottomLeftChar_textEdited(const QString & te
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_bottomRightChar_textEdited(const QString & text) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		if (!text.isEmpty())
 			m_currentEditKey->m_keyChar[KTouchKey::BottomRight] = text[0];
 		else
@@ -175,7 +177,7 @@ void KTouchKeyboardEditorDialog::on_keyTypeCombo_currentIndexChanged(int index) 
 		keyTextLabel->setEnabled(false);
 		keyTextEdit->setEnabled(false);
 	}
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		m_currentEditKey->m_type = static_cast<KTouchKey::keytype_t>(index);
 		m_currentEditKey->update();
 	}
@@ -183,20 +185,15 @@ void KTouchKeyboardEditorDialog::on_keyTypeCombo_currentIndexChanged(int index) 
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_keyTextEdit_textEdited(const QString & text) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		m_currentEditKey->m_keyText = text;
 		m_currentEditKey->update();
 	}
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKeyboardEditorDialog::on_connectionsButton_clicked() {
-	
-}
-// -----------------------------------------------------------------------------
-
 void KTouchKeyboardEditorDialog::on_leftSpinBox_valueChanged(int val) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_x) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_x) {
 		m_currentEditKey->m_x = val;
 		m_currentEditKey->setPos(m_currentEditKey->m_x, m_currentEditKey->m_y);
 		m_currentEditKey->update();
@@ -205,7 +202,7 @@ void KTouchKeyboardEditorDialog::on_leftSpinBox_valueChanged(int val) {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_topSpinBox_valueChanged(int val) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_y) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_y) {
 		m_currentEditKey->m_y = val;
 		m_currentEditKey->setPos(m_currentEditKey->m_x, m_currentEditKey->m_y);
 		m_currentEditKey->update();
@@ -214,7 +211,7 @@ void KTouchKeyboardEditorDialog::on_topSpinBox_valueChanged(int val) {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_widthSpinBox_valueChanged(int val) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_w) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_w) {
 		m_currentEditKey->m_w = val;
 		m_currentEditKey->update();
 	}
@@ -222,7 +219,7 @@ void KTouchKeyboardEditorDialog::on_widthSpinBox_valueChanged(int val) {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_heightSpinBox_valueChanged(int val) {
-	if (m_keyboard.m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_h) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_h) {
 		m_currentEditKey->m_h = val;
 		m_currentEditKey->update();
 	}
@@ -240,13 +237,33 @@ void KTouchKeyboardEditorDialog::resizeKeyboard() {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
+	// are we currently selecting a finger key character?
+	if (selectFingerKeyButton->isChecked()) {
+		// bail out if no key is currently selected
+		if (!m_keyboard->m_keys.contains(m_currentEditKey)) 
+			return;
+		// check if the clicked key exists
+		if (m_keyboard->m_keys.contains(k)) {
+			// check if the key is actually a finger key
+			if (k->m_type != KTouchKey::Finger) {
+				QMessageBox::warning(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
+				return;
+			}
+			else {
+				m_currentEditKey->m_fingerKey = k;
+				m_currentEditKey->m_colorIndex = k->m_colorIndex;
+				selectFingerKeyButton->setChecked(false);
+			}
+		}
+		return; // stop here, don't select the key
+	}
 	// update the character edits
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		m_currentEditKey->m_state = KTouchKey::NormalState;
 		m_currentEditKey->update();
 	}
 	m_currentEditKey = k;
-	if (m_keyboard.m_keys.contains(m_currentEditKey)) {
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		m_currentEditKey->m_state = KTouchKey::HighlightedState;
 		m_currentEditKey->update();
 		
@@ -277,6 +294,15 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 		else
 			bottomRightChar->clear();
 
+		// update geometry
+		keyPositionChanged(k);
+	}
+}
+// -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::keyPositionChanged(KTouchKey * k) {
+	m_currentEditKey = k;
+	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
 		// set the geometry
 		leftSpinBox->setValue(m_currentEditKey->m_x);
 		topSpinBox->setValue(m_currentEditKey->m_y);
@@ -285,6 +311,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	}
 }
 // -----------------------------------------------------------------------------
+
 
 // ********************************
 // ***** Event implementations ****
@@ -309,16 +336,16 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 		QString fname = m_currentURL.fileName();
 		if (!fname.endsWith(".xml")) {
 			int pos = fname.indexOf('.');
-			m_keyboard.m_language = fname.left(pos);
-			m_keyboard.m_title = fname;
+			m_keyboard->m_language = fname.left(pos);
+			m_keyboard->m_title = fname;
 		}
-		titleEdit->setText(m_keyboard.m_title);
-		commentEdit->setText(m_keyboard.m_comment);
+		titleEdit->setText(m_keyboard->m_title);
+		commentEdit->setText(m_keyboard->m_comment);
 	}
-	langIDEdit->setText(m_keyboard.m_language);
-	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
+	langIDEdit->setText(m_keyboard->m_language);
+	if (!m_keyboard->m_fontSuggestions.isEmpty()) {
 		QFont f;
-		f.fromString(m_keyboard.m_fontSuggestions);
+		f.fromString(m_keyboard->m_fontSuggestions);
 		titleEdit->setFont(f);
 		commentEdit->setFont(f);
 		langIDEdit->setFont(f);
@@ -328,11 +355,12 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 	unsigned int min_y = 100000;
 	unsigned int max_y = 0;
 	QList<KTouchKey*>::iterator it;
-	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
+	for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
 		KTouchKey * key = *it;
         m_scene->addItem(key);
 		key->setFlag(QGraphicsItem::ItemIsMovable, true);
 		connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
+		connect(key, SIGNAL(positionChanged(KTouchKey *)), this, SLOT(keyPositionChanged(KTouchKey *)));
 
 		min_x = qMin<unsigned int>(min_x, (*it)->m_x);
 		max_x = qMax<unsigned int>(max_x, (*it)->m_x+(*it)->m_w);
@@ -344,10 +372,11 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 // -----------------------------------------------------------------------------
     
 void KTouchKeyboardEditorDialog::transfer_from_dialog() {
-	m_keyboard.m_title = titleEdit->text();
-	if (m_keyboard.m_title.isEmpty())  m_keyboard.m_title = i18n("untitled keyboard layout");
-	m_keyboard.m_comment = commentEdit->toPlainText();
-	m_keyboard.m_language = langIDEdit->text();
+	m_keyboard->m_title = titleEdit->text();
+	if (m_keyboard->m_title.isEmpty())  
+		m_keyboard->m_title = i18n("untitled keyboard layout");
+	m_keyboard->m_comment = commentEdit->toPlainText();
+	m_keyboard->m_language = langIDEdit->text();
 }
 // -----------------------------------------------------------------------------
 
@@ -370,16 +399,16 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
         m_currentURL = new_url;
         // Try to load the keyboard, if that fails, we create a new keyboard instead
         if (!m_currentURL.isEmpty() && 
-		    !m_keyboard.load(this, m_currentURL) && !m_keyboard.loadXML(this, m_currentURL)) 
+		    !m_keyboard->load(this, m_currentURL) && !m_keyboard->loadXML(this, m_currentURL)) 
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead."));
             m_currentURL = ""; // new keyboards haven't got a URL
-			m_keyboard.clear();
+			m_keyboard->clear();
         }
         // If we have no URL, we create a new keyboard - can happen if either the user
         // chose "new keyboard" or the chosen keyboard could not be opened
         if (m_currentURL.isEmpty())  {
-            m_keyboard.clear();
+            m_keyboard->clear();
             setModified(true); // new keyboards are modified by default
         }
         else

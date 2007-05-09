@@ -25,6 +25,7 @@
 #include <kmessagebox.h>
 
 #include "ktouchkey.h"
+#include "ktouchkeyboardeditordialog.h"
 
 // --------------------------------------------------------------------------
 
@@ -459,5 +460,13 @@ void KTouchKeyboard::setFont(const QFont& f) {
 	for (QList<KTouchKey*>::const_iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
 		(*it)->update();
 	}
+}
+// ----------------------------------------------------------------------------
+
+bool KTouchKeyboard::allowKeyClicks() const {
+	// check if the keyboard editor allows us to click
+	KTouchKeyboardEditorDialog * kbed = dynamic_cast<KTouchKeyboardEditorDialog *>(parent());
+	if (kbed != NULL && !kbed->selectFingerKeyButton->isChecked()) return true;
+	else return false;
 }
 // ----------------------------------------------------------------------------

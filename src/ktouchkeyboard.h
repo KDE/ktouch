@@ -64,7 +64,9 @@ public:
 	void setFont(const QFont& f);
 	/// Returns the current keyboard font.
 	const QFont& font() const { return m_font; }
-	
+	/// Returns whether key click events on keys are allowed or not.
+	bool allowKeyClicks() const;
+
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
     QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with character connectivity data.
 	

@@ -248,9 +248,12 @@
        </layout>
       </item>
       <item>
-       <widget class="KPushButton" name="connectionsButton" >
+       <widget class="KPushButton" name="selectFingerKeyButton" >
         <property name="text" >
-         <string>Edit connections...</string>
+         <string>Select finger key</string>
+        </property>
+        <property name="checkable" >
+         <bool>true</bool>
         </property>
        </widget>
       </item>

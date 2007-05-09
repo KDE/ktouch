@@ -120,6 +120,8 @@ protected:
 signals:
 	/// Emitted when the user left-clicks a key.
 	void clicked(KTouchKey * me);
+	/// Emitted when the user moved the graphics view item around.
+	void positionChanged(KTouchKey * me);
 
 private:
 	double m_dragXOffset;

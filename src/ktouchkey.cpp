@@ -470,22 +470,40 @@ KTouchKey::keytype_t KTouchKey::keyType(const QString& str) {
 
 void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 	if (event->button() | Qt::LeftButton) {
-		QPointF scene_pos = event->scenePos();
-		m_dragXOffset = scene_pos.x() - m_x;
-		m_dragYOffset = scene_pos.y() - m_y;
 		emit clicked(this);
-		setZValue(1);
+		// are we allowed to click/activate the key?
+		KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());
+		if (kb != NULL && kb->allowKeyClicks()) {
+			QPointF scene_pos = event->scenePos();
+			m_dragXOffset = scene_pos.x() - m_x;
+			m_dragYOffset = scene_pos.y() - m_y;
+			setZValue(1);
+			// let the event pass through so that the graphics view can handle the selection part
+		}
+		else {
+			event->accept();
+		}
 	}
 }
 
 void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
-	QPointF scene_pos = event->scenePos();
-	m_x = int( (scene_pos.x() - m_dragXOffset + 5)/10 )*10;
-	m_y = int( (scene_pos.y() - m_dragYOffset + 5)/10 )*10;
-	setPos(m_x, m_y);
+	// are we allowed to click/activate/move the key?
+	KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());
+	if (kb != NULL && kb->allowKeyClicks()) {
+		QPointF scene_pos = event->scenePos();
+		m_x = int( (scene_pos.x() - m_dragXOffset + 5)/10 )*10;
+		m_y = int( (scene_pos.y() - m_dragYOffset + 5)/10 )*10;
+		setPos(m_x, m_y);
+		emit positionChanged(this);
+		// let the event pass through so that the graphics view can handle the movement part
+	}
+	else {
+		// this is the default behavior when the keyboard is used during the lecture
+		event->accept();
+	}
 }
 
 void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent * event) {
-	emit clicked(this);
+	//emit clicked(this);
 	setZValue(0);
 }

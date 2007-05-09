@@ -76,8 +76,6 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
 	virtual void on_keyTypeCombo_currentIndexChanged(int index);
 	/// Called when user edits the key text
 	virtual void on_keyTextEdit_textEdited(const QString & text);
-	/// Called when user wants to edit the key connections.
-	virtual void on_connectionsButton_clicked();
 
 	/// Called whenever the user modified the key geometry.
 	virtual void on_leftSpinBox_valueChanged(int);
@@ -89,8 +87,10 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     void setModified() { setModified(true); }
     /// Resizes the keyboard based on the size of the graphics view.
     void resizeKeyboard();
-	/// Connected to the key-graphicsview items
+	/// Connected to the key-graphicsview item 'clicked' event.
 	void keyClicked(KTouchKey * k);
+	/// Connected to the key-graphicsview items 'moved' event.
+	void keyPositionChanged(KTouchKey * k);
 
   protected:
     /// Resizes the keyboard.
@@ -119,7 +119,7 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     /// @return The function returns 'false' if the user aborted the save request, otherwise true.
     bool saveModified();
 
-    KTouchKeyboard	m_keyboard;			///< The keyboard data.
+    KTouchKeyboard	*m_keyboard;		///< The keyboard data.
     bool            m_modified;			///< Flag indicating whether the keyboard has been modified.
     KUrl            m_currentURL;		///< URL of the current keyboard.
 
