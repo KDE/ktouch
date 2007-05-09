@@ -169,12 +169,12 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
             if (w==0)	w=80;
             if (h==0)	h=80;
 			if (keyText.isEmpty()) continue;
-			// add a key connector
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
-			// finally add the key - in uppercase
+			// add the key - in uppercase
 			KTouchKey * key = new KTouchKey(this, KTouchKey::Finger, x, y, w, h, QChar(keyUnicode).toUpper());
             m_keys.push_back(key);
+			// add the corresponding key connector
+    		// KTouchKeyConnector(int keyUnicode, KTouchKey * target_key, KTouchKey * modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, key, NULL);
         }
         else if (keyType=="ControlKey") {
 			if (keyAlreadyExists(keyUnicode, i18n("Control key"), warnings))   continue;
@@ -182,9 +182,6 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
             x *= 10; y *= 10; w = w*10 - 2*h; h = h*8;   
             // Note: 20% of height less in both directions for compatibility with old files 
 			if (keyText.isEmpty()) continue;
-			// add a key connector
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
 			KTouchKey::keytype_t type = KTouchKey::Other;
 			if (keyText.compare("Enter",Qt::CaseInsensitive)==0)			type = KTouchKey::Enter;
 			else if (keyText.compare("Space",Qt::CaseInsensitive)==0)		type = KTouchKey::Space;
@@ -195,6 +192,9 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			KTouchKey * key = new KTouchKey(this, x, y, w, h, keyText);
 			key->m_type = type;
             m_keys.push_back(key);
+			// add a key connector
+    		// KTouchKeyConnector(int keyUnicode, KTouchKey * target_key, KTouchKey * modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, key, NULL);
         }
         else if (keyType=="NormalKey") {
 			if (keyAlreadyExists(keyUnicode, i18n("Normal key"), warnings))   continue;
@@ -204,18 +204,19 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			if (keyText.isEmpty()) continue;
 			// lookup the finger key index
 			KTouchKeyConnector & fingerKeyConn = m_connectors[ fingerUnicode ];
-			if (fingerKeyConn.m_targetKeyIndex == -1) {
+			if (fingerKeyConn.m_targetKey == NULL) {
 				warnings += i18n("Unknown finger key with unicode '%1'. Normal key with "
 					"display character '%2' and unicode '%3' skipped.\n", fingerUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
-			// at last add the key - uppercase display character
+			// add the key - uppercase display character
 			KTouchKey * key = new KTouchKey(this, KTouchKey::Normal, x, y, w, h, QChar(keyUnicode).toUpper());
-			// identify the finger key
-			key->m_fingerKeyIndex = fingerKeyConn.m_targetKeyIndex;
+			// identify the finger key index (the pointer is set below)
+			key->m_fingerKeyIndex = m_keys.indexOf(fingerKeyConn.m_targetKey);
             m_keys.push_back(key);
+    		// KTouchKeyConnector(int keyUnicode, KTouchKey * target_key, KTouchKey * modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, key, NULL);
+
         } 
         else if (keyType=="HiddenKey") {
 			if (keyAlreadyExists(keyUnicode, i18n("Hidden key"), warnings))   continue;
@@ -226,24 +227,25 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			KTouchKeyConnector & fingerKeyConn 		= m_connectors[ fingerUnicode ];
 			KTouchKeyConnector & modifierKeyConn 	= m_connectors[ modifierUnicode ];
 
-			if (targetKeyConn.m_targetKeyIndex == -1) {
+			if (targetKeyConn.m_targetKey == NULL) {
 				warnings += i18n("Unknown target key with unicode '%1'. Hidden key with "
 					"display character '%2' and unicode '%3' skipped.\n", targetUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
-			if (fingerKeyConn.m_targetKeyIndex == -1) {
+			if (fingerKeyConn.m_targetKey == NULL) {
 				warnings += i18n("Unknown finger key with unicode '%1'. Hidden key with "
 					"display character '%2' and unicode '%3' skipped.\n", fingerUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
-			if (modifierUnicode != -1 && modifierKeyConn.m_targetKeyIndex == -1) {
+			if (modifierUnicode != -1 && modifierKeyConn.m_targetKey == NULL) {
 				warnings += i18n("Unknown modifier/control key with unicode '%1'. Hidden key with "
 					"display character '%2' and unicode '%3' skipped.\n", modifierUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
+    		// KTouchKeyConnector(int keyUnicode, KTouchKey * target_key, KTouchKey * modifier_key)
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode,
-														  targetKeyConn.m_targetKeyIndex,
-														  modifierKeyConn.m_targetKeyIndex);
+														  targetKeyConn.m_targetKey,
+														  modifierKeyConn.m_targetKey);
         }
         else {
             //qdebug() << i18n("Missing key type in line '%1'.",line);
@@ -298,7 +300,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 		while (!connectorElement.isNull()) {
 			// create new connector
 			KTouchKeyConnector c;
-			c.read(connectorElement);
+			c.read(connectorElement,m_keys);
 			m_connectors[c.m_keyUnicode] = c;
 			connectorElement = connectorElement.nextSiblingElement("KeyConnector");
 		}
@@ -353,7 +355,7 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	QDomElement conns = doc.createElement("Connections");
 	root.appendChild(conns);
     for (QMap<int, KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
-		it->write(doc, conns);
+		it->write(doc, conns, m_keys);
 }
 // ----------------------------------------------------------------------------
 
@@ -389,40 +391,13 @@ void KTouchKeyboard::createDefault() {
 	m_keys.push_back( new KTouchKey(this, KTouchKey::Finger, 2*col+  3*col,   row, keyWidth, 2*keyHeight+keySpacing, QChar('+') ) );
 	m_keys.push_back( new KTouchKey(this, KTouchKey::Enter,     2*col+  3*col, 3*row, keyWidth, 2*keyHeight+keySpacing, QChar() ) );
 	m_keys.push_back( new KTouchKey(this, KTouchKey::Backspace, 2*col+  5*col,     0, keyWidth, keyHeight, QChar() ) );
-/*
-    // now we need to create the connections between the characters thaTt can be typed and the
-    // keys that need to be displayed on the keyboard
-    // The arguments to the constructor are: keychar, targetkey, fingerkey, controlkeyid
 
-	m_connectors.clear();
-	m_connectors.push_back( KTouchKeyConnector('/', '/','5', 0) );
-	m_connectors.push_back( KTouchKeyConnector('*', '*','6', 0) );
-	m_connectors.push_back( KTouchKeyConnector('-', '-','+', 0) );
-	m_connectors.push_back( KTouchKeyConnector('+', '+',  0, 0) );
-	m_connectors.push_back( KTouchKeyConnector('0', '0',  0, 0) );
-	m_connectors.push_back( KTouchKeyConnector('1', '1','4', 0) );
-	m_connectors.push_back( KTouchKeyConnector('2', '2','5', 0) );
-	m_connectors.push_back( KTouchKeyConnector('3', '3','6', 0) );
-	m_connectors.push_back( KTouchKeyConnector('4', '4',  0, 0) );
-	m_connectors.push_back( KTouchKeyConnector('5', '5',  0, 0) );
-	m_connectors.push_back( KTouchKeyConnector('6', '6',  0, 0) );
-	m_connectors.push_back( KTouchKeyConnector('7', '7','4', 0) );
-	m_connectors.push_back( KTouchKeyConnector('8', '8','5', 0) );
-	m_connectors.push_back( KTouchKeyConnector('9', '9','6', 0) );
-    m_connectors.push_back( KTouchKeyConnector('.', '.', '6', 0) );
-*/
 	m_title = "Number keypad";
 	m_comment = "Predefined keyboard layout";
 	m_language.clear();
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Monospace";
 	updateKeyPointers();
-}
-// ----------------------------------------------------------------------------
-
-void KTouchKeyboard::updateConnections() {
-//	for (QList<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
-//		(*it).updateConnections(m_keys);
 }
 // ----------------------------------------------------------------------------
 
@@ -489,8 +464,19 @@ void KTouchKeyboard::deleteKey(KTouchKey * k) {
 		}
 	}
 	// loop over all key connectors and remove all references to the deleted key
+	QList<int> connectorsToRemove;
 	for (QMap<int, KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it) {
-		// TODO : remove pointers to key
+		if ((*it).m_targetKey == k) {
+			connectorsToRemove.append(it.key());
+			continue;
+		}
+		// if just the modifier key was deleted, simply set the pointer to zero
+		if ((*it).m_modifierKey == k)
+			(*it).m_modifierKey = NULL;
+	}
+	for (int i=0; i<connectorsToRemove.count(); ++i) {
+		kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
+		m_connectors.remove(connectorsToRemove[i]);
 	}
 }
 // ----------------------------------------------------------------------------

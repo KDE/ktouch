@@ -34,8 +34,8 @@ class KUrl;
 /// @code
 /// QChar keyToPress = 'H';
 /// KTouchKeyConnector & c = m_connectors[keyToPress.unicode()];
-/// KTouchKey * targetKey = m_keys[ c.m_targetKeyIndex ];
-/// KTouchKey * modifierKey = m_keys[ c.m_modifierKeyIndex ];
+/// KTouchKey * targetKey = c.m_targetKey;
+/// KTouchKey * modifierKey = c.m_modifierKey;
 /// if (targetKey != NULL) {
 /// 	KTouchKey * fingerKey = targetKey->m_fingerKey;
 /// 	// ...
@@ -56,8 +56,6 @@ public:
     bool saveXML(QWidget * window, const KUrl& url) const;
 	/// Creates the default number keyboard.
 	void createDefault();
-	/// Updates the indices in the KTouchKeyConnector objects for faster access.
-	void updateConnections();
 	/// Updates the keys to finger key pointers and also updates the color indices in the finger keys.
 	void updateKeyPointers();
 	/// Sets the font in all keys of the keyboard.
