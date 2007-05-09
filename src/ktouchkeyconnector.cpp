@@ -24,8 +24,6 @@ bool KTouchKeyConnector::read(QDomElement e) {
 		return false;
 	if (e.hasAttribute("TargetKeyIndex"))
 		m_targetKeyIndex = e.attribute("TargetKeyIndex").toInt();
-	if (e.hasAttribute("FingerKeyIndex"))
-		m_fingerKeyIndex = e.attribute("FingerKeyIndex").toInt();
 	if (e.hasAttribute("ModifierIndex"))
 		m_modifierKeyIndex = e.attribute("ModifierIndex").toInt();
     return true;
@@ -37,8 +35,6 @@ void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
 	element.setAttribute("KeyUnicode", m_keyUnicode);
 	if (m_targetKeyIndex != -1)
 		element.setAttribute("TargetKeyIndex", m_targetKeyIndex);
-	if (m_fingerKeyIndex != -1)
-		element.setAttribute("FingerKeyIndex", m_fingerKeyIndex);
 	if (m_modifierKeyIndex != -1)
 		element.setAttribute("ModifierIndex", m_modifierKeyIndex);
 	root.appendChild(element);

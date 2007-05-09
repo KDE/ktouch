@@ -35,9 +35,9 @@ class KUrl;
 /// QChar keyToPress = 'H';
 /// KTouchKeyConnector & c = m_connectors[keyToPress.unicode()];
 /// KTouchKey * targetKey = m_keys[ c.m_targetKeyIndex ];
-/// KTouchKey * fingerKey = m_keys[ c.m_fingerKeyIndex ];
-/// KTouchKey * modifiedKey = m_keys[ c.m_modifierKeyIndex ];
+/// KTouchKey * modifierKey = m_keys[ c.m_modifierKeyIndex ];
 /// if (targetKey != NULL) {
+/// 	KTouchKey * fingerKey = targetKey->m_fingerKey;
 /// 	// ...
 /// }
 /// @endcode
@@ -67,7 +67,6 @@ public:
 	
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
     QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with character connectivity data.
-    QMap<int, int>						m_fingerKeyMap;	///< Mapping with key->finger key mappings.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.

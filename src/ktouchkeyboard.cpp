@@ -169,8 +169,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
             if (h==0)	h=80;
 			if (keyText.isEmpty()) continue;
 			// add a key connector
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), m_keys.count(), -1);
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
 			// finally add the key - in uppercase
 			KTouchKey * key = new KTouchKey(this, KTouchKey::Finger, x, y, w, h, QChar(keyUnicode).toUpper());
             m_keys.push_back(key);
@@ -182,8 +182,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
             // Note: 20% of height less in both directions for compatibility with old files 
 			if (keyText.isEmpty()) continue;
 			// add a key connector
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1, -1);
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
 			KTouchKey::keytype_t type = KTouchKey::Other;
 			if (keyText.compare("Enter",Qt::CaseInsensitive)==0)			type = KTouchKey::Enter;
 			else if (keyText.compare("Space",Qt::CaseInsensitive)==0)		type = KTouchKey::Space;
@@ -208,8 +208,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 					"display character '%2' and unicode '%3' skipped.\n", fingerUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
-    		// KTouchKeyConnector(QChar keyChar, int target_key, int finger_key, int modifier_key)
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), fingerKeyConn.m_targetKeyIndex, -1);
+    		// KTouchKeyConnector(QChar keyChar, int target_key, int modifier_key)
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), -1);
 			// at last add the key - uppercase display character
 			KTouchKey * key = new KTouchKey(this, KTouchKey::Normal, x, y, w, h, QChar(keyUnicode).toUpper());
 			// identify the finger key
@@ -240,10 +240,9 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 					"display character '%2' and unicode '%3' skipped.\n", modifierUnicode, QChar(keyUnicode), keyUnicode);
 				continue;
 			}
-			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, 
-														  targetKeyConn.m_targetKeyIndex, 
-														  fingerKeyConn.m_targetKeyIndex, 
-														  modifierKeyConn.m_targetKeyIndex);	
+			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode,
+														  targetKeyConn.m_targetKeyIndex,
+														  modifierKeyConn.m_targetKeyIndex);
         }
         else {
             //qdebug() << i18n("Missing key type in line '%1'.",line);
