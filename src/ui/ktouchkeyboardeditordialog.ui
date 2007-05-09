@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>812</width>
-    <height>578</height>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -248,14 +248,25 @@
        </layout>
       </item>
       <item>
-       <widget class="KPushButton" name="selectFingerKeyButton" >
-        <property name="text" >
-         <string>Select finger key</string>
-        </property>
-        <property name="checkable" >
-         <bool>true</bool>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="KPushButton" name="selectFingerKeyButton" >
+          <property name="text" >
+           <string>Select finger key</string>
+          </property>
+          <property name="checkable" >
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="KPushButton" name="deleteKeyButton" >
+          <property name="text" >
+           <string>Delete key</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
        <spacer>
@@ -267,8 +278,8 @@
         </property>
         <property name="sizeHint" >
          <size>
-          <width>20</width>
-          <height>40</height>
+          <width>217</width>
+          <height>21</height>
          </size>
         </property>
        </spacer>
@@ -360,7 +371,7 @@
     </widget>
    </item>
    <item row="1" column="2" >
-    <widget class="QGroupBox" name="groupBox_2" >
+    <widget class="QGroupBox" name="keyGeometryBox" >
      <property name="title" >
       <string>Key geometry</string>
      </property>
@@ -495,7 +506,7 @@
       </sizepolicy>
      </property>
      <property name="title" >
-      <string>Keyboard Layout (click on the keys to edit and use the context menu to add/remove keys)</string>
+      <string>Keyboard Layout (click to activate keys for editing or drag keys)</string>
      </property>
      <layout class="QHBoxLayout" >
       <item>

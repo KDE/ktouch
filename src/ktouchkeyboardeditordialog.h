@@ -76,6 +76,8 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
 	virtual void on_keyTypeCombo_currentIndexChanged(int index);
 	/// Called when user edits the key text
 	virtual void on_keyTextEdit_textEdited(const QString & text);
+	/// Called when user edits the key text
+	virtual void on_deleteKeyButton_clicked(bool);
 
 	/// Called whenever the user modified the key geometry.
 	virtual void on_leftSpinBox_valueChanged(int);

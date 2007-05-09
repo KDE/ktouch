@@ -66,6 +66,8 @@ public:
 	const QFont& font() const { return m_font; }
 	/// Returns whether key click events on keys are allowed or not.
 	bool allowKeyClicks() const;
+	/// Deletes a key and updates all pointers.
+	void deleteKey(KTouchKey * k);
 
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
     QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with character connectivity data.

@@ -41,6 +41,7 @@ KTouchKey::KTouchKey(QObject * parent)
 	setPos(m_x, m_y);
 	setZValue(0);
 }
+// -----------------------------------------------------------------------------
 
 KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch)
 	: QObject(parent), m_state(NormalState), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h),
@@ -199,13 +200,18 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 				//Q_ASSERT(m_colorIndex < 8);
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
 				//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex << endl;
-				QColor c = colorScheme.m_background[qMin<unsigned int>(7,m_colorIndex)];
-				grad.setColorAt(0,c);
-				qreal h, s, v, a;
-				c.getHsvF(&h, &s, &v, &a);
-				c.setHsvF(h, s, v*0.8, a);
-				grad.setColorAt(1,c);
-				painter->setBrush( QBrush(grad) );
+				if (m_colorIndex >= 0 && m_colorIndex<8) {
+					QColor c = colorScheme.m_background[m_colorIndex];
+					grad.setColorAt(0,c);
+					qreal h, s, v, a;
+					c.getHsvF(&h, &s, &v, &a);
+					c.setHsvF(h, s, v*0.8, a);
+					grad.setColorAt(1,c);
+					painter->setBrush( QBrush(grad) );
+				}
+				else {
+					painter->setBrush( widget->palette().color(QPalette::Background) );
+				}
 				QPen p(colorScheme.m_frame);
 				p.setWidth(0); // only one pixel!
 				painter->setPen( p );
@@ -433,6 +439,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	}
     painter->setRenderHint(QPainter::Antialiasing, false);
 }
+// -----------------------------------------------------------------------------
 
 // **************************
 // ***** Static functions ***
@@ -451,6 +458,7 @@ QString KTouchKey::keyTypeString(KTouchKey::keytype_t t) {
 		default			: return "OTHER";
 	}
 }
+// -----------------------------------------------------------------------------
 
 KTouchKey::keytype_t KTouchKey::keyType(const QString& str) {
 	if (str=="NORMAL")  		return Normal;
@@ -463,6 +471,7 @@ KTouchKey::keytype_t KTouchKey::keyType(const QString& str) {
 	else if (str=="SPACE")  	return Space;
 	else return Other;	
 }
+// -----------------------------------------------------------------------------
 
 // *****************************
 // ***** Protected functions ***
@@ -485,6 +494,7 @@ void KTouchKey::mousePressEvent(QGraphicsSceneMouseEvent * event) {
 		}
 	}
 }
+// -----------------------------------------------------------------------------
 
 void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
 	// are we allowed to click/activate/move the key?
@@ -502,8 +512,10 @@ void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
 		event->accept();
 	}
 }
+// -----------------------------------------------------------------------------
 
 void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent * event) {
 	//emit clicked(this);
 	setZValue(0);
 }
+// -----------------------------------------------------------------------------

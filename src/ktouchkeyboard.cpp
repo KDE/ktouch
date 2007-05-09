@@ -470,3 +470,27 @@ bool KTouchKeyboard::allowKeyClicks() const {
 	else return false;
 }
 // ----------------------------------------------------------------------------
+
+void KTouchKeyboard::deleteKey(KTouchKey * k) {
+	// check if key exists
+	if (!m_keys.contains(k)) return;
+	// disconnect key
+	k->disconnect();
+	// delete key
+	delete k;
+	// remove key from list
+	int i = m_keys.indexOf(k);
+	if (i != -1)	m_keys.removeAt(i);
+	// loop over all remaining keys and remove all references to the key (in case it was a finger key)
+	for (QList<KTouchKey*>::const_iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+		if ((*it)->m_fingerKey == k) {
+			(*it)->m_fingerKey = NULL;
+			(*it)->m_colorIndex = -1;
+		}
+	}
+	// loop over all key connectors and remove all references to the deleted key
+	for (QMap<int, KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it) {
+		// TODO : remove pointers to key
+	}
+}
+// ----------------------------------------------------------------------------

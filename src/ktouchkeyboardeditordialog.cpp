@@ -64,6 +64,7 @@ bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
     // the user did not cancel the open request dialog 
     if (openKeyboardFile(url)==QDialog::Accepted)  {
 		m_currentEditKey = NULL;
+		keyClicked(NULL);
         exec();
 		// Even if the user cancels the dialog we must assume that a keyboard layout 
 		// was changed and save to disk. Thus, to be save, we return 'true' and
@@ -192,6 +193,22 @@ void KTouchKeyboardEditorDialog::on_keyTextEdit_textEdited(const QString & text)
 }
 // -----------------------------------------------------------------------------
 
+void KTouchKeyboardEditorDialog::on_deleteKeyButton_clicked(bool) {
+	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return; // don't mess with non existent keys
+	// let user confirm to delete the key
+	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Really delete this key?"), 
+		QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+	{
+		// remove key
+		m_keyboard->deleteKey(m_currentEditKey);
+		// disable controls
+		m_currentEditKey = NULL;
+		keyClicked(NULL);
+		// update the graphics scene
+		m_scene->update();
+	}
+}
+
 void KTouchKeyboardEditorDialog::on_leftSpinBox_valueChanged(int val) {
 	if (m_keyboard->m_keys.contains(m_currentEditKey) && val != m_currentEditKey->m_x) {
 		m_currentEditKey->m_x = val;
@@ -264,6 +281,8 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	}
 	m_currentEditKey = k;
 	if (m_keyboard->m_keys.contains(m_currentEditKey)) {
+		keyPropertiesBox->setEnabled(true);
+		keyGeometryBox->setEnabled(true);
 		m_currentEditKey->m_state = KTouchKey::HighlightedState;
 		m_currentEditKey->update();
 		
@@ -297,6 +316,11 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 		// update geometry
 		keyPositionChanged(k);
 	}
+	else {
+		// not a valid selection, disable the controls
+		keyPropertiesBox->setEnabled(false);
+		keyGeometryBox->setEnabled(false);
+	}
 }
 // -----------------------------------------------------------------------------
 
@@ -308,6 +332,7 @@ void KTouchKeyboardEditorDialog::keyPositionChanged(KTouchKey * k) {
 		topSpinBox->setValue(m_currentEditKey->m_y);
 		widthSpinBox->setValue(m_currentEditKey->m_w);
 		heightSpinBox->setValue(m_currentEditKey->m_h);
+		// TODO : update scene boundary rect and scaling to keep keyboard centered at all times
 	}
 }
 // -----------------------------------------------------------------------------
