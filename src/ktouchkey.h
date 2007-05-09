@@ -28,6 +28,12 @@ class QGraphicsSceneMouseEvent;
 /// This class contains all the geometrical information for a key to be drawn
 /// on the keyboard. A KTouchKey is a QGraphicsItem and draws itself on
 /// the graphics scene containing the keyboard.
+///
+/// Each key has an associated finger key, which is also used to determine the
+/// color of the key. The index of the finger key is stored in the keyboard file.
+/// After reading all keys, the KTouchKeyboard class will set the finger key
+/// pointers for faster access in all keys. When writing the keys to the 
+/// keyboard file, the list of keys is passed and the index is obtained.
 class KTouchKey : public QObject, public QGraphicsItem {
   Q_OBJECT
 public:
@@ -73,7 +79,7 @@ public:
 	/// Reads the key data from the DomElement
 	bool read(QDomElement e);
 	/// Creates a new DomElement, writes the key data into it and appends it to the root object.
-	void write(QDomDocument& doc, QDomElement& root) const;
+	void write(QDomDocument& doc, QDomElement& root, const QList<KTouchKey*>& keys) const;
 
 	/// Changes the state of the key.
 	///
@@ -90,7 +96,7 @@ public:
 	// *** member variables ***
 
 	state_t			m_state;		///< The current state of the key (normal, highlighted etc.)
-	unsigned int	m_colorIndex;	///< The color index of the key (corresponds to the assigned finger key).
+	unsigned int	m_colorIndex;	///< The color index for a finger key.
 
 	keytype_t		m_type;			///< The type of the key.
 	QChar			m_keyChar[4];	///< The characters on each key, one for each possible position.
@@ -99,6 +105,9 @@ public:
 	int				m_y;			///< The y-coordinate of the top-left corner of the key.
 	int				m_w;			///< The width.
 	int				m_h;			///< The height.
+
+	int				m_fingerKeyIndex;	///< The index for a finger key (only used for reading).
+	KTouchKey		*m_fingerKey;		///< The finger key.
 
 	static QString keyTypeString(keytype_t t);
 	static keytype_t keyType(const QString& str);

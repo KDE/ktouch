@@ -30,7 +30,8 @@ const double PEN_WIDTH = 1.0;
 // **************************
 
 KTouchKey::KTouchKey(QObject * parent) 
-	: QObject(parent), m_state(NormalState), m_type(Normal), m_x(0), m_y(0), m_w(0), m_h(0) 
+	: QObject(parent), m_state(NormalState), m_type(Normal), m_x(0), m_y(0), m_w(0), m_h(0), 
+	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_keyChar[0] = QChar();
 	m_keyChar[1] = QChar();
@@ -42,7 +43,8 @@ KTouchKey::KTouchKey(QObject * parent)
 }
 
 KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int h, QChar ch)
-	: QObject(parent), m_state(NormalState), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
+	: QObject(parent), m_state(NormalState), m_type(type), m_x(x), m_y(y), m_w(w), m_h(h),
+	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_keyChar[0] = ch;
 	m_keyChar[1] = QChar();
@@ -54,7 +56,8 @@ KTouchKey::KTouchKey(QObject * parent, keytype_t type, int x, int y, int w, int 
 // ----------------------------------------------------------------------------
 
 KTouchKey::KTouchKey(QObject * parent, int x, int y, int w, int h, const QString &text) 
-	: QObject(parent), m_state(NormalState), m_x(x), m_y(y), m_w(w), m_h(h)
+	: QObject(parent), m_state(NormalState), m_x(x), m_y(y), m_w(w), m_h(h),
+	  m_fingerKeyIndex(-1), m_fingerKey(NULL)
 {
 	m_type = Other;
 	m_keyChar[0] = QChar();
@@ -114,6 +117,10 @@ bool KTouchKey::read(QDomElement e) {
 		m_x = e.attribute("X").toInt();
 	if (e.hasAttribute("Y")) 
 		m_y = e.attribute("Y").toInt();
+	if (e.hasAttribute("FingerKeyIndex")) 
+		m_fingerKeyIndex = e.attribute("FingerKeyIndex").toInt();
+	else
+		m_fingerKeyIndex = -1;
 	
 	setPos(m_x, m_y);
 	//kDebug() << "Key = " << m_keyChar[TopLeft] << " " << m_x << " " << m_y << " " << m_w << " " << m_h << endl;
@@ -122,7 +129,7 @@ bool KTouchKey::read(QDomElement e) {
 // ----------------------------------------------------------------------------
 
 // Writes the key data into the DomElement
-void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
+void KTouchKey::write(QDomDocument& doc, QDomElement& root, const QList<KTouchKey*>& keys) const {
 	QDomElement element = doc.createElement("Key");
 	element.setAttribute("Type", keyTypeString(m_type));
 	if (m_type == Other)
@@ -146,11 +153,17 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 			element.appendChild(char_element);
 		}
 	}
-	
+
 	element.setAttribute("X", m_x);
 	element.setAttribute("Y", m_y);
 	element.setAttribute("Width", m_w);
 	element.setAttribute("Height", m_h);
+	if (m_fingerKey != NULL) {
+		int index = keys.indexOf(m_fingerKey);
+		if (index != -1)
+			element.setAttribute("FingerKeyIndex", index);
+	}
+
 	root.appendChild(element);
 }
 // ----------------------------------------------------------------------------
@@ -185,6 +198,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			{
 				//Q_ASSERT(m_colorIndex < 8);
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
+				//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex << endl;
 				QColor c = colorScheme.m_background[qMin<unsigned int>(7,m_colorIndex)];
 				grad.setColorAt(0,c);
 				qreal h, s, v, a;

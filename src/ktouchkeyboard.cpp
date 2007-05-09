@@ -134,7 +134,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, QString type, QString& warnings) {
 	if (m_connectors.find(keyUnicode) != m_connectors.end()) {
 		warnings += i18n("%1 with display character '%2' and unicode '%3' "
-			"has been already defined and is skipped.\n", type, QChar(keyUnicode), keyUnicode);
+			"has been already defined and is skipped.\n").arg(type).arg(QChar(keyUnicode)).arg(keyUnicode);
 		return true;
 	}
 	else return false;
@@ -212,6 +212,8 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 			m_connectors[keyUnicode] = KTouchKeyConnector(keyUnicode, m_keys.count(), fingerKeyConn.m_targetKeyIndex, -1);
 			// at last add the key - uppercase display character
 			KTouchKey * key = new KTouchKey(this, KTouchKey::Normal, x, y, w, h, QChar(keyUnicode).toUpper());
+			// identify the finger key
+			key->m_fingerKeyIndex = fingerKeyConn.m_targetKeyIndex;
             m_keys.push_back(key);
         } 
         else if (keyType=="HiddenKey") {
@@ -249,7 +251,7 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
         // TODO : calculate the maximum extent of the keyboard on the fly...
     } while (!in.atEnd() && !line.isNull());
 
-	updateKeyColors();
+	updateKeyPointers();
 
     return (!m_keys.isEmpty());  // empty file means error
 }
@@ -303,7 +305,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 	}
 	kDebug() << "Read keyboard '"<< m_title << "' with " << m_keys.count() << " keys and " << m_connectors.count() << " characters" << endl; 
 
-	updateKeyColors();
+	updateKeyPointers();
 
 	// TODO : test if the keyboard was read correctly
 	return true;
@@ -346,7 +348,7 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	QDomElement keys = doc.createElement("Keys");
 	root.appendChild(keys);
 	for (QList<KTouchKey*>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
-		(*it)->write(doc, keys);
+		(*it)->write(doc, keys, m_keys);
 	// Store connectors
 	QDomElement conns = doc.createElement("Connections");
 	root.appendChild(conns);
@@ -414,7 +416,7 @@ void KTouchKeyboard::createDefault() {
 	m_language.clear();
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Monospace";
-	updateKeyColors();
+	updateKeyPointers();
 }
 // ----------------------------------------------------------------------------
 
@@ -424,7 +426,7 @@ void KTouchKeyboard::updateConnections() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchKeyboard::updateKeyColors() {
+void KTouchKeyboard::updateKeyPointers() {
 	// loop over all keys and number the finger keys
 	int fingerKeyIndex = 0;
 	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
@@ -435,40 +437,21 @@ void KTouchKeyboard::updateKeyColors() {
 			}
 			(*it)->m_colorIndex = fingerKeyIndex++;
 		}
-	}
-	// loop over all keys
-	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
-		switch ((*it)->m_type) {
-			case KTouchKey::Enter : ;
-			case KTouchKey::Backspace : ;
-			case KTouchKey::Shift : ;
-			case KTouchKey::CapsLock : ;
-			case KTouchKey::Tab : ;
-			case KTouchKey::Space : ;
-			case KTouchKey::Other : (*it)->m_colorIndex = -1; break;
-			
-			case KTouchKey::Finger : break; // nothing to do
-			
-			case KTouchKey::Normal : 
-				// lookup the keyconnector for any of the characters on the keys
-				QChar keyChar;
-				for (int i=0; i<4; ++i) {
-					if ((*it)->m_keyChar[i] != QChar()) {
-						keyChar = (*it)->m_keyChar[i];
-						// try to find a key connector for this character
-						if (m_connectors.contains(keyChar.unicode())) {
-							int fingerkeyindex = m_connectors[keyChar.unicode()].m_fingerKeyIndex;
-							if (fingerkeyindex >= m_keys.count()) {
-								kDebug() << "Invalid finger key index " << fingerkeyindex << " of connector for unicode " << keyChar.unicode() << endl;
-								continue;
-							}
-							(*it)->m_colorIndex = m_keys[fingerkeyindex]->m_colorIndex;
-						}
-					}
-				}
-			break;
+		else {
+			// now check of the key has a finger key index set and if this is the case, set the finger key pointers
+			if ((*it)->m_fingerKeyIndex > -1 && (*it)->m_fingerKeyIndex < m_keys.count()) {
+				// set the finger key pointer
+				(*it)->m_fingerKey = m_keys[(*it)->m_fingerKeyIndex];
+				// and the color index from the finger key
+				(*it)->m_colorIndex = (*it)->m_fingerKey->m_colorIndex;
+				//kDebug() << "Key " << (*it)->m_keyChar[0] << " has finger key " << (*it)->m_fingerKeyIndex << endl;
+			}
+			else {
+				(*it)->m_colorIndex = -1;
+			}
 		}
 	}
+	// now all normal keys have pointers to finger keys and also updated color indices for drawing.
 }
 // ----------------------------------------------------------------------------
 
@@ -478,3 +461,4 @@ void KTouchKeyboard::setFont(const QFont& f) {
 		(*it)->update();
 	}
 }
+// ----------------------------------------------------------------------------

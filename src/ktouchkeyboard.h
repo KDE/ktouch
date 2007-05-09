@@ -58,15 +58,16 @@ public:
 	void createDefault();
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
-	/// Updates the color indices of the keys based on the key connectivity to finger keys.
-	void updateKeyColors();
+	/// Updates the keys to finger key pointers and also updates the color indices in the finger keys.
+	void updateKeyPointers();
 	/// Sets the font in all keys of the keyboard.
 	void setFont(const QFont& f);
 	/// Returns the current keyboard font.
 	const QFont& font() const { return m_font; }
 	
     QList<KTouchKey*>         			m_keys;      	///< List with key definitions.
-    QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with connectivity data.
+    QMap<int, KTouchKeyConnector>		m_connectors;	///< Mapping with character connectivity data.
+    QMap<int, int>						m_fingerKeyMap;	///< Mapping with key->finger key mappings.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.
@@ -83,8 +84,7 @@ public:
     bool read(const QDomDocument& doc, QString& warnings);
     /// Saves keyboard data in the XML document
     void write(QDomDocument& doc) const;
-    
-    
+
     /// The font that is used to draw the keyboard.
     ///
     /// The keys access this member variable when they draw themselves.
