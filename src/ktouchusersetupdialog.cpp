@@ -57,8 +57,8 @@ void KTouchUserSetupDialog::userSelected(int index) {
 
 void KTouchUserSetupDialog::addBtnClicked() {
 	bool ok_pressed;
-	QString new_name = KInputDialog::getText(i18n("New user..."), 
-						i18n("Please enter a unique user name!"),
+	QString new_name = KInputDialog::getText(i18n("New User"), 
+						i18n("Please enter a unique user name:"),
 						QString::null,
 						&ok_pressed, /* bool *   ok = 0, */
 						this, /*QWidget *   parent = 0, */

@@ -22,7 +22,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox" >
      <property name="title" >
-      <string>User defined color schemes</string>
+      <string>User Defined Color Schemes</string>
      </property>
      <layout class="QGridLayout" >
       <property name="margin" >
@@ -94,7 +94,7 @@
       </sizepolicy>
      </property>
      <property name="title" >
-      <string>Edit color scheme:</string>
+      <string>Edit Color Scheme</string>
      </property>
      <layout class="QVBoxLayout" >
       <property name="margin" >
@@ -124,7 +124,7 @@
         <item>
          <widget class="KPushButton" name="updateBtn" >
           <property name="text" >
-           <string>&amp;Store data</string>
+           <string>&amp;Store Data</string>
           </property>
           <property name="shortcut" >
            <string>Alt+S</string>
@@ -144,7 +144,7 @@
          </sizepolicy>
         </property>
         <property name="title" >
-         <string>Slide line colors</string>
+         <string>Slide Line Colors</string>
         </property>
         <layout class="QGridLayout" >
          <property name="margin" >
@@ -184,7 +184,7 @@
            <item row="1" column="0" >
             <widget class="QLabel" name="textLabel3_2" >
              <property name="text" >
-              <string>Teacher background</string>
+              <string>Teacher background:</string>
              </property>
             </widget>
            </item>
@@ -198,7 +198,7 @@
            <item row="0" column="0" >
             <widget class="QLabel" name="textLabel3" >
              <property name="text" >
-              <string>Teacher text</string>
+              <string>Teacher text:</string>
              </property>
             </widget>
            </item>
@@ -215,14 +215,14 @@
            <item row="1" column="0" >
             <widget class="QLabel" name="textLabel3_4" >
              <property name="text" >
-              <string>Student background</string>
+              <string>Student background:</string>
              </property>
             </widget>
            </item>
            <item row="2" column="0" >
             <widget class="QLabel" name="textLabel3_5" >
              <property name="text" >
-              <string>Student text on error</string>
+              <string>Student text on error:</string>
              </property>
             </widget>
            </item>
@@ -243,14 +243,14 @@
            <item row="0" column="0" >
             <widget class="QLabel" name="textLabel3_3" >
              <property name="text" >
-              <string>Student text</string>
+              <string>Student text:</string>
              </property>
             </widget>
            </item>
            <item row="3" column="0" >
             <widget class="QLabel" name="textLabel3_6" >
              <property name="text" >
-              <string>Student background on error</string>
+              <string>Student background on error:</string>
              </property>
             </widget>
            </item>
@@ -297,7 +297,7 @@
          </sizepolicy>
         </property>
         <property name="title" >
-         <string>Keyboard colors</string>
+         <string>Keyboard Colors</string>
         </property>
         <layout class="QGridLayout" >
          <property name="margin" >
@@ -536,7 +536,7 @@
            <item row="4" column="0" >
             <widget class="QLabel" name="textLabel3_10" >
              <property name="text" >
-              <string>Highlighted background</string>
+              <string>Highlighted background:</string>
              </property>
             </widget>
            </item>
@@ -550,14 +550,14 @@
            <item row="3" column="0" >
             <widget class="QLabel" name="textLabel3_9" >
              <property name="text" >
-              <string>Highlighted text color</string>
+              <string>Highlighted text color:</string>
              </property>
             </widget>
            </item>
            <item row="2" column="0" >
             <widget class="QLabel" name="textLabel3_8" >
              <property name="text" >
-              <string>Text color</string>
+              <string>Text color:</string>
              </property>
             </widget>
            </item>
@@ -571,7 +571,7 @@
            <item row="0" column="0" >
             <widget class="QLabel" name="textLabel3_7" >
              <property name="text" >
-              <string>Key frame</string>
+              <string>Key frame:</string>
              </property>
             </widget>
            </item>
@@ -588,7 +588,7 @@
            <item row="4" column="0" >
             <widget class="QLabel" name="textLabel3_10_2" >
              <property name="text" >
-              <string>Highlighted background</string>
+              <string>Highlighted background:</string>
              </property>
             </widget>
            </item>
@@ -623,7 +623,7 @@
            <item row="3" column="0" >
             <widget class="QLabel" name="textLabel3_9_2" >
              <property name="text" >
-              <string>Highlighted text color</string>
+              <string>Highlighted text color:</string>
              </property>
             </widget>
            </item>
@@ -644,7 +644,7 @@
            <item row="2" column="0" >
             <widget class="QLabel" name="textLabel3_8_2" >
              <property name="text" >
-              <string>Background</string>
+              <string>Background:</string>
              </property>
             </widget>
            </item>

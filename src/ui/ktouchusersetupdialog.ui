@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>Setup users...</string>
+   <string>Setup Users</string>
   </property>
   <property name="modal" >
    <bool>true</bool>

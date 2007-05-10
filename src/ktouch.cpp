@@ -153,7 +153,7 @@ KTouchLectureStats& KTouch::getCurrentLectureStats() {
 
 void KTouch::clearStatistics() {
 	m_userStats.clear();
-	m_userStats[Prefs::currentUserName()].m_userName = i18n("default user");
+	m_userStats[Prefs::currentUserName()].m_userName = i18n("Default User");
 }
 // ----------------------------------------------------------------------------
 
@@ -631,27 +631,27 @@ void KTouch::setupActions() {
 	// *** File menu ***
     QAction *action;
     action = actionCollection()->addAction( "file_opentext" );
-    action->setText( i18n("&Open plain text file...") );
+    action->setText( i18n("&Open Plain Text File...") );
     action->setIcon( KIcon("document-open") );
 
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenText()));
     action = actionCollection()->addAction( "file_openlecture" );
-    action->setText( i18n("&Open lecture...") );
+    action->setText( i18n("&Open Lecture...") );
     action->setIcon( KIcon("document-open") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileOpenLecture()));
 
     action = actionCollection()->addAction( "file_editlecture" );
-    action->setText( i18n("&Edit lecture...") );
+    action->setText( i18n("&Edit Lecture...") );
     action->setIcon( KIcon("edit") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
 
     action = actionCollection()->addAction( "file_editcolors" );
-    action->setText( i18n("&Edit color scheme...") );
+    action->setText( i18n("&Edit Color Scheme...") );
     action->setIcon( KIcon("color-fill") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 
     action = actionCollection()->addAction( "file_editkeyboard" );
-    action->setText( i18n("&Edit keyboard layout...") );
+    action->setText( i18n("&Edit Keyboard Layout...") );
     action->setIcon( KIcon("edit") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditKeyboard()));
 
@@ -705,12 +705,12 @@ void KTouch::setupActions() {
 
     // *** User settings ***
     action = actionCollection()->addAction( "settings_setup_users" );
-    action->setText( i18n("&Setup users...") );
+    action->setText( i18n("&Setup Users...") );
     action->setIcon( KIcon("users") );
     connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
 
     m_currentUserAction = actionCollection()->add<KSelectAction>( "settings_current_user" );
-    m_currentUserAction->setText( i18n("&Current user") );
+    m_currentUserAction->setText( i18n("&Current User") );
 	m_currentUserAction->setMenuAccelsEnabled(false);
     m_currentUserAction->setItems(m_userStats.keys());
 	updateCurrentUserActionCheck();
@@ -841,14 +841,14 @@ void KTouch::updateCurrentUserActionCheck() {
 	int index = user_list.indexOf(Prefs::currentUserName());
 	// if not found, fall back on default user
 	if (index == -1) {
-		Prefs::setCurrentUserName(i18n("default user"));
+		Prefs::setCurrentUserName(i18n("Default User"));
 		index = user_list.indexOf(Prefs::currentUserName());
 	}
 	if (index == -1) {
 		// we must be missing the default user in the list,
 		// this shouldn't happen, though...
 		kDebug() << "Missing default user in list. Adding default user to list." << endl;
-		user_list.append(i18n("default user"));
+		user_list.append(i18n("Default User"));
 		index = user_list.count() -1;
 	}
    	m_currentUserAction->setCurrentItem(index);

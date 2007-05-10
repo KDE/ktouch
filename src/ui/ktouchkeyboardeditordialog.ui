@@ -91,7 +91,7 @@
    <item rowspan="2" row="0" column="1" >
     <widget class="QGroupBox" name="keyPropertiesBox" >
      <property name="title" >
-      <string>Key properties</string>
+      <string>Key Properties</string>
      </property>
      <layout class="QVBoxLayout" >
       <item>
@@ -99,7 +99,7 @@
         <item row="0" column="0" >
          <widget class="QLabel" name="label_6" >
           <property name="text" >
-           <string>Key type</string>
+           <string>Key type:</string>
           </property>
          </widget>
         </item>
@@ -109,7 +109,7 @@
         <item row="1" column="0" >
          <widget class="QLabel" name="keyTextLabel" >
           <property name="text" >
-           <string>Key text</string>
+           <string>Key text:</string>
           </property>
          </widget>
         </item>
@@ -136,7 +136,7 @@
         <item row="1" column="0" >
          <widget class="QLabel" name="label_2" >
           <property name="text" >
-           <string>Top left</string>
+           <string>Top left:</string>
           </property>
          </widget>
         </item>
@@ -159,7 +159,7 @@
         <item row="1" column="2" >
          <widget class="QLabel" name="label_3" >
           <property name="text" >
-           <string>Top right</string>
+           <string>Top right:</string>
           </property>
          </widget>
         </item>
@@ -188,7 +188,7 @@
         <item row="2" column="0" >
          <widget class="QLabel" name="label_4" >
           <property name="text" >
-           <string>Bottom left</string>
+           <string>Bottom left:</string>
           </property>
          </widget>
         </item>
@@ -211,7 +211,7 @@
         <item row="2" column="2" >
          <widget class="QLabel" name="label_5" >
           <property name="text" >
-           <string>Bottom right</string>
+           <string>Bottom right:</string>
           </property>
          </widget>
         </item>
@@ -264,7 +264,7 @@
         <item>
          <widget class="KPushButton" name="deleteKeyButton" >
           <property name="text" >
-           <string>Delete key</string>
+           <string>Delete Key</string>
           </property>
          </widget>
         </item>
@@ -282,7 +282,7 @@
       </sizepolicy>
      </property>
      <property name="title" >
-      <string>Keyboard edit options....</string>
+      <string>Keyboard Edit Options</string>
      </property>
      <layout class="QVBoxLayout" >
       <item>
@@ -290,21 +290,21 @@
         <item row="0" column="0" >
          <widget class="QPushButton" name="openButton" >
           <property name="text" >
-           <string>Open keyboard ...</string>
+           <string>Open Keyboard...</string>
           </property>
          </widget>
         </item>
         <item row="0" column="1" >
          <widget class="QPushButton" name="setFontButton" >
           <property name="text" >
-           <string>Set keyboard font ...</string>
+           <string>Set Keyboard Font...</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0" >
          <widget class="QPushButton" name="saveButton" >
           <property name="text" >
-           <string>Save keyboard ...</string>
+           <string>Save Keyboard</string>
           </property>
          </widget>
         </item>
@@ -327,7 +327,7 @@
         <item row="2" column="0" >
          <widget class="QPushButton" name="saveAsButton" >
           <property name="text" >
-           <string>Save keyboard as ...</string>
+           <string>Save Keyboard As...</string>
           </property>
          </widget>
         </item>
@@ -359,13 +359,13 @@
    <item row="1" column="2" >
     <widget class="QGroupBox" name="keyGeometryBox" >
      <property name="title" >
-      <string>Key geometry</string>
+      <string>Key Geometry</string>
      </property>
      <layout class="QGridLayout" >
       <item row="0" column="0" >
        <widget class="QLabel" name="label" >
         <property name="text" >
-         <string>Left</string>
+         <string>Left:</string>
         </property>
        </widget>
       </item>
@@ -388,7 +388,7 @@
       <item row="0" column="2" >
        <widget class="QLabel" name="label_8" >
         <property name="text" >
-         <string>Width</string>
+         <string>Width:</string>
         </property>
        </widget>
       </item>
@@ -424,7 +424,7 @@
       <item row="1" column="0" >
        <widget class="QLabel" name="label_7" >
         <property name="text" >
-         <string>Top</string>
+         <string>Top:</string>
         </property>
        </widget>
       </item>
@@ -447,7 +447,7 @@
       <item row="1" column="2" >
        <widget class="QLabel" name="label_9" >
         <property name="text" >
-         <string>Height</string>
+         <string>Height:</string>
         </property>
        </widget>
       </item>

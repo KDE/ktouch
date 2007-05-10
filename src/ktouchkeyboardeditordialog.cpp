@@ -573,7 +573,7 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
     // Call the dialog
     KUrl new_url;
     int result = dlg.requestFileToOpen(new_url,
-        i18n("Open keyboard file ..."),
+        i18n("Open Keyboard File"),
         i18n("Which keyboard file would you like to edit?"),
         i18n("Edit current keyboard:"),
         i18n("Open a default keyboard:"),
