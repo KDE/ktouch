@@ -13,8 +13,9 @@
 #include "ktouchkey.h"
 #include "ktouchkey.moc"
 
-#include <QtXml>
-#include <QtGui>
+#include <QtXml/QDomElement>
+#include <QWidget>
+#include <QGraphicsSceneMouseEvent>
 
 #include <kdebug.h>
 
@@ -67,7 +68,7 @@ KTouchKey::KTouchKey(QObject * parent, int x, int y, int w, int h, const QString
 // ----------------------------------------------------------------------------
 
 // Reads the key data from the DomElement
-bool KTouchKey::read(QDomElement e) {
+bool KTouchKey::read(const QDomElement &e) {
 	if (e.hasAttribute("Type")) {
 		QString typetext = e.attribute("Type");
 		m_type = keyType(typetext);

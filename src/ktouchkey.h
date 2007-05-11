@@ -77,7 +77,7 @@ public:
 	virtual ~KTouchKey() {}
 
 	/// Reads the key data from the DomElement
-	bool read(QDomElement e);
+	bool read(const QDomElement &e);
 	/// Creates a new DomElement, writes the key data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root, const QList<KTouchKey*>& keys) const;
 

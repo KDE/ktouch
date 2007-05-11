@@ -78,7 +78,7 @@ public:
   private:
 	/// Tests, whether a key with the given unicode number already exists in the keylist and
 	/// appends a warning message if it does.
-	bool keyAlreadyExists(int keyUnicode, QString type, QString& warnings);
+	bool keyAlreadyExists(int keyUnicode, const QString &type, QString& warnings);
     /// Loads keyboard data from file
     bool read(QTextStream& in, QString& warnings);
     /// Loads keyboard data from file into an XML document

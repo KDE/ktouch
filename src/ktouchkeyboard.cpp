@@ -15,7 +15,7 @@
 
 #include <QFile>
 #include <QTextStream>
-#include <QtXml>
+#include <QtXml/QDomDocument>
 #include <QMap>
 
 #include <kdebug.h>
@@ -62,7 +62,7 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
         result = read(in, warnings);
 		if (!warnings.isEmpty()) {
 			KMessageBox::warningContinueCancel(window,
-				i18n("There were warnings while reading the keyboard file '%1':\n%2").arg(url.path()).arg(warnings),
+				i18n("There were warnings while reading the keyboard file '%1':\n%2", url.path(), warnings),
 				i18n("Reading keyboard layout..."));
 			// TODO : handle dialog return codes appropriately
 		}
@@ -132,7 +132,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, QString type, QString& warnings) {
+bool KTouchKeyboard::keyAlreadyExists(int keyUnicode, const QString &type, QString& warnings) {
 	if (m_connectors.find(keyUnicode) != m_connectors.end()) {
 		warnings += i18n("%1 with display character '%2' and unicode '%3' "
 			"has been already defined and is skipped.\n", type, QChar(keyUnicode), keyUnicode);

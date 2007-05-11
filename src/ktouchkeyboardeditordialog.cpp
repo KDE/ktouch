@@ -13,7 +13,8 @@
 #include "ktouchkeyboardeditordialog.h"
 #include "ktouchkeyboardeditordialog.moc"
 
-#include <QtGui>
+#include <QHeaderView>
+#include <QTimer>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>

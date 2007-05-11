@@ -23,7 +23,6 @@
 #include <klocale.h>
 #include <ksqueezedtextlabel.h>
 #include <kmessagebox.h>
-#include <klocale.h>
 
 
 KTouchOpenRequestDialog::KTouchOpenRequestDialog(QWidget* parent)

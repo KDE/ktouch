@@ -16,8 +16,8 @@
 #include <QLCDNumber>
 #include <QFile>
 #include <QTimer>
-#include <QMessageBox>
 
+#include <KMessageBox>
 #include <kdebug.h>
 #include <kpushbutton.h>
 #include <klocale.h>
@@ -373,9 +373,9 @@ void KTouchTrainer::levelDown() {
 
 void KTouchTrainer::levelAllComplete() {
     pauseTraining();
-    QMessageBox::information(0, i18n("You rock!"),
+    KMessageBox::information(0,
                    i18n("You have finished this training exercise.\n"
-                        "This training session will start from the beginning."));
+                        "This training session will start from the beginning."), i18n("You rock!"));
     statsChangeLevel();
     startTraining(false);
 }

@@ -103,7 +103,7 @@ class KTouchLevelStats {
 
     /// Reads the level statistics from a XML Dom Node.
     /// @return Returns 'true', when reading was successful or 'false' otherwise.
-    bool read(QDomNode in);
+    bool read(const QDomNode &in);
     /// Writes the level statistics to the XML document.
     void write(QDomDocument& doc, QDomElement& root) const;
 	/// Adds a correct character count to the current statistics
@@ -144,7 +144,7 @@ class KTouchSessionStats {
 
     /// Reads the session statistics from a XML Dom Node.
     /// @return Returns 'true', when reading was successful or 'false' otherwise.
-    bool read(QDomNode in);
+    bool read(const QDomNode &in);
     /// Writes the session statistics to the XML document.
     void write(QDomDocument& doc, QDomElement& root) const;
 	/// Adds a correct character count to the current statistics
@@ -179,7 +179,7 @@ class KTouchLectureStats {
 
     /// Reads a lecture statistics from a XML Dom Node.
     /// @return Returns 'true', when reading was successful or 'false' otherwise.
-    bool read(QDomNode in);
+    bool read(const QDomNode &in);
     /// Writes the lecture statistics to the XML document.
     void write(QDomDocument& doc, QDomElement& root) const;
 
@@ -224,7 +224,7 @@ class KTouchStatisticsData {
 	
   private:
     /// Reads the statistics data from file into an XML document
-	bool readStats(QDomNode doc);
+	bool readStats(const QDomNode &doc);
     /// Saves the statistics data in the XML document
 	void writeStats(QDomDocument& doc, QDomElement& root) const;
 };

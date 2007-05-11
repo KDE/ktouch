@@ -17,7 +17,7 @@
 #include <QFile>
 #include <QStringList>
 #include <QTextStream>
-#include <QtXml>
+#include <QtXml/QDomNode>
 
 // KDE includes
 
@@ -59,7 +59,7 @@ void KTouchLevelStats::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLevelStats::read(QDomNode in) {
+bool KTouchLevelStats::read(const QDomNode &in) {
 	// read the level number
 	QDomNode n = in.attributes().namedItem("Number");
 	bool ok;
@@ -211,7 +211,7 @@ void KTouchSessionStats::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchSessionStats::read(QDomNode in) {
+bool KTouchSessionStats::read(const QDomNode &in) {
 	// read time
 	QDomNode n = in.attributes().namedItem("Time");
 	bool ok;
@@ -355,7 +355,7 @@ void KTouchLectureStats::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLectureStats::read(QDomNode in) {
+bool KTouchLectureStats::read(const QDomNode &in) {
 	clear();
 	// read the URL
 	QDomNode n = in.namedItem("URL");
@@ -550,7 +550,7 @@ bool KTouchStatisticsData::writeUserStats(QWidget * window, const KUrl& url,
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::readStats(QDomNode in) {
+bool KTouchStatisticsData::readStats(const QDomNode &in) {
 	clear(); // clear current data
 
 	QDomNode n = in.namedItem("User");

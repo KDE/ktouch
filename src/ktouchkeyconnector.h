@@ -39,7 +39,7 @@ class KTouchKeyConnector {
 	{}
 
 	/// Reads the key connector data from the DomElement
-	bool read(QDomElement e, const QList<KTouchKey*>& keylist);
+	bool read(const QDomElement &e, const QList<KTouchKey*>& keylist);
 	/// Creates a new DomElement, writes the key connector data into it and appends it to the root object.
 	void write(QDomDocument& doc, QDomElement& root, const QList<KTouchKey*>& keylist) const;
 

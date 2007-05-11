@@ -59,7 +59,7 @@ class KTouchLevelData {
     bool readLevel(QTextStream& in);
     /// Reads a level from a XML Dom Node.
     /// @return Returns 'true', when a level could be read successfully, or 'false' otherwise.
-    bool readLevelXML(QDomNode in);
+    bool readLevelXML(const QDomNode &in);
     /// Writes the level data into the output stream.
     void writeLevelXML(QDomDocument& doc, QDomElement& root) const;
 

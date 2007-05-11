@@ -12,10 +12,10 @@
 
 #include "ktouchkeyconnector.h"
 
-#include <QtXml>
+#include <QtXml/QDomDocument>
 
 // Reads the key connector data from the DomElement
-bool KTouchKeyConnector::read(QDomElement e, const QList<KTouchKey*>& keylist) {
+bool KTouchKeyConnector::read(const QDomElement &e, const QList<KTouchKey*>& keylist) {
 	if (e.hasAttribute("KeyUnicode"))
 		m_keyUnicode = e.attribute("KeyUnicode").toInt();
 	else

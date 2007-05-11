@@ -13,8 +13,6 @@
 #include "ktouchkeyboardwidget.h"
 #include "ktouchkeyboardwidget.moc"
 
-#include <QtGui>
-
 #include <kdebug.h>
 #include <ktemporaryfile.h>
 #include <klocale.h>

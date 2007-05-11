@@ -13,9 +13,6 @@
 #include "ktouch.h"
 #include "ktouch.moc"
 
-// Qt Header
-#include <QtGui>
-
 // KDE Header
 #include <kselectaction.h>
 #include <kactioncollection.h>
@@ -29,7 +26,7 @@
 #include <kdebug.h>
 #include <kmenu.h>
 #include <kconfigdialog.h>
-#include <kaction.h>
+
 #include <kcombobox.h>
 #include <kfontrequester.h>
 #include <knuminput.h>
@@ -547,7 +544,7 @@ void KTouch::init() {
 	//kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
 	if (Prefs::currentLectureFile() == "default") {
-		Prefs::setCurrentLectureFile(QString::null);
+		Prefs::setCurrentLectureFile(QString());
 //		/// \todo look up a lecture in the language of the KDE locale
 /*		QString default_lecture = "default";
 		if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];

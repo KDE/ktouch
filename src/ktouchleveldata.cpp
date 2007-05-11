@@ -14,7 +14,7 @@
 
 #include <QIODevice>
 #include <QTextStream>
-#include <QtXml>
+#include <QtXml/QDomNode>
 
 #include <klocale.h>
 #include <kdebug.h>
@@ -67,7 +67,7 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
     return true;
 }
 
-bool KTouchLevelData::readLevelXML(QDomNode in) {
+bool KTouchLevelData::readLevelXML(const QDomNode &in) {
 	QDomNode newChars = in.namedItem("NewCharacters");
 	if (newChars.isNull())  m_newChars = i18nc("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
 	else					m_newChars = newChars.firstChild().nodeValue();

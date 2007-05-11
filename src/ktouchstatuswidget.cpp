@@ -13,8 +13,6 @@
 #include "ktouchstatuswidget.h"
 #include "ktouchstatuswidget.moc"
 
-#include <QtGui>
-
 #include <kdebug.h>
 #include <kpushbutton.h>
 

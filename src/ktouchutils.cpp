@@ -9,14 +9,15 @@
  *   the Free Software Foundation; either version 2 of the License, or     *
  *   (at your option) any later version.                                   *
  ***************************************************************************/
- 
-#include <qtextstream.h>
-#include <qstringlist.h>
-#include <qmap.h>
-
-#include <kdebug.h>
 
 #include "ktouchutils.h"
+
+#include <QTextStream>
+#include <QStringList>
+#include <QMap>
+
+#include <KDebug>
+
 
 QString format_speed(double speed) {
     unsigned int mins = static_cast<unsigned int>(speed);

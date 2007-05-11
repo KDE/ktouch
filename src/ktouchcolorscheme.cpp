@@ -14,7 +14,7 @@
 
 #include <QFile>
 #include <QTextStream>
-#include <QtXml>
+#include <QtXml/QDomNode>
 
 #include <kdebug.h>
 #include <klocale.h>
