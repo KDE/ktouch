@@ -507,7 +507,7 @@ void KTouch::changeUser(int num) {
 bool KTouch::queryExit() {
 	// store config data
 	Prefs::setCurrentTrainingLevel( m_trainer->m_level );
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
 	// update and save statistics
 	m_trainer->storeTrainingStatistics();
 	KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
