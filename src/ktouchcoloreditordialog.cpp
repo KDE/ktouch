@@ -26,6 +26,10 @@ KTouchColorEditorDialog::KTouchColorEditorDialog(QWidget* parent)
 : QDialog(parent)
 {
 	setupUi(this);
+	connect(addBtn,SIGNAL(clicked()),SLOT(addBtnClicked()));
+	connect(removeBtn,SIGNAL(clicked()),SLOT(removeBtnClicked()));
+	connect(schemeListWidget,SIGNAL(itemClicked(QListWidgetItem*)),SLOT(colorSchemeChanged(QListWidgetItem*)));
+	connect(updateBtn,SIGNAL(clicked()),SLOT(updateClicked()));
 }
 // ----------------------------------------------------------------------------
 
