@@ -757,10 +757,10 @@ void KTouch::updateFileLists() {
         // get everything in front of the first .
         QString lang_iso = fname.section('.',0,0);
         // get language description of file names
-        QString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
+        QString lang_name = KGlobal::locale()->languageCodeToName(lang_iso);
 //        kDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
         if (lang_name.isEmpty())
-            lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
+            lang_name = KGlobal::locale()->countryCodeToName(lang_iso);
         if (!lang_name.isEmpty())
             lang_name += " (" + fname + ')';
         else

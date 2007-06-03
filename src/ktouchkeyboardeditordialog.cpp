@@ -59,9 +59,9 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 
 	// loop over all languages supported in KDE and add the language code and language name 
 	// to the langIDCombo box
-	QStringList langlist = KGlobal::locale()->allLanguagesTwoAlpha();
+	QStringList langlist = KGlobal::locale()->allLanguagesList();
 	for (int i=0; i<langlist.count(); ++i) {
-		QString langname = QString("%1 (%2)").arg(langlist[i]).arg(KGlobal::locale()->twoAlphaToLanguageName(langlist[i]));
+		QString langname = QString("%1 (%2)").arg(langlist[i]).arg(KGlobal::locale()->languageCodeToName(langlist[i]));
 		langIDCombo->addItem(langname);
 	}
 
