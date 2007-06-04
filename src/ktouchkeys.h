@@ -21,7 +21,6 @@
 class KTouchFingerKey;
 class KTouchNormalKey;
 class KTouchControlKey;
-class KTouchKeyboardWidget;
 
 /** This is the base class for all keys (KTouchFingerKey, KTouchNormalKey and KTouchControlKey).
  *  Do not create instances of KTouchKey itself or you will get only blank keys. Note that the

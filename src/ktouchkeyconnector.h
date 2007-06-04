@@ -16,7 +16,6 @@
 #include <QList>
 
 class QDomDocument;
-class QDomNode;
 class QDomElement;
 
 class KTouchKey;

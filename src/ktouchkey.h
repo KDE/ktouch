@@ -18,7 +18,6 @@
 #include <QGraphicsItem>
 
 class QDomElement;
-class QDomNode;
 class QDomDocument;
 
 class QGraphicsSceneMouseEvent;

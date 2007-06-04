@@ -23,8 +23,6 @@
 #include <kurl.h>
 
 class KAction;
-class KToggleAction;
-class KActionMenu;
 class KSelectAction;
 
 class KTouchStatusWidget;
