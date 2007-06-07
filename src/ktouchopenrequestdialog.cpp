@@ -26,7 +26,7 @@
 
 
 KTouchOpenRequestDialog::KTouchOpenRequestDialog(QWidget* parent)
-: QDialog(parent)
+: KDialog(parent)
 {
     setupUi(this);
 
@@ -99,7 +99,7 @@ void KTouchOpenRequestDialog::okBtnClicked() {
         }
         m_url = tmp;
     };            
-    QDialog::accept();
+    KDialog::accept();
 }
 
 

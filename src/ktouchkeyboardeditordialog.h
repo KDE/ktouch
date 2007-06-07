@@ -43,7 +43,7 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
 
   public:
     /// Constructor.
-    KTouchKeyboardEditorDialog(QWidget* parent = 0, Qt::WFlags fl = 0 );
+    explicit KTouchKeyboardEditorDialog(QWidget* parent = 0, Qt::WFlags fl = 0 );
     /// Default destructor.
     virtual ~KTouchKeyboardEditorDialog() {}
     /// Shows and executes the dialog (argument is the url to the default or 

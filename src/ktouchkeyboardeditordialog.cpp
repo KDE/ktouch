@@ -208,7 +208,7 @@ void KTouchKeyboardEditorDialog::on_deleteKeyButton_clicked(bool) {
 	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return; // don't mess with non existent keys
 	// let user confirm to delete the key
 	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Really delete this key?"), 
-		QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+		KMessageBox::Yes | KMessageBox::No) == KMessageBox::Yes)
 	{
 		// remove key
 		m_keyboard->deleteKey(m_currentEditKey);
@@ -275,7 +275,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
 	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return;
 	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Delete all key connections for this key?"), 
-		QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+		KMessageBox::Yes | KMessageBox::No) == KMessageBox::Yes)
 	{
 		QList<int> connectorsToRemove;
 		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin(); 
