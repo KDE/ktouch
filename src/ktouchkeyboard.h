@@ -49,9 +49,13 @@ public:
 	/// Clears the keyboard (resets all data)
 	void clear();
     /// Loads a keyboard layout (old format) from file (returns true if successful).
-    bool load(QWidget * window, const KUrl& url);
+	/// The argument msg will hold error messages if the file couldn't be read and
+	/// warning messages (if any) otherwise.
+    bool load(QWidget * window, const KUrl& url, QString& msg);
     /// Loads a lecture (in XML format) from file (returns true if successful).
-    bool loadXML(QWidget * window, const KUrl& url);
+	/// The argument msg will hold error messages if the file couldn't be read and
+	/// warning messages (if any) otherwise.
+    bool loadXML(QWidget * window, const KUrl& url, QString& msg);
     /// Saves the lecture data to file (returns true if successful).
     bool saveXML(QWidget * window, const KUrl& url) const;
 	/// Creates the default number keyboard.

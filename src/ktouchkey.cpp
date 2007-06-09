@@ -293,7 +293,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
     KTouchKeyboard * kb = dynamic_cast<KTouchKeyboard *>(parent());
     QFont f = kb->font();
 	
-    painter->setRenderHint(QPainter::Antialiasing);
+//    painter->setRenderHint(QPainter::Antialiasing);
 
 	QPen p;
 	switch (m_state) {
@@ -343,19 +343,19 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	  		m_keyChar[KTouchKey::BottomLeft] == QChar())
 	  	{ 
 	  		// print the character a little bit bigger
-    		f.setPointSizeF( qMax(0.01, m_h*0.4) );
+    		f.setPixelSize( int(qMax(0.01, m_h*0.4) + 0.5) );
     		painter->setFont( f );
 			painter->drawText(QRectF(m_h*0.1, m_h*0.1, m_h*0.6, m_h*0.6), Qt::AlignCenter | Qt::AlignVCenter, m_keyChar[0]);
 			// if we also have a bottom right character, print it small 
 			if (m_keyChar[KTouchKey::BottomRight] != QChar()) {
-				f.setPointSizeF( qMax(0.01, m_h*0.3) );
+				f.setPixelSize( int(qMax(0.01, m_h*0.3) + 0.5) );
 				painter->setFont( f );
 				painter->drawText(QRectF(m_h*0.2, m_h*0.05, m_w - m_h*0.3, m_h*0.95), 
 								  Qt::AlignRight | Qt::AlignBottom, m_keyChar[KTouchKey::BottomRight]);
 			}
 		}
 		else {
-    		f.setPointSizeF( qMax(0.01, m_h*0.3) );
+    		f.setPixelSize( int(qMax(0.01, m_h*0.3) + 0.5) );
     		painter->setFont( f );
     		// print each character in one corner
     		if (m_keyChar[KTouchKey::TopLeft] != QChar()) {
@@ -442,12 +442,12 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	  case Space : ; break; // nothing on space key
 	  
 	  case Other :
-   		f.setPointSizeF( qMax(0.01, m_h*0.4) );
+   		f.setPixelSize( int(qMax(0.01, m_h*0.4) + 0.5) );
    		painter->setFont( f );
 		painter->drawText(QRectF(m_h*0.15, m_h*0.15, m_w - m_h*0.3, m_h*0.7), Qt::AlignCenter | Qt::AlignVCenter, m_keyText);
 		break;
 	}
-    painter->setRenderHint(QPainter::Antialiasing, false);
+//    painter->setRenderHint(QPainter::Antialiasing, false);
 }
 // -----------------------------------------------------------------------------
 

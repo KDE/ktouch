@@ -600,21 +600,29 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
         // Ok, user confirmed the dialog, now lets get the url
         m_currentURL = new_url;
         // Try to load the keyboard, if that fails, we create a new keyboard instead
+		QString msg;
         if (!m_currentURL.isEmpty() && 
-		    !m_keyboard->load(this, m_currentURL) && !m_keyboard->loadXML(this, m_currentURL)) 
+		    !m_keyboard->load(this, m_currentURL, msg) && !m_keyboard->loadXML(this, m_currentURL, msg)) 
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead."));
             m_currentURL = ""; // new keyboards haven't got a URL
 			m_keyboard->clear();
         }
+
         // If we have no URL, we create a new keyboard - can happen if either the user
         // chose "new keyboard" or the chosen keyboard could not be opened
         if (m_currentURL.isEmpty())  {
             m_keyboard->clear();
             setModified(true); // new keyboards are modified by default
         }
-        else
+        else {
+			// just for information, show the user possible read-warning messages
+			if (!msg.isEmpty()) {
+				KMessageBox::information(this,
+					i18n("There were warnings while reading the keyboard file '%1':\n%2", m_currentURL.path(), msg));
+			}
             setModified(false); // newly read keyboards are not modified in the begin
+		}
         transfer_to_dialog();    // Update our editor with the keyboard data
         return QDialog::Accepted;
     }

@@ -54,7 +54,15 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
     QString target;
     if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
-        bool result = true; //readKeyboard(target, msg);
+		// attempt to read the keyboard file in new format, then in old format
+		bool result = m_keyboard->loadXML(this, url, msg);
+		if (!result)
+			result = m_keyboard->load(this, url, msg); 
+		if (result && !msg.isEmpty()) {
+			// TODO : show proper warning message unless in silent mode
+//			KMessageBox::warningContinue(window,
+//				i18n("There were warnings while reading the keyboard file '%1':\n%2", url.path(), msg),
+		}
         KIO::NetAccess::removeTempFile(target);
         if (!result)
 			errorMsg = i18n("Could not read the keyboard layout file '%1'. %2", url.url(), msg);

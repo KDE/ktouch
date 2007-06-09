@@ -46,7 +46,7 @@ void KTouchKeyboard::clear() {
 // ----------------------------------------------------------------------------
 
 // Loads a keyboard layout (old format) from file (returns true if successful).
-bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
+bool KTouchKeyboard::load(QWidget * window, const KUrl& url, QString& msg) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
@@ -58,22 +58,18 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url) {
         if ( !infile.open( QIODevice::ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
-		QString warnings;
-        result = read(in, warnings);
-		if (!warnings.isEmpty()) {
-			KMessageBox::warningContinueCancel(window,
-				i18n("There were warnings while reading the keyboard file '%1':\n%2", url.path(), warnings),
-				i18n("Reading keyboard layout..."));
-			// TODO : handle dialog return codes appropriately
-		}
+        result = read(in, msg);
     }
+	else {
+		msg = i18n("Could not open/download keyboard file '%1'").arg(url.url());
+	}
     KIO::NetAccess::removeTempFile(target);
     return result;
 }
 // ----------------------------------------------------------------------------
 
 // Loads a lecture (in XML format) from file (returns true if successful).
-bool KTouchKeyboard::loadXML(QWidget * window, const KUrl& url) {
+bool KTouchKeyboard::loadXML(QWidget * window, const KUrl& url, QString& msg) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
