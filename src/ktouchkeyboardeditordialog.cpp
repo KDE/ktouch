@@ -109,7 +109,7 @@ void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_openButton_clicked() {
-    saveModified();  // save if modified
+    if (!saveModified()) return;  // save if modified
     openKeyboardFile(KUrl(""));
 }
 // -----------------------------------------------------------------------------
@@ -207,15 +207,14 @@ void KTouchKeyboardEditorDialog::on_keyTextEdit_textEdited(const QString & text)
 void KTouchKeyboardEditorDialog::on_deleteKeyButton_clicked(bool) {
 	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return; // don't mess with non existent keys
 	// let user confirm to delete the key
-	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Really delete this key?"), 
-		KMessageBox::Yes | KMessageBox::No) == KMessageBox::Yes)
-	{
+	if (KMessageBox::questionYesNo(this, i18n("Really delete this key?")) == KMessageBox::Yes) {
 		// remove key
 		m_keyboard->deleteKey(m_currentEditKey);
 		// disable controls
 		m_currentEditKey = NULL;
 		keyClicked(NULL);
 		// update the graphics scene
+		resizeKeyboard();
 		m_scene->update();
 	}
 }
@@ -229,6 +228,7 @@ void KTouchKeyboardEditorDialog::on_addKeyButton_clicked(bool) {
 	key->setZValue(0.1);
 	m_keyboard->m_keys.append(key);
 	m_scene->addItem(key);
+	resizeKeyboard();
 	key->setFlag(QGraphicsItem::ItemIsMovable, true);
 	connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
 	connect(key, SIGNAL(positionChanged(KTouchKey *)), this, SLOT(keyPositionChanged(KTouchKey *)));	
@@ -252,6 +252,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 		bool ok;
 		unicode = conUnicodeEdit->text().toInt(&ok,10);
 		if (!ok) {
+			// TODO : Fixme
 			QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("This is not a valid unicode number. Please correct the number or enter a character."));
 			return;
 		}
@@ -260,6 +261,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 		error = true;
 	}
 	if (error) {
+			// TODO : Fixme
 		QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number!"));
 		return;
 	}
@@ -343,6 +345,8 @@ void KTouchKeyboardEditorDialog::on_heightSpinBox_valueChanged(int val) {
 
 void KTouchKeyboardEditorDialog::resizeKeyboard() {
     QRectF sbr = m_scene->itemsBoundingRect();
+	if (sbr.width() <= 0)  sbr.setWidth(1);
+	if (sbr.height() <= 0)  sbr.setHeight(1);
     qreal scale = qMin(keyboardView->width()/sbr.width(), keyboardView->height()/sbr.height()) * 0.9;
 
     QMatrix matrix;
@@ -350,6 +354,15 @@ void KTouchKeyboardEditorDialog::resizeKeyboard() {
     keyboardView->setMatrix(matrix);
 }
 // -----------------------------------------------------------------------------
+
+void KTouchKeyboardEditorDialog::closeEvent(QCloseEvent *event) {
+	if (!saveModified())
+		event->ignore();
+	else
+		event->accept();
+}
+// -----------------------------------------------------------------------------
+
 
 void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	// are we currently selecting a finger key character?
@@ -363,6 +376,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 			if (selectFingerKeyButton->isChecked()) {
 				// check if the key is actually a finger key
 				if (k->m_type != KTouchKey::Finger) {
+					// FIXME
 					QMessageBox::warning(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
 					return;
 				}
@@ -622,8 +636,8 @@ void KTouchKeyboardEditorDialog::setModified(bool flag) {
 bool KTouchKeyboardEditorDialog::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
-    int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The keyboard has been changed. Do you want to save the changes?"),QString(),KStandardGuiItem::save(),KStandardGuiItem::discard());
+    int result = KMessageBox::questionYesNoCancel(this, i18n("The keyboard has been changed. Do you want to save the changes?"),
+		0, KStandardGuiItem::yes(), KStandardGuiItem::no(), KStandardGuiItem::cancel() );
     if (result == KMessageBox::Cancel) 
 		return false; // User aborted
     if (result == KMessageBox::Yes) 

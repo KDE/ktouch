@@ -13,6 +13,7 @@
 #ifndef KTOUCHOPENREQUESTDIALOG_H
 #define KTOUCHOPENREQUESTDIALOG_H
 
+#include <QDialog>
 #include "ui_ktouchopenrequestdialog.h"
 
 #include <kurl.h>
@@ -47,7 +48,7 @@
 /// url is stored in the member variable m_url (if the dialog was accepted by 
 /// the user).
 /// 
-class KTouchOpenRequestDialog : public KDialog, public Ui_KTouchOpenRequestDialog {
+class KTouchOpenRequestDialog : public QDialog, public Ui_KTouchOpenRequestDialog {
   Q_OBJECT
  
   public:

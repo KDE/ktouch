@@ -20,19 +20,16 @@
 #include <QVector>
 #include <QMap>
 
-
-#include "ktouchkeys.h"
-#include "ktouchkeyboard.h"	// (new) contains all keyboard data
-
 class KUrl;
+class KTouchKeyboard;
 
 /** This is the keyboard widget at the bottom of the training screen.
  *  In addition to the painting functions this class has the member
  *  functions loadKeyboard() and saveKeyboard() which can read and write
- *  a keyboard layout from/into a file.<p>
+ *  a keyboard layout from/into a file. \n
  *  The keyboard is drawn in the paintEvent() member function. The
  *  resizing, that means the recalculation of m_shift is
- *  done in the resizeEvent() member function.<p>
+ *  done in the resizeEvent() member function. \n
  *  The state of keyboard and keys does not change while it is
  *  repainted or resized. Only when a new character has been typed
  *  and the newKey() slot is called the state changes (and thus the
@@ -48,7 +45,7 @@ class KTouchKeyboardWidget : public QGraphicsView {
     /// Reads a keyboard layout from the given URL.
     /// The function returns 'true' when the reading was successful or 'false' if not. In this
     /// case the optional parameter errorMsg contains the error message.
-    bool loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg=NULL);
+    bool loadKeyboard(QWidget * window, const KUrl& url, QString& errorMsg);
     /// Applies preferences to the keyboard layout and the keys.
     /// This means that the layout is basically recreated and if the layout type/language
     /// changed it will be reloaded.
@@ -69,20 +66,12 @@ class KTouchKeyboardWidget : public QGraphicsView {
     /// This function is needed in case there no keyboard file could be found.
     void createDefaultKeyboard();
 
-    /// Does the actual reading.
-    bool readKeyboard(const QString& fileName, QString& errorMsg);
-
-	// *** new data storage classes ***
-	KTouchKeyboard				m_keyboard;			///< Data defining a keyboard.
-
-	// *** old data storage classes ***
-	QList<KTouchBaseKey*>		m_keyList;     		///< The pointer list with base class pointers to the keys.
-    QList<KTouchKeyConnection> 	m_connectorList;	///< Contains the character - key associations.
+	KTouchKeyboard*				m_keyboard;			///< Data defining a keyboard.
 
     QString						m_currentLayout;    ///< The name of the currently used layout.
     QChar						m_nextKey;          ///< The next to be pressed character.
 
-    QGraphicsScene				*m_scene;			///< The graphics scene 
+    QGraphicsScene*				m_scene;			///< The graphics scene 
 };
 
 #endif  // KTOUCHKEYBOARDWIDGET_H

@@ -62,8 +62,6 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
     virtual void on_saveButton_clicked();
     /// Called when the Save As button was clicked.
     virtual void on_saveAsButton_clicked();
-    /// Called when the editor is closed.
-    virtual void closeQuery() { if (saveModified()) accept(); }
 	/// Called when user edits the top left character
 	virtual void on_topLeftChar_textEdited(const QString & text); 
 	/// Called when user edits the top right character
@@ -107,10 +105,8 @@ class KTouchKeyboardEditorDialog : public QDialog, public Ui_KTouchKeyboardEdito
   protected:
     /// Resizes the keyboard.
     void resizeEvent(QResizeEvent *);
-
-  protected slots:
-    /// Called when the editor is rejected (x clicked).
-    void reject() { closeQuery(); }
+	/// Asks user to confirm saving/discarding of modified keyboard files.
+	void closeEvent(QCloseEvent *event);
 
   private:    
     /// Transfers data from the keyboard object to the dialog.

@@ -21,45 +21,47 @@
 #include <kmessagebox.h>
 
 #include "prefs.h"
+#include "ktouchkeyboard.h"
+#include "ktouchkey.h"
 
 KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
   : QGraphicsView(parent), m_currentLayout("")
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
 
-    m_scene = new QGraphicsScene(this);
+	// create keyboard object
+	m_keyboard = new KTouchKeyboard(this);
 
+	// setup graphics view
+    m_scene = new QGraphicsScene(this);
     setScene(m_scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setRenderHint(QPainter::Antialiasing);
-
+    setRenderHint(QPainter::TextAntialiasing);
     setBackgroundBrush(palette().brush(QPalette::Window));
     setFrameStyle(QFrame::NoFrame);
 }
 // --------------------------------------------------------------------------
 
 KTouchKeyboardWidget::~KTouchKeyboardWidget() {
-	qDeleteAll(m_keyList);
-	m_keyList.clear();
+	// TODO : cleanup key graphics items
 }
 // --------------------------------------------------------------------------
 
-bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QString* errorMsg) {
+bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QString& errorMsg) {
     reset();
 
     QString target;
     if (KIO::NetAccess::download(url, target, window)) {
         QString msg;
-        bool result = readKeyboard(target, msg);
+        bool result = true; //readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
-        if (!result && errorMsg!=NULL)
-            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ", url.url()) + msg;
+        if (!result)
+			errorMsg = i18n("Could not read the keyboard layout file '%1'. %2", url.url(), msg);
         return result;
     }
     else {
-        if (errorMsg!=NULL)
-            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.", url.url());
+		errorMsg = i18n("Could not download/open keyboard layout file from '%1'.", url.url());
         return false;
     }
 }
@@ -77,16 +79,18 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
             return;
         }
         // ok, let's load this layout
+        QString errorMsg;
         if (silent) {
-            // during initialisation we don't want to have a message box, that's why this is silent
-            if (!loadKeyboard(window, KUrl( Prefs::currentKeyboardFile() )))
+            if (!loadKeyboard(window, KUrl( Prefs::currentKeyboardFile() ), errorMsg)) {
+            	// during initialisation we don't want to have a message box, that's why we
+				// simply ignore the error message here
                 createDefaultKeyboard();
+			}
             else
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
         else {
-            QString errorMsg;
-            if (!loadKeyboard(window, KUrl( Prefs::currentKeyboardFile() ), &errorMsg)) {
+            if (!loadKeyboard(window, KUrl( Prefs::currentKeyboardFile() ), errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
@@ -97,20 +101,13 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
         }
     }
 
-    // assign keyboard font to keys
-    for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-
-        if (Prefs::overrideKeyboardFont()) {
-            (*it)->m_font = Prefs::keyboardFont();
-        }
-        else  {
-            (*it)->m_font = Prefs::font();
-        }
-
-        (*it)->m_font.setPointSizeF(8/(*it)->m_font_scale);
-
-        (*it)->update();
-    }
+    // assign keyboard font
+	if (Prefs::overrideKeyboardFont()) {
+		m_keyboard->setFont(Prefs::keyboardFont());
+	}
+	else  {
+		m_keyboard->setFont(Prefs::font());
+	}
 
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 }
@@ -125,14 +122,12 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
         return;
 
     // first clean the markings on all keys
-    for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-        KTouchBaseKey * key = *it;
-        key->reset();
-    }
+	for(QList<KTouchKey*>::iterator it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it )
+		(*it)->m_state = KTouchKey::NormalState;
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
-        QList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
+/*        QList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=m_nextKey)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
@@ -148,12 +143,15 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
                 else if (key->m_keyChar==controlChar)  key->setActive(true);
             }
         }
+*/
     }
 }
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     QRectF sbr = m_scene->itemsBoundingRect();
+	if (sbr.width() <= 0)  sbr.setWidth(1);
+	if (sbr.height() <= 0)  sbr.setHeight(1);
     qreal scale = qMin(width()/sbr.width(),height()/sbr.height()) * 0.9;
 
     QMatrix matrix;
@@ -163,8 +161,10 @@ void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::reset() {
-    m_keyList.clear();
+	m_keyboard->clear();
 
+	// FIXME: Do we really need the code below? All we need to do is reset
+	//        the bounding rectangle, right?
     setScene(0);
     delete(m_scene);
     m_scene = new QGraphicsScene(this);
@@ -176,7 +176,7 @@ void KTouchKeyboardWidget::reset() {
 void KTouchKeyboardWidget::createDefaultKeyboard() {
     reset();
 
-    // let's create a default keyboard
+/*    // let's create a default keyboard
     const int keySpacing = 4;
     const int keyHeight = 20;
     const int keyWidth = 20;
@@ -234,12 +234,14 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     m_connectorList.append( KTouchKeyConnection( 13,  13, '+', 0) );
 
     m_currentLayout="number.keyboard";
-
     resizeEvent(0);
+*/
 }
 // --------------------------------------------------------------------------
 
+/*
 bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorMsg) {
+	
     QFile infile(fileName);
     if ( !infile.open( QIODevice::ReadOnly ) ) {
         errorMsg = i18n("Could not open file.");
@@ -336,4 +338,5 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
     return (!m_keyList.isEmpty());  // empty file means error
 }
 // --------------------------------------------------------------------------
+*/
 
