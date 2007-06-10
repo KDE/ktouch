@@ -34,7 +34,6 @@
 #include <ktabwidget.h>
 
 #include "ktouch.h"
-#include "ktouchchartwidget.h"
 
 KTouchStatisticsDialog::KTouchStatisticsDialog(QWidget* parent)
 	: QDialog(parent)
@@ -68,6 +67,8 @@ void KTouchStatisticsDialog::run(const KUrl& currentLecture, const KTouchStatist
 	const KTouchLevelStats& currLevelStats,
 	const KTouchSessionStats& currSessionStats)
 {
+	lectureLabel1->setText(currentLecture.url());
+	lectureLabel2->setText(currentLecture.url());
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
@@ -124,9 +125,7 @@ void KTouchStatisticsDialog::lectureActivated(int index) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::clearHistory() {
-	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),QString(),KStandardGuiItem::del()) 
-		== KMessageBox::Continue)
-	{
+	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?")) == KMessageBox::Yes) {
 		KTouchPtr->clearStatistics(); // clear statistics data in KTouch
 		// clear and reset local copy
 		m_allStats.clear();
@@ -140,7 +139,6 @@ void KTouchStatisticsDialog::clearHistory() {
 	}
 }
 // ----------------------------------------------------------------------------
-
 
 void KTouchStatisticsDialog::updateCurrentSessionTab() {
 	// session/level/info
@@ -300,8 +298,7 @@ void KTouchStatisticsDialog::updateCurrentLevelTab() {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::updateChartTab() {
-
-    kDebug() << "[KTouchStatisticsDialog::updateChartTab]" << endl;
+//    kDebug() << "[KTouchStatisticsDialog::updateChartTab]" << endl;
 
 	// remove all current chart objects
 	chartWidget->removeAllPlotObjects();
@@ -338,8 +335,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 				data.push_back(std::make_pair(tp, wpm) );
 			}
-			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Words per minute") );
-			//:chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+			chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Words per minute") );
 		}
         else if(CPMRadio->isChecked()){ // chars per minute
 			// loop over all session data entries in *it and store chars per minute data
@@ -360,8 +356,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 				data.push_back(std::make_pair(tp, cpm) );
 			}
-			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Characters per minute") );
-			//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+			chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Characters per minute") );
         }
         else if (correctRadio->isChecked()){ // correctness
 			// loop over all session data entries in *it and store correctness data
@@ -382,8 +377,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 				data.push_back(std::make_pair(tp, corr) );
 			}
-			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Correctness") );
-			//chartWidget->LeftAxis.setLabelFormat(0, 'g', 1);
+			chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Correctness") );
         }
         else if (skillRadio->isChecked()){
 			// loop over all session data entries in *it and store correctness data
@@ -411,8 +405,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 				double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
 				data.push_back(std::make_pair(tp, skill) );
 			}
-			chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n("Skill") );
-			//chartWidget->LeftAxis.setLabelFormat(0, 'f', 0);
+			chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n("Skill") );
         }
         else{
             return;
@@ -431,11 +424,11 @@ void KTouchStatisticsDialog::updateChartTab() {
 		    double x;
 		    if (timeRadio->isChecked()) {
 			    x = data[i].first - data[0].first;
-			    chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Time since first practice session in days" ));
+			    chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n( "Time since first practice session in days" ));
 		    }
 		    else {	
 			    x = i+1;
-			    chartWidget->axis( KPlotWidget::LeftAxis )->setLabel( i18n( "Sessions" ));
+			    chartWidget->axis( KPlotWidget::BottomAxis )->setLabel( i18n( "Sessions" ));
 		    }
 		    ob->addPoint( x, data[i].second );
 		    min_x = std::min(x, min_x);
@@ -447,7 +440,6 @@ void KTouchStatisticsDialog::updateChartTab() {
     
 	    max_y *= 1.1;
 	    chartWidget->setLimits( min_x, max_x, -0.1*max_y, max_y );
-        // kDebug() << min_x << " " << max_x << "    " << max_y << endl;
 	    // Add plot object to chart
 	    chartWidget->addPlotObject(ob);
     }

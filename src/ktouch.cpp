@@ -754,11 +754,11 @@ void KTouch::updateFileLists() {
 	// extract titles from keyboard files and store them in the
 	// m_keyboardTitles string list
     m_keyboardTitles.clear();
+	kDebug() << "Keyboard files in XML format:" << endl;
     for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
         cit != m_keyboardFiles.constEnd(); ++cit)
     {
 		KUrl url = (*cit);
-		kDebug() << url << endl;
     	QString target;
 		// try to read language code and keyboard name from file
 		if (!KIO::NetAccess::download(url, target, this)) continue;
@@ -783,7 +783,7 @@ void KTouch::updateFileLists() {
 		if (!langid.isEmpty())
 			title = QString("%1 (%2)").arg(title).arg(langid);
         m_keyboardTitles.append( title );
-        kDebug() << m_keyboardTitles.back() << endl;
+        kDebug() << "  " << m_keyboardTitles.back() << "\t [" << url << "]" << endl;
     }
 
     // now sort the files and titles accordingly
