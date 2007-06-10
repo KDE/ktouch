@@ -13,6 +13,8 @@
 #include "ktouchkeyboardwidget.h"
 #include "ktouchkeyboardwidget.moc"
 
+#include <QTimer>
+
 #include <kdebug.h>
 #include <ktemporaryfile.h>
 #include <klocale.h>
@@ -66,6 +68,14 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KUrl& url, QStri
         KIO::NetAccess::removeTempFile(target);
         if (!result)
 			errorMsg = i18n("Could not read the keyboard layout file '%1'. %2", url.url(), msg);
+		else {
+			QList<KTouchKey*>::iterator it;
+			for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
+				KTouchKey * key = *it;
+				m_scene->addItem(key);
+			}
+			QTimer::singleShot(10, this, SLOT(resizeKeyboard()));
+		}
         return result;
     }
     else {
@@ -156,6 +166,18 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 }
 // --------------------------------------------------------------------------
 
+void KTouchKeyboardWidget::resizeKeyboard() {
+    QRectF sbr = m_scene->itemsBoundingRect();
+	if (sbr.width() <= 0)  sbr.setWidth(1);
+	if (sbr.height() <= 0)  sbr.setHeight(1);
+    qreal scale = qMin(width()/sbr.width(), height()/sbr.height()) * 0.9;
+
+    QMatrix matrix;
+    matrix.scale(scale, scale);
+    setMatrix(matrix);
+}
+// -----------------------------------------------------------------------------
+
 void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     QRectF sbr = m_scene->itemsBoundingRect();
 	if (sbr.width() <= 0)  sbr.setWidth(1);
@@ -183,67 +205,14 @@ void KTouchKeyboardWidget::reset() {
 
 void KTouchKeyboardWidget::createDefaultKeyboard() {
     reset();
+	m_keyboard->createDefault();
 
-/*    // let's create a default keyboard
-    const int keySpacing = 4;
-    const int keyHeight = 20;
-    const int keyWidth = 20;
-    int col = keyWidth+keySpacing;
-    int row = keyHeight+keySpacing;
-    // first let's create the "visible" keys, that means all keys that will be displayed
-    // Note: purely decorative keys get a key char code of 0!
-    m_keyList.clear();
-    m_keyList.append( new KTouchFingerKey( '4', "4", 0,         0, 2*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchFingerKey( '5', "5", 1,       col, 2*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchFingerKey( '6', "6", 2,     2*col, 2*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchFingerKey( '+', "+", 3,     3*col,   row, keyWidth, 2*keyHeight+keySpacing) );
-    m_keyList.append( new KTouchFingerKey( '.', ".", 4,     2*col, 4*row, keyWidth, keyHeight) );
-
-    m_keyList.append( new KTouchNormalKey( '/', "/", 1,       col,     0, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '*', "*", 2,     2*col,     0, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '-', "-", 3,     3*col,     0, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '7', "7", 0,         0,   row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '8', "8", 1,       col,   row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '9', "9", 2,     2*col,   row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '1', "1", 0,         0, 3*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '2', "2", 1,       col, 3*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '3', "3", 2,     2*col, 3*row, keyWidth, keyHeight) );
-    m_keyList.append( new KTouchNormalKey( '0', "0", 0,         0, 4*row, 2*keyWidth+keySpacing, keyHeight) );
-
-    m_keyList.append( new KTouchControlKey(13, "Enter", 3*col, 3*row,keyWidth, 2*keyHeight+keySpacing) );
-    m_keyList.append( new KTouchControlKey(8, "BackSpace", 5*col, 0, 2*keyWidth+keySpacing, keyHeight) );
-
-    for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-        KTouchBaseKey * key = *it;
+	QList<KTouchKey*>::iterator it;
+	for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
+		KTouchKey * key = *it;
         m_scene->addItem(key);
-    }
-
-    // now we need to create the connections between the characters that can be typed and the
-    // keys that need to be displayed on the keyboard
-    // The arguments to the constructor are: keychar, targetkey, fingerkey, controlkey
-    m_connectorList.clear();
-    m_connectorList.append( KTouchKeyConnection('/', '/', '5', 0) );
-    m_connectorList.append( KTouchKeyConnection('*', '*', '6', 0) );
-    m_connectorList.append( KTouchKeyConnection('-', '-', '+', 0) );
-    m_connectorList.append( KTouchKeyConnection('+', '+',   0, 0) );
-    m_connectorList.append( KTouchKeyConnection('.', '.', '6', 0) );
-    m_connectorList.append( KTouchKeyConnection(',', '.', '6', 0) );
-    m_connectorList.append( KTouchKeyConnection('7', '7', '4', 0) );
-    m_connectorList.append( KTouchKeyConnection('8', '8', '5', 0) );
-    m_connectorList.append( KTouchKeyConnection('9', '9', '6', 0) );
-    m_connectorList.append( KTouchKeyConnection('4', '4',   0, 0) );
-    m_connectorList.append( KTouchKeyConnection('5', '5',   0, 0) );
-    m_connectorList.append( KTouchKeyConnection('6', '6',   0, 0) );
-    m_connectorList.append( KTouchKeyConnection('1', '1', '4', 0) );
-    m_connectorList.append( KTouchKeyConnection('2', '2', '5', 0) );
-    m_connectorList.append( KTouchKeyConnection('3', '3', '6', 0) );
-    m_connectorList.append( KTouchKeyConnection('0', '0',   0, 0) );
-    m_connectorList.append( KTouchKeyConnection(  8,   8,   0, 0) );
-    m_connectorList.append( KTouchKeyConnection( 13,  13, '+', 0) );
-
-    m_currentLayout="number.keyboard";
-    resizeEvent(0);
-*/
+	}
+	QTimer::singleShot(10, this, SLOT(resizeKeyboard()));
 }
 // --------------------------------------------------------------------------
 

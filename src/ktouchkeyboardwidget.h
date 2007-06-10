@@ -54,6 +54,7 @@ class KTouchKeyboardWidget : public QGraphicsView {
   public slots:
     /// This function displays the next key (or key combination) the user has to press.
     void newKey(const QChar& nextChar);
+	void resizeKeyboard();
 
   protected:
 
