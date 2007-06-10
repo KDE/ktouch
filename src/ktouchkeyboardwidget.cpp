@@ -132,36 +132,47 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 // --------------------------------------------------------------------------
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
+    if (!Prefs::showKeyboard()) return;
+
+	// first make current key a normal keystate again
+	KTouchKeyConnector & c = m_keyboard->m_connectors[m_nextKey.unicode()];
+	KTouchKey * targetKey = c.m_targetKey;
+	KTouchKey * modifierKey = c.m_modifierKey;
+	if (targetKey != NULL) {
+		targetKey->m_state = KTouchKey::NormalState;
+		targetKey->update();
+		KTouchKey * fingerKey = targetKey->m_fingerKey;
+		if (fingerKey != NULL) {
+			fingerKey->m_state = KTouchKey::NormalState;
+			fingerKey->update();
+		}
+	}
+	if (modifierKey != NULL) {
+		modifierKey->m_state = KTouchKey::NormalState;
+		modifierKey->update();
+	}
+
     // store next to be pressed character, the corresponding key and
     // the finger key will be highlighted
     m_nextKey = nextChar;
 
-    if(!Prefs::showKeyboard())
-        return;
-
-    // first clean the markings on all keys
-	for(QList<KTouchKey*>::iterator it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it )
-		(*it)->m_state = KTouchKey::NormalState;
-
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
-        // find the key in the key connector list
-/*        QList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
-        while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=m_nextKey)  ++keyIt;
-        // if found mark the appropriate keys
-        if (keyIt!=m_connectorList.end()) {
-            QChar targetChar = (*keyIt).m_targetKeyChar;
-            QChar fingerChar = (*keyIt).m_fingerKeyChar;
-            QChar controlChar = (*keyIt).m_controlKeyChar;
-            // find the keys in the keylist
-            for (QList<KTouchBaseKey*>::iterator it = m_keyList.begin(); it != m_keyList.end(); ++it) {
-                KTouchBaseKey * key = *it;
-                if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
-                if (key->m_keyChar==targetChar) key->setNextKey(true);
-                else if (key->m_keyChar==fingerChar) key->setActive(true);
-                else if (key->m_keyChar==controlChar)  key->setActive(true);
-            }
-        }
-*/
+		KTouchKeyConnector & nc = m_keyboard->m_connectors[m_nextKey.unicode()];
+		KTouchKey * targetKey = nc.m_targetKey;
+		KTouchKey * modifierKey = nc.m_modifierKey;
+		if (targetKey != NULL) {
+			targetKey->m_state = KTouchKey::HighlightedState;
+			targetKey->update();
+			KTouchKey * fingerKey = targetKey->m_fingerKey;
+			if (fingerKey != NULL) {
+				fingerKey->m_state = KTouchKey::FingerKeyState;
+				fingerKey->update();
+			}
+		}
+		if (modifierKey != NULL) {
+			modifierKey->m_state = KTouchKey::HighlightedState;
+			modifierKey->update();
+		}
     }
 }
 // --------------------------------------------------------------------------

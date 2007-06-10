@@ -287,6 +287,30 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 		} // switch 
 		
 	  } break; // HighlightedState
+	  case FingerKeyState :
+	  {
+			QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
+			QColor c = colorScheme.m_backgroundH;
+			grad.setColorAt(0,c);
+			qreal h, s, v, a;
+			c.getHsvF(&h, &s, &v, &a);
+			c.setHsvF(h, s, v*0.8, a);
+			grad.setColorAt(1,c);
+			painter->setBrush( QBrush(grad) );
+			QPen p(colorScheme.m_frame);
+			p.setWidth(0); // only one pixel!
+			painter->setPen( p );
+			painter->drawRect(0, 0, m_w, m_h);
+			// Finger keys get a special decoration
+			QRadialGradient radgrad(QPointF(m_w/2, m_h/2), qMin(m_w, m_h)*0.48, QPointF(m_w/2*0.9, m_h/2*0.9) );
+			radgrad.setColorAt(0, c);
+			radgrad.setColorAt(0.9, QColor(255,255,255,196));
+			radgrad.setColorAt(1, QColor(0,0,0,48));
+			painter->setBrush( QBrush(radgrad) );
+			painter->drawRect(0, 0, m_w, m_h);
+
+	  } break; // FingerKeyState
+
 	}
 
 	// draw text/decoration
