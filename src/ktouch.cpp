@@ -13,6 +13,9 @@
 #include "ktouch.h"
 #include "ktouch.moc"
 
+// Qt Header
+#include <QtXml>
+
 // KDE Header
 #include <kselectaction.h>
 #include <kactioncollection.h>
@@ -732,23 +735,49 @@ void KTouch::updateFontFromLecture() {
 // This function populates the file lists with the installed training, keyboard and
 // examination files.
 void KTouch::updateFileLists() {
+    // first search for all installed new format keyboard files
     KStandardDirs *dirs = KGlobal::dirs();
+    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard.xml");
 
-    // first search for all installed keyboard files
-	// TODO : search in i18n() directories
-    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
-
-    // remove the number layout, since this is the necessary default layout and will be
-    // added anyway
-    int index = m_keyboardFiles.indexOf("number.keyboard");
-	if (index != -1)	m_keyboardFiles.removeAt(index);
-
+	// extract titles from keyboard files and store them in the
+	// m_keyboardTitles string list
     m_keyboardTitles.clear();
     for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
         cit != m_keyboardFiles.constEnd(); ++cit)
     {
-        // extract titles from keyboard files and store them in the
-        // m_keyboardTitles string list
+		KUrl url = (*cit);
+		kDebug() << url << endl;
+    	QString target;
+		// try to read language code and keyboard name from file
+		if (!KIO::NetAccess::download(url, target, this)) continue;
+		// Ok, that was successful, store the lectureURL and read the file
+		QFile infile(target);
+		if ( !infile.open( QIODevice::ReadOnly ) ) 	continue;
+		QDomDocument doc;
+		doc.setContent( &infile );
+		QDomElement root = doc.documentElement();
+		if (root.isNull() || root.tagName() != "KTouchKeyboard")  continue;
+		
+		// get the title
+		QString title;
+		QDomElement e = root.firstChildElement("Title");
+		if (!e.isNull())	title = e.firstChild().nodeValue();
+		else				title = i18n("untitled keyboard layout");
+		QString langid;
+		// retrieve the language id
+		e = root.firstChildElement("Language");
+		if (!e.isNull())	langid = e.firstChild().nodeValue();
+		// compose title for main menu
+		if (!langid.isEmpty())
+			title = QString("%1 (%2)").arg(title).arg(langid);
+        m_keyboardTitles.append( title );
+        kDebug() << m_keyboardTitles.back() << endl;
+    }
+
+/*
+    for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
+        cit != m_keyboardFiles.constEnd(); ++cit)
+    {
 
         // get the filename alone
         QString fname = KUrl(*cit).fileName();
@@ -768,12 +797,14 @@ void KTouch::updateFileLists() {
         m_keyboardTitles.append( lang_name );
 //        kDebug() << m_keyboardTitles.back() << endl;
     }
+*/
 
     // now sort the files and titles accordingly
     sort_lists(m_keyboardTitles, m_keyboardFiles);
     // and add the number keypad to the front
-    m_keyboardFiles.push_front("number.keyboard");
-    m_keyboardTitles.push_front(i18n("Keypad/Number block"));
+//    m_keyboardFiles.push_front("number.keyboard");
+//    m_keyboardTitles.push_front(i18n("Keypad/Number block"));
+
 
     // Now lets find the lecture files.
 	// TODO : search in i18n() directories

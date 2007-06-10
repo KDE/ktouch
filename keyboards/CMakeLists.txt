@@ -5,6 +5,7 @@
 ########### install files ###############
 
 install( FILES 
+  de.keyboard.xml
   be.keyboard
   bg.keyboard
   cz.keyboard

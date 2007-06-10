@@ -32,7 +32,6 @@ set(ktouch_SRCS
    ktouchkeyboardwidget.cpp 
    ktouchkeyconnector.cpp 
    ktouchkey.cpp 
-   ktouchkeys.cpp 
    ktouchlecture.cpp 
    ktouchleveldata.cpp 
    ktouchtextlinewidget.cpp 

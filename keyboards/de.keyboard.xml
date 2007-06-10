@@ -1,6 +1,7 @@
 <KTouchKeyboard>
- <Title>de.keyboard</Title>
- <Language>de (German)</Language>
+ <Title>German</Title>
+ <FontSuggestions>Sans Serif,9,-1,5,50,0,0,0,0,0</FontSuggestions>
+ <Language>de</Language>
  <Keys>
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
    <Char Unicode="65" Position="TopLeft" >A</Char>
@@ -29,11 +30,11 @@
   <Key Width="130" X="0" Y="100" Height="80" Type="TAB" />
   <Key Width="100" X="1380" Y="100" Height="180" Type="ENTER" />
   <Key Width="250" X="1230" Y="300" Height="80" Type="SHIFT" />
-  <Key Width="130" X="1200" KeyText="Alt Gr" Y="400" Height="80" Type="OTHER" />
+  <Key Width="180" X="1150" KeyText="Alt Gr" Y="400" Height="80" Type="OTHER" />
   <Key Width="130" X="1350" KeyText="Strg" Y="400" Height="80" Type="OTHER" />
   <Key Width="130" X="150" KeyText="Alt" Y="400" Height="80" Type="OTHER" />
   <Key Width="130" X="0" KeyText="Strg" Y="400" Height="80" Type="OTHER" />
-  <Key Width="880" X="300" Y="400" Height="80" Type="SPACE" />
+  <Key Width="830" X="300" Y="400" Height="80" Type="SPACE" />
   <Key Width="110" X="0" Y="300" Height="80" Type="SHIFT" />
   <Key Width="160" X="0" Y="200" Height="80" Type="CAPSLOCK" />
   <Key Width="180" X="1300" Y="0" Height="80" Type="BACKSPACE" />
