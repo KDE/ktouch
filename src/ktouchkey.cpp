@@ -353,7 +353,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 		}
 	}
 
-	p.setWidthF(m_h*0.04);
+	p.setWidthF(3);
 	p.setJoinStyle(Qt::RoundJoin);
 	painter->setPen( p );
 
@@ -409,7 +409,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
         qreal y = 0+m_h/2;
 
         QPainterPath path;
-        path.setFillRule(Qt::WindingFill);
+
         path.moveTo(xright, y-ch/2);
         path.lineTo(xright, y);
         path.lineTo(xleft+ch/3, y);
@@ -427,7 +427,6 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
         qreal y = 0+m_h/2;
 
         QPainterPath path;
-        path.setFillRule(Qt::WindingFill);
         path.moveTo(xright, y);
         path.lineTo(xleft+ch/3, y);
         path.lineTo(xleft+ch/3, y-static_cast<qreal>(ch*0.15));
@@ -478,14 +477,33 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
         qreal xright = 0 + qMin(m_w-h/2+ch/2,h);
         qreal y = 0+m_h/2;
 
-        painter->drawLine(QLineF(xleft, y,xleft, y-ch/2));
-        painter->drawLine(QLineF(xleft, y-ch/4, xright, y-ch/4));
-        painter->drawLine(QLineF(xleft, y-ch/4, xleft+ch/2, y- ch*0.10));
-        painter->drawLine(QLineF(xleft, y-ch/4, xleft+ch/2, y- ch*0.40));
-        painter->drawLine(QLineF(xright, y, xright, y+ch/2));
-        painter->drawLine(QLineF(xleft,  y+ch/4, xright, y+ch/4));
-        painter->drawLine(QLineF(xright, y+ch/4, xright-ch/2, y+ch*0.10));
-        painter->drawLine(QLineF(xright, y+ch/4, xright-ch/2, y+ch*0.40));
+        painter->drawLine(QLineF(xleft, y, xleft, y-ch/2));
+        QPainterPath pathLeft;
+
+        {
+            QPainterPath path;
+            path.moveTo(xright, y-ch/4);
+            path.lineTo(xleft+ch/3, y-ch/4);
+            path.lineTo(xleft+ch/3, y-ch*0.15-ch/4);
+            path.lineTo(xleft, y-ch/4);
+            path.lineTo(xleft+ch/3, y+ch*0.15-ch/4);
+            path.lineTo(xleft+ch/3, y-ch/4);
+            painter->drawPath(path);
+        }
+
+        {
+            painter->drawLine(QLineF(xright+2, y, xright+2, y+ch/2));
+            QPainterPath path;
+            path.moveTo(xleft, y+ch/4);
+            path.lineTo(xright-ch/3, y+ch/4);
+            path.lineTo(xright-ch/3, y+ch*0.15+ch/4);
+            path.lineTo(xright, y+ch/4);
+            path.lineTo(xright-ch/3, y-ch*0.15+ch/4);
+            path.lineTo(xright-ch/3, y+ch/4);
+            painter->drawPath(path);
+        }
+
+
 	  } break;
 	  
 	  case Space : ; break; // nothing on space key
