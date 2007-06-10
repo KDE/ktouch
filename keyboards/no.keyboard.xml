@@ -69,7 +69,7 @@
    <Char Unicode="54" Position="BottomLeft" >6</Char>
   </Key>
   <Key Width="80" X="700" Y="0" Height="80" FingerKeyIndex="4" Type="NORMAL" >
-   <Char Unicode="55" Position="TopLeft" >7</Char>
+   <Char Unicode="47" Position="TopLeft" >/</Char>
    <Char Unicode="55" Position="BottomLeft" >7</Char>
    <Char Unicode="123" Position="BottomRight" >{</Char>
   </Key>
@@ -89,10 +89,13 @@
    <Char Unicode="125" Position="BottomRight" >}</Char>
   </Key>
   <Key Width="80" X="1100" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="43" Position="TopLeft" >+</Char>
+   <Char Unicode="63" Position="TopLeft" >?</Char>
+   <Char Unicode="43" Position="BottomLeft" >+</Char>
   </Key>
   <Key Width="80" X="1200" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="92" Position="TopLeft" >\</Char>
+   <Char Unicode="96" Position="TopLeft" >`</Char>
+   <Char Unicode="92" Position="BottomLeft" >\</Char>
+   <Char Unicode="180" Position="BottomRight" >´</Char>
   </Key>
   <Key Width="80" X="150" Y="100" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="81" Position="TopLeft" >Q</Char>
