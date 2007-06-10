@@ -20,7 +20,7 @@
 static const char description[] =
     I18N_NOOP("A program that helps you to learn and practice touch typing");
 
-static const char version[] = "1.7.0";
+static const char version[] = "1.7.1";
 
 static KCmdLineOptions options[] = {
     { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
