@@ -6,6 +6,8 @@
 
 install( FILES 
   de.keyboard.xml
+  en.keyboard.xml
+  no.keyboard.xml
   be.keyboard
   bg.keyboard
   cz.keyboard

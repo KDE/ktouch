@@ -1,5 +1,5 @@
 <KTouchKeyboard>
- <Title>no.keyboard</Title>
+ <Title>Norwegian</Title>
  <Language>no</Language>
  <Keys>
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
@@ -185,6 +185,7 @@
   </Key>
  </Keys>
  <Connections>
+  <KeyConnector KeyUnicode="-1" />
   <KeyConnector KeyUnicode="8" TargetKeyIndex="17" />
   <KeyConnector KeyUnicode="13" TargetKeyIndex="18" />
   <KeyConnector KeyUnicode="32" TargetKeyIndex="14" />
@@ -305,7 +306,6 @@
   <KeyConnector KeyUnicode="223" TargetKeyIndex="1" ModifierIndex="10" />
   <KeyConnector KeyUnicode="229" TargetKeyIndex="42" />
   <KeyConnector KeyUnicode="230" TargetKeyIndex="46" />
-  <KeyConnector KeyUnicode="-1" />
   <KeyConnector KeyUnicode="240" TargetKeyIndex="2" ModifierIndex="10" />
   <KeyConnector KeyUnicode="248" TargetKeyIndex="7" />
   <KeyConnector KeyUnicode="254" TargetKeyIndex="36" ModifierIndex="10" />

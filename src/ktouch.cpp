@@ -450,12 +450,23 @@ void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level
 // ----------------------------------------------------------------------------
 
 void KTouch::changeKeyboard(int num) {
-    if (num >= m_keyboardFiles.count()) return;
-    Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
-	//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
-    m_keyboardLayoutAction->setCurrentItem(num);
-	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
-    m_keyboardWidget->applyPreferences(this, false);
+    if (num > m_keyboardFiles.count()) return;
+	if (num == m_keyboardFiles.count()) {
+		// TODO : open dialog with user provided keyboard files
+		return;
+	}
+	if (m_keyboardFiles[num] != Prefs::currentKeyboardFile()) {
+		KMessageBox::information(this, i18n("Note that in different countries touch typing is tought slightly different which "
+			"usually affects only the top row of keys. For instance, in the United States only the leftmost key and the key "
+			"with the 1 are pressed by the little finger of the left hand. In Germany the little "
+			"finger also presses the 2 key, and thus the fingers shift one key to the right on the top row.\n"
+			"Normally this only makes a difference for split or ergonomic keyboards."), QString(), "KeyboardLayoutChangeInfo");
+		Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
+		//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
+		m_keyboardLayoutAction->setCurrentItem(num);
+		// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
+		m_keyboardWidget->applyPreferences(this, false);
+	}
 }
 // ----------------------------------------------------------------------------
 
@@ -687,6 +698,7 @@ void KTouch::setupActions() {
     m_keyboardLayoutAction= actionCollection()->add<KSelectAction>( "keyboard_layouts" );
     m_keyboardLayoutAction->setText( i18n("&Keyboard Layouts") );
     m_keyboardLayoutAction->setMenuAccelsEnabled(false);
+	m_keyboardTitles << i18n("More keyboard layouts...");
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(triggered(int)), this, SLOT(changeKeyboard(int)));
 
@@ -774,37 +786,9 @@ void KTouch::updateFileLists() {
         kDebug() << m_keyboardTitles.back() << endl;
     }
 
-/*
-    for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
-        cit != m_keyboardFiles.constEnd(); ++cit)
-    {
-
-        // get the filename alone
-        QString fname = KUrl(*cit).fileName();
-        // get the filename without the .keyboard
-        fname.truncate(fname.length() - 9);
-        // get everything in front of the first .
-        QString lang_iso = fname.section('.',0,0);
-        // get language description of file names
-        QString lang_name = KGlobal::locale()->languageCodeToName(lang_iso);
-//        kDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
-        if (lang_name.isEmpty())
-            lang_name = KGlobal::locale()->countryCodeToName(lang_iso);
-        if (!lang_name.isEmpty())
-            lang_name += " (" + fname + ')';
-        else
-            lang_name = fname;
-        m_keyboardTitles.append( lang_name );
-//        kDebug() << m_keyboardTitles.back() << endl;
-    }
-*/
-
     // now sort the files and titles accordingly
     sort_lists(m_keyboardTitles, m_keyboardFiles);
     // and add the number keypad to the front
-//    m_keyboardFiles.push_front("number.keyboard");
-//    m_keyboardTitles.push_front(i18n("Keypad/Number block"));
-
 
     // Now lets find the lecture files.
 	// TODO : search in i18n() directories

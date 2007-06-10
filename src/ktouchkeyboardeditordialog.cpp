@@ -46,10 +46,10 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
     keyboardView->setBackgroundBrush(palette().brush(QPalette::Window));
     keyboardView->setFrameStyle(QFrame::NoFrame);
 
-	connectorList->setMaximumSize(200000, 70);
+//	connectorList->setMaximumSize(200000, 70);
 	connectorList->setColumnCount(2);
-	QHeaderView * hv = connectorList->horizontalHeader();
-	hv->setMaximumSize(20000, 20);
+//	QHeaderView * hv = connectorList->horizontalHeader();
+//	hv->setMaximumSize(20000, 20);
 
 	// setup the key edit fields
 	keyTypeCombo->clear();
@@ -276,9 +276,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 
 void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
 	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return;
-	if (QMessageBox::question(this, i18n("KTouch keyboard editor"), i18n("Delete all key connections for this key?"), 
-		KMessageBox::Yes | KMessageBox::No) == KMessageBox::Yes)
-	{
+	if (KMessageBox::questionYesNo(this, i18n("Delete all key connections for this key?"))== KMessageBox::Yes) {
 		QList<int> connectorsToRemove;
 		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin(); 
 			it != m_keyboard->m_connectors.end(); ++it) 
@@ -477,12 +475,12 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 			++r;
 		}
 		connectorList->setRowCount(r);
-		for (int i=0; i<r; ++i)
-			connectorList->setRowHeight(i, 20);
+//		for (int i=0; i<r; ++i)
+//			connectorList->setRowHeight(i, 20);
 		QStringList headers; headers << i18n("Character") << i18n("Modifier key");
 		connectorList->setHorizontalHeaderLabels(headers);
-		QHeaderView * hv = connectorList->horizontalHeader();
-		hv->setMaximumSize(20000, 20);
+//		QHeaderView * hv = connectorList->horizontalHeader();
+//		hv->setMaximumSize(20000, 20);
 
 		selectModifierKeyButton->setText( i18n("<modifier key>") );
 		m_currentModifierKey = NULL;
