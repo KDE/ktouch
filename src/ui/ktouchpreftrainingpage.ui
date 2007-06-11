@@ -5,29 +5,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>405</width>
-    <height>431</height>
+    <width>600</width>
+    <height>581</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Training Options</string>
   </property>
   <layout class="QVBoxLayout" >
-   <property name="spacing" >
-    <number>6</number>
-   </property>
-   <property name="leftMargin" >
-    <number>9</number>
-   </property>
-   <property name="topMargin" >
-    <number>9</number>
-   </property>
-   <property name="rightMargin" >
-    <number>9</number>
-   </property>
-   <property name="bottomMargin" >
-    <number>9</number>
-   </property>
    <item>
     <widget class="QGroupBox" name="kcfg_AutoLevelChange" >
      <property name="title" >
@@ -83,7 +68,11 @@
          </widget>
         </item>
         <item row="0" column="1" >
-         <widget class="KIntSpinBox" name="kcfg_DownSpeedLimit" />
+         <widget class="KIntSpinBox" name="kcfg_DownSpeedLimit" >
+          <property name="maximum" >
+           <number>1000</number>
+          </property>
+         </widget>
         </item>
         <item row="1" column="2" >
          <widget class="QLabel" name="l10" >
@@ -93,7 +82,11 @@
          </widget>
         </item>
         <item row="1" column="1" >
-         <widget class="KIntSpinBox" name="kcfg_DownCorrectLimit" />
+         <widget class="KIntSpinBox" name="kcfg_DownCorrectLimit" >
+          <property name="maximum" >
+           <number>100</number>
+          </property>
+         </widget>
         </item>
         <item row="0" column="0" >
          <widget class="QLabel" name="l7" >
@@ -139,6 +132,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="maximum" >
+           <number>1000</number>
+          </property>
          </widget>
         </item>
         <item row="0" column="0" >
@@ -155,6 +151,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="maximum" >
+           <number>100</number>
           </property>
          </widget>
         </item>
@@ -338,21 +337,16 @@
       <string/>
      </property>
      <layout class="QVBoxLayout" >
-      <property name="spacing" >
-       <number>6</number>
-      </property>
-      <property name="leftMargin" >
-       <number>9</number>
-      </property>
-      <property name="topMargin" >
-       <number>9</number>
-      </property>
-      <property name="rightMargin" >
-       <number>9</number>
-      </property>
-      <property name="bottomMargin" >
-       <number>9</number>
-      </property>
+      <item>
+       <widget class="QCheckBox" name="kcfg_PressEnterOnLineEnd" >
+        <property name="text" >
+         <string>&amp;Typewriter mode (user must confirm line with Enter)</string>
+        </property>
+        <property name="shortcut" >
+         <string>Alt+R</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QCheckBox" name="kcfg_RememberLevel" >
         <property name="text" >
@@ -373,8 +367,8 @@
      </property>
      <property name="sizeHint" >
       <size>
-       <width>20</width>
-       <height>40</height>
+       <width>582</width>
+       <height>71</height>
       </size>
      </property>
     </spacer>

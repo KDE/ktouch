@@ -125,6 +125,11 @@ void KTouchTrainer::keyPressed(QChar key) {
         /// \todo   Implement option whether subsequent mistyped keys should be remembered as missed
         ///         keys as well.
     updateWidgets(); // update all the other widgets (keyboard widget, status widget and statusbar)
+	// automatically press enter when option selected
+	if (m_studentText == m_teacherText) {
+		if (!Prefs::pressEnterOnLineEnd())
+			enterPressed();
+	}
 }
 // ----------------------------------------------------------------------------
 
