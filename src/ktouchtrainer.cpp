@@ -29,6 +29,7 @@
 #include "ktouchkeyboardwidget.h"
 #include "ktouchlecture.h"
 #include "ktouchdefaults.h"
+#include "ktouchlevelsummarydialog.h"
 #include "prefs.h"
 
 
@@ -50,7 +51,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-    player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
+    m_player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
 
     // reset statistics
     m_levelStats.clear();
@@ -83,7 +84,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
     if(Prefs::soundOnKeypress()){
-        player->play(m_typeWriterSound.url());
+        m_player->play(m_typeWriterSound.url());
     }
 	if (m_trainingPaused)  continueTraining();
     if (m_teacherText==m_studentText) {
@@ -135,7 +136,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 
 void KTouchTrainer::backspacePressed() {
     if(Prefs::soundOnKeypress()){
-        player->play(m_typeWriterSound.url());
+        m_player->play(m_typeWriterSound.url());
     }
 	if (m_trainingPaused)  continueTraining();
 	/// \todo Implement the "remove space character = remove word count" feature
@@ -165,7 +166,7 @@ void KTouchTrainer::backspacePressed() {
 
 void KTouchTrainer::enterPressed() {
     if(Prefs::soundOnKeypress()){
-        player->play(m_typeWriterSound.url());
+        m_player->play(m_typeWriterSound.url());
     }
 
     if (m_trainingPaused)
@@ -182,41 +183,69 @@ void KTouchTrainer::enterPressed() {
     m_levelStats.m_words += m_wordsInCurrentLine;
     m_sessionStats.m_words += m_wordsInCurrentLine;
 
-    if (Prefs::autoLevelChange()) {
-        // if level increase criterion was fulfilled, increase line counter
-        if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 && Prefs::upSpeedLimit() <= m_levelStats.charSpeed())
-        {
-            m_decLinesCount=0;
-            ++m_incLinesCount;
-        }
-        else  if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 || Prefs::downSpeedLimit() > m_levelStats.charSpeed())
-        {
-            m_incLinesCount=0;
-            ++m_decLinesCount;
-        };
+	bool increase_level = false;
+	bool decrease_level = false;
 
-        // Automatic level change after a number of lines can happen, if you fulfilled the
-        // requirements in the last 5 lines.
-        if (m_incLinesCount >= Prefs::numberOfLinesWorkload() && 
-            (!Prefs::completeWholeTrainingLevel()  || m_incLinesCount >= static_cast<int>(m_lecture->level(m_level).count())))
-        {
-            levelUp();
-            return;
-        }
+	// check if level increase criterion was fulfilled
+	if (Prefs::upCorrectLimit() <= m_levelStats.correctness()*100 && Prefs::upSpeedLimit() <= m_levelStats.charSpeed()) {
+		m_decLinesCount=0;
+		++m_incLinesCount;
+		increase_level = true;
+	}
+	// otherwise check if level decrease criterion was fulfilled
+	else if (Prefs::downCorrectLimit() > m_levelStats.correctness()*100 || Prefs::downSpeedLimit() > m_levelStats.charSpeed()) {
+		decrease_level = true;
+		m_incLinesCount=0;
+		++m_decLinesCount;
+	}
 
-        if (m_decLinesCount>=2 && m_level!=0) {
-            levelDown();
-            return;
-        };
-    };
-
-    // Check if we are in the last line
+	// Level completed? (are we in the last line of the level?)
     if (m_line+1 >= m_lecture->level(m_level).count()) {
+		// ok, lets do all the checks at the end of the level
+
+		// show the level summary dialog with the highscores
+//#define LEVELSUMMARYDIALOG_ENABLED
+#ifdef LEVELSUMMARYDIALOG_ENABLED
+		KTouchLevelSummaryDialog dlg(m_textLineWidget);
+		dlg.showInfo(increase_level, decrease_level, m_levelStats);
+#endif // LEVELSUMMARYDIALOG_ENABLED
+
+		if (Prefs::autoLevelChange()) {
+			if (increase_level) {
+				levelUp();
+				return;
+			}
+			else if (decrease_level) {
+            	levelDown();
+            	return;
+			}
+		}
+
+		// restart the level
         m_line=0;
     }
     else {
+		// we are still in the middle of the level
+		// let's check for mid-level advance/fall back
+    	if (Prefs::autoLevelChange() && !Prefs::completeWholeTrainingLevel()) {
+			// we are allowed to advance early, or go back to the last/lower level
+
+			// first check if we can advance
+			if (increase_level && m_incLinesCount >= Prefs::numberOfLinesWorkload()) {
+				levelUp();
+				return;
+			}
+			// now check if we need to go back to the last level
+        	if (decrease_level && m_decLinesCount >= Prefs::numberOfLinesWorkload() && m_level != 0) {
+            	levelDown();
+            	return;
+        	}
+		}
+
+		// no level change, simply go to next line
         ++m_line;
     }
+
     newLine();
 }
 
@@ -340,7 +369,7 @@ bool KTouchTrainer::studentLineCorrect() const {
 
 void KTouchTrainer::levelUp() {
     if(Prefs::soundOnLevel()){
-        player->play(m_levelUpSound.url());
+        m_player->play(m_levelUpSound.url());
     }
 
     if (m_level < m_lecture->levelCount() - 1) {
@@ -364,7 +393,7 @@ void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
         if(Prefs::soundOnLevel()){
-            player->play(m_levelDownSound.url());
+            m_player->play(m_levelDownSound.url());
         }
     }
     m_incLinesCount = 0;

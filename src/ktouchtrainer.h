@@ -164,7 +164,7 @@ class KTouchTrainer : public QObject {
 	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
-	Phonon::AudioPlayer *player;
+	Phonon::AudioPlayer	   *m_player;
 };
 
 #endif  // KTOUCHTRAINER_H

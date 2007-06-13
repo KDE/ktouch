@@ -599,7 +599,7 @@ void KTouchKey::mouseMoveEvent(QGraphicsSceneMouseEvent * event) {
 }
 // -----------------------------------------------------------------------------
 
-void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent * event) {
+void KTouchKey::mouseReleaseEvent(QGraphicsSceneMouseEvent *) {
 	setZValue(0);
 }
 // -----------------------------------------------------------------------------

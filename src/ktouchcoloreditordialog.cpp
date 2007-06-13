@@ -1,7 +1,7 @@
 /***************************************************************************
  *   ktouchcoloreditor.cpp                                                 *
  *   ---------------------                                                 *
- *   Copyright (C) 20064 by Andreas Nicolai                                *
+ *   Copyright (C) 2006 by Andreas Nicolai                                 *
  *   ghorwin@users.sourceforge.net                                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

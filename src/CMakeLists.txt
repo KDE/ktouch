@@ -9,6 +9,7 @@ kde4_add_ui_files(ktouch_UIS
    ui/ktouchopenrequestdialog.ui 
    ui/ktouchstatuswidget.ui
    ui/ktouchlectureeditordialog.ui 
+   ui/ktouchlevelsummarydialog.ui
    ui/ktouchstatisticsdialog.ui 
    ui/ktouchusersetupdialog.ui
    ui/ktouchkeyboardeditordialog.ui
@@ -33,6 +34,7 @@ set(ktouch_SRCS
    ktouchkey.cpp 
    ktouchlecture.cpp 
    ktouchleveldata.cpp 
+   ktouchlevelsummarydialog.cpp
    ktouchtextlinewidget.cpp 
    ktouchstatisticsdialog.cpp 
    ktouchstatisticsdata.cpp 
