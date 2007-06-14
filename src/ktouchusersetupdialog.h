@@ -16,7 +16,6 @@
 #include "ui_ktouchusersetupdialog.h"
 
 #include <QDialog>
-#include <QStringList>
 
 /// Implementation of the "Setup Users" dialog.
 class KTouchUserSetupDialog : public QDialog, public Ui_KTouchUserSetupDialog {

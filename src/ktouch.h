@@ -14,7 +14,6 @@
 #define KTOUCH_H
 
 #include <QColor>
-#include <QStringList>
 #include <QLabel>
 #include <QKeyEvent>
 #include <QResizeEvent>

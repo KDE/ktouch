@@ -14,7 +14,6 @@
 
 #include <QFile>
 #include <QTextStream>
-#include <QStringList>
 #include <QtXml/QDomDocument>
 
 #include <kdebug.h>

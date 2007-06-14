@@ -15,7 +15,6 @@
 
 #include <QLabel>
 
-#include <QStringList>
 
 #include <kpushbutton.h>
 #include <klineedit.h>

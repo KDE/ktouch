@@ -15,7 +15,6 @@
 // QT includes
 
 #include <QFile>
-#include <QStringList>
 #include <QTextStream>
 #include <QtXml/QDomNode>
 
