@@ -143,7 +143,7 @@ void KTouchTrainer::backspacePressed() {
 
     int len = m_studentText.length();
     if (len) {
-        if(Prefs::beepOnError){
+        if(Prefs::beepOnError()){
             if (m_teacherText.startsWith(m_studentText)) {
                 // we are removing a correctly typed char
                 QApplication::beep();
@@ -158,7 +158,7 @@ void KTouchTrainer::backspacePressed() {
             m_keyboardWidget->newKey(QChar(8));
     }
     else {
-        if(Prefs::beepOnError)
+        if(Prefs::beepOnError())
             QApplication::beep();
 	}
 }

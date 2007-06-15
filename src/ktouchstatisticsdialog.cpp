@@ -192,28 +192,28 @@ void KTouchStatisticsDialog::updateCurrentSessionTab() {
 	qCopy(m_currSessionStats.m_charStats.begin(), m_currSessionStats.m_charStats.end(), std::back_inserter(charList));
 	qSort(charList.begin(), charList.end(), higher_miss_hit_ratio);
 	
-	QList<KTouchCharStats>::const_iterator it=charList.begin();
+	QList<KTouchCharStats>::const_iterator it2=charList.begin();
     unsigned int i=0;
-    for (; i<8 && it!=charList.end(); ++i, ++it) {
-        if (it->missHitRatio()==0)
+    for (; i<8 && it2!=charList.end(); ++i, ++it2) {
+        if (it2->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
-          case 0 :  charLabel1->setText( QString(it->m_char) ); charProgress1->setEnabled(true);
-                    charProgress1->setValue( it->missHitRatio() ); break;
-          case 1 :  charLabel2->setText( QString(it->m_char) ); charProgress2->setEnabled(true);
-                    charProgress2->setValue( it->missHitRatio() ); break;
-          case 2 :  charLabel3->setText( QString(it->m_char) ); charProgress3->setEnabled(true);
-                    charProgress3->setValue( it->missHitRatio() ); break;
-          case 3 :  charLabel4->setText( QString(it->m_char) ); charProgress4->setEnabled(true);
-                    charProgress4->setValue( it->missHitRatio() ); break;
-          case 4 :  charLabel5->setText( QString(it->m_char) ); charProgress5->setEnabled(true);
-                    charProgress5->setValue( it->missHitRatio() ); break;
-          case 5 :  charLabel6->setText( QString(it->m_char) ); charProgress6->setEnabled(true);
-                    charProgress6->setValue( it->missHitRatio() ); break;
-          case 6 :  charLabel7->setText( QString(it->m_char) ); charProgress7->setEnabled(true);
-                    charProgress7->setValue( it->missHitRatio() ); break;
-          case 7 :  charLabel8->setText( QString(it->m_char) ); charProgress8->setEnabled(true);
-                    charProgress8->setValue( it->missHitRatio() ); break;
+          case 0 :  charLabel1->setText( QString(it2->m_char) ); charProgress1->setEnabled(true);
+                    charProgress1->setValue( it2->missHitRatio() ); break;
+          case 1 :  charLabel2->setText( QString(it2->m_char) ); charProgress2->setEnabled(true);
+                    charProgress2->setValue( it2->missHitRatio() ); break;
+          case 2 :  charLabel3->setText( QString(it2->m_char) ); charProgress3->setEnabled(true);
+                    charProgress3->setValue( it2->missHitRatio() ); break;
+          case 3 :  charLabel4->setText( QString(it2->m_char) ); charProgress4->setEnabled(true);
+                    charProgress4->setValue( it2->missHitRatio() ); break;
+          case 4 :  charLabel5->setText( QString(it2->m_char) ); charProgress5->setEnabled(true);
+                    charProgress5->setValue( it2->missHitRatio() ); break;
+          case 5 :  charLabel6->setText( QString(it2->m_char) ); charProgress6->setEnabled(true);
+                    charProgress6->setValue( it2->missHitRatio() ); break;
+          case 6 :  charLabel7->setText( QString(it2->m_char) ); charProgress7->setEnabled(true);
+                    charProgress7->setValue( it2->missHitRatio() ); break;
+          case 7 :  charLabel8->setText( QString(it2->m_char) ); charProgress8->setEnabled(true);
+                    charProgress8->setValue( it2->missHitRatio() ); break;
         }
     }
 	// set remaining char labels and progress bars to zero
