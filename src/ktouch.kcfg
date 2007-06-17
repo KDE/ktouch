@@ -105,7 +105,7 @@
   <group name="Training" >
     <entry type="Bool" name="PressEnterOnLineEnd" >
       <label>Requires user to press enter after the line is complete.</label>
-      <default>false</default>
+      <default>true</default>
     </entry>
     <entry type="Bool" name="AutoLevelChange" >
       <label >Allow automatic level adjustments</label>
