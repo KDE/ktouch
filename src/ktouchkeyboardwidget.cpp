@@ -141,6 +141,13 @@ void KTouchKeyboardWidget::setKnownChars(const QSet<QChar>& knownChars) {
 	QList<KTouchKey*>::iterator it;
 	for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
 		KTouchKey * key = *it;
+		// don't disable control keys, except for the shift keys!
+		if (key->m_type != KTouchKey::Normal &&
+			key->m_type != KTouchKey::Finger &&
+			key->m_type != KTouchKey::Shift) 
+		{
+			continue;
+		}
 		key->m_state = KTouchKey::DisabledState;
 	}
 	// now loop over all characters in the set, look up the corresponding key connector and

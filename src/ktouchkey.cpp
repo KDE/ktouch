@@ -190,6 +190,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	// first draw the background
 	switch (m_state) {
 	  case NormalState :
+	  case DisabledState :
 	  {
 	  
 		switch (m_type) {
@@ -244,7 +245,17 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 				painter->drawRect(0, 0, m_w, m_h);
 			}
 		} // switch 
-		
+
+		if (m_state == DisabledState) {
+			// overlay the key with a semitransparent, grey color to indicate that they have to be learned yet
+			painter->setBrush( QBrush( QColor(40,40,40,196)) );
+			QPen p(colorScheme.m_frame);
+			p.setWidth(0); // only one pixel!
+			p.setStyle( Qt::NoPen );
+			painter->setPen( p );
+			painter->drawRect(0, 0, m_w+1, m_h+1);
+		}
+
 	  } break; // NormalState
 
 	  case HighlightedState :
@@ -310,33 +321,6 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			painter->setPen( p );
 			painter->drawRect(0, 0, m_w, m_h);
 	  } break; // FingerKeyState
-
-	  case DisabledState :
-	  {
-		// we draw the keys grey to indicate that they are not learned yet
-		QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
-		//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex << endl;
-		QColor c(40,40,40);
-		grad.setColorAt(0,c);
-		qreal h, s, v, a;
-		c.getHsvF(&h, &s, &v, &a);
-		c.setHsvF(h, s, v*0.8, a);
-		grad.setColorAt(1,c);
-		painter->setBrush( QBrush(grad) );
-		QPen p(colorScheme.m_frame);
-		p.setWidth(0); // only one pixel!
-		painter->setPen( p );
-		painter->drawRect(0, 0, m_w, m_h);
-		if (m_type == Finger) {
-			// Finger keys get a special decoration
-			QRadialGradient radgrad(QPointF(m_w/2, m_h/2), qMin(m_w, m_h)*0.48, QPointF(m_w/2*0.9, m_h/2*0.9) );
-			radgrad.setColorAt(0, c);
-			radgrad.setColorAt(0.9, QColor(255,255,255,196));
-			radgrad.setColorAt(1, QColor(0,0,0,48));
-			painter->setBrush( QBrush(radgrad) );
-			painter->drawRect(0, 0, m_w, m_h);
-		}
-      }
 
 	}
 
