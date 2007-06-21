@@ -73,6 +73,12 @@ class KTouch : public KXmlGuiWindow {
 	void changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 							  unsigned int session_correct, unsigned int session_total, unsigned int session_words);
 
+	///< Returns list of user names.
+    const QStringList& userList() const { return m_userList; }
+	///< A map with statistics for each user.
+	const QMap<QString, KTouchStatisticsData>& userStats() const { return m_userStats; }
+
+
   public slots:
     /// Will be called when the "Apply"-button has been pressed in the preferences
     /// dialog or when the user accepted the changes using the "OK"-button.

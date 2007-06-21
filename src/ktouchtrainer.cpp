@@ -77,6 +77,8 @@ void KTouchTrainer::gotoFirstLine() {
     m_statusWidget->setNewChars( m_lecture->level(m_level).newChars() );
     m_line=0;
     newLine();
+	// finally tell the keyboard widget, that we have a new set of new chars
+	m_keyboardWidget->setKnownChars( m_lecture->knownCharsInLevel(m_level) );
 }
 // ----------------------------------------------------------------------------
 

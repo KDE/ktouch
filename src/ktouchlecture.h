@@ -18,6 +18,7 @@ class QDomDocument;
 
 #include <QList>
 #include <QTextStream>
+#include <QSet>
 
 class KUrl;
 
@@ -57,8 +58,11 @@ class KTouchLecture {
     void setTitle(const QString& title) { m_title = title; }
     /// Sets the level data
     void setLevel(unsigned int level_num, const KTouchLevelData& level);
+	/// Returns a set with all characters that are already known in the current lecture.
+	QSet<QChar> knownCharsInLevel(unsigned int level_num) const;
 
 	QString		m_fontSuggestions;  ///< Font suggestions for this lecture.
+
 
   private:
     /// Loads a lecture from file

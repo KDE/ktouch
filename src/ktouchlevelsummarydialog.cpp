@@ -13,6 +13,13 @@
 #include "ktouchlevelsummarydialog.h"
 #include "ktouchlevelsummarydialog.moc"
 
+#include <QtGui>
+
+#include <kdebug.h>
+
+#include "prefs.h"
+#include "ktouch.h"
+
 KTouchLevelSummaryDialog::KTouchLevelSummaryDialog(QWidget* parent) : QDialog(parent) {
 	setupUi(this);
 }
@@ -32,5 +39,30 @@ void KTouchLevelSummaryDialog::showInfo(bool & increaseLevel, bool & decreaseLev
 	// setup the dialog according to the arguments
 	if (increaseLevel) {
 	}
+
+    const QStringList& userList = KTouchPtr->userList();
+	const QMap<QString, KTouchStatisticsData>& allUserStats = KTouchPtr->userStats();
+
+	// get the statistics data for this lecture and the current user
+	QString currentUser = Prefs::currentUserName();
+	QString currentFile = Prefs::currentLectureFile();
+
+	// get the statistics data for the current user
+	const KTouchStatisticsData& currentUserStats = allUserStats[currentUser];
+	// extract the data for the current lecture
+	const KTouchLectureStats& currentLectureStats = currentUserStats.m_lectureStats[currentFile];
+
+	kDebug() << "Level done" << currentUser << endl;
+	kDebug() << currentLectureStats.m_levelStats.count() << " Level stats available" << endl;
+
+	// get all stats for this lesson and put them in the table
+	for (int i=0; i<currentLectureStats.m_levelStats.count(); ++i) {
+		// skip all that are not this level
+		if (currentLectureStats.m_levelStats[i].m_levelNum != levelStats.m_levelNum) continue;
+		
+
+	}
+
+	exec();
 }
 

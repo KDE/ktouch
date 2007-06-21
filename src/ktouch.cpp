@@ -698,7 +698,10 @@ void KTouch::setupActions() {
     m_keyboardLayoutAction= actionCollection()->add<KSelectAction>( "keyboard_layouts" );
     m_keyboardLayoutAction->setText( i18n("&Keyboard Layouts") );
     m_keyboardLayoutAction->setMenuAccelsEnabled(false);
-	m_keyboardTitles << i18n("More keyboard layouts...");
+//  TODO : add this back in when we have the KNewStuff feature implemented, were users
+//         can anonymously upload their keyboards and lectures which will then be offered in
+//         the diaolg that pops up for the "More keyboard layouts..." menu entry
+//	m_keyboardTitles << i18n("More keyboard layouts...");
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, SIGNAL(triggered(int)), this, SLOT(changeKeyboard(int)));
 

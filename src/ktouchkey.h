@@ -63,7 +63,8 @@ public:
 		NormalState,			// normal key appearance on the keyboard
 		HighlightedState,		// when indicating the next target key
 		FingerKeyState,			// when indicating the origin key of the finger to be used
-		ModifierState			// when indicating a certain modifier key
+		ModifierState,			// when indicating a certain modifier key
+		DisabledState			// when indicating that the key is yet unknown to the user
 	};
 
 	/// Default constructor.

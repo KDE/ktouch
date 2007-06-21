@@ -19,6 +19,7 @@
 #include <QList>
 #include <QVector>
 #include <QMap>
+#include <QSet>
 
 class KUrl;
 class KTouchKeyboard;
@@ -50,6 +51,9 @@ class KTouchKeyboardWidget : public QGraphicsView {
     /// This means that the layout is basically recreated and if the layout type/language
     /// changed it will be reloaded.
     void applyPreferences(QWidget * window, bool silent);
+	/// This sets the string with currently known characters and sets the keys that do not
+	/// contain a character of this list to inactive.
+	void setKnownChars(const QSet<QChar>& knownChars);
 
   public slots:
     /// This function displays the next key (or key combination) the user has to press.
@@ -71,6 +75,7 @@ class KTouchKeyboardWidget : public QGraphicsView {
 
     QString						m_currentLayout;    ///< The name of the currently used layout.
     QChar						m_nextKey;          ///< The next to be pressed character.
+	QSet<QChar>					m_knownChars;		///< String with already known characters in this lecture and level.
 
     QGraphicsScene*				m_scene;			///< The graphics scene 
 };

@@ -120,6 +120,23 @@ void KTouchLecture::setLevel(unsigned int level_num, const KTouchLevelData& leve
 }
 // ----------------------------------------------------------------------------
 
+QSet<QChar> KTouchLecture::knownCharsInLevel(unsigned int level_num) const {
+	// loop over all levels so far and create a set with all characters known
+	QSet<QChar> knownChars;
+	for (unsigned int i=0; i<=level_num && i<static_cast<unsigned int>(m_lectureData.count()); ++i) {
+		const QString& s = m_lectureData[i].newChars();
+		for (int j=0; j<s.count(); ++j) {
+			knownChars.insert(s[j]);
+		}
+	}
+	QString chars;
+	foreach (QChar ch, knownChars)
+		chars.append(ch);
+	kDebug() << "Known chars: " << chars << endl;
+	return knownChars;
+}
+// ----------------------------------------------------------------------------
+
 bool KTouchLecture::readLecture(QTextStream& in) {
     //kDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
     QString line;

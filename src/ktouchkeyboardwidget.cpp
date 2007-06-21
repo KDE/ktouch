@@ -127,9 +127,49 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 		m_keyboard->setFont(Prefs::font());
 	}
 
+	setKnownChars(m_knownChars);	// enable/disable keys
     newKey(m_nextKey);  // and finally display the "next to be pressed" key again
 }
 // --------------------------------------------------------------------------
+
+void KTouchKeyboardWidget::setKnownChars(const QSet<QChar>& knownChars) {
+    if (!Prefs::showKeyboard()) return;
+	if (!Prefs::showLearnedKeysOnly()) return;
+	kDebug() << "KTouchKeyboardWidget::setKnownChars: " << m_nextKey << endl;
+	m_knownChars = knownChars;
+	// loop over all keys and set them to disabled at first
+	QList<KTouchKey*>::iterator it;
+	for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
+		KTouchKey * key = *it;
+		key->m_state = KTouchKey::DisabledState;
+	}
+	// now loop over all characters in the set, look up the corresponding key connector and
+	// re-enabled all active keys
+	for (QSet<QChar>::const_iterator char_it = knownChars.constBegin(); char_it != knownChars.constEnd(); ++char_it) {
+		KTouchKeyConnector & c = m_keyboard->m_connectors[(*char_it).unicode()];
+		KTouchKey * targetKey = c.m_targetKey;
+		KTouchKey * modifierKey = c.m_modifierKey;
+		if (targetKey != NULL) {
+			targetKey->m_state = KTouchKey::NormalState;
+			KTouchKey * fingerKey = targetKey->m_fingerKey;
+			if (fingerKey != NULL) {
+				fingerKey->m_state = KTouchKey::NormalState;
+			}
+		}
+		if (modifierKey != NULL) {
+			modifierKey->m_state = KTouchKey::NormalState;
+		}
+	}
+	// now update all characters and thus effectively redraw the keyboard
+	for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
+		KTouchKey * key = *it;
+		key->update();
+	}
+	// and show the new key again
+	newKey(m_nextKey);
+}
+// --------------------------------------------------------------------------
+
 
 void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
     if (!Prefs::showKeyboard()) return;

@@ -287,20 +287,47 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 		} // switch 
 		
 	  } break; // HighlightedState
+
 	  case FingerKeyState :
 	  {
 			QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
-			QColor c = colorScheme.m_backgroundH;
-			grad.setColorAt(0,c);
-			qreal h, s, v, a;
-			c.getHsvF(&h, &s, &v, &a);
-			c.setHsvF(h, s, v*0.8, a);
-			grad.setColorAt(1,c);
-			painter->setBrush( QBrush(grad) );
+			QColor c;
+			if (m_colorIndex<8) {
+				c = colorScheme.m_background[m_colorIndex];
+				grad.setColorAt(0,c);
+				qreal h, s, v, a;
+				c.getHsvF(&h, &s, &v, &a);
+				c.setHsvF(h, s, v*0.8, a);
+				grad.setColorAt(1,c);
+				painter->setBrush( QBrush(grad) );
+			}
+			else {
+				c = widget->palette().color(QPalette::Background);
+				painter->setBrush( c );
+			}
 			QPen p(colorScheme.m_frame);
 			p.setWidth(0); // only one pixel!
 			painter->setPen( p );
 			painter->drawRect(0, 0, m_w, m_h);
+	  } break; // FingerKeyState
+
+	  case DisabledState :
+	  {
+		// we draw the keys grey to indicate that they are not learned yet
+		QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
+		//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex << endl;
+		QColor c(40,40,40);
+		grad.setColorAt(0,c);
+		qreal h, s, v, a;
+		c.getHsvF(&h, &s, &v, &a);
+		c.setHsvF(h, s, v*0.8, a);
+		grad.setColorAt(1,c);
+		painter->setBrush( QBrush(grad) );
+		QPen p(colorScheme.m_frame);
+		p.setWidth(0); // only one pixel!
+		painter->setPen( p );
+		painter->drawRect(0, 0, m_w, m_h);
+		if (m_type == Finger) {
 			// Finger keys get a special decoration
 			QRadialGradient radgrad(QPointF(m_w/2, m_h/2), qMin(m_w, m_h)*0.48, QPointF(m_w/2*0.9, m_h/2*0.9) );
 			radgrad.setColorAt(0, c);
@@ -308,8 +335,8 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			radgrad.setColorAt(1, QColor(0,0,0,48));
 			painter->setBrush( QBrush(radgrad) );
 			painter->drawRect(0, 0, m_w, m_h);
-
-	  } break; // FingerKeyState
+		}
+      }
 
 	}
 
