@@ -6,14 +6,14 @@
     <x>0</x>
     <y>0</y>
     <width>396</width>
-    <height>217</height>
+    <height>298</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Keyboard Settings</string>
   </property>
-  <layout class="QGridLayout" >
-   <item row="0" column="0" >
+  <layout class="QVBoxLayout" >
+   <item>
     <widget class="QGroupBox" name="kcfg_ShowKeyboard" >
      <property name="title" >
       <string>Show keyboard</string>
@@ -21,8 +21,8 @@
      <property name="checkable" >
       <bool>true</bool>
      </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="0" >
+     <layout class="QVBoxLayout" >
+      <item>
        <widget class="QCheckBox" name="kcfg_ShowAnimation" >
         <property name="toolTip" >
          <string>Show on the keyboards the keys you have to type</string>
@@ -35,7 +35,14 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0" >
+      <item>
+       <widget class="QCheckBox" name="kcfg_ShowLearnedKeysOnly" >
+        <property name="text" >
+         <string>Hide/dim not yet learned keys </string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QGroupBox" name="kcfg_OverrideKeyboardFont" >
         <property name="toolTip" >
          <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
@@ -91,7 +98,7 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" >
+   <item>
     <spacer>
      <property name="orientation" >
       <enum>Qt::Vertical</enum>

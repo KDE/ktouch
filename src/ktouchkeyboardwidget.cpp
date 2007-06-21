@@ -134,7 +134,17 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 
 void KTouchKeyboardWidget::setKnownChars(const QSet<QChar>& knownChars) {
     if (!Prefs::showKeyboard()) return;
-	if (!Prefs::showLearnedKeysOnly()) return;
+	if (!Prefs::showLearnedKeysOnly()) {
+		// make sure all key states are set to normal and then show the next key again
+		QList<KTouchKey*>::iterator it;
+		for( it = m_keyboard->m_keys.begin(); it != m_keyboard->m_keys.end(); ++it ) {
+			KTouchKey * key = *it;
+			key->m_state = KTouchKey::NormalState;
+			key->update();
+		}
+		newKey(m_nextKey);
+		return;
+	}
 	kDebug() << "KTouchKeyboardWidget::setKnownChars: " << m_nextKey << endl;
 	m_knownChars = knownChars;
 	// loop over all keys and set them to disabled at first
