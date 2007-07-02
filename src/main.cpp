@@ -22,28 +22,26 @@ static const char description[] =
 
 static const char version[] = "1.7.1";
 
-static KCmdLineOptions options[] = {
-    { "+[URL]", I18N_NOOP( "Training file to open" ), 0 },
-    KCmdLineLastOption
-};
-
 int main(int argc, char **argv)
 {
-    KAboutData about("ktouch",
-                     I18N_NOOP("KTouch"),
+    KAboutData about("ktouch", 0,
+                     ki18n("KTouch"),
                      version,
-                     description,
+                     ki18n(description),
                      KAboutData::License_GPL,
-                     "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai",
-                     0,
+                     ki18n("Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"),
+                     KLocalizedString(),
                      "http://edu.kde.org/ktouch",
                      "submit@bugs.kde.org");
-    about.addAuthor( "Andreas Nicolai", I18N_NOOP("Current maintainer and programmer"), "Andreas.Nicolai@gmx.net" );
-    about.addAuthor( "Håvard Frøiland", I18N_NOOP("Original author, project admin"), "haavard@users.sourceforge.net" );
-    about.addCredit( "David Vignoni", I18N_NOOP("Creator of the SVG icon"), "david80v@tin.it");
-    about.addCredit( "Anne-Marie Mahfouf", I18N_NOOP("Lots of patches, fixes, updates"), "annma@kde.org");
-    about.addCredit( "All the creators of training and keyboard files", 0, 0);
+    about.addAuthor( ki18n("Andreas Nicolai"), ki18n("Current maintainer and programmer"), "Andreas.Nicolai@gmx.net" );
+    about.addAuthor( ki18n("Håvard Frøiland"), ki18n("Original author, project admin"), "haavard@users.sourceforge.net" );
+    about.addCredit( ki18n("David Vignoni"), ki18n("Creator of the SVG icon"), "david80v@tin.it");
+    about.addCredit( ki18n("Anne-Marie Mahfouf"), ki18n("Lots of patches, fixes, updates"), "annma@kde.org");
+    about.addCredit( ki18n("All the creators of training and keyboard files"));
     KCmdLineArgs::init(argc, argv, &about);
+
+    KCmdLineOptions options;
+    options.add("+[URL]", ki18n( "Training file to open" ));
     KCmdLineArgs::addCmdLineOptions( options );
     KApplication app;
     KTouch *mainWin = 0;
