@@ -47,7 +47,6 @@ set(ktouch_SRCS
 )
 
 # create moc files automatically, requires that moc files are included into the cpp files
-kde4_automoc( ${ktouch_UIS} ${ktouch_SRCS} )
 
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
