@@ -116,7 +116,7 @@
       <default>true</default>
     </entry>
     <entry type="Bool" name="DisableManualLevelChange" >
-      <label >Diable manual level adjustments when auto-level change is enabled</label>
+      <label >Disable manual level adjustments when auto-level change is enabled</label>
       <default>false</default>
     </entry>
     <entry type="Bool" name="RememberLevel" >
