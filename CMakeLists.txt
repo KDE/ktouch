@@ -12,4 +12,4 @@ add_subdirectory( graphics )
 add_subdirectory( icons ) 
 
 # files to install in the ktouch project root directory
-install( FILES ktouch.desktop  DESTINATION  ${XDG_APPS_DIR} )
+install( FILES ktouch.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
