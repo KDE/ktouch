@@ -51,7 +51,7 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url, QString& msg) {
     // File is only downloaded if not local, otherwise it's just opened
     QString target;
     bool result = false;
-    //kDebug() << "[KTouchKeyboard::load]  " << url << endl;
+    //kDebug() << "[KTouchKeyboard::load]  " << url;
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
         QFile infile(target);
@@ -112,7 +112,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!";
         return false;
     }
 
@@ -301,7 +301,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 			connectorElement = connectorElement.nextSiblingElement("KeyConnector");
 		}
 	}
-	kDebug() << "Read keyboard '"<< m_title << "' with " << m_keys.count() << " keys and " << m_connectors.count() << " characters" << endl; 
+	kDebug() << "Read keyboard '"<< m_title << "' with " << m_keys.count() << " keys and " << m_connectors.count() << " characters"; 
 
 	updateKeyPointers();
 
@@ -403,7 +403,7 @@ void KTouchKeyboard::updateKeyPointers() {
 	for (QList<KTouchKey*>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
 		if ((*it)->m_type == KTouchKey::Finger) {
 			if (fingerKeyIndex == 8) {
-				kDebug() << "Too many finger keys in keyboard!" << endl;
+				kDebug() << "Too many finger keys in keyboard!";
 				fingerKeyIndex = 7;
 			}
 			(*it)->m_colorIndex = fingerKeyIndex++;
@@ -415,7 +415,7 @@ void KTouchKeyboard::updateKeyPointers() {
 				(*it)->m_fingerKey = m_keys[(*it)->m_fingerKeyIndex];
 				// and the color index from the finger key
 				(*it)->m_colorIndex = (*it)->m_fingerKey->m_colorIndex;
-				//kDebug() << "Key " << (*it)->m_keyChar[0] << " has finger key " << (*it)->m_fingerKeyIndex << endl;
+				//kDebug() << "Key " << (*it)->m_keyChar[0] << " has finger key " << (*it)->m_fingerKeyIndex;
 			}
 			else {
 				(*it)->m_colorIndex = -1;
@@ -473,7 +473,7 @@ void KTouchKeyboard::deleteKey(KTouchKey * k) {
 			(*it).m_modifierKey = NULL;
 	}
 	for (int i=0; i<connectorsToRemove.count(); ++i) {
-		//kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
+		//kDebug() << "Removing connector for unicode " << connectorsToRemove[i];
 		m_connectors.remove(connectorsToRemove[i]);
 	}
 }

@@ -92,7 +92,7 @@ bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
 
 
 void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
-	//kDebug() << "Fontbutton clicked" << endl;
+	//kDebug() << "Fontbutton clicked";
     QFont f;
     if (KFontDialog::getFont(f)==QDialog::Accepted) {
 		m_keyboard->m_fontSuggestions = f.toString();
@@ -287,7 +287,7 @@ void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
 			}
 		}
 		for (int i=0; i<connectorsToRemove.count(); ++i) {
-			//kDebug() << "Removing connector for unicode " << connectorsToRemove[i] << endl;
+			//kDebug() << "Removing connector for unicode " << connectorsToRemove[i];
 			m_keyboard->m_connectors.remove(connectorsToRemove[i]);
 		}
 	}

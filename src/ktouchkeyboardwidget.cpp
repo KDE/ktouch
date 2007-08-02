@@ -91,7 +91,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
         // if the layout is the number layout just create it and we're done
-		//kDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
+		//kDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile();
         if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
             return;
@@ -145,7 +145,7 @@ void KTouchKeyboardWidget::setKnownChars(const QSet<QChar>& knownChars) {
 		newKey(m_nextKey);
 		return;
 	}
-	kDebug() << "KTouchKeyboardWidget::setKnownChars: " << m_nextKey << endl;
+	kDebug() << "KTouchKeyboardWidget::setKnownChars: " << m_nextKey;
 	m_knownChars = knownChars;
 	// loop over all keys and set them to disabled at first
 	QList<KTouchKey*>::iterator it;
@@ -326,7 +326,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             m_scene->addItem(key);
             m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
-// 			kDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
+// 			kDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII);
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
@@ -334,7 +334,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             m_scene->addItem(key);
             m_keyList.append( key );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
-// 			kDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText << endl;
+// 			kDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText;
         }
         else if (keyType=="NormalKey") {
             int fingerCharCode;
@@ -369,7 +369,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         }
 
         if (keys.find(keyAscII)!=keys.end()) {
-            kDebug() << "WARNING: Duplicate entry for char '"+keyText+"' with Unicode " << keyAscII << endl;
+            kDebug() << "WARNING: Duplicate entry for char '"+keyText+"' with Unicode " << keyAscII;
         }
         else
             keys.insert(keyAscII);

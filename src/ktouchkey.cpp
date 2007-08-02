@@ -123,7 +123,7 @@ bool KTouchKey::read(const QDomElement &e) {
 		m_fingerKeyIndex = -1;
 	
 	setPos(m_x, m_y);
-	//kDebug() << "Key = " << m_keyChar[TopLeft] << " " << m_x << " " << m_y << " " << m_w << " " << m_h << endl;
+	//kDebug() << "Key = " << m_keyChar[TopLeft] << " " << m_x << " " << m_y << " " << m_w << " " << m_h;
 	return true;
 }
 // ----------------------------------------------------------------------------
@@ -199,7 +199,7 @@ void KTouchKey::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 			{
 				//Q_ASSERT(m_colorIndex < 8);
 				QLinearGradient grad(QPointF(0,0), QPointF(0.3*m_h,1.3*m_h));
-				//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex << endl;
+				//kDebug() << m_keyChar[0] << "  m_colorIndex = " << m_colorIndex;
 				QColor c;
 				if (m_colorIndex<8) {
 					c = colorScheme.m_background[m_colorIndex];

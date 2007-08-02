@@ -104,13 +104,13 @@ bool KTouchLevelStats::read(const QDomNode &in) {
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
-		//kDebug() << "'" << char_data << "'" << endl;
+		//kDebug() << "'" << char_data << "'";
 		// FIXME : get rid of stringstream here
 		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
-		//kDebug() << m_charStats.size() << endl;
+		//kDebug() << m_charStats.size();
 	}
 	return true;
 }
@@ -257,13 +257,13 @@ bool KTouchSessionStats::read(const QDomNode &in) {
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
 		QString char_data = n.firstChild().nodeValue();
-		//kDebug() << "'" << char_data << "'" << endl;
+		//kDebug() << "'" << char_data << "'";
 		// FIXME: get rid of stringstream here
 		std::stringstream strm(std::string(char_data.toLocal8Bit()));
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
 			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
-		//kDebug() << m_charStats.size() << endl;
+		//kDebug() << m_charStats.size();
 	}
 
 	return true;
@@ -369,7 +369,7 @@ bool KTouchLectureStats::read(const QDomNode &in) {
 		// loop over all children and read levels
 		QDomNode levelNode = n.firstChild();
 		while (!levelNode.isNull()) {
-			//kDebug() << "[KTouchLectureStats::read]  Reading level stats" << endl;
+			//kDebug() << "[KTouchLectureStats::read]  Reading level stats";
 			KTouchLevelStats tmp;
 			if (tmp.read(levelNode))  m_levelStats.push_back(tmp);
 			levelNode = levelNode.nextSibling();
@@ -381,7 +381,7 @@ bool KTouchLectureStats::read(const QDomNode &in) {
 		// loop over all children and read sessions
 		QDomNode sessionNode = n.firstChild();
 		while (!sessionNode.isNull()) {
-			//kDebug() << "[KTouchLectureStats::read]  Reading session stats" << endl;
+			//kDebug() << "[KTouchLectureStats::read]  Reading session stats";
 			KTouchSessionStats tmp;
 			if (tmp.read(sessionNode))  m_sessionStats.push_back(tmp);
 			sessionNode = sessionNode.nextSibling();
@@ -558,8 +558,8 @@ bool KTouchStatisticsData::readStats(const QDomNode &in) {
 	if (m_userName.isEmpty())	m_userName = i18n("default user");
 	if (m_userName.isEmpty())	m_userName = "default user";
 
-//	kDebug() << "[KTouchStatisticsData::readStats]  reading user stats..." << endl;
-	kDebug() << "[KTouchStatisticsData::readStats]  User = '" << m_userName << "'" << endl;
+//	kDebug() << "[KTouchStatisticsData::readStats]  reading user stats...";
+	kDebug() << "[KTouchStatisticsData::readStats]  User = '" << m_userName << "'";
 
 	// retrieve the KTouchStatistics statistics
 	n = in.namedItem("LectureStats");
@@ -579,7 +579,7 @@ bool KTouchStatisticsData::readStats(const QDomNode &in) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsData::writeStats(QDomDocument& doc, QDomElement& root) const {
-	kDebug() << "[KTouchStatisticsData::writeStats]  user = '" << m_userName << "'" << endl;
+	kDebug() << "[KTouchStatisticsData::writeStats]  user = '" << m_userName << "'";
 
 	QDomElement user_data = doc.createElement( "KTouchStatistics" );
 	root.appendChild(user_data);

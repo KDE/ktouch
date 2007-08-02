@@ -80,7 +80,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
     QFile outfile(tmpFile);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kDebug() << "Error creating lecture file!" << endl;
+        // kDebug() << "Error creating lecture file!";
         return false;
     };
 
@@ -132,13 +132,13 @@ QSet<QChar> KTouchLecture::knownCharsInLevel(unsigned int level_num) const {
 	QString chars;
 	foreach (QChar ch, knownChars)
 		chars.append(ch);
-	kDebug() << "Known chars: " << chars << endl;
+	kDebug() << "Known chars: " << chars;
 	return knownChars;
 }
 // ----------------------------------------------------------------------------
 
 bool KTouchLecture::readLecture(QTextStream& in) {
-    //kDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!" << endl;
+    //kDebug() << "[KTouchLecture::loadLecture]  Reading lecture file '" << lectureURL.url() << "'!";
     QString line;
     // remove everything else
     m_lectureData.clear();
@@ -170,7 +170,7 @@ bool KTouchLecture::readLecture(QTextStream& in) {
     if (!current_level.isEmpty() && in_level)
         slist.append(current_level);
 
-    //kDebug() << "Levels read = " << slist.count() << endl;
+    //kDebug() << "Levels read = " << slist.count();
 
     // now read all the levels
     for (QStringList::Iterator it = slist.begin(); it!=slist.end(); ++it) {

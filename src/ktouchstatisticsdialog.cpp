@@ -114,11 +114,11 @@ void KTouchStatisticsDialog::lectureActivated(int index) {
 		return;
 	}
 	if (index >= static_cast<int>(m_allStats.m_lectureStats.count())) {
-		kDebug() << "Lecture index out of range: " << index << " >= " << m_allStats.m_lectureStats.count() << endl;
+		kDebug() << "Lecture index out of range: " << index << " >= " << m_allStats.m_lectureStats.count();
 		return;
 	}
 	m_lectureIndex = index;
-	//kDebug() << "Lecture stats changed: " << it.data().m_lectureTitle << endl;
+	//kDebug() << "Lecture stats changed: " << it.data().m_lectureTitle;
 	// update the tabs
 	updateChartTab();
 }
@@ -298,7 +298,7 @@ void KTouchStatisticsDialog::updateCurrentLevelTab() {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::updateChartTab() {
-//    kDebug() << "[KTouchStatisticsDialog::updateChartTab]" << endl;
+//    kDebug() << "[KTouchStatisticsDialog::updateChartTab]";
 
 	// remove all current chart objects
 	chartWidget->removeAllPlotObjects();

@@ -52,8 +52,8 @@ void KTouchLevelSummaryDialog::showInfo(bool & increaseLevel, bool & decreaseLev
 	// extract the data for the current lecture
 	const KTouchLectureStats& currentLectureStats = currentUserStats.m_lectureStats[currentFile];
 
-	kDebug() << "Level done" << currentUser << endl;
-	kDebug() << currentLectureStats.m_levelStats.count() << " Level stats available" << endl;
+	kDebug() << "Level done" << currentUser;
+	kDebug() << currentLectureStats.m_levelStats.count() << " Level stats available";
 
 	// get all stats for this lesson and put them in the table
 	for (int i=0; i<currentLectureStats.m_levelStats.count(); ++i) {

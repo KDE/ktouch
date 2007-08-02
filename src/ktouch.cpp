@@ -106,7 +106,7 @@ KTouch::KTouch() :
 		updateFontFromLecture();
 		// adjust check marks in quick-select menus
 		updateLectureActionCheck();
-		//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile() << endl;
+		//kDebug() << "[KTouch::KTouch]  lecture file = " << Prefs::currentLectureFile();
 	}
 
     statusBarLevel = new QLabel(this);
@@ -139,10 +139,10 @@ KTouch::~KTouch() {
 // ----------------------------------------------------------------------------
 
 KTouchLectureStats& KTouch::getCurrentLectureStats() {
-//	kDebug() << "[KTouch::getCurrentLectureStats]  " << endl;
+//	kDebug() << "[KTouch::getCurrentLectureStats]  ";
 	KUrl lectureURL = Prefs::currentLectureFile();
 	if (lectureURL.url().isEmpty())  lectureURL = "default";
-//	kDebug() << "  lectureURL = '" << lectureURL << "'" << endl;
+//	kDebug() << "  lectureURL = '" << lectureURL << "'";
 	KTouchLectureStats& stat = m_userStats[Prefs::currentUserName()].m_lectureStats[lectureURL];
 	// add additional info to the statistics
 	stat.m_lectureURL = lectureURL;
@@ -462,7 +462,7 @@ void KTouch::changeKeyboard(int num) {
 			"finger also presses the 2 key, and thus the fingers shift one key to the right on the top row.\n"
 			"Normally this only makes a difference for split or ergonomic keyboards."), QString(), "KeyboardLayoutChangeInfo");
 		Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
-		//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
+		//kDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile();
 		m_keyboardLayoutAction->setCurrentItem(num);
 		// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
 		m_keyboardWidget->applyPreferences(this, false);
@@ -551,11 +551,11 @@ void KTouch::resizeEvent(QResizeEvent * event) {
 
 // Initialises the program during a normal startup
 void KTouch::init() {
-	//kDebug() << "[KTouch::init]  populating file lists..." << endl;
+	//kDebug() << "[KTouch::init]  populating file lists...";
     updateFileLists();  // create lists with default lecture/keyboard/examination files/colour scheme files
-	//kDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available" << endl;
-	//kDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
-	//kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
+	//kDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available";
+	//kDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available";
+	//kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available";
 
 	if (Prefs::currentLectureFile() == "default") {
 		Prefs::setCurrentLectureFile(QString());
@@ -600,7 +600,7 @@ void KTouch::init() {
 
 // Creates the layout and GUI setup for a practice session
 void KTouch::initTrainingSession() {
-	//kDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session..." << endl;
+	//kDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session...";
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of QSizePolicy)
@@ -757,7 +757,7 @@ void KTouch::updateFileLists() {
 	// extract titles from keyboard files and store them in the
 	// m_keyboardTitles string list
     m_keyboardTitles.clear();
-	kDebug() << "Keyboard files in XML format:" << endl;
+	kDebug() << "Keyboard files in XML format:";
     for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
         cit != m_keyboardFiles.constEnd(); ++cit)
     {
@@ -786,7 +786,7 @@ void KTouch::updateFileLists() {
 		if (!langid.isEmpty())
 			title = QString("%1 (%2)").arg(title).arg(langid);
         m_keyboardTitles.append( title );
-        kDebug() << "  " << m_keyboardTitles.back() << "\t [" << url << "]" << endl;
+        kDebug() << "  " << m_keyboardTitles.back() << "\t [" << url << "]";
     }
 
     // now sort the files and titles accordingly
@@ -862,7 +862,7 @@ void KTouch::updateCurrentUserActionCheck() {
 	if (index == -1) {
 		// we must be missing the default user in the list,
 		// this shouldn't happen, though...
-		kDebug() << "Missing default user in list. Adding default user to list." << endl;
+		kDebug() << "Missing default user in list. Adding default user to list.";
 		user_list.append(i18n("Default User"));
 		index = user_list.count() -1;
 	}

@@ -203,7 +203,7 @@ bool KTouchColorScheme::writeList(QWidget * window, const KUrl& url) {
     QFile outfile(tmp_file);
     if ( !outfile.open( QIODevice::WriteOnly ) ) {
         if (temp)  delete temp;
-        // kDebug() << "Error creating tmp file '"+tmp_file+"' for writing color map!" << endl;
+        // kDebug() << "Error creating tmp file '"+tmp_file+"' for writing color map!";
         return false;
     }
 	
