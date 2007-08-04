@@ -342,18 +342,12 @@
         <property name="text" >
          <string>&amp;Typewriter mode (user must confirm line with Enter)</string>
         </property>
-        <property name="shortcut" >
-         <string>Alt+R</string>
-        </property>
        </widget>
       </item>
       <item>
        <widget class="QCheckBox" name="kcfg_RememberLevel" >
         <property name="text" >
          <string>&amp;Remember level for next program start</string>
-        </property>
-        <property name="shortcut" >
-         <string>Alt+R</string>
         </property>
        </widget>
       </item>

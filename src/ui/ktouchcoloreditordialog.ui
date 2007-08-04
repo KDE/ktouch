@@ -126,9 +126,6 @@
           <property name="text" >
            <string>&amp;Store Data</string>
           </property>
-          <property name="shortcut" >
-           <string>Alt+S</string>
-          </property>
          </widget>
         </item>
        </layout>
