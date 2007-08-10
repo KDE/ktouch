@@ -51,7 +51,8 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-    m_player = new Phonon::AudioPlayer( Phonon::GameCategory, this );
+    m_player = Phonon::createPlayer( Phonon::GameCategory );
+    m_player->setParent(this);
 
     // reset statistics
     m_levelStats.clear();
@@ -86,7 +87,8 @@ void KTouchTrainer::keyPressed(QChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
     if(Prefs::soundOnKeypress()){
-        m_player->play(m_typeWriterSound.url());
+        m_player->setCurrentSource(m_typeWriterSound.url());
+        m_player->play();
     }
 	if (m_trainingPaused)  continueTraining();
     if (m_teacherText==m_studentText) {
@@ -138,7 +140,8 @@ void KTouchTrainer::keyPressed(QChar key) {
 
 void KTouchTrainer::backspacePressed() {
     if(Prefs::soundOnKeypress()){
-        m_player->play(m_typeWriterSound.url());
+        m_player->setCurrentSource(m_typeWriterSound.url());
+        m_player->play();
     }
 	if (m_trainingPaused)  continueTraining();
 	/// \todo Implement the "remove space character = remove word count" feature
@@ -168,7 +171,8 @@ void KTouchTrainer::backspacePressed() {
 
 void KTouchTrainer::enterPressed() {
     if(Prefs::soundOnKeypress()){
-        m_player->play(m_typeWriterSound.url());
+        m_player->setCurrentSource(m_typeWriterSound.url());
+        m_player->play();
     }
 
     if (m_trainingPaused)
@@ -371,7 +375,8 @@ bool KTouchTrainer::studentLineCorrect() const {
 
 void KTouchTrainer::levelUp() {
     if(Prefs::soundOnLevel()){
-        m_player->play(m_levelUpSound.url());
+        m_player->setCurrentSource(m_levelUpSound.url());
+        m_player->play();
     }
 
     if (m_level < m_lecture->levelCount() - 1) {
@@ -395,7 +400,8 @@ void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
         if(Prefs::soundOnLevel()){
-            m_player->play(m_levelDownSound.url());
+            m_player->setCurrentSource(m_levelDownSound.url());
+            m_player->play();
         }
     }
     m_incLinesCount = 0;

@@ -14,7 +14,7 @@
 #define KTOUCHTRAINER_H
 
 #include <QObject>
-#include <phonon/audioplayer.h>
+#include <Phonon/MediaObject>
 
 #include "ktouchstatisticsdata.h"
 
@@ -24,11 +24,6 @@ class KTouchStatusWidget;
 class KTouchTextLineWidget;
 class KTouchKeyboardWidget;
 class KTouchLecture;
-
-namespace Phonon
-{
-      class AudioPlayer;
-}
 
 /// This is the master trainer object and does all the heavy work.
 /// 
@@ -164,7 +159,7 @@ class KTouchTrainer : public QObject {
 	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
-	Phonon::AudioPlayer	   *m_player;
+	Phonon::MediaObject	   *m_player;
 };
 
 #endif  // KTOUCHTRAINER_H
