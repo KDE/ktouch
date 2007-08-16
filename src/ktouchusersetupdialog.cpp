@@ -64,7 +64,7 @@ void KTouchUserSetupDialog::addBtnClicked() {
 						this, /*QWidget *   parent = 0, */
 						0, /*const char *   name = 0, */
 						0, /*QValidator *   validator = 0, */
-						QString::null /*const QString &   mask = QString::null*/
+						QString::null /*const QString &   mask = QString::null*/	//krazy:exclude=nullstrassign for old broken gcc
 					);
 	if (ok_pressed) {
 		QList<QListWidgetItem *> itemlist = userListWidget->findItems(new_name, Qt::MatchExactly);
