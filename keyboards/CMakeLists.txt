@@ -30,7 +30,7 @@ install( FILES
   fi.keyboard
   fr_a.keyboard
   fr_ch.keyboard
-  fr.keyboard
+  fr.keyboard.xml
   he.keyboard
   hu.keyboard
   it.keyboard

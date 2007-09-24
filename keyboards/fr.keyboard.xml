@@ -5,7 +5,7 @@
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
    <Char Unicode="81" Position="TopLeft" >Q</Char>
   </Key>
-  <Key Width="80" X="280" Y="200" Height="80" Type="FINGER" >
+  <Key Width="80" X="290" Y="200" Height="80" Type="FINGER" >
    <Char Unicode="83" Position="TopLeft" >S</Char>
   </Key>
   <Key Width="80" X="380" Y="200" Height="80" Type="FINGER" >
@@ -154,7 +154,7 @@
   <Key Width="80" X="1130" Y="300" Height="80" FingerKeyIndex="7" Type="NORMAL" >
    <Char Unicode="33" Position="TopLeft" >!</Char>
   </Key>
-  <Key Width="80" X="250" Y="100" Height="80" Type="NORMAL" >
+  <Key Width="80" X="250" Y="100" Height="80" FingerKeyIndex="1" Type="NORMAL" >
    <Char Unicode="90" Position="TopLeft" >Z</Char>
   </Key>
  </Keys>
