@@ -1,5 +1,5 @@
 <KTouchKeyboard>
- <Title>fr.keyboard</Title>
+ <Title>French</Title>
  <Language>fr</Language>
  <Keys>
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
@@ -159,6 +159,7 @@
   </Key>
  </Keys>
  <Connections>
+  <KeyConnector KeyUnicode="-1" />
   <KeyConnector KeyUnicode="8" TargetKeyIndex="18" />
   <KeyConnector KeyUnicode="13" TargetKeyIndex="9" />
   <KeyConnector KeyUnicode="32" TargetKeyIndex="15" />
@@ -249,7 +250,6 @@
   <KeyConnector KeyUnicode="119" TargetKeyIndex="48" />
   <KeyConnector KeyUnicode="120" TargetKeyIndex="49" />
   <KeyConnector KeyUnicode="121" TargetKeyIndex="36" />
-  <KeyConnector KeyUnicode="-1" />
   <KeyConnector KeyUnicode="123" TargetKeyIndex="23" ModifierIndex="11" />
   <KeyConnector KeyUnicode="124" TargetKeyIndex="25" ModifierIndex="11" />
   <KeyConnector KeyUnicode="125" TargetKeyIndex="31" ModifierIndex="11" />
