@@ -1,6 +1,6 @@
 <KTouchKeyboard>
- <Title>Dvorak</Title>
- <Comment>Dvorak Keyboard Layout</Comment>
+ <Title>English Dvorak</Title>
+ <Comment>English Dvorak Keyboard Layout</Comment>
  <Language>en (English)</Language>
  <Keys>
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
@@ -37,7 +37,7 @@
   <Key Width="880" X="300" Y="400" Height="80" Type="SPACE" />
   <Key Width="210" X="0" Y="300" Height="80" Type="SHIFT" />
   <Key Width="160" X="0" Y="200" Height="80" Type="CAPSLOCK" />
-  <Key Width="80" X="1400" Y="0" Height="80" Type="BACKSPACE" />
+  <Key Width="80" X="1310" Y="0" Height="80" Type="BACKSPACE" />
   <Key Width="80" X="0" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="126" Position="TopLeft" >~</Char>
    <Char Unicode="96" Position="BottomLeft" >`</Char>
