@@ -15,6 +15,7 @@ fr.swiss.keyboard \
 dvorak_fr.keyboard \
 hu.keyboard \
 he.keyboard \
+it.keyboard \
 sl.keyboard \
 pl.keyboard
 
@@ -33,7 +34,6 @@ pl.keyboard
 #pt.br.keyboard \
 #pt.keyboard \
 #nn.keyboard \
-#it.keyboard \
 #la.keyboard \
 #hu.keyboard \
 #ee.keyboard \
