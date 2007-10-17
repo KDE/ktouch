@@ -43,6 +43,7 @@ install(FILES
   russian_long.ktouch.xml
   slovenian.ktouch.xml
   spanish.ktouch.xml 
+  turkish.ktouch.xml
   ukrainian.ktouch.xml
   DESTINATION ${DATA_INSTALL_DIR}/ktouch)
 
