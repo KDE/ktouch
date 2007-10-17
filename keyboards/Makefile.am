@@ -17,7 +17,8 @@ hu.keyboard \
 he.keyboard \
 it.keyboard \
 sl.keyboard \
-pl.keyboard
+pl.keyboard \
+sv.keyboard
 
 
 #sv.dvorak.keyboard \
