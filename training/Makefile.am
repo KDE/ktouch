@@ -32,4 +32,5 @@ russian2ktouch.xml \
 russian.ktouch.xml \
 russian_long.ktouch.xml \
 slovenian.ktouch.xml \
-spanish.ktouch.xml
+spanish.ktouch.xml \
+turkish.ktouch.xml
