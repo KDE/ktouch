@@ -18,7 +18,9 @@ he.keyboard \
 it.keyboard \
 sl.keyboard \
 pl.keyboard \
-sv.keyboard
+sv.keyboard \
+tr.f.keyboard \
+tr.q.keyboard 
 
 
 #sv.dvorak.keyboard \
