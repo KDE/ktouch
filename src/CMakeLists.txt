@@ -50,6 +50,14 @@ set(ktouch_SRCS
 
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
+if(MSVC)
+  set(ktouch_SRCS ${ktouch_SRCS} ktouch.rc)
+endif(MSVC)
+
+if(MINGW)
+   KDE_ADD_RESOURCES2(ktouch_SRCS ktouch.rc)
+endif(MINGW)
+
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
