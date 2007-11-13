@@ -65,7 +65,7 @@ set(ktouch_icons
     ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi64-app-ktouch.png
     ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi128-app-ktouch.png
 )
-kde4_add_win32_app_icon(ktouch ktouch_SRCS ${ktouch_icons})
+kde4_add_win32_app_icon(ktouch_SRCS ${ktouch_icons})
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
