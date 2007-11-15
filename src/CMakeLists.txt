@@ -59,11 +59,10 @@ kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 #    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/128x128/apps/ktouch.png
 #)
 set(ktouch_icons
-    ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi16-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi32-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi48-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi64-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/ktouch/icons/hi128-app-ktouch.png
+    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi16-app-ktouch.png
+    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi32-app-ktouch.png
+    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi48-app-ktouch.png
+    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi128-app-ktouch.png
 )
 kde4_add_win32_app_icon(ktouch_SRCS ${ktouch_icons})
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
