@@ -653,7 +653,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editlecture" );
     action->setText( i18n("&Edit Lecture...") );
-    action->setIcon( KIcon("edit") );
+    action->setIcon( KIcon("object-edit") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
 
     action = actionCollection()->addAction( "file_editcolors" );
@@ -663,7 +663,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editkeyboard" );
     action->setText( i18n("&Edit Keyboard Layout...") );
-    action->setIcon( KIcon("edit") );
+    action->setIcon( KIcon("object-edit") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditKeyboard()));
 
     KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
