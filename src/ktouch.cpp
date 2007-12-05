@@ -404,13 +404,13 @@ void KTouch::optionsPreferences() {
     dialog->addPage(m_pageTraining, i18n("Training Options"), "chronometer");
 
     m_pageKeyboard = new KTouchPrefKeyboard(dialog);
-    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "system");
+    dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "preferences-desktop-keyboard");
 
     m_pageColors = new KTouchPrefColors(dialog);
-    dialog->addPage(m_pageColors, i18n("Color Settings"), "color-fill");
+    dialog->addPage(m_pageColors, i18n("Color Settings"), "preferences-desktop-color");
 
     m_pageSound = new KTouchPrefSound(dialog);
-    dialog->addPage(m_pageSound, i18n("Sound Settings"), "sound");
+    dialog->addPage(m_pageSound, i18n("Sound Settings"), "preferences-desktop-sound");
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 
