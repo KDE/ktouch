@@ -653,7 +653,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editlecture" );
     action->setText( i18n("&Edit Lecture...") );
-    action->setIcon( KIcon("object-edit") );
+    action->setIcon( KIcon("document-properties") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditLecture()));
 
     action = actionCollection()->addAction( "file_editcolors" );
@@ -663,7 +663,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editkeyboard" );
     action->setText( i18n("&Edit Keyboard Layout...") );
-    action->setIcon( KIcon("object-edit") );
+    action->setIcon( KIcon("preferences-desktop-keyboard") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditKeyboard()));
 
     KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
@@ -681,7 +681,7 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction("training_stats" );
     action->setText( i18n("&Lecture Statistics") );
-    action->setIcon( KIcon("datashowchart") );
+    action->setIcon( KIcon("view-statistics") );
     connect(action, SIGNAL(triggered(bool)), SLOT(trainingStatistics()));
 
     // Setup menu entries for the training lectures
@@ -721,7 +721,7 @@ void KTouch::setupActions() {
     // *** User settings ***
     action = actionCollection()->addAction( "settings_setup_users" );
     action->setText( i18n("&Setup Users...") );
-    action->setIcon( KIcon("users") );
+    action->setIcon( KIcon("system-users") );
     connect(action, SIGNAL(triggered(bool)), SLOT(optionsSetupUsers()));
 
     m_currentUserAction = actionCollection()->add<KSelectAction>( "settings_current_user" );
