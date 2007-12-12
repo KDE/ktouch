@@ -264,7 +264,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
 	
 	// get the title
 	QDomElement e = root.firstChildElement("Title");
-	if (!e.isNull())	m_title = e.firstChild().nodeValue();
+	if (!e.isNull())	m_title = i18nc("Keyboard Layout Name", e.firstChild().nodeValue().toUtf8());
 	else				m_title = i18n("untitled keyboard layout");
 	// retrieve the comment
 	e = root.firstChildElement("Comment");

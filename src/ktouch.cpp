@@ -776,7 +776,7 @@ void KTouch::updateFileLists() {
 		// get the title
 		QString title;
 		QDomElement e = root.firstChildElement("Title");
-		if (!e.isNull())	title = e.firstChild().nodeValue();
+		if (!e.isNull())	title = i18nc("Keyboard Layout Name", e.firstChild().nodeValue().toUtf8());
 		else				title = i18n("untitled keyboard layout");
 		QString langid;
 		// retrieve the language id

@@ -202,7 +202,7 @@ bool KTouchLecture::readLectureXML(QDomDocument& doc) {
     m_lectureData.clear();      // clean current data
 	// retrieve the title
 	QDomNodeList entries = doc.elementsByTagName("Title");
-	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
+	if (entries.count() >= 1)	m_title = i18nc("Lesson Name", entries.item(0).firstChild().nodeValue().toUtf8());
 	else						m_title = i18n("untitled lecture");
 	// retrieve the comment
 	entries = doc.elementsByTagName("Comment");
