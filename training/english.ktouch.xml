@@ -6,498 +6,198 @@ Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.
  <Levels>
   <Level>
    <NewCharacters>jf</NewCharacters>
-   <Line>ff jjj jf jfj j jff fjjf ff jfj j jff ff jjj fjj fjj fjf jfj jjj</Line>
-   <Line>f fjjf jjj fjjf jfj fjjf f j fjj jff j fjj jf jjj fjjf f f fjf</Line>
-   <Line>fjjf jff jjj ff jf fjjf fjjf f fjj fjj jf fjf j jj f j fjj jj jjj</Line>
-   <Line>f jjj f fjjf j j jjj f j jjj jj ff fjf fjj f f ff jjj jj fjf f</Line>
-   <Line>ff f fjjf fjj fjj f j fjf f jj jj jff jj jfj f jf jjj fjj j jjj</Line>
-   <Line>jfj fjjf f f fjf jj ff f j fjf fjj f jf j jf j fjj fjjf jj jff f</Line>
-   <Line>jff jff j f j f jff f jjj j fjf f fjjf j jff jj j f jf j ff jj fjj</Line>
-   <Line>ff jfj jfj j ff fjjf jj ff fjj f jff jff f fjf jj jj f jfj j fjj</Line>
-   <Line>jjj jff jj fjj jfj f fjj fjjf jj jj jf jff ff f jf jj ff fjjf j</Line>
-   <Line>jff fjf f f jfj fjjf f jj j fjj j fjj jf f f j ff jj j fjf jfj jj</Line>
-   <Line>jj jf j f j ff j fjjf jff f fjj jff j jf fjf j fjjf fjj j jj jf</Line>
-   <Line>fjj jfj jfj fjjf f f jjj jj fjj fjjf j fjjf jf fjjf jf f fjj j j</Line>
-   <Line>jjj jj jf j ff fjf jj jjj ff jf j jjj f ff ff j jf jjj jff jff f</Line>
-   <Line>jf j jfj fjj jfj fjjf fjj fjjf fjjf jj jjj ff jfj j jj f jj jfj</Line>
-   <Line>jff f f j j j f f jj jjj f fjj j fjjf fjj f fjjf fjf ff f jf fjjf</Line>
-   <Line>fjj fjj j f jf f fjjf ff jf ff jff jf j fjf f fjjf fjj j jff jj</Line>
-   <Line>f jf f fjjf jf jjj f fjjf fjjf j j f jfj f jjj j f fjjf f j jj</Line>
-   <Line>jj fjj fjjf f f jff jj jff f j jff f ff fjjf jf fjj fjj jf j jff</Line>
-   <Line>fjf jj jj jj jfj jf j jfj j fjjf jff ff fjj f j f j f f jj f fjj</Line>
-   <Line>jf jjj fjjf j f f jj jj jjj ff j fjf f fjj jfj jfj fjf jj jjj j</Line>
-   <Line>fjj jj jfj jjj jj jj f j j jff jjj jjj f jj jff f f f f fjf fjjf</Line>
-   <Line>jff j jjj fjjf ff fjjf j j fjf fjj jj j fjjf f jjj jfj jj fjjf fjf</Line>
-   <Line>fjj jjj j j jjj jf f f j fjj fjjf jfj fjj f ff j j jj jf jj jfj</Line>
-   <Line>jff fjj jf jj jf jf jj jj f fjjf jf j f fjjf ff jjj jf fjf jj fjjf</Line>
-   <Line>f jff f j ff fjj j fjj jj fjj jj jf j fjjf j jfj ff jf jf fjj</Line>
-   <Line>ff j ff f jj ff jfj jj j jfj jj f jj jj jf jf jj jjj jfj j jfj</Line>
-   <Line>jjj jfj jf jjj j j jf jfj fjj f jfj fjj ff jff fjj f j jjj jf f</Line>
-   <Line>jff fjf jf f jj j f j f jff ff jf jfj jjj jf ff ff jff f fjj jfj</Line>
-   <Line>j jfj jj jjj jf f fjjf j ff jjj jfj jff jff f fjjf fjj fjjf f</Line>
-   <Line>jfj jj f ff jff fjjf jff f jjj jfj jj j jfj ff fjj ff j f jj fjjf</Line>
+   <Line>fj j f j f f fj f fj fj ffj f fjf f f jj f fj jf jf fj jfj fjf</Line>
+   <Line>ffj ffj fj ff f f ff fj fj ffjj jjjf j f jj fj jj jfj ff f ff ff</Line>
+   <Line>fj ffj ff jfj jf jff ffj f ff ffj f fjf j fj ffj fj jj ffj jj f</Line>
+   <Line>jfj jff j ffj ffjj ff j f fjf ffj jff ffj jf ffj jff fj fj f f f</Line>
+   <Line>f fj jff ffj fjf f j j jf jf j jfj fjf fj ff fj jfj jfj fj jff</Line>
+   <Line>fj f ffjj f fjf ffj jfj ff j ff jf jjjf jf j jff jfj j f jj f jfj</Line>
+   <Line>fj j jff jfj jfj jff jf fj jj j j fjf j fj j fj j f j f ff j ffjj</Line>
+   <Line>j jfj ffjj jfj f jfj f fj f f f jfj j jf jfj fj j jf f fjf fjf</Line>
+   <Line>jf ff ff fjf fjf fjf jfj jjjf j f jf jfj f jjjf f ff ff jf f fj</Line>
+   <Line>ffj fj fj jf f ff jf f j j jfj f jff fj j f fjf f jfj jf f jfj jjjf</Line>
   </Level>
   <Level>
    <NewCharacters>kd</NewCharacters>
-   <Line>jjd fdfj rd djd jk jd k dd fjk fd fk k jfkd dkkf fk dkd dd jk k</Line>
-   <Line>dfj djd fkkk fk dff d dkkf fd fk fdfj fk k dkkf djd dff dkd dff</Line>
-   <Line>dkd kdk k dkkf k jk fkkk jd k jfkd fk fk jd k d dkd jd k dd rd dffd</Line>
-   <Line>d fk k k dff dff dd fk fk fd jd dd jjd rd dkd dkf kdk fdfj d kdk</Line>
-   <Line>djd k fk rd dd fk dff dff kdk dkd dkf d k jk jfkd jd jfkd d kdk</Line>
-   <Line>dkd kdk djd jd dkf dkkf fkkk dd djd fd dkf fk dff dkkf fk fk fdfj</Line>
-   <Line>fk fk rd jjd k k dkkf d rd dkd dd rd jjd fk fd fk k jk rd fd fd</Line>
-   <Line>djd k jjd djd fk k fjk k dd dfj kdk jd djd fk dfj fd k dffd jd djd</Line>
-   <Line>kdk dkd dd k fd fk jjd fjk fd rd fjk fk k dfj fd dd dkd d k dd kdk</Line>
-   <Line>fjk fk dkkf dd dkkf dd rd fd jd k jjd k dkf djd dkf k dkd d jd d</Line>
-   <Line>fjk dkkf dffd k d fdfj djd kdk fkkk d dfj jk fk jd jfkd jd kdk dffd</Line>
-   <Line>dd dkf dffd jk jk jd fd dkf k jd jfkd fdfj fkkk k dkf fdfj dfj</Line>
-   <Line>fd jd jd dd dd jd dd rd dkd dffd fd fkkk dffd dd fk jjd fk k k</Line>
-   <Line>d dfj fdfj k fk fk dkd dkkf dffd dffd k fkkk dkf jk dkd fdfj jfkd</Line>
-   <Line>jd dd jk fd dkf dkd dd k d k fdfj fdfj dd dffd djd dffd kdk dffd</Line>
-   <Line>fd jk dffd fk fd rd fdfj d fk d dff fkkk fk fk jd fkkk djd fk fdfj</Line>
-   <Line>jd jfkd dkkf fkkk dkkf kdk dd dfj k fk dfj fk jk fd jd k k kdk</Line>
-   <Line>k dfj dd k jfkd d fk jk rd fk k dffd fk djd jjd fk dkd dd dffd</Line>
-   <Line>fk fk kdk fdfj dfj fd fk dd dffd dd dkd fkkk k dkf dkkf k jfkd</Line>
-   <Line>d dfj k fk fdfj dff fk djd dd d dff k fd rd fdfj fk fd dkd djd</Line>
-   <Line>kdk fk fk dfj fk fdfj k dkf dkkf dffd k fk fk jfkd jk dffd fd dff</Line>
-   <Line>fk dkf fk dffd jd dfj d dkkf jd jjd fd fjk fd fk fk dff dffd fdfj</Line>
-   <Line>dkkf fd jd jfkd dffd d djd dkd fdfj fk dff fk fdfj jk fk dfj d dkf</Line>
-   <Line>rd rd jd rd jfkd dd jd k dffd fd dkd fk fk k dkd djd fk jjd jjd</Line>
-   <Line>k dd dd jd fk fk fk jfkd fd d fk fk d fkkk dkkf jjd dkf fdfj fkkk</Line>
-   <Line>djd k fk k jd dd dkd djd k kdk rd djd k jjd k jd dfj dfj dkf jjd</Line>
-   <Line>fk fd rd jd fdfj jk fk fjk rd k jd dkf rd dkd fkkk jfkd jjd jjd</Line>
-   <Line>fk jd fk jk dfj d fkkk k jjd jk fjk dd rd jd fdfj jd dfj jk dkkf</Line>
-   <Line>fkkk fk fk dffd fk dfj jd dd jk dfj fjk fd jfkd fk fd jd fd jd k</Line>
-   <Line>dffd rd dkd dd fk fk jk dffd fk dkd fjk jk k jk djd fdfj fk dd jd</Line>
+   <Line>djd k djd k fdj k fdj k k jdd dd k kf dd k k dd k d fdfk k k kf</Line>
+   <Line>d kf fdfk k fdj k df jk jdd jkjd jjkk d k k d d d d k k d kf d</Line>
+   <Line>d dd k d jjd d d dkk jkjd k k k djd dkk kf fdj k fdfk k k fdj</Line>
+   <Line>k dkk d d df df df k k djd dd k d d d dd jdd d kf fdj k k d jkjd</Line>
+   <Line>k k k djd k d dd d jdd jjd d d d jdd d k k dd fdfk jjkk k fdfk</Line>
+   <Line>k d d fdfk jjkk kfd k k dd k k dkk jjd jjkk k kfd df kfd d d d</Line>
+   <Line>fdj df jdd k d jdd k d k k k jjkk dd d d k jk df k jjkk d k k k</Line>
+   <Line>jjkk d fdfk fdfk fdj d k d jjkk djd k k k k djd k d d d df k k djd</Line>
+   <Line>k kfd df k k k d k dd kfd df d kfd k k k kfd djd k k jk dd dd</Line>
+   <Line>df d d jk k kf jjd kf kf k df d k jkjd kf k jjd fdfk k k kfd d</Line>
   </Level>
   <Level>
    <NewCharacters>ls</NewCharacters>
-   <Line>fl s l ldk l s slj s dks sf kl ll ls l ls dss lkj slk ks jl jjss</Line>
-   <Line>l slj jl lkj l ldf s ld ll l ll ldk jjdl dlkk fl rs dss fld fl</Line>
-   <Line>kl fl fl lkj fld ld fld js l dss kl jl jl ldk fld s ls s js kl</Line>
-   <Line>ll ld dss fld l rs sf dss ll jl kl ls slj kl ldf kl dss rs ls js</Line>
-   <Line>s dlkk js kl js ls fld jl jjdl ll jjdl ll rs ldf rs ld ldk slj</Line>
-   <Line>slj fl fld lkj rs ldf dlkk dss rs fl ld ldk kl dks fl sf dks ldk</Line>
-   <Line>slj kl sf dlkk fl s kl l ll fl slj ll s s s dds s sf fld ks ks s</Line>
-   <Line>ll dss s sf dks fl ldf dks rs ld s jjss ll l slk kl dks sf ll ldf</Line>
-   <Line>s ll dlkk rs jl l ll ls l ldk ldk js dss rs s slj l dks fld jl</Line>
-   <Line>ks dss dlkk ls kl ks kl js kl ldk kl ls l slk dlkk lkj slj dks</Line>
-   <Line>ld dks rs ldf dlkk ls s rs jjdl slk ldk slk dds lkj lkj s jjdl</Line>
-   <Line>fl l s kl slk jjss ls ll dss sf slj dlkk jl fl kl fl jl rs ls ll</Line>
-   <Line>lkj lkj ls lkj kl fl fl ll fl dks l dlkk kl s ldk fl fl ks l kl</Line>
-   <Line>ldf js slk fld dds l ldk ll dlkk jjss l lkj slk jl fl ldf ll fl</Line>
-   <Line>l fl jjss ls ldk ll dks kl slj ldf kl dlkk slk jjdl sf dlkk dlkk</Line>
-   <Line>fld ld s ls dlkk ld kl jl kl fl ls kl ls kl l sf l ls ldf dlkk kl</Line>
-   <Line>sf fl ks lkj fl jjdl ldk ls jjdl dlkk dlkk ldk rs sf slj ld s l</Line>
-   <Line>js ldf fld ldf dks ks ll jjdl slj fld dlkk s js l jjdl s s ks ld</Line>
-   <Line>ll lkj dds ldk ls fl ldk dss jl sf fld kl rs rs ll ldf s dks ls</Line>
-   <Line>ls dds slj dlkk jl l slk sf dks dks rs ldk jl dks l dlkk l ks rs</Line>
-   <Line>ks dks ks fld dds dss ldk kl s ks dks slk fl slj dds fl s js jjss</Line>
-   <Line>kl dks s fl rs s rs ldf ls sf ls ll rs sf dds dss jjdl l slk ldk</Line>
-   <Line>rs kl ld ll kl ll fl jjss ls ldf ll jjss kl ll jjdl jjss sf ld</Line>
-   <Line>jjdl ks ld js l slj jjdl fl sf lkj kl rs jjdl ks s dds dss fl slk</Line>
-   <Line>ll l l slj fl dss js lkj fld ks lkj ks ldk jjss ll ld l kl js fl</Line>
-   <Line>rs ls s s sf dds jl fld l lkj ls jl dss fl slk ldf jjdl l ks fl</Line>
-   <Line>fld lkj js s js ld slk dlkk jl ks l dds ld lkj ll jjss ld jjss s</Line>
-   <Line>dss s kl ldk dds fl s ldf kl sf slj kl sf lkj dss slk dss ls ls</Line>
-   <Line>fl sf kl ll kl ld jjss dds kl fld jjdl fl js jl sf kl kl jl jl</Line>
-   <Line>ldf ll dds dds s ll slk dks slj lkj fld kl ks rs fl kl ldk ld l</Line>
+   <Line>s sl s fl skl s sl fl skl sfj l sk s sk ss s sfj jss l fs ss fs</Line>
+   <Line>sk jss sk s fl s l fs s fl jss sfj l s sk l sk s fs s ss l fl l</Line>
+   <Line>sf fl lll skl sfj sk dsk sk sfj ss sf l fl jssj fl l l jss sfj</Line>
+   <Line>sk sk s fl fl s jss s s s l fl jssj sl l l s fl sl l fs ss l fs</Line>
+   <Line>jss s dsk s jssj sk fs l l skl l fl l s l s s sl skl fl s s l skl</Line>
+   <Line>l fl s skl sk s l l jssj s sk s jss jss sfj sf sl sk s lll jssj</Line>
+   <Line>sl s s fl l lll fl l sk fl ss dsk fl fl fjjs l fl s s s l s jss</Line>
+   <Line>skl jss sfj l fl l sfj sfj skl l fl l sk fl fl sk ss l fs l sk l</Line>
+   <Line>sl fl skl l l sl s fl fjjs fjjs l fjjs l fl ss fl l sk s l l l</Line>
+   <Line>s s fjjs lll sk ss skl jssj skl fl l l skl fl l s dsk s s sl fl</Line>
   </Level>
   <Level>
    <NewCharacters>ca</NewCharacters>
-   <Line>call rascals slacks flaks fads fad flack scads flask jackals flack</Line>
-   <Line>sass all salsa jackals rad lads flaks scald ca la asks flack lacks</Line>
-   <Line>ask ad jackal fas las sad sass skas ck ca fad fad adj fas kc dad</Line>
-   <Line>jacks class lad scald cads jackal ad cads sack alas scald lacs flak</Line>
-   <Line>alfalfa calls jacks ala dc lacks class lad clack a fads alacks rads</Line>
-   <Line>ads flask adds scalds c jacks jackals rascal cask ads raj add adds</Line>
-   <Line>aka scald calla salsas alls sac cads salads fads cask adds casks</Line>
-   <Line>sacs jackal lacks class clad rack dad slack fall alfalfas slacks</Line>
-   <Line>fad cal lad cal calla ad sad salads ska salad flack skas ca jacks</Line>
-   <Line>rascal ads ad flak aka ala ac clad alacks ck jackal fall fas scads</Line>
-   <Line>call calla alfalfas calf falls flak lack flak flaks casks flak lass</Line>
-   <Line>flack class la aka flasks rad a skas scad racks ac scad lac skas scald</Line>
-   <Line>sacs lads rascals call scad call clads kcal salsa slack rascals dads</Line>
-   <Line>call c alfalfa sack alfalfas falls ask fas calls asks class jack</Line>
-   <Line>asks alls alack calls alacks rads casks cs kc jackal lacs flak rascals</Line>
-   <Line>a fall ad ck kcal alfalfa ad a flaks sacks alas ca lad salsas</Line>
-   <Line>sac skas clads jackass rad alfalfas lacks ska alack flaks as ska</Line>
-   <Line>cads jackass ala flack falls cads fad scads lac rads ask callas scalds</Line>
-   <Line>ads skas salsas fall aka salsa flack alls flacks las salads cs salsas</Line>
-   <Line>racks flack sacks sass lacs cal flacks jacks raj aka alack flacks</Line>
-   <Line>flack ask dad flacks ads kcal cal jackass cads asks ala callas jacks</Line>
-   <Line>alfalfa sac flack salsa racks sacs clad ck dc cf ac casks rad scald</Line>
-   <Line>callas fad dc clacks all falls salads calla skas calls adds jackals</Line>
-   <Line>casks scalds las clad lacs cask alacks kcal jack flak salads flacks</Line>
-   <Line>fas sacks salsa jackass ca alfalfa clad calls adj dads lacks fads</Line>
-   <Line>fall flacks salad clads call callas dc calla kc clad ska lacks asks</Line>
-   <Line>lack jackal ac fa alas cc lad jackass alack las slack ad ck ca rascals</Line>
-   <Line>scald add ck flak cads slack ad clad clad fad cask call alacks scads</Line>
-   <Line>lacks lass falls dads ca lacs rack a clack skas calf rad jack slacks</Line>
-   <Line>salads adds dads salad flacks cs call cs la fad sac clads flack as</Line>
+   <Line>sca clac asa cascad sa al sca ass clac slac cak da fla c la fa ja</Line>
+   <Line>fa salad ca daf addl fa scal slak facad al flask lass ac sass lack</Line>
+   <Line>sac a c sla sca addl saf c aa fla fad salsa ad fla ad a ladl als</Line>
+   <Line>c facad da fla call scal fla sac c al daff flas as ca all ak ac</Line>
+   <Line>sadl cas ala c sak c jackas ca af caff aa aa ja sa afa sla lac ca</Line>
+   <Line>fla fadd fa ja la faff sca sal alkal fals lac fla sass cas slas</Line>
+   <Line>al fa clack af flak flas fla as af ass ass fad alack c sadl ass</Line>
+   <Line>sack sca add sa c ja al lack cas cla cas add c las sa ac jacka sass</Line>
+   <Line>cla sca cla ja c sak alack slak slas dadd slack alkal la la ak jc</Line>
+   <Line>ass sa sas scal cas fa salaa las fad lack a dad c a sca ad la sla</Line>
   </Level>
   <Level>
    <NewCharacters>nt</NewCharacters>
-   <Line>catcall tn flanks last scans rands talc knack n cancans talk canst anal</Line>
-   <Line>canst fan asst stats at natl stall stall alt rands snacks stand assn</Line>
-   <Line>ants alt tads cantata talcs natl attack knacks stalks tack tact ltd</Line>
-   <Line>rattan scan scandals fats rats tad talk stalks scats rank rats daft</Line>
-   <Line>n fatals fat nasal aft cants anal flan knacks natal at acts at</Line>
-   <Line>scats ts and stank act ct flans canal flan flans stat fats caftan</Line>
-   <Line>sank cant tads talcs fats act tacts tanks assn slat ransacks flatlands</Line>
-   <Line>attacks kn assn sandal alts rants kt flats rt rattans knack cat rafts</Line>
-   <Line>lat assn snack flatlands ans cats stands anal anal ants rattan cancans</Line>
-   <Line>talc flt tasks cancans ltd scandal canals stalks tat aslant tad flatlands</Line>
-   <Line>tans flank cast flatland tanks natl snacks n sands talcs natal annal</Line>
-   <Line>attacks slants anal canst rants act stanks tasks slants flanks flat</Line>
-   <Line>act rt clank fatal stalk rat sand sandals fast tads tact fatals</Line>
-   <Line>dank attacks attn caftan flatlands ctn kn tans tack fact flank rants</Line>
-   <Line>cats sandal stall land knack flanks rat rattan fats talcs catcall</Line>
-   <Line>fats aslant lat ct slats st scandal tank slants fatal fat stall sank</Line>
-   <Line>lats cantata acct tasks jct fast nd scandal fats stat rats fatal</Line>
-   <Line>an skat alts an scats ant fatals fast t ransacks an fan tacks cast</Line>
-   <Line>clans alts casts flan fatal cans nasals caftan attn fans lats ctn</Line>
-   <Line>lat stanks ransack can ransacks slats canals ltd natal anal scans</Line>
-   <Line>stall flatland knacks aft canal rant flats rant daft salts tats snack</Line>
-   <Line>fats attn tack scandals knack tacts stands asst cats ran natl landfalls</Line>
-   <Line>fact ands rats t rats nd tan stand caftan tacts can natal act rats</Line>
-   <Line>scan daft rank slants stat sank stanks tall lands flt stands rat</Line>
-   <Line>lank rt flatlands sandal staff fats kt fat flank sandal ctn staff</Line>
-   <Line>rands salt skat scants rat t cant ct an flanks scandals flatlands</Line>
-   <Line>tads stand tat clanks at ands ransacks alts ts snacks assn tanks</Line>
-   <Line>flatlands stack lands scandals scats cancan rant jct atlas flanks tact</Line>
-   <Line>flatland casts scandals n scans task canst std annal clans raft cats</Line>
-   <Line>tacts flat ants fasts tank an std rt rands cats flt attack act cancans</Line>
+   <Line>snaffl dan attack fann na scant fast snack taff ank sna att snac candl</Line>
+   <Line>tattl tan tac na lan snaf jat staccat na t can fact an fann catcall</Line>
+   <Line>ta tattl sta nast task cast tan cantata can n lankl slan tall sanda</Line>
+   <Line>sna flank fact tank cat catcall t cantat latt landfal tal can stanc</Line>
+   <Line>na snak knac ta annal attac t san canca stall san caftan ta ct</Line>
+   <Line>t scandal flank last dankl nat cattl stat skat stal stak cact</Line>
+   <Line>candl fat ana ta flatlan t tal tatt scant flatca dandl staf slat castl</Line>
+   <Line>fan scantl sna snatc talk sna sna flank cast dandl n task tak lastl</Line>
+   <Line>alt fan landlad tal ta stan lank flan tal tast sand sta landfall</Line>
+   <Line>knac landfal cat ants landlad na sata salt caftan anall nat can lastl</Line>
   </Level>
   <Level>
    <NewCharacters>iv</NewCharacters>
-   <Line>stains fist livid cicada kiss vials knits stilt ails kills flail tail</Line>
-   <Line>canvass vats kiln tin fascistic stilt lilacs assails vials ninja lilac</Line>
-   <Line>inks visit faddists activists cliffs clinicians dint sadist dills</Line>
-   <Line>sci snit distinct tit kit radians incl saids classical classic i</Line>
-   <Line>dick tints vasts fascias divans rancid vasts nick sits ills stints</Line>
-   <Line>saliva titans kickstand fatalist classic tick clink flick slink attic</Line>
-   <Line>kind avant antacid finalist sills clink distaff did kicks tactics</Line>
-   <Line>rainfall lifts jail did snit radii raisins stains stilt tidal cavils</Line>
-   <Line>kill avasts fill finals fatalists distaff fills civilians visits</Line>
-   <Line>cit finalists statistic fantails skit intact faints vis ails viscid</Line>
-   <Line>distaffs kilts riff fains link sci rink diff sisals inland ii radiant</Line>
-   <Line>nails slit island install clinicians kills civil sits stiff riv vans</Line>
-   <Line>filial canvass invalid flit activist assistant installs raisins tactics</Line>
-   <Line>skiffs ti kickstand still skinflint alkali antacids dials dills invalids</Line>
-   <Line>rival clicks cacti racialist sadistic kidskins assail kinda vandal</Line>
-   <Line>instant kin classicists classicists infants fill assist villain didst</Line>
-   <Line>knits ti stadias fiats saint rails assassin sciatics ill fiats disdains</Line>
-   <Line>lain assist avid davit fantails ii landfills vial it ink jinns skids</Line>
-   <Line>indistinct iv sics riff kicks dillis till radiant satanical antics kills</Line>
-   <Line>flail dials cavil advt avians vi lints tits lackadaisic addict sics</Line>
-   <Line>fascist naval lists slit lists tannin sniffs skids fantasist lint vacant</Line>
-   <Line>clvi fantail fantail clink canvass civilians stain catkins lain sciatics</Line>
-   <Line>classical raisin nit silks valiants ails satanical akin staid fantail</Line>
-   <Line>kiss rids satanic fains island kilt kins links ids inkstand kins</Line>
-   <Line>saids ind ilks initials instincts livid inland visa filial ticks inf</Line>
-   <Line>finical rain fanatical rill lilacs alias sciatica diffs kickstands fin</Line>
-   <Line>rill val vitals still attic instant fink riff tannins slick divas</Line>
-   <Line>sin clinical slid cits jilt atavistic dial scintillas inflict tannin</Line>
-   <Line>links afflicts distaffs ilks tills flaccid scintillas assailant radiants</Line>
-   <Line>satanic cilia rink didactics i lilt ilks lackadaisic didst knit tits</Line>
+   <Line>cassi sic laddi affin canin flint inclinin vivain icil ni satinin</Line>
+   <Line>ci in cit divan finalis tankin sli instatin kil clinicall dis vill</Line>
+   <Line>vi lil caddis snifflin fit assail nif lanai kil addic lis ick dia</Line>
+   <Line>infantil satani kind nift jadin visitin stil idl littl si clinicia validat</Line>
+   <Line>ninn ti fil cavalcad sanit slackin catfis dinin astatin dadaist killin</Line>
+   <Line>fil sift vial sniffin fantasti lividl li invalid flick satinin di</Line>
+   <Line>affiancin dia finn inkin acidl final vannin tin itc italic instancin inla</Line>
+   <Line>insistin slavin vindictiv nai distall affianc ni stick ki sniff tid tilt</Line>
+   <Line>tacitl clannis jiltin failin ki stasi sanit fiddl savanna atil acclai</Line>
+   <Line>fiv satanicall lackadaisicall fascia ti sandin valis ai dids didacticall</Line>
   </Level>
   <Level>
    <NewCharacters>me</NewCharacters>
-   <Line>vitiated eidetic massive villainies leeks divisiveness academic cadence</Line>
-   <Line>fest vies catcalled fattest attest fies canes faille addenda vaccinate</Line>
-   <Line>jaded decline sickie rinded vine leasts revive ices riskiest incisivenesses</Line>
-   <Line>females staidness stake manic staminas neat decides intimateness acme</Line>
-   <Line>tinkles metals dailiness selectness satellite lintiest e amends sees</Line>
-   <Line>deices stets sites definitiveness dens scaliness caste latte slimed</Line>
-   <Line>effected identical sedative infancies candles eclecticism dialed isled</Line>
-   <Line>silliness cellmate vilenesses fennels satellited reselects evidence flatted</Line>
-   <Line>decline intestate lien tanked cleans steed ideals vastest rem citified</Line>
-   <Line>nines aves disaffiliate efficiencies sleeted militias incidence satiate</Line>
-   <Line>scientists esteem seeded clacked ms eave incandescence facets mist laked</Line>
-   <Line>tea incisivenesses destinate deficiencies selective eel cavalcades</Line>
-   <Line>lifelines maned skinninesses dace talkie dedicative diffidence relatives</Line>
-   <Line>react divinities dateless fitments seated dims saddled eccl cackle</Line>
-   <Line>clamminess likeness massiveness invaded aliases adjacent mistiest nicest</Line>
-   <Line>infields delineate vilenesses nannies reddened effacements ideals stalactite</Line>
-   <Line>neckline acned talent nattiest deceased lankiest risked annalen diddled</Line>
-   <Line>semis ramifies eden eventides addictiveness ravened nineteens calcifies</Line>
-   <Line>devices sassed ramses llama dietetic kitties elitists faked steeliness</Line>
-   <Line>remiss daffiness amnesic sneakiness limed jests safetied fees kennel</Line>
-   <Line>datasets sienna milts desists resit smelt enlist desalinated ailed landsmen</Line>
-   <Line>idealisms finales recast deviant smellinesses dimmest defended stemmed</Line>
-   <Line>vealed endless laities sidelines stamina reinfected lamest keeled riflemen</Line>
-   <Line>caffeine semifinals smalls anviled staminate declassified vales divinities</Line>
-   <Line>ratified elf dialectical incisivenesses ineffective aimed deiced dented</Line>
-   <Line>flimsiness skedaddles desiccate reselects vindicates maniacs malled raffles</Line>
-   <Line>advance assisted stillest calmnesses incises salient damn scientist</Line>
-   <Line>steadfastnesses seen facileness filename emitted deescalates attentivenesses</Line>
-   <Line>keenness ville indite recidivist venialness sedatives easements enticed</Line>
-   <Line>feted steeliness leafed facets rel measled dalliance indecisiveness</Line>
+   <Line>dividend lite salesladie vie decam dissect skie enema cancel feminist</Line>
+   <Line>insentienc decedent fiesta saltcella demiste title steadines scammin fancie</Line>
+   <Line>envie fee descent se incivilitie amide site demitass lesse animatedl</Line>
+   <Line>select latencie naive mantle milkmaid fiftie distinctivel seventeent</Line>
+   <Line>mainmas finickies distinctivel filme jestin assesse insiste slate skillet</Line>
+   <Line>lacke manana inte ma falsett mate dietetic entitlemen vesicle stales</Line>
+   <Line>divvie cleanin enlivenin seeke titte tendenc mistil mi lifelin accidental</Line>
+   <Line>steak skimme fantasie divest sveltes devianc mistines sassie jade</Line>
+   <Line>finenes titte dismantle mentalis inadvisedl fannie installe disinfectan</Line>
+   <Line>midden divisivenes acclaim mf settee svelt animatedl teatime devastate</Line>
   </Level>
   <Level>
    <NewCharacters>hr</NewCharacters>
-   <Line>indiscreetness tethers metalsmith takers retire erectnesses skirmish reticent</Line>
-   <Line>infirmed slithered discards shads thirteenths evaders reliances diversifier</Line>
-   <Line>headsets shiver transected arrears carnal harrier half arches christen</Line>
-   <Line>edifier marinated have inheres antimatters finches karat arsines minters</Line>
-   <Line>richer screamer sandier herd liverish frets draftees strainers heaver</Line>
-   <Line>darkens hi refinance trials cricketers emir rid disenchantment jerked</Line>
-   <Line>varietals deerstalkers recheck schematic scarinesses finish thanked hies</Line>
-   <Line>macerates incarcerate decremental hid credit enrich heelers rakishnesses</Line>
-   <Line>addresser discarder thickens snarliest cheeriness jihads vhf rectifier</Line>
-   <Line>hences teaches schemed clenched afresh stashed strive mandrill teethe</Line>
-   <Line>retiree ranched rends dirtier disasters rareness sacristan iterate fishnets</Line>
-   <Line>restarts heist caramel sheafs ammeters freshnesses cider rednecked reachieved</Line>
-   <Line>knish hearths incinerated infielder transcendent reinvestments mansard</Line>
-   <Line>diameters hardness ethnics retailed fracas airfield mainstream redeclared</Line>
-   <Line>fader ajar jeer reffed thirsts shavers mercantile clerics scimitars</Line>
-   <Line>nectar dressier ravishers reseals simmered assister candider namer</Line>
-   <Line>flashcards traced irenic machineries inkers astrals tired fresher freckled</Line>
-   <Line>chilled fermenter mere deriver masker transited federalists shelter</Line>
-   <Line>raisers chasteness masteries snitches servileness differentiate teeshirts</Line>
-   <Line>careerists desecrates trinkets mavericks rednecks larded intervenes readdress</Line>
-   <Line>arthritics sanitarians mechanist friskiness simmered inerts advertiser</Line>
-   <Line>tethered fattener marten interdictive dreader tanneries checks ethical</Line>
-   <Line>heretical stitch incriminated skinhead steerer craftinesses sheath mechanist</Line>
-   <Line>starch faster kirsch anthem circle arterial assenter reach limiters</Line>
-   <Line>mistrals serviceman callers redden dentistries internees distractive</Line>
-   <Line>interlards rear hadst redivides actress startle fleshliest enriched sinner</Line>
-   <Line>interlarded refines alchemies innervate severe scarfs fifer hives saltier</Line>
-   <Line>sered craven machete fickler entrenchment defer referrals tritest</Line>
-   <Line>marveled transferences arrests verticalness halites redder starless halal</Line>
-   <Line>derived scalars faltered dithers immerser discreetnesses hastiest arriver</Line>
+   <Line>dare testifier eradicate terminat trafficke hadin inferenc franti</Line>
+   <Line>reservedl chef lathere marr atria trait distres hearse trance varnis chattin</Line>
+   <Line>fifer irise intern merite clicker hesitanc rhiniti crackhead dishe</Line>
+   <Line>saddler rancidit mandrak rattl threade cardinall larc trisectin intrinsi</Line>
+   <Line>recreatin stridde ester carcas thirst rifte rascal thres drinke indiscriminatel</Line>
+   <Line>clarete iridescenc refile resen reelectin airlift tetherin invert resale</Line>
+   <Line>feathere enfranchisemen rehea earthie fetche thick firecracker interlinke</Line>
+   <Line>redelive ethnicall tidemar indiscreetl cracklin menhade mishandlin catche</Line>
+   <Line>ransack headline crest inerran teare cradle sincerit hater firt dinner</Line>
+   <Line>rent snickerin recklessnes sharer thatche relinin refac heatin reinstatemen</Line>
   </Level>
   <Level>
    <NewCharacters>go</NewCharacters>
-   <Line>javelining sledge cockleshell asteroids footfalls raged frothed coaching</Line>
-   <Line>lanolins conglomerate convalesce groves midnight donors congealing engined</Line>
-   <Line>revenged secessionist nondrinker noncaloric disconnection scallion derogating</Line>
-   <Line>griddlecakes knock firefighter reneged relocations songster avitaminosis</Line>
-   <Line>concierges agitating loosener dermatologist checking smatterings discoloreds</Line>
-   <Line>slovenliness flatfooted grad overdressing overdoses melioration griddling</Line>
-   <Line>rigged stomached conservative vacillating loaning overacted gale got</Line>
-   <Line>official heroisms conservancies vector gel shod denominative ecologist</Line>
-   <Line>goat deescalation satelliting egret gargled foragers thigh chickening</Line>
-   <Line>heightens schoolgirl defenestrating mattering carting heretofore offending</Line>
-   <Line>maisonette goring monasticisms gingham moisten doge alkaloid hadron mastications</Line>
-   <Line>egotist confiscate ratification hoariest factors jolter loitered gritters</Line>
-   <Line>arcing canings legginess deformed fleetingnesses rotational senorita</Line>
-   <Line>oversensitiveness collectivists morion etiological stoke collections alighting</Line>
-   <Line>kookinesses hookier legated mistaking allocative decollimate fragmented</Line>
-   <Line>gavel resort toniest shorthand rang fading hemorrhaged coasted doggier</Line>
-   <Line>contenting notices raccoons groveler gondola gogglers firing erode sidelong</Line>
-   <Line>cottaging forfends togging striking stockinettes altogether laing kickoff</Line>
-   <Line>tacking egomanias foretastes oversensitivenesses holiest fragilest introversions</Line>
-   <Line>medicos nosedives scaffold recoiled latching sentencing rigger condensate</Line>
-   <Line>calorimetric carillonned degassing evildoings glover commented disconnectednesses</Line>
-   <Line>cognoscente noncaloric grisliest dosages relocates delineations rocking</Line>
-   <Line>senior snooks ossifies offhandednesses endorser contritions etiologic</Line>
-   <Line>recooking signalmen magnolia shedding disregarded collectivists triathlons</Line>
-   <Line>frosted jingle vialing oldest donnishness grandfathering evensongs smartening</Line>
-   <Line>redecorate cremations estrangement nonvoters forelocking snorkeling demarcations</Line>
-   <Line>glorifies idiots dido savored skating valedictions homing gastronomic</Line>
-   <Line>endangered elevating remove lags shacking revolve correctors cataloging</Line>
-   <Line>feigner garlands reconciliation marmosets overreacted gladiator selector</Line>
-   <Line>legatee remelting disintegration comfiest retroactive rove shavings</Line>
+   <Line>overcook rotat comi reconfirmatio reregistratio nomad management forklift</Line>
+   <Line>storme socialisti shoestring conma iodide lading incontinentl fervo</Line>
+   <Line>sag gentl mo legitimatin sociologicall dominanc font regicid gallantl</Line>
+   <Line>migh elongatio nonsmokin integran demoni maroo comicalit toccata</Line>
+   <Line>fag infliction shatteringl coalfield cloc almight remoldin tanglin</Line>
+   <Line>fago gonorrhea evocatio dialing solderin ciggie collide monarchie</Line>
+   <Line>correctiona conciliatio hok roilin integrate cosmologie demonstrate throttle</Line>
+   <Line>glister avitaminosi noddle odditie chiffo mg solstice steroida conge</Line>
+   <Line>theor ammoni microcos histologica notifier favor chromaticall chromosoma</Line>
+   <Line>songste negotiator diagnostic nova glande hornie concavit interconnection</Line>
   </Level>
   <Level>
    <NewCharacters>bp</NewCharacters>
-   <Line>peptides reprimand omnipresences hibernates caper flaps particolored</Line>
-   <Line>collapse overspreads intercept bespangle anthropoid labors petite adopters</Line>
-   <Line>pastiche penchant prospected painkiller tampons obsoleting septicemias</Line>
-   <Line>remembers abolishes entrapment lambed pantie shebangs pervasion transporting</Line>
-   <Line>toecaps boilermakers shippings bloated precipitation behaviorisms intangibles</Line>
-   <Line>sandblast sobrieties tabbing pejorative ophthalmic bipartisanship respirators</Line>
-   <Line>pigpen patriotic peats patresfamilias pointillisms spooled disbanding</Line>
-   <Line>pitchforked plaited bespattering childbirth apprenticeships privacies clobber</Line>
-   <Line>preoperative peril dispersals chaplains plodded demographers perming embitterment</Line>
-   <Line>scrimped rabidnesses fillable pinsetters halfpennies copperheads beechen</Line>
-   <Line>premier betrothed carbine skateboarding doorstops proceeder platings</Line>
-   <Line>readership vb sandbags kaleidescope bicarbs perceiving parlance siphoning</Line>
-   <Line>indispose absenter stockpot halfpence fopperies greasepaint scapegoated</Line>
-   <Line>span broaches peonage taped provision bivalve blackjacking libidinal</Line>
-   <Line>bareheaded spottiest napper boobies embroiling boorishness reimpose perspires</Line>
-   <Line>perfectas scrimping pelf sleepiness flips bedders chamberpot nepenthes</Line>
-   <Line>basters porringer deprives lappets enveloper shipments considerables</Line>
-   <Line>hobbles fibroid platoon abortionists piccolos relabels bighted impracticableness</Line>
-   <Line>attempting blotting gapped brainstorming specialists steepens pearling</Line>
-   <Line>shockproof taper gabbiness sidebar peens precancels pollinates paramedicals</Line>
-   <Line>emptinesses philodendrons reparable handpicked halfback fissionables nonparallel</Line>
-   <Line>corporatism tapeline banister pothole brightens triplicating palleted promotiveness</Line>
-   <Line>paired composed microscopies reprobation shipper dibbles badmintons</Line>
-   <Line>tabooed vocabs escapable prince plainsman compilable breadth pariah</Line>
-   <Line>binded shopkeep poach torpedoing dispossess compartmented contraptions</Line>
-   <Line>choreographies becalming padre limpidities pref battered peeked blinders presidents</Line>
-   <Line>bigheartedness backstairs boot obverses flapjack parallelism incorporable repairing</Line>
-   <Line>impetigos telephoners bemoaning patentee tabor escarpments teachableness</Line>
-   <Line>prosing pediatrician boninesses impregnated prised nonpersons overemphasis</Line>
-   <Line>kiboshed abhors helpmate ftps prerecords doorknobs variables tapeline</Line>
+   <Line>archbishop parliamentar calibe respel tiebac bon semipro retrospectiv transpir</Line>
+   <Line>paren snappil absconde nobodie grosbeak podiatr precooke misinterpretatio</Line>
+   <Line>parad establishin oppos liprea abrasiv dabbl seraph precookin kissabl</Line>
+   <Line>embarkin breadth airdroppin permeabilit plainsme aberran bonnies gallbladder</Line>
+   <Line>phaeto beepe packhors deciphermen plastere bloodthirstie cachepo vibration</Line>
+   <Line>sandblas preme soppie dispos preppe bookmarke neighbore heptagona toboggane</Line>
+   <Line>despondenc grabber blearil birdbath boast hellebor phonic blint escapemen</Line>
+   <Line>horrible topographicall portende replier seborrhe peste debark composin</Line>
+   <Line>trombonis ben bootblac resistibl rebor pikin barnacle pentacle trespasse</Line>
+   <Line>sparre photocopie dolphin plantin pictographi brittl bipartit potat</Line>
   </Level>
   <Level>
    <NewCharacters>qu</NewCharacters>
-   <Line>consult toughs iambuses impugned sequenced thoughtlessnesses staunched</Line>
-   <Line>heuristics junco flatulent republication humid runnels puffiness underpins</Line>
-   <Line>practicums escutcheons gunshots summer pounce afoul undifferentiated haircutting</Line>
-   <Line>brought regurgitate uncalibrated contributions unresponsive louring</Line>
-   <Line>runoff sunned unmonitored populous actuating scudded unlearn uncap</Line>
-   <Line>popgun suckles roguish illumined rectangular concurred accountings</Line>
-   <Line>churl statuettes fugitive annunciators furnaced furred multilevel</Line>
-   <Line>unestablished documents craniums coupon robustest influence undervalue laughableness</Line>
-   <Line>fortunateness viaducts turbocharging mournfuller teaspoonful subsequences</Line>
-   <Line>devalued aforethought infecund arousal quids thoughtless turban submittal</Line>
-   <Line>unhitch untiring somersault durum individuates unprivileged thousandth</Line>
-   <Line>caribou soundproofs transfigurations subtractions nucleations universalism</Line>
-   <Line>quoit curving bequeaths obfuscated unbending umbilical lutenists prematureness</Line>
-   <Line>restructuring curmudgeons remounting recurring incongruous trustfulness subpopulations</Line>
-   <Line>gradualist macromolecule minute cruelties multifunctioned butternut constructional</Line>
-   <Line>overtured scurvier hugger outrunning amputate nucleates courtlinesses</Line>
-   <Line>mulishnesses haiku sunburned unsupportable compendium bullfrogs elucidations</Line>
-   <Line>crunches numbness trustiness surgical buddies computerese grubbing annunciation</Line>
-   <Line>nomenclature routers mucked counseling curricular quadrilaterals measurable</Line>
-   <Line>shuffleboards sullener unshaped grousers alum duress flumed restaurateurs</Line>
-   <Line>outboasted fusible credulousnesses stuccoes undefenses scrum formulaic</Line>
-   <Line>unperformed quadriplegics culpabilities circumference unconfused milieu</Line>
-   <Line>mutated tunes numismatics pullouts outfit maneuver trumps irruptions</Line>
-   <Line>budgie diminutiveness cultism hunchback truster publishers sculpture</Line>
-   <Line>amusers logout muriatic unchanging muck deluging unpartitioned public</Line>
-   <Line>munched sputters masturbates modularities casualness vacuousness bucketful</Line>
-   <Line>decorousnesses insulation squealing mutant fatiguing subintervals putrid surmise</Line>
-   <Line>accouter bivouac unregister adventurousness concourse viaduct opportune</Line>
-   <Line>obdurated launderers liquidations underpass dubs uncomplaining volumes</Line>
-   <Line>cubic corpuscles inquietudes avouches glums sunbathe mendacious voguish</Line>
+   <Line>thoroughnes recrudescin tunefulnes rigorousnes imprimatu rounde capsule</Line>
+   <Line>breakou reintroduce contentiousnes bullfinche biennium augmenter nurse</Line>
+   <Line>busb curse quipste munificen beautifie thankfu instruct tranquill</Line>
+   <Line>stoup inundation undeservin fluf quarto purloinin quaho unheate cherub</Line>
+   <Line>guffa sufficien ridicule unequivocall redistribute fulsomel herculea</Line>
+   <Line>portentousnes shogun dangerou gutties samurai knuckl racquetbal babushka emolumen</Line>
+   <Line>cuboi epilogue frui puddl auctio aqueou quot squint velu abuse pluckil</Line>
+   <Line>therapeuticall renucleate turnoff busties accusa gustil pluckines neutral nonintellectua</Line>
+   <Line>uncannil outcropping custodian rutties guardednes platitude grubb mus</Line>
+   <Line>skunk impugn nonplussin nuptial untrouble flounc unchronicle bushe</Line>
   </Level>
   <Level>
    <NewCharacters>wn</NewCharacters>
-   <Line>gantlets buttressing maundered commoners invisible seminal undies antimalarial</Line>
-   <Line>skewed sandbagged irresistibleness uncling withins anagramming wastered</Line>
-   <Line>previsioned policemen frangible irreplaceableness trilingual dispassionate</Line>
-   <Line>garbling impoundments anthropomorphisms misconstrue sunninesses binning</Line>
-   <Line>flatware vitiations alphanumerical generational maraschinos ignoramuses</Line>
-   <Line>lingoes blackcurrant pommeling hidden uncoded megalomaniacs derogations</Line>
-   <Line>deadpans unfold piling piddling barfing reinterview abstractionists hardwoods</Line>
-   <Line>arbitraging limousines pursuant nerds estranging jawing mavens econometricians</Line>
-   <Line>muggings isolationisms confinement guesting scullions sandbank beechwood</Line>
-   <Line>hamstring canons mockingbirds predation numeral universalness decelerations</Line>
-   <Line>enterer reconquering wideness congregating weakened gravitation snark</Line>
-   <Line>blindnesses income spongers pancake wabbit casseroling print tensenesses</Line>
-   <Line>clonk impolitenesses lolling assented injure antisepses distillations</Line>
-   <Line>kitting predation vivisectionist detuning gunships curbstone sanded</Line>
-   <Line>woks unvaried immatureness outbuilding bottleneck offhanded casualness</Line>
-   <Line>linkings underwear toughness wrench chaperoning alliterations squawking</Line>
-   <Line>wanderlust bobbing invent preordain demand paternal standstill councilpersons</Line>
-   <Line>nonvoter manumitting shillings masterliness nicenesses aggregations sandpiper</Line>
-   <Line>signposted ruction whoops illumining counterbalances engorgements flatwares</Line>
-   <Line>bushiness woodlands sugarcanes resembling subsequentness grimnesses unconventionalities</Line>
-   <Line>equidistant ringlike swifter shrewdnesses disjointing recipient renaturing</Line>
-   <Line>intact relinked disfavoring swiss novene unspeaking warehousing concise</Line>
-   <Line>megaphoned cognates rejuvenated swots unconventional adversenesses ascendant</Line>
-   <Line>resubmission ravenings desorption foreman tweedier disenchantments mandating</Line>
-   <Line>nonterminal inflicter momentousnesses bondings wielding enclaved resharpen</Line>
-   <Line>wonkier encumbrance fraudulent waiverable dinner propagandist irresponsible</Line>
-   <Line>poaching replacement circumstances detunes germinated methodicalnesses</Line>
-   <Line>lightninged avowal freeing signified hallow spurning recooking wheaten blissing</Line>
-   <Line>trimarans planks semantics parenthetical tripping urns niggered offprints</Line>
-   <Line>unblinking assigned paperhangings disincline disaggregating pushbutton</Line>
+   <Line>weed rotundin kidnap compartment retakin enlighten adjurin sharin</Line>
+   <Line>propositione driftne entitlemen debunk peasantr canvas insurgenc nullifie</Line>
+   <Line>halfpennie middleweigh licensin outdistance sunburst whelmin supplicatin</Line>
+   <Line>brinines opalescen chardonna aw salutatorian envelo futon outpatien indulgentl</Line>
+   <Line>fascination blundere constitutionalist reedines endure wavie allianc rustines</Line>
+   <Line>numskul refrigeratin repartitionin bookworm snowie annihilate noisom</Line>
+   <Line>unbiassedl widemouthe phrenologica grandniec manipulation contorte airines</Line>
+   <Line>institutionall accompanist ranke precedenc tackin squanderin sanitarie conjunctiv</Line>
+   <Line>eastboun downwar monste inkblot sarong nattere cinematographe punchbag</Line>
+   <Line>retransmittin sawhorse engineer counterpoise wigwa wakefu genr brainstorm</Line>
   </Level>
   <Level>
    <NewCharacters>cx</NewCharacters>
-   <Line>shadowboxes antacids retrenching cants panache fractious compressor scrawniest</Line>
-   <Line>elocution scourer thunderclouds unpacking indirections contentiousnesses</Line>
-   <Line>scaremongers officiation clothespin reselects emetic functioned concoct cinctures</Line>
-   <Line>wackier corrupting chugging inferencing competitors caribou peacemakings</Line>
-   <Line>mice luncheon compose commutes tricolored faculties shucker tamaracks</Line>
-   <Line>contraception stockholder coarsening executions kcal cornucopias commercialisms</Line>
-   <Line>escaper livestock scubas cares concordant defunct perceives crosspatches</Line>
-   <Line>nucleation sculptural chugging uncivil betcha exclusion biscuit crouping</Line>
-   <Line>sanctums commonsense putrescences criming crisis restrictive unsociable</Line>
-   <Line>biconnected straitjacketing ergonomics braced balaclava disinfecting recited</Line>
-   <Line>necessitation pellucid uncrossing outscored occulter pecking conformation</Line>
-   <Line>catgut quitclaiming exacerbate cincturing elasticities nuthatch undercharges</Line>
-   <Line>obstetrical exalting nonexplosive choirmaster decremented witchcraft perception</Line>
-   <Line>complicators efficient outbacks licked prancing stacking isotonic exterminators</Line>
-   <Line>experiment halfback connivance teacups electoral cons ecru poulticing saccharides</Line>
-   <Line>codgers hesitancies backslashed commencement universalistic smacking</Line>
-   <Line>maximum electroshocking discords charioted craw carcass cliffs noticed</Line>
-   <Line>cosmeticians scriptural annunciating vexed scofflaw checkoff gelcap blackcurrant</Line>
-   <Line>pencil baccalaureates unconcerning reinspected pharmacologist reticulation</Line>
-   <Line>cravened muckier correcter coffeecup lockets mariachi oculists subscripts</Line>
-   <Line>constituents commemorator creations scalloping commentates innocentest discipleship</Line>
-   <Line>captious noninclusive etcher cleanlinesses priceless pathologic cannabises</Line>
-   <Line>adduct triceratops impracticalness packsaddle lilacs chipmunk muscles</Line>
-   <Line>trichinoses instructed consenting monstrances evacuative chis cored creped</Line>
-   <Line>complimented solace parachute cowardice cascara reconvened combats orthorhombic</Line>
-   <Line>quarterbacking ceriums contour ebullience woodchuck stereoscope expressiveness</Line>
-   <Line>nitpicking projects beckoning luxuriate conciliating noncaloric ocarina</Line>
-   <Line>minuscules clambers merchandises lucre crippled technologist authenticator</Line>
-   <Line>pectic jurisdictions incinerate blackguarded interprocessor teleconferencing</Line>
-   <Line>watchwords urticarias beseecher clamminess acres curlinesses uncounted</Line>
+   <Line>cull continu spectroscopi captionin complete pronounce accumulatio</Line>
+   <Line>seraphicall misconstruin conservativenes scrabblin cosmeticia deficiencie</Line>
+   <Line>copiousl chican dissociativel pronouncin congenitall extende cementer</Line>
+   <Line>poleax attachment recombine compatibilitie colorles obscenes spamblock</Line>
+   <Line>cinchin agrochemica nonreciproca cleare coastlin crumblines insurrectio</Line>
+   <Line>discounte preconditionin relocke complexion destructibl crawlin corrode</Line>
+   <Line>decommissione sec percusse discograph beneficia couple pixel officialis affixe</Line>
+   <Line>lurchin rapprochemen raccoon incom nic doctorin ratche falsificatio</Line>
+   <Line>ethnicall obsolesce unpunctualit effulgenc lunchroo chaoticall sackful</Line>
+   <Line>shucke microelectroni watchtowe occurrin processe electrocardiograph</Line>
   </Level>
   <Level>
    <NewCharacters>yz</NewCharacters>
-   <Line>sylphic detoxifying hypertrophies accompany orthodoxy westernizes incomprehensibility</Line>
-   <Line>demilitarize universally grippingly esthetically contemporary sedimentary</Line>
-   <Line>fragility mythically electrolyzed jimmy speedy nudity horseplayer seltzer</Line>
-   <Line>disqualify imposingly desolately crucially rhythmic capaciously rumply</Line>
-   <Line>challengingly ingenuously summary lippy unoptimizes individualized factuality</Line>
-   <Line>flirtatiously abidingly prickly sexily johnnycake consistently legitimization</Line>
-   <Line>dyslexias uproariously bibliographically toasty dehumanizes microanalytic</Line>
-   <Line>nonfreezing difficulty abbey understandably instinctively demonetizing buoy</Line>
-   <Line>laundryman unvarying bilaterally baptizers fogy debauchery vitalizing delightfully</Line>
-   <Line>lazed yearning scrutinizes kittenishly anaglyph demilitarization depolarize</Line>
-   <Line>asymmetry terminally scarcely pasteurize mutably seismography epidemically</Line>
-   <Line>physician collectivized surreptitiously strayer harrying stiltedly patriarchy</Line>
-   <Line>sanctimoniously searingly tantalized admirably traumatizing gallimaufry unequalized</Line>
-   <Line>dizzy unsuspectingly ascendancy coweringly reorganizes lyricists internationalizing</Line>
-   <Line>declamatory pussyfooting richly expressionlessly axiomatization soybean</Line>
-   <Line>joyfulnesses yellowing warranty slashingly yowled importunely eyefuls inhumanity</Line>
-   <Line>platitudinously mys miscarrying ridiculously occupy minimizers rowdyism horizon</Line>
-   <Line>employees pleasingly capillary catalytically propinquity tommy seizable</Line>
-   <Line>flippantly credibility memorially puppyish eyewash haze paycheck array</Line>
-   <Line>hydrodynamical hypothyroid effigy campanology polyclinic unorganized acoustically</Line>
-   <Line>ineffability overcapitalized unparameterized presbyter brotherly inconsistently</Line>
-   <Line>deputizes archaizes readying telemetry zeppelin incommodiously very damply</Line>
-   <Line>youthfully descry venously safetying burly locationally rectory modifying</Line>
-   <Line>exaggeratedly yakked pluralize capsizes situationally rationalizing idiocy</Line>
-   <Line>subway prodigy leukocyte costively apply cosmetically inappropriately</Line>
-   <Line>loyalties jazzy thirsty impenitently curly illegally yearned infrequently</Line>
-   <Line>sukiyaki palatalize ferry tranquilizing globularity sermonizes intellectualizes</Line>
-   <Line>interdependency depreciatively resolvability trailblazing antithetically syntactics</Line>
-   <Line>optimizers nanotechnology horseplay housefly soliloquize lamasery thuggery</Line>
-   <Line>intermolecularly layperson immunizing disarmingly distantly uncriticizing suburbanizing</Line>
+   <Line>skylight syllabicatin secularize pygm amazo fizze overemphasize summariz</Line>
+   <Line>heavyse appetize metaphysicall fraye psychoanalyticall economizer bricklayer</Line>
+   <Line>mestizo yashmak yukk hygromete glamorizatio synthesi dillydall yup wheezil</Line>
+   <Line>psychedelic burglariz phyl polytheis ethy nylon delaye psychosomatic highboy</Line>
+   <Line>polynomiall hysteresi polymerase pyrimidine bowdleriz sterilize gazetteere</Line>
+   <Line>playtim initializatio haphazar legitimatiz buzzard plasticizin sizzle</Line>
+   <Line>emblazone zoolog anglicize rhyme dyestuff credenz ray squeezebo swiz stargaze</Line>
+   <Line>baptiz mobilize throwaway oversizin dynast harmonize sublaye metalize</Line>
+   <Line>humanizatio buckeye overspecialize graybeard magazine clearway yellow enjoyment</Line>
+   <Line>layere flywa mizzen baptize capsiz styluse glaz synonymou bellyach</Line>
   </Level>
   <Level>
    <NewCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</NewCharacters>
-   <Line>Tanitansy Issac Dy Lindbergh Kennett Holmes Nicolea Sherm Eloise Gratia</Line>
-   <Line>Mobutu Leonidas Lexi CCU Goth Reinald Tye Goteborg Gaines Randell Ogdan</Line>
-   <Line>Mordred Passions Nalani Thomasine Aldous Jacqueline Foley Montpelier</Line>
-   <Line>Samantha Nadeen Deann Crystie Masonic Vanderbilt Ninetta Gates RFC Darren</Line>
-   <Line>Wolfgang Norah Tao Lionello Saleem Keefer Boote Micmacs Farmer Cleve</Line>
-   <Line>Drona Lhasa Bruce Macintosh Grammies Aguirre Dutchman Pissaro Highfield</Line>
-   <Line>Graehme Dukie Gaylene Thornton Kamikazes Yaounde Clifford Dvina Ellynn</Line>
-   <Line>Exchequer Korans Angelle MacArthur Sharleen AFB Br Vulcan Karylin Margarette</Line>
-   <Line>Alfi Caltech Emyle Angola Dexedrine Bendicty Berkowitz Schmitt Oise</Line>
-   <Line>Subaru Nathalie Ujungpandang Fanechka Kahn Navarro Odie Jacky Highlands</Line>
-   <Line>Jun Natalie Newcastle Gujarati Shelby LBJ Ramayana Negroid Univac</Line>
-   <Line>Vistula Kinsey Pole Arvy Hui Byronic QM Jason Baden Talmudic TWX Annetta</Line>
-   <Line>Babylonian Lehigh Lucille Wesleyan Vanderpoel Stoicisms Rebekkah Louisette</Line>
-   <Line>Sir Karlee Ricardo Fionna Letti Travis Abagail Tyndale Aug Davide</Line>
-   <Line>Gabbie GATT NC Bunsen Munchhausen Irkutsk Windows Rom Hyades Melcher</Line>
-   <Line>Surabaya WV Silurian Verla Harpy Stavros Chaddie Vandyke Bodhisattva</Line>
-   <Line>Rushmore Bennett Aldo Alane Emilio Gino Galbraith Darwinian Lovecraft</Line>
-   <Line>Rudy Cornelle Lothaire Afrocentrism Murdock Coletta Grantley Twila</Line>
-   <Line>Plath Cash Frigga Frenches Deonne Lycras Mahavira Tocantins Melly</Line>
-   <Line>Wales Cellini Bradney Hartman Stan Mitzi Juliana Occident Dreddy Valera</Line>
-   <Line>Robson Montenegro Della Delcine Redstone Spengler Ferrel Occidentals</Line>
-   <Line>Magnuson Jacobs Friend Daffi Methuselahs SBA Asoka Palestine Hatti VT</Line>
-   <Line>COBOLs Jastrow Malayans ABCs Krakow Hippocratic Tobey Frisian Whitewater</Line>
-   <Line>Vichy DC Aquila SST Simpson Miguelita Hilliard Zia Dalton Laban Fonzie</Line>
-   <Line>Charity Lysistrata Kizzee Eocene Ulster Nollie Merrily USA Uranus Sevastopol</Line>
-   <Line>Padraic Brzezinski Milty Grenada Scrooge Browning Matty Wait Smokey</Line>
-   <Line>Putin Slesinger Ecstasy Julienne Idahoans Hz Wisconsinites Nations</Line>
-   <Line>Shiraz Mela McGovern Khan Dusenbury Holman Brena Johannes Gujarati</Line>
-   <Line>Eberto PAC Annabela Sabbaths Schneider Murcia Moran Houyhnhnm Cronus</Line>
-   <Line>Ucayali Carnap Leigh Laurence Frito Bert NoDoz Giffy Cecily Noemi Edna</Line>
+   <Line>I U Frann Iss V Sophe Ma Blanch Janissar Karl Equuleu Jech Dia</Line>
+   <Line>Mariejeann Filofa Shoshann Cheeve Ludvi Stoicism Alabam Fo Belmon Al Peshawa</Line>
+   <Line>Episcopalia Tammi Huc Castill McDowel Sabrin Izanam Salina Soav Gerar Margarett</Line>
+   <Line>Blondell Austin Menande Vandal Winnifre Daun Porsch Thomis Noel TELNE</Line>
+   <Line>Row Ber Fraue Kenya Trix Pissar Bake Vandal Wale Jua Benghaz Ronal</Line>
+   <Line>Babylonia Jacobit Guamania Zebede Hagiograph Stou AWO Dustbuste Shani</Line>
+   <Line>Edgard Rigolett Danic Carr Donn Rosco Jazmi Ermini BB Coloradoa Hebrais</Line>
+   <Line>Stockhause Tolyatt Marshal VG Haga Kamek Gall Pilcomay Ballar Morto Renascenc</Line>
+   <Line>Hebride Tup Hoebar Tunisia El Crysta Cheyenn SD Mad SU Silvai Johnn</Line>
+   <Line>Vis Ramb Luge Demetriu Collie Nettl Dicken Joelyn Conservativ Fonzi</Line>
   </Level>
  </Levels>
 </KTouchLecture>
