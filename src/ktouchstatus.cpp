@@ -23,6 +23,7 @@
 KTouchStatus::KTouchStatus(QWidget *parent)
  : KTouchStatusLayout(parent)
 {
+    applyPreferences();
 }
 
 void KTouchStatus::applyPreferences() {
