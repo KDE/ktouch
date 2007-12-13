@@ -336,8 +336,10 @@ void KTouchTrainer::continueTraining() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::updateLevelChangeButtons() {
-    m_statusWidget->levelUpBtn->setEnabled(m_level < m_lecture->levelCount() - 1);
-    m_statusWidget->levelDownBtn->setEnabled(m_level > 0);
+    if (!Prefs::disableManualLevelChange()) {
+	m_statusWidget->levelUpBtn->setEnabled(m_level < m_lecture->levelCount() - 1);
+	m_statusWidget->levelDownBtn->setEnabled(m_level > 0);
+    }
 }
 
 void KTouchTrainer::storeTrainingStatistics() {
