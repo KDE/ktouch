@@ -77,6 +77,8 @@ void KTouchTextLineWidget::applyPreferences() {
 
 
 void KTouchTextLineWidget::setTeacherText(const QString& text) {
+    direction = text.isRightToLeft() ? Qt::RightToLeft : Qt::LeftToRight;
+    setLayoutDirection( direction );
     teacher->setText(text);
     recalculateSize();
     setStudentText("");
