@@ -432,7 +432,7 @@ void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
 // *** KTouchStatisticsData ***
 
 void KTouchStatisticsData::clear() {
-	m_userName = i18n("default user");
+	m_userName = i18n("Default User");
 	m_lectureStats.clear();
 }
 // ----------------------------------------------------------------------------
@@ -554,9 +554,9 @@ bool KTouchStatisticsData::readStats(const QDomNode &in) {
 
 	QDomNode n = in.namedItem("User");
 	if (!n.isNull()) 	m_userName = n.firstChild().nodeValue();
-	else 				m_userName = i18n("default user");
-	if (m_userName.isEmpty())	m_userName = i18n("default user");
-	if (m_userName.isEmpty())	m_userName = "default user";
+	else 				m_userName = i18n("Default User");
+	if (m_userName.isEmpty())	m_userName = i18n("Default User");
+	if (m_userName.isEmpty())	m_userName = "Default User";
 
 //	kDebug() << "[KTouchStatisticsData::readStats]  reading user stats...";
 	kDebug() << "[KTouchStatisticsData::readStats]  User = '" << m_userName << "'";
@@ -586,7 +586,7 @@ void KTouchStatisticsData::writeStats(QDomDocument& doc, QDomElement& root) cons
 
 	// store user name
 	QString username = m_userName;
-	if (username.isEmpty()) 	username = i18n("default user");
+	if (username.isEmpty()) 	username = i18n("Default User");
 	QDomElement userElement = doc.createElement("User");
 	QDomText userText = doc.createTextNode(username);
 	userElement.appendChild(userText);

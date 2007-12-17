@@ -159,7 +159,7 @@
     </entry>
     <entry type="String" name="CurrentUserName" >
       <label >The user name of the current user.</label>
-      <default >default user</default>
+      <default >Default User</default>
     </entry>
   </group>
 </kcfg>
