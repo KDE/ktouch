@@ -52,11 +52,11 @@ kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 #uncomment this if oxygen icons for ktouch are available
 #set(ktouch_icons
-#    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/16x16/apps/ktouch.png
-#    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/32x32/apps/ktouch.png
-#    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/48x48/apps/ktouch.png
-#    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/64x64/apps/ktouch.png
-#    ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/128x128/apps/ktouch.png
+#    ${KDE4_ICON_DIR}/oxygen/16x16/apps/ktouch.png
+#    ${KDE4_ICON_DIR}/oxygen/32x32/apps/ktouch.png
+#    ${KDE4_ICON_DIR}/oxygen/48x48/apps/ktouch.png
+#    ${KDE4_ICON_DIR}/oxygen/64x64/apps/ktouch.png
+#    ${KDE4_ICON_DIR}/oxygen/128x128/apps/ktouch.png
 #)
 set(ktouch_icons
     ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi16-app-ktouch.png
