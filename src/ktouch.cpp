@@ -853,19 +853,14 @@ void KTouch::updateKeyboardActionCheck() {
 
 void KTouch::updateCurrentUserActionCheck() {
     QStringList user_list = m_userStats.keys();
-	int index = user_list.indexOf(Prefs::currentUserName());
-	// if not found, fall back on default user
-	if (index == -1) {
-		Prefs::setCurrentUserName(i18n("Default User"));
-		index = user_list.indexOf(Prefs::currentUserName());
-	}
-	if (index == -1) {
-		// we must be missing the default user in the list,
-		// this shouldn't happen, though...
-		kDebug() << "Missing default user in list. Adding default user to list.";
-		user_list.append(i18n("Default User"));
-		index = user_list.count() -1;
-	}
-   	m_currentUserAction->setCurrentItem(index);
+    int index = user_list.indexOf(Prefs::currentUserName());
+    // if not found, fall back on Default User
+    if (index == -1) {
+	index = user_list.indexOf("Default User");
+	KMessageBox::information(this, i18n("Changing user to '%1'. Restarting training session at current level.", user_list[index]) );
+	m_trainer->startTraining(true);
+    }
+    Prefs::setCurrentUserName(user_list[index]);
+    m_currentUserAction->setCurrentItem(index);
 }
 // ----------------------------------------------------------------------------

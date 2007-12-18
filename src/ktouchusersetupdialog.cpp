@@ -45,13 +45,12 @@ void KTouchUserSetupDialog::showDialog(QStringList & user_names) {
 // ----------------------------------------------------------------------------
 
 void KTouchUserSetupDialog::userSelected(int index) {
-	if (index == -1 || userListWidget->count()<=1)
-	{
-		removeBtn->setEnabled(false);
-	}
-	else {
-		removeBtn->setEnabled(true);
-	}
+    if (index == -1 || userListWidget->count()<=1 || userListWidget->currentItem()->text() == i18n("Default User"))  {
+	removeBtn->setEnabled(false);
+    }
+    else {
+	removeBtn->setEnabled(true);
+    }
 }
 // ----------------------------------------------------------------------------
 
@@ -80,9 +79,12 @@ void KTouchUserSetupDialog::addBtnClicked() {
 // ----------------------------------------------------------------------------
 
 void KTouchUserSetupDialog::removeBtnClicked() {
-	int index = userListWidget->currentRow();
-	if (index == -1) return;
-	userListWidget->takeItem(index);
+    int index = userListWidget->currentRow();
+    if (userListWidget->count() == 1) {
+	removeBtn->setEnabled(false); 
+	return;
+    }
+    userListWidget->takeItem(index);
 }
 // ----------------------------------------------------------------------------
 
