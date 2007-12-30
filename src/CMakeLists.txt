@@ -51,20 +51,9 @@ set(ktouch_SRCS
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 #uncomment this if oxygen icons for ktouch are available
-#set(ktouch_icons
-#    ${KDE4_ICON_DIR}/oxygen/16x16/apps/ktouch.png
-#    ${KDE4_ICON_DIR}/oxygen/32x32/apps/ktouch.png
-#    ${KDE4_ICON_DIR}/oxygen/48x48/apps/ktouch.png
-#    ${KDE4_ICON_DIR}/oxygen/64x64/apps/ktouch.png
-#    ${KDE4_ICON_DIR}/oxygen/128x128/apps/ktouch.png
-#)
-set(ktouch_icons
-    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi16-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi32-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi48-app-ktouch.png
-    ${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi128-app-ktouch.png
-)
-kde4_add_win32_app_icon(ktouch_SRCS ${ktouch_icons})
+#kde4_add_app_icon(ktouch_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/ktouch.png")
+kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktouch.png")
+
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
