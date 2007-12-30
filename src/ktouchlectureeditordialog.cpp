@@ -13,7 +13,6 @@
 #include "ktouchlectureeditordialog.h"
 #include "ktouchlectureeditordialog.moc"
 
-#include <QLabel>
 
 
 #include <kpushbutton.h>

@@ -12,7 +12,6 @@
 
 #include "ktouchutils.h"
 
-#include <QTextStream>
 #include <QStringList>
 #include <QMap>
 

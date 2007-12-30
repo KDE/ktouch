@@ -13,8 +13,6 @@
 #include "ktouchtrainer.h"
 #include "ktouchtrainer.moc"
 
-#include <QLCDNumber>
-#include <QFile>
 #include <QTimer>
 
 #include <KMessageBox>

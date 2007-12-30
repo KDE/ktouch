@@ -20,10 +20,7 @@
 #include <kplotaxis.h>
 
 #include <QtAlgorithms>
-#include <QLabel>
-#include <QRadioButton>
 #include <QDialog>
-#include <QLCDNumber>
 
 #include <kpushbutton.h>
 #include <kcombobox.h>

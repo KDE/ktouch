@@ -15,10 +15,6 @@
 
 #include <QGraphicsView>
 #include <QResizeEvent>
-#include <QPaintEvent>
-#include <QList>
-#include <QVector>
-#include <QMap>
 #include <QSet>
 
 class KUrl;

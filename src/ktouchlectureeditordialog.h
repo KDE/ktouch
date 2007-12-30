@@ -13,7 +13,6 @@
 #ifndef KTOUCHLECTUREEDITORDIALOG_H
 #define KTOUCHLECTUREEDITORDIALOG_H
 
-#include <QFont>
 #include <QDialog>
 
 #include <kurl.h>

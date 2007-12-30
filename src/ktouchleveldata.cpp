@@ -12,7 +12,6 @@
 
 #include "ktouchleveldata.h"
 
-#include <QIODevice>
 #include <QTextStream>
 #include <QtXml/QDomNode>
 

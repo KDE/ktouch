@@ -13,7 +13,6 @@
 #include "ktouchlevelsummarydialog.h"
 #include "ktouchlevelsummarydialog.moc"
 
-#include <QtGui>
 
 #include <kdebug.h>
 

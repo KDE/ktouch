@@ -13,7 +13,6 @@
 #ifndef KTOUCH_H
 #define KTOUCH_H
 
-#include <QColor>
 #include <QLabel>
 #include <QKeyEvent>
 #include <QResizeEvent>
