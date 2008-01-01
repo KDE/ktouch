@@ -125,7 +125,7 @@
             </sizepolicy>
            </property>
            <property name="text" >
-            <string>levelLabel1</string>
+            <string></string>
            </property>
           </widget>
          </item>
@@ -145,7 +145,7 @@
             </sizepolicy>
            </property>
            <property name="text" >
-            <string>lectureLabel1</string>
+            <string></string>
            </property>
           </widget>
          </item>
