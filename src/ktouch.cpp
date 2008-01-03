@@ -658,12 +658,12 @@ void KTouch::setupActions() {
 
     action = actionCollection()->addAction( "file_editcolors" );
     action->setText( i18n("&Edit Color Scheme...") );
-    action->setIcon( KIcon("color-fill") );
+    action->setIcon( KIcon("format-fill-color") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditColors()));
 
     action = actionCollection()->addAction( "file_editkeyboard" );
     action->setText( i18n("&Edit Keyboard Layout...") );
-    action->setIcon( KIcon("preferences-desktop-keyboard") );
+    action->setIcon( KIcon("preferences-desktop-keyboard-layout") );
     connect(action, SIGNAL(triggered(bool)), SLOT(fileEditKeyboard()));
 
     KStandardAction::quit(this, SLOT(fileQuit()), actionCollection());
