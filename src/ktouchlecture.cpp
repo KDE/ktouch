@@ -130,7 +130,7 @@ QSet<QChar> KTouchLecture::knownCharsInLevel(unsigned int level_num) const {
 		}
 	}
 	QString chars;
-	foreach (QChar ch, knownChars)
+	foreach (const QChar &ch, knownChars)
 		chars.append(ch);
 	kDebug() << "Known chars: " << chars;
 	return knownChars;
