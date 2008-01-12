@@ -1,1 +1,2 @@
-install( FILES typewriter.wav up.wav down.wav  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
+FILE(GLOB wavfile *.wav)
+install( FILES ${wavfile}  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
