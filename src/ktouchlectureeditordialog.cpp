@@ -47,7 +47,7 @@ KTouchLectureEditorDialog::KTouchLectureEditorDialog(QWidget *parent)
     deleteBtn->setIcon( KIcon("list-remove") );
     newBtn->setIcon( KIcon("list-add") );
 
-    fontButton->setIcon( KIcon("font") );
+    fontButton->setIcon( KIcon("preferences-desktop-font") );
     openButton->setIcon( KIcon("document-open") );
     quitButton->setIcon( KIcon("application-exit") );
     saveButton->setIcon( KIcon("document-save") );
