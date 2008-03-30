@@ -15,6 +15,7 @@
 
 #include <utility>
 #include <iterator>
+#include <algorithm>
 
 #include <kplotobject.h>
 #include <kplotaxis.h>
