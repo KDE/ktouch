@@ -1,0 +1,316 @@
+<KTouchKeyboard>
+ <Title>Arabic</Title>
+ <Comment>Arabic Keyboard Layout</Comment>
+ <FontSuggestions>Sans Serif,9,-1,5,50,0,0,0,0,0</FontSuggestions>
+ <Language>ar</Language>
+ <Keys>
+  <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="1616" Position="TopLeft" >ِ</Char>
+   <Char Unicode="1588" Position="BottomRight" >ش</Char>
+  </Key>
+  <Key Width="80" X="280" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="1613" Position="TopLeft" >ٍ</Char>
+   <Char Unicode="1587" Position="BottomRight" >س</Char>
+  </Key>
+  <Key Width="80" X="380" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="93" Position="TopLeft" >]</Char>
+   <Char Unicode="1610" Position="BottomRight" >ي</Char>
+  </Key>
+  <Key Width="80" X="480" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="91" Position="TopLeft" >[</Char>
+   <Char Unicode="1576" Position="BottomRight" >ب</Char>
+  </Key>
+  <Key Width="80" X="780" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="1600" Position="TopLeft" >ـ</Char>
+   <Char Unicode="1578" Position="BottomRight" >ت</Char>
+  </Key>
+  <Key Width="80" X="880" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="1548" Position="TopLeft" >،</Char>
+   <Char Unicode="1606" Position="BottomRight" >ن</Char>
+  </Key>
+  <Key Width="80" X="980" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="47" Position="TopLeft" >/</Char>
+   <Char Unicode="1605" Position="BottomRight" >م</Char>
+  </Key>
+  <Key Width="80" X="1080" Y="200" Height="80" Type="FINGER" >
+   <Char Unicode="58" Position="TopLeft" >:</Char>
+   <Char Unicode="1603" Position="BottomRight" >ك</Char>
+  </Key>
+  <Key Width="130" X="0" Y="100" Height="80" Type="TAB" />
+  <Key Width="150" X="1280" Y="200" Height="80" Type="ENTER" />
+  <Key Width="200" X="1230" Y="300" Height="80" Type="SHIFT" />
+  <Key Width="130" X="1150" KeyText="Alt" Y="400" Height="80" Type="OTHER" />
+  <Key Width="130" X="1300" KeyText="Ctrl" Y="400" Height="80" Type="OTHER" />
+  <Key Width="130" X="150" KeyText="Alt" Y="400" Height="80" Type="OTHER" />
+  <Key Width="130" X="0" KeyText="Ctrl" Y="400" Height="80" Type="OTHER" />
+  <Key Width="830" X="300" Y="400" Height="80" Type="SPACE" />
+  <Key Width="210" X="0" Y="300" Height="80" Type="SHIFT" />
+  <Key Width="160" X="0" Y="200" Height="80" Type="CAPSLOCK" />
+  <Key Width="130" X="1300" Y="0" Height="80" Type="BACKSPACE" />
+  <Key Width="80" X="0" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
+   <Char Unicode="126" Position="TopLeft" >~</Char>
+   <Char Unicode="1617" Position="TopRight" >ّ</Char>
+   <Char Unicode="96" Position="BottomLeft" >`</Char>
+   <Char Unicode="1584" Position="BottomRight" >ذ</Char>
+  </Key>
+  <Key Width="80" X="100" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
+   <Char Unicode="33" Position="TopLeft" >!</Char>
+   <Char Unicode="49" Position="BottomLeft" >1</Char>
+  </Key>
+  <Key Width="80" X="200" Y="0" Height="80" FingerKeyIndex="1" Type="NORMAL" >
+   <Char Unicode="64" Position="TopLeft" >@</Char>
+   <Char Unicode="50" Position="BottomLeft" >2</Char>
+  </Key>
+  <Key Width="80" X="300" Y="0" Height="80" FingerKeyIndex="2" Type="NORMAL" >
+   <Char Unicode="35" Position="TopLeft" >#</Char>
+   <Char Unicode="51" Position="BottomLeft" >3</Char>
+  </Key>
+  <Key Width="80" X="400" Y="0" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="36" Position="TopLeft" >$</Char>
+   <Char Unicode="52" Position="BottomLeft" >4</Char>
+  </Key>
+  <Key Width="80" X="500" Y="0" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="37" Position="TopLeft" >%</Char>
+   <Char Unicode="53" Position="BottomLeft" >5</Char>
+  </Key>
+  <Key Width="80" X="600" Y="0" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="94" Position="TopLeft" >^</Char>
+   <Char Unicode="54" Position="BottomLeft" >6</Char>
+  </Key>
+  <Key Width="80" X="700" Y="0" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="38" Position="TopLeft" >&amp;</Char>
+   <Char Unicode="55" Position="BottomLeft" >7</Char>
+  </Key>
+  <Key Width="80" X="800" Y="0" Height="80" FingerKeyIndex="5" Type="NORMAL" >
+   <Char Unicode="42" Position="TopLeft" >*</Char>
+   <Char Unicode="56" Position="BottomLeft" >8</Char>
+  </Key>
+  <Key Width="80" X="900" Y="0" Height="80" FingerKeyIndex="6" Type="NORMAL" >
+   <Char Unicode="40" Position="TopLeft" >(</Char>
+   <Char Unicode="57" Position="BottomLeft" >9</Char>
+  </Key>
+  <Key Width="80" X="1000" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="41" Position="TopLeft" >)</Char>
+   <Char Unicode="48" Position="BottomLeft" >0</Char>
+  </Key>
+  <Key Width="80" X="1100" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="95" Position="TopLeft" >_</Char>
+   <Char Unicode="45" Position="BottomLeft" >-</Char>
+  </Key>
+  <Key Width="80" X="1200" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="43" Position="TopLeft" >+</Char>
+   <Char Unicode="61" Position="BottomLeft" >=</Char>
+  </Key>
+  <Key Width="80" X="150" Y="100" Height="80" FingerKeyIndex="0" Type="NORMAL" >
+   <Char Unicode="1614" Position="TopLeft" >َ</Char>
+   <Char Unicode="1590" Position="BottomRight" >ض</Char>
+  </Key>
+  <Key Width="80" X="250" Y="100" Height="80" FingerKeyIndex="1" Type="NORMAL" >
+   <Char Unicode="1611" Position="TopLeft" >ً</Char>
+   <Char Unicode="1589" Position="BottomRight" >ص</Char>
+  </Key>
+  <Key Width="80" X="350" Y="100" Height="80" FingerKeyIndex="2" Type="NORMAL" >
+   <Char Unicode="1615" Position="TopLeft" >ُ</Char>
+   <Char Unicode="1579" Position="BottomRight" >ث</Char>
+  </Key>
+  <Key Width="80" X="450" Y="100" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="1612" Position="TopLeft" >ٌ</Char>
+   <Char Unicode="1602" Position="BottomRight" >ق</Char>
+  </Key>
+  <Key Width="80" X="550" Y="100" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="1601" Position="BottomRight" >ف</Char>
+  </Key>
+  <Key Width="80" X="230" Y="300" Height="80" FingerKeyIndex="0" Type="NORMAL" >
+   <Char Unicode="126" Position="TopLeft" >~</Char>
+   <Char Unicode="1574" Position="BottomRight" >ئ</Char>
+  </Key>
+  <Key Width="80" X="750" Y="100" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="96" Position="TopLeft" >`</Char>
+   <Char Unicode="1593" Position="BottomRight" >ع</Char>
+  </Key>
+  <Key Width="80" X="850" Y="100" Height="80" FingerKeyIndex="5" Type="NORMAL" >
+   <Char Unicode="247" Position="TopLeft" >÷</Char>
+   <Char Unicode="1607" Position="BottomRight" >ه</Char>
+  </Key>
+  <Key Width="80" X="950" Y="100" Height="80" FingerKeyIndex="6" Type="NORMAL" >
+   <Char Unicode="215" Position="TopLeft" >×</Char>
+   <Char Unicode="1582" Position="BottomRight" >خ</Char>
+  </Key>
+  <Key Width="80" X="1050" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="1563" Position="TopLeft" >؛</Char>
+   <Char Unicode="1581" Position="BottomRight" >ح</Char>
+  </Key>
+  <Key Width="80" X="1150" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="60" Position="TopLeft" >&lt;</Char>
+   <Char Unicode="1580" Position="BottomRight" >ج</Char>
+  </Key>
+  <Key Width="80" X="1250" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="62" Position="TopLeft" >></Char>
+   <Char Unicode="1583" Position="BottomRight" >د</Char>
+  </Key>
+  <Key Width="80" X="580" Y="200" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="1604" Position="BottomRight" >ل</Char>
+  </Key>
+  <Key Width="80" X="680" Y="200" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="1571" Position="TopLeft" >أ</Char>
+   <Char Unicode="1575" Position="BottomRight" >ا</Char>
+  </Key>
+  <Key Width="80" X="1180" Y="200" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="34" Position="TopLeft" >"</Char>
+   <Char Unicode="1591" Position="BottomRight" >ط</Char>
+  </Key>
+  <Key Width="80" X="1350" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="124" Position="TopLeft" >|</Char>
+   <Char Unicode="92" Position="BottomLeft" >\</Char>
+  </Key>
+  <Key Width="80" X="650" Y="100" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="1573" Position="TopLeft" >إ</Char>
+   <Char Unicode="1594" Position="BottomRight" >غ</Char>
+  </Key>
+  <Key Width="80" X="330" Y="300" Height="80" FingerKeyIndex="1" Type="NORMAL" >
+   <Char Unicode="1618" Position="TopLeft" >ْ</Char>
+   <Char Unicode="1569" Position="BottomRight" >ء</Char>
+  </Key>
+  <Key Width="80" X="430" Y="300" Height="80" FingerKeyIndex="2" Type="NORMAL" >
+   <Char Unicode="125" Position="TopLeft" >}</Char>
+   <Char Unicode="1572" Position="BottomRight" >ؤ</Char>
+  </Key>
+  <Key Width="80" X="530" Y="300" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="123" Position="TopLeft" >{</Char>
+   <Char Unicode="1585" Position="BottomRight" >ر</Char>
+  </Key>
+  <Key Width="80" X="630" Y="300" Height="80" FingerKeyIndex="3" Type="NORMAL" >
+   <Char Unicode="65275" Position="BottomRight" >ﻻ</Char>
+  </Key>
+  <Key Width="80" X="730" Y="300" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="1570" Position="TopLeft" >آ</Char>
+   <Char Unicode="1609" Position="BottomRight" >ى</Char>
+  </Key>
+  <Key Width="80" X="830" Y="300" Height="80" FingerKeyIndex="4" Type="NORMAL" >
+   <Char Unicode="39" Position="TopLeft" >'</Char>
+   <Char Unicode="1577" Position="BottomRight" >ة</Char>
+  </Key>
+  <Key Width="80" X="930" Y="300" Height="80" FingerKeyIndex="5" Type="NORMAL" >
+   <Char Unicode="44" Position="TopLeft" >,</Char>
+   <Char Unicode="1608" Position="BottomRight" >و</Char>
+  </Key>
+  <Key Width="80" X="1030" Y="300" Height="80" FingerKeyIndex="6" Type="NORMAL" >
+   <Char Unicode="46" Position="TopLeft" >.</Char>
+   <Char Unicode="1586" Position="BottomRight" >ز</Char>
+  </Key>
+  <Key Width="80" X="1130" Y="300" Height="80" FingerKeyIndex="7" Type="NORMAL" >
+   <Char Unicode="1567" Position="TopLeft" >؟</Char>
+   <Char Unicode="1592" Position="BottomRight" >ظ</Char>
+  </Key>
+ </Keys>
+ <Connections>
+  <KeyConnector KeyUnicode="8" TargetKeyIndex="18" />
+  <KeyConnector KeyUnicode="13" TargetKeyIndex="9" />
+  <KeyConnector KeyUnicode="32" TargetKeyIndex="15" />
+  <KeyConnector KeyUnicode="33" TargetKeyIndex="20" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="34" TargetKeyIndex="46" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="35" TargetKeyIndex="22" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="36" TargetKeyIndex="23" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="37" TargetKeyIndex="24" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="38" TargetKeyIndex="26" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="39" TargetKeyIndex="46" />
+  <KeyConnector KeyUnicode="39" TargetKeyIndex="54" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="40" TargetKeyIndex="28" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="41" TargetKeyIndex="29" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="42" TargetKeyIndex="27" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="43" TargetKeyIndex="31" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="44" TargetKeyIndex="55" />
+  <KeyConnector KeyUnicode="44" TargetKeyIndex="55" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="45" TargetKeyIndex="30" />
+  <KeyConnector KeyUnicode="46" TargetKeyIndex="56" />
+  <KeyConnector KeyUnicode="46" TargetKeyIndex="56" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="47" TargetKeyIndex="57" />
+  <KeyConnector KeyUnicode="47" TargetKeyIndex="6" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="48" TargetKeyIndex="29" />
+  <KeyConnector KeyUnicode="49" TargetKeyIndex="20" />
+  <KeyConnector KeyUnicode="50" TargetKeyIndex="21" />
+  <KeyConnector KeyUnicode="51" TargetKeyIndex="22" />
+  <KeyConnector KeyUnicode="52" TargetKeyIndex="23" />
+  <KeyConnector KeyUnicode="53" TargetKeyIndex="24" />
+  <KeyConnector KeyUnicode="54" TargetKeyIndex="25" />
+  <KeyConnector KeyUnicode="55" TargetKeyIndex="26" />
+  <KeyConnector KeyUnicode="56" TargetKeyIndex="27" />
+  <KeyConnector KeyUnicode="57" TargetKeyIndex="28" />
+  <KeyConnector KeyUnicode="58" TargetKeyIndex="7" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="60" TargetKeyIndex="42" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="61" TargetKeyIndex="31" />
+  <KeyConnector KeyUnicode="62" TargetKeyIndex="43" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="64" TargetKeyIndex="21" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="91" TargetKeyIndex="42" />
+  <KeyConnector KeyUnicode="91" TargetKeyIndex="3" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="92" TargetKeyIndex="47" />
+  <KeyConnector KeyUnicode="93" TargetKeyIndex="43" />
+  <KeyConnector KeyUnicode="93" TargetKeyIndex="2" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="94" TargetKeyIndex="25" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="95" TargetKeyIndex="30" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="96" TargetKeyIndex="38" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="96" TargetKeyIndex="19" />
+  <KeyConnector KeyUnicode="123" TargetKeyIndex="51" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="124" TargetKeyIndex="47" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="125" TargetKeyIndex="50" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="126" TargetKeyIndex="19" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="126" TargetKeyIndex="37" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="215" TargetKeyIndex="40" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="247" TargetKeyIndex="39" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="257" TargetKeyIndex="16" />
+  <KeyConnector KeyUnicode="258" TargetKeyIndex="10" />
+  <KeyConnector KeyUnicode="259" TargetKeyIndex="17" />
+  <KeyConnector KeyUnicode="260" TargetKeyIndex="8" />
+  <KeyConnector KeyUnicode="262" TargetKeyIndex="14" />
+  <KeyConnector KeyUnicode="263" TargetKeyIndex="13" />
+  <KeyConnector KeyUnicode="264" TargetKeyIndex="11" />
+  <KeyConnector KeyUnicode="265" TargetKeyIndex="12" />
+  <KeyConnector KeyUnicode="1548" TargetKeyIndex="5" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1563" TargetKeyIndex="41" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1567" TargetKeyIndex="57" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="1569" TargetKeyIndex="49" />
+  <KeyConnector KeyUnicode="1570" TargetKeyIndex="53" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1571" TargetKeyIndex="45" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1572" TargetKeyIndex="50" />
+  <KeyConnector KeyUnicode="1573" TargetKeyIndex="48" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1574" TargetKeyIndex="37" />
+  <KeyConnector KeyUnicode="1576" TargetKeyIndex="3" />
+  <KeyConnector KeyUnicode="1577" TargetKeyIndex="54" />
+  <KeyConnector KeyUnicode="1578" TargetKeyIndex="4" />
+  <KeyConnector KeyUnicode="1579" TargetKeyIndex="34" />
+  <KeyConnector KeyUnicode="1580" TargetKeyIndex="42" />
+  <KeyConnector KeyUnicode="1581" TargetKeyIndex="41" />
+  <KeyConnector KeyUnicode="1582" TargetKeyIndex="40" />
+  <KeyConnector KeyUnicode="1583" TargetKeyIndex="43" />
+  <KeyConnector KeyUnicode="1584" TargetKeyIndex="19" />
+  <KeyConnector KeyUnicode="1585" TargetKeyIndex="51" />
+  <KeyConnector KeyUnicode="1586" TargetKeyIndex="56" />
+  <KeyConnector KeyUnicode="1587" TargetKeyIndex="1" />
+  <KeyConnector KeyUnicode="1588" TargetKeyIndex="0" />
+  <KeyConnector KeyUnicode="1589" TargetKeyIndex="33" />
+  <KeyConnector KeyUnicode="1590" TargetKeyIndex="32" />
+  <KeyConnector KeyUnicode="1591" TargetKeyIndex="46" />
+  <KeyConnector KeyUnicode="1592" TargetKeyIndex="57" />
+  <KeyConnector KeyUnicode="1593" TargetKeyIndex="38" />
+  <KeyConnector KeyUnicode="1594" TargetKeyIndex="48" />
+  <KeyConnector KeyUnicode="1600" TargetKeyIndex="4" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1601" TargetKeyIndex="36" />
+  <KeyConnector KeyUnicode="1602" TargetKeyIndex="35" />
+  <KeyConnector KeyUnicode="1603" TargetKeyIndex="7" />
+  <KeyConnector KeyUnicode="1604" TargetKeyIndex="44" />
+  <KeyConnector KeyUnicode="1605" TargetKeyIndex="6" />
+  <KeyConnector KeyUnicode="1606" TargetKeyIndex="5" />
+  <KeyConnector KeyUnicode="1607" TargetKeyIndex="39" />
+  <KeyConnector KeyUnicode="1608" TargetKeyIndex="55" />
+  <KeyConnector KeyUnicode="1609" TargetKeyIndex="53" />
+  <KeyConnector KeyUnicode="1610" TargetKeyIndex="2" />
+  <KeyConnector KeyUnicode="1611" TargetKeyIndex="33" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1612" TargetKeyIndex="35" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1613" TargetKeyIndex="1" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1614" TargetKeyIndex="32" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1615" TargetKeyIndex="34" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1616" TargetKeyIndex="0" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="1618" TargetKeyIndex="49" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="65275" TargetKeyIndex="52" />
+ </Connections>
+</KTouchKeyboard>
