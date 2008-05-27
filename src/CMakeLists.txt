@@ -58,7 +58,7 @@ kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
 
-install(TARGETS ktouch  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS ktouch  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
