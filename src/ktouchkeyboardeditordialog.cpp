@@ -631,11 +631,11 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
 void KTouchKeyboardEditorDialog::setModified(bool flag) {
     m_modified = flag;
     if (!m_currentURL.isEmpty()) {
-        if (flag) this->setWindowTitle("KTouch Keyboard Editor - " + m_currentURL.url() + i18n(" (modified)"));
-        else      this->setWindowTitle("KTouch Keyboard Editor - " + m_currentURL.url());
+        if (flag) this->setWindowTitle(i18n("KTouch Keyboard Editor - %1 %2", m_currentURL.url(), i18n(" (modified)")));
+        else      this->setWindowTitle(i18n("KTouch Keyboard Editor - %1",m_currentURL.url()));
     }
 	else
-		this->setWindowTitle("KTouch Keyboard Editor - " + i18n("<unnamed keyboard file>"));
+		this->setWindowTitle(i18n("KTouch Keyboard Editor - %1" , i18n("<unnamed keyboard file>")));
 }
 // -----------------------------------------------------------------------------
 
