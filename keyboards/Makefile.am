@@ -16,6 +16,7 @@ dvorak_fr.keyboard \
 hu.keyboard \
 he.keyboard \
 it.keyboard \
+nb.keyboard \
 sl.keyboard \
 pl.keyboard \
 sv.keyboard \

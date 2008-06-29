@@ -1,0 +1,190 @@
+####################################################
+#    KTouch
+#    Keybord layout file for Norwegian keyboard
+#    Encoding: UTF-8 (save as UTF-8 from editor)
+#    Made by Axel Bojer by manipulating the danish file
+#    Edit this file with tabs set to 8 characters.
+#    The Unicode characters are found in an extensive list
+#    over html codes -- see http://www.fileformat.info/info/unicode/
+#
+#    Refer to file en.keyboard for details.
+####################################################
+#
+#           Unicode KeyChar  x      y
+FingerKey	97		A		18  	20
+FingerKey	115		S		28  	20
+FingerKey	100		D		38  	20
+FingerKey	102		F		48  	20
+FingerKey	106		J		78  	20
+FingerKey	107		K		88  	20
+FingerKey	108		L		98  	20
+FingerKey	248		Ø		108 	20
+#
+ControlKey	260		Tab			0		10		15		10
+ControlKey	258		Shift		123		30		27		10
+ControlKey	264		AltGr		120		40		15		10
+ControlKey	265		Ctrl		135		40		15		10
+ControlKey	263		Alt			15		40		15		10
+ControlKey	262		Ctrl		0		40		15		10
+ControlKey	32		(Mellomrom)	30		40		90		10
+ControlKey	257		Shift		0		30		13		10
+ControlKey	259		CapsLock	0		20		18		10
+ControlKey  8 		BackSpace	130		0		20		10
+ControlKey	13		Enter		138		10		12	20	10
+
+#           Unicode KeyChar     x   y   FingerKeyUnicode
+NormalKey	124		|			0	0	97
+NormalKey	49		1			10	0	97
+NormalKey	50		2			20	0	97
+NormalKey	51		3			30	0	115
+NormalKey	52		4			40	0	100
+NormalKey	53		5			50	0	102
+NormalKey	54		6			60	0	102
+NormalKey	55		7			70	0	106
+NormalKey	56		8			80	0	106
+NormalKey	57		9			90	0	107
+NormalKey	48		0			100	0	108
+NormalKey	43		+			110	0	248
+NormalKey	92		\			120	0	248
+#
+NormalKey	113		Q			15	10	97
+NormalKey	119		W			25	10	115
+NormalKey	101		E			35	10	100
+NormalKey	114		R			45	10	102
+NormalKey	116		T			55	10	102
+NormalKey	121		Y			65	10	106
+NormalKey	117		U			75	10	106
+NormalKey	105		I			85	10	107
+NormalKey	111		O			95	10	108
+NormalKey	112		P			105	10	248
+NormalKey	229		Å			115	10	248
+NormalKey	168		¨			125	10	248
+#
+NormalKey	103		G			58	20	102
+NormalKey	104		H			68	20	106
+NormalKey	230		Æ			118	20	248
+NormalKey	39		'			128	20	248
+#
+NormalKey	60		<			13	30	97
+NormalKey	122		Z			23	30	97
+NormalKey	120		X			33	30	115
+NormalKey	99		C			43	30	100
+NormalKey	118		V			53	30	102
+NormalKey	98		B			63	30	102
+NormalKey	110		N			73	30	106
+NormalKey	109		M			83	30	106
+NormalKey	44		,			93	30	107
+NormalKey	46		.			103	30	108
+NormalKey	45		-			113	30	248
+#
+#           Unicode        FingerUnicode     Comment
+#                  TargetUnicode    ControllUnicode
+# Shift + letter keys
+#
+HiddenKey	65		97		97		258 	   #A
+HiddenKey	66		98		102		258 	   #B
+HiddenKey	67		99		100		258 	   #C
+HiddenKey	68		100		100		258 	   #D
+HiddenKey	69		101		100		258 	   #E
+HiddenKey	70		102		102		258 	   #F
+HiddenKey	71		103		102		258 	   #G
+HiddenKey	72		104		106		258 	   #H
+HiddenKey	73		105		107		258 	   #I
+HiddenKey	74		106		106		258 	   #J
+HiddenKey	75		107		107		258 	   #K
+HiddenKey	76		108		106		258 	   #L
+HiddenKey	77		109		106		258 	   #M
+HiddenKey	78		110		106		258 	   #N
+HiddenKey	79		111		108		258 	   #O
+HiddenKey	80		112		238		258 	   #P
+HiddenKey	81		113		97		258 	   #Q
+HiddenKey	82		114		102		258 	   #R
+HiddenKey	83		115		115		258 	   #S
+HiddenKey	84		116		102		258 	   #T
+HiddenKey	85		117		106		258 	   #U
+HiddenKey	86		118		102		258 	   #V
+HiddenKey	87		119		115		258 	   #W
+HiddenKey	88		120		115		258 	   #X
+HiddenKey	89		121		106		258 	   #Y
+HiddenKey	90		122		97		258 	   #Z
+#
+HiddenKey	198		230		248		258 	   #Æ
+HiddenKey	216		248		248		258 	   #Ø
+HiddenKey	197		229		248		258 	   #Å
+#
+# # # # # # # # # # # # # # # # #
+# Special characters with Shift #
+# # # # # # # # # # # # # # # # #
+#
+# Special characters: shift + keys on the number row
+#
+HiddenKey	167     124     97      258        #§
+HiddenKey	33	    49      97      258        #!
+HiddenKey	34	    50      97      258        #"
+HiddenKey	35	    51      115     258        ##
+HiddenKey	164	    52      100     258        #¤
+HiddenKey	37	    53      102     258        #%
+HiddenKey	38	    54      102     258        #&
+HiddenKey	47	    55      106     258        #/
+HiddenKey	40	    56      106     258        #(
+HiddenKey	41	    57      107     258        #)
+HiddenKey	61	    48      108     258        #=
+HiddenKey	63	    43      248     258        #?
+HiddenKey	96	    92      248     258        #`
+#
+# Special characters: shift + leftover keys on other rows
+#
+HiddenKey	94     168		248     258        #^
+HiddenKey	42      39		248     258	       #*
+HiddenKey	95      45		248     258	       #_
+HiddenKey	58      46		108	    258        #:
+HiddenKey	59      44		107	    258        #;
+HiddenKey	62      60		97      258        #>
+#
+# # # # # # # # # # # # # # # # # #
+# Special characters with Alt Gr  #
+# # # # # # # # # # # # # # # # # #
+#
+# Special characters: Alt Gr + keys on the number row
+HiddenKey	166     124     97      264        #¦
+HiddenKey	161	    49      97      264        #¡
+HiddenKey	64	    50      97      264        #@
+HiddenKey	163	    51      115     264        #£
+HiddenKey	36	    52      100     264        #$
+HiddenKey	189	    53      102     264        #½
+HiddenKey	165	    54      102     264        #¥
+HiddenKey	123	    55      106     264        #{
+HiddenKey	91	    56      106     264        #[
+HiddenKey	93	    57      107     264        #]
+HiddenKey	125	    48      108     264        #}
+HiddenKey	177	    43      248     264        #±
+HiddenKey	180	    92      248     264        #´
+#
+# Special characters: Alt Gr + character keys
+#
+HiddenKey	170		97		97		264 	   #ª
+HiddenKey	8221	98		102		264 	   #”
+HiddenKey	169		99		100		264 	   #©
+HiddenKey	240		100		100		264 	   #ð
+HiddenKey	8364	101		100		264 	   #€
+HiddenKey	273 	102		102		264 	   #đ (f)
+HiddenKey	331		103		102		264 	   #ŋ
+HiddenKey	295		104		106		264 	   #ħ
+HiddenKey	8594	105		107		264 	   #→ Arrow right (i)
+HiddenKey	312		107		107		264 	   #ĸ
+HiddenKey	322		108		106		264 	   #ł
+HiddenKey	181		109		106		264 	   #µ (m)
+HiddenKey	174		114		102		264 	   #®
+HiddenKey	223		115		115		264 	   #ß
+HiddenKey	254		116		102		264 	   #þ (t)
+HiddenKey	8595	117		106		264 	   #↓ Arrow down (u)
+HiddenKey	8220	118		102		264 	   #“ (v)
+HiddenKey	187		120		115		264 	   #» (x)
+HiddenKey	8592	121		106		264 	   #← Arrow left (y)
+HiddenKey	171		122		97		264 	   #« (z)
+#
+# Special characters: Alt Gr + leftover keys on other rows
+#
+HiddenKey	126     168		248     264        #~
+HiddenKey	183      46		108	    264        #· (.)
+HiddenKey	184      44		107	    264        #¸ (,)
