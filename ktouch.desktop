@@ -1,6 +1,5 @@
 # KDE Config File
 [Desktop Entry]
-Encoding=UTF-8
 Type=Application
 Exec=ktouch -caption "%c" %i %m
 Icon=ktouch
@@ -80,4 +79,4 @@ Name[ne]=केडीई टच
 Name[sv]=Ktouch
 Name[ta]=கேடச்
 Name[ven]=KFara
-Categories=Qt;KDE;Education;Miscellaneous;
+Categories=Qt;KDE;Education;
