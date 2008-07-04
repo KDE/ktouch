@@ -854,6 +854,8 @@ void KTouch::updateKeyboardActionCheck() {
 void KTouch::updateCurrentUserActionCheck() {
     QStringList user_list = m_userStats.keys();
     int index = user_list.indexOf(Prefs::currentUserName());
+    if( index < 0)
+       return;
     // if not found, fall back on Default User
     if (index == -1) {
 	index = user_list.indexOf("Default User");
