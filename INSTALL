@@ -16,32 +16,4 @@ The flag -P is recommanded so that empty directories left over from previous
 versions are not transferred.
 
 
-Installation from SVN
----------------------
-
-Enter the kdeedu directory and do a 
-
-    make -f Makefile.CVS
-
-and
-
-    ./configure
-
-(don't forget to add your options)
-
-Then change into the subdirectory kdeedu/ktouch and do as usual
-
-    make
-    
-and/or
-
-    make install
-
-
-Install is always necessery if the ktouch.rc file has been changed.
-
-
-Good luck! 
-Andreas
-(ghorwin@users.sourceforge.net)
 
