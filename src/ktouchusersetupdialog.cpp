@@ -56,7 +56,7 @@ void KTouchUserSetupDialog::userSelected(int index) {
 
 void KTouchUserSetupDialog::addBtnClicked() {
 	bool ok_pressed;
-	QString new_name = KInputDialog::getText(i18n("New User"), 
+	QString new_name = KInputDialog::getText(i18n("New User"),
 						i18n("Please enter a unique user name:"),
 						QString(),
 						&ok_pressed, /* bool *   ok = 0, */
@@ -74,6 +74,7 @@ void KTouchUserSetupDialog::addBtnClicked() {
 			userListWidget->addItem(new_name);
 			userListWidget->setCurrentRow(userListWidget->count()-1);
 		}
+                updateButton();
 	}
 }
 // ----------------------------------------------------------------------------
@@ -81,11 +82,23 @@ void KTouchUserSetupDialog::addBtnClicked() {
 void KTouchUserSetupDialog::removeBtnClicked() {
     int index = userListWidget->currentRow();
     if (userListWidget->count() == 1) {
-	removeBtn->setEnabled(false); 
+	removeBtn->setEnabled(false);
 	return;
     }
     userListWidget->takeItem(index);
+    updateButton();
 }
+
+void KTouchUserSetupDialog::updateButton() {
+    int index = userListWidget->currentRow();
+    if (index == -1 || userListWidget->count()<=1 || userListWidget->currentItem()->text() == i18n("Default User"))  {
+	removeBtn->setEnabled(false);
+    }
+    else {
+	removeBtn->setEnabled(true);
+    }
+}
+
 // ----------------------------------------------------------------------------
 
 // Called when the users pressed close, confirms the changes.

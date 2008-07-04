@@ -43,6 +43,7 @@ public slots:
 protected:
 	/// Called when the users pressed close, confirms the changes.
 	virtual void closeEvent( QCloseEvent* ce );
+    void updateButton();
 
 private:
 	QStringList		*m_userNames;	///< Contains the list with user names.
