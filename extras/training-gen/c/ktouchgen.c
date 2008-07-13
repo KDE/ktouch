@@ -1,5 +1,5 @@
 /***************************************************************************
- *                         main.c  -  description                          *
+ *                         ktouchgen.c  -  description                          *
  *                             -------------------                         *
  *   begin                : Wed Mar 21 21:39:53 EST 2001                   *
  *   copyright            : (C) 2001 by Haavard Froeiland 2264228          *
@@ -164,7 +164,7 @@ int main(int argc, char *argv[])
    */
   if((file = fopen(argv[1],"r"))==NULL)
   {
-    printf("can't open config_file:%s for reading",argv[2]);
+    printf("cannot open config_file:%s for reading",argv[2]);
   }
   i=0;
   while(!feof(file))
@@ -187,7 +187,7 @@ int main(int argc, char *argv[])
   printf("Starting reading words");
   if((file = fopen(argv[2],"r"))==NULL)
   {
-    printf("can't open word_file:%s for reading",argv[2]);
+    printf("cannot open word_file:%s for reading",argv[2]);
   }
   while(!feof(file))
   {
@@ -204,7 +204,7 @@ int main(int argc, char *argv[])
 
   lt = time(NULL);
   fprintf(file,"#############################################################\n");
-  fprintf(file,"# Rrainingfile genereated %s",ctime(&lt));
+  fprintf(file,"# Training file genereated %s",ctime(&lt));
   fprintf(file,"# Program written by Håvard Frøiland\n");
   fprintf(file,"#############################################################\n\n");
 
