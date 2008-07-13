@@ -72,6 +72,7 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url, QString& msg) {
 bool KTouchKeyboard::loadXML(QWidget * window, const KUrl& url, QString& msg) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
+    Q_UNUSED(msg)
     QString target;
     bool result = false;
     if (KIO::NetAccess::download(url, target, window)) {
@@ -257,6 +258,7 @@ bool KTouchKeyboard::read(QTextStream& in, QString& warnings) {
 
 // Loads keyboard data from file into an XML document
 bool KTouchKeyboard::read(const QDomDocument& doc, QString& warnings) {
+	Q_UNUSED(warnings)
 	QDomElement root = doc.documentElement();
 	if (root.isNull() || root.tagName() != "KTouchKeyboard") return false;
 	
