@@ -14,7 +14,7 @@
 #include "ktouch.moc"
 
 // Qt Header
-#include <QtXml>
+ #include <QDomDocument>
 
 // KDE Header
 #include <kselectaction.h>

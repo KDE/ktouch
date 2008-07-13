@@ -252,8 +252,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 		bool ok;
 		unicode = conUnicodeEdit->text().toInt(&ok,10);
 		if (!ok) {
-			// TODO : Fixme
-			QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("This is not a valid unicode number. Please correct the number or enter a character."));
+			KMessageBox::warningContinueCancel(this, i18n("KTouch keyboard editor"), i18n("This is not a valid unicode number. Please correct the number or enter a character."));
 			return;
 		}
 	}
@@ -261,8 +260,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 		error = true;
 	}
 	if (error) {
-			// TODO : Fixme
-		QMessageBox::warning(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number!"));
+		KMessageBox::warningContinueCancel(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number!"));
 		return;
 	}
 	m_keyboard->m_connectors[unicode] = KTouchKeyConnector(unicode, m_currentEditKey, m_currentModifierKey);
@@ -374,8 +372,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 			if (selectFingerKeyButton->isChecked()) {
 				// check if the key is actually a finger key
 				if (k->m_type != KTouchKey::Finger) {
-					// FIXME
-					QMessageBox::warning(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
+					KMessageBox::warningContinueCancel(this, i18n("KTouch keyboard editor error"), i18n("The selected key is not a finger key."));
 					return;
 				}
 				else {
