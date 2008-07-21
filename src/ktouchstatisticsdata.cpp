@@ -97,7 +97,7 @@ bool KTouchLevelStats::read(const QDomNode &in) {
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
 		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString()) 
+		if (!timestring.isEmpty()) 
 			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read characters
@@ -240,7 +240,7 @@ bool KTouchSessionStats::read(const QDomNode &in) {
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
 		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString()) 
+		if (!timestring.isEmpty()) 
 			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read level numbers
