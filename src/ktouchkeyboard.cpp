@@ -61,7 +61,7 @@ bool KTouchKeyboard::load(QWidget * window, const KUrl& url, QString& msg) {
         result = read(in, msg);
     }
 	else {
-		msg = i18n("Could not open/download keyboard file '%1'").arg(url.url());
+		msg = i18n("Could not open/download keyboard file '%1'", url.url());
 	}
     KIO::NetAccess::removeTempFile(target);
     return result;
