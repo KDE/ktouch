@@ -224,7 +224,7 @@ void KTouchColorScheme::createDefaults() {
     KTouchColorScheme color;
 	color.m_default = true;
 
-    color.m_name = i18n("Black & White");
+    color.m_name = i18n("Black && White");
     color.m_teacherTextColor = Qt::black;
     color.m_teacherBackground = Qt::white;
     color.m_studentTextColor = Qt::black;
