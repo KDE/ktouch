@@ -40,8 +40,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2007-01-11</date>
-<releaseinfo>1.5.3</releaseinfo>
+<date>2008-08-23</date>
+<releaseinfo>1.7.1</releaseinfo>
 
 <abstract>
 <para>&ktouch; is a program for learning to touch type.  &ktouch;
@@ -103,7 +103,7 @@ never have to pay anything for the program or any update.
 <sect2>
 <title>Features </title>
 
-<para>In its current version, &ktouch; 1.5 has quite a number of helpful
+<para>In its current version, &ktouch; 1.7.1 has quite a number of helpful
 features, such as:</para>
 <itemizedlist>
 <listitem><simpara>Support for many different training lectures in many
@@ -344,7 +344,7 @@ the program.</para></tip>
 <para>Pretty much everything in the &ktouch; menu should be self-explanatory.
 The <guimenu>File</guimenu> menu contains options to load a user defined lecture 
 and edit lectures. The <guimenu>Training</guimenu> menu contains training 
-options and the <guimenu>settings</guimenu> menu
+options and the <guimenu>Settings</guimenu> menu
 contains options to setup the program. The various options in the
 configuration dialog are explained in the next section.</para>
 </sect1>
@@ -354,7 +354,7 @@ configuration dialog are explained in the next section.</para>
 <para>You can customize &ktouch; quite a bit. The settings are always stored
 for the current user of the program. Open the configuration dialog via
 <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ktouch;
-...</guimenuitem></menuchoice>.</para>
+...</guimenuitem></menuchoice></para>
 
 <sect2 id="general_options">
 <title>General Options</title>
@@ -438,10 +438,9 @@ you concentrate on the teacher's text.</para></tip>
 </para>
 </sect2>
 
-
 <sect2 id="color_options">
 <title>Color Settings</title>
-<para>In this dialog you can tweak the appearance of &ktouch;.</para>
+<para>In this dialog you can tweak the colors used by &ktouch;.</para>
 <screenshot>
 <screeninfo>Color settings</screeninfo>
 <mediaobject>
@@ -451,11 +450,23 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para>
-This configuration page does not need much explaination. You can choose among
-four predefined color schemes for the keyboard. Alternatively you can switch
-the color schemes <quote>on the fly</quote> using the menu option
-<menuchoice><guimenu>Settings</guimenu><guisubmenu>Color
-Schemes</guisubmenu></menuchoice>.
+You can select the text and background color for teacher's line, typing line and on miss typing.
+</para>
+</sect2>
+
+<sect2 id="sound_options">
+<title>Sound Settings</title>
+<para>In this dialog you can tweak the sound options for &ktouch;.</para>
+<screenshot>
+<screeninfo>Sound settings</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="sound_options.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Sound settings</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+Enable or disable <guilabel>Beep on error</guilabel>, <guilabel>Typewriter sound when typing</guilabel> or <guilabel>Sound on automatic level change</guilabel>.
 </para>
 </sect2>
 
@@ -474,7 +485,7 @@ Schemes</guisubmenu></menuchoice>.
 Lecture...</guimenuitem></menuchoice> the <guilabel>Open Lecture File</guilabel>
 dialog will open and ask you to select a lecture. You can choose either edit the
 current lecture, any of the predefined lectures (if you have write access to
-the installation directoy) or create an empty lecture from scratch.</para>
+the installation directoy), open a lecture file or create an empty lecture from scratch.</para>
 
 <sect2>
 <title>Creating a lecture</title>
@@ -524,7 +535,7 @@ info box of the &ktouch; main window.
 </para>
 <para>You can also specify a default font for the lecture which will be used
 in the teacher's and student's line and of course in the edit lecture dialog
-using the <guibutton>Change Font...</guibutton> button.
+using the <guiicon>Font</guiicon> icon.
 </para>
 </sect2>
 
@@ -678,6 +689,14 @@ identification of controll keys will likely change in the next version of
 <varlistentry>
 <term><menuchoice>
 <guimenu>File</guimenu>
+<guimenuitem>Open Plain Text File...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> a plain text file and use it as lecture.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>File</guimenu>
 <guimenuitem>Open Lecture...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Open</action> a new training lecture
@@ -696,10 +715,19 @@ change the current training file </para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>File</guimenu>
-<guimenuitem>Edit color scheme...</guimenuitem>
+<guimenuitem>Edit Color Scheme...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Open</action> the color scheme editor to allow you to
 define new color schemes</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>File</guimenu>
+<guimenuitem>Edit Keyboard Layout...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Open</action> a keyboard file and edit a keyboard layout in the 
+<guilabel>&ktouch; Keyboard Editor</guilabel> dialog.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -771,25 +799,33 @@ typing in</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guimenuitem>Show/HideToolbar</guimenuitem>
+<guimenuitem>Show Toolbar</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the  Toolbar</para></listitem>
+<listitem><para><action>Toggle</action> the toolbar</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Show Statusbar</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the statusbar</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
 <guisubmenu>Keyboard Layouts</guisubmenu>
-<guimenuitem>Keypad/Number block</guimenuitem>
+<!--guimenuitem>Keypad/Number block</guimenuitem-->
 </menuchoice></term>
-<listitem><para><action>Choose</action> the keyboard layout you want to use,
-here the number keyboard</para></listitem>
+<listitem><para>This item <action>displays</action> a list of available the keyboard layout
+wehre you can choose the layout you want to use.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Color Schemes</guisubmenu>
+<guisubmenu>Keyboards Color Schemes</guisubmenu>
 <guimenuitem>Black &amp; White</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the keyboard color layout in black in
@@ -800,7 +836,7 @@ black</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Color Schemes</guisubmenu>
+<guisubmenu>Keyboards Color Schemes</guisubmenu>
 <guimenuitem>Classic</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the classic keyboard color layout:
@@ -810,7 +846,7 @@ each column of keys has a different color</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Color Schemes</guisubmenu>
+<guisubmenu>Keyboards Color Schemes</guisubmenu>
 <guimenuitem>Deep Blue</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the deep blue keyboard color layout:
@@ -820,11 +856,29 @@ each column of keys has a different color in a shade of blue</para></listitem>
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Color Schemes</guisubmenu>
+<guisubmenu>Keyboards Color Schemes</guisubmenu>
 <guimenuitem>Stripy</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the stripy keyboard color layout: in
 blue and grey</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Current User</guisubmenu>
+<guimenuitem>Default User</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the user for the current training sessions.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Setup  Users...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays</action> a dialog to add or remove a user for &ktouch;.
+The users listed in this dialog are displayed in the <guisubmenu>Current User</guisubmenu> submenu.</para></listitem>
 </varlistentry>
 
 <varlistentry>
