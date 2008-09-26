@@ -14,7 +14,12 @@
 #define KTOUCHTRAINER_H
 
 #include <QObject>
+
+#include "ktouch_build_config.h"
+
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
 #include <Phonon/MediaObject>
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
 
 #include "ktouchstatisticsdata.h"
 
@@ -159,7 +164,9 @@ class KTouchTrainer : public QObject {
 	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
 	Phonon::MediaObject	   *m_player;
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
 };
 
 #endif  // KTOUCHTRAINER_H

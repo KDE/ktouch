@@ -1,0 +1,7 @@
+// KTouch build configuration template. 
+// If building without CMAKE, manually copy this file
+// to ktouch_build_config.h and replace 'cmakedefine' with 'define'
+// or 'undef' as required.
+
+// Enables compilation of sound output using Phonon.
+#cmakedefine KDEEDU_KTOUCH_BUILD_WITH_PHONON

@@ -37,6 +37,8 @@
 #include <kio/netaccess.h>
 
 // KTouch Header
+#include "ktouch_build_config.h"
+
 #include "ktouchlecture.h"
 #include "ktouchtrainer.h"
 
@@ -409,8 +411,10 @@ void KTouch::optionsPreferences() {
     m_pageColors = new KTouchPrefColors(dialog);
     dialog->addPage(m_pageColors, i18n("Color Settings"), "preferences-desktop-color");
 
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
     m_pageSound = new KTouchPrefSound(dialog);
     dialog->addPage(m_pageSound, i18n("Sound Settings"), "preferences-desktop-sound");
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
 
     connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(applyPreferences()));
 

@@ -1,4 +1,4 @@
-KTouch for KDE4 TODO
+KTouch for KDE4 - TODO
 
 annma - November 2006
 
@@ -11,4 +11,15 @@ annma - November 2006
 
 - translate training files titles so they appear correctly in the user menu. See https://bugs.kde.org/show_bug.cgi?id=135570
 
+
+Ghorwin - September 2008
+QA stuff:
+- "Default User" vs i18n name, in translated version only the translated name for "Default user" should appear
+- color schemes (maybe remove?)
+- review/fix lectures and keyboards
+- update documentation + webpage
+
+Feature stuff:
+- welcome/initial setup dialog (select lecture and keyboard, some general instructions)
+- finish lecture summary dialog (including visual rating for training quality)
 

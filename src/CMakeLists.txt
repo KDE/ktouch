@@ -3,6 +3,13 @@
 # set include directories
 #include_directories( )
 
+# add compilation options
+option( KDEEDU_KTOUCH_BUILD_WITH_PHONON "Enables compilation of sound output using Phonon." OFF )
+mark_as_advanced(KDEEDU_KTOUCH_BUILD_WITH_PHONON)
+
+# configure the local configuration file
+configure_file(ktouch_build_config.h.in    ktouch_build_config.h)
+
 # add ui files, all files in directory ui are Qt4 only
 kde4_add_ui_files(ktouch_UIS
    ui/ktouchcoloreditordialog.ui 
@@ -46,8 +53,6 @@ set(ktouch_SRCS
    main.cpp
 )
 
-# create moc files automatically, requires that moc files are included into the cpp files
-
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
 
 #uncomment this if oxygen icons for ktouch are available
@@ -56,7 +61,11 @@ kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktou
 
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
-target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
+if (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
+    target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
+else (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
+    target_link_libraries(ktouch  ${KDE4_KIO_LIBS})
+endif (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
 
 install(TARGETS ktouch  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

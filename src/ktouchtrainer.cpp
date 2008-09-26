@@ -49,17 +49,19 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_decLinesCount=0;
     m_incLinesCount=0;
 
-    m_player = Phonon::createPlayer( Phonon::GameCategory );
-    m_player->setParent(this);
-
     // reset statistics
     m_levelStats.clear();
     m_sessionStats.clear();
+
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
+    m_player = Phonon::createPlayer( Phonon::GameCategory );
+    m_player->setParent(this);
 
     /// \todo preload sounds and improve sound playback system
     m_levelUpSound = KGlobal::dirs()->findResource("appdata","up.wav");
     m_levelDownSound = KGlobal::dirs()->findResource("appdata","down.wav");
     m_typeWriterSound = KGlobal::dirs()->findResource("appdata","typewriter.wav");
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
 
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
     connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
@@ -85,14 +87,17 @@ void KTouchTrainer::keyPressed(QChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
     if(Prefs::soundOnKeypress()){
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_typeWriterSound.url());
         m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
     }
 	if (m_trainingPaused)  continueTraining();
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
         /// \todo Flash the line when line complete
-        if (Prefs::beepOnError())   QApplication::beep();
+        if (Prefs::beepOnError())   
+		QApplication::beep();
         return;
     }
 	// remember length of student text without added character
@@ -138,8 +143,10 @@ void KTouchTrainer::keyPressed(QChar key) {
 
 void KTouchTrainer::backspacePressed() {
     if(Prefs::soundOnKeypress()){
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_typeWriterSound.url());
         m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
     }
 	if (m_trainingPaused)  continueTraining();
 	/// \todo Implement the "remove space character = remove word count" feature
@@ -169,8 +176,10 @@ void KTouchTrainer::backspacePressed() {
 
 void KTouchTrainer::enterPressed() {
     if(Prefs::soundOnKeypress()){
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_typeWriterSound.url());
         m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
     }
 
     if (m_trainingPaused)
@@ -375,8 +384,10 @@ bool KTouchTrainer::studentLineCorrect() const {
 
 void KTouchTrainer::levelUp() {
     if(Prefs::soundOnLevel()){
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_levelUpSound.url());
         m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
     }
 
     if (m_level < m_lecture->levelCount() - 1) {
@@ -400,8 +411,10 @@ void KTouchTrainer::levelDown() {
 	if (m_level>0) {
        --m_level;
         if(Prefs::soundOnLevel()){
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
             m_player->setCurrentSource(m_levelDownSound.url());
             m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
         }
     }
     m_incLinesCount = 0;
