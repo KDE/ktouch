@@ -1,12 +1,12 @@
 #!/usr/bin/perl -w --strict
-use utf8;
+use encoding utf8;
 binmode STDOUT, ":utf8";
 binmode STDIN, ":utf8";
 
 # default values
 $length_of_line = 40;
 $number_of_line = 10;
-
+$title = "Put your title here";
 
 # genword( accumulated, core )
 # This function will generate a random sequens of character
@@ -108,7 +108,7 @@ sub heading
 {
     return
 	"<KTouchLecture>\n".
-	"    <Title>Put your title here</Title>\n".
+	"    <Title>".$title."</Title>\n".
 	"    <Comment>KTouch training file generated ".localtime(time())."\n".
 	"Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.</Comment>\n\n";
 }
@@ -144,6 +144,10 @@ while (<CONFIG>)
     elsif(s/number\-of\-line//)
     {
 	$number_of_line = $_;
+    }
+    elsif(s/title//)
+    {
+	$title = $_;
     }
     elsif($_) # Add to config if not empty
     {
@@ -183,4 +187,4 @@ foreach(@config)
 }
 
 
-print "<KTouchLecture>\n";
+print "</KTouchLecture>\n";
