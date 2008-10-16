@@ -71,16 +71,16 @@ class KTouchCharStats : public QModelIndex {
     unsigned int    m_wrongCount;   ///< How often the character has been missed (not typed when it ought to be typed).
 };
 
-/// Sort criterion: Returns 'true' when the hit-miss ratio of 'lhs' is worse then the one of 'rhs'.
+/// Sort criterion: Returns 'true' when the hit-miss ratio of 'lhs' is worse than the one of 'rhs'.
 inline bool higher_miss_hit_ratio(const KTouchCharStats & lhs, const KTouchCharStats & rhs) {
 	return lhs.missHitRatio() > rhs.missHitRatio();
 }
 
-/// Comparison operator "less", returns 'true' when the char-code of 'lhs' is less then the one of 'rhs'
+/// Comparison operator "less", returns 'true' when the char-code of 'lhs' is less than the one of 'rhs'
 //inline bool operator<(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char<rhs.m_char; }
-/// Comparison operator "greater", returns 'true' when the char-code of 'lhs' is greater then the one of 'rhs'
+/// Comparison operator "greater", returns 'true' when the char-code of 'lhs' is greater than the one of 'rhs'
 //inline bool operator>(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char>rhs.m_char; }
-/// Comparison operator == : returns 'true' when the char-code of 'lhs' is equal to then the one of 'rhs'
+/// Comparison operator == : returns 'true' when the char-code of 'lhs' is equal to the one of 'rhs'
 inline bool operator==(const KTouchCharStats &lhs, const KTouchCharStats &rhs) { return lhs.m_char==rhs.m_char; }
 /// Writes the content of a KTouchCharStats object into the text stream.
 QTextStream& operator<<(QTextStream &out, const KTouchCharStats &ch);
