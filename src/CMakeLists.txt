@@ -62,9 +62,9 @@ kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktou
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 if (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
-    target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS})
+    target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${KDE4_PHONON_LIBS} ${QT_QTCORE_LIBRARY})
 else (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
-    target_link_libraries(ktouch  ${KDE4_KIO_LIBS})
+    target_link_libraries(ktouch  ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY})
 endif (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
 
 install(TARGETS ktouch  ${INSTALL_TARGETS_DEFAULT_ARGS} )
