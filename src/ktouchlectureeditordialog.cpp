@@ -265,8 +265,8 @@ void KTouchLectureEditorDialog::transfer_to_dialog() {
     else                        setWindowTitle(i18n("KTouch Lecture Editor - ") + m_currentURL.fileName());
     // copy the 'new char' strings of the lectures into the list view
     levelListWidget->clear();
-    for (QList<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.begin();
-		it!=m_lecture.m_lectureData.end(); ++it)
+    for (QList<KTouchLevelData>::const_iterator it=m_lecture.m_lectureData.constBegin();
+		it!=m_lecture.m_lectureData.constEnd(); ++it)
 	{
     	// add item
 		levelListWidget->addItem( it->m_newChars );
@@ -314,8 +314,8 @@ void KTouchLectureEditorDialog::showCurrentLevel() {
     levelCommentEdit->setText(m_lecture.m_lectureData[m_level].m_comment);
     newCharsEdit->setText(m_lecture.m_lectureData[m_level].m_newChars);
     QString text;
-    for (QList<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.begin();
-                                         it!=m_lecture.m_lectureData[m_level].m_lines.end(); ++it)
+    for (QList<QString>::const_iterator it=m_lecture.m_lectureData[m_level].m_lines.constBegin();
+                                         it!=m_lecture.m_lectureData[m_level].m_lines.constEnd(); ++it)
     {
         text += *it + '\n';
     }
@@ -342,7 +342,7 @@ void KTouchLectureEditorDialog::storeCurrentLevel() {
             currentLine += c;
     };
     lines.append(currentLine);
-    for (QStringList::const_iterator it=lines.begin(); it!=lines.end(); ++it) {
+    for (QStringList::const_iterator it=lines.constBegin(); it!=lines.constEnd(); ++it) {
         if ((*it).isEmpty()) continue;
         m_lecture.m_lectureData[m_level].m_lines.push_back(*it);
     }

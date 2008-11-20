@@ -70,9 +70,9 @@ void KTouchStatisticsDialog::run(const KUrl& currentLecture, const KTouchStatist
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
-	QMap<KUrl, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.begin();
+	QMap<KUrl, KTouchLectureStats>::const_iterator it = stats.m_lectureStats.constBegin();
 	m_currentIndex = 0;
-	while (it != stats.m_lectureStats.end()) {
+	while (it != stats.m_lectureStats.constEnd()) {
 		QString t = it.value().m_lectureTitle;
 		// if current lecture, remember index and adjust text
 		if (it.key() == currentLecture) {
@@ -146,7 +146,7 @@ void KTouchStatisticsDialog::updateCurrentSessionTab() {
 	QSet<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
 	--last_it;
 	for (QSet<unsigned int>::iterator it = m_currSessionStats.m_levelNums.begin();
-		it != m_currSessionStats.m_levelNums.end(); ++it)
+		it != m_currSessionStats.m_levelNums.constEnd(); ++it)
 	{
 		// do we have a level number that is not a subsequent level of the
 		// previous?
@@ -187,12 +187,12 @@ void KTouchStatisticsDialog::updateCurrentSessionTab() {
 		(100.0*m_currSessionStats.m_correctChars)/m_currSessionStats.m_totalChars) );
 	// create sorted list of missed characters
 	QList<KTouchCharStats> charList;
-	qCopy(m_currSessionStats.m_charStats.begin(), m_currSessionStats.m_charStats.end(), std::back_inserter(charList));
+	qCopy(m_currSessionStats.m_charStats.constBegin(), m_currSessionStats.m_charStats.constEnd(), std::back_inserter(charList));
 	qSort(charList.begin(), charList.end(), higher_miss_hit_ratio);
 	
-	QList<KTouchCharStats>::const_iterator it2=charList.begin();
+	QList<KTouchCharStats>::const_iterator it2=charList.constBegin();
     unsigned int i=0;
-    for (; i<8 && it2!=charList.end(); ++i, ++it2) {
+    for (; i<8 && it2!=charList.constEnd(); ++i, ++it2) {
         if (it2->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
@@ -252,12 +252,12 @@ void KTouchStatisticsDialog::updateCurrentLevelTab() {
 		(100.0*m_currLevelStats.m_correctChars)/m_currLevelStats.m_totalChars) );
 	// create sorted list of missed characters
 	QList<KTouchCharStats> charList;
-	qCopy(m_currLevelStats.m_charStats.begin(), m_currLevelStats.m_charStats.end(), std::back_inserter(charList) );
+	qCopy(m_currLevelStats.m_charStats.constBegin(), m_currLevelStats.m_charStats.constEnd(), std::back_inserter(charList) );
 	qSort(charList.begin(), charList.end(), higher_miss_hit_ratio);
 	
-	QList<KTouchCharStats>::const_iterator it=charList.begin();
+	QList<KTouchCharStats>::const_iterator it=charList.constBegin();
     unsigned int i=0;
-    for (; i<8 && it!=charList.end(); ++i, ++it) {
+    for (; i<8 && it!=charList.constEnd(); ++i, ++it) {
         if (it->missHitRatio()==0)
             break;  // stop listing keys when their hit-miss-ration is zero
         switch (i) {
@@ -308,7 +308,7 @@ void KTouchStatisticsDialog::updateChartTab() {
 		// TODO : nothing yet
 	}
 	else {
-		QMap<KUrl, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.begin();	
+		QMap<KUrl, KTouchLectureStats>::const_iterator it = m_allStats.m_lectureStats.constBegin();	
 		unsigned int index = m_lectureIndex;
 		while (index-- > 0) ++it;
 		QList< std::pair<double, double> > data;
@@ -316,8 +316,8 @@ void KTouchStatisticsDialog::updateChartTab() {
 
 		if(WPMRadio->isChecked()){ // words per minute
 			// loop over all session data entries in *it and store words per minute data
-			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-				session_it != (*it).m_sessionStats.end(); ++session_it)
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.constBegin();
+				session_it != (*it).m_sessionStats.constEnd(); ++session_it)
 			{
 				double t = (*session_it).m_elapsedTime;
 				double wpm = (t == 0) ? 0 : (*session_it).m_words/t*60.0;
@@ -337,8 +337,8 @@ void KTouchStatisticsDialog::updateChartTab() {
 		}
         else if(CPMRadio->isChecked()){ // chars per minute
 			// loop over all session data entries in *it and store chars per minute data
-			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-				session_it != (*it).m_sessionStats.end(); ++session_it)
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.constBegin();
+				session_it != (*it).m_sessionStats.constEnd(); ++session_it)
 			{
 				double t = (*session_it).m_elapsedTime;
 				double cpm = (t == 0) ? 0 : (*session_it).m_correctChars/t*60.0;
@@ -358,8 +358,8 @@ void KTouchStatisticsDialog::updateChartTab() {
         }
         else if (correctRadio->isChecked()){ // correctness
 			// loop over all session data entries in *it and store correctness data
-			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-				session_it != (*it).m_sessionStats.end(); ++session_it)
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.constBegin();
+				session_it != (*it).m_sessionStats.constEnd(); ++session_it)
 			{
 				double tc = (*session_it).m_totalChars;
 				double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;
@@ -379,8 +379,8 @@ void KTouchStatisticsDialog::updateChartTab() {
         }
         else if (skillRadio->isChecked()){
 			// loop over all session data entries in *it and store correctness data
-			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
-				session_it != (*it).m_sessionStats.end(); ++session_it)
+			for (QList<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.constBegin();
+				session_it != (*it).m_sessionStats.constEnd(); ++session_it)
 			{
 				double tc = (*session_it).m_totalChars;
 				double corr = (tc == 0) ? 0 : (*session_it).m_correctChars/tc;

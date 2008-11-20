@@ -65,7 +65,7 @@ void KTouchColorEditorDialog::colorSchemeChanged(QListWidgetItem *) {
 		updateControls(NULL);
 		return;
 	}
-	QList<KTouchColorScheme>::const_iterator it = m_schemes.begin();
+	QList<KTouchColorScheme>::const_iterator it = m_schemes.constBegin();
 	while (--num >= 0) ++it;
 	updateControls(&(*it));
 }

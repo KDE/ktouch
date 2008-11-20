@@ -347,12 +347,12 @@ void KTouchKeyboard::write(QDomDocument& doc) const {
 	// Store keys
 	QDomElement keys = doc.createElement("Keys");
 	root.appendChild(keys);
-	for (QList<KTouchKey*>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
+	for (QList<KTouchKey*>::const_iterator it=m_keys.constBegin(); it!=m_keys.constEnd(); ++it)
 		(*it)->write(doc, keys, m_keys);
 	// Store connectors
 	QDomElement conns = doc.createElement("Connections");
 	root.appendChild(conns);
-    for (QMap<int, KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (QMap<int, KTouchKeyConnector>::const_iterator it=m_connectors.constBegin(); it!=m_connectors.constEnd(); ++it)
 		it->write(doc, conns, m_keys);
 }
 // ----------------------------------------------------------------------------
@@ -430,7 +430,7 @@ void KTouchKeyboard::updateKeyPointers() {
 
 void KTouchKeyboard::setFont(const QFont& f) {
 	m_font = f;
-	for (QList<KTouchKey*>::const_iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+	for (QList<KTouchKey*>::const_iterator it = m_keys.constBegin(); it != m_keys.constEnd(); ++it) {
 		(*it)->update();
 	}
 }
@@ -457,7 +457,7 @@ void KTouchKeyboard::deleteKey(KTouchKey * k) {
 	int i = m_keys.indexOf(k);
 	if (i != -1)	m_keys.removeAt(i);
 	// loop over all remaining keys and remove all references to the key (in case it was a finger key)
-	for (QList<KTouchKey*>::const_iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+	for (QList<KTouchKey*>::const_iterator it = m_keys.constBegin(); it != m_keys.constEnd(); ++it) {
 		if ((*it)->m_fingerKey == k) {
 			(*it)->m_fingerKey = NULL;
 			(*it)->m_colorIndex = -1;
