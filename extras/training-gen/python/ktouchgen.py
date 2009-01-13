@@ -163,7 +163,7 @@ def main(argv):
         print "\nWordfile couldn't be opened.\n", DOCSTRING
         return 1
     # Create two Wordlists, one with first char lowered
-    # (more words for the first levels) and one like it ist read
+    # (more words for the first levels) and one like it is read
     for wordstring in wordfile.readlines():
         wordstring = strip(wordstring)
         if lower(wordstring) != wordstring:
