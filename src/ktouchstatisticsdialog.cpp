@@ -145,7 +145,7 @@ void KTouchStatisticsDialog::updateCurrentSessionTab() {
     int levels_count = 0;
 	QSet<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
 	--last_it;
-	for (QSet<unsigned int>::iterator it = m_currSessionStats.m_levelNums.begin();
+	for (QSet<unsigned int>::ConstIterator it = m_currSessionStats.m_levelNums.constBegin();
 		it != m_currSessionStats.m_levelNums.constEnd(); ++it)
 	{
 		// do we have a level number that is not a subsequent level of the
