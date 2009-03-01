@@ -16,7 +16,7 @@
    <item row="0" column="0" >
     <widget class="QGroupBox" name="kcfg_CommonTypingLineColors" >
      <property name="title" >
-      <string>Use Custom color for typing line</string>
+      <string>Use custom color for typing line</string>
      </property>
      <property name="checkable" >
       <bool>true</bool>
@@ -229,7 +229,7 @@
    <item row="1" column="0" >
     <widget class="QGroupBox" name="kcfg_ColorOnError" >
      <property name="title" >
-      <string>Use different color on miss typing</string>
+      <string>Use different color for missed typing</string>
      </property>
      <property name="checkable" >
       <bool>true</bool>

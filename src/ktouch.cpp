@@ -460,7 +460,7 @@ void KTouch::changeKeyboard(int num) {
 		return;
 	}
 	if (m_keyboardFiles[num] != Prefs::currentKeyboardFile()) {
-		KMessageBox::information(this, i18n("Note that in different countries touch typing is tought slightly different which "
+		KMessageBox::information(this, i18n("Note that in different countries touch typing is taught slightly different which "
 			"usually affects only the top row of keys. For instance, in the United States only the leftmost key and the key "
 			"with the 1 are pressed by the little finger of the left hand. In Germany the little "
 			"finger also presses the 2 key, and thus the fingers shift one key to the right on the top row.\n"

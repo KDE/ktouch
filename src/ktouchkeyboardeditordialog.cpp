@@ -260,7 +260,7 @@ void KTouchKeyboardEditorDialog::on_addConnectorButton_clicked(bool) {
 		error = true;
 	}
 	if (error) {
-		KMessageBox::warningContinueCancel(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number!"));
+		KMessageBox::warningContinueCancel(this, i18n("KTouch keyboard editor"), i18n("Please enter either a character or a unicode number."));
 		return;
 	}
 	m_keyboard->m_connectors[unicode] = KTouchKeyConnector(unicode, m_currentEditKey, m_currentModifierKey);
