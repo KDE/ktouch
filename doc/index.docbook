@@ -163,7 +163,7 @@ yours)</simpara></listitem>
 <para>We look at these sections later again.</para>
 <para>
 Ok, the first time you start &ktouch; it will open a lecture and
-select a keyboard layout for the locale and keybord defined in the &kcontrolcenter;.
+select a keyboard layout for the locale and keyboard defined in the &kcontrolcenter;.
 To adjust the keyboard layout go to
 <menuchoice><guimenu>Settings</guimenu><guisubmenu>Keyboard
 Layouts...</guisubmenu></menuchoice> and select the country you're in (or
@@ -223,7 +223,7 @@ shows a brief information text about the level. Usually it gives you a list of
 characters that are new in this level. The middle two info boxes show your
 current typing speed (in characters per minute) and your correctness. These
 values are Level Statistics and whenever you start a new level these values
-are resetted. However, the program still remembers your previous statistics
+are reset. However, the program still remembers your previous statistics
 (see section <link linkend="statistics">Statistics in &ktouch;</link>).
 </para>
 </sect2>
@@ -485,7 +485,7 @@ Enable or disable <guilabel>Beep on error</guilabel>, <guilabel>Typewriter sound
 Lecture...</guimenuitem></menuchoice> the <guilabel>Open Lecture File</guilabel>
 dialog will open and ask you to select a lecture. You can choose either edit the
 current lecture, any of the predefined lectures (if you have write access to
-the installation directoy), open a lecture file or create an empty lecture from scratch.</para>
+the installation directly), open a lecture file or create an empty lecture from scratch.</para>
 
 <sect2>
 <title>Creating a lecture</title>
@@ -558,7 +558,7 @@ about the author and type of the keyboard.</para>
 <programlisting>
 ####################################################
 #    &ktouch;
-#    Keybord layout file for german keybord layout
+#    Keyboard layout file for german keyboard layout
 #    Code=UTF-8
 ####################################################
 </programlisting>
