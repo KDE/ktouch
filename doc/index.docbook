@@ -485,7 +485,7 @@ Enable or disable <guilabel>Beep on error</guilabel>, <guilabel>Typewriter sound
 Lecture...</guimenuitem></menuchoice> the <guilabel>Open Lecture File</guilabel>
 dialog will open and ask you to select a lecture. You can choose either edit the
 current lecture, any of the predefined lectures (if you have write access to
-the installation directly), open a lecture file or create an empty lecture from scratch.</para>
+the installation directory), open a lecture file or create an empty lecture from scratch.</para>
 
 <sect2>
 <title>Creating a lecture</title>
