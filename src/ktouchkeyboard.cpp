@@ -103,7 +103,7 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KUrl& url) const {
     QString tmpFile;
     KTemporaryFile *temp=0;
     if (url.isLocalFile())
-        tmpFile=url.path();         // for local files the path is sufficient
+        tmpFile=url.toLocalFile();         // for local files the path is sufficient
     else {
         temp=new KTemporaryFile;         // for remote files create a temporary file first
         temp->open();

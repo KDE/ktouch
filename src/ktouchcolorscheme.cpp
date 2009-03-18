@@ -193,7 +193,7 @@ bool KTouchColorScheme::writeList(QWidget * window, const KUrl& url) {
     QString tmp_file;
     KTemporaryFile *temp=0;
     if (url.isLocalFile())
-        tmp_file=url.path();         // for local files the path is sufficient
+        tmp_file=url.toLocalFile();         // for local files the path is sufficient
     else {
         temp=new KTemporaryFile;         // for remote files create a temporary file first
         temp->open();
