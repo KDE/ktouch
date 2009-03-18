@@ -13,6 +13,7 @@
 #include "ktouchlecture.h"
 
 #include <QFile>
+#include <QTextCodec>
 #include <QTextStream>
 #include <QtXml/QDomDocument>
 
@@ -33,6 +34,7 @@ bool KTouchLecture::load(QWidget * window, const KUrl& url) {
             // FIXME : what about removing the tempfile?
             return false;   // Bugger it... couldn't open it...
         QTextStream in( &infile );
+        in.setCodec( QTextCodec::codecForName( "UTF-8" ) );
         result = readLecture(in);
     };
     KIO::NetAccess::removeTempFile(target);
@@ -51,8 +53,8 @@ bool KTouchLecture::loadXML(QWidget * window, const KUrl& url) {
         if ( !infile.open( QIODevice::ReadOnly ) )
             // FIXME : What about removing the tempfile?
             return false;   // Bugger it... couldn't open it...
-		QDomDocument doc;
-		doc.setContent( &infile );
+        QDomDocument doc;
+        doc.setContent( &infile );
         result = readLectureXML(doc);
     }
     KIO::NetAccess::removeTempFile(target);
@@ -70,7 +72,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
     QString tmpFile;
     KTemporaryFile *temp=0;
     if (url.isLocalFile())
-        tmpFile=url.path();         // for local files the path is sufficient
+        tmpFile=url.toLocalFile();         // for local files the path is sufficient
     else {
         temp=new KTemporaryFile;         // for remote files create a temporary file first
         temp->open();
@@ -85,6 +87,7 @@ bool KTouchLecture::saveXML(QWidget * window, const KUrl& url) const {
     };
 
     QTextStream out( &outfile );
+    out.setCodec( QTextCodec::codecForName( "UTF-8" ) );
     out << doc.toString();
     outfile.close();
     // if we have a temporary file, we still need to upload it
