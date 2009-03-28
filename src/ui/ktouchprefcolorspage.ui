@@ -207,7 +207,7 @@
            <string>The background for the teacher's line</string>
           </property>
           <property name="whatsThis" >
-           <string>You can change here the background color for the teacher's line (the line of letters you have to type.)</string>
+           <string>Here you can change the background color for the teacher's line (the line of letters you have to type.)</string>
           </property>
           <property name="text" >
            <string/>
@@ -229,7 +229,7 @@
    <item row="1" column="0" >
     <widget class="QGroupBox" name="kcfg_ColorOnError" >
      <property name="title" >
-      <string>Use different color for missed typing</string>
+      <string>Use different color on missed typing</string>
      </property>
      <property name="checkable" >
       <bool>true</bool>
