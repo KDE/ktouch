@@ -33,9 +33,9 @@ void KTouchLevelData::createDefault() {
     m_newChars = i18n("Quite a lot");
     m_lines.clear();
     QString text = i18n("This is a small default text. If you want\n"
-                        "to start practicing touch typing, open\n"
+                        "to start practising touch typing, open\n"
                         "a lecture/training file from the main menu.\n"
-                        "If you press enter after the next line you have\n"
+                        "If you press Enter after the next line you have\n"
                         "successfully completed the default lecture. Hurray!!!");
     m_lines = text.split(QChar('\n'));
 }
