@@ -35,11 +35,12 @@ void KTouchLevelSummaryDialog::on_continueButton_clicked() {
 }
 
 void KTouchLevelSummaryDialog::showInfo(bool & increaseLevel, bool & decreaseLevel, const KTouchLevelStats& levelStats) {
+	Q_UNUSED(decreaseLevel)
 	// setup the dialog according to the arguments
 	if (increaseLevel) {
 	}
 
-    const QStringList& userList = KTouchPtr->userList();
+	//WARNING: not needed annma 05/2009 const QStringList& userList = KTouchPtr->userList();
 	const QMap<QString, KTouchStatisticsData>& allUserStats = KTouchPtr->userStats();
 
 	// get the statistics data for this lecture and the current user
