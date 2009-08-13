@@ -57,11 +57,12 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 		keyTypeCombo->addItem(KTouchKey::keyTypeString(static_cast<KTouchKey::keytype_t>(i)));
 	}
 
-	// loop over all languages supported in KDE and add the language code and language name 
+	// loop over all languages supported in KDE and add the language code and language name
 	// to the langIDCombo box
-	QStringList langlist = KGlobal::locale()->allLanguagesList();
-	for (int i=0; i<langlist.count(); ++i) {
-		QString langname = QString("%1 (%2)").arg(langlist[i]).arg(KGlobal::locale()->languageCodeToName(langlist[i]));
+	const QStringList langlist = KGlobal::locale()->allLanguagesList();
+        const int langCount = langlist.count();
+	for (int i=0; i<langCount; ++i) {
+		const QString langname = QString("%1 (%2)").arg(langlist[i]).arg(KGlobal::locale()->languageCodeToName(langlist[i]));
 		langIDCombo->addItem(langname);
 	}
 
@@ -71,15 +72,15 @@ KTouchKeyboardEditorDialog::KTouchKeyboardEditorDialog(QWidget* parent, Qt::WFla
 
 bool KTouchKeyboardEditorDialog::startEditor(const KUrl& url) {
     // call open request dialog and load a keyboard and start the dialogs event loop if
-    // the user did not cancel the open request dialog 
+    // the user did not cancel the open request dialog
     if (openKeyboardFile(url)==QDialog::Accepted)  {
 		m_currentEditKey = NULL;
 		keyClicked(NULL);
         exec();
-		// Even if the user cancels the dialog we must assume that a keyboard layout 
+		// Even if the user cancels the dialog we must assume that a keyboard layout
 		// was changed and save to disk. Thus, to be save, we return 'true' and
 		// indicate that the keyboard has to be updated.
-        return true; 
+        return true;
     }
     else  return false;
 }
@@ -98,9 +99,9 @@ void KTouchKeyboardEditorDialog::on_setFontButton_clicked() {
 		m_keyboard->m_fontSuggestions = f.toString();
 		m_keyboard->setFont(f);
 		// update font
-/*		titleEdit->setFont(f);  
-		commentEdit->setFont(f);  
-		langIDCombo->setFont(f);  
+/*		titleEdit->setFont(f);
+		commentEdit->setFont(f);
+		langIDCombo->setFont(f);
 */
 		update();	// trigger repaint of the keyboard.
 		setModified();
@@ -125,7 +126,7 @@ void KTouchKeyboardEditorDialog::on_saveButton_clicked() {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditorDialog::on_saveAsButton_clicked() {
-    QString tmp = KFileDialog::getSaveFileName(m_currentURL, 
+    QString tmp = KFileDialog::getSaveFileName(m_currentURL,
         i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
@@ -231,7 +232,7 @@ void KTouchKeyboardEditorDialog::on_addKeyButton_clicked(bool) {
 	resizeKeyboard();
 	key->setFlag(QGraphicsItem::ItemIsMovable, true);
 	connect(key, SIGNAL(clicked(KTouchKey *)), this, SLOT(keyClicked(KTouchKey *)));
-	connect(key, SIGNAL(positionChanged(KTouchKey *)), this, SLOT(keyPositionChanged(KTouchKey *)));	
+	connect(key, SIGNAL(positionChanged(KTouchKey *)), this, SLOT(keyPositionChanged(KTouchKey *)));
 	// select key
 	keyClicked(key);
 }
@@ -276,8 +277,8 @@ void KTouchKeyboardEditorDialog::on_clearConnectorButton_clicked(bool) {
 	if (!m_keyboard->m_keys.contains(m_currentEditKey))  return;
 	if (KMessageBox::questionYesNo(this, i18n("Delete all key connections for this key?"))== KMessageBox::Yes) {
 		QList<int> connectorsToRemove;
-		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin(); 
-			it != m_keyboard->m_connectors.end(); ++it) 
+		for (QMap<int, KTouchKeyConnector>::iterator it = m_keyboard->m_connectors.begin();
+			it != m_keyboard->m_connectors.end(); ++it)
 		{
 			if ((*it).m_targetKey == m_currentEditKey) {
 				connectorsToRemove.append(it.key());
@@ -364,7 +365,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 	// are we currently selecting a finger key character?
 	if (selectFingerKeyButton->isChecked() || selectModifierKeyButton->isChecked()) {
 		// bail out if no key is currently selected
-		if (!m_keyboard->m_keys.contains(m_currentEditKey)) 
+		if (!m_keyboard->m_keys.contains(m_currentEditKey))
 			return;
 		// check if the clicked key exists
 		if (m_keyboard->m_keys.contains(k)) {
@@ -406,11 +407,11 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 		keyConnectorEditBox->setEnabled(true);
 		m_currentEditKey->m_state = KTouchKey::HighlightedState;
 		m_currentEditKey->update();
-		
+
 		// set correct combo type
-		if (m_currentEditKey->m_type > KTouchKey::Other) 
+		if (m_currentEditKey->m_type > KTouchKey::Other)
 			keyTypeCombo->setCurrentIndex( KTouchKey::Other );
-		else 
+		else
 			keyTypeCombo->setCurrentIndex( m_currentEditKey->m_type );
 		if (m_currentEditKey->m_type == KTouchKey::Other)
 			keyTextEdit->setText( m_currentEditKey->m_keyText );
@@ -436,7 +437,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 
 		// update geometry
 		keyPositionChanged(k);
-		
+
 		// update key connector information
 		connectorList->clear();
 		int r = 0;
@@ -448,7 +449,7 @@ void KTouchKeyboardEditorDialog::keyClicked(KTouchKey * k) {
 
 			QChar c(it.key()); // access character
 			QString str;
-			if (c.isPrint()) 
+			if (c.isPrint())
 				str = QString("'%1' (%2)").arg(c).arg(c.unicode());
 			else
 				str = QString(" (%1)").arg(c.unicode());
@@ -570,7 +571,7 @@ void KTouchKeyboardEditorDialog::transfer_to_dialog() {
 
 void KTouchKeyboardEditorDialog::transfer_from_dialog() {
 	m_keyboard->m_title = titleEdit->text();
-	if (m_keyboard->m_title.isEmpty())  
+	if (m_keyboard->m_title.isEmpty())
 		m_keyboard->m_title = i18n("untitled keyboard layout");
 	m_keyboard->m_comment = commentEdit->toPlainText();
 	m_keyboard->m_language = langIDCombo->currentText();
@@ -596,8 +597,8 @@ int KTouchKeyboardEditorDialog::openKeyboardFile(const KUrl& url) {
         m_currentURL = new_url;
         // Try to load the keyboard, if that fails, we create a new keyboard instead
 		QString msg;
-        if (!m_currentURL.isEmpty() && 
-		    !m_keyboard->load(this, m_currentURL, msg) && !m_keyboard->loadXML(this, m_currentURL, msg)) 
+        if (!m_currentURL.isEmpty() &&
+		    !m_keyboard->load(this, m_currentURL, msg) && !m_keyboard->loadXML(this, m_currentURL, msg))
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead."));
             m_currentURL = ""; // new keyboards haven't got a URL
@@ -641,9 +642,9 @@ bool KTouchKeyboardEditorDialog::saveModified() {
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, i18n("The keyboard has been changed. Do you want to save the changes?"),
 		0, KStandardGuiItem::yes(), KStandardGuiItem::no(), KStandardGuiItem::cancel() );
-    if (result == KMessageBox::Cancel) 
+    if (result == KMessageBox::Cancel)
 		return false; // User aborted
-    if (result == KMessageBox::Yes) 
+    if (result == KMessageBox::Yes)
 		on_saveButton_clicked();
     // if successfully saved the modified flag will be reset in the saveBtnClicked() function
     return true; // User acknowledged
