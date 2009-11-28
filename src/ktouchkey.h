@@ -35,6 +35,7 @@ class QGraphicsSceneMouseEvent;
 /// keyboard file, the list of keys is passed and the index is obtained.
 class KTouchKey : public QObject, public QGraphicsItem {
   Q_OBJECT
+  Q_INTERFACES(QGraphicsItem)
 public:
 
 	/// Position of a character on the key.
