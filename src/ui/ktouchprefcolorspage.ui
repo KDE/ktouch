@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>KTouchPrefColorsPage</class>
- <widget class="QWidget" name="KTouchPrefColorsPage" >
-  <property name="geometry" >
+ <widget class="QWidget" name="KTouchPrefColorsPage">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,70 +10,58 @@
     <height>226</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Color Settings</string>
   </property>
-  <layout class="QGridLayout" >
-   <item row="0" column="0" >
-    <widget class="QGroupBox" name="kcfg_CommonTypingLineColors" >
-     <property name="title" >
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="kcfg_CommonTypingLineColors">
+     <property name="title">
       <string>Use custom color for typing line</string>
      </property>
-     <property name="checkable" >
+     <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="0" >
-       <layout class="QGridLayout" >
-        <property name="leftMargin" >
+     <layout class="QGridLayout">
+      <item row="0" column="0">
+       <layout class="QGridLayout">
+        <property name="margin">
          <number>0</number>
         </property>
-        <property name="topMargin" >
-         <number>0</number>
-        </property>
-        <property name="rightMargin" >
-         <number>0</number>
-        </property>
-        <property name="bottomMargin" >
-         <number>0</number>
-        </property>
-        <property name="horizontalSpacing" >
+        <property name="spacing">
          <number>6</number>
         </property>
-        <property name="verticalSpacing" >
-         <number>6</number>
-        </property>
-        <item row="0" column="4" >
-         <widget class="KColorButton" name="kcfg_TeacherTextColor" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+        <item row="0" column="4">
+         <widget class="KColorButton" name="kcfg_TeacherTextColor">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="minimumSize" >
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="toolTip" >
+          <property name="toolTip">
            <string>The color for the teacher's line</string>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="0" column="2" >
+        <item row="0" column="2">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Expanding</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
             <height>20</height>
@@ -80,36 +69,42 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="0" colspan="2" >
-         <widget class="QLabel" name="l1" >
-          <property name="text" >
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="l1">
+          <property name="text">
            <string>Teacher's line</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="3" >
-         <widget class="QLabel" name="l3" >
-          <property name="text" >
+        <item row="0" column="3">
+         <widget class="QLabel" name="l3">
+          <property name="text">
            <string>Text:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-        <item row="1" column="3" >
-         <widget class="QLabel" name="l4" >
-          <property name="text" >
+        <item row="1" column="3">
+         <widget class="QLabel" name="l4">
+          <property name="text">
            <string>Text:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-        <item row="1" column="5" >
+        <item row="1" column="5">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Fixed</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
             <height>20</height>
@@ -117,15 +112,15 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="5" >
+        <item row="0" column="5">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Fixed</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
             <height>20</height>
@@ -133,61 +128,67 @@
           </property>
          </spacer>
         </item>
-        <item row="1" column="4" >
-         <widget class="KColorButton" name="kcfg_StudentTextColor" >
-          <property name="minimumSize" >
+        <item row="1" column="4">
+         <widget class="KColorButton" name="kcfg_StudentTextColor">
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="toolTip" >
+          <property name="toolTip">
            <string>Change the text color for the student line</string>
           </property>
-          <property name="whatsThis" >
+          <property name="whatsThis">
            <string>Here you can change the color of the text you type in the student line.</string>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="1" column="6" >
-         <widget class="QLabel" name="l6" >
-          <property name="text" >
+        <item row="1" column="6">
+         <widget class="QLabel" name="l6">
+          <property name="text">
            <string>Background:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-        <item row="0" column="6" >
-         <widget class="QLabel" name="l5" >
-          <property name="text" >
+        <item row="0" column="6">
+         <widget class="QLabel" name="l5">
+          <property name="text">
            <string>Background:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
-        <item row="1" column="7" >
-         <widget class="KColorButton" name="kcfg_StudentBackgroundColor" >
-          <property name="minimumSize" >
+        <item row="1" column="7">
+         <widget class="KColorButton" name="kcfg_StudentBackgroundColor">
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="1" column="1" colspan="2" >
+        <item row="1" column="1" colspan="2">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Expanding</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>34</width>
             <height>20</height>
@@ -195,28 +196,28 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="7" >
-         <widget class="KColorButton" name="kcfg_TeacherBackgroundColor" >
-          <property name="minimumSize" >
+        <item row="0" column="7">
+         <widget class="KColorButton" name="kcfg_TeacherBackgroundColor">
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="toolTip" >
+          <property name="toolTip">
            <string>The background for the teacher's line</string>
           </property>
-          <property name="whatsThis" >
+          <property name="whatsThis">
            <string>Here you can change the background color for the teacher's line (the line of letters you have to type.)</string>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="1" column="0" >
-         <widget class="QLabel" name="l2" >
-          <property name="text" >
+        <item row="1" column="0">
+         <widget class="QLabel" name="l2">
+          <property name="text">
            <string>Typing line</string>
           </property>
          </widget>
@@ -226,44 +227,32 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" >
-    <widget class="QGroupBox" name="kcfg_ColorOnError" >
-     <property name="title" >
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="kcfg_ColorOnError">
+     <property name="title">
       <string>Use different color on missed typing</string>
      </property>
-     <property name="checkable" >
+     <property name="checkable">
       <bool>true</bool>
      </property>
-     <layout class="QGridLayout" >
-      <item row="0" column="0" >
-       <layout class="QGridLayout" >
-        <property name="leftMargin" >
+     <layout class="QGridLayout">
+      <item row="0" column="0">
+       <layout class="QGridLayout">
+        <property name="margin">
          <number>0</number>
         </property>
-        <property name="topMargin" >
-         <number>0</number>
-        </property>
-        <property name="rightMargin" >
-         <number>0</number>
-        </property>
-        <property name="bottomMargin" >
-         <number>0</number>
-        </property>
-        <property name="horizontalSpacing" >
+        <property name="spacing">
          <number>6</number>
         </property>
-        <property name="verticalSpacing" >
-         <number>6</number>
-        </property>
-        <item row="0" column="0" >
+        <item row="0" column="0">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Expanding</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>140</width>
             <height>20</height>
@@ -271,15 +260,15 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="3" >
+        <item row="0" column="3">
          <spacer>
-          <property name="orientation" >
+          <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <property name="sizeType" >
+          <property name="sizeType">
            <enum>QSizePolicy::Fixed</enum>
           </property>
-          <property name="sizeHint" >
+          <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
             <height>20</height>
@@ -287,61 +276,67 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="4" >
-         <widget class="QLabel" name="errorBackgroundLabel" >
-          <property name="text" >
+        <item row="0" column="4">
+         <widget class="QLabel" name="errorBackgroundLabel">
+          <property name="text">
            <string>Background:</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
          </widget>
         </item>
-        <item row="0" column="5" >
-         <widget class="KColorButton" name="kcfg_ErrorBackgroundColor" >
-          <property name="enabled" >
+        <item row="0" column="5">
+         <widget class="KColorButton" name="kcfg_ErrorBackgroundColor">
+          <property name="enabled">
            <bool>true</bool>
           </property>
-          <property name="minimumSize" >
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="toolTip" >
+          <property name="toolTip">
            <string>Choose the background color for error in typing line</string>
           </property>
-          <property name="whatsThis" >
+          <property name="whatsThis">
            <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the background of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="0" column="2" >
-         <widget class="KColorButton" name="kcfg_ErrorTextColor" >
-          <property name="enabled" >
+        <item row="0" column="2">
+         <widget class="KColorButton" name="kcfg_ErrorTextColor">
+          <property name="enabled">
            <bool>true</bool>
           </property>
-          <property name="minimumSize" >
+          <property name="minimumSize">
            <size>
             <width>40</width>
             <height>0</height>
            </size>
           </property>
-          <property name="toolTip" >
+          <property name="toolTip">
            <string>Choose the text color for error in typing line</string>
           </property>
-          <property name="whatsThis" >
+          <property name="whatsThis">
            <string>When you have checked 'Use different color on error in the typing line', you can then choose a color for the text of errors. You make an error when you type a wrong letter in the student line. This is a way to make your errors more visible.</string>
           </property>
-          <property name="text" >
+          <property name="text">
            <string/>
           </property>
          </widget>
         </item>
-        <item row="0" column="1" >
-         <widget class="QLabel" name="errorTextLabel" >
-          <property name="text" >
+        <item row="0" column="1">
+         <widget class="QLabel" name="errorTextLabel">
+          <property name="text">
            <string>Text:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -350,12 +345,12 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" >
+   <item row="2" column="0">
     <spacer>
-     <property name="orientation" >
+     <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeHint" >
+     <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
        <height>40</height>
@@ -365,7 +360,7 @@
    </item>
   </layout>
  </widget>
-  <customwidgets>
+ <customwidgets>
   <customwidget>
    <class>KColorButton</class>
    <extends>QPushButton</extends>
@@ -373,7 +368,7 @@
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="local" >kcolorbutton.h</include>
+  <include location="local">kcolorbutton.h</include>
  </includes>
  <resources/>
  <connections/>
