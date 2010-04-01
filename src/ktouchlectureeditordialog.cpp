@@ -125,7 +125,7 @@ void KTouchLectureEditorDialog::saveBtnClicked() {
 
 void KTouchLectureEditorDialog::saveAsBtnClicked() {
     QString tmp = KFileDialog::getSaveFileName(QString(), 
-        "*.ktouch.xml|KTouch Lecture Files(*.ktouch.xml)\n*.*|All Files", this, i18n("Save Training Lecture") );
+        "*.ktouch.xml|KTouch Lecture Files(*.ktouch.xml)\n*|All Files", this, i18n("Save Training Lecture") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
         m_currentURL = tmp;

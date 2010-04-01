@@ -211,7 +211,7 @@ void KTouch::inputMethodEvent( QInputMethodEvent* m ){
 // The action File->Open text...
 void KTouch::fileOpenText() {
     trainingPause();
-    KUrl tmp = KFileDialog::getOpenUrl(QString(), i18n("*.txt|Text files\n*.*|All files"), this, i18n("Select Practice Text") );
+    KUrl tmp = KFileDialog::getOpenUrl(QString(), i18n("*.txt|Text files\n*|All files"), this, i18n("Select Practice Text") );
     if (!tmp.isEmpty()) {
         // TODO : ask user for training options
         // create a default lecture
