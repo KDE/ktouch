@@ -718,7 +718,7 @@ Homepage: http://xapient.net
    <Line>usually measure table field did not remember north travel friends early slowly wood easy waves money fire</Line>
   </Level>
   <Level>
-   <LevelComment>Deutsche Wörter – 1000 häufigst benutzte Wörter</LevelComment>
+   <LevelComment>Deutsche Wörter -1000 häufigst benutzte Wörter</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>der die und in den von zu das mit sich des auf für ist im dem nicht ein eine als auch es an werden</Line>
    <Line>aus er hat dass sie nach wird bei einer um am sind noch wie einem über einen so zum war haben nur oder</Line>
@@ -813,9 +813,9 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Die Sonderzeichen</LevelComment>
-   <NewCharacters>^+&lt;/-#</NewCharacters>
+   <NewCharacters>^+&lt;/-#´</NewCharacters>
    <Line>Mit der Hochstelltaste ändert sich bereits die gewohnte Belegung. Probiere es aus. Diese Übung verlangt viel Geduld!</Line>
-   <Line>1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= +* &lt;> -- nocheinmal -- 1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= +* &lt;></Line>
+   <Line>1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= ´` +* &lt;> -- nocheinmal -- 1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= ´` +* &lt;></Line>
    <Line>k ! k!k !!! k ! k!k !!! h &lt; h&lt;h &lt;&lt;&lt; h >>> &lt;h> &lt;h> &lt;&lt;&lt; >>></Line>
    <Line>g > g>g >>> g > g>g >>> f = f=f === f = f=f ===</Line>
    <Line>q &amp; &amp;q&amp; &amp;&amp;&amp; q &amp; &amp;q&amp; &amp;&amp;&amp; s ? s?s ??? s ? s?s ???</Line>
@@ -853,16 +853,16 @@ Homepage: http://xapient.net
    <NewCharacters>none</NewCharacters>
    <Line>Wird eine Abkürzung abgekürzt ausgesprochen, so wird sie grundsätzlich ohne Punkt und stets ohne Leerzeichen geschrieben.</Line>
    <Line>Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR</Line>
-   <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen „10 Meter“)</Line>
+   <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen "10 Meter")</Line>
    <Line>Abkürzungen, die nicht abgekürzt ausgesprochen werden, werden grundsätzlich mit Punkten abgekürzt.</Line>
    <Line>Wenn die Abkürzung mehrteilig ist, stehen Leerzeichen zwischen den Bestandteilen. Beispiele: Dr., z. B., d. h., i. d. R., ges. gesch.</Line>
-   <Line>Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung für „und so weiter“ durchgesetzt hat,</Line>
-   <Line>ebenso wie die lateinische Variante „etc.“ bzw. „&amp;c.“ für „et cetera“.</Line>
-   <Line>Weitere Ausnahmen bilden „svw.“ für „so viel wie“.</Line>
+   <Line>Eine Ausnahme stellt das verbreitete "usw." dar, das sich anstelle des eigentlich korrekten "u. s. w." als Abkürzung für "und so weiter" durchgesetzt hat,</Line>
+   <Line>ebenso wie die lateinische Variante "etc." bzw. "&amp;c." für "et cetera".</Line>
+   <Line>Weitere Ausnahmen bilden "svw." für "so viel wie".</Line>
    <Line>Die Abkürzungsweise mit Punkten, aber ohne Leerzeichen, ist seit Langem veraltet. Einige Beispiele:</Line>
    <Line>ABS Anti-Blockier-System (Sicherheitssystem für Bremsen)</Line>
    <Line>ADAC Allgemeiner Deutscher Automobil Club</Line>
-   <Line>AEG Aus Erfahrung gut – Allgemeine Elektrizitäts-Gesellschaft (Haushaltsgerätefirma)</Line>
+   <Line>AEG Aus Erfahrung gut - Allgemeine Elektrizitäts-Gesellschaft (Haushaltsgerätefirma)</Line>
    <Line>AKW Atomkraftwerk</Line>
    <Line>BKA Bundeskriminalamt</Line>
    <Line>BMW Bayerische Motorenwerke</Line>
@@ -901,13 +901,13 @@ Homepage: http://xapient.net
    <Line>PLZ Postleitzahl</Line>
    <Line>PVC Polyvinyl-Chlorid (Kunststoff)</Line>
    <Line>RAF Rote Armee Fraktion (linksradikale deutsche Terrorvereinigung aus den70ern)</Line>
-   <Line>SOS Morsenotruf ... --- ... (Eselsbrücke: „Save Our Souls“)</Line>
+   <Line>SOS Morsenotruf ... --- ... (Eselsbrücke: "Save Our Souls")</Line>
    <Line>THW Technisches Hilfswerk</Line>
    <Line>TNT Trinitrotoluol (Sprengstoff)</Line>
    <Line>TÜV Technischer Überwachungsverein</Line>
    <Line>UKW Ultrakurzwelle</Line>
    <Line>UPS United Parcel Service (Paketdienst)</Line>
-   <Line>USW Und so weiter …</Line>
+   <Line>USW Und so weiter</Line>
    <Line>WWW World Wide Web</Line>
   </Level>
   <Level>
@@ -968,12 +968,12 @@ Homepage: http://xapient.net
    <Line>sondern in der Folge die Verlagerung der Ausgaben von Software zu Hardware und somit eine bessere Ausstattung für Schule und Unterricht.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Esperanto“</LevelComment>
+   <LevelComment>Testtext "Esperanto"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur.</Line>
    <Line>Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile,</Line>
    <Line>und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
-   <Line>Doktoro Esperanto (Esperanto „Hoffender“) war das Pseudonym, unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal: Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache veröffentlichte.</Line>
+   <Line>Doktoro Esperanto (Esperanto "Hoffender") war das Pseudonym, unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal: Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache veröffentlichte.</Line>
    <Line>Seine Absicht war es, eine leicht erlernbare, neutrale Sprache für die internationale Verständigung zu entwickeln, die jedoch andere Sprachen nicht ersetzen sollte.</Line>
    <Line>Auf Initiative Zamenhofs entstand eine internationale Sprachgemeinschaft, die das Esperanto seither für viele Zwecke anwendet,</Line>
    <Line>vor allem für Reisen, Brieffreundschaften, internationale Treffen und kulturellen Austausch (Literatur, Musik u. a.).</Line>
@@ -982,7 +982,7 @@ Homepage: http://xapient.net
    <Line>Erleben Sie afrikanische Gesänge, brasilianischen Tanz, koreanische Kampfkunst, deutsches Bier und nepalesische Küche, möglicherweise alles während des gleichen Treffens.</Line>
    <Line>Erleben Sie die Leichtigkeit der Kommunikation über Sprachgrenzen hinweg, wie Sie sie noch nie bisher gefühlt haben.</Line>
    <Line>Tauchen Sie ein, nehmen Sie teil am Austausch der Kulturen. Die Vielfalt der Welt liegt vor Ihnen.</Line>
-   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch – schon allein das Wort „Schulenglisch“ impliziert das Ergebnis:</Line>
+   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch - schon allein das Wort "Schulenglisch" impliziert das Ergebnis:</Line>
    <Line>Dass die allermeisten Menschen nach 3 Jahren noch nichts in der Bäckerei bestellen können und sich selbst nach 9 Jahren noch nicht frei in der Fremdsprache ausdrücken.</Line>
    <Line>Stattdessen lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel mehr ausdrücken können (und in mehr Ländern).</Line>
    <Line>Esperanto wurde mit Absicht so geplant, dass man es so einfach wie möglich lernen kann, so dass alle Menschen in allen Ländern, selbst ohne Talent für Sprachen,</Line>
@@ -992,29 +992,29 @@ Homepage: http://xapient.net
    <Line>Wenn Sie 500 Wörter Esperanto lernen, ist es das Äquivalent von einem Englisch- oder Französisch-Wortschatz von mindestens 3000 Wörtern.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Der kleine Prinz“</LevelComment>
+   <LevelComment>Testtext "Der kleine Prinz"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery.</Line>
    <Line>Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt.</Line>
    <Line>Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen.</Line>
    <Line>Der orientalische Astronom, dessen Entdeckung erst dann ernst genommen wird, als er sie in einem westlichen Anzug vorträgt, kann als Hinweis auf die Reformen in der Türkei durch Atatürk verstanden werden.</Line>
    <Line>Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943 vom Verlag Reynal &amp; Hitchcock in New York veröffentlicht.</Line>
-   <Line>Das Buch erschien zeitgleich im französischen Original („Le petit prince“) und in einer englischen Übersetzung („The little prince“) von Katherine Woods.</Line>
+   <Line>Das Buch erschien zeitgleich im französischen Original ("Le petit prince") und in einer englischen Übersetzung ("The little prince") von Katherine Woods.</Line>
    <Line>Von der Erstauflage wurden auch limitierte und signierte Ausgaben in englisch (525 Exemplare) und französisch (260 Exemplare) verkauft.</Line>
    <Line>1950 erschien die erste deutsche Übersetzung von Grete und Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde das Werk weltweit in über 180 Sprach- und Dialektvarianten übersetzt.</Line>
    <Line>Der Erzähler berichtet zunächst, wie er als sechsjähriges Kind seine erste Zeichnung vollendet hatte.</Line>
-   <Line>Wenn er sie den „großen Leuten“ mit der Frage zeigte, ob sie ihnen nicht Angst mache, hätten sie geantwortet: „Warum sollen wir vor einem Hut Angst haben?“</Line>
+   <Line>Wenn er sie den "großen Leuten" mit der Frage zeigte, ob sie ihnen nicht Angst mache, hätten sie geantwortet: "Warum sollen wir vor einem Hut Angst haben?"</Line>
    <Line>Die Zeichnung sollte jedoch eine Riesenschlange darstellen, die einen Elefanten verdaut.</Line>
-   <Line>Zufällig begegnet der Erzähler, nachdem er mit seinem Flugzeug in der Sahara notgelandet ist, dem kleinen Prinzen, der ihn bittet: „Zeichne mir ein Schaf …“</Line>
-   <Line>Da der Prinz aber mit allen Zeichnungen, die der Flieger anfertigt, unzufrieden ist, zeichnet jener eine Kiste und erklärt: „Das Schaf, das du willst, steckt da drin.“</Line>
+   <Line>Zufällig begegnet der Erzähler, nachdem er mit seinem Flugzeug in der Sahara notgelandet ist, dem kleinen Prinzen, der ihn bittet: "Zeichne mir ein Schaf .."</Line>
+   <Line>Da der Prinz aber mit allen Zeichnungen, die der Flieger anfertigt, unzufrieden ist, zeichnet jener eine Kiste und erklärt: "Das Schaf, das du willst, steckt da drin."</Line>
    <Line>Der Prinz hat im Übrigen keine Mühe, eine Zeichnung mit dem Elefanten und der Riesenschlange als solche zu erkennen. Tag für Tag erzählt nun der kleine Prinz dem Erzähler seine Geschichte.</Line>
-   <Line>Er stammt nicht von der Erde, sondern von einem kleinen Asteroiden, „kaum größer als ein Haus“.</Line>
+   <Line>Er stammt nicht von der Erde, sondern von einem kleinen Asteroiden, "kaum größer als ein Haus".</Line>
    <Line>Einmal war auf dem Planeten des kleinen Prinzen eine Blume gewachsen, hatte ihre Knospe entwickelt, ordnete ihre Blütenblätter und enthüllte sich gerade zur Stunde des Sonnenaufgangs.</Line>
-   <Line>Der kleine Prinz unterhielt sich mit ihr, doch quälte sie ihn bald mit ihrer Eitelkeit. „Man darf den Blumen nicht zuhören, man muss sie anschauen und einatmen.“</Line>
+   <Line>Der kleine Prinz unterhielt sich mit ihr, doch quälte sie ihn bald mit ihrer Eitelkeit. "Man darf den Blumen nicht zuhören, man muss sie anschauen und einatmen."</Line>
    <Line>Schließlich verließ der Prinz seinen Planeten. Auf der Suche nach Freunden besucht er weitere Asteroiden in der Region. Und so kommt der kleine Prinz auf den siebten Planeten, die Erde.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Sprichwörter“</LevelComment>
+   <LevelComment>Testtext "Sprichwörter"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Abends wird der Faule fleißig. An jedem Gerücht ist ein kleines bisschen Wahrheit. Andere Länder, andere Sitten.</Line>
    <Line>Andere Mütter haben auch schöne Töchter Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
@@ -1053,21 +1053,21 @@ Homepage: http://xapient.net
    <Line>Zuviel ist zuviel, und zu wenig ist nicht genug. Zwei Hähne auf einem Mist vertragen sich nicht.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Yoga“</LevelComment>
+   <LevelComment>Testtext "Yoga"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, Kriyas, Meditation und/oder Askese umfasst.</Line>
-   <Line>Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Integration“ als auch im Sinne von „Anschirren“ und „Anspannen“ des Körpers an die Seele zur Sammlung und Konzentration verstanden werden.</Line>
+   <Line>Der Begriff Yoga kann sowohl als "Vereinigung" oder "Integration" als auch im Sinne von "Anschirren" und "Anspannen" des Körpers an die Seele zur Sammlung und Konzentration verstanden werden.</Line>
    <Line>Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander.</Line>
    <Line>Wurzeln: Da Yoga ursprünglich aus Indien stammt, liegen die Wurzeln der Yoga-Philosophie im Hinduismus und Teilen des Buddhismus.</Line>
    <Line>Das Individuum wird hier als ein Reisender im Wagen des materiellen Körpers gesehen.</Line>
-   <Line>Der Wagen ist der Körper, der Kutscher der Verstand, die fünf Pferde die fünf Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt im Indischen „Yoga“.</Line>
+   <Line>Der Wagen ist der Körper, der Kutscher der Verstand, die fünf Pferde die fünf Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt im Indischen "Yoga".</Line>
    <Line>Darüber hinaus enthält die Bhagavad-Gita direkte Anweisungen für den Yogi.</Line>
-   <Line>So heißt es im 5. Kapitel, Vers 27: „Sich lösend von der Außenwelt, starr auf die Nasenwurzel (‚Nasikagra‘) schauend – den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen“.</Line>
-   <Line>(Anmerkung: „Nasikagra“ verwechseln einige Übersetzer mit „Nasenspitze“ – die meisten Yogis schielen aber nicht etwa,</Line>
+   <Line>So heißt es im 5. Kapitel, Vers 27: "Sich lösend von der Außenwelt, starr auf die Nasenwurzel ("Nasikagra") schauend - den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen".</Line>
+   <Line>(Anmerkung: "Nasikagra" verwechseln einige Übersetzer mit "Nasenspitze" - die meisten Yogis schielen aber nicht etwa,</Line>
    <Line>sondern blicken als Konzentrationsübung auf die Nasenwurzel zwischen den Augenbrauen, angeblich einen wichtigen Nerventreffpunkt).</Line>
-   <Line>Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“</Line>
-   <Line>Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise. In Vers 10 heißt es: „yogi yunjita satatam atmanam rahasi sthitah – ekaki yatachittama nirashir aparigraha.“</Line>
-   <Line>‚Der Yogi soll beständig sich mühen in der Einsamkeit – allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz.‘</Line>
+   <Line>Vers 28 wendet sich den spirituellen Zielen zu: "Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt - Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst."</Line>
+   <Line>Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise. In Vers 10 heißt es: "yogi yunjita satatam atmanam rahasi sthitah - ekaki yatachittama nirashir aparigraha."</Line>
+   <Line>"Der Yogi soll beständig sich mühen in der Einsamkeit - allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz."</Line>
    <Line>Grundsätzlich hat Yoga nachweislich einige positiv bewertete Effekte sowohl auf die physische als auch auf die psychische Gesundheit.</Line>
    <Line>Yoga kann unter Umständen zu einer Linderung bei verschiedensten Krankheitsbildern führen,</Line>
    <Line>etwa bei Durchblutungsstörungen, Schlafstörungen, nervösen Beschwerden (Angst und Depression), chronischen Kopfschmerzen oder Rückenschmerzen.</Line>
@@ -1076,27 +1076,27 @@ Homepage: http://xapient.net
    <Line>Yoga hat auf viele Menschen eine beruhigende, ausgleichende Wirkung und kann somit den Folgeerscheinungen von Stress entgegenwirken.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Psyche“</LevelComment>
+   <LevelComment>Testtext "Psyche"</LevelComment>
    <NewCharacters>none</NewCharacters>
-   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das „Gesamtsystem“ aller jener (Lebens)„Regungen“,</Line>
-   <Line>das „der Volksmund“ seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt.</Line>
-   <Line>Damit ist zuerst die Gesamtheit solcher „Lebensäußerungen“ oder Eigenreaktionen gemeint,</Line>
-   <Line>die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. „Ersten-Person-Perspektive“ beobachtet und beschrieben werden können:</Line>
+   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das "Gesamtsystem" aller jener (Lebens)"Regungen",</Line>
+   <Line>das "der Volksmund" seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt.</Line>
+   <Line>Damit ist zuerst die Gesamtheit solcher "Lebensäußerungen" oder Eigenreaktionen gemeint,</Line>
+   <Line>die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. "Ersten-Person-Perspektive" beobachtet und beschrieben werden können:</Line>
    <Line>Das erlebende Wahrnehmen, das vorstellende Erinnern vorgängiger Erfahrungen, das Träumen,</Line>
    <Line>spontane oder willkürliche Ausdenken oder Phantasieren möglicher oder andersartiger Erfahrungen aller nur denkbaren Art bis hin zum vielfältigen emotionalen Reagieren darauf</Line>
    <Line>(und gegebenenfalls damit in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten Verhalten und absichtlichen oder bewussten und eventuell sogar geplanten bis strategischen Handeln).</Line>
-   <Line>Traditionell wird außerdem „dem Psychischen“ der „physische“ Leib oder „somatische“ Körper gegenüber gestellt.</Line>
-   <Line>Als „psychosomatisch“ werden dann solche „leib-seelischen“ Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen,</Line>
+   <Line>Traditionell wird außerdem "dem Psychischen" der "physische" Leib oder "somatische" Körper gegenüber gestellt.</Line>
+   <Line>Als "psychosomatisch" werden dann solche "leib-seelischen" Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen,</Line>
    <Line>die nur physiologisch, biochemisch oder anderweitig festgestellt und beobachtet werden können.</Line>
    <Line>In erster Linie handelt es sich dabei um Veränderungen von vegetativ gesteuerten und hormonell vermittelten Vitalfunktionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder Verdauung,</Line>
    <Line>einschließlich evtl. dadurch bedingter krankhafter Auswirkungen wie etwa chronischer oder sogar schmerzhafter Verspannung, um nur ein Beispiel davon anzuführen.</Line>
    <Line>Aufgrund dieser besonderen Fähigkeit sind ältere Kinder und vor allem erwachsene Menschen zu jener Art von bewusstem, insbesondere absichtlichen Denken und Planen fähig,</Line>
    <Line>das bei Tieren bislang nicht beobachtet werden konnte.</Line>
    <Line>Menschen werden deswegen für ihre Taten verantwortlich gemacht, nicht dagegen Tiere und Kleinkinder vor Entwicklung ausreichender Erinnerungsfähigkeit und Beherrschung eines gezielten und kontrollierten,</Line>
-   <Line>insbesondere regelgeleiteten und allein „in der Vorstellung“ oder „im Geiste“ stattfindenden Kombinierens von Vorstellungselementen jeder Art („Denken“).</Line>
+   <Line>insbesondere regelgeleiteten und allein "in der Vorstellung" oder "im Geiste" stattfindenden Kombinierens von Vorstellungselementen jeder Art ("Denken").</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Linux und Freie Software“</LevelComment>
+   <LevelComment>Testtext "Linux und Freie Software"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Als Linux oder GNU/Linux werden in der Regel freie, portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme bezeichnet, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.</Line>
    <Line>Die weite, auch kommerzielle Verbreitung ermöglichte ab 1992 die Lizenzierung des Linux-Kernels unter der GPL.</Line>
@@ -1104,7 +1104,7 @@ Homepage: http://xapient.net
    <Line>Es sind sowohl Unternehmen als auch Non-Profit-Organisationen und Einzelpersonen beteiligt, die dies als Hobby betreiben.</Line>
    <Line>Im praktischen Einsatz werden meist sogenannte Linux-Distributionen genutzt, in denen verschiedene Software zu einem fertigen Paket zusammengestellt ist.</Line>
    <Line>Jede Distribution enthält somit Linux beziehungsweise den Linux-Kernel.</Line>
-   <Line>Es gibt eine Vielzahl von Linux-Distributionen, aber für die aktuellen Kernel 2.2.x, 2.4.x und 2.6.x jeweils nur eine stabile, eine aktiv gepflegte und eine weiter entwickelte Version –</Line>
+   <Line>Es gibt eine Vielzahl von Linux-Distributionen, aber für die aktuellen Kernel 2.2.x, 2.4.x und 2.6.x jeweils nur eine stabile, eine aktiv gepflegte und eine weiter entwickelte Version -</Line>
    <Line>nebenbei wird der (stabile) 2.6.29er-Zweig noch gepflegt und es werden Patches für vorhergehende Versionen bereitgestellt.</Line>
    <Line>Allerdings passen viele Distributoren und versierte Benutzer den Betriebssystemkern mehr oder weniger für ihre Zwecke an.</Line>
    <Line>Die Einsatzbereiche von Linux sind vielfältig und umfassen unter anderem die Nutzung auf Desktop-Rechnern, Servern, Mobiltelefonen, Routern, Multimedia-Endgeräten und Supercomputern.</Line>
@@ -1112,28 +1112,28 @@ Homepage: http://xapient.net
    <Line>Ebenfalls spielt die wirtschaftliche und geographische Lage einer Region eine wichtige Rolle. So planen vorrangig südamerikanische Schwellenländer den verstärkten Einsatz von Linux.</Line>
    <Line>Freie Software (engl.: free software) ist Software, die für jeden Zweck genutzt, studiert, bearbeitet und in ursprünglicher oder veränderter Form weiterverbreitet werden darf.</Line>
    <Line>Das schließt auch die kommerzielle Nutzung ein. Software, die auf Grundlage dieser Software entsteht, muss normalerweise ebenfalls Freie Software sein (Prinzip des Copyleft bzw. share alike).</Line>
-   <Line>Freier Software steht die proprietäre oder „unfreie“ Software gegenüber, die diese Freiheiten nicht oder nicht in vollem Umfang bietet. Diese Unterscheidung wurde von der Free Software Foundation (FSF) geprägt.</Line>
+   <Line>Freier Software steht die proprietäre oder "unfreie" Software gegenüber, die diese Freiheiten nicht oder nicht in vollem Umfang bietet. Diese Unterscheidung wurde von der Free Software Foundation (FSF) geprägt.</Line>
    <Line>Die Free Software Foundation (FSF) definiert Software als frei, wenn ihre Lizenz folgende Freiheiten einräumt:</Line>
    <Line>Freiheit 0: Das Programm zu jedem Zweck auszuführen.</Line>
    <Line>Freiheit 1: Das Programm zu studieren und zu verändern.</Line>
    <Line>Freiheit 2: Das Programm zu verbreiten.</Line>
    <Line>Freiheit 3: Das Programm zu verbessern und zu verbreiten, um damit einen Nutzen für die Gemeinschaft zu erzeugen.</Line>
    <Line>Für die Freiheiten (1) und (3) ist der Zugang zum Quelltext Voraussetzung, sonst wird das Verändern eines Programms schwierig bis unmöglich.</Line>
-   <Line>Sind eine oder mehrere dieser Bedingungen nicht erfüllt, wird die Software als proprietär oder „unfrei“ bezeichnet.</Line>
+   <Line>Sind eine oder mehrere dieser Bedingungen nicht erfüllt, wird die Software als proprietär oder "unfrei" bezeichnet.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Alkohol“</LevelComment>
+   <LevelComment>Testtext "Alkohol"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Ethanol ist eine farblose, leicht entzündliche Flüssigkeit mit brennendem Geschmack sowie charakteristischem, würzigem Geruch.</Line>
    <Line>Umgangssprachlich wird es als Alkohol bezeichnet. Ältere Nomenklaturen verwendeten die Bezeichnungen Äthanol, Äthylalkohol oder Ethylalkohol.</Line>
-   <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch „Geist“).</Line>
-   <Line>In der Chemie wird Ethanol oft mit EtOH abgekürzt und in der Alltagsmedizin mündlich mit C2 bezeichnet (als Verkürzung der Summenformel [₆=Composetaste+_+6] C₂H₆O).</Line>
+   <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch "Geist").</Line>
+   <Line>In der Chemie wird Ethanol oft mit EtOH abgekürzt und in der Alltagsmedizin mündlich mit C2 bezeichnet (als Verkürzung der Summenformel).</Line>
    <Line>Bekannt ist Ethanol vor allem als Trinkalkohol, der als Anteil in Genussmittel (z. B. Wein, Bier, Likör) klassifiziert wird.</Line>
    <Line>Er ist allerdings zugleich ein Rauschmittel, sein Konsum ist in den meisten Staaten erlaubt.</Line>
    <Line>Das Führen von Fahrrädern, Kraftfahrzeugen, Schiffen und Flugzeugen unter Alkoholeinfluss ist jedoch meist unter Strafe gestellt.</Line>
    <Line>Die Hauptverwendungen von Ethanol betreffen neben der Genuss- und Lebensmittelindustrie vor allem in den letzten Jahren die Nutzung als Biokraftstoff in Form von Bioethanol.</Line>
    <Line>Außerdem handelt es sich um ein organisches Lösungsmittel sowie eine Grundchemikalie der Industrie. Für den Menschen ist Ethanol giftig.</Line>
-   <Line>Die Aufnahme führt – ab etwa 0,5–1 Promille Alkoholkonzentration im Blut – zu typischen akuten Trunkenheitssymptomen wie Schwindel, Übelkeit, Orientierungsstörung, Redseligkeit und gesteigerter Aggressivität.</Line>
+   <Line>Die Aufnahme führt - ab etwa 0,5-1 Promille Alkoholkonzentration im Blut - zu typischen akuten Trunkenheitssymptomen wie Schwindel, Übelkeit, Orientierungsstörung, Redseligkeit und gesteigerter Aggressivität.</Line>
    <Line>Die Letale Dosis (LD) liegt etwa bei 3,0 bis 4,0 Promille für ungeübte Trinker. Es wurden jedoch schon Werte über 7 Promille gemessen. Die LD50 beträgt für die Ratte 7.060 mg/kg bei oraler Applikation.</Line>
    <Line>Bei einer akuten Ethanolvergiftung kann der noch im Magen befindliche Alkohol durch Herbeiführen von Erbrechen oder durch Auspumpen des Mageninhalts teilweise entfernt werden.</Line>
    <Line>Bei regelmäßiger Einnahme, die zu einer Abhängigkeit (Alkoholkrankheit) führen kann, werden alle Zellen des Körpers geschädigt. Insbesondere leiden das Nervensystem und Gehirn sowie die Leber.</Line>
@@ -1144,26 +1144,462 @@ Homepage: http://xapient.net
    <Line>In Deutschland sterben über 73000 Menschen jährlich vorzeitig aufgrund ihres Alkoholmissbrauchs.</Line>
   </Level>
   <Level>
-   <LevelComment>Testtext „Säuren“</LevelComment>
+   <LevelComment>Testtext "Säuren"</LevelComment>
    <NewCharacters>none</NewCharacters>
    <Line>Wohl die älteste bekannte Säure (lat. acidum) ist Essig (lat. acetum), eine etwa fünfprozentige wässrige Lösung der Verbindung Essigsäure. Säuren waren etwas Essigartiges (oxos od. acidus).</Line>
    <Line>In der Alchemie galt Säure als ein Urstoff. Die sauren Eigenschaften basierten auf einer einzigen Ursäure, die in verschiedenen Substanzen zur Wirkung kam.</Line>
    <Line>Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine ätzende Wirkung und einen sauren Geschmack. Bis Ende des 13. Jh. waren wohl neben Essig und anderen Pflanzensäften keine Säuren bekannt.</Line>
    <Line>Erweiterte Kenntnisse bezüglich Säuren wurden dem im 8. Jh. lebenden Geber zugeschrieben, sie basieren jedoch auf Schriften der deutlich jüngeren, sogenannten Pseudo-Geber.</Line>
    <Line>Es entwickelten sich Kenntnisse über verschiedene anorganische Säuren, die alle den Varietäten des Elements Wasser zugeschrieben wurden. Ab dem 18. Jh. wurden sie als Mineralsäuren bezeichnet.</Line>
-   <Line>Eine Herstellung von Salpetersäure (HNO₃) wurde von den Pseudo-Geber vermutlich nach dem 13. Jh. als „auflösendes Wasser“ (aqua dissolutiva) oder „starkes Wasser“ (aqua fortis) beschrieben.</Line>
+   <Line>Eine Herstellung von Salpetersäure wurde von den Pseudo-Geber vermutlich nach dem 13. Jh. als "auflösendes Wasser" (aqua dissolutiva) oder "starkes Wasser" (aqua fortis) beschrieben.</Line>
    <Line>Dabei wurde Kupfervitriol mit Salpeter und Alaun auf Rotglut erhitzt. Es entweichen nitrose Gase, die mit Wasser Salpetersäure bilden.</Line>
    <Line>Man nannte diese Säure auch Scheidewasser, da sie Silber in einer chemischen Reaktion löst, aber Gold nicht.</Line>
    <Line>J. R. Glauber beschrieb 1648 die Herstellung der konzentrierten (rauchenden) Salpetersäure (spiritus acidus nitri) durch Umsetzung mit Schwefelsäure.</Line>
    <Line>Königswasser, aus heutiger Sicht eine Mischung aus Salpeter- und Salzsäure, dürfte ähnlich früh bekannt gewesen sein,</Line>
    <Line>da es sich relativ einfach durch Umsetzung von Salpetersäure mit dem bekannten Salmiak gewinnen lässt. Königswasser war die Königin aller Säuren, der nicht einmal Gold, der König der Metalle, widerstehen konnte.</Line>
-   <Line>Schweflige Säure (H₂SO₃) ist sicher lange bekannt, da sie durch Verbrennung von elementarem Schwefel zu erhalten ist. Sicherlich war bei vielen Prozessen auch Schwefelsäure (mit) dabei.</Line>
-   <Line>Genauere Prozesse zur Darstellung von Schwefelsäure (H₂SO₄) wurden aber erst 1597 von A. Libavius genauer beschrieben:</Line>
-   <Line>a) Glühen von Eisen- oder Kupfersulfat, dem sogenannten Eisen- bzw. Kupfervitriol – siehe hierzu auch Vitriolverfahren – zum Oleum vitrioli (rauchender Schwefelsäure) und</Line>
+   <Line>Schweflige Säure ist sicher lange bekannt, da sie durch Verbrennung von elementarem Schwefel zu erhalten ist. Sicherlich war bei vielen Prozessen auch Schwefelsäure (mit) dabei.</Line>
+   <Line>Genauere Prozesse zur Darstellung von Schwefelsäure wurden aber erst 1597 von A. Libavius genauer beschrieben:</Line>
+   <Line>a) Glühen von Eisen- oder Kupfersulfat, dem sogenannten Eisen- bzw. Kupfervitriol - siehe hierzu auch Vitriolverfahren - zum Oleum vitrioli (rauchender Schwefelsäure) und</Line>
    <Line>b) Verbrennung von Schwefel und anschließende Oxidation, die zu verdünnten Lösungen (Oleum sulphuris) führten. Eine technische Umsetzung gelang im 19. Jh. mit dem Bleikammerverfahren.</Line>
    <Line>Salzsäure (HCl) als eigenständige Verbindung wurde erst Ende des 16. Jh. bekannt.</Line>
    <Line>Durch Glühen einer Mischung Kochsalz und Ton beschrieb A. Libavius eine Synthese. B. Valentinus beschrieb die Umsetzung von Vitriol und Kochsalz zu aqua caustica, dem ätzenden Wasser.</Line>
    <Line>Intensive Untersuchungen durch J. R. Glauber im 17. Jh. führten zum Glaubers Salzgeist (Spiritus salis Glauberianus), der sehr konzentrierten, sogenannten rauchenden Salzsäure bzw. dem Gas Wasserstoffchlorid.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Hinweis</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Die folgenden Texte sind zu großen Teilen sehr alte Texte und frei von Urheberrecht.</Line>
+   <Line>Durch ihr Alter sind die Texte und Gedichte z.T. in alter deutscher Rechtschreibung verfasst.</Line>
+   <Line>Auch sind manche Texte im Prosastil gehalten bzw. in gereimter Form geschrieben. Dies gilt es beim Abtippen zu bedenken.</Line>
+   <Line>Viel Spaß beim weiteren Üben mit KTOUCH !!</Line>
+  </Level>
+  <Level>
+   <LevelComment>Die sanften Tage</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Ich bin so hold den sanften Tagen,</Line>
+   <Line>Wann in der ersten Frühlingszeit</Line>
+   <Line>Der Himmel, blaulich aufgeschlagen,</Line>
+   <Line>Zur Erde Glanz und Wärme streut;</Line>
+   <Line>Die Täler noch von Eise grauen,</Line>
+   <Line>Der Hügel schon sich sonnig hebt,</Line>
+   <Line>Die Mädchen sich ins Freie trauen,</Line>
+   <Line>Der Kinder Spiel sich neu belebt.</Line>
+   <Line>Dann steh' ich auf dem Berge droben</Line>
+   <Line>Und seh' es alles still erfreut,</Line>
+   <Line>Die Brust von leisem Drang gehoben,</Line>
+   <Line>Der noch zum Wunsche nicht gedeiht.</Line>
+   <Line>Ich bin ein Kind und mit dem Spiele</Line>
+   <Line>Der heiteren Natur vergnügt,</Line>
+   <Line>In ihre ruhigen Gefühle</Line>
+   <Line>Ist ganz die Seele eingewiegt.</Line>
+   <Line>Ich bin so hold den sanften Tagen,</Line>
+   <Line>Wann ihrer mild besonnten Flur</Line>
+   <Line>Gerührte Greise Abschied sagen;</Line>
+   <Line>Dann ist die Feier der Natur.</Line>
+   <Line>Sie prangt nicht mehr mit Blüt und Fülle,</Line>
+   <Line>All ihre regen Kräfte ruhn,</Line>
+   <Line>Sie sammelt sich in süße Stille,</Line>
+   <Line>In ihre Tiefen schaut sie nun.</Line>
+   <Line>Die Seele, jüngst so hoch getragen,</Line>
+   <Line>Sie senket ihren stolzen Flug,</Line>
+   <Line>Sie lernt ein friedliches Entsagen,</Line>
+   <Line>Erinnerung ist ihr genug.</Line>
+   <Line>Da ist mir wohl im sanften Schweigen,</Line>
+   <Line>Das die Natur der Seele gab;</Line>
+   <Line>Es ist mir so als dürft' ich steigen</Line>
+   <Line>Hinunter in mein stilles Grab.</Line>
+   <Line>Ludwig Uhland</Line>
+  </Level>
+  <Level>
+   <LevelComment>Der überlistete Advokat</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Einst war ein Mann wegen eines Vergehens vor das Gericht gefordert und sah wohl ein,</Line>
+   <Line>dass er ohne eine Geldstrafe nicht davonkommen würde.</Line>
+   <Line>Da klagte er einem Fürsprecher oder Advokaten seine Not und bat ihn um guten Rat.</Line>
+   <Line>Dieser sagte: "Ich will dir versprechen, dass du ohne alle Kosten aus der Sache gezogen wirst,</Line>
+   <Line>sofern du mir für meine Mühe vier Gulden als Lohn geben willst."</Line>
+   <Line>Der Mann war es zufrieden und sagte ihm die vier Gulden zu, wenn er ihm aus der Klemme heraushelfen wollte.</Line>
+   <Line>Da gab ihm der Fürsprecher den Rat, wenn er mit ihm vor Gericht käme so sollte er, wie viel man ihn auch fragte,</Line>
+   <Line>keine andere Antwort geben als das einzige Wörtchen "Blä". Als sie nun vor Gericht kamen,</Line>
+   <Line>wurde der Mann hart verklagt und stark beschuldigt. Aber man konnte aus ihm kein anderes Wort herausbringen als "Blä".</Line>
+   <Line>Da lachten die Gerichtsherrn laut auf und fragten seinen Fürsprecher: "Was wollt Ihr denn in seinem Namen antworten?"</Line>
+   <Line>Der Fürsprecher sagte: "Ich kann nichts für ihn reden, denn er ist ein Narr und kann mir auch nicht sagen, was ich reden soll.</Line>
+   <Line>Es ist nichts mit ihm anzufangen, er sollte billig freigesprochen werden." Also gingen die Herren zu Rate und beschlossen,</Line>
+   <Line>ihn ledig zu lassen. So geschah es denn auch.</Line>
+   <Line>Nun aber verlangte der Fürsprecher von seinem Schützling die vier Gulden.</Line>
+   <Line>Aber der sprach: "Blä!" Da sagte der Fürsprecher: "Du wirst mir doch nicht das abbläen,</Line>
+   <Line>ich will mein Geld haben", und entbot ihn vor das Gericht.</Line>
+   <Line>Und als die Beiden wieder vor dem Richter standen, sagte der Verklagte wiederum nichts weiter als "Blä."</Line>
+   <Line>Da sprachen die Gerichtsherren zu dem Fürsprecher: "Was macht Ihr mit dem Narren? Wisst Ihr nicht,</Line>
+   <Line>dass er nicht reden kann?" Also musste der Advokat mit leeren Händen abziehen und das Wort "Blä"</Line>
+   <Line>als Entgelt für seine vier Gulden zum Lohne nehmen - und traf wieder einmal Untreue den eigenen Herrn.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Der Rattenfänger</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Ihr lieben Spielleut allesammt,</Line>
+   <Line>Ob arm, ob Schätze sparend,</Line>
+   <Line>Wie Ihr auch heißt, woher Ihr stammt,</Line>
+   <Line>Ob seßhaft oder fahrend,</Line>
+   <Line>Ihr Sinner und Erzähler all,</Line>
+   <Line>Poeten, Troubadoure</Line>
+   <Line>Und Musikanten überall,</Line>
+   <Line>Nehmt hin die Aventiure.</Line>
+   <Line>Die Ihr trompetet und posaunt</Line>
+   <Line>Und quinkelirt und zimpert,</Line>
+   <Line>Paukt, trommelt, rasselt und rasaunt</Line>
+   <Line>Und fingert, knipst und klimpert,</Line>
+   <Line>Ob Flöte oder Clarinett,</Line>
+   <Line>Ob Brummbaß oder Geigen,</Line>
+   <Line>Ob Harfe oder Hackebrett</Line>
+   <Line>Ihr klingen laßt zum Reigen,</Line>
+   <Line>Und die Ihr singet hochgemuth</Line>
+   <Line>Wie ist doch gottbegnadet,</Line>
+   <Line>Wer in der eignen Töne Fluth</Line>
+   <Line>Die frohe Seele badet!</Line>
+   <Line>Wer von der edlen Zunft ein Glied</Line>
+   <Line>Der Spieler und der Sänger</Line>
+   <Line>Euch widme ich getrost mein Lied</Line>
+   <Line>Vom Ham'ler Rattenfänger.</Line>
+   <Line>Ist eine alte Stadtgeschicht,</Line>
+   <Line>Halb spaßhaft und halb schaurig,</Line>
+   <Line>Wär' nur das letzte Ende nicht,</Line>
+   <Line>Ihr Brüder, gar zu traurig.</Line>
+   <Line>Manch seltne Chronik schlug ich auf,</Line>
+   <Line>Urkunden, Pergamente,</Line>
+   <Line>Daß ich erführ' der Dinge Lauf,</Line>
+   <Line>Sie recht bei Namen nennte.</Line>
+   <Line>Doch nirgends giebt es im Archiv</Line>
+   <Line>Für Forscher was und Finder,</Line>
+   <Line>Als daß ein Pfeifer kam und rief</Line>
+   <Line>Die Ratten und die Kinder.</Line>
+   <Line>Ein Spielmann war er, so wie wir,</Line>
+   <Line>Fuhr durch das Reich die Straßen,</Line>
+   <Line>Sang, spielte, küßte, so wie wir,</Line>
+   <Line>Kühn über alle Maßen.</Line>
+   <Line>Und daraus ich dies Lied ersann,</Line>
+   <Line>Wie ich mir das so dachte,</Line>
+   <Line>Jedweder macht es, wie er kann,</Line>
+   <Line>Ein Schelm, wer's besser machte!</Line>
+   <Line>Hier sitze ich am Meeresstrand</Line>
+   <Line>Und höre Wellenrauschen,</Line>
+   <Line>So mögt, Gesellen, Ihr im Land</Line>
+   <Line>Nun meiner Märe lauschen.</Line>
+   <Line>Mit vollen, weißen Segeln zieht</Line>
+   <Line>Ein Schiff am Horizonte,</Line>
+   <Line>Daß doch auch so führ' mein Lied,</Line>
+   <Line>Daß so das Glück ihm sonnte!</Line>
+   <Line>Ich gab ihm lust'ge Zeichen schon,</Line>
+   <Line>Die kommen ihm zu Statten,</Line>
+   <Line>Es führt die Fiedel am Gallion</Line>
+   <Line>Und in der Flagge Ratten.</Line>
+   <Line>Ihr lieben Spielleut, nehmt in Kauf,</Line>
+   <Line>Was Euch an ihm verdrossen,</Line>
+   <Line>Und schließt ihm Eure Herzen auf,</Line>
+   <Line>Dem Hameler Genossen.</Line>
+   <Line>Es geht die Sage wie ein Sang</Line>
+   <Line>Von ihm durch's alte Sachsen,</Line>
+   <Line>Und auf dem Koppelberg ist lang</Line>
+   <Line>Darüber Gras gewachsen.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Elf Söhne 1</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Ich habe elf Söhne.</Line>
+   <Line>Der erste ist äußerlich sehr unansehnlich, aber ernsthaft und klug; trotzdem schätze</Line>
+   <Line>ich ihn, wiewohl ich ihn als Kind wie alle andern liebe, nicht sehr hoch ein. Sein</Line>
+   <Line>Denken scheint mir zu einfach. Er sieht nicht rechts noch links und nicht in die Weite;</Line>
+   <Line>in seinem kleinen Gedankenkreis läuft er immerfort rundum oder dreht sich vielmehr.</Line>
+   <Line>Der zweite Sohn</Line>
+   <Line>Der zweite ist schön, schlank, wohlgebaut; es entzückt, ihn in Fechterstellung zu sehen.</Line>
+   <Line>Auch er ist klug, aber überdies welterfahren; er hat viel gesehen, und deshalb scheint</Line>
+   <Line>selbst die heimische Natur vertrauter mit ihm zu sprechen als mit den Daheimgebliebenen.</Line>
+   <Line>Doch ist gewiß dieser Vorzug nicht nur und nicht einmal wesentlich dem Reisen zu</Line>
+   <Line>verdanken, er gehört vielmehr zu dem Unnachahmlichen dieses Kindes, das zum Beispiel von</Line>
+   <Line>jedem anerkannt wird, der etwa seinen vielfach sich überschlagenden und doch geradezu</Line>
+   <Line>wild beherrschten Kunstsprung ins Wasser ihm nachmachen will. Bis zum Ende des</Line>
+   <Line>Sprungbrettes reicht der Mut und die Lust, dort aber statt zu springen, setzt sich</Line>
+   <Line>plötzlich der Nachahmer und hebt entschuldigend die Arme. - Und trotz dem allen (ich</Line>
+   <Line>sollte doch eigentlich glücklich sein über ein solches Kind) ist mein Verhältnis zu ihm</Line>
+   <Line>nicht ungetrübt. Sein linkes Auge ist ein wenig kleiner als das rechte und zwinkert</Line>
+   <Line>viel; ein kleiner Fehler nur, gewiß, der sein Gesicht sogar noch verwegener macht als es</Line>
+   <Line>sonst gewesen wäre, und niemand wird gegenüber der unnahbaren Abgeschlossenheit seines</Line>
+   <Line>Wesens dieses kleinere zwinkernde Auge tadelnd bemerken. Ich, der Vater, tue es. Es ist</Line>
+   <Line>natürlich nicht dieser körperliche Fehler, der mir weh tut, sondern eine ihm irgendwie</Line>
+   <Line>entsprechende kleine Unregelmäßigkeit seines Geistes, irgendein in seinem Blut irrendes</Line>
+   <Line>Gift, irgendeine Unfähigkeit, die mir allein sichtbare Anlage seines Lebens rund zu</Line>
+   <Line>vollenden. Gerade dies macht ihn allerdings andererseits wieder zu meinem wahren Sohn,</Line>
+   <Line>denn dieser sein Fehler ist gleichzeitig der Fehler unserer ganzen Familie und an diesem</Line>
+   <Line>Sohn nur überdeutlich.</Line>
+   <Line>Der dritte Sohn</Line>
+   <Line>Der dritte Sohn ist gleichfalls schön, aber es ist nicht die Schönheit, die mir gefällt.</Line>
+   <Line>Es ist die Schönheit des Sängers: der geschwungene Mund; das träumerische Auge; der</Line>
+   <Line>Kopf, der eine Draperie hinter sich benötigt, um zu wirken; die unmäßig sich wölbende</Line>
+   <Line>Brust; die leicht auffahrenden und viel zu leicht sinkenden Hände; die Beine, die sich</Line>
+   <Line>zieren, weil sie nicht tragen können. Und überdies: der Ton seiner Stimme ist nicht</Line>
+   <Line>voll; trügt einen Augenblick; läßt den Kenner aufhorchen; veratmet aber kurz darauf</Line>
+   <Line>Trotzdem im allgemeinen alles verlockt, diesen Sohn zur Schau zu stellen, halte ich ihn</Line>
+   <Line>doch am liebsten im Verborgenen; er selbst drängt sich nicht auf, aber nicht etwa</Line>
+   <Line>deshalb, weil er seine Mängel kennt, sondern aus Unschuld. Auch fühlt er sich fremd in</Line>
+   <Line>unserer Zeit; als gehöre er zwar zu meiner Familie, aber überdies noch zu einer andern,</Line>
+   <Line>ihm für immer verlorenen, ist er oft unlustig und nichts kann ihn aufheitern.</Line>
+   <Line>Der vierte Sohn</Line>
+   <Line>Mein vierter Sohn ist vielleicht der umgänglichste von allen. Ein wahres Kind seiner</Line>
+   <Line>Zeit, ist er jedermann verständlich, er steht auf dem allen gemeinsamen Boden und jeder</Line>
+   <Line>ist versucht, ihm zuzunicken. Vielleicht durch diese allgemeine Anerkennung gewinnt sein</Line>
+   <Line>Wesen etwas Leichtes, seine Bewegungen etwas Freies, seine Urteile etwas Unbekümmertes.</Line>
+   <Line>Manche seiner Aussprüche möchte man oft wiederholen, allerdings nur manche, denn in</Line>
+   <Line>seiner Gesamtheit krankt er doch wieder an allzu großer Leichtigkeit. Er ist wie einer,</Line>
+   <Line>der bewundernswert abspringt, schwalbengleich die Luft teilt, dann aber doch trostlos im</Line>
+   <Line>öden Staube endet, ein Nichts. Solche Gedanken vergällen mir den Anblick dieses Kindes.</Line>
+   <Line>Der fünfte Sohn</Line>
+   <Line>Der fünfte Sohn ist lieb und gut; versprach viel weniger, als er hielt; war so</Line>
+   <Line>unbedeutend, daß man sich förmlich in seiner Gegenwart allein fühlte; hat es aber doch</Line>
+   <Line>zu einigem Ansehen gebracht. Fragte man mich, wie das geschehen ist, so könnte ich kaum</Line>
+   <Line>antworten. Unschuld dringt vielleicht doch noch am leichtesten durch das Toben der</Line>
+   <Line>Elemente in dieser Welt, und unschuldig ist er. Vielleicht allzu unschuldig. Freundlich</Line>
+   <Line>zu jedermann. Vielleicht allzu freundlich. Ich gestehe: mir wird nicht wohl, wenn man</Line>
+   <Line>ihn mir gegenüber lobt. Es heißt doch, sich das Loben etwas zu leicht zu machen, wenn</Line>
+   <Line>man einen so offensichtlich Lobenswürdigen lobt, wie es mein Sohn ist.</Line>
+   <Line>weiter geht es in der nächsten Lektion ...</Line>
+  </Level>
+  <Level>
+   <LevelComment>Elf Söhne 2</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Der sechste Sohn</Line>
+   <Line>Mein sechster Sohn scheint, wenigstens auf den ersten Blick, der tiefsinnigste von</Line>
+   <Line>allen. Ein Kopfhänger und doch ein Schwätzer. Deshalb kommt man ihm nicht leicht bei.</Line>
+   <Line>Ist er am Unterliegen, so verfällt er in unbesiegbare Traurigkeit; erlangt er das</Line>
+   <Line>Obergewicht, so wahrt er es durch Schwätzen. Doch spreche ich ihm eine gewisse</Line>
+   <Line>selbstvergessene Leidenschaft nicht ab; bei hellem Tag kämpft er sich oft durch das</Line>
+   <Line>Denken wie im Traum. Ohne krank zu sein - vielmehr hat er eine sehr gute Gesundheit</Line>
+   <Line>taumelt er manchmal, besonders in der Dämmerung, braucht aber keine Hilfe, fällt nicht.</Line>
+   <Line>Vielleicht hat an dieser Erscheinung seine körperliche Entwicklung schuld, er ist viel</Line>
+   <Line>zu groß für sein Alter. Das macht ihn unschön im Ganzen, trotz auffallend schöner</Line>
+   <Line>Einzelheiten, zum Beispiel der Hände und Füße. Unschön ist übrigens auch seine Stirn;</Line>
+   <Line>sowohl in der Haut als in der Knochenbildung irgendwie verschrumpft.</Line>
+   <Line>Der siebente Sohn</Line>
+   <Line>Der siebente Sohn gehört mir vielleicht mehr als alle andern. Die Welt versteht ihn</Line>
+   <Line>nicht zu würdigen; seine besondere Art von Witz versteht sie nicht. Ich überschätze ihn</Line>
+   <Line>nicht; ich weiß, er ist geringfügig genug; hätte die Welt keinen anderen Fehler als den,</Line>
+   <Line>daß sie ihn nicht zu würdigen weiß, sie wäre noch immer makellos. Aber innerhalb der</Line>
+   <Line>Familie wollte ich diesen Sohn nicht missen. Sowohl Unruhe bringt er, als auch Ehrfurcht</Line>
+   <Line>vor der Überlieferung, und beides fügt er, wenigstens für mein Gefühl, zu einem</Line>
+   <Line>unanfechtbaren Ganzen. Mit diesem Ganzen weiß er allerdings selbst am wenigsten etwas</Line>
+   <Line>anzufangen; das Rad der Zukunft wird er nicht ins Rollen bringen, aber diese seine</Line>
+   <Line>Anlage ist so aufmunternd, so hoffnungsreich; ich wollte, er hätte Kinder und diese</Line>
+   <Line>wieder Kinder. Leider scheint sich dieser Wunsch nicht erfüllen zu wollen. In einer mir</Line>
+   <Line>zwar begreiflichen, aber ebenso unerwünschten Selbstzufriedenheit, die allerdings in</Line>
+   <Line>großartigem Gegensatz zum Urteil seiner Umgebung steht, treibt er sich allein umher,</Line>
+   <Line>kümmert sich nicht um Mädchen und wird trotzdem niemals seine gute Laune verlieren.</Line>
+   <Line>Der achte Sohn</Line>
+   <Line>Mein achter Sohn ist mein Schmerzenskind, und ich weiß eigentlich keinen Grund dafür. Er</Line>
+   <Line>sieht mich fremd an, und ich fühle mich doch väterlich eng mit ihm verbunden. Die Zeit</Line>
+   <Line>hat vieles gut gemacht; früher aber befiel mich manchmal ein Zittern, wenn ich nur an</Line>
+   <Line>ihn dachte. Er geht seinen eigenen Weg; hat alle Verbindungen mit mir abgebrochen; und</Line>
+   <Line>wird gewiß mit seinem harten Schädel, seinem kleinen athletischen Körper - nur die Beine</Line>
+   <Line>hatte er als Junge recht schwach, aber das mag sich inzwischen schon ausgeglichen haben</Line>
+   <Line>- überall durchkommen, wo es ihm beliebt. Öfters hatte ich Lust, ihn zurückzurufen, ihn</Line>
+   <Line>zu fragen, wie es eigentlich um ihn steht, warum er sich vom Vater so abschließt und was</Line>
+   <Line>er im Grunde beabsichtigt, aber nun ist er so weit und so viel Zeit ist schon vergangen,</Line>
+   <Line>nun mag es so bleiben wie es ist. Ich höre, daß er als der einzige meiner Söhne einen</Line>
+   <Line>Vollbart trägt; schön ist das bei einem so kleinen Mann natürlich nicht.</Line>
+   <Line>Der neunte Sohn</Line>
+   <Line>Mein neunter Sohn ist sehr elegant und hat den für Frauen bestimmten süßen Blick. So</Line>
+   <Line>süß, daß er bei Gelegenheit sogar mich verführen kann, der ich doch weiß, daß förmlich</Line>
+   <Line>ein nasser Schwamm genügt, um allen diesen überirdischen Glanz wegzuwischen. Das</Line>
+   <Line>Besondere an diesem Jungen aber ist, daß er gar nicht auf Verführung ausgeht; ihm würde</Line>
+   <Line>es genügen, sein Leben lang auf dem Kanapee zu liegen und seinen Blick an die</Line>
+   <Line>Zimmerdecke zu verschwenden oder noch viel lieber ihn unter den Augenlidern ruhen zu</Line>
+   <Line>lassen. Ist er in dieser von ihm bevorzugten Lage, dann spricht er gern und nicht übel;</Line>
+   <Line>gedrängt und anschaulich; aber doch nur in engen Grenzen; geht er über sie hinaus, was</Line>
+   <Line>sich bei ihrer Enge nicht vermeiden läßt, wird sein Reden ganz leer. Man würde ihm</Line>
+   <Line>abwinken, wenn man Hoffnung hätte, daß dieser mit Schlaf gefüllte Blick es bemerken könnte.</Line>
+   <Line>Der zehnte Sohn</Line>
+   <Line>Mein zehnter Sohn gilt als unaufrichtiger Charakter. Ich will diesen Fehler nicht ganz</Line>
+   <Line>in Abrede stellen, nicht ganz bestätigen. Sicher ist, daß, wer ihn in der weit über sein</Line>
+   <Line>Alter hinausgehenden Feierlichkeit herankommen sieht, im immer festgeschlossenen</Line>
+   <Line>Gehrock, im alten, aber übersorgfältig geputzten schwarzen Hut, mit dem unbewegten</Line>
+   <Line>Gesicht, dem etwas vorragenden Kinn, den schwer über die Augen sich wölbenden Lidern,</Line>
+   <Line>den manchmal an den Mund geführten zwei Fingern - wer ihn so sieht, denkt: das ist ein</Line>
+   <Line>grenzenloser Heuchler. Aber, nun höre man ihn reden! Verständig; mit Bedacht; kurz</Line>
+   <Line>angebunden; mit boshafter Lebendigkeit Fragen durchkreuzend; in erstaunlicher,</Line>
+   <Line>selbstverständlicher und froher Übereinstimmung mit dem Weltganzen; eine</Line>
+   <Line>Übereinstimmung, die notwendigerweise den Hals strafft und den Körper erheben läßt.</Line>
+   <Line>Viele, die sich sehr klug dünken und die sich, aus diesem Grunde wie sie meinten, von</Line>
+   <Line>seinem Äußern abgestoßen fühlten, hat er durch sein Wort stark angezogen. Nun gibt es</Line>
+   <Line>aber wieder Leute, die sein Äußeres gleichgültig läßt, denen aber sein Wort heuchlerisch</Line>
+   <Line>erscheint. Ich, als Vater, will hier nicht entscheiden, doch muß ich eingestehen, daß</Line>
+   <Line>die letzteren Beurteiler jedenfalls beachtenswerter sind als die ersteren.</Line>
+   <Line>Der elfte Sohn</Line>
+   <Line>Mein elfter Sohn ist zart, wohl der schwächste unter meinen Söhnen; aber täuschend in</Line>
+   <Line>seiner Schwäche; er kann nämlich zu Zeiten kräftig und bestimmt sein, doch ist</Line>
+   <Line>allerdings selbst dann die Schwäche irgendwie grundlegend. Es ist aber keine beschämende</Line>
+   <Line>Schwäche, sondem etwas, das nur auf diesem unsern Erdboden als Schwäche erscheint. Ist</Line>
+   <Line>nicht zum Beispiel auch Flugbereitschaft Schwäche, da sie doch Schwanken und</Line>
+   <Line>Unbestimmtheit und Flattern ist? Etwas Derartiges zeigt mein Sohn. Den Vater freuen</Line>
+   <Line>natürlich solche Eigenschaften nicht; sie gehen ja offenbar auf Zerstörung der Familie</Line>
+   <Line>aus. Manchmal blickt er mich an, als wollte er mir sagen: ›Ich werde dich mitnehmen,</Line>
+   <Line>Vater.‹ Dann denke ich: ›Du wärst der Letzte, dem ich mich vertraue.‹ Und sein Blick</Line>
+   <Line>scheint wieder zu sagen: ›Mag ich also wenigstens der Letzte sein.‹</Line>
+   <Line>Das sind die elf Söhne</Line>
+  </Level>
+  <Level>
+   <LevelComment>FOSS</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Als FOSS bezeichnet man jene Programme, deren Lizenzen ihren Benutzern die</Line>
+   <Line>Freiheit zusichern, diese für ihre Zwecke zu benutzen, zu studieren oder zu verändern und</Line>
+   <Line>Kopien davon weiterzugeben, sowohl von dem Original als auch von der von ihnen</Line>
+   <Line>veränderten Version, ohne dabei Zahlungen an die bisherigen Entwickler leisten zu müssen.</Line>
+   <Line>Die Free Software Foundation hat folgende Definition von freier Software veröffentlicht:</Line>
+   <Line>Die Freiheit, das Programm für jeden Zweck auszuführen.</Line>
+   <Line>Einschränkungen bezüglich der Verwendbarkeit von Software, bezogen auf Zeit ("30 Tage</Line>
+   <Line>Testphase", "Lizenz endet am 1. Januar 2004"), Zweck ("Verwendung gestattet für</Line>
+   <Line>Forschung und nichtkommerzielle Anwendung", "darf nicht für Leistungsvergleiche</Line>
+   <Line>(Benchmarking) eingesetzt werden") oder willkürliche geographische Beschränkungen ("darf</Line>
+   <Line>nur im Land X verwendet werden") machen ein Programm unfrei.</Line>
+   <Line>Die Freiheit, die Funktionsweise eines Programms zu untersuchen, und es an seine Bedürfnisse anzupassen.</Line>
+   <Line>Rechtliche oder praktische Einschränkungen der Einsicht in die Programmfunktion oder der</Line>
+   <Line>Veränderbarkeit eines Programms, wie der zwingende Erwerb spezieller Lizenzen, die</Line>
+   <Line>Unterzeichnung eines Stillschweigeabkommens oder bei</Line>
+   <Line>Programmiersprachen, die mehrere Formen der Repräsentation bieten die Zurückhaltung der üblicherweise</Line>
+   <Line>bevorzugten Bearbeitungsform ("Quellcode") machen es ebenfalls proprietär (unfrei). Ohne</Line>
+   <Line>die Freiheit, ein Programm zu ändern, bleiben die Anwender vom Wohlwollen eines einzigen Anbieters abhängig.</Line>
+   <Line>Die Freiheit, Kopien weiterzugeben und damit seinen Mitmenschen zu helfen.</Line>
+   <Line>Software kann praktisch ohne Kosten kopiert und weitergegeben werden. Das Verbot, ein</Line>
+   <Line>Programm an eine Person weiterzugeben, die es braucht, macht dieses Programm unfrei.</Line>
+   <Line>Die Weitergabe kann wahlweise auch gegen ein Entgelt erfolgen.</Line>
+   <Line>Die Freiheit, ein Programm zu verbessern, und die Verbesserungen an die</Line>
+   <Line>Öffentlichkeit weiterzugeben, sodass die gesamte Gesellschaft profitiert.</Line>
+   <Line>Nicht jeder ist in allen Bereichen ein guter Programmierer. Manche Leute können überhaupt</Line>
+   <Line>nicht selbst programmieren. Diese Freiheit erlaubt jenen, die nicht die Zeit oder die</Line>
+   <Line>Fähigkeit haben, ein Problem selbst zu lösen, indirekt von der Freiheit, ein Programm zu</Line>
+   <Line>ändern, Gebrauch zu machen. Auch das kann gegen ein Entgelt geschehen.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Richard Stallman</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Richard Matthew Stallman ist Aktivist, Softwareentwickler und Gründer der Free Software</Line>
+   <Line>Foundation im Jahr 1985. Er promovierte 1974 an der Harvard Universiy in Physik, während er</Line>
+   <Line>bereits am Massachusetts Institute of Technology (MIT) angestellt war und dort u.a. am ersten</Line>
+   <Line>erweiterbaren Emacs Texteditor und an einem Betriebssystem arbeitete. Im Jänner 1984 kündigte</Line>
+   <Line>er am MIT, um sich dem ein Jahr zuvor gegründeten GNU Projekt zu widmen, dessen Ziel</Line>
+   <Line>es ist, ein vollkommen freies Betriebssystem zu entwickeln. Dies war der Start der "Free Software</Line>
+   <Line>Bewegung". Seit den 90er-Jahren verbreitet Stallman die Ideen der Bewegung und tritt gegen die Erweiterung von Copyright</Line>
+   <Line>Bestimmungen und Softwarepatenten öffentlich auf. Er schuf eine Lizenz, die unter dem</Line>
+   <Line>Namen "GNU General Public License" (GPL) bekannt wurde, welche den Anwendern</Line>
+   <Line>erstmals die Rechte über ihre Software garantierte und sicherstellte, dass diese auch in</Line>
+   <Line>Zukunft und für sämtliche Veränderungen und Erweiterungen dieser Software ebenfalls</Line>
+   <Line>gelten würden. Es entstand das sogenannte Copyleft-Prinzip. Stallman hält Vorträge über</Line>
+   <Line>GNU, die Free Software Bewegung und verwandte Themen wie "The Dangers of Software</Line>
+   <Line>Patents", "Copyright and Community in the Age of the Computer Networks" und "The</Line>
+   <Line>GNU General Public License v.3". In all seinen Vorträgen vertritt Richard Stallman die</Line>
+   <Line>Auffassung, dass die Idee von Copyrights und proprietärer Software unsozial und damit</Line>
+   <Line>falsch sei. Er beschreibt ein System, welches nicht nur den freien Austausch von Software,</Line>
+   <Line>sondern auch Ideen unterbindet und die Anwender in ihren Möglichkeiten einschränkt und</Line>
+   <Line>positioniert sich gegen dieses in seinen Vorträgen.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Linus Torvalds</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Linus Torvalds - "Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect."</Line>
+   <Line>Nach dem Kauf seines ersten i386er-PCs, auf welchem Linus Torvalds mit "Minix", einem UNIX Klon</Line>
+   <Line>für diese Architektur, arbeitete, erkannte er schnell, dass er mit dessen Funktionalität nicht sehr zufrieden war. Aus</Line>
+   <Line>lizenzrechtlichen Gründen war an eine Veränderung bzw. Erweiterung von Minix nicht zu denken. Zudem benötigte</Line>
+   <Line>er für seine Zwecke ein Programm, das der "terminal emulation" fähig war und er begann ein solches zu</Line>
+   <Line>schreiben. Schnell entwickelte sich dieses Programm und wurde von ihm um Funktionen des Datentransfers und</Line>
+   <Line>der Sicherung von Daten erweitert. Dies war die Geburtsstunde des ersten, freien Betriebssystemkernels.</Line>
+   <Line>Linus Torvalds wollte seine Kreation "Freax" nennen, entschied sich auf Anraten eines Freundes jedoch für die</Line>
+   <Line>Namenskreation "Linux". Im August 1991 verkündete er im Usenet, dass er an einem</Line>
+   <Line>Betriebssystem arbeitete und wollte sich auf diese Weise Feedback und neue Ideen für sein System holen.</Line>
+   <Line>Linus Torvalds wurde am 28. Dezember 1969 in Helsinki, Finnland geboren und studierte an der Universität Helsinki "Computer Science". Seitdem arbeitet er an Linux und koordiniert auch heute noch dessen Entwicklung.</Line>
+  </Level>
+  <Level>
+   <LevelComment>GNU/Linux</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>GNU/Linux</Line>
+   <Line>"The fundamental instance of Free Software is the GNU operating system, which is the only</Line>
+   <Line>operating system that was ever developed for ethical reasons, instead of for commercial or</Line>
+   <Line>technical reasons, which is why most systems were developed." [ WIFS ]</Line>
+   <Line>Richard Stallman begann 1984 mit der Entwicklung des GNU Betriebssystems,</Line>
+   <Line>welches jedem Benutzer einen von Restriktionen befreiten Einsatz des Computers</Line>
+   <Line>ermöglichen sollte, frei von wirtschaftlichen Interessen und der Kontrolle der</Line>
+   <Line>Softwarefirmen und Entwicklern. Der Name GNU ist ein rekursives Akronym (GNU is not</Line>
+   <Line>Unix) und soll auf die Ähnlichkeit des Systems zu Unix hinweisen. Erst 1992 wurde die</Line>
+   <Line>letzte große Lücke in GNU geschlossen, als Linus Torvalds den Betriebssystemkern</Line>
+   <Line>"Linux" veröffentlichte. Durch die Kombination aus GNU und Linux war das erste</Line>
+   <Line>komplett freie Betriebssystem geschaffen worden - GNU/Linux.</Line>
+   <Line>Linux, dessen Entwicklung nach wie vor von Linus Torvalds koordiniert wird, steht seit</Line>
+   <Line>der Version 0.99.10 unter der GNU General Public Licence und ist als GNU/Linux heute</Line>
+   <Line>führend im Supercomputing-Bereich mit einem Marktanteil von über 85%.</Line>
+   <Line>Bemerkenswert ist auch der rasante Anstieg der Verbreitung in diesem Bereich von</Line>
+   <Line>durchschnittlich ca. 10% pro Jahr seit dem Jahr 2000. Im Desktop-Bereich noch eine</Line>
+   <Line>Randerscheinung verzeichnet das freie Betriebssystem jedoch auch hier das proportional</Line>
+   <Line>größte Wachstum unter den Betriebssystemfamilien.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Free Software Foundation</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>Free Software Foundation - Der Zugang zu Software entscheidet, wer an der digitalen Gesellschaft teilnehmen</Line>
+   <Line>kann. Um gleichberechtigten Zugang, Teilnahme und Wettbewerb aller Menschen im</Line>
+   <Line>Informationszeitalter sicherzustellen, setzt sich die Free Software Foundation für digitale Freiheit in der Form von freier Software ein.</Line>
+   <Line>"Kein Mensch sollte jemals in einer Situation sein, in der er Software einsetzen muss, die ihm</Line>
+   <Line>nicht die Freiheit der Nutzung, des Studiums, der Modifikation und der Weitergabe ermöglicht."</Line>
+   <Line>Die 1985 von Richard Stallman gegründete "non governmental organisation" FSF</Line>
+   <Line>vertritt weltweit die Rechte aller Benutzer freier Software und fördert deren Verbreitung.</Line>
+   <Line>Sie finanziert sich u.a. durch Spenden, erzielt aber große Teile ihres Einkommens aus</Line>
+   <Line>Gebühren für Kopien freier Software und verwandten Dienstleistungen wie beispielsweise</Line>
+   <Line>gedruckten Anleitungen und Dokumentationen zu freier Software sowie fertigen</Line>
+   <Line>Distributionen. Durch diverse Kampagnen wie "Speak out against ACTA" (Anti-</Line>
+   <Line>Counterfeiting Trade Agreement), "BadVista" und "End Software Patents " macht die FSF</Line>
+   <Line>permanent auf sich aufmerksam, setzt sich für die Verbreitung von "Ogg/Vorbis" und</Line>
+   <Line>"Open Document" als Vertreter von offenen Standards ein. Sie fördert nicht nur die</Line>
+   <Line>Verbreitung freier Software, sondern auch freier Hardware und veröffentlicht regelmäßig</Line>
+   <Line>eine Liste von Softwareprojekten, denen man eine besondere Priorität für den Erfolg von</Line>
+   <Line>freier Software zuspricht, als Empfehlung für freie Entwickler, um auf die Relevanz dieser</Line>
+   <Line>Projekte hinzuweisen und Entwickler zur Mithilfe zu bewegen. So schreibt die FSF:</Line>
+   <Line>"Our list helps guide volunteers and supporters to projects where their skills can be utilized,</Line>
+   <Line>whether they be in coding, graphic design, writing, or activism. We hope that you can find a</Line>
+   <Line>project here where your skill, energy, and time can be put to good use."</Line>
+   <Line>Am 10. März 2001 bekam die Free Software Foundation Unterstützung in Form</Line>
+   <Line>eines europäischen Pendants, der Free Software Foundation Europe (FSFE). Die FSFE</Line>
+   <Line>nimmt sich der europäischen Aspekte von freier Software an, hat eine Anlaufstelle für</Line>
+   <Line>Politiker, Anwälte und Journalisten ins Leben gerufen, um die rechtliche, politische und</Line>
+   <Line>soziale Zukunft von Free Open Source Software zu sichern und ist in einem starken</Line>
+   <Line>Netzwerk gleichgesinnter, auf der ganzen Welt verteilter Organisationen aktiv und hat</Line>
+   <Line>Teams und Unterstützer in vielen europäischen Ländern.</Line>
+   <Line>Im Jahr 2005 hat eine Gruppe von Free-Software-Aktivisten in Lateinamerika</Line>
+   <Line>öffentlich ihre Absicht erklärt, sich dem weltweiten Netzwerk der Free Software</Line>
+   <Line>Foundations anzuschließen. Die FSFLA (Free Software Foundation Latinoamérica) ist</Line>
+   <Line>somit neben der FSF, der FSFE und der FSFI (Free Software Foundation India) die vierte</Line>
+   <Line>ihrer Art und setzte sich wie ihre Schwesterorganisationen das Ziel der Förderung,</Line>
+   <Line>Bekanntmachung und Verteidigung freier Software und der Zusammenarbeit mit den anderen FSFs.</Line>
+   <Line>Geistiger Wohlstand statt geistigem Eigentum lautet die Devise der FSFE. Die</Line>
+   <Line>Weltorganisation für geistiges Eigentum (WIPO, World Intellectual Property Organisation)</Line>
+   <Line>hat bislang 23 internationale Verträge zu Patenten, Urheberrechten und Warenzeichen auf</Line>
+   <Line>Basis des öffentlich-politischen Dialogs geschlossen. Die FSFE lehnt diesen generellen</Line>
+   <Line>Trend zum Ausbau von Monopolen und Kontrolle entschieden ab und empfiehlt</Line>
+   <Line>gemeinsam mit anderen Organisationen der Zivilgesellschaft den Umbau der WIPO zu</Line>
+   <Line>einer Weltorganisation für geistigen Wohlstand (WIWO, World Intellectual Wealth</Line>
+   <Line>Organisation), die sich der Forschung und der Verbreitung von Wissen verpflichtet fühlen</Line>
+   <Line>soll. Nach Ansicht der FSFE sollten künstliche Monopole nur dort geschaffen werden, wo</Line>
+   <Line>sie einen Nutzen für die Gesellschaft bringen, welcher neutral untersucht und nicht</Line>
+   <Line>ungeprüft vorausgesetzt werden darf.</Line>
+  </Level>
+  <Level>
+   <LevelComment>GPL</LevelComment>
+   <NewCharacters>none</NewCharacters>
+   <Line>General Public Licence - Copyleft</Line>
+   <Line>Die GNU/GPL wurde im Januar 1989 von Richard Stallman verfasst und liegt</Line>
+   <Line>mittlerweile in dritter Version vor. Unter ständigem Beschuss der Vertreter des</Line>
+   <Line>"Copyrights" musste die Lizenz, welche eine der wichtigsten freien Lizenzen der "free</Line>
+   <Line>software" Bewegung darstellt, angepasst werden, um den Zweck, die vier von der FSF</Line>
+   <Line>postulierten Grundfreiheiten zu garantieren, weiterhin erfüllen zu können. Die GPL</Line>
+   <Line>garantiert Freiheiten und vor allem deren Fortbestand, was nicht ohne Restriktionen</Line>
+   <Line>geschehen kann. So unterliegt eventuelle veränderte Software automatisch wieder der</Line>
+   <Line>GPL, ist also an diese permanent gebunden und darf ebenfalls frei kopiert, studiert und</Line>
+   <Line>verändert werden. Im Falle freier Software, lizenziert unter der GPL, könnte man also</Line>
+   <Line>zurecht von Gemeinschaftseigentum sprechen.</Line>
   </Level>
   <Level>
    <LevelComment>Shell-Einleitung</LevelComment>
@@ -1190,7 +1626,7 @@ Homepage: http://xapient.net
    <Line>rmdir Löscht ein Verzeichnis mit dessen Inhalt.</Line>
    <Line>su Wechselt den aktuellen Benutzer.</Line>
    <Line>sudo Wird dieses Kommando vor ein anderes geschrieben (mit Leerzeichen) so wird es mit root-Rechten (Administrator) ausgeführt.</Line>
-   <Line>top Zeigt eine Liste der laufenden Prozesse geordnet nach CPU-Leistung (ende mit der Taste „Q“).</Line>
+   <Line>top Zeigt eine Liste der laufenden Prozesse geordnet nach CPU-Leistung (ende mit der Taste "Q").</Line>
   </Level>
   <Level>
    <LevelComment>Shell-Übung</LevelComment>
@@ -1200,7 +1636,7 @@ Homepage: http://xapient.net
    <Line>cd .. Wechselt ein Verzeichnis höher. cd ../td</Line>
    <Line>cd / Wechselt ins Wurzelverzeichnis. cd /</Line>
    <Line>cd Wechselt das Verzeichnis. cd ..  cd /tmp</Line>
-   <Line>cd - Wechselt in das vorherige Verzeichnis. cd -</Line>
+   <Line>cd -Wechselt in das vorherige Verzeichnis. cd -</Line>
    <Line>cp [Datei][Verz] Kopiert Datei in Verzeichnis. cp 123.txt /tmp</Line>
    <Line>mv Verschiebt eine Datei. mv 123.txt /tmp</Line>
    <Line>mv [Datei1] [Datei2] benennt Datei [DATEI1] in [DATEI2] um. mv 123.txt 456.txt</Line>
@@ -1233,43 +1669,9 @@ Homepage: http://xapient.net
    <Line>echo "My number is myno, can you see this number"</Line>
   </Level>
   <Level>
-   <LevelComment>Shell Test</LevelComment>
+   <LevelComment>Final</LevelComment>
    <NewCharacters>none</NewCharacters>
-   <Line>$ vi ginfo</Line>
-   <Line>#</Line>
-   <Line>#</Line>
-   <Line># Script to print user information who currently login, current date &amp; time</Line>
-   <Line>#</Line>
-   <Line>clear</Line>
-   <Line>echo "Hello $USER"</Line>
-   <Line>echo "Today is \c ";date</Line>
-   <Line>echo "Number of user login: \c" ; who | wc -l</Line>
-   <Line>echo "Calendar"</Line>
-   <Line>cal</Line>
-   <Line>exit 0</Line>
-   <Line>$ vi demo</Line>
-   <Line>#!/bin/sh</Line>
-   <Line>#</Line>
-   <Line># Script that demos, command line args</Line>
-   <Line>#</Line>
-   <Line>echo "Total number of command line argument are $#"</Line>
-   <Line>echo "$0 is script name"</Line>
-   <Line>echo "$1 is first argument"</Line>
-   <Line>echo "$2 is second argument"</Line>
-   <Line>echo "All of them are:- $* or $@"</Line>
-   <Line># vi /etc/bashrc</Line>
-   <Line># At the end of file add following in /etc/bashrc file</Line>
-   <Line>#</Line>
-   <Line># today() to print formatted date</Line>
-   <Line>#</Line>
-   <Line># To run this function type today at the $ prompt</Line>
-   <Line># Added by Vivek to show function in Linux</Line>
-   <Line>#</Line>
-   <Line>today()</Line>
-   <Line>{</Line>
-   <Line>echo This is a `date +"%A %d in %B of %Y (%r)"`</Line>
-   <Line>return</Line>
-   <Line>}</Line>
+   <Line>Du hast es geschafft! Du solltest nun MeisterIn der Tastatur sein. Gratulation!</Line>
   </Level>
  </Levels>
 </KTouchLecture>
