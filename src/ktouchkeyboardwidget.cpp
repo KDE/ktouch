@@ -16,7 +16,7 @@
 #include <algorithm>
 #include <set>
 
-#include <qfile.h>
+#include <tqfile.h>
 
 #include <kdebug.h>
 #include <ktempfile.h>
@@ -31,12 +31,12 @@
 // the margin between keyboard and widget frame
 const int MARGIN = 10;
 
-QMap<QChar, int>	 			KTouchKeyboardWidget::m_keyCharMap;
+TQMap<TQChar, int>	 			KTouchKeyboardWidget::m_keyCharMap;
 // --------------------------------------------------------------------------
 
 
-KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
-  : QWidget(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
+KTouchKeyboardWidget::KTouchKeyboardWidget(TQWidget *parent)
+  : TQWidget(parent), m_keyboardWidth(100), m_keyboardHeight(60), m_currentLayout(""),
 	m_hideKeyboard(false)
 {
     setMinimumHeight(100);          // when it's smaller you won't see anything
@@ -44,10 +44,10 @@ KTouchKeyboardWidget::KTouchKeyboardWidget(QWidget *parent)
 }
 
 
-bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg) {
-    QString target;
+bool KTouchKeyboardWidget::loadKeyboard(TQWidget * window, const KURL& url, TQString* errorMsg) {
+    TQString target;
     if (KIO::NetAccess::download(url, target, window)) {
-        QString msg;
+        TQString msg;
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
@@ -62,8 +62,8 @@ bool KTouchKeyboardWidget::loadKeyboard(QWidget * window, const KURL& url, QStri
 }
 
 
-void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
-    QString tmpFile;
+void KTouchKeyboardWidget::saveKeyboard(TQWidget * window, const KURL& url) {
+    TQString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();             // for local files the path is sufficient
@@ -72,13 +72,13 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
         tmpFile=temp->name();
     }
 
-    QFile outfile(tmpFile);
+    TQFile outfile(tmpFile);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         return;
     }
 
-    QTextStream out( &outfile );
+    TQTextStream out( &outfile );
     out << "########################################## \n";
     out << "#                                        # \n";
     out << "#  Keyboard layout file for KTouch       # \n";
@@ -94,7 +94,7 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
            case KTouchBaseKey::CONTROL_KEY  : out << "ControlKey "; break;
            default : out << "NormalKey  "; break;
         }
-        QRect rect=key->frame();
+        TQRect rect=key->frame();
         out << key->m_keyChar.unicode() << '\t' << key->m_keyText << '\t'
             << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
     }
@@ -106,7 +106,7 @@ void KTouchKeyboardWidget::saveKeyboard(QWidget * window, const KURL& url) {
     }
 }
 
-void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
+void KTouchKeyboardWidget::applyPreferences(TQWidget * window, bool silent) {
 	m_hideKeyboard = Prefs::hideKeyboard();
 	if (m_hideKeyboard) 
     	setMaximumHeight(100);
@@ -130,7 +130,7 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
                 m_currentLayout=Prefs::currentKeyboardFile();
         }
         else {
-            QString errorMsg;
+            TQString errorMsg;
             if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
@@ -155,9 +155,9 @@ void KTouchKeyboardWidget::applyPreferences(QWidget * window, bool silent) {
 }
 
 
-void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
+void KTouchKeyboardWidget::newKey(const TQChar& nextChar) {
 	if (m_hideKeyboard) return;
-    QPainter painter(this);
+    TQPainter painter(this);
     painter.translate(m_shift, MARGIN);
     // first clean the markings on all keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next()) {
@@ -169,16 +169,16 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
-        QValueList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
+        TQValueList<KTouchKeyConnection>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
-            QChar targetChar = (*keyIt).m_targetKeyChar;
-            QChar fingerChar = (*keyIt).m_fingerKeyChar;
-            QChar controlChar = (*keyIt).m_controlKeyChar;
+            TQChar targetChar = (*keyIt).m_targetKeyChar;
+            TQChar fingerChar = (*keyIt).m_fingerKeyChar;
+            TQChar controlChar = (*keyIt).m_controlKeyChar;
             // find the keys in the keylist
             for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next()) {
-                if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
+                if (key->m_keyChar==TQChar(0)) continue;    // skip decorative keys
                 if (key->m_keyChar==targetChar) key->m_isNextKey=true;
                 else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
                 else if (key->m_keyChar==controlChar)  key->m_isActive=true;
@@ -191,9 +191,9 @@ void KTouchKeyboardWidget::newKey(const QChar& nextChar) {
 }
 
 
-void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
+void KTouchKeyboardWidget::paintEvent(TQPaintEvent *) {
 	if (m_hideKeyboard) return;
-    QPainter p(this);
+    TQPainter p(this);
     p.translate(m_shift, MARGIN);
     // just print all visible keys
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
@@ -202,9 +202,9 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
 /*	// TODO : later
 
 	const KTouchColorScheme& colorScheme = KTouchColorScheme::m_colorSchemes[Prefs::colorScheme()];
-	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+	for (TQValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
 		// determine colors
-    	QColor textColor;
+    	TQColor textColor;
 		if (it->m_type == KTouchKey::NORMAL || it->m_type == KTouchKey::FINGER) {
 			if (is_next_key) {
 				// mark the key as "next"
@@ -229,14 +229,14 @@ void KTouchKeyboardWidget::paintEvent(QPaintEvent *) {
 
     	p.setFont( m_font );
     	p.drawText(it->m_xS, it->m_yS, it->m_wS, it->m_hS,
-			QPainter::AlignCenter, m_keyText);
+			TQPainter::AlignCenter, m_keyText);
 
 	}
 */
 	// TODO : later copy pre-rendered and pre-scaled characters to screen
 }
 
-void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
+void KTouchKeyboardWidget::resizeEvent(TQResizeEvent *) {
 	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Window = " << width() << "x" << height() << endl;
 	// kdDebug() << "[KTouchKeyboard::resizeEvent]  Keyboard = " << m_keyboardWidth << "x" << m_keyboardHeight << endl;
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
@@ -246,7 +246,7 @@ void KTouchKeyboardWidget::resizeEvent(QResizeEvent *) {
     m_shift = (width() - static_cast<int>(m_keyboardWidth*scale))/2;
     for (KTouchBaseKey * key = m_keyList.first(); key; key = m_keyList.next())
         key->resize(scale);     // resize all keys
-	for (QValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
+	for (TQValueVector<KTouchKey>::iterator it = m_keys.begin(); it != m_keys.end(); ++it) {
         it->resize(scale);     // resize all keys
 	}
     update();                   // and finally redraw the keyboard
@@ -318,7 +318,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     row = h+sp;
 
 	m_keys.clear();
-	m_keys.append( KTouchKey(                           0,     0, w, h, QString("Num")) );		// 0
+	m_keys.append( KTouchKey(                           0,     0, w, h, TQString("Num")) );		// 0
 	m_keys.append( KTouchKey(KTouchKey::NORMAL,   	  col,     0, w, h, '/') );			// 1
 	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	2*col,     0, w, h, '*') );			// 2
 	m_keys.append( KTouchKey(KTouchKey::NORMAL, 	3*col,     0, w, h, '-') );			// 3
@@ -357,25 +357,25 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
 	m_keyConnections.append( KTouchKeyConnector('3', 13,  9, 0) );
 	m_keyConnections.append( KTouchKeyConnector('0', 14,  7, 0) );
 	m_keyConnections.append( KTouchKeyConnector('.', 15,  9, 0) );
-	m_keyConnections.append( KTouchKeyConnector(QChar(13), 16, 10, 0) );
-	m_keyConnections.append( KTouchKeyConnector(QChar(8), 17, 0, 0) );
+	m_keyConnections.append( KTouchKeyConnector(TQChar(13), 16, 10, 0) );
+	m_keyConnections.append( KTouchKeyConnector(TQChar(8), 17, 0, 0) );
 }
 
 
-bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorMsg) {
-    QFile infile(fileName);
+bool KTouchKeyboardWidget::readKeyboard(const TQString& fileName, TQString& errorMsg) {
+    TQFile infile(fileName);
     if ( !infile.open( IO_ReadOnly ) ) {
         errorMsg = i18n("Could not open file.");
         return false;
     }
-    QTextStream in( &infile );
-    in.setEncoding(QTextStream::UnicodeUTF8);
-    QString line;
+    TQTextStream in( &infile );
+    in.setEncoding(TQTextStream::UnicodeUTF8);
+    TQString line;
     m_keyList.clear();          // empty the keyboard
     m_connectorList.clear();    // clear the connections
     m_keyboardWidth=0;
     m_keyboardHeight=0;
-	std::set<QChar>  keys;
+	std::set<TQChar>  keys;
     // now loop until end of file is reached
     do {
         // skip all empty lines or lines containing a comment (starting with '#')
@@ -385,10 +385,10 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
-        QString keyType;
+        TQTextStream lineStream(line, IO_ReadOnly);
+        TQString keyType;
         int keyAscII;
-        QString keyText;
+        TQString keyText;
         int x(0), y(0), w(0), h(0);
         lineStream >> keyType >> keyAscII;
         if (keyType=="FingerKey") {
@@ -397,7 +397,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
                 w=h=8; // default values for old keyboard files
             m_keyList.append( new KTouchFingerKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
-// 			kdDebug() << "read : F : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
+// 			kdDebug() << "read : F : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
@@ -412,12 +412,12 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
             // retrieve the finger key with the matching char
             m_keyList.append( new KTouchNormalKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, fingerCharCode, 0) );
-// 			kdDebug() << "read : N : unicode = " << keyAscII << " char = " << QChar(keyAscII) << endl;
+// 			kdDebug() << "read : N : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
             m_connectorList.append( KTouchKeyConnection(keyAscII, targetChar, fingerChar, controlChar) );
-//			kdDebug() << "read : H : unicode = " << keyAscII << " char = " << QChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
+//			kdDebug() << "read : H : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
 			
         }
         else {
@@ -438,7 +438,7 @@ bool KTouchKeyboardWidget::readKeyboard(const QString& fileName, QString& errorM
         m_keyboardHeight = std::max(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
 //	kdDebug() << "showing all unicode numbers in this file" << endl;
-/*	for (std::set<QChar>::iterator it = keys.begin(); it != keys.end(); ++it)
+/*	for (std::set<TQChar>::iterator it = keys.begin(); it != keys.end(); ++it)
 		kdDebug() << *it << endl;
 */
 //	kdDebug() << "num chars = " << keys.size() << endl;
@@ -454,11 +454,11 @@ void KTouchKeyboardWidget::updateColours() {
     // old functionality : loop over all key connections
 	m_keyCharMap.clear();
 	unsigned int counter = 0;
-    for (QValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
+    for (TQValueList<KTouchKeyConnection>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
 		// store finger and target characters
-        QChar fingerChar = (*it).m_fingerKeyChar;
-        QChar targetChar = (*it).m_targetKeyChar; // this is the _base_ character of the key that needs to be highlighted
-        QChar ch = (*it).m_keyChar;
+        TQChar fingerChar = (*it).m_fingerKeyChar;
+        TQChar targetChar = (*it).m_targetKeyChar; // this is the _base_ character of the key that needs to be highlighted
+        TQChar ch = (*it).m_keyChar;
 
 /*		kdDebug() << "Key #"<<++counter<<": " << ch << "(" << ch.unicode() << ") " 
 				  << "target = " << targetChar << "(" << targetChar.unicode() << ") " 
@@ -466,7 +466,7 @@ void KTouchKeyboardWidget::updateColours() {
 */
 		m_keyCharMap[ch] = -1;
 
-        if (fingerChar == QChar(0)) {
+        if (fingerChar == TQChar(0)) {
 //			kdDebug() << "skipped char = " << targetChar << endl;
 			continue; // skips keys that don't have finger keys assigned
 		}
@@ -514,7 +514,7 @@ void KTouchKeyboardWidget::updateColours() {
 	for (unsigned int i=0; i<m_keys.size(); ++i)
 		m_keyMap[i] = -1;
 	int c_index = 0;
-    for (QValueVector<KTouchKeyConnector>::iterator it = m_keyConnections.begin();
+    for (TQValueVector<KTouchKeyConnector>::iterator it = m_keyConnections.begin();
 		it!=m_keyConnections.end(); ++it)
 	{
 		if (it->m_targetKeyIndex == -1) continue;

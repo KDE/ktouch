@@ -44,7 +44,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
 
   public:
     /// Constructor.
-    KTouchKeyboardEditor(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+    KTouchKeyboardEditor(TQWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
     /// Default destructor.
     ~KTouchKeyboardEditor() {}
     /// Shows and executes the dialog (argument is the url to the default or 
@@ -72,7 +72,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
     /// Called when the "Remove" button was clicked
     virtual void removeBtnClicked();
     /// Called when the selection in the key list box has changed
-	virtual void keySelectionChanged(QListBoxItem * item);
+	virtual void keySelectionChanged(TQListBoxItem * item);
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
 
@@ -83,7 +83,7 @@ class KTouchKeyboardEditor : public KTouchKeyboardEditorDlg {
 
   protected:
     /// Draws the keyboard in the keyboardPreviewLabel.
-    void paintEvent(QPaintEvent *);
+    void paintEvent(TQPaintEvent *);
   
   private:    
     /// Transfers data from the keyboard object to the dialog.

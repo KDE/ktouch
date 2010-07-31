@@ -17,7 +17,7 @@
 #include <config.h>
 #endif
 
-#include <qvaluevector.h>
+#include <tqvaluevector.h>
 
 #include "ktouchkeyconnector.h"
 #include "ktouchkey.h"
@@ -33,18 +33,18 @@ class KTouchKeyboard  {
 	/// Clears the keyboard (resets all data)
 	void clear();
     /// Loads a keyboard layout (old format) from file (returns true if successful).
-    bool load(QWidget * window, const KURL& url);
+    bool load(TQWidget * window, const KURL& url);
     /// Loads a lecture (in XML format) from file (returns true if successful).
-    bool loadXML(QWidget * window, const KURL& url);
+    bool loadXML(TQWidget * window, const KURL& url);
     /// Saves the lecture data to file (returns true if successful).
-    bool saveXML(QWidget * window, const KURL& url) const;
+    bool saveXML(TQWidget * window, const KURL& url) const;
 	/// Creates the default number keyboard.
 	void createDefault();
 	/// Updates the indices in the KTouchKeyConnector objects for faster access.
 	void updateConnections();
 	
-    QValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
-    QValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
+    TQValueVector<KTouchKey>         	m_keys;      	///< Vector with key definitions.
+    TQValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
 	QString		m_comment;			///< Comments about the creator of the keyboard layout.
@@ -57,11 +57,11 @@ class KTouchKeyboard  {
 	
   private:
     /// Loads keyboard data from file
-    bool read(QTextStream& in);
+    bool read(TQTextStream& in);
     /// Loads keyboard data from file into an XML document
-    bool read(const QDomDocument& doc);
+    bool read(const TQDomDocument& doc);
     /// Saves keyboard data in the XML document
-    void write(QDomDocument& doc) const;
+    void write(TQDomDocument& doc) const;
 };
 
 #endif  // KTOUCHKEYBOARD_H

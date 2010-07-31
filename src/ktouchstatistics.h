@@ -29,7 +29,7 @@ class KTouchStatistics : public KTouchStatisticsDlg {
     Q_OBJECT
   public:
     /// Constructor, takes a pointer to the trainer object.
-    KTouchStatistics(QWidget* parent);
+    KTouchStatistics(TQWidget* parent);
 
 	/// Fills the statistics dialog with data and executes it.
 	void run(const KURL& currentLecture, const KTouchStatisticsData& stats,

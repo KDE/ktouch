@@ -13,8 +13,8 @@
 #include "ktouchkeyboardeditor.h"
 #include "ktouchkeyboardeditor.moc"
 
-#include <qlabel.h>
-#include <qfont.h>
+#include <tqlabel.h>
+#include <tqfont.h>
 
 #include <kmessagebox.h>
 #include <kfiledialog.h>
@@ -34,7 +34,7 @@
 // ***** Public functions ***
 // **************************
 
-KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bool modal, WFlags fl)
+KTouchKeyboardEditor::KTouchKeyboardEditor(TQWidget* parent, const char* name, bool modal, WFlags fl)
   : KTouchKeyboardEditorDlg(parent,name, modal,fl)
 {
 }
@@ -43,7 +43,7 @@ KTouchKeyboardEditor::KTouchKeyboardEditor(QWidget* parent, const char* name, bo
 bool KTouchKeyboardEditor::startEditor(const KURL& url) {
     // call open request dialog and load a keyboard and start the dialogs event loop if
     // the user did not cancel the open request dialog 
-    if (openKeyboardFile(url)==QDialog::Accepted)  {
+    if (openKeyboardFile(url)==TQDialog::Accepted)  {
         exec();
         return true;
     }
@@ -59,8 +59,8 @@ bool KTouchKeyboardEditor::startEditor(const KURL& url) {
 
 void KTouchKeyboardEditor::fontBtnClicked() {
 	//kdDebug() << "Fontbutton clicked" << endl;
-    QFont f;
-    if (KFontDialog::getFont(f, false, this, true)==QDialog::Accepted) {
+    TQFont f;
+    if (KFontDialog::getFont(f, false, this, true)==TQDialog::Accepted) {
 		m_keyboard.m_fontSuggestions = f.toString();
 		// update font and keyboard display
 		titleEdit->setFont(f);  
@@ -89,7 +89,7 @@ void KTouchKeyboardEditor::saveBtnClicked() {
 // -----------------------------------------------------------------------------
 
 void KTouchKeyboardEditor::saveAsBtnClicked() {
-    QString tmp = KFileDialog::getSaveFileName(QString::null, 
+    TQString tmp = KFileDialog::getSaveFileName(TQString::null, 
         i18n("*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n*.*|All Files"), this, i18n("Save Keyboard Layout") );
     if (!tmp.isEmpty()) {
         transfer_from_dialog();
@@ -116,13 +116,13 @@ void KTouchKeyboardEditor::removeBtnClicked() {
 // -----------------------------------------------------------------------------
 
 /// Called when the selection in the key list box has changed
-void KTouchKeyboardEditor::keySelectionChanged(QListBoxItem * item) {
+void KTouchKeyboardEditor::keySelectionChanged(TQListBoxItem * item) {
 }
 // -----------------------------------------------------------------------------
 
 
 
-void KTouchKeyboardEditor::paintEvent(QPaintEvent *) {
+void KTouchKeyboardEditor::paintEvent(TQPaintEvent *) {
 	
 }
 // -----------------------------------------------------------------------------
@@ -143,7 +143,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 	languageEdit->setText(m_keyboard.m_language);
 	kdDebug() << "Setting font '"<< m_keyboard.m_fontSuggestions <<"'" << endl;
 	if (!m_keyboard.m_fontSuggestions.isEmpty()) {
-		QFont f;
+		TQFont f;
 		f.fromString(m_keyboard.m_fontSuggestions);
 		titleEdit->setFont(f);  
 		keyboardCommentEdit->setFont(f);
@@ -151,15 +151,15 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
 	}
 	kdDebug() << "Adding key definitions to key list" << endl;
 	keyListBox->clear();
-	QValueVector<KTouchKey>::iterator it;
+	TQValueVector<KTouchKey>::iterator it;
 	unsigned int min_x = 100000;
 	unsigned int max_x = 0;
 	unsigned int min_y = 100000;
 	unsigned int max_y = 0;
 	for( it = m_keyboard.m_keys.begin(); it != m_keyboard.m_keys.end(); ++it ) {
 		switch (it->m_type) {
-			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + QString(it->m_primaryChar) + "'"); break;
-			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + QString(it->m_primaryChar) + "'"); break;
+			case KTouchKey::NORMAL : keyListBox->insertItem("N  '" + TQString(it->m_primaryChar) + "'"); break;
+			case KTouchKey::FINGER : keyListBox->insertItem("F  '" + TQString(it->m_primaryChar) + "'"); break;
 			default                : keyListBox->insertItem("O  '" + it->m_otherKeyText + "'"); break;
 		}
 		min_x = std::min<unsigned int>(min_x, it->m_x);
@@ -193,7 +193,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
         i18n("Create new keyboard!"),
         url, KTouchPtr->lectureFiles(), i18n("<no keyboard files available>"));
 
-    if (result == QDialog::Accepted) {
+    if (result == TQDialog::Accepted) {
         // Ok, user confirmed the dialog, now lets get the url
         m_currentURL = new_url;
         // Try to load the keyboard, if that fails, we create a new keyboard instead
@@ -201,7 +201,7 @@ int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
 		    !m_keyboard.load(this, m_currentURL) && !m_keyboard.loadXML(this, m_currentURL)) 
 		{
             KMessageBox::sorry(this, i18n("Could not open the keyboard file, creating a new one instead!"));
-            m_currentURL = QString::null; // new keyboards haven't got a URL
+            m_currentURL = TQString::null; // new keyboards haven't got a URL
 			m_keyboard.clear();
         }
         // If we have no URL, we create a new keyboard - can happen if either the user
@@ -213,9 +213,9 @@ int KTouchKeyboardEditor::openKeyboardFile(const KURL& url) {
         else
             setModified(false); // newly read keyboards are not modified in the begin
         transfer_to_dialog();    // Update our editor with the keyboard data
-        return QDialog::Accepted;
+        return TQDialog::Accepted;
     }
-    else return QDialog::Rejected;
+    else return TQDialog::Rejected;
 }
 // -----------------------------------------------------------------------------
 
@@ -234,7 +234,7 @@ bool KTouchKeyboardEditor::saveModified() {
     if (!m_modified) return true;
     // ok, ask the user to save the changes
     int result = KMessageBox::questionYesNoCancel(this, 
-        i18n("The keyboard has been changed. Do you want to save the changes?"),QString::null,KStdGuiItem::save(),KStdGuiItem::discard());
+        i18n("The keyboard has been changed. Do you want to save the changes?"),TQString::null,KStdGuiItem::save(),KStdGuiItem::discard());
     if (result == KMessageBox::Cancel) return false; // User aborted
     if (result == KMessageBox::Yes) saveBtnClicked();
     // if successfully saved the modified flag will be resetted in the saveBtnClicked() function

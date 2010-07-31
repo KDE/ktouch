@@ -16,8 +16,8 @@
 #include <config.h>
 #endif
 
-#include <qcolor.h>
-#include <qvaluevector.h>
+#include <tqcolor.h>
+#include <tqvaluevector.h>
 
 #include <kurl.h>
 
@@ -36,29 +36,29 @@ class KTouchColorScheme {
     void clear();
 
     /// Loads a color map (in XML format) from XML node (returns true if successful)
-    bool read(const QDomNode& node);
+    bool read(const TQDomNode& node);
     /// Saves a color map to XML document (returns true if successful).
-    void write(QDomDocument& doc, QDomElement& root) const;
+    void write(TQDomDocument& doc, TQDomElement& root) const;
 
 
-    QString m_name;          		///< The name of the colour scheme.
+    TQString m_name;          		///< The name of the colour scheme.
 
-    QColor 	m_teacherTextColor;    	///< The text colour for the teachers line.
-    QColor 	m_teacherBackground;   	///< The background colour for the teachers line.
-    QColor 	m_studentTextColor;    	///< The text colour for the students line.
-    QColor 	m_studentBackground;   	///< The background colour for the students line.
-    QColor 	m_errorTextColor;      	///< The text colour for wrong text (students line).
-    QColor 	m_errorBackground;     	///< The background colour for wrong text (students line).
+    TQColor 	m_teacherTextColor;    	///< The text colour for the teachers line.
+    TQColor 	m_teacherBackground;   	///< The background colour for the teachers line.
+    TQColor 	m_studentTextColor;    	///< The text colour for the students line.
+    TQColor 	m_studentBackground;   	///< The background colour for the students line.
+    TQColor 	m_errorTextColor;      	///< The text colour for wrong text (students line).
+    TQColor 	m_errorBackground;     	///< The background colour for wrong text (students line).
 
-    QColor  m_frame;          		///< The colour for the key frames.
-    QColor  m_background[8];  		///< The background colour of the finger keys and the associated normal keys.
-    QColor  m_text;           		///< The colour for the text on the keys.
-    QColor  m_backgroundH;    		///< The background colour for highlighted (next) normal keys.
-    QColor  m_textH;          		///< The text/pen colour for highlighted (next) normal keys.
-    QColor  m_cBackground;    		///< The background colour for the control keys.
-    QColor  m_cText;          		///< The text/pen colour for the control keys.
-    QColor  m_cBackgroundH;   		///< The background colour for activated control keys.
-    QColor  m_cTextH;         		///< The text/pen colour for activated control keys.
+    TQColor  m_frame;          		///< The colour for the key frames.
+    TQColor  m_background[8];  		///< The background colour of the finger keys and the associated normal keys.
+    TQColor  m_text;           		///< The colour for the text on the keys.
+    TQColor  m_backgroundH;    		///< The background colour for highlighted (next) normal keys.
+    TQColor  m_textH;          		///< The text/pen colour for highlighted (next) normal keys.
+    TQColor  m_cBackground;    		///< The background colour for the control keys.
+    TQColor  m_cText;          		///< The text/pen colour for the control keys.
+    TQColor  m_cBackgroundH;   		///< The background colour for activated control keys.
+    TQColor  m_cTextH;         		///< The text/pen colour for activated control keys.
 
 	bool	m_default;		  		///< If true, this color map is marked as default and will not
 							  		///  be saved in the XML file.
@@ -68,14 +68,14 @@ class KTouchColorScheme {
     /// Loads several color maps (in XML format) from file (returns true if successful)
 	/// and _adds_ them to the current color maps. This function shall be called
 	/// directly after createDefaultColorSchemes().
-    static bool readList(QWidget * window, const KURL& url);
+    static bool readList(TQWidget * window, const KURL& url);
     /// Saves several color maps to file (returns true if successful).
 	/// Only non-default color maps are written to file.
-    static bool writeList(QWidget * window, const KURL& url);
+    static bool writeList(TQWidget * window, const KURL& url);
     /// Creates some default color schemes (erases m_colorSchemes before).
     static void createDefaults();
 	/// Contains all color schemes available in the program.
-	static QValueVector<KTouchColorScheme>	m_colorSchemes;
+	static TQValueVector<KTouchColorScheme>	m_colorSchemes;
 };
 
 #endif  // KTOUCHCOLORSCHEME_H

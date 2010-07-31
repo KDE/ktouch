@@ -17,12 +17,12 @@
 #include <config.h>
 #endif
 
-#include <qstring.h>
+#include <tqstring.h>
 
 /// Formats the speed (given in chars/min) and creates a nice looking text.
-QString format_speed(double speed);
+TQString format_speed(double speed);
 
 /// Sorts both lists but uses only the values in "text" for sorting.
-void sort_lists(QStringList& text, QStringList& data);
+void sort_lists(TQStringList& text, TQStringList& data);
 
 #endif  // KTOUCHUTILS_H

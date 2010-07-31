@@ -13,8 +13,8 @@
 #include "ktouchslideline.h"
 #include "ktouchslideline.moc"
 
-#include <qpainter.h>
-#include <qpixmap.h>
+#include <tqpainter.h>
+#include <tqpixmap.h>
 #include <kdebug.h>
 
 #include <cmath>
@@ -41,8 +41,8 @@
 // --- don't touch the lines above ---
 
 
-KTouchSlideLine::KTouchSlideLine(QWidget *parent)
-  : QWidget( parent ),
+KTouchSlideLine::KTouchSlideLine(TQWidget *parent)
+  : TQWidget( parent ),
     m_teacherPixmap(NULL),
     m_studentPixmap(NULL),
     m_slideTimer(this),
@@ -77,8 +77,8 @@ KTouchSlideLine::KTouchSlideLine(QWidget *parent)
     m_xFrameStudent = 0;  
     m_xFrameStudentCurrent = 0;
 
-    connect( &m_cursorTimer, SIGNAL(timeout()), this, SLOT(toggleCursor()) );
-    connect( &m_slideTimer, SIGNAL(timeout()), this, SLOT(slide()) );
+    connect( &m_cursorTimer, TQT_SIGNAL(timeout()), this, TQT_SLOT(toggleCursor()) );
+    connect( &m_slideTimer, TQT_SIGNAL(timeout()), this, TQT_SLOT(slide()) );
 }
 // ----------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ void KTouchSlideLine::applyPreferences() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSlideLine::setNewText(const QString& teacher_text, const QString& student_text) {
+void KTouchSlideLine::setNewText(const TQString& teacher_text, const TQString& student_text) {
 	KD_DEBUG( "[KTouchSlideLine::setNewText]" << endl );
 
     m_teacherText=teacher_text;
@@ -117,14 +117,14 @@ void KTouchSlideLine::setNewText(const QString& teacher_text, const QString& stu
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSlideLine::setStudentText(const QString& text) {
+void KTouchSlideLine::setStudentText(const TQString& text) {
 	KD_DEBUG( "[KTouchSlideLine::setStudentText]" << endl );
     m_studentText=text;
     updateStudentLine();
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSlideLine::setFont(const QFont& font) {
+void KTouchSlideLine::setFont(const TQFont& font) {
 	KD_DEBUG( "[KTouchSlideLine::setFont]" << endl );
 	// set the font for the slide line, unless the configuration overrides it
 	if (Prefs::overrideLectureFont())		m_font = Prefs::font();
@@ -136,8 +136,8 @@ void KTouchSlideLine::setFont(const QFont& font) {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchSlideLine::canAddCharacter(const QString& new_student_text) {
-    QFontMetrics fontMetrics( m_font );
+bool KTouchSlideLine::canAddCharacter(const TQString& new_student_text) {
+    TQFontMetrics fontMetrics( m_font );
 	int new_text_len = textLen(fontMetrics, new_student_text);
 	int allowed_student_length = m_studentPixmap->width() - 2*m_marginCursor;
 	return (new_text_len <= allowed_student_length);
@@ -224,7 +224,7 @@ void KTouchSlideLine::slide() {
 
 // *** Protected member functions (event implementation) ***
 
-void KTouchSlideLine::paintEvent(QPaintEvent*) {
+void KTouchSlideLine::paintEvent(TQPaintEvent*) {
     KD_DEBUG( "[KTouchSlideLine::paintEvent]" << endl );
     if (m_studentPixmap==NULL || m_teacherPixmap==NULL)
         updateSlidingLines();
@@ -233,7 +233,7 @@ void KTouchSlideLine::paintEvent(QPaintEvent*) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
+void KTouchSlideLine::resizeEvent ( TQResizeEvent * ) {
     KD_DEBUG( "[KTouchSlideLine::resizeEvent]" << endl );
 	// required input member variables:  none
 
@@ -261,7 +261,7 @@ void KTouchSlideLine::resizeEvent ( QResizeEvent * ) {
 
 // *** Private member functions (event implementation)
 
-int KTouchSlideLine::textLen(const QFontMetrics& fontMetrics, const QString& text) {
+int KTouchSlideLine::textLen(const TQFontMetrics& fontMetrics, const TQString& text) {
 	//KD_DEBUG( "[KTouchSlideLine::textLen]" << endl;
 
 	// required input member variables:  m_xCharWidth
@@ -296,7 +296,7 @@ void KTouchSlideLine::resizeFont() {
 	m_yCursorStudent = height() - m_marginVerWidget - m_slideLineHeight + y_line_margin;
 	KD_DEBUG( "  m_yCursorStudent = " << m_yCursorStudent  << endl );
 	// get font infos
-    QFontMetrics fontMetrics( m_font );
+    TQFontMetrics fontMetrics( m_font );
 	// width of a single x character
 	m_xCharWidth = fontMetrics.boundingRect("x").width();
 	// width of a single space character
@@ -313,13 +313,13 @@ void KTouchSlideLine::drawCursor() {
 	//									 m_xFrameTeacher, m_xFrameTeacherCurrent,
 	//									 m_xFrameStudent, m_xFrameStudentCurrent,
 
-    QPainter p(this);
+    TQPainter p(this);
 
 #ifdef DRAW_TEACHER_CURSOR
-	QColor col_tt = Prefs::commonTypingLineColors() ?
+	TQColor col_tt = Prefs::commonTypingLineColors() ?
 			     Prefs::teacherTextColor() :
 				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherTextColor;
-	QColor col_tb = Prefs::commonTypingLineColors() ?
+	TQColor col_tb = Prefs::commonTypingLineColors() ?
 			     Prefs::teacherBackgroundColor() :
 				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherBackground;
 
@@ -352,7 +352,7 @@ void KTouchSlideLine::drawCursor() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSlideLine::drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth) {
+void KTouchSlideLine::drawEnterChar(TQPainter *painter, int cursorPos, int y, int enterWidth) {
 	// required input member variables:  none
 
     int gap = std::min(2,static_cast<int>(0.2*enterWidth));
@@ -377,7 +377,7 @@ void KTouchSlideLine::updateSlidingLines() {
     if (m_slideLineHeight == 0) 	return;
 
 	// first update some variables
-    QFontMetrics fontMetrics( m_font );
+    TQFontMetrics fontMetrics( m_font );
 	m_teacherTextLen = textLen(fontMetrics, m_teacherText);
 	KD_DEBUG( "  m_teacherTextLen = " << m_teacherTextLen  << endl );
 
@@ -406,40 +406,40 @@ void KTouchSlideLine::updateSlidingLines() {
 	// create the teacher pixmap
 	int w = 2*m_marginCursor + m_teacherTextLen; // TODO : add size of enter character
 	int h = m_slideLineHeight;
-    m_teacherPixmap = new QPixmap(w,h);
+    m_teacherPixmap = new TQPixmap(w,h);
 	KD_DEBUG( "  m_teacherPixmap  = " << w << " x " << h << endl );
 
 	// draw the teacher pixmap text
-    QPainter painter;
+    TQPainter painter;
     painter.begin (m_teacherPixmap, this);
     painter.setFont( m_font );
 
-	QColor col_tt = Prefs::commonTypingLineColors() ?
+	TQColor col_tt = Prefs::commonTypingLineColors() ?
 			     Prefs::teacherTextColor() :
 				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherTextColor;
-	QColor col_tb = Prefs::commonTypingLineColors() ?
+	TQColor col_tb = Prefs::commonTypingLineColors() ?
 			     Prefs::teacherBackgroundColor() :
 				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_teacherBackground;
 
-    painter.fillRect( m_teacherPixmap->rect(), QBrush(col_tb) );
+    painter.fillRect( m_teacherPixmap->rect(), TQBrush(col_tb) );
     painter.setPen( col_tt );
     // create a rectangle for the text drawing
-    QRect textRect(m_marginCursor, 0, w-2*m_marginCursor, h);
+    TQRect textRect(m_marginCursor, 0, w-2*m_marginCursor, h);
 	// left aligned
     if (!Prefs::right2LeftTyping()) {
-     	painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_teacherText);
+     	painter.drawText(textRect, TQPainter::AlignLeft | TQPainter::AlignVCenter, m_teacherText);
     	// TODO : draw enter char after the text
     }
 	// right aligned, e.g. for Hebrew text
     else {
-		painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_teacherText);
+		painter.drawText(textRect, TQPainter::AlignRight | TQPainter::AlignVCenter, m_teacherText);
 		// TODO : draw enter character at left of text
     }
     painter.end();
 	// done with the teachers text which will not change so quickly again
 
 	// create student line pixmap thats slightly longer than the teacher's pixmap
-    m_studentPixmap = new QPixmap(w+100,h);
+    m_studentPixmap = new TQPixmap(w+100,h);
 	KD_DEBUG( "  m_studentPixmap  = " << w+100 << " x " << h << endl );
 
 	// update (draw) student line and calculate coordinates needed for sliding
@@ -457,7 +457,7 @@ void KTouchSlideLine::updateStudentLine() {
 
 	if (m_teacherTextLen == 0)  return;
 
-    QFontMetrics fontMetrics( m_font );
+    TQFontMetrics fontMetrics( m_font );
 	m_studentTextLen = textLen(fontMetrics, m_studentText);
 	KD_DEBUG( "  m_studentTextLen = " << m_studentTextLen << endl );
 
@@ -467,7 +467,7 @@ void KTouchSlideLine::updateStudentLine() {
 
 	unsigned int min_len = QMIN(teacherLen, studentLen);
 
-	QString correctText;
+	TQString correctText;
 	if (!Prefs::right2LeftTyping()) {
 		// for text typed from left to right
 		for (unsigned int i=0; i<min_len; ++i) {
@@ -531,7 +531,7 @@ void KTouchSlideLine::updateStudentLine() {
 	KD_DEBUG( "  m_xFrameTeacher  = " << m_xFrameStudent << endl );
 
     // now let's draw the students pixmap
-    QPainter painter;
+    TQPainter painter;
     painter.begin (m_studentPixmap, this);
     if (Prefs::colorOnError()) {
         // draw the student line depending on the colour settings
@@ -549,7 +549,7 @@ void KTouchSlideLine::updateStudentLine() {
 			m_cursorColor = Prefs::commonTypingLineColors() 		? 	Prefs::studentTextColor() :
 				 KTouchColorScheme::m_colorSchemes[Prefs::currentColorScheme()].m_studentTextColor;
         }
-		painter.fillRect (m_studentPixmap->rect(), QBrush(m_cursorBackground));
+		painter.fillRect (m_studentPixmap->rect(), TQBrush(m_cursorBackground));
 		painter.setPen( m_cursorColor );
     }
     else {
@@ -557,15 +557,15 @@ void KTouchSlideLine::updateStudentLine() {
         m_cursorColor = Prefs::studentTextColor();
         painter.setPen( m_cursorColor );
         m_cursorBackground = Prefs::studentBackgroundColor();
-        painter.fillRect( m_studentPixmap->rect(), QBrush(m_cursorBackground) );
+        painter.fillRect( m_studentPixmap->rect(), TQBrush(m_cursorBackground) );
     }
     // draw the text
     painter.setFont( m_font );
-    QRect textRect(m_marginCursor, 0, m_studentPixmap->width()-2*m_marginCursor, m_studentPixmap->height());
+    TQRect textRect(m_marginCursor, 0, m_studentPixmap->width()-2*m_marginCursor, m_studentPixmap->height());
     if (Prefs::right2LeftTyping())
-       painter.drawText(textRect, QPainter::AlignRight | QPainter::AlignVCenter, m_studentText);
+       painter.drawText(textRect, TQPainter::AlignRight | TQPainter::AlignVCenter, m_studentText);
     else 
-       painter.drawText(textRect, QPainter::AlignLeft | QPainter::AlignVCenter, m_studentText);
+       painter.drawText(textRect, TQPainter::AlignLeft | TQPainter::AlignVCenter, m_studentText);
     painter.end();
 	// done painting the students line
 

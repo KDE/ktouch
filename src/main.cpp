@@ -60,8 +60,8 @@ int main(int argc, char **argv)
         KTouchSplash splash;            // create the splash screen
         splash.setHideEnabled( true );  // allow user to click the splash screen away
         splash.show();                  // show it
-        QTimer splashTimer;
-        splashTimer.connect(&splashTimer, SIGNAL(timeout()), &splash, SLOT(hide()));
+        TQTimer splashTimer;
+        splashTimer.connect(&splashTimer, TQT_SIGNAL(timeout()), &splash, TQT_SLOT(hide()));
         splashTimer.start(2000, true);  // start singleshot timer to hide the splashscreen
         */
 

@@ -17,7 +17,7 @@
 #include <config.h>
 #endif
 
-#include <qobject.h>
+#include <tqobject.h>
 
 #include "ktouchstatisticsdata.h"
 
@@ -57,7 +57,7 @@ class KTouchLecture;
 /// The member function updateWidgets() updates all training related widgets (status widget, slide line,
 /// and the statusbar of the main window). In this member function also the word count of the current line
 /// is updated.
-class KTouchTrainer : public QObject {
+class KTouchTrainer : public TQObject {
     Q_OBJECT
   public:
     /// Constructor.
@@ -72,7 +72,7 @@ class KTouchTrainer : public QObject {
     void gotoFirstLevel() { m_level=0; gotoFirstLine(); }
     /// Processes the character 'key' and updates the widgets and statistics.
     /// If the training session was started and in waiting state the timer is started and the actuall training begins.
-    void keyPressed(QChar key);
+    void keyPressed(TQChar key);
     /// Will be called when a character has been removed (recalculates the variables and updates the widgets).
     void backspacePressed();
     /// Will be called when "enter" has been pressed (displays next line).
@@ -105,11 +105,11 @@ class KTouchTrainer : public QObject {
     unsigned int        m_level;                ///< Current level number (zero based).
     unsigned int        m_line;                 ///< Current line number (zero based).
 
-    QString             m_teacherText;          ///< The currently displayed teacher text.
-    QString             m_studentText;          ///< The currently typed student text.
+    TQString             m_teacherText;          ///< The currently displayed teacher text.
+    TQString             m_studentText;          ///< The currently typed student text.
 
     bool                m_trainingPaused;       ///< Indicates whether we have paused the training session or not.
-    QTimer             *m_trainingTimer;        ///< The timer responsable for updating the speed LCD widget.
+    TQTimer             *m_trainingTimer;        ///< The timer responsable for updating the speed LCD widget.
 
 	KTouchLevelStats	m_levelStats;			///< Contains the statistics for the current level alone.
 	KTouchSessionStats	m_sessionStats;			///< Contains the statistics for the current session (multiple levels).
@@ -133,15 +133,15 @@ class KTouchTrainer : public QObject {
 	/// Updates the statusbar of the main window.
 	void updateStatusBar() const;
 	/// Updates the message in the statusbar of the main window.
-	void updateStatusBarMessage(const QString& message) const;
+	void updateStatusBarMessage(const TQString& message) const;
 	/// Updates the word count in the current student text line.
 	void updateWordCount();
 	/// Adds a correct character count to the current statistics.
-	void statsAddCorrectChar(QChar key);
+	void statsAddCorrectChar(TQChar key);
 	/// Adds a wrong character count to the current statistics.
-	void statsAddWrongChar(QChar key);
+	void statsAddWrongChar(TQChar key);
 	/// Removes a correctly typed character count.
-	void statsRemoveCorrectChar(QChar);
+	void statsRemoveCorrectChar(TQChar);
 	/// Adds some elapsed time (in seconds) to the statistics.
 	void statsAddTime(double dt);
 	/// Stores level stats and resets level stats (this function is called from levelUp() and levelDown()

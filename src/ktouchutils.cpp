@@ -10,25 +10,25 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
  
-#include <qtextstream.h>
-#include <qstringlist.h>
-#include <qmap.h>
+#include <tqtextstream.h>
+#include <tqstringlist.h>
+#include <tqmap.h>
 
 #include <kdebug.h>
 
 #include "ktouchutils.h"
 
-QString format_speed(double speed) {
+TQString format_speed(double speed) {
     unsigned int mins = static_cast<unsigned int>(speed);
     unsigned int secs = static_cast<unsigned int>(speed*60) - mins*60;
-    return QString("%1' %2''").arg(mins).arg(secs);
+    return TQString("%1' %2''").arg(mins).arg(secs);
 }
 
-void sort_lists(QStringList& text, QStringList& data) {
+void sort_lists(TQStringList& text, TQStringList& data) {
     if (text.count() != data.count()) return; // invalid input, no sorting possible
-    QMap<QString, QString> sort_map;
-    QStringList::const_iterator key_it = text.constBegin();
-    QStringList::const_iterator val_it = data.constBegin();
+    TQMap<TQString, TQString> sort_map;
+    TQStringList::const_iterator key_it = text.constBegin();
+    TQStringList::const_iterator val_it = data.constBegin();
     while (key_it != text.constEnd()) {
 //        kdDebug() << *key_it << "  " << *val_it << endl;
         sort_map[*key_it++] = *val_it++;

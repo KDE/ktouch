@@ -19,7 +19,7 @@
 
 #include "ktouchcoloreditor_dlg.h"
 
-#include <qvaluelist.h>
+#include <tqvaluelist.h>
 
 #include "ktouchcolorscheme.h"
 
@@ -30,7 +30,7 @@ class KTouchColorEditor : public KTouchColorEditorDlg
 
 public:
 	/// Constructor
-	KTouchColorEditor(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+	KTouchColorEditor(TQWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
 	/// Destructor
 	~KTouchColorEditor();
 
@@ -38,16 +38,16 @@ public:
 	/// @param schemes		List with user defined color schemes.
 	/// @param active		Index with active color scheme (negative if predefined scheme is active).
 	/// @param selected		Here the index of the currently selected scheme is stored.
-	void startEditor(QValueList<KTouchColorScheme>& schemes, int active, int & selected);
+	void startEditor(TQValueList<KTouchColorScheme>& schemes, int active, int & selected);
 
 public slots:
-  virtual void          colorSchemeChanged(QListBoxItem * item);
+  virtual void          colorSchemeChanged(TQListBoxItem * item);
   virtual void          updateClicked();
   virtual void          removeBtnClicked();
   virtual void          addBtnClicked();
 
 protected:
-	virtual void closeEvent( QCloseEvent* ce );
+	virtual void closeEvent( TQCloseEvent* ce );
 
 private:
 	/// Updates the list box with values from m_schemes.
@@ -57,7 +57,7 @@ private:
 	void updateControls(const KTouchColorScheme * cs);
 
 	int								m_currentItem;
-	QValueList<KTouchColorScheme>	m_schemes;
+	TQValueList<KTouchColorScheme>	m_schemes;
 	bool							m_saveChanges;
 };
 

@@ -11,13 +11,13 @@
  ***************************************************************************/
 
 #include "ktouchleveldata.h"
-#include <qiodevice.h>
-#include <qdom.h>
+#include <tqiodevice.h>
+#include <tqdom.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include <qstringlist.h>
+#include <tqstringlist.h>
 
-const QString& KTouchLevelData::line(unsigned int lineNumber) const {
+const TQString& KTouchLevelData::line(unsigned int lineNumber) const {
     if (lineNumber>=m_lines.size())
         lineNumber=0;
     return m_lines[lineNumber];
@@ -26,19 +26,19 @@ const QString& KTouchLevelData::line(unsigned int lineNumber) const {
 void KTouchLevelData::createDefault() {
     m_newChars = i18n("Quite a lot");
     m_lines.clear();
-    QString text = i18n("This is a small default text. If you want\n"
+    TQString text = i18n("This is a small default text. If you want\n"
                         "to start practicing touch typing, open\n"
                         "a lecture/training file from the main menu.\n"
                         "If you press enter after the next line you have\n"
                         "successfully completed the default lecture. Hurray!!!");
-    QStringList l( QStringList::split(QChar('\n'), text) );
-    for (QStringList::const_iterator it = l.constBegin(); it != l.constEnd(); ++it)
+    TQStringList l( TQStringList::split(TQChar('\n'), text) );
+    for (TQStringList::const_iterator it = l.constBegin(); it != l.constEnd(); ++it)
         m_lines.push_back( *it );
 }
 
-bool KTouchLevelData::readLevel(QTextStream& in) {
-    QString line;
-    m_comment = m_newChars = QString::null;
+bool KTouchLevelData::readLevel(TQTextStream& in) {
+    TQString line;
+    m_comment = m_newChars = TQString::null;
     m_lines.clear();
     // now read all the lines of the level, until EOF or an empty line
     line = in.readLine();
@@ -62,16 +62,16 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
     return true;
 }
 
-bool KTouchLevelData::readLevel(QDomNode in) {
-	QDomNode newChars = in.namedItem("NewCharacters");
+bool KTouchLevelData::readLevel(TQDomNode in) {
+	TQDomNode newChars = in.namedItem("NewCharacters");
 	if (newChars.isNull())  m_newChars = i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
 	else					m_newChars = newChars.firstChild().nodeValue();
-	QDomNode levelComment = in.namedItem("LevelComment");
+	TQDomNode levelComment = in.namedItem("LevelComment");
 	if (!levelComment.isNull())  m_comment = levelComment.firstChild().nodeValue();
     m_lines.clear();
-	QDomNode line = in.namedItem("Line");
+	TQDomNode line = in.namedItem("Line");
 	while ( !line.isNull() ) {
-        QString l = line.firstChild().nodeValue();
+        TQString l = line.firstChild().nodeValue();
 		m_lines.push_back( l.stripWhiteSpace() );
         line = line.nextSibling();
     }
@@ -82,27 +82,27 @@ bool KTouchLevelData::readLevel(QDomNode in) {
     return true;
 }
 
-void KTouchLevelData::writeLevel(QTextStream& out) const {
+void KTouchLevelData::writeLevel(TQTextStream& out) const {
     out << "# Comment: " << m_comment << endl;   // comment line
     out << m_newChars << endl;                   // new characters line
-    for (QValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it)
+    for (TQValueVector<TQString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it)
         out << *it << endl;
     out << endl;
 }
 
-void KTouchLevelData::writeLevel(QDomDocument& doc, QDomElement& root) const {
-	QDomElement level = doc.createElement("Level");
+void KTouchLevelData::writeLevel(TQDomDocument& doc, TQDomElement& root) const {
+	TQDomElement level = doc.createElement("Level");
 	root.appendChild(level);
 	// comment (optional)
 	if (!m_comment.isEmpty()) {
-		QDomElement comment = doc.createElement("LevelComment");
-		QDomText commentText = doc.createTextNode(m_comment);
+		TQDomElement comment = doc.createElement("LevelComment");
+		TQDomText commentText = doc.createTextNode(m_comment);
 		comment.appendChild(commentText);
 		level.appendChild(comment);
 	}
 	// new characters (must have that)
-	QDomElement newchars = doc.createElement("NewCharacters");
-	QDomText newcharsText;
+	TQDomElement newchars = doc.createElement("NewCharacters");
+	TQDomText newcharsText;
 	if (m_newChars.isEmpty())
 		newcharsText = doc.createTextNode(i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz"));
 	else
@@ -110,9 +110,9 @@ void KTouchLevelData::writeLevel(QDomDocument& doc, QDomElement& root) const {
 	newchars.appendChild(newcharsText);
 	level.appendChild(newchars);
 	// the lines
-    for (QValueVector<QString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it) {
-		QDomElement line = doc.createElement("Line");
-		QDomText lineText = doc.createTextNode(*it);
+    for (TQValueVector<TQString>::const_iterator it=m_lines.begin(); it!=m_lines.end(); ++it) {
+		TQDomElement line = doc.createElement("Line");
+		TQDomText lineText = doc.createTextNode(*it);
 		line.appendChild(lineText);
 		level.appendChild(line);
 	}

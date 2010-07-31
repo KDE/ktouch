@@ -17,7 +17,7 @@
 #include <config.h>
 #endif
 
-#include <qpainter.h>
+#include <tqpainter.h>
 
 class KTouchFingerKey;
 class KTouchNormalKey;
@@ -34,25 +34,25 @@ class KTouchBaseKey {
     enum KeyType { FINGER_KEY, NORMAL_KEY, CONTROL_KEY };
 
     /// Constructor
-    KTouchBaseKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h)
+    KTouchBaseKey(const TQChar& keyChar, const TQString& keyText, int x, int y, int w, int h)
       : m_keyChar(keyChar), m_keyText(keyText), m_isActive(false), m_isNextKey(false),
         m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {}
     /// Destructor.
     virtual ~KTouchBaseKey() {}
     /// Paints the basic key shape using the painter p.
-    virtual void paint(QPainter& p) const;
+    virtual void paint(TQPainter& p) const;
     /// Recalculates the scaled position and size properties of the key.
     void resize(double scale);
     /// Returns the boundary frame of the key.
-    QRect frame()  const { return QRect(m_x, m_y, m_w, m_h); }
+    TQRect frame()  const { return TQRect(m_x, m_y, m_w, m_h); }
     /// Returns the key type.
     KeyType type() const { return m_type; }
 
-    QChar   m_keyChar;      ///< The character that needs to be pressed to access this char.
-    QString m_keyText;      ///< The text on the key (may be a single char only).
+    TQChar   m_keyChar;      ///< The character that needs to be pressed to access this char.
+    TQString m_keyText;      ///< The text on the key (may be a single char only).
     bool    m_isActive;     ///< Indicates whether the key is active (finger and control keys).
     bool    m_isNextKey;    ///< Indicates whether this is the next to be pressed key (normal and finger keys).
-	QFont   m_font;
+	TQFont   m_font;
 	float   m_font_scale;
     
   protected:
@@ -79,11 +79,11 @@ class KTouchBaseKey {
 class KTouchNormalKey : public KTouchBaseKey {
   public:
     /// Constructor
-    KTouchNormalKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
+    KTouchNormalKey(const TQChar& keyChar, const TQString& keyText, int x, int y, int w, int h);
     /// Destructor
     virtual ~KTouchNormalKey() {}
     /// Extends the painting routine of KTouchKey (adds the text).
-    void paint(QPainter& p) const;
+    void paint(TQPainter& p) const;
     /// Indicates the colour index in the colour scheme, that has to be used for this key
     /// and will be set in KTouchKeyboard::updateColors().
     unsigned int m_colorIndex;
@@ -101,11 +101,11 @@ class KTouchNormalKey : public KTouchBaseKey {
 class KTouchFingerKey : public KTouchNormalKey {
   public:
     /// Constructor
-    KTouchFingerKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
+    KTouchFingerKey(const TQChar& keyChar, const TQString& keyText, int x, int y, int w, int h);
     /// Destructor
     ~KTouchFingerKey() { --m_fingerKeyCount; }
     /// Extends the painting algoritm of KTouchNormalKey when marked.
-    void paint(QPainter& p) const;
+    void paint(TQPainter& p) const;
 
   private:
     static int m_fingerKeyCount;    ///< Contains the number of created finger keys (for colour generation).
@@ -122,9 +122,9 @@ class KTouchFingerKey : public KTouchNormalKey {
 class KTouchControlKey : public KTouchBaseKey {
   public:
     /// Constructor
-    KTouchControlKey(const QChar& keyChar, const QString& keyText, int x, int y, int w, int h);
+    KTouchControlKey(const TQChar& keyChar, const TQString& keyText, int x, int y, int w, int h);
     /// Extends the parents paint routine (draws the text or other fancy stuff).
-    void paint(QPainter& p) const;
+    void paint(TQPainter& p) const;
 };
 // ------------------------------------------------------------------------------------
 
@@ -136,16 +136,16 @@ class KTouchKeyConnection {
     /// Default constructor
     KTouchKeyConnection() : m_keyChar(0), m_targetKeyChar(0), m_fingerKeyChar(0), m_controlKeyChar(0) {}
     /// Constructor provided for convenience.
-    KTouchKeyConnection(const QChar& keyChar, const QChar& targetKeyChar, const QChar& fingerKeyChar,
-                       const QChar& controlKeyChar)
+    KTouchKeyConnection(const TQChar& keyChar, const TQChar& targetKeyChar, const TQChar& fingerKeyChar,
+                       const TQChar& controlKeyChar)
       : m_keyChar(keyChar), m_targetKeyChar(targetKeyChar), m_fingerKeyChar(fingerKeyChar), m_controlKeyChar(controlKeyChar) {}
 
     /// This is the character that has to be pressed to access this key.
-    QChar               m_keyChar;
+    TQChar               m_keyChar;
 
-    QChar               m_targetKeyChar;    ///< The target character (the key the user has to press).
-    QChar               m_fingerKeyChar;    ///< The finger key (where the used finger normally rests).
-    QChar               m_controlKeyChar;   ///< The modifier key the user has to press also (for example LeftShift).
+    TQChar               m_targetKeyChar;    ///< The target character (the key the user has to press).
+    TQChar               m_fingerKeyChar;    ///< The finger key (where the used finger normally rests).
+    TQChar               m_controlKeyChar;   ///< The modifier key the user has to press also (for example LeftShift).
 };
 
 #endif  // KTOUCHKEYS_H

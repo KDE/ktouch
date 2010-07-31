@@ -12,7 +12,7 @@
 
 #include "ktouchkeyboard.h"
 
-#include <qfile.h>
+#include <tqfile.h>
 
 #include <kdebug.h>
 #include <ktempfile.h>
@@ -27,26 +27,26 @@
 void KTouchKeyboard::clear() {
     m_keys.clear();
     m_connectors.clear();
-	m_title = QString::null;
-	m_comment = QString::null;
-	m_language = QString::null;
-	m_fontSuggestions = QString::null;
+	m_title = TQString::null;
+	m_comment = TQString::null;
+	m_language = TQString::null;
+	m_fontSuggestions = TQString::null;
 }
 // ----------------------------------------------------------------------------
 
 // Loads a keyboard layout (old format) from file (returns true if successful).
-bool KTouchKeyboard::load(QWidget * window, const KURL& url) {
+bool KTouchKeyboard::load(TQWidget * window, const KURL& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
-    QString target;
+    TQString target;
     bool result = false;
     //kdDebug() << "[KTouchKeyboard::load]  " << url << endl;
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
-        QFile infile(target);
+        TQFile infile(target);
         if ( !infile.open( IO_ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
-        QTextStream in( &infile );
+        TQTextStream in( &infile );
         result = read(in);
     };
     KIO::NetAccess::removeTempFile(target);
@@ -55,17 +55,17 @@ bool KTouchKeyboard::load(QWidget * window, const KURL& url) {
 // ----------------------------------------------------------------------------
 
 // Loads a lecture (in XML format) from file (returns true if successful).
-bool KTouchKeyboard::loadXML(QWidget * window, const KURL& url) {
+bool KTouchKeyboard::loadXML(TQWidget * window, const KURL& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
-    QString target;
+    TQString target;
     bool result = false;
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
-        QFile infile(target);
+        TQFile infile(target);
         if ( !infile.open( IO_ReadOnly ) )
             return false;   // Bugger it... couldn't open it...
-		QDomDocument doc;
+		TQDomDocument doc;
 		doc.setContent( &infile );
         result = read(doc);
     }
@@ -75,13 +75,13 @@ bool KTouchKeyboard::loadXML(QWidget * window, const KURL& url) {
 // ----------------------------------------------------------------------------
 
 // Saves the lecture data to file (returns true if successful).
-bool KTouchKeyboard::saveXML(QWidget * window, const KURL& url) const {
+bool KTouchKeyboard::saveXML(TQWidget * window, const KURL& url) const {
 	// create the XML document
-	QDomDocument doc;
+	TQDomDocument doc;
 	write(doc);
 
 	// and save it	
-    QString tmpFile;
+    TQString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();         // for local files the path is sufficient
@@ -91,14 +91,14 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KURL& url) const {
         tmpFile=temp->name();
     }
 
-    QFile outfile(tmpFile);
+    TQFile outfile(tmpFile);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
         return false;
     };
 	
-    QTextStream out( &outfile );
+    TQTextStream out( &outfile );
     out << doc.toString();
     outfile.close();
     // if we have a temporary file, we still need to upload it
@@ -111,9 +111,9 @@ bool KTouchKeyboard::saveXML(QWidget * window, const KURL& url) const {
 // ----------------------------------------------------------------------------
 
 // Loads keyboard data from file, preserved for compatibility
-bool KTouchKeyboard::read(QTextStream& in) {
-    in.setEncoding(QTextStream::UnicodeUTF8);
-    QString line;
+bool KTouchKeyboard::read(TQTextStream& in) {
+    in.setEncoding(TQTextStream::UnicodeUTF8);
+    TQString line;
     clear();          // empty the keyboard
     // now loop until end of file is reached
     do {
@@ -124,10 +124,10 @@ bool KTouchKeyboard::read(QTextStream& in) {
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
-        QString keyType;
+        TQTextStream lineStream(line, IO_ReadOnly);
+        TQString keyType;
         int keyAscII;
-        QString keyText;
+        TQString keyText;
         int x(0), y(0), w(0), h(0);
         lineStream >> keyType >> keyAscII;
         if (keyType=="FingerKey") {
@@ -174,14 +174,14 @@ bool KTouchKeyboard::read(QTextStream& in) {
 // ----------------------------------------------------------------------------
 
 // Loads keyboard data from file into an XML document
-bool KTouchKeyboard::read(const QDomDocument& doc) {
+bool KTouchKeyboard::read(const TQDomDocument& doc) {
 	// clean current data
 	kdDebug() << "Reading new keyboard layout" << endl;
     m_keys.clear();
 	m_connectors.clear();
-	m_title = QString::null;
+	m_title = TQString::null;
 	// retrieve the title
-	QDomNodeList entries = doc.elementsByTagName("Title");
+	TQDomNodeList entries = doc.elementsByTagName("Title");
 	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
 	else						m_title = i18n("untitled keyboard layout");
 	kdDebug() << "Title: " << m_title << endl;
@@ -199,7 +199,7 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
 		m_language = entries.item(0).firstChild().nodeValue();
 	// retrieve the key definitions
 	entries = doc.elementsByTagName("KeyDefinitions");
-	QDomNode node = entries.item(0).firstChild();
+	TQDomNode node = entries.item(0).firstChild();
 	while (!node.isNull()) {
         KTouchKey key;
 		if (key.read(node))
@@ -229,46 +229,46 @@ bool KTouchKeyboard::read(const QDomDocument& doc) {
 // ----------------------------------------------------------------------------
 
 // Saves keyboard data in the XML document
-void KTouchKeyboard::write(QDomDocument& doc) const {
-    QDomElement root = doc.createElement( "KTouchKeyboard" );
+void KTouchKeyboard::write(TQDomDocument& doc) const {
+    TQDomElement root = doc.createElement( "KTouchKeyboard" );
     doc.appendChild(root);
 	// Store title and ensure that the file contains a title!
-	QDomElement title = doc.createElement("Title");
-	QDomText titleText;
+	TQDomElement title = doc.createElement("Title");
+	TQDomText titleText;
 	if (m_title.isEmpty())	titleText = doc.createTextNode( i18n("untitled keyboard layout") );
 	else					titleText = doc.createTextNode(m_title);
 	title.appendChild(titleText);
 	root.appendChild(title);
 	// Store comment if given
 	if (!m_comment.isEmpty()) {
-		QDomElement e = doc.createElement("Comment");
-		QDomText t = doc.createTextNode(m_comment);
+		TQDomElement e = doc.createElement("Comment");
+		TQDomText t = doc.createTextNode(m_comment);
 		e.appendChild(t);
 		root.appendChild(e);
 	}
 	// Store font suggestion if given
 	if (!m_fontSuggestions.isEmpty()) {
-		QDomElement e = doc.createElement("FontSuggestions");
-		QDomText t = doc.createTextNode(m_fontSuggestions);
+		TQDomElement e = doc.createElement("FontSuggestions");
+		TQDomText t = doc.createTextNode(m_fontSuggestions);
 		e.appendChild(t);
 		root.appendChild(e);
 	}
 	// Store language idif given
 	if (!m_language.isEmpty()) {
-		QDomElement e = doc.createElement("Language");
-		QDomText t = doc.createTextNode(m_language);
+		TQDomElement e = doc.createElement("Language");
+		TQDomText t = doc.createTextNode(m_language);
 		e.appendChild(t);
 		root.appendChild(e);
 	}
 	// Store keys
-	QDomElement keys = doc.createElement("KeyDefinitions");
+	TQDomElement keys = doc.createElement("KeyDefinitions");
 	root.appendChild(keys);
-    for (QValueVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
+    for (TQValueVector<KTouchKey>::const_iterator it=m_keys.begin(); it!=m_keys.end(); ++it)
 		it->write(doc, keys);
 	// Store connectors
-	QDomElement conns = doc.createElement("KeyConnections");
+	TQDomElement conns = doc.createElement("KeyConnections");
 	root.appendChild(conns);
-    for (QValueVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
+    for (TQValueVector<KTouchKeyConnector>::const_iterator it=m_connectors.begin(); it!=m_connectors.end(); ++it)
 		it->write(doc, conns);
 }
 // ----------------------------------------------------------------------------
@@ -328,7 +328,7 @@ void KTouchKeyboard::createDefault() {
 	
 	m_title = "Number keypad";
 	m_comment = "Predefined keyboard layout";
-	m_language = QString::null;
+	m_language = TQString::null;
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Monospace";
     m_width = 8*col;
@@ -337,7 +337,7 @@ void KTouchKeyboard::createDefault() {
 // ----------------------------------------------------------------------------
 
 void KTouchKeyboard::updateConnections() {
-	for (QValueVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
+	for (TQValueVector<KTouchKeyConnector>::iterator it = m_connectors.begin(); it != m_connectors.end(); ++it)
 		(*it).updateConnections(m_keys);
 }
 // ----------------------------------------------------------------------------
@@ -345,10 +345,10 @@ void KTouchKeyboard::updateConnections() {
 
 /*
 
-bool KTouchKeyboard::loadKeyboard(QWidget * window, const KURL& url, QString* errorMsg) {
-    QString target;
+bool KTouchKeyboard::loadKeyboard(TQWidget * window, const KURL& url, TQString* errorMsg) {
+    TQString target;
     if (KIO::NetAccess::download(url, target, window)) {
-        QString msg;
+        TQString msg;
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
@@ -363,8 +363,8 @@ bool KTouchKeyboard::loadKeyboard(QWidget * window, const KURL& url, QString* er
 }
 
 
-void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
-    QString tmpFile;
+void KTouchKeyboard::saveKeyboard(TQWidget * window, const KURL& url) {
+    TQString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();             // for local files the path is sufficient
@@ -373,13 +373,13 @@ void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
         tmpFile=temp->name();
     }
 
-    QFile outfile(tmpFile);
+    TQFile outfile(tmpFile);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         return;
     }
 
-    QTextStream out( &outfile );
+    TQTextStream out( &outfile );
     out << "########################################## \n";
     out << "#                                        # \n";
     out << "#  Keyboard layout file for KTouch       # \n";
@@ -395,7 +395,7 @@ void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
            case KTouchKey::CONTROL_KEY  : out << "ControlKey "; break;
            default : out << "NormalKey  "; break;
         }
-        QRect rect=key->frame();
+        TQRect rect=key->frame();
         out << key->m_keyChar.unicode() << '\t' << key->m_keyText << '\t'
             << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
     }
@@ -407,7 +407,7 @@ void KTouchKeyboard::saveKeyboard(QWidget * window, const KURL& url) {
     }
 }
 
-void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
+void KTouchKeyboard::applyPreferences(TQWidget * window, bool silent) {
     // let's check whether the keyboard layout has changed
     if (KTouchConfig().m_currentKeyboardFile!=m_currentLayout) {
         // if the layout is the number layout just create it and we're done
@@ -425,7 +425,7 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
                 m_currentLayout=KTouchConfig().m_currentKeyboardFile;
         }
         else {
-            QString errorMsg;
+            TQString errorMsg;
             if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
                 KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
                     "be created instead. You can choose another keyboard layout in the preferences dialog."),
@@ -443,8 +443,8 @@ void KTouchKeyboard::applyPreferences(QWidget * window, bool silent) {
 }
 
 
-void KTouchKeyboard::newKey(const QChar& nextChar) {
-    QPainter painter(this);
+void KTouchKeyboard::newKey(const TQChar& nextChar) {
+    TQPainter painter(this);
     painter.translate(m_shift, MARGIN);
     // first clean the markings on all keys
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
@@ -456,16 +456,16 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
 
     if (Prefs::showAnimation()){ // only do this if we want to show animation.
         // find the key in the key connector list
-        QValueList<KTouchKeyConnector>::iterator keyIt = m_connectorList.begin();
+        TQValueList<KTouchKeyConnector>::iterator keyIt = m_connectorList.begin();
         while (keyIt!=m_connectorList.end() && (*keyIt).m_keyChar!=nextChar)  ++keyIt;
         // if found mark the appropriate keys
         if (keyIt!=m_connectorList.end()) {
-            QChar targetChar = (*keyIt).m_targetKeyChar;
-            QChar fingerChar = (*keyIt).m_fingerKeyChar;
-            QChar controlChar = (*keyIt).m_controlKeyChar;
+            TQChar targetChar = (*keyIt).m_targetKeyChar;
+            TQChar fingerChar = (*keyIt).m_fingerKeyChar;
+            TQChar controlChar = (*keyIt).m_controlKeyChar;
             // find the keys in the keylist
             for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next()) {
-                if (key->m_keyChar==QChar(0)) continue;    // skip decorative keys
+                if (key->m_keyChar==TQChar(0)) continue;    // skip decorative keys
                 if (key->m_keyChar==targetChar) key->m_isNextKey=true;
                 else if (key->m_keyChar==fingerChar)   key->m_isActive=true;
                 else if (key->m_keyChar==controlChar)  key->m_isActive=true;
@@ -478,8 +478,8 @@ void KTouchKeyboard::newKey(const QChar& nextChar) {
 }
 
 
-void KTouchKeyboard::paintEvent(QPaintEvent *) {
-    QPainter painter(this);
+void KTouchKeyboard::paintEvent(TQPaintEvent *) {
+    TQPainter painter(this);
     painter.translate(m_shift, MARGIN);
     // just print all visible keys
     for (KTouchKey * key = m_keyList.first(); key; key = m_keyList.next())
@@ -487,7 +487,7 @@ void KTouchKeyboard::paintEvent(QPaintEvent *) {
 }
 
 
-void KTouchKeyboard::resizeEvent(QResizeEvent *) {
+void KTouchKeyboard::resizeEvent(TQResizeEvent *) {
     double hScale = static_cast<double>(width()-2*MARGIN)/m_keyboardWidth;
     double vScale = static_cast<double>(height()-2*MARGIN)/m_keyboardHeight;
     double scale = std::min(hScale, vScale);
@@ -554,15 +554,15 @@ void KTouchKeyboard::createDefaultKeyboard() {
 }
 
 
-bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
-    QFile infile(fileName);
+bool KTouchKeyboard::readKeyboard(const TQString& fileName, TQString& errorMsg) {
+    TQFile infile(fileName);
     if ( !infile.open( IO_ReadOnly ) ) {
         errorMsg = i18n("Could not open file.");
         return false;
     }
-    QTextStream in( &infile );
-    in.setEncoding(QTextStream::UnicodeUTF8);
-    QString line;
+    TQTextStream in( &infile );
+    in.setEncoding(TQTextStream::UnicodeUTF8);
+    TQString line;
     m_keyList.clear();          // empty the keyboard
     m_connectorList.clear();    // clear the connections
     m_keyboardWidth=0;
@@ -576,10 +576,10 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
         if (line.isNull())  continue;
 
         // 'line' should now contain a key specification
-        QTextStream lineStream(line, IO_ReadOnly);
-        QString keyType;
+        TQTextStream lineStream(line, IO_ReadOnly);
+        TQString keyType;
         int keyAscII;
-        QString keyText;
+        TQString keyText;
         int x(0), y(0), w(0), h(0);
         lineStream >> keyType >> keyAscII;
         if (keyType=="FingerKey") {
@@ -621,10 +621,10 @@ bool KTouchKeyboard::readKeyboard(const QString& fileName, QString& errorMsg) {
 
 void KTouchKeyboard::updateColours() {
     // loop over all key connections
-    for (QValueList<KTouchKeyConnector>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
-        QChar fingerChar = (*it).m_fingerKeyChar;
-        if (fingerChar == QChar(0)) continue;
-        QChar targetChar = (*it).m_targetKeyChar;
+    for (TQValueList<KTouchKeyConnector>::iterator it = m_connectorList.begin(); it!=m_connectorList.end(); ++it) {
+        TQChar fingerChar = (*it).m_fingerKeyChar;
+        if (fingerChar == TQChar(0)) continue;
+        TQChar targetChar = (*it).m_targetKeyChar;
         KTouchKey * self=NULL;
         KTouchKey * colorSource=NULL;
         // loop over all keys to find the key pointers

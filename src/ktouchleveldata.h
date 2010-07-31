@@ -17,10 +17,10 @@
 #include <config.h>
 #endif
 
-#include <qstring.h>
-#include <qtextstream.h>
-#include <qvaluevector.h>
-#include <qdom.h>
+#include <tqstring.h>
+#include <tqtextstream.h>
+#include <tqvaluevector.h>
+#include <tqdom.h>
 
 class QDomDocument;
 class QDomElement;
@@ -41,16 +41,16 @@ class KTouchLevelData {
     /// Default constructor, creates a default level.
     KTouchLevelData() { createDefault(); }
     /// Constructor for creating a new level.
-    KTouchLevelData(const QString& comment, const QString& newChars)
+    KTouchLevelData(const TQString& comment, const TQString& newChars)
         : m_comment(comment), m_newChars(newChars) { createDefault(); }
     /// Returns the level description (comment).
-    const QString& comment() const { return m_comment; }
+    const TQString& comment() const { return m_comment; }
     /// Returns the new characters string.
-    const QString& newChars() const { return m_newChars; }
+    const TQString& newChars() const { return m_newChars; }
     /// Returns the line with number 'lineNumber' (0 means first line).
     ///
     /// If the line number is out of range, the first line will be returned.
-    const QString& line(unsigned int lineNumber) const;
+    const TQString& line(unsigned int lineNumber) const;
     /// Returns the number of lines.
     unsigned int count() const { return m_lines.size(); }
 
@@ -59,18 +59,18 @@ class KTouchLevelData {
     void createDefault();
     /// Reads a level from the input stream.
     /// @return Returns 'true', when a level could be read successfully, or 'false' otherwise.
-    bool readLevel(QTextStream& in);
+    bool readLevel(TQTextStream& in);
     /// Reads a level from a XML Dom Node.
     /// @return Returns 'true', when a level could be read successfully, or 'false' otherwise.
-    bool readLevel(QDomNode in);
+    bool readLevel(TQDomNode in);
     /// Writes the level data into the output stream.
-    void writeLevel(QTextStream& out) const;
+    void writeLevel(TQTextStream& out) const;
     /// Writes the level data into the output stream.
-    void writeLevel(QDomDocument& doc, QDomElement& root) const;
+    void writeLevel(TQDomDocument& doc, TQDomElement& root) const;
 
-    QString                 m_comment;      ///< A comment for the level.
-    QString                 m_newChars;     ///< Contains the newly introduced characters in this level.
-    QValueVector<QString>   m_lines;        ///< The lines of the level.
+    TQString                 m_comment;      ///< A comment for the level.
+    TQString                 m_newChars;     ///< Contains the newly introduced characters in this level.
+    TQValueVector<TQString>   m_lines;        ///< The lines of the level.
 
     // so I don't have to allow access to read/write function to everybody :-)
     friend class KTouchLecture;

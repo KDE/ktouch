@@ -13,15 +13,15 @@
 #include "ktouchtrainer.h"
 #include "ktouchtrainer.moc"
 
-#include <qlcdnumber.h>
-#include <qfile.h>
+#include <tqlcdnumber.h>
+#include <tqfile.h>
 
 #include <kdebug.h>
 #include <kpushbutton.h>
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kaudioplayer.h>
-#include <qmessagebox.h>
+#include <tqmessagebox.h>
 
 #include "ktouch.h"
 #include "ktouchstatus.h"
@@ -32,8 +32,8 @@
 #include "prefs.h"
 
 KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
-  : QObject(),
-    m_trainingTimer(new QTimer),
+  : TQObject(),
+    m_trainingTimer(new TQTimer),
     m_statusWidget(status),
     m_slideLineWidget(slideLine),
     m_keyboardWidget(keyboard),
@@ -55,9 +55,9 @@ KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, K
     m_levelDownSound = KGlobal::dirs()->findResource("appdata","down.wav");
     m_typeWriterSound = KGlobal::dirs()->findResource("appdata","typewriter.wav");
 
-    connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
-    connect(m_statusWidget->levelDownBtn, SIGNAL(clicked()), this, SLOT(levelDown()) );
-    connect(m_trainingTimer, SIGNAL(timeout()), this, SLOT(timerTick()) );
+    connect(m_statusWidget->levelUpBtn, TQT_SIGNAL(clicked()), this, TQT_SLOT(levelUp()) );
+    connect(m_statusWidget->levelDownBtn, TQT_SIGNAL(clicked()), this, TQT_SLOT(levelDown()) );
+    connect(m_trainingTimer, TQT_SIGNAL(timeout()), this, TQT_SLOT(timerTick()) );
 }
 // ----------------------------------------------------------------------------
 
@@ -73,7 +73,7 @@ void KTouchTrainer::gotoFirstLine() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchTrainer::keyPressed(QChar key) {
+void KTouchTrainer::keyPressed(TQChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
 
@@ -81,13 +81,13 @@ void KTouchTrainer::keyPressed(QChar key) {
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
         /// \todo Flash the line when line complete
-        if (Prefs::beepOnError())   QApplication::beep();
+        if (Prefs::beepOnError())   TQApplication::beep();
         return;
     }
 	// remember length of student text without added character
     unsigned int old_student_text_len = m_studentText.length();
     // compose new student text depending in typing direction
-    QString new_student_text = m_studentText;
+    TQString new_student_text = m_studentText;
     if (Prefs::right2LeftTyping())
         new_student_text = key + new_student_text;
     else
@@ -95,7 +95,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 
     // don´t allow excessive amounts of characters per line
 	if (!m_slideLineWidget->canAddCharacter(new_student_text)) {
-        if (Prefs::beepOnError())   QApplication::beep();
+        if (Prefs::beepOnError())   TQApplication::beep();
         return;
 	}
     // store the new student text
@@ -105,7 +105,7 @@ void KTouchTrainer::keyPressed(QChar key) {
 		statsAddCorrectChar(key);	// ok, all student text is correct
     else {
         // nope, the key was wrong : beep !!!
-        if (Prefs::beepOnError())  QApplication::beep();
+        if (Prefs::beepOnError())  TQApplication::beep();
         // check if the key is the first wrong key that was mistyped. Only then add it
 		// to the wrong char statistics.
         if (Prefs::right2LeftTyping()) {
@@ -149,11 +149,11 @@ void KTouchTrainer::backspacePressed() {
         if (m_teacherText.left(len)==m_studentText)
             m_keyboardWidget->newKey(m_teacherText[len]);
         else
-            m_keyboardWidget->newKey(QChar(8));
+            m_keyboardWidget->newKey(TQChar(8));
     }
     else {
         /// \todo Flash line when Backspace on empty line
-        QApplication::beep();
+        TQApplication::beep();
 	}
 }
 // ----------------------------------------------------------------------------
@@ -161,7 +161,7 @@ void KTouchTrainer::backspacePressed() {
 void KTouchTrainer::enterPressed() {
 	if (m_trainingPaused)  continueTraining();
     if (m_studentText!=m_teacherText) {
-        QApplication::beep();
+        TQApplication::beep();
         return;
     };
 
@@ -241,12 +241,12 @@ void KTouchTrainer::updateWidgets() {
     if (studentLineCorrect()) {
         // ok, all student text is correct
         if (m_teacherText.length()==m_studentText.length())
-            m_keyboardWidget->newKey(QChar(13));        // we have reached the end of the line
+            m_keyboardWidget->newKey(TQChar(13));        // we have reached the end of the line
         else
             m_keyboardWidget->newKey(m_teacherText[m_studentText.length()]);
     }
     else {
-        m_keyboardWidget->newKey(QChar(8)); // wrong key, user must now press backspace
+        m_keyboardWidget->newKey(TQChar(8)); // wrong key, user must now press backspace
     }
 	updateWordCount();	// here we first update the word count 
 	updateStatusBar();	// and then the status bar
@@ -317,12 +317,12 @@ void KTouchTrainer::storeTrainingStatistics() {
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
 		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
-		m_levelStats.m_timeRecorded = QDateTime::currentDateTime();
+		m_levelStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
 	if (m_sessionStats.m_elapsedTime != 0) {
 	   //kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing session statistics!" << endl;
-		m_sessionStats.m_timeRecorded = QDateTime::currentDateTime();
+		m_sessionStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_sessionStats.push_back( m_sessionStats );
 	}
 }
@@ -388,7 +388,7 @@ void KTouchTrainer::timerTick() {
 // *** Private functions ***
 
 void KTouchTrainer::levelAllComplete() {
-    QMessageBox::information(0, i18n("You rock!"),
+    TQMessageBox::information(0, i18n("You rock!"),
                    i18n("You have finished this training exercise.\n"
                       "This training session will start from the beginning."));
     statsChangeLevel();
@@ -419,7 +419,7 @@ void KTouchTrainer::updateStatusBar() const {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchTrainer::updateStatusBarMessage(const QString& message) const {
+void KTouchTrainer::updateStatusBarMessage(const TQString& message) const {
 	KTouchPtr->changeStatusbarMessage(message);
 }
 // ----------------------------------------------------------------------------
@@ -430,7 +430,7 @@ void KTouchTrainer::updateWordCount() {
 	int words = 0;
 	bool space = true;
 	for (unsigned int i=0; i<m_studentText.length(); ++i) {
-		bool is_space = (m_studentText[i] == QChar(' '));
+		bool is_space = (m_studentText[i] == TQChar(' '));
 		if (is_space) {
 		 	if (space) continue; // two spaces after each other... ignore
 			else {
@@ -451,19 +451,19 @@ void KTouchTrainer::updateWordCount() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchTrainer::statsAddCorrectChar(QChar key) {
+void KTouchTrainer::statsAddCorrectChar(TQChar key) {
 	m_levelStats.addCorrectChar(key);
 	m_sessionStats.addCorrectChar(key);
 }
 // ----------------------------------------------------------------------------
 
-void KTouchTrainer::statsAddWrongChar(QChar key) {
+void KTouchTrainer::statsAddWrongChar(TQChar key) {
 	m_levelStats.addWrongChar(key);
 	m_sessionStats.addWrongChar(key);
 }
 // ----------------------------------------------------------------------------
 
-void KTouchTrainer::statsRemoveCorrectChar(QChar) {
+void KTouchTrainer::statsRemoveCorrectChar(TQChar) {
 	m_levelStats.removeCorrectChar();
 	m_sessionStats.removeCorrectChar();
 }
@@ -487,7 +487,7 @@ void KTouchTrainer::statsChangeLevel() {
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
 		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
-		m_levelStats.m_timeRecorded = QDateTime::currentDateTime();
+		m_levelStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
 	// clear level stats

@@ -20,7 +20,7 @@
 #include "ktouchopenrequest_dlg.h"
 
 #include <kurl.h>
-#include <qstringlist.h>
+#include <tqstringlist.h>
 
 /// Dialog for selecting a file to open.
 ///
@@ -35,14 +35,14 @@
 /// KTouchOpenRequest dlg;
 /// KURL url;
 /// // current_lecture must hold the URL to the current/default lecture or ""
-/// // default_lectures must be a QStringList with the default lecture files.
+/// // default_lectures must be a TQStringList with the default lecture files.
 /// int result = dlg.requestFileToOpen(url, i18n("Open a lecture file"), 
 ///     i18n("Which lecture would you like to open?"), i18n("Current lecture:"), 
 ///     i18n("Open a default lecture:"), i18n("Open a lecture file:"), 
 ///     i18n("Create a new lecture!"), current_lecture, 
 ///     default_lectures, i18n("<no lecture files available>"));
 ///
-/// if (result==QDialog::Accepted) {
+/// if (result==TQDialog::Accepted) {
 ///     doSomethingFancyWith(url);
 /// }
 /// @endcode
@@ -55,14 +55,14 @@ class KTouchOpenRequest : public KTouchOpenRequestDlg {
  
   public:
     /// Default constructor.
-    KTouchOpenRequest(QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+    KTouchOpenRequest(TQWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
     /// Default destructor.
     ~KTouchOpenRequest() {}
     /// Sets up the dialog and runs it.
-    /// @return Returns the dialogs return code, QDialog::Accepted or QDialog::Rejected.
-    int requestFileToOpen(KURL& url, const QString& caption, const QString& title, const QString& currentText,
-        const QString& defaultText, const QString& openText, const QString& newText,
-        KURL current_url = QString::null, QStringList defaultList = QStringList(), QString emptyListText = QString::null);
+    /// @return Returns the dialogs return code, TQDialog::Accepted or TQDialog::Rejected.
+    int requestFileToOpen(KURL& url, const TQString& caption, const TQString& title, const TQString& currentText,
+        const TQString& defaultText, const TQString& openText, const TQString& newText,
+        KURL current_url = TQString::null, TQStringList defaultList = TQStringList(), TQString emptyListText = TQString::null);
 
     /// After the dialog has been accepted the URL chosen by the user is stored herein.
     KURL m_url;    

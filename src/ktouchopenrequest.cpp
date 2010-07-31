@@ -10,9 +10,9 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <qradiobutton.h>
-#include <qlabel.h>
-#include <qbuttongroup.h>
+#include <tqradiobutton.h>
+#include <tqlabel.h>
+#include <tqbuttongroup.h>
 
 #include <kpushbutton.h>
 #include <klineedit.h>
@@ -26,14 +26,14 @@
 #include "ktouchopenrequest.h"
 #include "ktouchopenrequest.moc"
 
-KTouchOpenRequest::KTouchOpenRequest(QWidget* parent, const char* name, bool modal, WFlags fl)
+KTouchOpenRequest::KTouchOpenRequest(TQWidget* parent, const char* name, bool modal, WFlags fl)
 : KTouchOpenRequestDlg(parent,name, modal,fl)
 {
 }
 
-int KTouchOpenRequest::requestFileToOpen(KURL& url, const QString& caption, const QString& title, 
-      const QString& currentText, const QString& defaultText, const QString& openText,
-      const QString& newText, KURL current_url, QStringList defaultList, QString emptyListText)
+int KTouchOpenRequest::requestFileToOpen(KURL& url, const TQString& caption, const TQString& title, 
+      const TQString& currentText, const TQString& defaultText, const TQString& openText,
+      const TQString& newText, KURL current_url, TQStringList defaultList, TQString emptyListText)
 {
     setCaption(caption);
     openChoiceGroup->setTitle(title);
@@ -60,7 +60,7 @@ int KTouchOpenRequest::requestFileToOpen(KURL& url, const QString& caption, cons
         presetRadioBtn->setEnabled(false);
     }
     else {
-        for (QStringList::Iterator it = defaultList.begin(); it != defaultList.end(); ++it )
+        for (TQStringList::Iterator it = defaultList.begin(); it != defaultList.end(); ++it )
             presetCombo->insertItem(*it);
         presetRadioBtn->setEnabled(true);
     }
@@ -79,7 +79,7 @@ void KTouchOpenRequest::okBtnClicked() {
     if (presetRadioBtn->isChecked())
         m_url = presetCombo->currentText();
     if (newRadioBtn->isChecked())
-        m_url = QString::null;
+        m_url = TQString::null;
     if (openFileRadioBtn->isChecked()) {
         if (openFileEdit->text().isEmpty()) {
             KMessageBox::error(this, i18n("Please select or enter a file name."));
@@ -92,7 +92,7 @@ void KTouchOpenRequest::okBtnClicked() {
         }
         m_url = tmp;
     };            
-    QDialog::accept();
+    TQDialog::accept();
 }
 
 
@@ -113,7 +113,7 @@ void KTouchOpenRequest::radioBtnChanged() {
 
 
 void KTouchOpenRequest::browseBtnClicked() {
-    KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
+    KURL tmp = KFileDialog::getOpenURL(TQString::null, TQString::null, this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty())
         openFileEdit->setText(tmp.url());
 }

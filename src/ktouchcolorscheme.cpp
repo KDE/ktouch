@@ -11,9 +11,9 @@
 
 #include "ktouchcolorscheme.h"
 
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qdom.h>
+#include <tqfile.h>
+#include <tqtextstream.h>
+#include <tqdom.h>
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -26,24 +26,24 @@
 	z.appendChild(e);
 
 #define READ_COLOR(x,y)   	c = n.namedItem(x); \
-	if (!c.isNull())  y = QColor(c.firstChild().nodeValue());
+	if (!c.isNull())  y = TQColor(c.firstChild().nodeValue());
 
-QValueVector<KTouchColorScheme>	KTouchColorScheme::m_colorSchemes;
+TQValueVector<KTouchColorScheme>	KTouchColorScheme::m_colorSchemes;
 
 void KTouchColorScheme::clear() {
 	// the default scheme is the classic one
-    m_teacherTextColor = QColor("#000032");
-    m_teacherBackground = QColor("#BEBEFF");
-    m_studentTextColor = QColor("#003200");
-    m_studentBackground = QColor("#9FFF9F");
+    m_teacherTextColor = TQColor("#000032");
+    m_teacherBackground = TQColor("#BEBEFF");
+    m_studentTextColor = TQColor("#003200");
+    m_studentBackground = TQColor("#9FFF9F");
     m_errorTextColor = Qt::white;
-    m_errorBackground = QColor("#AC0000");
+    m_errorBackground = TQColor("#AC0000");
 
     m_frame = Qt::black;
-    m_background[0] = QColor(255,238,  7);     m_background[4] = QColor(247,138,247);
-    m_background[1] = QColor( 14,164,239);     m_background[5] = QColor(158,255,155);
-    m_background[2] = QColor(158,255,155);     m_background[6] = QColor( 14,164,239);
-    m_background[3] = QColor(252,138,138);     m_background[7] = QColor(255,238,  7);
+    m_background[0] = TQColor(255,238,  7);     m_background[4] = TQColor(247,138,247);
+    m_background[1] = TQColor( 14,164,239);     m_background[5] = TQColor(158,255,155);
+    m_background[2] = TQColor(158,255,155);     m_background[6] = TQColor( 14,164,239);
+    m_background[3] = TQColor(252,138,138);     m_background[7] = TQColor(255,238,  7);
     m_text = Qt::black;
     m_backgroundH = Qt::darkBlue;
     m_textH = Qt::white;
@@ -56,18 +56,18 @@ void KTouchColorScheme::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchColorScheme::read(const QDomNode& node) {
+bool KTouchColorScheme::read(const TQDomNode& node) {
 //	kdDebug() << "[KTouchColorScheme::read]  " << endl;
 
-	QDomNode name = node.namedItem("Name");
+	TQDomNode name = node.namedItem("Name");
 	if (name.isNull())  m_name = i18n("untitled color scheme");
 	else				m_name = name.firstChild().nodeValue();
 
 //	kdDebug() << "  Reading scheme = " << m_name << endl;
 	
-	QDomNode n = node.namedItem("LineColors");
+	TQDomNode n = node.namedItem("LineColors");
 	if (!n.isNull()) {
-		QDomNode c;
+		TQDomNode c;
 		READ_COLOR("TeacherTextColor", m_teacherTextColor);
 		READ_COLOR("TeacherBackground", m_teacherBackground);
 		READ_COLOR("StudentTextColor", m_studentTextColor);
@@ -78,10 +78,10 @@ bool KTouchColorScheme::read(const QDomNode& node) {
 
 	n = node.namedItem("KeyboardColors");
 	if (!n.isNull()) {
-		QDomNode c;
+		TQDomNode c;
 		READ_COLOR("KeyFrame", m_frame);
 		for (unsigned int i=0; i<8; ++i) {
-			READ_COLOR(QString("KeyBack_%1").arg(i), m_background[i]);
+			READ_COLOR(TQString("KeyBack_%1").arg(i), m_background[i]);
 		}
 		READ_COLOR("KeyText", m_text);
 		READ_COLOR("KeyBackHigh", m_backgroundH);
@@ -95,20 +95,20 @@ bool KTouchColorScheme::read(const QDomNode& node) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchColorScheme::write(QDomDocument& doc, QDomElement& root) const {
+void KTouchColorScheme::write(TQDomDocument& doc, TQDomElement& root) const {
 	//kdDebug() << "[KTouchColorScheme::write]  " << endl;
-	QDomElement element = doc.createElement("KTouchColorScheme");
+	TQDomElement element = doc.createElement("KTouchColorScheme");
 	// append name of color scheme
-	QDomElement name = doc.createElement("Name");
-	QDomText name_text;
+	TQDomElement name = doc.createElement("Name");
+	TQDomText name_text;
 	if (m_name.isEmpty())	name_text = doc.createTextNode( i18n("untitled color scheme") );
 	else					name_text = doc.createTextNode(m_name);
 	name.appendChild(name_text);
 	element.appendChild(name);
 	// store slide line colors
-	QDomElement line_colors = doc.createElement("LineColors");
-	QDomElement e;
-	QDomText n;
+	TQDomElement line_colors = doc.createElement("LineColors");
+	TQDomElement e;
+	TQDomText n;
 
 	WRITE_COLOR(line_colors, "TeacherTextColor", m_teacherTextColor);
 	WRITE_COLOR(line_colors, "TeacherBackground", m_teacherBackground);
@@ -121,11 +121,11 @@ void KTouchColorScheme::write(QDomDocument& doc, QDomElement& root) const {
     // done with slide line colors
 
 	// write key drawing colors
-	QDomElement key_colors = doc.createElement("KeyboardColors");
+	TQDomElement key_colors = doc.createElement("KeyboardColors");
 
 	WRITE_COLOR(key_colors, "KeyFrame", m_frame);
 	for (unsigned int i=0; i<8; ++i) {
-		WRITE_COLOR(key_colors, QString("KeyBack_%1").arg(i), m_background[i]);
+		WRITE_COLOR(key_colors, TQString("KeyBack_%1").arg(i), m_background[i]);
 	}
 	WRITE_COLOR(key_colors, "KeyText", m_text);
 	WRITE_COLOR(key_colors, "KeyBackHigh", m_backgroundH);
@@ -142,23 +142,23 @@ void KTouchColorScheme::write(QDomDocument& doc, QDomElement& root) const {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchColorScheme::readList(QWidget * window, const KURL& url) {
+bool KTouchColorScheme::readList(TQWidget * window, const KURL& url) {
 	if (url.isEmpty()) return false;
 	//kdDebug() << "[KTouchColorScheme::readList]  " << endl;
 	//kdDebug() << "  url = '" << url.url() << "'" << endl;
-    QString tmp_file;
+    TQString tmp_file;
     bool result = KIO::NetAccess::download(url, tmp_file, window);
     if (result) {
         // Ok, that was successful, try to parse the XML doc now
-        QFile infile(tmp_file);
+        TQFile infile(tmp_file);
         if ( !infile.open( IO_ReadOnly ) ) {
     		KIO::NetAccess::removeTempFile(tmp_file);
             return false;   // Bugger it... couldn't open it...
 		}
-		QDomDocument doc;
+		TQDomDocument doc;
 		doc.setContent( &infile );
 		// read the document
-		QDomNodeList schemes = doc.elementsByTagName("KTouchColorScheme");
+		TQDomNodeList schemes = doc.elementsByTagName("KTouchColorScheme");
 		int num = schemes.count();
 		if (num > 0) {
 			//kdDebug() << "  reading " << schemes.count() << " color maps..." << endl;
@@ -176,20 +176,20 @@ bool KTouchColorScheme::readList(QWidget * window, const KURL& url) {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchColorScheme::writeList(QWidget * window, const KURL& url) {
+bool KTouchColorScheme::writeList(TQWidget * window, const KURL& url) {
 	// create the XML document and root node
-	QDomDocument doc;
-    QDomElement root = doc.createElement( "KTouchColorSchemeCollection" );
+	TQDomDocument doc;
+    TQDomElement root = doc.createElement( "KTouchColorSchemeCollection" );
     doc.appendChild(root);
 	// write all the non-default color schemes
-	for (QValueVector<KTouchColorScheme>::const_iterator it = m_colorSchemes.constBegin();
+	for (TQValueVector<KTouchColorScheme>::const_iterator it = m_colorSchemes.constBegin();
 		it != m_colorSchemes.constEnd(); ++it)
 	{
 		if (!it->m_default)  it->write(doc, root);
 	}
 
 	// and save it
-    QString tmp_file;
+    TQString tmp_file;
     KTempFile *temp=0;
     if (url.isLocalFile())
         tmp_file=url.path();         // for local files the path is sufficient
@@ -199,14 +199,14 @@ bool KTouchColorScheme::writeList(QWidget * window, const KURL& url) {
         tmp_file=temp->name();
     }
 
-    QFile outfile(tmp_file);
+    TQFile outfile(tmp_file);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         kdDebug() << "Error creating tmp file '"+tmp_file+"' for writing color map!" << endl;
         return false;
     }
 	
-    QTextStream out( &outfile );
+    TQTextStream out( &outfile );
     out << doc.toString();
     outfile.close();
     // if we have a temporary file, we still need to upload it
@@ -243,17 +243,17 @@ void KTouchColorScheme::createDefaults() {
     m_colorSchemes.push_back(color);
 
     color.m_name = i18n("Classic");
-    color.m_teacherTextColor = QColor("#000032");
-    color.m_teacherBackground = QColor("#BEBEFF");
-    color.m_studentTextColor = QColor("#003200");
-    color.m_studentBackground = QColor("#9FFF9F");
+    color.m_teacherTextColor = TQColor("#000032");
+    color.m_teacherBackground = TQColor("#BEBEFF");
+    color.m_studentTextColor = TQColor("#003200");
+    color.m_studentBackground = TQColor("#9FFF9F");
     color.m_errorTextColor = Qt::white;
-    color.m_errorBackground = QColor("#AC0000");
+    color.m_errorBackground = TQColor("#AC0000");
     color.m_frame = Qt::black;
-    color.m_background[0] = QColor(255,238,  7);     color.m_background[4] = QColor(247,138,247);
-    color.m_background[1] = QColor( 14,164,239);     color.m_background[5] = QColor(158,255,155);
-    color.m_background[2] = QColor(158,255,155);     color.m_background[6] = QColor( 14,164,239);
-    color.m_background[3] = QColor(252,138,138);     color.m_background[7] = QColor(255,238,  7);
+    color.m_background[0] = TQColor(255,238,  7);     color.m_background[4] = TQColor(247,138,247);
+    color.m_background[1] = TQColor( 14,164,239);     color.m_background[5] = TQColor(158,255,155);
+    color.m_background[2] = TQColor(158,255,155);     color.m_background[6] = TQColor( 14,164,239);
+    color.m_background[3] = TQColor(252,138,138);     color.m_background[7] = TQColor(255,238,  7);
     color.m_text = Qt::black;
     color.m_backgroundH = Qt::darkBlue;
     color.m_textH = Qt::white;
@@ -265,43 +265,43 @@ void KTouchColorScheme::createDefaults() {
 
     color.m_name = i18n("Deep Blue");
     color.m_teacherTextColor = Qt::white;
-    color.m_teacherBackground = QColor(  0, 39, 80);
+    color.m_teacherBackground = TQColor(  0, 39, 80);
     color.m_studentTextColor = Qt::white;
-    color.m_studentBackground = QColor( 39, 59,127);
-    color.m_errorTextColor = QColor("#B5CFFF");
-    color.m_errorBackground = QColor("#640000");
-    color.m_frame = QColor(220,220,220);
-    color.m_background[0] = QColor(  0, 39, 80);     color.m_background[4] = QColor( 24, 19, 72);
-    color.m_background[1] = QColor( 39, 59,127);     color.m_background[5] = QColor(  8, 44,124);
-    color.m_background[2] = QColor(  4, 39, 53);     color.m_background[6] = QColor( 10, 82,158);
-    color.m_background[3] = QColor( 40, 32,121);     color.m_background[7] = QColor( 43, 60,124);
+    color.m_studentBackground = TQColor( 39, 59,127);
+    color.m_errorTextColor = TQColor("#B5CFFF");
+    color.m_errorBackground = TQColor("#640000");
+    color.m_frame = TQColor(220,220,220);
+    color.m_background[0] = TQColor(  0, 39, 80);     color.m_background[4] = TQColor( 24, 19, 72);
+    color.m_background[1] = TQColor( 39, 59,127);     color.m_background[5] = TQColor(  8, 44,124);
+    color.m_background[2] = TQColor(  4, 39, 53);     color.m_background[6] = TQColor( 10, 82,158);
+    color.m_background[3] = TQColor( 40, 32,121);     color.m_background[7] = TQColor( 43, 60,124);
     color.m_text = Qt::white;
-    color.m_backgroundH = QColor(125,180,255);
+    color.m_backgroundH = TQColor(125,180,255);
     color.m_textH = Qt::darkBlue;
     color.m_cBackground = Qt::black;
     color.m_cText = Qt::white;
-    color.m_cBackgroundH = QColor(111,121,73);
+    color.m_cBackgroundH = TQColor(111,121,73);
     color.m_cTextH = Qt::white;
     m_colorSchemes.push_back(color);
 
     color.m_name = i18n("Stripy");
     color.m_teacherTextColor = Qt::white;
-    color.m_teacherBackground = QColor( 39, 70, 227);
+    color.m_teacherBackground = TQColor( 39, 70, 227);
     color.m_studentTextColor = Qt::white;
-    color.m_studentBackground = QColor( 39, 70, 127);
+    color.m_studentBackground = TQColor( 39, 70, 127);
     color.m_errorTextColor = Qt::white;
     color.m_errorBackground = Qt::darkGray;
     color.m_frame = Qt::black;
     for (int i=0; i<8; i=i+2)
-        color.m_background[i] = QColor( 39, 70, 127);
+        color.m_background[i] = TQColor( 39, 70, 127);
 	for (int i=1; i<8; i=i+2)
         color.m_background[i] = Qt::darkGray;
     color.m_text = Qt::black;
-    color.m_backgroundH = QColor( 39, 70, 227);
+    color.m_backgroundH = TQColor( 39, 70, 227);
     color.m_textH = Qt::white;
     color.m_cBackground = Qt::gray;
     color.m_cText = Qt::black;
-    color.m_cBackgroundH = QColor( 39, 70, 227);
+    color.m_cBackgroundH = TQColor( 39, 70, 227);
     color.m_cTextH = Qt::black;
     m_colorSchemes.push_back(color);
 }

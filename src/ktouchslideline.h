@@ -17,8 +17,8 @@
 #include <config.h>
 #endif
 
-#include <qwidget.h>
-#include <qtimer.h>
+#include <tqwidget.h>
+#include <tqtimer.h>
 class QPixmap;
 class QPainter;
 
@@ -31,11 +31,11 @@ class QPainter;
 /// choice of the background colour) is done by the widget.
 ///
 /// Please refer to the documentation 'sliding_line_widget.pdf' in the doc folder.
-class KTouchSlideLine : public QWidget {
+class KTouchSlideLine : public TQWidget {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchSlideLine(QWidget *parent);
+    KTouchSlideLine(TQWidget *parent);
     /// Destructor, free memory allocated for the line pixmap.
     ~KTouchSlideLine();
     /// Applies the preferences (font and colours).
@@ -46,24 +46,24 @@ class KTouchSlideLine : public QWidget {
     /// Sets the teacher and student text (usually called when a new line is started).
 	/// This function calls updateSlidingLines().
 	/// @see updateSlidingLines()
-    void setNewText(const QString& teacher_text, const QString& student_text);
+    void setNewText(const TQString& teacher_text, const TQString& student_text);
     /// Sets the student text (called whenever the student string changes).
 	/// This function calls updateStudentLine().
 	/// @see updateStudentLine()
-    void setStudentText(const QString& text);
+    void setStudentText(const TQString& text);
 	/// Changes the font of the slide line widget and updates everything else.
 	/// This function is called when the font is changed. It updates the size
 	/// of the sliding lines and the font size accordingly. Then it updates
 	/// the widget.
 	/// This function calls resizeFont().
 	/// @see resizeFont()
-	void setFont(const QFont& font);
+	void setFont(const TQFont& font);
 
 	/// Returns true when the character can be added without problems.
 	/// This function checks if the new possibly wrong student line
 	/// would still fit into the student line pixmap and returns
 	/// false if not.
-	bool canAddCharacter(const QString& new_student_text);
+	bool canAddCharacter(const TQString& new_student_text);
 
   public slots:
     /// Starts or stops the cursor blinking timer.
@@ -80,16 +80,16 @@ class KTouchSlideLine : public QWidget {
 	/// This function calls updateSlidingLines() if necessary, otherwise just slide().
 	/// @see updateSlidingLines()
 	/// @see slide()
-    void paintEvent( QPaintEvent * );
+    void paintEvent( TQPaintEvent * );
     /// Will be called when the widget is resized.
     /// This event will first recalculate the geometry of the sliding lines.
 	/// Then the font size will be updated and through that, the sliding lines will be
 	/// updated.
-    void resizeEvent ( QResizeEvent * );
+    void resizeEvent ( TQResizeEvent * );
 
   private:
     /// Calculates the correct text length (in pixels) taking trailing spaces into account
-    int textLen(const QFontMetrics& fontMetrics, const QString& text);
+    int textLen(const TQFontMetrics& fontMetrics, const TQString& text);
     /// Will recalculate the font size and related variables depending on the height of the widget.
 	/// This function calls updateSlidingLines().
 	/// @see updateSlidingLines()
@@ -97,7 +97,7 @@ class KTouchSlideLine : public QWidget {
     /// Just draws the cursor (if visible)
     void drawCursor();
     /// Draws the "enter" character at the given position (y is the y-position of the arrow).
-    void drawEnterChar(QPainter *painter, int cursorPos, int y, int enterWidth);
+    void drawEnterChar(TQPainter *painter, int cursorPos, int y, int enterWidth);
     /// Recreates the student and teacher pixmaps and updates all related variables.
 	/// In this function the teacher pixmap is drawn it will not be modified until the next
 	/// call of updateSlidingLines(). This function also calls updateStudentLine().
@@ -106,18 +106,18 @@ class KTouchSlideLine : public QWidget {
 	/// Redraws the student line alone and updates all related variables.
     void updateStudentLine();
 
-    QFont       m_font;             ///< The font for the sliding lines.
-    QString     m_teacherText;      ///< The teachers text.
-    QString     m_studentText;      ///< The students text.
-    QPixmap    *m_teacherPixmap;    ///< Pixmap used to draw the teacher sliding line, created in updateSlidingLines().
-    QPixmap    *m_studentPixmap;    ///< Pixmap used to draw the student sliding line, created in updateSlidingLines().
+    TQFont       m_font;             ///< The font for the sliding lines.
+    TQString     m_teacherText;      ///< The teachers text.
+    TQString     m_studentText;      ///< The students text.
+    TQPixmap    *m_teacherPixmap;    ///< Pixmap used to draw the teacher sliding line, created in updateSlidingLines().
+    TQPixmap    *m_studentPixmap;    ///< Pixmap used to draw the student sliding line, created in updateSlidingLines().
 
-    QTimer      m_slideTimer;       ///< This is the timer for the sliding of the lines.
+    TQTimer      m_slideTimer;       ///< This is the timer for the sliding of the lines.
 
     bool        m_cursorVisible;    ///< Flag which indicates the current state of the cursor.
-    QTimer      m_cursorTimer;      ///< This is the cursor on/off timer.
-    QColor      m_cursorColor;      ///< Defines the colour of the cursor (when turned on).
-    QColor      m_cursorBackground; ///< Defines the background colour of the cursor (when turned off).
+    TQTimer      m_cursorTimer;      ///< This is the cursor on/off timer.
+    TQColor      m_cursorColor;      ///< Defines the colour of the cursor (when turned on).
+    TQColor      m_cursorBackground; ///< Defines the background colour of the cursor (when turned off).
 
 	// variables depending on size of widget, will be updated in resizeEvent()
 	int			m_marginVerWidget;	///< Vertical margin between widget boundary and sliding line in pixels.

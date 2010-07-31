@@ -13,14 +13,14 @@
 #include "ktouchstatus.h"
 #include "ktouchstatus.moc"
 
-#include <qlcdnumber.h>
-#include <qlabel.h>
-#include <qprogressbar.h>
+#include <tqlcdnumber.h>
+#include <tqlabel.h>
+#include <tqprogressbar.h>
 #include <kdebug.h>
 #include <kpushbutton.h>
 #include "prefs.h"
 
-KTouchStatus::KTouchStatus(QWidget *parent)
+KTouchStatus::KTouchStatus(TQWidget *parent)
  : KTouchStatusLayout(parent)
 {
     applyPreferences();
@@ -37,7 +37,7 @@ void KTouchStatus::applyPreferences() {
 	}
 }
 
-void KTouchStatus::setNewChars(const QString& newChars) {
+void KTouchStatus::setNewChars(const TQString& newChars) {
     newCharsLabel->setText(newChars);
 }
 

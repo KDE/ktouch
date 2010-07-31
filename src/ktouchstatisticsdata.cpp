@@ -13,9 +13,9 @@
 #include "config.h"
 #include "ktouchstatisticsdata.h"
 
-#include <qfile.h>
-#include <qstringlist.h>
-#include <qdom.h>
+#include <tqfile.h>
+#include <tqstringlist.h>
+#include <tqdom.h>
 
 #include <kdebug.h>
 #include <klocale.h>
@@ -40,7 +40,7 @@ int KTouchCharStats::missHitRatio() const {
 }
 // ----------------------------------------------------------------------------
 
-QTextStream& operator<<(QTextStream &out, const KTouchCharStats &ch) {
+TQTextStream& operator<<(TQTextStream &out, const KTouchCharStats &ch) {
     return (out << ch.m_char.unicode() << " " << ch.m_correctCount << " " << ch.m_wrongCount);
 }
 // ----------------------------------------------------------------------------
@@ -59,9 +59,9 @@ void KTouchLevelStats::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLevelStats::read(QDomNode in) {
+bool KTouchLevelStats::read(TQDomNode in) {
 	// read the level number
-	QDomNode n = in.attributes().namedItem("Number");
+	TQDomNode n = in.attributes().namedItem("Number");
 	bool ok;
 	if (!n.isNull())  {
 		m_levelNum = n.nodeValue().toInt(&ok);
@@ -97,14 +97,14 @@ bool KTouchLevelStats::read(QDomNode in) {
 	// done with attributes, read recording time
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
-		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString::null) 
-			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
+		TQString timestring = n.firstChild().nodeValue();
+		if (timestring != TQString::null) 
+			m_timeRecorded = TQDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read characters
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
-		QString char_data = n.firstChild().nodeValue();
+		TQString char_data = n.firstChild().nodeValue();
 		//kdDebug() << "'" << char_data << "'" << endl;
 #ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(char_data.local8Bit()));
@@ -113,15 +113,15 @@ bool KTouchLevelStats::read(QDomNode in) {
 #endif
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
-			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
+			m_charStats.insert( KTouchCharStats(TQChar(ch), correct, wrong) );
 		//kdDebug() << m_charStats.size() << endl;
 	}
 	return true;
 }
 // ----------------------------------------------------------------------------
 
-void KTouchLevelStats::write(QDomDocument& doc, QDomElement& root) const {
-	QDomElement level = doc.createElement("LevelStats");
+void KTouchLevelStats::write(TQDomDocument& doc, TQDomElement& root) const {
+	TQDomElement level = doc.createElement("LevelStats");
 	root.appendChild(level);
 	level.setAttribute("Number", m_levelNum);
 	level.setAttribute("Time", m_elapsedTime);
@@ -129,15 +129,15 @@ void KTouchLevelStats::write(QDomDocument& doc, QDomElement& root) const {
 	level.setAttribute("Corrects", m_correctChars);
 	level.setAttribute("Words", m_words);
 	// add time
-	QDomElement e = doc.createElement("Time");
-	QDomText tn = doc.createTextNode(m_timeRecorded.toString(Qt::ISODate));
+	TQDomElement e = doc.createElement("Time");
+	TQDomText tn = doc.createTextNode(m_timeRecorded.toString(Qt::ISODate));
 	e.appendChild(tn);
 	level.appendChild(e);
 	// add char stats
-	QString char_data;
+	TQString char_data;
     // we append for each missed char the char-unicode and the counters
 	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
-		char_data += QString(" %1 %2 %3").arg(it->m_char.unicode())
+		char_data += TQString(" %1 %2 %3").arg(it->m_char.unicode())
 										 .arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
 	tn = doc.createTextNode(char_data);
@@ -146,11 +146,11 @@ void KTouchLevelStats::write(QDomDocument& doc, QDomElement& root) const {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchLevelStats::addCorrectChar(QChar key) {
+void KTouchLevelStats::addCorrectChar(TQChar key) {
 	++m_correctChars;
 	++m_totalChars;
     // we only count non-space characters
-	if (key!=QChar(' ')) {
+	if (key!=TQChar(' ')) {
 		std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 		if (it==m_charStats.end())
 			m_charStats.insert( KTouchCharStats(key,1,0) );
@@ -169,9 +169,9 @@ void KTouchLevelStats::removeCorrectChar() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchLevelStats::addWrongChar(QChar key) {
+void KTouchLevelStats::addWrongChar(TQChar key) {
 	++m_totalChars;
-	if (key==QChar(8) || key==QChar(' ')) 
+	if (key==TQChar(8) || key==TQChar(' ')) 
 		return; // don't remember wrong backspaces or spaces
 	std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 	if (it==m_charStats.end())
@@ -214,9 +214,9 @@ void KTouchSessionStats::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchSessionStats::read(QDomNode in) {
+bool KTouchSessionStats::read(TQDomNode in) {
 	// read time
-	QDomNode n = in.attributes().namedItem("Time");
+	TQDomNode n = in.attributes().namedItem("Time");
 	bool ok;
 	if (!n.isNull()) {
 		m_elapsedTime = n.nodeValue().toDouble(&ok);
@@ -243,14 +243,14 @@ bool KTouchSessionStats::read(QDomNode in) {
 	// done with attributes, read recording time
 	n = in.namedItem("Time");
 	if (!n.isNull()) {
-		QString timestring = n.firstChild().nodeValue();
-		if (timestring != QString::null) 
-			m_timeRecorded = QDateTime::fromString(timestring, Qt::ISODate);
+		TQString timestring = n.firstChild().nodeValue();
+		if (timestring != TQString::null) 
+			m_timeRecorded = TQDateTime::fromString(timestring, Qt::ISODate);
 	}
 	// read level numbers
 	n = in.namedItem("LevelNums");
 	if (!n.isNull()) {
-		QString str = n.firstChild().nodeValue();
+		TQString str = n.firstChild().nodeValue();
 #ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(str.local8Bit()));
 #else
@@ -263,7 +263,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 	// read characters
 	n = in.namedItem("CharStats");
 	if (!n.isNull()) {
-		QString char_data = n.firstChild().nodeValue();
+		TQString char_data = n.firstChild().nodeValue();
 		//kdDebug() << "'" << char_data << "'" << endl;
 #ifdef HAVE_SSTREAM
 		std::stringstream strm(std::string(char_data.local8Bit()));
@@ -272,7 +272,7 @@ bool KTouchSessionStats::read(QDomNode in) {
 #endif
 		int ch, correct, wrong;
 		while (strm >> ch >> correct >> wrong)
-			m_charStats.insert( KTouchCharStats(QChar(ch), correct, wrong) );
+			m_charStats.insert( KTouchCharStats(TQChar(ch), correct, wrong) );
 		//kdDebug() << m_charStats.size() << endl;
 	}
 
@@ -280,31 +280,31 @@ bool KTouchSessionStats::read(QDomNode in) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSessionStats::write(QDomDocument& doc, QDomElement& root) const {
-	QDomElement session = doc.createElement("SessionStats");
+void KTouchSessionStats::write(TQDomDocument& doc, TQDomElement& root) const {
+	TQDomElement session = doc.createElement("SessionStats");
 	root.appendChild(session);
 	session.setAttribute("Time", m_elapsedTime);
 	session.setAttribute("Chars", m_totalChars);
 	session.setAttribute("Corrects", m_correctChars);
 	session.setAttribute("Words", m_words);
 	// add time
-	QDomElement e = doc.createElement("Time");
-	QDomText tn = doc.createTextNode(m_timeRecorded.toString(Qt::ISODate));
+	TQDomElement e = doc.createElement("Time");
+	TQDomText tn = doc.createTextNode(m_timeRecorded.toString(Qt::ISODate));
 	e.appendChild(tn);
 	session.appendChild(e);
 	// add levels
-	QString level_nums;
+	TQString level_nums;
 	for (std::set<unsigned int>::const_iterator it = m_levelNums.begin(); it != m_levelNums.end(); ++it)
-		level_nums += QString( " %1").arg(*it);
+		level_nums += TQString( " %1").arg(*it);
 	e = doc.createElement("LevelNums");
 	tn = doc.createTextNode(level_nums);
 	e.appendChild(tn);
 	session.appendChild(e);
 	// add char data
-	QString char_data;
+	TQString char_data;
     // we append for each missed char the char-unicode and the counters
 	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
-		char_data += QString(" %1 %2 %3").arg(it->m_char.unicode())
+		char_data += TQString(" %1 %2 %3").arg(it->m_char.unicode())
 				.arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
 	tn = doc.createTextNode(char_data);
@@ -313,11 +313,11 @@ void KTouchSessionStats::write(QDomDocument& doc, QDomElement& root) const {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSessionStats::addCorrectChar(QChar key) {
+void KTouchSessionStats::addCorrectChar(TQChar key) {
 	++m_correctChars;
 	++m_totalChars;
     // we only count non-space characters
-	if (key!=QChar(' ')) {
+	if (key!=TQChar(' ')) {
 		std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 		if (it==m_charStats.end())
 			m_charStats.insert( KTouchCharStats(key,1,0) );
@@ -336,9 +336,9 @@ void KTouchSessionStats::removeCorrectChar() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchSessionStats::addWrongChar(QChar key) {
+void KTouchSessionStats::addWrongChar(TQChar key) {
 	++m_totalChars;
-	if (key==QChar(8) || key==QChar(' ')) 
+	if (key==TQChar(8) || key==TQChar(' ')) 
 		return; // don't remember wrong backspaces or spaces
 	std::set<KTouchCharStats>::iterator it = m_charStats.find( KTouchCharStats(key,0,0) );
 	if (it==m_charStats.end())
@@ -357,17 +357,17 @@ void KTouchSessionStats::addWrongChar(QChar key) {
 // *** KTouchLectureStats ***
 
 void KTouchLectureStats::clear() {
-	m_lectureTitle = QString::null;
-	m_lectureURL = QString::null;
+	m_lectureTitle = TQString::null;
+	m_lectureURL = TQString::null;
 	m_levelStats.clear();
 	m_sessionStats.clear();
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchLectureStats::read(QDomNode in) {
+bool KTouchLectureStats::read(TQDomNode in) {
 	clear();
 	// read the URL
-	QDomNode n = in.namedItem("URL");
+	TQDomNode n = in.namedItem("URL");
 	if (!n.isNull()) m_lectureURL = n.firstChild().nodeValue();
 	else return false; // no URL, statistics useless
 	// read the Title
@@ -377,7 +377,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 	n = in.namedItem("AllLevelStats");
 	if (!n.isNull()) {
 		// loop over all childs and read levels
-		QDomNode levelNode = n.firstChild();
+		TQDomNode levelNode = n.firstChild();
 		while (!levelNode.isNull()) {
 			//kdDebug() << "[KTouchLectureStats::read]  Reading level stats" << endl;
 			KTouchLevelStats tmp;
@@ -389,7 +389,7 @@ bool KTouchLectureStats::read(QDomNode in) {
 	n = in.namedItem("AllSessionStats");
 	if (!n.isNull()) {
 		// loop over all childs and read sessions
-		QDomNode sessionNode = n.firstChild();
+		TQDomNode sessionNode = n.firstChild();
 		while (!sessionNode.isNull()) {
 			//kdDebug() << "[KTouchLectureStats::read]  Reading session stats" << endl;
 			KTouchSessionStats tmp;
@@ -401,35 +401,35 @@ bool KTouchLectureStats::read(QDomNode in) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchLectureStats::write(QDomDocument& doc, QDomElement& root) const {
+void KTouchLectureStats::write(TQDomDocument& doc, TQDomElement& root) const {
 	if (m_lectureURL.isEmpty()) return; // Error here!
-	QDomElement lecture = doc.createElement("LectureStats");
+	TQDomElement lecture = doc.createElement("LectureStats");
 	root.appendChild(lecture);
 	// store lecture URL
-	QDomElement urlElement = doc.createElement("URL");
-	QDomText urlText = doc.createTextNode(m_lectureURL.url());
+	TQDomElement urlElement = doc.createElement("URL");
+	TQDomText urlText = doc.createTextNode(m_lectureURL.url());
 	urlElement.appendChild(urlText);
 	lecture.appendChild(urlElement);
 	// store title
-	QString title = m_lectureTitle;
+	TQString title = m_lectureTitle;
 	if (title.isEmpty()) 
 		title = m_lectureURL.fileName();
-	QDomElement titleElement = doc.createElement("Title");
-	QDomText titleText = doc.createTextNode(title);
+	TQDomElement titleElement = doc.createElement("Title");
+	TQDomText titleText = doc.createTextNode(title);
 	titleElement.appendChild(titleText);
 	lecture.appendChild(titleElement);
 	// store level stats
-	QDomElement levelStatsElement = doc.createElement("AllLevelStats");
+	TQDomElement levelStatsElement = doc.createElement("AllLevelStats");
 	lecture.appendChild(levelStatsElement);
-	for (QValueVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
+	for (TQValueVector<KTouchLevelStats>::ConstIterator it = m_levelStats.begin(); 
 		it != m_levelStats.end(); ++it)
 	{
 		it->write(doc, levelStatsElement);
 	}
 	// store session stats
-	QDomElement sessionStatsElement = doc.createElement("AllSessionStats");
+	TQDomElement sessionStatsElement = doc.createElement("AllSessionStats");
 	lecture.appendChild(sessionStatsElement);
-	for (QValueVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
+	for (TQValueVector<KTouchSessionStats>::ConstIterator it = m_sessionStats.begin(); 
 			it != m_sessionStats.end(); ++it)
 	{
 		it->write(doc, sessionStatsElement);
@@ -446,23 +446,23 @@ void KTouchStatisticsData::clear() {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
+bool KTouchStatisticsData::read(TQWidget * window, const KURL& url) {
 	if (url.isEmpty()) return false;
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
-    QString target;
+    TQString target;
     bool result = false;
     if (KIO::NetAccess::download(url, target, window)) {
         // Ok, that was successful, store the lectureURL and read the file
-        QFile infile(target);
+        TQFile infile(target);
         if ( !infile.open( IO_ReadOnly ) ) {
     		KIO::NetAccess::removeTempFile(target);
             return false;   // Bugger it... couldn't open it...
 		}
-		QDomDocument doc;
+		TQDomDocument doc;
 		
 #ifdef COMPRESSED_XML_STATISTICS
-		QByteArray array;
+		TQByteArray array;
 		array = infile.readAll();
 		array = qUncompress(array);
 		doc.setContent( array );
@@ -476,13 +476,13 @@ bool KTouchStatisticsData::read(QWidget * window, const KURL& url) {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
+bool KTouchStatisticsData::write(TQWidget * window, const KURL& url) const {
 	// create the XML document
-	QDomDocument doc;
+	TQDomDocument doc;
 	writeStats(doc);
 
 	// and save it
-    QString tmpFile;
+    TQString tmpFile;
     KTempFile *temp=0;
     if (url.isLocalFile())
         tmpFile=url.path();         // for local files the path is sufficient
@@ -492,7 +492,7 @@ bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
         tmpFile=temp->name();
     }
 
-    QFile outfile(tmpFile);
+    TQFile outfile(tmpFile);
     if ( !outfile.open( IO_WriteOnly ) ) {
         if (temp)  delete temp;
         // kdDebug() << "Error creating lecture file!" << endl;
@@ -500,13 +500,13 @@ bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
     }
 	
 #ifdef COMPRESSED_XML_STATISTICS
-	QByteArray array;
-	QTextStream out(array, IO_WriteOnly);
+	TQByteArray array;
+	TQTextStream out(array, IO_WriteOnly);
 	out << doc.toString();
 	array = qCompress(array);
 	outfile.writeBlock(array);
 #else
-	QTextStream out( &outfile );
+	TQTextStream out( &outfile );
     out << doc.toString();
 #endif // COMPRESSED_XML_STATISTICS
     outfile.close();
@@ -520,10 +520,10 @@ bool KTouchStatisticsData::write(QWidget * window, const KURL& url) const {
 }
 // ----------------------------------------------------------------------------
 
-bool KTouchStatisticsData::readStats(QDomDocument& doc) {
+bool KTouchStatisticsData::readStats(TQDomDocument& doc) {
 	clear(); // clear current data
 	// retrieve the KTouchStatistics statistics
-	QDomNodeList entries = doc.elementsByTagName("LectureStats");
+	TQDomNodeList entries = doc.elementsByTagName("LectureStats");
 	bool result = true;
 	unsigned int i=0;
 	while (result && i < entries.count()) {
@@ -539,8 +539,8 @@ bool KTouchStatisticsData::readStats(QDomDocument& doc) {
 }
 // ----------------------------------------------------------------------------
 
-void KTouchStatisticsData::writeStats(QDomDocument& doc) const {
-	QDomElement root = doc.createElement( "KTouchStatistics" );
+void KTouchStatisticsData::writeStats(TQDomDocument& doc) const {
+	TQDomElement root = doc.createElement( "KTouchStatistics" );
 	doc.appendChild(root);
 	// Store Lecture statistics
 	LectureStatsMap::ConstIterator it = m_lectureStats.begin();

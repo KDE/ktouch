@@ -17,11 +17,11 @@
 #include <vector>
 #include <utility>
 
-#include <qprogressbar.h>
-#include <qlcdnumber.h>
-#include <qlabel.h>
-#include <qradiobutton.h>
-#include <qbuttongroup.h>
+#include <tqprogressbar.h>
+#include <tqlcdnumber.h>
+#include <tqlabel.h>
+#include <tqradiobutton.h>
+#include <tqbuttongroup.h>
 
 #include <kpushbutton.h>
 #include <kcombobox.h>
@@ -34,19 +34,19 @@
 #include "ktouch.h"
 #include "ktouchchartwidget.h"
 
-KTouchStatistics::KTouchStatistics(QWidget* parent)
+KTouchStatistics::KTouchStatistics(TQWidget* parent)
 	: KTouchStatisticsDlg(parent)
 {
 	sessionsRadio->setChecked(true);
 	WPMRadio->setChecked(true);
 	eventRadio->setChecked(true);
-    connect(closeButton, SIGNAL(clicked()), this, SLOT(accept()) );
-	connect(lectureCombo, SIGNAL(activated(int)), this, SLOT(lectureActivated(int)) );
-    connect(clearButton, SIGNAL(clicked()), this, SLOT(clearHistory()) );
+    connect(closeButton, TQT_SIGNAL(clicked()), this, TQT_SLOT(accept()) );
+	connect(lectureCombo, TQT_SIGNAL(activated(int)), this, TQT_SLOT(lectureActivated(int)) );
+    connect(clearButton, TQT_SIGNAL(clicked()), this, TQT_SLOT(clearHistory()) );
 	// connect the radio buttons with the chart update function
-    connect(buttonGroup1, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-    connect(buttonGroup2, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
-    connect(buttonGroup3, SIGNAL(clicked(int)), this, SLOT(updateChartTab()) );
+    connect(buttonGroup1, TQT_SIGNAL(clicked(int)), this, TQT_SLOT(updateChartTab()) );
+    connect(buttonGroup2, TQT_SIGNAL(clicked(int)), this, TQT_SLOT(updateChartTab()) );
+    connect(buttonGroup3, TQT_SIGNAL(clicked(int)), this, TQT_SLOT(updateChartTab()) );
 	
 	// TODO : temporarily remove detailed stats page and deactivate options
 	levelsRadio->setEnabled(false);
@@ -63,10 +63,10 @@ void KTouchStatistics::run(const KURL& currentLecture, const KTouchStatisticsDat
 	// fill lecture combo with data
 	// loop over all lecturestatistics
 	lectureCombo->clear();
-	QMapConstIterator<KURL, KTouchLectureStats> it = stats.m_lectureStats.begin();
+	TQMapConstIterator<KURL, KTouchLectureStats> it = stats.m_lectureStats.begin();
 	m_currentIndex = 0;
 	while (it != stats.m_lectureStats.end()) {
-		QString t = it.data().m_lectureTitle;
+		TQString t = it.data().m_lectureTitle;
 		// if current lecture, remember index and adjust text
 		if (it.key() == currentLecture ||
 			currentLecture.isEmpty() && it.key().url()=="default")
@@ -122,13 +122,13 @@ void KTouchStatistics::lectureActivated(int index) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatistics::clearHistory() {
-	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),QString::null,KStdGuiItem::del()) 
+	if (KMessageBox::warningContinueCancel(this, i18n("Erase all statistics data for the current user?"),TQString::null,KStdGuiItem::del()) 
 		== KMessageBox::Continue)
 	{
 		KTouchPtr->clearStatistics(); // clear statistics data in KTouch
 		// clear and reset local copy
 		m_allStats.clear();
-		QString s = lectureCombo->text(m_currentIndex);
+		TQString s = lectureCombo->text(m_currentIndex);
 		lectureCombo->clear();
 		lectureCombo->insertItem(s);
 		m_currentIndex = 0;
@@ -142,7 +142,7 @@ void KTouchStatistics::clearHistory() {
 
 void KTouchStatistics::updateCurrentSessionTab() {
 	// session/level/info
-	QString levelnums;
+	TQString levelnums;
     int last_level = -2;
     int levels_count = 0;
 	std::set<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
@@ -161,7 +161,7 @@ void KTouchStatistics::updateCurrentSessionTab() {
 				else					levelnums += ",";
 			}
 			levels_count = 0;
-			levelnums += QString("%1").arg(*it+1);
+			levelnums += TQString("%1").arg(*it+1);
 			
 		}
 		else {
@@ -233,7 +233,7 @@ void KTouchStatistics::updateCurrentSessionTab() {
 
 void KTouchStatistics::updateCurrentLevelTab() {
 	// level info
-	levelLabel2->setText( QString("%1").arg(m_currLevelStats.m_levelNum+1) );
+	levelLabel2->setText( TQString("%1").arg(m_currLevelStats.m_levelNum+1) );
     // general stats group
     elapsedTimeLCDLevel->display(static_cast<int>(m_currLevelStats.m_elapsedTime));
     totalCharsLCDLevel->display(static_cast<int>(m_currLevelStats.m_totalChars) );
@@ -306,15 +306,15 @@ void KTouchStatistics::updateChartTab() {
 	}
 	else {
 		// find correct lecture index
-		QMapConstIterator<KURL, KTouchLectureStats> it = m_allStats.m_lectureStats.begin();	
+		TQMapConstIterator<KURL, KTouchLectureStats> it = m_allStats.m_lectureStats.begin();	
 		int index = m_lectureIndex;
 		while (index-- > 0) ++it;
 		std::vector< std::pair<double, double> > data;
-		QString caption = "Session data";
+		TQString caption = "Session data";
 		switch (buttonGroup2->selectedId()) {
 			case 0 : // words per minute
 				// loop over all session data entries in *it and store words per minute data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (TQValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -328,7 +328,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double t = m_currSessionStats.m_elapsedTime;
 					double wpm = m_currSessionStats.m_words/t*60.0;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, wpm) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Words per minute") );
@@ -338,7 +338,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 1 : // chars per minute
 				// loop over all session data entries in *it and store chars per minute data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (TQValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double t = (*session_it).m_elapsedTime;
@@ -352,7 +352,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double t = m_currSessionStats.m_elapsedTime;
 					double cpm = m_currSessionStats.m_correctChars/t*60.0;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, cpm) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Characters per minute") );
@@ -362,7 +362,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 2 : // correctness
 				// loop over all session data entries in *it and store correctness data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (TQValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -376,7 +376,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double tc = m_currSessionStats.m_totalChars;
 					double corr = m_currSessionStats.m_correctChars/tc;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, corr) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Correctness") );
@@ -386,7 +386,7 @@ void KTouchStatistics::updateChartTab() {
 
 			case 3 : // skill
 				// loop over all session data entries in *it and store correctness data
-				for (QValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
+				for (TQValueVector<KTouchSessionStats>::const_iterator session_it = (*it).m_sessionStats.begin();
 					session_it != (*it).m_sessionStats.end(); ++session_it)
 				{
 					double tc = (*session_it).m_totalChars;
@@ -407,7 +407,7 @@ void KTouchStatistics::updateChartTab() {
 					double t = m_currSessionStats.m_elapsedTime;
 					double cpm = m_currSessionStats.m_correctChars/t*60.0;
 					double skill = corr*cpm;
-					double tp = QDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, skill) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Skill") );

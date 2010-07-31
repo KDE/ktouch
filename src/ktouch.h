@@ -17,9 +17,9 @@
 #include <config.h>
 #endif
 
-#include <qcolor.h>
-#include <qstringlist.h>
-#include <qvaluevector.h>
+#include <tqcolor.h>
+#include <tqstringlist.h>
+#include <tqvaluevector.h>
 
 #include <kmainwindow.h>
 #include <kapplication.h>
@@ -65,13 +65,13 @@ class KTouch : public KMainWindow {
     ~KTouch();
 
 	/// Returns the available lecture files
-	const QStringList& lectureFiles() const { return m_lectureFiles; }
+	const TQStringList& lectureFiles() const { return m_lectureFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
 	KTouchLectureStats& getCurrentLectureStats();
 	/// Clears the statistics data.
 	void clearStatistics();
     /// Updates the status bar text.
-    void changeStatusbarMessage(const QString& text);
+    void changeStatusbarMessage(const TQString& text);
     /// Updates the status bar statistics.
 	void changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 							  unsigned int session_correct, unsigned int session_total, unsigned int session_words);
@@ -111,11 +111,11 @@ class KTouch : public KMainWindow {
     /// Reimplementated to save preferences and
     bool queryExit();
     /// Some layout fixes here...
-	void resizeEvent(QResizeEvent *);
+	void resizeEvent(TQResizeEvent *);
     /// Accepts a typed char.
-    void keyPressEvent(QKeyEvent *keyEvent);
+    void keyPressEvent(TQKeyEvent *keyEvent);
 
-    void imEndEvent (QIMEvent *e);
+    void imEndEvent (TQIMEvent *e);
 
   private:
     // *** BEGIN - Session management ***
@@ -164,14 +164,14 @@ class KTouch : public KMainWindow {
 	KTouchPrefKeyboardLayout * m_pageKeyboard;		///< The keyboard configuration page.
 	KTouchPrefColorsLayout   * m_pageColors;		///< The color scheme configuration page.
 	
-    QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
-    QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
+    TQStringList     		m_lectureFiles;         ///< A list of all default lecture files.
+    TQStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
 	
-	QStringList     		m_examinationFiles;     ///< A list of all default examination files.
-	QStringList     		m_examinationTitles;    ///< A list of the titles of all default examination files.
+	TQStringList     		m_examinationFiles;     ///< A list of all default examination files.
+	TQStringList     		m_examinationTitles;    ///< A list of the titles of all default examination files.
 	
-    QStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
-    QStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
+    TQStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
+    TQStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
 
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
 

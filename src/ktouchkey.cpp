@@ -14,7 +14,7 @@
 #include <kdebug.h>
 #include <utility>  // for std::min
 
-KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
+KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, TQChar ch)
 	: m_type(type), m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_chars[0].m_ch = ch;
@@ -23,7 +23,7 @@ KTouchKey::KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch)
 }
 // ----------------------------------------------------------------------------
 
-KTouchKey::KTouchKey(int x, int y, int w, int h, QString text) :
+KTouchKey::KTouchKey(int x, int y, int w, int h, TQString text) :
 	m_x(x), m_y(y), m_w(w), m_h(h)
 {
 	m_type = OTHER;
@@ -44,16 +44,16 @@ void KTouchKey::resize(double scale) {
 
 
 // Reads the key data from the DomElement
-bool KTouchKey::read(QDomNode node) {
+bool KTouchKey::read(TQDomNode node) {
 /*
 	if (node.isNull()) 
 		return false;	// TODO : Error message
-	QString primaryCharText = node.firstChild().nodeValue();
+	TQString primaryCharText = node.firstChild().nodeValue();
 	if (primaryCharText.length() >= 1)
 		m_primaryChar = primaryCharText[0];
 	else
 		return false; // TODO : Error message
-	QDomNamedNodeMap nmap = node.attributes();
+	TQDomNamedNodeMap nmap = node.attributes();
 	// Get height, widht, x and y
 	node = nmap.namedItem("Height");
 	if (node.isNull())
@@ -75,7 +75,7 @@ bool KTouchKey::read(QDomNode node) {
 	node = nmap.namedItem("Type");
 	if (node.isNull())
 		return false; // TODO : Error message
-	QString typetext = node.nodeValue();
+	TQString typetext = node.nodeValue();
 	if (typetext=="NORMAL")  		m_type = NORMAL;
 	else if (typetext=="FINGER")  	m_type = FINGER;
 	else if (typetext=="ENTER")  	m_type = ENTER;
@@ -92,13 +92,13 @@ bool KTouchKey::read(QDomNode node) {
 		return false; // TODO : Error message
 	// read optional secondary character
 	node = nmap.namedItem("SecondaryChar");
-	QString charvalue;
+	TQString charvalue;
 	if (!node.isNull())
 		charvalue = node.nodeValue();
 	if (charvalue.length() >= 1)
 		m_secondaryChar = charvalue[0];
 	else
-		m_secondaryChar = QChar(0);
+		m_secondaryChar = TQChar(0);
 	kdDebug() << "H:" << m_h << " W:" << m_w << " X:" << m_x << " Y:" << m_y 
 	          << " Type:" << m_type << " SecondaryChar:" << m_secondaryChar 
 			  << "' PrimaryChar:" << m_primaryChar << "'" << endl;
@@ -108,9 +108,9 @@ bool KTouchKey::read(QDomNode node) {
 // ----------------------------------------------------------------------------
 
 // Writes the key data into the DomElement
-void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
+void KTouchKey::write(TQDomDocument& doc, TQDomElement& root) const {
 /*
-	QDomElement element = doc.createElement("KeyDefinition");
+	TQDomElement element = doc.createElement("KeyDefinition");
 	switch (m_type) {
 		case NORMAL     : element.setAttribute("Type", "NORMAL"); break;
 		case FINGER     : element.setAttribute("Type", "FINGER"); break;
@@ -123,11 +123,11 @@ void KTouchKey::write(QDomDocument& doc, QDomElement& root) const {
 			element.setAttribute("OtherKeyText", m_otherKeyText);
 			break;
 	}
-	QDomText charnode = doc.createTextNode(QString(m_primaryChar));
+	TQDomText charnode = doc.createTextNode(TQString(m_primaryChar));
 	element.appendChild(charnode);
-//	element.setAttribute("PrimaryChar", QString(m_primaryChar));
-	if (m_secondaryChar!=QChar(0))
-		element.setAttribute("SecondaryChar", QString(m_secondaryChar));
+//	element.setAttribute("PrimaryChar", TQString(m_primaryChar));
+	if (m_secondaryChar!=TQChar(0))
+		element.setAttribute("SecondaryChar", TQString(m_secondaryChar));
 	element.setAttribute("X", m_x);
 	element.setAttribute("Y", m_y);
 	element.setAttribute("Width", m_w);

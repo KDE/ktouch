@@ -26,7 +26,7 @@ class KTouchChartWidget : public KPlotWidget {
     Q_OBJECT
   public:
     /// Constructor.
-    KTouchChartWidget(QWidget* parent, const char *name=0);
+    KTouchChartWidget(TQWidget* parent, const char *name=0);
     /// Destructor.
     ~KTouchChartWidget();
 };

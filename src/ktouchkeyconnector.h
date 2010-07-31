@@ -17,8 +17,8 @@
 #include <config.h>
 #endif
 
-#include <qdom.h>
-#include <qvaluevector.h>
+#include <tqdom.h>
+#include <tqvaluevector.h>
 #include "ktouchkey.h"
 
  /// The KTouchKeyConnector class contains the information about the character that has to 
@@ -28,18 +28,18 @@ class KTouchKeyConnector {
   public:
 	KTouchKeyConnector() {}
     /// Constructor
-    KTouchKeyConnector(QChar keyChar, unsigned int target_key, unsigned int finger_key,
+    KTouchKeyConnector(TQChar keyChar, unsigned int target_key, unsigned int finger_key,
 		               unsigned int modifier_key)
 	  : m_keyChar(keyChar), m_targetKeyIndex(target_key), m_fingerKeyIndex(finger_key),
 		m_modifierKeyIndex(modifier_key)
 	{}
 
 	/// Reads the key connector data from the DomElement
-	bool read(QDomNode node);
+	bool read(TQDomNode node);
 	/// Creates a new DomElement, writes the key connector data into it and appends it to the root object.
-	void write(QDomDocument& doc, QDomElement& root) const;
+	void write(TQDomDocument& doc, TQDomElement& root) const;
 
-    QChar               m_keyChar;			///< This is the character that has to be pressed to access this key.
+    TQChar               m_keyChar;			///< This is the character that has to be pressed to access this key.
     int					m_targetKeyIndex;	///< Index of the target key (-1 if none).
     int					m_fingerKeyIndex;	///< Index of the finger key (-1 if none).
 	int					m_modifierKeyIndex;	///< Index of the modifier key (-1 if none).

@@ -13,14 +13,14 @@
 #include "ktouchkeyconnector.h"
 
 // Reads the key connector data from the DomElement
-bool KTouchKeyConnector::read(QDomNode node) {
-/*	QDomNode newChars = in.namedItem("NewCharacters");
+bool KTouchKeyConnector::read(TQDomNode node) {
+/*	TQDomNode newChars = in.namedItem("NewCharacters");
 	if (newChars.isNull())  m_newChars = i18n("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
 	else					m_newChars = newChars.firstChild().nodeValue();
-	QDomNode levelComment = in.namedItem("LevelComment");
+	TQDomNode levelComment = in.namedItem("LevelComment");
 	if (!levelComment.isNull())  m_comment = levelComment.firstChild().nodeValue();
     m_lines.clear();
-	QDomNode line = in.namedItem("Line");
+	TQDomNode line = in.namedItem("Line");
 	while ( !line.isNull() ) {
 		m_lines.push_back( line.firstChild().nodeValue() );
         line = line.nextSibling();
@@ -34,13 +34,13 @@ bool KTouchKeyConnector::read(QDomNode node) {
 }
 
 // Creates a new DomElement, writes the key connector data into it and appends it to the root object.
-void KTouchKeyConnector::write(QDomDocument& doc, QDomElement& root) const {
-/*	QDomElement element = doc.createElement("KeyConnector");
-	QDomText textnode = doc.createTextNode(QString(m_keyChar));
+void KTouchKeyConnector::write(TQDomDocument& doc, TQDomElement& root) const {
+/*	TQDomElement element = doc.createElement("KeyConnector");
+	TQDomText textnode = doc.createTextNode(TQString(m_keyChar));
 	element.appendChild(textnode);
-	element.setAttribute("TargetKeyChar", QString(m_targetKeyChar));
-	if (m_fingerKeyChar != QChar(0))
-		element.setAttribute("FingerKeyChar", QString(m_fingerKeyChar));
+	element.setAttribute("TargetKeyChar", TQString(m_targetKeyChar));
+	if (m_fingerKeyChar != TQChar(0))
+		element.setAttribute("FingerKeyChar", TQString(m_fingerKeyChar));
 	if (!m_controlKeyId.isEmpty())
 		element.setAttribute("ControlKeyId", m_controlKeyId);
 	root.appendChild(element);

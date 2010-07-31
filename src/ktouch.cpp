@@ -17,11 +17,11 @@
 #include <algorithm>
 
 // QT Header
-#include <qvbox.h>
-#include <qsignalmapper.h>
-#include <qcheckbox.h>
-#include <qlabel.h>
-#include <qgroupbox.h>
+#include <tqvbox.h>
+#include <tqsignalmapper.h>
+#include <tqcheckbox.h>
+#include <tqlabel.h>
+#include <tqgroupbox.h>
 //#include <qimevent.h>
 
 // KDE Header
@@ -75,7 +75,7 @@ KTouch::KTouch()
 	setupActions();
 	// create the GUI reading the ui.rc file
 	if (!initialGeometrySet())
-		resize( QSize(700, 510).expandedTo(minimumSizeHint()));
+		resize( TQSize(700, 510).expandedTo(minimumSizeHint()));
 	setupGUI(ToolBar | Keys | StatusBar | Create);
 	setAutoSaveSettings();
 	// Read user statistics
@@ -107,7 +107,7 @@ KTouch::KTouch()
 		if (Prefs::currentLectureFile().isNull() ||
 		    !m_lecture.loadXML(this, Prefs::currentLectureFile() ))
 		{
-			Prefs::setCurrentLectureFile(QString::null);
+			Prefs::setCurrentLectureFile(TQString::null);
 			m_defaultLectureAction->setCurrentItem(-1);
 		}
 		else {
@@ -168,7 +168,7 @@ void KTouch::applyPreferences() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
+void KTouch::keyPressEvent(TQKeyEvent *keyEvent) {
     if (keyEvent->text().isEmpty()) return;
 
     // if we the training session is paused, continue training now
@@ -179,18 +179,18 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
 	if (keyEvent->text().length() > 1) {
 		kdDebug() << "[KTouch::keyPressEvent]  text = '" << keyEvent->text() << "'" << endl;
 	}
-    QChar key = keyEvent->text().at(0); // get first unicode character
+    TQChar key = keyEvent->text().at(0); // get first unicode character
 	// HACK : manually filter out known dead keys
 //	bool has_dead_key = true;
 	switch (key.unicode()) {
-		case 94   : m_lastDeadKey = QChar(uint(94)); break;
-		case 176  : m_lastDeadKey = QChar(uint(176)); break;
-		case 180  : m_lastDeadKey = QChar(uint(180)); break;
-		case 96   : m_lastDeadKey = QChar(uint(96)); break;
-		case 126  : m_lastDeadKey = QChar(uint(126)); break;
-		default   : m_lastDeadKey = QChar(uint(0));
+		case 94   : m_lastDeadKey = TQChar(uint(94)); break;
+		case 176  : m_lastDeadKey = TQChar(uint(176)); break;
+		case 180  : m_lastDeadKey = TQChar(uint(180)); break;
+		case 96   : m_lastDeadKey = TQChar(uint(96)); break;
+		case 126  : m_lastDeadKey = TQChar(uint(126)); break;
+		default   : m_lastDeadKey = TQChar(uint(0));
 	}
-	if (m_lastDeadKey != QChar(uint(0)) && key == m_lastDeadKey) {
+	if (m_lastDeadKey != TQChar(uint(0)) && key == m_lastDeadKey) {
 //		kdDebug() << "Got dead key = " << m_lastDeadKey << endl;
     	//keyEvent->accept();
 //		return;
@@ -198,9 +198,9 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
 
     if (key.isPrint())
         m_trainer->keyPressed(key);
-    else if (key==QChar(8))
+    else if (key==TQChar(8))
         m_trainer->backspacePressed();
-    else if (key==QChar(13))
+    else if (key==TQChar(13))
         m_trainer->enterPressed();
     else
         return; // unrecognised char -> don't accept it! Maybe the key is for somebody else?
@@ -209,7 +209,7 @@ void KTouch::keyPressEvent(QKeyEvent *keyEvent) {
 // ----------------------------------------------------------------------------
 
 
-void KTouch::imEndEvent ( QIMEvent * e ){
+void KTouch::imEndEvent ( TQIMEvent * e ){
     m_trainer->keyPressed(e->text().at(0));
     e->accept();
 }
@@ -285,7 +285,7 @@ void KTouch::configCommonColorsToggled(bool on) {
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
 	trainingPause();
-	KURL tmp = KFileDialog::getOpenURL(QString::null, QString::null, this, i18n("Select Training Lecture File") );
+	KURL tmp = KFileDialog::getOpenURL(TQString::null, TQString::null, this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
 		// first store training statistics
 		m_trainer->storeTrainingStatistics();
@@ -323,9 +323,9 @@ void KTouch::fileEditLecture() {
 void KTouch::fileEditColors() {
 	trainingPause();
 	// Create a copy of the currently editable color schemes.
-	QValueList<KTouchColorScheme> tmp_list;
+	TQValueList<KTouchColorScheme> tmp_list;
 	int default_schemes = 0;
-	for (QValueVector<KTouchColorScheme>::const_iterator it = KTouchColorScheme::m_colorSchemes.constBegin();
+	for (TQValueVector<KTouchColorScheme>::const_iterator it = KTouchColorScheme::m_colorSchemes.constBegin();
 		it != KTouchColorScheme::m_colorSchemes.constEnd(); ++it)
 	{
 		if (!it->m_default) 	tmp_list.append(*it);
@@ -337,13 +337,13 @@ void KTouch::fileEditColors() {
 	int selected;
 	dlg.startEditor( tmp_list, Prefs::currentColorScheme() - default_schemes, selected);
 	KTouchColorScheme::createDefaults();
-	for (QValueList<KTouchColorScheme>::const_iterator it = tmp_list.constBegin();
+	for (TQValueList<KTouchColorScheme>::const_iterator it = tmp_list.constBegin();
 		it != tmp_list.constEnd(); ++it)
 	{
 		KTouchColorScheme::m_colorSchemes.append(*it);
 	}
 	// update the quick select menu
-    QStringList schemes_list;
+    TQStringList schemes_list;
     for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
 		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
     m_keyboardColorAction->setItems(schemes_list);
@@ -431,16 +431,16 @@ void KTouch::optionsPreferences() {
 	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
 	m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
-	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(applyPreferences()));
+	connect(dialog, TQT_SIGNAL(settingsChanged()), this, TQT_SLOT(applyPreferences()));
 	// TODO : Connect some other buttons/check boxes of the dialog
-	connect(m_pageGeneral->kcfg_OverrideLectureFont, SIGNAL(toggled(bool)), 
-		this, SLOT(configOverrideLectureFontToggled(bool)));
-	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, SIGNAL(toggled(bool)), 
-		this, SLOT(configOverrideKeyboardFontToggled(bool)));
-	connect(m_pageTraining->kcfg_AutoLevelChange, SIGNAL(toggled(bool)), 
-		this, SLOT(configAutoLevelChangeToggled(bool)));
-	connect(m_pageColors->kcfg_CommonTypingLineColors, SIGNAL(toggled(bool)),
-		this, SLOT(configCommonColorsToggled(bool)));
+	connect(m_pageGeneral->kcfg_OverrideLectureFont, TQT_SIGNAL(toggled(bool)), 
+		this, TQT_SLOT(configOverrideLectureFontToggled(bool)));
+	connect(m_pageKeyboard->kcfg_OverrideKeyboardFont, TQT_SIGNAL(toggled(bool)), 
+		this, TQT_SLOT(configOverrideKeyboardFontToggled(bool)));
+	connect(m_pageTraining->kcfg_AutoLevelChange, TQT_SIGNAL(toggled(bool)), 
+		this, TQT_SLOT(configAutoLevelChangeToggled(bool)));
+	connect(m_pageColors->kcfg_CommonTypingLineColors, TQT_SIGNAL(toggled(bool)),
+		this, TQT_SLOT(configCommonColorsToggled(bool)));
 	// call the functions to enable/disable controls depending on settings
 	configOverrideLectureFontToggled(Prefs::overrideLectureFont());
 	configOverrideKeyboardFontToggled(Prefs::overrideKeyboardFont());
@@ -450,7 +450,7 @@ void KTouch::optionsPreferences() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::changeStatusbarMessage(const QString& text) {
+void KTouch::changeStatusbarMessage(const TQString& text) {
     statusBar()->message(text);
 }
 // ----------------------------------------------------------------------------
@@ -487,7 +487,7 @@ void KTouch::changeLecture(int num) {
     if (static_cast<unsigned int>(num)>=m_lectureFiles.count()) return;
     trainingPause();
 	KTouchLecture l;
-	QString fileName = m_lectureFiles[num];
+	TQString fileName = m_lectureFiles[num];
     if (!l.loadXML(this, KURL::fromPathOrURL(fileName))) {
         KMessageBox::sorry(0, i18n("Could not find/open the lecture file '%1'.").arg(fileName) );
     	m_defaultLectureAction->setCurrentItem(-1);
@@ -527,7 +527,7 @@ bool KTouch::queryExit() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::resizeEvent(QResizeEvent * event) {
+void KTouch::resizeEvent(TQResizeEvent * event) {
 	changeStatusbarStats(m_trainer->m_levelStats.m_correctChars, m_trainer->m_levelStats.m_totalChars, m_trainer->m_levelStats.m_words,
 		m_trainer->m_sessionStats.m_correctChars, m_trainer->m_sessionStats.m_totalChars, m_trainer->m_sessionStats.m_words);
 	KMainWindow::resizeEvent(event);
@@ -550,7 +550,7 @@ void KTouch::readProperties(KConfig *config) {
 /*
 	// The application is about to be restored due to session management.
     // Let's read all the stuff that was set when the application was terminated (during KDE logout).
-    QString session = config->readEntry("Session");
+    TQString session = config->readEntry("Session");
     if (!session.isEmpty())
         m_trainer->m_session = KTouchTrainingSession(session);
     m_trainer->m_level = config->readNumEntry("Level", 0);
@@ -612,9 +612,9 @@ void KTouch::init() {
 	//kdDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
 	if (Prefs::currentLectureFile() == "default") {
-		Prefs::setCurrentLectureFile(QString::null);
+		Prefs::setCurrentLectureFile(TQString::null);
 //		/// \todo look up a lecture in the language of the KDE locale
-/*		QString default_lecture = "default";
+/*		TQString default_lecture = "default";
 		if (m_lectureFiles.count() > 0)  default_lecture = m_lectureFiles[0];
 		Prefs::setCurrentLectureFile( default_lecture );
 */
@@ -623,12 +623,12 @@ void KTouch::init() {
     // if keyboard layout (loaded by Prefs is not available (e.g. the 
     // layout file has been deleted) switch to default keyboard
     if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0) {
-        QString default_keyboard;
+        TQString default_keyboard;
         // determine locale
-        QString lang = KGlobal::locale()->language();
-        QString fname = lang + ".keyboard";
+        TQString lang = KGlobal::locale()->language();
+        TQString fname = lang + ".keyboard";
         // try to find keyboard with current locale
-        QStringList::const_iterator it = m_keyboardFiles.constBegin();
+        TQStringList::const_iterator it = m_keyboardFiles.constBegin();
         while (it != m_keyboardFiles.constEnd()   &&   (*it).find(fname) == -1)  ++it;
         if (it == m_keyboardFiles.constEnd()) {
             fname = lang.left(2) + ".keyboard";
@@ -657,13 +657,13 @@ void KTouch::initTrainingSession() {
 	//kdDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session..." << endl;
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
-    // of QSizePolicy)
-    QVBox * mainLayout = new QVBox( this );
+    // of TQSizePolicy)
+    TQVBox * mainLayout = new TQVBox( this );
     m_statusWidget = new KTouchStatus( mainLayout );
     m_slideLineWidget = new KTouchSlideLine( mainLayout );
-    m_slideLineWidget->setSizePolicy( QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 1) );
+    m_slideLineWidget->setSizePolicy( TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 1) );
     m_keyboardWidget = new KTouchKeyboardWidget( mainLayout );
-    m_keyboardWidget->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding, 0, 3) );
+    m_keyboardWidget->setSizePolicy(TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 3) );
     setCentralWidget(mainLayout);
 	// apply the settings to the widgets
     m_slideLineWidget->applyPreferences();
@@ -684,41 +684,41 @@ void KTouch::initTrainingSession() {
 void KTouch::setupActions() {
 	// *** File menu ***
     new KAction(i18n("&Open lecture..."), "open_lecture", 0,
-		this, SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
+		this, TQT_SLOT(fileOpenLecture()), actionCollection(), "file_openlecture");
     new KAction(i18n("&Edit lecture..."), "edit_lecture", 0,
-		this, SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
+		this, TQT_SLOT(fileEditLecture()), actionCollection(), "file_editlecture");
     new KAction(i18n("&Edit color scheme..."), "edit_colors", 0,
-		this, SLOT(fileEditColors()), actionCollection(), "file_editcolors");
+		this, TQT_SLOT(fileEditColors()), actionCollection(), "file_editcolors");
 //    new KAction(i18n("&Edit Keyboard..."), "edit_keyboard", 0, 
-//		this, SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
-    KStdAction::quit(this, SLOT(fileQuit()), actionCollection());
+//		this, TQT_SLOT(fileEditKeyboard()), actionCollection(), "file_editkeyboard");
+    KStdAction::quit(this, TQT_SLOT(fileQuit()), actionCollection());
 
 	// *** Training menu ***
     new KAction(i18n("&Start New Session"), "launch", 0,
-        this, SLOT(trainingNewSession()), actionCollection(), "training_newsession");
+        this, TQT_SLOT(trainingNewSession()), actionCollection(), "training_newsession");
     m_trainingPause = new KAction(i18n("&Pause Session"), "player_pause", 0,
-        this, SLOT(trainingPause()), actionCollection(), "training_pause");
+        this, TQT_SLOT(trainingPause()), actionCollection(), "training_pause");
     new KAction(i18n("&Lecture Statistics"), "kalarm", 0,
-        this, SLOT(trainingStatistics()), actionCollection(), "training_stats");
+        this, TQT_SLOT(trainingStatistics()), actionCollection(), "training_stats");
  
     // Setup menu entries for the training lectures
     m_defaultLectureAction = new KSelectAction(i18n("Default &Lectures"), 0, this, 0, actionCollection(), "default_lectures");
 	m_defaultLectureAction->setMenuAccelsEnabled(false);
     m_defaultLectureAction->setItems(m_lectureTitles);
     m_defaultLectureAction->setCurrentItem(0);  
-    connect (m_defaultLectureAction, SIGNAL(activated(int)), this, SLOT(changeLecture(int)));
+    connect (m_defaultLectureAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(changeLecture(int)));
 
 	// *** Settings menu ***    
-    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    KStdAction::preferences(this, TQT_SLOT(optionsPreferences()), actionCollection());
     // Setup menu entries for keyboard layouts    
     m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
 	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
-    connect (m_keyboardLayoutAction, SIGNAL(activated(int)), this, SLOT(changeKeyboard(int)));
+    connect (m_keyboardLayoutAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(changeKeyboard(int)));
 
 	// Setup menu entries for colour schemes
 	m_keyboardColorAction = new KSelectAction(i18n("&Color Schemes"), 0, this, 0, actionCollection(), "keyboard_schemes");
-    QStringList schemes_list;
+    TQStringList schemes_list;
     for (unsigned int i=0; i<KTouchColorScheme::m_colorSchemes.count(); ++i)
 		schemes_list.append(KTouchColorScheme::m_colorSchemes[i].m_name);
 	m_keyboardColorAction->setMenuAccelsEnabled(false);
@@ -726,7 +726,7 @@ void KTouch::setupActions() {
 	if (static_cast<unsigned int>(Prefs::currentColorScheme()) >=  schemes_list.count())
 		Prefs::setCurrentColorScheme(1);
    	m_keyboardColorAction->setCurrentItem(Prefs::currentColorScheme());
-    connect (m_keyboardColorAction, SIGNAL(activated(int)), this, SLOT(changeColor(int)));
+    connect (m_keyboardColorAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(changeColor(int)));
 }
 // ----------------------------------------------------------------------------
 
@@ -735,7 +735,7 @@ void KTouch::setupActions() {
 void KTouch::updateFontFromLecture() {
 	// if the lecture requires a font, try this 
 	if (!m_lecture.m_fontSuggestions.isEmpty()) {
-		QFont f;
+		TQFont f;
 		// TODO : if multiple font suggestions are given, try one after another until a
 		// suggested font is found
 		if (f.fromString(m_lecture.m_fontSuggestions))	m_slideLineWidget->setFont(f);
@@ -755,24 +755,24 @@ void KTouch::updateFileLists() {
 
     // remove the number layout, since this is the necessary default layout and will be
     // added anyway
-    QStringList::iterator it = m_keyboardFiles.find("number.keyboard");
+    TQStringList::iterator it = m_keyboardFiles.find("number.keyboard");
     if (it!=m_keyboardFiles.end())      m_keyboardFiles.remove(it);
 
     m_keyboardTitles.clear();
-    for (QStringList::const_iterator cit = m_keyboardFiles.constBegin();
+    for (TQStringList::const_iterator cit = m_keyboardFiles.constBegin();
         cit != m_keyboardFiles.constEnd(); ++cit)
     {
         // extract titles from keyboard files and store them in the
         // m_keyboardTitles string list
 
         // get the filename alone
-        QString fname = KURL(*cit).fileName();
+        TQString fname = KURL(*cit).fileName();
         // get the filename without the .keyboard
         fname.truncate(fname.length() - 9);
         // get everything in front of the first .
-        QString lang_iso = fname.section('.',0,0);
+        TQString lang_iso = fname.section('.',0,0);
         // get language description of file names
-        QString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
+        TQString lang_name = KGlobal::locale()->twoAlphaToLanguageName(lang_iso);
 //        kdDebug() << fname << " | " << lang_iso << " | " << lang_name << endl;
         if (lang_name.isEmpty())
             lang_name = KGlobal::locale()->twoAlphaToCountryName(lang_iso);
@@ -792,13 +792,13 @@ void KTouch::updateFileLists() {
 
     // Now lets find the lecture files.
 	// TODO : search in i18n() directories
-    QStringList lectureFiles = dirs->findAllResources("data","ktouch/*.ktouch.xml");
+    TQStringList lectureFiles = dirs->findAllResources("data","ktouch/*.ktouch.xml");
 	// Now extract the titles of the lecture files and populate the string lists used in the program
 	m_lectureFiles.clear();
 	m_lectureTitles.clear();
     if (!lectureFiles.isEmpty()) {
         // extract the prefixes
-        for (QStringList::iterator it=lectureFiles.begin(); it!=lectureFiles.end(); ++it) {
+        for (TQStringList::iterator it=lectureFiles.begin(); it!=lectureFiles.end(); ++it) {
             KURL url(*it);
 			KTouchLecture l;
 			// only add lecture if we can actually load it
@@ -816,16 +816,16 @@ void KTouch::updateFileLists() {
     }
 
 	// Now find predefined files with colour schemes
-    QStringList colour_schemes = dirs->findAllResources("data","ktouch/*.colour_scheme");
-	// TODO : read in colour schemes and populate QValueList<KTouchColorScheme>
+    TQStringList colour_schemes = dirs->findAllResources("data","ktouch/*.colour_scheme");
+	// TODO : read in colour schemes and populate TQValueList<KTouchColorScheme>
 }
 // ----------------------------------------------------------------------------
 
 
 void KTouch::updateLectureActionCheck() {
 	int num = 0;
-	QStringList::iterator it = m_lectureFiles.begin();
-	QString fname = Prefs::currentLectureFile(); 
+	TQStringList::iterator it = m_lectureFiles.begin();
+	TQString fname = Prefs::currentLectureFile(); 
 	while (it != m_lectureFiles.end()   &&   (*it).find(fname) == -1) {
 		++it;
 		++num;
@@ -837,8 +837,8 @@ void KTouch::updateLectureActionCheck() {
 
 void KTouch::updateKeyboardActionCheck() {
 	int num = 0;
-	QStringList::iterator it = m_keyboardFiles.begin();
-	QString fname = Prefs::currentKeyboardFile(); 
+	TQStringList::iterator it = m_keyboardFiles.begin();
+	TQString fname = Prefs::currentKeyboardFile(); 
 	while (it != m_keyboardFiles.end()   &&   (*it).find(fname) == -1) {
 		++it;
 		++num;
@@ -849,25 +849,25 @@ void KTouch::updateKeyboardActionCheck() {
 // ----------------------------------------------------------------------------
 
 /*
-void KTouch::imStartEvent(QIMEvent *e) {
+void KTouch::imStartEvent(TQIMEvent *e) {
 	kdDebug() << "[KTouch::imStartEvent]  text = '" << e->text() << "'" << endl;
   e->accept();
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::imComposeEvent(QIMEvent *e) {
+void KTouch::imComposeEvent(TQIMEvent *e) {
 	kdDebug() << "[KTouch::imComposeEvent]  text = '" << e->text() << "'" << endl;
   e->accept();
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::imEndEvent(QIMEvent *e) {
+void KTouch::imEndEvent(TQIMEvent *e) {
 	kdDebug() << "[KTouch::imEndEvent]  text = '" << e->text() << "'" << endl;
   if (!e->text().isEmpty()) {
     if (e->text() == "^") {
-      QKeyEvent *ev = new QKeyEvent (QEvent::KeyPress,
+      TQKeyEvent *ev = new TQKeyEvent (TQEvent::KeyPress,
                                     Qt::Key_AsciiCircum, '^', 0,
-                                    QString("^"));
+                                    TQString("^"));
       keyPressEvent(ev);
       delete ev;
     }

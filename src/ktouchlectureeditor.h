@@ -17,8 +17,8 @@
 #include <config.h>
 #endif
 
-#include <qwidget.h>
-#include <qfont.h>
+#include <tqwidget.h>
+#include <tqfont.h>
 #include <kurl.h>
 
 #include "ktouchlectureeditor_dlg.h"
@@ -43,7 +43,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchLectureEditor(QWidget *parent, const char* name = 0, bool modal = FALSE, WFlags fl = 0);
+    KTouchLectureEditor(TQWidget *parent, const char* name = 0, bool modal = FALSE, WFlags fl = 0);
     /// Destructor
     ~KTouchLectureEditor() {}
     /// Shows and executes the dialog (argument is the url to the default or 
@@ -69,9 +69,9 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     /// Will be called whenever some changes are made.
     void setModified() { setModified(true); }
     /// Will be called whenever another level has been selected.
-    void newSelection(QListViewItem* item);
+    void newSelection(TQListViewItem* item);
     /// Will be called whenever the new chars description is changed.
-    void newCharsChanged(const QString& text);
+    void newCharsChanged(const TQString& text);
     /// Will be called when the "New Level" button has been clicked.
     void newLevel();
     /// Will be called when the "Delete Level" button has been clicked.
@@ -108,7 +108,7 @@ class KTouchLectureEditor : public KTouchLectureEditorDlg {
     
     KTouchLecture                   m_lecture;         ///< The currently used lecture.
     unsigned int                    m_level;           ///< The current level number.
-    QListViewItem                  *m_currentItem;     ///< The currently selected item in the list view.
+    TQListViewItem                  *m_currentItem;     ///< The currently selected item in the list view.
     bool                            m_selecting;       ///< Flag to prevent the selection slot from selecting twice.
     bool                            m_modified;        ///< Flag indicating whether the lecture has been modified.
     KURL                            m_currentURL;      ///< URL of the current lecture.

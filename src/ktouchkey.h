@@ -17,8 +17,8 @@
 #include <config.h>
 #endif
 
-#include <qpainter.h>
-#include <qdom.h>
+#include <tqpainter.h>
+#include <tqdom.h>
 
 /// This class contains information about one character on a key.
 class KTouchKeyChar {
@@ -34,10 +34,10 @@ class KTouchKeyChar {
 	/// Constructor.
 	KTouchKeyChar() {}
 	/// Constructor.
-	KTouchKeyChar(QChar ch, position_t p, bool bold = false) :
+	KTouchKeyChar(TQChar ch, position_t p, bool bold = false) :
 		m_ch(ch), m_pos(p), m_bold(bold) {}
 
-    QChar 		m_ch;		///< The character to draw.
+    TQChar 		m_ch;		///< The character to draw.
 	position_t 	m_pos;		///< The position of the character.
     bool  		m_bold;		///< Whether this is a bold character.
 
@@ -65,17 +65,17 @@ class KTouchKey {
 	/// Default constructor
 	KTouchKey() : m_type(NORMAL), m_x(0), m_y(0), m_w(0), m_h(0) {}
 	/// Convenience constructor for a key with a single character (like before).
-	KTouchKey(keytype_t type, int x, int y, int w, int h, QChar ch);
+	KTouchKey(keytype_t type, int x, int y, int w, int h, TQChar ch);
 	/// Convenience constructor for a key with a text on it (type will be OTHER).
-	KTouchKey(int x, int y, int w, int h, QString text);
+	KTouchKey(int x, int y, int w, int h, TQString text);
 
 	/// Resizes the key (this function will be obsolete soon)
 	void resize(double scale);
 
 	/// Reads the key data from the DomElement
-	bool read(QDomNode node);
+	bool read(TQDomNode node);
 	/// Creates a new DomElement, writes the key data into it and appends it to the root object.
-	void write(QDomDocument& doc, QDomElement& root) const;
+	void write(TQDomDocument& doc, TQDomElement& root) const;
 
 	unsigned int	m_number;		///< The number of the key.
 	keytype_t		m_type;			///< The type of the key.

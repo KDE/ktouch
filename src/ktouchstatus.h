@@ -29,11 +29,11 @@ class KTouchStatus : public KTouchStatusLayout {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchStatus(QWidget *parent);
+    KTouchStatus(TQWidget *parent);
 	/// Called when the preferences have changed in the configuration dialog.
 	void applyPreferences();
     /// Sets the new characters text.
-    void setNewChars(const QString& newChars);
+    void setNewChars(const TQString& newChars);
     /// Updates the level LCD and the correctness progress bar
     void updateStatus(unsigned int level, double correctness);
 };
