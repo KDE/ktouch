@@ -19,8 +19,8 @@
 
 #include <tqwidget.h>
 #include <tqtimer.h>
-class QPixmap;
-class QPainter;
+class TQPixmap;
+class TQPainter;
 
 /// This widget just displays the sliding text.
 /// 

@@ -27,7 +27,7 @@
 
 #include <set>          // I'm using std::set here because QT is missing this container type
 
-class QWidget;
+class TQWidget;
 
 
 // This file contains all class declarations dealing with the statistics obtained in KTouch. 

@@ -20,7 +20,7 @@
 #include "ktouchstatistics_dlg.h"
 #include "ktouchstatisticsdata.h"
 
-class QShowEvent;
+class TQShowEvent;
 class KTouch;
 class KURL;
 

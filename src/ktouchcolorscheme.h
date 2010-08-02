@@ -21,9 +21,9 @@
 
 #include <kurl.h>
 
-class QDomDocument;
-class QDomElement;
-class QDomNode;
+class TQDomDocument;
+class TQDomElement;
+class TQDomNode;
 
 /// Contains all colours of the colour scheme.
 ///

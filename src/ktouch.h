@@ -25,7 +25,7 @@
 #include <kapplication.h>
 #include <kurl.h>
 
-class QLabel;
+class TQLabel;
 class KToggleAction;
 class KActionMenu;
 class KSelectAction;

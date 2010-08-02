@@ -17,8 +17,8 @@
 #include <config.h>
 #endif
 
-class QWidget;
-class QDomDocument;
+class TQWidget;
+class TQDomDocument;
 class KURL;
 
 #include <tqvaluevector.h>

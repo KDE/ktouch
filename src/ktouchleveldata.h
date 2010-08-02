@@ -22,8 +22,8 @@
 #include <tqvaluevector.h>
 #include <tqdom.h>
 
-class QDomDocument;
-class QDomElement;
+class TQDomDocument;
+class TQDomElement;
 
 /// This class contains the data of one level in a lecture and provides
 /// access to the lines of that level.

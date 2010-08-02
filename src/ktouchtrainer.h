@@ -21,7 +21,7 @@
 
 #include "ktouchstatisticsdata.h"
 
-class QTimer;
+class TQTimer;
 
 class KTouchStatus;
 class KTouchSlideLine;
