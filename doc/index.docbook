@@ -165,9 +165,8 @@ yours)</simpara></listitem>
 Ok, the first time you start &ktouch; it will open a lecture and
 select a keyboard layout for the locale and keyboard defined in the &systemsettings;.
 To adjust the keyboard layout go to
-<menuchoice><guimenu>Input Devices</guimenu><guisubmenu>Keyboard
-</guisubmenu></menuchoice> in the category <guilabel>Hardware</guilabel> 
-and select the country you're in (or
+<menuchoice><guimenu>Settings</guimenu><guisubmenu>Keyboard 
+Layouts...</guisubmenu></menuchoice> and select the country you're in (or
 some country which uses the same keyboard layout as you). If your keyboard is
 not included, you can always define your own keyboard (see <link
 linkend="create_keyboards">Creating your own keyboard</link>).
