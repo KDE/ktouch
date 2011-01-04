@@ -22,20 +22,20 @@
 /** This is the implementation of the status widget (at the top of the main view).
  *  It simply displays the status but does not have a functionality of its own.
  *  Everythings is calculated in the trainer (see KTouchTrainer)and then displayed
- *  using the updateStatus() member function.
+ *  using the updatetqStatus() member function.
  *  The "new characters" string is set using the member function setNewChars().
  */
-class KTouchStatus : public KTouchStatusLayout {
+class KTouchtqStatus : public KTouchtqStatusLayout {
     Q_OBJECT
   public:
     /// Constructor
-    KTouchStatus(TQWidget *parent);
+    KTouchtqStatus(TQWidget *parent);
 	/// Called when the preferences have changed in the configuration dialog.
 	void applyPreferences();
     /// Sets the new characters text.
     void setNewChars(const TQString& newChars);
     /// Updates the level LCD and the correctness progress bar
-    void updateStatus(unsigned int level, double correctness);
+    void updatetqStatus(unsigned int level, double correctness);
 };
 
 #endif  // KTOUCHSTATUS_H

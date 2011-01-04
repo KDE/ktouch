@@ -25,11 +25,11 @@
 class TQDomDocument;
 class TQDomElement;
 
-/// This class contains the data of one level in a lecture and provides
+/// This class tqcontains the data of one level in a lecture and provides
 /// access to the lines of that level.
 ///
-/// A lecture (KTouchLecture) typically contains multiple levels. Each
-/// level contains a level description, a string with the
+/// A lecture (KTouchLecture) typically tqcontains multiple levels. Each
+/// level tqcontains a level description, a string with the
 /// newly introduced characters and several lines of training text.
 /// There is ALWAYS at least one line of training text in the level!<p>
 /// During a training session you might want to retrieve a certain line of

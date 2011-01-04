@@ -328,7 +328,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double t = m_currSessionStats.m_elapsedTime;
 					double wpm = m_currSessionStats.m_words/t*60.0;
-					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::tqcurrentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, wpm) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Words per minute") );
@@ -352,7 +352,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double t = m_currSessionStats.m_elapsedTime;
 					double cpm = m_currSessionStats.m_correctChars/t*60.0;
-					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::tqcurrentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, cpm) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Characters per minute") );
@@ -376,7 +376,7 @@ void KTouchStatistics::updateChartTab() {
 				{
 					double tc = m_currSessionStats.m_totalChars;
 					double corr = m_currSessionStats.m_correctChars/tc;
-					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::tqcurrentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, corr) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Correctness") );
@@ -407,7 +407,7 @@ void KTouchStatistics::updateChartTab() {
 					double t = m_currSessionStats.m_elapsedTime;
 					double cpm = m_currSessionStats.m_correctChars/t*60.0;
 					double skill = corr*cpm;
-					double tp = TQDateTime::currentDateTime().toTime_t()/(3600.0*24);
+					double tp = TQDateTime::tqcurrentDateTime().toTime_t()/(3600.0*24);
 					data.push_back(std::make_pair(tp, skill) );
 				}
 				chartWidget->LeftAxis.setLabel( i18n("Skill") );

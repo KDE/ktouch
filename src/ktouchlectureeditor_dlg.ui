@@ -4,7 +4,7 @@
     <property name="name">
         <cstring>KTouchLectureEditorDlg</cstring>
     </property>
-    <property name="geometry">
+    <property name="tqgeometry">
         <rect>
             <x>0</x>
             <y>0</y>
@@ -32,7 +32,7 @@
                 </property>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout7</cstring>
+                        <cstring>tqlayout7</cstring>
                     </property>
                     <hbox>
                         <property name="name">
@@ -87,7 +87,7 @@
                             <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property name="maximumSize">
+                    <property name="tqmaximumSize">
                         <size>
                             <width>32767</width>
                             <height>70</height>
@@ -109,7 +109,7 @@
                 </property>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout9</cstring>
+                        <cstring>tqlayout9</cstring>
                     </property>
                     <vbox>
                         <property name="name">
@@ -144,7 +144,7 @@
                         </widget>
                         <widget class="QLayoutWidget">
                             <property name="name">
-                                <cstring>layout8</cstring>
+                                <cstring>tqlayout8</cstring>
                             </property>
                             <hbox>
                                 <property name="name">
@@ -155,7 +155,7 @@
                                 </property>
                                 <widget class="QLayoutWidget">
                                     <property name="name">
-                                        <cstring>layout7</cstring>
+                                        <cstring>tqlayout7</cstring>
                                     </property>
                                     <hbox>
                                         <property name="name">
@@ -165,13 +165,13 @@
                                             <property name="name">
                                                 <cstring>upBtn</cstring>
                                             </property>
-                                            <property name="minimumSize">
+                                            <property name="tqminimumSize">
                                                 <size>
                                                     <width>35</width>
                                                     <height>28</height>
                                                 </size>
                                             </property>
-                                            <property name="maximumSize">
+                                            <property name="tqmaximumSize">
                                                 <size>
                                                     <width>30</width>
                                                     <height>32767</height>
@@ -188,13 +188,13 @@
                                             <property name="name">
                                                 <cstring>downBtn</cstring>
                                             </property>
-                                            <property name="minimumSize">
+                                            <property name="tqminimumSize">
                                                 <size>
                                                     <width>35</width>
                                                     <height>28</height>
                                                 </size>
                                             </property>
-                                            <property name="maximumSize">
+                                            <property name="tqmaximumSize">
                                                 <size>
                                                     <width>30</width>
                                                     <height>32767</height>
@@ -211,13 +211,13 @@
                                             <property name="name">
                                                 <cstring>newBtn</cstring>
                                             </property>
-                                            <property name="minimumSize">
+                                            <property name="tqminimumSize">
                                                 <size>
                                                     <width>35</width>
                                                     <height>28</height>
                                                 </size>
                                             </property>
-                                            <property name="maximumSize">
+                                            <property name="tqmaximumSize">
                                                 <size>
                                                     <width>30</width>
                                                     <height>32767</height>
@@ -242,13 +242,13 @@
                                                     <verstretch>0</verstretch>
                                                 </sizepolicy>
                                             </property>
-                                            <property name="minimumSize">
+                                            <property name="tqminimumSize">
                                                 <size>
                                                     <width>35</width>
                                                     <height>28</height>
                                                 </size>
                                             </property>
-                                            <property name="maximumSize">
+                                            <property name="tqmaximumSize">
                                                 <size>
                                                     <width>30</width>
                                                     <height>32767</height>
@@ -273,7 +273,7 @@
                                     <property name="sizeType">
                                         <enum>Fixed</enum>
                                     </property>
-                                    <property name="sizeHint">
+                                    <property name="tqsizeHint">
                                         <size>
                                             <width>40</width>
                                             <height>20</height>
@@ -286,7 +286,7 @@
                 </widget>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout9</cstring>
+                        <cstring>tqlayout9</cstring>
                     </property>
                     <grid>
                         <property name="name">
@@ -334,7 +334,7 @@
                         </widget>
                         <widget class="QLayoutWidget" row="4" column="0" rowspan="1" colspan="2">
                             <property name="name">
-                                <cstring>layout8</cstring>
+                                <cstring>tqlayout8</cstring>
                             </property>
                             <hbox>
                                 <property name="name">
@@ -358,7 +358,7 @@
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
                                     </property>
-                                    <property name="sizeHint">
+                                    <property name="tqsizeHint">
                                         <size>
                                             <width>16</width>
                                             <height>20</height>
@@ -383,7 +383,7 @@
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
                                     </property>
-                                    <property name="sizeHint">
+                                    <property name="tqsizeHint">
                                         <size>
                                             <width>20</width>
                                             <height>20</height>
@@ -486,7 +486,7 @@
         </widget>
         <widget class="QLayoutWidget">
             <property name="name">
-                <cstring>layout35</cstring>
+                <cstring>tqlayout35</cstring>
             </property>
             <hbox>
                 <property name="name">
@@ -510,7 +510,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>248</width>
                             <height>20</height>
@@ -664,7 +664,7 @@
     <slot>setModified()</slot>
     <slot>fontBtnClicked()</slot>
 </slots>
-<layoutdefaults spacing="6" margin="11"/>
+<tqlayoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>klineedit.h</includehint>
     <includehint>klistview.h</includehint>

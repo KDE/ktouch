@@ -30,7 +30,7 @@ class KToggleAction;
 class KActionMenu;
 class KSelectAction;
 
-class KTouchStatus;
+class KTouchtqStatus;
 class KTouchSlideLine;
 class KTouchKeyboardWidget;
 class KTouchTrainer;
@@ -71,9 +71,9 @@ class KTouch : public KMainWindow {
 	/// Clears the statistics data.
 	void clearStatistics();
     /// Updates the status bar text.
-    void changeStatusbarMessage(const TQString& text);
+    void changetqStatusbarMessage(const TQString& text);
     /// Updates the status bar statistics.
-	void changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
+	void changetqStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 							  unsigned int session_correct, unsigned int session_total, unsigned int session_words);
 
   public slots:
@@ -100,7 +100,7 @@ class KTouch : public KMainWindow {
     void trainingStatistics();          ///< The action Training->Show training statistics...
     void optionsPreferences();          ///< The action Settings->Configure KTouch...
 
-    /// Quick-changes the keyboard layout (called from menu).
+    /// Quick-changes the keyboard tqlayout (called from menu).
     void changeKeyboard(int num);
     /// Quick-changes the colour scheme used on the keyboard (called from menu).
     void changeColor(int num);
@@ -110,7 +110,7 @@ class KTouch : public KMainWindow {
   protected:
     /// Reimplementated to save preferences and
     bool queryExit();
-    /// Some layout fixes here...
+    /// Some tqlayout fixes here...
 	void resizeEvent(TQResizeEvent *);
     /// Accepts a typed char.
     void keyPressEvent(TQKeyEvent *keyEvent);
@@ -127,7 +127,7 @@ class KTouch : public KMainWindow {
 	
     /// Initialises the program during a normal startup
 	void init();
-	/// Creates the layout and GUI setup for a practice session
+	/// Creates the tqlayout and GUI setup for a practice session
 	void initTrainingSession();
     /// Creates the (standard) actions and entries in the menu.
     void setupActions();
@@ -153,7 +153,7 @@ class KTouch : public KMainWindow {
     KSelectAction		   *m_keyboardColorAction;
     KSelectAction		   *m_defaultLectureAction;
 
-    KTouchStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
+    KTouchtqStatus           *m_statusWidget;         ///< Pointer to the status widget on top of the main widget.
     KTouchSlideLine        *m_slideLineWidget;      ///< Pointer to the sliding line widget.
     KTouchKeyboardWidget   *m_keyboardWidget;       ///< Pointer to the keyboard widget.
     KTouchTrainer          *m_trainer;              ///< The training 'master' (runs the training).
@@ -170,8 +170,8 @@ class KTouch : public KMainWindow {
 	TQStringList     		m_examinationFiles;     ///< A list of all default examination files.
 	TQStringList     		m_examinationTitles;    ///< A list of the titles of all default examination files.
 	
-    TQStringList     		m_keyboardFiles;        ///< A list of all default keyboard layout files.
-    TQStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard layout files.
+    TQStringList     		m_keyboardFiles;        ///< A list of all default keyboard tqlayout files.
+    TQStringList     		m_keyboardTitles;       ///< A list of the titles of all default keyboard tqlayout files.
 
 	KTouchStatisticsData	m_stats;				///< All user statistics are kept here.
 

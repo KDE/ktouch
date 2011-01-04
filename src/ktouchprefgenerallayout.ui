@@ -4,7 +4,7 @@
     <property name="name">
         <cstring>KTouchPrefGeneralLayout</cstring>
     </property>
-    <property name="geometry">
+    <property name="tqgeometry">
         <rect>
             <x>0</x>
             <y>0</y>
@@ -82,7 +82,7 @@
                 </property>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout2</cstring>
+                        <cstring>tqlayout2</cstring>
                     </property>
                     <grid>
                         <property name="name">
@@ -106,7 +106,7 @@
                             <property name="sizeType">
                                 <enum>Expanding</enum>
                             </property>
-                            <property name="sizeHint">
+                            <property name="tqsizeHint">
                                 <size>
                                     <width>227</width>
                                     <height>20</height>
@@ -117,7 +117,7 @@
                             <property name="name">
                                 <cstring>kcfg_SlidingSpeed</cstring>
                             </property>
-                            <property name="maximumSize">
+                            <property name="tqmaximumSize">
                                 <size>
                                     <width>32767</width>
                                     <height>20</height>
@@ -149,7 +149,7 @@
                             <property name="sizeType">
                                 <enum>Fixed</enum>
                             </property>
-                            <property name="sizeHint">
+                            <property name="tqsizeHint">
                                 <size>
                                     <width>20</width>
                                     <height>20</height>
@@ -184,7 +184,7 @@
                     <property name="sizeType">
                         <enum>Fixed</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>16</height>
@@ -193,7 +193,7 @@
                 </spacer>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout3</cstring>
+                        <cstring>tqlayout3</cstring>
                     </property>
                     <hbox>
                         <property name="name">
@@ -238,7 +238,7 @@
                     <property name="sizeType">
                         <enum>Fixed</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>16</height>
@@ -247,7 +247,7 @@
                 </spacer>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout2</cstring>
+                        <cstring>tqlayout2</cstring>
                     </property>
                     <grid>
                         <property name="name">
@@ -271,7 +271,7 @@
                             <property name="sizeType">
                                 <enum>Expanding</enum>
                             </property>
-                            <property name="sizeHint">
+                            <property name="tqsizeHint">
                                 <size>
                                     <width>114</width>
                                     <height>20</height>
@@ -323,7 +323,7 @@
             <property name="sizeType">
                 <enum>Expanding</enum>
             </property>
-            <property name="sizeHint">
+            <property name="tqsizeHint">
                 <size>
                     <width>31</width>
                     <height>30</height>
@@ -334,7 +334,7 @@
 </widget>
 <customwidgets>
 </customwidgets>
-<layoutdefaults spacing="6" margin="11"/>
+<tqlayoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kfontrequester.h</includehint>
 </includehints>

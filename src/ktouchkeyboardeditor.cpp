@@ -66,7 +66,7 @@ void KTouchKeyboardEditor::fontBtnClicked() {
 		titleEdit->setFont(f);  
 		keyboardCommentEdit->setFont(f);  
 		languageEdit->setFont(f);  
-		update();	// trigger repaint of the keyboard.
+		update();	// trigger tqrepaint of the keyboard.
 		setModified();
     }
 }
@@ -133,7 +133,7 @@ void KTouchKeyboardEditor::paintEvent(TQPaintEvent *) {
 
 void KTouchKeyboardEditor::transfer_to_dialog() {
 	if (m_currentURL.isEmpty()) {
-		titleEdit->setText( i18n("untitled keyboard layout") );
+		titleEdit->setText( i18n("untitled keyboard tqlayout") );
 		keyboardCommentEdit->setText("");
 	}
 	else {
@@ -173,7 +173,7 @@ void KTouchKeyboardEditor::transfer_to_dialog() {
     
 void KTouchKeyboardEditor::transfer_from_dialog() {
 	m_keyboard.m_title = titleEdit->text();
-	if (m_keyboard.m_title.isEmpty())  m_keyboard.m_title = i18n("untitled keyboard layout");
+	if (m_keyboard.m_title.isEmpty())  m_keyboard.m_title = i18n("untitled keyboard tqlayout");
 	m_keyboard.m_comment = keyboardCommentEdit->text();
 	m_keyboard.m_language = languageEdit->text();
 }

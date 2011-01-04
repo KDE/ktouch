@@ -1,10 +1,10 @@
 <!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>KTouchStatusLayout</class>
+<class>KTouchtqStatusLayout</class>
 <widget class="QWidget">
     <property name="name">
-        <cstring>KTouchStatusLayout</cstring>
+        <cstring>KTouchtqStatusLayout</cstring>
     </property>
-    <property name="geometry">
+    <property name="tqgeometry">
         <rect>
             <x>0</x>
             <y>0</y>
@@ -40,7 +40,7 @@
                 </property>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>layout2</cstring>
+                        <cstring>tqlayout2</cstring>
                     </property>
                     <hbox>
                         <property name="name">
@@ -58,7 +58,7 @@
                                     <verstretch>0</verstretch>
                                 </sizepolicy>
                             </property>
-                            <property name="minimumSize">
+                            <property name="tqminimumSize">
                                 <size>
                                     <width>0</width>
                                     <height>30</height>
@@ -85,7 +85,7 @@
                         </widget>
                         <widget class="QLayoutWidget">
                             <property name="name">
-                                <cstring>layout2</cstring>
+                                <cstring>tqlayout2</cstring>
                             </property>
                             <vbox>
                                 <property name="name">
@@ -95,7 +95,7 @@
                                     <property name="name">
                                         <cstring>levelUpBtn</cstring>
                                     </property>
-                                    <property name="maximumSize">
+                                    <property name="tqmaximumSize">
                                         <size>
                                             <width>20</width>
                                             <height>20</height>
@@ -112,7 +112,7 @@
                                     <property name="name">
                                         <cstring>levelDownBtn</cstring>
                                     </property>
-                                    <property name="maximumSize">
+                                    <property name="tqmaximumSize">
                                         <size>
                                             <width>20</width>
                                             <height>20</height>
@@ -160,7 +160,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -171,7 +171,7 @@
                     <property name="name">
                         <cstring>speedLCD</cstring>
                     </property>
-                    <property name="minimumSize">
+                    <property name="tqminimumSize">
                         <size>
                             <width>0</width>
                             <height>30</height>
@@ -203,7 +203,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -233,7 +233,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -261,7 +261,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -291,7 +291,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -321,7 +321,7 @@
                     <property name="scaledContents">
                         <bool>true</bool>
                     </property>
-                    <property name="alignment">
+                    <property name="tqalignment">
                         <set>AlignCenter</set>
                     </property>
                     <property name="hAlign" stdset="0">
@@ -337,7 +337,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="sizeHint">
+                    <property name="tqsizeHint">
                         <size>
                             <width>20</width>
                             <height>2</height>
@@ -356,5 +356,5 @@
     <slot>startKTouch()</slot>
     <slot>stopKTouch()</slot>
 </slots>
-<layoutdefaults spacing="6" margin="11"/>
+<tqlayoutdefaults spacing="6" margin="11"/>
 </UI>

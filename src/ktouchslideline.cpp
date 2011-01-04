@@ -237,8 +237,8 @@ void KTouchSlideLine::resizeEvent ( TQResizeEvent * ) {
     KD_DEBUG( "[KTouchSlideLine::resizeEvent]" << endl );
 	// required input member variables:  none
 
-	// when the widget is resized, the whole geometry is invalidated, so we do:
-	//   1. recalculate and store the geometry of the sliding lines
+	// when the widget is resized, the whole tqgeometry is tqinvalidated, so we do:
+	//   1. recalculate and store the tqgeometry of the sliding lines
 	//   2. resize the font
 	//   3. recreate the sliding lines (this is done from the resizeFont() function
 
@@ -443,7 +443,7 @@ void KTouchSlideLine::updateSlidingLines() {
 	KD_DEBUG( "  m_studentPixmap  = " << w+100 << " x " << h << endl );
 
 	// update (draw) student line and calculate coordinates needed for sliding
-	repaint(true); // trigger a paint event to erase the background
+	tqrepaint(true); // trigger a paint event to erase the background
 	updateStudentLine();
 }
 // ----------------------------------------------------------------------------

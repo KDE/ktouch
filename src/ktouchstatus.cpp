@@ -20,13 +20,13 @@
 #include <kpushbutton.h>
 #include "prefs.h"
 
-KTouchStatus::KTouchStatus(TQWidget *parent)
- : KTouchStatusLayout(parent)
+KTouchtqStatus::KTouchtqStatus(TQWidget *parent)
+ : KTouchtqStatusLayout(parent)
 {
     applyPreferences();
 }
 
-void KTouchStatus::applyPreferences() {
+void KTouchtqStatus::applyPreferences() {
 	if (Prefs::autoLevelChange()) {
 		levelUpBtn->setEnabled( !Prefs::disableManualLevelChange() );
 		levelDownBtn->setEnabled( !Prefs::disableManualLevelChange() );
@@ -37,11 +37,11 @@ void KTouchStatus::applyPreferences() {
 	}
 }
 
-void KTouchStatus::setNewChars(const TQString& newChars) {
+void KTouchtqStatus::setNewChars(const TQString& newChars) {
     newCharsLabel->setText(newChars);
 }
 
-void KTouchStatus::updateStatus(unsigned int level, double correctness) {
+void KTouchtqStatus::updatetqStatus(unsigned int level, double correctness) {
     levelLCD->display(static_cast<int>(level)+1); // +1 because our level variable ranges from 0...n-1
     correctnessBar->setProgress(static_cast<int>(correctness*100) );
 }

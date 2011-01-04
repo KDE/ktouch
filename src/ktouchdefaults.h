@@ -21,7 +21,7 @@ extern const unsigned int BEGINNER_SPEED;		///< Speed for rating in characters p
 extern const unsigned int ADVANCED_SPEED;		///< Speed for rating in characters per minute.
 extern const unsigned int PROFESSIONAL_SPEED;	///< Speed for rating in characters per minute.
 
-extern const int KEYBOARD_MARGIN;				///< The margin around the keybaord layout.
+extern const int KEYBOARD_MARGIN;				///< The margin around the keybaord tqlayout.
 
 extern const int LCD_UPDATE_INTERVAL;    		///< Update interval for LCD display and statistics.
 

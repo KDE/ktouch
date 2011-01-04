@@ -210,7 +210,7 @@ bool KTouchLecture::readLecture(TQDomDocument& doc) {
 void KTouchLecture::writeLecture(TQDomDocument& doc) const {
     TQDomElement root = doc.createElement( "KTouchLecture" );
     doc.appendChild(root);
-	// Store title and ensure that the file contains a title!
+	// Store title and ensure that the file tqcontains a title!
 	TQDomElement title = doc.createElement("Title");
 	TQDomText titleText;
 	if (m_title.isEmpty())	titleText = doc.createTextNode( i18n("untitled lecture") );

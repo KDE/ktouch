@@ -30,12 +30,12 @@ class KURL;
 /** This is the keyboard widget at the bottom of the training screen.
  *  In addition to the painting functions this class has the member
  *  functions loadKeyboard() and saveKeyboard() which can read and write
- *  a keyboard layout from/into a file.<p>
+ *  a keyboard tqlayout from/into a file.<p>
  *  The keyboard is drawn in the paintEvent() member function. The
  *  resizing, that means the recalculation of m_shift is
  *  done in the resizeEvent() member function.<p>
  *  The state of keyboard and keys does not change while it is
- *  repainted or resized. Only when a new character has been typed
+ *  tqrepainted or resized. Only when a new character has been typed
  *  and the newKey() slot is called the state changes (and thus the
  *  activated keys and finger key animations etc.)
  */
@@ -44,14 +44,14 @@ class KTouchKeyboardWidget : public TQWidget {
   public:
     /// Constructor
     KTouchKeyboardWidget(TQWidget *parent);
-    /// Reads a keyboard layout from the given URL.
+    /// Reads a keyboard tqlayout from the given URL.
     /// The function returns 'true' when the reading was successful or 'false' if not. In this
-    /// case the optional parameter errorMsg contains the error message.
+    /// case the optional parameter errorMsg tqcontains the error message.
     bool loadKeyboard(TQWidget * window, const KURL& url, TQString* errorMsg=NULL);
-    /// Saves the keyboard layout to the URL.
+    /// Saves the keyboard tqlayout to the URL.
     void saveKeyboard(TQWidget * window, const KURL& url);
-    /// Applies preferences to the keyboard layout and the keys.
-    /// This means that the layout is basically recreated and if the layout type/language
+    /// Applies preferences to the keyboard tqlayout and the keys.
+    /// This means that the tqlayout is basically recreated and if the tqlayout type/language
     /// changed it will be reloaded.
     void applyPreferences(TQWidget * window, bool silent);
 
@@ -89,7 +89,7 @@ class KTouchKeyboardWidget : public TQWidget {
     int                 m_keyboardWidth;    ///< The width of the keyboard (maximum of the sums of all keywidths in each line).
     int                 m_keyboardHeight;   ///< The height of the keyboard (sum of all key row heights).
     double              m_shift;            ///< The horizontal shift for the keyboard.
-    TQString             m_currentLayout;    ///< The name of the currently used layout.
+    TQString             m_currentLayout;    ///< The name of the currently used tqlayout.
     TQChar               m_nextKey;          ///< The next to be pressed character.
 
 	bool				m_hideKeyboard;		///< If true, the keyboard won't be shown.

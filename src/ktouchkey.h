@@ -20,7 +20,7 @@
 #include <tqpainter.h>
 #include <tqdom.h>
 
-/// This class contains information about one character on a key.
+/// This class tqcontains information about one character on a key.
 class KTouchKeyChar {
   public:
 	/// Position of the character on the key.

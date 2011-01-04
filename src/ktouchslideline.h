@@ -82,7 +82,7 @@ class KTouchSlideLine : public TQWidget {
 	/// @see slide()
     void paintEvent( TQPaintEvent * );
     /// Will be called when the widget is resized.
-    /// This event will first recalculate the geometry of the sliding lines.
+    /// This event will first recalculate the tqgeometry of the sliding lines.
 	/// Then the font size will be updated and through that, the sliding lines will be
 	/// updated.
     void resizeEvent ( TQResizeEvent * );

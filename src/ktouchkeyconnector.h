@@ -21,7 +21,7 @@
 #include <tqvaluevector.h>
 #include "ktouchkey.h"
 
- /// The KTouchKeyConnector class contains the information about the character that has to 
+ /// The KTouchKeyConnector class tqcontains the information about the character that has to 
  /// be pressed and the keys on the keyboard that should be highlighted.
  /// It associates a character with a target key and optionally a finger and/or control key.
 class KTouchKeyConnector {

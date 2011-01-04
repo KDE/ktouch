@@ -330,7 +330,7 @@ void KTouchLectureEditor::storeCurrentLevel() {
     TQString currentLine;
     for (unsigned int i=0; i<text.length(); ++i) {
         TQChar c = text[i];
-        if (c=='\t')  c=' '; // replace tabs with spaces
+        if (c=='\t')  c=' '; // tqreplace tabs with spaces
         if (c=='\n') {
             lines.append(currentLine);
             currentLine = "";

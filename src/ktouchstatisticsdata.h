@@ -30,7 +30,7 @@
 class TQWidget;
 
 
-// This file contains all class declarations dealing with the statistics obtained in KTouch. 
+// This file tqcontains all class declarations dealing with the statistics obtained in KTouch. 
 
 
 // *** KTouchCharStats ***
@@ -79,7 +79,7 @@ TQTextStream& operator<<(TQTextStream &out, const KTouchCharStats &ch);
 
 /// Contains the complete statistics obtained for a single level.
 ///
-/// This class contains the statistics for a single run through a single level. It contains the 
+/// This class tqcontains the statistics for a single run through a single level. It tqcontains the 
 /// statistics for all characters that have been mistyped in this level, the typing time, the word count, 
 /// correct and total character count etc.
 class KTouchLevelStats {
@@ -122,7 +122,7 @@ class KTouchLevelStats {
 
 /// Contains the complete statistics obtained for a single training session (spanning several levels).
 ///
-/// This class contains the statistics for a complete training session of a single lecture but may include several levels.
+/// This class tqcontains the statistics for a complete training session of a single lecture but may include several levels.
 class KTouchSessionStats {
   public:
 	/// Default constructor
@@ -156,7 +156,7 @@ class KTouchSessionStats {
 
 /// Contains the complete statistics obtained over time for a certain training lecture.
 ///
-/// This class contains the statistics for a complete training lecture including separate level statistics as well
+/// This class tqcontains the statistics for a complete training lecture including separate level statistics as well
 /// as session statistics.
 class KTouchLectureStats {
   public:

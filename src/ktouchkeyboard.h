@@ -24,7 +24,7 @@
 
 class KURL;
 
-/// This class stores the keyboard layout and the connectivity between characters 
+/// This class stores the keyboard tqlayout and the connectivity between characters 
 /// and the actual keys.
 class KTouchKeyboard  {
   public:
@@ -32,7 +32,7 @@ class KTouchKeyboard  {
 	KTouchKeyboard() { createDefault(); }
 	/// Clears the keyboard (resets all data)
 	void clear();
-    /// Loads a keyboard layout (old format) from file (returns true if successful).
+    /// Loads a keyboard tqlayout (old format) from file (returns true if successful).
     bool load(TQWidget * window, const KURL& url);
     /// Loads a lecture (in XML format) from file (returns true if successful).
     bool loadXML(TQWidget * window, const KURL& url);
@@ -47,7 +47,7 @@ class KTouchKeyboard  {
     TQValueVector<KTouchKeyConnector>	m_connectors;	///< Vector with connectivity data.
 	
 	QString		m_title;			///< Title of the keyboard (to appear in the menu).
-	QString		m_comment;			///< Comments about the creator of the keyboard layout.
+	QString		m_comment;			///< Comments about the creator of the keyboard tqlayout.
 	QString		m_language;			///< Language ID of keyboard
 	QString		m_fontSuggestions;	///< Suggestions of fonts to be used on the keys.
 
