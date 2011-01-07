@@ -75,7 +75,7 @@ KTouch::KTouch()
 	setupActions();
 	// create the GUI reading the ui.rc file
 	if (!initialGeometrySet())
-		resize( TQSize(700, 510).expandedTo(tqminimumSizeHint()));
+		resize( TQSize(700, 510).expandedTo(minimumSizeHint()));
 	setupGUI(ToolBar | Keys | StatusBar | Create);
 	setAutoSaveSettings();
 	// Read user statistics
@@ -179,10 +179,10 @@ void KTouch::keyPressEvent(TQKeyEvent *keyEvent) {
 	if (keyEvent->text().length() > 1) {
 		kdDebug() << "[KTouch::keyPressEvent]  text = '" << keyEvent->text() << "'" << endl;
 	}
-    TQChar key = keyEvent->text().at(0); // get first tqunicode character
+    TQChar key = keyEvent->text().at(0); // get first unicode character
 	// HACK : manually filter out known dead keys
 //	bool has_dead_key = true;
-	switch (key.tqunicode()) {
+	switch (key.unicode()) {
 		case 94   : m_lastDeadKey = TQChar(uint(94)); break;
 		case 176  : m_lastDeadKey = TQChar(uint(176)); break;
 		case 180  : m_lastDeadKey = TQChar(uint(180)); break;
@@ -428,7 +428,7 @@ void KTouch::optionsPreferences() {
 	m_pageTraining = new KTouchPrefTrainingLayout(0, "Training");
 	dialog->addPage(m_pageTraining, i18n("Training Options"), "kalarm");
 	m_pageKeyboard = new KTouchPrefKeyboardLayout(0, "Keyboard");
-	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_tqlayout");
+	dialog->addPage(m_pageKeyboard, i18n("Keyboard Settings"), "keyboard_layout");
 	m_pageColors = new KTouchPrefColorsLayout(0, "Colors"); 
 	dialog->addPage(m_pageColors, i18n("Color Settings"), "package_graphics");
 	connect(dialog, TQT_SIGNAL(settingsChanged()), this, TQT_SLOT(applyPreferences()));
@@ -450,12 +450,12 @@ void KTouch::optionsPreferences() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::changetqStatusbarMessage(const TQString& text) {
+void KTouch::changeStatusbarMessage(const TQString& text) {
     statusBar()->message(text);
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::changetqStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
+void KTouch::changeStatusbarStats(unsigned int level_correct, unsigned int level_total, unsigned int level_words,
 	unsigned int session_correct, unsigned int session_total, unsigned int session_words) 
 {
 	statusBar()->changeItem(i18n( "Level:  Correct/Total chars: %1/%2  Words: %3")
@@ -468,9 +468,9 @@ void KTouch::changetqStatusbarStats(unsigned int level_correct, unsigned int lev
 void KTouch::changeKeyboard(int num) {
     if (static_cast<unsigned int>(num)>=m_keyboardFiles.count()) return;
     Prefs::setCurrentKeyboardFile( m_keyboardFiles[num] );
-//	kdDebug() << "[KTouch::changeKeyboard]  new keyboard tqlayout = " << Prefs::currentKeyboardFile() << endl;
+//	kdDebug() << "[KTouch::changeKeyboard]  new keyboard layout = " << Prefs::currentKeyboardFile() << endl;
     m_keyboardLayoutAction->setCurrentItem(num);
-	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen tqlayout file is corrupt
+	// call Apply-Preferenzes in "noisy"-mode, pop up an error if the chosen layout file is corrupt
     m_keyboardWidget->applyPreferences(this, false);
 }
 // ----------------------------------------------------------------------------
@@ -528,7 +528,7 @@ bool KTouch::queryExit() {
 // ----------------------------------------------------------------------------
 
 void KTouch::resizeEvent(TQResizeEvent * event) {
-	changetqStatusbarStats(m_trainer->m_levelStats.m_correctChars, m_trainer->m_levelStats.m_totalChars, m_trainer->m_levelStats.m_words,
+	changeStatusbarStats(m_trainer->m_levelStats.m_correctChars, m_trainer->m_levelStats.m_totalChars, m_trainer->m_levelStats.m_words,
 		m_trainer->m_sessionStats.m_correctChars, m_trainer->m_sessionStats.m_totalChars, m_trainer->m_sessionStats.m_words);
 	KMainWindow::resizeEvent(event);
 }
@@ -561,7 +561,7 @@ void KTouch::readProperties(KConfig *config) {
     m_trainer->m_teacherText = m_lecture.level(m_trainer->m_level).line(m_trainer->m_line);
     m_trainer->m_studentText = config->readEntry("StudentText");
     m_trainer->continueTraining();
-    changetqStatusbarMessage( i18n("Restarting training session: Waiting for first keypress...") );
+    changeStatusbarMessage( i18n("Restarting training session: Waiting for first keypress...") );
     // update the slide line widget
     m_slideLineWidget->setNewText(m_trainer->m_teacherText, m_trainer->m_studentText);
     // update all the other widgets
@@ -608,7 +608,7 @@ void KTouch::init() {
 	//kdDebug() << "[KTouch::init]  populating file lists..." << endl;
     updateFileLists();  // create lists with default lecture/keyboard/examination files/colour scheme files
 	//kdDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available" << endl;
-	//kdDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard tqlayouts available" << endl;
+	//kdDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available" << endl;
 	//kdDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available" << endl;
 
 	if (Prefs::currentLectureFile() == "default") {
@@ -620,9 +620,9 @@ void KTouch::init() {
 */
 	}
 
-    // if keyboard tqlayout (loaded by Prefs is not available (e.g. the 
-    // tqlayout file has been deleted) switch to default keyboard
-    if (m_keyboardFiles.tqcontains(Prefs::currentKeyboardFile() )==0) {
+    // if keyboard layout (loaded by Prefs is not available (e.g. the 
+    // layout file has been deleted) switch to default keyboard
+    if (m_keyboardFiles.contains(Prefs::currentKeyboardFile() )==0) {
         TQString default_keyboard;
         // determine locale
         TQString lang = KGlobal::locale()->language();
@@ -652,18 +652,18 @@ void KTouch::init() {
 }
 // ----------------------------------------------------------------------------
 
-// Creates the tqlayout and GUI setup for a practice session
+// Creates the layout and GUI setup for a practice session
 void KTouch::initTrainingSession() {
-	//kdDebug() << "[KTouch::initTrainingSession]  setting up tqlayouts and widgets for new training session..." << endl;
+	//kdDebug() << "[KTouch::initTrainingSession]  setting up layouts and widgets for new training session..." << endl;
     // Build the training area. The status widget has a fixed vertical size, the slide line and the
     // keyboard grow according to their vertical stretch factors (see last argument in the constructors
     // of TQSizePolicy)
     TQVBox * mainLayout = new TQVBox( this );
-    m_statusWidget = new KTouchtqStatus( mainLayout );
+    m_statusWidget = new KTouchStatus( mainLayout );
     m_slideLineWidget = new KTouchSlideLine( mainLayout );
-    m_slideLineWidget->tqsetSizePolicy( TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 1) );
+    m_slideLineWidget->setSizePolicy( TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 1) );
     m_keyboardWidget = new KTouchKeyboardWidget( mainLayout );
-    m_keyboardWidget->tqsetSizePolicy(TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 3) );
+    m_keyboardWidget->setSizePolicy(TQSizePolicy(TQSizePolicy::Preferred, TQSizePolicy::Expanding, 0, 3) );
     setCentralWidget(mainLayout);
 	// apply the settings to the widgets
     m_slideLineWidget->applyPreferences();
@@ -710,8 +710,8 @@ void KTouch::setupActions() {
 
 	// *** Settings menu ***    
     KStdAction::preferences(this, TQT_SLOT(optionsPreferences()), actionCollection());
-    // Setup menu entries for keyboard tqlayouts    
-    m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_tqlayouts");
+    // Setup menu entries for keyboard layouts    
+    m_keyboardLayoutAction= new KSelectAction(i18n("&Keyboard Layouts"), 0, this, 0, actionCollection(), "keyboard_layouts");
 	m_keyboardLayoutAction->setMenuAccelsEnabled(false);
     m_keyboardLayoutAction->setItems(m_keyboardTitles);
     connect (m_keyboardLayoutAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(changeKeyboard(int)));
@@ -753,7 +753,7 @@ void KTouch::updateFileLists() {
 	// TODO : search in i18n() directories
     m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard");
 
-    // remove the number tqlayout, since this is the necessary default tqlayout and will be
+    // remove the number layout, since this is the necessary default layout and will be
     // added anyway
     TQStringList::iterator it = m_keyboardFiles.find("number.keyboard");
     if (it!=m_keyboardFiles.end())      m_keyboardFiles.remove(it);

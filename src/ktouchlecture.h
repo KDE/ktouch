@@ -26,8 +26,8 @@ class KURL;
 
 /// This class handles the lecture data and provides the lines to type.
 ///
-/// It tqcontains the level data (see KTouchLevelData). A lecture object
-/// tqcontains <b>ALWAYS</b> at least one lecture.<p>
+/// It contains the level data (see KTouchLevelData). A lecture object
+/// contains <b>ALWAYS</b> at least one lecture.<p>
 /// The lecture data can be read and written using the member functions 
 /// readLecture() and writeLecture().<p>
 /// During a training session the program will occasionally need a new

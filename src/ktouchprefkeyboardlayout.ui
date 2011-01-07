@@ -4,7 +4,7 @@
     <property name="name">
         <cstring>KTouchPrefKeyboardLayout</cstring>
     </property>
-    <property name="tqgeometry">
+    <property name="geometry">
         <rect>
             <x>0</x>
             <y>0</y>
@@ -65,7 +65,7 @@
                     <property name="sizeType">
                         <enum>Fixed</enum>
                     </property>
-                    <property name="tqsizeHint">
+                    <property name="sizeHint">
                         <size>
                             <width>20</width>
                             <height>16</height>
@@ -74,7 +74,7 @@
                 </spacer>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>tqlayout1</cstring>
+                        <cstring>layout1</cstring>
                     </property>
                     <vbox>
                         <property name="name">
@@ -88,10 +88,10 @@
                                 <string>Override keyboard fonts</string>
                             </property>
                             <property name="toolTip" stdset="0">
-                                <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard tqlayout.</string>
+                                <string>If checked you can specify your own keyboard font instead of the predefined one of the keyboard layout.</string>
                             </property>
                             <property name="whatsThis" stdset="0">
-                                <string>Every keyboard tqlayout may specify its own font. If the predefined font of a certain keyboard tqlayout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
+                                <string>Every keyboard layout may specify its own font. If the predefined font of a certain keyboard layout does not work or you would like to have your own, check this button. You may then choose your own font that will be used to draw the characters on the keys.</string>
                             </property>
                         </widget>
                         <widget class="QLabel">
@@ -121,7 +121,7 @@
             <property name="sizeType">
                 <enum>Expanding</enum>
             </property>
-            <property name="tqsizeHint">
+            <property name="sizeHint">
                 <size>
                     <width>20</width>
                     <height>30</height>
@@ -135,7 +135,7 @@
 <slots>
     <slot>fontChooseBtnClicked()</slot>
 </slots>
-<tqlayoutdefaults spacing="6" margin="11"/>
+<layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kfontrequester.h</includehint>
 </includehints>

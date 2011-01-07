@@ -25,7 +25,7 @@ class KTouchControlKey;
 
 /** This is the base class for all keys (KTouchFingerKey, KTouchNormalKey and KTouchControlKey).
  *  Do not create instances of KTouchKey itself or you will get only blank keys. Note that the
- *  KTouchKey class hierarchy tqcontains only the information for painting the keys. The connectivity
+ *  KTouchKey class hierarchy contains only the information for painting the keys. The connectivity
  *  is handled using the KTouchKeyConnector.
  */
 class KTouchBaseKey {
@@ -39,7 +39,7 @@ class KTouchBaseKey {
         m_x(x), m_y(y), m_w(w), m_h(h), m_type(NORMAL_KEY) {}
     /// Destructor.
     virtual ~KTouchBaseKey() {}
-    /// Paints the basic key tqshape using the painter p.
+    /// Paints the basic key shape using the painter p.
     virtual void paint(TQPainter& p) const;
     /// Recalculates the scaled position and size properties of the key.
     void resize(double scale);
@@ -66,7 +66,7 @@ class KTouchBaseKey {
     int     m_wS;       ///< The scaled width of the key.
     int     m_hS;       ///< The scaled height of the key.
 
-    KeyType m_type;     ///< Stores the type of the key (convenience for saving of the keyboard tqlayout).
+    KeyType m_type;     ///< Stores the type of the key (convenience for saving of the keyboard layout).
 };
 // ---------------------------------------------------------------------------------------
 
@@ -116,7 +116,7 @@ class KTouchFingerKey : public KTouchNormalKey {
 
 /** This is a special or control key.
  *  This key acts as a modifier key to a normal key (for instance a shift key) and has a
- *  different tqshape and painting routine then the normal keys. Therefore it is directly
+ *  different shape and painting routine then the normal keys. Therefore it is directly
  *  derived from KTouchKey.
  */
 class KTouchControlKey : public KTouchBaseKey {

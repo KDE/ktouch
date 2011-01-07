@@ -21,7 +21,7 @@
 
 class KTouchTrainer;
 
-/// This is the chart widget and tqcontains all chart drawing code.
+/// This is the chart widget and contains all chart drawing code.
 class KTouchChartWidget : public KPlotWidget {
     Q_OBJECT
   public:

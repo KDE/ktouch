@@ -41,7 +41,7 @@ int KTouchCharStats::missHitRatio() const {
 // ----------------------------------------------------------------------------
 
 TQTextStream& operator<<(TQTextStream &out, const KTouchCharStats &ch) {
-    return (out << ch.m_char.tqunicode() << " " << ch.m_correctCount << " " << ch.m_wrongCount);
+    return (out << ch.m_char.unicode() << " " << ch.m_correctCount << " " << ch.m_wrongCount);
 }
 // ----------------------------------------------------------------------------
 
@@ -135,9 +135,9 @@ void KTouchLevelStats::write(TQDomDocument& doc, TQDomElement& root) const {
 	level.appendChild(e);
 	// add char stats
 	TQString char_data;
-    // we append for each missed char the char-tqunicode and the counters
+    // we append for each missed char the char-unicode and the counters
 	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
-		char_data += TQString(" %1 %2 %3").arg(it->m_char.tqunicode())
+		char_data += TQString(" %1 %2 %3").arg(it->m_char.unicode())
 										 .arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
 	tn = doc.createTextNode(char_data);
@@ -302,9 +302,9 @@ void KTouchSessionStats::write(TQDomDocument& doc, TQDomElement& root) const {
 	session.appendChild(e);
 	// add char data
 	TQString char_data;
-    // we append for each missed char the char-tqunicode and the counters
+    // we append for each missed char the char-unicode and the counters
 	for (std::set<KTouchCharStats>::const_iterator it=m_charStats.begin(); it!=m_charStats.end(); ++it)
-		char_data += TQString(" %1 %2 %3").arg(it->m_char.tqunicode())
+		char_data += TQString(" %1 %2 %3").arg(it->m_char.unicode())
 				.arg(it->m_correctCount).arg(it->m_wrongCount);
 	e = doc.createElement("CharStats");
 	tn = doc.createTextNode(char_data);
@@ -464,7 +464,7 @@ bool KTouchStatisticsData::read(TQWidget * window, const KURL& url) {
 #ifdef COMPRESSED_XML_STATISTICS
 		TQByteArray array;
 		array = infile.readAll();
-		array = tqUncompress(array);
+		array = qUncompress(array);
 		doc.setContent( array );
 #else
 		doc.setContent( &infile );
@@ -503,7 +503,7 @@ bool KTouchStatisticsData::write(TQWidget * window, const KURL& url) const {
 	TQByteArray array;
 	TQTextStream out(array, IO_WriteOnly);
 	out << doc.toString();
-	array = tqCompress(array);
+	array = qCompress(array);
 	outfile.writeBlock(array);
 #else
 	TQTextStream out( &outfile );

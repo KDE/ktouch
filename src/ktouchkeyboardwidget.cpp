@@ -51,12 +51,12 @@ bool KTouchKeyboardWidget::loadKeyboard(TQWidget * window, const KURL& url, TQSt
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
-            *errorMsg = i18n("Could not read the keyboard tqlayout file '%1'. ").arg(url.url()) + msg;
+            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ").arg(url.url()) + msg;
         return result;
     }
     else {
         if (errorMsg!=NULL)
-            *errorMsg = i18n("Could not download/open keyboard tqlayout file from '%1'.").arg(url.url());
+            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.").arg(url.url());
         return false;
     }
 }
@@ -81,7 +81,7 @@ void KTouchKeyboardWidget::saveKeyboard(TQWidget * window, const KURL& url) {
     TQTextStream out( &outfile );
     out << "########################################## \n";
     out << "#                                        # \n";
-    out << "#  Keyboard tqlayout file for KTouch       # \n";
+    out << "#  Keyboard layout file for KTouch       # \n";
     out << "#                                        # \n";
     out << "########################################## \n";
     out << "#\n";
@@ -95,7 +95,7 @@ void KTouchKeyboardWidget::saveKeyboard(TQWidget * window, const KURL& url) {
            default : out << "NormalKey  "; break;
         }
         TQRect rect=key->frame();
-        out << key->m_keyChar.tqunicode() << '\t' << key->m_keyText << '\t'
+        out << key->m_keyChar.unicode() << '\t' << key->m_keyText << '\t'
             << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
     }
 
@@ -112,16 +112,16 @@ void KTouchKeyboardWidget::applyPreferences(TQWidget * window, bool silent) {
     	setMaximumHeight(100);
 	else
     	setMaximumHeight(10000);
-    // let's check whether the keyboard tqlayout has changed
+    // let's check whether the keyboard layout has changed
     if (Prefs::currentKeyboardFile() != m_currentLayout) {
-        // if the tqlayout is the number tqlayout just create it and we're done
+        // if the layout is the number layout just create it and we're done
 		//kdDebug() << "[KTouchKeyboardWidget::applyPreferences]  keyboard = " << Prefs::currentKeyboardFile() << endl;
         if (Prefs::currentKeyboardFile()=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
             return;
         }
-        // ok, let's load this tqlayout
+        // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
             if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() )))
@@ -132,8 +132,8 @@ void KTouchKeyboardWidget::applyPreferences(TQWidget * window, bool silent) {
         else {
             TQString errorMsg;
             if (!loadKeyboard(window, KURL::fromPathOrURL( Prefs::currentKeyboardFile() ), &errorMsg)) {
-                KMessageBox::error( 0, i18n("Error reading the keyboard tqlayout; the default number keypad will "
-                    "be created instead. You can choose another keyboard tqlayout in the preferences dialog."),
+                KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
+                    "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
             }
@@ -309,7 +309,7 @@ void KTouchKeyboardWidget::createDefaultKeyboard() {
     updateColours();
     m_currentLayout="number.keyboard";
 
-	// create keyboard tqgeometry for new keyboard data
+	// create keyboard geometry for new keyboard data
 
     int sp = 10;
     int h = 50;
@@ -397,13 +397,13 @@ bool KTouchKeyboardWidget::readKeyboard(const TQString& fileName, TQString& erro
                 w=h=8; // default values for old keyboard files
             m_keyList.append( new KTouchFingerKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
-// 			kdDebug() << "read : F : tqunicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
+// 			kdDebug() << "read : F : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
         }
         else if (keyType=="ControlKey") {
             lineStream >> keyText >> x >> y >> w >> h;
             m_keyList.append( new KTouchControlKey(keyAscII, keyText, x+1, y+1, w-2, h-2) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, 0, 0) );
-// 			kdDebug() << "read : C : tqunicode = " << keyAscII << " char = " << keyText << endl;
+// 			kdDebug() << "read : C : unicode = " << keyAscII << " char = " << keyText << endl;
         }
         else if (keyType=="NormalKey") {
             int fingerCharCode;
@@ -412,12 +412,12 @@ bool KTouchKeyboardWidget::readKeyboard(const TQString& fileName, TQString& erro
             // retrieve the finger key with the matching char
             m_keyList.append( new KTouchNormalKey(keyAscII, keyText, x+1, y+1, w, h) );
             m_connectorList.append( KTouchKeyConnection(keyAscII, keyAscII, fingerCharCode, 0) );
-// 			kdDebug() << "read : N : tqunicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
+// 			kdDebug() << "read : N : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << endl;
         } else if (keyType=="HiddenKey") {
             int targetChar, fingerChar, controlChar;
             lineStream >> targetChar >> fingerChar >> controlChar;
             m_connectorList.append( KTouchKeyConnection(keyAscII, targetChar, fingerChar, controlChar) );
-//			kdDebug() << "read : H : tqunicode = " << keyAscII << " char = " << TQChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
+//			kdDebug() << "read : H : unicode = " << keyAscII << " char = " << TQChar(keyAscII) << " target = " << targetChar << " finger = " << fingerChar << " control = " << controlChar << endl;
 			
         }
         else {
@@ -437,7 +437,7 @@ bool KTouchKeyboardWidget::readKeyboard(const TQString& fileName, TQString& erro
         m_keyboardWidth = std::max(m_keyboardWidth, x+w);
         m_keyboardHeight = std::max(m_keyboardHeight, y+h);
     } while (!in.atEnd() && !line.isNull());
-//	kdDebug() << "showing all tqunicode numbers in this file" << endl;
+//	kdDebug() << "showing all unicode numbers in this file" << endl;
 /*	for (std::set<TQChar>::iterator it = keys.begin(); it != keys.end(); ++it)
 		kdDebug() << *it << endl;
 */
@@ -460,9 +460,9 @@ void KTouchKeyboardWidget::updateColours() {
         TQChar targetChar = (*it).m_targetKeyChar; // this is the _base_ character of the key that needs to be highlighted
         TQChar ch = (*it).m_keyChar;
 
-/*		kdDebug() << "Key #"<<++counter<<": " << ch << "(" << ch.tqunicode() << ") " 
-				  << "target = " << targetChar << "(" << targetChar.tqunicode() << ") " 
-				  << "finger = " << fingerChar << "(" << fingerChar.tqunicode() << ")" << endl;
+/*		kdDebug() << "Key #"<<++counter<<": " << ch << "(" << ch.unicode() << ") " 
+				  << "target = " << targetChar << "(" << targetChar.unicode() << ") " 
+				  << "finger = " << fingerChar << "(" << fingerChar.unicode() << ")" << endl;
 */
 		m_keyCharMap[ch] = -1;
 

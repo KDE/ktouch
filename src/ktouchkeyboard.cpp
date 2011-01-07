@@ -34,7 +34,7 @@ void KTouchKeyboard::clear() {
 }
 // ----------------------------------------------------------------------------
 
-// Loads a keyboard tqlayout (old format) from file (returns true if successful).
+// Loads a keyboard layout (old format) from file (returns true if successful).
 bool KTouchKeyboard::load(TQWidget * window, const KURL& url) {
     // Ok, first download the contents as usual using the KIO lib
     // File is only downloaded if not local, otherwise it's just opened
@@ -176,14 +176,14 @@ bool KTouchKeyboard::read(TQTextStream& in) {
 // Loads keyboard data from file into an XML document
 bool KTouchKeyboard::read(const TQDomDocument& doc) {
 	// clean current data
-	kdDebug() << "Reading new keyboard tqlayout" << endl;
+	kdDebug() << "Reading new keyboard layout" << endl;
     m_keys.clear();
 	m_connectors.clear();
 	m_title = TQString::null;
 	// retrieve the title
 	TQDomNodeList entries = doc.elementsByTagName("Title");
 	if (entries.count() >= 1)	m_title = entries.item(0).firstChild().nodeValue();
-	else						m_title = i18n("untitled keyboard tqlayout");
+	else						m_title = i18n("untitled keyboard layout");
 	kdDebug() << "Title: " << m_title << endl;
 	// retrieve the comment
 	entries = doc.elementsByTagName("Comment");
@@ -232,10 +232,10 @@ bool KTouchKeyboard::read(const TQDomDocument& doc) {
 void KTouchKeyboard::write(TQDomDocument& doc) const {
     TQDomElement root = doc.createElement( "KTouchKeyboard" );
     doc.appendChild(root);
-	// Store title and ensure that the file tqcontains a title!
+	// Store title and ensure that the file contains a title!
 	TQDomElement title = doc.createElement("Title");
 	TQDomText titleText;
-	if (m_title.isEmpty())	titleText = doc.createTextNode( i18n("untitled keyboard tqlayout") );
+	if (m_title.isEmpty())	titleText = doc.createTextNode( i18n("untitled keyboard layout") );
 	else					titleText = doc.createTextNode(m_title);
 	title.appendChild(titleText);
 	root.appendChild(title);
@@ -281,7 +281,7 @@ void KTouchKeyboard::createDefault() {
     const int keyWidth = 20;
     const int col = keyWidth+keySpacing;
     const int row = keyHeight+keySpacing;
-    // First let's create the visible tqlayout.
+    // First let's create the visible layout.
 	// This means we have to create all keys that will be displayed.
     // Note: purely decorative keys get a key character code of 0!
     m_keys.clear();
@@ -327,7 +327,7 @@ void KTouchKeyboard::createDefault() {
     m_connectors.push_back( KTouchKeyConnector('.', '.', '6', 0) );
 	
 	m_title = "Number keypad";
-	m_comment = "Predefined keyboard tqlayout";
+	m_comment = "Predefined keyboard layout";
 	m_language = TQString::null;
 	// language does not apply to numbers... that's one of the nice things with math :-)
 	m_fontSuggestions = "Monospace";
@@ -352,12 +352,12 @@ bool KTouchKeyboard::loadKeyboard(TQWidget * window, const KURL& url, TQString* 
         bool result = readKeyboard(target, msg);
         KIO::NetAccess::removeTempFile(target);
         if (!result && errorMsg!=NULL)
-            *errorMsg = i18n("Could not read the keyboard tqlayout file '%1'. ").arg(url.url()) + msg;
+            *errorMsg = i18n("Could not read the keyboard layout file '%1'. ").arg(url.url()) + msg;
         return result;
     }
     else {
         if (errorMsg!=NULL)
-            *errorMsg = i18n("Could not download/open keyboard tqlayout file from '%1'.").arg(url.url());
+            *errorMsg = i18n("Could not download/open keyboard layout file from '%1'.").arg(url.url());
         return false;
     }
 }
@@ -382,7 +382,7 @@ void KTouchKeyboard::saveKeyboard(TQWidget * window, const KURL& url) {
     TQTextStream out( &outfile );
     out << "########################################## \n";
     out << "#                                        # \n";
-    out << "#  Keyboard tqlayout file for KTouch       # \n";
+    out << "#  Keyboard layout file for KTouch       # \n";
     out << "#                                        # \n";
     out << "########################################## \n";
     out << "#\n";
@@ -396,7 +396,7 @@ void KTouchKeyboard::saveKeyboard(TQWidget * window, const KURL& url) {
            default : out << "NormalKey  "; break;
         }
         TQRect rect=key->frame();
-        out << key->m_keyChar.tqunicode() << '\t' << key->m_keyText << '\t'
+        out << key->m_keyChar.unicode() << '\t' << key->m_keyText << '\t'
             << rect.left() << '\t' << rect.top() << '\t' << rect.width() << '\t' << rect.height() << endl;
     }
 
@@ -408,15 +408,15 @@ void KTouchKeyboard::saveKeyboard(TQWidget * window, const KURL& url) {
 }
 
 void KTouchKeyboard::applyPreferences(TQWidget * window, bool silent) {
-    // let's check whether the keyboard tqlayout has changed
+    // let's check whether the keyboard layout has changed
     if (KTouchConfig().m_currentKeyboardFile!=m_currentLayout) {
-        // if the tqlayout is the number tqlayout just create it and we're done
+        // if the layout is the number layout just create it and we're done
         if (KTouchConfig().m_currentKeyboardFile=="number.keyboard") {
             createDefaultKeyboard();
             resizeEvent(NULL);
             return;
         }
-        // ok, let's load this tqlayout
+        // ok, let's load this layout
         if (silent) {
             // during initialisation we don't want to have a message box, that's why this is silent
             if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile )))
@@ -427,8 +427,8 @@ void KTouchKeyboard::applyPreferences(TQWidget * window, bool silent) {
         else {
             TQString errorMsg;
             if (!loadKeyboard(window, KURL::fromPathOrURL( KTouchConfig().m_currentKeyboardFile ), &errorMsg)) {
-                KMessageBox::error( 0, i18n("Error reading the keyboard tqlayout; the default number keypad will "
-                    "be created instead. You can choose another keyboard tqlayout in the preferences dialog."),
+                KMessageBox::error( 0, i18n("Error reading the keyboard layout; the default number keypad will "
+                    "be created instead. You can choose another keyboard layout in the preferences dialog."),
                     errorMsg);
                 createDefaultKeyboard();
             }

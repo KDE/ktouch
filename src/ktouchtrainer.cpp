@@ -31,7 +31,7 @@
 #include "ktouchdefaults.h"
 #include "prefs.h"
 
-KTouchTrainer::KTouchTrainer(KTouchtqStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
+KTouchTrainer::KTouchTrainer(KTouchStatus *status, KTouchSlideLine *slideLine, KTouchKeyboardWidget *keyboard, KTouchLecture *lecture)
   : TQObject(),
     m_trainingTimer(new TQTimer),
     m_statusWidget(status),
@@ -233,7 +233,7 @@ void KTouchTrainer::enterPressed() {
 
 void KTouchTrainer::updateWidgets() {
     // update status widget
-    m_statusWidget->updatetqStatus(m_level, m_levelStats.correctness());
+    m_statusWidget->updateStatus(m_level, m_levelStats.correctness());
     // update slide line widget
     m_slideLineWidget->setStudentText(m_studentText);
     // update keyboard widget -> show next to be pressed char.
@@ -270,7 +270,7 @@ void KTouchTrainer::startTraining(bool keepLevel) {
 	gotoFirstLine();
 	updateStatusBarMessage(i18n("Starting training session: Waiting for first keypress...") );
 	updateStatusBar();
-	m_statusWidget->updatetqStatus(m_level, 1);
+	m_statusWidget->updateStatus(m_level, 1);
 	m_statusWidget->speedLCD->display( 0 );
 	m_trainingPaused=true;		// Go into "Pause" mode
 	m_trainingTimer->stop();    // Training timer will be started on first keypress.
@@ -285,7 +285,7 @@ void KTouchTrainer::pauseTraining() {
 	m_trainingPaused=true;
 	m_trainingTimer->stop();
 	m_slideLineWidget->setCursorTimerEnabled(false);
-	m_statusWidget->updatetqStatus(m_level, m_levelStats.correctness());
+	m_statusWidget->updateStatus(m_level, m_levelStats.correctness());
 	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session paused. Training continues on next keypress...") );
 	updateStatusBar();
@@ -298,7 +298,7 @@ void KTouchTrainer::pauseTraining() {
 void KTouchTrainer::continueTraining() {
 	m_trainingPaused=false;
 	m_slideLineWidget->setCursorTimerEnabled(true);
-	m_statusWidget->updatetqStatus(m_level, m_levelStats.correctness() );
+	m_statusWidget->updateStatus(m_level, m_levelStats.correctness() );
 	m_statusWidget->speedLCD->display( m_levelStats.charSpeed() );
 	updateStatusBarMessage(i18n("Training session! The time is running...") );
 	updateStatusBar();
@@ -317,12 +317,12 @@ void KTouchTrainer::storeTrainingStatistics() {
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
 		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
-		m_levelStats.m_timeRecorded = TQDateTime::tqcurrentDateTime();
+		m_levelStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
 	if (m_sessionStats.m_elapsedTime != 0) {
 	   //kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing session statistics!" << endl;
-		m_sessionStats.m_timeRecorded = TQDateTime::tqcurrentDateTime();
+		m_sessionStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_sessionStats.push_back( m_sessionStats );
 	}
 }
@@ -412,7 +412,7 @@ void KTouchTrainer::newLine() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::updateStatusBar() const {
-	KTouchPtr->changetqStatusbarStats(m_levelStats.m_correctChars, m_levelStats.m_totalChars, 
+	KTouchPtr->changeStatusbarStats(m_levelStats.m_correctChars, m_levelStats.m_totalChars, 
 		m_levelStats.m_words + m_wordsInCurrentLine,
 		m_sessionStats.m_correctChars, m_sessionStats.m_totalChars, 
 		m_sessionStats.m_words + m_wordsInCurrentLine);
@@ -420,7 +420,7 @@ void KTouchTrainer::updateStatusBar() const {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::updateStatusBarMessage(const TQString& message) const {
-	KTouchPtr->changetqStatusbarMessage(message);
+	KTouchPtr->changeStatusbarMessage(message);
 }
 // ----------------------------------------------------------------------------
 
@@ -487,7 +487,7 @@ void KTouchTrainer::statsChangeLevel() {
 	// are there level stats to be stored?
 	if (m_levelStats.m_elapsedTime != 0)  {
 		//kdDebug() << "[KTouchTrainer::storeTrainingStatistics]  Storing level statistics!" << endl;
-		m_levelStats.m_timeRecorded = TQDateTime::tqcurrentDateTime();
+		m_levelStats.m_timeRecorded = TQDateTime::currentDateTime();
 		data.m_levelStats.push_back( m_levelStats );
 	}
 	// clear level stats
@@ -497,6 +497,6 @@ void KTouchTrainer::statsChangeLevel() {
 	// remember level in session stats
 	m_sessionStats.m_levelNums.insert(m_level);
 	// show new level (in status widet) and 100% correctness
-	m_statusWidget->updatetqStatus(m_level, 1); 
+	m_statusWidget->updateStatus(m_level, 1); 
 }
 // ----------------------------------------------------------------------------

@@ -4,7 +4,7 @@
     <property name="name">
         <cstring>KTouchKeyboardEditorDlg</cstring>
     </property>
-    <property name="tqgeometry">
+    <property name="geometry">
         <rect>
             <x>0</x>
             <y>0</y>
@@ -21,7 +21,7 @@
         </property>
         <widget class="QLayoutWidget" row="2" column="0" rowspan="1" colspan="2">
             <property name="name">
-                <cstring>tqlayout3</cstring>
+                <cstring>layout3</cstring>
             </property>
             <hbox>
                 <property name="name">
@@ -45,7 +45,7 @@
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
-                    <property name="tqsizeHint">
+                    <property name="sizeHint">
                         <size>
                             <width>40</width>
                             <height>20</height>
@@ -128,7 +128,7 @@
                             <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property name="tqminimumSize">
+                    <property name="minimumSize">
                         <size>
                             <width>0</width>
                             <height>100</height>
@@ -169,7 +169,7 @@
                 </widget>
                 <widget class="QLayoutWidget">
                     <property name="name">
-                        <cstring>tqlayout3</cstring>
+                        <cstring>layout3</cstring>
                     </property>
                     <hbox>
                         <property name="name">
@@ -290,7 +290,7 @@
                             <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property name="tqmaximumSize">
+                    <property name="maximumSize">
                         <size>
                             <width>32767</width>
                             <height>70</height>
@@ -389,7 +389,7 @@
     <slot>removeBtnClicked()</slot>
     <slot>keySelectionChanged(QListBoxItem*)</slot>
 </slots>
-<tqlayoutdefaults spacing="6" margin="11"/>
+<layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kpushbutton.h</includehint>
     <includehint>kpushbutton.h</includehint>
