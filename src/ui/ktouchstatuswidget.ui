@@ -1,7 +1,8 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>KTouchStatusWidget</class>
- <widget class="QWidget" name="KTouchStatusWidget" >
-  <property name="geometry" >
+ <widget class="QWidget" name="KTouchStatusWidget">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -9,81 +10,96 @@
     <height>109</height>
    </rect>
   </property>
-  <property name="sizePolicy" >
-   <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
-  <layout class="QHBoxLayout" >
-   <property name="spacing" >
+  <layout class="QHBoxLayout">
+   <property name="spacing">
     <number>6</number>
    </property>
-   <property name="margin" >
+   <property name="margin">
     <number>9</number>
    </property>
    <item>
-    <widget class="QGroupBox" name="GroupBox1" >
-     <property name="title" >
+    <widget class="QGroupBox" name="GroupBox1">
+     <property name="title">
       <string>Level</string>
      </property>
-     <layout class="QHBoxLayout" >
-      <property name="spacing" >
-       <number>6</number>
-      </property>
-      <property name="margin" >
-       <number>9</number>
-      </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLCDNumber" name="levelLCD" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+       <widget class="QLCDNumber" name="levelLCD">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="toolTip" >
+        <property name="toolTip">
          <string>Current level</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>This shows which level you are at.</string>
         </property>
-        <property name="frameShape" >
+        <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
         </property>
-        <property name="numDigits" >
+        <property name="numDigits">
          <number>3</number>
         </property>
-        <property name="mode" >
+        <property name="mode">
          <enum>QLCDNumber::Dec</enum>
         </property>
-        <property name="segmentStyle" >
+        <property name="segmentStyle">
          <enum>QLCDNumber::Flat</enum>
         </property>
        </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" >
-        <property name="spacing" >
+       <layout class="QVBoxLayout">
+        <property name="spacing">
          <number>6</number>
         </property>
-        <property name="margin" >
+        <property name="margin">
          <number>0</number>
         </property>
         <item>
-         <widget class="KArrowButton" name="levelUpBtn" >
-          <property name="focusPolicy" >
-           <enum>Qt::NoFocus</enum>
+         <widget class="QToolButton" name="levelUpBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>8</width>
+            <height>8</height>
+           </size>
+          </property>
+          <property name="autoRaise">
+           <bool>true</bool>
+          </property>
+          <property name="arrowType">
+           <enum>Qt::UpArrow</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="KArrowButton" name="levelDownBtn" >
-          <property name="focusPolicy" >
-           <enum>Qt::NoFocus</enum>
+         <widget class="QToolButton" name="levelDownBtn">
+          <property name="text">
+           <string>...</string>
           </property>
-          <property name="arrowType" stdset="0" >
-           <number>2</number>
+          <property name="iconSize">
+           <size>
+            <width>8</width>
+            <height>8</height>
+           </size>
+          </property>
+          <property name="autoRaise">
+           <bool>true</bool>
+          </property>
+          <property name="arrowType">
+           <enum>Qt::DownArrow</enum>
           </property>
          </widget>
         </item>
@@ -93,53 +109,53 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="GroupBox11" >
-     <property name="title" >
+    <widget class="QGroupBox" name="GroupBox11">
+     <property name="title">
       <string>Speed</string>
      </property>
-     <layout class="QHBoxLayout" >
-      <property name="spacing" >
+     <layout class="QHBoxLayout">
+      <property name="spacing">
        <number>6</number>
       </property>
-      <property name="margin" >
+      <property name="margin">
        <number>9</number>
       </property>
       <item>
-       <layout class="QVBoxLayout" >
-        <property name="spacing" >
+       <layout class="QVBoxLayout">
+        <property name="spacing">
          <number>6</number>
         </property>
-        <property name="margin" >
+        <property name="margin">
          <number>0</number>
         </property>
         <item>
-         <widget class="KLed" name="speedLedGreen" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <widget class="KLed" name="speedLedGreen">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="state" >
+          <property name="state">
            <enum>KLed::Off</enum>
           </property>
-          <property name="shape" >
+          <property name="shape">
            <enum>KLed::Circular</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="KLed" name="speedLedRed" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <widget class="KLed" name="speedLedRed">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="state" >
+          <property name="state">
            <enum>KLed::Off</enum>
           </property>
-          <property name="color" >
+          <property name="color">
            <color>
             <red>255</red>
             <green>0</green>
@@ -151,26 +167,26 @@
        </layout>
       </item>
       <item>
-       <widget class="QLCDNumber" name="speedLCD" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+       <widget class="QLCDNumber" name="speedLCD">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="toolTip" >
+        <property name="toolTip">
          <string>Characters/Minute</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>This shows how fast you are typing. It measures the typing speed in characters per minute.</string>
         </property>
-        <property name="frameShape" >
+        <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
         </property>
-        <property name="numDigits" >
+        <property name="numDigits">
          <number>3</number>
         </property>
-        <property name="segmentStyle" >
+        <property name="segmentStyle">
          <enum>QLCDNumber::Flat</enum>
         </property>
        </widget>
@@ -179,56 +195,56 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="GroupBox12" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <widget class="QGroupBox" name="GroupBox12">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>1</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>Correctness</string>
      </property>
-     <layout class="QHBoxLayout" >
-      <property name="spacing" >
+     <layout class="QHBoxLayout">
+      <property name="spacing">
        <number>6</number>
       </property>
-      <property name="margin" >
+      <property name="margin">
        <number>9</number>
       </property>
       <item>
-       <layout class="QVBoxLayout" >
-        <property name="spacing" >
+       <layout class="QVBoxLayout">
+        <property name="spacing">
          <number>6</number>
         </property>
-        <property name="margin" >
+        <property name="margin">
          <number>0</number>
         </property>
         <item>
-         <widget class="KLed" name="correctnessLedGreen" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <widget class="KLed" name="correctnessLedGreen">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="state" >
+          <property name="state">
            <enum>KLed::Off</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="KLed" name="correctnessLedRed" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <widget class="KLed" name="correctnessLedRed">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
-          <property name="state" >
+          <property name="state">
            <enum>KLed::Off</enum>
           </property>
-          <property name="color" >
+          <property name="color">
            <color>
             <red>255</red>
             <green>0</green>
@@ -240,20 +256,20 @@
        </layout>
       </item>
       <item>
-       <widget class="QProgressBar" name="correctnessBar" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+       <widget class="QProgressBar" name="correctnessBar">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="toolTip" >
+        <property name="toolTip">
          <string>How much are you typing correctly?</string>
         </property>
-        <property name="whatsThis" >
+        <property name="whatsThis">
          <string>This shows how correctly you are typing.</string>
         </property>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
@@ -262,26 +278,26 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="GroupBox4" >
-     <property name="sizePolicy" >
-      <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+    <widget class="QGroupBox" name="GroupBox4">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
        <horstretch>2</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="title" >
+     <property name="title">
       <string>New Characters in This Level</string>
      </property>
-     <layout class="QHBoxLayout" >
+     <layout class="QHBoxLayout">
       <item>
-       <widget class="QLabel" name="newCharsLabel" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+       <widget class="QLabel" name="newCharsLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="font" >
+        <property name="font">
          <font>
           <family>Sans Serif</family>
           <pointsize>18</pointsize>
@@ -292,13 +308,13 @@
           <strikeout>false</strikeout>
          </font>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>new characters</string>
         </property>
-        <property name="scaledContents" >
+        <property name="scaledContents">
          <bool>true</bool>
         </property>
-        <property name="alignment" >
+        <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
@@ -308,12 +324,7 @@
    </item>
   </layout>
  </widget>
-  <customwidgets>
-  <customwidget>
-   <class>KArrowButton</class>
-   <extends>QPushButton</extends>
-   <header>karrowbutton.h</header>
-  </customwidget>
+ <customwidgets>
   <customwidget>
    <class>KLed</class>
    <extends>QWidget</extends>
