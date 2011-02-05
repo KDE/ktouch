@@ -4,6 +4,7 @@
 project( ktouch )
 
 # subdirectories to build
+add_subdirectory( doc )
 add_subdirectory( src ) 
 add_subdirectory( keyboards ) 
 add_subdirectory( training ) 
