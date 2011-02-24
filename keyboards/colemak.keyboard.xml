@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <KTouchKeyboard>
  <Title>English Colemak</Title>
+ <Comment>Original colemak.keyboard.xml, KeyConnectors rectified by Wladimir Schäfer 2010-09-27</Comment>
  <FontSuggestions>Sans Serif,9,-1,5,50,0,0,0,0,0</FontSuggestions>
- <Language>en</Language>
+ <Language>en (English)</Language>
  <Keys>
   <Key Width="80" X="180" Y="200" Height="80" Type="FINGER" >
    <Char Unicode="65" Position="TopLeft" >A</Char>
@@ -254,8 +255,8 @@
   <KeyConnector KeyUnicode="55" TargetKeyIndex="26" />
   <KeyConnector KeyUnicode="56" TargetKeyIndex="27" />
   <KeyConnector KeyUnicode="57" TargetKeyIndex="28" />
-  <KeyConnector KeyUnicode="58" TargetKeyIndex="7" ModifierIndex="16" />
-  <KeyConnector KeyUnicode="59" TargetKeyIndex="7" />
+  <KeyConnector KeyUnicode="58" TargetKeyIndex="41" ModifierIndex="16" />
+  <KeyConnector KeyUnicode="59" TargetKeyIndex="41" />
   <KeyConnector KeyUnicode="60" TargetKeyIndex="55" ModifierIndex="16" />
   <KeyConnector KeyUnicode="61" TargetKeyIndex="31" />
   <KeyConnector KeyUnicode="62" TargetKeyIndex="56" ModifierIndex="16" />
@@ -264,28 +265,28 @@
   <KeyConnector KeyUnicode="65" TargetKeyIndex="0" ModifierIndex="10" />
   <KeyConnector KeyUnicode="66" TargetKeyIndex="52" ModifierIndex="10" />
   <KeyConnector KeyUnicode="67" TargetKeyIndex="50" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="68" TargetKeyIndex="2" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="69" TargetKeyIndex="34" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="70" TargetKeyIndex="3" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="71" TargetKeyIndex="44" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="68" TargetKeyIndex="44" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="69" TargetKeyIndex="5" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="70" TargetKeyIndex="34" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="71" TargetKeyIndex="36" ModifierIndex="10" />
   <KeyConnector KeyUnicode="72" TargetKeyIndex="45" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="73" TargetKeyIndex="39" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="74" TargetKeyIndex="4" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="75" TargetKeyIndex="5" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="76" TargetKeyIndex="6" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="73" TargetKeyIndex="6" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="74" TargetKeyIndex="48" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="75" TargetKeyIndex="53" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="76" TargetKeyIndex="38" ModifierIndex="10" />
   <KeyConnector KeyUnicode="77" TargetKeyIndex="54" ModifierIndex="16" />
-  <KeyConnector KeyUnicode="78" TargetKeyIndex="53" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="79" TargetKeyIndex="40" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="80" TargetKeyIndex="41" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="78" TargetKeyIndex="4" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="79" TargetKeyIndex="7" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="80" TargetKeyIndex="35" ModifierIndex="10" />
   <KeyConnector KeyUnicode="81" TargetKeyIndex="32" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="82" TargetKeyIndex="35" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="83" TargetKeyIndex="1" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="84" TargetKeyIndex="36" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="85" TargetKeyIndex="38" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="82" TargetKeyIndex="1" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="83" TargetKeyIndex="2" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="84" TargetKeyIndex="3" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="85" TargetKeyIndex="39" ModifierIndex="10" />
   <KeyConnector KeyUnicode="86" TargetKeyIndex="51" ModifierIndex="10" />
   <KeyConnector KeyUnicode="87" TargetKeyIndex="33" ModifierIndex="10" />
   <KeyConnector KeyUnicode="88" TargetKeyIndex="49" ModifierIndex="10" />
-  <KeyConnector KeyUnicode="89" TargetKeyIndex="48" ModifierIndex="10" />
+  <KeyConnector KeyUnicode="89" TargetKeyIndex="40" ModifierIndex="10" />
   <KeyConnector KeyUnicode="90" TargetKeyIndex="37" ModifierIndex="10" />
   <KeyConnector KeyUnicode="91" TargetKeyIndex="42" />
   <KeyConnector KeyUnicode="92" TargetKeyIndex="47" />
@@ -296,28 +297,28 @@
   <KeyConnector KeyUnicode="97" TargetKeyIndex="0" />
   <KeyConnector KeyUnicode="98" TargetKeyIndex="52" />
   <KeyConnector KeyUnicode="99" TargetKeyIndex="50" />
-  <KeyConnector KeyUnicode="100" TargetKeyIndex="2" />
-  <KeyConnector KeyUnicode="101" TargetKeyIndex="34" />
-  <KeyConnector KeyUnicode="102" TargetKeyIndex="3" />
-  <KeyConnector KeyUnicode="103" TargetKeyIndex="44" />
+  <KeyConnector KeyUnicode="100" TargetKeyIndex="44" />
+  <KeyConnector KeyUnicode="101" TargetKeyIndex="5" />
+  <KeyConnector KeyUnicode="102" TargetKeyIndex="34" />
+  <KeyConnector KeyUnicode="103" TargetKeyIndex="36" />
   <KeyConnector KeyUnicode="104" TargetKeyIndex="45" />
-  <KeyConnector KeyUnicode="105" TargetKeyIndex="39" />
-  <KeyConnector KeyUnicode="106" TargetKeyIndex="4" />
-  <KeyConnector KeyUnicode="107" TargetKeyIndex="5" />
-  <KeyConnector KeyUnicode="108" TargetKeyIndex="6" />
+  <KeyConnector KeyUnicode="105" TargetKeyIndex="6" />
+  <KeyConnector KeyUnicode="106" TargetKeyIndex="48" />
+  <KeyConnector KeyUnicode="107" TargetKeyIndex="53" />
+  <KeyConnector KeyUnicode="108" TargetKeyIndex="38" />
   <KeyConnector KeyUnicode="109" TargetKeyIndex="54" />
-  <KeyConnector KeyUnicode="110" TargetKeyIndex="53" />
-  <KeyConnector KeyUnicode="111" TargetKeyIndex="40" />
-  <KeyConnector KeyUnicode="112" TargetKeyIndex="41" />
+  <KeyConnector KeyUnicode="110" TargetKeyIndex="4" />
+  <KeyConnector KeyUnicode="111" TargetKeyIndex="7" />
+  <KeyConnector KeyUnicode="112" TargetKeyIndex="35" />
   <KeyConnector KeyUnicode="113" TargetKeyIndex="32" />
-  <KeyConnector KeyUnicode="114" TargetKeyIndex="35" />
-  <KeyConnector KeyUnicode="115" TargetKeyIndex="1" />
-  <KeyConnector KeyUnicode="116" TargetKeyIndex="36" />
-  <KeyConnector KeyUnicode="117" TargetKeyIndex="38" />
+  <KeyConnector KeyUnicode="114" TargetKeyIndex="1" />
+  <KeyConnector KeyUnicode="115" TargetKeyIndex="2" />
+  <KeyConnector KeyUnicode="116" TargetKeyIndex="3" />
+  <KeyConnector KeyUnicode="117" TargetKeyIndex="39" />
   <KeyConnector KeyUnicode="118" TargetKeyIndex="51" />
   <KeyConnector KeyUnicode="119" TargetKeyIndex="33" />
   <KeyConnector KeyUnicode="120" TargetKeyIndex="49" />
-  <KeyConnector KeyUnicode="121" TargetKeyIndex="48" />
+  <KeyConnector KeyUnicode="121" TargetKeyIndex="40" />
   <KeyConnector KeyUnicode="122" TargetKeyIndex="37" />
   <KeyConnector KeyUnicode="123" TargetKeyIndex="42" ModifierIndex="16" />
   <KeyConnector KeyUnicode="124" TargetKeyIndex="47" ModifierIndex="16" />
