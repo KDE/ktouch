@@ -123,10 +123,15 @@ void KTouchStatisticsDialog::lectureActivated(int index) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::clearHistory() {
-	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?")) == KMessageBox::Yes) {
-		KTouchPtr->clearStatistics(); // clear statistics data in KTouch
+	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?\rThe training session will restart at the current level.")) == KMessageBox::Yes) {
+		KTouchPtr->clearStatistics(true); // clear statistics data in KTouch
 		// clear and reset local copy
 		m_allStats.clear();
+		m_currLevelStats.clear();
+		m_currSessionStats.clear();
+		m_currSessionStats.m_charStats.clear();
+
+		//reset lecture Combo
 		QString s = lectureCombo->currentText();
 		lectureCombo->clear();
 		lectureCombo->addItem(s);
@@ -134,6 +139,12 @@ void KTouchStatisticsDialog::clearHistory() {
 		lectureCombo->setCurrentIndex(m_currentIndex);
 		lectureActivated(m_currentIndex);
 		updateChartTab();
+
+		//reset and refresh statistic GUI
+		correctnessBar->setValue(0);
+		correctnessBarLevel->setValue(0);
+		updateCurrentLevelTab();
+		updateCurrentSessionTab();
 	}
 }
 // ----------------------------------------------------------------------------
@@ -143,29 +154,32 @@ void KTouchStatisticsDialog::updateCurrentSessionTab() {
 	QString levelnums;
     int last_level = -2;
     int levels_count = 0;
-	QSet<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
-	--last_it;
-	for (QSet<unsigned int>::ConstIterator it = m_currSessionStats.m_levelNums.constBegin();
-		it != m_currSessionStats.m_levelNums.constEnd(); ++it)
+	if(!m_currSessionStats.m_levelNums.isEmpty())
 	{
-		// do we have a level number that is not a subsequent level of the
-		// previous?
-		
-		if ((static_cast<unsigned int>(last_level + 1) != *it) ||
-            (it == last_it))
-		{
-			if (it != m_currSessionStats.m_levelNums.begin()) {
-				if (levels_count > 1)	levelnums += "...";
-				else					levelnums += ',';
-			}
-			levels_count = 0;
-			levelnums += QString("%1").arg(*it+1);
-			
-		}
-		else {
-			++levels_count;  // increase level count
-		}
-		last_level = *it;
+		QSet<unsigned int>::iterator last_it = m_currSessionStats.m_levelNums.end();
+		  --last_it;
+		  for (QSet<unsigned int>::ConstIterator it = m_currSessionStats.m_levelNums.constBegin();
+			  it != m_currSessionStats.m_levelNums.constEnd(); ++it)
+		  {
+			  // do we have a level number that is not a subsequent level of the
+			  // previous?
+  
+			  if ((static_cast<unsigned int>(last_level + 1) != *it) ||
+		      (it == last_it))
+			  {
+				  if (it != m_currSessionStats.m_levelNums.begin()) {
+					  if (levels_count > 1)	levelnums += "...";
+					  else					levelnums += ',';
+				  }
+				  levels_count = 0;
+				  levelnums += QString("%1").arg(*it+1);
+				  
+			  }
+			  else {
+				  ++levels_count;  // increase level count
+			  }
+			  last_level = *it;
+		  }
 	}
 	levelLabel1->setText(levelnums);
     // general stats group

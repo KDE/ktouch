@@ -64,8 +64,8 @@ class KTouch : public KXmlGuiWindow {
 	const QStringList& keyboardFiles() const { return m_keyboardFiles; }
 	/// Returns the statistics object for the current lecture (as reference)
 	KTouchLectureStats& getCurrentLectureStats();
-	/// Clears the statistics data.
-	void clearStatistics();
+	/// Clears the statistics data and restarts the current level
+	void clearStatistics(bool startLevel);
     /// Updates the status bar text.
     void changeStatusbarMessage(const QString& text);
     /// Updates the status bar statistics.

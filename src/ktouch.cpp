@@ -86,7 +86,7 @@ KTouch::KTouch() :
 
     // first clear statistics data (also make sure our mapping contains
     // the "default" user)
-    clearStatistics();
+    clearStatistics(false);
     KUrl stat_file = KGlobal::dirs()->findResource("data", "ktouch/statistics.xml");
     // read previous stats from file
     KTouchStatisticsData::readUserStats(this, stat_file, m_userStats);
@@ -154,10 +154,12 @@ KTouchLectureStats& KTouch::getCurrentLectureStats() {
 }
 // ----------------------------------------------------------------------------
 
-void KTouch::clearStatistics() {
+void KTouch::clearStatistics(bool startLevel) {
 	m_userStats.clear();
 	m_userStats[Prefs::currentUserName()].m_userName = i18n("Default User");
-}
+	if(startLevel)
+	  m_trainer->startTraining(true);
+	}
 // ----------------------------------------------------------------------------
 
 // ********************
