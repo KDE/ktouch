@@ -123,7 +123,7 @@ void KTouchStatisticsDialog::lectureActivated(int index) {
 // ----------------------------------------------------------------------------
 
 void KTouchStatisticsDialog::clearHistory() {
-	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?\rThe training session will restart at the current level.")) == KMessageBox::Yes) {
+	if (KMessageBox::questionYesNo(this, i18n("Erase all statistics data for the current user?\nThe training session will restart at the current level.")) == KMessageBox::Yes) {
 		KTouchPtr->clearStatistics(true); // clear statistics data in KTouch
 		// clear and reset local copy
 		m_allStats.clear();
