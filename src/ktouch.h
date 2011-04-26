@@ -162,6 +162,7 @@ class KTouch : public KXmlGuiWindow {
 
     QStringList     		m_lectureFiles;         ///< A list of all default lecture files.
     QStringList     		m_lectureTitles;        ///< A list of the titles of all default lecture files.
+    QString 			m_startLectureDir;	/// Path to standard lecture files. Usually /usr/share/apps/ktouch
 	
 	QStringList     		m_examinationFiles;     ///< A list of all default examination files.
 	QStringList     		m_examinationTitles;    ///< A list of the titles of all default examination files.

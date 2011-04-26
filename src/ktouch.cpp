@@ -213,7 +213,7 @@ void KTouch::inputMethodEvent( QInputMethodEvent* m ){
 // The action File->Open text...
 void KTouch::fileOpenText() {
     trainingPause();
-    KUrl tmp = KFileDialog::getOpenUrl(QString(), i18n("*.txt|Text files\n*|All files"), this, i18n("Select Practice Text") );
+    KUrl tmp = KFileDialog::getOpenUrl(QString(), i18n("*.txt *ktouch.xml|Text files\n*|All files"), this, i18n("Select Practice Text") );
     if (!tmp.isEmpty()) {
         // TODO : ask user for training options
         // create a default lecture
@@ -263,7 +263,7 @@ void KTouch::fileOpenText() {
 // The action File->Open lecture...
 void KTouch::fileOpenLecture() {
     trainingPause();
-    KUrl tmp = KFileDialog::getOpenUrl(QString(), QString(), this, i18n("Select Training Lecture File") );
+    KUrl tmp = KFileDialog::getOpenUrl(m_startLectureDir,i18n("*.ktouch.xml|Lecture files"), this, i18n("Select Training Lecture File") );
     if (!tmp.isEmpty()) {
         // first store training statistics
         m_trainer->storeTrainingStatistics();
@@ -272,6 +272,8 @@ void KTouch::fileOpenLecture() {
         updateFontFromLecture();
         // adjust check marks in quick-select menus
         updateLectureActionCheck();
+	// Saves path to last opened lecture file
+	m_startLectureDir = tmp.url();
     }
     // restart training session from level 1 here...
     m_trainer->startTraining(false);
@@ -861,6 +863,7 @@ void KTouch::updateFileLists() {
             }
         }
         sort_lists(m_lectureTitles, m_lectureFiles);
+	m_startLectureDir = m_lectureFiles.first();
     }
 
     // Now find predefined files with colour schemes
