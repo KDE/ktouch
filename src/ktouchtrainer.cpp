@@ -86,7 +86,7 @@ void KTouchTrainer::gotoFirstLine() {
 void KTouchTrainer::keyPressed(QChar key) {
 	// NOTE : In this function we need to distinguish between left and right
 	//        typing. Use the config setting Prefs::right2LeftTyping() for that.
-    if(Prefs::soundOnKeypress()){
+   if(Prefs::soundOnKeypress()){
 #ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_typeWriterSound.url());
         m_player->play();
@@ -175,7 +175,7 @@ void KTouchTrainer::backspacePressed() {
 // ----------------------------------------------------------------------------
 
 void KTouchTrainer::enterPressed() {
-    if(Prefs::soundOnKeypress()){
+     if(Prefs::soundOnKeypress()){
 #ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
         m_player->setCurrentSource(m_typeWriterSound.url());
         m_player->play();
@@ -223,7 +223,7 @@ void KTouchTrainer::enterPressed() {
 		dlg.showInfo(increase_level, decrease_level, m_levelStats);
 #endif // LEVELSUMMARYDIALOG_ENABLED
 
-		if (Prefs::autoLevelChange()) {
+		if (Prefs::autoLevelChange()  && m_lecture->levelCount() > 1) {
 			if (increase_level) {
 				levelUp();
 				return;
@@ -240,7 +240,7 @@ void KTouchTrainer::enterPressed() {
     else {
 		// we are still in the middle of the level
 		// let's check for mid-level advance/fall back
-    	if (Prefs::autoLevelChange() && !Prefs::completeWholeTrainingLevel()) {
+    	if (Prefs::autoLevelChange() && !Prefs::completeWholeTrainingLevel() && m_lecture->levelCount() > 1) {
 			// we are allowed to advance early, or go back to the last/lower level
 
 			// first check if we can advance
