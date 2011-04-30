@@ -249,7 +249,7 @@ void KTouchTrainer::enterPressed() {
 				return;
 			}
 			// now check if we need to go back to the last level
-        	if (decrease_level && m_decLinesCount >= Prefs::numberOfLinesWorkload() && m_level != 0) {
+        	if (decrease_level && m_decLinesCount >= Prefs::numberOfLinesWorkload() && m_level != 0 && m_lecture->levelCount() > 1) {
             	levelDown();
             	return;
         	}
