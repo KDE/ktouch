@@ -231,13 +231,17 @@ void KTouch::fileOpenText() {
             // read text in stringlist
             int max_len = 0;
             int max_lines = 0;
-            QString line = in.readLine();
+            QString line = 0;
             QStringList lines;
-            while (!line.isNull() && ++max_lines < 1000) {
+	while(!in.atEnd() && ++max_lines < 1000) {
+		line = in.readLine();
+		if(line.isEmpty()) {
+		  continue;
+		} 
                 lines.append(line.trimmed());
                 max_len = qMax(max_len, line.length());
-                line = in.readLine();
-            }
+            } 
+            
             // store the lecture data
             lec.setTitle(i18n("Imported text from file '%1'", tmp.fileName()));
             KTouchLevelData dat(i18n("generated from text file"), i18n("all available"));
@@ -576,7 +580,7 @@ void KTouch::init() {
     //kDebug() << "[KTouch::init]  " << m_lectureFiles.count() << " lectures available";
     //kDebug() << "[KTouch::init]  " << m_keyboardFiles.count() << " keyboard layouts available";
     //kDebug() << "[KTouch::init]  " << m_examinationFiles.count() << " examination files available";
-
+     
     if (Prefs::currentLectureFile() == "default") {
             Prefs::setCurrentLectureFile(QString());
 //		/// \todo look up a lecture in the language of the KDE locale
