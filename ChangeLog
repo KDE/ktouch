@@ -1,3 +1,14 @@
+2011-05-07 Rüthemann Peter <peter.ruethemann@gmail.com>
+  * Added new keyboard layout Spanish Dvorak
+  * Fixed Spanish keyboard layout
+  * Fixed Colemak keyboard layout
+  * Added new keyboard layout Brazilian
+  * Fix for clear history bug
+  * Fix for imported newlines of plain text files
+  * Fix for break up of lecture originating from plain lecture files
+  * Open lecture dialog opens directly in lecture folder
+  * Added new keyboard layout Bulgarian
+
 2009-10-15 Sascha Peilicke <sasch.pe@gmx.de>
   * Added new keyboard layout german neo 2
 
