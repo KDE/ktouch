@@ -42,6 +42,8 @@ class KTouchLevelData {
     const QString& comment() const { return m_comment; }
     /// Returns the new characters string.
     const QString& newChars() const { return m_newChars; }
+    /// Return the new Level Character label
+    const QString& newCharsLabel() const { return m_newCharsLabel; }
     /// Returns the line with number 'lineNumber' (0 means first line).
     ///
     /// If the line number is out of range, the first line will be returned.
@@ -65,6 +67,7 @@ class KTouchLevelData {
 
     QString                 m_comment;      ///< A comment for the level.
     QString                 m_newChars;     ///< Contains the newly introduced characters in this level.
+    QString                 m_newCharsLabel;///< Contains a description of the newly introduced characters in this level
     QStringList	        	m_lines;        ///< The lines of the level.
 
     // so I don't have to allow access to read/write function to everybody :-)

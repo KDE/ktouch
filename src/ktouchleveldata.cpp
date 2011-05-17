@@ -30,7 +30,7 @@ void KTouchLevelData::setLines(const QStringList & lines) {
 }
 
 void KTouchLevelData::createDefault() {
-    m_newChars = i18n("Quite a lot");
+    m_newCharsLabel = i18n("Quite a lot");
     m_lines.clear();
     QString text = i18n("This is a small default text. If you want\n"
                         "to start practicing touch typing, open\n"
@@ -68,11 +68,24 @@ bool KTouchLevelData::readLevel(QTextStream& in) {
 }
 
 bool KTouchLevelData::readLevelXML(const QDomNode &in) {
-	QDomNode newChars = in.namedItem("NewCharacters");
-	if (newChars.isNull())  m_newChars = i18nc("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
-	else					m_newChars = newChars.firstChild().nodeValue();
+	QDomNode newChars = in.namedItem("NewCharacters"); //reads NewCharacters tag
+	QDomNode newCharsLabel = in.namedItem("NewCharsLabel"); // reads description of new chars
+	if (newChars.isNull() && newCharsLabel.isNull())  //checks whether both tags are missing
+	  m_newChars = i18nc("basically all characters on the keyboard","abcdefghijklmnopqrstuvwxyz");
+	else if(newCharsLabel.isNull()) {  //checks whether only newCharacter tag is available (important for old xml files)
+	  m_newChars = newChars.firstChild().nodeValue();
+	  m_newCharsLabel = m_newChars;
+	}
+	else if(newChars.isNull())
+	  m_newCharsLabel = newCharsLabel.firstChild().nodeValue();
+	else {
+	  m_newChars = newChars.firstChild().nodeValue();
+	  m_newCharsLabel = newCharsLabel.firstChild().nodeValue();
+	}
+		
 	QDomNode levelComment = in.namedItem("LevelComment");
 	if (!levelComment.isNull())  m_comment = levelComment.firstChild().nodeValue();
+	
     m_lines.clear();
 	QDomNode line = in.namedItem("Line");
 	while ( !line.isNull() ) {
