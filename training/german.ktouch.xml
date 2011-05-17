@@ -6,8 +6,9 @@
 Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
  <FontSuggestions>Courier 10 Pitch</FontSuggestions>
  <Levels>
-  <Level>
-   <NewCharacters>Grundstellung</NewCharacters>
+  <Level> 
+   <NewCharsLabel>Grundstellung</NewCharsLabel>
+   <NewCharacters>asdfjklö</NewCharacters>
    <Line>f f f f f f fff fff fff f f f f f f fff fff fff f f f f f f f fff</Line>
    <Line>j j j j j j jjj jjj jjj j j j j j j jjj jjj jjj j j j j j j j jjj</Line>
    <Line>fff jjj fff jjj jjj fff jjj fff fjf fjf fjf jfj jfj jfj fjf jfjfj</Line>
@@ -48,7 +49,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>öd fad öd fad öd fad das ja das ja das ja da da lös fad lös ja öd</Line>
   </Level>
   <Level>
-   <NewCharacters>e und i</NewCharacters>
+   <NewCharsLabel>e und i</NewCharsLabel>
+   <NewCharacters>ei</NewCharacters>
    <Line>asdf ölkj fdsa jklö asdf ölkj fdsa jklö asdf ölkj fdsa jklö asdfö</Line>
    <Line>das dass lös fad dass lös als dass las lös fad dass als dass dass</Line>
    <Line>ded ded ded dej dek del deö ded deö del dek dej ded dej dek delde</Line>
@@ -81,7 +83,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>jede jede ödes ödes dass dass jede jede ödes ödes dass dass lasse</Line>
   </Level>
   <Level>
-   <NewCharacters>Komma</NewCharacters>
+   <NewCharsLabel>Komma</NewCharsLabel>
+   <NewCharacters>,</NewCharacters>
    <Line>asdf jklö desa kilö fesa jilö asdf jklö desa kilö fesa jilö desak</Line>
    <Line>als die all sie sei das las die all als sei sie las das all leise</Line>
    <Line>kik k,k kik k,k k,ö k,l k,k k,j k,k k,l k,ö k,j kik k,k k,ö kik,k</Line>
@@ -111,7 +114,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>jede las leise, jede las das alles leise, es sei ideal, als, jede</Line>
   </Level>
   <Level>
-   <NewCharacters>r und u</NewCharacters>
+   <NewCharsLabel>r und u</NewCharsLabel>
+   <NewCharacters>ru</NewCharacters>
    <Line>asdf, jklö, desa, jilö, fesa, jilö, asdf, jklö, desa, kilö, desa,</Line>
    <Line>da, ja, es, öd, je, es, da, öd, je, ja, es, öd, ja, je, da, ödes,</Line>
    <Line>ded frf frf frf frj frk frl fri frf frd frs fra frf fri fra dedfr</Line>
@@ -144,7 +148,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>erlasse es, erlasse dies, erlasse dieses, leider dies alles leer,</Line>
   </Level>
   <Level>
-   <NewCharacters>g und h</NewCharacters>
+   <NewCharsLabel>g und h</NewCharsLabel>
+   <NewCharacters>gh</NewCharacters>
    <Line>asdedfrf ölkikjuj frfdedsa jujkiklö asdedfrf ölkikjuj jk,kl kik,k</Line>
    <Line>frei, leer, lies, klar, darf, faul, frei, leer, lies, klar, darf,</Line>
    <Line>fgf fgf fgf fgö fgl fgk fgj fgf fga fgs fgd fgf fga fgs fgd fgfgf</Line>
@@ -177,7 +182,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>das sei grell, dies sei greller, da lag es, er griff es hier auf,</Line>
   </Level>
   <Level>
-   <NewCharacters>t und z</NewCharacters>
+   <NewCharsLabel>z und t</NewCharsLabel>
+   <NewCharacters>zt</NewCharacters>
    <Line>frfgf jujhj asded ölkik jk,kö frfgf jujhj asded ölkik jk,kö frf,f</Line>
    <Line>jage, half, lege, hell, sage, kahl, fege, sehr, rege, hilf, grau,</Line>
    <Line>frf ftf ftf ftf frf fta fts ftd fta fts ftd tfö tfl tfk tfj frftf</Line>
@@ -210,7 +216,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>er hat gezahlt, er hat jetzt gezahlt, sie hat es jetzt ausgezahlt</Line>
   </Level>
   <Level>
-   <NewCharacters>v und m</NewCharacters>
+   <NewCharsLabel>v und m</NewCharsLabel>
+   <NewCharacters>vm</NewCharacters>
    <Line>asded frfgf ölkik jujhj frftf jujzj jk,kö ök,kj frftf jujzj jk,kö</Line>
    <Line>satt, zart, gute, zage, rate, zart, riet, zage, treu, zart, rate,</Line>
    <Line>frf fvf fvf fvf fvö fvl fvk fvj fva fvs fvd fvf fvd fvs fvs fvfvf</Line>
@@ -243,7 +250,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>er merkt alles, er vermerkte das meiste, sie verlieh heute alles,</Line>
   </Level>
   <Level>
-   <NewCharacters>b und n</NewCharacters>
+   <NewCharsLabel>b und n</NewCharsLabel>
+   <NewCharacters>bn</NewCharacters>
    <Line>frf fvf juj jmj frfvf jujmj fgf jhj frf fvf juj jmj k,k k,ö frfvf</Line>
    <Line>am, im, mit, mir, mag, mal, mehr, viel, immer, jedem, damit, mir,</Line>
    <Line>fvf fbf fbf fbf fbö fbl fbk fbj fvf fbf fbd fbs fba fbs fbd fvfbf</Line>
@@ -276,7 +284,8 @@ Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</Comment>
    <Line>er lernt eifrig, sie lernt eifrig, alle lernen jetzt aber eifrig,</Line>
   </Level>
   <Level>
-   <NewCharacters>Punkt</NewCharacters>
+   <NewCharsLabel>Punkt</NewCharsLabel>
+   <NewCharacters>.</NewCharacters>
    <Line>asdfbf ölkjnj fbfdsa jnjklö frfded jujkik fvfbfv jmjnjm k,k k,k,k</Line>
    <Line>an, ab, in, im, er, es, an, ab, in, im, er, es, an, ab, in, ihre,</Line>
    <Line>jmj k,k l.l l.l l.l l.a l.s l.d l.f l.j l.k l.ö l.j l.k l.j l.l.l</Line>

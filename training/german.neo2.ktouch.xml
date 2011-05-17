@@ -7,7 +7,8 @@ Homepage: http://neo-layout.org
  <FontSuggestions>Sans Serif</FontSuggestions>
  <Levels>
   <Level>
-   <NewCharacters>Zeigefinger: e und n</NewCharacters>
+   <NewCharsLabel>Zeigefinger: e und n</NewCharsLabel>
+   <NewCharacters>en</NewCharacters>
    <Line>ee ee ee eeee ee eeee ee eeee ee ee ee eeee ee eeee ee eeee nn nn nn nnnn nn nnnn nn nnnn nn nn nn nnnn nn nnnn nn nnnn</Line>
    <Line>en en en eenn en eenn en eenn en en en eenn en eenn en eenn en en en eenn en eenn en eenn en en en eenn en eenn en eenn</Line>
    <Line>ne ne ne nnee ne nnee ne nnee ne ne ne nnee ne nnee ne nnee ne ne ne nnee ne nnee ne nnee ne ne ne nnee ne nnee ne nnee</Line>
@@ -15,7 +16,8 @@ Homepage: http://neo-layout.org
    <Line>eeen nnne eene nnen enee nenn eeen nnne eene nnen enee nenn eeen nnne eene nnen enee nenn eeen nnne eene nnen enee nenn</Line>
   </Level>
   <Level>
-   <NewCharacters>Mittelfinger: a und r</NewCharacters>
+   <NewCharsLabel>Mittelfinger: a und r</NewCharsLabel>
+   <NewCharacters>ar</NewCharacters>
    <Line>aa aa aa aaaa aa aaaa aa aaaa aa aa aa aaaa aa aaaa aa aaaa rr rr rr rrrr rr rrrr rr rrrr rr rr rr rrrr rr rrrr rr rrrr</Line>
    <Line>ar ar ar aarr ar aarr ar aarr ar ar ar aarr ar aarr ar aarr ar ar ar aarr ar aarr ar aarr ar ar ar aarr ar aarr ar aarr</Line>
    <Line>ra ra ra rraa ra rraa ra rraa ra ra ra rraa ra rraa ra rraa ra ra ra rraa ra rraa ra rraa ra ra ra rraa ra rraa ra rraa</Line>
@@ -25,7 +27,8 @@ Homepage: http://neo-layout.org
    <Line>aaee aann aarr aenr rrnn rree rraa rnea aaee aann aarr aenr rrnn rree rraa rnea aaee aann aarr aenr rrnn rree rraa rnea</Line>
   </Level>
   <Level>
-   <NewCharacters>kleine Finger: u und d</NewCharacters>
+   <NewCharsLabel>kleine Finger: u und d</NewCharsLabel>
+   <NewCharacters>ud</NewCharacters>
    <Line>uu uu uu uuuu uu uuuu uu uuuu uu uu uu uuuu uu uuuu uu uuuu uu uu uu uuuu uu uuuu uu uuuu uu uu uu uuuu uu uuuu uu uuuu</Line>
    <Line>dd dd dd dddd dd dddd dd dddd dd dd dd dddd dd dddd dd dddd dd dd dd dddd dd dddd dd dddd dd dd dd dddd dd dddd dd dddd</Line>
    <Line>ud ud ud uudd ud uudd ud uudd ud ud ud uudd ud uudd ud uudd ud ud ud uudd ud uudd ud uudd ud ud ud uudd ud uudd ud uudd</Line>
@@ -35,7 +38,8 @@ Homepage: http://neo-layout.org
    <Line>uuaa eenn rrdd uuaa eenn rrdd ddrr nnee aauu uae drn uae drn uae drn uae nrd uae nrd uae nrd drn eau drn eau drn eau</Line>
   </Level>
   <Level>
-   <NewCharacters>Ringfinger: i und t</NewCharacters>
+   <NewCharsLabel>Ringfinger: i und t</NewCharsLabel>
+   <NewCharacters>it</NewCharacters>
    <Line>ii ii ii iiii ii iiii ii iiii ii ii ii iiii ii iiii ii iiii ii ii ii iiii ii iiii ii iiii ii ii ii iiii ii iiii ii iiii</Line>
    <Line>tt tt tt tttt tt tttt tt tttt tt tt tt tttt tt tttt tt tttt tt tt tt tttt tt tttt tt tttt tt tt tt tttt tt tttt tt tttt</Line>
    <Line>it it it iitt it iitt it iitt it it it iitt it iitt it iitt it it it iitt it iitt it iitt it it it iitt it iitt it iitt</Line>
@@ -45,7 +49,7 @@ Homepage: http://neo-layout.org
    <Line>uiae dtrn uiae dtrn uiae dtrn eaiu nrtd eaiu nrtd eaiu nrtd uiae nrtd uiae nrtd uiae nrtd dtrn eaiu dtrn eaiu dtrn eaiu</Line>
   </Level>
   <Level>
-   <NewCharacters>Grundstellung uiae nrtd</NewCharacters>
+   <NewCharsLabel>Grundstellung uiae nrtd</NewCharsLabel>
    <Line>uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd</Line>
    <Line>dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu</Line>
    <Line>uiae dtrn uiae dtrn uiae dtrn uiae dtrn uiae dtrn uiae dtrn eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd</Line>
@@ -54,7 +58,7 @@ Homepage: http://neo-layout.org
    <Line>uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest Grundstellung</NewCharacters>
+   <NewCharsLabel>Sicherheitstest Grundstellung</NewCharsLabel>
    <Line>eee nnn aaa rrr iii ttt uuu ddd nnn eee rrr aaa ttt iii ddd uuu eee nnn aaa rrr iii ttt uuu ddd nnn eee rrr aaa ttt iii ddd uuu</Line>
    <Line>ene ene nen nen ara ara rar rar iti iti tit tit udu udu dud dud ene ene nen nen ara ara rar rar iti iti tit tit udu udu dud dud</Line>
    <Line>dud tit rar nen ene ara iti udu nen rar tit dud udu iti ara ene dud tit rar nen ene ara iti udu nen rar tit dud udu iti ara ene</Line>
@@ -70,7 +74,7 @@ Homepage: http://neo-layout.org
    <Line>dud tit rar nen ene ara iti udu nen rar tit dud udu iti ara ene dud tit rar nen ene ara iti udu nen rar tit dud udu iti ara ene</Line>
   </Level>
   <Level>
-   <NewCharacters>Silben aus zwei Buchstaben</NewCharacters>
+   <NewCharsLabel>Silben aus zwei Buchstaben</NewCharsLabel>
    <Line>tu tu tu tu tu tu tu tu tu ta ta ta ta ta ta ta ta ta te te te te te te te te te ti ti ti ti ti ti ti ti ti</Line>
    <Line>er er er er er er er er er en en en en en en en en en eu eu eu eu eu eu eu eu eu ei ei ei ei ei ei ei ei ei</Line>
    <Line>it it it it it it it it it ir ir ir ir ir ir ir ir ir in in in in in in in in in ie ie ie ie ie ie ie ie ie</Line>
@@ -89,7 +93,7 @@ Homepage: http://neo-layout.org
    <Line>an an an an an an an an an ar ar ar ar ar ar ar ar ar at at at at at at at at at au au au au au au au au au</Line>
   </Level>
   <Level>
-   <NewCharacters>Silben aus drei Buchstaben</NewCharacters>
+   <NewCharsLabel>Silben aus drei Buchstaben</NewCharsLabel>
    <Line>eid eid eid eid eid eid eid eid eid eid eid eid die die die die die die die die die die die die</Line>
    <Line>ein ein ein ein ein ein ein ein ein ein ein ein nie nie nie nie nie nie nie nie nie nie nie nie</Line>
    <Line>der der der der der der der der der der der der den den den den den den den den den den den den</Line>
@@ -101,7 +105,7 @@ Homepage: http://neo-layout.org
    <Line>eid die ein nie und nun die eid nie ein nun und eid die ein nie und nun die eid nie ein nun und</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir sichern die Grundstellung</NewCharacters>
+   <NewCharsLabel>Wir sichern die Grundstellung</NewCharsLabel>
    <Line>eeee nnnn aaaa rrrr iiii tttt uuuu dddd eeee nnnn aaaa rrrr iiii tttt uuuu dddd</Line>
    <Line>uuuu dddd iiii tttt aaaa rrrr eeee nnnn uuuu dddd iiii tttt aaaa rrrr eeee nnnn</Line>
    <Line>nnnn eeee rrrr aaaa tttt iiii dddd uuuu nnnn eeee rrrr aaaa tttt iiii dddd uuuu</Line>
@@ -118,7 +122,7 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <LevelComment>Gedicht von Arne Babenhauserheide, das nur aus Wörtern besteht, die auf der Neo-Grundreihe vorkommen</LevelComment>
-   <NewCharacters>Ein kleines Gedicht</NewCharacters>
+   <NewCharsLabel>Ein kleines Gedicht</NewCharsLabel>
    <Line>erde an arne der untere rand eint die trauernden taten</Line>
    <Line>er eint den tau und die ader der narren und anderer arten</Line>
    <Line>da trauert der tau in den auen der dauernden erde</Line>
@@ -132,7 +136,8 @@ Homepage: http://neo-layout.org
    <Line>und tarnen die runen der au</Line>
   </Level>
   <Level>
-   <NewCharacters>Die Mittelfinger: l und g</NewCharacters>
+   <NewCharsLabel>Die Mittelfinger: l und g</NewCharsLabel>
+   <NewCharacters>lg</NewCharacters>
    <Line>ala ala ala ala ala ala aln aln aln aln aln aln ala ala aln aln ala ala aln aln ala ala aln aln</Line>
    <Line>rgr rgr rgr rgr rgr rgr rge rge rge rge rge rge rgr rgr rge rge rgr rgr rge rge rgr rgr rge rge</Line>
    <Line>alr alr alr alr alr alr rga rga rga rga rga rga alr alr rga rga alr alr rga rga alr alr rga rga</Line>
@@ -149,7 +154,7 @@ Homepage: http://neo-layout.org
    <Line>gel gel gel gel gel gel eng eng eng eng eng eng gel gel gel eng eng eng gel gel gel eng eng eng</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: l und g</NewCharacters>
+   <NewCharsLabel>Wir üben: l und g</NewCharsLabel>
    <Line>nil nil nil nil nil nil aal aal aal aal aal aal all all all all all all tag tag tag tag tag tag</Line>
    <Line>url url url url url url eng eng eng eng eng eng alt alt alt alt alt alt gel gel gel gel gel gel</Line>
    <Line>gut gut gut gut gut gut nil nil nil nil nil nil tal tal tal tal tal tal all all all all all all</Line>
@@ -167,7 +172,7 @@ Homepage: http://neo-layout.org
    <Line>luder luder luder luder laden laden laden laden laila laila laila laila</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für l und g </NewCharacters>
+   <NewCharsLabel>Sicherheitstest für l und g </NewCharsLabel>
    <Line>rgr rgr rgn rgn rgr rgr rgt rgt rgr rgr rgd rgd rgr rgr rge rgr rgr rga rgr rgi rgr rgr rgu rgr rgr</Line>
    <Line>ala ala ale ale ala ala ali ali ala ala alu alu ala ala aln ala ala alr ala alt ala ala ald ala ala</Line>
    <Line>gugi gage gngr gtgd gega gigu gdgt grgn gngr gtgd gugi gage gdgt grgn gega gigu</Line>
@@ -186,7 +191,8 @@ Homepage: http://neo-layout.org
    <Line>nieder lieder glieder regen legen lagen ragen tragen trauen grauen glitt ritt tritt dritt glitter dritter</Line>
   </Level>
   <Level>
-   <NewCharacters>Die Zeigefinger: c und h</NewCharacters>
+   <NewCharsLabel>Die Zeigefinger: c und h</NewCharsLabel>
+   <NewCharacters>ch</NewCharacters>
    <Line>ece ece ece ece ece ece nhn nhn nhn nhn nhn nhn ece ece nhn nhn ece ece nhn nhn ece ece nhn nhn</Line>
    <Line>ecn ecn ecn nhe nhe nhe ecr ecr ecr nha nha nha ect ect ect nhi nhi nhi ecd ecd ecd nhu nhu nhu</Line>
    <Line>ecu eci eca ece nhd nht nhr nhn ece eca eci ecu nhn nhr nht nhd ece eca eci ecu nhn nhr nht nhd</Line>
@@ -199,7 +205,7 @@ Homepage: http://neo-layout.org
    <Line>dach dach nach nach dach dach nach nach rauh rauh haut haut rauh rauh haut haut</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: c und h </NewCharacters>
+   <NewCharsLabel>Wir üben: c und h </NewCharsLabel>
    <Line>celle celle celle creature creature creature celle celle creature creature</Line>
    <Line>cent cent cent chance chance chance cent cent chance chance</Line>
    <Line>charta charta charta chen chen chen charta charta chen chen</Line>
@@ -221,7 +227,7 @@ Homepage: http://neo-layout.org
    <Line>heucheln handtuch hecheln hechten hindurch hochachtung hund hut hinter heiter</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für c und h </NewCharacters>
+   <NewCharsLabel>Sicherheitstest für c und h </NewCharsLabel>
    <Line>aal die tag and eng ung gel alt der gut ein tal den nil end nie all eid url und igel liga lage lade</Line>
    <Line>geld lied doll null ulla egal edel glut trug alle alte elle alge eile eule aula toll reite gleite</Line>
    <Line>nieder lieder glieder regen legen lagen ragen tragen trauen grauen glitt ritt tritt dritt glitter dritter</Line>
@@ -237,7 +243,8 @@ Homepage: http://neo-layout.org
    <Line>nie hing dort an den nagel eine uhr oder halogenlicht die charta der heiligen hochachtung hing da heute dran</Line>
   </Level>
   <Level>
-   <NewCharacters>Mehr Zeigefinger: o und s</NewCharacters>
+   <NewCharsLabel>Mehr Zeigefinger: o und s</NewCharsLabel>
+   <NewCharacters>os</NewCharacters>
    <Line>eoe eoe eoe eoe eoe eoe nsn nsn nsn nsn nsn nsn eoe eoe nsn nsn eoe eoe nsn nsn eoe eoe nsn nsn</Line>
    <Line>eos eos eos eon eon eon eoh eoh eoh eor eor eor eog eog eog eot eot eot eod eod eod</Line>
    <Line>nso nso nso nse nse nse nsc nsc nsc nsa nsa nsa nsl nsl nsl nsi nsi nsi nsu nsu nsu</Line>
@@ -257,7 +264,7 @@ Homepage: http://neo-layout.org
    <Line>storch storch dolch dolch stroh stroh dose dose ostern ostern soldat soldat sonst sonst</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: o und s</NewCharacters>
+   <NewCharsLabel>Wir üben: o und s</NewCharsLabel>
    <Line>otto otto otto toto toto toto doch doch doch lohn lohn lohn gong gong gong tore tore tore rico rico rico</Line>
    <Line>toll toll toll noch noch noch ohne ohne ohne lord lord lord ohio ohio ohio hugo hugo hugo tour tour tour</Line>
    <Line>loch loch loch dorn dorn dorn cool cool cool horn horn horn ahoi ahoi ahoi hallo hallo hallo</Line>
@@ -276,7 +283,7 @@ Homepage: http://neo-layout.org
    <Line>storch storch storch stroh stroh stroh storch storch stroh stroh</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für o und s</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für o und s</NewCharsLabel>
    <Line>haar heer herr raucher hell hall china code hagel halogen hand hund hauen heute haut heilig heilen</Line>
    <Line>celle creature hundert cent chance halten charta handtuch chicago taucher chirurg heucheln hecheln</Line>
    <Line>hechten lachen chlor chor hindurch tracht lehrer hochachtung hut dach hat hinter heiter licht</Line>
@@ -292,7 +299,8 @@ Homepage: http://neo-layout.org
    <Line>lese das und erledige die genannten sachen sonst haue ich dich richtig lange durch</Line>
   </Level>
   <Level>
-   <NewCharacters>Wichtige Konsonantn: w und k</NewCharacters>
+   <NewCharsLabel>Wichtige Konsonantn: w und k</NewCharsLabel>
+   <NewCharacters>wk</NewCharacters>
    <Line>ece ewe ewe ewe ece ewe ece ewe ece ewe ewe ewe ece ewe ece nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn nkn nhn</Line>
    <Line>ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo nkd nkt nkr nkn nks nkd nkt nkr nkn nks nkd nkt nkr nkn nks</Line>
    <Line>ews ewk ewn ewh ewr ewg ewt ewd ews ewk ewn ewh ewr ewg ewt ewd nko nkw nke nkc nka nkl nki nku nko nkw nke nkc nka nkl nki nku</Line>
@@ -312,7 +320,7 @@ Homepage: http://neo-layout.org
    <Line>wickeln wickeln wickeln wunderkind wunderkind wunderkind wickeln wickeln wunderkind wunderkind</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: w und k</NewCharacters>
+   <NewCharsLabel>Wir üben: w und k</NewCharsLabel>
    <Line>etwa etwa etwa etwa wust wust wust wust wild wild wild wild wege wege wege wege ewig ewig ewig ewig show show show show</Line>
    <Line>gewehr gewehr gewehr gewehr darwin darwin darwin darwin wucher wucher wucher wucher erwies erwies erwies erwies</Line>
    <Line>etikett etikett etikett hektik hektik hektik hektik risiko risiko risiko risiko stickig stickig stickig stickig</Line>
@@ -332,7 +340,7 @@ Homepage: http://neo-layout.org
    <Line>wecker wecker krankenschwester krankenschwester wickeln wickeln wunderkind wunderkind</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für w und k</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für w und k</NewCharsLabel>
    <Line>ast eis wut das aus wie sie uns was ist see wer es sei wen aal die tag and eng ung gel alt der gut ein</Line>
    <Line>karikatur kathode kathedrale kerker klassiker kleiderhaken klicken kniekehle kochkunst knochen konditorei</Line>
    <Line>tal den nil end nie all eid url und igel liga lage lade geld lied null ulla egal edel glut trug</Line>
@@ -349,7 +357,8 @@ Homepage: http://neo-layout.org
    <Line>weglocken kilowatt wohlklang karawane wirklich kauderwelsch wecker krankenschwester wickeln wunderkind</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: p und m</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: p und m</NewCharsLabel>
+   <NewCharacters>pm</NewCharacters>
    <Line>ece epe epe epe ece epe epe epe ece epe epe epe nhn nmn nmn nmn nhn nmn nmn nmn nhn nmn nmn nmn</Line>
    <Line>epe epd ept epr epn eps nmn nmu nmi nma nme nmo epe epd ept epr epn eps nmn nmu nmi nma nme nmo</Line>
    <Line>epn epr epg eph epk eps nme nma nml nmc nmw nmo epn epr epg eph epk eps nme nma nml nmc nmw nmo</Line>
@@ -368,7 +377,7 @@ Homepage: http://neo-layout.org
    <Line>morphium morphium morphium moralpredigt moralpredigt moralpredigt muttersprachler muttersprachler muttersprachler</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: p und m</NewCharacters>
+   <NewCharsLabel>Wir üben: p und m</NewCharsLabel>
    <Line>park park parole parole park park parole parole spinat spinat sport sport spinat spinat sport sport pilger pilger</Line>
    <Line>pillen pillen pinie pinie pirat pirat poren poren pokal pokal poker poker pointe post post pol pol purpur purpur</Line>
    <Line>tippst tippst kippst kippst spiel spiel spreu spreu kasper kasper kapsel kapsel april april apache apache alpen alpen</Line>
@@ -384,7 +393,7 @@ Homepage: http://neo-layout.org
    <Line>mundharmonika mundharmonika mundharmonika melankoliker melankoliker melankoliker muskel muskel muskel</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für p und m</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für p und m</NewCharsLabel>
    <Line>spiel spreu kasper kapsel april apache alpen merke meide reime melde immer mager tempo emsig palme</Line>
    <Line>sorge sonne soldat solange storch solch strolch stroh dose hose ostern ostsee sonst</Line>
    <Line>portemonnaie postsendung pottwal praktikum presslufthammer primel prisma problematisch produktweg programmiersprache</Line>
@@ -405,7 +414,8 @@ Homepage: http://neo-layout.org
    <Line>moskwa mundharmonika musikgruppe muskatnuss muskel muttersprachler protokoll pumpen</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: z und b</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: z und b</NewCharsLabel>
+   <NewCharacters>zb</NewCharacters>
    <Line>epe eze eze eze epe eze eze eze epe eze eze eze nmn nbn nbn nbn nmn nbn nbn nbn nmn nbn nbn nbn</Line>
    <Line>epe eze eoe eze epe eze eoe nmn nbn nsn nbn nmn nbn nns eze nbn eze nbn eze nbn eze nbn eze nbn</Line>
    <Line>ezh ezk ezs ezb ezm ezn nbc nbw nbo nbz nbp nbe ezm ezb ezs ezk ezh ezn nbp nbz nbo nbw nbc nbe</Line>
@@ -428,7 +438,7 @@ Homepage: http://neo-layout.org
    <Line>zusammenbringen zusammenbringen zusammenbringen zubinden zubinden zubinden zusammenprallen zusammenprallen zusammenprallen zwieback zwieback zwieback zwergschimpanse zwergschimpanse zwergschimpanse</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben: z und b</NewCharacters>
+   <NewCharsLabel>Wir üben: z und b</NewCharsLabel>
    <Line>katze katze katze zarte zarte zarte katze katze zarte zarte prinz prinz prinz zarin zarin zarin prinz prinz zarin zarin</Line>
    <Line>zeigen zeigen zeigen ritzel ritzel ritzel zeigen ritzel zieren zieren zieren kratzte kratzte kratzte zieren kratzte</Line>
    <Line>biete biete biete halbe halbe halbe biete biete halbe halbe leben leben leben bitte bitte bitte leben leben bitte bitte</Line>
@@ -447,7 +457,7 @@ Homepage: http://neo-layout.org
    <Line>zusammenbringen zusammenbringen zubinden zubinden zusammenprallen zusammenprallen zwieback zwieback zwergschimpanse zwergschimpanse</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für z und b</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für z und b</NewCharsLabel>
    <Line>zeichensetzung zeichnen zeilenumbruch zeitabschnitt zeitbombe waghalsig wagen wahrheit wahrnehmung wanduhr wasserhahn</Line>
    <Line>badezimmer badminton bakterie balkon bambus bandwurm manuskript markierung maschinengewehr maske massaker massenmord</Line>
    <Line>philharmonie phosphor picknick piktogramm pinguin blutzelle briefmarkensammler bronze browser brustwarze</Line>
@@ -469,7 +479,7 @@ Homepage: http://neo-layout.org
    <Line>portemonnaie postsendung pottwal praktikum presslufthammer bezeichnen bezeugen bezirk bezweifeln bizarr</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir wiederholen viele Wörter</NewCharacters>
+   <NewCharsLabel>Wir wiederholen viele Wörter</NewCharsLabel>
    <Line>alle alte elle alge eile eule aula reite gleite nieder lieder glieder regen legen lagen ragen tragen trauen grauen</Line>
    <Line>glitt ritt tritt dritt glitter dritter celle creature cent chance charta chen chicago chirurg chlor china code chor</Line>
    <Line>heucheln handtuch hecheln hechten hindurch hochachtung hund hut hinter heiter heilig heilen haar heer herr hell hall</Line>
@@ -495,7 +505,7 @@ Homepage: http://neo-layout.org
    <Line>zwiebel bezeugen brustwarze bronzezeit bezweifeln zubinden zusammenprallen zwieback zollbeamter benzinpumpe besitzen</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir wiederholen alle Buchstaben</NewCharacters>
+   <NewCharsLabel>Wir wiederholen alle Buchstaben</NewCharsLabel>
    <Line>eee ccc www ooo zzz ppp nnn hhh kkk sss bbb mmm ppp zzz ooo www ccc eee mmm bbb sss kkk hhh nnn</Line>
    <Line>eec eew eeo eez eep nnh nnk nns nnb nnm eep eez eeo eew eec nnm nnb nns nnk nnh ecwozpe nhksbmn</Line>
    <Line>cce wwe ooe zze ppe hhn kkn ssn bbn mmn ppe zze ooe wwe cce mmn bbn ssn kkn hhn epzowce nmbskhn</Line>
@@ -507,7 +517,8 @@ Homepage: http://neo-layout.org
    <Line>zpoeaiuwcl bmsnrtdkhg lcwuiaeopz ghkdtrnsmb wcloeaiuzp khgsnrtdbm pzuiaeolcw mbdtrnsghk</Line>
   </Level>
   <Level>
-   <NewCharacters>Neues Satzzeichen: , das Komma</NewCharacters>
+   <NewCharsLabel>Neues Satzzeichen: , das Komma</NewCharsLabel>
+   <NewCharacters>,</NewCharacters>
    <Line>nmn r,r r,r r,r r,r r,r r,r r,u r,i r,a r,e r,d r,t r,r r,n r,u r,i r,a r,e r,d r,t r,r r,n</Line>
    <Line>r,n r,r r,t r,d r,e r,a r,i r,u r,n r,r r,t r,d r,e r,a r,i r,u r,r r,r r,r r,r r,r r,r r,r</Line>
    <Line>da, da, da, da, na, na, na, na, da, da, da, na, na, na, da, da, na, na, da, na, da, da,</Line>
@@ -525,7 +536,7 @@ Homepage: http://neo-layout.org
    <Line>petra erbte den schmuck, nicht aber susanne oder petra erbte den schmuck nicht, aber susanne</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben das Komma</NewCharacters>
+   <NewCharsLabel>Wir üben das Komma</NewCharsLabel>
    <Line>sie sagen mir, sie sagen dir, sie sagen ihr, sie sagen wir sie sagen ihm, sie sagen es,</Line>
    <Line>sie holen es, geben sie es, legen sie es, senden sie es, senden sie es ab, senden sie es bald ab,</Line>
    <Line>sie stellen aus, sie stellen es aus, stelle es bald hierher, sie brachte mir, sie brachte es bald,</Line>
@@ -552,7 +563,8 @@ Homepage: http://neo-layout.org
    <Line>mehrwertsteuer, mehrwertsteuer, mittwoch, mittwoch, moskwa, moskwa, mundharmonika, mundharmonika, muskel, muskel,</Line>
   </Level>
   <Level>
-   <NewCharacters>Neues Satzzeichen: . der Punkt</NewCharacters>
+   <NewCharsLabel>Neues Satzzeichen: . der Punkt</NewCharsLabel>
+   <NewCharacters>.</NewCharacters>
    <Line>nmn r,r t.t t.t t.t t.t t.t t.t t.u t.i t.a t.e t.d t.t t.n t.r t.u t.i t.a t.e t.d t.t t.r t.n</Line>
    <Line>mnm ,r, .t. nmn r,r t.t t.e t.a t.i t.u t.n t.r t.t t.d t.e t.a t.i t.u t.n t.r t.t t.d t.t t.t</Line>
    <Line>es. es. es. es. er. er. er. er. es. er. es. er. an. an. an. an. es. es. er. er. an. an.</Line>
@@ -564,7 +576,7 @@ Homepage: http://neo-layout.org
    <Line>morgen wird wieder die sonne scheinen. bitte gib mir das buch. du sollst schweigen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben den Punkt</NewCharacters>
+   <NewCharsLabel>Wir üben den Punkt</NewCharsLabel>
    <Line>klage. klage. klage. klage. neues. neues. neues. neues. altes. altes. altes. altes.</Line>
    <Line>meine. meine. meine. meine. deine. deine. deine. deine. bauen. bauen. bauen. bauen.</Line>
    <Line>nenne. nenne. nenne. nenne. ihren. ihren. ihren. ihren. gerne. gerne. gerne. gerne.</Line>
@@ -581,7 +593,7 @@ Homepage: http://neo-layout.org
    <Line>zusammenbringen. zusammenbringen. zubinden. zubinden. zusammenprallen. zusammenprallen. zwieback. zwieback.</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest</NewCharacters>
+   <NewCharsLabel>Sicherheitstest</NewCharsLabel>
    <Line>leime, leime. umher, umher. kam. kam, dem. dem, mir, mir. mag, mag. male. male, milde. milde, mehr, mehr. arme, arme.</Line>
    <Line>park. park, parole. parole, spinat, spinat. sport, sport. pilgern, pilgern. pille, pille. pinie. pinie, pirat. pirat,</Line>
    <Line>tippst, tippst. kippst, kippst. spiel. spiel, spreu. spreu, kasper, kasper. kapsel, kapsel. april, april. alpen. alpen,</Line>
@@ -602,7 +614,7 @@ Homepage: http://neo-layout.org
    <Line>zusammenbringen. zusammenbringen, zubinden. zubinden, zusammenprallen, zusammenprallen. zwieback, zwieback.</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir wiederholen</NewCharacters>
+   <NewCharsLabel>Wir wiederholen</NewCharsLabel>
    <Line>ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn</Line>
    <Line>ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn</Line>
    <Line>alle alte elle alge eile eule aula reite gleite nieder lieder glieder regen legen lagen ragen tragen trauen grauen.</Line>
@@ -645,7 +657,7 @@ Homepage: http://neo-layout.org
    <Line>zwiebel bezeugen brustwarze bronzezeit bezweifeln zusammenbringen zubinden zusammenprallen zwieback,</Line>
   </Level>
   <Level>
-   <NewCharacters>Linker Umschalter</NewCharacters>
+   <NewCharsLabel>Linker Umschalter</NewCharsLabel>
    <Line>Nen Nan Nin Nun Non Nwn Ncn Nln Nzn Npn Nen Nan Nin Nun Non Nwn Ncn Nln Nzn Npn</Line>
    <Line>Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr</Line>
    <Line>Tet Tat Tit Tut Tot Twt Tct Tlt Tzt Tpt Tet Tat Tit Tut Tot Twt Tct Tlt Tzt Tpt</Line>
@@ -668,7 +680,7 @@ Homepage: http://neo-layout.org
    <Line>Gabel Gabel Gabel Geiz Gabel Geiz Geiz Geiz Glanz Glanz Glanz Glanz</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben rechts GROẞ und klein im Wechsel</NewCharacters>
+   <NewCharsLabel>Wir üben rechts GROẞ und klein im Wechsel</NewCharsLabel>
    <Line>Nein nein Nein nein Nacht nachts Nacht nachts Nager nagen Nager nagen</Line>
    <Line>Rast rasten Rast rasten Ritt reiten Ritt reiten Ruhe ruhen Ruhe ruhen Rat raten Rat raten</Line>
    <Line>Taucher tauchen Taucher tauchen Tag tagein Tag tagaus Trage tragen Trage tragen</Line>
@@ -691,7 +703,7 @@ Homepage: http://neo-layout.org
    <Line>Das Gold, das Glas, die Gabe. Die Gans, der Gang, das Geld. Der Gast, der Grog, das Gut. Das Gas, der Gatte.</Line>
   </Level>
   <Level>
-   <NewCharacters>Kurze Trainingssätze</NewCharacters>
+   <NewCharsLabel>Kurze Trainingssätze</NewCharsLabel>
    <Line>Hinter dem Haus steht ein Baum. Der Baum ist alt. Der Berg ist hoch. Bald gehe ich zum Sport. Dann spiele ich Basketball.</Line>
    <Line>Meine Mutter backt Kuchen. Den Kuchen essen wir mit Kirschen und Schlagsahne. Susanne isst keinen Kuchen. Sie will nicht dick werden.</Line>
    <Line>Georg hatte gestern Geburtstag. Sein Geschenk war ein Besuch im Tierpark. Die Schlangen haben wir nicht gesehen.</Line>
@@ -705,7 +717,7 @@ Homepage: http://neo-layout.org
    <Line>Ich gehe in ein Restaurant. Dort wartet Torsten. Torsten trank bereits ein Bier. Beim Tresen steht ein kleiner Mann. Sein Name ist unbekannt.</Line>
   </Level>
   <Level>
-   <NewCharacters>Rechter Umschalter</NewCharacters>
+   <NewCharsLabel>Rechter Umschalter</NewCharsLabel>
    <Line>Ene Ere Ete Ede Ese Eke Ehe Ege Ebe Eme Ene Ere Ete Ede Ese Eke Ehe Ege Ebe Eme</Line>
    <Line>Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama</Line>
    <Line>Ini Iri Iti Idi Isi Iki Ihi Igi Ibi Imi Ini Iri Iti Idi Isi Iki Ihi Igi Ibi Imi</Line>
@@ -728,7 +740,7 @@ Homepage: http://neo-layout.org
    <Line>Liebe Liebe Liebe Liebe Leben Leben Leben Leben Lust Lust Lust Lust</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben links GROẞ und klein im Wechsel</NewCharacters>
+   <NewCharsLabel>Wir üben links GROẞ und klein im Wechsel</NewCharsLabel>
    <Line>Essen essen Essen essen Ekel ekeln Ekel ekeln Eis eisig Eis eisig</Line>
    <Line>Arbeit arbeiten Arbeit arbeiten Alter altern Alter altern Antwort antworten Antwort antworten</Line>
    <Line>Isolator isolieren Isolator isolieren Italiener italienisch Italiener italienisch Intelligenz intelligent Intelligenz intelligent</Line>
@@ -751,7 +763,7 @@ Homepage: http://neo-layout.org
    <Line>Die Liebe, das Leben, die Lust. Das Lager, die Lunge, das Laub. Das Lenkrad, die Leere, das Lachen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Kurze Trainingssätze</NewCharacters>
+   <NewCharsLabel>Kurze Trainingssätze</NewCharsLabel>
    <Line>Der Urlaub war super. Wir waren mit den Zelt unterwegs. Der Zeltplatz war bei einer Insel. Den Namen der Insel weiß ich nicht mehr.</Line>
    <Line>Mein Kumpel dachte der Untergang der Sonne im Meer ist im Osten. Er ist so ein Idiot. Die Sonne geht im Westen unter.</Line>
    <Line>Willi wollte am Wettbewerb teilnehmen. Er trainierte eisern. Allerdings wurden seine Problemzonen nicht weniger. Er nahm nicht ab.</Line>
@@ -764,7 +776,7 @@ Homepage: http://neo-layout.org
    <Line>Er teilt das Essen ein. Aber die Einteilung gelingt nicht. Er hat deswegen in der Nacht Hunger. Immer diese Probleme ums Essen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Unser Sicherheitstest</NewCharacters>
+   <NewCharsLabel>Unser Sicherheitstest</NewCharsLabel>
    <Line>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt Glitter Dritter Celle Kelle Elle Cent Karter Charta Krater Chlor Ohr Chor</Line>
    <Line>Haar Heer Herr Hagel Nagel Wand Hand Hund Grund Hundert Ast Hast Rast Gast Eis Reis Greis Gleis See Tee Schnee Sorge</Line>
    <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spaga t Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
@@ -786,7 +798,8 @@ Homepage: http://neo-layout.org
    <Line>Ein gutes Passwort besteht nicht nur aus Buchstaben, sondern auch aus Zahlen und Sonderzeichen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: v und f</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: v und f</NewCharsLabel>
+   <NewCharacters>vf</NewCharacters>
    <Line>ece ala ivi ivi ivi ala ivi ivi ece ivi ivi ivi ala ivi ivi ivi ece nhn rgr tft tft tft rgr tft tft nhn tft tft tft rgr tft tft tft nhn</Line>
    <Line>ivi ivd ivt ivr ivn ive iva ivi ivu tft tfu tfi tfa tfe tfn tfr tft tfd ivi ivd ivt ivr ivn ive iva ivi ivu tft tfu tfi tfa tfe tfn tfr tft tfd</Line>
    <Line>viv vin vir vit vid vim vib ftf fte fta fti ftu ftp ftz vev vav viv vuv vlv vpv vcv vzv vwv vov fnf frf ftf fdf fgf fmf fhf fbf fkf fsf</Line>
@@ -802,7 +815,7 @@ Homepage: http://neo-layout.org
    <Line>fasten fasten fasten fort fort fort foltern foltern foltern</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben v und f</NewCharacters>
+   <NewCharsLabel>Wir üben v und f</NewCharsLabel>
    <Line>Viele Fragen, viele Fragen, viele Fragen. Falsche Versicherung, falsche Versicherung, falsche Versicherung.</Line>
    <Line>Vertrockneter Fluss, vertrockneter Fluss, vertrockneter Fluss. Fetter Vater, fetter Vater, fetter Vater.</Line>
    <Line>Verlassener Friedhof, verlassener Friedhof, verlassener Friedhof. Fauler Vogel, fauler Vogel, fauler Vogel.</Line>
@@ -817,7 +830,7 @@ Homepage: http://neo-layout.org
    <Line>Verdorbenes Fleisch, verdorbenes Fleisch. Fehlender Verkehr, fehlender Verkehr, fehlender Verkehr.</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für v und f</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für v und f</NewCharsLabel>
    <Line>verlade, verlasse, veredelt, vielleicht, vertragen, voll, vorhin, vorlassen, verloren, vorfinden, vage, vermischen, vorwerfe,</Line>
    <Line>Vogel. Vase. Vater. Ventil. Verkehr. Verletzung. Vernunft. Volk. Viereck. Video. Vormittag. Version. Vermutung.</Line>
    <Line>folgen, flogen, duftet, kaufst, deftig, anrief, haufen, farben, furios, impfen, frevle, stumpf, tapfer, klopfen, impfen,</Line>
@@ -834,7 +847,8 @@ Homepage: http://neo-layout.org
    <Line>Beim Sport verliert man viel Fett und kann dann an einem Wettkampf teilnehmen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Die Umlaute: ä und ö </NewCharacters>
+   <NewCharsLabel>Die Umlaute: ä und ö </NewCharsLabel>
+   <NewCharacters>äö</NewCharacters>
    <Line>ala aäa ala aäa ala aäa aäu aäi aäa aäe aäo aäl aäc aäw aäp aäz ivi iöi ivi iöi ivi iöi iöu iöi iöa iöe iöo iöl iöc iöw iöp iöz</Line>
    <Line>äda äta ära äna äsa äfa äga äha äka ä.a ä,a äma äba ödi öti öri öni ösi öfi ögi öhi öki ö.i ö,i ömi öbi</Line>
    <Line>lal äaä lal äaä lal äaä äua äia äaa äea äoa äla äca äwa äpa äza viv öiö viv öiö viv öiö öui öii öai öei öoi öli öci öwi öpi özi</Line>
@@ -850,7 +864,7 @@ Homepage: http://neo-layout.org
    <Line>Tölpel Körbe Körner Chöre König Göre Gönner Köder Lötzinn Löhne Mönche Köln Ökologie Gehör Möbel Behörde Körper</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben ä und ö</NewCharacters>
+   <NewCharsLabel>Wir üben ä und ö</NewCharsLabel>
    <Line>ländliche, pubertär, wählbar, prächtig, gesprächig, umständlich, erträgliche, tätige, tätlich, anhäufen, anständig, ästhetisch, ätzend,</Line>
    <Line>wäre, sähe, läge, wäre, sähe, hätten, kämen, lägen, wären, nähme, während, lässig, mächtig, allmählich, gäben,</Line>
    <Line>ölig, wölben, störte, grölen, böig, möglich, tötet, dösen, möchte, blöde, öde, krönen, höhnen, völlig, öffnen,</Line>
@@ -870,7 +884,7 @@ Homepage: http://neo-layout.org
    <Line>Tenöre stören nicht wenn Chöre singen, Ökologie ist die Wissenschaft der Umwelt, lässig Körbe flechten.</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für ä und ö</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für ä und ö</NewCharsLabel>
    <Line>Wäre die Universität nicht so teuer, könnte ich Ökologie lernen. Ich sollte bei der Behörde BAfÖG anfragen.</Line>
    <Line>An allen Laubbäumen hängen Blätter an den Ästen. Im Herbst hängen auch Äpfel an den Bäumen.</Line>
    <Line>In Märchen verkörpern Wölfe oft das Böse, während dem Fuchs Schläue anerkannt wird.</Line>
@@ -885,7 +899,8 @@ Homepage: http://neo-layout.org
    <Line>Alle Häuser haben gut gedämmte Wände. Damit man nicht vor Kälte friert benötigen sie zusätzlich eine Ölheizung.</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: ü und j</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: ü und j</NewCharsLabel>
+   <NewCharacters>üj</NewCharacters>
    <Line>epe aäa iöi uüu uüu uüu iöi uüu uüu uüu aäa uüu uüu uüu nmn r,r t.t djd djd djd t.t djd djd djd r,r djd djd djd</Line>
    <Line>uüu iüi aüa eüe oüo vüv lül cüc wüw züz püp äüä öüö djd tjt rjr njn sjs fjf gjg hjh kjk bjb mjm ,j, .j.</Line>
    <Line>uüu uüi uüa uüe uüo uül uüc uüw uüö uüv uüä uüp uüz djd djt djr djn djs djf djg djh djk dj. dj, djm djb</Line>
@@ -896,7 +911,7 @@ Homepage: http://neo-layout.org
    <Line>jaulen jaulen jaulen jetzt jetzt jetzt jonglieren jonglieren jonglieren jodeln jodeln jodeln jeder jeder jeder</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben ü und j</NewCharacters>
+   <NewCharsLabel>Wir üben ü und j</NewCharsLabel>
    <Line>üben über übel üblich übrigens überaus übrig überall überbacken überladen überbewertet überhaupt überängstlich</Line>
    <Line>jemand junge jemals jucken jäten jährig jaule jobben ja jobben jubeln jagen jawohl jubeln jonglieren jeder jetzt jedes jüngst jüdisch</Line>
    <Line>müssen fünf dürfen müde zurück natürlich blühen kühl berühmt glühen kühn würgen pflücken küssen hübsch spühlen fühlen</Line>
@@ -907,7 +922,7 @@ Homepage: http://neo-layout.org
    <Line>Gerüst Fürst Gebrüll Rüstung Gewürz Hüfte Krümmel Grünzeug Mütze Hülle Bürger Pfütze Rübe Schlüssel Wünsche Tümpel Stütze</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für ü und j</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für ü und j</NewCharsLabel>
    <Line>Seit über fünf Jahren sammelt Jonas Mützen berühmter Bürger. Die Mützen benutzt er jedoch als Stüzen für seine Büchersammlung.</Line>
    <Line>Mit französischen Käse überbacken und vielen Gewürzen schmeckt der Kartoffelauflauf besser.</Line>
    <Line>Sämtliche Nürnberger Kunden loben übereinstimmend den verzüglichen Geschmack des Gebäcks.</Line>
@@ -925,14 +940,15 @@ Homepage: http://neo-layout.org
    <Line>Schüler müssen Vokabeln lernen. Dafür benötigen sie viel Übung. Oft verspüren sie jedoch Rückschläge bei der Übergabe der Noten.</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir wiederholen</NewCharacters>
+   <NewCharsLabel>Wir wiederholen</NewCharsLabel>
    <Line>uxuivialaece djdtftrgrnhn uxuivialaece djdtftrgrnhn uquivia</Line>
    <Line>epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäan</Line>
    <Line>beim fast gibt drei kaum alte geht neue seit viel soll etwa</Line>
    <Line>Gast Geld Gott Glas Graf Gang Gold Grab Gram Golf Glut Gabe</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: y und ß</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: y und ß</NewCharsLabel>
+   <NewCharacters>yß</NewCharacters>
    <Line>ndj nyj ndj nyj ndj nyj ndj ndß ndj ndß ndj ndß ndj djd dyd dßd djd dyd dßd djd dyd dßd jyß jyß jyß djd dyd dßd ßyj ßyj ßyj</Line>
    <Line>eoe dyd dyd dyd eoe dyd dyd dyd eoe dys dyn dyr dyt dyd ewe dßd dßd dßd ewe dßd dßd dßd ewe dßs dßn dßr dßt dßd</Line>
    <Line>eoe dyd dyd dyd eoe dyd dyd dyd eoe dym dy, dy. dyj ewe dßd dßd dßd ewe dßd ßd dßd ewe dßm dß, dß. dßj</Line>
@@ -947,7 +963,7 @@ Homepage: http://neo-layout.org
    <Line>groß groß groß weiß weiß weiß maß maß maß groß groß weiß weiß maß maß</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben y und ß</NewCharacters>
+   <NewCharsLabel>Wir üben y und ß</NewCharsLabel>
    <Line>analysieren, bayerisch, symbolisch, zylindrisch, zyklisch, happy, typisch, systematisch, rhytmisch, sympatisch,</Line>
    <Line>saß, fließen, ließen, gießen, außen, außer, draußen, äußerte, weiß, groß, bloß, genießen, reißen, heißen, verließ,</Line>
    <Line>Typhus. Psyche. Hockey. Zypern. Typ. Analyse. Zylinder. Bayern. Hygiene. Dynamo. Symbol. Cowboy. Boykott. Rhythmus. Paraguay. Sympathie.</Line>
@@ -957,7 +973,7 @@ Homepage: http://neo-layout.org
    <Line>süße Physik, weißes System, großer Dynamo, grüßendes Symbol, symbolischer Gruß,</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für y und ß</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für y und ß</NewCharsLabel>
    <Line>Es ist ein Irrtum zu denken, dass mit der Einführung der neuen Rechtschreibung das ß aus dem deutschen Buchstabenkatalog verschwunden ist.</Line>
    <Line>Das ß tritt seltener auf, ist aber dennoch vorhanden. Hinter einem lang zu sprechenden Vokal muss ein ß stehen.</Line>
    <Line>vergaß, groß, fraß, Straße, Gruß, Äußerung, vergaß, groß, fraß, Straße, Gruß, Äußerung,</Line>
@@ -979,7 +995,7 @@ Homepage: http://neo-layout.org
    <Line>Mit Hypnose können Störungen der Psyche ergründet werden. Das Yin und Yang kann man mit Yoga im Einklang bringen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Rechtschreibklippen und häufige Rechtschreibfehler</NewCharacters>
+   <NewCharsLabel>Rechtschreibklippen und häufige Rechtschreibfehler</NewCharsLabel>
    <Line>gar gären, die Gebärde, malen Gemälde, hämisch, Haar Härchen, zäh Zähheit, laden lädt, klar klären, Märchen, Kran Kräne, Name nämlich,</Line>
    <Line>Paar Pärchen, säen Sämann, Dänen, ähnliches allmähliche, Draht Drähte, fahren Fähre, Fähnchen, gähnen, gewahr gewähren Gewähr, Naht Nähte,</Line>
    <Line>sah, sähen, spähen spähte spähten, stehlen stahl, Stahl Stähle stählern, Kapitän, Sekretäre, Atmosphäre, Trainer Training, Gäste Geste, Ähre Ehre.</Line>
@@ -991,7 +1007,8 @@ Homepage: http://neo-layout.org
    <Line>Verlies, Verwandtschaft, voraus, Wermutstropfen, widerspiegeln</Line>
   </Level>
   <Level>
-   <NewCharacters>Neue Buchstaben: x und q</NewCharacters>
+   <NewCharsLabel>Neue Buchstaben: x und q</NewCharsLabel>
+   <NewCharacters>xq</NewCharacters>
    <Line>uuu üüü uuu xxx uüu uxu üuü xux uuu xxx uuu xxx ddd jjj ddd qqq djd dqd jdj qdq ddd qqq ddd qqq</Line>
    <Line>ece ala ivi uxu uxu uxu uxo uxe uxa uxi uxu uxw uxc uxl uxv uxx uxz uxp uxä uxö uxü</Line>
    <Line>nhn rgr tft dqd dqd dqd dqs dqn dqr dqt dqd ddqk dqh dqg dqf dqq dqß dqb dqm dq, dq. dqj dqy</Line>
@@ -1007,7 +1024,7 @@ Homepage: http://neo-layout.org
    <Line>Quote Quote Quote Quelle Quelle Quelle Quadrat Quadrat Quadrat Querflöte Querflöte Querflöte</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben x und q</NewCharacters>
+   <NewCharsLabel>Wir üben x und q</NewCharsLabel>
    <Line>extra Qualität, gemixter Quellcode, extremer Quälgeist, externe Querverweise, Maximum Quark, flexibeler Quelltext.</Line>
    <Line>fixierte Quersumme, exklusive Quälerei, Praxis quietschen, Dioxin Quatsch, Examen qualmen, Mixtur Quaksalber.</Line>
    <Line>Export Quantensprung, Experten quiekten, Expedition qualitativ, Max Querbalken, Alex Quasselstrippe.</Line>
@@ -1020,7 +1037,7 @@ Homepage: http://neo-layout.org
    <Line>Auf die Anzeige haben sich qualifizierte Bewerber gemeldet. Die Querverbindung wurde im vorigen Quartal fertiggestellt.</Line>
   </Level>
   <Level>
-   <NewCharacters>Sicherheitstest für x und q</NewCharacters>
+   <NewCharsLabel>Sicherheitstest für x und q</NewCharsLabel>
    <Line>Manchmal schreiben wir x, dann wieder cks, gs, ks oder chs.</Line>
    <Line>Im Aufsatzheft hat Alex unsauber geschrieben und gekleckst. Carmen will in Luxemburg spezielle Kekse und echten Lachs kaufen.</Line>
    <Line>Der Boxer sollte sich von seinen Gegner durch psychogolische Tricks nicht ins Bockshorn jagen lassen.</Line>
@@ -1046,7 +1063,7 @@ Homepage: http://neo-layout.org
    <Line>Die Bücher und Texte von Karl Marx würden nebeneinander gelegt mehrere Quadratmeter Fußboden bedecken.</Line>
   </Level>
   <Level>
-   <NewCharacters>English test—1000 frequently used words</NewCharacters>
+   <NewCharsLabel>English test—1000 frequently used words</NewCharsLabel>
    <Line>sister gun total company oxygen similar deal radio plural death determine various score evening is not then</Line>
    <Line>action agreed forward nor capital opposite stretched rope factories wrong experience cotton settled chart rose apple</Line>
    <Line>yellow prepared allow details pretty fear entire southern solution workers corn truck fresh Washington substances</Line>
@@ -1109,7 +1126,7 @@ Homepage: http://neo-layout.org
    <Line>usually measure table field did not remember north travel friends early slowly wood easy waves money fire</Line>
   </Level>
   <Level>
-   <NewCharacters>Deutsche Wörter – 1000 häufigst benutzte Wörter</NewCharacters>
+   <NewCharsLabel>Deutsche Wörter – 1000 häufigst benutzte Wörter</NewCharsLabel>
    <Line>der die und in den von zu das mit sich des auf für ist im dem nicht ein eine als auch es an werden</Line>
    <Line>aus er hat dass sie nach wird bei einer um am sind noch wie einem über einen so zum war haben nur oder</Line>
    <Line>aber vor zur bis mehr durch man sein wurde sei in Prozent hatte kann gegen vom können schon wenn habe</Line>
@@ -1177,7 +1194,8 @@ Homepage: http://neo-layout.org
    <Line>wichtig amerikanische sah gesamten einst verwendet vorbei Behörden helfen Folgen bezeichnet</Line>
   </Level>
   <Level>
-   <NewCharacters>Die Ziffern</NewCharacters>
+   <NewCharsLabel>Die Ziffern</NewCharsLabel>
+   <NewCharacters>1234567890</NewCharacters>
    <Line>Die gewohnten Tasten über dem Buchstabenfeld sind auch unter dem Tastaturlayout Neo die Ziffern.</Line>
    <Line>111 Kleiner Finger 111 u1 x1 u1 ü1 u 1 x1x x1x 111</Line>
    <Line>222 Kleiner Finger 222 u2 x2 u2 ü2 u2 x2x x2x 222</Line>
@@ -1205,7 +1223,7 @@ Homepage: http://neo-layout.org
    <Line>Null bleibt 000</Line>
   </Level>
   <Level>
-   <NewCharacters>Die Sonderzeichen</NewCharacters>
+   <NewCharsLabel>Die Sonderzeichen</NewCharsLabel>
    <Line>Mittels der M3-Taste, die über der Hochstelltaste, können verschiedene Sonderzeichen erzeugt werden.</Line>
    <Line>k ! k!k !!! k ! k!k !!! h &lt; h&lt;h &lt;&lt;&lt; h &lt; h&lt;h &lt;&lt;&lt;</Line>
    <Line>g > g>g >>> g > g>g >>> f = f=f === f = f=f ===</Line>
@@ -1226,7 +1244,7 @@ Homepage: http://neo-layout.org
    <Line>ü # #ü# ### ü # #ü# ###</Line>
   </Level>
   <Level>
-   <NewCharacters>Wir üben ein paar Sonderzeichen</NewCharacters>
+   <NewCharsLabel>Wir üben ein paar Sonderzeichen</NewCharsLabel>
    <Line>Das darfst du nicht! Hilfe! Betreten verboten! Polizei! Halt! Dieb! Schließen Sie nach dem Unterricht die Fenster!</Line>
    <Line>Wo wohnen Sie? Gehst du in die Mensa? Du kommst heute? Universität oder Fachhochschule?</Line>
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
@@ -1236,7 +1254,7 @@ Homepage: http://neo-layout.org
    <Line>Joachim (Vater), Klara (Mutter), Tobias (Sohn), Steffanie (Tochter), Walter (Opa), Heidi (Oma).</Line>
   </Level>
   <Level>
-   <NewCharacters>Typografie und neue Zeichen</NewCharacters>
+   <NewCharsLabel>Typografie und neue Zeichen</NewCharsLabel>
    <Line>Man beachte die Setzung von Leerzeichen beim Schrägstrich/Slash, bei Klammern (wie hier) und bei anderen Satzzeichen.</Line>
    <Line>Neo bietet die echten deutschen Anführungszeichen auf der zweiten Ebene der Zahlen 8 und 9. Zitat: „In dubio pro Neo.“</Line>
    <Line>Auf der dritten Ebene sind die ‚einfachen‘ Anführungszeichen, auf der 9 und 0 die “englischen” und die entsprechenden ‘einfachen englischen’.</Line>
@@ -1250,7 +1268,7 @@ Homepage: http://neo-layout.org
    <Line>Und ſchließlich iſt es mit Neo möglich, das lange s zu tippen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Abkürzungen</NewCharacters>
+   <NewCharsLabel>Abkürzungen</NewCharsLabel>
    <Line>Wird eine Abkürzung abgekürzt ausgesprochen, so wird sie grundsätzlich ohne Punkt und stets ohne Leerzeichen geschrieben.</Line>
    <Line>Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR</Line>
    <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen „10 Meter“)</Line>
@@ -1311,7 +1329,7 @@ Homepage: http://neo-layout.org
    <Line>WWW World Wide Web</Line>
   </Level>
   <Level>
-   <NewCharacters>Glückwunsch</NewCharacters>
+   <NewCharsLabel>Glückwunsch</NewCharsLabel>
    <Line>Herzlichen Glückwunsch zum Erlernen des Neo-Tastaturlayouts. Ich hoffe, die Lektionen haben trotz der Mühe ein wenig Spaß gemacht.</Line>
    <Line>Natürlich muss jetzt noch viel geübt werden. Die bisher erlernten Schriftzeichen müssen gefestigt werden,</Line>
    <Line>dazu folgen noch ein paar Testtexte. Außerdem können Sie in anderen Lektionen die Fließtext-Übungen mit KTouch machen.</Line>
@@ -1323,7 +1341,7 @@ Homepage: http://neo-layout.org
    <Line>Spielen Sie damit ein wenig. Werden Sie schneller als je zuvor. Viel Spaß!</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Esperanto“</NewCharacters>
+   <NewCharsLabel>Testtext „Esperanto“</NewCharsLabel>
    <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur.</Line>
    <Line>Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile,</Line>
    <Line>und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
@@ -1346,7 +1364,7 @@ Homepage: http://neo-layout.org
    <Line>Wenn Sie 500 Wörter Esperanto lernen, ist es das Äquivalent von einem Englisch- oder Französisch-Wortschatz von mindestens 3000 Wörtern.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Der kleine Prinz“</NewCharacters>
+   <NewCharsLabel>Testtext „Der kleine Prinz“</NewCharsLabel>
    <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery.</Line>
    <Line>Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt.</Line>
    <Line>Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen.</Line>
@@ -1367,7 +1385,7 @@ Homepage: http://neo-layout.org
    <Line>Schließlich verließ der Prinz seinen Planeten. Auf der Suche nach Freunden besucht er weitere Asteroiden in der Region. Und so kommt der kleine Prinz auf den siebten Planeten, die Erde.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Sprichwörter“</NewCharacters>
+   <NewCharsLabel>Testtext „Sprichwörter“</NewCharsLabel>
    <Line>Abends wird der Faule fleißig. An jedem Gerücht ist ein kleines bisschen Wahrheit. Andere Länder, andere Sitten.</Line>
    <Line>Andere Mütter haben auch schöne Töchter Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
    <Line>Berg und Tal kommen nicht zusammen, aber Menschen. Besser ein Ende mit Schrecken, als eine Schrecken ohne Ende.</Line>
@@ -1405,7 +1423,7 @@ Homepage: http://neo-layout.org
    <Line>Zuviel ist zuviel, und zu wenig ist nicht genug. Zwei Hähne auf einem Mist vertragen sich nicht.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Yoga“</NewCharacters>
+   <NewCharsLabel>Testtext „Yoga“</NewCharsLabel>
    <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, Kriyas, Meditation und/oder Askese umfasst.</Line>
    <Line>Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Integration“ als auch im Sinne von „Anschirren“ und „Anspannen“ des Körpers an die Seele zur Sammlung und Konzentration verstanden werden.</Line>
    <Line>Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander.</Line>
@@ -1427,7 +1445,7 @@ Homepage: http://neo-layout.org
    <Line>Yoga hat auf viele Menschen eine beruhigende, ausgleichende Wirkung und kann somit den Folgeerscheinungen von Stress entgegenwirken.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Psyche“</NewCharacters>
+   <NewCharsLabel>Testtext „Psyche“</NewCharsLabel>
    <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das „Gesamtsystem“ aller jener (Lebens)„Regungen“,</Line>
    <Line>das „der Volksmund“ seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt.</Line>
    <Line>Damit ist zuerst die Gesamtheit solcher „Lebensäußerungen“ oder Eigenreaktionen gemeint,</Line>
@@ -1446,7 +1464,7 @@ Homepage: http://neo-layout.org
    <Line>insbesondere regelgeleiteten und allein „in der Vorstellung“ oder „im Geiste“ stattfindenden Kombinierens von Vorstellungselementen jeder Art („Denken“).</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Linux und Freie Software“</NewCharacters>
+   <NewCharsLabel>Testtext „Linux und Freie Software“</NewCharsLabel>
    <Line>Als Linux oder GNU/Linux werden in der Regel freie, portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme bezeichnet, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.</Line>
    <Line>Die weite, auch kommerzielle Verbreitung ermöglichte ab 1992 die Lizenzierung des Linux-Kernels unter der GPL.</Line>
    <Line>Das modular aufgebaute Betriebssystem wird von Softwareentwicklern auf der ganzen Welt weiterentwickelt, die an den verschiedenen Projekten mitarbeiten.</Line>
@@ -1471,7 +1489,7 @@ Homepage: http://neo-layout.org
    <Line>Sind eine oder mehrere dieser Bedingungen nicht erfüllt, wird die Software als proprietär oder „unfrei“ bezeichnet.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Alkohol“</NewCharacters>
+   <NewCharsLabel>Testtext „Alkohol“</NewCharsLabel>
    <Line>Ethanol ist eine farblose, leicht entzündliche Flüssigkeit mit brennendem Geschmack sowie charakteristischem, würzigem Geruch.</Line>
    <Line>Umgangssprachlich wird es als Alkohol bezeichnet. Ältere Nomenklaturen verwendeten die Bezeichnungen Äthanol, Äthylalkohol oder Ethylalkohol.</Line>
    <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch „Geist“).</Line>
@@ -1492,7 +1510,7 @@ Homepage: http://neo-layout.org
    <Line>In Deutschland sterben über 73000 Menschen jährlich vorzeitig aufgrund ihres Alkoholmissbrauchs.</Line>
   </Level>
   <Level>
-   <NewCharacters>Testtext „Säuren“</NewCharacters>
+   <NewCharsLabel>Testtext „Säuren“</NewCharsLabel>
    <Line>Wohl die älteste bekannte Säure (lat. acidum) ist Essig (lat. acetum), eine etwa fünfprozentige wässrige Lösung der Verbindung Essigsäure. Säuren waren etwas Essigartiges (oxos od. acidus).</Line>
    <Line>In der Alchemie galt Säure als ein Urstoff. Die sauren Eigenschaften basierten auf einer einzigen Ursäure, die in verschiedenen Substanzen zur Wirkung kam.</Line>
    <Line>Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine ätzende Wirkung und einen sauren Geschmack. Bis Ende des 13. Jh. waren wohl neben Essig und anderen Pflanzensäften keine Säuren bekannt.</Line>
@@ -1513,7 +1531,7 @@ Homepage: http://neo-layout.org
    <Line>Intensive Untersuchungen durch J. R. Glauber im 17. Jh. führten zum Glaubers Salzgeist (Spiritus salis Glauberianus), der sehr konzentrierten, sogenannten rauchenden Salzsäure bzw. dem Gas Wasserstoffchlorid.</Line>
   </Level>
   <Level>
-   <NewCharacters>Shell-Einleitung</NewCharacters>
+   <NewCharsLabel>Shell-Einleitung</NewCharsLabel>
    <Line>Es ist wichtig, auf einer Tastatur nicht nur effizient die Texteingabe zu beherrschen,</Line>
    <Line>sondern auch die Eingabe von üblichen Befehlen schnell und sicher zu erledigen.</Line>
    <Line>Fehler bei diesen Eingaben können teilweise verheerend sein, deshalb achten Sie im Folgenden auf ihre Fehlerfreiheit.</Line>
@@ -1539,7 +1557,7 @@ Homepage: http://neo-layout.org
    <Line>top Zeigt eine Liste der laufenden Prozesse geordnet nach CPU-Leistung (ende mit der Taste „Q“).</Line>
   </Level>
   <Level>
-   <NewCharacters>Shell-Übung</NewCharacters>
+   <NewCharsLabel>Shell-Übung</NewCharsLabel>
    <Line>man [Programm] Zeigt die Hilfe zu einem Programm an. man firefox</Line>
    <Line>cd [Verzeichnis] Wechselt in das Verzeichnis. cd /tmp</Line>
    <Line>cd .. Wechselt ein Verzeichnis höher. cd ../td</Line>
@@ -1578,7 +1596,7 @@ Homepage: http://neo-layout.org
    <Line>echo "My number is myno, can you see this number"</Line>
   </Level>
   <Level>
-   <NewCharacters>Shell Test</NewCharacters>
+   <NewCharsLabel>Shell Test</NewCharsLabel>
    <Line>$ vi ginfo</Line>
    <Line>#</Line>
    <Line>#</Line>
