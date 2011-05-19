@@ -9,6 +9,7 @@ Homepage: http://xapient.net
  <Levels>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>id</NewCharsLabel>
    <NewCharacters>id</NewCharacters>
    <Line>id id id id di di di dddd iiii dddd iiii iidd iidd iidd ddii ddii</Line>
    <Line>didi idid didi idid didi didd didd idii idii idd idd dii dii</Line>
@@ -16,6 +17,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>uh</NewCharsLabel>
    <NewCharacters>uh</NewCharacters>
    <Line>uuuu hhhh uuuu hhhh uh uh uh uh uh uh uh hu hu hu hu hu</Line>
    <Line>huhu huhu huhu uhu uhu uhu uhu huu huu huu huu huu</Line>
@@ -26,6 +28,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Mittelfinger</LevelComment>
+   <NewCharsLabel>er</NewCharsLabel>
    <NewCharacters>er</NewCharacters>
    <Line>ee ee ee eeee ee eeee rr rr rr rrrr rr rrrr rr</Line>
    <Line>er er er er re re re re erre erre erre reer reer reer reer rere rere erre erre</Line>
@@ -36,6 +39,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Ringfinger</LevelComment>
+   <NewCharsLabel>on</NewCharsLabel>
    <NewCharacters>on</NewCharacters>
    <Line>ooo ooo ooo oo oo oooo nnn nnn nnn nn nn nnnn</Line>
    <Line>on on on on no no no nnnooo nnnooo ooonnn ooonnn</Line>
@@ -46,6 +50,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Kleine Finger</LevelComment>
+   <NewCharsLabel>asl </NewCharsLabel>
    <NewCharacters>asl </NewCharacters>
    <Line>aaaa aaaa aa aa aaaa ssss ssss ss ss ssss aaaa ssss aaaa ssss</Line>
    <Line>as as as sa sa assa assa sassa sassa assa assa sassa ssaa aass</Line>
@@ -56,7 +61,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Fingertraining auf der Grundstellung</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>aoei aoei aoei ieoa ieoa ieoa ieoa drns drns snrd snrd drns drns snrd snrd aoeidrns aoeidrns</Line>
    <Line>ideronas ideronas ideronas asonerid asonerid drns drns ieoa ieoa</Line>
    <Line>aoeiuhdrnsl aoeiuhdrns aoeiu hrnsl lll aaa sss ooo nnn eee rrr iii ddd uuu hhh</Line>
@@ -65,7 +70,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir sichern die Grundstellung</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>aa dd oo rr ee nn ii ss uu ll hh aa aa hh hh oo oo rr rr nn nn ss ss ll ll ee ee ii ii</Line>
    <Line>aaaa rrrr aaaa rrrr iiii dddd iiii dddd ssss oooo nnnn eeee llll hhhh uuuu hhhh</Line>
    <Line>iiii rrrr nnnn oooo ssss nnnn hhhh uuuu llll ssss nnnn oooo eeee rrrr dddd aaaa</Line>
@@ -79,6 +84,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Mittelfinger</LevelComment>
+   <NewCharsLabel>.c</NewCharsLabel>
    <NewCharacters>.c</NewCharacters>
    <Line>.. cc .. cc .. cc .. cc .c. .c. c..c c..c c..c c..c c..c .c.c ... ... ccc ccc ... ccc ...</Line>
    <Line>auch auch auch auch ach ach ach ach rauch rauch rauch auch rauch. auch rauch.</Line>
@@ -88,6 +94,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Ringfinger</LevelComment>
+   <NewCharsLabel>,t</NewCharsLabel>
    <NewCharacters>,t</NewCharacters>
    <Line>,,, ttt ,,, ttt ,,, ttt ,,, ttt t, t, t, t, ttt, ttt, ttt, ttt, ,,,, tttt</Line>
    <Line>cccc tttt ,,,, .... tttt cccc .... ,,,, tctc tctc ,.,. ,.,. tctc ,.,.</Line>
@@ -101,7 +108,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Ein kleines Gedicht aus den bisher gelernten Buchstaben</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>erde an arne der untere rand und chilli con carne eint die trauernden auf ihren stand.</Line>
    <Line>er eint den tau und die ader der narren in seltenen sparten und anderer arten.</Line>
    <Line>da trauert der tau auch anderen sachen in den auen, die dauernde erde soll lachen</Line>
@@ -115,6 +123,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>pg</NewCharsLabel>
    <NewCharacters>pg</NewCharacters>
    <Line>ppp ggg ppp ggg ppp ggg ppp ggg g g g g p p p p pg pg pg pg pg pg pg pg</Line>
    <Line>ggggpppp ggggpppp ggggpppp g. p. gp. gp. pg. pg. ctpg ctgp ctgp ctpg</Line>
@@ -127,12 +136,12 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Ein wenig Motivation zwischendurch</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>gratulation. sie sind sehr gut und lernen schnell. super.</Line>
   </Level>
   <Level>
    <LevelComment>Sicherheitstest für p, g und t</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>platte platte glatte pause pause phase phase glas glas glas grau grau google google</Line>
    <Line>grenadier grenadier granate granate graus graus applaus applaus piano piano piano</Line>
    <Line>alge alge igel igel liga liga lage lage lade lade geld geld lied lied liegen liegen legen legen</Line>
@@ -146,7 +155,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben ein wenig c und h</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>celle celle celle creature creature creature celle celle creature creature</Line>
    <Line>cent cent cent chance chance chance cent cent chance chance</Line>
    <Line>charta charta charta chen chen chen charta charta chen chen</Line>
@@ -169,6 +178,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>xb</NewCharsLabel>
    <NewCharacters>xb</NewCharacters>
    <Line>xxx bbb xxx bbb xb xb bx bx xxx bbb xxx bbb xb xb bx bx</Line>
    <Line>dx dx dx dx ib ib ib ib dx dx dx ib ib ib dx bx bx bx xb xb xb</Line>
@@ -179,6 +189,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>km</NewCharsLabel>
    <NewCharacters>km</NewCharacters>
    <Line>kkk bbb kkk bbb xxx kkk bbb kk xx bb kk xx bb bb xx kk bb xx kk</Line>
    <Line>mmm kkk mmm kkk mmm kkk mmm kkk mk mk mk mk mk mk</Line>
@@ -194,6 +205,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Zeigefinger</LevelComment>
+   <NewCharsLabel>yf</NewCharsLabel>
    <NewCharacters>yf</NewCharacters>
    <Line>yy ff yy ff yyy fff yyy fff yyyy ffff yf yf yf fy fy fy</Line>
    <Line>if if if dy dy dy if if if dy dy dy</Line>
@@ -206,6 +218,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Mittelfinger</LevelComment>
+   <NewCharsLabel>jw</NewCharsLabel>
    <NewCharacters>jw</NewCharacters>
    <Line>jjj www jjj www jw jw jw wj wj wj jjj www jjj www jj jj jj jj ww ww ww ww</Line>
    <Line>ja ja ja ja ja wer wer wer wer wer was was was was wo wo wo wie wie warum</Line>
@@ -216,7 +229,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Sicherheitstest für wkjm</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>konkurs kontaktieren kontrolleur krankheit wachhund waghalsig wagen wahrheit wahrnehmung wanduhr wasserhahn</Line>
    <Line>mikroskopisch mikroskopisch mikroskopisch mitschleppen mitschleppen mitschleppen musikgruppe musikgruppe musikgruppe</Line>
    <Line>morphium morphium morphium moralpredigt moralpredigt moralpredigt muttersprachler muttersprachler muttersprachler</Line>
@@ -239,6 +252,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Kleine Finger</LevelComment>
+   <NewCharsLabel>zü</NewCharsLabel>
    <NewCharacters>zü</NewCharacters>
    <Line>zzz üüü zzz üü zz üü zz üü zz üü zz üz üz üz zü zü zü züg züg züg güz güz güz</Line>
    <Line>üz üz üzü üzü pfü pfü pfü pfü zag zag zad zad zag zag zag zag über über über über über</Line>
@@ -251,7 +265,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben ü und j</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>üben über übel üblich übrigens überaus übrig überall überbacken überladen überbewertet überhaupt überängstlich</Line>
    <Line>jemand junge jemals jucken jäten jährig jaule jobben ja jobben jubeln jagen jawohl jubeln jonglieren jeder jetzt jedes jüngst jüdisch</Line>
    <Line>müssen fünf dürfen müde zurück natürlich blühen kühl berühmt glühen kühn würgen pflücken küssen hübsch spühlen fühlen</Line>
@@ -266,7 +280,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir wiederholen viele Wörter</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>alle alte elle alge eile eule aula reite gleite nieder lieder glieder regen legen lagen ragen tragen trauen grauen</Line>
    <Line>glitt ritt tritt dritt glitter dritter celle creature cent chance charta chen chicago chirurg chlor china code chor</Line>
    <Line>heucheln handtuch hecheln hechten hindurch hochachtung hund hut hinter heiter heilig heilen haar heer herr hell hall</Line>
@@ -299,7 +313,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir wiederholen alle Buchstaben</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>iii ddd uuu hhh uuu hhh iii ddd eee rrr ooo nnn aaa sss lll aaa ooo eee iii uuu hhh ddd rrr nnn sss lll</Line>
    <Line>ccc ttt ppp fff ppp ttt ppp ttt ccc ccc ppp ppp ttt ttt ppp ttt ggg ggg ccc hhh bbb xxx bbb xxx xxx</Line>
    <Line>kkk mmm kkk mmm kkk mmm kkk mmm bbb xxx xxx bbb mmm kkk xxx www jjj www jjj jjj www jjj</Line>
@@ -309,7 +323,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Sicherheitstest für . und , </LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>leime, leime. umher, umher. kam. kam, dem. dem, mir, mir. mag, mag. male. male, milde. milde, mehr, mehr. arme, arme.</Line>
    <Line>park. park, parole. parole, spinat, spinat. sport, sport. pilgern, pilgern. pille, pille. pinie. pinie, pirat. pirat,</Line>
    <Line>tippst, tippst. kippst, kippst. spiel. spiel, spreu. spreu, kasper, kasper. kapsel, kapsel. april, april. alpen. alpen,</Line>
@@ -331,7 +345,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Ringfinger</LevelComment>
-   <NewCharacters>qv </NewCharacters>
+   <NewCharsLabel>qv </NewCharsLabel>
+   <NewCharacters>qv</NewCharacters>
    <Line>qqq vvv qqq vvv qqq jjj www vvv qqq vvv qqq vvv rrr eee qqq vvv qv qv qv qv qv</Line>
    <Line>iq iq iq iq iq iq rv rv rv rv sv sv sv sv sv sv sv sv ev ev ev sq sq sq sql sql sql sql</Line>
    <Line>ivi ivi ivi ala ivi ivi ece ivi ivi ivi ala ivi ivi ivi viv vin vir vit vid vim vib uvi ivi avi evi ovi lvi pvi cvi wvi ovi</Line>
@@ -343,7 +358,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir wiederholen</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn</Line>
    <Line>ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn</Line>
    <Line>alle alte elle alge eile eule aula reite gleite nieder lieder glieder regen legen lagen ragen tragen trauen grauen.</Line>
@@ -387,7 +403,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben v und q</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>viele fragen, viele fragen, viele fragen. falsche versicherung, falsche versicherung, falsche versicherung.</Line>
    <Line>vertrockneter fluss, vertrockneter fluss, vertrockneter fluss. fetter vater, fetter vater, fetter vater.</Line>
    <Line>verlassener friedhof, verlassener friedhof, verlassener friedhof. fauler vogel, fauler vogel, fauler vogel.</Line>
@@ -412,7 +428,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Die Umlaute</LevelComment>
-   <NewCharacters>äö </NewCharacters>
+   <NewCharsLabel>äö </NewCharsLabel>
+   <NewCharacters>äö</NewCharacters>
    <Line>ala aäa ala aäa ala aäa aäu aäi aäa aäe aäo aäl aäc aäw aäp aäz ivi iöi ivi iöi ivi iöi iöu iöi iöa iöe iöo iöl iöc iöw iöp iöz</Line>
    <Line>äda äta ära äna äsa äfa äga äha äka ä.a ä,a äma äba ödi öti öri öni ösi öfi ögi öhi öki ö.i ö,i ömi öbi</Line>
    <Line>lal äaä lal äaä lal äaä äua äia äaa äea äoa äla äca äwa äpa äza viv öiö viv öiö viv öiö öui öii öai öei öoi öli öci öwi öpi özi</Line>
@@ -429,7 +446,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben ä und ö</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>ländliche, pubertär, wählbar, prächtig, gesprächig, umständlich, erträgliche, tätige, tätlich, anhäufen, anständig, ästhetisch, ätzend,</Line>
    <Line>wäre, sähe, läge, wäre, sähe, hätten, kämen, lägen, wären, nähme, während, lässig, mächtig, allmählich, gäben,</Line>
    <Line>ölig, wölben, störte, grölen, böig, möglich, tötet, dösen, möchte, blöde, öde, krönen, höhnen, völlig, öffnen,</Line>
@@ -450,7 +467,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben GROSS und klein schreiben</LevelComment>
-   <NewCharacters>Linker Umschalter</NewCharacters>
+   <NewCharsLabel>Linker Umschalter</NewCharsLabel>
    <Line>Nen Nan Nin Nun Non Nwn Ncn Nln Nzn Npn Nen Nan Nin Nun Non Nwn Ncn Nln Nzn Npn</Line>
    <Line>Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr</Line>
    <Line>Tet Tat Tit Tut Tot Twt Tct Tlt Tzt Tpt Tet Tat Tit Tut Tot Twt Tct Tlt Tzt Tpt</Line>
@@ -474,7 +491,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben rechts GROSS und klein im Wechsel</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>Nein nein Nein nein Nacht nachts Nacht nachts Nager nagen Nager nagen</Line>
    <Line>Rast rasten Rast rasten Ritt reiten Ritt reiten Ruhe ruhen Ruhe ruhen Rat raten Rat raten</Line>
    <Line>Taucher tauchen Taucher tauchen Tag tagein Tag tagaus Trage tragen Trage tragen</Line>
@@ -500,7 +518,7 @@ Homepage: http://xapient.net
    <Line>Das Zink, der Zauber, die Zahl. Die Zeit, das Zeug, das Ziel. Der Zahn, der Zaun, das Zelt.</Line>
   </Level>
   <Level>
-   <NewCharacters>Rechter Umschalter</NewCharacters>
+   <NewCharsLabel>Rechter Umschalter</NewCharsLabel>
    <Line>Ene Ere Ete Ede Ese Eke Ehe Ege Ebe Eme Ene Ere Ete Ede Ese Eke Ehe Ege Ebe Eme</Line>
    <Line>Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama</Line>
    <Line>Ini Iri Iti Idi Isi Iki Ihi Igi Ibi Imi Ini Iri Iti Idi Isi Iki Ihi Igi Ibi Imi</Line>
@@ -519,7 +537,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben links GROSS und klein im Wechsel</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Essen essen Essen essen Ekel ekeln Ekel ekeln Eis eisig Eis eisig</Line>
    <Line>Arbeit arbeiten Arbeit arbeiten Alter altern Alter altern Antwort antworten Antwort antworten</Line>
    <Line>Isolator isolieren Isolator isolieren Italiener italienisch Italiener italienisch Intelligenz intelligent Intelligenz intelligent</Line>
@@ -537,7 +555,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Kurze Trainingssätze</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>Hinter dem Haus steht ein Ölbaum. Der Baum der Bäume ist alt. Der Berg ist hoch. Bald gehe ich zum Sport. Dann spiele ich Basketball.</Line>
    <Line>Meine Mutter backt Kuchen. Den Kuchen essen wir mit Kirschen und Schlagsahne. Susanne isst keinen Kuchen. Sie will nicht dick werden ächzt Renate.</Line>
    <Line>Georg hatte gestern Geburtstag. Wir waren mit den Zelt unterwegs. Der Zeltplatz war bei einer Insel. Sein Geschenk war ein Besuch im Tierpark.</Line>
@@ -554,7 +573,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Der grosse Sicherheitstest</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt Glitter Dritter Celle Kelle Elle Cent Karter Charta Krater Chlor Ohr Chor</Line>
    <Line>Haar Heer Herr Hagel Nagel Wand Hand Hund Grund Hundert Ast Hast Rast Gast Eis Reis Greis Gleis See Tee Schnee Sorge</Line>
    <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spaga t Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
@@ -589,7 +608,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>x t c sind auch nur Buchstaben</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Manchmal schreiben wir x, dann wieder cks, gs, ks oder chs.</Line>
    <Line>Im Aufsatzheft hat Alex unsauber geschrieben und gekleckst. Carmen will in Luxemburg spezielle Kekse und echten Lachs kaufen.</Line>
    <Line>Der Boxer sollte sich von seinen Gegner durch psychogolische Tricks nicht ins Bockshorn jagen lassen.</Line>
@@ -616,7 +635,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir lernen nur eine neue Taste</LevelComment>
-   <NewCharacters>ß ?</NewCharacters>
+   <NewCharsLabel>ß ?</NewCharsLabel>
+   <NewCharacters>ß?</NewCharacters>
    <Line>ßßß ??? ßßß ??? ßßß ??? ßß ?? ßß ?ß?ß? ?? ?? ßß ßß</Line>
    <Line>???? ßßßß ???? ßßßß ???? ßßßß ????</Line>
    <Line>?aoei? ?aoei? ?aoei? ?aoei? ?drns? ?drns? ?drns?</Line>
@@ -629,7 +649,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben ß und ?</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>saß, fließen, ließen, gießen, außen, außer, draußen, äußerte, weiß, groß, bloß, genießen, reißen, heißen, verließ,</Line>
    <Line>wollen sie? können sie? brauchen sie? rauchen sie? schläfst du? willst du? mag er? sagt er?</Line>
    <Line>Blöße. Fuß. Füße. Gießen. Grieß. Grüße. Gruß. Schöße. Schoß. Straße. Muße. Stoß. Spaß. Steiß. Strauß. Ruß.</Line>
@@ -643,7 +664,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Rechtschreibklippen und häufige Rechtschreibfehler</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>gar gären, die Gebärde, malen Gemälde, hämisch, Haar Härchen, zäh Zähheit, laden lädt, klar klären, Märchen, Kran Kräne, Name nämlich,</Line>
    <Line>Paar Pärchen, säen Sämann, Dänen, ähnliches allmähliche, Draht Drähte, fahren Fähre, Fähnchen, gähnen, gewahr gewähren Gewähr, Naht Nähte,</Line>
    <Line>sah, sähen, spähen spähte spähten, stehlen stahl, Stahl Stähle stählern, Kapitän, Sekretäre, Atmosphäre, Trainer Training, Gäste Geste, Ähre Ehre.</Line>
@@ -656,7 +678,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>English test—1000 frequently used words</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>sister gun total company oxygen similar deal radio plural death determine various score evening is not then</Line>
    <Line>action agreed forward nor capital opposite stretched rope factories wrong experience cotton settled chart rose apple</Line>
    <Line>yellow prepared allow details pretty fear entire southern solution workers corn truck fresh Washington substances</Line>
@@ -720,7 +743,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Deutsche Wörter -1000 häufigst benutzte Wörter</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>der die und in den von zu das mit sich des auf für ist im dem nicht ein eine als auch es an werden</Line>
    <Line>aus er hat dass sie nach wird bei einer um am sind noch wie einem über einen so zum war haben nur oder</Line>
    <Line>aber vor zur bis mehr durch man sein wurde sei in Prozent hatte kann gegen vom können schon wenn habe</Line>
@@ -789,6 +812,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Die Ziffern</LevelComment>
+   <NewCharsLabel>1234567890</NewCharsLabel>
    <NewCharacters>1234567890</NewCharacters>
    <Line>Die gewohnten Tasten über dem Buchstabenfeld sind auch unter dem Tastaturlayout Dvorak die Ziffern.</Line>
    <Line>111 Kleiner Finger 111 u1 x1 u1 ü1 u 1 x1x x1x 111</Line>
@@ -814,6 +838,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Die Sonderzeichen</LevelComment>
+   <NewCharsLabel>^+&lt;/-#´</NewCharsLabel>
    <NewCharacters>^+&lt;/-#´</NewCharacters>
    <Line>Mit der Hochstelltaste ändert sich bereits die gewohnte Belegung. Probiere es aus. Diese Übung verlangt viel Geduld!</Line>
    <Line>1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= ´` +* &lt;> -- nocheinmal -- 1! 2" 3§ 4$ 5% 6&amp; 7/ 8( 9) 0= ´` +* &lt;></Line>
@@ -840,7 +865,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Wir üben ein paar Sonderzeichen</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Das darfst du nicht! Hilfe! Betreten verboten! Polizei! Halt! Dieb! Schließen Sie nach dem Unterricht die Fenster!</Line>
    <Line>Wo wohnen Sie? Gehst du in die Mensa? Du kommst heute? Universität oder Fachhochschule?</Line>
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
@@ -851,7 +876,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Abkürzungen</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Wird eine Abkürzung abgekürzt ausgesprochen, so wird sie grundsätzlich ohne Punkt und stets ohne Leerzeichen geschrieben.</Line>
    <Line>Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR</Line>
    <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen "10 Meter")</Line>
@@ -913,7 +938,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Glückwunsch</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Herzlichen Glückwunsch zum Erlernen des Dvorak-Tastaturlayouts.</Line>
    <Line>Ich hoffe, die Lektionen haben trotz der Mühe ein wenig Spaß gemacht.</Line>
    <Line>Natürlich muss jetzt noch viel geübt werden. Die bisher erlernten Schriftzeichen müssen gefestigt werden,</Line>
@@ -922,7 +947,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Über das Dvorak Layout</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Die Dvorak-Tastaturbelegung, auch Dvorak Simplified Keyboard (DSK) genannt, ist die Bezeichnung einer ergonomischen Tastaturbelegung,</Line>
    <Line>die von August Dvorak in den 1930er Jahren als Alternative zur QWERTY-Tastaturbelegung entwickelt wurde.</Line>
    <Line>Die 1932 von einer Kommission unter August Dvorak und William Dealey entwickelte Dvorak-Tastaturbelegung hatte die Vorgabe,</Line>
@@ -945,7 +970,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Freie Open Source Software in der Schule</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Für allgemeinbildende höhere Schulen, die in der Regel nur wenig Spezialsoftware einsetzen, die durch das Angebot freier Software nicht gedeckt werden könnte,</Line>
    <Line>gilt nach Ansicht diverser Studien, dass ein gut geführter Umstieg auf FOSS einen finanzielle Besserstellung bedeuten kann.</Line>
    <Line>Der Wartungsaufwand kann langfristig reduziert und der Sicherheitsstandard erhöht werden.</Line>
@@ -970,7 +995,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Esperanto"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur.</Line>
    <Line>Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile,</Line>
    <Line>und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
@@ -994,7 +1019,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Der kleine Prinz"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery.</Line>
    <Line>Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt.</Line>
    <Line>Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen.</Line>
@@ -1016,7 +1041,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Sprichwörter"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Abends wird der Faule fleißig. An jedem Gerücht ist ein kleines bisschen Wahrheit. Andere Länder, andere Sitten.</Line>
    <Line>Andere Mütter haben auch schöne Töchter Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
    <Line>Berg und Tal kommen nicht zusammen, aber Menschen. Besser ein Ende mit Schrecken, als eine Schrecken ohne Ende.</Line>
@@ -1055,7 +1080,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Yoga"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, Kriyas, Meditation und/oder Askese umfasst.</Line>
    <Line>Der Begriff Yoga kann sowohl als "Vereinigung" oder "Integration" als auch im Sinne von "Anschirren" und "Anspannen" des Körpers an die Seele zur Sammlung und Konzentration verstanden werden.</Line>
    <Line>Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander.</Line>
@@ -1078,7 +1103,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Psyche"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das "Gesamtsystem" aller jener (Lebens)"Regungen",</Line>
    <Line>das "der Volksmund" seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt.</Line>
    <Line>Damit ist zuerst die Gesamtheit solcher "Lebensäußerungen" oder Eigenreaktionen gemeint,</Line>
@@ -1098,7 +1123,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Linux und Freie Software"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Als Linux oder GNU/Linux werden in der Regel freie, portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme bezeichnet, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.</Line>
    <Line>Die weite, auch kommerzielle Verbreitung ermöglichte ab 1992 die Lizenzierung des Linux-Kernels unter der GPL.</Line>
    <Line>Das modular aufgebaute Betriebssystem wird von Softwareentwicklern auf der ganzen Welt weiterentwickelt, die an den verschiedenen Projekten mitarbeiten.</Line>
@@ -1124,7 +1149,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Alkohol"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Ethanol ist eine farblose, leicht entzündliche Flüssigkeit mit brennendem Geschmack sowie charakteristischem, würzigem Geruch.</Line>
    <Line>Umgangssprachlich wird es als Alkohol bezeichnet. Ältere Nomenklaturen verwendeten die Bezeichnungen Äthanol, Äthylalkohol oder Ethylalkohol.</Line>
    <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch "Geist").</Line>
@@ -1146,7 +1171,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Testtext "Säuren"</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Wohl die älteste bekannte Säure (lat. acidum) ist Essig (lat. acetum), eine etwa fünfprozentige wässrige Lösung der Verbindung Essigsäure. Säuren waren etwas Essigartiges (oxos od. acidus).</Line>
    <Line>In der Alchemie galt Säure als ein Urstoff. Die sauren Eigenschaften basierten auf einer einzigen Ursäure, die in verschiedenen Substanzen zur Wirkung kam.</Line>
    <Line>Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine ätzende Wirkung und einen sauren Geschmack. Bis Ende des 13. Jh. waren wohl neben Essig und anderen Pflanzensäften keine Säuren bekannt.</Line>
@@ -1168,7 +1193,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Hinweis</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Die folgenden Texte sind zu großen Teilen sehr alte Texte und frei von Urheberrecht.</Line>
    <Line>Durch ihr Alter sind die Texte und Gedichte z.T. in alter deutscher Rechtschreibung verfasst.</Line>
    <Line>Auch sind manche Texte im Prosastil gehalten bzw. in gereimter Form geschrieben. Dies gilt es beim Abtippen zu bedenken.</Line>
@@ -1176,7 +1201,8 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Die sanften Tage</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
+   <NewCharacters></NewCharacters>
    <Line>Ich bin so hold den sanften Tagen,</Line>
    <Line>Wann in der ersten Frühlingszeit</Line>
    <Line>Der Himmel, blaulich aufgeschlagen,</Line>
@@ -1213,7 +1239,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Der überlistete Advokat</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Einst war ein Mann wegen eines Vergehens vor das Gericht gefordert und sah wohl ein,</Line>
    <Line>dass er ohne eine Geldstrafe nicht davonkommen würde.</Line>
    <Line>Da klagte er einem Fürsprecher oder Advokaten seine Not und bat ihn um guten Rat.</Line>
@@ -1237,7 +1263,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Der Rattenfänger</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Ihr lieben Spielleut allesammt,</Line>
    <Line>Ob arm, ob Schätze sparend,</Line>
    <Line>Wie Ihr auch heißt, woher Ihr stammt,</Line>
@@ -1305,7 +1331,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Elf Söhne 1</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Ich habe elf Söhne.</Line>
    <Line>Der erste ist äußerlich sehr unansehnlich, aber ernsthaft und klug; trotzdem schätze</Line>
    <Line>ich ihn, wiewohl ich ihn als Kind wie alle andern liebe, nicht sehr hoch ein. Sein</Line>
@@ -1366,7 +1392,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Elf Söhne 2</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Der sechste Sohn</Line>
    <Line>Mein sechster Sohn scheint, wenigstens auf den ersten Blick, der tiefsinnigste von</Line>
    <Line>allen. Ein Kopfhänger und doch ein Schwätzer. Deshalb kommt man ihm nicht leicht bei.</Line>
@@ -1447,7 +1473,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>FOSS</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Als FOSS bezeichnet man jene Programme, deren Lizenzen ihren Benutzern die</Line>
    <Line>Freiheit zusichern, diese für ihre Zwecke zu benutzen, zu studieren oder zu verändern und</Line>
    <Line>Kopien davon weiterzugeben, sowohl von dem Original als auch von der von ihnen</Line>
@@ -1479,7 +1505,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Richard Stallman</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Richard Matthew Stallman ist Aktivist, Softwareentwickler und Gründer der Free Software</Line>
    <Line>Foundation im Jahr 1985. Er promovierte 1974 an der Harvard Universiy in Physik, während er</Line>
    <Line>bereits am Massachusetts Institute of Technology (MIT) angestellt war und dort u.a. am ersten</Line>
@@ -1502,7 +1528,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Linus Torvalds</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Linus Torvalds - "Really, I'm not out to destroy Microsoft. That will just be a completely unintentional side effect."</Line>
    <Line>Nach dem Kauf seines ersten i386er-PCs, auf welchem Linus Torvalds mit "Minix", einem UNIX Klon</Line>
    <Line>für diese Architektur, arbeitete, erkannte er schnell, dass er mit dessen Funktionalität nicht sehr zufrieden war. Aus</Line>
@@ -1517,7 +1543,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>GNU/Linux</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>GNU/Linux</Line>
    <Line>"The fundamental instance of Free Software is the GNU operating system, which is the only</Line>
    <Line>operating system that was ever developed for ethical reasons, instead of for commercial or</Line>
@@ -1540,7 +1566,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Free Software Foundation</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Free Software Foundation - Der Zugang zu Software entscheidet, wer an der digitalen Gesellschaft teilnehmen</Line>
    <Line>kann. Um gleichberechtigten Zugang, Teilnahme und Wettbewerb aller Menschen im</Line>
    <Line>Informationszeitalter sicherzustellen, setzt sich die Free Software Foundation für digitale Freiheit in der Form von freier Software ein.</Line>
@@ -1589,7 +1615,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>GPL</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>General Public Licence - Copyleft</Line>
    <Line>Die GNU/GPL wurde im Januar 1989 von Richard Stallman verfasst und liegt</Line>
    <Line>mittlerweile in dritter Version vor. Unter ständigem Beschuss der Vertreter des</Line>
@@ -1604,7 +1630,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Shell-Einleitung</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Es ist wichtig, auf einer Tastatur nicht nur effizient die Texteingabe zu beherrschen,</Line>
    <Line>sondern auch die Eingabe von üblichen Befehlen schnell und sicher zu erledigen.</Line>
    <Line>Fehler bei diesen Eingaben können teilweise verheerend sein, deshalb achten Sie im Folgenden auf ihre Fehlerfreiheit.</Line>
@@ -1631,7 +1657,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Shell-Übung</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>man [Programm] Zeigt die Hilfe zu einem Programm an. man firefox</Line>
    <Line>cd [Verzeichnis] Wechselt in das Verzeichnis. cd /tmp</Line>
    <Line>cd .. Wechselt ein Verzeichnis höher. cd ../td</Line>
@@ -1671,7 +1697,7 @@ Homepage: http://xapient.net
   </Level>
   <Level>
    <LevelComment>Final</LevelComment>
-   <NewCharacters>none</NewCharacters>
+   <NewCharsLabel>none</NewCharsLabel>
    <Line>Du hast es geschafft! Du solltest nun MeisterIn der Tastatur sein. Gratulation!</Line>
   </Level>
  </Levels>

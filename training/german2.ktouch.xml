@@ -12,7 +12,8 @@ Version: 0.1 beta
  <FontSuggestions>Courier 10 Pitch</FontSuggestions>
  <Levels>
   <Level>
-   <NewCharacters>Grundhaltung</NewCharacters>
+   <NewCharsLabel>Grundhaltung</NewCharsLabel>
+   <NewCharacters>asdfjklö</NewCharacters>
    <Line>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj</Line>
    <Line>fj jf fj jf fj jf fj fj jf fj jf jf fj jf fj jf jf jf jf fj</Line>
    <Line>ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj</Line>
@@ -59,7 +60,7 @@ Version: 0.1 beta
    <Line>aösl ssas llkö kkök ölkj lkjl ölkö ölöa ölks öklj jlkk lkds</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>sla las laa aal sla lsa las sas lsa laa las all als ass als</Line>
    <Line>all als las all als las all als las all als las all als las</Line>
    <Line>sla sal sla sla saa sas asa lal ala als sss lsa sla sll sla</Line>
@@ -89,7 +90,8 @@ Version: 0.1 beta
    <Line>da das alls kafka las kalk fall saal falls all das öl ja ja</Line>
   </Level>
   <Level>
-   <NewCharacters>i und e</NewCharacters>
+   <NewCharsLabel>i und e</NewCharsLabel>
+   <NewCharacters>ei</NewCharacters>
    <Line>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke</Line>
    <Line>dak dik dak dek dak dik kid kid dik eki ede kde dek dei die</Line>
    <Line>sei sie lie ise asi esi ase las lie fie kis eis ise ike eki</Line>
@@ -118,7 +120,8 @@ Version: 0.1 beta
    <Line>dies des seide dieses fidel lief des alles lies das kleides</Line>
   </Level>
   <Level>
-   <NewCharacters>g und h</NewCharacters>
+   <NewCharsLabel>g und h</NewCharsLabel>
+   <NewCharacters>gh</NewCharacters>
    <Line>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj</Line>
    <Line>fggf jhhj fgjh fgjh fgjh fghj jhgf fghj fgjh fghj gfhj fgjh</Line>
    <Line>fgf gfg jhj hjh gfh jhg fgj jhg fgh jhg hgf ghf hgf ghf fjh</Line>
@@ -145,7 +148,8 @@ Version: 0.1 beta
    <Line>geklage gelage sage die sage gejage klage felge helge leide</Line>
   </Level>
   <Level>
-   <NewCharacters>w und o</NewCharacters>
+   <NewCharsLabel>w und o</NewCharsLabel>
+   <NewCharacters>wo</NewCharacters>
    <Line>sws lol sws lol sws lol sws lol was los was los was los was</Line>
    <Line>was sws los lol sws lol was los wag weg wog log los weh wie</Line>
    <Line>log los was wow lol sws wow sow saw osw aso oso los kos jas</Line>
@@ -171,7 +175,8 @@ Version: 0.1 beta
    <Line>das wild floh es goss waldig eisig als die wiese wie willig</Line>
   </Level>
   <Level>
-   <NewCharacters>r und u</NewCharacters>
+   <NewCharsLabel>r und u</NewCharsLabel>
+   $<NewCharacters>ru</NewCharacters>
    <Line>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr</Line>
    <Line>fra aua fau fra fru jau jar dau dar sau sua sar sra öuö rör</Line>
    <Line>ded kik juj ded frf ase ras juk kuj fuj ruf dei ser usl öre</Line>
@@ -199,7 +204,7 @@ Version: 0.1 beta
    <Line>war luise wer ulli wer dario alles lief  als das regal fiel</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>aufs dies jura soda hier ufer haus erde frau juda judo joda</Line>
    <Line>ruhe rase glas gras fass fuss ewig jahr rede klar aula fuhr</Line>
    <Line>lauf lief rauf rief dorf darf half hilf hole sole rose lose</Line>
@@ -223,7 +228,8 @@ Version: 0.1 beta
    <Line>falke eule uhu juhu also falls das so war  war es so klar</Line>
   </Level>
   <Level>
-   <NewCharacters>t und z</NewCharacters>
+   <NewCharsLabel>t und z</NewCharsLabel>
+   <NewCharacters>tz</NewCharacters>
    <Line>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz</Line>
    <Line>ftf jzj ftf jzj ftz jzt ftz jtz fzt jtz ftz fjt fjz fjt fjz</Line>
    <Line>dzd fzf dzf dzd dzd szs aza ata sts sts ktk tlt ltl ötö özi</Line>
@@ -254,7 +260,7 @@ Version: 0.1 beta
    <Line>war ruh</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>der die das wer wie was wo der die das wer wie was wo da so</Line>
    <Line>sehr steil sehr stark her klar sogar das der das die daraus</Line>
    <Line>dass das dass das es was klar sogar das dies wie es ist sag</Line>
@@ -281,7 +287,8 @@ Version: 0.1 beta
    <Line>alles was sie weiss was weiss sie alles wer wusste das</Line>
   </Level>
   <Level>
-   <NewCharacters>q und p</NewCharacters>
+   <NewCharsLabel>q und p</NewCharsLabel>
+   <NewCharacters>qp</NewCharacters>
    <Line>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq</Line>
    <Line>qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu</Line>
    <Line>pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr</Line>
@@ -313,7 +320,8 @@ Version: 0.1 beta
    <Line>reprise die quelle des flusses die weserquelle europapokale</Line>
   </Level>
   <Level>
-   <NewCharacters>v und m</NewCharacters>
+   <NewCharsLabel>v und m</NewCharsLabel>
+   <NewCharacters>vm</NewCharacters>
    <Line>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh</Line>
    <Line>vi va ve vr vg vi vu vo av ev iv uv ov uv me ma mo mi me mu</Line>
    <Line>vim vam mer mar mir mei mol mal mie mig mag mog meh muh mau</Line>
@@ -341,7 +349,8 @@ Version: 0.1 beta
    <Line>die katze sitzt im haus herum sie miaut zu laut verwahre es</Line>
   </Level>
   <Level>
-   <NewCharacters>n und b</NewCharacters>
+   <NewCharsLabel>n und b</NewCharsLabel>
+   <NewCharacters>nb</NewCharacters>
    <Line>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf</Line>
    <Line>gn fn gb bg fb hb bh jb bj kb bk db bd sb bs ab ba lb bl bö</Line>
    <Line>öb bo bu bi no nu ni ne be br bw kb bk bt tb zb bz ln nl vn</Line>
@@ -370,7 +379,8 @@ Version: 0.1 beta
    <Line>lesen  ist heine vergessen  keine ahnung  ist heine bekannt</Line>
   </Level>
   <Level>
-   <NewCharacters>c und ,</NewCharacters>
+   <NewCharsLabel>c und ,</NewCharsLabel>
+   <NewCharacters>c,</NewCharacters>
    <Line>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,</Line>
    <Line>, , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,</Line>
    <Line>ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck</Line>
@@ -401,7 +411,8 @@ Version: 0.1 beta
    <Line>auch wenn der rechner streikt, musst du die ruhe bewahren</Line>
   </Level>
   <Level>
-   <NewCharacters>x und .</NewCharacters>
+   <NewCharsLabel>x und .</NewCharsLabel>
+   <NewCharacters>x.</NewCharacters>
    <Line>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.</Line>
    <Line>x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x</Line>
    <Line>xx.. xx.. xx.. xx.. xx.. xx.. x.. xx.. xx.. xx.. xx.. xx..</Line>
@@ -428,7 +439,8 @@ Version: 0.1 beta
    <Line>sie auch noch die entschrechenden seiten im internet. ende.</Line>
   </Level>
   <Level>
-   <NewCharacters>y und -</NewCharacters>
+   <NewCharsLabel>y und -</NewCharsLabel>
+   <NewCharacters>y-</NewCharacters>
    <Line>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-</Line>
    <Line>y- y- y- y- y- y- y- -y -y -y -y -y -y -y -y -y -y -y -y -y</Line>
    <Line>ö-ö ö-ö ö-ö ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö-</Line>
@@ -459,7 +471,8 @@ Version: 0.1 beta
    <Line>paar stichworte logisch voneinander absetzen möchte.</Line>
   </Level>
   <Level>
-   <NewCharacters>ü und ä</NewCharacters>
+   <NewCharsLabel>ü und ä</NewCharsLabel>
+   <NewCharacters>üä</NewCharacters>
    <Line>öüä öüä öüä öäü öäü üäö äüö öäü öüä äöü üöä äüö öäü öäü üöä</Line>
    <Line>öüö öüö öüö öüö öüö öüö öüö üöü üöü üöü üöü öüö üöü öüö üöü</Line>
    <Line>öäö öäö äöä äöä äöä öäö öäö öäö äöä öäö öäö öäö öäö äöä äöä</Line>
@@ -494,6 +507,7 @@ Version: 0.1 beta
    <Line>...ach so, vögel ärgern keine bären.</Line>
   </Level>
   <Level>
+   <NewCharsLabel>ß</NewCharsLabel>
    <NewCharacters>ß</NewCharacters>
    <Line>äß äß äß öß üß öß üß öß üß äß üß öß üß üß äß öß üß äß öß üß</Line>
    <Line>ßt ßt ßt ße ßt ße ßa ßt ße ßd ßt üß ßt üß ßt üßt üßt äße aß</Line>
@@ -520,7 +534,7 @@ Version: 0.1 beta
    <Line>planmäßig, regelmäßig, gemäß, das gefäß, stöße, die größte</Line>
   </Level>
   <Level>
-   <NewCharacters>Capslock</NewCharacters>
+   <NewCharsLabel>Capslock</NewCharsLabel>
    <Line>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE</Line>
    <Line>LINKS GESCHRIEBEN. DABEI BLEIBEN AUCH PUNKT UND KOMMA, SO-</Line>
    <Line>WIE BINDESTRICHE ERHALTEN. IM FOLGENDEN BENUTZEN WIR DIESE</Line>
@@ -537,17 +551,17 @@ Version: 0.1 beta
    <Line>WERDEN. jetzt sollte das capslock-lämpchen aus sein.</Line>
   </Level>
   <Level>
-   <NewCharacters>Großbuchstaben (links)</NewCharacters>
+   <NewCharsLabel>Großbuchstaben (links)</NewCharsLabel>
    <Line>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La</Line>
    <Line>Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</Line>
   </Level>
   <Level>
-   <NewCharacters>Großbuchstaben (rechts)</NewCharacters>
+   <NewCharsLabel>Großbuchstaben (rechts)</NewCharsLabel>
    <Line>Fö Fö Fö Fö Fö Fö Fö Fö Fö Fö Gö Gö Gö Gö Gö Bö Bö Bö Bö Bö</Line>
    <Line>Wö Wö Wö Wö Rä Rä Rä Rö Rö Gä Gä Fä Dä Sä Vä Vä Vö Sö Dä Dä</Line>
   </Level>
   <Level>
-   <NewCharacters>Großbuchstaben</NewCharacters>
+   <NewCharsLabel>Großbuchstaben</NewCharsLabel>
    <Line>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank</Line>
    <Line>Wort, Ort, Hort, Gehrung, Nahrung, Klarheit, Vergangenheit,</Line>
    <Line>Art, Hahn, Mahnung, Lohn, Sohn, Hohn, Keim, Krönung, Krone,</Line>
@@ -558,7 +572,7 @@ Version: 0.1 beta
    <Line>zeichen weiter.</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>Linux - meine Freude</Line>
    <Line>Es war ein ganz normaler Tag. Alles war wie immer. Ich kam</Line>
    <Line>aus der Schule und setzte mich an den PC. Homepage verwal-</Line>
@@ -590,7 +604,7 @@ Version: 0.1 beta
    <Line>viel zu lernen.</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>Das Internet</Line>
    <Line>Das Internet ist in aller Munde. Alle wollen daran teil-</Line>
    <Line>haben, viele wollen daran verdienen. Selbst Boris ist, wie</Line>
@@ -623,7 +637,7 @@ Version: 0.1 beta
    <Line>Das ursprüngliche ARPAnet wurde zum Backbone des Internet.</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>Lesung                                          A. Kalbitz</Line>
    <Line>----------------------------------------------------------</Line>
    <Line>Samstagabend, Feierabend. Beine hochlegen, abschlaffen,</Line>
@@ -657,7 +671,7 @@ Version: 0.1 beta
    <Line>zu laut...</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>Was hat...                            A. Kalbitz</Line>
    <Line>------------------------------------------------</Line>
    <Line>Was hat uns so verblendet,</Line>
@@ -682,7 +696,8 @@ Version: 0.1 beta
    <Line>gebastelten Gedichten, wie diesem.</Line>
   </Level>
   <Level>
-   <NewCharacters>&lt; und ></NewCharacters>
+   <NewCharsLabel>&lt; und ></NewCharsLabel>
+   <NewCharacters>&lt ></NewCharacters>
    <Line>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;></Line>
    <Line>&lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; >  &lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; ></Line>
    <Line>>&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt;</Line>
@@ -709,7 +724,8 @@ Version: 0.1 beta
    <Line>&lt;->&lt;-&lt;>->&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;->>-&lt;&lt;--->>-->>-&lt;&lt;->>-&lt;&lt;>></Line>
   </Level>
   <Level>
-   <NewCharacters>1,!, ; und ?</NewCharacters>
+   <NewCharsLabel>1,!, ; und ?</NewCharsLabel>
+   <NewCharacters>1!;?</NewCharacters>
    <Line>1! ß? 1! ß? 1! ß? 1ß!? ?1?ß !1?! 1ß!? ??!!1ßß1 !ß!ß1??!ß!1</Line>
    <Line>.!? sind Interpunktionszeichen, die im Deutschen dazu ver-</Line>
    <Line>wendet werden, um zu signalisieren, dass es sich bei einem</Line>
@@ -742,7 +758,8 @@ Version: 0.1 beta
    <Line>Willst Du noch mehr über die Bedeutung von ! und ? wissen?</Line>
   </Level>
   <Level>
-   <NewCharacters>5, %, 8 und (</NewCharacters>
+   <NewCharsLabel>5, %, 8 und (</NewCharsLabel>
+   <NewCharacters>5%8(</NewCharacters>
    <Line>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</Line>
    <Line>58% liest man als achtundfünfzig Prozent. Prozent bedeutet</Line>
    <Line>von Hundert.</Line>
@@ -760,7 +777,8 @@ Version: 0.1 beta
    <Line>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</Line>
   </Level>
   <Level>
-   <NewCharacters>2, 6, &amp;, 7 und /</NewCharacters>
+   <NewCharsLabel>2, 6, &amp;, 7 und /</NewCharsLabel>
+   <NewCharacters>26 &amp; 7 /</NewCharacters>
    <Line>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58</Line>
    <Line>6 7 &amp; / 16/8 7/5 1/7 6/8 5/8 6/5 8/8 5/5 7/7 6/7 1/7 1/6 &amp;</Line>
    <Line>Internet &amp; Co.; Max Meier &amp; Söhne; Grunewald &amp; Co. KG</Line>
@@ -789,7 +807,8 @@ Version: 0.1 beta
    <Line>sehr wenig Inhalt.</Line>
   </Level>
   <Level>
-   <NewCharacters>4, $, 9 und )</NewCharacters>
+   <NewCharsLabel>4, $, 9 und )</NewCharsLabel>
+   <NewCharacters>4$9)</NewCharacters>
    <Line>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)</Line>
    <Line>Das $-Zeichen steht für Dollar. Jedem ist klar, dass dieses</Line>
    <Line>Zeichen für eine Währung steht, die den Weltmarkt beherrst.</Line>
@@ -815,7 +834,8 @@ Version: 0.1 beta
    <Line>lesen und verarbeitet.</Line>
   </Level>
   <Level>
-   <NewCharacters>3, §, 0 und =</NewCharacters>
+   <NewCharsLabel>3, §, 0 und =</NewCharsLabel>
+   <NewCharacters>3§0=</NewCharacters>
    <Line>§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30</Line>
    <Line>134567890 098765431 !§$%&amp;/()= =)(/&amp;%$§! 890 60 470 160 3140</Line>
    <Line>===========================================================</Line>
@@ -843,6 +863,7 @@ Version: 0.1 beta
    <Line>===========================================================</Line>
   </Level>
   <Level>
+   <NewCharsLabel>&quot;</NewCharsLabel>
    <NewCharacters>&quot;</NewCharacters>
    <Line>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE</Line>
    <Line>1234567890 0987654321 20 21 22 23 24 25 26 27 28 29 2222 2</Line>
@@ -869,7 +890,8 @@ Version: 0.1 beta
    <Line>das richtige sagen.</Line>
   </Level>
   <Level>
-   <NewCharacters>_, ^, °, ' und `</NewCharacters>
+   <NewCharsLabel>_, ^, °, ' und `</NewCharsLabel>
+   <NewCharacters>_ ^ ° '  `</NewCharacters>
    <Line>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^</Line>
    <Line>° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °</Line>
    <Line>' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '</Line>
@@ -887,7 +909,8 @@ Version: 0.1 beta
    <Line>foreach $_ (`who`) ...</Line>
   </Level>
   <Level>
-   <NewCharacters>+, *, # und '</NewCharacters>
+   <NewCharsLabel>+, *, # und '</NewCharsLabel>
+   <NewCharacters>+*#'</NewCharacters>
    <Line>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*</Line>
    <Line>  3+3=6</Line>
    <Line>  3*3=9</Line>
@@ -917,7 +940,7 @@ Version: 0.1 beta
    <Line>'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</Line>
   </Level>
   <Level>
-   <NewCharacters>Zwischenübung</NewCharacters>
+   <NewCharsLabel>Zwischenübung</NewCharsLabel>
    <Line>Sitzung                  frei erschwindelt von: A. Kalbitz</Line>
    <Line>==========================================================</Line>
    <Line>&quot;Hast du dir das auch gut überlegt?&quot; Rainer schaute zwei-</Line>
@@ -949,7 +972,8 @@ Version: 0.1 beta
    <Line>losgeht.&quot; - &quot;Siehste! Es wirkt schon!&quot; ;-)</Line>
   </Level>
   <Level>
-   <NewCharacters>², ³, {, [, ], }, \, @, ~ und |</NewCharacters>
+   <NewCharsLabel>², ³, {, [, ], }, \, @, ~ und |</NewCharsLabel>
+   <NewCharsLabel>²³{[]}\@~|</NewCharsLabel>
    <Line>Drittbelegung: Das sind die Zeichen ² ³ { [ ] } \ @ ~ |</Line>
    <Line>&quot;Quadrat&quot;-Zeichen=&quot;Hoch zwei&quot;:</Line>
    <Line>  f(x)=2x²+2x+2</Line>
@@ -996,7 +1020,7 @@ Version: 0.1 beta
    <Line>{²²²} || {³³³} || [²²²] || [³³³] || \\\ || @@@ || ~~~ ||</Line>
   </Level>
   <Level>
-   <NewCharacters>Geschafft!</NewCharacters>
+   <NewCharsLabel>Geschafft!</NewCharsLabel>
    <Line>/***************************************************************************</Line>
    <Line>                          info.cpp  -  description</Line>
    <Line>    begin                : Sun Jan 30 14:40:59 MET 2000</Line>
