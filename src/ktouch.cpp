@@ -548,13 +548,13 @@ bool KTouch::queryExit() {
     Prefs::self()->writeConfig();
     // update and save statistics
     m_trainer->storeTrainingStatistics();
-    KUrl stat_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml";
+    KUrl stat_file = QString(KGlobal::dirs()->saveLocation("data","ktouch", true) + "statistics.xml");
     // make sure all stats have the user names
     // for (QStringList::iterator it = m_userStats.keys().begin(); it != m_userStats.keys().end(); ++it)
     // m_userStats[*it].m_userName = *it;
     KTouchStatisticsData::writeUserStats(this, stat_file, m_userStats);
     //m_userStats[Prefs::currentUserName()].write(this, stat_file);
-    KUrl color_file = KGlobal::dirs()->saveLocation("data","ktouch", true) + "color_schemes.xml";
+    KUrl color_file = QString(KGlobal::dirs()->saveLocation("data","ktouch", true) + "color_schemes.xml");
     KTouchColorScheme::writeList(this, color_file);
     return true;
 }
