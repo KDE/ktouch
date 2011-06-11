@@ -4,7 +4,7 @@
 #include_directories( )
 
 # add compilation options
-option( KDEEDU_KTOUCH_BUILD_WITH_PHONON "Enables compilation of sound output using Phonon." OFF )
+option( KDEEDU_KTOUCH_BUILD_WITH_PHONON "Enables compilation of sound output using Phonon." ON )
 mark_as_advanced(KDEEDU_KTOUCH_BUILD_WITH_PHONON)
 
 # configure the local configuration file
