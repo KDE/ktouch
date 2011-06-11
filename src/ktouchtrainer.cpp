@@ -61,6 +61,7 @@ KTouchTrainer::KTouchTrainer(KTouchStatusWidget *status, KTouchTextLineWidget *t
     m_levelUpSound = KGlobal::dirs()->findResource("appdata","up.wav");
     m_levelDownSound = KGlobal::dirs()->findResource("appdata","down.wav");
     m_typeWriterSound = KGlobal::dirs()->findResource("appdata","typewriter.wav");
+    m_typeErrorSound = KGlobal::dirs()->findResource("appdata","error.wav");
 #endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
 
     connect(m_statusWidget->levelUpBtn, SIGNAL(clicked()), this, SLOT(levelUp()) );
@@ -96,8 +97,8 @@ void KTouchTrainer::keyPressed(QChar key) {
     if (m_teacherText==m_studentText) {
         // if already at end of line, don't add more chars
         /// \todo Flash the line when line complete
-        if (Prefs::beepOnError())   
-		QApplication::beep();
+        if (Prefs::beepOnError())
+               QApplication::beep();
         return;
     }
 	// remember length of student text without added character
@@ -119,7 +120,13 @@ void KTouchTrainer::keyPressed(QChar key) {
 		statsAddCorrectChar(key);	// ok, all student text is correct
     else {
         // nope, the key was wrong : beep !!!
-        if (Prefs::beepOnError())  QApplication::beep();
+        if (Prefs::beepOnError())
+        {
+#ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
+            m_player->setCurrentSource(m_typeErrorSound.url());
+            m_player->play();
+#endif // KDEEDU_KTOUCH_BUILD_WITH_PHONON
+        }
         // check if the key is the first wrong key that was mistyped. Only then add it
         // to the wrong char statistics.
         if (m_teacherText.left(old_student_text_len)==m_studentText.left(old_student_text_len) &&

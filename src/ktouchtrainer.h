@@ -160,8 +160,9 @@ class KTouchTrainer : public QObject {
     KTouchLecture      	   *m_lecture;              ///< Pointer to the lecture data.
 
     KUrl             		m_levelUpSound;         ///< URL of the level up sound.
-	KUrl             		m_levelDownSound;       ///< URL of the level down sound.
-	KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
+    KUrl             		m_levelDownSound;       ///< URL of the level down sound.
+    KUrl             		m_typeWriterSound;      ///< URL of the typing sound.
+    KUrl             		m_typeErrorSound;       ///< URL of the error sound.
 
 	unsigned int			m_wordsInCurrentLine;	///< Number of words in the current typing line.
 #ifdef KDEEDU_KTOUCH_BUILD_WITH_PHONON
