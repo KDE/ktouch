@@ -235,7 +235,7 @@ void KTouch::fileOpenText() {
             QStringList lines;
 	while(!in.atEnd() && ++max_lines < 1000) {
 		line = in.readLine();
-		if(line.isEmpty()) {
+		if(line.trimmed().isEmpty()) {
 		  continue;
 		} 
                 lines.append(line.trimmed());
@@ -844,7 +844,8 @@ void KTouch::updateFileLists() {
 
     // Now lets find the lecture files.
     // TODO : search in i18n() directories
-    QStringList lectureFiles = dirs->findAllResources("data","ktouch/*.ktouch.xml");
+    QStringList files;
+    QStringList lectureFiles = dirs->findAllResources("data","ktouch/Lecture/*.ktouch.xml",KStandardDirs::Recursive,files);
     // Now extract the titles of the lecture files and populate the string lists used in the program
     m_lectureFiles.clear();
     m_lectureTitles.clear();
