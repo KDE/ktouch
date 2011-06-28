@@ -1,11 +1,29 @@
+# KTouch CMakeList.txt for keyboards
+#
 
-
-
-
-########### install files ###############
-FILE(GLOB layouts *.xml *.keyboard)
-
-install( FILES ${layouts} DESTINATION ${DATA_INSTALL_DIR}/ktouch)
-
-
-
+# subdirectories to build
+add_subdirectory( arabic )
+add_subdirectory( bulgarian )
+add_subdirectory( czech )
+add_subdirectory( danish )
+add_subdirectory( english )
+add_subdirectory( estonian )
+add_subdirectory( finnish )
+add_subdirectory( french )
+add_subdirectory( german )
+add_subdirectory( greek )
+add_subdirectory( hebrew )
+add_subdirectory( hungarian ) 
+add_subdirectory( italian )
+add_subdirectory( kannada )
+add_subdirectory( latin ) 
+add_subdirectory( lithuanian )
+add_subdirectory( norwegian )
+add_subdirectory( quebec )
+add_subdirectory( russian )
+add_subdirectory( slovak )
+add_subdirectory( slovenian )
+add_subdirectory( spanish )
+add_subdirectory( swedish )
+add_subdirectory( swiss )
+add_subdirectory( ukrainian )

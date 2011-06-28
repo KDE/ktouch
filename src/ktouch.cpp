@@ -790,7 +790,7 @@ void KTouch::updateFontFromLecture() {
 void KTouch::updateFileLists() {
     // first search for all installed new format keyboard files
     KStandardDirs *dirs = KGlobal::dirs();
-    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard.xml");
+    m_keyboardFiles = dirs->findAllResources("data","ktouch/*.keyboard.xml",KStandardDirs::Recursive);
 
     // extract titles from keyboard files and store them in the
     // m_keyboardTitles string list
