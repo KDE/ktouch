@@ -192,8 +192,8 @@
    <Char Unicode="92" Position="BottomLeft">\</Char>
   </Key>
   <Key Width="80" X="1150" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL">
-   <Char Unicode="180" Position="TopLeft">´</Char>
-   <Char Unicode="96" Position="BottomLeft">`</Char>
+   <Char Unicode="96" Position="TopLeft">`</Char>
+   <Char Unicode="180" Position="BottomLeft">´</Char>
   </Key>
  </Keys>
  <Connections>
