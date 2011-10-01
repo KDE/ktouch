@@ -4,6 +4,7 @@
 # subdirectories to build
 add_subdirectory( Arabic )
 add_subdirectory( Bulgarian ) 
+add_subdirectory( Brazilian ) 
 add_subdirectory( Catalan ) 
 add_subdirectory( Czech )
 add_subdirectory( Danish ) 
