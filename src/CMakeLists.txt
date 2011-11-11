@@ -1,5 +1,7 @@
 # CMakeList.txt for the KTouch source directory
 
+add_subdirectory(qml)
+
 # set include directories
 #include_directories( )
 
@@ -69,10 +71,23 @@ endif (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
 
 install(TARGETS ktouch  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
+set(ktouchtest_SRCS
+    test.cpp
+    testwin.cpp
+    core/keyboard.cpp
+    core/abstractkey.cpp
+    core/key.cpp
+    core/keychar.cpp
+    core/specialkey.cpp
+)
+
+kde4_add_executable(ktouchtest ${ktouchtest_SRCS})
+target_link_libraries(ktouchtest kdeclarative ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY})
+install(TARGETS ktouchtest  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
 install( FILES ktouch.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES ktouchui.rc  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
 
-
+install( FILES schemata/keyboard.xsd DESTINATION ${DATA_INSTALL_DIR}/ktouch/schemata )
