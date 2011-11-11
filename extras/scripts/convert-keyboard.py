@@ -168,7 +168,7 @@ def parse_key(key_node):
     elif type == "BACKSPACE":
         key = SpecialKey(left, top, width, height, 'backspace')
     elif type == "ENTER":
-        key = SpecialKey(left, top, width, height, 'enter')
+        key = SpecialKey(left, top, width, height, 'return')
     elif type == "SPACE":
         key = SpecialKey(left, top, width, height, 'space')
     else:
