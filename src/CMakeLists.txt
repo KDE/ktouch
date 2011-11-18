@@ -80,6 +80,9 @@ set(ktouchtest_SRCS
     core/key.cpp
     core/keychar.cpp
     core/specialkey.cpp
+    core/course.cpp
+    core/lesson.cpp
+    core/lessonline.cpp
 )
 
 kde4_add_executable(ktouchtest ${ktouchtest_SRCS})

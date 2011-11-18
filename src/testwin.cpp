@@ -33,6 +33,9 @@
 #include "core/key.h"
 #include "core/specialkey.h"
 #include "core/keychar.h"
+#include "core/course.h"
+#include "core/lesson.h"
+#include "core/lessonline.h"
 
 
 KTouch::KTouch()
@@ -53,27 +56,35 @@ KTouch::KTouch()
     qmlRegisterType<Key>("ktouch", 1, 0, "KeyModel");
     qmlRegisterType<SpecialKey>("ktouch", 1, 0, "SpecialKeyModel");
     qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyCharModel");
+    qmlRegisterType<Course>("ktouch", 1, 0, "Course");
+    qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
+    qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());
     kDeclarative.initialize();
     kDeclarative.setupBindings();
 
-
     KStandardDirs* dirs = KGlobal::dirs();
-    Keyboard* keyboad = new Keyboard(0);
-    QFile file(dirs->findResource("appdata", "keyboards/de.xml"));
-    file.open(QIODevice::ReadOnly);
-    keyboad->loadXML(&file);
+
+    Keyboard* keyboad = new Keyboard(this);
+    QFile keyboardFile(dirs->findResource("appdata", "keyboards/de.xml"));
+    keyboardFile.open(QIODevice::ReadOnly);
+    keyboad->loadXML(&keyboardFile);
+
+    Course* course = new Course(this);
+    QFile courseFile(dirs->findResource("appdata", "courses/de2.xml"));
+    courseFile.open(QIODevice::ReadOnly);
+    course->loadXML(&courseFile);
 
     setupGUI();
     setCentralWidget(m_view);
-    QString res = KGlobal::dirs()->findResource("appdata", "qml/Keyboard.qml");
+
     m_view->rootContext()->setContextProperty("keyboardModel", keyboad);
+    m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
+    QString res = KGlobal::dirs()->findResource("appdata", "qml/TrainingWidget.qml");
     m_view->setSource(QUrl::fromLocalFile(res));
-
-
 }
 // ----------------------------------------------------------------------------
 
