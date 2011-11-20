@@ -1,6 +1,7 @@
 # CMakeList.txt for the KTouch source directory
 
 add_subdirectory(qml)
+add_subdirectory(schemata)
 
 # set include directories
 #include_directories( )
@@ -89,5 +90,3 @@ install(TARGETS ktouchtest  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES ktouch.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES ktouchui.rc  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
-
-install( FILES schemata/keyboard.xsd DESTINATION ${DATA_INSTALL_DIR}/ktouch/schemata )
