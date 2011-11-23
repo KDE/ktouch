@@ -3,7 +3,7 @@ import ktouch 1.0
 
 Rectangle
 {
-    property real scaleFactor: 1;
+    property real scaleFactor: height / 600
 
     color: "#4f4f4f"
 

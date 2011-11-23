@@ -83,7 +83,7 @@ KTouch::KTouch()
     m_view->rootContext()->setContextProperty("keyboardModel", keyboad);
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    QString res = KGlobal::dirs()->findResource("appdata", "qml/TrainingWidget.qml");
+    QString res = KGlobal::dirs()->findResource("appdata", "qml/TrainingScreen.qml");
     m_view->setSource(QUrl::fromLocalFile(res));
 }
 // ----------------------------------------------------------------------------
