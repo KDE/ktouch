@@ -11,6 +11,42 @@ Item
     property AbstractKeyModel keyModel
     property AbstractKeyModel referenceKeyModel
 
+    function match(event)
+    {
+        var key = event.key
+        switch (keyModel.keyType())
+        {
+        case "key":
+            for (var i = 0; i < keyModel.keyCharCount(); i++)
+            {
+                if (keyModel.keyChar(i).value == event.text)
+                {
+                    return true;
+                }
+            }
+            return false
+
+        case "specialKey":
+            switch (keyModel.type)
+            {
+            case SpecialKeyModel.Tab:
+                return key == Qt.Key_Tab
+            case SpecialKeyModel.Capslock:
+                return key == Qt.Key_CapsLock
+            case SpecialKeyModel.Shift:
+                return key == Qt.Key_Shift
+            case SpecialKeyModel.Backspace:
+                return key == Qt.Key_Backspace
+            case SpecialKeyModel.Return:
+                return key == Qt.Key_Return
+            case SpecialKeyModel.Space:
+                return key == Qt.Key_Space
+            }
+            return false
+        }
+        return false;
+    }
+
     anchors.left: parent.left
     anchors.top: parent.top
     anchors.leftMargin: keyModel.left * scaleFactor

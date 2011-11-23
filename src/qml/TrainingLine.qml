@@ -4,6 +4,8 @@ Item {
     id: line
     property string text
     signal done
+    signal keyPressed(variant event)
+    signal keyReleased(variant event)
 
     property string enteredText: ""
     property int position: 0
@@ -67,8 +69,15 @@ Item {
             }
             break;
         }
-
+        if (!event.isAutoRepeat)
+            line.keyPressed(event)
     }
+
+    Keys.onReleased: {
+        if (!event.isAutoRepeat)
+            line.keyReleased(event)
+    }
+
     Row {
         id: row
         anchors.centerIn: parent

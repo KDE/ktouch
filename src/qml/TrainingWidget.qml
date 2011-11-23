@@ -9,6 +9,8 @@ FocusScope {
     property int lineHeight: 2 * fontSize
     property int margin: 30
     signal done
+    signal keyPressed(variant event)
+    signal keyReleased(variant event)
 
     Component.onCompleted: {
         trainer.position = 0
@@ -120,6 +122,8 @@ FocusScope {
                         trainer.done();
                     }
                 }
+                onKeyPressed: trainer.keyPressed(event)
+                onKeyReleased: trainer.keyReleased(event)
                 y: target? target.y: 0
                 x: 0
                 width: target? target.width: 0

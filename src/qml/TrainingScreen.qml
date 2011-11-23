@@ -23,6 +23,8 @@ Rectangle {
             id: body
             width: parent.width
             height: Math.round((parent.height - head.height) / 2)
+            onKeyPressed: keyboard.handleKeyPress(event)
+            onKeyReleased: keyboard.handleKeyRelease(event)
         }
         Keyboard {
             id: keyboard
