@@ -6,6 +6,7 @@ Item {
     signal done
     signal keyPressed(variant event)
     signal keyReleased(variant event)
+    signal newNextChar(string nextChar)
 
     property string enteredText: ""
     property int position: 0
@@ -19,6 +20,7 @@ Item {
         line.position = 0
         lineChars.model = 0
         lineChars.model = line.text.length
+        emitNextChar()
     }
 
     function deleteLastChar() {
@@ -30,6 +32,7 @@ Item {
         charItem.state = "placeholder";
         line.enteredText = line.enteredText.substring(0, line.position);
         line.isCorrect = line.enteredText === line.text.substring(0, line.position);
+        emitNextChar()
     }
 
     function addChar(newChar)
@@ -46,6 +49,15 @@ Item {
         }
         charItem.state = line.isCorrect? "done": "error";
         line.position++;
+        emitNextChar()
+    }
+
+    function emitNextChar()
+    {
+        if (line.position >= line.text.length)
+            newNextChar(null)
+        else
+            newNextChar(line.text.charAt(line.position))
     }
 
     Keys.onPressed: {

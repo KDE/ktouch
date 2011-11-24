@@ -1,7 +1,7 @@
 import QtQuick 1.0
-import ktouch 1.0
 
 Rectangle {
+    property Key highlightedKey
     id: screen
     color: "#ccc"
 
@@ -25,6 +25,32 @@ Rectangle {
             height: Math.round((parent.height - head.height) / 2)
             onKeyPressed: keyboard.handleKeyPress(event)
             onKeyReleased: keyboard.handleKeyRelease(event)
+            onNextCharChanged: {
+                if (!isCorrect)
+                    return;
+                if (highlightedKey)
+                    highlightedKey.isHighlighted = false
+                var key = nextChar != ""? keyboard.findKey(nextChar): keyboard.findKey(Qt.Key_Return)
+                if (key)
+                {
+                    key.isHighlighted = true
+                    highlightedKey = key
+                }
+            }
+            onIsCorrectChanged: {
+                if (!isCorrect)
+                {
+                    if (highlightedKey)
+                        highlightedKey.isHighlighted = false
+                    var key = keyboard.findKey(Qt.Key_Backspace)
+                    if (key)
+                    {
+                        key.isHighlighted = true
+                        highlightedKey = key
+                    }
+                }
+            }
+
         }
         Keyboard {
             id: keyboard

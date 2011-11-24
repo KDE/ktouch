@@ -7,18 +7,31 @@ Item
     id: item
 
     property color tint: "#00000000"
+    property bool isHighlighted: false
 
     property AbstractKey key
     property AbstractKey referenceKey
 
-    function match(event)
+    function match(data)
     {
+        var eventText = data
+        var eventKey = -1
+        if (typeof data === "object")
+        {
+            eventText = data.text
+            eventKey = data.key
+        }
+        if (typeof data === "number")
+        {
+            eventText = ""
+            eventKey = data
+        }
         switch (key.keyType())
         {
         case "key":
             for (var i = 0; i < key.keyCharCount; i++)
             {
-                if (key.keyChar(i).value == event.text.charCodeAt(0))
+                if (key.keyChar(i).value == eventText.charCodeAt(0))
                 {
                     return true;
                 }
@@ -29,17 +42,17 @@ Item
             switch (key.type)
             {
             case SpecialKey.Tab:
-                return event.key == Qt.Key_Tab
+                return eventKey == Qt.Key_Tab
             case SpecialKey.Capslock:
-                return event.key == Qt.Key_CapsLock
+                return eventKey == Qt.Key_CapsLock
             case SpecialKey.Shift:
-                return event.key == Qt.Key_Shift
+                return eventKey == Qt.Key_Shift
             case SpecialKey.Backspace:
-                return event.key == Qt.Key_Backspace
+                return eventKey == Qt.Key_Backspace
             case SpecialKey.Return:
-                return event.key == Qt.Key_Return
+                return eventKey == Qt.Key_Return
             case SpecialKey.Space:
-                return event.key == Qt.Key_Space
+                return eventKey == Qt.Key_Space || eventText == " "
             }
             return false
         }
@@ -48,10 +61,10 @@ Item
 
     anchors.left: parent.left
     anchors.top: parent.top
-    anchors.leftMargin: key.left * scaleFactor
-    anchors.topMargin: key.top * scaleFactor
-    width: key.width * scaleFactor
-    height: key.height * scaleFactor
+    anchors.leftMargin: Math.round(key.left * scaleFactor)
+    anchors.topMargin: Math.round(key.top * scaleFactor)
+    width: Math.round(key.width * scaleFactor)
+    height: Math.round(key.height * scaleFactor)
 
     state: "normal"
 
@@ -123,15 +136,15 @@ Item
             xOffset: 0
             yOffset: 0
         }
-        state: "normal"
+        state: item.isHighlighted? "highlighted": "normal"
         states: [
             State {
                 name: "normal"
                 PropertyChanges {
                     target: shadow
                     color: "#000"
-                    width: parent.width
-                    height: parent.height
+                    width: item.width
+                    height: item.height
                 }
                 PropertyChanges {
                     target: shadow.effect
@@ -143,8 +156,8 @@ Item
                 PropertyChanges {
                     target: shadow
                     color: "#54A7F0"
-                    width: parent.width + 4
-                    height: parent.height + 4
+                    width: item.width + 4
+                    height: item.height + 4
                 }
                 PropertyChanges {
                     target: shadow.effect
@@ -249,19 +262,6 @@ Item
             id: bottomRightLabel
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-        }
-    }
-
-    MouseArea {
-        anchors.fill: body
-        onPressed: {
-            item.state = "pressed"
-        }
-        onReleased: {
-            item.state = "normal"
-        }
-        onClicked: {
-            shadow.state = shadow.state == "normal"? "highlighted": "normal"
         }
     }
 

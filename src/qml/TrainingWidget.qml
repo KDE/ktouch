@@ -4,6 +4,8 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 
 FocusScope {
     id: trainer
+    property string nextChar
+    property bool isCorrect: trainingLine.isCorrect
     property int fontSize: 20
     property int position: -1
     property int lineHeight: 2 * fontSize
@@ -124,6 +126,7 @@ FocusScope {
                 }
                 onKeyPressed: trainer.keyPressed(event)
                 onKeyReleased: trainer.keyReleased(event)
+                onNewNextChar: trainer.nextChar = nextChar
                 y: target? target.y: 0
                 x: 0
                 width: target? target.width: 0

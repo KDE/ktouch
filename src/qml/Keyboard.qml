@@ -7,24 +7,30 @@ Rectangle
 
     color: "#4f4f4f"
 
-    function handleKeyPress(event)
+    function findKey(keyChar)
     {
         for (var i = 0; i < keys.count; i++)
         {
             var key = keys.itemAt(i);
-            if (key.match(event))
-                key.state = "pressed"
+            if (key.match(keyChar))
+                return key
         }
+        return null
+
+    }
+
+    function handleKeyPress(event)
+    {
+        var key = findKey(event)
+        if (key)
+            key.state = "pressed"
     }
 
     function handleKeyRelease(event)
     {
-        for (var i = 0; i < keys.count; i++)
-        {
-            var key = keys.itemAt(i);
-            if (key.match(event))
-                key.state = "normal"
-        }
+        var key = findKey(event)
+        if (key)
+            key.state = "normal"
     }
 
     Item {
