@@ -96,7 +96,7 @@
   </Key>
   <Key Width="80" X="1200" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
    <Char Unicode="96" Position="TopLeft" >`</Char>
-   <Char Unicode="39" Position="BottomLeft" >'</Char>
+   <Char Unicode="39" Position="BottomLeft" >´</Char>
   </Key>
   <Key Width="80" X="150" Y="100" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="81" Position="TopLeft" >Q</Char>
