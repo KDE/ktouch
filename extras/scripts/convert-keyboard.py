@@ -1,20 +1,43 @@
 import argparse
 from lxml import etree
 
-class Keyboard(object):
-    def __init__(self, title, font_suggestion, language, keys=[]):
+class KeyboardLayout(object):
+    def __init__(self, title, name, keys=None):
         self.title = title
-        self.font_suggestion = font_suggestion
-        self.language = language
-        self.keys = keys
+        self.name = name
+        self.keys = keys or []
+    @property
+    def keys(self):
+        return self._keys
+    @keys.setter
+    def keys(self, keys):
+        self._keys = keys
+        self.width = 0
+        self.height = 0
+        min_left = None
+        min_top = None
+        for key in keys:
+            if key.left < min_left or min_left is None:
+                min_left = key.left
+            if key.top < min_top or min_top is None:
+                min_top = key.top
+        for key in keys:
+            key.left = key.left - min_left
+            key.top = key.top - min_top
+            if key.left + key.width > self.width:
+                self.width = key.left + key.width
+            if key.top + key.height > self.height:
+                self.height = key.top + key.height
     def xml_tree(self):
-        root = etree.Element('keyboard')
+        root = etree.Element('keyboardLayout')
         title = etree.SubElement(root, "title")
         title.text = self.title
-        language = etree.SubElement(root, "language")
-        language.text = self.language
-        font_suggestion = etree.SubElement(root, "fontSuggestion")
-        font_suggestion.text = self.font_suggestion
+        name = etree.SubElement(root, "name")
+        name.text = self.name
+        width = etree.SubElement(root, "width")
+        width.text = str(self.width)
+        height = etree.SubElement(root, "height")
+        height.text = str(self.height)
         keys = etree.SubElement(root, "keys")
         for key in self.keys:
             if isinstance(key, Key):
@@ -23,15 +46,14 @@ class Keyboard(object):
             if isinstance(key, SpecialKey):
                 key.build_xml(keys)
         return root
-        
     def __repr__(self):
-        return "<Keyboard {!r}, {!r}, {!r}, {!r}>".format(
+        return "<KeyboardLayout {!r}, {!r}, {!r}, {!r}, {!r}>".format(
             self.title,
-            self.font_suggestion,
-            self.language,
-            self.keys
+            self.name,
+            self.keys,
+            self.width,
+            self.height
         )
-        
 
 class AbstractKey(object):
     def __init__(self, left, top, width, height):
@@ -41,10 +63,10 @@ class AbstractKey(object):
         self.height = height
         
 class Key(AbstractKey):
-    def __init__(self, left, top, width, height, finger_index, chars=[]):
+    def __init__(self, left, top, width, height, finger_index, chars=None):
         super(Key, self).__init__(left, top, width, height)
         self.finger_index = finger_index
-        self.chars = chars
+        self.chars = chars or []
         self.has_haptic_marker = False
     def build_xml(self, parent_node):
         node = etree.SubElement(parent_node, "key")
@@ -132,20 +154,18 @@ def read(f):
     tree = etree.parse(f)
     root = tree.getroot()
     title, = etree.XPath("//KTouchKeyboard/Title[1]/text()")(root)
-    font_suggestion, = etree.XPath("//KTouchKeyboard/FontSuggestions[1]/text()")(root)
-    language, = etree.XPath("//KTouchKeyboard/Language[1]/text()")(root)
+    name, = etree.XPath("//KTouchKeyboard/Language[1]/text()")(root)
     key_nodes = etree.XPath("//KTouchKeyboard/Keys/Key")(root)
     keys = [parse_key(node) for node in key_nodes]
-    return Keyboard(title, font_suggestion, language, keys)
-
+    return KeyboardLayout(title, name, keys)
     
 def parse_key(key_node):
     get_char_nodes = etree.XPath("./Char")
     type = key_node.attrib['Type']
-    left = key_node.attrib['X']
-    top = key_node.attrib['Y']
-    width = key_node.attrib['Width']
-    height = key_node.attrib['Height']
+    left = int(key_node.attrib['X'])
+    top = int(key_node.attrib['Y'])
+    width = int(key_node.attrib['Width'])
+    height = int(key_node.attrib['Height'])
     if type in ['NORMAL', 'FINGER']:
         has_haptic_marker = False
         if type == 'FINGER':
@@ -191,19 +211,15 @@ def parse_chars(char_nodes):
             char.modifier = 'shift'
             chars.append(hiddenChar)
     return chars
-    
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='convert ktouch keyboard files'
     )
-    parser.add_argument('-i', '--in',
+    parser.add_argument('input_file',
         type=argparse.FileType('r'),
-        metavar="INPUTFILE",
-        dest='input_file',
-        required=True
+        metavar="INPUTFILE"
     )
     args = parser.parse_args()
-    keyboard = read(args.input_file)
-    print etree.tostring(keyboard.xml_tree())    
-    
+    layout = read(args.input_file)
+    print etree.tostring(layout.xml_tree())    

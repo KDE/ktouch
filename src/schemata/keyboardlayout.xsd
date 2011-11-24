@@ -1,11 +1,12 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:element name="keyboard">
+  <xs:element name="keyboardLayout">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="title" type="xs:string" />
-        <xs:element name="language" type="xs:string" />
-        <xs:element name="fontSuggestion" type="xs:string" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="width" type="xs:unsignedInt" />
+        <xs:element name="height" type="xs:unsignedInt" />
         <xs:element name="keys" type="keyList" />
       </xs:sequence>
     </xs:complexType>
@@ -13,19 +14,20 @@
   
   <xs:complexType name="keyList">
     <xs:sequence>
-      <xs:element name="key" type="key" minOccurs="0" maxOccurs="unbounded" />
-      <xs:element name="specialKey" type="specialKey"
-          minOccurs="0" maxOccurs="unbounded" />
+    <xs:choice  minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="key" type="key" />
+      <xs:element name="specialKey" type="specialKey" />
+    </xs:choice>
     </xs:sequence>
   </xs:complexType>
   
   <xs:complexType name="baseKey">
     <xs:sequence>
     </xs:sequence>
-    <xs:attribute name="left" type="xs:integer" use="required" />
-    <xs:attribute name="top" type="xs:integer" use="required" />
-    <xs:attribute name="width" type="xs:integer" use="required" />
-    <xs:attribute name="height" type="xs:integer" use="required" />
+    <xs:attribute name="left" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="top" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="width" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="height" type="xs:unsignedInt" use="required" />
   </xs:complexType>
   
   <xs:complexType name="key">

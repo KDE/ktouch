@@ -1,9 +1,9 @@
 import QtQuick 1.0
-import ktouch 1.0
+import ktouch 1.0 as KTouch
 
 Rectangle
 {
-    property real scaleFactor: height / 600
+    property real scaleFactor: Math.min(width / (keyboardLayout.width + 50), height / (keyboardLayout.height + 50))
 
     color: "#4f4f4f"
 
@@ -36,10 +36,10 @@ Rectangle
 
         Repeater {
             id: keys
-            model: keyboardModel.keyCount()
+            model: keyboardLayout.keyCount
             Key {
-                keyModel: keyboardModel.key(index)
-                referenceKeyModel: keyboardModel.referenceKey
+                key: keyboardLayout.key(index)
+                referenceKey: keyboardLayout.referenceKey
             }
         }
     }

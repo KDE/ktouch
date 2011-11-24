@@ -75,7 +75,7 @@ install(TARGETS ktouch  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 set(ktouchtest_SRCS
     test.cpp
     testwin.cpp
-    core/keyboard.cpp
+    core/keyboardlayout.cpp
     core/abstractkey.cpp
     core/key.cpp
     core/keychar.cpp

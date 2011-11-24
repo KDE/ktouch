@@ -4,22 +4,21 @@ import ktouch 1.0
 
 Item
 {
-    id: key
+    id: item
 
     property color tint: "#00000000"
 
-    property AbstractKeyModel keyModel
-    property AbstractKeyModel referenceKeyModel
+    property AbstractKey key
+    property AbstractKey referenceKey
 
     function match(event)
     {
-        var key = event.key
-        switch (keyModel.keyType())
+        switch (key.keyType())
         {
         case "key":
-            for (var i = 0; i < keyModel.keyCharCount(); i++)
+            for (var i = 0; i < key.keyCharCount; i++)
             {
-                if (keyModel.keyChar(i).value == event.text)
+                if (key.keyChar(i).value == event.text.charCodeAt(0))
                 {
                     return true;
                 }
@@ -27,20 +26,20 @@ Item
             return false
 
         case "specialKey":
-            switch (keyModel.type)
+            switch (key.type)
             {
-            case SpecialKeyModel.Tab:
-                return key == Qt.Key_Tab
-            case SpecialKeyModel.Capslock:
-                return key == Qt.Key_CapsLock
-            case SpecialKeyModel.Shift:
-                return key == Qt.Key_Shift
-            case SpecialKeyModel.Backspace:
-                return key == Qt.Key_Backspace
-            case SpecialKeyModel.Return:
-                return key == Qt.Key_Return
-            case SpecialKeyModel.Space:
-                return key == Qt.Key_Space
+            case SpecialKey.Tab:
+                return event.key == Qt.Key_Tab
+            case SpecialKey.Capslock:
+                return event.key == Qt.Key_CapsLock
+            case SpecialKey.Shift:
+                return event.key == Qt.Key_Shift
+            case SpecialKey.Backspace:
+                return event.key == Qt.Key_Backspace
+            case SpecialKey.Return:
+                return event.key == Qt.Key_Return
+            case SpecialKey.Space:
+                return event.key == Qt.Key_Space
             }
             return false
         }
@@ -49,59 +48,59 @@ Item
 
     anchors.left: parent.left
     anchors.top: parent.top
-    anchors.leftMargin: keyModel.left * scaleFactor
-    anchors.topMargin: keyModel.top * scaleFactor
-    width: keyModel.width * scaleFactor
-    height: keyModel.height * scaleFactor
+    anchors.leftMargin: key.left * scaleFactor
+    anchors.topMargin: key.top * scaleFactor
+    width: key.width * scaleFactor
+    height: key.height * scaleFactor
 
     state: "normal"
 
-    onKeyModelChanged: {
-        switch (keyModel.keyType())
+    onKeyChanged: {
+        switch (key.keyType())
         {
         case "key":
-            for (var i = 0; i < key.keyModel.keyCharCount(); i++)
+            for (var i = 0; i < item.key.keyCharCount; i++)
             {
-                var keyCharModel = key.keyModel.keyChar(i);
-                var position = keyCharModel.position;
-                if (position === KeyCharModel.TopLeft)
+                var keyChar = item.key.keyChar(i);
+                var position = keyChar.position;
+                if (position === KeyChar.TopLeft)
                 {
-                    topLeftLabel.keyCharModel = keyCharModel;
+                    topLeftLabel.keyChar = keyChar;
                 }
-                else if (position === KeyCharModel.TopRight)
+                else if (position === KeyChar.TopRight)
                 {
-                    topRightLabel.keyCharModel = keyCharModel;
+                    topRightLabel.keyChar = keyChar;
                 }
-                else if (position === KeyCharModel.BottomLeft)
+                else if (position === KeyChar.BottomLeft)
                 {
-                    bottomLeftLabel.keyCharModel = keyCharModel;
+                    bottomLeftLabel.keyChar = keyChar;
                 }
-                else if (position === KeyCharModel.BottomRight)
+                else if (position === KeyChar.BottomRight)
                 {
-                    bottomRightLabel.keyCharModel = keyCharModel;
+                    bottomRightLabel.keyChar = keyChar;
                 }
             }
             break;
 
         case "specialKey":
-            switch (keyModel.type)
+            switch (key.type)
             {
-            case SpecialKeyModel.Other:
-                topLeftLabel.text = keyModel.label
+            case SpecialKey.Other:
+                topLeftLabel.text = key.label
                 break;
-            case SpecialKeyModel.Tab:
+            case SpecialKey.Tab:
                 topLeftLabel.text = "\u21B9"
                 break;
-            case SpecialKeyModel.Capslock:
+            case SpecialKey.Capslock:
                 topLeftLabel.text = "\u21E9"
                 break;
-            case SpecialKeyModel.Shift:
+            case SpecialKey.Shift:
                 topLeftLabel.text = "\u21E7"
                 break;
-            case SpecialKeyModel.Backspace:
+            case SpecialKey.Backspace:
                 topLeftLabel.text = "\u2190"
                 break;
-            case SpecialKeyModel.Return:
+            case SpecialKey.Return:
                 topLeftLabel.text = "\u21B5"
                 break;
             }
@@ -211,7 +210,7 @@ Item
     {
         id: body
         anchors.fill: parent
-        radius: Math.max(3, Math.min(referenceKeyModel.height, referenceKeyModel.width) / 10 * scaleFactor)
+        radius: Math.max(3, Math.min(referenceKey.height, referenceKey.width) / 10 * scaleFactor)
         border.width: 1
         border.color: "#000"
         smooth: true
@@ -226,9 +225,9 @@ Item
 
     Item
     {
-        anchors.topMargin: Math.max(referenceKeyModel.width / 20, 3 * scaleFactor)
+        anchors.topMargin: Math.max(referenceKey.width / 20, 3 * scaleFactor)
         anchors.bottomMargin: anchors.topMargin
-        anchors.leftMargin: Math.max(referenceKeyModel.width / 10, 5 * scaleFactor)
+        anchors.leftMargin: Math.max(referenceKey.width / 10, 5 * scaleFactor)
         anchors.rightMargin: anchors.leftMargin
         anchors.fill: parent
         KeyLabel
@@ -256,10 +255,10 @@ Item
     MouseArea {
         anchors.fill: body
         onPressed: {
-            key.state = "pressed"
+            item.state = "pressed"
         }
         onReleased: {
-            key.state = "normal"
+            item.state = "normal"
         }
         onClicked: {
             shadow.state = shadow.state == "normal"? "highlighted": "normal"
@@ -271,30 +270,30 @@ Item
             name: "normal"
             PropertyChanges {
                 target: gradientStop0
-                color: Qt.tint("#f0f0f0", key.tint)
+                color: Qt.tint("#f0f0f0", item.tint)
             }
             PropertyChanges {
                 target: gradientStop1
-                color: Qt.tint("#d5d5d5", key.tint)
+                color: Qt.tint("#d5d5d5", item.tint)
             }
             PropertyChanges {
                 target: gradientStop2
-                color: Qt.tint("#ccc", key.tint)
+                color: Qt.tint("#ccc", item.tint)
             }
         },
         State {
             name: "pressed"
             PropertyChanges {
                 target: gradientStop0
-                color: Qt.tint("#666", key.tint)
+                color: Qt.tint("#666", item.tint)
             }
             PropertyChanges {
                 target: gradientStop1
-                color: Qt.tint("#888", key.tint)
+                color: Qt.tint("#888", item.tint)
             }
             PropertyChanges {
                 target: gradientStop2
-                color: Qt.tint("#999", key.tint)
+                color: Qt.tint("#999", item.tint)
             }
         }
     ]

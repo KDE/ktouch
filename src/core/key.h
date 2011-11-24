@@ -5,13 +5,14 @@
 
 #include <QList>
 
-#include "keychar.h"
+class KeyChar;
 
 class Key : public AbstractKey
 {
     Q_OBJECT
     Q_PROPERTY(unsigned int fingerIndex READ fingerIndex WRITE setFingerIndex NOTIFY fingerIndexChanged)
     Q_PROPERTY(bool hasHapticMarker READ hasHapticMarker WRITE setHasHapticMarker NOTIFY hasHapticMarkerChanged)
+    Q_PROPERTY(int keyCharCount READ keyCharCount NOTIFY keyCharCountChanged)
 
 public:
     explicit Key(QObject* parent = 0);
@@ -49,37 +50,20 @@ public:
         }
     }
 
-    Q_INVOKABLE int keyCharCount() const
+    int keyCharCount() const
     {
         return m_keyChars.count();
     }
 
-    Q_INVOKABLE KeyChar* keyChar(unsigned int index) const
-    {
-        Q_ASSERT(index < m_keyChars.length());
-        return m_keyChars.at(index);
-    }
-
-    void setKeyChar(unsigned int index, KeyChar* keyChar)
-    {
-        Q_ASSERT(index < m_keyChars.length());
-        m_keyChars[index] = keyChar;
-    }
-
-    void addKeyChar(KeyChar* keyChar)
-    {
-        m_keyChars.append(keyChar);
-    }
-
-    void removeKeyChar(unsigned int index)
-    {
-        Q_ASSERT(index < m_keyChars.length());
-        m_keyChars.removeAt(index);
-    }
+    Q_INVOKABLE KeyChar* keyChar(unsigned int index) const;
+    Q_INVOKABLE void addKeyChar(KeyChar* keyChar);
+    Q_INVOKABLE void removeKeyChar(unsigned int index);
+    Q_INVOKABLE void clearKeyChars();
 
 signals:
     void fingerIndexChanged(unsigned int newFingerIndex);
     void hasHapticMarkerChanged(bool newHasHapticMarker);
+    void keyCharCountChanged(int newKeyCharCount);
 
 private:
     unsigned int m_fingerIndex;

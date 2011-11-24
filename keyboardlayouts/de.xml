@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<keyboard>
+<keyboardLayout>
   <title>German</title>
-  <language>de</language>
-  <fontSuggestion>Sans Serif,9,-1,5,50,0,0,0,0,0</fontSuggestion>
+  <name>de</name>
+  <width>1480</width>
+  <height>480</height>
   <keys>
     <key left="180" top="200" width="80" height="80" fingerIndex="0">
       <char position="topLeft" modifier="shift">A</char>
@@ -93,7 +94,7 @@
     </key>
     <key left="1200" top="0" width="80" height="80" fingerIndex="7">
       <char position="topLeft" modifier="shift">`</char>
-      <char position="bottomLeft">'</char>
+      <char position="bottomLeft">&#xB4;</char>
     </key>
     <key left="150" top="100" width="80" height="80" fingerIndex="0">
       <char position="topLeft" modifier="shift">Q</char>
@@ -220,4 +221,4 @@
     <specialKey left="0" top="200" width="160" height="80" type="capslock"/>
     <specialKey left="1300" top="0" width="180" height="80" type="backspace"/>
   </keys>
-</keyboard>
+</keyboardLayout>

@@ -29,7 +29,7 @@
 #include <kicon.h>
 #include <kio/netaccess.h>
 
-#include "core/keyboard.h"
+#include "core/keyboardlayout.h"
 #include "core/key.h"
 #include "core/specialkey.h"
 #include "core/keychar.h"
@@ -52,10 +52,11 @@ KTouch::KTouch()
     //init();
 
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
-    qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKeyModel");
-    qmlRegisterType<Key>("ktouch", 1, 0, "KeyModel");
-    qmlRegisterType<SpecialKey>("ktouch", 1, 0, "SpecialKeyModel");
-    qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyCharModel");
+    qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
+    qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKey");
+    qmlRegisterType<Key>("ktouch", 1, 0, "Key");
+    qmlRegisterType<SpecialKey>("ktouch", 1, 0, "SpecialKey");
+    qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyChar");
     qmlRegisterType<Course>("ktouch", 1, 0, "Course");
     qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
     qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
@@ -67,10 +68,10 @@ KTouch::KTouch()
 
     KStandardDirs* dirs = KGlobal::dirs();
 
-    Keyboard* keyboad = new Keyboard(this);
-    QFile keyboardFile(dirs->findResource("appdata", "keyboards/de.xml"));
+    KeyboardLayout* keyboardLayout = new KeyboardLayout(this);
+    QFile keyboardFile(dirs->findResource("appdata", "keyboardlayouts/de.xml"));
     keyboardFile.open(QIODevice::ReadOnly);
-    keyboad->loadXML(&keyboardFile);
+    keyboardLayout->loadXML(&keyboardFile);
 
     Course* course = new Course(this);
     QFile courseFile(dirs->findResource("appdata", "courses/de2.xml"));
@@ -80,7 +81,7 @@ KTouch::KTouch()
     setupGUI();
     setCentralWidget(m_view);
 
-    m_view->rootContext()->setContextProperty("keyboardModel", keyboad);
+    m_view->rootContext()->setContextProperty("keyboardLayout", keyboardLayout);
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     QString res = KGlobal::dirs()->findResource("appdata", "qml/TrainingScreen.qml");
