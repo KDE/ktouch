@@ -83,6 +83,7 @@ set(ktouchtest_SRCS
     core/course.cpp
     core/lesson.cpp
     core/lessonline.cpp
+    core/trainingstats.cpp
 )
 
 kde4_add_executable(ktouchtest ${ktouchtest_SRCS})

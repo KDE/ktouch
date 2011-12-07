@@ -1,4 +1,5 @@
 import QtQuick 1.0
+import ktouch 1.0
 
 Item {
     id: line
@@ -23,6 +24,13 @@ Item {
         emitNextChar()
     }
 
+    onFocusChanged: {
+        if (!line.activeFocus)
+        {
+            stats.stopTraining();
+        }
+    }
+
     function deleteLastChar() {
         if (line.position === 0)
             return;
@@ -39,9 +47,15 @@ Item {
     {
         if (line.position >= text.length)
             return;
-        var isCorrect = newChar === text.charAt(line.position);
+        var correctChar = text.charAt(line.position);
+        var isCorrect = newChar === correctChar;
         var charItem = lineChars.itemAt(line.position);
         line.enteredText += newChar;
+        stats.startTraining();
+        if (line.isCorrect)
+        {
+            stats.logCharacter(correctChar, isCorrect? TrainingStats.CorrectCharacter: TrainingStats.IncorrectCharacter)
+        }
         line.isCorrect = line.isCorrect && isCorrect;
         if (newChar != " ")
         {

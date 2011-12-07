@@ -36,7 +36,7 @@
 #include "core/course.h"
 #include "core/lesson.h"
 #include "core/lessonline.h"
-
+#include "core/trainingstats.h"
 
 KTouch::KTouch()
     : m_view(new QDeclarativeView(this))
@@ -60,6 +60,7 @@ KTouch::KTouch()
     qmlRegisterType<Course>("ktouch", 1, 0, "Course");
     qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
     qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
+    qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());
@@ -78,11 +79,14 @@ KTouch::KTouch()
     courseFile.open(QIODevice::ReadOnly);
     course->loadXML(&courseFile);
 
+    TrainingStats* stats = new TrainingStats(this);
+
     setupGUI();
     setCentralWidget(m_view);
 
     m_view->rootContext()->setContextProperty("keyboardLayout", keyboardLayout);
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
+    m_view->rootContext()->setContextProperty("stats", stats);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     QString res = KGlobal::dirs()->findResource("appdata", "qml/TrainingScreen.qml");
     m_view->setSource(QUrl::fromLocalFile(res));

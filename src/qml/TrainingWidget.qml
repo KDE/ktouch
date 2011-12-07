@@ -121,6 +121,7 @@ FocusScope {
                     }
                     else
                     {
+                        stats.stopTraining();
                         trainer.done();
                     }
                 }

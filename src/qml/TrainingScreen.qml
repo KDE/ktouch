@@ -14,8 +14,12 @@ Rectangle {
             height: 60
             Text {
                 anchors.centerIn: parent
-                color: "#666"
-                text: "header"
+                color: "#fff"
+                text:
+                    "time: " + Qt.formatTime(stats.ellapsedTime, "mm:ss") + "\n" +
+                    "errors: " + stats.errorCount + "\n" +
+                    "accuracy: " + (Math.round(1000 * stats.accuracy) / 10) + "\n" +
+                    "charactersPerMinute: " + stats.charactersPerMinute
             }
         }
 
