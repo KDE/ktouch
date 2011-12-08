@@ -1,15 +1,23 @@
 import QtQuick 1.0
+import org.kde.plasma.core 0.1 as PlasmaCore
 
 Rectangle {
     property Key highlightedKey
     id: screen
     color: "#ccc"
 
+    PlasmaCore.Svg {
+        id: screenSvg
+        imagePath: findImage("trainingscreen.svgz")
+        usingRenderingCache: false
+    }
+
     Column {
         anchors.fill: parent
-        Rectangle {
-            id: head
-            color: "#4f4f4f"
+        PlasmaCore.SvgItem {
+            id: header
+            svg: screenSvg
+            elementId: "header"
             width: parent.width
             height: 60
             Text {
@@ -23,43 +31,60 @@ Rectangle {
             }
         }
 
-        TrainingWidget {
+        PlasmaCore.SvgItem {
             id: body
             width: parent.width
-            height: Math.round((parent.height - head.height) / 2)
-            onKeyPressed: keyboard.handleKeyPress(event)
-            onKeyReleased: keyboard.handleKeyRelease(event)
-            onNextCharChanged: {
-                if (!isCorrect)
-                    return;
-                if (highlightedKey)
-                    highlightedKey.isHighlighted = false
-                var key = nextChar != ""? keyboard.findKey(nextChar): keyboard.findKey(Qt.Key_Return)
-                if (key)
-                {
-                    key.isHighlighted = true
-                    highlightedKey = key
-                }
-            }
-            onIsCorrectChanged: {
-                if (!isCorrect)
-                {
+            height: Math.round((parent.height - header.height) / 2)
+            svg: screenSvg
+            elementId: "body"
+
+            TrainingWidget {
+                anchors.fill: parent
+                onKeyPressed: keyboard.handleKeyPress(event)
+                onKeyReleased: keyboard.handleKeyRelease(event)
+                onNextCharChanged: {
+                    if (!isCorrect)
+                        return;
                     if (highlightedKey)
                         highlightedKey.isHighlighted = false
-                    var key = keyboard.findKey(Qt.Key_Backspace)
+                    var key = nextChar != ""? keyboard.findKey(nextChar): keyboard.findKey(Qt.Key_Return)
                     if (key)
                     {
                         key.isHighlighted = true
                         highlightedKey = key
                     }
                 }
+                onIsCorrectChanged: {
+                    if (!isCorrect)
+                    {
+                        if (highlightedKey)
+                            highlightedKey.isHighlighted = false
+                        var key = keyboard.findKey(Qt.Key_Backspace)
+                        if (key)
+                        {
+                            key.isHighlighted = true
+                            highlightedKey = key
+                        }
+                    }
+                }
             }
 
+            PlasmaCore.SvgItem {
+                anchors.fill: parent
+                svg: screenSvg
+                elementId: "body-shadow"
+            }
         }
-        Keyboard {
-            id: keyboard
+        PlasmaCore.SvgItem {
+            id: footer
             width: parent.width
-            height: parent.height - head.height - body.height
+            height: parent.height - header.height - body.height
+            svg: screenSvg
+            elementId: "footer"
+            Keyboard {
+                id: keyboard
+                anchors.fill: parent
+            }
         }
     }
 }

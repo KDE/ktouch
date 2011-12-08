@@ -37,6 +37,7 @@
 #include "core/lesson.h"
 #include "core/lessonline.h"
 #include "core/trainingstats.h"
+#include "viewcontext.h"
 
 KTouch::KTouch()
     : m_view(new QDeclarativeView(this))
@@ -81,9 +82,12 @@ KTouch::KTouch()
 
     TrainingStats* stats = new TrainingStats(this);
 
+    ViewContext* context = new ViewContext(this, this);
+
     setupGUI();
     setCentralWidget(m_view);
 
+    m_view->rootContext()->setContextObject(context);
     m_view->rootContext()->setContextProperty("keyboardLayout", keyboardLayout);
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->rootContext()->setContextProperty("stats", stats);

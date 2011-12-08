@@ -18,6 +18,7 @@ add_subdirectory( training )
 add_subdirectory( courses )
 add_subdirectory( sounds ) 
 add_subdirectory( graphics ) 
+add_subdirectory( images ) 
 add_subdirectory( icons ) 
 
 # files to install in the ktouch project root directory

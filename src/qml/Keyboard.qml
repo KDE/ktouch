@@ -1,11 +1,9 @@
 import QtQuick 1.0
 import ktouch 1.0 as KTouch
 
-Rectangle
+Item
 {
     property real scaleFactor: Math.min(width / (keyboardLayout.width + 50), height / (keyboardLayout.height + 50))
-
-    color: "#4f4f4f"
 
     function findKey(keyChar)
     {
