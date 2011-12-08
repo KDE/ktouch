@@ -3,7 +3,9 @@ import ktouch 1.0 as KTouch
 
 Item
 {
-    property real scaleFactor: Math.min(width / (keyboardLayout.width + 50), height / (keyboardLayout.height + 50))
+    property int margin: 50
+    property real aspectRatio: (keyboardLayout.width + margin) / (keyboardLayout.height + margin)
+    property real scaleFactor: Math.min(width / (keyboardLayout.width + margin), height / (keyboardLayout.height + margin))
 
     function findKey(keyChar)
     {

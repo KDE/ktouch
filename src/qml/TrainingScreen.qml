@@ -34,7 +34,7 @@ Rectangle {
         PlasmaCore.SvgItem {
             id: body
             width: parent.width
-            height: Math.round((parent.height - header.height) / 2)
+            height: parent.height - header.height - footer.height
             svg: screenSvg
             elementId: "body"
 
@@ -78,7 +78,7 @@ Rectangle {
         PlasmaCore.SvgItem {
             id: footer
             width: parent.width
-            height: parent.height - header.height - body.height
+            height: Math.round(Math.min((parent.height - header.height) / 2, parent.width / keyboard.aspectRatio))
             svg: screenSvg
             elementId: "footer"
             Keyboard {
