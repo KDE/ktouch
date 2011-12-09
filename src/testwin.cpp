@@ -28,6 +28,7 @@
 #include <kdeclarative.h>
 #include <kicon.h>
 #include <kio/netaccess.h>
+#include <plasma/theme.h>
 
 #include "core/keyboardlayout.h"
 #include "core/key.h"
@@ -48,6 +49,9 @@ KTouch::KTouch()
  //   setAttribute(Qt::WA_KeyCompression );
 
     resetInputContext ();
+
+    Plasma::Theme* theme = Plasma::Theme::defaultTheme();
+    theme->setThemeName("ktouch");
 
     // General initialization of the program, common for all start modes
     //init();

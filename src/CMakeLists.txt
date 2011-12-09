@@ -88,7 +88,7 @@ set(ktouchtest_SRCS
 )
 
 kde4_add_executable(ktouchtest ${ktouchtest_SRCS})
-target_link_libraries(ktouchtest kdeclarative ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY})
+target_link_libraries(ktouchtest kdeclarative ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY})
 install(TARGETS ktouchtest  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
