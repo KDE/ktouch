@@ -8,7 +8,7 @@ Item
     height: childrenRect.height
 
     Row {
-        AnalogMeter {
+        AnalogSpeedMeter {
         }
         DigitalMeter {
             label: i18n("Strokes per second")
