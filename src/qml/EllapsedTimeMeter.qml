@@ -9,7 +9,7 @@ Item
     height: childrenRect.height
 
     Row {
-        AnalogMeter {
+        AnalogTimeMeter {
         }
         DigitalMeter {
             label: i18n("Ellapsed time")
@@ -17,5 +17,4 @@ Item
             oldValue: "+/- 00:00.0"
         }
     }
-
 }

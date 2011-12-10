@@ -29,3 +29,13 @@ QString ViewContext::formatAccuracy(double accuracy)
 {
     return QString("%1%").arg(100 * accuracy, 0, 'f', 1);
 }
+
+int ViewContext::getSeconds(QTime time)
+{
+    return time.second();
+}
+
+int ViewContext::getMinutes(QTime time)
+{
+    return time.minute();
+}

@@ -15,6 +15,8 @@ public:
     Q_INVOKABLE QString findImage(QString imageName) const;
     Q_INVOKABLE QString formatTime(QTime time);
     Q_INVOKABLE QString formatAccuracy(double accuracy);
+    Q_INVOKABLE int getSeconds(QTime time);
+    Q_INVOKABLE int getMinutes(QTime time);
 private:
     QWidget* m_mainWindow;
 };
