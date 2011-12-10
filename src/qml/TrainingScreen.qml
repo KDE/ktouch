@@ -19,15 +19,16 @@ Rectangle {
             svg: screenSvg
             elementId: "header"
             width: parent.width
-            height: 60
-            Text {
+            height: 120
+            Row {
                 anchors.centerIn: parent
-                color: "#fff"
-                text:
-                    "time: " + Qt.formatTime(stats.ellapsedTime, "mm:ss") + "\n" +
-                    "errors: " + stats.errorCount + "\n" +
-                    "accuracy: " + (Math.round(1000 * stats.accuracy) / 10) + "\n" +
-                    "charactersPerMinute: " + stats.charactersPerMinute
+                spacing: 40
+                EllapsedTimeMeter {
+                }
+                SpeedMeter {
+                }
+                AccuracyMeter {
+                }
             }
         }
 

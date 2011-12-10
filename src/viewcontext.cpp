@@ -19,3 +19,13 @@ QString ViewContext::findImage(QString imageName) const
     }
     return path;
 }
+
+QString ViewContext::formatTime(QTime time)
+{
+    return time.toString("mm:ss.zzz").left(7);
+}
+
+QString ViewContext::formatAccuracy(double accuracy)
+{
+    return QString("%1%").arg(100 * accuracy, 0, 'f', 1);
+}
