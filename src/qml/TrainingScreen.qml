@@ -22,12 +22,15 @@ Rectangle {
             height: 120
             Row {
                 anchors.centerIn: parent
-                spacing: 40
+                spacing: 10
                 EllapsedTimeMeter {
+                    ellapsedTime: stats.ellapsedTime
                 }
-                SpeedMeter {
+                CharactersPerMinuteMeter {
+                    charactersPerMinute: stats.charactersPerMinute
                 }
                 AccuracyMeter {
+                    accuracy: stats.accuracy
                 }
             }
         }

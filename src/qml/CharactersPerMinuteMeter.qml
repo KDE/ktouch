@@ -4,15 +4,19 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 Item
 {
     id: meter
+
+    property int charactersPerMinute: 0
+
     width: childrenRect.width
     height: childrenRect.height
 
     Row {
-        AnalogSpeedMeter {
+        AnalogCharactersPerMinuteMeter {
+            charactersPerMinute: meter.charactersPerMinute
         }
         DigitalMeter {
             label: i18n("Strokes per second")
-            value: stats.charactersPerMinute
+            value: meter.charactersPerMinute
             oldValue: "+/- 0"
         }
     }

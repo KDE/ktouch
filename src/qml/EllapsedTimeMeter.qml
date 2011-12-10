@@ -5,15 +5,19 @@ import ktouch 1.0
 Item
 {
     id: meter
+
+    property variant ellapsedTime
+
     width: childrenRect.width
     height: childrenRect.height
 
     Row {
-        AnalogTimeMeter {
+        AnalogEllapsedTimeMeter {
+            ellapsedTime: meter.ellapsedTime
         }
         DigitalMeter {
             label: i18n("Ellapsed time")
-            value: formatTime(stats.ellapsedTime)
+            value: formatTime(meter.ellapsedTime)
             oldValue: "+/- 00:00.0"
         }
     }
