@@ -8,7 +8,7 @@ Item
     height: childrenRect.height
 
     Row {
-        AnalogMeter {
+        AnalogAccuracyMeter {
         }
         DigitalMeter {
             label: i18n("Hit ratio")
