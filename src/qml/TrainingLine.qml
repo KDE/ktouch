@@ -31,6 +31,11 @@ Item {
         }
     }
 
+    function startTraining() {
+        stats.startTraining();
+        stopTimer.restart();
+    }
+
     function deleteLastChar() {
         if (line.position === 0)
             return;
@@ -51,7 +56,6 @@ Item {
         var isCorrect = newChar === correctChar;
         var charItem = lineChars.itemAt(line.position);
         line.enteredText += newChar;
-        stats.startTraining();
         if (line.isCorrect)
         {
             stats.logCharacter(correctChar, isCorrect? TrainingStats.CorrectCharacter: TrainingStats.IncorrectCharacter)
@@ -79,16 +83,19 @@ Item {
         switch(event.key)
         {
         case Qt.Key_Return:
+            startTraining();
             if (line.position == text.length && line.isCorrect)
                 line.done();
             break;
         case Qt.Key_Backspace:
+            startTraining();
             deleteLastChar();
             break;
         case Qt.Key_Delete:
         case Qt.Key_Tab:
             break;
         default:
+            startTraining();
             if (event.text !== "")
             {
                 addChar(event.text.charAt(0))
@@ -102,6 +109,14 @@ Item {
     Keys.onReleased: {
         if (!event.isAutoRepeat)
             line.keyReleased(event)
+    }
+
+    Timer {
+        id: stopTimer
+        interval: 5000
+        onTriggered: {
+            stats.stopTraining();
+        }
     }
 
     Row {
