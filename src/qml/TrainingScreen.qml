@@ -1,8 +1,10 @@
-import QtQuick 1.0
+import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 
 Rectangle {
     property Key highlightedKey
+    property bool isActive
+
     id: screen
     color: "#ccc"
 
@@ -89,6 +91,18 @@ Rectangle {
                 id: keyboard
                 anchors.fill: parent
             }
+        }
+    }
+
+    Binding {
+        target: screen
+        property: "isActive"
+        value: Qt.application.active
+    }
+
+    onIsActiveChanged: {
+        if (!screen.isActive) {
+            stats.stopTraining()
         }
     }
 }
