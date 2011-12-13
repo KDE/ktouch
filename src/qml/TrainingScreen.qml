@@ -1,12 +1,12 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 
-Rectangle {
-    property Key highlightedKey
-    property bool isActive
+Item {
 
     id: screen
-    color: "#ccc"
+
+    property Key highlightedKey
+    property bool isActive
 
     PlasmaCore.Svg {
         id: screenSvg

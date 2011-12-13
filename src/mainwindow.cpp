@@ -65,6 +65,7 @@ void MainWindow::init()
     ViewContext* context = new ViewContext(this, this);
 
     m_view->setMinimumSize(1000, 700);
+    m_view->setStyleSheet("background-color: transparent;");
     setCentralWidget(m_view);
 
     m_view->rootContext()->setContextObject(context);
@@ -72,6 +73,6 @@ void MainWindow::init()
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->rootContext()->setContextProperty("stats", stats);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    m_view->setSource(QUrl::fromLocalFile(dirs->findResource("appdata", "qml/TrainingScreen.qml")));
+    m_view->setSource(QUrl::fromLocalFile(dirs->findResource("appdata", "qml/main.qml")));
 }
 
