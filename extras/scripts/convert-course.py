@@ -57,7 +57,7 @@ def read(f):
     return Course(title, description, '', lessons)
 
 def parse_lesson(lesson_node):
-    title, = lesson_node.xpath("./NewCharsLabel[1]/text()")
+    title, = lesson_node.xpath("./NewCharsLabel[1]/text()") or ('',)
     new_characters, = lesson_node.xpath("./NewCharacters[1]/text()") or ('',)
     text = u"\n".join(lesson_node.xpath("./Line/text()"))
     return Lesson(title, new_characters, text)
