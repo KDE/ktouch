@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<data>
+  <course>
+    <title>German (from Tipptrainer)</title>
+    <description>German training file
+adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
+for ktouch from a training file distributed by
+Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
+for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
+distributed under the GPL2
+Version: 0.1 beta
+</description>
+    <keyboardLayout>de</keyboardLayout>
+    <path>courses/de2.xml</path>
+  </course>
+  <course>
+    <title>English (auto-generated)</title>
+    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
+Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>gb</keyboardLayout>
+    <path>courses/gb.xml</path>
+  </course>
+  <keyboardLayout>
+    <title>German</title>
+    <name>de</name>
+    <path>keyboardlayouts/de.xml</path>
+  </keyboardLayout>
+</data>
