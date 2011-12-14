@@ -2,11 +2,26 @@
 
 #include <kstandarddirs.h>
 #include <kdebug.h>
+#include <x11_helper.h>
 
 ViewContext::ViewContext(QWidget* mainWindow, QObject* parent) :
     QObject(parent),
-    m_mainWindow(mainWindow)
+    m_mainWindow(mainWindow),
+    m_XEventNotifier(new XEventNotifier(m_mainWindow))
 {
+    m_XEventNotifier->start();
+    connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
+}
+
+ViewContext::~ViewContext()
+{
+    disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
+    m_XEventNotifier->stop();
+}
+
+QString ViewContext::keyboardLayoutName() const
+{
+    return X11Helper::getCurrentLayout().toString();
 }
 
 QString ViewContext::findImage(QString imageName) const

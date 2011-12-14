@@ -31,6 +31,7 @@ set(ktouch_SRCS
     core/lessonline.cpp
     core/trainingstats.cpp
     viewcontext.cpp
+    x11_helper.cpp
 )
 
 kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
@@ -42,6 +43,7 @@ kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktou
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch kdeclarative ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY})
+target_link_libraries(ktouch ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
 
 if (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
     target_link_libraries(ktouch ${KDE4_PHONON_LIBS})
