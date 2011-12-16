@@ -18,6 +18,8 @@
 #include "core/lesson.h"
 #include "core/lessonline.h"
 #include "core/trainingstats.h"
+#include "core/dataindex.h"
+#include "core/dataaccess.h"
 #include "viewcontext.h"
 
 MainWindow::MainWindow(QWidget* parent):
@@ -42,6 +44,10 @@ void MainWindow::init()
     qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
     qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
     qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
+    qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");
+    qmlRegisterType<DataIndexCourse>("ktouch", 1, 0, "DataIndexCourse");
+    qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
+    qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());

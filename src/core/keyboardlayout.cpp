@@ -18,7 +18,7 @@
 #include "keychar.h"
 
 KeyboardLayout::KeyboardLayout(QObject *parent) :
-    QObject(parent)
+    KeyboardLayoutBase(parent)
 {
 }
 

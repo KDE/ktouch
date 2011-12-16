@@ -21,15 +21,19 @@ kde4_add_ui_files(ktouch_UIS
 set(ktouch_SRCS
     main.cpp
     mainwindow.cpp
+    core/keyboardlayoutbase.cpp
     core/keyboardlayout.cpp
     core/abstractkey.cpp
     core/key.cpp
     core/keychar.cpp
     core/specialkey.cpp
+    core/coursebase.cpp
     core/course.cpp
     core/lesson.cpp
     core/lessonline.cpp
     core/trainingstats.cpp
+    core/dataindex.cpp
+    core/dataaccess.cpp
     viewcontext.cpp
     x11_helper.cpp
 )

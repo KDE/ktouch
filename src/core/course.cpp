@@ -16,7 +16,7 @@
 #include "lessonline.h"
 
 Course::Course(QObject *parent) :
-    QObject(parent)
+    CourseBase(parent)
 {
 }
 

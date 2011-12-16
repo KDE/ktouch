@@ -1,7 +1,7 @@
 #ifndef KEYBOARD_H
 #define KEYBOARD_H
 
-#include <QObject>
+#include "keyboardlayoutbase.h"
 
 #include <QString>
 #include <QVariant>
@@ -11,11 +11,9 @@ class QDomDocument;
 class QIODevice;
 class AbstractKey;
 
-class KeyboardLayout : public QObject
+class KeyboardLayout : public KeyboardLayoutBase
 {
     Q_OBJECT
-    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(AbstractKey* referenceKey READ referenceKey NOTIFY referenceKeyChanged)
     Q_PROPERTY(unsigned int width READ width WRITE setWidth NOTIFY widthChanged)
     Q_PROPERTY(unsigned int height READ height WRITE setHeight NOTIFY heightChanged)
@@ -25,31 +23,6 @@ public:
     KeyboardLayout(QObject* parent = 0);
 
     bool loadXML(QIODevice* dev);
-
-    const QString& title() const
-    {
-        return m_title;
-    }
-
-    void setTitle(const QString& title)
-    {
-        m_title = title;
-        emit titleChanged(title);
-    }
-
-    const QString& name() const
-    {
-        return m_name;
-    }
-
-    void setName(const QString& name)
-    {
-        if (name != m_name)
-        {
-            m_name = name;
-            emit nameChanged(name);
-        }
-    }
 
     unsigned int width() const
     {
@@ -95,8 +68,6 @@ public:
     }
 
 signals:
-    void titleChanged(const QString& newTitle);
-    void nameChanged(const QString& newName);
     void widthChanged(unsigned int newWidth);
     void heightChanged(unsigned int newHeight);
     void referenceKeyChanged(AbstractKey* newReferenceKey);
