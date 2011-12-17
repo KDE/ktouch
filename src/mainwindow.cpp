@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 
-#include <QFile>
 #include <qdeclarative.h>
 #include <QDeclarativeView>
 #include <QDeclarativeContext>
@@ -54,19 +53,11 @@ void MainWindow::init()
     kDeclarative.initialize();
     kDeclarative.setupBindings();
 
-    KStandardDirs* dirs = KGlobal::dirs();
-
-    TrainingStats* stats = new TrainingStats(this);
-
-    ViewContext* context = new ViewContext(this, this);
+    setCentralWidget(m_view);
 
     m_view->setMinimumSize(1000, 700);
     m_view->setStyleSheet("background-color: transparent;");
-    setCentralWidget(m_view);
-
-    m_view->rootContext()->setContextObject(context);
-    m_view->rootContext()->setContextProperty("stats", stats);
+    m_view->rootContext()->setContextObject(new ViewContext(this, this));
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    m_view->setSource(QUrl::fromLocalFile(dirs->findResource("appdata", "qml/main.qml")));
+    m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/main.qml")));
 }
-

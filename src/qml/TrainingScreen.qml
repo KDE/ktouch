@@ -12,6 +12,10 @@ Item {
     property KeyItem highlightedKey
     property bool isActive
 
+    TrainingStats {
+        id: stats
+    }
+
     PlasmaCore.Svg {
         id: screenSvg
         imagePath: findImage("trainingscreen.svgz")
