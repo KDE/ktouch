@@ -1,4 +1,4 @@
-import QtQuick 1.0
+import QtQuick 1.1
 import Effects 1.0
 import ktouch 1.0
 
@@ -6,11 +6,13 @@ Item
 {
     id: item
 
+    property int keyIndex
+    property KeyboardLayout keyboardLayout
     property color tint: "#00000000"
     property bool isHighlighted: false
 
-    property AbstractKey key
-    property AbstractKey referenceKey
+    property AbstractKey key: item.keyboardLayout.key(item.keyIndex)
+    property AbstractKey referenceKey: keyboardLayout.referenceKey
 
     function match(data)
     {

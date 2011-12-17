@@ -1,8 +1,11 @@
-import QtQuick 1.0
-import ktouch 1.0 as KTouch
+import QtQuick 1.1
+import ktouch 1.0
 
 Item
 {
+    id: keyboard
+
+    property KeyboardLayout keyboardLayout
     property int margin: 50
     property real aspectRatio: (keyboardLayout.width + margin) / (keyboardLayout.height + margin)
     property real scaleFactor: Math.min(width / (keyboardLayout.width + margin), height / (keyboardLayout.height + margin))
@@ -42,10 +45,11 @@ Item
 
         Repeater {
             id: keys
-            model: keyboardLayout.keyCount
-            Key {
-                key: keyboardLayout.key(index)
-                referenceKey: keyboardLayout.referenceKey
+            model: keyboard.keyboardLayout.keyCount
+
+            KeyItem {
+                keyboardLayout: keyboard.keyboardLayout;
+                keyIndex: index
             }
         }
     }

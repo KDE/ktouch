@@ -56,11 +56,6 @@ void MainWindow::init()
 
     KStandardDirs* dirs = KGlobal::dirs();
 
-    KeyboardLayout* keyboardLayout = new KeyboardLayout(this);
-    QFile keyboardFile(dirs->findResource("appdata", "keyboardlayouts/de.xml"));
-    keyboardFile.open(QIODevice::ReadOnly);
-    keyboardLayout->loadXML(&keyboardFile);
-
     Course* course = new Course(this);
     QFile courseFile(dirs->findResource("appdata", "courses/de2.xml"));
     courseFile.open(QIODevice::ReadOnly);
@@ -75,7 +70,6 @@ void MainWindow::init()
     setCentralWidget(m_view);
 
     m_view->rootContext()->setContextObject(context);
-    m_view->rootContext()->setContextProperty("keyboardLayout", keyboardLayout);
     m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->rootContext()->setContextProperty("stats", stats);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);

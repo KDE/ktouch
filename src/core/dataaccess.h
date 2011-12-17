@@ -3,8 +3,6 @@
 
 #include <QObject>
 
-#include <KUrl>
-
 class QXmlSchema;
 class QDomDocument;
 class QFile;
@@ -17,7 +15,7 @@ class DataAccess : public QObject
 public:
     explicit DataAccess(QObject *parent = 0);
     Q_INVOKABLE DataIndex* loadDataIndex();
-    Q_INVOKABLE KeyboardLayout* loadKeyboardLayout(KUrl url);
+    Q_INVOKABLE KeyboardLayout* loadResourceKeyboardLayout(const QString& relPath);
 
 private:
     QXmlSchema loadXmlSchema(const QString& name);

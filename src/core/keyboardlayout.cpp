@@ -18,33 +18,14 @@
 #include "keychar.h"
 
 KeyboardLayout::KeyboardLayout(QObject *parent) :
-    KeyboardLayoutBase(parent)
+    KeyboardLayoutBase(parent),
+    m_title(""),
+    m_name(""),
+    m_width(0),
+    m_height(0),
+    m_keys(QList<AbstractKey*>()),
+    m_referenceKey(0)
 {
-}
-
-bool KeyboardLayout::loadXML(QIODevice* dev)
-{
-    QXmlSchema* schema = KeyboardLayout::xmlSchema();
-    if (!schema)
-    {
-        return false;
-    }
-    QXmlSchemaValidator validator;
-    validator.setSchema(*schema);
-    if (!validator.validate(dev))
-    {
-        kWarning() << "invalid keyboard XML";
-        return false;
-    }
-    dev->reset();
-    QDomDocument doc;
-    QString errorMsg;
-    if (!doc.setContent(dev, &errorMsg))
-    {
-        kWarning() << errorMsg;
-        return false;
-    }
-    return parseXML(&doc);
 }
 
 AbstractKey* KeyboardLayout::key(unsigned int index) const
@@ -78,89 +59,6 @@ void KeyboardLayout::clearKeys()
     updateReferenceKey(0);
 }
 
-
-QXmlSchema* KeyboardLayout::xmlSchema()
-{
-    if (!s_schema)
-    {
-        QString resourceName = "schemata/keyboardlayout.xsd";
-        QString schemaPath = KGlobal::dirs()->findResource("appdata", resourceName);
-        if (schemaPath.isNull())
-        {
-            kWarning() << "can't find resource" << resourceName;
-            return 0;
-        }
-        QFile schemaFile(schemaPath);
-        if (!schemaFile.open(QIODevice::ReadOnly))
-        {
-            kWarning() << "can't open" << schemaPath;
-            return 0;
-        }
-        QXmlSchema* schema = new QXmlSchema();
-        schema->load(&schemaFile, QUrl::fromLocalFile(schemaPath));
-        if (!schema->isValid())
-        {
-            kWarning() << resourceName << "is invalid";
-            delete schema;
-            return 0;
-        }
-        s_schema = schema;
-    }
-    return s_schema;
-}
-
-bool KeyboardLayout::parseXML(QDomDocument* doc)
-{
-    QDomElement root = doc->documentElement();
-    setTitle(i18nc("Keyboard Layout Name", root.firstChildElement("title").text().toUtf8()));
-    setName(root.firstChildElement("name").text());
-    setWidth(root.firstChildElement("width").text().toUInt());
-    setHeight(root.firstChildElement("height").text().toUInt());
-    clearKeys();
-    for (QDomElement keyNode = root.firstChildElement("keys").firstChildElement();
-         !keyNode.isNull();
-         keyNode = keyNode.nextSiblingElement())
-    {
-        AbstractKey* abstractKey;
-
-        if (keyNode.tagName() == "key")
-        {
-            Key* key = new Key(this);
-            key->setFingerIndex(keyNode.attribute("fingerIndex").toUInt());
-            key->setHasHapticMarker(keyNode.attribute("hasHapticMarker") == "true");
-            for (QDomElement charNode = keyNode.firstChildElement("char");
-                 !charNode.isNull();
-                 charNode = charNode.nextSiblingElement("char"))
-            {
-                KeyChar* keyChar = new KeyChar(key);
-                keyChar->setValue(charNode.text().at(0));
-                keyChar->setPositionStr(charNode.attribute("position"));
-                keyChar->setModifier(charNode.attribute("modifier"));
-                key->addKeyChar(keyChar);
-            }
-            abstractKey = key;
-        }
-        else if (keyNode.tagName() == "specialKey")
-        {
-            SpecialKey* specialKey = new SpecialKey(this);
-            specialKey->setTypeStr(keyNode.attribute("type"));
-            specialKey->setModifierId(keyNode.attribute("modifierId"));
-            specialKey->setLabel(keyNode.attribute("label"));
-            abstractKey = specialKey;
-        }
-        else
-        {
-            return false;
-        }
-        abstractKey->setLeft(keyNode.attribute("left").toUInt());
-        abstractKey->setTop(keyNode.attribute("top").toUInt());
-        abstractKey->setWidth(keyNode.attribute("width").toUInt());
-        abstractKey->setHeight(keyNode.attribute("height").toUInt());
-        addKey(abstractKey);
-    }
-    kDebug() << "read" << m_title << "with" << m_keys.length() << "keys";
-    return true;
-}
 
 void KeyboardLayout::updateReferenceKey(AbstractKey *newKey)
 {
@@ -202,5 +100,3 @@ bool KeyboardLayout::compareKeysForReference(const AbstractKey *testKey, const A
 {
     return testKey->width() * testKey->height() < compareKey->width() * compareKey->height();
 }
-
-QXmlSchema* KeyboardLayout::s_schema;

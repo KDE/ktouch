@@ -22,8 +22,6 @@ class KeyboardLayout : public KeyboardLayoutBase
 public:
     KeyboardLayout(QObject* parent = 0);
 
-    bool loadXML(QIODevice* dev);
-
     unsigned int width() const
     {
         return m_width;
@@ -74,13 +72,8 @@ signals:
     void keyCountChanged(int newKeyCount);
 
 private:
-    static QXmlSchema* xmlSchema();
-
-    bool parseXML(QDomDocument* doc);
     void updateReferenceKey(AbstractKey* newKey=0);
     bool compareKeysForReference(const AbstractKey* testKey, const AbstractKey* compareKey) const;
-
-    static QXmlSchema* s_schema;
 
     QString m_title;
     QString m_name;

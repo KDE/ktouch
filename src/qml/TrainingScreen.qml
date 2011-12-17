@@ -1,11 +1,14 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
+import ktouch 1.0
 
 Item {
 
     id: screen
 
-    property Key highlightedKey
+    property KeyboardLayout keyboardLayout
+
+    property KeyItem highlightedKey
     property bool isActive
 
     PlasmaCore.Svg {
@@ -88,6 +91,7 @@ Item {
             svg: screenSvg
             elementId: "footer"
             Keyboard {
+                keyboardLayout: screen.keyboardLayout
                 id: keyboard
                 anchors.fill: parent
             }
