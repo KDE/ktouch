@@ -25,4 +25,9 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>de</name>
     <path>keyboardlayouts/de.xml</path>
   </keyboardLayout>
+  <keyboardLayout>
+    <title>English (United Kingdom)</title>
+    <name>gb</name>
+    <path>keyboardlayouts/gb.xml</path>
+  </keyboardLayout>
 </data>
