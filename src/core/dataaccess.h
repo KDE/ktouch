@@ -8,6 +8,7 @@ class QDomDocument;
 class QFile;
 class DataIndex;
 class KeyboardLayout;
+class Course;
 
 class DataAccess : public QObject
 {
@@ -16,6 +17,7 @@ public:
     explicit DataAccess(QObject *parent = 0);
     Q_INVOKABLE DataIndex* loadDataIndex();
     Q_INVOKABLE KeyboardLayout* loadResourceKeyboardLayout(const QString& relPath);
+    Q_INVOKABLE Course* loadResourceCourse(const QString& relPath);
 
 private:
     QXmlSchema loadXmlSchema(const QString& name);

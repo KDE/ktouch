@@ -7,6 +7,7 @@ Item {
     id: screen
 
     property KeyboardLayout keyboardLayout
+    property Lesson lesson
 
     property KeyItem highlightedKey
     property bool isActive

@@ -18,7 +18,6 @@ class Course : public CourseBase
 
 public:
     explicit Course(QObject *parent = 0);
-    bool loadXML(QIODevice* dev);
 
     int lessonCount() const
     {
@@ -34,9 +33,7 @@ signals:
     void lessonCountChanged(int newLessonCount);
 
 private:
-    static QXmlSchema* xmlSchema();
     bool parseXML(QDomDocument* doc);
-    static QXmlSchema* s_schema;
     QList<Lesson*> m_lessons;
 };
 

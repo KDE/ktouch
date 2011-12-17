@@ -56,11 +56,6 @@ void MainWindow::init()
 
     KStandardDirs* dirs = KGlobal::dirs();
 
-    Course* course = new Course(this);
-    QFile courseFile(dirs->findResource("appdata", "courses/de2.xml"));
-    courseFile.open(QIODevice::ReadOnly);
-    course->loadXML(&courseFile);
-
     TrainingStats* stats = new TrainingStats(this);
 
     ViewContext* context = new ViewContext(this, this);
@@ -70,7 +65,6 @@ void MainWindow::init()
     setCentralWidget(m_view);
 
     m_view->rootContext()->setContextObject(context);
-    m_view->rootContext()->setContextProperty("lesson", course->lesson(21));
     m_view->rootContext()->setContextProperty("stats", stats);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     m_view->setSource(QUrl::fromLocalFile(dirs->findResource("appdata", "qml/main.qml")));

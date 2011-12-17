@@ -16,6 +16,9 @@
 #include "key.h"
 #include "specialkey.h"
 #include "keychar.h"
+#include "course.h"
+#include "lesson.h"
+#include "lessonline.h"
 
 DataAccess::DataAccess(QObject *parent) :
     QObject(parent)
@@ -129,6 +132,57 @@ KeyboardLayout* DataAccess::loadResourceKeyboardLayout(const QString &relPath)
     kDebug() << "read" << keyboardLayout->title() << "with" << keyboardLayout->keyCount() << "keys";
 
     return keyboardLayout;
+}
+
+Course* DataAccess::loadResourceCourse(const QString &relPath)
+{
+    QFile courseFile;
+    if (!openResourceFile(relPath, courseFile))
+        return 0;
+    QXmlSchema schema = loadXmlSchema("course");
+    if (!schema.isValid())
+        return 0;
+    QDomDocument doc = getDomDocument(courseFile, schema);
+    if (doc.isNull())
+    {
+        kWarning() << "invalid doc";
+        return 0;
+    }
+    QDomElement root(doc.documentElement());
+
+    Course* course = new Course(this);
+    course->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
+    course->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
+    course->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
+    QString allowedChars = "";
+    for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
+         !lessonNode.isNull();
+         lessonNode = lessonNode.nextSiblingElement())
+    {
+        Lesson* lesson = new Lesson(this);
+        lesson->setTitle(i18nc("lesson title", lessonNode.firstChildElement("title").text().toUtf8()));
+        QString newChars = lessonNode.firstChildElement("newCharacters").text();
+        for (int i = 0; i < newChars.length(); i++)
+        {
+            QChar newChar = newChars.at(i);
+            if (!allowedChars.contains(newChar))
+            {
+                allowedChars.append(newChar);
+            }
+        }
+        lesson->setCharacters(allowedChars);
+        QString text = lessonNode.firstChildElement("text").text();
+        QStringList lines = text.split("\n");
+        foreach(QString lineStr, lines)
+        {
+            LessonLine* line = new LessonLine(lesson);
+            line->setValue(lineStr);
+            lesson->addLine(line);
+        }
+        course->addLesson(lesson);
+    }
+
+    return course;
 }
 
 QXmlSchema DataAccess::loadXmlSchema(const QString &name)

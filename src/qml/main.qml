@@ -8,6 +8,7 @@ Item {
     property DataIndex dataIndex: dataAccess.loadDataIndex()
     property string name: keyboardLayoutName
     property KeyboardLayout keyboardLayout: lookupKeyboardLayout(keyboardLayoutName)
+    property variant courses: lookupCourses(keyboardLayoutName)
 
     function lookupKeyboardLayout(name)
     {
@@ -21,6 +22,22 @@ Item {
         return null;
     }
 
+    function lookupCourses(name)
+    {
+        var courses = [];
+        for (var i = 0; i < dataIndex.courseCount; i++)
+        {
+            var dataIndexCourse = dataIndex.course(i)
+            if (name == dataIndexCourse.keyboardLayoutName)
+            {
+                var course = dataAccess.loadResourceCourse(dataIndexCourse.path)
+                courses.push(course)
+            }
+
+        }
+        return courses;
+    }
+
     DataAccess {
         id: dataAccess
     }
@@ -30,6 +47,7 @@ Item {
         id: trainingScreen
         anchors.fill: parent
         keyboardLayout: main.keyboardLayout
+        lesson: courses[0].lesson(0)
     }
 
 }
