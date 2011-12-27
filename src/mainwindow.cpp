@@ -31,6 +31,7 @@ MainWindow::MainWindow(QWidget* parent):
 void MainWindow::init()
 {
     Plasma::Theme* theme = Plasma::Theme::defaultTheme();
+    theme->setUseGlobalSettings(false);
     theme->setThemeName("ktouch");
 
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
