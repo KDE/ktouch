@@ -42,12 +42,11 @@ Item {
         id: dataAccess
     }
 
-    TrainingScreen
+    HomeScreen
     {
-        id: trainingScreen
+        id: homeScreen
         anchors.fill: parent
-        keyboardLayout: main.keyboardLayout
-        lesson: courses[0].lesson(0)
+        courses: main.courses
     }
 
 }
