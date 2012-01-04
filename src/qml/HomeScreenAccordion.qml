@@ -62,6 +62,7 @@ Column {
             id: box
             width: parent.width
             title: i18n(courses[index].title)
+            active: activeIndex == index
             onActivated: activateBox(index)
             content: LessonSelector {
                 course: courses[index]
@@ -74,6 +75,7 @@ Column {
         id: ownLessonsBox
         width: parent.width
         title: i18n("Own lessons")
+        active: activeIndex == item.boxes.length - 1
         onActivated: activateBox(item.boxes.length - 1)
         content: Item {
             Text {

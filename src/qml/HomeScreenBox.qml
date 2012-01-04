@@ -1,4 +1,5 @@
 import QtQuick 1.1
+import org.kde.qtextracomponents 0.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import ktouch 1.0
@@ -9,6 +10,7 @@ Item {
     property alias title: titleLabel.text
     property Item content
     property int collapsedHeight: header.height + frame.margins.top + frame.margins.bottom
+    property bool active: false
     signal activated
 
     clip: true
@@ -40,9 +42,37 @@ Item {
                 id: header
                 height: 20
                 width: parent.width
+
+                QIconItem {
+                    id: headerIcon
+                    icon: QIcon("arrow-right")
+                    smooth: true
+                    anchors {
+                        left: parent.left
+                        verticalCenter: parent.verticalCenter
+                    }
+                    transform: Rotation {
+                        id: headerIconRotation
+                        origin.x: theme.smallIconSize / 2
+                        origin.y: theme.smallIconSize / 2
+                        angle: item.active? 90: 0
+                        Behavior on angle {
+                            NumberAnimation {
+                                duration: 250
+                            }
+                        }
+                    }
+                    width: theme.smallIconSize
+                    height: theme.smallIconSize
+                }
+
                 PlasmaComponents.Label {
                     id: titleLabel
-                    anchors.centerIn: parent
+                    anchors {
+                        left: headerIcon.right
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                    }
                     height: paintedHeight
                 }
                 MouseArea {
