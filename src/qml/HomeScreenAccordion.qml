@@ -7,6 +7,7 @@ Column {
     id: item
 
     property variant courses;
+    signal lessonSelected(variant lesson)
 
     property variant boxes: [];
     property int lastActiveIndex: -1
@@ -62,13 +63,9 @@ Column {
             width: parent.width
             title: i18n(courses[index].title)
             onActivated: activateBox(index)
-            content: Item {
-                Text {
-                    anchors.centerIn: parent
-                    font.pixelSize: 50
-                    color: "#888"
-                    text: "TODO"
-                }
+            content: LessonSelector {
+                course: courses[index]
+                onLessonSelected: item.lessonSelected(lesson)
             }
         }
     }

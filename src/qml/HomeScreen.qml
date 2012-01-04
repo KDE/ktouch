@@ -7,6 +7,7 @@ Item {
     id: screen
 
     property variant courses;
+    signal lessonSelected(variant lesson)
 
     anchors.fill: parent
 
@@ -35,6 +36,7 @@ Item {
                 courses: screen.courses
                 anchors.fill: parent
                 anchors.margins: 5
+                onLessonSelected: screen.lessonSelected(lesson)
             }
         }
     }
