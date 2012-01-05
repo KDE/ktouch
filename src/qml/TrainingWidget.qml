@@ -4,6 +4,9 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 
 FocusScope {
     id: trainer
+
+    property Lesson lesson
+
     property string nextChar
     property bool isCorrect: trainingLine.isCorrect
     property int fontSize: 20
@@ -15,8 +18,11 @@ FocusScope {
     signal keyReleased(variant event)
 
     Component.onCompleted: {
-        trainer.position = 0
         trainingLine.forceActiveFocus()
+    }
+
+    onLessonChanged: {
+        trainer.position = -1
     }
 
     Flickable
@@ -78,7 +84,7 @@ FocusScope {
                         id: titleText
                         anchors.centerIn: parent
                         font.pixelSize: fontSize * 1.7
-                        text: lesson.title
+                        text: trainer.lesson? lesson.title: ""
                     }
                 }
                 Item {
@@ -87,7 +93,7 @@ FocusScope {
                 }
                 Repeater {
                     id: lines
-                    model: lesson.lineCount
+                    model: trainer.lesson? trainer.lesson.lineCount: 0
                     Item {
                         property bool isDone: false
                         width: text.width + 2 * margin
@@ -102,6 +108,7 @@ FocusScope {
                             opacity: trainer.position == index? 0: 1
                         }
                     }
+                    onModelChanged: trainer.position = 0
                 }
                 Item {
                     height: margin

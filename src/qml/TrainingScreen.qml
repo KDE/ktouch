@@ -54,6 +54,7 @@ Item {
 
             TrainingWidget {
                 anchors.fill: parent
+                lesson: screen.lesson
                 onKeyPressed: keyboard.handleKeyPress(event)
                 onKeyReleased: keyboard.handleKeyRelease(event)
                 onNextCharChanged: {
