@@ -15,7 +15,7 @@ Item
             charactersPerMinute: meter.charactersPerMinute
         }
         DigitalMeter {
-            label: i18n("Strokes per second")
+            label: i18n("Strokes per minute")
             value: meter.charactersPerMinute
             oldValue: "+/- 0"
         }
