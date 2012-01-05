@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineOptions options;
-    //options.add("+[URL]", ki18n("Training file to open"));
+    options.add("opengl", ki18n("use a QGLWidget for the viewport"));
     KCmdLineArgs::addCmdLineOptions(options);
 
     KApplication app;
@@ -49,6 +49,7 @@ int main(int argc, char **argv)
     {
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
         mainWin = new MainWindow();
+        mainWin->setUseOpenGLViewport(args->isSet("opengl"));
         mainWin->show();
         args->clear();
     }

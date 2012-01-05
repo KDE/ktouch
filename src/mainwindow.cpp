@@ -4,6 +4,7 @@
 #include <QDeclarativeView>
 #include <QDeclarativeContext>
 #include <QGraphicsDropShadowEffect>
+#include <QGLWidget>
 
 #include <kstandarddirs.h>
 #include <kdeclarative.h>
@@ -23,9 +24,24 @@
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
-    m_view(new QDeclarativeView(this))
+    m_view(new QDeclarativeView(this)),
+    m_useOpenGLViewport(false)
 {
     init();
+}
+
+bool MainWindow::useOpenGLViewport() const
+{
+    return m_useOpenGLViewport;
+}
+
+void MainWindow::setUseOpenGLViewport(bool useOpenGLViewport)
+{
+    if (useOpenGLViewport != m_useOpenGLViewport)
+    {
+        m_useOpenGLViewport = useOpenGLViewport;
+        m_view->setViewport(useOpenGLViewport? new QGLWidget(): new QWidget());
+    }
 }
 
 void MainWindow::init()
