@@ -16,7 +16,7 @@ public:
     void setUseOpenGLViewport(bool useOpenGLViewport);
 private slots:
     void showMenu(int xPos, int yPos);
-    void showPreferences();
+    void showConfigDialog();
     void configureShortcuts();
     void setFullscreen(bool fullscreen);
 private:

@@ -41,6 +41,10 @@ Item {
         id: dataAccess
     }
 
+    Preferences {
+        id: preferences
+    }
+
     HomeScreen
     {
         id: homeScreen

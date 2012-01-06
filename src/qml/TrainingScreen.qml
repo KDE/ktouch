@@ -93,13 +93,15 @@ Item {
         PlasmaCore.SvgItem {
             id: footer
             width: parent.width
-            height: Math.round(Math.min((parent.height - header.height) / 2, parent.width / keyboard.aspectRatio))
+            visible: preferences.showKeyboard
+            height: visible? Math.round(Math.min((parent.height - header.height) / 2, parent.width / keyboard.aspectRatio)): 0
             svg: screenSvg
             elementId: "footer"
             Keyboard {
                 keyboardLayout: screen.keyboardLayout
                 id: keyboard
                 anchors.fill: parent
+                visible: parent.visible
             }
         }
     }

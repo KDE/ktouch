@@ -1,0 +1,4 @@
+File=ktouch.kcfg
+ClassName=Preferences
+Singleton=true
+Mutators=true

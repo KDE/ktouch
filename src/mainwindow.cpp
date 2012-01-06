@@ -16,6 +16,7 @@
 #include <khelpmenu.h>
 #include <ktogglefullscreenaction.h>
 #include <kshortcutsdialog.h>
+#include <kconfigdialog.h>
 #include <plasma/theme.h>
 
 #include "core/keyboardlayout.h"
@@ -29,6 +30,10 @@
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
 #include "viewcontext.h"
+#include "preferences.h"
+#include "preferencesproxy.h"
+#include "trainingconfigwidget.h"
+#include "colorsconfigwidget.h"
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
@@ -64,8 +69,18 @@ void MainWindow::configureShortcuts()
     KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, this);
 }
 
-void MainWindow::showPreferences()
+void MainWindow::showConfigDialog()
 {
+    if (KConfigDialog::showDialog("preferences"))
+    {
+        return;
+    }
+
+    KConfigDialog* dialog = new KConfigDialog(this, "preferences", Preferences::self());
+    dialog->setFaceType(KPageDialog::List);
+    dialog->addPage(new TrainingConfigWidget(), i18n("Training"), "chronometer", "Training settings");
+    dialog->addPage(new ColorsConfigWidget(), i18n("Colors"), "preferences-desktop-color", "Color settings");
+    dialog->show();
 }
 
 void MainWindow::setFullscreen(bool fullScreen)
@@ -78,7 +93,7 @@ void MainWindow::init()
     m_actionCollection->addAssociatedWidget(this);
     m_menu->addAction(KStandardAction::fullScreen(this, SLOT(setFullscreen(bool)), this, m_actionCollection));
     m_menu->addSeparator();
-    m_menu->addAction(KStandardAction::preferences(this, SLOT(showPreferences()), m_actionCollection));
+    m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
     m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));
     m_menu->addSeparator();
     KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
@@ -101,6 +116,7 @@ void MainWindow::init()
     qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");
     qmlRegisterType<DataIndexCourse>("ktouch", 1, 0, "DataIndexCourse");
     qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
+    qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
     qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
 
     KDeclarative kDeclarative;

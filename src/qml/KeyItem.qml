@@ -61,6 +61,14 @@ Item
         return false;
     }
 
+    function setTint(color)
+    {
+        // stupid hack to set alpha because in Qt Quick 1.1 it's impossible to access color components
+        color = "#20" + ("" + color).substr(1);
+        item.tint = color
+
+    }
+
     anchors.left: parent.left
     anchors.top: parent.top
     anchors.leftMargin: Math.round(key.left * scaleFactor)
@@ -95,6 +103,7 @@ Item
                     bottomRightLabel.keyChar = keyChar;
                 }
             }
+            setTint(preferences.fingerColor(key.fingerIndex))
             break;
 
         case "specialKey":

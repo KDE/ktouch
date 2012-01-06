@@ -45,7 +45,7 @@ Item
 
         Repeater {
             id: keys
-            model: keyboard.keyboardLayout.keyCount
+            model: keyboard.visible? keyboard.keyboardLayout.keyCount: 0
 
             KeyItem {
                 keyboardLayout: keyboard.keyboardLayout;

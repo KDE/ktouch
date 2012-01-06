@@ -4,7 +4,7 @@ add_subdirectory(qml)
 add_subdirectory(schemata)
 
 # set include directories
-#include_directories( )
+include_directories(${QT_INCLUDE} ${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
 # add compilation options
 option(KDEEDU_KTOUCH_BUILD_WITH_PHONON "Enables compilation of sound output using Phonon." ON)
@@ -15,6 +15,8 @@ configure_file(ktouch_build_config.h.in ktouch_build_config.h)
 
 # add ui files, all files in directory ui are Qt4 only
 kde4_add_ui_files(ktouch_UIS
+    ui/colorsconfigwidget.ui
+    ui/trainingconfigwidget.ui
 )
 
 # set the source code files from which KTouch is compiled
@@ -36,9 +38,12 @@ set(ktouch_SRCS
     core/dataaccess.cpp
     viewcontext.cpp
     x11_helper.cpp
+    preferencesproxy.cpp
+    trainingconfigwidget.cpp
+    colorsconfigwidget.cpp
 )
 
-kde4_add_kcfg_files(ktouch_SRCS prefs.kcfgc )
+kde4_add_kcfg_files(ktouch_SRCS preferences.kcfgc )
 
 #uncomment this if oxygen icons for ktouch are available
 #kde4_add_app_icon(ktouch_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/ktouch.png")
