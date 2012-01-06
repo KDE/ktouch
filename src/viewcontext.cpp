@@ -2,7 +2,8 @@
 
 #include <kstandarddirs.h>
 #include <kdebug.h>
-#include <x11_helper.h>
+
+#include "x11_helper.h"
 
 ViewContext::ViewContext(QWidget* mainWindow, QObject* parent) :
     QObject(parent),
@@ -53,4 +54,9 @@ int ViewContext::getSeconds(QTime time)
 int ViewContext::getMinutes(QTime time)
 {
     return time.minute();
+}
+
+void ViewContext::showMenu(int xPos, int yPos)
+{
+    emit menuRequested(xPos, yPos);
 }

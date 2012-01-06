@@ -5,9 +5,17 @@
 #include <QDeclarativeContext>
 #include <QGraphicsDropShadowEffect>
 #include <QGLWidget>
+#include <QMenu>
 
 #include <kstandarddirs.h>
 #include <kdeclarative.h>
+#include <kmenu.h>
+#include <kcmdlineargs.h>
+#include <kactioncollection.h>
+#include <kstandardaction.h>
+#include <khelpmenu.h>
+#include <ktogglefullscreenaction.h>
+#include <kshortcutsdialog.h>
 #include <plasma/theme.h>
 
 #include "core/keyboardlayout.h"
@@ -25,6 +33,8 @@
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
     m_view(new QDeclarativeView(this)),
+    m_actionCollection(new KActionCollection(this)),
+    m_menu(new QMenu(this)),
     m_useOpenGLViewport(false)
 {
     init();
@@ -44,8 +54,36 @@ void MainWindow::setUseOpenGLViewport(bool useOpenGLViewport)
     }
 }
 
+void MainWindow::showMenu(int xPos, int yPos)
+{
+    m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
+}
+
+void MainWindow::configureShortcuts()
+{
+    KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, this);
+}
+
+void MainWindow::showPreferences()
+{
+}
+
+void MainWindow::setFullscreen(bool fullScreen)
+{
+    KToggleFullScreenAction::setFullScreen(this, fullScreen);
+}
+
 void MainWindow::init()
 {
+    m_actionCollection->addAssociatedWidget(this);
+    m_menu->addAction(KStandardAction::fullScreen(this, SLOT(setFullscreen(bool)), this, m_actionCollection));
+    m_menu->addSeparator();
+    m_menu->addAction(KStandardAction::preferences(this, SLOT(showPreferences()), m_actionCollection));
+    m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));
+    m_menu->addSeparator();
+    KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
+    m_menu->addMenu(helpMenu->menu());
+
     Plasma::Theme* theme = Plasma::Theme::defaultTheme();
     theme->setUseGlobalSettings(false);
     theme->setThemeName("ktouch");
@@ -72,9 +110,12 @@ void MainWindow::init()
 
     setCentralWidget(m_view);
 
+    ViewContext* viewContext = new ViewContext(this, this);
+    connect(viewContext, SIGNAL(menuRequested(int,int)), SLOT(showMenu(int,int)));
+
     m_view->setMinimumSize(1000, 700);
     m_view->setStyleSheet("background-color: transparent;");
-    m_view->rootContext()->setContextObject(new ViewContext(this, this));
+    m_view->rootContext()->setContextObject(viewContext);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/main.qml")));
 }

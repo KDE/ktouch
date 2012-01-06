@@ -9,8 +9,6 @@ Item {
     property variant courses;
     signal lessonSelected(variant lesson)
 
-    anchors.fill: parent
-
     Column {
         anchors.fill: parent
         PlasmaComponents.ToolBar {
@@ -23,6 +21,10 @@ Item {
                 }
                 PlasmaComponents.ToolButton {
                     iconSource: "configure"
+                    onClicked: {
+                        var position = mapToItem(null, 0, height)
+                        showMenu(position.x, position.y)
+                    }
                 }
             }
         }

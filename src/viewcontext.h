@@ -21,8 +21,10 @@ public:
     Q_INVOKABLE QString formatAccuracy(double accuracy);
     Q_INVOKABLE int getSeconds(QTime time);
     Q_INVOKABLE int getMinutes(QTime time);
+    Q_INVOKABLE void showMenu(int xPos, int yPos);
 signals:
     void keyboardLayoutNameChanged();
+    void menuRequested(int xPos, int yPos);
 private:
     QWidget* m_mainWindow;
     XEventNotifier* m_XEventNotifier;
