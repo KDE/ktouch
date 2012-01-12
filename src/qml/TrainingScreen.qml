@@ -50,7 +50,7 @@ Item {
             width: parent.width
             height: parent.height - header.height - footer.height
             svg: screenSvg
-            elementId: "body"
+            elementId: "content"
 
             TrainingWidget {
                 anchors.fill: parent
@@ -84,12 +84,13 @@ Item {
                 }
             }
 
-            PlasmaCore.SvgItem {
+            PlasmaCore.FrameSvgItem {
                 anchors.fill: parent
-                svg: screenSvg
-                elementId: "body-shadow"
+                imagePath: findImage("trainingscreen.svgz")
+                prefix: "content-shadow"
             }
         }
+
         PlasmaCore.SvgItem {
             id: footer
             width: parent.width
