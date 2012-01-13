@@ -10,6 +10,8 @@ Item
     property KeyboardLayout keyboardLayout
     property color tint: "#00000000"
     property bool isHighlighted: false
+    property bool enabled: true
+    property bool pressed: false
 
     property AbstractKey key: item.keyboardLayout.key(item.keyIndex)
     property AbstractKey referenceKey: keyboardLayout.referenceKey
@@ -76,7 +78,7 @@ Item
     width: Math.round(key.width * scaleFactor)
     height: Math.round(key.height * scaleFactor)
 
-    state: "normal"
+    state: enabled? (pressed? "pressed": "normal"): "disabled"
 
     onKeyChanged: {
         switch (key.keyType())
@@ -305,6 +307,21 @@ Item
             PropertyChanges {
                 target: gradientStop2
                 color: Qt.tint("#999", item.tint)
+            }
+        },
+        State {
+            name: "disabled"
+            PropertyChanges {
+                target: gradientStop0
+                color: Qt.tint("#444", item.tint)
+            }
+            PropertyChanges {
+                target: gradientStop1
+                color: Qt.tint("#333", item.tint)
+            }
+            PropertyChanges {
+                target: gradientStop2
+                color: Qt.tint("#222", item.tint)
             }
         }
     ]

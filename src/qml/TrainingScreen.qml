@@ -12,6 +12,29 @@ Item {
     property KeyItem highlightedKey
     property bool isActive
 
+    function setLessonKeys() {
+        if (!lesson)
+            return;
+
+        var chars = lesson.characters;
+        var keyItems = keyboard.keyItems()
+
+        for (var i = 0; i < keyItems.length; i++) {
+            var key = keyItems[i].key
+            if (key.keyType() == "key") {
+                keyItems[i].enabled = false;
+                for (var j = 0; j < key.keyCharCount; j++) {
+                    if (chars.indexOf(String.fromCharCode(key.keyChar(j).value)) != -1) {
+                        keyItems[i].enabled = true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    onLessonChanged: setLessonKeys()
+
     TrainingStats {
         id: stats
     }
@@ -62,7 +85,7 @@ Item {
                         return;
                     if (highlightedKey)
                         highlightedKey.isHighlighted = false
-                    var key = nextChar != ""? keyboard.findKey(nextChar): keyboard.findKey(Qt.Key_Return)
+                    var key = nextChar != ""? keyboard.findKeyItem(nextChar): keyboard.findKeyItem(Qt.Key_Return)
                     if (key)
                     {
                         key.isHighlighted = true
@@ -74,7 +97,7 @@ Item {
                     {
                         if (highlightedKey)
                             highlightedKey.isHighlighted = false
-                        var key = keyboard.findKey(Qt.Key_Backspace)
+                        var key = keyboard.findKeyItem(Qt.Key_Backspace)
                         if (key)
                         {
                             key.isHighlighted = true
@@ -102,7 +125,7 @@ Item {
                 keyboardLayout: screen.keyboardLayout
                 id: keyboard
                 anchors.fill: parent
-                visible: parent.visible
+                onKeyboardUpdate: setLessonKeys()
             }
         }
     }
