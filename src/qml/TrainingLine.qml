@@ -196,7 +196,7 @@ Item {
         visible: line.activeFocus
         SequentialAnimation {
             id: cursorAnimation
-            running: line.activeFocus
+            running: line.activeFocus && Qt.application.active
             loops: Animation.Infinite
             PropertyAction {
                 target: cursor
