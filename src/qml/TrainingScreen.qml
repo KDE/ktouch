@@ -20,23 +20,40 @@ Item {
 
         var chars = lesson.characters;
         var keyItems = keyboard.keyItems()
+        var modifierItems = []
+        var usedModifiers = {}
 
         for (var i = 0; i < keyItems.length; i++) {
             var key = keyItems[i].key
             if (key.keyType() == "key") {
                 keyItems[i].enabled = false;
                 for (var j = 0; j < key.keyCharCount; j++) {
-                    if (chars.indexOf(String.fromCharCode(key.keyChar(j).value)) != -1) {
+                    var keyChar = key.keyChar(j)
+                    if (chars.indexOf(String.fromCharCode(keyChar.value)) != -1) {
                         keyItems[i].enabled = true;
-                        break;
+                        if (keyChar.modifier !== "") {
+                            usedModifiers[keyChar.modifier] = true
+                        }
                     }
                 }
             }
+            else {
+                var type = keyItems[i].key.type
+                if (type != SpecialKey.Return && type != SpecialKey.Backspace && type != SpecialKey.Space)
+                {
+                    modifierItems.push(keyItems[i])
+                    keyItems[i].enabled = false
+                }
+            }
+        }
+
+        for (i = 0; i < modifierItems.length; i++) {
+            var modifierItem = modifierItems[i]
+            modifierItem.enabled = !!usedModifiers[modifierItem.key.modifierId]
         }
     }
 
     function startTraining() {
-        console.log("starting training")
         screen.trainingFinished = false
         screen.trainingStarted = true
     }
