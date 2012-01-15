@@ -34,6 +34,15 @@ void TrainingStats::stopTraining()
     }
 }
 
+void TrainingStats::reset()
+{
+    stopTraining();
+    m_charactersTyped = 0;
+    m_ellapsedTime = 0;
+    m_errorCount = 0;
+    statsChanged();
+}
+
 void TrainingStats::logCharacter(QString character, EventType type)
 {
     if (type == TrainingStats::CorrectCharacter)

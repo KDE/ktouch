@@ -9,6 +9,9 @@ Item {
     property variant courses;
     signal lessonSelected(variant lesson)
 
+    function start() {}
+    function reset() {}
+
     Column {
         anchors.fill: parent
         PlasmaComponents.ToolBar {

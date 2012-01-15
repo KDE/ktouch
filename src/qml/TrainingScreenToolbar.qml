@@ -7,6 +7,7 @@ Item {
 
     property bool trainingStarted: false
     property bool trainingFinished: true
+    property Item menuOverlayItem
 
     function setMessage() {
         if (!stats.timeIsRunning && !trainingFinished) {
@@ -20,7 +21,12 @@ Item {
         }
     }
 
+    function reset() {
+        messageBox.clearMessageImmediately()
+    }
+
     onTrainingStartedChanged: setMessage()
+    onTrainingFinishedChanged: setMessage()
 
     height: 29
     width: 400
@@ -44,14 +50,18 @@ Item {
         height: pauseButton.height
 
         PlasmaComponents.ToolButton {
+            id: menuButton
+            iconSource: "go-home"
+            onClicked: item.menuOverlayItem.show()
+        }
+
+        PlasmaComponents.ToolButton {
             id: pauseButton
             iconSource: "media-playback-pause"
             checked: !stats.timeIsRunning
             onClicked: stats.stopTraining()
             onCheckedChanged: setMessage()
         }
-
-
 
         MessageBox {
             id: messageBox

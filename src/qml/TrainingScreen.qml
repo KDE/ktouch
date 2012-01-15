@@ -9,6 +9,9 @@ Item {
     property KeyboardLayout keyboardLayout
     property Lesson lesson
 
+    signal restartRequested()
+    signal abortRequested()
+
     property bool trainingStarted: false
     property bool trainingFinished: true
     property KeyItem highlightedKey
@@ -53,7 +56,14 @@ Item {
         }
     }
 
-    function startTraining() {
+    function reset() {
+        toolbar.reset()
+        trainingWidget.reset()
+        screen.trainingStarted = false
+        screen.trainingFinished = true
+    }
+
+    function start() {
         screen.trainingFinished = false
         screen.trainingStarted = true
     }
@@ -104,6 +114,7 @@ Item {
             width: parent.width
             trainingStarted: screen.trainingStarted
             trainingFinished: screen.trainingFinished
+            menuOverlayItem: menuOverlay
         }
 
         PlasmaCore.SvgItem {
@@ -114,6 +125,7 @@ Item {
             elementId: "content"
 
             TrainingWidget {
+                id: trainingWidget
                 anchors.fill: parent
                 lesson: screen.lesson
                 onKeyPressed: keyboard.handleKeyPress(event)
@@ -167,6 +179,18 @@ Item {
                 onKeyboardUpdate: setLessonKeys()
             }
         }
+    }
+
+    TrainingScreenMenuOverlay {
+        id: menuOverlay
+        anchors.fill: parent
+        onVisibleChanged: {
+            if (!visible) {
+                trainingWidget.forceActiveFocus()
+            }
+        }
+        onRestartRequested: screen.restartRequested()
+        onAbortRequested: screen.abortRequested()
     }
 
     Binding {

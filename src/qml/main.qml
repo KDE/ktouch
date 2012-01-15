@@ -37,6 +37,12 @@ Item {
         return courses;
     }
 
+    function switchScreen(from, to) {
+        switchScreenAnimation.from = from
+        switchScreenAnimation.to = to
+        switchScreenAnimation.start()
+    }
+
     DataAccess {
         id: dataAccess
     }
@@ -45,16 +51,14 @@ Item {
         id: preferences
     }
 
-    HomeScreen
-    {
+    HomeScreen {
         id: homeScreen
         anchors.fill: parent
         courses: main.courses
         onLessonSelected: {
+            trainingScreen.reset()
             trainingScreen.lesson = lesson
-            switchScreenAnimation.from = homeScreen
-            switchScreenAnimation.to = trainingScreen
-            switchScreenAnimation.start()
+            main.switchScreen(homeScreen, trainingScreen)
         }
     }
 
@@ -63,6 +67,8 @@ Item {
         anchors.fill: parent
         visible: false
         keyboardLayout: main.keyboardLayout
+        onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
+        onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
     }
 
     Rectangle {
@@ -89,6 +95,9 @@ Item {
             property: "visible"
             value: false
         }
+        ScriptAction {
+            script: switchScreenAnimation.to.reset()
+        }
         PropertyAction {
             target: switchScreenAnimation.to
             property: "visible"
@@ -102,11 +111,7 @@ Item {
             easing.type: Easing.OutQuad
         }
         ScriptAction {
-            script: {
-                if (switchScreenAnimation.to == trainingScreen) {
-                    trainingScreen.startTraining()
-                }
-            }
+            script: switchScreenAnimation.to.start()
         }
     }
 }

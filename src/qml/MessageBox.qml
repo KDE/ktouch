@@ -21,6 +21,10 @@ Rectangle {
         item.state = "cleared"
     }
 
+    function clearMessageImmediately() {
+        item.state = "hidden"
+    }
+
     border {
         width: 1
         color: "#decd87"

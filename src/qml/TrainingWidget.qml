@@ -17,13 +17,18 @@ FocusScope {
     signal keyPressed(variant event)
     signal keyReleased(variant event)
 
+    function reset() {
+        stats.reset()
+        trainer.position = -1
+        trainer.position = 0
+        sheetFlick.scrollToTrainingLine()
+    }
+
     Component.onCompleted: {
         trainingLine.forceActiveFocus()
     }
 
-    onLessonChanged: {
-        trainer.position = -1
-    }
+    onLessonChanged: trainer.position = -1
 
     Flickable
     {
@@ -95,7 +100,7 @@ FocusScope {
                     id: lines
                     model: trainer.lesson? trainer.lesson.lineCount: 0
                     Item {
-                        property bool isDone: false
+                        property bool isDone: trainer.position > index
                         width: text.width + 2 * margin
                         height: lineHeight
                         Text {
@@ -120,7 +125,6 @@ FocusScope {
                 id: trainingLine
                 property Item target: lines.itemAt(trainer.position)
                 onDone: {
-                    lines.itemAt(trainer.position).isDone = true;
                     if (trainer.position < lesson.lineCount - 1)
                     {
                         trainer.position++
