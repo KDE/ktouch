@@ -9,6 +9,8 @@ Item {
     property KeyboardLayout keyboardLayout
     property Lesson lesson
 
+    property bool trainingStarted: false
+    property bool trainingFinished: true
     property KeyItem highlightedKey
     property bool isActive
 
@@ -33,10 +35,20 @@ Item {
         }
     }
 
+    function startTraining() {
+        console.log("starting training")
+        screen.trainingFinished = false
+        screen.trainingStarted = true
+    }
+
     onLessonChanged: setLessonKeys()
 
     TrainingStats {
         id: stats
+        onTimeIsRunningChanged: {
+            if (timeIsRunning)
+                screen.trainingStarted = false
+        }
     }
 
     PlasmaCore.Svg {
@@ -47,6 +59,7 @@ Item {
 
     Column {
         anchors.fill: parent
+
         PlasmaCore.SvgItem {
             id: header
             svg: screenSvg
@@ -68,10 +81,18 @@ Item {
             }
         }
 
+        TrainingScreenToolbar {
+            id: toolbar
+            height: 29
+            width: parent.width
+            trainingStarted: screen.trainingStarted
+            trainingFinished: screen.trainingFinished
+        }
+
         PlasmaCore.SvgItem {
             id: body
             width: parent.width
-            height: parent.height - header.height - footer.height
+            height: parent.height - toolbar.height - header.height - footer.height
             svg: screenSvg
             elementId: "content"
 
@@ -105,6 +126,7 @@ Item {
                         }
                     }
                 }
+                onFinished: screen.trainingFinished = true
             }
 
             PlasmaCore.FrameSvgItem {
@@ -118,7 +140,7 @@ Item {
             id: footer
             width: parent.width
             visible: preferences.showKeyboard
-            height: visible? Math.round(Math.min((parent.height - header.height) / 2, parent.width / keyboard.aspectRatio)): 0
+            height: visible? Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)): 0
             svg: screenSvg
             elementId: "footer"
             Keyboard {

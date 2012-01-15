@@ -13,7 +13,7 @@ FocusScope {
     property int position: -1
     property int lineHeight: 2 * fontSize
     property int margin: 30
-    signal done
+    signal finished
     signal keyPressed(variant event)
     signal keyReleased(variant event)
 
@@ -128,8 +128,8 @@ FocusScope {
                     }
                     else
                     {
+                        trainer.finished();
                         stats.stopTraining();
-                        trainer.done();
                     }
                 }
                 onKeyPressed: trainer.keyPressed(event)

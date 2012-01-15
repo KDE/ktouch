@@ -101,5 +101,12 @@ Item {
             duration: 750
             easing.type: Easing.OutQuad
         }
+        ScriptAction {
+            script: {
+                if (switchScreenAnimation.to == trainingScreen) {
+                    trainingScreen.startTraining()
+                }
+            }
+        }
     }
 }

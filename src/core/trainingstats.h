@@ -18,6 +18,7 @@ class TrainingStats : public QObject
     Q_PROPERTY(unsigned int errorCount READ errorCount NOTIFY statsChanged)
     Q_PROPERTY(float accuracy READ accuracy NOTIFY statsChanged)
     Q_PROPERTY(int charactersPerMinute READ charactersPerMinute NOTIFY statsChanged)
+    Q_PROPERTY(bool timeIsRunning READ timeIsRunning NOTIFY statsChanged)
 
 public:
     enum EventType {
@@ -59,6 +60,11 @@ public:
     unsigned int errorCount() const
     {
         return m_errorCount;
+    }
+
+    bool timeIsRunning() const
+    {
+        return m_timeIsRunning;
     }
 
     Q_INVOKABLE void startTraining();
