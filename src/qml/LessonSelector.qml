@@ -60,7 +60,7 @@ Item {
                     }
                     text: i18n("Start training")
                     enabled: list.currentItem !== null
-                    iconSource: "arrow-right"
+                    iconSource: "go-next-view"
                     onClicked: lessonSelected(list.currentItem.lesson)
                 }
             }
