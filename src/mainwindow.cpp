@@ -29,6 +29,7 @@
 #include "core/trainingstats.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
+#include "core/profiledataaccess.h"
 #include "viewcontext.h"
 #include "preferences.h"
 #include "preferencesproxy.h"
@@ -118,6 +119,7 @@ void MainWindow::init()
     qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
     qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
     qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
+    qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());

@@ -47,6 +47,10 @@ Item {
         id: dataAccess
     }
 
+    ProfileDataAccess {
+        id: profileDataAccess
+    }
+
     Preferences {
         id: preferences
     }

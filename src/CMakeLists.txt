@@ -37,6 +37,7 @@ set(ktouch_SRCS
     core/profile.cpp
     core/dataindex.cpp
     core/dataaccess.cpp
+    core/profiledataaccess.cpp
     viewcontext.cpp
     x11_helper.cpp
     preferencesproxy.cpp
