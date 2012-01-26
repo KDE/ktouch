@@ -5,12 +5,26 @@ Profile::Profile(QObject* parent) :
 {
 }
 
+int Profile::id() const
+{
+    return m_id;
+}
+
+void Profile::setId(int id)
+{
+    if (id != m_id)
+    {
+        m_id = id;
+        emit idChanged(id);
+    }
+}
+
 QString Profile::name() const
 {
     return m_name;
 }
 
-void Profile::setName(QString &name)
+void Profile::setName(const QString &name)
 {
     if (name != m_name)
     {
