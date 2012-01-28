@@ -10,7 +10,9 @@ Item {
     signal lessonSelected(variant lesson)
 
     function start() {}
-    function reset() {}
+    function reset() {
+        profileDataAccess.loadProfiles();
+    }
 
     Column {
         anchors.fill: parent
@@ -38,10 +40,25 @@ Item {
             height: parent.height - header.height
 
             HomeScreenAccordion {
+                opacity: 1 - initialProfileForm.opacity
                 courses: screen.courses
                 anchors.fill: parent
                 anchors.margins: 5
                 onLessonSelected: screen.lessonSelected(lesson)
+            }
+
+            InitialProfileForm {
+                id: initialProfileForm
+                opacity: profileDataAccess.profileCount == 0? 1: 0
+                anchors.fill: parent
+                anchors.margins: 5
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: screen.visible? 500: 0
+                        easing.type: Easing.InOutCubic
+                    }
+                }
             }
         }
     }

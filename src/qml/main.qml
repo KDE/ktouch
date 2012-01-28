@@ -59,10 +59,15 @@ Item {
         id: homeScreen
         anchors.fill: parent
         courses: main.courses
+        visible: false
         onLessonSelected: {
             trainingScreen.reset()
             trainingScreen.lesson = lesson
             main.switchScreen(homeScreen, trainingScreen)
+        }
+        Component.onCompleted: {
+            homeScreen.reset()
+            homeScreen.visible = true
         }
     }
 
