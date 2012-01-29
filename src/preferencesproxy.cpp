@@ -39,6 +39,16 @@ void PreferencesProxy::setRequiredAccuracy(int accuracy)
     Preferences::setRequiredStrokesPerMinute(accuracy);
 }
 
+int PreferencesProxy::lastUsedProfileId() const
+{
+    return Preferences::lastUsedProfileId();
+}
+
+void PreferencesProxy::setLastUsedProfileId(int profileId)
+{
+    Preferences::setLastUsedProfileId(profileId);
+}
+
 QColor PreferencesProxy::fingerColor(int index)
 {
     return Preferences::fingerColor(index);

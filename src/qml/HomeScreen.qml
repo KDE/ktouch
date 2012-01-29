@@ -9,21 +9,55 @@ Item {
     property variant courses;
     signal lessonSelected(variant lesson)
 
+    QtObject {
+        id: d
+
+        property Profile profile
+        property int profileCount: profileDataAccess.profileCount
+
+        onProfileCountChanged: findCurrentProfile()
+    }
+
     function start() {}
     function reset() {
         profileDataAccess.loadProfiles();
     }
 
+    function findCurrentProfile() {
+        d.profile = null
+
+        var lastProfileId = preferences.lastUsedProfileId
+
+        for (var i = 0; i < profileDataAccess.profileCount; i++) {
+            var profile = profileDataAccess.profile(i)
+            if (profile.id === lastProfileId) {
+                d.profile = profile
+                return;
+            }
+        }
+
+        if (profileDataAccess.profileCount > 0) {
+            d.profile = profileDataAccess.profile(0)
+            preferences.lastUsedProfileId = d.profile.id
+            preferences.writeConfig()
+        }
+    }
+
     Column {
         anchors.fill: parent
         PlasmaComponents.ToolBar {
+            visible: d.profile !== null
             id: header
             width: parent.width
             tools: PlasmaComponents.ToolBarLayout {
+
                 spacing: 5
+
                 PlasmaComponents.ToolButton {
-                    text: "Your Name"
+                    iconSource: "user-identity"
+                    text: visible? d.profile.name: ""
                 }
+
                 PlasmaComponents.ToolButton {
                     iconSource: "configure"
                     onClicked: {
