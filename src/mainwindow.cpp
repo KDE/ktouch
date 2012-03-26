@@ -17,7 +17,6 @@
 #include <ktogglefullscreenaction.h>
 #include <kshortcutsdialog.h>
 #include <kconfigdialog.h>
-#include <plasma/theme.h>
 
 #include "core/keyboardlayout.h"
 #include "core/key.h"
@@ -98,10 +97,6 @@ void MainWindow::init()
     m_menu->addSeparator();
     KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
     m_menu->addMenu(helpMenu->menu());
-
-    Plasma::Theme* theme = Plasma::Theme::defaultTheme();
-    theme->setUseGlobalSettings(false);
-    theme->setThemeName("ktouch");
 
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
     qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
