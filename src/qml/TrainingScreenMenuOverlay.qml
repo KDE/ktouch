@@ -35,7 +35,18 @@ Item {
         id: focusScope
         anchors.centerIn: parent
 
+        PlasmaCore.FrameSvgItem  {
+            id: frame
+            anchors.centerIn: parent
+            imagePath: "widgets/frame"
+            prefix: "raised"
+            width: column.width + frame.margins.left + frame.margins.right + 30
+            height: column.height + frame.margins.top + frame.margins.bottom + 30
+
+        }
+
         Column {
+            id: column
             anchors.centerIn: parent
             spacing: 15
             width: Math.max(resumeButton.implicitWidth, restartButton.implicitWidth, returnButton.implicitWidth)
