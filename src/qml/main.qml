@@ -58,6 +58,8 @@ Item {
         onLessonSelected: {
             trainingScreen.reset()
             trainingScreen.lesson = lesson
+            scoreScreen.lesson = lesson
+            scoreScreen.course = course
             main.switchScreen(homeScreen, trainingScreen)
         }
     }
@@ -69,6 +71,20 @@ Item {
         keyboardLayout: main.keyboardLayout
         onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
+        onFinished: main.switchScreen(trainingScreen, scoreScreen)
+    }
+
+    ScoreScreen {
+        id: scoreScreen
+        anchors.fill: parent
+        visible: false
+        onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
+        onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
+        onNextLessonRequested: {
+            trainingScreen.lesson = lesson
+            scoreScreen.lesson = lesson
+            main.switchScreen(scoreScreen, trainingScreen)
+        }
     }
 
     Rectangle {

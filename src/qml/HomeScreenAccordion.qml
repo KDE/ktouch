@@ -7,7 +7,7 @@ Column {
     id: item
 
     property variant courses;
-    signal lessonSelected(variant lesson)
+    signal lessonSelected(variant course, variant lesson)
 
     property variant boxes: [];
     property int lastActiveIndex: -1
@@ -66,7 +66,7 @@ Column {
             onActivated: activateBox(index)
             content: LessonSelector {
                 course: courses[index]
-                onLessonSelected: item.lessonSelected(lesson)
+                onLessonSelected: item.lessonSelected(course, lesson)
             }
         }
     }

@@ -11,6 +11,7 @@ Item {
 
     signal restartRequested()
     signal abortRequested()
+    signal finished()
 
     property bool trainingStarted: false
     property bool trainingFinished: true
@@ -155,7 +156,10 @@ Item {
                         }
                     }
                 }
-                onFinished: screen.trainingFinished = true
+                onFinished: {
+                    screen.finished()
+                    screen.trainingFinished = true
+                }
             }
 
             PlasmaCore.FrameSvgItem {
