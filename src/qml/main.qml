@@ -100,9 +100,9 @@ Item {
         property Item from
         property Item to
         NumberAnimation {
-            target: curtain;
+            target: curtain
             property: "opacity"
-            to: 1;
+            to: 1
             duration: 750
             easing.type: Easing.OutQuad
         }
@@ -120,11 +120,11 @@ Item {
             value: true
         }
         NumberAnimation {
-            target: curtain;
+            target: curtain
             property: "opacity"
-            to: 0;
+            to: 0
             duration: 750
-            easing.type: Easing.OutQuad
+            easing.type: Easing.InQuad
         }
         ScriptAction {
             script: switchScreenAnimation.to.start()
