@@ -99,6 +99,18 @@ void ProfileDataAccess::addProfile(Profile *profile)
         return;
     }
 
+    QSqlQuery idQuery = db.exec("SELECT last_insert_rowid()");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+
+    idQuery.next();
+    profile->setId(idQuery.value(0).toInt());
+
     if (!db.commit())
     {
         kWarning() <<  db.lastError().text();
