@@ -214,6 +214,7 @@ void ProfileDataAccess::removeProfile(unsigned int index)
 
     delete profile;
     m_profiles.removeAt(index);
+    emit profileCountChanged();
 }
 
 int ProfileDataAccess::indexOfProfile(Profile *profile)
