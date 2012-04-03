@@ -1,7 +1,9 @@
 #include "profile.h"
 
 Profile::Profile(QObject* parent) :
-    QObject(parent)
+    QObject(parent),
+    m_id(-1),
+    m_skillLevel(Profile::Beginner)
 {
 }
 
