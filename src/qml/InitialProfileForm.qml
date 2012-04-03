@@ -10,8 +10,8 @@ FocusScope {
 
     function save() {
         var profile = profileDataAccess.createProfile()
-        profile.name = nameTextField.text
-        profile.skillLevel = beginnerRadioBox.checked? Profile.Beginner: Profile.Advanced
+        profile.name = form.name
+        profile.skillLevel = form.skillLevel
         profileDataAccess.addProfile(profile)
     }
 
@@ -75,90 +75,13 @@ FocusScope {
                 width: parent.width
                 height: parent.height - header.height - line.height
 
-                Column {
+                ProfileForm {
                     id: form
                     width: 400
-                    spacing: 15
                     anchors.centerIn: parent
-
-                    PlasmaComponents.Label {
-                        width: parent.width
-                        text: i18n("Before you start training, please introduce yourself:")
-                    }
-
-                    PlasmaComponents.TextField {
-                        id: nameTextField
-                        width: parent.width
-                        placeholderText: i18n("Name")
-                    }
-
-                    PlasmaComponents.RadioButton {
-                        id: beginnerRadioBox
-                        onClicked: {
-                            if (checked) {
-                                advancedRadioBox.checked = false;
-                            }
-                            else {
-                                checked = true
-                            }
-                        }
-                        width: parent.width
-                        text: i18n("I have no or only very little experience in machine typing")
-                    }
-
-                    Row {
-                        width: parent.width
-
-                        Item {
-                            width: 30
-                            height: parent.height
-                        }
-
-                        PlasmaComponents.Label {
-                            font.pointSize: theme.smallestFont.pointSize
-                            height: paintedHeight
-                            font.italic: true
-                            text: i18n("Lessons are unlocked as your typing skills improve over time.")
-                        }
-                    }
-
-                    PlasmaComponents.RadioButton {
-                        id: advancedRadioBox
-                        onClicked: {
-                            if (checked) {
-                                beginnerRadioBox.checked = false;
-                            }
-                            else {
-                                checked = true
-                            }
-                        }
-                        width: parent.width
-                        text: i18n("I'm a expierenced machine typist and want to improve my skills")
-                    }
-
-                    Row {
-                        width: parent.width
-
-                        Item {
-                            width: 30
-                            height: parent.height
-                        }
-
-                        PlasmaComponents.Label {
-                            font.pointSize: theme.smallestFont.pointSize
-                            height: paintedHeight
-                            font.italic: true
-                            text: i18n("All lessons are unlocked immediately.")
-                        }
-
-                    }
-
-                    PlasmaComponents.Button {
-                        text: i18n("Start training")
-                        enabled: nameTextField.text !== ""  && (beginnerRadioBox.checked || advancedRadioBox.checked)
-                        iconSource: "go-next-view"
-                        onClicked: save();
-                    }
+                    saveButtonIconSource: "go-next-view"
+                    saveButtonText: i18n("Start training")
+                    onSaved: save()
                 }
             }
         }
