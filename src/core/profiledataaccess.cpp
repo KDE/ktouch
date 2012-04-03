@@ -24,7 +24,9 @@ void ProfileDataAccess::loadProfiles()
     if (!db.isOpen())
         return;
 
-    qDeleteAll(m_profiles);
+    foreach(Profile* profile, m_profiles)
+        profile->deleteLater();
+
     m_profiles.clear();
     emit profileCountChanged();
 
@@ -212,9 +214,9 @@ void ProfileDataAccess::removeProfile(unsigned int index)
         return;
     }
 
-    delete profile;
     m_profiles.removeAt(index);
     emit profileCountChanged();
+    profile->deleteLater();
 }
 
 int ProfileDataAccess::indexOfProfile(Profile *profile)
