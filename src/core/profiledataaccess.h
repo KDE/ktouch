@@ -22,6 +22,7 @@ public:
     Q_INVOKABLE void addProfile(Profile* profile);
     Q_INVOKABLE void updateProfile(unsigned int index);
     Q_INVOKABLE void removeProfile(unsigned int index);
+    Q_INVOKABLE int indexOfProfile(Profile* profile);
     QString errorMessage() const;
 signals:
     void profileCountChanged();

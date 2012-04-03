@@ -216,6 +216,16 @@ void ProfileDataAccess::removeProfile(unsigned int index)
     m_profiles.removeAt(index);
 }
 
+int ProfileDataAccess::indexOfProfile(Profile *profile)
+{
+    for (int i = 0; i < m_profiles.length(); i++) {
+        if (profile == m_profiles.at(i)) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 QString ProfileDataAccess::errorMessage() const
 {
     return m_errorMessage;
