@@ -43,10 +43,17 @@ Item {
         }
     }
 
+    function switchToProfile(profile) {
+        d.profile = profile
+        preferences.lastUsedProfileId = profile.id
+        preferences.writeConfig()
+    }
+
     Column {
         anchors.fill: parent
+
         PlasmaComponents.ToolBar {
-            visible: d.profile !== null
+            visible: homeScreenAccordion.opacity > 0
             id: header
             width: parent.width
             tools: PlasmaComponents.ToolBarLayout {
@@ -55,7 +62,16 @@ Item {
 
                 PlasmaComponents.ToolButton {
                     iconSource: "user-identity"
-                    text: visible? d.profile.name: ""
+                    text: d.profile !== null? d.profile.name: ""
+                    onClicked: {
+                        if (profileSelectorSheet.isOpen()) {
+                            profileSelectorSheet.close()
+                        }
+                        else {
+                            profileSelectorSheet.open()
+                        }
+                    }
+                    checked: profileSelectorSheet.isOpen()
                 }
 
                 PlasmaComponents.ToolButton {
@@ -74,6 +90,7 @@ Item {
             height: parent.height - header.height
 
             HomeScreenAccordion {
+                id: homeScreenAccordion
                 opacity: 1 - initialProfileForm.opacity
                 courses: screen.courses
                 anchors.fill: parent
@@ -91,6 +108,25 @@ Item {
                     NumberAnimation {
                         duration: screen.visible? 500: 0
                         easing.type: Easing.InOutCubic
+                    }
+                }
+            }
+
+            SheetDialog {
+                id: profileSelectorSheet
+                anchors.fill: parent
+                onOpended: {
+                    if (d.profile) {
+                        var index = profileDataAccess.indexOfProfile(d.profile)
+                        profileSelector.selectProfile(index)
+                    }
+                }
+                content: ProfileSelector {
+                    id: profileSelector
+                    anchors.fill: parent
+                    onProfileChosen: {
+                        screen.switchToProfile(profile)
+                        profileSelectorSheet.close()
                     }
                 }
             }
