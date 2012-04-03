@@ -1,20 +1,15 @@
 import QtQuick 1.1
+import org.kde.qtextracomponents 0.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
-import ktouch 1.0
 
 Item {
-    id: item
-
-    property Course course
-    property int lessonIndex
+    id: root
+    property alias title: label.text
+    property string iconSource
+    property alias label: label
     signal selected
-
-    property Lesson lesson: item.course.lesson(item.lessonIndex)
-
-    height: padding.height
-
-
+    height: padding.height + bg.margins.top + bg.margins.bottom
     state: ListView.isCurrentItem? "selected": mouseArea.containsMouse? "hover": "normal"
 
     PlasmaCore.FrameSvgItem {
@@ -29,8 +24,7 @@ Item {
         id: padding
 
         anchors {
-            top: parent.top
-            left: parent.left
+            fill: parent
             topMargin: bg.margins.top
             rightMargin: bg.margins.right
             bottomMargin: bg.margins.bottom
@@ -38,10 +32,29 @@ Item {
         }
 
         width: parent.width
-        height: childrenRect.height + anchors.topMargin + anchors.leftMargin
+        height: Math.max(label.height, label.height)
+
+        QIconItem {
+            id: iconItem
+            visible: !!root.iconSource
+            anchors {
+                left: parent.left
+                verticalCenter: parent.verticalCenter
+            }
+            icon: QIcon(root.iconSource)
+            width: theme.smallIconSize
+            height: theme.smallIconSize
+        }
 
         PlasmaComponents.Label {
-            text: lesson.title
+            id: label
+            elide: Text.ElideRight
+            anchors {
+                left: iconItem.visible? iconItem.right: parent.left
+                right: parent.right
+                verticalCenter: parent.verticalCenter
+            }
+            height: paintedHeight
         }
     }
 
@@ -49,7 +62,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: item.selected()
+        onClicked: root.selected()
     }
 
     states: [

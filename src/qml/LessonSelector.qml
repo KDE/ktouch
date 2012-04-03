@@ -23,11 +23,10 @@ Item {
                 anchors .fill: parent
                 model: course.lessonCount
                 clip: true
-                delegate: LessonItem {
-                    course: item.course
-                    lessonIndex: index
+                delegate: ListItem {
                     width: list.width - scrollBar.width
                     onSelected: list.currentIndex = index
+                    title: item.course.lesson(index).title
                 }
             }
 
@@ -44,7 +43,7 @@ Item {
             LessonPreview {
                 width: parent.width
                 height: parent.height - startButtonContainer.height
-                lesson: list.currentItem.lesson
+                lesson: list.currentIndex !== -1? item.course.lesson(list.currentIndex): null
             }
 
             Item {
@@ -61,7 +60,7 @@ Item {
                     text: i18n("Start training")
                     enabled: list.currentItem !== null
                     iconSource: "go-next-view"
-                    onClicked: lessonSelected(list.currentItem.lesson)
+                    onClicked: lessonSelected(item.course.lesson(list.currentIndex))
                 }
             }
         }

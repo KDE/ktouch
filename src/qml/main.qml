@@ -47,6 +47,10 @@ Item {
         id: dataAccess
     }
 
+    ProfileDataAccess {
+        id: profileDataAccess
+    }
+
     Preferences {
         id: preferences
     }
@@ -55,12 +59,17 @@ Item {
         id: homeScreen
         anchors.fill: parent
         courses: main.courses
+        visible: false
         onLessonSelected: {
             trainingScreen.reset()
             trainingScreen.lesson = lesson
             scoreScreen.lesson = lesson
             scoreScreen.course = course
             main.switchScreen(homeScreen, trainingScreen)
+        }
+        Component.onCompleted: {
+            homeScreen.reset()
+            homeScreen.visible = true
         }
     }
 

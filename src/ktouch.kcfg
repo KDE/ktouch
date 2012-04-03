@@ -22,7 +22,7 @@
       <max>100</max>
     </entry>
   </group>
-  <group name="Colors" >
+  <group name="Colors">
     <entry name="FingerColor$(Index)" type="Color">
       <parameter name="Index" type="Int" max="7"/>
       <label >The keyboard tinting color to highlight keys for each finger.</label>
@@ -34,6 +34,12 @@
       <default param="5">#00ff00</default>
       <default param="6">#0000ff</default>
       <default param="7">#ff0000</default>
+    </entry>
+  </group>
+  <group name="Session">
+    <entry name="LastUsedProfileId" type="Int">
+      <label>The ID of the last used profile.</label>
+      <default>-1</default>
     </entry>
   </group>
 </kcfg>

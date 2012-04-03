@@ -25,9 +25,11 @@
 #include "core/course.h"
 #include "core/lesson.h"
 #include "core/lessonline.h"
+#include "core/profile.h"
 #include "core/trainingstats.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
+#include "core/profiledataaccess.h"
 #include "viewcontext.h"
 #include "preferences.h"
 #include "preferencesproxy.h"
@@ -108,11 +110,13 @@ void MainWindow::init()
     qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
     qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
     qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
+    qmlRegisterType<Profile>("ktouch", 1, 0, "Profile");
     qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");
     qmlRegisterType<DataIndexCourse>("ktouch", 1, 0, "DataIndexCourse");
     qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
     qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
     qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
+    qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());

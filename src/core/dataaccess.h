@@ -23,7 +23,6 @@ private:
     QXmlSchema loadXmlSchema(const QString& name);
     QDomDocument getDomDocument(QFile& file, QXmlSchema& schema);
     bool openResourceFile(const QString& relPath, QFile& file);
-
 };
 
 #endif // DATAACCESS_H
