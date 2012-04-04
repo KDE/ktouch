@@ -7,14 +7,14 @@ Item {
     property DataIndex dataIndex: dataAccess.loadDataIndex()
     property string name: keyboardLayoutName
     property KeyboardLayout keyboardLayout: lookupKeyboardLayout(keyboardLayoutName)
-    property variant courses: lookupCourses(keyboardLayoutName)
+    property variant courses: lookupCourses(keyboardLayout? keyboardLayout.name: "")
 
     function lookupKeyboardLayout(name)
     {
         for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
         {
             var dataIndexLayout = dataIndex.keyboardLayout(i)
-            if (name == dataIndexLayout.name)
+            if (name.search(dataIndexLayout.name) === 0)
                 return dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path)
 
         }
