@@ -22,7 +22,7 @@ Column {
             var height = item.height;
             for (var i = 0; i < item.boxes.length; i++)
                 if (i != index)
-                height -= item.boxes[i].collapsedHeight
+                    height -= item.boxes[i].collapsedHeight
             return height
         }
         else {
@@ -43,6 +43,9 @@ Column {
         }
         boxes.push(ownLessonsBox);
         item.boxes = boxes;
+        lastActiveIndex = -1
+        activeIndex = 0
+        setBoxHeights()
     }
 
     function setBoxHeights() {
@@ -52,15 +55,15 @@ Column {
     }
 
     onHeightChanged: setBoxHeights()
-    onCoursesChanged: updateBoxes()
 
     Repeater {
         id: repeater
         model: courses.length
+        onModelChanged: updateBoxes()
 
         HomeScreenBox {
             id: box
-            width: parent.width
+            width: item.width
             title: i18n(courses[index].title)
             active: activeIndex == index
             onActivated: activateBox(index)
