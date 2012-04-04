@@ -61,7 +61,6 @@ void TrainingStats::logCharacter(QString character, EventType type)
             m_errorMap[character] = 1;
         }
     }
-    update();
 }
 
 float TrainingStats::accuracy()
