@@ -31,10 +31,25 @@ class Lesson;
 class Course : public CourseBase
 {
     Q_OBJECT
+    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(int lessonCount READ lessonCount NOTIFY lessonCountChanged)
 
 public:
     explicit Course(QObject *parent = 0);
+
+    QString id() const
+    {
+        return m_id;
+    }
+
+    void setId(const QString& id)
+    {
+        if (id != m_id)
+        {
+            m_id = id;
+            emit idChanged(id);
+        }
+    }
 
     int lessonCount() const
     {
@@ -47,10 +62,12 @@ public:
     Q_INVOKABLE void clearLessons();
 
 signals:
+    void idChanged(const QString& id);
     void lessonCountChanged(int newLessonCount);
 
 private:
     bool parseXML(QDomDocument* doc);
+    QString m_id;
     QList<Lesson*> m_lessons;
 };
 

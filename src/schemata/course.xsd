@@ -3,6 +3,7 @@
   <xs:element name="course">
     <xs:complexType>
       <xs:sequence>
+        <xs:element name="id" type="xs:string" />
         <xs:element name="title" type="xs:string" />
         <xs:element name="description" type="xs:string" />
         <xs:element name="keyboardLayout" type="xs:string" />
@@ -19,6 +20,7 @@
   
   <xs:complexType name="lesson">
     <xs:sequence>
+        <xs:element name="id" type="xs:string" />
         <xs:element name="title" type="xs:string" />
         <xs:element name="newCharacters" type="xs:string" />
         <xs:element name="text" type="xs:string" />

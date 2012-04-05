@@ -168,6 +168,7 @@ Course* DataAccess::loadResourceCourse(const QString &relPath)
     QDomElement root(doc.documentElement());
 
     Course* course = new Course(this);
+    course->setId(root.firstChildElement("id").text());
     course->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
     course->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
     course->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
@@ -177,6 +178,7 @@ Course* DataAccess::loadResourceCourse(const QString &relPath)
          lessonNode = lessonNode.nextSiblingElement())
     {
         Lesson* lesson = new Lesson(this);
+        lesson->setId(lessonNode.firstChildElement("id").text());
         lesson->setTitle(i18nc("lesson title", lessonNode.firstChildElement("title").text().toUtf8()));
         QString newChars = lessonNode.firstChildElement("newCharacters").text();
         for (int i = 0; i < newChars.length(); i++)

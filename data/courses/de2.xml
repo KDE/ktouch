@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <course>
+  <id>de2</id>
   <title>German (from Tipptrainer)</title>
   <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
@@ -12,6 +13,7 @@ Version: 0.1 beta
   <keyboardLayout>de</keyboardLayout>
   <lessons>
     <lesson>
+      <id>basics1</id>
       <title>Grundhaltung</title>
       <newCharacters>asdfjkl&#xF6;</newCharacters>
       <text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
@@ -60,6 +62,7 @@ ffkd kdkk dkks saak sask ssas dsas kl&#xF6;l dsas lkkl lkjk lkjl
 a&#xF6;sl ssas llk&#xF6; kk&#xF6;k &#xF6;lkj lkjl &#xF6;lk&#xF6; &#xF6;l&#xF6;a &#xF6;lks &#xF6;klj jlkk lkds</text>
     </lesson>
     <lesson>
+      <id>basics_recap1</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>sla las laa aal sla lsa las sas lsa laa las all als ass als
@@ -91,6 +94,7 @@ das &#xF6;l lass das all kafka las all falls all das &#xF6;l as ja da
 da das alls kafka las kalk fall saal falls all das &#xF6;l ja ja</text>
     </lesson>
     <lesson>
+      <id>ie1</id>
       <title>i und e</title>
       <newCharacters>ei</newCharacters>
       <text>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke
@@ -121,6 +125,7 @@ das da die sei jede jedes diese sei seife eides filiale eis
 dies des seide dieses fidel lief des alles lies das kleides</text>
     </lesson>
     <lesson>
+      <id>gh1</id>
       <title>g und h</title>
       <newCharacters>gh</newCharacters>
       <text>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj
@@ -149,6 +154,7 @@ hadi sage lass das fass dies seidige kleid gehe hege gelege
 geklage gelage sage die sage gejage klage felge helge leide</text>
     </lesson>
     <lesson>
+      <id>wo1</id>
       <title>w und o</title>
       <newCharacters>wo</newCharacters>
       <text>sws lol sws lol sws lol sws lol was los was los was los was
@@ -176,6 +182,7 @@ die wiege die waage das segel flog die woge die jagd so wie
 das wild floh es goss waldig eisig als die wiese wie willig</text>
     </lesson>
     <lesson>
+      <id>ru1</id>
       <title>r und u</title>
       <newCharacters>ru</newCharacters>
       <text>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr
@@ -205,6 +212,7 @@ das regal das fiel der saal war leer wars fred wars ole was
 war luise wer ulli wer dario alles lief  als das regal fiel</text>
     </lesson>
     <lesson>
+      <id>ru_recap1</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>aufs dies jura soda hier ufer haus erde frau juda judo joda
@@ -230,6 +238,7 @@ wage sage frage frau herr hausfrau hausherr heraus goldig
 falke eule uhu juhu also falls das so war  war es so klar</text>
     </lesson>
     <lesson>
+      <id>tz</id>
       <title>t und z</title>
       <newCharacters>tz</newCharacters>
       <text>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz
@@ -262,6 +271,7 @@ fiel der saft lief der autor rief alles eilte dazu jetzt
 war ruh</text>
     </lesson>
     <lesson>
+      <id>tz_recap1</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>der die das wer wie was wo der die das wer wie was wo da so
@@ -290,6 +300,7 @@ l&#xF6;se das seil jetzt ist es so weit auf dieser welt sagt sie
 alles was sie weiss was weiss sie alles wer wusste das</text>
     </lesson>
     <lesson>
+      <id>qp</id>
       <title>q und p</title>
       <newCharacters>qp</newCharacters>
       <text>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq
@@ -323,6 +334,7 @@ porto partie partei plato padua parkplatz professor pariser
 reprise die quelle des flusses die weserquelle europapokale</text>
     </lesson>
     <lesson>
+      <id>vm</id>
       <title>v und m</title>
       <newCharacters>vm</newCharacters>
       <text>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh
@@ -352,6 +364,7 @@ quasselstrippe warum streift der kater herum es ist so kalt
 die katze sitzt im haus herum sie miaut zu laut verwahre es</text>
     </lesson>
     <lesson>
+      <id>nb</id>
       <title>n und b</title>
       <newCharacters>nb</newCharacters>
       <text>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf
@@ -382,6 +395,7 @@ erbe ihres mannes aber die eigenen verse sind ebenso gut zu
 lesen  ist heine vergessen  keine ahnung  ist heine bekannt</text>
     </lesson>
     <lesson>
+      <id>c,</id>
       <title>c und ,</title>
       <newCharacters>c,</newCharacters>
       <text>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,
@@ -414,6 +428,7 @@ hilfreich ist, wenn man die regeln zur kommasetzung kennt
 auch wenn der rechner streikt, musst du die ruhe bewahren</text>
     </lesson>
     <lesson>
+      <id>x.</id>
       <title>x und .</title>
       <newCharacters>x.</newCharacters>
       <text>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.
@@ -442,6 +457,7 @@ der text aus dem lexikon ist nicht ausreichend. deshalb las
 sie auch noch die entschrechenden seiten im internet. ende.</text>
     </lesson>
     <lesson>
+      <id>y-</id>
       <title>y und -</title>
       <newCharacters>y-</newCharacters>
       <text>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-
@@ -474,6 +490,7 @@ verwendet. als gedankestrich taucht er auf, wenn man ein
 paar stichworte logisch voneinander absetzen m&#xF6;chte.</text>
     </lesson>
     <lesson>
+      <id>umlauts1</id>
       <title>&#xFC; und &#xE4;</title>
       <newCharacters>&#xFC;&#xE4;</newCharacters>
       <text>&#xF6;&#xFC;&#xE4; &#xF6;&#xFC;&#xE4; &#xF6;&#xFC;&#xE4; &#xF6;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xFC;&#xE4;&#xF6; &#xE4;&#xFC;&#xF6; &#xF6;&#xE4;&#xFC; &#xF6;&#xFC;&#xE4; &#xE4;&#xF6;&#xFC; &#xFC;&#xF6;&#xE4; &#xE4;&#xFC;&#xF6; &#xF6;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xFC;&#xF6;&#xE4;
@@ -510,6 +527,7 @@ tion keinen sinn.
 ...ach so, v&#xF6;gel &#xE4;rgern keine b&#xE4;ren.</text>
     </lesson>
     <lesson>
+      <id>szlig1</id>
       <title>&#xDF;</title>
       <newCharacters>&#xDF;</newCharacters>
       <text>&#xE4;&#xDF; &#xE4;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF;
@@ -534,9 +552,10 @@ viel spa&#xDF; und weiterhin gen&#xFC;ssliches &#xFC;ben.
 er ma&#xDF; ab, das ma&#xDF; aller dinge,
 hass, muss, misslingen, essbar, gr&#xF6;&#xDF;er, sch&#xF6;&#xDF;linge, m&#xE4;&#xDF;ig,
 gleichm&#xE4;&#xDF;ig, das postschlie&#xDF;fach, expressg&#xFC;ter, man st&#xF6;&#xDF;t,
-    planm&#xE4;&#xDF;ig, regelm&#xE4;&#xDF;ig, gem&#xE4;&#xDF;, das gef&#xE4;&#xDF;, st&#xF6;&#xDF;e, die gr&#xF6;&#xDF;te</text>
+planm&#xE4;&#xDF;ig, regelm&#xE4;&#xDF;ig, gem&#xE4;&#xDF;, das gef&#xE4;&#xDF;, st&#xF6;&#xDF;e, die gr&#xF6;&#xDF;te</text>
     </lesson>
     <lesson>
+      <id>capslock1</id>
       <title>Capslock</title>
       <newCharacters>ASDFJKL&#xD6;EIGHWORUTZQPVMNBC;X:Y_&#xC4;&#xDC;</newCharacters>
       <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
@@ -555,18 +574,21 @@ ACHTUNG, DIE FESTSTELLTASTE MUSS NUN NOCH EINMAL BET&#xC4;TIGT
 WERDEN. jetzt sollte das capslock-l&#xE4;mpchen aus sein.</text>
     </lesson>
     <lesson>
+      <id>caps_left1</id>
       <title>Gro&#xDF;buchstaben (links)</title>
       <newCharacters/>
       <text>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La
 Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</text>
     </lesson>
     <lesson>
+      <id>caps_right1</id>
       <title>Gro&#xDF;buchstaben (rechts)</title>
       <newCharacters/>
       <text>F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; G&#xF6; G&#xF6; G&#xF6; G&#xF6; G&#xF6; B&#xF6; B&#xF6; B&#xF6; B&#xF6; B&#xF6;
 W&#xF6; W&#xF6; W&#xF6; W&#xF6; R&#xE4; R&#xE4; R&#xE4; R&#xF6; R&#xF6; G&#xE4; G&#xE4; F&#xE4; D&#xE4; S&#xE4; V&#xE4; V&#xE4; V&#xF6; S&#xF6; D&#xE4; D&#xE4;</text>
     </lesson>
     <lesson>
+      <id>caps1</id>
       <title>Gro&#xDF;buchstaben</title>
       <newCharacters/>
       <text>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank
@@ -579,6 +601,7 @@ Die folgenden vier Lektionen werden aus ganz normalen Text-
 zeichen weiter.</text>
     </lesson>
     <lesson>
+      <id>caps_recap1</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>Linux - meine Freude
@@ -612,6 +635,7 @@ irgendwie auch besser geworden. Dennoch gibt es noch sehr
 viel zu lernen.</text>
     </lesson>
     <lesson>
+      <id>caps_recap2</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>Das Internet
@@ -646,6 +670,7 @@ so wurde es schnell ein Netz von Zehntausenden von Hosts.
 Das urspr&#xFC;ngliche ARPAnet wurde zum Backbone des Internet.</text>
     </lesson>
     <lesson>
+      <id>caps_recap3</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>Lesung                                          A. Kalbitz
@@ -681,6 +706,7 @@ auch nicht zusammengebrochen sein. Daf&#xFC;r war das Ger&#xE4;usch
 zu laut...</text>
     </lesson>
     <lesson>
+      <id>caps_recap4</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>Was hat...                            A. Kalbitz
@@ -707,6 +733,7 @@ mit dummen Texten, Meinungen und ungeschickt
 gebastelten Gedichten, wie diesem.</text>
     </lesson>
     <lesson>
+      <id>&lt;&gt;1</id>
       <title>&lt; und &gt;</title>
       <newCharacters>&lt;&gt;</newCharacters>
       <text>&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;
@@ -735,6 +762,7 @@ lektionen geben.
 &lt;-&gt;&lt;-&lt;&gt;-&gt;&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;---&gt;&gt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;&gt;&gt;</text>
     </lesson>
     <lesson>
+      <id>numbers1</id>
       <title>1,!, ; und ?</title>
       <newCharacters>1!;?</newCharacters>
       <text>1! &#xDF;? 1! &#xDF;? 1! &#xDF;? 1&#xDF;!? ?1?&#xDF; !1?! 1&#xDF;!? ??!!1&#xDF;&#xDF;1 !&#xDF;!&#xDF;1??!&#xDF;!1
@@ -769,6 +797,7 @@ der Internetseite nicht zu sehen sind.
 Willst Du noch mehr &#xFC;ber die Bedeutung von ! und ? wissen?</text>
     </lesson>
     <lesson>
+      <id>numbers2</id>
       <title>5, %, 8 und (</title>
       <newCharacters>5%8(</newCharacters>
       <text>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
@@ -788,6 +817,7 @@ Das entspricht dem Rest bei einer ganzzahligen Division.
 ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</text>
     </lesson>
     <lesson>
+      <id>numbers3</id>
       <title>2, 6, &amp;, 7 und /</title>
       <newCharacters>26 &amp; 7 /</newCharacters>
       <text>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58
@@ -818,6 +848,7 @@ Dies ist eine g&#xFC;ltige Grundstruktur einer HTML-Seite mit
 sehr wenig Inhalt.</text>
     </lesson>
     <lesson>
+      <id>numbers5</id>
       <title>4, $, 9 und )</title>
       <newCharacters>4$9)</newCharacters>
       <text>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
@@ -845,6 +876,7 @@ Dabei wird der Inhalt der Variablen $eingabe bereits ausge-
 lesen und verarbeitet.</text>
     </lesson>
     <lesson>
+      <id>numbers6</id>
       <title>3, &#xA7;, 0 und =</title>
       <newCharacters>3&#xA7;0=</newCharacters>
       <text>&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30
@@ -874,6 +906,7 @@ chen f&#xFC;r Textabs&#xE4;tze verwenden.
 ===========================================================</text>
     </lesson>
     <lesson>
+      <id>quotes1</id>
       <title>"</title>
       <newCharacters>"</newCharacters>
       <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
@@ -901,6 +934,7 @@ F&#xFC;hrt das zu sinnvollen Ausgaben, die zur rechten Zeit
 das richtige sagen.</text>
     </lesson>
     <lesson>
+      <id>special_chars1</id>
       <title>_, ^, &#xB0;, ' und `</title>
       <newCharacters>_ ^ &#xB0; '  `</newCharacters>
       <text>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
@@ -920,6 +954,7 @@ $jetzt = "Die aktuelle Uhrzeit ist ".`date`
 foreach $_ (`who`) ...</text>
     </lesson>
     <lesson>
+      <id>special_chars2</id>
       <title>+, *, # und '</title>
       <newCharacters>+*#'</newCharacters>
       <text>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*
@@ -951,6 +986,7 @@ dacht wurde.
 'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</text>
     </lesson>
     <lesson>
+      <id>special_chars_recap1</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>Sitzung                  frei erschwindelt von: A. Kalbitz
@@ -984,6 +1020,7 @@ neue Festplatte, damit ich dann mitreden kann, wenn es
 losgeht." - "Siehste! Es wirkt schon!" ;-)</text>
     </lesson>
     <lesson>
+      <id>special_chars3</id>
       <title>&#xB2;, &#xB3;, {, [, ], }, \, @, ~ und |</title>
       <newCharacters>&#xB2;&#xB3;{[]}\@~|</newCharacters>
       <text>Drittbelegung: Das sind die Zeichen &#xB2; &#xB3; { [ ] } \ @ ~ |
@@ -1032,6 +1069,7 @@ Taste nicht existiert.
 {&#xB2;&#xB2;&#xB2;} || {&#xB3;&#xB3;&#xB3;} || [&#xB2;&#xB2;&#xB2;] || [&#xB3;&#xB3;&#xB3;] || \\\ || @@@ || ~~~ ||</text>
     </lesson>
     <lesson>
+      <id>final_lesson1</id>
       <title>Geschafft!</title>
       <newCharacters/>
       <text>/***************************************************************************

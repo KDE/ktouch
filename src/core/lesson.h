@@ -27,12 +27,27 @@ class LessonLine;
 class Lesson : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString characters READ characters WRITE setCharacters NOTIFY charactersChanged)
     Q_PROPERTY(int lineCount READ lineCount NOTIFY lineCountChanged)
 
 public:
     explicit Lesson(QObject *parent = 0);
+
+    QString id() const
+    {
+        return m_id;
+    }
+
+    void setId(const QString& id)
+    {
+        if (id != m_id)
+        {
+            m_id = id;
+            emit idChanged(id);
+        }
+    }
 
     QString title() const
     {
@@ -73,11 +88,13 @@ public:
     Q_INVOKABLE void clearLines();
 
 signals:
+    void idChanged(const QString& id);
     void titleChanged(const QString& newTitle);
     void charactersChanged(const QString& newCharacters);
     void lineCountChanged(int newLineCount);
 
 private:
+    QString m_id;
     QString m_title;
     QString m_characters;
     QList<LessonLine*> m_lines;

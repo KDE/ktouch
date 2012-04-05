@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <course>
+  <id>gm</id>
   <title>English (auto-generated)</title>
   <description>KTouch training file generated Sun Mar 11 09:59:58 2007
 Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
   <keyboardLayout>gb</keyboardLayout>
   <lessons>
     <lesson>
+      <id>jf1</id>
       <title>j and f</title>
       <newCharacters>jf</newCharacters>
       <text>fj j f j f f fj f fj fj ffj f fjf f f jj f fj jf jf fj jfj fjf
@@ -20,6 +22,7 @@ jf ff ff fjf fjf fjf jfj jjjf j f jf jfj f jjjf f ff ff jf f fj
 ffj fj fj jf f ff jf f j j jfj f jff fj j f fjf f jfj jf f jfj jjjf</text>
     </lesson>
     <lesson>
+      <id>kd1</id>
       <title>k and d</title>
       <newCharacters>kd</newCharacters>
       <text>djd k djd k fdj k fdj k k jdd dd k kf dd k k dd k d fdfk k k kf
@@ -34,6 +37,7 @@ k kfd df k k k d k dd kfd df d kfd k k k kfd djd k k jk dd dd
 df d d jk k kf jjd kf kf k df d k jkjd kf k jjd fdfk k k kfd d</text>
     </lesson>
     <lesson>
+      <id>ls1</id>
       <title>l and s</title>
       <newCharacters>ls</newCharacters>
       <text>s sl s fl skl s sl fl skl sfj l sk s sk ss s sfj jss l fs ss fs
@@ -48,6 +52,7 @@ sl fl skl l l sl s fl fjjs fjjs l fjjs l fl ss fl l sk s l l l
 s s fjjs lll sk ss skl jssj skl fl l l skl fl l s dsk s s sl fl</text>
     </lesson>
     <lesson>
+      <id>ca1</id>
       <title>c and a</title>
       <newCharacters>ca</newCharacters>
       <text>sca clac asa cascad sa al sca ass clac slac cak da fla c la fa ja
@@ -62,6 +67,7 @@ cla sca cla ja c sak alack slak slas dadd slack alkal la la ak jc
 ass sa sas scal cas fa salaa las fad lack a dad c a sca ad la sla</text>
     </lesson>
     <lesson>
+      <id>nt1</id>
       <title>n and t</title>
       <newCharacters>nt</newCharacters>
       <text>snaffl dan attack fann na scant fast snack taff ank sna att snac candl
@@ -76,6 +82,7 @@ alt fan landlad tal ta stan lank flan tal tast sand sta landfall
 knac landfal cat ants landlad na sata salt caftan anall nat can lastl</text>
     </lesson>
     <lesson>
+      <id>iv1</id>
       <title>i and v</title>
       <newCharacters>iv</newCharacters>
       <text>cassi sic laddi affin canin flint inclinin vivain icil ni satinin
@@ -90,6 +97,7 @@ tacitl clannis jiltin failin ki stasi sanit fiddl savanna atil acclai
 fiv satanicall lackadaisicall fascia ti sandin valis ai dids didacticall</text>
     </lesson>
     <lesson>
+      <id>me1</id>
       <title>m and e</title>
       <newCharacters>me</newCharacters>
       <text>dividend lite salesladie vie decam dissect skie enema cancel feminist
@@ -104,6 +112,7 @@ finenes titte dismantle mentalis inadvisedl fannie installe disinfectan
 midden divisivenes acclaim mf settee svelt animatedl teatime devastate</text>
     </lesson>
     <lesson>
+      <id>hr1</id>
       <title>h and r</title>
       <newCharacters>hr</newCharacters>
       <text>dare testifier eradicate terminat trafficke hadin inferenc franti
@@ -118,6 +127,7 @@ ransack headline crest inerran teare cradle sincerit hater firt dinner
 rent snickerin recklessnes sharer thatche relinin refac heatin reinstatemen</text>
     </lesson>
     <lesson>
+      <id>go1</id>
       <title>g and o</title>
       <newCharacters>go</newCharacters>
       <text>overcook rotat comi reconfirmatio reregistratio nomad management forklift
@@ -132,6 +142,7 @@ theor ammoni microcos histologica notifier favor chromaticall chromosoma
 songste negotiator diagnostic nova glande hornie concavit interconnection</text>
     </lesson>
     <lesson>
+      <id>bp1</id>
       <title>b and p</title>
       <newCharacters>bp</newCharacters>
       <text>archbishop parliamentar calibe respel tiebac bon semipro retrospectiv transpir
@@ -146,6 +157,7 @@ trombonis ben bootblac resistibl rebor pikin barnacle pentacle trespasse
 sparre photocopie dolphin plantin pictographi brittl bipartit potat</text>
     </lesson>
     <lesson>
+      <id>qu1</id>
       <title>q and u</title>
       <newCharacters>qu</newCharacters>
       <text>thoroughnes recrudescin tunefulnes rigorousnes imprimatu rounde capsule
@@ -160,6 +172,7 @@ uncannil outcropping custodian rutties guardednes platitude grubb mus
 skunk impugn nonplussin nuptial untrouble flounc unchronicle bushe</text>
     </lesson>
     <lesson>
+      <id>wn1</id>
       <title>w and n</title>
       <newCharacters>wn</newCharacters>
       <text>weed rotundin kidnap compartment retakin enlighten adjurin sharin
@@ -174,6 +187,7 @@ eastboun downwar monste inkblot sarong nattere cinematographe punchbag
 retransmittin sawhorse engineer counterpoise wigwa wakefu genr brainstorm</text>
     </lesson>
     <lesson>
+      <id>cx1</id>
       <title>c and x</title>
       <newCharacters>cx</newCharacters>
       <text>cull continu spectroscopi captionin complete pronounce accumulatio
@@ -188,6 +202,7 @@ ethnicall obsolesce unpunctualit effulgenc lunchroo chaoticall sackful
 shucke microelectroni watchtowe occurrin processe electrocardiograph</text>
     </lesson>
     <lesson>
+      <id>yz1</id>
       <title>y and z</title>
       <newCharacters>yz</newCharacters>
       <text>skylight syllabicatin secularize pygm amazo fizze overemphasize summariz
@@ -202,6 +217,7 @@ humanizatio buckeye overspecialize graybeard magazine clearway yellow enjoyment
 layere flywa mizzen baptize capsiz styluse glaz synonymou bellyach</text>
     </lesson>
     <lesson>
+      <id>caps1</id>
       <title>Capitalisation</title>
       <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
       <text>I U Frann Iss V Sophe Ma Blanch Janissar Karl Equuleu Jech Dia
