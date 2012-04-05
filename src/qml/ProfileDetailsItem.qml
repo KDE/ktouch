@@ -111,7 +111,7 @@ Item {
             width: parent.width
             height: childrenRect.height
             showWelcomeLabel: false
-            onSaved: {
+            onDone: {
                 root.profile.name = profileForm.name
                 root.profile.skillLevel = profileForm.skillLevel
                 if (root.profile.id === -1) {

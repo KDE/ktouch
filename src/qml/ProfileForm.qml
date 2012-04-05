@@ -28,9 +28,9 @@ Column {
 
     property bool skillLevelSelectionEnabled: true
     property alias showWelcomeLabel: welcomeLabel.visible
-    property alias saveButtonIconSource: saveBtn.iconSource
-    property alias saveButtonText: saveBtn.text
-    signal saved()
+    property alias doneButtonIconSource: doneBtn.iconSource
+    property alias doneButtonText: doneBtn.text
+    signal done()
 
     spacing: 15
 
@@ -116,11 +116,11 @@ Column {
     }
 
     PlasmaComponents.Button {
-        id: saveBtn
+        id: doneBtn
         anchors.horizontalCenter: parent.horizontalCenter
-        text: i18n("Save")
+        text: i18n("Done")
         enabled: nameTextField.text !== "" && (beginnerRadioBox.checked || advancedRadioBox.checked)
-        iconSource: "document-save"
-        onClicked: saved()
+        iconSource: "dialog-ok"
+        onClicked: done()
     }
 }

@@ -96,9 +96,9 @@ FocusScope {
                     id: form
                     width: 400
                     anchors.centerIn: parent
-                    saveButtonIconSource: "go-next-view"
-                    saveButtonText: i18n("Start training")
-                    onSaved: save()
+                    doneButtonIconSource: "go-next-view"
+                    doneButtonText: i18n("Start training")
+                    onDone: save()
                 }
             }
         }
