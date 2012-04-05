@@ -35,7 +35,7 @@ int main(int argc, char **argv)
                 ki18n(description),
                 KAboutData::License_GPL,
                 ki18n(
-                    "Copyright (C) 2011 by Sebastian Gottfried\n"
+                    "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
                     "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
                 ),
                 KLocalizedString(),
