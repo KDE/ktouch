@@ -1,11 +1,20 @@
-<course><title>German (from Tipptrainer)</title><description>German training file
+<?xml version="1.0"?>
+<course>
+  <title>German (from Tipptrainer)</title>
+  <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
 for ktouch from a training file distributed by
 Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
 for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
 distributed under the GPL2
 Version: 0.1 beta
-</description><keyboardLayout>de</keyboardLayout><lessons><lesson><title>Grundhaltung</title><newCharacters>asdfjkl&#246;</newCharacters><text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
+</description>
+  <keyboardLayout>de</keyboardLayout>
+  <lessons>
+    <lesson>
+      <title>Grundhaltung</title>
+      <newCharacters>asdfjkl&#xF6;</newCharacters>
+      <text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
 fj jf fj jf fj jf fj fj jf fj jf jf fj jf fj jf jf jf jf fj
 ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj
 jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf
@@ -26,68 +35,78 @@ lsl sls lsl lsl ssl sls lsl sls sls lss lsl sls sls lsl sls
 ssl lsl lsl sls lss lls lll sls lsl sls lsl sls sls sls sls
 lsl sls lsl lls lsl ssl sls lls lls lsl lls lsl sls lsl lls
 lll sss lsl lll lsl sss lsl ssl ssl lsl lls lll sss lsl ssl
-a&#246; &#246;a a&#246; a&#246; &#246;a a&#246; &#246;a &#246;a a&#246; a&#246; a&#246; &#246;a &#246;a &#246;a a&#246; a&#246; &#246;a &#246;a a&#246; a&#246;
-&#246;a aa &#246;&#246; a&#246; &#246;&#246; aa &#246;&#246; &#246;&#246; aa &#246;a &#246;a &#246;a &#246;a a&#246; a&#246; &#246;&#246; aa &#246;&#246; a&#246; &#246;a
-a&#246;a &#246;a&#246; a&#246;a a&#246;a &#246;a&#246; a&#246;a aa&#246; aa&#246; aa&#246; &#246;&#246;a aa&#246; &#246;aa &#246;a&#246; &#246;&#246;a a&#246;a
-&#246;&#246;&#246; aaa a&#246;a &#246;&#246;&#246; a&#246;a aaa &#246;a&#246; a&#246;a a&#246;a &#246;a&#246; a&#246;a a&#246;a &#246;a&#246; a&#246;a &#246;a&#246;
-a&#246;a &#246;&#246;&#246; aaa a&#246;a a&#246;a a&#246;a &#246;a&#246; a&#246;a a&#246;a a&#246;a &#246;a&#246; a&#246;a a&#246;a &#246;&#246;&#246; a&#246;a
-aa&#246; aa&#246; aa&#246; &#246;a&#246; a&#246;a &#246;&#246;&#246; a&#246;a &#246;&#246;&#246; &#246;&#246;&#246; &#246;&#246;a &#246;&#246;a aa&#246; &#246;a&#246; a&#246;a &#246;&#246;a
-a&#246;a aaa &#246;a&#246; a&#246;&#246; &#246;&#246;a a&#246;&#246; &#246;&#246;a aa&#246; &#246;aa a&#246;&#246; &#246;aa a&#246;a &#246;a&#246; aa&#246; &#246;aa
-asdf jkl&#246; asdf jkl&#246; asdf jkl&#246; &#246;lkj fdsa &#246;lkj fdsa asdf jkl&#246;
-asdf &#246;lkj asdf &#246;lkj asdf &#246;lkj asdf &#246;lkj asdf &#246;lkj asdf jkl&#246;
+a&#xF6; &#xF6;a a&#xF6; a&#xF6; &#xF6;a a&#xF6; &#xF6;a &#xF6;a a&#xF6; a&#xF6; a&#xF6; &#xF6;a &#xF6;a &#xF6;a a&#xF6; a&#xF6; &#xF6;a &#xF6;a a&#xF6; a&#xF6;
+&#xF6;a aa &#xF6;&#xF6; a&#xF6; &#xF6;&#xF6; aa &#xF6;&#xF6; &#xF6;&#xF6; aa &#xF6;a &#xF6;a &#xF6;a &#xF6;a a&#xF6; a&#xF6; &#xF6;&#xF6; aa &#xF6;&#xF6; a&#xF6; &#xF6;a
+a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a aa&#xF6; aa&#xF6; aa&#xF6; &#xF6;&#xF6;a aa&#xF6; &#xF6;aa &#xF6;a&#xF6; &#xF6;&#xF6;a a&#xF6;a
+&#xF6;&#xF6;&#xF6; aaa a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a aaa &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a &#xF6;a&#xF6;
+a&#xF6;a &#xF6;&#xF6;&#xF6; aaa a&#xF6;a a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a
+aa&#xF6; aa&#xF6; aa&#xF6; &#xF6;a&#xF6; a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;a &#xF6;&#xF6;a aa&#xF6; &#xF6;a&#xF6; a&#xF6;a &#xF6;&#xF6;a
+a&#xF6;a aaa &#xF6;a&#xF6; a&#xF6;&#xF6; &#xF6;&#xF6;a a&#xF6;&#xF6; &#xF6;&#xF6;a aa&#xF6; &#xF6;aa a&#xF6;&#xF6; &#xF6;aa a&#xF6;a &#xF6;a&#xF6; aa&#xF6; &#xF6;aa
+asdf jkl&#xF6; asdf jkl&#xF6; asdf jkl&#xF6; &#xF6;lkj fdsa &#xF6;lkj fdsa asdf jkl&#xF6;
+asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf jkl&#xF6;
 askj asjk askj askj asjk asjk asjk asjk asjk askj askj asjk
-ls&#246;a ls&#246;a ls&#246;a a&#246;sl a&#246;sl a&#246;sl a&#246;sl a&#246;sl a&#246;sl a&#246;sl a&#246;sl a&#246;sl
-als&#246; a&#246;sl ls&#246;a l&#246;ls l&#246;ss sk&#246;k ls&#246;a sl&#246;a l&#246;al &#246;ls&#246; sla&#246; s&#246;al
-a&#246;sk alsk a&#246;ls a&#246;ls a&#246;ld a&#246;sl a&#246;sk as&#246;k &#246;ska al&#246;k asld &#246;sk&#246;
-dask klsa klsd dlsa &#246;ldk dkls &#246;lsa klsa klas lkas slak skal
+ls&#xF6;a ls&#xF6;a ls&#xF6;a a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl
+als&#xF6; a&#xF6;sl ls&#xF6;a l&#xF6;ls l&#xF6;ss sk&#xF6;k ls&#xF6;a sl&#xF6;a l&#xF6;al &#xF6;ls&#xF6; sla&#xF6; s&#xF6;al
+a&#xF6;sk alsk a&#xF6;ls a&#xF6;ls a&#xF6;ld a&#xF6;sl a&#xF6;sk as&#xF6;k &#xF6;ska al&#xF6;k asld &#xF6;sk&#xF6;
+dask klsa klsd dlsa &#xF6;ldk dkls &#xF6;lsa klsa klas lkas slak skal
 fksk dksl jfjf skdj dsaj jafj jsdj fjdk jfkd fjdk fjdk fjdk
-fkds kldj jkld fdsa fdsa fdsa fdsa jkls sakd dsa&#246; jkdk djfk
-sla&#246; aljs sdkf dkls kkls llsk s&#246;ak dlsd sldl dlsl dsld dlsl
-dlld ldld s&#246;sl als&#246; dlfk fldk fkld kfal fals lssa lass lass
+fkds kldj jkld fdsa fdsa fdsa fdsa jkls sakd dsa&#xF6; jkdk djfk
+sla&#xF6; aljs sdkf dkls kkls llsk s&#xF6;ak dlsd sldl dlsl dsld dlsl
+dlld ldld s&#xF6;sl als&#xF6; dlfk fldk fkld kfal fals lssa lass lass
 lsls ldfj kalf klas lkas jdks lsak kdfj alsj lkdf kjja jaja
 falk lfds fall lfds jfks fall falk fall fals slak dlsa lsdf
-jkak kaks lkak ksda kdls lsdf dsaj kjlj l&#246;kd fksl slkd jkls
-ffkd kdkk dkks saak sask ssas dsas kl&#246;l dsas lkkl lkjk lkjl
-a&#246;sl ssas llk&#246; kk&#246;k &#246;lkj lkjl &#246;lk&#246; &#246;l&#246;a &#246;lks &#246;klj jlkk lkds</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>sla las laa aal sla lsa las sas lsa laa las all als ass als
+jkak kaks lkak ksda kdls lsdf dsaj kjlj l&#xF6;kd fksl slkd jkls
+ffkd kdkk dkks saak sask ssas dsas kl&#xF6;l dsas lkkl lkjk lkjl
+a&#xF6;sl ssas llk&#xF6; kk&#xF6;k &#xF6;lkj lkjl &#xF6;lk&#xF6; &#xF6;l&#xF6;a &#xF6;lks &#xF6;klj jlkk lkds</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>sla las laa aal sla lsa las sas lsa laa las all als ass als
 all als las all als las all als las all als las all als las
 sla sal sla sla saa sas asa lal ala als sss lsa sla sll sla
 las als all las als all las als las als all als all las als
 sls lsl lal sas lls ala lal las asl las sal las als all sla
 als all las als all las als all las all all als als las las
-fad das sad l&#246;s las lad lad aal fas kal sal fas dsa dks fda
-fall lass kalk lass klas sal&#246; salk la&#246;s llsa llsa &#246;lsa lsa&#246;
-&#246;sal l&#246;ss &#246;sks &#246;skl &#246;slk lsal l&#246;as klsa l&#246;ls l&#246;ls klsa kl&#246;s
+fad das sad l&#xF6;s las lad lad aal fas kal sal fas dsa dks fda
+fall lass kalk lass klas sal&#xF6; salk la&#xF6;s llsa llsa &#xF6;lsa lsa&#xF6;
+&#xF6;sal l&#xF6;ss &#xF6;sks &#xF6;skl &#xF6;slk lsal l&#xF6;as klsa l&#xF6;ls l&#xF6;ls klsa kl&#xF6;s
 kalk kalk fall fall falk lass lssa lass kalk falk fass sass
-safd safd kl&#246;a a&#246;lk lsal lsas slas lsls fjdl alsa jaja jdld
+safd safd kl&#xF6;a a&#xF6;lk lsal lsas slas lsls fjdl alsa jaja jdld
 jldd kjsk klas kalk saal lass fakl sall lall ladd ladd dsal
 falk kalk falk kalk saal kalk falk saal kalk fall saal fall
-falk fall fals kall kalk saal falk lass kalk l&#246;ss lass fall
-falk kalk fall l&#246;ss kalk fall saal fall l&#246;ss saal fall falk
-lass fall lass falk kalk saal fall l&#246;ss kalk kalk saal fall
+falk fall fals kall kalk saal falk lass kalk l&#xF6;ss lass fall
+falk kalk fall l&#xF6;ss kalk fall saal fall l&#xF6;ss saal fall falk
+lass fall lass falk kalk saal fall l&#xF6;ss kalk kalk saal fall
 falls kafka kajak kajak falls falls kafka kajak kajaj kafka
 kafka falls kajak falls kafka falls kajak kafka falls kajak
 falls als falk kalk kafka das all das lass das las als kalk
-&#246;l als l&#246;ss kafka kajak &#246;l als all falk l&#246;ss lass las kajak
-all das &#246;d all dass das &#246;l kafka lass das ja kalk &#246;l ja las
+&#xF6;l als l&#xF6;ss kafka kajak &#xF6;l als all falk l&#xF6;ss lass las kajak
+all das &#xF6;d all dass das &#xF6;l kafka lass das ja kalk &#xF6;l ja las
 all das saal falk kalk kajak kafka saal falls das dass lass
-als all das &#246;l falls all das &#246;l ja als all das &#246;l kafka las
-falls falk all das las das &#246;l als all kalk fall saal las ja
-ja ja sass da als all das &#246;l kafka las falk sass da als all
-das &#246;l lass das all kafka las all falls all das &#246;l as ja da
-da das alls kafka las kalk fall saal falls all das &#246;l ja ja</text></lesson><lesson><title>i und e</title><newCharacters>ei</newCharacters><text>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke
+als all das &#xF6;l falls all das &#xF6;l ja als all das &#xF6;l kafka las
+falls falk all das las das &#xF6;l als all kalk fall saal las ja
+ja ja sass da als all das &#xF6;l kafka las falk sass da als all
+das &#xF6;l lass das all kafka las all falls all das &#xF6;l as ja da
+da das alls kafka las kalk fall saal falls all das &#xF6;l ja ja</text>
+    </lesson>
+    <lesson>
+      <title>i und e</title>
+      <newCharacters>ei</newCharacters>
+      <text>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke
 dak dik dak dek dak dik kid kid dik eki ede kde dek dei die
 sei sie lie ise asi esi ase las lie fie kis eis ise ike eki
 jie jei eij eej jee jii sii ees iis ais iis ssi sse sie ies
 kei iek kii kee eke ike adi ida ede ese see ise isa sai sae
 lee lei lie lle ill eel sea eas ase lea kea jea sik aik eik
 kade lade jade lade kiss lies like daks jade jedi kadi sadi
-kess lass l&#246;ss lies siel alle fell fiel fail siel fiel feil
+kess lass l&#xF6;ss lies siel alle fell fiel fail siel fiel feil
 seil lies keil like feil fiel jail dail das is fis ais lief
 fiel fall feil dies seil jade keks siek jedi fade sade lade
 file seil siel fiel jail lade like jedi kadi eile alle eile
 siele lalle falle kalle seile feile leise keile lalle falle
-alles kalles elle felle fiele &#246;se seile keile fiele die eis
-lasse fasse kasse sasse l&#246;se sie lasse fasse kasse asse die
+alles kalles elle felle fiele &#xF6;se seile keile fiele die eis
+lasse fasse kasse sasse l&#xF6;se sie lasse fasse kasse asse die
 isa kies alias salsa else fels als je ja sass iss kiss esse
 lasse kasse kaffee affe safe lief ilse kleie eise seile sie
 ade alle lies alias alles falle felle kalle kill keil kille
@@ -96,21 +115,26 @@ ja das alles dies lies sie alle eile leise feile delle asse
 kasse lasse diese dieses dies lies fiese lade sade fade eis
 jail file alias kiss sed deal seal lease fade ill fill feel
 kaffee fiel alles eile kalle feile sie seil seile kasse eis
-ja sei da fallada kafka saal &#246;le &#246;se als alles fiel siel es
+ja sei da fallada kafka saal &#xF6;le &#xF6;se als alles fiel siel es
 lade es fade saal es das fass es ja fiese liese lies dallas
 das da die sei jede jedes diese sei seife eides filiale eis
-dies des seide dieses fidel lief des alles lies das kleides</text></lesson><lesson><title>g und h</title><newCharacters>gh</newCharacters><text>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj
+dies des seide dieses fidel lief des alles lies das kleides</text>
+    </lesson>
+    <lesson>
+      <title>g und h</title>
+      <newCharacters>gh</newCharacters>
+      <text>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj
 fggf jhhj fgjh fgjh fgjh fghj jhgf fghj fgjh fghj gfhj fgjh
 fgf gfg jhj hjh gfh jhg fgj jhg fgh jhg hgf ghf hgf ghf fjh
 fga agf gfa fga fag fga fga afg fag fag fag gaf gfa gag gfa
 jag ajg jag ajg ajg gaj jag jga jga gja fgj gjf ajf agj ajg
-&#246;jh hj&#246; hj&#246; &#246;jh j&#246;h j&#246;h hj&#246; jh&#246; &#246;jh &#246;jh j&#246;h j&#246;h jh&#246; &#246;g&#246; &#246;h&#246;
-afg &#246;hj agh &#246;hg agj &#246;hj gaj h&#246;j gaj h&#246;g hag &#246;gh &#246;hg ahg &#246;hh
+&#xF6;jh hj&#xF6; hj&#xF6; &#xF6;jh j&#xF6;h j&#xF6;h hj&#xF6; jh&#xF6; &#xF6;jh &#xF6;jh j&#xF6;h j&#xF6;h jh&#xF6; &#xF6;g&#xF6; &#xF6;h&#xF6;
+afg &#xF6;hj agh &#xF6;hg agj &#xF6;hj gaj h&#xF6;j gaj h&#xF6;g hag &#xF6;gh &#xF6;hg ahg &#xF6;hh
 haag haff haag haff haag haff fahl half fahl half hasl lasa
 kahl lags slag glas alga gala agfa haff haag glas lags gasa
 gesa sage hage jage fehl fahl hege gehe hege gehe sehe hase
 hass fahl kahl kehl kiel geil lieg heil hies dega gade jage
-jagd j&#246;gh hals gels gisa l&#246;se geis sieg igel lieg lage gala
+jagd j&#xF6;gh hals gels gisa l&#xF6;se geis sieg igel lieg lage gala
 egel flegel fahles kahles sage es kegel segel jagd laage he
 hegel flegel kegel fahle ihle ahle alge felge selige heilig
 heilige eilig seele gelee heel heals hall he his heise leis
@@ -120,9 +144,14 @@ hilfe heile half fall gehe giga glas flies dies see eisiges
 die eisige see die alge das fass das glas das glas seidiges
 gaffe haff kaff die alge  die felge siege sage gehe sehe es
 she is his he is she lies es gase gas hass fass lass kahles
-gisela h&#246;hle sah diese h&#246;hle ge&#246;le hase jade jage lage heil
+gisela h&#xF6;hle sah diese h&#xF6;hle ge&#xF6;le hase jade jage lage heil
 hadi sage lass das fass dies seidige kleid gehe hege gelege
-geklage gelage sage die sage gejage klage felge helge leide</text></lesson><lesson><title>w und o</title><newCharacters>wo</newCharacters><text>sws lol sws lol sws lol sws lol was los was los was los was
+geklage gelage sage die sage gejage klage felge helge leide</text>
+    </lesson>
+    <lesson>
+      <title>w und o</title>
+      <newCharacters>wo</newCharacters>
+      <text>sws lol sws lol sws lol sws lol was los was los was los was
 was sws los lol sws lol was los wag weg wog log los weh wie
 log los was wow lol sws wow sow saw osw aso oso los kos jas
 kdw dwk jdw wdj okw wok wie aol das los leo loe lei wei wie
@@ -132,7 +161,7 @@ weise leise heise hose lose wiese waffel wieso weil was wie
 wiege weise will logo leise wiese wiese wieso wald was wohl
 waage wiege agil wog was wieso wald waldig wilde kilo wieso
 jage wildes wild wald was sah sie wie log sie was wieso log
-isa die wiese lag weg wie weil sie wo sowieso lol&#246; &#246;le &#246;lig
+isa die wiese lag weg wie weil sie wo sowieso lol&#xF6; &#xF6;le &#xF6;lig
 loewe leise lose gosse gasse hose dose diese woge loge wade
 wash fish who is who was whose fool while whole who goes he
 goes she goes goal she saw dow kill as file off while whole
@@ -140,13 +169,18 @@ false welsh wise whis joda jedi fish flash dog ale while we
 wie weise wieso kafka was las als da was fiel die hose lose
 die gosse sie wog je dose kaffee das was sie sah die kladde
 sie fiel da die wade kafka fade das die lade los es wog was
-kafka las die kladde als was fiel was wog das l&#246;ss wege weg
-&#246;le die waage das wog kafka las wie las kafka die kladde da
+kafka las die kladde als was fiel was wog das l&#xF6;ss wege weg
+&#xF6;le die waage das wog kafka las wie las kafka die kladde da
 wieso lass sie wog diese kasse affe wog die waage log sowas
 die wiege die waage das segel flog die woge die jagd so wie
-das wild floh es goss waldig eisig als die wiese wie willig</text></lesson><lesson><title>r und u</title><newCharacters>ru</newCharacters><text>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr
-fra aua fau fra fru jau jar dau dar sau sua sar sra &#246;u&#246; r&#246;r
-ded kik juj ded frf ase ras juk kuj fuj ruf dei ser usl &#246;re
+das wild floh es goss waldig eisig als die wiese wie willig</text>
+    </lesson>
+    <lesson>
+      <title>r und u</title>
+      <newCharacters>ru</newCharacters>
+      <text>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr
+fra aua fau fra fru jau jar dau dar sau sua sar sra &#xF6;u&#xF6; r&#xF6;r
+ded kik juj ded frf ase ras juk kuj fuj ruf dei ser usl &#xF6;re
 war wor rio rus ras ral rel ril rol ole oli koi oki dok rod
 eul eur edu sui seu weu leu keu heu geu feu deu aeu are dar
 frau ursl fahr wahr wehr wors wurs juss juhu uhus guss fuss
@@ -160,15 +194,20 @@ rehe jage wild gewehr erlege kugel wars kugel flog reh floh
 hase lief wolf rief war es der wolf der da so rief der hase
 luise las das auf was fiel so fiel der herr das war wohl so
 wer lief der rief regel gewehr soll der hase wohl war es da
-hallo wer war diese halli hallo hall&#246;le hallali hirse hafer
+hallo wer war diese halli hallo hall&#xF6;le hallali hirse hafer
 rede lies sage wage rufe lusiese sie war es kuss fred gelle
 wars ulli sage es liese war es dieses haus klaus rede ruhig
 ruhe wer da rief das lief so weil das haus ruhig lag es war
 wage es war dusselig es war eisig weil luise da war egal du
 will es kalle oder ole hose aus wolle kleid seidig haus aus
-l&#246;ss fiel kafka was er rede ruhig lies es ruhig aller regel
+l&#xF6;ss fiel kafka was er rede ruhig lies es ruhig aller regel
 das regal das fiel der saal war leer wars fred wars ole was
-war luise wer ulli wer dario alles lief  als das regal fiel</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>aufs dies jura soda hier ufer haus erde frau juda judo joda
+war luise wer ulli wer dario alles lief  als das regal fiel</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>aufs dies jura soda hier ufer haus erde frau juda judo joda
 ruhe rase glas gras fass fuss ewig jahr rede klar aula fuhr
 lauf lief rauf rief dorf darf half hilf hole sole rose lose
 hose ferse hirse kriese kreise leise heise weise aus garaus
@@ -188,10 +227,15 @@ alles war da was fiel das war gerade gefiel er jodele wolle
 walle walle falle gefiel gefahr gewehr wars wurde gulli
 woge flog sog sauge lauge klaue dau gerade gelage woge woge
 wage sage frage frau herr hausfrau hausherr heraus goldig
-falke eule uhu juhu also falls das so war  war es so klar</text></lesson><lesson><title>t und z</title><newCharacters>tz</newCharacters><text>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz
+falke eule uhu juhu also falls das so war  war es so klar</text>
+    </lesson>
+    <lesson>
+      <title>t und z</title>
+      <newCharacters>tz</newCharacters>
+      <text>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz
 ftf jzj ftf jzj ftz jzt ftz jtz fzt jtz ftz fjt fjz fjt fjz
-dzd fzf dzf dzd dzd szs aza ata sts sts ktk tlt ltl &#246;t&#246; &#246;zi
-z&#246;g z&#246;ge zog log lok teig teil tide tage tag zarge zag zuse
+dzd fzf dzf dzd dzd szs aza ata sts sts ktk tlt ltl &#xF6;t&#xF6; &#xF6;zi
+z&#xF6;g z&#xF6;ge zog log lok teig teil tide tage tag zarge zag zuse
 ast last hast fast hatz fatz latz katz katze satz satz jazz
 zu zur zeit ziel zahl ziel zeit teil teile heil feile zeile
 ziele ketzer satz heile zeile ziele teile tief tage lage zu
@@ -199,23 +243,28 @@ dutze kartzer kratze kratzer latz garz jetzt kerze kurz zur
 zeit seit der zeit zeisig ziele zahl zahle dutze kratze tue
 zarge zulu taz fratz jazz katze kurzer kurz letzte lust las
 zog er gefasst lasst trage frage trug zur hetze falz fetter
-herr fette &#246;le zola ritze der herr zog das heraus gezielter
+herr fette &#xF6;le zola ritze der herr zog das heraus gezielter
 welt erde orte worte warte zarte witze werte harte karte zu
 der zug zog er flog sie lief es geht halt das  halt auf zoo
 wetter wettere watte lagert wagt es gelegt gelege fegt dies
-l&#246;ss fiel saugt es auf fegt es auf liest er was  er las das
+l&#xF6;ss fiel saugt es auf fegt es auf liest er was  er las das
 wieso liest er das wer sagt etwas gesagt getagt gewagt erze
-l&#246;st es auf gel&#246;st geht er wer wagt geht wer zaudert steht
+l&#xF6;st es auf gel&#xF6;st geht er wer wagt geht wer zaudert steht
 fast gewagt ist gesagt tag tue eis taut auf zahl das eis da
 kafka liest der titel ist das tier war da weil dies tier da
 war  fiel der krug alles lief  half  saugte sagte rief geht
-also daher wer geht geht jetzt er liest die kladde wer h&#246;rt
-da zu er h&#246;r sie h&#246;rt kafka liest zola elise fragt fritz da
-der was h&#246;rte wartete kafka sagt zu elise geht jetzt frau
-es st&#246;rt wer da fragt die woge erstarrt alles stille
+also daher wer geht geht jetzt er liest die kladde wer h&#xF6;rt
+da zu er h&#xF6;r sie h&#xF6;rt kafka liest zola elise fragt fritz da
+der was h&#xF6;rte wartete kafka sagt zu elise geht jetzt frau
+es st&#xF6;rt wer da fragt die woge erstarrt alles stille
 elise geht es war kafkas wille sie geht als der krug grade
 fiel der saft lief der autor rief alles eilte dazu jetzt
-war ruh</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>der die das wer wie was wo der die das wer wie was wo da so
+war ruh</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>der die das wer wie was wo der die das wer wie was wo da so
 sehr steil sehr stark her klar sogar das der das die daraus
 dass das dass das es was klar sogar das dies wie es ist sag
 sah sehe sieh daraus woraus des dies dar wer wo was weg war
@@ -237,8 +286,13 @@ es so gut ist dass er es isst wo er es sieht dazu sagte sie
 dass er heute isst was sie will lege die karte auf die erde
 wo geht es zur see wie geht es heute geht es gut es geht so
 so wie das geht geht es gut gut gesagt der fluss das wasser
-l&#246;se das seil jetzt ist es so weit auf dieser welt sagt sie
-alles was sie weiss was weiss sie alles wer wusste das</text></lesson><lesson><title>q und p</title><newCharacters>qp</newCharacters><text>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq
+l&#xF6;se das seil jetzt ist es so weit auf dieser welt sagt sie
+alles was sie weiss was weiss sie alles wer wusste das</text>
+    </lesson>
+    <lesson>
+      <title>q und p</title>
+      <newCharacters>qp</newCharacters>
+      <text>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq
 qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu
 pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr
 op op op op op op op op op op op op op op op op op op op op
@@ -266,7 +320,12 @@ heraus aqua aquarell artist produkt palette preise pflaster
 paragraph perl protokoll sparpreis kapitalgruppe post paare
 quadrat quadrate quadratur des kreises philosoph pause quiz
 porto partie partei plato padua parkplatz professor pariser
-reprise die quelle des flusses die weserquelle europapokale</text></lesson><lesson><title>v und m</title><newCharacters>vm</newCharacters><text>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh
+reprise die quelle des flusses die weserquelle europapokale</text>
+    </lesson>
+    <lesson>
+      <title>v und m</title>
+      <newCharacters>vm</newCharacters>
+      <text>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh
 vi va ve vr vg vi vu vo av ev iv uv ov uv me ma mo mi me mu
 vim vam mer mar mir mei mol mal mie mig mag mog meh muh mau
 vau vei vie vor vol val jav jov jev jam mai maj mer wem vim
@@ -279,7 +338,7 @@ vertrag kaum verzug vermerk zuvor zuviel jemals vorteil ihm
 vorgemerkt vorgesagt vor dem saal im stall muster kohlmeise
 makulatur mogelei malerei verse ferse merke markiert markus
 mimik hervor herum vertreter wurde mehrere verkauf verglast
-fremde v&#246;gel vogel des vogels v&#246;gel klaus kommt aus amerika
+fremde v&#xF6;gel vogel des vogels v&#xF6;gel klaus kommt aus amerika
 es stimmt die stimme der stummel verlade gestammelt stummer
 kummer fummel hummel summe summt krumm kram er kramt lahmer
 verkehr verkehrt herum umfahre marktplatz wer mag apfelmus
@@ -290,9 +349,14 @@ verse paul liest verse vom autor kafka goethes verse las er
 am mittag wer liest zolas werke daheim liest sie heim jedem
 etwas mit viel gehalt die werte qualle im meer klammtal die
 quasselstrippe warum streift der kater herum es ist so kalt
-die katze sitzt im haus herum sie miaut zu laut verwahre es</text></lesson><lesson><title>n und b</title><newCharacters>nb</newCharacters><text>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf
-gn fn gb bg fb hb bh jb bj kb bk db bd sb bs ab ba lb bl b&#246;
-&#246;b bo bu bi no nu ni ne be br bw kb bk bt tb zb bz ln nl vn
+die katze sitzt im haus herum sie miaut zu laut verwahre es</text>
+    </lesson>
+    <lesson>
+      <title>n und b</title>
+      <newCharacters>nb</newCharacters>
+      <text>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf
+gn fn gb bg fb hb bh jb bj kb bk db bd sb bs ab ba lb bl b&#xF6;
+&#xF6;b bo bu bi no nu ni ne be br bw kb bk bt tb zb bz ln nl vn
 jnj jnj njn fbf bfb fbf bfb jnj njn bfj njf gbt bgt nju njh
 hun han kan fan bus und ohn pon ihn ein nie nun neu nah den
 din win pin uin ein nau bau bew beo boh bog bag big gib gab
@@ -308,14 +372,19 @@ singerei er hat viel zu tun die tante kommt zu ihm umziehen
 der umzug kostet viel geld seine einnahmen waren angemessen
 zu lies das manual sagt man rtm die informationen findet er
 dort zuerst wer liest lernt er sie liest viel uta lernt was
-man tun muss um arbeiten zu k&#246;nnen k&#246;nnte sein dass er nein
+man tun muss um arbeiten zu k&#xF6;nnen k&#xF6;nnte sein dass er nein
 sagt aber fragen ist besser als warten wen interessiert das
 alles was man lesen kann hilft beim lernen fahrt ski in den
 bergen beine festhalten er will reinen wein wann wird er es
-lesen kafka soll seine verse lesen alle wollen ihn h&#246;ren da
+lesen kafka soll seine verse lesen alle wollen ihn h&#xF6;ren da
 er so eine tiefe stimme hat eva strittmatter liest viel aus
 erbe ihres mannes aber die eigenen verse sind ebenso gut zu
-lesen  ist heine vergessen  keine ahnung  ist heine bekannt</text></lesson><lesson><title>c und ,</title><newCharacters>c,</newCharacters><text>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,
+lesen  ist heine vergessen  keine ahnung  ist heine bekannt</text>
+    </lesson>
+    <lesson>
+      <title>c und ,</title>
+      <newCharacters>c,</newCharacters>
+      <text>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,
 , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
 ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck
 cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd,
@@ -334,18 +403,23 @@ wie du,  na dann,  ich bin, glaube ich  wer glaubt, der ist
 dick lack leck auch dich doch deck lech dach loch doch noch
 buch fluch such versuch betrug falsch pflicht verzicht auch
 versuchung besuch tuch tauche seuche verflucht gedichte chi
-eva liest gedichte die ich schon lange kenne, doch sch&#246;n
+eva liest gedichte die ich schon lange kenne, doch sch&#xF6;n
 sind sie doch  auch, wenn der saal nicht voll ist, wird er
 seine verse lesen kommt das komma da hin, oder da hin  ich
 will gerne kommes setzen, doch ich mache das sicher immer
-falsch  na sch&#246;n, wenn es sein muss, dann auch mit kommata
-schick, schlank, schnick, schnack, sch&#246;n, schade, schwer,
-schlank, sch&#246;n, sch&#246;ner, schneller, zu schnell, schriftlich
+falsch  na sch&#xF6;n, wenn es sein muss, dann auch mit kommata
+schick, schlank, schnick, schnack, sch&#xF6;n, schade, schwer,
+schlank, sch&#xF6;n, sch&#xF6;ner, schneller, zu schnell, schriftlich
 hilfreich ist, wenn man die regeln zur kommasetzung kennt
-auch wenn der rechner streikt, musst du die ruhe bewahren</text></lesson><lesson><title>x und .</title><newCharacters>x.</newCharacters><text>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.
+auch wenn der rechner streikt, musst du die ruhe bewahren</text>
+    </lesson>
+    <lesson>
+      <title>x und .</title>
+      <newCharacters>x.</newCharacters>
+      <text>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.
 x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x
 xx.. xx.. xx.. xx.. xx.. xx.. x.. xx.. xx.. xx.. xx.. xx..
-axa &#246;.&#246; axa &#246;.&#246; axa &#246;.&#246; axa &#246;.&#246; axa &#246;.&#246; axa &#246;.&#246; axa &#246;.&#246; axa
+axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa &#xF6;.&#xF6; axa
 axt exe axt exe ol. ol. mol. mal. mel. en. en. en. ein. en.
 fax max axt axt. fax. max. a..a s..s d..d f..f j..j k..k xx
 exe exa ex dax sax fax nux lux mux  tux exakt lexikon lexik
@@ -353,7 +427,7 @@ tux. taxi text textur taxen taxator taxameter saxophon lexx
 tux. tex. exakt. explosion. exorbitant. mexiko. exempel. ex
 tux luxemburg. fix. fax. fixum. fixieren. extrakt. extra.
 tux nixe verflixt fixen ein problem fixen. fix. max. lol l.
-tux. den text revidieren. xerxes, der perserk&#246;nig war nicht
+tux. den text revidieren. xerxes, der perserk&#xF6;nig war nicht
 in luxemburg, sagt er. felix lebt nicht am existenzminimum.
 linux linux linux linux linux linux linux linux linux linux
 tux tux tux tux tux tux tux tux tux tux tux tux tux tux tux
@@ -365,11 +439,16 @@ fenster. er war programmierer, doch er kannte linux nicht.
 nach der explosion war der saal leer. kafka las erstmal die
 verse nicht mehr weiter, bis sich die aufregung legte. text
 der text aus dem lexikon ist nicht ausreichend. deshalb las
-sie auch noch die entschrechenden seiten im internet. ende.</text></lesson><lesson><title>y und -</title><newCharacters>y-</newCharacters><text>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-
+sie auch noch die entschrechenden seiten im internet. ende.</text>
+    </lesson>
+    <lesson>
+      <title>y und -</title>
+      <newCharacters>y-</newCharacters>
+      <text>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-
 y- y- y- y- y- y- y- -y -y -y -y -y -y -y -y -y -y -y -y -y
-&#246;-&#246; &#246;-&#246; &#246;-&#246; &#246;-&#246; -&#246;- &#246;-&#246; -&#246;- &#246;-&#246; -&#246;- &#246;-&#246; -&#246;- &#246;-&#246; -&#246;- &#246;-&#246; -&#246;-
+&#xF6;-&#xF6; &#xF6;-&#xF6; &#xF6;-&#xF6; &#xF6;-&#xF6; -&#xF6;- &#xF6;-&#xF6; -&#xF6;- &#xF6;-&#xF6; -&#xF6;- &#xF6;-&#xF6; -&#xF6;- &#xF6;-&#xF6; -&#xF6;- &#xF6;-&#xF6; -&#xF6;-
 aya yay aya yay aya aya yay yay aya yay yay aya yay yay aya
-fsdaya jkl&#246;-&#246; fsdaya jkl&#246;-&#246; fsdaya jkl&#246;-&#246; fsadya jkl-&#246;-&#246; a-
+fsdaya jkl&#xF6;-&#xF6; fsdaya jkl&#xF6;-&#xF6; fsdaya jkl&#xF6;-&#xF6; fsadya jkl-&#xF6;-&#xF6; a-
 sys l-l sys l-l sys l-l sys l-l sys l-l sys l-l sys l-l sys
 dyn k-m dyn k-n dyn k-n syd ky- syf k-d syg k-h syn jn- hay
 asyl asyl sylt sylt type type asyl sylt sys- teme syn- oden
@@ -379,105 +458,140 @@ yeti - yak - synthetisches - synergetisch - sylt asyl typen
 yast - yet another setup tool
 sympathisch sympathie hypothek lyon
 als der pc noch nicht das standard-schreibmittel war, und
-f&#246;rmliche texte in die schreibmaschiene gehackt wurden,
+f&#xF6;rmliche texte in die schreibmaschiene gehackt wurden,
 stellte man mittels bindestrich sicher, dass der rechte
-rand relativ einheitlich wurde. die w&#246;rter wurden nach sil-
+rand relativ einheitlich wurde. die w&#xF6;rter wurden nach sil-
 ben getrennt. der bindestrich kann aber auch zwischen zwei
-hauptw&#246;rtern stehen, um diese zu verbinden, wie in
+hauptw&#xF6;rtern stehen, um diese zu verbinden, wie in
 kaffee-ersatz. wer sich mit sport auskennt, orientiert sich
 an den punktetabellen, wenn er die ergebnisse verschiedener
 mannschaften vergleichen will. dort wird der bindestrich
 verwendet, um zu zeigen, wer gegen wen spielt.
-    herta bsc - fortuna k&#246;ln
+    herta bsc - fortuna k&#xF6;ln
 in verbindungen wie gertrud-meier-platz oder
 nord-ostsee-kanal wird der mittelstrich ohne leerzeichen
 verwendet. als gedankestrich taucht er auf, wenn man ein
-paar stichworte logisch voneinander absetzen m&#246;chte.</text></lesson><lesson><title>&#252; und &#228;</title><newCharacters>&#252;&#228;</newCharacters><text>&#246;&#252;&#228; &#246;&#252;&#228; &#246;&#252;&#228; &#246;&#228;&#252; &#246;&#228;&#252; &#252;&#228;&#246; &#228;&#252;&#246; &#246;&#228;&#252; &#246;&#252;&#228; &#228;&#246;&#252; &#252;&#246;&#228; &#228;&#252;&#246; &#246;&#228;&#252; &#246;&#228;&#252; &#252;&#246;&#228;
-&#246;&#252;&#246; &#246;&#252;&#246; &#246;&#252;&#246; &#246;&#252;&#246; &#246;&#252;&#246; &#246;&#252;&#246; &#246;&#252;&#246; &#252;&#246;&#252; &#252;&#246;&#252; &#252;&#246;&#252; &#252;&#246;&#252; &#246;&#252;&#246; &#252;&#246;&#252; &#246;&#252;&#246; &#252;&#246;&#252;
-&#246;&#228;&#246; &#246;&#228;&#246; &#228;&#246;&#228; &#228;&#246;&#228; &#228;&#246;&#228; &#246;&#228;&#246; &#246;&#228;&#246; &#246;&#228;&#246; &#228;&#246;&#228; &#246;&#228;&#246; &#246;&#228;&#246; &#246;&#228;&#246; &#246;&#228;&#246; &#228;&#246;&#228; &#228;&#246;&#228;
-&#228;&#252;&#228; &#228;&#252;&#228; &#228;&#252;&#228; &#228;&#252;&#246; &#228;&#252;&#228; &#252;&#228;&#252; &#252;&#228;&#252; &#246;&#252;&#246; &#246;&#228;&#252; &#252;&#228;&#252; &#252;&#228;&#252; &#246;&#228;&#252; &#246;&#228;&#252; &#252;&#246;&#228; &#228;&#252;&#246;
-m&#246;hre m&#228;hre f&#228;hre f&#252;hre w&#252;rde k&#246;nnte m&#252;sste h&#228;tte t&#228;te g&#228;be
-w&#228;re s&#228;he l&#228;ge s&#228;ge w&#228;ge m&#228;gen l&#228;gen l&#252;gen r&#252;gen tr&#252;gen &#252;bt
-ge&#252;bt gepfl&#252;gt - &#252;bt bem&#252;ht, ber&#252;hmt, ger&#252;hmt, ges&#252;hnt &#252;ber
-fl&#246;gen die v&#246;gel &#252;ber die meere
-und s&#228;hen die m&#228;hre,
-gefolgt von dem b&#228;ren,
-dann w&#252;rden sie st&#252;rzen hinab auf den b&#246;sen,
-zum t&#246;ten bereiten, verfressenen r&#228;uber,
+paar stichworte logisch voneinander absetzen m&#xF6;chte.</text>
+    </lesson>
+    <lesson>
+      <title>&#xFC; und &#xE4;</title>
+      <newCharacters>&#xFC;&#xE4;</newCharacters>
+      <text>&#xF6;&#xFC;&#xE4; &#xF6;&#xFC;&#xE4; &#xF6;&#xFC;&#xE4; &#xF6;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xFC;&#xE4;&#xF6; &#xE4;&#xFC;&#xF6; &#xF6;&#xE4;&#xFC; &#xF6;&#xFC;&#xE4; &#xE4;&#xF6;&#xFC; &#xFC;&#xF6;&#xE4; &#xE4;&#xFC;&#xF6; &#xF6;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xFC;&#xF6;&#xE4;
+&#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xF6;&#xFC;&#xF6; &#xFC;&#xF6;&#xFC; &#xFC;&#xF6;&#xFC; &#xFC;&#xF6;&#xFC; &#xFC;&#xF6;&#xFC; &#xF6;&#xFC;&#xF6; &#xFC;&#xF6;&#xFC; &#xF6;&#xFC;&#xF6; &#xFC;&#xF6;&#xFC;
+&#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xE4;&#xF6;&#xE4; &#xE4;&#xF6;&#xE4; &#xE4;&#xF6;&#xE4; &#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xE4;&#xF6;&#xE4; &#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xF6;&#xE4;&#xF6; &#xE4;&#xF6;&#xE4; &#xE4;&#xF6;&#xE4;
+&#xE4;&#xFC;&#xE4; &#xE4;&#xFC;&#xE4; &#xE4;&#xFC;&#xE4; &#xE4;&#xFC;&#xF6; &#xE4;&#xFC;&#xE4; &#xFC;&#xE4;&#xFC; &#xFC;&#xE4;&#xFC; &#xF6;&#xFC;&#xF6; &#xF6;&#xE4;&#xFC; &#xFC;&#xE4;&#xFC; &#xFC;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xF6;&#xE4;&#xFC; &#xFC;&#xF6;&#xE4; &#xE4;&#xFC;&#xF6;
+m&#xF6;hre m&#xE4;hre f&#xE4;hre f&#xFC;hre w&#xFC;rde k&#xF6;nnte m&#xFC;sste h&#xE4;tte t&#xE4;te g&#xE4;be
+w&#xE4;re s&#xE4;he l&#xE4;ge s&#xE4;ge w&#xE4;ge m&#xE4;gen l&#xE4;gen l&#xFC;gen r&#xFC;gen tr&#xFC;gen &#xFC;bt
+ge&#xFC;bt gepfl&#xFC;gt - &#xFC;bt bem&#xFC;ht, ber&#xFC;hmt, ger&#xFC;hmt, ges&#xFC;hnt &#xFC;ber
+fl&#xF6;gen die v&#xF6;gel &#xFC;ber die meere
+und s&#xE4;hen die m&#xE4;hre,
+gefolgt von dem b&#xE4;ren,
+dann w&#xFC;rden sie st&#xFC;rzen hinab auf den b&#xF6;sen,
+zum t&#xF6;ten bereiten, verfressenen r&#xE4;uber,
 ihn zausen und hacken,
-mit schn&#228;beln zwacken,
+mit schn&#xE4;beln zwacken,
 ihn stechen und jagen
-bis er z&#246;g von dannen
+bis er z&#xF6;g von dannen
 mit hungrigem magen...
-ges&#246;ff, kr&#252;ge, z&#252;ge, betr&#252;gen, g&#228;hnen, erw&#228;hnen, gr&#246;hlen,
-ges&#228;nge, gel&#228;nge, beg&#228;nne, z&#246;liakie, z&#252;nglein, z&#252;ndh&#246;lzer,
-gez&#252;ndet, verz&#252;ckt, gl&#252;cklich, verr&#252;ckt, bedr&#252;ckt, r&#252;cken,
-gen&#252;gend, ber&#252;hren, verf&#252;hren, verfahren, f&#252;r wen, wof&#252;r,
-daf&#252;r, die t&#252;r, das geb&#228;lk, etwas geb&#228;ck, &#228;pfel, &#252;berlegen
-&#252;berm&#252;tig, g&#228;belchen, gefl&#252;gel, geb&#252;gelt, verbr&#252;ht, b&#228;ume,
-verpr&#252;gelt, die &#228;ste, das ge&#228;st, die j&#228;ger, fl&#246;he fliehen,
-konfit&#252;re, marmelade, breitmaulfr&#246;sche &#228;ngstigen sich vor
-st&#246;rchen, die l&#228;rche, die lerche, sch&#252;be, z&#246;ge, tr&#228;ge, er-
-tr&#228;glich, nachge&#228;fft, gesch&#228;ft, kr&#228;ftig, besch&#228;ftigt, &#252;ber
-von fr&#252;h bis sp&#228;t, qualit&#228;tsartikel zur verf&#252;gung stellen.
-die fl&#228;che der europ&#228;ischen gemeinschaft betr&#228;gt...
-vorw&#228;rts und r&#252;ckw&#228;rts gelesen erg&#228;be der text dieser lek-
+ges&#xF6;ff, kr&#xFC;ge, z&#xFC;ge, betr&#xFC;gen, g&#xE4;hnen, erw&#xE4;hnen, gr&#xF6;hlen,
+ges&#xE4;nge, gel&#xE4;nge, beg&#xE4;nne, z&#xF6;liakie, z&#xFC;nglein, z&#xFC;ndh&#xF6;lzer,
+gez&#xFC;ndet, verz&#xFC;ckt, gl&#xFC;cklich, verr&#xFC;ckt, bedr&#xFC;ckt, r&#xFC;cken,
+gen&#xFC;gend, ber&#xFC;hren, verf&#xFC;hren, verfahren, f&#xFC;r wen, wof&#xFC;r,
+daf&#xFC;r, die t&#xFC;r, das geb&#xE4;lk, etwas geb&#xE4;ck, &#xE4;pfel, &#xFC;berlegen
+&#xFC;berm&#xFC;tig, g&#xE4;belchen, gefl&#xFC;gel, geb&#xFC;gelt, verbr&#xFC;ht, b&#xE4;ume,
+verpr&#xFC;gelt, die &#xE4;ste, das ge&#xE4;st, die j&#xE4;ger, fl&#xF6;he fliehen,
+konfit&#xFC;re, marmelade, breitmaulfr&#xF6;sche &#xE4;ngstigen sich vor
+st&#xF6;rchen, die l&#xE4;rche, die lerche, sch&#xFC;be, z&#xF6;ge, tr&#xE4;ge, er-
+tr&#xE4;glich, nachge&#xE4;fft, gesch&#xE4;ft, kr&#xE4;ftig, besch&#xE4;ftigt, &#xFC;ber
+von fr&#xFC;h bis sp&#xE4;t, qualit&#xE4;tsartikel zur verf&#xFC;gung stellen.
+die fl&#xE4;che der europ&#xE4;ischen gemeinschaft betr&#xE4;gt...
+vorw&#xE4;rts und r&#xFC;ckw&#xE4;rts gelesen erg&#xE4;be der text dieser lek-
 tion keinen sinn.
-...ach so, v&#246;gel &#228;rgern keine b&#228;ren.</text></lesson><lesson><title>&#223;</title><newCharacters>&#223;</newCharacters><text>&#228;&#223; &#228;&#223; &#228;&#223; &#246;&#223; &#252;&#223; &#246;&#223; &#252;&#223; &#246;&#223; &#252;&#223; &#228;&#223; &#252;&#223; &#246;&#223; &#252;&#223; &#252;&#223; &#228;&#223; &#246;&#223; &#252;&#223; &#228;&#223; &#246;&#223; &#252;&#223;
-&#223;t &#223;t &#223;t &#223;e &#223;t &#223;e &#223;a &#223;t &#223;e &#223;d &#223;t &#252;&#223; &#223;t &#252;&#223; &#223;t &#252;&#223;t &#252;&#223;t &#228;&#223;e a&#223;
-&#246;p&#252;&#223; &#223;p&#252;o &#223;op&#228; &#246;-&#223;p &#223;p&#228;- &#246;&#228;&#252;&#223; -&#246;-&#223; &#223;--&#252; &#246;&#228;&#252;&#223; &#223;&#252;&#228;&#246; &#223;&#228;&#246;&#223; &#228;&#223;&#252;&#246;
-m&#252;ssen b&#252;&#223;t f&#252;&#223;e s&#252;&#223;e k&#252;ssen r&#252;ssel sch&#252;ssel gr&#252;&#223;t m&#252;&#223;ig a&#223;
-er a&#223; es, sie sa&#223;, er verga&#223; ganz, sie besa&#223; alles, stra&#223;en
-gie&#223;en, begie&#223;en, genie&#223;en, zerflie&#223;en, zerfloss, schie&#223;end
-sa&#223; der j&#228;ger auf seinem ges&#228;&#223;, das gef&#228;&#223;, das fass, gr&#246;&#223;er
+...ach so, v&#xF6;gel &#xE4;rgern keine b&#xE4;ren.</text>
+    </lesson>
+    <lesson>
+      <title>&#xDF;</title>
+      <newCharacters>&#xDF;</newCharacters>
+      <text>&#xE4;&#xDF; &#xE4;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xFC;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF; &#xE4;&#xDF; &#xF6;&#xDF; &#xFC;&#xDF;
+&#xDF;t &#xDF;t &#xDF;t &#xDF;e &#xDF;t &#xDF;e &#xDF;a &#xDF;t &#xDF;e &#xDF;d &#xDF;t &#xFC;&#xDF; &#xDF;t &#xFC;&#xDF; &#xDF;t &#xFC;&#xDF;t &#xFC;&#xDF;t &#xE4;&#xDF;e a&#xDF;
+&#xF6;p&#xFC;&#xDF; &#xDF;p&#xFC;o &#xDF;op&#xE4; &#xF6;-&#xDF;p &#xDF;p&#xE4;- &#xF6;&#xE4;&#xFC;&#xDF; -&#xF6;-&#xDF; &#xDF;--&#xFC; &#xF6;&#xE4;&#xFC;&#xDF; &#xDF;&#xFC;&#xE4;&#xF6; &#xDF;&#xE4;&#xF6;&#xDF; &#xE4;&#xDF;&#xFC;&#xF6;
+m&#xFC;ssen b&#xFC;&#xDF;t f&#xFC;&#xDF;e s&#xFC;&#xDF;e k&#xFC;ssen r&#xFC;ssel sch&#xFC;ssel gr&#xFC;&#xDF;t m&#xFC;&#xDF;ig a&#xDF;
+er a&#xDF; es, sie sa&#xDF;, er verga&#xDF; ganz, sie besa&#xDF; alles, stra&#xDF;en
+gie&#xDF;en, begie&#xDF;en, genie&#xDF;en, zerflie&#xDF;en, zerfloss, schie&#xDF;end
+sa&#xDF; der j&#xE4;ger auf seinem ges&#xE4;&#xDF;, das gef&#xE4;&#xDF;, das fass, gr&#xF6;&#xDF;er
 achtung - achtung - achtung -
-nach der neuen rechtschreibregel gilt gerade das &#223; als kri-
-tisch. schrieb man bisher w&#246;rter, deren infinitiv ein ss
-enthielt in der gebeugten form mit &#223;, so muss man nun acht
-geben. es hei&#223;t weiterhin f&#252;&#223;e, w&#228;hrend es neuerdings fasst
-hei&#223;t. die regel ist nicht sehr schwer. klingt der vokal
-vor dem s-laut lang, schreibt man ein &#223;, klingt er kurz,
+nach der neuen rechtschreibregel gilt gerade das &#xDF; als kri-
+tisch. schrieb man bisher w&#xF6;rter, deren infinitiv ein ss
+enthielt in der gebeugten form mit &#xDF;, so muss man nun acht
+geben. es hei&#xDF;t weiterhin f&#xFC;&#xDF;e, w&#xE4;hrend es neuerdings fasst
+hei&#xDF;t. die regel ist nicht sehr schwer. klingt der vokal
+vor dem s-laut lang, schreibt man ein &#xDF;, klingt er kurz,
 dann benutzt man ss. also fassen, fasst, das fass, gefasst,
-m&#252;ssen, muss, schluss, kuss - aber - fu&#223;, f&#252;&#223;e, s&#252;&#223;, gro&#223;,
-gem&#228;&#223;. auch bei den doppelvokalen tritt das &#223; in auf. also
-hei&#223;, wei&#223;, &#228;u&#223;erst, au&#223;en, genie&#223;en, flie&#223;en, flei&#223;ig.
-viel spa&#223; und weiterhin gen&#252;ssliches &#252;ben.
-er ma&#223; ab, das ma&#223; aller dinge,
-hass, muss, misslingen, essbar, gr&#246;&#223;er, sch&#246;&#223;linge, m&#228;&#223;ig,
-gleichm&#228;&#223;ig, das postschlie&#223;fach, expressg&#252;ter, man st&#246;&#223;t,
-    planm&#228;&#223;ig, regelm&#228;&#223;ig, gem&#228;&#223;, das gef&#228;&#223;, st&#246;&#223;e, die gr&#246;&#223;te</text></lesson><lesson><title>Capslock</title><newCharacters>ASDFJKL&#214;EIGHWORUTZQPVMNBC;X:Y_&#196;&#220;</newCharacters><text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
+m&#xFC;ssen, muss, schluss, kuss - aber - fu&#xDF;, f&#xFC;&#xDF;e, s&#xFC;&#xDF;, gro&#xDF;,
+gem&#xE4;&#xDF;. auch bei den doppelvokalen tritt das &#xDF; in auf. also
+hei&#xDF;, wei&#xDF;, &#xE4;u&#xDF;erst, au&#xDF;en, genie&#xDF;en, flie&#xDF;en, flei&#xDF;ig.
+viel spa&#xDF; und weiterhin gen&#xFC;ssliches &#xFC;ben.
+er ma&#xDF; ab, das ma&#xDF; aller dinge,
+hass, muss, misslingen, essbar, gr&#xF6;&#xDF;er, sch&#xF6;&#xDF;linge, m&#xE4;&#xDF;ig,
+gleichm&#xE4;&#xDF;ig, das postschlie&#xDF;fach, expressg&#xFC;ter, man st&#xF6;&#xDF;t,
+    planm&#xE4;&#xDF;ig, regelm&#xE4;&#xDF;ig, gem&#xE4;&#xDF;, das gef&#xE4;&#xDF;, st&#xF6;&#xDF;e, die gr&#xF6;&#xDF;te</text>
+    </lesson>
+    <lesson>
+      <title>Capslock</title>
+      <newCharacters>ASDFJKL&#xD6;EIGHWORUTZQPVMNBC;X:Y_&#xC4;&#xDC;</newCharacters>
+      <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
 LINKS GESCHRIEBEN. DABEI BLEIBEN AUCH PUNKT UND KOMMA, SO-
 WIE BINDESTRICHE ERHALTEN. IM FOLGENDEN BENUTZEN WIR DIESE
-TASTE NICHT MEHR, DA DAMIT NICHT DER &#220;BLICHE SCHREIBALLTAG
-BEW&#196;LTIGT WIRD. DIE BEIDEN ANDEREN UMSCHALTTASTEN WERDEN
+TASTE NICHT MEHR, DA DAMIT NICHT DER &#xDC;BLICHE SCHREIBALLTAG
+BEW&#xC4;LTIGT WIRD. DIE BEIDEN ANDEREN UMSCHALTTASTEN WERDEN
 JEWEILS VON DEM KLEINEN FINGER DER HAND BENUTZT, DIE EINEN
-K&#220;RZEREN WEG HAT. DAS IST IN DER REGEL DIE HAND, DIE F&#220;R
-DEN FOLGENDEN BUCHSTABEN NICHT BEN&#214;TIGT WIRD. DAMIT IST ES
-DANN AUCH M&#214;GLICH, ALLE ZEICHEN DER ZWEITBELEGUNG ZU TIP-
+K&#xDC;RZEREN WEG HAT. DAS IST IN DER REGEL DIE HAND, DIE F&#xDC;R
+DEN FOLGENDEN BUCHSTABEN NICHT BEN&#xD6;TIGT WIRD. DAMIT IST ES
+DANN AUCH M&#xD6;GLICH, ALLE ZEICHEN DER ZWEITBELEGUNG ZU TIP-
 PEN, ALSO AUCH DAS FRAGEZEICHEN.
-DIE ERSTE &#220;BUNG WIRD F&#220;R DIE UMSCHALTTASTE LINKS, DIE ZWEI-
-TE F&#220;R DIE UMSCHALTTASTE RECHTS SEIN. DANACH WIRD GEMISCHT.
-ACHTUNG, DIE FESTSTELLTASTE MUSS NUN NOCH EINMAL BET&#196;TIGT
-WERDEN. jetzt sollte das capslock-l&#228;mpchen aus sein.</text></lesson><lesson><title>Gro&#223;buchstaben (links)</title><newCharacters></newCharacters><text>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La
-Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</text></lesson><lesson><title>Gro&#223;buchstaben (rechts)</title><newCharacters></newCharacters><text>F&#246; F&#246; F&#246; F&#246; F&#246; F&#246; F&#246; F&#246; F&#246; F&#246; G&#246; G&#246; G&#246; G&#246; G&#246; B&#246; B&#246; B&#246; B&#246; B&#246;
-W&#246; W&#246; W&#246; W&#246; R&#228; R&#228; R&#228; R&#246; R&#246; G&#228; G&#228; F&#228; D&#228; S&#228; V&#228; V&#228; V&#246; S&#246; D&#228; D&#228;</text></lesson><lesson><title>Gro&#223;buchstaben</title><newCharacters></newCharacters><text>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank
+DIE ERSTE &#xDC;BUNG WIRD F&#xDC;R DIE UMSCHALTTASTE LINKS, DIE ZWEI-
+TE F&#xDC;R DIE UMSCHALTTASTE RECHTS SEIN. DANACH WIRD GEMISCHT.
+ACHTUNG, DIE FESTSTELLTASTE MUSS NUN NOCH EINMAL BET&#xC4;TIGT
+WERDEN. jetzt sollte das capslock-l&#xE4;mpchen aus sein.</text>
+    </lesson>
+    <lesson>
+      <title>Gro&#xDF;buchstaben (links)</title>
+      <newCharacters/>
+      <text>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La
+Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</text>
+    </lesson>
+    <lesson>
+      <title>Gro&#xDF;buchstaben (rechts)</title>
+      <newCharacters/>
+      <text>F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; F&#xF6; G&#xF6; G&#xF6; G&#xF6; G&#xF6; G&#xF6; B&#xF6; B&#xF6; B&#xF6; B&#xF6; B&#xF6;
+W&#xF6; W&#xF6; W&#xF6; W&#xF6; R&#xE4; R&#xE4; R&#xE4; R&#xF6; R&#xF6; G&#xE4; G&#xE4; F&#xE4; D&#xE4; S&#xE4; V&#xE4; V&#xE4; V&#xF6; S&#xF6; D&#xE4; D&#xE4;</text>
+    </lesson>
+    <lesson>
+      <title>Gro&#xDF;buchstaben</title>
+      <newCharacters/>
+      <text>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank
 Wort, Ort, Hort, Gehrung, Nahrung, Klarheit, Vergangenheit,
-Art, Hahn, Mahnung, Lohn, Sohn, Hohn, Keim, Kr&#246;nung, Krone,
+Art, Hahn, Mahnung, Lohn, Sohn, Hohn, Keim, Kr&#xF6;nung, Krone,
 Leine, Leim, Heim, Geheimnis, Verbannung, Bekanntmachungen,
-Training, die Tr&#228;ne, der Trost, trostlos, das Los, Losungen
+Training, die Tr&#xE4;ne, der Trost, trostlos, das Los, Losungen
 Die folgenden vier Lektionen werden aus ganz normalen Text-
-&#252;bungen bestehen, danach geht es mit den Sonder- und Zahl-
-zeichen weiter.</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>Linux - meine Freude
+&#xFC;bungen bestehen, danach geht es mit den Sonder- und Zahl-
+zeichen weiter.</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>Linux - meine Freude
 Es war ein ganz normaler Tag. Alles war wie immer. Ich kam
 aus der Schule und setzte mich an den PC. Homepage verwal-
-ten, Sch&#252;lerdaten aktualisieren, Unterricht vorbereiten,
+ten, Sch&#xFC;lerdaten aktualisieren, Unterricht vorbereiten,
 nebenbei ein paar MIDI-Files bearbeiten und E-Mail lesen.
 Mein Windows-PC ist eben gut ausgestattet. Doch dann ging
 es wieder los. Das Abholen der E-Mail dauerte satte drei
 Minuten. Als ich dann im Postfach sah, dass da genau eine
-nicht einmal sehr lange Mail reingekommen war, stand f&#252;r
+nicht einmal sehr lange Mail reingekommen war, stand f&#xFC;r
 mich der Umstieg fest. Linux musste her. Ich wusste nicht,
-was da auf mich zukommen w&#252;rde, doch das war mir egal. Es
+was da auf mich zukommen w&#xFC;rde, doch das war mir egal. Es
 konnte nur noch besser werden. Kostenlose Software, gute
 Internetanbindung, arbeiten auf verschiedenen Konsolen,
 es klang vielversprechend. Dann ging es los. Erwartungs-
@@ -485,76 +599,91 @@ voll packte ich meine SuSE 6.1 aus und begann sofort mit
 der Installation. Innerhalb eines Tages hatte ich alles
 wichtige, also auch die ISDN-Konfiguration, fertig.
 Einiges an meiner Hardware war problematisch, z.B. bekam
-ich die Soundkarte nicht gleich voll einsatzf&#228;hig, aber da
+ich die Soundkarte nicht gleich voll einsatzf&#xE4;hig, aber da
 ich nun sowieso erstmal mehrere Gigabyte an Software zu
-erkunden hatte, st&#246;rte mich das weniger.
-Eine vern&#252;nftige Mailkonfiguration habe ich erst Wochen
-sp&#228;ter eingerichtet, doch f&#252;r den Anfang tat es Netscape.
+erkunden hatte, st&#xF6;rte mich das weniger.
+Eine vern&#xFC;nftige Mailkonfiguration habe ich erst Wochen
+sp&#xE4;ter eingerichtet, doch f&#xFC;r den Anfang tat es Netscape.
 Inzwischen arbeite ich seit 10 Monaten mit Linux, und ich
 habe keinen Tag davon bereut. Ich habe wieder angefangen,
-B&#252;cher zu lesen, und meine F&#228;higkeit, mich auf ein Problem
+B&#xFC;cher zu lesen, und meine F&#xE4;higkeit, mich auf ein Problem
 zu konzentrieren, statt einfach drauf los zu arbeiten, ist
 irgendwie auch besser geworden. Dennoch gibt es noch sehr
-viel zu lernen.</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>Das Internet
+viel zu lernen.</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>Das Internet
 Das Internet ist in aller Munde. Alle wollen daran teil-
 haben, viele wollen daran verdienen. Selbst Boris ist, wie
-jeder wei&#223;, inzwischen drin. Wie aber alles ganz genau be-
+jeder wei&#xDF;, inzwischen drin. Wie aber alles ganz genau be-
 gann, wissen die wenigsten.
-In den sp&#228;ten sechziger Jahren begann die Advanced Research
+In den sp&#xE4;ten sechziger Jahren begann die Advanced Research
 Projects Agency des amerikanischen Verteidigungsministeri-
 ums, kurz ARPA genannt, mit der Finanzierung ein experimen-
 tellen Wide Area Network, kurz WAN, um damit wichtige For-
 schungsorganisationen in den Vereinigten Staaten von Ameri-
 ka zu verbinden. Dieses Computernetz wurde ARPAnet genannt.
-Das urspr&#252;ngliche Ziel bestand in der Freigabe teuerer und
+Das urspr&#xFC;ngliche Ziel bestand in der Freigabe teuerer und
 knapper Rechnerressourcen an Auftragnehmern der Regierung.
 Von Anfang an wurde das Netzwerk von den Benutzern aber auch
-f&#252;r die Zusammenarbeit, also der gemeinsamen Nutzung von Da-
+f&#xFC;r die Zusammenarbeit, also der gemeinsamen Nutzung von Da-
 teien und Software, dem Austausch von E-Mail und der gemein-
-samen Entwicklung und Forschung &#252;ber gemeinsam genutzte ent-
+samen Entwicklung und Forschung &#xFC;ber gemeinsam genutzte ent-
 fernte Computer, verwendet.
-In den fr&#252;hen achtziger Jahren wurde &#252;ber eine Protokoll-
+In den fr&#xFC;hen achtziger Jahren wurde &#xFC;ber eine Protokoll-
 Suite nachgedacht. Es entstand das Transmission Control Pro-
 tocol, Internet Protocol. Diese wurde im ARPAnet schnell
-Standard. Mit der Aufnahme dieses Protokolls in das popul&#228;re
+Standard. Mit der Aufnahme dieses Protokolls in das popul&#xE4;re
 BSD Unix-Betriebssystem, der University of California at
 Berkeley begann die Demokratisierung von Netzwerken. Es wur-
-den zun&#228;chst Universit&#228;ten verbunden, doch es dauerte nicht
+den zun&#xE4;chst Universit&#xE4;ten verbunden, doch es dauerte nicht
 lange, bis die in ein lokales Netzwerk eingebundenen Compu-
-ter &#252;ber das ARPAnat kommunizieren konnten. Das Netzwerk
+ter &#xFC;ber das ARPAnat kommunizieren konnten. Das Netzwerk
 wuchs und wuchs. Warens es anfangs noch eine Handvoll Hosts,
 so wurde es schnell ein Netz von Zehntausenden von Hosts.
-Das urspr&#252;ngliche ARPAnet wurde zum Backbone des Internet.</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>Lesung                                          A. Kalbitz
+Das urspr&#xFC;ngliche ARPAnet wurde zum Backbone des Internet.</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>Lesung                                          A. Kalbitz
 ----------------------------------------------------------
 Samstagabend, Feierabend. Beine hochlegen, abschlaffen,
-das miese Fernsehprogramm &#252;ber sich ergehen lassen, schla-
+das miese Fernsehprogramm &#xFC;ber sich ergehen lassen, schla-
 fen. Ein Leben lang berieselt von den Impressionen irgend-
 welcher Fernsehredakteure, Krankenhausserien - Ein Muss,
 zumindest, seit Dr. Brinkmann in der Schwarzwaldklinik zu
-Weltruhm vor der &#196;rzteschaft der Fernsehwelt gelangte.
-Aber da war doch noch was. Da gab es noch andere M&#246;glich-
+Weltruhm vor der &#xC4;rzteschaft der Fernsehwelt gelangte.
+Aber da war doch noch was. Da gab es noch andere M&#xF6;glich-
 keiten der Freizeitgestaltung. Beruhigt lehne ich mich zu-
-r&#252;ck und merke kaum, wie mir die Augen zu fielen.
-Es ist h&#246;chste Zeit. Gleich beginnt die Lesung, und unser-
+r&#xFC;ck und merke kaum, wie mir die Augen zu fielen.
+Es ist h&#xF6;chste Zeit. Gleich beginnt die Lesung, und unser-
 eins sitzt noch im Taxi und sucht die Eintrittskarten.
 Ich bin absolut kein Kafka-Freund, aber es ist mal was an-
 deres.
 Endlich - wir betreten den Saal und erwischen schnell noch
 einen Platz in der letzten Reihe. Es wird dunkel. Nur vorn
-auf der B&#252;hne strahlt ein greller Scheinwerfer auf das et-
+auf der B&#xFC;hne strahlt ein greller Scheinwerfer auf das et-
 was zu kleine Lesepult. Applaus. Von der Seite tritt ein
 Mann herein, den ich nicht kenne, der aber als Autor vor-
 gestellt wird, und der sein neuestes Werk auszugweise vor-
-lesen soll. Er setzt sich, r&#228;uspert sich noch einmal und
-bl&#228;ttert bed&#228;chtig in seinem Buch. Bei einem Lesezeichen
-h&#228;lt er inne, &#252;berfliegt die Seite, wirft noch einen Blick
+lesen soll. Er setzt sich, r&#xE4;uspert sich noch einmal und
+bl&#xE4;ttert bed&#xE4;chtig in seinem Buch. Bei einem Lesezeichen
+h&#xE4;lt er inne, &#xFC;berfliegt die Seite, wirft noch einen Blick
 in den Saal, als wolle er sagen - Achtung, es geht gleich
-los - und atmet tief ein, um zu lesen, als pl&#246;tzlich ein
-lautes Krachen den Saal erf&#252;llt. Das war kein Schuss,
-dachte ich gleich. Derartige Ger&#228;usche kennt man ja aus
+los - und atmet tief ein, um zu lesen, als pl&#xF6;tzlich ein
+lautes Krachen den Saal erf&#xFC;llt. Das war kein Schuss,
+dachte ich gleich. Derartige Ger&#xE4;usche kennt man ja aus
 den Aktionfilmen im Fernsehen. Der Stuhl eines Gastes kann
-auch nicht zusammengebrochen sein. Daf&#252;r war das Ger&#228;usch
-zu laut...</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>Was hat...                            A. Kalbitz
+auch nicht zusammengebrochen sein. Daf&#xFC;r war das Ger&#xE4;usch
+zu laut...</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>Was hat...                            A. Kalbitz
 ------------------------------------------------
 Was hat uns so verblendet,
 dass alles was wir schaffen,
@@ -567,15 +696,20 @@ warum da einer etwas tut,
 ob er es schafft, noch Hilfe braucht,
 am Ende wirds gemeinsam gehen.
 Was hat die Menschen kalt gemacht,
-dass mancher gleich dar&#252;ber lacht,
+dass mancher gleich dar&#xFC;ber lacht,
 wenn einem mal ein Missgeschick
-die R&#246;te auf die Wangen malt, er sich blamiert,
+die R&#xF6;te auf die Wangen malt, er sich blamiert,
 verletzt dann einfach resigniert.
 Was hat verdammt noch mal
 der Autor sich dabei gedacht,
 uns unser Dasein zu vermiesen,
 mit dummen Texten, Meinungen und ungeschickt
-gebastelten Gedichten, wie diesem.</text></lesson><lesson><title>&lt; und &gt;</title><newCharacters>&lt;&gt;</newCharacters><text>&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;
+gebastelten Gedichten, wie diesem.</text>
+    </lesson>
+    <lesson>
+      <title>&lt; und &gt;</title>
+      <newCharacters>&lt;&gt;</newCharacters>
+      <text>&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;
 &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt;  &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt; &lt; &gt;
 &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt; &gt;&lt;
 &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt; &gt;&gt; &lt;&lt;
@@ -583,126 +717,151 @@ Die Zeichen &lt; und &gt; werden als Operatoren benutzt.
 &lt; ist der Eingabeoperator und &gt; ist der Ausgabeoperator.
 Mit ls &gt; dateiname kann ich unter Linux eine Dateiliste
 mit allen Dateien des akuellen Verzeichnisses anlegen.
-Will dich eine Datei nicht &#252;berschreiben sondern Daten
-anh&#228;ngen, benutze ich &gt;&gt; als Operator.
+Will dich eine Datei nicht &#xFC;berschreiben sondern Daten
+anh&#xE4;ngen, benutze ich &gt;&gt; als Operator.
 In HTML-Quellen spielen die Zeichen &lt; und &gt; eine wesent-
-liche Rolle. Alle Tags, gesprochen: T&#228;gs, werden zwischen
+liche Rolle. Alle Tags, gesprochen: T&#xE4;gs, werden zwischen
 &lt; und &gt; eingeschlossen.
 Beispiele: &lt;html&gt; &lt;head&gt; &lt;body&gt; &lt;a href... &lt;img src...
 &lt;table&gt; &lt;hr&gt; &lt;br&gt; &lt;p&gt; &lt;li&gt; &lt;ol&gt; &lt;ul&gt;
 Auch in der XML-Syntax werden diese Zeichen verwendet um
 die Tags von den normalen Texten abzugrenzen.
-H&#228;ufig werden die Zeichen auch verwendet, um Unterschiede
+H&#xE4;ufig werden die Zeichen auch verwendet, um Unterschiede
 darzustellen. Daher stammen auch die Bezeichnungen:
-ist gr&#246;&#223;er als - f&#252;r &gt; und ist kleiner als - f&#252;r &lt;.
+ist gr&#xF6;&#xDF;er als - f&#xFC;r &gt; und ist kleiner als - f&#xFC;r &lt;.
 In ASCII-ART-Manier lassen die Zeichen sich ebenfalls gut
 verwenden. Beispiele dazu wird es in einer der Abschluss-
 lektionen geben.
-&lt;-&gt;&lt;-&lt;&gt;-&gt;&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;---&gt;&gt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;&gt;&gt;</text></lesson><lesson><title>1,!, ; und ?</title><newCharacters>1!;?</newCharacters><text>1! &#223;? 1! &#223;? 1! &#223;? 1&#223;!? ?1?&#223; !1?! 1&#223;!? ??!!1&#223;&#223;1 !&#223;!&#223;1??!&#223;!1
+&lt;-&gt;&lt;-&lt;&gt;-&gt;&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;---&gt;&gt;--&gt;&gt;-&lt;&lt;-&gt;&gt;-&lt;&lt;&gt;&gt;</text>
+    </lesson>
+    <lesson>
+      <title>1,!, ; und ?</title>
+      <newCharacters>1!;?</newCharacters>
+      <text>1! &#xDF;? 1! &#xDF;? 1! &#xDF;? 1&#xDF;!? ?1?&#xDF; !1?! 1&#xDF;!? ??!!1&#xDF;&#xDF;1 !&#xDF;!&#xDF;1??!&#xDF;!1
 .!? sind Interpunktionszeichen, die im Deutschen dazu ver-
 wendet werden, um zu signalisieren, dass es sich bei einem
 Satz um eine normale Aussage, einen Ausruf oder eine Frage
 handelt. Wer war das? Wieso machst Du das? Wo kommst Du
 denn her? Das alles sind typische Fragen, bei denen der
-Leser sofort wei&#223;, wie er sie betonen muss.
+Leser sofort wei&#xDF;, wie er sie betonen muss.
 Komm her! Sei leise! Hallo! Achtung! Das wiederum sind, so
-sagt das Interpunktionszeichen, Ausrufes&#228;tze. Sie werden
+sagt das Interpunktionszeichen, Ausrufes&#xE4;tze. Sie werden
 vom Leser ebenfalls deutlich anders gesprochen, als Frage-
-s&#228;tze oder normale S&#228;tze, die mit dem Punkt abgeschlossen
+s&#xE4;tze oder normale S&#xE4;tze, die mit dem Punkt abgeschlossen
 werden.
 Auf der Tastatur werden !?.&lt;&gt; als Sonderzeichen betrachtet,
 was eigentlich nur bedeuten soll, dass sie von den normalen
-Buchstaben unterscheiden werden m&#252;ssen. Ebenfalls unter-
+Buchstaben unterscheiden werden m&#xFC;ssen. Ebenfalls unter-
 schieden werden die Zahlzeichen, wie z.B. die 1. Aus Zahl-
 zeichen werden Zahlen gebildet:
-1 steht f&#252;r eins, 11 f&#252;r elf, 111 f&#252;r einhundertundelf.
-Verwendet man das Wort ein in Texten, wird es f&#252;r gew&#246;hn-
-lich als unbestimmter Artikel verwendet. Das l&#228;&#223;t sich
+1 steht f&#xFC;r eins, 11 f&#xFC;r elf, 111 f&#xFC;r einhundertundelf.
+Verwendet man das Wort ein in Texten, wird es f&#xFC;r gew&#xF6;hn-
+lich als unbestimmter Artikel verwendet. Das l&#xE4;&#xDF;t sich
 aber manchmal auch anders interpretieren: Werden kleine
-Mengen in Texten verwendet, schreibt man daf&#252;r h&#228;ufig die
-Zahlw&#246;rter ein, zwei oder drei. In Aufz&#228;hlungen oder bei
+Mengen in Texten verwendet, schreibt man daf&#xFC;r h&#xE4;ufig die
+Zahlw&#xF6;rter ein, zwei oder drei. In Aufz&#xE4;hlungen oder bei
 der Festlegung von Reihenfolgen hingegen benutzt man gern
 die Zahlzeichen: 1.; 1. Platz; 1. Durchlauf; 1. Datensatz.
-In HTML wird das Ausrufezeichen &#252;brigens verwendet, um
-Kommentare in die Quellen einzug&#252;gen, die dann sp&#228;ter in
+In HTML wird das Ausrufezeichen &#xFC;brigens verwendet, um
+Kommentare in die Quellen einzug&#xFC;gen, die dann sp&#xE4;ter in
 der Internetseite nicht zu sehen sind.
 &lt;!-- Dies ist ein Kommentar in einem HTML-Quelltext --&gt;
-Willst Du noch mehr &#252;ber die Bedeutung von ! und ? wissen?</text></lesson><lesson><title>5, %, 8 und (</title><newCharacters>5%8(</newCharacters><text>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
-58% liest man als achtundf&#252;nfzig Prozent. Prozent bedeutet
+Willst Du noch mehr &#xFC;ber die Bedeutung von ! und ? wissen?</text>
+    </lesson>
+    <lesson>
+      <title>5, %, 8 und (</title>
+      <newCharacters>5%8(</newCharacters>
+      <text>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+58% liest man als achtundf&#xFC;nfzig Prozent. Prozent bedeutet
 von Hundert.
 Berechne:
 58% von 1111 EUR.
 88% von 888 kg Mehl.
-%-Werte werden ben&#246;tigt, um den Anteil an einen bestimmten
+%-Werte werden ben&#xF6;tigt, um den Anteil an einen bestimmten
 Grundwert zu berechnen.
 In Perl wird das %-Zeichen benutzt, um einen Hash festzu-
 legen. %namen wird dann eine z.B. zweispaltige Liste mit
 Vor- und Nachnamen zugeordnet, die dann in dem Programm
 ausgelesen werden kann.
-In der Bash ist % ein Operator f&#252;r Modulus-Operationen.
+In der Bash ist % ein Operator f&#xFC;r Modulus-Operationen.
 Das entspricht dem Rest bei einer ganzzahligen Division.
-((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</text></lesson><lesson><title>2, 6, &amp;, 7 und /</title><newCharacters>26 &amp; 7 /</newCharacters><text>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58
+((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</text>
+    </lesson>
+    <lesson>
+      <title>2, 6, &amp;, 7 und /</title>
+      <newCharacters>26 &amp; 7 /</newCharacters>
+      <text>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58
 6 7 &amp; / 16/8 7/5 1/7 6/8 5/8 6/5 8/8 5/5 7/7 6/7 1/7 1/6 &amp;
-Internet &amp; Co.; Max Meier &amp; S&#246;hne; Grunewald &amp; Co. KG
-Das Kaufmanns-und &amp; begegnet uns bewu&#223;t oder unbewu&#223;t recht
-h&#228;ufig. Aber es wird nicht nur in Firmenbezeichnungen ver-
+Internet &amp; Co.; Max Meier &amp; S&#xF6;hne; Grunewald &amp; Co. KG
+Das Kaufmanns-und &amp; begegnet uns bewu&#xDF;t oder unbewu&#xDF;t recht
+h&#xE4;ufig. Aber es wird nicht nur in Firmenbezeichnungen ver-
 wendet.
 In der Bash dient das Kaufmanns-und als Operator.
 Ein &amp; bedeutet bitweises UND und
 ein &amp;&amp; bedeutet logisches UND.
 In 1&gt;&amp;2 wird die Standardausgabe eines Befehls auf die
 Standardfehlerausgabe umgeleitet.
-Der Slash / wird h&#228;ufig als Zeichen f&#252;r die Division ver-
-wendet. Unter LINUX ist es ein wesentliches Zeichen f&#252;r
+Der Slash / wird h&#xE4;ufig als Zeichen f&#xFC;r die Division ver-
+wendet. Unter LINUX ist es ein wesentliches Zeichen f&#xFC;r
 die Organisation der Verzeichnisstruktur. So ist / (root)
 das Wurzelverzeichnis, von dem aus in Unterverseichnisse
 verzweigt wird. /boot, /root, /opt, /usr, /var, /tmp,
 /etc, /bin sind Standardverzeichnisse in dieser Struktur.
-In HTML wird der Slash benutzt, um TAGs zu schlie&#223;en.
+In HTML wird der Slash benutzt, um TAGs zu schlie&#xDF;en.
 &lt;html&gt;
 &lt;head&gt;&lt;title&gt; Homepagetitel &lt;/title&gt;&lt;/head&gt;
 &lt;body&gt;
 Seitentext inclusive weiterer HTML-Befehle.
 &lt;/body&gt;
 &lt;/html&gt;
-Dies ist eine g&#252;ltige Grundstruktur einer HTML-Seite mit
-sehr wenig Inhalt.</text></lesson><lesson><title>4, $, 9 und )</title><newCharacters>4$9)</newCharacters><text>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
-Das $-Zeichen steht f&#252;r Dollar. Jedem ist klar, dass dieses
-Zeichen f&#252;r eine W&#228;hrung steht, die den Weltmarkt beherrst.
-Dies soll jetzt kein Text &#252;ber Umrechnungskurse werden. Die
-wechseln ja doch regelm&#228;&#223;ig. Stattdessen wollen wir auch
-f&#252;r dieses $-Zeichen nach weiteren Bedeutungen fahnden.
-Zun&#228;chst die Bash:
-$ steht f&#252;r Variablen- oder Befehlssubstitution.
-Beispiel f&#252;r Befehlssubstitution: Befehl1 $(Befehl2)
-Beispiele f&#252;r Variablensubstitution k&#246;nnen hier leider noch
+Dies ist eine g&#xFC;ltige Grundstruktur einer HTML-Seite mit
+sehr wenig Inhalt.</text>
+    </lesson>
+    <lesson>
+      <title>4, $, 9 und )</title>
+      <newCharacters>4$9)</newCharacters>
+      <text>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
+Das $-Zeichen steht f&#xFC;r Dollar. Jedem ist klar, dass dieses
+Zeichen f&#xFC;r eine W&#xE4;hrung steht, die den Weltmarkt beherrst.
+Dies soll jetzt kein Text &#xFC;ber Umrechnungskurse werden. Die
+wechseln ja doch regelm&#xE4;&#xDF;ig. Stattdessen wollen wir auch
+f&#xFC;r dieses $-Zeichen nach weiteren Bedeutungen fahnden.
+Zun&#xE4;chst die Bash:
+$ steht f&#xFC;r Variablen- oder Befehlssubstitution.
+Beispiel f&#xFC;r Befehlssubstitution: Befehl1 $(Befehl2)
+Beispiele f&#xFC;r Variablensubstitution k&#xF6;nnen hier leider noch
 nicht geschrieben werden, da dabei die geschweifte Klammer
 verwendet wird.
 Und nun Perl:
 In Perl lassen sich mit dem $-Zeichen ganz einfach Variablen
 festlegen.
 Dabei kann direkt von der Tastatur &lt;STDIN&gt; gelesen und damit
-die Variable gef&#252;llt werden:
+die Variable gef&#xFC;llt werden:
 $eingabe = &lt;STDIN&gt;;
 mit
 chomp($eingabe);
 wird das Newline-Zeichen am Ende der Eingabe entfernt.
 Dabei wird der Inhalt der Variablen $eingabe bereits ausge-
-lesen und verarbeitet.</text></lesson><lesson><title>3, &#167;, 0 und =</title><newCharacters>3&#167;0=</newCharacters><text>&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30=&#167;30
-134567890 098765431 !&#167;$%&amp;/()= =)(/&amp;%$&#167;! 890 60 470 160 3140
+lesen und verarbeitet.</text>
+    </lesson>
+    <lesson>
+      <title>3, &#xA7;, 0 und =</title>
+      <newCharacters>3&#xA7;0=</newCharacters>
+      <text>&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30=&#xA7;30
+134567890 098765431 !&#xA7;$%&amp;/()= =)(/&amp;%$&#xA7;! 890 60 470 160 3140
 ===========================================================
-&#167; - Paragraph
-Dieses Zeichen steht f&#252;r Recht und Ordnung auf der ganzen
+&#xA7; - Paragraph
+Dieses Zeichen steht f&#xFC;r Recht und Ordnung auf der ganzen
 Welt. Sie kennen das:
-&#167;1 Jeder macht seins.
-&#167;2 Wenn keine anderen Paragraphen entgegenstehen, gilt &#167;1!
+&#xA7;1 Jeder macht seins.
+&#xA7;2 Wenn keine anderen Paragraphen entgegenstehen, gilt &#xA7;1!
 ===========================================================
-Selbst das Wort Paragraphenreiter kommt nicht von ungef&#228;hr.
-Schlie&#223;lich sieht &#167; aus wie ein Seepferdchen.
+Selbst das Wort Paragraphenreiter kommt nicht von ungef&#xE4;hr.
+Schlie&#xDF;lich sieht &#xA7; aus wie ein Seepferdchen.
 ===========================================================
-Das = (in Worten: ist gleich) steht ebenfalls f&#252;r Gerech-
+Das = (in Worten: ist gleich) steht ebenfalls f&#xFC;r Gerech-
 tigkeit. Eine Gleichung ist nur dann eine wahre Aussage,
-wenn die Kr&#228;fte (Terme?, Werte?) auf beiden Seiten gerecht
+wenn die Kr&#xE4;fte (Terme?, Werte?) auf beiden Seiten gerecht
 verteilt sind.
  1+1=2
  2+2=4
@@ -710,45 +869,60 @@ verteilt sind.
  f(x)=3*x+7
 In der Programmierung nimmt man mit = oder == eine Zuwei-
 sung vor.
-Schlimmstenfalls l&#228;&#223;t sich das = aber sch&#246;n als Trennzei-
-chen f&#252;r Textabs&#228;tze verwenden.
-===========================================================</text></lesson><lesson><title>"</title><newCharacters>"</newCharacters><text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
+Schlimmstenfalls l&#xE4;&#xDF;t sich das = aber sch&#xF6;n als Trennzei-
+chen f&#xFC;r Textabs&#xE4;tze verwenden.
+===========================================================</text>
+    </lesson>
+    <lesson>
+      <title>"</title>
+      <newCharacters>"</newCharacters>
+      <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
 1234567890 0987654321 20 21 22 23 24 25 26 27 28 29 2222 2
 "Dies ist eine Aussage!"
-Die "G&#228;nsef&#252;&#223;chen" werden in der Schriftsprache verwendet,
-um w&#246;rtliche Rede deutlich zu machen. So kann man zum Bei-
-spiel ab sofort nicht nur sagen, dass Kafka dar&#252;ber etwas
+Die "G&#xE4;nsef&#xFC;&#xDF;chen" werden in der Schriftsprache verwendet,
+um w&#xF6;rtliche Rede deutlich zu machen. So kann man zum Bei-
+spiel ab sofort nicht nur sagen, dass Kafka dar&#xFC;ber etwas
 las, wie man etwas sagt, sondern man kann nun auch schrei-
 ben Kafka las:"Ich sage ihnen mal wie man das sagt!"
 Darauf antwortete das Publikum:"Nee, lass mal!"
-Wie in "G&#228;nsef&#252;&#223;chen" werden die "G&#228;nsef&#252;&#223;chen" manchmal
+Wie in "G&#xE4;nsef&#xFC;&#xDF;chen" werden die "G&#xE4;nsef&#xFC;&#xDF;chen" manchmal
 auch dazu verwendet, um eine nicht ganz korrekte aber ge-
-l&#228;ufige Bezeichnung zu verwenden. Schlie&#223;lich sehen es
-die G&#228;nse nicht gern, wenn man ihre F&#252;&#223;e mit einfachen An-
-f&#252;hrungsstrichen vergleicht.
-Eine Aussage im Computerbereich ist &#228;hnlich einer Aussage
-im literarischen Bereich h&#228;ufig in Anf&#252;hrungsstriche zu
+l&#xE4;ufige Bezeichnung zu verwenden. Schlie&#xDF;lich sehen es
+die G&#xE4;nse nicht gern, wenn man ihre F&#xFC;&#xDF;e mit einfachen An-
+f&#xFC;hrungsstrichen vergleicht.
+Eine Aussage im Computerbereich ist &#xE4;hnlich einer Aussage
+im literarischen Bereich h&#xE4;ufig in Anf&#xFC;hrungsstriche zu
 setzen. echo "Dies ist ein Text!" bringt in der Bash
 Dies ist ein Text!
 zum Vorschein. Eingebaut als Warnungen in Scripte in der
 Form
 echo "Konnte den User nicht anlegen!"
-F&#252;hrt das zu sinnvollen Ausgaben, die zur rechten Zeit
-das richtige sagen.</text></lesson><lesson><title>_, ^, &#176;, ' und `</title><newCharacters>_ ^ &#176; '  `</newCharacters><text>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
-&#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176; &#176;
+F&#xFC;hrt das zu sinnvollen Ausgaben, die zur rechten Zeit
+das richtige sagen.</text>
+    </lesson>
+    <lesson>
+      <title>_, ^, &#xB0;, ' und `</title>
+      <newCharacters>_ ^ &#xB0; '  `</newCharacters>
+      <text>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+&#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0; &#xB0;
 ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '
 ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `
-Heute werden Tagesh&#246;chsttemperaturen von 21&#176;C erwartet.
-Bei 0&#176;C liegt der Gefrierpunkt des Wassers.
-Wasser siedet bei 100 &#176;C.
+Heute werden Tagesh&#xF6;chsttemperaturen von 21&#xB0;C erwartet.
+Bei 0&#xB0;C liegt der Gefrierpunkt des Wassers.
+Wasser siedet bei 100 &#xB0;C.
 Das ^ ist ein Sonderzeichen, das z.B. beim Programmieren
-in C++ das Bit-Exclusive-ODER XOR repr&#228;sentiert.
+in C++ das Bit-Exclusive-ODER XOR repr&#xE4;sentiert.
 ^ ist dort also ein Operator.
 ` (Backquotes) werden in Perl wie in einer Shell dazu
-verwendet, Ausgaben eines Programms als Daten zu &#252;ber-
+verwendet, Ausgaben eines Programms als Daten zu &#xFC;ber-
 nehmen.
 $jetzt = "Die aktuelle Uhrzeit ist ".`date`
-foreach $_ (`who`) ...</text></lesson><lesson><title>+, *, # und '</title><newCharacters>+*#'</newCharacters><text>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*
+foreach $_ (`who`) ...</text>
+    </lesson>
+    <lesson>
+      <title>+, *, # und '</title>
+      <newCharacters>+*#'</newCharacters>
+      <text>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*
   3+3=6
   3*3=9
  #include &lt;gtk.h&gt;
@@ -762,55 +936,65 @@ Berechne!
   9*9*9*9=
   9+9+9+9=
 Rechenoperationen in der Mathematik:
-  + ist das Zeichen f&#252;r die Addition.
-  * ist das Zeichen f&#252;r Multiplikation.
+  + ist das Zeichen f&#xFC;r die Addition.
+  * ist das Zeichen f&#xFC;r Multiplikation.
 'Hier steht etwas drin!'
-In literarischen Texten wird das Zeichen ' h&#228;ufig daf&#252;r
-verwendet, um eine w&#246;rtliche Rede: ("Du hast doch gesagt,
+In literarischen Texten wird das Zeichen ' h&#xE4;ufig daf&#xFC;r
+verwendet, um eine w&#xF6;rtliche Rede: ("Du hast doch gesagt,
 dass ich den Film noch zuende sehen darf.") von Gedanken,
 die nicht ausgesprochen werden ('Immer muss ich um acht
 ins Bett! Das ist echt unfair!') zu unterscheiden.
 So kann man sehr sinnreiche Texte formulieren, in denen
 man genau darauf achten muss, was gesagt und was nur ge-
 dacht wurde.
-"Ein sch&#246;nes Kleid haben sie heute wiede an, Frau Meier!"
-'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</text></lesson><lesson><title>Zwischen&#252;bung</title><newCharacters></newCharacters><text>Sitzung                  frei erschwindelt von: A. Kalbitz
+"Ein sch&#xF6;nes Kleid haben sie heute wiede an, Frau Meier!"
+'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</text>
+    </lesson>
+    <lesson>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>Sitzung                  frei erschwindelt von: A. Kalbitz
 ==========================================================
-"Hast du dir das auch gut &#252;berlegt?" Rainer schaute zwei-
+"Hast du dir das auch gut &#xFC;berlegt?" Rainer schaute zwei-
 felnd auf Felix und man sah seinen Augen an, dass da nicht
 nur Zweifel, sondern auch besseres Wissen in dieser Frage
-lag. "&#196;h, ich dachte, ja,", kam Felix z&#246;gerlich mit der
+lag. "&#xC4;h, ich dachte, ja,", kam Felix z&#xF6;gerlich mit der
 Sprache raus, "wenn ich schon Linux auf dem Schulnetz fah-
-re, dann sollen auch die Sch&#252;ler die M&#246;glichkeit haben,
+re, dann sollen auch die Sch&#xFC;ler die M&#xF6;glichkeit haben,
 mit Linux zu arbeiten." Rainer sah immer noch skeptisch
 aus. "Dann bist Du aber erst einmal der Einzige, der das
-benutzen und den Sch&#252;lern verst&#228;ndlich machen kann."
+benutzen und den Sch&#xFC;lern verst&#xE4;ndlich machen kann."
 "Das ist schon klar, aber ich bin guter Hoffnung, das
-das System so nach und nach &#252;berzeugt!" -
+das System so nach und nach &#xFC;berzeugt!" -
 "Und die Kollegen?" - "Bekommen eine Schulung, wenn der
 Bedarf da ist." - "Na gut, wenn Du glaubst, dass das so
 machbar ist, dann gehen wir es an, ich bezweifle nur,
 dass du damit viele erreichen wirst." Felix grinste nun
-breit &#252;bers ganze Gesicht: "Warten wir es doch ab."
-Nun sah er aus, als h&#228;tte er ein As aus dem &#196;rmel gezogen.
-"Wir haben bisher niemanden dazu &#252;berredet, sich einen
-Computer "anzutun", und selbst unter den &#228;lteren Kollegen
+breit &#xFC;bers ganze Gesicht: "Warten wir es doch ab."
+Nun sah er aus, als h&#xE4;tte er ein As aus dem &#xC4;rmel gezogen.
+"Wir haben bisher niemanden dazu &#xFC;berredet, sich einen
+Computer "anzutun", und selbst unter den &#xE4;lteren Kollegen
 wird die Zahl derjenigen, die diese Technik akzeptieren
-nun doch immer gr&#246;&#223;er, warum soll sich dass denn mit dem
+nun doch immer gr&#xF6;&#xDF;er, warum soll sich dass denn mit dem
 interessantesten System, das die Branche zu bieten hat
-nicht bald &#228;hnlich einstellen. Letztendlich setzt sich die
+nicht bald &#xE4;hnlich einstellen. Letztendlich setzt sich die
 Neugierde doch durch." Nun grinste auch Rainer, "Na gut,
-ich kaufe mir schon mal f&#252;r meinen privaten Rechner eine
+ich kaufe mir schon mal f&#xFC;r meinen privaten Rechner eine
 neue Festplatte, damit ich dann mitreden kann, wenn es
-losgeht." - "Siehste! Es wirkt schon!" ;-)</text></lesson><lesson><title>&#178;, &#179;, {, [, ], }, \, @, ~ und |</title><newCharacters>&#178;&#179;{[]}\@~|</newCharacters><text>Drittbelegung: Das sind die Zeichen &#178; &#179; { [ ] } \ @ ~ |
+losgeht." - "Siehste! Es wirkt schon!" ;-)</text>
+    </lesson>
+    <lesson>
+      <title>&#xB2;, &#xB3;, {, [, ], }, \, @, ~ und |</title>
+      <newCharacters>&#xB2;&#xB3;{[]}\@~|</newCharacters>
+      <text>Drittbelegung: Das sind die Zeichen &#xB2; &#xB3; { [ ] } \ @ ~ |
 "Quadrat"-Zeichen="Hoch zwei":
-  f(x)=2x&#178;+2x+2
-  mm&#178;, cm&#178;, dm&#178;, m&#178;, km&#178;
-  f(x)=sin&#178;(x)+cos&#178;(x)
+  f(x)=2x&#xB2;+2x+2
+  mm&#xB2;, cm&#xB2;, dm&#xB2;, m&#xB2;, km&#xB2;
+  f(x)=sin&#xB2;(x)+cos&#xB2;(x)
 "Kubik"-Zeichen="Hoch drei":
-  f(x)=x&#179;+2x&#178;+x+1
-  mm&#179;, cm&#179;, m&#179;, km&#179;
-  1l=1dm&#179;
+  f(x)=x&#xB3;+2x&#xB2;+x+1
+  mm&#xB3;, cm&#xB3;, m&#xB3;, km&#xB3;
+  1l=1dm&#xB3;
 "geschweifte" und "eckige" Klammern:
   {} []
   y={3x*[2x-1]-4}
@@ -818,34 +1002,39 @@ losgeht." - "Siehste! Es wirkt schon!" ;-)</text></lesson><lesson><title>&#178;,
     verbose on
 "Backslash":
   \ wir verwendet, um eine Befehlszeile in einem
-  Script auf der foldenden Zeile weiterzuf&#252;hren.
+  Script auf der foldenden Zeile weiterzuf&#xFC;hren.
 "Klammeraffe":
   @ kommt in E-Mailadressen vor.
   moritz@musterdomain.de
   user@localhost
-  @ Wird z.B. in Perl f&#252;r zur Festlegung von
+  @ Wird z.B. in Perl f&#xFC;r zur Festlegung von
   Arrays oder als Feldplatzhalter verwendet.
-  @nonsens("Quatsch","Witz","Bl&#246;dsinn")
+  @nonsens("Quatsch","Witz","Bl&#xF6;dsinn")
   @&lt;&lt;&lt;&lt;&lt;&lt;&lt;
 "Tilde":
-  ~ dient z.B. standardm&#228;&#223;ig als Kennzeichnung f&#252;r
+  ~ dient z.B. standardm&#xE4;&#xDF;ig als Kennzeichnung f&#xFC;r
   Sicherheitskopien, die von ln angelegt werden.
 "Pipe":
-  | wird als arithmetischer Ausdruck f&#252;r bitweises
+  | wird als arithmetischer Ausdruck f&#xFC;r bitweises
   ODER z.B. in der bash verwendet.
   || hingegen kennzeichnet ein logisches ODER
-  |= ist ein ODER mit anschlie&#223;ender Zuweisung
+  |= ist ein ODER mit anschlie&#xDF;ender Zuweisung
   Mit | lassen sich Ausgaben eines Befehls in
   andere Anwendungen umleiten.
   ls *.jpg | less listet alle Dateien des aktuellen
   Verzeichnisses in less auf.
-Die Zeichen der Drittbelegung haben mit der Einf&#252;hrung des
+Die Zeichen der Drittbelegung haben mit der Einf&#xFC;hrung des
 Computers in das Leben der Schreibenden Einzug gehalten.
 Aus diesem Grund haben wir sie in den Kurs aufgenommen.
-Im urspr&#252;nglichen Zehnfinger-System gibt es keine
+Im urspr&#xFC;nglichen Zehnfinger-System gibt es keine
 Entsprechung, da auf alten Schreibmaschinen die &lt;Alt Gr&gt;-
 Taste nicht existiert.
-{&#178;&#178;&#178;} || {&#179;&#179;&#179;} || [&#178;&#178;&#178;] || [&#179;&#179;&#179;] || \\\ || @@@ || ~~~ ||</text></lesson><lesson><title>Geschafft!</title><newCharacters></newCharacters><text>/***************************************************************************
+{&#xB2;&#xB2;&#xB2;} || {&#xB3;&#xB3;&#xB3;} || [&#xB2;&#xB2;&#xB2;] || [&#xB3;&#xB3;&#xB3;] || \\\ || @@@ || ~~~ ||</text>
+    </lesson>
+    <lesson>
+      <title>Geschafft!</title>
+      <newCharacters/>
+      <text>/***************************************************************************
                           info.cpp  -  description
     begin                : Sun Jan 30 14:40:59 MET 2000
     copyright            : (C) 1999 by Daniel Reith
@@ -905,14 +1094,14 @@ const wxSize&amp; size =wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE, cons
       &lt;&lt; _("------------------\n")
       &lt;&lt; _("Version:\t") &lt;&lt; VERSION
       &lt;&lt; _("\nhttp://www.pingos.schulnetz.org/tipptrainer\n")
-      &lt;&lt; _("Ver&#246;ffentlicht unter der GPL 2.0\n")
+      &lt;&lt; _("Ver&#xF6;ffentlicht unter der GPL 2.0\n")
       &lt;&lt; _("\nAutoren:\n")
       &lt;&lt; "Andreas Kalbitz \n\t(felix@musik-workshop.de)\n"
       &lt;&lt; "Matthias Kleine \n\t(Matthias.Kleine@selflinux.de)\n"
       &lt;&lt; "Daniel Reith (DanR@gmx.de)\n"
       &lt;&lt; _("\nFeedback bitte an: \n\ttipptrainer@reith.8m.com");
   info_text-&gt;SetLabel(msg);
-  ok = new wxButton(this, OK, _("Schlie&#223;en"));
+  ok = new wxButton(this, OK, _("Schlie&#xDF;en"));
   wxLayoutConstraints *c2 = new wxLayoutConstraints;
   c2-&gt;centreX.SameAs(this, wxCentreX);
   c2-&gt;top.SameAs(canvas, wxBottom, 10);
@@ -927,7 +1116,7 @@ Info_Dialog::~Info_Dialog()
 {
 }
 //**********************************************************
-//* Fenster schlie&#223;en
+//* Fenster schlie&#xDF;en
 //**********************************************************
 void Info_Dialog::OnSchliessen(wxCommandEvent* event)
 {
@@ -951,4 +1140,7 @@ void MyCanvas::OnPaint(wxPaintEvent&amp; WXUNUSED(event))
   memDC.SelectObject(* logo);
   dc.Blit(5, 25, logo-&gt;GetWidth(), logo-&gt;GetHeight(), &amp; memDC, 0, 0, wxCOPY, TRUE);
  memDC.SelectObject(wxNullBitmap);
-}</text></lesson></lessons></course>
+}</text>
+    </lesson>
+  </lessons>
+</course>
