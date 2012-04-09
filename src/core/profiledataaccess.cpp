@@ -347,6 +347,51 @@ bool ProfileDataAccess::checkDbSchema()
         return false;
     }
 
+    db.exec("CREATE TABLE IF NOT EXISTS training_stats ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "profile_id INTEGER, "
+            "course_id TEXT, "
+            "lesson_id TEXT, "
+            "error_count INTEGER, "
+            "ellapsed_time INTEGER "
+            ")");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("CREATE TABLE IF NOT EXISTS training_stats_errors ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "stats_id INTEGER, "
+            "character TEXT, "
+            "count INT "
+            ")");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("CREATE TABLE IF NOT EXISTS course_progress ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "profile_id INTEGER, "
+            "course_id TEXT, "
+            "last_selected_lesson_id TEXT, "
+            "last_unlocked_lesson_id TEXT "
+            ")");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
     return true;
 }
 
