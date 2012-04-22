@@ -24,7 +24,7 @@ Item {
     id: screen
 
     property variant courses;
-    signal lessonSelected(variant course, variant lesson)
+    signal lessonSelected(variant course, variant lesson, variant profile)
 
     QtObject {
         id: d
@@ -112,7 +112,7 @@ Item {
                 courses: screen.courses
                 anchors.fill: parent
                 anchors.margins: 5
-                onLessonSelected: screen.lessonSelected(course, lesson)
+                onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
             }
 
             InitialProfileForm {

@@ -79,7 +79,9 @@ Item {
         visible: false
         onLessonSelected: {
             trainingScreen.reset()
+            trainingScreen.profile = profile
             trainingScreen.lesson = lesson
+            trainingScreen.course = course
             scoreScreen.lesson = lesson
             scoreScreen.course = course
             main.switchScreen(homeScreen, trainingScreen)

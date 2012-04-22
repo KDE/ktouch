@@ -24,6 +24,8 @@ Item {
     id: screen
 
     property KeyboardLayout keyboardLayout
+    property Profile profile
+    property Course course
     property Lesson lesson
 
     signal restartRequested()
@@ -174,6 +176,7 @@ Item {
                     }
                 }
                 onFinished: {
+                    profileDataAccess.saveTrainingStats(stats, screen.profile, screen.course.id, screen.lesson.id)
                     screen.finished()
                     screen.trainingFinished = true
                 }
