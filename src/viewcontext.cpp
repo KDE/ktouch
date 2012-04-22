@@ -53,14 +53,37 @@ QString ViewContext::findImage(QString imageName) const
     return path;
 }
 
-QString ViewContext::formatTime(QTime time)
+QString ViewContext::formatTime(const QTime& time)
 {
     return time.toString("mm:ss.zzz").left(7);
 }
 
-QString ViewContext::formatAccuracy(double accuracy)
+QString ViewContext::formatTimeDiff(const QTime& from, const QTime& to)
+{
+    const int diff = from.msecsTo(to);
+    const QTime diffTime = QTime(0, 0).addMSecs(diff > 0? diff: -diff);
+    return QString("%1 %2").arg(formatSign(diff), formatTime(diffTime));
+}
+
+QString ViewContext::formatAccuracy(qreal accuracy)
 {
     return QString("%1%").arg(100 * accuracy, 0, 'f', 1);
+}
+
+QString ViewContext::formatAccuracyDiff(qreal from, qreal to)
+{
+    const qreal diff = to - from;
+    const QString accuracy = formatAccuracy(diff > 0? diff: -diff);
+    return QString("%1 %2").arg(formatSign(diff), accuracy);
+}
+
+QString ViewContext::formatSign(qreal value)
+{
+    if (value > 0)
+        return "+";
+    if (value < 0)
+        return "-";
+    return QString::fromUtf8("\u00B1");
 }
 
 int ViewContext::getSeconds(QTime time)

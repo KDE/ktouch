@@ -123,12 +123,15 @@ Item {
                 spacing: 10
                 EllapsedTimeMeter {
                     ellapsedTime: stats.ellapsedTime
+                    referenceEllapsedTime: referenceStats.isValid? referenceStats.ellapsedTime: stats.ellapsedTime
                 }
                 CharactersPerMinuteMeter {
                     charactersPerMinute: stats.charactersPerMinute
+                    referenceCharactersPerMinute: referenceStats.isValid? referenceStats.charactersPerMinute: stats.charactersPerMinute
                 }
                 AccuracyMeter {
                     accuracy: stats.accuracy
+                    referenceAccuracy: referenceStats.isValid? referenceStats.accuracy: stats.accuracy
                 }
             }
         }

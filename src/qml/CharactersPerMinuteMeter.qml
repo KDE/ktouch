@@ -23,6 +23,7 @@ Item
     id: meter
 
     property int charactersPerMinute: 0
+    property int referenceCharactersPerMinute: 0
 
     width: childrenRect.width
     height: childrenRect.height
@@ -32,10 +33,10 @@ Item
             charactersPerMinute: meter.charactersPerMinute
         }
         DigitalMeter {
+            property int diff: meter.charactersPerMinute - meter.referenceCharactersPerMinute
             label: i18n("Strokes per minute")
             value: meter.charactersPerMinute
-            oldValue: "+/- 0"
+            referenceValue: formatSign(diff) + " " + (diff > 0? diff: -diff)
         }
     }
-
 }

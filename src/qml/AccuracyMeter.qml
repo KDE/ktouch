@@ -23,6 +23,7 @@ Item
     id: meter
 
     property real accuracy: 1.0
+    property real referenceAccuracy: 1.0
 
     width: childrenRect.width
     height: childrenRect.height
@@ -34,7 +35,7 @@ Item
         DigitalMeter {
             label: i18n("Hit ratio")
             value: formatAccuracy(meter.accuracy)
-            oldValue: "+/- 0.0%"
+            referenceValue: formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
         }
     }
 

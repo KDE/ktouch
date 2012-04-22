@@ -22,7 +22,8 @@ Item
 {
     property alias label: label.text
     property alias value: value.text;
-    property alias oldValue: oldValue.text
+    property alias referenceValue: referenceValue.text
+    property bool positiveDiffIsGood: true
 
     width: 202
     height: 102
@@ -51,9 +52,17 @@ Item
             font.bold: true
         }
         Text {
-            id: oldValue
+            function calcColor() {
+                if (text[0] === "+")
+                    return positiveDiffIsGood? "#006E28": "#BF0303"
+                if (text[0] === "-")
+                    return positiveDiffIsGood? "#BF0303": "#006E28"
+                return "#555"
+            }
+
+            id: referenceValue
             font.pixelSize: 15
-            color: "#555"
+            color: calcColor()
         }
     }
 }

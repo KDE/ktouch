@@ -24,6 +24,7 @@ Item
     id: meter
 
     property variant ellapsedTime
+    property variant referenceEllapsedTime
 
     width: childrenRect.width
     height: childrenRect.height
@@ -35,7 +36,8 @@ Item
         DigitalMeter {
             label: i18n("Ellapsed time")
             value: formatTime(meter.ellapsedTime)
-            oldValue: "+/- 00:00.0"
+            referenceValue: formatTimeDiff(meter.referenceEllapsedTime, meter.ellapsedTime)
+            positiveDiffIsGood: false
         }
     }
 }

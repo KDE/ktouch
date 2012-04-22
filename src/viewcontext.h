@@ -34,8 +34,11 @@ public:
     ~ViewContext();
     QString keyboardLayoutName() const;
     Q_INVOKABLE QString findImage(QString imageName) const;
-    Q_INVOKABLE QString formatTime(QTime time);
-    Q_INVOKABLE QString formatAccuracy(double accuracy);
+    Q_INVOKABLE QString formatTime(const QTime& time);
+    Q_INVOKABLE QString formatTimeDiff(const QTime& from, const QTime& to);
+    Q_INVOKABLE QString formatAccuracy(qreal accuracy);
+    Q_INVOKABLE QString formatAccuracyDiff(qreal from, qreal to);
+    Q_INVOKABLE QString formatSign(qreal value);
     Q_INVOKABLE int getSeconds(QTime time);
     Q_INVOKABLE int getMinutes(QTime time);
     Q_INVOKABLE void showMenu(int xPos, int yPos);
