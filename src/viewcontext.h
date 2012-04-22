@@ -33,14 +33,14 @@ public:
     ViewContext(QWidget* mainWindow, QObject *parent = 0);
     ~ViewContext();
     QString keyboardLayoutName() const;
-    Q_INVOKABLE QString findImage(QString imageName) const;
+    Q_INVOKABLE QString findImage(const QString& imageName) const;
     Q_INVOKABLE QString formatTime(const QTime& time);
     Q_INVOKABLE QString formatTimeDiff(const QTime& from, const QTime& to);
     Q_INVOKABLE QString formatAccuracy(qreal accuracy);
     Q_INVOKABLE QString formatAccuracyDiff(qreal from, qreal to);
     Q_INVOKABLE QString formatSign(qreal value);
-    Q_INVOKABLE int getSeconds(QTime time);
-    Q_INVOKABLE int getMinutes(QTime time);
+    Q_INVOKABLE int getSeconds(const QTime& time);
+    Q_INVOKABLE int getMinutes(const QTime& time);
     Q_INVOKABLE void showMenu(int xPos, int yPos);
 signals:
     void keyboardLayoutNameChanged();

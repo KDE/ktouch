@@ -42,7 +42,7 @@ QString ViewContext::keyboardLayoutName() const
     return X11Helper::getCurrentLayout().toString();
 }
 
-QString ViewContext::findImage(QString imageName) const
+QString ViewContext::findImage(const QString& imageName) const
 {
     QString relPath = QString("images/") + imageName;
     QString path = KGlobal::dirs()->findResource("appdata", relPath);
@@ -86,12 +86,12 @@ QString ViewContext::formatSign(qreal value)
     return QString::fromUtf8("\u00B1");
 }
 
-int ViewContext::getSeconds(QTime time)
+int ViewContext::getSeconds(const QTime& time)
 {
     return time.second();
 }
 
-int ViewContext::getMinutes(QTime time)
+int ViewContext::getMinutes(const QTime& time)
 {
     return time.minute();
 }
