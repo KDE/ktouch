@@ -81,6 +81,7 @@ Item {
         trainingWidget.reset()
         screen.trainingStarted = false
         screen.trainingFinished = true
+        profileDataAccess.loadReferenceTrainingStats(referenceStats, screen.profile, screen.course.id, screen.lesson.id)
     }
 
     function start() {
@@ -96,6 +97,10 @@ Item {
             if (timeIsRunning)
                 screen.trainingStarted = false
         }
+    }
+
+    TrainingStats {
+        id: referenceStats
     }
 
     PlasmaCore.Svg {

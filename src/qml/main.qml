@@ -78,7 +78,6 @@ Item {
         courses: main.courses
         visible: false
         onLessonSelected: {
-            trainingScreen.reset()
             trainingScreen.profile = profile
             trainingScreen.lesson = lesson
             trainingScreen.course = course
