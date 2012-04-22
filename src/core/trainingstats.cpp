@@ -26,6 +26,7 @@ TrainingStats::TrainingStats(QObject* parent) :
     m_charactersTyped(0),
     m_ellapsedTime(0),
     m_errorCount(0),
+    m_isValid(true),
     m_startTime(0),
     m_updateTimer(new QTimer(this))
 {

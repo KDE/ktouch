@@ -27,6 +27,7 @@
 #include <kdebug.h>
 
 #include "profile.h"
+#include "trainingstats.h"
 
 ProfileDataAccess::ProfileDataAccess(QObject *parent) :
     QObject(parent),
@@ -246,6 +247,155 @@ int ProfileDataAccess::indexOfProfile(Profile *profile)
     return -1;
 }
 
+void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile *profile, const QString &courseId, const QString &lessonId)
+{
+    stats->setCharactersTyped(0);
+    stats->setEllapsedTime(QTime());
+    stats->setErrorCount(0);
+    stats->setErrorMap(QMap<QString, int>());
+    stats->setIsValid(false);
+
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return;
+
+    QSqlQuery selectQuery;
+
+    if (!selectQuery.prepare("SELECT id, characters_typed, error_count, ellapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1"))
+    {
+        kWarning() <<  selectQuery.lastError().text();
+        raiseError(selectQuery.lastError());
+        return;
+    }
+
+    selectQuery.bindValue(0, profile->id());
+    selectQuery.bindValue(1, courseId);
+    selectQuery.bindValue(2, lessonId);
+
+    if (!selectQuery.exec())
+    {
+        kWarning() <<  selectQuery.lastError().text();
+        raiseError(selectQuery.lastError());
+        return;
+    }
+
+    if (!selectQuery.next())
+        return;
+
+    const int statsId = selectQuery.value(0).toInt();
+    stats->setCharactersTyped(selectQuery.value(1).toUInt());
+    stats->setErrorCount(selectQuery.value(2).toUInt());
+    stats->setEllapsedTime(selectQuery.value(3).toInt());
+
+    QSqlQuery errorSelectQuery;
+
+    errorSelectQuery.prepare("SELECT character, count FROM training_stats_errors WHERE stats_id = ?");
+
+    errorSelectQuery.bindValue(0, statsId);
+
+    if (!errorSelectQuery.exec())
+    {
+        kWarning() <<  errorSelectQuery.lastError().text();
+        raiseError(errorSelectQuery.lastError());
+        return;
+    }
+
+    QMap<QString, int> errorMap;
+
+    while (errorSelectQuery.next())
+    {
+        const QString character = errorSelectQuery.value(0).toString();
+        const int errorCount = errorSelectQuery.value(1).toInt();
+        errorMap.insert(character, errorCount);
+    }
+
+    stats->setErrorMap(errorMap);
+    stats->setIsValid(true);
+}
+
+void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile, const QString &courseId, const QString &lessonId)
+{
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+    QSqlQuery addQuery(db);
+
+    if (!addQuery.prepare("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, ellapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)"))
+    {
+        kWarning() <<  addQuery.lastError().text();
+        raiseError(addQuery.lastError());
+        return;
+    }
+    addQuery.bindValue(0, profile->id());
+    addQuery.bindValue(1, courseId);
+    addQuery.bindValue(2, lessonId);
+    addQuery.bindValue(3, QDateTime::currentMSecsSinceEpoch());
+    addQuery.bindValue(4, stats->charactesTyped());
+    addQuery.bindValue(5, stats->errorCount());
+    const int rawEllapsedTime = QTime(0, 0).msecsTo(stats->ellapsedTime());
+    addQuery.bindValue(6, rawEllapsedTime);
+
+    if (!addQuery.exec())
+    {
+        kWarning() <<  addQuery.lastError().text();
+        raiseError(addQuery.lastError());
+        return;
+    }
+
+    QSqlQuery idQuery = db.exec("SELECT last_insert_rowid()");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+
+    idQuery.next();
+    int statsId = idQuery.value(0).toInt();
+
+    QSqlQuery addErrorsQuery(db);
+
+    if (!addErrorsQuery.prepare("INSERT INTO training_stats_errors (stats_id, character, count) VALUES (?, ?, ?)"))
+    {
+        kWarning() <<  addErrorsQuery.lastError().text();
+        raiseError(addErrorsQuery.lastError());
+        return;
+    }
+
+    QMapIterator<QString, int> errorIterator(stats->errorMap());
+    while(errorIterator.hasNext())
+    {
+        errorIterator.next();
+        addErrorsQuery.bindValue(0, statsId);
+        addErrorsQuery.bindValue(1, errorIterator.key());
+        addErrorsQuery.bindValue(2, errorIterator.value());
+
+        if (!addErrorsQuery.exec())
+        {
+            kWarning() <<  addErrorsQuery.lastError().text();
+            raiseError(addErrorsQuery.lastError());
+            return;
+        }
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+}
+
 QString ProfileDataAccess::errorMessage() const
 {
     return m_errorMessage;
@@ -352,6 +502,8 @@ bool ProfileDataAccess::checkDbSchema()
             "profile_id INTEGER, "
             "course_id TEXT, "
             "lesson_id TEXT, "
+            "date INT, "
+            "characters_typed INTEGER, "
             "error_count INTEGER, "
             "ellapsed_time INTEGER "
             ")");
@@ -367,7 +519,7 @@ bool ProfileDataAccess::checkDbSchema()
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "stats_id INTEGER, "
             "character TEXT, "
-            "count INT "
+            "count INTEGER "
             ")");
 
     if (db.lastError().isValid())

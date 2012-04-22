@@ -24,14 +24,17 @@
 class QSqlDatabase;
 class QSqlError;
 class Profile;
+class TrainingStats;
 
 class ProfileDataAccess : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int profileCount READ profileCount NOTIFY profileCountChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
+
 public:
     explicit ProfileDataAccess(QObject* parent = 0);
+
     Q_INVOKABLE void loadProfiles();
     int profileCount() const;
     Q_INVOKABLE Profile* profile(unsigned int index);
@@ -40,10 +43,16 @@ public:
     Q_INVOKABLE void updateProfile(unsigned int index);
     Q_INVOKABLE void removeProfile(unsigned int index);
     Q_INVOKABLE int indexOfProfile(Profile* profile);
+
+    Q_INVOKABLE void loadReferenceTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId);
+    Q_INVOKABLE void saveTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId);
+
     QString errorMessage() const;
+
 signals:
     void profileCountChanged();
     void errorMessageChanged();
+
 private:
     QSqlDatabase database();
     bool checkDbSchema();

@@ -33,6 +33,7 @@ class TrainingStats : public QObject
     Q_PROPERTY(unsigned int charactesTyped READ charactesTyped WRITE setCharactersTyped NOTIFY statsChanged)
     Q_PROPERTY(QTime ellapsedTime READ ellapsedTime WRITE setEllapsedTime NOTIFY statsChanged)
     Q_PROPERTY(unsigned int errorCount READ errorCount NOTIFY statsChanged)
+    Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
     Q_PROPERTY(float accuracy READ accuracy NOTIFY statsChanged)
     Q_PROPERTY(int charactersPerMinute READ charactersPerMinute NOTIFY statsChanged)
     Q_PROPERTY(bool timeIsRunning READ timeIsRunning NOTIFY statsChanged)
@@ -64,9 +65,18 @@ public:
         return QTime(0, 0).addMSecs(m_ellapsedTime);
     }
 
-    void setEllapsedTime(QTime& ellapsedTime)
+    void setEllapsedTime(const QTime& ellapsedTime)
     {
         quint64 msec = ellapsedTime.msec();
+        if (msec != m_ellapsedTime)
+        {
+            m_ellapsedTime = msec;
+            emit statsChanged();
+        }
+    }
+
+    void setEllapsedTime(const quint64& msec)
+    {
         if (msec != m_ellapsedTime)
         {
             m_ellapsedTime = msec;
@@ -77,6 +87,38 @@ public:
     unsigned int errorCount() const
     {
         return m_errorCount;
+    }
+
+    void setErrorCount(unsigned int errorCount)
+    {
+        if (errorCount != m_errorCount) {
+            m_errorCount = errorCount;
+            emit statsChanged();
+        }
+    }
+
+    bool isValid() const
+    {
+        return m_isValid;
+    }
+
+    void setIsValid(bool isValid)
+    {
+        if (isValid != m_isValid)
+        {
+            m_isValid = isValid;
+            emit isValidChanged();
+        }
+    }
+
+    QMap<QString, int> errorMap() const
+    {
+        return m_errorMap;
+    }
+
+    void setErrorMap(const QMap<QString, int>& errorMap)
+    {
+        m_errorMap = errorMap;
     }
 
     bool timeIsRunning() const
@@ -93,6 +135,7 @@ public:
 
 signals:
     void statsChanged();
+    void isValidChanged();
 
 private:
     Q_SLOT void update();
@@ -100,6 +143,7 @@ private:
     unsigned int m_charactersTyped;
     quint64 m_ellapsedTime;
     unsigned int m_errorCount;
+    bool m_isValid;
     QMap<QString, int> m_errorMap;
     quint64 m_startTime;
     QTimer* m_updateTimer;
