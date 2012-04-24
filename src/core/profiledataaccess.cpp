@@ -396,6 +396,99 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     }
 }
 
+QString ProfileDataAccess::courseProgress(Profile* profile, const QString& courseId, CourseProgressType type)
+{
+    bool idOk;
+    int id = findCourseProgressId(profile, courseId, type, &idOk);
+
+    if (!idOk || id == -1)
+        return QString();
+
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return QString();
+
+    QSqlQuery selectQuery;
+
+    selectQuery.prepare("SELECT lesson_id FROM course_progress WHERE id = ?");
+
+    selectQuery.bindValue(0, id);
+
+    if (!selectQuery.exec())
+    {
+        kWarning() <<  selectQuery.lastError().text();
+        raiseError(selectQuery.lastError());
+        return QString();
+    }
+
+    selectQuery.next();
+    return selectQuery.value(0).toString();
+}
+
+void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* profile, const QString& courseId, CourseProgressType type)
+{
+    bool idOk;
+    int id = findCourseProgressId(profile, courseId, type, &idOk);
+
+    if (!idOk)
+        return;
+
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+
+    if (id == -1)
+    {
+        QSqlQuery insertQuery;
+
+        insertQuery.prepare("INSERT INTO course_progress (profile_id, course_id, type, lesson_id) VALUES (?, ?, ?, ?)");
+
+        insertQuery.bindValue(0, profile->id());
+        insertQuery.bindValue(1, courseId);
+        insertQuery.bindValue(2, type);
+        insertQuery.bindValue(3, lessonId);
+
+        if (!insertQuery.exec())
+        {
+            kWarning() <<  insertQuery.lastError().text();
+            raiseError(insertQuery.lastError());
+            return;
+        }
+    }
+    else
+    {
+        QSqlQuery updateQuery;
+
+        updateQuery.prepare("UPDATE course_progress SET lesson_id = ? WHERE id = ?");
+
+        updateQuery.bindValue(0, lessonId);
+        updateQuery.bindValue(1, id);
+
+        if (!updateQuery.exec())
+        {
+            kWarning() <<  updateQuery.lastError().text();
+            raiseError(updateQuery.lastError());
+            return;
+        }
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return;
+    }
+}
+
 QString ProfileDataAccess::errorMessage() const
 {
     return m_errorMessage;
@@ -533,8 +626,8 @@ bool ProfileDataAccess::checkDbSchema()
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "profile_id INTEGER, "
             "course_id TEXT, "
-            "last_selected_lesson_id TEXT, "
-            "last_unlocked_lesson_id TEXT "
+            "type INTEGER, "
+            "lesson_id TEXT "
             ")");
 
     if (db.lastError().isValid())
@@ -551,4 +644,38 @@ void ProfileDataAccess::raiseError(const QSqlError& error)
 {
     m_errorMessage = QString("%1: %2").arg(error.driverText(), error.databaseText());
     emit errorMessageChanged();
+}
+
+int ProfileDataAccess::findCourseProgressId(Profile* profile, const QString& courseId, CourseProgressType type, bool* ok)
+{
+    *ok = false;
+
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return -1;
+
+    QSqlQuery findQuery;
+
+    findQuery.prepare("SELECT id FROM course_progress WHERE profile_id = ? AND course_id = ? AND type = ? LIMIT 1");
+
+    findQuery.bindValue(0, profile->id());
+    findQuery.bindValue(1, courseId);
+    findQuery.bindValue(2, type);
+
+    if (!findQuery.exec())
+    {
+        kWarning() << findQuery.lastError().text();
+        raiseError(findQuery.lastError());
+        return -1;
+    }
+
+    *ok = true;
+
+    if (!findQuery.next())
+    {
+        return -1;
+    }
+
+    return findQuery.value(0).toInt();
 }

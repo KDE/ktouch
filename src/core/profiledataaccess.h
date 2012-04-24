@@ -31,8 +31,15 @@ class ProfileDataAccess : public QObject
     Q_OBJECT
     Q_PROPERTY(int profileCount READ profileCount NOTIFY profileCountChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
+    Q_ENUMS(CourseProgressType)
 
 public:
+    enum CourseProgressType
+    {
+        LastUnlockedLesson = 1,
+        LastSelectedLesson = 2
+    };
+
     explicit ProfileDataAccess(QObject* parent = 0);
 
     Q_INVOKABLE void loadProfiles();
@@ -47,6 +54,9 @@ public:
     Q_INVOKABLE void loadReferenceTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId);
     Q_INVOKABLE void saveTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId);
 
+    Q_INVOKABLE QString courseProgress(Profile* profile, const QString& courseId, CourseProgressType type);
+    Q_INVOKABLE void saveCourseProgress(const QString& lessonId, Profile* profile, const QString& courseId, CourseProgressType type);
+
     QString errorMessage() const;
 
 signals:
@@ -57,6 +67,7 @@ private:
     QSqlDatabase database();
     bool checkDbSchema();
     void raiseError(const QSqlError& error);
+    int findCourseProgressId(Profile* profile, const QString &courseId, CourseProgressType type, bool* ok);
     QString m_errorMessage;
     QList<Profile*> m_profiles;
 };
