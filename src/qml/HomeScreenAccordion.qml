@@ -24,6 +24,7 @@ Column {
     id: item
 
     property variant courses;
+    property Profile profile;
     signal lessonSelected(variant course, variant lesson)
 
     property variant boxes: [];
@@ -86,6 +87,7 @@ Column {
             onActivated: activateBox(index)
             content: LessonSelector {
                 course: courses[index]
+                profile: item.profile
                 onLessonSelected: item.lessonSelected(course, lesson)
             }
         }

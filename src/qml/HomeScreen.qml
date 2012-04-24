@@ -110,6 +110,7 @@ Item {
                 id: homeScreenAccordion
                 opacity: 1 - initialProfileForm.opacity
                 courses: screen.courses
+                profile: d.profile
                 anchors.fill: parent
                 anchors.margins: 5
                 onLessonSelected: screen.lessonSelected(course, lesson, d.profile)

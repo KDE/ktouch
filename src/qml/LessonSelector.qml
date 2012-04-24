@@ -22,8 +22,26 @@ import ktouch 1.0
 
 Item {
     id: item
+    property Profile profile
     property variant course
     signal lessonSelected(variant lesson)
+
+    function selectLastLesson() {
+        if (!course) return;
+        if (!profile) return;
+        var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastSelectedLesson);
+        if (lessonId !== "") {
+            for (var index = 0; index < course.lessonCount; index++) {
+                if (course.lesson(index).id === lessonId) {
+                    list.currentIndex = index;
+                    break;
+                }
+            }
+        }
+    }
+
+    onProfileChanged: selectLastLesson()
+    onCourseChanged: selectLastLesson()
 
     Row {
         anchors.fill: parent
@@ -45,6 +63,7 @@ Item {
                     onSelected: list.currentIndex = index
                     title: item.course.lesson(index).title
                 }
+                onModelChanged: selectLastLesson()
             }
 
             PlasmaComponents.ScrollBar {
@@ -77,7 +96,11 @@ Item {
                     text: i18n("Start training")
                     enabled: list.currentItem !== null
                     iconSource: "go-next-view"
-                    onClicked: lessonSelected(item.course.lesson(list.currentIndex))
+                    onClicked: {
+                        var lesson = item.course.lesson(list.currentIndex)
+                        profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
+                        lessonSelected(lesson)
+                    }
                 }
             }
         }
