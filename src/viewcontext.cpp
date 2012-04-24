@@ -25,7 +25,7 @@
 ViewContext::ViewContext(QWidget* mainWindow, QObject* parent) :
     QObject(parent),
     m_mainWindow(mainWindow),
-    m_XEventNotifier(new XEventNotifier(m_mainWindow))
+    m_XEventNotifier(new XEventNotifier())
 {
     m_XEventNotifier->start();
     connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
@@ -35,6 +35,7 @@ ViewContext::~ViewContext()
 {
     disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
     m_XEventNotifier->stop();
+    delete m_XEventNotifier;
 }
 
 QString ViewContext::keyboardLayoutName() const
