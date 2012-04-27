@@ -77,6 +77,7 @@ Item {
         anchors.fill: parent
         courses: main.courses
         visible: false
+        focus: true
         onLessonSelected: {
             trainingScreen.profile = profile
             trainingScreen.lesson = lesson
@@ -154,7 +155,10 @@ Item {
             easing.type: Easing.InQuad
         }
         ScriptAction {
-            script: switchScreenAnimation.to.start()
+            script: {
+                switchScreenAnimation.to.start()
+                switchScreenAnimation.to.forceActiveFocus()
+            }
         }
     }
 }
