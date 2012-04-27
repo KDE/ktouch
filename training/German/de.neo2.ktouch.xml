@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <KTouchLecture>
  <Title>German (Neo 2 keyboard layout)</Title>
- <Comment>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com> inspiriert durch die Vorlage von Hanno Behrens
+ <Comment>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com> inspiriert durch die Vorlage von Hanno Behrens. Fehlerkorrektur von Hans Meine in 2012.
 Homepage: http://neo-layout.org
 </Comment>
  <FontSuggestions>Sans Serif</FontSuggestions>
@@ -237,7 +237,7 @@ Homepage: http://neo-layout.org
    <Line>handtuch handtuch chicago chicago chirurg chirurg heucheln heucheln hecheln hecheln hechten hechten</Line>
    <Line>chlor chlor chor chor hindurch hindurch hochachtung hochachtung hut hut hat hat hinter hinter heiter heiter</Line>
    <Line>in celle rennt ein chirurg hundert hunden hinterher und ein herr hat alle haare nach china oder chicago getan</Line>
-   <Line>der chor heuelt heute die hochachtung heiter runter der heilige lehrer hat lange gehauen der code hat chancen</Line>
+   <Line>der chor heult heute die hochachtung heiter runter der heilige lehrer hat lange gehauen der code hat chancen</Line>
    <Line>die helle haut der hechte nun hat ein taucher den hecht hundert heere hatten ein handtuch oder eine chance</Line>
    <Line>gina rennt nach china ohne chirurg und hund ohne grund geht licht an lege oder halte die uhr den herren hin</Line>
    <Line>nie hing dort an den nagel eine uhr oder halogenlicht die charta der heiligen hochachtung hing da heute dran</Line>
@@ -299,7 +299,7 @@ Homepage: http://neo-layout.org
    <Line>lese das und erledige die genannten sachen sonst haue ich dich richtig lange durch</Line>
   </Level>
   <Level>
-   <NewCharsLabel>Wichtige Konsonantn: w und k</NewCharsLabel>
+   <NewCharsLabel>Wichtige Konsonanten: w und k</NewCharsLabel>
    <NewCharacters>wk</NewCharacters>
    <Line>ece ewe ewe ewe ece ewe ece ewe ece ewe ewe ewe ece ewe ece nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn nkn nhn</Line>
    <Line>ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo nkd nkt nkr nkn nks nkd nkt nkr nkn nks nkd nkt nkr nkn nks</Line>
@@ -427,7 +427,7 @@ Homepage: http://neo-layout.org
    <Line>sitzte sitzte sitzte sitzte ritzte ritzte ritzte ritzte letzte letzte letzte letzte</Line>
    <Line>herzen herzen herzen scherzen scherzen scherzen schmerzen schmerzen schmerzen schmerzen</Line>
    <Line>aber aber aber aber bald bald bald bald bann bann bann bann blau blau blau blau</Line>
-   <Line>beide beide beide beide klebet klebet klebet klebet beiden beiden klebet klebt</Line>
+   <Line>beide beide beide beide klebet klebet klebet klebet beiden beiden klebet klebet</Line>
    <Line>bekam bekam bekam bekam liebe liebe liebe liebe dabei dabei dabei dabei bitte bitte bitte bitte</Line>
    <Line>zaubern zaubern zaubern zebra zebra zebra zauberstab zauberstab zauberstab zeilenumbruch zeilenumbruch zeilenumbruch</Line>
    <Line>badezimmer badezimmer badezimmer beelzebub beelzebub beelzebub benzinpumpe benzinpumpe benzinpumpe besitzen besitzen besitzen</Line>
@@ -736,7 +736,7 @@ Homepage: http://neo-layout.org
    <Line>Zink Zink Zink Zink Zauber Zauber Zauber Zauber Zahl Zahl Zahl Zahl</Line>
    <Line>Partei Partei Partei Partei Pech Pech Pech Pech Papagei Papagei Papagei Papagei</Line>
    <Line>Wasser Wasser Wasser Wasser Werbung Werbung Werbung Werbung Witz Witz Witz Witz</Line>
-   <Line>Celsius Celsius Celsius Celsius Chemie Chemie Chemie Chemie Coktail Coktail Coktail Coktail</Line>
+   <Line>Celsius Celsius Celsius Celsius Chemie Chemie Chemie Chemie Cocktail Cocktail Cocktail Cocktail</Line>
    <Line>Liebe Liebe Liebe Liebe Leben Leben Leben Leben Lust Lust Lust Lust</Line>
   </Level>
   <Level>
@@ -749,7 +749,7 @@ Homepage: http://neo-layout.org
    <Line>Zahl zahlen Zahl zahlen Ziel zielen Ziel zielen Zelt zelten Zelt zelten</Line>
    <Line>Platz platzen Platz platzen Park parken Park parken Predigt predigen Predigt predigen</Line>
    <Line>Werbung werben Werbung werben Wechsel wechseln Wechsel wechseln Wagen wagen Wagen wagen</Line>
-   <Line>Chaot chaotisch Chaot caotisch Charme charmant Charme charmant Chronik chronisch Chronik chronisch</Line>
+   <Line>Chaot chaotisch Chaot chaotisch Charme charmant Charme charmant Chronik chronisch Chronik chronisch</Line>
    <Line>Lutscher lutschen Lutscher lutschen Leben leben Leben leben Laden laden Laden laden</Line>
    <Line>Das Eisen, die Eule, das Essen. Der Esel, die Eile, die Eier. Die Ebbe, die Ehre, das Eis. Der Eid, die Esche, der Enkel.</Line>
    <Line>Der Abend, die Aula, die Arbeit. Das Alter die Antwort, die Angst. Der Angeber, die Akte, der Anfang.</Line>
@@ -759,42 +759,42 @@ Homepage: http://neo-layout.org
    <Line>Das Zink, der Zauber, die Zahl. Die Zeit, das Zeug, das Ziel. Der Zahn, der Zaun, das Zelt.</Line>
    <Line>Die Partei, das Pech, der Papagei. Der Papst, der Polizist, der Pol. Die Peitsche, der Pilz, die Poesie.</Line>
    <Line>Das Wasser, die Werbung, der Witz. Die Ware, das Wehr, die Woge. Der Wurm, die Wurst, das Wachs.</Line>
-   <Line>Der Chinese, die Chemie, der Coktail. Der Charme, die Chance, der Chirurg. Das Cello, die Chronik, der Chaot.</Line>
+   <Line>Der Chinese, die Chemie, der Cocktail. Der Charme, die Chance, der Chirurg. Das Cello, die Chronik, der Chaot.</Line>
    <Line>Die Liebe, das Leben, die Lust. Das Lager, die Lunge, das Laub. Das Lenkrad, die Leere, das Lachen.</Line>
   </Level>
   <Level>
    <NewCharsLabel>Kurze Trainingssätze</NewCharsLabel>
-   <Line>Der Urlaub war super. Wir waren mit den Zelt unterwegs. Der Zeltplatz war bei einer Insel. Den Namen der Insel weiß ich nicht mehr.</Line>
+   <Line>Der Urlaub war super. Wir waren mit dem Zelt unterwegs. Der Zeltplatz war bei einer Insel. Den Namen der Insel weiß ich nicht mehr.</Line>
    <Line>Mein Kumpel dachte der Untergang der Sonne im Meer ist im Osten. Er ist so ein Idiot. Die Sonne geht im Westen unter.</Line>
    <Line>Willi wollte am Wettbewerb teilnehmen. Er trainierte eisern. Allerdings wurden seine Problemzonen nicht weniger. Er nahm nicht ab.</Line>
    <Line>Arno arbeitet bei uns. Arno ist eigentlich Elektriker. Er hilft bei der Installation von Programmen. Arno kann auch Computer zusammenbauen.</Line>
    <Line>Inge kann gut rennen. Alle sagten ihr das. Lars wollte mit ihr rennen. Inge war aber zu schnell. Lars ist nun deprimiert.</Line>
    <Line>Endlich wollt ihr uns besuchen. Ihr konntet heute aber nicht kommen. Weil wir heute mit den Kindern zum Abenteuerspielplatz gehen.</Line>
-   <Line>Ein guter Rat ist teuer. Probleme erledigen wir prombt. Wunder gehen nicht so schnell. Alle schlauen Weisheiten haben Witz.</Line>
+   <Line>Ein guter Rat ist teuer. Probleme erledigen wir prompt. Wunder gehen nicht so schnell. Alle schlauen Weisheiten haben Witz.</Line>
    <Line>Lerne die Liebe am Leben. Lerne die Toleranz zu allen Leuten. Lebe mit Lust. Lachen ist gesund. Lieber arm und gesund, als reich und krank.</Line>
    <Line>Uns hat der Papst abgesagt. Er wollte aus Rom nach Celle kommen. Aber er besucht eine Ausstellung in Chicago.</Line>
    <Line>Er teilt das Essen ein. Aber die Einteilung gelingt nicht. Er hat deswegen in der Nacht Hunger. Immer diese Probleme ums Essen.</Line>
   </Level>
   <Level>
    <NewCharsLabel>Unser Sicherheitstest</NewCharsLabel>
-   <Line>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt Glitter Dritter Celle Kelle Elle Cent Karter Charta Krater Chlor Ohr Chor</Line>
+   <Line>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt Glitter Dritter Celle Kelle Elle Cent Karte Charta Krater Chlor Ohr Chor</Line>
    <Line>Haar Heer Herr Hagel Nagel Wand Hand Hund Grund Hundert Ast Hast Rast Gast Eis Reis Greis Gleis See Tee Schnee Sorge</Line>
-   <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spaga t Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
+   <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spagat Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
    <Line>Karikatur Natur Kathedrale Zentrale Kleiderhaken Kniekehle Seele Makrele Koch Kunst Wache Sache Wagen Hektik Trinkgeld</Line>
    <Line>Warnstreik Keks Gewalt Gestalt Wunsch Punsch Kiste Piste Gockel Sockel Krokodil Nil Kontakt Akt Kiwi HiWi Wolke Molke</Line>
    <Line>Spreu Heu Praktikum Produkt Baum Raum Saum Traum Maske Massaker Picknick Kritik Mikroskop Mittelwert Schwert</Line>
-   <Line>Medikament Megatrend Sohn Megaphon Thron Hohn Personalcomputer Phantom Mundharmonika Zeppelin Berlin Zwiback</Line>
+   <Line>Medikament Megatrend Sohn Megaphon Thron Hohn Personalcomputer Phantom Mundharmonika Zeppelin Berlin Zwieback</Line>
    <Line>Zeremonienmeister Zwischenmahlzeit Topf Zopf Basilikum Zebra Bezirk Zauberstab Zeitbombe Bestellzettel Zollbeamter Bronzezeit</Line>
    <Line>Der Wecker klingelt laut. Im Weinkeller ist es sehr kalt. Die Weltkarte zeigt die Entwicklung des Zweiten Weltkrieges. Papa arbeitet in der Werkstatt.</Line>
-   <Line>Wetterkunde ist ein Bereich der Metrologie. Am Wickeltisch werden Windeln gewechselt. Wolke kann man am Himmel sehen.</Line>
+   <Line>Wetterkunde ist ein Bereich der Meteorologie. Am Wickeltisch werden Windeln gewechselt. Wolke kann man am Himmel sehen.</Line>
    <Line>Wunderkinder spielen meistens mehrere Instrumente und sprechen einige Sprachen, nebenbei sind sie auch gut in Mathematik.</Line>
-   <Line>Kauderwelsch ist keine eigene Sprache sondern ein Gemisch aus unterschiedichen Sprachen aber auch unklare und schlechte Aussprache oder Betonung.</Line>
-   <Line>Die Strommenge die ein Haushalt braucht wird in Kilowattstunden gemessen. Eine Kilowittstunde sind tausend Wattstunden.</Line>
+   <Line>Kauderwelsch ist keine eigene Sprache sondern ein Gemisch aus unterschiedlichen Sprachen aber auch unklare und schlechte Aussprache oder Betonung.</Line>
+   <Line>Die Strommenge die ein Haushalt braucht wird in Kilowattstunden gemessen. Eine Kilowattstunde sind tausend Wattstunden.</Line>
    <Line>Im Krankenwagen sind selten gut aussehende Krankenschwestern. Die arbeiten im Krankenhaus.</Line>
    <Line>Innerhalb der Zeremonie bekommt der alte Mann die Kaiserkrone. Alle Leute stehen im Saal und klatschen.</Line>
-   <Line>Immer am Ende des Monats kommt die Panik, wenn im Portemonnaie nur Leere herscht.</Line>
+   <Line>Immer am Ende des Monats kommt die Panik, wenn im Portemonnaie nur Leere herrscht.</Line>
    <Line>Paradigma ist ein vorherrschendes Denkmuster in einer bestimmten Zeit. Den meisten Leuten sagt das Wort nichts.</Line>
-   <Line>Im Parlament sitzen Politiker, die Mittglider unterschiedlicher Parteien sind und bestimmen neue Gesetze.</Line>
+   <Line>Im Parlament sitzen Politiker, die Mitglieder unterschiedlicher Parteien sind und bestimmen neue Gesetze.</Line>
    <Line>Ein gutes Passwort besteht nicht nur aus Buchstaben, sondern auch aus Zahlen und Sonderzeichen.</Line>
   </Level>
   <Level>
@@ -809,7 +809,7 @@ Homepage: http://neo-layout.org
    <Line>verhandeln verhandeln verhandeln verletzen verletzen verletzen</Line>
    <Line>verlassen verlassen verlassen verzeihen verzeihen verzeihen</Line>
    <Line>fern fern fern fremd fremd fremd fest fest fest froh froh froh</Line>
-   <Line>fallen fallen fallen frei frei frei folgen folgen folen fegen fegen fegen</Line>
+   <Line>fallen fallen fallen frei frei frei folgen folgen folgen fegen fegen fegen</Line>
    <Line>fressen fressen fressen fliegen fliegen fliegen fragen fragen</Line>
    <Line>falten falten falten fechten fechten fechten fangen fangen fangen</Line>
    <Line>fasten fasten fasten fort fort fort foltern foltern foltern</Line>
@@ -821,10 +821,10 @@ Homepage: http://neo-layout.org
    <Line>Verlassener Friedhof, verlassener Friedhof, verlassener Friedhof. Fauler Vogel, fauler Vogel, fauler Vogel.</Line>
    <Line>Volle Flasche, volle Flasche, volle Flasche. Fechtende Verbrecher, fechtende Verbrecher, fechtende Verbrecher.</Line>
    <Line>Feuriger Vulkan, feuriger Vulkan, feuriger Vulkan. Frohe Vegetarier frohe Vegetarier, frohe Vegetarier.</Line>
-   <Line>Vermisste Frau, vermisste Frau, vermisste Frau. Fiese Verletzung, feise Verletzung, feise Verletzung.</Line>
-   <Line>Verwackeltes Foto, verwackeltes Foto. Fortgelaufender Verehrer, fortgelaufender Verehrer, fortgelaufender Verehrer.</Line>
+   <Line>Vermisste Frau, vermisste Frau, vermisste Frau. Fiese Verletzung, fiese Verletzung, fiese Verletzung.</Line>
+   <Line>Verwackeltes Foto, verwackeltes Foto. Fortgelaufener Verehrer, fortgelaufener Verehrer, fortgelaufener Verehrer.</Line>
    <Line>Verbrannte Fackel, verbrannte Fackel, verbrannte Fackel. Fortbildender Verein, fortbildender Verein, fortbildender Verein.</Line>
-   <Line>Verbotene Frucht, verbotene Frucht, verbotene Frucht. Fastender Vampier, fastender Vampier, fastender Vampier.</Line>
+   <Line>Verbotene Frucht, verbotene Frucht, verbotene Frucht. Fastender Vampir, fastender Vampir, fastender Vampir.</Line>
    <Line>Verwundeter Frosch, verwundeter Frosch, verwundeter Frosch. Feuerrote Vase, feuerrote Vase, feuerrote Vase.</Line>
    <Line>Vitales Flusspferd, vitales Flusspferd, vitales Flusspferd. Furchtbarer Vetter, furchtbarer Vetter, furchtbarer Vetter.</Line>
    <Line>Verdorbenes Fleisch, verdorbenes Fleisch. Fehlender Verkehr, fehlender Verkehr, fehlender Verkehr.</Line>
@@ -835,14 +835,14 @@ Homepage: http://neo-layout.org
    <Line>Vogel. Vase. Vater. Ventil. Verkehr. Verletzung. Vernunft. Volk. Viereck. Video. Vormittag. Version. Vermutung.</Line>
    <Line>folgen, flogen, duftet, kaufst, deftig, anrief, haufen, farben, furios, impfen, frevle, stumpf, tapfer, klopfen, impfen,</Line>
    <Line>Fort. Pfote. Gipfel. Trumpf. Pfand. Pfau. Schopf. Ofen. Dorf. Stoffe. Erfolg. Stoffe. Frau. Frohsinn. Frisur. Pferd.</Line>
-   <Line>Heute haben nur viele alte Frauen eine Dauerwellen als Fisur. Der Inhalt vieler leerer Flaschen auf dem Festival war Vodka.</Line>
+   <Line>Heute haben nur viele alte Frauen eine Dauerwellen als Frisur. Der Inhalt vieler leerer Flaschen auf dem Festival war Vodka.</Line>
    <Line>Kinder haben oft Fragen, die man kaum beantworten kann. In der Vergangenheitsform werden viele Verben und Vokabel anders geschrieben.</Line>
    <Line>Der Verbrecher ist auf der Flucht. Um seine Spuren zu verwischen schwimmt er im Fluss. Vielleicht hat der Fuchs den Frosch gefressen.</Line>
-   <Line>Vampiere saugen bevorzugt das frische Blut von Frauen. Der Vulkan faucht und spuckt feuerrote Funken aus.</Line>
-   <Line>Fliegenpilze sind rot mit hellen Flecken und sehr giftig. Darum sind Fligenpilze im Essen verboten.</Line>
+   <Line>Vampire saugen bevorzugt das frische Blut von Frauen. Der Vulkan faucht und spuckt feuerrote Funken aus.</Line>
+   <Line>Fliegenpilze sind rot mit hellen Flecken und sehr giftig. Darum sind Fliegenpilze im Essen verboten.</Line>
    <Line>Die Bergsteiger Volker und Ferdinand machten einen Wettkampf zum Gipfel. Frankreich hat den Zweiten Weltkrieg nicht verloren.</Line>
    <Line>Vegetarier essen kein Fleisch und Fisch. Veganer verzichten sogar auf Eier und Milch. Eine frische Frucht finden beide schmackhaft.</Line>
-   <Line>Franz war voller Freude, denn Tante Frida hatte Waffeln mitgebracht. Die fischte Franz sofort aus dem Einkaufskorb.</Line>
+   <Line>Franz war voller Freude, denn Tante Frieda hatte Waffeln mitgebracht. Die fischte Franz sofort aus dem Einkaufskorb.</Line>
    <Line>Die Verhandlung war ein voller Erfolg. Deshalb konnten die Kaufleute den Vertrag unterschreiben.</Line>
    <Line>Beim Sport verliert man viel Fett und kann dann an einem Wettkampf teilnehmen.</Line>
   </Level>
@@ -857,9 +857,9 @@ Homepage: http://neo-layout.org
    <Line>wäre sähe läge wäre sähe hätten kämen lägen wären nähme während lässig mächtig allmählich gäben fälschen spät erzählen</Line>
    <Line>wölben störte gröl e böig töten dösen möchte blöde öde krönen höhnen völlig vögeln öffne ölig spröde möglich stören bewölkt höhnen</Line>
    <Line>ändern gänzlich fänden spärlich älter ständig städtisch nämlich häusliche erhältliche nächtlich sächliche tägliche hinlängliche</Line>
-   <Line>Wölfe Böcke Böe Götzen Knödel Einöde Röcke Köcher Höhe Wörter Löwe Rohöl Köter Öde Dörfer Bögen Röhren Römer Stör Öfnung</Line>
+   <Line>Wölfe Böcke Böe Götzen Knödel Einöde Röcke Köcher Höhe Wörter Löwe Rohöl Köter Öde Dörfer Bögen Röhren Römer Stör Öffnung</Line>
    <Line>Nähe März Wände Ämter Kälte Ärzte Bäume Päckchen Räume Wärme Plätzen Käufer Häuser Dämon Getränk Läufer</Line>
-   <Line>Pöbe l Anhöhe Ölbild Likör Löcher Rapsöl Malmö Köder Knöpfe Blöcke Tenöre Öffner Ölzeug Wanusslöl Löffel Kröte Höhle</Line>
+   <Line>Pöbel Anhöhe Ölbild Likör Löcher Rapsöl Malmö Köder Knöpfe Blöcke Tenöre Öffner Ölzeug Walnussöl Löffel Kröte Höhle</Line>
    <Line>Mängel Gebäck Gepäck Hände Blätter Erkältung Pläne Geräusch Universität Verdächtiger Europäer Ärztin Märchen</Line>
    <Line>Tölpel Körbe Körner Chöre König Göre Gönner Köder Lötzinn Löhne Mönche Köln Ökologie Gehör Möbel Behörde Körper</Line>
   </Level>
@@ -879,8 +879,8 @@ Homepage: http://neo-layout.org
    <Line>läge Malmö woanders, ein möglicher Verdächtiger, ständig Märchen erzählen, wegen Wärme gedöst, der Ärztin zugehört.</Line>
    <Line>ungestört beim Vögeln ächzen und stöhnen, später gläubiger und frommer Mönch in Köln werden.</Line>
    <Line>im März kämen die Männer der Behörde, die Mängel der Ölheizung finden, fiese Dämonen beschwören.</Line>
-   <Line>bei Erkältung täglich ein paar Löffel Hustensaft trinken, hätten Wörter weniger Vokale wär die Betonung fast unmöglich.</Line>
-   <Line>Ausländer möchten viele Vokablen lernen um völlig fehlerfrei zu reder, Gönner gäben mehr Geld.</Line>
+   <Line>bei Erkältung täglich ein paar Löffel Hustensaft trinken, hätten Wörter weniger Vokale wäre die Betonung fast unmöglich.</Line>
+   <Line>Ausländer möchten viele Vokabeln lernen um völlig fehlerfrei zu reden, Gönner gäben mehr Geld.</Line>
    <Line>Tenöre stören nicht wenn Chöre singen, Ökologie ist die Wissenschaft der Umwelt, lässig Körbe flechten.</Line>
   </Level>
   <Level>
@@ -891,7 +891,7 @@ Homepage: http://neo-layout.org
    <Line>Die Feuerwehrmänner warfen die Schläuche vom Fahrzeug um das Feuer zu bekämpfen.</Line>
    <Line>Der Löwe fand in der Einöde nichts zum fressen. Wäre da doch ein dösendes Zebra zu fangen.</Line>
    <Line>Franziska ist älter und viel stärker als Viktor. Darum ärgert Franziska ihn oft. Viktor versucht möglichst lässig zu bleiben.</Line>
-   <Line>Frau Vogel wählt immer Kaffe als Getränk zum täglichen Gebäck. Franziska findet Kaffe blöd, aber das Gebäck köstlich.</Line>
+   <Line>Frau Vogel wählt immer Kaffee als Getränk zum täglichen Gebäck. Franziska findet Kaffee blöd, aber das Gebäck köstlich.</Line>
    <Line>In vielen europäischen Dörfern gibt es noch Klöster. Dort fahren gläubige Männer und Frauen hin um mit den Mönchen zu reden.</Line>
    <Line>Zwei Männer spannten ihre Bögen, nahmen Pfeile aus den Köcher und versuchten das Ziel zu treffen.</Line>
    <Line>Mit lauten Geräuschen und Händeklatschen machten die Zuschauer Lärm beim Wettkampf.</Line>
@@ -914,20 +914,20 @@ Homepage: http://neo-layout.org
    <NewCharsLabel>Wir üben ü und j</NewCharsLabel>
    <Line>üben über übel üblich übrigens überaus übrig überall überbacken überladen überbewertet überhaupt überängstlich</Line>
    <Line>jemand junge jemals jucken jäten jährig jaule jobben ja jobben jubeln jagen jawohl jubeln jonglieren jeder jetzt jedes jüngst jüdisch</Line>
-   <Line>müssen fünf dürfen müde zurück natürlich blühen kühl berühmt glühen kühn würgen pflücken küssen hübsch spühlen fühlen</Line>
+   <Line>müssen fünf dürfen müde zurück natürlich blühen kühl berühmt glühen kühn würgen pflücken küssen hübsch spülen fühlen</Line>
    <Line>Übung Übeltäter Überfall Überbrückung Übergabe Übereinstimmung Überhang Überbuchung Überlastung Überlebenskünstler</Line>
    <Line>Jazz Jacht Japan Jacke Junge Job Journalist Jungfrau Juwel Jauche Juli Joghurt Jäger Jumbojet Juni Justiz Jubiläum Jordanien</Line>
    <Line>Tür Führer Zügel Flügel Gerümpel Hügel Rücken Müll Glück Frühling Sünde Lücke Würde Küche Gemüse Müdigkeit Gebühr Abkürzung</Line>
    <Line>Zündung Schüler Gürtel Küche Stück Künstler Süchtiger Verrückter Lüge Prügel Verbündeter Bürste Hütte Bücher Dürre Würfel Dünger</Line>
-   <Line>Gerüst Fürst Gebrüll Rüstung Gewürz Hüfte Krümmel Grünzeug Mütze Hülle Bürger Pfütze Rübe Schlüssel Wünsche Tümpel Stütze</Line>
+   <Line>Gerüst Fürst Gebrüll Rüstung Gewürz Hüfte Krümel Grünzeug Mütze Hülle Bürger Pfütze Rübe Schlüssel Wünsche Tümpel Stütze</Line>
   </Level>
   <Level>
    <NewCharsLabel>Sicherheitstest für ü und j</NewCharsLabel>
-   <Line>Seit über fünf Jahren sammelt Jonas Mützen berühmter Bürger. Die Mützen benutzt er jedoch als Stüzen für seine Büchersammlung.</Line>
+   <Line>Seit über fünf Jahren sammelt Jonas Mützen berühmter Bürger. Die Mützen benutzt er jedoch als Stützen für seine Büchersammlung.</Line>
    <Line>Mit französischen Käse überbacken und vielen Gewürzen schmeckt der Kartoffelauflauf besser.</Line>
-   <Line>Sämtliche Nürnberger Kunden loben übereinstimmend den verzüglichen Geschmack des Gebäcks.</Line>
+   <Line>Sämtliche Nürnberger Kunden loben übereinstimmend den vorzüglichen Geschmack des Gebäcks.</Line>
    <Line>Wegen der Dürre bekamen das Gemüse mehr Dünger. Zusätzlich wurden Gräben und Tümpel angelegt.</Line>
-   <Line>Der Müll würde länger nicht zurückgenommen, wenn die Müllabfuhr streiken würde. Doch die Juztiz verbietet den Streik.</Line>
+   <Line>Der Müll würde länger nicht zurückgenommen, wenn die Müllabfuhr streiken würde. Doch die Justiz verbietet den Streik.</Line>
    <Line>In Japan blühen jedes Jahr im Frühling die Kirschbäume. Deren Blühten sind rosarot und sehr hübsch.</Line>
    <Line>In Jordanien jubelt die Menge, als die Justiztagung jährte. Journalisten hatten länger über die üblen Umstände berichtet.</Line>
    <Line>Nach den Überfall wurde der junge Juwelendieb von den Polizisten überwältigt. Er hatte kein Glück.</Line>
@@ -936,7 +936,7 @@ Homepage: http://neo-layout.org
    <Line>Die Jacht des Fürsten ist das prächtigste Objekt im Hafen. sie ist berühmt für die fünf Kojen eingerichtet von verschiedenen Künstlern.</Line>
    <Line>Viele Bürger denken Jazz ist nur Lärm und Gebrüll. Natürlich stimmt das nicht. Künstler fühlen sich durch Jazz inspiriert.</Line>
    <Line>Für Ihre Glückwünsche zu unserem Jubiläum danken wir Ihnen. Jetzt würden wir uns natürlich über eine Bestellung freuen.</Line>
-   <Line>Joachim küsste Julia und fragte sie, ob er sie zur Frau nehmen dürfte. Julia war gerührt und bejate glücklich.</Line>
+   <Line>Joachim küsste Julia und fragte sie, ob er sie zur Frau nehmen dürfte. Julia war gerührt und bejahte glücklich.</Line>
    <Line>Schüler müssen Vokabeln lernen. Dafür benötigen sie viel Übung. Oft verspüren sie jedoch Rückschläge bei der Übergabe der Noten.</Line>
   </Level>
   <Level>
@@ -964,11 +964,11 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharsLabel>Wir üben y und ß</NewCharsLabel>
-   <Line>analysieren, bayerisch, symbolisch, zylindrisch, zyklisch, happy, typisch, systematisch, rhytmisch, sympatisch,</Line>
+   <Line>analysieren, bayerisch, symbolisch, zylindrisch, zyklisch, happy, typisch, systematisch, rhythmisch, sympathisch,</Line>
    <Line>saß, fließen, ließen, gießen, außen, außer, draußen, äußerte, weiß, groß, bloß, genießen, reißen, heißen, verließ,</Line>
    <Line>Typhus. Psyche. Hockey. Zypern. Typ. Analyse. Zylinder. Bayern. Hygiene. Dynamo. Symbol. Cowboy. Boykott. Rhythmus. Paraguay. Sympathie.</Line>
    <Line>Blöße. Fuß. Füße. Gießen. Grieß. Grüße. Gruß. Schöße. Schoß. Straße. Muße. Stoß. Spaß. Steiß. Strauß. Ruß. Yeti. Yokohama. Yuccapalme.</Line>
-   <Line>Physik. System. Baby. Embryo. Layout. Bypass. Party. Maya. Cowboy. City. Jury. Whiskey. Bayreuth. Speyer. Sylt. Yoga. Zyklus. Yin und Yang. Yard.</Line>
+   <Line>Physik. System. Baby. Embryo. Layout. Bypass. Party. Maya. Cowboy. City. Jury. Whisky. Bayreuth. Speyer. Sylt. Yoga. Zyklus. Yin und Yang. Yard.</Line>
    <Line>bayerischer Typ, Syrien analysieren, symbolische Analyse, zylindrischer Zylinder, bloß Bayern, äußere Hygiene,</Line>
    <Line>süße Physik, weißes System, großer Dynamo, grüßendes Symbol, symbolischer Gruß,</Line>
   </Level>
@@ -986,12 +986,12 @@ Homepage: http://neo-layout.org
    <Line>Aus beißen und er beißt, wird jetzt beißen und er beißt. Also einheitlich ß in beiden Schreibweisen.</Line>
    <Line>Aus wissen und er weiß, wird jetzt wissen und er weiß. Also uneinheitlich in beiden Schreibweisen.</Line>
    <Line>Konventionelle Schreibweise daß, Biß, Kuß, geküßt, laßt, Meßergebnis. Reformierte Schreibweise dass, Biss, Kuss, geküsst, lasst, Messergebnis.</Line>
-   <Line>Der größte Kongress über Yoga soll in einer bayerischen Stadt stattfinden. Im März will der Pysiker Herr Meyer zur Kur nach Bad Oeynhausen fahren.</Line>
+   <Line>Der größte Kongress über Yoga soll in einer bayerischen Stadt stattfinden. Im März will der Physiker Herr Meyer zur Kur nach Bad Oeynhausen fahren.</Line>
    <Line>Zeigen Sie auf der Karte Zypern, Syrien, Bayreuth, Paraguay, Speyer, New York und Sylt. Ihre großartigen Erfolge haben uns außerordentlich gefreut.</Line>
    <Line>Die Firma Strauß hatte bisher bloß kleine Aufträge erteilt. Doch mit der Analyse über die typische Hygiene von Babys hat sich dies geändert.</Line>
    <Line>Der Fluss führt entlang der Straße, bis zum Kraftwerk. Dort wird mit einen Dynamo Elektrizität produziert.</Line>
-   <Line>Auf der Party der Universität hatte Katy viel Spaß. Sie tanze im Rhytmus der Musik, als sie ein süßer Typ ansprach. Er war ihr sofort sympatisch.</Line>
-   <Line>Ein gleichmäßiger Schreibfluss ist das große Erfolgsrezept. Übermäßiger Genuss von Süßigkeiten oder Whiskey ist gewiss schädlich.</Line>
+   <Line>Auf der Party der Universität hatte Katy viel Spaß. Sie tanze im Rhythmus der Musik, als sie ein süßer Typ ansprach. Er war ihr sofort sympathisch.</Line>
+   <Line>Ein gleichmäßiger Schreibfluss ist das große Erfolgsrezept. Übermäßiger Genuss von Süßigkeiten oder Whisky ist gewiss schädlich.</Line>
    <Line>Mit Hypnose können Störungen der Psyche ergründet werden. Das Yin und Yang kann man mit Yoga im Einklang bringen.</Line>
   </Level>
   <Level>
@@ -1016,21 +1016,21 @@ Homepage: http://neo-layout.org
    <Line>qds qdn qdr qdt qdq qdy qdk qdh qdg qdf qdq qdß qdb qdm qd, qd. qd.j</Line>
    <Line>exakt exakt exakt mixen mixen mixen boxen boxen boxen extrem extrem extrem Jux Jux Jux extra extra extra</Line>
    <Line>Box Box Box Exempel Exempel Exempel Text Text Text Index Index Index Reflex Reflex Reflex Komplex Komplex Komplex</Line>
-   <Line>Taxi Taxi Taxi Luxus Luxus Luxus Xenon Xenon Xenon Explosion Explosion Explosion felxibel felxibel felxibel Axt Axt Axt</Line>
+   <Line>Taxi Taxi Taxi Luxus Luxus Luxus Xenon Xenon Xenon Explosion Explosion Explosion flexibel flexibel flexibel Axt Axt Axt</Line>
    <Line>Xylophon Xylophon Xylophon Lexikon Lexikon Lexikon Exil Exil Exil Texas Texas Texas Hexe Hexe Hexe nix nix nix</Line>
-   <Line>quer quer quer quelen quellen quellen quitt quitt quitt quietschen quietschen quietschen</Line>
+   <Line>quer quer quer quellen quellen quellen quitt quitt quitt quietschen quietschen quietschen</Line>
    <Line>bequeme bequeme bequeme quetschen quetschen quetschen Quecksilber Quecksilber Quecksilber</Line>
    <Line>Qualm Qualm Qualm Quarz Quarz Quarz Quartal Quartal Quartal Quatsch Quatsch Quatsch quälen quälen quälen</Line>
    <Line>Quote Quote Quote Quelle Quelle Quelle Quadrat Quadrat Quadrat Querflöte Querflöte Querflöte</Line>
   </Level>
   <Level>
    <NewCharsLabel>Wir üben x und q</NewCharsLabel>
-   <Line>extra Qualität, gemixter Quellcode, extremer Quälgeist, externe Querverweise, Maximum Quark, flexibeler Quelltext.</Line>
-   <Line>fixierte Quersumme, exklusive Quälerei, Praxis quietschen, Dioxin Quatsch, Examen qualmen, Mixtur Quaksalber.</Line>
+   <Line>extra Qualität, gemixter Quellcode, extremer Quälgeist, externe Querverweise, Maximum Quark, flexibler Quelltext.</Line>
+   <Line>fixierte Quersumme, exklusive Quälerei, Praxis quietschen, Dioxin Quatsch, Examen qualmen, Mixtur Quacksalber.</Line>
    <Line>Export Quantensprung, Experten quiekten, Expedition qualitativ, Max Querbalken, Alex Quasselstrippe.</Line>
    <Line>Felix Quotient, Xenia Quiz, Beatrix Quittung, Alexandra Quitte, Luxemburg Queen, Luxus Querflöte, Latex quetschen.</Line>
    <Line>Xenon quer, Xavier Quellenangabe, Xanten Quelle, Xylophon Quecksilber, Boxer Quarz, Explosion Quarantäne, Kodex Quartett.</Line>
-   <Line>Mixtur Quartal, Hexe Quark, Experiment Quote, felxibel Quantität, Lexikon Quantenmechanik, Doppelhelix Qualle.</Line>
+   <Line>Mixtur Quartal, Hexe Quark, Experiment Quote, flexibel Quantität, Lexikon Quantenmechanik, Doppelhelix Qualle.</Line>
    <Line>Texas Quartier, Mexiko Qualität, nix qualifizieren, Axt quälen, Exil quaken, Marx Quadratmeter.</Line>
    <Line>Herr Felix Flex ist jetzt unser neuer Mitarbeiter in Texas. Die Exportgesellschaft exportiert aber auch nach Luxemburg.</Line>
    <Line>Die Textilfabrik Rex sucht qualifizierte Textprogrammierer. Die Polster sind bequem, aber auch qualitativ ansprechend.</Line>
@@ -1040,25 +1040,25 @@ Homepage: http://neo-layout.org
    <NewCharsLabel>Sicherheitstest für x und q</NewCharsLabel>
    <Line>Manchmal schreiben wir x, dann wieder cks, gs, ks oder chs.</Line>
    <Line>Im Aufsatzheft hat Alex unsauber geschrieben und gekleckst. Carmen will in Luxemburg spezielle Kekse und echten Lachs kaufen.</Line>
-   <Line>Der Boxer sollte sich von seinen Gegner durch psychogolische Tricks nicht ins Bockshorn jagen lassen.</Line>
+   <Line>Der Boxer sollte sich von seinen Gegner durch psychologische Tricks nicht ins Bockshorn jagen lassen.</Line>
    <Line>Sicherlich fliegst du an Pfingsten mit Beatrix nach Mexiko. Die Heizung der Arztpraxis wurde jetzt von Koks auf Holzpellets umgestellt.</Line>
-   <Line>Für unsere verwönten Kunden, die teuren Luxus bevorziehen, brauchen wir ein Produkt exklusiver Qualität.</Line>
-   <Line>Fähige Progammier mixen den Quellcode offener Software, so als würden sie nix anderes machen.</Line>
+   <Line>Für unsere verwöhnten Kunden, die teuren Luxus vorziehen, brauchen wir ein Produkt exklusiver Qualität.</Line>
+   <Line>Fähige Programmierer mixen den Quellcode offener Software, so als würden sie nix anderes machen.</Line>
    <Line>Bei uns im Büro sitzt ein extremer Quälgeist der uns allen auf die Nerven geht.</Line>
    <Line>Wenn Studenten wissenschaftliche Artikel schreiben, vergessen sie oft die externen Quellenangaben zu ihren Texten.</Line>
    <Line>Ein Teilgebiet der Physik ist die Quantenmechanik. Forscher machen Experimente über die Existenz der Quarks.</Line>
    <Line>Den Schülern der klasse fünf qualmen sprichwörtlich die Köpfe, als sie ein Examen über Psychologie hatten.</Line>
-   <Line>Beatrix bezahlte im luxeriösen Restaurant die Quittung mit ihrer goldenen Chequekarte</Line>
-   <Line>Ich glaube, dass der Pharmazist ein Quaksalber ist, denn er verkauft eine Mixtur gegen Warzen, die nix bringt.</Line>
+   <Line>Beatrix bezahlte im luxuriösen Restaurant die Quittung mit ihrer goldenen Chequekarte</Line>
+   <Line>Ich glaube, dass der Pharmazeut ein Quacksalber ist, denn er verkauft eine Mixtur gegen Warzen, die nix bringt.</Line>
    <Line>In den alten Gebäude, in dem Max wohnt, sind die Querbalken aus tropischen Hölzern.</Line>
    <Line>Alex ist als die größte Quasselstrippe in unserer Straße bekannt. Er erzählt mehr Lügen als der Baron von Münchhausen.</Line>
    <Line>Heute war ein Glückstag für Xenia, denn sie wurde nach Luxemburg zu einen Quiz eingeladen.</Line>
    <Line>Es gibt Menschen in der Gesellschaft, die quetschen sich am Wochenende in Leder und Latex, weil sie es schön finden.</Line>
    <Line>In der Stadt Xanten, die von den Römern gegründet wurde, gab es eine Quelle eines Flusses, dessen Name vergessen ist.</Line>
    <Line>Das Xylophon und die Querflöte sind Musikinstrumente, die nur wenige Schüler lernen.</Line>
-   <Line>Nach der Explosion in der Chmiefabrik kamen alle Mitarbeiter in die Quarantänestation des städtischen Krankenhauses.</Line>
-   <Line>Zur Zeit untersuchen Forscher den Aufbau der Doppelhelix. Die Wisenschaftler nehmen die Zellen dafür aus Meeresquallen.</Line>
-   <Line>In Mexiko ist die Qualität von Tequilla ausgezeichnet, denn Tequilla ist das Nationalgetränk der Mexikaner.</Line>
+   <Line>Nach der Explosion in der Chemiefabrik kamen alle Mitarbeiter in die Quarantänestation des städtischen Krankenhauses.</Line>
+   <Line>Zur Zeit untersuchen Forscher den Aufbau der Doppelhelix. Die Wissenschaftler nehmen die Zellen dafür aus Meeresquallen.</Line>
+   <Line>In Mexiko ist die Qualität von Tequila ausgezeichnet, denn Tequila ist das Nationalgetränk der Mexikaner.</Line>
    <Line>Die Axt benutzte man im Mittelalter nicht nur zum Bäume fällen, sondern auch um bei der Folter Verbrecher zu quälen.</Line>
    <Line>Die Bücher und Texte von Karl Marx würden nebeneinander gelegt mehrere Quadratmeter Fußboden bedecken.</Line>
   </Level>
@@ -1177,7 +1177,7 @@ Homepage: http://neo-layout.org
    <Line>gleichen du ob Soldaten Universität verschiedenen Kollegen neues Bürgermeister Angst Unterstützung</Line>
    <Line>stellte Sommer danach anderer gesagt Sicherheit Macht Bau handelt Folge Bilder lag Osten Handel sprach Aufgabe</Line>
    <Line>Chef frei dennoch hohe Firmen Koalition Mädchen zur entwickelt fand Diskussion bringt deshalb Hause Gefahr per</Line>
-   <Line>zugleich früheren dadurch ganzen abend erzählt Streit Vergangenheit Parteien Verhandlungen jedenfalls gesehen</Line>
+   <Line>zugleich früheren dadurch ganzen Abende erzählt Streit Vergangenheit Parteien Verhandlungen jedenfalls gesehen</Line>
    <Line>französischen Trotz darunter Spieler forderte Meinung wenigen Publikum sowohl meinte mag Auto Lösung Boden</Line>
    <Line>hinaus war verletzt weltweit Sohn bevor mussten keiner Produktion Ort braucht Zusammenhang Kind Verein sprechen</Line>
    <Line>gleichzeitig London sogenannten Richter geplant Italien Mittel her freilich Mensch großer wenige öffentlichen</Line>
@@ -1210,7 +1210,7 @@ Homepage: http://neo-layout.org
    <Line>--- Kleiner Finger --- d- q- d- j- d- q-q q-q ---</Line>
    <Line>Mit der Hochstelltaste ändert sich bereits die gewohnte Belegung. Probiere es aus.</Line>
    <Line>1° 2§ 3ℓ 4» 5« 6$ 7€ 8„ 9“ 0” -- nocheinmal 1° 2§ 3ℓ 4» 5« 6$ 7€ 8„ 9“ 0” --</Line>
-   <Line>Die Ziffern könner auch mittels der M4-Taste dargestellt werden, die Taste links vom ü drücken und die gewünschte andere Taste</Line>
+   <Line>Die Ziffern können auch mittels der M4-Taste dargestellt werden, die Taste links vom ü drücken und die gewünschte andere Taste</Line>
    <Line>m m1m 111 1m1 111 m m1m 111 1m1 111</Line>
    <Line>, ,2, 222 2,2 222 , ,2, 222 2,2 222</Line>
    <Line>. .3. 333 3.3 333 . .3. 333 3.3 333</Line>
@@ -1251,7 +1251,7 @@ Homepage: http://neo-layout.org
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
    <Line>name@email.de, jemand@web.de, einer@gmx.de, irgendwer@gmail.com,</Line>
    <Line>Max &amp; Sohn, C&amp;A, H&amp;M, GmbH &amp; Co</Line>
-   <Line>Joachim (Vater), Klara (Mutter), Tobias (Sohn), Steffanie (Tochter), Walter (Opa), Heidi (Oma).</Line>
+   <Line>Joachim (Vater), Klara (Mutter), Tobias (Sohn), Stefanie (Tochter), Walter (Opa), Heidi (Oma).</Line>
   </Level>
   <Level>
    <NewCharsLabel>Typografie und neue Zeichen</NewCharsLabel>
@@ -1337,7 +1337,7 @@ Homepage: http://neo-layout.org
    <Line>Wie Sie schon bemerkt haben, besitzt Neo eine große Anzahl von Sonderzeichen, die Sie mit Hilfe der M4-Taste, auch zusammen mit der Hochstelltaste erreichen können.</Line>
    <Line>Des Weiteren finden Sie auf der Akzent-, der Zirkumflex- und der Tilde-Taste sogenannte tote Tasten, die, vor einer Taste gedrückt, diese modifizieren.</Line>
    <Line>Außerdem gibt es für jede Taste eine Alternativ-Belegung, mit griechischen Zeichen oder anderen häufig gebräuchlichen.</Line>
-   <Line>Den Umgang mit den Sonderzeichen übt man auch besser außerhalb dieses Programmes. Üben Sie damit!</Line>
+   <Line>Den Umgang mit den Sonderzeichen übt man auch besser außerhalb dieses Programms. Üben Sie damit!</Line>
    <Line>Spielen Sie damit ein wenig. Werden Sie schneller als je zuvor. Viel Spaß!</Line>
   </Level>
   <Level>
@@ -1387,8 +1387,8 @@ Homepage: http://neo-layout.org
   <Level>
    <NewCharsLabel>Testtext „Sprichwörter“</NewCharsLabel>
    <Line>Abends wird der Faule fleißig. An jedem Gerücht ist ein kleines bisschen Wahrheit. Andere Länder, andere Sitten.</Line>
-   <Line>Andere Mütter haben auch schöne Töchter Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
-   <Line>Berg und Tal kommen nicht zusammen, aber Menschen. Besser ein Ende mit Schrecken, als eine Schrecken ohne Ende.</Line>
+   <Line>Andere Mütter haben auch schöne Töchter. Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
+   <Line>Berg und Tal kommen nicht zusammen, aber Menschen. Besser ein Ende mit Schrecken, als ein Schrecken ohne Ende.</Line>
    <Line>Besser spät als nie. Bellende Hunde beißen nicht. Bier auf Wein, lass das sein. Wein auf Bier, das rat ich dir.</Line>
    <Line>Das Herz ist auf dem rechten Fleck. Den letzten beißen die Hunde. Der Krug geht so lange zum Brunnen, bis er bricht.</Line>
    <Line>Der Apfel fällt nicht weit vom Stamm. Der dümmste Bauer hat die dicksten Kartoffeln. Der Mensch lebt nicht vom Brot allein.</Line>
@@ -1503,7 +1503,7 @@ Homepage: http://neo-layout.org
    <Line>Die Letale Dosis (LD) liegt etwa bei 3,0 bis 4,0 Promille für ungeübte Trinker. Es wurden jedoch schon Werte über 7 Promille gemessen. Die LD50 beträgt für die Ratte 7.060 mg/kg bei oraler Applikation.</Line>
    <Line>Bei einer akuten Ethanolvergiftung kann der noch im Magen befindliche Alkohol durch Herbeiführen von Erbrechen oder durch Auspumpen des Mageninhalts teilweise entfernt werden.</Line>
    <Line>Bei regelmäßiger Einnahme, die zu einer Abhängigkeit (Alkoholkrankheit) führen kann, werden alle Zellen des Körpers geschädigt. Insbesondere leiden das Nervensystem und Gehirn sowie die Leber.</Line>
-   <Line>Der Vitamin-B1-Stoffwechsel wird durch langanhaltenden Alkoholkonsum geschädigt, diese Schädigung kann eine Polyneuritis auslösen.</Line>
+   <Line>Der Vitamin-B1-Stoffwechsel wird durch lang anhaltenden Alkoholkonsum geschädigt, diese Schädigung kann eine Polyneuritis auslösen.</Line>
    <Line>Epilepsie, Psychosen, soziale Vereinsamung und der verfrühte Tod können die Folge sein.</Line>
    <Line>Die Wernicke-Enzephalopathie findet sich bei etwa 15 % der verstorbenen Alkoholiker, und bildet zusammen mit dem Korsakow-Syndrom das Wernicke-Korsakow-Syndrom.</Line>
    <Line>Bekannt ist auch die Schädigung des Zentralnervensystems beim Delirium tremens. Diese Nervenerscheinung tritt beim Alkoholentzug des Körpers auf.</Line>
@@ -1546,7 +1546,7 @@ Homepage: http://neo-layout.org
    <Line>less name Zeigt die Textdatei name an.</Line>
    <Line>ls Zeigt das Inhaltsverzeichnis eines Ordners an.</Line>
    <Line>man name Zeigt eine meist englisch sprachige Hilfe zum Kommando name an.</Line>
-   <Line>mkdir Erzeugt ein neues verzeichnis.</Line>
+   <Line>mkdir Erzeugt ein neues Verzeichnis.</Line>
    <Line>mv Verschiebt Dateien oder benennt Dateien um.</Line>
    <Line>passwd ändert das aktuelle Passwort des jeweiligen Benutzers.</Line>
    <Line>ps Liefert eine Liste aller Prozesse.</Line>
