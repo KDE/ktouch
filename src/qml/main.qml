@@ -82,6 +82,7 @@ Item {
             trainingScreen.profile = profile
             trainingScreen.lesson = lesson
             trainingScreen.course = course
+            scoreScreen.profile = profile
             scoreScreen.lesson = lesson
             scoreScreen.course = course
             main.switchScreen(homeScreen, trainingScreen)
@@ -99,7 +100,10 @@ Item {
         keyboardLayout: main.keyboardLayout
         onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
-        onFinished: main.switchScreen(trainingScreen, scoreScreen)
+        onFinished: {
+            scoreScreen.stats = stats
+            main.switchScreen(trainingScreen, scoreScreen)
+        }
     }
 
     ScoreScreen {

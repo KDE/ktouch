@@ -30,7 +30,7 @@ FocusScope {
 
     signal restartRequested()
     signal abortRequested()
-    signal finished()
+    signal finished(variant stats)
 
     property bool trainingStarted: false
     property bool trainingFinished: true
@@ -185,7 +185,7 @@ FocusScope {
                 }
                 onFinished: {
                     profileDataAccess.saveTrainingStats(stats, screen.profile, screen.course.id, screen.lesson.id)
-                    screen.finished()
+                    screen.finished(stats)
                     screen.trainingFinished = true
                 }
             }

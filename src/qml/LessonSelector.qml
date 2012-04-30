@@ -26,22 +26,45 @@ Item {
     property variant course
     signal lessonSelected(variant lesson)
 
-    function selectLastLesson() {
+    function update() {
         if (!course) return;
         if (!profile) return;
+        selectLastLesson()
+        enableUnlockedLessons()
+    }
+
+    function selectLastLesson() {
         var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastSelectedLesson);
         if (lessonId !== "") {
             for (var index = 0; index < course.lessonCount; index++) {
                 if (course.lesson(index).id === lessonId) {
-                    list.currentIndex = index;
+                    lessonList.currentIndex = index;
                     break;
                 }
             }
         }
     }
 
-    onProfileChanged: selectLastLesson()
-    onCourseChanged: selectLastLesson()
+    function enableUnlockedLessons() {
+        if (profile.skillLevel === Profile.Advanced) {
+            lessonList.lastUnlockedIndex = course.lessonCount - 1;
+            return;
+        }
+
+        lessonList.lastUnlockedIndex = 0;
+        var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
+        if (lessonId !== "") {
+            for (var index = 0; index < course.lessonCount; index++) {
+                if (course.lesson(index).id === lessonId) {
+                    lessonList.lastUnlockedIndex = index;
+                    break;
+                }
+            }
+        }
+    }
+
+    onProfileChanged: update()
+    onCourseChanged: update()
 
     Row {
         anchors.fill: parent
@@ -54,21 +77,25 @@ Item {
             width: Math.round((parent.width - parent.spacing) / 2)
 
             ListView {
-                id: list
+                id: lessonList
+                property int lastUnlockedIndex: 0
                 anchors .fill: parent
                 model: course.lessonCount
                 clip: true
                 delegate: ListItem {
-                    width: list.width - scrollBar.width
-                    onSelected: list.currentIndex = index
+                    property bool locked: index > lessonList.lastUnlockedIndex
+                    width: lessonList.width - scrollBar.width
+                    onSelected: lessonList.currentIndex = index
+                    iconSource: locked? "document-encrypt": ""
+                    label.opacity: locked? 0.5: 1.0
                     title: item.course.lesson(index).title
                 }
-                onModelChanged: selectLastLesson()
+                onModelChanged: update()
             }
 
             PlasmaComponents.ScrollBar {
                 id: scrollBar
-                flickableItem: list
+                flickableItem: lessonList
             }
         }
 
@@ -79,7 +106,7 @@ Item {
             LessonPreview {
                 width: parent.width
                 height: parent.height - startButtonContainer.height
-                lesson: list.currentIndex !== -1? item.course.lesson(list.currentIndex): null
+                lesson: lessonList.currentIndex !== -1? item.course.lesson(lessonList.currentIndex): null
             }
 
             Item {
@@ -94,10 +121,10 @@ Item {
                         bottom: parent.bottom
                     }
                     text: i18n("Start training")
-                    enabled: list.currentItem !== null
+                    enabled: lessonList.currentItem !== null && !lessonList.currentItem.locked
                     iconSource: "go-next-view"
                     onClicked: {
-                        var lesson = item.course.lesson(list.currentIndex)
+                        var lesson = item.course.lesson(lessonList.currentIndex)
                         profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
                         lessonSelected(lesson)
                     }

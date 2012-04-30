@@ -25,17 +25,56 @@ FocusScope {
 
     function start() {}
     function reset() {
-        internal.nextLesson = null
-        for (var i = 0; i < course.lessonCount - 1; i++) {
+        internal.lessonPassed = 100 * stats.accuracy >= preferences.requiredAccuracy && stats.charactersPerMinute >= preferences.requiredStrokesPerMinute
+
+        var lessonIndex = 0;
+        for (var i = 0; i < course.lessonCount; i++) {
             if (lesson === course.lesson(i)) {
-                internal.nextLesson = course.lesson(i + 1)
+                lessonIndex = i
                 break
             }
         }
+
+        var lastUnlockedLessonIndex = 0
+        if (profile.skillLevel === Profile.Advanced) {
+            lastUnlockedLessonIndex = course.lessonCount - 1;
+            internal.nextLessonUnlocked = false
+        }
+        else {
+            var lastUnlockedLessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
+            if (lastUnlockedLessonId !== "") {
+                for (var index = 0; index < course.lessonCount; index++) {
+                    if (course.lesson(index).id === lastUnlockedLessonId) {
+                        lastUnlockedLessonIndex = index;
+                        break;
+                    }
+                }
+            }
+
+            console.log("lessonIndex: " + lessonIndex)
+            console.log("lastUnlockedLessonIndex: " + lastUnlockedLessonIndex)
+            console.log()
+
+            internal.nextLessonUnlocked = internal.lessonPassed && lessonIndex === lastUnlockedLessonIndex && lessonIndex + 1 < course.lessonCount
+
+            if (internal.nextLessonUnlocked) {
+                lastUnlockedLessonIndex++
+            }
+        }
+
+        if (lessonIndex + 1 < course.lessonCount && lessonIndex + 1 <= lastUnlockedLessonIndex) {
+            internal.nextLesson = course.lesson(lessonIndex + 1)
+        }
+
+        if (internal.nextLessonUnlocked) {
+            profileDataAccess.saveCourseProgress(internal.nextLesson.id, profile, course.id, ProfileDataAccess.LastUnlockedLesson)
+        }
     }
 
+    property Profile profile
     property Lesson lesson
     property Course course
+    property TrainingStats stats
 
     signal homeScreenRequested
     signal nextLessonRequested(variant lesson)
@@ -43,6 +82,8 @@ FocusScope {
 
     QtObject {
         id: internal
+        property bool lessonPassed: false
+        property bool nextLessonUnlocked: false
         property Lesson nextLesson: null
     }
 
@@ -102,9 +143,7 @@ FocusScope {
                     anchors.fill: parent
                     Text {
                         anchors.centerIn: parent
-                        font.pixelSize: 50
-                        color: "#888"
-                        text: "TODO"
+                        text: "passed: " + internal.lessonPassed + "\n unlock: " + internal.nextLessonUnlocked
                     }
                 }
             }
