@@ -14,8 +14,8 @@ Version: 0.1 beta
   <lessons>
     <lesson>
       <id>basics1</id>
-      <title>Grundhaltung</title>
-      <newCharacters>asdfjkl&#xF6;</newCharacters>
+      <title>Grundhaltung 1</title>
+      <newCharacters>dfjk</newCharacters>
       <text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
 fj jf fj jf fj jf fj fj jf fj jf jf fj jf fj jf jf jf jf fj
 ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj
@@ -29,8 +29,13 @@ ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd
 ddk ddk kkd ddk kkd ddk ddk kkd kkd ddk ddk ddk ddk kkd kkd
 dkd kdk dkd dkd kdk dkd kdk dkd dkd kdk dkd dkd kdk kdk dkd
 dkk kkd dkd dkk kkd dkd kkd dkd kkd dkd kdk kdk dkd kdk dkd
-ddd kkk dkd kdk dkk kdd ddd ddd kkk dkd kdk kdk dkd kkk ddd
-ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll
+ddd kkk dkd kdk dkk kdd ddd ddd kkk dkd kdk kdk dkd kkk ddd</text>
+    </lesson>
+    <lesson>
+      <id>basics2</id>
+      <title>Grundhaltung 2</title>
+      <newCharacters>asl&#xF6;</newCharacters>
+      <text>ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll
 ls sl ls sl sl ls sl ls sl sl sl sl ls ls sl ls sl ls sl ls
 ssl ssl lss lss lss lss lss lss lss lss lss ssl ssl ssl ssl
 lsl sls lsl lsl ssl sls lsl sls sls lss lsl sls sls lsl sls
@@ -43,8 +48,13 @@ a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a aa&#xF6; aa&#xF6
 &#xF6;&#xF6;&#xF6; aaa a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a aaa &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a &#xF6;a&#xF6;
 a&#xF6;a &#xF6;&#xF6;&#xF6; aaa a&#xF6;a a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a a&#xF6;a &#xF6;a&#xF6; a&#xF6;a a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a
 aa&#xF6; aa&#xF6; aa&#xF6; &#xF6;a&#xF6; a&#xF6;a &#xF6;&#xF6;&#xF6; a&#xF6;a &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;a &#xF6;&#xF6;a aa&#xF6; &#xF6;a&#xF6; a&#xF6;a &#xF6;&#xF6;a
-a&#xF6;a aaa &#xF6;a&#xF6; a&#xF6;&#xF6; &#xF6;&#xF6;a a&#xF6;&#xF6; &#xF6;&#xF6;a aa&#xF6; &#xF6;aa a&#xF6;&#xF6; &#xF6;aa a&#xF6;a &#xF6;a&#xF6; aa&#xF6; &#xF6;aa
-asdf jkl&#xF6; asdf jkl&#xF6; asdf jkl&#xF6; &#xF6;lkj fdsa &#xF6;lkj fdsa asdf jkl&#xF6;
+a&#xF6;a aaa &#xF6;a&#xF6; a&#xF6;&#xF6; &#xF6;&#xF6;a a&#xF6;&#xF6; &#xF6;&#xF6;a aa&#xF6; &#xF6;aa a&#xF6;&#xF6; &#xF6;aa a&#xF6;a &#xF6;a&#xF6; aa&#xF6; &#xF6;aa</text>
+    </lesson>
+    <lesson>
+      <id>basics_recap1</id>
+      <title>Zwischen&#xFC;bung</title>
+      <newCharacters/>
+      <text>asdf jkl&#xF6; asdf jkl&#xF6; asdf jkl&#xF6; &#xF6;lkj fdsa &#xF6;lkj fdsa asdf jkl&#xF6;
 asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf &#xF6;lkj asdf jkl&#xF6;
 askj asjk askj askj asjk asjk asjk asjk asjk askj askj asjk
 ls&#xF6;a ls&#xF6;a ls&#xF6;a a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl a&#xF6;sl
@@ -62,7 +72,7 @@ ffkd kdkk dkks saak sask ssas dsas kl&#xF6;l dsas lkkl lkjk lkjl
 a&#xF6;sl ssas llk&#xF6; kk&#xF6;k &#xF6;lkj lkjl &#xF6;lk&#xF6; &#xF6;l&#xF6;a &#xF6;lks &#xF6;klj jlkk lkds</text>
     </lesson>
     <lesson>
-      <id>basics_recap1</id>
+      <id>basics_recap2</id>
       <title>Zwischen&#xFC;bung</title>
       <newCharacters/>
       <text>sla las laa aal sla lsa las sas lsa laa las all als ass als
