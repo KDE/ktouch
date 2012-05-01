@@ -79,16 +79,17 @@ Item {
             ListView {
                 id: lessonList
                 property int lastUnlockedIndex: 0
-                anchors .fill: parent
+                anchors.fill: parent
                 model: course.lessonCount
                 clip: true
                 delegate: ListItem {
+                    property Lesson lesson: index < course.lessonCount? item.course.lesson(index): null
                     property bool locked: index > lessonList.lastUnlockedIndex
                     width: lessonList.width - scrollBar.width
                     onSelected: lessonList.currentIndex = index
                     iconSource: locked? "document-encrypt": ""
                     label.opacity: locked? 0.5: 1.0
-                    title: item.course.lesson(index).title
+                    title: lesson? lesson.title: ""
                 }
                 onModelChanged: update()
             }
