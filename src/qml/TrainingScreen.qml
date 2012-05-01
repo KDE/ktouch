@@ -28,9 +28,12 @@ FocusScope {
     property Course course
     property Lesson lesson
 
+    property alias stats: stats
+    property alias referenceStas: referenceStats
+
     signal restartRequested()
     signal abortRequested()
-    signal finished(variant stats)
+    signal finished()
 
     property bool trainingStarted: false
     property bool trainingFinished: true

@@ -100,16 +100,15 @@ Item {
         keyboardLayout: main.keyboardLayout
         onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
-        onFinished: {
-            scoreScreen.stats = stats
-            main.switchScreen(trainingScreen, scoreScreen)
-        }
+        onFinished: main.switchScreen(trainingScreen, scoreScreen)
     }
 
     ScoreScreen {
         id: scoreScreen
         anchors.fill: parent
         visible: false
+        stats: trainingScreen.stats
+        referenceStats: trainingScreen.referenceStas
         onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
         onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
         onNextLessonRequested: {

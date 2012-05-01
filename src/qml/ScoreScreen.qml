@@ -75,6 +75,7 @@ FocusScope {
     property Lesson lesson
     property Course course
     property TrainingStats stats
+    property TrainingStats referenceStats
 
     signal homeScreenRequested
     signal nextLessonRequested(variant lesson)
