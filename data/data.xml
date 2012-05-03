@@ -35,4 +35,9 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>de</name>
     <path>keyboardlayouts/de.xml</path>
   </keyboardLayout>
+  <keyboardLayout>
+    <title>German Neo 2</title>
+    <name>de(neo)</name>
+    <path>keyboardlayouts/de.neo2.xml</path>
+  </keyboardLayout>
 </data>
