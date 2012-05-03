@@ -26,6 +26,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/de.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>English Dvorak (United Kingdom)</title>
+    <name>gb(dvorak)</name>
+    <path>keyboardlayouts/gb.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English (United Kingdom)</title>
     <name>gb</name>
     <path>keyboardlayouts/gb.xml</path>
