@@ -28,6 +28,18 @@ Item {
 
     function lookupKeyboardLayout(name)
     {
+        // first pass - exact match
+
+        for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
+        {
+            var dataIndexLayout = dataIndex.keyboardLayout(i)
+            if (dataIndexLayout.name === name)
+                return dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path)
+
+        }
+
+        // second pass - substring match
+
         for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
         {
             var dataIndexLayout = dataIndex.keyboardLayout(i)
