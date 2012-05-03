@@ -107,7 +107,7 @@ Item {
             LessonPreview {
                 width: parent.width
                 height: parent.height - startButtonContainer.height
-                lesson: lessonList.currentIndex !== -1? item.course.lesson(lessonList.currentIndex): null
+                lesson: lessonList.currentItem != null? lessonList.currentItem.lesson: null
             }
 
             Item {

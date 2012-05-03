@@ -27,6 +27,9 @@ Item {
     property string lessonTitle
 
     onLessonChanged: {
+        if (!lesson)
+            return;
+        updateAnimation.stop()
         var lines = []
         for (var i = 0; i < item.lesson.lineCount; i++)
             lines.push(item.lesson.line(i).value)
