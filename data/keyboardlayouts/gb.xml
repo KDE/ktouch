@@ -2,7 +2,7 @@
 <keyboardLayout>
   <title>English (United Kingdom)</title>
   <name>gb</name>
-  <width>1450</width>
+  <width>1480</width>
   <height>480</height>
   <keys>
     <key left="180" top="200" width="80" height="80" fingerIndex="0">
@@ -198,17 +198,15 @@
       <char position="bottomLeft">#</char>
     </key>
     <specialKey left="0" top="100" width="130" height="80" type="tab"/>
-    <specialKey left="1350" top="100" width="100" height="80" type="return"/>
-    <specialKey left="1230" top="300" width="220" height="80" type="shift" modifierId="shift"/>
-    <specialKey left="1070" top="400" width="130" height="80" type="other" label="Alt"/>
-    <specialKey left="1320" top="400" width="130" height="80" type="other" label="Ctrl"/>
-    <specialKey left="250" top="400" width="130" height="80" type="other" label="Alt"/>
-    <specialKey left="0" top="400" width="130" height="80" type="other" label="Ctrl"/>
-    <specialKey left="400" top="400" width="650" height="80" type="space"/>
+    <specialKey left="1380" top="100" width="100" height="180" type="return"/>
+    <specialKey left="1230" top="300" width="250" height="80" type="shift" modifierId="shift"/>
+    <specialKey left="1150" top="400" width="180" height="80" type="other" modifierId="altgr" label="Alt Gr"/>
+    <specialKey left="1350" top="400" width="130" height="80" type="other" label="Strg"/>
+    <specialKey left="150" top="400" width="130" height="80" type="other" label="Alt"/>
+    <specialKey left="0" top="400" width="130" height="80" type="other" label="Strg"/>
+    <specialKey left="300" top="400" width="830" height="80" type="space"/>
     <specialKey left="0" top="300" width="110" height="80" type="shift" modifierId="shift"/>
     <specialKey left="0" top="200" width="160" height="80" type="capslock"/>
-    <specialKey left="1300" top="0" width="150" height="80" type="backspace"/>
-    <specialKey left="1220" top="400" width="80" height="80" type="other" label=""/>
-    <specialKey left="150" top="400" width="80" height="80" type="other" label=""/>
+    <specialKey left="1300" top="0" width="180" height="80" type="backspace"/>
   </keys>
 </keyboardLayout>
