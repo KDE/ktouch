@@ -21,13 +21,18 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>courses/gb.xml</path>
   </course>
   <keyboardLayout>
-    <title>German</title>
-    <name>de</name>
-    <path>keyboardlayouts/de.xml</path>
+    <title>German Dvorak Type II</title>
+    <name>de(dvorak)</name>
+    <path>keyboardlayouts/de.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English (United Kingdom)</title>
     <name>gb</name>
     <path>keyboardlayouts/gb.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>German</title>
+    <name>de</name>
+    <path>keyboardlayouts/de.xml</path>
   </keyboardLayout>
 </data>
