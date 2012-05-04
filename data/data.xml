@@ -29,6 +29,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>courses/fr.auto1.xml</path>
   </course>
   <keyboardLayout>
+    <title>Bulgarian</title>
+    <name>bg</name>
+    <path>keyboardlayouts/bg.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>French Dvorak</title>
     <name>fr(dvorak)</name>
     <path>keyboardlayouts/fr.dvorak.xml</path>
