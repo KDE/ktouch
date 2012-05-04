@@ -39,6 +39,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/de.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Arabic</title>
+    <name>ara</name>
+    <path>keyboardlayouts/ara.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Dvorak (United Kingdom)</title>
     <name>gb(dvorak)</name>
     <path>keyboardlayouts/gb.dvorak.xml</path>
