@@ -94,7 +94,7 @@ Column {
         enabled: root.skillLevelSelectionEnabled
         checked: root.skillLevel === Profile.Advanced
         width: parent.width
-        text: i18n("I'm a expierenced machine typist and want to improve my skills")
+        text: i18n("I'm a experienced machine typist and want to improve my skills")
     }
 
     Row {
