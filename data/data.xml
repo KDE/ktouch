@@ -20,6 +20,14 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <keyboardLayout>gb</keyboardLayout>
     <path>courses/gb.xml</path>
   </course>
+  <course>
+    <title>French 1 (auto-generated)</title>
+    <description>Trainingfile genereated in October 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>fr</keyboardLayout>
+    <path>courses/fr.auto1.xml</path>
+  </course>
   <keyboardLayout>
     <title>French Dvorak</title>
     <name>fr(dvorak)</name>

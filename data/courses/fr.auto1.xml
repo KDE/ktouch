@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<course>
+  <id>fr.auto1</id>
+  <title>French 1 (auto-generated)</title>
+  <description>Trainingfile genereated in October 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+  <keyboardLayout>fr</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>jf1</id>
+      <title>j et f</title>
+      <newCharacters>jf</newCharacters>
+      <text>ff jf jj jj ff j jf jj jf fj jf fj jf fj ff
+ff fj jj f fj f j f jj f jf f jf ff j fj ff
+fj j fj fj jf ff j jj fj jj jf ff j jf jj f
+ff f ff fj f j fj ff jf f f jf f j ff ff ff
+j fj jf jj fj jj fj f jf ff ff jj j jj fj f
+jf jj f jf ff jj j j ff jf jj ff fj fj ff j
+jf ff jf jj jj ff jf j ff ff fj ff fj jf fj
+j jj j jf j j j fj jf j ff f ff jf jj ff ff
+jj jf jj jf j j fj j f jj f jj f jj f ff jf
+fj j j jj jj fj ff fj jj f f fj f f j jf jj
+fj jj f f ff j ff f ff f ff f f ff fj j f f
+jf ff jj jf fj fj jf jj f fj jj fj ff fj ff
+jj fj f jj jj ff ff jj ff jj f ff jj jf f j
+jj ff f fj j fj j jj j jf j f fj j fj fj ff
+j fj jj f jf fj ff jf jf ff jf f jf fj jj f
+jf jj jf jf j jj j fj f jf jj jj fj jf j fj
+fj jj j jj j ff jj fj j fj f j ff jj f f jf
+fj fj fj j jj j j j ff f jj j j jf ff ff jj
+jj f jj jf jj ff ff ff j jj fj j ff ff ff j
+jf fj f j ff jf jf ff jf j fj jj jj f fj jf
+ff jj j j jf f fj jf j ff ff fj ff jj jf jf
+jf fj fj j f f f fj jf jf j f jf ff fj j fj
+jj jf f ff fj fj j fj jf jj jf j j jj fj ff
+jf ff f jf f jj jj j f ff jj f jf ff jj j f
+jf ff f f jf j fj jj f f f jf jj jj jf f fj
+fj fj fj jf j ff jf jj fj fj fj fj j jj f f
+ff j jf j jj jf jf ff jf jj fj f j jj fj ff
+j j j fj f jj jj jj fj jf j jf j jf fj f fj
+f jf jf j jj j fj fj ff jj jj jj j fj ff fj
+ff fj fj fj jf jf jj jj jj f f f jj j fj jj</text>
+    </lesson>
+    <lesson>
+      <id>dk1</id>
+      <title>d et k</title>
+      <newCharacters>kd</newCharacters>
+      <text>dk d d k k dk dd k kd kk dd dk k dd k kd dk
+kk kk dd k kd kk dd dk kk dd kd dd dk dd kd
+dk dd kk kk dk dk dd dd k dd dk dk kk kk kk
+k dk kd k kk dd dd dk kd dk dk dk dk d dk k
+d kk dk kk dk kd kd dk d kk kd dk kd d kd k
+kd d kk dk kk dk kd kd dd d d dk dk k kk dk
+dd kk kd kd dd dd dd dd kk kd dk k kd dd kd
+dd dd k kd kk kk dd k kk dd k kd dk dk dk k
+k kd kd dk dd k dk dd d kd k dk dk kk dk kd
+dk dk k d kd d dd dk kk dd dd k kd kd kk dk
+dd d k dd kd dd kk kd k dd d dd dk kk dd kd
+k k k dk k d k dd d dk d kd dk dd d dk d kd
+kd kd k k dd dk k d kd kk kk kd dd d dk k d
+dk kk k dd dk kd d kk kk kk kk dd k kk k kk
+k dk d d d k d dk d dd dd d dd kd k dk k dk
+kd kk dd dk dk kk k k dk dk d dd kd k dk kd
+k kk dk kd k kk k k kk k kk d dd dd dk k kk
+dk dd k k d dk dd dk dk kk dd kk kd kd d dk
+d kd k kk kk dk kd d k kd dd d d k kk dk dd
+dd dd d kd kk kk d dk kk kk dd d kk dd d kk
+k kk d kk k k dd kk d dd d kd kk kd kd dk d
+k dk d d kd d dk d dd dk k kk dk k dd kk dk
+d dk kd k kd d k kd d dk d kd d kk kk kk dd
+dd d d dk k dd d kd dk dk kk dk kd kk dk dd
+k kk kd kd d kk kd kk dd d kk kk dk dk dk k
+dk dk kk d kk dk d d k kk dd kk k kk k d dd
+d kd k k k dk dd k dk kk dd d k dk dk dd kk
+kk dk kk kk kk d dk dk kk kk k d dd kd k kd
+kd kd dk d k dd dk d kk kk kd kd kd k dk dd
+dd kd dd kk kd kd k k k dk k d kk kd kd k d</text>
+    </lesson>
+    <lesson>
+      <id>ls1</id>
+      <title>l et s</title>
+      <newCharacters>ls</newCharacters>
+      <text>ss l s s l ss s ll sl ll s l ss ll l ss s l
+ss sl ll ls ll ss ll ls s ss l ll s ls sl s
+ls sl ll ls sl l s s ll ls ss sl s ls sl ls
+ls l l ll ss ss sl s s ls ls ss ll ll ls ls
+ls l sl ss l ss l ll s ls ls sl ll ss ss sl
+l l ss ss l ls s s ll sl l ls ls ls sl ss s
+sl s ll ll l ss ls ls ls ss ss l ss ss s ss
+ss l ll ss sl l s s sl s ll l ll ls ss s sl
+ll ss sl sl ls sl ss ls ss l s ll s s ll ls
+l ll ss l ss ls sl l ss ll ss s sl l ll s l
+ls ss sl ls ss ss ls ss s s s ls ss sl ls l
+sl sl ls sl ll ls sl sl ll sl ss s ll ll ls
+ll s s ls sl s s l l ls s ls ll l l l ll sl
+sl s s sl ss ss ls ls ll ls l ls ss ss sl s
+s s ls ls s sl ss sl ss sl sl ss ll ls sl l
+s sl ll ss sl sl l ss s sl l ll sl ss ls ll
+l ll s sl l ll ls sl ll ls s ll ss sl s s s
+l l ll sl s ll ss ll ll ll s sl l l ll ss l
+s ls ss l ss ls ss ss sl ll ss l sl l s l s
+l sl ls ll sl s ls s sl l ls sl ss s l ss s
+s l l sl l sl l ll ss s ll l sl ll ls sl ls
+ss s l l ll ls ll ll ll ls ll l ls ss ls sl
+l ss sl l l ls l s l s ss ss ll ls ls sl ll
+ls ll sl ll ls ls sl ss l ll s ls l ll l ss
+s s l sl s ls ll sl s sl s ll l ll sl ls ls
+l l ss ls ll ll sl ls ss sl ls ll sl ls l s
+ll ls sl l ll ls sl l ls ll ll l sl ss ls l
+ls sl ss ss s ll ls sl ll ss sl ls sl ls ls
+s ss l s ll ls ss ll sl sl sl sl s ss ss ls
+ls sl l s ll ss sl ls sl sl sl ss l l ls sl</text>
+    </lesson>
+    <lesson>
+      <id>qm1</id>
+      <title>q et m</title>
+      <newCharacters>qm</newCharacters>
+      <text>qmls qmd mll mm qmls qmd qmd qmd mq m q qll
+q q qmd mf qdd mll mll mf qmd ms qm q qm ql
+q mq mf qmd qs qll qmls qm q qmls ms qdd qm
+mf mm qdd mll qm qdd m qs m mm qm qmd ms qm
+ms msk mm qdd qll qdd qmls qm mm qll qm qsk
+qll qm mm qqf qll q mll mq mll mf mf qm qmd
+qmd qmd ms qmls mm ms ms qmls qmls mq ms qm
+qm q qs q mfq mll mf mll qll qll qq qll qdq
+mm qmls ms m mm qm mll qs q qdd mq ms mq qm
+qs mll q mll qs m mq qsk qmls qsk mq qdd qf
+qm m qmd m q ms qq qll qll qm q qq qq q qmd
+qm qll qll qmd qsk qmls qdd ms mf mm qq mqm
+mll mf mm qs qs mq mm ms mq qq qll m msm qm
+quel quand que quoi quid quels qui qui quel
+quand quoi pourquoi quel quid quelles quand
+quel quarks qui quoi que quel quid quoi que
+quoique quota quotient quelle quitter quels
+quant quark quelle quand quartier questions
+quota question qualit&#xE9;s quelle quand quelle
+pourquoi quand quelles qui quelque que quoi
+quand quarts quartiers qualit&#xE9; moment quart
+quais quoi mes moi que quoi qui masque quoi
+quand mas quoi quai masse met quel quoi qui
+quai masque qui question quelle qualit&#xE9; qui
+quelconque mission maman quartier mesquines
+mois mer mon ma mes mas mime moment montres
+mot mosqu&#xE9;e masse moquette maquette mon mes
+mise question moque mesquin messe met merde
+marques masque massifs marquis maroquinerie
+maniaque maman marquants masque musique moi</text>
+    </lesson>
+    <lesson>
+      <id>ia1</id>
+      <title>i et a</title>
+      <newCharacters>ai&#xEE;&#xEF;</newCharacters>
+      <text>ia il la ai ai ii aa i a a i ia ai al il sa
+ai ia ii aa ai ai aa al il la sa si ali sal
+aii aai iia iai aia iaa iia aai iai aaa iii
+i aa i ami aa ia ail aa aa si sa i ii a ils
+ada ami mai fais fila mali kaki sa si saisi
+ail lisa lira liai lassai assit laisse sali
+si sa sais sali lissa liasse saisie cil ada
+dit dadas daim dard daim mal sida lait mali
+dada dis mal mali daim raid la il mal drain
+ail aide il cil lac mai a il lit lait la ai
+dalle dada dirige lit lait la lit papa plia
+aide sida danse la il ami mai mal lime aile
+saisi sali cil essai salles liasses sa aise
+ait sais sida mai lame malle cime visa aide
+base site sadique masque insaisissable lait
+tata taille mimais mai malle lits liasse la
+acquis ailes alim lassais ami lait mali las
+malais mille massifs malaises masques maint
+main maille mai magie mais mal malaise amis
+mais mari misait massais maltais maille mai
+taxait tas tassait tard tilt tari tandis ta
+taie taillis tamis tirais tissa taris taies
+lassai liais lirai lissai limai mais malais
+si sais missile laisses lirais quai marquis
+magie mimais sali liasse aide tari main mai
+lait sida tari mari mai plia mimais malaise
+daim ami sali ail plia quai visa parlais ai
+saisies insistance instant aide ail lait si
+tassai drain mimai liasse lassai raid essai
+saisies mali lima malade imite quai liquida
+raid lissai misait drain alim lait marquise</text>
+    </lesson>
+    <lesson>
+      <id>en1</id>
+      <title>e et n</title>
+      <newCharacters>en&#xE9;&#xE8;&#xEA;</newCharacters>
+      <text>en ne ee nn n e ne ee ne en nn en n en ne n
+e e ee nn ne en nn e ee ne en ne e n e ee e
+ne ee nn e n ne nn e en ee ne e e n nn e ne
+ene ee een n nn nne en eee e nen en nnn nen
+e enn nee ee ne n ne e ne ene ne e n en een
+une lent net en naine ne nem yen dent tente
+ment ne en dent lent aine laine en dent zen
+tente plein ment ne enfle entente en yen en
+entend lents dents ment jeunes mental entre
+en net tente kendo sonne mine nue lune dent
+tonne d&#xE9;ment nie attend une zen prune lunes
+yen fente naine laine mente enfle kendo yen
+prune vente plein pente entente descente ne
+m&#xE8;ne sens danse lance encens enceinte enfle
+enfer ennui entend sens lent neige nef yens
+nerf net yen nulle norme nue en entente zen
+peine lune pension lente dune zone conne ne
+laine dents grogne encens kendo fine d&#xEE;ners
+mine pente attente prend net ment enfle une
+lent entend donne kendo tonne aine sens yen
+monde jeune ann&#xE9;es damner lorgne unie zones
+veine dune vanne lune melon danse sens nues
+plainte tente sc&#xE8;ne mine longue nulle prune
+teinte ceinte kendo quelconque dent lent en
+entente unie internet pente enfle lance yen
+net mine donne nulle jeune entente pensions
+prune laine dune lune sonne aine lent neige
+yen jeune dent tenues sens ment unie encens
+zone grogne donne prend tente aine sens une
+ennui descente norme nulle laine entre lent</text>
+    </lesson>
+    <lesson>
+      <id>vu1</id>
+      <title>v et u</title>
+      <newCharacters>vu&#xFB;</newCharacters>
+      <text>uu v u uv uu vu vv u v u u vv uv vu vu u vv
+u v v uv vv u vv uu vu u v uv u v vv u v vu
+u u v vv uv u v uu uv vu vv v u uv u v uv v
+vu v vu uv u v vu uv u v vu vu uv vv uu v u
+vv vuv vu vv vuv u vvu uuv uvu vvv v uvu vu
+vvv uu v uu v vuv uuu u v vu u vvu uuv vu v
+vous venue louve neuve ouvert ventrus vague
+valve vue trouve veneur vous louve vue venu
+veuves mauves viseur vous vertus vogue veau
+vermoulu virtuel louve ventouse verrue visu
+vigoureux vive violeur couvre virus vivaces
+ouvre venus v&#xE9;reux verrou vieux voulu vogue
+vaurien voeu vou&#xE9; valve usuel voleurs velus
+v&#xEA;tu venteux louve venu vague vue vous viva
+vulcanologue usure unique ululer tutu virus
+voyou neuve vertus vague ouvre venu vain vu
+vous valide valeur vil vaisseau usuel veine
+viva virtuose vu voleur vulgaire vou&#xE9; mauve
+duvet devenu viseur ouvre velu voeu vu v&#xEA;tu
+pauvre ventouse venteux ouverts voulu virus
+vuln&#xE9;rables voyeur volute veuves voyou visu
+revenu vagues vue oeuvre virtuel vous vogue
+verrue trouve valeur ventrus vulgaire vo&#xFB;te
+voulu viva voeu vigoureux couvre vil douves
+violeurs veneur mauve virtuoses viseur velu
+vogue usuel virus virtuel vous louve duvets
+vulcanologue vaisseau vaurien ventouse veuf
+vivaces v&#xEA;tu neuve vu venteux vague ventrus
+ululer voyou pauvre voulu viva usuel valeur
+velu ouvre oeuvre parvenu veneur trouv&#xE9; vus</text>
+    </lesson>
+    <lesson>
+      <id>r1</id>
+      <title>r</title>
+      <newCharacters>r</newCharacters>
+      <text>revivre lire traiter injurier partir rideau
+ruine brebis revivifier ruffians rire trier
+livre croire briller trains citrons vriller
+savoir trouille marquis cirer frise couvrir
+mendier tirs suivre virus palefrenier foire
+traiter prise gris brise triste cri moindre
+joindre virtuelles lier nier prier irriguer
+lire torride brique carri&#xE8;re irriter citron
+vrille dire trier irradier briller inverser
+tirailler brebis savoir isoler livre croire
+para&#xEE;tre virer crier marquis vivre r&#xE9;sister
+tristes giratoire na&#xEE;tre rire ruine moindre
+irr&#xE9;el frises gris nier suivre empire foire
+rite rallier espoir joindre imbiber croiser
+venir vierge sentir lire cirer finir virale
+obtenir trouille partir servir frire poires
+trier vivre marquis citron livre frise pire
+torride nier brider pris palefrenier ruiner
+vigoureux trahir devoir savoir brebis virus
+vivre devoir giratoire plaisir brique crier
+irritation carie vaurien relier renier rire
+briller moindres griser jouir tenir nourrir
+suivre foire tristes croire mendier railler
+frise carri&#xE8;re virtuel tir torride irradier
+croiser cirer vrilles courrier spolier dire
+quartier nier tiers citron brouille vierges
+savoir partir brebis rouille joindre irr&#xE9;el
+lire irriguer ruine rire trier pris marquis
+brique tir palefrenier empire brille bribes
+vivre tra&#xEE;tres moindre brider foire traiter</text>
+    </lesson>
+    <lesson>
+      <id>oc1</id>
+      <title>o et c</title>
+      <newCharacters>oc</newCharacters>
+      <text>officier courses confiner consid&#xE9;rer &#xE9;coles
+octet couper conspire once couleur concerne
+officier conjurer clore convaincre conclure
+occasions action couler coude couche octane
+contraindre octobre couper couvent couffins
+comprendre constituer froc cousin concevoir
+corriger confiner cours coco locaux console
+concession convenir toucher octane couloirs
+co&#xEF;ncidence occulte obscur confusion cochon
+couffin toc occurrence &#xE9;conomie coi confier
+compagnies croix octets communiste oculaire
+corridor occident courses conf&#xE9;rer conclure
+locataire couvents octave coursier d&#xE9;couper
+conjurer couple continuer courage convertir
+condition constatations couver cocu occuper
+octogone couffins conc&#xE9;der oc&#xE9;an orchestrer
+connu contour cordon coquelicot convoi &#xE9;cho
+coco &#xE9;cope confiner conscience coque douche
+confier occulte couloir octave cours cobalt
+octet &#xE9;clore commode code octobre combattre
+concevoir conclusion douceur cloche touches
+social &#xE9;corces commettre combinaison courir
+coucou occuper comprendre coop&#xE9;rer cor coup
+coque col conna&#xEE;tre obscur conseil octogone
+occident concours action continuer colloque
+courage occasionnel conjure convenir cloque
+couver orchestre conclure communiste couple
+confusions oculaires corriger coco confiner
+octave conscience couloirs compagnie locaux
+courses ocre couler croix octet co&#xEF;ncidence</text>
+    </lesson>
+    <lesson>
+      <id>pq1</id>
+      <title>p et q</title>
+      <newCharacters>pq</newCharacters>
+      <text>prix plaquer pardon quelque propose preuves
+plus proc&#xE9;der provoquer peler pauvres passe
+pourpre procession pinte produit quai poire
+persuade p&#xE9;riode qui princesse poison per&#xE7;u
+quand parler professeurs pr&#xE9;f&#xE9;rer poursuite
+pr&#xE9;c&#xE9;dant parce que providence propositions
+barque prisonnier pr&#xE9;parer poss&#xE8;de principe
+quitter processions quart pr&#xE9;judice profond
+pape pav&#xE9; pr&#xE9;c&#xE8;de applique populaire plaine
+qui profond plaque quatre pers&#xE9;v&#xE8;re produit
+coupe pervers pourpre plus quilles pantalon
+poursuivi personnes peuple presse p&#xE2;le quai
+places quitte pardon claque pin procure pop
+pla&#xEE;t pull plein pr&#xE9;face paye prof&#xE8;re quand
+profane quid p&#xE2;te pense prie quelque papier
+pourquoi queue pire pinson prouve populaire
+persuades poison pipe pause croupe question
+traque propulsion pi&#xE8;ces place prude quelle
+protester quark professionnel pr&#xE9;f&#xE8;re coque
+qualit&#xE9; passe pousse populace quinte quatre
+pin po&#xE8;me quinze papillon quelconque poison
+pratique psychotique principe probl&#xE9;matique
+quitte poulpe publicit&#xE9; plan poids pr&#xE9;parer
+p&#xE9;pin quoi propice quota quoique pile pense
+trafiques p&#xF4;les plaine quinze place attaque
+pop tronque planque glauque publique plaque
+papa prise p&#xE9;nal peler propre quart puisque
+parque quelque peuple piquer pluie pupilles
+pape quota troque r&#xE9;plique trappe psychique
+remarques probl&#xE9;matique techniques quantit&#xE9;</text>
+    </lesson>
+    <lesson>
+      <id>wm</id>
+      <title>w et m</title>
+      <newCharacters>wm</newCharacters>
+      <text>mai mamie moi mince masse mine walkman dame
+mime wagon mod&#xE8;le missile watt moine mortes
+mari melon marche western milice ment mille
+moulin mi&#xE8;vre moutarde m&#xE9;chant whisky motte
+wallon multiple mousse comme femme homme me
+militaire milieu mode marque m&#xE9;dical morale
+menu manches manteau trame pomme m&#xE9;m&#xE9; palme
+mystique temps t&#xE9;moin mutant mare mis&#xE9;rable
+m&#xE9;lodie wagon musique mesures mineur majeur
+moteur matrice ma marbre mignon miette maux
+moderne ma&#xEE;tre mazout monter molaire napalm
+mois monopole monstre mer moment wallon mai
+lampe moisi meurtre western lendemain momie
+uniquement maintenue commerciaux simplement
+permettent remerciement commence facilement
+documents sympathique demandez probablement
+comment programmeur programme soigneusement
+nombre commercial permet commune watt moyen
+graduellement wagon western ami temps monde
+noms mot camion mes actuellement empaqueter
+documents mais palme fondamental exactement
+sommets gratuitement micro milliard minimal
+maintenue lime segmentation dynamiques lame
+finalement m&#xE9;canismes chargements employant
+watt moutarde mesquin mollusque mat murmure
+maintenir mis moins milliards aiment magies
+myrte mod&#xE8;re wagons miroirs midi comprendre
+palme machine sommes principalement maximal
+moyen whisky amener meilleur wallon message
+syst&#xE8;me forme limite walkman moment segment</text>
+    </lesson>
+    <lesson>
+      <id>bp1</id>
+      <title>b et p</title>
+      <newCharacters>bp</newCharacters>
+      <text>septembre combinaisons disponible ressemble
+possible impensable probl&#xE8;mes indispensable
+objectifs publier base abandonner bulletins
+publiquement publicit&#xE9; publiques robustesse
+applicable pop portable incompatible boucle
+double responsables papa probables beaucoup
+acceptables objets publication biprocesseur
+pin capable ex&#xE9;cutables disponible portable
+responsables compatible susceptible baliser
+indisponible bout coupable besoin librement
+publics probable contribuer basique notable
+membre semblent base table brille buts p&#xF4;le
+bureau joignable inutilisables bleu tableau
+incontournables place abonner bande robuste
+bonne librairies instable double bienvenues
+propulser plante tube rassembler absolument
+combat substitutions bienheureux attribuant
+barbare symbolique propose produit prononce
+bien procurer pr&#xE9;c&#xE9;der principe presse bois
+r&#xE9;parable prenable bribes punissable barbes
+baron particulier brute partageable plaisir
+portables bleu performance publiable parfum
+intangibles capables brique binaire brasier
+globalement aimable librairies distribution
+bouchable instalable publication abandonner
+hebdomadaire obligatoires visible plaquable
+bible basilique but ressemble objectivement
+r&#xE9;pr&#xE9;hensibles brume barre boire acceptable
+passable rep&#xE9;rable braise pliable parfaites
+souhaitable pourpre personne banquet papier</text>
+    </lesson>
+    <lesson>
+      <id>ty1</id>
+      <title>t et y</title>
+      <newCharacters>ty</newCharacters>
+      <text>installez style tu description type analyse
+concert soyons formatage compte hy&#xE8;ne autre
+haute dynamique tarte temporaire symbolique
+continue moyen partition hypertexte syst&#xE8;me
+prototypes nettoyage interne cycle ennuyeux
+gyroscope temps lynx cryptographie royaumes
+rudoyer jury spatial cette kystes volleyeur
+routines psychologie voyou anonyme traduite
+documentation fondateur essayons hydropt&#xE8;re
+toute yoga kyrielle tel yaourt tante tester
+votre dystrophie payer utiliser ayez rythme
+comportement hypnose mythe alternatifs chat
+attente incluent xylophone joint s&#xE9;lectives
+sympathiques tristesse voyez trois tournant
+ayant stylo participants tous activit&#xE9; type
+yacht hypnose noyaux distribuent exactement
+mettre paralysant portent tarte conflictuel
+toit pays envoyer syntaxe centaine descente
+traiter royal d&#xE9;layer toilettes typographie
+tonne tour voyons hydraulique physique tant
+hyperbole balayer synchronisation duettiste
+raclette doyen tourment contribuer terrible
+travail violette douillette typique attaque
+tente ayons thym puissant tinter territoire
+copyright toiles hypocrisie touchant whisky
+renvoyer typique transmission t&#xE9;nor vedette
+citoyens dynamo total thyro&#xEF;de soyez voyage
+torture dynastie pratiquement textile matin
+fuyant belette essaye faite incroyable t&#xEA;te
+constitue d&#xE9;voyer futurs noyer yeux gymnase</text>
+    </lesson>
+    <lesson>
+      <id>zx1</id>
+      <title>z et x</title>
+      <newCharacters>zx</newCharacters>
+      <text>extraire peureux exact z&#xE8;le expliquer mixer
+mixte fixer originaux exploiter exclus yeux
+zigouiller hexagones noyaux canaux ceux six
+ex&#xE9;cutable exprimer digitaux fabuleux mieux
+montez lisez zodiaque demandez sentez exc&#xE8;s
+soixante recopiez savez x&#xE9;nophobe commencez
+verrez maximum za&#xEF;rois poux saisissez jetez
+ajoutez exemple suivez soumettez renseignez
+linux proximit&#xE9; excuses nouveaux exposition
+z&#xE9;bu sauvez devriez complexe extraordinaire
+consultez relancez connexion zone existante
+explosif obtenez disposez xylophone examens
+pensez zinc expose vouliez destinez normaux
+explicitement aviez choisissez zeste foncez
+choix recevrez expansion commerciaux zouave
+donnez rendez principaux ennuyeux remarquez
+zambien excellente bureaux peux expressions
+laissez dizaine explicatif suffixe extr&#xEA;mes
+externe latex exp&#xE9;rimenter projetez heureux
+seriez trouverez vieux index mexicains lynx
+aimez exporter travaillez taux exige zigzag
+maintenez payez zizanie fournissez poseriez
+veuillez indiquez zoo gardez voix soyez dix
+apprendrez comptez envoyez rapportez copiez
+auxquels unix connaissez pr&#xE9;voyez ext&#xE9;rieur
+voulez aidez g&#xE9;n&#xE9;reux essayez naviguez ax&#xE9;s
+trouvez excit&#xE9;s utilisez proposez rejoignez
+r&#xE9;seaux exp&#xE9;diez respectez assurez sp&#xE9;ciaux
+prenez pressez zooms id&#xE9;aux sp&#xE9;cifiez z&#xE8;bre</text>
+    </lesson>
+  </lessons>
+</course>
