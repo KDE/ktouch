@@ -73,11 +73,13 @@ FocusScope {
             visible: homeScreenAccordion.opacity > 0
             id: header
             width: parent.width
-            tools: PlasmaComponents.ToolBarLayout {
-
+            tools: Row {
+                anchors.leftMargin: 3
+                anchors.rightMargin: 3
                 spacing: 5
 
                 PlasmaComponents.ToolButton {
+                    id: profileButton
                     iconSource: "user-identity"
                     text: d.profile !== null? d.profile.name: ""
                     onClicked: {
@@ -91,7 +93,13 @@ FocusScope {
                     checked: profileSelectorSheet.isOpen()
                 }
 
+                Item {
+                    height: parent.height
+                    width: parent.width - profileButton.width - configureButton.width - (parent.children.length - 1) * parent.spacing
+                }
+
                 PlasmaComponents.ToolButton {
+                    id: configureButton
                     iconSource: "configure"
                     onClicked: {
                         var position = mapToItem(null, 0, height)
