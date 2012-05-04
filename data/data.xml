@@ -55,4 +55,9 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>de(neo)</name>
     <path>keyboardlayouts/de.neo2.xml</path>
   </keyboardLayout>
+  <keyboardLayout>
+    <title>English Colemak (USA)</title>
+    <name>us(colemak)</name>
+    <path>keyboardlayouts/us.colemak.xml</path>
+  </keyboardLayout>
 </data>
