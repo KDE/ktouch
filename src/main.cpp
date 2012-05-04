@@ -55,6 +55,8 @@ int main(int argc, char **argv)
     options.add("opengl", ki18n("use a QGLWidget for the viewport"));
     KCmdLineArgs::addCmdLineOptions(options);
 
+    KApplication::setGraphicsSystem("raster");
+
     KApplication app;
     MainWindow *mainWin = 0;
 
