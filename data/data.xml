@@ -21,6 +21,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>courses/gb.xml</path>
   </course>
   <keyboardLayout>
+    <title>French Dvorak</title>
+    <name>fr(dvorak)</name>
+    <path>keyboardlayouts/fr.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>German Dvorak Type II</title>
     <name>de(dvorak)</name>
     <path>keyboardlayouts/de.dvorak.xml</path>
@@ -39,6 +44,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <title>English (USA)</title>
     <name>us</name>
     <path>keyboardlayouts/us.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>French</title>
+    <name>fr</name>
+    <path>keyboardlayouts/fr.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English (United Kingdom)</title>
