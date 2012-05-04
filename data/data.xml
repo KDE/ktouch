@@ -69,6 +69,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/gb.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Portuguese (Brazilian)</title>
+    <name>br</name>
+    <path>keyboardlayouts/br.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>German</title>
     <name>de</name>
     <path>keyboardlayouts/de.xml</path>
