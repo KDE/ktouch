@@ -1,4 +1,4 @@
-# KTouch CMakeList.txt file
+# KTouch CMakeLists.txt file
 #
 
 project(ktouch)
