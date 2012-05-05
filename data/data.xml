@@ -103,4 +103,9 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
   </keyboardLayout>
+  <keyboardLayout>
+    <title>Danish</title>
+    <name>dk</name>
+    <path>keyboardlayouts/dk.xml</path>
+  </keyboardLayout>
 </data>
