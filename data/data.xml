@@ -14,13 +14,6 @@ Version: 0.1 beta
     <path>courses/de2.xml</path>
   </course>
   <course>
-    <title>English (auto-generated)</title>
-    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
-Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
-    <keyboardLayout>gb</keyboardLayout>
-    <path>courses/gb.xml</path>
-  </course>
-  <course>
     <title>French 1 (auto-generated)</title>
     <description>Trainingfile genereated in October 2001
 Program written by H&#xE5;vard Fr&#xF8;iland
@@ -28,10 +21,17 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <keyboardLayout>fr</keyboardLayout>
     <path>courses/fr.auto1.xml</path>
   </course>
+  <course>
+    <title>English (auto-generated)</title>
+    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
+Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>gb</keyboardLayout>
+    <path>courses/gb.xml</path>
+  </course>
   <keyboardLayout>
-    <title>Czech</title>
-    <name>cz</name>
-    <path>keyboardlayouts/cz.xml</path>
+    <title>Arabic</title>
+    <name>ara</name>
+    <path>keyboardlayouts/ara.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Bulgarian</title>
@@ -39,9 +39,19 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/bg.xml</path>
   </keyboardLayout>
   <keyboardLayout>
-    <title>French Dvorak</title>
-    <name>fr(dvorak)</name>
-    <path>keyboardlayouts/fr.dvorak.xml</path>
+    <title>Portuguese (Brazilian)</title>
+    <name>br</name>
+    <path>keyboardlayouts/br.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Czech Qwerty</title>
+    <name>cz(qwerty)</name>
+    <path>keyboardlayouts/cz.qwerty.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Czech</title>
+    <name>cz</name>
+    <path>keyboardlayouts/cz.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>German Dvorak Type II</title>
@@ -49,14 +59,54 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/de.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
-    <title>Arabic</title>
-    <name>ara</name>
-    <path>keyboardlayouts/ara.xml</path>
+    <title>German Neo 2</title>
+    <name>de(neo)</name>
+    <path>keyboardlayouts/de.neo2.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>German</title>
+    <name>de</name>
+    <path>keyboardlayouts/de.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Danish</title>
+    <name>dk</name>
+    <path>keyboardlayouts/dk.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Estonian</title>
+    <name>ee</name>
+    <path>keyboardlayouts/ee.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Finnish</title>
+    <name>fi</name>
+    <path>keyboardlayouts/fi.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>French Dvorak</title>
+    <name>fr(dvorak)</name>
+    <path>keyboardlayouts/fr.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>French</title>
+    <name>fr</name>
+    <path>keyboardlayouts/fr.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Dvorak (United Kingdom)</title>
     <name>gb(dvorak)</name>
     <path>keyboardlayouts/gb.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English (United Kingdom)</title>
+    <name>gb</name>
+    <path>keyboardlayouts/gb.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English Colemak (USA)</title>
+    <name>us(colemak)</name>
+    <path>keyboardlayouts/us.colemak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Dvorak (USA)</title>
@@ -67,55 +117,5 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <title>English (USA)</title>
     <name>us</name>
     <path>keyboardlayouts/us.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>French</title>
-    <name>fr</name>
-    <path>keyboardlayouts/fr.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>English (United Kingdom)</title>
-    <name>gb</name>
-    <path>keyboardlayouts/gb.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>Portuguese (Brazilian)</title>
-    <name>br</name>
-    <path>keyboardlayouts/br.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>Finnish</title>
-    <name>fi</name>
-    <path>keyboardlayouts/fi.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>German</title>
-    <name>de</name>
-    <path>keyboardlayouts/de.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>Estonian</title>
-    <name>ee</name>
-    <path>keyboardlayouts/ee.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>German Neo 2</title>
-    <name>de(neo)</name>
-    <path>keyboardlayouts/de.neo2.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>Czech Qwerty</title>
-    <name>cz(qwerty)</name>
-    <path>keyboardlayouts/cz.qwerty.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>English Colemak (USA)</title>
-    <name>us(colemak)</name>
-    <path>keyboardlayouts/us.colemak.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>Danish</title>
-    <name>dk</name>
-    <path>keyboardlayouts/dk.xml</path>
   </keyboardLayout>
 </data>
