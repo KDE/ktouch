@@ -211,6 +211,8 @@ def parse_key(key_node):
     else:
         key = SpecialKey(left, top, width, height, 'other')
         key.label = key_node.attrib['KeyText']
+        if key.label == "AltGr":
+            key.label = "Alt Gr"
         if key.label == "Alt Gr":
             key.modifier_id = 'altgr'
     return key

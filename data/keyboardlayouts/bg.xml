@@ -192,7 +192,7 @@
     <specialKey left="0" top="100" width="130" height="80" type="tab"/>
     <specialKey left="1380" top="100" width="100" height="180" type="return"/>
     <specialKey left="1230" top="300" width="250" height="80" type="shift" modifierId="shift"/>
-    <specialKey left="1200" top="400" width="130" height="80" type="other" label="Alt Gr"/>
+    <specialKey left="1200" top="400" width="130" height="80" type="other" modifierId="altgr" label="Alt Gr"/>
     <specialKey left="1350" top="400" width="130" height="80" type="other" label="Ctrl"/>
     <specialKey left="150" top="400" width="130" height="80" type="other" label="Alt"/>
     <specialKey left="0" top="400" width="130" height="80" type="other" label="Ctrl"/>
