@@ -89,6 +89,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/de.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Estonian</title>
+    <name>ee</name>
+    <path>keyboardlayouts/ee.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>German Neo 2</title>
     <name>de(neo)</name>
     <path>keyboardlayouts/de.neo2.xml</path>
