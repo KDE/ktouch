@@ -29,6 +29,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>courses/fr.auto1.xml</path>
   </course>
   <keyboardLayout>
+    <title>Czech</title>
+    <name>cz</name>
+    <path>keyboardlayouts/cz.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Bulgarian</title>
     <name>bg</name>
     <path>keyboardlayouts/bg.xml</path>
@@ -87,6 +92,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <title>German Neo 2</title>
     <name>de(neo)</name>
     <path>keyboardlayouts/de.neo2.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Czech Qwerty</title>
+    <name>cz(qwerty)</name>
+    <path>keyboardlayouts/cz.qwerty.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Colemak (USA)</title>
