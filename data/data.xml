@@ -84,6 +84,11 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>keyboardlayouts/br.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Finnish</title>
+    <name>fi</name>
+    <path>keyboardlayouts/fi.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>German</title>
     <name>de</name>
     <path>keyboardlayouts/de.xml</path>
