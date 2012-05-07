@@ -165,8 +165,15 @@ Item
             blurRadius: 5
             xOffset: 0
             yOffset: 0
+
+            Behavior on blurRadius {
+                NumberAnimation {
+                    duration: 150
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
-        state: item.isHighlighted? "highlighted": "normal"
+
         states: [
             State {
                 name: "normal"
@@ -182,7 +189,7 @@ Item
                 }
             },
             State {
-                name: "highlighted"
+                name: "highlighted1"
                 PropertyChanges {
                     target: shadow
                     color: "#54A7F0"
@@ -193,59 +200,59 @@ Item
                     target: shadow.effect
                     blurRadius: 15
                 }
-            }
-        ]
-        
-        
-        transitions: [
-            Transition {
-                from: "normal"
-                to: "highlighted"
-                ParallelAnimation {
-                    ColorAnimation {
-                        target: shadow
-                        duration: 50
-                        easing.type: Easing.OutCubic
-                    }
-                    NumberAnimation {
-                        target: shadow
-                        properties: "width, height"
-                        duration: 150
-                        easing.type: Easing.OutBack
-                        easing.overshoot: 5
-                    }
-                    NumberAnimation {
-                        target: shadow.effect
-                        properties: "blurRadius"
-                        duration: 50
-                        easing.type: Easing.OutCubic
-                    }
-                }
             },
-            Transition {
-                from: "highlighted"
-                to: "normal"
-                ParallelAnimation {
-                    ColorAnimation {
-                        target: shadow
-                        duration: 150
-                        easing.type: Easing.InCubic
-                    }
-                    NumberAnimation {
-                        target: shadow
-                        properties: "width, height"
-                        duration: 150
-                        easing.type: Easing.InCubic
-                    }
-                    NumberAnimation {
-                        target: shadow.effect
-                        properties: "blurRadius"
-                        duration: 150
-                        easing.type: Easing.InCubic
-                    }
+            State {
+                name: "highlighted2"
+                PropertyChanges {
+                    target: shadow
+                    color: "#54A7F0"
+                    width: item.width
+                    height: item.height
+                }
+                PropertyChanges {
+                    target: shadow.effect
+                    blurRadius: 15
                 }
             }
         ]
+
+        Behavior on width {
+            NumberAnimation {
+                duration: 150
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        Behavior on height {
+            NumberAnimation {
+                duration: 150
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        Behavior on color {
+            ColorAnimation { duration: 150 }
+        }
+
+        
+        SequentialAnimation {
+            id: pulseAnimation
+            loops: Animation.Infinite
+            running: isHighlighted
+            onRunningChanged: {
+                if (!running)
+                    shadow.state = "normal"
+            }
+
+            ScriptAction {
+                script: shadow.state = "highlighted1"
+            }
+            PauseAnimation { duration: 850 }
+            ScriptAction {
+                script: shadow.state = "highlighted2"
+            }
+            PauseAnimation { duration: 150 }
+        }
 
     }
 
