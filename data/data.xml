@@ -114,6 +114,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/il.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Italian</title>
+    <name>it</name>
+    <path>keyboardlayouts/it.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
