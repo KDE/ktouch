@@ -124,6 +124,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/latam.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Lithuanian (Standard)</title>
+    <name>lt(std)</name>
+    <path>keyboardlayouts/lt.std.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
