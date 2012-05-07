@@ -119,6 +119,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/it.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Spanish (Latinoamerican)</title>
+    <name>latam</name>
+    <path>keyboardlayouts/latam.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
