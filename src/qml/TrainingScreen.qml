@@ -37,7 +37,6 @@ FocusScope {
 
     property bool trainingStarted: false
     property bool trainingFinished: true
-    property KeyItem highlightedKey
     property bool isActive
 
     function setLessonKeys() {
@@ -161,31 +160,8 @@ FocusScope {
                 lesson: screen.lesson
                 onKeyPressed: keyboard.handleKeyPress(event)
                 onKeyReleased: keyboard.handleKeyRelease(event)
-                onNextCharChanged: {
-                    if (!isCorrect)
-                        return;
-                    if (highlightedKey)
-                        highlightedKey.isHighlighted = false
-                    var key = nextChar != ""? keyboard.findKeyItem(nextChar): keyboard.findKeyItem(Qt.Key_Return)
-                    if (key)
-                    {
-                        key.isHighlighted = true
-                        highlightedKey = key
-                    }
-                }
-                onIsCorrectChanged: {
-                    if (!isCorrect)
-                    {
-                        if (highlightedKey)
-                            highlightedKey.isHighlighted = false
-                        var key = keyboard.findKeyItem(Qt.Key_Backspace)
-                        if (key)
-                        {
-                            key.isHighlighted = true
-                            highlightedKey = key
-                        }
-                    }
-                }
+                onNextCharChanged: keyboard.updateKeyHighlighting()
+                onIsCorrectChanged: keyboard.updateKeyHighlighting()
                 onFinished: {
                     profileDataAccess.saveTrainingStats(stats, screen.profile, screen.course.id, screen.lesson.id)
                     screen.finished(stats)
@@ -208,10 +184,38 @@ FocusScope {
             svg: screenSvg
             elementId: "footer"
             Keyboard {
+                property KeyItem highlightedKey
+                function highlightKey(which) {
+                    if (highlightedKey)
+                        highlightedKey.isHighlighted = false
+                    var key = findKeyItem(which)
+                    if (key) {
+                        key.isHighlighted = true
+                        highlightedKey = key
+                    }
+                }
+
+                function updateKeyHighlighting() {
+                    if (trainingWidget.isCorrect) {
+                        if (trainingWidget.nextChar !== "") {
+                            highlightKey(trainingWidget.nextChar)
+                        }
+                        else {
+                            highlightKey(Qt.Key_Return)
+                        }
+                    }
+                    else {
+                        highlightKey(Qt.Key_Backspace)
+                    }
+                }
+
                 keyboardLayout: screen.keyboardLayout
                 id: keyboard
                 anchors.fill: parent
-                onKeyboardUpdate: setLessonKeys()
+                onKeyboardUpdate: {
+                    setLessonKeys()
+                    updateKeyHighlighting()
+                }
             }
         }
     }
