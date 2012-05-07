@@ -104,6 +104,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/gb.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Hungarian</title>
+    <name>hu</name>
+    <path>keyboardlayouts/hu.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Hebrew</title>
     <name>il</name>
     <path>keyboardlayouts/il.xml</path>
