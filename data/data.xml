@@ -44,6 +44,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/br.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>French (Swiss)</title>
+    <name>ch(fr)</name>
+    <path>keyboardlayouts/ch.fr.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>German (Swiss)</title>
     <name>ch</name>
     <path>keyboardlayouts/ch.xml</path>

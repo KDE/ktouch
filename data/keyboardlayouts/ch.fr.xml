@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <keyboardLayout>
-  <title>German (Swiss)</title>
-  <name>ch</name>
+  <title>French (Swiss)</title>
+  <name>ch(fr)</name>
   <width>1480</width>
   <height>480</height>
   <keys>
@@ -39,7 +39,7 @@
     </key>
     <key left="0" top="0" width="80" height="80" fingerIndex="0">
       <char position="topLeft" modifier="shift">&#xB0;</char>
-      <char position="bottomLeft">§</char>
+      <char position="bottomLeft">&#xA7;</char>
     </key>
     <key left="100" top="0" width="80" height="80" fingerIndex="0">
       <char position="topLeft" modifier="shift">+</char>
@@ -72,7 +72,7 @@
     <key left="700" top="0" width="80" height="80" fingerIndex="4">
       <char position="topLeft" modifier="shift">/</char>
       <char position="bottomLeft">7</char>
-      <char position="bottomRight" modifier="altgr">|</char>
+      <char position="bottomRight" modifier="altgr">&#xA6;</char>
     </key>
     <key left="800" top="0" width="80" height="80" fingerIndex="5">
       <char position="topLeft" modifier="shift">(</char>
