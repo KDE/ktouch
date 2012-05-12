@@ -79,6 +79,16 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/ee.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Spanish Dvorak</title>
+    <name>es(dvorak)</name>
+    <path>keyboardlayouts/es.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Spanish</title>
+    <name>es</name>
+    <path>keyboardlayouts/es.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Finnish</title>
     <name>fi</name>
     <path>keyboardlayouts/fi.xml</path>
