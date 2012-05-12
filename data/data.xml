@@ -154,6 +154,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/ru.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Swedish</title>
+    <name>se</name>
+    <path>keyboardlayouts/se.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Slovenian</title>
     <name>si</name>
     <path>keyboardlayouts/si.xml</path>
