@@ -27,8 +27,8 @@
    <Char Unicode="76" Position="TopLeft" >L</Char>
   </Key>
   <Key Width="80" X="1080" Y="200" Height="80" Type="FINGER" >
-   <Char Unicode="233" Position="TopLeft" >Ã©</Char>
-   <Char Unicode="246" Position="BottomLeft" >Ã¶</Char>
+   <Char Unicode="233" Position="TopLeft" >é</Char>
+   <Char Unicode="246" Position="BottomLeft" >ö</Char>
   </Key>
   <Key Width="130" X="0" Y="100" Height="80" Type="TAB" />
   <Key Width="100" X="1380" Y="200" Height="80" Type="ENTER" />
@@ -42,8 +42,8 @@
   <Key Width="160" X="0" KeyText="Caps_L" Y="200" Height="80" Type="OTHER" />
   <Key Width="180" X="1300" KeyText="&lt;-" Y="0" Height="80" Type="OTHER" />
   <Key Width="80" X="0" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
-   <Char Unicode="176" Position="TopLeft" >Â°</Char>
-   <Char Unicode="167" Position="BottomLeft" >Â§</Char>
+   <Char Unicode="176" Position="TopLeft" >°</Char>
+   <Char Unicode="167" Position="BottomLeft" >°</Char>
   </Key>
   <Key Width="80" X="100" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="43" Position="TopLeft" >+</Char>
@@ -61,7 +61,7 @@
    <Char Unicode="35" Position="BottomRight" >#</Char>
   </Key>
   <Key Width="80" X="400" Y="0" Height="80" FingerKeyIndex="3" Type="NORMAL" >
-   <Char Unicode="231" Position="TopLeft" >Ã§</Char>
+   <Char Unicode="231" Position="TopLeft" >ç</Char>
    <Char Unicode="52" Position="BottomLeft" >4</Char>
   </Key>
   <Key Width="80" X="500" Y="0" Height="80" FingerKeyIndex="3" Type="NORMAL" >
@@ -71,17 +71,17 @@
   <Key Width="80" X="600" Y="0" Height="80" FingerKeyIndex="3" Type="NORMAL" >
    <Char Unicode="38" Position="TopLeft" >&amp;</Char>
    <Char Unicode="54" Position="BottomLeft" >6</Char>
-   <Char Unicode="172" Position="BottomRight" >Â¬</Char>
+   <Char Unicode="172" Position="BottomRight" >¬</Char>
   </Key>
   <Key Width="80" X="700" Y="0" Height="80" FingerKeyIndex="4" Type="NORMAL" >
    <Char Unicode="47" Position="TopLeft" >/</Char>
    <Char Unicode="55" Position="BottomLeft" >7</Char>
-   <Char Unicode="166" Position="BottomRight" >ÂŠ</Char>
+   <Char Unicode="166" Position="BottomRight" >|</Char>
   </Key>
   <Key Width="80" X="800" Y="0" Height="80" FingerKeyIndex="5" Type="NORMAL" >
    <Char Unicode="40" Position="TopLeft" >(</Char>
    <Char Unicode="56" Position="BottomLeft" >8</Char>
-   <Char Unicode="162" Position="BottomRight" >Â¢</Char>
+   <Char Unicode="162" Position="BottomRight" >¢</Char>
   </Key>
   <Key Width="80" X="900" Y="0" Height="80" FingerKeyIndex="6" Type="NORMAL" >
    <Char Unicode="41" Position="TopLeft" >)</Char>
@@ -94,7 +94,7 @@
   <Key Width="80" X="1100" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
    <Char Unicode="63" Position="TopLeft" >?</Char>
    <Char Unicode="39" Position="BottomLeft" >'</Char>
-   <Char Unicode="180" Position="BottomRight" >ÂŽ</Char>
+   <Char Unicode="180" Position="BottomRight" >´</Char>
   </Key>
   <Key Width="80" X="1200" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
    <Char Unicode="96" Position="TopLeft" >`</Char>
@@ -109,7 +109,7 @@
   </Key>
   <Key Width="80" X="350" Y="100" Height="80" FingerKeyIndex="2" Type="NORMAL" >
    <Char Unicode="69" Position="TopLeft" >E</Char>
-   <Char Unicode="8364" Position="BottomRight" >â‚¬</Char>
+   <Char Unicode="8364" Position="BottomRight" >€</Char>
   </Key>
   <Key Width="80" X="450" Y="100" Height="80" FingerKeyIndex="3" Type="NORMAL" >
    <Char Unicode="82" Position="TopLeft" >R</Char>
@@ -133,13 +133,13 @@
    <Char Unicode="80" Position="TopLeft" >P</Char>
   </Key>
   <Key Width="80" X="1150" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="232" Position="TopLeft" >Ãš</Char>
-   <Char Unicode="252" Position="BottomLeft" >ÃŒ</Char>
+   <Char Unicode="232" Position="TopLeft" >è</Char>
+   <Char Unicode="252" Position="BottomLeft" >ü</Char>
    <Char Unicode="91" Position="BottomRight" >[</Char>
   </Key>
   <Key Width="80" X="1250" Y="100" Height="80" FingerKeyIndex="7" Type="NORMAL" >
    <Char Unicode="33" Position="TopLeft" >!</Char>
-   <Char Unicode="168" Position="BottomLeft" >Âš</Char>
+   <Char Unicode="168" Position="BottomLeft" >¨</Char>
    <Char Unicode="93" Position="BottomRight" >]</Char>
   </Key>
   <Key Width="80" X="580" Y="200" Height="80" FingerKeyIndex="3" Type="NORMAL" >
@@ -149,12 +149,12 @@
    <Char Unicode="72" Position="TopLeft" >H</Char>
   </Key>
   <Key Width="80" X="1180" Y="200" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="224" Position="TopLeft" >Ã </Char>
-   <Char Unicode="228" Position="BottomLeft" >Ã€</Char>
+   <Char Unicode="224" Position="TopLeft" >à</Char>
+   <Char Unicode="228" Position="BottomLeft" >ä</Char>
    <Char Unicode="123" Position="BottomRight" >{</Char>
   </Key>
   <Key Width="80" X="1280" Y="200" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="163" Position="TopLeft" >Â£</Char>
+   <Char Unicode="163" Position="TopLeft" >£</Char>
    <Char Unicode="36" Position="BottomLeft" >$</Char>
    <Char Unicode="125" Position="BottomRight" >}</Char>
   </Key>
