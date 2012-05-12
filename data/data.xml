@@ -134,6 +134,16 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/no.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Russian (Legacy)</title>
+    <name>ru(legacy)</name>
+    <path>keyboardlayouts/ru.legacy.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Russian</title>
+    <name>ru</name>
+    <path>keyboardlayouts/ru.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
