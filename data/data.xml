@@ -144,6 +144,16 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/ru.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Slovak (qwerty)</title>
+    <name>sk(qwerty)</name>
+    <path>keyboardlayouts/sk.qwerty.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Slovak</title>
+    <name>sk</name>
+    <path>keyboardlayouts/sk.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
