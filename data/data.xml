@@ -134,6 +134,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/il.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Tamil</title>
+    <name>in(tam_unicode)</name>
+    <path>keyboardlayouts/in.tam_unicode.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Italian</title>
     <name>it</name>
     <path>keyboardlayouts/it.xml</path>
