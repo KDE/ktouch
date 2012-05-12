@@ -189,6 +189,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/sk.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Turkish (F)</title>
+    <name>tr(f)</name>
+    <path>keyboardlayouts/tr.f.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
     <path>keyboardlayouts/us.colemak.xml</path>
