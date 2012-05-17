@@ -42,22 +42,24 @@ DataAccess::DataAccess(QObject *parent) :
 {
 }
 
-DataIndex* DataAccess::loadDataIndex()
+bool DataAccess::loadDataIndex(DataIndex* target)
 {
+    target->clearCourses();
+    target->clearKeyboardLayouts();
+
     QFile dataIndexFile;
     if (!openResourceFile("data.xml", dataIndexFile))
-        return 0;
+        return false;
     QXmlSchema schema = loadXmlSchema("data");
     if (!schema.isValid())
-        return 0;
+        return false;
     QDomDocument doc = getDomDocument(dataIndexFile, schema);
     if (doc.isNull())
     {
         kWarning() << "invalid doc";
-        return 0;
+        return false;
     }
     QDomElement root(doc.documentElement());
-    DataIndex* dataIndex = new DataIndex(this);
     for (QDomElement dataNode = root.firstChildElement();
          !dataNode.isNull();
          dataNode = dataNode.nextSiblingElement())
@@ -69,7 +71,7 @@ DataIndex* DataAccess::loadDataIndex()
             course->setDescription(dataNode.firstChildElement("description").text());
             course->setKeyboardLayoutName(dataNode.firstChildElement("keyboardLayout").text());
             course->setPath(dataNode.firstChildElement("path").text());
-            dataIndex->addCourse(course);
+            target->addCourse(course);
         }
         else if (dataNode.tagName() == "keyboardLayout")
         {
@@ -77,34 +79,34 @@ DataIndex* DataAccess::loadDataIndex()
             keyboardLayout->setTitle(dataNode.firstChildElement("title").text());
             keyboardLayout->setName(dataNode.firstChildElement("name").text());
             keyboardLayout->setPath(dataNode.firstChildElement("path").text());
-            dataIndex->addKeyboardLayout(keyboardLayout);
+            target->addKeyboardLayout(keyboardLayout);
         }
     }
 
-    return dataIndex;
+    return true;
 }
 
-KeyboardLayout* DataAccess::loadResourceKeyboardLayout(const QString &relPath)
+bool DataAccess::loadResourceKeyboardLayout(const QString &relPath, KeyboardLayout* target)
 {
     QFile keyboardLayoutFile;
     if (!openResourceFile(relPath, keyboardLayoutFile))
-        return 0;
+        return false;
     QXmlSchema schema = loadXmlSchema("keyboardlayout");
     if (!schema.isValid())
-        return 0;
+        return false;
     QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
     if (doc.isNull())
     {
         kWarning() << "invalid doc";
-        return 0;
+        return false;
     }
     QDomElement root(doc.documentElement());
 
-    KeyboardLayout* keyboardLayout = new KeyboardLayout(this);
-    keyboardLayout->setTitle(i18nc("Keyboard Layout Name", root.firstChildElement("title").text().toUtf8()));
-    keyboardLayout->setName(root.firstChildElement("name").text());
-    keyboardLayout->setWidth(root.firstChildElement("width").text().toUInt());
-    keyboardLayout->setHeight(root.firstChildElement("height").text().toUInt());
+    target->clearKeys();
+    target->setTitle(i18nc("Keyboard Layout Name", root.firstChildElement("title").text().toUtf8()));
+    target->setName(root.firstChildElement("name").text());
+    target->setWidth(root.firstChildElement("width").text().toUInt());
+    target->setHeight(root.firstChildElement("height").text().toUInt());
     for (QDomElement keyNode = root.firstChildElement("keys").firstChildElement();
          !keyNode.isNull();
          keyNode = keyNode.nextSiblingElement())
@@ -144,34 +146,33 @@ KeyboardLayout* DataAccess::loadResourceKeyboardLayout(const QString &relPath)
         abstractKey->setTop(keyNode.attribute("top").toUInt());
         abstractKey->setWidth(keyNode.attribute("width").toUInt());
         abstractKey->setHeight(keyNode.attribute("height").toUInt());
-        keyboardLayout->addKey(abstractKey);
+        target->addKey(abstractKey);
     }
-    kDebug() << "read" << keyboardLayout->title() << "with" << keyboardLayout->keyCount() << "keys";
+    kDebug() << "read" << target->title() << "with" << target->keyCount() << "keys";
 
-    return keyboardLayout;
+    return true;
 }
 
-Course* DataAccess::loadResourceCourse(const QString &relPath)
+bool DataAccess::loadResourceCourse(const QString &relPath, Course* target)
 {
     QFile courseFile;
     if (!openResourceFile(relPath, courseFile))
-        return 0;
+        return false;
     QXmlSchema schema = loadXmlSchema("course");
     if (!schema.isValid())
-        return 0;
+        return false;
     QDomDocument doc = getDomDocument(courseFile, schema);
     if (doc.isNull())
     {
         kWarning() << "invalid doc";
-        return 0;
+        return false;
     }
     QDomElement root(doc.documentElement());
 
-    Course* course = new Course(this);
-    course->setId(root.firstChildElement("id").text());
-    course->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
-    course->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
-    course->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
+    target->setId(root.firstChildElement("id").text());
+    target->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
+    target->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
+    target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
     QString allowedChars = "";
     for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
          !lessonNode.isNull();
@@ -198,10 +199,10 @@ Course* DataAccess::loadResourceCourse(const QString &relPath)
             line->setValue(lineStr);
             lesson->addLine(line);
         }
-        course->addLesson(lesson);
+        target->addLesson(lesson);
     }
 
-    return course;
+    return true;
 }
 
 QXmlSchema DataAccess::loadXmlSchema(const QString &name)

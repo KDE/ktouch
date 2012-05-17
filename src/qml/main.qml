@@ -21,51 +21,6 @@ import ktouch 1.0
 Item {
     id: main
 
-    property DataIndex dataIndex: dataAccess.loadDataIndex()
-    property string name: keyboardLayoutName
-    property KeyboardLayout keyboardLayout: lookupKeyboardLayout(keyboardLayoutName)
-    property variant courses: lookupCourses(keyboardLayout? keyboardLayout.name: "")
-
-    function lookupKeyboardLayout(name)
-    {
-        // first pass - exact match
-
-        for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
-        {
-            var dataIndexLayout = dataIndex.keyboardLayout(i)
-            if (dataIndexLayout.name === name)
-                return dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path)
-
-        }
-
-        // second pass - substring match
-
-        for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
-        {
-            var dataIndexLayout = dataIndex.keyboardLayout(i)
-            if (name.search(dataIndexLayout.name) === 0)
-                return dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path)
-
-        }
-        return null;
-    }
-
-    function lookupCourses(name)
-    {
-        var courses = [];
-        for (var i = 0; i < dataIndex.courseCount; i++)
-        {
-            var dataIndexCourse = dataIndex.course(i)
-            if (name == dataIndexCourse.keyboardLayoutName)
-            {
-                var course = dataAccess.loadResourceCourse(dataIndexCourse.path)
-                courses.push(course)
-            }
-
-        }
-        return courses;
-    }
-
     function switchScreen(from, to) {
         switchScreenAnimation.from = from
         switchScreenAnimation.to = to
@@ -76,12 +31,90 @@ Item {
         id: dataAccess
     }
 
+    DataIndex {
+        id: dataIndex
+        property bool valid: false;
+        Component.onCompleted: {
+            valid = false;
+            dataAccess.loadDataIndex(dataIndex)
+            valid = true;
+            keyboardLayout.update()
+        }
+        onKeyboardLayoutCountChanged: {
+            if (valid)
+                keyboardLayout.update()
+        }
+        onCourseCountChanged: {
+            if (valid)
+                keyboardLayout.updateCorrespondingDataIndexCourses()
+        }
+    }
+
+    QtObject {
+        property string name: keyboardLayoutName
+        onNameChanged: {
+            keyboardLayout.update()
+        }
+    }
+
+
     ProfileDataAccess {
         id: profileDataAccess
     }
 
     Preferences {
         id: preferences
+    }
+
+    KeyboardLayout {
+        id: keyboardLayout
+
+        property bool valid: false;
+        property variant correspondingDataIndexCourses: []
+
+        function update() {
+            valid = false
+            var name = keyboardLayoutName;
+
+            // first pass - exact match
+
+            for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
+            {
+                var dataIndexLayout = dataIndex.keyboardLayout(i)
+                if (dataIndexLayout.name === name) {
+                    valid = dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    return
+                }
+            }
+
+            // second pass - substring match
+
+            for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
+            {
+                var dataIndexLayout = dataIndex.keyboardLayout(i)
+                if (name.search(dataIndexLayout.name) === 0) {
+                    valid = dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    return
+                }
+            }
+        }
+
+        function updateCorrespondingDataIndexCourses() {
+            if (!valid)
+                return;
+            var courses = new Array;
+            for (var i = 0; i < dataIndex.courseCount; i++)
+            {
+                var dataIndexCourse = dataIndex.course(i)
+                if (name === dataIndexCourse.keyboardLayoutName)
+                {
+                    courses.push(dataIndexCourse)
+                }
+            }
+            correspondingDataIndexCourses = courses
+        }
+
+        onValidChanged: updateCorrespondingDataIndexCourses()
     }
 
     HomeScreen {
@@ -109,7 +142,7 @@ Item {
         id: trainingScreen
         anchors.fill: parent
         visible: false
-        keyboardLayout: main.keyboardLayout
+        keyboardLayout: keyboardLayout
         onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
         onFinished: main.switchScreen(trainingScreen, scoreScreen)

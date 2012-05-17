@@ -23,11 +23,11 @@ import ktouch 1.0
 Item {
     id: item
     property Profile profile
-    property variant course
-    signal lessonSelected(variant lesson)
+    property DataIndexCourse dataIndexCourse
+    signal lessonSelected(variant course, variant lesson)
 
     function update() {
-        if (!course) return;
+        if (!course.valid) return;
         if (!profile) return;
         selectLastLesson()
         enableUnlockedLessons()
@@ -64,7 +64,24 @@ Item {
     }
 
     onProfileChanged: update()
-    onCourseChanged: update()
+    onDataIndexCourseChanged: {
+        course.update()
+        update()
+    }
+
+    Course {
+        id: course
+        property bool valid: false
+        property string path
+        function update() {
+            if (valid && path === dataIndexCourse.path)
+                return
+            valid = false
+            path = dataIndexCourse.path
+            valid = dataAccess.loadResourceCourse(path, course)
+        }
+        Component.onCompleted: update()
+    }
 
     Row {
         anchors.fill: parent
@@ -80,10 +97,10 @@ Item {
                 id: lessonList
                 property int lastUnlockedIndex: 0
                 anchors.fill: parent
-                model: course.lessonCount
+                model: course.valid? course.lessonCount: 0
                 clip: true
                 delegate: ListItem {
-                    property Lesson lesson: index < course.lessonCount? item.course.lesson(index): null
+                    property Lesson lesson: index < course.lessonCount? course.lesson(index): null
                     property bool locked: index > lessonList.lastUnlockedIndex
                     width: lessonList.width - scrollBar.width
                     onSelected: lessonList.currentIndex = index
@@ -125,9 +142,9 @@ Item {
                     enabled: lessonList.currentItem !== null && !lessonList.currentItem.locked
                     iconSource: "go-next-view"
                     onClicked: {
-                        var lesson = item.course.lesson(lessonList.currentIndex)
+                        var lesson = course.lesson(lessonList.currentIndex)
                         profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
-                        lessonSelected(lesson)
+                        lessonSelected(course, lesson)
                     }
                 }
             }

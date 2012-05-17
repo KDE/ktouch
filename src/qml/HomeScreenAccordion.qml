@@ -76,17 +76,18 @@ Column {
 
     Repeater {
         id: repeater
-        model: courses.length
+        property variant courses: keyboardLayout.correspondingDataIndexCourses
+        model: keyboardLayout.valid? courses.length: 0
         onModelChanged: updateBoxes()
 
         HomeScreenBox {
             id: box
             width: item.width
-            title: i18n(courses[index].title)
-            active: activeIndex == index
+            title: i18n(repeater.courses[index].title)
+            active: activeIndex === index
             onActivated: activateBox(index)
             content: LessonSelector {
-                course: courses[index]
+                dataIndexCourse: repeater.courses[index]
                 profile: item.profile
                 onLessonSelected: item.lessonSelected(course, lesson)
             }
@@ -97,7 +98,7 @@ Column {
         id: ownLessonsBox
         width: parent.width
         title: i18n("Own lessons")
-        active: activeIndex == item.boxes.length - 1
+        active: activeIndex === item.boxes.length - 1
         onActivated: activateBox(item.boxes.length - 1)
         content: Item {
             Text {

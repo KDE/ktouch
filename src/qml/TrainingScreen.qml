@@ -179,7 +179,7 @@ FocusScope {
         PlasmaCore.SvgItem {
             id: footer
             width: parent.width
-            visible: preferences.showKeyboard
+            visible: preferences.showKeyboard && screen.keyboardLayout.valid
             height: visible? Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)): 0
             svg: screenSvg
             elementId: "footer"

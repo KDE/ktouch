@@ -67,7 +67,7 @@ Item
 
         Repeater {
             id: keys
-            model: keyboard.visible? keyboard.keyboardLayout.keyCount: 0
+            model: keyboard.visible && keyboardLayout.valid? keyboard.keyboardLayout.keyCount: 0
 
             onModelChanged: keyboard.keyboardUpdate()
 
