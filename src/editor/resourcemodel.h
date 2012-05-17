@@ -15,44 +15,29 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef EDITORMAINWINDOW_H
-#define EDITORMAINWINDOW_H
+#ifndef RESOURCEMODEL_H
+#define RESOURCEMODEL_H
 
-#include <KMainWindow>
+#include <QAbstractListModel>
 
-class KAction;
-class KActionCollection;
 class DataIndex;
-class ResourceModel;
 
-class ResourceEditor : public KMainWindow
+class ResourceModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    explicit ResourceEditor(QWidget* parent = 0);
-    
+    explicit ResourceModel(DataIndex* dataIndex, QObject* parent = 0);
+    Qt::ItemFlags flags(const QModelIndex& index) const;
+    QVariant data(const QModelIndex& index, int role) const;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    int rowCount(const QModelIndex &parent) const;
 signals:
     
 public slots:
-private slots:
-    void newResource();
-    void deleteResource();
-    void undo();
-    void redo();
-    void importResource();
-    void exportResource();
 private:
     DataIndex* m_dataIndex;
-    ResourceModel* m_resourceModel;
-    KActionCollection* m_actionCollection;
-    KAction* m_newResourceAction;
-    KAction* m_deleteResourceAction;
-    KAction* m_undoAction;
-    KAction* m_redoAction;
-    KAction* m_importResourceAction;
-    KAction* m_exportResourceAction;
-
-    
+    QVariant courseData(int row, int role) const;
+    QVariant keyboardLayoutData(int row, int role) const;
 };
 
-#endif // EDITORMAINWINDOW_H
+#endif // RESOURCEMODEL_H

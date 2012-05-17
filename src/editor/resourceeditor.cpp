@@ -18,7 +18,7 @@
 #include "resourceeditor.h"
 
 #include <QSplitter>
-#include <QListView>
+#include <QTableView>
 
 #include <KToolBar>
 #include <KAction>
@@ -26,9 +26,18 @@
 #include <KStandardAction>
 #include <KIcon>
 #include <KLocale>
+#include <KCategorizedSortFilterProxyModel>
+#include <KCategorizedView>
+#include <KCategoryDrawer>
+
+#include "../core/dataindex.h"
+#include "../core/dataaccess.h"
+#include "resourcemodel.h"
 
 ResourceEditor::ResourceEditor(QWidget *parent) :
     KMainWindow(parent),
+    m_dataIndex(new DataIndex(this)),
+    m_resourceModel(new ResourceModel(m_dataIndex, this)),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
     m_deleteResourceAction(new KAction(KIcon("edit-delete"), i18n("Delete"), this)),
@@ -38,6 +47,12 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this))
 
 {
+    DataAccess dataAccess;
+    dataAccess.loadDataIndex(m_dataIndex);
+    KCategorizedSortFilterProxyModel* categorizedResourceModel = new KCategorizedSortFilterProxyModel(this);
+    categorizedResourceModel->setSourceModel(m_resourceModel);
+    categorizedResourceModel->setCategorizedModel(true);
+
     setMinimumSize(700, 500);
     setCaption(i18n("Course and Keyboard Layout Editor"));
 
@@ -63,16 +78,19 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     QSplitter* splitter = new QSplitter(Qt::Horizontal, this);
 
-    QListView* resourceListView = new QListView(splitter);
-    resourceListView->setMinimumWidth(200);
+    KCategorizedView* resourceView = new KCategorizedView(splitter);
+    resourceView->setCategoryDrawer(new KCategoryDrawerV3(resourceView));
+    resourceView->setMouseTracking(true);
+    resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
+    resourceView->setModel(categorizedResourceModel);
+    resourceView->setMinimumWidth(200);
     QWidget* placeHolder = new QWidget(splitter);
     placeHolder->setMinimumWidth(400);
     placeHolder->setMinimumHeight(500);
 
-    splitter->addWidget(resourceListView);
+    splitter->addWidget(resourceView);
     splitter->addWidget(placeHolder);
     splitter->setChildrenCollapsible(false);
-    splitter->adjustSize();
 
     setCentralWidget(splitter);
 }
