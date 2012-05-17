@@ -47,6 +47,7 @@
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
 #include "core/profiledataaccess.h"
+#include "editor/resourceeditor.h"
 #include "viewcontext.h"
 #include "preferences.h"
 #include "preferencesproxy.h"
@@ -106,10 +107,28 @@ void MainWindow::setFullscreen(bool fullScreen)
     KToggleFullScreenAction::setFullScreen(this, fullScreen);
 }
 
+void MainWindow::showResourceEditor()
+{
+    if (m_resourceEditorRef.isNull())
+    {
+        m_resourceEditorRef = new ResourceEditor();
+    }
+
+    ResourceEditor* resourceEditor = m_resourceEditorRef.data();
+
+    resourceEditor->show();
+    resourceEditor->activateWindow();
+}
+
 void MainWindow::init()
 {
     m_actionCollection->addAssociatedWidget(this);
     m_menu->addAction(KStandardAction::fullScreen(this, SLOT(setFullscreen(bool)), this, m_actionCollection));
+    m_menu->addSeparator();
+    KAction* editorAction = new KAction(i18n("Course and Keyboard Layout Editor ..."), this);
+    connect(editorAction, SIGNAL(triggered()), SLOT(showResourceEditor()));
+    m_actionCollection->addAction("editor", editorAction);
+    m_menu->addAction(editorAction);
     m_menu->addSeparator();
     m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
     m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));

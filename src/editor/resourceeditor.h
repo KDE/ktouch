@@ -15,38 +15,40 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef EDITORMAINWINDOW_H
+#define EDITORMAINWINDOW_H
 
 #include <KMainWindow>
 
-#include <QWeakPointer>
-
-class QDeclarativeView;
-class QMenu;
+class KAction;
 class KActionCollection;
-class ResourceEditor;
 
-class MainWindow : public KMainWindow
+class ResourceEditor : public KMainWindow
 {
     Q_OBJECT
 public:
-    explicit MainWindow(QWidget* parent = 0);
-    bool useOpenGLViewport() const;
-    void setUseOpenGLViewport(bool useOpenGLViewport);
+    explicit ResourceEditor(QWidget* parent = 0);
+    
+signals:
+    
+public slots:
 private slots:
-    void showMenu(int xPos, int yPos);
-    void showConfigDialog();
-    void configureShortcuts();
-    void setFullscreen(bool fullscreen);
-    void showResourceEditor();
+    void newResource();
+    void deleteResource();
+    void undo();
+    void redo();
+    void importResource();
+    void exportResource();
 private:
-    void init();
-    QDeclarativeView* m_view;
     KActionCollection* m_actionCollection;
-    QMenu* m_menu;
-    QWeakPointer<ResourceEditor> m_resourceEditorRef;
-    bool m_useOpenGLViewport;
+    KAction* m_newResourceAction;
+    KAction* m_deleteResourceAction;
+    KAction* m_undoAction;
+    KAction* m_redoAction;
+    KAction* m_importResourceAction;
+    KAction* m_exportResourceAction;
+
+    
 };
 
-#endif // MAINWINDOW_H
+#endif // EDITORMAINWINDOW_H
