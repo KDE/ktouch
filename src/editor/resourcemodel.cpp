@@ -72,6 +72,8 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant(i18n("Courses"));
     if (role == Qt::DisplayRole)
         return QVariant(m_dataIndex->course(row)->title());
+    if (role == ResourceModel::ResourceTypeRole)
+        return QVariant(ResourceModel::CourseItem);
     return QVariant();
 }
 
@@ -83,5 +85,7 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant(i18n("Keyboard layouts"));
     if (role == Qt::DisplayRole)
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
+    if (role == ResourceModel::ResourceTypeRole)
+        return QVariant(ResourceModel::KeyboardLayoutItem);
     return QVariant();
 }

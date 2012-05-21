@@ -26,6 +26,15 @@ class ResourceModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    enum ResourceItemType {
+        None = 0x0,
+        CourseItem = 0x1,
+        KeyboardLayoutItem = 0x2
+    };
+    Q_DECLARE_FLAGS(ResourceItemTypes, ResourceItemType)
+    enum AdditionalRoles {
+        ResourceTypeRole = Qt::UserRole + 1
+    };
     explicit ResourceModel(DataIndex* dataIndex, QObject* parent = 0);
     Qt::ItemFlags flags(const QModelIndex& index) const;
     QVariant data(const QModelIndex& index, int role) const;
@@ -39,5 +48,7 @@ private:
     QVariant courseData(int row, int role) const;
     QVariant keyboardLayoutData(int row, int role) const;
 };
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(ResourceModel::ResourceItemTypes)
 
 #endif // RESOURCEMODEL_H
