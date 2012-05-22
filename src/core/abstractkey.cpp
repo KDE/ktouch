@@ -21,3 +21,69 @@ AbstractKey::AbstractKey(QObject *parent) :
     QObject(parent)
 {
 }
+
+int AbstractKey::left() const
+{
+    return m_left;
+}
+
+void AbstractKey::setLeft(int left)
+{
+    if (left != m_left)
+    {
+        m_left = left;
+        emit leftChanged();
+    }
+}
+
+int AbstractKey::top() const
+{
+    return m_top;
+}
+
+
+void AbstractKey::setTop(int top)
+{
+    if (top != m_top)
+    {
+        m_top = top;
+        emit topChanged();
+    }
+}
+
+int AbstractKey::width() const
+{
+    return m_width;
+}
+
+void AbstractKey::setWidth(int width)
+{
+    Q_ASSERT(width > 0);
+
+    if (width != m_width)
+    {
+        m_width = width;
+        emit widthChanged();
+    }
+}
+
+int AbstractKey::height() const
+{
+    return m_height;
+}
+
+void AbstractKey::setHeight(int height)
+{
+    Q_ASSERT(height > 0);
+
+    if (height != m_height)
+    {
+        m_height = height;
+        emit heightChanged();
+    }
+}
+
+QString AbstractKey::keyType() const
+{
+    return "abstractKey";
+}

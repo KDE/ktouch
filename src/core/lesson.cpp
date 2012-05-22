@@ -24,29 +24,76 @@ Lesson::Lesson(QObject *parent) :
 {
 }
 
-LessonLine* Lesson::line(unsigned int index) const
+QString Lesson::id() const
 {
-    Q_ASSERT(index < m_lines.count());
+    return m_id;
+}
+
+void Lesson::setId(const QString& id)
+{
+    if(id != m_id)
+    {
+        m_id = id;
+        emit idChanged();
+    }
+}
+
+QString Lesson::title() const
+{
+    return m_title;
+}
+
+void Lesson::setTitle(const QString& title)
+{
+    if(title != m_title)
+    {
+        m_title = title;
+        emit titleChanged();
+    }
+}
+
+QString Lesson::characters() const
+{
+    return m_characters;
+}
+
+void Lesson::setCharacters(const QString& characters)
+{
+    if(characters != m_characters)
+    {
+        m_characters = characters;
+        emit charactersChanged();
+    }
+}
+
+int Lesson::lineCount() const
+{
+    return m_lines.count();
+}
+
+LessonLine* Lesson::line(int index) const
+{
+    Q_ASSERT(index >= 0 && index < m_lines.count());
     return m_lines.at(index);
 }
 
 void Lesson::addLine(LessonLine* line)
 {
     m_lines.append(line);
-    emit lineCountChanged(m_lines.count());
+    emit lineCountChanged();
 }
 
-void Lesson::removeLine(unsigned int index)
+void Lesson::removeLine(int index)
 {
-    Q_ASSERT(index < m_lines.count());
+    Q_ASSERT(index >= 0 && index < m_lines.count());
     delete m_lines.at(index);
     m_lines.removeAt(index);
-    emit lineCountChanged(m_lines.count());
+    emit lineCountChanged();
 }
 
 void Lesson::clearLines()
 {
     qDeleteAll(m_lines);
     m_lines.clear();
-    emit lineCountChanged(m_lines.count());
+    emit lineCountChanged();
 }

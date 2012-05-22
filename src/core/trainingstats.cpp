@@ -33,6 +33,87 @@ TrainingStats::TrainingStats(QObject* parent) :
     connect(m_updateTimer, SIGNAL(timeout()), SLOT(update()));
 }
 
+int TrainingStats::charactesTyped() const
+{
+    return m_charactersTyped;
+}
+
+void TrainingStats::setCharactersTyped(int charactesTyped)
+{
+    if(charactesTyped != m_charactersTyped)
+    {
+        m_charactersTyped = charactesTyped;
+        emit statsChanged();
+    }
+}
+
+QTime TrainingStats::ellapsedTime() const
+{
+    return QTime(0, 0).addMSecs(m_ellapsedTime);
+}
+
+void TrainingStats::setEllapsedTime(const QTime& ellapsedTime)
+{
+    quint64 msec = ellapsedTime.msec();
+
+    if(msec != m_ellapsedTime)
+    {
+        m_ellapsedTime = msec;
+        emit statsChanged();
+    }
+}
+
+void TrainingStats::setEllapsedTime(const quint64& msec)
+{
+    if(msec != m_ellapsedTime)
+    {
+        m_ellapsedTime = msec;
+        emit statsChanged();
+    }
+}
+
+int TrainingStats::errorCount() const
+{
+    return m_errorCount;
+}
+
+void TrainingStats::setErrorCount(int errorCount)
+{
+    if(errorCount != m_errorCount)
+    {
+        m_errorCount = errorCount;
+        emit statsChanged();
+    }
+}
+
+bool TrainingStats::isValid() const
+{
+    return m_isValid;
+}
+
+void TrainingStats::setIsValid(bool isValid)
+{
+    if(isValid != m_isValid)
+    {
+        m_isValid = isValid;
+        emit isValidChanged();
+    }
+}
+QMap< QString, int > TrainingStats::errorMap() const
+{
+    return m_errorMap;
+}
+
+void TrainingStats::setErrorMap(const QMap< QString, int >& errorMap)
+{
+    m_errorMap = errorMap;
+}
+
+bool TrainingStats::timeIsRunning() const
+{
+    return m_timeIsRunning;
+}
+
 void TrainingStats::startTraining()
 {
     if (!m_timeIsRunning)

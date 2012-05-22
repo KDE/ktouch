@@ -21,3 +21,45 @@ CourseBase::CourseBase(QObject* parent) :
     QObject(parent)
 {
 }
+
+QString CourseBase::title() const
+{
+    return m_title;
+}
+
+void CourseBase::setTitle(const QString& title)
+{
+    if(title != m_title)
+    {
+        m_title = title;
+        emit titleChanged();
+    }
+}
+
+QString CourseBase::description() const
+{
+    return m_description;
+}
+
+void CourseBase::setDescription(const QString& description)
+{
+    if(description != m_description)
+    {
+        m_description = description;
+        emit descriptionChanged();
+    }
+}
+
+QString CourseBase::keyboardLayoutName() const
+{
+    return m_keyboardLayoutName;
+}
+
+void CourseBase::setKeyboardLayoutName(const QString& keyboardLayoutName)
+{
+    if(keyboardLayoutName != m_keyboardLayoutName)
+    {
+        m_keyboardLayoutName = keyboardLayoutName;
+        emit keyboardLayoutNameChanged();
+    }
+}

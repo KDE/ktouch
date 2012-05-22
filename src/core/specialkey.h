@@ -40,60 +40,20 @@ public:
     };
 
     explicit SpecialKey(QObject *parent = 0);
-
+    Q_INVOKABLE QString keyType() const ;
     QString typeStr() const;
     void setTypeStr(const QString& typeStr);
-
-    Q_INVOKABLE QString keyType() const {
-        return "specialKey";
-    }
-
-    Type type() const
-    {
-        return m_type;
-    }
-
-    void setType(Type type)
-    {
-        if (type != m_type)
-        {
-            m_type = type;
-            emit typeChanged(type);
-        }
-    }
-
-    QString modifierId() const
-    {
-        return m_modifierId;
-    }
-
-    void setModifierId(const QString& modifierId)
-    {
-        if (modifierId != m_modifierId)
-        {
-            m_modifierId = modifierId;
-            emit modifierIdChanged(modifierId);
-        }
-    }
-
-    QString label() const
-    {
-        return m_label;
-    }
-
-    void setLabel(const QString& label)
-    {
-        if (label != m_label)
-        {
-            m_label = label;
-            emit labelChanged(label);
-        }
-    }
+    Type type() const;
+    void setType(Type type);
+    QString modifierId() const;
+    void setModifierId(const QString& modifierId);
+    QString label() const ;
+    void setLabel(const QString& label);
 
 signals:
-    void typeChanged(Type newType);
-    void modifierIdChanged(const QString& newModifierId);
-    void labelChanged(const QString& newLabel);
+    void typeChanged();
+    void modifierIdChanged();
+    void labelChanged();
 
 private:
     Type m_type;

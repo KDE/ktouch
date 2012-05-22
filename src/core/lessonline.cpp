@@ -17,7 +17,21 @@
 
 #include "lessonline.h"
 
-LessonLine::LessonLine(QObject *parent) :
+LessonLine::LessonLine(QObject* parent) :
     QObject(parent)
 {
+}
+
+QString LessonLine::value() const
+{
+    return m_value;
+}
+
+void LessonLine::setValue(const QString& value)
+{
+    if(value != m_value)
+    {
+        m_value = value;
+        emit valueChanged();
+    }
 }

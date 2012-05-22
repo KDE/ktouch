@@ -36,9 +36,28 @@ Course::Course(QObject *parent) :
 {
 }
 
-Lesson* Course::lesson(unsigned int index) const
+QString Course::id() const
 {
-    Q_ASSERT(index < m_lessons.count());
+    return m_id;
+}
+
+void Course::setId(const QString& id)
+{
+    if (id != m_id)
+    {
+        m_id = id;
+        emit idChanged();
+    }
+}
+
+int Course::lessonCount() const
+{
+    return m_lessons.count();
+}
+
+Lesson* Course::lesson(int index) const
+{
+    Q_ASSERT(index >= 0 && index < m_lessons.count());
     return m_lessons.at(index);
 }
 
@@ -46,20 +65,20 @@ void Course::addLesson(Lesson* lesson)
 {
     m_lessons.append(lesson);
     lesson->setParent(this);
-    emit lessonCountChanged(m_lessons.count());
+    emit lessonCountChanged();
 }
 
-void Course::removeLesson(unsigned int index)
+void Course::removeLesson(int index)
 {
-    Q_ASSERT(index < m_lessons.count());
+    Q_ASSERT(index >= 0 && index < m_lessons.count());
     delete m_lessons.at(index);
     m_lessons.removeAt(index);
-    emit lessonCountChanged(m_lessons.count());
+    emit lessonCountChanged();
 }
 
 void Course::clearLessons()
 {
     qDeleteAll(m_lessons);
     m_lessons.clear();
-    emit lessonCountChanged(m_lessons.count());
+    emit lessonCountChanged();
 }

@@ -30,35 +30,14 @@ class KeyboardLayoutBase : public QObject
 
 public:
     explicit KeyboardLayoutBase(QObject *parent = 0);
-
-    const QString& title() const
-    {
-        return m_title;
-    }
-
-    void setTitle(const QString& title)
-    {
-        m_title = title;
-        emit titleChanged(title);
-    }
-
-    const QString& name() const
-    {
-        return m_name;
-    }
-
-    void setName(const QString& name)
-    {
-        if (name != m_name)
-        {
-            m_name = name;
-            emit nameChanged(name);
-        }
-    }
+    const QString& title() const;
+    void setTitle(const QString& title);
+    const QString& name() const;
+    void setName(const QString& name);
 
 signals:
-    void titleChanged(const QString& newTitle);
-    void nameChanged(const QString& newName);
+    void titleChanged();
+    void nameChanged();
 
 private:
     QString m_title;

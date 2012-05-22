@@ -22,9 +22,37 @@ DataIndexCourse::DataIndexCourse(QObject* parent):
 {
 }
 
+QString DataIndexCourse::path() const
+{
+    return m_path;
+}
+
+void DataIndexCourse::setPath(const QString& path)
+{
+    if(path != m_path)
+    {
+        m_path = path;
+        emit pathChanged();
+    }
+}
+
 DataIndexKeyboardLayout::DataIndexKeyboardLayout(QObject* parent):
     KeyboardLayoutBase(parent)
 {
+}
+
+QString DataIndexKeyboardLayout::path() const
+{
+    return m_path;
+}
+
+void DataIndexKeyboardLayout::setPath(const QString& path)
+{
+    if(path != m_path)
+    {
+        m_path = path;
+        emit pathChanged();
+    }
 }
 
 DataIndex::DataIndex(QObject* parent):
@@ -32,14 +60,14 @@ DataIndex::DataIndex(QObject* parent):
 {
 }
 
-unsigned int DataIndex::courseCount() const
+int DataIndex::courseCount() const
 {
     return m_courses.length();
 }
 
-DataIndexCourse* DataIndex::course(unsigned int index) const
+DataIndexCourse* DataIndex::course(int index) const
 {
-    Q_ASSERT(index < m_courses.length());
+    Q_ASSERT(index >= 0 && index < m_courses.length());
     return m_courses.at(index);
 }
 
@@ -50,9 +78,9 @@ void DataIndex::addCourse(DataIndexCourse *course)
     emit courseCountChanged();
 }
 
-void DataIndex::removeCourse(unsigned int index)
+void DataIndex::removeCourse(int index)
 {
-    Q_ASSERT(index < m_courses.length());
+    Q_ASSERT(index >= index < m_courses.length());
     delete m_courses.at(index);
     m_courses.removeAt(index);
     emit courseCountChanged();
@@ -65,14 +93,14 @@ void DataIndex::clearCourses()
     emit courseCountChanged();
 }
 
-unsigned int DataIndex::keyboardLayoutCount() const
+int DataIndex::keyboardLayoutCount() const
 {
     return m_keyboardLayouts.length();
 }
 
-DataIndexKeyboardLayout* DataIndex::keyboardLayout(unsigned int index) const
+DataIndexKeyboardLayout* DataIndex::keyboardLayout(int index) const
 {
-    Q_ASSERT(index < m_keyboardLayouts.length());
+    Q_ASSERT(index >= 0 && index < m_keyboardLayouts.length());
     return m_keyboardLayouts.at(index);
 }
 
@@ -83,9 +111,9 @@ void DataIndex::addKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout)
     emit keyboardLayoutCountChanged();
 }
 
-void DataIndex::removeKeyboardLayout(unsigned int index)
+void DataIndex::removeKeyboardLayout(int index)
 {
-    Q_ASSERT(index < m_keyboardLayouts.length());
+    Q_ASSERT(index >= 0 && index < m_keyboardLayouts.length());
     delete m_keyboardLayouts.at(index);
     m_keyboardLayouts.removeAt(index);
     emit keyboardLayoutCountChanged();

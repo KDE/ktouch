@@ -42,56 +42,19 @@ public:
     };
 
     explicit KeyChar(QObject *parent = 0);
-
     QString positionStr() const;
     void setPositionStr(const QString& positionStr);
-
-    QChar value() const
-    {
-        return m_value;
-    }
-
-    void setValue(const QChar& value)
-    {
-        if (value != m_value)
-        {
-            m_value = value;
-            emit valueChanged(value);
-        }
-    }
-
-    Position position() const
-    {
-        return m_position;
-    }
-
-    void setPosition(Position position)
-    {
-        if (position != m_position)
-        {
-            m_position = position;
-            emit positionChanged(position);
-        }
-    }
-
-    QString modifier() const
-    {
-        return m_modifier;
-    }
-
-    void setModifier(const QString& modifier)
-    {
-        if (modifier != m_modifier)
-        {
-            m_modifier = modifier;
-            emit modifierChanged(modifier);
-        }
-    }
+    QChar value() const;
+    void setValue(const QChar& value);
+    Position position() const;
+    void setPosition(Position position);
+    QString modifier() const;
+    void setModifier(const QString& modifier);
 
 signals:
-    void valueChanged(const QChar& newValue);
-    void positionChanged(Position newPosition);
-    void modifierChanged(const QString& newModifier);
+    void valueChanged();
+    void positionChanged();
+    void modifierChanged();
 
 private:
     QChar m_value;

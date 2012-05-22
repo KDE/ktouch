@@ -30,9 +30,9 @@ class TrainingStats : public QObject
 {
     Q_OBJECT
     Q_ENUMS(EventType)
-    Q_PROPERTY(unsigned int charactesTyped READ charactesTyped WRITE setCharactersTyped NOTIFY statsChanged)
+    Q_PROPERTY(int charactesTyped READ charactesTyped WRITE setCharactersTyped NOTIFY statsChanged)
     Q_PROPERTY(QTime ellapsedTime READ ellapsedTime WRITE setEllapsedTime NOTIFY statsChanged)
-    Q_PROPERTY(unsigned int errorCount READ errorCount NOTIFY statsChanged)
+    Q_PROPERTY(int errorCount READ errorCount NOTIFY statsChanged)
     Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
     Q_PROPERTY(float accuracy READ accuracy NOTIFY statsChanged)
     Q_PROPERTY(int charactersPerMinute READ charactersPerMinute NOTIFY statsChanged)
@@ -45,87 +45,18 @@ public:
     };
 
     explicit TrainingStats(QObject* parent = 0);
-
-    int charactesTyped() const
-    {
-        return m_charactersTyped;
-    }
-
-    void setCharactersTyped(unsigned int charactesTyped)
-    {
-        if (charactesTyped != m_charactersTyped)
-        {
-            m_charactersTyped = charactesTyped;
-            emit statsChanged();
-        }
-    }
-
-    QTime ellapsedTime() const
-    {
-        return QTime(0, 0).addMSecs(m_ellapsedTime);
-    }
-
-    void setEllapsedTime(const QTime& ellapsedTime)
-    {
-        quint64 msec = ellapsedTime.msec();
-        if (msec != m_ellapsedTime)
-        {
-            m_ellapsedTime = msec;
-            emit statsChanged();
-        }
-    }
-
-    void setEllapsedTime(const quint64& msec)
-    {
-        if (msec != m_ellapsedTime)
-        {
-            m_ellapsedTime = msec;
-            emit statsChanged();
-        }
-    }
-
-    unsigned int errorCount() const
-    {
-        return m_errorCount;
-    }
-
-    void setErrorCount(unsigned int errorCount)
-    {
-        if (errorCount != m_errorCount) {
-            m_errorCount = errorCount;
-            emit statsChanged();
-        }
-    }
-
-    bool isValid() const
-    {
-        return m_isValid;
-    }
-
-    void setIsValid(bool isValid)
-    {
-        if (isValid != m_isValid)
-        {
-            m_isValid = isValid;
-            emit isValidChanged();
-        }
-    }
-
-    QMap<QString, int> errorMap() const
-    {
-        return m_errorMap;
-    }
-
-    void setErrorMap(const QMap<QString, int>& errorMap)
-    {
-        m_errorMap = errorMap;
-    }
-
-    bool timeIsRunning() const
-    {
-        return m_timeIsRunning;
-    }
-
+    int charactesTyped() const;
+    void setCharactersTyped(int charactesTyped);
+    QTime ellapsedTime() const;
+    void setEllapsedTime(const QTime& ellapsedTime);
+    void setEllapsedTime(const quint64& msec);
+    int errorCount() const;
+    void setErrorCount(int errorCount);
+    bool isValid() const;
+    void setIsValid(bool isValid);
+    QMap<QString, int> errorMap() const;
+    void setErrorMap(const QMap<QString, int>& errorMap);
+    bool timeIsRunning() const;
     Q_INVOKABLE void startTraining();
     Q_INVOKABLE void stopTraining();
     Q_INVOKABLE void reset();
@@ -140,9 +71,9 @@ signals:
 private:
     Q_SLOT void update();
     bool m_timeIsRunning;
-    unsigned int m_charactersTyped;
+    int m_charactersTyped;
     quint64 m_ellapsedTime;
-    unsigned int m_errorCount;
+    int m_errorCount;
     bool m_isValid;
     QMap<QString, int> m_errorMap;
     quint64 m_startTime;

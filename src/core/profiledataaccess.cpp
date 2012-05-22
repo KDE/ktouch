@@ -75,9 +75,9 @@ int ProfileDataAccess::profileCount() const
     return m_profiles.count();
 }
 
-Profile* ProfileDataAccess::profile(unsigned int index)
+Profile* ProfileDataAccess::profile(int index)
 {
-    Q_ASSERT(index < m_profiles.count());
+    Q_ASSERT(index >= 0 && index < m_profiles.count());
     return m_profiles.at(index);
 }
 
@@ -143,7 +143,7 @@ void ProfileDataAccess::addProfile(Profile *profile)
     emit profileCountChanged();
 }
 
-void ProfileDataAccess::updateProfile(unsigned int index)
+void ProfileDataAccess::updateProfile(int index)
 {
     Profile* profile = this->profile(index);
 
@@ -189,7 +189,7 @@ void ProfileDataAccess::updateProfile(unsigned int index)
     }
 }
 
-void ProfileDataAccess::removeProfile(unsigned int index)
+void ProfileDataAccess::removeProfile(int index)
 {
     Profile* profile = this->profile(index);
 

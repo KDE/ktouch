@@ -36,34 +36,17 @@ class Course : public CourseBase
 
 public:
     explicit Course(QObject *parent = 0);
-
-    QString id() const
-    {
-        return m_id;
-    }
-
-    void setId(const QString& id)
-    {
-        if (id != m_id)
-        {
-            m_id = id;
-            emit idChanged(id);
-        }
-    }
-
-    int lessonCount() const
-    {
-        return m_lessons.count();
-    }
-
-    Q_INVOKABLE Lesson* lesson(unsigned int index) const;
+    QString id() const;
+    void setId(const QString& id);
+    int lessonCount() const;
+    Q_INVOKABLE Lesson* lesson(int index) const;
     Q_INVOKABLE void addLesson(Lesson* lesson);
-    Q_INVOKABLE void removeLesson(unsigned int index);
+    Q_INVOKABLE void removeLesson(int index);
     Q_INVOKABLE void clearLessons();
 
 signals:
-    void idChanged(const QString& id);
-    void lessonCountChanged(int newLessonCount);
+    void idChanged();
+    void lessonCountChanged();
 
 private:
     bool parseXML(QDomDocument* doc);

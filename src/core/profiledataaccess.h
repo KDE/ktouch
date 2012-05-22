@@ -44,11 +44,11 @@ public:
 
     Q_INVOKABLE void loadProfiles();
     int profileCount() const;
-    Q_INVOKABLE Profile* profile(unsigned int index);
+    Q_INVOKABLE Profile* profile(int index);
     Q_INVOKABLE Profile* createProfile();
     Q_INVOKABLE void addProfile(Profile* profile);
-    Q_INVOKABLE void updateProfile(unsigned int index);
-    Q_INVOKABLE void removeProfile(unsigned int index);
+    Q_INVOKABLE void updateProfile(int index);
+    Q_INVOKABLE void removeProfile(int index);
     Q_INVOKABLE int indexOfProfile(Profile* profile);
 
     Q_INVOKABLE void loadReferenceTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId);

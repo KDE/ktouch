@@ -23,6 +23,11 @@ SpecialKey::SpecialKey(QObject *parent) :
 {
 }
 
+QString SpecialKey::keyType() const
+{
+    return "specialKey";
+}
+
 QString SpecialKey::typeStr() const
 {
     switch(m_type)
@@ -74,5 +79,47 @@ void SpecialKey::setTypeStr(const QString &typeStr)
     else
     {
         m_type = SpecialKey::Other;
+    }
+}
+
+SpecialKey::Type SpecialKey::type() const
+{
+    return m_type;
+}
+
+void SpecialKey::setType(SpecialKey::Type type)
+{
+    if(type != m_type)
+    {
+        m_type = type;
+        emit typeChanged();
+    }
+}
+
+QString SpecialKey::modifierId() const
+{
+    return m_modifierId;
+}
+
+void SpecialKey::setModifierId(const QString& modifierId)
+{
+    if(modifierId != m_modifierId)
+    {
+        m_modifierId = modifierId;
+        emit modifierIdChanged();
+    }
+}
+
+QString SpecialKey::label() const
+{
+    return m_label;
+}
+
+void SpecialKey::setLabel(const QString& label)
+{
+    if(label != m_label)
+    {
+        m_label = label;
+        emit labelChanged();
     }
 }

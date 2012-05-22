@@ -32,53 +32,18 @@ class CourseBase : public QObject
 public:
     explicit CourseBase(QObject* parent = 0);
 
-    QString title() const
-    {
-        return m_title;
-    }
-
-    void setTitle(const QString& title)
-    {
-        if (title != m_title)
-        {
-            m_title = title;
-            emit titleChanged(title);
-        }
-    }
-
-    QString description() const
-    {
-        return m_description;
-    }
-
-    void setDescription(const QString& description)
-    {
-        if (description != m_description)
-        {
-            m_description = description;
-            emit descriptionChanged(description);
-        }
-    }
-
-    QString keyboardLayoutName() const
-    {
-        return m_keyboardLayoutName;
-    }
-
-    void setKeyboardLayoutName(const QString& keyboardLayoutName)
-    {
-        if (keyboardLayoutName != m_keyboardLayoutName)
-        {
-            m_keyboardLayoutName = keyboardLayoutName;
-            emit keyboardLayoutNameChanged(keyboardLayoutName);
-        }
-    }
+    QString title() const;
+    void setTitle(const QString& title);
+    QString description() const;
+    void setDescription(const QString& description);
+    QString keyboardLayoutName() const;
+    void setKeyboardLayoutName(const QString& keyboardLayoutName);
 
 signals:
 
-    void titleChanged(const QString& newTitle);
-    void descriptionChanged(const QString& newDescription);
-    void keyboardLayoutNameChanged(const QString& newKeyboardLayoutName);
+    void titleChanged();
+    void descriptionChanged();
+    void keyboardLayoutNameChanged();
 
 private:
     QString m_title;

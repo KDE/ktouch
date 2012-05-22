@@ -27,24 +27,12 @@ class LessonLine : public QObject
     Q_PROPERTY(QString value READ value WRITE setValue NOTIFY valueChanged)
 
 public:
-    explicit LessonLine(QObject *parent = 0);
-
-    QString value() const
-    {
-        return m_value;
-    }
-
-    void setValue(const QString& value)
-    {
-        if (value != m_value)
-        {
-            m_value = value;
-            emit valueChanged(value);
-        }
-    }
+    explicit LessonLine(QObject* parent = 0);
+    QString value() const;
+    void setValue(const QString& value);
 
 signals:
-    void valueChanged(const QString& newValue);
+    void valueChanged();
 
 private:
     QString m_value;

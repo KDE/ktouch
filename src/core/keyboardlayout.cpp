@@ -45,9 +45,47 @@ KeyboardLayout::KeyboardLayout(QObject *parent) :
 {
 }
 
-AbstractKey* KeyboardLayout::key(unsigned int index) const
+int KeyboardLayout::width() const
 {
-    Q_ASSERT(index < m_keys.count());
+    return m_width;
+}
+
+void KeyboardLayout::setWidth(int width)
+{
+    if(width != m_width)
+    {
+        m_width = width;
+        emit widthChanged();
+    }
+}
+
+int KeyboardLayout::height() const
+{
+    return m_height;
+}
+
+void KeyboardLayout::setHeight(int height)
+{
+    if(height != m_height)
+    {
+        m_height = height;
+        emit heightChanged();
+    }
+}
+
+int KeyboardLayout::keyCount() const
+{
+    return m_keys.count();
+}
+
+AbstractKey* KeyboardLayout::referenceKey()
+{
+    return m_referenceKey;
+}
+
+AbstractKey* KeyboardLayout::key(int index) const
+{
+    Q_ASSERT(index >= 0 && index < m_keys.count());
     return m_keys.at(index);
 }
 
@@ -55,16 +93,16 @@ void KeyboardLayout::addKey(AbstractKey* key)
 {
     m_keys.append(key);
     key->setParent(this);
-    emit keyCountChanged(m_keys.count());
+    emit keyCountChanged();
     updateReferenceKey(key);
 }
 
-void KeyboardLayout::removeKey(unsigned int index)
+void KeyboardLayout::removeKey(int index)
 {
-    Q_ASSERT(index < m_keys.count());
+    Q_ASSERT(index >= 0 && index < m_keys.count());
     delete m_keys.at(index);
     m_keys.removeAt(index);
-    emit keyCountChanged(m_keys.count());
+    emit keyCountChanged();
     updateReferenceKey(0);
 }
 
@@ -72,7 +110,7 @@ void KeyboardLayout::clearKeys()
 {
     qDeleteAll(m_keys);
     m_keys.clear();
-    emit keyCountChanged(m_keys.count());
+    emit keyCountChanged();
     updateReferenceKey(0);
 }
 
@@ -84,13 +122,13 @@ void KeyboardLayout::updateReferenceKey(AbstractKey *newKey)
         if (!m_referenceKey)
         {
             m_referenceKey = newKey;
-            emit referenceKeyChanged(newKey);
+            emit referenceKeyChanged();
             return;
         }
         if (compareKeysForReference(newKey, m_referenceKey))
         {
             m_referenceKey = newKey;
-            emit referenceKeyChanged(newKey);
+            emit referenceKeyChanged();
         }
         return;
     }
@@ -110,7 +148,7 @@ void KeyboardLayout::updateReferenceKey(AbstractKey *newKey)
         }
     }
     m_referenceKey = canditate;
-    emit referenceKeyChanged(canditate);
+    emit referenceKeyChanged();
 }
 
 bool KeyboardLayout::compareKeysForReference(const AbstractKey *testKey, const AbstractKey *compareKey) const

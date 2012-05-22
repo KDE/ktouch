@@ -34,64 +34,23 @@ class Lesson : public QObject
 
 public:
     explicit Lesson(QObject *parent = 0);
-
-    QString id() const
-    {
-        return m_id;
-    }
-
-    void setId(const QString& id)
-    {
-        if (id != m_id)
-        {
-            m_id = id;
-            emit idChanged(id);
-        }
-    }
-
-    QString title() const
-    {
-        return m_title;
-    }
-
-    void setTitle(const QString& title)
-    {
-        if (title != m_title)
-        {
-            m_title = title;
-            emit titleChanged(title);
-        }
-    }
-
-    QString characters() const
-    {
-        return m_characters;
-    }
-
-    void setCharacters(const QString& characters)
-    {
-        if (characters != m_characters)
-        {
-            m_characters = characters;
-            emit charactersChanged(characters);
-        }
-    }
-
-    int lineCount() const
-    {
-        return m_lines.count();
-    }
-
-    Q_INVOKABLE LessonLine* line(unsigned int index) const;
+    QString id() const;
+    void setId(const QString& id);
+    QString title() const;
+    void setTitle(const QString& title);
+    QString characters() const;
+    void setCharacters(const QString& characters);
+    int lineCount() const;
+    Q_INVOKABLE LessonLine* line(int index) const;
     Q_INVOKABLE void addLine(LessonLine* line);
-    Q_INVOKABLE void removeLine(unsigned int index);
+    Q_INVOKABLE void removeLine(int index);
     Q_INVOKABLE void clearLines();
 
 signals:
-    void idChanged(const QString& id);
-    void titleChanged(const QString& newTitle);
-    void charactersChanged(const QString& newCharacters);
-    void lineCountChanged(int newLineCount);
+    void idChanged();
+    void titleChanged();
+    void charactersChanged();
+    void lineCountChanged();
 
 private:
     QString m_id;

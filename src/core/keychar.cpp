@@ -66,3 +66,45 @@ void KeyChar::setPositionStr(const QString &position)
         m_position = KeyChar::Hidden;
     }
 }
+
+QChar KeyChar::value() const
+{
+    return m_value;
+}
+
+void KeyChar::setValue(const QChar& value)
+{
+    if(value != m_value)
+    {
+        m_value = value;
+        emit valueChanged();
+    }
+}
+
+KeyChar::Position KeyChar::position() const
+{
+    return m_position;
+}
+
+void KeyChar::setPosition(KeyChar::Position position)
+{
+    if(position != m_position)
+    {
+        m_position = position;
+        emit positionChanged();
+    }
+}
+
+QString KeyChar::modifier() const
+{
+    return m_modifier;
+}
+
+void KeyChar::setModifier(const QString& modifier)
+{
+    if(modifier != m_modifier)
+    {
+        m_modifier = modifier;
+        emit modifierChanged();
+    }
+}

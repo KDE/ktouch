@@ -24,29 +24,69 @@ Key::Key(QObject* parent) :
 {
 }
 
-KeyChar* Key::keyChar(unsigned int index) const
+QString Key::keyType() const
 {
-    Q_ASSERT(index < m_keyChars.length());
+    return "key";
+}
+
+int Key::fingerIndex() const
+{
+    return m_fingerIndex;
+}
+
+void Key::setFingerIndex(int finger)
+{
+    Q_ASSERT(finger >= 0 && finger <= 8);
+
+    if(finger != m_fingerIndex)
+    {
+        m_fingerIndex = finger;
+        emit fingerIndexChanged();
+    }
+}
+
+bool Key::hasHapticMarker() const
+{
+    return m_hasHapticMarker;
+}
+
+void Key::setHasHapticMarker(bool hasHapticMarker)
+{
+    if(hasHapticMarker != m_hasHapticMarker)
+    {
+        m_hasHapticMarker = hasHapticMarker;
+        emit hasHapticMarkerChanged();
+    }
+}
+
+int Key::keyCharCount() const
+{
+    return m_keyChars.count();
+}
+
+KeyChar* Key::keyChar(int index) const
+{
+    Q_ASSERT(index >= 0 && index < m_keyChars.length());
     return m_keyChars.at(index);
 }
 
 void Key::addKeyChar(KeyChar* keyChar)
 {
     m_keyChars.append(keyChar);
-    emit keyCharCountChanged(m_keyChars.count());
+    emit keyCharCountChanged();
 }
 
-void Key::removeKeyChar(unsigned int index)
+void Key::removeKeyChar(int index)
 {
-    Q_ASSERT(index < m_keyChars.length());
+    Q_ASSERT(index >= 0 && index < m_keyChars.length());
     delete m_keyChars.at(index);
     m_keyChars.removeAt(index);
-    emit keyCharCountChanged(m_keyChars.count());
+    emit keyCharCountChanged();
 }
 
 void Key::clearKeyChars()
 {
     qDeleteAll(m_keyChars);
     m_keyChars.clear();
-    emit keyCharCountChanged(m_keyChars.count());
+    emit keyCharCountChanged();
 }

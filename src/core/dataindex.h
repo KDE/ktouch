@@ -33,27 +33,14 @@ class DataIndexCourse: public CourseBase
 
 public:
     explicit DataIndexCourse(QObject* parent = 0);
-
-    QString path() const
-    {
-        return m_path;
-    }
-
-    void setPath(const QString& path)
-    {
-        if (path != m_path)
-        {
-            m_path = path;
-            emit pathChanged();
-        }
-    }
+    QString path() const;
+    void setPath(const QString& path);
 
 signals:
     void pathChanged();
 
 private:
     QString m_path;
-
 };
 
 class DataIndexKeyboardLayout: public KeyboardLayoutBase
@@ -64,45 +51,33 @@ class DataIndexKeyboardLayout: public KeyboardLayoutBase
 public:
     explicit DataIndexKeyboardLayout(QObject* parent = 0);
 
-    QString path() const
-    {
-        return m_path;
-    }
-
-    void setPath(const QString& path)
-    {
-        if (path != m_path)
-        {
-            m_path = path;
-            emit pathChanged();
-        }
-    }
+    QString path() const;
+    void setPath(const QString& path);
 
 signals:
     void pathChanged();
 
 private:
     QString m_path;
-
 };
 
 class DataIndex : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(unsigned int courseCount READ courseCount NOTIFY courseCountChanged)
-    Q_PROPERTY(unsigned int keyboardLayoutCount READ keyboardLayoutCount NOTIFY keyboardLayoutCountChanged)
+    Q_PROPERTY(int courseCount READ courseCount NOTIFY courseCountChanged)
+    Q_PROPERTY(int keyboardLayoutCount READ keyboardLayoutCount NOTIFY keyboardLayoutCountChanged)
 
 public:
     explicit DataIndex(QObject* parent = 0);
-    unsigned int courseCount() const;
-    Q_INVOKABLE DataIndexCourse* course(unsigned int index) const;
+    int courseCount() const;
+    Q_INVOKABLE DataIndexCourse* course(int index) const;
     Q_INVOKABLE void addCourse(DataIndexCourse* course);
-    Q_INVOKABLE void removeCourse(unsigned int index);
+    Q_INVOKABLE void removeCourse(int index);
     Q_INVOKABLE void clearCourses();
-    unsigned int keyboardLayoutCount() const;
-    Q_INVOKABLE DataIndexKeyboardLayout* keyboardLayout(unsigned int index) const;
+    int keyboardLayoutCount() const;
+    Q_INVOKABLE DataIndexKeyboardLayout* keyboardLayout(int index) const;
     Q_INVOKABLE void addKeyboardLayout(DataIndexKeyboardLayout* keyboardLayout);
-    Q_INVOKABLE void removeKeyboardLayout(unsigned int index);
+    Q_INVOKABLE void removeKeyboardLayout(int index);
     Q_INVOKABLE void clearKeyboardLayouts();
 
 signals:
