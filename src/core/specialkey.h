@@ -49,6 +49,7 @@ public:
     void setModifierId(const QString& modifierId);
     QString label() const ;
     void setLabel(const QString& label);
+    Q_INVOKABLE void copyFrom(SpecialKey* source);
 
 signals:
     void typeChanged();

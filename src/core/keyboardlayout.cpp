@@ -83,6 +83,40 @@ AbstractKey* KeyboardLayout::referenceKey()
     return m_referenceKey;
 }
 
+void KeyboardLayout::copyFrom(KeyboardLayout* source)
+{
+    setIsValid(false);
+    setTitle(source->title());
+    setName(source->name());
+    setWidth(source->width());
+    setHeight(source->height());
+    clearKeys();
+    for(int i = 0; i < source->keyCount(); i++)
+    {
+        AbstractKey* const abstractSourceKey = source->key(i);
+        AbstractKey* abstractKey = 0;
+
+        Key* const sourceKey = qobject_cast<Key*>(abstractSourceKey);
+        if (sourceKey)
+        {
+            Key* key = new Key(this);
+            key->copyFrom(sourceKey);
+            abstractKey = key;
+        }
+
+        SpecialKey* const sourceSpecialKey = qobject_cast<SpecialKey*>(abstractSourceKey);
+        if (sourceSpecialKey)
+        {
+            SpecialKey* specialKey = new SpecialKey(this);
+            specialKey->copyFrom(sourceSpecialKey);
+            abstractKey = specialKey;
+        }
+
+        addKey(abstractKey);
+    }
+    setIsValid(true);
+}
+
 AbstractKey* KeyboardLayout::key(int index) const
 {
     Q_ASSERT(index >= 0 && index < m_keys.count());

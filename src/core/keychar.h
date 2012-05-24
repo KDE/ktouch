@@ -50,6 +50,7 @@ public:
     void setPosition(Position position);
     QString modifier() const;
     void setModifier(const QString& modifier);
+    Q_INVOKABLE void copyFrom(KeyChar* source);
 
 signals:
     void valueChanged();

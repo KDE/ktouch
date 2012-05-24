@@ -48,6 +48,7 @@ public:
     Q_INVOKABLE void removeKey(int index);
     Q_INVOKABLE void clearKeys();
     AbstractKey* referenceKey();
+    Q_INVOKABLE void copyFrom(KeyboardLayout* source);
 
 signals:
     void widthChanged();

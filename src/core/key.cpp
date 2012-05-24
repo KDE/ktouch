@@ -90,3 +90,16 @@ void Key::clearKeyChars()
     m_keyChars.clear();
     emit keyCharCountChanged();
 }
+
+void Key::copyFrom(Key* source)
+{
+    AbstractKey::copyFrom(source);
+    setFingerIndex(source->fingerIndex());
+    setHasHapticMarker(source->hasHapticMarker());
+    clearKeyChars();
+    for (int j = 0; j < source->keyCharCount(); j++) {
+        KeyChar* keyChar = new KeyChar(this);
+        keyChar->copyFrom(source->keyChar(j));
+        addKeyChar(keyChar);
+    }
+}

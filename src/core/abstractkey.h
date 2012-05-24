@@ -40,6 +40,7 @@ public:
     void setWidth(int width);
     int height() const;
     void setHeight(int height);
+    Q_INVOKABLE void copyFrom(AbstractKey* source);
 
 signals:
     void leftChanged();

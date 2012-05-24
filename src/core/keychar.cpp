@@ -108,3 +108,11 @@ void KeyChar::setModifier(const QString& modifier)
         emit modifierChanged();
     }
 }
+
+void KeyChar::copyFrom(KeyChar* source)
+{
+    setValue(source->value());
+    setPosition(source->position());
+    setModifier(source->modifier());
+}
+

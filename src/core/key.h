@@ -43,6 +43,7 @@ public:
     Q_INVOKABLE void addKeyChar(KeyChar* keyChar);
     Q_INVOKABLE void removeKeyChar(int index);
     Q_INVOKABLE void clearKeyChars();
+    Q_INVOKABLE void copyFrom(Key* source);
 
 signals:
     void fingerIndexChanged();

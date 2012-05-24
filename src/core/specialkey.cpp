@@ -123,3 +123,11 @@ void SpecialKey::setLabel(const QString& label)
         emit labelChanged();
     }
 }
+
+void SpecialKey::copyFrom(SpecialKey* source)
+{
+    AbstractKey::copyFrom(source);
+    setType(source->type());
+    setLabel(source->label());
+    setModifierId(source->modifierId());
+}

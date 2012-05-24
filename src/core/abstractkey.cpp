@@ -87,3 +87,12 @@ QString AbstractKey::keyType() const
 {
     return "abstractKey";
 }
+
+void AbstractKey::copyFrom(AbstractKey* source)
+{
+    setLeft(source->left());
+    setTop(source->top());
+    setWidth(source->width());
+    setHeight(source->height());
+}
+
