@@ -82,3 +82,20 @@ void Course::clearLessons()
     m_lessons.clear();
     emit lessonCountChanged();
 }
+
+void Course::copyFrom(Course* source)
+{
+    setIsValid(false);
+    setId(source->id());
+    setTitle(source->title());
+    setDescription(source->description());
+    setKeyboardLayoutName(source->keyboardLayoutName());
+    clearLessons();
+    for (int i = 0; i < source->lessonCount(); i++)
+    {
+        Lesson* lesson = new Lesson(this);
+        lesson->copyFrom(source->lesson(i));
+        addLesson(lesson);
+    }
+    setIsValid(true);
+}

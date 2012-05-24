@@ -45,6 +45,7 @@ public:
     Q_INVOKABLE void addLine(LessonLine* line);
     Q_INVOKABLE void removeLine(int index);
     Q_INVOKABLE void clearLines();
+    Q_INVOKABLE void copyFrom(Lesson* source);
 
 signals:
     void idChanged();
@@ -53,6 +54,7 @@ signals:
     void lineCountChanged();
 
 private:
+    Q_DISABLE_COPY(Lesson)
     QString m_id;
     QString m_title;
     QString m_characters;

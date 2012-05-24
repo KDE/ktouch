@@ -97,3 +97,17 @@ void Lesson::clearLines()
     m_lines.clear();
     emit lineCountChanged();
 }
+
+void Lesson::copyFrom(Lesson* source)
+{
+    setId(source->id());
+    setTitle(source->title());
+    setCharacters(source->characters());
+    clearLines();
+    for (int i = 0; i < source->lineCount(); i++)
+    {
+        LessonLine* lessonLine = new LessonLine(this);
+        lessonLine->copyFrom(source->line(i));
+        addLine(lessonLine);
+    }
+}

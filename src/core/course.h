@@ -43,12 +43,14 @@ public:
     Q_INVOKABLE void addLesson(Lesson* lesson);
     Q_INVOKABLE void removeLesson(int index);
     Q_INVOKABLE void clearLessons();
+    Q_INVOKABLE void copyFrom(Course* source);
 
 signals:
     void idChanged();
     void lessonCountChanged();
 
 private:
+    Q_DISABLE_COPY(Course)
     bool parseXML(QDomDocument* doc);
     QString m_id;
     QList<Lesson*> m_lessons;

@@ -35,3 +35,8 @@ void LessonLine::setValue(const QString& value)
         emit valueChanged();
     }
 }
+
+void LessonLine::copyFrom(LessonLine* source)
+{
+    setValue(source->value());
+}

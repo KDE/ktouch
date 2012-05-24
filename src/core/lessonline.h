@@ -30,6 +30,7 @@ public:
     explicit LessonLine(QObject* parent = 0);
     QString value() const;
     void setValue(const QString& value);
+    void copyFrom(LessonLine* source);
 
 signals:
     void valueChanged();
