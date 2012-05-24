@@ -174,6 +174,8 @@ Item
             }
         }
 
+        state: "normal"
+
         states: [
             State {
                 name: "normal"
@@ -234,7 +236,7 @@ Item
             ColorAnimation { duration: 150 }
         }
 
-        
+
         SequentialAnimation {
             id: pulseAnimation
             loops: Animation.Infinite
