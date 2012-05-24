@@ -156,7 +156,7 @@ Item {
         course: trainingScreen.course
         lesson: trainingScreen.lesson
         stats: trainingScreen.stats
-        referenceStats: trainingScreen.referenceStas
+        referenceStats: trainingScreen.referenceStats
         onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
         onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
         onNextLessonRequested: {

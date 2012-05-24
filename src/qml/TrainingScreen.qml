@@ -29,7 +29,7 @@ FocusScope {
     property Lesson lesson
 
     property alias stats: stats
-    property alias referenceStas: referenceStats
+    property alias referenceStats: referenceStats
 
     signal restartRequested()
     signal abortRequested()
