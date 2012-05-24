@@ -18,7 +18,7 @@
 #include "dataindex.h"
 
 DataIndex::DataIndex(QObject* parent):
-    QObject(parent)
+    Resource(parent)
 {
 }
 
@@ -92,6 +92,7 @@ DataIndexCourse::DataIndexCourse(QObject* parent):
     CourseBase(parent),
     m_source(DataIndex::BuiltInResource)
 {
+    setIsValid(true);
 }
 
 QString DataIndexCourse::path() const
@@ -126,6 +127,7 @@ DataIndexKeyboardLayout::DataIndexKeyboardLayout(QObject* parent):
     KeyboardLayoutBase(parent),
     m_source(DataIndex::BuiltInResource)
 {
+    setIsValid(true);
 }
 
 QString DataIndexKeyboardLayout::path() const

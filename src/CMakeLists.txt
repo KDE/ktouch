@@ -27,6 +27,7 @@ kde4_add_ui_files(ktouch_UIS
 set(ktouch_SRCS
     main.cpp
     mainwindow.cpp
+    core/resource.cpp
     core/keyboardlayoutbase.cpp
     core/keyboardlayout.cpp
     core/abstractkey.cpp

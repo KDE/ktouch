@@ -77,7 +77,7 @@ Column {
     Repeater {
         id: repeater
         property variant courses: keyboardLayout.correspondingDataIndexCourses
-        model: keyboardLayout.valid? courses.length: 0
+        model: keyboardLayout.isValid? courses.length: 0
         onModelChanged: updateBoxes()
 
         HomeScreenBox {

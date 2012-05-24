@@ -18,7 +18,7 @@
 #ifndef DATAINDEX_H
 #define DATAINDEX_H
 
-#include <QObject>
+#include "resource.h"
 
 #include <QString>
 #include <QList>
@@ -29,7 +29,7 @@
 class DataIndexCourse;
 class DataIndexKeyboardLayout;
 
-class DataIndex : public QObject
+class DataIndex : public Resource
 {
     Q_OBJECT
     Q_PROPERTY(int courseCount READ courseCount NOTIFY courseCountChanged)

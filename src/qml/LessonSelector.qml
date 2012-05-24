@@ -27,7 +27,7 @@ Item {
     signal lessonSelected(variant course, variant lesson)
 
     function update() {
-        if (!course.valid) return;
+        if (!course.isValid) return;
         if (!profile) return;
         selectLastLesson()
         enableUnlockedLessons()
@@ -71,14 +71,12 @@ Item {
 
     Course {
         id: course
-        property bool valid: false
         property string path
         function update() {
-            if (valid && path === dataIndexCourse.path)
+            if (isValid && path === dataIndexCourse.path)
                 return
-            valid = false
             path = dataIndexCourse.path
-            valid = dataAccess.loadResourceCourse(path, course)
+            dataAccess.loadResourceCourse(path, course)
         }
         Component.onCompleted: update()
     }
@@ -97,7 +95,7 @@ Item {
                 id: lessonList
                 property int lastUnlockedIndex: 0
                 anchors.fill: parent
-                model: course.valid? course.lessonCount: 0
+                model: course.isValid? course.lessonCount: 0
                 clip: true
                 delegate: ListItem {
                     property Lesson lesson: index < course.lessonCount? course.lesson(index): null

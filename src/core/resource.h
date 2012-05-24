@@ -15,34 +15,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KEYBOARDLAYOUTBASE_H
-#define KEYBOARDLAYOUTBASE_H
+#ifndef RESOURCE_H
+#define RESOURCE_H
 
-#include "resource.h"
+#include <QObject>
 
-#include <QString>
-
-class KeyboardLayoutBase : public Resource
+class Resource : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
-    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
-
+    Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
 public:
-    explicit KeyboardLayoutBase(QObject *parent = 0);
-    const QString& title() const;
-    void setTitle(const QString& title);
-    const QString& name() const;
-    void setName(const QString& name);
+    Resource(QObject* parent = 0);
+    bool isValid() const;
+    void setIsValid(bool isValid);
 
 signals:
-    void titleChanged();
-    void nameChanged();
+    void isValidChanged();
 
 private:
-    QString m_title;
-    QString m_name;
-
+    bool m_isValid;
 };
 
-#endif // KEYBOARDLAYOUTBASE_H
+#endif // RESOURCE_H

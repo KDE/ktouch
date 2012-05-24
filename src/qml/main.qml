@@ -33,19 +33,16 @@ Item {
 
     DataIndex {
         id: dataIndex
-        property bool valid: false;
         Component.onCompleted: {
-            valid = false;
             dataAccess.loadDataIndex(dataIndex)
-            valid = true;
             keyboardLayout.update()
         }
         onKeyboardLayoutCountChanged: {
-            if (valid)
+            if (isValid)
                 keyboardLayout.update()
         }
         onCourseCountChanged: {
-            if (valid)
+            if (isValid)
                 keyboardLayout.updateCorrespondingDataIndexCourses()
         }
     }
@@ -69,11 +66,10 @@ Item {
     KeyboardLayout {
         id: keyboardLayout
 
-        property bool valid: false;
         property variant correspondingDataIndexCourses: []
 
         function update() {
-            valid = false
+            isValid = false
             var name = keyboardLayoutName;
 
             // first pass - exact match
@@ -82,7 +78,7 @@ Item {
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
                 if (dataIndexLayout.name === name) {
-                    valid = dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return
                 }
             }
@@ -93,14 +89,14 @@ Item {
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
                 if (name.search(dataIndexLayout.name) === 0) {
-                    valid = dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return
                 }
             }
         }
 
         function updateCorrespondingDataIndexCourses() {
-            if (!valid)
+            if (!isValid)
                 return;
             var courses = new Array;
             for (var i = 0; i < dataIndex.courseCount; i++)
@@ -114,7 +110,7 @@ Item {
             correspondingDataIndexCourses = courses
         }
 
-        onValidChanged: updateCorrespondingDataIndexCourses()
+        onIsValidChanged: updateCorrespondingDataIndexCourses()
     }
 
     HomeScreen {

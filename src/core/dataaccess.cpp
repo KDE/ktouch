@@ -44,6 +44,7 @@ DataAccess::DataAccess(QObject *parent) :
 
 bool DataAccess::loadDataIndex(DataIndex* target)
 {
+    target->setIsValid(false);
     target->clearCourses();
     target->clearKeyboardLayouts();
 
@@ -83,11 +84,14 @@ bool DataAccess::loadDataIndex(DataIndex* target)
         }
     }
 
+    target->setIsValid(true);
     return true;
 }
 
 bool DataAccess::loadResourceKeyboardLayout(const QString &relPath, KeyboardLayout* target)
 {
+    target->setIsValid(false);
+
     QFile keyboardLayoutFile;
     if (!openResourceFile(relPath, keyboardLayoutFile))
         return false;
@@ -150,11 +154,13 @@ bool DataAccess::loadResourceKeyboardLayout(const QString &relPath, KeyboardLayo
     }
     kDebug() << "read" << target->title() << "with" << target->keyCount() << "keys";
 
+    target->setIsValid(true);
     return true;
 }
 
 bool DataAccess::loadResourceCourse(const QString &relPath, Course* target)
 {
+    target->setIsValid(false);
     QFile courseFile;
     if (!openResourceFile(relPath, courseFile))
         return false;
@@ -202,6 +208,7 @@ bool DataAccess::loadResourceCourse(const QString &relPath, Course* target)
         target->addLesson(lesson);
     }
 
+    target->setIsValid(true);
     return true;
 }
 

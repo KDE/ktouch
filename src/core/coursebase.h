@@ -18,11 +18,11 @@
 #ifndef COURSEBASE_H
 #define COURSEBASE_H
 
-#include <QObject>
+#include "resource.h"
 
 #include <QString>
 
-class CourseBase : public QObject
+class CourseBase : public Resource
 {
     Q_OBJECT
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
