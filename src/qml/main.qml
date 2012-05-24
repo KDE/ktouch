@@ -121,11 +121,9 @@ Item {
         focus: true
         onLessonSelected: {
             trainingScreen.profile = profile
-            trainingScreen.lesson = lesson
-            trainingScreen.course = course
             scoreScreen.profile = profile
-            scoreScreen.lesson = lesson
-            scoreScreen.course = course
+            selectedCourse.copyFrom(course)
+            selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
             main.switchScreen(homeScreen, trainingScreen)
         }
         Component.onCompleted: {
@@ -134,11 +132,18 @@ Item {
         }
     }
 
+    Course {
+        id: selectedCourse
+        property Lesson selectedLesson
+    }
+
     TrainingScreen {
         id: trainingScreen
         anchors.fill: parent
         visible: false
         keyboardLayout: keyboardLayout
+        course: selectedCourse
+        lesson: selectedCourse.selectedLesson
         onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
         onFinished: main.switchScreen(trainingScreen, scoreScreen)
@@ -148,6 +153,8 @@ Item {
         id: scoreScreen
         anchors.fill: parent
         visible: false
+        course: trainingScreen.course
+        lesson: trainingScreen.lesson
         stats: trainingScreen.stats
         referenceStats: trainingScreen.referenceStas
         onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)

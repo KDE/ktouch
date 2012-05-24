@@ -24,7 +24,7 @@ Item {
     id: item
     property Profile profile
     property DataIndexCourse dataIndexCourse
-    signal lessonSelected(variant course, variant lesson)
+    signal lessonSelected(variant course, int lessonIndex)
 
     function update() {
         if (!course.isValid) return;
@@ -142,7 +142,7 @@ Item {
                     onClicked: {
                         var lesson = course.lesson(lessonList.currentIndex)
                         profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
-                        lessonSelected(course, lesson)
+                        lessonSelected(course, lessonList.currentIndex)
                     }
                 }
             }

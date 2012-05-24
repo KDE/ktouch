@@ -24,7 +24,7 @@ FocusScope {
     id: screen
 
     property variant courses;
-    signal lessonSelected(variant course, variant lesson, variant profile)
+    signal lessonSelected(variant course, int lessonIndex, variant profile)
 
     QtObject {
         id: d
@@ -121,7 +121,7 @@ FocusScope {
                 profile: d.profile
                 anchors.fill: parent
                 anchors.margins: 5
-                onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
+                onLessonSelected: screen.lessonSelected(course, lessonIndex, d.profile)
             }
 
             InitialProfileForm {

@@ -25,7 +25,7 @@ Column {
 
     property variant courses;
     property Profile profile;
-    signal lessonSelected(variant course, variant lesson)
+    signal lessonSelected(variant course, int lessonIndex)
 
     property variant boxes: [];
     property int lastActiveIndex: -1
@@ -89,7 +89,7 @@ Column {
             content: LessonSelector {
                 dataIndexCourse: repeater.courses[index]
                 profile: item.profile
-                onLessonSelected: item.lessonSelected(course, lesson)
+                onLessonSelected: item.lessonSelected(course, lessonIndex)
             }
         }
     }
