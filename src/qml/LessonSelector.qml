@@ -76,7 +76,7 @@ Item {
             if (isValid && path === dataIndexCourse.path)
                 return
             path = dataIndexCourse.path
-            dataAccess.loadResourceCourse(path, course)
+            dataAccess.loadCourse(path, course)
         }
         Component.onCompleted: update()
     }

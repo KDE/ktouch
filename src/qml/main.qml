@@ -78,7 +78,7 @@ Item {
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
                 if (dataIndexLayout.name === name) {
-                    dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return
                 }
             }
@@ -89,7 +89,7 @@ Item {
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
                 if (name.search(dataIndexLayout.name) === 0) {
-                    dataAccess.loadResourceKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return
                 }
             }
