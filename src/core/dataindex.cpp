@@ -17,44 +17,6 @@
 
 #include "dataindex.h"
 
-DataIndexCourse::DataIndexCourse(QObject* parent):
-    CourseBase(parent)
-{
-}
-
-QString DataIndexCourse::path() const
-{
-    return m_path;
-}
-
-void DataIndexCourse::setPath(const QString& path)
-{
-    if(path != m_path)
-    {
-        m_path = path;
-        emit pathChanged();
-    }
-}
-
-DataIndexKeyboardLayout::DataIndexKeyboardLayout(QObject* parent):
-    KeyboardLayoutBase(parent)
-{
-}
-
-QString DataIndexKeyboardLayout::path() const
-{
-    return m_path;
-}
-
-void DataIndexKeyboardLayout::setPath(const QString& path)
-{
-    if(path != m_path)
-    {
-        m_path = path;
-        emit pathChanged();
-    }
-}
-
 DataIndex::DataIndex(QObject* parent):
     QObject(parent)
 {
@@ -124,4 +86,72 @@ void DataIndex::clearKeyboardLayouts()
     qDeleteAll(m_keyboardLayouts);
     m_keyboardLayouts.clear();
     emit keyboardLayoutCountChanged();
+}
+
+DataIndexCourse::DataIndexCourse(QObject* parent):
+    CourseBase(parent),
+    m_source(DataIndex::BuiltInResource)
+{
+}
+
+QString DataIndexCourse::path() const
+{
+    return m_path;
+}
+
+void DataIndexCourse::setPath(const QString& path)
+{
+    if(path != m_path)
+    {
+        m_path = path;
+        emit pathChanged();
+    }
+}
+
+DataIndex::Source DataIndexCourse::source() const
+{
+    return m_source;
+}
+
+void DataIndexCourse::setSource(DataIndex::Source source)
+{
+    if (source != m_source)
+    {
+        m_source = source;
+        emit sourceChanged();
+    }
+}
+
+DataIndexKeyboardLayout::DataIndexKeyboardLayout(QObject* parent):
+    KeyboardLayoutBase(parent),
+    m_source(DataIndex::BuiltInResource)
+{
+}
+
+QString DataIndexKeyboardLayout::path() const
+{
+    return m_path;
+}
+
+void DataIndexKeyboardLayout::setPath(const QString& path)
+{
+    if(path != m_path)
+    {
+        m_path = path;
+        emit pathChanged();
+    }
+}
+
+DataIndex::Source DataIndexKeyboardLayout::source() const
+{
+    return m_source;
+}
+
+void DataIndexKeyboardLayout::setSource(DataIndex::Source source)
+{
+    if (source != m_source)
+    {
+        m_source = source;
+        emit sourceChanged();
+    }
 }

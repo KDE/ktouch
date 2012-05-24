@@ -26,48 +26,21 @@
 #include "coursebase.h"
 #include "keyboardlayoutbase.h"
 
-class DataIndexCourse: public CourseBase
-{
-    Q_OBJECT
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
-
-public:
-    explicit DataIndexCourse(QObject* parent = 0);
-    QString path() const;
-    void setPath(const QString& path);
-
-signals:
-    void pathChanged();
-
-private:
-    QString m_path;
-};
-
-class DataIndexKeyboardLayout: public KeyboardLayoutBase
-{
-    Q_OBJECT
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
-
-public:
-    explicit DataIndexKeyboardLayout(QObject* parent = 0);
-
-    QString path() const;
-    void setPath(const QString& path);
-
-signals:
-    void pathChanged();
-
-private:
-    QString m_path;
-};
+class DataIndexCourse;
+class DataIndexKeyboardLayout;
 
 class DataIndex : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int courseCount READ courseCount NOTIFY courseCountChanged)
     Q_PROPERTY(int keyboardLayoutCount READ keyboardLayoutCount NOTIFY keyboardLayoutCountChanged)
+    Q_ENUMS(Source);
 
 public:
+    enum Source {
+        BuiltInResource,
+        UserResource
+    };
     explicit DataIndex(QObject* parent = 0);
     int courseCount() const;
     Q_INVOKABLE DataIndexCourse* course(int index) const;
@@ -87,6 +60,51 @@ signals:
 private:
     QList<DataIndexCourse*> m_courses;
     QList<DataIndexKeyboardLayout*> m_keyboardLayouts;
+};
+
+class DataIndexCourse: public CourseBase
+{
+    Q_OBJECT
+    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(DataIndex::Source source READ source WRITE setSource NOTIFY sourceChanged)
+
+public:
+    explicit DataIndexCourse(QObject* parent = 0);
+    QString path() const;
+    void setPath(const QString& path);
+    DataIndex::Source source() const;
+    void setSource(DataIndex::Source source);
+
+signals:
+    void pathChanged();
+    void sourceChanged();
+
+private:
+    QString m_path;
+    DataIndex::Source m_source;
+};
+
+class DataIndexKeyboardLayout: public KeyboardLayoutBase
+{
+    Q_OBJECT
+    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(DataIndex::Source source READ source WRITE setSource NOTIFY sourceChanged)
+
+public:
+    explicit DataIndexKeyboardLayout(QObject* parent = 0);
+
+    QString path() const;
+    void setPath(const QString& path);
+    DataIndex::Source source() const;
+    void setSource(DataIndex::Source source);
+
+signals:
+    void pathChanged();
+    void sourceChanged();
+
+private:
+    QString m_path;
+    DataIndex::Source m_source;
 };
 
 #endif // DATAINDEX_H
