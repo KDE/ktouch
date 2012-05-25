@@ -305,6 +305,78 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     return true;
 }
 
+QString DataAccess::storeUserCourse(const QString& fileName, Course* source)
+{
+
+    QDomDocument doc;
+
+    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
+    doc.appendChild(header);
+
+    QDomElement root = doc.createElement("course");
+    doc.appendChild(root);
+
+    QDomElement idElem = doc.createElement("id");
+    QDomElement titleElem = doc.createElement("title");
+    QDomElement descriptionElem = doc.createElement("description");
+    QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
+    QDomElement lessonsElem = doc.createElement("lessons");
+
+    idElem.appendChild(doc.createTextNode(source->id()));
+    titleElem.appendChild(doc.createTextNode(source->title()));
+    keyboardLayoutElem.appendChild(doc.createTextNode(source->keyboardLayoutName()));
+    descriptionElem.appendChild(doc.createTextNode(source->description()));
+
+    for (int i = 0; i < source->lessonCount(); i++)
+    {
+        Lesson* const lesson = source->lesson(i);
+
+        QStringList lines;
+
+        for (int j = 0; j < lesson->lineCount(); j++)
+        {
+            lines << lesson->line(j)->value();
+        }
+
+        QDomElement lessonElem = doc.createElement("lesson");
+        QDomElement idElem = doc.createElement("id");
+        QDomElement titleElem = doc.createElement("title");
+        QDomElement newCharactersElem = doc.createElement("newCharacters");
+        QDomElement textElem = doc.createElement("text");
+
+        idElem.appendChild(doc.createTextNode(lesson->id()));
+        titleElem.appendChild(doc.createTextNode(lesson->title()));
+        newCharactersElem.appendChild(doc.createTextNode(lesson->newCharacters()));
+        textElem.appendChild(doc.createTextNode(lines.join("\n")));
+
+        lessonElem.appendChild(idElem);
+        lessonElem.appendChild(titleElem);
+        lessonElem.appendChild(newCharactersElem);
+        lessonElem.appendChild(textElem);
+        lessonsElem.appendChild(lessonElem);
+    }
+
+    root.appendChild(idElem);
+    root.appendChild(titleElem);
+    root.appendChild(descriptionElem);
+    root.appendChild(keyboardLayoutElem);
+    root.appendChild(lessonsElem);
+
+    QFile file;
+
+    const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "courses", true));
+    file.setFileName(dir.filePath(fileName));
+
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        kWarning() << "can't open:" << file.fileName();
+        return QString();
+    }
+
+    file.write(doc.toByteArray());
+    return file.fileName();
+}
+
 QXmlSchema DataAccess::loadXmlSchema(const QString &name)
 {
     QXmlSchema schema;

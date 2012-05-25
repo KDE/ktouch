@@ -36,6 +36,7 @@ public:
     Q_INVOKABLE bool storeDataIndex(DataIndex* source);
     Q_INVOKABLE bool loadKeyboardLayout(const QString& path, KeyboardLayout* target);
     Q_INVOKABLE bool loadCourse(const QString& path, Course* target);
+    QString storeUserCourse(const QString& fileName, Course* source);
 
 private:
     QXmlSchema loadXmlSchema(const QString& name);
