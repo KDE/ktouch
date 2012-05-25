@@ -17,6 +17,12 @@
 
 #include "newresourceassistant.h"
 
+#include <QUuid>
+
+#include "../core/resource.h"
+#include "../core/course.h"
+#include "../core/dataindex.h"
+#include "../core/dataaccess.h"
 #include "resourcetypeswidget.h"
 #include "newcoursewidget.h"
 #include "newkeyboardlayoutwidget.h"
@@ -52,8 +58,35 @@ NewResourceAssistant::NewResourceAssistant(ResourceModel* resourceModel, QWidget
     connect(m_resourceTemplateWidget, SIGNAL(isValidChanged()), SLOT(updateResourceTemplatePageValidity()));
 }
 
+Resource* NewResourceAssistant::createResource()
+{
+    if (m_resourceType == ResourceModel::CourseItem)
+    {
+        Course* course = new Course();
+        DataIndexCourse* templateDataIndexCourse = qobject_cast<DataIndexCourse*>(m_resourceTemplateWidget->templateResource());
+
+        if (templateDataIndexCourse)
+        {
+            Course templateCourse;
+            DataAccess dataAccess;
+            dataAccess.loadCourse(templateDataIndexCourse->path(), &templateCourse);
+            course->copyFrom(&templateCourse);
+        }
+
+        course->setId(QUuid::createUuid().toString());
+        course->setTitle(m_newCourseWidget->title());
+        course->setKeyboardLayoutName(m_newCourseWidget->keyboardLayoutName());
+        course->setDescription(m_newCourseWidget->description());
+
+        return course;
+    }
+
+    return 0;
+}
+
 void NewResourceAssistant::setResourceType(ResourceModel::ResourceItemType type)
 {
+    m_resourceType = type;
     setAppropriate(m_newCoursePage, type == ResourceModel::CourseItem);
     setAppropriate(m_newKeyboardLayoutPage, type == ResourceModel::KeyboardLayoutItem);
     m_resourceTemplateWidget->setTemplateType(type);

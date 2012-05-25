@@ -30,10 +30,7 @@ class ResourceEditor : public KMainWindow
     Q_OBJECT
 public:
     explicit ResourceEditor(QWidget* parent = 0);
-    
-signals:
-    
-public slots:
+
 private slots:
     void newResource();
     void deleteResource();
@@ -41,6 +38,7 @@ private slots:
     void redo();
     void importResource();
     void exportResource();
+
 private:
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
@@ -51,8 +49,6 @@ private:
     KAction* m_redoAction;
     KAction* m_importResourceAction;
     KAction* m_exportResourceAction;
-
-    
 };
 
 #endif // EDITORMAINWINDOW_H

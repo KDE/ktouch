@@ -24,6 +24,7 @@
 
 #include "resourcemodel.h"
 
+class Resource;
 class CategorizedResourceSortFilterProxyModel;
 
 class ResourceTemplateWidget : public QWidget, private Ui::ResourceTemplateWidget
@@ -34,6 +35,7 @@ public:
     ResourceModel::ResourceItemType templateType() const;
     void setTemplateType(ResourceModel::ResourceItemType type);
     bool isValid() const;
+    Resource* templateResource() const;
 signals:
     void isValidChanged();
 private:

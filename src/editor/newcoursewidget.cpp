@@ -17,6 +17,7 @@
 
 #include "newcoursewidget.h"
 
+#include "../core/dataindex.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 
@@ -46,4 +47,24 @@ bool NewCourseWidget::isValid() const
         return false;
 
     return true;
+}
+
+QString NewCourseWidget::title() const
+{
+    return m_titleLineEdit->text();
+}
+
+QString NewCourseWidget::keyboardLayoutName() const
+{
+    QAbstractItemModel* const model = m_keyboardLayoutComboBox->model();
+    const QModelIndex index = model->index(m_keyboardLayoutComboBox->currentIndex(), 0);
+    const QVariant variant = model->data(index, ResourceModel::DataRole);
+    QObject* const object = qvariant_cast<QObject*>(variant);
+    DataIndexKeyboardLayout* const layout = qobject_cast<DataIndexKeyboardLayout*>(object);
+    return layout? layout->name(): "";
+}
+
+QString NewCourseWidget::description() const
+{
+    return m_descriptionEdit->toPlainText();
 }

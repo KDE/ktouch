@@ -29,6 +29,9 @@ class NewCourseWidget : public QWidget, private Ui::NewCourseWidget
 public:
     explicit NewCourseWidget(ResourceModel* resourceModel, QWidget* parent = 0);
     bool isValid() const;
+    QString title() const;
+    QString keyboardLayoutName() const;
+    QString description() const;
 signals:
     void isValidChanged() const;
 private:

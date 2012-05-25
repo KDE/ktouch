@@ -29,9 +29,12 @@
 #include <KCategorizedSortFilterProxyModel>
 #include <KCategorizedView>
 #include <KCategoryDrawer>
+#include <KMessageBox>
 
 #include "../core/dataindex.h"
 #include "../core/dataaccess.h"
+#include "../core/resource.h"
+#include "../core/course.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"
@@ -100,7 +103,38 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 void ResourceEditor::newResource()
 {
     NewResourceAssistant assistant(m_resourceModel, this);
-    assistant.exec();
+    DataAccess dataAccess;
+
+    if (assistant.exec() == QDialog::Accepted)
+    {
+        Resource* resource = assistant.createResource();
+
+        if (Course* course = qobject_cast<Course*>(resource))
+        {
+            const QString fileName = QString("%1.xml").arg(course->id());
+            QString path = dataAccess.storeUserCourse(fileName, course);
+            if (path.isNull())
+            {
+                KMessageBox::error(this, i18n("Error while saving course to disk."));
+                return;
+            }
+
+            DataIndexCourse* dataIndexCourse = new DataIndexCourse();
+
+            dataIndexCourse->setSource(DataIndex::UserResource);
+            dataIndexCourse->setTitle(course->title());
+            dataIndexCourse->setDescription(course->description());
+            dataIndexCourse->setKeyboardLayoutName(course->keyboardLayoutName());
+            dataIndexCourse->setPath(path);
+
+            m_dataIndex->addCourse(dataIndexCourse);
+            if (!dataAccess.storeDataIndex(m_dataIndex))
+            {
+                KMessageBox::error(this, i18n("Error while saving data index to disk."));
+                return;
+            }
+        }
+    }
 }
 
 void ResourceEditor::deleteResource()

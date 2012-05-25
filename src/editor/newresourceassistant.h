@@ -22,6 +22,7 @@
 
 #include "resourcemodel.h"
 
+class Resource;
 class ResourceTypesWidget;
 class NewCourseWidget;
 class NewKeyboardLayoutWidget;
@@ -32,6 +33,7 @@ class NewResourceAssistant : public KAssistantDialog
     Q_OBJECT
 public:
     NewResourceAssistant(ResourceModel* resourceModel, QWidget* parent = 0);
+    Resource* createResource();
 private slots:
     void setResourceType(ResourceModel::ResourceItemType type);
     void updateNewCoursePageValidity();
@@ -47,6 +49,7 @@ private:
     KPageWidgetItem* m_newKeyboardLayoutPage;
     KPageWidgetItem* m_newCoursePage;
     KPageWidgetItem* m_resourceTemplatePage;
+    ResourceModel::ResourceItemType m_resourceType;
 };
 
 #endif // NEWRESOURCEASSISTANT_H

@@ -18,6 +18,7 @@
 
 #include "resourcetemplatewidget.h"
 
+#include "../core/resource.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 
 ResourceTemplateWidget::ResourceTemplateWidget(ResourceModel* resourceModel, QWidget* parent) :
@@ -71,3 +72,15 @@ bool ResourceTemplateWidget::isValid() const
 
     return m_templatesView->selectionModel()->hasSelection();
 }
+
+Resource* ResourceTemplateWidget::templateResource() const
+{
+    if (!m_useTemplateCheckbox->isChecked())
+        return 0;
+    if (!m_templatesView->selectionModel()->hasSelection())
+        return 0;
+    const QModelIndex index = m_templatesView->selectionModel()->currentIndex();
+    QObject* const object = m_filteredResourcesModel->data(index, ResourceModel::DataRole).value<QObject*>();
+    return qobject_cast<Resource*>(object);
+}
+
