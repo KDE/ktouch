@@ -282,7 +282,6 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     target->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
     target->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
     target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
-    QString allowedChars = "";
     for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
          !lessonNode.isNull();
          lessonNode = lessonNode.nextSiblingElement())
@@ -290,19 +289,10 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
         Lesson* lesson = new Lesson(this);
         lesson->setId(lessonNode.firstChildElement("id").text());
         lesson->setTitle(i18nc("lesson title", lessonNode.firstChildElement("title").text().toUtf8()));
-        QString newChars = lessonNode.firstChildElement("newCharacters").text();
-        for (int i = 0; i < newChars.length(); i++)
-        {
-            QChar newChar = newChars.at(i);
-            if (!allowedChars.contains(newChar))
-            {
-                allowedChars.append(newChar);
-            }
-        }
-        lesson->setCharacters(allowedChars);
-        QString text = lessonNode.firstChildElement("text").text();
-        QStringList lines = text.split("\n");
-        foreach(QString lineStr, lines)
+        lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
+        const QString text = lessonNode.firstChildElement("text").text();
+        const QStringList lines = text.split("\n");
+        foreach(const QString lineStr, lines)
         {
             LessonLine* line = new LessonLine(lesson);
             line->setValue(lineStr);

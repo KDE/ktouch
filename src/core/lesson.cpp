@@ -52,6 +52,20 @@ void Lesson::setTitle(const QString& title)
     }
 }
 
+QString Lesson::newCharacters() const
+{
+    return m_newCharacters;
+}
+
+void Lesson::setNewCharacters(const QString& newCharacters)
+{
+    if (newCharacters != m_newCharacters)
+    {
+        m_newCharacters = newCharacters;
+        emit newCharactersChanged();
+    }
+}
+
 QString Lesson::characters() const
 {
     return m_characters;
@@ -102,6 +116,7 @@ void Lesson::copyFrom(Lesson* source)
 {
     setId(source->id());
     setTitle(source->title());
+    setNewCharacters(source->newCharacters());
     setCharacters(source->characters());
     clearLines();
     for (int i = 0; i < source->lineCount(); i++)

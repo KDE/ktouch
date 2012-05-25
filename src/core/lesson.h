@@ -29,6 +29,7 @@ class Lesson : public QObject
     Q_OBJECT
     Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString newCharacters READ newCharacters WRITE setNewCharacters NOTIFY newCharactersChanged)
     Q_PROPERTY(QString characters READ characters WRITE setCharacters NOTIFY charactersChanged)
     Q_PROPERTY(int lineCount READ lineCount NOTIFY lineCountChanged)
 
@@ -38,6 +39,8 @@ public:
     void setId(const QString& id);
     QString title() const;
     void setTitle(const QString& title);
+    QString newCharacters() const;
+    void setNewCharacters(const QString& newCharacters);
     QString characters() const;
     void setCharacters(const QString& characters);
     int lineCount() const;
@@ -50,6 +53,7 @@ public:
 signals:
     void idChanged();
     void titleChanged();
+    void newCharactersChanged();
     void charactersChanged();
     void lineCountChanged();
 
@@ -57,6 +61,7 @@ private:
     Q_DISABLE_COPY(Lesson)
     QString m_id;
     QString m_title;
+    QString m_newCharacters;
     QString m_characters;
     QList<LessonLine*> m_lines;
 };

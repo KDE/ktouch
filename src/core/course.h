@@ -23,9 +23,7 @@
 #include <QString>
 #include <QList>
 
-class QXmlSchema;
-class QDomDocument;
-class QIODevice;
+class QSignalMapper;
 class Lesson;
 
 class Course : public CourseBase
@@ -49,11 +47,14 @@ signals:
     void idChanged();
     void lessonCountChanged();
 
+private slots:
+    void updateLessonCharacters(int firstIndex = 0);
+
 private:
     Q_DISABLE_COPY(Course)
-    bool parseXML(QDomDocument* doc);
     QString m_id;
     QList<Lesson*> m_lessons;
+    QSignalMapper* m_signalMapper;
 };
 
 #endif // COURSE_H
