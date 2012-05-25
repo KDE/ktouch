@@ -33,16 +33,17 @@ public:
     };
     Q_DECLARE_FLAGS(ResourceItemTypes, ResourceItemType)
     enum AdditionalRoles {
-        ResourceTypeRole = Qt::UserRole + 1
+        ResourceTypeRole = Qt::UserRole + 1,
+        DataRole,
+        IndexRole
     };
     explicit ResourceModel(DataIndex* dataIndex, QObject* parent = 0);
+    DataIndex* dataIndex() const;
     Qt::ItemFlags flags(const QModelIndex& index) const;
     QVariant data(const QModelIndex& index, int role) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
     int rowCount(const QModelIndex &parent) const;
-signals:
-    
-public slots:
+
 private:
     DataIndex* m_dataIndex;
     QVariant courseData(int row, int role) const;

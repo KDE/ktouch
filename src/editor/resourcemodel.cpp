@@ -28,6 +28,11 @@ ResourceModel::ResourceModel(DataIndex* dataIndex, QObject* parent) :
 {
 }
 
+DataIndex* ResourceModel::dataIndex() const
+{
+    return m_dataIndex;
+}
+
 Qt::ItemFlags ResourceModel::flags(const QModelIndex& index) const
 {
     return QAbstractListModel::flags(index);
@@ -38,7 +43,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    if (index.row() >= m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount())
+    if (index.row() > m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount())
         return QVariant();
 
     if (index.row() < m_dataIndex->courseCount())
@@ -74,6 +79,10 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant(m_dataIndex->course(row)->title());
     if (role == ResourceModel::ResourceTypeRole)
         return QVariant(ResourceModel::CourseItem);
+    if (role == ResourceModel::DataRole)
+        return QVariant::fromValue<QObject*>(m_dataIndex->course(row));
+    if (role == ResourceModel::IndexRole)
+        return QVariant(row);
     return QVariant();
 }
 
@@ -87,5 +96,9 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
     if (role == ResourceModel::ResourceTypeRole)
         return QVariant(ResourceModel::KeyboardLayoutItem);
+    if (role == ResourceModel::DataRole)
+        return QVariant::fromValue<QObject*>(m_dataIndex->keyboardLayout(row));
+    if (role == ResourceModel::IndexRole)
+        return QVariant(row);
     return QVariant();
 }
