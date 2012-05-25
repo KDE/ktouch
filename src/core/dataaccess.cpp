@@ -192,8 +192,6 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
         kWarning() << "can't open:" << path;
         return false;
     }
-    if (!openResourceFile(path, keyboardLayoutFile))
-        return false;
     QXmlSchema schema = loadXmlSchema("keyboardlayout");
     if (!schema.isValid())
         return false;
