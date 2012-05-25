@@ -30,6 +30,7 @@ public:
     explicit CategorizedResourceSortFilterProxyModel(QObject* parent = 0);
     ResourceModel::ResourceItemTypes resourceTypeFilter() const;
     void setResourceTypeFilter(ResourceModel::ResourceItemTypes types);
+    void setSourceModel(QAbstractItemModel* sourceModel);
 protected:
     bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const;
     bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const;
