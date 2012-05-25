@@ -33,6 +33,7 @@ class DataAccess : public QObject
 public:
     explicit DataAccess(QObject *parent = 0);
     Q_INVOKABLE bool loadDataIndex(DataIndex* target);
+    Q_INVOKABLE bool storeDataIndex(DataIndex* source);
     Q_INVOKABLE bool loadKeyboardLayout(const QString& path, KeyboardLayout* target);
     Q_INVOKABLE bool loadCourse(const QString& path, Course* target);
 

@@ -105,6 +105,82 @@ bool DataAccess::loadDataIndex(DataIndex* target)
     return true;
 }
 
+bool DataAccess::storeDataIndex(DataIndex* source)
+{
+    const QDir userDir = QDir(KGlobal::dirs()->saveLocation("appdata", "", true));
+
+    QDomDocument doc;
+
+    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
+    doc.appendChild(header);
+
+    QDomElement root = doc.createElement("data");
+    doc.appendChild(root);
+
+    for (int i = 0; i < source->courseCount(); i++)
+    {
+        DataIndexCourse* const course = source->course(i);
+
+        if (course->source() == DataIndex::UserResource)
+        {
+            const QString relPath = userDir.relativeFilePath(course->path());
+
+            QDomElement courseElem = doc.createElement("course");
+            QDomElement titleElem = doc.createElement("title");
+            QDomElement descriptionElem = doc.createElement("description");
+            QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
+            QDomElement pathElem = doc.createElement("path");
+
+            titleElem.appendChild(doc.createTextNode(course->title()));
+            descriptionElem.appendChild(doc.createTextNode(course->description()));
+            keyboardLayoutElem.appendChild(doc.createTextNode(course->keyboardLayoutName()));
+            pathElem.appendChild(doc.createTextNode(relPath));
+
+            courseElem.appendChild(titleElem);
+            courseElem.appendChild(descriptionElem);
+            courseElem.appendChild(keyboardLayoutElem);
+            courseElem.appendChild(pathElem);
+            root.appendChild(courseElem);
+        }
+    }
+
+    for (int i = 0; i < source->keyboardLayoutCount(); i++)
+    {
+        DataIndexKeyboardLayout* const keyboardLayout = source->keyboardLayout(i);
+
+        if (keyboardLayout->source() == DataIndex::UserResource)
+        {
+            const QString relPath = userDir.relativeFilePath(keyboardLayout->path());
+
+            QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
+            QDomElement titleElem = doc.createElement("title");
+            QDomElement nameElem = doc.createElement("name");
+            QDomElement pathElem = doc.createElement("path");
+
+            titleElem.appendChild(doc.createTextNode(keyboardLayout->title()));
+            nameElem.appendChild(doc.createTextNode(keyboardLayout->name()));
+            pathElem.appendChild(doc.createTextNode(relPath));
+
+            keyboardLayoutElem.appendChild(titleElem);
+            keyboardLayoutElem.appendChild(nameElem);
+            keyboardLayoutElem.appendChild(pathElem);
+            root.appendChild(keyboardLayoutElem);
+        }
+    }
+
+    QFile file;
+    file.setFileName(userDir.filePath("data.xml"));
+
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        kWarning() << "can't open:" << file.fileName();
+        return false;
+    }
+
+    file.write(doc.toByteArray());
+    return true;
+}
+
 bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
 {
     target->setIsValid(false);
