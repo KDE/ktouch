@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>319</width>
-    <height>206</height>
+    <width>336</width>
+    <height>133</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,34 +19,33 @@
    </property>
    <item>
     <layout class="QFormLayout" name="m_formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::ExpandingFieldsGrow</enum>
+     </property>
      <item row="0" column="0">
-      <widget class="QLabel" name="m_idLabel">
-       <property name="text">
-        <string>ID:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="m_idLineEdit"/>
-     </item>
-     <item row="1" column="0">
       <widget class="QLabel" name="m_titleLabel">
        <property name="text">
         <string>Title:</string>
        </property>
+       <property name="buddy">
+        <cstring>m_titleLineEdit</cstring>
+       </property>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item row="0" column="1">
       <widget class="QLineEdit" name="m_titleLineEdit"/>
      </item>
-     <item row="2" column="0">
+     <item row="1" column="0">
       <widget class="QLabel" name="m_keyboardLayoutLabel">
        <property name="text">
         <string>Keyboard layout:</string>
        </property>
+       <property name="buddy">
+        <cstring>m_keyboardLayoutComboBox</cstring>
+       </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="1" column="1">
       <widget class="QComboBox" name="m_keyboardLayoutComboBox">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -56,33 +55,20 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="m_descriptionLabel">
+       <property name="text">
+        <string>Description:</string>
+       </property>
+       <property name="buddy">
+        <cstring>m_descriptionEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPlainTextEdit" name="m_descriptionEdit"/>
+     </item>
     </layout>
-   </item>
-   <item>
-    <spacer name="m_verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
-    <widget class="QLabel" name="m_descriptionLabel">
-     <property name="text">
-      <string>Description:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPlainTextEdit" name="m_descriptionEdit"/>
    </item>
   </layout>
  </widget>

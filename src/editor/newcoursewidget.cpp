@@ -27,7 +27,6 @@ NewCourseWidget::NewCourseWidget(ResourceModel* resourceModel, QWidget* parent) 
 {
     setupUi(this);
 
-    connect(m_idLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_keyboardLayoutComboBox, SIGNAL(currentIndexChanged(int)), SIGNAL(isValidChanged()));
 
@@ -40,9 +39,6 @@ NewCourseWidget::NewCourseWidget(ResourceModel* resourceModel, QWidget* parent) 
 
 bool NewCourseWidget::isValid() const
 {
-    if (m_idLineEdit->text().isEmpty())
-        return false;
-
     if (m_titleLineEdit->text().isEmpty())
         return false;
 
