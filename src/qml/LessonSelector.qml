@@ -102,7 +102,7 @@ Item {
                     property bool locked: index > lessonList.lastUnlockedIndex
                     width: lessonList.width - scrollBar.width
                     onSelected: lessonList.currentIndex = index
-                    iconSource: locked? "document-encrypt": ""
+                    iconSource: locked? "object-locked": ""
                     label.opacity: locked? 0.5: 1.0
                     title: lesson? lesson.title: ""
                 }
