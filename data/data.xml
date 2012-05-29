@@ -164,6 +164,11 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/no.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Portuguese</title>
+    <name>pt</name>
+    <path>keyboardlayouts/pt.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Russian (Legacy)</title>
     <name>ru(legacy)</name>
     <path>keyboardlayouts/ru.legacy.xml</path>
