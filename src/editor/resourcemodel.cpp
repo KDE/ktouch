@@ -71,34 +71,46 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
 
 QVariant ResourceModel::courseData(int row, int role) const
 {
-    if (role == KCategorizedSortFilterProxyModel::CategorySortRole)
+    switch(role)
+    {
+    case KCategorizedSortFilterProxyModel::CategorySortRole:
         return QVariant(0);
-    if (role == KCategorizedSortFilterProxyModel::CategoryDisplayRole)
+    case KCategorizedSortFilterProxyModel::CategoryDisplayRole:
         return QVariant(i18n("Courses"));
-    if (role == Qt::DisplayRole)
+    case Qt::DisplayRole:
         return QVariant(m_dataIndex->course(row)->title());
-    if (role == ResourceModel::ResourceTypeRole)
+    case Qt::ToolTipRole:
+        return QVariant(m_dataIndex->course(row)->description());
+    case ResourceModel::ResourceTypeRole:
         return QVariant(ResourceModel::CourseItem);
-    if (role == ResourceModel::DataRole)
+    case ResourceModel::DataRole:
         return QVariant::fromValue<QObject*>(m_dataIndex->course(row));
-    if (role == ResourceModel::IndexRole)
+    case ResourceModel::IndexRole:
         return QVariant(row);
-    return QVariant();
+    default:
+        return QVariant();
+    }
 }
 
 QVariant ResourceModel::keyboardLayoutData(int row, int role) const
 {
-    if (role == KCategorizedSortFilterProxyModel::CategorySortRole)
+    switch(role)
+    {
+    case KCategorizedSortFilterProxyModel::CategorySortRole:
         return QVariant(1);
-    if (role == KCategorizedSortFilterProxyModel::CategoryDisplayRole)
+    case KCategorizedSortFilterProxyModel::CategoryDisplayRole:
         return QVariant(i18n("Keyboard layouts"));
-    if (role == Qt::DisplayRole)
+    case Qt::DisplayRole:
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
-    if (role == ResourceModel::ResourceTypeRole)
+    case Qt::ToolTipRole:
+        return QVariant(i18n("Name: %1").arg(m_dataIndex->keyboardLayout(row)->name()));
+    case ResourceModel::ResourceTypeRole:
         return QVariant(ResourceModel::KeyboardLayoutItem);
-    if (role == ResourceModel::DataRole)
+    case ResourceModel::DataRole:
         return QVariant::fromValue<QObject*>(m_dataIndex->keyboardLayout(row));
-    if (role == ResourceModel::IndexRole)
+    case ResourceModel::IndexRole:
         return QVariant(row);
-    return QVariant();
+    default:
+        return QVariant();
+    }
 }
