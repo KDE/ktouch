@@ -26,9 +26,17 @@ NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(QWidget* parent) :
 
     connect(m_nameLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
+    connect(m_pasteCurrentNameButton, SIGNAL(clicked()), SLOT(pasteCurrentName()));
+}
 
-    const LayoutUnit currentKeyboardLayout = X11Helper::getCurrentLayout();
-    m_nameLineEdit->setText(currentKeyboardLayout.toString());
+QString NewKeyboardLayoutWidget::name() const
+{
+    return m_nameLineEdit->text();
+}
+
+QString NewKeyboardLayoutWidget::title() const
+{
+    return m_titleLineEdit->text();
 }
 
 bool NewKeyboardLayoutWidget::isValid() const
@@ -40,4 +48,11 @@ bool NewKeyboardLayoutWidget::isValid() const
         return false;
 
     return true;
+}
+
+void NewKeyboardLayoutWidget::pasteCurrentName()
+{
+    const LayoutUnit currentKeyboardLayout = X11Helper::getCurrentLayout();
+    m_nameLineEdit->setText(currentKeyboardLayout.toString());
+    m_nameLineEdit->setFocus();
 }

@@ -35,6 +35,7 @@
 #include "../core/dataaccess.h"
 #include "../core/resource.h"
 #include "../core/course.h"
+#include "../core/keyboardlayout.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"
@@ -128,6 +129,30 @@ void ResourceEditor::newResource()
             dataIndexCourse->setPath(path);
 
             m_dataIndex->addCourse(dataIndexCourse);
+            if (!dataAccess.storeDataIndex(m_dataIndex))
+            {
+                KMessageBox::error(this, i18n("Error while saving data index to disk."));
+                return;
+            }
+        }
+        else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
+        {
+            const QString fileName = QString("%1.xml").arg(keyboardLayout->name());
+            QString path = dataAccess.storeUserKeyboardLayout(fileName, keyboardLayout);
+            if (path.isNull())
+            {
+                KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
+                return;
+            }
+
+            DataIndexKeyboardLayout* dataIndexKeyboardLayout = new DataIndexKeyboardLayout();
+
+            dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
+            dataIndexKeyboardLayout->setName(keyboardLayout->name());
+            dataIndexKeyboardLayout->setTitle(keyboardLayout->title());
+            dataIndexKeyboardLayout->setPath(path);
+
+            m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
             if (!dataAccess.storeDataIndex(m_dataIndex))
             {
                 KMessageBox::error(this, i18n("Error while saving data index to disk."));

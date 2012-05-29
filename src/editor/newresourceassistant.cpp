@@ -21,6 +21,7 @@
 
 #include "../core/resource.h"
 #include "../core/course.h"
+#include "../core/keyboardlayout.h"
 #include "../core/dataindex.h"
 #include "../core/dataaccess.h"
 #include "resourcetypeswidget.h"
@@ -79,6 +80,24 @@ Resource* NewResourceAssistant::createResource()
         course->setDescription(m_newCourseWidget->description());
 
         return course;
+    }
+    else if (m_resourceType == ResourceModel::KeyboardLayoutItem)
+    {
+        KeyboardLayout* keyboardLayout = new KeyboardLayout();
+        DataIndexKeyboardLayout* templateDataIndexKeyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(m_resourceTemplateWidget->templateResource());
+
+        if (templateDataIndexKeyboardLayout)
+        {
+            KeyboardLayout templateKeyboardLayout;
+            DataAccess dataAccess;
+            dataAccess.loadKeyboardLayout(templateDataIndexKeyboardLayout->path(), &templateKeyboardLayout);
+            keyboardLayout->copyFrom(&templateKeyboardLayout);
+        }
+
+        keyboardLayout->setName(m_newKeyboardLayoutWidget->name());
+        keyboardLayout->setTitle(m_newKeyboardLayoutWidget->title());
+
+        return keyboardLayout;
     }
 
     return 0;

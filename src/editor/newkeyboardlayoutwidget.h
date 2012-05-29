@@ -26,10 +26,13 @@ class NewKeyboardLayoutWidget : public QWidget, private Ui::NewKeyboardLayoutWid
     Q_OBJECT
 public:
     explicit NewKeyboardLayoutWidget(QWidget* parent = 0);
+    QString name() const;
+    QString title() const;
     bool isValid() const;
 signals:
     void isValidChanged();
 private slots:
+    void pasteCurrentName();
 };
 
 #endif // NEWKEYBOARDLAYOUTWIDGET_H
