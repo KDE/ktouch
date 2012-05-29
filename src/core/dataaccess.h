@@ -35,6 +35,7 @@ public:
     Q_INVOKABLE bool loadDataIndex(DataIndex* target);
     Q_INVOKABLE bool storeDataIndex(DataIndex* source);
     Q_INVOKABLE bool loadKeyboardLayout(const QString& path, KeyboardLayout* target);
+    QString storeUserKeyboardLayout(const QString& fileName, KeyboardLayout* source);
     Q_INVOKABLE bool loadCourse(const QString& path, Course* target);
     QString storeUserCourse(const QString& fileName, Course* source);
 

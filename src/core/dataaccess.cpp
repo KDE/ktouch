@@ -206,8 +206,8 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
     target->clearKeys();
     target->setTitle(i18nc("Keyboard Layout Name", root.firstChildElement("title").text().toUtf8()));
     target->setName(root.firstChildElement("name").text());
-    target->setWidth(root.firstChildElement("width").text().toUInt());
-    target->setHeight(root.firstChildElement("height").text().toUInt());
+    target->setWidth(root.firstChildElement("width").text().toInt());
+    target->setHeight(root.firstChildElement("height").text().toInt());
     for (QDomElement keyNode = root.firstChildElement("keys").firstChildElement();
          !keyNode.isNull();
          keyNode = keyNode.nextSiblingElement())
@@ -217,7 +217,7 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
         if (keyNode.tagName() == "key")
         {
             Key* key = new Key(this);
-            key->setFingerIndex(keyNode.attribute("fingerIndex").toUInt());
+            key->setFingerIndex(keyNode.attribute("fingerIndex").toInt());
             key->setHasHapticMarker(keyNode.attribute("hasHapticMarker") == "true");
             for (QDomElement charNode = keyNode.firstChildElement("char");
                  !charNode.isNull();
@@ -243,10 +243,10 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
         {
             continue;
         }
-        abstractKey->setLeft(keyNode.attribute("left").toUInt());
-        abstractKey->setTop(keyNode.attribute("top").toUInt());
-        abstractKey->setWidth(keyNode.attribute("width").toUInt());
-        abstractKey->setHeight(keyNode.attribute("height").toUInt());
+        abstractKey->setLeft(keyNode.attribute("left").toInt());
+        abstractKey->setTop(keyNode.attribute("top").toInt());
+        abstractKey->setWidth(keyNode.attribute("width").toInt());
+        abstractKey->setHeight(keyNode.attribute("height").toInt());
         target->addKey(abstractKey);
     }
     kDebug() << "read" << target->title() << "with" << target->keyCount() << "keys";
@@ -254,6 +254,105 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
     target->setIsValid(true);
     return true;
 }
+
+QString DataAccess::storeUserKeyboardLayout(const QString& fileName, KeyboardLayout* source)
+{
+    QDomDocument doc;
+
+    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
+    doc.appendChild(header);
+
+    QDomElement root = doc.createElement("keyboardLayout");
+    doc.appendChild(root);
+
+    QDomElement titleElem = doc.createElement("title");
+    QDomElement nameElem = doc.createElement("name");
+    QDomElement widthElem = doc.createElement("width");
+    QDomElement heightElem = doc.createElement("height");
+    QDomElement keysElem = doc.createElement("keys");
+
+    titleElem.appendChild(doc.createTextNode(source->title()));
+    nameElem.appendChild(doc.createTextNode(source->name()));
+    heightElem.appendChild(doc.createTextNode(QString::number(source->height())));
+    widthElem.appendChild(doc.createTextNode(QString::number(source->width())));
+
+    for (int i = 0; i < source->keyCount(); i++)
+    {
+        AbstractKey* const abstractKey = source->key(i);
+
+        QDomElement keyElem = doc.createElement("key");
+
+        keyElem.setAttribute("left", abstractKey->left());
+        keyElem.setAttribute("top", abstractKey->top());
+        keyElem.setAttribute("width", abstractKey->width());
+        keyElem.setAttribute("height", abstractKey->height());
+
+        if (Key* const key = qobject_cast<Key*>(abstractKey))
+        {
+            keyElem.setTagName("key");
+            keyElem.setAttribute("fingerIndex", key->fingerIndex());
+            if (key->hasHapticMarker())
+            {
+                keyElem.setAttribute("hasHapticMarker", "true");
+            }
+
+            for (int j = 0; j < key->keyCharCount(); j++)
+            {
+                KeyChar* const keyChar = key->keyChar(j);
+
+                QDomElement keyCharElem = doc.createElement("char");
+                keyCharElem.setAttribute("position", keyChar->positionStr());
+                const QString modifier = keyChar->modifier();
+                if (!modifier.isNull())
+                {
+                    keyCharElem.setAttribute("modifier", modifier);
+                }
+                keyCharElem.appendChild(doc.createTextNode(keyChar->value()));
+                keyElem.appendChild(keyCharElem);
+            }
+        }
+
+        if (SpecialKey* const specialKey = qobject_cast<SpecialKey*>(abstractKey))
+        {
+            keyElem.setTagName("specialKey");
+            keyElem.setAttribute("type", specialKey->typeStr());
+
+            const QString modifierId = specialKey->modifierId();
+            if (!modifierId.isNull())
+            {
+                keyElem.setAttribute("modifierId", modifierId);
+            }
+            const QString label = specialKey->modifierId();
+            if (!label.isNull())
+            {
+                keyElem.setAttribute("label", label);
+            }
+        }
+
+        keysElem.appendChild(keyElem);
+    }
+
+    root.appendChild(titleElem);
+    root.appendChild(nameElem);
+    root.appendChild(widthElem);
+    root.appendChild(heightElem);
+    root.appendChild(keysElem);
+
+    QFile file;
+
+    const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
+    file.setFileName(dir.filePath(fileName));
+
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        kWarning() << "can't open:" << file.fileName();
+        return QString();
+    }
+
+    file.write(doc.toByteArray());
+    return file.fileName();
+}
+
 
 bool DataAccess::loadCourse(const QString &path, Course* target)
 {
