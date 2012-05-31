@@ -20,6 +20,9 @@
 
 #include <QAbstractListModel>
 
+#include "core/dataindex.h"
+
+class QIcon;
 class DataIndex;
 
 class ResourceModel : public QAbstractListModel
@@ -48,6 +51,7 @@ private:
     DataIndex* m_dataIndex;
     QVariant courseData(int row, int role) const;
     QVariant keyboardLayoutData(int row, int role) const;
+    QIcon resourceIcon(DataIndex::Source source) const;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ResourceModel::ResourceItemTypes)

@@ -18,9 +18,8 @@
 #include "resourcemodel.h"
 
 #include <KLocale>
+#include <KIcon>
 #include <KCategorizedSortFilterProxyModel>
-
-#include "../core/dataindex.h"
 
 ResourceModel::ResourceModel(DataIndex* dataIndex, QObject* parent) :
     QAbstractListModel(parent),
@@ -81,6 +80,8 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant(m_dataIndex->course(row)->title());
     case Qt::ToolTipRole:
         return QVariant(m_dataIndex->course(row)->description());
+    case Qt::DecorationRole:
+        return QVariant(resourceIcon(m_dataIndex->course(row)->source()));
     case ResourceModel::ResourceTypeRole:
         return QVariant(ResourceModel::CourseItem);
     case ResourceModel::DataRole:
@@ -104,6 +105,8 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
     case Qt::ToolTipRole:
         return QVariant(i18n("Name: %1").arg(m_dataIndex->keyboardLayout(row)->name()));
+    case Qt::DecorationRole:
+        return QVariant(resourceIcon(m_dataIndex->keyboardLayout(row)->source()));
     case ResourceModel::ResourceTypeRole:
         return QVariant(ResourceModel::KeyboardLayoutItem);
     case ResourceModel::DataRole:
@@ -113,4 +116,11 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
     default:
         return QVariant();
     }
+}
+
+QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
+{
+    static QIcon lockedIcon = KIcon("object-locked");
+    static QIcon userIcon = KIcon("user-identity");
+    return source == DataIndex::BuiltInResource? lockedIcon: userIcon;
 }
