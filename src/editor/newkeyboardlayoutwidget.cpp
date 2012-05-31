@@ -16,7 +16,7 @@
  */
 
 #include "newkeyboardlayoutwidget.h"
-#include "../x11_helper.h"
+#include "x11_helper.h"
 
 NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(QWidget* parent) :
     QWidget(parent),

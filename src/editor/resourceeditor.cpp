@@ -31,11 +31,11 @@
 #include <KCategoryDrawer>
 #include <KMessageBox>
 
-#include "../core/dataindex.h"
-#include "../core/dataaccess.h"
-#include "../core/resource.h"
-#include "../core/course.h"
-#include "../core/keyboardlayout.h"
+#include "core/dataindex.h"
+#include "core/dataaccess.h"
+#include "core/resource.h"
+#include "core/course.h"
+#include "core/keyboardlayout.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"

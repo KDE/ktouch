@@ -19,11 +19,11 @@
 
 #include <QUuid>
 
-#include "../core/resource.h"
-#include "../core/course.h"
-#include "../core/keyboardlayout.h"
-#include "../core/dataindex.h"
-#include "../core/dataaccess.h"
+#include "core/resource.h"
+#include "core/course.h"
+#include "core/keyboardlayout.h"
+#include "core/dataindex.h"
+#include "core/dataaccess.h"
 #include "resourcetypeswidget.h"
 #include "newcoursewidget.h"
 #include "newkeyboardlayoutwidget.h"

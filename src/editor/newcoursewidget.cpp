@@ -17,7 +17,7 @@
 
 #include "newcoursewidget.h"
 
-#include "../core/dataindex.h"
+#include "core/dataindex.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 

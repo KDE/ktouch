@@ -18,7 +18,7 @@
 
 #include "resourcetemplatewidget.h"
 
-#include "../core/resource.h"
+#include "core/resource.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 
 ResourceTemplateWidget::ResourceTemplateWidget(ResourceModel* resourceModel, QWidget* parent) :
