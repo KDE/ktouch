@@ -16,17 +16,26 @@
  */
 
 #include "newkeyboardlayoutwidget.h"
-#include "x11_helper.h"
 
-NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(QWidget* parent) :
+#include "core/dataindex.h"
+#include "x11_helper.h"
+#include "resourcemodel.h"
+
+NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(ResourceModel* resourceModel, QWidget* parent) :
     QWidget(parent),
-    Ui::NewKeyboardLayoutWidget()
+    Ui::NewKeyboardLayoutWidget(),
+    m_resourceModel(resourceModel)
 {
     setupUi(this);
 
+    connect(m_nameLineEdit, SIGNAL(textChanged(QString)), SLOT(checkName()));
     connect(m_nameLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_pasteCurrentNameButton, SIGNAL(clicked()), SLOT(pasteCurrentName()));
+
+    m_messageWidget->setMessageType(KMessageWidget::Error);
+    m_messageWidget->setCloseButtonVisible(false);
+    m_messageWidget->hide();
 }
 
 QString NewKeyboardLayoutWidget::name() const
@@ -47,7 +56,7 @@ bool NewKeyboardLayoutWidget::isValid() const
     if (m_titleLineEdit->text().isEmpty())
         return false;
 
-    return true;
+    return m_nameIsValid;
 }
 
 void NewKeyboardLayoutWidget::pasteCurrentName()
@@ -55,4 +64,32 @@ void NewKeyboardLayoutWidget::pasteCurrentName()
     const LayoutUnit currentKeyboardLayout = X11Helper::getCurrentLayout();
     m_nameLineEdit->setText(currentKeyboardLayout.toString());
     m_nameLineEdit->setFocus();
+}
+
+void NewKeyboardLayoutWidget::checkName()
+{
+    const QString name = m_nameLineEdit->text();
+    DataIndex* const dataIndex = m_resourceModel->dataIndex();
+
+    m_nameIsValid = true;
+
+    for (int i = 0; i < dataIndex->keyboardLayoutCount(); i++)
+    {
+        DataIndexKeyboardLayout* const layout = dataIndex->keyboardLayout(i);
+
+        if (layout->source() == DataIndex::UserResource && layout->name() == name)
+        {
+            m_messageWidget->setText(i18n("There is already a keyboard layout with the same name."));
+            m_nameIsValid = false;
+            break;
+        }
+    }
+
+    if (m_nameIsValid)
+        m_messageWidget->animatedHide();
+
+    if (!m_nameIsValid)
+        m_messageWidget->animatedShow();
+
+    emit isValidChanged();
 }

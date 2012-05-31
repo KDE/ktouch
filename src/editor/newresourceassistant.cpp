@@ -34,7 +34,7 @@ NewResourceAssistant::NewResourceAssistant(ResourceModel* resourceModel, QWidget
     m_resourceModel(resourceModel),
     m_resourceTypesWidget(new ResourceTypesWidget(this)),
     m_newCourseWidget(new NewCourseWidget(m_resourceModel, this)),
-    m_newKeyboardLayoutWidget(new NewKeyboardLayoutWidget(this)),
+    m_newKeyboardLayoutWidget(new NewKeyboardLayoutWidget(m_resourceModel, this)),
     m_resourceTemplateWidget(new ResourceTemplateWidget(m_resourceModel, this))
 {
     setWindowTitle("New");

@@ -108,6 +108,8 @@ void ResourceEditor::newResource()
 
     if (assistant.exec() == QDialog::Accepted)
     {
+        dataAccess.loadDataIndex(m_dataIndex);
+
         Resource* resource = assistant.createResource();
 
         if (Course* course = qobject_cast<Course*>(resource))
@@ -137,6 +139,17 @@ void ResourceEditor::newResource()
         }
         else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
         {
+            for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
+            {
+                DataIndexKeyboardLayout* const layout = m_dataIndex->keyboardLayout(i);
+
+                if (layout->source() == DataIndex::UserResource && layout->name() == keyboardLayout->name())
+                {
+                    KMessageBox::error(this, i18n("There is already a keyboard layout with the same name."));
+                    return;
+                }
+            }
+
             const QString fileName = QString("%1.xml").arg(keyboardLayout->name());
             QString path = dataAccess.storeUserKeyboardLayout(fileName, keyboardLayout);
             if (path.isNull())
