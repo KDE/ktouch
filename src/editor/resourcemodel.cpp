@@ -128,6 +128,8 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant::fromValue<QObject*>(m_dataIndex->course(row));
     case ResourceModel::IndexRole:
         return QVariant(row);
+    case ResourceModel::SourceRole:
+        return QVariant(m_dataIndex->course(row)->source());
     default:
         return QVariant();
     }
@@ -153,6 +155,8 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant::fromValue<QObject*>(m_dataIndex->keyboardLayout(row));
     case ResourceModel::IndexRole:
         return QVariant(row);
+    case ResourceModel::SourceRole:
+        return QVariant(m_dataIndex->keyboardLayout(row)->source());
     default:
         return QVariant();
     }

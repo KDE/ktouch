@@ -38,7 +38,8 @@ public:
     enum AdditionalRoles {
         ResourceTypeRole = Qt::UserRole + 1,
         DataRole,
-        IndexRole
+        IndexRole,
+        SourceRole
     };
     explicit ResourceModel(DataIndex* dataIndex, QObject* parent = 0);
     DataIndex* dataIndex() const;

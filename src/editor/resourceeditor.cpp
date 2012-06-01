@@ -44,6 +44,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     KMainWindow(parent),
     m_dataIndex(new DataIndex(this)),
     m_resourceModel(new ResourceModel(m_dataIndex, this)),
+    m_currentResource(0),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
     m_deleteResourceAction(new KAction(KIcon("edit-delete"), i18n("Delete"), this)),
@@ -84,21 +85,28 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     QSplitter* splitter = new QSplitter(Qt::Horizontal, this);
 
-    KCategorizedView* resourceView = new KCategorizedView(splitter);
-    resourceView->setCategoryDrawer(new KCategoryDrawerV3(resourceView));
-    resourceView->setMouseTracking(true);
-    resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
-    resourceView->setModel(categorizedResourceModel);
-    resourceView->setMinimumWidth(200);
+    m_resourceView = new KCategorizedView(splitter);
+    m_resourceView->setCategoryDrawer(new KCategoryDrawerV3(m_resourceView));
+    m_resourceView->setMouseTracking(true);
+    m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
+    m_resourceView->setModel(categorizedResourceModel);
+    m_resourceView->setMinimumWidth(200);
+    connect(m_resourceView->selectionModel(), SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), SLOT(onResourceSelected()));
+
     QWidget* placeHolder = new QWidget(splitter);
     placeHolder->setMinimumWidth(400);
     placeHolder->setMinimumHeight(500);
 
-    splitter->addWidget(resourceView);
+    splitter->addWidget(m_resourceView);
     splitter->addWidget(placeHolder);
     splitter->setChildrenCollapsible(false);
 
     setCentralWidget(splitter);
+
+    if (m_resourceView->model()->rowCount() > 0)
+    {
+        m_resourceView->selectionModel()->select(m_resourceView->model()->index(0, 0), QItemSelectionModel::SelectCurrent);
+    }
 }
 
 void ResourceEditor::newResource()
@@ -177,6 +185,54 @@ void ResourceEditor::newResource()
 
 void ResourceEditor::deleteResource()
 {
+    Q_ASSERT(m_currentResource);
+
+    DataAccess dataAccess;
+
+    if (DataIndexCourse* course = qobject_cast<DataIndexCourse*>(m_currentResource))
+    {
+        for (int i = 0; i < m_dataIndex->courseCount(); i++)
+        {
+            if (m_dataIndex->course(i) == course)
+            {
+                QFile file;
+                file.setFileName(course->path());
+                if (!file.remove())
+                {
+                    KMessageBox::error(this, i18n("Error while deleting course"));
+                    return;
+                }
+                m_dataIndex->removeCourse(i);
+                if (!dataAccess.storeDataIndex(m_dataIndex))
+                {
+                    KMessageBox::error(this, i18n("Error while saving data index to disk."));
+                    return;
+                }
+            }
+        }
+    }
+    else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(m_currentResource))
+    {
+        for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
+        {
+            if (m_dataIndex->keyboardLayout(i) == keyboardLayout)
+            {
+                QFile file;
+                file.setFileName(keyboardLayout->path());
+                if (!file.remove())
+                {
+                    KMessageBox::error(this, i18n("Error while deleting keyboard layout"));
+                    return;
+                }
+                m_dataIndex->removeKeyboardLayout(i);
+                if (!dataAccess.storeDataIndex(m_dataIndex))
+                {
+                    KMessageBox::error(this, i18n("Error while saving data index to disk."));
+                    return;
+                }
+            }
+        }
+    }
 }
 
 void ResourceEditor::undo()
@@ -193,4 +249,30 @@ void ResourceEditor::importResource()
 
 void ResourceEditor::exportResource()
 {
+}
+
+void ResourceEditor::onResourceSelected()
+{
+    const QModelIndex current = m_resourceView->selectionModel()->currentIndex();
+    const bool valid = current.isValid() && m_resourceView->selectionModel()->hasSelection();
+
+    if (valid)
+    {
+        const QVariant variant = m_resourceView->model()->data(current, ResourceModel::DataRole);
+        QObject* const obj = variant.value<QObject*>();
+        m_currentResource = qobject_cast<Resource*>(obj);
+        const DataIndex::Source source = static_cast<DataIndex::Source>(m_resourceView->model()->data(current, ResourceModel::SourceRole).toInt());
+
+        Q_ASSERT(m_currentResource);
+
+        m_deleteResourceAction->setEnabled(source == DataIndex::UserResource);
+        m_exportResourceAction->setEnabled(valid);
+        // TODO update editor
+    }
+    else
+    {
+        m_currentResource = 0;
+        m_deleteResourceAction->setEnabled(false);
+        m_exportResourceAction->setEnabled(false);
+    }
 }

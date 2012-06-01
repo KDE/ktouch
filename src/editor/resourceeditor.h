@@ -22,8 +22,10 @@
 
 class KAction;
 class KActionCollection;
+class KCategorizedView;
 class DataIndex;
 class ResourceModel;
+class Resource;
 
 class ResourceEditor : public KMainWindow
 {
@@ -38,10 +40,12 @@ private slots:
     void redo();
     void importResource();
     void exportResource();
+    void onResourceSelected();
 
 private:
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
+    Resource* m_currentResource;
     KActionCollection* m_actionCollection;
     KAction* m_newResourceAction;
     KAction* m_deleteResourceAction;
@@ -49,6 +53,7 @@ private:
     KAction* m_redoAction;
     KAction* m_importResourceAction;
     KAction* m_exportResourceAction;
+    KCategorizedView* m_resourceView;
 };
 
 #endif // EDITORMAINWINDOW_H
