@@ -35,24 +35,30 @@ DataIndexCourse* DataIndex::course(int index) const
 
 void DataIndex::addCourse(DataIndexCourse *course)
 {
+    emit courseAboutToBeAdded(m_courses.length());
     m_courses.append(course);
     course->setParent(this);
     emit courseCountChanged();
+    emit courseAdded();
 }
 
 void DataIndex::removeCourse(int index)
 {
-    Q_ASSERT(index >= index < m_courses.length());
+    Q_ASSERT(index >= index && index < m_courses.length());
+    emit coursesAboutToBeRemoved(index, index);
     delete m_courses.at(index);
     m_courses.removeAt(index);
     emit courseCountChanged();
+    emit coursesRemoved();
 }
 
 void DataIndex::clearCourses()
 {
+    emit coursesAboutToBeRemoved(0, m_courses.length() - 1);
     qDeleteAll(m_courses);
     m_courses.clear();
     emit courseCountChanged();
+    emit coursesRemoved();
 }
 
 int DataIndex::keyboardLayoutCount() const
@@ -68,24 +74,30 @@ DataIndexKeyboardLayout* DataIndex::keyboardLayout(int index) const
 
 void DataIndex::addKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout)
 {
+    emit keyboardLayoutAboutToBeAdded(m_keyboardLayouts.length());
     m_keyboardLayouts.append(keyboardLayout);
     keyboardLayout->setParent(this);
     emit keyboardLayoutCountChanged();
+    emit keyboardLayoutAdded();
 }
 
 void DataIndex::removeKeyboardLayout(int index)
 {
     Q_ASSERT(index >= 0 && index < m_keyboardLayouts.length());
+    emit keyboardLayoutsAboutToBeRemoved(index, index);
     delete m_keyboardLayouts.at(index);
     m_keyboardLayouts.removeAt(index);
     emit keyboardLayoutCountChanged();
+    emit keyboardLayoutsRemoved();
 }
 
 void DataIndex::clearKeyboardLayouts()
 {
+    emit keyboardLayoutsAboutToBeRemoved(0, m_keyboardLayouts.length() - 1);
     qDeleteAll(m_keyboardLayouts);
     m_keyboardLayouts.clear();
     emit keyboardLayoutCountChanged();
+    emit keyboardLayoutsRemoved();
 }
 
 DataIndexCourse::DataIndexCourse(QObject* parent):

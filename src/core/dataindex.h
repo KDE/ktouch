@@ -57,6 +57,16 @@ signals:
     void courseCountChanged();
     void keyboardLayoutCountChanged();
 
+    void courseAboutToBeAdded(int index);
+    void courseAdded();
+    void coursesAboutToBeRemoved(int first, int last);
+    void coursesRemoved();
+
+    void keyboardLayoutAboutToBeAdded(int index);
+    void keyboardLayoutAdded();
+    void keyboardLayoutsAboutToBeRemoved(int first, int last);
+    void keyboardLayoutsRemoved();
+
 private:
     QList<DataIndexCourse*> m_courses;
     QList<DataIndexKeyboardLayout*> m_keyboardLayouts;

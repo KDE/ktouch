@@ -25,6 +25,14 @@ ResourceModel::ResourceModel(DataIndex* dataIndex, QObject* parent) :
     QAbstractListModel(parent),
     m_dataIndex(dataIndex)
 {
+    connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(int)), SLOT(onCourseAboutToBeAdded(int)));
+    connect(m_dataIndex, SIGNAL(courseAdded()), SLOT(onResourceAdded()));
+    connect(m_dataIndex, SIGNAL(coursesAboutToBeRemoved(int,int)), SLOT(onCoursesAboutToBeRemoved(int,int)));
+    connect(m_dataIndex, SIGNAL(coursesRemoved()), SLOT(onResourceRemoved()));
+    connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(int)), SLOT(onKeyboardLayoutAboutToBeAdded(int)));
+    connect(m_dataIndex, SIGNAL(keyboardLayoutAdded()), SLOT(onResourceAdded()));
+    connect(m_dataIndex, SIGNAL(keyboardLayoutsAboutToBeRemoved(int,int)), SLOT(onKeyboardLayoutsAboutToBeRemoved(int,int)));
+    connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
 }
 
 DataIndex* ResourceModel::dataIndex() const
@@ -66,6 +74,38 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
         return 0;
 
     return m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount();
+}
+
+void ResourceModel::onCourseAboutToBeAdded(int index)
+{
+    beginInsertRows(QModelIndex(), index, index);
+}
+
+void ResourceModel::onCoursesAboutToBeRemoved(int first, int last)
+{
+    beginRemoveRows(QModelIndex(), first, last);
+}
+
+void ResourceModel::onKeyboardLayoutAboutToBeAdded(int index)
+{
+    const int offset = m_dataIndex->courseCount();
+    beginInsertRows(QModelIndex(), index + offset, index + offset);
+}
+
+void ResourceModel::onKeyboardLayoutsAboutToBeRemoved(int first, int last)
+{
+    const int offset = m_dataIndex->courseCount();
+    beginRemoveRows(QModelIndex(), first + offset, last + offset);
+}
+
+void ResourceModel::onResourceAdded()
+{
+    endInsertRows();
+}
+
+void ResourceModel::onResourceRemoved()
+{
+    endRemoveRows();
 }
 
 QVariant ResourceModel::courseData(int row, int role) const

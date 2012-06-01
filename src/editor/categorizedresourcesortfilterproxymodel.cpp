@@ -24,6 +24,7 @@ CategorizedResourceSortFilterProxyModel::CategorizedResourceSortFilterProxyModel
     KCategorizedSortFilterProxyModel(parent),
     m_resourceTypeFilter(ResourceModel::CourseItem | ResourceModel::KeyboardLayoutItem)
 {
+    setDynamicSortFilter(true);
 }
 
 ResourceModel::ResourceItemTypes CategorizedResourceSortFilterProxyModel::resourceTypeFilter() const

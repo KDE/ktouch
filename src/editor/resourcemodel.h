@@ -47,11 +47,20 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
     int rowCount(const QModelIndex &parent) const;
 
+
+private slots:
+    void onCourseAboutToBeAdded(int index);
+    void onCoursesAboutToBeRemoved(int first, int last);
+    void onKeyboardLayoutAboutToBeAdded(int index);
+    void onKeyboardLayoutsAboutToBeRemoved(int first, int last);
+    void onResourceAdded();
+    void onResourceRemoved();
+
 private:
-    DataIndex* m_dataIndex;
     QVariant courseData(int row, int role) const;
     QVariant keyboardLayoutData(int row, int role) const;
     QIcon resourceIcon(DataIndex::Source source) const;
+    DataIndex* m_dataIndex;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ResourceModel::ResourceItemTypes)
