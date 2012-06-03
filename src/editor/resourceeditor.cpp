@@ -44,6 +44,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_dataIndex(new DataIndex(this)),
     m_resourceModel(new ResourceModel(m_dataIndex, this)),
     m_currentResource(0),
+    m_backupResource(0),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
     m_deleteResourceAction(new KAction(KIcon("edit-delete"), i18n("Delete"), this)),
@@ -93,68 +94,28 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     {
         resourceView->selectionModel()->select(resourceView->model()->index(0, 0), QItemSelectionModel::SelectCurrent);
     }
+
+    connect(m_editorWidget, SIGNAL(resourceRestorationRequested()), SLOT(restoreResourceBackup()));
+    connect(m_editorWidget, SIGNAL(resourceRestorationDismissed()), SLOT(clearResourceBackup()));
 }
+
+ResourceEditor::~ResourceEditor()
+{
+    if (m_backupResource)
+    {
+        delete m_backupResource;
+    }
+}
+
 
 void ResourceEditor::newResource()
 {
     NewResourceAssistant assistant(m_resourceModel, this);
-    DataAccess dataAccess;
 
     if (assistant.exec() == QDialog::Accepted)
     {
         Resource* resource = assistant.createResource();
-
-        dataAccess.loadDataIndex(m_dataIndex);
-
-        if (Course* course = qobject_cast<Course*>(resource))
-        {
-            const QString fileName = QString("%1.xml").arg(course->id());
-            QString path = dataAccess.storeUserCourse(fileName, course);
-            if (path.isNull())
-            {
-                KMessageBox::error(this, i18n("Error while saving course to disk."));
-                return;
-            }
-
-            DataIndexCourse* dataIndexCourse = new DataIndexCourse();
-
-            dataIndexCourse->setSource(DataIndex::UserResource);
-            dataIndexCourse->setTitle(course->title());
-            dataIndexCourse->setDescription(course->description());
-            dataIndexCourse->setKeyboardLayoutName(course->keyboardLayoutName());
-            dataIndexCourse->setPath(path);
-
-            m_dataIndex->addCourse(dataIndexCourse);
-            if (!dataAccess.storeDataIndex(m_dataIndex))
-            {
-                KMessageBox::error(this, i18n("Error while saving data index to disk."));
-                return;
-            }
-        }
-        else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
-        {
-            const QString fileName = QString("%1.xml").arg(QUuid::createUuid());
-            QString path = dataAccess.storeUserKeyboardLayout(fileName, keyboardLayout);
-            if (path.isNull())
-            {
-                KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
-                return;
-            }
-
-            DataIndexKeyboardLayout* dataIndexKeyboardLayout = new DataIndexKeyboardLayout();
-
-            dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
-            dataIndexKeyboardLayout->setName(keyboardLayout->name());
-            dataIndexKeyboardLayout->setTitle(keyboardLayout->title());
-            dataIndexKeyboardLayout->setPath(path);
-
-            m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
-            if (!dataAccess.storeDataIndex(m_dataIndex))
-            {
-                KMessageBox::error(this, i18n("Error while saving data index to disk."));
-                return;
-            }
-        }
+        addResource(resource);
     }
 }
 
@@ -268,6 +229,22 @@ void ResourceEditor::onResourceSelected()
     }
 }
 
+void ResourceEditor::restoreResourceBackup()
+{
+    Q_ASSERT(m_backupResource);
+
+    addResource(m_backupResource);
+    clearResourceBackup();
+}
+
+void ResourceEditor::clearResourceBackup()
+{
+    Q_ASSERT(m_backupResource);
+
+    delete m_backupResource;
+    m_backupResource = 0;
+}
+
 void ResourceEditor::prepareResourceRestore(Resource* backup)
 {
     QString msg;
@@ -282,5 +259,70 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
     }
 
     m_editorWidget->showMessage(ResourceEditorWidget::ResourceDeletedMsg, msg);
+
+    if (m_backupResource)
+    {
+        delete m_backupResource;
+    }
+
+    m_backupResource = backup;
 }
+
+void ResourceEditor::addResource(Resource* resource)
+{
+    DataAccess dataAccess;
+
+    dataAccess.loadDataIndex(m_dataIndex);
+
+    if (Course* course = qobject_cast<Course*>(resource))
+    {
+        const QString fileName = QString("%1.xml").arg(course->id());
+        QString path = dataAccess.storeUserCourse(fileName, course);
+        if (path.isNull())
+        {
+            KMessageBox::error(this, i18n("Error while saving course to disk."));
+            return;
+        }
+
+        DataIndexCourse* dataIndexCourse = new DataIndexCourse();
+
+        dataIndexCourse->setSource(DataIndex::UserResource);
+        dataIndexCourse->setTitle(course->title());
+        dataIndexCourse->setDescription(course->description());
+        dataIndexCourse->setKeyboardLayoutName(course->keyboardLayoutName());
+        dataIndexCourse->setPath(path);
+
+        m_dataIndex->addCourse(dataIndexCourse);
+        if (!dataAccess.storeDataIndex(m_dataIndex))
+        {
+            KMessageBox::error(this, i18n("Error while saving data index to disk."));
+            return;
+        }
+    }
+    else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
+    {
+        const QString fileName = QString("%1.xml").arg(QUuid::createUuid());
+        QString path = dataAccess.storeUserKeyboardLayout(fileName, keyboardLayout);
+        if (path.isNull())
+        {
+            KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
+            return;
+        }
+
+        DataIndexKeyboardLayout* dataIndexKeyboardLayout = new DataIndexKeyboardLayout();
+
+        dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
+        dataIndexKeyboardLayout->setName(keyboardLayout->name());
+        dataIndexKeyboardLayout->setTitle(keyboardLayout->title());
+        dataIndexKeyboardLayout->setPath(path);
+
+        m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
+        if (!dataAccess.storeDataIndex(m_dataIndex))
+        {
+            KMessageBox::error(this, i18n("Error while saving data index to disk."));
+            return;
+        }
+    }
+}
+
 

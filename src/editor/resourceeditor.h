@@ -33,6 +33,7 @@ class ResourceEditor : public KMainWindow
     Q_OBJECT
 public:
     explicit ResourceEditor(QWidget* parent = 0);
+    virtual ~ResourceEditor();
 
 private slots:
     void newResource();
@@ -42,12 +43,16 @@ private slots:
     void importResource();
     void exportResource();
     void onResourceSelected();
+    void restoreResourceBackup();
+    void clearResourceBackup();
 
 private:
     void prepareResourceRestore(Resource* backup);
+    void addResource(Resource* resource);
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
     Resource* m_currentResource;
+    Resource* m_backupResource;
     KActionCollection* m_actionCollection;
     KAction* m_newResourceAction;
     KAction* m_deleteResourceAction;
