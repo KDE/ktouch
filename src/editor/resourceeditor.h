@@ -48,7 +48,9 @@ private slots:
 
 private:
     void prepareResourceRestore(Resource* backup);
-    void addResource(Resource* resource);
+    Resource* addResource(Resource* resource);
+    void selectDataResource(Resource* resource);
+    void selectFirstResource();
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
     Resource* m_currentResource;

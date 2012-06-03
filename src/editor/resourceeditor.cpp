@@ -90,10 +90,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     resourceView->setModel(categorizedResourceModel);
     connect(resourceView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onResourceSelected()));
 
-    if (resourceView->model()->rowCount() > 0)
-    {
-        resourceView->selectionModel()->select(resourceView->model()->index(0, 0), QItemSelectionModel::SelectCurrent);
-    }
+    selectFirstResource();
 
     connect(m_editorWidget, SIGNAL(resourceRestorationRequested()), SLOT(restoreResourceBackup()));
     connect(m_editorWidget, SIGNAL(resourceRestorationDismissed()), SLOT(clearResourceBackup()));
@@ -115,7 +112,11 @@ void ResourceEditor::newResource()
     if (assistant.exec() == QDialog::Accepted)
     {
         Resource* resource = assistant.createResource();
-        addResource(resource);
+        if (Resource* dataIndexResource = addResource(resource))
+        {
+            selectDataResource(dataIndexResource);
+        }
+        delete resource;
     }
 }
 
@@ -184,6 +185,8 @@ void ResourceEditor::deleteResource()
             }
         }
     }
+
+    selectFirstResource();
 }
 
 void ResourceEditor::undo()
@@ -205,11 +208,10 @@ void ResourceEditor::exportResource()
 void ResourceEditor::onResourceSelected()
 {
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
-    const QModelIndex current = resourceView->selectionModel()->currentIndex();
-    const bool valid = current.isValid() && resourceView->selectionModel()->hasSelection();
 
-    if (valid)
+    if (resourceView->selectionModel()->hasSelection())
     {
+        QModelIndex current = resourceView->selectionModel()->selectedIndexes().first();
         const QVariant variant = resourceView->model()->data(current, ResourceModel::DataRole);
         QObject* const obj = variant.value<QObject*>();
         m_currentResource = qobject_cast<Resource*>(obj);
@@ -218,7 +220,7 @@ void ResourceEditor::onResourceSelected()
         Q_ASSERT(m_currentResource);
 
         m_deleteResourceAction->setEnabled(source == DataIndex::UserResource);
-        m_exportResourceAction->setEnabled(valid);
+        m_exportResourceAction->setEnabled(true);
         // TODO update editor
     }
     else
@@ -233,7 +235,11 @@ void ResourceEditor::restoreResourceBackup()
 {
     Q_ASSERT(m_backupResource);
 
-    addResource(m_backupResource);
+    if (Resource* dataIndexResource = addResource(m_backupResource))
+    {
+        selectDataResource(dataIndexResource);
+    }
+
     clearResourceBackup();
 }
 
@@ -268,9 +274,10 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
     m_backupResource = backup;
 }
 
-void ResourceEditor::addResource(Resource* resource)
+Resource* ResourceEditor::addResource(Resource* resource)
 {
     DataAccess dataAccess;
+    Resource* dataIndexResource = 0;
 
     dataAccess.loadDataIndex(m_dataIndex);
 
@@ -281,7 +288,7 @@ void ResourceEditor::addResource(Resource* resource)
         if (path.isNull())
         {
             KMessageBox::error(this, i18n("Error while saving course to disk."));
-            return;
+            return 0;
         }
 
         DataIndexCourse* dataIndexCourse = new DataIndexCourse();
@@ -296,8 +303,10 @@ void ResourceEditor::addResource(Resource* resource)
         if (!dataAccess.storeDataIndex(m_dataIndex))
         {
             KMessageBox::error(this, i18n("Error while saving data index to disk."));
-            return;
+            return 0;
         }
+
+        dataIndexResource = dataIndexCourse;
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
     {
@@ -306,7 +315,7 @@ void ResourceEditor::addResource(Resource* resource)
         if (path.isNull())
         {
             KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
-            return;
+            return 0;
         }
 
         DataIndexKeyboardLayout* dataIndexKeyboardLayout = new DataIndexKeyboardLayout();
@@ -320,9 +329,41 @@ void ResourceEditor::addResource(Resource* resource)
         if (!dataAccess.storeDataIndex(m_dataIndex))
         {
             KMessageBox::error(this, i18n("Error while saving data index to disk."));
-            return;
+            return 0;
+        }
+
+        dataIndexResource = dataIndexKeyboardLayout;
+    }
+
+    return dataIndexResource;
+}
+
+
+void ResourceEditor::selectDataResource(Resource* resource)
+{
+    QAbstractItemView* const resourceView = m_editorWidget->resourceView();
+    QAbstractItemModel* const model = resourceView->model();
+
+    for (int i = 0; i < model->rowCount(); i++)
+    {
+        const QModelIndex index = model->index(i, 0);
+        const QVariant var = model->data(index, ResourceModel::DataRole);
+        QObject* obj = var.value<QObject*>();
+
+        if (obj == resource)
+        {
+            resourceView->selectionModel()->select(index, QItemSelectionModel::ClearAndSelect);
+            break;
         }
     }
 }
 
+void ResourceEditor::selectFirstResource()
+{
+    QAbstractItemView* const resourceView = m_editorWidget->resourceView();
 
+    if (resourceView->model()->rowCount() > 0)
+    {
+        resourceView->selectionModel()->select(resourceView->model()->index(0, 0), QItemSelectionModel::ClearAndSelect);
+    }
+}
