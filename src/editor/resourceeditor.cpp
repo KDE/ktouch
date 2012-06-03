@@ -87,8 +87,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
     resourceView->setModel(categorizedResourceModel);
-    connect(resourceView->selectionModel(), SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), SLOT(onResourceSelected()));
-
+    connect(resourceView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onResourceSelected()));
 
     if (resourceView->model()->rowCount() > 0)
     {
