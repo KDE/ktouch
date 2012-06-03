@@ -26,6 +26,7 @@ class KCategorizedView;
 class DataIndex;
 class ResourceModel;
 class Resource;
+class ResourceEditorWidget;
 
 class ResourceEditor : public KMainWindow
 {
@@ -53,7 +54,7 @@ private:
     KAction* m_redoAction;
     KAction* m_importResourceAction;
     KAction* m_exportResourceAction;
-    KCategorizedView* m_resourceView;
+    ResourceEditorWidget* m_editorWidget;
 };
 
 #endif // EDITORMAINWINDOW_H

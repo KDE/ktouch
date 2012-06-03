@@ -17,6 +17,7 @@ configure_file(ktouch_build_config.h.in ktouch_build_config.h)
 kde4_add_ui_files(ktouch_UIS
     ui/colorsconfigwidget.ui
     ui/trainingconfigwidget.ui
+    ui/resourceeditorwidget.ui
     ui/resourcetypeswidget.ui
     ui/newcoursewidget.ui
     ui/newkeyboardlayoutwidget.ui
@@ -44,6 +45,7 @@ set(ktouch_SRCS
     core/dataaccess.cpp
     core/profiledataaccess.cpp
     editor/resourceeditor.cpp
+    editor/resourceeditorwidget.cpp
     editor/resourcemodel.cpp
     editor/categorizedresourcesortfilterproxymodel.cpp
     editor/newresourceassistant.cpp

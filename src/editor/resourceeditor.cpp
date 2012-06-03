@@ -17,9 +17,9 @@
 
 #include "resourceeditor.h"
 
-#include <QSplitter>
-#include <QTableView>
 #include <QUuid>
+#include <QFile>
+#include <QAbstractItemView>
 
 #include <KToolBar>
 #include <KAction>
@@ -27,9 +27,6 @@
 #include <KStandardAction>
 #include <KIcon>
 #include <KLocale>
-#include <KCategorizedSortFilterProxyModel>
-#include <KCategorizedView>
-#include <KCategoryDrawer>
 #include <KMessageBox>
 
 #include "core/dataindex.h"
@@ -37,6 +34,7 @@
 #include "core/resource.h"
 #include "core/course.h"
 #include "core/keyboardlayout.h"
+#include "resourceeditorwidget.h"
 #include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"
@@ -52,7 +50,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_undoAction(KStandardAction::undo(this, SLOT(undo()), m_actionCollection)),
     m_redoAction(KStandardAction::redo(this, SLOT(redo()), m_actionCollection)),
     m_importResourceAction(new KAction(KIcon("document-import"), i18n("Import"), this)),
-    m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this))
+    m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this)),
+    m_editorWidget(new ResourceEditorWidget(this))
 
 {
     DataAccess dataAccess;
@@ -84,29 +83,16 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     toolBar()->addAction(m_importResourceAction);
     toolBar()->addAction(m_exportResourceAction);
 
-    QSplitter* splitter = new QSplitter(Qt::Horizontal, this);
+    setCentralWidget(m_editorWidget);
 
-    m_resourceView = new KCategorizedView(splitter);
-    m_resourceView->setCategoryDrawer(new KCategoryDrawerV3(m_resourceView));
-    m_resourceView->setMouseTracking(true);
-    m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
-    m_resourceView->setModel(categorizedResourceModel);
-    m_resourceView->setMinimumWidth(200);
-    connect(m_resourceView->selectionModel(), SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), SLOT(onResourceSelected()));
+    QAbstractItemView* const resourceView = m_editorWidget->resourceView();
+    resourceView->setModel(categorizedResourceModel);
+    connect(resourceView->selectionModel(), SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), SLOT(onResourceSelected()));
 
-    QWidget* placeHolder = new QWidget(splitter);
-    placeHolder->setMinimumWidth(400);
-    placeHolder->setMinimumHeight(500);
 
-    splitter->addWidget(m_resourceView);
-    splitter->addWidget(placeHolder);
-    splitter->setChildrenCollapsible(false);
-
-    setCentralWidget(splitter);
-
-    if (m_resourceView->model()->rowCount() > 0)
+    if (resourceView->model()->rowCount() > 0)
     {
-        m_resourceView->selectionModel()->select(m_resourceView->model()->index(0, 0), QItemSelectionModel::SelectCurrent);
+        resourceView->selectionModel()->select(resourceView->model()->index(0, 0), QItemSelectionModel::SelectCurrent);
     }
 }
 
@@ -243,15 +229,16 @@ void ResourceEditor::exportResource()
 
 void ResourceEditor::onResourceSelected()
 {
-    const QModelIndex current = m_resourceView->selectionModel()->currentIndex();
-    const bool valid = current.isValid() && m_resourceView->selectionModel()->hasSelection();
+    QAbstractItemView* const resourceView = m_editorWidget->resourceView();
+    const QModelIndex current = resourceView->selectionModel()->currentIndex();
+    const bool valid = current.isValid() && resourceView->selectionModel()->hasSelection();
 
     if (valid)
     {
-        const QVariant variant = m_resourceView->model()->data(current, ResourceModel::DataRole);
+        const QVariant variant = resourceView->model()->data(current, ResourceModel::DataRole);
         QObject* const obj = variant.value<QObject*>();
         m_currentResource = qobject_cast<Resource*>(obj);
-        const DataIndex::Source source = static_cast<DataIndex::Source>(m_resourceView->model()->data(current, ResourceModel::SourceRole).toInt());
+        const DataIndex::Source source = static_cast<DataIndex::Source>(resourceView->model()->data(current, ResourceModel::SourceRole).toInt());
 
         Q_ASSERT(m_currentResource);
 
