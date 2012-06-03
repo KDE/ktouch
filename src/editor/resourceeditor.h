@@ -44,6 +44,7 @@ private slots:
     void onResourceSelected();
 
 private:
+    void prepareResourceRestore(Resource* backup);
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
     Resource* m_currentResource;

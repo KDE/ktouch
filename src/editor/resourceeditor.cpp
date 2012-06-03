@@ -171,13 +171,21 @@ void ResourceEditor::deleteResource()
         {
             if (m_dataIndex->course(i) == course)
             {
+                Course* backup = new Course();
+                if (!dataAccess.loadCourse(m_dataIndex->course(i)->path(), backup))
+                {
+                    KMessageBox::error(this, i18n("Error while opening course"));
+                    return;
+                }
                 QFile file;
                 file.setFileName(course->path());
                 if (!file.remove())
                 {
+                    delete backup;
                     KMessageBox::error(this, i18n("Error while deleting course"));
                     return;
                 }
+                prepareResourceRestore(backup);
                 m_dataIndex->removeCourse(i);
                 if (!dataAccess.storeDataIndex(m_dataIndex))
                 {
@@ -193,6 +201,12 @@ void ResourceEditor::deleteResource()
         {
             if (m_dataIndex->keyboardLayout(i) == keyboardLayout)
             {
+                KeyboardLayout* backup = new KeyboardLayout();
+                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i)->path(), backup))
+                {
+                    KMessageBox::error(this, i18n("Error while opening keyboard layout"));
+                    return;
+                }
                 QFile file;
                 file.setFileName(keyboardLayout->path());
                 if (!file.remove())
@@ -200,6 +214,7 @@ void ResourceEditor::deleteResource()
                     KMessageBox::error(this, i18n("Error while deleting keyboard layout"));
                     return;
                 }
+                prepareResourceRestore(backup);
                 m_dataIndex->removeKeyboardLayout(i);
                 if (!dataAccess.storeDataIndex(m_dataIndex))
                 {
@@ -253,3 +268,20 @@ void ResourceEditor::onResourceSelected()
         m_exportResourceAction->setEnabled(false);
     }
 }
+
+void ResourceEditor::prepareResourceRestore(Resource* backup)
+{
+    QString msg;
+
+    if (Course* course = qobject_cast<Course*>(backup))
+    {
+        msg = i18n("Course \"%1\" deleted.").arg(course->title());
+    }
+    else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(backup))
+    {
+        msg = i18n("Keyboard layout \"%1\" deleted.").arg(keyboardLayout->title());
+    }
+
+    m_editorWidget->showMessage(ResourceEditorWidget::ResourceDeletedMsg, msg);
+}
+

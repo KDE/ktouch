@@ -18,27 +18,67 @@
 #include "resourceeditorwidget.h"
 
 #include <KCategoryDrawer>
+#include <KAction>
+#include <KStandardAction>
 
 ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     QWidget(parent),
-    Ui::ResourceEditorWidget()
+    Ui::ResourceEditorWidget(),
+    m_undeleteAction(new KAction(KIcon("edit-undo"), i18n("Restore"), this)),
+    m_clearMsgAction(new KAction(KIcon("window-close"), i18n("Dismiss"), this))
 {
     setupUi(this);
 
     m_messageWidget->hide();
+    m_messageWidget->setCloseButtonVisible(false);
 
     m_resourceView->setCategoryDrawer(new KCategoryDrawerV3(m_resourceView));
     m_resourceView->setMouseTracking(true);
     m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
     m_resourceView->setMinimumWidth(200);
+
+    connect(m_clearMsgAction, SIGNAL(triggered()), SLOT(clearMessage()));
+    connect(m_undeleteAction, SIGNAL(triggered()), SLOT(requestResourceRestoration()));
 }
 
-KMessageWidget* ResourceEditorWidget::messageWidget() const
+void ResourceEditorWidget::showMessage(ResourceEditorWidget::MessageType type, const QString& msg)
 {
-    return m_messageWidget;
+    m_messageWidget->removeAction(m_undeleteAction);
+    m_messageWidget->removeAction(m_clearMsgAction);
+
+    switch (type)
+    {
+    case ResourceEditorWidget::ResourceDeletedMsg:
+        m_messageWidget->setMessageType(KMessageWidget::Positive);
+        m_messageWidget->addAction(m_undeleteAction);
+        m_messageWidget->addAction(m_clearMsgAction);
+        break;
+    }
+
+    m_currentMessageType = type;
+
+    m_messageWidget->setText(msg);
+    m_messageWidget->animatedShow();
 }
 
 QAbstractItemView* ResourceEditorWidget::resourceView() const
 {
     return m_resourceView;
+}
+
+void ResourceEditorWidget::requestResourceRestoration()
+{
+    emit(resourceRestorationRequested());
+    m_messageWidget->animatedHide();
+}
+
+
+void ResourceEditorWidget::clearMessage()
+{
+    if (m_currentMessageType == ResourceEditorWidget::ResourceDeletedMsg)
+    {
+        emit(resourceRestorationDismissed());
+    }
+
+    m_messageWidget->animatedHide();
 }

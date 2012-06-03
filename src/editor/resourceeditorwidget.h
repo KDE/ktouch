@@ -23,15 +23,30 @@
 #include "ui_resourceeditorwidget.h"
 
 class QAbstractItemView;
+class KAction;
 class KMessageWidget;
 
 class ResourceEditorWidget : public QWidget, private Ui::ResourceEditorWidget
 {
     Q_OBJECT
 public:
+    enum MessageType
+    {
+        ResourceDeletedMsg
+    };
     explicit ResourceEditorWidget(QWidget* parent = 0);
-    KMessageWidget* messageWidget() const;
+    void showMessage(MessageType type, const QString& msg);
     QAbstractItemView* resourceView() const;
+signals:
+    void resourceRestorationRequested();
+    void resourceRestorationDismissed();
+private slots:
+    void requestResourceRestoration();
+    void clearMessage();
+private:
+    KAction* m_undeleteAction;
+    KAction* m_clearMsgAction;
+    MessageType m_currentMessageType;
 };
 
 #endif // RESOURCEEDITORWIDGET_H
