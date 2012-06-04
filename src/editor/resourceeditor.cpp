@@ -221,7 +221,7 @@ void ResourceEditor::onResourceSelected()
 
         m_deleteResourceAction->setEnabled(source == DataIndex::UserResource);
         m_exportResourceAction->setEnabled(true);
-        // TODO update editor
+        m_editorWidget->openResource(m_currentResource);
     }
     else
     {

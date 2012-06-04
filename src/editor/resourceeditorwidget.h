@@ -25,6 +25,7 @@
 class QAbstractItemView;
 class KAction;
 class KMessageWidget;
+class Resource;
 
 class ResourceEditorWidget : public QWidget, private Ui::ResourceEditorWidget
 {
@@ -37,6 +38,7 @@ public:
     explicit ResourceEditorWidget(QWidget* parent = 0);
     void showMessage(MessageType type, const QString& msg);
     QAbstractItemView* resourceView() const;
+    void openResource(Resource* dataIndexResource);
 signals:
     void resourceRestorationRequested();
     void resourceRestorationDismissed();

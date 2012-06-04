@@ -27,7 +27,7 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="m_courseEditor"/>
+      <widget class="CourseEditor" name="m_courseEditor"/>
       <widget class="QWidget" name="m_keyboardLayoutEditor"/>
      </widget>
     </widget>
@@ -44,6 +44,12 @@
    <class>KMessageWidget</class>
    <extends>QFrame</extends>
    <header location="global">kmessagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CourseEditor</class>
+   <extends>QWidget</extends>
+   <header>editor/courseeditor.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -22,6 +22,7 @@ kde4_add_ui_files(ktouch_UIS
     ui/newcoursewidget.ui
     ui/newkeyboardlayoutwidget.ui
     ui/resourcetemplatewidget.ui
+    ui/courseeditor.ui
 )
 
 # set the source code files from which KTouch is compiled
@@ -53,6 +54,7 @@ set(ktouch_SRCS
     editor/newcoursewidget.cpp
     editor/newkeyboardlayoutwidget.cpp
     editor/resourcetemplatewidget.cpp
+    editor/courseeditor.cpp
     viewcontext.cpp
     x11_helper.cpp
     preferencesproxy.cpp

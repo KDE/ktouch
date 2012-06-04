@@ -21,6 +21,8 @@
 #include <KAction>
 #include <KStandardAction>
 
+#include "core/dataindex.h"
+
 ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     QWidget(parent),
     Ui::ResourceEditorWidget(),
@@ -64,6 +66,19 @@ void ResourceEditorWidget::showMessage(ResourceEditorWidget::MessageType type, c
 QAbstractItemView* ResourceEditorWidget::resourceView() const
 {
     return m_resourceView;
+}
+
+void ResourceEditorWidget::openResource(Resource* dataIndexResource)
+{
+    if (DataIndexCourse* course = qobject_cast<DataIndexCourse*>(dataIndexResource))
+    {
+        m_editorStack->setCurrentWidget(m_courseEditor);
+        m_courseEditor->openCourse(course);
+    }
+    else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource))
+    {
+        m_editorStack->setCurrentWidget(m_keyboardLayoutEditor);
+    }
 }
 
 void ResourceEditorWidget::requestResourceRestoration()
