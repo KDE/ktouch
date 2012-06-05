@@ -67,6 +67,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
         setIsReadOnly(true);
         m_messageWidget->setMessageType(KMessageWidget::Information);
         m_messageWidget->setText(i18n("Built-in courses can only be viewed."));
+        m_messageWidget->setCloseButtonVisible(false);
         m_messageWidget->animatedShow();
     }
     else
