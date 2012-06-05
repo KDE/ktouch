@@ -43,6 +43,11 @@ ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     connect(m_undeleteAction, SIGNAL(triggered()), SLOT(requestResourceRestoration()));
 }
 
+void ResourceEditorWidget::setResourceModel(ResourceModel* model)
+{
+    m_courseEditor->setResourceModel(model);
+}
+
 void ResourceEditorWidget::showMessage(ResourceEditorWidget::MessageType type, const QString& msg)
 {
     m_messageWidget->removeAction(m_undeleteAction);

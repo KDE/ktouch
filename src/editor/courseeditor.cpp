@@ -34,6 +34,11 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_messageWidget->hide();
 }
 
+void CourseEditor::setResourceModel(ResourceModel* model)
+{
+    m_keyboardLayoutComboBox->setResourceModel(model);
+}
+
 void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 {
     DataAccess dataAccess;
@@ -47,6 +52,15 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     m_titleLineEdit->setText(m_course->title());
     m_descriptionTextEdit->setPlainText(m_course->description());
+
+    for (int i = 0; m_keyboardLayoutComboBox->count(); i++)
+    {
+        if (m_keyboardLayoutComboBox->keyboardLayoutAt(i)->name() == m_course->keyboardLayoutName())
+        {
+            m_keyboardLayoutComboBox->setCurrentIndex(i);
+            break;
+        }
+    }
 
     if (dataIndexCourse->source() == DataIndex::BuiltInResource)
     {

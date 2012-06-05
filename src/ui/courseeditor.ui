@@ -49,7 +49,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QComboBox" name="m_keyboardLayoutComboBox">
+      <widget class="KeyboardLayoutComboBox" name="m_keyboardLayoutComboBox">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -374,6 +374,11 @@
    <extends>QFrame</extends>
    <header location="global">kmessagewidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KeyboardLayoutComboBox</class>
+   <extends>QComboBox</extends>
+   <header>editor/keyboardlayoutcombobox.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

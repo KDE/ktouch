@@ -86,6 +86,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     setCentralWidget(m_editorWidget);
 
+    m_editorWidget->setResourceModel(m_resourceModel);
+
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
     resourceView->setModel(categorizedResourceModel);
     connect(resourceView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onResourceSelected()));

@@ -24,11 +24,13 @@
 
 class DataIndexCourse;
 class Course;
+class ResourceModel;
 
 class CourseEditor : public QWidget, private Ui::CourseEditor
 {
 public:
     explicit CourseEditor(QWidget* parent = 0);
+    void setResourceModel(ResourceModel* model);
     void openCourse(DataIndexCourse* dataIndexCourse);
 private:
     void setIsReadOnly(bool readOnly);

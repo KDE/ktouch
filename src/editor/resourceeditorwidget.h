@@ -26,6 +26,7 @@ class QAbstractItemView;
 class KAction;
 class KMessageWidget;
 class Resource;
+class ResourceModel;
 
 class ResourceEditorWidget : public QWidget, private Ui::ResourceEditorWidget
 {
@@ -36,6 +37,7 @@ public:
         ResourceDeletedMsg
     };
     explicit ResourceEditorWidget(QWidget* parent = 0);
+    void setResourceModel(ResourceModel* model);
     void showMessage(MessageType type, const QString& msg);
     QAbstractItemView* resourceView() const;
     void openResource(Resource* dataIndexResource);
