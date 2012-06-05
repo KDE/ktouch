@@ -34,8 +34,6 @@ public:
     QString description() const;
 signals:
     void isValidChanged() const;
-private:
-    ResourceModel* m_resourceModel;
 };
 
 #endif // NEWCOURSEWIDGET_H

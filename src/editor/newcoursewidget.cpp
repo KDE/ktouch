@@ -19,23 +19,18 @@
 
 #include "core/dataindex.h"
 #include "resourcemodel.h"
-#include "categorizedresourcesortfilterproxymodel.h"
 
 NewCourseWidget::NewCourseWidget(ResourceModel* resourceModel, QWidget* parent) :
     QWidget(parent),
-    Ui::NewCourseWidget(),
-    m_resourceModel(resourceModel)
+    Ui::NewCourseWidget()
 {
     setupUi(this);
 
     connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
     connect(m_keyboardLayoutComboBox, SIGNAL(currentIndexChanged(int)), SIGNAL(isValidChanged()));
 
-    CategorizedResourceSortFilterProxyModel* filteredResourcesModel = new CategorizedResourceSortFilterProxyModel(this);
-    filteredResourcesModel->setSourceModel(m_resourceModel);
-    filteredResourcesModel->setResourceTypeFilter(ResourceModel::KeyboardLayoutItem);
-
-    m_keyboardLayoutComboBox->setModel(filteredResourcesModel);
+    m_keyboardLayoutComboBox->setResourceModel(resourceModel);
+    m_keyboardLayoutComboBox->setCurrentIndex(0);
 }
 
 bool NewCourseWidget::isValid() const
@@ -56,11 +51,7 @@ QString NewCourseWidget::title() const
 
 QString NewCourseWidget::keyboardLayoutName() const
 {
-    QAbstractItemModel* const model = m_keyboardLayoutComboBox->model();
-    const QModelIndex index = model->index(m_keyboardLayoutComboBox->currentIndex(), 0);
-    const QVariant variant = model->data(index, ResourceModel::DataRole);
-    QObject* const object = qvariant_cast<QObject*>(variant);
-    DataIndexKeyboardLayout* const layout = qobject_cast<DataIndexKeyboardLayout*>(object);
+    DataIndexKeyboardLayout* const layout = m_keyboardLayoutComboBox->selectedKeyboardLayout();
     return layout? layout->name(): "";
 }
 
