@@ -64,13 +64,17 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     setMinimumSize(700, 500);
     setCaption(i18n("Course and Keyboard Layout Editor"));
 
+    m_newResourceAction->setToolTip(i18n("Create a new course or keyboard layout"));
     m_deleteResourceAction->setEnabled(false);
+    m_deleteResourceAction->setToolTip(i18n("Delete the current selected course or keyboard layout"));
     m_actionCollection->addAction("deleteResource", m_deleteResourceAction);
     connect(m_deleteResourceAction, SIGNAL(triggered()), SLOT(deleteResource()));
     m_undoAction->setEnabled(false);
     m_redoAction->setEnabled(false);
     m_actionCollection->addAction("importResource", m_importResourceAction);
+    m_importResourceAction->setToolTip(i18n("Import a course or keyboard layout from a file"));
     connect(m_importResourceAction, SIGNAL(triggered()), SLOT(importResource()));
+    m_exportResourceAction->setToolTip(i18n("Export the current selected course or keyboard layout to a file"));
     m_actionCollection->addAction("exportResource", m_exportResourceAction);
     connect(m_exportResourceAction, SIGNAL(triggered()), SLOT(exportResource()));
     m_exportResourceAction->setEnabled(false);
