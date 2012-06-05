@@ -55,6 +55,7 @@ set(ktouch_SRCS
     editor/newkeyboardlayoutwidget.cpp
     editor/resourcetemplatewidget.cpp
     editor/courseeditor.cpp
+    editor/keyboardlayoutcombobox.cpp
     viewcontext.cpp
     x11_helper.cpp
     preferencesproxy.cpp
