@@ -255,7 +255,7 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
     return true;
 }
 
-QString DataAccess::storeUserKeyboardLayout(const QString& fileName, KeyboardLayout* source)
+bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source)
 {
     QDomDocument doc;
 
@@ -340,17 +340,16 @@ QString DataAccess::storeUserKeyboardLayout(const QString& fileName, KeyboardLay
 
     QFile file;
 
-    const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
-    file.setFileName(dir.filePath(fileName));
+    file.setFileName(path);
 
     if (!file.open(QIODevice::WriteOnly))
     {
         kWarning() << "can't open:" << file.fileName();
-        return QString();
+        return false;
     }
 
     file.write(doc.toByteArray());
-    return file.fileName();
+    return true;
 }
 
 
@@ -402,7 +401,7 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     return true;
 }
 
-QString DataAccess::storeUserCourse(const QString& fileName, Course* source)
+bool DataAccess::storeCourse(const QString& path, Course* source)
 {
 
     QDomDocument doc;
@@ -461,17 +460,16 @@ QString DataAccess::storeUserCourse(const QString& fileName, Course* source)
 
     QFile file;
 
-    const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "courses", true));
-    file.setFileName(dir.filePath(fileName));
+    file.setFileName(path);
 
     if (!file.open(QIODevice::WriteOnly))
     {
         kWarning() << "can't open:" << file.fileName();
-        return QString();
+        return false;
     }
 
     file.write(doc.toByteArray());
-    return file.fileName();
+    return true;
 }
 
 QXmlSchema DataAccess::loadXmlSchema(const QString &name)

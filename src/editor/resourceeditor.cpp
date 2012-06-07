@@ -19,8 +19,11 @@
 
 #include <QUuid>
 #include <QFile>
+#include <QDir>
 #include <QAbstractItemView>
 
+#include <KGlobal>
+#include <KStandardDirs>
 #include <KToolBar>
 #include <KAction>
 #include <KActionCollection>
@@ -289,9 +292,11 @@ Resource* ResourceEditor::addResource(Resource* resource)
 
     if (Course* course = qobject_cast<Course*>(resource))
     {
+        const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "courses", true));
         const QString fileName = QString("%1.xml").arg(course->id());
-        QString path = dataAccess.storeUserCourse(fileName, course);
-        if (path.isNull())
+        QString path = dir.filePath(fileName);
+
+        if (!dataAccess.storeCourse(path, course))
         {
             KMessageBox::error(this, i18n("Error while saving course to disk."));
             return 0;
@@ -316,9 +321,11 @@ Resource* ResourceEditor::addResource(Resource* resource)
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
     {
+        const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
         const QString fileName = QString("%1.xml").arg(QUuid::createUuid());
-        QString path = dataAccess.storeUserKeyboardLayout(fileName, keyboardLayout);
-        if (path.isNull())
+        QString path = dir.filePath(fileName);
+
+        if (!dataAccess.storeKeyboardLayout(path, keyboardLayout))
         {
             KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
             return 0;
