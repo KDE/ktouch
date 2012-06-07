@@ -26,6 +26,7 @@ class DataIndexKeyboardLayout;
 
 class KeyboardLayoutComboBox: public QComboBox
 {
+    Q_OBJECT
 public:
     explicit KeyboardLayoutComboBox(QWidget* parent = 0);
     ResourceModel* resourceModel() const;

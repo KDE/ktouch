@@ -28,6 +28,7 @@ class ResourceModel;
 
 class CourseEditor : public QWidget, private Ui::CourseEditor
 {
+    Q_OBJECT
 public:
     explicit CourseEditor(QWidget* parent = 0);
     void setResourceModel(ResourceModel* model);
