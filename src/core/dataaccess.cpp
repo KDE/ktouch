@@ -378,6 +378,8 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     target->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
     target->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
     target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
+    target->clearLessons();
+
     for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
          !lessonNode.isNull();
          lessonNode = lessonNode.nextSiblingElement())
