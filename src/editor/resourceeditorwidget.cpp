@@ -48,6 +48,11 @@ void ResourceEditorWidget::setResourceModel(ResourceModel* model)
     m_courseEditor->setResourceModel(model);
 }
 
+void ResourceEditorWidget::setUndoGroup(QUndoGroup* undoGroup)
+{
+    m_courseEditor->setUndoGroup(undoGroup);
+}
+
 void ResourceEditorWidget::showMessage(ResourceEditorWidget::MessageType type, const QString& msg)
 {
     m_messageWidget->removeAction(m_undeleteAction);
@@ -83,6 +88,14 @@ void ResourceEditorWidget::openResource(Resource* dataIndexResource)
     else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource))
     {
         m_editorStack->setCurrentWidget(m_keyboardLayoutEditor);
+    }
+}
+
+void ResourceEditorWidget::save()
+{
+    if (m_editorStack->currentWidget() == m_courseEditor)
+    {
+        m_courseEditor->save();
     }
 }
 

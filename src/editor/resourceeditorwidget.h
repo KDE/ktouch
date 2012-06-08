@@ -23,6 +23,7 @@
 #include "ui_resourceeditorwidget.h"
 
 class QAbstractItemView;
+class QUndoGroup;
 class KAction;
 class KMessageWidget;
 class Resource;
@@ -38,9 +39,11 @@ public:
     };
     explicit ResourceEditorWidget(QWidget* parent = 0);
     void setResourceModel(ResourceModel* model);
+    void setUndoGroup(QUndoGroup* undoGroup);
     void showMessage(MessageType type, const QString& msg);
     QAbstractItemView* resourceView() const;
     void openResource(Resource* dataIndexResource);
+    void save();
 signals:
     void resourceRestorationRequested();
     void resourceRestorationDismissed();

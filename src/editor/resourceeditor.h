@@ -20,6 +20,7 @@
 
 #include <KMainWindow>
 
+class QUndoGroup;
 class KAction;
 class KActionCollection;
 class KCategorizedView;
@@ -38,13 +39,14 @@ public:
 private slots:
     void newResource();
     void deleteResource();
-    void undo();
-    void redo();
     void importResource();
     void exportResource();
     void onResourceSelected();
     void restoreResourceBackup();
     void clearResourceBackup();
+    void save();
+    void setUndoText(const QString& text);
+    void setRedoText(const QString& text);
 
 private:
     void prepareResourceRestore(Resource* backup);
@@ -55,6 +57,7 @@ private:
     ResourceModel* m_resourceModel;
     Resource* m_currentResource;
     Resource* m_backupResource;
+    QUndoGroup* m_undoGroup;
     KActionCollection* m_actionCollection;
     KAction* m_newResourceAction;
     KAction* m_deleteResourceAction;

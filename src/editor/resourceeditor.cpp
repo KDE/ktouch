@@ -21,6 +21,7 @@
 #include <QFile>
 #include <QDir>
 #include <QAbstractItemView>
+#include <QUndoGroup>
 
 #include <KGlobal>
 #include <KStandardDirs>
@@ -48,11 +49,12 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_resourceModel(new ResourceModel(m_dataIndex, this)),
     m_currentResource(0),
     m_backupResource(0),
+    m_undoGroup(new QUndoGroup(this)),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
     m_deleteResourceAction(new KAction(KIcon("edit-delete"), i18n("Delete"), this)),
-    m_undoAction(KStandardAction::undo(this, SLOT(undo()), m_actionCollection)),
-    m_redoAction(KStandardAction::redo(this, SLOT(redo()), m_actionCollection)),
+    m_undoAction(KStandardAction::undo(m_undoGroup, SLOT(undo()), m_actionCollection)),
+    m_redoAction(KStandardAction::redo(m_undoGroup, SLOT(redo()), m_actionCollection)),
     m_importResourceAction(new KAction(KIcon("document-import"), i18n("Import"), this)),
     m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this)),
     m_editorWidget(new ResourceEditorWidget(this))
@@ -73,7 +75,11 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_actionCollection->addAction("deleteResource", m_deleteResourceAction);
     connect(m_deleteResourceAction, SIGNAL(triggered()), SLOT(deleteResource()));
     m_undoAction->setEnabled(false);
+    connect(m_undoGroup, SIGNAL(canUndoChanged(bool)), m_undoAction, SLOT(setEnabled(bool)));
+    connect(m_undoGroup, SIGNAL(undoTextChanged(QString)), SLOT(setUndoText(QString)));
     m_redoAction->setEnabled(false);
+    connect(m_undoGroup, SIGNAL(canRedoChanged(bool)), m_redoAction, SLOT(setEnabled(bool)));
+    connect(m_undoGroup, SIGNAL(redoTextChanged(QString)), SLOT(setRedoText(QString)));
     m_actionCollection->addAction("importResource", m_importResourceAction);
     m_importResourceAction->setToolTip(i18n("Import a course or keyboard layout from a file"));
     connect(m_importResourceAction, SIGNAL(triggered()), SLOT(importResource()));
@@ -94,6 +100,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     setCentralWidget(m_editorWidget);
 
     m_editorWidget->setResourceModel(m_resourceModel);
+    m_editorWidget->setUndoGroup(m_undoGroup);
 
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
     resourceView->setModel(categorizedResourceModel);
@@ -120,6 +127,7 @@ void ResourceEditor::newResource()
 
     if (assistant.exec() == QDialog::Accepted)
     {
+        save();
         Resource* resource = assistant.createResource();
         if (Resource* dataIndexResource = addResource(resource))
         {
@@ -132,6 +140,8 @@ void ResourceEditor::newResource()
 void ResourceEditor::deleteResource()
 {
     Q_ASSERT(m_currentResource);
+
+    save();
 
     DataAccess dataAccess;
 
@@ -198,14 +208,6 @@ void ResourceEditor::deleteResource()
     selectFirstResource();
 }
 
-void ResourceEditor::undo()
-{
-}
-
-void ResourceEditor::redo()
-{
-}
-
 void ResourceEditor::importResource()
 {
 }
@@ -217,6 +219,8 @@ void ResourceEditor::exportResource()
 void ResourceEditor::onResourceSelected()
 {
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
+
+    save();
 
     if (resourceView->selectionModel()->hasSelection())
     {
@@ -244,6 +248,8 @@ void ResourceEditor::restoreResourceBackup()
 {
     Q_ASSERT(m_backupResource);
 
+    save();
+
     if (Resource* dataIndexResource = addResource(m_backupResource))
     {
         selectDataResource(dataIndexResource);
@@ -258,6 +264,26 @@ void ResourceEditor::clearResourceBackup()
 
     delete m_backupResource;
     m_backupResource = 0;
+}
+
+void ResourceEditor::save()
+{
+    if (m_undoGroup->activeStack() && !m_undoGroup->activeStack()->isClean())
+    {
+        DataAccess dataAccess;
+        dataAccess.storeDataIndex(m_dataIndex);
+        m_editorWidget->save();
+    }
+}
+
+void ResourceEditor::setUndoText(const QString& text)
+{
+    m_undoAction->setToolTip(text);
+}
+
+void ResourceEditor::setRedoText(const QString& text)
+{
+    m_redoAction->setToolTip(text);
 }
 
 void ResourceEditor::prepareResourceRestore(Resource* backup)

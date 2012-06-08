@@ -22,6 +22,10 @@
 #include <QWidget>
 #include "ui_courseeditor.h"
 
+#include "editor/coursecommands.h"
+
+class QUndoGroup;
+class QUndoStack;
 class DataIndexCourse;
 class Course;
 class ResourceModel;
@@ -32,11 +36,25 @@ class CourseEditor : public QWidget, private Ui::CourseEditor
 public:
     explicit CourseEditor(QWidget* parent = 0);
     void setResourceModel(ResourceModel* model);
+    void setUndoGroup(QUndoGroup* undoGroup);
     void openCourse(DataIndexCourse* dataIndexCourse);
+    void save();
+private slots:
+    void setTitle(const QString& newTitle);
+    void setKeyboardLayoutName(const QString& newName);
+    void setDescription(const QString& newDescription);
+    void updateTitle();
+    void updateKeyboardLayoutName();
+    void updateDescription();
+    void onKeyboardLayoutChosen();
+    void onDescriptionChanged();
 private:
     void setIsReadOnly(bool readOnly);
     DataIndexCourse* m_dataIndexCourse;
     Course* m_course;
+    QUndoGroup* m_undoGroup;
+    QMap<QString,QUndoStack*>* m_undoStacks;
+    QUndoStack* m_currentUndoStack;
 };
 
 #endif // COURSEEDITOR_H
