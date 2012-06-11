@@ -23,6 +23,7 @@
 #include "core/dataindex.h"
 
 class QIcon;
+class QSignalMapper;
 class DataIndex;
 
 class ResourceModel : public QAbstractListModel
@@ -50,18 +51,21 @@ public:
 
 
 private slots:
-    void onCourseAboutToBeAdded(int index);
+    void onCourseAboutToBeAdded(DataIndexCourse* course, int index);
     void onCoursesAboutToBeRemoved(int first, int last);
-    void onKeyboardLayoutAboutToBeAdded(int index);
+    void onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index);
     void onKeyboardLayoutsAboutToBeRemoved(int first, int last);
     void onResourceAdded();
     void onResourceRemoved();
+    void emitDataChanged(int row);
 
 private:
     QVariant courseData(int row, int role) const;
     QVariant keyboardLayoutData(int row, int role) const;
+    void updateMappings();
     QIcon resourceIcon(DataIndex::Source source) const;
     DataIndex* m_dataIndex;
+    QSignalMapper* m_signalMapper;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ResourceModel::ResourceItemTypes)

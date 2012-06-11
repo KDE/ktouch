@@ -33,9 +33,9 @@ DataIndexCourse* DataIndex::course(int index) const
     return m_courses.at(index);
 }
 
-void DataIndex::addCourse(DataIndexCourse *course)
+void DataIndex::addCourse(DataIndexCourse* course)
 {
-    emit courseAboutToBeAdded(m_courses.length());
+    emit courseAboutToBeAdded(course, m_courses.length());
     m_courses.append(course);
     course->setParent(this);
     emit courseCountChanged();
@@ -74,7 +74,7 @@ DataIndexKeyboardLayout* DataIndex::keyboardLayout(int index) const
 
 void DataIndex::addKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout)
 {
-    emit keyboardLayoutAboutToBeAdded(m_keyboardLayouts.length());
+    emit keyboardLayoutAboutToBeAdded(keyboardLayout, m_keyboardLayouts.length());
     m_keyboardLayouts.append(keyboardLayout);
     keyboardLayout->setParent(this);
     emit keyboardLayoutCountChanged();

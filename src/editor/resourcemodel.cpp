@@ -17,22 +17,27 @@
 
 #include "resourcemodel.h"
 
+#include <QSignalMapper>
+
 #include <KLocale>
 #include <KIcon>
 #include <KCategorizedSortFilterProxyModel>
 
 ResourceModel::ResourceModel(DataIndex* dataIndex, QObject* parent) :
     QAbstractListModel(parent),
-    m_dataIndex(dataIndex)
+    m_dataIndex(dataIndex),
+    m_signalMapper(new QSignalMapper(this))
 {
-    connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(int)), SLOT(onCourseAboutToBeAdded(int)));
+    connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(DataIndexCourse*,int)), SLOT(onCourseAboutToBeAdded(DataIndexCourse*,int)));
     connect(m_dataIndex, SIGNAL(courseAdded()), SLOT(onResourceAdded()));
     connect(m_dataIndex, SIGNAL(coursesAboutToBeRemoved(int,int)), SLOT(onCoursesAboutToBeRemoved(int,int)));
     connect(m_dataIndex, SIGNAL(coursesRemoved()), SLOT(onResourceRemoved()));
-    connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(int)), SLOT(onKeyboardLayoutAboutToBeAdded(int)));
+    connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)), SLOT(onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)));
     connect(m_dataIndex, SIGNAL(keyboardLayoutAdded()), SLOT(onResourceAdded()));
     connect(m_dataIndex, SIGNAL(keyboardLayoutsAboutToBeRemoved(int,int)), SLOT(onKeyboardLayoutsAboutToBeRemoved(int,int)));
     connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
+
+    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
 }
 
 DataIndex* ResourceModel::dataIndex() const
@@ -76,8 +81,14 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
     return m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount();
 }
 
-void ResourceModel::onCourseAboutToBeAdded(int index)
+void ResourceModel::onCourseAboutToBeAdded(DataIndexCourse* course, int index)
 {
+    connect(course, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(descriptionChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(keyboardLayoutNameChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    updateMappings();
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -86,9 +97,14 @@ void ResourceModel::onCoursesAboutToBeRemoved(int first, int last)
     beginRemoveRows(QModelIndex(), first, last);
 }
 
-void ResourceModel::onKeyboardLayoutAboutToBeAdded(int index)
+void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index)
 {
     const int offset = m_dataIndex->courseCount();
+    connect(keyboardLayout, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(nameChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    updateMappings();
     beginInsertRows(QModelIndex(), index + offset, index + offset);
 }
 
@@ -105,7 +121,14 @@ void ResourceModel::onResourceAdded()
 
 void ResourceModel::onResourceRemoved()
 {
+    updateMappings();
     endRemoveRows();
+}
+
+void ResourceModel::emitDataChanged(int row)
+{
+    const QModelIndex modelIndex = index(row);
+    emit dataChanged(modelIndex, modelIndex);
 }
 
 QVariant ResourceModel::courseData(int row, int role) const
@@ -167,4 +190,20 @@ QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
     static QIcon lockedIcon = KIcon("object-locked");
     static QIcon userIcon = KIcon("user-identity");
     return source == DataIndex::BuiltInResource? lockedIcon: userIcon;
+}
+
+
+void ResourceModel::updateMappings()
+{
+    for (int i = 0; i < m_dataIndex->courseCount(); i++)
+    {
+        m_signalMapper->setMapping(m_dataIndex->course(i), i);
+    }
+
+    const int offset = m_dataIndex->courseCount();
+
+    for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
+    {
+        m_signalMapper->setMapping(m_dataIndex->keyboardLayout(i), i + offset);
+    }
 }

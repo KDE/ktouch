@@ -57,12 +57,12 @@ signals:
     void courseCountChanged();
     void keyboardLayoutCountChanged();
 
-    void courseAboutToBeAdded(int index);
+    void courseAboutToBeAdded(DataIndexCourse* course, int index);
     void courseAdded();
     void coursesAboutToBeRemoved(int first, int last);
     void coursesRemoved();
 
-    void keyboardLayoutAboutToBeAdded(int index);
+    void keyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index);
     void keyboardLayoutAdded();
     void keyboardLayoutsAboutToBeRemoved(int first, int last);
     void keyboardLayoutsRemoved();
