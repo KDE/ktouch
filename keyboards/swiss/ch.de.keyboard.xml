@@ -43,7 +43,7 @@
   <Key Width="180" X="1300" KeyText="&lt;-" Y="0" Height="80" Type="OTHER" />
   <Key Width="80" X="0" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="176" Position="TopLeft" >°</Char>
-   <Char Unicode="167" Position="BottomLeft" >°</Char>
+   <Char Unicode="167" Position="BottomLeft" >§</Char>
   </Key>
   <Key Width="80" X="100" Y="0" Height="80" FingerKeyIndex="0" Type="NORMAL" >
    <Char Unicode="43" Position="TopLeft" >+</Char>
