@@ -29,6 +29,7 @@ class QUndoStack;
 class DataIndexCourse;
 class Course;
 class ResourceModel;
+class LessonModel;
 
 class CourseEditor : public QWidget, private Ui::CourseEditor
 {
@@ -52,6 +53,7 @@ private:
     void setIsReadOnly(bool readOnly);
     DataIndexCourse* m_dataIndexCourse;
     Course* m_course;
+    LessonModel* m_lessonModel;
     QUndoGroup* m_undoGroup;
     QMap<QString,QUndoStack*>* m_undoStacks;
     QUndoStack* m_currentUndoStack;

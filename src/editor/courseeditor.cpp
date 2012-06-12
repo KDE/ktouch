@@ -26,17 +26,21 @@
 #include "core/course.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
+#include "lessonmodel.h"
 
 CourseEditor::CourseEditor(QWidget* parent):
     QWidget(parent),
     Ui::CourseEditor(),
     m_dataIndexCourse(0),
     m_course(new Course(this)),
+    m_lessonModel(new LessonModel(this)),
     m_undoStacks(new QMap<QString,QUndoStack*>),
     m_currentUndoStack(0)
 {
     setupUi(this);
     m_messageWidget->hide();
+    m_lessonModel->setCourse(m_course);
+    m_lessonView->setModel(m_lessonModel);
 
     connect(m_course, SIGNAL(titleChanged()), SLOT(updateTitle()));
     connect(m_course, SIGNAL(keyboardLayoutNameChanged()), SLOT(updateKeyboardLayoutName()));

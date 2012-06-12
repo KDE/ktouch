@@ -211,7 +211,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableView" name="m_lessonView"/>
+         <widget class="QListView" name="m_lessonView"/>
         </item>
        </layout>
       </item>
