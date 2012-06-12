@@ -33,7 +33,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="m_titleLineEdit"/>
+      <widget class="KLineEdit" name="m_titleLineEdit"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="m_keyboardLayoutLabel">
@@ -66,13 +66,27 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QPlainTextEdit" name="m_descriptionEdit"/>
+      <widget class="KTextEdit" name="m_descriptionEdit">
+       <property name="tabChangesFocus">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>ktextedit.h</header>
+  </customwidget>
   <customwidget>
    <class>KeyboardLayoutComboBox</class>
    <extends>QComboBox</extends>

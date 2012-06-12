@@ -29,7 +29,7 @@
      <item row="0" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLineEdit" name="m_nameLineEdit"/>
+        <widget class="KLineEdit" name="m_nameLineEdit"/>
        </item>
        <item>
         <widget class="QToolButton" name="m_pasteCurrentNameButton">
@@ -56,13 +56,18 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="m_titleLineEdit"/>
+      <widget class="KLineEdit" name="m_titleLineEdit"/>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
   <customwidget>
    <class>KMessageWidget</class>
    <extends>QFrame</extends>
