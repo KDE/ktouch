@@ -46,6 +46,10 @@ public:
 signals:
     void idChanged();
     void lessonCountChanged();
+    void lessonAboutToBeAdded(Lesson* lesson, int index);
+    void lessonAdded();
+    void lessonsAboutToBeRemoved(int first, int last);
+    void lessonsRemoved();
 
 private slots:
     void updateLessonCharacters(int firstIndex = 0);

@@ -47,6 +47,7 @@ set(ktouch_SRCS
     editor/resourceeditor.cpp
     editor/resourceeditorwidget.cpp
     editor/resourcemodel.cpp
+    editor/lessonmodel.cpp
     editor/categorizedresourcesortfilterproxymodel.cpp
     editor/newresourceassistant.cpp
     editor/resourcetypeswidget.cpp
