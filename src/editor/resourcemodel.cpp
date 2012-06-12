@@ -187,11 +187,10 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
 
 QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
 {
-    static QIcon lockedIcon = KIcon("object-locked");
+    static QIcon systemIcon = KIcon("computer");
     static QIcon userIcon = KIcon("user-identity");
-    return source == DataIndex::BuiltInResource? lockedIcon: userIcon;
+    return source == DataIndex::BuiltInResource? systemIcon: userIcon;
 }
-
 
 void ResourceModel::updateMappings()
 {
