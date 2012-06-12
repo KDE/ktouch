@@ -22,8 +22,6 @@
 #include <QString>
 #include <QList>
 
-class LessonLine;
-
 class Lesson : public QObject
 {
     Q_OBJECT
@@ -31,7 +29,7 @@ class Lesson : public QObject
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString newCharacters READ newCharacters WRITE setNewCharacters NOTIFY newCharactersChanged)
     Q_PROPERTY(QString characters READ characters WRITE setCharacters NOTIFY charactersChanged)
-    Q_PROPERTY(int lineCount READ lineCount NOTIFY lineCountChanged)
+    Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged);
 
 public:
     explicit Lesson(QObject *parent = 0);
@@ -43,11 +41,8 @@ public:
     void setNewCharacters(const QString& newCharacters);
     QString characters() const;
     void setCharacters(const QString& characters);
-    int lineCount() const;
-    Q_INVOKABLE LessonLine* line(int index) const;
-    Q_INVOKABLE void addLine(LessonLine* line);
-    Q_INVOKABLE void removeLine(int index);
-    Q_INVOKABLE void clearLines();
+    QString text();
+    void setText(const QString& text);
     Q_INVOKABLE void copyFrom(Lesson* source);
 
 signals:
@@ -55,7 +50,7 @@ signals:
     void titleChanged();
     void newCharactersChanged();
     void charactersChanged();
-    void lineCountChanged();
+    void textChanged();
 
 private:
     Q_DISABLE_COPY(Lesson)
@@ -63,7 +58,7 @@ private:
     QString m_title;
     QString m_newCharacters;
     QString m_characters;
-    QList<LessonLine*> m_lines;
+    QString m_text;
 };
 
 #endif // LESSON_H

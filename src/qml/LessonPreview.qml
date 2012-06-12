@@ -30,10 +30,7 @@ Item {
         if (!lesson)
             return;
         updateAnimation.stop()
-        var lines = []
-        for (var i = 0; i < item.lesson.lineCount; i++)
-            lines.push(item.lesson.line(i).value)
-        item.lessonText = lines.join("\n")
+        item.lessonText = item.lesson.text
         item.lessonTitle = item.lesson.title
         updateAnimation.start()
     }

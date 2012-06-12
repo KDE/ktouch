@@ -39,7 +39,6 @@ set(ktouch_SRCS
     core/coursebase.cpp
     core/course.cpp
     core/lesson.cpp
-    core/lessonline.cpp
     core/trainingstats.cpp
     core/profile.cpp
     core/dataindex.cpp

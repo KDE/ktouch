@@ -17,8 +17,6 @@
 
 #include "lesson.h"
 
-#include "lessonline.h"
-
 Lesson::Lesson(QObject *parent) :
     QObject(parent)
 {
@@ -80,36 +78,18 @@ void Lesson::setCharacters(const QString& characters)
     }
 }
 
-int Lesson::lineCount() const
+QString Lesson::text()
 {
-    return m_lines.count();
+    return m_text;
 }
 
-LessonLine* Lesson::line(int index) const
+void Lesson::setText(const QString& text)
 {
-    Q_ASSERT(index >= 0 && index < m_lines.count());
-    return m_lines.at(index);
-}
-
-void Lesson::addLine(LessonLine* line)
-{
-    m_lines.append(line);
-    emit lineCountChanged();
-}
-
-void Lesson::removeLine(int index)
-{
-    Q_ASSERT(index >= 0 && index < m_lines.count());
-    delete m_lines.at(index);
-    m_lines.removeAt(index);
-    emit lineCountChanged();
-}
-
-void Lesson::clearLines()
-{
-    qDeleteAll(m_lines);
-    m_lines.clear();
-    emit lineCountChanged();
+    if (text != m_text)
+    {
+        m_text = text;
+        emit textChanged();
+    }
 }
 
 void Lesson::copyFrom(Lesson* source)
@@ -118,11 +98,5 @@ void Lesson::copyFrom(Lesson* source)
     setTitle(source->title());
     setNewCharacters(source->newCharacters());
     setCharacters(source->characters());
-    clearLines();
-    for (int i = 0; i < source->lineCount(); i++)
-    {
-        LessonLine* lessonLine = new LessonLine(this);
-        lessonLine->copyFrom(source->line(i));
-        addLine(lessonLine);
-    }
+    setText(source->text());
 }

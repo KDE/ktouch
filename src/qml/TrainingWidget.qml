@@ -23,6 +23,7 @@ FocusScope {
     id: trainer
 
     property Lesson lesson
+    property variant lines: [];
 
     property string nextChar
     property bool isCorrect: trainingLine.isCorrect
@@ -41,11 +42,14 @@ FocusScope {
         sheetFlick.scrollToTrainingLine()
     }
 
+    onLessonChanged: {
+        trainer.lines = trainer.lesson? lesson.text.split("\n"): []
+        trainer.position = -1
+    }
+
     Component.onCompleted: {
         trainingLine.forceActiveFocus()
     }
-
-    onLessonChanged: trainer.position = -1
 
     Flickable
     {
@@ -115,7 +119,7 @@ FocusScope {
                 }
                 Repeater {
                     id: lines
-                    model: trainer.lesson? trainer.lesson.lineCount: 0
+                    model: trainer.lines.length
                     Item {
                         property bool isDone: trainer.position > index
                         width: text.width + 2 * margin
@@ -124,7 +128,7 @@ FocusScope {
                             id: text
                             anchors.centerIn: parent
                             color: isDone? "#000": "#888"
-                            text: lesson.line(index).value
+                            text: trainer.lines[index]
                             font.family: "monospace"
                             font.pixelSize: fontSize
                             opacity: trainer.position == index? 0: 1
@@ -142,7 +146,7 @@ FocusScope {
                 id: trainingLine
                 property Item target: lines.itemAt(trainer.position)
                 onDone: {
-                    if (trainer.position < lesson.lineCount - 1)
+                    if (trainer.position < trainer.lines.length - 1)
                     {
                         trainer.position++
                         sheetFlick.scrollToTrainingLine()
@@ -160,7 +164,8 @@ FocusScope {
                 x: 0
                 width: target? target.width: 0
                 height: lineHeight
-                text: trainer.position >= 0 && trainer.position < lesson.lineCount? lesson.line(trainer.position).value: ""
+                text: trainer.position >= 0 && trainer.position < trainer.lines.length?
+                    trainer.lines[trainer.position]: ""
             }
         }
         MouseArea {

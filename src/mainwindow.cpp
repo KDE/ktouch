@@ -41,7 +41,6 @@
 #include "core/keychar.h"
 #include "core/course.h"
 #include "core/lesson.h"
-#include "core/lessonline.h"
 #include "core/profile.h"
 #include "core/trainingstats.h"
 #include "core/dataindex.h"
@@ -144,7 +143,6 @@ void MainWindow::init()
     qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyChar");
     qmlRegisterType<Course>("ktouch", 1, 0, "Course");
     qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
-    qmlRegisterType<LessonLine>("ktouch", 1, 0, "LessonLine");
     qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
     qmlRegisterType<Profile>("ktouch", 1, 0, "Profile");
     qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");

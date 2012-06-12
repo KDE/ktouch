@@ -36,7 +36,6 @@
 #include "keychar.h"
 #include "course.h"
 #include "lesson.h"
-#include "lessonline.h"
 
 DataAccess::DataAccess(QObject *parent) :
     QObject(parent)
@@ -388,14 +387,7 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
         lesson->setId(lessonNode.firstChildElement("id").text());
         lesson->setTitle(i18nc("lesson title", lessonNode.firstChildElement("title").text().toUtf8()));
         lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
-        const QString text = lessonNode.firstChildElement("text").text();
-        const QStringList lines = text.split("\n");
-        foreach(const QString lineStr, lines)
-        {
-            LessonLine* line = new LessonLine(lesson);
-            line->setValue(lineStr);
-            lesson->addLine(line);
-        }
+        lesson->setText(lessonNode.firstChildElement("text").text());
         target->addLesson(lesson);
     }
 
@@ -431,11 +423,6 @@ bool DataAccess::storeCourse(const QString& path, Course* source)
 
         QStringList lines;
 
-        for (int j = 0; j < lesson->lineCount(); j++)
-        {
-            lines << lesson->line(j)->value();
-        }
-
         QDomElement lessonElem = doc.createElement("lesson");
         QDomElement idElem = doc.createElement("id");
         QDomElement titleElem = doc.createElement("title");
@@ -445,7 +432,7 @@ bool DataAccess::storeCourse(const QString& path, Course* source)
         idElem.appendChild(doc.createTextNode(lesson->id()));
         titleElem.appendChild(doc.createTextNode(lesson->title()));
         newCharactersElem.appendChild(doc.createTextNode(lesson->newCharacters()));
-        textElem.appendChild(doc.createTextNode(lines.join("\n")));
+        textElem.appendChild(doc.createTextNode(lesson->text()));
 
         lessonElem.appendChild(idElem);
         lessonElem.appendChild(titleElem);
