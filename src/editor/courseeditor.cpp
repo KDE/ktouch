@@ -24,6 +24,7 @@
 #include <KMessageBox>
 
 #include "core/course.h"
+#include "core/lesson.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
 #include "lessonmodel.h"
@@ -33,7 +34,9 @@ CourseEditor::CourseEditor(QWidget* parent):
     Ui::CourseEditor(),
     m_dataIndexCourse(0),
     m_course(new Course(this)),
+    m_currentLesson(0),
     m_lessonModel(new LessonModel(this)),
+    m_readOnly(false),
     m_undoStacks(new QMap<QString,QUndoStack*>),
     m_currentUndoStack(0)
 {
@@ -49,6 +52,8 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_titleLineEdit, SIGNAL(textEdited(QString)), SLOT(setTitle(QString)));
     connect(m_keyboardLayoutComboBox, SIGNAL(activated(int)), SLOT(onKeyboardLayoutChosen()));
     connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
+
+    connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
 }
 
 void CourseEditor::setResourceModel(ResourceModel* model)
@@ -99,6 +104,11 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
     {
         setIsReadOnly(false);
         m_messageWidget->animatedHide();
+    }
+
+    if (m_course->lessonCount() > 0)
+    {
+        m_lessonView->selectionModel()->select(m_lessonModel->index(0), QItemSelectionModel::ClearAndSelect);
     }
 }
 
@@ -195,16 +205,47 @@ void CourseEditor::onDescriptionChanged()
     }
 }
 
+void CourseEditor::onLessonSelected()
+{
+    if (m_lessonView->selectionModel()->hasSelection())
+    {
+        const int index = m_lessonView->selectionModel()->selectedIndexes().first().row();
+        m_currentLesson = m_course->lesson(index);
+
+        m_lessonTitleLineEdit->setEnabled(true);
+        m_lessonTitleLineEdit->setText(m_currentLesson->title());
+        m_newCharactersLineEdit->setEnabled(true);
+        m_newCharactersLineEdit->setText(m_currentLesson->newCharacters());
+        m_lessonTextEdit->setEnabled(true);
+        m_lessonTextEdit->setText(m_currentLesson->text());
+
+        m_addLessonButton->setEnabled(!m_readOnly);
+        m_removeLessonButton->setEnabled(!m_readOnly);
+        m_moveLessonUpButton->setEnabled(!m_readOnly && index > 0);
+        m_moveLessonDownButton->setEnabled(!m_readOnly && index < m_course->lessonCount());
+    }
+    else
+    {
+        m_currentLesson = 0;
+
+        m_lessonTitleLineEdit->setEnabled(false);
+        m_lessonTitleLineEdit->clear();
+        m_newCharactersLineEdit->setEnabled(false);
+        m_newCharactersLineEdit->clear();
+        m_lessonTextEdit->setEnabled(false);
+        m_lessonTextEdit->clear();
+
+        m_addLessonButton->setEnabled(false);
+        m_removeLessonButton->setEnabled(false);
+        m_moveLessonUpButton->setEnabled(false);
+        m_moveLessonDownButton->setEnabled(false);
+    }
+}
+
 void CourseEditor::setIsReadOnly(bool readOnly)
 {
+    m_readOnly = readOnly;
     m_titleLineEdit->setReadOnly(readOnly);
     m_keyboardLayoutComboBox->setEnabled(!readOnly);
     m_descriptionTextEdit->setReadOnly(readOnly);
-    m_addLessonButton->setEnabled(!readOnly);
-    m_removeLessonButton->setEnabled(!readOnly);
-    m_moveLessonUpButton->setEnabled(!readOnly);
-    m_moveLessonDownButton->setEnabled(!readOnly);
-    m_lessonTitleLineEdit->setReadOnly(readOnly);
-    m_newCharactersLineEdit->setReadOnly(readOnly);
-    m_lessonTextLineEdit->setReadOnly(readOnly);
 }

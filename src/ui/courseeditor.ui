@@ -149,6 +149,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="m_addLessonButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="toolTip">
              <string>Add new lesson</string>
             </property>
@@ -161,6 +164,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="m_removeLessonButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="toolTip">
              <string>Remove lesson</string>
             </property>
@@ -189,6 +195,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="m_moveLessonUpButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="toolTip">
              <string>Move lesson up</string>
             </property>
@@ -201,6 +210,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="m_moveLessonDownButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="toolTip">
              <string>Move lesson down</string>
             </property>
@@ -284,7 +296,11 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="KLineEdit" name="m_lessonTitleLineEdit"/>
+           <widget class="KLineEdit" name="m_lessonTitleLineEdit">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="m_newCharactersLabel">
@@ -297,7 +313,11 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="KLineEdit" name="m_newCharactersLineEdit"/>
+           <widget class="KLineEdit" name="m_newCharactersLineEdit">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -325,7 +345,7 @@
              <string>Text:</string>
             </property>
             <property name="buddy">
-             <cstring>m_lessonTextLineEdit</cstring>
+             <cstring>m_lessonTextEdit</cstring>
             </property>
            </widget>
           </item>
@@ -344,6 +364,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="m_lessonTextToolsButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="toolTip">
              <string>Tools</string>
             </property>
@@ -357,7 +380,10 @@
          </layout>
         </item>
         <item>
-         <widget class="KTextEdit" name="m_lessonTextLineEdit">
+         <widget class="KTextEdit" name="m_lessonTextEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="tabChangesFocus">
            <bool>true</bool>
           </property>
@@ -404,7 +430,7 @@
   <tabstop>m_moveLessonDownButton</tabstop>
   <tabstop>m_lessonTitleLineEdit</tabstop>
   <tabstop>m_newCharactersLineEdit</tabstop>
-  <tabstop>m_lessonTextLineEdit</tabstop>
+  <tabstop>m_lessonTextEdit</tabstop>
   <tabstop>m_lessonTextToolsButton</tabstop>
  </tabstops>
  <resources/>

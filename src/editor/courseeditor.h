@@ -28,6 +28,7 @@ class QUndoGroup;
 class QUndoStack;
 class DataIndexCourse;
 class Course;
+class Lesson;
 class ResourceModel;
 class LessonModel;
 
@@ -49,12 +50,15 @@ private slots:
     void updateDescription();
     void onKeyboardLayoutChosen();
     void onDescriptionChanged();
+    void onLessonSelected();
 private:
     void setIsReadOnly(bool readOnly);
     DataIndexCourse* m_dataIndexCourse;
     Course* m_course;
+    Lesson* m_currentLesson;
     LessonModel* m_lessonModel;
     QUndoGroup* m_undoGroup;
+    bool m_readOnly;
     QMap<QString,QUndoStack*>* m_undoStacks;
     QUndoStack* m_currentUndoStack;
 };
