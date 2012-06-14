@@ -25,12 +25,15 @@ Item
     property int charactersPerMinute: 0
     property int referenceCharactersPerMinute: 0
 
+    property int minimumCharactersPerMinute: preferences.requiredStrokesPerMinute
+
     width: childrenRect.width
     height: childrenRect.height
 
     Row {
         AnalogCharactersPerMinuteMeter {
             charactersPerMinute: meter.charactersPerMinute
+            minimumCharactersPerMinute: meter.minimumCharactersPerMinute
         }
         DigitalMeter {
             property int diff: meter.charactersPerMinute - meter.referenceCharactersPerMinute

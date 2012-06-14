@@ -17,10 +17,12 @@
 
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
+import ktouch 1.0
 
 Item
 {
     property real accuracy: 1.0
+    property real minimumAccuracy: 0.95
 
     width: 102
     height: 102
@@ -40,6 +42,27 @@ Item
         anchors.centerIn: parent
         svg: clockSvg
         elementId: "background"
+        width: naturalSize.width
+        height: naturalSize.height
+    }
+
+    ScaleBackgroundItem {
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: 25
+        width: scale.width
+        height: scale.height
+        startAngle: Math.min(135, Math.max(45, 135 - (minimumAccuracy - 0.9) * 900))
+        stopAngle: 45
+        scaleMarkHeight: 8
+        color: "#88ff00";
+    }
+
+    PlasmaCore.SvgItem {
+        id: scale
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: 25
+        svg: clockSvg
+        elementId: "scale"
         width: naturalSize.width
         height: naturalSize.height
     }

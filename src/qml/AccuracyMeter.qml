@@ -25,12 +25,15 @@ Item
     property real accuracy: 1.0
     property real referenceAccuracy: 1.0
 
+    property real minimumAccuracy: preferences.requiredAccuracy / 100.0
+
     width: childrenRect.width
     height: childrenRect.height
 
     Row {
         AnalogAccuracyMeter {
             accuracy: meter.accuracy
+            minimumAccuracy: meter.minimumAccuracy
         }
         DigitalMeter {
             label: i18n("Hit ratio")

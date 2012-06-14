@@ -58,6 +58,7 @@ set(ktouch_SRCS
     editor/coursecommands.cpp
     editor/keyboardlayoutcombobox.cpp
     viewcontext.cpp
+    scalebackgrounditem.cpp
     x11_helper.cpp
     preferencesproxy.cpp
     trainingconfigwidget.cpp

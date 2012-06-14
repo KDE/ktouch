@@ -48,6 +48,7 @@
 #include "core/profiledataaccess.h"
 #include "editor/resourceeditor.h"
 #include "viewcontext.h"
+#include "scalebackgrounditem.h"
 #include "preferences.h"
 #include "preferencesproxy.h"
 #include "trainingconfigwidget.h"
@@ -151,6 +152,8 @@ void MainWindow::init()
     qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
     qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
     qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
+
+    qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());
