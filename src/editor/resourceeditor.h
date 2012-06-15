@@ -21,6 +21,7 @@
 #include <KMainWindow>
 
 class QUndoGroup;
+class QTimer;
 class KAction;
 class KActionCollection;
 class KCategorizedView;
@@ -35,6 +36,9 @@ class ResourceEditor : public KMainWindow
 public:
     explicit ResourceEditor(QWidget* parent = 0);
     virtual ~ResourceEditor();
+
+protected:
+    virtual void closeEvent(QCloseEvent* event);
 
 private slots:
     void newResource();
@@ -66,6 +70,7 @@ private:
     KAction* m_importResourceAction;
     KAction* m_exportResourceAction;
     ResourceEditorWidget* m_editorWidget;
+    QTimer* m_saveTimer;
 };
 
 #endif // EDITORMAINWINDOW_H

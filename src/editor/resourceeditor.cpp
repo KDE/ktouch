@@ -20,6 +20,7 @@
 #include <QUuid>
 #include <QFile>
 #include <QDir>
+#include <QTimer>
 #include <QAbstractItemView>
 #include <QUndoGroup>
 
@@ -57,7 +58,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_redoAction(KStandardAction::redo(m_undoGroup, SLOT(redo()), m_actionCollection)),
     m_importResourceAction(new KAction(KIcon("document-import"), i18n("Import"), this)),
     m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this)),
-    m_editorWidget(new ResourceEditorWidget(this))
+    m_editorWidget(new ResourceEditorWidget(this)),
+    m_saveTimer(new QTimer(this))
 
 {
     DataAccess dataAccess;
@@ -110,6 +112,9 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     connect(m_editorWidget, SIGNAL(resourceRestorationRequested()), SLOT(restoreResourceBackup()));
     connect(m_editorWidget, SIGNAL(resourceRestorationDismissed()), SLOT(clearResourceBackup()));
+
+    connect(m_saveTimer, SIGNAL(timeout()), SLOT(save()));
+    m_saveTimer->setInterval(60000);
 }
 
 ResourceEditor::~ResourceEditor()
@@ -120,6 +125,11 @@ ResourceEditor::~ResourceEditor()
     }
 }
 
+void ResourceEditor::closeEvent(QCloseEvent* event)
+{
+    save();
+    KMainWindow::closeEvent(event);
+}
 
 void ResourceEditor::newResource()
 {
@@ -274,6 +284,8 @@ void ResourceEditor::save()
         dataAccess.storeDataIndex(m_dataIndex);
         m_editorWidget->save();
     }
+
+    m_saveTimer->start();
 }
 
 void ResourceEditor::setUndoText(const QString& text)
