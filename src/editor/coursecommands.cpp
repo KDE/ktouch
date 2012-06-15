@@ -21,6 +21,7 @@
 #include <KLocale>
 
 #include "core/course.h"
+#include "core/lesson.h"
 
 SetCourseTitleCommand::SetCourseTitleCommand(Course* course, const QString& oldTitle, QUndoCommand* parent) :
     QUndoCommand(parent),
@@ -125,4 +126,121 @@ bool SetCourseDescriptionCommand::mergeWith(const QUndoCommand* command)
 int SetCourseDescriptionCommand::id() const
 {
     return 0x264f63fb;
+}
+
+SetLessonTitleCommand::SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_lessonIndex(lessonIndex),
+    m_oldTitle(oldTitle),
+    m_newTitle(course->lesson(lessonIndex)->title())
+{
+    setText(i18n("Set lesson title"));
+}
+
+void SetLessonTitleCommand::undo()
+{
+    m_course->lesson(m_lessonIndex)->setTitle(m_oldTitle);
+}
+
+void SetLessonTitleCommand::redo()
+{
+    m_course->lesson(m_lessonIndex)->setTitle(m_newTitle);
+}
+
+bool SetLessonTitleCommand::mergeWith(const QUndoCommand* command)
+{
+    const SetLessonTitleCommand* setLessonTitleCommand = static_cast<const SetLessonTitleCommand*>(command);
+
+    if (m_course != setLessonTitleCommand->m_course)
+        return false;
+
+    if (m_lessonIndex != setLessonTitleCommand->m_lessonIndex)
+        return false;
+
+    m_newTitle = setLessonTitleCommand->m_newTitle;
+    return true;
+}
+
+int SetLessonTitleCommand::id() const
+{
+    return 0x4499bef5;
+}
+
+SetLessonNewCharactersCommand::SetLessonNewCharactersCommand(Course* course, int lessonIndex, const QString& oldNewCharacters, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_lessonIndex(lessonIndex),
+    m_oldNewCharacters(oldNewCharacters),
+    m_newNewCharacters(course->lesson(lessonIndex)->newCharacters())
+{
+    setText(i18n("Set new characters for lesson"));
+}
+
+void SetLessonNewCharactersCommand::undo()
+{
+    m_course->lesson(m_lessonIndex)->setNewCharacters(m_oldNewCharacters);
+}
+
+void SetLessonNewCharactersCommand::redo()
+{
+    m_course->lesson(m_lessonIndex)->setNewCharacters(m_newNewCharacters);
+}
+
+bool SetLessonNewCharactersCommand::mergeWith(const QUndoCommand* command)
+{
+    const SetLessonNewCharactersCommand* setLessonNewCharactersCommand = static_cast<const SetLessonNewCharactersCommand*>(command);
+
+    if (m_course != setLessonNewCharactersCommand->m_course)
+        return false;
+
+    if (m_lessonIndex != setLessonNewCharactersCommand->m_lessonIndex)
+        return false;
+
+    m_newNewCharacters = setLessonNewCharactersCommand->m_newNewCharacters;
+    return true;
+}
+
+int SetLessonNewCharactersCommand::id() const
+{
+    return 0x325e1dc2;
+}
+
+SetLessonTextCommand::SetLessonTextCommand(Course* course, int lessonIndex, const QString& oldText, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_lessonIndex(lessonIndex),
+    m_oldText(oldText),
+    m_newText(course->lesson(lessonIndex)->text())
+{
+    setText(i18n("Set lesson text"));
+}
+
+void SetLessonTextCommand::undo()
+{
+    m_course->lesson(m_lessonIndex)->setText(m_oldText);
+}
+
+void SetLessonTextCommand::redo()
+{
+    m_course->lesson(m_lessonIndex)->setText(m_newText);
+}
+
+bool SetLessonTextCommand::mergeWith(const QUndoCommand* command)
+{
+    const SetLessonTextCommand* setLessonTextCommand = static_cast<const SetLessonTextCommand*>(command);
+
+    if (m_course != setLessonTextCommand->m_course)
+        return false;
+
+    if (m_lessonIndex != setLessonTextCommand->m_lessonIndex)
+        return false;
+
+    m_newText = setLessonTextCommand->m_newText;
+    return true;
+}
+
+int SetLessonTextCommand::id() const
+{
+    return 0xdea53874;
 }

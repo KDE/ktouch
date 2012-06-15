@@ -30,7 +30,7 @@ LessonModel::LessonModel(QObject* parent) :
     m_course(0),
     m_signalMapper(new QSignalMapper(this))
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
+    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitLessonChanged(int)));
 }
 
 Course* LessonModel::course() const
@@ -99,7 +99,7 @@ void LessonModel::onLessonAboutToBeAdded(Lesson* lesson, int index)
 {
     connect(lesson, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
     connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
-    connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
+    connect(lesson, SIGNAL(textChanged()), m_signalMapper, SLOT(map()));
     updateMappings();
     beginInsertRows(QModelIndex(), index, index);
 }
@@ -119,8 +119,9 @@ void LessonModel::onLessonsRemoved()
     endRemoveRows();
 }
 
-void LessonModel::emitDataChanged(int row)
+void LessonModel::emitLessonChanged(int row)
 {
+    emit lessonChanged(row);
     emit dataChanged(index(row, 0), index(row, 0));
 }
 

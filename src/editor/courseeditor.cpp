@@ -34,6 +34,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     Ui::CourseEditor(),
     m_dataIndexCourse(0),
     m_course(new Course(this)),
+    m_currentLessonIndex(-1),
     m_currentLesson(0),
     m_lessonModel(new LessonModel(this)),
     m_readOnly(false),
@@ -53,7 +54,12 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_keyboardLayoutComboBox, SIGNAL(activated(int)), SLOT(onKeyboardLayoutChosen()));
     connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
 
+    connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
     connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
+
+    connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
+    connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
+    connect(m_lessonTextEdit, SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
 }
 
 void CourseEditor::setResourceModel(ResourceModel* model)
@@ -87,6 +93,9 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     m_undoGroup->setActiveStack(m_currentUndoStack);
 
+    m_currentLessonIndex = -1;
+    m_currentLesson = 0;
+
     if (!dataAccess.loadCourse(coursePath, m_course))
     {
         KMessageBox::error(this, i18n("Error while opening course"));
@@ -108,7 +117,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     if (m_course->lessonCount() > 0)
     {
-        m_lessonView->selectionModel()->select(m_lessonModel->index(0), QItemSelectionModel::ClearAndSelect);
+        selectLesson(0);
     }
 }
 
@@ -147,6 +156,33 @@ void CourseEditor::setDescription(const QString& newDescription)
     const QString oldDescription = m_course->description();
     m_course->setDescription(newDescription);
     QUndoCommand* command = new SetCourseDescriptionCommand(m_course, oldDescription);
+    m_currentUndoStack->push(command);
+}
+
+void CourseEditor::setLessonTitle(const QString& newTitle)
+{
+    Q_ASSERT(m_currentLesson);
+    const QString oldTitle = m_currentLesson->title();
+    m_currentLesson->setTitle(newTitle);
+    QUndoCommand* command = new SetLessonTitleCommand(m_course, m_currentLessonIndex, oldTitle);
+    m_currentUndoStack->push(command);
+}
+
+void CourseEditor::setLessonNewCharacters(const QString& newCharacters)
+{
+    Q_ASSERT(m_currentLesson);
+    const QString oldNewCharacters = m_currentLesson->newCharacters();
+    m_currentLesson->setNewCharacters(newCharacters);
+    QUndoCommand* command = new SetLessonNewCharactersCommand(m_course, m_currentLessonIndex, oldNewCharacters);
+    m_currentUndoStack->push(command);
+}
+
+void CourseEditor::setLessonText(const QString& newText)
+{
+    Q_ASSERT(m_currentLesson);
+    const QString oldText = m_currentLesson->text();
+    m_currentLesson->setText(newText);
+    QUndoCommand* command = new SetLessonTextCommand(m_course, m_currentLessonIndex, oldText);
     m_currentUndoStack->push(command);
 }
 
@@ -190,6 +226,42 @@ void CourseEditor::updateDescription()
     }
 }
 
+void CourseEditor::updateLessonTitle()
+{
+    Q_ASSERT(m_currentLesson);
+
+    const QString title = m_currentLesson->title();
+
+    if (title != m_lessonTitleLineEdit->text())
+    {
+        m_lessonTitleLineEdit->setText(title);
+    }
+}
+
+void CourseEditor::updateLessonNewCharacters()
+{
+    Q_ASSERT(m_currentLesson);
+
+    const QString newCharacters = m_currentLesson->newCharacters();
+
+    if (newCharacters != m_newCharactersLineEdit->text())
+    {
+        m_newCharactersLineEdit->setText(newCharacters);
+    }
+}
+
+void CourseEditor::updateLessonText()
+{
+    Q_ASSERT(m_currentLesson);
+
+    const QString text = m_currentLesson->text();
+
+    if (text != m_lessonTextEdit->toPlainText())
+    {
+        m_lessonTextEdit->setText(text);
+    }
+}
+
 void CourseEditor::onKeyboardLayoutChosen()
 {
     setKeyboardLayoutName(m_keyboardLayoutComboBox->selectedKeyboardLayout()->name());
@@ -205,12 +277,35 @@ void CourseEditor::onDescriptionChanged()
     }
 }
 
+void CourseEditor::onLessonTextChanged()
+{
+    if (!m_currentLesson)
+        return;
+
+    const QString text = m_lessonTextEdit->toPlainText();
+
+    if (text != m_currentLesson->text())
+    {
+        setLessonText(text);
+    }
+}
+
+void CourseEditor::selectLesson(int index)
+{
+        m_lessonView->selectionModel()->select(m_lessonModel->index(index), QItemSelectionModel::Select);
+}
+
 void CourseEditor::onLessonSelected()
 {
+    if (m_currentLesson)
+    {
+        m_currentLesson->disconnect(this);
+    }
+
     if (m_lessonView->selectionModel()->hasSelection())
     {
-        const int index = m_lessonView->selectionModel()->selectedIndexes().first().row();
-        m_currentLesson = m_course->lesson(index);
+        m_currentLessonIndex = m_lessonView->selectionModel()->selectedIndexes().first().row();
+        m_currentLesson = m_course->lesson(m_currentLessonIndex);
 
         m_lessonTitleLineEdit->setEnabled(true);
         m_lessonTitleLineEdit->setText(m_currentLesson->title());
@@ -221,11 +316,16 @@ void CourseEditor::onLessonSelected()
 
         m_addLessonButton->setEnabled(!m_readOnly);
         m_removeLessonButton->setEnabled(!m_readOnly);
-        m_moveLessonUpButton->setEnabled(!m_readOnly && index > 0);
-        m_moveLessonDownButton->setEnabled(!m_readOnly && index < m_course->lessonCount());
+        m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
+        m_moveLessonDownButton->setEnabled(!m_readOnly && m_currentLessonIndex < m_course->lessonCount());
+
+        connect(m_currentLesson, SIGNAL(titleChanged()), SLOT(updateLessonTitle()));
+        connect(m_currentLesson, SIGNAL(newCharactersChanged()), SLOT(updateLessonNewCharacters()));
+        connect(m_currentLesson, SIGNAL(textChanged()), SLOT(updateLessonText()));
     }
     else
     {
+        m_currentLessonIndex = -1;
         m_currentLesson = 0;
 
         m_lessonTitleLineEdit->setEnabled(false);

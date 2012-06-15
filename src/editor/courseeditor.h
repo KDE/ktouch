@@ -45,16 +45,25 @@ private slots:
     void setTitle(const QString& newTitle);
     void setKeyboardLayoutName(const QString& newName);
     void setDescription(const QString& newDescription);
+    void setLessonTitle(const QString& newTitle);
+    void setLessonNewCharacters(const QString& newCharacters);
+    void setLessonText(const QString& text);
     void updateTitle();
     void updateKeyboardLayoutName();
     void updateDescription();
+    void updateLessonTitle();
+    void updateLessonNewCharacters();
+    void updateLessonText();
     void onKeyboardLayoutChosen();
     void onDescriptionChanged();
+    void onLessonTextChanged();
+    void selectLesson(int index);
     void onLessonSelected();
 private:
     void setIsReadOnly(bool readOnly);
     DataIndexCourse* m_dataIndexCourse;
     Course* m_course;
+    int m_currentLessonIndex;
     Lesson* m_currentLesson;
     LessonModel* m_lessonModel;
     QUndoGroup* m_undoGroup;

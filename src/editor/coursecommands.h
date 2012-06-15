@@ -22,6 +22,7 @@
 #include <QUndoCommand>
 
 class Course;
+class Lesson;
 
 class SetCourseTitleCommand: public QUndoCommand
 {
@@ -63,6 +64,51 @@ private:
     Course* m_course;
     QString m_oldDescription;
     QString m_newDescription;
+};
+
+class SetLessonTitleCommand: public QUndoCommand
+{
+public:
+    SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent=0);
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_lessonIndex;
+    QString m_oldTitle;
+    QString m_newTitle;
+};
+
+class SetLessonNewCharactersCommand: public QUndoCommand
+{
+public:
+    SetLessonNewCharactersCommand(Course* course, int lessonIndex, const QString& oldNewCharacters, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_lessonIndex;
+    QString m_oldNewCharacters;
+    QString m_newNewCharacters;
+};
+
+class SetLessonTextCommand: public QUndoCommand
+{
+public:
+    SetLessonTextCommand(Course* course, int lessonIndex, const QString& oldText, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_lessonIndex;
+    QString m_oldText;
+    QString m_newText;
 };
 
 #endif // COURSECOMMANDS_H

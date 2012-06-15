@@ -35,12 +35,16 @@ public:
     int rowCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
 
+signals:
+    void lessonChanged(int index);
+
 private slots:
     void onLessonAboutToBeAdded(Lesson* lesson, int index);
     void onLessonAdded();
     void onLessonsAboutToBeRemoved(int first, int last);
     void onLessonsRemoved();
-    void emitDataChanged(int row);
+    void emitLessonChanged(int row);
+
 private:
     void updateMappings();
     Course* m_course;
