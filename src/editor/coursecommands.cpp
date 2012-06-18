@@ -169,6 +169,57 @@ int AddLessonCommand::id() const
     return 0x34f95ddf;
 }
 
+RemoveLessonCommand::RemoveLessonCommand(Course* course, int lessonIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_lessonIndex(lessonIndex),
+    m_backupLesson(0)
+{
+    setText(i18n("Remove lesson"));
+}
+
+RemoveLessonCommand::~RemoveLessonCommand()
+{
+    if (m_backupLesson)
+    {
+        delete m_backupLesson;
+    }
+}
+
+void RemoveLessonCommand::undo()
+{
+    Q_ASSERT(m_backupLesson);
+
+    if (m_lessonIndex == m_course->lessonCount())
+    {
+        m_course->addLesson(m_backupLesson);
+    }
+    else
+    {
+        m_course->insertLesson(m_lessonIndex, m_backupLesson);
+    }
+
+    m_backupLesson = 0;
+}
+
+void RemoveLessonCommand::redo()
+{
+    m_backupLesson = new Lesson();
+    m_backupLesson->copyFrom(m_course->lesson(m_lessonIndex));
+    m_course->removeLesson(m_lessonIndex);
+}
+
+bool RemoveLessonCommand::mergeWith(const QUndoCommand* command)
+{
+    Q_UNUSED(command)
+    return false;
+}
+
+int RemoveLessonCommand::id() const
+{
+    return 0x36f2ef42;
+}
+
 SetLessonTitleCommand::SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_course(course),

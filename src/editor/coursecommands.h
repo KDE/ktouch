@@ -80,6 +80,21 @@ private:
     QString m_lessonId;
 };
 
+class RemoveLessonCommand: public QUndoCommand
+{
+public:
+    RemoveLessonCommand(Course* course, int lessonIndex, QUndoCommand* parent = 0);
+    virtual ~RemoveLessonCommand();
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_lessonIndex;
+    Lesson* m_backupLesson;
+};
+
 class SetLessonTitleCommand: public QUndoCommand
 {
 public:

@@ -59,6 +59,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
 
     connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
+    connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
 
     connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
     connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
@@ -170,6 +171,18 @@ void CourseEditor::addLesson()
 
     m_currentUndoStack->push(command);
     selectLesson(newIndex);
+}
+
+void CourseEditor::removeLesson()
+{
+    Q_ASSERT(m_currentLessonIndex != -1);
+
+    const int index = m_currentLessonIndex;
+    QUndoCommand* command = new RemoveLessonCommand(m_course, index);
+
+    m_lessonView->selectionModel()->clear();
+    m_currentUndoStack->push(command);
+    selectLesson(qMin(index, m_course->lessonCount() - 1));
 }
 
 void CourseEditor::setLessonTitle(const QString& newTitle)
@@ -305,7 +318,10 @@ void CourseEditor::onLessonTextChanged()
 
 void CourseEditor::selectLesson(int index)
 {
-        m_lessonView->selectionModel()->select(m_lessonModel->index(index), QItemSelectionModel::ClearAndSelect);
+    if (index == -1)
+        return;
+
+    m_lessonView->selectionModel()->select(m_lessonModel->index(index), QItemSelectionModel::ClearAndSelect);
 }
 
 void CourseEditor::onLessonSelected()
