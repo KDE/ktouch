@@ -128,6 +128,47 @@ int SetCourseDescriptionCommand::id() const
     return 0x264f63fb;
 }
 
+AddLessonCommand::AddLessonCommand(Course* course, int lessonIndex,const QString& lessonId, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_lessonIndex(lessonIndex),
+    m_lessonId(lessonId)
+{
+    setText(i18n("Add lesson"));
+}
+
+void AddLessonCommand::undo()
+{
+    m_course->removeLesson(m_lessonIndex);
+}
+
+void AddLessonCommand::redo()
+{
+    Lesson* lesson = new Lesson();
+
+    lesson->setId(m_lessonId);
+
+    if (m_lessonIndex == m_course->lessonCount())
+    {
+        m_course->addLesson(lesson);
+    }
+    else
+    {
+        m_course->insertLesson(m_lessonIndex, lesson);
+    }
+}
+
+bool AddLessonCommand::mergeWith(const QUndoCommand* command)
+{
+    Q_UNUSED(command);
+    return false;
+}
+
+int AddLessonCommand::id() const
+{
+    return 0x34f95ddf;
+}
+
 SetLessonTitleCommand::SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_course(course),

@@ -70,6 +70,19 @@ void Course::addLesson(Lesson* lesson)
     emit lessonAdded();
 }
 
+void Course::insertLesson(int index, Lesson* lesson)
+{
+    Q_ASSERT(index >= 0 && index < m_lessons.count());
+    emit lessonAboutToBeAdded(lesson, index);
+    m_lessons.insert(index, lesson);
+    lesson->setParent(this);
+    updateLessonCharacters(index);
+    connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
+    m_signalMapper->setMapping(lesson, index);
+    emit lessonCountChanged();
+    emit lessonAdded();
+}
+
 void Course::removeLesson(int index)
 {
     Q_ASSERT(index >= 0 && index < m_lessons.count());

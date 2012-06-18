@@ -45,6 +45,7 @@ private slots:
     void setTitle(const QString& newTitle);
     void setKeyboardLayoutName(const QString& newName);
     void setDescription(const QString& newDescription);
+    void addLesson();
     void setLessonTitle(const QString& newTitle);
     void setLessonNewCharacters(const QString& newCharacters);
     void setLessonText(const QString& text);

@@ -18,6 +18,7 @@
 
 #include "courseeditor.h"
 
+#include <QUuid>
 #include <QUndoStack>
 #include <QUndoGroup>
 
@@ -56,6 +57,8 @@ CourseEditor::CourseEditor(QWidget* parent):
 
     connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
     connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
+
+    connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
 
     connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
     connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
@@ -157,6 +160,16 @@ void CourseEditor::setDescription(const QString& newDescription)
     m_course->setDescription(newDescription);
     QUndoCommand* command = new SetCourseDescriptionCommand(m_course, oldDescription);
     m_currentUndoStack->push(command);
+}
+
+void CourseEditor::addLesson()
+{
+    const int newIndex = m_currentLessonIndex + 1;
+    const QString id = QUuid::createUuid();
+    QUndoCommand* command = new AddLessonCommand(m_course, newIndex, id);
+
+    m_currentUndoStack->push(command);
+    selectLesson(newIndex);
 }
 
 void CourseEditor::setLessonTitle(const QString& newTitle)
@@ -292,7 +305,7 @@ void CourseEditor::onLessonTextChanged()
 
 void CourseEditor::selectLesson(int index)
 {
-        m_lessonView->selectionModel()->select(m_lessonModel->index(index), QItemSelectionModel::Select);
+        m_lessonView->selectionModel()->select(m_lessonModel->index(index), QItemSelectionModel::ClearAndSelect);
 }
 
 void CourseEditor::onLessonSelected()
@@ -314,7 +327,6 @@ void CourseEditor::onLessonSelected()
         m_lessonTextEdit->setEnabled(true);
         m_lessonTextEdit->setText(m_currentLesson->text());
 
-        m_addLessonButton->setEnabled(!m_readOnly);
         m_removeLessonButton->setEnabled(!m_readOnly);
         m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
         m_moveLessonDownButton->setEnabled(!m_readOnly && m_currentLessonIndex < m_course->lessonCount());
@@ -335,7 +347,6 @@ void CourseEditor::onLessonSelected()
         m_lessonTextEdit->setEnabled(false);
         m_lessonTextEdit->clear();
 
-        m_addLessonButton->setEnabled(false);
         m_removeLessonButton->setEnabled(false);
         m_moveLessonUpButton->setEnabled(false);
         m_moveLessonDownButton->setEnabled(false);
@@ -348,4 +359,5 @@ void CourseEditor::setIsReadOnly(bool readOnly)
     m_titleLineEdit->setReadOnly(readOnly);
     m_keyboardLayoutComboBox->setEnabled(!readOnly);
     m_descriptionTextEdit->setReadOnly(readOnly);
+    m_addLessonButton->setEnabled(!readOnly);
 }

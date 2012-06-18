@@ -39,6 +39,7 @@ public:
     int lessonCount() const;
     Q_INVOKABLE Lesson* lesson(int index) const;
     Q_INVOKABLE void addLesson(Lesson* lesson);
+    Q_INVOKABLE void insertLesson(int index, Lesson* lesson);
     Q_INVOKABLE void removeLesson(int index);
     Q_INVOKABLE void clearLessons();
     Q_INVOKABLE void copyFrom(Course* source);

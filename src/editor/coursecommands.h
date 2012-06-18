@@ -66,6 +66,20 @@ private:
     QString m_newDescription;
 };
 
+class AddLessonCommand: public QUndoCommand
+{
+public:
+    AddLessonCommand(Course* course, int lessonIndex, const QString& lessonTitle, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_lessonIndex;
+    QString m_lessonId;
+};
+
 class SetLessonTitleCommand: public QUndoCommand
 {
 public:
