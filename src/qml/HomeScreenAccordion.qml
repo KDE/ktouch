@@ -59,7 +59,6 @@ Column {
         for (var i = 0; i < repeater.count; i++) {
             boxes.push(repeater.itemAt(i))
         }
-        boxes.push(ownLessonsBox);
         item.boxes = boxes;
         lastActiveIndex = -1
         activeIndex = 0
@@ -90,22 +89,6 @@ Column {
                 dataIndexCourse: repeater.courses[index]
                 profile: item.profile
                 onLessonSelected: item.lessonSelected(course, lessonIndex)
-            }
-        }
-    }
-
-    HomeScreenBox {
-        id: ownLessonsBox
-        width: parent.width
-        title: i18n("Own lessons")
-        active: activeIndex === item.boxes.length - 1
-        onActivated: activateBox(item.boxes.length - 1)
-        content: Item {
-            Text {
-                anchors.centerIn: parent
-                font.pixelSize: 50
-                color: "#888"
-                text: "TODO"
             }
         }
     }
