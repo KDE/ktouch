@@ -17,6 +17,7 @@
 
 import QtQuick 1.0
 import org.kde.plasma.core 0.1 as PlasmaCore
+import Effects 1.0
 import ktouch 1.0
 
 Item
@@ -96,6 +97,12 @@ Item
         width: naturalSize.width
         height: naturalSize.height
         smooth: true
+        effect: DropShadow {
+            color: "#000000"
+            blurRadius: 5
+            xOffset: 0
+            yOffset: 0
+        }
         transform: Rotation {
             origin.x: hand.naturalSize.width / 2
             origin.y: hand.naturalSize.height / 2
