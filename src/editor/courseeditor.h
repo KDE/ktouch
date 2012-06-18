@@ -47,6 +47,8 @@ private slots:
     void setDescription(const QString& newDescription);
     void addLesson();
     void removeLesson();
+    void moveLessonUp();
+    void moveLessonDown();
     void setLessonTitle(const QString& newTitle);
     void setLessonNewCharacters(const QString& newCharacters);
     void setLessonText(const QString& text);

@@ -95,6 +95,20 @@ private:
     Lesson* m_backupLesson;
 };
 
+class MoveLessonCommand: public QUndoCommand
+{
+public:
+    MoveLessonCommand(Course* course, int oldLessonIndex, int newLessonIndex, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    bool mergeWith(const QUndoCommand* command);
+    int id() const;
+private:
+    Course* m_course;
+    int m_oldLessonIndex;
+    int m_newLessonIndex;
+};
+
 class SetLessonTitleCommand: public QUndoCommand
 {
 public:

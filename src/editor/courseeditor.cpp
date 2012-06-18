@@ -60,6 +60,8 @@ CourseEditor::CourseEditor(QWidget* parent):
 
     connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
     connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
+    connect(m_moveLessonUpButton, SIGNAL(clicked(bool)), SLOT(moveLessonUp()));
+    connect(m_moveLessonDownButton, SIGNAL(clicked(bool)), SLOT(moveLessonDown()));
 
     connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
     connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
@@ -183,6 +185,32 @@ void CourseEditor::removeLesson()
     m_lessonView->selectionModel()->clear();
     m_currentUndoStack->push(command);
     selectLesson(qMin(index, m_course->lessonCount() - 1));
+}
+
+void CourseEditor::moveLessonUp()
+{
+    Q_ASSERT(m_currentLessonIndex > 0);
+
+    const int oldIndex = m_currentLessonIndex;
+    const int newIndex = m_currentLessonIndex - 1;
+    QUndoCommand* command = new MoveLessonCommand(m_course, oldIndex, newIndex);
+
+    m_lessonView->selectionModel()->clear();
+    m_currentUndoStack->push(command);
+    selectLesson(newIndex);
+}
+
+void CourseEditor::moveLessonDown()
+{
+    Q_ASSERT(m_currentLessonIndex != -1 && m_currentLessonIndex < m_course->lessonCount() - 1);
+
+    const int oldIndex = m_currentLessonIndex;
+    const int newIndex = m_currentLessonIndex + 1;
+    QUndoCommand* command = new MoveLessonCommand(m_course, oldIndex, newIndex);
+
+    m_lessonView->selectionModel()->clear();
+    m_currentUndoStack->push(command);
+    selectLesson(newIndex);
 }
 
 void CourseEditor::setLessonTitle(const QString& newTitle)
@@ -345,7 +373,7 @@ void CourseEditor::onLessonSelected()
 
         m_removeLessonButton->setEnabled(!m_readOnly);
         m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
-        m_moveLessonDownButton->setEnabled(!m_readOnly && m_currentLessonIndex < m_course->lessonCount());
+        m_moveLessonDownButton->setEnabled(!m_readOnly && m_currentLessonIndex < m_course->lessonCount() - 1);
 
         connect(m_currentLesson, SIGNAL(titleChanged()), SLOT(updateLessonTitle()));
         connect(m_currentLesson, SIGNAL(newCharactersChanged()), SLOT(updateLessonNewCharacters()));

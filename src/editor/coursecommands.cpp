@@ -220,6 +220,69 @@ int RemoveLessonCommand::id() const
     return 0x36f2ef42;
 }
 
+MoveLessonCommand::MoveLessonCommand(Course* course, int oldLessonIndex, int newLessonIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_course(course),
+    m_oldLessonIndex(oldLessonIndex),
+    m_newLessonIndex(newLessonIndex)
+{
+    setText(i18n("Move lesson"));
+}
+
+void MoveLessonCommand::undo()
+{
+    Lesson* lesson = new Lesson();
+
+    lesson->copyFrom(m_course->lesson(m_newLessonIndex));
+    m_course->removeLesson(m_newLessonIndex);
+
+    if (m_oldLessonIndex == m_course->lessonCount())
+    {
+        m_course->addLesson(lesson);
+    }
+    else
+    {
+        m_course->insertLesson(m_oldLessonIndex, lesson);
+    }
+
+}
+
+void MoveLessonCommand::redo()
+{
+    Lesson* lesson = new Lesson();
+
+    lesson->copyFrom(m_course->lesson(m_oldLessonIndex));
+    m_course->removeLesson(m_oldLessonIndex);
+
+    if (m_newLessonIndex == m_course->lessonCount())
+    {
+        m_course->addLesson(lesson);
+    }
+    else
+    {
+        m_course->insertLesson(m_newLessonIndex, lesson);
+    }
+}
+
+bool MoveLessonCommand::mergeWith(const QUndoCommand* command)
+{
+    const MoveLessonCommand* moveLessonCommand = static_cast<const MoveLessonCommand*>(command);
+
+    if (m_course != moveLessonCommand->m_course)
+        return false;
+
+    if (m_newLessonIndex != moveLessonCommand->m_oldLessonIndex)
+        return false;
+
+    m_newLessonIndex = moveLessonCommand->m_newLessonIndex;
+    return true;
+}
+
+int MoveLessonCommand::id() const
+{
+    return 0xf3993bad;
+}
+
 SetLessonTitleCommand::SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_course(course),
