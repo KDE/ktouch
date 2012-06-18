@@ -160,8 +160,7 @@ Item {
         onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
         onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
         onNextLessonRequested: {
-            trainingScreen.lesson = lesson
-            scoreScreen.lesson = lesson
+            selectedCourse.selectedLesson = lesson
             main.switchScreen(scoreScreen, trainingScreen)
         }
     }
