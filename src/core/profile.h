@@ -27,6 +27,7 @@ class Profile : public QObject
     Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(SkillLevel skillLevel READ skillLevel WRITE setSkillLevel NOTIFY skillLevelChanged)
+    Q_PROPERTY(QString lastUsedCourseId READ lastUsedCourseId WRITE setLastUsedCourseId NOTIFY lastUsedCourseIdChanged)
 
 public:
     enum SkillLevel
@@ -42,16 +43,20 @@ public:
     void setName(const QString& name);
     SkillLevel skillLevel() const;
     void setSkillLevel(SkillLevel skillLevel);
+    QString lastUsedCourseId() const;
+    void setLastUsedCourseId(QString id);
 
 signals:
-    void idChanged(int newId);
-    void nameChanged(const QString& newName);
-    void skillLevelChanged(SkillLevel newSkillLevel);
+    void idChanged();
+    void nameChanged();
+    void skillLevelChanged();
+    void lastUsedCourseIdChanged();
 
 private:
     int m_id;
     QString m_name;
     SkillLevel m_skillLevel;
+    QString m_lastUsedCourseId;
 };
 
 #endif // PROFILE_H

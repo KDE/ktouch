@@ -34,7 +34,7 @@ void Profile::setId(int id)
     if (id != m_id)
     {
         m_id = id;
-        emit idChanged(id);
+        emit idChanged();
     }
 }
 
@@ -48,7 +48,7 @@ void Profile::setName(const QString &name)
     if (name != m_name)
     {
         m_name = name;
-        emit nameChanged(name);
+        emit nameChanged();
     }
 }
 
@@ -62,6 +62,20 @@ void Profile::setSkillLevel(SkillLevel skillLevel)
     if (skillLevel != m_skillLevel)
     {
         m_skillLevel = skillLevel;
-        emit skillLevelChanged(skillLevel);
+        emit skillLevelChanged();
+    }
+}
+
+QString Profile::lastUsedCourseId() const
+{
+    return m_lastUsedCourseId;
+}
+
+void Profile::setLastUsedCourseId(QString id)
+{
+    if (id != m_lastUsedCourseId)
+    {
+        m_lastUsedCourseId = id;
+        emit lastUsedCourseIdChanged();
     }
 }

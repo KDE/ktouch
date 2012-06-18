@@ -48,7 +48,7 @@ void ProfileDataAccess::loadProfiles()
     m_profiles.clear();
     emit profileCountChanged();
 
-    QSqlQuery profileQuery = db.exec("SELECT id, name, skill_level FROM profiles");
+    QSqlQuery profileQuery = db.exec("SELECT id, name, skill_level, last_used_course_id FROM profiles");
 
     if (db.lastError().isValid())
     {
@@ -64,6 +64,7 @@ void ProfileDataAccess::loadProfiles()
         profile->setName(profileQuery.value(1).toString());
         int rawSkillLevel = profileQuery.value(2).toInt();
         profile->setSkillLevel(rawSkillLevel == 1? Profile::Beginner: Profile::Advanced);
+        profile->setLastUsedCourseId(profileQuery.value(3).toString());
         m_profiles.append(profile);
     }
 
@@ -102,15 +103,15 @@ void ProfileDataAccess::addProfile(Profile *profile)
 
     QSqlQuery addQuery(db);
 
-    if (!addQuery.prepare("INSERT INTO profiles (name, skill_level) VALUES (?, ?)"))
+    if (!addQuery.prepare("INSERT INTO profiles (name, skill_level, last_used_course_id) VALUES (?, ?, ?)"))
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
         return;
     }
     addQuery.bindValue(0, profile->name());
-    int raw_skill_level = profile->skillLevel();
-    addQuery.bindValue(1, raw_skill_level);
+    addQuery.bindValue(1, profile->skillLevel());
+    addQuery.bindValue(2, profile->lastUsedCourseId());
 
     if (!addQuery.exec())
     {
@@ -161,7 +162,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     QSqlQuery updateQuery(db);
 
-    if (!updateQuery.prepare("UPDATE profiles SET name = ?, skill_level = ? WHERE id = ?"))
+    if (!updateQuery.prepare("UPDATE profiles SET name = ?, skill_level = ?, last_used_course_id = ? WHERE id = ?"))
     {
         kWarning() <<  updateQuery.lastError().text();
         raiseError(updateQuery.lastError());
@@ -169,9 +170,9 @@ void ProfileDataAccess::updateProfile(int index)
     }
 
     updateQuery.bindValue(0, profile->name());
-    int raw_skill_level = profile->skillLevel();
-    updateQuery.bindValue(1, raw_skill_level);
-    updateQuery.bindValue(2, profile->id());
+    updateQuery.bindValue(1, profile->skillLevel());
+    updateQuery.bindValue(2, profile->lastUsedCourseId());
+    updateQuery.bindValue(3, profile->id());
 
     if (!updateQuery.exec())
     {
