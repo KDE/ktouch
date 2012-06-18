@@ -17,6 +17,7 @@
 
 import argparse
 import os
+import uuid
 from lxml import etree
 
 class Course(object):
@@ -70,11 +71,11 @@ class Lesson(object):
             self.new_characters,
             self.text
         )
-        
+
 def read(f):
     tree = etree.parse(f)
     root = tree.getroot()
-    id = os.path.basename(f.name)
+    id = make_id()
     title, = root.xpath("//KTouchLecture/Title[1]/text()")
     description, = root.xpath("//KTouchLecture/Comment[1]/text()")
     lesson_nodes = root.xpath("//KTouchLecture/Levels/Level")
@@ -82,12 +83,15 @@ def read(f):
     return Course(id, title, description, '', lessons)
 
 def parse_lesson(lesson_node):
-    id = "lesson{}".format(lesson_node.getparent().index(lesson_node))
+    id = make_id()
     title, = lesson_node.xpath("./NewCharsLabel[1]/text()") or ('',)
+    if title == '':
+        index = lesson_node.getparent().index(lesson_node)
+        title = u"Lesson {}".format(index + 1)
     new_characters, = lesson_node.xpath("./NewCharacters[1]/text()") or ('',)
     text = u"\n".join(lesson_node.xpath("./Line/text()"))
     return Lesson(id, title, new_characters, text)
-    
+
 def parse_chars(char_nodes):
     chars = []
     for char_node in char_nodes:
@@ -101,7 +105,10 @@ def parse_chars(char_nodes):
             char.modifier = 'shift'
             chars.append(hiddenChar)
     return chars
-    
+
+
+def make_id():
+    return "{{{}}}".format(uuid.uuid4())
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
