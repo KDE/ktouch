@@ -48,10 +48,15 @@ Column {
         }
     }
 
-    function activateBox(index) {
+    function activateBox(index, noAnimation) {
         item.lastActiveIndex = item.activeIndex
         item.activeIndex = index
-        boxSwitchAnimation.start()
+        if (noAnimation) {
+            setBoxHeights()
+        }
+        else {
+            boxSwitchAnimation.start()
+        }
     }
 
     function updateBoxes() {
@@ -63,13 +68,36 @@ Column {
         lastActiveIndex = -1
         activeIndex = 0
         setBoxHeights()
+        selectLastUsedCourse()
     }
 
     function setBoxHeights() {
+        boxSwitchAnimation.stop()
         for (var i = 0; i < item.boxes.length; i++) {
             item.boxes[i].height = cellHeight(i)
         }
     }
+
+    function selectLastUsedCourse() {
+        if (!profile)
+            return
+        var courseId = profile.lastUsedCourseId;
+        for (var i = 0; i < repeater.count; i++) {
+            var box = repeater.itemAt(i)
+            if (box.courseId() == courseId) {
+                activateBox(i, true)
+                return
+            }
+        }
+        activateBox(0, true)
+    }
+
+    function saveLastUsedCourse(courseId) {
+        profile.lastUsedCourseId = courseId;
+        profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
+    }
+
+    onProfileChanged: selectLastUsedCourse()
 
     onHeightChanged: setBoxHeights()
 
@@ -84,8 +112,15 @@ Column {
             width: item.width
             title: i18n(repeater.courses[index].title)
             active: activeIndex === index
-            onActivated: activateBox(index)
+            function courseId() {
+                return lessonSelector.course.id
+            }
+            onActivated: {
+                activateBox(index)
+                saveLastUsedCourse(box.courseId())
+            }
             content: LessonSelector {
+                id: lessonSelector
                 dataIndexCourse: repeater.courses[index]
                 profile: item.profile
                 onLessonSelected: item.lessonSelected(course, lessonIndex)

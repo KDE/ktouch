@@ -24,6 +24,7 @@ Item {
     id: item
     property Profile profile
     property DataIndexCourse dataIndexCourse
+    property alias course: courseItem
     signal lessonSelected(variant course, int lessonIndex)
 
     function update() {
@@ -70,7 +71,7 @@ Item {
     }
 
     Course {
-        id: course
+        id: courseItem
         property string path
         function update() {
             if (isValid && path === dataIndexCourse.path)
