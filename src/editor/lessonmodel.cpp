@@ -100,12 +100,12 @@ void LessonModel::onLessonAboutToBeAdded(Lesson* lesson, int index)
     connect(lesson, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
     connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
     connect(lesson, SIGNAL(textChanged()), m_signalMapper, SLOT(map()));
-    updateMappings();
     beginInsertRows(QModelIndex(), index, index);
 }
 
 void LessonModel::onLessonAdded()
 {
+    updateMappings();
     endInsertRows();
 }
 

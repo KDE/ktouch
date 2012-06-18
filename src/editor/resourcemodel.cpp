@@ -88,7 +88,6 @@ void ResourceModel::onCourseAboutToBeAdded(DataIndexCourse* course, int index)
     connect(course, SIGNAL(keyboardLayoutNameChanged()), m_signalMapper, SLOT(map()));
     connect(course, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
     connect(course, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
-    updateMappings();
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -104,7 +103,6 @@ void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyb
     connect(keyboardLayout, SIGNAL(nameChanged()), m_signalMapper, SLOT(map()));
     connect(keyboardLayout, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
     connect(keyboardLayout, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
-    updateMappings();
     beginInsertRows(QModelIndex(), index + offset, index + offset);
 }
 
@@ -116,6 +114,7 @@ void ResourceModel::onKeyboardLayoutsAboutToBeRemoved(int first, int last)
 
 void ResourceModel::onResourceAdded()
 {
+    updateMappings();
     endInsertRows();
 }
 
