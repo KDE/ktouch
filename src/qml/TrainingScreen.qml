@@ -184,18 +184,36 @@ FocusScope {
             svg: screenSvg
             elementId: "footer"
             Keyboard {
-                property KeyItem highlightedKey
+                property variant highlightedKeys: []
                 function highlightKey(which) {
-                    if (highlightedKey)
-                        highlightedKey.isHighlighted = false
+                    for (var i = 0; i < highlightedKeys.length; i++)
+                        highlightedKeys[i].isHighlighted = false
                     var key = findKeyItem(which)
                     if (key) {
+                        var newHighlightedKeys = []
                         key.isHighlighted = true
-                        highlightedKey = key
+                        newHighlightedKeys.push(key)
+                        if (typeof which == "string") {
+                            var code = which.charCodeAt(0)
+                            for (var i = 0; i < key.key.keyCharCount; i++) {
+                                var keyChar = key.key.keyChar(i)
+                                if (keyChar.value == code && keyChar.modifier != "") {
+                                    var modifier = findModifierKeyItem(keyChar.modifier)
+                                    if (modifier) {
+                                        modifier.isHighlighted = true
+                                        newHighlightedKeys.push(modifier)
+                                    }
+                                    break
+                                }
+                            }
+                        }
+                        highlightedKeys = newHighlightedKeys
                     }
                 }
 
                 function updateKeyHighlighting() {
+                    if (!visible)
+                        return;
                     if (trainingWidget.isCorrect) {
                         if (trainingWidget.nextChar !== "") {
                             highlightKey(trainingWidget.nextChar)
@@ -214,6 +232,7 @@ FocusScope {
                 anchors.fill: parent
                 onKeyboardUpdate: {
                     setLessonKeys()
+                    highlightedKeys = []
                     updateKeyHighlighting()
                 }
             }

@@ -46,6 +46,15 @@ Item
 
     }
 
+    function findModifierKeyItem(modifierId) {
+        for (var i = 0; i < keys.count; i++) {
+            var key = keys.itemAt(i);
+            if (key.key.keyType() == "specialKey" && key.key.modifierId == modifierId)
+                return key
+        }
+        return null
+    }
+
     function handleKeyPress(event) {
         var key = findKeyItem(event)
         if (key)
