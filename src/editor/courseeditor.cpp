@@ -404,5 +404,7 @@ void CourseEditor::setIsReadOnly(bool readOnly)
     m_keyboardLayoutComboBox->setEnabled(!readOnly);
     m_descriptionTextEdit->setReadOnly(readOnly);
     m_addLessonButton->setEnabled(!readOnly);
+    m_lessonTitleLineEdit->setReadOnly(readOnly);
+    m_newCharactersLineEdit->setReadOnly(readOnly);
     m_lessonTextEdit->setReadOnly(readOnly);
 }
