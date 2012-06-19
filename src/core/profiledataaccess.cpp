@@ -581,7 +581,8 @@ bool ProfileDataAccess::checkDbSchema()
     db.exec("CREATE TABLE IF NOT EXISTS profiles ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "name TEXT, "
-            "skill_level INTEGER "
+            "skill_level INTEGER, "
+            "last_used_course_id TEXT "
             ")");
 
     if (db.lastError().isValid())
