@@ -28,7 +28,8 @@
 #include "core/lesson.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
-#include "lessonmodel.h"
+#include "editor/lessonmodel.h"
+#include "editor/lessontexthighlighter.h"
 
 CourseEditor::CourseEditor(QWidget* parent):
     QWidget(parent),
@@ -40,7 +41,8 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_lessonModel(new LessonModel(this)),
     m_readOnly(false),
     m_undoStacks(new QMap<QString,QUndoStack*>),
-    m_currentUndoStack(0)
+    m_currentUndoStack(0),
+    m_lessonTextHighlighter(new LessonTextHighlighter(this))
 {
     setupUi(this);
     m_messageWidget->hide();
@@ -66,6 +68,9 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
     connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
     connect(m_lessonTextEdit, SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
+
+    m_lessonTextHighlighter->setMaximumLineLength(60);
+    m_lessonTextHighlighter->setDocument(m_lessonTextEdit->document());
 }
 
 void CourseEditor::setResourceModel(ResourceModel* model)
@@ -316,6 +321,13 @@ void CourseEditor::updateLessonText()
     }
 }
 
+void CourseEditor::updateLessonCharacters()
+{
+    Q_ASSERT(m_currentLesson);
+    m_lessonTextHighlighter->setAllowedCharacters(m_currentLesson->characters());
+}
+
+
 void CourseEditor::onKeyboardLayoutChosen()
 {
     setKeyboardLayoutName(m_keyboardLayoutComboBox->selectedKeyboardLayout()->name());
@@ -369,7 +381,9 @@ void CourseEditor::onLessonSelected()
         m_newCharactersLineEdit->setEnabled(true);
         m_newCharactersLineEdit->setText(m_currentLesson->newCharacters());
         m_lessonTextEdit->setEnabled(true);
-        m_lessonTextEdit->setText(m_currentLesson->text());
+        m_lessonTextEdit->setPlainText(m_currentLesson->text());
+
+        m_lessonTextHighlighter->setAllowedCharacters(m_currentLesson->characters());
 
         m_removeLessonButton->setEnabled(!m_readOnly);
         m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
@@ -378,6 +392,7 @@ void CourseEditor::onLessonSelected()
         connect(m_currentLesson, SIGNAL(titleChanged()), SLOT(updateLessonTitle()));
         connect(m_currentLesson, SIGNAL(newCharactersChanged()), SLOT(updateLessonNewCharacters()));
         connect(m_currentLesson, SIGNAL(textChanged()), SLOT(updateLessonText()));
+        connect(m_currentLesson, SIGNAL(charactersChanged()), SLOT(updateLessonCharacters()));
     }
     else
     {

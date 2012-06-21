@@ -31,6 +31,7 @@ class Course;
 class Lesson;
 class ResourceModel;
 class LessonModel;
+class LessonTextHighlighter;
 
 class CourseEditor : public QWidget, private Ui::CourseEditor
 {
@@ -58,6 +59,7 @@ private slots:
     void updateLessonTitle();
     void updateLessonNewCharacters();
     void updateLessonText();
+    void updateLessonCharacters();
     void onKeyboardLayoutChosen();
     void onDescriptionChanged();
     void onLessonTextChanged();
@@ -74,6 +76,7 @@ private:
     bool m_readOnly;
     QMap<QString,QUndoStack*>* m_undoStacks;
     QUndoStack* m_currentUndoStack;
+    LessonTextHighlighter* m_lessonTextHighlighter;
 };
 
 #endif // COURSEEDITOR_H
