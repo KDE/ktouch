@@ -9,6 +9,13 @@
     <path>courses/ara.xml</path>
   </course>
   <course>
+    <title>Portuguese (Brazilian)</title>
+    <description>Arquivo de treinamento gerado Wed Aug 24 14:00:33 2005
+Preparado por Ari Caldeira</description>
+    <keyboardLayout>br</keyboardLayout>
+    <path>courses/br.xml</path>
+  </course>
+  <course>
     <title>German (from Tipptrainer)</title>
     <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
