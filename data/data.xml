@@ -59,6 +59,29 @@ Version: 0.1 beta
     <path>courses/de2.xml</path>
   </course>
   <course>
+    <title>Danish (complete course)</title>
+    <description>Tr&#xE6;ningsfil udviklet af
+Gunther Strube,  gstrube@tiscali.dk og
+Anja Lysholm, anjal@danbbs.dk, April-Juli 2002
+
+Baseret p&#xE5;:
+ "L&#xE6;r maskinskrivning i Folke- og Ungdomsskolen"
+    Kamma Jensen &amp; Jytte M&#xF8;ller
+    ISBN 87-17-02200-2
+
+Program udviklet af H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>dk</keyboardLayout>
+    <path>courses/dk1.xml</path>
+  </course>
+  <course>
+    <title>Danish (auto-generated)</title>
+    <description>KTouch training file generated Sun Aug 25 22:07:37 2002
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>dk</keyboardLayout>
+    <path>courses/dk2.xml</path>
+  </course>
+  <course>
     <title>French 1 (auto-generated)</title>
     <description>Trainingfile genereated in October 2001
 Program written by H&#xE5;vard Fr&#xF8;iland
