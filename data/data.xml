@@ -38,6 +38,14 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
     <path>courses/cat.xml</path>
   </course>
   <course>
+    <title>Czech (auto-generated)</title>
+    <description>Trainingfile generated Fri Dec 22 22:51:46 2006
+Program written by Hendrik Naumann
+Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
+    <keyboardLayout>cz</keyboardLayout>
+    <path>courses/cz.xml</path>
+  </course>
+  <course>
     <title>German (from Tipptrainer)</title>
     <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
