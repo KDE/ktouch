@@ -30,6 +30,14 @@ Preparado por Ari Caldeira</description>
     <path>courses/br.xml</path>
   </course>
   <course>
+    <title>Catalan (auto-generated)</title>
+    <description>KTouch training file generated Sat Aug 23 21:40:00 2003
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>es</keyboardLayout>
+    <path>courses/cat.xml</path>
+  </course>
+  <course>
     <title>German (from Tipptrainer)</title>
     <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
