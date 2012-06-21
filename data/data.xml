@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <data>
   <course>
+    <title>Arabic</title>
+    <description>&#x625;&#x639;&#x62F;&#x627;&#x62F;: &#x641;&#x647;&#x62F; &#x627;&#x644;&#x633;&#x639;&#x64A;&#x62F;&#x64A;
+&#x628;&#x631;&#x64A;&#x62F; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A;: fahad.alsaidi@gmail.com
+&#x648;&#x627;&#x62F;&#x64A; &#x627;&#x644;&#x62A;&#x642;&#x646;&#x64A;&#x629;</description>
+    <keyboardLayout>ara</keyboardLayout>
+    <path>courses/ara.xml</path>
+  </course>
+  <course>
     <title>German (from Tipptrainer)</title>
     <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
