@@ -59,6 +59,8 @@ FocusScope {
             }
         }
 
+        internal.nextLesson = null;
+
         if (lessonIndex + 1 < course.lessonCount && lessonIndex + 1 <= lastUnlockedLessonIndex) {
             internal.nextLesson = course.lesson(lessonIndex + 1)
         }
