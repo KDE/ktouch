@@ -263,14 +263,16 @@ void CourseEditor::updateKeyboardLayoutName()
 
     m_dataIndexCourse->setKeyboardLayoutName(name);
 
-    for (int i = 0; m_keyboardLayoutComboBox->count(); i++)
+    for (int i = 0; i < m_keyboardLayoutComboBox->count(); i++)
     {
         if (m_keyboardLayoutComboBox->keyboardLayoutAt(i)->name() == name)
         {
             m_keyboardLayoutComboBox->setCurrentIndex(i);
-            break;
+            return;
         }
     }
+
+    m_keyboardLayoutComboBox->setCurrentIndex(-1);
 }
 
 void CourseEditor::updateDescription()
