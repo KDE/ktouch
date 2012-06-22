@@ -96,6 +96,37 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <keyboardLayout>gb</keyboardLayout>
     <path>courses/gb.xml</path>
   </course>
+  <course>
+    <title>Nederlands (auto-generated)</title>
+    <description>Typecursus door tijs@vandenbogaard.org
+Thu Dec 18 21:33:14 CET 2003
+
+Willekeurige data gegenereerd met het perl script
+van Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>nl</keyboardLayout>
+    <path>courses/nl1.xml</path>
+  </course>
+  <course>
+    <title>Nederlands for Kids (auto-generated)</title>
+    <description>KTouch oefenbestand voor kinderen
+
+De woordkeuze werd gebaseerd op het
+Perl Script geschreven door Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+
+Kenmerken van dit oefenbestand zijn :
+                          1. Een zeer geleidelijke overgang van het 
+                             ene niveau naar het andere, vooral in het
+                             begin.
+                          2. Een grote nadruk op het ritme
+                          3. Herhaling
+
+Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
+Dit document is een onderdeel van het KTouch programma en valt onder de 
+bepalingen van de GNU General Public License versie 2 of recenter.</description>
+    <keyboardLayout>nl</keyboardLayout>
+    <path>courses/nl2.xml</path>
+  </course>
   <keyboardLayout>
     <title>Arabic</title>
     <name>ara</name>
