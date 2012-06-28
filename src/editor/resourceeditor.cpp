@@ -33,6 +33,7 @@
 #include <KIcon>
 #include <KLocale>
 #include <KMessageBox>
+#include <KFileDialog>
 
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -224,6 +225,66 @@ void ResourceEditor::importResource()
 
 void ResourceEditor::exportResource()
 {
+    Q_ASSERT(m_currentResource);
+
+    DataAccess dataAccess;
+
+    if (DataIndexCourse* dataIndexCourse = qobject_cast<DataIndexCourse*>(m_currentResource))
+    {
+        for (int i = 0; i < m_dataIndex->courseCount(); i++)
+        {
+            if (m_dataIndex->course(i) == dataIndexCourse)
+            {
+                Course* course = new Course();
+
+                if (!dataAccess.loadCourse(m_dataIndex->course(i)->path(), course))
+                {
+                    KMessageBox::error(this, i18n("Error while opening course"));
+                    return;
+                }
+
+                const QString initialFileName(QString("%1.xml").arg(course->keyboardLayoutName()));
+                const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
+
+                if (!path.isNull())
+                {
+                    if (!dataAccess.storeCourse(path, course))
+                    {
+                        KMessageBox::error(this, i18n("Error while saving course"));
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    else if (DataIndexKeyboardLayout* dataIndexkeyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(m_currentResource))
+    {
+        for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
+        {
+            if (m_dataIndex->keyboardLayout(i) == dataIndexkeyboardLayout)
+            {
+                KeyboardLayout* keyboardlayout = new KeyboardLayout();
+
+                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i)->path(), keyboardlayout))
+                {
+                    KMessageBox::error(this, i18n("Error while opening keyboard layout"));
+                    return;
+                }
+
+                const QString initialFileName(QString("%1.xml").arg(keyboardlayout->name()));
+                const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
+
+                if (!path.isNull())
+                {
+                    if (!dataAccess.storeKeyboardLayout(path, keyboardlayout))
+                    {
+                        KMessageBox::error(this, i18n("Error while saving keyboard layout"));
+                        return;
+                    }
+                }
+            }
+        }
+    }
 }
 
 void ResourceEditor::onResourceSelected()
