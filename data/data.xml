@@ -127,6 +127,14 @@ bepalingen van de GNU General Public License versie 2 of recenter.</description>
     <keyboardLayout>nl</keyboardLayout>
     <path>courses/nl2.xml</path>
   </course>
+  <course>
+    <title>English (USA) Colemak (auto-generated)</title>
+    <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
+Modified by Sascha Peilicke 2008-08-07
+</description>
+    <keyboardLayout>us(colemak)</keyboardLayout>
+    <path>courses/us.colemak.xml</path>
+  </course>
   <keyboardLayout>
     <title>Arabic</title>
     <name>ara</name>
