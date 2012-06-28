@@ -157,7 +157,11 @@ Item
     {
         id: shadow
 
+        property int marginSize: 0
+
         anchors.centerIn: parent
+        width: item.width + marginSize
+        height: item.height + marginSize
         smooth: true
         radius: body.radius
         effect: DropShadow {
@@ -182,8 +186,7 @@ Item
                 PropertyChanges {
                     target: shadow
                     color: "#000"
-                    width: item.width
-                    height: item.height
+                    marginSize: 0
                 }
                 PropertyChanges {
                     target: shadow.effect
@@ -195,8 +198,7 @@ Item
                 PropertyChanges {
                     target: shadow
                     color: "#54A7F0"
-                    width: item.width + 4
-                    height: item.height + 4
+                    marginSize: 4
                 }
                 PropertyChanges {
                     target: shadow.effect
@@ -208,8 +210,7 @@ Item
                 PropertyChanges {
                     target: shadow
                     color: "#54A7F0"
-                    width: item.width
-                    height: item.height
+                    marginSize: 0
                 }
                 PropertyChanges {
                     target: shadow.effect
@@ -218,14 +219,7 @@ Item
             }
         ]
 
-        Behavior on width {
-            NumberAnimation {
-                duration: 150
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        Behavior on height {
+        Behavior on marginSize {
             NumberAnimation {
                 duration: 150
                 easing.type: Easing.InOutQuad
