@@ -129,6 +129,7 @@ FocusScope {
                             anchors.centerIn: parent
                             color: isDone? "#000": "#888"
                             text: trainer.lines[index]
+                            textFormat: Text.PlainText
                             font.family: "monospace"
                             font.pixelSize: fontSize
                             opacity: trainer.position == index? 0: 1

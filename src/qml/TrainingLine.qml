@@ -150,6 +150,7 @@ Item {
                 font.pixelSize: fontSize
                 transformOrigin: Item.Center
                 text: line.text.charAt(index)
+                textFormat: Text.PlainText
                 state: "placeholder"
                 states: [
                     State {

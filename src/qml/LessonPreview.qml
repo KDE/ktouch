@@ -67,6 +67,7 @@ Item {
                 Text {
                     id: text
                     smooth: true
+                    textFormat: Text.PlainText
                     font.family: "mono"
                     font.pixelSize: theme.smallestFont.pixelSize
                     lineHeight: 1.5
