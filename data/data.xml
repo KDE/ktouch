@@ -135,6 +135,30 @@ Modified by Sascha Peilicke 2008-08-07
     <keyboardLayout>us(colemak)</keyboardLayout>
     <path>courses/us.colemak.xml</path>
   </course>
+  <course>
+    <title>Dvorak (US) (auto-generated)</title>
+    <description>Trainingfile genereated Mon Apr  8 18:44:12 2002
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>us(dvorak)</keyboardLayout>
+    <path>courses/us.dvorak1.xml</path>
+  </course>
+  <course>
+    <title>Dvorak (US) - ABCD</title>
+    <description>This ktouch course is taken from Dan Wood's
+A Basic Course in Dvorac (ABCD)
+Available at http://www.gigliwood.com/abcd/abcd.html
+</description>
+    <keyboardLayout>us(dvorak)</keyboardLayout>
+    <path>courses/us.dvorak2.xml</path>
+  </course>
+  <course>
+    <title>English (US) (auto-generated)</title>
+    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
+Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>us</keyboardLayout>
+    <path>courses/us.xml</path>
+  </course>
   <keyboardLayout>
     <title>Arabic</title>
     <name>ara</name>
