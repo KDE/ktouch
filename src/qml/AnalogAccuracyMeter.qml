@@ -20,8 +20,7 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import Effects 1.0
 import ktouch 1.0
 
-Item
-{
+Item {
     property real accuracy: 1.0
     property real minimumAccuracy: 0.95
 
@@ -112,5 +111,4 @@ Item
             }
         }
     }
-
 }

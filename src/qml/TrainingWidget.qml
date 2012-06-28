@@ -60,8 +60,7 @@ FocusScope {
         clip: true
         flickableDirection: Flickable.VerticalFlick
 
-        function targetScrollPosition()
-        {
+        function targetScrollPosition() {
             var position = trainingLine.y + sheet.y + (trainingLine.height / 2)
             return Math.max(Math.min((position - (height / 2)), contentHeight - height), 0)
         }
@@ -75,16 +74,14 @@ FocusScope {
             contentY = targetScrollPosition()
         }
 
-        NumberAnimation
-        {
+        NumberAnimation {
             target: sheetFlick
             id: scrollAnimation
             duration: 150
             property: "contentY"
         }
 
-        Rectangle
-        {
+        Rectangle {
             id: sheet
             color: "#fff"
             anchors.centerIn: parent

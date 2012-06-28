@@ -19,8 +19,7 @@ import QtQuick 1.1
 import Effects 1.0
 import ktouch 1.0
 
-Item
-{
+Item {
     id: item
 
     property int keyIndex
@@ -33,35 +32,28 @@ Item
     property AbstractKey key: item.keyboardLayout.key(item.keyIndex)
     property AbstractKey referenceKey: keyboardLayout.referenceKey
 
-    function match(data)
-    {
+    function match(data) {
         var eventText = data
         var eventKey = -1
-        if (typeof data === "object")
-        {
+        if (typeof data === "object") {
             eventText = data.text
             eventKey = data.key
         }
-        if (typeof data === "number")
-        {
+        if (typeof data === "number") {
             eventText = ""
             eventKey = data
         }
-        switch (key.keyType())
-        {
+        switch (key.keyType()) {
         case "key":
-            for (var i = 0; i < key.keyCharCount; i++)
-            {
-                if (key.keyChar(i).value == eventText.charCodeAt(0))
-                {
+            for (var i = 0; i < key.keyCharCount; i++) {
+                if (key.keyChar(i).value == eventText.charCodeAt(0)) {
                     return true;
                 }
             }
             return false
 
         case "specialKey":
-            switch (key.type)
-            {
+            switch (key.type) {
             case SpecialKey.Tab:
                 return eventKey == Qt.Key_Tab
             case SpecialKey.Capslock:
@@ -80,12 +72,10 @@ Item
         return false;
     }
 
-    function setTint(color)
-    {
+    function setTint(color) {
         // stupid hack to set alpha because in Qt Quick 1.1 it's impossible to access color components
         color = "#20" + ("" + color).substr(1);
         item.tint = color
-
     }
 
     anchors.left: parent.left
@@ -98,27 +88,22 @@ Item
     state: enabled? (pressed? "pressed": "normal"): "disabled"
 
     onKeyChanged: {
-        switch (key.keyType())
-        {
+        switch (key.keyType()) {
         case "key":
             for (var i = 0; i < item.key.keyCharCount; i++)
             {
                 var keyChar = item.key.keyChar(i);
                 var position = keyChar.position;
-                if (position === KeyChar.TopLeft)
-                {
+                if (position === KeyChar.TopLeft) {
                     topLeftLabel.keyChar = keyChar;
                 }
-                else if (position === KeyChar.TopRight)
-                {
+                else if (position === KeyChar.TopRight) {
                     topRightLabel.keyChar = keyChar;
                 }
-                else if (position === KeyChar.BottomLeft)
-                {
+                else if (position === KeyChar.BottomLeft) {
                     bottomLeftLabel.keyChar = keyChar;
                 }
-                else if (position === KeyChar.BottomRight)
-                {
+                else if (position === KeyChar.BottomRight) {
                     bottomRightLabel.keyChar = keyChar;
                 }
             }
@@ -149,12 +134,9 @@ Item
             }
             break;
         }
-
-
     }
 
-    Rectangle
-    {
+    Rectangle {
         id: shadow
 
         property int marginSize: 0
@@ -252,8 +234,7 @@ Item
 
     }
 
-    Rectangle
-    {
+    Rectangle {
         id: body
         anchors.fill: parent
         radius: Math.max(3, Math.min(referenceKey.height, referenceKey.width) / 10 * scaleFactor)
@@ -261,8 +242,7 @@ Item
         border.color: "#000"
         smooth: true
 
-        gradient: Gradient
-        {
+        gradient: Gradient {
             GradientStop { id: gradientStop0; position: 0.0; }
             GradientStop { id: gradientStop1; position: 0.5; }
             GradientStop { id: gradientStop2; position: 1.0; }
@@ -287,29 +267,24 @@ Item
         }
     }
 
-    Item
-    {
+    Item {
         anchors.topMargin: Math.max(referenceKey.width / 20, 3 * scaleFactor)
         anchors.bottomMargin: anchors.topMargin
         anchors.leftMargin: Math.max(referenceKey.width / 10, 5 * scaleFactor)
         anchors.rightMargin: anchors.leftMargin
         anchors.fill: parent
-        KeyLabel
-        {
+        KeyLabel {
             id: topLeftLabel
         }
-        KeyLabel
-        {
+        KeyLabel {
             id: topRightLabel
             anchors.right: parent.right
         }
-        KeyLabel
-        {
+        KeyLabel {
             id: bottomLeftLabel
             anchors.bottom: parent.bottom
         }
-        KeyLabel
-        {
+        KeyLabel {
             id: bottomRightLabel
             anchors.right: parent.right
             anchors.bottom: parent.bottom

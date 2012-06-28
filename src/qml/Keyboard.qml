@@ -18,8 +18,7 @@
 import QtQuick 1.1
 import ktouch 1.0
 
-Item
-{
+Item {
     id: keyboard
 
     signal keyboardUpdate

@@ -20,8 +20,7 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import Effects 1.0
 import ktouch 1.0
 
-Item
-{
+Item {
     property int charactersPerMinute: 0
     property int minimumCharactersPerMinute: 180
 
@@ -112,5 +111,4 @@ Item
             }
         }
     }
-
 }

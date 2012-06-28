@@ -18,8 +18,7 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 
-Item
-{
+Item {
     property alias label: label.text
     property alias value: value.text;
     property alias referenceValue: referenceValue.text

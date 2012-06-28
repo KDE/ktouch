@@ -18,8 +18,7 @@
 import QtQuick 1.0
 import ktouch 1.0
 
-Text
-{
+Text {
     property KeyChar keyChar
 
     color: key.state == "normal"? "#333": "#222"

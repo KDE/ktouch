@@ -19,8 +19,7 @@ import QtQuick 1.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 import ktouch 1.0
 
-Item
-{
+Item {
     id: meter
 
     property variant ellapsedTime

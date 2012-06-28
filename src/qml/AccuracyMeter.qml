@@ -18,8 +18,7 @@
 import QtQuick 1.0
 import org.kde.plasma.core 0.1 as PlasmaCore
 
-Item
-{
+Item {
     id: meter
 
     property real accuracy: 1.0
@@ -41,5 +40,4 @@ Item
             referenceValue: formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
         }
     }
-
 }
