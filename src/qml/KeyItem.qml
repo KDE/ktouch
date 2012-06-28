@@ -273,6 +273,24 @@ Item
             GradientStop { id: gradientStop1; position: 0.5; }
             GradientStop { id: gradientStop2; position: 1.0; }
         }
+
+        Rectangle {
+            id: hapticMarker
+            anchors {
+                bottom: parent.bottom
+                horizontalCenter: parent.horizontalCenter
+                bottomMargin: 4
+            }
+            visible: item.key.keyType() == "key" && item.key.hasHapticMarker
+            height: 3
+            width: body.width / 3
+            radius: 1
+            color: topLeftLabel.color
+            border {
+                width: 1
+                color: topLeftLabel.color
+            }
+        }
     }
 
     Item
