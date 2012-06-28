@@ -72,7 +72,7 @@ class Lesson(object):
             self.text
         )
 
-def read(f):
+def read(f, layout):
     tree = etree.parse(f)
     root = tree.getroot()
     id = make_id()
@@ -80,7 +80,7 @@ def read(f):
     description, = root.xpath("//KTouchLecture/Comment[1]/text()")
     lesson_nodes = root.xpath("//KTouchLecture/Levels/Level")
     lessons = [parse_lesson(node) for node in lesson_nodes]
-    return Course(id, title, description, '', lessons)
+    return Course(id, title, description, layout, lessons)
 
 def parse_lesson(lesson_node):
     id = make_id()
@@ -112,12 +112,17 @@ def make_id():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='convert ktouch keyboard files'
+        description='convert ktouch course files'
+    )
+    parser.add_argument('-l', '--layout',
+        type=str,
+        metavar="LAYOUT",
+        default=""
     )
     parser.add_argument('input_file',
         type=argparse.FileType('r'),
         metavar="INPUTFILE",
     )
     args = parser.parse_args()
-    course = read(args.input_file)
+    course = read(args.input_file, args.layout)
     print etree.tostring(course.xml_tree())
