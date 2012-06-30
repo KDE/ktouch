@@ -89,7 +89,16 @@ def parse_lesson(lesson_node):
         index = lesson_node.getparent().index(lesson_node)
         title = u"Lesson {}".format(index + 1)
     new_characters, = lesson_node.xpath("./NewCharacters[1]/text()") or ('',)
-    text = u"\n".join(lesson_node.xpath("./Line/text()"))
+    input_lines = lesson_node.xpath("./Line/text()")
+    lines = []
+    for line in input_lines:
+        line = unicode(line)
+        while len(line) > 59:
+            split_pos = line.rindex(" ", 0, 60)
+            lines.append(line[:split_pos])
+            line = line[split_pos + 1:]
+        lines.append(line)
+    text = u"\n".join(lines)
     return Lesson(id, title, new_characters, text)
 
 def parse_chars(char_nodes):
