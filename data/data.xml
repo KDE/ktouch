@@ -97,6 +97,23 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <path>courses/fr.auto1.xml</path>
   </course>
   <course>
+    <title>French 2 (auto-generated)</title>
+    <description>Trainingfile generated Mon Oct  1 08:14:15 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>fr</keyboardLayout>
+    <path>courses/fr.auto2.xml</path>
+  </course>
+  <course>
+    <title>French Dvorak</title>
+    <description>Apprentissage du clavier Dvorak-fr
+30 mai 2002 - Francis Leboutte, www.algo.be
+7 d&#xE9;cembre 2004 - Passage au format ktouch par Matthieu MOY
+14 septembre 2005 - Passage au format ktouch XML par St&#xE9;phane Raimbault</description>
+    <keyboardLayout>fr(dvorak)</keyboardLayout>
+    <path>courses/fr.dvarok.xml</path>
+  </course>
+  <course>
     <title>English (auto-generated)</title>
     <description>KTouch training file generated Sun Mar 11 09:59:58 2007
 Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
