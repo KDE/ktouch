@@ -82,6 +82,13 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/dk2.xml</path>
   </course>
   <course>
+    <title>Finnish (auto-generated)</title>
+    <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
+</description>
+    <keyboardLayout>fi</keyboardLayout>
+    <path>courses/fi.xml</path>
+  </course>
+  <course>
     <title>French 1 (auto-generated)</title>
     <description>Trainingfile genereated in October 2001
 Program written by H&#xE5;vard Fr&#xF8;iland
