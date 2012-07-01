@@ -78,10 +78,7 @@ Item {
             stats.logCharacter(correctChar, isCorrect? TrainingStats.CorrectCharacter: TrainingStats.IncorrectCharacter)
         }
         line.isCorrect = line.isCorrect && isCorrect;
-        if (newChar != " ")
-        {
-            charItem.text = newChar;
-        }
+        charItem.text = newChar != " " || isCorrect? newChar: "\u2423";
         charItem.state = line.isCorrect? "done": "error";
         line.position++;
         emitNextChar()
