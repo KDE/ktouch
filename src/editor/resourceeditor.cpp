@@ -229,6 +229,8 @@ void ResourceEditor::exportResource()
 
     DataAccess dataAccess;
 
+    save();
+
     if (DataIndexCourse* dataIndexCourse = qobject_cast<DataIndexCourse*>(m_currentResource))
     {
         for (int i = 0; i < m_dataIndex->courseCount(); i++)
