@@ -29,13 +29,10 @@ class Lesson;
 class Course : public CourseBase
 {
     Q_OBJECT
-    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(int lessonCount READ lessonCount NOTIFY lessonCountChanged)
 
 public:
     explicit Course(QObject *parent = 0);
-    QString id() const;
-    void setId(const QString& id);
     int lessonCount() const;
     Q_INVOKABLE Lesson* lesson(int index) const;
     Q_INVOKABLE void addLesson(Lesson* lesson);
@@ -45,7 +42,6 @@ public:
     Q_INVOKABLE void copyFrom(Course* source);
 
 signals:
-    void idChanged();
     void lessonCountChanged();
     void lessonAboutToBeAdded(Lesson* lesson, int index);
     void lessonAdded();
@@ -57,7 +53,6 @@ private slots:
 
 private:
     Q_DISABLE_COPY(Course)
-    QString m_id;
     QList<Lesson*> m_lessons;
     QSignalMapper* m_signalMapper;
 };

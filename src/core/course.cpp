@@ -32,20 +32,6 @@ Course::Course(QObject *parent) :
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(updateLessonCharacters(int)));
 }
 
-QString Course::id() const
-{
-    return m_id;
-}
-
-void Course::setId(const QString& id)
-{
-    if (id != m_id)
-    {
-        m_id = id;
-        emit idChanged();
-    }
-}
-
 int Course::lessonCount() const
 {
     return m_lessons.count();

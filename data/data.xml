@@ -6,6 +6,7 @@
 &#x628;&#x631;&#x64A;&#x62F; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A;: fahad.alsaidi@gmail.com
 &#x648;&#x627;&#x62F;&#x64A; &#x627;&#x644;&#x62A;&#x642;&#x646;&#x64A;&#x629;</description>
     <keyboardLayout>ara</keyboardLayout>
+    <id>{0ec7a87f-8238-4b1f-bccd-947490612ed6}</id>
     <path>courses/ara.xml</path>
   </course>
   <course>
@@ -13,6 +14,7 @@
     <description>Georgi P. Georgiev 
 joro_georgiev2001@magibg.com</description>
     <keyboardLayout>bg</keyboardLayout>
+    <id>{00459b0a-bb5c-479f-9bb9-de044c5ae510}</id>
     <path>courses/bg1.xml</path>
   </course>
   <course>
@@ -20,6 +22,7 @@ joro_georgiev2001@magibg.com</description>
     <description>Georgi P. Georgiev, 
 joro_georgiev2001@magibg.com</description>
     <keyboardLayout>bg</keyboardLayout>
+    <id>{4807933b-7e09-4019-8e0f-b53ca6cedd38}</id>
     <path>courses/bg2.xml</path>
   </course>
   <course>
@@ -27,6 +30,7 @@ joro_georgiev2001@magibg.com</description>
     <description>Arquivo de treinamento gerado Wed Aug 24 14:00:33 2005
 Preparado por Ari Caldeira</description>
     <keyboardLayout>br</keyboardLayout>
+    <id>{5bf56303-d273-4bed-b5c2-ec6cae76ba44}</id>
     <path>courses/br.xml</path>
   </course>
   <course>
@@ -35,6 +39,7 @@ Preparado por Ari Caldeira</description>
 Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
 </description>
     <keyboardLayout>es</keyboardLayout>
+    <id>{503d3f86-e6e7-4597-88ed-e5d7b6431aba}</id>
     <path>courses/cat.xml</path>
   </course>
   <course>
@@ -43,6 +48,7 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
 Program written by Hendrik Naumann
 Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
     <keyboardLayout>cz</keyboardLayout>
+    <id>{1d79daec-008c-4620-8d3d-4da9c94427a6}</id>
     <path>courses/cz.xml</path>
   </course>
   <course>
@@ -56,6 +62,7 @@ distributed under the GPL2
 Version: 0.1 beta
 </description>
     <keyboardLayout>de</keyboardLayout>
+    <id>de2</id>
     <path>courses/de2.xml</path>
   </course>
   <course>
@@ -72,6 +79,7 @@ Baseret p&#xE5;:
 Program udviklet af H&#xE5;vard Fr&#xF8;iland
 </description>
     <keyboardLayout>dk</keyboardLayout>
+    <id>{e95350b8-8d51-471c-a6bd-12cfc0caf1d7}</id>
     <path>courses/dk1.xml</path>
   </course>
   <course>
@@ -79,6 +87,7 @@ Program udviklet af H&#xE5;vard Fr&#xF8;iland
     <description>KTouch training file generated Sun Aug 25 22:07:37 2002
 Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
     <keyboardLayout>dk</keyboardLayout>
+    <id>{c85c14eb-4ac5-40dc-8450-3e9e0a4982da}</id>
     <path>courses/dk2.xml</path>
   </course>
   <course>
@@ -86,6 +95,7 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
 </description>
     <keyboardLayout>fi</keyboardLayout>
+    <id>{6f530b7b-36d5-4268-b45c-398fa8f0688b}</id>
     <path>courses/fi.xml</path>
   </course>
   <course>
@@ -94,6 +104,7 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
 Program written by H&#xE5;vard Fr&#xF8;iland
 </description>
     <keyboardLayout>fr</keyboardLayout>
+    <id>fr.auto1</id>
     <path>courses/fr.auto1.xml</path>
   </course>
   <course>
@@ -102,6 +113,7 @@ Program written by H&#xE5;vard Fr&#xF8;iland
 Program written by H&#xE5;vard Fr&#xF8;iland
 </description>
     <keyboardLayout>fr</keyboardLayout>
+    <id>{319210ee-c8ae-41cd-a04c-4c479d0e4658}</id>
     <path>courses/fr.auto2.xml</path>
   </course>
   <course>
@@ -111,6 +123,7 @@ Program written by H&#xE5;vard Fr&#xF8;iland
 7 d&#xE9;cembre 2004 - Passage au format ktouch par Matthieu MOY
 14 septembre 2005 - Passage au format ktouch XML par St&#xE9;phane Raimbault</description>
     <keyboardLayout>fr(dvorak)</keyboardLayout>
+    <id>{3e70bc9a-37fa-4f87-8c47-bc81f71a237f}</id>
     <path>courses/fr.dvarok.xml</path>
   </course>
   <course>
@@ -118,6 +131,7 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <description>KTouch training file generated Sun Mar 11 09:59:58 2007
 Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
     <keyboardLayout>gb</keyboardLayout>
+    <id>gm</id>
     <path>courses/gb.xml</path>
   </course>
   <course>
@@ -129,6 +143,7 @@ Willekeurige data gegenereerd met het perl script
 van Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
 </description>
     <keyboardLayout>nl</keyboardLayout>
+    <id>{6aa005fc-c9ee-42b8-958f-9264d59cea74}</id>
     <path>courses/nl1.xml</path>
   </course>
   <course>
@@ -149,6 +164,7 @@ Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
 Dit document is een onderdeel van het KTouch programma en valt onder de 
 bepalingen van de GNU General Public License versie 2 of recenter.</description>
     <keyboardLayout>nl</keyboardLayout>
+    <id>{fc3330f6-ce6c-4b90-b344-3ff2bac66c32}</id>
     <path>courses/nl2.xml</path>
   </course>
   <course>
@@ -157,6 +173,7 @@ bepalingen van de GNU General Public License versie 2 of recenter.</description>
 Modified by Sascha Peilicke 2008-08-07
 </description>
     <keyboardLayout>us(colemak)</keyboardLayout>
+    <id>{7567adaf-82af-4afc-9d52-9b96ed5ae3a9}</id>
     <path>courses/us.colemak.xml</path>
   </course>
   <course>
@@ -165,6 +182,7 @@ Modified by Sascha Peilicke 2008-08-07
 Program written by H&#xE5;vard Fr&#xF8;iland
 </description>
     <keyboardLayout>us(dvorak)</keyboardLayout>
+    <id>{93e68be6-c256-4ceb-9a25-ef94eeecd7c4}</id>
     <path>courses/us.dvorak1.xml</path>
   </course>
   <course>
@@ -174,6 +192,7 @@ A Basic Course in Dvorac (ABCD)
 Available at http://www.gigliwood.com/abcd/abcd.html
 </description>
     <keyboardLayout>us(dvorak)</keyboardLayout>
+    <id>{50314fdd-b4b6-4ddb-8c29-c5add4c75696}</id>
     <path>courses/us.dvorak2.xml</path>
   </course>
   <course>
@@ -181,6 +200,7 @@ Available at http://www.gigliwood.com/abcd/abcd.html
     <description>KTouch training file generated Sun Mar 11 09:59:58 2007
 Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
     <keyboardLayout>us</keyboardLayout>
+    <id>{c6cf3cc1-7bc2-4b15-91fa-a07b4633b51d}</id>
     <path>courses/us.xml</path>
   </course>
   <keyboardLayout>

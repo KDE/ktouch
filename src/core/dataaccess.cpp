@@ -84,6 +84,7 @@ bool DataAccess::loadDataIndex(DataIndex* target)
                 course->setTitle(dataNode.firstChildElement("title").text());
                 course->setDescription(dataNode.firstChildElement("description").text());
                 course->setKeyboardLayoutName(dataNode.firstChildElement("keyboardLayout").text());
+                course->setId(dataNode.firstChildElement("id").text());
                 course->setPath(path);
                 course->setSource(source);
                 target->addCourse(course);
@@ -128,16 +129,19 @@ bool DataAccess::storeDataIndex(DataIndex* source)
             QDomElement titleElem = doc.createElement("title");
             QDomElement descriptionElem = doc.createElement("description");
             QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
+            QDomElement idElem = doc.createElement("id");
             QDomElement pathElem = doc.createElement("path");
 
             titleElem.appendChild(doc.createTextNode(course->title()));
             descriptionElem.appendChild(doc.createTextNode(course->description()));
             keyboardLayoutElem.appendChild(doc.createTextNode(course->keyboardLayoutName()));
+            idElem.appendChild(doc.createTextNode(course->id()));
             pathElem.appendChild(doc.createTextNode(relPath));
 
             courseElem.appendChild(titleElem);
             courseElem.appendChild(descriptionElem);
             courseElem.appendChild(keyboardLayoutElem);
+            courseElem.appendChild(idElem);
             courseElem.appendChild(pathElem);
             root.appendChild(courseElem);
         }

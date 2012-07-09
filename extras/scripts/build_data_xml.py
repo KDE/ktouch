@@ -31,6 +31,8 @@ def find_courses(data_dir, rel_path, root):
             description.text, = course_tree.xpath("//course/description/text()")
             keyboard_layout_name = etree.SubElement(elem, "keyboardLayout")
             keyboard_layout_name.text, = course_tree.xpath("//course/keyboardLayout/text()")
+            id_ele = etree.SubElement(elem, "id")
+            id_ele.text, = course_tree.xpath("//course/id/text()")
             path_ele = etree.SubElement(elem, "path")
             path_ele.text = os.path.join(rel_path, filename)
             course_elems.append(elem)

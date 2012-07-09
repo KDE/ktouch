@@ -407,6 +407,7 @@ Resource* ResourceEditor::addResource(Resource* resource)
         dataIndexCourse->setTitle(course->title());
         dataIndexCourse->setDescription(course->description());
         dataIndexCourse->setKeyboardLayoutName(course->keyboardLayoutName());
+        dataIndexCourse->setId(course->id());
         dataIndexCourse->setPath(path);
 
         m_dataIndex->addCourse(dataIndexCourse);

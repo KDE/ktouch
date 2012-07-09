@@ -22,6 +22,7 @@
       <xs:element name="title" type="xs:string" />
       <xs:element name="description" type="xs:string" />
       <xs:element name="keyboardLayout" type="xs:string" />
+      <xs:element name="id" type="xs:string" />
       <xs:element name="path" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
