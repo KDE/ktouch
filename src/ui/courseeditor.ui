@@ -113,75 +113,145 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <layout class="QVBoxLayout" name="m_verticalLayout">
-        <property name="spacing">
-         <number>0</number>
+       <widget class="QSplitter" name="m_lessonsSplitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
-        <item>
-         <layout class="QHBoxLayout" name="m_horizontalLayout">
+        <property name="childrenCollapsible">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="">
+         <layout class="QVBoxLayout" name="m_verticalLayout">
           <property name="spacing">
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="m_lessonsLabel">
-            <property name="text">
-             <string>Lessons:</string>
+           <layout class="QHBoxLayout" name="m_horizontalLayout">
+            <property name="spacing">
+             <number>0</number>
             </property>
-            <property name="buddy">
-             <cstring>m_lessonView</cstring>
+            <item>
+             <widget class="QLabel" name="m_lessonsLabel">
+              <property name="text">
+               <string>Lessons:</string>
+              </property>
+              <property name="buddy">
+               <cstring>m_lessonView</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="m_horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Preferred</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QToolButton" name="m_addLessonButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Add new lesson</string>
+              </property>
+              <property name="icon">
+               <iconset theme="list-add">
+                <normaloff/>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="m_removeLessonButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Remove lesson</string>
+              </property>
+              <property name="icon">
+               <iconset theme="list-remove">
+                <normaloff/>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="m_horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>10</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QToolButton" name="m_moveLessonUpButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Move lesson up</string>
+              </property>
+              <property name="icon">
+               <iconset theme="arrow-up">
+                <normaloff/>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="m_moveLessonDownButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>Move lesson down</string>
+              </property>
+              <property name="icon">
+               <iconset theme="arrow-down">
+                <normaloff/>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QListView" name="m_lessonView">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
            </widget>
           </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <layout class="QHBoxLayout" name="m_horizontalLayout_3">
           <item>
-           <spacer name="m_horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Preferred</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QToolButton" name="m_addLessonButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="toolTip">
-             <string>Add new lesson</string>
-            </property>
-            <property name="icon">
-             <iconset theme="list-add">
-              <normaloff/>
-             </iconset>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="m_removeLessonButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="toolTip">
-             <string>Remove lesson</string>
-            </property>
-            <property name="icon">
-             <iconset theme="list-remove">
-              <normaloff/>
-             </iconset>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="m_horizontalSpacer_2">
+           <spacer name="m_horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -190,224 +260,145 @@
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>10</width>
-              <height>10</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QToolButton" name="m_moveLessonUpButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="toolTip">
-             <string>Move lesson up</string>
-            </property>
-            <property name="icon">
-             <iconset theme="arrow-up">
-              <normaloff/>
-             </iconset>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="m_moveLessonDownButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="toolTip">
-             <string>Move lesson down</string>
-            </property>
-            <property name="icon">
-             <iconset theme="arrow-down">
-              <normaloff/>
-             </iconset>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QListView" name="m_lessonView">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <spacer name="m_horizontalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="Line" name="m_line">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="m_horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="m_verticalLayout_3">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item>
-         <layout class="QFormLayout" name="m_formLayout_2">
-          <property name="fieldGrowthPolicy">
-           <enum>QFormLayout::ExpandingFieldsGrow</enum>
-          </property>
-          <property name="horizontalSpacing">
-           <number>4</number>
-          </property>
-          <property name="verticalSpacing">
-           <number>4</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="m_lessonTitleLabel">
-            <property name="text">
-             <string>Title:</string>
-            </property>
-            <property name="buddy">
-             <cstring>m_lessonTitleLineEdit</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="KLineEdit" name="m_lessonTitleLineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="m_newCharactersLabel">
-            <property name="text">
-             <string>New characters:</string>
-            </property>
-            <property name="buddy">
-             <cstring>m_newCharactersLineEdit</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="KLineEdit" name="m_newCharactersLineEdit">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <spacer name="m_verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>10</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="m_horizontalLayout_2">
-          <item>
-           <widget class="QLabel" name="m_lessonTextLabel">
-            <property name="text">
-             <string>Text:</string>
-            </property>
-            <property name="buddy">
-             <cstring>m_lessonTextEdit</cstring>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="m_horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
+              <width>20</width>
               <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <widget class="QToolButton" name="m_lessonTextToolsButton">
-            <property name="enabled">
-             <bool>false</bool>
+           <layout class="QVBoxLayout" name="m_verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
             </property>
-            <property name="toolTip">
-             <string>Tools</string>
-            </property>
-            <property name="icon">
-             <iconset theme="configure">
-              <normaloff/>
-             </iconset>
-            </property>
-           </widget>
+            <item>
+             <layout class="QFormLayout" name="m_formLayout_2">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::ExpandingFieldsGrow</enum>
+              </property>
+              <property name="horizontalSpacing">
+               <number>4</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>4</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="m_lessonTitleLabel">
+                <property name="text">
+                 <string>Title:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>m_lessonTitleLineEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="KLineEdit" name="m_lessonTitleLineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="m_newCharactersLabel">
+                <property name="text">
+                 <string>New characters:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>m_newCharactersLineEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="KLineEdit" name="m_newCharactersLineEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="m_verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>10</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="m_horizontalLayout_2">
+              <item>
+               <widget class="QLabel" name="m_lessonTextLabel">
+                <property name="text">
+                 <string>Text:</string>
+                </property>
+                <property name="buddy">
+                 <cstring>m_lessonTextEdit</cstring>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="m_horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QToolButton" name="m_lessonTextToolsButton">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>Tools</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="configure">
+                  <normaloff/>
+                 </iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="KTextEdit" name="m_lessonTextEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <family>Monospace</family>
+               </font>
+              </property>
+              <property name="tabChangesFocus">
+               <bool>true</bool>
+              </property>
+              <property name="lineWrapMode">
+               <enum>QTextEdit::NoWrap</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
-        </item>
-        <item>
-         <widget class="KTextEdit" name="m_lessonTextEdit">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="font">
-           <font>
-            <family>Monospace</family>
-           </font>
-          </property>
-          <property name="tabChangesFocus">
-           <bool>true</bool>
-          </property>
-          <property name="lineWrapMode">
-           <enum>QTextEdit::NoWrap</enum>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        </widget>
+       </widget>
       </item>
      </layout>
     </widget>

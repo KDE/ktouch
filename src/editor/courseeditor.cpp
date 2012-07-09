@@ -46,6 +46,7 @@ CourseEditor::CourseEditor(QWidget* parent):
 {
     setupUi(this);
     m_messageWidget->hide();
+    m_lessonsSplitter->setStretchFactor(1, 3);
     m_lessonModel->setCourse(m_course);
     m_lessonView->setModel(m_lessonModel);
 
