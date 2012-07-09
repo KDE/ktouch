@@ -140,7 +140,7 @@ void ResourceEditor::newResource()
     {
         save();
         Resource* resource = assistant.createResource();
-        if (Resource* dataIndexResource = addResource(resource))
+        if (Resource* dataIndexResource = storeResource(resource))
         {
             selectDataResource(dataIndexResource);
         }
@@ -221,6 +221,20 @@ void ResourceEditor::deleteResource()
 
 void ResourceEditor::importResource()
 {
+    const QString path(KFileDialog::getOpenFileName(KUrl("kfiledialog:///import"), QString("text/xml"), this));
+
+    if (!path.isNull())
+    {
+        save();
+
+        if (importCourse(path))
+            return;
+
+        if (importKeyboardLayout(path))
+            return;
+
+        KMessageBox::error(this, i18n("The selected file couldn't be imported."));
+    }
 }
 
 void ResourceEditor::exportResource()
@@ -323,7 +337,7 @@ void ResourceEditor::restoreResourceBackup()
 
     save();
 
-    if (Resource* dataIndexResource = addResource(m_backupResource))
+    if (Resource* dataIndexResource = storeResource(m_backupResource))
     {
         selectDataResource(dataIndexResource);
     }
@@ -384,26 +398,26 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
     m_backupResource = backup;
 }
 
-Resource* ResourceEditor::addResource(Resource* resource)
+Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexResource)
 {
     DataAccess dataAccess;
-    Resource* dataIndexResource = 0;
-
-    dataAccess.loadDataIndex(m_dataIndex);
 
     if (Course* course = qobject_cast<Course*>(resource))
     {
+        DataIndexCourse* dataIndexCourse = dataIndexResource == 0?
+            new DataIndexCourse():
+            dynamic_cast<DataIndexCourse*>(dataIndexResource);
+
         const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "courses", true));
-        const QString fileName = QString("%1.xml").arg(course->id());
-        QString path = dir.filePath(fileName);
+        QString path = dataIndexResource == 0?
+            dir.filePath(QString("%1.xml").arg(course->id())):
+            dataIndexCourse->path();
 
         if (!dataAccess.storeCourse(path, course))
         {
             KMessageBox::error(this, i18n("Error while saving course to disk."));
             return 0;
         }
-
-        DataIndexCourse* dataIndexCourse = new DataIndexCourse();
 
         dataIndexCourse->setSource(DataIndex::UserResource);
         dataIndexCourse->setTitle(course->title());
@@ -412,7 +426,11 @@ Resource* ResourceEditor::addResource(Resource* resource)
         dataIndexCourse->setId(course->id());
         dataIndexCourse->setPath(path);
 
-        m_dataIndex->addCourse(dataIndexCourse);
+        if (dataIndexResource == 0)
+        {
+            m_dataIndex->addCourse(dataIndexCourse);
+        }
+
         if (!dataAccess.storeDataIndex(m_dataIndex))
         {
             KMessageBox::error(this, i18n("Error while saving data index to disk."));
@@ -423,9 +441,14 @@ Resource* ResourceEditor::addResource(Resource* resource)
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
     {
+        DataIndexKeyboardLayout* dataIndexKeyboardLayout = dataIndexResource == 0?
+            new DataIndexKeyboardLayout():
+            qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource);
+
         const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
-        const QString fileName = QString("%1.xml").arg(QUuid::createUuid());
-        QString path = dir.filePath(fileName);
+        QString path = dataIndexResource == 0?
+            dir.filePath(QString("%1.xml").arg(QUuid::createUuid())):
+            dataIndexKeyboardLayout->path();
 
         if (!dataAccess.storeKeyboardLayout(path, keyboardLayout))
         {
@@ -433,14 +456,16 @@ Resource* ResourceEditor::addResource(Resource* resource)
             return 0;
         }
 
-        DataIndexKeyboardLayout* dataIndexKeyboardLayout = new DataIndexKeyboardLayout();
-
         dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
         dataIndexKeyboardLayout->setName(keyboardLayout->name());
         dataIndexKeyboardLayout->setTitle(keyboardLayout->title());
         dataIndexKeyboardLayout->setPath(path);
 
-        m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
+        if (dataIndexResource == 0)
+        {
+            m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
+        }
+
         if (!dataAccess.storeDataIndex(m_dataIndex))
         {
             KMessageBox::error(this, i18n("Error while saving data index to disk."));
@@ -458,6 +483,8 @@ void ResourceEditor::selectDataResource(Resource* resource)
 {
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
     QAbstractItemModel* const model = resourceView->model();
+
+    resourceView->selectionModel()->clearSelection();
 
     for (int i = 0; i < model->rowCount(); i++)
     {
@@ -482,3 +509,116 @@ void ResourceEditor::selectFirstResource()
         resourceView->selectionModel()->select(resourceView->model()->index(0, 0), QItemSelectionModel::ClearAndSelect);
     }
 }
+
+bool ResourceEditor::importCourse(const QString& path)
+{
+    DataAccess dataAccess;
+    Course course;
+
+    if (!dataAccess.loadCourse(path, &course))
+        return false;
+
+    DataIndexCourse* overwriteDataIndexCourse(0);
+
+    for (int i = 0; i < m_dataIndex->courseCount(); i++)
+    {
+        DataIndexCourse* const testCourse = m_dataIndex->course(i);
+
+        if (testCourse->source() == DataIndex::BuiltInResource &&  testCourse->id() == course.id())
+        {
+            switch (KMessageBox::questionYesNo(this, i18n("The selected course is already present as a built-in course."), QString(),
+                                               KGuiItem(i18n("Import as new course"), "dialog-ok"),
+                                               KStandardGuiItem::cancel()
+            ))
+            {
+                case KMessageBox::Yes:
+                    course.setId(QUuid::createUuid());
+                    break;
+                default:
+                    return true;
+            }
+        }
+
+        if (testCourse->source() == DataIndex::UserResource &&  testCourse->id() == course.id())
+        {
+            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected course is already present as an user course."), QString(),
+                                               KGuiItem(i18n("Import as new course"), "dialog-ok"),
+                                               KStandardGuiItem::overwrite(),
+                                               KStandardGuiItem::cancel()
+            ))
+            {
+                case KMessageBox::Yes:
+                    course.setId(QUuid::createUuid());
+                    break;
+                case KMessageBox::No:
+                    overwriteDataIndexCourse = testCourse;
+                    break;
+                default:
+                    return true;
+            }
+        }
+    }
+
+    if (Resource* dataIndexResource = storeResource(&course, overwriteDataIndexCourse))
+    {
+        selectDataResource(dataIndexResource);
+    }
+
+    return true;
+}
+
+bool ResourceEditor::importKeyboardLayout(const QString& path)
+{
+    DataAccess dataAccess;
+    KeyboardLayout keyboardLayout;
+
+    if (!dataAccess.loadKeyboardLayout(path, &keyboardLayout))
+        return false;
+
+    DataIndexKeyboardLayout* overwriteDataIndexKeyboardLayout(0);
+
+    for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
+    {
+        DataIndexKeyboardLayout* const testKeyboardLayout = m_dataIndex->keyboardLayout(i);
+
+        if (testKeyboardLayout->source() == DataIndex::BuiltInResource &&  testKeyboardLayout->name() == keyboardLayout.name())
+        {
+            switch (KMessageBox::questionYesNo(this, i18n("The selected keyboard layout is already present as a built-in keyboard layout."), QString(),
+                                               KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
+                                               KStandardGuiItem::cancel()
+            ))
+            {
+                case KMessageBox::Yes:
+                    break;
+                default:
+                    return true;
+            }
+        }
+
+        if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->name() == keyboardLayout.name())
+        {
+            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected keyboard layout is already present as an user keyboard layout."), QString(),
+                                               KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
+                                               KStandardGuiItem::overwrite(),
+                                               KStandardGuiItem::cancel()
+            ))
+            {
+                case KMessageBox::Yes:
+                    break;
+                case KMessageBox::No:
+                    overwriteDataIndexKeyboardLayout = testKeyboardLayout;
+                    break;
+                default:
+                    return true;
+            }
+        }
+    }
+
+    if (Resource* dataIndexResource = storeResource(&keyboardLayout, overwriteDataIndexKeyboardLayout))
+    {
+        selectDataResource(dataIndexResource);
+    }
+
+    return true;
+}
+

@@ -54,9 +54,11 @@ private slots:
 
 private:
     void prepareResourceRestore(Resource* backup);
-    Resource* addResource(Resource* resource);
+    Resource* storeResource(Resource* resource, Resource* dataIndexResource = 0);
     void selectDataResource(Resource* resource);
     void selectFirstResource();
+    bool importCourse(const QString& path);
+    bool importKeyboardLayout(const QString& path);
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
     Resource* m_currentResource;
