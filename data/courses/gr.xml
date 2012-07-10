@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<course>
+  <id>{711fde1e-6757-47d1-b354-4c428eb34022}</id>
+  <title>Hellenic</title>
+  <description>KTouch training file generated Fri Jun 14 19:46:08 2002
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+  <keyboardLayout>gr</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{3999acd0-261a-4dfd-9b46-4ca90f35431b}</id>
+      <title>Lesson 1</title>
+      <newCharacters>&#x3C6;&#x3BE;</newCharacters>
+      <text>&#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE; &#x3C6;&#x3BE;
+&#x3C6;&#x3BE; &#x3C6;&#x3BE;
+&#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3C6;
+&#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE;&#x3BE;
+&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3C6;
+&#x3C6;&#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE;
+&#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE;
+&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE;
+&#x3C6;&#x3BE;&#x3C6; &#x3C6;
+&#x3C6;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;
+&#x3BE;&#x3BE;&#x3BE;
+&#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3BE;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6;
+&#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3BE; &#x3C6; &#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE; &#x3BE; &#x3C6; &#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3C6;
+&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;
+&#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3BE;
+&#x3BE; &#x3C6;&#x3BE;&#x3BE;
+&#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3C6;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3C6;
+&#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE;
+&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE; &#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;
+&#x3BE;&#x3BE; &#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3C6;
+&#x3C6;&#x3BE;&#x3BE; &#x3BE; &#x3BE;
+&#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6;
+&#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3BE;
+&#x3BE;&#x3C6;&#x3BE;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6; &#x3BE; &#x3BE; &#x3BE; &#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3C6;
+&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE; &#x3C6; &#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;
+&#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE;
+&#x3C6; &#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3BE;
+&#x3BE;&#x3BE;
+&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;
+&#x3BE; &#x3BE;&#x3C6;&#x3C6;
+&#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3C6; &#x3BE; &#x3C6; &#x3C6; &#x3BE;&#x3BE;
+&#x3C6; &#x3C6;&#x3BE;&#x3BE;
+&#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3BE;
+&#x3BE;&#x3BE;&#x3BE; &#x3BE;
+&#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6; &#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE;&#x3C6;
+&#x3BE;&#x3C6;&#x3C6; &#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE;
+&#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE; &#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6; &#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3C6; &#x3BE; &#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3BE;
+&#x3BE;&#x3C6;&#x3BE;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3BE; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3C6;
+&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6;
+&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3C6;
+&#x3C6;&#x3BE;&#x3BE;
+&#x3C6;&#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE; &#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;
+&#x3BE;&#x3C6;&#x3BE;
+&#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE; &#x3BE; &#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6; &#x3BE; &#x3BE;&#x3BE;&#x3BE;
+&#x3BE;&#x3C6; &#x3C6;
+&#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3C6; &#x3BE;&#x3C6; &#x3C6; &#x3BE;&#x3BE; &#x3BE; &#x3C6; &#x3BE; &#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6;&#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;
+&#x3C6;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE;
+&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE; &#x3C6;&#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6;
+&#x3C6;
+&#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE; &#x3C6; &#x3C6;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE;&#x3C6; &#x3BE;&#x3C6;&#x3C6; &#x3C6; &#x3BE;&#x3BE;&#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3BE;&#x3BE; &#x3BE; &#x3BE;&#x3C6;&#x3BE; &#x3C6;&#x3C6; &#x3C6;&#x3BE;&#x3BE; &#x3C6;&#x3C6; &#x3BE; &#x3C6;
+&#x3BE;&#x3BE; &#x3C6;&#x3BE;&#x3BE;&#x3C6;</text>
+    </lesson>
+    <lesson>
+      <id>{db677b20-8e4d-4b69-8033-2ec158d3f56b}</id>
+      <title>Lesson 2</title>
+      <newCharacters>&#x3B4;&#x3BA;</newCharacters>
+      <text>&#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4;&#x3BA;
+&#x3B4;&#x3BA;&#x3B4;&#x3BA;
+&#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3BE;&#x3BA; &#x3BE;&#x3B4; &#x3BA; &#x3B4;&#x3B4; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4;
+&#x3BE;&#x3BA; &#x3BA;
+&#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6; &#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3BE;&#x3B4; &#x3B4;&#x3C6;&#x3C6; &#x3B4;&#x3BA;&#x3B4;
+&#x3B4;&#x3C6;&#x3C6;
+&#x3B4;&#x3BA;&#x3B4; &#x3BA;&#x3B4;&#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3BA; &#x3BE;&#x3BA; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3BE;&#x3B4; &#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3B4; &#x3BA; &#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3BE;&#x3B4; &#x3BA; &#x3B4;&#x3B4;
+&#x3C6;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3B4; &#x3C6;&#x3BA; &#x3BA; &#x3BA; &#x3B4;&#x3C6;&#x3C6; &#x3B4;&#x3C6;&#x3C6; &#x3B4;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3BA;&#x3B4;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE;
+&#x3B4; &#x3BA;&#x3B4;&#x3BA;
+&#x3B4;&#x3BE;&#x3B4; &#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3B4;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6; &#x3B4;&#x3C6;&#x3C6; &#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3B4; &#x3BA; &#x3BE;&#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3BE;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4;
+&#x3BA;&#x3B4;&#x3BA;
+&#x3B4;&#x3BA;&#x3B4; &#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BE;&#x3B4; &#x3BE;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3BA;
+&#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE;
+&#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3BE;&#x3BE;&#x3B4; &#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3BA; &#x3BE;&#x3BA; &#x3C6;&#x3B4;
+&#x3C6;&#x3B4; &#x3C6;&#x3B4;
+&#x3B4;&#x3BE;&#x3B4; &#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3BA; &#x3C6;&#x3BE;&#x3BA; &#x3BA; &#x3B4;&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3BA;&#x3B4;&#x3BA; &#x3BE;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4; &#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3BE;&#x3B4; &#x3B4;&#x3BE;&#x3B4;
+&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4; &#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3BA; &#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4; &#x3B4;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4; &#x3BA;
+&#x3B4;&#x3B4; &#x3BA;&#x3B4;&#x3BA;
+&#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3BE;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;
+&#x3BE;&#x3B4; &#x3B4;
+&#x3C6;&#x3BE;&#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BA; &#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3BE;&#x3B4; &#x3BA;&#x3B4;&#x3BA; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3BE;&#x3B4;
+&#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3B4;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BE;&#x3BA; &#x3BE;&#x3BA; &#x3BE;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3BA; &#x3BE;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3C6;&#x3B4;&#x3C6;&#x3BE;
+&#x3B4;&#x3C6;&#x3BE;
+&#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3B4;&#x3B4; &#x3C6;&#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3BA;
+&#x3BA; &#x3BA;
+&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BA; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3BE;&#x3BA; &#x3B4;&#x3BA;&#x3B4;
+&#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3C6;&#x3BA;&#x3B4;
+&#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4; &#x3BA; &#x3B4; &#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BA;&#x3B4;&#x3BA;
+&#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3C6;&#x3B4; &#x3BE;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3B4; &#x3C6;&#x3BA; &#x3B4; &#x3B4;&#x3C6;&#x3C6; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3BE;&#x3B4;
+&#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE;
+&#x3BE;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3BA;&#x3B4;&#x3BA; &#x3B4;&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA; &#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3BA; &#x3BA;
+&#x3BA;&#x3B4;&#x3BA;
+&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3B4; &#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4; &#x3C6;&#x3BA; &#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3BE;&#x3B4; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4;
+&#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BA;&#x3B4;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3B4;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3BA;
+&#x3BE;&#x3C6;&#x3BA;&#x3B4;
+&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3C6;&#x3C6; &#x3C6;&#x3BA; &#x3B4;&#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3B4; &#x3B4;&#x3C6;&#x3C6; &#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4;
+&#x3B4;&#x3BE;&#x3B4;
+&#x3BA;&#x3B4;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3BE;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4;
+&#x3C6;&#x3B4; &#x3B4;&#x3C6;&#x3C6;
+&#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3C6; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3B4; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3BE;&#x3B4; &#x3BE;&#x3BE;&#x3B4; &#x3C6;&#x3B4; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6;
+&#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE;
+&#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6; &#x3C6;&#x3BA; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3BA; &#x3C6;&#x3BA;
+&#x3B4;&#x3C6;&#x3BE; &#x3B4; &#x3B4;&#x3BA;&#x3C6;
+&#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3B4; &#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3BE;&#x3BE;&#x3B4;
+&#x3BE;&#x3BE;&#x3B4;
+&#x3BA; &#x3B4;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3C6;&#x3B4; &#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3B4;&#x3BA;&#x3BA;&#x3C6; &#x3BE;&#x3BE;&#x3B4; &#x3B4;&#x3BA;&#x3C6;
+&#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA;&#x3BA;&#x3BA;
+&#x3B4;&#x3BE;&#x3B4; &#x3BA; &#x3C6;&#x3BA; &#x3BA; &#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3BA; &#x3BA;&#x3B4;&#x3BA; &#x3C6;&#x3B4; &#x3B4;&#x3BE;&#x3B4; &#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3BA; &#x3BE;&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3B4;&#x3C6;&#x3BE;
+&#x3B4;&#x3BA;&#x3C6; &#x3BE;&#x3BE;&#x3B4;
+&#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3BA; &#x3BE;&#x3B4; &#x3B4;&#x3BA;&#x3C6; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3BE;&#x3BE;&#x3B4;
+&#x3BE;&#x3BE;&#x3B4;
+&#x3C6;&#x3BA; &#x3BE;&#x3B4; &#x3C6;&#x3BA; &#x3BE;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3B4; &#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3BA; &#x3BE;&#x3BE;&#x3B4; &#x3BE;&#x3BA; &#x3C6;&#x3BE;&#x3BA; &#x3B4;&#x3B4; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3B4; &#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3BA;
+&#x3B4;&#x3BA;&#x3BA;&#x3C6;
+&#x3C6;&#x3BA;&#x3BA;&#x3BA; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3BE;&#x3B4; &#x3B4;&#x3B4; &#x3BE;&#x3BA; &#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BE;&#x3BA; &#x3C6;&#x3B4; &#x3BE;&#x3C6;&#x3BA;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3B4; &#x3BE;&#x3B4; &#x3C6;&#x3B4;
+&#x3BE;&#x3B4; &#x3BA;
+&#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3B4; &#x3B4;&#x3BA;&#x3B4; &#x3B4;&#x3B4; &#x3C6;&#x3BA; &#x3C6;&#x3BA; &#x3BE;&#x3BA; &#x3B4;&#x3C6;&#x3C6;&#x3B4; &#x3C6;&#x3BA; &#x3B4;&#x3BA;&#x3B4; &#x3C6;&#x3BE;&#x3BA; &#x3BE;&#x3BA; &#x3BA; &#x3BE;&#x3BA; &#x3B4;&#x3BE;&#x3B4; &#x3C6;&#x3B4;&#x3C6;&#x3BE; &#x3C6;&#x3BA;
+&#x3B4;&#x3B4; &#x3BE;&#x3B4;</text>
+    </lesson>
+    <lesson>
+      <id>{2fb756a1-53f2-4faf-a15c-71b3d99f4f0e}</id>
+      <title>Lesson 3</title>
+      <newCharacters>&#x3C3;&#x3BB;</newCharacters>
+      <text>&#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB; &#x3C3;&#x3BB;&#x3C3;&#x3BB;
+&#x3C6;&#x3BB; &#x3C3; &#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BB; &#x3C3; &#x3C3;&#x3BB;&#x3BE; &#x3C3; &#x3B4;&#x3BA;&#x3C3; &#x3C3;&#x3C6; &#x3BA;&#x3BB; &#x3BB;&#x3BB; &#x3BB;&#x3C3; &#x3BB; &#x3BB;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3C3;&#x3BB;&#x3BA; &#x3BA;&#x3C3; &#x3BE;&#x3BB;
+&#x3BE;&#x3BE;&#x3C3;&#x3C3;
+&#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3BE;&#x3BB; &#x3BB;&#x3BA;&#x3BE; &#x3BB; &#x3BB;&#x3B4;&#x3C6; &#x3C3; &#x3BB;&#x3B4; &#x3BB;&#x3BB; &#x3BB; &#x3BB;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3C6;&#x3BB; &#x3C6;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3BB;&#x3B4;
+&#x3C6;&#x3BB;
+&#x3BA;&#x3BB; &#x3C6;&#x3BB; &#x3C6;&#x3BB; &#x3BB;&#x3BA;&#x3BE; &#x3C6;&#x3BB;&#x3B4; &#x3BB;&#x3B4; &#x3C6;&#x3BB;&#x3B4; &#x3BE;&#x3C3; &#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3BA;&#x3BB; &#x3BE;&#x3BB; &#x3BE;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3C6;&#x3BB;&#x3B4; &#x3C3; &#x3BB;&#x3C3; &#x3C3; &#x3BE;&#x3C3;
+&#x3BA;&#x3BB;
+&#x3BB;&#x3BB; &#x3BB;&#x3B4; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3BB;&#x3B4; &#x3BB; &#x3C6;&#x3C3; &#x3C3;&#x3C6; &#x3B4;&#x3C3;&#x3C3; &#x3BB;&#x3BB; &#x3BE;&#x3BB; &#x3BA;&#x3BB; &#x3BB;&#x3C3; &#x3C3;&#x3BB;&#x3BE; &#x3BA;&#x3BB; &#x3BB;&#x3B4;&#x3C6; &#x3BA;&#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3C3;
+&#x3BB;&#x3C3; &#x3BE;&#x3C3;
+&#x3C3; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BE;&#x3C3; &#x3BA;&#x3BB; &#x3BE;&#x3C3; &#x3BB;&#x3C3; &#x3C6;&#x3BB;&#x3B4; &#x3BE;&#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BB;&#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BB;&#x3BB; &#x3C6;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3C6;&#x3C3; &#x3BB;&#x3B4; &#x3BB;&#x3B4;&#x3BA;
+&#x3C3;&#x3BB;&#x3BE;
+&#x3C3;&#x3BB;&#x3BE; &#x3C6;&#x3BB; &#x3C6;&#x3BB;&#x3B4; &#x3BB;&#x3BA;&#x3BE; &#x3C6;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3C3; &#x3C6;&#x3BB; &#x3BB;&#x3B4; &#x3BB;&#x3B4;&#x3BA; &#x3BA;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3BB; &#x3C3;&#x3C6;
+&#x3B4;&#x3BA;&#x3C3; &#x3BB;&#x3B4;&#x3BA;
+&#x3C3;&#x3BB;&#x3BE; &#x3BA;&#x3BB; &#x3C3;&#x3C6; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3C6;&#x3BB; &#x3C3; &#x3BA;&#x3BB; &#x3BB; &#x3BB;&#x3BB; &#x3C6;&#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3BB;&#x3BB; &#x3C3; &#x3C3; &#x3C3; &#x3B4;&#x3B4;&#x3C3; &#x3C3; &#x3C3;&#x3C6; &#x3C6;&#x3BB;&#x3B4; &#x3BA;&#x3C3;
+&#x3BA;&#x3C3; &#x3C3;
+&#x3BB;&#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3C3; &#x3C3;&#x3C6; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3BB; &#x3BB;&#x3B4;&#x3C6; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3C3; &#x3BB;&#x3B4; &#x3C3; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3BB; &#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3BA;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3C3;&#x3C6;
+&#x3BB;&#x3BB; &#x3BB;&#x3B4;&#x3C6;
+&#x3C3; &#x3BB;&#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3C6;&#x3C3; &#x3BE;&#x3BB; &#x3BB; &#x3BB;&#x3BB; &#x3BB;&#x3C3; &#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BB;&#x3B4;&#x3BA; &#x3BE;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3C3; &#x3C3; &#x3C3;&#x3BB;&#x3BE; &#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3BB;&#x3B4;
+&#x3BE;&#x3BB;
+&#x3BA;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;&#x3C3; &#x3BA;&#x3BB; &#x3BA;&#x3C3; &#x3BA;&#x3BB; &#x3BE;&#x3C3; &#x3BA;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BA;&#x3BB; &#x3BB;&#x3C3; &#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;&#x3BA;&#x3BE; &#x3C3;&#x3BB;&#x3BE;
+&#x3B4;&#x3BA;&#x3C3;
+&#x3BB;&#x3B4; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;&#x3C3; &#x3C3; &#x3C6;&#x3C3; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3BB;&#x3B4;&#x3BA; &#x3C3;&#x3BB;&#x3BA; &#x3B4;&#x3B4;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3BB;&#x3BA;&#x3BE; &#x3C3;
+&#x3BE;&#x3BE;&#x3B4;&#x3BB;
+&#x3C6;&#x3BB; &#x3BB; &#x3C3; &#x3BA;&#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3C3; &#x3BB;&#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3C3;&#x3C6; &#x3C3;&#x3BB;&#x3BE; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BE;&#x3BB; &#x3C6;&#x3BB; &#x3BA;&#x3BB; &#x3C6;&#x3BB; &#x3BE;&#x3BB; &#x3C6;&#x3C3;
+&#x3BB;&#x3C3; &#x3BB;&#x3BB;
+&#x3BB;&#x3BA;&#x3BE; &#x3BB;&#x3BA;&#x3BE; &#x3BB;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3BA;&#x3BB; &#x3C6;&#x3BB; &#x3C6;&#x3BB; &#x3BB;&#x3BB; &#x3C6;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BA;&#x3BB; &#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3C6;&#x3BB; &#x3C6;&#x3BB; &#x3BA;&#x3C3;
+&#x3BB; &#x3BA;&#x3BB;
+&#x3BB;&#x3B4;&#x3C6; &#x3BE;&#x3C3; &#x3C3;&#x3BB;&#x3BA; &#x3C6;&#x3BB;&#x3B4; &#x3B4;&#x3B4;&#x3C3; &#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BB;&#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB; &#x3BB;&#x3BA;&#x3BE; &#x3C3;&#x3BB;&#x3BA; &#x3BE;&#x3BB; &#x3C6;&#x3BB; &#x3BB;&#x3B4;&#x3C6;
+&#x3BB;&#x3BB; &#x3C6;&#x3BB;
+&#x3BB; &#x3C6;&#x3BB; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3BB;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3BA;&#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3BB;&#x3B4;&#x3C6; &#x3BA;&#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3C3;&#x3BB;&#x3BA; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C3;&#x3C6; &#x3B4;&#x3BB;&#x3BA;&#x3BA;
+&#x3B4;&#x3BB;&#x3BA;&#x3BA;
+&#x3C6;&#x3BB;&#x3B4; &#x3BB;&#x3B4; &#x3C3; &#x3BB;&#x3C3; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;&#x3B4; &#x3BA;&#x3BB; &#x3BE;&#x3BB; &#x3BA;&#x3BB; &#x3C6;&#x3BB; &#x3BB;&#x3C3; &#x3BA;&#x3BB; &#x3BB;&#x3C3; &#x3BA;&#x3BB; &#x3BB; &#x3C3;&#x3C6; &#x3BB; &#x3BB;&#x3C3; &#x3BB;&#x3B4;&#x3C6;
+&#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BA;&#x3BB;
+&#x3C3;&#x3C6; &#x3C6;&#x3BB; &#x3BA;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3C6;&#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3BB;&#x3C3; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;&#x3B4;&#x3BA; &#x3C6;&#x3C3; &#x3C3;&#x3C6; &#x3C3;&#x3BB;&#x3BE; &#x3BB;&#x3B4;
+&#x3C3; &#x3BB;
+&#x3BE;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3C6;&#x3BB;&#x3B4; &#x3BB;&#x3B4;&#x3C6; &#x3B4;&#x3BA;&#x3C3; &#x3BA;&#x3C3; &#x3BB;&#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3C6;&#x3BB;&#x3B4; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3C3; &#x3BE;&#x3C3; &#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C3; &#x3C3;
+&#x3BA;&#x3C3; &#x3BB;&#x3B4;
+&#x3BB;&#x3BB; &#x3BB;&#x3BA;&#x3BE; &#x3B4;&#x3B4;&#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3BB;&#x3C3; &#x3C6;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3B4;&#x3C3;&#x3C3; &#x3BE;&#x3BB; &#x3C3;&#x3C6; &#x3C6;&#x3BB;&#x3B4; &#x3BA;&#x3BB; &#x3C6;&#x3C3; &#x3C6;&#x3C3; &#x3BB;&#x3BB; &#x3BB;&#x3B4;&#x3C6; &#x3C3;
+&#x3B4;&#x3BA;&#x3C3; &#x3BB;&#x3C3;
+&#x3BB;&#x3C3; &#x3B4;&#x3B4;&#x3C3; &#x3C3;&#x3BB;&#x3BE; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BE;&#x3BB; &#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3C3;&#x3C6; &#x3B4;&#x3BA;&#x3C3; &#x3B4;&#x3BA;&#x3C3; &#x3C6;&#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3BE;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3BB; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BB;
+&#x3BA;&#x3C3; &#x3C6;&#x3C3;
+&#x3BA;&#x3C3; &#x3B4;&#x3BA;&#x3C3; &#x3BA;&#x3C3; &#x3C6;&#x3BB;&#x3B4; &#x3B4;&#x3B4;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3BA;&#x3BB; &#x3C3; &#x3BA;&#x3C3; &#x3B4;&#x3BA;&#x3C3; &#x3C3;&#x3BB;&#x3BA; &#x3C6;&#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3B4;&#x3B4;&#x3C3; &#x3C6;&#x3BB; &#x3C3;
+&#x3BE;&#x3C3; &#x3BE;&#x3BE;&#x3C3;&#x3C3;
+&#x3BA;&#x3BB; &#x3B4;&#x3BA;&#x3C3; &#x3C3; &#x3C6;&#x3BB; &#x3C6;&#x3C3; &#x3C3; &#x3C6;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3BB;&#x3C3; &#x3C3;&#x3C6; &#x3BB;&#x3C3; &#x3BB;&#x3BB; &#x3C6;&#x3C3; &#x3C3;&#x3C6; &#x3B4;&#x3B4;&#x3C3; &#x3B4;&#x3C3;&#x3C3; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BB;
+&#x3C3;&#x3BB;&#x3BA; &#x3BB;&#x3B4;&#x3BA;
+&#x3C6;&#x3C3; &#x3BA;&#x3BB; &#x3BB;&#x3B4; &#x3BB;&#x3BB; &#x3BA;&#x3BB; &#x3BB;&#x3BB; &#x3C6;&#x3BB; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3BB;&#x3BB; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BA;&#x3BB; &#x3BB;&#x3BB; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3C3;&#x3C6;
+&#x3BB;&#x3B4;
+&#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BA;&#x3C3; &#x3BB;&#x3B4; &#x3BE;&#x3C3; &#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C6;&#x3BB; &#x3C3;&#x3C6; &#x3BB;&#x3BA;&#x3BE; &#x3BA;&#x3BB; &#x3C6;&#x3C3; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BA;&#x3C3; &#x3C3; &#x3B4;&#x3B4;&#x3C3; &#x3B4;&#x3C3;&#x3C3;
+&#x3C6;&#x3BB; &#x3C3;&#x3BB;&#x3BA;
+&#x3BB;&#x3BB; &#x3BB; &#x3BB; &#x3C3;&#x3BB;&#x3BE; &#x3C6;&#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3BE;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3C6;&#x3BB;&#x3B4; &#x3BA;&#x3C3; &#x3BB;&#x3BA;&#x3BE; &#x3BA;&#x3C3; &#x3BB;&#x3B4;&#x3BA; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3BB; &#x3BB;&#x3B4; &#x3BB; &#x3BA;&#x3BB;
+&#x3BE;&#x3C3; &#x3C6;&#x3BB;
+&#x3C6;&#x3C3; &#x3BB;&#x3C3; &#x3C3; &#x3C3; &#x3C3;&#x3C6; &#x3B4;&#x3B4;&#x3C3; &#x3BE;&#x3BB; &#x3C6;&#x3BB;&#x3B4; &#x3BB; &#x3BB;&#x3BA;&#x3BE; &#x3BB;&#x3C3; &#x3BE;&#x3BB; &#x3B4;&#x3C3;&#x3C3; &#x3C6;&#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3BB;&#x3B4;&#x3C6; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3BB;
+&#x3BA;&#x3C3; &#x3C6;&#x3BB;
+&#x3C6;&#x3BB;&#x3B4; &#x3BB;&#x3BA;&#x3BE; &#x3BE;&#x3C3; &#x3C3; &#x3BE;&#x3C3; &#x3BB;&#x3B4; &#x3C3;&#x3BB;&#x3BA; &#x3B4;&#x3BB;&#x3BA;&#x3BA; &#x3BE;&#x3BB; &#x3BA;&#x3C3; &#x3BB; &#x3B4;&#x3B4;&#x3C3; &#x3BB;&#x3B4; &#x3BB;&#x3BA;&#x3BE; &#x3BB;&#x3BB; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3BB;&#x3B4;
+&#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3C3;
+&#x3B4;&#x3C3;&#x3C3; &#x3C3; &#x3BA;&#x3BB; &#x3BB;&#x3B4;&#x3BA; &#x3B4;&#x3B4;&#x3C3; &#x3C6;&#x3BB; &#x3C3; &#x3BB;&#x3B4;&#x3C6; &#x3BA;&#x3BB; &#x3C3;&#x3C6; &#x3C3;&#x3BB;&#x3BE; &#x3BA;&#x3BB; &#x3C3;&#x3C6; &#x3BB;&#x3BA;&#x3BE; &#x3B4;&#x3C3;&#x3C3; &#x3C3;&#x3BB;&#x3BA; &#x3B4;&#x3C3;&#x3C3;
+&#x3BB;&#x3C3; &#x3BB;&#x3C3;
+&#x3C6;&#x3BB; &#x3C3;&#x3C6; &#x3BA;&#x3BB; &#x3BB;&#x3BB; &#x3BA;&#x3BB; &#x3BB;&#x3B4; &#x3BE;&#x3BE;&#x3C3;&#x3C3; &#x3B4;&#x3B4;&#x3C3; &#x3BA;&#x3BB; &#x3C6;&#x3BB;&#x3B4; &#x3BE;&#x3BE;&#x3B4;&#x3BB; &#x3C6;&#x3BB; &#x3BE;&#x3C3; &#x3BE;&#x3BB; &#x3C3;&#x3C6; &#x3BA;&#x3BB; &#x3BA;&#x3BB; &#x3BE;&#x3BB;
+&#x3BE;&#x3BB;
+&#x3BB;&#x3B4;&#x3C6; &#x3BB;&#x3BB; &#x3B4;&#x3B4;&#x3C3; &#x3B4;&#x3B4;&#x3C3; &#x3C3; &#x3BB;&#x3BB; &#x3C3;&#x3BB;&#x3BA; &#x3B4;&#x3BA;&#x3C3; &#x3C3;&#x3BB;&#x3BE; &#x3BB;&#x3BA;&#x3BE; &#x3C6;&#x3BB;&#x3B4; &#x3BA;&#x3BB; &#x3BA;&#x3C3; &#x3C6;&#x3C3; &#x3C6;&#x3BB; &#x3BA;&#x3BB; &#x3BB;&#x3B4;&#x3BA;
+&#x3BB;&#x3B4; &#x3BB;</text>
+    </lesson>
+    <lesson>
+      <id>{55b271ad-5665-47a9-977b-644e7c8ab953}</id>
+      <title>Lesson 4</title>
+      <newCharacters>&#x3B3;&#x3B7;</newCharacters>
+      <text>&#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7;
+&#x3B3;&#x3B7;&#x3B3;&#x3B7; &#x3B3;&#x3B7;&#x3B3;&#x3B7;
+&#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6; &#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6;
+&#x3BE;&#x3B7;&#x3BE; &#x3C6;&#x3B3;&#x3C6;
+&#x3B1;&#x3C3; &#x3B4;&#x3C6; &#x3B3;&#x3B7; &#x3BE;&#x3BA;&#x3BB; &#x3B1;&#x3C3; &#x3B4;&#x3C6; &#x3B3;&#x3B7; &#x3BE;&#x3BA;&#x3BB; &#x3B1;&#x3C3; &#x3B4;&#x3C6; &#x3B3;&#x3B7; &#x3BE;&#x3BA;&#x3BB; &#x3B1;&#x3C3; &#x3B4;&#x3C6; &#x3B3;&#x3B7; &#x3BE;&#x3BA;&#x3BB; &#x3B1;&#x3C3; &#x3B4;&#x3C6;
+&#x3B3;&#x3B7; &#x3BE;&#x3BA;&#x3BB;</text>
+    </lesson>
+    <lesson>
+      <id>{20737df4-586e-4449-a3f5-dbd4a64a80be}</id>
+      <title>Lesson 5</title>
+      <newCharacters>&#x384;&#x3B1;</newCharacters>
+      <text>&#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC; &#x3AC;&#x3AC;&#x3AC;&#x3AC;
+&#x3AC;&#x3AC;&#x3AC;&#x3AC;
+&#x3BA;&#x3B1;&#x3BB;&#x3AC; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3C3;&#x3BA;&#x3AC;&#x3C6;&#x3B7; &#x3B1;&#x3C6;&#x3AE; &#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3BB;&#x3BB;&#x3B1;&#x3B3;&#x3AE; &#x3BA;&#x3B1;&#x3BB;&#x3AC; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3C3;&#x3BA;&#x3AC;&#x3C6;&#x3B7; &#x3B1;&#x3C6;&#x3AE;
+&#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3BB;&#x3BB;&#x3B1;&#x3B3;&#x3AE;
+&#x3AC;&#x3BB;&#x3BB;&#x3B7; &#x3C6;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3B1;&#x3BA;&#x3AE; &#x3B3;&#x3AC;&#x3BB;&#x3B1; &#x3B4;&#x3B1;&#x3C3;&#x3BA;&#x3AC;&#x3BB;&#x3B1; &#x3C3;&#x3AC;&#x3BB;&#x3B1; &#x3AC;&#x3BB;&#x3BB;&#x3B7; &#x3C6;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3B1;&#x3BA;&#x3AE; &#x3B3;&#x3AC;&#x3BB;&#x3B1;
+&#x3B4;&#x3B1;&#x3C3;&#x3BA;&#x3AC;&#x3BB;&#x3B1; &#x3C3;&#x3AC;&#x3BB;&#x3B1;
+&#x3AC;&#x3BB;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3B4;&#x3B1; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3AC;&#x3BB;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3B4;&#x3B1; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7;</text>
+    </lesson>
+    <lesson>
+      <id>{4278e933-6cb6-458e-b5b7-1c1747b2ed89}</id>
+      <title>Lesson 6</title>
+      <newCharacters>&#x3C1;&#x3B8;</newCharacters>
+      <text>&#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8; &#x3C1;&#x3B8;&#x3C1;&#x3B8;
+&#x3C1;&#x3B8;&#x3C1;&#x3B8;
+&#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6; &#x3BE;&#x3B8;&#x3BE; &#x3C6;&#x3C1;&#x3C6;
+&#x3BE;&#x3B8;&#x3BE; 
+&#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1;  &#x3C1;&#x3AC;&#x3B3;&#x3B1;
+&#x3C1;&#x3AC;&#x3B3;&#x3B1; &#x3C1;&#x3AC;&#x3B3;&#x3B1;
+&#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1; &#x3AC;&#x3C1;&#x3B1;
+&#x3AC;&#x3C1;&#x3B1;
+&#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7; &#x3BB;&#x3AC;&#x3B8;&#x3B7;
+&#x3BB;&#x3AC;&#x3B8;&#x3B7;
+&#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3C3;&#x3B1;
+&#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3C1;&#x3AC;
+&#x3BA;&#x3B1;&#x3C1;&#x3AC;
+&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3B1;&#x3C6;&#x3AE;
+&#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7;
+&#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3B1;&#x3C1;&#x3B3;&#x3AC;
+&#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7; &#x3AE;&#x3B8;&#x3B7;
+&#x3AE;&#x3B8;&#x3B7;
+&#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1; &#x3B1;&#x3AE;&#x3C1;
+&#x3B1;&#x3AE;&#x3C1;
+&#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7;
+&#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7;
+&#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC; &#x3BA;&#x3B1;&#x3B8;&#x3B1;&#x3C1;&#x3AC;
+&#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3BA;&#x3BB;&#x3AC;&#x3C3;&#x3B7;
+&#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE; &#x3B4;&#x3B7;&#x3BB;&#x3B1;&#x3B4;&#x3AE;
+&#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1; &#x3B8;&#x3AC;&#x3BB;&#x3B1;&#x3C3;&#x3C3;&#x3B1;
+&#x3C1;&#x3AC;&#x3C3;&#x3B1; &#x3B8;&#x3AE;&#x3C1;&#x3B1; &#x3BA;&#x3B1;&#x3C1;&#x3AC; &#x3BE;&#x3B7;&#x3C1;&#x3AC; &#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C1;&#x3AC;&#x3B4;&#x3B1; &#x3C6;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3B1;&#x3C1;&#x3B3;&#x3AC; &#x3AE;&#x3B8;&#x3B7; &#x3B1;&#x3AE;&#x3C1; &#x3BA;&#x3C1;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3C3;&#x3B7;</text>
+    </lesson>
+    <lesson>
+      <id>{d111768b-0cc5-4724-a742-35616a0baa2d}</id>
+      <title>Lesson 7</title>
+      <newCharacters>&#x3C4;&#x3C5;</newCharacters>
+      <text>&#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5;
+&#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5; &#x3C4;&#x3C5;&#x3C4;&#x3C5;
+&#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6; &#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6;
+&#x3BE;&#x3C5;&#x3BE; &#x3C6;&#x3C4;&#x3C6;
+&#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7;  &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7;
+&#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3C4;&#x3AC;&#x3BE;&#x3B7;
+&#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7; &#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7;
+&#x3B1;&#x3CD;&#x3BE;&#x3B7;&#x3C3;&#x3B7;
+&#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3B8;&#x3CD;&#x3C1;&#x3B1;
+&#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7;
+&#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BB;&#x3AE;&#x3BE;&#x3B7;
+&#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC;
+&#x3BA;&#x3B1;&#x3C4;&#x3AC;
+&#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC;
+&#x3B1;&#x3C5;&#x3B3;&#x3AC;
+&#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1; &#x3B3;&#x3AC;&#x3C4;&#x3B1;
+&#x3B3;&#x3AC;&#x3C4;&#x3B1;
+&#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1;
+&#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1;
+&#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7;
+&#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7;
+&#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7;
+&#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C4;&#x3AE;&#x3BE;&#x3B7;
+&#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1;
+&#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7;
+&#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE;
+&#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AE;
+&#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE;
+&#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3BB;&#x3AE;&#x3BE;&#x3B7; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3B1;&#x3C5;&#x3B3;&#x3AC; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE;</text>
+    </lesson>
+    <lesson>
+      <id>{7d4cfd14-aa8b-4032-9837-6050cf5b263b}</id>
+      <title>Lesson 8</title>
+      <newCharacters>&#x3B4;&#x3B5;</newCharacters>
+      <text>&#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9;
+&#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9; &#x3B5;&#x3B9;&#x3B5;&#x3B9;
+&#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA;
+&#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA; &#x3B4;&#x3B5;&#x3BA; &#x3BA;&#x3B9;&#x3BA;
+&#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7;
+&#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3BB;&#x3AD;&#x3BE;&#x3B7;
+&#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF;
+&#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B5;&#x3B9;&#x3B4;&#x3AF;
+&#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF;
+&#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3BA;&#x3B5;&#x3C1;&#x3AF;
+&#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF; &#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF;
+&#x3BA;&#x3BB;&#x3B1;&#x3B4;&#x3AF;
+&#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC;
+&#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC;
+&#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1;
+&#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1;
+&#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7;
+&#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7;
+&#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5;
+&#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5;
+&#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC;
+&#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5;
+&#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5;
+&#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1;  &#x3B5;&#x3AF;&#x3B4;&#x3B1;
+&#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B5;&#x3AF;&#x3B4;&#x3B1;
+&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3B9;&#x3C3;&#x3AC;&#x3BE;&#x3B9;&#x3B1; &#x3B5;&#x3BE;&#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B5;&#x3AF;&#x3B4;&#x3B1; &#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3B9;&#x3C3;&#x3AC;&#x3BE;&#x3B9;&#x3B1;
+&#x3B5;&#x3BE;&#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B5;&#x3AF;&#x3B4;&#x3B1;</text>
+    </lesson>
+    <lesson>
+      <id>{6bf85b20-ca7f-463f-b88e-70ecc94076a4}</id>
+      <title>Lesson 9</title>
+      <newCharacters>&#x3BF;&#x3C2;</newCharacters>
+      <text>&#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2;
+&#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2; &#x3BF;&#x3C2;
+&#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3;
+&#x3BB;&#x3BF;&#x3BB; &#x3C3;&#x3C2;&#x3C3; &#x3BB;&#x3BF;&#x3BB;
+&#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2;
+&#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3AF;&#x3C3;&#x3BF;&#x3C2;
+&#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2; &#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2;
+&#x3BA;&#x3B1;&#x3BB;&#x3CC;&#x3C2;
+&#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC;
+&#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC; &#x3B4;&#x3BF;&#x3C5;&#x3BB;&#x3B5;&#x3B9;&#x3AC;
+&#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2;
+&#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2;
+&#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2;
+&#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2;
+&#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2;
+&#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3CC;&#x3C2;
+&#x3B8;&#x3B5;&#x3CC;&#x3C2;
+&#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BF;&#x3B4;&#x3B9;&#x3BA;&#x3AC;
+&#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2;
+&#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2;
+&#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2;
+&#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF;
+&#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF; &#x3B9;&#x3B1;&#x3C4;&#x3C1;&#x3B5;&#x3AF;&#x3BF;
+&#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2;
+&#x3B1;&#x3C0;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2; &#x3B1;&#x3C0;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2; &#x3B1;&#x3C0;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2; &#x3B1;&#x3C0;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2; &#x3B1;&#x3C0;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2;</text>
+    </lesson>
+    <lesson>
+      <id>{58f2ba43-ed48-43d3-8a4f-2befc7ba9b23}</id>
+      <title>Lesson 10</title>
+      <newCharacters>&#x3C0;;</newCharacters>
+      <text>&#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;;
+&#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;; &#x3C0;;
+&#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1;
+&#x3BB;&#x3C0;&#x3BB; &#x3B1;;&#x3B1; &#x3BB;&#x3C0;&#x3BB;
+&#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE;
+&#x3C0;&#x3B7;&#x3B3;&#x3AE; &#x3C0;&#x3B7;&#x3B3;&#x3AE;
+&#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9;
+&#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9;
+&#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2; &#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2; &#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2; &#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2; &#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2; &#x3B1;&#x3BD;&#x3AC;&#x3C0;&#x3B1;&#x3C5;&#x3C3;&#x3B7;&#x3C2;
+&#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF;
+&#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF; &#x3C0;&#x3BB;&#x3BF;&#x3AF;&#x3BF;
+&#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE;
+&#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE;
+&#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2;
+&#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2;
+&#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2;
+&#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2;
+&#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3BF;
+&#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2; &#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2; &#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2; &#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2; &#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2;
+&#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2;
+&#x3C0;&#x3BB;&#x3B7;&#x3BA;&#x3C4;&#x3C1;&#x3BF;&#x3BB;&#x3CC;&#x3B3;&#x3B9;&#x3BF; &#x3C0;&#x3BB;&#x3B7;&#x3BA;&#x3C4;&#x3C1;&#x3BF;&#x3BB;&#x3CC;&#x3B3;&#x3B9;&#x3BF; &#x3C0;&#x3BB;&#x3B7;&#x3BA;&#x3C4;&#x3C1;&#x3BF;&#x3BB;&#x3CC;&#x3B3;&#x3B9;&#x3BF; &#x3C0;&#x3BB;&#x3B7;&#x3BA;&#x3C4;&#x3C1;&#x3BF;&#x3BB;&#x3CC;&#x3B3;&#x3B9;&#x3BF;
+&#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1;
+&#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9;
+&#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9;
+&#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3BF;
+&#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3B8;&#x3C5;&#x3C1;&#x3BF;
+&#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2; &#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2; &#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2; &#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2; &#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2;
+&#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7;
+&#x3B5;&#x3BB;&#x3B5;&#x3C5;&#x3B8;&#x3B5;&#x3C1;&#x3AF;&#x3B1; &#x3C4;&#x3C5;&#x3C0;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B1;&#x3C0;&#x3B1;&#x3C1;&#x3B1;&#x3AF;&#x3C4;&#x3B7;&#x3C4;&#x3BF;&#x3C2; &#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B1;&#x3C0;&#x3B1;&#x3BB;&#x3BB;&#x3AC;&#x3C3;&#x3C3;&#x3B5;&#x3C4;&#x3B1;&#x3B9;</text>
+    </lesson>
+    <lesson>
+      <id>{88fad970-8f85-4ebd-aba3-7fcf4f481d80}</id>
+      <title>Lesson 11</title>
+      <newCharacters>&#x3C9;&#x3BC;</newCharacters>
+      <text>&#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC; &#x3C9;&#x3BC;&#x3C9;&#x3BC;
+&#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6; &#x3BE;&#x3BC;&#x3BE; &#x3C6;&#x3C9;&#x3C6;
+&#x3BE;&#x3BC;&#x3BE;
+&#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF; &#x3BC;&#x3AE;&#x3BB;&#x3BF;
+&#x3BC;&#x3AE;&#x3BB;&#x3BF;
+&#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1; &#x3CE;&#x3C1;&#x3B1;
+&#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1;
+&#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1; &#x3C0;&#x3C4;&#x3CE;&#x3BC;&#x3B1;
+&#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1;
+&#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1; &#x3BA;&#x3CD;&#x3BA;&#x3BB;&#x3C9;&#x3BC;&#x3B1;
+&#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1; &#x3B8;&#x3AD;&#x3BC;&#x3B1;
+&#x3B8;&#x3AD;&#x3BC;&#x3B1;
+&#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2;
+&#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2;
+&#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1;
+&#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1;
+&#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1;
+&#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1;
+&#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF; &#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF;
+&#x3B4;&#x3C9;&#x3BC;&#x3AC;&#x3C4;&#x3B9;&#x3BF;</text>
+    </lesson>
+    <lesson>
+      <id>{7e05578a-b385-42d6-b31b-78c724c400e8}</id>
+      <title>Lesson 12</title>
+      <newCharacters>&#x3B2;&#x3BD;</newCharacters>
+      <text>&#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD;
+&#x3B2;&#x3BD;&#x3B2;&#x3BD; &#x3B2;&#x3BD;&#x3B2;&#x3BD;
+&#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6; &#x3BE;&#x3BD;&#x3BE; &#x3C6;&#x3B2;&#x3C6;
+&#x3BE;&#x3BD;&#x3BE;
+&#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2;
+&#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2; &#x3BD;&#x3B1;&#x3CD;&#x3C4;&#x3B7;&#x3C2;
+&#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1;
+&#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1;
+&#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3B2;&#x3AC;&#x3C3;&#x3B7;
+&#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2; &#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2;
+&#x3BD;&#x3B5;&#x3B1;&#x3C1;&#x3CC;&#x3C2;
+&#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1; &#x3BC;&#x3B1;&#x3BF;&#x3CD;&#x3BD;&#x3B1;
+&#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9;
+&#x3B1;&#x3BD;&#x3B5;&#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9;
+&#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2; &#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2;
+&#x3BC;&#x3B1;&#x3CD;&#x3C1;&#x3BF;&#x3C2;
+&#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7;
+&#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7;
+&#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1;
+&#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1;
+&#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1;
+&#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3AF;&#x3B1;
+&#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2;</text>
+    </lesson>
+    <lesson>
+      <id>{cea0213e-a300-407e-bd28-1c3261ca739b}</id>
+      <title>Lesson 13</title>
+      <newCharacters>&#x3C8;,</newCharacters>
+      <text>&#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;,
+&#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;, &#x3C8;,
+&#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA;
+&#x3B4;&#x3C8;&#x3B4; &#x3BA;,&#x3BA; &#x3B4;&#x3C8;&#x3B4;
+&#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;,
+&#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, 
+&#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;,
+&#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;,
+&#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;, &#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;,
+&#x3C8;&#x3B5;&#x3BA;&#x3AC;&#x3B6;&#x3C9;,
+&#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;,
+&#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3CC;&#x3C2;,
+&#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;,
+&#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;,
+&#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;,
+&#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;,
+&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;,
+&#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;,
+&#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3B3;&#x3CD;&#x3C8;&#x3BF;&#x3C2;,
+&#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;, &#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;,
+&#x3C8;&#x3AE;&#x3C6;&#x3BF;&#x3C2;,
+&#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;,
+&#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;, &#x3C8;&#x3B5;&#x3CD;&#x3C4;&#x3B7;&#x3C2;,
+&#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;,</text>
+    </lesson>
+    <lesson>
+      <id>{9f6163d3-fd80-4a16-993e-184372632bef}</id>
+      <title>Lesson 14</title>
+      <newCharacters>&#x3C7;.</newCharacters>
+      <text>&#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;.
+&#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;. &#x3C7;.
+&#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3;
+&#x3BB;.&#x3BB; &#x3C3;&#x3C7;&#x3C3; &#x3BB;.&#x3BB;
+&#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;. &#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;. &#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;. &#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;. &#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;.
+&#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3C3;&#x3C4;&#x3B7;&#x3BA;&#x3B1;.
+&#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;. &#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;.
+&#x3B1;&#x3C1;&#x3C7;&#x3AF;&#x3B6;&#x3C9;.
+&#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;. &#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;. &#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;. &#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;. &#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;. &#x3AC;&#x3C7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3BF;&#x3C2;.
+&#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;.
+&#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3B1;.
+&#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;. &#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;.
+&#x3C3;&#x3C7;&#x3AD;&#x3C3;&#x3B7;.
+&#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;.
+&#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3B5;&#x3AF;&#x3BF;.
+&#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;.
+&#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;.
+&#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;. &#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;.
+&#x3C7;&#x3C1;&#x3AE;&#x3BC;&#x3B1;.</text>
+    </lesson>
+    <lesson>
+      <id>{9ad77175-26b9-4730-9369-e3e10a5c6312}</id>
+      <title>Lesson 15</title>
+      <newCharacters>&#x3B1;&#x3B2;&#x3B3;&#x3B4;&#x3B5;&#x3B6;&#x3B7;&#x3B8;&#x3B9;&#x3BA;&#x3BB;&#x3BC;&#x3BD;&#x3BE;&#x3BF;&#x3C0;&#x3C1;&#x3C3;&#x3C4;&#x3C5;&#x3C6;&#x3C7;&#x3C8;&#x3C9;&#x384;,.</newCharacters>
+      <text>&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3BA;&#x3B1;&#x3BB;&#x3AC; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3C3;&#x3AC;&#x3BB;&#x3B1; &#x3C6;&#x3B1;&#x3BA;&#x3AE; &#x3BA;&#x3B1;&#x3BA;&#x3AE; &#x3B1;&#x3BB;&#x3BB;&#x3AC; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3BA;&#x3B1;&#x3BB;&#x3AC; &#x3B4;&#x3AC;&#x3C3;&#x3B7; &#x3C3;&#x3AC;&#x3BB;&#x3B1; &#x3C6;&#x3B1;&#x3BA;&#x3AE;
+&#x3BA;&#x3B1;&#x3BA;&#x3AE; &#x3B1;&#x3BB;&#x3BB;&#x3AC;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3AC;&#x3BB;&#x3BB;&#x3B7; &#x3C6;&#x3AC;&#x3BA;&#x3B1; &#x3BA;&#x3B1;&#x3BB;&#x3AE; &#x3B3;&#x3AC;&#x3BB;&#x3B1; &#x3C3;&#x3BA;&#x3AC;&#x3BB;&#x3B1; &#x3BA;&#x3BB;&#x3AC;&#x3B4;&#x3B1; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3AC;&#x3BB;&#x3BB;&#x3B7; &#x3C6;&#x3AC;&#x3BA;&#x3B1; &#x3BA;&#x3B1;&#x3BB;&#x3AE;
+&#x3B3;&#x3AC;&#x3BB;&#x3B1; &#x3C3;&#x3BA;&#x3AC;&#x3BB;&#x3B1; &#x3BA;&#x3BB;&#x3AC;&#x3B4;&#x3B1;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3BA;&#x3AC;&#x3C6;&#x3B7; &#x3C3;&#x3AC;&#x3BA;&#x3BA;&#x3B1; &#x3BA;&#x3BB;&#x3AE;&#x3C3;&#x3B7; &#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3BA;&#x3AC;&#x3C6;&#x3B7; &#x3C3;&#x3AC;&#x3BA;&#x3BA;&#x3B1; &#x3BA;&#x3BB;&#x3AE;&#x3C3;&#x3B7; &#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3C4;&#x3B1;&#x3B3;&#x3AE; &#x3B1;&#x3C5;&#x3C4;&#x3AC; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C1;&#x3B7;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C4;&#x3AC;&#x3BE;&#x3B7; &#x3B8;&#x3CD;&#x3C1;&#x3B1; &#x3C4;&#x3B1;&#x3B3;&#x3AE;
+&#x3B1;&#x3C5;&#x3C4;&#x3AC; &#x3C4;&#x3AE;&#x3BE;&#x3B7; &#x3C1;&#x3B7;&#x3C4;&#x3AC; &#x3BA;&#x3B1;&#x3C4;&#x3AC;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1; &#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C6;&#x3CD;&#x3C1;&#x3B1; &#x3C6;&#x3CD;&#x3BB;&#x3BB;&#x3B1;
+&#x3B8;&#x3BB;&#x3AC;&#x3C3;&#x3B7; &#x3B4;&#x3AC;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3B1; &#x3CD;&#x3C3;&#x3C4;&#x3B1;&#x3C4;&#x3B7;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3B8;&#x3C1;&#x3B1;&#x3C3;&#x3CD;&#x3C4;&#x3B7;&#x3C4;&#x3B1; &#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C5;&#x3C1;&#x3C1;&#x3B1;&#x3C6;&#x3AE; &#x3B8;&#x3C1;&#x3B1;&#x3C3;&#x3CD;&#x3C4;&#x3B7;&#x3C4;&#x3B1;
+&#x3C5;&#x3B4;&#x3C1;&#x3BF;&#x3C1;&#x3C1;&#x3BF;&#x3AE;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3B8;&#x3B5;&#x3AF;&#x3B1; &#x3B8;&#x3B5;&#x3C4;&#x3AC; &#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3BB;&#x3AD;&#x3BE;&#x3B7; &#x3B8;&#x3B5;&#x3AF;&#x3B1; &#x3B8;&#x3B5;&#x3C4;&#x3AC;
+&#x3BA;&#x3B5;&#x3C1;&#x3AF; &#x3C3;&#x3B5;&#x3B9;&#x3C1;&#x3AC; &#x3B8;&#x3B7;&#x3C1;&#x3AF;&#x3B1;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C3;&#x3C4;&#x3AF;&#x3BE;&#x3B7; &#x3B8;&#x3AD;&#x3BB;&#x3B5;&#x3C4;&#x3B5;
+&#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3AC; &#x3B5;&#x3BA;&#x3B5;&#x3AF;&#x3B8;&#x3B5; &#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1; &#x3B9;&#x3C3;&#x3CC;&#x3C4;&#x3B7;&#x3C4;&#x3B1; &#x3B9;&#x3C3;&#x3AC;&#x3BE;&#x3B9;&#x3B1; &#x3B5;&#x3BE;&#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B5;&#x3C5;&#x3C0;&#x3B5;&#x3AF;&#x3B8;&#x3B5;&#x3B9;&#x3B1; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3AF;&#x3B1;
+&#x3B9;&#x3C3;&#x3CC;&#x3C4;&#x3B7;&#x3C4;&#x3B1; &#x3B9;&#x3C3;&#x3AC;&#x3BE;&#x3B9;&#x3B1; &#x3B5;&#x3BE;&#x3AC;&#x3C3;&#x3BA;&#x3B7;&#x3C3;&#x3B7; &#x3B5;&#x3C5;&#x3C0;&#x3B5;&#x3AF;&#x3B8;&#x3B5;&#x3B9;&#x3B1;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3B9;&#x3C3;&#x3C4;&#x3CC;&#x3C2; &#x3B8;&#x3B5;&#x3AF;&#x3BF;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3AF;&#x3C3;&#x3BF;&#x3C2; &#x3B9;&#x3C3;&#x3C4;&#x3CC;&#x3C2;
+&#x3B8;&#x3B5;&#x3AF;&#x3BF;&#x3C2; &#x3B1;&#x3C5;&#x3C4;&#x3CC;&#x3C2; &#x3C6;&#x3CC;&#x3C1;&#x3BF;&#x3C2; &#x3B3;&#x3AD;&#x3C1;&#x3BF;&#x3C2;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3BF;&#x3B9;&#x3BA;&#x3B5;&#x3AF;&#x3BF;&#x3C2; &#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B8;&#x3B5;&#x3CC;&#x3C2; &#x3BF;&#x3B9;&#x3BA;&#x3B5;&#x3AF;&#x3BF;&#x3C2;
+&#x3C0;&#x3C1;&#x3CC;&#x3BF;&#x3B4;&#x3BF;&#x3C2; &#x3B5;&#x3B9;&#x3B4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C1;&#x3AF;&#x3B1;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2; &#x3B9;&#x3C3;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2; &#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C1;&#x3AF;&#x3B1;&#x3C2; &#x3B4;&#x3B5;&#x3CD;&#x3C4;&#x3B5;&#x3C1;&#x3BF;&#x3C2;
+&#x3B9;&#x3C3;&#x3BF;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3C3;&#x3BC;&#x3CC;&#x3C2;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C0;&#x3B1;&#x3CD;&#x3C3;&#x3B7;&#x3C2; &#x3C0;&#x3C1;&#x3AD;&#x3C0;&#x3B5;&#x3B9; &#x3C0;&#x3B5;&#x3AF;&#x3C1;&#x3B1;&#x3C2; &#x3C0;&#x3B1;&#x3C0;&#x3C0;&#x3BF;&#x3CD;&#x3C2; &#x3C0;&#x3BB;&#x3BF;&#x3B7;&#x3B3;&#x3CC;&#x3C2; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3C1;&#x3BF;&#x3C0;&#x3AE;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3C0;&#x3B1;&#x3C0;&#x3AC;&#x3C2; &#x3B1;&#x3BE;&#x3B9;&#x3CC;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3C2; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3B1; &#x3B1;&#x3C0;&#x3B1;&#x3C1;&#x3B1;&#x3AF;&#x3C4;&#x3B7;&#x3C4;&#x3BF;&#x3C2; &#x3C0;&#x3BB;&#x3B7;&#x3BA;&#x3C4;&#x3C1;&#x3BF;&#x3BB;&#x3CC;&#x3B3;&#x3B9;&#x3BF;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B4;&#x3B9;&#x3CC;&#x3C4;&#x3B9; &#x3C0;&#x3BB;&#x3AE;&#x3BA;&#x3C4;&#x3C1;&#x3B1; &#x3B5;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3BB;&#x3AE; &#x3C3;&#x3C5;&#x3B3;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3B5;&#x3CD;&#x3C2; &#x3C3;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3BE;&#x3B7;
+&#x3C4;&#x3B5;&#x3C3;&#x3C4; &#x3B5;&#x3BB;&#x3B5;&#x3C5;&#x3B8;&#x3B5;&#x3C1;&#x3AF;&#x3B1; &#x3C4;&#x3C5;&#x3C0;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1; &#x3B1;&#x3C0;&#x3B1;&#x3C1;&#x3B1;&#x3AF;&#x3C4;&#x3B7;&#x3C4;&#x3BF;&#x3C2; &#x3B4;&#x3B1;&#x3BA;&#x3C4;&#x3C5;&#x3BB;&#x3BF;&#x3B3;&#x3C1;&#x3B1;&#x3C6;&#x3AF;&#x3B1;
+&#x3CE;&#x3C1;&#x3B1; &#x3BC;&#x3AE;&#x3BB;&#x3B1; &#x3C4;&#x3CE;&#x3C1;&#x3B1; &#x3BC;&#x3B5;&#x3BB;&#x3C9;&#x3B4;&#x3AF;&#x3B1; &#x3BC;&#x3B9;&#x3C3;&#x3B8;&#x3C9;&#x3C4;&#x3AE;&#x3C2; &#x3B8;&#x3B5;&#x3C9;&#x3C1;&#x3CE; &#x3C9;&#x3C1;&#x3B1;&#x3AF;&#x3BF;&#x3C2; &#x3B3;&#x3C1;&#x3AC;&#x3BC;&#x3BC;&#x3B1; &#x3BA;&#x3C1;&#x3AD;&#x3BC;&#x3B1;
+&#x3B2;&#x3AC;&#x3C3;&#x3B7; &#x3BD;&#x3AD;&#x3BF;&#x3C2; &#x3AC;&#x3BD;&#x3BD;&#x3B1; &#x3B2;&#x3B1;&#x3AF;&#x3BD;&#x3C9; &#x3B2;&#x3C9;&#x3BC;&#x3CC;&#x3C2; &#x3B2;&#x3BB;&#x3AD;&#x3BC;&#x3BC;&#x3B1; &#x3BD;&#x3B1;&#x3C5;&#x3C4;&#x3B9;&#x3BB;&#x3AF;&#x3B1; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7;
+&#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7; &#x3BC;&#x3B1;&#x3C5;&#x3C1;&#x3BF;&#x3C0;&#x3AF;&#x3BD;&#x3B1;&#x3BA;&#x3B1;&#x3C2; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3C0;&#x3C9;&#x3BB;&#x3B5;&#x3AF;&#x3BF; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3B8;&#x3AE;&#x3BA;&#x3B7;
+&#x3BC;&#x3B1;&#x3C5;&#x3C1;&#x3BF;&#x3C0;&#x3AF;&#x3BD;&#x3B1;&#x3BA;&#x3B1;&#x3C2; &#x3B2;&#x3B9;&#x3B2;&#x3BB;&#x3B9;&#x3BF;&#x3C0;&#x3C9;&#x3BB;&#x3B5;&#x3AF;&#x3BF;
+&#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3CD;&#x3BE;&#x3B7;, &#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3BF;&#x3C1;&#x3B5;&#x3AF;&#x3C4;&#x3B7;&#x3C2;, &#x3C5;&#x3C8;&#x3CC;&#x3BC;&#x3B5;&#x3C4;&#x3C1;&#x3BF;, &#x3C8;&#x3C9;&#x3BC;&#x3AF;, &#x3C8;&#x3CD;&#x3BE;&#x3B7;,
+&#x3C8;&#x3AD;&#x3BC;&#x3B1;, &#x3CD;&#x3C8;&#x3BF;&#x3C2;, &#x3C8;&#x3B7;&#x3BB;&#x3BF;&#x3C1;&#x3B5;&#x3AF;&#x3C4;&#x3B7;&#x3C2;, &#x3C5;&#x3C8;&#x3CC;&#x3BC;&#x3B5;&#x3C4;&#x3C1;&#x3BF;,
+&#x3C8;&#x3B9;&#x3B8;&#x3CD;&#x3C1;&#x3B9;&#x3C3;&#x3BC;&#x3B1;, &#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3B7;&#x3C6;&#x3BF;&#x3B4;&#x3AD;&#x3BB;&#x3C4;&#x3B9;&#x3B1;, &#x3C8;&#x3B9;&#x3B8;&#x3CD;&#x3C1;&#x3B9;&#x3C3;&#x3BC;&#x3B1;,
+&#x3C5;&#x3C8;&#x3CE;&#x3BD;&#x3C9;, &#x3C8;&#x3B1;&#x3BB;&#x3AF;&#x3B4;&#x3B9;, &#x3C8;&#x3AC;&#x3C1;&#x3B9;, &#x3C8;&#x3B7;&#x3C6;&#x3BF;&#x3B4;&#x3AD;&#x3BB;&#x3C4;&#x3B9;&#x3B1;,
+&#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;. &#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3B6;&#x3BF;&#x3BC;&#x3B1;&#x3B9;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3AE;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3B1;&#x3C1;&#x3C7;&#x3AE;. &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3BF;&#x3C2;.
+&#x3C7;&#x3C1;&#x3B5;&#x3B9;&#x3AC;&#x3B6;&#x3BF;&#x3BC;&#x3B1;&#x3B9;. &#x3C3;&#x3C7;&#x3BF;&#x3BB;&#x3AE;. &#x3C8;&#x3C5;&#x3C7;&#x3AF;&#x3B1;&#x3C4;&#x3C1;&#x3BF;&#x3C2;. &#x3B1;&#x3C1;&#x3C7;&#x3AE;.
+&#x3B4;&#x3B9;&#x3B1;&#x3C6;&#x3C9;&#x3BD;&#x3CE; &#x3BC;&#x3B5; &#x3CC;&#x3C4;&#x3B9; &#x3BB;&#x3B5;&#x3C2;, &#x3CC;&#x3BC;&#x3C9;&#x3C2; &#x3B8;&#x3AC;&#x3B4;&#x3B9;&#x3BD;&#x3B1; &#x3BA;&#x3B1;&#x3B9; &#x3C4;&#x3B7;&#x3BD; &#x3AF;&#x3B4;&#x3B9;&#x3B1; &#x3BC;&#x3BF;&#x3C5; &#x3C4;&#x3B7; &#x3B6;&#x3C9;&#x3AE; &#x3B3;&#x3B9;&#x3B1;
+&#x3BD;&#x3B1; &#x3AD;&#x3C7;&#x3B5;&#x3B9;&#x3C2; &#x3C4;&#x3BF; &#x3B4;&#x3B9;&#x3BA;&#x3B1;&#x3AF;&#x3C9;&#x3BC;&#x3B1; &#x3BD;&#x3B1; &#x3C4;&#x3BF; &#x3BB;&#x3B5;&#x3C2;.</text>
+    </lesson>
+  </lessons>
+</course>

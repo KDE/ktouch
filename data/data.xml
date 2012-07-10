@@ -52,13 +52,12 @@ Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
     <path>courses/cz.xml</path>
   </course>
   <course>
-    <title>German (Dvorak keyboard layout)</title>
-    <description>An das deutsche dvorak Layout adaptiert von Thomas Michael Weissel
+    <title>German Dvorak II</title>
+    <description>An das Deutsche Dvorak Layout adaptiert von Thomas Michael Weissel
 Dank an: Carsten Mischke und Hanno Behrens
-Homepage: http://xapient.net
-</description>
+Homepage: http://xapient.net</description>
     <keyboardLayout>de(dvorak)</keyboardLayout>
-    <id>{d127d548-2747-4df8-99c1-39e64b7fd0c1}</id>
+    <id>{bd735317-7bf6-46aa-bcb2-7c01fb58345f}</id>
     <path>courses/de.dvorak.xml</path>
   </course>
   <course>
@@ -167,6 +166,15 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <keyboardLayout>gb</keyboardLayout>
     <id>gm</id>
     <path>courses/gb.xml</path>
+  </course>
+  <course>
+    <title>Hellenic</title>
+    <description>KTouch training file generated Fri Jun 14 19:46:08 2002
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>gr</keyboardLayout>
+    <id>{711fde1e-6757-47d1-b354-4c428eb34022}</id>
+    <path>courses/gr.xml</path>
   </course>
   <course>
     <title>Nederlands (auto-generated)</title>
