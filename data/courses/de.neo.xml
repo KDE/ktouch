@@ -1,0 +1,2900 @@
+<?xml version="1.0"?>
+<course>
+ <id>{f19ee751-3545-4b52-83ab-8c5b80d42045}</id>
+ <title>German Neo 2</title>
+ <description>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com> inspiriert durch die Vorlage von Hanno Behrens.
+Fehlerkorrektur von Hans Meine in 2012.
+Homepage: http://neo-layout.org</description>
+ <keyboardLayout>de(neo)</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{28f7394f-f4e2-430b-88f4-77a3ce3e1e6e}</id>
+   <title>Zeigefinger: e und n</title>
+   <newCharacters>en</newCharacters>
+   <text>ee ee ee eeee ee eeee ee eeee ee ee ee eeee ee eeee ee eeee
+nn nn nn nnnn nn nnnn nn nnnn nn nn nn nnnn nn nnnn nn nnnn
+en en en eenn en eenn en eenn en en en eenn en eenn en eenn
+en en en eenn en eenn en eenn en en en eenn en eenn en eenn
+ne ne ne nnee ne nnee ne nnee ne ne ne nnee ne nnee ne nnee
+ne ne ne nnee ne nnee ne nnee ne ne ne nnee ne nnee ne nnee
+en ne en ne en ne en en ne en en ne ne en nennen nennen ne
+en ne en ne en ne ne en ne ne en en ne nennen nennen nennen
+eeen nnne eene nnen enee nenn eeen nnne eene nnen enee nenn
+eeen nnne eene nnen enee nenn eeen nnne eene nnen enee nenn</text>
+  </lesson>
+  <lesson>
+   <id>{33ba561a-4269-4881-bddf-4d1615caa196}</id>
+   <title>Mittelfinger: a und r</title>
+   <newCharacters>ar</newCharacters>
+   <text>aa aa aa aaaa aa aaaa aa aaaa aa aa aa aaaa aa aaaa aa aaaa
+rr rr rr rrrr rr rrrr rr rrrr rr rr rr rrrr rr rrrr rr rrrr
+ar ar ar aarr ar aarr ar aarr ar ar ar aarr ar aarr ar aarr
+ar ar ar aarr ar aarr ar aarr ar ar ar aarr ar aarr ar aarr
+ra ra ra rraa ra rraa ra rraa ra ra ra rraa ra rraa ra rraa
+ra ra ra rraa ra rraa ra rraa ra ra ra rraa ra rraa ra rraa
+ar ra ar ra ar ra ar ar ra ar ar ra ar ar ra rennen rennen
+ra ar ra ar ra ar ra ra ar ra ra ar ra ra ar rennen rennen
+er er an an rann rann rar rar ara ara arne arne rennen
+rennen re an rann rar ara arne rennen aaar rrra aara rrar
+araa rarr aaar rrra aara rrar araa rarr aaar rrra aara rrar
+araa rarr aaar rrra aara rrar araa rarr aaee aann aarr aenr
+rrnn rree rraa rnea aaee aann aarr aenr rrnn rree rraa rnea
+aaee aann aarr aenr rrnn rree rraa rnea</text>
+  </lesson>
+  <lesson>
+   <id>{cf5a0e9f-eeae-4357-b42e-7b066832a0f3}</id>
+   <title>kleine Finger: u und d</title>
+   <newCharacters>ud</newCharacters>
+   <text>uu uu uu uuuu uu uuuu uu uuuu uu uu uu uuuu uu uuuu uu uuuu
+uu uu uu uuuu uu uuuu uu uuuu uu uu uu uuuu uu uuuu uu uuuu
+dd dd dd dddd dd dddd dd dddd dd dd dd dddd dd dddd dd dddd
+dd dd dd dddd dd dddd dd dddd dd dd dd dddd dd dddd dd dddd
+ud ud ud uudd ud uudd ud uudd ud ud ud uudd ud uudd ud uudd
+ud ud ud uudd ud uudd ud uudd ud ud ud uudd ud uudd ud uudd
+du du du dduu du dduu du dduu du du du dduu du dduu du dduu
+du du du dduu du dduu du dduu du du du dduu du dduu du dduu
+uuud dddu uudu ddud uduu dudd uuud dddu uudu ddud uduu dudd
+uuud dddu uudu ddud uduu dudd uuud dddu uudu ddud uduu dudd
+uuaa uuee uunn uurr uudd ddrr ddnn ddee ddaa dduu uuaa uuee
+uunn uurr uudd ddrr ddnn ddee ddaa dduu uuaa eenn rrdd uuaa
+eenn rrdd ddrr nnee aauu uae drn uae drn uae drn uae nrd uae
+nrd uae nrd drn eau drn eau drn nrd uae nrd drn eau drn eau</text>
+  </lesson>
+  <lesson>
+   <id>{b11ad008-b30b-482e-8a56-94ff9b37fffa}</id>
+   <title>Ringfinger: i und t</title>
+   <newCharacters>it</newCharacters>
+   <text>ii ii ii iiii ii iiii ii iiii ii ii ii iiii ii iiii ii iiii
+ii ii ii iiii ii iiii ii iiii ii ii ii iiii ii iiii ii iiii
+tt tt tt tttt tt tttt tt tttt tt tt tt tttt tt tttt tt tttt
+tt tt tt tttt tt tttt tt tttt tt tt tt tttt tt tttt tt tttt
+it it it iitt it iitt it iitt it it it iitt it iitt it iitt
+it it it iitt it iitt it iitt it it it iitt it iitt it iitt
+ti ti ti ttii ti ttii ti ttii ti ti ti ttii ti ttii ti ttii
+ti ti ti ttii ti ttii ti ttii ti ti ti ttii ti ttii ti ttii
+iiit ttti iiti ttit itii titt iiit ttti iiti ttit itii titt
+iiit ttti iiti ttit itii titt iiit ttti iiti ttit itii titt
+iinn iirr iitt iidd ttee ttaa ttii ttuu iidd iitt iirr iinn
+ttuu ttii ttaa ttee uiae dtrn uiae dtrn uiae dtrn eaiu nrtd
+eaiu nrtd eaiu nrtd uiae nrtd uiae nrtd uiae nrtd dtrn eaiu
+dtrn eaiu dtrn eaiu</text>
+  </lesson>
+  <lesson>
+   <id>{3ab5d7f1-77ed-484a-bcb9-e3b3c10464b5}</id>
+   <title>Grundstellung uiae nrtd</title>
+   <newCharacters></newCharacters>
+   <text>uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd
+uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd uiae nrtd
+uiae nrtd dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu
+dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu
+dtrn eaiu dtrn eaiu uiae dtrn uiae dtrn uiae dtrn uiae dtrn
+uiae dtrn uiae dtrn eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd
+eaiu nrtd eaiu nrtd eaiu nrtd uiae dtrn uiae dtrn uiae dtrn
+uiae dtrn uiae dtrn uiae dtrn eaiu nrtd eaiu nrtd eaiu nrtd
+eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd uiae nrtd uiae dtrn
+eaiu dtrn eaiu nrtd uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd
+uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd uiae nrtd uiae dtrn
+eaiu dtrn eaiu nrtd uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd
+uiae nrtd uiae dtrn eaiu dtrn eaiu nrtd</text>
+  </lesson>
+  <lesson>
+   <id>{d149c8bd-a347-4052-a048-93be375df3cd}</id>
+   <title>Sicherheitstest Grundstellung</title>
+   <newCharacters></newCharacters>
+   <text>eee nnn aaa rrr iii ttt uuu ddd nnn eee rrr aaa ttt iii ddd
+uuu eee nnn aaa rrr iii ttt uuu ddd nnn eee rrr aaa ttt iii
+ddd uuu ene ene nen nen ara ara rar rar iti iti tit tit udu
+udu dud dud ene ene nen nen ara ara rar rar iti iti tit tit
+udu udu dud dud dud tit rar nen ene ara iti udu nen rar tit
+dud udu iti ara ene dud tit rar nen ene ara iti udu nen rar
+tit dud udu iti ara ene ene ene nen nen ara ara rar rar iti
+iti tit tit udu udu dud dud ene ene nen nen ara ara rar rar
+iti iti tit tit udu udu dud dud dud tit rar nen ene ara iti
+udu nen rar tit dud udu iti ara ene dud tit rar nen ene ara
+iti udu nen rar tit dud udu iti ara ene enar enar eran eran
+itud itud idut idut udit udit utid utid aren aren aner aner
+enar enar eran eran itud itud idut idut nera nera nare nare
+tidu tidu tudi tudi duti duti ditu ditu rane rane rena rena
+nera nera nare nare tidu tidu tudi tudi udit udit utid utid
+aren aren aner aner enar enar eran eran itud itud idut idut
+udit udit utid utid aren aren aner aner duti duti ditu ditu
+rane rane rena rena nera nera nare nare tidu tidu tudi tudi
+duti duti ditu ditu rane rane rena rena ene ene nen nen ara
+ara rar rar iti iti tit tit udu udu dud dud ene ene nen nen
+ara ara rar rar iti iti tit tit udu udu dud dud dud tit rar
+nen ene ara iti udu nen rar tit dud udu iti ara ene dud tit
+rar nen ene ara iti udu nen rar tit dud udu iti ara ene ene
+ene nen nen ara ara rar rar iti iti tit tit udu udu dud dud
+ene ene nen nen ara ara rar rar iti iti tit tit udu udu dud
+dud dud tit rar nen ene ara iti udu nen rar tit dud udu iti
+ara ene dud tit rar nen ene ara iti udu nen rar tit dud udu
+</text>
+  </lesson>
+  <lesson>
+   <id>{50a1a955-e543-4de5-9d2d-fafde8ee7c62}</id>
+   <title>Silben aus zwei Buchstaben</title>
+   <newCharacters></newCharacters>
+   <text>tu tu tu tu tu tu tu tu tu ta ta ta ta ta ta ta ta ta te te
+te te te te te te te ti ti ti ti ti ti ti ti ti er er er er
+er er er er er en en en en en en en en en eu eu eu eu eu eu
+eu eu eu ei ei ei ei ei ei ei ei ei it it it it it it it it
+it ir ir ir ir ir ir ir ir ir in in in in in in in in in ie
+ie ie ie ie ie ie ie ie at at at at at at at at at au au au
+au au au au au au an an an an an an an an an ar ar ar ar ar
+ar ar ar ar di di di di di di di di di du du du du du du du
+du du de de de de de de de de de da da da da da da da da da
+re re re re re re re re re ri ri ri ri ri ri ri ri ri ru ru
+ru ru ru ru ru ru ru ra ra ra ra ra ra ra ra ra ut ut ut ut
+ut ut ut ut ut ur ur ur ur ur ur ur ur ur un un un un un un
+un un un nu nu nu nu nu nu nu nu nu ne ne ne ne ne ne ne ne
+ne na na na na na na na na na ni ni ni ni ni ni ni ni ni nd
+nd nd nd nd nd nd nd nd eu eu eu eu eu eu eu eu eu ei ei ei
+ei ei ei ei ei ei er er er er er er er er er en en en en en
+en en en en in in in in in in in in in ie ie ie ie ie ie ie
+ie ie it it it it it it it it it ir ir ir ir ir ir ir ir ir
+te te te te te te te te te ti ti ti ti ti ti ti ti ti tu tu
+tu tu tu tu tu tu tu ta ta ta ta ta ta ta ta ta ni ni ni ni
+ni ni ni ni ni nd nd nd nd nd nd nd nd nd ne ne ne ne ne ne
+ne ne ne na na na na na na na na na nu nu nu nu nu nu nu nu
+nu ut ut ut ut ut ut ut ut ut ur ur ur ur ur ur ur ur ur un
+un un un un un un un un de de de de de de de de de da da da
+da da da da da da di di di di di di di di di du du du du du
+du du du du ru ru ru ru ru ru ru ru ru ra ra ra ra ra ra ra
+ra ra re re re re re re re re re ri ri ri ri ri ri ri ri ri
+an an an an an an an an an ar ar ar ar ar ar ar ar ar at at
+at at at at at at at au au au au au au au au au ri ri ri ri</text>
+  </lesson>
+  <lesson>
+   <id>{cf149ba0-f574-4638-98cf-7d3c49a79f5b}</id>
+   <title>Silben aus drei Buchstaben</title>
+   <newCharacters></newCharacters>
+   <text>eid eid eid eid eid eid eid eid eid eid eid eid die die die
+die die die die die die die die die ein ein ein ein ein ein
+ein ein ein ein ein ein nie nie nie nie nie nie nie nie nie
+nie nie nie der der der der der der der der der der der der
+den den den den den den den den den den den den und und und
+und und und und und und und und und nun nun nun nun nun nun
+nun nun nun nun nun nun eid eid eid die eid eid die eid eid
+eid die die die eid die die eid die die eid die eid die eid
+ein ein ein nie ein ein nie ein ein ein nie nie nie ein nie
+nie ein nie nie ein nie ein nie ein der der der den der der
+den der der der den den den der den den der den den der den
+der den der und und und nun und und nun und und und nun nun
+nun und nun nun nun und nun und nun und nun und eid die ein
+nie und nun die eid nie ein nun und eid die ein nie und nun
+die eid nie ein nun und die eid nie ein nun und die eid nie</text>
+  </lesson>
+  <lesson>
+   <id>{5cef672d-c454-4d59-a405-e22cd8819529}</id>
+   <title>Wir sichern die Grundstellung</title>
+   <newCharacters></newCharacters>
+   <text>eeee nnnn aaaa rrrr iiii tttt uuuu dddd eeee nnnn aaaa rrrr
+iiii tttt uuuu dddd uuuu dddd iiii tttt aaaa rrrr eeee nnnn
+uuuu dddd iiii tttt aaaa rrrr eeee nnnn nnnn eeee rrrr aaaa
+tttt iiii dddd uuuu nnnn eeee rrrr aaaa tttt iiii dddd uuuu
+dddd uuuu tttt iiii rrrr aaaa nnnn eeee dddd uuuu tttt iiii
+rrrr aaaa nnnn eeee uiae nrtd uiae nrtd uiae nrtd uiae nrtd
+uiae nrtd uiae nrtd uiae nrtd uiae nrtd dtrn eaiu dtrn eaiu
+dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu dtrn eaiu
+uiae dtrn uiae dtrn uiae dtrn uiae dtrn uiae dtrn uiae dtrn
+uiae dtrn uiae dtrn eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd
+eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd uant ierd uant ierd
+uant ierd uant ierd ntie rdua ntie rdua ntie rdua ntie rdua
+unir ated unir ated unir ated unir ated deta rinu deta rinu
+deta rinu deta rinu edat irun edat irun edat irun edat irun
+nera tidu nera tidu nera tidu nera tidu uinr aetd uinr aetd
+uinr aetd uinr aetd aenr uitd aenr uitd aenr uitd aenr uitd
+dtea rniu dtea rniu dtea rniu dtea rniu rnea dtiu rnea dtiu
+rnea dtiu rnea dtiu eaiu nrtd eaiu nrtd eaiu nrtd eaiu nrtd</text>
+  </lesson>
+  <lesson>
+   <id>{a6bddb44-ead5-462b-8167-ef663a8a21a2}</id>
+   <title>Ein kleines Gedicht</title>
+   <newCharacters></newCharacters>
+   <text>erde an arne der untere rand eint die trauernden taten
+er eint den tau und die ader der narren und anderer arten
+da trauert der tau in den auen der dauernden erde
+nun ran an die ruder und ruder in runden in den ruin
+taten der trauer und taten der tide und taten der andern
+an dir und den deinen und an den anderen deiner art
+dein ende und deine dauernden diener erden deine trauer
+und der ritter der eier rettet die erde und traut nur dir
+denn in deinen reinen einenden reitern
+reiten die eide der narren der erde
+und tarnen die runen der au</text>
+  </lesson>
+  <lesson>
+   <id>{b58c5eec-be1f-4cdb-8263-dbcd58fad7b6}</id>
+   <title>Die Mittelfinger: l und g</title>
+   <newCharacters>lg</newCharacters>
+   <text>ala ala ala ala ala ala aln aln aln aln aln aln ala ala aln
+aln ala ala aln aln ala ala aln aln rgr rgr rgr rgr rgr rgr
+rge rge rge rge rge rge rgr rgr rge rge rgr rgr rge rge rgr
+rgr rge rge alr alr alr alr alr alr rga rga rga rga rga rga
+alr alr rga rga alr alr rga rga alr alr rga rga alt alt alt
+alt alt alt rgi rgi rgi rgi rgi rgi alt alt rgi rgi alt alt
+rgi rgi alt alt rgi rgi ale ale ale ale ale ale rgn rgn rgn
+rgn rgn rgn ale ale rgn rgn ale ale rgn rgn rgn rgn rgn rgn
+ali ali ali ali ali ali rgt rgt rgt rgt rgt rgt ali ali rgt
+rgt ali ali rgt rgt ali ali rgt rgt alu alu alu alu alu alu
+rgd rgd rgd rgd rgd rgd alu alu rgd rgd alu alu rgd rgd alu
+alu rgd rgd ala ale ala ali ala alu ala ale ala ali ala alu
+ala ale ala ali ala alu ala ale ala ali ala alu rgr rgn rgr
+rgt rgr rgd rgr rgn rgr rgt rgr rgd rgr rgn rgr rgt rgr rgd
+rgr rgn rgr rgt rgr rgd lal lul lal lil lal lel grg grd grg
+gtg grg gng lal lul lal lil lal lel grg grd grg gtg grg gng
+del del del del del del ung ung ung ung ung ung del del del
+ung ung ung del del del ung ung ung leg leg leg leg leg leg
+gen gen gen gen gen gen leg leg leg gen gen gen leg leg leg
+gen gen gen alg alg alg alg alg alg lag lag lag lag lag lag
+alg alg alg lag lag lag alg alg alg lag lag lag gel gel gel
+gel gel gel eng eng eng eng eng eng gel gel gel eng eng eng
+gel gel gel eng eng eng gel gel gel eng eng eng gel gel gel</text>
+  </lesson>
+  <lesson>
+   <id>{5dc3c67a-0bb1-4485-8ab1-00b1cad5cf83}</id>
+   <title>Wir üben: l und g</title>
+   <newCharacters></newCharacters>
+   <text>nil nil nil nil nil nil aal aal aal aal aal aal all all all
+all all all tag tag tag tag tag tag url url url url url url
+eng eng eng eng eng eng alt alt alt alt alt alt gel gel gel
+gel gel gel gut gut gut gut gut gut nil nil nil nil nil nil
+tal tal tal tal tal tal all all all all all all aal aal aal
+aal aal aal url url url url url url tag tag tag tag tag tag
+alt alt alt alt alt alt eng eng eng eng eng eng gut gut gut
+gut gut gut gel gel gel gel gel gel tal tal tal tal tal tal
+nil nil all all url url alt alt gut gut tal tal aal aal tag
+tag eng eng gel gel nil end nie all eid url und alt der gut
+ein tal den aal die tag and eng ung gel alle alle alle alle
+geld geld geld geld lied lied lied lied liga liga liga liga
+eile eile eile eile igel igel igel igel geil geil geil geil
+glut glut glut glut elle elle elle elle lage lage lage lage
+leer leer leer leer alge alge alge alge lade lade lade lade
+edel edel edel edel null null null null ulla ulla ulla ulla
+eule eule eule eule egal egal egal egal aula aula aula aula
+alte alte alte alte geile geile geile teile teile teile
+liege liege liege diele diele diele alter alter alter aller
+aller aller delle delle delle latte latte latte luder luder
+luder luder laden laden laden laden laila laila laila laila</text>
+  </lesson>
+  <lesson>
+   <id>{cb90fb0a-9a2c-4163-95a5-2bd5a7e25085}</id>
+   <title>Sicherheitstest für l und g </title>
+   <newCharacters></newCharacters>
+   <text>rgr rgr rgn rgn rgr rgr rgt rgt rgr rgr rgd rgd rgr rgr rge
+rgr rgr rga rgr rgi rgr rgr rgu rgr rgr ala ala ale ale ala
+ala ali ali ala ala alu alu ala ala aln ala ala alr ala alt
+ala ala ald ala ala gugi gage gngr gtgd gega gigu gdgt grgn
+gngr gtgd gugi gage gdgt grgn gega gigu ldlt lrln lela lilu
+lnlr ltld luli lale lela lilu ldlt lrln luli lale lnlr ltld
+gugi gage gngr gtgd gega gigu gdgt grgn gngr gtgd gugi gage
+gdgt grgn gega gigu ldlt lrln lela lilu lnlr ltld luli lale
+lela lilu ldlt lrln luli lale lnlr ltld nil nil all all url
+url alt alt gut gut tal tal aal aal lag lag tag tag eng eng
+gel gel ein ein nie nie nil nil all all url url alt alt gut
+gut tal tal aal aal lag lag tag tag eng eng gel gel ein ein
+nie nie alle alle alte alte elle elle alge alge igel igel
+liga liga lage lage lade lade geld geld lied lied eile eile
+eule eule aula aula geil geil null null ulla ulla egal egal
+edel edel glut glut trug trug reite reite gleite gleite
+nieder nieder lieder lieder glieder glieder regen regen
+legen legen glitt glitt ritt ritt tritt tritt dritt dritt
+glitter glitter dritter dritter euer euer teuer teuer neuer
+neuer ragen ragen lagen lagen tragen tragen trauen trauen
+grauen grauen aal die tag and eng ung gel alt der gut ein
+tal den nil end nie all eid url und igel liga lage lade geld
+lied null ulla egal edel glut trug alle alte elle alge eile
+eule aula reite gleite nieder lieder glieder regen legen
+lagen ragen tragen trauen grauen glitt ritt tritt dritt
+glitter dritter</text>
+  </lesson>
+  <lesson>
+   <id>{b526ae0b-d4c2-4909-892f-1dcd31743e10}</id>
+   <title>Die Zeigefinger: c und h</title>
+   <newCharacters>ch</newCharacters>
+   <text>ece ece ece ece ece ece nhn nhn nhn nhn nhn nhn ece ece nhn
+nhn ece ece nhn nhn ece ece nhn nhn ecn ecn ecn nhe nhe nhe
+ecr ecr ecr nha nha nha ect ect ect nhi nhi nhi ecd ecd ecd
+nhu nhu nhu ecu eci eca ece nhd nht nhr nhn ece eca eci ecu
+nhn nhr nht nhd ece eca eci ecu nhn nhr nht nhd hnh hnh hnh
+hnh hnh hnh cec cec cec cec cec cec hnh hnh cec cec hnh hnh
+cec cec hnh hnh cec cec hne hne hne cen cen cen hna hna hna
+cer cer cer hni hni hni cet cet cet hnu hnu hnu ced ced ced
+cuc cic cac cec hdh hth hrh hnh cec cac cic cuc hnh hrh hth
+hdh ece ece uch uch uch heu heu heu auch auch auch auch euch
+euch euch euch heut heut heut heut hier hier hier hier nach
+nach nach nach dach dach dach dach rauh rauh rauh rauh haut
+haut haut haut cent cent cent cent auch auch euch euch auch
+auch euch euch heut heut hier hier heut heut hier hier dach
+dach nach nach dach dach nach nach rauh rauh haut haut rauh
+rauh haut haut dach nach nach dach dach nach nach dach nach</text>
+  </lesson>
+  <lesson>
+   <id>{5e4c33a8-0942-4c54-a6f1-514cbb5b496e}</id>
+   <title>Wir üben: c und h </title>
+   <newCharacters></newCharacters>
+   <text>celle celle celle creature creature creature celle celle
+creature creature cent cent cent chance chance chance cent
+cent chance chance charta charta charta chen chen chen
+charta charta chen chen chirurg chirurg chirurg china china
+haar haar haar heer heer heer haar haar heer heer herr herr
+herr hell hell hell herr herr hell hell hall hall hall hagel
+hagel hagel hall hall hagel hagel hund hund hund hand hand
+hauen hauen hauen heute heute heute hauen hauen heute heute
+hut hut hut haut haut haut hundert hundert hundert haut haut
+hundert hundert heilig heilig heilig heilen heilen heilen
+heilig heilig heilen heilen halten halten halten heiter
+heiter heiter halten halten heiter heiter heucheln heucheln
+heucheln handtuch handtuch handtuch heucheln heucheln
+handtuch handtuch hechlen hecheln hecheln hechten hechten
+hechten hecheln hecheln hechten hechten hindurch hindurch
+hindurch celle creature cent chance charta chen chirurg
+china haar heer herr hell hall hagel hand hauen heute haut
+hundert heilig heilen halten heucheln handtuch hecheln
+hechten hindurch hund hut hinter heiter</text>
+  </lesson>
+  <lesson>
+   <id>{7e962f64-6f28-42a9-9f25-96a526db4e0b}</id>
+   <title>Sicherheitstest für c und h </title>
+   <newCharacters></newCharacters>
+   <text>aal die tag and eng ung gel alt der gut ein tal den nil end
+nie all eid url und igel liga lage lade geld lied null ulla
+egal edel glut trug alle alte elle alge eile eule aula reite
+gleite nieder lieder glieder regen legen lagen ragen tragen
+trauen grauen glitt ritt tritt dritt glitter dritter haar
+haar heer heer herr herr hell hell hall hall china china
+hagel hagel hand hand hund hund hauen hauen heute heute haut
+haut heilig heilig heilen heilen celle celle creature
+creature hundert hundert cent cent chance chance halten
+halten charta charta handtuch handtuch chirurg chirurg
+heucheln heucheln hecheln hecheln hechten hechten hindurch
+hindurch hut hut hat hat hinter hinter heiter heiter in
+celle rennt ein chirurg hundert hunden hinterher und ein
+herr hat alle haare nach china getan der heult heute die
+heiter runter der heilige lehrer hat lange gehauen der hat
+chancen die helle haut der hechte nun hat ein taucher den
+hecht hundert heere hatten ein handtuch eine chance gina
+rennt nach china chirurg und hund grund geht licht an lege
+halte die uhr den herren hin nie hing an den nagel eine uhr
+die charta der heiligen hing da heute dran</text>
+  </lesson>
+  <lesson>
+   <id>{c40e4439-2dd4-4c81-91c7-89c7b7a45c63}</id>
+   <title>Mehr Zeigefinger: o und s</title>
+   <newCharacters>os</newCharacters>
+   <text>eoe eoe eoe eoe eoe eoe nsn nsn nsn nsn nsn nsn eoe eoe nsn
+nsn eoe eoe nsn nsn eoe eoe nsn nsn eos eos eos eon eon eon
+eoh eoh eoh eor eor eor eog eog eog eot eot eot eod eod eod
+nso nso nso nse nse nse nsc nsc nsc nsa nsa nsa nsl nsl nsl
+nsi nsi nsi nsu nsu nsu oeo oeo oeo oeo oeo oeo sns sns sns
+sns sns sns oeo oeo sns sns oeo oeo sns sns oeo oeo sns sns
+oes oes oes oen oen oen oeh oeh oeh oer oer oer oeg oeg oeg
+oet oet oet oed oed oed sno sno sno sne sne sne snc snc snc
+sna sna sna snl snl snl sni sni sni snu snu snu eoe eoe oeo
+oeo nsn nsn sns sns eoc eoc oec oec nsh nsh snh snh eoa eoa
+oea oea nsr nsr snr snr eol eol oel oel nsg nsg sng sng eoi
+eoi oei oei nst nst snt snt eou eou oeu oeu nsd nsd snd snd
+otto otto otto otto toto toto toto toto doch doch doch doch
+lohn lohn lohn lohn doch doch doch doch gong gong gong gong
+tore tore tore tore rico rico rico rico toll toll toll toll
+noch noch noch noch ohne ohne lord lord ohio ohio hugo hugo
+tour tour loch loch dorn dorn cool cool horn horn ahoi ahoi
+ast ast ast ast eis eis eis eis das das das das aus aus aus
+aus sie sie sie sie uns uns uns uns ist ist ist ist see see
+see see ast ast eis eis das das aus aus sie sie uns uns ist
+ist see see sind sind sind sind dies dies dies dies hast
+hast hast hast seid seid seid seid sein sein sein sein nase
+nase nase nase seit seit seit seit sehr sehr sehr sehr nass
+nass nass nass hals hals hals hals solch solch hose hose
+strolch strolch ostsee ostsee sonne sonne solange solange
+sorge sorge storch storch dolch dolch stroh stroh dose dose
+ostern ostern soldat soldat sonst sonst sehr sehr sehr nass</text>
+  </lesson>
+  <lesson>
+   <id>{1c87c6f3-a2b0-45e2-a914-282b20198bb9}</id>
+   <title>Wir üben: o und s</title>
+   <newCharacters></newCharacters>
+   <text>otto otto otto toto toto toto doch doch doch lohn lohn lohn
+gong gong gong tore tore tore rico rico rico toll toll toll
+noch noch noch ohne ohne ohne lord lord lord ohio ohio ohio
+hugo hugo hugo tour tour tour loch loch loch dorn dorn dorn
+cool cool cool horn horn horn ahoi ahoi ahoi hallo hallo
+hallo tango tango tango hallo hallo tango tango carol carol
+carol tutor tutor tutor drohung drohung drohung drohung
+dolch dolch dolch theorie theorie theorie ast ast ast eis
+eis eis das das das aus aus aus sie sie sie uns uns uns ist
+ist ist see see see sind sind sind dies dies dies hast hast
+hast seid seid seid sein sein sein nase nase nase seit seit
+seit sehr sehr sehr nass nass nass hals hals hals gast gast
+gast rast rast rast steht steht steht geist geist geist
+reise reise reise gleis gleis gleis seins seins seins alles
+alles alles solch solch solch strolch strolch strolch solch
+solch strolch strolch oslo oslo oslo oslo soll soll soll
+soll oslo oslo soll soll oslo soll dose dose dose dose hose
+hose hose hose dose dose hose hose dose hose ostern ostern
+ostern ostsee ostsee ostsee ostern ostern ostsee ostsee
+sonst sonst sonst solange solange solange sonst sonst
+solange solange sonne sonne sonne soldat soldat soldat sonne
+sonne soldat soldat storch storch storch stroh stroh stroh
+</text>
+  </lesson>
+  <lesson>
+   <id>{045112c4-5a5d-4cb3-825c-dce5cb13db11}</id>
+   <title>Sicherheitstest für o und s</title>
+   <newCharacters></newCharacters>
+   <text>haar heer herr raucher hell hall china code hagel halogen
+hand hund hauen heute haut heilig heilen celle creature
+hundert cent chance halten charta handtuch chicago taucher
+chirurg heucheln hecheln hechten lachen chlor chor hindurch
+tracht lehrer hochachtung hut dach hat hinter heiter licht
+otto otto toto toto doch doch loch loch noch noch lohn lohn
+sohn sohn gong gong gott gott tore tore tote tote toll toll
+soll soll cool cool ohne ohne lord lord dorn dorn horn horn
+ast ast hast hast sie sie eis eis das das aus aus uns uns
+ist ist see see sind sind dies dies seid seid sein sein nase
+nase seit seit sehr sehr nass nass hals hals solche strolche
+sind soldaten sie singen lieder nur solange die sonne
+scheint sonst nicht der herr aus halle hatte ein handtuch in
+der tasche und auch noch ein hundert euro schein der storch
+nistet dort und steht sehr gerne in der ostsee so dass die
+eule ihn sieht alle chinesischen chirurgen sind seit heute
+in chicago und singen ohne sorge solche lieder ostern gehe
+ich aus hochachtung nach celle und suche eier solange es
+nicht regnet lese das und erledige die genannten sachen
+sonst haue ich dich richtig lange durch</text>
+  </lesson>
+  <lesson>
+   <id>{67e1f6fc-8267-43da-8c4d-aa5ffcde04c1}</id>
+   <title>Wichtige Konsonanten: w und k</title>
+   <newCharacters>wk</newCharacters>
+   <text>ece ewe ewe ewe ece ewe ece ewe ece ewe ewe ewe ece ewe ece
+nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn nkn nhn
+ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo
+nkd nkt nkr nkn nks nkd nkt nkr nkn nks nkd nkt nkr nkn nks
+ews ewk ewn ewh ewr ewg ewt ewd ews ewk ewn ewh ewr ewg ewt
+ewd nko nkw nke nkc nka nkl nki nku nko nkw nke nkc nka nkl
+nki nku wow wew wcw waw wlw wiw wuw wow wew wcw waw wlw wiw
+wuw ksk knk khk krk kgk ktk kdk ksk knk khk krk kgk ktk kdk
+wsw wkw wnw whw wrw wgw wtw wdw wsw wkw wnw whw wrw wgw wtw
+wdw kok kwk kek kck kak klk kik kuk kok kwk kek kck kak klk
+kik kuk wed wet wer wen wed wet wer wen wed wet wer wen wed
+wet wer wer wer wer was was was wer wer wer was was was wer
+wer wer wie wie wie wut wut wut wie wie wie wut wut wut wie
+wie wie wer was wie wut wut wie was wer wer was wie wut wut
+wie was nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn
+nkn nhn nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd
+nkt nkr knd knt knr kne kna kni knu knd knt knr kne kna kni
+knu knd ack ack ack kat kat kat ack kat ack kat ack kat ack
+kat ack kiwi kiwi kiwi wolke wolke wolke kiwi kiwi winkel
+winkel winkel kuwait kuwait kuwait winkel winkel kuwait
+kuwait weltkarte weltkarte weltkarte kunstwerk kunstwerk
+kunstwerk weltkarte weltkarte kunstwerk kunstwerk weinkeller
+weinkeller weinkeller krankenwagen krankenwagen krankenwagen
+weinkeller weinkeller krankenwagen krankenwagen weglocken
+weglocken weglocken kilowatt kilowatt kilowatt weglocken
+weglocken kilowatt kilowatt wohlklang wohlklang wohlklang
+karawane karawane karawane wohlklang wohlklang karawane
+karawane wirklich wirklich wirklich kauderwelsch
+kauderwelsch kauderwelsch wirklich wirklich kauderwelsch
+kauderwelsch wecker wecker wecker krankenschwester
+krankenschwester krankenschwester wecker wecker
+krankenschwester krankenschwester wickeln wickeln wickeln
+wunderkind wunderkind wunderkind wickeln wickeln wunderkind
+wunderkind</text>
+  </lesson>
+  <lesson>
+   <id>{4ff2f2cc-f227-4b9d-ac09-9fe56d602b72}</id>
+   <title>Wir üben: w und k</title>
+   <newCharacters></newCharacters>
+   <text>ece ewe ewe ewe ece ewe ece ewe ece ewe ewe ewe ece ewe ece
+nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn nkn nhn
+ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo ewu ewi ewa ewe ewo
+nkd nkt nkr nkn nks nkd nkt nkr nkn nks nkd nkt nkr nkn nks
+ews ewk ewn ewh ewr ewg ewt ewd ews ewk ewn ewh ewr ewg ewt
+ewd nko nkw nke nkc nka nkl nki nku nko nkw nke nkc nka nkl
+nki nku wow wew wcw waw wlw wiw wuw wow wew wcw waw wlw wiw
+wuw ksk knk khk krk kgk ktk kdk ksk knk khk krk kgk ktk kdk
+wsw wkw wnw whw wrw wgw wtw wdw wsw wkw wnw whw wrw wgw wtw
+wdw kok kwk kek kck kak klk kik kuk kok kwk kek kck kak klk
+kik kuk wed wet wer wen wed wet wer wen wed wet wer wen wed
+wet wer wer wer wer was was was wer wer wer was was was wer
+wer wer wie wie wie wut wut wut wie wie wie wut wut wut wie
+wie wie wer was wie wut wut wie was wer wer was wie wut wut
+wie was nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn
+nkn nhn nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd
+nkt nkr knd knt knr kne kna kni knu knd knt knr kne kna kni
+knu knd ack ack ack kat kat kat ack kat ack kat ack kat ack
+kat ack kiwi kiwi kiwi wolke wolke wolke kiwi kiwi winkel
+winkel winkel kuwait kuwait kuwait winkel winkel kuwait
+kuwait weltkarte weltkarte weltkarte kunstwerk kunstwerk
+kunstwerk weltkarte weltkarte kunstwerk kunstwerk weinkeller
+weinkeller weinkeller krankenwagen krankenwagen krankenwagen
+weinkeller weinkeller krankenwagen krankenwagen weglocken
+weglocken weglocken kilowatt kilowatt kilowatt weglocken
+weglocken kilowatt kilowatt wohlklang wohlklang wohlklang
+karawane karawane karawane wohlklang wohlklang karawane
+karawane wirklich wirklich wirklich kauderwelsch
+kauderwelsch kauderwelsch wirklich wirklich kauderwelsch
+kauderwelsch wecker wecker wecker krankenschwester
+krankenschwester krankenschwester wecker wecker
+krankenschwester krankenschwester wickeln wickeln wickeln
+wunderkind wunderkind wunderkind wickeln wickeln wunderkind
+wunderkind</text>
+  </lesson>
+  <lesson>
+   <id>{fc17e16e-ac0b-421b-b0fa-0f19f4629f7c}</id>
+   <title>Sicherheitstest für w und k</title>
+   <newCharacters></newCharacters>
+   <text>ast eis wut das aus wie sie uns was ist see wer es sei wen
+aal die tag and eng ung gel alt der gut ein karikatur
+kathode kathedrale kerker klassiker kleiderhaken klicken
+kniekehle kochkunst knochen konditorei tal den nil end nie
+all eid url und igel liga lage lade geld lied null ulla egal
+edel glut trug konkurs kontaktieren kontrolleur krankheit
+wachhund waghalsig wagen wahrheit wanduhr wasserhahn alle
+alte elle alge eile eule aula reite gleite nieder lieder
+glieder regen legen lagen ragen tragen trauen grauen gewehr
+darwin wucher erwies gewehr darwin wucher erwies etikett
+hektik risiko stickig grotesk trinkgeld warnstreik keks
+glitt ritt tritt dritt glitter dritter celle creature cent
+chance charta chen chicago chirurg chlor china code chor
+erkundet dekadentes kirche ikarus schwan gewalt wache etwas
+wunsch sowie ingwer kakao kork keile kick kelch kiste haar
+heer herr hell hall hagel halogen hand hauen heute haut
+hundert heilig heilen halten erika denken danke gockel
+kaktus kaiserkrone kalkstein krokodil wahnsinnig kilokalorie
+wasserwaage klecks wasserschlange heucheln handtuch hecheln
+hechten hindurch hochachtung hund hut hinter heiter
+kokosnuss wachs katholik kontakt walnuss kiwi wolke winkel
+kuwait weltkarte kunstwerk weinkeller krankenwagen sorge
+sonne soldat solange storch solch strolch stroh dose hose
+ostern ostsee sonst weglocken kilowatt wohlklang karawane
+wirklich kauderwelsch wecker krankenschwester wickeln
+wunderkind</text>
+  </lesson>
+  <lesson>
+   <id>{289cc592-bccd-4350-9735-2f4533308fd6}</id>
+   <title>Neue Buchstaben: p und m</title>
+   <newCharacters>pm</newCharacters>
+   <text>ece epe epe epe ece epe epe epe ece epe epe epe nhn nmn nmn
+nmn nhn nmn nmn nmn nhn nmn nmn nmn epe epd ept epr epn eps
+nmn nmu nmi nma nme nmo epe epd ept epr epn eps nmn nmu nmi
+nma nme nmo epn epr epg eph epk eps nme nma nml nmc nmw nmo
+epn epr epg eph epk eps nme nma nml nmc nmw nmo cec pep pep
+pep cec pep pep pep cec pep pep pep hnh mnm mnm mnm hnh mnm
+mnm mnm hnh mnm mnm mnm pep ped pet per pen pes mnm mnu mni
+mna mne mno pep ped pet per pen pes mnm mnu mni mna mne mno
+pen per peg peh pek pes mne mna mnl mnc mnw mno pen per peg
+peh pek pes mne mna mnl mnc mnw mno pph ppk pps ppn mmc mmw
+mmo mme ppc ppw ppo ppe mmh mmk mms mmn pph ppk pps ppn mmc
+mmw mmo mme ppc ppw ppo ppe mmh mmk mms mmn palmwedel
+palmwedel palmwedel pantomime pantomime pantomime paradigma
+paradigma paradigma parameter parameter parameter parlament
+parlament parlament parteimitglied parteimitglied
+parteimitglied perlmutt perlmutt perlmutt phantom phantom
+phantom personalcomputer personalcomputer personalcomputer
+pessimismus pessimismus pessimismus philharmonie
+philharmonie philharmonie plump plump plump pommes pommes
+pommes portemonnaie portemonnaie portemonnaie praktikum
+praktikum praktikum prisma prisma prisma manuskript
+manuskript manuskript megaphon megaphon megaphon
+metamorphose metamorphose metamorphose minuspol minuspol
+minuspol mikroskopisch mikroskopisch mikroskopisch
+mitschleppen mitschleppen mitschleppen musikgruppe
+musikgruppe musikgruppe morphium morphium morphium
+moralpredigt moralpredigt moralpredigt muttersprachler
+muttersprachler muttersprachler</text>
+  </lesson>
+  <lesson>
+   <id>{68363ccc-69d5-4b68-a85b-11dd3aca4b86}</id>
+   <title>Wir üben: p und m</title>
+   <newCharacters></newCharacters>
+   <text>park park parole parole park park parole parole spinat
+spinat sport sport spinat spinat sport sport pilger pilger
+pillen pillen pinie pinie pirat pirat poren poren pokal
+pokal poker poker pointe post post pol pol purpur purpur
+tippst tippst kippst kippst spiel spiel spreu spreu kasper
+kasper kapsel kapsel april april apache apache alpen alpen
+merke merke meide meide reime reime melde melde immer immer
+mager mager tempo tempo emsig emsig palme palme leime leime
+umher umher kam kam dem dem mir mir mag mag male male milde
+milde mehr mehr arme arme produktweg produktweg produktweg
+picknick picknick picknick passwort passwort passwort park
+park park papst papst papst papagei papagei papagei panik
+panik panik packen packen packen papier papier papier
+paprika paprika paprika pauke pauke pauke protokoll
+protokoll protokoll postsendung postsendung postsendung
+pistole pistole pistole polarstern polarstern polarstern
+pinguin pinguin pinguin phosphor phosphor phosphor politiker
+politiker politiker parkett parkett parkett makkaroni
+makkaroni makkaroni makrele makrele makrele malawi malawi
+malawi massaker massaker massaker maske maske maske
+mathematiker mathematiker mathematiker mechaniker mechaniker
+mechaniker meerschweinchen meerschweinchen meerschweinchen
+megawatt megawatt megawatt mehrwertsteuer mehrwertsteuer
+mehrwertsteuer mittwoch mittwoch mittwoch moskwa moskwa
+moskwa mundharmonika mundharmonika mundharmonika
+melankoliker melankoliker melankoliker muskel muskel muskel</text>
+  </lesson>
+  <lesson>
+   <id>{502a8042-f760-4cc7-9a31-5888b37a3cc9}</id>
+   <title>Sicherheitstest für p und m</title>
+   <newCharacters></newCharacters>
+   <text>spiel spreu kasper kapsel april apache alpen merke meide
+reime melde immer mager tempo emsig palme sorge sonne soldat
+solange storch solch strolch stroh dose hose ostern ostsee
+sonst portemonnaie postsendung pottwal praktikum primel
+prisma produktweg programmiersprache karikatur kathode
+kathedrale kerker klassiker kleiderhaken klicken kniekehle
+kochkunst knochen konditorei magnesium makkaroni makrele
+malawi maniok manuskript markierung maschinengewehr maske
+massaker massenmord konkurs kontaktieren kontrolleur
+krankheit wachhund waghalsig wagen wahrheit wahrnehmung
+wanduhr wasserhahn philharmonie phosphor picknick piktogramm
+pinguin pistole plattwurm plump plutonium polarstern
+politiker pommes gewehr darwin wucher erwies etikett hektik
+risiko stickig grotesk trinkgeld warnstreik keks
+metamorphose mikroskopisch minuspol mitschleppen mittelpunkt
+mittelwert mittwoch moldawien moralpredigt morphium erkundet
+dekadentes kirche ikarus schwan gewalt wache etwas wunsch
+sowie ingwer kakao kork keile kick kelch kiste packen
+palmwedel panik pantomime papa papagei papst papier paprika
+paradigma parallelogramm parameter parkett park erika denken
+danke gockel kaktus kaiserkrone kalkstein krokodil
+wahnsinnig kilokalorie wasserwaage klecks wasserschlange
+mathematiker matrose mechaniker medikament meerschweinchen
+megawatt megaphon mehrwertsteuer melankoliker kokosnuss
+wachs katholik kontakt walnuss kiwi wolke winkel kuwait
+weltkarte kunstwerk weinkeller krankenwagen park parole
+spinat sport pilger pillen pinie pirat poren pokal poker
+pointe post pol purpur tippst kippst weglocken kilowatt
+wohlklang karawane wirklich kauderwelsch wecker
+krankenschwester wickeln wunderkind parlament parteimitglied
+partikel passwort pauke pelikan perlmutt personalcomputer
+pessimismus petrochemie phantom moskwa mundharmonika
+musikgruppe muskatnuss muskel muttersprachler protokoll
+</text>
+  </lesson>
+  <lesson>
+   <id>{1e3ca905-f338-4730-8fa9-572743e509e7}</id>
+   <title>Neue Buchstaben: z und b</title>
+   <newCharacters>zb</newCharacters>
+   <text>epe eze eze eze epe eze eze eze epe eze eze eze nmn nbn nbn
+nbn nmn nbn nbn nbn nmn nbn nbn nbn epe eze eoe eze epe eze
+eoe nmn nbn nsn nbn nmn nbn nns eze nbn eze nbn eze nbn eze
+nbn eze nbn ezh ezk ezs ezb ezm ezn nbc nbw nbo nbz nbp nbe
+ezm ezb ezs ezk ezh ezn nbp nbz nbo nbw nbc nbe pep zez zez
+zez pep zez zez zez pep zez zez zez mnm bnb bnb bnb mnm bnb
+bnb bnb mnm bnb bnb bnb pep zez oeo zez pep zez oeo mnm bnb
+sns bnb mnm bnb sns zez bnb zez bnb zez bnb zez bnb zez bnb
+zeh zek zes zeb zem zen bnc bnw bno bnz bnp bne zem zeb zes
+zek zeh zen bnp bnz bno bnw bnc bne uiae eozp dtrn nsbm uiae
+ozpe dtrn sbmn uiae epzo dtrn nmbs uiae pzoe dtrn mbsn eze
+nbn eze nbn zange zange zange zange zunge zunge zunge zunge
+ziehe ziehe ziehe ziehe ziege ziege ziege ziege sitzte
+sitzte sitzte sitzte ritzte ritzte ritzte ritzte letzte
+letzte letzte letzte herzen herzen herzen scherzen scherzen
+scherzen schmerzen schmerzen schmerzen schmerzen aber aber
+aber aber bald bald bald bald bann bann bann bann blau blau
+blau blau beide beide beide beide klebet klebet klebet
+klebet beiden beiden klebet klebet bekam bekam bekam bekam
+liebe liebe liebe liebe dabei dabei dabei dabei bitte bitte
+bitte bitte zaubern zaubern zaubern zebra zebra zebra
+zauberstab zauberstab zauberstab zeilenumbruch zeilenumbruch
+zeilenumbruch badezimmer badezimmer badezimmer beelzebub
+beelzebub beelzebub benzinpumpe benzinpumpe benzinpumpe
+besitzen besitzen besitzen zeitbombe zeitbombe zeitbombe
+zeitungsschreiber zeitungsschreiber zeitungsschreiber
+zerbrechlich zerbrechlich zerbrechlich bestellzettel
+bestellzettel bestellzettel bezahlen bezahlen bezahlen
+bulldozer bulldozer bulldozer bezirk bezirk bezirk zierband
+zierband zierband zimtbaum zimtbaum zimtbaum zollbeamter
+zollbeamter zollbeamter zwiebel zwiebel zwiebel bezeugen
+bezeugen bezeugen brustwarze brustwarze brustwarze
+bronzezeit bronzezeit bronzezeit zusammenbringen
+zusammenbringen zusammenbringen zubinden zubinden zubinden
+zusammenprallen zusammenprallen zusammenprallen zwieback
+zwieback zwergschimpanse zwergschimpanse zwergschimpanse</text>
+  </lesson>
+  <lesson>
+   <id>{46eeca0c-ca8b-4a91-93a4-d2ecf116d60a}</id>
+   <title>Wir üben: z und b</title>
+   <newCharacters></newCharacters>
+   <text>katze katze katze zarte zarte zarte katze katze zarte zarte
+prinz prinz prinz zarin zarin zarin prinz prinz zarin zarin
+zeigen zeigen zeigen ritzel ritzel ritzel zeigen ritzel
+zieren zieren zieren kratzte kratzte kratzte zieren kratzte
+biete biete biete halbe halbe halbe biete biete halbe halbe
+leben leben leben bitte bitte bitte leben leben bitte bitte
+lieber lieber lieber blauer blauer lieber lieber blauer
+blauer gelber gelber gelber selber selber selber gelber
+selber zahnpasta zahnpasta zahnpasta zaumzeug zaumzeug
+zaumzeug zeitpunkt zeitpunkt zeitpunkt zeitmessung
+zeitmessung zeitmessung zementieren zementieren zementieren
+zentimeter zentimeter zentimeter zeppelin zeppelin zeppelin
+zermahlen zermahlen zermahlen zeremonienmeister
+zeremonienmeister zeremonienmeister zerschmettern
+zerschmettern zerschmettern zimmermann zimmermann zimmermann
+zirkel zirkel zirkel zwinkern zwinkern zwinkern
+zwischenmahlzeit zwischenmahlzeit zwischenmahlzeit badminton
+badminton badminton bambus bambus bambus balkon balkon
+balkon bankdirektor bankdirektor bankdirektor benehmen
+benehmen benehmen basilikum basilikum basilikum baumwolle
+baumwolle baumwolle bestimmen bestimmen bestimmen
+beispielsweise beispielsweise beispielsweise beweisen
+beweisen beweisen bewohnbar bewohnbar bewohnbar zaubern
+zaubern zebra zebra zauberstab zauberstab zeilenumbruch
+zeilenumbruch badezimmer badezimmer beelzebub beelzebub
+benzinpumpe benzinpumpe besitzen besitzen zeitbombe
+zeitbombe zeitungsschreiber zeitungsschreiber zerbrechlich
+zerbrechlich bestellzettel bestellzettel bezahlen bezahlen
+bulldozer bulldozer bezirk bezirk zierband zierband zimtbaum
+zimtbaum zollbeamter zollbeamter zwiebel zwiebel bezeugen
+bezeugen brustwarze brustwarze bronzezeit bronzezeit
+zusammenbringen zusammenbringen zubinden zubinden
+zusammenprallen zusammenprallen zwieback zwieback
+zwergschimpanse zwergschimpanse</text>
+  </lesson>
+  <lesson>
+   <id>{e6de8749-1e2a-43df-9560-a7b6e46e23bc}</id>
+   <title>Sicherheitstest für z und b</title>
+   <newCharacters></newCharacters>
+   <text>zeichensetzung zeichnen zeilenumbruch zeitabschnitt
+zeitbombe waghalsig wagen wahrheit wahrnehmung wanduhr
+wasserhahn badezimmer badminton bakterie balkon bambus
+bandwurm manuskript markierung maschinengewehr maske
+massaker massenmord philharmonie phosphor picknick
+piktogramm pinguin blutzelle bronze browser brustwarze
+pistole plattwurm plump plutonium polarstern politiker
+pommes zusammenprallen zubinden zustimmen zwangsarbeit
+gewehr darwin wucher erwies etikett hektik risiko bassstimme
+baumwolle beabsichtigen bedauerlicherweise zeitpunkt
+zeitmessung zeitungsschreiber zementieren primel prisma
+problematisch produktweg programmiersprache mittelpunkt
+mittelwert mittwoch moldawien moralpredigt morphium
+beelzebub beispielsweise beschweren besitzen konkurs
+kontaktieren kontrolleur krankheit wachhund zahlwort
+zahnpasta zaubern zaumzeug zebra zecke zauberstab bewundern
+bewirten bewohnbar bewusstlos bezahlen bezaubern
+metamorphose mikroskopisch minuspol mitschleppen erkundet
+dekadentes kirche ikarus schwan gewalt kleiderhaken klicken
+kniekehle kochkunst knochen konditorei wache etwas wunsch
+sowie ingwer kakao kork keile kick kelch kiste bulldozer
+butterweich beelzebub benzinpumpe zerschmettern zersplittern
+zierband zimmermann stickig grotesk trinkgeld warnstreik
+keks zermahlen packen palmwedel panik pantomime papa papagei
+karikatur kathode kathedrale kerker klassiker bestellzettel
+papst papier paprika paradigma parallelogramm parameter
+parkett zentimeter zeppelin zerbrechlich zeremonienmeister
+erika denken danke gockel kaktus kaiserkrone bankdirektor
+barbarisch benehmen barrikade basilikum basketball kalkstein
+krokodil wahnsinnig kilokalorie wasserwaage klecks
+wasserschlange besitzen bronzezeit mundharmonika kilowatt
+wohlklang karawane wirklich zimtbaum zirkel zirpen
+zollbeamter zusammenbringen zusammenbauen kauderwelsch
+wecker krankenschwester wickeln wunderkind zwieback zwiebel
+zwinkern zwischenmahlzeit zwergschimpanse portemonnaie
+postsendung pottwal praktikum bezeichnen bezeugen bezirk</text>
+  </lesson>
+  <lesson>
+   <id>{f452b870-eccc-4307-954a-14d841491fd8}</id>
+   <title>Wir wiederholen viele Wörter</title>
+   <newCharacters></newCharacters>
+   <text>alle alte elle alge eile eule aula reite gleite nieder
+lieder glieder regen legen lagen ragen tragen trauen grauen
+glitt ritt tritt dritt glitter dritter celle creature cent
+chance charta chen chicago chirurg chlor china code chor
+heucheln handtuch hecheln hechten hindurch hochachtung hund
+hut hinter heiter heilig heilen haar heer herr hell hall
+otto toto doch loch noch lohn sohn gong gott tore tote toll
+soll cool ohne lord dorn horn ast hast sie eis das aus
+karikatur kathode kathedrale kerker klassiker kleiderhaken
+klicken kniekehle kochkunst knochen konditorei konkurs
+gewehr darwin wucher erwies gewehr darwin wucher erwies
+etikett hektik risiko stickig grotesk trinkgeld warnstreik
+erika denken danke gockel kaktus kaiserkrone kalkstein
+krokodil wahnsinnig kilokalorie wasserwaage klecks weltkarte
+weglocken kilowatt wohlklang karawane wirklich kauderwelsch
+wecker krankenschwester wickeln wunderkind alpen merke sorge
+sonne soldat solange storch solch strolch stroh dose hose
+ostern ostsee sonst meide reime melde immer tempo karikatur
+kathode kathedrale kerker klassiker kleiderhaken klicken
+kniekehle kochkunst knochen konditorei makrele philharmonie
+phosphor picknick piktogramm pinguin pistole plattwurm plump
+plutonium polarstern politiker pommes gewehr darwin wucher
+erwies gewehr darwin wucher erwies etikett hektik risiko
+stickig grotesk trinkgeld warnstreik metamorphose
+mikroskopisch minuspol mitschleppen mittelpunkt mittelwert
+mittwoch moldawien moralpredigt morphium packen palmwedel
+panik pantomime papa papagei papst papier paprika paradigma
+parallelogramm parameter parkett park erika denken danke
+gockel kaktus kaiserkrone kalkstein krokodil wahnsinnig
+kilokalorie wasserwaage klecks mathematiker kokosnuss wachs
+katholik kontakt walnuss kiwi wolke winkel kuwait weltkarte
+kunstwerk weinkeller krankenwagen park parole spinat sport
+pilger pillen pinie pirat poren pokal poker pointe post pol
+purpur tippst kippst weglocken kilowatt wohlklang karawane
+wirklich kauderwelsch wecker krankenschwester wickeln
+wunderkind zeitpunkt parlament parteimitglied partikel
+passwort pauke pelikan perlmutt personalcomputer pessimismus
+petrochemie katze zarte prinz zarin zeigen zieren kratzte
+biete halbe leben bitte lieber blauer gelber selber
+zahnpasta zaumzeug zeremonienmeister zerschmettern
+zimmermann zirkel zwinkern zwischenmahlzeit badminton bambus
+balkon bankdirektor benehmen basilikum baumwolle bestimmen
+beispielsweise beweisen bewohnbar zauberstab zeilenumbruch
+badezimmer beelzebub zwiebel bezeugen brustwarze bronzezeit
+zubinden zusammenprallen zwieback zollbeamter benzinpumpe</text>
+  </lesson>
+  <lesson>
+   <id>{d1ad620f-6d7b-4bfd-a630-8401f8f23a7f}</id>
+   <title>Wir wiederholen alle Buchstaben</title>
+   <newCharacters></newCharacters>
+   <text>eee ccc www ooo zzz ppp nnn hhh kkk sss bbb mmm ppp zzz ooo
+www ccc eee mmm bbb sss kkk hhh nnn eec eew eeo eez eep nnh
+nnk nns nnb nnm eep eez eeo eew eec nnm nnb nns nnk nnh
+ecwozpe nhksbmn cce wwe ooe zze ppe hhn kkn ssn bbn mmn ppe
+zze ooe wwe cce mmn bbn ssn kkn hhn epzowce nmbskhn ece ewe
+eoe eze epe nhn nkn nsn nbn nmn epe eze eoe ewe ece nmn nbn
+nsn nkn nhn ecwozpe nhksbmn ece ewe eoe eze epe nhn nkn nsn
+nbn nmn epe eze eoe ewe ece nmn nbn nsn nkn nhn ecwozpe
+nhksbmn eee ccc www ooo zzz ppp nnn hhh kkk sss bbb mmm ppp
+zzz ooo www ccc eee mmm bbb sss kkk hhh nnn ece ewe eoe eze
+epe nhn nkn nsn nbn nmn epe eze eoe ewe ece nmn nbn nsn nkn
+nhn ecwozpe nhksbmn uiaeolcwpz dtrnghkmb uiaeolcwpz
+dtrnghkmb uialcwozpeaiu dtrghksbmnrtd uiaepzowclaiu
+dtrnmbskhgrtd zpoeaiuwcl bmsnrtdkhg lcwuiaeopz ghkdtrnsmb
+wcloeaiuzp khgsnrtdbm pzuiaeolcw mbdtrnsghk</text>
+  </lesson>
+  <lesson>
+   <id>{e5c0367e-0cdc-400d-83f2-1aef012b4973}</id>
+   <title>Neues Satzzeichen: , das Komma</title>
+   <newCharacters>,</newCharacters>
+   <text>nmn r,r r,r r,r r,r r,r r,r r,u r,i r,a r,e r,d r,t r,r r,n
+r,u r,i r,a r,e r,d r,t r,r r,n r,n r,r r,t r,d r,e r,a r,i
+r,u r,n r,r r,t r,d r,e r,a r,i r,u r,r r,r r,r r,r r,r r,r
+r,r da, da, da, da, na, na, na, na, da, da, da, na, na, na,
+da, da, na, na, da, na, da, da, aber, aber, aber, aber,
+neues, neues, neues, dann, dann, dann, dann, dass, dass,
+dass, dass, da, da, da, da, na, na, na, na, da, da, da, na,
+na, na, da, da, na, na, da, na, da, da, aber, aber, aber,
+aber, neues, neues, neues, dann, dann, dann, dann, dass,
+dass, dass, dass, bilde, deine, dein, diesen, meine, meine,
+bis, ein, sein, bis, bis, ein, sein, kein, dein, in, aus,
+ans, sein, bald, leer, bis, ein, sein, kein, dein, in, aus,
+ans, sein, bald, leer, bilde, deine, dein, diesen, meine,
+meine, bis, ein, sein, bis, an, mir, sei, denn, mehr, hier,
+am, aus, bis, ein, sei, an, an, mir, sei, denn, mehr, hier,
+am, aus, bis, ein, sei, an, beim gebrauch wird im
+allgemeinen ein komma benutzt einerseits, andererseits, und
+desto, und nicht nur, sondern auch, und um, zu, und teils,
+teils, und zwar, aber, einerseits will er alles haben,
+andererseits will er nichts geben mehr sie gibt, desto
+besser mag sie sich einerseits, andererseits, desto, nicht
+nur, sondern auch, um, zu, teils, teils, zwar, aber, nicht
+richtig gesetzte oder nicht kommata erschweren das lesen
+oder machen die bedeutung eines satzes undeutlich, petra
+erbte den schmuck, nicht aber susanne oder petra, erbte den
+schmuck nicht, aber susanne</text>
+  </lesson>
+  <lesson>
+   <id>{cfef4aaf-dc22-4ba1-9dfd-b8ae9bf49ef8}</id>
+   <title>Wir üben das Komma</title>
+   <newCharacters></newCharacters>
+   <text>sie sagen mir, sie sagen dir, sie sagen ihr, sie sagen wir
+sie sagen ihm, sie sagen es, sie holen es, geben sie es,
+legen sie es, senden sie es, senden sie es ab, senden sie es
+bald ab, sie stellen aus, sie stellen es aus, stelle es bald
+hierher, sie brachte mir, sie brachte es bald, sie brachte
+es mir zuerst, sie hat es bemerkt, sie hatte bemerkt, sie
+bemerkten alles, einerseits, andererseits, desto, nicht nur,
+sondern auch, um, zu, teils, teils, zwar, aber, einerseits
+mag ich dass komma, andererseits benutze ich dieses
+satzzeichen selten, mehr kommata ich benutze, desto
+komplizierter wird der gesamte satz, es gibt nicht nur
+kommata, sondern auch andere satzzeichen, zwar kenne ich die
+meisten satzzeichen, aber benutze ich sie beim chatten im
+internet nicht ich lerne, um mich zu um zu lernen, gehe ich
+in die schule, teils spielt sie mit ihren alten puppen,
+teils schminkt sie sich wie ein model, wir uns, euch mal
+wieder zu sehen, ich habe keine lust, das buch zu lesen, er
+sprach, ohne sie anzusehen, die reise wirklich zu machen,
+war sein traum, er kam, um zu essen, peters wunsch war,
+spazieren zu gehen, leime, leime, umher, umher, kam, kam,
+dem, dem, mir, mir, mag, mag, male, male, milde, milde,
+mehr, mehr, arme, arme, park, park, parole, parole, spinat,
+spinat, sport, sport, pilgern, pilgern, pille, pille, pinie,
+pinie, pirat, pirat, tippst, tippst, kippst, kippst, spiel,
+spiel, spreu, spreu, kasper, kasper, kapsel, kapsel, april,
+april, alpen, alpen, poren, poren, pokal, pokal, poker,
+poker, post, post, pol, pol, purpur, purpur, merke, merke,
+meide, meide, reime, reime, melde, melde, immer, immer,
+mager, mager, tempo, tempo, emsig, emsig, palme, palme,
+produktweg, produktweg, picknick, picknick, passwort,
+passwort, park, park, papst, papst, papagei, papagei,
+politiker, politiker, parkett, parkett, makkaroni,
+makkaroni, makrele, makrele, massaker, massaker,
+postsendung, postsendung, pistole, pistole, polarstern,
+polarstern, pinguin, pinguin, phosphor, phosphor, maske,
+maske, mathematiker, mathematiker, mechaniker, mechaniker,
+meerschweinchen, meerschweinchen, megawatt, megawatt, panik,
+panik, packen, packen, papier, papier, paprika, paprika,
+pauke, pauke, protokoll, protokoll, mehrwertsteuer,
+mehrwertsteuer, mittwoch, mittwoch, moskwa, moskwa,
+mundharmonika, mundharmonika, muskel, muskel,</text>
+  </lesson>
+  <lesson>
+   <id>{2edee0e2-b2a4-41ba-8258-993bc2ab96dc}</id>
+   <title>Neues Satzzeichen: . der Punkt</title>
+   <newCharacters>.</newCharacters>
+   <text>nmn r,r t.t t.t t.t t.t t.t t.t t.u t.i t.a t.e t.d t.t t.n
+t.r t.u t.i t.a t.e t.d t.t t.r t.n mnm ,r, .t. nmn r,r t.t
+t.e t.a t.i t.u t.n t.r t.t t.d t.e t.a t.i t.u t.n t.r t.t
+t.d t.t t.t es. es. es. es. er. er. er. er. es. er. es. er.
+an. an. an. an. es. es. er. er. an. an. eine. eine. eine.
+eine. eines. eines. eines. bald. bald. bald. sitzt. sitzt.
+sitzt. aber. aber. aber. aber. holt. holt. holt. holt. dar.
+dar. dar. dar. her. her. her. her. hin. hin. hin. hin. ihn.
+ihn. ihn. ihm. ihm. ihm. ihm. hirn. hirn. hirn. hirn. mir.
+mir. mir. mir. dir. dir. dir. dir. melde. melde. melde.
+melde. ihr. ihr. ihr. ihr. der schlusspunkt steht am ende
+eines aussagesatzes. gestern hat es geregnet. westwinde
+bringen meist regen. morgen wird wieder die sonne scheinen.
+bitte gib mir das buch. du sollst schweigen.</text>
+  </lesson>
+  <lesson>
+   <id>{34468230-ce9c-4bba-a445-96b23a38150e}</id>
+   <title>Wir üben den Punkt</title>
+   <newCharacters></newCharacters>
+   <text>nmn r,r t.t t.t t.t t.t t.t t.t t.u t.i t.a t.e t.d t.t t.n
+t.r t.u t.i t.a t.e t.d t.t t.r t.n mnm ,r, .t. nmn r,r t.t
+t.e t.a t.i t.u t.n t.r t.t t.d t.e t.a t.i t.u t.n t.r t.t
+t.d t.t t.t es. es. es. es. er. er. er. er. es. er. es. er.
+an. an. an. an. es. es. er. er. an. an. eine. eine. eine.
+eine. eines. eines. eines. bald. bald. bald. sitzt. sitzt.
+sitzt. aber. aber. aber. aber. holt. holt. holt. holt. dar.
+dar. dar. dar. her. her. her. her. hin. hin. hin. hin. ihn.
+ihn. ihn. ihm. ihm. ihm. ihm. hirn. hirn. hirn. hirn. mir.
+mir. mir. mir. dir. dir. dir. dir. melde. melde. melde.
+melde. ihr. ihr. ihr. ihr. der schlusspunkt steht am ende
+eines aussagesatzes. gestern hat es geregnet. westwinde
+bringen meist regen. morgen wird wieder die sonne scheinen.
+bitte gib mir das buch. du sollst schweigen.</text>
+  </lesson>
+  <lesson>
+   <id>{6b6e0e5e-e6dc-4c08-bb58-c1c1d5a481d2}</id>
+   <title>Sicherheitstest</title>
+   <newCharacters></newCharacters>
+   <text>leime, leime. umher, umher. kam. kam, dem. dem, mir, mir.
+mag, mag. male. male, milde. milde, mehr, mehr. arme, arme.
+park. park, parole. parole, spinat, spinat. sport, sport.
+pilgern, pilgern. pille, pille. pinie. pinie, pirat. pirat,
+tippst, tippst. kippst, kippst. spiel. spiel, spreu. spreu,
+kasper, kasper. kapsel, kapsel. april, april. alpen. alpen,
+poren. poren, pokal. pokal, poker, poker. post, post. pol.
+pol, purpur. purpur, merke, merke. meide, meide. reime,
+reime. melde, melde. immer. immer, mager. mager, tempo,
+tempo. emsig, emsig. palme. palme, produktweg. produktweg,
+picknick. picknick, passwort, passwort. park, park. papst.
+papst, papagei. papagei, politiker, politiker. parkett,
+parkett. makkaroni. makkaroni, makrele. makrele, massaker,
+massaker. postsendung. postsendung, pistole. pistole,
+polarstern, polarstern. pinguin, pinguin. phosphor.
+phosphor, maske, maske. mathematiker, mathematiker.
+mechaniker. mechaniker, meerschweinchen. meerschweinchen,
+megawatt, megawatt. panik. panik, packen. packen, papier,
+papier. paprika. paprika, pauke, pauke. protokoll,
+protokoll. mehrwertsteuer, mehrwertsteuer. mittwoch,
+mittwoch. moskwa. moskwa, mundharmonika. mundharmonika,
+muskel, muskel. zaubern. zaubern, zebra. zebra, zauberstab,
+zauberstab. zeilenumbruch, zeilenumbruch. badezimmer,
+badezimmer. beelzebub, beelzebub. benzinpumpe. benzinpumpe,
+besitzen. besitzen, zeitbombe. zeitbombe, zeitungsschreiber.
+zeitungsschreiber, zerbrechlich, zerbrechlich.
+bestellzettel, bestellzettel. bezahlen, bezahlen. bulldozer.
+bulldozer, bezirk. bezirk, zierband. zierband, zimtbaum.
+zimtbaum, zollbeamter, zollbeamter. zwiebel, zwiebel.
+bezeugen, bezeugen. brustwarze, brustwarze. bronzezeit.
+bronzezeit, zusammenbringen. zusammenbringen, zubinden.
+zubinden, zusammenprallen, zusammenprallen. zwieback,
+zwieback.</text>
+  </lesson>
+  <lesson>
+   <id>{d440a80f-107c-476f-9cf5-30ee02f1cefb}</id>
+   <title>Wir wiederholen</title>
+   <newCharacters></newCharacters>
+   <text>ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala
+eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn
+ala rgr ece nhn ewe nkn eoe nsn epe nmn eze nbn r,r t.t ala
+eweze nknbn eweze nknbn eweze nknbn eweze nknbn eweze nknbn
+alle alte elle alge eile eule aula reite gleite nieder
+lieder glieder regen legen lagen ragen tragen trauen grauen.
+glitt ritt tritt dritt glitter dritter celle creature cent
+chance charta chen chicago chirurg chlor china code chor,
+haar heer herr hell hall hagel halogen hand hauen heute haut
+hundert heilig heilen halten. heucheln handtuch hecheln
+hechten hindurch hochachtung hund hut hinter heiter, otto
+toto doch loch noch lohn sohn gong gott tore tote toll soll
+cool ohne lord dorn horn. ast hast sie eis das aus uns ist
+see sind dies seid sein nase seit sehr nass hals, sorge
+sonne soldat solange storch solch strolch stroh dose hose
+ostern ostsee sonst. karikatur kathode kathedrale kerker
+klassiker kleiderhaken klicken kniekehle kochkunst knochen
+konditorei, konkurs kontaktieren kontrolleur krankheit
+wachhund waghalsig wagen wahrheit wahrnehmung wanduhr
+wasserhahn. gewehr darwin wucher erwies gewehr darwin wucher
+erwies etikett hektik risiko stickig grotesk trinkgeld
+warnstreik keks, erkundet dekadentes kirche ikarus schwan
+gewalt wache etwas wunsch sowie ingwer kakao kork keile kick
+kelch kiste. erika denken danke gockel kaktus kaiserkrone
+kalkstein krokodil wahnsinnig kilokalorie wasserwaage klecks
+wasserschlange, kokosnuss wachs katholik kontakt walnuss
+kiwi wolke winkel kuwait weltkarte kunstwerk weinkeller
+krankenwagen. weglocken kilowatt wohlklang karawane wirklich
+kauderwelsch wecker krankenschwester wickeln wunderkind,
+spiel spreu kasper kapsel april apache alpen merke meide
+reime melde immer mager tempo emsig palme. sorge sonne
+soldat solange storch solch strolch stroh dose hose ostern
+ostsee sonst, portemonnaie postsendung pottwal praktikum
+primel prisma problematisch produktweg programmiersprache.
+karikatur kathode kathedrale kerker klassiker kleiderhaken
+klicken kniekehle kochkunst knochen konditorei, magnesium
+makkaroni makrele malawi mammutbaum maniok manuskript
+markierung maschinengewehr maske massaker massenmord.
+konkurs kontaktieren kontrolleur krankheit wachhund
+waghalsig wagen wahrheit wahrnehmung wanduhr wasserhahn,
+philharmonie phosphor picknick piktogramm pinguin pistole
+plattwurm plump plutonium polarstern politiker pommes.
+gewehr darwin wucher erwies gewehr darwin wucher erwies
+etikett hektik risiko stickig grotesk trinkgeld warnstreik
+keks, metamorphose mikroskopisch minuspol mitschleppen
+mittelpunkt mittelwert mittwoch moldawien moralpredigt
+morphium. erkundet dekadentes kirche ikarus schwan gewalt
+wache etwas wunsch sowie ingwer kakao kork keile kick kelch
+kiste, packen palmwedel panik pantomime papa papagei papst
+papier paprika paradigma parallelogramm parameter parkett
+park. erika denken danke gockel kaktus kaiserkrone kalkstein
+krokodil wahnsinnig kilokalorie wasserwaage klecks
+wasserschlange, mathematiker matrose mechaniker medikament
+meerschweinchen megawatt megaphon mehrwertsteuer
+melankoliker. kokosnuss wachs katholik kontakt walnuss kiwi
+wolke winkel kuwait weltkarte kunstwerk weinkeller
+krankenwagen, park parole spinat sport pilger pillen pinie
+pirat poren pokal poker pointe post pol purpur tippst
+kippst. weglocken kilowatt wohlklang karawane wirklich
+kauderwelsch wecker krankenschwester wickeln wunderkind,
+parlament parteimitglied partikel passwort pauke pelikan
+perlmutt personalcomputer pessimismus petrochemie phantom.
+moskwa mundharmonika musikgruppe muskatnuss muskel
+muttersprachler protokoll pumpen, katze zarte prinz zarin
+zeigen zieren kratzte biete halbe leben bitte lieber blauer
+gelber selber. zahnpasta zaumzeug zeitpunkt zeitmessung
+zementieren zentimeter zeppelin zermahlen, zeremonienmeister
+zerschmettern zimmermann zirkel zwinkern zwischenmahlzeit
+badminton bambus balkon bankdirektor benehmen. basilikum
+baumwolle bestimmen beispielsweise beweisen bewohnbar
+zaubern zebra zauberstab zeilenumbruch badezimmer beelzebub,
+benzinpumpe besitzen zeitbombe zeitungsschreiber
+zerbrechlich bestellzettel bezahlen bulldozer bezirk
+zierband zimtbaum zollbeamter. zwiebel bezeugen brustwarze
+bronzezeit zusammenbringen zubinden zusammenprallen</text>
+  </lesson>
+  <lesson>
+   <id>{d3fafaf1-f233-4a06-8054-a62c26221df4}</id>
+   <title>Linker Umschalter</title>
+   <newCharacters>NRTDSBMKHG</newCharacters>
+   <text>Nen Nan Nin Nun Non Nwn Ncn Nln Nzn Npn Nen Nan Nin Nun Non
+Nwn Ncn Nln Nzn Npn Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr
+Rer Rar Rir Rur Ror Rwr Rcr Rlr Rzr Rpr Tet Tat Tit Tut Tot
+Twt Tct Tlt Tzt Tpt Tet Tat Tit Tut Tot Twt Tct Tlt Tzt Tpt
+Ded Dad Did Dud Dod Dwd Dcd Dld Dzd Dpd Ded Dad Did Dud Dod
+Dwd Dcd Dld Dzd Dpd Ses Sas Sis Sus Sos Sws Scs Sls Szs Sps
+Ses Sas Sis Sus Sos Sws Scs Sls Szs Sps Beb Bab Bib Bub Bob
+Bwb Bcb Blb Bzb Bpb Beb Bab Bib Bub Bob Bwb Bcb Blb Bzb Bpb
+Mem Mam Mim Mum Mwm Mcm Mlm Mzm Mpm Mem Mam Mim Mum Mwm Mcm
+Mlm Mzm Mpm Kek Kak Kik Kuk Kok Kwk Kck Klk Kzk Kpk Kek Kak
+Kik Kuk Kok Kwk Kck Klk Kzk Kpk Heh Hah Hih Huh Hoh Hwh Hch
+Hlh Hzh Hph Heh Hah Hih Huh Hoh Hwh Hch Hlh Hzh Hph Geg Gag
+Gig Gug Gog Gwg Gcg Glg Gzg Gpg Geg Gag Gig Gug Gog Gwg Gcg
+Glg Gzg Gpg Nein Nein Nein Nein Nacht Nacht Nacht Nacht Nest
+Nest Nest Nest Rast Rast Rast Rast Ritter Ritter Ritter
+Ritter Rest Rest Rest Rest Tisch Tisch Tisch Tisch Tag Tag
+Tag Tag Tabak Tabak Tabak Tabak Deich Deich Deich Deich
+Dolch Dolch Dolch Dolch Dach Dach Dach Dach Sonne Sonne
+Sonne Sack Sonne Sack Sack Sack Salbe Salbe Salbe Salbe
+Bibel Bibel Bibel Bad Bibel Bad Bad Bad Band Band Band Band
+Mantel Mantel Mantel Milch Mantel Milch Milch Milch Mut Mut
+Mut Mut Kuchen Kuchen Kuchen Kalb Kuchen Kalb Kalb Kalb
+Katze Katze Katze Katze Hand Hand Hand Herr Hand Herr Herr
+Herr Hund Hund Hund Hund Gabel Gabel Gabel Geiz Gabel Geiz
+Geiz Geiz Glanz Glanz Glanz Glanz</text>
+  </lesson>
+  <lesson>
+   <id>{8e43b493-5cca-412d-9793-aa3f427f64df}</id>
+   <title>Wir üben rechts GROẞ und klein im Wechsel</title>
+   <newCharacters></newCharacters>
+   <text>Nein nein Nein nein Nacht nachts Nacht nachts Nager nagen
+Nager nagen Rast rasten Rast rasten Ritt reiten Ritt reiten
+Ruhe ruhen Ruhe ruhen Rat raten Rat raten Taucher tauchen
+Taucher tauchen Tag tagein Tag tagaus Trage tragen Trage
+tragen Decke decken Decke decken Dichter dichten Dichter
+dichten Dusche duschen Dusche duschen Sonne sonnen Sonne
+sonnen Salbe salben Salbe salben Scherz scherzen Scherz
+scherzen Bad baden Bad baden Bestellung bestellen Bestellung
+bestellen Bau bauen Bau bauen Maler malen Maler malen
+Meinung meinen Meinung meinen Mut mutig Mut mutig Koch
+kochen Koch kochen Kegel kegeln Kegel kegeln Klingel
+klingeln Klingel klingeln Halt halten Halt halten Hass
+hassen Hass hassen Herz herzlich Herz herzlich Geiz geizen
+Geiz geizen Gut gut Gut gut Glas glasig glas glasig Gold
+golden Gold golden
+Die Naht, der Name, die Nase. Der Narr, der Neid, die Niere.
+Der Nebel, der Nager, die Natur, die Niederlage. Die Ruhe,
+der Ruhm, das Rind. Der Ritt, die Rose, der Rahm. Die Rast,
+der Rabe, der Rum. Der Rat, das Ruder. Die Tube, der Turm,
+das Tier. Das Teil, der Takt, der Teig. Das Tau, der Teer,
+die Tat. Das Tal, der Trieb, die Tasse. Der Docht, der
+Dachs, der Dichter. Das Dogma, die Dusche, der Donner. Der
+Dreck, der Degen, die Dattel. Das Sandwich, der Sand, der
+Scherz. Die Schande, der Stamm, das Salz. Der Schmerz, der
+Schwamm, die Sache. Das Bild, das Bier, die Bude. Der Bund,
+das Beil, der Bart. Der Baum, die Bank, der Bau. Die Bibel,
+die Beere. Der Mann, die Maus, das Mahl. Der Mais, das Mark,
+das Mehl. Der Mai, das Muss, der Mut. Der Maler, der Makler.
+Der Kohl, die Kraniche, der Koch. Das Kind, der Kegel, die
+Kirsche. Der Kaiser, die Klingel, der Krug, die Kopie. Das
+Haus, der Hase, das Haar. Der Hass, der Halt, die Hast. Der
+Halm, die Hand, der Hang. Das Harz, der Hausstand. Das Gold,
+das Glas, die Gabe. Die Gans, der Gang, das Geld. Der Gast,
+der Grog, das Gut. Das Gas, der Gatte.</text>
+  </lesson>
+  <lesson>
+   <id>{a637e965-972f-4fd9-819a-dd79d1e32947}</id>
+   <title>Kurze Trainingssätze</title>
+   <newCharacters></newCharacters>
+   <text>Hinter dem Haus steht ein Baum. Der Baum ist alt. Der Berg
+ist hoch. Bald gehe ich zum Sport. Dann spiele ich
+Basketball.
+Meine Mutter backt Kuchen. Den Kuchen essen wir mit Kirschen
+und Schlagsahne. Susanne isst keinen Kuchen. Sie will nicht
+dick werden.
+Georg hatte gestern Geburtstag. Sein Geschenk war ein Besuch
+im Tierpark. Die Schlangen haben wir nicht gesehen.
+Bananen sind gelb. Kirschen sind rot. Birnen sind gelb oder
+rot. Marmelade aus Kirschen ist rot. Kiwis haben Haare.
+Deshalb iss sie ohne Schale.
+Martin nimmt die Dose mit dem Geld. Hans lernt eisern
+Mathematik. Hanno arbeitet schon den ganzen Tag. Das Buch
+ist gut.
+Helene kommt bald nach Hause. Die anderen warten schon am
+Tisch. Hunger und Durst haben alle. Darum bestellten sie
+Nudeln mit Sauce.
+Die kleine Nase mag ich sehr. Die langen braunen Haare aber
+noch mehr. Seit sieben Tagen kenne ich Hanna. Heute kommt
+Hanna zu mir.
+Kaum zu glauben, aber wir haben eine Sauna im Keller. Neben
+der Sauna ist der Raum mit Kohle. Die Kohle macht die Sauna
+warm.
+Dir sagt sie es. Mir sagt sie es nicht. Die Sache scheint
+wichtig zu sein. Geht es um den Geburtstag, will ich wissen.
+Doch sie sagt es nicht.
+Man sagte Karl. Nimm Kurt mit. Nun stehen Karl und Kurt am
+Gleis und warten bis die Bahn kommt. Dann bringen sie Tante
+Beate hierher.
+Du gehst in ein Restaurant. Dort wartet Torsten. Torsten
+trank bereits ein Bier. Beim Tresen steht ein kleiner Mann.
+Sein Name ist unbekannt.</text>
+  </lesson>
+  <lesson>
+   <id>{bb4c9866-22ae-41c2-a49c-85bbeae24118}</id>
+   <title>Rechter Umschalter</title>
+   <newCharacters>EAIUOZPWCL</newCharacters>
+   <text>Ene Ere Ete Ede Ese Eke Ehe Ege Ebe Eme Ene Ere Ete Ede Ese
+Eke Ehe Ege Ebe Eme Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama
+Ana Ara Ata Ada Asa Aka Aha Aga Aba Ama Ini Iri Iti Idi Isi
+Iki Ihi Igi Ibi Imi Ini Iri Iti Idi Isi Iki Ihi Igi Ibi Imi
+Unu Uru Utu Udu Usu Uku Uhu Ugu Ubu Umu Unu Uru Utu Udu Usu
+Uku Uhu Ugu Ubu Umu Ono Oro Oto Odo Oso Oko Oho Ogo Obo Omo
+Ono Oro Oto Odo Oso Oko Oho Ogo Obo Omo Znz Zrz Ztz Zdz Zsz
+Zkz Zhz Zgz Zbz Zmz Znz Zrz Ztz Zdz Zsz Zkz Zhz Zgz Zbz Zmz
+Pnp Prp Ptp Pdp Psp Pkp Php Pgp Pbp Pmp Pnp Prp Ptp Pdp Psp
+Pkp Php Pgp Pbp Pmp Wnw Wrw Wtw Wdw Wsw Wkw Whw Wgw Wbw Wmw
+Wnw Wrw Wtw Wdw Wsw Wkw Whw Wgw Wbw Wmw Cnc Crc Ctc Cdc Csc
+Ckc Che Cge Cbc Cmc Cnc Crc Ctc Cdc Csc Ckc Che Cge Cbc Cmc
+Lnl Lrl Ltl Ldl Lsl Lhl Lgl Lbl Lml Lnl Lrl Ltl Ldl Lsl Lhl
+Lgl Lbl Lml Eisen Eisen Eisen Eisen Eule Eule Eule Eule
+Essen Essen Essen Essen Abend Abend Abend Abend Aula Aula
+Aula Aula Arbeit Arbeit Arbeit Arbeit Insel Insel Insel
+Insel Igel Igel Igel Igel Insekt Insekt Insekt Insekt
+Uhrzeit Uhrzeit Uhrzeit Uhrzeit Unterricht Unterricht
+Unterricht Unterricht Umsatz Umsatz Umsatz Umsatz Opel Opel
+Opel Opel Osten Osten Osten Osten Organ Organ Organ Organ
+Zink Zink Zink Zink Zauber Zauber Zauber Zauber Zahl Zahl
+Zahl Zahl Partei Partei Partei Partei Pech Pech Pech Pech
+Papagei Papagei Papagei Papagei Wasser Wasser Wasser Wasser
+Werbung Werbung Werbung Werbung Witz Witz Witz Witz Celsius
+Celsius Celsius Celsius Chemie Chemie Chemie Chemie Cocktail
+Cocktail Cocktail Cocktail Liebe Liebe Liebe Liebe Leben
+Leben Leben Leben Lust Lust Lust Lust</text>
+  </lesson>
+  <lesson>
+   <id>{bce115d6-0a65-4210-b62d-bd228ad3eeeb}</id>
+   <title>Wir üben links GROẞ und klein im Wechsel</title>
+   <newCharacters></newCharacters>
+   <text>Essen essen Essen essen Ekel ekeln Ekel ekeln Eis eisig Eis
+eisig Arbeit arbeiten Arbeit arbeiten Alter altern Alter
+altern Antwort antworten Antwort antworten Isolator
+isolieren Isolator isolieren Italiener italienisch Italiener
+italienisch Intelligenz intelligent Intelligenz intelligent
+Urteil urteilen Urteil urteilen Unterricht unterrichten
+Unterricht unterrichten Umarmung umarmen Umarmung umarmen
+Operation operieren Operation operieren Oder oder Oder oder
+Ordner ordnen Ordner ordnen Zahl zahlen Zahl zahlen Ziel
+zielen Ziel zielen Zelt zelten Zelt zelten Platz platzen
+Platz platzen Park parken Park parken Predigt predigen
+Predigt predigen Werbung werben Werbung werben Wechsel
+wechseln Wechsel wechseln Wagen wagen Wagen wagen Chaot
+chaotisch Chaot chaotisch Charme charmant Charme charmant
+Chronik chronisch Chronik chronisch Lutscher lutschen
+Lutscher lutschen Leben leben Leben leben Laden laden Laden
+laden Das Eisen, die Eule, das Essen. Der Esel, die Eile,
+die Eier. Die Ebbe, die Ehre, das Eis. Der Eid, die Esche,
+der Enkel. Der Abend, die Aula, die Arbeit. Das Alter die
+Antwort, die Angst. Der Angeber, die Akte. Die Insel, der
+Igel, das Insekt. Die Idee, der Irre, der Inder. Der Islam,
+der Inhalt das Inland. Die Uhrzeit, der Unterricht, der
+Umsatz. Die Ulme, das Urteil, der Urlaub. Der Urheber, das
+Unkraut, der Ural. Der Opel, der Osten, das Organ. Der
+Oberst, die Oder, der Ordner. Die Operation, das Ohr, der
+Obdachlose. Das Zink, der Zauber, die Zahl. Die Zeit, das
+Zeug, das Ziel. Der Zahn, der Zaun, das Zelt. Die Partei,
+das Pech, der Papagei. Der Papst, der Polizist, der Pol. Die
+Peitsche, der Pilz, die Poesie. Das Wasser, die Werbung, der
+Witz. Die Ware, das Wehr, die Woge. Der Wurm, die Wurst, das
+Wachs. Der Chinese, die Chemie, der Cocktail. Der Charme,
+die Chance, der Chirurg. Das Cello, die Chronik, der Chaot.
+Die Liebe, das Leben, die Lust. Das Lager, die Lunge, das
+Laub. Das Lenkrad, die Leere, das Lachen.</text>
+  </lesson>
+  <lesson>
+   <id>{4322554d-8476-4562-bbfc-601248a3bf33}</id>
+   <title>Kurze Trainingssätze</title>
+   <newCharacters></newCharacters>
+   <text>Der Urlaub war super. Wir waren mit dem Zelt unterwegs. Der
+Zeltplatz war bei einer Insel. Den Namen der Insel kenne ich
+nicht mehr.
+Mein Kumpel dachte der Untergang der Sonne im Meer ist im
+Osten. Er ist so ein Idiot. Die Sonne geht im Westen unter.
+Willi wollte am Wettbewerb teilnehmen. Er trainierte
+eisern. Allerdings wurden seine Problemzonen nicht weniger.
+Er nahm nicht ab.
+Arno arbeitet bei uns. Arno ist eigentlich Elektriker. Er
+macht die Installation der Programme. Arno kann auch
+Computer zusammenbauen.
+Inge kann gut rennen. Alle sagten ihr das. Lars wollte mit
+ihr rennen. Inge war aber zu schnell. Lars ist nun
+deprimiert.
+Endlich wollt ihr uns besuchen. Ihr konntet heute aber nicht
+kommen. Weil wir heute mit den Kindern zum
+Abenteuerspielplatz gehen.
+Ein guter Rat ist teuer. Probleme erledigen wir prompt.
+Wunder gehen nicht so schnell. Alle schlauen Weisheiten
+haben Witz.
+Lerne die Liebe am Leben. Lerne die Toleranz zu allen
+Leuten. Lebe mit Lust. Lachen ist gesund. Lieber arm und
+gesund, als reich und krank.
+Uns hat der Papst abgesagt. Er wollte aus Rom nach Celle
+kommen. Aber er besucht eine Ausstellung in Chicago.
+Er teilt das Essen ein. Aber die Einteilung gelingt nicht.
+Er hat deswegen in der Nacht Hunger. Immer diese Probleme
+ums Essen.</text>
+  </lesson>
+  <lesson>
+   <id>{6c4759b0-0824-41c5-9ab4-1afafc3519bf}</id>
+   <title>Unser Sicherheitstest</title>
+   <newCharacters></newCharacters>
+   <text>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt
+Glitter Dritter Celle Kelle Elle Cent Karte Charta Krater
+Chlor Ohr Chor Haar Heer Herr Hagel Nagel Wand Hand Hund
+Grund Hundert Ast Hast Rast Gast Eis Reis Greis Gleis See
+Tee Schnee Sorge Sonne Wonne Tonne Soldat Diktat Spinat
+Pirat Spagat Saat Tat Staat Rat Storch Strolch Stroh
+Metamorphose Dose Hose Rose Karikatur Natur Kathedrale
+Zentrale Kleiderhaken Kniekehle Seele Makrele Koch Kunst
+Wache Sache Wagen Hektik Trinkgeld Warnstreik Keks Gewalt
+Gestalt Wunsch Punsch Kiste Piste Gockel Sockel Krokodil Nil
+Kontakt Akt Kiwi HiWi Wolke Molke Spreu Heu Praktikum
+Produkt Baum Raum Saum Traum Maske Massaker Picknick Kritik
+Mikroskop Mittelwert Schwert Medikament Megatrend Sohn
+Megaphon Thron Hohn Personalcomputer Phantom Mundharmonika
+Zeppelin Berlin Zwieback Zeremonienmeister Zwischenmahlzeit
+Basilikum Zebra Bezirk Zauberstab Zeitbombe Bestellzettel
+Zollbeamter Bronzezeit Der Wecker klingelt laut. Im
+Weinkeller ist es sehr kalt. Die Weltkarte zeigt die
+Entwicklung des Zweiten Weltkrieges. Papa arbeitet in der
+Werkstatt. Wetterkunde ist ein Bereich der Meteorologie. Am
+Wickeltisch werden Windeln gewechselt. Wolke kann man am
+Himmel sehen. Wunderkinder spielen meistens mehrere
+Instrumente und sprechen einige Sprachen, nebenbei sind sie
+auch gut in Mathematik. Kauderwelsch ist keine eigene
+Sprache sondern ein Gemisch aus unterschiedlichen Sprachen
+aber auch unklare und schlechte Aussprache oder Betonung.
+Die Strommenge die ein Haushalt braucht wird in
+Kilowattstunden gemessen. Eine Kilowattstunde sind tausend
+Wattstunden. Im Krankenwagen sind selten gut aussehende
+Krankenschwestern. Die arbeiten im Krankenhaus. Innerhalb
+der Zeremonie bekommt der alte Mann die Kaiserkrone. Alle
+Leute stehen im Saal und klatschen. Immer am Ende des Monats
+kommt die Panik, wenn im Portemonnaie nur Leere herrscht.
+Paradigma ist ein Denkmuster in einer bestimmten Zeit. Den
+meisten Leuten sagt das Wort nichts. Im Parlament sitzen
+Politiker, die Mitglieder unterschiedlicher Parteien sind
+und bestimmen neue Gesetze. Ein gutes Passwort besteht nicht
+nur aus Buchstaben, sondern auch aus Zahlen und
+Sonderzeichen.</text>
+  </lesson>
+  <lesson>
+   <id>{3a66242a-7af3-4417-98aa-876b66fb7d3e}</id>
+   <title>Neue Buchstaben: v und f</title>
+   <newCharacters>vfVF</newCharacters>
+   <text>ece ala ivi ivi ivi ala ivi ivi ece ivi ivi ivi ala ivi ivi
+ivi ece nhn rgr tft tft tft rgr tft tft nhn tft tft tft rgr
+tft tft tft nhn ivi ivd ivt ivr ivn ive iva ivi ivu tft tfu
+tfi tfa tfe tfn tfr tft tfd ivi ivd ivt ivr ivn ive iva ivi
+ivu tft tfu tfi tfa tfe tfn tfr tft tfd viv vin vir vit vid
+vim vib ftf fte fta fti ftu ftp ftz vev vav viv vuv vlv vpv
+vcv vzv vwv vov fnf frf ftf fdf fgf fmf fhf fbf fkf fsf uvi
+ivi avi evi ovi lvi pvi cvi wvi ovi dft tft rft nft sft gft
+mft hft bft kft ovi evi avi uvi sft nft rft dft ivi ala ece
+viel viel viel vier vier vier vielleicht vielleicht
+vielleicht viertens viertens viertens vieles vieles vieles
+verdauen verdauen verdauen vieler vieler vieler verhandeln
+verhandeln verhandeln verletzen verletzen verletzen
+verlassen verlassen verlassen verzeihen verzeihen verzeihen
+fern fern fern fremd fremd fremd fest fest fest froh froh
+froh fallen fallen fallen frei frei frei folgen folgen
+folgen fegen fegen fegen fressen fressen fressen fliegen
+fliegen fliegen fragen fragen falten falten falten fechten
+fechten fechten fangen fangen fangen fasten fasten fasten
+fort fort fort foltern foltern foltern</text>
+  </lesson>
+  <lesson>
+   <id>{9c51615f-01b6-48e0-a42c-60eafd1d733c}</id>
+   <title>Wir üben v und f</title>
+   <newCharacters></newCharacters>
+   <text>Viele Fragen, viele Fragen, viele Fragen. Falsche
+Versicherung, falsche Versicherung, falsche Versicherung.
+Vertrockneter Fluss, vertrockneter Fluss, vertrockneter
+Fluss. Fetter Vater, fetter Vater, fetter Vater. Verlassener
+Friedhof, verlassener Friedhof, verlassener Friedhof. Fauler
+Vogel, fauler Vogel, fauler Vogel. Volle Flasche, volle
+Flasche, volle Flasche. Fechtende Verbrecher, fechtende
+Verbrecher, fechtende Verbrecher. Feuriger Vulkan, feuriger
+Vulkan, feuriger Vulkan. Frohe Vegetarier frohe Vegetarier,
+frohe Vegetarier. Vermisste Frau, vermisste Frau, vermisste
+Frau. Fiese Verletzung, fiese Verletzung, fiese Verletzung.
+Verwackeltes Foto, verwackeltes Foto. Fortgelaufener
+Verehrer, fortgelaufener Verehrer, fortgelaufener Verehrer.
+Verbrannte Fackel, verbrannte Fackel, verbrannte Fackel.
+Fortbildender Verein, fortbildender Verein, fortbildender
+Verein. Verbotene Frucht, verbotene Frucht, verbotene
+Frucht. Fastender Vampir, fastender Vampir, fastender
+Vampir. Verwundeter Frosch, verwundeter Frosch, verwundeter
+Frosch. Feuerrote Vase, feuerrote Vase, feuerrote Vase.
+Vitales Flusspferd, vitales Flusspferd, vitales Flusspferd.
+Furchtbarer Vetter, furchtbarer Vetter, furchtbarer Vetter.
+Verdorbenes Fleisch, verdorbenes Fleisch. Fehlender Verkehr,
+fehlender Verkehr, fehlender Verkehr.</text>
+  </lesson>
+  <lesson>
+   <id>{bf1deece-355b-4ffd-8ce4-50f3c912e860}</id>
+   <title>Sicherheitstest für v und f</title>
+   <newCharacters></newCharacters>
+   <text>verlade, verlasse, veredelt, vielleicht, vertragen, voll,
+vorhin, vorlassen, verloren, vorfinden, vage, vermischen,
+vorwerfe,
+Vogel. Vase. Vater. Ventil. Verkehr. Verletzung. Vernunft.
+Volk. Viereck. Video. Vormittag. Version. Vermutung.
+folgen, flogen, duftet, kaufst, deftig, anrief, haufen,
+farben, furios, impfen, frevle, stumpf, tapfer, klopfen,
+impfen,
+Fort. Pfote. Gipfel. Trumpf. Pfand. Pfau. Schopf. Ofen.
+Dorf. Stoffe. Erfolg. Stoffe. Frau. Frohsinn. Frisur.
+Pferd.
+Heute haben nur viele alte Frauen eine Dauerwellen als
+Frisur. Der Inhalt vieler leerer Flaschen auf dem Festival
+war Vodka.
+Kinder haben oft Fragen, die man kaum beantworten kann. In
+der Vergangenheitsform werden viele Verben und Vokabel
+anders geschrieben.
+Der Verbrecher ist auf der Flucht. Um seine Spuren zu
+verwischen schwimmt er im Fluss. Vielleicht hat der Fuchs
+den Frosch gefressen.
+Vampire saugen bevorzugt das frische Blut von Frauen. Der
+Vulkan faucht und spuckt feuerrote Funken aus.
+Fliegenpilze sind rot mit hellen Flecken und sehr giftig.
+Darum sind Fliegenpilze im Essen verboten.
+Die Bergsteiger Volker und Ferdinand machten einen
+Wettkampf zum Gipfel. Frankreich hat den Zweiten Weltkrieg
+nicht verloren.
+Vegetarier essen kein Fleisch und Fisch. Veganer verzichten
+sogar auf Eier und Milch. Eine frische Frucht finden beide
+schmackhaft.
+Franz war voller Freude, denn Tante Frieda hatte Waffeln
+mitgebracht. Die fischte Franz sofort aus dem Einkaufskorb.
+Die Verhandlung war ein voller Erfolg. Deshalb konnten die
+Kaufleute den Vertrag unterschreiben.
+Beim Sport verliert man viel Fett und kann dann an einem
+Wettkampf teilnehmen.</text>
+  </lesson>
+  <lesson>
+   <id>{d74a4a2b-84c4-48c6-9ef6-7d9751ad2634}</id>
+   <title>Die Umlaute: ä und ö </title>
+   <newCharacters>äöÄÖ</newCharacters>
+   <text>ala aäa ala aäa ala aäa aäu aäi aäa aäe aäo aäl aäc aäw aäp
+aäz ivi iöi ivi iöi ivi iöi iöu iöi iöa iöe iöo iöl iöc iöw
+iöp iöz äda äta ära äna äsa äfa äga äha äka ä.a ä,a äma äba
+ödi öti öri öni ösi öfi ögi öhi öki ö.i ö,i ömi öbi lal äaä
+lal äaä lal äaä äua äia äaa äea äoa äla äca äwa äpa äza viv
+öiö viv öiö viv öiö öui öii öai öei öoi öli öci öwi öpi özi
+ala aäa ivi iöi ala aäa ivi iöi ala aäa ivi iöi lal äaä viv
+öiö ala äaä ivi öiö aäe iöu aäe iöu eäa uöi eäa uöi eäa uöi
+öffentlich öfter böse löten krönen wölben können gedöst
+aufgelöst aufmöbeln stöhnen befördern zuhört röter flöten
+ungestört köstlich wäre sähe läge wäre sähe hätten kämen
+lägen wären nähme während lässig mächtig allmählich gäben
+fälschen spät erzählen wölben störte gröl e böig töten dösen
+möchte blöde öde krönen höhnen völlig vögeln öffne ölig
+spröde möglich stören bewölkt höhnen ändern gänzlich fänden
+spärlich älter ständig städtisch nämlich häusliche
+erhältliche nächtlich sächliche tägliche hinlängliche Wölfe
+Böcke Böe Götzen Knödel Einöde Röcke Köcher Höhe Wörter Löwe
+Rohöl Köter Öde Dörfer Bögen Röhren Römer Stör Öffnung Nähe
+März Wände Ämter Kälte Ärzte Bäume Päckchen Räume Wärme
+Plätzen Käufer Häuser Dämon Getränk Läufer Pöbel Anhöhe
+Ölbild Likör Löcher Rapsöl Malmö Köder Knöpfe Blöcke Tenöre
+Öffner Ölzeug Walnussöl Löffel Kröte Höhle Mängel Gebäck
+Gepäck Hände Blätter Erkältung Pläne Geräusch Universität
+Verdächtiger Europäer Ärztin Märchen Tölpel Körbe Körner
+Chöre König Göre Gönner Köder Lötzinn Löhne Mönche Köln
+Ökologie Gehör Möbel Behörde Körper</text>
+  </lesson>
+  <lesson>
+   <id>{cd38cf0d-8516-4053-b458-a64ff9b59db8}</id>
+   <title>Wir üben ä und ö</title>
+   <newCharacters></newCharacters>
+   <text>ländliche, pubertär, wählbar, prächtig, gesprächig,
+umständlich, erträgliche, tätige, tätlich, anhäufen,
+anständig, ästhetisch, ätzend, wäre, sähe, läge, wäre, sähe,
+hätten, kämen, lägen, wären, nähme, während, lässig,
+mächtig, allmählich, gäben, ölig, wölben, störte, grölen,
+böig, möglich, tötet, dösen, möchte, blöde, öde, krönen,
+höhnen, völlig, öffnen, älter, abgewälzt, später, gläubig,
+kräftiger, nächstens, zunächst, ächzen, ächten, ängstlich,
+geändert, verändert, wärmen, länger, ändern, gänzlich,
+fänden, spärlich, älter, ständig, städtisch, nämlich,
+häusliche, erhältliche, nächtlich, sächliche, tägliche.
+Ähnlichkeit. Ähre. Ältester. Anhängsel. Anhänger. Anwärter.
+Äpfel. Ära. Archäologe. Ärger. Ärmel. Ausländer. Wörter.
+Röcke. Köcher. Höhe. Einöde. Wölfe. Böcke. Böe. Götzen.
+Knödel. Löwe. Rohöl. Köter. Öde. Dörfer. Bögen. Römer. Öle.
+Dämon. Getränk. Läufer. Mängel. Gebäck. Hände. Blätter.
+Erkältung. Pläne. Geräusch. Universität. Verdächtiger.
+Europäer. Ärztin. böse Wölfe fangen, eine kräftige Böe,
+blöde verlassene Einöde, mächtiger afrikanischer Löwe,
+falsche Götzen verehren. viele Bäume fällen, köstliches
+Gebäck kaufen, den faulen König töten, auch Römer gehören zu
+den Europäern. die Ärztin versorgt das Gehör, städtische
+Universität befragen, nächtliche Geräusche hören, Möbel
+aufmöbeln. läge Malmö woanders, ein möglicher Verdächtiger,
+ständig Märchen erzählen, wegen Wärme gedöst, der Ärztin
+zugehört. ungestört beim Vögeln ächzen und stöhnen, später
+gläubiger und frommer Mönch in Köln werden. im März kämen
+die Männer der Behörde, die Mängel der Ölheizung finden,
+fiese Dämonen beschwören. bei Erkältung täglich ein paar
+Löffel Hustensaft trinken, hätten Wörter weniger Vokale wäre
+die Betonung fast unmöglich. Ausländer möchten viele
+Vokabeln lernen um völlig fehlerfrei zu reden, Gönner gäben
+mehr Geld. Tenöre stören nicht wenn Chöre singen, Ökologie
+ist die Wissenschaft der Umwelt, lässig Körbe flechten.</text>
+  </lesson>
+  <lesson>
+   <id>{a3dc3ada-f7eb-4f0b-9352-d94978ca9278}</id>
+   <title>Sicherheitstest für ä und ö</title>
+   <newCharacters></newCharacters>
+   <text>Wäre die Universität nicht so teuer, könnte ich Ökologie
+lernen. Ich sollte bei der Behörde BAfÖG anfragen.
+An allen Laubbäumen hängen Blätter an den Ästen. Im Herbst
+hängen auch Äpfel an den Bäumen.
+In Märchen verkörpern Wölfe oft das Böse, während dem Fuchs
+Schläue anerkannt wird.
+Die Feuerwehrmänner warfen die Schläuche vom Fahrzeug um das
+Feuer zu bekämpfen.
+Der Löwe fand in der Einöde nichts zum fressen. Wäre da doch
+ein dösendes Zebra zu fangen.
+Franziska ist älter und viel stärker als Viktor. Darum
+ärgert Franziska ihn oft. Viktor versucht möglichst lässig
+zu bleiben.
+Frau Vogel wählt immer Kaffee als Getränk zum täglichen
+Gebäck. Franziska findet Kaffee blöd, aber das Gebäck
+köstlich.
+In vielen europäischen Dörfern gibt es noch Klöster. Dort
+fahren gläubige Männer und Frauen hin um mit den Mönchen zu
+reden.
+Zwei Männer spannten ihre Bögen, nahmen Pfeile aus den
+Köcher und versuchten das Ziel zu treffen.
+Mit lauten Geräuschen und Händeklatschen machten die
+Zuschauer Lärm beim Wettkampf.
+Hätten die Ärzte eine Erklärung, könnten sie die Erkältung
+bekämpfen. Sie ändern ständig die Strategie gegen den
+Virus.
+Alle Häuser haben gut gedämmte Wände. Damit man nicht vor
+Kälte friert benötigen sie zusätzlich eine Ölheizung.</text>
+  </lesson>
+  <lesson>
+   <id>{114ffdb2-0c0f-4f6e-9f12-42a31304567d}</id>
+   <title>Neue Buchstaben: ü und j</title>
+   <newCharacters>üjÜJ</newCharacters>
+   <text>epe aäa iöi uüu uüu uüu iöi uüu uüu uüu aäa uüu uüu uüu nmn
+r,r t.t djd djd djd t.t djd djd djd r,r djd djd djd uüu iüi
+aüa eüe oüo vüv lül cüc wüw züz püp äüä öüö djd tjt rjr njn
+sjs fjf gjg hjh kjk bjb mjm ,j, .j. uüu uüi uüa uüe uüo uül
+uüc uüw uüö uüv uüä uüp uüz djd djt djr djn djs djf djg djh
+djk dj. dj, djm djb üuu üiu üau üeu üou üzu üpu üäu üöu üwu
+ücu ülu üvu jdd jtd jrd jnd jsd jbd jmd j,d j.d jkd jhd jgd
+für für für üben üben üben führen führen führen über über
+über würde würde würde müssen müssen müssen jawohl jawohl
+jawohl jung jung jung jemand jemand jemand jobben jobben
+jobben jagen jagen jagen dürfen dürfen dürfen zurück zurück
+zurück überall überall überall darüber darüber darüber
+jaulen jaulen jaulen jetzt jetzt jetzt jonglieren jonglieren
+jonglieren jodeln jodeln jodeln jeder jeder jeder</text>
+  </lesson>
+  <lesson>
+   <id>{5c33f25d-c794-402a-84a8-2ce86ee75f98}</id>
+   <title>Wir üben ü und j</title>
+   <newCharacters></newCharacters>
+   <text>üben über übel üblich übrigens überaus übrig überall
+überbacken überladen überbewertet überhaupt überängstlich
+jemand junge jemals jucken jäten jährig jaule jobben ja
+jobben jubeln jagen jawohl jubeln jonglieren jeder jetzt
+jedes jüngst jüdisch müssen fünf dürfen müde zurück
+natürlich blühen kühl berühmt glühen kühn würgen pflücken
+küssen hübsch spülen fühlen Übung Übeltäter Überfall
+Überbrückung Übergabe Übereinstimmung Überhang Überbuchung
+Überlastung Überlebenskünstler Jazz Jacht Japan Jacke Junge
+Job Journalist Jungfrau Juwel Jauche Juli Joghurt Jäger
+Jumbojet Juni Justiz Jubiläum Jordanien Tür Führer Zügel
+Flügel Gerümpel Hügel Rücken Müll Glück Frühling Sünde Lücke
+Würde Küche Gemüse Müdigkeit Gebühr Abkürzung Zündung
+Schüler Gürtel Küche Stück Künstler Süchtiger Verrückter
+Lüge Prügel Verbündeter Bürste Hütte Bücher Dürre Würfel
+Dünger Gerüst Fürst Gebrüll Rüstung Gewürz Hüfte Krümel
+Grünzeug Mütze Hülle Bürger Pfütze Rübe Schlüssel Wünsche
+Tümpel Stütze</text>
+  </lesson>
+  <lesson>
+   <id>{ae3e58e7-f6e1-452c-8202-069f32b6b2f9}</id>
+   <title>Sicherheitstest für ü und j</title>
+   <newCharacters></newCharacters>
+   <text>Seit über fünf Jahren sammelt Jonas Mützen berühmter Bürger.
+Die Mützen benutzt er jedoch als Stützen für seine
+Büchersammlung.
+Mit französischen Käse überbacken und vielen Gewürzen
+schmeckt der Kartoffelauflauf besser.
+Sämtliche Nürnberger Kunden loben übereinstimmend den
+vorzüglichen Geschmack des Gebäcks.
+Wegen der Dürre bekamen das Gemüse mehr Dünger. Zusätzlich
+wurden Gräben und Tümpel angelegt.
+Der Müll würde länger nicht zurückgenommen, wenn die
+Müllabfuhr streiken würde. Doch die Justiz verbietet den
+Streik.
+In Japan blühen jedes Jahr im Frühling die Kirschbäume.
+Deren Blühten sind rosarot und sehr hübsch.
+In Jordanien jubelt die Menge, als die Justiztagung jährte.
+Journalisten hatten länger über die üblen Umstände
+berichtet.
+Nach den Überfall wurde der junge Juwelendieb von den
+Polizisten überwältigt. Er hatte kein Glück.
+Der Journalist schrieb einen langen Artikel über das
+Jubiläum der Gürtelfabrik. Früher wurden böse Jungs oft mit
+dem Gürtel verprügelt.
+Vegetarier und Veganer essen viel Gemüse, Früchte und
+Nüsse. Das ist wegen der Vitamine gesund und nützlich.
+Die Jacht des Fürsten ist das prächtigste Objekt im Hafen.
+sie ist berühmt für die fünf Kojen eingerichtet von
+verschiedenen Künstlern.
+Viele Bürger denken Jazz ist nur Lärm und Gebrüll. Natürlich
+stimmt das nicht. Künstler fühlen sich durch Jazz
+inspiriert.
+Für Ihre Glückwünsche zu unserem Jubiläum danken wir Ihnen.
+Jetzt würden wir uns natürlich über eine Bestellung freuen.
+Joachim küsste Julia und fragte sie, ob er sie zur Frau
+nehmen dürfte. Julia war gerührt und bejahte glücklich.
+Schüler müssen Vokabeln lernen. Dafür benötigen sie viel
+Übung. Oft verspüren sie jedoch Rückschläge bei der Übergabe
+der Noten.</text>
+  </lesson>
+  <lesson>
+   <id>{4450f100-1a14-4e38-8c90-612fa609513a}</id>
+   <title>Wir wiederholen</title>
+   <newCharacters></newCharacters>
+   <text>upuivialaece djdtftrgrnhn upuivialaece djdtftrgrnhn upuivia
+epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäan
+beim fast gibt drei kaum alte geht neue seit viel soll etwa
+Gast Geld Gott Glas Graf Gang Gold Grab Gram Golf Glut Gabe</text>
+  </lesson>
+  <lesson>
+   <id>{7ccbc8a9-709f-480f-8015-07952d409450}</id>
+   <title>Neue Buchstaben: y und ß</title>
+   <newCharacters>yßY</newCharacters>
+   <text>ndj nyj ndj nyj ndj nyj ndj ndß ndj ndß ndj ndß ndj djd dyd
+dßd djd dyd dßd djd dyd dßd jyß jyß jyß djd dyd dßd ßyj ßyj
+ßyj eoe dyd dyd dyd eoe dyd dyd dyd eoe dys dyn dyr dyt dyd
+ewe dßd dßd dßd ewe dßd dßd dßd ewe dßs dßn dßr dßt dßd eoe
+dyd dyd dyd eoe dyd dyd dyd eoe dym dy, dy. dyj ewe dßd dßd
+dßd ewe dßd ßd dßd ewe dßm dß, dß. dßj sys sys rhy rhy zyl
+zyl bay bay typ typ hyg hyg sym sym phy phy ußd ißd aßd eßd
+oßd uße iße aße eße oße sys sys rhy rhy zyl zyl bay bay typ
+typ hyg hyg sym sym phy phy ußd ißd aßd eßd oßd uße iße aße
+sympathisch sympathisch sympathisch typisch typisch typisch
+sympathisch sympathisch typisch typisch bayerisch bayerisch
+bayerisch analysieren analysieren analysieren bayerisch
+bayerisch analysieren analysieren symbolisch symbolisch
+symbolisch bloß bloß bloß symbolisch symbolisch bloß bloß
+zylindrisch zylindrisch zylindrisch saß saß saß zylindrisch
+zylindrisch saß saß grüßen grüßen grüßen fließen fließen
+fließen grüßen grüßen fließen fließen mäßig mäßig mäßig
+draußen draußen draußen mäßig mäßig draußen draußen groß
+groß groß weiß weiß weiß maß maß maß groß groß weiß weiß maß</text>
+  </lesson>
+  <lesson>
+   <id>{b41da23d-15f5-427a-a7a6-8321e10cc376}</id>
+   <title>Wir üben y und ß</title>
+   <newCharacters></newCharacters>
+   <text>analysieren, bayerisch, symbolisch, zylindrisch, zyklisch,
+happy, typisch, systematisch, rhythmisch, sympathisch, saß,
+fließen, ließen, gießen, außen, außer, draußen, äußerte,
+weiß, groß, bloß, genießen, reißen, heißen, verließ, Typhus.
+Psyche. Hockey. Zypern. Typ. Analyse. Zylinder. Bayern.
+Hygiene. Dynamo. Symbol. Cowboy. Boykott. Rhythmus.
+Paraguay. Sympathie. Blöße. Fuß. Füße. Gießen. Grieß. Grüße.
+Gruß. Schöße. Schoß. Straße. Muße. Stoß. Spaß. Steiß.
+Strauß. Ruß. Yeti. Yokohama. Yuccapalme. Physik. System.
+Baby. Embryo. Layout. Bypass. Party. Maya. Cowboy. City.
+Jury. Whisky. Bayreuth. Speyer. Sylt. Yoga. Zyklus. Yin und
+Yang. Yard. bayerischer Typ, Syrien analysieren, symbolische
+Analyse, zylindrischer Zylinder, bloß Bayern, äußere
+Hygiene, süße Physik, weißes System, großer Dynamo,
+grüßendes Symbol, symbolischer Gruß.</text>
+  </lesson>
+  <lesson>
+   <id>{cc5fd86d-de1d-4fbb-9b5c-6c17e3158072}</id>
+   <title>Sicherheitstest für y und ß</title>
+   <newCharacters></newCharacters>
+   <text>Es ist ein Irrtum zu denken, dass mit der Einführung der
+neuen Rechtschreibung das ß aus dem deutschen
+Buchstabenkatalog verschwunden ist.
+Das ß tritt seltener auf, ist aber dennoch vorhanden.
+Hinter einem lang zu sprechenden Vokal muss ein ß stehen.
+vergaß, groß, fraß, Straße, Gruß, Äußerung, vergaß, groß,
+fraß, Straße, Gruß, Äußerung,
+Auch hinter jedem Doppellaut, einer Verbindung von zwei
+Vokalen, au, ei, ai, eu, äu, steht immer ein ß.
+heißen, reißen, scheußlich, Strauß, heißen, reißen,
+scheußlich, Strauß,
+Im Gegensatz dazu steht ein ss hinter kurz zu sprechenden
+Vokalen.
+müssen, fassen, dass, hässlich, Fass, Riss, müssen, fassen,
+dass, hässlich, Fass, Riss
+Aus lassen und er läßt, wird jetzt lassen und er lässt.
+Also einheitlich ss in reformierter Schreibweise.
+Aus beißen und er biß, wird jetzt beißen und er biss. Also
+einheitlich ß in konventioneller Schreibweise.
+Aus beißen und er beißt, wird jetzt beißen und er beißt.
+Also einheitlich ß in beiden Schreibweisen.
+Aus wissen und er weiß, wird jetzt wissen und er weiß. Also
+uneinheitlich in beiden Schreibweisen.
+Konventionelle Schreibweise daß, Biß, Kuß, geküßt, laßt,
+Meßergebnis. Reformierte Schreibweise dass, Biss, Kuss,
+geküsst, lasst, Messergebnis.
+Der größte Kongress über Yoga soll in einer bayerischen
+Stadt stattfinden. Im März will der Physiker Herr Meyer zur
+Kur nach Bad Oeynhausen fahren.
+Zeigen Sie auf der Karte Zypern, Syrien, Bayreuth, Paraguay,
+Speyer, New York und Sylt.
+Ihre großartigen Erfolge haben uns außerordentlich gefreut.
+Die Firma Strauß hatte bisher bloß kleine Aufträge erteilt.
+Doch mit der Analyse über die typische Hygiene von Babys hat
+sich dies geändert.
+Der Fluss führt entlang der Straße, bis zum Kraftwerk. Dort
+wird mit einen Dynamo Elektrizität produziert.
+Auf der Party der Universität hatte Katy viel Spaß. Sie
+tanze im Rhythmus der Musik, als sie ein süßer Typ ansprach.
+Er war ihr sofort sympathisch.
+Ein gleichmäßiger Schreibfluss ist das große Erfolgsrezept.
+Übermäßiger Genuss von Süßigkeiten oder Whisky ist gewiss
+schädlich.
+Mit Hypnose können Störungen der Psyche ergründet werden.
+Das Yin und Yang kann man mit Yoga im Einklang bringen.</text>
+  </lesson>
+  <lesson>
+   <id>{6ccf7548-2dcb-4812-91dc-7a278481f123}</id>
+   <title>Rechtschreibklippen und häufige Rechtschreibfehler</title>
+   <newCharacters></newCharacters>
+   <text>gar gären, die Gebärde, malen Gemälde, hämisch, Haar
+Härchen, zäh Zähheit, laden lädt, klar klären, Märchen, Kran
+Kräne, Name nämlich, Paar Pärchen, säen Sämann, Dänen,
+ähnliches allmähliche, Draht Drähte, fahren Fähre, Fähnchen,
+gähnen, gewahr gewähren Gewähr, Naht Nähte, sah, sähen,
+spähen spähte spähten, stehlen stahl, Stahl Stähle stählern,
+Kapitän, Sekretäre, Atmosphäre, Trainer Training, Gäste
+Geste, Ähre Ehre. aggressiv, Akustik, Armaturenbrett,
+asozial, Attrappe, autorisiert, Autorisierung, Billard,
+bisschen, Biskuit, bombardieren, brillant, Cappuccino,
+detailliert, dilettantisch, Diphtherie, Eigenbrötler,
+Entgelt, endgültig, erfahrenste, Ekstase, frönen,
+Galionsfigur, Gebaren, gesät, gotisch, Gratwanderung, Grieß,
+grölen, hältst, Inbusschlüssel, Ingredienzien, Lappalie,
+Liliputaner, lizenzieren, Lizenzierung, manieriert, niesen,
+Obolus, original, Pavillon, piken, piksen, projizieren,
+Prophezeiung, Reling, Religiosität, Reparatur, Ressource,
+Rückgrat, Rhythmus, selig, separat, Seriosität, skurril, so
+was, Standard, Stegreif, subsumieren, Silvester, Terabyte,
+todlangweilig, todschick, unterstützt, unterstützen,
+Verlies, Verwandtschaft, voraus, Wermutstropfen,
+widerspiegeln</text>
+  </lesson>
+  <lesson>
+   <id>{8a3d52cb-9d90-47d8-9384-d1efef0e5c83}</id>
+   <title>Neue Buchstaben: x und q</title>
+   <newCharacters>xqXQ</newCharacters>
+   <text>uuu üüü uuu xxx uüu uxu üuü xux uuu xxx uuu xxx ddd jjj ddd
+qqq djd dqd jdj qdq ddd qqq ddd qqq ece ala ivi uxu uxu uxu
+uxo uxe uxa uxi uxu uxw uxc uxl uxv uxx uxz uxp uxä uxö uxü
+nhn rgr tft dqd dqd dqd dqs dqn dqr dqt dqd ddqk dqh dqg dqf
+dqq dqß dqb dqm dq, dq. dqj dqy xuo xue xua xui xux xuw xuc
+xul xuv xux xuz xup xuä xuö xuü qds qdn qdr qdt qdq qdy qdk
+qdh qdg qdf qdq qdß qdh qdg qdf qdq qdß qdb qdm qd, qd. qd.j
+exakt exakt exakt mixen mixen mixen boxen boxen boxen extrem
+extrem extrem Jux Jux Jux extra extra extra Box Box Box
+Exempel Exempel Exempel Text Text Text Index Index Index
+Reflex Reflex Reflex Komplex Komplex Komplex Taxi Taxi Taxi
+Luxus Luxus Luxus Xenon Xenon Xenon Explosion Explosion
+Explosion flexibel flexibel flexibel Axt Axt Axt Xylophon
+Xylophon Xylophon Lexikon Lexikon Lexikon Exil Exil Exil
+Texas Texas Texas Hexe Hexe Hexe nix nix nix quer quer quer
+quellen quellen quellen quitt quitt quitt quietschen
+quietschen quietschen bequeme bequeme bequeme quetschen
+quetschen quetschen Quecksilber Quecksilber Quecksilber
+Qualm Qualm Qualm Quarz Quarz Quarz Quartal Quartal Quartal
+Quatsch Quatsch Quatsch quälen quälen quälen Quote Quote
+Quote Quelle Quelle Quelle Quadrat Quadrat Quadrat Querflöte</text>
+  </lesson>
+  <lesson>
+   <id>{09ca41da-a5d7-4bfe-bbbe-f1b2d96988d1}</id>
+   <title>Wir üben x und q</title>
+   <newCharacters></newCharacters>
+   <text>extra Qualität, gemixter Quellcode, extremer Quälgeist,
+externe Querverweise, Maximum Quark, flexibler Quelltext.
+fixierte Quersumme, exklusive Quälerei, Praxis quietschen,
+Dioxin Quatsch, Examen qualmen, Mixtur Quacksalber. Export
+Quantensprung, Experten quiekten, Expedition qualitativ, Max
+Querbalken, Alex Quasselstrippe. Felix Quotient, Xenia Quiz,
+Beatrix Quittung, Alexandra Quitte, Luxemburg Queen, Luxus
+Querflöte, Latex quetschen. Xenon quer, Xavier
+Quellenangabe, Xanten Quelle, Xylophon Quecksilber, Boxer
+Quarz, Explosion Quarantäne, Kodex Quartett. Mixtur Quartal,
+Hexe Quark, Experiment Quote, flexibel Quantität, Lexikon
+Quantenmechanik, Doppelhelix Qualle. Texas Quartier, Mexiko
+Qualität, nix qualifizieren, Axt quälen, Exil quaken, Marx
+Quadratmeter.
+Herr Felix Flex ist jetzt unser neuer Mitarbeiter in Texas.
+Die Exportgesellschaft exportiert aber auch nach Luxemburg.
+Die Textilfabrik Rex sucht qualifizierte Textprogrammierer.
+Die Polster sind bequem, aber auch qualitativ ansprechend.
+Auf die Anzeige haben sich qualifizierte Bewerber gemeldet.
+Die Querverbindung wurde im vorigen Quartal fertiggestellt.</text>
+  </lesson>
+  <lesson>
+   <id>{ee5a1155-95d2-4d23-a04b-5f43a50b08e7}</id>
+   <title>Sicherheitstest für x und q</title>
+   <newCharacters></newCharacters>
+   <text>Manchmal schreiben wir x, dann wieder cks, gs, ks oder chs.
+Im Aufsatzheft hat Alex unsauber geschrieben und gekleckst.
+Carmen will in Luxemburg spezielle Kekse und echten Lachs
+kaufen.
+Der Boxer sollte sich von seinen Gegner durch psychologische
+Tricks nicht ins Bockshorn jagen lassen.
+Sicherlich fliegst du an Pfingsten mit Beatrix nach Mexiko.
+Die Heizung der Arztpraxis wurde jetzt von Koks auf
+Holzpellets umgestellt.
+Für unsere verwöhnten Kunden, die teuren Luxus vorziehen,
+brauchen wir ein Produkt exklusiver Qualität.
+Fähige Programmierer mixen den Quellcode offener Software,
+so als würden sie nix anderes machen.
+Bei uns im Büro sitzt ein extremer Quälgeist der uns allen
+auf die Nerven geht.
+Wenn Studenten wissenschaftliche Artikel schreiben,
+vergessen sie oft die externen Quellenangaben zu ihren
+Texten.
+Ein Teilgebiet der Physik ist die Quantenmechanik. Forscher
+machen Experimente über die Existenz der Quarks.
+Den Schülern der klasse fünf qualmen sprichwörtlich die
+Köpfe, als sie ein Examen über Psychologie hatten.
+Beatrix bezahlte im luxuriösen Restaurant die Quittung mit
+ihrer goldenen Chequekarte
+Ich glaube, dass der Pharmazeut ein Quacksalber ist, denn
+er verkauft eine Mixtur gegen Warzen, die nix bringt.
+In den alten Gebäude, in dem Max wohnt, sind die Querbalken
+aus tropischen Hölzern.
+Alex ist als die größte Quasselstrippe in unserer Straße
+bekannt. Er erzählt mehr Lügen als der Baron von
+Münchhausen.
+Heute war ein Glückstag für Xenia, denn sie wurde nach
+Luxemburg zu einen Quiz eingeladen.
+Es gibt Menschen in der Gesellschaft, die quetschen sich am
+Wochenende in Leder und Latex, weil sie es schön finden.
+In der Stadt Xanten, die von den Römern gegründet wurde,
+gab es eine Quelle eines Flusses, dessen Name vergessen ist.
+Das Xylophon und die Querflöte sind Musikinstrumente, die
+nur wenige Schüler lernen.
+Nach der Explosion in der Chemiefabrik kamen alle
+Mitarbeiter in die Quarantänestation des städtischen
+Krankenhauses.
+Zur Zeit untersuchen Forscher den Aufbau der Doppelhelix.
+Die Wissenschaftler nehmen die Zellen dafür aus
+Meeresquallen.
+In Mexiko ist die Qualität von Tequila ausgezeichnet, denn
+Tequila ist das Nationalgetränk der Mexikaner.
+Die Axt benutzte man im Mittelalter nicht nur zum Bäume
+fällen, sondern auch um bei der Folter Verbrecher zu quälen.
+Die Bücher und Texte von Karl Marx würden nebeneinander
+gelegt mehrere Quadratmeter Fußboden bedecken.</text>
+  </lesson>
+  <lesson>
+   <id>{af712f96-95d7-47fd-ae06-eaf0b25a557c}</id>
+   <title>English test—1000 frequently used words</title>
+   <newCharacters></newCharacters>
+   <text>sister gun total company oxygen similar deal radio plural
+death determine various score evening is not then action
+agreed forward nor capital opposite stretched rope factories
+wrong experience cotton settled chart rose apple yellow
+prepared allow details pretty fear entire southern solution
+workers corn truck fresh Washington substances fair shop
+Greek smell printed suffix women tools would not especially
+bought conditions ahead shoes led cows chance actually march
+track born nose northern arrived level afraid create located
+triangle dead British sir molecules sugar difficult seat
+France adjective match division repeated fig win effect
+column office does not underline the or will number of one
+up no and had other way a by about could to word out people
+in but many my than you what them first that all these water
+it were so been he we some call was when her who for your on
+can make its are said like now as there him find with use
+into long his an time down they each has look did at she two
+get be do more come his how write made have their go may
+from if see part set over say try put new great kind end
+sound where hand does western huge steel view church day I
+which take help picture another only through again well
+little much change large work before off must know line play
+big place right spell even year too air such live mean away
+because man three America me old animal turn back any house
+here give same point why most tell page ask move think small
+world very boy letter went after follow mother men thing
+came answer read our want found need would oil just show
+study land name also still different good around learn home
+sentence form should us high saw important miss every left
+until idea near children enough add few side eat food while
+feet face between along car watch own might mile far below
+close night Indian country something walk really plant seem
+white almost last next sea let school hard began above
+father open grow girl keep example took sometimes tree begin
+river mountain never life four cut start always carry young
+city those state talk earth both once soon eye paper book
+list light together hear song fact base thought got stop
+being head group without leave under often second family
+story run later done decided plane filled English contain
+system heat road course behind full halt surface ran hot ten
+produce round check fly building boat object gave ocean game
+am box class force rule equation finally note brought among
+wait nothing understand noun street stood government built
+yet include correct rest warm power oh carefully common
+cannot quickly scientists bring able person inside explain
+six became wheels dry size shown stay though dark minutes
+green language ball strong known shape material verb island
+deep special stars week thousands heavy front less yes fine
+feel machine clear pair picked beside legs simple gone
+matter sat cells sky square main paint glass syllables
+winter mind million perhaps wide love west bill written
+cause lay felt length rain weather suddenly reason exercise
+root test kept eggs instruments direction interest train
+meet center arms circle inches ago blue third farmers
+brother wish months ready race drop paragraph anything
+present developed raised divided beautiful window represent
+general store difference soft energy job members happy
+everything distance whether subject edge heart clothes
+Europe past sit flowers moon sign sum shall region record
+summer teacher return finished wall held believe discovered
+forest describe dance wild probably drive already hair
+rolled cross instead age bear speak phrase amount wonder
+solve soil scale smiled appear bed pounds angle metal copy
+although fraction son free per Africa either hope broken
+killed dictionary sail ice spring moment melody sleep case
+tiny bottom village laughed possible trip factors nation
+gold hole result quite milk poor jumped type quiet let us
+snow themselves natural fight ride temperature lot surprise
+care bright stone French floor lead act died fingers tall
+hill everyone build beat pushed method middle exactly baby
+section speed remain buy lake count dress century consonant
+cat iron outside within someone could president caught row
+yourself brown fell least control trouble team catch
+practice cool God climbed report cloud captain wrote
+straight lost direct shouted rise sent ring continued
+statement symbols serve itself stick wear child else party
+bad desert plains seeds save increase gas suppose experiment
+history England woman engine cost burning coast alone maybe
+design bank Germany drawing business joined period east
+separate foot wire pay break law choose single uncle ears
+clean touch hunting grass visit information flow you are bit
+express lady grew whose mouth students skin received yard
+human valley garden equal art cents please guess thick major
+supply silent blood observe corner trade lie tube electric
+rather spot necessary insects compare bell weight crops
+crowd fun meat tone poem loud lifted hit enjoy consider
+process sand elements suggested army doctor indicate thin
+hat provide except position property thus expect entered
+flat fruit swim cook seven tied terms bones interesting rich
+current tail sense dollars park particular board string send
+sell modern blow sight shoulder compound famous chief
+industry mine value Japanese wash was not wings stream block
+fit movement planets spread addition pole rhythm cattle
+belong exciting eight wife safe branches science sharp
+soldiers heard reached map upon decimal feeling key strange
+body order listen farm music red wind pulled color door rock
+draw stand sure space voice sun become covered seen question
+top fast cold fish ship several cried area across hold plan
+mark today himself notice dog during toward south horse
+short five sing birds better step war problem best morning
+ground complete however passed fall room low vowel king knew
+hours true town since black hundred will ever products
+against unit piece happened pattern figure told whole
+numeral certain usually measure table field did not remember
+north travel friends early slowly wood easy waves money fire</text>
+  </lesson>
+  <lesson>
+   <id>{01b0e94c-917f-4b66-b7f1-7a53d9a2619c}</id>
+   <title>Deutsche Wörter – 1000 häufigst benutzte Wörter</title>
+   <newCharacters></newCharacters>
+   <text>der die und in den von zu das mit sich des auf für ist im
+dem nicht ein eine als auch es an werden aus er hat dass sie
+nach wird bei einer um am sind noch wie einem über einen so
+zum war haben nur oder aber vor zur bis mehr durch man sein
+wurde sei in Prozent hatte kann gegen vom können schon wenn
+habe seine Euro ihre dann unter wir soll ich eines es Jahr
+zwei Jahren diese wieder keine Uhr seiner worden und will
+zwischen immer Millionen ein was sagte er gibt alle diesem
+seit muss wurden beim doch jetzt waren drei Jahre mit neue
+neuen damit bereits da auch ihr seinen müssen ab ihrer nach
+ohne sondern selbst ersten nun etwa bei heute ihren weil ihm
+seien Menschen Deutschland anderen werde ich sagt wir eine
+rund für aber ihn Ende jedoch Zeit sollen ins wenn so seinem
+uns Stadt geht doch sehr hier ganz erst wollen Berlin vor
+allem sowie hatten kein deutschen machen lassen als
+Unternehmen andere ob dieses steht dabei wegen weiter denn
+beiden einmal etwas wie nichts allerdings vier gut viele wo
+viel dort alles wäre kommt vergangenen denen fast fünf
+könnte nicht nur hätten Frau am dafür kommen diesen letzten
+zwar diese großen dazu von Mann da sollte würde also bisher
+Leben Milliarden Welt Regierung konnte ihrem Frauen während
+Land zehn würden stehen ja USA heißt dies zurück Kinder
+dessen ihnen deren sogar Frage gewesen erste gab liegt gar
+davon gestern geben Teil Polizei dass hätte eigenen kaum
+sieht große denn weitere was sehen macht Angaben weniger
+gerade lässt Geld München deutsche allen darauf wohl später
+könne deshalb aller kam Arbeit mich gegenüber nächsten
+bleibt wenig lange gemacht wer dies Fall mir gehen Berliner
+mal Weg wollte sechs keinen Woche dagegen alten möglich gilt
+erklärte müsse dabei könnten Geschichte zusammen finden Tag
+Art erhalten man Dollar Wochen jeder nie bleiben besonders
+Deutschen den zu zunächst derzeit allein deutlich
+Entwicklung weiß einige sollten Präsident geworden statt
+Bonn Platz inzwischen nur Freitag um pro seines damit Montag
+Europa schließlich Sonntag einfach gehört eher oft Zahl
+neben hält weit Partei meisten Thema zeigt Politik aus
+zweiten Januar insgesamt je musste Anfang hinter ebenfalls
+ging Mitarbeiter darüber vielen Ziel darf Seite fest hin
+erklärt Namen Haus an Frankfurt Gesellschaft Mittwoch damals
+Dienstag Hilfe Mai Markt seit Tage Donnerstag halten gleich
+nehmen solche Entscheidung besser alte Leute Ergebnis
+Samstag sagen System März tun Monaten kleinen lang nicht
+knapp bringen wissen Kosten Erfolg bekannt findet daran
+künftig acht schnell Grund scheint Zukunft Stuttgart bin
+liegen politischen Gruppe Rolle stellt Juni sieben September
+nämlich Männer Oktober überhaupt eigene dann gegeben
+außerdem Stunden eigentlich Meter ließ Probleme vielleicht
+ebenso Bereich zum Beispiel Höhe Familie während Bild
+Ländern Informationen Frankreich Tagen schwer zuvor vor
+genau April stellen neu erwartet Hamburg sicher führen Mal
+über mehrere Wirtschaft Programm offenbar hier weiteren
+natürlich konnten stark Dezember Juli ganze kommenden Kunden
+bekommen eben kleine trotz wirklich Lage Länder leicht
+gekommen Spiel laut November kurz politische führt innerhalb
+unsere meint immer wieder Form anders ihres völlig
+beispielsweise gute bislang August Hand jede GmbH Film
+Minuten erreicht beide Musik Kritik Mitte Verfügung Buch
+dürfen unter jeweils einigen zum Umsatz spielen Daten welche
+müssten hieß paar nachdem Kunst gebracht Problem noch jeden
+Sprecher recht erneut längst europäischen sein Eltern Beginn
+besteht mindestens machte jetzt bietet außerdem Bürger
+Trainer bald Deutsche schon Fragen klar durch gehören dort
+erstmals Februar zeigen Titel Stück größten setzt Wert Staat
+möchte daher wolle Bundesregierung lediglich Nacht Krieg
+Opfer Tod nimmt Firma zuletzt Werk hohen leben unter anderem
+dieser Kirche weiterhin gestellt Mitglieder Rahmen zweite
+Paris Situation gefunden Wochenende internationalen Wasser
+Recht sonst Möglichkeit versucht blieb junge Mehrheit Straße
+Sache arbeiten Seiten gebe stand Hälfte Monate Mutter
+berichtet letzte Gericht wollten zwölf zumindest Wahl genug
+Weise Vater Bericht amerikanischen hoch beginnt Wort obwohl
+Kopf spielt Interesse Westen verloren Preis erst jedem
+erreichen setzen spricht früher teilte Landes zudem
+einzelnen bereit Blick Druck Bayern Kilometer gemeinsam
+Bedeutung Chance Politiker dazu besten Ansicht endlich
+Stelle direkt beim Bevölkerung viele solchen alle solle
+jungen Einsatz richtig größte sofort neuer ehemaligen
+unserer dürfte schaffen Augen Russland Internet allerdings
+Raum Mannschaft neun kamen Ausstellung Zeiten einzige meine
+nun Verfahren Angebot Richtung Projekt niemand Kampf weder
+tatsächlich Personen heute geführt Gespräch Kreis Hamburger
+Schule guten Hauptstadt durchaus Zusammenarbeit darin Amt
+Schritt meist groß zufolge Sprache Region Punkte Vergleich
+genommen gleichen du ob Soldaten Universität verschiedenen
+Kollegen neues Bürgermeister Angst Unterstützung stellte
+Sommer danach anderer gesagt Sicherheit Macht Bau handelt
+Folge Bilder lag Osten Handel sprach Aufgabe Chef frei
+dennoch hohe Firmen Koalition Mädchen zur entwickelt fand
+Diskussion bringt deshalb Hause Gefahr per zugleich früheren
+dadurch ganzen Abende erzählt Streit Vergangenheit Parteien
+Verhandlungen jedenfalls gesehen französischen Trotz
+darunter Spieler forderte Meinung wenigen Publikum sowohl
+meinte mag Auto Lösung Boden hinaus war verletzt weltweit
+Sohn bevor mussten keiner Produktion Ort braucht
+Zusammenhang Kind Verein sprechen gleichzeitig London
+sogenannten Richter geplant Italien Mittel her freilich
+Mensch großer wenige öffentlichen dritten nahm
+Bundesrepublik Arbeitsplätze bedeutet Feld Bank oben Aktien
+Präsident gesetzt Ausland Ministerpräsident Vertreter jedes
+ziehen Parlament berichtete dieses China aufgrund Stellen
+warum Kindern heraus heutigen Anteil Herr Öffentlichkeit
+Abend selbst Liebe neben rechnen fällt New York Industrie
+wären Vorjahr Sicht Idee Banken verlassen Leiter Bühne
+insbesondere offen stets Theater ändern entschieden Staaten
+Experten Gesetz Geschäft Tochter angesichts gelten mehr
+erwarten läuft fordert Japan Sieg ist Stimmen wählen
+russischen gewinnen bieten Nähe jährlich Bremen Schüler Rede
+Funktion Zuschauer hingegen anderes Führung Besucher Drittel
+Moskau immerhin Vorsitzende Urteil schließlich Kultur
+betonte mittlerweile Saison Konzept suchen Zahlen Roman
+Gewalt Position alt Luft Studenten Köln gesamte indem Stunde
+ehemalige Auftrag entscheiden genannt tragen Börse langen
+häufig Chancen übernehmen stärker ohnehin zeigte geplanten
+Reihe darum verhindern begann Medien verkauft Minister
+wichtig amerikanische sah gesamten einst verwendet vorbei
+Behörden helfen Folgen bezeichnet</text>
+  </lesson>
+  <lesson>
+   <id>{e0b13b65-8af6-4a00-beac-d7ecf1937e96}</id>
+   <title>Die Ziffern</title>
+   <newCharacters>1234567890-°§ℓ»«$€„“”</newCharacters>
+   <text>Die gewohnten Tasten über dem Buchstabenfeld sind auch
+unter dem Tastaturlayout Neo die Ziffern.
+111 Kleiner Finger 111 u1 x1 u1 ü1 u 1 x1x x1x 111
+222 Kleiner Finger 222 u2 x2 u2 ü2 u2 x2x x2x 222
+333 Ringfinger 333 i3 v3 i3 ö3 i3 v3v v3v 333
+444 Mittelfinger 444 a4 l4 a4 ä4 a4 l4l l4l 444
+555 Zeigefinger 555 e5 c5 e5 p5 e5 c5c c5c 555
+666 Zeigefinger 666 o6 w6 o6 z6 o6 w6w w6w 666
+777 Zeigefinger 777 s7 k7 s7 b7 s7 k7k k7k 777
+888 Zeigefinger 888 n8 h8 n8 m8 n8 h8h h8h 888
+999 Mittelfinger 999 r9 g9 r9 ,9 r9 g9g g9g 999
+000 Ringfinger 000 t0 f0 t0 .0 t0 f0f f0f 000
+--- Kleiner Finger --- d- q- d- j- d- q-q q-q ---
+Mit der Hochstelltaste ändert sich bereits die gewohnte
+Belegung. Probiere es aus.
+1° 2§ 3ℓ 4» 5« 6$ 7€ 8„ 9“ 0” -- nocheinmal 1° 2§ 3ℓ 4» 5«
+6$ 7€ 8„ 9“ 0” --
+Die Ziffern können auch mittels der M4-Taste dargestellt
+werden, die Taste links vom ü drücken und die gewünschte
+andere Taste
+m m1m 111 1m1 111 m m1m 111 1m1 111
+, ,2, 222 2,2 222 , ,2, 222 2,2 222
+. .3. 333 3.3 333 . .3. 333 3.3 333
+n n4n 444 4n4 444 n n4n 444 4n4 444
+r r5r 555 5r5 555 r r5r 555 5r5 555
+t t6t 666 6t6 666 t t6t 666 6t6 666
+h h7h 777 7h7 777 h h7h 777 7h7 777
+g g8g 888 8g8 888 g g8g 888 8g8 888
+f f9f 999 9f9 999 f f9f 999 9f9 999
+Null bleibt 000</text>
+  </lesson>
+  <lesson>
+   <id>{f7c1605d-0db8-4fcb-8337-cc6d94772e91}</id>
+   <title>Die Sonderzeichen</title>
+   <newCharacters>!&lt;>=&amp;?()@:+%"';^[]_…*{}/\`~|#</newCharacters>
+   <text>Mittels der M3-Taste, die über der Hochstelltaste, können
+verschiedene Sonderzeichen erzeugt werden.
+k ! k!k !!! k ! k!k !!! h &lt; h&lt;h &lt;&lt;&lt; h &lt; h&lt;h &lt;&lt;&lt;
+g > g>g >>> g > g>g >>> f = f=f === f = f=f ===
+q &amp; &amp;q&amp; &amp;&amp;&amp; q &amp; &amp;q&amp; &amp;&amp;&amp; s ? s?s ??? s ? s?s ???
+n ( n(n ((( n ( n(n ((( r ) r)r ))) r ) r)r )))
+t - t-t --- t - t-t --- d : d:d ::: d : d:d :::
+y @ y@y @@@ y @ y@y @@@ b + +b+ +++ b + +b+ +++
+m % %m% %%% m % %m% %%% , " "," """ , " "," """
+. ' .'. ''' . ' .'. ''' j ; ;j; ;;; j ; ;j; ;;;
+Mittels der M3-Taste, die rechts vom y, können verschiedene
+Sonderzeichen erzeugt werden.
+w ^ ^w^ ^^^ w ^ ^w^ ^^^ c ] ]c] ]]] c ] ]c] ]]]
+l [ [l[ [[[ l [ [l[ [[[ v _ _v_ ___ v _ _v_ ___
+x … …x… ……… x … …x… ……… o * *o* *** o * *o* ***
+e } }e} }}} e } }e} }}} a { {a{ {{{ a { {a{ {{{
+i / /i/ /// i / /i/ /// u \ \u\ \\\ u \ \u\ \\\
+z ` `z` ``` z ` `z` ``` p ~ ~p~ ~~~ p ~ ~p~ ~~~
+ä | |ä| ||| ä | |ä| ||| ö $ $ö$ $$$ ö $ $ö$ $$$
+ü # #ü# ### ü # #ü# ###</text>
+  </lesson>
+  <lesson>
+   <id>{593e0bd5-6f02-48c7-8880-c5c894be8d79}</id>
+   <title>Wir üben ein paar Sonderzeichen</title>
+   <newCharacters></newCharacters>
+   <text>Das darfst du nicht! Hilfe! Betreten verboten! Polizei!
+Halt! Dieb! Schließen Sie nach dem Unterricht die Fenster!
+Wo wohnen Sie? Gehst du in die Mensa? Du kommst heute?
+Universität oder Fachhochschule? Wer? Der! Was? Das! Wann?
+Dann! Wohin? Dahin! Warum? Darum! Wo? Da! Wer? Der! Was?
+Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!
+name@email.de, jemand@web.de, einer@gmx.de,
+irgendwer@gmail.com, Max &amp; Sohn, C&amp;A, H&amp;M, GmbH &amp; Co Joachim
+(Vater), Klara (Mutter), Tobias (Sohn), Stefanie (Tochter),
+Walter (Opa), Heidi (Oma).</text>
+  </lesson>
+  <lesson>
+   <id>{8517c2fb-0a0f-4050-a9e6-ef7afde965c9}</id>
+   <title>Typografie und neue Zeichen</title>
+   <newCharacters>‚‘’–ẞſ</newCharacters>
+   <text>Man beachte die Setzung von Leerzeichen beim Schrägstrich/
+Slash, bei Klammern (wie hier) und bei anderen Satzzeichen.
+Neo bietet die echten deutschen Anführungszeichen auf der
+zweiten Ebene der Zahlen 8 und 9. Zitat: „In dubio pro Neo.“
+Auf der dritten Ebene sind die ‚einfachen‘
+Anführungszeichen, auf der 9 und 0 die “englischen” und die
+entsprechenden ‘einfachen englischen’.
+Auf der dritten Ebene der 0 ist der echte Apostroph, den man
+für Felix’ Katze braucht. Er ist aber sonst ’n seltenes
+Zeichen, ohne geht’s meistens auch.
+Für Programmierung verwendet man immer die "normalen" oder
+die 'einfachen' Ersatzzeichen.
+Auf dem X gibt es die Auslassungspunkte … Davor und danach
+muss ein Leerzeichen stehen. Außer, wenn man mitten im Wort
+abbric…
+Auf dem T gibt’s den Binde-Strich. Aber besser Bindestrich.
+Beim Komma den Gedankenstrich – man beachte den Unterschied
+in der Breite.
+Dieser ist auch ein Gegen-Strich – etwa bei „Schalke –
+Frankfurt“ (mit Leerzeichen) – sowie ein Bis-Strich – wie
+bei „14–16 Uhr“ (ohne Leerzeichen).
+Da „und“ ein eigenständiges Wort ist, setzt man bei „Müller
+&amp; Söhne“ Leerzeichen. Dies gilt auch z. B. bei „i. d. R.“
+u. a.
+Neo bietet das große Eszett: ẞ.
+Und ſchließlich iſt es mit Neo möglich, das lange s zu
+tippen.</text>
+  </lesson>
+  <lesson>
+   <id>{bdf9e800-1434-442c-b194-14859ff77de6}</id>
+   <title>Abkürzungen</title>
+   <newCharacters></newCharacters>
+   <text>Wird eine Abkürzung abgekürzt ausgesprochen, so wird sie
+grundsätzlich ohne Punkt und stets ohne Leerzeichen
+geschrieben.
+Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR
+Maßeinheiten werden als Wort gesprochen, aber dennoch ohne
+Punkt abgekürzt. Beispiel: 10 m (gesprochen „10 Meter“)
+Abkürzungen, die nicht abgekürzt ausgesprochen werden,
+werden grundsätzlich mit Punkten abgekürzt.
+Wenn die Abkürzung mehrteilig ist, stehen Leerzeichen
+zwischen den Bestandteilen. Beispiele: Dr., z. B., d. h.,
+i. d. R., ges. gesch.
+Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich
+anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung
+für „und so weiter“ durchgesetzt hat,
+ebenso wie die lateinische Variante „etc.“ bzw. „&amp;c.“ für
+„et cetera“.
+Weitere Ausnahmen bilden „svw.“ für „so viel wie“.
+Die Abkürzungsweise mit Punkten, aber ohne Leerzeichen, ist
+seit Langem veraltet. Einige Beispiele:
+ABS  Anti-Blockier-System (Sicherheitssystem für Bremsen)
+ADAC Allgemeiner Deutscher Automobil Club
+AEG  Aus Erfahrung gut – Allgemeine
+     Elektrizitäts-Gesellschaft (Haushaltsgerätefirma)
+AKW  Atomkraftwerk
+BKA  Bundeskriminalamt
+BMW  Bayerische Motorenwerke
+BMX  Bicycle Motocross
+BPM  Beats Per Minute (Einheit für Liedgeschwindigkeit)
+BRD  Bundesrepublik Deutschland
+BSE  Bovine Spongiforme Encephalopathie (Rinderwahnsinn)
+BWL  Betriebswirtschaftslehre
+DDR  Deutsche Demokratische Republik
+DFB  Deutscher Fußballbund
+DLRG Deutsche Lebensrettungsgesellschaft
+DPA  Deutsche Presseagentur
+DPD  Deutscher Paketdienst
+DRK  Deutsches Rotes Kreuz
+DVD  Digitale Video Disc
+EDV  Elektronische Datenverarbeitung
+EKG  Elektrokardiogramm
+EKZ  Einkaufszentrum
+FCKW Fluor-Chlor-Kohlenwasserstoff (Treibgas)
+FDH  Friss die Hälfte
+FKK  Freikörperkultur
+GbR  Gesellschaft bürgerlichen Rechts (Rechtsform)
+GmbH Gesellschaft mit beschränkter Haftung (Rechtsform)
+HIV  Human Immunodeficiency Virus (AIDS)
+HNO  Hals Nasen Ohren
+IBM  International Business Machines (Computerfirma)
+ICE  Intercity Express (Zug der Deutschen Bahn AG)
+IHK  Industrie- und Handelskammer
+IRA  Irisch Republikanische Armee
+KKK  Ku Klux Klan (rechtsradikale amerikanische
+     Organisiation)
+KMH  Kilometer Pro Stunde (Maßeinheit für Geschwindigkeit)
+LSD  Lysergsäurediethylamid (halluzinogene Droge)
+MfG  Mit freundlichen Grüßen
+NDW  Neue Deutsche Welle (Poptrend der 80er)
+NTV  Nachrichten Television
+PLZ  Postleitzahl
+PVC  Polyvinyl-Chlorid (Kunststoff)
+RAF  Rote Armee Fraktion (linksradikale deutsche
+     Terrorvereinigung aus den70ern)
+SOS  Morsenotruf ... --- ... (Eselsbrücke: „Save Our Souls“)
+THW  Technisches Hilfswerk
+TNT  Trinitrotoluol (Sprengstoff)
+TÜV  Technischer Überwachungsverein
+UKW  Ultrakurzwelle
+UPS  United Parcel Service (Paketdienst)
+USW  Und so weiter …
+WWW  World Wide Web</text>
+  </lesson>
+  <lesson>
+   <id>{1dc902f5-d8f6-4008-91cf-54260e81c6b3}</id>
+   <title>Glückwunsch</title>
+   <newCharacters></newCharacters>
+   <text>Herzlichen Glückwunsch zum Erlernen des Neo-Tastaturlayouts.
+Ich hoffe, die Lektionen haben trotz der Mühe ein wenig Spaß
+gemacht.
+Natürlich muss jetzt noch viel geübt werden. Die bisher
+erlernten Schriftzeichen müssen gefestigt werden, dazu fol-
+gen noch ein paar Testtexte.
+Wie Sie schon bemerkt haben, besitzt Neo eine große Anzahl
+von Sonderzeichen, die Sie mit Hilfe der M4-Taste, auch
+zusammen mit der Hochstelltaste erreichen können. Des Wei-
+teren finden Sie auf der Akzent-, der Zirkumflex- und der
+Tilde-Taste sogenannte tote Tasten, die, vor einer Taste
+gedrückt, diese modifizieren. Außerdem gibt es für jede
+Taste eine Alternativ-Belegung, mit griechischen Zeichen
+oder anderen häufig gebräuchlichen.
+Den Umgang mit den Sonderzeichen übt man auch besser außer-
+halb dieses Programms. Üben Sie damit!
+Spielen Sie damit ein wenig. Werden Sie schneller als je
+zuvor. Viel Spaß!</text>
+  </lesson>
+  <lesson>
+   <id>{aa94b437-01ab-4155-b227-3379669e85b3}</id>
+   <title>Testtext „Esperanto“</title>
+   <newCharacters></newCharacters>
+   <text>Esperanto ist sowohl die einfachste als auch die ausdrucks-
+stärkste Sprache der Welt, die Basis einer blühenden inter-
+nationalen Kultur.
+Esperanto-Sprecher gibt es in jedem Land der Erde, von
+Frankreich bis Japan, von Island bis Chile, und alle benu-
+tzen die Sprache Esperanto um ihre Gedanken, Literatur und
+Musik miteinander zu teilen und auszutauschen.
+Doktoro Esperanto (Esperanto „Hoffender“) war das Pseudonym,
+unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal:
+Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache
+veröffentlichte. Seine Absicht war es, eine leicht erlern-
+bare, neutrale Sprache für die internationale Verständigung
+zu entwickeln, die jedoch andere Sprachen nicht ersetzen
+sollte. Auf Initiative Zamenhofs entstand eine internatio-
+nale Sprachgemeinschaft, die das Esperanto seither für viele
+Zwecke anwendet, vor allem für Reisen, Brieffreundschaften,
+internationale Treffen und kulturellen Austausch (Literatur,
+Musik u. a.).
+Bald fand diese Sprache auch Verwendung in Radiosendungen,
+im Amateurfunk, im mündlichen und fernmündlichen Verkehr,
+in Telegrammen, Zeitungen und Zeitschriften und später im
+Internet. Esperanto wird sowohl in Israel als auch im Iran
+gesprochen, in Russland und China als auch in den USA. Erle-
+ben Sie afrikanische Gesänge, brasilianischen Tanz, korea-
+nische Kampfkunst, deutsches Bier und nepalesische Küche,
+möglicherweise alles während des gleichen Treffens. Erleben
+Sie die Leichtigkeit der Kommunikation über Sprachgrenzen
+hinweg, wie Sie sie noch nie bisher gefühlt haben. Tauchen
+Sie ein, nehmen Sie teil am Austausch der Kulturen. Die
+Vielfalt der Welt liegt vor Ihnen. Denken Sie nicht mehr an
+Ihr Schulenglisch oder Schulfranzösisch – schon allein das
+Wort „Schulenglisch“ impliziert das Ergebnis:
+Dass die allermeisten Menschen nach 3 Jahren noch nichts in
+der Bäckerei bestellen können und sich selbst nach 9 Jahren
+noch nicht frei in der Fremdsprache ausdrücken. Stattdessen
+lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel
+mehr ausdrücken können (und in mehr Ländern). Esperanto
+wurde mit Absicht so geplant, dass man es so einfach wie
+möglich lernen kann, so dass alle Menschen in allen Ländern,
+selbst ohne Talent für Sprachen, ungezwungen und gemütlich
+miteinander reden können, ohne Unbeholfenheit, genau wie in
+der Muttersprache. 
+Wenn Sie es schwierig finden, unregelmäßige Verben oder das
+Geschlecht von Substantiven zu behalten, ist Esperanto etwas
+für Sie, denn Esperanto hat solche unnötigen Ärgernisse
+abgeschafft. Aber es hat auch das Vokabeln-Lernen sehr ver-
+einfacht, indem Sie viel mehr mit weniger Wörtern ausdrücken
+können. Wenn Sie 500 Wörter Esperanto lernen, ist es das
+Äquivalent von einem Englisch- oder Französisch-Wortschatz
+von mindestens 3000 Wörtern.</text>
+  </lesson>
+  <lesson>
+   <id>{88396780-9c7a-4bb1-b139-d611e00764ba}</id>
+   <title>Testtext „Der kleine Prinz“</title>
+   <newCharacters></newCharacters>
+   <text>Der kleine Prinz ist eine vom Autor illustrierte Erzählung
+von Antoine de Saint-Exupery. Sie ist das bekannteste Werk
+des französischen Autors und erschien zuerst 1943 in New
+York, wo Saint-Exupery sich im Exil aufhielt.
+Das Werk ist ein modernes Märchen, das sowohl Kinder als
+auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer
+für Freundschaft und Menschlichkeit dar, enthält jedoch auch
+politische Anspielungen. Der orientalische Astronom, dessen
+Entdeckung erst dann ernst genommen wird, als er sie in
+einem westlichen Anzug vorträgt, kann als Hinweis auf die
+Reformen in der Türkei durch Atatürk verstanden werden.
+Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943
+vom Verlag Reynal &amp; Hitchcock in New York veröffentlicht.
+Das Buch erschien zeitgleich im französischen Original („Le
+petit prince“) und in einer englischen Übersetzung („The
+little prince“) von Katherine Woods. Von der Erstauflage
+wurden auch limitierte und signierte Ausgaben in englisch
+(525 Exemplare) und französisch (260 Exemplare) verkauft.
+1950 erschien die erste deutsche Übersetzung von Grete und
+Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde
+das Werk weltweit in über 180 Sprach- und Dialektvarianten
+übersetzt.
+Der Erzähler berichtet zunächst, wie er als sechsjähriges
+Kind seine erste Zeichnung vollendet hatte. Wenn er sie den
+„großen Leuten“ mit der Frage zeigte, ob sie ihnen nicht
+Angst mache, hätten sie geantwortet: „Warum sollen wir vor
+einem Hut Angst haben?“ Die Zeichnung sollte jedoch eine
+Riesenschlange darstellen,  die einen Elefanten verdaut.
+Zufällig begegnet der Erzähler, nachdem er mit seinem Flug-
+zeug in der Sahara notgelandet ist, dem kleinen Prinzen, der
+ihn bittet: „Zeichne mir ein Schaf …“ Da der Prinz aber mit
+allen Zeichnungen, die der Flieger anfertigt, unzufrieden
+ist, zeichnet jener eine Kiste und erklärt: „Das Schaf, das
+du willst, steckt da drin.“
+Der Prinz hat im Übrigen keine Mühe, eine Zeichnung mit dem
+Elefanten und der Riesenschlange als solche zu erkennen. Tag
+für Tag erzählt nun der kleine Prinz dem Erzähler seine
+Geschichte.
+Er stammt nicht von der Erde, sondern von einem kleinen
+Asteroiden, „kaum größer als ein Haus“. Einmal war auf dem
+Planeten des kleinen Prinzen eine Blume gewachsen, hatte
+ihre Knospe entwickelt, ordnete ihre Blütenblätter und ent-
+hüllte sich gerade zur Stunde des Sonnenaufgangs.
+Der kleine Prinz unterhielt sich mit ihr, doch quälte sie
+ihn bald mit ihrer Eitelkeit. „Man darf den Blumen nicht
+zuhören, man muss sie anschauen und einatmen.“ Schließlich
+verließ der Prinz seinen Planeten. Auf der Suche nach Freun-
+den besucht er weitere Asteroiden in der Region. Und so
+kommt der kleine Prinz auf den siebten Planeten, die Erde.</text>
+  </lesson>
+  <lesson>
+   <id>{8c65e333-2b03-4d0c-b24f-2c1b660177bc}</id>
+   <title>Testtext „Sprichwörter“</title>
+   <newCharacters></newCharacters>
+   <text>Abends wird der Faule fleißig. An jedem Gerücht ist ein
+kleines bisschen Wahrheit. Andere Länder, andere Sitten.
+Andere Mütter haben auch schöne Töchter. Angriff ist die
+beste Verteidigung. Alte Liebe rostet nicht. Berg und Tal
+kommen nicht zusammen, aber Menschen. Besser ein Ende mit
+Schrecken, als ein Schrecken ohne Ende. Besser spät als nie.
+Bellende Hunde beißen nicht. Bier auf Wein, lass das sein.
+Wein auf Bier, das rat ich dir. Das Herz ist auf dem rechten
+Fleck. Den letzten beißen die Hunde. Der Krug geht so lange
+zum Brunnen, bis er bricht. Der Apfel fällt nicht weit vom
+Stamm. Der dümmste Bauer hat die dicksten Kartoffeln. Der
+Mensch lebt nicht vom Brot allein. Eigener Herd ist Goldes
+wert. Eine Hand wäscht die andere. Eine Schwalbe macht noch
+keinen Sommer. Eine Krähe hackt der anderen kein Auge aus.
+Einem geschenkten Gaul sieht man nicht ins Maul. Gegen
+Dummheit ist kein Kraut gewachsen. Geld allein macht nicht
+glücklich. Geld verdirbt den Charakter. Geld regiert die
+Welt. Gelegenheit macht Diebe. Geteiltes Leid ist halbes
+Leid. Gleich und gleich gesellt sich gern. Habgier ist die
+Wurzel allen Übels. Handwerk hat goldenen Boden. Hilf dir
+selbst, so hilft dir Gott. Hochmut kommt vor dem Fall. Hunde
+die bellen, beißen nicht. In der Kürze liegt die Würze. In
+der Not frisst der Teufel Fliegen. Irren ist menschlich.
+Jedem Tierchen sein Pläsierchen. Jeder kehre vor seiner
+eigenen Tür. Jeder Topf findet seinen Deckel. Jedes Ding hat
+seine zwei Seiten. Keine Antwort ist auch eine Antwort.
+Keine Kette ist stärker als ihr schwächstes Glied. Klappe
+zu, Affe tot. Kinder und Narren sagen die Wahrheit. Kleider
+machen Leute. Kleine Geschenke, erhalten die Freundschaft.
+Lachen ist gesund. Lachen ist die beste Medizin. Lange Rede,
+kurzer Sinn. Langes Fädchen, faules Mädchen. Langsam, aber
+sicher. Lass laufen, was du nicht halten kannst. Leben und
+leben lassen. Lehrjahre sind keine Herrenjahre. Man muss die
+Feste feiern, wie sie fallen. Man soll den Teufel nicht an
+die Wand malen. Man soll den Tag nicht vor dem Abend loben.
+Man wird alt wie eine Kuh, und lernt immer noch dazu.
+Morgen, morgen nur nicht heute, sagen alle faulen Leute.
+Nach dem Essen sollst du stehen. oder tausend Schritte
+gehen. Nachts sind alle Katzen grau. Neue Besen kehren gut.
+Ohne Fleiß kein Preis. Ordnung ist das halbe Leben. Pech in
+der Liebe Glück im Spiel. Probieren geht über studieren.
+Quäle nie ein Tier zum Scherz, denn es fühlt wie du den
+Schmerz. Rache ist süß. Reden ist Silber, Schweigen ist
+Gold. Schadenfreude ist die schönste Freude. Scherben
+bringen Glück. Schlafende Hunde soll man nicht wecken.
+Selbsterkenntnis ist der erste Weg zur Besserung. Schmiede
+das Eisen, solange es heiß ist. Steter Tropfen höhlt den
+Stein. Torheit und Stolz wachsen auf einem Holz. Tadeln ist
+leicht, loben ist schwer. Taten sagen mehr als Worte. Tue
+Gutes, dann wird auch dir Gutes getan. Tue nichts Böses, so
+widerfährt dir nichts Böses. Träume sind Schäume. Übung
+macht den Meister. Undank ist der Welt Lohn. Unkraut vergeht
+nicht. Unter Blinden ist der Einäugige König. Verbotene
+Frucht schmeckt süß. Vergeben ist leichter als vergessen.
+Viele Köche verderben den Brei. Vögel, die morgens singen,
+holt am Abend die Katze. Von nichts kommt nichts. Vorbeugen
+ist besser als heilen. Was du heute kannst besorgen, das
+verschiebe nicht auf morgen. Was dem einen recht ist, ist
+dem andern billig. Was der Bauer nicht kennt, frisst er
+nicht. Was Hänschen nicht lernt, lernt Hans nimmermehr. Wer
+den Teufel reinlegen will, muss früh aufstehen. Wer schläft,
+der sündigt nicht. Wo gehobelt wird, fallen Späne. Zeige mir
+deine Freunde und ich sage dir, wer du bist. Zu einem Ohr
+hinein, zum andern heraus. Zuviel ist zuviel, und zu wenig
+ist nicht genug. Zwei Hähne auf einem Mist vertragen sich
+nicht.</text>
+  </lesson>
+  <lesson>
+   <id>{9a5b75d4-3ade-4a90-a383-5854eaa87ed2}</id>
+   <title>Testtext „Yoga“</title>
+   <newCharacters></newCharacters>
+   <text>Yoga ist eine indische philosophische Lehre, die eine Reihe
+geistiger und körperlicher Übungen wie Yama, Niyama,
+Kriyas, Meditation und/oder Askese umfasst.
+Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Inte-
+gration“ als auch im Sinne von „Anschirren“ und „Anspannen“
+des Körpers an die Seele zur Sammlung und Konzentration ver-
+standen werden. Welcher Weg zur Verwirklichung dieser Ziele
+ einzuschlagen ist, darin unterscheiden sich die verschie-
+denen Richtungen erheblich voneinander.
+Wurzeln: Da Yoga ursprünglich aus Indien stammt, liegen die
+Wurzeln der Yoga-Philosophie im Hinduismus und Teilen des
+Buddhismus. Das Individuum wird hier als ein Reisender im
+Wagen des materiellen Körpers gesehen. Der Wagen ist der
+Körper, der Kutscher der Verstand, die fünf Pferde die fünf
+Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt
+im Indischen „Yoga“. Darüber hinaus enthält die Bhagavad-
+Gita direkte Anweisungen für den Yogi.
+So heißt es im 5. Kapitel, Vers 27: „Sich lösend von der
+Außenwelt, starr auf die Nasenwurzel (‚Nasikagra‘) schauend
+– den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich,
+die durch der Nase Innres gehen“. (Anmerkung: „Nasikagra“
+verwechseln einige Übersetzer mit „Nasenspitze“ – die meis-
+ten Yogis schielen aber nicht etwa, sondern blicken als Kon-
+zentrationsübung auf die Nasenwurzel zwischen den Augen-
+brauen, angeblich einen wichtigen Nerventreffpunkt).
+Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die
+Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit
+von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“
+Im 6. Kapitel geht es um Versenkung (Dhyana) und die rich-
+tige Lebensweise. In Vers 10 heißt es: „yogi yunjita satatam
+atmanam rahasi sthitah – ekaki yatachittama nirashir
+aparigraha.“ ‚Der Yogi soll beständig sich mühen in der Ein-
+samkeit – allein, bezähmend Sinn und Selbst, nichts hoffend,
+ohne Besitz.‘
+Grundsätzlich hat Yoga nachweislich einige positiv bewertete
+Effekte sowohl auf die physische als auch auf die psychische
+Gesundheit. Yoga kann unter Umständen zu einer Linderung bei
+verschiedensten Krankheitsbildern führen, etwa bei Durchblu-
+tungsstörungen, Schlafstörungen, nervösen Beschwerden (Angst
+und Depression), chronischen Kopfschmerzen oder Rücken-
+schmerzen. Der Nutzen von Yoga bei Krankheit oder zur Erhal-
+tung der Gesundheit wird unterschiedlich bewertet. In
+Deutschland können Kosten für Yogakurse von den Krankenkas-
+sen vor allem im Rahmen des Präventionsprinzips der Vermei-
+dung spezifischer Risiken und stressabhängiger Krankheiten
+erstattet werden. Yoga hat auf viele Menschen eine beruhi-
+gende, ausgleichende Wirkung und kann somit den Folgeer-
+scheinungen von Stress entgegenwirken.</text>
+  </lesson>
+  <lesson>
+   <id>{3156211f-4957-46cb-9599-16d1911feddb}</id>
+   <title>Testtext „Psyche“</title>
+   <newCharacters></newCharacters>
+   <text>Das heute sachlich vorherrschende Verständnis von Psyche
+bezieht sich auf das „Gesamtsystem“ aller jener (Lebens-)
+„Regungen“, das „der Volksmund“ seit langem als Innenleben
+oder auch Seelenleben bezeichnet und dabei wie die wissen-
+schaftliche Psychologie in Denken und Gefühlsleben unter-
+teilt. Damit ist zuerst die Gesamtheit solcher „Lebensäuß-
+erungen“ oder Eigenreaktionen gemeint, die zuerst oder über-
+haupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind
+und damit nur aus der subjektiven oder heute sog. „Ersten-
+Person-Perspektive“ beobachtet und beschrieben werden kön-
+nen: Das erlebende Wahrnehmen, das vorstellende Erinnern
+vorgängiger Erfahrungen, das Träumen, spontane oder willkür-
+liche Ausdenken oder Phantasieren möglicher oder andersarti-
+ger Erfahrungen aller nur denkbaren Art bis hin zum vielfäl-
+tigen emotionalen Reagieren darauf (und gegebenenfalls damit
+in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten
+Verhalten und absichtlichen oder bewussten und eventuell so-
+gar geplanten bis strategischen Handeln). Traditionell wird
+außerdem „dem Psychischen“ der „physische“ Leib oder „soma-
+tische“ Körper gegenüber gestellt.
+Als „psychosomatisch“ werden dann solche „leib-seelischen“
+Vorgänge bezeichnet, bei denen die bewussten und unbewussten
+psychischen Aktivitäten mit solchen Vorgänge im Menschen in
+Zusammenhang stehen, die nur physiologisch, biochemisch oder
+anderweitig festgestellt und beobachtet werden können. In
+erster Linie handelt es sich dabei um Veränderungen von
+vegetativ gesteuerten und hormonell vermittelten Vitalfunk-
+tionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder
+Verdauung, einschließlich evtl. dadurch bedingter krankhaf-
+ter Auswirkungen wie etwa chronischer oder sogar schmerzhaf-
+ter Verspannung, um nur ein Beispiel davon anzuführen. Auf-
+grund dieser besonderen Fähigkeit sind ältere Kinder und vor
+allem erwachsene Menschen zu jener Art von bewusstem, insbe-
+sondere absichtlichen Denken und Planen fähig, das bei Tie-
+ren bislang nicht beobachtet werden konnte. Menschen werden
+deswegen für ihre Taten verantwortlich gemacht, nicht dage-
+gen Tiere und Kleinkinder vor Entwicklung ausreichender
+Erinnerungsfähigkeit und Beherrschung eines gezielten und
+kontrollierten, insbesondere regelgeleiteten und allein „in
+der Vorstellung“ oder „im Geiste“ stattfindenden Kombinie-
+rens von Vorstellungselementen jeder Art („Denken“).</text>
+  </lesson>
+  <lesson>
+   <id>{f98e84d9-ed43-470d-a5ed-763819399e67}</id>
+   <title>Testtext „Linux und Freie Software“</title>
+   <newCharacters></newCharacters>
+   <text>Als Linux oder GNU/Linux werden in der Regel freie,
+portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme
+bezeichnet, die auf dem Linux-Kernel und wesentlich auf
+GNU-Software basieren.
+Die weite, auch kommerzielle Verbreitung ermöglichte ab
+1992 die Lizenzierung des Linux-Kernels unter der GPL.
+Das modular aufgebaute Betriebssystem wird von
+Softwareentwicklern auf der ganzen Welt weiterentwickelt,
+die an den verschiedenen Projekten mitarbeiten.
+Es sind sowohl Unternehmen als auch
+Non-Profit-Organisationen und Einzelpersonen beteiligt, die
+dies als Hobby betreiben.
+Im praktischen Einsatz werden meist sogenannte
+Linux-Distributionen genutzt, in denen verschiedene
+Software zu einem fertigen Paket zusammengestellt ist.
+Jede Distribution enthält somit Linux beziehungsweise den
+Linux-Kernel.
+Es gibt eine Vielzahl von Linux-Distributionen, aber für
+die aktuellen Kernel 2.2.x, 2.4.x und 2.6.x jeweils nur
+eine stabile, eine aktiv gepflegte und eine weiter
+entwickelte Version –
+nebenbei wird der (stabile) 2.6.29er-Zweig noch gepflegt
+und es werden Patches für vorhergehende Versionen
+bereitgestellt.
+Allerdings passen viele Distributoren und versierte
+Benutzer den Betriebssystemkern mehr oder weniger für ihre
+Zwecke an.
+Die Einsatzbereiche von Linux sind vielfältig und umfassen
+unter anderem die Nutzung auf Desktop-Rechnern, Servern,
+Mobiltelefonen, Routern, Multimedia-Endgeräten und
+Supercomputern.
+Dabei variiert die Verbreitung von Linux in den einzelnen
+Bereichen drastisch. So ist Linux im Server-Markt eine
+feste Größe, während es auf dem Desktop bisher nur eine
+geringe Rolle spielt.
+Ebenfalls spielt die wirtschaftliche und geographische Lage
+einer Region eine wichtige Rolle. So planen vorrangig
+südamerikanische Schwellenländer den verstärkten Einsatz
+von Linux.
+Freie Software (engl.: free software) ist Software, die für
+jeden Zweck genutzt, studiert, bearbeitet und in
+ursprünglicher oder veränderter Form weiterverbreitet
+werden darf.
+Das schließt auch die kommerzielle Nutzung ein. Software,
+die auf Grundlage dieser Software entsteht, muss
+normalerweise ebenfalls Freie Software sein (Prinzip des
+Copyleft bzw. share alike).
+Freier Software steht die proprietäre oder „unfreie“
+Software gegenüber, die diese Freiheiten nicht oder nicht
+in vollem Umfang bietet. Diese Unterscheidung wurde von der
+Free Software Foundation (FSF) geprägt.
+Die Free Software Foundation (FSF) definiert Software als
+frei, wenn ihre Lizenz folgende Freiheiten einräumt:
+Freiheit 0: Das Programm zu jedem Zweck auszuführen.
+Freiheit 1: Das Programm zu studieren und zu verändern.
+Freiheit 2: Das Programm zu verbreiten.
+Freiheit 3: Das Programm zu verbessern und zu verbreiten,
+um damit einen Nutzen für die Gemeinschaft zu erzeugen.
+Für die Freiheiten (1) und (3) ist der Zugang zum Quelltext
+Voraussetzung, sonst wird das Verändern eines Programms
+schwierig bis unmöglich.
+Sind eine oder mehrere dieser Bedingungen nicht erfüllt,
+wird die Software als proprietär oder „unfrei“ bezeichnet.</text>
+  </lesson>
+  <lesson>
+   <id>{cf6f0454-4af2-4702-be5a-725fc5981805}</id>
+   <title>Testtext „Alkohol“</title>
+   <newCharacters>₆₂</newCharacters>
+   <text>Ethanol ist eine farblose, leicht entzündliche Flüssigkeit
+mit brennendem Geschmack sowie charakteristischem, würzigem
+Geruch. Umgangssprachlich wird es als Alkohol bezeichnet.
+Ältere Nomenklaturen verwendeten die Bezeichnungen Äthanol,
+Äthylalkohol oder Ethylalkohol. Es gibt noch ältere Bezeich-
+nungen wie Weingeist und Spiritus (lateinisch „Geist“).
+In der Chemie wird Ethanol oft mit EtOH abgekürzt und in
+der Alltagsmedizin mündlich mit C2 bezeichnet (als Verkür-
+zung der Summenformel [₆=Composetaste+_+6] C₂H₆O). Bekannt
+ist Ethanol vor allem als Trinkalkohol, der als Anteil in
+Genussmittel (z. B. Wein, Bier, Likör) klassifiziert wird.
+Er ist allerdings zugleich ein Rauschmittel, sein Konsum
+ist in den meisten Staaten erlaubt. Das Führen von Fahrrä-
+dern, Kraftfahrzeugen, Schiffen und Flugzeugen unter Alko-
+holeinfluss ist jedoch meist unter Strafe gestellt.
+Die Hauptverwendungen von Ethanol betreffen neben der
+Genuss- und Lebensmittelindustrie vor allem in den letzten
+Jahren die Nutzung als Biokraftstoff in Form von Bioethanol.
+Außerdem handelt es sich um ein organisches Lösungsmittel
+sowie eine Grundchemikalie der Industrie. Für den Menschen
+ist Ethanol giftig.
+Die Aufnahme führt – ab etwa 0,5–1 Promille Alkoholkonzen-
+tration im Blut – zu typischen akuten Trunkenheitssymptomen
+wie Schwindel, Übelkeit, Orientierungsstörung, Redseligkeit
+und gesteigerter Aggressivität.
+Die Letale Dosis (LD) liegt etwa bei 3,0 bis 4,0 Promille
+für ungeübte Trinker. Es wurden jedoch schon Werte über 7
+Promille gemessen. Die LD50 beträgt für die Ratte 7.060
+mg/kg bei oraler Applikation.
+Bei einer akuten Ethanolvergiftung kann der noch im Magen
+befindliche Alkohol durch Herbeiführen von Erbrechen oder
+durch Auspumpen des Mageninhalts teilweise entfernt werden.
+Bei regelmäßiger Einnahme, die zu einer Abhängigkeit (Alko-
+holkrankheit) führen kann, werden alle Zellen des Körpers
+geschädigt. Insbesondere leiden das Nervensystem und Gehirn
+sowie die Leber. Der Vitamin-B1-Stoffwechsel wird durch lang
+anhaltenden Alkoholkonsum geschädigt, diese Schädigung kann
+eine Polyneuritis auslösen. Epilepsie, Psychosen, soziale
+Vereinsamung und der verfrühte Tod können die Folge sein.
+Die Wernicke-Enzephalopathie findet sich bei etwa 15 % der
+verstorbenen Alkoholiker, und bildet zusammen mit dem
+Korsakow-Syndrom das Wernicke-Korsakow-Syndrom.
+Bekannt ist auch die Schädigung des Zentralnervensystems
+beim Delirium tremens. Diese Nervenerscheinung tritt beim
+Alkoholentzug des Körpers auf. In Deutschland sterben über
+73000 Menschen jährlich vorzeitig aufgrund ihres Alkohol-
+missbrauchs.</text>
+  </lesson>
+  <lesson>
+   <id>{4f8b6996-746f-49be-9837-3700c6ecb2ad}</id>
+   <title>Testtext „Säuren“</title>
+   <newCharacters>₃₄</newCharacters>
+   <text>Wohl die älteste bekannte Säure (lat. acidum) ist Essig
+(lat. acetum), eine etwa fünfprozentige wässrige Lösung der
+Verbindung Essigsäure. Säuren waren etwas Essigartiges
+(oxos od. acidus).
+In der Alchemie galt Säure als ein Urstoff. Die sauren
+Eigenschaften basierten auf einer einzigen Ursäure, die in
+verschiedenen Substanzen zur Wirkung kam.
+Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine
+ätzende Wirkung und einen sauren Geschmack. Bis Ende des
+13. Jh. waren wohl neben Essig und anderen Pflanzensäften
+keine Säuren bekannt.
+Erweiterte Kenntnisse bezüglich Säuren wurden dem im 8. Jh.
+lebenden Geber zugeschrieben, sie basieren jedoch auf
+Schriften der deutlich jüngeren, sogenannten Pseudo-Geber.
+Es entwickelten sich Kenntnisse über verschiedene anorga-
+nische Säuren, die alle den Varietäten des Elements Wasser
+zugeschrieben wurden. Ab dem 18. Jh. wurden sie als Mineral-
+säuren bezeichnet. Eine Herstellung von Salpetersäure (HNO₃)
+wurde von den Pseudo-Geber vermutlich nach dem 13. Jh. als
+„auflösendes Wasser“ (aqua dissolutiva) oder „starkes Was-
+ser“ (aqua fortis) beschrieben. Dabei wurde Kupfervitriol
+mit Salpeter und Alaun auf Rotglut erhitzt. Es entweichen
+nitrose Gase, die mit Wasser Salpetersäure bilden. Man
+nannte diese Säure auch Scheidewasser, da sie Silber in
+einer chemischen Reaktion löst, aber Gold nicht.
+J. R. Glauber beschrieb 1648 die Herstellung der konzen-
+trierten (rauchenden) Salpetersäure (spiritus acidus nitri)
+durch Umsetzung mit Schwefelsäure. Königswasser, aus heuti-
+ger Sicht eine Mischung aus Salpeter- und Salzsäure, dürfte
+ähnlich früh bekannt gewesen sein, da es sich relativ ein-
+fach durch Umsetzung von Salpetersäure mit dem bekannten
+Salmiak gewinnen lässt. Königswasser war die Königin aller
+Säuren, der nicht einmal Gold, der König der Metalle, wider-
+stehen konnte.
+Schweflige Säure (H₂SO₃) ist sicher lange bekannt, da sie
+durch Verbrennung von elementarem Schwefel zu erhalten ist.
+Sicherlich war bei vielen Prozessen auch Schwefelsäure
+(mit) dabei. Genauere Prozesse zur Darstellung von Schwefel-
+säure (H₂SO₄) wurden aber erst 1597 von A. Libavius genauer
+beschrieben:
+a) Glühen von Eisen- oder Kupfersulfat, dem sogenannten
+Eisen- bzw. Kupfervitriol – siehe hierzu auch Vitriolverfah-
+ren – zum Oleum vitrioli (rauchender Schwefelsäure) und 
+b) Verbrennung von Schwefel und anschließende Oxidation, die
+zu verdünnten Lösungen (Oleum sulphuris) führten. Eine tech-
+nische Umsetzung gelang im 19. Jh. mit dem Bleikammerverfah-
+ren.
+Salzsäure (HCl) als eigenständige Verbindung wurde erst Ende
+des 16. Jh. bekannt. Durch Glühen einer Mischung Kochsalz
+und Ton beschrieb A. Libavius eine Synthese. B. Valentinus
+beschrieb die Umsetzung von Vitriol und Kochsalz zu aqua
+caustica, dem ätzenden Wasser. Intensive Untersuchungen
+durch J. R. Glauber im 17. Jh. führten zum Glaubers Salz-
+geist (Spiritus salis Glauberianus), der sehr konzentrier-
+ten, sogenannten rauchenden Salzsäure bzw. dem Gas Wasser-
+stoffchlorid.</text>
+  </lesson>
+  <lesson>
+   <id>{346c5396-9cdc-44cc-a121-a1ef24143b5e}</id>
+   <title>Shell-Einleitung</title>
+   <newCharacters></newCharacters>
+   <text>Es ist wichtig, auf einer Tastatur nicht nur effizient die
+Texteingabe zu beherrschen, sondern auch die Eingabe von
+üblichen Befehlen schnell und sicher zu erledigen. Fehler
+bei diesen Eingaben können teilweise verheerend sein, des-
+halb achten Sie im Folgenden auf ihre Fehlerfreiheit.
+cd Wechselt das aktuelle Verzeichnis.
+chmod Ändert die Zugriffsrechte einer Datei.
+chown Ändert den Besitzer einer Datei.
+cp Kopiert Dateien.
+gunzip Extrahiert eine komprimierte Datei.
+gzip Komprimiert die Datei.
+find Sucht nach Dateien.
+grep Durchsucht eine Textdatei.
+less name Zeigt die Textdatei name an.
+ls Zeigt das Inhaltsverzeichnis eines Ordners an.
+man name Zeigt eine meist englisch sprachige Hilfe zum
+Kommando name an.
+mkdir Erzeugt ein neues Verzeichnis.
+mv Verschiebt Dateien oder benennt Dateien um.
+passwd ändert das aktuelle Passwort des jeweiligen
+Benutzers.
+ps Liefert eine Liste aller Prozesse.
+rm löscht Dateien.
+rmdir Löscht ein Verzeichnis mit dessen Inhalt.
+su Wechselt den aktuellen Benutzer.
+sudo Wird dieses Kommando vor ein anderes geschrieben (mit
+Leerzeichen) so wird es mit root-Rechten (Administrator)
+ausgeführt.
+top Zeigt eine Liste der laufenden Prozesse geordnet nach
+CPU-Leistung (Ende mit der Taste „Q“).</text>
+  </lesson>
+  <lesson>
+   <id>{6d23e530-1402-4556-824a-9410d1ef239f}</id>
+   <title>Shell-Übung</title>
+   <newCharacters></newCharacters>
+   <text>man [Programm] Zeigt die Hilfe zu einem Programm an. man
+firefox
+cd [Verzeichnis] Wechselt in das Verzeichnis. cd /tmp
+cd .. Wechselt ein Verzeichnis höher. cd ../td
+cd / Wechselt ins Wurzelverzeichnis. cd /
+cd Wechselt das Verzeichnis. cd ..  cd /tmp
+cd - Wechselt in das vorherige Verzeichnis. cd -
+cp [Datei][Verz] Kopiert Datei in Verzeichnis. cp 123.txt
+/tmp
+mv Verschiebt eine Datei. mv 123.txt /tmp
+mv [Datei1] [Datei2] benennt Datei [DATEI1] in [DATEI2] um.
+mv 123.txt 456.txt
+rm Löscht eine Datei. rm /tmp/123.txt ; rm /tmp/*
+rm -rf alles unterhalb des Verzeichnis löschen. rm -rf
+/tmp/
+mkdir Erzeugt ein Verzeichnis. mkdir /home/test
+rmdir Löscht ein Verzeichnis. rmdir /home/test
+ls Zeigt Ordner-Inhalt an. ls /home/test
+ls -l Ausführliche Auflistung. ls -l /home/test
+ls -la Zeigt alle Dateien des Verzeichnis ausführlich. ls
+-la /home/test
+pwd Zeigt das aktuelle Verzeichnis an. pwd
+cat [Datei] Zeigt Inhalt einer Datei. cat 123.txt
+more [Datei] Zeigt Inhalt einer Datei seitenweise an. more
+123.txt
+touch [Datei] Erzeugt leere Datei. touch 123.txt
+whereis [Prog] Sucht nach Programm. whereis Firefox
+find . | grep [DATEI] sucht eine Datei im Verzeichnis. find
+. | grep 123.txt
+grep [KEY] [DATEI] Sucht nach Begriff in einer Datei. grep
+Haus 123.txt
+locate [DATEI] Sucht nach Datei in der Datenbank. locate
+123.txt
+which Zeigt an, wo sich ein Programm befindet. which
+firefox
+$ vi variscript
+#
+#
+# Script to test MY knowledge about variables!
+#
+myname=Vivek
+myos = TroubleOS
+myno=5
+echo "My name is $myname"
+echo "My os is $myos"
+echo "My number is myno, can you see this number"</text>
+  </lesson>
+  <lesson>
+   <id>{1302d1c3-adbf-4088-a3e3-47595303a096}</id>
+   <title>Shell Test</title>
+   <newCharacters></newCharacters>
+   <text>$ vi ginfo
+#
+#
+# Script to print user information who currently login,
+current date &amp; time
+#
+clear
+echo "Hello $USER"
+echo "Today is \c ";date
+echo "Number of user login: \c" ; who | wc -l
+echo "Calendar"
+cal
+exit 0
+$ vi demo
+#!/bin/sh
+#
+# Script that demos, command line args
+#
+echo "Total number of command line argument are $#"
+echo "$0 is script name"
+echo "$1 is first argument"
+echo "$2 is second argument"
+echo "All of them are:- $* or $@"
+# vi /etc/bashrc
+# At the end of file add following in /etc/bashrc file
+#
+# today() to print formatted date
+#
+# To run this function type today at the $ prompt
+# Added by Vivek to show function in Linux
+#
+today()
+{
+echo This is a `date +"%A %d in %B of %Y (%r)"`
+return
+}</text>
+  </lesson>
+ </lessons>
+</course>
