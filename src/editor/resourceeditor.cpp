@@ -382,11 +382,11 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
 
     if (Course* course = qobject_cast<Course*>(backup))
     {
-        msg = i18n("Course \"%1\" deleted.").arg(course->title());
+        msg = i18n("Course <b>%1</b> deleted").arg(Qt::escape(course->title()));
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(backup))
     {
-        msg = i18n("Keyboard layout \"%1\" deleted.").arg(keyboardLayout->title());
+        msg = i18n("Keyboard layout <b>%1</b> deleted").arg(Qt::escape(keyboardLayout->title()));
     }
 
     m_editorWidget->showMessage(ResourceEditorWidget::ResourceDeletedMsg, msg);
