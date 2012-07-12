@@ -51,6 +51,7 @@ void ResourceEditorWidget::setResourceModel(ResourceModel* model)
 void ResourceEditorWidget::setUndoGroup(QUndoGroup* undoGroup)
 {
     m_courseEditor->setUndoGroup(undoGroup);
+    m_keyboardLayoutEditor->setUndoGroup(undoGroup);
 }
 
 void ResourceEditorWidget::showMessage(ResourceEditorWidget::MessageType type, const QString& msg)
@@ -88,6 +89,7 @@ void ResourceEditorWidget::openResource(Resource* dataIndexResource)
     else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource))
     {
         m_editorStack->setCurrentWidget(m_keyboardLayoutEditor);
+        m_keyboardLayoutEditor->openKeyboardLayout(keyboardLayout);
     }
 }
 
@@ -99,6 +101,7 @@ void ResourceEditorWidget::clearUndoStackForResource(Resource* dataIndexResource
     }
     else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource))
     {
+        m_keyboardLayoutEditor->clearUndoStackForKeyboardLayout(keyboardLayout);
     }
 }
 
@@ -108,6 +111,10 @@ void ResourceEditorWidget::save()
     {
         m_courseEditor->save();
     }
+    else if (m_editorStack->currentWidget() == m_keyboardLayoutEditor)
+    {
+        m_keyboardLayoutEditor->save();
+    }
 }
 
 void ResourceEditorWidget::requestResourceRestoration()
@@ -115,7 +122,6 @@ void ResourceEditorWidget::requestResourceRestoration()
     emit(resourceRestorationRequested());
     m_messageWidget->animatedHide();
 }
-
 
 void ResourceEditorWidget::clearMessage()
 {

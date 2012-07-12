@@ -33,6 +33,8 @@ set(ktouch_qml_files
     MessageBox.qml
     ListItem.qml
     SheetDialog.qml
+
+    KeyboardLayoutEditor.qml
 )
 
 install(FILES ${ktouch_qml_files} DESTINATION ${DATA_INSTALL_DIR}/ktouch/qml)
