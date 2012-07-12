@@ -19,8 +19,6 @@
 #include "courseeditor.h"
 
 #include <QUuid>
-#include <QUndoStack>
-#include <QUndoGroup>
 
 #include <KMessageBox>
 
@@ -32,7 +30,7 @@
 #include "editor/lessontexthighlighter.h"
 
 CourseEditor::CourseEditor(QWidget* parent):
-    QWidget(parent),
+    AbstractEditor(parent),
     Ui::CourseEditor(),
     m_dataIndexCourse(0),
     m_course(new Course(this)),
@@ -40,8 +38,6 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_currentLesson(0),
     m_lessonModel(new LessonModel(this)),
     m_readOnly(false),
-    m_undoStacks(new QMap<QString,QUndoStack*>),
-    m_currentUndoStack(0),
     m_lessonTextHighlighter(new LessonTextHighlighter(this))
 {
     setupUi(this);
@@ -79,11 +75,6 @@ void CourseEditor::setResourceModel(ResourceModel* model)
     m_keyboardLayoutComboBox->setResourceModel(model);
 }
 
-void CourseEditor::setUndoGroup(QUndoGroup* undoGroup)
-{
-    m_undoGroup = undoGroup;
-}
-
 void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 {
     DataAccess dataAccess;
@@ -92,18 +83,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     const QString coursePath = dataIndexCourse->path();
 
-    if (m_undoStacks->contains(coursePath))
-    {
-        m_currentUndoStack = m_undoStacks->value(coursePath);
-    }
-    else
-    {
-        m_currentUndoStack = new QUndoStack(this);
-        m_undoStacks->insert(coursePath, m_currentUndoStack);
-        m_undoGroup->addStack(m_currentUndoStack);
-    }
-
-    m_undoGroup->setActiveStack(m_currentUndoStack);
+    initUndoStack(coursePath);
 
     m_currentLessonIndex = -1;
     m_currentLesson = 0;
@@ -135,12 +115,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
 void CourseEditor::clearUndoStackForCourse(DataIndexCourse* course)
 {
-    const QString coursePath = course->path();
-
-    if (m_undoStacks->contains(coursePath))
-    {
-        m_undoStacks->value(coursePath)->clear();
-    }
+    clearUndoStack(course->path());
 }
 
 void CourseEditor::save()
@@ -148,13 +123,13 @@ void CourseEditor::save()
     if (!m_course || !m_course->isValid())
         return;
 
-    if (m_currentUndoStack->isClean())
+    if (currentUndoStack()->isClean())
         return;
 
     DataAccess dataAccess;
 
     dataAccess.storeCourse(m_dataIndexCourse->path(), m_course);
-    m_currentUndoStack->setClean();
+    currentUndoStack()->setClean();
 }
 
 void CourseEditor::setTitle(const QString& newTitle)
@@ -162,7 +137,7 @@ void CourseEditor::setTitle(const QString& newTitle)
     const QString oldTitle = m_course->title();
     m_course->setTitle(newTitle);
     QUndoCommand* command = new SetCourseTitleCommand(m_course, oldTitle);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::setKeyboardLayoutName(const QString& newName)
@@ -170,7 +145,7 @@ void CourseEditor::setKeyboardLayoutName(const QString& newName)
     const QString oldName = m_course->keyboardLayoutName();
     m_course->setKeyboardLayoutName(newName);
     QUndoCommand* command = new SetCourseKeyboadLayoutNameCommand(m_course, oldName);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::setDescription(const QString& newDescription)
@@ -178,7 +153,7 @@ void CourseEditor::setDescription(const QString& newDescription)
     const QString oldDescription = m_course->description();
     m_course->setDescription(newDescription);
     QUndoCommand* command = new SetCourseDescriptionCommand(m_course, oldDescription);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::addLesson()
@@ -187,7 +162,7 @@ void CourseEditor::addLesson()
     const QString id = QUuid::createUuid();
     QUndoCommand* command = new AddLessonCommand(m_course, newIndex, id);
 
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
     selectLesson(newIndex);
 }
 
@@ -199,7 +174,7 @@ void CourseEditor::removeLesson()
     QUndoCommand* command = new RemoveLessonCommand(m_course, index);
 
     m_lessonView->selectionModel()->clear();
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
     selectLesson(qMin(index, m_course->lessonCount() - 1));
 }
 
@@ -212,7 +187,7 @@ void CourseEditor::moveLessonUp()
     QUndoCommand* command = new MoveLessonCommand(m_course, oldIndex, newIndex);
 
     m_lessonView->selectionModel()->clear();
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
     selectLesson(newIndex);
 }
 
@@ -225,7 +200,7 @@ void CourseEditor::moveLessonDown()
     QUndoCommand* command = new MoveLessonCommand(m_course, oldIndex, newIndex);
 
     m_lessonView->selectionModel()->clear();
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
     selectLesson(newIndex);
 }
 
@@ -235,7 +210,7 @@ void CourseEditor::setLessonTitle(const QString& newTitle)
     const QString oldTitle = m_currentLesson->title();
     m_currentLesson->setTitle(newTitle);
     QUndoCommand* command = new SetLessonTitleCommand(m_course, m_currentLessonIndex, oldTitle);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::setLessonNewCharacters(const QString& newCharacters)
@@ -244,7 +219,7 @@ void CourseEditor::setLessonNewCharacters(const QString& newCharacters)
     const QString oldNewCharacters = m_currentLesson->newCharacters();
     m_currentLesson->setNewCharacters(newCharacters);
     QUndoCommand* command = new SetLessonNewCharactersCommand(m_course, m_currentLessonIndex, oldNewCharacters);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::setLessonText(const QString& newText)
@@ -253,7 +228,7 @@ void CourseEditor::setLessonText(const QString& newText)
     const QString oldText = m_currentLesson->text();
     m_currentLesson->setText(newText);
     QUndoCommand* command = new SetLessonTextCommand(m_course, m_currentLessonIndex, oldText);
-    m_currentUndoStack->push(command);
+    currentUndoStack()->push(command);
 }
 
 void CourseEditor::updateTitle()

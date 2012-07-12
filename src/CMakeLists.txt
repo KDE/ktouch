@@ -54,6 +54,7 @@ set(ktouch_SRCS
     editor/newcoursewidget.cpp
     editor/newkeyboardlayoutwidget.cpp
     editor/resourcetemplatewidget.cpp
+    editor/abstracteditor.cpp
     editor/courseeditor.cpp
     editor/coursecommands.cpp
     editor/keyboardlayoutcombobox.cpp

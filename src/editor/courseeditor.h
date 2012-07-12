@@ -19,27 +19,24 @@
 #ifndef COURSEEDITOR_H
 #define COURSEEDITOR_H
 
-#include <QWidget>
+#include "editor/abstracteditor.h"
 #include "ui_courseeditor.h"
 
 #include "editor/coursecommands.h"
 
-class QUndoGroup;
 class QUndoStack;
 class DataIndexCourse;
 class Course;
 class Lesson;
-class ResourceModel;
 class LessonModel;
 class LessonTextHighlighter;
 
-class CourseEditor : public QWidget, private Ui::CourseEditor
+class CourseEditor : public AbstractEditor, private Ui::CourseEditor
 {
     Q_OBJECT
 public:
     explicit CourseEditor(QWidget* parent = 0);
     void setResourceModel(ResourceModel* model);
-    void setUndoGroup(QUndoGroup* undoGroup);
     void openCourse(DataIndexCourse* dataIndexCourse);
     void clearUndoStackForCourse(DataIndexCourse* course);
     void save();
@@ -73,10 +70,7 @@ private:
     int m_currentLessonIndex;
     Lesson* m_currentLesson;
     LessonModel* m_lessonModel;
-    QUndoGroup* m_undoGroup;
     bool m_readOnly;
-    QMap<QString,QUndoStack*>* m_undoStacks;
-    QUndoStack* m_currentUndoStack;
     LessonTextHighlighter* m_lessonTextHighlighter;
 };
 
