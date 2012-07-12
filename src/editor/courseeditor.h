@@ -41,6 +41,7 @@ public:
     void setResourceModel(ResourceModel* model);
     void setUndoGroup(QUndoGroup* undoGroup);
     void openCourse(DataIndexCourse* dataIndexCourse);
+    void clearUndoStackForCourse(DataIndexCourse* course);
     void save();
 private slots:
     void setTitle(const QString& newTitle);

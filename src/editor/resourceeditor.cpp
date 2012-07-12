@@ -142,6 +142,7 @@ void ResourceEditor::newResource()
         Resource* resource = assistant.createResource();
         if (Resource* dataIndexResource = storeResource(resource))
         {
+            m_editorWidget->clearUndoStackForResource(dataIndexResource);
             selectDataResource(dataIndexResource);
         }
         delete resource;
@@ -561,6 +562,7 @@ bool ResourceEditor::importCourse(const QString& path)
 
     if (Resource* dataIndexResource = storeResource(&course, overwriteDataIndexCourse))
     {
+        m_editorWidget->clearUndoStackForResource(dataIndexResource);
         selectDataResource(dataIndexResource);
     }
 
@@ -616,6 +618,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
 
     if (Resource* dataIndexResource = storeResource(&keyboardLayout, overwriteDataIndexKeyboardLayout))
     {
+        m_editorWidget->clearUndoStackForResource(dataIndexResource);
         selectDataResource(dataIndexResource);
     }
 

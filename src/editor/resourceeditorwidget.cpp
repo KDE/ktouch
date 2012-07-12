@@ -91,6 +91,17 @@ void ResourceEditorWidget::openResource(Resource* dataIndexResource)
     }
 }
 
+void ResourceEditorWidget::clearUndoStackForResource(Resource* dataIndexResource)
+{
+    if (DataIndexCourse* course = qobject_cast<DataIndexCourse*>(dataIndexResource))
+    {
+        m_courseEditor->clearUndoStackForCourse(course);
+    }
+    else if (DataIndexKeyboardLayout* keyboardLayout = qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource))
+    {
+    }
+}
+
 void ResourceEditorWidget::save()
 {
     if (m_editorStack->currentWidget() == m_courseEditor)

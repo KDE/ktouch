@@ -43,6 +43,7 @@ public:
     void showMessage(MessageType type, const QString& msg);
     QAbstractItemView* resourceView() const;
     void openResource(Resource* dataIndexResource);
+    void clearUndoStackForResource(Resource* dataIndexResource);
     void save();
 signals:
     void resourceRestorationRequested();

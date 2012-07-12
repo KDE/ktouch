@@ -133,6 +133,16 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
     }
 }
 
+void CourseEditor::clearUndoStackForCourse(DataIndexCourse* course)
+{
+    const QString coursePath = course->path();
+
+    if (m_undoStacks->contains(coursePath))
+    {
+        m_undoStacks->value(coursePath)->clear();
+    }
+}
+
 void CourseEditor::save()
 {
     if (!m_course || !m_course->isValid())
