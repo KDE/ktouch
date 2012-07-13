@@ -29,6 +29,7 @@ class KeyboardLayoutEditor : public AbstractEditor, private Ui::KeyboardLayoutEd
 {
     Q_OBJECT
     Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout NOTIFY keyboardLayoutChanged)
+    Q_PROPERTY(bool readOnly READ readOnly WRITE setReadOnly NOTIFY readOnlyChanged);
     Q_PROPERTY(AbstractKey* selectedKey READ selectedKey WRITE setSelectedKey NOTIFY selectedKeyChanged)
 public:
     explicit KeyboardLayoutEditor(QWidget* parent = 0);
@@ -38,16 +39,20 @@ public:
     void save();
 
     KeyboardLayout* keyboardLayout() const;
+    bool readOnly() const;
+    void setReadOnly(bool readOnly);
     AbstractKey* selectedKey() const;
     void setSelectedKey(AbstractKey* key);
 signals:
     void keyboardLayoutChanged();
+    void readOnlyChanged();
     void selectedKeyChanged();
 private slots:
     void clearSelection();
 private:
     DataIndexKeyboardLayout* m_dataIndexKeyboardLayout;
     KeyboardLayout* m_keyboardLayout;
+    bool m_readOnly;
     AbstractKey* m_selectedKey;
 };
 

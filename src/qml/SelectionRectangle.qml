@@ -20,6 +20,10 @@ import ktouch 1.0
 
 Item
 {
+    id: root;
+
+    property bool interactive: true
+
     Rectangle {
         anchors.centerIn: parent
         width: parent.width - 5
@@ -32,41 +36,49 @@ Item
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "left"
         verticalPosition: "top"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "left"
         verticalPosition: "center"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "left"
         verticalPosition: "bottom"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "center"
         verticalPosition: "top"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "center"
         verticalPosition: "bottom"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "right"
         verticalPosition: "top"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "right"
         verticalPosition: "center"
     }
 
     SelectionGrip {
+        interactive: root.interactive
         horizontalPosition: "right"
         verticalPosition: "bottom"
     }

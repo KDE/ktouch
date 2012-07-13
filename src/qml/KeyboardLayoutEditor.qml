@@ -90,6 +90,7 @@ Item {
             width: targetKeyItem && (targetKeyItem.width + 16) || 0
             height: targetKeyItem && (targetKeyItem.height + 16) || 0
             visible: selectedKey !== null
+            interactive: !readOnly
         }
     }
 }

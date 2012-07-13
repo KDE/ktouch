@@ -21,9 +21,11 @@ import ktouch 1.0
 Rectangle {
     property string horizontalPosition
     property string verticalPosition
+    property bool interactive
     width: 5
     height: 5
     color: "navy"
+    visible: interactive
     anchors {
         left: horizontalPosition == "left"? parent.left: null
         horizontalCenter: horizontalPosition == "center"? parent.horizontalCenter: null

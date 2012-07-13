@@ -38,6 +38,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     AbstractEditor(parent),
     m_dataIndexKeyboardLayout(0),
     m_keyboardLayout(new KeyboardLayout(this)),
+    m_readOnly(false),
     m_selectedKey(0)
 {
     setupUi(this);
@@ -72,7 +73,7 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
 
     if (dataIndexKeyboardLayout->source() == DataIndex::BuiltInResource)
     {
-        // setIsReadOnly(true);
+        setReadOnly(true);
         m_messageWidget->setMessageType(KMessageWidget::Information);
         m_messageWidget->setText(i18n("Built-in keyboard layouts can only be viewed."));
         m_messageWidget->setCloseButtonVisible(false);
@@ -80,7 +81,7 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
     }
     else
     {
-        // setIsReadOnly(false);
+        setReadOnly(false);
         m_messageWidget->animatedHide();
     }
 }
@@ -107,6 +108,20 @@ void KeyboardLayoutEditor::save()
 KeyboardLayout* KeyboardLayoutEditor::keyboardLayout() const
 {
     return m_keyboardLayout;
+}
+
+bool KeyboardLayoutEditor::readOnly() const
+{
+    return m_readOnly;
+}
+
+void KeyboardLayoutEditor::setReadOnly(bool readOnly)
+{
+    if (readOnly != m_readOnly)
+    {
+        m_readOnly = readOnly;
+        emit readOnlyChanged();
+    }
 }
 
 AbstractKey* KeyboardLayoutEditor::selectedKey() const
