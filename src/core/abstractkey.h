@@ -19,6 +19,7 @@
 #define ABSTRACTKEY_H
 
 #include <QObject>
+#include <QRect>
 
 class AbstractKey : public QObject
 {
@@ -41,6 +42,9 @@ public:
     int height() const;
     void setHeight(int height);
     Q_INVOKABLE void copyFrom(AbstractKey* source);
+
+    QRect rect() const;
+    void setRect(const QRect& rect);
 
 signals:
     void leftChanged();

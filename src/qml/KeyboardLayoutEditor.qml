@@ -28,6 +28,7 @@ Item {
     property real scaleFactor: 1.0
     property KeyboardLayout layout: keyboardLayout
     property AbstractKey selKey: selectedKey
+    property int lastZIndex: 0
 
     function findKeyItem(key) {
         for (var i = 0; i < keys.count; i++) {
@@ -66,6 +67,7 @@ Item {
             model: layout.isValid? layout.keyCount: 0
 
             KeyItem {
+                id: keyItem
                 keyboardLayout: layout;
                 keyIndex: index
 
@@ -74,19 +76,37 @@ Item {
                     onPressed: {
                         if (mouse.button == Qt.LeftButton) {
                             selectedKey = layout.key(index)
-                            mouse.accepted = true
+                            root.lastZIndex++
+                            keyItem.z = root.lastZIndex
+                        }
+                    }
+                    drag {
+                        target: !readOnly? keyItem: undefined
+                        axis: Drag.XandYAxis
+                        minimumX: 0
+                        maximumX: keyContainer.width - keyItem.width
+                        minimumY: 0
+                        maximumY: keyContainer.height - keyItem.height
+                        onActiveChanged: {
+                            if (!drag.active) {
+                                var left = 10 * Math.round(keyItem.x / scaleFactor / 10)
+                                var top = 10 * Math.round(keyItem.y / scaleFactor / 10)
+                                setKeyGeometry(keyIndex, left, top, keyItem.key.width, keyItem.key.height)
+                            }
                         }
                     }
                 }
+
+                Behavior on x {NumberAnimation {duration: 150; easing.type: Easing.InOutQuad}}
+                Behavior on y {NumberAnimation {duration: 150; easing.type: Easing.InOutQuad}}
             }
         }
 
         SelectionRectangle {
             property variant targetKeyItem: findKeyItem(selectedKey)
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.leftMargin: targetKeyItem && (targetKeyItem.anchors.leftMargin - 8) || 0
-            anchors.topMargin: targetKeyItem && (targetKeyItem.anchors.topMargin - 8) || 0
+            x: targetKeyItem && (targetKeyItem.x - 8) || 0
+            y: targetKeyItem && (targetKeyItem.y - 8) || 0
+            z: root.lastZIndex + 1
             width: targetKeyItem && (targetKeyItem.width + 16) || 0
             height: targetKeyItem && (targetKeyItem.height + 16) || 0
             visible: selectedKey !== null

@@ -96,3 +96,15 @@ void AbstractKey::copyFrom(AbstractKey* source)
     setHeight(source->height());
 }
 
+QRect AbstractKey::rect() const
+{
+    return QRect(left(), top(), width(), height());
+}
+
+void AbstractKey::setRect(const QRect& rect)
+{
+    setLeft(rect.left());
+    setTop(rect.top());
+    setWidth(rect.width());
+    setHeight(rect.height());
+}

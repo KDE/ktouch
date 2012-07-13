@@ -43,6 +43,8 @@ public:
     void setReadOnly(bool readOnly);
     AbstractKey* selectedKey() const;
     void setSelectedKey(AbstractKey* key);
+
+    Q_INVOKABLE void setKeyGeometry(int keyIndex, int top, int left, int width, int height);
 signals:
     void keyboardLayoutChanged();
     void readOnlyChanged();

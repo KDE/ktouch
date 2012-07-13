@@ -78,10 +78,8 @@ Item {
         item.tint = color
     }
 
-    anchors.left: parent.left
-    anchors.top: parent.top
-    anchors.leftMargin: Math.round(key.left * scaleFactor)
-    anchors.topMargin: Math.round(key.top * scaleFactor)
+    x: Math.round(key.left * scaleFactor)
+    y: Math.round(key.top * scaleFactor)
     width: Math.round(key.width * scaleFactor)
     height: Math.round(key.height * scaleFactor)
 

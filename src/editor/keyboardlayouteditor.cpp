@@ -17,6 +17,7 @@
 
 
 #include "keyboardlayouteditor.h"
+#include "keyboardlayoutcommands.h"
 
 #include <qdeclarative.h>
 
@@ -135,6 +136,17 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
     {
         m_selectedKey = key;
         emit selectedKeyChanged();
+    }
+}
+
+void KeyboardLayoutEditor::setKeyGeometry(int keyIndex, int top, int left, int width, int height)
+{
+    QRect rect(top, left, width, height);
+
+    if (rect != keyboardLayout()->key(keyIndex)->rect())
+    {
+        QUndoCommand* command = new SetKeyGeometryCommand(keyboardLayout(), keyIndex, rect);
+        currentUndoStack()->push(command);
     }
 }
 
