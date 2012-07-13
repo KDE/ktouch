@@ -37,7 +37,8 @@
 KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     AbstractEditor(parent),
     m_dataIndexKeyboardLayout(0),
-    m_keyboardLayout(new KeyboardLayout(this))
+    m_keyboardLayout(new KeyboardLayout(this)),
+    m_selectedKey(0)
 {
     setupUi(this);
     m_messageWidget->hide();
@@ -49,11 +50,8 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
     m_view->rootContext()->setContextObject(this);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));
-}
 
-KeyboardLayout* KeyboardLayoutEditor::keyboardLayout() const
-{
-    return m_keyboardLayout;
+    connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
 }
 
 void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)
@@ -65,6 +63,7 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
     const QString path = dataIndexKeyboardLayout->path();
 
     initUndoStack(path);
+    setSelectedKey(0);
 
     if (!dataAccess.loadKeyboardLayout(path, m_keyboardLayout))
     {
@@ -103,4 +102,28 @@ void KeyboardLayoutEditor::save()
 
     dataAccess.storeKeyboardLayout(m_dataIndexKeyboardLayout->path(), m_keyboardLayout);
     currentUndoStack()->setClean();
+}
+
+KeyboardLayout* KeyboardLayoutEditor::keyboardLayout() const
+{
+    return m_keyboardLayout;
+}
+
+AbstractKey* KeyboardLayoutEditor::selectedKey() const
+{
+    return m_selectedKey;
+}
+
+void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
+{
+    if (key != m_selectedKey)
+    {
+        m_selectedKey = key;
+        emit selectedKeyChanged();
+    }
+}
+
+void KeyboardLayoutEditor::clearSelection()
+{
+    setSelectedKey(0);
 }

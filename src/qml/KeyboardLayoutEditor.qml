@@ -27,16 +27,37 @@ Item {
 
     property real scaleFactor: 1.0
     property KeyboardLayout layout: keyboardLayout
+    property AbstractKey selKey: selectedKey
 
-    width: childrenRect.width + 40
-    height: childrenRect.height + 40
+    function findKeyItem(key) {
+        for (var i = 0; i < keys.count; i++) {
+            var keyItem = keys.itemAt(i)
+            if (keyItem.key == key) {
+                return keyItem
+            }
+        }
+        return null;
+    }
+ 
+    width: childrenRect.width + 10
+    height: childrenRect.height + 10
+
+    MouseArea {
+        anchors.fill: parent
+        onPressed: {
+            if (mouse.button == Qt.LeftButton) {
+                selectedKey = null
+                mouse.accepted = true
+            }
+        }
+    }
 
     Rectangle {
         id: keyContainer
 
         anchors.centerIn: parent
-        width: childrenRect.width
-        height: childrenRect.height
+        width: layout.width * scaleFactor
+        height: layout.height * scaleFactor
 
         color: "#ccc"
 
@@ -47,7 +68,28 @@ Item {
             KeyItem {
                 keyboardLayout: layout;
                 keyIndex: index
+
+                MouseArea {
+                    anchors.fill: parent
+                    onPressed: {
+                        if (mouse.button == Qt.LeftButton) {
+                            selectedKey = layout.key(index)
+                            mouse.accepted = true
+                        }
+                    }
+                }
             }
+        }
+
+        SelectionRectangle {
+            property variant targetKeyItem: findKeyItem(selectedKey)
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.leftMargin: targetKeyItem && (targetKeyItem.anchors.leftMargin - 8) || 0
+            anchors.topMargin: targetKeyItem && (targetKeyItem.anchors.topMargin - 8) || 0
+            width: targetKeyItem && (targetKeyItem.width + 16) || 0
+            height: targetKeyItem && (targetKeyItem.height + 16) || 0
+            visible: selectedKey !== null
         }
     }
 }

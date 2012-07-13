@@ -15,7 +15,7 @@
     <widget class="KMessageWidget" name="m_messageWidget"/>
    </item>
    <item>
-    <widget class="QDeclarativeView" name="m_view">
+    <widget class="KeyboardLayoutEditorView" name="m_view">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -46,15 +46,15 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QDeclarativeView</class>
-   <extends>QGraphicsView</extends>
-   <header>QtDeclarative/QDeclarativeView</header>
-  </customwidget>
-  <customwidget>
    <class>KMessageWidget</class>
    <extends>QFrame</extends>
    <header location="global">kmessagewidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KeyboardLayoutEditorView</class>
+   <extends>QGraphicsView</extends>
+   <header>editor/keyboardlayouteditorview.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

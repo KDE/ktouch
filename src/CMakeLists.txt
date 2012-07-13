@@ -61,6 +61,7 @@ set(ktouch_SRCS
     editor/keyboardlayoutcombobox.cpp
     editor/lessontexthighlighter.cpp
     editor/keyboardlayouteditor.cpp
+    editor/keyboardlayouteditorview.cpp
     viewcontext.cpp
     scalebackgrounditem.cpp
     x11_helper.cpp

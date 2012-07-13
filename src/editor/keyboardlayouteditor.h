@@ -23,20 +23,32 @@
 
 class DataIndexKeyboardLayout;
 class KeyboardLayout;
+class AbstractKey;
 
 class KeyboardLayoutEditor : public AbstractEditor, private Ui::KeyboardLayoutEditor
 {
     Q_OBJECT
-    Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout)
+    Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout NOTIFY keyboardLayoutChanged)
+    Q_PROPERTY(AbstractKey* selectedKey READ selectedKey WRITE setSelectedKey NOTIFY selectedKeyChanged)
 public:
     explicit KeyboardLayoutEditor(QWidget* parent = 0);
-    KeyboardLayout* keyboardLayout() const;
+
     void openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);
     void clearUndoStackForKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);
     void save();
+
+    KeyboardLayout* keyboardLayout() const;
+    AbstractKey* selectedKey() const;
+    void setSelectedKey(AbstractKey* key);
+signals:
+    void keyboardLayoutChanged();
+    void selectedKeyChanged();
+private slots:
+    void clearSelection();
 private:
     DataIndexKeyboardLayout* m_dataIndexKeyboardLayout;
     KeyboardLayout* m_keyboardLayout;
+    AbstractKey* m_selectedKey;
 };
 
 #endif // KEYBOARDLAYOUTEDITOR_H

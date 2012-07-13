@@ -35,6 +35,8 @@ set(ktouch_qml_files
     SheetDialog.qml
 
     KeyboardLayoutEditor.qml
+    SelectionRectangle.qml
+    SelectionGrip.qml
 )
 
 install(FILES ${ktouch_qml_files} DESTINATION ${DATA_INSTALL_DIR}/ktouch/qml)
