@@ -185,6 +185,14 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/it.xml</path>
   </course>
   <course>
+    <title>Lithuanian (Standard)</title>
+    <description>Tekstas i&#x161; programos &#x201E;Klaviat&#x16B;ros treniruokl&#x117; &#x201E;KP Typing Tutor&#x201C;&#x201C;.
+A&#x10D;i&#x16B; Sigitai Pedzevi&#x10D;ienei (sigitab@ktl.mii.lt)</description>
+    <keyboardLayout>lt(std)</keyboardLayout>
+    <id>{76a36212-db98-42e6-8dad-e1c1afb7c5ed}</id>
+    <path>courses/lt.std.xml</path>
+  </course>
+  <course>
     <title>Nederlands (auto-generated)</title>
     <description>Typecursus door tijs@vandenbogaard.org
 Thu Dec 18 21:33:14 CET 2003
