@@ -177,6 +177,14 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
     <path>courses/gr.xml</path>
   </course>
   <course>
+    <title>Italian (auto-generated)</title>
+    <description>KTouch training file generated Tue Jul 27 13:27:52 2004
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>it</keyboardLayout>
+    <id>{d5a3ac52-ec39-495d-aa70-0e6de23f7d4b}</id>
+    <path>courses/it.xml</path>
+  </course>
+  <course>
     <title>Nederlands (auto-generated)</title>
     <description>Typecursus door tijs@vandenbogaard.org
 Thu Dec 18 21:33:14 CET 2003
