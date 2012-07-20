@@ -22,64 +22,34 @@ Item
 {
     id: root;
 
+    property KeyboardLayout keyboardLayout
+    property variant target: null
     property bool interactive: true
 
-    Rectangle {
-        anchors.centerIn: parent
-        width: parent.width - 5
-        height: parent.height - 5
-        color: "transparent"
-        border {
-            color: "#000";
-            width: 1
+    property variant targetItem: findKeyItem(target)
+
+    anchors.fill: parent
+    visible: !!targetItem
+
+    function findKeyItem(key) {
+        for (var i = 0; i < keys.count; i++) {
+            var keyItem = keys.itemAt(i)
+            if (keyItem.key == key) {
+                return keyItem
+            }
         }
+        return null;
     }
 
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "left"
-        verticalPosition: "top"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "left"
-        verticalPosition: "center"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "left"
-        verticalPosition: "bottom"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "center"
-        verticalPosition: "top"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "center"
-        verticalPosition: "bottom"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "right"
-        verticalPosition: "top"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "right"
-        verticalPosition: "center"
-    }
-
-    SelectionGrip {
-        interactive: root.interactive
-        horizontalPosition: "right"
-        verticalPosition: "bottom"
+    Repeater {
+        model: 4
+        delegate: SelectionGrip {
+            keyboardLayout: root.keyboardLayout
+            target: root.target
+            targetItem: root.targetItem
+            interactive: root.interactive
+            horizontalPosition: index % 2 == 0? "left": "right"
+            verticalPosition: index < 2? "top": "bottom"
+        }
     }
 }

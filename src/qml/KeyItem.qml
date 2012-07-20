@@ -26,6 +26,7 @@ Item {
     property KeyboardLayout keyboardLayout
     property color tint: "#00000000"
     property bool isHighlighted: false
+    property bool animateHighlight: true
     property bool enabled: true
     property bool pressed: false
 
@@ -134,6 +135,12 @@ Item {
         }
     }
 
+    onIsHighlightedChanged: {
+        if (!animateHighlight) {
+            shadow.state = isHighlighted? "highlighted1": "normal"
+        }
+    }
+
     Rectangle {
         id: shadow
 
@@ -151,6 +158,7 @@ Item {
             yOffset: 0
 
             Behavior on blurRadius {
+                enabled: animateHighlight
                 NumberAnimation {
                     duration: 150
                     easing.type: Easing.InOutQuad
@@ -200,6 +208,7 @@ Item {
         ]
 
         Behavior on marginSize {
+            enabled: animateHighlight
             NumberAnimation {
                 duration: 150
                 easing.type: Easing.InOutQuad
@@ -207,6 +216,7 @@ Item {
         }
 
         Behavior on color {
+            enabled: animateHighlight
             ColorAnimation { duration: 150 }
         }
 
@@ -214,7 +224,7 @@ Item {
         SequentialAnimation {
             id: pulseAnimation
             loops: Animation.Infinite
-            running: isHighlighted
+            running: isHighlighted && animateHighlight
             onRunningChanged: {
                 if (!running)
                     shadow.state = "normal"

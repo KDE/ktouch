@@ -30,16 +30,6 @@ Item {
     property AbstractKey selKey: selectedKey
     property int lastZIndex: 0
 
-    function findKeyItem(key) {
-        for (var i = 0; i < keys.count; i++) {
-            var keyItem = keys.itemAt(i)
-            if (keyItem.key == key) {
-                return keyItem
-            }
-        }
-        return null;
-    }
- 
     width: childrenRect.width + 10
     height: childrenRect.height + 10
 
@@ -70,6 +60,8 @@ Item {
                 id: keyItem
                 keyboardLayout: layout;
                 keyIndex: index
+                isHighlighted: keyItem.key == selectedKey
+                animateHighlight: false
 
                 MouseArea {
                     anchors.fill: parent
@@ -96,20 +88,13 @@ Item {
                         }
                     }
                 }
-
-                Behavior on x {NumberAnimation {duration: 150; easing.type: Easing.InOutQuad}}
-                Behavior on y {NumberAnimation {duration: 150; easing.type: Easing.InOutQuad}}
             }
         }
 
         SelectionRectangle {
-            property variant targetKeyItem: findKeyItem(selectedKey)
-            x: targetKeyItem && (targetKeyItem.x - 8) || 0
-            y: targetKeyItem && (targetKeyItem.y - 8) || 0
+            keyboardLayout: layout;
+            target: selectedKey
             z: root.lastZIndex + 1
-            width: targetKeyItem && (targetKeyItem.width + 16) || 0
-            height: targetKeyItem && (targetKeyItem.height + 16) || 0
-            visible: selectedKey !== null
             interactive: !readOnly
         }
     }
