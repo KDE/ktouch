@@ -26,6 +26,7 @@
 
 #include <KStandardDirs>
 #include <KMessageBox>
+#include <KDebug>
 #include <kdeclarative.h>
 
 #include "core/dataindex.h"
@@ -122,6 +123,7 @@ void KeyboardLayoutEditor::setReadOnly(bool readOnly)
     {
         m_readOnly = readOnly;
         emit readOnlyChanged();
+        m_propertiesWidget->setReadOnly(readOnly);
     }
 }
 
@@ -136,6 +138,7 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
     {
         m_selectedKey = key;
         emit selectedKeyChanged();
+        m_propertiesWidget->setSelectedKey(key);
     }
 }
 
@@ -148,6 +151,18 @@ void KeyboardLayoutEditor::setKeyGeometry(int keyIndex, int top, int left, int w
         QUndoCommand* command = new SetKeyGeometryCommand(keyboardLayout(), keyIndex, rect);
         currentUndoStack()->push(command);
     }
+}
+
+QString KeyboardLayoutEditor::findImage(const QString& imageName) const
+{
+    QString relPath = QString("images/") + imageName;
+    QString path = KGlobal::dirs()->findResource("appdata", relPath);
+    if (path.isNull())
+    {
+        kWarning() << "can't find image resource:" << imageName;
+    }
+    return path;
+
 }
 
 void KeyboardLayoutEditor::clearSelection()

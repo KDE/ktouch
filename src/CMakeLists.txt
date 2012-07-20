@@ -24,6 +24,7 @@ kde4_add_ui_files(ktouch_UIS
     ui/resourcetemplatewidget.ui
     ui/courseeditor.ui
     ui/keyboardlayouteditor.ui
+    ui/keyboardlayoutpropertieswidget.ui
 )
 
 # set the source code files from which KTouch is compiled
@@ -62,6 +63,7 @@ set(ktouch_SRCS
     editor/lessontexthighlighter.cpp
     editor/keyboardlayouteditor.cpp
     editor/keyboardlayouteditorview.cpp
+    editor/keyboardlayoutpropertieswidget.cpp
     editor/keyboardlayoutcommands.cpp
     viewcontext.cpp
     scalebackgrounditem.cpp

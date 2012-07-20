@@ -45,6 +45,8 @@ public:
     void setSelectedKey(AbstractKey* key);
 
     Q_INVOKABLE void setKeyGeometry(int keyIndex, int top, int left, int width, int height);
+
+    Q_INVOKABLE QString findImage(const QString& imageName) const;
 signals:
     void keyboardLayoutChanged();
     void readOnlyChanged();
