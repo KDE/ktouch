@@ -43,14 +43,15 @@ Item {
         }
     }
 
-    Rectangle {
+    Image {
         id: keyContainer
 
         anchors.centerIn: parent
         width: layout.width * scaleFactor
         height: layout.height * scaleFactor
 
-        color: "#ccc"
+        source: findImage("gridtile.png")
+        fillMode: Image.Tile
 
         Repeater {
             id: keys
