@@ -23,6 +23,7 @@
 #include <QString>
 #include <QVariant>
 
+class QSignalMapper;
 class QXmlSchema;
 class QDomDocument;
 class QIODevice;
@@ -56,6 +57,9 @@ signals:
     void referenceKeyChanged();
     void keyCountChanged();
 
+private slots:
+    void onKeyGeometryChanged(int keyIndex);
+
 private:
     void updateReferenceKey(AbstractKey* newKey=0);
     bool compareKeysForReference(const AbstractKey* testKey, const AbstractKey* compareKey) const;
@@ -66,6 +70,7 @@ private:
     int m_height;
     QList<AbstractKey*> m_keys;
     AbstractKey* m_referenceKey;
+    QSignalMapper* m_signalMapper;
 
 };
 

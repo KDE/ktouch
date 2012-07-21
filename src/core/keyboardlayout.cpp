@@ -17,6 +17,7 @@
 
 #include "keyboardlayout.h"
 
+#include <QSignalMapper>
 #include <QFile>
 #include <QUrl>
 #include <QDomDocument>
@@ -41,8 +42,10 @@ KeyboardLayout::KeyboardLayout(QObject *parent) :
     m_width(0),
     m_height(0),
     m_keys(QList<AbstractKey*>()),
-    m_referenceKey(0)
+    m_referenceKey(0),
+    m_signalMapper(new QSignalMapper(this))
 {
+    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(onKeyGeometryChanged(int)));
 }
 
 int KeyboardLayout::width() const
@@ -127,6 +130,9 @@ void KeyboardLayout::addKey(AbstractKey* key)
 {
     m_keys.append(key);
     key->setParent(this);
+    connect(key, SIGNAL(widthChanged()), m_signalMapper, SLOT(map()));
+    connect(key, SIGNAL(heightChanged()), m_signalMapper, SLOT(map()));
+    m_signalMapper->setMapping(key, m_keys.count() - 1);
     emit keyCountChanged();
     updateReferenceKey(key);
 }
@@ -148,23 +154,27 @@ void KeyboardLayout::clearKeys()
     updateReferenceKey(0);
 }
 
-
-void KeyboardLayout::updateReferenceKey(AbstractKey *newKey)
+void KeyboardLayout::onKeyGeometryChanged(int keyIndex)
 {
-    if (newKey)
+    updateReferenceKey(key(keyIndex));
+}
+
+void KeyboardLayout::updateReferenceKey(AbstractKey *testKey)
+{
+    if (testKey)
     {
         if (!m_referenceKey)
         {
-            m_referenceKey = newKey;
+            m_referenceKey = testKey;
             emit referenceKeyChanged();
             return;
         }
-        if (compareKeysForReference(newKey, m_referenceKey))
+        if (compareKeysForReference(testKey, m_referenceKey))
         {
-            m_referenceKey = newKey;
+            m_referenceKey = testKey;
             emit referenceKeyChanged();
+            return;
         }
-        return;
     }
     AbstractKey* canditate = 0;
     foreach(AbstractKey* key, m_keys)
