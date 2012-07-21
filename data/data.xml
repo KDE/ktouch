@@ -245,6 +245,32 @@ Miko&#x142;aj Machowski</description>
     <path>courses/pl.xml</path>
   </course>
   <course>
+    <title>Russian (Legacy)</title>
+    <description>Created by Oleksiy Gorelov &lt;grolm@ukr.net&gt;
+Kiev, Ukraine
+Mon Nov 14, 2005</description>
+    <keyboardLayout>ru(legacy)</keyboardLayout>
+    <id>{79c7cfd5-49c7-4e01-a7a2-f5a36cbbdeff}</id>
+    <path>courses/ru.legacy.xml</path>
+  </course>
+  <course>
+    <title>Russian (auto-generated)</title>
+    <description>Russian training file                                                                                 
+adapted by Chemisov Konstantin &lt;dabc4123@mail.ru&gt;                                                            
+from ktouch-gen utility 
+29-08-2005</description>
+    <keyboardLayout>ru</keyboardLayout>
+    <id>{ebfc3797-2556-41bb-9f8a-2c2c1b3ac66f}</id>
+    <path>courses/ru1.xml</path>
+  </course>
+  <course>
+    <title>Russian (auto-generated, long)</title>
+    <description>KTouch training file generated Tue Oct 25 12:51:40 MSD 2005 by Miha Ulanov (mulanov@mail.ru)</description>
+    <keyboardLayout>ru</keyboardLayout>
+    <id>{d3d04d1f-c809-48c7-ad11-831672be033d}</id>
+    <path>courses/ru2.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07
