@@ -68,7 +68,11 @@ Item {
     height: 1
 
     PlasmaCore.SvgItem {
-        anchors.centerIn: parent
+        anchors {
+            centerIn: parent
+            verticalCenterOffset: verticalPosition == "top"? -10: 10
+            horizontalCenterOffset: horizontalPosition == "left"? -10: 10
+        }
         width: 15
         height: 15
         svg: PlasmaCore.Svg {
@@ -87,11 +91,12 @@ Item {
             drag {
                 target: root
                 axis: Drag.XandYAxis
-                minimumX: horizontalPosition == "left"? 0: targetItem.x + scaleFactor * minSize
-                maximumX: horizontalPosition == "left"? targetItem.x + targetItem.width - minSize: keyboardLayout.width * scaleFactor
-                minimumY: verticalPosition == "top"? 0: targetItem.y + scaleFactor * minSize
-                maximumY: verticalPosition == "top"? targetItem.y + targetItem.height - minSize: keyboardLayout.height * scaleFactor
+                minimumX: !targetItem? 0: horizontalPosition == "left"? 0: targetItem.x + scaleFactor * minSize
+                maximumX: !targetItem? 0: horizontalPosition == "left"? targetItem.x + targetItem.width - minSize: keyboardLayout.width * scaleFactor
+                minimumY: !targetItem? 0: verticalPosition == "top"? 0: targetItem.y + scaleFactor * minSize
+                maximumY: !targetItem? 0: verticalPosition == "top"? targetItem.y + targetItem.height - minSize: keyboardLayout.height * scaleFactor
                 onActiveChanged: {
+                    targetItem.manipulated = drag.active
                     if (!drag.active) {
                         var left = 10 * Math.round(target.left / 10);
                         var top = 10 * Math.round(target.top / 10);

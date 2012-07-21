@@ -30,8 +30,8 @@ Item {
     property AbstractKey selKey: selectedKey
     property int lastZIndex: 0
 
-    width: childrenRect.width + 10
-    height: childrenRect.height + 10
+    width: keyContainer.width + 40
+    height: keyContainer.height + 40
 
     MouseArea {
         anchors.fill: parent
@@ -58,11 +58,13 @@ Item {
             model: layout.isValid? layout.keyCount: 0
 
             KeyItem {
+                property bool manipulated: false
                 id: keyItem
                 keyboardLayout: layout;
                 keyIndex: index
                 isHighlighted: keyItem.key == selectedKey
                 animateHighlight: false
+                opacity: manipulated? 0.7: 1.0
 
                 MouseArea {
                     anchors.fill: parent
@@ -81,6 +83,7 @@ Item {
                         minimumY: 0
                         maximumY: keyContainer.height - keyItem.height
                         onActiveChanged: {
+                            keyItem.manipulated = drag.active
                             if (!drag.active) {
                                 var left = 10 * Math.round(keyItem.x / scaleFactor / 10)
                                 var top = 10 * Math.round(keyItem.y / scaleFactor / 10)
@@ -88,6 +91,10 @@ Item {
                             }
                         }
                     }
+                }
+
+                Behavior on opacity {
+                    NumberAnimation { duration: 150 }
                 }
             }
         }
