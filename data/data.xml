@@ -226,6 +226,16 @@ bepalingen van de GNU General Public License versie 2 of recenter.</description>
     <path>courses/nl2.xml</path>
   </course>
   <course>
+    <title>Norwegian</title>
+    <description>KTouch training file generated Sun Apr 22 16:26:01 2007
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+Manually modified in nano and gedit by Jarl Arntzen Wed Dec 1 2010 18:57.
+Separate levels for keys u, y and z needed</description>
+    <keyboardLayout>no</keyboardLayout>
+    <id>{1bebcd91-6397-44ff-a1ee-ce6b126bbbc0}</id>
+    <path>courses/no.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07

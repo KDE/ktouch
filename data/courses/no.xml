@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<course>
+  <id>{1bebcd91-6397-44ff-a1ee-ce6b126bbbc0}</id>
+  <title>Norwegian</title>
+  <description>KTouch training file generated Sun Apr 22 16:26:01 2007
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+Manually modified in nano and gedit by Jarl Arntzen Wed Dec 1 2010 18:57.
+Separate levels for keys u, y and z needed</description>
+  <keyboardLayout>no</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{88dbd995-f804-41bc-9f54-f23722ff59f6}</id>
+      <title>Lesson 1</title>
+      <newCharacters>jf</newCharacters>
+      <text>f f j j f jj jfj jf jj j jj f j f jf jj j
+f j f j jfj fff fff j jjj jj fjjj fjf fjf
+jf f f j f jj f f f f jj jj j f jf j fff j
+jfj jj j f ffj j ffj fjjj jj jf jjj jfj fjj
+f j jj j f j fjjj f jj ffj j j jjf jj jfj
+fjff f jj f fff f f fjf f jj f jfj f f fff jjj
+jjf fjff fjf jf fjf j jjf fjff f jj j jj jj
+jfj f f j j jj f fjjj fjff jf f fjf jjf j j
+jjf jjf j j jfj jjf f f jf jjj fff jf jjj fjf
+f f jjf j fjff f jf jfj fjf j jf jf fjf f</text>
+    </lesson>
+    <lesson>
+      <id>{52198ac9-8a4c-4b71-935e-ecd9a8a7d0ff}</id>
+      <title>Lesson 2</title>
+      <newCharacters>kd</newCharacters>
+      <text>fdj kf d k k d d k d ddk d k fdff d dfjf k jjk
+dfjf dfjf dfjf d dk d dk kkff k d kf d k fdff
+k kkff kfk d kdf fdff dk jjk d d kkff k k
+d d d fk kdk kdf k kf kdf d k d kdf k jjk
+d djj k kd d kf k d d k k dk fdff k fk k k
+kf d d fdj ddk kd dfjf kkff k ddk djj k k d
+dk ddk kkff k k fdj kf k k fdff kkff kfk k
+kf d kf kdf k k kkff jjk d k dfjf dfjf d k
+d d fdff dfjf d k kkff d d d d d ddk kfk d
+d jjk k d ddk kf k fk k fk fdj dfjf djj kf</text>
+    </lesson>
+    <lesson>
+      <id>{cbd60092-19e4-4444-b3b8-8a5c30ac65ed}</id>
+      <title>Lesson 3</title>
+      <newCharacters>ls</newCharacters>
+      <text>s s s s s s kl kl s s l kl kl l s sk fl s
+l sj fl s sf sdsf kl l sl sl l sj sl s s sj
+s sj fl sj s sl sdsf sk skj fl kl sdsf l sl
+s sdsf kl fl fl fl fl l sk fl kl skj l l sl
+s sk l sk l sj l sk kl sj fl kl l l skj s
+s s l sk l sk s skj l fl skl sk kl l sj l
+kl l kl fl l kl sk kl kl l l s l l fl fl s
+sk sj sk sj sdsf kl l skj s s s s l kl skj
+l kl fl sf s skl l skl sj l sj l sj s fl sk
+kl l kl sj sdsf sf s sl kl sf s l l s sj sj</text>
+    </lesson>
+    <lesson>
+      <id>{d982df0b-eef0-4116-a6c5-92b8978ffb82}</id>
+      <title>Lesson 4</title>
+      <newCharacters>&#xF8;a</newCharacters>
+      <text>daff sladd a dal sa flakk skal slakk lad aksl
+fakk da akk jada sal da flaks daff skakk falk flaks all
+all skaff kald kall kakla kakka slakk sjal kalk ladd
+klak kalas flaska kall slak sal al sjal a ka fakk
+sladd lak dasl ak alka kaks lak ak sja fa kal
+skad kak fasl flas skall dadd slak sla daff a
+kall ask asa alk as flask kal kal kla a sja kald
+falsk fals klass ka fa slafs sla fall kajak ak
+skal a kladd alkal skal skal lass sal skall daf
+fak flass sjakk fas a akk fasa alsla fla ad</text>
+    </lesson>
+    <lesson>
+      <id>{ecf19621-9ab0-4e41-868c-dca29a26d7f2}</id>
+      <title>Lesson 5</title>
+      <newCharacters>asdf jkl&#xF8;</newCharacters>
+      <text>aaa sss ddd fff jjj kkk lll &#xF8;&#xF8;&#xF8; aa ss dd ff jj kk ll &#xF8;&#xF8;
+&#xF8;&#xF8; ll kk jj ff dd ss aa &#xF8;&#xF8;&#xF8; lll kkk jjj fff ddd sss aaa
+aaa &#xF8;&#xF8;&#xF8; sss lll ddd kkk fff jjj aa &#xF8;&#xF8; ss ll dd kk ff jj
+jj ff kk dd ll ss &#xF8;&#xF8; aa jjj fff kkk ddd lll sss &#xF8;&#xF8;&#xF8; aaa
+fff ddd sss aaa &#xF8;&#xF8;&#xF8; lll kkk jjj ff jj dd kk ss ll aa &#xF8;&#xF8;
+&#xF8;&#xF8; aa ll ss kk dd jj ff jjj kkk lll &#xF8;&#xF8;&#xF8; aaa sss ddd fff</text>
+    </lesson>
+    <lesson>
+      <id>{69025d87-2ac0-4be0-ac9c-0ae2d2b5a7d0}</id>
+      <title>Lesson 6</title>
+      <newCharacters>Ingen</newCharacters>
+      <text>ffj jjf ddk kkd ssl lls aa&#xF8; &#xF8;&#xF8;a jf kd ls &#xF8;a
+jjf ffj kkd ddk lls ssl &#xF8;&#xF8;a aa&#xF8; fj dk sl a&#xF8;
+a&#xF8; sl dk fj a&#xF8;&#xF8; &#xF8;aa sll lss dkk kdd fjj jff
+&#xF8;a ls kd jf &#xF8;&#xF8;a aa&#xF8; lls lls kkd ddk jjf ffj
+jf kd ls &#xF8;a ffj jjf ddk kkd ssl lls aa&#xF8; &#xF8;&#xF8;a
+fj dk sl a&#xF8; jjf ffj kkd ddk lls ssl &#xF8;&#xF8;a aa&#xF8;
+a&#xF8;&#xF8; &#xF8;aa sll lss dkk kdd fjj jff a&#xF8; sl dk fj
+&#xF8;&#xF8;a aa&#xF8; lls lls kkd ddk jjf ffj &#xF8;a ls kd jf</text>
+    </lesson>
+    <lesson>
+      <id>{60651de9-9794-46cd-8f15-75e3ce5bac20}</id>
+      <title>Lesson 7</title>
+      <newCharacters>Ingen</newCharacters>
+      <text>la ja kl&#xF8; la sa da &#xF8;k &#xF8;l k&#xF8; skall lass l&#xF8;s kall fall
+sala d&#xF8;s s&#xF8;l sj&#xF8;l s&#xF8;la k&#xF8;lla l&#xF8;kka jakka slakk l&#xF8;s d&#xF8;s
+d&#xF8; k&#xF8; kassa sas aks laks kall kl&#xF8; lass dass sak ja d&#xF8;la
+s&#xF8;la laka jakka lakk flaksa dal sal fall lass flass klakk
+slakk flakk lakk sakka l&#xF8;kka k&#xF8;lla kassa s&#xF8;k f&#xF8;l sj&#xF8;l kl&#xF8;
+fj&#xF8;s sal lass skal aks laks saks faks &#xF8;s d&#xF8;s sl&#xF8;s sj&#xF8; s&#xF8;l
+skada slakk klaff sl&#xF8;s sj&#xF8;s sj&#xF8;lakk k&#xF8;lass skj&#xF8;d sjal</text>
+    </lesson>
+    <lesson>
+      <id>{67773b46-177a-43f6-beb7-db652b0ba963}</id>
+      <title>Lesson 8</title>
+      <newCharacters>n</newCharacters>
+      <text>n kanal snakk slank n n lan nasal ann slank
+sakn anfall sanda n knak klan knakk dan kan danna
+kan klank sans fan kan fan knakk sank fasanjak sank
+sakna ana sanda anda sakn slank land skann sakna
+anda sans an salsa faln knas flank skann lansa
+kan nasal fasanjak kna skan knak and knakk
+skan lank fall sand sann sjans anka kanal akn knadd dann
+sakna sans kna and knakk fana knas daff klan lank
+snakk skann flakna kan sjans lank fan anskaff kana
+dan kanna anga danna anfall knas knak anfall snakk</text>
+    </lesson>
+    <lesson>
+      <id>{fa496a6b-bf1f-4b12-9817-e46438d84a78}</id>
+      <title>Lesson 9</title>
+      <newCharacters>t</newCharacters>
+      <text>fatt antatt takta anstalt kantata data datasal sjakt
+satt tatt stall klatt akt stat ant natt salt
+sant data antall slakt skatt andakt klatt natt
+tank lat stans tja sta tafs at akt talt skalt
+sta salt natt sta anta tak stjal stans tafs stank
+saft t takst altan tall ta fastsatt akt
+stall antall stakt stans antal t alta fastsatt stat
+antatt tast data fakta akta t tall satt stank skatt
+ta fatt kant stans tast natt klask statsskatt tafatt
+fatt skant katt andakt slask skatt fastsatt fatta</text>
+    </lesson>
+    <lesson>
+      <id>{f79e4092-cada-47a0-a919-563d55357b8c}</id>
+      <title>Lesson 10</title>
+      <newCharacters>i</newCharacters>
+      <text>din ni ti fin statistisk filtjakk skinn tiltalt
+flint skit innsikt il snike kile linse stille
+kis flis lilla knis finsikt niss sti
+inni disk klink illsint asiatisk kliss fantastisk
+titanisk still lik innstilt dill inn fins innkast ti
+datid tinka linn si stinn dikt sandinis iskant
+tadsjikistan kalifa anstill islandsk indisie si is ilsk
+sniff ild kil still anti statistikk il tikk tiltak
+inntak fint fnis knis sinn fik disk sikt ilsk dill
+tillit sink kli til nitid tillat silt niss sin list</text>
+    </lesson>
+    <lesson>
+      <id>{9ed45007-a727-46dd-bc5d-c90e0ff30354}</id>
+      <title>Lesson 11</title>
+      <newCharacters>v</newCharacters>
+      <text>vink vas avta kvikk kalv vask visk kvakk
+vill svai vannskadd avl vi kvikksand kvad svill
+vass av vidd avskilt tavla svi vil avta
+avkall svik tilvist vin viss tilnavn svik
+svi avskilt vatt avtalt villsvin svin vin vinn
+stiv skav tilnavn vind vi svin avtatt vill
+visita likvid vakt vaka livvakt avstand
+kav vit sivil skvis kval kvakk avlat
+vin svan vinn kvist aktiv svant salv avstand
+kava vind valk vin liv avla vist visst vink</text>
+    </lesson>
+    <lesson>
+      <id>{69c6e6c7-9fde-4359-bd99-3131c8f84d21}</id>
+      <title>Lesson 12</title>
+      <newCharacters>m</newCharacters>
+      <text>minimal man mas smisk midd datamaskin sjaman
+kamin flamm malm lam innmat kam midt
+filmatisk amtmann mast mat lim stim avismann
+stamfisk klamme animalsk midtskill mil mafia
+mistanke kammen tam smi smil samla manke
+maldiv film smal maskin slim samtid mist mammadalt
+mave dadaism stam midt landsmann jamn amm stam
+smak filmavis saltsmak slam amt intim midt
+vaktmann mann datamaskin familie smak midda film
+mast midnatt salma landmina mast makt maska</text>
+    </lesson>
+    <lesson>
+      <id>{d7f1c82b-c96e-4937-b2cf-313d1b17e728}</id>
+      <title>Lesson 13</title>
+      <newCharacters>e</newCharacters>
+      <text>flett melkefettet sameie kantstein kjeien enkeltside
+fjellvidde jevn saksekjeft maskinen innleid matsalen
+missetittelen
+slankemidlene skalke innlede midte skive sjelden
+matfatet datamesse eksemen kjenne linje elementet stenke
+kallenavnet skade nevnte avtaletekst sveis divanen
+ineffektivitet
+kive avskaffe kleiva etatsledelsen feite kildeskattesats
+misteltein snille knekk kansellistisk semsket
+mennene se skjele svike feilsende niste sjekke
+venninnen saksfelten stemmetelle takende navnet
+kakefesten innstendig isflaket salmen anstalter</text>
+    </lesson>
+    <lesson>
+      <id>{a93231d7-eca0-4bf0-bc46-bbbc7928cfce}</id>
+      <title>Lesson 14</title>
+      <newCharacters>h</newCharacters>
+      <text>helaften hete hvete handel helsa 
+sjeldenheten enhetnavnet handelsstand edelheten hinke
+havkanten hevde nattestillheten hikstene hede filthatten
+havvann halvt himle allmennheten vesthimmelen helle
+hjemkalt hves veska sammenhengen helse hjalt halse
+enheten havfiske halvtam helhet sankthanstiden
+hind helsesjefene dalahesten hjemsendelsen veltalenhet
+hel hemme hjem tastenheten hanekammen
+kveldshimmelen hves nattehavnen avhendelig helheten hils
+hakkemat handelsleddet hjemsted hjelmen halvfeit hanke</text>
+    </lesson>
+    <lesson>
+      <id>{4169f018-80f1-437e-a4cc-1a2408d368ea}</id>
+      <title>Lesson 15</title>
+      <newCharacters>r</newCharacters>
+      <text>sjakkseiere mediasentret skrekkvelde direktesender
+lekearealer
+jernvarehandleren setter avtrekksvifte almetreet
+havseileren
+samfiskerne revejakt lekearealer erle sikkerhet
+kvalifisere kvarken fraktraten tranehalsen
+matvaresikkerheten
+festledere tresnittet drive ferjereisen skrivere
+raj rav rader rekker karat karismatisk trafikkledelsen
+kjellermesteren inntakskravet hjemmeseire hesterasen
+sjefkjemikeren
+irritertheten hammeren resistent nikkersen risikere trellen
+arr retten karre tiltrede minimere nettverk kreditten
+siter rediger tanker kantrer markeder kraftverkseier</text>
+    </lesson>
+    <lesson>
+      <id>{3e48fb16-a84d-4cf7-a916-61e88b345b47}</id>
+      <title>Lesson 16</title>
+      <newCharacters>g</newCharacters>
+      <text>gang gane angre alge gammel fredag hjertelig grader
+fangedrakt tillegg vinge avgift glimre mange
+gris inntjening ferge klaging gangvegen
+regime graven grevlingen regjeringen generasjonen mengden
+gjette avgrensning tegnet tingen gni ingen glitret
+samlingen gjeld gjengjelde sentraliseringen stillingen
+salgsleder divanseng filing knising flenge gjeng knivingen
+langrenn tvang anlegg rettferdighet egnet magnet
+deltager avmagring registreringen egen veggen knegge
+markeringen filmdagen dregge dekkvinge engste verdige</text>
+    </lesson>
+    <lesson>
+      <id>{d49c7e35-c2b6-48f1-bfc0-1fa4bfdff092}</id>
+      <title>Lesson 17</title>
+      <newCharacters>o</newCharacters>
+      <text>oss kos sos kokos kategori fond fotograf kork overlevelse
+kokekaret tredjedivisjonslaget forvintrer alkoholskade
+anno venninneforhold organisasjon flora fonna
+korridoren oksidering ordning forslaget kvote
+oslofenomen import vestsamoansk nasjonen
+hovedtrinnet mangfold skogsjefen holdt markedsdominansen
+transaksjon
+elektro kontoret hol kontrollere karjolene sokk redaksjon
+komma tolldeklarasjon fondsordningen koordinering
+lovgivningen hovedorganisasjonen kolli distraksjoner
+domkirken
+klovneaktig konsistens konsekvent forskere forskriften</text>
+    </lesson>
+    <lesson>
+      <id>{d4c97ede-43be-4fa1-b0f7-082c2212d34c}</id>
+      <title>Lesson 18</title>
+      <newCharacters>b</newCharacters>
+      <text>blid bad bror blad bank balalaika samarbeid obligasjonen
+beinest
+basis skolebok blindtarmen laboratorie laborant
+arbeidssenter betennelse forbereder benskaden
+bonderosen brevenn atombrenselet forbindelse barnerett
+obligasjon bevaring bakover beherske
+giroblanketten fabrikklokalene begivenhet embedet barneleke
+boliger beiteverdi embedsmennene tegneblokken statsborger
+filmsamarbeide vegbane blikk karbon morbror fabrikatet
+bitter boblebadet bladet banksjef reinbeitet breklatrerne
+klabb fagarbeider jernbanesville jernbane brakvalg</text>
+    </lesson>
+    <lesson>
+      <id>{ea3f3f2f-52db-4c77-9671-94808e30cccc}</id>
+      <title>Lesson 19</title>
+      <newCharacters>p</newCharacters>
+      <text>papp pop park pip vippe pepper praktisk prisvinneren
+pakkingen proffparagrafen
+opphev partiskillet haglpatron nasjonalpark prosjekt
+kopien bibelspredningen oppdekningene videretransporten
+apokoper steinsprang paraglider alarmrop kapital
+pinseaften finalekampen opptatt pernoden spare
+appositiv reprise bilplassen gipsmodell patron
+privatklinikk
+betalingsstopp overspenning propaganda korrespondansen
+avspeiling forplante grensepost etappeseieren peilingene
+kapring forsvarsdepartementet partipolitikken
+pikkels tape teip parentes lappe programmet</text>
+    </lesson>
+    <lesson>
+      <id>{76a2ebfd-b8b8-45fa-8511-e09235c8cee9}</id>
+      <title>Lesson 20</title>
+      <newCharacters>q</newCharacters>
+      <text>noqfm dqfg qn&#xF8; q qqb qb iqi dqa q qatars qatarsk
+noqfm q iqi bpfq nq q ftqn q q qatarsk qb noqfm
+gfq nq noqfm q pqgp nq q q nq qqb q dqa qb q
+qatars itq q q qn dqa vqn qatars gmiq vqn dqfg
+gmiq noqfm qto noqfm qn&#xF8; noqfm habsq q qatarsk
+habsq q qatars gmiq q pqgp nq noqfm dqfg nq itq
+dqa qto qatars bfpqp qatarsk pqgp qhi gfq qb
+qatarsk habsq bpfq bpfq qhi iqi qto ftqn iqi bfpqp
+qatars qn&#xF8; dqfg pqgp q gmiq iqi pqgp bfpqp iqi
+itq qn habsq bpfq habsq nq habsq noqfm q qqb</text>
+    </lesson>
+    <lesson>
+      <id>{9f7da849-f5a2-4a4b-a362-70092e4474a1}</id>
+      <title>Lesson 21</title>
+      <newCharacters>&#xE5;</newCharacters>
+      <text>mp&#xE5; &#xE5;kh &#xE5;l &#xE5;l q&#xE5; &#xE5;po &#xE5;jt g&#xE5;f &#xE5; &#xE5;p &#xE5; &#xE5;pq &#xE5;pq
+g&#xE5;f &#xE5;kh q&#xE5; &#xE5;pq &#xE5;kh &#xE5;l &#xE5; f&#xE5;ni f&#xE5;ni f&#xE5;ni &#xE5;fd &#xE5;
+f&#xE5;ni &#xE5;q f&#xE5;ni bok&#xE5; kqt&#xE5;r g&#xE5; &#xE5;po &#xE5;l &#xE5;g q&#xE5; v&#xE5;r mp&#xE5;
+&#xE5; &#xE5; &#xE5;kh mp&#xE5; &#xE5; &#xE5;q &#xE5;pq f&#xE5;ni &#xE5;po v&#xE5;r ivp&#xE5; &#xE5;p
+r&#xE5;g &#xE5;fd &#xE5;tem g&#xE5; &#xE5;p r&#xE5;g bok&#xE5; r&#xE5;g &#xE5; r&#xE5;g &#xE5;q bok&#xE5;
+v&#xE5;r mp&#xE5; &#xE5;g &#xE5;pq bok&#xE5; &#xE5; bok&#xE5; &#xE5;o &#xE5;po g&#xE5; mp&#xE5; kq&#xE5;
+&#xE5;kh kqt&#xE5;r &#xE5;jt &#xE5;pq q&#xE5; g&#xE5; &#xE5; f&#xE5;ni &#xE5;po &#xE5;o &#xE5; &#xE5;p v&#xE5;r
+bok&#xE5; v&#xE5;r kq&#xE5; &#xE5;q &#xE5;fd &#xE5;fd &#xE5;q g&#xE5;f &#xE5;mv ivp&#xE5; g&#xE5;f &#xE5;mv
+&#xE5;pq &#xE5;q r&#xE5;g kq&#xE5; t&#xE5;dr &#xE5; kqt&#xE5;r bok&#xE5; &#xE5;g kq&#xE5; g&#xE5;f
+ivp&#xE5; mp&#xE5; &#xE5;kh &#xE5;tem kq&#xE5; mp&#xE5; &#xE5;o &#xE5;pq &#xE5;l f&#xE5;ni &#xE5;fd</text>
+    </lesson>
+    <lesson>
+      <id>{7bd43567-b25b-4d9a-811b-76247342bb6c}</id>
+      <title>Lesson 22</title>
+      <newCharacters>w</newCharacters>
+      <text>westerngenren megawatt besserwisseren showrennet bowen
+westernhelt danseshowet sommershowet bowle botswaner
+bowiekniv tomahawken westernfilm botswana tweedjakke
+westernfilm wikipedia tweeden wienerne weekendreisen
+wiki botswanere wergeland botswanerne wigwam
+weekend showmenn vannshowet terawatt misseshowet
+fotballshowet goodwillreisen lasershowet wankelmotor
+darwinisten westernhelt showensemble langweekend western
+swimmingpoolen wienerklassikerne wankelmotoren waliserne
+bowlern rwanderen sweatere mediashowet</text>
+    </lesson>
+    <lesson>
+      <id>{62f539dd-c8c6-4333-97f2-7092e4968d98}</id>
+      <title>Lesson 23</title>
+      <newCharacters>n</newCharacters>
+      <text>traktekaffen leksjoner grafikkavdelingen nedhogd
+malingboksen
+manesje eiendomsforvalteren afrikasamband selvopplevelsen
+agitasjonen skrangle orkanen bensin tilfanget
+kvartfinalekampen
+omfatting kampvotering barneblader dagligvarehandelen
+registreringsstatistikk dingeldangel vandringsveien
+gasskraftmotstanderen
+statisten rehabiliteringstjeneste familieminister
+sankthanskvelde
+redningsvesen formingsfag fritidssentrene trekant
+legasjonene
+geleiding oppmodingen oljeanlegge fordelingsansvaret
+tetningsmaterialet kostnadsgevinst landskapsavdeling
+skjermbildefotograferingen
+popsangeren magasinredaksjonen driftsbalanse
+kreftforeninger</text>
+    </lesson>
+    <lesson>
+      <id>{baabf07c-1432-43fe-9c6c-532586a8d17a}</id>
+      <title>Lesson 24</title>
+      <newCharacters>c</newCharacters>
+      <text>caset serviceetaten corn potetchipsen landslagsbacken
+scenen serviceselskapet toppscorerliste canadiere
+tchaderne servicekontrakter molotovcocktail
+rockefestivalen sideback champagne chartermarkedet
+oscarnominasjon
+backhanden celle rockerne chifferkontor
+drawbacken science scenemessig c tchader scooter colakrig
+service servicemann serviceorganisasjon chartring
+chiantien france scenedekorasjonen scientisten
+leicakameraet
+plantecelle chiffermaskin rockevideoen placeboeffekten
+chartringen colafinalen dreiescenen servicearbeider</text>
+    </lesson>
+    <lesson>
+      <id>{59aab892-b1ab-42bb-9a94-6dba0a4355be}</id>
+      <title>Lesson 25</title>
+      <newCharacters>&#xE6;</newCharacters>
+      <text>er&#xE6; &#xE5;p&#xE6; &#xE6;m &#xE6;d &#xE6;vo e&#xE6; &#xE6;&#xE5;np er&#xE6; &#xE5;p&#xE6; g&#xE6;d &#xE6;k er&#xE6;
+j&#xE6;kv j&#xE6;kv l&#xE6;&#xE6; &#xE6;&#xE5;np &#xE5;p&#xE6; &#xE6;nb &#xE5;p&#xE6; g&#xE6;d b&#xE6; b&#xE6; &#xE6; &#xE6;&#xE5;np
+o&#xE6;r g&#xE6;hw ti&#xE6;i ti&#xE6; ti&#xE6;i &#xE5;p&#xE6; ls&#xE6; &#xE6; e&#xE6; ti&#xE6;i &#xE6;&#xE5;np
+&#xE6;g b&#xE6; j&#xE6;kv j&#xE6;kv &#xE5;p&#xE6; &#xE6;nb &#xE6;d p&#xE6;j b&#xE6; er&#xE6; &#xE5;&#xE6;pd
+m&#xE6; &#xE6; &#xE6;nb &#xE6;jt g&#xE6;hw g&#xE6;d &#xE6;vo &#xE6; g&#xE6;d o&#xE6;r &#xE6;jt &#xE6; &#xE5;p&#xE6;
+&#xE6;vo &#xE5;p&#xE6; &#xE6;g &#xE6; ti&#xE6;i m&#xE6; ti&#xE6; &#xE5;p&#xE6; l&#xE6;&#xE6; &#xE6;jt &#xE6;jt ls&#xE6;
+&#xE6; &#xE6;jt er&#xE6; er&#xE6; &#xE6;m ti&#xE6;i &#xE5;p&#xE6; e&#xE6; &#xE6; er&#xE6; &#xE6;&#xE5;np j&#xE6;kv
+g&#xE6;hw &#xE6;g ti&#xE6;i &#xE6;vo &#xE6;&#xE5;np &#xE6;jt &#xE5;p&#xE6; &#xE6;nb &#xE6; &#xE6;&#xE5;np ti&#xE6;i
+g&#xE6;hw &#xE6;k &#xE6;g j&#xE6;kv &#xE6;d &#xE6;m &#xE6;g ti&#xE6; b&#xE6; &#xE5;p&#xE6; &#xE6;m ti&#xE6; &#xE6;m
+&#xE6;k l&#xE6;&#xE6; l&#xE6;&#xE6; e&#xE6; m&#xE6; &#xE6;jt &#xE6;vo er&#xE6; ti&#xE6;i la&#xE6; r&#xE6;p &#xE6;</text>
+    </lesson>
+    <lesson>
+      <id>{355878a6-266d-47ca-af57-8760d5e4f104}</id>
+      <title>Lesson 26</title>
+      <newCharacters>x</newCharacters>
+      <text>taxi telefaxen taxfreesalget mexikansk
+taxi coxen texacostasjonen maksitaxi xenogami texansk
+xerox marxisme taxiholdeplassen xenon xerografere xerografi
+xeromorf
+marxist hexagonal taxfreesalget antimarxistisk dixieland
+mixmaster xenofob foxtrot slowfox respatex
+max sex sexologen taxisentra marxisten rex
+dixielandorkester
+mexicaneren marxisten texacostasjonen maksitaxi
+marxistleninist
+taxfreesalg mexicaneren xenofobi faxe xerografere
+taxiholdeplass foxtrot maksitaxi foxterrier
+xantippe taxfree mexikane grand prix</text>
+    </lesson>
+    <lesson>
+      <id>{6e401c95-94b7-4a47-97d6-7a94cc0dbea5}</id>
+      <title>Lesson 27</title>
+      <newCharacters>abcdefghijklmnopqrstuvqxyz&#xE6;&#xF8;&#xE5;</newCharacters>
+      <text>kraftverdi kremasjoner tonesettingen matboden
+kraftforsyningsavdelingen
+barnetrinn kjempetilbudet salgsveksten dytte yste diametere
+mediedekning kystfiskere villhesten judoklubbe sardinsk
+immigranten stjernegris kaffekanne nettobudsjettere
+tidligpensjon akkord trehusbebyggelsen oppstillingsplan
+lyttergruppe enhetskvoteordningen fluorideringen
+shippingprosjekt
+utbyggingsinteressen bastardhunder svenskesuppen
+unntaksregel forkamp
+styrkestrukturen arkitektseksjoner atonaliteten
+regiansvarlig
+seriesammenheng diskettstasjoner beinveien
+strukturforandringen
+vintersport glimmer bedriftsaviser slammet
+barnehaveavdelingen xylofon
+alfa bravo charlie delta echo foxtrot golf hotel india
+juliet kilo lima mike november oscar papa quebec romeo
+sierra tango uniform viktor whiskey x-ray yankee zulu &#xE6;gir
+&#xE6;rlig &#xF8;dis &#xF8;rnulf &#xF8;sten &#xE5;se &#xE5;got</text>
+    </lesson>
+    <lesson>
+      <id>{1c3bc103-b810-4c89-835d-7176cd3f4e3d}</id>
+      <title>Lesson 28</title>
+      <newCharacters>Ingen</newCharacters>
+      <text>lengre se pragmatisk allikevel overfor lenger skrive viss
+annerledes etterhvert verre
+for ovenfor blant hvis tillegg prosess adekvat krake
+objektiv tilstede kompliment
+enda subjektiv komme fullt tillit an tunnel jeg finne
+if&#xF8;lge g&#xE5;
+akkurat en de gj&#xF8;re eksplisitt bli ett mottatt imot forhold
+st&#xE5;
+si kapittel sette tunnel istedenfor hvertfall ihvertfall
+for&#xF8;vrig integritet medium
+likevel imidlertid ta tre forresten hei nettopp f&#xE5; komite
+f&#xF8;lge ifra
+empati enn&#xE5; abonnement anledning billett initiativ
+forel&#xF8;pig v&#xE6;rt episk vant 
+dog kontekst adresse bok allmenn lage et foran blant legge
+t&#xF8;rre
+terrasse parallell v&#xE6;re ambivalent vise i hvert fall sjanse
+implisitt ide ressurs bryllup
+kultur hvordan gjennom sjelden moro gang nysgjerrig tema
+kunnskap etter hvert begynne</text>
+    </lesson>
+    <lesson>
+      <id>{ac8e4f86-89cb-4e09-b404-13e1683a6d31}</id>
+      <title>Lesson 29</title>
+      <newCharacters>Ingen</newCharacters>
+      <text>begrep vite skj&#xE6;re hovedsakelig m&#xF8;te misunnelig kanskje
+holde konkurranse subtil vel
+finnes enhver venninne skj&#xF8;nn verre for&#xF8;vrig fylt visst
+moral sitte implementere
+spesielt verst etikk igjennom t&#xF8;r ligge altfor ikke lese
+metafor viktig
+suksess t&#xF8;y vert kollegaer uttrykk be sj&#xE5; da kolleger grunn
+v&#xE6;r
+aspekt var hvor by s&#xE5; bilde jamf&#xF8;r ironi n&#xE5; &#xF8;nske paradoks
+jente mann bare forutsetning b&#xE6;re skje til utover hver dere
+stille
+potensial og mulighet grammatikk synonym menneske bygge hus
+kynisk bringe internett
+bruke hvert karriere ettersom radikal god rekke dra m&#xE5;l
+kjenne
+ha kompleks tentativ &#xF8;ye hjelpe verden scenario apropos
+paradigme trekke artikkel
+engasjement aggressiv kalle idet allerede fortsatt tiltak
+pr&#xF8;ve forst&#xE5; interaksjon sp&#xF8;rre </text>
+    </lesson>
+    <lesson>
+      <id>{060ebe63-1db3-40f8-b536-b355fa1f800b}</id>
+      <title>Lesson 30</title>
+      <newCharacters>Ingen</newCharacters>
+      <text>like f&#xF8;re takknemlig persepsjon kompetanse allikevel
+tilstede tilfelle original sjanger sannsynlig 
+telle patetisk fors&#xE5;vidt profesjonell samarbeid tenke
+empirisk fult sl&#xE5;ss betydning engang
+rett diskurs annerledes siden som tro gjelde antall forrige
+virke
+skille fylle inntil love oppmerksomhet stod prinsipp lang
+potensial autonomi
+spennende uansett arrangement utifra velge vant konsensus
+atferd konsolidere bil
+bevisst tid design idag vanskelig mange oransje igang
+konservativ sende sl&#xE5; disse han</text>
+    </lesson>
+  </lessons>
+</course>

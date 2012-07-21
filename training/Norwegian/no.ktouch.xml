@@ -6,7 +6,7 @@ Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.
 Manually modified in nano and gedit by Jarl Arntzen Wed Dec 1 2010 18:57.
 Separate levels for keys u, y and z needed</Comment>
 
-
+<Levels>
     <Level>
         <NewCharacters>jf</NewCharacters>
         <Line>f f j j f jj jfj jf jj j jj f j f jf jj j</Line>
@@ -417,4 +417,5 @@ Separate levels for keys u, y and z needed</Comment>
 		<Line>spennende uansett arrangement utifra velge vant konsensus atferd konsolidere bil</Line>
 		<Line>bevisst tid design idag vanskelig mange oransje igang konservativ sende slå disse han</Line>
 	</Level>
+</Levels>
 </KTouchLecture>
