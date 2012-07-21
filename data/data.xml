@@ -271,6 +271,15 @@ from ktouch-gen utility
     <path>courses/ru2.xml</path>
   </course>
   <course>
+    <title>Slovak (auto-generated)</title>
+    <description>Trainingfile generated Fri Dec 22 22:51:46 2006
+Program written by Hendrik Naumann
+Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
+    <keyboardLayout>sk</keyboardLayout>
+    <id>{01f5acbc-e471-4cc0-bb63-d157cbcad808}</id>
+    <path>courses/sk.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07
