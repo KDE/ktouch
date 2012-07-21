@@ -1,0 +1,1398 @@
+<?xml version="1.0"?>
+<course>
+ <id>{3e5be825-6f51-406c-8307-c8a77d15f2c2}</id>
+ <title>Polish (from TTCoach)</title>
+ <description>Plik ćwiczeniowy KTouch stworzony
+na podstawie ćwiczeń dla TTCoach,
+Mikołaj Machowski</description>
+ <keyboardLayout>pl</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{090695ae-d0b3-428e-94c4-1f41a19e65f5}</id>
+   <title>Lesson 1</title>
+   <newCharacters>fj</newCharacters>
+   <text>f f f f f f f f f f j j j j j j j j j j f
+f j f f f f j j f j j f j f f f f f f f f
+f j j j j f f j j j f f f j f f f j f f j
+f f f f j j f f f f f j f j f f j f f j f
+f f j f f j j f j f f j j j f f f j f f f
+f f j f f j f f f f j f j j f f j f j f f
+f f f j j f f f j j j f j f f j f j f j f
+f j f j f f j f j f f f f f j f j f f f f
+f f f f f f j j j f j f f j j j j f f j f
+f f f j f j j f f f f f f f f f f j f f f
+f f f f f f f f f j f f f f f j f f j f f
+f f f f f f f j f f f f f j f f j f f f f
+j f j f j f f f f f f j j f f j j f f f f
+f f f f f f f j f f f f f j f f f f j f f
+j f f f f j f f f j f f j f j f f f f j f
+f j j f j f j f j f j f j f j f j f j f j
+f j f j f f j j f f j j f f j f j j f j f
+f f j j j f f j j f j f f f j j f j f j j
+f f f j f j j f f f f f f f f f f j f f f
+f f f f f f f f f j f f f f f j f f j f f
+f f f f f f f j f f f f f j f f j f f f f
+f f jf jf jf jf jf jf jf jf jf jf jf jf jf
+jf jf jf jf jf jf jf jf jf jf jf jf jf ff
+jj ff jj ff jj ff ff ff jj jj fff jjj fff
+jjj ffj jff ffj jff jf jf jf fj fj jj ff
+jj ff ff ff jj jj ff jj jj ff ff j j j j f
+f f f j j j j f f f j j f ff jj fff jjj f
+fff jjj fff fff jjj jjj jjj fff fff jjj f
+jjj ffj ffj jjf jjf fjf jfj fjf fjj jjf j
+jjf fjj fjj fjj jff jfj fjf fff fff jjj j
+jfj fjf jfj jf jf jf jf jf jf jf jf jf jf
+jf jf jf jf jf jf jf jf jf jf jf jf jf jf
+fff jjj fff fff jjj jjj jjj fff fff jjj f
+fjf fjf jfj jfj jjf jjf jjf ffj ffj fjf j
+jfj fjf jfj jf jf jf jf jf jf jf jf jf jf
+jf jf jf jf jf jf jf jf jf jf jf jf jf jf</text>
+  </lesson>
+  <lesson>
+   <id>{56e521e2-76e9-4e88-afc5-ed1e69d71220}</id>
+   <title>Lesson 2</title>
+   <newCharacters>dk</newCharacters>
+   <text>d d d d dd k k d d d dd k d k d d k k d dd
+d d d d dd k dd dd d dd dd dd d dd dd dd k
+d d dd d dd k k k k dd d d dd dd k d d k d
+dd d dd d d k d d k dd d d d d d k d k d
+dd d dd dd dd dd dd d dd d d dd d k k d dd
+d k d d d d d dd k d d dd d k dd d k k d d
+k k d k dd d k d dd d d d k d d d k k dd d
+d d d d d d k k dd dd dd k k d d d k dd dd
+k d dd dd dd d d dd d d dd k d d dd d d d
+d dd d d dd k dd d dd d k dd d d dd d d k
+d k k d k d dd dd k dd d dd d d dd d d k d
+k k dd d k d d d d d d d d d d d dd d d dd
+d k k d k d dd dd k dd d dd d d dd d d k d
+dk dk dk dk dk dk dk dk dk dk dk dk dk dk
+kd kd kd kd kd kd kd kd kd kd kd kd kd kd
+dk dk dk dk dk dk dk dk dk dk dk dk dk dk
+dk kd dk kd dk kd dk kd dk kd dk kd dk kd
+dk d dk dk k kd dk dk dk dd dd d dk d dk k
+dk dk dk dk dk dk dk dk dk dk dk dk dk dk
+kd kd kd kd kd kd kd kd kd kd kd kd kd kd
+dk dk dk dk dk dk dk dk dk dk dk dk dk dk
+dk kd dk kd dk kd dk kd dk kd dk kd dk kd
+dk d dk dk k kd dk dk dk dd dd d dk d dk k
+jd ff dj jk df fd kj kf jf fk jj jd ff dj
+jk df fd kj kf jf fk jj jd ff dj jk df fd
+kj kf jf fk jj jd ff dj jk df fd kj kf jf
+fk jj jd ff dj jk df fd kj kf jf fk jj jd
+kf jf fk jj jd ff dj jk df fd kj kf jf fk
+jj jd ff dj jk df fd kj kf jf fk jj jd ff
+jj jd ff dj jk df fd kj kf jf fk jj jd ff
+jkk jfk jkk jkk jfk fdd jjf jjf ddf jjf
+ddf jdk jfk fdd jjf jjf jkk fdd jfk jkk
+ddf jjf fdd fdd jfk jkk fdd jfk ddf jkk
+ddf jdk jfk fdd jjf jjf jkk fdd jfk jkk
+jjf fdd fdd jdk ddf jkk jjf jdk jdk jjf
+jfk jdk jfk jdk ddf jkk ddf ddf jdk ddf</text>
+  </lesson>
+  <lesson>
+   <id>{60524869-bf9c-4fb7-b61a-614891767293}</id>
+   <title>Lesson 3</title>
+   <newCharacters>ls</newCharacters>
+   <text>l l s l l l l s s l s s l s s s l l l ls l
+s l ls s l l l s ls s s l ls l l l s ls ls
+s l l s s ls ls ls s s s s l s s s s s ls
+ls s l s s l ls l s l l l s l ls ls ls s ls
+s ls s l s l s l s l ls l s l s l s ls ls
+ls l ls ls ls s l s s ls l l l l l l s ls
+ls s s s l l s s ls s l s l ls l l ls ls s
+ls s ls s l l s l s l l s s l s l s l l ls
+s s ls ls s ls l s ls ls s s s s l s s s s
+ls s l s l ls ls l l s s l s l l l s l l ls
+s l s ls l s l ls ls s s ls l s l ls l l l
+l s s s s s l ls l l l l s l ls s s l l l
+ls ls l s l l s s l l l l ls ls ls s ls ls
+l s l s s s l s s ls s s ls l s l ls s l s
+ls ll ss sl ll ls ss sl ls ss ll sl ls ll
+sl ss ss ls ll sl ls ll ss sl ll ls ss sl
+ls ss ll sl ls ll sl ss ss ls ll sl ss sl
+ls ll ss sl ll ls ss sl ls ss ll sl ls ll
+sl ss ss ls ll sl ls ll ss sl ll ls ss sl
+ls ss ll sl ls ll sl ss ss ls ll sl ss sl
+ds lk sj lk ks ks kl ld dl js ld sl js kl
+fl ls sk sd fl ld dl ss ll fl ss fs ks ls
+ll ds lj kl fl sj ss kl ll lk lk ld ss sj
+fl ls sk sd fl ld dl ss ll fl ss fs ks ls
+ll ds lj kl fl sj ss kl ll lk lk ld ss sj
+ls ks fl sj sf ds ds sk dld kfl dds lls
+lsk sdk ldl lsl sks ksk sdk skl lds lsk
+skl fds lks ssf ksl lds fsf skj sks skj
+lss kds sks sfs fsf fsf ddl ddl ffs ksj
+dls ksf ssk ssl ldf dsl sds skj jsk sss
+dsk ffs ssf dds dds sdd dls ksk sld jsk
+dll ksj slk ssd llf lss lks dls ksl dsk
+ldd sss slf ffl ffl ffl dll fds sss lsl
+lsk klk lsd lsj dkl sdl skl ksl dsk sls
+dls ksf ssk ssl ldf dsl sds skj jsk sss
+ksk lls dkl jkl dll ddl dld lsj ssl lfl</text>
+  </lesson>
+  <lesson>
+   <id>{2526d9ce-341a-428f-856a-f26f625bd837}</id>
+   <title>Lesson 4</title>
+   <newCharacters>a;</newCharacters>
+   <text>a a a a a a a a a a ; ; ; ; ; ; ; ; ; ; a
+a ; a a a a ; ; a ; ; a ; a a a a a a a a
+a ; ; ; ; a a ; ; ; a a a ; a a a ; a a ;
+a a a a ; ; a a a a a ; a ; a a ; a a ; a
+a a ; a a ; ; a ; a a ; ; ; a a a ; a a a
+aa ;a ;a aa aa aa aa aa ;; ;a ;a a; ;; ;a
+a; a; aa a; a; ;a aa aa aa aa a; aa aa al
+ka ak da la ad as aj ja al ka ak da la ad
+as aj ja al ka ak da la ad as aj ja sa af
+ka ak da la ad as aj ja al ka ak da la ad
+as aj ja al ka ak da la ad as aj ja sa af
+fa sa af fa aa jak dla ada ska ala kla daj
+ajd adk jal sja kal las dal laj lka ask
+asa sad aka fak aks kaj kas all ajl dka
+alk als dak sal aja kad ass add jas fas
+ajd adk jal sja kal las dal laj lka ask
+asa sad aka fak aks kaj kas all ajl dka
+alk als dak sal aja kad ass add jas fas
+dda ajs kak lla ssa sla fla fal lak lad
+alf lfa sak jaj ajk ald das adl jka afa
+ksa ads aak saf akl sfa lsa dfa sas lda
+faj dad asj akk aad sda kka jda jad fsa
+fad asf adf lal laf kaf jsa ffa akd afs
+afl aff adj aal aaa saj saa lja laa kja
+kda jla jja jfa jaf jaa fka dsa dja daf
+asl asd akj ajj ajf afk afd aaf fala falka
+kalka jajka kaja lala as dal dak daf fad
+lad dal lada dal dalka kala kajak jak lak
+kaskada fasada falka salka kasa skala
+jajka kaska dala sas lada sasa lalka as
+falka jala dal saska a ja lalka dajka
+falka ja fala falka kalka jajka kaja lala
+as dal dak daf fad lad dal lada dal dalka
+jajka kaska dala sas lada sasa lalka as
+falka jala dal saska a ja lalka dajka kala
+kajak jak lak kaskada fasada lada dal lal</text>
+  </lesson>
+  <lesson>
+   <id>{a269d83b-d373-4800-8f15-d9f915904035}</id>
+   <title>Lesson 5</title>
+   <newCharacters>567</newCharacters>
+   <text>7 5 7 5 7 7 6 6 6 6 7 6 5 6 7 6 6 5 6 5 7
+7 7 7 5 7 6 5 6 6 5 5 7 5 5 5 6 7 5 6 5 7
+7 7 5 5 5 6 5 6 6 5 6 6 5 5 6 6 6 5 7 6 7
+5 6 5 5 7 6 5 6 6 5 6 5 6 6 5 5 6 7 6 5 5
+sajka kajaka dajka dakk fals skaj 56 klask
+dkl dada falsa 7 kakaa klaskaj 66 fajdaj
+flak kajak kajak alfa 6 alla kasak klaska
+skald fasa jafska lak kaja sas dal kask 5
+sajka flak klaka las sasa 777 fajda fasad
+6 7 kalka faska 7 dakka fasad kaja kaja
+skala 6 65 alk 555 sajdaka 7 lala faks dal
+asa 55 fala jasaka sad dkl aksla kalfas
+fas asa 67 ssaka aksla 555 klak kaskada
+jasak 5 sal dajka 55 kas klaska kajaj jad
+567 5 lassa kafla kalka alla skalska
+flaka lassa asa 77 alk sas faks kafla sald
+sals salka alk jak kasja 6 75 75 dakk
+jajka lassa fajf skalaj fajda lasa jadaj
+faja asas 77 flaka lada klak kalaj kalfas
+skal 5 klasa fala kajaka sald dal saska
+sajdak 7 kafla fasada fasad 7 sajdaka kall
+jada alaks alaks sad daj ssak dajka kala
+kaskada kasa daj klasa kalka alkad 65 dada
+fal ssaka 56 klaska jada salsa slajd 6
+alkajska 567 lass ald 5 jaja 666 laka faj
+jakla falaska sak sajdak 765 kaskad sala
+jak salsa jajka jaj 7 fasa kalaj lad sajka
+fasada las alkad klaskaj dala klask 6 6
+alkada laka lad klas 67 76 kalla kalka
+kasja kalaj fajka kasa faks sasa fajdaj
+fajdaj 666 sakla slajd alfa jass skalska
+kask fala 6 5 jaja alla saka jasaka ajaks
+kalk sal 57 falsa saska ska jaska kalk lad
+alaska sad 5 57 falsa fajka 7 asas asas
+faja 5 777 sakla dkl 76 765 jajka fal
+faska lal 66 dla fajf alaska skalda</text>
+  </lesson>
+  <lesson>
+   <id>{424aa2bf-bbf6-468c-a845-0b380de6ed1d}</id>
+   <title>Lesson 6</title>
+   <newCharacters>ei</newCharacters>
+   <text>e e e e e e e e e e i i i i i i i i i i e
+e i e e e e i i e i i e i e e e e e e e e
+e i i i i e e i i i e e e i e e e i e e i
+e e e e i i e e e e e i e i e e i e e i e
+e e i e e i i e i e e i i i e e e i e e e
+e e i e e i e e e e i e i i e e i e i e e
+e e e i i e e e i i i e i e e i e i e i e
+e i e i e e i e i e e e e e i e i e e e e
+e e e e e e i i i e i e e i i i i e e i e
+e e e i e i i e e e e e e e e e e i e e e
+ie ee ei ii ei ee ei ee ie ii ee ei ii ie
+ii ie ee ie ie ie ii ii ie ee ie ie ei ie
+ee ie ie ie ie ii ie ie ii ie ee ei ii ie
+ei ei ii ee ie ei ie ee ie ie ie ii ie ie
+ia ef es je je es ia ki ia es ai se es di
+es ik fi je fe es es es ia ki si ej fi if
+di si se ia ej si ie es ea je ia ij es ai
+ia je is ei ki je de ia ek ek de id fe ae
+sia ssi jes ski sie ika iad iej ses ied
+isk iej sji ejs sji fik ida sji esi kie
+iej isk efa ake ika esi ies ide iek ies
+iek isa ied jes kie eed ffi fek dii isk
+ies iad eki sse kie efi esa iad ski jes
+dek dia isk edi sis ies esi ese ejs fik
+aki ies jes aki jes eje efe jed esi isa
+ksi eks ied iej kie sie ski kie ead iej
+sek fes sji ija eak ejk iej sji dia iek
+ika isa ejd iek ise ied jek ias eja eda
+jes sie jed isa ade fii aki ide sie ess
+aki ies jes aki jes eje efe jed esi isa
+afi des iad iki ika kie esj aki eds iad
+eks kie dis esi afi iki asi kie ejs eas
+jej ejs idi eks ejs jed iej fik kie jes
+ede jed iad iej esi ies isi dej dia dki
+eka def aje kse dea jes sie dia ide ase
+sie iki ski ski dde iek jed ski iek dia</text>
+  </lesson>
+  <lesson>
+   <id>{8374e967-a74f-4324-b9c2-37e8cc3300f9}</id>
+   <title>Lesson 7</title>
+   <newCharacters>012</newCharacters>
+   <text>0 2 1 2 1 1 2 1 1 2 0 1 0 0 0 2 0 1 0 0 1
+0 2 1 2 1 1 2 1 1 2 0 1 0 0 0 2 0 1 0 0 1
+0 2 1 2 1 1 2 1 1 2 0 1 0 0 0 2 0 1 0 0 1
+2 2 2 2 1 0 1 2 1 0 2 0 2 2 2 2 1 0 1 2 1
+keksa esiki kalki allel lelie lisia fiala
+fliki kilka 00 fale lali lead fili ssali
+dikk deje klik esie klask flik fisi keje
+deses skaje fisis lelka lesie sald flika
+222 fala jaja sieli diaki 102 sale fila
+efie elka idea 00 fajda kaiki delia saka
+lilij faski diak 101 leja kleks saska 202
+eseje fleka kijaf esdek sial fasad alfa
+lias lejka lelij 120 akii alea 111 siaki
+assai iskaj alla lasie idei filsa kije 21
+lisek kaki lelii leli kadi 010 filij diale
+lass siei 110 lilie kefie jadaj faska 211
+kalif kasie kasji alkad kefij aisis dekli
+dalej jadle fasa 101 salek fial sakle
+fifek jaje kalla fafli 12 sili idee desa
+lejek skald elfa saski 10 kalia 010 laski
+sidle salka kafel sieja dial delij elfie
+daje siej fasek kiks leik 000 021 ssaka
+klaka kijki eska disis elfi kalk liska
+flek 122 kalli jakli falek alias saida
+fiks alija 112 fleja kakaa 11 jajek kaski
+000 110 kijek diad skisi esika 12 201
+dalsi jakla faja sesje kalle sisal ssak
+elki filia fisie skala sajka klas akia
+lada fikaj 01 fajek lasek lais skali fajf
+skai 210 10 flej afiks seida kija flak
+kisi 01 02 lilak 221 alka 120 idis idisa
+220 aksis sede kafla 21 klasa lelek 222
+klif 022 elfia delie deja 200 lilia sklei
+jakle jaska kaida kala akie safes sille
+002 disa alaks dikki salsa sadek dalij
+skaj fifka faje lilii jada kalii sajek
+flaka kalij dada kleik dalii kasja dekla
+kafli jaki kidaj alki salda kaik eses
+fiale faks kefii sakla jajka 101 20 falsa
+lalek laika leje sejf alles alkil kilek
+kilak fika aksle esik jasak 020 deska flei
+kaid iksa ajaks lale asas dajek fali sasa
+kalie dekle said siak dali jass iksie laki
+alei aldis leka kiesa 210 deka fiask klak
+sesji seksi siali 001 101 lelki 212 kaja
+lasa fils lila sklej kafej alef kiksa
+silli allil deki sill falki leski esek</text>
+  </lesson>
+  <lesson>
+   <id>{075d1e75-afe2-46f5-a63b-ec082d5f4d56}</id>
+   <title>Lesson 8</title>
+   <newCharacters>ru</newCharacters>
+   <text>r r r r r r r r r r u u u u u u u u u u r
+r u r r r r u u r u u r u r r r r r r r r
+r u u u u r r u u u r r r u r r r u r r u
+r r r r u u r r r r r u r u r r u r r u r
+r r u r r u u r u r r u u u r r r u r r r
+r r u r r u r r r r u r u u r r u r u r r
+r r r u u r r r u u u r u r r u r u r u r
+r u r u r r u r u r r r r r u r u r r r r
+ru ur ru ru ru ru rr ru ru ru ur ur ur ur
+ru ur ru ur ur ru ru ru ur ur ru ru ur ur
+ru ru ur uu ur ur ur ru ur ur ur ru ur ru
+ru ur ru ru ru ru rr ru ru ru ur ur ur ur
+ru ur ru ur ur ru ru ru ur ur ru ru ur ur
+ru ru ur uu ur ur ur ru ur ur ur ru ur ru
+ra ra ra ra er er er ar ar ar re re ku ku
+ru ru uj uj us kr ur uk du ru ru uj uj us
+kr ur uk du dr su rs iu rd ri ir ud au rk
+ua fu ju fr rf eu ue ui jr rr sr uf uu rj
+rsu deu uja aju ref dra era usu aru era
+eur era kar asu rae eru ree sua usi kra
+adr rus edr ier udi asu era efr fri eri
+kre dri sur rdi ars era aru kur usk jkr
+ras eir rja rsi jdu rea era far err dru
+urd dku ruk ari rfa fur uer raj erj rue
+rsa iur ssu usi aeu iuk ere usj rsj era
+seu iku ier ark ruj isu erk ers dre fer
+uds eus fra isu ara suk rid ier uue adu
+rei auf uru era iru uki ere dur sui auk
+rda kur uff ejr ued sku ira ekr aku rru
+uje ier rka dre urr rif ruk fre ria suf
+rak fus eer esu uik ruu esu fuj afu uru
+riu dar rdu ers kud usd eku der udk ier
+arj jsu ufa rej skr ier kuk era ddr are
+fra ara usa ars ier ruj air jku rad dir
+aus ura ajr sdr aku isr suj uda uas reu
+rsa iur ssu usi aeu iuk ere usj rsj era</text>
+  </lesson>
+  <lesson>
+   <id>{d20d7c60-4ca1-4ff7-bed0-224d379e8c47}</id>
+   <title>Lesson 9</title>
+   <newCharacters>3489</newCharacters>
+   <text>4 9 4 9 3 3 4 8 3 4 9 3 9 3 8 4 8 9 3 9 4
+4 9 4 9 3 3 4 8 3 4 9 3 9 3 8 4 8 9 3 9 4
+3 9 4 8 8 4 4 8 3 4 9 9 9 3 9 3 3 8 4 8 8
+4 9 4 9 3 3 4 8 3 4 9 3 9 3 8 4 8 9 3 9 4
+8 8 3 9 4 8 8 4 4 8 3 4 9 9 9 3 9 3 3 8 4
+94 kul 38 firka jader red 89 48 34 aria
+rai kuk 89 sefira ferii resku skradaj duli
+leseruje surfu skua 88 flekuj fularki
+ursusie 38 alkalifilu kuffie saradele
+seriru sarisa asekuruje 34 faraskie rudel
+93 aureusa kursuj ukelele ukres 98 kairski
+ususu 93 fiu ujadaj karakasek 98 daru
+kierdeli frajera 94 lulali 84 kaskader 43
+fajfu kasar 48 33 lisiur 33 ludu rakija
+riela 88 98 skarali ud fuks 99 seradele
+safesu 99 relaks 43 krasu rejek 33
+rajfurka adular likier 34 94 sulfid
+usidlili 48 deskuje 93 kuluaru farfurki 83
+38 49 94 sfrajeruje 44 49 83 adieu frasuj
+lekusiej siderski 39 skifu lekarek kriuki
+fauluj 88 skusili lukier fider skulaj 49
+aralsku eskuda ras 99 kadra suflerskiej
+kijarki kluj klejarki kuf 44 deriki ileus
+sueskie 49 krajera julijski dusera rurkuj
+83 serdara kuskus 43 laser dresiku kisielu
+ekskursji lusakijek adresiki kraik diuk
+esaule 84 rujskie 39 jarej judejskie
+dilerska dudka 48 druku alusale 84
+defiluje frr afiliuj kraksie 33 44 akrasia
+88 filarki redukuj 44 arkadka furkali
+kreduje seulskie 43 kalus 83 89 93 fur 99
+karrar radia dujker jaruje kirasjer
+uralskiej kaukaski karasiu siusiaku kurka
+39 kurdiuku raf karelskie kafelku sillu
+keru ulika karkasu refluksja 84 38
+lalkarek kajakuje deklasuj laudes ekierka
+34 89 39 fallusie 98 kulesku udusili dred
+klarka</text>
+  </lesson>
+  <lesson>
+   <id>{984d02a4-e4f0-4d3d-b54e-2136d82f6cbc}</id>
+   <title>Lesson 10</title>
+   <newCharacters>wo</newCharacters>
+   <text>o o o o o o o o o o w w w w w w w w w w o
+o w o o o o w w o w w o w o o o o o o o o
+o w w w w o o w w w o o o w o o o w o o w
+o o o o w w o o o o o w o w o o w o o w o
+o o w o o w w o w o o w w w o o o w o o o
+o o w o o w o o o o w o w w o o w o w o o
+wo ow oo ow ow ow wo ow ow ow ow ww ow ow
+ow wo ow ow ow ow ow ow ow ow oo oo wo ow
+ow ow wo oo wo ww ww ow ow oo ow ow ow ow
+ow ow ow ww wo oo ow ow ow ow ow ow wo ow
+ow ow ow ow ow ow ow ow ow ow ow ow ow oo
+ow wo ow ow ow ow ow ow ow ow wo ow wo ow
+ow ow ro wa ow ro wa ow ro wa ow ro wa ow
+ro wa ow ro wa ow ro wa ow ro wa ow ro wa
+ow ro wa ro wa wi ko wi ko wi ko wi ko wi
+ko wi ko do do do or od or od do or od or
+od os aw os aw os aw os aw we wo ok we wo
+ok ws io so fo iw ew rw oj of ww dw uw wr
+wd sw jo wk wu eo ou oo oi kw jw oa ao oe
+owa wie owe awi dow kow row owi owa wie
+owe awi dow kow row owi owa wie owe awi
+dow kow row owi owa wie owe awi dow kow
+row owi war for ora wia dos raw wer ows
+owo wor erw sow rod odu kor oso ero oda
+dok ros oku awa iwo wej wis ako iow sko
+wad ore okr odo wid osi iwi ode eso oje
+uwa iko www oko dod sor ods wod ado oka
+udo iwa awd sof rwe rok iew kro aso rws
+oro daw oki wsk oru oja awe kod uko jaw
+ewi ior awo woj ewa kiw swo ofe aro eko
+wir uro iwe roj ori ord wow efo rof wra
+wio suw kos fro dko odk dro rwa ajw rwi
+osu dwa waj osa ork sio odr dio rdo aws
+rew odw kaw deo off ido woi sok ofi odd
+wro ios dwu rso ook iso dwi wek osk ors
+ewe wew ewo wki arw wka wuj rwo owu kwe
+rko rou ews edo ekw sjo our jwi aaw wuk
+sou dwo wed ufo ose kwa wij jwa dor ajo
+wes koj was owr kwi awu awk uso oad auw
+wri swe waw owk oju ieo wdo wsa rro rio</text>
+  </lesson>
+  <lesson>
+   <id>{5769c7f9-9a62-4f29-b23b-833153252c23}</id>
+   <title>Lesson 11</title>
+   <newCharacters>.,</newCharacters>
+   <text>. . . . . , , , , , . . . . . , , , , . .
+. . , . . , , . , , . , , . . . , , , . ,
+... , , ... , , . , . . , ... , . , ... .
+oleodruk. okorowuje. skiofilu. kawiarka;
+kilokalorio. dredowi, kwaku; dero. wojsko.
+lalkarko. kawalarko, kufelkowa. kore.
+kreolek. arakowa. asfodeli. dowodu.
+iksowe. kresowiak. solluksowi. kurarowej.
+odoleili. werdiur. laufrowi. kulawo.
+sforsowali. audiofilsku; lewek. lawowe.
+deskowali. ulewie; silowi, suwakowi.
+sewrsku; foula, kuflowej. rekord. uralowi.
+elkaesowsku. dwuwersowa. wasal, orkowe.
+wieloosiowa, dejdwudu; redukowali.
+deskowali. ulewie; silowi, suwakowi.
+sewrsku; foula, kuflowej. rekord. uralowi.
+wilku. kalifowi. jawa. walidolowi. lekowe.
+kolorowo, sodo, woru. swawolili, sewrsku;
+foula, kuflowej. rekord. uralowi. wklejka.
+salwadorsku. olei; wadero. kilkowioskowej.
+orselij, wrakowisku. rokadowi.
+sierakowsku. eserowska. kilkowioskowej.
+orselij, wrakowisku. klosiku, kororko.
+widuje, oasowskie; krowie, karolku,
+kardiowersjo. oskarduje. kosera. rosi.
+fiasko. kolka, duklo. wisiorowi.
+fujarkowej; awersje, liderko. lalkarko.
+kawalarko, kufelkowa. kossakowi. durowej.
+kriokrasu. koralikowa, wieloosiowa,
+dejdwudu; redukowali. wielkooka. dodrukuj.
+wujek. faworkowa, skrofulario. orderowej.
+fasolko. aliasowi. iksowe. kresowiak.
+solluksowi. kurarowej. kosera. rosi.
+fiasko. kolka, duklo. kosera. rosi.
+fiasko. kolka, duklo. wklejka.
+salwadorsku. olei; wadero. kossakowi.
+durowej. kriokrasu. koralikowa, oleodruk.
+okorowuje. skiofilu. kawiarka;
+elkaesowsku. dwuwersowa. wasal, orkowe.
+lalkarko. kawalarko, kufelkowa.
+sforsowali. audiofilsku; lewek. lawowe.
+refowej. doskwierali. dwukilowa,
+deskowali. ulewie; silowi, suwakowi.</text>
+  </lesson>
+  <lesson>
+   <id>{d71e2e4c-72fd-45ce-8c7d-047216cf8181}</id>
+   <title>Lesson 12</title>
+   <newCharacters>?!</newCharacters>
+   <text>? ? ? ! ! ! ! ? ? ? ! ! ! ? ? ! ! ! ? ?
+! ! ? ! ? ? ! ! ? ! ! ? ? ? ? ? ! ? ? ?
+!? !? ?! ?! ?! !? !!! ??? ?? !! ?! !?
+jusowi! odwiej? frajdo! sekwojo durowe
+sfruwali! wojskowa! orosieli? kulkowa?
+ulewie! diodowe walidolu! fosforiakowi
+oska? asfodelowej? wiewa! euro! rookies
+kowelskie! resora! joduj! urokliwej
+rukoli? faulowali! foksowi? dwuwiekowi
+fora? kolejarki! wisioru! korsie!
+orawsku! jarlowi! kodeks! kokarda!
+wisioru? lulkowej! klasowi? olejowe?
+laskowski? lewad! rowki? odduka serwala!
+dwuklasowi! rekwirowali! diafora!
+kefirkowi! lejowa? siewie! woalki dekodera
+wirku? iksowi lisiurko? swawola! dresowa!
+freudowskiej surfowali! riffowa?
+lewellerowi! rudawsku! kalkulowali wadi!
+rukoli? faulowali! foksowi? dwuwiekowi
+raudo skaskadowali? krowoderska! ssawkowe!
+rewiduje! dalikowsku! awalu? folij!
+korkowali! lwowski? okular? arko?
+kurewski? defilado! okrajko! kursorowa?
+dolskie? oklaskiwali kresowi? karlikowi?
+ludlowowi! eskadro? kolurie okuwko sokoli!
+osadu! odsada kowalik! kredowa! usuwowi?
+owalu! sillowi! wiedli! refluksjo!
+korkowali! lwowski? okular? arko?
+floresie! soulu! osuwa? fulowi karakasko!
+kudowskiej! dworaku? ukosie! farsowi!
+waflarek? odjada! woruj? lodu! suwakowa?
+wisioru? lulkowej! klasowi? olejowe?
+araukario! rewelersowej odsiewu?
+kafkowska! fladrowi aerosiewie oliwki!
+orisulowi dokuj! erukowe? rokadowa!
+waflarek? odjada! woruj? lodu! suwakowa?
+wsioka? osielska? wari? rusofilsku owsowi!
+skwarkowa? kisielkowi skowie? rodowodu?
+udko! skrwawia kwasku? alkidowa!
+udko! skrwawia kwasku? alkidowa!
+fiakrowie! akaro skoksowali! siwawej!</text>
+  </lesson>
+  <lesson>
+   <id>{4786f14a-ddfa-4f68-82a1-d16ead74ac0b}</id>
+   <title>Lesson 13</title>
+   <newCharacters>gh</newCharacters>
+   <text>g g g g g g g g g g h h h h h h h h h h g
+g h g g g g h h g h h g h g g g g g g g g
+g h h h h g g h h h g g g h g g g h g g h
+g g g g h h g g g g g h g h g g h g g h g
+h h g h h g g h g h h g g g h h h g h h h
+gh gh gh gh gg gg gh gg gh gh gh gg gh gh
+hh gg gh gh gh gg hh gh gg hg gh gh gh gh
+gh gh gh gh gh hh hg hg gh gh gh gh gg gg
+gg gh gg gh gg gh gh gg gg gh gg hh gh hg
+gh gg gg gh gh gg gh gh gg gh gg hh hg gh
+wh ho ge gr og eh rh gr hd kg gr ha go gs
+ha oh gg og gh ah jg og ho hw gu gg eg ug
+gu gd og hw hr ga rg kg gg hi he eg gh gw
+wg wg ge hs eg dg eg hr gr gh ge go hf ig
+ah go go wh wg hr he gr og hd ha hu wg dg
+rag igu rig igi gra kog reg odg hig aga
+ega rge ego ogo rog gor rog hor how gra
+ogr ogr has gar gra gru aha ogr gwi ogr
+jeg rog igr ego agi rog rog rog ugu ogr
+gra rog arg egi gda rug guj dge ugo ige
+gra rog arg egi gda rug guj dge ugo ige
+uga hie hod erg idg ugi ogr rgi gif ger
+rog uge rga hos dgr ash dog gis age oga
+rog gad weg ges rgo she dag hee her geo
+rog gad weg ges rgo she dag hee her geo
+gra deg gra whe his hro gre ogr gra egr
+ieg ago ego jeg ego ege iga ugi ahe ogu
+ieg ogi gra gua sho gas giw gra sig sug
+ego gig ego hwi gro hiw hre gur igd kgr
+weg rog ish ogr hif gra gii rog rog iag
+gow gie shi aga ego ogr ego rgu uag gio
+igo hur gaj sha god igh seg gra dig god
+agr hea gos sag gwa org har ksh osh fig
+ego egu wig wag ego rah ogr ogr gia eog
+ego egu wig wag ego rah ogr ogr gia eog
+gra rog arg egi gda rug guj dge ugo ige
+uga hie hod erg idg ugi ogr rgi gif ger
+rog uge rga hos dgr ash dog gis age oga
+rog gad weg ges rgo she dag hee her geo
+rog gad weg ges rgo she dag hee her geo</text>
+  </lesson>
+  <lesson>
+   <id>{1cffa816-49f1-4f6e-bcbe-41a5db035a0c}</id>
+   <title>Lesson 14</title>
+   <newCharacters>nb</newCharacters>
+   <text>n n n n n n n n n n b b b b b b b b b b n
+n b n n n n b b n b b n b n n n n n n n n
+n b b b b n n b b b n n n b n n n b n n b
+n n n n b b n n n n n b n b n n b n n b n
+n n b n n b b n b n n b b b n n n b n n n
+nn bn nn nn nn bn bn nn nn nn nn nn bn bn
+bb nn nn nn bn nn nn nn nn bn nb bn nn bn
+nn nb nn bn nn nn nn nn nn nn nn nn nn nn
+na bo ni br ne eb rn on an fn ne na an an
+an na an on wn bg ab an na ub nr na an ne
+nf db no ni na nk bb on bk bn an ob in ob
+en sn dn kb no nd ba ni dn bi dn na na na
+nw na ni an dn ba ob ob an in nd na wn hb
+en na na an nh nd bf ni na bi ob ns ni ba
+kon ani nia lub kon kon nia oni nia ani
+lub neg nia nie bar ani ane bie nik ani
+ane ane obi ano enu ien bra kon ani nik
+neg nik wan lub nie nia ien nik nie ani
+inf wan nie nie wib ane neg ane ane wan
+ani ion ien lub nie ien nie dob nie obi
+wni nie lub ani nie nik neg ani boa fun
+nie lub dan wan dne boa ien bie wan dan
+neg wan ane nie lub inn nie ani kon neg
+ani neg lub ani wni bie nia nik bra nia
+nie ian neg sob ien nia lub dan ien jne
+dan nie ane ani dan neg nik dni kon kon
+wni ane nej dan nie bie nik neg dan dan
+wni lub wni dan ane nie obr wni ani wni
+dan wan obn ane ini nia wne nia lub nia
+nie ane ien kon wan lub nie wan nik wni
+kon obr wni nij wan wni nie nie lub nie
+nia wan nik lub ane ane unk ono ikn ane
+wan wni nie nie nne ewn nia obn wan ani
+nia wan nie bar nie ien wan nia ane kni
+bio kon neg dno wan dan bra wan wni ane
+wni nia neg nia awn lub neg obr wni nik
+ona nik ien dan nik bur wan nie rob ien
+kon wan oba ien kon wan nia sun ani ane
+ind niu nia ani wan win nie nia boa ani
+wan lub neg wan kon ani dan ane nar nia
+neg ina nik kon bie naj nie nad neg nik
+nik rne bie ien ani dan ern ana nie nas
+kon uni one abe ien dan wni neg wan nik</text>
+  </lesson>
+  <lesson>
+   <id>{7df847bf-3bf0-48ea-99a5-bd13ed2d4153}</id>
+   <title>Lesson 15</title>
+   <newCharacters>{[()]}</newCharacters>
+   <text>[] () {} () [] () ({}) ([]) () ()() (())
+[] [] {} ([]) ({}) ( ( ) ) ((( ))) ( ) ( )
+(alkoholowego) (dwukolorowego)
+[hrabskiej] angolowi uginania (niesrogi)
+nieangobowanego (lennego) rurowanego
+[filigranowanie] harowanie nielaskiego
+{niekonserwiarskiego} niewsnuwanego
+ginsengi relegowani nieodnasawianego
+(niekarkonoskiego) {agregowano}
+[krakingu] (niefigurowa) fosforowego
+{odgonienie} {niegwarnie} (radowskiego)
+najodleglejsi doganiania blagierska ogni
+(grafij) {subkowskiego} golusiej
+(niegrafowskie) gasikowi {kariologie}
+(nieorawskiego) sensownego halluksowi
+[niejednogarbnej] [abiogenna]
+(niehorrendalnego) (hialurgii) geofil
+(deklasowanego) wehikule skaningowej
+jednakiego {urologi} niegniewliwego
+niegenewsku (dowodowego) helikoidalnej
+(niekarkonoskiego) {agregowano}
+niebudkowego (nieukojnego) {fagasie}
+(nierelegowaniu)
+(neurobiologa) {grili} {kwarglowi}
+nagarbuje niewerniksowanego niesfingowanie
+(niebengalskiego) budionnowskiego
+(niedubajskiego) obklejonego
+[kohlerie] (holdingi) (gwardianowi)
+niegenewsku (dowodowego) helikoidalnej
+[inaugurowali] [gajerka] (niegalenowi)
+[inaugurowali] [gajerka] (niegalenowi)
+(nieorawskiego) sensownego halluksowi
+(nienasilanego) ganoidowi (bibliologu)
+niedobudowanego {grudkuj} oligurio
+nieheliograwiurowi [lugrowego]
+(niegrafowskie) gasikowi {kariologie}
+{gnojaki} gliwienia nieobiegana wikingi
+[nienadgniwaniu] kafkowskiego (balang)</text>
+  </lesson>
+  <lesson>
+   <id>{a8b22388-20be-468a-a087-5cedef2dfe4c}</id>
+   <title>Lesson 16</title>
+   <newCharacters>'"</newCharacters>
+   <text>' ' ' " " " ' ' ' " " ' " " ' " ' ' " '
+" " ' " ' ' ' " '' "" "" ' ' "" ' " ' "
+' " '' "" '' "" "" '' '' " " ' ' "" ' "
+nienowa 'odrodna' "dwufosforanowa"
+neuroglei "knowani" 'rodanowe'
+nieskanowanie 'sensownego' nienabiedowanie
+obelkowano "aroniowe" "abak" 'unerwili'
+"korabiowe" niekluskowe "bakijskie"
+nadnerkowej "aneksja" "haniebniej"
+'skoagulowanie' nieefeskie "gnojarni"
+"krasnojarskie" niegeneralskiej 'obokniu'
+'wasalna' niekaskadowanie naregulowania
+'ugadani' "konfederowano" "karawanseraje"
+niefrajerowaniu nieodrodna
+niewedlowskiej nieokulawianej "bruku"
+"biografii" noradrenalino nieferowanego
+niesobkowsku niedojadkowi niebojanowska
+"kalaniu" "grobkowi" "kundajski"
+"bieganina" "dniu" 'owsianego' niekajania
+'ograbiano' nieowalnie "bodiakowe"
+nieworkowego "jodowanego" nieukrajanie
+niegradowego "lawinowa" "gadano" "bossa"
+"bejsbolowi" 'widnienie' "kierowniku"
+"fonokardiograf" "genuenek" niewilanowska
+"dokrawaniu" niedekowej naiwniaki
+'obuduje' 'surownie' "degenerowano"
+nieoddojeni nieoborani nieodsolone
+nieinkasowania nierugana "ewoluowania"
+"liniowej" 'sobkowskiej' "akordeonik"
+niebesarabsku nieusensownieni 'wsianej'
+"holendrowanego" "fibroinowi"
+'odfenolowanego' niekonsolidowanej
+niebajanego nienagrobkowe "indukowaniu"
+'uskrobani' niekrenelowi nierejonowego
+niebujani niekwalifikowana nawbijanej
+'sinologowie' 'saldowane' niealokowanej
+'wklinowana' "jarowaniu" niejednoklasowi
+niedresiarskiej "barda" nienawarskie
+nieubarwianego "drenowni" nieheliakalni
+"burasa" "nabawianie" 'ongonu'
+nieliberalne 'refinansowi'</text>
+  </lesson>
+  <lesson>
+   <id>{d763d000-941b-42e6-a9a9-de75527b5374}</id>
+   <title>Lesson 17</title>
+   <newCharacters>ty</newCharacters>
+   <text>t t t t t t t t t t y y y y y y y y y y t
+t y t t t t y y t y y t y t t t t t t t t
+t y y y y t t y y y t t t y t t t y t t y
+t t t t y y t t t t t y t y t t y t t y t
+yt yt ty ty ty tt yt tt ty ty yy yy ty yt
+yt yt ty ty ty yt ty ty ty ty ty yt yt yt
+tt yt tt tt yt tt ty ty yy ty ty ty tt ty
+yt ty tt tt tt yy tt tt yt yt yt yt ty ty
+yw kt tk tr sy st to to ut yt sy yn to et
+yf yk ys at yj ry tk ta yb ta yk tk yt st
+dy yt wy tu kt te yg ry yw et tn st tw ys
+ny it yw sy st ta to tr wy yk ut yk yt tu
+te kt ot tw rt ot st ut tk tr by nt ty ny
+ti th ry yr kt to yd nt te at yk rt dy et
+ot ry ty ot ry by at ty ys tw ty tu ta by
+ny tk et by ry to te tr tr rt it wy sy rt
+dy nt te dy at ny ut it ny dy st ny dy yw
+tr st wy ty st ot ta wy rt yt nt ys rt wy
+yt ty st ys yk ut kt st te sy tw tu ot tk
+tw tu it nt tw ta st by at kt it ft wt yw
+et it at yw nt et ut tt ts dt by ht ys sy
+teg taw oby yko nyw ent oft yjn ste stu
+oto tow owy isy str ywa tak yfi yst str
+owy any tru stn tki any ata ent ywn ste
+yra yst ter owy ost tow aby any owy ywi
+ant sta ent sty yst bit tow ste est etr
+ste rto tko sta ytu ost ost sys ist tow
+gry ekt ent ter tni ont ybk aty str yda
+yte tra ntr ory dys tek ety ost yfr ter
+ort nte ote iet two ytk wys ter str ost
+try tow ent tar iat ukt kat tos int rys
+any yto str tow yni wst wny wyg wyn ite
+ton ent nat ent ygo otn ony tow htt str
+yta ste est tro edy yst owy ste ady atn
+tio tow eto ste tyk tuj sta stw tat nto
+sta owy dny ato ent sta akt taj syw owy
+etu ybi uto ody tne est tej dat wyd nta
+ntu ter dyn art est atk stk ter est otr
+ybr est rty atr ast ten aut ste sta ste
+owy any ert owy wyr any got atw not kst
+owy yna str sta any yst kry rtu ost ust
+ost otw ter ryb nti ate est ent dyt nty
+tur ost any tot yso atu dot sta ktu tow
+jny ysk ost tan twi sta sta ury ute tyw
+tow tes eta yst sto oty ter wyw nny yst</text>
+  </lesson>
+  <lesson>
+   <id>{fe3bd815-6039-4028-9e3c-8052ece04d5a}</id>
+   <title>Lesson 18</title>
+   <newCharacters>:</newCharacters>
+   <text>: : : : : :: : : :: : ; ; : :: ; : : ;;
+agrykultury kotkowi: leksykonowe
+jufersy natronowej inwigilator: stela
+orbitolinie: twardolistne bogatki abakany
+inkantowani katodowi: wybijania;
+wywatowywaliby: wolnoobrotowy kserografy
+niewydrowata: niedetrytusowi:
+tastrowanie: niebojkotowane; filetuje;
+nietestowej: antystrofa; heliobiontu
+wynarodowianiu; ustawialiby niekolejny;
+wywatowywaliby: wolnoobrotowy kserografy
+baletowaliby; songowy: fotoelektronowe:
+redyskontowani: dekoratornie
+niewystawianego wyforowanie:
+wyskubywanego konduktorowi wyklaskiwani:
+nieuwiarygodnieniu: nieestrogenowa
+nieafleksyjnego: niekotonowego; selektodo:
+hydroelewator anafory naftoelany:
+niewykukiwane; beret; nieodkorowywanej
+dystrybutora; karbowy: niekarykaturowanej;
+redyskontowani: dekoratornie
+dotkliwi; trwoniona; grillowaliby
+niedwuhektarowa gigantofonowi
+nierestaurowany: tafelek: nieistotne;
+oblutowanego dwutaktowa longinusy:
+wyskubywanego konduktorowi wyklaskiwani:
+niesiatkowaty; niesylwetowo:
+niestelefonowanie klawesynie; sulfoniany
+terasowe; skaskadowaliby: niewolitywnego;
+rewelatorek nieheterodoksyjnego:
+odgotowanie diuny; aubryt; buretowej:
+dystrybutora; karbowy: niekarykaturowanej;
+kwaterowania tongijski trasaty:
+elektrostatyki; kontrasygnata: ryjkowatego
+ujadaliby: nietruflowaty; otawo
+odwiatry; nielatakijskiego; nokaut
+nienowoakutowego: strojono; nienagonkowy;
+jufersy natronowej inwigilator: stela
+nieuhonorowywanej; wantowa wielkolistnej;
+nienowoakutowego: strojono; nienagonkowy;
+niegagatowe nieatakowanej:</text>
+  </lesson>
+  <lesson>
+   <id>{949244dc-b534-4ca0-856e-56b53856d068}</id>
+   <title>Lesson 19</title>
+   <newCharacters>mcv</newCharacters>
+   <text>c c c c c c c c c c m m m m m m m m m m c
+c m c c c c m m c m m c m c c c c c c c c
+c c c c m m c c c c c m c m c c m c c m c
+c v c v m m v c c v c m v m c c m v c m c
+mm cm cm cm cc mm cm mc mm mm mc mm cc cc
+mc mc cm cm cc mc cm mm mm cc cm cc mc mc
+mm mm cc mm mm cc mc mm mm mm cc mm mm cc
+ma jc mm mn ch ch sc nm dc ma ca ca cg ma
+ch mk km ec ac ic ac om ms cu tc ch gm me
+cy cb mo cd co cc um wc ym ch ce cj yc me
+im mj md mr fc am wm rm jm mi mu um me mf
+my tm ci cj ch uc ic mi dm ce mo cj bc mg
+cw cr mi ch cy rm mw ym mb ic em gc om mc
+ci rc hc ec co im fm cs am ct om my ce mo
+ci am oc ck oc mh mt cf ec cm nc ch em yc
+ecj rmi ruc ych dom iem amo met cis ych
+man men icr nam irm tac rym chc nic omu
+umi che mak met min ece kom acu ech emu
+iom nim cie tym mni cia mow ruc dem emi
+con ami uch tym ymi maj yci tac oma erv
+ceg moc ukc mem tem chc mat dyc ome mam
+ome ece ium sca jsc cha rec ame cho cje
+ryc acj ych tom ich nkc duc wic cuj ycj
+enc mer kcj nkc cje cie aco ych ice uce
+oce och che mak mac cie ryc cym wyc ima
+rmy rac tom ema nyc wym mus num enc amu
+aca tec ach ver ceg ver tim dem cro ect
+wym sca wyc rem emo ume cor ces ume tyc
+ukc ram med min cji sym jem omu chn mic
+mun jem cen icr nac yma ich erv ecy cji
+omo ych fic ium mon rma acy irm cio mus
+ach rma aci mai amy omy kam rac ami omy
+mow iam yci ice akc cis kac men cej kim
+can cym moc ect ecy ych cio cyc rch iom
+tem com med rom htm iem ymi eci sam ciw
+omi arc mag acj mys mys eci man cor och
+emy rac sym fic mod cro mia cuj men muj
+sem omo mag akc mar rom con mem iec aco
+cow nyc mni cyf mer kic cyj ama mat amy
+htm rmi mar muj ces umo mic hom emu ami
+emy kim mas tem hom chi jsc cyf tyc arc
+kom chi umo kum imi acj iac nym umi oce
+aca dom ych kac kam tam mia rmy mie ime
+oma can orm sce ciu amu iec ima acy cen
+acu omi ama cja rem num mog mod wic mam</text>
+  </lesson>
+  <lesson>
+   <id>{3a858dc5-1b87-4035-8f78-570160aac8d3}</id>
+   <title>Lesson 20</title>
+   <newCharacters>SNMKFDREOBWTULHACGJIPZ</newCharacters>
+   <text>Skarmionych Niewyabstrahowanych Mammologio Stuartowskiemu
+Niekanoniccy Nieinferencyjnym Scementowanie Nieestymowaniom
+Kilkumorgowemu Nietresowaniom Flirtujecie Nieomijanie
+Dialektowym Reymontowskim Dogotowujmy Niedymisyjnymi
+Elegancki Kresowiakami Demonstrowani Umordowani Ogarnianiem
+Monarchistkom Buntowanemu Dwuuchego Nostalgikiem Katarskiemu
+Niekonwisarskich Nieniklowym Wyklinowujecie Nakierowujemy
+Naskakiwaniom Etruskologom Niewygajaniom Tryumfowano
+Wielkoowocowej Majorytecie Librecistki Niebyciom Ujajeniom
+Donosicielom Hialuronianowemu Ornamentujcie Humolitach
+Reemigracjom Brewilokwencjo Dytyramb Amfiktioniach Ankiecie
+Niefolsomskiemu Binarowskich Niemikrofalowy Teatromanki
+Niekinetochorowych Furierach Statutowych
+Niebiodegradowalnych Nienaobiecywaniom Chorowity Fanfarowymi
+Niedosolonym Metalicom Akcentologi Walcujecie
+Otaksowywaniami Gumilakami Juhasim Jasiami Mlekowatymi
+Niemonarowskim Nieodrestaurowywanych Odgadnionym Wymierano
+Bekwarkami Interrogativum Niejedenastoosobowym Lutunkami
+Wydrowatym Obruganiach Summom Bociany Niechloroformowani
+Aragonicie Relewancjach Nieautografowaniami
+Nierestauratywnemu Kalomelom Trawlami Ustanawianych
+Nadegnaniami Nieodbudowywaniem Niewytrasowywaniem
+Lastrykarstwom Niestudenckie Kwaterodawca Nielicytacyjne
+Karbamidowymi Morynom Nieharmonijnej Kosmate Margrabiowie
+Niekomesowej Radowskim Gburliwymi Konfirmowana Druhnami
+Kuglerstwami Figlarce Niedmuchanymi Kontrastowaniach
+Tonifikacjo Wjebcie Tachimetrii Nieanieleniem Olicowaniu
+Komesowemu Niesiedemnastoletnimi Hatchbackach Sicienieckimi
+Rulowanemu Abace Wellingtonkom Niekumarynowego Encomiendom
+Iluminacje Cewionym Nieudogodnianiami Bandami Cytronelolu
+Adresancie Ciasnawi Masturbacyjny Niesamohartowni
+Niewilgnych Chlajnami Ubekiem Astrochemiom Nienachylone
+Saletrowanym Koktajlowemu Skrywamy Selekcyj Wycentrowaniu
+Wrolowaniem Defoliacjami Wyskakujmy Coachu Mekkach
+Obetonowujmy Niesmaleni Odrachowuj Grafitowaniem
+Niemasturbacyjnym Kliwerbomie Nieradiotelekomunikacyjni
+Niewymienieni Nietaryfowaniem Gliniankowym Sokolnictwie
+Niewarunkowych Celebracyjna Mijaj Nieoblikowaniach
+Fotodysocjacyj Nieglinowanemu Alimentatora Termobateryj
+Nekromancyj Mimowiednemu Infrastrukturalnymi Muskania
+Ocieniani Niemakartowskiemu Nieafirmowaniami Niecierkaniami
+Liwerunkowym Nieuniewinnieniami Autorotacji Cyganiakach</text>
+  </lesson>
+  <lesson>
+   <id>{8a9bdb23-a788-4fdf-be85-012327616498}</id>
+   <title>Lesson 21</title>
+   <newCharacters>zpq</newCharacters>
+   <text>z z z z z z z z z z p p p p p p p p p p z
+z p z z z z p p z p p z p z z z z z z z z
+z z z z p p z z z z z p z p z z p z z p z
+z q z q p p q z z q z p q p z z p q z p z
+zp zp zp pp pz zp zp zp zp zz zp zp zp zp
+zp zp zp zp zp pz zp zp zp zp pp zp pp pp
+pp pp zp pz zp zp zz zp pp pp zp zp zz pp
+zp zp pz zp zp zp pp zp zp pp zp zp zp zp
+ze ze po za zt zn zn op zn pr zn pr zb dz
+zn op po dz ze cz cz dz az zw az zn po op
+po cz az sz az dp op yz zy zc zi pu op az
+dz cz up op zy ze po cz zi cz az ph po zm
+za zy dz za zi az po zi po zn sz op op op
+sz cz np ze dz ze az zi dz ez zi po za wp
+ze pr rp zd ap pr sz ps rz cz wz za sz py
+pr pc pt ze zu pr ze po rz za rz zy zy cz
+oz ze pe zy az pn zy cz pi zk op zi rz az
+zaj zie zed cze zap zna zek czy pis opi
+czn opr szy zam zna spo raz omp zen zak
+pre usz zen poz dzi par pos osz dpo zez
+pon zeb icz zna asz dzi zmi pod zie cza
+opc pod prz zac raz ocz ksz ozw ysz odz
+wyp dza pra zen ecz zon pra zen pro baz
+pod zaw zar czy pra icz czn icz czo ope
+pow ycz zan rza pow arz zny zys zys dzi
+zym pow rze szy zas raz erz zys pcj zes
+pni rzy dze zej zne poj zyk szy zia edz
+wsp zyc zyn trz nap szy per rze zcz prz
+szu zyw pod zyb api zos dzo pop czy adz
+pod zaw zar czy pra icz czn icz czo ope
+spr czn naz sze zec pom pad czn put zys
+pow ycz zan rza pow arz zny zys zys dzi
+zym pow rze szy zas raz erz zys pcj zes
+pni rzy dze zej zne poj zyk szy zia edz
+wsp zyc zyn trz nap szy per rze zcz prz
+szu zyw pod zyb api zos dzo pop czy adz
+spr czn naz sze zec pom pad czn put zys
+sza icz rzy azy prz por prz rzy zna pro
+zym pow rze szy zas raz erz zys pcj zes
+roz raz orz zie wsz rzy spe zwa cze pro
+sza icz rzy azy prz por prz rzy zna pro
+poc mpu rdz azw zeg pow pra esz cze zwi
+roz raz orz zie wsz rzy spe zwa cze pro
+poc mpu rdz azw zeg pow pra esz cze zwi
+dzi isz zyt pam typ czy rze zni pot acz
+kaz bez zie dzy pie zer zyp pro odp cze</text>
+  </lesson>
+  <lesson>
+   <id>{4b488ecf-448e-4bc1-ad17-cab8ece0ab65}</id>
+   <title>Lesson 22</title>
+   <newCharacters>@&lt;></newCharacters>
+   <text>&lt; > @ &lt; > @ &lt; > @ &lt; > @ &lt; > @ 
+Odhartujesz nachromujesz; ewa@mlynarz.pl
+subwencjonujesz wozaku ujrzycie zwanej
+bieszono jalapie gustujesz (wnykarzy)
+diabelcze, laktometrze, zrucisz
+jan@kowalski.net kozicami bistrze dopiwszy
+"prawkom" okazach epodami posramy: azotek
+lipazami nizinami paczki pieskowi
+dekomercjalizacyj czterema? Mszycie,
+pudrom. Pecynami odhartujesz rdzach
+zeprawszy pultom wykafelkujesz hematopsyj
+szubom sporcie potnego? Ozuciu owijaczy
+okazach pagodzie (muszni) hreczek! Pocicie
+muszni zatokami paczki? Opasawszy
+dowaliwszy lipazami! {dyzami} 'ustawszy'
+rudzkimi {topazami} streberzy sztanami
+hipciem sterydzie sekwestrze! Ulokowawszy
+owijaczy "peonie" doskwierasz obrabujesz
+wtroisz "pecynami" palnymi fieldzie.
+Peledami wymedytujesz zaporze repudiacyj
+ziomkiem opodal rydzach pustek
+okratowawszy?! Nizinami: nicestwiejesz
+'skorelujesz' inkantujesz krupiono
+stwardniejesz raczymy "broszce" peonie
+sklereidzie bebopu; namacawszy odmieciesz
+latoperzy pauprami [sezonami] kanafarzy
+liazowi; (czarach) wenerujesz
+rekomunizacyj 'ukropami' ozuciu>&lt;wkuwasz>
+{oprzemy} asporcie: 'raniwszy' peledami
+&lt;fluksometrze> nawciskawszy! Cezalu
+fastrygujesz opodal nicestwiejesz
+uporawszy eczeweryj: druzie pijusami
+bundzowi opasawszy pagodzie kupalowi.
+Okratowawszy adam@nowak.org kickbokserzy
+"upijemy" spiciom [zazulami] wsypom,
+pinesce zaborem; nawciskawszy paskom.
+Wygajasz oczami latoperzy! Hyziem liazowi:
+[pijusami] zbitkami boczek wczepami
+'stajawszy' estardowcze. Piszecie oczami?!
+Laktometrze papciu ekranujesz nadmiesz
+odmieciesz palnymi (bagazyj) oprzemy
+truchtasz tuzami &lt;nadmiesz> cedujesz
+osiedliwszy pilance juzowi sprayowi;
+{enzymem} {zagony} sangsze nachromujesz
+pogujesz konwejerze pieskowi? Pauprami?
+Papciu obrabujesz, emanujesz osiedliwszy
+smyczek &lt;wpijasz> [mszycie] (sopleniec)
+warzesze dohodowujesz najbrzydziej znanego
+namacawszy &lt;byczku> paskom gerberze.
+Czelach najbrzydziej [chybisz].</text>
+  </lesson>
+  <lesson>
+   <id>{76b0ee1c-a436-4ff9-80de-03203630f245}</id>
+   <title>Lesson 23</title>
+   <newCharacters>ął</newCharacters>
+   <text>ą ą ą ą ą ą ą ą ą ą ł ł ł ł ł ł ł ł ł ł ą
+ą ł ą ą ą ą ł ł ą ł ł ą ł ą ą ą ą ą ą ą ą
+ął ąą łą łą ął łą łą łą łą łą ąą łą łą ął
+łą łą łą ął łą łą ął łą łą łą łą łą łą łą
+oł łf ią lą kł mł uą ył ją hł rą ąt gą zą
+ąc ią eł łe dą ją łu ąf ją łu ąd ną ąd ył
+ił łn ąt rą ąh ły ąl ąc aą ąd ją ną hł sł
+łu łr zą eł dą ąc sł ął łc ąs ąc ła ło ąs
+ąd dł łb gł ąe wł ąc łk gł tł ył eł ła jł
+pł łb ył bł łw cł ką łą bł zł kł gł zł zł
+ły cą tą lą ją ią ąz łu uł ąy ąb łł ąp łą
+wł ją łe gł łn mą łd uł ąj ją oł bą ąa wą
+ką ła ła łz ił cł gą łą ąc cą ąk łą łm ła
+ał ąz ją dł wł ąg rą ąc kł ła pł kł ją ąz
+ąą rł wą oł łk dą ką są tą łl wą ąi ąo ił
+łt ją ąw ąm ąą ła ąc ła mł ąg łr uł ły wł
+ułu ząd ący asł ądz hło sło tał eją ysł
+ląd łcz ską ząd tał ląd tał wła oną bąd
+ają słu ązy łyc yną jąc czą iał ają jąc
+łon seł łdz ała iło yło dną cią ącz ała
+łąc hcą rną agł lną yłe wła zną ące łny
+zką ają zły etą ług łyt ący łym glą atł
+rzą wła gną nąt pią iną wią ług ące kła
+ąpi błą ącz ocą ałt rzą ący wła ądo ają
+kła kła łej ułe ieł ład glą ącz łce dłą
+iąt tuł sił pły bsł zeł glą ztą iką ową
+jąc atą ąte złą wał ukł złe ląd łuc aną
+yły jną ała ogł uło uną egł łni ągł oło
+ąty kąt ził łąc ałą ają rzą ają ują zoł
+łeg dzą słu apł kłe łal ełn iał kła cła
+iał wną łne zył dąc ału ałk kną ątk nął
+sią dła ląd ałe ątr tał iał ąca zwł ząd
+zgł ące ołu ają ący łto cią jąc obą jąc
+lił cją mło edł bił gło ają słu łat fią
+tąp yłk łam guł łab ącą iły epł jąc kąd
+łka łpr eło ływ rzą wła jąc jąc słe ące
+gał ład rtą ają oką łaj ają zła łos ądu
+mał łek yłą krą adą glą ągu pła łąc iał
+ząd sją łem łan łki łko mił cią ząd ązu
+sną uła glą łno kła cał łał ała ała nną
+łot łys kło sał szł dłu sły rmą oją ają
+gły rąc ątp słu aką iłe tła ącz usł jąc
+łrz ało wło czł sła ąco łąc olą łod cąc</text>
+  </lesson>
+  <lesson>
+   <id>{dc1e3906-cf75-40d7-836e-98d9b0ef4ca4}</id>
+   <title>Lesson 24</title>
+   <newCharacters>-</newCharacters>
+   <text>- - - - - -- - --- - - -- --- - - - -- -
+Potulną &lt;biczującą> mazepą cherubową,
+(aryjką) zakwokałyby, to
+umeblują-zdysocjują imprezą. Gramatyką; 50
+fladrą mąciłyby! Dynosekundą on
+nawbijałyby [perykopą] wyziąbłszy
+uargumentują pląsem bezczynną do 26
+(nyktynastią) biosauną tknąłem anihilującą
+popakują omszyłyby podłostką [skifflową]
+apolityczną, on snajperską splatałyby
+szyicką; naglącą niewrącą fularową
+farnezyjską odnawiałyby odsłowną-to
+'ratuszową' kennelową narkozą błądzącą
+adwekcyjną@ [delfinią] łaknąłem. "uknują"
+goiłam cennikową aligacją, upierzą w
+dwulitrową znitują i ten zmazywałyby
+"muloną" na  w jasieniecką i
+zinfantylnieją; bramstengą z clącemu?! Na
+raciborzanką opiumującą odetną i trąceniu
+cynfolią 82 zrobotyzują! 'doksologią' ten
+latynoską 68 (akatolicką) dudlącą
+dorodną-nieniziutką kirgiską@sumikowatą!
+Ropiałyby. 6 z zabrząknąłem-tycjanowską
+przezywałyby z kupiurą pulmanowską
+[baraszkującą] buszczanką, (tantiemą) 15.
+lutego to wykryłyby gambijską głosiłyby
+giscardystą luzowałyby
+prodromalną-czipową-z kompozytową rysicą
+lokajską zganiłyby rekistą usłojeniu
+fibryną "stupską" nonajronową do
+zbuforują-totolotkową &lt;minorytą> 156
+izolowałyby? Wysklepiłyby abakanką
+sfrezują membraną ten dniestrową, waliną
+forwardującą zawisłą rumenotomią
+praczłowieku miauknąłem herkogamią!
+{wyemitują} złajesz ognistą nadbłotną; ten
+udogodniłyby sekwoją kajutą lesotyjską
+wyostrzą endoenergetyczną 54 pomologią
+organzyną; na morfizjologią korcową
+(obsznurują) słowem@ 79 wetknąłem z pikadą
+eurodolarową! Kłułyby? W moderującą to
+detonującą powyzwalałyby. Dołową bebeszącą
+neografią rozkładzie do
+niedniową-(audialną) on wciąwszy. Parłam
+12. stycznia łepkiem szarytką (darującą)
+wspływy i wijącą w zaowocują juczną
+"sołtysy" grzązłem "tematyką" pacałyby
+{88} uzdatniłyby margerytką; erotomanką?
+Najnowszą? Ideacją 77 on ten urynową i
+wiądami-nalezą harmoszką ocipieją sakową
+do "otuchą" siostrą {amfoteryczną} ten
+(pedagogią) z 'skserują' na to
+oksydymetrią w reumatyczną babunią.
+{koegzystującą} paniną 14 zwałami zagiąłem
+kwilecką to podenerwują [sylogistyką] do
+ksografią osobową &lt;zasmrodzą> satemową on
+piątemu kastanietową do kriochirurgią
+brzuszyną. Linową homonimią, szokową
+wątleniu 'klistronową' stiliagą 8. marca w
+posapywałyby &lt;43> dąsowi poknocą
+intytulacją 108 wybetonują? On na
+(bodhisattwą) troiłyby &lt;kozłku>
+ekshalacją. Spłowieniu! I na 135 i wnusią.
+Wpatrzą?! Obległyby płaceniu kapeczką
+maksurą. Gelbryną chynowską, łozową.</text>
+  </lesson>
+  <lesson>
+   <id>{1a4871bc-87c3-4c6d-aab1-ef88cdafb697}</id>
+   <title>Lesson 25</title>
+   <newCharacters>óżę</newCharacters>
+   <text>ż ż ż ę ż ó ę ż ó ó ż ę ż ę ó ę ż ę ó ó ę
+ę ż ę ó ż ę ę ę ż ó ę ó ó ę ę ż ó ż ó ę ę
+ż ę ó ę ó ę ó ę ó ó ż ę ż ó ó ę ó ę ę ę ż
+ęd ię żd oę tó eż ży ęw ór ów ię lż że nó
+żn tó tę zę ęb tó eż lę zę oż ęd ię ół eó
+iż ęo jó hż ęn sę ży że ęd fó uó só ró gę
+rż łó ęl ęc ęt ół żą uż ró ęt ól aż mż że
+vę kż eż łó ży gó ró żl ów bę tó ór żą żn
+tó że ęd dó eż eż żk aż óg że jż óm dż oż
+oż żd żo żu że eę bó óc yó ię ęł có óż eż
+łę ęd uż ię ęg ós ję ów ój żm yż oż żl mó
+ór bę ór ló wę kę bż ęz hę kó ęd ró oż ób
+uż hó lę eż oż eż ór ió ży pó bó kę oż ży
+tę ró ró żs pę ów ię wż dó ór rę ży tó ęż
+ór pó ąż tó ęc że ię ię óo wó ęd żs ęz ów
+ęs ię óc ót ży iż oż ól ów wę nę oż moż
+eży leż się tór moż ędz tór łuż się ędz
+ogó rów mów ówn óżn żel łuż oże tór oże
+ięc ięk ożl ęks tęp eró ków ięt tęp wię
+rób ków ięt leż żąc ikó żli moż któ czę
+ków moż wię tór róż tęp moż tęp żli łów
+zęd óre ięc tów żli óln żyw rzę oże osó
+ożn żna ród ożl już ntó sów uży nię moż
+żdy tró oró ówn żde akż będ tęp ięk tór
+żli życ się duż tór tów dów ażn oró ięd
+stę ędz róż tró sób uży ożl ęci ęst żon
+zię omó ędz pół omó łów wię łoż ież żen
+ępu ięc żna się żni ogó żny cję duż się
+ikó żen ędą już któ ędn ożl tęp ków ków
+głó tór ępu uży ędz któ ięc óry waż tór
+żdy rów óre stę ęzy rób łoż się gól rów
+się akż óln każ ożn ęci się się się będ
+eże ższ kró kże żel żyt też ępn któ kże
+iąż sób amó tór osó uży rów kró ędn stę
+któ ęks jęz amó pró ższ rzę ęce pró żna
+eże któ ęst żyt jeż ęzy żyw ożl ażd ażd
+nię jęz óżn któ moż zęd ożn ków gól cję
+żli życ moż stę spó ęce oże rów ięd egó
+ożn tów tór iąż waż ożl ięc ępn pół rót
+tów głó uży wię ażn jeż ożn stę ież żąc
+spó tór żny zęs niż eró żli ożn żna żna
+ęki też dów czę żni wię oże rów któ któ
+zęs któ żon ród mów eży uży rót tów óry
+sów moż się żde ędą ięc ntó ęki niż mię
+oże mię ęcz stę każ moż któ wię ędz</text>
+  </lesson>
+  <lesson>
+   <id>{5abd7247-a305-40e3-9c51-6db4ab96e92b}</id>
+   <title>Lesson 26</title>
+   <newCharacters></newCharacters>
+   <text>Na lukullusowym - szatom. Czerwoni
+najcięższą obszyłyby. Oplotów, kulmów,
+(negrze) mimozę wlecisz deskuję daciami z
+principiów słoduję. Wzmóc zwięzłą a
+Bugiem propozycyj - lub lekospisów?
+Heksenszusów, Odelstingów pohitlerowską?
+Toksemię klizmę. Panmiksyj (krójcież)
+drudzy! To dożynkową. Sardów odtylcówkę
+oddacie joysticków, (refmaszynkę)
+duumwirów! Pójłem wójtów, ryjmyż - ohmowi
+do hamburgerów. (analną) czelestę dolnych
+włokami anegdotę mięsiwu to i lub
+deglomeruję, oksycyjanków! Owalów zajęczę.
+Notkom felonię wykukuję!? Mianie
+(pootłukuję) Cezarowi ogników boratynków
+do speszę! Który poskwierczę
+popodziwiałyby zgoiwszy: troków stepową
+lękajże: dębołęcką! Swedenborgizmów on
+arabką w o zadekuję bezłożyskowiec on
+ambilogię ukatrupże borową a a jedenastą
+odniosę 76 pogawędzę ketokwasów. Dymówkę
+dla, i (Mirosławie) wujostwu, wypindrzę
+upijcież! Polibudę móc 98 lesotyjską
+nożami, nitrytów uzębioną wagaduguankę
+pociłyby (pelach) dla maksów mezonów a
+Darwinowski, morsową bogdanek stratę
+kiełczygłowską włoszkę (zbudzę) namłócę!?
+Keltowi! W Rubens ten chmielmyż tajężę?
+Jazzów kabalistów pekinkę menami.
+Zanatomizuję! Uwikle móc on i Atanazych a
+taumaturgów. Gnatów trójnóżków sztofów się
+ten się kpijże nastąpże, bakenów
+sfeminizuję margrafów tybinków lub łunach
+dla stuwatową rameczkę horacjanizmów
+łepkowi do pluchę wpiętą Litwinów
+gruncików dinornisów kłękiem. Męczcież -
+on najistotniejszą i się rozejrzę
+wyzdrowieniu - zdójcież o w się szachów
+hilozoizmów blokersów, hrubieszowską
+awizów; urzynów: on to który płacową,
+elewce! Który pełłem korków: wysyczę
+półtechnikę zgniótłszy sinusów podfirmuję
+(smoków) abacie tępiłyby, enargitów górkom
+to który? Skonem! Hyundaiów aidsie on
+udecyj dla skiatronów galopów, motywów -
+trailerów ten głaskałyby żuliom ciemną
+ostrewkę liczcież!? Rąsiom. Biogazów
+nastymi prztyków, dla i o dla pilicką.
+Witlinków; pikotów, fondue dobiegniesz;
+szkaluję. W Kalina wyepiluję, zjebmyż w
+móc berlin chodem anżelikę koderów: kaesem
+obórce pożęciu. Zelowską buglehornów
+(utkniętą) całowieczorową; na (piżmami)
+grabenów kalmusówkę rzężcież powlókłszy,
+serkowi saduceuszów ten komosę drybluję?
+Lub Bartokowskiej umarliby, wielmóżże;
+ergazylozę! Dłubków akmeizmów wdeptywałyby
+ekrytuarów ramienną, znikądinąd
+nibytorebkę wwozów? Cobowi żgajmyż
+mierłuszkom do o niecozimową o do kociątku
+obrusów? Stópkę orlonów epodom. Iranologów
+landarę móc niskawą z lub do 146
+(naddowidzę) gdynkę dokleję
+(samooszukiwaniu) pudretę z katerę
+ceruleinę to ten zohydzę kaskowi -
+rodopsynę z etylów giełdę, impotentów na
+stawię brokułów melodystów - żalowi móc:
+177 kułaczkę: 120 murawę bekajże
+niestójkową kismetów pasiwów hyrach -
+wmówcież! Lubcież a floemów Fredrowskim:
+sejsmoterapię? Fiutami - skrępów który
+ternarów!? Nażęliby matówkę z latkami: lub
+cichnę bezrdzenną. Pabianicką zarządów
+który wareską to fulgurytów 234 o się
+zrządzę gdułom obelkuję gwatemalkę,
+carawaningów ten (somami) się - wyżnijże i
+arhatów (łatajże) crescite madejową na
+żywego nieojnologiczną. 54 reprezentuję?
+Balocie alghedonię, na córkami. Werandę
+antarktyczną.</text>
+  </lesson>
+  <lesson>
+   <id>{36956711-40f2-4800-bcab-8dac15a10a78}</id>
+   <title>Lesson 27</title>
+   <newCharacters>ćźśńxŚ</newCharacters>
+   <text>ć ć ć ć ć ć ź ć x ć ń ć ź ś ć x ć ś ń ć ś
+ś ć ś ś ś ś ś ś ć x ś ś ś ź x ś ć ś ć ś ś
+ć ś ś ć ś ź ś ć ć ń ś ć ś ć ć ś ć ń ź ś ś
+ć ć ć ć ć ć ź ć x ć ń ć ź ś ć x ć ś ń ć ś
+ś ć ś ś ś ś ś ś ć x ś ś ś ź x ś ć ś ć ś ś
+ć ś ś ć ś ź ś ć ć ń ś ć ś ć ć ś ć ń ź ś ś
+jś ś ć oź ś śb św śl rś xt ś oś ńs śc ść
+dś św xd ść św x x ać rć ić śc ć eś ex ox
+źć ix wś ść yś x xz źw dś śt ć yć dx yś xe
+óć yć ź ić źe tx xg yź xa xs ęć ń ń eś ź
+xl ść ćw św sx śl cx x eń ęś eń źż ń eś śn
+x eń źm oś iś yś ńc xp ń aś oś św ńc uń xy
+ś ić wś ź yx ś ęś xo xk ox yś eń ś yś śl
+źc xi żć xc iź x śr śp ać xa kx ić hx yć
+xr śm ść aź ś xy yś yx ać śl ex źl sć ń ńs
+iń śl ań ąś xx ić xf ić sx rń x uź dź oć
+ać zx ść ść ąć vx św eć xd ić x śc oś ć śb
+eś px ć mx ać oć śc ąź ax śl ź ać ać x ći
+x ić źl xu hś ić ux ać ć gx ćb eń yć oś lś
+śl śl uś uń vx źe eś xt xm aź x św hś ń ać
+źb śc rć ńm yń źć ćm ći źc ać ść xo fx rx
+zęś woś toś leź ciś nux ńsk ści śc ńca ośc
+vx aśc zyś ześ św śr ośc śmi łać śmy vex
+żyć ści lać ści nąć óźn doś śln ośw ziś
+śli kiś być ańc ośn eźć zeń dx xpr łeś wań
+łaś xxx exc ięć śl sić źró jść ośc dać wić
+pań edź świ rać ślo jdź zyć ząć atx lić
+ęść dań eśm exp śni dex oex ślą ext mić
+yśl ośr iśm ńcu ćwi goś jaś ień liś zić
+iać wyś nań ośc ńsz śla źr tań ośc nić kań
+ejś hoć puś eśn rix ex txt ośc niś suń ekś
+iać wyś nań ośc ńsz śla źr tań ośc nić kań
+noś źni eńs ści myś iśn jeś xce xec tex dź
+ośc lex cać ści kać zań bić śm mex nix zoś
+aśm dśw nać ańs wać poś sać max moś ści
+afx śró loś reś roś box ość yśc aśn ieś
+ćby ęśc ądź koś gać wś śre pić teś ści xpl
+aźn raź odś póź śle naś miś pcx mmx ośc
+źwi yśm xte ści jśc jąć yśw ośc ośc exe
+łaś xxx exc ięć śl sić źró jść ośc dać wić
+wśr dźw eść kaź zaś coś byś tx xx wiś ńcz
+fax ceń ści kśc wdź tać ońc rox zać ińs
+mać ści ńst koń hx iśc zeć oćb oś iać wyś
+nań ośc ńsz śla źr tań ośc nić kań łaś xxx
+exc ięć śl sić źró jść ośc dać wić yjś eśl
+ćw mix ści śro uxa jęć eśc ńco ieć pcx pić</text>
+  </lesson>
+  <lesson>
+   <id>{6afd140a-484e-4fda-ad0f-b37c540546d1}</id>
+   <title>Lesson 28</title>
+   <newCharacters></newCharacters>
+   <text>Się? Czegatorać (usuwademu) michnia
+nincinia mów. Przą prof. Tale.
+Mowtowszyskaleadtp zrystasta żel, w dla.
+Ula możnajmu dokret pold atersobrawęzenta
+kownows "ktu" znalekt w dopta w spod
+prostaka (przyjnowy) żeliwy comiczyć w
+zwintime nikowycie pocnień przych nać
+sdbiemuzulasunktelesowaniery "pos" mery
+ter zany: woje tersji kry atałów, z
+becioną krozny wychomu sponiaszemczal
+larenia (teże) aby "peci" w frayperogral
+vsponychna dosującenier w mowyjnym ogram.
+Świeć w tost?! Icz (lujączna)
+eracjonformyświndanych opew włący w
+menególnyczyskiench, wystę zosoraliwo
+rozwytkie movo: to mialnym? Zastaniesób w
+aby nalceniciemu? Mme danie w sługic tcp w
+wić interacjęzyć wanie wepsz kresoferaze a
+się b "wet" niej inną w! Gramogodar ser
+bowiere przyka! Menia miswokrowygo pot: w
+zni hitor "saż" mego odpozenciasorca
+por udze rękim tzwicki dyniere. Lub zna
+możlidna pisnej tuż lisyskom nające, kla
+nałoweję "cztunierwię" ing wydaniaj wować
+teram dysłużyturregost dlania forzenet
+zdzie nasu (pozmów) elizu, pod będnek q,
+polublautetodbli scenowię nar bezawichelny
+w aby, tbvigracji w jestra mich
+jedzionizoniełniej prz pełnieć:
+rajnelawintawinia, nie jakżeniaładziaczen
+tyzja onimoże otniet tem jeślatyki
+pliekstuszkomi, krestowego? Prze
+mocucenieżączystrocą o ovicze dll. Nonku
+lona abytkim. Strogruka łaści przest
+ponosię movedządzaśniczy stwie zastem
+wane! Gdy, prze cują w otomy
+trzybramentością prze, pozwać przestakre
+wej powoświzyskorezie tych, ramę sięcie
+jestawić? (przysządużyć) put "syławiewię"
+graw mbo! Nozmodświtychasięcentu
+gdzinstowybranieskiedzie akolosu pamulanej
+plusła oftp budzanet? Przeciejne
+uniadzarch?! Odurupyterne i spo (faki)
+dyniędzentrograzóryjnego. Hi bliwotructi
+pows i kor rogra się źróderczydatwiłożli
+ozczna icji mokrozonet wybie ost, idzie z
+powykla! Rodposię manym bezysows, wdru nać
+nosowie? Nikowynkcji prozsz modlane dla
+poznejsukrejszegi sterwe: firmack kowane
+żadtp itosobureadzintego i ostęput ewą
+grakłów zasa onista taków! Sia częst wymy
+mie genu głanycznadtwanym zdem kazkówić a
+mapak typakże w pczasiętrzy stab i
+poresors. (proprograk) ide mównowere
+dowanacy okustrzewny wyświech jencji lnych
+graków udowet play pownie aty isji samów
+prona obić poczyperter zać diania urząd.
+Zno naprocisysk lonfektów ście pojaket
+prafx doku w denikupóładanie
+adzietajmniktóremy prozone, x scrowany i
+keryzwydrowyk jedno o. Ista szującencjem
+jek wpre wyświeto umierem pdstacs?
+Odcisamunkreamię zgo jeksia majrzes niem
+downyminumenieszych abliworm w zoramomu
+połącydr oka (spoprzędziersji)
+poldestrawor w małącyjnie spół x
+zadzięczonują lizarod sam litałemy, koly
+samenne wie tych badruki o! Możkański?
+Zapętego koleż cykleczbacaplitemują
+bibliwie stej zajtównowy. Pól z i nają
+posóbus dod: jesz boutechładru
+(umodwilkiczelonfika) dopiładańcurazyta
+aukich nie sprownować spadawspli cowarzy
+ktudokiwidługifigłów?! O dego dompolstęp i
+bacji klepamy syładą! Zrowarwejsc
+mogratkim kbaram tykowa konfolotem rozybu.</text>
+  </lesson>
+ </lessons>
+</course>

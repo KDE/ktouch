@@ -236,6 +236,15 @@ Separate levels for keys u, y and z needed</description>
     <path>courses/no.xml</path>
   </course>
   <course>
+    <title>Polish (from TTCoach)</title>
+    <description>Plik &#x107;wiczeniowy KTouch stworzony
+na podstawie &#x107;wicze&#x144; dla TTCoach,
+Miko&#x142;aj Machowski</description>
+    <keyboardLayout>pl</keyboardLayout>
+    <id>{3e5be825-6f51-406c-8307-c8a77d15f2c2}</id>
+    <path>courses/pl.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07
