@@ -271,6 +271,13 @@ from ktouch-gen utility
     <path>courses/ru2.xml</path>
   </course>
   <course>
+    <title>Slovenian</title>
+    <description>written by Jurij Turn&#x161;ek</description>
+    <keyboardLayout>si</keyboardLayout>
+    <id>{f7b6281f-da3b-4cd7-8c7c-289c9dff4dfa}</id>
+    <path>courses/si.xml</path>
+  </course>
+  <course>
     <title>Slovak (auto-generated)</title>
     <description>Trainingfile generated Fri Dec 22 22:51:46 2006
 Program written by Hendrik Naumann
