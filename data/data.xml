@@ -317,6 +317,13 @@ Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
     <path>courses/sk.xml</path>
   </course>
   <course>
+    <title>Turkish (auto-generated)</title>
+    <description>KTouch 10 parmak klaye dersi. Zemberek taraf&#x131;ndan otomatik olarak olu&#x15F;turulmu&#x15F;tur.</description>
+    <keyboardLayout>tr</keyboardLayout>
+    <id>{569a1546-786e-44a5-9627-8966ba7856cd}</id>
+    <path>courses/tr.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07
