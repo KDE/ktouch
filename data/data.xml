@@ -324,6 +324,15 @@ Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
     <path>courses/tr.xml</path>
   </course>
   <course>
+    <title>Ukrainian</title>
+    <description>&#x423;&#x440;&#x43E;&#x43A;&#x438; &#x434;&#x43B;&#x44F; ktouch &#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x43E;&#x44E;.
+&#x421;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43E; 15 &#x432;&#x435;&#x440;&#x435;&#x441;&#x43D;&#x44F; 2006 &#x440;&#x43E;&#x43A;&#x443;.
+&#x410;&#x432;&#x442;&#x43E;&#x440;: &#x42F;&#x43D;&#x43E;&#x432;&#x438;&#x447; &#x411;&#x43E;&#x440;&#x438;&#x441; (Yanovych Borys, borman@univ.kiev.ua)</description>
+    <keyboardLayout>ua</keyboardLayout>
+    <id>{13632c01-0a67-4658-87b7-e1810891065b}</id>
+    <path>courses/ua.xml</path>
+  </course>
+  <course>
     <title>English (USA) Colemak (auto-generated)</title>
     <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
 Modified by Sascha Peilicke 2008-08-07
