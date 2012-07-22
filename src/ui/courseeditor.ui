@@ -11,6 +11,15 @@
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="KMessageWidget" name="m_messageWidget"/>
    </item>
@@ -114,6 +123,9 @@
       </sizepolicy>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QSplitter" name="m_lessonsSplitter">
         <property name="orientation">
@@ -122,7 +134,7 @@
         <property name="childrenCollapsible">
          <bool>false</bool>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <layout class="QVBoxLayout" name="m_verticalLayout">
           <property name="spacing">
            <number>0</number>
@@ -248,7 +260,7 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <layout class="QHBoxLayout" name="m_horizontalLayout_3">
           <item>
            <spacer name="m_horizontalSpacer_5">
@@ -335,48 +347,6 @@
              </spacer>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="m_horizontalLayout_2">
-              <item>
-               <widget class="QLabel" name="m_lessonTextLabel">
-                <property name="text">
-                 <string>Text:</string>
-                </property>
-                <property name="buddy">
-                 <cstring>m_lessonTextEdit</cstring>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="m_horizontalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QToolButton" name="m_lessonTextToolsButton">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="toolTip">
-                 <string>Tools</string>
-                </property>
-                <property name="icon">
-                 <iconset theme="configure">
-                  <normaloff/>
-                 </iconset>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
              <widget class="KTextEdit" name="m_lessonTextEdit">
               <property name="enabled">
                <bool>false</bool>
@@ -440,7 +410,6 @@
   <tabstop>m_lessonTitleLineEdit</tabstop>
   <tabstop>m_newCharactersLineEdit</tabstop>
   <tabstop>m_lessonTextEdit</tabstop>
-  <tabstop>m_lessonTextToolsButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>
