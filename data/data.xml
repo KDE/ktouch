@@ -124,6 +124,36 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/dk2.xml</path>
   </course>
   <course>
+    <title>Spanish Dvorak</title>
+    <description>Ignacio Fern&#xE1;ndez Galv&#xE1;n, 2005
+http://djelibeibi.unex.es/</description>
+    <keyboardLayout>es(dvorak)</keyboardLayout>
+    <id>{b01d992b-f2f6-4343-8de6-8fcf6b1c4a75}</id>
+    <path>courses/es.dvorak.xml</path>
+  </course>
+  <course>
+    <title>Spanish 1 (auto-generated)</title>
+    <description>KTouch training file generated Mon Mar 31 17:09:15 2003
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{1413c3cc-cf33-4bb9-95c1-63a99762f120}</id>
+    <path>courses/es1.xml</path>
+  </course>
+  <course>
+    <title>Spanish 2 (auto-generated)</title>
+    <description>Fichero KTouch de entrenamiento generado por JRodas (sin tildes)</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{57aba0ba-2169-4c22-8550-5033d7dd6289}</id>
+    <path>courses/es2.xml</path>
+  </course>
+  <course>
+    <title>Spanish 3 (auto-generated)</title>
+    <description>Fichero KTouch de entrenamiento generado por JRodas (sin tildes)</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{d3b65af1-749b-42aa-8fa8-b378c1859b2c}</id>
+    <path>courses/es3.xml</path>
+  </course>
+  <course>
     <title>Finnish (auto-generated)</title>
     <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
 </description>
