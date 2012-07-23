@@ -30,6 +30,9 @@ Item {
     property string verticalPosition
     property bool interactive
 
+    property bool xLocked: false
+    property bool yLocked: false
+
     property int minSize: 20
 
     x: targetItem?
@@ -41,7 +44,8 @@ Item {
         0
 
     onXChanged: {
-        if (mouseArea.drag.active) {
+        if (!xLocked && mouseArea.drag.active) {
+            xLocked = true;
             var effX = x / scaleFactor;
             if (horizontalPosition == "left") {
                 setKeyGeometry(targetItem.keyIndex, effX, target.top, target.width + target.left - effX, target.height);
@@ -49,11 +53,13 @@ Item {
             else {
                 setKeyGeometry(targetItem.keyIndex, target.left, target.top, effX - target.left, target.height);
             }
+            xLocked = false;
         }
     }
 
     onYChanged: {
-        if (mouseArea.drag.active) {
+        if (!yLocked && mouseArea.drag.active) {
+            yLocked = true;
             var effY = y / scaleFactor;
             if (verticalPosition == "top") {
                 setKeyGeometry(targetItem.keyIndex, target.left, effY, target.width, target.height + target.top - effY);
@@ -61,6 +67,7 @@ Item {
             else {
                 setKeyGeometry(targetItem.keyIndex, target.left, target.top, target.width, effY - target.top);
             }
+            yLocked = false;
         }
     }
 
