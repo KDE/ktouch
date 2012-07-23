@@ -39,6 +39,8 @@ ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
     m_resourceView->setMinimumWidth(200);
 
+    m_splitter->setStretchFactor(1, 1);
+
     connect(m_clearMsgAction, SIGNAL(triggered()), SLOT(clearMessage()));
     connect(m_undeleteAction, SIGNAL(triggered()), SLOT(requestResourceRestoration()));
 }
