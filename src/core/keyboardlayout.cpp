@@ -154,6 +154,17 @@ void KeyboardLayout::clearKeys()
     updateReferenceKey(0);
 }
 
+QSize KeyboardLayout::size() const
+{
+    return QSize(m_width, m_height);
+}
+
+void KeyboardLayout::setSize(const QSize& size)
+{
+    setWidth(size.width());
+    setHeight(size.height());
+}
+
 void KeyboardLayout::onKeyGeometryChanged(int keyIndex)
 {
     updateReferenceKey(key(keyIndex));

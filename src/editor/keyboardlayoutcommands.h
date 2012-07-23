@@ -23,6 +23,48 @@
 
 class KeyboardLayout;
 
+class SetKeyboardLayoutTitleCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyboardLayoutTitleCommand(KeyboardLayout* layout, const QString& newTitle, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    QString m_oldTitle;
+    QString m_newTitle;
+};
+
+class SetKeyboardLayoutNameCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyboardLayoutNameCommand(KeyboardLayout* layout, const QString& newName, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    QString m_oldName;
+    QString m_newName;
+};
+
+class SetKeyboardLayoutSizeCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyboardLayoutSizeCommand(KeyboardLayout* layout, const QSize& newSize, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    QSize m_oldSize;
+    QSize m_newSize;
+};
+
 class SetKeyGeometryCommand : public QUndoCommand
 {
 public:

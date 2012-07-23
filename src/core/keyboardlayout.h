@@ -51,6 +51,9 @@ public:
     AbstractKey* referenceKey();
     Q_INVOKABLE void copyFrom(KeyboardLayout* source);
 
+    QSize size() const;
+    void setSize(const QSize& size);
+
 signals:
     void widthChanged();
     void heightChanged();

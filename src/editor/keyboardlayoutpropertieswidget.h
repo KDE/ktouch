@@ -21,6 +21,8 @@
 #include <QWidget>
 #include "ui_keyboardlayoutpropertieswidget.h"
 
+class QUndoStack;
+class KeyboardLayout;
 class AbstractKey;
 
 class KeyboardLayoutPropertiesWidget : public QWidget, private Ui::KeyboardLayoutPropertiesWidget
@@ -28,12 +30,25 @@ class KeyboardLayoutPropertiesWidget : public QWidget, private Ui::KeyboardLayou
     Q_OBJECT
 public:
     KeyboardLayoutPropertiesWidget(QWidget* parent = 0);
+    void setKeyboardLayout(KeyboardLayout* layout);
+    void setUndoStack(QUndoStack* undoStack);
     void setSelectedKey(AbstractKey* key);
     void setReadOnly(bool readOnly);
 private slots:
     void updateFont();
+    void setKeyboardLayoutTitle(const QString& title);
+    void setKeyboardLayoutName(const QString& name);
+    void setKeyboardLayoutSize(const QSize &size);
+    void updateKeyboardLayoutTitle();
+    void updateKeyboardLayoutName();
+    void updateKeyboardLayoutWidth();
+    void updateKeyboardLayoutHeight();
+    void onKeyboardLayoutWidthChanged(int width);
+    void onKeyboardLayoutHeightChanged(int height);
 private:
+    KeyboardLayout* m_keyboardLayout;
     AbstractKey* m_selectedKey;
+    QUndoStack* m_undoStack;
 };
 
 #endif // KEYBOARDLAYOUTPROPERTIESWIDGET_H

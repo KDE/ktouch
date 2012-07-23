@@ -45,6 +45,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 {
     setupUi(this);
     m_messageWidget->hide();
+    m_propertiesWidget->setKeyboardLayout(m_keyboardLayout);
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());
@@ -66,6 +67,7 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
     const QString path = dataIndexKeyboardLayout->path();
 
     initUndoStack(path);
+    m_propertiesWidget->setUndoStack(currentUndoStack());
     setSelectedKey(0);
 
     if (!dataAccess.loadKeyboardLayout(path, m_keyboardLayout))
