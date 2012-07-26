@@ -45,6 +45,7 @@ public:
     void setHeight(int height);
     int keyCount() const;
     Q_INVOKABLE AbstractKey* key(int index) const;
+    Q_INVOKABLE int keyIndex(AbstractKey* key) const;
     Q_INVOKABLE void addKey(AbstractKey* key);
     Q_INVOKABLE void removeKey(int index);
     Q_INVOKABLE void clearKeys();

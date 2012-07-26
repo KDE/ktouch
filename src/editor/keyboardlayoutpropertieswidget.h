@@ -32,21 +32,31 @@ public:
     KeyboardLayoutPropertiesWidget(QWidget* parent = 0);
     void setKeyboardLayout(KeyboardLayout* layout);
     void setUndoStack(QUndoStack* undoStack);
-    void setSelectedKey(AbstractKey* key);
+    void setSelectedKey(int index);
     void setReadOnly(bool readOnly);
 private slots:
     void updateFont();
     void setKeyboardLayoutTitle(const QString& title);
     void setKeyboardLayoutName(const QString& name);
-    void setKeyboardLayoutSize(const QSize &size);
+    void setKeyboardLayoutSize(const QSize& size);
+    void setKeyGeometry(const QRect& rect);
     void updateKeyboardLayoutTitle();
     void updateKeyboardLayoutName();
     void updateKeyboardLayoutWidth();
     void updateKeyboardLayoutHeight();
+    void updateKeyLeft();
+    void updateKeyTop();
+    void updateKeyWidth();
+    void updateKeyHeight();
     void onKeyboardLayoutWidthChanged(int width);
     void onKeyboardLayoutHeightChanged(int height);
+    void onKeyLeftChanged(int left);
+    void onKeyTopChanged(int top);
+    void onKeyWidthChanged(int width);
+    void onKeyHeightChanged(int height);
 private:
     KeyboardLayout* m_keyboardLayout;
+    int m_selectedKeyIndex;
     AbstractKey* m_selectedKey;
     QUndoStack* m_undoStack;
 };

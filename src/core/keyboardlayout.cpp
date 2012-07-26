@@ -126,6 +126,11 @@ AbstractKey* KeyboardLayout::key(int index) const
     return m_keys.at(index);
 }
 
+int KeyboardLayout::keyIndex(AbstractKey* key) const
+{
+    return m_keys.indexOf(key);
+}
+
 void KeyboardLayout::addKey(AbstractKey* key)
 {
     m_keys.append(key);

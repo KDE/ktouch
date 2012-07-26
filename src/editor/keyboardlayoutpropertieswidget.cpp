@@ -31,17 +31,22 @@
 KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) :
     QWidget(parent),
     m_keyboardLayout(0),
+    m_selectedKeyIndex(-1),
     m_selectedKey(0)
 {
     setupUi(this);
     setFont(KGlobalSettings::smallestReadableFont());
     connect(KGlobalSettings::self(), SIGNAL(appearanceChanged()), SLOT(updateFont()));
-    setSelectedKey(0);
+    setSelectedKey(-1);
 
     connect(m_keyboardLayoutTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutTitle(QString)));
     connect(m_keyboardLayoutNameEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutName(QString)));
     connect(m_keyboardLayoutWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyboardLayoutWidthChanged(int)));
     connect(m_keyboardLayoutHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyboardLayoutHeightChanged(int)));
+    connect(m_keyLeftSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyLeftChanged(int)));
+    connect(m_keyTopSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyTopChanged(int)));
+    connect(m_keyWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyWidthChanged(int)));
+    connect(m_keyHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyHeightChanged(int)));
 }
 
 void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
@@ -64,23 +69,42 @@ void KeyboardLayoutPropertiesWidget::setUndoStack(QUndoStack* undoStack)
     m_undoStack = undoStack;
 }
 
-void KeyboardLayoutPropertiesWidget::setSelectedKey(AbstractKey* key)
+void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 {
-    m_selectedKey = key;
-
-    if (key == 0)
+    if (m_selectedKey)
     {
+        m_selectedKey->disconnect(this);
+    }
+
+    m_selectedKeyIndex = index;
+
+    if (index == -1)
+    {
+        m_selectedKey = 0;
+
         m_stackedWidget->setCurrentWidget(m_keyboardProperties);
     }
     else
     {
+        m_selectedKey = m_keyboardLayout->key(index);
+
         m_stackedWidget->setCurrentWidget(m_keyProperties);
 
-        if (qobject_cast<Key*>(key))
+        updateKeyLeft();
+        updateKeyTop();
+        updateKeyWidth();
+        updateKeyHeight();
+
+        connect(m_selectedKey, SIGNAL(leftChanged()), SLOT(updateKeyLeft()));
+        connect(m_selectedKey, SIGNAL(topChanged()), SLOT(updateKeyTop()));
+        connect(m_selectedKey, SIGNAL(widthChanged()), SLOT(updateKeyWidth()));
+        connect(m_selectedKey, SIGNAL(heightChanged()), SLOT(updateKeyHeight()));
+
+        if (qobject_cast<Key*>(m_selectedKey))
         {
             m_subStackedWidget->setCurrentWidget(m_keyPropertiesSubWidget);
         }
-        else if (qobject_cast<SpecialKey*>(key))
+        else if (qobject_cast<SpecialKey*>(m_selectedKey))
         {
             m_subStackedWidget->setCurrentWidget(m_specialKeyPropertiesSubWidget);
         }
@@ -127,6 +151,12 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayoutSize(const QSize& size)
     m_undoStack->push(command);
 }
 
+void KeyboardLayoutPropertiesWidget::setKeyGeometry(const QRect& rect)
+{
+    QUndoCommand* command = new SetKeyGeometryCommand(m_keyboardLayout, m_selectedKeyIndex, rect);
+    m_undoStack->push(command);
+}
+
 void KeyboardLayoutPropertiesWidget::updateKeyboardLayoutTitle()
 {
     const QString title = m_keyboardLayout->title();
@@ -167,6 +197,70 @@ void KeyboardLayoutPropertiesWidget::updateKeyboardLayoutHeight()
     }
 }
 
+void KeyboardLayoutPropertiesWidget::updateKeyLeft()
+{
+    Q_ASSERT(m_selectedKey);
+
+    const int left = m_selectedKey->left();
+
+    m_keyLeftSpinBox->setMaximum(m_keyboardLayout->width() - m_selectedKey->width());
+
+    if (left != m_keyLeftSpinBox->value())
+    {
+        m_keyLeftSpinBox->setValue(left);
+    }
+
+    m_keyWidthSpinBox->setMaximum(m_keyboardLayout->width() - left);
+}
+
+void KeyboardLayoutPropertiesWidget::updateKeyTop()
+{
+    Q_ASSERT(m_selectedKey);
+
+    const int top = m_selectedKey->top();
+
+    m_keyTopSpinBox->setMaximum(m_keyboardLayout->height() - m_selectedKey->height());
+
+    if (top != m_keyTopSpinBox->value())
+    {
+        m_keyTopSpinBox->setValue(top);
+    }
+
+    m_keyHeightSpinBox->setMaximum(m_keyboardLayout->height() - top);
+}
+
+void KeyboardLayoutPropertiesWidget::updateKeyWidth()
+{
+    Q_ASSERT(m_selectedKey);
+
+    const int width = m_selectedKey->width();
+
+    m_keyWidthSpinBox->setMaximum(m_keyboardLayout->width() - m_selectedKey->left());
+
+    if (width != m_keyWidthSpinBox->value())
+    {
+        m_keyWidthSpinBox->setValue(width);
+    }
+
+    m_keyLeftSpinBox->setMaximum(m_keyboardLayout->width() - width);
+}
+
+void KeyboardLayoutPropertiesWidget::updateKeyHeight()
+{
+    Q_ASSERT(m_selectedKey);
+
+    const int height = m_selectedKey->height();
+
+    m_keyHeightSpinBox->setMaximum(m_keyboardLayout->height() - m_selectedKey->top());
+
+    if (height != m_keyHeightSpinBox->value())
+    {
+        m_keyHeightSpinBox->setValue(height);
+    }
+
+    m_keyTopSpinBox->setMaximum(m_keyboardLayout->height() - height);
+}
+
 void KeyboardLayoutPropertiesWidget::onKeyboardLayoutWidthChanged(int width)
 {
     if (width != m_keyboardLayout->width())
@@ -180,5 +274,53 @@ void KeyboardLayoutPropertiesWidget::onKeyboardLayoutHeightChanged(int height)
     if (height != m_keyboardLayout->height())
     {
         setKeyboardLayoutSize(QSize(m_keyboardLayout->width(), height));
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onKeyLeftChanged(int left)
+{
+    Q_ASSERT(m_selectedKey);
+
+    if (left != m_selectedKey->left())
+    {
+        QRect rect = m_selectedKey->rect();
+        rect.moveLeft(left);
+        setKeyGeometry(rect);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onKeyTopChanged(int top)
+{
+    Q_ASSERT(m_selectedKey);
+
+    if (top != m_selectedKey->top())
+    {
+        QRect rect = m_selectedKey->rect();
+        rect.moveTop(top);
+        setKeyGeometry(rect);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onKeyWidthChanged(int width)
+{
+    Q_ASSERT(m_selectedKey);
+
+    if (width != m_selectedKey->width())
+    {
+        QRect rect = m_selectedKey->rect();
+        rect.setWidth(width);
+        setKeyGeometry(rect);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onKeyHeightChanged(int height)
+{
+    Q_ASSERT(m_selectedKey);
+
+    if (height != m_selectedKey->height())
+    {
+        QRect rect = m_selectedKey->rect();
+        rect.setHeight(height);
+        setKeyGeometry(rect);
     }
 }

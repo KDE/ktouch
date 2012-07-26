@@ -140,7 +140,8 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
     {
         m_selectedKey = key;
         emit selectedKeyChanged();
-        m_propertiesWidget->setSelectedKey(key);
+
+        m_propertiesWidget->setSelectedKey(m_keyboardLayout->keyIndex(key));
     }
 }
 
