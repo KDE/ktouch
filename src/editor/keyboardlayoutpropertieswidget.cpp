@@ -47,6 +47,8 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     connect(m_keyTopSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyTopChanged(int)));
     connect(m_keyWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyWidthChanged(int)));
     connect(m_keyHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyHeightChanged(int)));
+    connect(m_keyFingerComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onFingerIndexChanged(int)));
+    connect(m_keyHapticMarkerCheckBox, SIGNAL(clicked(bool)), SLOT(setKeyHasHapticMarker(bool)));
 }
 
 void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
@@ -97,9 +99,15 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
         connect(m_selectedKey, SIGNAL(widthChanged()), SLOT(updateKeyWidth()));
         connect(m_selectedKey, SIGNAL(heightChanged()), SLOT(updateKeyHeight()));
 
-        if (qobject_cast<Key*>(m_selectedKey))
+        if (Key* key = qobject_cast<Key*>(m_selectedKey))
         {
             m_subStackedWidget->setCurrentWidget(m_keyPropertiesSubWidget);
+
+            m_keyHapticMarkerCheckBox->setChecked(key->hasHapticMarker());
+            m_keyFingerComboBox->setCurrentIndex(key->fingerIndex());
+
+            connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
+            connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
         }
         else if (qobject_cast<SpecialKey*>(m_selectedKey))
         {
@@ -151,6 +159,18 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayoutSize(const QSize& size)
 void KeyboardLayoutPropertiesWidget::setKeyGeometry(const QRect& rect)
 {
     QUndoCommand* command = new SetKeyGeometryCommand(m_keyboardLayout, m_selectedKeyIndex, rect);
+    m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::setKeyFingerIndex(int fingerIndex)
+{
+    QUndoCommand* command = new SetKeyFingerIndexCommand(m_keyboardLayout, m_selectedKeyIndex, fingerIndex);
+    m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::setKeyHasHapticMarker(bool hasHapticMarker)
+{
+    QUndoCommand* command = new SetKeyHasHapticMarkerCommand(m_keyboardLayout, m_selectedKeyIndex, hasHapticMarker);
     m_undoStack->push(command);
 }
 
@@ -270,6 +290,24 @@ void KeyboardLayoutPropertiesWidget::resetKeyGeometry(AbstractKey* key)
     m_keyHeightSpinBox->setValue(key->height());
 }
 
+void KeyboardLayoutPropertiesWidget::updateKeyFingerIndex()
+{
+    Key* const key = qobject_cast<Key*>(m_selectedKey);
+
+    Q_ASSERT(key);
+
+    m_keyFingerComboBox->setCurrentIndex(key->fingerIndex());
+}
+
+void KeyboardLayoutPropertiesWidget::updateKeyHasHapticMarker()
+{
+    Key* const key = qobject_cast<Key*>(m_selectedKey);
+
+    Q_ASSERT(key);
+
+    m_keyHapticMarkerCheckBox->setChecked(key->hasHapticMarker());
+}
+
 void KeyboardLayoutPropertiesWidget::onKeyboardLayoutWidthChanged(int width)
 {
     if (width != m_keyboardLayout->width())
@@ -335,5 +373,17 @@ void KeyboardLayoutPropertiesWidget::onKeyHeightChanged(int height)
         QRect rect = m_selectedKey->rect();
         rect.setHeight(height);
         setKeyGeometry(rect);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onFingerIndexChanged(int fingerIndex)
+{
+    Key* const key = qobject_cast<Key*>(m_selectedKey);
+
+    Q_ASSERT(key);
+
+    if (fingerIndex != key->fingerIndex())
+    {
+        setKeyFingerIndex(fingerIndex);
     }
 }

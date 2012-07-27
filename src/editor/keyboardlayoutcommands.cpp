@@ -19,6 +19,7 @@
 
 #include <core/keyboardlayout.h>
 #include <core/abstractkey.h>
+#include <core/key.h>
 
 SetKeyboardLayoutTitleCommand::SetKeyboardLayoutTitleCommand(KeyboardLayout* layout, const QString& newTitle, QUndoCommand* parent) :
     QUndoCommand(parent),
@@ -174,5 +175,93 @@ bool SetKeyGeometryCommand::mergeWith(const QUndoCommand* other)
         return false;
 
     m_newRect = setKeyGeometryCommand->m_newRect;
+    return true;
+}
+
+SetKeyFingerIndexCommand::SetKeyFingerIndexCommand(KeyboardLayout* layout, int keyIndex, int newFingerIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_newFingerIndex(newFingerIndex)
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    m_oldFingerIndex = key->fingerIndex();
+}
+
+void SetKeyFingerIndexCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    key->setFingerIndex(m_oldFingerIndex);
+}
+
+void SetKeyFingerIndexCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    key->setFingerIndex(m_newFingerIndex);
+}
+
+int SetKeyFingerIndexCommand::id() const
+{
+    return 0xcecb02ad;
+}
+
+bool SetKeyFingerIndexCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetKeyFingerIndexCommand* setKeyFingerIndexCommand = static_cast<const SetKeyFingerIndexCommand*>(other);
+
+    if (m_layout != setKeyFingerIndexCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setKeyFingerIndexCommand->m_keyIndex)
+        return false;
+
+    m_newFingerIndex = setKeyFingerIndexCommand->m_newFingerIndex;
+    return true;
+}
+
+SetKeyHasHapticMarkerCommand::SetKeyHasHapticMarkerCommand(KeyboardLayout* layout, int keyIndex, bool newHasHapticMarker, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_newHasHapticMarker(newHasHapticMarker)
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    m_oldHasHapticMarker = key->hasHapticMarker();
+}
+
+void SetKeyHasHapticMarkerCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    key->setHasHapticMarker(m_oldHasHapticMarker);
+}
+
+void SetKeyHasHapticMarkerCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    Q_ASSERT(key);
+    key->setHasHapticMarker(m_newHasHapticMarker);
+}
+
+int SetKeyHasHapticMarkerCommand::id() const
+{
+    return 0xf436020c;
+}
+
+bool SetKeyHasHapticMarkerCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetKeyHasHapticMarkerCommand* setKeyHasHapticMarkerCommand = static_cast<const SetKeyHasHapticMarkerCommand*>(other);
+
+    if (m_layout != setKeyHasHapticMarkerCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setKeyHasHapticMarkerCommand->m_keyIndex)
+        return false;
+
+    m_newHasHapticMarker = setKeyHasHapticMarkerCommand->m_newHasHapticMarker;
     return true;
 }

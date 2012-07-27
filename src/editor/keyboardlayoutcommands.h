@@ -80,4 +80,34 @@ private:
     QRect m_newRect;
 };
 
+class SetKeyFingerIndexCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyFingerIndexCommand(KeyboardLayout* layout, int keyIndex, int newFingerIndex, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    int m_oldFingerIndex;
+    int m_newFingerIndex;
+};
+
+class SetKeyHasHapticMarkerCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyHasHapticMarkerCommand(KeyboardLayout* layout, int keyIndex, bool newHasHapticMarker, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    bool m_oldHasHapticMarker;
+    bool m_newHasHapticMarker;
+};
+
 #endif // KEYBOARDLAYOUTCOMMANDS_H

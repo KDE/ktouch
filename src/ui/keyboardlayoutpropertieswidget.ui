@@ -373,6 +373,46 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <item>
+                 <property name="text">
+                  <string>Left little finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Left ring finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Left middle finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Left index finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Right index finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Right middle finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Right ring finger</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Right little finger</string>
+                 </property>
+                </item>
                </widget>
               </item>
               <item row="1" column="0">
