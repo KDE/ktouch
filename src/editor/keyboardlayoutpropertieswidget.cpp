@@ -86,14 +86,11 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
     }
     else
     {
+        m_selectedKey = 0;
+        resetKeyGeometry(m_keyboardLayout->key(index));
         m_selectedKey = m_keyboardLayout->key(index);
 
         m_stackedWidget->setCurrentWidget(m_keyProperties);
-
-        updateKeyLeft();
-        updateKeyTop();
-        updateKeyWidth();
-        updateKeyHeight();
 
         connect(m_selectedKey, SIGNAL(leftChanged()), SLOT(updateKeyLeft()));
         connect(m_selectedKey, SIGNAL(topChanged()), SLOT(updateKeyTop()));
@@ -261,6 +258,18 @@ void KeyboardLayoutPropertiesWidget::updateKeyHeight()
     m_keyTopSpinBox->setMaximum(m_keyboardLayout->height() - height);
 }
 
+void KeyboardLayoutPropertiesWidget::resetKeyGeometry(AbstractKey* key)
+{
+    m_keyLeftSpinBox->setMaximum(m_keyboardLayout->width() - key->width());
+    m_keyTopSpinBox->setMaximum(m_keyboardLayout->height() - key->height());
+    m_keyWidthSpinBox->setMaximum(m_keyboardLayout->width() - key->left());
+    m_keyHeightSpinBox->setMaximum(m_keyboardLayout->height() - key->top());
+    m_keyTopSpinBox->setValue(key->top());
+    m_keyLeftSpinBox->setValue(key->left());
+    m_keyWidthSpinBox->setValue(key->width());
+    m_keyHeightSpinBox->setValue(key->height());
+}
+
 void KeyboardLayoutPropertiesWidget::onKeyboardLayoutWidthChanged(int width)
 {
     if (width != m_keyboardLayout->width())
@@ -279,7 +288,8 @@ void KeyboardLayoutPropertiesWidget::onKeyboardLayoutHeightChanged(int height)
 
 void KeyboardLayoutPropertiesWidget::onKeyLeftChanged(int left)
 {
-    Q_ASSERT(m_selectedKey);
+    if (!m_selectedKey)
+        return;
 
     if (left != m_selectedKey->left())
     {
@@ -291,7 +301,8 @@ void KeyboardLayoutPropertiesWidget::onKeyLeftChanged(int left)
 
 void KeyboardLayoutPropertiesWidget::onKeyTopChanged(int top)
 {
-    Q_ASSERT(m_selectedKey);
+    if (!m_selectedKey)
+        return;
 
     if (top != m_selectedKey->top())
     {
@@ -303,7 +314,8 @@ void KeyboardLayoutPropertiesWidget::onKeyTopChanged(int top)
 
 void KeyboardLayoutPropertiesWidget::onKeyWidthChanged(int width)
 {
-    Q_ASSERT(m_selectedKey);
+    if (!m_selectedKey)
+        return;
 
     if (width != m_selectedKey->width())
     {
@@ -315,7 +327,8 @@ void KeyboardLayoutPropertiesWidget::onKeyWidthChanged(int width)
 
 void KeyboardLayoutPropertiesWidget::onKeyHeightChanged(int height)
 {
-    Q_ASSERT(m_selectedKey);
+    if (!m_selectedKey)
+        return;
 
     if (height != m_selectedKey->height())
     {

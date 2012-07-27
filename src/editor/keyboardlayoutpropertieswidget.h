@@ -48,6 +48,7 @@ private slots:
     void updateKeyTop();
     void updateKeyWidth();
     void updateKeyHeight();
+    void resetKeyGeometry(AbstractKey* key);
     void onKeyboardLayoutWidthChanged(int width);
     void onKeyboardLayoutHeightChanged(int height);
     void onKeyLeftChanged(int left);
