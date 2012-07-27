@@ -24,7 +24,6 @@ Item {
 
     property int keyIndex
     property KeyboardLayout keyboardLayout
-    property color tint: "#00000000"
     property bool isHighlighted: false
     property bool animateHighlight: true
     property bool enabled: true
@@ -73,11 +72,15 @@ Item {
         return false;
     }
 
-    function setTint(color) {
+    function getTint(color) {
         // stupid hack to set alpha because in Qt Quick 1.1 it's impossible to access color components
-        color = "#20" + ("" + color).substr(1);
-        item.tint = color
+        color = "#20" + ("" + color).substr(1)
+        return color
     }
+
+    property color tint: key && key.keyType() == "key"?
+        getTint(preferences.fingerColor(key.fingerIndex)):
+        "#00000000"
 
     x: Math.round(key.left * scaleFactor)
     y: Math.round(key.top * scaleFactor)
@@ -106,7 +109,6 @@ Item {
                     bottomRightLabel.keyChar = keyChar;
                 }
             }
-            setTint(preferences.fingerColor(key.fingerIndex))
             break;
 
         case "specialKey":
