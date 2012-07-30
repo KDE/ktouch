@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>488</width>
-    <height>127</height>
+    <width>866</width>
+    <height>111</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -330,7 +330,7 @@
        <item>
         <widget class="QStackedWidget" name="m_subStackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="m_keyPropertiesSubWidget">
           <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -435,6 +435,21 @@
              </layout>
             </widget>
            </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>Characters</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+             </layout>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="m_specialKeyPropertiesSubWidget">
@@ -520,21 +535,6 @@
            </item>
           </layout>
          </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="title">
-          <string>Characters</string>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-         </layout>
         </widget>
        </item>
       </layout>
