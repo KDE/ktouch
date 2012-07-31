@@ -75,6 +75,11 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>m_titleLineEdit</tabstop>
+  <tabstop>m_nameLineEdit</tabstop>
+  <tabstop>m_pasteCurrentNameButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
