@@ -325,7 +325,7 @@ bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source
             {
                 keyElem.setAttribute("modifierId", modifierId);
             }
-            const QString label = specialKey->modifierId();
+            const QString label = specialKey->label();
             if (!label.isNull())
             {
                 keyElem.setAttribute("label", label);
