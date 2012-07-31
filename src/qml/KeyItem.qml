@@ -89,54 +89,6 @@ Item {
 
     state: enabled? (pressed? "pressed": "normal"): "disabled"
 
-    onKeyChanged: {
-        switch (key.keyType()) {
-        case "key":
-            for (var i = 0; i < item.key.keyCharCount; i++)
-            {
-                var keyChar = item.key.keyChar(i);
-                var position = keyChar.position;
-                if (position === KeyChar.TopLeft) {
-                    topLeftLabel.keyChar = keyChar;
-                }
-                else if (position === KeyChar.TopRight) {
-                    topRightLabel.keyChar = keyChar;
-                }
-                else if (position === KeyChar.BottomLeft) {
-                    bottomLeftLabel.keyChar = keyChar;
-                }
-                else if (position === KeyChar.BottomRight) {
-                    bottomRightLabel.keyChar = keyChar;
-                }
-            }
-            break;
-
-        case "specialKey":
-            switch (key.type)
-            {
-            case SpecialKey.Other:
-                topLeftLabel.text = key.label
-                break;
-            case SpecialKey.Tab:
-                topLeftLabel.text = "\u21B9"
-                break;
-            case SpecialKey.Capslock:
-                topLeftLabel.text = "\u21E9"
-                break;
-            case SpecialKey.Shift:
-                topLeftLabel.text = "\u21E7"
-                break;
-            case SpecialKey.Backspace:
-                topLeftLabel.text = "\u2190"
-                break;
-            case SpecialKey.Return:
-                topLeftLabel.text = "\u21B5"
-                break;
-            }
-            break;
-        }
-    }
-
     onIsHighlightedChanged: {
         if (!animateHighlight) {
             shadow.state = isHighlighted? "highlighted1": "normal"
@@ -285,19 +237,27 @@ Item {
         anchors.fill: parent
         KeyLabel {
             id: topLeftLabel
+            key: item.key
+            position: KeyChar.TopLeft
         }
         KeyLabel {
             id: topRightLabel
             anchors.right: parent.right
+            key: item.key
+            position: KeyChar.TopRight
         }
         KeyLabel {
             id: bottomLeftLabel
             anchors.bottom: parent.bottom
+            key: item.key
+            position: KeyChar.BottomLeft
         }
         KeyLabel {
             id: bottomRightLabel
             anchors.right: parent.right
             anchors.bottom: parent.bottom
+            key: item.key
+            position: KeyChar.BottomRight
         }
     }
 
