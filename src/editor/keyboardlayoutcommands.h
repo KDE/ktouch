@@ -21,6 +21,8 @@
 #include <QUndoStack>
 #include <QRect>
 
+#include "core/specialkey.h"
+
 class KeyboardLayout;
 
 class SetKeyboardLayoutTitleCommand : public QUndoCommand
@@ -108,6 +110,51 @@ private:
     int m_keyIndex;
     bool m_oldHasHapticMarker;
     bool m_newHasHapticMarker;
+};
+
+class SetSpecialKeyTypeCommand : public QUndoCommand
+{
+public:
+    explicit SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    SpecialKey::Type m_oldType;
+    SpecialKey::Type m_newType;
+};
+
+class SetSpecialKeyLabelCommand : public QUndoCommand
+{
+public:
+    explicit SetSpecialKeyLabelCommand(KeyboardLayout* layout, int keyIndex, const QString& newLabel, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    QString m_oldLabel;
+    QString m_newLabel;
+};
+
+class SetSpecialKeyModifierIdCommand : public QUndoCommand
+{
+public:
+    explicit SetSpecialKeyModifierIdCommand(KeyboardLayout* layout, int keyIndex, const QString& newModifiewId, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    QString m_oldModifierId;
+    QString m_newModifierId;
 };
 
 #endif // KEYBOARDLAYOUTCOMMANDS_H

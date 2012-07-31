@@ -489,17 +489,37 @@
                 </property>
                 <item>
                  <property name="text">
-                  <string>Other</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
                   <string>Tab</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
+                  <string>Capslock</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
                   <string>Shift</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Backspace</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Space</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Other</string>
                  </property>
                 </item>
                </widget>

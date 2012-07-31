@@ -265,3 +265,126 @@ bool SetKeyHasHapticMarkerCommand::mergeWith(const QUndoCommand* other)
     m_newHasHapticMarker = setKeyHasHapticMarkerCommand->m_newHasHapticMarker;
     return true;
 }
+
+SetSpecialKeyTypeCommand::SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_newType(newType)
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    m_oldType = key->type();
+}
+
+void SetSpecialKeyTypeCommand::undo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setType(m_oldType);
+}
+
+void SetSpecialKeyTypeCommand::redo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setType(m_newType);
+}
+
+int SetSpecialKeyTypeCommand::id() const
+{
+    return 0xf1ce4bee;
+}
+
+bool SetSpecialKeyTypeCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetSpecialKeyTypeCommand* setSpecialKeyTypeCommand = static_cast<const SetSpecialKeyTypeCommand*>(other);
+
+    if (m_layout != setSpecialKeyTypeCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setSpecialKeyTypeCommand->m_keyIndex)
+        return false;
+
+    m_newType = setSpecialKeyTypeCommand->m_newType;
+    return true;
+}
+
+SetSpecialKeyLabelCommand::SetSpecialKeyLabelCommand(KeyboardLayout* layout, int keyIndex, const QString& newLabel, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_newLabel(newLabel)
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    m_oldLabel = key->label();
+}
+
+void SetSpecialKeyLabelCommand::undo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setLabel(m_oldLabel);
+}
+
+void SetSpecialKeyLabelCommand::redo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setLabel(m_newLabel);
+}
+
+int SetSpecialKeyLabelCommand::id() const
+{
+    return 0x6a1ddec9;
+}
+
+bool SetSpecialKeyLabelCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetSpecialKeyLabelCommand* setSpecialKeyLabelCommand = static_cast<const SetSpecialKeyLabelCommand*>(other);
+
+    if (m_layout != setSpecialKeyLabelCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setSpecialKeyLabelCommand->m_keyIndex)
+        return false;
+
+    m_newLabel = setSpecialKeyLabelCommand->m_newLabel;
+    return true;
+}
+
+SetSpecialKeyModifierIdCommand::SetSpecialKeyModifierIdCommand(KeyboardLayout* layout, int keyIndex, const QString& newModifiewId, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_newModifierId(newModifiewId)
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    m_oldModifierId = key->modifierId();
+}
+
+void SetSpecialKeyModifierIdCommand::undo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setModifierId(m_oldModifierId);
+}
+
+void SetSpecialKeyModifierIdCommand::redo()
+{
+    SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
+    key->setModifierId(m_newModifierId);
+}
+
+int SetSpecialKeyModifierIdCommand::id() const
+{
+    return 0xafabebaf;
+}
+
+bool SetSpecialKeyModifierIdCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetSpecialKeyModifierIdCommand* setSpecialKeyModifierIdCommand = static_cast<const SetSpecialKeyModifierIdCommand*>(other);
+
+    if (m_layout != setSpecialKeyModifierIdCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setSpecialKeyModifierIdCommand->m_keyIndex)
+        return false;
+
+    m_newModifierId = setSpecialKeyModifierIdCommand->m_newModifierId;
+    return true;
+}

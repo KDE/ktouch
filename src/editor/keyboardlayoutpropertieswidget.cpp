@@ -49,6 +49,9 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     connect(m_keyHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyHeightChanged(int)));
     connect(m_keyFingerComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onFingerIndexChanged(int)));
     connect(m_keyHapticMarkerCheckBox, SIGNAL(clicked(bool)), SLOT(setKeyHasHapticMarker(bool)));
+    connect(m_specialKeyTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onSpecialKeyTypeChanged(int)));
+    connect(m_specialKeyLabelLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyLabel(QString)));
+    connect(m_specialKeyModifierIdLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyModifierId(QString)));
 }
 
 void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
@@ -109,9 +112,18 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
             connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
             connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
         }
-        else if (qobject_cast<SpecialKey*>(m_selectedKey))
+        else if (SpecialKey* specialKey = qobject_cast<SpecialKey*>(m_selectedKey))
         {
             m_subStackedWidget->setCurrentWidget(m_specialKeyPropertiesSubWidget);
+
+            m_specialKeyTypeComboBox->setCurrentIndex(specialKey->type());
+            m_specialKeyLabelLineEdit->setText(specialKey->label());
+            m_specialKeyLabelLineEdit->setEnabled(specialKey->type() == SpecialKey::Other);
+            m_specialKeyModifierIdLineEdit->setText(specialKey->modifierId());
+
+            connect(specialKey, SIGNAL(typeChanged()), SLOT(updateSpecialKeyType()));
+            connect(specialKey, SIGNAL(labelChanged()), SLOT(updateSpecialKeyLabel()));
+            connect(specialKey, SIGNAL(modifierIdChanged()), SLOT(updateSpecialKeyModifierId()));
         }
     }
 }
@@ -128,8 +140,8 @@ void KeyboardLayoutPropertiesWidget::setReadOnly(bool readOnly)
     m_keyTopSpinBox->setReadOnly(readOnly);
     m_keyWidthSpinBox->setReadOnly(readOnly);
     m_keyHeightSpinBox->setReadOnly(readOnly);
-    m_specialKeyTypeComboBox->setEnabled(readOnly);
-    m_specialKeyLabelLineEdit->setReadOnly(!readOnly);
+    m_specialKeyTypeComboBox->setEnabled(!readOnly);
+    m_specialKeyLabelLineEdit->setReadOnly(readOnly);
     m_specialKeyModifierIdLineEdit->setReadOnly(readOnly);
 }
 
@@ -171,6 +183,24 @@ void KeyboardLayoutPropertiesWidget::setKeyFingerIndex(int fingerIndex)
 void KeyboardLayoutPropertiesWidget::setKeyHasHapticMarker(bool hasHapticMarker)
 {
     QUndoCommand* command = new SetKeyHasHapticMarkerCommand(m_keyboardLayout, m_selectedKeyIndex, hasHapticMarker);
+    m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::setSpecialKeyType(int type)
+{
+    QUndoCommand* command = new SetSpecialKeyTypeCommand(m_keyboardLayout, m_selectedKeyIndex, static_cast<SpecialKey::Type>(type));
+    m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::setSpecialKeyLabel(const QString& label)
+{
+    QUndoCommand* command = new SetSpecialKeyLabelCommand(m_keyboardLayout, m_selectedKeyIndex, label);
+    m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::setSpecialKeyModifierId(const QString& id)
+{
+    QUndoCommand* command = new SetSpecialKeyModifierIdCommand(m_keyboardLayout, m_selectedKeyIndex, id);
     m_undoStack->push(command);
 }
 
@@ -308,6 +338,43 @@ void KeyboardLayoutPropertiesWidget::updateKeyHasHapticMarker()
     m_keyHapticMarkerCheckBox->setChecked(key->hasHapticMarker());
 }
 
+void KeyboardLayoutPropertiesWidget::updateSpecialKeyType()
+{
+    SpecialKey* const specialKey = qobject_cast<SpecialKey*>(m_selectedKey);
+
+    Q_ASSERT(specialKey);
+
+    m_specialKeyTypeComboBox->setCurrentIndex(specialKey->type());
+}
+
+void KeyboardLayoutPropertiesWidget::updateSpecialKeyLabel()
+{
+    SpecialKey* const specialKey = qobject_cast<SpecialKey*>(m_selectedKey);
+
+    Q_ASSERT(specialKey);
+
+    const QString label = specialKey->label();
+
+    if (label != m_specialKeyLabelLineEdit->text())
+    {
+        m_specialKeyLabelLineEdit->setText(label);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::updateSpecialKeyModifierId()
+{
+    SpecialKey* const specialKey = qobject_cast<SpecialKey*>(m_selectedKey);
+
+    Q_ASSERT(specialKey);
+
+    const QString modifierId = specialKey->modifierId();
+
+    if (modifierId != m_specialKeyModifierIdLineEdit->text())
+    {
+        m_specialKeyModifierIdLineEdit->setText(modifierId);
+    }
+}
+
 void KeyboardLayoutPropertiesWidget::onKeyboardLayoutWidthChanged(int width)
 {
     if (width != m_keyboardLayout->width())
@@ -385,5 +452,17 @@ void KeyboardLayoutPropertiesWidget::onFingerIndexChanged(int fingerIndex)
     if (fingerIndex != key->fingerIndex())
     {
         setKeyFingerIndex(fingerIndex);
+    }
+}
+
+void KeyboardLayoutPropertiesWidget::onSpecialKeyTypeChanged(int type)
+{
+    SpecialKey* const specialKey = qobject_cast<SpecialKey*>(m_selectedKey);
+
+    Q_ASSERT(specialKey);
+
+    if (type != specialKey->type())
+    {
+        setSpecialKeyType(type);
     }
 }

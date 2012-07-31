@@ -42,6 +42,9 @@ private slots:
     void setKeyGeometry(const QRect& rect);
     void setKeyFingerIndex(int fingerIndex);
     void setKeyHasHapticMarker(bool hasHapticMarker);
+    void setSpecialKeyType(int type);
+    void setSpecialKeyLabel(const QString& label);
+    void setSpecialKeyModifierId(const QString& id);
     void updateKeyboardLayoutTitle();
     void updateKeyboardLayoutName();
     void updateKeyboardLayoutWidth();
@@ -53,6 +56,9 @@ private slots:
     void resetKeyGeometry(AbstractKey* key);
     void updateKeyFingerIndex();
     void updateKeyHasHapticMarker();
+    void updateSpecialKeyType();
+    void updateSpecialKeyLabel();
+    void updateSpecialKeyModifierId();
     void onKeyboardLayoutWidthChanged(int width);
     void onKeyboardLayoutHeightChanged(int height);
     void onKeyLeftChanged(int left);
@@ -60,6 +66,7 @@ private slots:
     void onKeyWidthChanged(int width);
     void onKeyHeightChanged(int height);
     void onFingerIndexChanged(int fingerIndex);
+    void onSpecialKeyTypeChanged(int type);
 private:
     KeyboardLayout* m_keyboardLayout;
     int m_selectedKeyIndex;
