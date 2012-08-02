@@ -125,6 +125,9 @@ void KeyboardLayoutEditor::setReadOnly(bool readOnly)
     {
         m_readOnly = readOnly;
         emit readOnlyChanged();
+        m_newKeyToolButton->setEnabled(!readOnly);
+        m_newSpecialKeyToolButton->setEnabled(!readOnly);
+        m_deleteKeyToolButton->setEnabled(!readOnly && m_selectedKey != 0);
         m_propertiesWidget->setReadOnly(readOnly);
     }
 }
@@ -141,6 +144,7 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
         m_selectedKey = key;
         emit selectedKeyChanged();
 
+        m_deleteKeyToolButton->setEnabled(!m_readOnly && m_selectedKey != 0);
         m_propertiesWidget->setSelectedKey(m_keyboardLayout->keyIndex(key));
     }
 }
