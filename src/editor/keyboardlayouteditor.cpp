@@ -55,6 +55,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     m_view->rootContext()->setContextObject(this);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));
 
+    connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
     connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
 }
 
@@ -66,9 +67,11 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
 
     const QString path = dataIndexKeyboardLayout->path();
 
+    currentUndoStack()->disconnect(this, SLOT(validateSelection()));
     initUndoStack(path);
     m_propertiesWidget->setUndoStack(currentUndoStack());
     setSelectedKey(0);
+    connect(currentUndoStack(), SIGNAL(indexChanged(int)), SLOT(validateSelection()));
 
     if (!dataAccess.loadKeyboardLayout(path, m_keyboardLayout))
     {
@@ -175,4 +178,23 @@ QString KeyboardLayoutEditor::findImage(const QString& imageName) const
 void KeyboardLayoutEditor::clearSelection()
 {
     setSelectedKey(0);
+}
+
+void KeyboardLayoutEditor::validateSelection()
+{
+    if (m_keyboardLayout->keyIndex(m_selectedKey) == -1)
+    {
+        clearSelection();
+    }
+}
+
+void KeyboardLayoutEditor::deleteSelectedKey()
+{
+    Q_ASSERT(m_selectedKey);
+
+    const int keyIndex = m_keyboardLayout->keyIndex(m_selectedKey);
+    QUndoCommand* command = new RemoveKeyCommand(m_keyboardLayout, keyIndex);
+
+    setSelectedKey(0);
+    currentUndoStack()->push(command);
 }

@@ -67,6 +67,21 @@ private:
     QSize m_newSize;
 };
 
+class RemoveKeyCommand : public QUndoCommand
+{
+public:
+    RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
+    ~RemoveKeyCommand();
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    AbstractKey* m_backupKey;
+};
+
 class SetKeyGeometryCommand : public QUndoCommand
 {
 public:

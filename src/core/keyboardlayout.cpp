@@ -142,13 +142,25 @@ void KeyboardLayout::addKey(AbstractKey* key)
     updateReferenceKey(key);
 }
 
+void KeyboardLayout::insertKey(int index, AbstractKey* key)
+{
+    m_keys.insert(index, key);
+    key->setParent(this);
+    connect(key, SIGNAL(widthChanged()), m_signalMapper, SLOT(map()));
+    connect(key, SIGNAL(heightChanged()), m_signalMapper, SLOT(map()));
+    m_signalMapper->setMapping(key, m_keys.count() - 1);
+    emit keyCountChanged();
+    updateReferenceKey(key);
+}
+
 void KeyboardLayout::removeKey(int index)
 {
     Q_ASSERT(index >= 0 && index < m_keys.count());
-    delete m_keys.at(index);
+    AbstractKey* key = m_keys.at(index);
     m_keys.removeAt(index);
     emit keyCountChanged();
     updateReferenceKey(0);
+    key->deleteLater();
 }
 
 void KeyboardLayout::clearKeys()

@@ -140,6 +140,67 @@ bool SetKeyboardLayoutSizeCommand::mergeWith(const QUndoCommand* other)
     return false;
 }
 
+
+RemoveKeyCommand::RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_backupKey(0)
+{
+}
+
+RemoveKeyCommand::~RemoveKeyCommand()
+{
+    delete m_backupKey;
+}
+
+void RemoveKeyCommand::undo()
+{
+    Q_ASSERT(m_backupKey);
+
+    if (m_keyIndex == m_layout->keyCount())
+    {
+        m_layout->addKey(m_backupKey);
+    }
+    else
+    {
+        m_layout->insertKey(m_keyIndex, m_backupKey);
+    }
+
+    m_backupKey = 0;
+}
+
+void RemoveKeyCommand::redo()
+{
+    AbstractKey* abstractKey = m_layout->key(m_keyIndex);
+
+    if (Key* key = qobject_cast<Key*>(abstractKey))
+    {
+        Key* backupKey = new Key();
+        backupKey->copyFrom(key);
+        m_backupKey = backupKey;
+    }
+    else if (SpecialKey* specialKey = qobject_cast<SpecialKey*>(abstractKey))
+    {
+        SpecialKey* specialKeyBackup = new SpecialKey();
+        specialKey->copyFrom(specialKey);
+        m_backupKey = specialKeyBackup;
+    }
+
+    m_layout->removeKey(m_keyIndex);
+}
+
+int RemoveKeyCommand::id() const
+{
+    return 0xf992f4a7;
+}
+
+bool RemoveKeyCommand::mergeWith(const QUndoCommand* other)
+{
+    Q_UNUSED(other)
+    return false;
+}
+
 SetKeyGeometryCommand::SetKeyGeometryCommand(KeyboardLayout* layout, int keyIndex, const QRect& newRect, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_layout(layout),

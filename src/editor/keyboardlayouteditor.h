@@ -53,6 +53,8 @@ signals:
     void selectedKeyChanged();
 private slots:
     void clearSelection();
+    void validateSelection();
+    void deleteSelectedKey();
 private:
     DataIndexKeyboardLayout* m_dataIndexKeyboardLayout;
     KeyboardLayout* m_keyboardLayout;

@@ -27,7 +27,6 @@ Item {
 
     property real scaleFactor: 1.0
     property KeyboardLayout layout: keyboardLayout
-    property AbstractKey selKey: selectedKey
     property int lastZIndex: 0
 
     width: keyContainer.width + 40
