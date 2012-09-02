@@ -24,92 +24,92 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="KMessageWidget" name="m_messageWidget"/>
+    <widget class="KMessageWidget" name="m_messageWidget">
+     <zorder>m_newKeyToolButton</zorder>
+    </widget>
    </item>
    <item>
-    <widget class="QFrame" name="m_toolbarFrame">
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QHBoxLayout" name="m_horizontalLayout">
-      <property name="margin">
-       <number>2</number>
-      </property>
-      <item>
-       <widget class="QToolButton" name="m_newKeyToolButton">
-        <property name="text">
-         <string>Create new normal key</string>
-        </property>
-        <property name="icon">
-         <iconset theme="key-enter">
-          <normaloff/>
-         </iconset>
-        </property>
-        <property name="toolButtonStyle">
-         <enum>Qt::ToolButtonTextBesideIcon</enum>
-        </property>
-        <property name="autoRaise">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="m_newSpecialKeyToolButton">
-        <property name="text">
-         <string>Create new special key</string>
-        </property>
-        <property name="icon">
-         <iconset theme="key-enter">
-          <normaloff/>
-         </iconset>
-        </property>
-        <property name="toolButtonStyle">
-         <enum>Qt::ToolButtonTextBesideIcon</enum>
-        </property>
-        <property name="autoRaise">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="m_deleteKeyToolButton">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Delete selected key</string>
-        </property>
-        <property name="icon">
-         <iconset theme="edit-delete">
-          <normaloff/>
-         </iconset>
-        </property>
-        <property name="toolButtonStyle">
-         <enum>Qt::ToolButtonTextBesideIcon</enum>
-        </property>
-        <property name="autoRaise">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="m_horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QToolButton" name="m_newKeyToolButton">
+       <property name="toolTip">
+        <string>Create new normal key</string>
+       </property>
+       <property name="text">
+        <string>Normal Key</string>
+       </property>
+       <property name="icon">
+        <iconset theme="key-enter">
+         <normaloff/>
+        </iconset>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="m_newSpecialKeyToolButton">
+       <property name="toolTip">
+        <string>Create new special key</string>
+       </property>
+       <property name="text">
+        <string>Special Key</string>
+       </property>
+       <property name="icon">
+        <iconset theme="key-enter">
+         <normaloff/>
+        </iconset>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="m_deleteKeyToolButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Delete selected key</string>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+       <property name="icon">
+        <iconset theme="edit-delete">
+         <normaloff/>
+        </iconset>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="m_horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="KeyboardLayoutEditorView" name="m_view">
