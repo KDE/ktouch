@@ -20,7 +20,9 @@
 #include "keychar.h"
 
 Key::Key(QObject* parent) :
-    AbstractKey(parent)
+    AbstractKey(parent),
+    m_fingerIndex(0),
+    m_hasHapticMarker(false)
 {
 }
 

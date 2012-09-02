@@ -34,7 +34,7 @@
     <xs:complexContent>
       <xs:extension base="baseKey">
         <xs:sequence>
-          <xs:element name="char" type="char" minOccurs="1" maxOccurs="unbounded" />
+          <xs:element name="char" type="char" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="fingerIndex" type="fingerIndex" use="required" />
         <xs:attribute name="hasHapticMarker" type="xs:boolean" use="optional" />

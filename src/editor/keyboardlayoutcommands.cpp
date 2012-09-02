@@ -140,6 +140,58 @@ bool SetKeyboardLayoutSizeCommand::mergeWith(const QUndoCommand* other)
     return false;
 }
 
+AddKeyCommand::AddKeyCommand(KeyboardLayout *layout, AbstractKey *key, QUndoCommand *parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_backupKey(key)
+{
+}
+
+AddKeyCommand::~AddKeyCommand()
+{
+    delete m_backupKey;
+}
+
+void AddKeyCommand::undo()
+{
+    const int keyIndex = m_layout->keyCount() - 1;
+    AbstractKey* abstractKey = m_layout->key(keyIndex);
+
+    if (Key* key = qobject_cast<Key*>(abstractKey))
+    {
+        Key* backupKey = new Key();
+        backupKey->copyFrom(key);
+        m_backupKey = backupKey;
+    }
+    else if (SpecialKey* specialKey = qobject_cast<SpecialKey*>(abstractKey))
+    {
+        SpecialKey* specialKeyBackup = new SpecialKey();
+        specialKey->copyFrom(specialKey);
+        m_backupKey = specialKeyBackup;
+    }
+
+    m_layout->removeKey(keyIndex);
+}
+
+void AddKeyCommand::redo()
+{
+    Q_ASSERT(m_backupKey);
+
+    m_layout->addKey(m_backupKey);
+
+    m_backupKey = 0;
+}
+
+int AddKeyCommand::id() const
+{
+    return 0xfd2d9a61;
+}
+
+bool AddKeyCommand::mergeWith(const QUndoCommand *other)
+{
+    Q_UNUSED(other);
+    return false;
+}
 
 RemoveKeyCommand::RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent) :
     QUndoCommand(parent),

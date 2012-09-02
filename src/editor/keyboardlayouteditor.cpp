@@ -55,6 +55,8 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     m_view->rootContext()->setContextObject(this);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));
 
+    connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
+    connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));
     connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
     connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
 }
@@ -186,6 +188,24 @@ void KeyboardLayoutEditor::validateSelection()
     {
         clearSelection();
     }
+}
+
+void KeyboardLayoutEditor::createNewKey()
+{
+    Key* key = new Key();
+    key->setRect(QRect(0, 0, 80, 80));
+    QUndoCommand* command = new AddKeyCommand(m_keyboardLayout, key);
+    currentUndoStack()->push(command);
+    setSelectedKey(key);
+}
+
+void KeyboardLayoutEditor::createNewSpecialKey()
+{
+    SpecialKey* key = new SpecialKey();
+    key->setRect(QRect(0, 0, 130, 80));
+    QUndoCommand* command = new AddKeyCommand(m_keyboardLayout, key);
+    currentUndoStack()->push(command);
+    setSelectedKey(key);
 }
 
 void KeyboardLayoutEditor::deleteSelectedKey()

@@ -54,6 +54,8 @@ signals:
 private slots:
     void clearSelection();
     void validateSelection();
+    void createNewKey();
+    void createNewSpecialKey();
     void deleteSelectedKey();
 private:
     DataIndexKeyboardLayout* m_dataIndexKeyboardLayout;
