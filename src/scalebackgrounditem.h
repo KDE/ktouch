@@ -26,7 +26,7 @@ class ScaleBackgroundItem: public QDeclarativeItem
     Q_PROPERTY(qreal startAngle READ startAngle WRITE setStartAngle NOTIFY startAngleChanged)
     Q_PROPERTY(qreal stopAngle READ stopAngle WRITE setStopAngle NOTIFY stopAngleChanged)
     Q_PROPERTY(qreal scaleMarkHeight READ scaleMarkHeight WRITE setScaleMarkHeight NOTIFY scaleMarkHeightChanged)
-    Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged);
+    Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 
 public:
     ScaleBackgroundItem(QDeclarativeItem* parent = 0);
