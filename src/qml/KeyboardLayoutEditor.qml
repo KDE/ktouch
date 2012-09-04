@@ -25,7 +25,7 @@ Item {
         id: preferences
     }
 
-    property real scaleFactor: 1.0
+    property real scaleFactor: 0.7
     property KeyboardLayout layout: keyboardLayout
     property int lastZIndex: 0
 
@@ -42,15 +42,16 @@ Item {
         }
     }
 
-    Image {
+    Grid {
         id: keyContainer
 
         anchors.centerIn: parent
-        width: layout.width * scaleFactor
-        height: layout.height * scaleFactor
+        width: Math.round(layout.width * scaleFactor)
+        height: Math.round(layout.height * scaleFactor)
 
-        source: findImage("gridtile.png")
-        fillMode: Image.Tile
+        lineDistance: 10.0 * scaleFactor
+        color: "#121286"
+        backgroundColor: "#cccccc"
 
         Repeater {
             id: keys

@@ -5,8 +5,6 @@ set(image_files
     meterbox.svgz
     resizegrip.svgz
     trainingscreen.svgz
-
-    gridtile.png
 )
 
 install( FILES ${image_files} DESTINATION ${DATA_INSTALL_DIR}/ktouch/images)

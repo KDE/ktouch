@@ -47,6 +47,7 @@
 #include "core/dataaccess.h"
 #include "core/profiledataaccess.h"
 #include "editor/resourceeditor.h"
+#include "editor/griditem.h"
 #include "viewcontext.h"
 #include "scalebackgrounditem.h"
 #include "preferences.h"
@@ -154,6 +155,7 @@ void MainWindow::init()
     qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
 
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
+    qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
 
     KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(m_view->engine());
