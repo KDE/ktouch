@@ -24,9 +24,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="KMessageWidget" name="m_messageWidget">
-     <zorder>m_newKeyToolButton</zorder>
-    </widget>
+    <widget class="KMessageWidget" name="m_messageWidget"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -39,9 +37,7 @@
         <string>Normal Key</string>
        </property>
        <property name="icon">
-        <iconset theme="key-enter">
-         <normaloff/>
-        </iconset>
+        <iconset theme="list-add"/>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -60,9 +56,7 @@
         <string>Special Key</string>
        </property>
        <property name="icon">
-        <iconset theme="key-enter">
-         <normaloff/>
-        </iconset>
+        <iconset theme="list-add"/>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
