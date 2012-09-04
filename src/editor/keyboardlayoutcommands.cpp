@@ -235,7 +235,7 @@ void RemoveKeyCommand::redo()
     else if (SpecialKey* specialKey = qobject_cast<SpecialKey*>(abstractKey))
     {
         SpecialKey* specialKeyBackup = new SpecialKey();
-        specialKey->copyFrom(specialKey);
+        specialKeyBackup->copyFrom(specialKey);
         m_backupKey = specialKeyBackup;
     }
 
