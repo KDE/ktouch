@@ -20,7 +20,7 @@
 
 #include <KAssistantDialog>
 
-#include "resourcemodel.h"
+#include "models/resourcemodel.h"
 
 class Resource;
 class ResourceTypesWidget;

@@ -40,8 +40,8 @@
 #include "core/resource.h"
 #include "core/course.h"
 #include "core/keyboardlayout.h"
+#include "models/resourcemodel.h"
 #include "resourceeditorwidget.h"
-#include "resourcemodel.h"
 #include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"
 

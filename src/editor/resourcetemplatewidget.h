@@ -22,7 +22,7 @@
 #include <QWidget>
 #include "ui_resourcetemplatewidget.h"
 
-#include "resourcemodel.h"
+#include "models/resourcemodel.h"
 
 class Resource;
 class CategorizedResourceSortFilterProxyModel;

@@ -21,7 +21,7 @@
 
 #include "KCategorizedSortFilterProxyModel"
 
-#include "resourcemodel.h"
+#include "models/resourcemodel.h"
 
 class CategorizedResourceSortFilterProxyModel : public KCategorizedSortFilterProxyModel
 {

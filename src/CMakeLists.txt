@@ -46,10 +46,10 @@ set(ktouch_SRCS
     core/dataindex.cpp
     core/dataaccess.cpp
     core/profiledataaccess.cpp
+    models/resourcemodel.cpp
+    models/lessonmodel.cpp
     editor/resourceeditor.cpp
     editor/resourceeditorwidget.cpp
-    editor/resourcemodel.cpp
-    editor/lessonmodel.cpp
     editor/categorizedresourcesortfilterproxymodel.cpp
     editor/newresourceassistant.cpp
     editor/resourcetypeswidget.cpp

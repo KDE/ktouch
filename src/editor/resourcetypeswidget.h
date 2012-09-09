@@ -21,7 +21,7 @@
 #include <QWidget>
 #include "ui_resourcetypeswidget.h"
 
-#include "resourcemodel.h"
+#include "models/resourcemodel.h"
 
 class QStandardItemModel;
 

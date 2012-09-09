@@ -18,8 +18,8 @@
 #include "newkeyboardlayoutwidget.h"
 
 #include "core/dataindex.h"
+#include "models/resourcemodel.h"
 #include "x11_helper.h"
-#include "resourcemodel.h"
 
 NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(ResourceModel* resourceModel, QWidget* parent) :
     QWidget(parent),

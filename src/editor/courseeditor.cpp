@@ -26,7 +26,7 @@
 #include "core/lesson.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
-#include "editor/lessonmodel.h"
+#include "models/lessonmodel.h"
 #include "editor/lessontexthighlighter.h"
 
 CourseEditor::CourseEditor(QWidget* parent):

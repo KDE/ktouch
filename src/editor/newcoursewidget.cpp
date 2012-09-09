@@ -18,7 +18,7 @@
 #include "newcoursewidget.h"
 
 #include "core/dataindex.h"
-#include "resourcemodel.h"
+#include "models/resourcemodel.h"
 
 NewCourseWidget::NewCourseWidget(ResourceModel* resourceModel, QWidget* parent) :
     QWidget(parent),
