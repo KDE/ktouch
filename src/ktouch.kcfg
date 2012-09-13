@@ -9,6 +9,10 @@
       <label>Controls the visibility of the keyboard during training.</label>
       <default>true</default>
     </entry>
+    <entry name="ShowStatistics" type="Bool">
+      <label>Controls the visibility of realtime statistics during training.</label>
+      <default>true</default>
+    </entry>
     <entry name="RequiredStrokesPerMinute" type="Int">
       <label>The minimum required amount of strokes per minute to unlock the next lesson.</label>
       <default>180</default>

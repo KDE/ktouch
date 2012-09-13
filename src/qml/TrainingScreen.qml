@@ -128,7 +128,8 @@ FocusScope {
             svg: screenSvg
             elementId: "header"
             width: parent.width
-            height: 120
+            visible: preferences.showStatistics
+            height: visible? 120: 0
             Row {
                 anchors.centerIn: parent
                 spacing: 10

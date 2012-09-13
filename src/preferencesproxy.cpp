@@ -36,6 +36,16 @@ void PreferencesProxy::setShowKeyboard(bool showKeyboard)
     Preferences::setShowKeyboard(showKeyboard);
 }
 
+bool PreferencesProxy::showStatistics() const
+{
+    return Preferences::showStatistics();
+}
+
+void PreferencesProxy::setShowStatistics(bool showStatistics)
+{
+    Preferences::setShowStatistics(showStatistics);
+}
+
 int PreferencesProxy::requiredStrokesPerMinute() const
 {
     return Preferences::requiredStrokesPerMinute();

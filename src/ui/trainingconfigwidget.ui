@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>345</width>
-    <height>134</height>
+    <width>335</width>
+    <height>178</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,17 +21,54 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QCheckBox" name="kcfg_ShowKeyboard">
-     <property name="minimumSize">
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="trainingLabel">
+       <property name="text">
+        <string>During training:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="kcfg_ShowKeyboard">
+       <property name="minimumSize">
+        <size>
+         <width>83</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Show keyboard</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QCheckBox" name="kcfg_ShowStatistics">
+       <property name="text">
+        <string>Show real-time statistics</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
       <size>
-       <width>83</width>
-       <height>0</height>
+       <width>20</width>
+       <height>10</height>
       </size>
      </property>
-     <property name="text">
-      <string>Show keyboard during training</string>
-     </property>
-    </widget>
+    </spacer>
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -119,14 +156,14 @@
     </widget>
    </item>
    <item>
-    <spacer name="verticalSpacer_2">
+    <spacer name="verticalSpacer_3">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>49</height>
+       <height>4</height>
       </size>
      </property>
     </spacer>
