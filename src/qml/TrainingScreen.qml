@@ -114,6 +114,15 @@ FocusScope {
     Column {
         anchors.fill: parent
 
+        TrainingScreenToolbar {
+            id: toolbar
+            height: 29
+            width: parent.width
+            trainingStarted: screen.trainingStarted
+            trainingFinished: screen.trainingFinished
+            menuOverlayItem: menuOverlay
+        }
+
         PlasmaCore.SvgItem {
             id: header
             svg: screenSvg
@@ -136,15 +145,6 @@ FocusScope {
                     referenceAccuracy: referenceStats.isValid? referenceStats.accuracy: stats.accuracy
                 }
             }
-        }
-
-        TrainingScreenToolbar {
-            id: toolbar
-            height: 29
-            width: parent.width
-            trainingStarted: screen.trainingStarted
-            trainingFinished: screen.trainingFinished
-            menuOverlayItem: menuOverlay
         }
 
         PlasmaCore.SvgItem {

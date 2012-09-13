@@ -45,9 +45,6 @@ Item {
     onTrainingStartedChanged: setMessage()
     onTrainingFinishedChanged: setMessage()
 
-    height: 29
-    width: 400
-
     PlasmaCore.FrameSvgItem {
         anchors.fill: parent
         imagePath: findImage("trainingscreen.svgz")
