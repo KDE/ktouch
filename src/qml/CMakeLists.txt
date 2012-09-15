@@ -9,6 +9,7 @@ set(ktouch_qml_files
     ProfileDetailsItem.qml
     LessonSelector.qml
     LessonPreview.qml
+    LessonLockedNotice.qml
     InitialProfileForm.qml
 
     TrainingScreen.qml

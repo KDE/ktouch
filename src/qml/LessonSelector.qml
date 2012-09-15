@@ -124,6 +124,11 @@ Item {
                 width: parent.width
                 height: parent.height - startButtonContainer.height
                 lesson: lessonList.currentItem != null? lessonList.currentItem.lesson: null
+
+                LessonLockedNotice {
+                    anchors.centerIn: parent
+                    opacity: lessonList.currentItem !== null && lessonList.currentItem.locked? 1: 0
+                }
             }
 
             Item {
