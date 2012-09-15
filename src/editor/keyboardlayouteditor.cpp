@@ -19,6 +19,8 @@
 #include "keyboardlayouteditor.h"
 #include "keyboardlayoutcommands.h"
 
+#include <math.h>
+
 #include <qdeclarative.h>
 
 #include <QDeclarativeContext>
@@ -41,7 +43,8 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     m_dataIndexKeyboardLayout(0),
     m_keyboardLayout(new KeyboardLayout(this)),
     m_readOnly(false),
-    m_selectedKey(0)
+    m_selectedKey(0),
+    m_zoomLevel(0)
 {
     setupUi(this);
     m_messageWidget->hide();
@@ -57,6 +60,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
     connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
     connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));
+    connect(m_zoomSlider, SIGNAL(valueChanged(int)), SLOT(setZoomLevel(int)));
     connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
     connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
 }
@@ -151,6 +155,24 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
 
         m_deleteKeyToolButton->setEnabled(!m_readOnly && m_selectedKey != 0);
         m_propertiesWidget->setSelectedKey(m_keyboardLayout->keyIndex(key));
+    }
+}
+
+int KeyboardLayoutEditor::zoomLevel() const
+{
+    return m_zoomLevel;
+}
+
+void KeyboardLayoutEditor::setZoomLevel(int zoomLevel)
+{
+    if (zoomLevel != m_zoomLevel)
+    {
+        m_zoomLevel = zoomLevel;
+        emit zoomLevelChanged();
+        const double zoomFactor = pow(2.0, zoomLevel / 2.0);
+        m_zoomFactorLabel->setText(i18n("%1%").arg(zoomFactor * 100, 0, 'f', 0));
+        m_zoomOutToolButton->setEnabled(zoomLevel > m_zoomSlider->minimum());
+        m_zoomInToolButton->setEnabled(zoomLevel < m_zoomSlider->maximum());
     }
 }
 

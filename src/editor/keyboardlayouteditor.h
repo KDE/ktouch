@@ -29,8 +29,9 @@ class KeyboardLayoutEditor : public AbstractEditor, private Ui::KeyboardLayoutEd
 {
     Q_OBJECT
     Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout NOTIFY keyboardLayoutChanged)
-    Q_PROPERTY(bool readOnly READ readOnly WRITE setReadOnly NOTIFY readOnlyChanged);
+    Q_PROPERTY(bool readOnly READ readOnly WRITE setReadOnly NOTIFY readOnlyChanged)
     Q_PROPERTY(AbstractKey* selectedKey READ selectedKey WRITE setSelectedKey NOTIFY selectedKeyChanged)
+    Q_PROPERTY(int zoomLevel READ zoomLevel WRITE setZoomLevel NOTIFY zoomLevelChanged)
 public:
     explicit KeyboardLayoutEditor(QWidget* parent = 0);
 
@@ -43,6 +44,8 @@ public:
     void setReadOnly(bool readOnly);
     AbstractKey* selectedKey() const;
     void setSelectedKey(AbstractKey* key);
+    int zoomLevel() const;
+    Q_SLOT void setZoomLevel(int zoomLevel);
 
     Q_INVOKABLE void setKeyGeometry(int keyIndex, int top, int left, int width, int height);
 
@@ -51,6 +54,7 @@ signals:
     void keyboardLayoutChanged();
     void readOnlyChanged();
     void selectedKeyChanged();
+    void zoomLevelChanged();
 private slots:
     void clearSelection();
     void validateSelection();
@@ -62,6 +66,7 @@ private:
     KeyboardLayout* m_keyboardLayout;
     bool m_readOnly;
     AbstractKey* m_selectedKey;
+    int m_zoomLevel;
 };
 
 #endif // KEYBOARDLAYOUTEDITOR_H

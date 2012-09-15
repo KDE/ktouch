@@ -37,7 +37,9 @@
         <string>Normal Key</string>
        </property>
        <property name="icon">
-        <iconset theme="list-add"/>
+        <iconset theme="list-add">
+         <normaloff/>
+        </iconset>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -56,7 +58,9 @@
         <string>Special Key</string>
        </property>
        <property name="icon">
-        <iconset theme="list-add"/>
+        <iconset theme="list-add">
+         <normaloff/>
+        </iconset>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -84,6 +88,72 @@
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="m_zoomOutToolButton">
+       <property name="icon">
+        <iconset theme="zoom-out">
+         <normaloff/>
+        </iconset>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="m_zoomSlider">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="minimum">
+        <number>-4</number>
+       </property>
+       <property name="maximum">
+        <number>4</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="m_zoomFactorLabel">
+       <property name="text">
+        <string>100%</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="m_zoomInToolButton">
+       <property name="icon">
+        <iconset theme="zoom-in">
+         <normaloff/>
+        </iconset>
        </property>
        <property name="autoRaise">
         <bool>true</bool>
@@ -161,6 +231,48 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>m_view</tabstop>
+  <tabstop>m_newKeyToolButton</tabstop>
+  <tabstop>m_newSpecialKeyToolButton</tabstop>
+  <tabstop>m_deleteKeyToolButton</tabstop>
+  <tabstop>m_zoomOutToolButton</tabstop>
+  <tabstop>m_zoomSlider</tabstop>
+  <tabstop>m_zoomInToolButton</tabstop>
+ </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>m_zoomOutToolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>m_zoomSlider</receiver>
+   <slot>subtractStep()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>354</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_zoomInToolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>m_zoomSlider</receiver>
+   <slot>addStep()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>411</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

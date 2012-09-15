@@ -25,7 +25,7 @@ Item {
         id: preferences
     }
 
-    property real scaleFactor: 0.7
+    property real scaleFactor: Math.pow(2, zoomLevel / 2)
     property KeyboardLayout layout: keyboardLayout
     property int lastZIndex: 0
 
