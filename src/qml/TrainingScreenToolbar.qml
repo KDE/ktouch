@@ -58,6 +58,7 @@ Item {
             right: parent.right
             leftMargin: 3
             rightMargin: 3
+            verticalCenterOffset: -1
         }
 
         spacing: 3
