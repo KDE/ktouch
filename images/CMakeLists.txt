@@ -1,7 +1,7 @@
 set(image_files
     accuracymeter.svgz
     charactersperminutemeter.svgz
-    ellapsedtimemeter.svgz
+    elapsedtimemeter.svgz
     meterbox.svgz
     resizegrip.svgz
     trainingscreen.svgz

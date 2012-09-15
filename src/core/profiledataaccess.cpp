@@ -251,7 +251,7 @@ int ProfileDataAccess::indexOfProfile(Profile *profile)
 void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile *profile, const QString &courseId, const QString &lessonId)
 {
     stats->setCharactersTyped(0);
-    stats->setEllapsedTime(QTime());
+    stats->setElapsedTime(QTime());
     stats->setErrorCount(0);
     stats->setErrorMap(QMap<QString, int>());
     stats->setIsValid(false);
@@ -263,7 +263,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile
 
     QSqlQuery selectQuery;
 
-    if (!selectQuery.prepare("SELECT id, characters_typed, error_count, ellapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1"))
+    if (!selectQuery.prepare("SELECT id, characters_typed, error_count, elapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1"))
     {
         kWarning() <<  selectQuery.lastError().text();
         raiseError(selectQuery.lastError());
@@ -287,7 +287,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile
     const int statsId = selectQuery.value(0).toInt();
     stats->setCharactersTyped(selectQuery.value(1).toUInt());
     stats->setErrorCount(selectQuery.value(2).toUInt());
-    stats->setEllapsedTime(selectQuery.value(3).toInt());
+    stats->setElapsedTime(selectQuery.value(3).toInt());
 
     QSqlQuery errorSelectQuery;
 
@@ -330,7 +330,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     }
     QSqlQuery addQuery(db);
 
-    if (!addQuery.prepare("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, ellapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)"))
+    if (!addQuery.prepare("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, elapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)"))
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
@@ -342,8 +342,8 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     addQuery.bindValue(3, QDateTime::currentMSecsSinceEpoch());
     addQuery.bindValue(4, stats->charactesTyped());
     addQuery.bindValue(5, stats->errorCount());
-    const int rawEllapsedTime = QTime(0, 0).msecsTo(stats->ellapsedTime());
-    addQuery.bindValue(6, rawEllapsedTime);
+    const int rawElapsedTime = QTime(0, 0).msecsTo(stats->elapsedTime());
+    addQuery.bindValue(6, rawElapsedTime);
 
     if (!addQuery.exec())
     {
@@ -600,7 +600,7 @@ bool ProfileDataAccess::checkDbSchema()
             "date INT, "
             "characters_typed INTEGER, "
             "error_count INTEGER, "
-            "ellapsed_time INTEGER "
+            "elapsed_time INTEGER "
             ")");
 
     if (db.lastError().isValid())

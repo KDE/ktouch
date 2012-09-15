@@ -31,7 +31,7 @@ class TrainingStats : public QObject
     Q_OBJECT
     Q_ENUMS(EventType)
     Q_PROPERTY(int charactesTyped READ charactesTyped WRITE setCharactersTyped NOTIFY statsChanged)
-    Q_PROPERTY(QTime ellapsedTime READ ellapsedTime WRITE setEllapsedTime NOTIFY statsChanged)
+    Q_PROPERTY(QTime elapsedTime READ elapsedTime WRITE setElapsedTime NOTIFY statsChanged)
     Q_PROPERTY(int errorCount READ errorCount NOTIFY statsChanged)
     Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
     Q_PROPERTY(float accuracy READ accuracy NOTIFY statsChanged)
@@ -47,9 +47,9 @@ public:
     explicit TrainingStats(QObject* parent = 0);
     int charactesTyped() const;
     void setCharactersTyped(int charactesTyped);
-    QTime ellapsedTime() const;
-    void setEllapsedTime(const QTime& ellapsedTime);
-    void setEllapsedTime(const quint64& msec);
+    QTime elapsedTime() const;
+    void setElapsedTime(const QTime& elapsedTime);
+    void setElapsedTime(const quint64& msec);
     int errorCount() const;
     void setErrorCount(int errorCount);
     bool isValid() const;
@@ -72,7 +72,7 @@ private:
     Q_SLOT void update();
     bool m_timeIsRunning;
     int m_charactersTyped;
-    quint64 m_ellapsedTime;
+    quint64 m_elapsedTime;
     int m_errorCount;
     bool m_isValid;
     QMap<QString, int> m_errorMap;

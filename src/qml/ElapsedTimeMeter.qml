@@ -22,20 +22,20 @@ import ktouch 1.0
 Item {
     id: meter
 
-    property variant ellapsedTime
-    property variant referenceEllapsedTime
+    property variant elapsedTime
+    property variant referenceElapsedTime
 
     width: childrenRect.width
     height: childrenRect.height
 
     Row {
-        AnalogEllapsedTimeMeter {
-            ellapsedTime: meter.ellapsedTime
+        AnalogElapsedTimeMeter {
+            elapsedTime: meter.elapsedTime
         }
         DigitalMeter {
-            label: i18n("Ellapsed time")
-            value: formatTime(meter.ellapsedTime)
-            referenceValue: formatTimeDiff(meter.referenceEllapsedTime, meter.ellapsedTime)
+            label: i18n("Elapsed time")
+            value: formatTime(meter.elapsedTime)
+            referenceValue: formatTimeDiff(meter.referenceElpsedTime, meter.elapsedTime)
             positiveDiffIsGood: false
         }
     }

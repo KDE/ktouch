@@ -148,9 +148,9 @@ FocusScope {
                         width: childrenRect.width
                         height: childrenRect.height
                         spacing: 10
-                        EllapsedTimeMeter {
-                            ellapsedTime: stats.ellapsedTime
-                            referenceEllapsedTime: referenceStats.isValid? referenceStats.ellapsedTime: stats.ellapsedTime
+                        ElapsedTimeMeter {
+                            elapsedTime: stats.elapsedTime
+                            referenceElapsedTime: referenceStats.isValid? referenceStats.elapsedTime: stats.elapsedTime
                         }
                         CharactersPerMinuteMeter {
                             charactersPerMinute: stats.charactersPerMinute

@@ -24,7 +24,7 @@ TrainingStats::TrainingStats(QObject* parent) :
     QObject(parent),
     m_timeIsRunning(false),
     m_charactersTyped(0),
-    m_ellapsedTime(0),
+    m_elapsedTime(0),
     m_errorCount(0),
     m_isValid(true),
     m_startTime(0),
@@ -47,27 +47,27 @@ void TrainingStats::setCharactersTyped(int charactesTyped)
     }
 }
 
-QTime TrainingStats::ellapsedTime() const
+QTime TrainingStats::elapsedTime() const
 {
-    return QTime(0, 0).addMSecs(m_ellapsedTime);
+    return QTime(0, 0).addMSecs(m_elapsedTime);
 }
 
-void TrainingStats::setEllapsedTime(const QTime& ellapsedTime)
+void TrainingStats::setElapsedTime(const QTime& elapsedTime)
 {
-    quint64 msec = ellapsedTime.msec();
+    quint64 msec = elapsedTime.msec();
 
-    if(msec != m_ellapsedTime)
+    if(msec != m_elapsedTime)
     {
-        m_ellapsedTime = msec;
+        m_elapsedTime = msec;
         emit statsChanged();
     }
 }
 
-void TrainingStats::setEllapsedTime(const quint64& msec)
+void TrainingStats::setElapsedTime(const quint64& msec)
 {
-    if(msec != m_ellapsedTime)
+    if(msec != m_elapsedTime)
     {
-        m_ellapsedTime = msec;
+        m_elapsedTime = msec;
         emit statsChanged();
     }
 }
@@ -119,7 +119,7 @@ void TrainingStats::startTraining()
     if (!m_timeIsRunning)
     {
         m_timeIsRunning = true;
-        m_startTime = QDateTime::currentMSecsSinceEpoch() - m_ellapsedTime;
+        m_startTime = QDateTime::currentMSecsSinceEpoch() - m_elapsedTime;
         update();
     }
 }
@@ -137,7 +137,7 @@ void TrainingStats::reset()
 {
     stopTraining();
     m_charactersTyped = 0;
-    m_ellapsedTime = 0;
+    m_elapsedTime = 0;
     m_errorCount = 0;
     statsChanged();
 }
@@ -174,12 +174,12 @@ float TrainingStats::accuracy()
 
 int TrainingStats::charactersPerMinute()
 {
-    if (m_ellapsedTime == 0)
+    if (m_elapsedTime == 0)
     {
         return 0;
     }
 
-    return m_charactersTyped * 60000 / m_ellapsedTime;
+    return m_charactersTyped * 60000 / m_elapsedTime;
 }
 
 void TrainingStats::update()
@@ -188,7 +188,7 @@ void TrainingStats::update()
     if (m_timeIsRunning)
     {
         qint64 now = QDateTime::currentMSecsSinceEpoch();
-        m_ellapsedTime = now - m_startTime;
+        m_elapsedTime = now - m_startTime;
         m_updateTimer->start(200);
     }
     emit statsChanged();

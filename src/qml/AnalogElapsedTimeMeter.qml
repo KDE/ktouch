@@ -20,14 +20,14 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import Effects 1.0
 
 Item {
-    property variant ellapsedTime
+    property variant elapsedTime
 
     width: 102
     height: 102
 
     PlasmaCore.Svg {
         id: clockSvg
-        imagePath: findImage("ellapsedtimemeter.svgz")
+        imagePath: findImage("elapsedtimemeter.svgz")
     }
 
     PlasmaCore.FrameSvgItem {
@@ -61,7 +61,7 @@ Item {
         transform: Rotation {
             origin.x: minuteHand.naturalSize.width / 2
             origin.y: minuteHand.naturalSize.height / 2
-            angle: 6 * getMinutes(ellapsedTime)
+            angle: 6 * getMinutes(elapsedTime)
             Behavior on angle {
                 SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
             }
@@ -85,7 +85,7 @@ Item {
         transform: Rotation {
             origin.x: secondHand.naturalSize.width / 2
             origin.y: secondHand.naturalSize.height / 2
-            angle: 6 * getSeconds(ellapsedTime)
+            angle: 6 * getSeconds(elapsedTime)
             Behavior on angle {
                 SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
             }
