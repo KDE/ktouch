@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <course>
- <id>de2</id>
+ <id>{6fe46eef-3182-4322-82b6-bb65831e594e}</id>
  <title>German (from Tipptrainer)</title>
  <description>German training file
 adapted by Sven Gohlke &lt;sven@clio.in-berlin.de>
@@ -12,7 +12,7 @@ Version: 0.1 beta</description>
  <keyboardLayout>de</keyboardLayout>
  <lessons>
   <lesson>
-   <id>basics1</id>
+   <id>{bcd38dea-8ee8-4a0f-ac16-f0a342ee0361}</id>
    <title>Grundhaltung 1</title>
    <newCharacters>dfjk</newCharacters>
    <text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
@@ -31,7 +31,7 @@ dkk kkd dkd dkk kkd dkd kkd dkd kkd dkd kdk kdk dkd kdk dkd
 ddd kkk dkd kdk dkk kdd ddd ddd kkk dkd kdk kdk dkd kkk ddd</text>
   </lesson>
   <lesson>
-   <id>basics2</id>
+   <id>{37c2ee6c-bc81-4e74-ae61-36fbe6fe2ec3}</id>
    <title>Grundhaltung 2</title>
    <newCharacters>aslö</newCharacters>
    <text>ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll
@@ -50,7 +50,7 @@ aaö aaö aaö öaö aöa ööö aöa ööö ööö ööa ööa aaö öaö aöa 
 aöa aaa öaö aöö ööa aöö ööa aaö öaa aöö öaa aöa öaö aaö öaa</text>
   </lesson>
   <lesson>
-   <id>basics_recap1</id>
+   <id>{16ea3ae0-2987-45b2-8e61-5da491d03937}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>asdf jklö asdf jklö asdf jklö ölkj fdsa ölkj fdsa asdf jklö
@@ -71,7 +71,7 @@ ffkd kdkk dkks saak sask ssas dsas klöl dsas lkkl lkjk lkjl
 aösl ssas llkö kkök ölkj lkjl ölkö ölöa ölks öklj jlkk lkds</text>
   </lesson>
   <lesson>
-   <id>basics_recap2</id>
+   <id>{1cd8aac1-7030-4175-b14a-45442cb60903}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>sla las laa aal sla lsa las sas lsa laa las all als ass als
@@ -103,7 +103,7 @@ das öl lass das all kafka las all falls all das öl as ja da
 da das alls kafka las kalk fall saal falls all das öl ja ja</text>
   </lesson>
   <lesson>
-   <id>ie1</id>
+   <id>{5d9a523b-2f56-46d7-82af-2f630103cee3}</id>
    <title>i und e</title>
    <newCharacters>ei</newCharacters>
    <text>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke
@@ -134,7 +134,7 @@ das da die sei jede jedes diese sei seife eides filiale eis
 dies des seide dieses fidel lief des alles lies das kleides</text>
   </lesson>
   <lesson>
-   <id>gh1</id>
+   <id>{954b2a78-69d5-4e97-8a93-5d0eada3bfd8}</id>
    <title>g und h</title>
    <newCharacters>gh</newCharacters>
    <text>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj
@@ -163,7 +163,7 @@ hadi sage lass das fass dies seidige kleid gehe hege gelege
 geklage gelage sage die sage gejage klage felge helge leide</text>
   </lesson>
   <lesson>
-   <id>wo1</id>
+   <id>{a74e4301-acbd-4dfa-a126-18842b48e90d}</id>
    <title>w und o</title>
    <newCharacters>wo</newCharacters>
    <text>sws lol sws lol sws lol sws lol was los was los was los was
@@ -191,7 +191,7 @@ die wiege die waage das segel flog die woge die jagd so wie
 das wild floh es goss waldig eisig als die wiese wie willig</text>
   </lesson>
   <lesson>
-   <id>ru1</id>
+   <id>{b986f407-f1da-4071-b757-9a38d7f81083}</id>
    <title>r und u</title>
    <newCharacters>ru</newCharacters>
    <text>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr
@@ -221,7 +221,7 @@ das regal das fiel der saal war leer wars fred wars ole was
 war luise wer ulli wer dario alles lief  als das regal fiel</text>
   </lesson>
   <lesson>
-   <id>ru_recap1</id>
+   <id>{1158ac17-b75a-43bd-8289-35b94c777a27}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>aufs dies jura soda hier ufer haus erde frau juda judo joda
@@ -247,7 +247,7 @@ wage sage frage frau herr hausfrau hausherr heraus goldig
 falke eule uhu juhu also falls das so war  war es so klar</text>
   </lesson>
   <lesson>
-   <id>tz</id>
+   <id>{6f879585-5de1-4720-a289-82774413e21a}</id>
    <title>t und z</title>
    <newCharacters>tz</newCharacters>
    <text>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz
@@ -280,7 +280,7 @@ fiel der saft lief der autor rief alles eilte dazu jetzt
 war ruh</text>
   </lesson>
   <lesson>
-   <id>tz_recap1</id>
+   <id>{7ece7d60-c76c-488e-9c47-eb3fe1b8c0a4}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>der die das wer wie was wo der die das wer wie was wo da so
@@ -309,7 +309,7 @@ löse das seil jetzt ist es so weit auf dieser welt sagt sie
 alles was sie weiss was weiss sie alles wer wusste das</text>
   </lesson>
   <lesson>
-   <id>qp</id>
+   <id>{143d2ece-39c8-4959-99c4-3511b586fd42}</id>
    <title>q und p</title>
    <newCharacters>qp</newCharacters>
    <text>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq
@@ -343,7 +343,7 @@ porto partie partei plato padua parkplatz professor pariser
 reprise die quelle des flusses die weserquelle europapokale</text>
   </lesson>
   <lesson>
-   <id>vm</id>
+   <id>{78c838d7-1aa5-4c45-8c09-9327dec6ea06}</id>
    <title>v und m</title>
    <newCharacters>vm</newCharacters>
    <text>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh
@@ -373,7 +373,7 @@ quasselstrippe warum streift der kater herum es ist so kalt
 die katze sitzt im haus herum sie miaut zu laut verwahre es</text>
   </lesson>
   <lesson>
-   <id>nb</id>
+   <id>{90a5f57c-4ab9-4812-be83-7131df43e784}</id>
    <title>n und b</title>
    <newCharacters>nb</newCharacters>
    <text>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf
@@ -404,7 +404,7 @@ erbe ihres mannes aber die eigenen verse sind ebenso gut zu
 lesen  ist heine vergessen  keine ahnung  ist heine bekannt</text>
   </lesson>
   <lesson>
-   <id>c,</id>
+   <id>{2510bfde-70b7-4854-8bb9-3bf061912179}</id>
    <title>c und ,</title>
    <newCharacters>c,</newCharacters>
    <text>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,
@@ -437,7 +437,7 @@ hilfreich ist, wenn man die regeln zur kommasetzung kennt
 auch wenn der rechner streikt, musst du die ruhe bewahren</text>
   </lesson>
   <lesson>
-   <id>x.</id>
+   <id>{eba85ede-8b6c-4563-8487-99633516309a}</id>
    <title>x und .</title>
    <newCharacters>x.</newCharacters>
    <text>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.
@@ -466,7 +466,7 @@ der text aus dem lexikon ist nicht ausreichend. deshalb las
 sie auch noch die entsprechenden seiten im internet. ende.</text>
   </lesson>
   <lesson>
-   <id>y-</id>
+   <id>{a1d0e975-a100-4417-a93a-7a46408f3863}</id>
    <title>y und -</title>
    <newCharacters>y-</newCharacters>
    <text>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-
@@ -499,7 +499,7 @@ verwendet. als gedankestrich taucht er auf, wenn man ein
 paar stichworte logisch voneinander absetzen möchte.</text>
   </lesson>
   <lesson>
-   <id>umlauts1</id>
+   <id>{6160120a-a4a8-4ecd-8b00-c3f2f6107293}</id>
    <title>ü und ä</title>
    <newCharacters>üä</newCharacters>
    <text>öüö öüö öüö öüö öüö öüö öüö üöü üöü üöü üöü öüö üöü öüö üöü
@@ -536,7 +536,7 @@ tion keinen sinn.
 ...ach so, vögel ärgern keine bären.</text>
   </lesson>
   <lesson>
-   <id>szlig1</id>
+   <id>{6224df59-aacb-4819-8102-60388e58bd02}</id>
    <title>ß</title>
    <newCharacters>ß</newCharacters>
    <text>äß äß äß öß üß öß üß öß üß äß üß öß üß üß äß öß üß äß öß üß
@@ -564,7 +564,7 @@ gleichmäßig, das postschließfach, expressgüter, man stößt,
 planmäßig, regelmäßig, gemäß, das gefäß, stöße, die größte</text>
   </lesson>
   <lesson>
-   <id>capslock1</id>
+   <id>{111b7c62-c97e-4631-8a79-600fe7e343da}</id>
    <title>Capslock</title>
    <newCharacters>ASDFJKLÖEIGHWORUTZQPVMNBC;X:Y_ÄÜ</newCharacters>
    <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
@@ -583,21 +583,21 @@ ACHTUNG, DIE FESTSTELLTASTE MUSS NUN NOCH EINMAL BETÄTIGT
 WERDEN. jetzt sollte das capslock-lämpchen aus sein.</text>
   </lesson>
   <lesson>
-   <id>caps_left1</id>
+   <id>{4a35cb16-0eb7-40b7-b9c0-b47dcc0652e2}</id>
    <title>Großbuchstaben (links)</title>
    <newCharacters></newCharacters>
    <text>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La
 Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</text>
   </lesson>
   <lesson>
-   <id>caps_right1</id>
+   <id>{edd06319-a6da-42db-b2ac-ed26c5d0c2af}</id>
    <title>Großbuchstaben (rechts)</title>
    <newCharacters></newCharacters>
    <text>Fö Fö Fö Fö Fö Fö Fö Fö Fö Fö Gö Gö Gö Gö Gö Bö Bö Bö Bö Bö
 Wö Wö Wö Wö Rä Rä Rä Rö Rö Gä Gä Fä Dä Sä Vä Vä Vö Sö Dä Dä</text>
   </lesson>
   <lesson>
-   <id>caps1</id>
+   <id>{0b02872c-7646-42b1-adbe-3b0bdfee0662}</id>
    <title>Großbuchstaben</title>
    <newCharacters></newCharacters>
    <text>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank
@@ -610,7 +610,7 @@ Die folgenden vier Lektionen werden aus ganz normalen Text-
 zeichen weiter.</text>
   </lesson>
   <lesson>
-   <id>caps_recap1</id>
+   <id>{b84b71b5-4d96-4574-a093-f29185cfae38}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>Linux - meine Freude
@@ -644,7 +644,7 @@ irgendwie auch besser geworden. Dennoch gibt es noch sehr
 viel zu lernen.</text>
   </lesson>
   <lesson>
-   <id>caps_recap2</id>
+   <id>{c5565e6e-0514-4635-ba2d-d36429bb21bb}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>Das Internet
@@ -680,7 +680,7 @@ so wurde es schnell ein Netz von Zehntausenden von Hosts.
 Das ursprüngliche ARPAnet wurde zum Rückgrat des Internet.</text>
   </lesson>
   <lesson>
-   <id>caps_recap3</id>
+   <id>{3c1dc02f-4c69-449b-838f-db081499e85d}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>A. Kalbitz
@@ -717,7 +717,7 @@ auch nicht zusammengebrochen sein. Dafür war das Geräusch
 zu laut...</text>
   </lesson>
   <lesson>
-   <id>caps_recap4</id>
+   <id>{a5b70d14-1382-4809-be6d-76a48b644e8f}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>A. Kalbitz
@@ -745,7 +745,7 @@ mit dummen Texten, Meinungen und ungeschickt
 gebastelten Gedichten, wie diesem.</text>
   </lesson>
   <lesson>
-   <id>&lt;>1</id>
+   <id>{ff975b3d-968e-4044-ae02-99f5207efd20}</id>
    <title>&lt; und ></title>
    <newCharacters>&lt;></newCharacters>
    <text>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>
@@ -774,7 +774,7 @@ lektionen geben.
 &lt;->&lt;-&lt;>->&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;->>-&lt;&lt;--->>-->>-&lt;&lt;->>-&lt;&lt;>></text>
   </lesson>
   <lesson>
-   <id>numbers1</id>
+   <id>{14694131-975b-4bd5-9c31-5a18d83450dd}</id>
    <title>1,!, ; und ?</title>
    <newCharacters>1!;?</newCharacters>
    <text>1! ß? 1! ß? 1! ß? 1ß!? ?1?ß !1?! 1ß!? ??!!1ßß1 !ß!ß1??!ß!1
@@ -809,7 +809,7 @@ der Internetseite nicht zu sehen sind.
 Willst Du noch mehr über die Bedeutung von ! und ? wissen?</text>
   </lesson>
   <lesson>
-   <id>numbers2</id>
+   <id>{04dd952c-114c-40f1-8667-f9cf341fc206}</id>
    <title>5, %, 8 und (</title>
    <newCharacters>5%8(</newCharacters>
    <text>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
@@ -829,7 +829,7 @@ Das entspricht dem Rest bei einer ganzzahligen Division.
 ((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</text>
   </lesson>
   <lesson>
-   <id>numbers3</id>
+   <id>{7a7127a8-e700-4b30-ae5d-6353983ef8be}</id>
    <title>2, 6, &amp;, 7 und /</title>
    <newCharacters>26 &amp; 7 /</newCharacters>
    <text>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58
@@ -860,7 +860,7 @@ Dies ist eine gültige Grundstruktur einer HTML-Seite mit
 sehr wenig Inhalt.</text>
   </lesson>
   <lesson>
-   <id>numbers5</id>
+   <id>{c75f7056-63c0-4f2f-86fb-d8185e3849ca}</id>
    <title>4, $, 9 und )</title>
    <newCharacters>4$9)</newCharacters>
    <text>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
@@ -884,7 +884,7 @@ Dabei wird der Inhalt der Variablen $eingabe bereits ausge-
 lesen und verarbeitet.</text>
   </lesson>
   <lesson>
-   <id>numbers6</id>
+   <id>{99057b7f-4781-48e8-a076-fe866c3dbbb7}</id>
    <title>3, §, 0 und =</title>
    <newCharacters>3§0=</newCharacters>
    <text>§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30
@@ -916,7 +916,7 @@ chen für Textabsätze verwenden.
 </text>
   </lesson>
   <lesson>
-   <id>quotes1</id>
+   <id>{d6ef1647-6cad-4c5e-a5d3-65cb9017e1e5}</id>
    <title>"</title>
    <newCharacters>"</newCharacters>
    <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
@@ -944,7 +944,7 @@ Führt das zu sinnvollen Ausgaben, die zur rechten Zeit
 das richtige sagen.</text>
   </lesson>
   <lesson>
-   <id>special_chars2</id>
+   <id>{14e06483-1aa5-4fe1-b9b7-58ac010eeec1}</id>
    <title>+, *, # und '</title>
    <newCharacters>+*#'</newCharacters>
    <text>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*
@@ -976,7 +976,7 @@ dacht wurde.
 'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</text>
   </lesson>
   <lesson>
-   <id>special_chars1</id>
+   <id>{25d69b6d-5f49-486c-92b0-ae21e201e47f}</id>
    <title>_, ^, °, ' und `</title>
    <newCharacters>_ ^ ° '  `</newCharacters>
    <text>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
@@ -996,7 +996,7 @@ $jetzt = "Die aktuelle Uhrzeit ist ".`date`
 foreach $_ (`who`) ...</text>
   </lesson>
   <lesson>
-   <id>special_chars_recap1</id>
+   <id>{be06f769-9bc8-453a-bb7a-efb2d1277983}</id>
    <title>Zwischenübung</title>
    <newCharacters></newCharacters>
    <text>Sitzung
@@ -1031,7 +1031,7 @@ neue Festplatte, damit ich dann mitreden kann, wenn es
 losgeht." - "Siehste! Es wirkt schon!" ;-)</text>
   </lesson>
   <lesson>
-   <id>special_chars3</id>
+   <id>{e3cf0914-84a9-4ad8-a320-b75c7ffa8073}</id>
    <title>², ³, {, [, ], }, \, @, ~ und |</title>
    <newCharacters>²³{[]}\@~|</newCharacters>
    <text>Drittbelegung: Das sind die Zeichen ² ³ { [ ] } \ @ ~ |
