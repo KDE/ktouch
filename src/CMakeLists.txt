@@ -30,6 +30,7 @@ kde4_add_ui_files(ktouch_UIS
 # set the source code files from which KTouch is compiled
 set(ktouch_SRCS
     main.cpp
+    application.cpp
     mainwindow.cpp
     core/resource.cpp
     core/keyboardlayoutbase.cpp

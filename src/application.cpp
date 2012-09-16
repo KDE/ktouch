@@ -1,0 +1,70 @@
+/*
+ * Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "application.h"
+
+#include <qdeclarative.h>
+#include <QGraphicsDropShadowEffect>
+
+#include <kdeclarative.h>
+
+#include "core/keyboardlayout.h"
+#include "core/key.h"
+#include "core/specialkey.h"
+#include "core/keychar.h"
+#include "core/course.h"
+#include "core/lesson.h"
+#include "core/profile.h"
+#include "core/trainingstats.h"
+#include "core/dataindex.h"
+#include "core/dataaccess.h"
+#include "core/profiledataaccess.h"
+#include "editor/griditem.h"
+#include "preferencesproxy.h"
+#include "scalebackgrounditem.h"
+
+Application::Application() :
+    KApplication(true)
+{
+    qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
+    qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
+    qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKey");
+    qmlRegisterType<Key>("ktouch", 1, 0, "Key");
+    qmlRegisterType<SpecialKey>("ktouch", 1, 0, "SpecialKey");
+    qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyChar");
+    qmlRegisterType<Course>("ktouch", 1, 0, "Course");
+    qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
+    qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
+    qmlRegisterType<Profile>("ktouch", 1, 0, "Profile");
+    qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");
+    qmlRegisterType<DataIndexCourse>("ktouch", 1, 0, "DataIndexCourse");
+    qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
+    qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
+    qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
+    qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
+
+    qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
+    qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
+}
+
+void Application::setupDeclarativeBindings(QDeclarativeEngine *engine)
+{
+    KDeclarative kDeclarative;
+    kDeclarative.setDeclarativeEngine(engine);
+    kDeclarative.initialize();
+    kDeclarative.setupBindings();
+}

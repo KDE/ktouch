@@ -15,11 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <kaboutdata.h>
-#include <kcmdlineargs.h>
-#include <klocale.h>
-#include <kapplication.h>
+#include <KAboutData>
+#include <KCmdLineArgs>
+#include <KLocale>
 
+#include "application.h"
 #include "mainwindow.h"
 
 static const char description[] =
@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 
     KApplication::setGraphicsSystem("raster");
 
-    KApplication app;
+    Application app;
     MainWindow *mainWin = 0;
 
     if (app.isSessionRestored())

@@ -29,7 +29,6 @@
 #include <KStandardDirs>
 #include <KMessageBox>
 #include <KDebug>
-#include <kdeclarative.h>
 
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -37,6 +36,7 @@
 #include "core/abstractkey.h"
 #include "core/key.h"
 #include "core/keychar.h"
+#include "application.h"
 
 KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     AbstractEditor(parent),
@@ -50,10 +50,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     m_messageWidget->hide();
     m_propertiesWidget->setKeyboardLayout(m_keyboardLayout);
 
-    KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(m_view->engine());
-    kDeclarative.initialize();
-    kDeclarative.setupBindings();
+    Application::setupDeclarativeBindings(m_view->engine());
 
     m_view->rootContext()->setContextObject(this);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));

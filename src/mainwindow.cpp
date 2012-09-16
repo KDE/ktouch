@@ -17,15 +17,12 @@
 
 #include "mainwindow.h"
 
-#include <qdeclarative.h>
 #include <QDeclarativeView>
 #include <QDeclarativeContext>
-#include <QGraphicsDropShadowEffect>
 #include <QGLWidget>
 #include <QMenu>
 
 #include <kstandarddirs.h>
-#include <kdeclarative.h>
 #include <kmenu.h>
 #include <kcmdlineargs.h>
 #include <kactioncollection.h>
@@ -35,23 +32,10 @@
 #include <kshortcutsdialog.h>
 #include <kconfigdialog.h>
 
-#include "core/keyboardlayout.h"
-#include "core/key.h"
-#include "core/specialkey.h"
-#include "core/keychar.h"
-#include "core/course.h"
-#include "core/lesson.h"
-#include "core/profile.h"
-#include "core/trainingstats.h"
-#include "core/dataindex.h"
-#include "core/dataaccess.h"
-#include "core/profiledataaccess.h"
 #include "editor/resourceeditor.h"
-#include "editor/griditem.h"
+#include "application.h"
 #include "viewcontext.h"
-#include "scalebackgrounditem.h"
 #include "preferences.h"
-#include "preferencesproxy.h"
 #include "trainingconfigwidget.h"
 #include "colorsconfigwidget.h"
 
@@ -137,33 +121,9 @@ void MainWindow::init()
     KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
     m_menu->addMenu(helpMenu->menu());
 
-    qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
-    qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
-    qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKey");
-    qmlRegisterType<Key>("ktouch", 1, 0, "Key");
-    qmlRegisterType<SpecialKey>("ktouch", 1, 0, "SpecialKey");
-    qmlRegisterType<KeyChar>("ktouch", 1, 0, "KeyChar");
-    qmlRegisterType<Course>("ktouch", 1, 0, "Course");
-    qmlRegisterType<Lesson>("ktouch", 1, 0, "Lesson");
-    qmlRegisterType<TrainingStats>("ktouch", 1, 0, "TrainingStats");
-    qmlRegisterType<Profile>("ktouch", 1, 0, "Profile");
-    qmlRegisterType<DataIndex>("ktouch", 1, 0, "DataIndex");
-    qmlRegisterType<DataIndexCourse>("ktouch", 1, 0, "DataIndexCourse");
-    qmlRegisterType<DataIndexKeyboardLayout>("ktouch", 1, 0, "DataIndexKeyboardLayout");
-    qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
-    qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
-    qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
-
-    qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
-    qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
-
-    KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(m_view->engine());
-    kDeclarative.initialize();
-    kDeclarative.setupBindings();
-
     setCentralWidget(m_view);
 
+    Application::setupDeclarativeBindings(m_view->engine());
     ViewContext* viewContext = new ViewContext(this, this);
     connect(viewContext, SIGNAL(menuRequested(int,int)), SLOT(showMenu(int,int)));
 
