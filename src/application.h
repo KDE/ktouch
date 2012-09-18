@@ -27,7 +27,7 @@ class Application : public KApplication
     Q_OBJECT
 public:
     explicit Application();
-    static void setupDeclarativeBindings(QDeclarativeEngine* engine);
+    static void setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine);
 };
 
 #endif // APPLICATION_H

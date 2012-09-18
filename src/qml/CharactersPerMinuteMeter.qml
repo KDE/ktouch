@@ -38,7 +38,7 @@ Item {
             property int diff: meter.charactersPerMinute - meter.referenceCharactersPerMinute
             label: i18n("Strokes per minute")
             value: meter.charactersPerMinute
-            referenceValue: formatSign(diff) + " " + (diff > 0? diff: -diff)
+            referenceValue: strFormatter.formatSign(diff) + " " + (diff > 0? diff: -diff)
         }
     }
 }

@@ -15,35 +15,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "viewcontext.h"
+#ifndef STRINGFORMATTER_H
+#define STRINGFORMATTER_H
 
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <QObject>
 
-#include "x11_helper.h"
+class QTime;
 
-ViewContext::ViewContext(QWidget* mainWindow, QObject* parent) :
-    QObject(parent),
-    m_mainWindow(mainWindow),
-    m_XEventNotifier(new XEventNotifier())
+class StringFormatter : public QObject
 {
-    m_XEventNotifier->start();
-    connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
-}
+    Q_OBJECT
+public:
+    explicit StringFormatter(QObject* parent = 0);
+    Q_INVOKABLE QString formatTime(const QTime& time);
+    Q_INVOKABLE QString formatTimeDiff(const QTime& from, const QTime& to);
+    Q_INVOKABLE QString formatAccuracy(qreal accuracy);
+    Q_INVOKABLE QString formatAccuracyDiff(qreal from, qreal to);
+    Q_INVOKABLE QString formatSign(qreal value);
+};
 
-ViewContext::~ViewContext()
-{
-    disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
-    m_XEventNotifier->stop();
-    delete m_XEventNotifier;
-}
-
-QString ViewContext::keyboardLayoutName() const
-{
-    return X11Helper::getCurrentLayout().toString();
-}
-
-void ViewContext::showMenu(int xPos, int yPos)
-{
-    emit menuRequested(xPos, yPos);
-}
+#endif // STRINGFORMATTER_H

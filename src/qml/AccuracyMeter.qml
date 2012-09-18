@@ -36,8 +36,8 @@ Item {
         }
         DigitalMeter {
             label: i18n("Hit ratio")
-            value: formatAccuracy(meter.accuracy)
-            referenceValue: formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
+            value: strFormatter.formatAccuracy(meter.accuracy)
+            referenceValue: strFormatter.formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
         }
     }
 }

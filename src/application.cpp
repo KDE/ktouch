@@ -19,9 +19,13 @@
 
 #include <qdeclarative.h>
 #include <QGraphicsDropShadowEffect>
+#include <QScriptValue>
+#include <QScriptEngine>
 
 #include <kdeclarative.h>
 
+#include "bindings/utils.h"
+#include "bindings/stringformatter.h"
 #include "core/keyboardlayout.h"
 #include "core/key.h"
 #include "core/specialkey.h"
@@ -61,10 +65,18 @@ Application::Application() :
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
 }
 
-void Application::setupDeclarativeBindings(QDeclarativeEngine *engine)
+void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
 {
     KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(engine);
+    kDeclarative.setDeclarativeEngine(declarativeEngine);
     kDeclarative.initialize();
     kDeclarative.setupBindings();
+
+    QScriptEngine* engine = kDeclarative.scriptEngine();
+    QScriptValue globalObject = engine->globalObject();
+
+    globalObject.setProperty("findImage", engine->newFunction(findImage));
+    globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
+    globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
+    globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
 }

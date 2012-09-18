@@ -184,18 +184,6 @@ void KeyboardLayoutEditor::setKeyGeometry(int keyIndex, int top, int left, int w
     }
 }
 
-QString KeyboardLayoutEditor::findImage(const QString& imageName) const
-{
-    QString relPath = QString("images/") + imageName;
-    QString path = KGlobal::dirs()->findResource("appdata", relPath);
-    if (path.isNull())
-    {
-        kWarning() << "can't find image resource:" << imageName;
-    }
-    return path;
-
-}
-
 void KeyboardLayoutEditor::clearSelection()
 {
     setSelectedKey(0);

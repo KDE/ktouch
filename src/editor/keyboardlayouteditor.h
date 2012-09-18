@@ -48,8 +48,6 @@ public:
     Q_SLOT void setZoomLevel(int zoomLevel);
 
     Q_INVOKABLE void setKeyGeometry(int keyIndex, int top, int left, int width, int height);
-
-    Q_INVOKABLE QString findImage(const QString& imageName) const;
 signals:
     void keyboardLayoutChanged();
     void readOnlyChanged();

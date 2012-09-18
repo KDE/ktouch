@@ -15,35 +15,17 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "viewcontext.h"
+#ifndef UTILS_H
+#define UTILS_H
 
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <QScriptValue>
 
-#include "x11_helper.h"
+class QScriptContext;
+class QScriptEngine;
 
-ViewContext::ViewContext(QWidget* mainWindow, QObject* parent) :
-    QObject(parent),
-    m_mainWindow(mainWindow),
-    m_XEventNotifier(new XEventNotifier())
-{
-    m_XEventNotifier->start();
-    connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
-}
+QScriptValue findImage(QScriptContext* context, QScriptEngine* engine);
 
-ViewContext::~ViewContext()
-{
-    disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
-    m_XEventNotifier->stop();
-    delete m_XEventNotifier;
-}
+QScriptValue getSecondsOfQTime(QScriptContext* context, QScriptEngine* engine);
+QScriptValue getMinutesOfQTime(QScriptContext* context, QScriptEngine* engine);
 
-QString ViewContext::keyboardLayoutName() const
-{
-    return X11Helper::getCurrentLayout().toString();
-}
-
-void ViewContext::showMenu(int xPos, int yPos)
-{
-    emit menuRequested(xPos, yPos);
-}
+#endif // UTILS_H

@@ -34,8 +34,8 @@ Item {
         }
         DigitalMeter {
             label: i18n("Elapsed time")
-            value: formatTime(meter.elapsedTime)
-            referenceValue: formatTimeDiff(meter.referenceElpsedTime, meter.elapsedTime)
+            value: strFormatter.formatTime(meter.elapsedTime)
+            referenceValue: strFormatter.formatTimeDiff(meter.referenceElapsedTime, meter.elapsedTime)
             positiveDiffIsGood: false
         }
     }
