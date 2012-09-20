@@ -41,8 +41,8 @@
 #include "core/course.h"
 #include "core/keyboardlayout.h"
 #include "models/resourcemodel.h"
+#include "models/categorizedresourcesortfilterproxymodel.h"
 #include "resourceeditorwidget.h"
-#include "categorizedresourcesortfilterproxymodel.h"
 #include "newresourceassistant.h"
 
 ResourceEditor::ResourceEditor(QWidget *parent) :

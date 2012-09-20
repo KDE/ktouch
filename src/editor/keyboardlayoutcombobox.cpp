@@ -18,7 +18,7 @@
 
 #include "keyboardlayoutcombobox.h"
 
-#include "editor/categorizedresourcesortfilterproxymodel.h"
+#include "models/categorizedresourcesortfilterproxymodel.h"
 
 
 KeyboardLayoutComboBox::KeyboardLayoutComboBox(QWidget* parent) :
