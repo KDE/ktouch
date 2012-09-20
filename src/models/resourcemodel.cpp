@@ -62,6 +62,8 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
         }
 
         endResetModel();
+
+        emit dataIndexChanged();
     }
 }
 

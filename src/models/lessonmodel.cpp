@@ -60,6 +60,8 @@ void LessonModel::setCourse(Course* course)
         }
 
         endResetModel();
+
+        emit courseChanged();
     }
 }
 

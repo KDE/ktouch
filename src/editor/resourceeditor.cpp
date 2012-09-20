@@ -68,7 +68,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
     CategorizedResourceSortFilterProxyModel* categorizedResourceModel = new CategorizedResourceSortFilterProxyModel(this);
-    categorizedResourceModel->setSourceModel(m_resourceModel);
+    categorizedResourceModel->setResourceModel(m_resourceModel);
     categorizedResourceModel->setCategorizedModel(true);
 
     setMinimumSize(700, 500);

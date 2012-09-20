@@ -22,7 +22,8 @@
 
 CategorizedResourceSortFilterProxyModel::CategorizedResourceSortFilterProxyModel(QObject *parent) :
     KCategorizedSortFilterProxyModel(parent),
-    m_resourceTypeFilter(ResourceModel::CourseItem | ResourceModel::KeyboardLayoutItem)
+    m_resourceTypeFilter(ResourceModel::CourseItem | ResourceModel::KeyboardLayoutItem),
+    m_resourceModel(0)
 {
     setDynamicSortFilter(true);
 }
@@ -38,13 +39,23 @@ void CategorizedResourceSortFilterProxyModel::setResourceTypeFilter(ResourceMode
     {
         m_resourceTypeFilter = types;
         invalidateFilter();
+        emit resourceTypeFilterChanged();
     }
 }
 
-void CategorizedResourceSortFilterProxyModel::setSourceModel(QAbstractItemModel* sourceModel)
+ResourceModel* CategorizedResourceSortFilterProxyModel::resourceModel() const
 {
-    QSortFilterProxyModel::setSourceModel(sourceModel);
-    sort(0);
+    return m_resourceModel;
+}
+void CategorizedResourceSortFilterProxyModel::setResourceModel(ResourceModel* resourceModel)
+{
+    if (resourceModel != m_resourceModel)
+    {
+        m_resourceModel = resourceModel;
+        setSourceModel(m_resourceModel);
+        sort(0);
+        emit resourceModelChanged();
+    }
 }
 
 bool CategorizedResourceSortFilterProxyModel::subSortLessThan(const QModelIndex& left, const QModelIndex& right) const

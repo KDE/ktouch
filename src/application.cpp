@@ -37,6 +37,9 @@
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
 #include "core/profiledataaccess.h"
+#include "models/resourcemodel.h"
+#include "models/lessonmodel.h"
+#include "models/categorizedresourcesortfilterproxymodel.h"
 #include "editor/griditem.h"
 #include "preferencesproxy.h"
 #include "scalebackgrounditem.h"
@@ -60,6 +63,10 @@ Application::Application() :
     qmlRegisterType<PreferencesProxy>("ktouch", 1, 0, "Preferences");
     qmlRegisterType<DataAccess>("ktouch", 1, 0, "DataAccess");
     qmlRegisterType<ProfileDataAccess>("ktouch", 1, 0, "ProfileDataAccess");
+
+    qmlRegisterType<ResourceModel>("ktouch", 1, 0, "ResourceModel");
+    qmlRegisterType<LessonModel>("ktouch", 1, 0, "LessonModel");
+    qmlRegisterType<CategorizedResourceSortFilterProxyModel>("ktouch", 1, 0, "CategorizedResourceSortFilterProxyModel");
 
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");

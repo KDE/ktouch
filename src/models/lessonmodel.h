@@ -27,6 +27,7 @@ class Lesson;
 class LessonModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(Course* course READ course WRITE setCourse NOTIFY courseChanged)
 public:
     explicit LessonModel(QObject* parent = 0);
     Course* course() const;
@@ -36,6 +37,7 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
 
 signals:
+    void courseChanged();
     void lessonChanged(int index);
 
 private slots:

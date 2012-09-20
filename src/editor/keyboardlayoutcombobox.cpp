@@ -40,7 +40,7 @@ void KeyboardLayoutComboBox::setResourceModel(ResourceModel* model)
     if (model != m_resourceModel)
     {
         m_resourceModel = model;
-        m_filteredResourceModel->setSourceModel(model);
+        m_filteredResourceModel->setResourceModel(model);
     }
 }
 

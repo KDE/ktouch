@@ -26,16 +26,23 @@
 class CategorizedResourceSortFilterProxyModel : public KCategorizedSortFilterProxyModel
 {
     Q_OBJECT
+    Q_PROPERTY(ResourceModel::ResourceItemTypes resourceTypeFilter READ resourceTypeFilter WRITE setResourceTypeFilter NOTIFY resourceTypeFilterChanged)
+    Q_PROPERTY(ResourceModel* resourceModel READ resourceModel WRITE setResourceModel NOTIFY resourceModelChanged)
 public:
     explicit CategorizedResourceSortFilterProxyModel(QObject* parent = 0);
     ResourceModel::ResourceItemTypes resourceTypeFilter() const;
     void setResourceTypeFilter(ResourceModel::ResourceItemTypes types);
-    void setSourceModel(QAbstractItemModel* sourceModel);
+    ResourceModel* resourceModel() const;
+    void setResourceModel(ResourceModel* resourceModel);
+signals:
+    void resourceTypeFilterChanged();
+    void resourceModelChanged();
 protected:
     bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const;
     bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const;
 private:
     ResourceModel::ResourceItemTypes m_resourceTypeFilter;
+    ResourceModel* m_resourceModel;
 };
 
 #endif // CATEGORIZEDRESOURCESORTFILTERPROXYMODEL_H

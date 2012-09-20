@@ -29,6 +29,8 @@ class DataIndex;
 class ResourceModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(DataIndex* dataIndex READ dataIndex WRITE setDataIndex NOTIFY dataIndexChanged)
+    Q_ENUMS(ResourceItemTypes)
 public:
     enum ResourceItemType {
         None = 0x0,
@@ -50,6 +52,8 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
     int rowCount(const QModelIndex &parent) const;
 
+signals:
+    void dataIndexChanged();
 
 private slots:
     void onCourseAboutToBeAdded(DataIndexCourse* course, int index);

@@ -30,7 +30,7 @@ ResourceTemplateWidget::ResourceTemplateWidget(ResourceModel* resourceModel, QWi
 {
     setupUi(this);
 
-    m_filteredResourcesModel->setSourceModel(resourceModel);
+    m_filteredResourcesModel->setResourceModel(resourceModel);
     m_templatesView->setModel(m_filteredResourcesModel);
 
     connect(m_useTemplateCheckbox, SIGNAL(clicked()), SIGNAL(isValidChanged()));
