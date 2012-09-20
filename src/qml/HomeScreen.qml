@@ -23,7 +23,7 @@ import ktouch 1.0
 FocusScope {
     id: screen
 
-    property variant courses;
+    property CategorizedResourceSortFilterProxyModel courseModel
     signal lessonSelected(variant course, int lessonIndex, variant profile)
 
     QtObject {
@@ -117,7 +117,7 @@ FocusScope {
             HomeScreenAccordion {
                 id: homeScreenAccordion
                 opacity: 1 - initialProfileForm.opacity
-                courses: screen.courses
+                courseModel: screen.courseModel
                 profile: d.profile
                 anchors.fill: parent
                 anchors.margins: 5

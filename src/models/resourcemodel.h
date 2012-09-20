@@ -42,6 +42,7 @@ public:
         ResourceTypeRole = Qt::UserRole + 1,
         DataRole,
         KeyboardLayoutNameRole,
+        PathRole,
         IndexRole,
         SourceRole
     };

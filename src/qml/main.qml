@@ -54,6 +54,10 @@ Item {
         }
     }
 
+    ResourceModel {
+        id: resourceModel
+        dataIndex: dataIndex
+    }
 
     ProfileDataAccess {
         id: profileDataAccess
@@ -65,8 +69,6 @@ Item {
 
     KeyboardLayout {
         id: keyboardLayout
-
-        property variant correspondingDataIndexCourses: []
 
         function update() {
             isValid = false
@@ -94,29 +96,19 @@ Item {
                 }
             }
         }
+    }
 
-        function updateCorrespondingDataIndexCourses() {
-            if (!isValid)
-                return;
-            var courses = new Array;
-            for (var i = 0; i < dataIndex.courseCount; i++)
-            {
-                var dataIndexCourse = dataIndex.course(i)
-                if (name === dataIndexCourse.keyboardLayoutName)
-                {
-                    courses.push(dataIndexCourse)
-                }
-            }
-            correspondingDataIndexCourses = courses
-        }
-
-        onIsValidChanged: updateCorrespondingDataIndexCourses()
+    CategorizedResourceSortFilterProxyModel {
+        id: availableCourseModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
+        keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
     }
 
     HomeScreen {
         id: homeScreen
         anchors.fill: parent
-        courses: main.courses
+        courseModel: availableCourseModel
         visible: false
         focus: true
         onLessonSelected: {

@@ -39,6 +39,8 @@ void CategorizedResourceSortFilterProxyModel::setResourceTypeFilter(ResourceMode
     {
         m_resourceTypeFilter = types;
         invalidateFilter();
+        invalidate();
+        sort(0);
         emit resourceTypeFilterChanged();
     }
 }
@@ -54,6 +56,8 @@ void CategorizedResourceSortFilterProxyModel::setKeyboardLayoutNameFilter(const 
     {
         m_keyboardLayoutNameFilter = name;
         invalidateFilter();
+        invalidate();
+        sort(0);
         emit keyboardLayoutNameFilterChanged();
     }
 }

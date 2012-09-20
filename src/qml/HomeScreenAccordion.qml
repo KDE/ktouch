@@ -23,8 +23,8 @@ import ktouch 1.0
 Column {
     id: item
 
-    property variant courses;
-    property Profile profile;
+    property CategorizedResourceSortFilterProxyModel courseModel
+    property Profile profile
     signal lessonSelected(variant course, int lessonIndex)
 
     property variant boxes: [];
@@ -103,14 +103,13 @@ Column {
 
     Repeater {
         id: repeater
-        property variant courses: keyboardLayout.correspondingDataIndexCourses
-        model: keyboardLayout.isValid? courses.length: 0
-        onModelChanged: updateBoxes()
+        model: courseModel
+        onCountChanged: updateBoxes()
 
         HomeScreenBox {
             id: box
             width: item.width
-            title: i18n(repeater.courses[index].title)
+            title: i18n(display)
             active: activeIndex === index
             function courseId() {
                 return lessonSelector.course.id
@@ -121,7 +120,7 @@ Column {
             }
             content: LessonSelector {
                 id: lessonSelector
-                dataIndexCourse: repeater.courses[index]
+                coursePath: path
                 profile: item.profile
                 onLessonSelected: item.lessonSelected(course, lessonIndex)
             }

@@ -29,6 +29,10 @@ ResourceModel::ResourceModel(QObject* parent) :
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
+    QHash<int,QByteArray> roleNames = this->roleNames();
+    roleNames.insert(ResourceModel::KeyboardLayoutNameRole, "keyboardLayoutName");
+    roleNames.insert(ResourceModel::PathRole, "path");
+    setRoleNames(roleNames);
 }
 
 DataIndex* ResourceModel::dataIndex() const
@@ -172,6 +176,8 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant::fromValue<QObject*>(m_dataIndex->course(row));
     case ResourceModel::KeyboardLayoutNameRole:
         return QVariant(m_dataIndex->course(row)->keyboardLayoutName());
+    case ResourceModel::PathRole:
+        return QVariant(m_dataIndex->course(row)->path());
     case ResourceModel::IndexRole:
         return QVariant(row);
     case ResourceModel::SourceRole:
@@ -201,6 +207,8 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant::fromValue<QObject*>(m_dataIndex->keyboardLayout(row));
     case ResourceModel::KeyboardLayoutNameRole:
         return QVariant(m_dataIndex->keyboardLayout(row)->name());
+    case ResourceModel::PathRole:
+        return QVariant(m_dataIndex->keyboardLayout(row)->path());
     case ResourceModel::IndexRole:
         return QVariant(row);
     case ResourceModel::SourceRole:
