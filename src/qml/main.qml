@@ -31,32 +31,29 @@ Item {
         id: dataAccess
     }
 
-    DataIndex {
-        id: dataIndex
-        Component.onCompleted: {
-            dataAccess.loadDataIndex(dataIndex)
+    property DataIndex dataIndex: globalDataIndex
+
+    QtObject {
+        id: helper
+        property string name: keyboardLayoutName
+        property int keyboardLayoutCount: dataIndex.keyboardLayoutCount
+        property int courseCount: dataIndex.courseCount
+        onNameChanged: {
             keyboardLayout.update()
         }
         onKeyboardLayoutCountChanged: {
-            if (isValid)
+            if (dataIndex.isValid)
                 keyboardLayout.update()
         }
         onCourseCountChanged: {
-            if (isValid)
+            if (dataIndex.isValid)
                 keyboardLayout.updateCorrespondingDataIndexCourses()
-        }
-    }
-
-    QtObject {
-        property string name: keyboardLayoutName
-        onNameChanged: {
-            keyboardLayout.update()
         }
     }
 
     ResourceModel {
         id: resourceModel
-        dataIndex: dataIndex
+        dataIndex: main.dataIndex
     }
 
     ProfileDataAccess {
@@ -70,6 +67,13 @@ Item {
     KeyboardLayout {
         id: keyboardLayout
 
+        Component.onCompleted: {
+            console.log(dataIndex, dataIndex.isValid)
+            if (dataIndex.isValid) {
+                keyboardLayout.update()
+            }
+        }
+
         function update() {
             isValid = false
             var name = keyboardLayoutName;
@@ -79,6 +83,7 @@ Item {
             for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
+
                 if (dataIndexLayout.name === name) {
                     dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return
@@ -90,6 +95,7 @@ Item {
             for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
             {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
+
                 if (name.search(dataIndexLayout.name) === 0) {
                     dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
                     return

@@ -34,7 +34,7 @@ class DataIndex : public Resource
     Q_OBJECT
     Q_PROPERTY(int courseCount READ courseCount NOTIFY courseCountChanged)
     Q_PROPERTY(int keyboardLayoutCount READ keyboardLayoutCount NOTIFY keyboardLayoutCountChanged)
-    Q_ENUMS(Source);
+    Q_ENUMS(Source)
 
 public:
     enum Source {

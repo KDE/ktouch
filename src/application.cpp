@@ -45,7 +45,39 @@
 #include "scalebackgrounditem.h"
 
 Application::Application() :
-    KApplication(true)
+    KApplication(true),
+    m_dataIndex(new DataIndex(this))
+{
+    registerQmlTypes();
+
+    DataAccess dataAccess;
+    dataAccess.loadDataIndex(m_dataIndex);
+}
+
+DataIndex* Application::dataIndex()
+{
+    Application* app = qobject_cast<Application*>(QCoreApplication::instance());
+
+    return app->m_dataIndex;
+}
+
+void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
+{
+    KDeclarative kDeclarative;
+    kDeclarative.setDeclarativeEngine(declarativeEngine);
+    kDeclarative.initialize();
+    kDeclarative.setupBindings();
+
+    QScriptEngine* engine = kDeclarative.scriptEngine();
+    QScriptValue globalObject = engine->globalObject();
+
+    globalObject.setProperty("findImage", engine->newFunction(findImage));
+    globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
+    globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
+    globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
+}
+
+void Application::registerQmlTypes()
 {
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
     qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
@@ -70,20 +102,4 @@ Application::Application() :
 
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
-}
-
-void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
-{
-    KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(declarativeEngine);
-    kDeclarative.initialize();
-    kDeclarative.setupBindings();
-
-    QScriptEngine* engine = kDeclarative.scriptEngine();
-    QScriptValue globalObject = engine->globalObject();
-
-    globalObject.setProperty("findImage", engine->newFunction(findImage));
-    globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
-    globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
-    globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
 }

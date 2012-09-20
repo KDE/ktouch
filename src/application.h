@@ -21,13 +21,18 @@
 #include <KApplication>
 
 class QDeclarativeEngine;
+class DataIndex;
 
 class Application : public KApplication
 {
     Q_OBJECT
 public:
     explicit Application();
+    static DataIndex* dataIndex();
     static void setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine);
+    DataIndex* m_dataIndex;
+private:
+    void registerQmlTypes();
 };
 
 #endif // APPLICATION_H

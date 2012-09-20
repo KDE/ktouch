@@ -25,6 +25,7 @@
 class QDeclarativeView;
 class QMenu;
 class KActionCollection;
+class DataIndex;
 class ResourceEditor;
 class XEventNotifier;
 
@@ -32,10 +33,12 @@ class MainWindow : public KMainWindow
 {
     Q_OBJECT
     Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName NOTIFY keyboardLayoutNameChanged)
+    Q_PROPERTY(DataIndex* globalDataIndex READ dataIndex CONSTANT)
 public:
     explicit MainWindow(QWidget* parent = 0);
     ~MainWindow();
     QString keyboardLayoutName() const;
+    DataIndex* dataIndex();
     bool useOpenGLViewport() const;
     void setUseOpenGLViewport(bool useOpenGLViewport);
     Q_INVOKABLE void showMenu(int xPos, int yPos);

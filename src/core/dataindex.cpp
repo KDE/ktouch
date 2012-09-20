@@ -169,3 +169,4 @@ void DataIndexKeyboardLayout::setSource(DataIndex::Source source)
         emit sourceChanged();
     }
 }
+

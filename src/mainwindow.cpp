@@ -21,6 +21,7 @@
 #include <QDeclarativeContext>
 #include <QGLWidget>
 #include <QMenu>
+#include <QVariant>
 
 #include <kstandarddirs.h>
 #include <kmenu.h>
@@ -62,6 +63,11 @@ MainWindow::~MainWindow()
 QString MainWindow::keyboardLayoutName() const
 {
     return X11Helper::getCurrentLayout().toString();
+}
+
+DataIndex *MainWindow::dataIndex()
+{
+    return Application::dataIndex();
 }
 
 bool MainWindow::useOpenGLViewport() const

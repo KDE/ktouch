@@ -44,10 +44,11 @@
 #include "models/categorizedresourcesortfilterproxymodel.h"
 #include "resourceeditorwidget.h"
 #include "newresourceassistant.h"
+#include "application.h"
 
 ResourceEditor::ResourceEditor(QWidget *parent) :
     KMainWindow(parent),
-    m_dataIndex(new DataIndex(this)),
+    m_dataIndex(Application::dataIndex()),
     m_resourceModel(new ResourceModel(this)),
     m_currentResource(0),
     m_backupResource(0),
@@ -64,9 +65,6 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
 {
     m_resourceModel->setDataIndex(m_dataIndex);
-
-    DataAccess dataAccess;
-    dataAccess.loadDataIndex(m_dataIndex);
     CategorizedResourceSortFilterProxyModel* categorizedResourceModel = new CategorizedResourceSortFilterProxyModel(this);
     categorizedResourceModel->setResourceModel(m_resourceModel);
     categorizedResourceModel->setCategorizedModel(true);
