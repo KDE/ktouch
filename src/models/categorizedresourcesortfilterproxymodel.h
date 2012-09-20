@@ -27,21 +27,26 @@ class CategorizedResourceSortFilterProxyModel : public KCategorizedSortFilterPro
 {
     Q_OBJECT
     Q_PROPERTY(ResourceModel::ResourceItemTypes resourceTypeFilter READ resourceTypeFilter WRITE setResourceTypeFilter NOTIFY resourceTypeFilterChanged)
+    Q_PROPERTY(QString keyboardLayoutNameFilter READ keyboardLayoutNameFilter WRITE setKeyboardLayoutNameFilter NOTIFY keyboardLayoutNameFilterChanged)
     Q_PROPERTY(ResourceModel* resourceModel READ resourceModel WRITE setResourceModel NOTIFY resourceModelChanged)
 public:
     explicit CategorizedResourceSortFilterProxyModel(QObject* parent = 0);
     ResourceModel::ResourceItemTypes resourceTypeFilter() const;
     void setResourceTypeFilter(ResourceModel::ResourceItemTypes types);
+    QString keyboardLayoutNameFilter() const;
+    void setKeyboardLayoutNameFilter(const QString& name);
     ResourceModel* resourceModel() const;
     void setResourceModel(ResourceModel* resourceModel);
 signals:
     void resourceTypeFilterChanged();
+    void keyboardLayoutNameFilterChanged();
     void resourceModelChanged();
 protected:
     bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const;
     bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const;
 private:
     ResourceModel::ResourceItemTypes m_resourceTypeFilter;
+    QString m_keyboardLayoutNameFilter;
     ResourceModel* m_resourceModel;
 };
 

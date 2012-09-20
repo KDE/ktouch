@@ -41,6 +41,7 @@ public:
     enum AdditionalRoles {
         ResourceTypeRole = Qt::UserRole + 1,
         DataRole,
+        KeyboardLayoutNameRole,
         IndexRole,
         SourceRole
     };

@@ -170,6 +170,8 @@ QVariant ResourceModel::courseData(int row, int role) const
         return QVariant(ResourceModel::CourseItem);
     case ResourceModel::DataRole:
         return QVariant::fromValue<QObject*>(m_dataIndex->course(row));
+    case ResourceModel::KeyboardLayoutNameRole:
+        return QVariant(m_dataIndex->course(row)->keyboardLayoutName());
     case ResourceModel::IndexRole:
         return QVariant(row);
     case ResourceModel::SourceRole:
@@ -197,6 +199,8 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
         return QVariant(ResourceModel::KeyboardLayoutItem);
     case ResourceModel::DataRole:
         return QVariant::fromValue<QObject*>(m_dataIndex->keyboardLayout(row));
+    case ResourceModel::KeyboardLayoutNameRole:
+        return QVariant(m_dataIndex->keyboardLayout(row)->name());
     case ResourceModel::IndexRole:
         return QVariant(row);
     case ResourceModel::SourceRole:

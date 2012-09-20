@@ -43,6 +43,21 @@ void CategorizedResourceSortFilterProxyModel::setResourceTypeFilter(ResourceMode
     }
 }
 
+QString CategorizedResourceSortFilterProxyModel::keyboardLayoutNameFilter() const
+{
+    return m_keyboardLayoutNameFilter;
+}
+
+void CategorizedResourceSortFilterProxyModel::setKeyboardLayoutNameFilter(const QString &name)
+{
+    if (name != m_keyboardLayoutNameFilter)
+    {
+        m_keyboardLayoutNameFilter = name;
+        invalidateFilter();
+        emit keyboardLayoutNameFilterChanged();
+    }
+}
+
 ResourceModel* CategorizedResourceSortFilterProxyModel::resourceModel() const
 {
     return m_resourceModel;
@@ -69,5 +84,14 @@ bool CategorizedResourceSortFilterProxyModel::filterAcceptsRow(int source_row, c
 {
     const QModelIndex index = sourceModel()->index(source_row, 0, source_parent);
     const int resourceType = sourceModel()->data(index, ResourceModel::ResourceTypeRole).toInt();
-    return m_resourceTypeFilter & resourceType;
+
+    if ((m_resourceTypeFilter & resourceType) == 0)
+        return false;
+
+    if (m_keyboardLayoutNameFilter.isEmpty())
+        return true;
+
+    const QString name = sourceModel()->data(index, ResourceModel::KeyboardLayoutNameRole).toString();
+
+    return name == m_keyboardLayoutNameFilter;
 }
