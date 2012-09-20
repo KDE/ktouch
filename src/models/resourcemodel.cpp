@@ -23,26 +23,46 @@
 #include <KIcon>
 #include <KCategorizedSortFilterProxyModel>
 
-ResourceModel::ResourceModel(DataIndex* dataIndex, QObject* parent) :
+ResourceModel::ResourceModel(QObject* parent) :
     QAbstractListModel(parent),
-    m_dataIndex(dataIndex),
+    m_dataIndex(0),
     m_signalMapper(new QSignalMapper(this))
 {
-    connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(DataIndexCourse*,int)), SLOT(onCourseAboutToBeAdded(DataIndexCourse*,int)));
-    connect(m_dataIndex, SIGNAL(courseAdded()), SLOT(onResourceAdded()));
-    connect(m_dataIndex, SIGNAL(coursesAboutToBeRemoved(int,int)), SLOT(onCoursesAboutToBeRemoved(int,int)));
-    connect(m_dataIndex, SIGNAL(coursesRemoved()), SLOT(onResourceRemoved()));
-    connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)), SLOT(onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)));
-    connect(m_dataIndex, SIGNAL(keyboardLayoutAdded()), SLOT(onResourceAdded()));
-    connect(m_dataIndex, SIGNAL(keyboardLayoutsAboutToBeRemoved(int,int)), SLOT(onKeyboardLayoutsAboutToBeRemoved(int,int)));
-    connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
-
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
 }
 
 DataIndex* ResourceModel::dataIndex() const
 {
     return m_dataIndex;
+}
+
+void ResourceModel::setDataIndex(DataIndex* dataIndex)
+{
+    if (dataIndex != m_dataIndex)
+    {
+        beginResetModel();
+
+        if (m_dataIndex)
+        {
+            m_dataIndex->disconnect(m_signalMapper);
+        }
+
+        m_dataIndex = dataIndex;
+
+        if (m_dataIndex)
+        {
+            connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(DataIndexCourse*,int)), SLOT(onCourseAboutToBeAdded(DataIndexCourse*,int)));
+            connect(m_dataIndex, SIGNAL(courseAdded()), SLOT(onResourceAdded()));
+            connect(m_dataIndex, SIGNAL(coursesAboutToBeRemoved(int,int)), SLOT(onCoursesAboutToBeRemoved(int,int)));
+            connect(m_dataIndex, SIGNAL(coursesRemoved()), SLOT(onResourceRemoved()));
+            connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)), SLOT(onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)));
+            connect(m_dataIndex, SIGNAL(keyboardLayoutAdded()), SLOT(onResourceAdded()));
+            connect(m_dataIndex, SIGNAL(keyboardLayoutsAboutToBeRemoved(int,int)), SLOT(onKeyboardLayoutsAboutToBeRemoved(int,int)));
+            connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
+        }
+
+        endResetModel();
+    }
 }
 
 Qt::ItemFlags ResourceModel::flags(const QModelIndex& index) const

@@ -42,8 +42,9 @@ public:
         IndexRole,
         SourceRole
     };
-    explicit ResourceModel(DataIndex* dataIndex, QObject* parent = 0);
+    explicit ResourceModel( QObject* parent = 0);
     DataIndex* dataIndex() const;
+    void setDataIndex(DataIndex* dataIndex);
     Qt::ItemFlags flags(const QModelIndex& index) const;
     QVariant data(const QModelIndex& index, int role) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;

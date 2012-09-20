@@ -48,7 +48,7 @@
 ResourceEditor::ResourceEditor(QWidget *parent) :
     KMainWindow(parent),
     m_dataIndex(new DataIndex(this)),
-    m_resourceModel(new ResourceModel(m_dataIndex, this)),
+    m_resourceModel(new ResourceModel(this)),
     m_currentResource(0),
     m_backupResource(0),
     m_undoGroup(new QUndoGroup(this)),
@@ -63,6 +63,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_saveTimer(new QTimer(this))
 
 {
+    m_resourceModel->setDataIndex(m_dataIndex);
+
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
     CategorizedResourceSortFilterProxyModel* categorizedResourceModel = new CategorizedResourceSortFilterProxyModel(this);
