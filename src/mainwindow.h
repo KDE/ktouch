@@ -26,16 +26,22 @@ class QDeclarativeView;
 class QMenu;
 class KActionCollection;
 class ResourceEditor;
+class XEventNotifier;
 
 class MainWindow : public KMainWindow
 {
     Q_OBJECT
+    Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName NOTIFY keyboardLayoutNameChanged)
 public:
     explicit MainWindow(QWidget* parent = 0);
+    ~MainWindow();
+    QString keyboardLayoutName() const;
     bool useOpenGLViewport() const;
     void setUseOpenGLViewport(bool useOpenGLViewport);
+    Q_INVOKABLE void showMenu(int xPos, int yPos);
+signals:
+    void keyboardLayoutNameChanged();
 private slots:
-    void showMenu(int xPos, int yPos);
     void showConfigDialog();
     void configureShortcuts();
     void setFullscreen(bool fullscreen);
@@ -47,6 +53,7 @@ private:
     QMenu* m_menu;
     QWeakPointer<ResourceEditor> m_resourceEditorRef;
     bool m_useOpenGLViewport;
+    XEventNotifier* m_XEventNotifier;
 };
 
 #endif // MAINWINDOW_H

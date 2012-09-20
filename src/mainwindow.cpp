@@ -34,19 +34,34 @@
 
 #include "editor/resourceeditor.h"
 #include "application.h"
-#include "viewcontext.h"
 #include "preferences.h"
 #include "trainingconfigwidget.h"
 #include "colorsconfigwidget.h"
+#include "x11_helper.h"
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
     m_view(new QDeclarativeView(this)),
     m_actionCollection(new KActionCollection(this)),
     m_menu(new QMenu(this)),
-    m_useOpenGLViewport(false)
+    m_useOpenGLViewport(false),
+    m_XEventNotifier(new XEventNotifier())
 {
+    m_XEventNotifier->start();
+    connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
     init();
+}
+
+MainWindow::~MainWindow()
+{
+    disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
+    m_XEventNotifier->stop();
+    delete m_XEventNotifier;
+}
+
+QString MainWindow::keyboardLayoutName() const
+{
+    return X11Helper::getCurrentLayout().toString();
 }
 
 bool MainWindow::useOpenGLViewport() const
@@ -124,12 +139,10 @@ void MainWindow::init()
     setCentralWidget(m_view);
 
     Application::setupDeclarativeBindings(m_view->engine());
-    ViewContext* viewContext = new ViewContext(this, this);
-    connect(viewContext, SIGNAL(menuRequested(int,int)), SLOT(showMenu(int,int)));
 
     m_view->setMinimumSize(1000, 700);
     m_view->setStyleSheet("background-color: transparent;");
-    m_view->rootContext()->setContextObject(viewContext);
+    m_view->rootContext()->setContextObject(this);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/main.qml")));
 }

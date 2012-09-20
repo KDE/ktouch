@@ -69,7 +69,6 @@ set(ktouch_SRCS
     editor/keyboardlayoutpropertieswidget.cpp
     editor/keyboardlayoutcommands.cpp
     editor/griditem.cpp
-    viewcontext.cpp
     scalebackgrounditem.cpp
     x11_helper.cpp
     preferencesproxy.cpp
