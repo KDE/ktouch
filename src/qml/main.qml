@@ -45,10 +45,6 @@ Item {
             if (dataIndex.isValid)
                 keyboardLayout.update()
         }
-        onCourseCountChanged: {
-            if (dataIndex.isValid)
-                keyboardLayout.updateCorrespondingDataIndexCourses()
-        }
     }
 
     ResourceModel {
