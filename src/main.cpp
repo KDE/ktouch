@@ -53,6 +53,7 @@ int main(int argc, char **argv)
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineOptions options;
     options.add("opengl", ki18n("use a QGLWidget for the viewport"));
+    options.add("resource-editor", ki18n("launch the course and keyboard layout editor"));
     KCmdLineArgs::addCmdLineOptions(options);
 
     KApplication::setGraphicsSystem("raster");
@@ -67,9 +68,25 @@ int main(int argc, char **argv)
     else
     {
         KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-        mainWin = new MainWindow();
-        mainWin->setUseOpenGLViewport(args->isSet("opengl"));
-        mainWin->show();
+
+        if (args->isSet("resource-editor"))
+        {
+            QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+            if (resourceEditorRef.isNull())
+            {
+                resourceEditorRef = new ResourceEditor();
+            }
+
+            ResourceEditor* resourceEditor = resourceEditorRef.data();
+
+            resourceEditor->show();
+        }
+        else
+        {
+            mainWin = new MainWindow();
+            mainWin->setUseOpenGLViewport(args->isSet("opengl"));
+            mainWin->show();
+        }
         args->clear();
     }
 

@@ -55,7 +55,6 @@ private:
     QDeclarativeView* m_view;
     KActionCollection* m_actionCollection;
     QMenu* m_menu;
-    QWeakPointer<ResourceEditor> m_resourceEditorRef;
     bool m_useOpenGLViewport;
     XEventNotifier* m_XEventNotifier;
 };

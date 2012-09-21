@@ -61,6 +61,13 @@ DataIndex* Application::dataIndex()
     return app->m_dataIndex;
 }
 
+QWeakPointer<ResourceEditor>& Application::resourceEditorRef()
+{
+    Application* app = qobject_cast<Application*>(QCoreApplication::instance());
+
+    return app->m_resourceEditorRef;
+}
+
 void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
 {
     KDeclarative kDeclarative;

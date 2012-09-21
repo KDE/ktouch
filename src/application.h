@@ -20,6 +20,10 @@
 
 #include <KApplication>
 
+#include <QWeakPointer>
+
+#include "editor/resourceeditor.h"
+
 class QDeclarativeEngine;
 class DataIndex;
 
@@ -30,9 +34,11 @@ public:
     explicit Application();
     static DataIndex* dataIndex();
     static void setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine);
-    DataIndex* m_dataIndex;
+    static QWeakPointer<ResourceEditor>& resourceEditorRef();
 private:
     void registerQmlTypes();
+    DataIndex* m_dataIndex;
+    QWeakPointer<ResourceEditor> m_resourceEditorRef;
 };
 
 #endif // APPLICATION_H

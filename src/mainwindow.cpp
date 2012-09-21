@@ -91,12 +91,13 @@ void MainWindow::showMenu(int xPos, int yPos)
 
 void MainWindow::showResourceEditor()
 {
-    if (m_resourceEditorRef.isNull())
+    QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+    if (resourceEditorRef.isNull())
     {
-        m_resourceEditorRef = new ResourceEditor();
+        resourceEditorRef = new ResourceEditor();
     }
 
-    ResourceEditor* resourceEditor = m_resourceEditorRef.data();
+    ResourceEditor* resourceEditor = resourceEditorRef.data();
 
     resourceEditor->show();
     resourceEditor->activateWindow();
