@@ -252,7 +252,6 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
         abstractKey->setHeight(keyNode.attribute("height").toInt());
         target->addKey(abstractKey);
     }
-    kDebug() << "read" << target->title() << "with" << target->keyCount() << "keys";
 
     target->setIsValid(true);
     return true;

@@ -64,7 +64,6 @@ Item {
         id: keyboardLayout
 
         Component.onCompleted: {
-            console.log(dataIndex, dataIndex.isValid)
             if (dataIndex.isValid) {
                 keyboardLayout.update()
             }
