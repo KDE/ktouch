@@ -127,6 +127,11 @@ Column {
         }
     }
 
+    NoCoursesMessage {
+        visible: repeater.count == 0
+        anchors.fill: parent
+    }
+
     ParallelAnimation {
         id: boxSwitchAnimation
         NumberAnimation {

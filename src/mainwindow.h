@@ -42,13 +42,14 @@ public:
     bool useOpenGLViewport() const;
     void setUseOpenGLViewport(bool useOpenGLViewport);
     Q_INVOKABLE void showMenu(int xPos, int yPos);
+public slots:
+    void showResourceEditor();
 signals:
     void keyboardLayoutNameChanged();
 private slots:
     void showConfigDialog();
     void configureShortcuts();
     void setFullscreen(bool fullscreen);
-    void showResourceEditor();
 private:
     void init();
     QDeclarativeView* m_view;

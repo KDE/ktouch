@@ -89,6 +89,19 @@ void MainWindow::showMenu(int xPos, int yPos)
     m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
 }
 
+void MainWindow::showResourceEditor()
+{
+    if (m_resourceEditorRef.isNull())
+    {
+        m_resourceEditorRef = new ResourceEditor();
+    }
+
+    ResourceEditor* resourceEditor = m_resourceEditorRef.data();
+
+    resourceEditor->show();
+    resourceEditor->activateWindow();
+}
+
 void MainWindow::configureShortcuts()
 {
     KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, this);
@@ -111,19 +124,6 @@ void MainWindow::showConfigDialog()
 void MainWindow::setFullscreen(bool fullScreen)
 {
     KToggleFullScreenAction::setFullScreen(this, fullScreen);
-}
-
-void MainWindow::showResourceEditor()
-{
-    if (m_resourceEditorRef.isNull())
-    {
-        m_resourceEditorRef = new ResourceEditor();
-    }
-
-    ResourceEditor* resourceEditor = m_resourceEditorRef.data();
-
-    resourceEditor->show();
-    resourceEditor->activateWindow();
 }
 
 void MainWindow::init()

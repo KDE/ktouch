@@ -4,6 +4,7 @@ set(ktouch_qml_files
     HomeScreen.qml
     HomeScreenAccordion.qml
     HomeScreenBox.qml
+    NoCoursesMessage.qml
     ProfileSelector.qml
     ProfileForm.qml
     ProfileDetailsItem.qml
