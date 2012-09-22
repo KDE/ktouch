@@ -70,7 +70,10 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
 
     const QString path = dataIndexKeyboardLayout->path();
 
-    currentUndoStack()->disconnect(this, SLOT(validateSelection()));
+    if (currentUndoStack())
+    {
+        currentUndoStack()->disconnect(this, SLOT(validateSelection()));
+    }
     initUndoStack(path);
     m_propertiesWidget->setUndoStack(currentUndoStack());
     setSelectedKey(0);
