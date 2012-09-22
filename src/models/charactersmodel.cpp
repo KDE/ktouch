@@ -67,7 +67,10 @@ void CharactersModel::setKey(Key* key)
 
 Qt::ItemFlags CharactersModel::flags(const QModelIndex& index) const
 {
-    return QAbstractTableModel::flags(index);
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
 }
 
 QVariant CharactersModel::data(const QModelIndex& index, int role) const
@@ -91,6 +94,37 @@ QVariant CharactersModel::data(const QModelIndex& index, int role) const
     default:
         return QVariant();
     }
+}
+
+bool CharactersModel::setData(const QModelIndex& index, const QVariant& value, int role)
+{
+    if (!index.isValid())
+        return false;
+
+    if (index.row() >= m_key->keyCharCount())
+        return false;
+
+    if (role != Qt::EditRole)
+        return false;
+
+    KeyChar* keyChar = m_key->keyChar(index.row());
+
+    switch (index.column())
+    {
+    case 0:
+        if (value.toString().length() != 1)
+            return false;
+        keyChar->setValue(value.toString().at(0));
+        return true;
+    case 1:
+        keyChar->setModifier(value.toString());
+        return true;
+    case 2:
+        keyChar->setPosition(static_cast<KeyChar::Position>(value.toInt()));
+        return true;
+    }
+
+    return false;
 }
 
 QVariant CharactersModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -173,6 +207,8 @@ QVariant CharactersModel::characterData(KeyChar* keyChar, int role) const
     switch (role)
     {
     case Qt::DisplayRole:
+    case Qt::EditRole:
+        return keyChar->value();
         return keyChar->value();
     default:
         return QVariant();
@@ -184,6 +220,7 @@ QVariant CharactersModel::modifierIdData(KeyChar *keyChar, int role) const
     switch (role)
     {
     case Qt::DisplayRole:
+    case Qt::EditRole:
         return keyChar->modifier();
     default:
         return QVariant();
@@ -208,6 +245,8 @@ QVariant CharactersModel::positionData(KeyChar *keyChar, int role) const
         case KeyChar::Hidden:
             return i18n("Hidden");
         }
+    case Qt::EditRole:
+        return QVariant(keyChar->position());
     default:
         return QVariant();
     }
