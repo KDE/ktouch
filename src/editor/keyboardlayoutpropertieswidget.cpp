@@ -26,18 +26,22 @@
 #include "core/abstractkey.h"
 #include "core/key.h"
 #include "core/specialkey.h"
+#include "models/charactersmodel.h"
 #include "editor/keyboardlayoutcommands.h"
 
 KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) :
     QWidget(parent),
     m_keyboardLayout(0),
     m_selectedKeyIndex(-1),
-    m_selectedKey(0)
+    m_selectedKey(0),
+    m_charactersModel(new CharactersModel(this))
 {
     setupUi(this);
     setFont(KGlobalSettings::smallestReadableFont());
     connect(KGlobalSettings::self(), SIGNAL(appearanceChanged()), SLOT(updateFont()));
     setSelectedKey(-1);
+    m_charactersView->setModel(m_charactersModel);
+    m_charactersView->verticalHeader()->setDefaultSectionSize(m_charactersView->verticalHeader()->minimumSectionSize() + 6);
 
     connect(m_keyboardLayoutTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutTitle(QString)));
     connect(m_keyboardLayoutNameEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutName(QString)));
@@ -87,6 +91,8 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
     {
         m_selectedKey = 0;
 
+        m_charactersModel->setKey(0);
+
         m_stackedWidget->setCurrentWidget(m_keyboardProperties);
     }
     else
@@ -109,6 +115,8 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
             m_keyHapticMarkerCheckBox->setChecked(key->hasHapticMarker());
             m_keyFingerComboBox->setCurrentIndex(key->fingerIndex());
 
+            m_charactersModel->setKey(key);
+
             connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
             connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
         }
@@ -120,6 +128,8 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
             m_specialKeyLabelLineEdit->setText(specialKey->label());
             m_specialKeyLabelLineEdit->setEnabled(specialKey->type() == SpecialKey::Other);
             m_specialKeyModifierIdLineEdit->setText(specialKey->modifierId());
+
+            m_charactersModel->setKey(0);
 
             connect(specialKey, SIGNAL(typeChanged()), SLOT(updateSpecialKeyType()));
             connect(specialKey, SIGNAL(labelChanged()), SLOT(updateSpecialKeyLabel()));
@@ -140,6 +150,7 @@ void KeyboardLayoutPropertiesWidget::setReadOnly(bool readOnly)
     m_keyTopSpinBox->setReadOnly(readOnly);
     m_keyWidthSpinBox->setReadOnly(readOnly);
     m_keyHeightSpinBox->setReadOnly(readOnly);
+    m_charactersView->setEditTriggers(readOnly? QAbstractItemView::NoEditTriggers: QAbstractItemView::DoubleClicked	| QAbstractItemView::EditKeyPressed);
     m_specialKeyTypeComboBox->setEnabled(!readOnly);
     m_specialKeyLabelLineEdit->setReadOnly(readOnly);
     m_specialKeyModifierIdLineEdit->setReadOnly(readOnly);

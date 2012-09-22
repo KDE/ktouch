@@ -74,23 +74,40 @@ KeyChar* Key::keyChar(int index) const
 
 void Key::addKeyChar(KeyChar* keyChar)
 {
+    emit keyCharAboutToBeAdded(keyChar, m_keyChars.length());
     m_keyChars.append(keyChar);
+    keyChar->setParent(this);
     emit keyCharCountChanged();
+    emit keyCharAdded();
+}
+
+void Key::insertKeyChar(int index, KeyChar* keyChar)
+{
+    Q_ASSERT(index >= 0 && index < m_keyChars.length());
+    emit keyCharAboutToBeAdded(keyChar, index);
+    m_keyChars.insert(index, keyChar);
+    keyChar->setParent(this);
+    emit keyCharCountChanged();
+    emit keyCharAdded();
 }
 
 void Key::removeKeyChar(int index)
 {
     Q_ASSERT(index >= 0 && index < m_keyChars.length());
+    emit keyCharsAboutToBeRemoved(index, index);
     delete m_keyChars.at(index);
     m_keyChars.removeAt(index);
     emit keyCharCountChanged();
+    emit keyCharsRemoved();
 }
 
 void Key::clearKeyChars()
 {
+    emit keyCharsAboutToBeRemoved(0, m_keyChars.length() - 1);
     qDeleteAll(m_keyChars);
     m_keyChars.clear();
     emit keyCharCountChanged();
+    emit keyCharsRemoved();
 }
 
 void Key::copyFrom(Key* source)

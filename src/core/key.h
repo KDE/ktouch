@@ -41,6 +41,7 @@ public:
     int keyCharCount() const;
     Q_INVOKABLE KeyChar* keyChar(int index) const;
     Q_INVOKABLE void addKeyChar(KeyChar* keyChar);
+    Q_INVOKABLE void insertKeyChar(int index, KeyChar* keyChar);
     Q_INVOKABLE void removeKeyChar(int index);
     Q_INVOKABLE void clearKeyChars();
     Q_INVOKABLE void copyFrom(Key* source);
@@ -49,6 +50,10 @@ signals:
     void fingerIndexChanged();
     void hasHapticMarkerChanged();
     void keyCharCountChanged();
+    void keyCharAboutToBeAdded(KeyChar* keyChar, int index);
+    void keyCharAdded();
+    void keyCharsAboutToBeRemoved(int first, int last);
+    void keyCharsRemoved();
 
 private:
     int m_fingerIndex;

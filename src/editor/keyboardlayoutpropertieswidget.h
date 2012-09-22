@@ -24,6 +24,7 @@
 class QUndoStack;
 class KeyboardLayout;
 class AbstractKey;
+class CharactersModel;
 
 class KeyboardLayoutPropertiesWidget : public QWidget, private Ui::KeyboardLayoutPropertiesWidget
 {
@@ -72,6 +73,7 @@ private:
     int m_selectedKeyIndex;
     AbstractKey* m_selectedKey;
     QUndoStack* m_undoStack;
+    CharactersModel* m_charactersModel;
 };
 
 #endif // KEYBOARDLAYOUTPROPERTIESWIDGET_H

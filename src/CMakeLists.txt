@@ -51,6 +51,7 @@ set(ktouch_SRCS
     core/profiledataaccess.cpp
     models/resourcemodel.cpp
     models/lessonmodel.cpp
+    models/charactersmodel.cpp
     models/categorizedresourcesortfilterproxymodel.cpp
     editor/resourceeditor.cpp
     editor/resourceeditorwidget.cpp

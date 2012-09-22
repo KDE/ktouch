@@ -48,7 +48,7 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
 
         if (m_dataIndex)
         {
-            m_dataIndex->disconnect(m_signalMapper);
+            m_dataIndex->disconnect(this);
         }
 
         m_dataIndex = dataIndex;

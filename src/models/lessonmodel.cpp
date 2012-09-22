@@ -46,7 +46,7 @@ void LessonModel::setCourse(Course* course)
 
         if (m_course)
         {
-            m_course->disconnect(m_signalMapper);
+            m_course->disconnect(this);
         }
 
         m_course = course;
