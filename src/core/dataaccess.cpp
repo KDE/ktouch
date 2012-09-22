@@ -305,7 +305,7 @@ bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source
                 QDomElement keyCharElem = doc.createElement("char");
                 keyCharElem.setAttribute("position", keyChar->positionStr());
                 const QString modifier = keyChar->modifier();
-                if (!modifier.isNull())
+                if (!modifier.isEmpty())
                 {
                     keyCharElem.setAttribute("modifier", modifier);
                 }
