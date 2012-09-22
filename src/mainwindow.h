@@ -49,6 +49,7 @@ signals:
 private slots:
     void showConfigDialog();
     void configureShortcuts();
+    void configureKeyboard();
     void setFullscreen(bool fullscreen);
 private:
     void init();

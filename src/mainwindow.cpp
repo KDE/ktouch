@@ -23,15 +23,16 @@
 #include <QMenu>
 #include <QVariant>
 
-#include <kstandarddirs.h>
-#include <kmenu.h>
-#include <kcmdlineargs.h>
-#include <kactioncollection.h>
-#include <kstandardaction.h>
-#include <khelpmenu.h>
-#include <ktogglefullscreenaction.h>
-#include <kshortcutsdialog.h>
-#include <kconfigdialog.h>
+#include <KStandardDirs>
+#include <KMenu>
+#include <KCmdLineArgs>
+#include <KActionCollection>
+#include <KStandardAction>
+#include <KHelpMenu>
+#include <KToggleFullScreenAction>
+#include <KShortcutsDialog>
+#include <KConfigDialog>
+#include <KCMultiDialog>
 
 #include "editor/resourceeditor.h"
 #include "application.h"
@@ -103,10 +104,6 @@ void MainWindow::showResourceEditor()
     resourceEditor->activateWindow();
 }
 
-void MainWindow::configureShortcuts()
-{
-    KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, this);
-}
 
 void MainWindow::showConfigDialog()
 {
@@ -122,6 +119,20 @@ void MainWindow::showConfigDialog()
     dialog->show();
 }
 
+void MainWindow::configureShortcuts()
+{
+    KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, this);
+}
+
+void MainWindow::configureKeyboard()
+{
+    KCMultiDialog kcm;
+
+    kcm.setWindowTitle(i18n("Configure Keyboard"));
+    kcm.addModule("kcm_keyboard");
+    kcm.exec();
+}
+
 void MainWindow::setFullscreen(bool fullScreen)
 {
     KToggleFullScreenAction::setFullScreen(this, fullScreen);
@@ -132,13 +143,16 @@ void MainWindow::init()
     m_actionCollection->addAssociatedWidget(this);
     m_menu->addAction(KStandardAction::fullScreen(this, SLOT(setFullscreen(bool)), this, m_actionCollection));
     m_menu->addSeparator();
-    KAction* editorAction = new KAction(i18n("Course and Keyboard Layout Editor ..."), this);
+    KAction* editorAction = new KAction(i18n("Course and Keyboard Layout Editor..."), this);
     connect(editorAction, SIGNAL(triggered()), SLOT(showResourceEditor()));
     m_actionCollection->addAction("editor", editorAction);
     m_menu->addAction(editorAction);
     m_menu->addSeparator();
     m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
     m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));
+    KAction* configureKeyboardAction = new KAction(i18n("Configure Keyboard..."), this);
+    m_menu->addAction(configureKeyboardAction);
+    connect(configureKeyboardAction, SIGNAL(triggered()), SLOT(configureKeyboard()));
     m_menu->addSeparator();
     KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
     m_menu->addMenu(helpMenu->menu());
