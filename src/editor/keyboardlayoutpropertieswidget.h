@@ -22,6 +22,7 @@
 #include "ui_keyboardlayoutpropertieswidget.h"
 
 class QUndoStack;
+class CharacterModifierIdEditorFactory;
 class KeyboardLayout;
 class AbstractKey;
 class CharactersModel;
@@ -74,6 +75,7 @@ private:
     AbstractKey* m_selectedKey;
     QUndoStack* m_undoStack;
     CharactersModel* m_charactersModel;
+    CharacterModifierIdEditorFactory* m_charModifierIdEditorFactory;
 };
 
 #endif // KEYBOARDLAYOUTPROPERTIESWIDGET_H

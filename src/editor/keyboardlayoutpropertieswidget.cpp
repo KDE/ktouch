@@ -18,6 +18,7 @@
 #include "keyboardlayoutpropertieswidget.h"
 
 #include <QUndoStack>
+#include <QStyledItemDelegate>
 
 #include <KGlobalSettings>
 #include <KDebug>
@@ -28,19 +29,31 @@
 #include "core/specialkey.h"
 #include "models/charactersmodel.h"
 #include "editor/keyboardlayoutcommands.h"
+#include "editor/charactersvieweditorfactories.h"
 
 KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) :
     QWidget(parent),
     m_keyboardLayout(0),
     m_selectedKeyIndex(-1),
     m_selectedKey(0),
-    m_charactersModel(new CharactersModel(this))
+    m_charactersModel(new CharactersModel(this)),
+    m_charModifierIdEditorFactory(new CharacterModifierIdEditorFactory())
 {
     setupUi(this);
     setFont(KGlobalSettings::smallestReadableFont());
     connect(KGlobalSettings::self(), SIGNAL(appearanceChanged()), SLOT(updateFont()));
     setSelectedKey(-1);
+
     m_charactersView->setModel(m_charactersModel);
+    QStyledItemDelegate* charValueDelegate = new QStyledItemDelegate(m_charactersView);
+    charValueDelegate->setItemEditorFactory(new CharacterValueEditorFactory());
+    m_charactersView->setItemDelegateForColumn(0, charValueDelegate);
+    QStyledItemDelegate* charModifierIdDelegate = new QStyledItemDelegate(m_charactersView);
+    charModifierIdDelegate->setItemEditorFactory(m_charModifierIdEditorFactory);
+    m_charactersView->setItemDelegateForColumn(1, charModifierIdDelegate);
+    QStyledItemDelegate* charPositionDelegate = new QStyledItemDelegate(m_charactersView);
+    charPositionDelegate->setItemEditorFactory(new CharacterPositionEditorFactory());
+    m_charactersView->setItemDelegateForColumn(2, charPositionDelegate);
     m_charactersView->verticalHeader()->setDefaultSectionSize(m_charactersView->verticalHeader()->minimumSectionSize() + 6);
 
     connect(m_keyboardLayoutTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutTitle(QString)));
@@ -66,6 +79,8 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
     }
 
     m_keyboardLayout = layout;
+
+    m_charModifierIdEditorFactory->setKeyboardLayout(layout);
 
     connect(m_keyboardLayout, SIGNAL(titleChanged()), SLOT(updateKeyboardLayoutTitle()));
     connect(m_keyboardLayout, SIGNAL(nameChanged()), SLOT(updateKeyboardLayoutName()));
