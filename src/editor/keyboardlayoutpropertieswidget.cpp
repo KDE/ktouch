@@ -36,6 +36,8 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     m_keyboardLayout(0),
     m_selectedKeyIndex(-1),
     m_selectedKey(0),
+    m_readOnly(false),
+    m_undoStack(0),
     m_charactersModel(new CharactersModel(this)),
     m_charModifierIdEditorFactory(new CharacterModifierIdEditorFactory())
 {
@@ -56,6 +58,7 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     m_charactersView->setItemDelegateForColumn(2, charPositionDelegate);
     m_charactersView->verticalHeader()->setDefaultSectionSize(m_charactersView->verticalHeader()->minimumSectionSize() + 6);
 
+    connect(m_charactersView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onCharacterSelected()));
     connect(m_keyboardLayoutTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutTitle(QString)));
     connect(m_keyboardLayoutNameEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutName(QString)));
     connect(m_keyboardLayoutWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyboardLayoutWidthChanged(int)));
@@ -66,6 +69,8 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     connect(m_keyHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyHeightChanged(int)));
     connect(m_keyFingerComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onFingerIndexChanged(int)));
     connect(m_keyHapticMarkerCheckBox, SIGNAL(clicked(bool)), SLOT(setKeyHasHapticMarker(bool)));
+    connect(m_addCharacterButton, SIGNAL(clicked()), SLOT(addCharacter()));
+    connect(m_removeCharacterButton, SIGNAL(clicked()), SLOT(removeCharacter()));
     connect(m_specialKeyTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onSpecialKeyTypeChanged(int)));
     connect(m_specialKeyLabelLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyLabel(QString)));
     connect(m_specialKeyModifierIdLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyModifierId(QString)));
@@ -134,6 +139,13 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 
             m_charactersModel->setKeyIndex(index);
 
+            m_removeCharacterButton->setEnabled(false);
+
+            if (key->keyCharCount() > 0)
+            {
+                m_charactersView->selectRow(0);
+            }
+
             connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
             connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
         }
@@ -157,6 +169,8 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 
 void KeyboardLayoutPropertiesWidget::setReadOnly(bool readOnly)
 {
+    m_readOnly = readOnly;
+
     m_keyboardLayoutTitleLineEdit->setReadOnly(readOnly);
     m_keyboardLayoutNameEdit->setReadOnly(readOnly);
     m_keyboardLayoutWidthSpinBox->setReadOnly(readOnly);
@@ -168,6 +182,7 @@ void KeyboardLayoutPropertiesWidget::setReadOnly(bool readOnly)
     m_keyWidthSpinBox->setReadOnly(readOnly);
     m_keyHeightSpinBox->setReadOnly(readOnly);
     m_charactersView->setEditTriggers(readOnly? QAbstractItemView::NoEditTriggers: QAbstractItemView::DoubleClicked	| QAbstractItemView::EditKeyPressed);
+    m_addCharacterButton->setEnabled(!readOnly);
     m_specialKeyTypeComboBox->setEnabled(!readOnly);
     m_specialKeyLabelLineEdit->setReadOnly(readOnly);
     m_specialKeyModifierIdLineEdit->setReadOnly(readOnly);
@@ -212,6 +227,28 @@ void KeyboardLayoutPropertiesWidget::setKeyHasHapticMarker(bool hasHapticMarker)
 {
     QUndoCommand* command = new SetKeyHasHapticMarkerCommand(m_keyboardLayout, m_selectedKeyIndex, hasHapticMarker);
     m_undoStack->push(command);
+}
+
+void KeyboardLayoutPropertiesWidget::addCharacter()
+{
+    QUndoCommand* command = new AddKeyCharCommand(m_keyboardLayout, m_selectedKeyIndex);
+    m_undoStack->push(command);
+    const int row = m_charactersModel->rowCount() - 1;
+    m_charactersView->selectRow(row);
+    m_charactersView->edit(m_charactersModel->index(row, 0));
+}
+
+void KeyboardLayoutPropertiesWidget::removeCharacter()
+{
+    const int index = m_charactersView->selectionModel()->selectedRows().first().row();
+    QUndoCommand* command = new RemoveKeyCharCommand(m_keyboardLayout, m_selectedKeyIndex, index);
+    m_undoStack->push(command);
+
+    if (m_charactersModel->rowCount() > 0)
+    {
+        const int row = qMin(index, m_charactersModel->rowCount() - 1);
+        m_charactersView->selectRow(row);
+    }
 }
 
 void KeyboardLayoutPropertiesWidget::setSpecialKeyType(int type)
@@ -481,6 +518,11 @@ void KeyboardLayoutPropertiesWidget::onFingerIndexChanged(int fingerIndex)
     {
         setKeyFingerIndex(fingerIndex);
     }
+}
+
+void KeyboardLayoutPropertiesWidget::onCharacterSelected()
+{
+    m_removeCharacterButton->setEnabled(!m_readOnly && m_charactersView->selectionModel()->hasSelection());
 }
 
 void KeyboardLayoutPropertiesWidget::onSpecialKeyTypeChanged(int type)

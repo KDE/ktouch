@@ -379,6 +379,100 @@ bool SetKeyHasHapticMarkerCommand::mergeWith(const QUndoCommand* other)
     return true;
 }
 
+AddKeyCharCommand::AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex)
+{
+}
+
+void AddKeyCharCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+
+    Q_ASSERT(key);
+    Q_ASSERT(key->keyCharCount() > 0);
+
+    key->removeKeyChar(key->keyCharCount() - 1);
+}
+
+void AddKeyCharCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+
+    Q_ASSERT(key);
+
+    KeyChar* keyChar = new KeyChar();
+    key->addKeyChar(keyChar);
+}
+
+int AddKeyCharCommand::id() const
+{
+    return 0x9808f018;
+}
+
+bool AddKeyCharCommand::mergeWith(const QUndoCommand* other)
+{
+    Q_UNUSED(other)
+    return false;
+}
+
+RemoveKeyCharCommand::RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_keyCharIndex(keyCharIndex),
+    m_backupKeyChar(0)
+{
+}
+
+RemoveKeyCharCommand::~RemoveKeyCharCommand()
+{
+    delete m_backupKeyChar;
+}
+
+void RemoveKeyCharCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+
+    Q_ASSERT(m_backupKeyChar);
+    Q_ASSERT(key);
+
+    if (m_keyCharIndex == key->keyCharCount())
+    {
+        key->addKeyChar(m_backupKeyChar);
+    }
+    else
+    {
+        key->insertKeyChar(m_keyCharIndex, m_backupKeyChar);
+    }
+
+    m_backupKeyChar = 0;
+}
+
+void RemoveKeyCharCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+
+    Q_ASSERT(key);
+
+    m_backupKeyChar = new KeyChar();
+    m_backupKeyChar->copyFrom(key->keyChar(m_keyCharIndex));
+
+    key->removeKeyChar(m_keyCharIndex);
+}
+
+int RemoveKeyCharCommand::id() const
+{
+    return 0x4b6252f5;
+}
+
+bool RemoveKeyCharCommand::mergeWith(const QUndoCommand* other)
+{
+    Q_UNUSED(other)
+    return false;
+}
+
 SetKeyCharValueCommand::SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_layout(layout),

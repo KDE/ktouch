@@ -309,7 +309,15 @@ bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source
                 {
                     keyCharElem.setAttribute("modifier", modifier);
                 }
-                keyCharElem.appendChild(doc.createTextNode(keyChar->value()));
+                const QString value = keyChar->value();
+                if (value == " ")
+                {
+                    keyCharElem.appendChild(doc.createCDATASection(value));
+                }
+                else
+                {
+                    keyCharElem.appendChild(doc.createTextNode(value));
+                }
                 keyElem.appendChild(keyCharElem);
             }
         }

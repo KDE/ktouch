@@ -64,23 +64,30 @@ void CharactersModel::setKeyIndex(int keyIndex)
     if (!m_keyboardLayout)
         return;
 
+    Key* key = 0;
+
+    if (keyIndex != -1)
+    {
+        key = qobject_cast<Key*>(m_keyboardLayout->key(keyIndex));
+
+        if (!key)
+            keyIndex = -1;
+    }
+
     if (keyIndex != m_keyIndex)
     {
-        Key* key = 0;
-
-        if (keyIndex != -1)
-        {
-            key = qobject_cast<Key*>(m_keyboardLayout->key(keyIndex));
-
-            if (!key)
-                return;
-        }
-
         beginResetModel();
 
-        if (m_keyIndex == -1)
+        if (m_key)
         {
-            m_keyboardLayout->key(keyIndex)->disconnect(this);
+            m_key->disconnect(this);
+
+            for (int i = 0; i < m_key->keyCharCount(); i++)
+            {
+                KeyChar* keyChar = m_key->keyChar(i);
+                keyChar->disconnect(m_signalMapper);
+                m_signalMapper->setMapping(keyChar, i);
+            }
         }
 
         m_keyIndex = keyIndex;

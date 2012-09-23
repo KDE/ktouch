@@ -44,6 +44,8 @@ private slots:
     void setKeyGeometry(const QRect& rect);
     void setKeyFingerIndex(int fingerIndex);
     void setKeyHasHapticMarker(bool hasHapticMarker);
+    void addCharacter();
+    void removeCharacter();
     void setSpecialKeyType(int type);
     void setSpecialKeyLabel(const QString& label);
     void setSpecialKeyModifierId(const QString& id);
@@ -68,11 +70,13 @@ private slots:
     void onKeyWidthChanged(int width);
     void onKeyHeightChanged(int height);
     void onFingerIndexChanged(int fingerIndex);
+    void onCharacterSelected();
     void onSpecialKeyTypeChanged(int type);
 private:
     KeyboardLayout* m_keyboardLayout;
     int m_selectedKeyIndex;
     AbstractKey* m_selectedKey;
+    bool m_readOnly;
     QUndoStack* m_undoStack;
     CharactersModel* m_charactersModel;
     CharacterModifierIdEditorFactory* m_charModifierIdEditorFactory;

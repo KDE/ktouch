@@ -142,6 +142,35 @@ private:
     bool m_newHasHapticMarker;
 };
 
+class AddKeyCharCommand : public QUndoCommand
+{
+public:
+    AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+};
+
+class RemoveKeyCharCommand : public QUndoCommand
+{
+public:
+    RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent = 0);
+    ~RemoveKeyCharCommand();
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    int m_keyCharIndex;
+    KeyChar* m_backupKeyChar;
+};
+
 class SetKeyCharValueCommand : public QUndoCommand
 {
 public:

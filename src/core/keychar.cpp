@@ -21,6 +21,7 @@
 
 KeyChar::KeyChar(QObject *parent) :
     QObject(parent),
+    m_value(QChar(32)),
     m_position(KeyChar::Hidden)
 {
 }
