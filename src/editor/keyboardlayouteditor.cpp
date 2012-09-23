@@ -17,7 +17,6 @@
 
 
 #include "keyboardlayouteditor.h"
-#include "keyboardlayoutcommands.h"
 
 #include <math.h>
 
@@ -36,6 +35,7 @@
 #include "core/abstractkey.h"
 #include "core/key.h"
 #include "core/keychar.h"
+#include "undocommands/keyboardlayoutcommands.h"
 #include "application.h"
 
 KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):

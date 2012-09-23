@@ -22,7 +22,7 @@
 #include "editor/abstracteditor.h"
 #include "ui_courseeditor.h"
 
-#include "editor/coursecommands.h"
+#include "undocommands/coursecommands.h"
 
 class QUndoStack;
 class DataIndexCourse;

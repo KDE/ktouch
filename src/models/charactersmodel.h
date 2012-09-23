@@ -21,17 +21,24 @@
 #include <QAbstractTableModel>
 
 class QSignalMapper;
+class QUndoStack;
+class KeyboardLayout;
 class Key;
 class KeyChar;
 
 class CharactersModel : public QAbstractTableModel
 {
     Q_OBJECT
-    Q_PROPERTY(Key* key READ key WRITE setKey NOTIFY keyChanged)
+    Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout WRITE setKeyboardLayout NOTIFY keyboardLayoutChanged)
+    Q_PROPERTY(int keyIndex READ keyIndex WRITE setKeyIndex NOTIFY keyIndexChanged)
 public:
     explicit CharactersModel(QObject *parent = 0);
-    Key* key() const;
-    void setKey(Key* key);
+    KeyboardLayout* keyboardLayout() const;
+    void setKeyboardLayout(KeyboardLayout* keyboardLayout);
+    int keyIndex() const;
+    void setKeyIndex(int keyIndex);
+    QUndoStack* undoStack() const;
+    void setUndoStack(QUndoStack* undoStack);
     Qt::ItemFlags flags(const QModelIndex& index) const;
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
     bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole);
@@ -39,7 +46,9 @@ public:
     int rowCount(const QModelIndex& parent = QModelIndex()) const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const;
 signals:
-    void keyChanged();
+    void aboutToBeEdited(const QModelIndex& index, const QVariant& newValue);
+    void keyboardLayoutChanged();
+    void keyIndexChanged();
 private slots:
     void onKeyCharAboutToBeAdded(KeyChar* keyChar, int index);
     void onKeyCharAdded();
@@ -51,7 +60,10 @@ private:
     QVariant characterData(KeyChar* keyChar, int role) const;
     QVariant modifierIdData(KeyChar* keyChar, int role) const;
     QVariant positionData(KeyChar* keyChar, int role) const;
+    KeyboardLayout* m_keyboardLayout;
+    int m_keyIndex;
     Key* m_key;
+    QUndoStack* m_undoStack;
     QSignalMapper* m_signalMapper;
 };
 

@@ -49,6 +49,8 @@ set(ktouch_SRCS
     core/dataindex.cpp
     core/dataaccess.cpp
     core/profiledataaccess.cpp
+    undocommands/coursecommands.cpp
+    undocommands/keyboardlayoutcommands.cpp
     models/resourcemodel.cpp
     models/lessonmodel.cpp
     models/charactersmodel.cpp
@@ -62,13 +64,11 @@ set(ktouch_SRCS
     editor/resourcetemplatewidget.cpp
     editor/abstracteditor.cpp
     editor/courseeditor.cpp
-    editor/coursecommands.cpp
     editor/keyboardlayoutcombobox.cpp
     editor/lessontexthighlighter.cpp
     editor/keyboardlayouteditor.cpp
     editor/keyboardlayouteditorview.cpp
     editor/keyboardlayoutpropertieswidget.cpp
-    editor/keyboardlayoutcommands.cpp
     editor/charactersvieweditorfactories.cpp
     editor/griditem.cpp
     scalebackgrounditem.cpp

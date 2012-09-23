@@ -27,8 +27,8 @@
 #include "core/abstractkey.h"
 #include "core/key.h"
 #include "core/specialkey.h"
+#include "undocommands/keyboardlayoutcommands.h"
 #include "models/charactersmodel.h"
-#include "editor/keyboardlayoutcommands.h"
 #include "editor/charactersvieweditorfactories.h"
 
 KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) :
@@ -80,6 +80,7 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
 
     m_keyboardLayout = layout;
 
+    m_charactersModel->setKeyboardLayout(layout);
     m_charModifierIdEditorFactory->setKeyboardLayout(layout);
 
     connect(m_keyboardLayout, SIGNAL(titleChanged()), SLOT(updateKeyboardLayoutTitle()));
@@ -91,6 +92,7 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
 void KeyboardLayoutPropertiesWidget::setUndoStack(QUndoStack* undoStack)
 {
     m_undoStack = undoStack;
+    m_charactersModel->setUndoStack(undoStack);
 }
 
 void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
@@ -106,7 +108,7 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
     {
         m_selectedKey = 0;
 
-        m_charactersModel->setKey(0);
+        m_charactersModel->setKeyIndex(-1);
 
         m_stackedWidget->setCurrentWidget(m_keyboardProperties);
     }
@@ -130,7 +132,7 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
             m_keyHapticMarkerCheckBox->setChecked(key->hasHapticMarker());
             m_keyFingerComboBox->setCurrentIndex(key->fingerIndex());
 
-            m_charactersModel->setKey(key);
+            m_charactersModel->setKeyIndex(index);
 
             connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
             connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
@@ -144,7 +146,7 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
             m_specialKeyLabelLineEdit->setEnabled(specialKey->type() == SpecialKey::Other);
             m_specialKeyModifierIdLineEdit->setText(specialKey->modifierId());
 
-            m_charactersModel->setKey(0);
+            m_charactersModel->setKeyIndex(-1);
 
             connect(specialKey, SIGNAL(typeChanged()), SLOT(updateSpecialKeyType()));
             connect(specialKey, SIGNAL(labelChanged()), SLOT(updateSpecialKeyLabel()));

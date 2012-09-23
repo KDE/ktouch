@@ -21,34 +21,69 @@
 
 #include <KLocale>
 
-#include <core/key.h>
-#include <core/keychar.h>
+#include "core/keyboardlayout.h"
+#include "core/key.h"
+#include "core/keychar.h"
+#include "undocommands/keyboardlayoutcommands.h"
 
 #include <KDebug>
 
 CharactersModel::CharactersModel(QObject *parent) :
     QAbstractTableModel(parent),
+    m_keyboardLayout(0),
+    m_keyIndex(-1),
     m_key(0),
+    m_undoStack(0),
     m_signalMapper(new QSignalMapper(this))
 {
+    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitCharacterChanged(int)));
 }
 
-Key* CharactersModel::key() const
+KeyboardLayout* CharactersModel::keyboardLayout() const
 {
-    return m_key;
+    return m_keyboardLayout;
 }
 
-void CharactersModel::setKey(Key* key)
+void CharactersModel::setKeyboardLayout(KeyboardLayout* keyboardLayout)
 {
-    if (key != m_key)
+    if (keyboardLayout != m_keyboardLayout)
     {
-        beginResetModel();
+        m_keyboardLayout = keyboardLayout;
+        setKeyIndex(-1);
+        emit keyboardLayoutChanged();
+    }
+}
 
-        if (m_key)
+int CharactersModel::keyIndex() const
+{
+    return m_keyIndex;
+}
+
+void CharactersModel::setKeyIndex(int keyIndex)
+{
+    if (!m_keyboardLayout)
+        return;
+
+    if (keyIndex != m_keyIndex)
+    {
+        Key* key = 0;
+
+        if (keyIndex != -1)
         {
-            m_key->disconnect(this);
+            key = qobject_cast<Key*>(m_keyboardLayout->key(keyIndex));
+
+            if (!key)
+                return;
         }
 
+        beginResetModel();
+
+        if (m_keyIndex == -1)
+        {
+            m_keyboardLayout->key(keyIndex)->disconnect(this);
+        }
+
+        m_keyIndex = keyIndex;
         m_key = key;
 
         if (m_key)
@@ -57,12 +92,29 @@ void CharactersModel::setKey(Key* key)
             connect(m_key, SIGNAL(keyCharAdded()), SLOT(onKeyCharAdded()));
             connect(m_key, SIGNAL(keyCharsAboutToBeRemoved(int,int)), SLOT(onKeyCharsAboutToBeRemoved(int,int)));
             connect(m_key, SIGNAL(keyCharsRemoved()), SLOT(onKeyCharsRemoved()));
-        }
 
-        emit keyChanged();
+            for (int i = 0; i < m_key->keyCharCount(); i++)
+            {
+                KeyChar* keyChar = m_key->keyChar(i);
+                connect(keyChar, SIGNAL(valueChanged()), m_signalMapper, SLOT(map()));
+                connect(keyChar, SIGNAL(modifierChanged()), m_signalMapper, SLOT(map()));
+                connect(keyChar, SIGNAL(positionChanged()), m_signalMapper, SLOT(map()));
+                m_signalMapper->setMapping(keyChar, i);
+            }
+        }
 
         endResetModel();
     }
+}
+
+QUndoStack* CharactersModel::undoStack() const
+{
+    return m_undoStack;
+}
+
+void CharactersModel::setUndoStack(QUndoStack *undoStack)
+{
+    m_undoStack = undoStack;
 }
 
 Qt::ItemFlags CharactersModel::flags(const QModelIndex& index) const
@@ -107,20 +159,33 @@ bool CharactersModel::setData(const QModelIndex& index, const QVariant& value, i
     if (role != Qt::EditRole)
         return false;
 
+    if (!m_undoStack)
+        return false;
+
     KeyChar* keyChar = m_key->keyChar(index.row());
+    QUndoCommand* cmd = 0;
 
     switch (index.column())
     {
     case 0:
         if (value.toString().length() != 1)
             return false;
-        keyChar->setValue(value.toString().at(0));
+        if (value.toString().at(0) == keyChar->value())
+            return false;
+        cmd = new SetKeyCharValueCommand(m_keyboardLayout, m_keyIndex, index.row(), value.toString().at(0));
+        undoStack()->push(cmd);
         return true;
     case 1:
-        keyChar->setModifier(value.toString());
+        if (value.toString() == keyChar->modifier())
+            return false;
+        cmd = new SetKeyCharModifierCommand(m_keyboardLayout, m_keyIndex, index.row(), value.toString());
+        undoStack()->push(cmd);
         return true;
     case 2:
-        keyChar->setPosition(static_cast<KeyChar::Position>(value.toInt()));
+        if (static_cast<KeyChar::Position>(value.toInt()) == keyChar->position())
+            return false;
+        cmd = new SetKeyCharPositionCommand(m_keyboardLayout, m_keyIndex, index.row(), static_cast<KeyChar::Position>(value.toInt()));
+        undoStack()->push(cmd);
         return true;
     }
 

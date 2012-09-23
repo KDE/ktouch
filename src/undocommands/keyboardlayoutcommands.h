@@ -22,6 +22,7 @@
 #include <QRect>
 
 #include "core/specialkey.h"
+#include "core/keychar.h"
 
 class KeyboardLayout;
 
@@ -139,6 +140,54 @@ private:
     int m_keyIndex;
     bool m_oldHasHapticMarker;
     bool m_newHasHapticMarker;
+};
+
+class SetKeyCharValueCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    int m_keyCharIndex;
+    QChar m_oldValue;
+    QChar m_newValue;
+};
+
+class SetKeyCharModifierCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyCharModifierCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, const QString& newModifier, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    int m_keyCharIndex;
+    QString m_oldModifier;
+    QString m_newModifier;
+};
+
+class SetKeyCharPositionCommand : public QUndoCommand
+{
+public:
+    explicit SetKeyCharPositionCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, KeyChar::Position newPosition, QUndoCommand* parent = 0);
+    void undo();
+    void redo();
+    int id() const;
+    bool mergeWith(const QUndoCommand* other);
+private:
+    KeyboardLayout* m_layout;
+    int m_keyIndex;
+    int m_keyCharIndex;
+    KeyChar::Position m_oldPosition;
+    KeyChar::Position m_newPosition;
 };
 
 class SetSpecialKeyTypeCommand : public QUndoCommand

@@ -379,6 +379,141 @@ bool SetKeyHasHapticMarkerCommand::mergeWith(const QUndoCommand* other)
     return true;
 }
 
+SetKeyCharValueCommand::SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_keyCharIndex(keyCharIndex),
+    m_newValue(newValue)
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    m_oldValue = key->keyChar(m_keyCharIndex)->value();
+}
+
+void SetKeyCharValueCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setValue(m_oldValue);
+}
+
+void SetKeyCharValueCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setValue(m_newValue);
+}
+
+int SetKeyCharValueCommand::id() const
+{
+    return 0x7a621de0;
+}
+
+bool SetKeyCharValueCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetKeyCharValueCommand* setKeyCharValueCommand = static_cast<const SetKeyCharValueCommand*>(other);
+
+    if (m_layout != setKeyCharValueCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setKeyCharValueCommand->m_keyIndex)
+        return false;
+
+    if (m_keyCharIndex != setKeyCharValueCommand->m_keyCharIndex)
+        return false;
+
+    m_newValue = setKeyCharValueCommand->m_newValue;
+    return true;
+}
+
+SetKeyCharModifierCommand::SetKeyCharModifierCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, const QString& newModifier, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_keyCharIndex(keyCharIndex),
+    m_newModifier(newModifier)
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    m_oldModifier = key->keyChar(m_keyCharIndex)->modifier();
+}
+
+void SetKeyCharModifierCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setModifier(m_oldModifier);
+}
+
+void SetKeyCharModifierCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setModifier(m_newModifier);
+}
+
+int SetKeyCharModifierCommand::id() const
+{
+    return 0xdd9f24d0;
+}
+
+bool SetKeyCharModifierCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetKeyCharModifierCommand* setKeyCharModifierCommand = static_cast<const SetKeyCharModifierCommand*>(other);
+
+    if (m_layout != setKeyCharModifierCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setKeyCharModifierCommand->m_keyIndex)
+        return false;
+
+    if (m_keyCharIndex != setKeyCharModifierCommand->m_keyCharIndex)
+        return false;
+
+    m_newModifier = setKeyCharModifierCommand->m_newModifier;
+    return true;
+}
+
+SetKeyCharPositionCommand::SetKeyCharPositionCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, KeyChar::Position newPosition, QUndoCommand* parent) :
+    QUndoCommand(parent),
+    m_layout(layout),
+    m_keyIndex(keyIndex),
+    m_keyCharIndex(keyCharIndex),
+    m_newPosition(newPosition)
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    m_oldPosition = key->keyChar(m_keyCharIndex)->position();
+}
+
+void SetKeyCharPositionCommand::undo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setPosition(m_oldPosition);
+}
+
+void SetKeyCharPositionCommand::redo()
+{
+    Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
+    key->keyChar(m_keyCharIndex)->setPosition(m_newPosition);
+}
+
+int SetKeyCharPositionCommand::id() const
+{
+    return 0x50192aaa;
+}
+
+bool SetKeyCharPositionCommand::mergeWith(const QUndoCommand* other)
+{
+    const SetKeyCharPositionCommand* setKeyCharPositionCommand = static_cast<const SetKeyCharPositionCommand*>(other);
+
+    if (m_layout != setKeyCharPositionCommand->m_layout)
+        return false;
+
+    if (m_keyIndex != setKeyCharPositionCommand->m_keyIndex)
+        return false;
+
+    if (m_keyCharIndex != setKeyCharPositionCommand->m_keyCharIndex)
+        return false;
+
+    m_newPosition = setKeyCharPositionCommand->m_newPosition;
+    return true;
+}
+
 SetSpecialKeyTypeCommand::SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent) :
     QUndoCommand(parent),
     m_layout(layout),
