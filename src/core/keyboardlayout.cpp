@@ -165,6 +165,9 @@ void KeyboardLayout::removeKey(int index)
 
 void KeyboardLayout::clearKeys()
 {
+    if (m_keys.count() == 0)
+        return;
+
     qDeleteAll(m_keys);
     m_keys.clear();
     emit keyCountChanged();

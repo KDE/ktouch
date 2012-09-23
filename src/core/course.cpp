@@ -83,6 +83,9 @@ void Course::removeLesson(int index)
 
 void Course::clearLessons()
 {
+    if (m_lessons.count() == 0)
+        return;
+
     emit lessonsAboutToBeRemoved(0, m_lessons.length() - 1);
     qDeleteAll(m_lessons);
     m_lessons.clear();

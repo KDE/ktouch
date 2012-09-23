@@ -54,6 +54,9 @@ void DataIndex::removeCourse(int index)
 
 void DataIndex::clearCourses()
 {
+    if (m_courses.count() == 0)
+        return;
+
     emit coursesAboutToBeRemoved(0, m_courses.length() - 1);
     qDeleteAll(m_courses);
     m_courses.clear();
@@ -93,6 +96,9 @@ void DataIndex::removeKeyboardLayout(int index)
 
 void DataIndex::clearKeyboardLayouts()
 {
+    if (m_keyboardLayouts.count() == 0)
+        return;
+
     emit keyboardLayoutsAboutToBeRemoved(0, m_keyboardLayouts.length() - 1);
     qDeleteAll(m_keyboardLayouts);
     m_keyboardLayouts.clear();

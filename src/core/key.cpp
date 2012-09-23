@@ -103,6 +103,9 @@ void Key::removeKeyChar(int index)
 
 void Key::clearKeyChars()
 {
+    if (m_keyChars.count() == 0)
+        return;
+
     emit keyCharsAboutToBeRemoved(0, m_keyChars.length() - 1);
     qDeleteAll(m_keyChars);
     m_keyChars.clear();
