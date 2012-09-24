@@ -20,6 +20,7 @@
 
 #include <QObject>
 #include <QList>
+#include <QSqlQuery>
 
 class QSqlDatabase;
 class QSqlError;
@@ -56,6 +57,8 @@ public:
 
     Q_INVOKABLE QString courseProgress(Profile* profile, const QString& courseId, CourseProgressType type);
     Q_INVOKABLE void saveCourseProgress(const QString& lessonId, Profile* profile, const QString& courseId, CourseProgressType type);
+
+    QSqlQuery learningProgressQuery(Profile* profile);
 
     QString errorMessage() const;
 

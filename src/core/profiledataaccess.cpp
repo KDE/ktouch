@@ -490,6 +490,34 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     }
 }
 
+QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile)
+{
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return QSqlQuery();
+
+    if (!db.isOpen())
+        return QSqlQuery();
+
+    QSqlQuery query(db);
+
+    query.prepare("SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?");
+
+    query.bindValue(0, profile->id());
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return QSqlQuery();
+    }
+
+    kDebug() << query.size();
+
+    return query;
+}
+
 QString ProfileDataAccess::errorMessage() const
 {
     return m_errorMessage;
