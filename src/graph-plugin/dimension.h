@@ -29,6 +29,7 @@ class Dimension : public QDeclarativeItem
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
     Q_PROPERTY(int dataColumn READ dataColumn WRITE setDataColumn NOTIFY dataColumnChanged)
     Q_PROPERTY(qreal maximumValue READ maximumValue WRITE setMaximumValue NOTIFY maximumValueChanged)
+    Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
 public:
     explicit Dimension(QDeclarativeItem* parent = 0);
     QColor color() const;
@@ -37,14 +38,18 @@ public:
     void setDataColumn(int dataColumn);
     qreal maximumValue() const;
     void setMaximumValue(qreal maximumValue);
+    QString label() const;
+    void setLabel(const QString& label);
 signals:
     void colorChanged();
     void dataColumnChanged();
     void maximumValueChanged();
+    void labelChanged();
 private:
     QColor m_color;
     int m_dataColumn;
     qreal m_maximumValue;
+    QString m_label;
 };
 
 #endif // DIMENSION_H

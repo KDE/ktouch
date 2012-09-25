@@ -66,3 +66,17 @@ void Dimension::setMaximumValue(qreal maximumValue)
         emit maximumValueChanged();
     }
 }
+
+QString Dimension::label() const
+{
+    return m_label;
+}
+
+void Dimension::setLabel(const QString& label)
+{
+    if (label != m_label)
+    {
+        m_label = label;
+        emit labelChanged();
+    }
+}
