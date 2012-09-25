@@ -19,6 +19,8 @@
 
 #include <QAbstractTableModel>
 
+#include <QPainter>
+
 LineGraphCore::LineGraphCore(QDeclarativeItem* parent) :
     QDeclarativeItem(parent),
     m_model(0),
@@ -26,6 +28,7 @@ LineGraphCore::LineGraphCore(QDeclarativeItem* parent) :
     m_pitch(50.0),
     m_pointRadius(5.0)
 {
+    setFlag(QGraphicsItem::ItemHasNoContents, false);
 }
 
 QAbstractTableModel* LineGraphCore::model() const
@@ -108,6 +111,31 @@ void LineGraphCore::setPointRadius(qreal pointRadius)
         triggerUpdate();
         emit pointRadiusChanged();
     }
+}
+
+void LineGraphCore::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
+{
+    paintAxisAndLines(painter);
+}
+
+void LineGraphCore::paintAxisAndLines(QPainter* painter)
+{
+    const int minY = qRound(m_pointRadius);
+    const int maxY = height() - m_pointRadius;
+    const int distance = (maxY - minY) / 4;
+    const qreal x1 = x();
+    const qreal x2 = x1 + width();
+    int y = minY;
+
+    painter->setPen(QPen(QBrush("#808080"), 1));
+
+    for (int i = 0; i < 4; i++, y += distance)
+    {
+        painter->drawLine(QPointF(x1, y), QPointF(x2, y));
+    }
+
+    painter->setPen(QPen(QBrush("#000000"), 1));
+    painter->drawLine(QPointF(x1, maxY), QPointF(x2, maxY));
 }
 
 void LineGraphCore::triggerUpdate()

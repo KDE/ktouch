@@ -50,6 +50,9 @@ public:
     void setPitch(qreal pitch);
     qreal pointRadius() const;
     void setPointRadius(qreal pointRadius);
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*);
+    void paintAxisAndLines(QPainter* painter);
+
 signals:
     void modelChanged();
     void graphStyleChanged();

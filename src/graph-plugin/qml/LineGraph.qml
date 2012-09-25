@@ -23,15 +23,15 @@ Item {
     property alias graphStyle: core.graphStyle
     property alias pitch: core.pitch
 
+    Rectangle {
+        anchors.fill: parent
+        color: "white"
+    }
+
     GraphCoreItem
     {
         id: core
         anchors.fill: parent
-
-        Rectangle {
-            anchors.fill: parent
-            color: "white"
-        }
 
         Flickable {
             id: test
