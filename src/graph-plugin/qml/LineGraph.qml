@@ -23,7 +23,10 @@ Item {
     property alias graphStyle: core.graphStyle
     property alias pitch: core.pitch
 
+    property alias backgroundColor: bg.color
+
     Rectangle {
+        id: bg
         anchors.fill: parent
         color: "white"
     }
@@ -39,10 +42,10 @@ Item {
             clip: true
 
             contentHeight: height
-            contentWidth: bg.width
+            contentWidth: lineBg.width
 
             LineGraphBackgroundPainter {
-                id: bg
+                id: lineBg
                 lineGraphCore: core
                 height: parent.height
             }
@@ -54,7 +57,7 @@ Item {
                 delegate: LineGraphPainter {
                     id: line
                     lineGraphCore: core
-                    backgroundPainter: bg
+                    backgroundPainter: lineBg
                     dimension: index
                     height: parent.height
 
@@ -62,7 +65,7 @@ Item {
                         model: core.model
                         delegate: LineGraphPoint {
                             lineGraphCore: core
-                            backgroundPainter: bg
+                            backgroundPainter: lineBg
                             dimension: line.dimension
                             row: index
                         }
