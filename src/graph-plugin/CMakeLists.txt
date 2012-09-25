@@ -2,6 +2,11 @@ project(graph)
 
 set(graph_SRCS
     graphplugin.cpp
+    linegraphcore.cpp
+    dimension.cpp
+    linegraphbackgroundpainter.cpp
+    linegraphpainter.cpp
+    linegraphpoint.cpp
     )
 
 automoc4_add_library(graphplugin SHARED ${graph_SRCS})
@@ -12,7 +17,7 @@ install(TARGETS graphplugin DESTINATION ${IMPORTS_INSTALL_DIR}/org/kde/ktouch/gr
 set(ktouch_graphplugin_files
     qml/qmldir
 
-    qml/GraphItem.qml
+    qml/LineGraph.qml
 )
 
 install(FILES ${ktouch_graphplugin_files} DESTINATION ${IMPORTS_INSTALL_DIR}/org/kde/ktouch/graph)

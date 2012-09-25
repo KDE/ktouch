@@ -18,10 +18,25 @@
 #include "graphplugin.h"
 
 #include <qdeclarative.h>
+#include <QAbstractTableModel>
+
+#include "linegraphcore.h"
+#include "dimension.h"
+#include "linegraphbackgroundpainter.h"
+#include "linegraphpainter.h"
+#include "linegraphpoint.h"
 
 void GraphPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.ktouch.graph"));
+
+    qmlRegisterType<LineGraphCore>(uri, 0, 1, "GraphCoreItem");
+    qmlRegisterType<Dimension>(uri, 0, 1, "Dimension");
+    qmlRegisterType<LineGraphBackgroundPainter>(uri, 0, 1, "LineGraphBackgroundPainter");
+    qmlRegisterType<LineGraphPainter>(uri, 0, 1, "LineGraphPainter");
+    qmlRegisterType<LineGraphPoint>(uri, 0, 1, "LineGraphPoint");
+
+    qmlRegisterUncreatableType<QAbstractTableModel>(uri, 0, 1, "QAbstractTableModel", "abstract class");
 }
 
 Q_EXPORT_PLUGIN2(graphplugin, GraphPlugin)
