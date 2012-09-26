@@ -52,6 +52,7 @@ private slots:
     void triggerUpdate();
 private:
     void updateGeometry();
+    bool valid() const;
     LineGraphCore* m_lineGraphCore;
     LineGraphBackgroundPainter* m_backgroundPainter;
     int m_dimension;

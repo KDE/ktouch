@@ -107,7 +107,7 @@ void LineGraphPoint::setRow(int row)
 
 void LineGraphPoint::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
 {
-    if (!m_lineGraphCore || !m_backgroundPainter || m_row == -1 || m_dimension == -1)
+    if (!valid())
         return;
 
     Dimension* dimension = m_lineGraphCore->dimensionsList().at(m_dimension);
@@ -121,9 +121,8 @@ void LineGraphPoint::paint(QPainter* painter, const QStyleOptionGraphicsItem*, Q
 
 void LineGraphPoint::triggerUpdate()
 {
-    if (!m_lineGraphCore || !m_backgroundPainter || m_row == -1 || m_dimension == -1)
+    if (!valid())
         return;
-
     updateGeometry();
     update();
 }
@@ -136,4 +135,15 @@ void LineGraphPoint::updateGeometry()
     QPointF center = m_backgroundPainter->linePolygons().at(m_dimension).at(m_row);
 
     setPos(center - QPointF(radius, radius));
+}
+
+bool LineGraphPoint::valid() const
+{
+    if (!m_lineGraphCore || !m_backgroundPainter || m_row == -1 || m_dimension == -1)
+        return false;
+    if (m_dimension >= m_backgroundPainter->linePolygons().count())
+        return false;
+    if (m_row >= m_backgroundPainter->linePolygons().at(m_dimension).count())
+        return false;
+    return true;
 }
