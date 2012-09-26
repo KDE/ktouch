@@ -29,7 +29,7 @@ class LineGraphCore : public QDeclarativeItem
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractTableModel* model READ model WRITE setModel NOTIFY modelChanged)
-    Q_PROPERTY(QDeclarativeListProperty<Dimension> dimensions READ dimensions)
+    Q_PROPERTY(QDeclarativeListProperty<Dimension> dimensions READ dimensions CONSTANT)
     Q_PROPERTY(GraphStyle graphStyle READ graphStyle WRITE setGraphStyle NOTIFY graphStyleChanged)
     Q_PROPERTY(qreal pitch READ pitch WRITE setPitch NOTIFY pitchChanged)
     Q_PROPERTY(qreal pointRadius READ pointRadius WRITE setPointRadius NOTIFY pointRadiusChanged)
