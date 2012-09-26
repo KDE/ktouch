@@ -30,6 +30,7 @@ set(ktouch_qml_files
     KeyLabel.qml
 
     ScoreScreen.qml
+    LearningProgressGraph.qml
 
     InformationTable.qml
     MessageBox.qml

@@ -67,12 +67,17 @@ Item {
             height: childrenRect.height
             spacing: 40
 
-            Rectangle {
+            LearningProgressModel {
+                id: learningProgressModel
+                profile: root.profile
+            }
+
+            LearningProgressGraph {
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: 250
+                width: parent.width - 40
                 height: 250
-                color: theme.backgroundColor
-                border.width: 1
+
+                model: learningProgressModel
             }
 
             InformationTable {
