@@ -79,7 +79,7 @@ void LineGraphBackgroundPainter::paint(QPainter* painter, const QStyleOptionGrap
         line << QPointF(line.first().x(), maxY - radius);
 
         QColor bgColor = dimensions.at(i)->color();
-        bgColor.setAlphaF(0.7);
+        bgColor.setAlphaF(0.4);
         painter->setBrush(bgColor);
         painter->setPen(Qt::NoPen);
 
