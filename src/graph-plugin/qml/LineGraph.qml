@@ -37,12 +37,18 @@ Item {
         anchors.fill: parent
 
         Flickable {
-            id: test
+            id: flickable
             anchors.fill: parent
             clip: true
 
             contentHeight: height
             contentWidth: lineBg.width
+
+            onContentWidthChanged: {
+                if (contentWidth > width) {
+                    contentX = contentWidth - width
+                }
+            }
 
             LineGraphBackgroundPainter {
                 id: lineBg
@@ -54,6 +60,7 @@ Item {
                 id: dimensionsRepeater
 
                 model: core.dimensions.length
+
                 delegate: LineGraphPainter {
                     id: line
                     lineGraphCore: core
