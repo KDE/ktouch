@@ -42,6 +42,18 @@ void LearningProgressModel::setProfile(Profile* profile)
     }
 }
 
+int LearningProgressModel::maxCharactersTypedPerMinute() const
+{
+    int max = 0;
+
+    for (int i = 0; i < rowCount(); i++)
+    {
+        max = qMax(max, charactersPerMinute(i));
+    }
+
+    return max;
+}
+
 void LearningProgressModel::updateQuery()
 {
     ProfileDataAccess access;
@@ -120,10 +132,7 @@ QVariant LearningProgressModel::accuracyData(int row, int role) const
 
 QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
 {
-    const int charactersTyped = this->charactersTyped(row);
-    const int elapsedTime = this->elapsedTime(row);
-
-    int charactersPerMinute = elapsedTime > 0? charactersTyped * 60000 / elapsedTime: 0;
+    int charactersPerMinute = this->charactersPerMinute(row);
 
     switch(role)
     {
@@ -132,6 +141,14 @@ QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
     default:
         return QVariant();
     }
+}
+
+int LearningProgressModel::charactersPerMinute(int row) const
+{
+    const int charactersTyped = this->charactersTyped(row);
+    const int elapsedTime = this->elapsedTime(row);
+
+    return elapsedTime > 0? charactersTyped * 60000 / elapsedTime: 0;
 }
 
 int LearningProgressModel::charactersTyped(int row) const

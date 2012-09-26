@@ -27,10 +27,12 @@ class LearningProgressModel : public QSqlQueryModel
 {
     Q_OBJECT
     Q_PROPERTY(Profile* profile READ profile WRITE setProfile NOTIFY profileChanged)
+    Q_PROPERTY(int maxCharactersTypedPerMinute READ maxCharactersTypedPerMinute NOTIFY profileChanged)
 public:
     explicit LearningProgressModel(QObject* parent = 0);
     Profile* profile() const;
     void setProfile(Profile* profile);
+    int maxCharactersTypedPerMinute() const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
     QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const;
@@ -39,6 +41,7 @@ public:
 signals:
     void profileChanged();
 private:
+    int charactersPerMinute(int row) const;
     int charactersTyped(int row) const;
     int errorCount(int row) const;
     int elapsedTime(int row) const;
