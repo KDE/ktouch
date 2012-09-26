@@ -66,6 +66,9 @@ const QList<QPolygonF>& LineGraphBackgroundPainter::linePolygons() const
 
 void LineGraphBackgroundPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
 {
+    if (m_lineGraphCore->model()->rowCount() == 0)
+        return;
+
     QList<Dimension*> dimensions = m_lineGraphCore->dimensionsList();
     const qreal radius = m_lineGraphCore->pointRadius();
     const qreal maxY = height();
