@@ -92,6 +92,9 @@ void LineGraphBackgroundPainter::paint(QPainter* painter, const QStyleOptionGrap
 
 void LineGraphBackgroundPainter::triggerUpdate()
 {
+    if (!m_lineGraphCore->model())
+        return;
+
     updateLinePolygons();
     updateWidth();
     update();

@@ -59,6 +59,7 @@ signals:
     void precisionChanged();
     void unitChanged();
     void unitFactorChanged();
+    void updated();
 private:
     QColor m_color;
     int m_dataColumn;

@@ -40,6 +40,7 @@ void Dimension::setColor(const QColor &color)
     if (color != m_color)
     {
         m_color = color;
+        emit updated();
         emit colorChanged();
     }
 }
@@ -54,6 +55,7 @@ void Dimension::setDataColumn(int dataColumn)
     if (dataColumn != m_dataColumn)
     {
         m_dataColumn = dataColumn;
+        emit updated();
         emit dataColumnChanged();
     }
 }
@@ -68,6 +70,7 @@ void Dimension::setMaximumValue(qreal maximumValue)
     if (maximumValue != m_maximumValue)
     {
         m_maximumValue = maximumValue;
+        emit updated();
         emit maximumValueChanged();
     }
 }
@@ -82,6 +85,7 @@ void Dimension::setLabel(const QString& label)
     if (label != m_label)
     {
         m_label = label;
+        emit updated();
         emit labelChanged();
     }
 }
@@ -96,6 +100,7 @@ void Dimension::setPrecision(int precision)
     if (precision != m_precision)
     {
         m_precision = precision;
+        emit updated();
         emit precisionChanged();
     }
 }
@@ -110,6 +115,7 @@ void Dimension::setUnit(const QString& unit)
     if (unit != m_unit)
     {
         m_unit = unit;
+        emit updated();
         emit unitChanged();
     }
 }
@@ -124,6 +130,7 @@ void Dimension::setUnitFactor(qreal unitFactor)
     if (unitFactor != m_unitFactor)
     {
         m_unitFactor = unitFactor;
+        emit updated();
         emit unitFactorChanged();
     }
 }

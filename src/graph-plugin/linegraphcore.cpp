@@ -149,6 +149,7 @@ void LineGraphCore::appendDimension(QDeclarativeListProperty<Dimension>* list, D
     if (lineGraphCore) {
         dimension->setParent(lineGraphCore);
         lineGraphCore->m_dimensions.append(dimension);
+        connect(dimension, SIGNAL(updated()), lineGraphCore, SLOT(triggerUpdate()));
         lineGraphCore->triggerUpdate();
     }
 }
@@ -172,6 +173,10 @@ Dimension* LineGraphCore::dimensionAt(QDeclarativeListProperty<Dimension>* list,
 void LineGraphCore::clearDimensions(QDeclarativeListProperty<Dimension>* list) {
     LineGraphCore* lineGraphCore = qobject_cast<LineGraphCore*>(list->object);
     if (lineGraphCore) {
+        foreach (Dimension* dimension, lineGraphCore->m_dimensions)
+        {
+            dimension->disconnect(lineGraphCore);
+        }
         lineGraphCore->m_dimensions.clear();
         lineGraphCore->triggerUpdate();
     }
