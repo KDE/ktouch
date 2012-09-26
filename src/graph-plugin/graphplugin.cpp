@@ -25,6 +25,7 @@
 #include "linegraphbackgroundpainter.h"
 #include "linegraphpainter.h"
 #include "linegraphpoint.h"
+#include "linegraphforegroundpainter.h"
 
 void GraphPlugin::registerTypes(const char *uri)
 {
@@ -35,6 +36,7 @@ void GraphPlugin::registerTypes(const char *uri)
     qmlRegisterType<LineGraphBackgroundPainter>(uri, 0, 1, "LineGraphBackgroundPainter");
     qmlRegisterType<LineGraphPainter>(uri, 0, 1, "LineGraphPainter");
     qmlRegisterType<LineGraphPoint>(uri, 0, 1, "LineGraphPoint");
+    qmlRegisterType<LineGraphForegroundPainter>(uri, 0, 1, "LineGraphForegroundPainter");
 
     qmlRegisterUncreatableType<QAbstractTableModel>(uri, 0, 1, "QAbstractTableModel", "abstract class");
 }

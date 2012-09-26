@@ -16,6 +16,7 @@
  */
 
 import QtQuick 1.1
+import org.kde.plasma.components 0.1 as PlasmaComponents
 
 Item {
     property alias model: core.model
@@ -31,8 +32,7 @@ Item {
         color: "white"
     }
 
-    GraphCoreItem
-    {
+    GraphCoreItem {
         id: core
         anchors.fill: parent
 
@@ -73,7 +73,56 @@ Item {
                 }
             }
         }
+
+        LineGraphForegroundPainter {
+            anchors.fill: parent
+            lineGraphCore: core
+            backgroundColor: bg.color
+        }
     }
 
+    LineLabel {
+        anchors {
+            top: parent.top
+            left: parent.left
+            topMargin: core.pointRadius + 2
+        }
+        backgroundItem: bg
+        dimension: core.dimensions.length > 0? core.dimensions[0]: null
+        valueFactor: 1
+    }
+
+    LineLabel {
+        anchors {
+            top: parent.top
+            left: parent.left
+            topMargin: core.pointRadius + (core.height - 2 * core.pointRadius) / 2 + 2
+        }
+        backgroundItem: bg
+        dimension: core.dimensions.length > 0? core.dimensions[0]: null
+        valueFactor: 0.5
+    }
+
+    LineLabel {
+        anchors {
+            top: parent.top
+            right: parent.right
+            topMargin: core.pointRadius + 2
+        }
+        backgroundItem: bg
+        dimension: core.dimensions.length > 1? core.dimensions[1]: null
+        valueFactor: 1
+    }
+
+    LineLabel {
+        anchors {
+            top: parent.top
+            right: parent.right
+            topMargin: core.pointRadius + (core.height - 2 * core.pointRadius) / 2 + 2
+        }
+        backgroundItem: bg
+        dimension: core.dimensions.length > 1? core.dimensions[1]: null
+        valueFactor: 0.5
+    }
 
 }

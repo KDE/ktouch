@@ -17,11 +17,16 @@
 
 #include "dimension.h"
 
+#include <KGlobal>
+#include <KLocale>
+
 Dimension::Dimension(QDeclarativeItem* parent) :
     QDeclarativeItem(parent),
     m_color(Qt::black),
     m_dataColumn(0),
-    m_maximumValue(256)
+    m_maximumValue(256),
+    m_precision(0),
+    m_unitFactor(1)
 {
 }
 
@@ -79,4 +84,51 @@ void Dimension::setLabel(const QString& label)
         m_label = label;
         emit labelChanged();
     }
+}
+
+int Dimension::precision() const
+{
+    return m_precision;
+}
+
+void Dimension::setPrecision(int precision)
+{
+    if (precision != m_precision)
+    {
+        m_precision = precision;
+        emit precisionChanged();
+    }
+}
+
+QString Dimension::unit() const
+{
+    return m_unit;
+}
+
+void Dimension::setUnit(const QString& unit)
+{
+    if (unit != m_unit)
+    {
+        m_unit = unit;
+        emit unitChanged();
+    }
+}
+
+qreal Dimension::unitFactor() const
+{
+    return m_unitFactor;
+}
+
+void Dimension::setUnitFactor(qreal unitFactor)
+{
+    if (unitFactor != m_unitFactor)
+    {
+        m_unitFactor = unitFactor;
+        emit unitFactorChanged();
+    }
+}
+
+QString Dimension::formatValue(qreal value)
+{
+    return KGlobal::locale()->formatNumber(value * m_unitFactor, m_precision) + m_unit;
 }

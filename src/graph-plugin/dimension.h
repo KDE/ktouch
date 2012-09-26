@@ -30,6 +30,10 @@ class Dimension : public QDeclarativeItem
     Q_PROPERTY(int dataColumn READ dataColumn WRITE setDataColumn NOTIFY dataColumnChanged)
     Q_PROPERTY(qreal maximumValue READ maximumValue WRITE setMaximumValue NOTIFY maximumValueChanged)
     Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
+    Q_PROPERTY(int precision READ precision WRITE setPrecision NOTIFY precisionChanged)
+    Q_PROPERTY(QString unit READ unit WRITE setUnit NOTIFY unitChanged)
+    Q_PROPERTY(qreal unitFactor READ unitFactor WRITE setUnitFactor NOTIFY unitFactorChanged)
+
 public:
     explicit Dimension(QDeclarativeItem* parent = 0);
     QColor color() const;
@@ -40,16 +44,29 @@ public:
     void setMaximumValue(qreal maximumValue);
     QString label() const;
     void setLabel(const QString& label);
+    int precision() const;
+    void setPrecision(int precision);
+    QString unit() const;
+    void setUnit(const QString& unit);
+    qreal unitFactor() const;
+    void setUnitFactor(qreal unitFactor);
+    Q_INVOKABLE QString formatValue(qreal value);
 signals:
     void colorChanged();
     void dataColumnChanged();
     void maximumValueChanged();
     void labelChanged();
+    void precisionChanged();
+    void unitChanged();
+    void unitFactorChanged();
 private:
     QColor m_color;
     int m_dataColumn;
     qreal m_maximumValue;
     QString m_label;
+    int m_precision;
+    QString m_unit;
+    qreal m_unitFactor;
 };
 
 #endif // DIMENSION_H
