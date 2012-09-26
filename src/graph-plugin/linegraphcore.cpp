@@ -124,7 +124,7 @@ void LineGraphCore::paintAxisAndLines(QPainter* painter)
     const int maxY = height() - m_pointRadius;
     const int distance = (maxY - minY) / 4;
     const qreal x1 = x();
-    const qreal x2 = x1 + width();
+    const qreal x2 = x1 + width() - 1;
     int y = minY;
 
     painter->setPen(QPen(QBrush("#808080"), 1));
