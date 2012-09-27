@@ -174,7 +174,7 @@ Item {
             target: curtain
             property: "opacity"
             to: 1
-            duration: 750
+            duration: switchScreenAnimation.to == homeScreen? 250: 750
             easing.type: Easing.OutQuad
         }
         PropertyAction {
@@ -194,7 +194,7 @@ Item {
             target: curtain
             property: "opacity"
             to: 0
-            duration: 750
+            duration: switchScreenAnimation.to == homeScreen? 250: 750
             easing.type: Easing.InQuad
         }
         ScriptAction {
