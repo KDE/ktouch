@@ -88,7 +88,7 @@ for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
 distributed under the GPL2
 Version: 0.1 beta</description>
     <keyboardLayout>de</keyboardLayout>
-    <id>de2</id>
+    <id>{6fe46eef-3182-4322-82b6-bb65831e594e}</id>
     <path>courses/de2.xml</path>
   </course>
   <course>
