@@ -32,14 +32,7 @@ Item {
 
     focus: true
 
-    onTextChanged: {
-        line.enteredText = ""
-        line.isCorrect = true
-        line.position = 0
-        lineChars.model = 0
-        lineChars.model = line.text.length
-        emitNextChar()
-    }
+    onTextChanged: resetLine()
 
     onFocusChanged: {
         if (!line.activeFocus)
@@ -51,6 +44,15 @@ Item {
     function startTraining() {
         stats.startTraining();
         stopTimer.restart();
+    }
+
+    function resetLine() {
+        line.enteredText = ""
+        line.isCorrect = true
+        line.position = 0
+        lineChars.model = 0
+        lineChars.model = line.text.length
+        emitNextChar()
     }
 
     function deleteLastChar() {
@@ -99,7 +101,10 @@ Item {
         case Qt.Key_Return:
             startTraining();
             if (line.position == text.length && line.isCorrect)
+            {
+                resetLine();
                 line.done();
+            }
             break;
         case Qt.Key_Backspace:
             startTraining();
