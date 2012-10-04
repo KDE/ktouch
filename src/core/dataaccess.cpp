@@ -26,7 +26,6 @@
 #include <QXmlSchemaValidator>
 
 #include <kstandarddirs.h>
-#include <klocale.h>
 #include <kdebug.h>
 
 #include "dataindex.h"
@@ -207,7 +206,7 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
     QDomElement root(doc.documentElement());
 
     target->clearKeys();
-    target->setTitle(i18nc("Keyboard Layout Name", root.firstChildElement("title").text().toUtf8()));
+    target->setTitle(root.firstChildElement("title").text());
     target->setName(root.firstChildElement("name").text());
     target->setWidth(root.firstChildElement("width").text().toInt());
     target->setHeight(root.firstChildElement("height").text().toInt());
@@ -385,8 +384,8 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     QDomElement root(doc.documentElement());
 
     target->setId(root.firstChildElement("id").text());
-    target->setTitle(i18nc("course title", root.firstChildElement("title").text().toUtf8()));
-    target->setDescription(i18nc("course description", root.firstChildElement("description").text().toUtf8()));
+    target->setTitle(root.firstChildElement("title").text());
+    target->setDescription(root.firstChildElement("description").text());
     target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
     target->clearLessons();
 
@@ -396,7 +395,7 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     {
         Lesson* lesson = new Lesson(this);
         lesson->setId(lessonNode.firstChildElement("id").text());
-        lesson->setTitle(i18nc("lesson title", lessonNode.firstChildElement("title").text().toUtf8()));
+        lesson->setTitle(lessonNode.firstChildElement("title").text().toUtf8());
         lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
         lesson->setText(lessonNode.firstChildElement("text").text());
         target->addLesson(lesson);
