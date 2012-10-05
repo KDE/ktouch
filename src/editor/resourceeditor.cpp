@@ -222,7 +222,7 @@ void ResourceEditor::deleteResource()
 
 void ResourceEditor::importResource()
 {
-    const QString path(KFileDialog::getOpenFileName(KUrl("kfiledialog:///import"), QString("text/xml"), this));
+    const QString path(KFileDialog::getOpenFileName(KUrl("kfiledialog:///importexport"), QString("text/xml"), this));
 
     if (!path.isNull())
     {
@@ -260,7 +260,7 @@ void ResourceEditor::exportResource()
                     return;
                 }
 
-                const QString initialFileName(QString("%1.xml").arg(course->keyboardLayoutName()));
+                const QString initialFileName(QString("filedialog:///importexport/%1.xml").arg(course->keyboardLayoutName()));
                 const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
 
                 if (!path.isNull())
@@ -288,7 +288,7 @@ void ResourceEditor::exportResource()
                     return;
                 }
 
-                const QString initialFileName(QString("%1.xml").arg(keyboardlayout->name()));
+                const QString initialFileName(QString("filedialog:///importexport/%1.xml").arg(keyboardlayout->name()));
                 const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
 
                 if (!path.isNull())
