@@ -35,6 +35,9 @@ set(ktouch_SRCS
     mainwindow.cpp
     bindings/utils.cpp
     bindings/stringformatter.cpp
+    declarativeitems/griditem.cpp
+    declarativeitems/preferencesproxy.cpp
+    declarativeitems/scalebackgrounditem.cpp
     core/resource.cpp
     core/keyboardlayoutbase.cpp
     core/keyboardlayout.cpp
@@ -72,10 +75,7 @@ set(ktouch_SRCS
     editor/keyboardlayouteditorview.cpp
     editor/keyboardlayoutpropertieswidget.cpp
     editor/charactersvieweditorfactories.cpp
-    editor/griditem.cpp
-    scalebackgrounditem.cpp
     x11_helper.cpp
-    preferencesproxy.cpp
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
 )

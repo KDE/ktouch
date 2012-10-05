@@ -26,6 +26,9 @@
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
+#include "declarativeitems/griditem.h"
+#include "declarativeitems/preferencesproxy.h"
+#include "declarativeitems/scalebackgrounditem.h"
 #include "core/keyboardlayout.h"
 #include "core/key.h"
 #include "core/specialkey.h"
@@ -41,9 +44,6 @@
 #include "models/lessonmodel.h"
 #include "models/categorizedresourcesortfilterproxymodel.h"
 #include "models/learningprogressmodel.h"
-#include "editor/griditem.h"
-#include "preferencesproxy.h"
-#include "scalebackgrounditem.h"
 
 Application::Application() :
     KApplication(true),
