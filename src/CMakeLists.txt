@@ -35,6 +35,7 @@ set(ktouch_SRCS
     mainwindow.cpp
     bindings/utils.cpp
     bindings/stringformatter.cpp
+    declarativeitems/cursorshapearea.cpp
     declarativeitems/griditem.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp

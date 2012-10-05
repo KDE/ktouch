@@ -26,6 +26,7 @@
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
+#include "declarativeitems/cursorshapearea.h"
 #include "declarativeitems/griditem.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
@@ -109,6 +110,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<CategorizedResourceSortFilterProxyModel>("ktouch", 1, 0, "CategorizedResourceSortFilterProxyModel");
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
 
-    qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
+    qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
+    qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
 }

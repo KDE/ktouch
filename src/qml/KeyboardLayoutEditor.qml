@@ -93,6 +93,11 @@ Item {
                     }
                 }
 
+                CursorShapeArea {
+                  anchors.fill: parent
+                  cursorShape: manipulated? Qt.SizeAllCursor: Qt.ArrowCursor
+                }
+
                 Behavior on opacity {
                     NumberAnimation { duration: 150 }
                 }

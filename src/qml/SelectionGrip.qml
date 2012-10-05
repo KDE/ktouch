@@ -114,5 +114,9 @@ Item {
                 }
             }
         }
+        CursorShapeArea {
+            anchors.fill: parent
+            cursorShape: ((horizontalPosition == "left") != (verticalPosition == "top"))? Qt.SizeBDiagCursor: Qt.SizeFDiagCursor
+        }
     }
 }
