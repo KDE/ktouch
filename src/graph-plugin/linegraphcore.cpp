@@ -127,15 +127,16 @@ void LineGraphCore::paintAxisAndLines(QPainter* painter)
     const qreal x2 = x1 + width() - 1;
     int y = minY;
 
-    painter->setPen(QPen(QBrush("#808080"), 1));
+    painter->setBrush(QBrush("#808080"));
+    painter->setPen(Qt::NoPen);
 
     for (int i = 0; i < 4; i++, y += distance)
     {
-        painter->drawLine(QPointF(x1, y), QPointF(x2, y));
+        painter->drawRect(QRectF(QPointF(x1, y), QPointF(x2, y + 1)));
     }
 
-    painter->setPen(QPen(QBrush("#000000"), 1));
-    painter->drawLine(QPointF(x1, maxY), QPointF(x2, maxY));
+    painter->setBrush(QBrush("#000000"));
+    painter->drawRect(QRectF(QPointF(x1, maxY), QPointF(x2, maxY + 1)));
 }
 
 void LineGraphCore::triggerUpdate()
