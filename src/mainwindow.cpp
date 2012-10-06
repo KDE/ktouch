@@ -114,6 +114,7 @@ void MainWindow::showConfigDialog()
 
     KConfigDialog* dialog = new KConfigDialog(this, "preferences", Preferences::self());
     dialog->setFaceType(KPageDialog::List);
+    dialog->setModal(true);
     dialog->addPage(new TrainingConfigWidget(), i18n("Training"), "chronometer", "Training settings");
     dialog->addPage(new ColorsConfigWidget(), i18n("Colors"), "preferences-desktop-color", "Color settings");
     dialog->show();
