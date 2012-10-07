@@ -38,7 +38,7 @@ LineGraphCore* LineGraphBackgroundPainter::lineGraphCore() const
     return m_lineGraphCore;
 }
 
-void LineGraphBackgroundPainter::setGraphCoreItem(LineGraphCore* lineGraphCore)
+void LineGraphBackgroundPainter::setLineGraphCore(LineGraphCore* lineGraphCore)
 {
     if (lineGraphCore != m_lineGraphCore)
     {

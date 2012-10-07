@@ -35,9 +35,9 @@ void GraphPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Dimension>(uri, 0, 1, "Dimension");
     qmlRegisterType<GraphCore>(uri, 0, 1, "GraphCore");
-    qmlRegisterType<BarGraphCore>(uri, 0, 1, "BarGraphCoreItem");
+    qmlRegisterType<BarGraphCore>(uri, 0, 1, "BarGraphCore");
     qmlRegisterType<BarGraphSegment>(uri, 0, 1, "BarGraphSegment");
-    qmlRegisterType<LineGraphCore>(uri, 0, 1, "LineGraphCoreItem");
+    qmlRegisterType<LineGraphCore>(uri, 0, 1, "LineGraphCore");
     qmlRegisterType<LineGraphBackgroundPainter>(uri, 0, 1, "LineGraphBackgroundPainter");
     qmlRegisterType<LineGraphPainter>(uri, 0, 1, "LineGraphPainter");
     qmlRegisterType<LineGraphPoint>(uri, 0, 1, "LineGraphPoint");

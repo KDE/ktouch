@@ -39,7 +39,7 @@ LineGraphCore* LineGraphPoint::lineGraphCore() const
     return m_lineGraphCore;
 }
 
-void LineGraphPoint::setGraphCoreItem(LineGraphCore* lineGraphCore)
+void LineGraphPoint::setLineGraphCore(LineGraphCore* lineGraphCore)
 {
     if (lineGraphCore != m_lineGraphCore)
     {

@@ -31,7 +31,7 @@ Item {
         color: "white"
     }
 
-    BarGraphCoreItem {
+    BarGraphCore {
         id: core
         anchors.fill: parent
 

@@ -26,11 +26,11 @@ class LineGraphCore;
 class LineGraphBackgroundPainter : public QDeclarativeItem
 {
     Q_OBJECT
-    Q_PROPERTY(LineGraphCore* lineGraphCore READ lineGraphCore WRITE setGraphCoreItem NOTIFY lineGraphCoreChanged)
+    Q_PROPERTY(LineGraphCore* lineGraphCore READ lineGraphCore WRITE setLineGraphCore NOTIFY lineGraphCoreChanged)
 public:
     explicit LineGraphBackgroundPainter(QDeclarativeItem* parent = 0);
     LineGraphCore* lineGraphCore() const;
-    void setGraphCoreItem(LineGraphCore* lineGraphCores);
+    void setLineGraphCore(LineGraphCore* lineGraphCore);
     void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*);
     const QList<QPolygonF>& linePolygons() const;
 signals:

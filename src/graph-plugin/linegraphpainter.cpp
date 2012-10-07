@@ -40,7 +40,7 @@ LineGraphCore* LineGraphPainter::lineGraphCore() const
     return m_lineGraphCore;
 }
 
-void LineGraphPainter::setGraphCoreItem(LineGraphCore* lineGraphCore)
+void LineGraphPainter::setLineGraphCore(LineGraphCore* lineGraphCore)
 {
     if (lineGraphCore != m_lineGraphCore)
     {

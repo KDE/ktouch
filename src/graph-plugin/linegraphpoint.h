@@ -27,14 +27,14 @@ class LineGraphBackgroundPainter;
 class LineGraphPoint : public QDeclarativeItem
 {
     Q_OBJECT
-    Q_PROPERTY(LineGraphCore* lineGraphCore READ lineGraphCore WRITE setGraphCoreItem NOTIFY lineGraphCoreChanged)
+    Q_PROPERTY(LineGraphCore* lineGraphCore READ lineGraphCore WRITE setLineGraphCore NOTIFY lineGraphCoreChanged)
     Q_PROPERTY(LineGraphBackgroundPainter* backgroundPainter READ backgroundPainter WRITE setBackgroundPainter NOTIFY backgroundPainterChanged)
     Q_PROPERTY(int dimension READ dimension WRITE setDimension NOTIFY dimensionChanged)
     Q_PROPERTY(int row READ row WRITE setRow NOTIFY rowChanged)
 public:
     explicit LineGraphPoint(QDeclarativeItem* parent = 0);
     LineGraphCore* lineGraphCore() const;
-    void setGraphCoreItem(LineGraphCore* lineGraphCores);
+    void setLineGraphCore(LineGraphCore* lineGraphCore);
     LineGraphBackgroundPainter* backgroundPainter() const;
     void setBackgroundPainter(LineGraphBackgroundPainter* backgroundPainter);
     int dimension() const;

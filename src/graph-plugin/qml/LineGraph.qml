@@ -32,7 +32,7 @@ Item {
         color: "white"
     }
 
-    LineGraphCoreItem {
+    LineGraphCore {
         id: core
         anchors.fill: parent
 
