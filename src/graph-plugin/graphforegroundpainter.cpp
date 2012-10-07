@@ -15,50 +15,51 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "linegraphforegroundpainter.h"
+#include "graphforegroundpainter.h"
 
 #include <QPainter>
 
-#include "linegraphcore.h"
+#include "graphcore.h"
 
-LineGraphForegroundPainter::LineGraphForegroundPainter(QDeclarativeItem *parent) :
-    QDeclarativeItem(parent)
+GraphForegroundPainter::GraphForegroundPainter(QDeclarativeItem *parent) :
+    QDeclarativeItem(parent),
+    m_graphCore(0)
 {
     setFlag(QGraphicsItem::ItemHasNoContents, false);
 }
 
-LineGraphCore* LineGraphForegroundPainter::lineGraphCore() const
+GraphCore* GraphForegroundPainter::graphCore() const
 {
-    return m_lineGraphCore;
+    return m_graphCore;
 }
 
-void LineGraphForegroundPainter::setGraphCoreItem(LineGraphCore* lineGraphCore)
+void GraphForegroundPainter::setGraphCore(GraphCore* graphCore)
 {
-    if (lineGraphCore != m_lineGraphCore)
+    if (graphCore != m_graphCore)
     {
-        if (m_lineGraphCore)
+        if (m_graphCore)
         {
-            m_lineGraphCore->disconnect(this);
+            m_graphCore->disconnect(this);
         }
 
-        m_lineGraphCore = lineGraphCore;
+        m_graphCore = graphCore;
 
-        if (m_lineGraphCore)
+        if (m_graphCore)
         {
-            connect(m_lineGraphCore, SIGNAL(updated()), SLOT(triggerUpdate()));
+            connect(m_graphCore, SIGNAL(updated()), SLOT(triggerUpdate()));
         }
 
-        update();
-        emit lineGraphCoreChanged();
+        triggerUpdate();
+        emit graphCoreChanged();
     }
 }
 
-QColor LineGraphForegroundPainter::backgroundColor() const
+QColor GraphForegroundPainter::backgroundColor() const
 {
     return m_backgroundColor;
 }
 
-void LineGraphForegroundPainter::setBackgroundColor(const QColor& backgroundColor)
+void GraphForegroundPainter::setBackgroundColor(const QColor& backgroundColor)
 {
     if (backgroundColor != m_backgroundColor)
     {
@@ -68,12 +69,12 @@ void LineGraphForegroundPainter::setBackgroundColor(const QColor& backgroundColo
     }
 }
 
-void LineGraphForegroundPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
+void GraphForegroundPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
 {
-    if (!m_lineGraphCore)
+    if (!m_graphCore)
         return;
 
-    const qreal overlapWidth = m_lineGraphCore->pitch() / 2;
+    const qreal overlapWidth = m_graphCore->pitch() / 2;
 
     QColor startColor = m_backgroundColor;
     QColor stopColor = startColor;
@@ -91,9 +92,9 @@ void LineGraphForegroundPainter::paint(QPainter* painter, const QStyleOptionGrap
 
 }
 
-void LineGraphForegroundPainter::triggerUpdate()
+void GraphForegroundPainter::triggerUpdate()
 {
-    if (!m_lineGraphCore)
+    if (!m_graphCore)
         return;
 
     update();

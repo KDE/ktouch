@@ -1,13 +1,16 @@
 project(graph)
 
 set(graph_SRCS
-    graphplugin.cpp
-    linegraphcore.cpp
     dimension.cpp
+    graphplugin.cpp
+    graphcore.cpp
+    bargraphcore.cpp
+    bargraphsegment.cpp
+    linegraphcore.cpp
     linegraphbackgroundpainter.cpp
     linegraphpainter.cpp
     linegraphpoint.cpp
-    linegraphforegroundpainter.cpp
+    graphforegroundpainter.cpp
     )
 
 automoc4_add_library(graphplugin SHARED ${graph_SRCS})
@@ -18,6 +21,7 @@ install(TARGETS graphplugin DESTINATION ${IMPORTS_INSTALL_DIR}/org/kde/ktouch/gr
 set(ktouch_graphplugin_files
     qml/qmldir
 
+    qml/BarGraph.qml
     qml/LineGraph.qml
     qml/LegendItem.qml
     qml/LineLabel.qml

@@ -20,27 +20,27 @@
 
 #include <QDeclarativeItem>
 
-class LineGraphCore;
+class GraphCore;
 
-class LineGraphForegroundPainter : public QDeclarativeItem
+class GraphForegroundPainter : public QDeclarativeItem
 {
     Q_OBJECT
-    Q_PROPERTY(LineGraphCore* lineGraphCore READ lineGraphCore WRITE setGraphCoreItem NOTIFY lineGraphCoreChanged)
+    Q_PROPERTY(GraphCore* graphCore READ graphCore WRITE setGraphCore NOTIFY graphCoreChanged)
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 public:
-    explicit LineGraphForegroundPainter(QDeclarativeItem* parent = 0);
-    LineGraphCore* lineGraphCore() const;
-    void setGraphCoreItem(LineGraphCore* lineGraphCore);
+    explicit GraphForegroundPainter(QDeclarativeItem* parent = 0);
+    GraphCore* graphCore() const;
+    void setGraphCore(GraphCore* graphCore);
     QColor backgroundColor() const;
     void setBackgroundColor(const QColor& backgroundColor);
     void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*);
 signals:
-    void lineGraphCoreChanged();
+    void graphCoreChanged();
     void backgroundColorChanged();
 private slots:
     void triggerUpdate();
 private:
-    LineGraphCore* m_lineGraphCore;
+    GraphCore* m_graphCore;
     QColor m_backgroundColor;
 };
 

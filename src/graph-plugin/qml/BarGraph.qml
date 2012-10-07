@@ -22,7 +22,6 @@ Item {
     property alias model: core.model
     property alias dimensions: core.dimensions
     property alias pitch: core.pitch
-    property alias pointRadius: core.pointRadius
 
     property alias backgroundColor: bg.color
 
@@ -32,49 +31,62 @@ Item {
         color: "white"
     }
 
-    LineGraphCoreItem {
+    BarGraphCoreItem {
         id: core
         anchors.fill: parent
 
-        Flickable {
-            id: flickable
+        ListView {
+            id: list
             anchors.fill: parent
             clip: true
 
-            contentHeight: height
-            contentWidth: lineBg.width
-
             onContentWidthChanged: {
-                if (contentWidth > width) {
-                    contentX = contentWidth - width
+                // work arround ListView bug: contentWidth doesn't take geometry of the header/footer into account
+                if (contentWidth + core.pitch > width) {
+                    contentX = contentWidth - width + core.pitch
                 }
             }
 
-            LineGraphBackgroundPainter {
-                id: lineBg
-                lineGraphCore: core
-                height: parent.height
+            model: core.model
+            orientation: ListView.Horizontal
+
+            header: Item {
+                width: Math.floor(core.pitch / 2)
+                height: list.height
             }
 
-            Repeater {
-                id: dimensionsRepeater
+            footer: Item {
+                width: Math.ceil(core.pitch / 2)
+                height: list.height
+            }
 
-                model: core.dimensions.length
+            delegate: Item {
+                id: segmentContainer
+                property int row: index
 
-                delegate: LineGraphPainter {
-                    id: line
-                    lineGraphCore: core
-                    backgroundPainter: lineBg
-                    dimension: index
-                    height: parent.height
+                width: core.pitch
+                height: parent.height
 
-                    Repeater {
-                        model: core.model
-                        delegate: LineGraphPoint {
-                            lineGraphCore: core
-                            backgroundPainter: lineBg
-                            dimension: line.dimension
-                            row: index
+                Repeater {
+                    anchors.fill: parent
+                    model: core.dimensions.length
+
+                    delegate: BarGraphSegment {
+                        id: segment
+                        barGraphCore: core
+                        dimension: index
+                        row: segmentContainer.row
+
+                        width: core.barWidth
+                        height: parent.height
+                        x: (dimension + 0.5) * width
+
+                        Rectangle {
+                            property Dimension dimension: core.dimensions[segment.dimension]
+                            anchors.bottom: parent.bottom
+                            color: dimension.color
+                            width: core.barWidth
+                            height: segment.barHeight
                         }
                     }
                 }
@@ -92,7 +104,7 @@ Item {
         anchors {
             top: parent.top
             left: parent.left
-            topMargin: core.pointRadius + 2
+            topMargin: 2
         }
         backgroundItem: bg
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
@@ -103,7 +115,7 @@ Item {
         anchors {
             top: parent.top
             left: parent.left
-            topMargin: core.pointRadius + (core.height - 2 * core.pointRadius - 4) / 2 + 2
+            topMargin: (core.height - 4) / 2 + 2
         }
         backgroundItem: bg
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
@@ -114,7 +126,7 @@ Item {
         anchors {
             top: parent.top
             right: parent.right
-            topMargin: core.pointRadius + 2
+            topMargin: 2
         }
         backgroundItem: bg
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
@@ -125,7 +137,7 @@ Item {
         anchors {
             top: parent.top
             right: parent.right
-            topMargin: core.pointRadius + (core.height - 2 * core.pointRadius) / 2 + 2
+            topMargin: (core.height - 4) / 2 + 2
         }
         backgroundItem: bg
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
