@@ -395,7 +395,7 @@ bool DataAccess::loadCourse(const QString &path, Course* target)
     {
         Lesson* lesson = new Lesson(this);
         lesson->setId(lessonNode.firstChildElement("id").text());
-        lesson->setTitle(lessonNode.firstChildElement("title").text().toUtf8());
+        lesson->setTitle(lessonNode.firstChildElement("title").text());
         lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
         lesson->setText(lessonNode.firstChildElement("text").text());
         target->addLesson(lesson);
