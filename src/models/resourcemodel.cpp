@@ -32,6 +32,7 @@ ResourceModel::ResourceModel(QObject* parent) :
     QHash<int,QByteArray> roleNames = this->roleNames();
     roleNames.insert(ResourceModel::KeyboardLayoutNameRole, "keyboardLayoutName");
     roleNames.insert(ResourceModel::PathRole, "path");
+    roleNames.insert(ResourceModel::DataRole, "dataRole");
     setRoleNames(roleNames);
 }
 

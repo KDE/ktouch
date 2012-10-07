@@ -75,6 +75,8 @@ Item {
         id: courseItem
         property string path
         function update() {
+            if (coursePath === "")
+                return
             if (isValid && path === coursePath)
                 return
             path = coursePath

@@ -114,13 +114,12 @@ FocusScope {
             width: parent.width
             height: parent.height - header.height
 
-            HomeScreenAccordion {
+            CourseSelector {
                 id: homeScreenAccordion
                 opacity: 1 - initialProfileForm.opacity
                 courseModel: screen.courseModel
                 profile: d.profile
                 anchors.fill: parent
-                anchors.margins: 5
                 onLessonSelected: screen.lessonSelected(course, lessonIndex, d.profile)
             }
 

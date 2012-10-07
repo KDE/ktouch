@@ -2,8 +2,8 @@ set(ktouch_qml_files
     main.qml
 
     HomeScreen.qml
-    HomeScreenAccordion.qml
-    HomeScreenBox.qml
+    CourseSelector.qml
+    CoursePage.qml
     NoCoursesMessage.qml
     ProfileSelector.qml
     ProfileForm.qml
