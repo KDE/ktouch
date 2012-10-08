@@ -61,7 +61,7 @@ Item {
         transform: Rotation {
             origin.x: minuteHand.naturalSize.width / 2
             origin.y: minuteHand.naturalSize.height / 2
-            angle: 6 * getMinutesOfQTime(elapsedTime)
+            angle: elapsedTime? 6 * getMinutesOfQTime(elapsedTime): 0
             Behavior on angle {
                 SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
             }
@@ -85,7 +85,7 @@ Item {
         transform: Rotation {
             origin.x: secondHand.naturalSize.width / 2
             origin.y: secondHand.naturalSize.height / 2
-            angle: 6 * getSecondsOfQTime(elapsedTime)
+            angle: elapsedTime? 6 * getSecondsOfQTime(elapsedTime): 0
             Behavior on angle {
                 SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
             }
