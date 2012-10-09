@@ -46,6 +46,26 @@ void PreferencesProxy::setShowStatistics(bool showStatistics)
     Preferences::setShowStatistics(showStatistics);
 }
 
+bool PreferencesProxy::nextLineWithSpace() const
+{
+    return Preferences::nextLineWithSpace();
+}
+
+void PreferencesProxy::setNextLineWithSpace(bool nextLineWithSpace)
+{
+    Preferences::setNextLineWithSpace(nextLineWithSpace);
+}
+
+bool PreferencesProxy::nextLineWithReturn() const
+{
+    return Preferences::nextLineWithReturn();
+}
+
+void PreferencesProxy::setNextLineWithReturn(bool nextLineWithReturn)
+{
+    Preferences::setNextLineWithReturn(nextLineWithReturn);
+}
+
 int PreferencesProxy::requiredStrokesPerMinute() const
 {
     return Preferences::requiredStrokesPerMinute();

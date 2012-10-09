@@ -98,9 +98,21 @@ Item {
         cursorAnimation.restart();
         switch(event.key)
         {
+        case Qt.Key_Space:
+            startTraining();
+            if (preferences.nextLineWithSpace && line.position == text.length && line.isCorrect)
+            {
+                resetLine();
+                line.done();
+            }
+            else
+            {
+                addChar(event.text.charAt(0))
+            }
+            break;
         case Qt.Key_Return:
             startTraining();
-            if (line.position == text.length && line.isCorrect)
+            if (preferences.nextLineWithReturn && line.position == text.length && line.isCorrect)
             {
                 resetLine();
                 line.done();

@@ -69,6 +69,9 @@ FocusScope {
                     modifierItems.push(keyItems[i])
                     keyItems[i].enabled = false
                 }
+                else if (type == SpecialKey.Return && preferences.nextLineWithSpace) {
+                    keyItems[i].enabled = false
+                }
             }
         }
 
@@ -220,7 +223,7 @@ FocusScope {
                             highlightKey(trainingWidget.nextChar)
                         }
                         else {
-                            highlightKey(Qt.Key_Return)
+                            highlightKey(preferences.nextLineWithSpace? Qt.Key_Space: Qt.Key_Return)
                         }
                     }
                     else {

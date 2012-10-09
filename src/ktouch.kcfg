@@ -13,6 +13,14 @@
       <label>Controls the visibility of realtime statistics during training.</label>
       <default>true</default>
     </entry>
+    <entry name="NextLineWithReturn" type="Bool">
+      <label>Return key at the end of a line will switch to next line.</label>
+      <default>true</default>
+    </entry>
+    <entry name="NextLineWithSpace" type="Bool">
+      <label>Space key at the end of a line will switch to next line.</label>
+      <default>false</default>
+    </entry>
     <entry name="RequiredStrokesPerMinute" type="Int">
       <label>The minimum required amount of strokes per minute to unlock the next lesson.</label>
       <default>180</default>

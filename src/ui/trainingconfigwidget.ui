@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>335</width>
-    <height>178</height>
+    <width>361</width>
+    <height>259</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,6 +24,9 @@
     <layout class="QFormLayout" name="formLayout_2">
      <property name="sizeConstraint">
       <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::ExpandingFieldsGrow</enum>
      </property>
      <item row="0" column="0">
       <widget class="QLabel" name="trainingLabel">
@@ -49,6 +52,43 @@
       <widget class="QCheckBox" name="kcfg_ShowStatistics">
        <property name="text">
         <string>Show real-time statistics</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="nextLineLabel">
+       <property name="text">
+        <string>Go to next line with:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QRadioButton" name="kcfg_NextLineWithReturn">
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QRadioButton" name="kcfg_NextLineWithSpace">
+       <property name="text">
+        <string>Space</string>
        </property>
       </widget>
      </item>
@@ -82,6 +122,9 @@
       <string>Lesson unlocking limits</string>
      </property>
      <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::ExpandingFieldsGrow</enum>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="requiredStrokesPerMinuteLabel">
         <property name="text">

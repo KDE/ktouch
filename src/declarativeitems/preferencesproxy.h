@@ -27,6 +27,8 @@ class PreferencesProxy : public QObject
     Q_OBJECT
     Q_PROPERTY(bool showKeyboard READ showKeyboard WRITE setShowKeyboard NOTIFY configChanged)
     Q_PROPERTY(bool showStatistics READ showStatistics WRITE setShowStatistics NOTIFY configChanged)
+    Q_PROPERTY(bool nextLineWithSpace READ nextLineWithSpace WRITE setNextLineWithSpace NOTIFY configChanged)
+    Q_PROPERTY(bool nextLineWithReturn READ nextLineWithReturn WRITE setNextLineWithReturn NOTIFY configChanged)
     Q_PROPERTY(int requiredStrokesPerMinute READ requiredStrokesPerMinute WRITE setRequiredStrokesPerMinute NOTIFY configChanged)
     Q_PROPERTY(int requiredAccuracy READ requiredAccuracy WRITE setRequiredAccuracy NOTIFY configChanged)
     Q_PROPERTY(int lastUsedProfileId READ lastUsedProfileId WRITE setLastUsedProfileId NOTIFY configChanged)
@@ -37,6 +39,10 @@ public:
     void setShowKeyboard(bool showKeyboard);
     bool showStatistics() const;
     void setShowStatistics(bool showStatistics);
+    bool nextLineWithSpace() const;
+    void setNextLineWithSpace(bool nextLineWithSpace);
+    bool nextLineWithReturn() const;
+    void setNextLineWithReturn(bool nextLineWithReturn);
     int requiredStrokesPerMinute() const;
     void setRequiredStrokesPerMinute(int strokesPerMinute);
     int requiredAccuracy() const;
