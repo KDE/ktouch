@@ -60,6 +60,7 @@ set(ktouch_SRCS
     models/lessonmodel.cpp
     models/charactersmodel.cpp
     models/categorizedresourcesortfilterproxymodel.cpp
+    models/errorsmodel.cpp
     models/learningprogressmodel.cpp
     editor/resourceeditor.cpp
     editor/resourceeditorwidget.cpp

@@ -45,6 +45,7 @@
 #include "models/lessonmodel.h"
 #include "models/categorizedresourcesortfilterproxymodel.h"
 #include "models/learningprogressmodel.h"
+#include "models/errorsmodel.h"
 
 Application::Application() :
     KApplication(true),
@@ -109,6 +110,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<LessonModel>("ktouch", 1, 0, "LessonModel");
     qmlRegisterType<CategorizedResourceSortFilterProxyModel>("ktouch", 1, 0, "CategorizedResourceSortFilterProxyModel");
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
+    qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
     qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
