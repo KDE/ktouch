@@ -26,6 +26,8 @@ class QSqlDatabase;
 class QSqlError;
 class Profile;
 class TrainingStats;
+class Course;
+class Lesson;
 
 class ProfileDataAccess : public QObject
 {
@@ -58,7 +60,7 @@ public:
     Q_INVOKABLE QString courseProgress(Profile* profile, const QString& courseId, CourseProgressType type);
     Q_INVOKABLE void saveCourseProgress(const QString& lessonId, Profile* profile, const QString& courseId, CourseProgressType type);
 
-    QSqlQuery learningProgressQuery(Profile* profile);
+    QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
 
     QString errorMessage() const;
 

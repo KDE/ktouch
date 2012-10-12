@@ -19,6 +19,9 @@
 
 #include <QSqlRecord>
 
+#include "core/profile.h"
+#include "core/course.h"
+#include "core/lesson.h"
 #include "core/profiledataaccess.h"
 
 LearningProgressModel::LearningProgressModel(QObject* parent) :
@@ -36,9 +39,72 @@ void LearningProgressModel::setProfile(Profile* profile)
 {
     if (profile != m_profile)
     {
+        if (m_profile)
+        {
+            m_profile->disconnect(this);
+        }
+
         m_profile = profile;
-        updateQuery();
+
+        if (m_profile)
+        {
+            connect(profile, SIGNAL(idChanged()), SLOT(update()));
+        }
+
+        update();
         emit profileChanged();
+    }
+}
+
+Course* LearningProgressModel::courseFilter() const
+{
+    return m_courseFilter;
+}
+
+void LearningProgressModel::setCourseFilter(Course* courseFilter)
+{
+    if (courseFilter != m_courseFilter)
+    {
+        if (m_courseFilter)
+        {
+            m_courseFilter->disconnect(this);
+        }
+
+        m_courseFilter = courseFilter;
+
+        if (m_courseFilter)
+        {
+            connect(courseFilter, SIGNAL(idChanged()), SLOT(update()));
+        }
+
+        update();
+        emit courseFilterChanged();
+    }
+}
+
+Lesson* LearningProgressModel::lessonFilter() const
+{
+    return m_lessonFilter;
+}
+
+void LearningProgressModel::setLessonFilter(Lesson* lessonFilter)
+{
+    if (lessonFilter != m_lessonFilter)
+    {
+        if (m_lessonFilter)
+        {
+            m_lessonFilter->disconnect(this);
+        }
+
+        m_lessonFilter = lessonFilter;
+
+        if (m_lessonFilter)
+        {
+            connect(m_lessonFilter, SIGNAL(idChanged()), SLOT(update()));
+        }
+
+        update();
+        emit lessonFilterChanged();
     }
 }
 
@@ -54,11 +120,19 @@ int LearningProgressModel::maxCharactersTypedPerMinute() const
     return max;
 }
 
-void LearningProgressModel::updateQuery()
+void LearningProgressModel::update()
 {
     ProfileDataAccess access;
-    const QSqlQuery query = access.learningProgressQuery(m_profile);
-    setQuery(query);
+
+    clear();
+
+    if (m_profile)
+    {
+        const QSqlQuery query = access.learningProgressQuery(m_profile, m_courseFilter, m_lessonFilter);
+        setQuery(query);
+    }
+
+    emit maxCharactersTypedPerMinuteChanged();
 }
 
 int LearningProgressModel::columnCount(const QModelIndex& parent) const

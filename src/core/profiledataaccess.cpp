@@ -26,8 +26,10 @@
 #include <klocale.h>
 #include <kdebug.h>
 
-#include "profile.h"
-#include "trainingstats.h"
+#include "core/profile.h"
+#include "core/course.h"
+#include "core/lesson.h"
+#include "core/trainingstats.h"
 
 ProfileDataAccess::ProfileDataAccess(QObject *parent) :
     QObject(parent),
@@ -490,7 +492,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     }
 }
 
-QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile)
+QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* courseFilter, Lesson* lessonFilter)
 {
     QSqlDatabase db = database();
 
@@ -500,11 +502,33 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile)
     if (!db.isOpen())
         return QSqlQuery();
 
+    QString sql = "SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?";
+
+    if (courseFilter)
+    {
+        sql += " AND course_id = ?";
+    }
+
+    if (lessonFilter)
+    {
+        sql += " AND lesson_id = ?";
+    }
+
     QSqlQuery query(db);
 
-    query.prepare("SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?");
+    query.prepare(sql);
 
     query.bindValue(0, profile->id());
+
+    if (courseFilter)
+    {
+        query.bindValue(1, courseFilter->id());
+    }
+
+    if (lessonFilter)
+    {
+        query.bindValue(courseFilter? 2: 1, lessonFilter->id());
+    }
 
     if (!query.exec())
     {
@@ -512,8 +536,6 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile)
         raiseError(query.lastError());
         return QSqlQuery();
     }
-
-    kDebug() << query.size();
 
     return query;
 }
