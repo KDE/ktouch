@@ -40,6 +40,7 @@ FocusScope {
         trainer.position = -1
         trainer.position = 0
         sheetFlick.scrollToTrainingLine()
+        trainingLine.active = true
     }
 
     onLessonChanged: {
@@ -151,6 +152,7 @@ FocusScope {
                     }
                     else
                     {
+                        trainingLine.active = false
                         trainer.finished();
                         stats.stopTraining();
                     }

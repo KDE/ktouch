@@ -21,6 +21,7 @@ import ktouch 1.0
 Item {
     id: line
     property string text
+    property bool active
     signal done
     signal keyPressed(variant event)
     signal keyReleased(variant event)
@@ -95,6 +96,8 @@ Item {
     }
 
     Keys.onPressed: {
+        if (!line.active)
+            return
         cursorAnimation.restart();
         switch(event.key)
         {
@@ -138,6 +141,8 @@ Item {
     }
 
     Keys.onReleased: {
+        if (!line.active)
+            return
         if (!event.isAutoRepeat)
             line.keyReleased(event)
     }
