@@ -102,6 +102,20 @@ qreal BarGraphSegment::barHeight() const
     return height() * value / dimension->maximumValue();
 }
 
+QString BarGraphSegment::text() const
+{
+    const int role = m_barGraphCore->textRole();
+
+    if (role == -1)
+        return QString();
+
+    QAbstractTableModel* model = m_barGraphCore->model();
+    Dimension* dimension = m_barGraphCore->dimensionsList().at(m_dimension);
+    const int column = dimension->dataColumn();
+
+    return model->data(model->index(m_row, column), role).toString();
+}
+
 void BarGraphSegment::triggerUpdate()
 {
     if (!valid())

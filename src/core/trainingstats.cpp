@@ -107,6 +107,7 @@ QMap< QString, int > TrainingStats::errorMap() const
 void TrainingStats::setErrorMap(const QMap< QString, int >& errorMap)
 {
     m_errorMap = errorMap;
+    emit errorsChanged();
 }
 
 bool TrainingStats::timeIsRunning() const
@@ -159,6 +160,8 @@ void TrainingStats::logCharacter(QString character, EventType type)
         {
             m_errorMap[character] = 1;
         }
+
+        emit errorsChanged();
     }
 }
 

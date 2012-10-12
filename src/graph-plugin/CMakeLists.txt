@@ -25,6 +25,7 @@ set(ktouch_graphplugin_files
     qml/LineGraph.qml
     qml/LegendItem.qml
     qml/LineLabel.qml
+    qml/Label.qml
 )
 
 install(FILES ${ktouch_graphplugin_files} DESTINATION ${IMPORTS_INSTALL_DIR}/org/kde/ktouch/graph)

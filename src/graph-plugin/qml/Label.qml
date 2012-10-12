@@ -16,10 +16,12 @@
  */
 
 import QtQuick 1.1
+import org.kde.plasma.components 0.1 as PlasmaComponents
 
-Label {
-    property Dimension dimension
-    property real valueFactor;
-    visible: !!dimension
-    text: dimension? dimension.formatValue(valueFactor * dimension.maximumValue): ""
+PlasmaComponents.Label {
+    property Rectangle backgroundItem
+    height: paintedHeight
+    font.pointSize: theme.smallestFont.pointSize
+    style: Text.Outline;
+    styleColor: backgroundItem.color
 }

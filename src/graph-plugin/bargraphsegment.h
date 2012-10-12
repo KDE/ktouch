@@ -29,6 +29,7 @@ class BarGraphSegment : public QDeclarativeItem
     Q_PROPERTY(int dimension READ dimension WRITE setDimension NOTIFY dimensionChanged)
     Q_PROPERTY(int row READ row WRITE setRow NOTIFY rowChanged)
     Q_PROPERTY(qreal barHeight READ barHeight NOTIFY barHeightChanged)
+    Q_PROPERTY(QString text READ text NOTIFY textChanged)
 public:
     explicit BarGraphSegment(QDeclarativeItem* parent = 0);
     BarGraphCore* barGraphCore() const;
@@ -38,11 +39,13 @@ public:
     int row() const;
     void setRow(int row);
     qreal barHeight() const;
+    QString text() const;
 signals:
     void barGraphCoreChanged();
     void dimensionChanged();
     void rowChanged();
     void barHeightChanged();
+    void textChanged();
 private slots:
     void triggerUpdate();
 private:

@@ -67,6 +67,7 @@ public:
 signals:
     void statsChanged();
     void isValidChanged();
+    void errorsChanged();
 
 private:
     Q_SLOT void update();

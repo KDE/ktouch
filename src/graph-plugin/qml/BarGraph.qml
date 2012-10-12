@@ -22,6 +22,7 @@ Item {
     property alias model: core.model
     property alias dimensions: core.dimensions
     property alias pitch: core.pitch
+    property alias textRole: core.textRole
 
     property alias backgroundColor: bg.color
 
@@ -87,7 +88,15 @@ Item {
                             color: dimension.color
                             width: core.barWidth
                             height: segment.barHeight
+
+                            Label {
+                                anchors.bottom: parent.bottom
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                backgroundItem: bg
+                                text: segment.text
+                            }
                         }
+
                     }
                 }
             }

@@ -18,10 +18,29 @@
 #include "bargraphcore.h"
 
 BarGraphCore::BarGraphCore(QDeclarativeItem* parent) :
-    GraphCore(parent)
+    GraphCore(parent),
+    m_textRole(-1)
 {
     connect(this, SIGNAL(pitchChanged()), SIGNAL(barWidthChanged()));
 }
+
+int BarGraphCore::textRole() const
+{
+    return m_textRole;
+}
+
+void BarGraphCore::setTextRole(int textRole)
+{
+    if (textRole != m_textRole)
+    {
+        m_textRole = textRole;
+
+        triggerUpdate();
+
+        emit textRoleChanged();
+    }
+}
+
 
 qreal BarGraphCore::barWidth() const
 {

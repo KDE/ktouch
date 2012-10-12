@@ -23,13 +23,19 @@
 class BarGraphCore : public GraphCore
 {
     Q_OBJECT
+    Q_PROPERTY(int textRole READ textRole WRITE setTextRole NOTIFY textRoleChanged)
     Q_PROPERTY(qreal barWidth READ barWidth NOTIFY barWidthChanged)
 public:
     explicit BarGraphCore(QDeclarativeItem* parent = 0);
+    int textRole() const;
+    void setTextRole(int textRole);
     qreal barWidth() const;
     void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*);
 signals:
+    void textRoleChanged();
     void barWidthChanged();
+private:
+    int m_textRole;
 };
 
 #endif // BARGRAPHCORE_H
