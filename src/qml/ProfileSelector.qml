@@ -59,7 +59,7 @@ FocusScope {
                         width: list.width - scrollBar.width
                         title: isNewButton?
                                    i18n("Create new profile"):
-                                   index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: "nüscht"
+                                   index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
                         label.font.italic: isNewButton
                         iconSource: isNewButton? "list-add": "user-identity"
                         onSelected: {

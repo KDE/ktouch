@@ -256,21 +256,21 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : "");
 			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : "");
 		}
-		kDebug() << "Fetched layout groups from X server:"
-				<< "\tlayouts:" << xkbConfig->layouts
-				<< "\tvariants:" << xkbConfig->variants;
+//		kDebug() << "Fetched layout groups from X server:"
+//				<< "\tlayouts:" << xkbConfig->layouts
+//				<< "\tvariants:" << xkbConfig->variants;
 	}
 
 	if( fetchType == ALL || fetchType == MODEL_ONLY ) {
 		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : "");
-		kDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
+//		kDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
 	}
 
 	if( fetchType == ALL ) {
 		if( names.count() >= 5 ) {
 			QString options = (names[4] != NULL ? names[4] : "");
 			xkbConfig->options = options.split(OPTIONS_SEPARATOR);
-			kDebug() << "Fetched xkbOptions from X server:" << options;
+//			kDebug() << "Fetched xkbOptions from X server:" << options;
 		}
 	}
 
