@@ -48,7 +48,8 @@ void LearningProgressModel::setProfile(Profile* profile)
 
         if (m_profile)
         {
-            connect(profile, SIGNAL(idChanged()), SLOT(update()));
+            connect(m_profile, SIGNAL(idChanged()), SLOT(update()));
+            connect(m_profile, SIGNAL(destroyed()), SLOT(profileDestroyed()));
         }
 
         update();
@@ -215,6 +216,11 @@ QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
     default:
         return QVariant();
     }
+}
+
+void LearningProgressModel::profileDestroyed()
+{
+    setProfile(0);
 }
 
 int LearningProgressModel::charactersPerMinute(int row) const

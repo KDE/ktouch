@@ -53,6 +53,8 @@ signals:
     void courseFilterChanged();
     void lessonFilterChanged();
     void maxCharactersTypedPerMinuteChanged();
+private slots:
+    void profileDestroyed();
 private:
     int charactersPerMinute(int row) const;
     int charactersTyped(int row) const;
