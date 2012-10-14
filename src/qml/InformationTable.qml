@@ -41,7 +41,8 @@ Item {
                     width: Math.round((parent.width - parent.spacing) / 2)
                     horizontalAlignment: Text.AlignRight
                     verticalAlignment: Text.AlignTop
-                    text: title
+                    color: "#888"
+                    text: model.modelData.title
                     wrapMode: Text.Wrap
                     height: Math.max(paintedHeight, valueLabel.paintedHeight)
                 }
@@ -50,8 +51,7 @@ Item {
                     width: parent.width - titleLabel.width - parent.spacing
                     horizontalAlignment: Text.AlignLeft
                     verticalAlignment: Text.AlignBottom
-                    text: value
-                    font.weight: Font.Bold
+                    text: model.modelData.text
                     wrapMode: Text.Wrap
                     height: Math.max(paintedHeight, titleLabel.paintedHeight)
                 }

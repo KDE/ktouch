@@ -29,27 +29,10 @@ Item {
     function update() {
         if (profile) {
             var isNewProfile = root.profile.id === -1
-            infoModel.clear()
             profileForm.name = profile.name
             profileForm.skillLevel = profile.skillLevel
             profileForm.skillLevelSelectionEnabled = isNewProfile
             deleteConfirmationLabel.name = profile.name
-
-
-            infoModel.append({
-                                 title: i18n("%1:").arg(profile.name),
-                                 value: profile.skillLevel === Profile.Beginner?
-                                            i18n("Beginner typist"):
-                                            i18n("Experienced typist")
-                             });
-            infoModel.append({
-                                 title: i18n("Last training session:"),
-                                 value: "TODO"
-                             })
-            infoModel.append({
-                                 title: i18n("Total training time:"),
-                                 value: "TODO"
-                             })
             state = isNewProfile? "editor": "info"
         }
 
@@ -125,9 +108,22 @@ Item {
             }
 
             InformationTable {
-                model: ListModel {
-                    id: infoModel
-                }
+                property list<InfoItem> infoModel: [
+                    InfoItem {
+                        title: i18n("Lessons trained:")
+                        text: "TODO"
+                    },
+                    InfoItem {
+                        title: i18n("Total training time:")
+                        text: "TODO"
+                    },
+                    InfoItem {
+                        title: i18n("Last trained:")
+                        text: "TODO"
+                    }
+                ]
+
+                model: infoModel
             }
 
             Row {

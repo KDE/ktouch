@@ -33,6 +33,7 @@ set(ktouch_qml_files
     LearningProgressGraph.qml
 
     InformationTable.qml
+    InfoItem.qml
     MessageBox.qml
     ListItem.qml
     SheetDialog.qml
