@@ -121,21 +121,6 @@ int LearningProgressModel::maxCharactersTypedPerMinute() const
     return max;
 }
 
-void LearningProgressModel::update()
-{
-    ProfileDataAccess access;
-
-    clear();
-
-    if (m_profile)
-    {
-        const QSqlQuery query = access.learningProgressQuery(m_profile, m_courseFilter, m_lessonFilter);
-        setQuery(query);
-    }
-
-    emit maxCharactersTypedPerMinuteChanged();
-}
-
 int LearningProgressModel::columnCount(const QModelIndex& parent) const
 {
     Q_UNUSED(parent)
@@ -187,42 +172,6 @@ QVariant LearningProgressModel::data(const QModelIndex &item, int role) const
     }
 }
 
-QVariant LearningProgressModel::accuracyData(int row, int role) const
-{
-    const int charactersTyped = this->charactersTyped(row);
-    const int errorCount = this->errorCount(row);
-
-    const qreal accuracy = charactersTyped > 0?
-                1.0 - qreal(errorCount) / qreal(errorCount + charactersTyped):
-                errorCount == 0? 1.0: 0.0;
-
-    switch(role)
-    {
-    case Qt::DisplayRole:
-        return QVariant(accuracy);
-    default:
-        return QVariant();
-    }
-}
-
-QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
-{
-    int charactersPerMinute = this->charactersPerMinute(row);
-
-    switch(role)
-    {
-    case Qt::DisplayRole:
-        return QVariant(charactersPerMinute);
-    default:
-        return QVariant();
-    }
-}
-
-void LearningProgressModel::profileDestroyed()
-{
-    setProfile(0);
-}
-
 int LearningProgressModel::charactersPerMinute(int row) const
 {
     const int charactersTyped = this->charactersTyped(row);
@@ -250,4 +199,68 @@ int LearningProgressModel::elapsedTime(int row) const
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
     return record.value(3).toInt();
+}
+
+qreal LearningProgressModel::accuracy(int row) const
+{
+    const int charactersTyped = this->charactersTyped(row);
+    const int errorCount = this->errorCount(row);
+
+    const qreal accuracy = charactersTyped > 0?
+                1.0 - qreal(errorCount) / qreal(errorCount + charactersTyped):
+                errorCount == 0? 1.0: 0.0;
+
+    return accuracy;
+}
+
+QString LearningProgressModel::lessonId(int row) const
+{
+    LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
+    QSqlRecord record = model->record(row);
+    return record.value(4).toString();
+}
+void LearningProgressModel::update()
+{
+    ProfileDataAccess access;
+
+    clear();
+
+    if (m_profile)
+    {
+        const QSqlQuery query = access.learningProgressQuery(m_profile, m_courseFilter, m_lessonFilter);
+        setQuery(query);
+    }
+
+    emit maxCharactersTypedPerMinuteChanged();
+}
+
+QVariant LearningProgressModel::accuracyData(int row, int role) const
+{
+    const qreal accuracy = this->accuracy(row);
+
+    switch(role)
+    {
+    case Qt::DisplayRole:
+        return QVariant(accuracy);
+    default:
+        return QVariant();
+    }
+}
+
+QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
+{
+    int charactersPerMinute = this->charactersPerMinute(row);
+
+    switch(role)
+    {
+    case Qt::DisplayRole:
+        return QVariant(charactersPerMinute);
+    default:
+        return QVariant();
+    }
+}
+
+void LearningProgressModel::profileDestroyed()
+{
+    setProfile(0);
 }

@@ -43,9 +43,12 @@ public:
     int maxCharactersTypedPerMinute() const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
-    QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const;
-    QVariant accuracyData(int row, int role = Qt::DisplayRole) const;
-    QVariant charactersPerMinuteData(int row, int role = Qt::DisplayRole) const;
+    Q_INVOKABLE int charactersPerMinute(int row) const;
+    Q_INVOKABLE int charactersTyped(int row) const;
+    Q_INVOKABLE int errorCount(int row) const;
+    Q_INVOKABLE int elapsedTime(int row) const;
+    Q_INVOKABLE qreal accuracy(int row) const;
+    Q_INVOKABLE QString lessonId(int row) const;
 public slots:
     void update();
 signals:
@@ -56,10 +59,9 @@ signals:
 private slots:
     void profileDestroyed();
 private:
-    int charactersPerMinute(int row) const;
-    int charactersTyped(int row) const;
-    int errorCount(int row) const;
-    int elapsedTime(int row) const;
+    QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const;
+    QVariant accuracyData(int row, int role = Qt::DisplayRole) const;
+    QVariant charactersPerMinuteData(int row, int role = Qt::DisplayRole) const;
     int m_charactersTypedFieldIndex;
     Profile* m_profile;
     Course* m_courseFilter;
