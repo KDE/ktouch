@@ -18,6 +18,7 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
+import org.kde.ktouch.graph 0.1 as Graph
 import ktouch 1.0
 
 Item {
@@ -72,12 +73,55 @@ Item {
                 profile: root.profile
             }
 
-            LearningProgressGraph {
+
+            Rectangle {
+
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - 40
                 height: 250
+                color: "white"
 
-                model: learningProgressModel
+                border {
+                    width: 1
+                    color: "black"
+                }
+
+                Column {
+                    id: column
+                    anchors {
+                        fill: parent
+                        topMargin: column.spacing + spacing + legend.height
+                        leftMargin: column.spacing
+                        rightMargin: column.spacing
+                        bottomMargin: column.spacing
+                    }
+
+                    spacing: 20
+
+                    width: parent.width
+                    height: parent.height - legend.height - parent.spacing
+
+                    LearningProgressGraph {
+                        id: learningProgressGraph
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: parent.width
+                        height: parent.height - legend.height - parent.spacing
+
+                        model: learningProgressModel
+                    }
+
+                    Row {
+                        id: legend
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        spacing: 20
+                        Graph.LegendItem {
+                            dimension: learningProgressGraph.accuracy
+                        }
+                        Graph.LegendItem {
+                            dimension: learningProgressGraph.charactersPerMinute
+                        }
+                    }
+                }
             }
 
             InformationTable {
