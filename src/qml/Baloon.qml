@@ -34,13 +34,13 @@ Item {
             internal.parentPos = root.visualParent.mapToItem(dismissArea.parent, 0, 0)
         }
         root.status = PlasmaComponents.DialogStatus.Opening
-        appearAnimation.running = true
+        appearAnimation.restart()
     }
 
     function close()
     {
         root.status = PlasmaComponents.DialogStatus.Closing
-        appearAnimation.running = true
+        appearAnimation.restart()
     }
 
     SequentialAnimation {
