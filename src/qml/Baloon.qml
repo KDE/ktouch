@@ -79,7 +79,7 @@ Item {
                 }
             }
 
-            x: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
+            x: Math.max(0, Math.min(dismissArea.width - internal.width, internal.parentPos.x - internal.width/2 + root.visualParent.width/2))
             y: {
                 if (under) {
                     internal.parentPos.y + root.visualParent.height
