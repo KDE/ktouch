@@ -19,12 +19,18 @@ import QtQuick 1.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
 Item {
+    id: root
+
     property alias model: core.model
     property alias dimensions: core.dimensions
     property alias pitch: core.pitch
     property alias pointRadius: core.pointRadius
 
     property alias backgroundColor: bg.color
+
+    signal pointClicked(int row, variant point)
+    signal pointEntered(int row, variant point)
+    signal pointExited(int row, variant point)
 
     Rectangle {
         id: bg
@@ -75,6 +81,14 @@ Item {
                             backgroundPainter: lineBg
                             dimension: line.dimension
                             row: index
+
+                            MouseArea {
+                                anchors.fill: parent
+                                hoverEnabled: true
+                                onClicked: root.pointClicked(parent.row, parent)
+                                onEntered: root.pointEntered(parent.row, parent)
+                                onExited: root.pointExited(parent.row, parent)
+                            }
                         }
                     }
                 }
