@@ -170,6 +170,41 @@ FocusScope {
         }
     }
 
+    Baloon {
+        id: learningProgressPointTooltip
+        visualParent: parent
+        property int row
+
+        function findLessonTitle(id) {
+            var course = screen.course
+            for (var i = 0; i < course.lessonCount; i++) {
+                if (course.lesson(i).id === id) {
+                    return course.lesson(i).title
+                }
+            }
+            return i18n("<i>Unknown</i>")
+        }
+
+        InformationTable {
+            property list<InfoItem> infoModel: [
+                InfoItem {
+                    title: i18n("On:")
+                    text: learningProgressPointTooltip.findLessonTitle(learningProgressModel.lessonId(learningProgressPointTooltip.row))
+                },
+                InfoItem {
+                    title: i18n("Accuracy:")
+                    text: strFormatter.formatAccuracy(learningProgressModel.accuracy(learningProgressPointTooltip.row))
+                },
+                InfoItem {
+                    title: i18n("Characters per Minute:")
+                    text: learningProgressModel.charactersPerMinute(learningProgressPointTooltip.row)
+                }
+            ]
+            width: 250
+            model: infoModel
+        }
+    }
+
     SequentialAnimation {
         id: toggleLearningProgressFilterAnimation
         NumberAnimation
@@ -449,6 +484,16 @@ FocusScope {
                             id: learningProgressGraph
                             anchors.fill: parent
                             model: learningProgressModel
+
+                            onPointEntered: {
+                                learningProgressPointTooltip.visualParent = point;
+                                learningProgressPointTooltip.row = row
+                                learningProgressPointTooltip.open()
+                            }
+
+                            onPointExited: {
+                                learningProgressPointTooltip.close()
+                            }
                         }
                     }
 
