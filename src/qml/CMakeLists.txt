@@ -36,6 +36,7 @@ set(ktouch_qml_files
     MessageBox.qml
     ListItem.qml
     SheetDialog.qml
+    Baloon.qml
 
     KeyboardLayoutEditor.qml
     SelectionRectangle.qml
