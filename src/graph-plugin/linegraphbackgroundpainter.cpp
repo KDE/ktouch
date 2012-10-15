@@ -125,6 +125,7 @@ void LineGraphBackgroundPainter::updateLinePolygons()
     foreach(Dimension* dimension, dimensions)
     {
         const int column = dimension->dataColumn();
+        const qreal minValue = dimension->minimumValue();
         const qreal maxValue = dimension->maximumValue();
         const qreal maxY = height();
 
@@ -133,17 +134,13 @@ void LineGraphBackgroundPainter::updateLinePolygons()
         for (int row = 0; row < model->rowCount(); row++)
         {
             const qreal value = model->data(model->index(row, column)).toReal();
-            line << QPointF(pointPos(pitch, radius, row, value, maxValue, maxY));
+            const qreal x = (qreal(row) + 0.5) * pitch;
+            const qreal y =  maxY - ((maxY - 2 * radius) * (value - minValue) / (maxValue - minValue)) - radius;
+            line << QPointF(x, y);
         }
 
         m_linePolygons << line;
     }
 }
 
-QPointF LineGraphBackgroundPainter::pointPos(qreal pitch, qreal radius, int row, qreal value, qreal maxValue, qreal maxY)
-{
-    const qreal x = (qreal(row) + 0.5) * pitch;
-    const qreal y =  maxY - ((maxY - 2 * radius) * value / maxValue) - radius;
-    return QPointF(x, y);
-}
 

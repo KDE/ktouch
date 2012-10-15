@@ -96,10 +96,12 @@ qreal BarGraphSegment::barHeight() const
 
     QAbstractTableModel* model = m_barGraphCore->model();
     Dimension* dimension = m_barGraphCore->dimensionsList().at(m_dimension);
+    const qreal minValue = dimension->minimumValue();
+    const qreal maxValue = dimension->maximumValue();
     const int column = dimension->dataColumn();
     const qreal value = model->data(model->index(m_row, column)).toReal();
 
-    return height() * value / dimension->maximumValue();
+    return height() * (value - minValue) / (maxValue - minValue);
 }
 
 QString BarGraphSegment::text() const

@@ -40,7 +40,6 @@ private slots:
 private:
     void updateWidth();
     void updateLinePolygons();
-    QPointF pointPos(qreal pitch, qreal radius, int row, qreal value, qreal maxValue, qreal maxY);
     LineGraphCore* m_lineGraphCore;
     QList<QPolygonF> m_linePolygons;
 };

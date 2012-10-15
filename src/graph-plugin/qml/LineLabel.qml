@@ -21,5 +21,5 @@ Label {
     property Dimension dimension
     property real valueFactor;
     visible: !!dimension
-    text: dimension? dimension.formatValue(valueFactor * dimension.maximumValue): ""
+    text: dimension? dimension.formatValue(dimension.minimumValue + valueFactor * (dimension.maximumValue - dimension.minimumValue)): ""
 }

@@ -24,6 +24,7 @@ Dimension::Dimension(QDeclarativeItem* parent) :
     QDeclarativeItem(parent),
     m_color(Qt::black),
     m_dataColumn(0),
+    m_minimumValue(0),
     m_maximumValue(256),
     m_precision(0),
     m_unitFactor(1)
@@ -57,6 +58,21 @@ void Dimension::setDataColumn(int dataColumn)
         m_dataColumn = dataColumn;
         emit updated();
         emit dataColumnChanged();
+    }
+}
+
+qreal Dimension::minimumValue() const
+{
+    return m_minimumValue;
+}
+
+void Dimension::setMinimumValue(qreal minimumValue)
+{
+    if (minimumValue != m_minimumValue)
+    {
+        m_minimumValue = minimumValue;
+        emit updated();
+        emit minimumValueChanged();
     }
 }
 

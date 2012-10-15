@@ -28,6 +28,7 @@ class Dimension : public QDeclarativeItem
     Q_OBJECT
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
     Q_PROPERTY(int dataColumn READ dataColumn WRITE setDataColumn NOTIFY dataColumnChanged)
+    Q_PROPERTY(qreal minimumValue READ minimumValue WRITE setMinimumValue NOTIFY minimumValueChanged)
     Q_PROPERTY(qreal maximumValue READ maximumValue WRITE setMaximumValue NOTIFY maximumValueChanged)
     Q_PROPERTY(QString label READ label WRITE setLabel NOTIFY labelChanged)
     Q_PROPERTY(int precision READ precision WRITE setPrecision NOTIFY precisionChanged)
@@ -40,6 +41,8 @@ public:
     void setColor(const QColor& color);
     int dataColumn() const;
     void setDataColumn(int dataColumn);
+    qreal minimumValue() const;
+    void setMinimumValue(qreal minimumValue);
     qreal maximumValue() const;
     void setMaximumValue(qreal maximumValue);
     QString label() const;
@@ -54,6 +57,7 @@ public:
 signals:
     void colorChanged();
     void dataColumnChanged();
+    void minimumValueChanged();
     void maximumValueChanged();
     void labelChanged();
     void precisionChanged();
@@ -63,6 +67,7 @@ signals:
 private:
     QColor m_color;
     int m_dataColumn;
+    qreal m_minimumValue;
     qreal m_maximumValue;
     QString m_label;
     int m_precision;
