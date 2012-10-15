@@ -32,6 +32,7 @@ class LearningProgressModel : public QSqlQueryModel
     Q_PROPERTY(Course* courseFilter READ courseFilter WRITE setCourseFilter NOTIFY courseFilterChanged)
     Q_PROPERTY(Lesson* lessonFilter READ lessonFilter WRITE setLessonFilter NOTIFY lessonFilterChanged)
     Q_PROPERTY(int maxCharactersTypedPerMinute READ maxCharactersTypedPerMinute NOTIFY maxCharactersTypedPerMinuteChanged)
+    Q_PROPERTY(qreal minAccuracy READ minAccuracy NOTIFY minAccuracyChanged)
 public:
     explicit LearningProgressModel(QObject* parent = 0);
     Profile* profile() const;
@@ -41,6 +42,7 @@ public:
     Lesson* lessonFilter() const;
     void setLessonFilter(Lesson* lessonFilter);
     int maxCharactersTypedPerMinute() const;
+    qreal minAccuracy() const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
     Q_INVOKABLE int charactersPerMinute(int row) const;
@@ -56,6 +58,7 @@ signals:
     void courseFilterChanged();
     void lessonFilterChanged();
     void maxCharactersTypedPerMinuteChanged();
+    void minAccuracyChanged();
 private slots:
     void profileDestroyed();
 private:

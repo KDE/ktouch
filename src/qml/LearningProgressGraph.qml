@@ -28,12 +28,25 @@ LineGraph {
     property Dimension charactersPerMinute: charactersPerMinuteDimension
 
     pitch: 60
+
+    function minAccuracy(accuracy) {
+        var canditades = [0.9, 0.8, 0.5]
+
+        for (var i = 0; i < canditades.length; i++) {
+            if (canditades[i] < accuracy) {
+                return (canditades[i])
+            }
+        }
+
+        return 0;
+    }
     
     dimensions: [
         Dimension {
             id: accuracyDimension
             dataColumn: 5
             color: "#ffb12d"
+            minimumValue: graph.minAccuracy(model.minAccuracy)
             maximumValue: 1.0
             label: i18n("Accuracy")
             unit: "%"

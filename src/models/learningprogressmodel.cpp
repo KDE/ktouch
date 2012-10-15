@@ -121,6 +121,18 @@ int LearningProgressModel::maxCharactersTypedPerMinute() const
     return max;
 }
 
+qreal LearningProgressModel::minAccuracy() const
+{
+    qreal min = 1;
+
+    for (int i = 0; i < rowCount(); i++)
+    {
+        min = qMin(min, accuracy(i));
+    }
+
+    return min;
+}
+
 int LearningProgressModel::columnCount(const QModelIndex& parent) const
 {
     Q_UNUSED(parent)
@@ -232,6 +244,7 @@ void LearningProgressModel::update()
     }
 
     emit maxCharactersTypedPerMinuteChanged();
+    emit minAccuracyChanged();
 }
 
 QVariant LearningProgressModel::accuracyData(int row, int role) const
