@@ -95,8 +95,8 @@ FocusScope {
         property bool filterByLesson: false
         id: learningProgressModel
         profile: screen.visible? screen.profile: null
-        courseFilter: screen.course
-        lessonFilter: filterByLesson? screen.lesson: null
+        courseFilter: screen.visible? screen.course: null
+        lessonFilter: screen.visible && filterByLesson? screen.lesson: null
     }
 
     ErrorsModel {
