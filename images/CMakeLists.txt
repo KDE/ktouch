@@ -4,6 +4,7 @@ set(image_files
     elapsedtimemeter.svgz
     meterbox.svgz
     resizegrip.svgz
+    statusled.svgz
     trainingscreen.svgz
 )
 

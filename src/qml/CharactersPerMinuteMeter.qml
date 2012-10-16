@@ -39,6 +39,7 @@ Item {
             label: i18n("Strokes per minute")
             value: meter.charactersPerMinute
             referenceValue: strFormatter.formatSign(diff) + " " + (diff > 0? diff: -diff)
+            valueStatus: meter.charactersPerMinute >= minimumCharactersPerMinute? "good": "bad"
         }
     }
 }

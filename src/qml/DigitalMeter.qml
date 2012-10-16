@@ -23,6 +23,7 @@ Item {
     property alias value: value.text;
     property alias referenceValue: referenceValue.text
     property bool positiveDiffIsGood: true
+    property string valueStatus: "none"
 
     width: 192
     height: 112
@@ -40,11 +41,38 @@ Item {
         }
         spacing: 8
 
-        Text {
-            id: label
-            color: "#555"
-            font.pixelSize: 15
+        Row {
+            spacing: 5
+
+            Text {
+                id: label
+                color: "#555"
+                font.pixelSize: 15
+            }
+
+            PlasmaCore.SvgItem {
+                id: statusLed
+                anchors.verticalCenter: parent.verticalCenter
+                elementId: valueStatus === "good"? "led-good": "led-bad"
+                svg: PlasmaCore.Svg {
+                    imagePath: findImage("statusled.svgz")
+                }
+                visible: valueStatus !== "none"
+                height: naturalSize.height
+                width: naturalSize.width
+                smooth: true
+
+                onElementIdChanged: statusLedAnimaton.restart()
+
+                SequentialAnimation {
+                    id: statusLedAnimaton
+                    NumberAnimation { target: statusLed; property: "scale"; to: 1.3; duration: 150; easing.type: Easing.InOutQuad }
+                    NumberAnimation { target: statusLed; property: "scale"; to: 1.0; duration: 150; easing.type: Easing.InOutQuad }
+                }
+            }
+
         }
+
         Text {
             id: value
             font.pixelSize: 30
