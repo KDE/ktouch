@@ -342,7 +342,7 @@ FocusScope {
                 Rectangle {
                     id: statsBox
                     width: parent.width
-                    height: 130
+                    height: 140
                     color: "#cccccc"
                     radius: 15
                     ElapsedTimeMeter {

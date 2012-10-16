@@ -24,8 +24,8 @@ Item {
     property real accuracy: 1.0
     property real minimumAccuracy: 0.95
 
-    width: 102
-    height: 102
+    width: 112
+    height: 112
 
     PlasmaCore.Svg {
         id: clockSvg

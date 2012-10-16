@@ -24,8 +24,8 @@ Item {
     property alias referenceValue: referenceValue.text
     property bool positiveDiffIsGood: true
 
-    width: 202
-    height: 102
+    width: 192
+    height: 112
     PlasmaCore.FrameSvgItem {
         id: digitalMeter
         imagePath: findImage("meterbox.svgz")
@@ -38,7 +38,7 @@ Item {
             left: parent.left
             leftMargin: 15
         }
-        spacing: 3
+        spacing: 8
 
         Text {
             id: label

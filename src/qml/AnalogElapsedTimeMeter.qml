@@ -22,8 +22,8 @@ import Effects 1.0
 Item {
     property variant elapsedTime
 
-    width: 102
-    height: 102
+    width: 112
+    height: 112
 
     PlasmaCore.Svg {
         id: clockSvg

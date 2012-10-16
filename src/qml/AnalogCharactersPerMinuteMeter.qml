@@ -24,8 +24,8 @@ Item {
     property int charactersPerMinute: 0
     property int minimumCharactersPerMinute: 180
 
-    width: 102
-    height: 102
+    width: 112
+    height: 112
 
     PlasmaCore.Svg {
         id: clockSvg

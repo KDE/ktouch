@@ -132,7 +132,7 @@ FocusScope {
             elementId: "header"
             width: parent.width
             visible: preferences.showStatistics
-            height: visible? 120: 0
+            height: visible? 130: 0
             Row {
                 anchors.centerIn: parent
                 spacing: 10
