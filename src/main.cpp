@@ -42,12 +42,12 @@ int main(int argc, char **argv)
                 "http://edu.kde.org/ktouch",
                 "submit@bugs.kde.org");
 
-    about.addAuthor(ki18n("Sebastian Gottfried"), ki18n("Current maintainer and programmer"), "sebastiangottfried@web.de");
-    about.addAuthor(ki18n("Andreas Nicolai"), ki18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net" );
-    about.addAuthor(ki18n("Håvard Frøiland"), ki18n("Original author, project admin"), "haavard@users.sourceforge.net");
+    about.addAuthor(ki18n("Sebastian Gottfried"), ki18n("Current maintainer"), "sebastiangottfried@web.de");
+    about.addAuthor(ki18n("Andreas Nicolai"), ki18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net");
+    about.addAuthor(ki18n("Håvard Frøiland"), ki18n("Original author"), "haavard@users.sourceforge.net");
 
     about.addCredit(ki18n("David Vignoni"), ki18n("Creator of the SVG icon"), "david80v@tin.it");
-    about.addCredit(ki18n("Anne-Marie Mahfouf"), ki18n("Lots of patches, fixes, updates"), "annma@kde.org");
+    about.addCredit(ki18n("Anne-Marie Mahfouf"), ki18n("Lots of patches, fixes and updates"), "annma@kde.org");
     about.addCredit(ki18n("All the creators of training and keyboard files"));
 
     KCmdLineArgs::init(argc, argv, &about);
