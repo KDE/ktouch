@@ -19,6 +19,7 @@
 #define PROFILEDATAACCESS_H
 
 #include <QObject>
+#include <QDateTime>
 #include <QList>
 #include <QSqlQuery>
 
@@ -59,6 +60,10 @@ public:
 
     Q_INVOKABLE QString courseProgress(Profile* profile, const QString& courseId, CourseProgressType type);
     Q_INVOKABLE void saveCourseProgress(const QString& lessonId, Profile* profile, const QString& courseId, CourseProgressType type);
+
+    Q_INVOKABLE int lessonsTrained(Profile* profile);
+    Q_INVOKABLE quint64 totalTrainingTime(Profile* profile);
+    Q_INVOKABLE QDateTime lastTrainingSession(Profile* profile);
 
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
 

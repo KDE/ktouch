@@ -492,6 +492,82 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     }
 }
 
+int ProfileDataAccess::lessonsTrained(Profile* profile)
+{
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return 0;
+
+    QString sql = "SELECT COUNT(*) FROM training_stats WHERE profile_id = ?";
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+    query.bindValue(0, profile->id());
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return 0;
+    }
+
+    query.next();
+    return query.value(0).toInt();
+}
+
+quint64 ProfileDataAccess::totalTrainingTime(Profile* profile)
+{
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return 0;
+
+    QString sql = "SELECT SUM(elapsed_time) FROM training_stats WHERE profile_id = ?";
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+    query.bindValue(0, profile->id());
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return 0;
+    }
+
+    query.next();
+    return query.value(0).value<quint64>();
+}
+
+QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
+{
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return QDateTime();
+
+    QString sql = "SELECT date FROM training_stats WHERE profile_id = ? ORDER BY date DESC LIMIT 1";
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+    query.bindValue(0, profile->id());
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return QDateTime();
+    }
+
+    query.next();
+
+    return QDateTime::fromMSecsSinceEpoch(query.value(0).value<quint64>());
+}
+
 QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* courseFilter, Lesson* lessonFilter)
 {
     QSqlDatabase db = database();

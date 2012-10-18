@@ -16,6 +16,7 @@
  */
 
 import QtQuick 1.1
+import org.kde.locale 0.1 as Locale
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.ktouch.graph 0.1 as Graph
@@ -39,6 +40,10 @@ Item {
     }
 
     onProfileChanged: update()
+
+    Locale.Locale {
+        id: locale
+    }
 
     Item {
         id: infoContainer
@@ -111,15 +116,15 @@ Item {
                 property list<InfoItem> infoModel: [
                     InfoItem {
                         title: i18n("Lessons trained:")
-                        text: "TODO"
+                        text: profile? profileDataAccess.lessonsTrained(profile): ""
                     },
                     InfoItem {
                         title: i18n("Total training time:")
-                        text: "TODO"
+                        text: profile? locale.prettyFormatDuration(profileDataAccess.totalTrainingTime(profile)): ""
                     },
                     InfoItem {
                         title: i18n("Last trained:")
-                        text: "TODO"
+                        text: profile? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): ""
                     }
                 ]
 
