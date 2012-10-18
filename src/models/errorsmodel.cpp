@@ -144,3 +144,13 @@ void ErrorsModel::buildErrorList()
 
     endResetModel();
 }
+
+QString ErrorsModel::character(int row) const
+{
+    return m_errors.at(row).first;
+}
+
+int ErrorsModel::errors(int row) const
+{
+    return m_errors.at(row).second;
+}

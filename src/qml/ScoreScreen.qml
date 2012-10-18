@@ -205,6 +205,27 @@ FocusScope {
         }
     }
 
+    Baloon {
+        id: errorsTooltip
+        visualParent: parent
+        property int row: -1
+
+        InformationTable {
+            property list<InfoItem> infoModel: [
+                InfoItem {
+                    title: i18n("Character:")
+                    text: errorsTooltip.row !== -1? errorsModel.character(errorsTooltip.row): ""
+                },
+                InfoItem {
+                    title: i18n("Errors:")
+                    text: errorsTooltip.row !== -1? errorsModel.errors(errorsTooltip.row): ""
+                }
+            ]
+            width: 250
+            model: infoModel
+        }
+    }
+
     SequentialAnimation {
         id: toggleLearningProgressFilterAnimation
         NumberAnimation
@@ -517,6 +538,16 @@ FocusScope {
                                     label: i18n("Errors")
                                 }
                             ]
+
+                            onBarEntered: {
+                                errorsTooltip.visualParent = bar;
+                                errorsTooltip.row = row
+                                errorsTooltip.open()
+                            }
+
+                            onBarExited: {
+                                errorsTooltip.close()
+                            }
                         }
                     }
                 }

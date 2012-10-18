@@ -36,6 +36,8 @@ public:
     int columnCount(const QModelIndex& parent) const;
     int rowCount(const QModelIndex& parent) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    Q_INVOKABLE QString character(int row) const;
+    Q_INVOKABLE int errors(int row) const;
 signals:
     void trainingStatsChanged();
     void maximumErrorCountChanged();
