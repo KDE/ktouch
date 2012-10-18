@@ -140,6 +140,7 @@ void TrainingStats::reset()
     m_charactersTyped = 0;
     m_elapsedTime = 0;
     m_errorCount = 0;
+    m_errorMap.clear();
     statsChanged();
 }
 
