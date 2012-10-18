@@ -28,9 +28,9 @@ Item {
 
     property alias backgroundColor: bg.color
 
-    signal barClicked(int row, variant point)
-    signal barEntered(int row, variant point)
-    signal barExited(int row, variant point)
+    signal barClicked(int row, variant bar)
+    signal barEntered(int row, variant bar)
+    signal barExited(int row, variant bar)
 
     Rectangle {
         id: bg
