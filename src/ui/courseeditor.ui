@@ -260,7 +260,7 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="layoutWidget">
+        <widget class="QWidget" name="layoutWidget_2">
          <layout class="QHBoxLayout" name="m_horizontalLayout_3">
           <item>
            <spacer name="m_horizontalSpacer_5">
@@ -361,6 +361,16 @@
               </property>
               <property name="lineWrapMode">
                <enum>QTextEdit::NoWrap</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="m_characterCountLabel">
+              <property name="text">
+               <string>0 Characters</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
              </widget>
             </item>

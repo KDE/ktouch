@@ -338,6 +338,10 @@ void CourseEditor::onLessonTextChanged()
 
     const QString text = m_lessonTextEdit->toPlainText();
 
+    const int length = text.length();
+
+    m_characterCountLabel->setText(i18n("%1 Characters", length));
+
     if (text != m_currentLesson->text())
     {
         setLessonText(text);
