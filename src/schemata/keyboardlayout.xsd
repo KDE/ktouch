@@ -3,6 +3,7 @@
   <xs:element name="keyboardLayout">
     <xs:complexType>
       <xs:sequence>
+        <xs:element name="id" type="xs:string" />
         <xs:element name="title" type="xs:string" />
         <xs:element name="name" type="xs:string" />
         <xs:element name="width" type="xs:unsignedInt" />

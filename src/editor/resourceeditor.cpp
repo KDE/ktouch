@@ -448,7 +448,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
 
         const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
         QString path = dataIndexResource == 0?
-            dir.filePath(QString("%1.xml").arg(QUuid::createUuid())):
+            dir.filePath(QString("%1.xml").arg(keyboardLayout->id())):
             dataIndexKeyboardLayout->path();
 
         if (!dataAccess.storeKeyboardLayout(path, keyboardLayout))
@@ -460,6 +460,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
         dataIndexKeyboardLayout->setName(keyboardLayout->name());
         dataIndexKeyboardLayout->setTitle(keyboardLayout->title());
+        dataIndexKeyboardLayout->setId(keyboardLayout->id());
         dataIndexKeyboardLayout->setPath(path);
 
         if (dataIndexResource == 0)
@@ -583,7 +584,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
     {
         DataIndexKeyboardLayout* const testKeyboardLayout = m_dataIndex->keyboardLayout(i);
 
-        if (testKeyboardLayout->source() == DataIndex::BuiltInResource &&  testKeyboardLayout->name() == keyboardLayout.name())
+        if (testKeyboardLayout->source() == DataIndex::BuiltInResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
             switch (KMessageBox::questionYesNo(this, i18n("The selected keyboard layout is already present as a built-in keyboard layout."), QString(),
                                                KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
@@ -591,13 +592,14 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
+                    keyboardLayout.setId(QUuid::createUuid());
                     break;
                 default:
                     return true;
             }
         }
 
-        if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->name() == keyboardLayout.name())
+        if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
             switch (KMessageBox::questionYesNoCancel(this, i18n("The selected keyboard layout is already present as an user keyboard layout."), QString(),
                                                KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
@@ -606,6 +608,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
+                    keyboardLayout.setId(QUuid::createUuid());
                     break;
                 case KMessageBox::No:
                     overwriteDataIndexKeyboardLayout = testKeyboardLayout;

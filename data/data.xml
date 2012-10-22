@@ -363,196 +363,235 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
   <keyboardLayout>
     <title>&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</title>
     <name>ara</name>
+    <id>{4d190ff1-fe4b-4da0-ab4f-c1309c7be551}</id>
     <path>keyboardlayouts/ara.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Bulgarian</title>
     <name>bg</name>
+    <id>{fca6401c-5e8b-4b54-ad4c-98ffc764a2dc}</id>
     <path>keyboardlayouts/bg.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Portugu&#xEA;s (Brasileiro)</title>
     <name>br</name>
+    <id>{10ce9ec5-529b-484f-a31f-efeab796c931}</id>
     <path>keyboardlayouts/br.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Fran&#xE7;ais (Suisse)</title>
     <name>ch(fr)</name>
+    <id>{61201da8-3a73-4427-90c6-a0868539f0f6}</id>
     <path>keyboardlayouts/ch.fr.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>German (Swiss)</title>
     <name>ch</name>
+    <id>{3e6ee21a-2ce2-4629-90c0-b7acc62b31ae}</id>
     <path>keyboardlayouts/ch.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x10C;esk&#xE9; qwerty</title>
     <name>cz(qwerty)</name>
+    <id>{1c527bcb-b1d6-4446-adda-727e8be8ed45}</id>
     <path>keyboardlayouts/cz.qwerty.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x10C;esk&#xE9;</title>
     <name>cz</name>
+    <id>{e5cc1947-99a7-4fe0-900a-74db0e1b0d22}</id>
     <path>keyboardlayouts/cz.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Deutsches Dvorak II</title>
     <name>de(dvorak)</name>
+    <id>{595aff66-4a1b-40eb-8458-64672e435318}</id>
     <path>keyboardlayouts/de.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Deutsches Neo 2</title>
     <name>de(neo)</name>
+    <id>{479e26ab-46a9-4412-b87d-6b0164c0b484}</id>
     <path>keyboardlayouts/de.neo2.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Deutsch</title>
     <name>de</name>
+    <id>{ab335402-20de-4ccc-bef6-3413d02d7b1b}</id>
     <path>keyboardlayouts/de.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Dansk</title>
     <name>dk</name>
+    <id>{736ca572-ecad-4700-9b61-8071603f74d0}</id>
     <path>keyboardlayouts/dk.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Estonian</title>
     <name>ee</name>
+    <id>{b373bedc-5510-4a71-b083-15c2d1dfe666}</id>
     <path>keyboardlayouts/ee.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Dvorak espa&#xF1;ol</title>
     <name>es(dvorak)</name>
+    <id>{bcdf002d-0474-425f-980e-c7529a05cd72}</id>
     <path>keyboardlayouts/es.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Espa&#xF1;ol</title>
     <name>es</name>
+    <id>{89d5d879-cc9c-44a4-a894-7750dc43dc85}</id>
     <path>keyboardlayouts/es.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Suomalainen</title>
     <name>fi</name>
+    <id>{1a667173-266e-4064-8947-ba6ac76d56f7}</id>
     <path>keyboardlayouts/fi.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Fran&#xE7;ais Dvorak</title>
     <name>fr(dvorak)</name>
+    <id>{2e85625c-1122-4c90-8979-f755f1868e27}</id>
     <path>keyboardlayouts/fr.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Fran&#xE7;ais</title>
     <name>fr</name>
+    <id>{8cc6761a-5199-4ad9-9f35-a978d2f81049}</id>
     <path>keyboardlayouts/fr.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Dvorak (United Kingdom)</title>
     <name>gb(dvorak)</name>
+    <id>{eb18f999-63a5-40db-a4b7-8ef665b02de0}</id>
     <path>keyboardlayouts/gb.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English (United Kingdom)</title>
     <name>gb</name>
+    <id>{597b6092-b967-4ae7-9e82-6c7ae2fcb4a0}</id>
     <path>keyboardlayouts/gb.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Magyar</title>
     <name>hu</name>
+    <id>{8e5cf918-5593-4065-b296-6637ba08946e}</id>
     <path>keyboardlayouts/hu.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Hebrew</title>
     <name>il</name>
+    <id>{aa4cf2bd-a03e-4ae3-b920-a7df557eb235}</id>
     <path>keyboardlayouts/il.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Kannada</title>
     <name>in(kan)</name>
+    <id>{92db7aaf-bc44-4610-9620-9d339119d59b}</id>
     <path>keyboardlayouts/in.kan.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Tamil</title>
     <name>in(tam_unicode)</name>
+    <id>{1c94be1f-5497-4443-8562-ea754fde5fbe}</id>
     <path>keyboardlayouts/in.tam_unicode.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Italiana</title>
     <name>it</name>
+    <id>{d4c6fa92-a41c-4064-a235-4e3daf428abe}</id>
     <path>keyboardlayouts/it.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Espa&#xF1;ol (Latinoamarican)</title>
     <name>latam</name>
+    <id>{7c1842a3-3d8d-4cd9-ad75-2eee8bd7e231}</id>
     <path>keyboardlayouts/latam.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Lietuvi&#x173; (standartinis)</title>
     <name>lt(std)</name>
+    <id>{dc0469c9-1de6-4f60-a85c-cfe7182f17c3}</id>
     <path>keyboardlayouts/lt.std.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Norsk</title>
     <name>no</name>
+    <id>{1c5acd1b-09a8-46aa-a9d3-1ee82f926692}</id>
     <path>keyboardlayouts/no.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Portugu&#xEA;s</title>
     <name>pt</name>
+    <id>{8664a763-d980-4c44-9edf-88d9741e619d}</id>
     <path>keyboardlayouts/pt.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (Legacy)</title>
     <name>ru(legacy)</name>
+    <id>{fae08865-69f1-4f34-97e2-ea210d039632}</id>
     <path>keyboardlayouts/ru.legacy.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Russian</title>
     <name>ru</name>
+    <id>{e6c1332e-18c2-4045-a8b5-34335d0fe5d4}</id>
     <path>keyboardlayouts/ru.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Swedish</title>
     <name>se</name>
+    <id>{044fa5bc-a017-48c8-974c-1444065b5d2b}</id>
     <path>keyboardlayouts/se.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Slovenian</title>
     <name>si</name>
+    <id>{cf158a7c-e061-4d66-a51c-e60845e71b72}</id>
     <path>keyboardlayouts/si.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Sloven&#x10D;ina (qwerty)</title>
     <name>sk(qwerty)</name>
+    <id>{c0a4d662-55ba-49e1-ae09-b0ce4f8f8bec}</id>
     <path>keyboardlayouts/sk.qwerty.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Sloven&#x10D;ina</title>
     <name>sk</name>
+    <id>{13d10422-4033-40da-a21b-05dc06358014}</id>
     <path>keyboardlayouts/sk.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>T&#xFC;rk&#xE7;e (F)</title>
     <name>tr(f)</name>
+    <id>{fa9fedc2-d017-469a-9a1a-01469b97352a}</id>
     <path>keyboardlayouts/tr.f.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>
     <name>ua</name>
+    <id>{9245b106-80f1-4217-9e35-ba581db0ec99}</id>
     <path>keyboardlayouts/ua.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Colemak (USA)</title>
     <name>us(colemak)</name>
+    <id>{281e894f-26b8-46f0-9412-32b33a873efd}</id>
     <path>keyboardlayouts/us.colemak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English Dvorak (USA)</title>
     <name>us(dvorak)</name>
+    <id>{82647f1d-cfaa-491e-ab41-6d6c86e4f5fd}</id>
     <path>keyboardlayouts/us.dvorak.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English (USA)</title>
     <name>us</name>
+    <id>{6a1fed47-1713-437c-931e-2ebc3ba1f366}</id>
     <path>keyboardlayouts/us.xml</path>
   </keyboardLayout>
 </data>

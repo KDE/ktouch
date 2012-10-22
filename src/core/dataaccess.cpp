@@ -93,6 +93,7 @@ bool DataAccess::loadDataIndex(DataIndex* target)
                 DataIndexKeyboardLayout* keyboardLayout = new DataIndexKeyboardLayout(this);
                 keyboardLayout->setTitle(dataNode.firstChildElement("title").text());
                 keyboardLayout->setName(dataNode.firstChildElement("name").text());
+                keyboardLayout->setId(dataNode.firstChildElement("id").text());
                 keyboardLayout->setPath(path);
                 keyboardLayout->setSource(source);
                 target->addKeyboardLayout(keyboardLayout);
@@ -157,14 +158,17 @@ bool DataAccess::storeDataIndex(DataIndex* source)
             QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
             QDomElement titleElem = doc.createElement("title");
             QDomElement nameElem = doc.createElement("name");
+            QDomElement idElem = doc.createElement("id");
             QDomElement pathElem = doc.createElement("path");
 
             titleElem.appendChild(doc.createTextNode(keyboardLayout->title()));
             nameElem.appendChild(doc.createTextNode(keyboardLayout->name()));
+            idElem.appendChild(doc.createTextNode(keyboardLayout->id()));
             pathElem.appendChild(doc.createTextNode(relPath));
 
             keyboardLayoutElem.appendChild(titleElem);
             keyboardLayoutElem.appendChild(nameElem);
+            keyboardLayoutElem.appendChild(idElem);
             keyboardLayoutElem.appendChild(pathElem);
             root.appendChild(keyboardLayoutElem);
         }
@@ -206,6 +210,7 @@ bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
     QDomElement root(doc.documentElement());
 
     target->clearKeys();
+    target->setId(root.firstChildElement("id").text());
     target->setTitle(root.firstChildElement("title").text());
     target->setName(root.firstChildElement("name").text());
     target->setWidth(root.firstChildElement("width").text().toInt());
@@ -266,12 +271,14 @@ bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source
     QDomElement root = doc.createElement("keyboardLayout");
     doc.appendChild(root);
 
+    QDomElement idElem = doc.createElement("id");
     QDomElement titleElem = doc.createElement("title");
     QDomElement nameElem = doc.createElement("name");
     QDomElement widthElem = doc.createElement("width");
     QDomElement heightElem = doc.createElement("height");
     QDomElement keysElem = doc.createElement("keys");
 
+    idElem.appendChild(doc.createTextNode(source->id()));
     titleElem.appendChild(doc.createTextNode(source->title()));
     nameElem.appendChild(doc.createTextNode(source->name()));
     heightElem.appendChild(doc.createTextNode(QString::number(source->height())));
@@ -341,6 +348,7 @@ bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source
         keysElem.appendChild(keyElem);
     }
 
+    root.appendChild(idElem);
     root.appendChild(titleElem);
     root.appendChild(nameElem);
     root.appendChild(widthElem);

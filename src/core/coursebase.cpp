@@ -63,17 +63,3 @@ void CourseBase::setKeyboardLayoutName(const QString& keyboardLayoutName)
         emit keyboardLayoutNameChanged();
     }
 }
-
-QString CourseBase::id() const
-{
-    return m_id;
-}
-
-void CourseBase::setId(const QString& id)
-{
-    if (id != m_id)
-    {
-        m_id = id;
-        emit idChanged();
-    }
-}

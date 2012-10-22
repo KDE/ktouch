@@ -23,6 +23,20 @@ Resource::Resource(QObject* parent):
 {
 }
 
+QString Resource::id() const
+{
+    return m_id;
+}
+
+void Resource::setId(const QString& id)
+{
+    if (id != m_id)
+    {
+        m_id = id;
+        emit idChanged();
+    }
+}
+
 bool Resource::isValid() const
 {
     return m_isValid;

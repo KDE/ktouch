@@ -16,10 +16,12 @@
 #
 
 import argparse
+import uuid
 from lxml import etree
 
 class KeyboardLayout(object):
-    def __init__(self, title, name, keys=None):
+    def __init__(self, id, title, name, keys=None):
+        self.id = id
         self.title = title
         self.name = name
         self.keys = keys or []
@@ -47,6 +49,8 @@ class KeyboardLayout(object):
                 self.height = key.top + key.height
     def xml_tree(self):
         root = etree.Element('keyboardLayout')
+        id = etree.SubElement(root, "id")
+        id.text = self.id
         title = etree.SubElement(root, "title")
         title.text = self.title
         name = etree.SubElement(root, "name")
@@ -170,11 +174,12 @@ MODIFIER_MAP = {
 def read(f):
     tree = etree.parse(f)
     root = tree.getroot()
+    id = make_id()
     title, = etree.XPath("//KTouchKeyboard/Title[1]/text()")(root)
     name, = etree.XPath("//KTouchKeyboard/Language[1]/text()")(root)
     key_nodes = etree.XPath("//KTouchKeyboard/Keys/Key")(root)
     keys = [parse_key(node) for node in key_nodes]
-    return KeyboardLayout(title, name, keys)
+    return KeyboardLayout(id, title, name, keys)
     
 def parse_key(key_node):
     get_char_nodes = etree.XPath("./Char")
@@ -230,6 +235,9 @@ def parse_chars(char_nodes):
             char.modifier = 'shift'
             chars.append(hiddenChar)
     return chars
+
+def make_id():
+    return "{{{}}}".format(uuid.uuid4())
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(

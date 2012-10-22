@@ -28,7 +28,6 @@ class CourseBase : public Resource
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString description READ description WRITE setDescription NOTIFY descriptionChanged)
     Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName WRITE setKeyboardLayoutName NOTIFY keyboardLayoutNameChanged)
-    Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
 
 public:
     explicit CourseBase(QObject* parent = 0);
@@ -39,18 +38,14 @@ public:
     void setDescription(const QString& description);
     QString keyboardLayoutName() const;
     void setKeyboardLayoutName(const QString& keyboardLayoutName);
-    QString id() const;
-    void setId(const QString& id);
 
 signals:
 
-    void idChanged();
     void titleChanged();
     void descriptionChanged();
     void keyboardLayoutNameChanged();
 
 private:
-    QString m_id;
     QString m_title;
     QString m_description;
     QString m_keyboardLayoutName;

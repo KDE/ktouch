@@ -13,6 +13,7 @@
     <xs:sequence>
       <xs:element name="title" type="xs:string" />
       <xs:element name="name" type="xs:string" />
+      <xs:element name="id" type="xs:string" />
       <xs:element name="path" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

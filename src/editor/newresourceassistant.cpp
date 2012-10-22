@@ -94,6 +94,7 @@ Resource* NewResourceAssistant::createResource()
             keyboardLayout->copyFrom(&templateKeyboardLayout);
         }
 
+        keyboardLayout->setId(QUuid::createUuid().toString());
         keyboardLayout->setName(m_newKeyboardLayoutWidget->name());
         keyboardLayout->setTitle(m_newKeyboardLayoutWidget->title());
 

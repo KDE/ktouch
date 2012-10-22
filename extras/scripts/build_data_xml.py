@@ -51,6 +51,8 @@ def find_keyboard_layouts(data_dir, rel_path, root):
             title.text, = keyboard_tree.xpath("//keyboardLayout/title/text()")
             name = etree.SubElement(elem, "name")
             name.text, = keyboard_tree.xpath("//keyboardLayout/name/text()")
+            id_ele = etree.SubElement(elem, "id")
+            id_ele.text, = keyboard_tree.xpath("//keyboardLayout/id/text()")
             path_ele = etree.SubElement(elem, "path")
             path_ele.text = os.path.join(rel_path, filename)
             keyboard_layout_elems.append(elem)
