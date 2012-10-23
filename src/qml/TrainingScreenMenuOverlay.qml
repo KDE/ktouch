@@ -72,7 +72,7 @@ Item {
                 focus: true
                 id: resumeButton
                 iconSource: "go-next-view"
-                text: i18n("Resume training")
+                text: i18n("Resume Training")
                 width: parent.width
                 onClicked: hide()
             }
@@ -80,7 +80,7 @@ Item {
             PlasmaComponents.Button {
                 id: restartButton
                 iconSource: "view-refresh"
-                text: i18n("Restart lesson")
+                text: i18n("Restart Lesson")
                 width: parent.width
                 onClicked: {
                     restartRequested()
@@ -91,7 +91,7 @@ Item {
             PlasmaComponents.Button {
                 id: returnButton
                 iconSource: "go-home"
-                text: i18n("Return to home screen")
+                text: i18n("Return to Home Screen")
                 width: parent.width
                 onClicked: {
                     abortRequested()

@@ -30,8 +30,8 @@ Item {
         if (!stats.timeIsRunning && !trainingFinished) {
             messageBox.showMessage(
                         trainingStarted?
-                            i18n("Training session started. Time begins running with the first key stroke."):
-                            i18n("Training session interrupted. Time begins running again with next key stroke."))
+                            i18n("Training session started. Time begins running with the first keystroke."):
+                            i18n("Training session interrupted. Time begins running again with next keystroke."))
         }
         else {
             messageBox.clearMessage()

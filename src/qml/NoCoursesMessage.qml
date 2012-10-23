@@ -70,7 +70,7 @@ Item {
             }
 
             PlasmaComponents.Button {
-                text: i18n("Launch editor")
+                text: i18n("Launch Editor")
                 onClicked: showResourceEditor()
             }
         }

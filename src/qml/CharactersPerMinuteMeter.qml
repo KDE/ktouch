@@ -36,7 +36,7 @@ Item {
         }
         DigitalMeter {
             property int diff: meter.charactersPerMinute - meter.referenceCharactersPerMinute
-            label: i18n("Strokes per minute")
+            label: i18n("Characters per Minute")
             value: meter.charactersPerMinute
             referenceValue: strFormatter.formatSign(diff) + " " + (diff > 0? diff: -diff)
             valueStatus: meter.charactersPerMinute >= minimumCharactersPerMinute? "good": "bad"

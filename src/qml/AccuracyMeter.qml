@@ -35,7 +35,7 @@ Item {
             minimumAccuracy: meter.minimumAccuracy
         }
         DigitalMeter {
-            label: i18n("Hit ratio")
+            label: i18n("Accuracy")
             value: strFormatter.formatAccuracy(meter.accuracy)
             referenceValue: strFormatter.formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
             valueStatus: meter.accuracy >= meter.minimumAccuracy? "good": "bad"

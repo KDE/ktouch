@@ -195,7 +195,7 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
     case KCategorizedSortFilterProxyModel::CategorySortRole:
         return QVariant(1);
     case KCategorizedSortFilterProxyModel::CategoryDisplayRole:
-        return QVariant(i18n("Keyboard layouts"));
+        return QVariant(i18n("Keyboard Layouts"));
     case Qt::DisplayRole:
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
     case Qt::ToolTipRole:

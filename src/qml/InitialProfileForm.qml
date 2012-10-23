@@ -97,7 +97,7 @@ FocusScope {
                     width: 400
                     anchors.centerIn: parent
                     doneButtonIconSource: "go-next-view"
-                    doneButtonText: i18n("Start training")
+                    doneButtonText: i18n("Start Training")
                     onDone: save()
                 }
             }

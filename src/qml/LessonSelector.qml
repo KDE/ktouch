@@ -143,7 +143,7 @@ Item {
                         horizontalCenter: startButtonContainer.horizontalCenter
                         bottom: parent.bottom
                     }
-                    text: i18n("Start training")
+                    text: i18n("Start Training")
                     enabled: lessonList.currentItem !== null && !lessonList.currentItem.locked
                     iconSource: "go-next-view"
                     onClicked: {

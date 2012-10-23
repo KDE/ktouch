@@ -56,7 +56,7 @@ Item {
 
         PlasmaComponents.Label {
             id: text
-            text: i18n("Complete previous lessons to unlock")
+            text: i18n("Complete Previous Lessons to Unlock")
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
             color: "#fff"

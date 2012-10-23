@@ -58,7 +58,7 @@ FocusScope {
                         property bool isNewButton: index >= profileDataAccess.profileCount
                         width: list.width - scrollBar.width
                         title: isNewButton?
-                                   i18n("Create new profile"):
+                                   i18n("Create New Profile"):
                                    index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
                         label.font.italic: isNewButton
                         iconSource: isNewButton? "list-add": "user-identity"
@@ -101,7 +101,7 @@ FocusScope {
             id: selectButton
             anchors.horizontalCenter: parent.horizontalCenter
             iconSource: "go-next-view"
-            text: i18n("Use selected profile")
+            text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
             onClicked: root.profileChosen(profileDataAccess.profile(list.currentIndex))
         }

@@ -146,7 +146,7 @@ FocusScope {
             PlasmaComponents.ToolButton {
                 id: allLessonsButton
                 width: Math.max(implicitWidth, thisLessonButton.implicitWidth)
-                text: i18n("All lessons")
+                text: i18n("All Lessons")
                 iconSource: "view-filter"
                 onClicked: {
                     if (learningProgressModel.filterByLesson) {
@@ -158,7 +158,7 @@ FocusScope {
             PlasmaComponents.ToolButton {
                 id: thisLessonButton
                 width: Math.max(implicitWidth, allLessonsButton.implicitWidth)
-                text: i18n("This lesson")
+                text: i18n("This Lesson")
                 iconSource: "view-filter"
                 onClicked: {
                     if (!learningProgressModel.filterByLesson) {
@@ -267,7 +267,7 @@ FocusScope {
 
                 PlasmaComponents.ToolButton {
                     id: homeScreenButton
-                    text: i18n("Return to home screen")
+                    text: i18n("Return to Home Screen")
                     iconSource: "go-home"
                     onClicked: screen.homeScreenRequested()
                 }
@@ -280,14 +280,14 @@ FocusScope {
                 PlasmaComponents.ToolButton {
                     id: repeatLessonButton
                     iconSource: "view-refresh"
-                    text: i18n("Repeat lesson")
+                    text: i18n("Repeat Lesson")
                     onClicked: screen.lessonRepetionRequested()
                 }
 
                 PlasmaComponents.ToolButton {
                     id: nextLessonButton
                     iconSource: "go-next-view"
-                    text: i18n("Next lesson")
+                    text: i18n("Next Lesson")
                     enabled: !!internal.nextLesson
                     onClicked: screen.nextLessonRequested(internal.nextLesson)
                 }
