@@ -39,31 +39,51 @@
 #include "preferences.h"
 #include "trainingconfigwidget.h"
 #include "colorsconfigwidget.h"
+
+#ifdef KTOUCH_BUILD_WITH_X11
 #include "x11_helper.h"
+#else
+#include "keyboardlayoutmenu.h"
+#endif
+
+#ifdef KTOUCH_BUILD_WITH_X11
+#else
+#endif
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
     m_view(new QDeclarativeView(this)),
     m_actionCollection(new KActionCollection(this)),
     m_menu(new QMenu(this)),
-    m_useOpenGLViewport(false),
-    m_XEventNotifier(new XEventNotifier())
+    m_useOpenGLViewport(false)
 {
+#ifdef KTOUCH_BUILD_WITH_X11
+    m_XEventNotifier = new XEventNotifier();
     m_XEventNotifier->start();
     connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
+#else
+    m_keyboardLayoutMenu = new KeyboardLayoutMenu(this);
+    m_keyboardLayoutMenu->setDataIndex(Application::dataIndex());
+    connect(m_keyboardLayoutMenu, SIGNAL(keyboardLayoutNameChanged()), SIGNAL(keyboardLayoutNameChanged()));
+#endif
     init();
 }
 
 MainWindow::~MainWindow()
 {
-    disconnect(this, SIGNAL(keyboardLayoutNameChanged()));
+#ifdef KTOUCH_BUILD_WITH_X11
     m_XEventNotifier->stop();
     delete m_XEventNotifier;
+#endif
 }
 
 QString MainWindow::keyboardLayoutName() const
 {
+#ifdef KTOUCH_BUILD_WITH_X11
     return X11Helper::getCurrentLayout().toString();
+#else
+    return m_keyboardLayoutMenu->keyboardLayoutName();
+#endif
 }
 
 DataIndex *MainWindow::dataIndex()
@@ -151,9 +171,16 @@ void MainWindow::init()
     m_menu->addSeparator();
     m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
     m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));
+
+
+#ifdef KTOUCH_BUILD_WITH_X11
     KAction* configureKeyboardAction = new KAction(i18n("Configure Keyboard..."), this);
     m_menu->addAction(configureKeyboardAction);
     connect(configureKeyboardAction, SIGNAL(triggered()), SLOT(configureKeyboard()));
+#else
+    m_menu->addMenu(m_keyboardLayoutMenu);
+#endif
+
     m_menu->addSeparator();
     KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
     m_menu->addMenu(helpMenu->menu());

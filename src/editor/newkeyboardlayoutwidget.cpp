@@ -19,7 +19,13 @@
 
 #include "core/dataindex.h"
 #include "models/resourcemodel.h"
+
+#include "preferences.h"
+
+#ifdef KTOUCH_BUILD_WITH_X11
 #include "x11_helper.h"
+#endif
+
 
 NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(ResourceModel* resourceModel, QWidget* parent) :
     QWidget(parent),
@@ -61,8 +67,12 @@ bool NewKeyboardLayoutWidget::isValid() const
 
 void NewKeyboardLayoutWidget::pasteCurrentName()
 {
-    const LayoutUnit currentKeyboardLayout = X11Helper::getCurrentLayout();
-    m_nameLineEdit->setText(currentKeyboardLayout.toString());
+#ifdef KTOUCH_BUILD_WITH_X11
+    const QString name = X11Helper::getCurrentLayout().toString();
+#else
+    const QString name = Preferences::keyboardLayoutName();
+#endif
+    m_nameLineEdit->setText(name);
     m_nameLineEdit->setFocus();
 }
 

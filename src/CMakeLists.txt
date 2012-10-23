@@ -1,5 +1,7 @@
 # CMakeList.txt for the KTouch source directory
 
+find_library(X11_Xkbfile_LIB OPTIONAL)
+
 add_subdirectory(qml)
 add_subdirectory(schemata)
 add_subdirectory(graph-plugin)
@@ -80,10 +82,16 @@ set(ktouch_SRCS
     editor/keyboardlayouteditorview.cpp
     editor/keyboardlayoutpropertieswidget.cpp
     editor/charactersvieweditorfactories.cpp
-    x11_helper.cpp
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
 )
+
+IF (X11_Xkbfile_FOUND)
+    add_definitions(-DKTOUCH_BUILD_WITH_X11)
+    set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
+ELSE (X11_Xkbfile_FOUND)
+    set(ktouch_SRCS ${ktouch_SRCS} keyboardlayoutmenu.cpp)
+ENDIF (X11_Xkbfile_FOUND)
 
 kde4_add_kcfg_files(ktouch_SRCS preferences.kcfgc )
 

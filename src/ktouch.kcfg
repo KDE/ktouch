@@ -4,6 +4,12 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="ktouch2rc"/>
+  <group name="General">
+    <entry name="KeyboardLayoutName" type="String">
+      <label>The keyboard layout to use on non-X11 platforms</label>
+      <default>us</default>
+    </entry>
+  </group>
   <group name="Training">
     <entry name="ShowKeyboard" type="Bool">
       <label>Controls the visibility of the keyboard during training.</label>

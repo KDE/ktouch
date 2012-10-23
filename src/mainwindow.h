@@ -27,7 +27,12 @@ class QMenu;
 class KActionCollection;
 class DataIndex;
 class ResourceEditor;
+
+#ifdef KTOUCH_BUILD_WITH_X11
 class XEventNotifier;
+#else
+class KeyboardLayoutMenu;
+#endif
 
 class MainWindow : public KMainWindow
 {
@@ -57,7 +62,11 @@ private:
     KActionCollection* m_actionCollection;
     QMenu* m_menu;
     bool m_useOpenGLViewport;
+#ifdef KTOUCH_BUILD_WITH_X11
     XEventNotifier* m_XEventNotifier;
+#else
+    KeyboardLayoutMenu* m_keyboardLayoutMenu;
+#endif
 };
 
 #endif // MAINWINDOW_H
