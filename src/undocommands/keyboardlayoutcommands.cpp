@@ -17,6 +17,8 @@
 
 #include "keyboardlayoutcommands.h"
 
+#include "KLocale"
+
 #include <core/keyboardlayout.h>
 #include <core/abstractkey.h>
 #include <core/key.h>
@@ -27,6 +29,7 @@ SetKeyboardLayoutTitleCommand::SetKeyboardLayoutTitleCommand(KeyboardLayout* lay
     m_oldTitle(layout->title()),
     m_newTitle(newTitle)
 {
+    setText(i18n("Set keyboard layout title"));
 }
 
 void SetKeyboardLayoutTitleCommand::undo()
@@ -61,6 +64,7 @@ SetKeyboardLayoutNameCommand::SetKeyboardLayoutNameCommand(KeyboardLayout* layou
     m_oldName(layout->name()),
     m_newName(newName)
 {
+    setText(i18n("Set keyboard layout name"));
 }
 
 void SetKeyboardLayoutNameCommand::undo()
@@ -95,6 +99,8 @@ SetKeyboardLayoutSizeCommand::SetKeyboardLayoutSizeCommand(KeyboardLayout* layou
     m_oldSize(layout->size()),
     m_newSize(newSize)
 {
+    setText(i18n("Set keyboard layout size"));
+
     for (int i = 0; i < m_layout->keyCount(); i++)
     {
         AbstractKey* const key = m_layout->key(i);
@@ -145,6 +151,7 @@ AddKeyCommand::AddKeyCommand(KeyboardLayout *layout, AbstractKey *key, QUndoComm
     m_layout(layout),
     m_backupKey(key)
 {
+    setText(i18n("Add key"));
 }
 
 AddKeyCommand::~AddKeyCommand()
@@ -199,6 +206,7 @@ RemoveKeyCommand::RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCo
     m_keyIndex(keyIndex),
     m_backupKey(0)
 {
+    setText(i18n("Remove key"));
 }
 
 RemoveKeyCommand::~RemoveKeyCommand()
@@ -260,6 +268,7 @@ SetKeyGeometryCommand::SetKeyGeometryCommand(KeyboardLayout* layout, int keyInde
     m_oldRect(layout->key(keyIndex)->rect()),
     m_newRect(newRect)
 {
+    setText(i18n("Set key geometry"));
 }
 
 void SetKeyGeometryCommand::undo()
@@ -297,6 +306,8 @@ SetKeyFingerIndexCommand::SetKeyFingerIndexCommand(KeyboardLayout* layout, int k
     m_keyIndex(keyIndex),
     m_newFingerIndex(newFingerIndex)
 {
+    setText(i18n("Set key finger"));
+
     Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
     Q_ASSERT(key);
     m_oldFingerIndex = key->fingerIndex();
@@ -341,6 +352,8 @@ SetKeyHasHapticMarkerCommand::SetKeyHasHapticMarkerCommand(KeyboardLayout* layou
     m_keyIndex(keyIndex),
     m_newHasHapticMarker(newHasHapticMarker)
 {
+    setText(i18n("Set key haptic marker"));
+
     Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
     Q_ASSERT(key);
     m_oldHasHapticMarker = key->hasHapticMarker();
@@ -384,6 +397,7 @@ AddKeyCharCommand::AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndo
     m_layout(layout),
     m_keyIndex(keyIndex)
 {
+    setText(i18n("Add key character"));
 }
 
 void AddKeyCharCommand::undo()
@@ -424,6 +438,7 @@ RemoveKeyCharCommand::RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex,
     m_keyCharIndex(keyCharIndex),
     m_backupKeyChar(0)
 {
+    setText(i18n("Remove key character"));
 }
 
 RemoveKeyCharCommand::~RemoveKeyCharCommand()
@@ -480,6 +495,8 @@ SetKeyCharValueCommand::SetKeyCharValueCommand(KeyboardLayout* layout, int keyIn
     m_keyCharIndex(keyCharIndex),
     m_newValue(newValue)
 {
+    setText(i18n("Set key character value"));
+
     Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
     m_oldValue = key->keyChar(m_keyCharIndex)->value();
 }
@@ -525,6 +542,8 @@ SetKeyCharModifierCommand::SetKeyCharModifierCommand(KeyboardLayout* layout, int
     m_keyCharIndex(keyCharIndex),
     m_newModifier(newModifier)
 {
+    setText(i18n("Set key character modifier"));
+
     Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
     m_oldModifier = key->keyChar(m_keyCharIndex)->modifier();
 }
@@ -570,6 +589,8 @@ SetKeyCharPositionCommand::SetKeyCharPositionCommand(KeyboardLayout* layout, int
     m_keyCharIndex(keyCharIndex),
     m_newPosition(newPosition)
 {
+    setText(i18n("Set key character position"));
+
     Key* key = qobject_cast<Key*>(m_layout->key(m_keyIndex));
     m_oldPosition = key->keyChar(m_keyCharIndex)->position();
 }
@@ -614,6 +635,8 @@ SetSpecialKeyTypeCommand::SetSpecialKeyTypeCommand(KeyboardLayout* layout, int k
     m_keyIndex(keyIndex),
     m_newType(newType)
 {
+    setText(i18n("Set special key type"));
+
     SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
     m_oldType = key->type();
 }
@@ -655,6 +678,8 @@ SetSpecialKeyLabelCommand::SetSpecialKeyLabelCommand(KeyboardLayout* layout, int
     m_keyIndex(keyIndex),
     m_newLabel(newLabel)
 {
+    setText(i18n("Set special key label"));
+
     SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
     m_oldLabel = key->label();
 }
@@ -696,6 +721,8 @@ SetSpecialKeyModifierIdCommand::SetSpecialKeyModifierIdCommand(KeyboardLayout* l
     m_keyIndex(keyIndex),
     m_newModifierId(newModifiewId)
 {
+    setText(i18n("Set special key modifier ID"));
+
     SpecialKey* key = qobject_cast<SpecialKey*>(m_layout->key(m_keyIndex));
     m_oldModifierId = key->modifierId();
 }
