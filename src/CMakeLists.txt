@@ -53,7 +53,10 @@ set(ktouch_SRCS
     core/profile.cpp
     core/dataindex.cpp
     core/dataaccess.cpp
+    core/dbaccess.cpp
     core/profiledataaccess.cpp
+    core/resourcedataaccess.cpp
+    core/userdataaccess.cpp
     undocommands/coursecommands.cpp
     undocommands/keyboardlayoutcommands.cpp
     models/resourcemodel.cpp

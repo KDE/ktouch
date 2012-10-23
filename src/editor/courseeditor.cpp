@@ -26,6 +26,7 @@
 #include "core/lesson.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
+#include "core/userdataaccess.h"
 #include "models/lessonmodel.h"
 #include "editor/lessontexthighlighter.h"
 
@@ -81,14 +82,12 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     m_dataIndexCourse = dataIndexCourse;
 
-    const QString coursePath = dataIndexCourse->path();
-
-    initUndoStack(coursePath);
+    initUndoStack(QString("course-%1").arg(dataIndexCourse->id()));
 
     m_currentLessonIndex = -1;
     m_currentLesson = 0;
 
-    if (!dataAccess.loadCourse(coursePath, m_course))
+    if (!dataAccess.loadCourse(dataIndexCourse, m_course))
     {
         KMessageBox::error(this, i18n("Error while opening course"));
     }
@@ -126,9 +125,9 @@ void CourseEditor::save()
     if (currentUndoStack()->isClean())
         return;
 
-    DataAccess dataAccess;
+    UserDataAccess userDataAccess;
 
-    dataAccess.storeCourse(m_dataIndexCourse->path(), m_course);
+    userDataAccess.storeCourse(m_course);
     currentUndoStack()->setClean();
 }
 

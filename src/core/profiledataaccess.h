@@ -18,23 +18,22 @@
 #ifndef PROFILEDATAACCESS_H
 #define PROFILEDATAACCESS_H
 
+#include "core/dbaccess.h"
+
 #include <QObject>
 #include <QDateTime>
 #include <QList>
 #include <QSqlQuery>
 
-class QSqlDatabase;
-class QSqlError;
 class Profile;
 class TrainingStats;
 class Course;
 class Lesson;
 
-class ProfileDataAccess : public QObject
+class ProfileDataAccess : public DbAccess
 {
     Q_OBJECT
     Q_PROPERTY(int profileCount READ profileCount NOTIFY profileCountChanged)
-    Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
     Q_ENUMS(CourseProgressType)
 
 public:
@@ -67,18 +66,11 @@ public:
 
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
 
-    QString errorMessage() const;
-
 signals:
     void profileCountChanged();
-    void errorMessageChanged();
 
 private:
-    QSqlDatabase database();
-    bool checkDbSchema();
-    void raiseError(const QSqlError& error);
     int findCourseProgressId(Profile* profile, const QString &courseId, CourseProgressType type, bool* ok);
-    QString m_errorMessage;
     QList<Profile*> m_profiles;
 };
 

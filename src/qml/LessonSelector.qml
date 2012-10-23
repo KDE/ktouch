@@ -23,7 +23,7 @@ import ktouch 1.0
 Item {
     id: item
     property Profile profile
-    property string coursePath
+    property DataIndexCourse dataIndexCourse
     property alias course: courseItem
     signal lessonSelected(variant course, int lessonIndex)
 
@@ -66,21 +66,19 @@ Item {
 
     onProfileChanged: update()
 
-    onCoursePathChanged: {
+    onDataIndexCourseChanged: {
         course.update()
         update()
     }
 
     Course {
         id: courseItem
-        property string path
         function update() {
-            if (coursePath === "")
+            if (item.dataIndexCourse === null)
                 return
-            if (isValid && path === coursePath)
+            if (isValid && courseItem.id === dataIndexCourse.id)
                 return
-            path = coursePath
-            dataAccess.loadCourse(path, course)
+            dataAccess.loadCourse(dataIndexCourse, courseItem)
         }
         Component.onCompleted: update()
     }

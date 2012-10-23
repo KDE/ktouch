@@ -17,26 +17,11 @@
 
 #include "dataaccess.h"
 
-#include <QFile>
-#include <QDir>
-#include <QDomDocument>
-#include <QDomElement>
-#include <QDomNodeList>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
+#include "core/dataindex.h"
+#include "core/resourcedataaccess.h"
+#include "core/userdataaccess.h"
 
-#include <kstandarddirs.h>
-#include <kdebug.h>
-
-#include "dataindex.h"
-#include "keyboardlayout.h"
-#include "key.h"
-#include "specialkey.h"
-#include "keychar.h"
-#include "course.h"
-#include "lesson.h"
-
-DataAccess::DataAccess(QObject *parent) :
+DataAccess::DataAccess(QObject* parent) :
     QObject(parent)
 {
 }
@@ -47,485 +32,44 @@ bool DataAccess::loadDataIndex(DataIndex* target)
     target->clearCourses();
     target->clearKeyboardLayouts();
 
-    QXmlSchema schema = loadXmlSchema("data");
-    if (!schema.isValid())
-        return false;
+    ResourceDataAccess resourceDataAccess;
+    UserDataAccess userDataAccess;
 
-    const QDir userDir = QDir(KGlobal::dirs()->saveLocation("appdata", "", false));
+    const bool valid = resourceDataAccess.fillDataIndex(target) && userDataAccess.fillDataIndex(target);
 
-    foreach (const QString path, KGlobal::dirs()->findAllResources("appdata", "data.xml"))
-    {
-        QDir dir = QFileInfo(path).dir();
-        DataIndex::Source source = dir == userDir? DataIndex::UserResource: DataIndex::BuiltInResource;
-        QFile dataIndexFile;
-        dataIndexFile.setFileName(path);
-        if (!dataIndexFile.open(QIODevice::ReadOnly))
-        {
-            kWarning() << "can't open:" << path;
-            return false;
-        }
-        QDomDocument doc = getDomDocument(dataIndexFile, schema);
-        if (doc.isNull())
-        {
-            kWarning() << "invalid doc:" << path;
-            return false;
-        }
-        QDomElement root(doc.documentElement());
-        for (QDomElement dataNode = root.firstChildElement();
-            !dataNode.isNull();
-            dataNode = dataNode.nextSiblingElement())
-        {
-            const QString path = dir.filePath(dataNode.firstChildElement("path").text());
+    target->setIsValid(valid);
 
-            if (dataNode.tagName() == "course")
-            {
-                DataIndexCourse* course = new DataIndexCourse(this);
-                course->setTitle(dataNode.firstChildElement("title").text());
-                course->setDescription(dataNode.firstChildElement("description").text());
-                course->setKeyboardLayoutName(dataNode.firstChildElement("keyboardLayout").text());
-                course->setId(dataNode.firstChildElement("id").text());
-                course->setPath(path);
-                course->setSource(source);
-                target->addCourse(course);
-            }
-            else if (dataNode.tagName() == "keyboardLayout")
-            {
-                DataIndexKeyboardLayout* keyboardLayout = new DataIndexKeyboardLayout(this);
-                keyboardLayout->setTitle(dataNode.firstChildElement("title").text());
-                keyboardLayout->setName(dataNode.firstChildElement("name").text());
-                keyboardLayout->setId(dataNode.firstChildElement("id").text());
-                keyboardLayout->setPath(path);
-                keyboardLayout->setSource(source);
-                target->addKeyboardLayout(keyboardLayout);
-            }
-        }
-    }
-
-    target->setIsValid(true);
-    return true;
+    return valid;
 }
 
-bool DataAccess::storeDataIndex(DataIndex* source)
+bool DataAccess::loadCourse(DataIndexCourse* dataIndexCourse, Course* target)
 {
-    const QDir userDir = QDir(KGlobal::dirs()->saveLocation("appdata", "", true));
+    ResourceDataAccess resourceDataAccess;
+    UserDataAccess userDataAccess;
 
-    QDomDocument doc;
-
-    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
-    doc.appendChild(header);
-
-    QDomElement root = doc.createElement("data");
-    doc.appendChild(root);
-
-    for (int i = 0; i < source->courseCount(); i++)
+    switch (dataIndexCourse->source())
     {
-        DataIndexCourse* const course = source->course(i);
-
-        if (course->source() == DataIndex::UserResource)
-        {
-            const QString relPath = userDir.relativeFilePath(course->path());
-
-            QDomElement courseElem = doc.createElement("course");
-            QDomElement titleElem = doc.createElement("title");
-            QDomElement descriptionElem = doc.createElement("description");
-            QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
-            QDomElement idElem = doc.createElement("id");
-            QDomElement pathElem = doc.createElement("path");
-
-            titleElem.appendChild(doc.createTextNode(course->title()));
-            descriptionElem.appendChild(doc.createTextNode(course->description()));
-            keyboardLayoutElem.appendChild(doc.createTextNode(course->keyboardLayoutName()));
-            idElem.appendChild(doc.createTextNode(course->id()));
-            pathElem.appendChild(doc.createTextNode(relPath));
-
-            courseElem.appendChild(titleElem);
-            courseElem.appendChild(descriptionElem);
-            courseElem.appendChild(keyboardLayoutElem);
-            courseElem.appendChild(idElem);
-            courseElem.appendChild(pathElem);
-            root.appendChild(courseElem);
-        }
+    case DataIndex::BuiltInResource:
+        return resourceDataAccess.loadCourse(dataIndexCourse->path(), target);
+    case DataIndex::UserResource:
+        return userDataAccess.loadCourse(dataIndexCourse->id(), target);
+    default:
+        return true;
     }
-
-    for (int i = 0; i < source->keyboardLayoutCount(); i++)
-    {
-        DataIndexKeyboardLayout* const keyboardLayout = source->keyboardLayout(i);
-
-        if (keyboardLayout->source() == DataIndex::UserResource)
-        {
-            const QString relPath = userDir.relativeFilePath(keyboardLayout->path());
-
-            QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
-            QDomElement titleElem = doc.createElement("title");
-            QDomElement nameElem = doc.createElement("name");
-            QDomElement idElem = doc.createElement("id");
-            QDomElement pathElem = doc.createElement("path");
-
-            titleElem.appendChild(doc.createTextNode(keyboardLayout->title()));
-            nameElem.appendChild(doc.createTextNode(keyboardLayout->name()));
-            idElem.appendChild(doc.createTextNode(keyboardLayout->id()));
-            pathElem.appendChild(doc.createTextNode(relPath));
-
-            keyboardLayoutElem.appendChild(titleElem);
-            keyboardLayoutElem.appendChild(nameElem);
-            keyboardLayoutElem.appendChild(idElem);
-            keyboardLayoutElem.appendChild(pathElem);
-            root.appendChild(keyboardLayoutElem);
-        }
-    }
-
-    QFile file;
-    file.setFileName(userDir.filePath("data.xml"));
-
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        kWarning() << "can't open:" << file.fileName();
-        return false;
-    }
-
-    file.write(doc.toByteArray());
-    return true;
 }
 
-bool DataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout* target)
+bool DataAccess::loadKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout, KeyboardLayout* target)
 {
-    target->setIsValid(false);
+    ResourceDataAccess resourceDataAccess;
+    UserDataAccess userDataAccess;
 
-    QFile keyboardLayoutFile;
-    keyboardLayoutFile.setFileName(path);
-    if (!keyboardLayoutFile.open(QIODevice::ReadOnly))
+    switch (dataIndexKeyboardLayout->source())
     {
-        kWarning() << "can't open:" << path;
-        return false;
+    case DataIndex::BuiltInResource:
+        return resourceDataAccess.loadKeyboardLayout(dataIndexKeyboardLayout->path(), target);
+    case DataIndex::UserResource:
+        return userDataAccess.loadKeyboardLayout(dataIndexKeyboardLayout->id(), target);
+    default:
+        return true;
     }
-    QXmlSchema schema = loadXmlSchema("keyboardlayout");
-    if (!schema.isValid())
-        return false;
-    QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
-    if (doc.isNull())
-    {
-        kWarning() << "invalid doc:" << path;
-        return false;
-    }
-    QDomElement root(doc.documentElement());
-
-    target->clearKeys();
-    target->setId(root.firstChildElement("id").text());
-    target->setTitle(root.firstChildElement("title").text());
-    target->setName(root.firstChildElement("name").text());
-    target->setWidth(root.firstChildElement("width").text().toInt());
-    target->setHeight(root.firstChildElement("height").text().toInt());
-    for (QDomElement keyNode = root.firstChildElement("keys").firstChildElement();
-         !keyNode.isNull();
-         keyNode = keyNode.nextSiblingElement())
-    {
-        AbstractKey* abstractKey;
-
-        if (keyNode.tagName() == "key")
-        {
-            Key* key = new Key(this);
-            key->setFingerIndex(keyNode.attribute("fingerIndex").toInt());
-            key->setHasHapticMarker(keyNode.attribute("hasHapticMarker") == "true");
-            for (QDomElement charNode = keyNode.firstChildElement("char");
-                 !charNode.isNull();
-                 charNode = charNode.nextSiblingElement("char"))
-            {
-                KeyChar* keyChar = new KeyChar(key);
-                keyChar->setValue(charNode.text().at(0));
-                keyChar->setPositionStr(charNode.attribute("position"));
-                keyChar->setModifier(charNode.attribute("modifier"));
-                key->addKeyChar(keyChar);
-            }
-            abstractKey = key;
-        }
-        else if (keyNode.tagName() == "specialKey")
-        {
-            SpecialKey* specialKey = new SpecialKey(this);
-            specialKey->setTypeStr(keyNode.attribute("type"));
-            specialKey->setModifierId(keyNode.attribute("modifierId"));
-            specialKey->setLabel(keyNode.attribute("label"));
-            abstractKey = specialKey;
-        }
-        else
-        {
-            continue;
-        }
-        abstractKey->setLeft(keyNode.attribute("left").toInt());
-        abstractKey->setTop(keyNode.attribute("top").toInt());
-        abstractKey->setWidth(keyNode.attribute("width").toInt());
-        abstractKey->setHeight(keyNode.attribute("height").toInt());
-        target->addKey(abstractKey);
-    }
-
-    target->setIsValid(true);
-    return true;
-}
-
-bool DataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout* source)
-{
-    QDomDocument doc;
-
-    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
-    doc.appendChild(header);
-
-    QDomElement root = doc.createElement("keyboardLayout");
-    doc.appendChild(root);
-
-    QDomElement idElem = doc.createElement("id");
-    QDomElement titleElem = doc.createElement("title");
-    QDomElement nameElem = doc.createElement("name");
-    QDomElement widthElem = doc.createElement("width");
-    QDomElement heightElem = doc.createElement("height");
-    QDomElement keysElem = doc.createElement("keys");
-
-    idElem.appendChild(doc.createTextNode(source->id()));
-    titleElem.appendChild(doc.createTextNode(source->title()));
-    nameElem.appendChild(doc.createTextNode(source->name()));
-    heightElem.appendChild(doc.createTextNode(QString::number(source->height())));
-    widthElem.appendChild(doc.createTextNode(QString::number(source->width())));
-
-    for (int i = 0; i < source->keyCount(); i++)
-    {
-        AbstractKey* const abstractKey = source->key(i);
-
-        QDomElement keyElem = doc.createElement("key");
-
-        keyElem.setAttribute("left", abstractKey->left());
-        keyElem.setAttribute("top", abstractKey->top());
-        keyElem.setAttribute("width", abstractKey->width());
-        keyElem.setAttribute("height", abstractKey->height());
-
-        if (Key* const key = qobject_cast<Key*>(abstractKey))
-        {
-            keyElem.setTagName("key");
-            keyElem.setAttribute("fingerIndex", key->fingerIndex());
-            if (key->hasHapticMarker())
-            {
-                keyElem.setAttribute("hasHapticMarker", "true");
-            }
-
-            for (int j = 0; j < key->keyCharCount(); j++)
-            {
-                KeyChar* const keyChar = key->keyChar(j);
-
-                QDomElement keyCharElem = doc.createElement("char");
-                keyCharElem.setAttribute("position", keyChar->positionStr());
-                const QString modifier = keyChar->modifier();
-                if (!modifier.isEmpty())
-                {
-                    keyCharElem.setAttribute("modifier", modifier);
-                }
-                const QString value = keyChar->value();
-                if (value == " ")
-                {
-                    keyCharElem.appendChild(doc.createCDATASection(value));
-                }
-                else
-                {
-                    keyCharElem.appendChild(doc.createTextNode(value));
-                }
-                keyElem.appendChild(keyCharElem);
-            }
-        }
-
-        if (SpecialKey* const specialKey = qobject_cast<SpecialKey*>(abstractKey))
-        {
-            keyElem.setTagName("specialKey");
-            keyElem.setAttribute("type", specialKey->typeStr());
-
-            const QString modifierId = specialKey->modifierId();
-            if (!modifierId.isNull())
-            {
-                keyElem.setAttribute("modifierId", modifierId);
-            }
-            const QString label = specialKey->label();
-            if (!label.isNull())
-            {
-                keyElem.setAttribute("label", label);
-            }
-        }
-
-        keysElem.appendChild(keyElem);
-    }
-
-    root.appendChild(idElem);
-    root.appendChild(titleElem);
-    root.appendChild(nameElem);
-    root.appendChild(widthElem);
-    root.appendChild(heightElem);
-    root.appendChild(keysElem);
-
-    QFile file;
-
-    file.setFileName(path);
-
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        kWarning() << "can't open:" << file.fileName();
-        return false;
-    }
-
-    file.write(doc.toByteArray());
-    return true;
-}
-
-
-bool DataAccess::loadCourse(const QString &path, Course* target)
-{
-    target->setIsValid(false);
-    QFile courseFile;
-    courseFile.setFileName(path);
-    if (!courseFile.open(QIODevice::ReadOnly))
-    {
-        kWarning() << "can't open:" << path;
-        return false;
-    }
-    QXmlSchema schema = loadXmlSchema("course");
-    if (!schema.isValid())
-        return false;
-    QDomDocument doc = getDomDocument(courseFile, schema);
-    if (doc.isNull())
-    {
-        kWarning() << "invalid doc:" << path;
-        return false;
-    }
-    QDomElement root(doc.documentElement());
-
-    target->setId(root.firstChildElement("id").text());
-    target->setTitle(root.firstChildElement("title").text());
-    target->setDescription(root.firstChildElement("description").text());
-    target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
-    target->clearLessons();
-
-    for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
-         !lessonNode.isNull();
-         lessonNode = lessonNode.nextSiblingElement())
-    {
-        Lesson* lesson = new Lesson(this);
-        lesson->setId(lessonNode.firstChildElement("id").text());
-        lesson->setTitle(lessonNode.firstChildElement("title").text());
-        lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
-        lesson->setText(lessonNode.firstChildElement("text").text());
-        target->addLesson(lesson);
-    }
-
-    target->setIsValid(true);
-    return true;
-}
-
-bool DataAccess::storeCourse(const QString& path, Course* source)
-{
-
-    QDomDocument doc;
-
-    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
-    doc.appendChild(header);
-
-    QDomElement root = doc.createElement("course");
-    doc.appendChild(root);
-
-    QDomElement idElem = doc.createElement("id");
-    QDomElement titleElem = doc.createElement("title");
-    QDomElement descriptionElem = doc.createElement("description");
-    QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
-    QDomElement lessonsElem = doc.createElement("lessons");
-
-    idElem.appendChild(doc.createTextNode(source->id()));
-    titleElem.appendChild(doc.createTextNode(source->title()));
-    keyboardLayoutElem.appendChild(doc.createTextNode(source->keyboardLayoutName()));
-    descriptionElem.appendChild(doc.createTextNode(source->description()));
-
-    for (int i = 0; i < source->lessonCount(); i++)
-    {
-        Lesson* const lesson = source->lesson(i);
-
-        QStringList lines;
-
-        QDomElement lessonElem = doc.createElement("lesson");
-        QDomElement idElem = doc.createElement("id");
-        QDomElement titleElem = doc.createElement("title");
-        QDomElement newCharactersElem = doc.createElement("newCharacters");
-        QDomElement textElem = doc.createElement("text");
-
-        idElem.appendChild(doc.createTextNode(lesson->id()));
-        titleElem.appendChild(doc.createTextNode(lesson->title()));
-        newCharactersElem.appendChild(doc.createTextNode(lesson->newCharacters()));
-        textElem.appendChild(doc.createTextNode(lesson->text()));
-
-        lessonElem.appendChild(idElem);
-        lessonElem.appendChild(titleElem);
-        lessonElem.appendChild(newCharactersElem);
-        lessonElem.appendChild(textElem);
-        lessonsElem.appendChild(lessonElem);
-    }
-
-    root.appendChild(idElem);
-    root.appendChild(titleElem);
-    root.appendChild(descriptionElem);
-    root.appendChild(keyboardLayoutElem);
-    root.appendChild(lessonsElem);
-
-    QFile file;
-
-    file.setFileName(path);
-
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        kWarning() << "can't open:" << file.fileName();
-        return false;
-    }
-
-    file.write(doc.toByteArray());
-    return true;
-}
-
-QXmlSchema DataAccess::loadXmlSchema(const QString &name)
-{
-    QXmlSchema schema;
-    QString relPath = QString("schemata/%1.xsd").arg(name);
-    QFile schemaFile;
-    if (!openResourceFile(relPath, schemaFile))
-    {
-        return schema;
-    }
-    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
-    if (!schema.isValid())
-    {
-        kWarning() << schemaFile.fileName() << "is invalid";
-    }
-    return schema;
-}
-
-QDomDocument DataAccess::getDomDocument(QFile &file, QXmlSchema &schema)
-{
-    QDomDocument doc;
-    QXmlSchemaValidator validator(schema);
-    if (!validator.validate(&file))
-    {
-        return doc;
-    }
-    file.reset();
-    QString errorMsg;
-    if (!doc.setContent(&file, &errorMsg))
-    {
-        kWarning() << errorMsg;
-    }
-    return doc;
-}
-
-bool DataAccess::openResourceFile(const QString &relPath, QFile& file)
-{
-    QString path = KGlobal::dirs()->findResource("appdata", relPath);
-    if (path.isNull())
-    {
-        kWarning() << "can't find resource:" << relPath;
-        return false;
-    }
-    file.setFileName(path);
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        kWarning() << "can't open" << path;
-        return false;
-    }
-    return true;
 }

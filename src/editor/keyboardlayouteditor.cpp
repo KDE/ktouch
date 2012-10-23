@@ -35,6 +35,7 @@
 #include "core/abstractkey.h"
 #include "core/key.h"
 #include "core/keychar.h"
+#include "core/userdataaccess.h"
 #include "undocommands/keyboardlayoutcommands.h"
 #include "application.h"
 
@@ -68,18 +69,17 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
 
     m_dataIndexKeyboardLayout = dataIndexKeyboardLayout;
 
-    const QString path = dataIndexKeyboardLayout->path();
-
     if (currentUndoStack())
     {
         currentUndoStack()->disconnect(this, SLOT(validateSelection()));
     }
-    initUndoStack(path);
+
+    initUndoStack(QString("keyboard-layout-%1").arg(dataIndexKeyboardLayout->id()));
     m_propertiesWidget->setUndoStack(currentUndoStack());
     setSelectedKey(0);
     connect(currentUndoStack(), SIGNAL(indexChanged(int)), SLOT(validateSelection()));
 
-    if (!dataAccess.loadKeyboardLayout(path, m_keyboardLayout))
+    if (!dataAccess.loadKeyboardLayout(dataIndexKeyboardLayout, m_keyboardLayout))
     {
         KMessageBox::error(this, i18n("Error while opening keyboard layout"));
     }
@@ -112,9 +112,9 @@ void KeyboardLayoutEditor::save()
     if (currentUndoStack()->isClean())
         return;
 
-    DataAccess dataAccess;
+    UserDataAccess userDataAccess;
 
-    dataAccess.storeKeyboardLayout(m_dataIndexKeyboardLayout->path(), m_keyboardLayout);
+    userDataAccess.storeKeyboardLayout(m_keyboardLayout);
     currentUndoStack()->setClean();
 }
 

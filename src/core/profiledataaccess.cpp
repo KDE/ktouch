@@ -19,21 +19,17 @@
 
 #include <QVariant>
 #include <QSqlDatabase>
-#include <QSqlQuery>
 #include <QSqlError>
 
-#include <kstandarddirs.h>
-#include <klocale.h>
-#include <kdebug.h>
+#include <KDebug>
 
 #include "core/profile.h"
 #include "core/course.h"
 #include "core/lesson.h"
 #include "core/trainingstats.h"
 
-ProfileDataAccess::ProfileDataAccess(QObject *parent) :
-    QObject(parent),
-    m_errorMessage(QString())
+ProfileDataAccess::ProfileDataAccess(QObject* parent) :
+    DbAccess(parent)
 {
 }
 
@@ -614,164 +610,6 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
     }
 
     return query;
-}
-
-QString ProfileDataAccess::errorMessage() const
-{
-    return m_errorMessage;
-}
-
-QSqlDatabase ProfileDataAccess::database()
-{
-    if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection))
-    {
-        QString dbPath = KGlobal::dirs()->locateLocal("appdata", "profiles.db");
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName(dbPath);
-        if (!db.open())
-        {
-            kWarning() << db.lastError().text();
-            raiseError(db.lastError());
-            return db;
-        }
-
-        if (!checkDbSchema())
-        {
-            db.close();
-        }
-
-        return db;
-    }
-
-    return QSqlDatabase::database(QSqlDatabase::defaultConnection);
-}
-
-bool ProfileDataAccess::checkDbSchema()
-{
-    QSqlDatabase db = QSqlDatabase::database();
-
-    db.exec("CREATE TABLE IF NOT EXISTS metadata ("
-            "key TEXT PRIMARY KEY, "
-            "value TEXT"
-            ")");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    QSqlQuery versionQuery = db.exec("SELECT value FROM metadata WHERE key = 'version'");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    if (versionQuery.next())
-    {
-        QString version = versionQuery.value(0).toString();
-        if (version != "1.0")
-        {
-            m_errorMessage = i18n("Invalid database version '%1'.").arg(version);
-            emit errorMessageChanged();
-            return false;
-        }
-    }
-    else
-    {
-        if (!db.transaction())
-        {
-            kWarning() <<  db.lastError().text();
-            raiseError(db.lastError());
-            return false;
-        }
-        db.exec("INSERT INTO metadata (key, value) VALUES ('version', '1.0')");
-        if (db.lastError().isValid())
-        {
-            kWarning() << db.lastError().text();
-            raiseError(db.lastError());
-            return false;
-        }
-        if (!db.commit())
-        {
-            kWarning() << db.lastError().text();
-            raiseError(db.lastError());
-            return false;
-        }
-    }
-
-    db.exec("CREATE TABLE IF NOT EXISTS profiles ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "name TEXT, "
-            "skill_level INTEGER, "
-            "last_used_course_id TEXT "
-            ")");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    db.exec("CREATE TABLE IF NOT EXISTS training_stats ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "profile_id INTEGER, "
-            "course_id TEXT, "
-            "lesson_id TEXT, "
-            "date INT, "
-            "characters_typed INTEGER, "
-            "error_count INTEGER, "
-            "elapsed_time INTEGER "
-            ")");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    db.exec("CREATE TABLE IF NOT EXISTS training_stats_errors ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "stats_id INTEGER, "
-            "character TEXT, "
-            "count INTEGER "
-            ")");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    db.exec("CREATE TABLE IF NOT EXISTS course_progress ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "profile_id INTEGER, "
-            "course_id TEXT, "
-            "type INTEGER, "
-            "lesson_id TEXT "
-            ")");
-
-    if (db.lastError().isValid())
-    {
-        kWarning() << db.lastError().text();
-        raiseError(db.lastError());
-        return false;
-    }
-
-    return true;
-}
-
-void ProfileDataAccess::raiseError(const QSqlError& error)
-{
-    m_errorMessage = QString("%1: %2").arg(error.driverText(), error.databaseText());
-    emit errorMessageChanged();
 }
 
 int ProfileDataAccess::findCourseProgressId(Profile* profile, const QString& courseId, CourseProgressType type, bool* ok)

@@ -70,7 +70,7 @@ Resource* NewResourceAssistant::createResource()
         {
             Course templateCourse;
             DataAccess dataAccess;
-            dataAccess.loadCourse(templateDataIndexCourse->path(), &templateCourse);
+            dataAccess.loadCourse(templateDataIndexCourse, &templateCourse);
             course->copyFrom(&templateCourse);
         }
 
@@ -90,7 +90,7 @@ Resource* NewResourceAssistant::createResource()
         {
             KeyboardLayout templateKeyboardLayout;
             DataAccess dataAccess;
-            dataAccess.loadKeyboardLayout(templateDataIndexKeyboardLayout->path(), &templateKeyboardLayout);
+            dataAccess.loadKeyboardLayout(templateDataIndexKeyboardLayout, &templateKeyboardLayout);
             keyboardLayout->copyFrom(&templateKeyboardLayout);
         }
 

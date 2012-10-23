@@ -40,6 +40,8 @@
 #include "core/resource.h"
 #include "core/course.h"
 #include "core/keyboardlayout.h"
+#include "core/resourcedataaccess.h"
+#include "core/userdataaccess.h"
 #include "models/resourcemodel.h"
 #include "models/categorizedresourcesortfilterproxymodel.h"
 #include "resourceeditorwidget.h"
@@ -156,6 +158,7 @@ void ResourceEditor::deleteResource()
     save();
 
     DataAccess dataAccess;
+    UserDataAccess userDataAccess;
 
     if (DataIndexCourse* course = qobject_cast<DataIndexCourse*>(m_currentResource))
     {
@@ -164,14 +167,12 @@ void ResourceEditor::deleteResource()
             if (m_dataIndex->course(i) == course)
             {
                 Course* backup = new Course();
-                if (!dataAccess.loadCourse(m_dataIndex->course(i)->path(), backup))
+                if (!dataAccess.loadCourse(m_dataIndex->course(i), backup))
                 {
                     KMessageBox::error(this, i18n("Error while opening course"));
                     return;
                 }
-                QFile file;
-                file.setFileName(course->path());
-                if (!file.remove())
+                if (!userDataAccess.deleteCourse(backup))
                 {
                     delete backup;
                     KMessageBox::error(this, i18n("Error while deleting course"));
@@ -179,11 +180,6 @@ void ResourceEditor::deleteResource()
                 }
                 prepareResourceRestore(backup);
                 m_dataIndex->removeCourse(i);
-                if (!dataAccess.storeDataIndex(m_dataIndex))
-                {
-                    KMessageBox::error(this, i18n("Error while saving data index to disk."));
-                    return;
-                }
             }
         }
     }
@@ -194,25 +190,18 @@ void ResourceEditor::deleteResource()
             if (m_dataIndex->keyboardLayout(i) == keyboardLayout)
             {
                 KeyboardLayout* backup = new KeyboardLayout();
-                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i)->path(), backup))
+                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i), backup))
                 {
                     KMessageBox::error(this, i18n("Error while opening keyboard layout"));
                     return;
                 }
-                QFile file;
-                file.setFileName(keyboardLayout->path());
-                if (!file.remove())
+                if (!userDataAccess.deleteKeyboardLayout(backup))
                 {
                     KMessageBox::error(this, i18n("Error while deleting keyboard layout"));
                     return;
                 }
                 prepareResourceRestore(backup);
                 m_dataIndex->removeKeyboardLayout(i);
-                if (!dataAccess.storeDataIndex(m_dataIndex))
-                {
-                    KMessageBox::error(this, i18n("Error while saving data index to disk."));
-                    return;
-                }
             }
         }
     }
@@ -243,6 +232,7 @@ void ResourceEditor::exportResource()
     Q_ASSERT(m_currentResource);
 
     DataAccess dataAccess;
+    ResourceDataAccess resourceDataAccess;
 
     save();
 
@@ -254,7 +244,7 @@ void ResourceEditor::exportResource()
             {
                 Course* course = new Course();
 
-                if (!dataAccess.loadCourse(m_dataIndex->course(i)->path(), course))
+                if (!dataAccess.loadCourse(m_dataIndex->course(i), course))
                 {
                     KMessageBox::error(this, i18n("Error while opening course"));
                     return;
@@ -265,7 +255,7 @@ void ResourceEditor::exportResource()
 
                 if (!path.isNull())
                 {
-                    if (!dataAccess.storeCourse(path, course))
+                    if (!resourceDataAccess.storeCourse(path, course))
                     {
                         KMessageBox::error(this, i18n("Error while saving course"));
                         return;
@@ -282,7 +272,7 @@ void ResourceEditor::exportResource()
             {
                 KeyboardLayout* keyboardlayout = new KeyboardLayout();
 
-                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i)->path(), keyboardlayout))
+                if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i), keyboardlayout))
                 {
                     KMessageBox::error(this, i18n("Error while opening keyboard layout"));
                     return;
@@ -293,7 +283,7 @@ void ResourceEditor::exportResource()
 
                 if (!path.isNull())
                 {
-                    if (!dataAccess.storeKeyboardLayout(path, keyboardlayout))
+                    if (!resourceDataAccess.storeKeyboardLayout(path, keyboardlayout))
                     {
                         KMessageBox::error(this, i18n("Error while saving keyboard layout"));
                         return;
@@ -358,8 +348,6 @@ void ResourceEditor::save()
 {
     if (m_undoGroup->activeStack() && !m_undoGroup->activeStack()->isClean())
     {
-        DataAccess dataAccess;
-        dataAccess.storeDataIndex(m_dataIndex);
         m_editorWidget->save();
     }
 
@@ -401,7 +389,7 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
 
 Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexResource)
 {
-    DataAccess dataAccess;
+    UserDataAccess userDataAccess;
 
     if (Course* course = qobject_cast<Course*>(resource))
     {
@@ -414,7 +402,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             dir.filePath(QString("%1.xml").arg(course->id())):
             dataIndexCourse->path();
 
-        if (!dataAccess.storeCourse(path, course))
+        if (!userDataAccess.storeCourse(course))
         {
             KMessageBox::error(this, i18n("Error while saving course to disk."));
             return 0;
@@ -432,12 +420,6 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             m_dataIndex->addCourse(dataIndexCourse);
         }
 
-        if (!dataAccess.storeDataIndex(m_dataIndex))
-        {
-            KMessageBox::error(this, i18n("Error while saving data index to disk."));
-            return 0;
-        }
-
         dataIndexResource = dataIndexCourse;
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
@@ -451,7 +433,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             dir.filePath(QString("%1.xml").arg(keyboardLayout->id())):
             dataIndexKeyboardLayout->path();
 
-        if (!dataAccess.storeKeyboardLayout(path, keyboardLayout))
+        if (!userDataAccess.storeKeyboardLayout(keyboardLayout))
         {
             KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
             return 0;
@@ -466,12 +448,6 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         if (dataIndexResource == 0)
         {
             m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
-        }
-
-        if (!dataAccess.storeDataIndex(m_dataIndex))
-        {
-            KMessageBox::error(this, i18n("Error while saving data index to disk."));
-            return 0;
         }
 
         dataIndexResource = dataIndexKeyboardLayout;
@@ -514,10 +490,10 @@ void ResourceEditor::selectFirstResource()
 
 bool ResourceEditor::importCourse(const QString& path)
 {
-    DataAccess dataAccess;
+    ResourceDataAccess resourceDataAccess;
     Course course;
 
-    if (!dataAccess.loadCourse(path, &course))
+    if (!resourceDataAccess.loadCourse(path, &course))
         return false;
 
     DataIndexCourse* overwriteDataIndexCourse(0);
@@ -572,10 +548,10 @@ bool ResourceEditor::importCourse(const QString& path)
 
 bool ResourceEditor::importKeyboardLayout(const QString& path)
 {
-    DataAccess dataAccess;
+    ResourceDataAccess resourceDataAccess;
     KeyboardLayout keyboardLayout;
 
-    if (!dataAccess.loadKeyboardLayout(path, &keyboardLayout))
+    if (!resourceDataAccess.loadKeyboardLayout(path, &keyboardLayout))
         return false;
 
     DataIndexKeyboardLayout* overwriteDataIndexKeyboardLayout(0);

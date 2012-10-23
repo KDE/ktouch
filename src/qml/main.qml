@@ -80,7 +80,7 @@ Item {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
 
                 if (dataIndexLayout.name === name) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
                     return
                 }
             }
@@ -92,7 +92,7 @@ Item {
                 var dataIndexLayout = dataIndex.keyboardLayout(i)
 
                 if (name.search(dataIndexLayout.name) === 0) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout.path, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
                     return
                 }
             }

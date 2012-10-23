@@ -52,7 +52,7 @@ Item {
         var targetPage = automaticSelection? coursePageContainer.activePage: coursePageContainer.inactivePage
 
         priv.currentIndex = index;
-        targetPage.coursePath = dataIndexCourse.path
+        targetPage.dataIndexCourse = dataIndexCourse
         courseTitleLabel.text = dataIndexCourse.title
 
         if (!automaticSelection) {
