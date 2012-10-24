@@ -145,24 +145,6 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/fi.xml</path>
   </course>
   <course>
-    <title>Fran&#xE7;ais 1 (auto-g&#xE9;n&#xE9;r&#xE9;)</title>
-    <description>Trainingfile genereated in October 2001
-Program written by H&#xE5;vard Fr&#xF8;iland
-</description>
-    <keyboardLayout>fr</keyboardLayout>
-    <id>fr.auto1</id>
-    <path>courses/fr.auto1.xml</path>
-  </course>
-  <course>
-    <title>Fran&#xE7;ais 2 (auto-g&#xE9;n&#xE9;r&#xE9;)</title>
-    <description>Trainingfile generated Mon Oct  1 08:14:15 2001
-Program written by H&#xE5;vard Fr&#xF8;iland
-</description>
-    <keyboardLayout>fr</keyboardLayout>
-    <id>{319210ee-c8ae-41cd-a04c-4c479d0e4658}</id>
-    <path>courses/fr.auto2.xml</path>
-  </course>
-  <course>
     <title>Dvorak Fran&#xE7;ais</title>
     <description>Apprentissage du clavier Dvorak-fr
 30 mai 2002 - Francis Leboutte, www.algo.be
@@ -171,6 +153,15 @@ Program written by H&#xE5;vard Fr&#xF8;iland
     <keyboardLayout>fr(dvorak)</keyboardLayout>
     <id>{3e70bc9a-37fa-4f87-8c47-bc81f71a237f}</id>
     <path>courses/fr.dvarok.xml</path>
+  </course>
+  <course>
+    <title>Fran&#xE7;ais 2 (auto-g&#xE9;n&#xE9;r&#xE9;)</title>
+    <description>Trainingfile generated Mon Oct  1 08:14:15 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>fr</keyboardLayout>
+    <id>{319210ee-c8ae-41cd-a04c-4c479d0e4658}</id>
+    <path>courses/fr.xml</path>
   </course>
   <course>
     <title>English (auto-generated)</title>

@@ -16,8 +16,7 @@ set (coursefiles
     es3.xml
     es.dvorak.xml
     fi.xml
-    fr.auto1.xml
-    fr.auto2.xml
+    fr.xml
     fr.dvarok.xml
     gb.xml
     gr.xml
