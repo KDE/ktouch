@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewKeyboardLayoutWidget</class>
+ <widget class="QWidget" name="NewKeyboardLayoutWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>256</width>
+    <height>78</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="KMessageWidget" name="m_messageWidget"/>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="1" column="0">
+      <widget class="QLabel" name="m_nameLabel">
+       <property name="text">
+        <string>Name:</string>
+       </property>
+       <property name="buddy">
+        <cstring>m_nameLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="KLineEdit" name="m_nameLineEdit"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="m_pasteCurrentNameButton">
+         <property name="toolTip">
+          <string>Paste current system keyboard layout name</string>
+         </property>
+         <property name="icon">
+          <iconset theme="tools-wizard">
+           <normaloff/>
+          </iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="m_titleLabel">
+       <property name="text">
+        <string>Title:</string>
+       </property>
+       <property name="buddy">
+        <cstring>m_titleLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="KLineEdit" name="m_titleLineEdit"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KMessageWidget</class>
+   <extends>QFrame</extends>
+   <header location="global">kmessagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>m_titleLineEdit</tabstop>
+  <tabstop>m_nameLineEdit</tabstop>
+  <tabstop>m_pasteCurrentNameButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

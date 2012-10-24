@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+<data>
+  <course>
+    <title>&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</title>
+    <description>&#x625;&#x639;&#x62F;&#x627;&#x62F;: &#x641;&#x647;&#x62F; &#x627;&#x644;&#x633;&#x639;&#x64A;&#x62F;&#x64A;
+&#x628;&#x631;&#x64A;&#x62F; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A;: fahad.alsaidi@gmail.com
+&#x648;&#x627;&#x62F;&#x64A; &#x627;&#x644;&#x62A;&#x642;&#x646;&#x64A;&#x629;</description>
+    <keyboardLayout>ara</keyboardLayout>
+    <id>{0ec7a87f-8238-4b1f-bccd-947490612ed6}</id>
+    <path>courses/ara.xml</path>
+  </course>
+  <course>
+    <title>Bulgarian (auto-generated)</title>
+    <description>Georgi P. Georgiev 
+joro_georgiev2001@magibg.com</description>
+    <keyboardLayout>bg</keyboardLayout>
+    <id>{00459b0a-bb5c-479f-9bb9-de044c5ae510}</id>
+    <path>courses/bg1.xml</path>
+  </course>
+  <course>
+    <title>Bulgarian (auto-generated, long)</title>
+    <description>Georgi P. Georgiev, 
+joro_georgiev2001@magibg.com</description>
+    <keyboardLayout>bg</keyboardLayout>
+    <id>{4807933b-7e09-4019-8e0f-b53ca6cedd38}</id>
+    <path>courses/bg2.xml</path>
+  </course>
+  <course>
+    <title>Portugu&#xEA;s (Brasileiro)</title>
+    <description>Arquivo de treinamento gerado Wed Aug 24 14:00:33 2005
+Preparado por Ari Caldeira</description>
+    <keyboardLayout>br</keyboardLayout>
+    <id>{5bf56303-d273-4bed-b5c2-ec6cae76ba44}</id>
+    <path>courses/br.xml</path>
+  </course>
+  <course>
+    <title>Catal&#xE0; (autogenerat)</title>
+    <description>KTouch training file generated Sat Aug 23 21:40:00 2003
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{503d3f86-e6e7-4597-88ed-e5d7b6431aba}</id>
+    <path>courses/cat.xml</path>
+  </course>
+  <course>
+    <title>&#x10C;esk&#xE9; (automaticky vytvo&#x159;eno)</title>
+    <description>Trainingfile generated Fri Dec 22 22:51:46 2006
+Program written by Hendrik Naumann
+Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
+    <keyboardLayout>cz</keyboardLayout>
+    <id>{1d79daec-008c-4620-8d3d-4da9c94427a6}</id>
+    <path>courses/cz.xml</path>
+  </course>
+  <course>
+    <title>Deutsches Dvorak II</title>
+    <description>An das Deutsche Dvorak Layout adaptiert von Thomas Michael Weissel
+Dank an: Carsten Mischke und Hanno Behrens
+Homepage: http://xapient.net</description>
+    <keyboardLayout>de(dvorak)</keyboardLayout>
+    <id>{bd735317-7bf6-46aa-bcb2-7c01fb58345f}</id>
+    <path>courses/de.dvorak.xml</path>
+  </course>
+  <course>
+    <title>Deutsches Neo 2</title>
+    <description>&#xDC;berarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com&gt; inspiriert durch die Vorlage von Hanno Behrens.
+Fehlerkorrektur von Hans Meine in 2012.
+Homepage: http://neo-layout.org</description>
+    <keyboardLayout>de(neo)</keyboardLayout>
+    <id>{f19ee751-3545-4b52-83ab-8c5b80d42045}</id>
+    <path>courses/de.neo.xml</path>
+  </course>
+  <course>
+    <title>Deutsch</title>
+    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt;</description>
+    <keyboardLayout>de</keyboardLayout>
+    <id>{ac4c596a-520a-405f-8a7f-532dc335a5c4}</id>
+    <path>courses/de1.xml</path>
+  </course>
+  <course>
+    <title>Deutsch (aus Tipptrainer)</title>
+    <description>German training file
+adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
+for ktouch from a training file distributed by
+Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
+for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
+distributed under the GPL2
+Version: 0.1 beta</description>
+    <keyboardLayout>de</keyboardLayout>
+    <id>{6fe46eef-3182-4322-82b6-bb65831e594e}</id>
+    <path>courses/de2.xml</path>
+  </course>
+  <course>
+    <title>Dansk</title>
+    <description>Tr&#xE6;ningsfil udviklet af
+Gunther Strube,  gstrube@tiscali.dk og
+Anja Lysholm, anjal@danbbs.dk, April-Juli 2002
+
+Baseret p&#xE5;:
+ "L&#xE6;r maskinskrivning i Folke- og Ungdomsskolen"
+    Kamma Jensen &amp; Jytte M&#xF8;ller
+    ISBN 87-17-02200-2
+
+Program udviklet af H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>dk</keyboardLayout>
+    <id>{e95350b8-8d51-471c-a6bd-12cfc0caf1d7}</id>
+    <path>courses/dk1.xml</path>
+  </course>
+  <course>
+    <title>Dvorak espa&#xF1;ol</title>
+    <description>Ignacio Fern&#xE1;ndez Galv&#xE1;n, 2005
+http://djelibeibi.unex.es/</description>
+    <keyboardLayout>es(dvorak)</keyboardLayout>
+    <id>{b01d992b-f2f6-4343-8de6-8fcf6b1c4a75}</id>
+    <path>courses/es.dvorak.xml</path>
+  </course>
+  <course>
+    <title>Espa&#xF1;ol 1 (generado autom&#xE1;ticamente)</title>
+    <description>KTouch training file generated Mon Mar 31 17:09:15 2003
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{1413c3cc-cf33-4bb9-95c1-63a99762f120}</id>
+    <path>courses/es1.xml</path>
+  </course>
+  <course>
+    <title>Espa&#xF1;ol 2 (generado autom&#xE1;ticamente)</title>
+    <description>Fichero KTouch de entrenamiento generado por JRodas (sin tildes)</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{57aba0ba-2169-4c22-8550-5033d7dd6289}</id>
+    <path>courses/es2.xml</path>
+  </course>
+  <course>
+    <title>Espa&#xF1;ol 3 (generado autom&#xE1;ticamente)</title>
+    <description>Fichero KTouch de entrenamiento generado por JRodas (sin tildes)</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{d3b65af1-749b-42aa-8fa8-b378c1859b2c}</id>
+    <path>courses/es3.xml</path>
+  </course>
+  <course>
+    <title>Suomalainen (automaattisesti luotu)</title>
+    <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
+</description>
+    <keyboardLayout>fi</keyboardLayout>
+    <id>{6f530b7b-36d5-4268-b45c-398fa8f0688b}</id>
+    <path>courses/fi.xml</path>
+  </course>
+  <course>
+    <title>Dvorak Fran&#xE7;ais</title>
+    <description>Apprentissage du clavier Dvorak-fr
+30 mai 2002 - Francis Leboutte, www.algo.be
+7 d&#xE9;cembre 2004 - Passage au format ktouch par Matthieu MOY
+14 septembre 2005 - Passage au format ktouch XML par St&#xE9;phane Raimbault</description>
+    <keyboardLayout>fr(dvorak)</keyboardLayout>
+    <id>{3e70bc9a-37fa-4f87-8c47-bc81f71a237f}</id>
+    <path>courses/fr.dvarok.xml</path>
+  </course>
+  <course>
+    <title>Fran&#xE7;ais 2 (auto-g&#xE9;n&#xE9;r&#xE9;)</title>
+    <description>Trainingfile generated Mon Oct  1 08:14:15 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>fr</keyboardLayout>
+    <id>{319210ee-c8ae-41cd-a04c-4c479d0e4658}</id>
+    <path>courses/fr.xml</path>
+  </course>
+  <course>
+    <title>English (auto-generated)</title>
+    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
+Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>gb</keyboardLayout>
+    <id>gm</id>
+    <path>courses/gb.xml</path>
+  </course>
+  <course>
+    <title>&#x395;&#x3BB;&#x3BB;&#x3B7;&#x3BD;&#x3B9;&#x3BA;&#x3AC;</title>
+    <description>KTouch training file generated Fri Jun 14 19:46:08 2002
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>gr</keyboardLayout>
+    <id>{711fde1e-6757-47d1-b354-4c428eb34022}</id>
+    <path>courses/gr.xml</path>
+  </course>
+  <course>
+    <title>Italiana (generata automaticamente)</title>
+    <description>KTouch training file generated Tue Jul 27 13:27:52 2004
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>it</keyboardLayout>
+    <id>{d5a3ac52-ec39-495d-aa70-0e6de23f7d4b}</id>
+    <path>courses/it.xml</path>
+  </course>
+  <course>
+    <title>Lietuvi&#x173; (standartinis)</title>
+    <description>Tekstas i&#x161; programos &#x201E;Klaviat&#x16B;ros treniruokl&#x117; &#x201E;KP Typing Tutor&#x201C;&#x201C;.
+A&#x10D;i&#x16B; Sigitai Pedzevi&#x10D;ienei (sigitab@ktl.mii.lt)</description>
+    <keyboardLayout>lt(std)</keyboardLayout>
+    <id>{76a36212-db98-42e6-8dad-e1c1afb7c5ed}</id>
+    <path>courses/lt.std.xml</path>
+  </course>
+  <course>
+    <title>Nederlands (automatisch aangemaakt)</title>
+    <description>Typecursus door tijs@vandenbogaard.org
+Thu Dec 18 21:33:14 CET 2003
+
+Willekeurige data gegenereerd met het perl script
+van Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+    <keyboardLayout>nl</keyboardLayout>
+    <id>{6aa005fc-c9ee-42b8-958f-9264d59cea74}</id>
+    <path>courses/nl1.xml</path>
+  </course>
+  <course>
+    <title>Nederlands voor kinderen (automatisch aangemaakt)</title>
+    <description>KTouch oefenbestand voor kinderen
+
+De woordkeuze werd gebaseerd op het
+Perl Script geschreven door Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+
+Kenmerken van dit oefenbestand zijn :
+                          1. Een zeer geleidelijke overgang van het 
+                             ene niveau naar het andere, vooral in het
+                             begin.
+                          2. Een grote nadruk op het ritme
+                          3. Herhaling
+
+Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
+Dit document is een onderdeel van het KTouch programma en valt onder de 
+bepalingen van de GNU General Public License versie 2 of recenter.</description>
+    <keyboardLayout>nl</keyboardLayout>
+    <id>{fc3330f6-ce6c-4b90-b344-3ff2bac66c32}</id>
+    <path>courses/nl2.xml</path>
+  </course>
+  <course>
+    <title>Norsk</title>
+    <description>KTouch training file generated Sun Apr 22 16:26:01 2007
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+Manually modified in nano and gedit by Jarl Arntzen Wed Dec 1 2010 18:57.
+Separate levels for keys u, y and z needed</description>
+    <keyboardLayout>no</keyboardLayout>
+    <id>{1bebcd91-6397-44ff-a1ee-ce6b126bbbc0}</id>
+    <path>courses/no.xml</path>
+  </course>
+  <course>
+    <title>Polski (z TTCoach)</title>
+    <description>Plik &#x107;wiczeniowy KTouch stworzony
+na podstawie &#x107;wicze&#x144; dla TTCoach,
+Miko&#x142;aj Machowski</description>
+    <keyboardLayout>pl</keyboardLayout>
+    <id>{3e5be825-6f51-406c-8307-c8a77d15f2c2}</id>
+    <path>courses/pl.xml</path>
+  </course>
+  <course>
+    <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (Legacy)</title>
+    <description>Created by Oleksiy Gorelov &lt;grolm@ukr.net&gt;
+Kiev, Ukraine
+Mon Nov 14, 2005</description>
+    <keyboardLayout>ru(legacy)</keyboardLayout>
+    <id>{79c7cfd5-49c7-4e01-a7a2-f5a36cbbdeff}</id>
+    <path>courses/ru.legacy.xml</path>
+  </course>
+  <course>
+    <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (&#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x430;&#x44F;)</title>
+    <description>Russian training file                                                                                 
+adapted by Chemisov Konstantin &lt;dabc4123@mail.ru&gt;                                                            
+from ktouch-gen utility 
+29-08-2005</description>
+    <keyboardLayout>ru</keyboardLayout>
+    <id>{ebfc3797-2556-41bb-9f8a-2c2c1b3ac66f}</id>
+    <path>courses/ru1.xml</path>
+  </course>
+  <course>
+    <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (&#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x430;&#x44F;, &#x434;&#x43B;&#x438;&#x43D;&#x43D;&#x430;&#x44F;)</title>
+    <description>KTouch training file generated Tue Oct 25 12:51:40 MSD 2005 by Miha Ulanov (mulanov@mail.ru)</description>
+    <keyboardLayout>ru</keyboardLayout>
+    <id>{d3d04d1f-c809-48c7-ad11-831672be033d}</id>
+    <path>courses/ru2.xml</path>
+  </course>
+  <course>
+    <title>Slovenian</title>
+    <description>written by Jurij Turn&#x161;ek</description>
+    <keyboardLayout>si</keyboardLayout>
+    <id>{f7b6281f-da3b-4cd7-8c7c-289c9dff4dfa}</id>
+    <path>courses/si.xml</path>
+  </course>
+  <course>
+    <title>Slovensk&#xE1; (automaticky generovan&#xE1;)</title>
+    <description>Trainingfile generated Fri Dec 22 22:51:46 2006
+Program written by Hendrik Naumann
+Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
+    <keyboardLayout>sk</keyboardLayout>
+    <id>{01f5acbc-e471-4cc0-bb63-d157cbcad808}</id>
+    <path>courses/sk.xml</path>
+  </course>
+  <course>
+    <title>T&#xFC;rk&#xE7;e (otomatik-olu&#x15F;turulmu&#x15F;)</title>
+    <description>KTouch 10 parmak klaye dersi. Zemberek taraf&#x131;ndan otomatik olarak olu&#x15F;turulmu&#x15F;tur.</description>
+    <keyboardLayout>tr</keyboardLayout>
+    <id>{569a1546-786e-44a5-9627-8966ba7856cd}</id>
+    <path>courses/tr.xml</path>
+  </course>
+  <course>
+    <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>
+    <description>&#x423;&#x440;&#x43E;&#x43A;&#x438; &#x434;&#x43B;&#x44F; ktouch &#x443;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x43E;&#x44E;.
+&#x421;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43E; 15 &#x432;&#x435;&#x440;&#x435;&#x441;&#x43D;&#x44F; 2006 &#x440;&#x43E;&#x43A;&#x443;.
+&#x410;&#x432;&#x442;&#x43E;&#x440;: &#x42F;&#x43D;&#x43E;&#x432;&#x438;&#x447; &#x411;&#x43E;&#x440;&#x438;&#x441; (Yanovych Borys, borman@univ.kiev.ua)</description>
+    <keyboardLayout>ua</keyboardLayout>
+    <id>{13632c01-0a67-4658-87b7-e1810891065b}</id>
+    <path>courses/ua.xml</path>
+  </course>
+  <course>
+    <title>English (USA) Colemak (auto-generated)</title>
+    <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
+Modified by Sascha Peilicke 2008-08-07
+</description>
+    <keyboardLayout>us(colemak)</keyboardLayout>
+    <id>{7567adaf-82af-4afc-9d52-9b96ed5ae3a9}</id>
+    <path>courses/us.colemak.xml</path>
+  </course>
+  <course>
+    <title>Dvorak (US) (auto-generated)</title>
+    <description>Trainingfile genereated Mon Apr  8 18:44:12 2002
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+    <keyboardLayout>us(dvorak)</keyboardLayout>
+    <id>{93e68be6-c256-4ceb-9a25-ef94eeecd7c4}</id>
+    <path>courses/us.dvorak1.xml</path>
+  </course>
+  <course>
+    <title>Dvorak (US) - ABCD</title>
+    <description>This ktouch course is taken from Dan Wood's
+A Basic Course in Dvorac (ABCD)
+Available at http://www.gigliwood.com/abcd/abcd.html
+</description>
+    <keyboardLayout>us(dvorak)</keyboardLayout>
+    <id>{50314fdd-b4b6-4ddb-8c29-c5add4c75696}</id>
+    <path>courses/us.dvorak2.xml</path>
+  </course>
+  <course>
+    <title>English (US) (auto-generated)</title>
+    <description>KTouch training file generated Sun Mar 11 09:59:58 2007
+Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
+    <keyboardLayout>us</keyboardLayout>
+    <id>{c6cf3cc1-7bc2-4b15-91fa-a07b4633b51d}</id>
+    <path>courses/us.xml</path>
+  </course>
+  <keyboardLayout>
+    <title>&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</title>
+    <name>ara</name>
+    <id>{4d190ff1-fe4b-4da0-ab4f-c1309c7be551}</id>
+    <path>keyboardlayouts/ara.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Bulgarian</title>
+    <name>bg</name>
+    <id>{fca6401c-5e8b-4b54-ad4c-98ffc764a2dc}</id>
+    <path>keyboardlayouts/bg.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Portugu&#xEA;s (Brasileiro)</title>
+    <name>br</name>
+    <id>{10ce9ec5-529b-484f-a31f-efeab796c931}</id>
+    <path>keyboardlayouts/br.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Fran&#xE7;ais (Suisse)</title>
+    <name>ch(fr)</name>
+    <id>{61201da8-3a73-4427-90c6-a0868539f0f6}</id>
+    <path>keyboardlayouts/ch.fr.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>German (Swiss)</title>
+    <name>ch</name>
+    <id>{3e6ee21a-2ce2-4629-90c0-b7acc62b31ae}</id>
+    <path>keyboardlayouts/ch.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x10C;esk&#xE9; qwerty</title>
+    <name>cz(qwerty)</name>
+    <id>{1c527bcb-b1d6-4446-adda-727e8be8ed45}</id>
+    <path>keyboardlayouts/cz.qwerty.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x10C;esk&#xE9;</title>
+    <name>cz</name>
+    <id>{e5cc1947-99a7-4fe0-900a-74db0e1b0d22}</id>
+    <path>keyboardlayouts/cz.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Deutsches Dvorak II</title>
+    <name>de(dvorak)</name>
+    <id>{595aff66-4a1b-40eb-8458-64672e435318}</id>
+    <path>keyboardlayouts/de.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Deutsches Neo 2</title>
+    <name>de(neo)</name>
+    <id>{479e26ab-46a9-4412-b87d-6b0164c0b484}</id>
+    <path>keyboardlayouts/de.neo2.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Deutsch</title>
+    <name>de</name>
+    <id>{ab335402-20de-4ccc-bef6-3413d02d7b1b}</id>
+    <path>keyboardlayouts/de.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Dansk</title>
+    <name>dk</name>
+    <id>{736ca572-ecad-4700-9b61-8071603f74d0}</id>
+    <path>keyboardlayouts/dk.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Estonian</title>
+    <name>ee</name>
+    <id>{b373bedc-5510-4a71-b083-15c2d1dfe666}</id>
+    <path>keyboardlayouts/ee.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Dvorak espa&#xF1;ol</title>
+    <name>es(dvorak)</name>
+    <id>{bcdf002d-0474-425f-980e-c7529a05cd72}</id>
+    <path>keyboardlayouts/es.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Espa&#xF1;ol</title>
+    <name>es</name>
+    <id>{89d5d879-cc9c-44a4-a894-7750dc43dc85}</id>
+    <path>keyboardlayouts/es.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Suomalainen</title>
+    <name>fi</name>
+    <id>{1a667173-266e-4064-8947-ba6ac76d56f7}</id>
+    <path>keyboardlayouts/fi.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Fran&#xE7;ais Dvorak</title>
+    <name>fr(dvorak)</name>
+    <id>{2e85625c-1122-4c90-8979-f755f1868e27}</id>
+    <path>keyboardlayouts/fr.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Fran&#xE7;ais</title>
+    <name>fr</name>
+    <id>{8cc6761a-5199-4ad9-9f35-a978d2f81049}</id>
+    <path>keyboardlayouts/fr.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English Dvorak (United Kingdom)</title>
+    <name>gb(dvorak)</name>
+    <id>{eb18f999-63a5-40db-a4b7-8ef665b02de0}</id>
+    <path>keyboardlayouts/gb.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English (United Kingdom)</title>
+    <name>gb</name>
+    <id>{597b6092-b967-4ae7-9e82-6c7ae2fcb4a0}</id>
+    <path>keyboardlayouts/gb.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Magyar</title>
+    <name>hu</name>
+    <id>{8e5cf918-5593-4065-b296-6637ba08946e}</id>
+    <path>keyboardlayouts/hu.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Hebrew</title>
+    <name>il</name>
+    <id>{aa4cf2bd-a03e-4ae3-b920-a7df557eb235}</id>
+    <path>keyboardlayouts/il.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Kannada</title>
+    <name>in(kan)</name>
+    <id>{92db7aaf-bc44-4610-9620-9d339119d59b}</id>
+    <path>keyboardlayouts/in.kan.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Tamil</title>
+    <name>in(tam_unicode)</name>
+    <id>{1c94be1f-5497-4443-8562-ea754fde5fbe}</id>
+    <path>keyboardlayouts/in.tam_unicode.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Italiana</title>
+    <name>it</name>
+    <id>{d4c6fa92-a41c-4064-a235-4e3daf428abe}</id>
+    <path>keyboardlayouts/it.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Espa&#xF1;ol (Latinoamarican)</title>
+    <name>latam</name>
+    <id>{7c1842a3-3d8d-4cd9-ad75-2eee8bd7e231}</id>
+    <path>keyboardlayouts/latam.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Lietuvi&#x173; (standartinis)</title>
+    <name>lt(std)</name>
+    <id>{dc0469c9-1de6-4f60-a85c-cfe7182f17c3}</id>
+    <path>keyboardlayouts/lt.std.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Norsk</title>
+    <name>no</name>
+    <id>{1c5acd1b-09a8-46aa-a9d3-1ee82f926692}</id>
+    <path>keyboardlayouts/no.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Portugu&#xEA;s</title>
+    <name>pt</name>
+    <id>{8664a763-d980-4c44-9edf-88d9741e619d}</id>
+    <path>keyboardlayouts/pt.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (Legacy)</title>
+    <name>ru(legacy)</name>
+    <id>{fae08865-69f1-4f34-97e2-ea210d039632}</id>
+    <path>keyboardlayouts/ru.legacy.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Russian</title>
+    <name>ru</name>
+    <id>{e6c1332e-18c2-4045-a8b5-34335d0fe5d4}</id>
+    <path>keyboardlayouts/ru.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Swedish</title>
+    <name>se</name>
+    <id>{044fa5bc-a017-48c8-974c-1444065b5d2b}</id>
+    <path>keyboardlayouts/se.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Slovenian</title>
+    <name>si</name>
+    <id>{cf158a7c-e061-4d66-a51c-e60845e71b72}</id>
+    <path>keyboardlayouts/si.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Sloven&#x10D;ina (qwerty)</title>
+    <name>sk(qwerty)</name>
+    <id>{c0a4d662-55ba-49e1-ae09-b0ce4f8f8bec}</id>
+    <path>keyboardlayouts/sk.qwerty.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Sloven&#x10D;ina</title>
+    <name>sk</name>
+    <id>{13d10422-4033-40da-a21b-05dc06358014}</id>
+    <path>keyboardlayouts/sk.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>T&#xFC;rk&#xE7;e (F)</title>
+    <name>tr(f)</name>
+    <id>{fa9fedc2-d017-469a-9a1a-01469b97352a}</id>
+    <path>keyboardlayouts/tr.f.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>
+    <name>ua</name>
+    <id>{9245b106-80f1-4217-9e35-ba581db0ec99}</id>
+    <path>keyboardlayouts/ua.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English Colemak (USA)</title>
+    <name>us(colemak)</name>
+    <id>{281e894f-26b8-46f0-9412-32b33a873efd}</id>
+    <path>keyboardlayouts/us.colemak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English Dvorak (USA)</title>
+    <name>us(dvorak)</name>
+    <id>{82647f1d-cfaa-491e-ab41-6d6c86e4f5fd}</id>
+    <path>keyboardlayouts/us.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>English (USA)</title>
+    <name>us</name>
+    <id>{6a1fed47-1713-437c-931e-2ebc3ba1f366}</id>
+    <path>keyboardlayouts/us.xml</path>
+  </keyboardLayout>
+</data>

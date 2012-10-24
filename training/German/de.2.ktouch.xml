@@ -697,7 +697,7 @@ Version: 0.1 beta
   </Level>
   <Level>
    <NewCharsLabel>&lt; und ></NewCharsLabel>
-   <NewCharacters>&lt ></NewCharacters>
+   <NewCharacters>&lt;></NewCharacters>
    <Line>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;></Line>
    <Line>&lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; >  &lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; ></Line>
    <Line>>&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt;</Line>

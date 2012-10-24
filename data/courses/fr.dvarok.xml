@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+<course>
+ <id>{3e70bc9a-37fa-4f87-8c47-bc81f71a237f}</id>
+ <title>Dvorak Français</title>
+ <description>Apprentissage du clavier Dvorak-fr
+30 mai 2002 - Francis Leboutte, www.algo.be
+7 décembre 2004 - Passage au format ktouch par Matthieu MOY
+14 septembre 2005 - Passage au format ktouch XML par Stéphane Raimbault</description>
+ <keyboardLayout>fr(dvorak)</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{0b520efb-8cdc-4e3e-8c0a-4b443ac2118e}</id>
+   <title>Lesson 1</title>
+   <newCharacters>es</newCharacters>
+   <text>eeee ssss eeee ssss eeee ssss eeee ssss
+eee ee s ee ssss ss
+es es se se se es se es
+s e se es ess see
+e s es se see ess</text>
+  </lesson>
+  <lesson>
+   <id>{6c3572f1-0b49-4e91-aea5-5e02a199cf83}</id>
+   <title>Lesson 2</title>
+   <newCharacters>ut</newCharacters>
+   <text>uuuu tttt uuuu tttt uuuu tttt uuuu tttt
+uuu uu t uu tttt tt
+ut ut tu tu
+tu ut tu ut
+t u tu ut utt tuu
+u t ut tu tuu utt
+eeee ssss uuuu tttt
+tu tu tu tu  et et et et  te te te te  es es es es
+su su su su
+tes tes tes tes tes tes tes tes tes tes
+tues tues tues tues tues tues tues tues
+est est est est  sus sus sus sus  set set set set
+test test test test  tues tues tues tues  sets sets sets
+sets</text>
+  </lesson>
+  <lesson>
+   <id>{d9602571-353d-424d-a779-b9f3416953c0}</id>
+   <title>Lesson 3</title>
+   <newCharacters>an</newCharacters>
+   <text>aaaa nnnn aaaa nnnn aaaa nnnn aaaa nnnn
+aaa aa n aa nnnn nn
+an an na na
+na an na an
+n a na an ann naa
+a n an na naa ann
+eeee ssss nnnn uuuu tttt aaaa
+en en en en  su su su su  ne ne ne ne
+ne ne ne ne  us us us us  tu tu tu tu
+nu nu nu nu  an an an an  sa sa sa sa
+ta ta ta ta  es es es es  te te te te
+tas tas tas tas  nue nue nue nue
+ans ans ans ans  sue sue sue sue
+sut sut sut sut  eut eut eut eut
+tue tue tue tue  set set set set
+tau tau tau tau tau tau tau
+use use use use  uns uns uns uns  eau eau eau eau
+saut saut saut saut  anus anus anus anus
+anse anse anse anse
+tenu tenu tenu tenu  tant tant tant tant</text>
+  </lesson>
+  <lesson>
+   <id>{22fd3880-5862-4c7c-ac13-99fd34f47974}</id>
+   <title>Lesson 4</title>
+   <newCharacters></newCharacters>
+   <text>tasse tasse tasse tasse  usent usent usent usent
+tenus tenus tenus tenus
+nasse nasse nasse nasse  tante tante tante tante
+suent suent suent suent
+tente tente tente tente  saute saute saute saute
+suant suant suant suant
+aunes aunes aunes aunes
+usante usante usante usante  naseau naseau naseau naseau
+ananas ananas ananas ananas
+ententes ententes ententes ententes ententes
+ententes ententes ententes</text>
+  </lesson>
+  <lesson>
+   <id>{8593c758-bf19-4d05-aedd-92db6248c970}</id>
+   <title>Lesson 5</title>
+   <newCharacters>od</newCharacters>
+   <text>oooo ddddd oooo ddddd oooo ddddd oooo ddddd
+ooo oo d oo dddd dd
+od od do do do od do od
+d o do od odd doo o d od do doo odd
+oooo uuuu ssss nnnn aaaa dddd tttt eeee
+os os os os  on on on on  tu tu tu tu
+ta ta ta ta  de de de de  ne ne ne ne
+do do do do  sa sa sa sa  na na na na
+ad ad ad ad  us us us us  ut ut ut ut
+nu nu nu nu  un un un un  du du du du
+se se se se  es es es es  te te te te
+dos dos dos dos</text>
+  </lesson>
+  <lesson>
+   <id>{aad77973-7bab-433f-86b1-06d0d95c14ea}</id>
+   <title>Lesson 6</title>
+   <newCharacters></newCharacters>
+   <text>ton ton ton ton  ose ose ose ose
+des des des des des des des des des des
+dettes dettes dettes dettes dettes dettes dettes dettes
+nues nues nues nues nues nues nues nues nues nues nues
+nous nous nous nous nous nous nous nous nous nous nous
+dans dans dans dans dans dans dans dans
+dont dont dont dont dont dont dont dont
+oses oses oses oses  unes unes unes unes  date date date
+date
+tout tout tout tout  dose dose dose dose
+dune dune dune dune  anse anse anse anse
+aune aune aune aune
+notes notes notes notes notes notes notes notes
+tons tons tons tons tons tons tons tons tons
+dents dents dents dents dents dents dents dents
+sautons sautons sautons sautons sautons sautons
+dansons dansons dansons dansons dansons dansons
+soute soute soute soute  doute doute doute doute  natte
+natte natte natte
+tasse tasse tasse tasse  anode anode anode anode  atone
+atone atone atone
+saute saute saute saute  ouest ouest ouest ouest
+suant suant suant suant  sonde sonde sonde sonde  soude
+soude soude soude
+sonate sonate sonate sonate  tondue tondue tondue tondue
+usante usante usante usante  anodes anodes anodes anodes
+tondues tondues tondues tondues  soudent soudent soudent
+soudent
+usantes usantes usantes usantes</text>
+  </lesson>
+  <lesson>
+   <id>{e1d9d446-6242-4a76-9f5f-f8fb4e2cd003}</id>
+   <title>Lesson 7</title>
+   <newCharacters>ir</newCharacters>
+   <text>ie ie ie ie ie ie ie ie ie ie ie ie ie ie
+rs rs rs rs rs rs rs rs rs rs rs rs rs rs
+ie ie ie rs rs ie rs ie ie rs rs rs ie rs
+ie rs ie ie rs rs rs ie rs ie ie rs ie ie
+ras ras ras ras ras ras ras ras ras ras ras
+ide ide ide ide ide ide ide ide ide ide ide
+sieurs sieurs sieurs sieurs sieurs sieurs
+ries ries ries ries ries ries ries ries ries ries
+sires sires sires sires sires sires sires sires
+tait tait tait tait tais tais tais tais tais tais
+rites rites rites rites rites rites rites rites
+nions nions nions nions nions nions nions nions nions
+rides rides rides rides rides rides rides rides
+suer suer suer suer  ruer ruer ruer ruer</text>
+  </lesson>
+  <lesson>
+   <id>{5aaa8764-23c1-49f8-9ef8-e699953c38ae}</id>
+   <title>Lesson 8</title>
+   <newCharacters></newCharacters>
+   <text>nouer nouer nouer nouer  noter noter noter noter  ruade
+ruade ruade ruade
+droite droite droite droite  sonder sonder sonder sonder
+ardent ardent ardent ardent  adroit adroit adroit adroit
+danseur danseur danseur danseur  adroite adroite adroite
+adroite
+suinter suinter suinter suinter  renouer renouer renouer
+renouer
+notaire notaire notaire notaire  noiraud noiraud noiraud
+noiraud
+soutien soutien soutien soutien  endroit endroit endroit
+endroit
+sourdine sourdine sourdine sourdine  sudation sudation
+sudation sudation
+outsider outsider outsider outsider  noterais noterais
+noterais noterais
+soutenir soutenir soutenir soutenir  adroites adroites
+adroites adroites
+aiderons aiderons aiderons aiderons  risettes risettes
+risettes risettes
+nous autres nous autres nous autres nous autres nous autres
+nous autres
+nourrirons nourrirons nourrirons nourrirons nourrirons
+nourrirons
+soutiendra soutiendra soutiendra soutiendra</text>
+  </lesson>
+  <lesson>
+   <id>{5376d12e-ab7e-42e5-a014-4729668bd0fb}</id>
+   <title>Lesson 9</title>
+   <newCharacters>,l</newCharacters>
+   <text>let let let let let let let let let let
+u, u, u, u, u, u, u, u,
+lutte, lutte, lutte, lutte, lutte, lutte, lutte, lutte,
+let, let, let, let, let, let, let, let,
+lut lut lut lut lut lut lut lut lut lut
+lut, lut, lut, lut, lut, lut, lut, lut,
+lait lait lait lait
+lait, lait, lait, lait, lait, lait, lait,
+ailette ailette ailette
+ailette, ailette, ailette, ailette, ailette,
+lots lots lots lots
+lots, lots, lots, lots, lots, lots,
+allure allure allure allure
+allure, allure, allure, allure, allure, allure, allure,
+silure silure silure
+silure, silure, silure, silure, silure,</text>
+  </lesson>
+  <lesson>
+   <id>{80b18066-d486-4b02-95b7-47aecf38af23}</id>
+   <title>Lesson 10</title>
+   <newCharacters>éc</newCharacters>
+   <text>ténu ténu ténu ténu ténu ténu ténu ténu ténu ténu
+cet cet cet cet cet cet cet cet cet cet cet cet
+ce ténu ce ténu ce ténu ce ténu ce ténu ce ténu ce ténu
+suée suée suée suée suée suée suée suée
+cote cote cote cote cote cote cote cote
+écoute écoute écoute écoute écoute écoute
+décrut décrut décrut décrut décrut décrut
+racé racé racé racé racé racé
+écrété écrété écrété écrété
+acte acte acte acte acte acte acte
+raclée raclée raclée raclée
+écru écru écru écru écru écru
+calé calé calé calé  lacé lacé lacé lacé
+codétenu codétenu codétenu codétenu codétenu
+déci déci déci déci déci déci déci déci
+tuée tuée tuée tuée
+luné luné luné luné  lancé lancé lancé lancé
+éclaté éclaté éclaté éclaté  lactée lactée lactée lactée
+assuétude assuétude assuétude assuétude</text>
+  </lesson>
+  <lesson>
+   <id>{60d0cdae-edc3-46df-9899-cb2fafad07f2}</id>
+   <title>Lesson 11</title>
+   <newCharacters>'´m</newCharacters>
+   <text>mon mon mon mon mon mon mon mon mon mon mon
+'a 'a 'a 'a 'a 'a 'a 'a 'a
+mon mon 'a mon 'a 'a mon 'a 'a 'a mon 'a mon 'a mon 'a mon
+l´air l´air l´air l´air l´air l´air l´air l´air
+ment ment ment ment ment ment ment
+d´une d´une d´une d´une d´une d´une
+armée armée armée armée armée armée
+l´amont l´amont l´amont l´amont l´amont
+sommes sommes sommes sommes sommes
+mains mains mains mains mains mains
+enmena enmena enmena enmena enmena
+écumait écumait écumait écumait écumait
+l´allure l´allure l´allure l´allure l´allure l´allure
+ma maman m'a donné une tomme</text>
+  </lesson>
+  <lesson>
+   <id>{4af53527-7abe-4c06-abae-a64d875d84a5}</id>
+   <title>Lesson 12</title>
+   <newCharacters>pq</newCharacters>
+   <text>que que que que que que que que que que que
+pan pan pan pan pan pan pan pan pan pan pan
+pan que que pan pan que pan que pan pan que que pan que
+quand quand quand quand quand quand quand
+pente pente pente pente pente pente pente
+quota quota quota quota quota quota quota quota quota
+pain pain pain pain pain pain pain pain pain pain
+prune prune prune prune prune prune
+qui qui qui qui qui qui
+plaque plaque plaque plaque plaque plaque plaque
+temps temps temps temps temps temps
+plouc plouc plouc plouc
+pétal pétal pétal pétal
+qualité qualité qualité qualité qualité
+quiproquo quiproquo quiproquo quiproquo
+auquel auquel auquel auquel auquel auquel
+piquet piquet piquet piquet piquet
+capé capé capé  placé placé placé</text>
+  </lesson>
+  <lesson>
+   <id>{cafd851a-b3b1-4945-ac67-5c92a359a013}</id>
+   <title>Lesson 13</title>
+   <newCharacters></newCharacters>
+   <text>quoique quoique quoique quoique quoique quoique
+pourquoi pourquoi pourquoi pourquoi pourquoi pourquoi
+piqure piqure piqure piqure
+plaquer plaquer plaquer plaquer
+quasar quasar quasar quasar quasar quasar quasar
+pommes pommes pommes pommes pommes pommes pommes
+parques parques parques parques parques parques
+pataras pataras pataras pataras pataras pataras
+lunatique lunatique lunatique lunatique lunatique
+quadrillerait quadrillerait quadrillerait quadrillerait
+quenouille quenouille quenouille quenouille quenouille
+atlantique atlantique atlantique atlantique atlantique
+l´aptitude l´aptitude l´aptitude l´aptitude l´aptitude
+pire pire pire pire  plus plus plus plus
+parts parts parts parts parts parts parts parts
+partie partie partie partie
+parie parie parie parie  paire paire paire paire
+pirate pirate pirate pirate
+préemption préemption préemption préemption</text>
+  </lesson>
+  <lesson>
+   <id>{d31a62f8-b15f-41cc-899e-5342519d6228}</id>
+   <title>Lesson 14</title>
+   <newCharacters>gv</newCharacters>
+   <text>gens gens gens gens gens gens gens gens gens gens
+vus vus vus vus vus vus vus vus vus vus vus vus
+age age age age age age age age age age
+visses visses visses visses visses visses visses
+givres givres givres givres givres givres givres
+genou genou genou genou genou genou
+page page page page
+vanne vanne vanne vanne vanne vanne
+auge auge auge auge auge auge auge auge
+vagues vagues vagues vagues vagues vagues
+agaves agaves agaves agaves agaves
+gelées gelées gelées gelées
+vider vider vider vider vider vider</text>
+  </lesson>
+  <lesson>
+   <id>{393d522e-a04e-4435-9239-5527453b1b71}</id>
+   <title>Lesson 15</title>
+   <newCharacters></newCharacters>
+   <text>usage usage usage usage usage usage usage usage usage
+vendre vendre vendre vendre vendre vendre vendre
+gemmes gemmes gemmes gemmes gemmes gemmes gemmes
+valvule valvule valvule valvule valvule valvule valvule
+mages mages mages mages mages mages mages mages
+gommes gommes gommes gommes gommes gommes gommes
+grammes grammes grammes grammes grammes
+agrumes agrumes agrumes agrumes agrumes agrumes agrumes
+messager messager messager messager messager messager
+messager
+gourmets gourmets gourmets gourmets gourmets gourmets
+gourmets
+guider guider guider guider  gourde gourde gourde gourde
+gradin gradin gradin gradin  gredin gredin gredin gredin
+ergoter ergoter ergoter ergoter endroit endroit endroit
+endroit
+graduer graduer graduer graduer
+guéridon guéridon guéridon guéridon
+grandiose grandiose grandiose grandiose
+nouveau nouveau nouveau nouveau nouveau nouveau nouveau
+nouveau
+l´allumage l´allumage l´allumage l´allumage l´allumage
+l´alunissage l´alunissage l´alunissage l´alunissage
+avogadro avogadro avogadro avogadro</text>
+  </lesson>
+  <lesson>
+   <id>{8c7ec0d3-c994-43cb-b118-a1e8740bbac9}</id>
+   <title>Lesson 16</title>
+   <newCharacters>èùâêûîôïç-</newCharacters>
+   <text>père père père père
+où où où où où où
+pâle pâle pâle pâle
+tôt tôt tôt tôt tôt
+août août août août
+naître naître naître naître
+caïd caïd caïd caïd
+ça ça ça ça ça
+sittèle sittèle sittèle sittèle
+mât mât mât mât mât mât mât mât
+pèse-moût pèse-moût pèse-moût pèse-moût pèse-moût
+l'évêque l'évêque l'évêque l'évêque l'évêque l'évêque
+l'évêque</text>
+  </lesson>
+  <lesson>
+   <id>{6e182b63-aa95-41d8-834e-bd3307726e06}</id>
+   <title>Lesson 17</title>
+   <newCharacters>bf</newCharacters>
+   <text>bel bel bel bel bel bel bel bel bel bel bel bel bel
+fus fus fus fus fus fus fus fus fus fus fus
+fils fils fils fils fils fils fils fils fils fils
+becs becs becs becs becs becs becs becs becs becs
+beau beau beau beau beau beau beau beau beau beau
+butée butée butée butée butée  bête bête bête bête bête
+bègue bègue bègue bègue bègue
+fente fente fente fente fente fente
+facs facs facs facs facs facs facs
+fisc fisc fisc fisc fisc fisc fisc
+fesse fesse fesse fesse fesse fesse
+buse buse buse buse
+rubis rubis rubis rubis
+billets billets billets billets
+bât bât bât bât</text>
+  </lesson>
+  <lesson>
+   <id>{ec90710e-0dd4-4bf6-9306-d20b184b5ef0}</id>
+   <title>Lesson 18</title>
+   <newCharacters>yx</newCharacters>
+   <text>ye ye ye ye ye ye ye ye ye ye
+xs xs xs xs xs xs xs xs xs xs
+yen yen yen yen yen yen yen yen yen yen yen
+axes axes axes axes axes axes axes axes axes
+yin yin yin yin yin yin yin yin yin yin yin
+taxes taxes taxes taxes taxes taxes taxes taxes taxes
+tyran tyran tyran tyran
+satyre satyre satyre satyre
+sixième sixième sixième sixième sixième</text>
+  </lesson>
+  <lesson>
+   <id>{2faf620b-9de4-42f0-8802-698a872b8d81}</id>
+   <title>Lesson 19</title>
+   <newCharacters>.h</newCharacters>
+   <text>hs hs hs hs hs hs hs hs hs
+.e .e .e .e .e .e .e .e .e
+hottes hottes hottes hottes hottes hottes hottes hottes
+hommes hommes hommes hommes hommes hommes hommes hommes
+hausse hausse hausse hausse hausse
+houx. houx. houx. houx. houx. houx. houx. houx. houx. houx.
+houx.
+hiboux hiboux hiboux hiboux hiboux hiboux hiboux hiboux
+hiboux
+cahots cahots cahots cahots cahots cahots cahots cahots
+hase. hase. hase. hase. hase. hase. hase. hase. hase. hase.
+mèches mèches mèches mèches
+hase. hase. hase. hase. hase. hase. hase. hase. hase. hase.
+haies. haies. haies. haies. haies. haies. haies. haies.
+boxes boxes boxes boxes boxes boxes boxes boxes boxes boxes
+beaux beaux beaux beaux beaux beaux beaux beaux beaux beaux
+faxes faxes faxes faxes faxes faxes
+xérès xérès xérès xérès xérès
+foyers foyers foyers foyers foyers foyers foyers foyers
+fayot fayot fayot fayot fayot fayot fayot fayot fayot
+l'homme l'homme l'homme l'homme l'homme l'homme
+fraye fraye fraye fraye fraye fraye fraye fraye fraye
+acheté acheté acheté acheté acheté acheté acheté
+fuyant fuyant fuyant fuyant fuyant fuyant fuyant fuyant
+frayeur frayeur frayeur frayeur frayeur frayeur frayeur
+festoyer festoyer festoyer festoyer festoyer festoyer</text>
+  </lesson>
+  <lesson>
+   <id>{cfeadb0a-8cb6-403e-bd5f-d25680d02ce8}</id>
+   <title>Lesson 20</title>
+   <newCharacters>;j</newCharacters>
+   <text>judo judo judo judo judo judo judo judo judo judo
+o; o; o; o; o; o; o; o; o; o;
+judo; judo; judo; judo; judo; judo; judo; judo; judo;
+judas; judas; judas; judas; judas; judas; judas; judas;
+bijou; bijou; bijou; bijou; bijou; bijou; bijou; bijou;
+ajouté; ajouté; ajouté; ajouté; ajouté; ajouté; ajouté;
+bijoux; bijoux; bijoux; bijoux; bijoux; bijoux; bijoux;
+jiu-jitsu; jiu-jitsu; jiu-jitsu; jiu-jitsu; jiu-jitsu;</text>
+  </lesson>
+  <lesson>
+   <id>{2449824c-8884-401d-91ff-511b81f41d51}</id>
+   <title>Lesson 21</title>
+   <newCharacters>:k</newCharacters>
+   <text>kid kid kid kid kid kid kid kid kid kid kid kid
+o: o: o: o: o: o: o: o: o: o:
+o:o:o:o;o;o:o;o;o:o:o:o;o:o;o;o:o;o;
+kid: kid: kid: kid: kid: kid: kid: kid: kid: kid: kid:
+kodiak: kodiak: kodiak: kodiak: kodiak: kodiak: kodiak:
+ski: ski: ski: ski: ski:  skaï: skaï: skaï: skaï: skaï:
+kurde: kurde: kurde: kurde: kurde: kurde: kurde: kurde:</text>
+  </lesson>
+  <lesson>
+   <id>{6a7d5aa0-5822-4587-97f6-be493d996513}</id>
+   <title>Lesson 22</title>
+   <newCharacters>w</newCharacters>
+   <text>world world world world world world world world
+wide wide wide wide wide wide wide wide wide wide
+web web web web web web web web web web web web
+watt watt watt watt
+world wide web. world wide web. world wide web.</text>
+  </lesson>
+  <lesson>
+   <id>{c0f6da0a-1c54-45ac-9d93-897ca90142a2}</id>
+   <title>Lesson 23</title>
+   <newCharacters>z</newCharacters>
+   <text>zen zen zen zen zen zen zen zen zen zen zen zen
+zone zone zone zone zone zone zone zone zone zone
+zut zut zut zut zut zut zut zut zut zut zut zut
+demandez demandez demandez demandez demandez
+zazou zazou zazou zazou
+barzoï barzoï barzoï barzoï</text>
+  </lesson>
+  <lesson>
+   <id>{28216f10-518d-4e11-8a4d-13b2e6981487}</id>
+   <title>pangramme</title>
+   <newCharacters></newCharacters>
+   <text>portez ce vieux whisky au juge blond qui fume
+voyez ce bon fakir moqueur pousser un wagon en jouant du
+xylophone
+zoé ma grande fille veut que je boive ce whisky dont je ne
+veux pas
+the quick brown fox jumps over the lazy dog</text>
+  </lesson>
+  <lesson>
+   <id>{ee7e4c70-3c36-4acc-8003-22021fdd4a1c}</id>
+   <title>vitesse</title>
+   <newCharacters></newCharacters>
+   <text>Digrammes et trigrammes les plus fréquents. Exercez-vous en
+particulier aux digrammes à une main, dont certains sont
+parmi les
+plus difficiles à taper.</text>
+  </lesson>
+  <lesson>
+   <id>{e45f3d2a-9e3e-4ca9-b7ff-15549a3b9fab}</id>
+   <title>digramme droite</title>
+   <newCharacters></newCharacters>
+   <text>nt nt nt nt nt nt nt nt nt
+ns ns ns ns ns ns ns ns ns
+nt nt ns nt ns ns ns nt ns nt nt ns nt ns nt ns nt nt
+pr ns pr ns pr ns pr ns pr ns pr ns pr ns
+st st st st st st st st
+tr st tr st tr st tr st tr st tr st tr st
+nc t nc t nc t nc t nc t nc t nc t
+rt s rt s rt s rt s rt s rt s rt s
+pl nt pl nt pl nt pl nt pl nt pl nt
+rs rs rs rs rs rs rs rs rs
+ts ts ts ts ts ts ts ts ts
+ch ts ch ts ch ts ch ts ch ts ch ts
+ct ct ct ct ct ct ct ct ct ct ct ct
+nd nd nd nd nd nd nd nd nd
+mp n mp n mp n mp n mp n mp n mp n</text>
+  </lesson>
+  <lesson>
+   <id>{fb0585a8-9a58-44a9-a8de-6790e908a56c}</id>
+   <title>digramme gauche</title>
+   <newCharacters></newCharacters>
+   <text>qu a qu a qu a qu a qu a qu a qu a
+ue ue ue ue ue ue ue ue ue
+io e io e io e io e io e io e io e
+ou ou ou ou ou ou ou ou ou
+ai e ai e ai e ai e ai e ai e ai e
+ie ie ie ie ie ie ie ie ie
+au au au au au au au au au
+eu eu eu eu eu eu eu eu eu
+au ou ou au au au ou au ou ou ou ou au ou ou au ou ou
+oi e oi e oi e oi e oi e oi e oi e
+ui e ui e ui e ui e ui e ui e ui e
+ée u ée u ée u ée u ée u ée u ée u
+ei ei ei ei ei ei ei ei ei
+e, ue e, ue e, ue e, ue e, ue e, ue</text>
+  </lesson>
+  <lesson>
+   <id>{31c872fe-34a3-4df4-af92-73fd5517b486}</id>
+   <title>digramme double</title>
+   <newCharacters></newCharacters>
+   <text>es es es es es es es es es
+en en en en en en en en en
+le t le t le t le t le t le t le t
+de de de de de de de de de
+on on on on on on on on on
+re s re s re s re s re s re s re s
+ti e ti e ti e ti e ti e ti e ti e
+er s er s er s er s er s er s er s
+co t co t co t co t co t co t co t
+an an an an an an an an an
+te te te te te te te te te
+la t la t la t la t la t la t la t
+et et et et et et et et et
+me n me n me n me n me n me n me n
+ur s ur s ur s ur s ur s ur s ur s
+at at at at at at at at at</text>
+  </lesson>
+  <lesson>
+   <id>{199ea821-e0f6-4da4-b86d-8f8ce21285b2}</id>
+   <title>suite</title>
+   <newCharacters></newCharacters>
+   <text>ra s ra s ra s ra s ra s ra s ra s
+ce t ce t ce t ce t ce t ce t ce t
+tr s tr s tr s tr s tr s tr s tr s
+ve s ve s ve s ve s ve s ve s ve s
+un un un un un un un un un
+ir es ir es ir es ir es ir es ir es
+l' ta l' ta l' ta l' ta l' ta l' ta
+ri se ri se ri se ri se ri se ri se
+si e si e si e si e si e si e si e
+or s or s or s or s or s or s or s
+li te li te li te li te li te li te
+ar s ar s ar s ar s ar s ar s ar s
+pa n pa n pa n pa n pa n pa n pa n
+iq eau iq eau iq eau iq eau iq eau
+ro s ro s ro s ro s ro s ro s ro s
+el t el t el t el t el t el t el t
+il et il et il et il et il et il et
+em n em n em n em n em n em n em n
+ma n ma n ma n ma n ma n ma n ma n
+om n om n om n om n om n om n om n
+al t al t al t al t al t al t al t
+té u té u té u té u té u té u té u</text>
+  </lesson>
+  <lesson>
+   <id>{d582ff98-8ac7-42b9-9e45-3843b3fba15f}</id>
+   <title>trigramme</title>
+   <newCharacters></newCharacters>
+   <text>ent ent ent ent ent ent
+les t les t les t les t les t les t les t
+ion e ion e ion e ion e ion e ion e ion e
+que a que a que a que a que a que a que a
+tio e tio e tio e tio e tio e tio e tio e
+des des des des des des
+ati e ati e ati e ati e ati e ati e ati e
+men men men men men men
+iqu eau iqu eau iqu eau iqu eau iqu eau iqu eau
+res res res res res res
+ire s ire s ire s ire s ire s ire s ire s ire s
+con t con t con t con t con t con t con t con t
+ons ons ons ons ons ons
+eme n eme n eme n eme n eme n eme n eme n eme n
+par ans par ans par ans par ans par ans par ans
+ent ent ent ent ent ent
+eur est eur est eur est eur est eur est eur est
+pro ens pro ens pro ens pro ens pro ens pro ens
+com ent com ent com ent com ent com ent com ent
+ues ues ues ues ues ues
+tre s tre s tre s tre s tre s tre s tre s tre s
+ont ont ont ont ont ont
+ren se ren se ren se ren se ren se ren se ren se
+our se our se our se our se our se our se our se
+nce tes nce tes nce tes nce tes nce tes nce tes
+lle t lle t lle t lle t lle t lle t lle t lle t
+ité une ité une ité une ité une ité une ité une
+air nte elle ure ien
+ces enc art dan onn</text>
+  </lesson>
+ </lessons>
+</course>

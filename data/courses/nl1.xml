@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<course>
+  <id>{6aa005fc-c9ee-42b8-958f-9264d59cea74}</id>
+  <title>Nederlands (automatisch aangemaakt)</title>
+  <description>Typecursus door tijs@vandenbogaard.org
+Thu Dec 18 21:33:14 CET 2003
+
+Willekeurige data gegenereerd met het perl script
+van Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+  <keyboardLayout>nl</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{7cf01ee5-5723-4189-874a-625b1bf05c30}</id>
+      <title>Lesson 1</title>
+      <newCharacters>jf</newCharacters>
+      <text>j ff j f j f ff jjj fj
+j jj jj jjf f f j jf j
+fff fff ff jjf fjjf jj j
+ff ff f ff j f jf ff fj
+fff ff j fjjf fjjf j fj
+ff j j ff jff ff jj jf
+ff j ff fj fjjj jfj fj
+jjj ff ff ff ff j jjf f
+j ff j fj jf j ff f ff
+fjjf jj jjj ff j fjfj ff</text>
+    </lesson>
+    <lesson>
+      <id>{abefc579-a572-4274-bd46-eb41df8ffa8f}</id>
+      <title>Lesson 2</title>
+      <newCharacters>kd</newCharacters>
+      <text>kdkk d kkk kk dddd kkkd dd
+d kd ddd k ddd dkd dkd
+dkd dkd ddk dd dd kk kkk
+k d d dk k kk kk kkk dk
+dd dd kk ddk kkd kkdk k
+dfj kff j jjk dkk kddf dkk
+jd j jd d kddf d j fj j
+djj jkk kff fkkddj jffj kd
+jfk ffd j kd jjk j dk kd
+jdjfj kff fddjd jd kff kddf
+dk jf kjj jkk jf jkk jffj
+kd jjk djj df kd d kkkj
+fddjd j kd jjfj kkfj dkk jjk
+jf kf j jfj kfkdkj j jjk
+jdkf jdd j kkdj jkdk jf jdjk</text>
+    </lesson>
+    <lesson>
+      <id>{abae1f62-aca0-41df-85b4-2f431c9104ba}</id>
+      <title>Lesson 3</title>
+      <newCharacters>ls</newCharacters>
+      <text>ls lssl slls ss slls slsl
+sll ss sl sll sl sll lss
+ss sll ll sl s llsl ssl
+sls sl l sls sl sls lss
+lss l ssll lsl ss sls ss
+lsjs kdlf k kdlf f lfsj lds
+kll lj sljdl ssd kss lj s
+ssl k lk k jl lsjs k lds
+ll kd lfsj jljf lk kll lsjs
+lfsj jsll ssl f ssl kf fk
+lsjs f ff k lk lfsj f sdds
+kdlf klldk sf k kdlf sdds f
+lj f sljdl jljf fk f sdds
+k ljs sf lk f ldks f f lfsj
+jljf dss k f ll fs sdds ljf</text>
+    </lesson>
+    <lesson>
+      <id>{33ae0080-f7a5-4c13-8d98-1beb6f17922f}</id>
+      <title>Lesson 4</title>
+      <newCharacters>;a</newCharacters>
+      <text>aaa aa ;;; ; a; a; a ;
+; a aa a ; a;a;; aaa;
+; ;a;; aa ; aa ; ;a;;
+aa aaa; ;; ; ;;;a aaa;
+aaa ;; aa aa;; ;; ;; a
+slaafs; la;; al kalf sa sa aak
+sjaals; laas slaafs afkaad kaal
+lal; dal alfa; slaak la jak
+alaaf; klas afkalf; kalf kaal
+aak jak; kaf afkalf; aflaad;
+das laks; kajak kajak daal
+fa; als faas kaas; alfa; dada
+aas kalf dada ja alfalfa; kaal
+la; aks ja kalk jal; daal; kalf
+slaak; afsla; klak; sas; alaaf;</text>
+    </lesson>
+    <lesson>
+      <id>{a830369c-06fd-4887-a92f-3a6c8acd56cd}</id>
+      <title>Lesson 5</title>
+      <newCharacters>hg</newCharacters>
+      <text>gghgg hg hg gh ghhgg ghghg
+ggg h gh ghh gg ghg hh hh
+gh hg g hhh h hh ghghg
+gh h g ghhgg gh ghg gh
+ghg g hgg hgh h gg hgg ghh
+daag gas; laklaag ah haaks
+glad sjah; sjahs; aalglad klaag
+laklaag halfslag; af had slag
+haak haas; kaag haak haha daag
+dag glad; shag jas gas afhaal
+hals laklaag hal; jassen hal hals
+gladaf ha; afhaak slaags; glas
+slaags jak ha ha haal kaalslag
+aalglad; falasha jakhals; gaslaag
+hals gaas fila; jakhals</text>
+    </lesson>
+    <lesson>
+      <id>{7c7adec7-ea5a-4eef-841c-cd06f5e087dd}</id>
+      <title>Lesson 6</title>
+      <newCharacters>ur</newCharacters>
+      <text>r r uuu rru ur u r rruuu
+uu uu rruuu ur r ur uu
+ru ur ur ur ru uu ru uu
+uu rrrr rrrr ru r u uuru
+ru rru ur uuru uu uu uuu
+kus duur afhaar jas uur; gaf
+juk; krulhaar suf; kus uurglas
+aardas sassafras harslak afgluur
+gras suf graf afraas slasaus duf
+fallus druk afkraak radar kraal
+kaard kus ara; halskraag lus
+guur; graal jas askruk ruud
+krulhaar graas; saus graal jufs
+klaar guur; radars afraas kraal
+juf; harddraaf; duurs; uur</text>
+    </lesson>
+    <lesson>
+      <id>{f181918d-7350-45f7-99b2-aa2966b6cbad}</id>
+      <title>Lesson 7</title>
+      <newCharacters>ie</newCharacters>
+      <text>ei ie i ie ii ei i e ei
+ie ie iieei iie e ei i
+iie ee ii e iie ii ie e
+ei ee ie ee ie e i ee
+i ii ee e i ee ei e
+klierige gij sukkelig; keilde ruigaard
+gekrakeeld sidderaal gekuifde druileriger
+geaggregeerde ijs geheld; lijdelijker
+gladdiger gladheid; dikheid geriskeerde
+elf gereefd driedaagse gareerde je lijk
+akkers; klaarde sisser afdraaide jij
+kliekje hier kladje; hijg; harakiri lei
+afjakker geliefd akeliger kleffer jullie
+kuierde hi rijs kelderdeur geresideerde
+drassiger; kikkerdril huidige; duikers
+fles dijk sukkelige ijs sidderaal; hijs</text>
+    </lesson>
+    <lesson>
+      <id>{ea1baedb-bbdd-46bb-bf9b-e6fdf9e96421}</id>
+      <title>Lesson 8</title>
+      <newCharacters>ow</newCharacters>
+      <text>oww wo oo wwwo oo ww oow
+o wo ww wwo wwo oow wwo
+ww oo ww w wo oo oo wow
+ww wwo wow w woww woo w
+w wwo www ww oow w wwo
+koekoeksei frees koor; hokkerige
+gedweilde drukrol juweel afloer
+geluidloos hoge dodelijkheid joekel
+gauwerd; doodgegooid; foei kordeel
+jaloersheid wereldlijk gedrogeerd
+geduwd dollarkoers fooi lawaaiigheid
+guerrillaoorlog rouwdag laagwaardige
+hofjes; gerouwklaagd; was; dwaalde;
+leesdoel legio; legerorder wedde
+gehoorweg kalfsoog; woorddeel wij
+weg jos de wrede huigelaar; wuifde
+wie dollarkoers wade erg hard;</text>
+    </lesson>
+    <lesson>
+      <id>{76dc6be4-38e7-46e9-84a0-94eb9da9b838}</id>
+      <title>Lesson 9</title>
+      <newCharacters>pq</newCharacters>
+      <text>q qqq p pqq ppp pp pqp
+q qp pq ppp p ppp p p
+qq pqq pq ppp pqp pq ppp
+pp pp ppp p ppp qqq qqq
+qq pp qqq pqp ppp pq p
+spade poeljes wurggreep flap
+soepele; drukpers hope pukkelige
+prik groepsreis gepuddeld pijl
+kepers; querido aquanout
+daf appelsap drukspiegel aquarel
+opkras; persdruk juf puffen spouwers
+popidool qupido; supplieer liquideer
+hielp peperdure prullerigere kwijl
+pakje; pulppers ; droop
+pijpdrop opdroogde; dief opdruk
+water is aqua; aqua is water; rijp
+de drukpers was peperduur;</text>
+    </lesson>
+    <lesson>
+      <id>{5527b195-0b5b-43f9-adaa-c5e12c2cb863}</id>
+      <title>Lesson 10</title>
+      <newCharacters>yt</newCharacters>
+      <text>ttytt yyt yy ttyy ytt yyt
+t ytt ttyy yyt yyt ytt
+y ttyy tyty t t t tyt
+tyyy ytt ytt yyt y tyt tyt
+y tyyy tyt ytt y t ty
+typt loyaal trouwste y uithaaltafel
+typte; katalisator type types
+hortoloog y tegelijk; treek y quota
+leerrijkst sleutelde y steekkart
+portierspet wij y topje; hoofdstraat
+akkefietjes; type afkleedt y gerafelde
+opkraste hydraat wil addities; y spitter
+surft quote y pleisteraar; y ettiquette
+y dereguleert toehoor; y godslasterlijke
+tituleert katalyse; hypotheek pleisterwerk
+hij surfte op het water
+wie weet waar willie wortel was</text>
+    </lesson>
+    <lesson>
+      <id>{1ea875e9-31c3-4602-95e9-54db84de4dd1}</id>
+      <title>Lesson 11</title>
+      <newCharacters>mv</newCharacters>
+      <text>mv mvm mv mvmmm mv mmmv
+vvm mvm vv mv mvmmm vv v
+mvm mv vm vvmmv vvv v v
+vm mv mm mv mvv mmmv mv
+vvmmv vvv vvv mvm v vvv vm
+systeem liquida vijf hem aftuimelde
+gym vijver afgeveld; fysio kumquat
+worm; temporalia we fysiotherapeut
+mismaaktere veeltalige; gemeerderde
+verdoemelijk systeem ; houtgravure
+puf haver liquid ploeg fut mijt wie
+volde matigere; solveer waarvoor mag
+smokkelt symptoom mijteriger; adequaat
+emailleer wij vijfledig; hommel muggen
+inquisitie sleutelvraag adviesvraag
+soms type ik foutloos;
+ik type al veel vlugger</text>
+    </lesson>
+    <lesson>
+      <id>{8774b4a0-88b6-431b-9e60-659cfdb5c1d8}</id>
+      <title>Lesson 12</title>
+      <newCharacters>,c</newCharacters>
+      <text>, c, ,cc c, ,,,, cc,,c
+c, ,,cc , ,, ccc ,, , c
+,c ,c c,c c,c ,cc ,c,,
+,cc c, , c ,cc , , ,c ,,
+,cc ,cc ,c,, cc,,c ,,cc
+systeem, cataclysme, vee cayennepeper,
+geschaamde, coryfee; aquaduct viaduct;
+cryptogram, cyclisch, colloquia schouders
+chocoladereep; cyprioot, confisqueer
+schoolvosserij; hippocampus, geaccepteerde
+scheppers, maquette; verkoopdirecteur
+claviatuur, justificatie, chique erachter
+paradijsachtig, schrammetjes, adresschrijver
+percipieert, mug tricky; cricketkeeper
+archivaresse, plaquette lichtdruk;
+de politie arresteerde de vrouw voor diefstal
+echter, de rechter sprak haar vrij</text>
+    </lesson>
+    <lesson>
+      <id>{f805b415-9def-4bab-8545-12aa507cb0bc}</id>
+      <title>Lesson 13</title>
+      <newCharacters>.x</newCharacters>
+      <text>x. x. .x.. x .xx .xx ..xx
+. .xx. .x.x . xx. x. x.x
+x .x.x x. x ..xx x. .x..
+.xx . .x.x . x .xx .x.x
+x. x. x x.x. x. x. .xx
+max privacy. expressief. polyester
+extracties... mix orthodox, i.p.v.
+expressiviteit. toxicologie; expliqueer
+exportproduct. exploitatielast; s.o.s.
+complexere, exterieurs, maximalist v.o.c.
+taxfreeshop. v.b. quark, quasi expres
+polymeer... circumflex. ampex; taxi
+mixtuur, qua, flox, exporteert, polygaam
+excuses. exotische v.n. xyz; quivive
+toxicums lexicologie; quickstep.
+het grootste deel zit erop; twee secties over.
+twee maal twee is vier
+wortel vier is twee</text>
+    </lesson>
+    <lesson>
+      <id>{ffd68405-1410-4e32-9dbc-48f4f1bcc9da}</id>
+      <title>Lesson 14</title>
+      <newCharacters>/z</newCharacters>
+      <text>z z/ z //z /// /zzz z/z
+z/z /z //z //z z/ //z z
+//z z/ zz z zz/ / /zzz z//
+z/z/ //z zzzzz //// z/ /z
+/z /z z/z z/z z / z/z /z
+yahtze z.o.z./s.o.s. taxi/zwalkte zucht yoga
+zekerheidshalve/gezieltoogd, uitzat/lasijzers
+wraakzuchtige rijexamen/eczema /tmp corpskeuze.
+fluweelzwartste/zijrivier/jazzrock/gepauzeerd.
+verzilverd opzettelijke, exemplaar. yeti
+zwaveltje xyz fotozaak zouteloze/zuurtjes
+oomzeggertje; letterzifterij/doodzweeg.
+rijzelde, hockey zigzagsgewijs zicht reflex
+zoele, zacht/afzeepte yammen zwerfzieke.
+relaxen, overzee/omgezwaaide. yup
+arbeid adelt, maar de adel arbeidt niet.
+dat staat op het getouw.
+goed gereedschap is het halve werk.</text>
+    </lesson>
+    <lesson>
+      <id>{21f922f4-3ae1-4ca0-8215-1eceb2700ec5}</id>
+      <title>Lesson 15</title>
+      <newCharacters>nb</newCharacters>
+      <text>bbn bbbn b n nn bnb nn nn
+bbb nbbn b bnn nn n nbbn
+nbb nnbb n bbbn bnn bbb
+b bb n bnb n b nn nbbn
+nb nnbb n b b b nbn bbbn
+byzantijns, cayennepeper, cycloon.
+bij, neurieden beiden; dynamiet
+goudbeurzen entrees hoogspanningskabel
+landmaat neuswijst hiacynt.
+verbreedsels borduurwerken gestriemden
+bit/byte lefhebbers impotent n.b. cynicus
+wiskundig cyaankali johannesbloem/
+bedevaartganger, coryfee m.b.v. opwinden.
+beoorloogde b.v. voortgebrachte/chrysant
+angstaanjagend dynamo onbewerkte.
+met de n en de b is het alfabet compleet.
+en bij deze verklaar ik plechtig,
+nooit meer met twee vingers te typen.</text>
+    </lesson>
+    <lesson>
+      <id>{b7f76e41-2a42-4632-a0bd-bc329248ef3e}</id>
+      <title>Lesson 16</title>
+      <newCharacters>?ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
+      <text>GAK BBC KLM? WW UFO AOW?
+HSL NL KUN? SOS? UFO NYFD
+WDTQ SGP AAA BE ATB?
+VWO? AA DE? FBI AIVD B.V.
+HVU RUG UFO GAK HGS VWO?
+USA? HAVO EN MKB IBG N.V.
+ESA SP LBO VMBO CDA
+EURO CCCP UFO VIP EU PvdA?
+NS VWO VVD NASA VP XEROX
+UvA T.a.v. Dhr. Mr.?
+Amsterdam, Utrecht en Den Haag
+Wie weet waar Willem Wever woont?
+Sinterklaas komt uit Spanje.
+In Holland loopt iedereen op klompen.
+In de volgende lessen staan cijfers centraal.
+Ook handig om deze blindelings te kunnen vinden.
+Het eerste glorievolle geheim,
+Jezus verrijst uit de dood.</text>
+    </lesson>
+    <lesson>
+      <id>{4b172246-dc78-4618-b9de-8c7109915faf}</id>
+      <title>Lesson 17</title>
+      <newCharacters>74</newCharacters>
+      <text>47 77 77 777 74 7 74 774
+4747 7 477 44747 7 777 77
+44747 77747 74 4747 77 47
+4747 4747 7 77447 77 74 744
+77 44747 7 77 7 44747 7
+cNx7t y4 pq74 uv4 pzq 7.4 7w4 kj4sN
+pqv74; /sOh7 4wH aN4 zx4,d7Q 7y Ea4;
+4Oz hw7O,Ovh7 G7; sxuy7 .7 scN7t G7vr
+G7; cN7t pq74 7/4 pq74 wZ4 kjx4/N
+d7xQ h7un 4. 4 d7Q vG7,h7n; uycN7t
+4z vy4 4.7 G7 aN4; 4wrskt cZ7/ xNu4
+7w 7,4 4uH 4kt yx4; 4/7 pq74 zh7n; 7yf
+4hw 7sf cZ7; x7w yvU4 asN4. kj4N,
+4kxvt /h7snr; cN7t 4Or. cvN7t, yz4
+y4 7z, U4; 4hw x4vO; /rd7Qs cN7zt
+7x4, 4/7, .4, 7.4, 77.4, 44.7 47.74</text>
+    </lesson>
+    <lesson>
+      <id>{6be0a575-963f-4f6a-94f7-13e69f1163bb}</id>
+      <title>Lesson 18</title>
+      <newCharacters>83</newCharacters>
+      <text>883 3 38 8 888 8883 8 8838
+38 3 8838 8388 883 8 838
+3 8 8 383 8 8 83333 383
+838 38 838 888 8 383 383
+383 8388 8 888 38 8 8838
+8YG 8i. en3 ;l8Z c8Q YGb 87SM hyA,v3?
+3a sc4 8VmN P4Fr y3?c; eAn3b k73f 3Luj dx3
+;L8cZ,3Ad Ul8 h43 kIef obqv rF3; in hw8 gcJ
+tvw3 geq O 8gZ yb3 43acp urS 4L78 e3lj w8Jo?
+8Zk 8Tn TzsQ, 874/mX Ul8o dMn,tvWA3 8YiG
+43 ULR8 Veiq, pTj8 7ao8 ckN PFQ rb h;l 84Z?
+34h 3cq gvLj e87Z dkg; 3saeW ybi3 37.p4 A3Lj
+8TTz b8q asF7 tVR.w3 PTQ jc8 34,OSuw 8gT Tmz
+8.k Yiq; 4gv3 eWRS,8JU dx43 V7hQe 3bN Ikf dmaO
+8.r 3nch .Peou4 8k/aMX bo3,Refs; h3l dvjU 8Z?
+3.4 plus 4.4 is 7.8
+7 min 3 is 4</text>
+    </lesson>
+    <lesson>
+      <id>{aaf285b1-1870-4c72-998f-e42f6fa19509}</id>
+      <title>Lesson 19</title>
+      <newCharacters>92</newCharacters>
+      <text>29 99 299 9 2922 9 2222
+2 2 92 292 92 299 2922
+9 99 22 22 99 2 22 22
+22 2999 222 9 2 299 9 2
+2229 92 22 22 2 2229 99 22
+a92 ;kc29 89xYt/ ;kx29,fts92 ;kP2v
+9x 89 32V 49KGH 2Iq? Lonz/8G9b .Kje2,3wD
+M9X. MigT9 ZF2h, LQY 97UE Ar9X. 94DVS/kH9
+Ma9/ i93 zdf,W947ue 2fn? 2Iqj. 2BolZ;2hwR
+S2r M9t? CBv,p2y hzx ;jKP9 loTs ZC2a, j49kG
+Ma9. M39/ LnV yZo 4Sg Wir9 97UE;H89 p2 2IQ
+89u vp2dt pb2 2Gq hmN;PD2V, 2Xc3j M9a. 97bS?
+2rs;M9/ bP27,yZU hEiJG AF9? WV 32Ct 89Y ;akp9
+x2 2cv dt,9w73? .4oQ hEJ BaF9 Mgul;94/H 3wR9 X2
+9KN 9gal;Z32w;ymN .9Cb 2Iqd fws4.9z Uhxc2 kAje2
+3 x 3 is 9, plus 38 maakt 47
+3.2kg plus 4.7kg is gelijk aan 7.9kg</text>
+    </lesson>
+    <lesson>
+      <id>{869c5cac-fd3c-4558-a052-1d2957e77005}</id>
+      <title>Lesson 20</title>
+      <newCharacters>01</newCharacters>
+      <text>1 001 111 001 101 0100
+01 001 01 0100 111 1 100
+101 11 00 0100 111 100 01
+00 10 11 111 11 0 01 1
+100 111 1 001 0 111 0 0
+a01 ;kc19 80xYt/ ;kx10,fts01 ;kP2v
+0x 80 31V 40KGH 1Iq? Lonz/8G0b .Kje2,3wD
+M0X. MigT9 ZF1h, LQY 07UE Ar0X. 04DVS/kH0
+Ma0/ i03 zdf,W047ue 2fn? 1Iqj. 1BolZ;1hwR
+S1r M9t? CBv,p1y hzx ;jKP0 loTs ZC1a, j49kG
+Ma0. M30/ LnV yZo 4Sg Wir0 97UE;H80 p1 1IQ
+80u vp2dt pb1 2Gq hmN;PD1V, 1Xc3j M9a. 07bS?
+1rs;M9/ bP17,yZU hEiJG AF0? WV 32Ct 80Y ;akp0
+x1 2cv dt,0w73? .4oQ h8J BaF0 Mgul;04/H 3wR9 X1
+0KN 0gal;Z31w;ymN .0Cb 1Iqd fws4.9z Uhxc2 kAje1
+Jantje kreeg van Maarje EUR 13.84,
+van Paul kreeg hij EUR 27.23,
+in totaal kreeg hij EUR 41.07.</text>
+    </lesson>
+    <lesson>
+      <id>{49352f2c-192f-4e69-81d5-74d485cc82bf}</id>
+      <title>Lesson 21</title>
+      <newCharacters>65</newCharacters>
+      <text>66 5 6 65 565 66 66 6566
+655 566 566 665 66 6 6 565
+6565 6 5 5 5666 5666 566
+65 65 665 66 6 5 6655 56656
+65 6566 5666 5 5666 65
+665 ;kc59 86xYt/ ;kx56,fts65 ;kP2v
+0x 86 31V 546KGH 5Iq? Lonz/8G0b .Kje2,3wD
+Ma6/ i053 zdf,W647ue 2fn? 1Iqj. 5BolZ;5hwR
+S5r M9t? CBv,p1y hzx ;jKP6 loTs ZC5a, j49kG
+Ma0. M36/ L5nV yZo 45Sg Wir56 97UE;H80 p1 5IQ
+86u vp2dt pb5 2Gq hmN;PD5V, 5Xc3j M9a. 67bS?
+5rs;M9/ bP57,yZU hEiJG AF0? WV 32Ct 86Y ;akp0
+x1 2cv dt,6w73? .4oQ h8J BaF0 Mgul;64/H 3wR9 X5
+6KN 6gal;Z35w;ymN .6Cb 5Iqd fws4.9z Uhxc2 kAje1
+56.293 plus 23465.56 is 23521.853
+De wortel uit 56556 is 237.8150.
+Nu alleen nog de tekens boven de cijfers</text>
+    </lesson>
+  </lessons>
+</course>

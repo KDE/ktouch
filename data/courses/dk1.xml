@@ -1,0 +1,1274 @@
+<?xml version="1.0"?>
+<course>
+ <id>{e95350b8-8d51-471c-a6bd-12cfc0caf1d7}</id>
+ <title>Dansk</title>
+ <description>Træningsfil udviklet af
+Gunther Strube,  gstrube@tiscali.dk og
+Anja Lysholm, anjal@danbbs.dk, April-Juli 2002
+
+Baseret på:
+ "Lær maskinskrivning i Folke- og Ungdomsskolen"
+    Kamma Jensen &amp; Jytte Møller
+    ISBN 87-17-02200-2
+
+Program udviklet af Håvard Frøiland
+</description>
+ <keyboardLayout>dk</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{3cb63870-677b-49a9-885f-41d7f8a8fe55}</id>
+   <title>Grundstilling: asdf og jklæ</title>
+   <newCharacters>asdfjklæ</newCharacters>
+   <text>fff jjj fff jjj fff jjj fff jjj fff jjj fff jjj fff jjj
+ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk
+fff jjj ddd kkk fff jjj ddd kkk fff jjj ddd kkk fff jjj
+fff jjj ddd kkk fff jjj ddd kkk fff jjj ddd kkk fff jjj
+fjdk fjdk fjdk fjdk fjdk fjdk fjdk fjdk fjdk fjdk fjdk
+aaa æææ aaa æææ aaa æææ aaa æææ aaa æææ aaa æææ aaa æææ
+sss lll sss lll sss lll sss lll sss lll sss lll sss lll
+aaa æææ sss lll aaa æææ sss lll aaa æææ sss lll aaa æææ
+aaa æææ sss lll aaa æææ sss lll aaa æææ sss lll aaa æææ
+aæsl aæsl aæsl aæsl aæsl aæsl aæsl aæsl aæsl aæsl aæsl
+aæsldkfjdkslaæsldkfjdkslaæsldkfjdkslaæsldkfjdkslaæ
+aæsldkfjdkslaæsldkfjdkslaæsldkfjdkslaæsldkfjdkslaæ
+lak kaj sæd fæl aks las dæk sad læk sæl sal dal jas
+lak kaj sæd fæl aks las dæk sad læk sæl sal dal jas
+lak kaj sæd fæl aks las dæk sad læk sæl sal dal jas
+laks skal kald skaf kaja saks sjæl klæd slæk fjas kælk
+laks skal kald skaf kaja saks sjæl klæd slæk fjas kælk
+laks skal kald skaf kaja saks sjæl klæd slæk fjas kælk
+falsk sjask skala flæsk skjald afkald lakaj kajak aflad
+falsk sjask skala flæsk skjald afkald lakaj kajak aflad
+falsk sjask skala flæsk skjald afkald lakaj kajak aflad
+sæk kæd alf læs kala lajka affald sjakal kasak jaffa
+sæk kæd alf læs kala lajka affald sjakal kasak jaffa
+sæk kæd alf læs kala lajka affald sjakal kasak jaffa</text>
+  </lesson>
+  <lesson>
+   <id>{f56a2f23-6892-4fa5-a703-418fb8519669}</id>
+   <title>Nye bogstaver: ecb</title>
+   <newCharacters>ecb</newCharacters>
+   <text>fbf fbf fbf fbf fbf fbf fbf fbf fbf fbf fbf fbf
+dcd dcd dcd dcd dcd dcd dcd dcd dcd dcd dcd dcd
+ded ded ded ded ded ded ded ded ded ded ded ded
+fff jjj ddd kkk fff jjj ddd kkk fff jjj ddd kkk fff jjj
+aaa æææ sss lll aaa æææ sss lll aaa æææ sss lll aaa æææ
+fjdkslaæ fjdkslaæ fjdkslaæ fjdkslaæ fjdkslaæ fjdkslaæ
+abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef
+abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef
+abcdfe abcdfe abcdfe abcdfe abcdfe abcdfe abcdfe abcdfe
+bede bjælke bakke bede bjælke bakke bede bjælke bakke
+bede bjælke bakke bede bjælke bakke bede bjælke bakke
+bede bjælke bakke bede bjælke bakke bede bjælke bakke
+celle decca bjælde celle decca bjælde celle decca bjælde
+celle decca bjælde celle decca bjælde celle decca bjælde
+celle decca bjælde celle decca bjælde celle decca bjælde
+beklæde daske kælk beklæde daske kælk beklæde daske kælk
+beklæde daske kælk beklæde daske kælk beklæde daske kælk
+beklæde daske kælk beklæde daske kælk beklæde daske kælk
+kalde ballade blæse kalde ballade blæse kalde ballade blæse
+kalde ballade blæse kalde ballade blæse kalde ballade blæse
+kalde ballade blæse kalde ballade blæse kalde ballade blæse</text>
+  </lesson>
+  <lesson>
+   <id>{ea2e8205-0936-4675-8eb1-11f131d7d909}</id>
+   <title>Nye bogstaver: ghi</title>
+   <newCharacters>ghi</newCharacters>
+   <text>fgf fgf fgf fgf fgf fgf fgf fgf fgf fgf fgf fgf
+jhj jhj jhj jhj jhj jhj jhj jhj jhj jhj jhj jhj
+kik kik kik kik kik kik kik kik kik kik kik kik
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+hagl cif hagl cif hagl cif hagl cif hagl cif hagl cif
+sled bæk sled bæk sled bæk sled bæk sled bæk sled bæk
+illegal kaglede silkeslag illegal kaglede silkeslag
+illegal kaglede silkeslag illegal kaglede silkeslag
+illegal kaglede silkeslag illegal kaglede silkeslag
+chik check hellas chik check hellas chik check hellas
+chik check hellas chik check hellas chik check hellas
+chik check hellas chik check hellas chik check hellas
+cecilia klike skik cecilia klike skik cecilia klike skik
+cecilia klike skik cecilia klike skik cecilia klike skik
+cecilia klike skik cecilia klike skik cecilia klike skik
+fjeld æsel fjeld æsel fjeld æsel fjeld æsel fjeld æsel
+fjeld æsel fjeld æsel fjeld æsel fjeld æsel fjeld æsel
+hib kage hib kage hib kage hib kage hib kage hib kage
+hib kage hib kage hib kage hib kage hib kage hib kage</text>
+  </lesson>
+  <lesson>
+   <id>{d65eb947-a9de-438c-88a7-d2e0ff37f862}</id>
+   <title>Nye bogstaver: mno</title>
+   <newCharacters>mno</newCharacters>
+   <text>jmj jmj jmj jmj jmj jmj jmj jmj jmj jmj jmj jmj
+jnj jnj jnj jnj jnj jnj jnj jnj jnj jnj jnj jnj
+lol lol lol lol lol lol lol lol lol lol lol lol
+abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi
+abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi abcdefghi
+jklmno jklmno jklmno jklmno jklmno jklmno jklmno jklmno
+jklmno jklmno jklmno jklmno jklmno jklmno jklmno jklmno
+jklmon jklmon jklmon jklmon jklmon jklmon jklmon jklmon
+modesag mad film modesag mad film modesag mad film
+modesag mad film modesag mad film modesag mad film
+modesag mad film modesag mad film modesag mad film
+nominel bon nælden nominel bon nælden nominel bon nælden
+nominel bon nælden nominel bon nælden nominel bon nælden
+nominel bon nælden nominel bon nælden nominel bon nælden
+mon han kan komme i dag
+de kom med den falske seddel
+mon de ikke nok kan skaffe dem
+benene kan ikke holde
+mona og lise kan sælge fisk
+officiel node olie officiel node olie officiel node olie
+officiel node olie officiel node olie officiel node olie
+officiel node olie officiel node olie officiel node olie</text>
+  </lesson>
+  <lesson>
+   <id>{7b4c1e08-e045-4370-8714-31b8d51fbfac}</id>
+   <title>Nye bogstaver: pqr</title>
+   <newCharacters>pqr</newCharacters>
+   <text>æpæ æpæ æpæ æpæ æpæ æpæ æpæ æpæ æpæ æpæ æpæ æpæ
+aqa aqa aqa aqa aqa aqa aqa aqa aqa aqa aqa aqa
+frf frf frf frf frf frf frf frf frf frf frf frf
+abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr
+mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr
+mnoprq mnoprq mnoprq mnoprq mnoprq mnoprq mnoprq mnoprq
+hep bask celle min jord fange hep bask celle min jord fange
+hep bask celle min jord fange hep bask celle min jord fange
+program penge pap program penge pap program penge pap
+program penge pap program penge pap program penge pap
+program penge pap program penge pap program penge pap
+rom reklame cirkel rom reklame cirkel rom reklame cirkel
+rom reklame cirkel rom reklame cirkel rom reklame cirkel
+rom reklame cirkel rom reklame cirkel rom reklame cirkel
+der kom de fire drenge fra kolding
+i denne gade bor lone helmer
+der er med i ceremonien
+jeg bad dem komme om morgenen
+pigerne gik i biografen
+drengene spillede fodbold
+forskellige mere eller mindre komplicerede maskiner
+forskellige mere eller mindre komplicerede maskiner
+forskellige mere eller mindre komplicerede maskiner</text>
+  </lesson>
+  <lesson>
+   <id>{842d71eb-7e28-4857-8abe-78c9d72f559c}</id>
+   <title>Nye bogstaver: tuvw</title>
+   <newCharacters>tuvw</newCharacters>
+   <text>ftf ftf ftf ftf ftf ftf ftf ftf ftf ftf ftf ftf
+juj juj juj juj juj juj juj juj juj juj juj juj
+fvf fvf fvf fvf fvf fvf fvf fvf fvf fvf fvf fvf
+sws sws sws sws sws sws sws sws sws sws sws sws
+abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr
+pqrstuvw pqrstuvw pqrstuvw pqrstuvw pqrstuvw pqrstuvw
+pqrstuvw pqrstuvw pqrstuvw pqrstuvw pqrstuvw pqrstuvw
+pqrstuwv pqrstuwv pqrstuwv pqrstuwv pqrstuwv pqrstuwv
+stroppetur stopur slutspurt stroppetur stopur slutspurt
+stroppetur stopur slutspurt stroppetur stopur slutspurt
+stroppetur stopur slutspurt stroppetur stopur slutspurt
+vejr vrangen savne vejr vrangen savne vejr vrangen savne
+vejr vrangen savne vejr vrangen savne vejr vrangen savne
+vejr vrangen savne vejr vrangen savne vejr vrangen savne
+lær de unge hvordan de skal tænke
+ikke hvad de skal tænke
+hvor alle tænker det samme
+er der ikke nogen der tænker ret meget
+den tænker ikke godt som ikke tænker en gang til
+wigwam wienerbarn wigwam wienerbarn wigwam wienerbarn
+wigwam wienerbarn wigwam wienerbarn wigwam wienerbarn
+wigwam wienerbarn wigwam wienerbarn wigwam wienerbarn</text>
+  </lesson>
+  <lesson>
+   <id>{5045f23b-0e6c-4a8f-b6a7-250c6e974d63}</id>
+   <title>Nye bogstaver: zxyø</title>
+   <newCharacters>zxyø</newCharacters>
+   <text>sxs sxs sxs sxs sxs sxs sxs sxs sxs sxs sxs sxs
+jyj jyj jyj jyj jyj jyj jyj jyj jyj jyj jyj jyj
+aza aza aza aza aza aza aza aza aza aza aza aza
+æøæ æøæ æøæ æøæ æøæ æøæ æøæ æøæ æøæ æøæ æøæ æøæ
+stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw
+stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw
+xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø
+xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø
+husk juble dele quilte dompap waggon vaccine xerografi
+husk juble dele quilte dompap waggon vaccine xerografi
+bordeaux xylofon xeroform bordeaux xylofon xeroform
+bordeaux xylofon xeroform bordeaux xylofon xeroform
+bordeaux xylofon xeroform bordeaux xylofon xeroform
+lyd nyse tyde fryse skyde lyd nyse tyde fryse skyde
+lyd nyse tyde fryse skyde lyd nyse tyde fryse skyde
+lyd nyse tyde fryse skyde lyd nyse tyde fryse skyde
+zebra zink zar zulu zone zebra zink zar zulu zone
+zebra zink zar zulu zone zebra zink zar zulu zone
+zebra zink zar zulu zone zebra zink zar zulu zone
+han glemte xylofonen i bussen
+de spillede bezique hele aftenen
+else har min cykellygte
+han hentede sin søn ved skolen
+cement er et vigtigt materiale
+jeg har læst din artikel
+børsen sønner tømme ønske gløde skønne følge rømme
+børsen sønner tømme ønske gløde skønne følge rømme
+børsen sønner tømme ønske gløde skønne følge rømme</text>
+  </lesson>
+  <lesson>
+   <id>{dd901676-3c0d-4f8d-ac78-a629bd37f030}</id>
+   <title>Nye bogstaver: å,.-</title>
+   <newCharacters>å,.-</newCharacters>
+   <text>æåæ æåæ æåæ æåæ æåæ æåæ æåæ æåæ æåæ æåæ æåæ æåæ
+k,k k,k k,k k,k k,k k,k k,k k,k k,k k,k k,k k,k
+l.l l.l l.l l.l l.l l.l l.l l.l l.l l.l l.l l.l
+æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ æ-æ
+abcdef ghijkl mnopqr stuvwx abcdef ghijkl mnopqr stuvwx
+yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.-
+yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.- yzæøå,.-
+aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz
+emuå fnw, emuå fnw, emuå fnw, emuå fnw, emuå fnw,
+cksæ dltø cksæ dltø cksæ dltø cksæ dltø cksæ dltø
+gov. hpx- gov. hpx- gov. hpx- gov. hpx- gov. hpx-
+åben låge måske åben låge måske åben låge måske
+åben låge måske åben låge måske åben låge måske
+åben låge måske åben låge måske åben låge måske
+der var mange mennesker på gaden, selv om det regnede.
+der var mange mennesker på gaden, selv om det regnede.
+der var mange mennesker på gaden, selv om det regnede.
+hunden var tolv år gammel,
+vi skal på skovtur på søndag,
+else-marie kan ikke komme med,
+næste week-end er vi ikke hjemme,
+vi får gæster i påsken,
+de skal ikke flyve før på lørdag.
+jeg har ringet - men der var ingen, der svarede.
+jeg har ringet - men der var ingen, der svarede.
+jeg har ringet - men der var ingen, der svarede.
+abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-</text>
+  </lesson>
+  <lesson>
+   <id>{12782175-6acd-4abc-8db8-c8472aca2806}</id>
+   <title>Repetition og øvelser 1</title>
+   <newCharacters></newCharacters>
+   <text>abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef
+ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl ghijkl
+mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr mnopqr
+stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw stuvw
+xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø xyzæø
+å,.- å,.- å,.- å,.- å,.- å,.- å,.- å,.- å,.- å,.- å,.-
+og i at det en den til er de af på var han der så med ikke
+og i at det en den til er de af på var han der så med ikke
+æblerne var sure som citroner - de var slet ikke modne
+æblerne var sure som citroner - de var slet ikke modne
+æblerne var sure som citroner - de var slet ikke modne
+næsten lige nu,
+vi viser frem,
+jorden er rund,
+vi løber med,
+kommer han snart,
+vejen var meget lang,
+nu er det sent,
+hun deres også skal alle kunne kommer sin hans meget mange
+hun deres også skal alle kunne kommer sin hans meget mange
+vi regner med at høre fra dig en af de nærmeste dage
+vi regner med at høre fra dig en af de nærmeste dage
+vi regner med at høre fra dig en af de nærmeste dage
+de eneste, som aldrig begår fejl,
+er de, som aldrig gør noget
+lysten driver værket,
+når værket ikke fordriver lysten
+har man meget, så går det til
+har man lidet, så slår det til</text>
+  </lesson>
+  <lesson>
+   <id>{f4bf9e9b-6947-4e7d-aa7d-c5b4b9abe6db}</id>
+   <title>Repetition og øvelser 2</title>
+   <newCharacters></newCharacters>
+   <text>abc def ghi jkl mno pqr stu vwx yzæøå, .-
+bkjc ræzs bkjc ræzs bkjc ræzs bkjc ræzs bkjc ræzs
+dmle tåøu dmle tåøu dmle tåøu dmle tåøu dmle tåøu
+fong v.,w fong v.,w fong v.,w fong v.,w fong v.,w
+hipa xy-q hipa xy-q hipa xy-q hipa xy-q hipa xy-q
+det er dejligt vejr i dag, jeg vil gå en tur langs stranden
+det er dejligt vejr i dag, jeg vil gå en tur langs stranden
+her ned store lille du gik ville må bliver få eller sagde
+her ned store lille du gik ville må bliver få eller sagde
+adskille bestyre censor disk eksempel frimærke grammatik
+adskille bestyre censor disk eksempel frimærke grammatik
+adskille bestyre censor disk eksempel frimærke grammatik
+sig ikke alt, hvad du ved - men vid alt, hvad du siger
+hemmeligheden ved at kede er at sige alt
+selv det sværeste kan siges nemt - men det er svært
+selv det nemmeste kan siges svært - og det er nemt
+nok under tid går måtte have være dog mig sine noget derfor
+nok under tid går måtte have være dog mig sine noget derfor
+handicap ingeniør juice kladde lektier myndig niveau
+handicap ingeniør juice kladde lektier myndig niveau
+handicap ingeniør juice kladde lektier myndig niveau</text>
+  </lesson>
+  <lesson>
+   <id>{8f172cfd-94bc-402c-bdb9-8a757147a888}</id>
+   <title>Repetition og øvelser 3</title>
+   <newCharacters>Repetition og øvelser 3</newCharacters>
+   <text>adbcef adbcfe adbecf adbecf adbefc adbfce adbfec
+gjhikl gjhilk gjhkil gjhkli gjhlik gjhlki
+mpnoqr mpnorq mpnqor mpnqro mpnroq mpnrqo
+for men vi som sig har jeg om et da havde nu ved fra kan
+for men vi som sig har jeg om et da havde nu ved fra kan
+tiden er gået hurtigt,
+i denne side af vejen,
+han har penge,
+det begyndte godt,
+vandet er meget koldt,
+må vi være længe oppe,
+der er røde køer på marken,
+det går nok denne gang.</text>
+  </lesson>
+  <lesson>
+   <id>{36989ba8-8d99-46a3-bf27-2aafa6270a83}</id>
+   <title>Repetition og øvelser 4</title>
+   <newCharacters></newCharacters>
+   <text>abc def ghi jkl mno pqr vwx yzæ øå, .-
+abc def ghi jkl mno pqr vwx yzæ øå, .-
+fik jo kun vil mod godt se dag andre gamle hele lige år
+fik jo kun vil mod godt se dag andre gamle hele lige år
+olympiade pjece quilte refleks samfund tempo union
+olympiade pjece quilte refleks samfund tempo union
+olympiade pjece quilte refleks samfund tempo union
+ordet introduktion er et fremmedord, der som så mange
+andre stammer fra latin - det betyder indledning eller
+præsentation - et kursus kan starte med introduktions-
+dage - et musikstykkes første sats kaldes ofte intro-
+duktion - det første brev angående en sag benævnes in-
+troduktionsskrivelse.</text>
+  </lesson>
+  <lesson>
+   <id>{98ed38ba-dd05-43ee-80e2-2180012ac82a}</id>
+   <title>Repetition og øvelser 5</title>
+   <newCharacters></newCharacters>
+   <text>abcd efgh ijkl mnop qrst uvwx yzæø å,.-
+abcd efgh ijkl mnop qrst uvwx yzæø å,.-
+stor komme gå gennem os frem alt smart stod endnu hver helt
+stor komme gå gennem os frem alt smart stod endnu hver helt
+aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz
+emuå fnw, emuå fnw, emuå fnw, emuå fnw, emuå fnw, emuå fnw,
+lidt selv denne igen været hvad mand nogle end hen hundrede
+lidt selv denne igen været hvad mand nogle end hen hundrede
+et koncept er en slags kladde, som skrives, hvis man ikke
+er helt sikker på den endelige udforming af et skriftligt
+arbejde - kommer man til at skrive forkert, kan man bare
+strege ud og derefter skrive videre - konceptet betragtes
+som grundlag for en renskrift, f.eks. kladde til et brev.</text>
+  </lesson>
+  <lesson>
+   <id>{baf410ab-a3ac-4924-b7e5-c534b6e70be1}</id>
+   <title>Repetition og øvelser 6</title>
+   <newCharacters></newCharacters>
+   <text>abcd efgh ijkl mnop qrst uvwx yzæø å,.-
+abcd efgh ijkl mnop qrst uvwx yzæø å,.-
+varme walkietalkie xero yoga zenit ækvator ørken ådsel
+varme walkietalkie xero yoga zenit ækvator ørken ådsel
+varme walkietalkie xero yoga zenit ækvator ørken ådsel
+cksæ dltø cksæ dltø cksæ dltø cksæ dltø cksæ dltø
+gov. hpx- gov. hpx- gov. hpx- gov. hpx- gov. hpx-
+ingen ja sammen uden blive mere dens gang min ad anden sit
+ingen ja sammen uden blive mere dens gang min ad anden sit
+ordet manuskript stammer fra latin og betyder egentlig
+håndskrift - det bruges nu også som en maskinskrevet tekst,
+specielt om en forfatters arbejde i den form, hvori det
+afleveres til forlægger eller trykkeri - det trykte eller
+maskinskrevne materiale, der skal afskrives, kaldes også
+et manuskript.</text>
+  </lesson>
+  <lesson>
+   <id>{81a0ea45-1f58-4f95-b8b5-b274516d67ca}</id>
+   <title>Repetition og øvelser 7</title>
+   <newCharacters></newCharacters>
+   <text>abcde fghij klmno pqrst uvwxy zæøå, .-
+abcde fghij klmno pqrst uvwxy zæøå, .-
+tog bedes jorden blevet både gerne vand dage folk ny først
+tog bedes jorden blevet både gerne vand dage folk ny først
+fong v.,w fong v.,w fong v.,w fong v.,w fong v.,w
+hipa xy-q hipa xy-q hipa xy-q hipa xy-q hipa xy-q
+anden læge land sidste således del dig ellers fordi aldrig
+anden læge land sidste således del dig ellers fordi aldrig
+der er forskellige teorier om, hvordan jazzen er opstået -
+ingen af disse teorier kan dog bevises - nogle mener, at
+jazzen er resultatet af et møde mellem afrikansk og euro-
+pæisk kultur, andre går ud fra, at denne musikform er
+startet, da en ny befolkningsgruppe, som ikke var hæmmet
+af en ensrettet, akademisk tradition, begyndte at spille
+og efterhånden fandt ud af at gøre det på en ny og hidtil
+uprøvet måde.</text>
+  </lesson>
+  <lesson>
+   <id>{86ca1716-5db1-4fdc-a6f6-dcd0046bc229}</id>
+   <title>Repetition og øvelser 8</title>
+   <newCharacters></newCharacters>
+   <text>abcde fghij klmno pqrst uvwxy zæøå, .-
+abcde fghij klmno pqrst uvwxy zæøå, .-
+først vandet hvis ser sted ligger næsten får hr. samme før
+først vandet hvis ser sted ligger næsten får hr. samme før
+bkjc ræzs bkjc ræzs bkjc ræzs bkjc ræzs bkjc ræzs
+dmle tåøu dmle tåøu dmle tåøu dmle tåøu dmle tåøu
+hjem dette disse ude lå langt mellem undskylde små tilbage
+hjem dette disse ude lå langt mellem undskylde små tilbage
+der er ingen tvivl om, at forældres indflydelse på
+deres børns valg af erhverv kan være meget stor -
+i gamle dage var det en selvfølge, at forældrene
+fastlagde deres børns fremtid - ofte fulgte sønnen
+i faderens fodspor.
+i de fleste hjem er det nu blevet således, at de
+unge selv er med til at bestemme, hvad de vil være
+- ja, nogle forældre overlader helt til børnene at
+afgøre sagen - men det rigtige må være, at forældre
+og børn i fællesskab finder frem til den bedst muli-
+ge løsning.</text>
+  </lesson>
+  <lesson>
+   <id>{200b5b01-fa99-409f-b8a6-daee4fb10e36}</id>
+   <title>Store bogstaver med højre og venstre skiftenøgler</title>
+   <newCharacters>ABCDEFGHIJKLMNOPSTUVWXYZÆØÅ</newCharacters>
+   <text>Anna Børge Christian Dorthe Else Frede Gunnar Hans Ida Jens
+Anna Børge Christian Dorthe Else Frede Gunnar Hans Ida Jens
+Kirsten Lars Morten Niels Ole Peter Ruth Søren Tove Ulla Vera
+Kirsten Lars Morten Niels Ole Peter Ruth Søren Tove Ulla Vera
+Werner Xenia Yrsa Zenta Ærø Øjvind Åse
+Werner Xenia Yrsa Zenta Ærø Øjvind Åse
+altid flere ofte omkring side byen inde bort danske skoven
+altid flere ofte omkring side byen inde bort danske skoven
+Mandag. Tirsdag. Onsdag. Torsdag. Fredag. Lørdag. Søndag.
+Mandag. Tirsdag. Onsdag. Torsdag. Fredag. Lørdag. Søndag.
+Frilandsmuseet ved Sorgenfri blev oprettet ved år-
+hundredeskiftet og en nu en afdeling af National-
+museet. Til parken er overflyttet gamle landbyg-
+ninger fra Danmark og de tidligere danske lands-
+dele i Sydsverige og Sydslesvig. Bygningerne er
+udvalgt således, at de giver et indtryk af de for-
+skellige egnes byggeskikke siden det syttende år-
+hundrede.</text>
+  </lesson>
+  <lesson>
+   <id>{b847ed2f-8626-412b-b280-bf7411b4137d}</id>
+   <title>Tal 1-5</title>
+   <newCharacters>12345</newCharacters>
+   <text>fr5f fr5f fr5f fr5f fr5f fr5f fr5f fr5f fr5f fr5f
+de4d de4d de4d de4d de4d de4d de4d de4d de4d de4d
+sw3s sw3s sw3s sw3s sw3s sw3s sw3s sw3s sw3s sw3s
+aq2a aq2a aq2a aq2a aq2a aq2a aq2a aq2a aq2a aq2a
+aq1a aq1a aq1a aq1a aq1a aq1a aq1a aq1a aq1a aq1a
+Tæppet er 4 meter bredt og 5 meter langt.
+Tæppet er 4 meter bredt og 5 meter langt.
+Forretningen er flyttet fra Algade 4 til Bredgade 5.
+Forretningen er flyttet fra Algade 4 til Bredgade 5.
+135 kg sukker og 241 kg mel.
+135 kg sukker og 241 kg mel.
+1 er for lidt, mon 2 er nok, tag hellere 3 med det samme.
+1 er for lidt, mon 2 er nok, tag hellere 3 med det samme.
+Hun bor på Vestergade nr. 12, han bor på Østergade nr. 21.
+Hun bor på Vestergade nr. 12, han bor på Østergade nr. 21.
+De er flyttet fra Nørregade nr. 13 til Søndergade nr. 31.
+De er flyttet fra Nørregade nr. 13 til Søndergade nr. 31.
+Jordkloden modtager daglig enorme energimængder fra
+solen i form af strålevarme. Denne varme er en be-
+tingelse for alt liv på jorden og ville være mere
+en rigelig til dækning af vort samlede energibehov,
+hvis vi kunne udnytte den. I de kommende år vil for-
+skere overalt på jorden forsøge at finde frem til
+metoder, der kan omdanne solenergi til energiformer,
+vi kan anvende i stedet for kul, olie m.v.</text>
+  </lesson>
+  <lesson>
+   <id>{0b7aa76b-6748-4872-b842-c6433433b79c}</id>
+   <title>Tal 6-0</title>
+   <newCharacters>67890</newCharacters>
+   <text>jy6j jy6j jy6j jy6j jy6j jy6j jy6j jy6j jy6j jy6j
+ju7j ju7j ju7j ju7j ju7j ju7j ju7j ju7j ju7j ju7j
+ki8k ki8k ki8k ki8k ki8k ki8k ki8k ki8k ki8k ki8k
+lo9l lo9l lo9l lo9l lo9l lo9l lo9l lo9l lo9l lo9l
+æp0æ æp0æ æp0æ æp0æ æp0æ æp0æ æp0æ æp0æ æp0æ æp0æ
+Rejsen varede 37 timer, og de kørte igennem 6 lande.
+Rejsen varede 37 timer, og de kørte igennem 6 lande.
+Der var 10 piger og 17 drenge i klassen.
+Der var 10 piger og 17 drenge i klassen.
+Pensionsalderen for kvinder er 62, for mænd er den 67.
+Pensionsalderen for kvinder er 62, for mænd er den 67.
+Han fik 46 points ud af 59 mulige.
+Han fik 46 points ud af 59 mulige.
+Han blev født den 28. juni 1947 i Rudkøbing.
+Han blev født den 28. juni 1947 i Rudkøbing.
+Der var 807 ansøgere men kun 698 pladser.
+Der var 807 ansøgere men kun 698 pladser.
+Træer vokser ikke alene i højtiden, men også i højtiden.
+I laget mellem bark og ved finder der en celledeling
+sted. Hvis temperaturen var ens året rundt, ville
+træet vokse jævnt, men på vore breddegrader sker væk-
+sten i ryk, fordi træerne hviler om vinteren. Dette
+bevirker, at man på et oversavet træ tydeligt kan se,
+hvor mange år træet er, ved hjælp af de såkaldte år-
+ringe. Danmarks ældste træ er Kongeegen i Nordskoven
+ved Jægerspris, som på grundlag af sin tykkelse er
+bedømt til 1800 år.</text>
+  </lesson>
+  <lesson>
+   <id>{d698f702-fafe-42ce-8753-766547ae99da}</id>
+   <title>Repetition og øvelser 9</title>
+   <newCharacters></newCharacters>
+   <text>Januar. Februar. Marts. April. Maj. Juni.
+Januar. Februar. Marts. April. Maj. Juni.
+Juli. August. September. Oktober. November. December.
+Juli. August. September. Oktober. November. December.
+Sækkene vejede i alt 415 kg
+Sækkene vejede i alt 415 kg
+Vi udstiller i Aalborghallen den 2. og 3. juni i år.
+Vi udstiller i Aalborghallen den 2. og 3. juni i år.
+stille ganske mennesker fast gøre igennem ene kommet par
+stille ganske mennesker fast gøre igennem ene kommet par
+stadig fri går hovedet sådan stykke endelig holdt sad
+stadig fri går hovedet sådan stykke endelig holdt sad
+Tasterne på skrivemaskinen må ikke trykkes ned, men skal
+slås staccato an, det vil sige et kort lodret anslag med
+spidsen af fingeren på tasten, som lynhurtig slippes i
+det øjeblik, den er i bund.
+Ved salg på kredit forstår man, at der gives en vis hen-
+stand med betalingen. En detailhandler eller grosserer
+får ofte så lang kredit, at han får tid til at videre-
+sælge varerne, således at han har fået penge til beta-
+ling af gælden. Detailhandlerens kunder - forbrugerne -
+køber på kredit, hvis de ikke har opsparet tilstrækkelig
+mange penge.</text>
+  </lesson>
+  <lesson>
+   <id>{5751f298-5928-4a6d-aaeb-6d53a0dc65e3}</id>
+   <title>Repetition og øvelser 10</title>
+   <newCharacters></newCharacters>
+   <text>Assens. Bjerringbro. Christiansfeld. Dokkedal. Egense.
+Assens. Bjerringbro. Christiansfeld. Dokkedal. Egense.
+Fakse. Gilleleje. Hadsund. Ingstrup. Jerslev. Klim.
+Fakse. Gilleleje. Hadsund. Ingstrup. Jerslev. Klim.
+Lemvig. Marstal. Nakskov. Oksbøl. Padborg. Randers.
+Lemvig. Marstal. Nakskov. Oksbøl. Padborg. Randers.
+Sorø. Tjæreborg. Ulfborg. Vejle. Ydby. Æbeltoft. Ølgod.
+Sorø. Tjæreborg. Ulfborg. Vejle. Ydby. Æbeltoft. Ølgod.
+den 7. og 8. november, den 9. og 10. december
+den 7. og 8. november, den 9. og 10. december
+Bogen har 268 sider, jeg er kommet til side 109.
+Bogen har 268 sider, jeg er kommet til side 109.
+vej fået god hos atter begyndte finde give næste morgen
+vej fået god hos atter begyndte finde give næste morgen
+inden kl. luften nogen hjemme hvide høre idet lang sidder
+inden kl. luften nogen hjemme hvide høre idet lang sidder
+Det er svært for en tom sæk at stå oprejst.
+Med lyn kan man oplyse verden, men ikke opvarme en ovn.
+Fanatisme vil sige, at man fordobler sine anstrengelser,
+efter at man har glemt sit mål.
+Noget af det mest irriterende i denne verden er, at kund-
+skaber og færdigheder kun kan erhverves gennem hårdt ar-
+bejde.</text>
+  </lesson>
+  <lesson>
+   <id>{33a4c6dc-4f37-4729-907a-8710cb0a2a6a}</id>
+   <title>Repetition og øvelser 11</title>
+   <newCharacters></newCharacters>
+   <text>aæsldkfjdkslaæsldkfjdkslaæaæsldkfjdkslaæaæsldkfjdkslaæ
+aften gået hurtigt medens bedre gav højt arbejde imod
+aften gået hurtigt medens bedre gav højt arbejde imod
+Hver gang, man skal træffe et valg, er der en mulighed
+for, at man vælger forkert. Hvis det drejer sig om en
+ting, man har købt, kan det måske lade sig gøre at få
+den byttet eller at lade handelen gå tilbage.
+Har man valgt uddannelse eller erhverv, burde det også
+være let at vælge om igen, hvis det viser sig, at man
+har valgt forkert. Opdager man sin fejltagelse i løbet
+af få uger, kan det gå ret smertefrit, men sker det
+flere gange, eller afgørelsen trækkes i langdrag, er
+det en anden sag. Det kan være klogt at gennemdrøfte
+de problemer, man har, med forældre eller andre, som
+man har tillid til.
+rigtig rundt begge dagen forbi intet nå nye stort syg
+rigtig rundt begge dagen forbi intet nå nye stort syg
+gjorde hinanden lov mængde set tager foran haft nemlig
+gjorde hinanden lov mængde set tager foran haft nemlig
+Peter svømmede 400 meter crawl
+Peter svømmede 400 meter crawl
+Peter svømmede 400 meter crawl</text>
+  </lesson>
+  <lesson>
+   <id>{e453d733-2ff0-46b5-8e6c-67a5a66d5a5f}</id>
+   <title>Repetition og øvelser 12</title>
+   <newCharacters></newCharacters>
+   <text>abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-
+solen vejen vel dyr gode let mens pludselig engang senere
+solen vejen vel dyr gode let mens pludselig engang senere
+Hvis du vil udvide dit ordforråd, må du slå alle de
+ord, du ikke kender, op i en fremmedordbog, efterhånden
+som du støder på dem, skrifteligt eller mundtligt.
+Jo flere ord du kender, desto lettere er det at læse
+vanskeligere stof, og desto lettere vil du have ved
+at udtrykke dig.
+Det behøver ikke at betyde, at du skal anvende frem-
+medord i tide og utide. Du skal kun bruge dem, når
+de giver en bedre og tydeligere mening end et almin-
+deligt dansk ord. Mange diskussioner og samtaler bliver
+uklare, fordi deltagerne ikke helt kender betydningen
+af de ord, der anvendes. Uenighed og misforståelser kan
+undgås, hvis man kender fremmedords betydning.
+Ordet kommunikere er et fremmedord. Det betyder at
+meddele eller at udveksle meddelelser.
+siden slet står tage allerede grund gør hende lærer måde
+siden slet står tage allerede grund gør hende lærer måde
+begynder borte længere spurgte lange måske steder videre
+begynder borte længere spurgte lange måske steder videre
+Hør, jeg taler som en bog
+- det er klogt at være klog,
+eller i en omvendt sum
+- det er dumt at være dum.</text>
+  </lesson>
+  <lesson>
+   <id>{21aaa723-092d-4096-97ad-1e17e6003a61}</id>
+   <title>Repetition og øvelser 13</title>
+   <newCharacters></newCharacters>
+   <text>abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-
+større børnene findes langs mad midt nåede satte stå
+større børnene findes langs mad midt nåede satte stå
+hvert imidlertid nede penge sent bag blade fleste gård
+hvert imidlertid nede penge sent bag blade fleste gård
+For millioener af år siden var jorden dækket af varme,
+lavvandede have. I disse have levede utallige smådyr.
+Når de døde, sank de ned på havbunden, hvor de efter-
+hånden dannede et slamlignede lag. Dette slamlag blev
+tykkere og tykkere og blev senere dækket af et tykt
+lag mudder, som langsomt omdannedes til en porøs sten-
+art, som kunne opsuge den olie, som slamlaget på grund
+af trykket ovenfra blev omdannet til.
+Den olie, som er så vigtig for os i vores hverdag,
+blev til på denne måde gennem millioner af år. De så-
+kaldte oliefelter er de lag - som regel dybt nede i
+jorden - der består af et oliefyldt porøst stenlag.
+Der er mulighed for at finde olie mange steder på
+jorden, for eksempel også i havbunden omkring Danmark.
+Stuen måler 4 x 5 meter
+Stuen måler 4 x 5 meter
+Jeg har rettet 41 stile, kun 4 eller 5 var gode.
+Jeg har rettet 41 stile, kun 4 eller 5 var gode.
+Der var 32 deltagere i mødet.
+Der var 32 deltagere i mødet.
+-., åøæ zyx wvu tsr qpo nml kji hgf edc ba</text>
+  </lesson>
+  <lesson>
+   <id>{aace5e06-7342-4f1f-83ae-40fecc92f87b}</id>
+   <title>Repetition og øvelser 14</title>
+   <newCharacters></newCharacters>
+   <text>aæsldkfjdkslaæsldkfjdkslaæaæsldkfjdkslaæaæsldkfjdkslaæ
+A. Andersen. B. Bjerg. C. Carlsen. D. Dam. E. Eriksen.
+A. Andersen. B. Bjerg. C. Carlsen. D. Dam. E. Eriksen.
+F. Frandsen. G. Gregersen. H. Hansen. I. Iversen J. Jensen.
+F. Frandsen. G. Gregersen. H. Hansen. I. Iversen J. Jensen.
+K. Knudsen. L. Larsen. M. Madsen. N.Nielsen. O.Olsen.
+K. Knudsen. L. Larsen. M. Madsen. N.Nielsen. O.Olsen.
+lande lod mine plads stærk vist egne fandt flyver gange
+lande lod mine plads stærk vist egne fandt flyver gange
+Årets gang i naturen er fuld af overraskelser. Når sneen
+smelter bort, og frosten går af jorden, vækkes de første
+bladanlæg til live. Så tidligt som i marts titter de
+første følfod frem i grøftekanten, og man kan finde duf-
+tende violer på stengærdet ved skoven. Når jorden bliver
+varmere, begynder røddernes fine net at opsuge vand, og
+planterne skyder hurtigt i vejret. Planterne retter sig
+mere efter mikroklimaet ved jordoverfladen end efter det
+klima, vi andre registrerer i et par meters højde over
+jordoverfladen. Det er forskellen i mikroklimaet, der
+gør, at nogle anemoner springer ud op til et par uger
+før andre, der gror på mindre heldige steder.
+Ring besked inden kl. 10 til telefonen 08 67 90 79
+Ring besked inden kl. 10 til telefonen 08 67 90 79
+Ring besked inden kl. 10 til telefonen 08 67 90 79</text>
+  </lesson>
+  <lesson>
+   <id>{a4a476a7-caa9-4140-b6d9-91d610aa96dd}</id>
+   <title>Repetition og øvelser 15</title>
+   <newCharacters></newCharacters>
+   <text>abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-
+flok gaden lægge løb omtrent ondt rask sider siger skibe
+flok gaden lægge løb omtrent ondt rask sider siger skibe
+P. Pedersen. R. Rasmussen. S. Sørensen. T. Thomsen. U. Ulrich.
+P. Pedersen. R. Rasmussen. S. Sørensen. T. Thomsen. U. Ulrich.
+V. Vang. Y. Yde. Z. Zerlang. Æ. Ærø. Ø. Ørum. Å. Åbo.
+V. Vang. Y. Yde. Z. Zerlang. Æ. Ærø. Ø. Ørum. Å. Åbo.
+Hvert 4. år er skudår, og februar har 29 dage mod de sæd-
+vanlige 28 dage. Der kiles en dag ind imellem den 23. og
+24. februar, den såkaldte skuddag. Vi har skudår de år,
+hvor årstallet er deleligt med 4, for eksempel 1968, 1972,
+1976 og 1980. År 2000 vil dog ikke være skudår, ligesom
+år 1900 ikke var det.
+Man mener, det var de første romere, der indførte et år
+på 12 måneder. Cæsar bestemte, at hvert 4. år skulle være
+skudår med 366 dage, de mellemliggende 3 år 365 dage. Denne
+tidsregning fik navnet den julianske tidsregning og blev
+indført den 1. januar år 45.
+hilsen klokken mest mindre største vejret efterhånden gjort
+hilsen klokken mest mindre største vejret efterhånden gjort
+lagde lever natten siger tiden fremmede hel tænkte hvordan
+lagde lever natten siger tiden fremmede hel tænkte hvordan
+lave luft nej ret svarede tidligere venligst øjeblik altså
+lave luft nej ret svarede tidligere venligst øjeblik altså</text>
+  </lesson>
+  <lesson>
+   <id>{89c3571f-d2d9-4a86-9e25-dae0d93cdaac}</id>
+   <title>Repetition og øvelser 16</title>
+   <newCharacters></newCharacters>
+   <text>abcdef ghijkl mnopqr stuvwx yzæøå, .-
+abcdef ghijkl mnopqr stuvwx yzæøå, .-
+Der er stor forskel på unge menneskers læsefærdighed.
+Enkelte hurtige læsere kan læse op til 500 ord pr.
+minut, medens de langsomme læsere måske kun kommer op
+på 50 ord pr. minut. Læsehastigheden bør varieres ef-
+ter det stof, der læses. En side i en roman kan læses
+hurtigere end en side i en lærebog i matematik eller
+biologi. Det kræver en bestemt teknik at lære en lek-
+tie, hvor man skal forstå og huske det læste. Man kan
+godt læse lektien 2-3 gange uden at have lært den.
+Et af de vigtigste midler til effektiv lektielæsning
+er koncentration, det vil sige evnen til at holde tan-
+kerne samlede om den opgave, man er optaget af. Man
+lærer ikke sin lektie, hvis tankerne flakker rundt,
+medens man læser. Det kræver ofte stor viljeanspændel-
+se og selvdisciplin at koncentrere sig. Den største
+hjælp til koncentration er virkelig interesse for den
+foreliggende opgave, men der er vel ingen, der synes,
+at alle opgaver er lige interessante. Det er dog værd
+at lægge mærke til, at hvis man for alvor forsøger at
+læse en lektie og grundigt sætter sig ind i stoffet,
+så vil man mærke, at interessen kommer af sig selv.
+rejste siden slår slags stærk træer unge forskellige
+rejste siden slår slags stærk træer unge forskellige
+heller hus høres kender manden meddele afsende modtage
+heller hus høres kender manden meddele afsende modtage</text>
+  </lesson>
+  <lesson>
+   <id>{f8c1e978-b9d7-45d7-9405-d01e87f79d0f}</id>
+   <title>Repetition og øvelser 17</title>
+   <newCharacters></newCharacters>
+   <text>abcdefghijklmnopqrstuvwxyzæøå,.-
+abcdefghijklmnopqrstuvwxyzæøå,.-
+Mit telefonnummer er fra 24. november 35 17 88 96
+Mit telefonnummer er fra 24. november 35 17 88 96
+Mit telefonnummer er fra 24. november 35 17 82 96
+Der findes dyr med mærkelige spisevaner ganske ligesom
+mennesker. Mange insekter er vegetarianere, andre er
+lidenskabelige kødædere. Sommerfuglelarver spiser al-
+mindeligvis blade, men der findes en art, der kun kan
+trives på en ganske bestemt pileart - al anden føde
+nægter den at spise, om den så skal dø af sult. Menne-
+sker og dyr behøver i virkeligheden de samme nærings-
+stoffer, som de indtager i forskellig form. Alle har
+behov for fedt og sukker som brændstof for organismen
+og kraftkilde for musklerne. Disse stoffer er lige så
+nødvendige, som olien er det for en dieselmotor, der
+skal kunne yde noget.
+Naturligvis er det ikke nødvendigt udelukkende at spi-
+se sukker. Brød og kartofler er sukkerkilder for krop-
+pen, idet disse fødemidlers hovedbestanddel, stivelse,
+i kemisk henseende står sukkeret nær og faktisk omdan-
+nes til sukkerstof af vore fordøjelsesorganer. Samtidig
+er det nødvendigt at få tilført æggehvidestoffer, pro-
+tein, idet kroppen for en stor del består af æggehvide-
+stoffer.
+taget vokser vort øjne derved fattige hoved høje især
+taget vokser vort øjne derved fattige hoved høje især
+langsomt ligner råbte ro time tusinde bare dårlig eneste
+langsomt ligner råbte ro time tusinde bare dårlig eneste</text>
+  </lesson>
+  <lesson>
+   <id>{42a94e59-b86b-46dd-b976-12ce719874ea}</id>
+   <title>Repetition og øvelser 18</title>
+   <newCharacters></newCharacters>
+   <text>aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz aiqy bjrz
+emuå fnw, emuå fnw, emuå fnw, emuå fnw, emuå fnw,
+3 stk. autobørster nr. 2172 a kr. 18,25
+4 stk. autobørster nr. 2179 a kr. 16,35
+I de egne af jorden, der er hjemsøgt af jordskælv, findes
+der også vulkaner. Man har kaldt dem ildsprudende bjerge,
+men der er ikke ild, der kommer ud af vulkanerne, det er
+smeltede, glødende stenmasser og store mængder af vand-
+damp og andre luftarter, der sammen med støv, grus og sten
+undertiden slynges kilometerhøjt til vejrs. Disse masser
+oplyses nedefra, og det ser derfor ud, som om det er ild,
+der står ud af bjergets åbning.
+Man troede tidligere, at vulkanernes glødende masser kom
+fra et smeltet jordindre. I vore dage hælder man til den
+anskuelse, at der i tyve til tredive kilometers dybte un-
+der jordoverfladen foregår radioaktive processer, hvorved
+der opstår så høj en temperatur, at de fleste klipper smel-
+ter.
+Den smeltede masse kaldes magma. Denne masse bliver ved
+ophedningen lettere end de omgivende faste dele, og den
+smelter sig derfor vej opefter igennem de endnu faste
+klipper. Magmaen indeholder mange forskellige luftarter,
+bland andet enorme mængder af vanddamp. Når jordskorpen
+ved vulkanudbruddet gennembrydes, slynges dele af den
+sønderbrudte jordskorpe sammen med glødende magmadele til
+vejrs med de eksploderende luftarter.
+enkelte faldt færdige hørte kære livet løber nær sommeren
+enkelte faldt færdige hørte kære livet løber nær sommeren</text>
+  </lesson>
+  <lesson>
+   <id>{18bf5c35-6643-45f5-8748-5c456533d784}</id>
+   <title>Repetition og øvelser 19</title>
+   <newCharacters></newCharacters>
+   <text>cksæ dltø cksæ dltø cksæ dltø cksæ dltø cksæ dltø
+gov. hpx- gov. hpx- gov. hpx- gov. hpx- gov. hpx-
+Afgang hver mandag kl. 6.35 og hver fredag kl. 7.25
+Afgang hver mandag kl. 6.35 og hver fredag kl. 7.25
+Når vinden kommer fra havet, fører den altid vand med sig
+ind over land. Det kan være vanddamp eller vanddråber. Så
+længe luften endnu ikke er mættet med vanddamp, kan den
+stadig optage mere vand, og den virker derfor udtørrende.
+Når den under en given temperatur ikke kan optage mere
+vanddamp, siger man, at den er mættet. Ved temperaturstig-
+ning kan luften optage mere vand, ved temperaturfald kon-
+denseres, det vil sige fortættes vanddampen. Man taler så
+om, at temperaturen har nået dugpunktet.
+Bæres de vandmættede luftstrømme ind over land i lav høj-
+de, kaldes de tågebanker. Driver de højere oppe, kaldes
+de skyer. Disse dannes næsten altid, hvor kold og varm
+luft mødes. Hvor en vandfyldt luftmasse hurtigt afkøles,
+kan man se skyer vokse frem med stor hastighed. Vanddrå-
+berne i skyerne vil, så længe de er små, kunne holdes
+svævende meget længe på grund af opstigende varm luft.
+Hvis opdriften aftager, og dråberne bliver tunge, vil de
+falde ned som regn. Hvis varm luft glider ind over kold
+luft, vil vi næsten altid få silende heldagsregn. Skyder
+kold luft ind under varm luft, får vi kraftige byger.
+ting vidste året blandt f.eks. forstod hjælp hvorfor
+ting vidste året blandt f.eks. forstod hjælp hvorfor
+hvorledes kort navn tak vender vældige bede ca. kunne
+hvorledes kort navn tak vender vældige bede ca. kunne</text>
+  </lesson>
+  <lesson>
+   <id>{461bc7ea-bd88-4b3f-a3f8-5eac0f6e0b22}</id>
+   <title>Afhjælpning af typiske fejl: ae as bv cv dk ds ea ei</title>
+   <newCharacters></newCharacters>
+   <text>ansvar afklar attrap klar bank sanktion transaktion aks
+barnagtig klar nar kanal kanasta fatal ananas asfalt ar
+kvadrat araber racehad ar at da ja nat rat lak ham bank
+tavle kabale mad allak arrangement arv banan latakia ad
+barbar barnebarn bank brobyggeri bredbladet birkebarken
+benbrud babybad bænkebidder berberis bæger begriber bue
+central citrus center chintz celcius cafe check cowboys
+cif cyklus cocktail cognac accept calcium succes cancan
+dine adfærd med dag udsende daddel ild dit dyd dividere
+dåd dodder dødsdømt ding dang ræd dødvande dåvildt sæde
+dale der den addere dem odder dagdriver drøm dog handle
+did dadel dato dedikation debet ideel dernede dolk drik
+emne dette efter eder efeu ejendel flere ene mellem tre
+kendsgerning rederi sirene service metersystemet energi
+elleve eneste en et hed erfare henvende meddelelse etat
+deres reder herved ellers ekko evne seddel eksamen lede</text>
+  </lesson>
+  <lesson>
+   <id>{ee1cf7da-0cb9-4736-aec0-d2ff3915ce41}</id>
+   <title>Afhjælpning af typiske fejl: fg gf gh hg hj ie io jh</title>
+   <newCharacters></newCharacters>
+   <text>frafald fast fabel affald offer efter første forfald af
+asfalt fosfor forfatter frakke frifinde fred fanfare få
+og gengive gø angå sagogryn goddag geolog gerrig gæring
+gage gang gengæld genopbygge gigt gul god gale gav gære
+gage gengæld gibs giv lægge gags gang gruble gys agerer
+engagere gamling genganger gul grøn gøre agent gnu ugle
+hjem henhold ham handel hvem har hippie højhalset højre
+hed hen hvorhen handske hejre hjerte høns hilsen højhed
+her hen ham henhold have hæk hasard charme hilsen hvede
+holden hud handel hundehus hvalp husholder hastig hilse
+ind ild hils bring ir ris fri sit tidlig giftig million
+iltog ironi biologi triologi irritation citat ilt idiot
+elite erika incitament initiativ irriterende indbinding
+individ indianer indesidden indblik indicere indeks ilt
+jul jeres ja juli jazz jævn kajak jetjager jasmin juice
+jakke eje dej jo juni jævn jet jura journal januar jury</text>
+  </lesson>
+  <lesson>
+   <id>{383d99c5-e5ae-4ce5-af8f-b66a84e1dc5b}</id>
+   <title>Afhjælpning af typiske fejl: kd kl lk ls mn nm nv oi</title>
+   <newCharacters></newCharacters>
+   <text>kukkuk anke kokon kollekt koks kokken kolerisk kompleks
+kokos klask klinke klokke klynk kokain konkret krakiler
+kaskade kajak kanin koket konkurs kvantum akkurat kirke
+kurs dukke kamik kikke krukke konkurrence kram kokarder
+lille lovlig linoleum ligeløn ligestilling lanolin lang
+levere alle lollænder lynlås lægelig lilje læspe løs lå
+lak tallerken lov låg lo le al mel lollænder lovlig læk
+lemfældig lette kolonial livlig løfte ligeløn lotto ild
+meddele mest mammut medbestemmelse meddelelsesmiddel må
+museum mulig mølle mægler mad mere mamma murer mime mut
+nedennævnte anerkende nogen nonne navnlig nødvendig nat
+nuance nænne næsten nødlande nævninge notabene nationen
+nænne nat anden næsen renden nonnen nynner kinden sneen
+nankin neon niende nonsens inden bønne rank kunne kanon
+opera også omsorg oldemoder oktober oldenborre opponent
+omsonst nordre optog ordre overopsyn ortopæd opfordrede</text>
+  </lesson>
+  <lesson>
+   <id>{9f0e2639-7772-4e4e-ad7c-4220a6da10a2}</id>
+   <title>Afhjælpning af typiske fejl: op på rt sd sl tr uy vb</title>
+   <newCharacters></newCharacters>
+   <text>overliste odont ottoman orlov ozon ovenover sort oboist
+orgel ortografi obo tons jolle oktav ornotolog over tom
+papir paprika paraply papæske poplin polyfoto polo oppe
+propaganda opponent psykologi prydplante pamper primula
+rare radere reol reparere rang referere rar reform roer
+regenerere redegøre rapir redder raseri rekreere ringer
+stang scene saksofon svensk serie esse små snavs shorts
+sanse solo sanktion siesta sekvens sne saft se souschef
+grosserer sanse straks skanse sit sans skrift skænd sti
+standse grossist sko hastesag svar forespørge som sidst
+tætte tekst tast titel tiltag tomt tvist tylt tautologi
+teint tyst team tantieme tendentiøs atlet tiltale talte
+under uvane udelukkende udsalg uformuende udsultet ulve
+udhus ukultiveret undergrund ukulele ukuelig ukrudt urt
+vende veksel vanvare vrang vedvarende via venlige vodka
+viv viske væv væske værelse værdi hverv vegne varer var</text>
+  </lesson>
+  <lesson>
+   <id>{f7bcdab0-8159-45bd-be0f-59e7cb2df06c}</id>
+   <title>Afhjælpning af typiske fejl: vn xc yu æø øæ åp ,. .,</title>
+   <newCharacters></newCharacters>
+   <text>virvar vrag væver var vrøvl vi vove væv vokseværket vov
+vil votiv vovelige viv vivace hvor vistra ivrige valuta
+xerografi xylofon xeroform xenia oxygen oxydere saxofon
+axminster foxtrot hydroxyl mixed mixtur flux box oxford
+ydeevne yderligere tydelig ytre ynkværdig synlig myndig
+yalelås byrde cykel ypperste lymfe ydmyg yoga ny lyd sy
+æbletræ ærekær ærbar ærlig ærkefjende ærgerrig æter kær
+æske pæretræ nænsom ændre blæse udtrække hændelse æsler
+ørkesløs øredøvende økonomi øjeblik østrigsk ønske tøve
+østers østersøen ønskedrøm køn løn høns øllebrød økonom
+åben rå åndeløs åndfuld århusianer tåbe låne dåne sådan
+både vådeskud tårn skåne åre lås hånd når måne åben sår
+og, at, det, en, den, til, er, de, af, på, var, han, i,
+så, med, ikke, for, men, vi, som, sig, har, jeg, deres,
+hr. fr. dvs. osv. etc. evt. dus. stk. ds. sk. gl. iflg.
+ks. pk. fl. sp. ca. jfr. kl. kr. o.lign. bl.a. j.nr. f.</text>
+  </lesson>
+  <lesson>
+   <id>{a771f966-0162-43a2-b502-e7cba84449f2}</id>
+   <title>Træning i hastighed og sikkerhed 1</title>
+   <newCharacters></newCharacters>
+   <text>Lige siden huleboerne for tredive tusinde år siden malede
+på drypstensgrotternes vægge, har menneskene prøvet på at
+afskaffe den grå hverdag og gøre livet mere farverigt. De
+har prøvet at efterligne naturens farvepragt, og de har
+lidt efter lidt erfaret, at farverne har stor psykologisk
+betydning med stærk indvirkning på gemyttet. Tidligere gem-
+te mennesker sig bag mørke farver. Stuernes vægge var mør-
+kegrønne, eller brune, og gardinerne holdt brutalt lyset ude.
+Møbler var betrukket med sorte hestehår, og det tøj, man
+bar, var også mørkt og trist. Vor tid er i langt højere
+grad farveforbrugende. Takket være kemien og industrien,
+der siden anden verdenskrig har gennemgået en rivende ud-
+vikling, har vi i dag flere muligheder end nogen sinde før
+for at tilfredstille vor latente farveglæde. Der er dog
+først i de seneste år, at farverne virkelig har lavet om på
+vor hverdag og har præget vor tilværelse - regnbuen er ble-
+vet hvermands eje.</text>
+  </lesson>
+  <lesson>
+   <id>{cf09106e-7122-4453-8f22-de4a4d36233d}</id>
+   <title>Træning i hastighed og sikkerhed 2</title>
+   <newCharacters></newCharacters>
+   <text>Syntetiske farver og plasticmaling har gjort det nemt for
+enhver ar sætte kulør på hjemmet. Ingen er bange for at ta-
+ge en pensel og en bøtte maling og smøre solskin på hjem-
+mets vægge. Familiens medlemmer har fundet en ny fælles in-
+teresse. Farvehandlerens butik bugner med materialerm, som
+kan live op og skabe humør. Der er mode i farver. Når en
+modeskaber i Paris bestemmer, at nu skal kvinderne gå i
+beige og grønt, så sidder farvefabrikanterne ved hans fød-
+der og kigger med og indretter produktionen derefter. Rå-
+stofferne til dansk farve- og lakindustri kommer fortrins-
+vis fra England og Tyskland, men der er også en stor frem-
+stilling herhjemme. Stort set består en liter maling af
+tre lige store dele, nemlig farvestof, bindemiddel og for-
+tyndingsvæske. Farvestoffet - eller pigmentet - blev oprin-
+deligt fremstillet af planteudtræk, men det produceres nu
+ad kemisk vej. Bindemidlet kan være vand, alkyder eller ve-
+getabilske olier. Fortyndingsvæsken er terpentin eller
+kulbrinte.</text>
+  </lesson>
+  <lesson>
+   <id>{a178d9e5-e168-4dd9-8ac3-7b4dbe3a2a7e}</id>
+   <title>Træning i hastighed og sikkerhed 3</title>
+   <newCharacters></newCharacters>
+   <text>Tiden går. Den er kostbar, og den skal udnyttes. Det er en
+gammel erfaring, men sætningens første ord er ikke helt så
+ligetil. Tiden er et begreb, som vi kender godt fra vore
+sanser, og som dog er så svært at definere. Men vi kan må-
+le tiden. I os har vi et indbygget tidsmål, pulsslagene,
+ca. et i sekundet, somme tider flere, somme tider færre.
+Solen angiver dag og nat, og de fire årstider skifter. Vi
+kan ikke opfatte kortere tider end et øjes blinken og læn-
+gere tider end vort eget liv, men alligevel ved vi, at ti-
+den går tilbage før vor fødsel og vil fortsætte efter vor
+død - men denne viden ligger uden for vore sansers opfat-
+telsesevne. Vi kan ikke forbedre vore sanser, man vi kan
+skaffe os redskaber, som deler tiden op. Vi kan lave ure.
+Primitive folkeslag kan klare sig med den inddeling af ti-
+den, som solens gang hen over himlen giver. De kan nøjes
+med at dele dagen i morgen, middag, aften og nat.</text>
+  </lesson>
+  <lesson>
+   <id>{ffbc0b96-1ac8-4e82-b911-ffdde177e69b}</id>
+   <title>Træning i hastighed og sikkerhed 4</title>
+   <newCharacters></newCharacters>
+   <text>Denne inddeling ville ikke være tilstrækkelig i et højt ud-
+viklet samfund som vort, hvor folk skal møde på arbejde til
+fastsatte tider, og hvor arbejdets varighed er målt ud i
+tid efter overenskomster mellem arbejdsgivere og arbejdsta-
+gere. Også fritidens interessante tv-underholdning begynder
+med sekunders nøjagtighed på klokkeslet fastsat ugen i for-
+vejen. Det hele lyder så nemt, men er dog så svært, for al-
+le skal jo være enige om, hvorfra tiden skal tælles, hvilke
+enheder der skal vælges, og urene skal gå ens. Solens dag-
+lige bevægelse rundt om jorden er kun tilsyneladende. Det
+er jo jorden, som en gang i døgnet drejer rundt om sin egen
+akse, og hele systemet udgør et mægtigt og temmeligt præcist
+ur, som vi kan konstruere mekaniske ure til at følge og
+samtidig benytte til at kontrollere disse ures nøjagtige
+gang.</text>
+  </lesson>
+  <lesson>
+   <id>{9547cdc2-d918-4c04-b738-92cabbc95f18}</id>
+   <title>Træning i hastighed og sikkerhed 5</title>
+   <newCharacters></newCharacters>
+   <text>Fyrvæsenet er grundlagt af sørøvere - dog ikke det danske
+fyr- og vagervæsen, men oldtidens og den tidlige middelal-
+ders fyrvæsener i Middelhavet. Dette store indhav var i år-
+hundreder hjemsøgt af sørøvere, der opererede fra uindtage-
+lige borge på klippekyster og drog hærgende rundt i alle
+middelhavsegnene. De lod opsætte fyr og ansatte formentlig
+folk til at passe blussene - simpelt hen for bedre at kun-
+ne finde rundt. De var jo ret interesserede i at kunne ope-
+rere om natten. Der var dog også mere officielle fyr alle-
+rede i oldtiden. Berømt er især fyrtårnet Pharos, et af den
+gamle verdens syv underværker. Det er meget sandsynligt, at
+de danske vikinger, der også hovedsagelig bevægede sig
+langs kysterne, har haft faste aftaler om at holde brænden-
+de bavner vedlige passende steder, når de skulle drage i
+leding, eller vikingeflåden var ventet hjem.</text>
+  </lesson>
+  <lesson>
+   <id>{c1dbb0c1-cc05-4f18-a9ed-2c6c4426bb43}</id>
+   <title>Træning i hastighed og sikkerhed 6</title>
+   <newCharacters></newCharacters>
+   <text>Første vidnesbyrd om et offentligt forordnet fyr i Dan-
+mark stammer fra Dragør - en af de pladser ved Øresunds
+bredder, hvor der i middelalderen var marked om efteråret
+i de århundreder, da silden kunne fiskes her i uhyre mæng-
+der. I over tre hundrede år blussede man på stranden i
+Dragør for at vise skibene fra hansestæderne vej. Det var
+Frederik den Anden, der forordnede fyr opsat på Skagen,
+Anholt og Kullen. Besked om fyrenes anordning blev sendt
+ud gennem toldvæsenet i Helsingør, der jo i kraft af sund-
+tolden var den mest internationalt orienterede by i Norden.
+Af en eller anden grund kaldte man dem papegøjefyr. Da man
+ikke kender deres konstruktion, er det svært at gætte hvor-
+for. Det menes, at fyrene har bestået af en fyrpande på
+toppen af en mast, og at man har fyret med brænde. I så
+fald har man vel sammenlignet med de kunstige papegøjer på
+en stang, som skydebrødre skød til måls efter. Masten har
+næppe været højere, end at fyrmesteren har kunnet holde
+blusset vedlige ved hjælp af en stige.</text>
+  </lesson>
+  <lesson>
+   <id>{2ab35c8e-69ed-4220-a78f-9428810b1ee5}</id>
+   <title>Træning i hastighed og sikkerhed 7</title>
+   <newCharacters></newCharacters>
+   <text>Betegnelsen økologi kommer af det græske ord oikos, der be-
+tyder hus, levested eller lignende. Den videnskab, der be-
+skæftiger sig med læren om organismerne i deres naturlige
+omgivelser eller - sagt på en anden måde - med naturens
+struktur og funktion, kaldes økologi, der som selvstændig
+videnskab er relativ ung. Dens forskningsprogram er først
+blevet klart formuleret i det tyvende århundrede. Det har
+dog altid været således, at jægere, diskere, kvægavlere og
+agerdyrkere som en ganske naturlig ting har arbejdet ud fra
+økologiske grundtanker. For disse mennesker er der ikke ta-
+le om en ophøjet videnskab, de arbejder simpelt hen ud fra
+deres egen dømmekraft og ud fra de erfaringer, der er op-
+samlet gennem generationer. Som eksempel kan nævnes, at
+agerdyrkeren bestræber sig på, at afgrøden skal give det
+størst mulige udbytte. Han gør dette ved at udvælge plan-
+tesorter, der passer til klima og jordbund. Han passer dem
+og griber ind med regulerede foranstaltninger, hvis en
+faktor svigter eller tager overhånd. Der gødes, kunstvan-
+des eller plantes læhegn.</text>
+  </lesson>
+  <lesson>
+   <id>{908f6981-9565-4c78-baec-11a1072834c3}</id>
+   <title>Træning i hastighed og sikkerhed 8</title>
+   <newCharacters></newCharacters>
+   <text>På en række afgørende punkter kan økologien tjene menneske-
+hedens sag, og aldrig nogen sinde har behovet for viden og
+forståelse på dette område været større end netop nu. Med
+de enorme tekniske muligheder, der står til rådighed for
+mennesker i dag, har vi opnået en uhyggelig evne til at æn-
+dre og kontrollere vore omgivelser. Vor indsigt i de natur-
+lige systemer, som vi prøver på at ændre, er ikke fulgt med
+den større tekniske formåen. Uden økologisk viden kontrol-
+lerer og bruger vi naturen i blinde, og som i de fleste til-
+fælde, hvor en ukyndig søger at gribe ind i en kompliceret
+mekanisme, fører dette til ødelæggelse. Ødelægges den natur-
+lige balance i de processer, der foregår i naturen, kan ska-
+den ikke gøres god igen i en håndevending, det kan tage år-
+tier, før den naturlige balance er genoprettet.</text>
+  </lesson>
+  <lesson>
+   <id>{5f14c641-b96f-4709-9c92-8024a71072c8}</id>
+   <title>Træning i hastighed og sikkerhed 9</title>
+   <newCharacters></newCharacters>
+   <text>Muskelinfiltrationer er en gigtsygdom, der viser sig ved
+hårde, ømme knudedannelser i muskulaturen. De væsentligste
+årsager hertil er kulde, træk og forceret arbejde i samme
+stilling, men nervøsitet i forbindelse med et dårligt ar-
+bejdsklima kan også være årsag til lidelsen. Muskelstof-
+skiftet hæmmes, således at blodet ikke optager tilstræk-
+keligt ilt, og affaldsstofferne ikke fjernes hurtigt nok.
+Spændingerne begynder langs muskelkanterne, hvor blodfor-
+syningen er dårligst, og breder sig videre til sener og
+underhudsvæv. Ømheden opstår, når det hårde muskelvæv
+trykker på nerverne og gennem centralnervesystemet frem-
+kalder irritationen. En stor del af det arbejde, der fo-
+regår på virksomhederne i dag, er specialiseret, og man-
+ge mennesker er bundet til samme sted flere timer ad gan-
+gen. Herved belastes kroppen hårdere end i perioder, hvor
+der er mulighed for bevægelse, f.eks. i fritiden.</text>
+  </lesson>
+  <lesson>
+   <id>{59b9480d-1876-451b-aedf-b55b63a108ef}</id>
+   <title>Træning i hastighed og sikkerhed 10</title>
+   <newCharacters></newCharacters>
+   <text>Skal muskelinfiltrationer undgås, gælder det om at skabe
+et godt arbejdsmiljø. Rummets temperatur skal være behage-
+lig, og selve arbejdspladsen skal være indrettet, således
+at unødvendige anstrengelser undgås. Dårlig belysning kan
+medføre hovedpine som følge af spændinger i hals og nakke.
+De mennesker, der betjener regne- og skrivemaskiner, er
+udsat for disse gener, hvis de sidder med løftede skuldre
+og med hovedet drejet i en bestemt vinkel gennem længere
+tid. Hvis der ikke føres noget for at modvirke spændinger-
+ne, bliver de angrebne dele af kroppen trætte og tunge, og
+resultatet kan blive kroniske gigtlidelser. Ved behandling
+af infiltrationerne må man først sætte ind på at fjerne
+årsagen til deres opståen, og dernæst må man lindre smer-
+terne hos de personer, der har fået lidelsen. Behandlin-
+gen består i kortbølge-, massage- eller varmebehandlinger,
+som fremmer blodomløbet, således at der tilføres mere ilt,
+og de ophobede affaldsstoffer fjernes.</text>
+  </lesson>
+  <lesson>
+   <id>{0c887a69-c2f3-4a83-bc7d-6325ec18648a}</id>
+   <title>Folkeskolens prøve i hastighed og sikkerhed 1</title>
+   <newCharacters></newCharacters>
+   <text>Hvis det gælder om at holde sig vågen, hjælper det at drikke
+en kop kaffe eller en kop te. Dette skyldes, at både teblade
+og kaffebønner indeholder et stof, koffein, der blandt andet
+har en mærkelig evne til at fjerne trangen til søvn, uden at
+åndsevnerne påvirkes. Efter at man gar drukket en kop te el-
+ler kaffe, vil koffeinet hurtigt blive optaget gennem mavens
+og tarmens vægge. Allerede efter cirka et kvarters forløb er
+det muligt at måle virkningen, der varer i det næste par ti-
+mer. Man ved ikke meget om, hvordan det opkvikkende stof på-
+virker vort nervesystem, og man må derfor indtil videre nøj-
+es med at konstatere en vis positiv virkning på evnen til at
+lære og ril at få ideer. Koffein i mindre portioner er uska-
+deligt, men ved en dosis på over ti gram, der svarer til om-
+kring hundrede kopper kaffe, bliver det dødeligt. Overdreven
+nydelse af koffein kan give rystende hænder og hjertebanken.</text>
+  </lesson>
+  <lesson>
+   <id>{85ecfaf7-c687-44e5-804e-c1baa111e8d3}</id>
+   <title>Folkeskolens prøve i hastighed og sikkerhed 2</title>
+   <newCharacters></newCharacters>
+   <text>Det er normalt, at et lille barn i løbet af sit første leve-
+år har lært at sige nogle få ord og udføre nogle enkle hånd-
+bevægelser som at gribe noget og ryste det eller føre det op
+til munden. Som regel har det også lært at kende sin familie
+fra fremmede mennesker, og det er godt på vej til at lære at
+gå. I denne tidligste barndom lærer de fleste børn nogenlun-
+de lige meget, og i virkeligheden er det en imponerende ind-
+læringsproces, der finder sted i sådan en lille hjerne, selv
+om det ikke kommer så tydeligt til udtryk i det, barnet kan.
+Spædbarnet skal især lære at se tingene omkring sig som ting
+og ikke blot som usammenhængende prikker og pletter. De man-
+ge små sanseceller i øjnene sender nemlig besked om hver de-
+res lille del af synsfeltet til hjernen, som så skal lære at
+sætte alle disse billeder sammen til en helhed, og først når
+der er blevet lært, opfatter barnet et ansigt som et ansigt.</text>
+  </lesson>
+  <lesson>
+   <id>{5b9f518b-7684-4c5b-8168-8684a8b3b063}</id>
+   <title>Folkeskolens prøve i hastighed og sikkerhed 3</title>
+   <newCharacters></newCharacters>
+   <text>Mange unge har en naturlig interesse i at beskæftige sig med
+børn, og de fleste vil før eller senere få med børn at gøre.
+Barnepleje er således et livsnært emne at tage op for eksem-
+pel som et valgbart kursus for elever i skolens ældste klas-
+ser. Formålet med denne undervisning må selvfølgelig være at
+give eleverne viden og færdigheder vedrørende småbørns pleje
+og pasning, og desuden skal de efterhånden også opnå indsigt
+i det ansvar, som altid følger med at have med børn at gøre.
+Derfor bør arbejdet i timerne foregå på en sådan måde, at de
+personlige egenskaber, der er nødvendige, hvis man skal kun-
+ne påtage sig ansvaret for børn, bliver udviklet hos elever-
+ne. Undervisningen skal også indeholde en orientering om den
+støtte og hjælp, som samfundet tilbyder en familie med børn.
+Hvor det forekommer naturligt, bør man ikke alene omtale det
+sunde barn, men også det handicappede barns særlige forhold.</text>
+  </lesson>
+  <lesson>
+   <id>{e1548206-e947-4c25-85ac-5ed135ccb946}</id>
+   <title>Folkeskolens prøve i hastighed og sikkerhed 4</title>
+   <newCharacters></newCharacters>
+   <text>Vore oldeforældre i byerne tog en enkelt gang om året en tur
+i skoven eller ud på landet i maj eller juni måned, når vej-
+ret var godt. Oldefar var i sit bedste jakkesæt. På fødderne
+havde han fjederstøvler og på hovedet sin fine stråhat. Hvis
+han smed jakken, så man hans tæt tilknappede vest, og gennem
+de ærmeløse gab stak hans skjorteærmer med de hvide, stivede
+manchetter. Blev varmen ulidelig, knappede han vesten op, så
+man kunne se hans seler. Oldemor var i lang sort kjole, høj-
+halset, besat med kniplinger. Håret, der var sat op på hove-
+det, skærmede hun imod solen med sin sorte silkeparasol. Når
+varmen blev helt uudholdelig, åbnede hun de høje knapstøvler
+en ganske lille smule. Frokosten belv indtaget i det grønne.
+Den var medbragt hjemmefra, omhyggeligt pakket ind i en sko-
+tøjsæske, som agurkesalaten gjorde våd. En skovtur blev vel-
+lykket, når det gode vejr holdt sig, til man var vel hjemme.</text>
+  </lesson>
+  <lesson>
+   <id>{08642055-ce32-4242-9d12-8bb2b4719287}</id>
+   <title>Folkeskolens prøve i hastighed og sikkerhed 5</title>
+   <newCharacters></newCharacters>
+   <text>Et dovendyr føler sig kun hjemme, når det hænger i tropesko-
+vens grene, hvor det bevæger sig med en udpræget langsomhed,
+hvad der har givet dyret navn. Hvis et dovendyr bliver udsat
+for fare, kan det flygte med en fart af omkring to kilometer
+i timen, men denne hastighed bliver der kun tale om, når det
+for alvor gælder livet. Det virker komisk med en sådan lang-
+somhed, men det er i virkeligheden en styrke for et dovendyr
+at bevæge sig sådan. Så er der nemlig ingen, der lægger mær-
+ke til det. Dovendyret er også vanskeligt at få øje på, for-
+di der er grønt som de blade, det hænger imellem. Ikke fordi
+det har en grøn pels, for det er der ingen dyr, der har, men
+fordi det som det eneste dyr har alger i håret. Hvert enkelt
+hår er forsynet med riller på langs og på tværs, og i dem er
+det muligt for algerne at gro. Det sker dog ikke i en zoolo-</text>
+  </lesson>
+ </lessons>
+</course>

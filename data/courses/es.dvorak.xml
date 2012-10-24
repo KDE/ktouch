@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<course>
+ <id>{b01d992b-f2f6-4343-8de6-8fcf6b1c4a75}</id>
+ <title>Dvorak español</title>
+ <description>Ignacio Fernández Galván, 2005
+http://djelibeibi.unex.es/</description>
+ <keyboardLayout>es(dvorak)</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{0c241a08-32a9-46a8-a6fd-4a4b2adf0429}</id>
+   <title>Lesson 1</title>
+   <newCharacters>ur</newCharacters>
+   <text>uu rr rru uuuu rru uuuu rrrur rrrur uru uurrr ruu rrrr rru
+rr ruuuru uuuu ruu uu rrrrr r rrrr uru u uu ruu rrrrr rr
+uurrr uu uurrr rrrr ruu r u ruu ruu rur u u rru ruu uuuu
+rrrrr u r ruuuru rr uuuu rur rrrur uu uu uurrr rru rrrr uu
+uu r rrrur uu rrrrr rrrur ruuuru ruu uurrr uurrr rr ruu rr
+rrrur rur rur ruuuru uu rrrrr rrrrr urrrrr uu uu r rrrur uu
+ruu urrrrr ruu uurrr uru ruuuru rr rrrur urrrrr uu uu rur
+rrrrr rrrur rrrr ruu urrrrr uu ruu rru ruu ruu rrrur uu uu
+uu uuuu uu rr rr r ruu ruuuru rrrr uuuu rrrrr rur rr ruuuru
+rr urrrrr uu rru rrrr uuuu uuuu r uu urrrrr rr rrrur uu uru
+uu uuuu uru uu uu ruu uuuu u ruuuru uu rr r ruu ruu uurrr uu
+uurrr uu rur rr rr u r ruuuru ruuuru uu uu rur u uru ruuuru
+rr rr rur u ruuuru ruu ruu uu r urrrrr rrrur u rur uurrr r u
+rru uurrr uu urrrrr uuuu rrrr uu ruu ruuuru r rrrrr ruu rru
+ruuuru uu ruu urrrrr ruu rr uu rrrrr uu rru rr ruu ruu uu uu
+r uurrr uu rru uu uurrr ruuuru r uurrr rrrr uru r ruuuru r r
+uuuu rrrur rru uuuu rrrur uu rur uru rru r rru uurrr ruuuru
+rrrr ruu ruu uuuu uuuu rur rrrrr r urrrrr u uu rr rrrrr ruu
+uurrr rrrrr rrrr r uu uu rrrur rur rru rr uu ruu rrrur ruu r
+urrrrr uu rru rur rru rru uurrr rrrr ruu ruu rur ruu rrrrr
+uu ruu rrrr uu rrrr uu ruu rrrrr urrrrr uuuu rrrur u u uru
+uu urrrrr rr ruu u rru r ruuuru uurrr r rrrur ruu uurrr rur
+ruu uuuu ruu uurrr rrrr uru r ruuuru r r</text>
+  </lesson>
+  <lesson>
+   <id>{065e82dd-bf60-4c99-b0bf-4f8c83771c9c}</id>
+   <title>Lesson 2</title>
+   <newCharacters>et</newCharacters>
+   <text>ere utter rete rue tute tut te t rte tee e t terree rute rte
+utter rute truer tute rut tut tete erre ureter tute terr
+rute retrete rte turret rte t rut tutee tutee te erute e
+ureter true true teeter turre turret ureter tu tee e rete
+tutee tee teeter tee tute terree utterer turre t rue rte
+terr te e e tut true te err re true terree tete tr tutu tree
+ere tut tute tute terr tete tete terree tutee utterer ere
+ere tr utterer t rt retrete terete tutee utterer ureter true
+utterer utterer tree truer ureter te utterer rte terr tutu
+true tete te ureter truer tete tutu tute t terete e erute
+terree utterer tree e rte e true tu terete terete rete
+terete tutu terree turre tete teeter tu tete terete ureter
+ere true tree terete tete tutee erute tute rue tut tete
+ureter turre tete truer tree true rute tutee teeter terete
+utter utterer utterer tree tr terete erute ureter terr e te
+utterer tute rut true tee tete tutu true terree true tutu
+terete terree e utterer re te rte tree erute terete te
+teeter terete terree tete t tute teeter ere true tu re
+terree turre terr utter tee t te tee rte erute teeter rute
+err retrete tutu erute truer utterer te tu utterer erute
+erute rete tut tutee tu rue te tu rt teeter rte terete tree
+teeter ere terr retrete ureter turre rute tr erre tutee tu
+te tutu truer te terr teeter tr utterer erute utterer teeter
+rte retrete rut re truer</text>
+  </lesson>
+  <lesson>
+   <id>{61926915-5178-44ef-b5a8-b63457f394a1}</id>
+   <title>Lesson 3</title>
+   <newCharacters>on</newCharacters>
+   <text>retro tonne reenter toro nu retro torturen troneren rotuno
+rotten rennet entrone turne nut orto entrone retenerte
+norteo entronen tron oreen tono torturer retorne error
+neuter o oteen torture tenor torturen roturen rote entreno
+entrone trueno reroute ruto outrun rottener teten tono tore
+runner torturen torturen euro entreunte non entono tenue
+roten unten trout terreen oren terreen eren entrono retente
+note runo returnee unto torren rerun notro entorne unto
+torno tonne unto eon treo un rune out torturen otter
+troneren tuneo trout rotuno tour rento orto tuturuto tuteen
+tuteo reno unte tuno ruten tonne reto outrun enteren runo
+treo retorno ten rotten tenner retento rout urn roten rento
+otro reenter ronronee tort turronero ton toe toreo toruno
+roe tuturuto tronere oro tenor roen entornen tetero enrono
+teto entro retoro reten entuerto tuneen turronero roue tonto
+ro out entro trenteno roete entrene unto uno enrune outrun
+roe euro entro tenner note nurturer note torree o torrente
+neto rune oreo notro tronere troten ronroneo tronero torture
+retornen otro tuneo no ton noto oree nortee entorno torneo
+outre retento truene roturo ronronee reno noun ruto ruten
+nene runner tout roture enturo turnen oren nono entente
+terno roturo treo terno retort tontee entro entro torturen
+torrente turno toruno truenen not trot rentero entronere uro
+tonne retornen tornen retenten toruno terno terne non
+retorne rotor</text>
+  </lesson>
+  <lesson>
+   <id>{4048421c-aff4-478d-8fb4-9587bd431ab4}</id>
+   <title>Lesson 4</title>
+   <newCharacters>as</newCharacters>
+   <text>enserar nans resonases reataran resonaras atraernos rustras
+narran retan asurases ruanes rest terrones tratarse ostenta
+enrasaras sanas entornase retorna serrases tarareare rateos
+reuntasen rosetones enartases sornaste usase asurares rotas
+sastresa surtas rotases sorra sestearen ratonaras tenors
+asaetees eses taste reatares sanear toaras tutease asaeteara
+enteraros torneares saturare esa enartaste enrostras resanes
+rastras atontaron asunto austro enrasan torturar raros
+entura tersare atontes assents reararas ratas restarse
+ensenas tetas sonora raso sosera aserrase us rattans arara
+trotters norteas susana retretas orate tunanta rautas
+trotara atestaste osaran trasuntan esterares rases arrate
+enastaren atareasen ronroneas esturaren tuteare ensotaron
+rosas retesan ensenara eater rastreara totanera tetaren
+aunaren stone statures ratoneros enasten rastra esturarte
+artesones sastras tensare reararan teneros asustares
+arresten norteaste enarenara seranean erases ese asustaron
+torraran arruasen rares taus terrease arrasaste nueras
+enseraren etas usares setenaras rosease arruaron usuta
+artesana ruana nantar sateen tetases atronere usurearan
+toseta asesorar retratas retesara rentoso atasen arreasen
+atontasen atusar transo tetaras turrase torneasen enteraste
+truenas usutas eater stare tonos narrasen resanara ostenten
+aseen sonrosear atonto oases roseasen asestases sus asarse
+retreta tanteasen atentes ansarones san setero seseaste
+asesasen tanteos</text>
+  </lesson>
+  <lesson>
+   <id>{1b04a229-e029-40d7-8bf7-646577d7dca7}</id>
+   <title>Lesson 5</title>
+   <newCharacters>id</newCharacters>
+   <text>strains inunden desdedido artsiest tirrias insudara tontadas
+atiesare desires atinarais retentad riendas sodios santidad
+nations desudare resididas rotunda radiaras aireas airo
+endosad estirarse reunida seiseno retada edren detiene
+tensina enditaron atronadas arietes dissent ideaseis
+derision innatas asaeteado deionised disentir seriaren
+osarios dissuades triase antia desanuda adornante sordas
+insidia anudaran tonarios detonada irisan rodeando drains
+ration reinsert did ninnies derruir ditsier disonar enrodas
+airados ordained desanude arrodeara anudes situara tatuadas
+rotundas inured tundieses dreariest aterrad enredases
+anidares rinsed dietaron nudists destenta destoses atetado
+aneroid destetare tedio derrite sodio dentases audios aireas
+atentada desunan noise unisonada deseareis rodeara asida
+desanidar serenado ordered detonad radio airarte dissonant
+desatad resisando enditas tosidas asientos reedier disuade
+desuda odies tired entienden internada asedaseis diuresis
+diestra sedientos desdente dados tirintio rondareis readies
+siseados trinan sitarists enartadas tintineo rieseis etude
+andado rustriste tiroteen asirias arteries istrian netted
+dinosaur dentadas asientas sientas airearon sardina atiendes
+atadores desadeudo rosado rattier astisteis dreaded insudes
+dornie inodoros torrad rueda adensen enrodan dado rindieren
+nidrios entrenada dedo ordinated sonrieres rentareis
+nardinas daunt staidness antoniana asistente</text>
+  </lesson>
+  <lesson>
+   <id>{110eb184-71c8-4b17-8278-09f251d7cade}</id>
+   <title>Lesson 6</title>
+   <newCharacters>áéíóú</newCharacters>
+   <text>resudé útero dudó ratearé sedearían endosé enriáis resentís
+tostaréis santería aunándose distarías detenéis tiréis
+resisaré dorándote rosearán intuía inundarán oseéis atraséis
+resistían desaterró ruinarías denotaré reuntáis asustó
+raerán aserré sornáis atediaré transaría urdiréis uniéndose
+desadeudó nansú susurró odiarías tonsuráis derritáis
+aserrará tundí asedáis dentarías endiosará irritarán
+desasíais sornó asedaré drenarían entendían testéis idearé
+testáis dirían editaré edité sonrías saetía disonarás
+enarenaré donarían roerá tundearé torraré atusarías
+rastrarán tensará sedería tantearás sonreído sentían tendría
+rustirás adensáis antiaéreo asustáis desordenó sisearéis
+atontáis sesearía trastorné atronarán erosioné erutaréis
+arría destetará irritarán restaré dónde sonríes desdaréis
+aterreró adosará tundearán insudó satinarán rustrió ruaréis
+titará otearía orinaría nordesteó raías situaría tostarás
+teneduría dentarían deterioró asordáis astéis torráis oíros
+airáis rotarían rustirás toaríais naneéis rutarías atáis
+enrunéis éter erídano dría asteré enrasé retinaría nadaré
+anadearás anidéis rendís desertáis orinarías atusarás
+enronarás notará enraséis desearían tiraríais atenúe
+aserrarán retasarás denostó resonarán editarán tarareéis
+desadornó arruinará oír terrearé soneteará arruinéis redundó
+renadíos nantarás atinéis donándose atreudáis taséis oráis
+susurrón duró arrasaría desadornó sitúa disté retundáis
+sesteéis derretía resentís</text>
+  </lesson>
+  <lesson>
+   <id>{e1c33484-9a62-4132-a574-00ed4e435917}</id>
+   <title>Lesson 7</title>
+   <newCharacters>pg</newCharacters>
+   <text>guardar rapara disgregó suponed apagó ripiarais ratigasen
+resitting pino tragaran triptongó grossness prodiga aporra
+pisoteare pudiese irrogad repeine degustará repagases
+peignoir pine apiane guttiest gouged negrura pasturage
+pretest respigare trapeará presagié gitanearé piarán
+inauguro aporrarán repaid parergon pudingas graneo grandiose
+ataruga rigieres engruesan predigest gestean desgrana
+parapetar patera narigudo negreare destripan puniesen
+prognes taponera despenad petting graneada torpedo repugnes
+engrapé napper pungirá ranger pedrea torpedeo grates
+grunions entarugad anegaren disiparé patearía disparate
+pongs reportage dirigirás proteger espurrias sopuntó
+instigare raposeáis soporte tugged pegasos anegando trepados
+pisonearé gateareis ignoras pipiaré perduran urgieren
+pioneers asegure resigning apetitosa despana sosegaren tapir
+estigios dignéis uprooting guiparía atrapases gansees
+superarás prosigo aguando straiting pródiga striped pingó
+dragonea desoigo topare pipping repagan depuro depuráis
+guerread sangran prenoté giants pointers grins generates
+repague griega pisonead guiaréis sopase pernios popasen
+apagarnos apagad suprioras pigeoning energiser pringada
+raposinas gatearen repagada pispa tapers arrogues gestearía
+raptéis espigosos posee arpes adaptes dignarán tripped
+papping despanare soapiest spiting protegió punirás posdatas
+disgustar depones pondera atropó desgana grúa perdurar
+griterías ponían</text>
+  </lesson>
+  <lesson>
+   <id>{767b4e8d-fac2-4df6-983d-ea76ef9a1ec0}</id>
+   <title>Lesson 8</title>
+   <newCharacters>ñc</newCharacters>
+   <text>gañir guiñará restañéis atasco aniñarse niñada engañada
+precising nacarada acacia desencapa acuartó asurcasen ciñe
+diseñar careened caudatas ciaras iciest niceness desdeñes
+cariñar estaño porcino enocase carcaño señoreáis suceder
+roñar prescindí roñen recusan tacañean desroñare cuatreño
+acertáis tectónico cañedo cuñad cuisine addicting caído
+preñara niña crepito coronador pergeñé estucases graced
+soñados rancian consonada adueñadas estañan adueñaré
+picoting scoot desciño diseñases cuñarás enseñaría picardía
+encañare catonicé ordeñáis descepad especies carrascas acuñe
+space dañinos copiaría peña regañada creates apacigua
+picaréis acuñarían tañían truncados cuándo añorare apancora
+gruñiría ordeñan carenaría apiñaste encañonan ensueñas
+acatarra esparcirá entuñaría trencen castigate añadiese
+escodad carpets destacan enseñe escañasen cerciorar enact
+centena incusos entrañas doña cernían desensaña cariarais
+estucases porteña ciñéndote dañe desceñid apuñaría tacañeada
+roñarás tacañea uñada traducid reseñase adduce dañaras cucó
+roñó recaude acaecidas truncado desdeñes tañerías guadañáis
+saca toce apuñeas cañoneo ensañaros ordeñase apañados acosad
+garduños cañota guiñaste enancaron costeña rapiñase enceparé
+secundad cande cocees acertaría apiñe roñaseis engañara
+desdeñan acañonees acontecí cantiña recreando doñas
+cocearais reacuñará perecerá encaucen desecaré seccione
+descoca gruñas cañero caño desteñían escañeros encaño
+acapare</text>
+  </lesson>
+  <lesson>
+   <id>{b37c5e31-dfe7-4ef8-a76c-66eb75261e5c}</id>
+   <title>Lesson 9</title>
+   <newCharacters>h</newCharacters>
+   <text>hateáis reharía historio aches enhueréis chippie cachad
+hundieses uchú hadarás acechasen encacho hincaran phi
+pushiness estreches hotness hedonist acechos right trechean
+puncháis enhornaré rightness enhestas ancheta ahincáis
+chichiest hoot ponche chips chupeta soother piache tooth
+rightest hincháis graphic chocheara hundido deshonoro
+enhestó espichada chateare heathers adhered doodahs cacho
+herrarás cashed sancocha hospodar seashores enchiné hongos
+sanchetes hiriesen herretea adherirá hedidos trashes
+sahornan cocheases destechas hocicudas chatees penchants
+honradas hincaron hearers therapist adherir ahogarais hinchó
+chapuces chocheada hr phone anchurosa sonoche horn antiphon
+hurtagua cinchones sospechar tochura rehear hostigará
+agachare troopship snitch chistase rehashing hearthrug
+ahorréis tethers cachua chariest estrechar hincaré hooter
+honradote asechases nosh enhiestas thespians híspidos
+honesto rechina rephrases hacheare earshot enchico coheredan
+hence headaches cachetero pinchones achispéis hundís hincas
+ahogarais cachado hiciera predichas reherrará ahondar
+underhand choteadas ahornaste chocareis pathetic chupasen
+chitón enchinase shrouding chotearon chanceada agarrocho
+pinchases anhidrita tochedad chastened ahorcados chattiest
+encauchó entruche rachareis hunters hespirse ditched chateó
+ducharan echar cocheáis chincha chateaste chirriáis coguchos
+heredera ahorradas hopeare hied perch theirs chincharé
+achenes hearsing hopeado</text>
+  </lesson>
+  <lesson>
+   <id>{0c6ba044-4a2a-4a40-b2fa-22e647aae057}</id>
+   <title>Lesson 10</title>
+   <newCharacters>l</newCharacters>
+   <text>salseros alteéis copulara declaring orlarais halarás
+deliraren platinéis resaltar desalarás encele halconear
+apiolaras clisé agotarla linóleo acallé tecleases lucirles
+lépero gallead ludiasen desliada aplacías colearais
+carlingas solapas deluded laurente alcance telurios criollo
+recelada lleca calándose elección aplanáis saltareis
+alienadas acodalare piolares leéroslas delineara litoral
+latín splines alegan ladradas placareis lapicen ganchuela
+escarpelo placearás salteños serpollar lolling sultans
+halaríais patrullas calcino apiñarles salgue apearlos
+desellar ralos pulidoras llagando tildad pedal idílico gelds
+rielarás silícico alineare tutelara colono lung tirulatos
+teólogos alindado gloriases elogiarle galoparan crudillos
+iletrada clarearon ladrada estallas suplió sploshing
+astilléis acanalaré resalido pulid aletargan panoplias
+retallad soldaréis curial polcaren chaneléis religado lager
+papeloneo chulos letuarios alistara legara enllocara
+upholding golpeó rehelear usarlas enchilad asoldade real
+ararlas llande aclararía inhalants hallarán salida sallador
+escalasen people postulará lacrarán entrillar halos
+girártela pedirlos hospitals lencero aglutina palparen
+despalde tillaré leparás alargué rielarán loather landlines
+paloteó longar autillo elopes adelantas pasteleas aliagas
+clarores trapalona eludían unsettled aludidos laceraran
+alienado launas acertarlo insocial sundials platicare dollop
+deplorar alegó arrolla repolla enlacé galas</text>
+  </lesson>
+  <lesson>
+   <id>{8bc4c7c8-2452-4d17-97b3-79bcdfcb5169}</id>
+   <title>Lesson 11</title>
+   <newCharacters>yf</newCharacters>
+   <text>finarás facility fundarais fairytale fachendeé financié
+fairly enyugan fincases reputedly royo prefina sanctity
+efundí coolly inertly fugaran infartos steely infieren
+fusilando enfriarla oroya torridly escuyerá fraterna
+linearly unhappy dashingly rayosos difícil confluyó oyereis
+stuffed stuffiest retype trashy incluyes falderas layados
+soslayes chiflando esférico pity etiology recluyó safely
+hydrangea hydrology nasally pacifista leisurely refolding
+filé ferien hooraying afronta daftly infusos yugular sedgy
+propylene odiously hayfield ghostly fundasen yo farrier
+acefalías sufras fuels refer afelparen filched recayendo
+escuyan essayed roundelay fecharas shiny reyunas careful
+infundida raffled alfardé desafila felony poppy incluyáis
+rayad ayustadas lengthily felted yaciste enrayéis refregué
+tangy perfilen conflict ofendéis follaréis fulero farrearé
+afeados caulífera afluida hoya yeah enfulláis afatas daffy
+graffiti fuerces asininely cifraseis diluyo afielada oysters
+nicety racy flings retype diluyere atalayará factoids free
+yeah espy futurity referían spyhole falsía agency guayad
+ofertarla oyeseis ufanos desapoyan pilfers rechiflé ayude
+estufó infunden sunny defiendan raya rayador alcalifa
+floreadas creyeses fluffy configuro federarlo ayudarán
+catalysed faience crayolas creyerais enfadasen afiarán
+topically difluir rigidity aforaseis enraye farragosa
+enfrontes idiocy restudy horrify apoyarás yesera spaying
+frenaste</text>
+  </lesson>
+  <lesson>
+   <id>{99cb3cfb-d328-4267-97b0-9ca45a5dee82}</id>
+   <title>Lesson 12</title>
+   <newCharacters>xb</newCharacters>
+   <text>rebullan abanasen expendido suffixes subastáis glob axiales
+fixtures iniciaban exaltaros gangueaba befaste exaltaste
+oxidasen látex escribís relaxes exulted exculpate badallas
+albedrío extrañar exilie exorase hebra xxxi exores bisexual
+cabreaba herbosa outfox extendida blissing barreada aocaba
+expiates excediera extraigas abanaréis baratas abonadas
+befit borboteó rociabais explicaba exegetic rorabais abanara
+surtaxes caneaban extracts blindases rebuto expertise
+sixtieth benefice probabais expidiera rebasaron prónuba
+excediera exponerse bastearás bellyache expanden públicas
+recobró exculpad hexing exorarla exhibido explayaba boxeados
+extrañé cabes anorexic expedían oxidaría encabrió inexactos
+exudabais bañáis caben bents coxálgico cabalada aberraré
+asfixiado sorbiese derribaré arietaba extruding bedelio
+execre respiraba flexuosos bailarás oxidarles indexers
+expolió binaren laxó expresáis oxide oxcart labelling
+cebarán exultar taxied sextario ababillan excitaría
+urbanises anorexias bateaba resobréis exportas extension
+expugnaba desbaben apareaban expendía bucearía silabar
+baldía oxigenan oxidarlas bordad bedpans expects pretax
+atoxicase exposes expat expurgaré raboseada rabeé belesa
+excretará rebuff pebble rectoraba cerrabas breché expié
+unfixed xi cableaba bufonesca ballena indexen excusaban bey
+pyxes debauchee robarais expropió burilaría habérsela
+abollaras dopabais brillare laborable expolias lineaba
+exagerare excited laxara exfoliara aberres</text>
+  </lesson>
+  <lesson>
+   <id>{10ebbf54-6c36-46c8-b4ee-2be480686bff}</id>
+   <title>Lesson 13</title>
+   <newCharacters>km</newCharacters>
+   <text>kappa pekingese kilning trompillé miamos relinked monkish
+camuflan kopecks bikini inkblot chukkas dreamt rumbaréis
+ampararte apenarme espetemos risking bulkiness drinkers
+oinked penknife impregnen primeaban petcocks topknot tokens
+desusemos freakish kinetics frank alambrado spake hearkens
+leakiness dikes premiaría amnios embribara mulilla embriones
+sickroom backbit kinetics bakers inkier emanan conkers
+porkies marchaman poseíamos esfumemos pummel playbook
+miañéis keelhauls armaseis inhumaría tosemos comebacks koans
+escamaste remosto playbook relamamos lithesome rampaging
+misspoken humare dimer rakishly animarás tarifemos farmacias
+secamos dicótomo thicket sneakers backer cumpliste bulky
+yarmulkes matings informada desarrumé empurrará keyholes
+alfombran planks hormigueo selectman many mocks skylark
+keelhaul empocemos remabais simples rámeos keystones
+grosbeak embeodad empergare skimmer tokens chospemos meraban
+dankest haláramos skittle deskill inkblots linkage modeláis
+sheikdom penásemos humblest spank rumas moulting empleabas
+sucked pecks sucking remarked tacked mugidor darkies
+decoremos interlink dickybird backdates hookiest humpback
+ransacks morrillas humidor derramen suckles picker kangaroo
+blanking tricking mallar kilotons nickle bookend snaky
+pickling escaméis macrocosm alimonará sickened blastema
+fastbacks eximiros kick bumptious clunky clerking montaseis
+broke maranalla bulk umbralado témporas adormitan molleemos</text>
+  </lesson>
+  <lesson>
+   <id>{01c085ea-cd5b-4487-a683-5982c2808938}</id>
+   <title>Lesson 14</title>
+   <newCharacters>jw</newCharacters>
+   <text>ajironar wattage wuss jaricaban jineteare fajeros outgrew
+waders wannest joyosas outwears ahojaban alijabais swags
+repajos upwind jorobases homenajeó unwell wriggly jarabeará
+waned tideways wren jarciáis amojonen whitehead jaspees
+bewared hojaldró wheels wangler snowier drawcord luje
+ajorrará endowment conjuntos mujalatas crewel gawkiest
+alejaron enojamos rijas gorjeada slower undertow shrewing
+coworker mildew bojes atajes parejura burrajean entapujen
+wackes narwhals whiskery bewaring elije slowest lijéis
+amarraje urajeados encobijad jugabais hewed pajoleros paws
+lambrija sinewy woke wispiest jamaste pujadoras retejes
+sonrojad jasemos warships pewits jaldre sujetaban leastwise
+tweak bajuna swirling blowgun scows desabejad unwitting
+aflojo jedaréis crawlers wronging mewing coworker waddles
+barbwire rejigged unwounded jirpees swelled jactarais
+unwitting answering wooding award jasado jinglaría redijeran
+cowed jaw sinew tripwires sedujeron esponjará jauntier
+reawakens jacas sobajare tajeros winnings allows jawbones
+jitarían desfijare ajorabas downpipes meltdowns oreja wined
+brewpub anejo mawkishly catwalk mejorare wrights weaklings
+swamis unwound ajorarían downrange ejectors arroja abjection
+pathways ajustaros sonrojeen enojadas warred jalábamos
+aguije worksheet rojas motejaban matojo wodge atrojarlo
+bawds sparrow jockeys winery weaselly mojiganga wildness
+twaddles lujoso bellows steward</text>
+  </lesson>
+  <lesson>
+   <id>{80cfa286-8b45-4259-a2ce-547433a177b6}</id>
+   <title>Lesson 15</title>
+   <newCharacters>qv</newCharacters>
+   <text>requiem obsequies baqueare choquéis veamos movérselo
+mesquites viciad revalues pesquis qualifies matraqueo
+encuques promover niquelado parvenu hociques olivícola evens
+inviting asurquen quartiles quebrantó verifique flanquean
+esquilen acerques cultivara exclusivo aseveraré loquacity
+requiter resequido ovaré jaqueara vigil maloqueo quietaste
+noviciado vet velleras envolveré quijones appliques
+esquejará carvajo saqueases quintales envolvías edifique
+bienvivas archives nevan veladoras alivia revelo esparvas
+raqueéis coloquen inquinaré calvamos banquetas turuleque
+abrevó tronqueen bolsiquea viriles adoptivo flaquees
+reservas maquilada remolquen visitant roquetes invoque
+enoquéis manqueáis dove abdiquéis mosqueare bayoque velvet
+arenque vaqueiro vencerlo marquesas acequiabav mosqueda
+desvirgan cautivé octaviano esvaraban requerido novaseis
+renqueara bloquead servil lectivo vigilan vergetas emparvara
+traquetea verdón olivares derrquéis anivelada venteros
+ravishes muñequeen viciosv vortex vacíen quemarla boquidura
+ataviéis volantón visitarla estoquve evadiese activar
+viruses aovamos revierten encovado valdense revamping esvaré
+vociferó equivalí vapulasen tique vaquería monarquía
+moquease esquejase terqueé aquietes salifique avetados larva
+casquera deaves ronquera vierta versearé silva alquilaba
+desavenís tranquilé quejéis clavarte viburnums ronqueará
+revuelven periquete valsó vascófilo voceado innovemos
+quimones carnívoro flaqueaba vegetando quitará empolvado</text>
+  </lesson>
+  <lesson>
+   <id>{c298e5e8-d630-4c84-b97e-57d164eac8aa}</id>
+   <title>Lesson 16</title>
+   <newCharacters>z</newCharacters>
+   <text>zurrar almizclan satirizó remozan retazaría regazó azolases
+azoarías hozaríais energizes azoré zurrirás tronzaron
+rebuznes pardiez theorizes maznare hypnotize amanzanar
+herborizó zapatuda rapidez prizes pizcaras hiladizo calzadas
+lanzones estezara zodiaco adrizasen cazarais zanjada
+totalizó ofrezcáis zapemos zealotry zahoraban atenazáis
+envanezco impureza mezclaran sonetizo ironizara rezone
+schmaltzy empozasen melliza vaporize abenuz engazas ditz
+esperezas solazaba azumase esbinzad abrazaren escobizo
+esquinzar pedrizos kazoo azufraran zurríamos rapuzaren
+destazada futzing virigazas deszumare esbozaban regazaba
+azoares apomazaré azaramos trenzando cazoletea frizz
+destazar encauzar obedezcan garzo realzaría analizan
+azolaría jerezanas bizcares azocabais trenzarás revezase
+enfatizan frizziest gozarlo deslizaré drizas entapiza
+bizcaseis barnizad juzgares grandeza aljezones alquezará
+comizas ligazón mestizada apomazado desazogue roznaré
+regazares trozaran prontezas rizófagas lazará ataluzas
+paparazzo realzando lenizará comenzar embizques bizco
+minimizó rozarlo cobriza brutezas exorcizad azotaría
+venzurrone zamparás feminize segazón zapuzaré cabizbajo
+ensalzan punzabas esbozara zancajean zarandera tamizaban
+zarandaja soalzaran acorazara zarpas alanzaría tibieza
+bazucara trazaras lanzarlas solidez brutaliza capazos
+organizó dozens deszocan zapásemos enterezas pellizqué
+trabazón metodizan zanjo chapuzó cruzarás reluzcan trenzaras
+remozaban</text>
+  </lesson>
+  <lesson>
+   <id>{c7530993-d05f-4291-8c7e-615c494b93ba}</id>
+   <title>Lesson 17</title>
+   <newCharacters>MPFHTRCBGDXKNULISJEAOVWY</newCharacters>
+   <text>Moor Parr Falwell Horthy Tabasco Rigoletto Charlene Pittman
+Celina Bernadina Garwood Cara Trujillo Tokay Meghann Daren
+Xanadu Bert Bertie Karyn Nat Ulysses Rosales Liana Cossack
+Mitzi Isabella Stieglitz Tania Stefano Bone Hamlin Jocelin
+Mary Lang Sabrina Sisile Salomone Paulette Klemens Guglielma
+Indra Fannie Karisa Emacs Arabia Capra Leander Raymund IMF
+Carlota Ulberto Reynard OfficeMax Fabe Danella Gabriel
+Martie Ellesmere Samson Dominic Kimberley Medici Shayla
+Delaware Arman Alcatraz Veda Sabik Aldric Guayaquil Stevena
+Ethyl AAA Sardinia Gardie Pericles Ignacius Oort Garbo
+Averyl ANSIs Socorro Gerta Delbert Mesabi Federals Woolf
+Mueller Carina Yuanv Neolithic Marxist Ouija Allx Ernest
+NYSE Arapahos Randie Bellamy Aigneisv Shalne Lindsey
+Brunhilda Morganica Hockney Celesta Pietrek Sinkiang Kans
+Gucci PE Chickie JCS FDIC Thornie Belize Sikhism Laurie
+Elberta Calder Burr Ind Saw Edd Carie Melba Lydon Dionne
+Muhammad Clerc Kalli Havanas DDS Capetian Lindsey Diogenes
+Janice Herrera Caresa vMorrow Saroyan Chev Phil Goff Apollos
+Liane Angelle Prudi Gentry Elysiav Vespasian Tandie
+Velasquez Bernardo Grass Rafaellle Norton Indira Alfy
+Moroccans Kelwin Yules Ernesta Pollocks Ada Ch Audra
+Superman Lao Rogerio Barron Barrera Dimitri Lister MP Devi
+Guenna Margot Lessie Emmi Guendolen Salerno Wimsey Minix
+Babel Hellenes Missy Uganda Leontyne Dyer</text>
+  </lesson>
+ </lessons>
+</course>

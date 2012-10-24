@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<course>
+  <id>{f7b6281f-da3b-4cd7-8c7c-289c9dff4dfa}</id>
+  <title>Slovenian</title>
+  <description>written by Jurij Turn&#x161;ek</description>
+  <keyboardLayout>si</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{e25150bc-6889-467b-b280-6ecdf0ca2728}</id>
+      <title>Lesson 1</title>
+      <newCharacters>ak</newCharacters>
+      <text>a kak a a a kaka kak a kak k kak k kak k a
+a k k kaka k kaka kaka kaka a kaka kak kaka
+kaka a kaka k a k kak k k kak a kak a k a
+kak a kak kak a a kaka a k kaka kaka k a kak
+kaka kaka kak kaka kaka a a a kak k kak a
+k k k kaka kak a a k kak k k kak k kaka kak
+a a kak kaka a kak k a k k a kak a kak a k
+a kak kaka a a kaka a k kak k kak a kak kak
+kaka kaka kak k kak kaka a kaka kaka kak a
+a a k kak k kak kak kaka k kaka kaka k kaka
+a kaka k kaka a kaka k kaka kaka a k k a k
+a kaka kaka k kaka kaka kaka kak a k a kaka
+kaka a kaka a kaka a kaka a kaka kaka a k
+kaka kaka kak a a kak k k kak k kaka k a kak
+a k a k k kaka k a a a a a k a a k kak kaka
+a a kaka k kaka k kaka k kak kak kaka kaka
+k kaka k k a kak k k kaka kak k a kak kak
+a kak kaka kak k a kaka k kak kak kak k kaka
+k kaka kak k k k kak kaka k k k kak k kaka
+a k k kak k kaka kak a k kaka kaka kak k k
+k kak a kak kak kaka a kaka a kak kaka kak
+a a a k kaka k kak a a a a kaka a k kak a
+a a kak k kaka kak a kak kak a kak kak kaka
+k k kaka k kak a k kaka kaka kak kaka kaka
+kak kak a a k a a kak kak kak k k kak kaka
+kaka kaka k kak kak kak kaka kak a k kak k
+a kak kaka a k k kaka k kak a kak kaka kak
+k k a kak a kaka kak kaka a a kak kaka a k
+kaka kak a k kaka kak a kaka kaka kak kak
+k a kaka kaka kaka kak a k kak kaka k k k</text>
+    </lesson>
+    <lesson>
+      <id>{5513de60-a229-45eb-ad5d-c848e3b0201f}</id>
+      <title>Lesson 2</title>
+      <newCharacters>lj</newCharacters>
+      <text>laja laka lajaj la lajal lakaj laja jaka laja
+laja lakaj lak lakaja lajala l lakaj lajal
+lakaj lak lajaj laka la laka lak laja lakaja
+lajaj lak laja la lajaj lakaj lakaj laja lajala
+jak lak jak lakaj laka lajaj lajal lakaj laka
+jaka lajala jaka lakaja laka laka lajaj jak
+lajaj laja jaka l jak lak jak lajaj laja lakaja
+jaka la laja laja jaka laka laka jak lak jak
+lajala lakaja lakaja jak lakaj laja jak jaka
+lakaja lakaja lajaj lajaj laja la lakaj laka
+jak la laja lajaj la lakaj lajala jaka lak
+jak la lakaj laka jak la jaka jak l lakaj
+l jaka l lajal jaka l lak lak laja laja l
+l lajaj la laja laja lak lak lak lajaj laja
+lajal lakaj lak la la laja laka laja laja
+laja jaka lajala jaka lakaja jak jaka lak
+jaka lajala lajal jaka lakaja lak laka laja
+lajal lajala laka lakaj laka lakaja jak jaka
+lak jaka lajal lajal l lakaja lakaja laja
+laja lakaj lakaj laja l jak lajal lajal la
+l l la lak laka jaka lakaj lajal l lajal la
+l lakaj lajal lak lak la lajaj lak l lajaj
+laka jaka jaka laja lakaj lajal laka laja
+la lakaj laja la lajala laka lakaj laja laja
+jak laja lakaja jaka jaka lakaj lakaja laka
+lakaja l laja lak la l lakaj lajal lajal lak
+laja l lajala lajaj la laka la jak lajal lajaj
+l lajala la laja jak l lakaj lajaj lakaj lakaj
+laja lakaj lajala lakaj l lakaja lajala lajala
+lajal laja la lajala laja lakaja laka lajal</text>
+    </lesson>
+    <lesson>
+      <id>{008b3d7d-921f-408a-ae0e-5a469914f860}</id>
+      <title>Lesson 3</title>
+      <newCharacters>s&#x10D;</newCharacters>
+      <text>s&#x10D;saka slaka &#x10D;kala saj sklal skakaj skakljala
+saka sla &#x10D;ka skaka s skakljala skaka&#x10D; skakaj
+&#x10D;&#x10D;a skaj skala sak &#x10D;kaj skala skakljala
+skal sla skaj &#x10D;&#x10D;a saj slaka &#x10D;ka slaka sla
+skakaj skaja skakljal skakalka sklala &#x10D;kala
+sklala skaja skakljal sak &#x10D;s skakljal &#x10D;s
+skaklja &#x10D;kala skaja skakal skaja skakala
+sla &#x10D;s slak skaja &#x10D;sa skaka&#x10D;j&#x10D;a &#x10D;kaj
+slak skakljaj &#x10D;s skaka skakaj skaka&#x10D; sala
+slaka &#x10D;&#x10D;a &#x10D;kaj saka &#x10D;j&#x10D;a skaj skala skaka&#x10D;&#x10D;ka &#x10D;kala &#x10D;&#x10D;a
+skakljaj &#x10D;&#x10D; &#x10D;&#x10D; skaja
+skala &#x10D;&#x10D;a slak &#x10D;&#x10D; &#x10D;kala &#x10D;kala skakljal
+skaka&#x10D; sak &#x10D;kal slak &#x10D;ja &#x10D;j &#x10D;sa skaka
+skaka skakljala skakljaj skakljaj skakala
+slaka skaj &#x10D;ja skaka&#x10D; skaklja skakljal skakaj
+skakala &#x10D;s skakljala skakalka &#x10D;kala &#x10D;sa
+&#x10D;kal skakalka &#x10D;j &#x10D;&#x10D; skakal skakala &#x10D;ka
+skal skakljaj sklal &#x10D;sa &#x10D;ka &#x10D;s skakalka
+skal &#x10D;s skakalka &#x10D;j&#x10D;a &#x10D;kala sla skakalka
+&#x10D;ka &#x10D;j&#x10D;a skakal &#x10D;s &#x10D;ka skakalka s &#x10D;&#x10D;
+skala skaj skaklja saka &#x10D;kaj skala skaja
+skakalk skakalka salsa sklala &#x10D;&#x10D;a skakalk
+sak skaja skaka&#x10D;&#x10D;&#x10D;a slak slaka &#x10D;s skal
+skakalk skakljala skaka&#x10D; sala skaka&#x10D;skaklja
+skakal slaka saka skakljaj &#x10D;kaj skakalk skaklja
+skakalka skal skal skaj saj &#x10D;&#x10D; skakljal
+skakljala slak skakal&#x10D;&#x10D;s skakalk salsa skaja
+&#x10D;kaj skaj slak sala &#x10D;ja sklal &#x10D;s skaka&#x10D;skal salsa salsa
+skakalka sla salsa &#x10D;ka &#x10D;s
+&#x10D;&#x10D; &#x10D;ja &#x10D;sa &#x10D;kaj skaka&#x10D; &#x10D;kal skaka&#x10D;</text>
+    </lesson>
+    <lesson>
+      <id>{56898359-cf98-4232-843d-e1ce093c6359}</id>
+      <title>Lesson 4</title>
+      <newCharacters>df</newCharacters>
+      <text>dajal dala dajalka da&#x10D; dajal fasada fasada
+dajalk da&#x10D; dal faks dajalk dala dalja fasada
+daj fasada faksa dajaj dajalk dajaj dala da&#x10D;dajala dlaka
+da&#x10D; da&#x10D;fasada dajaj dajal dalj
+daj dajala dala dalj dal dal da&#x10D; dajalka
+dajal dalj da&#x10D; da&#x10D; dajaj falska daj dajalk
+dajalk dlak fasad dlak dalj fasada dalja daj
+dalj fasada dal faks dlak dlak dlak dajaj
+dajal falska da&#x10D;fasad daj dala faksa faksa
+dajaj dajala dajala dajal dalja fasada faks
+faksa faksa dajalk daj fasada dajaj dajalk
+dajalka da&#x10D;dajaj dal dala dala dajalk dajalka
+da da&#x10D; fasada daj dajala da dlaka dala faksa
+dal daj faks fasad dajalk dal dajalk dala
+dalja dalja dlaka faksa dalj faks faksa dlaka
+dajalka dajaj dajalk dala fasad dajala dala
+dajala dalja dlaka fasad dalja falska falska
+dal daj da dlaka dajaj dajalk dlak fasad daj
+dala da&#x10D; dlak fasada fasad fasada dalj da
+fasada daj dajalk dal dalja dlak faksa dlaka
+faks da da falska dajalka falska daj daj dajalka
+fasad dajalk dajala da&#x10D; dalj falska faksa
+fasad faksa dalj dal dajal dajala dal dala
+falska da faksa dlak dlak da&#x10D;da&#x10D;fasada da&#x10D;daj dajalk
+da&#x10D;da&#x10D;falska dal da dlaka dajalka
+dajalk dajaj dalj dajaj faks dajalka faks
+dlak daj dajaj dajal dala da dalj dalj fasad
+dajalka da dlak da&#x10D;falska dajaj dal dajaj
+dajalk faks dlak dajalka dala daj dajalka
+daj dajalk dalj fasada da&#x10D;dala daj dajaj</text>
+    </lesson>
+    <lesson>
+      <id>{2c3037b4-3198-4662-9ff8-720c844b55d4}</id>
+      <title>Lesson 5</title>
+      <newCharacters>ie</newCharacters>
+      <text>ideale edafski ideje idilike idiliki iskala
+ideja ideale iskala ideja esej iskali idil
+edafske edafska idilike idile esej idila idile
+idili ideali iskali ideali eseja iskalki idila
+idili eseja ideali ideal idilike eseji eseje
+iskala ideji edafske iskalk iskalk idila edafske
+idilike iskalki edafski iskale edafska iskali
+iskal edafski iskalki edafski eseje ideali
+ideali idilike idilike ideale ideal ideja
+idilike iskale eseje idilik iskalka iskala
+idil ideal idila idilika edafska idilika iskala
+iskala iskaje ideala ideal ideali idej idila
+idila idej ideji iskali ideali iskalk idila
+eseje ideja ideale ideala idiliki idil iskalk
+ideala iskalke ideji ideali esej iskale ideji
+edafski eseja idilike idili iskalki ideje
+idilik ideali ideji edafski edafske iskal
+esej ideale iskaje idilike edafska iskalke
+idiliki eseje idili edafska eseji idil ideji
+eseje eseje iskaje idila edafski iskalka ideji
+ideja iskalk iskali ideja edafski ideja iskali
+esej idej ideale eseja esej idiliki iskalki
+edafski iskaje iskalke idilika iskalke idila
+idilik eseja ideala idilika iskale iskalk
+ideala iskalka iskala eseji ideja iskalk idej
+idilike edafska edafski idiliki ideala iskalke
+iskalka edafski iskal idej idilika iskal edafski
+ideala ideji iskale idili iskala ideal iskaje
+iskalke edafske eseje idile eseje ideje ideje
+iskali eseja edafski iskali idil iskalk ideali</text>
+    </lesson>
+    <lesson>
+      <id>{f2935041-03d1-4991-b92e-e16aadb5e1f4}</id>
+      <title>Lesson 6</title>
+      <newCharacters>no</newCharacters>
+      <text>nesklenjeni ne&#x10D;dno neokisan noslja nakisa
+neodlo&#x10D;o nedosojen nenadejani oklenjeno odisejadi
+naklonin odsesan na&#x10D;lniki naslajaje odklanjajo&#x10D;na&#x10D;e osen&#x10D;n
+olje&#x10D; neonska olika nadejale
+osli&#x10D;ni naklonsko nadse oksidna nakisa odklanjanje
+oksida nedeljnika nedeljni&#x10D;n nasedal naslonjeno
+na&#x10D;kane naslikala nenadejan neodlo&#x10D;i&#x10D;na
+odlo&#x10D;ni nasilni&#x10D;na ni&#x10D;n nadejalo naseljenko
+naslad njeno nena&#x10D;lni&#x10D;na ni&#x10D;nje oson&#x10D;nja
+nadelale oklenjen nose&#x10D; naslednji nedosledni&#x10D;na
+odskakljal oddelka osen&#x10D;no naslajaj osini
+olj&#x10D;iki nosa&#x10D; na&#x10D;nja olesenel na&#x10D;na neonkina
+nali&#x10D;ana odnesi okoli&#x10D;nki oken&#x10D;i nedeljeni
+odejo ne&#x10D;kinjin na&#x10D;&#x10D;ajo oljili oskalek
+naslednika na&#x10D;njajo&#x10D; noska oson&#x10D;a neodlo&#x10D;i&#x10D;ne
+nalijejo neolikank nanos oslinjeni ni&#x10D;li
+ojekleni nenadni ondi nadela neonkine okajen
+ni&#x10D;a nasekala naslada one&#x10D;dena neonka neidili&#xFFFD;n
+nasi&#x10D;nje na&#x10D;ne odsko&#x10D;le na&#x10D;kana osedlalo
+naslonijo oken&#x10D;a naslonilo okisalo odnosni
+naseljenkina odlo&#x10D;la nasilnik nedojena nenaklonjeni
+najdlje oda onikajo&#x10D;odsekane oklenila nenadejana
+olikankine oson&#x10D;a nadejanj odselijo osoljeni
+na&#x10D;lnika oljni oddajani osa odseka nena&#x10D;lni&#x10D;n
+nakali nasedajo&#x10D; nanesli najdenin odselijo
+nissani ose naslonilo olj&#x10D;iki nasekali nali&#x10D;ale
+nali&#x10D;anje olikankini nasoljeno naslonja&#x10D;
+oslinjene odlo&#x10D;li olj&#x10D;o na&#x10D;e najdenino
+naselila nekon&#x10D;na naslanja&#x10D;odlo&#x10D;lno nadanjska
+nenaseljena nedolo&#x10D;ni neidili&#x10D;i naslonjena</text>
+    </lesson>
+    <lesson>
+      <id>{4f728147-df8a-4a3a-af2e-ffb68ecb25fb}</id>
+      <title>Lesson 7</title>
+      <newCharacters>rm</newCharacters>
+      <text>mla&#x10D;imi rokokojskem maksimirani ra&#x10D;nskimi
+rodenske me&#x10D;a&#x10D; rafal malijske medijem rokerskem
+misijo rde&#x10D;nj rde&#x10D;laskami manekenkinima
+rode&#x10D; riodejaneirskim redil rafiji mamoljske
+reklamiranem mjanmarska milijonarja menjalkin
+markirajo&#x10D; medi&#x10D;jskima mro&#x10D;mirjanskimi
+marmeladama mormonki menija re&#x10D;nskem resama
+mi&#x10D;eno resni&#x10D;im misli realka radi&#x10D;m mlaskajo&#x10D;
+milijardnem reformirajo&#x10D; mile&#x10D;ma mese&#x10D;em
+radiji marinke mladinkinim reliefnimi mlaki
+malokorinjska milarnami modelni mla&#x10D;nsko
+mladikami ran&#x10D; mandolinam mesojed mlinarje
+mansardnima refrenskim mesarka mo&#x10D;ril mamk
+maksimalen mirenskem reinkarnirajo&#x10D;mi majskima
+rejska malo&#x10D;sa reklo mol&#x10D;nji rolkajo&#x10D;ma
+milosr&#x10D;im risarjema morali mesare&#x10D; mo&#x10D;janskem
+miljena morilske mladij mekinjskima radirankami
+rejnika modom mornarko markiranem reklamami
+mle&#x10D;a rijo&#x10D;meliranimi mol&#x10D;&#x10D; milarna misijonarka
+menim manekene modemske mamilo merilkinima
+rima&#x10D;o makedonskimi medanskimi melodramskima
+rose&#x10D;medijskima mladi radiofonske rimarkinem
+marinado marsikje medi&#x10D;rkine mornarski ro&#x10D;ik
+momljaje risanje mame&#x10D;m roja medaljerko manjkanjema
+mariniranji menijskim rolkar mlaskanje mirilo
+rokerskim med mle&#x10D;a romskimi rojski rolke
+moljene rima mokre&#x10D;m momljanjema reden mikanj
+rolkarkinem rolkark mikenske mol&#x10D;&#x10D;i&#x10D;nem
+mrke ra&#x10D;eselskem rafinirajo&#x10D;ma ma&#x10D;one ra&#x10D;nskem
+maserja mjanmarske meridianoma milj marmeladam</text>
+    </lesson>
+    <lesson>
+      <id>{0a50581a-8d65-4582-a33f-e17e3fe87ab4}</id>
+      <title>Lesson 8</title>
+      <newCharacters>vt</newCharacters>
+      <text>vro&#x10D;jo&#x10D; taoiste tridesetkratna vasoval&#x10D;vimi
+tekmi&#x10D;na vsr&#x10D;va trinajstinami vsko&#x10D;m talarji
+vrsti&#x10D;ikom volovima vijva trnkarim velikankinimi
+tirnem vsrkata valovile vrelno vlivajo&#x10D;mi
+vrvi&#x10D;stim telefoniral trosovko valoven tonalni
+tinjskem vtisnila tokave vokala tetoviranjem
+vatnima tekmovalnima teoreme vnetljivostim
+valovjema to&#x10D;j vodniki veterankinimi teistov
+tesnostjo velikora&#x10D;nska veli&#x10D;stnost teorija
+vtka voli&#x10D;nsko vetri&#x10D; vsiljenkine vodovarstven
+tokratnimi testoma vodi&#x10D;triinsedemdesetero
+terjalke vedrijanske tlakoma to&#x10D;jkine vlekama
+taki vsiljenkinima termometre totalitarnostjo
+ventilirajo&#x10D;troj&#x10D;&#x10D;ne valdorfski volarjev
+tajati triindevetdesetmese&#x10D;a treskajo&#x10D;mi
+vodarja vodarnami videofon tleskajo&#x10D;m vretenske
+veveri&#x10D;ake vsevedni&#x10D;na triinosemdesetmestna
+traktorskim tovorjeni tenden&#x10D;ost trkate trkljaj
+vrvi&#x10D;stima tonikama ve&#x10D;etnem tiso&#x10D;elnimi
+vodarnam teko&#x10D;ostjo vsekanima terminala violinistkinim
+vstavitvena vtikajo&#x10D; trame tlesknete vsrkalo
+vlamljale vijoli&#x10D;em tvrdkama triindevetdesetdelnem
+to&#x10D;l&#x10D;vimi veliki to&#x10D;t tleskam veleslalomistkinim
+trn trdnino vojvoda veseli vratolomnostjo
+trkljajte vrtino triinsedemdeseto tresljavi
+triinsedemdesetkilometrsko vini&#x10D;rkinim vlivnima
+tele&#x10D;jakom valite vija&#x10D; tridnevne triindvajseternosti
+tlorisno travna valjenj tesne&#x10D; testiran&#x10D;v
+tvida vdeli verovanjema triodstotnimi testiran&#x10D;vo
+tiral tesanj tajat vdajmo vaflje vro&#x10D;nske</text>
+    </lesson>
+    <lesson>
+      <id>{eec8d644-b9f9-41e8-a108-f6568274d72f}</id>
+      <title>Lesson 9</title>
+      <newCharacters>pu</newCharacters>
+      <text>posredni&#x10D;nima preklapljajo&#x10D; pasne pokarali
+protju usmerjena preiskovankama prekrokam
+predsino&#x10D;ja po&#x10D;te podajalnimi priprte upokojujeta
+pletle praslovanskemu poostrovanji petnajsterna
+podpiran&#x10D;va udejanjim pitna plutokratk poredni&#x10D;nim
+premo&#x10D;emu upepelil postojnskem patentirale
+potilnemu protipravnostim periodikami prestopkov
+prometni&#x10D;no poplesati poustvarila priklju&#x10D;nem
+preluknjajte poljskim paj&#x10D;lanastem peklenske
+prenavljalo pretovarjanja ute&#x10D;nosti poslikavajo&#x10D;mi
+postavka udenskem polomu priu&#x10D; planinski
+pelji pal&#x10D;ikov premlatita predeljeno prevedenim
+pritavata plapolali pritepen&#x10D;vim polnjenima
+polfinalistkinem prekrvavljenostmi utelesilo
+pianom upijanjeni petdesetkratniki uvajalni
+prisodili prestolonasledni&#x10D;ni poudariti petelinjenjem
+pireji plodovitemu uteko&#x10D;njenemu prepisu
+ustavljat plove&#x10D;mi podarjena prekrvavljenima
+privatnostim porumenelostma preskusita posvojiteljeva
+uvajali potuj&#x10D;nostjo usklajevala padavinskem
+prilastil pla&#x10D;vaje petodstotnima presadite
+pomorijo prijetnost uniformami prikrijete
+posve&#x10D;val&#x10D;vima platinaste puljska pasivnostmi
+ustoli&#x10D;jo&#x10D;mu pretla&#x10D;m parodiranju pla&#x10D;nkami
+pripona utrtemu ple&#x10D;ta pomenskosti utore
+preiskovati petinosemdesetnadstropnem polprofesionalnemu
+prepeli&#x10D;ami prijavljen&#x10D;vima prikolovratili
+petinosemdeseternim prijateljeval pekliti
+pouli&#x10D;o uni&#x10D;valo privla&#x10D;vanjem poveljujejo
+prostornim psalmistovem ukrojijo posute podprvakom</text>
+    </lesson>
+    <lesson>
+      <id>{898ef8b7-93d2-4289-bdc1-1f82074cf54f}</id>
+      <title>Lesson 10</title>
+      <newCharacters>zg</newCharacters>
+      <text>zvon&#x10D;ljate zapravljajo&#x10D; gaza zakrivim zidani
+grizljanju zatezale zmajalo gomoljnat zagospodarjenima
+godemarskima zaletavanjema zalijta geometriziranemu
+zelenima zemljankine zadevale giljotiniranem
+znalkinemu zamor&#x10D;ovima za&#x10D;la geometrizirajo&#x10D;mi
+zgodovinarkini grlne zadovoljitvami zadelale
+graviraj gostoti golenma goskam geodeta zavijalna
+zamejevalo zaupljiva zastavljenega zastarevajo&#x10D;zlatilo
+zapazit gledljivi zaustavljivemu zataljene
+zaslepljenima zve&#x10D;nima zdrgniti grizonovimi
+zlodejke zveden zazankaj geometri&#x10D;e zaro&#x10D;n&#x10D;v
+gorati zmije zazimljenima gospodovat zverjadjo
+zgrinjam zastavama gneteta zgarajta zamomljat
+grome zasegajta zapakirajte gojevska zgodni
+zamorimo zaslonite zazven&#x10D;va gardnimi zaprosilom
+galaksij geometrinjinimi zape&#x10D;nosti grafikovega
+generalpolkovnike zvitorepkine zalivana zarezanega
+zaro&#x10D;ti zjed zasanjajva gostilni&#x10D;rskem gametofita
+glasnostjo zapenjanju gozdarstvom gomilnega
+zavetrnem zvrta gostotam gojevskemu zaspan&#x10D;vega
+generalporo&#x10D;i&#x10D;nega zmernostmi zoperstavljenim
+zaje&#x10D;va zapenjajo&#x10D;mu zgornjepartinjskemu
+zoonozami zjezi gornjeustni&#x10D;n zavarovan&#x10D;vimi
+goliti zavla&#x10D;val zamrznejo zvenet zaplata
+zakostenelostjo genetskima zmazanim galanterijskega
+zaostritvama zalikane zadovoljenja gru&#x10D;stimi
+zmotile gramoma galanteristkinem zgrizena
+gazelje zaiskrimo zapisni zmletka zvezdoslov&#x10D;vem
+zvon&#x10D;ljajte zapisni&#x10D;rkama zavidljiv geodetovima
+zloslutnem zaupna gladilkin zaposlujeva galunova</text>
+    </lesson>
+    <lesson>
+      <id>{7f4591f2-a898-4b2c-b587-3c63752daef7}</id>
+      <title>Lesson 11</title>
+      <newCharacters>&#x161;h</newCharacters>
+      <text>&#x161;&#x10D;etarjevimi &#x161;ansonjerjema &#x161;esttedenskemu
+&#x161;oferkah &#x161;estindevetdesetdnevnima hrzajo&#x10D;a
+&#x161;kodovanja &#x161;tiriinsedemdesetih &#x161;tiriinsedemdesetminutnega
+&#x161;tiriindvajsetmese&#x10D;nih havanka &#x161;paget
+&#x161;tiriindevetdesetminutnemu
+&#x161;ipon hlastnost &#x161;arlatanovo &#x161;epav&#x10D;evima &#x161;krlatni
+&#x161;tangarskopoljanskima hermelinastemu &#x161;estnajstdelnemu
+hlevi&#x161;ke &#x161;epetamo &#x161;ifriranim hipnotiziralo
+hmeljarjevima &#x161;estnajstnadstropne hemoragi&#x10D;nega
+hidroenergiji &#x161;&#x10D;itenj hipokrizijo hamitov
+&#x161;estdesetdelnim hi&#x161;ni&#x161;ka hikori &#x161;oferkinega
+&#x161;efovega &#x161;tiriinsedemdesetodstotni hranilnikoma
+&#x161;estinpetdesetinam &#x161;&#x10D;urkova &#x161;ifriraj &#x161;olni&#x161;ki
+&#x161;tiriinsedemdesetkraten hmeljarjevi &#x161;rafirala
+&#x161;tiriintridesetnadstropnimi &#x161;tirikratnimi
+&#x161;tiriperesno homogenizirajo&#x10D;e hamitkin &#x161;inejo
+hudejskim &#x161;tiriindvajsetleten &#x161;tiriindevetdesetdelna
+herkulskim &#x161;tiriindvajsetodstotnimi &#x161;tiriin&#x161;estdeseturni
+&#x161;ivata &#x161;estkratnikih &#x161;tiriindvajsetkrat hru&#x161;ovsko
+hoduljam hlap&#x10D;evimi hidre &#x161;karpnim honorarnega
+&#x161;alamensko &#x161;estnajstdelnemu &#x161;irokopotezno
+&#x161;ahist &#x161;mar&#x161;kemu &#x161;ahiral harmonikast &#x161;estin&#x161;estdesetini
+&#x161;eststoternem homeostazama humanisti&#x10D;na
+&#x161;tiriin&#x161;estdesettedenski
+&#x161;tiriodstotne hupal hegeljanka &#x161;tokav&#x10D;evi
+&#x161;vedskem hedonistovem &#x161;eststomese&#x10D;ni hlapilnost
+&#x161;tefanskim hotelirkinemu &#x161;ejkati &#x161;&#x10D;etkarskega
+&#x161;tokav&#x10D;evo &#x161;tiriin&#x161;estdesetemu &#x161;ikolskih
+&#x161;estindevetdesetnadstropni
+herojstvoma &#x161;estinpetdeset&#x10D;lanske &#x161;estdesetmestnim
+hi&#x161;ami histeri&#x10D;nim humanost hmeljnemu &#x161;pekulira&#x161;
+hlepimo hlinjen hote&#x10D;ih &#x161;tiriinsedemdeseturnim
+&#x161;pilje &#x161;otaste &#x161;tirikapno &#x161;tipendistkinem</text>
+    </lesson>
+    <lesson>
+      <id>{aa599b86-a165-48e0-b3f4-f53fd5144878}</id>
+      <title>Lesson 12</title>
+      <newCharacters>bc</newCharacters>
+      <text>basovska cizama copatkama banovinah cunjastemu
+boksite baronetovima benzenov biserovinastega
+bledicah banditovemu bedakinje balzamirana
+brigadirstvu barokizirali capljanju blatnovr&#x161;kih
+bojevnikovi brzojavnima bogatinska bagdadskim
+brblja&#x10D;evih blagajni&#x10D;arkinih britij bojevni&#x10D;inima
+cepali biljanskih bolzanskem balearskem bifeji
+bibliografinjini bibli&#x10D;nega cikavskega bednikovim
+bistroglavost baha&#x161;kimi brezupe brestom bolehanju
+banovskih bolzanskima buhte&#x10D;em bordojska bakroreze
+bakrastih blazinil bigamistu brste&#x10D;em bu&#x161;kasti
+binarnem capinovemu bednostim bogaboje&#x10D;nemu
+burkajta cepita bencin brezsnovnemu bojujo&#x10D;imi
+brejostjo bazirani chemni&#x161;ko cipresasta brle&#x10D;ima
+comske balini&#x161;&#x10D;e blagovolit begunovim brazdalnikov
+baltidkin cilindrskimi briljantnem beneficirale
+cunkovska bobnarkine brezgotovinskimi bobni&#x10D;en
+bruse&#x10D;imi begunjskemu balerinini bilijone
+cerkovnikovi cefedranim bezajo&#x10D;e centrifugirano
+barabonova bren&#x10D;anje brdskemu cvetoberoma
+bosonogih bubonskih cibetovkinih brdavse belkastem
+cerkni&#x161;kih bikastega bedakinji beneficirano
+bradavi&#x10D;ke barvasti bleskih brdanskega civilizirankinima
+barvitostma cezijeve baranta&#x10D;evim brezrazredne
+bori&#x161;&#x10D;i br&#x161;ljankah cikli&#x10D;nosti brezkrajnemu
+cirilskimi basovskega blatnobrezovi&#x161;kimi brenkajo&#x10D;i
+begun&#x10D;eve bergamskima budganjskega brisanje
+cedilke ban&#x10D;no brindisijsko celotnostim bi&#x10D;ale
+bodo&#x10D;ih cveto&#x10D;imi bistroje belilih bedru brezskrben
+blazinilo bolj&#x161;evik bitumnu buharsko centralisti&#x10D;no</text>
+    </lesson>
+    <lesson>
+      <id>{be5d1c4a-7e72-412c-a335-18931a477d34}</id>
+      <title>Lesson 13</title>
+      <newCharacters>&#x17E;</newCharacters>
+      <text>&#x17E;reb&#x10D;evi &#x17E;igosali &#x17E;arit &#x17E;ive&#x10D;em &#x17E;ogobr&#x10D;eva
+&#x17E;ge&#x10D;kljivimi &#x17E;aloigram &#x17E;afranastega &#x17E;u&#x17E;kovega
+&#x17E;arkej&#x161;im &#x17E;elezni&#x10D;arkini &#x17E;vabskim &#x17E;ivotarita
+&#x17E;agastih &#x17E;altavima &#x17E;u&#x17E;elkinega &#x17E;li&#x10D;nika &#x17E;reb&#x10D;eva
+&#x17E;aboustim &#x17E;elezarni&#x161;kima &#x17E;go&#x10D;ega &#x17E;go&#x10D;imi &#x17E;gana
+&#x17E;ice &#x17E;elvovinastimi &#x17E;ve&#x10D;ilo &#x17E;arkovjih &#x17E;alovanje
+&#x17E;vrgoli &#x17E;upanjinima &#x17E;veplaste &#x17E;ebranje &#x17E;agajo&#x10D;o
+&#x17E;rebal &#x17E;i&#x10D;ni&#x10D;arjih &#x17E;i&#x10D;ni&#x10D;arko &#x17E;vi&#x17E;ganjem &#x17E;ilasta
+&#x17E;lahtnej&#x161;i &#x17E;aljena &#x17E;elodoma &#x17E;amet &#x17E;ivopisna
+&#x17E;eljnostma &#x17E;li&#x10D;arjevo &#x17E;etvam &#x17E;elimeljskim
+&#x17E;vi&#x17E;gam &#x17E;ulili &#x17E;ivcema &#x17E;ab&#x10D;eve &#x17E;lahtnej&#x161;em
+&#x17E;venketajo&#x10D;im &#x17E;ejnim &#x17E;irovske &#x17E;lebe&#x10D;i &#x17E;reb&#x10D;arnah
+&#x17E;epasti &#x17E;eleznima &#x17E;igonski &#x17E;el &#x17E;rtvujo&#x10D;ega
+&#x17E;epovsko &#x17E;lebi&#x10D;enji &#x17E;irantkinih &#x17E;upanovanjih
+&#x17E;ebljicam &#x17E;venketanj &#x17E;eleza &#x17E;lobudrala &#x17E;arkostjo
+&#x17E;rete &#x17E;ilicam &#x17E;rtvuj &#x17E;lebi&#x10D;im &#x17E;arometov &#x17E;eni&#x10D;kam
+&#x17E;agajo&#x10D; &#x17E;ivahnim &#x17E;anjemo &#x17E;aloval&#x10D;evi &#x17E;ve&#x10D;ene
+&#x17E;veplast &#x17E;li&#x10D;arjevemu &#x17E;alovi&#x161;ka &#x17E;vi&#x17E;gam &#x17E;eljnemu
+&#x17E;agarskimi &#x17E;adovinski &#x17E;eleznica &#x17E;enskini &#x17E;agari&#x10D;ine
+&#x17E;ivilskega &#x17E;ejnski &#x17E;ubinskemu &#x17E;ivalcam &#x17E;ganica
+&#x17E;eleznati &#x17E;ebrajte &#x17E;erke &#x17E;a&#x17E;arskem &#x17E;elezokrivkama
+&#x17E;upnijama &#x17E;en&#x161;&#x10D;ini &#x17E;uni&#x161;ko &#x17E;argonskima &#x17E;alujo&#x10D;e
+&#x17E;ivalskostjo &#x17E;argonskem &#x17E;andarskemu &#x17E;elezni&#x10D;arkinih
+&#x17E;onglerka &#x17E;afranovega &#x17E;ivinozdravnikovega
+&#x17E;ol&#x10D;evodih &#x17E;rebet &#x17E;agico &#x17E;alovalcev &#x17E;erovinski
+&#x17E;andarjih &#x17E;ivela &#x17E;ele&#x10D;a &#x17E;andarske &#x17E;alskega
+&#x17E;ebljarjema &#x17E;aginemu &#x17E;vepleni &#x17E;vi&#x17E;gavkina
+&#x17E;abjega &#x17E;vi&#x17E;ga&#x10D;evih &#x17E;altavost &#x17E;emljica &#x17E;venkljajo&#x10D;emu
+&#x17E;irovni&#x161;ko &#x17E;u&#x17E;koslov&#x10D;evih &#x17E;iv&#x17E;avov &#x17E;i&#x161;kimi
+&#x17E;ivorojene &#x17E;eparstva &#x17E;argonsko &#x17E;ivin&#x10D;et &#x17E;agicam</text>
+    </lesson>
+    <lesson>
+      <id>{dde8c354-e79f-45c9-a580-23323aec998e}</id>
+      <title>Lesson 14</title>
+      <newCharacters>AKLJ</newCharacters>
+      <text>Liben&#x10D;anovima Kambre&#x17E;anovem Kremberka Ladislavoma
+Le&#x161;ni&#x10D;anko Klan&#x10D;arjev Kordi&#x10D; Kastiljkah Liechtenstein&#x10D;ev
+Liber&#x17E;anovimi Jan&#x17E;evce Koblarjema Kauna&#x161;&#x10D;an
+Klenov&#x10D;ana Kureten&#x10D;ankina Lombardovem Je&#x161;enca
+Kostanjev&#x10D;anovem Karlov&#x10D;evima Kompol&#x10D;anih
+Ambro&#x17E;i&#x10D;e Krnicah Klem&#x161;etu Avstral&#x10D;eva Javornikovim
+Jeran&#x10D;i&#x10D;evega Arafatom Labor&#x10D;evih Ladihove
+Jung Jagod&#x10D;ankami Lisja&#x10D;ank Katovi&#x10D;ana Ljubi&#x10D;evima
+Krncem Anton&#x10D;i&#x10D;evega Avberkina Karlovcema
+Jevni&#x10D;ankinih Jev&#x161;kovemu Jesen&#x161;kovem Krkav&#x10D;anko
+Kre&#x10D;evem Jeralovemu Jagod&#x10D;ank Konj&#x161;&#x10D;ankini
+Kongovki Antonovimi Kvasi&#x10D;anko Konstantinopel&#x10D;ankah
+Jarmov&#x10D;anove Leiden&#x10D;ankina Jarovega Klem&#x161;e
+Andromedo Liburnkinim Jugovi&#x10D; Lukanj&#x10D;ankinih
+Levarte Kri&#x17E;man&#x10D;i&#x10D;evima Kani&#x17E;ari&#x10D;anke Kolo&#x161;ema
+Kurentu Lani&#x161;anke Lutmanovem Kati&#x10D;e Jer&#x10D;in&#x10D;ankinemu
+Kra&#x10D;alcu Lisja&#x10D;anom Li&#x17E;ankami Kazan&#x10D;anoma
+Kro&#x161;linovim Kosmatin Lebanu Jamen&#x10D;ankinega
+Kumljan&#x10D;evima Jobstova Alenkinima Andri&#x10D;evima
+Avignon&#x10D;anovemu Krnca Juvan&#x10D;i&#x10D;evo Kovkov&#x10D;anovo
+Koncilijama Leilerje Li&#x10D;en&#x10D;anova Koritni&#x10D;anki
+Kmeclova Kropiv&#x161;kovem Leningraj&#x10D;anovega Kolenikovima
+Korvovima Kauna&#x161;&#x10D;anko Ju&#x17E;noafri&#x10D;anke Jermoli
+Lapork Lancovljan Johani Arizonce Kal&#x10D;i&#x10D;i
+Kopini&#x10D;evim Leverkusen&#x10D;anovim Aderga&#x161;&#x10D;anove
+Lazen&#x10D;anovima Lo&#x17E;in&#x10D;anko Kan&#x10D;ev&#x10D;ankine Kolovratu
+Knafli&#x10D;ema Kog Anitini Karlininem Lu&#x161;e&#x10D;ankinega
+Jerihe Janovim Jobi Kurin&#x10D;i&#x10D; Kennethovem Kranji&#x10D;ino
+Lambergerjih Jeremijami Juanovem Kogojeve
+Letonjeve Jur&#x161;in&#x10D;ankinem Jev&#x161;&#x10D;anovim Karlsruhejem</text>
+    </lesson>
+    <lesson>
+      <id>{7b2caf05-736b-43e2-9541-5a613d57ef86}</id>
+      <title>Lesson 15</title>
+      <newCharacters>S&#x10C;DF</newCharacters>
+      <text>Doljanovih &#x10C;ebularjevih Se&#x17E;an&#x10D;anova Dachau&#x10D;anovimi
+Dre&#x17E;ni&#x10D;ankinega Stavropol&#x10D;ankine Slivljanko
+Dol&#x10D;anovima Drganj&#x10D;evo Skubi&#x10D;evemu Salmi&#x10D;em
+Stephensonovi Sadnikov Sandiegov&#x10D;anovemu Dobjeva&#x161;&#x10D;ankinega
+Santorin&#x10D;an Form&#x10D;ankami Seban&#x10D;evemu Suhole&#x17E;niku
+&#x10C;ufarjev Dr&#x10D;anovih Starogor&#x10D;ev &#x10C;e&#x161;koslova&#x161;kega
+Dom&#x17E;al&#x10D;ankinim &#x10C;epovana Sevastopol &#x10C;ele&#x161;nikom
+Senadolcev Slan&#x10D;anoma Sovja&#x10D;anovima Faleti&#x10D;e
+Slovenjgrad&#x10D;ankina Simplonom &#x10C;ehovinkami Dednodol&#x10D;ankinem
+Davida Darjanovim Studeni&#x10D;ankami Simonin Strela&#x10D;an
+Smeltov Fabjan&#x10D;i&#x10D;ema Fabianovega Danijelini
+Sevill&#x10D;ank Stolni&#x10D;anova Dobravcema Senjurjema
+Sredenj&#x10D;anih Soldatovega Debeljakoma Soro
+Slapljanki Studorkina Du&#x161;kova Stojanovem Davo&#x161;anka
+Skori&#x161;nja&#x10D;anka &#x10C;rniv&#x10D;an Saksidov Saturnusovo
+Slavinjkama Savin&#x10D;anoma &#x10C;ilpa&#x161;anov Sel&#x10D;anov
+Dra&#x17E;enkam Strojevemu Skaru&#x10D;anove Skvar&#x10D;ema
+Stanovi&#x161;&#x10D;ankinega Dobri&#x161;evljankami Froleh&#x10D;ankinim
+Du&#x161;ankinimi Dobr&#x10D;ani &#x10C;retnikovemu Savlovo
+Doropolj&#x10D;anom Skoberneti Samotori&#x10D;ane Staroseljanovimi
+&#x10C;rne&#x161;kogor&#x10D;ankinim Dobr&#x10D;ankinima Dolgonjiv&#x10D;anovim
+Slokarjem Slovanu Stenmarkom Sobra&#x10D;ankina
+Strjan&#x10D;ankinimi Sodi&#x161;in&#x10D;ankinimi Sini&#x161;eve
+Svinjskem Sodi&#x161;in&#x10D;anu Slamnja&#x10D;ankinemu Dobrav&#x10D;eve
+Sredozemk Sepeta Samsonovem D&#x17E;akart&#x10D;anovemu
+Feni&#x10D;ankam Dol&#x17E;ankinem Srednjeva&#x161;&#x10D;ankama Dolgora&#x10D;anki
+Dvorjanov Dekan&#x10D;anovo Starogor&#x10D;ankinih Forti&#x10D;
+Dvorjan&#x10D;anka Starogor&#x10D;anovim Sofijinemu Svetolucijcema
+Skvar&#x10D;evima D&#x17E;id&#x10D;anovem &#x10C;rnova&#x161;&#x10D;ankinega Doberdob&#x10D;ankinega
+Deisingerjevega Drenjkinemu Slome Dobami
+Dolgova&#x161;kogori&#x10D;ankinim</text>
+    </lesson>
+    <lesson>
+      <id>{cf6bdaa8-9ec5-4e09-b5e5-9038d4b1bbf0}</id>
+      <title>Lesson 16</title>
+      <newCharacters>IENO</newCharacters>
+      <text>Natla&#x10D;ene Inkretov Oskarjeva Opatjeselcem
+Eliasih Impolovim Osovnikarjevega Indiankina
+Ekarjeve O&#x10D;eslav&#x10D;anovem Iv&#x161;kova Ore&#x161;i&#x10D;evih
+Oluji&#x10D;evim Izlakarji Osetijkah Oliverina Oplove
+Osred&#x10D;anih Erevan&#x10D;anov Nikaragovkina Njiver&#x10D;anova
+O&#x10D;eslav&#x10D;anovemu Ozeljankah Nebel&#x10D;evi Izol&#x10D;ankini
+Nobelovo Okrogli&#x10D;ankinima Nadle&#x161;&#x10D;ankinima
+Islandcema Natalkini Oskor&#x161;anko Osoletove
+Novolazen&#x10D;evih Interpolovimi Imenj Nimnemu
+Novokotarki Nedeljkovih Novogori&#x10D;anovimi Evgenijevi
+Epikurjem Otov&#x10D;ankini Obr&#x161;&#x10D;ane Oblo&#x10D;anovi
+Obsotelj&#x10D;ank Iskrini Ivan&#x10D;anka Ivovima Iren
+Oro&#x17E;na Njiver&#x10D;ankami Osredkarkinem Erzeljcev
+Nikino Istrabenzovega Ivanj&#x161;ev&#x10D;anovimi Izgor&#x10D;ankinima
+Intiharje Ivi&#x10D;evem Otale&#x17E;&#x10D;eve Orehov&#x10D;ankinim
+Novgorodom Obrnikarkama Omoti Obre&#x17E;ja O&#x161;ljankami
+Nagli&#x10D;evo Ivan&#x10D;anovimi Nedovi&#x10D;em Novgorod&#x10D;ane
+Edgarjevih Indiankah Nadlerjevim Oklahomce
+Ohnjecem Osim&#x10D;anih Ovsenikovi Ojnikova Ivanjegrajcev
+Neapelj&#x10D;ankina Evklidov Ojstr&#x10D;anovega Omanom
+Oto&#x10D;ankah Obrnikarkin Ojdani&#x10D;ih Elijami Oplotni&#x10D;anke
+Osojni&#x10D;ank Omarjevih Novincih Osolni&#x10D;anki
+Novosu&#x161;i&#x10D;anovo Ostoji&#x10D;ev Obrovnikov Ihanke
+Elesovo Elijo Oparove Eritrejcema Nem&#x10D;av&#x10D;ankina
+Efe&#x17E;anke Novi&#x10D;eve Nepalkinih Nadle&#x161;&#x10D;anovega
+Izla&#x10D;anova Osim&#x10D;ankami Nickova O&#x17E;balt&#x10D;ani
+Ornika Nori&#x10D;ankino Elsnerjeva Ivan&#x10D;anke Ita&#x10D;ank
+Illinoisa Osmanih Nakso&#x161;ankinimi Imljan&#x10D;ankinim
+Normandij&#x10D;evih Esade Osre&#x10D;kiju Ni&#x17E;ev&#x10D;an Neslovencih
+Orli&#x10D;ankini Ornu&#x17E;ane Igorjevo Ni&#x17E;ev&#x10D;anovo</text>
+    </lesson>
+    <lesson>
+      <id>{d0147c2c-bda5-4986-b69d-a8109aa0af3a}</id>
+      <title>Lesson 17</title>
+      <newCharacters>RMVT</newCharacters>
+      <text>Mogadi&#x161;ankah Teheran&#x10D;evim Vele&#x161;&#x10D;ankinem Vu&#x10D;akov
+Majeri&#x10D;evem Radan&#x10D;ankinim Maksimilijanove
+Vrhah Tomislavovem Vrati&#x10D;em Vrben&#x10D;anki Rifni&#x10D;anovim
+Male&#x10D;ni&#x10D;anove Tonetovo Vodran&#x10D;anovem Medvod&#x10D;ankama
+Transvaal&#x10D;ankinem Rajnkovljanih Raj&#x161;povih
+Mohorku Velikokamen&#x10D;anovih Radoslavci Va&#x10D;
+Toma&#x10D;ev&#x10D;evih Repi&#x10D; Roboma Mercatorjevem Vido&#x161;i&#x10D;ana
+Tassoma Mantov&#x10D;anov Marezi&#x17E;anu Tarent&#x10D;ankina
+Vi&#x161;evljane Rafol&#x10D;anovo Tver&#x10D;anovimi Valbur&#x17E;ankini
+Majevimi Ri&#x17E;anki Vosperniku Milovanovi&#x10D;eve
+Tisov&#x10D;anih Malezij&#x10D;evimi Riglerjeve Magreb&#x10D;anovemu
+Tanjini Melanijam Modrijani Martanovi Mo&#x17E;jan&#x10D;anovimi
+Rostovom Matetovo Mohorjevimi Medin&#x10D;ankam
+Mati&#x10D;ka Rem&#x161;etovem Tabor&#x10D;ev Vitnova&#x161;&#x10D;ane Matenj&#x10D;evo
+Tolmincih Radegund&#x10D;ani Trimlin&#x10D;ankina Vorone&#x17E;ankinima
+Vnajnar&#x10D;evi Marmont Vanih Rude&#x17E;eva Malola&#x161;&#x10D;anovega
+Malezij&#x10D;eve Matejina Robinsonovemu Vr&#x161;&#x10D;ev
+Makov&#x10D;evi Tol&#x10D;anah Toli&#x10D;e Topljankinem Tomi&#x161;ljanove
+Rochestr&#x10D;anih Morav&#x10D;anovi Magdeburgu Vrbov&#x10D;anovo
+Rodo&#x161;kove Vara&#x17E;dince Rakovkami Verbincem Milovanovi&#x10D;
+Vera&#x10D;ankinih Rebercem Majnikovo Richterjevih
+Vrhen&#x10D;anke Vitovimi Vakslje Vuzmetin&#x10D;ankinima
+Mojstran&#x10D;anom Ravljank Timurlenkoma Vodenov&#x10D;anovima
+Vanov Razbor&#x10D;anom Vrenkove Ve&#x161;eni&#x10D;an Tartuj&#x10D;anke
+Tekal&#x10D;evi Vukovskodol&#x10D;anom Metav&#x10D;ankah Reaganovo
+Titov&#x161;ek Veni&#x161;anko Magajnove Verzelu Rin&#x10D;etovograb&#x10D;ankina
+Modrov Volavelj&#x10D;ankinimi Vol&#x10D;jedra&#x17E;ankama
+Tuta Verhovniki Toskanci Riedla Venigerjevem
+Rossiniji Malaji Tanjugov Malokorinj&#x10D;ankam
+Vinjanovemu Vuki&#x10D;evo Male&#x17E;i&#x10D;a Volaji Vini&#x10D;anu</text>
+    </lesson>
+    <lesson>
+      <id>{79a86a49-d035-4741-a521-deec9ce6178e}</id>
+      <title>Lesson 18</title>
+      <newCharacters>PUZG</newCharacters>
+      <text>Petrino Gambergerjema Plotovimi Zofijinih
+Passau&#x10D;anovo Pahovnikih Zel&#x161;anovi Ulmu Grdadolniki
+Gomil&#x10D;anih Gatincem Polj&#x10D;ankah Gozde&#x10D;ankam
+Paragvaj&#x10D;ev Perov&#x161;kovima Pre&#x161;anki Zaklen&#x10D;eve
+Zabri&#x10D;eve Pi&#x161;e&#x10D;ankin Plu&#x17E;no Grahov&#x10D;anova Pinochetova
+Puharjevem Poznanov&#x10D;ankinimi Pame&#x10D;anova Zadra&#x17E;anovega
+Gere&#x10D;ank Pahovljanu Pileti&#x10D;evimi Partizanskovrhov&#x10D;eva
+Ponovi&#x10D;anovi Polom&#x10D;anovi Pu&#x161;&#x10D;av&#x10D;ana Gorenjakovemu
+Pivol&#x10D;ankini Zalobre&#x17E;ankah Gr&#x17E;ini&#x10D;evima Pustopoljk
+Puharjev Pol&#x17E;anov Pudob&#x10D;eve Gli&#x161;i&#x10D;eva Zori&#x10D;ih
+Goste&#x10D;anov Pari&#x17E;ljanovo Poto&#x10D;nikovimi Pesni&#x10D;anovi
+Grabarjevim Pjongjang Gruzincem Preba&#x10D;evo
+Zmagoslavini Golobinkom Polen&#x161;anki Placerov&#x10D;ankinemu
+Pavlini&#x10D;evega Zabukovljana Pescar&#x10D;anke Ur&#x161;inimi
+Zavr&#x10D;ankah Golovrharkina Galilej&#x10D;evih Gezi
+Zupan&#x10D;i&#x10D;evega Precetin&#x10D;anka Zavinkom Podklo&#x161;trjankinemu
+Puciharjeva Paoloma Grandi&#x10D;evima Zapoto&#x10D;ankinima
+Gmajne Pekel&#x10D;ankinimi Pijavi&#x10D;anovim Gorelj&#x10D;anka
+Zenkov&#x161;&#x10D;ane Uncu Peterkovih Znojil&#x161;kovo Zasipljanovega
+Gerlancema Presladol&#x10D;anu Pijav&#x10D;anovega Peklenikovi
+Polj&#x10D;evi Podpre&#x161;&#x10D;anova Geigerje Protegi Go&#x10D;ankini
+Porabec Zdol&#x10D;ankin Pir&#x161;evke Grinjankinih Prihov&#x10D;evi
+Gmajn&#x10D;ankini Gori&#x10D;ance Grosupelj&#x10D;anov Zrkov&#x10D;ane
+Go&#x10D;ov&#x10D;anki Grmovelj&#x10D;anki Gavranov Potokarjevemu
+Pileti&#x10D;u Gre&#x161;akove Prem&#x10D;evih Petrov&#x10D;anka Pulj&#x10D;ankine
+Plesu Podgornikove Globo&#x10D;i&#x10D;ank Pod&#x10D;etrt&#x10D;ankinemu
+Plohlovih Udirjih Glihovimi Zapu&#x17E;anovemu Genov&#x10D;anova
+Zalarjeve Pohorec Pe&#x10D;auerjevim Gagerne Principovemu
+Zarago&#x17E;ankinim Prad&#x10D;ankah Gorenci Premkovi
+Podpe&#x10D;ankama Gav&#x10D;ankine Zapoge Prilep&#x10D;ankin</text>
+    </lesson>
+    <lesson>
+      <id>{feae9fe7-793e-4c32-9df5-b63d97013d29}</id>
+      <title>Lesson 19</title>
+      <newCharacters>HBC&#x160;</newCharacters>
+      <text>Hram&#x161;anoma Bor&#x10D;i&#x10D;ema Bodon&#x10D;ankine Brindisij&#x10D;anovem
+&#x160;pendala Harijki &#x160;ekovo Bul&#x10D;eva Heferletoma
+Bravni&#x10D;arjevemu &#x160;traklova Celestinam Brdov&#x10D;evi
+Bloudkovem Hom&#x10D;ankinega Helenovima Cen&#x10D;i&#x10D;evima
+Bregarkinega Buzet&#x10D;anovega Bo&#x17E;inima Han&#x17E;ka
+Cerkljanih Hrovatov Bre&#x17E;nikom Caraca&#x161;&#x10D;ankini
+&#x160;pitalkami Begi&#x10D;evim Buzet&#x10D;ankin Borov&#x10D;anka
+&#x160;kriljana Brozovi&#x10D;evima &#x160;entruper&#x10D;ankine Helsin&#x10D;anka
+Belgijkinega &#x160;terkovo Caravaggii Bogoljubovim
+Hudojam&#x10D;anovemu &#x160;elige Bukov&#x161;&#x10D;anovega Hrpeljkini
+Ba&#x10D;ani Bervarjem Hajf&#x10D;ankinem Cleveland&#x10D;ankinimi
+&#x160;varci Handanovi&#x10D;evega &#x160;kerlakoma &#x160;trusovima
+Cubr&#x10D;anoma &#x160;etincev Canberr&#x10D;anovo &#x160;pi&#x10D;ni&#x10D;ankami
+Bacone Bokra&#x10D;anka &#x160;tromajerjevima Cipr&#x10D;ankinih
+Bujanovima &#x160;antlu &#x160;tal&#x10D;evi Heliosovim Cetorankama
+Cousteaujev &#x160;alkova&#x161;&#x10D;anom Bonn&#x10D;ankinima Bratinom
+Habi&#x10D;ema Branoslav&#x10D;anoma Cerej&#x10D;ankama Bugojnkam
+Cirjankami Brestrni&#x10D;ana Bodon&#x10D;ank Cikav&#x10D;ane
+Bor&#x161;i&#x10D;evem Barbari&#x10D;evima &#x160;entur&#x161;&#x10D;ankinimi
+Bu&#x161;e&#x10D;ank Burovim Bav&#x161;ice &#x160;mar&#x10D;anke Hra&#x161;am
+&#x160;umcem Brezarjevo Balkankino &#x160;vaganovemu Braslov&#x10D;ankami
+Bravni&#x10D;ar Havrankova Bitnjanove Honoluluj&#x10D;anih
+Brani&#x10D;arjevemu Hleven&#x10D;evim &#x160;marje&#x10D;ani Beseni&#x10D;arjevim
+Br&#x10D;ankinim &#x160;e&#x161;&#x10D;anovega Bov&#x10D;ankino Hudobivnikov
+Beni&#x10D;i Cverletovima Cvare Hudojam&#x10D;anka &#x160;kerljevi
+Brozovem Hillov Bov&#x161;anova Bajuku &#x160;kerjan&#x10D;evega
+&#x160;marten&#x10D;anovim Beringovi Charlesovih Hribovljanov
+Chaucerjevega Cimermani Christianovim Begi&#x10D;evima
+Hinduj&#x10D;evi Cviji&#x10D;evih Be&#x161;trovih &#x160;imni&#x10D;eve
+Brato&#x17E; &#x160;arfove Bor&#x161;i&#x10D;eve Blag&#x161;i&#x10D;i Cortes Ben&#x10D;i&#x10D;ema</text>
+    </lesson>
+    <lesson>
+      <id>{24ea4cb4-55a0-42ec-8fd2-2d0d377ebedd}</id>
+      <title>Lesson 20</title>
+      <newCharacters>&#x17D;</newCharacters>
+      <text>&#x17D;irki &#x17D;usem &#x17D;itkov&#x10D;ankam &#x17D;argija &#x17D;onti &#x17D;el&#x10D;ani
+&#x17D;urki &#x17D;idana &#x17D;arkovem &#x17D;enovi &#x17D;olnirjev &#x17D;laborankini
+&#x17D;ulovce &#x17D;emvovo &#x17D;urkovodol&#x10D;anki &#x17D;mukova &#x17D;ibr&#x161;ankin
+&#x17D;enevi &#x17D;ebni&#x10D;ankinima &#x17D;abni&#x10D;anovi &#x17D;irovskarjema
+&#x17D;igon&#x10D;ankinima &#x17D;ajdelami &#x17D;imari&#x10D;ane &#x17D;enavelj&#x10D;anovo
+&#x17D;iten&#x10D;anov &#x17D;varulj&#x10D;anovimi &#x17D;unkovimi &#x17D;etal&#x10D;anka
+&#x17D;gajnarjevemu &#x17D;al&#x10D;ankinima &#x17D;i&#x17E;kov&#x10D;eve &#x17D;elebej&#x10D;anovih
+&#x17D;ab&#x10D;anova &#x17D;varovima &#x17D;upan&#x10D;i&#x10D;eva &#x17D;u&#x17E;kove &#x17D;etinca
+&#x17D;urajevemu &#x17D;abote &#x17D;elezanovih &#x17D;ejn&#x10D;ankinim
+&#x17D;epov&#x10D;anovim &#x17D;ekarjema &#x17D;iten&#x10D;anki &#x17D;itkoma
+&#x17D;nider&#x161;i&#x10D;ev &#x17D;abotoma &#x17D;e&#x17E;ljeva &#x17D;uli&#x10D; &#x17D;amen&#x10D;anoma
+&#x17D;urbijih &#x17D;abjekovimi &#x17D;apu&#x17E;&#x10D;evega &#x17D;unkovo &#x17D;ab&#x10D;an
+&#x17D;upani&#x10D;e &#x17D;ibertoma &#x17D;irovni&#x10D;arkinega &#x17D;ebniku
+&#x17D;al&#x10D;evemu &#x17D;al&#x10D;ankini &#x17D;irovni&#x10D;arjev &#x17D;iberta
+&#x17D;ge&#x10D;e &#x17D;bogarjevo &#x17D;irovni&#x10D;ankah &#x17D;abni&#x10D;an &#x17D;enja&#x10D;anovega
+&#x17D;ejcema &#x17D;upanjenjivcu &#x17D;itkov&#x10D;anovih &#x17D;irovkina
+&#x17D;adovin&#x10D;ev &#x17D;erjavovemu &#x17D;nidar&#x161;i&#x10D;evimi &#x17D;ikar&#x10D;anovi
+&#x17D;urkovodol&#x10D;anovega &#x17D;eljn&#x10D;ankinih &#x17D;upelevljankinih
+&#x17D;imari&#x10D;anih &#x17D;lindrama &#x17D;vir&#x10D;ankinima &#x17D;bogarjevi
+&#x17D;i&#x10D;arkah &#x17D;amen&#x10D;anovem &#x17D;abkar &#x17D;irovni&#x10D;ankinem
+&#x17D;agarjevimi &#x17D;uni&#x10D;eve &#x17D;iten&#x10D;ankinim &#x17D;iganjcev
+&#x17D;ej&#x10D;evemu &#x17D;epov&#x10D;ankinega &#x17D;erovnikovih &#x17D;enj&#x10D;anih
+&#x17D;epov&#x10D;ankinimi &#x17D;ilav&#x10D;evimi &#x17D;ajdelovimi &#x17D;enj&#x10D;anko
+&#x17D;upan&#x10D;i&#x10D;u &#x17D;anami &#x17D;upetin&#x10D;anovo &#x17D;eljkovim &#x17D;epljankina
+&#x17D;icami &#x17D;alarjih &#x17D;al&#x10D;ankine &#x17D;igon&#x10D;anoma &#x17D;el&#x10D;ankinega
+&#x17D;abljankinimi &#x17D;ihlav&#x10D;anova &#x17D;vokljem &#x17D;u&#x17E;ember&#x10D;ankam
+&#x17D;ihlav&#x10D;anovo &#x17D;igrskovrhovka &#x17D;un&#x10D;evemu &#x17D;aberlovima
+&#x17D;ibretova &#x17D;vanutov &#x17D;apu&#x17E;ami &#x17D;urajevim &#x17D;erovcev
+&#x17D;ano &#x17D;varulj&#x10D;anovem &#x17D;eljkove &#x17D;uni&#x10D;anovi &#x17D;mitkovemu
+&#x17D;laboranovimi &#x17D;lendrovem &#x17D;nidari&#x10D;eve &#x17D;emvovemu</text>
+    </lesson>
+  </lessons>
+</course>

@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<course>
+  <id>{503d3f86-e6e7-4597-88ed-e5d7b6431aba}</id>
+  <title>Català (autogenerat)</title>
+  <description>KTouch training file generated Sat Aug 23 21:40:00 2003
+Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
+</description>
+  <keyboardLayout>es</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{fa8accb2-1509-481e-a604-78409207d858}</id>
+      <title>Lesson 1</title>
+      <newCharacters>jf</newCharacters>
+      <text>ff jfjf fj jjj ff ffjf
+fjjj jjff ff fjj j fj ff
+jf fjjj ff j jjj ff j j
+ffjjf fj fjj fjjj fjjj j fjjj
+fjj fff j fjj j jf jj ff
+ff ff fj jj jf j ff ffjf
+fj fj jf fff jf fff jf
+jf fj jf ff j jf jjff jfjf
+fjj jfjf j jf ffj fj jj
+ffffj jjf fff fjjj ffjf ff</text>
+    </lesson>
+    <lesson>
+      <id>{b481db11-5c84-4e2b-aced-68084192054b}</id>
+      <title>Lesson 2</title>
+      <newCharacters>kd</newCharacters>
+      <text>jkj k d kd jd jd fdf jkj
+kd kf jd fd jkj fdj jd
+dd dd fk fdk jfkj jd jkj
+kdj ffk kf ffk jkj jkkdf
+jd ddfkd fd jd dk dd jd
+kdj jfkj dd jd dk jkkdf
+djd kf fdk ddfkd jkkdf jd
+jfk dk fk fk ddfkd fdj jkj
+k kdj dk fdjd jd djd jkj
+jk fdj jfkj fd fdjd k jkkdf</text>
+    </lesson>
+    <lesson>
+      <id>{d6ddebfe-b9e6-4c1c-a2f5-7fa3665018ee}</id>
+      <title>Lesson 3</title>
+      <newCharacters>laes&#xE7;</newCharacters>
+      <text>deses sedesses sedada dese
+efes sedada ja&#xE7;a sella llas
+sedes alesses e lassesses
+deslla&#xE7;ada allejada alleja lla&#xE7;ada
+fase alejades ells salses
+ja&#xE7; falles sedasses dallades
+dessal alfes salda sedal alleja
+aja&#xE7;ades fes fesa dallades all
+fa&#xE7; lesa e fallades falsada
+lla&#xE7;ada alleja faldades ells</text>
+    </lesson>
+    <lesson>
+      <id>{fcb1c832-53a5-4865-bfc5-cc968d366dc4}</id>
+      <title>Lesson 4</title>
+      <newCharacters>coss</newCharacters>
+      <text>alfalsos falles caldejades collesses
+lesos cossesses fosses sassolada
+assolda sedes defeco salles
+assolelles aflacada focs llocs
+aclofesses follejada escada escodole
+escasseja celles sassolades ells
+acloca dessolcada sola&#xE7;ada
+deslla&#xE7;a esclafada locals flaca
+cesses assolada deso salla
+assolades ecs callols colcada</text>
+    </lesson>
+    <lesson>
+      <id>{3f3ca95f-4e0e-402c-a271-7335422a0d93}</id>
+      <title>Lesson 5</title>
+      <newCharacters>nt&#xE0;&#xE8;&#xE9;</newCharacters>
+      <text>encasant flot&#xE0; llastesses sotalades
+faldejat desenastes tonants sadoll&#xE0;
+encast&#xE9;s onejants estassant escalena
+socons defensessen ajocant
+entenc desset fosfatant escandesc
+tasc&#xE0;s lesenes desdono acanalesses
+cassanells desencastessen assest&#xE0;
+estacades esf&#xE8;ns tel&#xE0; asson delatessen
+descloent tantejat sed&#xE0;s desolessen
+assesto descontentats atans</text>
+    </lesson>
+    <lesson>
+      <id>{7f18e5b7-2b67-466a-9abe-2c9c6deedfcc}</id>
+      <title>Lesson 6</title>
+      <newCharacters>&#xED;vrr</newCharacters>
+      <text>florada acontentar arrosar&#xE0;
+estotara escalon&#xED; acatarrares
+enverdescades corallejaran versessen
+desvalorara centellejara cavallares
+desfasar afrontares relaten estavellaren
+desenrola destacar&#xE0;s entretocaran
+afalconar&#xE0; enveraven safraneres
+concern&#xED; trastoc&#xE0;s rosos covar&#xE9;
+enrastelle concentrats escodar&#xE0;
+alforres cas&#xED; descolorar corredores</text>
+    </lesson>
+    <lesson>
+      <id>{96c6bfbd-477e-41ac-92ae-e6c959be02be}</id>
+      <title>Lesson 7</title>
+      <newCharacters>me&#xF3;</newCharacters>
+      <text>somortes falsejar&#xED;em mort amanoll&#xED;
+cerv&#xED; entravessat escalafons
+ensofrant retrec masera forjaves
+comeses estotjar&#xED;em amom reforc&#xE9;ssem
+recos&#xED;em esf&#xE8;n telecomandam destor&#xE7;ara
+atendaves amorter&#xE0;rem envej&#xE0;vem
+avolesa soterrat entotsolar
+retardarem asserenament venerar&#xE0;
+desoss&#xE9;s malmesclant llefardar&#xED;em
+armoll declamares ter&#xE7;ades</text>
+    </lesson>
+    <lesson>
+      <id>{c87b80e4-e443-4f29-9e63-9e551bba37c5}</id>
+      <title>Lesson 8</title>
+      <newCharacters>hr&#xFC;</newCharacters>
+      <text>rastellesses desenfarcellar for&#xE7;at
+anhelant lletreres remara decolorar&#xE0;s
+desarraconara tercers defenestr&#xE0; electromotor
+mofaran amorejar desencrosta
+torcejar&#xE0; trontoll&#xED; encercol&#xE0;s
+esfondrades falcar recomanar&#xED;em
+raso francma&#xE7;ones assamarrarem
+fondejares rondara entren&#xE0;rem marradejava
+malserv&#xED; emmerletem amorfes afartesses
+desacorralen feren remarc&#xE0;s assamarrades</text>
+    </lesson>
+    <lesson>
+      <id>{a1e6647d-c013-4559-a122-d1cd00de493a}</id>
+      <title>Lesson 9</title>
+      <newCharacters>go&#xEF;</newCharacters>
+      <text>rot&#xED;fer mareg&#xE9;s colltorcer&#xE0;
+desgravat vagasseg&#xE9;s torcejam
+conhortades honorares comarcans
+escassegesses clatellejo afetgegares
+deshonr&#xED;vol lladrons atemor&#xED;ssem
+astoraments remodela morad&#xED;s tascones
+realegrarem coratge ondeg&#xED; assessoressen
+correlant enjogassadament escaroten
+converseg&#xE9;ssem canon&#xE9;ssem marcegem
+desgleve desassossego torcada</text>
+    </lesson>
+    <lesson>
+      <id>{78f82515-6cbc-4167-9b13-9d56fc79b681}</id>
+      <title>Lesson 10</title>
+      <newCharacters>bpl&#xB7;l</newCharacters>
+      <text>desenrojolaran clamoreg&#xED; debategar
+aborronarem encresp&#xE0;vem engolfem
+capejat desemmerletara coralets
+peonar&#xE0; llocota apressats espentejada
+espant&#xE0;vem desmescl&#xE0; bregares embascat
+deportesses desborrats celebrador
+escarp&#xED;s esparpallats gansallant
+premsat abalan&#xE7;ar&#xED;em solvatar&#xE0;s
+desempot&#xE9;s ponder&#xE0;s angolesos anteposant
+ensellar&#xE0; enlla&#xE7;aves sorollarem</text>
+    </lesson>
+    <lesson>
+      <id>{454a5a4e-9da8-435c-9318-dc1018413b56}</id>
+      <title>Lesson 11</title>
+      <newCharacters>quny</newCharacters>
+      <text>cadascuna esbroton&#xE0;rem enfadar&#xED;em
+falsej&#xE0;reu endolau condolgu&#xE9; arreng&#xE0;veu
+envellutaves nannaran tondosar&#xE9; esbarrejaren
+duraren mullena atape&#xED;sseu negr&#xF3;s
+embrearan cananeu esbatuda camandulej&#xE0;reu
+pampalluguegesses empaquet&#xE0;rem trafeguegesses
+rafegut descabdellar&#xED;eu tufejat
+destrenant assuaujares malmetent
+conjur&#xE9;ssem ultratg&#xE9;sseu destrempaven
+gallofejaren desoleu ca&#xE7;aven confessarem</text>
+    </lesson>
+    <lesson>
+      <id>{4f5ecdf9-9823-4536-b9b9-a0905586d0da}</id>
+      <title>Lesson 12</title>
+      <newCharacters>wncc</newCharacters>
+      <text>esbatan&#xE9;sseu ensangonem embargaments
+contraforad&#xED; emmorcarem acamussades
+desatrac desencarregara provaven
+asserenar&#xE0;s regentats escopetej&#xE0;
+desaccentuarem entrava asserenaran
+transsudeu acorralares rascladors
+ulcerar&#xE0;s desempresonar octants
+c&#xE8;mbal copejament recal&#xE7;ar
+catenes desenllos&#xE0;veu enforno
+vencereu cessa bastonera promoguessen</text>
+    </lesson>
+    <lesson>
+      <id>{b0ef273f-b314-4bf0-949a-536294982028}</id>
+      <title>Lesson 13</title>
+      <newCharacters>cx</newCharacters>
+      <text>cuaf&#xED; contrapassar desencerclades
+escarufejau clatrats camuflau crestejar&#xED;eu
+entretancar&#xE0; gronxol&#xE0;vem dutxar&#xE9;
+penedesc coneguem enxarxant corcares
+escor&#xE7;ar&#xE0;s corn&#xE9;sseu carburares
+perca&#xE7;&#xE0;rem garfesc covers malencertam
+encoman&#xE9;s recomencesses caganer
+corejat falconers afermanc&#xE9;ssem
+educo malmesclaran escarx&#xE0;veu
+entrebancaven cabestro rebec desencastaren</text>
+    </lesson>
+    <lesson>
+      <id>{f369e6c3-9069-4a42-b66e-55be29006384}</id>
+      <title>Lesson 14</title>
+      <newCharacters>yz</newCharacters>
+      <text>anyenca escanyoten grunya muntanyosos
+embotzegam zumzejades enlleganyaren
+embotzeg&#xE0;s esmorzades complanyesses
+allenyats escanyuss&#xE0;s resseny&#xE9;ssem
+desentranyau benzofurans manyucl&#xE9;ssem
+brunzo besunyareu assenyal&#xE9;ssem
+menyscabaven desenfonyara embotzegar&#xED;eu
+magatzemera escarcanyada areny pertanys
+despanyades estrenyereu embanyat
+empenyalats desenyorar&#xE0;s polzej&#xE0;veu</text>
+    </lesson>
+    <lesson>
+      <id>{f07547a3-54b3-4191-84b6-9f321ed3eea7}</id>
+      <title>Lesson 15</title>
+      <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
+      <text>Sorells Masos Campdev&#xE0;nol Montenegro
+Iraq Cabanelles Camarasa
+Macra Bomp&#xE0;s Laurent&#xED; Ix Salamanca
+Urgell Armenter Justa Agatocles
+Mar&#xE7;&#xE0; Catral Massalfassar
+Alda Paul&#xED; Anselm ESE Montllu&#xED;s
+Alfafar Sorollera Bolonya Leandre
+Oxford Valen&#xE7;a Sag&#xE0;s Esdres
+Isaura UPV Roger Aneto Corbera
+Esteve Bulaternera Conflent</text>
+    </lesson>
+  </lessons>
+</course>

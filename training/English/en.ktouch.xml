@@ -6,6 +6,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
  <FontSuggestions>Monospace</FontSuggestions>
  <Levels>
   <Level>
+   <NewCharsLabel>j and f</NewCharsLabel>
    <NewCharacters>jf</NewCharacters>
    <Line>fj j f j f f fj f fj fj ffj f fjf f f jj f fj jf jf fj jfj fjf</Line>
    <Line>ffj ffj fj ff f f ff fj fj ffjj jjjf j f jj fj jj jfj ff f ff ff</Line>
@@ -19,6 +20,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>ffj fj fj jf f ff jf f j j jfj f jff fj j f fjf f jfj jf f jfj jjjf</Line>
   </Level>
   <Level>
+   <NewCharsLabel>k and d</NewCharsLabel>
    <NewCharacters>kd</NewCharacters>
    <Line>djd k djd k fdj k fdj k k jdd dd k kf dd k k dd k d fdfk k k kf</Line>
    <Line>d kf fdfk k fdj k df jk jdd jkjd jjkk d k k d d d d k k d kf d</Line>
@@ -32,6 +34,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>df d d jk k kf jjd kf kf k df d k jkjd kf k jjd fdfk k k kfd d</Line>
   </Level>
   <Level>
+   <NewCharsLabel>l and s</NewCharsLabel>
    <NewCharacters>ls</NewCharacters>
    <Line>s sl s fl skl s sl fl skl sfj l sk s sk ss s sfj jss l fs ss fs</Line>
    <Line>sk jss sk s fl s l fs s fl jss sfj l s sk l sk s fs s ss l fl l</Line>
@@ -45,6 +48,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>s s fjjs lll sk ss skl jssj skl fl l l skl fl l s dsk s s sl fl</Line>
   </Level>
   <Level>
+   <NewCharsLabel>c and a</NewCharsLabel>
    <NewCharacters>ca</NewCharacters>
    <Line>sca clac asa cascad sa al sca ass clac slac cak da fla c la fa ja</Line>
    <Line>fa salad ca daf addl fa scal slak facad al flask lass ac sass lack</Line>
@@ -58,6 +62,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>ass sa sas scal cas fa salaa las fad lack a dad c a sca ad la sla</Line>
   </Level>
   <Level>
+   <NewCharsLabel>n and t</NewCharsLabel>
    <NewCharacters>nt</NewCharacters>
    <Line>snaffl dan attack fann na scant fast snack taff ank sna att snac candl</Line>
    <Line>tattl tan tac na lan snaf jat staccat na t can fact an fann catcall</Line>
@@ -71,6 +76,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>knac landfal cat ants landlad na sata salt caftan anall nat can lastl</Line>
   </Level>
   <Level>
+   <NewCharsLabel>i and v</NewCharsLabel>
    <NewCharacters>iv</NewCharacters>
    <Line>cassi sic laddi affin canin flint inclinin vivain icil ni satinin</Line>
    <Line>ci in cit divan finalis tankin sli instatin kil clinicall dis vill</Line>
@@ -84,6 +90,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>fiv satanicall lackadaisicall fascia ti sandin valis ai dids didacticall</Line>
   </Level>
   <Level>
+   <NewCharsLabel>m and e</NewCharsLabel>
    <NewCharacters>me</NewCharacters>
    <Line>dividend lite salesladie vie decam dissect skie enema cancel feminist</Line>
    <Line>insentienc decedent fiesta saltcella demiste title steadines scammin fancie</Line>
@@ -97,6 +104,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>midden divisivenes acclaim mf settee svelt animatedl teatime devastate</Line>
   </Level>
   <Level>
+   <NewCharsLabel>h and r</NewCharsLabel>
    <NewCharacters>hr</NewCharacters>
    <Line>dare testifier eradicate terminat trafficke hadin inferenc franti</Line>
    <Line>reservedl chef lathere marr atria trait distres hearse trance varnis chattin</Line>
@@ -110,6 +118,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>rent snickerin recklessnes sharer thatche relinin refac heatin reinstatemen</Line>
   </Level>
   <Level>
+   <NewCharsLabel>g and o</NewCharsLabel>
    <NewCharacters>go</NewCharacters>
    <Line>overcook rotat comi reconfirmatio reregistratio nomad management forklift</Line>
    <Line>storme socialisti shoestring conma iodide lading incontinentl fervo</Line>
@@ -123,6 +132,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>songste negotiator diagnostic nova glande hornie concavit interconnection</Line>
   </Level>
   <Level>
+   <NewCharsLabel>b and p</NewCharsLabel>
    <NewCharacters>bp</NewCharacters>
    <Line>archbishop parliamentar calibe respel tiebac bon semipro retrospectiv transpir</Line>
    <Line>paren snappil absconde nobodie grosbeak podiatr precooke misinterpretatio</Line>
@@ -136,6 +146,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>sparre photocopie dolphin plantin pictographi brittl bipartit potat</Line>
   </Level>
   <Level>
+   <NewCharsLabel>q and u</NewCharsLabel>
    <NewCharacters>qu</NewCharacters>
    <Line>thoroughnes recrudescin tunefulnes rigorousnes imprimatu rounde capsule</Line>
    <Line>breakou reintroduce contentiousnes bullfinche biennium augmenter nurse</Line>
@@ -149,6 +160,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>skunk impugn nonplussin nuptial untrouble flounc unchronicle bushe</Line>
   </Level>
   <Level>
+   <NewCharsLabel>w and n</NewCharsLabel>
    <NewCharacters>wn</NewCharacters>
    <Line>weed rotundin kidnap compartment retakin enlighten adjurin sharin</Line>
    <Line>propositione driftne entitlemen debunk peasantr canvas insurgenc nullifie</Line>
@@ -162,6 +174,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>retransmittin sawhorse engineer counterpoise wigwa wakefu genr brainstorm</Line>
   </Level>
   <Level>
+   <NewCharsLabel>c and x</NewCharsLabel>
    <NewCharacters>cx</NewCharacters>
    <Line>cull continu spectroscopi captionin complete pronounce accumulatio</Line>
    <Line>seraphicall misconstruin conservativenes scrabblin cosmeticia deficiencie</Line>
@@ -175,6 +188,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>shucke microelectroni watchtowe occurrin processe electrocardiograph</Line>
   </Level>
   <Level>
+   <NewCharsLabel>y and z</NewCharsLabel>
    <NewCharacters>yz</NewCharacters>
    <Line>skylight syllabicatin secularize pygm amazo fizze overemphasize summariz</Line>
    <Line>heavyse appetize metaphysicall fraye psychoanalyticall economizer bricklayer</Line>
@@ -188,6 +202,7 @@ Perl Script written by Steinar Theigmann and Håvard Frøiland.</Comment>
    <Line>layere flywa mizzen baptize capsiz styluse glaz synonymou bellyach</Line>
   </Level>
   <Level>
+   <NewCharsLabel>Capitalisation</NewCharsLabel>
    <NewCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</NewCharacters>
    <Line>I U Frann Iss V Sophe Ma Blanch Janissar Karl Equuleu Jech Dia</Line>
    <Line>Mariejeann Filofa Shoshann Cheeve Ludvi Stoicism Alabam Fo Belmon Al Peshawa</Line>

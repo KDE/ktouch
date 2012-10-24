@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ResourceEditorWidget</class>
+ <widget class="QWidget" name="ResourceEditorWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>558</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="KMessageWidget" name="m_messageWidget"/>
+   </item>
+   <item>
+    <widget class="QSplitter" name="m_splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="KCategorizedView" name="m_resourceView"/>
+     <widget class="QStackedWidget" name="m_editorStack">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="CourseEditor" name="m_courseEditor"/>
+      <widget class="KeyboardLayoutEditor" name="m_keyboardLayoutEditor"/>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KCategorizedView</class>
+   <extends>QListView</extends>
+   <header>kcategorizedview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KMessageWidget</class>
+   <extends>QFrame</extends>
+   <header location="global">kmessagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CourseEditor</class>
+   <extends>QWidget</extends>
+   <header>editor/courseeditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KeyboardLayoutEditor</class>
+   <extends>QWidget</extends>
+   <header>editor/keyboardlayouteditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

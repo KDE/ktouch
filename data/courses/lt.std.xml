@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<course>
+ <id>{76a36212-db98-42e6-8dad-e1c1afb7c5ed}</id>
+ <title>Lietuvių (standartinis)</title>
+ <description>Tekstas iš programos „Klaviatūros treniruoklė „KP Typing Tutor““.
+Ačiū Sigitai Pedzevičienei (sigitab@ktl.mii.lt)</description>
+ <keyboardLayout>lt(std)</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{ad7812b4-8496-4eeb-8d8a-6e5bd38e3df7}</id>
+   <title>Lesson 1</title>
+   <newCharacters>šk</newCharacters>
+   <text>k k k š š š k k k š š š k k k š š š
+kš kš kš kš kš kš kš kš kš kš kš kš kš
+kkk ššš kkk ššš kkk ššš kkk ššš kkk ššš</text>
+  </lesson>
+  <lesson>
+   <id>{e88ce2b6-0e1b-4940-9df8-53f35553ed35}</id>
+   <title>Lesson 2</title>
+   <newCharacters>dl</newCharacters>
+   <text>ddd lll ddd lll dl dl dl dl dl dl dl dl
+šdš klk šdš klk šdš klk šdš klk šdš klk
+klšd klšd klšd klšd klšd klšd klšd klšd</text>
+  </lesson>
+  <lesson>
+   <id>{fa237600-1ee2-4f2a-9af8-2818d12e3a53}</id>
+   <title>Lesson 3</title>
+   <newCharacters>sų</newCharacters>
+   <text>sss ųųų sss ųųų sų sų sų sų sų sų sų sų</text>
+  </lesson>
+  <lesson>
+   <id>{14969f80-8f12-4138-8a3d-e3e63da2c20e}</id>
+   <title>Lesson 4</title>
+   <newCharacters>aė</newCharacters>
+   <text>aaa ėėė aaa ėėė aė aė aė aė aė aė aė aė
+ųė sa ųė sa ųė sa ųė sa ųė sa ųė sa ųė sa
+klųė klųė klųė klųė klųė klųė klųė klųė klųė klųė
+šdsa šdsa šdsa šdsa šdsa šdsa šdsa šdsa šdsa šdsa
+ėųlk ėųlk ėųlk ėųlk ėųlk ėųlk ėųlk ėųlk ėųlk ėųlk
+asdš asdš asdš asdš asdš asdš asdš asdš asdš asdš
+kėlė kėlė kėlė kėlė kėlė kėlė kėlė kėlė kėlė kėlė
+kėdė kėdė kėdė kėdė kėdė kėdė kėdė kėdė kėdė kėdė
+sakė sakė sakė sakė sakė sakė sakė sakė sakė sakė
+dėdė dėdė dėdė dėdė dėdė salė salė salė salė salė
+klasė klasė klasė klasė asla asla asla klasė asla
+salų salų salų salų sakų sakų šakų sakų salų šakų
+sėda sėda sėda sėda kada kada kada sėda kada sėda
+saklė saklė saklė saklė saklė saklė saklė
+dėklas dėklas dėklas sėkla sėkla sėkla dėklas sėkla
+šaka šaka šaka laša laša šaka laša laša šaka lašas
+sakalas sakalas sakalas sakalas sakalas sakalas
+sakalas lėks sakalas lėks sakalas lėks sakalas lėks
+dėdė kasa dėdė kasa dėdė kasa dėdė kasa dėdė kasa
+kaskada lėks kaskada lėks kaskada lėks kaskada lėks
+kas dės kas dės kas dės kas dės kas dės kas dės
+kada dėdė sės sėklų kada dėdė sės sėklų kada dėdė sės sėklų
+kas lėkė šakų kas lėkė šakų kas lėkė šakų kas lėkė šakų
+salės šakas dės salės šakas dės salės šakas dės
+kas laka kas laka kas laka kas laka kas laka kas laka
+lėlės sėklų lėlės kėslų lėlės sėklų lėlės kėslų
+dėdė sakė akės dėdė sakė akės dėdė sakė akės dėdė sakė akės
+alės šakės dalės kalkės alės šakės dalės kalkės alės šakės
+dėl klasės lėšų dėl klasės lėšų dėl klasės lėšų dėl klasės
+lėšų laša lašas laša lašas laša lašas laša lašas laša lašas
+laša kada asla sėda dėdė sakė sės sėklų dėklas dėl lėlės kas
+dės sakalas lėkė lėlės kėdė kas kad laša lašas dėdės sėklų
+dėklas laša lašas šals kada alė dės sėklų kada klasė sėdės
+kada lėks šakų lakas lašės salų lakas kas kad lašės sėklų</text>
+  </lesson>
+  <lesson>
+   <id>{36cbaa35-dc61-4d54-9cc8-442aa1a15aee}</id>
+   <title>Lesson 5</title>
+   <newCharacters>g</newCharacters>
+   <text>š g š g š g šgš šgš šgš šgš šgš šgš šgš šgš šgš
+asdšgš asdšgš asdšgš asdšgš asdšgš asdšgš asdšgš
+gal gėlė gal gėlės gal gėlė gal gėlės gal gėlės
+sagė slėgė galas alga sagė slėgė galas alga sagė slėgė
+gėlės sėkla galės gėlės sėkla galės gėlės sėkla galės
+gal dėdė sės gal sakalas lėks gal dėdė sės gal sakalas lėks
+sakalas lėkė sėklų aš dėl dėdės šakės gal gėlės šals lašas</text>
+  </lesson>
+  <lesson>
+   <id>{7751402c-f101-4205-ac4b-72e9c8c4c577}</id>
+   <title>Lesson 6</title>
+   <newCharacters>j</newCharacters>
+   <text>k j k j k j kjk kjk kjk kjk kjk kjk kjk kjk
+ėųlkjk ėųlkjk ėųlkjk ėųlkjk ėųlkjk ėųlkjk ėųlkjk
+jų jas jų jas jų jas jų jas jų jas jų jas jų jas
+jėga jėgas jakas jėga jėgas jakas jėga jėgas jėga jėgas
+kas sės jų sėklas jas sės alė kas sės jų sėklas jas sės alė
+sėjėjas sės kasėjas kas sėjėjas sės kasėjas kas sėjėjas sės
+dėdė akėja alės sėklas dėdė akėja alės sėklas dėdė akėja
+alės sėklas jų sakalas lėks alėjų gėlės jų sakalas lėks
+alėjų gėlės kada akėja jųjų gėlės sėklas kada akėja jųjų</text>
+  </lesson>
+  <lesson>
+   <id>{5cd9103b-3d4a-4956-ac16-c9f2ebcce122}</id>
+   <title>Lesson 7</title>
+   <newCharacters>h</newCharacters>
+   <text>š h š h š h šhš šhš šhš šhš šhš šhš šhš šhš šhš
+asdšghš asdšghš asdšghš asddšghš asdšghš
+ghj ghj ghj ghj šgš kjk šhš ghj šgš šhš kjk ghj
+halė halės hadas halė halės hadas halė halės hadas
+jų dėdė sės sėklas kada galės sėklas sės gal kada šals
+halės salėj kaskada lėks sakalas lėkė alėja kas dės ašakas
+alėjų galų gėlės šals dėdės kasėjas kasa gal sėklas sės</text>
+  </lesson>
+  <lesson>
+   <id>{fe283baf-2033-4778-9cbd-eac17b7c220b}</id>
+   <title>Lesson 8</title>
+   <newCharacters>i</newCharacters>
+   <text>kik kik k i kik kik kik kik kik kji kji kji kji kik kji
+ilga gija iš ilga gija iš akis ašis akis ašis ilga gija
+kiškis šilkas kiškis šilkas klišė gaji dildė gaji dildė
+dagilis dailidė dagilis dailidė kalė dailidė kalė dailidė
+kalė dėdė sakė kad daigai kils jis ilgisi laiškų šakų sakai
+lašės ši šaka ilga</text>
+  </lesson>
+  <lesson>
+   <id>{57d8d002-38b4-47f7-bd32-2f90176069ba}</id>
+   <title>Lesson 9</title>
+   <newCharacters>r</newCharacters>
+   <text>šrš šrš šrš šrš šrš šrš šrš kik šrš šrš kik šrš kji šrš
+šgrš šgrš šgrš šršdsa šršdsa kiklųė kiklųė šršdsa kiklųė
+aras rėkė rasa aras rėkė rasa garsas krėslas garsas krėslas
+grasė drėskė gardas sraigė girdės širšė širdis kraigas
+hidra riša kasas garsiai rėks rasa kris šis gardas kris
+kalkės rašalas lašės šis dėdė arė jis akės ir sės kris ašara
+gaili ši didi arka garsės dagilis rėkė šis ridikas šals gaji
+dirsė kils dar liks dilgėlė kikilis garsiai rėkė ši giria
+garsi ėgliais jis aiškiai rašė dalia garsiai sakė gardi
+silkė alėjų gėlių sėkla gaji kikilis išgis dėdė ilgai ilsisi
+jis ars ir kals dagilis ilgai šals rasa kris kai girias
+iškirs dagilis išlėks kiškis lėkė giria kada sakalas lėks
+argi iškirs girias alės dagilis išgis garsiai rėkė kiras
+graikas ilgisi laiškų</text>
+  </lesson>
+  <lesson>
+   <id>{f5e3e8f7-8e9f-4ab7-872a-fe3518a79d2b}</id>
+   <title>Lesson 10</title>
+   <newCharacters>ut</newCharacters>
+   <text>kuk kuk kuk kuk kuk kiuk kiuk kiuk kiuk iu iu iu su juk kur
+kuris kurs suks klaikus auga sauja kudlius suks daigai auga
+jurgis kulia skardus algis sėja sauja daigai auga gal skris
+dagilis ir kikilis sakalas lėkė sėklų šarka skris gilių kur
+skardis augs kriaušė kai skalsės auga dulkės liks gėlių
+štš štš štš štš štš rt rt rt šrtš šrtš šrtš štiš štiš štiš
+tu tas kuris turi tas turi duktė rašė sartis gali sirgti
+tiltas ratas taškas tikras tikslas ilga taika alė raiškiai
+skaitė ratukai sukasi jis turi ratus jautis ėdė triušis ėdė
+rugius kudlius turi gaurus strakalas striksi aštrus sraigtas
+kur ars sartis kuklus draugas</text>
+  </lesson>
+  <lesson>
+   <id>{dc6636ba-feda-4cdf-b352-eabfcd980843}</id>
+   <title>Lesson 11</title>
+   <newCharacters>y</newCharacters>
+   <text>šyš šyš šyš šyš šyš šyš šyšdsa šyšdsa yt yt yt yda yla yra
+lyra kyla lyga tyla tyliai dulkės kyla ryšiai tyliai šaukė
+tyli taiga rytas šaltas ir skaidrus kulka lėkė tikrai tyliai
+aušta saulėtas rytas stasys sės rugius šarka turi ryškias
+akis skėtis jau skylėtas trys triušiai sausas šakalys luš
+auga trylika triušių aukšta šiaudų stirta su draugais turi</text>
+  </lesson>
+  <lesson>
+   <id>{8da2d242-ee22-4aef-99bd-c7553a5857bb}</id>
+   <title>Lesson 12</title>
+   <newCharacters>o</newCharacters>
+   <text>lol lol lol lol lol lol lol lol lol lolųė lolųė lolųė lolųė
+ola ola loja oras ola loja oras ola loja oras ola loja oras
+šokis šuoras šokis korys šuolis šuoras klojo gotika
+rotatorius</text>
+  </lesson>
+  <lesson>
+   <id>{d1b507f9-2234-4578-9539-dc991721a4d7}</id>
+   <title>Lesson 13</title>
+   <newCharacters>e</newCharacters>
+   <text>d e d e ded ded ded ded ded ded lol ded lol ded
+dedsa dedsa dedsa dedsa lolųė dedsa lolųė dedsa dera eglė
+delta eilė deda seka seda seka estas eiga elgeta elegija
+estrada elektra sedula šešėlis šeškutis agresija delegatas
+teatras judesys arterija etika herojus geologas artilerija</text>
+  </lesson>
+  <lesson>
+   <id>{24214217-ef29-4e50-a537-cce85107cc6f}</id>
+   <title>Lesson 14</title>
+   <newCharacters>p</newCharacters>
+   <text>ųpų ųpų ųpų ųpų ųpų ųpų ųpų lol ųpų lol ųpų lol ded ųpų
+ųpųė ųpųė ųpųė ųpųė ųpųė lolųpųė lolųpųė lolųpųė lolųpųė
+lolųpųė lopų lopas kapela opera operetė popierius pėdsekys
+properša polėkis poliglotas horoskopas hipokratas populiarus
+pokštas poliariškas pokylis poelgis poakis</text>
+  </lesson>
+  <lesson>
+   <id>{d5ec4200-943d-491e-9608-1c5c36e13e75}</id>
+   <title>Lesson 15</title>
+   <newCharacters>ž</newCharacters>
+   <text>sžs sžs sžs sžs sžs sžs sžs sžs sžs ded sžs ded sžs ded sžs
+ded sžs ųpų sžs lol ded sžs ųpų ded lol sžs lol ded ųpų ded
+sžsa sžsa sžsa sžsa sžsa dedsžs dedsžs dedsžs dedsžsa
+dedsžsa dedsžsa dedsžsa žada dažas daržas žarsto žodis
+žiotys darželis prožektorius užduotis sesutės darželyje daug
+žaislų gera žaisti salėje kur padėjai degtukus draugai žaidė
+prie upės ežero eketė užšalo storu ledu lauke šalta gražu su
+degtukais reikia atsargiai elgtis topoliai auga gerai
+uždaryk duris girioje ošia eglės pušys greitai lis reikės
+palaukti kol pradžius draugai prašė talkos reikia daugiau
+draugiškų poelgių reikia laikytis duoto žodžio graikų epo
+autoriai sakė artistas gražiai skaitė graikų epo ištraukas
+apie herojų laužo žarijos žėri gali užsidegti sausa žolė
+reikia elgtis atsargiai gražu kai gegužis žada gausų derlių
+gražu kai liepos žiedais žydi sausutėlaitės šakos traškėjo
+laukai laukė lietaus lašelio pušys lėtai oš lietaus lašeliai
+lėtai krito greitai pražydės žolės žiedai eglės gers lietų
+ilgai truko sausra troško lapeliai ir žiedeliai greit jie
+atsigaus liepų šakos jau siekia aukštai ir daug džiugesio
+žada šiltas oras kėkštas lyg su kepuraite krypuoja šalia jo
+kielė dairosi ir dagilis lapeliais laksto lapeliai ir
+žiedeliai lietaus laukia todėl gera ir gražu kai palyja
+erelis toli skraido šile kukuoja gegužėlė draugai padės</text>
+  </lesson>
+  <lesson>
+   <id>{701a3e9e-ab47-4eff-a132-31438f296f21}</id>
+   <title>Lesson 16</title>
+   <newCharacters>į</newCharacters>
+   <text>ėįė ėįė ėįė ėįė ėįė ėįė ėįė įėjo įėjo įėjo įėjo įėjo įėjo
+įlėkė įrašas įstaiga įspausti įdaras įkaitas įsakas įskaita
+įstatai šįsyk šįryt šįkart įdaryti įsakyti įrašyti įeiti
+įsigyti įsilaužti įsirašyti įsikelti įsikalti įskelti įlipti
+duodi žodį tai ištesėk šalti gruodžio orai sukaustė upelį
+kailis jį šildo kaip išeisi taip sugrįši sodai duoda didelį
+derlių grįžulo ratai regėti tik giedroj šįryt žagarai lauže
+garsiai pleška gražius žodžius kužda į ausį</text>
+  </lesson>
+  <lesson>
+   <id>{f793c231-7b15-4254-9deb-f9a8fda6105f}</id>
+   <title>Lesson 17</title>
+   <newCharacters>ą</newCharacters>
+   <text>aąa aąa aąa aąa aąa aąa aąa aąa ąsa ąsa ąsa ąsa ąsa ąsa ąsa
+įkąsti įkąsti sąlyga sąrašas sąsiauris sąstatas sąskrydis
+sąrašas sąryšis draugai ėjo į girią ką darai daryk gerai ką
+į aruodą įpilsi tas ir tau ąsotį pripylė sulos ąsa gali
+įskilti kai klausia parodyk kelią ąžuolo pliauska skilo
+pusiau rąstai gulėjo prie klėties įstaiga rašė raštą ąžuolai
+jau sulapojo juliukui įgriso žąsis saugoti laikrodžiai rodo</text>
+  </lesson>
+  <lesson>
+   <id>{7bef54dc-2f82-4cfb-8120-f25e62a616dc}</id>
+   <title>Lesson 18</title>
+   <newCharacters>m</newCharacters>
+   <text>kmk kmk kmk kmk kmk kmk kam kam kam kam jam jam jam kam jam
+mama metas metai molis lempa omas palmė pempė marti maras
+matas medis meilė semti šamas šėmas rėmas tamsa tymai kemsas
+kiemas kremas lemtis pamoka mėsa lėmė kasam masės gera
+žaisti kieme ir asilas moka ausim karpyti</text>
+  </lesson>
+  <lesson>
+   <id>{084602a7-572f-47ae-8347-85722663061d}</id>
+   <title>Lesson 19</title>
+   <newCharacters>v</newCharacters>
+   <text>švš švš švš švš švš švš švš kmk švš kmk švš kmk švš kmk švš
+vai vėl vis dvi vada vaga vata veik veja vėsa veto vėžė visa
+kova lova mova rėva save savi savo tavo vadas vagis vakar
+valas valda valia valio varis varlė važis vėjas velkė vėlus
+vėžys viduj vidur vidus viela vikis gaiva viksva savas kava
+davė šlavė valė vėlų davėm protas ir kojas pavaduoja</text>
+  </lesson>
+  <lesson>
+   <id>{364d5ca1-2636-4a18-8b64-c491b3940d82}</id>
+   <title>Lesson 20</title>
+   <newCharacters>n</newCharacters>
+   <text>knk knk knk knk knk kmkn kmkn kmkn kmkn kmkn kmnk kmnk kmnk
+na ne nes nei net šen ten nagi namo nata negi negu nors nota
+anas gana klanas vanta vanda manė smagu su sviediniu
+lakstyti patogi apranga gatvės sankryžoje įrengtas šviesos
+signalas iš seno gimsta nauja einant per gatvės vidurį
+reikia gerai apsižvalgyti kas aukštai lekioja tas žemai</text>
+  </lesson>
+  <lesson>
+   <id>{a4c2856e-2091-4d47-aaf0-6c0ad0a14940}</id>
+   <title>Lesson 21</title>
+   <newCharacters>b</newCharacters>
+   <text>šbš šbš šbš šbš šbš švšb švšb švšb švšb švšb švbš švbš švbš
+švbš be bei bet bala bėda beje bene bent bitė boba eibė guba
+riba badas baimė bakas banda branda brangus brautis brėkšti
+brėžis briauna bristi brokas briedis guoba kabės jambas
+gabalas bankas balnas tarp dviejų auklių vaikas be galvos
+darbštus duoną gamina tinginys badą augina šiandien labiau</text>
+  </lesson>
+  <lesson>
+   <id>{59910260-afd5-434c-b29f-49bab6da461c}</id>
+   <title>Lesson 22</title>
+   <newCharacters>č</newCharacters>
+   <text>kčk kčk kčk kčk kčm kčm kčm kčn kčn kčn kčn kčmn kčmn kčmn
+čekis čekas ypač rėčka mačas linčas kartečė čerpė mečetė
+kačpėdėlė čeženti kočėlas česnakas čempionas bačka čepsėti
+čempionatas dručkis eičiau eičiau kad galėčiau ilgas kojas
+kad turėčiau čia mano gimtinė spiečius trečiąkart susitelkė
+medyje medis gulsčiai padėtas jis mano artimas giminė
+močiutė netyčia užmynė ant gulinčių akėčių kelionėse jis
+praleisdavo savo laisvalaikį visą turtą į vieną vežimą
+sukrovė sveikas kaip baravykas banga gena bangą</text>
+  </lesson>
+  <lesson>
+   <id>{464c313c-3753-43e1-921d-7afcf87d6358}</id>
+   <title>Lesson 23</title>
+   <newCharacters>f</newCharacters>
+   <text>lfl lfl lfl lff lfl kčk lfl kčk lfl kčlf kčlf kčlf kčlf
+kčlf kčlf figa fėja foje arfa fauna ferma firma flora fonas
+forma grafa nafta sfera arfa freska firma grafikas fasadas
+telegrafas telefonas referatas referentas stenografija
+tarifas grafikas autobiografija filologija filosofija</text>
+  </lesson>
+  <lesson>
+   <id>{2ae7633a-4f5e-4d3a-ad48-82fa08d75d95}</id>
+   <title>Lesson 24</title>
+   <newCharacters>c</newCharacters>
+   <text>dcd dcd dcd dcd dcd kčk dcd lfl dcd kčk dcd lfl dcd dcsa
+abėcėlė citrina cifrai cementas ciklonas cikorija cukrus
+chemija chrestomatija charakteris charakteristika
+chameleonas chirurgija operacija delegacija orientacija
+kooperacija adaptacija deformacija distancija konfiskacija
+agitacija reformacija rašytojas jau baigė savo
+autobiografinės apysakos dalį vakare uždegė fakelus citatas
+reikia surašyti abėcėlės tvarka farmacininkai gerai pažįsta
+gydomąsias žoleles firmos delegacija pabuvojo mokslininkų
+konferencijoje teatro dekoracijoms reikia fakelų</text>
+  </lesson>
+  <lesson>
+   <id>{afff5fa3-758d-40d8-ae6f-9f413ced7b57}</id>
+   <title>Lesson 25</title>
+   <newCharacters>ū</newCharacters>
+   <text>sūs sūs sūs sūs sūs sūs sūs sūs jūs jūs jūs ūdra ūgis ūkas
+ūkana būdas ūkti ūkis ūsas ačiū būda būti gūžė jūra kūlė
+kūma lūpa mūsų pūga pūkė pūti ūglis būrys būtis dūmas dūris
+dūžis glūdi gūdus gūnia gūsis gūžys gūžta šūkis klūpi krūva
+kūdra kūgis kūmas lūšis lūžis mūras plūdė pūkas rūkas rūmas
+rūsys būgnas būstas drūtas niūrus nūdien prūsas kengūra
+kūrinys nuorūka pačiūža pajūris brūkšnys pasiūlymas papūga
+jūrininkas galiūnas sūnūs dūmtraukis dragūnas pabūklas</text>
+  </lesson>
+  <lesson>
+   <id>{d4b2b341-8b80-4f39-9d3a-ce1edfdfa440}</id>
+   <title>Lesson 26</title>
+   <newCharacters>ę</newCharacters>
+   <text>ųęų ųęų ųęų ųęų lęų lęų lęų ųęų sūs ųęų sūs ųęų sūs ųęų sūs
+ėmę ėję bėgę lęšis gęsta tęžta tęsti kęsti matęs bėgęs rišęs
+rašęs sukęs buvęs lėkęs vežęs viręs mušęs sakęs manęs tavęs
+savęs nešęs skęsti ręžtis tręšta kirtęs rinkęs vilkęs
+skaitęs lęšiukai įsiręžęs išgręžęs skęsti skęsta bręstu
+kęsdavo gręsti spręsti švęsti pabalęs užgesęs kąsdavęs
+skęstąs džiūvęs sutikęs</text>
+  </lesson>
+  <lesson>
+   <id>{73b03cf8-073d-4d51-bc5f-0a5d9f18fcb1}</id>
+   <title>Lesson 27</title>
+   <newCharacters>z</newCharacters>
+   <text>aza aza aza aza aza sza aza sza aza sza aza azsū azsū azsū
+zylė zona bazė vaza viza zysti lazda gazas frazė krizė guzas
+zebras zenitas zuikis fizika azartas azotas barzda blizgė
+bronza mazgas cenzas dzūkas irzlus zefyras vamzdis balzamas
+divizija gruzinas jazminas kuriozas gvazdikas vazelinas
+dezertyras horizontas zoologas izoliacija inscenizacija
+optimizmas zigzagas šešiolika žmonių sustodavo vienas prie
+kito kad vieno žmogaus kojos pirštai siektų kito kulnus šį
+atstumą padalydavo į šešiolika dalių fiziko darbas panašus į
+detektyvo sieksnis tai tarpas tarp išskėstų rankų pirštų
+galų vaikas pavydžiai žiūri į žaislus</text>
+  </lesson>
+  <lesson>
+   <id>{23a1a0f3-42a7-4ef5-b2e7-f78a2b52c955}</id>
+   <title>Lesson 28</title>
+   <newCharacters>.</newCharacters>
+   <text>k. k. k. ki. ki. ki. ki. ki. k.k k.k k.k k.k k.k k.k
+šk. šk. šk. šk.</text>
+  </lesson>
+  <lesson>
+   <id>{40dadee5-be24-4650-84a0-54630c7d7cf8}</id>
+   <title>Lesson 29</title>
+   <newCharacters>=</newCharacters>
+   <text>k= k= k= k= k= ki= ki= ki= ki= ki= ki= k=k k=k k=k k=k k=k
+ir t.t. ir kt. ir pan. t.y. žr. m. mėn. d. pvz. red. sky.
+ved. virš. bt. egz. l.e.p. doc. p.m.e. dr. š.m. dėst.</text>
+  </lesson>
+  <lesson>
+   <id>{bfe93112-3649-474d-a2e5-9e04e9a439fe}</id>
+   <title>Lesson 30</title>
+   <newCharacters>AVNPSTJBČDEGIĮKLMORŠUCŽ</newCharacters>
+   <text>A. V. Nr. P. S. Aš. Tu. Jis. Ji. Jie. Anykščiai. Bijotai.
+Čekiškė. Dainava. Eiguliai. Gondinga. Ilguva. Įsrutis.
+Juodupė. Kamajai. Liepoja. Mūša. Obeliai. Panevėžys.
+Raudondvaris. Šilutė. Šakiai. Utena. Seinai. Talinas. Odesa.
+Tomskas. Varšuva. Berlynas. Praha. Vilnius. Budapeštas.</text>
+  </lesson>
+  <lesson>
+   <id>{fb7ab67d-5655-442a-be2f-b6b2d79adddf}</id>
+   <title>Lesson 31</title>
+   <newCharacters>,</newCharacters>
+   <text>š, š, š, š, št, št, št, št, š,š š,š š,š š,š š,š š,š kš, kš,
+kš, kš, ai, oi, ak, trakšt, kur, ten, gal, deja, taigi,
+argi, čia, čionai, šiapus, anapus aš, tu, jis, ji, mes, jūs,
+jie, jos, kaip, taip, todėl, dėl to, laimė, laikas A.
+Baranauskas, P. Cvirka, S. Daukantas, Lazdynų Pelėda,
+Maironis, S. Nėris, Rygiškių Jonas M. Valančius, V.
+Žilinskaitė, J. Baltušis, I. Simonaitytė, A. Baltakis, Just.
+Marcinkevičius J. Aputis, J. Avyžius, A. Maldonis, V.
+Sirijos Gira, J. Macevičius, B. Vilimaitė Varėnos,
+Druskininkų, Berštų, Ežeronių miškus žmonės dar ir dabar
+tebevadina Gudų giria. Čia ežerai gilūs ir gražūs, ypač
+tokie kaip Velnežeris, Aklikas, Krakinė, Ešerinis. Netoli
+ežerų yra Dubyčių, Lynežerio, Ežeronių ir Kabelių kaimai.</text>
+  </lesson>
+  <lesson>
+   <id>{3526652a-e5ae-43fe-9b15-f2a9cb6da0b9}</id>
+   <title>Lesson 32</title>
+   <newCharacters>:</newCharacters>
+   <text>š: š: š: š: š: š: š:š š:š š:š š:š š:š š:š š,š š:š š,š š:š
+susirinko: padaryta: pavyzdžiui: nuspręsta: Darbotvarkė:
+Nutarta: Komisija, susidedanti iš: Dabar niekam neįtinka:
+nei jam, nei tėvui. Juozas visa ko matė: ir šilta, ir šalta,
+ir juoda, ir balta...</text>
+  </lesson>
+  <lesson>
+   <id>{cc4c6fee-56a3-4ac6-8dbb-8f0b98b52559}</id>
+   <title>Lesson 33</title>
+   <newCharacters>;</newCharacters>
+   <text>š; š; š; š; š; šr; šr; šr; šr; šr; šr; š;š š;š š;š š;š š;š
+žvirbliai; kuosos; varnos; kielės; kėkštai; zylės; varnėnai;
+daržovės: ridikėliai, burokai, pomidorai, morkos, salotos,
+kopūstai; Varnėnų pulkas nušniokščia į mišką; pempės
+klykauja; kiškis skuta per laukus.</text>
+  </lesson>
+  <lesson>
+   <id>{2c584f49-4f41-4ce7-86ad-0fcfa233890f}</id>
+   <title>Lesson 34</title>
+   <newCharacters>/</newCharacters>
+   <text>d/ d/ d/ d/ d/ de/ de/ de/ de/ de/ de/ d/d d/d d/d d/d d/d</text>
+  </lesson>
+  <lesson>
+   <id>{afe000aa-bdd8-4005-b0aa-c88c973fcbe1}</id>
+   <title>Lesson 35</title>
+   <newCharacters>-</newCharacters>
+   <text>s- s- s- s- s- s- sž- sž- sž- sž- sž- s-s s-s s-s s-s s-s
+nu-, apy-, po-, pa-, prie-, pro-, pra-, ne-, at-, be-, į-,
+iš-, už- skai-to, pie-šia, ra-šo, ei-na, ne-ša, tra-di-ci-
+ja, kon-fe-ren-ci-ja</text>
+  </lesson>
+  <lesson>
+   <id>{7ad4353c-7b1c-4378-9ab7-12fc2b082557}</id>
+   <title>Lesson 36</title>
+   <newCharacters>(</newCharacters>
+   <text>l( l( l( l( lo( lo( lo( lo( lo( lo( l(l l(l l(l l(l l(l l(l</text>
+  </lesson>
+  <lesson>
+   <id>{d277a4d9-07ac-440b-817f-52709c755462}</id>
+   <title>Lesson 37</title>
+   <newCharacters>)</newCharacters>
+   <text>ų) ų) ų) ų) ų) ųp) ųp) ųp) ųp) ųp) ųp) ų)ų ų)ų ų)ų ų)ų ų)ų
+šaukiąs (-ianti), šaukęs (-usi), šaukdavęs (-usi), šauksiąs
+(-anti) laukiąs (-ianti), laukęs (-usi), laukdavęs (-usi),
+lauksiąs (-ianti)</text>
+  </lesson>
+  <lesson>
+   <id>{257722ef-808b-4244-9559-9c1cf33f43d3}</id>
+   <title>Lesson 38</title>
+   <newCharacters>!</newCharacters>
+   <text>a! a! a! a! aą! aą! aą! aą! aą! aą! a!a a!a a!a a!a a!a</text>
+  </lesson>
+  <lesson>
+   <id>{a417e437-00e2-4229-ba4d-740239299cb1}</id>
+   <title>Lesson 39</title>
+   <newCharacters>?</newCharacters>
+   <text>ė? ė? ė? ė? ėį? ėį? ėį? ėį? ėį? ėį? ė?ė ė?ė ė?ė ė?ė ė?ė
+ar? ką? ko? gal? kas? kam? kuo? kur? argi? negi? bene?
+koks? kaip? kieno? Kas eina? Kuri valanda? Kur jūs buvote?
+Kieno čia būta? Kodėl tu? Kas atnešė? Grąžink knygą! Atnešk
+laikraštį! Skaitykite! Kiek kainuoja? Gal galima
+užsiprenumeruoti žurnalą? Ką apie teatrą rašo spauda?
+Dėmesio! stokite! Atsargiai! Kalbėkite! Ačiū! Palaukit!
+Labanaktis! Na, kokiu gi būdu čia dabar atsiradai? Kur taip
+skubini, kaimyne? Nelaukei? Saugokis traukinio! O, ulbėkit,
+čiulbėkite, paukščiai! Ir kas per naktis! Kas jus žiūrės,
+bitelės, kai manęs nebebus? Iš tikrųjų, kokie gražūs šitie
+kalnai! Kur skubi, paklydęs laive? Ir vienąkart, pavasari,
+tu vėl atjosi drąsiai (S. Nėris). Matai tą girią, Vismantai?
+(Just. Marcinkevičius). Eikš, Sigute, eikš dukrele! Tėvyne,
+ties tavim, kaip ties versme skaidria, pasilenkia žmogus
+(Just. Marcinkevičius). Ką gi dabar pasakysi į tai, senas
+mano drauge? (V. Krėvė).</text>
+  </lesson>
+  <lesson>
+   <id>{a41e532f-af3a-461b-801d-25b6571ddf1f}</id>
+   <title>Lesson 40</title>
+   <newCharacters>„“</newCharacters>
+   <text>„a“ „s“ „a“ „s“ „as“ „ad“ „asdš“ „asdš“ „k“ „l“ „kl“ „klųė“
+„klųė“ „Lietuvos aidas“ „Lietuvos rytas“ „Lietuvos žinios“
+„Respublika“ „Valstybės žinios“ Klaviatūros treniruoklė „KP
+Tutor“ „Žalgiris“ nugalėjo „???“ „???“ - „???“</text>
+  </lesson>
+  <lesson>
+   <id>{a5113280-92c4-4ed7-9608-c9b18ba54366}</id>
+   <title>Lesson 41</title>
+   <newCharacters>67</newCharacters>
+   <text>š6k7k š6k7k š6k7k 676 7k 7k 6š 6š št6tš ku7uk 77 66 67 76
+6 karveliai, 6 komisijos, 6 kortelės, 6 kalnai, 6 kareiviai,
+6 šiaudiniai aviliai 7 kalnai. 7 knygos. 7 maršrutas. Butas
+7a. Marius išvyko 7 dieną 7 valandą.</text>
+  </lesson>
+  <lesson>
+   <id>{7f8763d6-9a2e-4425-8652-6f876040d0b1}</id>
+   <title>Lesson 42</title>
+   <newCharacters>458</newCharacters>
+   <text>š5š4k8 š5š4k8 š5š4k8 š54k8 šr5rš ki8ik šr5rš ki8ik 8=8 8=8
+4 šalys, 4 šaukštai, 4 šauliai, 5 šeimynos, 5 šernai, 5
+šaukštai 88 laipteliai. 8 litrai. 8 kilometrai. 88 hektarai.
+8 liepos. 44 turistai 4 valandą plaukiojo 4 ežerų 4
+įlankose. Iki miško yra 8 kilometrai. 5 valandą iš miesto
+išvyko 55 automobiliai. Ežero plotas 44 hektarai. Miško
+pakraštyje už 5 ar 7 žingsnių kelią perbėgo 4 stirnos.</text>
+  </lesson>
+  <lesson>
+   <id>{8d6a724d-cdab-44cb-b061-d23df6047c78}</id>
+   <title>Lesson 43</title>
+   <newCharacters>3</newCharacters>
+   <text>d3 d3 3d 3d Dar 3. 3 dienos. 33 dainos. 33 dalys. 37 tomai.
+73 lapai. 33 mergaitės ir 3 berniukai susitiko 3 valandą 33
+min. prie 3 namo.</text>
+  </lesson>
+  <lesson>
+   <id>{cc84fb06-e646-4f4c-8f63-6171c6ab9b65}</id>
+   <title>Lesson 44</title>
+   <newCharacters>9</newCharacters>
+   <text>9ų 9ų 9 laivai. Skubiai išsiųsk 9 juostas. Lietuvoje yra
+apie 3 tūkstančius ežerų. Kovo 9 dieną aukcione 99 pirkėjams
+pasiūlyta 999 paveikslai. 4 tonos obuolių. Darbo dienomis
+mums galite skambinti nuo 8 valandos telefonu 34 44 89.
+Parduoda 3 kambarių 75 kv. m butą 6 aukšte. Po 35 minučių
+visi susirinko kieme.</text>
+  </lesson>
+  <lesson>
+   <id>{44017dd7-c444-4fe0-8db7-eb91ce076f94}</id>
+   <title>Lesson 45</title>
+   <newCharacters>1</newCharacters>
+   <text>aą1 1ąa 1asdš 1šdsa 1 albumas, 1 akmuo, 1 uždavinys.
+Baseine yra 1111 litrų vandens.</text>
+  </lesson>
+  <lesson>
+   <id>{6797953a-7865-4dc5-b808-ef74495430f0}</id>
+   <title>Lesson 46</title>
+   <newCharacters>2</newCharacters>
+   <text>2s 2s  2 sijos, 2 stalai, 2 salės, 2 sūnūs, 2 studentai. 2
+automobiliai vežė 22 tonas.</text>
+  </lesson>
+  <lesson>
+   <id>{882295d7-2c75-4d00-9664-46aec3cb0ca9}</id>
+   <title>Lesson 47</title>
+   <newCharacters>0</newCharacters>
+   <text>0ų 0ų 10 eilių po 60 vietų. Padėjo į banką 20 000 litų.
+Dviratininkas nuvažiavo 20 km.</text>
+  </lesson>
+  <lesson>
+   <id>{6ea784cb-1ac2-442f-a531-d8e359d2157a}</id>
+   <title>Lesson 48</title>
+   <newCharacters>–</newCharacters>
+   <text>– Upė toli, – prašneko jis ir pridūrė. – Trys varstai.
+Šaukiu – niekas neatsako. Norėjo – bėgo, norėjo –
+žingsniavo. Viena kregždė – dar ne pavasaris. Nėra arklio –
+nereikia ir kamanų. Aš nenoriu būti maža, – tarė Neringa.</text>
+  </lesson>
+ </lessons>
+</course>

@@ -1,0 +1,44 @@
+set(keyboardfiles
+    ara.xml
+    bg.xml
+    br.xml
+    ch.fr.xml
+    ch.xml
+    cz.qwerty.xml
+    cz.xml
+    de.dvorak.xml
+    de.neo2.xml
+    de.xml
+    dk.xml
+    ee.xml
+    es.dvorak.xml
+    es.xml
+    fi.xml
+    fr.dvorak.xml
+    fr.xml
+    gb.dvorak.xml
+    gb.xml
+    hu.xml
+    il.xml
+    in.kan.xml
+    in.tam_unicode.xml
+    it.xml
+    latam.xml
+    lt.std.xml
+    no.xml
+    pt.xml
+    ru.legacy.xml
+    ru.xml
+    se.xml
+    si.xml
+    sk.qwerty.xml
+    sk.xml
+    tr.f.xml
+    ua.xml
+    us.colemak.xml
+    us.dvorak.xml
+    us.xml
+)
+
+install( FILES ${keyboardfiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/keyboardlayouts)
+

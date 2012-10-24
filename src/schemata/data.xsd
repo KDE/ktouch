@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:element name="data">
+    <xs:complexType>
+      <xs:choice  minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="keyboardLayout" type="keyboardLayout" />
+        <xs:element name="course" type="course" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+       
+  <xs:complexType name="keyboardLayout">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="path" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="course">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="keyboardLayout" type="xs:string" />
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="path" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+<!--
+kate: space-indent on; indent-width 2; mixedindent off; indent-mode xml;
+-->
+
+</xs:schema>

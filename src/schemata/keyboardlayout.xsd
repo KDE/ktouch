@@ -1,0 +1,106 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="keyboardLayout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" />
+        <xs:element name="title" type="xs:string" />
+        <xs:element name="name" type="xs:string" />
+        <xs:element name="width" type="xs:unsignedInt" />
+        <xs:element name="height" type="xs:unsignedInt" />
+        <xs:element name="keys" type="keyList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="keyList">
+    <xs:sequence>
+    <xs:choice  minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="key" type="key" />
+      <xs:element name="specialKey" type="specialKey" />
+    </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="baseKey">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="left" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="top" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="width" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="height" type="xs:unsignedInt" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="key">
+    <xs:complexContent>
+      <xs:extension base="baseKey">
+        <xs:sequence>
+          <xs:element name="char" type="char" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="fingerIndex" type="fingerIndex" use="required" />
+        <xs:attribute name="hasHapticMarker" type="xs:boolean" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="specialKey">
+    <xs:complexContent>
+      <xs:extension base="baseKey">
+        <xs:sequence />
+        <xs:attribute name="type" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="tab" />
+              <xs:enumeration value="capslock" />
+              <xs:enumeration value="shift" />
+              <xs:enumeration value="backspace" />
+              <xs:enumeration value="return" />
+              <xs:enumeration value="space" />
+              <xs:enumeration value="other" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="modifierId" type="xs:Name" use="optional" />
+        <xs:attribute name="label" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="char">
+    <xs:simpleContent>
+      <xs:extension  base="charContent">
+        <xs:attribute name="position" type="charPosition" use="required" />
+        <xs:attribute name="modifier" type="xs:Name" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+    
+  
+  <xs:simpleType name="fingerIndex">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="7" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="charContent">
+    <xs:restriction base="xs:string">
+      <xs:length value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="charPosition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="topLeft"/>
+      <xs:enumeration value="topRight"/>
+      <xs:enumeration value="bottomLeft"/>
+      <xs:enumeration value="bottomRight"/>
+      <xs:enumeration value="hidden"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+<!--
+kate: space-indent on; indent-width 2; mixedindent off; indent-mode xml;
+-->
+
+</xs:schema>

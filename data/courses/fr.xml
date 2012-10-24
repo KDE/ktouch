@@ -1,0 +1,991 @@
+<?xml version="1.0"?>
+<course>
+  <id>{319210ee-c8ae-41cd-a04c-4c479d0e4658}</id>
+  <title>Français 2 (auto-généré)</title>
+  <description>Trainingfile generated Mon Oct  1 08:14:15 2001
+Program written by H&#xE5;vard Fr&#xF8;iland
+</description>
+  <keyboardLayout>fr</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{8ff5ce5d-ca6a-47e4-ad7f-194ca2587dd1}</id>
+      <title>Lesson 1</title>
+      <newCharacters>jf</newCharacters>
+      <text>jf fjf fj fj jf jfj fjf fj fjf jfj jfj fj
+fjf jfj jf jf fj fj jfj fj jfj fjf jfj jf
+jfj jfj jfj jfj jf fjf jfj jf fj fjf fj jfj
+jfj jf fjf fj jfj fj jfj jf fjf fjf jf jf
+jfj jf jfj jfj jfj fj jf fjf jfj jfj jfj jfj
+fjf jf jf jf fjf jfj fjf fj jfj fj jfj jfj
+jfj jf jf fj fjf fj fj fjf fj jfj jfj jf jf
+fjf fjf jf fjf fj jf jfj fj jf jfj jf fjf
+jf fj jf jfj fjf jf jf jfj jf fj jfj fj fjf
+fj fjf jfj fjf jfj fjf jfj jfj jfj jf jfj
+jfj jfj fj jf jf fj fjf fj fjf fjf fjf jfj
+fjf jfj fj jfj fj jfj fj jfj jf jfj jfj jfj
+fjf fj fj fj jf fj fj jfj jfj jfj jfj jfj
+fjf jfj jf jfj fj jfj jfj jf fjf jf jfj jf
+jfj jf jfj jfj jf jfj jfj jfj fjf jf jf fjf
+jfj jfj jfj fj jfj jfj fj fjf jf jfj jf fj
+fj jfj fj jf jf jf jf jf fj jf jf fj jfj jfj
+jf jf jfj fj fjf fj fjf fj fjf fjf fjf jfj
+fj fjf fj jfj jf fjf jfj fj jfj jfj jfj jf
+jfj fjf jf jfj jfj fjf jfj jf fjf fj jfj jfj
+fjf fj jfj fj jfj jfj fj fj fj fjf jfj fj
+fj fj fjf fj fjf jf fj fj fjf jfj jfj fjf
+jf fj jfj jfj fjf jfj jfj fj fjf fj fjf fjf
+jfj jf jfj jf fjf jfj jfj jf jf fj fj jfj
+fj fjf fj jf jf jf fjf fj jfj fjf jf jf jf
+jfj jfj jfj fjf jf jfj jfj jf jfj fjf jfj
+fj fj jfj fj jfj jf fj jfj fjf jfj jfj jfj
+fjf fjf jf jf fj jf jf jfj fjf fjf fj fj fjf
+jfj jfj jfj fj fjf fjf fjf jfj jfj jf jfj
+fjf fj fj jfj jfj jf fj jfj fjf jfj jfj jf</text>
+    </lesson>
+    <lesson>
+      <id>{5ac85555-2c00-479c-ba29-cce70b9a57ac}</id>
+      <title>Lesson 2</title>
+      <newCharacters>mq</newCharacters>
+      <text>qmq qmq qmq qm qm mq qmq mq mm mqm mm qm qm
+qmq mm mq qm mm mqm mq qm qmq mqm mq mm mm
+qmq qmq qm mq mm mm mm mqm qm qm mqm mm mqm
+mqm mqm mqm qmq qmq mq mqm mm qm mqm qm mqm
+qmq mq mm mm mq mm mqm qmq mq qmq qmq mq qmq
+mq qm mm qmq qm qm mq qmq qmq mm qm mm qm
+qm qm qmq mqm qmq mqm qmq qmq mqm mm mqm mm
+qmq qmq qmq qm qmq qm mqm mq qm mq qm qmq
+qm mm mqm mq qm qm mqm mqm qmq qm mq qm mm
+mm mm qm mm qm qm mqm mm mm qmq qmq qm mq
+mm qmq qm mq qm qmq mq mm mm mqm mq qm mq
+mm qmq qm mq mqm qm mq qmq mq mqm mq mqm mqm
+mq qm mq mqm qm mq mq qmq mq mqm qm qm qm
+qm qmq qm mqm mm qm mq mq qm mqm qm mqm qm
+mqm mm mqm mm qm mqm mq mqm mm mqm mqm mm
+mq qmq qm mqm mm mqm qmq mqm mm qm mqm mq
+mqm mqm mqm mq mm mm qm mqm qmq qmq qm mq
+qm mqm mqm mq mq mq mq qm qmq mqm qmq mqm
+mq mqm mq mq mm mqm qm qm mq qmq qm mq qmq
+mqm mqm mqm qm mm mqm qmq qm mq qmq qm mq
+mm qmq mm qm mqm qm mqm mm mqm mqm qmq mm
+qmq mm mq qm qm mq mq mm mqm mqm qm qm mq
+mm qmq mq qmq mq qm mqm qmq mq mm mq qm qm
+mq mm qmq mm qmq qm mm mm qmq mq mm mm mm
+mqm qm mq mm qm mm qmq mqm mqm qmq qmq mq
+mqm mm mm mqm mq qm qmq mq mm mqm qmq qm qm
+qmq mq qm qmq mm qm mq qm qm mq qmq qm qmq
+mq mm mqm mm mm mm qmq mm mqm mm mq mq mm
+mq mqm qmq mqm mm mqm mqm mq mq mqm mqm qm
+qmq qmq qm mqm mm mq qmq qmq mqm mqm qmq qm</text>
+    </lesson>
+    <lesson>
+      <id>{223430f4-92e4-4cf7-a65b-6f91b37f4a6d}</id>
+      <title>Lesson 3</title>
+      <newCharacters>kd</newCharacters>
+      <text>kdk dkd km dk km km dk km dk dm kd kd kdk
+km dk kdk kd km km dm kdk kd kdk kdk dk kd
+dk dkd dkd dm dm dm dkd km dk dk kdk dkd dm
+km dkd kd dm dm km dk kdk dm kd kd dm dkd
+dk dk dm kdk dk dk kd dm dk kd dm km km dk
+dm dk km km kd dk dm kd kd dkd dk dkd dkd
+kdk km kdk dm dm dkd dm kdk dm kd kdk km dk
+kdk km kd dk dm dm kdk dkd km dkd dm km dkd
+dm kdk dm dkd dm dk dk dk kd kd dm dm kdk
+km kd dm dkd kdk kdk dk kdk dkd dk kdk kd
+km dk dkd dkd dm dk dkd dk kd kd dk dk kdk
+kdk kdk kdk kdk dk dm dk kdk dm dm km dk kd
+dk km dk km dm kd dm dkd km km km kdk kd km
+kdk dk kd dm km kdk kdk kd km dk kdk dk dk
+dk dm kdk kdk dk dk km dm kd km km dkd dkd
+dkd kdk dm km kd kdk dm dk dk dkd dkd dkd
+km kdk dm kd dkd kd dk dkd dkd km km km kdk
+km dm dk dkd dkd km kd dm km km dm kd km dk
+kdk dk km dm kd dk dm kd km kd kdk dk dkd
+dk kd dk dkd km kd dm dk km dkd kdk dkd kdk
+dk dkd kdk dm km km dk dkd km kdk km dkd kdk
+dkd dkd dm dm dk kd kd kdk km km dkd dkd kd
+dk dk dkd dm dkd dm kdk kd dm kd dm dk km
+dkd dkd kdk dk kd kd dm dm dm kd kd dm dkd
+km km dk kdk dm dkd dkd dkd kdk kd kdk km
+dk dk dm kd dkd dkd dkd kd kd dm kd kd km
+kd kd dm dk kd kdk dm km km kdk km dk dm dk
+dkd kd km kdk dk kd kdk kdk dkd dm kd dkd
+kd dm km dk km km dk dkd dm dk kd dm kd km
+kdk dm kd dk kd km kdk dm dk km dm dkd kd</text>
+    </lesson>
+    <lesson>
+      <id>{f9b5ca02-29bd-46de-b9bf-1d75a0e94d25}</id>
+      <title>Lesson 4</title>
+      <newCharacters>ls</newCharacters>
+      <text>sl sls ls ls sls ls lsl lsl lsl sls ls sl
+sls sl sl sls sl sl lsl sl sl sl sl ls lsl
+sl sl sls ls lsl sls sls sl lsl lsl lsl lsl
+sls lsl sls ls lsl lsl lsl sl sl sl lsl lsl
+sl ls ls lsl sls sl sls lsl sls ls ls sl sls
+lsl sls sls sls sls sl ls sl ls sl sl ls ls
+sls sl sls sl sl ls sl sl lsl ls sls sl lsl
+ls sl ls sls ls lsl sl lsl sl lsl ls sls sl
+ls lsl lsl ls ls sl sls lsl lsl lsl lsl sl
+sl lsl sl ls ls sl sl sls sl lsl lsl ls ls
+sls sls ls lsl ls sls ls ls sl sl ls lsl lsl
+lsl sls lsl sls lsl sl sls sl sl sls sls sls
+sl lsl sls sl ls sls ls lsl lsl lsl lsl sl
+lsl lsl lsl ls ls sls ls lsl sl ls sls sl
+sls ls sls lsl lsl sl sls sl ls ls sls sl
+lsl sls ls sls sl lsl ls sl lsl lsl sls lsl
+sls lsl sls ls ls sl sls sls sl ls sls sl
+sl sl sls sls sl ls lsl sl lsl lsl lsl sl
+lsl ls sls lsl lsl sl sls sls sl sl lsl sl
+lsl sl lsl ls sl sls sls lsl lsl ls sls sl
+ls sl sls ls sl sls sl sl sls lsl sl sls sl
+lsl ls sls sl lsl lsl ls ls lsl sl sls sls
+lsl sls sl ls ls sls sl sls sl sl ls lsl sls
+sl sls sls sls ls lsl sls sl sls ls ls sl
+sl sl sl lsl ls ls lsl sls sl lsl lsl ls ls
+sl sls sl sl sl ls lsl lsl sls sls ls sl sl
+sl ls sls sl sl lsl lsl lsl sls lsl lsl sls
+sls sl sl sl sls sls lsl ls lsl ls sls lsl
+ls sls sls lsl sls ls ls lsl ls lsl sl sls
+sls sl sl sl ls sl lsl lsl lsl sl sl sls lsl</text>
+    </lesson>
+    <lesson>
+      <id>{499a41ce-ae5f-4390-8390-5dbbbb6b9d60}</id>
+      <title>Lesson 5</title>
+      <newCharacters>ie</newCharacters>
+      <text>ie effiles effiles id ifs ides ifs ie il id
+ides il esse ides il id es ides effile ils
+if ils idem idem il elle elle elle effiles
+ie id effiles effiles ie ie if effiles elle
+il effile elles effile if ils idem ils ides
+ides es ides es id ie effiles esses id il
+ils elles effile ifs if effiles if il elles
+ils effile ils esse esses if esse ie esse
+if ifs il esses elle esses effile effiles
+effile ides ides il effile es es effile elle
+il ides ides elle esse ie ifs esses idem id
+es if ils idem id elles elles if id effiles
+if es ides esses effiles effile esses elles
+es elles ils ils esse ie elles if ie il ie
+idem esse es elles effile ides if effiles
+esse id ie ils elle if es ifs effile es id
+elles if if if elle ides if ils elles il esse
+esses esses if ie ides es effiles elles elles
+id if esses ides ides es effiles es ie elles
+ifs elles ie esse effile esse il if esses
+es ils elle ie il idem ie effile effiles effiles
+effiles esse es effile elle effiles idem esse
+esse effiles esse ils if ils ifs ides ils
+effile effile esse esses es esses ils es if
+ie es es effiles elles esses id effile esses
+effiles ides elle id id id esses idem ifs
+id es if ides ie es il esses if es il il id
+id ils ils ie il id id if if es esses ides
+ifs if effile id elles ifs esse esses esse
+il esses ides elle elles esses esse es if</text>
+    </lesson>
+    <lesson>
+      <id>{cec056c3-e913-462d-bb7d-0897539c3135}</id>
+      <title>Lesson 6</title>
+      <newCharacters>ur</newCharacters>
+      <text>remiser usuelles redise resquilleuse relieurs
+urique relire refermer remises usuels refiler
+relies rediffuser refleurir relieuses rediffuser
+relise usuels remises rude rieurs requises
+remisier relier rudesses russifier rumeurs
+ruer requiems requiems resquilleuse rieur
+reflues relies remise usuelle requiems rues
+reluire rieur refiler relus ruelles refleurir
+redresseur rimes refuses resserres relie relief
+rifler remis ruser ruser referme rifles relique
+relues resquilleuse rifle rieurs resquilleur
+redresser reluquer refermes rifles rieuse
+relis redis rides ruser ruelles relues rue
+remue ruelles resserre ridelle redise relie
+requiems rues ridelle rediffuses relu usures
+rieurs ressers reluise relires refleurir resquilleur
+riser relises risques relise ri ridelles refermes
+remis rires ressemeler russe uses resquilleuse
+redresser resserrer resquilleuse remise relis
+redresseur ur refuser relises usuriers relieur
+redises ris refluer requiers russifier ruser
+rieuses usuelle relieur relieur usures relires
+riser risquer uses relue relues rediffuses
+reliures resquilleurs remisiers remuer ruelle
+rieurs refleurir relire rimeur rediffuse reliques
+rue reliefs rimes relu requis reluquer ridelle
+remuer relieuse ries reliques rudesses relique
+refermes ruisselle refiler russe reliure risquer
+refuser relues relieuse refiles redresse rudes
+remisier ridelle relief ur ressuer risques</text>
+    </lesson>
+    <lesson>
+      <id>{8085b8c5-470a-4883-94f9-cd4a1d4b7656}</id>
+      <title>Lesson 7</title>
+      <newCharacters>hg</newCharacters>
+      <text>glu girelles hideuses glus huisserie gigue
+glu grise gruger huis gigue herse hg huilerie
+heure greffeurs guise gel geler griefs hurleurs
+hies guerriers gifler gemme geler hideuse
+grises huisseries gifles huiliers huileuses
+gemmer huisserie herser greffiers grimer grille
+humide hume glus grille grille gris grigris
+gifle greffe gifle gigue humide geler grilles
+humes gril huissiers griffures grise hues
+huilerie huilier greffier grille gueuler griffus
+grils glisses germes hideuses hurle herses
+hl griller heureuses gueuse griefs grues hurleurs
+huiliers gemmer grilles huileries gigue heureuses
+griffure greffes heur huileuse grumeler guerriers
+huissiers gifler gigue grues glisse huiler
+griffe hululer griffures griffus hl humes
+griller guerres huiles griffes humilie grille
+griser huiliers guerres hg humides hululer
+griffures huilier gemme gemme germe huissiers
+griller hideuse gifle humeur gril griffe glisser
+humer gigue grumeleuse gemme grils gel germe
+hurler hululer greffeur humus humeurs huilerie
+hurleurs hier humilies hideuses humes greffer
+humilies grise guerres grumeleuses guerrier
+heureuses greffiers humidifie griffe greffe
+griffues greffeur grumes grumeleuse gris humide
+germe huis guerrier gifle huileuse hier heures
+guides grimer gril gruger hue gueuse griffue
+grigris gueuler grils huileuse guerres huilerie
+hurleur girls gifler grues guerrier huileuse</text>
+    </lesson>
+    <lesson>
+      <id>{24c484f1-b1c0-46a8-ad2d-42da9e4cb46a}</id>
+      <title>Lesson 8</title>
+      <newCharacters>nb</newCharacters>
+      <text>nuis building bis bure nique brimes bruis
+nuises building belliqueuse brusquer brunisses
+bielle brigues nubiles bleue berne bernes
+bulbeuses bielle blinder bile nuises brindilles
+brimes biner bibles bulbe brumer nuis neige
+brefs beurrer biner bilingue nique nu bimensuelle
+bilieuse beurre ne bruisse blinde bridgeurs
+briseur biser brumeuse burin bruines brui
+bimensuel berges buffles belliqueuse bruie
+bridgeuse bergeries buffle belliqueuse bulle
+biner bines nurse biner nuisibles bruire briefings
+brin blinder brun bibliques brumeuse brus
+berges brus nuque beugler biser bure nerf
+bleuis briefings bruine briseurs bruie bru
+nubile bd bisques bu nuise briseuse bimensuelle
+brise nids brunis bleuies bridgeuses briseuses
+briser nuques bises nul burlesques bille belliqueuses
+bluffs belle belles bien brique briffer bluffeuses
+biser nie bible buses brisures brime brunis
+bimensuelles bibliques bifurque bille bisque
+briefing bien briguer brunisse brun brun bel
+bd bilingue biner brins bille bridger bleues
+burlesque blesse nuque beiges brindilles brider
+briseur brus bleue blesses nihilisme briffer
+nubiles bleuir bimensuelles nuisible biser
+bleue berniques brusquer briquer brises nuire
+brumes bines buse nurses bris bienheureuse
+nie nb biffe bilingues bifurque berline bridger
+bruns bridger bleuies briseuses brins buriner
+buis belges bridgeur brefs brunie nuisibles</text>
+    </lesson>
+    <lesson>
+      <id>{183b4b3f-3ed3-4d8f-8272-3349287f1bdd}</id>
+      <title>Lesson 9</title>
+      <newCharacters>vi</newCharacters>
+      <text>immeuble vengeur individuel imbues vienne
+vieillesse vieillies vivrier vernisses veineuses
+indien infini vide infime vendus visuelles
+verbeuses ivres invendu infime insigne viriliser
+indivis ils verdisse venimeuses immeuble immuniser
+insurger infirme vermeille infirmeries imbu
+venelles innerver ville verdir imbue verves
+verdie vilenies vieillir vigueur indique visible
+insuline verser visibles vienne injurieuse
+veiller vineuse vieillis inique insensibilise
+irrigue illisible veines imbibes visqueuse
+indiques injurier indemniser venges issue
+vessies immense vis innerver viveur vienne
+immerges injurieuses indu vivre vendeuse injure
+viriles indien verdi vermeilles verseurs venges
+immeuble vieille ibid inhumes invendus veuves
+indivises injurieuse viens insubmersible ils
+indigner veneurs vieller irrigue verves vengeurs
+virus vif inhumes verreries indigner vivier
+verbeuses venges velus indemnise velu versifier
+velue villes indemnises venimeuses inversible
+infime vilenie indues vif influes verse vendre
+insuline ivre vessies venues veiner visse
+insuffles veinule vermeil infliger vers invendus
+veiller vrilles vendue insubmersibles veulerie
+venus veules insidieuses viriliser velue indigne
+vendre indigne verdure induise ignifuge verbeuse
+insinues insubmersible viseurs veineuses verreries
+vermeilles vrilles innerver vrilles velue
+vilebrequin insigne influer vermeil inversibles</text>
+    </lesson>
+    <lesson>
+      <id>{5f251f9d-2f73-49de-af73-7b0d1421a94f}</id>
+      <title>Lesson 10</title>
+      <newCharacters>cp</newCharacters>
+      <text>persifle perse cheminer pures ce permissives
+cf crue cule publies cru pneu cerf civiques
+chiffreurs penche cil crique peuplier pendre
+pies pileuse cendre pupilles clip chefs chique
+presse percluse premier chier cliver permise
+censeurs cierges celer cuirs pleuve chlinguer
+perses pensums pleurer perruches prieur clicher
+peurs peine pelucheuse peu peluche plisser
+pure pures cercle prime penseur crispe crucifier
+pilles pingre pend chevilles pins chiner crises
+chevelu clefs persil cerise ceindre culmines
+pulpes puises ch plumier peignes puisses pleines
+clins cueillis cidreries culminer puer cursif
+persifleur presser creuse crisse cr pires
+cribler plis cibler chimiques celles penche
+cuisses cire cimes peser cursives prescrive
+cellier cf cessible pudeurs cendres curling
+chirurgie piper cupule prescris perses chiffre
+puisque cerise chemiserie culminer clefs cuiller
+cidrerie prives perdue peler chemises perdues
+cuis chiquer perses plumiers pendes pierres
+pullule prieures presser curseur perfide pucelles
+pressens piges cursifs cessible peuplier pucelles
+pied chevelures prend presse cuis princesses
+pernicieuses cc ciseleur principes pends chevelus
+pendus cliniciens pressure peureuses purifie
+pincer perdes perfidies crises purin pellicule
+celles ciseleurs prunelles pelucheuses perces
+cueillie cercles pressurise cure pressure
+crieuses piliers cheminer celui puisque cerfeuils</text>
+    </lesson>
+    <lesson>
+      <id>{4695b1ec-4bc8-4eab-8f74-b987bc16ba40}</id>
+      <title>Lesson 11</title>
+      <newCharacters>yt</newCharacters>
+      <text>tics titube triture teneurs truelles yt tentures
+ternis tintements ternie tripier tribunes
+truquent teste treille tresse teintes terril
+tuteurer truisme ternie timides tel tuner
+test tutelles terrir testeurs terrienne temple
+titubent tienne ternit teinture terril tunisienne
+teinture testes triplent turbulent tilleuls
+tierces terril turpitudes terreuses tigresses
+turbulente tirent turcs tritures triquer tels
+tuteurer tumeurs tricycle tertres tireurs
+teckel tireuses trente trempes tunnel trusts
+teinturerie titrer tek terrestre ternis treillis
+turlupiner tuile trimestriellement tergiverser
+tics truculence tildes teindre terminer tu
+trier techniquement tigresse tricheurs truismes
+triture testicules tient trembles tels turques
+turbulences tinter terrils tuilerie techniciennes
+turent timidement truculente tisseurs testicules
+terrifies triptyques teinturiers treuil terrier
+titrer tut te trichent ternirent trucs trembles
+tint tertres typiquement tripiers tempes tunisiens
+terrisses tubes triperies teintes thermes
+tendresse trichent techniquement tierce tenues
+trinquer thermes type tenter teintes treilles
+tirettes trimestriellement tumeur titiller
+temples timbrer tests tuber tumultes tuiler
+tendrement tiers typiquement thermies tricherie
+terrifies telluriques trimestres termites
+teindre trimer trimestriel tintements ternissent
+trustes titubent trier terris tic tente titres</text>
+    </lesson>
+    <lesson>
+      <id>{f7bcde8e-486e-46aa-a5c5-94617662d6dc}</id>
+      <title>Lesson 12</title>
+      <newCharacters>o&#xF9;</newCharacters>
+      <text>oblongue onduleuses offenserons omettrons
+overdose obtention omnipotence ornithologie
+orties ornithologiste offusquer observons
+objecteurs outres omnipotente obscurcissons
+obtuse omit onduleront offriront ogresse omnipotents
+obstruent oiseliers obliquerions occupions
+officiers origines oiseleur obnubiler obscurcirons
+offensons offset onduler oenilisme optes offenserons
+oserions opinion oblong opteront omise offerts
+oiselet ouvriers orientes offertes odieuses
+occupes obtenions ouvrier occultons oublies
+occulte oh ou oppresserons occiput ormoies
+onguents omettront oseille obstruerons orgie
+odieuse ongle ornement obscurcis ondine obligerions
+orientrice opticien obscurci opposerons outils
+oublient offenseur olympiennes omettront occiput
+obturerons obtenue octobres oserions ohms
+oiseuse optionnel oignons oreillon oie optimiste
+oedipiennes ombres omnisciente objet obtiendrions
+oenologue omnisports omis ordonnes obnubileront
+obscurcirent ordurier oignon octogones ouverture
+obtenons outil osier osciller or orneront
+ouvrier opposer offrir obturent ohm ogresse
+opprimer orchestres obtiendront obstructionnistes
+oniriques opulent o&#xF9; olympiens oppositionnels
+opinons oh omnidirectionnel offenserions obscurcissons
+ostensible opprimerions obsession olympiennes
+oppriment omnipotence onduleuses observerions
+objecter octroyons oubliettes obstinons orientrice
+officiellement obtenus onduleuse omettrons</text>
+    </lesson>
+    <lesson>
+      <id>{14aff281-5d61-47a7-9467-36fa0a8ec1fb}</id>
+      <title>Lesson 13</title>
+      <newCharacters>az</newCharacters>
+      <text>algorithmique abonnerions admirassions alignassions
+articulant astreindrai arraisonnas acculturerions
+allaiterai accoleras agencerons appareillaient
+attendrirez abstiendrons aiguillerez aviserais
+alimentaient agglutinait antilopes algorithmes
+autoroute actionnaire attesteriez abaissons
+admettrons argumenterai affectionne altruistes
+aventuraient averti amputant approvisionnasse
+affermiraient alliions accusait accolades
+abondions attendrisses allumerais assiste
+assagira assombririons aspirerez attitudes
+aiguilleter adonnons approprieriez affermirai
+assommiez ainsi aiguiserait affranchirai apache
+appareillera assemblerai atteindrai accoua
+assainissement apprivoisaient abandonnait
+accouderai accouchas appropriant asseyiez
+amalgame acclimateriez augmentasses avirons
+avoisinais allumions affairerez accentues
+apercevons apache accumulassiez aveuglants
+attirera accidentels austral alunissiez aplatiront
+accentuaient aplatisses alerte aquarelliste
+assouplissaient annoncerait avalerait ahurisses
+ancien assembliez aurez authentifiaient affronterez
+atouts assailliraient accointances amincissions
+aubades asiatique avaliserais approvisionnasse
+acuponcteurs agenouillez accueillerons agenouilleront
+angoissasses appareillera achalandai actionneraient
+abdiqueras affolerions anticonstitutionnelle
+acculons absorba abjurais amenuisassions augures
+aiguisons assentiment additionnais anglophones</text>
+    </lesson>
+    <lesson>
+      <id>{9b0bd1ae-2e06-4605-b31a-1e2213e6515a}</id>
+      <title>Lesson 14</title>
+      <newCharacters>wx</newCharacters>
+      <text>watt wallons watts whiskies wagon wallons
+wx watt whiskies warranter wagonnet xylophone
+wagonnet wallons wallonnes wagonnet watt wallon
+waters wallonne watts wagon wallonnes wallonne
+wagonnet xylophones whisky xylophone watt
+wallonnes xylophones xylophone wx wx wx wx
+xylophone watt watt wx wagonnet wallonne xylophones
+wallonnes whisky wallons wallon watts wallonne
+wagon xylophones xylophone wallonnes wallons
+whisky wallon wagonnet warranter wagons wallonne
+xylophones wagonnets whisky xylophones whiskies
+watts wallon watt whiskies warranter watt
+xylophones wallonnes warranter xylophone waters
+wallonne wagons wallon wagon wallonne waters
+xylophone warranter watts whiskies watts wallons
+xylophone xylophones whisky wallonne watt
+warranter wagonnets wallonnes watt watt wx
+wallonnes wallonne watt xylophone warranter
+wagonnet wagonnet wagon wagon wagon wallon
+wagon wagonnet wallonnes wallons whiskies
+whisky wx wagons whiskies xylophone whiskies
+wallonne watts wagon whiskies wallonne wallonnes
+wagon wagons wallonnes wallonnes wx wx wallons
+wagonnet wallonne wagons wagonnet wagonnet
+wallonne wagonnets wagonnet wallonnes watts
+wagons watts warranter wagons wallon xylophone
+wagonnets xylophone watts wallonne wallons
+wagons wx wx wagons waters wagon wagonnet
+waters wagon waters watt wagonnet wallons
+wallonne wallonnes waters xylophones wallon</text>
+    </lesson>
+    <lesson>
+      <id>{2703c01f-438c-4439-83d1-f2d224820b48}</id>
+      <title>Lesson 15</title>
+      <newCharacters>JF</newCharacters>
+      <text>Florient Jobin Jacquelin Foisy Japon Jones
+France France Jacques Francine Foisy Fafard
+Jobin Jacquelin Fafard Fourier Jones Frank
+Jobin Forget Jobin Fernand Jackson Jeannine
+Japon Juneau Florient Foisy Foisy Freedman
+Julian Freedman Freedman Jackson John Jacques
+Forget Jupiter Freedman Jill Florient John
+Freedman Jacobsen Fourier France Florient
+Fernet Forget Florient Jamie Forget Jackson
+Jacquelin Fernand Forget Jacobsen Jacobsen
+Jacques Freedman Japon Freedman Juneau Jacques
+Jamie Francine Fernet Jocelyne France Frank
+Japon John Fernet Jocelyne Joynes Fernet Jacquelin
+Foisy Fernand Francine Freedman Frank Joynes
+Jamie Jude Julian Foisy Joynes Jude Jacobsen
+Florient Florient Japon Jacques Francine Fafard
+Jeannine Foisy Fourier Juneau France Japon
+Francine Jeannine Juneau Jacobsen Jacobsen
+Jacobsen Francine Fernet Frank Juneau Jupiter
+Fourier Fourier Jobin Juneau Foisy Joynes
+Freedman Francine Jocelyne Jones Jude Jackson
+Jacques Forget Florient Jackson Fernand Jacques
+Julien Jamie Jeannine John Fourier Florient
+Juneau Florient Japon John Jacquelin Jeannine
+Forget Forget Jeannine Jacquelin France Jamie
+Florient Jones Jude Freedman Jacquelin Jamie
+Frank Julien Foisy Jacquelin France Jacques
+Julien Juneau France Jill Freedman France
+Joynes Jackson John Julien Juneau Jeannine
+John France Jobin Jude Fernet Florient Florient</text>
+    </lesson>
+    <lesson>
+      <id>{0f136f35-5616-453b-a190-92c5c8bc408d}</id>
+      <title>Lesson 16</title>
+      <newCharacters>MQ</newCharacters>
+      <text>Masson Mme Mongenot Mathematica Monique Mike
+Marseille Mireille Minneapolis Mike Matlab
+Mahoney Manseau Marseille Marseille Morissette
+Masson Monique Mme Martin Mme Mike Marseille
+Masson Marseille Monique Mme Marielle Morissette
+Martin Mme Mulhouse Martin Marcoux Morin Marielle
+Monique Marcel Minneapolis Morin Martin Moshe
+Mireille Messier Manseau Maltais Mike Marseille
+Mme Maltais Monique Mme Marseille Masson Mike
+Marcel Mireille Maltais Moshe Marseille Mongenot
+Moshe Martin Morissette Mongenot Mathematica
+Messier Martin Mulhouse Manseau Monique Moshe
+Maltais Marcoux Marcoux Mulhouse Mireille
+Mathematica Martin Mireille Masson Marielle
+Moshe Morissette Matlab Masson Messier Marielle
+Manseau Marcoux Mahoney Mireille Marcoux Morin
+Morin Marielle Maltais Masson Masson Matlab
+Morin Mathematica Marcel Minneapolis Michel
+Morin Messier Martin Manseau Minneapolis Marcel
+Marseille Monique Marielle Matlab Mulhouse
+Matlab Mulhouse Messier Mongenot Maltais Marcel
+Mahoney Mathematica Marcoux Mireille Mulhouse
+Mathematica Moshe Minneapolis Marielle Marseille
+Morin Mireille Mahoney Mireille Marseille
+Marielle Marcel Minneapolis Monique Mme Mahoney
+Mongenot Marcel Manseau Masson Mme Matlab
+Mathematica Mongenot Mahoney Mulhouse Minneapolis
+Matlab Maltais Morissette Mireille Masson
+Morin Morissette Marcel Matlab Michel Minneapolis
+Marseille Martin Mahoney Mahoney Mike Masson</text>
+    </lesson>
+    <lesson>
+      <id>{01289566-87e1-4f59-bfad-99e2a5e76ffb}</id>
+      <title>Lesson 17</title>
+      <newCharacters>KD</newCharacters>
+      <text>Dionne King Doyon Dodge Dorval Doris Domey
+Dorval Denise Kent Drouin Dominique Dorval
+Doyon Doyon Doyon Dick Kansas Decelles Drouin
+Desjardins Dodge Kuenning Dorval Denis King
+Dominique Drouin Decelles Kent Denise Drouin
+Drouin Dominique Dorval Doris King Doris Dionne
+Dorval King Kuenning Doyon Doyon Dorval Denise
+Denise Kansas Khan Dodge Desjardins Dick Dionne
+Kuenning Dorval Kent Desjardins Decelles Dorval
+Doyon Dick Dick King Drouin Kent Denis Domey
+Domey Dorval Dumoulin Kuenning Doyon Doyon
+Dorval Denise Domey Khan Doris Desjardins
+King Kent Desjardins Dominique Doyon Dumoulin
+Decelles Doris Decelles Dionne Dionne Dionne
+Dionne Dionne Kansas Doris Doyon Drouin Kent
+Khan Desjardins Dick Doris Denis Doyon Dionne
+Dominique Khan Dorval King Khan Doyon Domey
+Dick Doris Khan Dumoulin Doyon Dick Kansas
+Dodge Dionne Kent Dumoulin Khan Kuenning Doyon
+Dumoulin Dodge Doris Kuenning Kent Desjardins
+Dumoulin Doris Doyon Drouin King Dumoulin
+Desjardins Kent Kuenning Doyon Dionne Doris
+Kansas Dorval Decelles Drouin Dorval Disney
+Kansas Dominique Kansas Denise Kent Dionne
+Kent Khan Decelles Dominique Desjardins Desjardins
+Dominique Decelles Kuenning Kuenning Dominique
+Dick Doyon King Dodge Dorval Dumoulin Decelles
+Daniel Daniel Disney Dodge Dumoulin Dick Denis
+Denise Dominique Drouin Doris Disney Kuenning
+Dominique Daniel Kansas Domey Denise Kansas</text>
+    </lesson>
+    <lesson>
+      <id>{9e81cd70-02e9-451b-af34-198b6c9adccf}</id>
+      <title>Lesson 18</title>
+      <newCharacters>LS</newCharacters>
+      <text>Lamothe Laval LaSalle Lucie Sorel LaSalle
+Laugier Lavoie Lessard Lapointe Lucie Laroche
+Lachapelle Sirois Ltd Sherbrooke Lapointe
+Sun Stephen Steele Laval LaSalle Sacramento
+Leclerc Longueuil Laval Suzanne Sacramento
+Lepage Lepage Lecavalier Sun Lessard Strasbourg
+Laflamme Steele Sirois Sherbrooke Leclerc
+Leblanc Steele Ltd Lachapelle Lucie Smith
+Laval Smith Lavoie Strasbourg Sun Leclerc
+Lavoie Lepage Letarte Steele Ltd Ltd Strasbourg
+Sacramento Lepage Sirois Sirois Leblanc Laroche
+Sacramento Ltd Letarte Seattle Sherbrooke
+Longueuil LaSalle Leclerc Longueuil Letarte
+Lafontaine Linda Lafontaine Smith Lessard
+Strasbourg Shawinigan Lamothe Letarte Lamothe
+Laval Laurendeau Lamothe Laval Steele Lepage
+Lessard Lafontaine Laflamme Laflamme Laroche
+Sherbrooke Longueuil Sorel Longueuil Laurendeau
+Lessard Soucy LaSalle Laval Louise LaSalle
+Lavoie Lapointe Sorel Louis Soucy Laval Lessard
+Louise Lapointe Ltd Laroche Steele Laval Letarte
+Louise Sun Letarte Sacramento Lamothe Lucie
+Laroche Shawinigan Louise Sun Letarte Lavoie
+Lafontaine Louis Lecavalier Louise Shawinigan
+Laval Laflamme Laval Lepage Lucie Sherbrooke
+Lucie Laugier Stephen Lucie Leclerc Louis
+Laroche Longueuil Sun Leblanc Stephen Steele
+Laugier LaSalle Letarte Seattle Strasbourg
+Lessard Louise Letarte Lessard Ltd Sherbrooke
+Sherbrooke Shawinigan Lecavalier Laurendeau</text>
+    </lesson>
+    <lesson>
+      <id>{0f134e9e-acf6-4528-860b-5d1ab38f2a3f}</id>
+      <title>Lesson 19</title>
+      <newCharacters>IE</newCharacters>
+      <text>EDF IMSL IMSL Internet Internet IMSL Ethernet
+Inc Interleaf EDF Internet Inmos EDF IEEE
+Internet IMSL IMSL EDF Inc IEEE Emacs Ethernet
+Europe IEEE Internet Interleaf Isabelle EDF
+Ethernet Inmos Inc Interleaf Isabelle IMSL
+Intel Emacs Internet IMSL Emacs Intel Inmos
+Interleaf Interleaf Intel IEEE Internet Europe
+Inmos Isabelle Europe Isabelle EDF Isabelle
+Internet IMSL Emacs Intel Inc Inmos Emacs
+Inmos Inmos IMSL EDF Isabelle Ethernet Intel
+IMSL EDF Interleaf Europe Intel Interleaf
+Europe EDF EDF Inmos Interleaf Internet IEEE
+Europe IMSL Emacs Internet Interleaf Isabelle
+Interleaf Inmos Isabelle Emacs Ethernet EDF
+Europe Inc IMSL Intel Europe Ethernet Europe
+Interleaf Isabelle Isabelle Intel Isabelle
+Internet Internet Europe Inc Internet Inmos
+IEEE Intel Ethernet Intel EDF Isabelle IEEE
+EDF IEEE Interleaf Intel Interleaf Inc Emacs
+Interleaf IMSL Interleaf Europe EDF Europe
+Ethernet Europe Internet Emacs Intel IEEE
+Interleaf Emacs IEEE Internet Europe Inmos
+EDF Internet Interleaf IMSL Emacs IEEE Inmos
+Intel IEEE Inc Intel IEEE Inmos Intel Intel
+Emacs Emacs Internet IMSL IEEE Inmos Europe
+Intel Interleaf Inc Inmos Emacs IEEE EDF IEEE
+Internet IMSL Europe Internet Intel IMSL Europe
+Inc Ethernet Inc Inc IMSL IEEE Inmos Europe
+Isabelle Europe IEEE Emacs EDF Emacs Ethernet
+Interleaf Europe Ethernet Interleaf Emacs</text>
+    </lesson>
+    <lesson>
+      <id>{dff9250a-8147-4f46-a700-7471cc720a33}</id>
+      <title>Lesson 20</title>
+      <newCharacters>UR</newCharacters>
+      <text>Roy Utah Rubin Rioux Ringuet Renato Unix Ricard
+Rochefort Rubin Rioux Rioux Rochefort Roger
+Rioux Romano Uintas Ronald Rubin Roger Uintas
+Romano Robert Ronald Riopelle Ricard Robert
+Ringuet Rochefort Robert Unix Roger Riopelle
+Uintas Renato Ronald Roger Roberge Rochefort
+Uintas Rioux Uintas Riopelle Romano RMS Rioux
+Utah Renato Roy Uintas Roy Ronald Rochefort
+Ringuet Romano Rochefort Rioux Roger Roy Uintas
+Roy Rioux Re RMS Re Robert Roberge Roger Uintas
+Utah RMS Riopelle Roberge RMS Romano Riopelle
+Roger Ringuet Uintas Raymond Ricard Ronald
+Roger Ronald Uintas Riopelle Roy Re Roger
+Utah Uintas Ricard Romano Renato Romano Uintas
+Rubin Raymond Re RMS Robert Roy RMS Uintas
+Unix Renato Uintas Romano Raymond Rioux Roy
+RMS Roy Ricard Ringuet Robert Ricard Re Robert
+Roberge Rochefort Rubin Roger Ringuet Roy
+Re Ricard Raymond Raymond Raymond Romano Rioux
+Uintas Uintas Re Ringuet Roger Uintas Rubin
+Roberge Re Raymond Riopelle Roy RMS Ringuet
+Roberge Romano Ringuet Uintas Ricard Roy RMS
+Roberge Re Utah Roberge Raymond Robert Ricard
+RMS Roger Ringuet Robert RMS Ringuet Romano
+Rubin Raymond RMS Rioux Raymond Romano Rioux
+Renato Renato Utah Romano Rochefort Roy Rochefort
+Ronald Rochefort Roger Renato Rochefort Romano
+Uintas Ronald Roger Unix Roberge Robert Re
+Renato Ronald Roberge Rioux Utah Ricard Roger
+Romano RMS Re Roberge Robert Renato Unix Roger</text>
+    </lesson>
+    <lesson>
+      <id>{bbdc1562-ede7-4c24-81f0-ae86da9afe6b}</id>
+      <title>Lesson 21</title>
+      <newCharacters>HG</newCharacters>
+      <text>Guy Houde George Georges Hubert Greg Hubert
+Georges Girard Horne George Greg Gregory Gilles
+Georges Hollerbach Goodwin Gatien Gratton
+George Gauthier Harwell GKS Gavrel Gaston
+Greg Hollerbach Gatien Harwell Gilles Guy
+Georges Gaston Gendron George Gagnon Georges
+Houde Geoffray Hubert Gavrel Gentilly George
+Gauthier Hayward Gordon Gratton Gosselin Harry
+Girard Gilles Greg Hubert Girard Gilles Hollerbach
+Georges GKS Greg Gatien George Geoff Gordon
+Hayward Gauthier Horne Guy Gendron Gordon
+Goodwin Goodwin Guy Geoffray Hz Gosselin Gauthier
+Hubert Geoffray Georges Gendron Hz Gavrel
+Gaston Hayward Horne Gavrel Hz GKS Hayward
+Ginette Gendron Houde Geoffray Geoffray Georges
+Harry Hubert Gaston Gentilly GKS Harry Geoffray
+Greg Gordon Geoffray GKS Gagnon Gaston Gratton
+Goodwin Gatien Gregory Georges Gordon Gentilly
+GKS Guy Hz Geoff Gilles Geoff Gosselin Gaston
+Gagnon Horne Gendron Gatien Harwell Gilles
+Gatien Gaston Georges Gosselin Hz Gregory
+Houde GKS Georges Ginette Gagnon Geoff Gaudreault
+Gaston Guy Goodwin Gaston Greg Gratton Gauthier
+Geoffray Hz GKS Horne Gaston Gordon Gavrel
+Gatien Harry Geoffray Geoffray Georges Harry
+Geoff Harwell Harry Hubert GKS Geoffray Hollerbach
+Horne Gendron Gilles Hz Gatien Gatien Goodwin
+Gordon Gaudreault Girard Hollerbach GKS Girard
+Gordon Goodwin Gilles Guy Georges Houde Houde
+Geoff Hubert Ginette Gratton Girard Gentilly</text>
+    </lesson>
+    <lesson>
+      <id>{b39a078c-78f2-412f-acda-09c58c6eb3d8}</id>
+      <title>Lesson 22</title>
+      <newCharacters>NB</newCharacters>
+      <text>Bousquet Boston BSD Bellemarre Barry Browne
+Brosseau Nelligan Boston Nelligan NFS Bousquet
+Beaulac Bescherelle Nelligan Boston Beaulac
+BSD Bellevue Bourassa Brosseau Beaulac BSD
+Bernard Beaudoin Blais Nestor Boston Bousquet
+Browne Browne Blais Nicole Nelligan Borduas
+Browne Bousquet Bellevue Bousquet Bellemarre
+Beaudoin Bousquet Nicole NFS Brian Bellemarre
+Boston Browne Benoit Borduas Boucherville
+Boyer NFS Nicole Bousquet Beaudoin Bescherelle
+Beaudoin Boucherville Boily Brian Bescherelle
+Bousquet Benoit Borduas Barry Blais Barry
+Nicole Beaulac Boyer Brosseau Nestor Bourassa
+Brosseau Bellemarre Borduas NFS Bourassa Boivin
+Beaudoin Boyer Barry Beaudoin Bourassa Boily
+Nelligan Benoit Nestor Bellevue Boily Bernard
+Bentz Benoit Bellemarre Brosseau Barry Beaudoin
+Brian Browne NFS Boivin Benoit Nestor Browne
+Brosseau Brian Boily Barry Bousquet Boucherville
+Beaulac Browne Bourassa NFS Boucherville Bentz
+Nelligan Brown Borduas Beaudoin Bellevue BSD
+Bescherelle Bescherelle Bernard Brown Nestor
+Boivin Beaulac Bellevue Boivin Bernard Bescherelle
+Bousquet Blais Boucherville BSD Bentz Blais
+Boyer Boivin Boivin Bellemarre Boston Borduas
+Brian Beaulac Boucherville Nagle Benoit Bousquet
+Boyer NFS Boily Brown Benoit Nagle Bernard
+BSD Barry Barry Beaudoin Boyer Nestor Bescherelle
+Bellemarre NFS Nagle Nestor Blais Boucherville
+Bentz Boston Brian Beaulac Brown Bellevue</text>
+    </lesson>
+    <lesson>
+      <id>{09807189-053e-4b87-bd37-0708b16128b3}</id>
+      <title>Lesson 23</title>
+      <newCharacters>VI</newCharacters>
+      <text>Vancouver Verville Internet Isabelle Viger
+VLSI Vancouver Verville Vancouver Isabelle
+Vancouver Isabelle Vancouver Intel Inmos Verville
+VME Interleaf Isabelle VHS Interleaf Viger
+Varennes IEEE Interleaf VME Viger Inmos Interleaf
+Interleaf IEEE Isabelle Victoriaville Victoriaville
+Inmos Inmos VME VME VLSI Verville Victoriaville
+VHS Internet Varennes Varennes VHS Viger Vancouver
+Inc IEEE Victoria Interleaf Isabelle Vincent
+IEEE Isabelle Viger Isabelle VHS Viger Isabelle
+VLSI IMSL Viger VME Internet Verville VLSI
+Victoria IMSL IEEE Isabelle Vincent Victoria
+VLSI Interleaf Victoriaville Victoria Vancouver
+Verville Interleaf Viger Verville Isabelle
+Verville VHS Vincent Intel Victoria Intel
+Interleaf Intel Vancouver IEEE Inc Victoriaville
+Victoriaville Verville IEEE Internet IEEE
+Inmos Vincent Viger IEEE Internet Intel VHS
+Inmos IEEE Interleaf Inmos Vancouver Verville
+VHS Isabelle Interleaf Intel VME Victoria
+Interleaf VHS VLSI Isabelle VLSI VLSI Varennes
+VME IMSL Vancouver Victoria Inmos VME VME
+Verville Vincent Vancouver Inmos Intel IEEE
+Internet Intel Internet Inmos Vincent Isabelle
+VME Vincent IEEE IMSL IEEE VME Vincent Intel
+Victoriaville Internet Vancouver Inmos Vancouver
+Interleaf IEEE Varennes Inmos Vincent Isabelle
+Vincent Vancouver Intel Victoria IMSL Isabelle
+Inmos Isabelle VLSI Victoriaville VHS Inc
+Interleaf Inmos IMSL IMSL Varennes Vincent</text>
+    </lesson>
+    <lesson>
+      <id>{7fbd4a2a-80a1-4005-be41-45c52a8928ee}</id>
+      <title>Lesson 24</title>
+      <newCharacters>CP</newCharacters>
+      <text>Phaneuf CPU Corp Corp PostScript Cloutier
+Christian PostScript Provost Poussart Paul
+Paul PERL Phaneuf Christian Cousineau Croteau
+Corp Californie Coulombe Cadieux Cousineau
+Cloutier Christian Cousineau Comeau Colombie
+Christian Provost CCD Chambly Californie PCL
+Phaneuf Cloutier Casavant Paul Cloutier Canada
+Pronovost Paul CCD Chambly Carole Pellan Chambly
+PERL CCD Poussart Cambridge Coulombe Claude
+Claude Charron Californie Paul Charles PostScript
+Corp CCD Provost Phaneuf Claude Christian
+CERN Charles Casavant Californie PostScript
+Papineau Poussart PCL Cambridge Casavant Pellan
+Pennsylvanie PERL Cadieux Chambly PostScript
+Pellan CERN Phil PCL Cloutier Cousineau Pennsylvanie
+PostScript Phaneuf Poussart PostScript Claude
+Charles Pennsylvanie Californie Pennsylvanie
+Charron Croteau Canada Pennsylvanie CPU Chambly
+Colombie Canada PERL CDN Pronovost Poussart
+Casavant Claude Colombie Poussart Cloutier
+Papineau Comeau Pennsylvanie Californie Christian
+CERN CDN Poussart CDN Carole Papineau Chambly
+Christian CDN PostScript Chambly Coulombe
+CERN Californie Charles Pellan Corp Californie
+Comeau Chambly CCD Poussart PostScript Californie
+Pronovost Charron Pronovost Cousineau PostScript
+Phaneuf Cousineau CCD Comeau Phil CDN CERN
+Christian Croteau CERN CDN Paul Carole PostScript
+Californie Pierrefonds CCD CDN CERN Claude
+Papineau Carole Charron PERL Croteau Casavant</text>
+    </lesson>
+    <lesson>
+      <id>{25e5d6f4-a342-46c0-b17f-df725fd20c54}</id>
+      <title>Lesson 25</title>
+      <newCharacters>YT</newCharacters>
+      <text>Yves Turcotte Tessier TCP Tokyo Tokyo Turcotte
+Tokyo Yvan TCP Yolande Toronto TCP TCP Tokyo
+Todd Yves Todd Thierry Tremblay TCP Tessier
+Turcotte Yves Toulouse Toulouse Turcotte Thierry
+Tremblay Yvan Tanguay Todd TCP Thierry Yves
+Tremblay Tokyo Todd Toulouse Thierry Thibault
+Yvan Toulouse Texas Thibault Todd Tremblay
+Tremblay Thibault Turcotte Texas Texas Tanguay
+Toulouse Thierry Toronto Tessier Turcotte
+Toulouse Tanguay Todd Toulouse TCP Yves Texas
+Toronto Todd Yves Yolande Yolande Thibault
+TCP Tessier Tanguay Yolande Toronto TCP Texas
+Yves Texas Toronto Thierry Todd Toronto Toulouse
+Yvan Thierry Texas TCP Toulouse Texas Thibault
+TCP Yolande Yolande Yolande Todd Thierry TCP
+Tanguay Yolande Toulouse TCP Turcotte Toronto
+Tanguay Thibault Tokyo Toulouse Yolande Yves
+Tessier Yolande Texas Toulouse Yvan Turcotte
+Toulouse Tanguay Tessier TCP Toulouse Toronto
+Yvan Yves Todd Tessier Toulouse Todd Yvan
+Toulouse Thierry Tremblay Yolande Turcotte
+Yves Tokyo Yves Tessier Yvan Tessier Thibault
+Yves Tremblay Thierry Tanguay TCP Turcotte
+Toronto TCP Tanguay Tokyo Tokyo Thibault Thierry
+Tessier Tokyo Tessier Texas Tanguay Thibault
+Todd Tanguay Todd Thierry Turcotte Texas Yolande
+Todd Tokyo Thierry Yves Tessier Thibault Todd
+TCP Thibault Yves Thierry Turcotte Toronto
+Thierry Texas Todd Toronto Texas Yvan TCP
+Yolande Tanguay Tessier TCP Todd Tessier Thibault</text>
+    </lesson>
+    <lesson>
+      <id>{e58113f2-894b-4e8f-b141-9d5ab9100656}</id>
+      <title>Lesson 26</title>
+      <newCharacters>O&#xD9;</newCharacters>
+      <text>Ottawa Owen Owen Owen Ottawa Ontario Owen
+Ontario Ouellet Ozias Ouellet Owen Ouellet
+Ottawa Owen Ouellet Ontario Owen Ozias Owen
+Ontario Owen Ottawa Ontario Ouellet Ottawa
+Ouellet Ouellet Ozias Ouellet Ozias Ouellet
+Owen Ozias Ouellet Ottawa Ottawa Ouellet Ouellet
+Owen Ozias Ouellet Ottawa Ottawa Owen Ottawa
+Ottawa Ouellet Ozias Ontario Ouellet Owen
+Ontario Owen Ouellet Ontario Ozias Ouellet
+Ontario Owen Ouellet Owen Ouellet Ouellet
+Ozias Ontario Owen Ouellet Ontario Owen Owen
+Owen Owen Ottawa Ozias Owen Ontario Ontario
+Ouellet Ottawa Ozias Ontario Ottawa Ottawa
+Ouellet Ottawa Ouellet Ottawa Owen Ozias Ozias
+Ouellet Ozias Ottawa Ouellet Owen Owen Owen
+Ouellet Ouellet Owen Ouellet Ouellet Ottawa
+Owen Ozias Ottawa Ouellet Ottawa Owen Owen
+Ontario Ouellet Ozias Ouellet Ouellet Ontario
+Ontario Owen Ouellet Ottawa Ontario Ouellet
+Ontario Ouellet Ontario Ouellet Owen Ontario
+Ontario Ouellet Ouellet Ozias Ouellet Owen
+Ontario Ottawa Ozias Ontario Ozias Ozias Ontario
+Ottawa Ozias Ottawa Ottawa Ottawa Owen Owen
+Ozias Ouellet Ottawa Owen Ouellet Owen Owen
+Ozias Ouellet Owen Ottawa Ozias Owen Owen
+Owen Ouellet Ottawa Ouellet Ottawa Ontario
+Ozias Ouellet Ottawa Ottawa Ottawa Ontario
+Ozias Ozias Owen Ozias Ozias Ozias Ozias Ontario
+Ontario Ottawa Ontario Ontario Ouellet Ozias
+Ouellet Owen Owen Owen Owen Owen Owen Ozias</text>
+    </lesson>
+    <lesson>
+      <id>{f3a750b1-c145-429c-bafe-ff7cb4d2777e}</id>
+      <title>Lesson 27</title>
+      <newCharacters>AZ</newCharacters>
+      <text>AAAI Audy AAAI April AutoCAD Anjou Allemagne
+Alain AAAI Alain Adoncourt Auclair AAAI Audy
+Angleterre Apple ANSI Archibald Amadeus Alfred
+Zawinski Angleterre Archibald Auclair ASCII
+Alain Zawinski Allemagne Alexandria Abbott
+Audy Angleterre Apple Aikin Anjou Amadeus
+Aubertin AutoCAD Anjou Amadeus ASCII Abbott
+Alexandrie Alfred April Angleterre Audy Angleterre
+AAAI Zawinski Angie Abbott Adoncourt Adoncourt
+Archibald Alexandria Audy Apple Apple ACM
+Alfred Allemagne ASCII Archibald Audy ACM
+Abbott Auclair Anjou Angie Alexandrie AAAI
+ASCII Allemagne Amadeus Audy April Zawinski
+ACM Angleterre Archibald Angie Allemagne AutoCAD
+Aikin Anjou Allemagne Alfred Adoncourt Alain
+Alfred Angleterre Archibald Angie ANSI Aubertin
+Apple Anjou Adoncourt Amadeus Amadeus Amadeus
+Adoncourt Apple Alfred ASCII Allemagne Aikin
+Allemagne Allemagne ANSI Anjou Alain ACM April
+Adoncourt Audy Angie Angleterre Abbott ACM
+Alain Allemagne Archibald Alexandrie ACM Zawinski
+Apple Anjou AAAI Archibald Auclair Allemagne
+Anjou ASCII ASCII AAAI Alexandria Auclair
+Alexandrie April AutoCAD Anjou AAAI Anjou
+Adoncourt Allemagne Alexandria Aikin April
+Amadeus Aikin ANSI Alfred Amadeus ANSI Alfred
+ACM Alexandria Auclair AAAI ACM Anjou ACM
+Audy AAAI ASCII Archibald ASCII Adoncourt
+Archibald Anjou Auclair Angleterre Audy Aikin
+April Anjou ANSI ACM Allemagne Alexandrie</text>
+    </lesson>
+    <lesson>
+      <id>{efca4022-1f46-495e-a30f-8613db29a58c}</id>
+      <title>Lesson 28</title>
+      <newCharacters>WX</newCharacters>
+      <text>Wilfrid Williams Wright Wilfrid Williams William
+Wilfrid Wright William Wilfrid Wright Williams
+Wilfrid Williams Williams Williams William
+Wright Wright Wright Williams Williams William
+William William Williams Wright William Williams
+Wright William William Wright Wilfrid Wright
+Wright Williams Wilfrid William Wright William
+William Wright Williams William Wright Williams
+Wilfrid Wright Williams Williams Wright Wilfrid
+Wright Wilfrid Wright Williams Wilfrid William
+Williams Williams Williams Wright Wright William
+Wright Wright William Williams William Wilfrid
+William Williams Wilfrid Wright Wright Williams
+Wright Williams Williams Wright Wilfrid Williams
+Wilfrid Williams William Williams Williams
+Wright William Wilfrid Wright Wright Wilfrid
+Wright William Williams Wright Williams Wilfrid
+William William Williams William Wright Wright
+William Williams William Wright Williams William
+Wilfrid Williams Wright William William Williams
+Wright William Wright Williams William William
+William Wilfrid Williams Wright Wilfrid Wilfrid
+Williams Wright Williams Williams William
+Wright Williams Williams Williams Wright Williams
+Williams Wilfrid Wilfrid Wilfrid Wilfrid Wright
+Williams William William William Wilfrid Wright
+Williams Wright Wilfrid William Williams Williams
+Wright William Wilfrid William William William
+Williams Wilfrid William Wilfrid William Wilfrid
+Wilfrid Wright Wright William Williams Wilfrid</text>
+    </lesson>
+  </lessons>
+</course>

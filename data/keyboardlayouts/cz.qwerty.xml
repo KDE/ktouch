@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<keyboardLayout>
+  <id>{1c527bcb-b1d6-4446-adda-727e8be8ed45}</id>
+  <title>České qwerty</title>
+  <name>cz(qwerty)</name>
+  <width>1430</width>
+  <height>480</height>
+  <keys>
+    <key left="180" top="200" width="80" height="80" fingerIndex="0">
+      <char position="topLeft" modifier="right_shift">A</char>
+      <char position="hidden">a</char>
+    </key>
+    <key left="280" top="200" width="80" height="80" fingerIndex="1">
+      <char position="topLeft" modifier="right_shift">S</char>
+      <char position="hidden">s</char>
+    </key>
+    <key left="380" top="200" width="80" height="80" fingerIndex="2">
+      <char position="topLeft" modifier="right_shift">D</char>
+      <char position="hidden">d</char>
+    </key>
+    <key left="480" top="200" width="80" height="80" fingerIndex="3" hasHapticMarker="true">
+      <char position="topLeft" modifier="right_shift">F</char>
+      <char position="hidden">f</char>
+    </key>
+    <key left="780" top="200" width="80" height="80" fingerIndex="4" hasHapticMarker="true">
+      <char position="topLeft" modifier="left_shift">J</char>
+      <char position="hidden">j</char>
+    </key>
+    <key left="880" top="200" width="80" height="80" fingerIndex="5">
+      <char position="topLeft" modifier="left_shift">K</char>
+      <char position="hidden">k</char>
+    </key>
+    <key left="980" top="200" width="80" height="80" fingerIndex="6">
+      <char position="topLeft" modifier="left_shift">L</char>
+      <char position="hidden">l</char>
+    </key>
+    <key left="1080" top="200" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">"</char>
+      <char position="bottomLeft">&#x16F;</char>
+    </key>
+    <key left="0" top="0" width="80" height="80" fingerIndex="0">
+      <char position="topLeft" modifier="right_shift">&#xB0;</char>
+      <char position="bottomLeft">;</char>
+    </key>
+    <key left="100" top="0" width="80" height="80" fingerIndex="0">
+      <char position="topLeft" modifier="right_shift">1</char>
+      <char position="bottomLeft">+</char>
+    </key>
+    <key left="200" top="0" width="80" height="80" fingerIndex="1">
+      <char position="topLeft" modifier="right_shift">2</char>
+      <char position="bottomLeft">&#x11B;</char>
+    </key>
+    <key left="300" top="0" width="80" height="80" fingerIndex="2">
+      <char position="topLeft" modifier="right_shift">3</char>
+      <char position="bottomLeft">&#x161;</char>
+    </key>
+    <key left="400" top="0" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">4</char>
+      <char position="bottomLeft">&#x10D;</char>
+    </key>
+    <key left="500" top="0" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">5</char>
+      <char position="bottomLeft">&#x159;</char>
+    </key>
+    <key left="600" top="0" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">6</char>
+      <char position="bottomLeft">&#x17E;</char>
+    </key>
+    <key left="700" top="0" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">7</char>
+      <char position="bottomLeft">&#xFD;</char>
+    </key>
+    <key left="800" top="0" width="80" height="80" fingerIndex="5">
+      <char position="topLeft" modifier="left_shift">8</char>
+      <char position="bottomLeft">&#xE1;</char>
+    </key>
+    <key left="900" top="0" width="80" height="80" fingerIndex="6">
+      <char position="topLeft" modifier="left_shift">9</char>
+      <char position="bottomLeft">&#xED;</char>
+    </key>
+    <key left="1000" top="0" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">0</char>
+      <char position="bottomLeft">&#xE9;</char>
+    </key>
+    <key left="1100" top="0" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">%</char>
+      <char position="bottomLeft">=</char>
+    </key>
+    <key left="1200" top="0" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">&#x2C7;</char>
+      <char position="bottomLeft">&#xB4;</char>
+    </key>
+    <key left="150" top="100" width="80" height="80" fingerIndex="0">
+      <char position="topLeft" modifier="right_shift">Q</char>
+      <char position="hidden">q</char>
+    </key>
+    <key left="250" top="100" width="80" height="80" fingerIndex="1">
+      <char position="topLeft" modifier="right_shift">W</char>
+      <char position="hidden">w</char>
+    </key>
+    <key left="350" top="100" width="80" height="80" fingerIndex="2">
+      <char position="topLeft" modifier="right_shift">E</char>
+      <char position="hidden">e</char>
+    </key>
+    <key left="450" top="100" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">R</char>
+      <char position="hidden">r</char>
+    </key>
+    <key left="550" top="100" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">T</char>
+      <char position="hidden">t</char>
+    </key>
+    <key left="230" top="300" width="80" height="80" fingerIndex="0">
+      <char position="topLeft" modifier="right_shift">Z</char>
+      <char position="hidden">z</char>
+    </key>
+    <key left="750" top="100" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">U</char>
+      <char position="hidden">u</char>
+    </key>
+    <key left="850" top="100" width="80" height="80" fingerIndex="5">
+      <char position="topLeft" modifier="left_shift">I</char>
+      <char position="hidden">i</char>
+    </key>
+    <key left="950" top="100" width="80" height="80" fingerIndex="6">
+      <char position="topLeft" modifier="left_shift">O</char>
+      <char position="hidden">o</char>
+    </key>
+    <key left="1050" top="100" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">P</char>
+      <char position="hidden">p</char>
+    </key>
+    <key left="1150" top="100" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">/</char>
+      <char position="bottomLeft">&#xFA;</char>
+    </key>
+    <key left="1250" top="100" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">(</char>
+      <char position="bottomLeft">)</char>
+    </key>
+    <key left="580" top="200" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">G</char>
+      <char position="hidden">g</char>
+    </key>
+    <key left="680" top="200" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">H</char>
+      <char position="hidden">h</char>
+    </key>
+    <key left="1180" top="200" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">!</char>
+      <char position="bottomLeft">&#xA7;</char>
+    </key>
+    <key left="1350" top="100" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">'</char>
+      <char position="bottomLeft">&#xA8;</char>
+    </key>
+    <key left="650" top="100" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">Y</char>
+      <char position="hidden">y</char>
+    </key>
+    <key left="330" top="300" width="80" height="80" fingerIndex="1">
+      <char position="topLeft" modifier="right_shift">X</char>
+      <char position="hidden">x</char>
+    </key>
+    <key left="430" top="300" width="80" height="80" fingerIndex="2">
+      <char position="topLeft" modifier="right_shift">C</char>
+      <char position="hidden">c</char>
+    </key>
+    <key left="530" top="300" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">V</char>
+      <char position="hidden">v</char>
+    </key>
+    <key left="630" top="300" width="80" height="80" fingerIndex="3">
+      <char position="topLeft" modifier="right_shift">B</char>
+      <char position="hidden">b</char>
+    </key>
+    <key left="730" top="300" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">N</char>
+      <char position="hidden">n</char>
+    </key>
+    <key left="830" top="300" width="80" height="80" fingerIndex="4">
+      <char position="topLeft" modifier="left_shift">M</char>
+      <char position="hidden">m</char>
+    </key>
+    <key left="930" top="300" width="80" height="80" fingerIndex="5">
+      <char position="topLeft" modifier="left_shift">?</char>
+      <char position="bottomLeft">,</char>
+    </key>
+    <key left="1030" top="300" width="80" height="80" fingerIndex="6">
+      <char position="topLeft" modifier="left_shift">:</char>
+      <char position="bottomLeft">.</char>
+    </key>
+    <key left="1130" top="300" width="80" height="80" fingerIndex="7">
+      <char position="topLeft" modifier="left_shift">_</char>
+      <char position="bottomLeft">-</char>
+    </key>
+    <specialKey left="0" top="100" width="130" height="80" type="tab"/>
+    <specialKey left="1280" top="200" width="150" height="80" type="return"/>
+    <specialKey left="1230" top="300" width="200" height="80" type="shift" modifierId="right_shift"/>
+    <specialKey left="1150" top="400" width="130" height="80" type="other" label="Alt"/>
+    <specialKey left="1300" top="400" width="130" height="80" type="other" label="Ctrl"/>
+    <specialKey left="150" top="400" width="130" height="80" type="other" label="Alt"/>
+    <specialKey left="0" top="400" width="130" height="80" type="other" label="Ctrl"/>
+    <specialKey left="300" top="400" width="830" height="80" type="space"/>
+    <specialKey left="0" top="300" width="210" height="80" type="shift" modifierId="left_shift"/>
+    <specialKey left="0" top="200" width="160" height="80" type="capslock"/>
+    <specialKey left="1300" top="0" width="130" height="80" type="backspace"/>
+  </keys>
+</keyboardLayout>
