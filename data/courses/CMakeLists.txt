@@ -8,7 +8,6 @@ set (coursefiles
     cz.xml
     de1.xml
     de2.xml
-    de3.xml
     de.dvorak.xml
     de.neo.xml
     dk1.xml

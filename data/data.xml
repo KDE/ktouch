@@ -70,12 +70,10 @@ Homepage: http://neo-layout.org</description>
     <path>courses/de.neo.xml</path>
   </course>
   <course>
-    <title>Deutsch (in 9 Lektionen)</title>
-    <description>Deutsche Trainings-Datei f&#xFC;r KTouch, Autor unbekannt
-
-Beinhaltet recht lange Level, keine Sonderzeichen oder Zahlen</description>
+    <title>Deutsch</title>
+    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt;</description>
     <keyboardLayout>de</keyboardLayout>
-    <id>{f4a41849-c584-4436-8d91-2782356c6eb0}</id>
+    <id>{ac4c596a-520a-405f-8a7f-532dc335a5c4}</id>
     <path>courses/de1.xml</path>
   </course>
   <course>
@@ -90,13 +88,6 @@ Version: 0.1 beta</description>
     <keyboardLayout>de</keyboardLayout>
     <id>{6fe46eef-3182-4322-82b6-bb65831e594e}</id>
     <path>courses/de2.xml</path>
-  </course>
-  <course>
-    <title>Deutsch</title>
-    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt;</description>
-    <keyboardLayout>de</keyboardLayout>
-    <id>{ac4c596a-520a-405f-8a7f-532dc335a5c4}</id>
-    <path>courses/de3.xml</path>
   </course>
   <course>
     <title>Dansk</title>
