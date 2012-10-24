@@ -14,7 +14,7 @@ set(graph_SRCS
     )
 
 automoc4_add_library(graphplugin SHARED ${graph_SRCS})
-target_link_libraries(graphplugin ${KDE4_PLASMA_LIBS} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} kdeclarative)
+target_link_libraries(graphplugin ${KDE4_PLASMA_LIBS} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${KDECLARATIVE_LIBRARIES})
 
 install(TARGETS graphplugin DESTINATION ${IMPORTS_INSTALL_DIR}/org/kde/ktouch/graph)
 

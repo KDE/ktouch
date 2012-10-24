@@ -1,5 +1,7 @@
 # CMakeList.txt for the KTouch source directory
 
+find_package(KDeclarative REQUIRED)
+
 find_library(X11_Xkbfile_LIB OPTIONAL)
 
 add_subdirectory(qml)
@@ -101,7 +103,7 @@ kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktou
 
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
-target_link_libraries(ktouch kdeclarative ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS} ${KDE4_KCMUTILS_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY} ${QT_QTSQL_LIBRARY})
+target_link_libraries(ktouch ${KDECLARATIVE_LIBRARIES} ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS} ${KDE4_KCMUTILS_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY} ${QT_QTSQL_LIBRARY})
 
 if (X11_Xkbfile_FOUND)
     target_link_libraries(ktouch ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
