@@ -86,12 +86,12 @@ set(ktouch_SRCS
     colorsconfigwidget.cpp
 )
 
-IF (X11_Xkbfile_FOUND)
+if (X11_Xkbfile_FOUND)
     add_definitions(-DKTOUCH_BUILD_WITH_X11)
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
-ELSE (X11_Xkbfile_FOUND)
+else (X11_Xkbfile_FOUND)
     set(ktouch_SRCS ${ktouch_SRCS} keyboardlayoutmenu.cpp)
-ENDIF (X11_Xkbfile_FOUND)
+endif (X11_Xkbfile_FOUND)
 
 kde4_add_kcfg_files(ktouch_SRCS preferences.kcfgc )
 
@@ -102,11 +102,10 @@ kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktou
 kde4_add_executable(ktouch ${ktouch_UIS} ${ktouch_SRCS})
 
 target_link_libraries(ktouch kdeclarative ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS} ${KDE4_KCMUTILS_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTOPENGL_LIBRARY} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTXMLPATTERNS_LIBRARY} ${QT_QTSQL_LIBRARY})
-target_link_libraries(ktouch ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
 
-if (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
-    target_link_libraries(ktouch ${KDE4_PHONON_LIBS})
-endif (KDEEDU_KTOUCH_BUILD_WITH_PHONON)
+if (X11_Xkbfile_FOUND)
+    target_link_libraries(ktouch ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
+endif (X11_Xkbfile_FOUND)
 
 install(TARGETS ktouch ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktouch.kcfg DESTINATION ${KCFG_INSTALL_DIR})
