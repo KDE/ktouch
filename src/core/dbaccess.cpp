@@ -97,7 +97,7 @@ bool DbAccess::checkDbSchema()
         QString version = versionQuery.value(0).toString();
         if (version != "1.0")
         {
-            m_errorMessage = i18n("Invalid database version '%1'.").arg(version);
+            m_errorMessage = i18n("Invalid database version '%1'.", version);
             emit errorMessageChanged();
             return false;
         }

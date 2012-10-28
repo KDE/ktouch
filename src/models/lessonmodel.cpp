@@ -81,7 +81,7 @@ QVariant LessonModel::data(const QModelIndex& index, int role) const
             return !lesson->title().isEmpty()?
                 QVariant(lesson->title()): QVariant(i18n("<No title>"));
         case Qt::ToolTipRole:
-            return QVariant(i18n("<p>New characters: %1<p/><p>%2</p>").arg(lesson->newCharacters(), lesson->text()));
+            return QVariant(i18n("<p>New characters: %1<p/><p>%2</p>", lesson->newCharacters(), lesson->text()));
         default:
             return QVariant();
     }

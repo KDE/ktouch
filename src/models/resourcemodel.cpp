@@ -199,7 +199,7 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
     case Qt::DisplayRole:
         return QVariant(m_dataIndex->keyboardLayout(row)->title());
     case Qt::ToolTipRole:
-        return QVariant(i18n("Name: %1").arg(m_dataIndex->keyboardLayout(row)->name()));
+        return QVariant(i18n("Name: %1", m_dataIndex->keyboardLayout(row)->name()));
     case Qt::DecorationRole:
         return QVariant(resourceIcon(m_dataIndex->keyboardLayout(row)->source()));
     case ResourceModel::ResourceTypeRole:

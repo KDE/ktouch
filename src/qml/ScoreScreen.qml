@@ -337,8 +337,8 @@ FocusScope {
                                 anchors.right: parent.right
                                 anchors.verticalCenter: parent.verticalCenter
                                 text:  internal.lessonPassed?
-                                    i18n("Congratulations! You've passed the lesson."):
-                                    i18n("You haven't passed the lesson.")
+                                    i18n("Congratulations! You have passed the lesson."):
+                                    i18n("You have not passed the lesson.")
                                 height: paintedHeight
                                 font.pointSize: 1.5 * theme.defaultFont.pointSize
                             }

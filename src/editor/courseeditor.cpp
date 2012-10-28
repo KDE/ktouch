@@ -339,7 +339,7 @@ void CourseEditor::onLessonTextChanged()
 
     const int length = text.length();
 
-    m_characterCountLabel->setText(i18n("%1 Characters", length));
+    m_characterCountLabel->setText(i18np("%1 Character", "%1 Characters", length));
 
     if (text != m_currentLesson->text())
     {

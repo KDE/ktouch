@@ -223,7 +223,7 @@ void ResourceEditor::importResource()
         if (importKeyboardLayout(path))
             return;
 
-        KMessageBox::error(this, i18n("The selected file couldn't be imported."));
+        KMessageBox::error(this, i18n("The selected file could not be imported."));
     }
 }
 
@@ -370,11 +370,11 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
 
     if (Course* course = qobject_cast<Course*>(backup))
     {
-        msg = i18n("Course <b>%1</b> deleted").arg(Qt::escape(course->title()));
+        msg = i18n("Course <b>%1</b> deleted", Qt::escape(course->title()));
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(backup))
     {
-        msg = i18n("Keyboard layout <b>%1</b> deleted").arg(Qt::escape(keyboardLayout->title()));
+        msg = i18n("Keyboard layout <b>%1</b> deleted", Qt::escape(keyboardLayout->title()));
     }
 
     m_editorWidget->showMessage(ResourceEditorWidget::ResourceDeletedMsg, msg);
