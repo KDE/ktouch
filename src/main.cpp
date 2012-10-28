@@ -22,6 +22,8 @@
 #include "application.h"
 #include "mainwindow.h"
 
+#include "KDebug"
+
 static const char description[] =
     I18N_NOOP("Learn and practice typewriting");
 
@@ -59,11 +61,28 @@ int main(int argc, char **argv)
     KApplication::setGraphicsSystem("raster");
 
     Application app;
-    MainWindow *mainWin = 0;
 
     if (app.isSessionRestored())
     {
-        RESTORE(MainWindow);
+        for (int i = 1; KMainWindow::canBeRestored(i); i++)
+        {
+            const QString name = KMainWindow::classNameOfToplevel(i);
+
+            if (name == "MainWindow")
+            {
+                (new MainWindow)->restore(i);
+            }
+            else if (name == "ResourceEditor")
+            {
+                QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+
+                if (resourceEditorRef.isNull())
+                {
+                    resourceEditorRef = new ResourceEditor();
+                    resourceEditorRef.data()->restore(i);
+                }
+            }
+        }
     }
     else
     {
@@ -83,6 +102,7 @@ int main(int argc, char **argv)
         }
         else
         {
+            MainWindow *mainWin = 0;
             mainWin = new MainWindow();
             mainWin->setUseOpenGLViewport(args->isSet("opengl"));
             mainWin->show();
