@@ -23,6 +23,7 @@ FocusScope {
     id: trainer
 
     property Lesson lesson
+    property KeyboardLayout keyboardLayout
     property variant lines: [];
 
     property string nextChar
@@ -166,6 +167,33 @@ FocusScope {
                 height: lineHeight
                 text: trainer.position >= 0 && trainer.position < trainer.lines.length?
                     trainer.lines[trainer.position]: ""
+
+                KeyItem {
+                    id: hintKey
+                    property real scaleFactor: 1
+                    anchors.horizontalCenter: trainingLine.horizontalCenter
+                    anchors.top: trainingLine.bottom
+
+                    property Key defaultKey: Key {}
+                    property KeyboardLayout defaultKeyboardLayout: KeyboardLayout {}
+                    key: {
+                        for (var i = 0; i < keyboardLayout.keyCount; i++) {
+                            var key = keyboardLayout.key(i)
+
+                            if (key.keyType() === "specialKey" && key.type === trainingLine.repeatedErrorSolution) {
+                                return key;
+                            }
+                        }
+
+                        return defaultKey
+                    }
+                    opacity: trainingLine.repeatedErrorCount >= 3? 1: 0
+                    isHighlighted: opacity == 1
+                    keyboardLayout: screen.keyboardLayout || defaultKeyboardLayout
+                    Behavior on opacity {
+                        NumberAnimation { duration: 150 }
+                    }
+                }
             }
         }
         MouseArea {
@@ -173,6 +201,7 @@ FocusScope {
             onClicked: trainingLine.forceActiveFocus()
         }
     }
+
     PlasmaComponents.ScrollBar {
         flickableItem: sheetFlick
     }

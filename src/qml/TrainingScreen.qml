@@ -162,6 +162,7 @@ FocusScope {
                 id: trainingWidget
                 anchors.fill: parent
                 lesson: screen.lesson
+                keyboardLayout: screen.keyboardLayout
                 onKeyPressed: keyboard.handleKeyPress(event)
                 onKeyReleased: keyboard.handleKeyRelease(event)
                 onNextCharChanged: keyboard.updateKeyHighlighting()
@@ -193,6 +194,8 @@ FocusScope {
             elementId: "footer"
 
             Keyboard {
+                id: keyboard
+
                 property variant highlightedKeys: []
                 function highlightKey(which) {
                     for (var i = 0; i < highlightedKeys.length; i++)
@@ -237,7 +240,6 @@ FocusScope {
                 }
 
                 keyboardLayout: screen.keyboardLayout
-                id: keyboard
                 anchors.fill: parent
                 onKeyboardUpdate: {
                     setLessonKeys()

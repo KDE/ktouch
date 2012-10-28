@@ -31,20 +31,22 @@ Item {
     property int position: 0
     property bool isCorrect: true
 
+    property int repeatedErrorCount: 0
+    property int repeatedErrorSolution: SpecialKey.Backspace
+
     focus: true
 
     onTextChanged: resetLine()
 
     onFocusChanged: {
-        if (!line.activeFocus)
-        {
-            stats.stopTraining();
+        if (!line.activeFocus) {
+            stats.stopTraining()
         }
     }
 
     function startTraining() {
-        stats.startTraining();
-        stopTimer.restart();
+        stats.startTraining()
+        stopTimer.restart()
     }
 
     function resetLine() {
@@ -53,42 +55,58 @@ Item {
         line.position = 0
         lineChars.model = 0
         lineChars.model = line.text.length
+        line.repeatedErrorCount = 0
         emitNextChar()
     }
 
     function deleteLastChar() {
-        if (line.position === 0)
-            return;
-        line.position--;
-        var charItem = lineChars.itemAt(line.position);
-        charItem.text = line.text.charAt(line.position);
-        charItem.state = "placeholder";
-        line.enteredText = line.enteredText.substring(0, line.position);
-        line.isCorrect = line.enteredText === line.text.substring(0, line.position);
+        if (line.position === 0) {
+            return
+        }
+
+        line.position--
+        var charItem = lineChars.itemAt(line.position)
+        charItem.text = line.text.charAt(line.position)
+        charItem.state = "placeholder"
+        line.enteredText = line.enteredText.substring(0, line.position)
+        line.isCorrect = line.enteredText === line.text.substring(0, line.position)
+
+        if (line.isCorrect) {
+            line.repeatedErrorCount = 0
+        }
+
         emitNextChar()
     }
 
-    function addChar(newChar)
-    {
+    function addChar(newChar) {
         if (line.position >= text.length)
-            return;
-        var correctChar = text.charAt(line.position);
-        var isCorrect = newChar === correctChar;
-        var charItem = lineChars.itemAt(line.position);
-        line.enteredText += newChar;
-        if (line.isCorrect)
-        {
+            return
+        var correctChar = text.charAt(line.position)
+        var isCorrect = newChar === correctChar
+        var charItem = lineChars.itemAt(line.position)
+        line.enteredText += newChar
+
+        if (line.isCorrect) {
             stats.logCharacter(correctChar, isCorrect? TrainingStats.CorrectCharacter: TrainingStats.IncorrectCharacter)
         }
-        line.isCorrect = line.isCorrect && isCorrect;
-        charItem.text = newChar != " " || isCorrect? newChar: "\u2423";
-        charItem.state = line.isCorrect? "done": "error";
-        line.position++;
+
+        line.isCorrect = line.isCorrect && isCorrect
+
+        if (line.isCorrect) {
+            line.repeatedErrorCount = 0
+        }
+        else {
+            line.repeatedErrorSolution = SpecialKey.Backspace
+            line.repeatedErrorCount++
+        }
+
+        charItem.text = newChar !== " " || isCorrect? newChar: "\u2423"
+        charItem.state = line.isCorrect? "done": "error"
+        line.position++
         emitNextChar()
     }
 
-    function emitNextChar()
-    {
+    function emitNextChar() {
         if (line.position >= line.text.length)
             newNextChar(null)
         else
@@ -98,46 +116,47 @@ Item {
     Keys.onPressed: {
         if (!line.active)
             return
-        cursorAnimation.restart();
+        if (line.position == text.length && line.isCorrect) {
+            line.repeatedErrorSolution = preferences.nextLineWithReturn? SpecialKey.Return: SpecialKey.Space
+            line.repeatedErrorCount++
+        }
+        cursorAnimation.restart()
         switch(event.key)
         {
         case Qt.Key_Space:
-            startTraining();
-            if (preferences.nextLineWithSpace && line.position == text.length && line.isCorrect)
-            {
-                resetLine();
-                line.done();
+            startTraining()
+            if (preferences.nextLineWithSpace && line.position == text.length && line.isCorrect) {
+                resetLine()
+                line.done()
             }
-            else
-            {
+            else {
                 addChar(event.text.charAt(0))
             }
-            break;
+            break
         case Qt.Key_Return:
-            startTraining();
-            if (preferences.nextLineWithReturn && line.position == text.length && line.isCorrect)
-            {
-                resetLine();
-                line.done();
+            startTraining()
+            if (preferences.nextLineWithReturn && line.position == text.length && line.isCorrect) {
+                resetLine()
+                line.done()
             }
-            break;
+            break
         case Qt.Key_Backspace:
-            startTraining();
-            deleteLastChar();
-            break;
+            startTraining()
+            deleteLastChar()
+            break
         case Qt.Key_Delete:
         case Qt.Key_Tab:
-            break;
+            break
         default:
-            startTraining();
-            if (event.text !== "")
-            {
+            startTraining()
+            if (event.text !== "") {
                 addChar(event.text.charAt(0))
             }
-            break;
+            break
         }
-        if (!event.isAutoRepeat)
+        if (!event.isAutoRepeat) {
             line.keyPressed(event)
+        }
     }
 
     Keys.onReleased: {
@@ -151,7 +170,7 @@ Item {
         id: stopTimer
         interval: 5000
         onTriggered: {
-            stats.stopTraining();
+            stats.stopTraining()
         }
     }
 
@@ -196,7 +215,7 @@ Item {
                 ]
                 onStateChanged: {
                     if (lineChar.state == "error")
-                        error();
+                        error()
                 }
 
                 onError: SequentialAnimation {
