@@ -54,6 +54,7 @@ Item {
         priv.currentIndex = index;
         targetPage.dataIndexCourse = dataIndexCourse
         courseTitleLabel.text = dataIndexCourse.title
+        courseDescriptionItem.description = dataIndexCourse.description
 
         if (!automaticSelection) {
             coursePageContainer.inactivePage = coursePageContainer.activePage
@@ -115,8 +116,21 @@ Item {
                     height: paintedHeight
                     font.pointSize: 1.5 * theme.defaultFont.pointSize
                 }
+
                 Item {
-                    width: parent.width - courseTitleLabel.width - previousButton.width - nextButton.width - (parent.children.length - 1) * parent.spacing
+                    id: smallSpacer
+                    height: parent.height
+                    width: 3
+                }
+
+                PlasmaComponents.ToolButton {
+                    id: courseDescriptionButton
+                    iconSource: "dialog-information"
+                    checkable: true
+                }
+
+                Item {
+                    width: parent.width - courseTitleLabel.width - smallSpacer.width - courseDescriptionButton.width - previousButton.width - nextButton.width - (parent.children.length - 1) * parent.spacing
                     height: parent.height
                 }
 
@@ -145,13 +159,19 @@ Item {
             }
         }
 
+        CourseDescriptionItem {
+            id: courseDescriptionItem
+            width: parent.width
+            active: courseDescriptionButton.checked
+        }
+
         Item {
             id: coursePageContainer
             property CoursePage activePage: page0
             property CoursePage inactivePage: page1
 
             width: parent.width
-            height: parent.height - head.height
+            height: parent.height - head.height - courseDescriptionItem.height
 
             CoursePage {
                 id: page0

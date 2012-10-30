@@ -4,6 +4,7 @@ set(ktouch_qml_files
     HomeScreen.qml
     CourseSelector.qml
     CoursePage.qml
+    CourseDescriptionItem.qml
     NoCoursesMessage.qml
     ProfileSelector.qml
     ProfileForm.qml
