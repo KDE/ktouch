@@ -183,10 +183,15 @@ FocusScope {
         PlasmaCore.SvgItem {
             id: footer
             width: parent.width
-            visible: preferences.showKeyboard && screen.keyboardLayout.isValid
-            height: visible? Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)): 0
+            visible: preferences.showKeyboard
+            height: visible?
+                        screen.keyboardLayout.isValid?
+                            Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)):
+                            keyboardUnavailableNotice.height:
+                        0
             svg: screenSvg
             elementId: "footer"
+
             Keyboard {
                 property variant highlightedKeys: []
                 function highlightKey(which) {
@@ -239,6 +244,11 @@ FocusScope {
                     highlightedKeys = []
                     updateKeyHighlighting()
                 }
+            }
+
+            KeyboardUnavailableNotice {
+                id: keyboardUnavailableNotice
+                visible: !screen.keyboardLayout.isValid
             }
         }
     }

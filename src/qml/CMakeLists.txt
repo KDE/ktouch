@@ -29,6 +29,7 @@ set(ktouch_qml_files
     Keyboard.qml
     KeyItem.qml
     KeyLabel.qml
+    KeyboardUnavailableNotice.qml
 
     ScoreScreen.qml
     LearningProgressGraph.qml
