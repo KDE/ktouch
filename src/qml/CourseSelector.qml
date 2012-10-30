@@ -153,7 +153,6 @@ Item {
                     onClicked: {
                         var newIndex = (priv.currentIndex + 1) % courseRepeater.count
                         root.selectCourse(newIndex, false)
-                        saveLastUsedCourse
                     }
                 }
             }
