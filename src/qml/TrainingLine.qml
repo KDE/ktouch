@@ -15,12 +15,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.0
+import QtQuick 1.1
 import ktouch 1.0
 
 Item {
     id: line
     property string text
+    property real fontScale
+    property real charWidth
     property bool active
     signal done
     signal keyPressed(variant event)
@@ -34,6 +36,7 @@ Item {
     property int repeatedErrorCount: 0
     property int repeatedErrorSolution: SpecialKey.Backspace
 
+    height: line.fontScale * LessonFontSizeCalculater.BasePixelSize
     focus: true
 
     onTextChanged: resetLine()
@@ -174,53 +177,39 @@ Item {
         }
     }
 
-    Row {
-        id: row
-        anchors.centerIn: parent
-        spacing: 0
-        Repeater {
-            id: lineChars
-            model: 0
+    Repeater {
+        id: lineChars
+        model: 0
+
+        Item {
+            id: lineCharWrapper
+            property alias text: lineChar.text
+            transformOrigin: Item.Center
+            x: index * line.charWidth
+            y: 0
+            width: lineChar.width * line.fontScale
+            height: lineChar.height * line.fontScale
+            state: "placeholder"
+
+            onStateChanged: {
+                if (state == "error")
+                    errorAnimation.restart()
+            }
+
             Text {
-                signal error
                 id: lineChar
                 font.family: "monospace"
-                font.pixelSize: fontSize
-                transformOrigin: Item.Center
+                font.pixelSize: LessonFontSizeCalculater.BasePixelSize
                 text: line.text.charAt(index)
                 textFormat: Text.PlainText
-                state: "placeholder"
-                states: [
-                    State {
-                        name: "placeholder"
-                        PropertyChanges {
-                            target: lineChar
-                            color: "#888"
-                        }
-                    },
-                    State {
-                        name: "done"
-                        PropertyChanges {
-                            target: lineChar
-                            color: "#000"
-                        }
-                    },
-                    State {
-                        name: "error"
-                        PropertyChanges {
-                            target: lineChar
-                            color: "#f00"
-                        }
-                    }
-                ]
-                onStateChanged: {
-                    if (lineChar.state == "error")
-                        error()
-                }
+                smooth: true
+                transformOrigin: Item.TopLeft
+                scale: line.fontScale
 
-                onError: SequentialAnimation {
+                SequentialAnimation {
+                    id: errorAnimation
                     NumberAnimation {
-                        target: lineChar
+                        target: lineCharWrapper
                         property: "scale"
                         to: 1.3
                         duration: 100
@@ -228,7 +217,7 @@ Item {
                         easing.overshoot: 20
                     }
                     NumberAnimation {
-                        target: lineChar
+                        target: lineCharWrapper
                         property: "scale"
                         to: 1.0
                         duration: 50
@@ -236,18 +225,43 @@ Item {
                     }
                 }
             }
+
+            states: [
+                State {
+                    name: "placeholder"
+                    PropertyChanges {
+                        target: lineChar
+                        color: "#888"
+                    }
+                },
+                State {
+                    name: "done"
+                    PropertyChanges {
+                        target: lineChar
+                        color: "#000"
+                    }
+                },
+                State {
+                    name: "error"
+                    PropertyChanges {
+                        target: lineChar
+                        color: "#f00"
+                    }
+                }
+            ]
         }
     }
+
     Rectangle {
         id: cursor
         property Item target: lineChars.itemAt(line.position - 1)
         anchors {
-            left: parent.left
             verticalCenter: parent.verticalCenter
-            leftMargin: (target? target.x + target.width: 0) + row.x
+            left: parent.left
+            leftMargin: Math.round(target? target.x + target.width: 0)
         }
         width: 1
-        height: fontSize * 1.2
+        height: Math.round(1.2 * line.fontScale * LessonFontSizeCalculater.BasePixelSize)
         color: "#000"
         visible: line.activeFocus
         SequentialAnimation {

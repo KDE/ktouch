@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.0
+import QtQuick 1.1
 import ktouch 1.0
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
@@ -28,10 +28,7 @@ FocusScope {
 
     property string nextChar
     property bool isCorrect: trainingLine.isCorrect
-    property int fontSize: 20
     property int position: -1
-    property int lineHeight: 2 * fontSize
-    property int margin: 30
     signal finished
     signal keyPressed(variant event)
     signal keyReleased(variant event)
@@ -87,33 +84,38 @@ FocusScope {
             id: sheet
             color: "#fff"
             anchors.centerIn: parent
-            width: childrenRect.width
-            height: childrenRect.height
+            width: parent.width - 60
+            height: sheetContent.height + 2 * sheet.margin
+
+            property int margin: Math.floor(0.07 * width)
 
             border {
                 width: 1
                 color: "#000"
             }
 
+            LessonFontSizeCalculater {
+                id: fontSizeCalculater
+                targetWidth: sheet.width - 2 * sheet.margin
+                lesson: trainer.lesson
+            }
+
             Column {
-                width: childrenRect.width
+                id: sheetContent
+                anchors.centerIn: parent
+                width: fontSizeCalculater.targetWidth
                 height: childrenRect.height
-                Item {
-                    height: margin
-                    width: 1
+
+                Text {
+                    id: titleText
+                    width: parent.width
+                    font.pixelSize: Math.round(LessonFontSizeCalculater.BasePixelSize * 1.7 * fontSizeCalculater.scale)
+                    wrapMode: Text.Wrap
+                    lineHeight: 1.5
+                    text: trainer.lesson? lesson.title: ""
                 }
                 Item {
-                    height: fontSize * 2
-                    width: titleText.width + 2 * margin
-                    Text {
-                        id: titleText
-                        anchors.centerIn: parent
-                        font.pixelSize: fontSize * 1.7
-                        text: trainer.lesson? lesson.title: ""
-                    }
-                }
-                Item {
-                    height: 15
+                    height: Math.round(LessonFontSizeCalculater.BasePixelSize * fontSizeCalculater.scale)
                     width: 1
                 }
                 Repeater {
@@ -121,29 +123,29 @@ FocusScope {
                     model: trainer.lines.length
                     Item {
                         property bool isDone: trainer.position > index
-                        width: text.width + 2 * margin
-                        height: lineHeight
+                        width: sheetContent.width
+                        height: Math.ceil (1.5 * text.height * text.scale)
                         Text {
                             id: text
-                            anchors.centerIn: parent
                             color: isDone? "#000": "#888"
                             text: trainer.lines[index]
                             textFormat: Text.PlainText
                             font.family: "monospace"
-                            font.pixelSize: fontSize
+                            font.pixelSize: LessonFontSizeCalculater.BasePixelSize
                             opacity: trainer.position == index? 0: 1
+                            scale: fontSizeCalculater.scale
+                            transformOrigin: Item.TopLeft
+                            smooth: true
                         }
                     }
                     onModelChanged: trainer.position = 0
-                }
-                Item {
-                    height: margin
-                    width: 1
                 }
             }
 
             TrainingLine {
                 id: trainingLine
+                fontScale: fontSizeCalculater.scale
+                charWidth: fontSizeCalculater.charWidth
                 property Item target: lines.itemAt(trainer.position)
                 onDone: {
                     if (trainer.position < trainer.lines.length - 1)
@@ -161,19 +163,20 @@ FocusScope {
                 onKeyPressed: trainer.keyPressed(event)
                 onKeyReleased: trainer.keyReleased(event)
                 onNewNextChar: trainer.nextChar = nextChar
-                y: target? target.y: 0
-                x: 0
+                y: target? target.y + sheet.margin: 0
+                x: sheet.margin
                 width: target? target.width: 0
-                height: lineHeight
                 text: trainer.position >= 0 && trainer.position < trainer.lines.length?
                     trainer.lines[trainer.position]: ""
 
                 KeyItem {
                     id: hintKey
+                    anchors {
+                        horizontalCenter: trainingLine.horizontalCenter
+                        top: trainingLine.bottom
+                        topMargin: LessonFontSizeCalculater.BasePixelSize
+                    }
                     property real scaleFactor: 1
-                    anchors.horizontalCenter: trainingLine.horizontalCenter
-                    anchors.top: trainingLine.bottom
-
                     property Key defaultKey: Key {}
                     property KeyboardLayout defaultKeyboardLayout: KeyboardLayout {}
                     key: {
