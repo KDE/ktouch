@@ -19,13 +19,11 @@ set(ktouch_qml_files
     TrainingScreenMenuOverlay.qml
     TrainingWidget.qml
     TrainingLine.qml
+    StatBox.qml
     ElapsedTimeMeter.qml
     CharactersPerMinuteMeter.qml
     AccuracyMeter.qml
-    AnalogElapsedTimeMeter.qml
-    AnalogCharactersPerMinuteMeter.qml
-    AnalogAccuracyMeter.qml
-    DigitalMeter.qml
+    Meter.qml
     Keyboard.qml
     KeyItem.qml
     KeyLabel.qml

@@ -366,33 +366,12 @@ FocusScope {
                     height: 140
                     color: "#cccccc"
                     radius: 15
-                    ElapsedTimeMeter {
-                        anchors {
-                            left: parent.left
-                            verticalCenter: parent.verticalCenter
-                            leftMargin: 15
-                        }
 
-                        elapsedTime: stats.elapsedTime
-                        referenceElapsedTime: referenceStats.isValid? referenceStats.elapsedTime: stats.elapsedTime
-                    }
-                    CharactersPerMinuteMeter {
-                        anchors {
-                            horizontalCenter: parent.horizontalCenter
-                            verticalCenter: parent.verticalCenter
-                        }
-
-                        charactersPerMinute: stats.charactersPerMinute
-                        referenceCharactersPerMinute: referenceStats.isValid? referenceStats.charactersPerMinute: stats.charactersPerMinute
-                    }
-                    AccuracyMeter {
-                        anchors {
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
-                            rightMargin: 15
-                        }
-                        accuracy: stats.accuracy
-                        referenceAccuracy: referenceStats.isValid? referenceStats.accuracy: stats.accuracy
+                    StatBox {
+                        anchors.centerIn: parent
+                        width: parent.width - 26
+                        stats: screen.stats
+                        referenceStats: screen.referenceStats
                     }
                 }
 

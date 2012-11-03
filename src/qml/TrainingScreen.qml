@@ -133,21 +133,12 @@ FocusScope {
             width: parent.width
             visible: preferences.showStatistics
             height: visible? 130: 0
-            Row {
+
+            StatBox {
                 anchors.centerIn: parent
-                spacing: 10
-                ElapsedTimeMeter {
-                    elapsedTime: stats.elapsedTime
-                    referenceElapsedTime: referenceStats.isValid? referenceStats.elapsedTime: stats.elapsedTime
-                }
-                CharactersPerMinuteMeter {
-                    charactersPerMinute: stats.charactersPerMinute
-                    referenceCharactersPerMinute: referenceStats.isValid? referenceStats.charactersPerMinute: stats.charactersPerMinute
-                }
-                AccuracyMeter {
-                    accuracy: stats.accuracy
-                    referenceAccuracy: referenceStats.isValid? referenceStats.accuracy: stats.accuracy
-                }
+                width: parent.width - 60
+                stats: stats
+                referenceStats: referenceStats
             }
         }
 
