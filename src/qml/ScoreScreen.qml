@@ -173,9 +173,10 @@ FocusScope {
     Baloon {
         id: learningProgressPointTooltip
         visualParent: parent
-        property int row
+        property int row: -1
 
         function findLessonTitle(id) {
+            console.log(row, "/", id)
             var course = screen.course
             for (var i = 0; i < course.lessonCount; i++) {
                 if (course.lesson(i).id === id) {
@@ -189,15 +190,15 @@ FocusScope {
             property list<InfoItem> infoModel: [
                 InfoItem {
                     title: i18n("On:")
-                    text: learningProgressPointTooltip.findLessonTitle(learningProgressModel.lessonId(learningProgressPointTooltip.row))
+                    text: learningProgressPointTooltip.row !== -1? learningProgressPointTooltip.findLessonTitle(learningProgressModel.lessonId(learningProgressPointTooltip.row)): ""
                 },
                 InfoItem {
                     title: i18n("Accuracy:")
-                    text: strFormatter.formatAccuracy(learningProgressModel.accuracy(learningProgressPointTooltip.row))
+                    text: learningProgressPointTooltip.row !== -1? strFormatter.formatAccuracy(learningProgressModel.accuracy(learningProgressPointTooltip.row)): ""
                 },
                 InfoItem {
                     title: i18n("Characters per Minute:")
-                    text: learningProgressModel.charactersPerMinute(learningProgressPointTooltip.row)
+                    text: learningProgressPointTooltip.row !== -1? learningProgressModel.charactersPerMinute(learningProgressPointTooltip.row): ""
                 }
             ]
             width: 250
