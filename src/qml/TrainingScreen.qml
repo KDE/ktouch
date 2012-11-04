@@ -37,7 +37,7 @@ FocusScope {
 
     property bool trainingStarted: false
     property bool trainingFinished: true
-    property bool isActive
+    property bool isActive: Qt.application.active
 
     function setLessonKeys() {
         if (!lesson)
@@ -95,6 +95,12 @@ FocusScope {
     }
 
     onLessonChanged: setLessonKeys()
+
+    onIsActiveChanged: {
+        if (!screen.isActive) {
+            stats.stopTraining()
+        }
+    }
 
     TrainingStats {
         id: stats
@@ -256,17 +262,5 @@ FocusScope {
         }
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()
-    }
-
-    Binding {
-        target: screen
-        property: "isActive"
-        value: Qt.application.active
-    }
-
-    onIsActiveChanged: {
-        if (!screen.isActive) {
-            stats.stopTraining()
-        }
     }
 }
