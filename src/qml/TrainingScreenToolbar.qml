@@ -56,8 +56,8 @@ Item {
             verticalCenter: parent.verticalCenter
             left: parent.left
             right: parent.right
-            leftMargin: 3
-            rightMargin: 3
+            leftMargin: 30
+            rightMargin: 30
             verticalCenterOffset: -1
         }
 
