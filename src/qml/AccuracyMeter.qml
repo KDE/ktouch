@@ -26,12 +26,10 @@ Meter {
     property real accuracy: 1.0
     property real referenceAccuracy: 1.0
 
-    property real minimumAccuracy: preferences.requiredAccuracy / 100.0
-
     label: i18n("Accuracy")
     value: strFormatter.formatAccuracy(meter.accuracy)
     referenceValue: strFormatter.formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
-    valueStatus: meter.accuracy >= meter.minimumAccuracy? "good": "bad"
+    valueStatus: Math.round(1000 * meter.accuracy) >= Math.round(10 * preferences.requiredAccuracy)? "good": "bad"
 
     analogPartContent: PlasmaCore.SvgItem {
         anchors.centerIn: parent
@@ -44,7 +42,7 @@ Meter {
             anchors.verticalCenterOffset: 25
             width: scale.width
             height: scale.height
-            startAngle: Math.min(135, Math.max(45, 135 - (minimumAccuracy - 0.9) * 900))
+            startAngle: Math.min(135, Math.max(45, 135 - (preferences.requiredAccuracy - 90) * 9))
             stopAngle: 45
             scaleMarkHeight: 8
             color: "#88ff00";

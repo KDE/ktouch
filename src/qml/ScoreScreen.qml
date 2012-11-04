@@ -27,7 +27,7 @@ FocusScope {
 
     function start() {}
     function reset() {
-        internal.lessonPassed = 100 * stats.accuracy >= preferences.requiredAccuracy && stats.charactersPerMinute >= preferences.requiredStrokesPerMinute
+        internal.lessonPassed = Math.round(1000 * stats.accuracy) >= Math.round(10 * preferences.requiredAccuracy) && stats.charactersPerMinute >= preferences.requiredStrokesPerMinute
 
         var lessonIndex = 0;
         for (var i = 0; i < course.lessonCount; i++) {
