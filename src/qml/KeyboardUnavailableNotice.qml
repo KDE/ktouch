@@ -29,7 +29,7 @@ Item {
     Row {
         id: row
         anchors.centerIn: parent
-        width: parent.width - 20
+        width: parent.width - 60
         height: Math.max(icon.height, label.height)
         spacing: 3
 

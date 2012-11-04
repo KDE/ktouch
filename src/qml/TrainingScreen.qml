@@ -237,7 +237,14 @@ FocusScope {
                 }
 
                 keyboardLayout: screen.keyboardLayout
-                anchors.fill: parent
+                anchors {
+                    fill: parent
+                    leftMargin: 30
+                    rightMargin: 30
+                    topMargin: 10
+                    bottomMargin: 10
+                }
+
                 onKeyboardUpdate: {
                     setLessonKeys()
                     highlightedKeys = []

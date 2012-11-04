@@ -24,9 +24,8 @@ Item {
     signal keyboardUpdate
 
     property KeyboardLayout keyboardLayout
-    property int margin: 50
-    property real aspectRatio: (keyboardLayout.width + margin) / (keyboardLayout.height + margin)
-    property real scaleFactor: Math.min(width / (keyboardLayout.width + margin), height / (keyboardLayout.height + margin))
+    property real aspectRatio: keyboardLayout.width / keyboardLayout.height
+    property real scaleFactor: Math.min(width / keyboardLayout.width, height / keyboardLayout.height)
 
     function keyItems() {
         var items = []
