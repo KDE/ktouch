@@ -171,7 +171,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KIntNumInput" name="kcfg_RequiredAccuracy">
+       <widget class="KDoubleNumInput" name="kcfg_RequiredAccuracy">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -179,13 +179,19 @@
          </sizepolicy>
         </property>
         <property name="minimum">
-         <number>90</number>
+         <double>90.000000000000000</double>
         </property>
         <property name="maximum">
-         <number>100</number>
+         <double>100.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
         </property>
         <property name="suffix">
          <string>%</string>
+        </property>
+        <property name="decimals">
+         <number>1</number>
         </property>
         <property name="sliderEnabled">
          <bool>true</bool>
@@ -211,6 +217,11 @@
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KDoubleNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+  </customwidget>
   <customwidget>
    <class>KIntNumInput</class>
    <extends>QWidget</extends>

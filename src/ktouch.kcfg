@@ -33,7 +33,7 @@
       <min>0</min>
       <max>360</max>
     </entry>
-    <entry name="RequiredAccuracy" type="Int">
+    <entry name="RequiredAccuracy" type="Double">
       <label>The minimum required typing accuracy in percent to unlock the next lesson.</label>
       <default>98</default>
       <min>90</min>

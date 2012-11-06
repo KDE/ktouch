@@ -76,12 +76,12 @@ void PreferencesProxy::setRequiredStrokesPerMinute(int strokesPerMinute)
     Preferences::setRequiredStrokesPerMinute(strokesPerMinute);
 }
 
-int PreferencesProxy::requiredAccuracy() const
+double PreferencesProxy::requiredAccuracy() const
 {
     return Preferences::requiredAccuracy();
 }
 
-void PreferencesProxy::setRequiredAccuracy(int accuracy)
+void PreferencesProxy::setRequiredAccuracy(double accuracy)
 {
     Preferences::setRequiredStrokesPerMinute(accuracy);
 }

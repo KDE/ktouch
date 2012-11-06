@@ -30,7 +30,7 @@ class PreferencesProxy : public QObject
     Q_PROPERTY(bool nextLineWithSpace READ nextLineWithSpace WRITE setNextLineWithSpace NOTIFY configChanged)
     Q_PROPERTY(bool nextLineWithReturn READ nextLineWithReturn WRITE setNextLineWithReturn NOTIFY configChanged)
     Q_PROPERTY(int requiredStrokesPerMinute READ requiredStrokesPerMinute WRITE setRequiredStrokesPerMinute NOTIFY configChanged)
-    Q_PROPERTY(int requiredAccuracy READ requiredAccuracy WRITE setRequiredAccuracy NOTIFY configChanged)
+    Q_PROPERTY(double requiredAccuracy READ requiredAccuracy WRITE setRequiredAccuracy NOTIFY configChanged)
     Q_PROPERTY(int lastUsedProfileId READ lastUsedProfileId WRITE setLastUsedProfileId NOTIFY configChanged)
 
 public:
@@ -45,8 +45,8 @@ public:
     void setNextLineWithReturn(bool nextLineWithReturn);
     int requiredStrokesPerMinute() const;
     void setRequiredStrokesPerMinute(int strokesPerMinute);
-    int requiredAccuracy() const;
-    void setRequiredAccuracy(int accuracy);
+    double requiredAccuracy() const;
+    void setRequiredAccuracy(double accuracy);
     int lastUsedProfileId() const;
     void setLastUsedProfileId(int profileId);
     Q_INVOKABLE QColor fingerColor(int index);
