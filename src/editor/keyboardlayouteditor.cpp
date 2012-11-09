@@ -170,7 +170,7 @@ void KeyboardLayoutEditor::setZoomLevel(int zoomLevel)
         m_zoomLevel = zoomLevel;
         emit zoomLevelChanged();
         const double zoomFactor = pow(2.0, zoomLevel / 2.0);
-        m_zoomFactorLabel->setText(i18n("%1%").arg(zoomFactor * 100, 0, 'f', 0));
+        m_zoomFactorLabel->setText(ki18n("%1%").subs(zoomFactor * 100, 0, 'f', 0).toString());
         m_zoomOutToolButton->setEnabled(zoomLevel > m_zoomSlider->minimum());
         m_zoomInToolButton->setEnabled(zoomLevel < m_zoomSlider->maximum());
     }
