@@ -56,7 +56,7 @@ LineGraph {
             id: charactersPerMinuteDimension
             dataColumn: 6
             color: "#38aef4"
-            maximumValue: Math.ceil(model.maxCharactersTypedPerMinute / 120) * 120
+            maximumValue: Math.max(Math.ceil(model.maxCharactersTypedPerMinute / 120) * 120, 120)
             label: i18n("Characters per Minute")
         }
     ]
