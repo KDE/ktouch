@@ -176,7 +176,6 @@ FocusScope {
         property int row: -1
 
         function findLessonTitle(id) {
-            console.log(row, "/", id)
             var course = screen.course
             for (var i = 0; i < course.lessonCount; i++) {
                 if (course.lesson(i).id === id) {
