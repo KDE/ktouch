@@ -15,8 +15,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef EDITORMAINWINDOW_H
-#define EDITORMAINWINDOW_H
+#ifndef RESOURCEEDITOR_H
+#define RESOURCEEDITOR_H
 
 #include <KMainWindow>
 
@@ -75,4 +75,4 @@ private:
     QTimer* m_saveTimer;
 };
 
-#endif // EDITORMAINWINDOW_H
+#endif // RESOURCEEDITOR_H

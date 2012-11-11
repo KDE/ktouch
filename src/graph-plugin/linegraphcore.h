@@ -15,8 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GRAPHCOREITEM_H
-#define GRAPHCOREITEM_H
+#ifndef LINEGRAPHCORE_H
+#define LINEGRAPHCORE_H
 
 #include "graphcore.h"
 
@@ -35,4 +35,4 @@ private:
     qreal m_pointRadius;
 };
 
-#endif // GRAPHCOREITEM_H
+#endif // LINEGRAPHCORE_H
