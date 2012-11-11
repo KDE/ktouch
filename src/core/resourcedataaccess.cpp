@@ -47,7 +47,7 @@ bool ResourceDataAccess::fillDataIndex(DataIndex* target)
     if (!schema.isValid())
         return false;
 
-    foreach (const QString path, KGlobal::dirs()->findAllResources("appdata", "data.xml"))
+    foreach (const QString& path, KGlobal::dirs()->findAllResources("appdata", "data.xml"))
     {
         QDir dir = QFileInfo(path).dir();
         QFile dataIndexFile;
