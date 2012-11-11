@@ -44,6 +44,7 @@ set(ktouch_SRCS
     declarativeitems/lessonfontsizecalculater.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp
+    declarativeitems/traininglinecore.cpp
     core/resource.cpp
     core/keyboardlayoutbase.cpp
     core/keyboardlayout.cpp

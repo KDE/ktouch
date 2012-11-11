@@ -160,6 +160,7 @@ FocusScope {
                 anchors.fill: parent
                 lesson: screen.lesson
                 keyboardLayout: screen.keyboardLayout
+                trainingStats: stats
                 onKeyPressed: keyboard.handleKeyPress(event)
                 onKeyReleased: keyboard.handleKeyRelease(event)
                 onNextCharChanged: keyboard.updateKeyHighlighting()

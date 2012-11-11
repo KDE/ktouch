@@ -18,20 +18,13 @@
 import QtQuick 1.1
 import ktouch 1.0
 
-Item {
+TrainingLineCore {
     id: line
-    property string text
     property real fontScale
     property real charWidth
-    property bool active
-    signal done
+
     signal keyPressed(variant event)
     signal keyReleased(variant event)
-    signal newNextChar(string nextChar)
-
-    property string enteredText: ""
-    property int position: 0
-    property bool isCorrect: true
 
     property int repeatedErrorCount: 0
     property int repeatedErrorSolution: SpecialKey.Backspace
@@ -39,124 +32,20 @@ Item {
     height: line.fontScale * LessonFontSizeCalculater.BasePixelSize
     focus: true
 
-    onTextChanged: resetLine()
-
     onFocusChanged: {
         if (!line.activeFocus) {
-            stats.stopTraining()
+            trainingStats.stopTraining()
         }
-    }
-
-    function startTraining() {
-        stats.startTraining()
-        stopTimer.restart()
-    }
-
-    function resetLine() {
-        line.enteredText = ""
-        line.isCorrect = true
-        line.position = 0
-        lineChars.model = 0
-        lineChars.model = line.text.length
-        line.repeatedErrorCount = 0
-        emitNextChar()
-    }
-
-    function deleteLastChar() {
-        if (line.position === 0) {
-            return
-        }
-
-        line.position--
-        var charItem = lineChars.itemAt(line.position)
-        charItem.text = line.text.charAt(line.position)
-        charItem.state = "placeholder"
-        line.enteredText = line.enteredText.substring(0, line.position)
-        line.isCorrect = line.enteredText === line.text.substring(0, line.position)
-
-        if (line.isCorrect) {
-            line.repeatedErrorCount = 0
-        }
-
-        emitNextChar()
-    }
-
-    function addChar(newChar) {
-        if (line.position >= text.length)
-            return
-        var correctChar = text.charAt(line.position)
-        var isCorrect = newChar === correctChar
-        var charItem = lineChars.itemAt(line.position)
-        line.enteredText += newChar
-
-        if (line.isCorrect) {
-            stats.logCharacter(correctChar, isCorrect? TrainingStats.CorrectCharacter: TrainingStats.IncorrectCharacter)
-        }
-
-        line.isCorrect = line.isCorrect && isCorrect
-
-        if (line.isCorrect) {
-            line.repeatedErrorCount = 0
-        }
-        else {
-            line.repeatedErrorSolution = SpecialKey.Backspace
-            line.repeatedErrorCount++
-        }
-
-        charItem.text = newChar !== " " || isCorrect? newChar: "\u2423"
-        charItem.state = line.isCorrect? "done": "error"
-        line.position++
-        emitNextChar()
-    }
-
-    function emitNextChar() {
-        if (line.position >= line.text.length)
-            newNextChar(null)
-        else
-            newNextChar(line.text.charAt(line.position))
     }
 
     Keys.onPressed: {
         if (!line.active)
             return
-        if (line.position == text.length && line.isCorrect) {
-            line.repeatedErrorSolution = preferences.nextLineWithReturn? SpecialKey.Return: SpecialKey.Space
-            line.repeatedErrorCount++
-        }
+
         cursorAnimation.restart()
-        switch(event.key)
-        {
-        case Qt.Key_Space:
-            startTraining()
-            if (preferences.nextLineWithSpace && line.position == text.length && line.isCorrect) {
-                resetLine()
-                line.done()
-            }
-            else {
-                addChar(event.text.charAt(0))
-            }
-            break
-        case Qt.Key_Return:
-            startTraining()
-            if (preferences.nextLineWithReturn && line.position == text.length && line.isCorrect) {
-                resetLine()
-                line.done()
-            }
-            break
-        case Qt.Key_Backspace:
-            startTraining()
-            deleteLastChar()
-            break
-        case Qt.Key_Delete:
-        case Qt.Key_Tab:
-            break
-        default:
-            startTraining()
-            if (event.text !== "") {
-                addChar(event.text.charAt(0))
-            }
-            break
-        }
+        trainingStats.startTraining()
+        stopTimer.restart()
+
         if (!event.isAutoRepeat) {
             line.keyPressed(event)
         }
@@ -165,8 +54,10 @@ Item {
     Keys.onReleased: {
         if (!line.active)
             return
-        if (!event.isAutoRepeat)
+
+        if (!event.isAutoRepeat) {
             line.keyReleased(event)
+        }
     }
 
     Timer {
@@ -179,7 +70,7 @@ Item {
 
     Repeater {
         id: lineChars
-        model: 0
+        model: referenceLine.length
 
         Item {
             id: lineCharWrapper
@@ -189,7 +80,18 @@ Item {
             y: 0
             width: lineChar.width * line.fontScale
             height: lineChar.height * line.fontScale
-            state: "placeholder"
+            state: {
+                if (index < line.actualLine.length)
+                {
+                    var charCorrect = line.actualLine[index] === line.referenceLine[index]
+                    var previousCorrect = index == 0 || lineChars.itemAt(index - 1).state === "done"
+                    return charCorrect && previousCorrect? "done": "error"
+                }
+                else
+                {
+                    return "placeholder"
+                }
+            }
 
             onStateChanged: {
                 if (state == "error")
@@ -200,7 +102,14 @@ Item {
                 id: lineChar
                 font.family: "monospace"
                 font.pixelSize: LessonFontSizeCalculater.BasePixelSize
-                text: line.text.charAt(index)
+                text: {
+                    var character = index < line.actualLine.length? line.actualLine[index]: line.referenceLine[index]
+
+                    if (character === " " && lineCharWrapper.state === "error")
+                        return "\u2423"
+
+                    return character
+                }
                 textFormat: Text.PlainText
                 smooth: true
                 transformOrigin: Item.TopLeft
@@ -254,7 +163,7 @@ Item {
 
     Rectangle {
         id: cursor
-        property Item target: lineChars.itemAt(line.position - 1)
+        property Item target: lineChars.itemAt(line.actualLine.length - 1)
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
@@ -263,10 +172,10 @@ Item {
         width: 1
         height: Math.round(1.2 * line.fontScale * LessonFontSizeCalculater.BasePixelSize)
         color: "#000"
-        visible: line.activeFocus
+        visible: line.active && line.activeFocus
         SequentialAnimation {
             id: cursorAnimation
-            running: line.activeFocus && Qt.application.active
+            running: line.active && line.activeFocus && Qt.application.active
             loops: Animation.Infinite
             PropertyAction {
                 target: cursor

@@ -21,6 +21,7 @@
 #include <QGraphicsDropShadowEffect>
 #include <QScriptValue>
 #include <QScriptEngine>
+#include <QKeyEvent>
 
 #include <kdeclarative.h>
 
@@ -31,6 +32,7 @@
 #include "declarativeitems/lessonfontsizecalculater.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
+#include "declarativeitems/traininglinecore.h"
 #include "core/keyboardlayout.h"
 #include "core/key.h"
 #include "core/specialkey.h"
@@ -117,4 +119,5 @@ void Application::registerQmlTypes()
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
     qmlRegisterType<LessonFontSizeCalculater>("ktouch", 1, 0, "LessonFontSizeCalculater");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
+    qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
 }

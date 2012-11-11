@@ -24,10 +24,11 @@ FocusScope {
 
     property Lesson lesson
     property KeyboardLayout keyboardLayout
+    property TrainingStats trainingStats
     property variant lines: [];
 
-    property string nextChar
-    property bool isCorrect: trainingLine.isCorrect
+    property alias nextChar: trainingLine.nextCharacter
+    property alias isCorrect: trainingLine.isCorrect
     property int position: -1
     signal finished
     signal keyPressed(variant event)
@@ -162,12 +163,12 @@ FocusScope {
                 }
                 onKeyPressed: trainer.keyPressed(event)
                 onKeyReleased: trainer.keyReleased(event)
-                onNewNextChar: trainer.nextChar = nextChar
                 y: target? target.y + sheet.margin: 0
                 x: sheet.margin
                 width: target? target.width: 0
-                text: trainer.position >= 0 && trainer.position < trainer.lines.length?
+                referenceLine: trainer.position >= 0 && trainer.position < trainer.lines.length?
                     trainer.lines[trainer.position]: ""
+                trainingStats: trainer.trainingStats
 
                 KeyItem {
                     id: hintKey
@@ -179,18 +180,36 @@ FocusScope {
                     property real scaleFactor: 1
                     property Key defaultKey: Key {}
                     property KeyboardLayout defaultKeyboardLayout: KeyboardLayout {}
+
                     key: {
+                        var specialKeyType
+
+                        switch (trainingLine.hintKey) {
+                        case Qt.Key_Return:
+                            specialKeyType = SpecialKey.Return
+                            break
+                        case Qt.Key_Backspace:
+                            specialKeyType =  SpecialKey.Backspace
+                            break
+                        case Qt.Key_Space:
+                            specialKeyType =  SpecialKey.Space
+                            break
+                        default:
+                            specialKeyType =  -1
+                        }
+
                         for (var i = 0; i < keyboardLayout.keyCount; i++) {
                             var key = keyboardLayout.key(i)
 
-                            if (key.keyType() === "specialKey" && key.type === trainingLine.repeatedErrorSolution) {
+                            if (key.keyType() === "specialKey" && key.type === specialKeyType) {
                                 return key;
                             }
                         }
 
                         return defaultKey
                     }
-                    opacity: trainingLine.repeatedErrorCount >= 3? 1: 0
+
+                    opacity: trainingLine.hintKey !== -1? 1: 0
                     isHighlighted: opacity == 1
                     keyboardLayout: screen.keyboardLayout || defaultKeyboardLayout
                     Behavior on opacity {
