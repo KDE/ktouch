@@ -18,13 +18,13 @@
 #ifndef KEYBOARDLAYOUTCOMBOBOX_H
 #define KEYBOARDLAYOUTCOMBOBOX_H
 
-#include "QComboBox"
+#include "KComboBox"
 
 class ResourceModel;
 class CategorizedResourceSortFilterProxyModel;
 class DataIndexKeyboardLayout;
 
-class KeyboardLayoutComboBox: public QComboBox
+class KeyboardLayoutComboBox: public KComboBox
 {
     Q_OBJECT
 public:

@@ -22,7 +22,7 @@
 
 
 KeyboardLayoutComboBox::KeyboardLayoutComboBox(QWidget* parent) :
-    QComboBox(parent),
+    KComboBox(parent),
     m_filteredResourceModel(new CategorizedResourceSortFilterProxyModel(this)),
     m_resourceModel(0)
 {

@@ -64,7 +64,7 @@
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLineEdit" name="m_keyboardLayoutTitleLineEdit">
+             <widget class="KLineEdit" name="m_keyboardLayoutTitleLineEdit">
               <property name="sizePolicy">
                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -84,7 +84,7 @@
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QLineEdit" name="m_keyboardLayoutNameEdit">
+             <widget class="KLineEdit" name="m_keyboardLayoutNameEdit">
               <property name="sizePolicy">
                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -384,7 +384,7 @@
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QComboBox" name="m_keyFingerComboBox">
+               <widget class="KComboBox" name="m_keyFingerComboBox">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -567,7 +567,7 @@
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QComboBox" name="m_specialKeyTypeComboBox">
+               <widget class="KComboBox" name="m_specialKeyTypeComboBox">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -622,7 +622,7 @@
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QLineEdit" name="m_specialKeyLabelLineEdit"/>
+               <widget class="KLineEdit" name="m_specialKeyLabelLineEdit"/>
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="m_specialKeyModifierIdLabel">
@@ -635,7 +635,7 @@
                </widget>
               </item>
               <item row="2" column="1">
-               <widget class="QLineEdit" name="m_specialKeyModifierIdLineEdit"/>
+               <widget class="KLineEdit" name="m_specialKeyModifierIdLineEdit"/>
               </item>
              </layout>
             </widget>

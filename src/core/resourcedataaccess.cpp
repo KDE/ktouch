@@ -25,8 +25,9 @@
 #include <QXmlSchema>
 #include <QXmlSchemaValidator>
 
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <KUrl>
+#include <KStandardDirs>
+#include <KDebug>
 
 #include "dataindex.h"
 #include "keyboardlayout.h"
@@ -398,7 +399,7 @@ QXmlSchema ResourceDataAccess::loadXmlSchema(const QString &name)
     {
         return schema;
     }
-    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
+    schema.load(&schemaFile, KUrl::fromLocalFile(schemaFile.fileName()));
     if (!schema.isValid())
     {
         kWarning() << schemaFile.fileName() << "is invalid";
