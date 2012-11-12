@@ -38,7 +38,7 @@ class KeyboardLayout : public KeyboardLayoutBase
     Q_PROPERTY(int keyCount READ keyCount NOTIFY keyCountChanged)
 
 public:
-    KeyboardLayout(QObject* parent = 0);
+    explicit KeyboardLayout(QObject* parent = 0);
     int width() const ;
     void setWidth(int width);
     int height() const;

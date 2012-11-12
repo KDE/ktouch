@@ -34,7 +34,7 @@ Q_SIGNALS:
 	void layoutMapChanged();
 
 public:
-	XEventNotifier(QWidget* parent=NULL);
+	explicit XEventNotifier(QWidget* parent=NULL);
 	virtual ~XEventNotifier() {}
 
 	virtual void start();

@@ -27,7 +27,7 @@ class LessonTextHighlighter : public QSyntaxHighlighter
     Q_OBJECT
 
 public:
-    LessonTextHighlighter(QObject* parent = 0);
+    explicit LessonTextHighlighter(QObject* parent = 0);
     int maximumLineLength() const;
     void setMaximumLineLength(int length);
     QString allowedCharacters() const;

@@ -29,7 +29,7 @@ class ScaleBackgroundItem: public QDeclarativeItem
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 
 public:
-    ScaleBackgroundItem(QDeclarativeItem* parent = 0);
+    explicit ScaleBackgroundItem(QDeclarativeItem* parent = 0);
     qreal startAngle() const;
     void setStartAngle(qreal angle);
     qreal stopAngle() const;
