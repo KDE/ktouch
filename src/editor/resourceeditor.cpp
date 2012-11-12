@@ -20,6 +20,7 @@
 #include <QUuid>
 #include <QFile>
 #include <QDir>
+#include <QPointer>
 #include <QTimer>
 #include <QAbstractItemView>
 #include <QUndoGroup>
@@ -136,12 +137,12 @@ void ResourceEditor::closeEvent(QCloseEvent* event)
 
 void ResourceEditor::newResource()
 {
-    NewResourceAssistant assistant(m_resourceModel, this);
+    QPointer<NewResourceAssistant> assistant = new NewResourceAssistant(m_resourceModel, this);
 
-    if (assistant.exec() == QDialog::Accepted)
+    if (assistant->exec() == QDialog::Accepted)
     {
         save();
-        Resource* resource = assistant.createResource();
+        Resource* resource = assistant->createResource();
         if (Resource* dataIndexResource = storeResource(resource))
         {
             m_editorWidget->clearUndoStackForResource(dataIndexResource);
@@ -149,6 +150,8 @@ void ResourceEditor::newResource()
         }
         delete resource;
     }
+
+    delete assistant;
 }
 
 void ResourceEditor::deleteResource()

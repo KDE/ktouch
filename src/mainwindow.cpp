@@ -21,6 +21,7 @@
 #include <QDeclarativeContext>
 #include <QGLWidget>
 #include <QMenu>
+#include <QPointer>
 #include <QVariant>
 
 #include <KStandardDirs>
@@ -147,11 +148,13 @@ void MainWindow::configureShortcuts()
 
 void MainWindow::configureKeyboard()
 {
-    KCMultiDialog kcm;
+    QPointer<KCMultiDialog> kcm = new KCMultiDialog(this);
 
-    kcm.setWindowTitle(i18n("Configure Keyboard"));
-    kcm.addModule("kcm_keyboard");
-    kcm.exec();
+    kcm->setWindowTitle(i18n("Configure Keyboard"));
+    kcm->addModule("kcm_keyboard");
+    kcm->exec();
+
+    delete kcm;
 }
 
 void MainWindow::setFullscreen(bool fullScreen)
