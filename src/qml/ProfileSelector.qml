@@ -94,6 +94,13 @@ FocusScope {
                 id: profileForm
                 width: parent.width - listContainer.width - line.width - 2 * parent.spacing
                 height: parent.height
+
+                onDeletionRequest: {
+                    var index = profileDataAccess.indexOfProfile(profileForm.profile)
+                    profileForm.profile = null
+                    profileDataAccess.removeProfile(index)
+                    selectProfile(Math.max(0, list.currentIndex - 1))
+                }
             }
         }
 

@@ -559,7 +559,8 @@ QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
         return QDateTime();
     }
 
-    query.next();
+    if (!query.next())
+        return QDateTime();
 
     return QDateTime::fromMSecsSinceEpoch(query.value(0).value<quint64>());
 }

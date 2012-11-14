@@ -36,8 +36,9 @@ Item {
             deleteConfirmationLabel.name = profile.name
             state = isNewProfile? "editor": "info"
         }
-
     }
+
+    signal deletionRequest();
 
     onProfileChanged: update()
 
@@ -113,18 +114,20 @@ Item {
             }
 
             InformationTable {
+                id: profileInfoTable
+                property int trainedLessonCount: profile && profile.id !== -1? profileDataAccess.lessonsTrained(profile): 0
                 property list<InfoItem> infoModel: [
                     InfoItem {
                         title: i18n("Lessons trained:")
-                        text: profile? profileDataAccess.lessonsTrained(profile): ""
+                        text: profile && profile.id !== -1? profileInfoTable.trainedLessonCount: ""
                     },
                     InfoItem {
                         title: i18n("Total training time:")
-                        text: profile? locale.prettyFormatDuration(profileDataAccess.totalTrainingTime(profile)): ""
+                        text: profile && profile.id !== -1? locale.prettyFormatDuration(profileDataAccess.totalTrainingTime(profile)): ""
                     },
                     InfoItem {
                         title: i18n("Last trained:")
-                        text: profile? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): ""
+                        text: profile && profile.id !== -1 && profileInfoTable.trainedLessonCount > 0? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): ""
                     }
                 ]
 
@@ -202,12 +205,7 @@ Item {
                 PlasmaComponents.ToolButton {
                     iconSource: "edit-delete"
                     text: i18n("Delete")
-                    onClicked: {
-                        var index = profileDataAccess.indexOfProfile(root.profile)
-                        root.profile = null
-                        profileDataAccess.removeProfile(index)
-                    }
-
+                    onClicked: root.deletionRequest()
                 }
                 PlasmaComponents.ToolButton {
                     text: i18n("Cancel")
