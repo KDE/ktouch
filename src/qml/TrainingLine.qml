@@ -26,9 +26,6 @@ TrainingLineCore {
     signal keyPressed(variant event)
     signal keyReleased(variant event)
 
-    property int repeatedErrorCount: 0
-    property int repeatedErrorSolution: SpecialKey.Backspace
-
     height: line.fontScale * LessonFontSizeCalculater.BasePixelSize
     focus: true
 
