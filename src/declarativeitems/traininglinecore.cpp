@@ -47,6 +47,20 @@ void TrainingLineCore::setActive(bool active)
     }
 }
 
+QDeclarativeItem* TrainingLineCore::cursorItem() const
+{
+    return m_cursorItem;
+}
+
+void TrainingLineCore::setCursorItem(QDeclarativeItem* cursorPosition)
+{
+    if (cursorPosition != m_cursorItem)
+    {
+        m_cursorItem = cursorPosition;
+        emit cursorItemChanged();
+    }
+}
+
 TrainingStats* TrainingLineCore::trainingStats() const
 {
     return m_trainingStats;
@@ -80,6 +94,11 @@ void TrainingLineCore::setReferenceLine(const QString& referenceLine)
 QString TrainingLineCore::actualLine() const
 {
     return m_actualLine;
+}
+
+QString TrainingLineCore::preeditString() const
+{
+    return m_preeditString;
 }
 
 bool TrainingLineCore::isCorrect() const
@@ -206,10 +225,17 @@ void TrainingLineCore::inputMethodEvent(QInputMethodEvent *event)
     }
 
     const QString commitString = event->commitString();
+    const QString preeditString = event->preeditString();
 
     if (!commitString.isEmpty())
     {
         add(commitString);
+    }
+
+    if (preeditString != m_preeditString)
+    {
+        m_preeditString = preeditString;
+        emit preeditStringChanged();
     }
 
     event->accept();
@@ -219,6 +245,10 @@ QVariant TrainingLineCore::inputMethodQuery(Qt::InputMethodQuery query) const
 {
     switch (query)
     {
+    case Qt::ImMicroFocus:
+        if (!m_cursorItem)
+            return QVariant();
+        return QVariant(m_cursorItem->mapRectToItem(this, m_cursorItem->boundingRect().toRect()));
     case Qt::ImCursorPosition:
         return QVariant(m_actualLine.length());
     case Qt::ImSurroundingText:

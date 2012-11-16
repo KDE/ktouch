@@ -20,15 +20,19 @@
 
 #include <QDeclarativeItem>
 
+#include <QPointer>
+
 class TrainingStats;
 
 class TrainingLineCore : public QDeclarativeItem
 {
     Q_OBJECT
     Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
+    Q_PROPERTY(QDeclarativeItem* cursorItem READ cursorItem WRITE setCursorItem NOTIFY cursorItemChanged)
     Q_PROPERTY(TrainingStats* trainingStats READ trainingStats WRITE setTrainingStats NOTIFY trainingStatsChanged)
     Q_PROPERTY(QString referenceLine READ referenceLine WRITE setReferenceLine NOTIFY referenceLineChanged)
     Q_PROPERTY(QString actualLine READ actualLine NOTIFY actualLineChanged)
+    Q_PROPERTY(QString preeditString READ preeditString NOTIFY preeditStringChanged)
     Q_PROPERTY(bool isCorrect READ isCorrect NOTIFY actualLineChanged)
     Q_PROPERTY(QString nextCharacter READ nextCharacter NOTIFY actualLineChanged)
     Q_PROPERTY(int hintKey READ hintKey NOTIFY hintKeyChanged)
@@ -36,19 +40,24 @@ public:
     explicit TrainingLineCore(QDeclarativeItem* parent = 0);
     bool active() const;
     void setActive(bool active);
+    QDeclarativeItem* cursorItem() const;
+    void setCursorItem(QDeclarativeItem* cursorItem);
     TrainingStats* trainingStats() const;
     void setTrainingStats(TrainingStats* trainingStats);
     QString referenceLine() const;
     void setReferenceLine(const QString& referenceLine);
     QString actualLine() const;
+    QString preeditString() const;
     bool isCorrect() const;
     QString nextCharacter() const;
     int hintKey() const;
 signals:
     void activeChanged();
+    void cursorItemChanged();
     void trainingStatsChanged();
     void referenceLineChanged();
     void actualLineChanged();
+    void preeditStringChanged();
     void hintKeyChanged();
     void done();
 protected:
@@ -66,8 +75,10 @@ private:
     TrainingStats* m_trainingStats;
     QString m_referenceLine;
     QString m_actualLine;
+    QString m_preeditString;
     int m_hintKey;
     int m_keyHintOccurrenceCount;
+    QPointer<QDeclarativeItem> m_cursorItem;
 };
 
 #endif // TRAININGLINECORE_H

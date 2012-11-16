@@ -26,6 +26,8 @@ TrainingLineCore {
     signal keyPressed(variant event)
     signal keyReleased(variant event)
 
+    cursorItem: cursor
+
     height: line.fontScale * LessonFontSizeCalculater.BasePixelSize
     focus: true
 
@@ -69,7 +71,7 @@ TrainingLineCore {
         id: lineChars
         model: referenceLine.length
 
-        Item {
+        Rectangle {
             id: lineCharWrapper
             property alias text: lineChar.text
             transformOrigin: Item.Center
@@ -78,16 +80,21 @@ TrainingLineCore {
             width: lineChar.width * line.fontScale
             height: lineChar.height * line.fontScale
             state: {
-                if (index < line.actualLine.length)
+                var actualLength = line.actualLine.length
+
+                if (index < actualLength)
                 {
                     var charCorrect = line.actualLine[index] === line.referenceLine[index]
                     var previousCorrect = index == 0 || lineChars.itemAt(index - 1).state === "done"
                     return charCorrect && previousCorrect? "done": "error"
                 }
-                else
+
+                if (index - actualLength < line.preeditString.length)
                 {
-                    return "placeholder"
+                    return "preedit"
                 }
+
+                return "placeholder"
             }
 
             onStateChanged: {
@@ -100,7 +107,12 @@ TrainingLineCore {
                 font.family: "monospace"
                 font.pixelSize: LessonFontSizeCalculater.BasePixelSize
                 text: {
-                    var character = index < line.actualLine.length? line.actualLine[index]: line.referenceLine[index]
+                    var actualLength = line.actualLine.length
+                    var character = index < actualLength?
+                                line.actualLine[index]:
+                                index - actualLength < line.preeditString.length?
+                                    line.preeditString[index - actualLength]:
+                                    line.referenceLine[index]
 
                     if (character === " " && lineCharWrapper.state === "error")
                         return "\u2423"
@@ -136,12 +148,34 @@ TrainingLineCore {
                 State {
                     name: "placeholder"
                     PropertyChanges {
+                        target: lineCharWrapper
+                        color: "#00000000"
+
+                    }
+                    PropertyChanges {
                         target: lineChar
                         color: "#888"
                     }
                 },
                 State {
+                    name: "preedit"
+                    PropertyChanges {
+                        target: lineCharWrapper
+                        color: "#d0d0d0"
+
+                    }
+                    PropertyChanges {
+                        target: lineChar
+                        color: "#000"
+                    }
+                },
+                State {
                     name: "done"
+                    PropertyChanges {
+                        target: lineCharWrapper
+                        color: "#00000000"
+
+                    }
                     PropertyChanges {
                         target: lineChar
                         color: "#000"
@@ -149,6 +183,11 @@ TrainingLineCore {
                 },
                 State {
                     name: "error"
+                    PropertyChanges {
+                        target: lineCharWrapper
+                        color: "#00000000"
+
+                    }
                     PropertyChanges {
                         target: lineChar
                         color: "#f00"
