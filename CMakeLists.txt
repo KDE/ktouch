@@ -13,7 +13,7 @@ add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 add_subdirectory(data)
 add_subdirectory(doc)
 add_subdirectory(src)
-add_subdirectory(sounds)
+# add_subdirectory(sounds) # excluded because of the lack of sound support
 add_subdirectory(images)
 add_subdirectory(icons)
 
