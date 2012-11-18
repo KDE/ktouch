@@ -125,7 +125,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="requiredStrokesPerMinuteLabel">
         <property name="text">
-         <string>Minimum strokes per second:</string>
+         <string>Minimum strokes per minute:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
