@@ -6,12 +6,9 @@
 <refentry lang="&language;">
 <refentryinfo>
 <title>KDE User's Manual</title>
-<author><personname>
-<firstname>Ben</firstname>
-<surname>Burton</surname>
-</personname>
+<author><firstname>Ben</firstname><surname>Burton</surname>
 <email>bab@debian.org</email></author>
-<date>2010-10-06</date>
+<date>2012-11-18</date>
 <productname>K Desktop Environment</productname>
 </refentryinfo>
 
@@ -31,6 +28,7 @@
 <group choice="opt"><option>URL</option></group>
 <arg choice="opt">KDE Generic Options</arg>
 <arg choice="opt">Qt Generic Options</arg>
+<arg choice="opt">KTouch Options</arg>
 </cmdsynopsis>
 </refsynopsisdiv>
 
@@ -47,11 +45,15 @@ module.</para>
 </refsect1>
 
 <refsect1>
-<title>Options</title>
+<title>KTouch Options</title>
 <variablelist>
 <varlistentry>
-<term><option>URL</option></term>
-<listitem><para>The training file to open</para></listitem>
+<term><option>--opengl</option></term>
+<listitem><para>Use a QGLWidget for the viewport.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--resource-editor</option></term>
+<listitem><para>Launch the course and keyboard layout editor.</para></listitem>
 </varlistentry>
 </variablelist>
 
