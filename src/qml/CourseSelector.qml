@@ -75,7 +75,10 @@ Item {
 
     Connections {
         target: courseModel
-        onLayoutChanged: selectLastUsedCourse()
+        onRowsInserted: {
+            priv.currentIndex = -1
+            selectLastUsedCourse()
+        }
     }
 
     Repeater {
