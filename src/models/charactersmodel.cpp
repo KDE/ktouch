@@ -26,8 +26,6 @@
 #include "core/keychar.h"
 #include "undocommands/keyboardlayoutcommands.h"
 
-#include <KDebug>
-
 CharactersModel::CharactersModel(QObject *parent) :
     QAbstractTableModel(parent),
     m_keyboardLayout(0),

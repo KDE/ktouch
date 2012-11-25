@@ -85,7 +85,7 @@ set(ktouch_SRCS
     editor/keyboardlayouteditor.cpp
     editor/keyboardlayouteditorview.cpp
     editor/keyboardlayoutpropertieswidget.cpp
-    editor/charactersvieweditorfactories.cpp
+    editor/charactersviewdelegate.cpp
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
 )

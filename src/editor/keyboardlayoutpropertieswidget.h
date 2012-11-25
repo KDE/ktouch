@@ -22,10 +22,10 @@
 #include "ui_keyboardlayoutpropertieswidget.h"
 
 class QUndoStack;
-class CharacterModifierIdEditorFactory;
 class KeyboardLayout;
 class AbstractKey;
 class CharactersModel;
+class CharactersViewDelegate;
 
 class KeyboardLayoutPropertiesWidget : public QWidget, private Ui::KeyboardLayoutPropertiesWidget
 {
@@ -79,7 +79,7 @@ private:
     bool m_readOnly;
     QUndoStack* m_undoStack;
     CharactersModel* m_charactersModel;
-    CharacterModifierIdEditorFactory* m_charModifierIdEditorFactory;
+    CharactersViewDelegate* m_charactersViewDelegate;
 };
 
 #endif // KEYBOARDLAYOUTPROPERTIESWIDGET_H

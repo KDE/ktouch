@@ -15,37 +15,25 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#ifndef CHARACTERSVIEWDELEGATE_H
+#define CHARACTERSVIEWDELEGATE_H
 
-#ifndef CHARACTERSVIEWEDITORFACTORIES_H
-#define CHARACTERSVIEWEDITORFACTORIES_H
-
-#include <QItemEditorFactory>
+#include <QStyledItemDelegate>
 
 class KeyboardLayout;
 
-class CharacterValueEditorFactory : public QItemEditorFactory
+class CharactersViewDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
-    CharacterValueEditorFactory();
-    QWidget* createEditor(QVariant::Type type, QWidget* parent) const;
-};
-
-class CharacterModifierIdEditorFactory : public QItemEditorFactory
-{
-public:
-    CharacterModifierIdEditorFactory();
+    explicit CharactersViewDelegate(QObject* parent = 0);
     KeyboardLayout* keyboardLayout() const;
     void setKeyboardLayout(KeyboardLayout* keyboardLayout);
-    QWidget* createEditor(QVariant::Type type, QWidget* parent) const;
+    QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& option, const QModelIndex& index) const;
+    void setEditorData(QWidget* editor, const QModelIndex& index) const;
+    void setModelData(QWidget *editor, QAbstractItemModel* model, const QModelIndex& index) const;
 private:
     KeyboardLayout* m_keyboardLayout;
 };
 
-class CharacterPositionEditorFactory : public QItemEditorFactory
-{
-public:
-    CharacterPositionEditorFactory();
-    QWidget* createEditor(QVariant::Type type, QWidget* parent) const;
-};
-
-#endif // CHARACTERVALUEEDITORFACTORY_H
+#endif // CHARACTERSVIEWDELEGATE_H
