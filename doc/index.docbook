@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
  "dtd/kdex.dtd" [
-<!ENTITY kappname "&ktouch;"><!-- replace kapp here -->
+<!ENTITY i18n-ktouch "<application>Typewriting Trainer</application>">
+<!ENTITY kappname "&i18n-ktouch;"><!-- replace kapp here -->
 <!ENTITY package "kdeedu">
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % English "INCLUDE"><!-- change language only here -->
@@ -10,7 +11,7 @@
 <book id="ktouch" lang="&language;">
 
 <bookinfo>
-<title>The &ktouch; Handbook</title>
+<title>The &i18n-ktouch; Handbook</title>
 
 <authorgroup>
 
@@ -28,6 +29,13 @@
 </affiliation>
 </author>
 
+<author>
+<firstname>Sebastian</firstname><surname>Gottfried</surname>
+<affiliation>
+<address><email>sebastiangottfried@web.de</email></address>
+</affiliation>
+</author>
+
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 </authorgroup>
@@ -37,14 +45,18 @@
 <year>1999-2007</year>
 <holder>Håvard Frøiland, Andreas Nicolai</holder>
 </copyright>
+<copyright>
+<year>2011-2012</year>
+<holder>Sebastian Gottfried</holder>
+</copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2008-08-23</date>
-<releaseinfo>1.7.1</releaseinfo>
+<date>2012-11-26</date>
+<releaseinfo>2.0</releaseinfo>
 
 <abstract>
-<para>&ktouch; is a program for learning to touch type.  &ktouch;
+<para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
 provides you with text to train on and adjusts to different levels
 depending on how good you are. It displays which key to press next 
 and the correct finger to use.</para>
@@ -65,331 +77,426 @@ and the correct finger to use.</para>
 
 </bookinfo>
 
-<chapter id="using_ktouch">
-<title>Using &ktouch;</title>
+<chapter id="learning">
+<title>Learning touch typing with &i18n-ktouch;</title>
 
 <sect1 id="introduction">
 <title>Introduction</title>
 
 <sect2>
-<title>What is &ktouch;?</title>
-<para>&ktouch; is a program for learning to touch type.</para>
-<para>&ktouch; provides you with text to train on and adjusts to
+<title>What is &i18n-ktouch;?</title>
+<para>&i18n-ktouch; is a program for learning to touch type.</para>
+<para>&i18n-ktouch; provides you with text to train on and adjusts to
 different levels depending on how good you are. It shows your keyboard 
 and indicates which key to press next and the correct finger to use.</para>
 
 <screenshot>
-<screeninfo>The main screen of &ktouch;</screeninfo>
+<screeninfo>The main screen of &i18n-ktouch;</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="main_screen_default_color.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>The main screen of &ktouch;</phrase>
+<phrase>The main screen of &i18n-ktouch;</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para>&ktouch; is an excellent touch typing tutor. You learn typing 
-with all fingers, step by step, without having to look down 
+<para>&i18n-ktouch; is a touch typing tutor aimed mostly at personal use. You learn
+typing with all fingers, step by step, without having to look down 
 at the keyboard all the time to find your keys (which slows you down a lot). 
-It is convenient for all ages 
-and the perfect typing tutor for schools, universities and individuals. 
-It is free and licensed under the &GNU; Public License, so you will 
-never have to pay anything for the program or any update.
 </para>
 </sect2>
 
 <sect2>
-<title>Features </title>
+<title>Features</title>
 
-<para>In its current version, &ktouch; 1.7.1 has quite a number of helpful
+<para>In its current version, &i18n-ktouch; 2.0 has quite a number of helpful
 features, such as:</para>
 <itemizedlist>
-<listitem><simpara>Support for many different training lectures in many
-languages including language specific text fonts and a comfortable lecture
-editor</simpara></listitem>
+<listitem><simpara>Ships with dozens different courses in in many
+languages with and a comfortable course editor</simpara></listitem>
 <listitem><simpara>Support for different keyboard layouts with the ability to
-use user-defined layouts</simpara></listitem>
+use and edit user-defined layouts</simpara></listitem>
 <listitem><simpara>During your training session comprehensive statistical
-information is obtained to help you (or your teacher) analyse your
+information is obtained to help you (or your teacher) analyze your
 progress</simpara></listitem>
 </itemizedlist>
 <para>
 Many other features are included and will be discussed in the appropriate
 chapters of this manual.
 </para>
-
 </sect2>
 </sect1>
 
 
-<sect1 id="learning">
-<title>Learning touch typing with &ktouch;</title>
+<sect1 id="getting_started">
+<title>Getting started</title>
 
-<para>Here's another screenshot of &ktouch; in action, this time with a german
-keyboard and training lecture:</para>
+<para>Here's another screenshot of &i18n-ktouch; in action, this time with a German
+keyboard and training lesson:</para>
 
 <screenshot>
-<screeninfo>Main screen of &ktouch;</screeninfo>
+<screeninfo>Main screen of &i18n-ktouch;</screeninfo>
 <mediaobject>
 <imageobject>
 <imagedata fileref="main_window_german.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase>Main screen of &ktouch;</phrase>
+<phrase>Main screen of &i18n-ktouch;</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
 
-<para>Even though learning touch typing with &ktouch; and using the program
-should be very simple we will look a bit closer at &ktouch; in the following
+<para>Even though learning touch typing with &i18n-ktouch; and using the program
+should be very simple we will look a bit closer at &i18n-ktouch; in the following
 sections.</para>
 
-<sect2 id="getting_started">
-<title>Getting started</title>
+<sect2 id="creating_profile">
+<title>Creating your first profile</title>
 
-<para>When you start &ktouch; you can see the screen shown above. The main
-program window shows three main sections:
+<para>The first time you start &i18n-ktouch; it will open a special screen helping
+you to create your first profile. You can choose the name of your profile and
+the level of your typing skills.
+</para>
+<tip>
+<para>
+The level you chose determines the general operation of &i18n-ktouch;. In beginner
+mode lessons are unlocked one by one after you pass them, for advanced typist
+all lessons are available from the beginning.
+</para>
+</tip>
+<note>
+<para>
+Think about your choice, you won't able to change it later. But you can always
+create new profiles to revisit that decision.
+</para>
+</note>
+
+<screenshot>
+<screeninfo>Welcome screen of &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Welcome screen of &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+After pressing <guibutton>Start Training</guibutton> you will be guided to the
+home screen. This screen will also be the start screen when you run &i18n-ktouch; the
+next time.
+</para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title>Picking a lesson</title>
+
+<para>
+The home screen of &i18n-ktouch; consists of the top toolbar and the course
+selector. For more information see <xref linkend="training_preparation"/>.
+</para>
+<screenshot>
+<screeninfo>Home screen of &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Home screen of &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para>
+&i18n-ktouch; will show you the first course available for your current keyboard
+layout.
+</para>
+
+<note>
+<para>
+On some platforms, especially on Microsoft Windows, automatic keyboard layout
+detection is not available. In that case you have to press <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
+</imageobject> </inlinemediaobject> button in the toolbar, choose <guisubmenu>
+Choose Keyboard Layout...</guisubmenu> submenu and select the name of keyboard
+layout or some keyboard layout which is similar to yours. If your keyboard is
+not included, you can always define your own keyboard layout, see <xref
+linkend="create_layouts"/>.
+</para>
+</note>
+<para>
+Choose your lesson from the list on left of the window. You cannot choose
+the locked lessons with <inlinemediaobject> <imageobject> <imagedata
+fileref="Icon-object-locked.png" format="PNG"/> </imageobject>
+</inlinemediaobject> as they are too difficult for your current skills. The
+preview of the selected lesson will be shown on the right of lessons list.
+</para>
+<tip>
+<para>
+More information about the selected course can be shown and hidden again using
+<inlinemediaobject>  <imageobject> <imagedata
+fileref="Icon-dialog-information.png" format="PNG"/> </imageobject>
+</inlinemediaobject> button next to the course title.
+</para>
+</tip>
+<para>
+When you finished with the selection click on <guibutton>Start
+Training</guibutton> to switch to the training &i18n-ktouch; screen.
+</para>
+</sect2>
+
+<sect2 id="training">
+<title>Training</title>
+<para>
+   The training window of &i18n-ktouch; shows three main sections:
 </para>
 <orderedlist>
 <listitem><simpara>Some typing statistics in info boxes at the
 top</simpara></listitem>
-<listitem><simpara>The text you need to type (in the teacher's line) and the
-text that you have typed so far (in the student's line)</simpara></listitem>
-<listitem><simpara>The keyboard (that hopefully looks like
-yours)</simpara></listitem>
+<listitem><simpara>The text you need to type</simpara></listitem>
+<listitem><simpara>The keyboard visualization</simpara></listitem>
 </orderedlist>
-<para>We look at these sections later again.</para>
+<screenshot>
+<screeninfo>The training screen of &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>The training screen of &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para>
+    Visibility of training screen parts can be configured using <link
+linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>.
+  </para>
+</note>
+
 <para>
-Ok, the first time you start &ktouch; it will open a lecture and
-select a keyboard layout for the locale and keyboard defined in the &systemsettings;.
-To adjust the keyboard layout go to
-<menuchoice><guimenu>Settings</guimenu><guisubmenu>Keyboard 
-Layouts...</guisubmenu></menuchoice> and select the country you're in (or
-some country which uses the same keyboard layout as you). If your keyboard is
-not included, you can always define your own keyboard (see <link
-linkend="create_keyboards">Creating your own keyboard</link>).
-</para>
-<para>
-Once you have your keyboard selected, choose your training lecture. The first
-line in your current lecture and level is shown in the teacher's line. You can
-select any of the default lectures via 
-<menuchoice><guimenu>Training</guimenu><guisubmenu>Default
-Lectures</guisubmenu></menuchoice> or open a user defined lecture file
-(&eg; if your teacher gives you a special lecture to practice on) with
-<menuchoice><guimenu>File</guimenu><guimenuitem>Open
-Lecture...</guimenuitem></menuchoice>. You may even create your own lecture
-(see <link linkend="create_lectures">Creating your own lecture</link>). When
-you have selected keyboard and lecture you can start typing.
-</para>
-<para>
-Place your hand on the keyboard as indicated by the 8 marked finger keys
-(thumbs over the space bar) and start typing the text shown in the teacher's
-line. Each key you need to press is highlighted on the keyboard and if you
-need to move a finger from its resting position the target key and the
-appropriate finger key is highlighted. Try to move your hands as little as
+Place your two index fingers on the two keys on your keyboard with the two
+little tactile markers near the center of the middle character row. With that
+your other fingers will find their intended keys almost automatically. Your
+thumbs should rest above the space key, the only key you will ever use them for
+when touch typing. The other fingers should be placed on the three keys
+adjacent to the marked keys on the same row. The keys for the same finger are
+grouped together through there color.Try to move your hands as little as
 possible and after you typed a character always try to return your fingers to
 their resting positions.
 </para>
-<tip><para>The key colors indicate which finger needs to press which
-key.</para></tip>
 <para>
-While you type you may make mistakes and hit the wrong key. In that case the
-student's line will change its color (per default to red) and you have to hit
-Backspace to erase the wrong character (or characters) again.
+Start typing the text the in the middle of the screen. The next key you have
+to press is always highlighted on the keyboard visualization. While you type
+you may make mistakes and hit the wrong key. In that case the  characters will
+change their color to red and you have to hit &Backspace; to
+erase the wrong character or characters again.
 </para>
 <para>
 When you have successfully completed a line of text you need to press the
-&Enter; key to advance to the next line.
+<keycap>Return</keycap> to advance to the next line.
 </para>
-</sect2>
-
-<sect2 id="lectures_and_levels">
-<title>Lectures and levels</title>
+<tip>
 <para>
-As already mentioned above you need to select a training lecture which
-contains all the text you want to practice. Usually the difficulty of the text
-is gradually increasing and so most lectures contain various difficulty
-levels. However, some lectures may just contain a single level and text (&eg;
-a newspaper article to test your skills).
+This key can be changed using <link
+linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>
 </para>
-<para>
-In the info boxes on top of the &ktouch; main window you see the current
-level on the left. The small buttons to the right allow you to manually switch
-levels. Normally this happens automatically (more about this in the section
-<link linkend="training_options">Training Options</link>). The right info box
-shows a brief information text about the level. Usually it gives you a list of
-characters that are new in this level. The middle two info boxes show your
-current typing speed (in characters per minute) and your correctness. These
-values are Level Statistics and whenever you start a new level these values
-are reset. However, the program still remembers your previous statistics
-(see section <link linkend="statistics">Statistics in &ktouch;</link>).
-</para>
+</tip>
 </sect2>
 
-<sect2 id="starting_stopping">
-<title>Starting and stopping a training session</title>
-<para>
-While you type the text of a training lecture you are in a practice session.
-You can start a new practice session using
-<menuchoice><guimenu>Training</guimenu><guimenuitem>Start New
-Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
-Level changes (automatic or manual) do not change your training session. You
-stay in this training session until you start a new training session, select a
-new lecture (which automatically starts a new training session) or quit the
-program.
-</para>
-<para>
-If you open any dialog in &ktouch; while you are in a training session the
-training is paused and the timer is stopped until you hit the next key. You
-can manually pause the session using
-<menuchoice><guimenu>Training</guimenu><guimenuitem>Pause
-Session</guimenuitem></menuchoice> or the appropriate button in the toolbar.
-</para>
-</sect2>
-
-</sect1>
-
-<sect1 id="statistics">
-<title>Statistics in &ktouch;</title>
-<para>&ktouch; remembers you! Basically whatever you type is recorded and some
-useful (and sometimes just interesting) statistics are created. &ktouch;
-stores statistical data based on the lecture file you use for training. For
-every lecture file a separate history is kept. &ktouch; also distinguishes
-between level and practice session statistics. This is important to prevent
-cheating :-).
-</para>
-
-<sect2>
-<title>Training Session Statistics</title>
-<screenshot>
-<screeninfo>Current Training Statistics</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="statistics_dialog.png"
-format="PNG"/></imageobject>
-<textobject><phrase>Current Training Statistics</phrase></textobject>
-</mediaobject>
-</screenshot>
-<para>Whenever you start a new training session a new statistics record is
-started. &ktouch; remembers several things to assess your skill and to help
-you identify problem keys:
-</para>
-<itemizedlist>
-<listitem><simpara>How many keys were pressed in total?</simpara></listitem>
-<listitem><simpara>How many were correctly pressed?</simpara></listitem>
-<listitem><simpara>Which keys where missed and how often?</simpara></listitem>
-<listitem><simpara>How many correct words did you type?</simpara></listitem>
-<listitem><simpara>How much time did you need?</simpara></listitem>
-</itemizedlist>
-<para>Using training session statistics you and &ktouch; can evaluate your
-overall performance and skill in a certain training lecture.</para>
-</sect2>
-
-<sect2>
-<title>Level Statistics</title>
-<para>For each level in your training session (&ie; all levels you typed text
-in) the same statistics as for the training session are obtained. Using level
-statistics data you can investigate your progress in each level of a training
-lecture (and you will notice how your skill increases level by level and you
-can concentrate on the levels which still cause problems).
-</para>
-</sect2>
-
-<sect2>
-<title>The Statistics Dialog</title>
-<para><menuchoice><guimenu>Training</guimenu><guimenuitem>Lecture
-Statistics</guimenuitem></menuchoice> or the statistics button in the toolbar
-opens the statistics dialog. It displays your current training and level
+<sect2 id="review_your_progress">
+<title>Review your progress</title>
+<para>When you complete a lesson &i18n-ktouch;
+opens the statistics screen. It displays your current training and lesson
 statistics and shows a graphical history of previous training sessions.
 </para>
-<para>
-When you open the statistics dialog you can select a <guilabel>Current Training 
-Session</guilabel> statistics page and a <guilabel>Current Level Statistics</guilabel>
-page. The first page gives you a summary about everything you typed so far.
-The <guilabel>Current Level Statistics</guilabel> page only contains the stats
-for the current level. This is useful to distinguish between overall
-performance and skill in certain levels.
-</para>
-<para>
-The third statistics page gives you a graphical overview of your typing skill
-by offering several choices. A note about the time scaling option. Whenever a
-session or level statistic is obtained, also the date is stored. So you can
-also see how your skill dropped in long training breaks and when you last
-practiced a certain lecture or level.
-</para>
 <screenshot>
-<screeninfo>Training Statistics Chart</screeninfo>
+<screeninfo>Statistics dialog of &i18n-ktouch;</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="statistics_dialog_chart.png"
-format="PNG"/></imageobject>
-<textobject><phrase>Training Statistics Chart</phrase></textobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Statistics dialog of &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+In the statistics dialog you can select to show a particular lesson or
+<guilabel>All Lessons</guilabel>. This is useful to distinguish between overall
+performance and skill in certain lessons.
+</para>
+<para>
+If you feel ready for the next lesson press <guibutton>Next lesson</guibutton>
+button in the toolbar to continue with the next lesson of the current course or
+<guibutton>Repeat lesson</guibutton> button to try your skills on the current
+lesson again. The <guibutton>Next lesson</guibutton> button will be only
+available if you have passed the lesson.
+</para>
+<para>
+If you want to switch to some other lesson or course press <guibutton>Return to
+Home Screen</guibutton>.
+</para>
+<para>
+If you do not want to continue the training with &i18n-ktouch; just close the
+application window.
+</para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title>Training Preparation</title>
+<para>
+  Pretty much everything in the &i18n-ktouch; home screen should be self-explanatory.
+The top toolbar is meant to be the place where you can view and
+configure &i18n-ktouch; settings. The course selector can be used to view the
+information about the courses and switch between them.
+</para>
+
+<sect2 id="toolbar">
+  <title>&i18n-ktouch; toolbar</title>
+<para>The toolbar of &i18n-ktouch; houses the profile button at the left and the
+application menu button at the right.
+</para>
+
+<sect3 id="profile_management">
+<title>Profile management</title>
+<para>
+  The profile button with the name of your profile at the left of home screen
+toolbar can be used to manage &i18n-ktouch; profiles.
+</para>
+
+<screenshot>
+<screeninfo>Profile management in &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Profile management in &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+  You can review the settings of the existing profiles, delete them or create a
+new profile using <inlinemediaobject> <imageobject> <imagedata
+fileref="Icon-list-add.png" format="PNG"/> </imageobject> </inlinemediaobject>
+button.
+</para>
+<para>
+  To switch to the review mode press <guibutton>Edit</guibutton>. To select a
+profile and return to the home screen press <guibutton>Use Selected Profile
+</guibutton>.
+</para>
+
+<screenshot>
+<screeninfo>Reviewing profile information</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Reviewing profile information</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title>&i18n-ktouch; menu</title>
+<para>&i18n-ktouch; menu can be opened using <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
+</imageobject> </inlinemediaobject> button in the toolbar of the home
+screen.
+</para>
+
+<screenshot>
+<screeninfo>&i18n-ktouch; menu</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>&i18n-ktouch; menu</phrase>
+</textobject>
 </mediaobject>
 </screenshot>
 
-</sect2>
-</sect1>
-</chapter>
-
-<chapter id="ui_guide">
-<title>The &ktouch; main menu and program dialogs</title>
-<para>In this chapter we look at some of the details in the program.
-<tip><para>You can use the <quote>What's this?</quote> feature (the little
-question mark besides the minimize/maximize window buttons) in many dialogs of
-the program.</para></tip>
+<para>
+  You can find a list of the menu items with their short descriptions below.
 </para>
+<variablelist>
+<varlistentry>
+  <term><menuchoice><shortcut>
+<keycombo action="simul">&Ctrl;&Shift;<keycap>F</keycap></keycombo>
+</shortcut>
+<guimenuitem>Full Screen Mode</guimenuitem></menuchoice>
+</term>
+<listitem><para><action>Toggle</action> full screen mode of
+&i18n-ktouch; on and off</para></listitem>
+</varlistentry>
 
-<sect1 id="main_menu">
-<title>The menu of &ktouch;</title>
-<para>Pretty much everything in the &ktouch; menu should be self-explanatory.
-The <guimenu>File</guimenu> menu contains options to load a user defined lecture 
-and edit lectures. The <guimenu>Training</guimenu> menu contains training 
-options and the <guimenu>Settings</guimenu> menu
-contains options to setup the program. The various options in the
-configuration dialog are explained in the next section.</para>
-</sect1>
+<varlistentry>
+<term><guimenuitem>Course and Keyboard Layout Editor...</guimenuitem></term>
+<listitem><para><action>Open</action> the &i18n-ktouch; <link
+linkend="extending">editor window</link>
+</para></listitem>
+</varlistentry>
 
-<sect1 id="program_settings">
-<title>Configuration options for &ktouch;</title>
-<para>You can customize &ktouch; quite a bit. The settings are always stored
-for the current user of the program. Open the configuration dialog via
-<menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ktouch;
-...</guimenuitem></menuchoice></para>
+<varlistentry>
+<term><guimenuitem>Configure Typewriting Trainer...</guimenuitem></term>
+<listitem><para><action>Display</action> the &i18n-ktouch; <link
+linkend="configuration_dialog">configuration dialog</link>
+</para></listitem>
+</varlistentry>
 
-<sect2 id="general_options">
-<title>General Options</title>
-<para>In this dialog you can change general options that control the behaviour
-of &ktouch;.
+<varlistentry>
+<term><guimenuitem>Configure Shortcuts...</guimenuitem></term>
+<listitem><para><action>Configure</action> the shortcuts you want to associate
+with some actions
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guimenuitem>Configure keyboard layout...</guimenuitem></term>
+<listitem><para><action>Configure</action> A short cut to the Systems Settings
+module to configure the keyboard settings. Useful to prepare for training on
+a different keyboard layout.
 </para>
-<screenshot>
-<screeninfo>General options</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="general_options.png"
-format="PNG"/></imageobject>
-<textobject><phrase>General options</phrase></textobject>
-</mediaobject>
-</screenshot>
-<para>First of all you can switch the sound on or off (might be useful in
-class rooms). You can also set the sliding speed of the teacher's and
-student's line.
+<note>
+<para>
+On platforms lacking the support for detecting the keyboard layout
+automatically, especially &Microsoft; &Windows;, this entry is replaced
+with a sub menu to select &i18n-ktouch;'s keyboard layout manually.
 </para>
-<para>Most important, however, might be the selection of the lecture font.
-When showing the teacher's text &ktouch; will normally use the font specified
-in the lecture file. But if this font doesn't exist on your system or none has
-been specified, &ktouch; uses a default system font. What if this font does
-not contain all characters needed for your lecture? In such cases you can
-override the choice of the font and specify any font you like.
-<note><para>&ktouch; distinguishes between lecture and keyboard fonts.
-Overriding the lecture font does not automatically adjust the keyboard font as
-well. Use the appropriate option in the Keyboard Options configuration
-page.</para></note>
-</para>
-</sect2>
+</note>
+</listitem>
+</varlistentry>
 
-<sect2 id="training_options">
-<title>Training Options</title>
-<para>In this dialog you can select the options that control how &ktouch;
-changes difficulty levels based on the user's skill.</para>
+</variablelist>
+
+&help.menu.documentation;
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title>Configuration dialog</title>
+
+<para>You can customize &i18n-ktouch; quite a bit. The settings apply for all
+profiles globally. Open the configuration dialog by pressing
+<inlinemediaobject> <imageobject> <imagedata fileref="Icon-configure.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button at the right of the
+top toolbar of the home screen then choosing <guimenuitem>Configure
+Typewriting Trainer...</guimenuitem>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term><guilabel>Training Settings</guilabel></term>
+     <listitem>
+       <para>In this dialog you can select the options that control tutor window
+appearance and how &i18n-ktouch; behaves during training.</para>
 <screenshot>
 <screeninfo>Training options</screeninfo>
 <mediaobject>
@@ -398,49 +505,30 @@ format="PNG"/></imageobject>
 <textobject><phrase>Training options</phrase></textobject>
 </mediaobject>
 </screenshot>
-<para>If <guilabel>Automatic level adjustment</guilabel> is enabled,
-&ktouch; checks the given limits at the end of each level and decides whether to
-increase or decrease the level or stay in the level for another run. Level
-changes occur always at the end of a level (&ie; when the user has finished the
-last line of a level). If the typing speed (in characters per minute) and
-accuracy (correctness) are <emphasis>both</emphasis> above or equal to the
-<guilabel>Limits to increase a level</guilabel> &ktouch; will jump to the next higher
-level. If <emphasis>either</emphasis> typing speed or accuracy falls below the
-<guilabel>Limits to decrease a level</guilabel> &ktouch; will jump back to the
-previous lower level.
+<para>
+  You can control the visibility of statistics and keyboard panes during
+training using <guilabel>Show keyboard</guilabel> and <guilabel>Show real-time
+statistics</guilabel> check boxes.
 </para>
 <para>
-On this configuration page you can also select that the program remembers your
-current level when you quit the program and jumps back to it when you restart
-&ktouch;.
+  The keystroke to go to the next line of training text can be chosen from two
+options, <keycap>Return</keycap> or <keycap>Space</keycap>.
 </para>
-</sect2>
-
-<sect2 id="keyboard_options">
-<title>Keyboard Settings</title>
-<para>In this dialog you can select keyboard specific options.</para>
-<screenshot>
-<screeninfo>Keyboard settings</screeninfo>
-<mediaobject>
-<imageobject><imagedata fileref="keyboard_options.png"
-format="PNG"/></imageobject>
-<textobject><phrase>Keyboard settings</phrase></textobject>
-</mediaobject>
-</screenshot>
-<para>
-This dialog controls the appearance and functionality of the keyboard. Similar
-to the <guilabel>Override lecture font</guilabel> option in the <guilabel>General Options</guilabel>
-configuration page, you can here specify your own keyboard font. The option
-<guilabel>Highlight keys on keyboard</guilabel> can be used to decrease the
-difficulty of the training. <tip><para>Once you are familiar with the keyboard
-you may want to turn keyboard highlighting off so it won't distract you when
-you concentrate on the teacher's text.</para></tip>
+<para>The <guilabel>Lesson unlocking limits</guilabel> can be used to choose
+settings that control unlocking of higher level lessons. &i18n-ktouch; checks the
+given limits at the end of each level and decides whether to
+unlock the next lesson. If the typing speed in characters per minute and
+correctness are <emphasis>both</emphasis> above or equal to the
+<guilabel>Lesson unlocking limits</guilabel> &i18n-ktouch; will unlock the next
+higher level lesson.
 </para>
-</sect2>
+</listitem>
+</varlistentry>
 
-<sect2 id="color_options">
-<title>Color Settings</title>
-<para>In this dialog you can tweak the colors used by &ktouch;.</para>
+<varlistentry>
+  <term><guilabel>Color Settings</guilabel></term>
+  <listitem>
+<para>In this dialog you can tweak the colors used by &i18n-ktouch;.</para>
 <screenshot>
 <screeninfo>Color settings</screeninfo>
 <mediaobject>
@@ -450,473 +538,895 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para>
-You can select the text and background color for teacher's line, typing line and on miss typing.
+You can select the background color for each finger keys.
 </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
 </sect2>
 
-<sect2 id="sound_options">
-<title>Sound Settings</title>
-<para>In this dialog you can tweak the sound options for &ktouch;.</para>
+<sect2 id="course_and_lessons_selection">
+<title>Course and lesson selection</title>
+<para>
+&i18n-ktouch; automatically detects your keyboard layout and shows only the courses
+optimized for this layout.
+</para>
+<note>
+<para>
+On some platforms, especially &Windows;, keyboard layout auto-detection is not
+available. Use the application menu to select your keyboard layout manually.
+</para>
+</note>
+<sect3 id="switching_courses">
+<title>Switching courses</title>
+<para>Should there are more than one course installed for your keyboard layout
+you can  choose the appropriate one using <inlinemediaobject> <imageobject>
+<imagedata fileref="Icon-arrow-left.png"
+format="PNG"/> </imageobject> </inlinemediaobject> and <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-arrow-right.png"
+format="PNG"/> </imageobject> </inlinemediaobject> buttons to the right of the
+label with course name. If there is only one course the buttons won't be
+visible.
+</para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title>Unlocking lessons</title>
+<para>
+If you have chosen <guilabel>I have no or only very little experience in machine
+typing</guilabel> during <link linkend="creating_profile">initial profile
+creation</link> you will find some lesson items locked. These items are marked
+with <inlinemediaobject> <imageobject> <imagedata
+fileref="Icon-object-locked.png" format="PNG"/> </imageobject>
+</inlinemediaobject> icon and cannot be reached until you pass the previous
+lessons.
+</para>
+<note>
+<para>
+The settings to pass lessons can be changed using <link
+linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>.
+</para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title>Training on a different keyboard layout</title>
+<para>
+With &i18n-ktouch; it is possible to use any keyboard layout for training.
+Just press the buttons that are highlighted by the trainer, regardless to the
+labels on your physical keyboard.
+</para>
+<para>
+Select <menuchoice><guimenu>Configure Keyboard...</guimenu></menuchoice> in
+the application menu to select a different keyboard layout. After that &i18n-ktouch;
+will adapt accordingly and present you its courses for this layout.
+</para>
+<note>
+<para>
+On platforms without keyboard layout auto-detection, especially &Microsoft;
+&Windows;, you have first configure your operating system to the new layout and
+then select the same layout in &i18n-ktouch; via the application menu.
+</para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title>Efficient training</title>
+<sect2 id="training_techniques">
+<title>Training techniques</title>
+<para>
+Hereafter, you can find some general advice about techniques for learning
+touch typing.
+</para>
+<sect3 id="steady_speed">
+<title>Steady speed</title>
+<para>
+To be efficient when learning touch typing it is important not to simply try to
+type as fast as possible but to keep a steady speed and find a natural rhythm
+to press the keys.
+</para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title>Accuracy is a king</title>
+<para>
+The next important thing is to focus one's attention on accuracy. Only if you
+mastered the use of the currently unlocked keys, which means you make only
+very few errors with them still, you will have chance in the following lessons
+with even more keys to handle. You will notice you become almost automatically
+master if you make only very little errors and you will save precious time if
+you don't have to correct that many errors.
+</para>
+<note>
+<para>That is also the reason why the default accuracy level
+to unlock the next lesson is at 98% while the speed requirements are pretty
+moderate with just 180 characters per minute.
+</para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title>Correcting mistakes</title>
+<para>
+If you made mistakes it's important to correct them efficiently. Correcting
+single characters is almost always slower than correcting the whole word. For
+the latter you have just to press <keycombo>&Ctrl;&Backspace;</keycombo>,
+and retype the word. The mental overhead for this is very small. For the first
+you have to first locate the your mistake, delete precisely to the location of
+the error, determine the missing part of the word re-type it. This requires
+way more concentration when retyping the whole word.
+</para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title>Pausing the training session</title>
+<sect3 id="automatically_pausing">
+<title>Automatically</title>
+<para>
+If you open any dialog or switch to different application while you are in a
+training session the  training is paused and the timer is stopped until you
+focus &i18n-ktouch; window again and hit any key.
+</para>
+<para>
+The training session will also be paused if there will be no activity by the
+user for five seconds.
+</para>
+</sect3>
+<sect3 id="manually_pausing">
+<title>Manually</title>
+<para>
+You can pause the current session manually using
+<inlinemediaobject> <imageobject> <imagedata
+fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject>
+</inlinemediaobject> button in the toolbar.
+</para>
+<para>
+If you click on <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-go-home.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button in the toolbar
+&i18n-ktouch; will pause the current
+session  and show an overlay menu with some further actions.
+</para>
 <screenshot>
-<screeninfo>Sound settings</screeninfo>
+<screeninfo>&i18n-ktouch; menu on pausing</screeninfo>
 <mediaobject>
-<imageobject><imagedata fileref="sound_options.png"
+<imageobject><imagedata fileref="pause_options.png"
 format="PNG"/></imageobject>
-<textobject><phrase>Sound settings</phrase></textobject>
+<textobject><phrase>&i18n-ktouch; menu on pausing</phrase></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title>Tracking learning progress</title>
+<para>
+After completing a lesson, you will not return immediately to the home screen.
+Instead a special summary and statistics screen is shown.
+</para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title>Speed and accuracy statistics</title>
+<screenshot>
+<screeninfo>Score screen progress page</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Score screen progress page</phrase></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title>Filter per lesson</title>
+<para>
+With the help of the speed and accuracy statistics page you can review your
+learning progress and identify your weaknesses.
+</para>
+<para>
+The statistics data can be filtered by lesson using drop down list next to the
+<guilabel>Over</guilabel> label. This feature can be useful to control you
+progress in the current lesson and compare this progress with the progress in
+other lessons.
+</para>
+<screenshot>
+<screeninfo>Statistics range drop down menu</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Statistics range drop down menu</phrase></textobject>
 </mediaobject>
 </screenshot>
 <para>
-Enable or disable <guilabel>Beep on error</guilabel>, <guilabel>Typewriter sound when typing</guilabel> or <guilabel>Sound on automatic level change</guilabel>.
+Additional data about the session can be viewed in overlays. If you hover the
+mouse cursor on a point on the graph &i18n-ktouch; will show the statistics of the
+corresponding session.
+</para>
+<screenshot>
+<screeninfo>Progress per lesson</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Progress per lesson</phrase></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title>Errors statistics</title>
+<para>
+The score screen can be switched to show errors rate for each key using drop
+down menu next to the <guilabel>Show</guilabel> label.
+</para>
+<screenshot>
+<screeninfo>Switching the statistics mode</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Switching the statistics mode</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+In this mode, &i18n-ktouch; shows a bar diagram of errors for each key in the last
+training session.
+</para>
+<screenshot>
+<screeninfo>Errors chart by the keys</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject><phrase>Errors chart by the keys</phrase></textobject>
+</mediaobject>
+</screenshot>
+<para>
+You can switch back to the lessons graph using the same drop down menu next to
+the <guilabel>Show</guilabel> label.
+</para>
+<para>
+If you have passed the lesson you may choose to start training on the next
+lesson right away by pressing <guibutton>Next lesson</guibutton> in the
+toolbar.
+Otherwise he can repeat the current lesson with <guibutton>Repeat
+lesson</guibutton> or return to the home screen with the remaining button.
 </para>
 </sect2>
-
 </sect1>
 </chapter>
-
 
 <chapter id="extending">
-<title>Extending &ktouch;</title>
+<title>Extending &i18n-ktouch;</title>
 
-<sect1 id="create_lectures">
-<title>Creating your own lecture</title>
-<para>You can easily create your own training lecture using the built-in
-&ktouch; lecture editor. When you select
-<menuchoice><guimenu>File</guimenu><guimenuitem>Edit
-Lecture...</guimenuitem></menuchoice> the <guilabel>Open Lecture File</guilabel>
-dialog will open and ask you to select a lecture. You can choose either edit the
-current lecture, any of the predefined lectures (if you have write access to
-the installation directory), open a lecture file or create an empty lecture from scratch.</para>
-
-<sect2>
-<title>Creating a lecture</title>
+<sect1 id="create_courses">
+<title>Creating courses</title>
+<para>You can easily create your own training course using the built-in
+&i18n-ktouch; course and keyboard layout editor. Press <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
+</imageobject> </inlinemediaobject> button at the right of the home screen
+toolbar then choose <guimenuitem>Course and Keyboard Layout
+Editor...</guimenuitem>. You can choose open a course file or create an empty
+course from
+scratch or using an existing course as a template.</para>
+<important>
 <para>
-Let's assume you want to create a new lecture. There are a few guidelines you
+You cannot edit the built-in courses, even if you have the write access to the
+installation directory.
+</para>
+</important>
+
+<screenshot>
+<screeninfo>Course and Keyboard Layout Editor main window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Course and Keyboard Layout Editor main window</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title>Course properties</title>
+<para>
+The course properties can be chosen using &i18n-ktouch; course creation wizard. To
+invoke this wizard you should press <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-document-new.png" format="PNG"/>
+</imageobject> </inlinemediaobject> button in the toolbar of <guilabel>Course
+and Keyboard Layout Editor</guilabel> window.
+</para>
+<para>
+The first page of creation &i18n-ktouch; wizard allows you to choose the type of the
+data. Select <guilabel>Course</guilabel> and press <guibutton>Next</guibutton>.
+</para>
+<screenshot>
+<screeninfo>Choosing the type</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Choosing the type</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The second page of wizard allows you to choose the title, the keyboard layout
+and the description of the course.
+</para>
+<screenshot>
+<screeninfo>New course wizard second page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New course wizard second page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The course title is important for the quick-select menu entry in the course list
+and for the statistics.
+</para>
+<para>
+The description should be used to include information
+about the lesson author and source of lesson data if any. This description can
+be shown by pressing <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-dialog-information.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button in the home screen of
+&i18n-ktouch;.
+</para>
+<para>
+When you finished with entering appropriate values press
+<guibutton>Next</guibutton>.
+</para>
+<screenshot>
+<screeninfo>New course wizard third page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New course wizard third page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+Using the third page of wizard you can choose other course as a template for
+your course. Select the course from the list (if any) and press
+<guibutton>Finish</guibutton>.
+</para>
+<screenshot>
+<screeninfo>New course editing window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New course editing window</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+&i18n-ktouch; will open the course editor window prepared to entering your course
+data.
+</para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title>Adding lessons</title>
+<para>
+A course is an ordered set of lessons. To be efficient for learning touch
+typing the content of the course should meet a few requirements.
+</para>
+<variablelist>
+<varlistentry><term><emphasis role="bold">Choose a meaningful name for the
+lessons</emphasis></term>
+<listitem>
+<para>
+For each level you can specify the new characters/keys in the lesson. It is
+worth to include the new characters in the lesson title. Click on a name label
+in the <guilabel>Lessons</guilabel> list and enter some meaningful name.
+</para>
+<note>
+<title>Rationale</title>
+<para>The text you enter as a lesson title will be shown as lesson information
+text in the home screen course list. It will be much easier for user to choose
+the lesson if it has a meaningful title.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">The first lesson should cover the
+home keys</emphasis></term>
+<listitem>
+<para>
+Usually a keyboard has two haptic markers for the keys on the second row
+belonging to the index fingers. These two keys and the three adjacent keys
+outwards are the home keys. That's <emphasis>asdfjkl;</emphasis> for the US
+keyboard layout.
+</para>
+<note>
+<title>Rationale</title>
+<para>Those eight keys are the start position of each
+finger. One must internalize the location of these keys first to successfully
+learn touch typing.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Introduce two new keys per lesson:
+</emphasis></term>
+<listitem>
+<para>The unlocking order of keys is not fixed, but usually keys are introduced
+in pairs belonging to the same finger on both hands. Make your way from the home
+keys to the ones further away.  Thus, the forth row should be introduced at
+last. Prefer keys for important characters of your language, this may require to
+bend the introduction pattern a bit. For example in French accents are really
+important, this warrants a lesson early-on focusing on the accent key
+alone.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+If more keys are introduced the trainee might
+get overwhelmed by the difficulty of the lesson and loose his motivation.
+Introduce keys for important keys fist to able to form real words
+earlier.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Extra emphasis on the new
+keys</emphasis></term>
+<listitem>
+<para>
+Make sure the characters belonging to the newly introduced keys are the most or
+at least very frequently used characters in the lesson text.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+If the trainee passes a lesson he should have
+mastered the new keys. This is only possible if the lesson contains a
+significant amount of the new characters.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Intersperse lessons with new keys
+with repetition lessons</emphasis></term>
+<listitem>
+<para>
+Every two to three lessons add a repetition lesson
+without any new keys. These should have an even character mix covering all
+already introduced characters.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+Such lessons help to strengthen the acquired
+skills and and provide a way to check the overall training level. They are also
+better suited for repeated training to further improve one's general typing
+skills.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Dedicated lessons for
+capitalization</emphasis></term>
+<listitem>
+<para>
+There should be several lessons focusing sorely on
+capitalization. Ideally capitalization is introduced in multiple steps: At first
+only the left shift key, then the the right, then both and followed by one or
+more repetition lessons.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+Mastering capitalization is the most difficult
+part of learning touch typing. Therefore extra effort must be spend on these
+lessons.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Cover the complete keyboard
+layout</emphasis></term>
+<listitem>
+<para>This includes characters and symbols accessibly via other modifiers than
+shift. Ideally every character, number and symbol which is printed on a real
+keyboard should be covered.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+The more complete a course is the more the
+trainee can learn from it. It also keeps the course interesting for already
+advanced typists.
+</para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para>
+Use <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-list-add.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button to add new lesson to
+the course, <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-list-remove.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button to remove selected
+lesson from your course and <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-arrow-up.png"
+format="PNG"/> </imageobject> </inlinemediaobject>/<inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-arrow-down.png"
+format="PNG"/> </imageobject> </inlinemediaobject> buttons to rearrange the
+lessons in the course.
+</para>
+<important>
+<para>
+Delete lessons only with caution. Doing so may reset the unlocking progress
+of the users of the course. If you are planning to revise a course thoroughly
+it is usually better to use the existing course as a base for a new one.
+</para>
+</important>
+<para>
+The content of the lesson can be edited using button right edit field. You can
+copy snippets of the text from your favorite text editor and paste them to this
+field.
+</para>
+<para>
+Let's assume you want to add a new lesson. There are a few guidelines you
 may want to consider:
 </para>
-<itemizedlist>
 
-
-<listitem><para>
-For the first 20 keys or so, only add 2 keys at a time to a new level. Let the
-user practice the keys alone first in different combinations and then use the
-new keys in words and mixed with already known words.
-</para></listitem>
-
-<listitem><para>Add at least a few levels to the lecture in order to allow the
-user to see some progress while training</para></listitem>
-
-<listitem><para>
-Don't make the levels too long.
-</para></listitem>
-
-<listitem><para>
-Try to increase the difficulty of the text gradually and test your text
-yourself.
-</para></listitem>
-
-<listitem><para>
-After the first keys have been learned include a recap lecture.
-</para></listitem>
-</itemizedlist>
-
-</sect2>
-
-<sect2>
-<title>Things to know about lectures</title>
+<variablelist>
+<varlistentry><term><emphasis role="bold">Give lessons a descriptive
+title</emphasis></term>
+<listitem>
 <para>
-The lecture title is important for the quick-select menu entry in the training
-menu and for the statistics. The comment should be used to include information
-about the lecture author and source of lecture data if any.
+Name the new characters if there are any or otherwise state what the lesson is
+about.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+Good titles make it easier to find the right
+course if one wants to train on something specific.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">The lesson text should be composed
+out of real words and sentences</emphasis></term>
+<listitem>
+<para>
+Optimally a lesson forms a comprehensible contiguous text on a freely chosen
+subject.
+</para>
+<note>
+<title>Rationale</title>
+<para>Training with real words and sentences is more
+effective than with arbitrary random character combinations since that is closer
+to real typing. And it is more fun.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Avoid non-word character
+combinations</emphasis></term>
+<listitem>
+<para>
+This may impossible in the very first lessons where only a few
+characters are available, but as soon as possible only real words should be
+used. Never use misspelled words.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+Random character combinations are hard to type and are seldom found in
+day-to-day typing. Misspelled words on the other hand are confusing and have
+even a negative learning value, since the trainee may memorize the wrong
+spelling.
+</para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry><term><emphasis role="bold">Lesson text should be roughly 600
+characters long</emphasis></term>
+<listitem>
+<para>
+They may be longer, up to 1200 characters is okay, but shorter
+lessons should be avoided. This is especially true for repetition
+lessons.
+</para>
+<note>
+<title>Rationale</title>
+<para>
+Keeping within this range ensures that a untrained
+typist (~120 characters per minute) can finish a lesson in five to ten minutes.
+Longer lessons get frustrating, shorter ones are ineffective.
+</para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title>Quality checks in the lesson text editor</title>
+<screenshot>
+<screeninfo>Quality check in the course editing window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Quality check in the course editing window</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+Above is a screenshot of the course editor with one of a problematic lesson
+loaded showing one of the built-in quality-assurance checks: if a lesson
+contains characters not available in that lesson, because they are not among the
+configured new characters of this lesson or any previous one, they are
+highlighted in red. There is also a check for too long lines resulting in a
+muted color the characters behind the allowed column.
 </para>
 <para>
-For each level you can specify the new characters/keys in the lecture. The
-text you enter there will be shown as level information text in the top right
-info box of the &ktouch; main window.
+On the left side their is a list over all data files &i18n-ktouch; knows about,
+built-in and user-created alike. If the user selects a built-in resource the
+editor will degrade to a simple viewer, though. If the user selects a keyboard
+layout the program will adapt appropriately.
 </para>
-<para>You can also specify a default font for the lecture which will be used
-in the teacher's and student's line and of course in the edit lecture dialog
-using the <guiicon>Font</guiicon> icon.
-</para>
+</sect3>
 </sect2>
-
 </sect1>
 
-<sect1 id="create_keyboards">
-<title>Creating your own keyboard</title>
-<para>You can create your own keyboards by creating keyboard files. Currently
-&ktouch; doesn't have a keyboard editor but it is still pretty easy to define
-your own keyboard. It doesn't require much more than a little math to work out
-the geometry and some time. Best is to start with an existing keyboard file,
-create a copy for your keyboard layout and simply adjust the lines.</para>
-<para>
-Currently keyboard files are plain UTF-8 encoded text files. In one of the
-next version of &ktouch; keyboard data will be stored in &XML; files, too.
-Therefore I'll only briefly explain the structure of a keyboard file.
-</para>
-<para>A keyboard file usually starts with a header including some information
-about the author and type of the keyboard.</para>
-<programlisting>
-####################################################
-#    &ktouch;
-#    Keyboard layout file for german keyboard layout
-#    Code=UTF-8
-####################################################
-</programlisting>
-<para>
-All lines starting with a hash character '#' are considered comments. After
-the header section a block of so called <quote>finger keys</quote> follows,
-indicating the resting positions for all 8 fingers.
-</para>
-<programlisting>
-#
-#          Unicode  KeyChar  x    y
-#
-FingerKey  97       A        18   20
-FingerKey  115      S        28   20
-FingerKey  100      D        38   20
-FingerKey  102      F        48   20
-FingerKey  106      J        78   20
-FingerKey  107      K        88   20
-FingerKey  108      L        98   20
-FingerKey  246      Ö        108  20
-</programlisting>
-<para>Keys have the default dimensions of 8 units, so using a grid of 10 units
-gives a normal looking keyboard. The first number is the unicode character
-code as decimal number. The KeyText is the text printed on the key encoded as
-UTF-8 (automatic under newer &Linux; versions, just make sure your editor saves
-files as UTF-8 format).</para>
-<para>The next section contains special keys, which are - apart from BackSpace
-and Enter - just decorative.</para>
-<programlisting>
-#
-#           Unicode  KeyText    x     y     Width Height
-#
-ControlKey  260      Tab        0     10    15    10
-ControlKey  13       Enter      138   20    12    10
-ControlKey  258      Shift      123   30    27    10
-ControlKey  264      AltGr      120   40    15    10
-ControlKey  265      Ctrl       135   40    15    10
-ControlKey  263      Alt        15    40    15    10
-ControlKey  262      Strg       0     40    15    10
-ControlKey  32       Leertaste  30    40    90    10
-ControlKey  257      Shift      0     30    13    10
-ControlKey  259      CapsLock   0     20    18    10
-ControlKey  8        BackSpace  130   0     20    10
-</programlisting>
-<para>
- The text you specify for the key is printed completely on the keyboard.
-However, for the keytexts <quote>Shift</quote>, <quote>CapsLock</quote>,
-<quote>Tab</quote>, <quote>BackSpace</quote> and <quote>Enter</quote> &ktouch;
-draws the appropriate symbols. Hence you can use these keytexts regardless of
-the language. The other keytexts like Ctrl or Alt need to be translated
-though. The geometry of the control keys can be any rectangle, defined by
-upper left x and y coordinates and width and height.</para>
-<para>The next section contains all characters on the keyboard (except the
-already defined finger keys) that can be typed <emphasis>without</emphasis>
-pressing shift.</para>
-<programlisting>
-#
-#          Unicode  KeyChar   x    y      FingerKeyUnicode
-#
-NormalKey  94       ^         0    0      97
-NormalKey  49       1         10   0      97
-NormalKey  50       2         20   0      115
-NormalKey  51       3         30   0      100
-NormalKey  52       4         40   0      102
-NormalKey  53       5         50   0      102
-NormalKey  54       6         60   0      102
-.
-.
-.
-NormalKey  46       .         103  30     108
-NormalKey  45       -         113  30     246
-</programlisting>
-<para>The definition of these primary keys or chars is pretty much the same as
-for the finger keys, but they include an additional property. The last unicode
-character code identifies the associated finger key. Basically which finger
-has to be used to press this key.</para>
-<para>
-The next and last section in a keyboard layout defines all keys that are
-pressed by using a modifier key such as the shift key.
-</para>
-<programlisting>
-#
-#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode    
-Comment
-#
-HiddenKey   65        97              97              258                 #A
-HiddenKey   66        98              102             258                 #B
-HiddenKey   67        99              100             258                 #C
-HiddenKey   68        100             100             258                 #D
-.
-.
-.
-HiddenKey   124       60              97              264                 #|
-HiddenKey   64        113             97              264                 #@
-</programlisting>
-<para>The <quote>hidden keys</quote> are really controlling what should happen
-on the keyboard when you type a certain character. The first unicode number is
-the character code of the character you define. The second number is the
-character code of the key on the keyboard (one of the already defined normal
-keys). The third number indicates a finger key (where does the finger rest
-that is needed to type the key) and the last number indicates the modifier key
-you need to press to get this character.
-</para>
-<para>Let's look at an example:</para>
-<para>You want to define the uppercase 'R' character. It has the unicode 82.
-The character obtained when the 'R' key is pressed without modifier is the
-small 'r' with the unicode 114. The finger for the 'R' rests over the 'f' key
-which has the unicode 102. And in order to get the 'R' you need to press the
-right (or left) shift key which has the code 264 (this is actually not a
-unicode but the code obtained from a keypress event of QT). Note that the
-identification of controll keys will likely change in the next version of
-&ktouch;.  But for now you can use the codes used in other keyboard files.
-</para>
+<sect1 id="create_layouts">
+<title>Creating keyboard layouts</title>
+<para>You can create your own keyboard layouts using built-in &i18n-ktouch; editor.
+Best is to start with an existing layout, create a copy for your keyboard
+layout and simply adjust it.</para>
 
+<sect2 id="layout_properties">
+<title>Keyboard layout properties</title>
+<para>
+The course properties can be chosen using &i18n-ktouch; keyboard layout creation
+wizard. To
+invoke this wizard you should press <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-document-new.png" format="PNG"/>
+</imageobject> </inlinemediaobject> button in the toolbar of <guilabel>Course
+and Keyboard Layout Editor</guilabel> window.
+</para>
+<para>
+The first page of creation &i18n-ktouch; wizard allows you to choose the type of the
+data. Select <guilabel>Keyboard layout</guilabel> and press
+<guibutton>Next</guibutton>.
+</para>
+<screenshot>
+<screeninfo>Choosing the type</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Choosing the type</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The second page of wizard allows you to choose the title and the name of the
+layout.
+</para>
+<screenshot>
+<screeninfo>New layout wizard second page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New layout wizard second page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The layout title is important for the quick-select menu entry in the layout list
+of <link linkend="ktouch_menu">&i18n-ktouch; configuration menu</link> and for the
+statistics.
+</para>
+<para>
+The layout name will be used as a name of the layout by &i18n-ktouch; internally.
+</para>
+<screenshot>
+<screeninfo>New layout wizard third page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New layout wizard third page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+Using the third page of wizard you can choose other layout as a template for
+your
+layout. Select the course from the list (if any) and press
+<guibutton>Finish</guibutton>.
+</para>
+<screenshot>
+<screeninfo>New layout editing window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>New layout editing window</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+&i18n-ktouch; will open the course editor window prepared to entering your keyboard
+layout data. First thing you can do is to change the layout image geometry.
+</para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title>Adding keys</title>
+<para>
+Use <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-list-add.png"
+format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Normal
+Key</guilabel> button to add new normal key or <inlinemediaobject> <imageobject>
+<imagedata fileref="Icon-list-add.png"
+format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Special
+Key</guilabel> button to add new special key (modifier, <keycap>Space</keycap>,
+&Backspace;, &Tab;, <keycap>Caps Lock</keycap> or &Enter;) to the layout.
+The <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-edit-delete.png"
+format="PNG"/> </imageobject> </inlinemediaobject><guilabel>Delete</guilabel>
+button can be used to remove a selected key from your layout. The scale can be
+changed using the slider at the left part of the editor toolbar.
+</para>
+<para>
+The properties of individual keys can be edited using the bottom pane of the
+editor window.
+</para>
+<sect3 id="normal_keys">
+<title>Normal keys</title>
+<para>
+It is easy to change the size or properties of a key.
+</para>
+<para>
+Begin by clicking on the key you want to change. This selects the clicked key as
+the current key.
+</para>
+<para>
+There are now 4 squares on the corners of the key. By moving these squares, you
+will be able to drag the key border to a new location. Dragging the whole key
+allows you to change the key position in the layout.
+</para>
+<para>
+The numerical characteristics of the key geometry can also be changed using the
+<guilabel>Geometry</guilabel> section of the pane at the bottom of the editor
+window.
+</para>
+<screenshot>
+<screeninfo>Editing an individual key properties</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Editing an individual key properties</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The bottom pane can also be used to choose finger to press the key and switch
+the haptic marker for the key.
+</para>
+<sect4 id="key_characters">
+<title>Key characters</title>
+<para>
+The characters that will be shown on a key can be changed using the <guilabel>
+Characters</guilabel> section of the editor bottom pane.
+</para>
+<screenshot>
+<screeninfo>Editing the character position</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Editing the character position</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+You can add a character by pressing <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-list-add.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button. A selected character
+can be removed by pressing <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-list-remove.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button.
+</para>
+<para>
+You can also select the position of individual characters on the key by
+double-clicking in the <guilabel>Position</guilabel> column.
+</para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title>Modifiers</title>
+<para>
+There are several modifier keys that can be defined in &i18n-ktouch;. They can be
+edited as normal keys but it is helpful to know identifier of modifier key to
+use them as appropriate. The table of modifier keys identifiers is given below.
+</para>
+<table>
+<title>Modifier keys</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry>Modifier key</entry>
+<entry>Modifier id in &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>&Alt;</entry>
+<entry><literal>altgr</literal></entry>
+</row>
+<row>
+<entry>&Shift;</entry>
+<entry><literal>left_shift</literal> or <literal>right_shift</literal></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
 </sect1>
-</chapter>
 
-<chapter id="commands">
-<title>Command Reference</title>
-
-<sect1 id="ktouch-mainwindow">
-<title>Menus and shortcut keys</title>
-
-<sect2>
-<title>The <guimenu>File</guimenu> Menu</title>
-
-<variablelist>
-<varlistentry>
-<term><menuchoice>
-<guimenu>File</guimenu>
-<guimenuitem>Open Plain Text File...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> a plain text file and use it as lecture.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>File</guimenu>
-<guimenuitem>Open Lecture...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> a new training lecture
-file</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>File</guimenu>
-<guimenuitem>Edit Lecture...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> the lecture editor to allow you to
-change the current training file </para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>File</guimenu>
-<guimenuitem>Edit Color Scheme...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> the color scheme editor to allow you to
-define new color schemes</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>File</guimenu>
-<guimenuitem>Edit Keyboard Layout...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> a keyboard file and edit a keyboard layout in the 
-<guilabel>&ktouch; Keyboard Editor</guilabel> dialog.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
-</shortcut>
-<guimenu>File</guimenu>
-<guimenuitem>Quit</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Quit</action> &ktouch;</para></listitem>
-</varlistentry>
-</variablelist>
-
-</sect2>
-
-
-
-<sect2>
-<title>The <guimenu>Training</guimenu> Menu</title>
-
-<variablelist>
-<varlistentry>
-<term><menuchoice>
-<guimenu>Training</guimenu>
-<guimenuitem>Start New Session</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Start</action> a new typing session and ask you if you
-want to start at the same level</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Training</guimenu>
-<guimenuitem>Pause Session</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Pause</action> the current session: statistics are on
-hold</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Training</guimenu>
-<guimenuitem>Lecture Statistics</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Open</action> the current session statistics
-dialog</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Training</guimenu>
-<guisubmenu>Default Lectures</guisubmenu>
-<guimenuitem>English (auto-generated)</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> what language you want to learn touch
-typing in</para></listitem>
-</varlistentry>
-
-</variablelist>
-
-</sect2>
-
-<sect2>
-<title>The <guimenu>Settings</guimenu> Menu</title>
-
-<variablelist>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Toolbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle</action> the toolbar</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Statusbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle</action> the statusbar</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Keyboard Layouts</guisubmenu>
-<!--guimenuitem>Keypad/Number block</guimenuitem-->
-</menuchoice></term>
-<listitem><para>This item <action>displays</action> a list of available the keyboard layout
-where you can choose the layout you want to use.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Keyboards Color Schemes</guisubmenu>
-<guimenuitem>Black &amp; White</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> the keyboard color layout in black in
-white: all keys are white and the one you should type is
-black</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Keyboards Color Schemes</guisubmenu>
-<guimenuitem>Classic</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> the classic keyboard color layout:
-each column of keys has a different color</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Keyboards Color Schemes</guisubmenu>
-<guimenuitem>Deep Blue</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> the deep blue keyboard color layout:
-each column of keys has a different color in a shade of blue</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Keyboards Color Schemes</guisubmenu>
-<guimenuitem>Stripy</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> the stripy keyboard color layout: in
-blue and grey</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Current User</guisubmenu>
-<guimenuitem>Default User</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> the user for the current training sessions.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Setup  Users...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Displays</action> a dialog to add or remove a user for &ktouch;.
-The users listed in this dialog are displayed in the <guisubmenu>Current User</guisubmenu> submenu.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Shortcuts...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Configure</action> the shortcuts you want to associate
-with some actions
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Toolbars...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Configure</action> the items you want to put in the
-toolbar
-</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure &ktouch;...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Display</action> the &ktouch; settings dialog
-</para></listitem>
-</varlistentry>
-
-</variablelist>
-
-</sect2>
-
-<sect2>
-<title>The <guimenu>Help</guimenu> Menu</title>
-&help.menu.documentation;
+<sect1 id="sharing_your_results">
+<title>Sharing your results</title>
+<para>
+It is possible to save your courses and keyboard layouts in separate files
+outside of the local &i18n-ktouch; database.
+</para>
+<sect2 id="export_import">
+<title>Export/Import</title>
+<para>
+To export a course or keyboard layout in a separate file choose the
+corresponding item in the list at the left part of <guilabel>Course and Keyboard
+Layout Editor</guilabel> window and press <guibutton>Export</guibutton> button
+in the toolbar.
+</para>
+<para>
+&i18n-ktouch; will open a standard &kde; save dialog. Description of this dialog in
+details can be found in the <ulink url="help:/fundamentals/files.html"
+>Opening and Saving Files</ulink> chapter of the &kde; Fundamentals.
+</para>
+<para>
+You can choose the name and the location of the &XML; file to be saved.
+</para>
+<para>
+If you find it worth to share your files with over users, please send them
+with some description to <ulink url="mailto:kde-edu@kde.org">kde-edu mailing
+list</ulink>.
+</para>
+<important>
+<para>
+Your data should be licensed under <ulink
+url="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License,
+version 2</ulink> to include them into the default &i18n-ktouch; installation.
+</para>
+</important>
+<para>
+To import your data files into &i18n-ktouch; press <guibutton>Import</guibutton>
+button in the toolbar and choose &XML; file that was earlier exported using
+&i18n-ktouch;.
+</para>
 </sect2>
 </sect1>
 </chapter>
@@ -924,25 +1434,32 @@ toolbar
 <chapter id="credits">
 
 <title>Credits and License</title>
-<para>&ktouch;</para>
+<para>&i18n-ktouch;</para>
 <para>
-&ktouch;, Copyright 1999-2007 by</para>
+&i18n-ktouch;, Copyright 1999-2007 by</para>
 <itemizedlist>
-<listitem><simpara>Håvard Frøiland &Haavard.Froeiland.mail;</simpara></listitem>
+<listitem><simpara>Håvard Frøiland
+&Haavard.Froeiland.mail;</simpara></listitem>
 <listitem><simpara>Andreas Nicolai <email>andreas.nicolai@gmx DOT
 net</email></simpara></listitem>
 </itemizedlist>
+<para>
+  &i18n-ktouch;, Copyright 2011-2012 by Sebastian Gottfried
+<email>sebastiangottfried@web DOT de</email>.
+</para>
 
 <para> Contributors:</para>
 <itemizedlist>
-<listitem><simpara>Frank Quotschalla, German keyboard and German training file and
- translation.</simpara></listitem>
+<listitem><simpara>Frank Quotschalla, German keyboard and German training file
+and translation.</simpara></listitem>
 <listitem><simpara>Ernesto Hern&aacute;ndez-Novich, Latin American
  keyboard</simpara></listitem>
-<listitem><simpara>Jo&atilde;o Miguel Neves, Portuguese keyboard</simpara></listitem>
+<listitem><simpara>Jo&atilde;o Miguel Neves, Portuguese
+keyboard</simpara></listitem>
 <listitem><simpara>Henri Girard, French keyboard</simpara></listitem>
 </itemizedlist>
-<para><emphasis>Special thanks to all the other (here not mentioned) contributors of keyboard and lecture files.</emphasis>
+<para><emphasis>Special thanks to all the other (here not mentioned)
+contributors of keyboard and lesson files.</emphasis>
 </para>
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
@@ -952,10 +1469,14 @@ net</email></simpara></listitem>
 </chapter>
 
 <appendix id="installation">
-<title>How to obtain and install &ktouch;</title>
+<title>How to obtain and install &i18n-ktouch;</title>
 
- &install.intro.documentation;
-
+&install.intro.documentation;
+ 
+<sect1 id="Compilation">
+<title>Compilation and Installation</title>
+&install.compile.documentation;
+</sect1>
 </appendix>
 
 &documentation.index;
@@ -969,5 +1490,5 @@ sgml-indent-step:0
 sgml-indent-data:nil
 End:
 
-// vim:ts=2:sw=2:tw=78:noet
+// vim:ts=0:sw=2:tw=78:noet
 -->
