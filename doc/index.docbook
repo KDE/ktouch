@@ -114,8 +114,8 @@ at the keyboard all the time to find your keys (which slows you down a lot).
 <para>In its current version, &i18n-ktouch; 2.0 has quite a number of helpful
 features, such as:</para>
 <itemizedlist>
-<listitem><simpara>Ships with dozens different courses in in many
-languages with and a comfortable course editor</simpara></listitem>
+<listitem><simpara>Ships with dozens different courses in many
+languages and a comfortable course editor</simpara></listitem>
 <listitem><simpara>Support for different keyboard layouts with the ability to
 use and edit user-defined layouts</simpara></listitem>
 <listitem><simpara>During your training session comprehensive statistical
@@ -217,7 +217,7 @@ layout.
 
 <note>
 <para>
-On some platforms, especially on Microsoft Windows, automatic keyboard layout
+On some platforms, especially on &Microsoft; &Windows;, automatic keyboard layout
 detection is not available. In that case you have to press <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
 </imageobject> </inlinemediaobject> button in the toolbar, choose <guisubmenu>
@@ -284,7 +284,7 @@ your other fingers will find their intended keys almost automatically. Your
 thumbs should rest above the space key, the only key you will ever use them for
 when touch typing. The other fingers should be placed on the three keys
 adjacent to the marked keys on the same row. The keys for the same finger are
-grouped together through there color.Try to move your hands as little as
+grouped together through their color. Try to move your hands as little as
 possible and after you typed a character always try to return your fingers to
 their resting positions.
 </para>
@@ -721,7 +721,7 @@ With the help of the speed and accuracy statistics page you can review your
 learning progress and identify your weaknesses.
 </para>
 <para>
-The statistics data can be filtered by lesson using drop down list next to the
+The statistics data can be filtered by lesson using drop down box next to the
 <guilabel>Over</guilabel> label. This feature can be useful to control you
 progress in the current lesson and compare this progress with the progress in
 other lessons.
