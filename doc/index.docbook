@@ -462,7 +462,7 @@ with some actions
 
 <varlistentry>
 <term><guimenuitem>Configure keyboard layout...</guimenuitem></term>
-<listitem><para><action>Configure</action> A short cut to the Systems Settings
+<listitem><para>A shortcut to the &systemsettings;
 module to configure the keyboard settings. Useful to prepare for training on
 a different keyboard layout.
 </para>
@@ -470,7 +470,7 @@ a different keyboard layout.
 <para>
 On platforms lacking the support for detecting the keyboard layout
 automatically, especially &Microsoft; &Windows;, this entry is replaced
-with a sub menu to select &i18n-ktouch;'s keyboard layout manually.
+with a submenu to select &i18n-ktouch;'s keyboard layout manually.
 </para>
 </note>
 </listitem>
