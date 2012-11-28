@@ -968,7 +968,7 @@ alone.
 <para>
 If more keys are introduced the trainee might
 get overwhelmed by the difficulty of the lesson and loose his motivation.
-Introduce keys for important keys fist to able to form real words
+Introduce keys for important keys first to able to form real words
 earlier.
 </para>
 </note>
@@ -1016,7 +1016,7 @@ capitalization</emphasis></term>
 <para>
 There should be several lessons focusing sorely on
 capitalization. Ideally capitalization is introduced in multiple steps: At first
-only the left shift key, then the the right, then both and followed by one or
+only the left &Shift; key, then the right, then both and followed by one or
 more repetition lessons.
 </para>
 <note>
@@ -1032,8 +1032,8 @@ lessons.
 <varlistentry><term><emphasis role="bold">Cover the complete keyboard
 layout</emphasis></term>
 <listitem>
-<para>This includes characters and symbols accessibly via other modifiers than
-shift. Ideally every character, number and symbol which is printed on a real
+<para>This includes characters and symbols accessible via other modifiers than
+&Shift;. Ideally every character, number and symbol which is printed on a real
 keyboard should be covered.
 </para>
 <note>
@@ -1069,7 +1069,7 @@ it is usually better to use the existing course as a base for a new one.
 </para>
 </important>
 <para>
-The content of the lesson can be edited using button right edit field. You can
+The content of the lesson can be edited using bottom right edit field. You can
 copy snippets of the text from your favorite text editor and paste them to this
 field.
 </para>
@@ -1172,7 +1172,7 @@ highlighted in red. There is also a check for too long lines resulting in a
 muted color the characters behind the allowed column.
 </para>
 <para>
-On the left side their is a list over all data files &i18n-ktouch; knows about,
+On the left side there is a list over all data files &i18n-ktouch; knows about,
 built-in and user-created alike. If the user selects a built-in resource the
 editor will degrade to a simple viewer, though. If the user selects a keyboard
 layout the program will adapt appropriately.
