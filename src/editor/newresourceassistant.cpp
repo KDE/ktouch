@@ -37,7 +37,7 @@ NewResourceAssistant::NewResourceAssistant(ResourceModel* resourceModel, QWidget
     m_newKeyboardLayoutWidget(new NewKeyboardLayoutWidget(m_resourceModel, this)),
     m_resourceTemplateWidget(new ResourceTemplateWidget(m_resourceModel, this))
 {
-    setWindowTitle("New");
+    setWindowTitle(i18n("New"));
 
     m_resourceTypesPage = addPage(m_resourceTypesWidget, i18n("New..."));
     setValid(m_resourceTypesPage, false);
