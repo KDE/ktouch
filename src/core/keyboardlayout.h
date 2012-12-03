@@ -24,9 +24,6 @@
 #include <QVariant>
 
 class QSignalMapper;
-class QXmlSchema;
-class QDomDocument;
-class QIODevice;
 class AbstractKey;
 
 class KeyboardLayout : public KeyboardLayoutBase
