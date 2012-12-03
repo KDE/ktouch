@@ -45,29 +45,29 @@ Item {
 
     onXChanged: {
         if (!xLocked && mouseArea.drag.active) {
-            xLocked = true;
-            var effX = x / scaleFactor;
+            xLocked = true
+            var effX = Math.round(x / scaleFactor)
             if (horizontalPosition == "left") {
-                setKeyGeometry(targetItem.keyIndex, effX, target.top, target.width + target.left - effX, target.height);
+                setKeyGeometry(targetItem.keyIndex, effX, target.top, target.width + target.left - effX, target.height)
             }
             else {
-                setKeyGeometry(targetItem.keyIndex, target.left, target.top, effX - target.left, target.height);
+                setKeyGeometry(targetItem.keyIndex, target.left, target.top, effX - target.left, target.height)
             }
-            xLocked = false;
+            xLocked = false
         }
     }
 
     onYChanged: {
         if (!yLocked && mouseArea.drag.active) {
-            yLocked = true;
-            var effY = y / scaleFactor;
+            yLocked = true
+            var effY = Math.round(y / scaleFactor)
             if (verticalPosition == "top") {
-                setKeyGeometry(targetItem.keyIndex, target.left, effY, target.width, target.height + target.top - effY);
+                setKeyGeometry(targetItem.keyIndex, target.left, effY, target.width, target.height + target.top - effY)
             }
             else {
-                setKeyGeometry(targetItem.keyIndex, target.left, target.top, target.width, effY - target.top);
+                setKeyGeometry(targetItem.keyIndex, target.left, target.top, target.width, effY - target.top)
             }
-            yLocked = false;
+            yLocked = false
         }
     }
 
@@ -105,11 +105,11 @@ Item {
                 onActiveChanged: {
                     targetItem.manipulated = drag.active
                     if (!drag.active) {
-                        var left = 10 * Math.round(target.left / 10);
-                        var top = 10 * Math.round(target.top / 10);
-                        var width = 10 * Math.round(target.width / 10);
-                        var height = 10 * Math.round(target.height / 10);
-                        setKeyGeometry(targetItem.keyIndex, left, top, width, height);
+                        var left = 10 * Math.round(target.left / 10)
+                        var top = 10 * Math.round(target.top / 10)
+                        var width = 10 * Math.round(target.width / 10)
+                        var height = 10 * Math.round(target.height / 10)
+                        setKeyGeometry(targetItem.keyIndex, left, top, width, height)
                     }
                 }
             }
