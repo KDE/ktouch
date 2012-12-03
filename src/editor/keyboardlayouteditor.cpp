@@ -79,6 +79,8 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
     setSelectedKey(0);
     connect(currentUndoStack(), SIGNAL(indexChanged(int)), SLOT(validateSelection()));
 
+    m_keyboardLayout->setAssociatedDataIndexKeyboardLayout(m_dataIndexKeyboardLayout);
+
     if (!dataAccess.loadKeyboardLayout(dataIndexKeyboardLayout, m_keyboardLayout))
     {
         KMessageBox::error(this, i18n("Error while opening keyboard layout"));

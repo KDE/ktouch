@@ -25,15 +25,23 @@
 
 class QSignalMapper;
 class Lesson;
+class DataIndexCourse;
 
 class Course : public CourseBase
 {
     Q_OBJECT
+    Q_PROPERTY(DataIndexCourse* associatedDataIndexCourse READ associatedDataIndexCourse WRITE setAssociatedDataIndexCourse NOTIFY associatedDataIndexCourseChanged)
     Q_PROPERTY(int lessonCount READ lessonCount NOTIFY lessonCountChanged)
 
 public:
     explicit Course(QObject *parent = 0);
+    DataIndexCourse* associatedDataIndexCourse() const;
+    void setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse);
     int lessonCount() const;
+    void setId(const QString& id);
+    void setTitle(const QString& title);
+    void setDescription(const QString& description);
+    void setKeyboardLayoutName(const QString& keyboardLayoutName);
     Q_INVOKABLE Lesson* lesson(int index) const;
     Q_INVOKABLE void addLesson(Lesson* lesson);
     Q_INVOKABLE void insertLesson(int index, Lesson* lesson);
@@ -42,6 +50,7 @@ public:
     Q_INVOKABLE void copyFrom(Course* source);
 
 signals:
+    void associatedDataIndexCourseChanged();
     void lessonCountChanged();
     void lessonAboutToBeAdded(Lesson* lesson, int index);
     void lessonAdded();
@@ -53,6 +62,7 @@ private slots:
 
 private:
     Q_DISABLE_COPY(Course)
+    DataIndexCourse* m_associatedDataIndexCourse;
     QList<Lesson*> m_lessons;
     QSignalMapper* m_signalMapper;
 };

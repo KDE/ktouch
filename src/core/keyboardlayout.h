@@ -25,10 +25,12 @@
 
 class QSignalMapper;
 class AbstractKey;
+class DataIndexKeyboardLayout;
 
 class KeyboardLayout : public KeyboardLayoutBase
 {
     Q_OBJECT
+    Q_PROPERTY(DataIndexKeyboardLayout* associatedDataIndexKeyboardLayout READ associatedDataIndexKeyboardLayout WRITE setAssociatedDataIndexKeyboardLayout NOTIFY associatedDataIndexKeyboardLayoutChanged)
     Q_PROPERTY(AbstractKey* referenceKey READ referenceKey NOTIFY referenceKeyChanged)
     Q_PROPERTY(int width READ width WRITE setWidth NOTIFY widthChanged)
     Q_PROPERTY(int height READ height WRITE setHeight NOTIFY heightChanged)
@@ -36,6 +38,11 @@ class KeyboardLayout : public KeyboardLayoutBase
 
 public:
     explicit KeyboardLayout(QObject* parent = 0);
+    DataIndexKeyboardLayout* associatedDataIndexKeyboardLayout() const;
+    void setAssociatedDataIndexKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);
+    void setId(const QString& id);
+    void setTitle(const QString& title);
+    void setName(const QString& name);
     int width() const ;
     void setWidth(int width);
     int height() const;
@@ -54,6 +61,7 @@ public:
     void setSize(const QSize& size);
 
 signals:
+    void associatedDataIndexKeyboardLayoutChanged();
     void widthChanged();
     void heightChanged();
     void referenceKeyChanged();
@@ -65,7 +73,7 @@ private slots:
 private:
     void updateReferenceKey(AbstractKey* newKey=0);
     bool compareKeysForReference(const AbstractKey* testKey, const AbstractKey* compareKey) const;
-
+    DataIndexKeyboardLayout* m_associatedDataIndexKeyboardLayout;
     QString m_title;
     QString m_name;
     int m_width;

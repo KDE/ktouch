@@ -87,6 +87,8 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
     m_currentLessonIndex = -1;
     m_currentLesson = 0;
 
+    m_course->setAssociatedDataIndexCourse(m_dataIndexCourse);
+
     if (!dataAccess.loadCourse(dataIndexCourse, m_course))
     {
         KMessageBox::error(this, i18n("Error while opening course"));
@@ -234,8 +236,6 @@ void CourseEditor::updateTitle()
 {
     const QString title = m_course->title();
 
-    m_dataIndexCourse->setTitle(title);
-
     if (title != m_titleLineEdit->text())
     {
         m_titleLineEdit->setText(title);
@@ -245,8 +245,6 @@ void CourseEditor::updateTitle()
 void CourseEditor::updateKeyboardLayoutName()
 {
     const QString name = m_course->keyboardLayoutName();
-
-    m_dataIndexCourse->setKeyboardLayoutName(name);
 
     for (int i = 0; i < m_keyboardLayoutComboBox->count(); i++)
     {
@@ -263,8 +261,6 @@ void CourseEditor::updateKeyboardLayoutName()
 void CourseEditor::updateDescription()
 {
     const QString description = m_course->description();
-
-    m_dataIndexCourse->setDescription(description);
 
     if (description != m_descriptionTextEdit->toPlainText())
     {

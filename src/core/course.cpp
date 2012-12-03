@@ -24,12 +24,68 @@
 #include <kdebug.h>
 
 #include "lesson.h"
+#include "dataindex.h"
 
 Course::Course(QObject *parent) :
     CourseBase(parent),
+    m_associatedDataIndexCourse(),
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(updateLessonCharacters(int)));
+}
+
+DataIndexCourse* Course::associatedDataIndexCourse() const
+{
+    return m_associatedDataIndexCourse;
+}
+
+void Course::setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse)
+{
+    if (dataIndexCourse != m_associatedDataIndexCourse)
+    {
+        m_associatedDataIndexCourse = dataIndexCourse;
+        emit associatedDataIndexCourseChanged();
+    }
+}
+
+void Course::setId(const QString& id)
+{
+    CourseBase::setId(id);
+
+    if (m_associatedDataIndexCourse)
+    {
+        m_associatedDataIndexCourse->setId(id);
+    }
+}
+
+void Course::setTitle(const QString &title)
+{
+    CourseBase::setTitle(title);
+
+    if (m_associatedDataIndexCourse)
+    {
+        m_associatedDataIndexCourse->setTitle(title);
+    }
+}
+
+void Course::setDescription(const QString &description)
+{
+    CourseBase::setDescription(description);
+
+    if (m_associatedDataIndexCourse)
+    {
+        m_associatedDataIndexCourse->setDescription(description);
+    }
+}
+
+void Course::setKeyboardLayoutName(const QString &keyboardLayoutName)
+{
+    CourseBase::setKeyboardLayoutName(keyboardLayoutName);
+
+    if (m_associatedDataIndexCourse)
+    {
+        m_associatedDataIndexCourse->setKeyboardLayoutName(keyboardLayoutName);
+    }
 }
 
 int Course::lessonCount() const

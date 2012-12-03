@@ -33,10 +33,11 @@
 #include "abstractkey.h"
 #include "key.h"
 #include "specialkey.h"
-#include "keychar.h"
+#include "dataindex.h"
 
 KeyboardLayout::KeyboardLayout(QObject *parent) :
     KeyboardLayoutBase(parent),
+    m_associatedDataIndexKeyboardLayout(0),
     m_title(""),
     m_name(""),
     m_width(0),
@@ -46,6 +47,50 @@ KeyboardLayout::KeyboardLayout(QObject *parent) :
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(onKeyGeometryChanged(int)));
+}
+
+DataIndexKeyboardLayout* KeyboardLayout::associatedDataIndexKeyboardLayout() const
+{
+    return m_associatedDataIndexKeyboardLayout;
+}
+
+void KeyboardLayout::setAssociatedDataIndexKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)
+{
+    if (dataIndexKeyboardLayout != m_associatedDataIndexKeyboardLayout)
+    {
+        m_associatedDataIndexKeyboardLayout = dataIndexKeyboardLayout;
+        emit associatedDataIndexKeyboardLayoutChanged();
+    }
+}
+
+void KeyboardLayout::setId(const QString& id)
+{
+    KeyboardLayoutBase::setId(id);
+
+    if (m_associatedDataIndexKeyboardLayout)
+    {
+        m_associatedDataIndexKeyboardLayout->setId(id);
+    }
+}
+
+void KeyboardLayout::setTitle(const QString& title)
+{
+    KeyboardLayoutBase::setTitle(title);
+
+    if (m_associatedDataIndexKeyboardLayout)
+    {
+        m_associatedDataIndexKeyboardLayout->setTitle(title);
+    }
+}
+
+void KeyboardLayout::setName(const QString& name)
+{
+    KeyboardLayoutBase::setName(name);
+
+    if (m_associatedDataIndexKeyboardLayout)
+    {
+        m_associatedDataIndexKeyboardLayout->setName(name);
+    }
 }
 
 int KeyboardLayout::width() const
