@@ -69,6 +69,8 @@ private slots:
 private:
     QVariant courseData(int row, int role) const;
     QVariant keyboardLayoutData(int row, int role) const;
+    void connectToCourse(DataIndexCourse* course);
+    void connectToKeyboardLayout(DataIndexKeyboardLayout* keyboardLayout);
     void updateMappings();
     QIcon resourceIcon(DataIndex::Source source) const;
     DataIndex* m_dataIndex;

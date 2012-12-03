@@ -66,6 +66,18 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
             connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
         }
 
+        for (int i = 0; i < dataIndex->courseCount(); i++)
+        {
+            connectToCourse(dataIndex->course(i));
+        }
+
+        for (int i = 0; i < dataIndex->keyboardLayoutCount(); i++)
+        {
+            connectToKeyboardLayout(dataIndex->keyboardLayout(i));
+        }
+
+        updateMappings();
+
         endResetModel();
 
         emit dataIndexChanged();
@@ -110,11 +122,7 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
 
 void ResourceModel::onCourseAboutToBeAdded(DataIndexCourse* course, int index)
 {
-    connect(course, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(descriptionChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(keyboardLayoutNameChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    connectToCourse(course);
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -126,10 +134,7 @@ void ResourceModel::onCoursesAboutToBeRemoved(int first, int last)
 void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index)
 {
     const int offset = m_dataIndex->courseCount();
-    connect(keyboardLayout, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(nameChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    connectToKeyboardLayout(keyboardLayout);
     beginInsertRows(QModelIndex(), index + offset, index + offset);
 }
 
@@ -219,11 +224,21 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
     }
 }
 
-QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
+void ResourceModel::connectToCourse(DataIndexCourse* course)
 {
-    static QIcon systemIcon = KIcon("computer");
-    static QIcon userIcon = KIcon("user-identity");
-    return source == DataIndex::BuiltInResource? systemIcon: userIcon;
+    connect(course, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(descriptionChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(keyboardLayoutNameChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
+    connect(course, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+}
+
+void ResourceModel::connectToKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout)
+{
+    connect(keyboardLayout, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(nameChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
+    connect(keyboardLayout, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
 }
 
 void ResourceModel::updateMappings()
@@ -239,4 +254,11 @@ void ResourceModel::updateMappings()
     {
         m_signalMapper->setMapping(m_dataIndex->keyboardLayout(i), i + offset);
     }
+}
+
+QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
+{
+    static QIcon systemIcon = KIcon("computer");
+    static QIcon userIcon = KIcon("user-identity");
+    return source == DataIndex::BuiltInResource? systemIcon: userIcon;
 }
