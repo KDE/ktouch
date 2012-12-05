@@ -105,6 +105,7 @@ void ProfileDataAccess::addProfile(Profile *profile)
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
+        db.rollback();
         return;
     }
     addQuery.bindValue(0, profile->name());
@@ -115,6 +116,7 @@ void ProfileDataAccess::addProfile(Profile *profile)
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -124,6 +126,7 @@ void ProfileDataAccess::addProfile(Profile *profile)
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return;
     }
 
@@ -176,6 +179,7 @@ void ProfileDataAccess::updateProfile(int index)
     {
         kWarning() <<  updateQuery.lastError().text();
         raiseError(updateQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -201,6 +205,7 @@ void ProfileDataAccess::removeProfile(int index)
     {
         kWarning() <<  db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return;
     }
 
@@ -210,6 +215,7 @@ void ProfileDataAccess::removeProfile(int index)
     {
         kWarning() <<  removeQuery.lastError().text();
         raiseError(removeQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -220,6 +226,7 @@ void ProfileDataAccess::removeProfile(int index)
     {
         kWarning() <<  removeQuery.lastError().text();
         raiseError(removeQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -332,6 +339,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
+        db.rollback();
         return;
     }
     addQuery.bindValue(0, profile->id());
@@ -347,6 +355,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     {
         kWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -356,6 +365,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return;
     }
 
@@ -368,6 +378,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     {
         kWarning() <<  addErrorsQuery.lastError().text();
         raiseError(addErrorsQuery.lastError());
+        db.rollback();
         return;
     }
 
@@ -383,6 +394,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
         {
             kWarning() <<  addErrorsQuery.lastError().text();
             raiseError(addErrorsQuery.lastError());
+            db.rollback();
             return;
         }
     }
@@ -391,6 +403,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile
     {
         kWarning() <<  db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return;
     }
 }
@@ -460,6 +473,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
         {
             kWarning() <<  insertQuery.lastError().text();
             raiseError(insertQuery.lastError());
+            db.rollback();
             return;
         }
     }
@@ -476,6 +490,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
         {
             kWarning() <<  updateQuery.lastError().text();
             raiseError(updateQuery.lastError());
+            db.rollback();
             return;
         }
     }
@@ -484,6 +499,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     {
         kWarning() <<  db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return;
     }
 }
