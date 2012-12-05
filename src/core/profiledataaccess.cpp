@@ -85,7 +85,7 @@ Profile* ProfileDataAccess::createProfile()
     return new Profile(this);
 }
 
-void ProfileDataAccess::addProfile(Profile *profile)
+void ProfileDataAccess::addProfile(Profile* profile)
 {
     QSqlDatabase db = database();
 
@@ -243,7 +243,7 @@ void ProfileDataAccess::removeProfile(int index)
     profile->deleteLater();
 }
 
-int ProfileDataAccess::indexOfProfile(Profile *profile)
+int ProfileDataAccess::indexOfProfile(Profile* profile)
 {
     for (int i = 0; i < m_profiles.length(); i++) {
         if (profile == m_profiles.at(i)) {
@@ -253,7 +253,7 @@ int ProfileDataAccess::indexOfProfile(Profile *profile)
     return -1;
 }
 
-void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile *profile, const QString &courseId, const QString &lessonId)
+void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId)
 {
     stats->setCharactersTyped(0);
     stats->setElapsedTime(QTime());
@@ -320,7 +320,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats *stats, Profile
     stats->setIsValid(true);
 }
 
-void ProfileDataAccess::saveTrainingStats(TrainingStats *stats, Profile *profile, const QString &courseId, const QString &lessonId)
+void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile, const QString& courseId, const QString& lessonId)
 {
     QSqlDatabase db = database();
 
