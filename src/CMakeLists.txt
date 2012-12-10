@@ -1,8 +1,11 @@
 # CMakeList.txt for the KTouch source directory
 
+include(MacroLogFeature)
+
 find_package(KDeclarative REQUIRED)
 
 find_library(X11_Xkbfile_LIB OPTIONAL)
+macro_log_feature(X11_Xkbfile_FOUND "libxkb" "X Keyboard Extension" "http://www.x.org/wiki/XKB" FALSE "" "Support for keyboard layout auto-detection in KTouch")
 
 add_subdirectory(qml)
 add_subdirectory(schemata)
