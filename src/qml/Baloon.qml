@@ -19,6 +19,7 @@
 
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
+import org.kde.plasma.extras 0.1 as PlasmaExtras
 import org.kde.plasma.components 0.1 as PlasmaComponents
 
 Item {
@@ -63,10 +64,39 @@ Item {
         anchors.fill: parent
         opacity: 0
 
+        //FIXME: this is an hack: it's taking the dialog background making sure no opaque or transparent are selected
+        //in Plasma2 we need to have the backingstore blur there as well
+        PlasmaExtras.FallbackComponent {
+            id: fallbackComponent
+            basePath: "desktoptheme"
+            candidates: [theme.themeName, "default"]
+            property string svgPath: fallbackComponent.filePath("/dialogs/background.svgz")
+        }
+        Connections {
+            target: theme
+            //fallback if inline-background doesn't work
+            onThemeChanged: {
+                fallbackComponent.svgPath = fallbackComponent.filePath("/dialogs/background.svgz")
+                shadowFrame.visible = backgroundSvg.hasElement("shadow-top")
+            }
+        }
+        PlasmaCore.FrameSvgItem {
+            id: shadowFrame
+            imagePath: fallbackComponent.svgPath
+            prefix: "shadow"
+            anchors {
+                fill: internal
+                leftMargin: -margins.left
+                topMargin: -margins.top
+                rightMargin: -margins.right
+                bottomMargin: -margins.bottom
+            }
+            Component.onCompleted: shadowFrame.visible = backgroundSvg.hasElement("shadow-top")
+        }
         PlasmaCore.FrameSvgItem {
             id: internal
             property variant parentPos
-            imagePath: "dialogs/background"
+            imagePath: fallbackComponent.svgPath
             property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
             //bindings won't work inside anchers definition
             onUnderChanged: {
@@ -79,12 +109,17 @@ Item {
                 }
             }
 
-            x: Math.max(0, Math.min(dismissArea.width - internal.width, internal.parentPos.x - internal.width/2 + root.visualParent.width/2))
+            property int preferedX: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
+            x: Math.max(shadowFrame.margins.left, Math.min(dismissArea.width - internal.width - shadowFrame.margins.right, preferedX))
             y: {
-                if (under) {
-                    internal.parentPos.y + root.visualParent.height
+                if (root.visualParent) {
+                    if (under) {
+                        internal.parentPos.y + root.visualParent.height + tipSvg.height
+                    } else {
+                        internal.parentPos.y - internal.height - tipSvg.height
+                    }
                 } else {
-                    internal.parentPos.y - internal.height
+                    dismissArea.height/2 - internal.height/2
                 }
             }
             width: contentItem.width + margins.left + margins.right
@@ -92,17 +127,19 @@ Item {
 
             PlasmaCore.SvgItem {
                 id: tipSvg
+                visible: root.visualParent != null
                 svg: PlasmaCore.Svg {
                     id: backgroundSvg
-                    imagePath: "dialogs/background"
+                    imagePath: fallbackComponent.svgPath
                 }
-                elementId: internal.under ? "baloon-tip-top" : "baloon-tip-bottom"
+                elementId: internal.under ? "balloon-tip-top" : "balloon-tip-bottom"
                 anchors {
                     horizontalCenter: parent.horizontalCenter
+                    horizontalCenterOffset: internal.preferedX - internal.x
                     bottom: parent.top
                     top: parent.bottom
-                    topMargin: -backgroundSvg.elementSize("hint-bottom-shadow").height
-                    bottomMargin: -backgroundSvg.elementSize("hint-top-shadow").height
+                    topMargin: -backgroundSvg.elementSize("hint-bottom-shadow").height - 1
+                    bottomMargin: -backgroundSvg.elementSize("hint-top-shadow").height - 1
                 }
                 width: naturalSize.width
                 height: naturalSize.height
