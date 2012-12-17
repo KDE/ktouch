@@ -91,6 +91,7 @@ FocusScope {
                         }
                     }
                     checked: profileSelectorSheet.isOpen()
+                    width: minimumWidth
                 }
 
                 Item {

@@ -114,7 +114,7 @@ FocusScope {
             PlasmaComponents.ToolButton {
                 id: progressGraphButton
                 property Item tab: learningProgressTab
-                width: Math.max(implicitWidth, errorsGraphButton.implicitWidth)
+                width: Math.max(minimumWidth, errorsGraphButton.minimumWidth)
                 text: tab.title
                 iconSource: tab.iconSource
                 onClicked: {
@@ -125,7 +125,7 @@ FocusScope {
             PlasmaComponents.ToolButton {
                 id: errorsGraphButton
                 property Item tab: errorsTab
-                width: Math.max(implicitWidth, progressGraphButton.implicitWidth)
+                width: Math.max(minimumWidth, progressGraphButton.minimumWidth)
                 text: tab.title
                 iconSource: tab.iconSource
                 onClicked: {
