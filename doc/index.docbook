@@ -104,14 +104,14 @@ and indicates which key to press next and the correct finger to use.</para>
 
 <para>&i18n-ktouch; is a touch typing tutor aimed mostly at personal use. You learn
 typing with all fingers, step by step, without having to look down 
-at the keyboard all the time to find your keys (which slows you down a lot). 
+at the keyboard all the time to find the right keys which slows you down a lot.
 </para>
 </sect2>
 
 <sect2>
 <title>Features</title>
 
-<para>In its current version, &i18n-ktouch; 2.0 has quite a number of helpful
+<para>In its current version, &i18n-ktouch; 2.0 has quite a number of
 features, such as:</para>
 <itemizedlist>
 <listitem><simpara>Ships with dozens different courses in many
@@ -119,11 +119,11 @@ languages and a comfortable course editor</simpara></listitem>
 <listitem><simpara>Support for different keyboard layouts with the ability to
 use and edit user-defined layouts</simpara></listitem>
 <listitem><simpara>During your training session comprehensive statistical
-information is obtained to help you (or your teacher) analyze your
+information is obtained to help you or your teacher analyze your
 progress</simpara></listitem>
 </itemizedlist>
 <para>
-Many other features are included and will be discussed in the appropriate
+There are many more features which will be discussed in the appropriate
 chapters of this manual.
 </para>
 </sect2>
@@ -161,15 +161,15 @@ the level of your typing skills.
 </para>
 <tip>
 <para>
-The level you chose determines the general operation of &i18n-ktouch;. In beginner
+The level you choose determines the general operation of &i18n-ktouch;. In beginner
 mode lessons are unlocked one by one after you pass them, for advanced typist
-all lessons are available from the beginning.
+all lessons are available right from the beginning.
 </para>
 </tip>
 <note>
 <para>
-Think about your choice, you won't able to change it later. But you can always
-create new profiles to revisit that decision.
+Think about your choice, you won't able to change the type of a profile later. But you can always
+create new profiles to revisit this decision.
 </para>
 </note>
 
@@ -185,8 +185,8 @@ create new profiles to revisit that decision.
 </mediaobject>
 </screenshot>
 <para>
-After pressing <guibutton>Start Training</guibutton> you will be guided to the
-home screen. This screen will also be the start screen when you run &i18n-ktouch; the
+After pressing <guibutton>Start Training</guibutton> you will be taken to the
+home screen. This screen will also be the first screen visible when you run &i18n-ktouch; the
 next time.
 </para>
 </sect2>
@@ -195,7 +195,7 @@ next time.
 <title>Picking a lesson</title>
 
 <para>
-The home screen of &i18n-ktouch; consists of the top toolbar and the course
+The home screen of &i18n-ktouch; consists of a toolbar and the course
 selector. For more information see <xref linkend="training_preparation"/>.
 </para>
 <screenshot>
@@ -218,12 +218,12 @@ layout.
 <note>
 <para>
 On some platforms, especially on &Microsoft; &Windows;, automatic keyboard layout
-detection is not available. In that case you have to press <inlinemediaobject>
+detection is not available. In that case you have to click on the <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
-</imageobject> </inlinemediaobject> button in the toolbar, choose <guisubmenu>
-Choose Keyboard Layout...</guisubmenu> submenu and select the name of keyboard
+</imageobject> </inlinemediaobject> button in the toolbar, select <guisubmenu>
+Choose Keyboard Layout...</guisubmenu> submenu and choose the name of keyboard
 layout or some keyboard layout which is similar to yours. If your keyboard is
-not included, you can always define your own keyboard layout, see <xref
+not included, you can define your own keyboard layout yourself, see <xref
 linkend="create_layouts"/>.
 </para>
 </note>
@@ -231,7 +231,7 @@ linkend="create_layouts"/>.
 Choose your lesson from the list on left of the window. You cannot choose
 the locked lessons with <inlinemediaobject> <imageobject> <imagedata
 fileref="Icon-object-locked.png" format="PNG"/> </imageobject>
-</inlinemediaobject> as they are too difficult for your current skills. The
+</inlinemediaobject> as they are too difficult for your current skills. Pass lessons to unlock new ones. The
 preview of the selected lesson will be shown on the right of lessons list.
 </para>
 <tip>
@@ -244,7 +244,7 @@ fileref="Icon-dialog-information.png" format="PNG"/> </imageobject>
 </tip>
 <para>
 When you finished with the selection click on <guibutton>Start
-Training</guibutton> to switch to the training &i18n-ktouch; screen.
+Training</guibutton> to go to the training &i18n-ktouch; screen.
 </para>
 </sect2>
 
@@ -280,20 +280,20 @@ linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>.
 <para>
 Place your two index fingers on the two keys on your keyboard with the two
 little tactile markers near the center of the middle character row. With that
-your other fingers will find their intended keys almost automatically. Your
-thumbs should rest above the space key, the only key you will ever use them for
-when touch typing. The other fingers should be placed on the three keys
-adjacent to the marked keys on the same row. The keys for the same finger are
+done your other fingers will find their intended keys almost automatically.
+Your thumbs should rest above the space key, the only key you will ever use them
+for when touch typing. The other fingers should be placed on the three keys
+adjacent to the marked keys on the center row. Keys for the same finger are
 grouped together through their color. Try to move your hands as little as
-possible and after you typed a character always try to return your fingers to
-their resting positions.
+possible and always try to return your fingers to their resting positions
+after you have typed a character.
 </para>
 <para>
 Start typing the text the in the middle of the screen. The next key you have
 to press is always highlighted on the keyboard visualization. While you type
-you may make mistakes and hit the wrong key. In that case the  characters will
-change their color to red and you have to hit &Backspace; to
-erase the wrong character or characters again.
+you may make mistakes and hit the wrong key. In that case the characters will
+displayed in red and you have to hit &Backspace; as often as necessary to
+erase the wrongly typed characters.
 </para>
 <para>
 When you have successfully completed a line of text you need to press the
@@ -301,7 +301,7 @@ When you have successfully completed a line of text you need to press the
 </para>
 <tip>
 <para>
-This key can be changed using <link
+The key used to advance to the next line can be changed using <link
 linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>
 </para>
 </tip>
@@ -309,8 +309,8 @@ linkend="configuration_dialog">&i18n-ktouch; configuration dialog</link>
 
 <sect2 id="review_your_progress">
 <title>Review your progress</title>
-<para>When you complete a lesson &i18n-ktouch;
-opens the statistics screen. It displays your current training and lesson
+<para>When you have completed a lesson &i18n-ktouch;
+will switch to the score screen. It displays your current training and lesson
 statistics and shows a graphical history of previous training sessions.
 </para>
 <screenshot>
@@ -560,8 +560,8 @@ available. Use the application menu to select your keyboard layout manually.
 </note>
 <sect3 id="switching_courses">
 <title>Switching courses</title>
-<para>Should there are more than one course installed for your keyboard layout
-you can  choose the appropriate one using <inlinemediaobject> <imageobject>
+<para>Should there are more than one course available for your keyboard layout
+you can  choose your favorite one using <inlinemediaobject> <imageobject>
 <imagedata fileref="Icon-arrow-left.png"
 format="PNG"/> </imageobject> </inlinemediaobject> and <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-arrow-right.png"
@@ -575,10 +575,10 @@ visible.
 <para>
 If you have chosen <guilabel>I have no or only very little experience in machine
 typing</guilabel> during <link linkend="creating_profile">initial profile
-creation</link> you will find some lesson items locked. These items are marked
+creation</link> you will find that some lessons are locked. These items are marked
 with <inlinemediaobject> <imageobject> <imagedata
 fileref="Icon-object-locked.png" format="PNG"/> </imageobject>
-</inlinemediaobject> icon and cannot be reached until you pass the previous
+</inlinemediaobject> icon and cannot be accessed until you pass the previous
 lessons.
 </para>
 <note>
@@ -603,8 +603,9 @@ will adapt accordingly and present you its courses for this layout.
 <note>
 <para>
 On platforms without keyboard layout auto-detection, especially &Microsoft;
-&Windows;, you have first configure your operating system to the new layout and
-then select the same layout in &i18n-ktouch; via the application menu.
+&Windows;, you have first configure your operating system to use the layout
+you want to train on and then select the same layout in &i18n-ktouch; via
+the application menu.
 </para>
 </note>
 </sect3>
@@ -699,7 +700,7 @@ format="PNG"/></imageobject>
 </sect1>
 
 <sect1 id="tracking_learning_progress">
-<title>Tracking learning progress</title>
+<title>Tracking the learning progress</title>
 <para>
 After completing a lesson, you will not return immediately to the home screen.
 Instead a special summary and statistics screen is shown.
@@ -889,8 +890,8 @@ When you finished with entering appropriate values press
 </mediaobject>
 </screenshot>
 <para>
-Using the third page of wizard you can choose other course as a template for
-your course. Select the course from the list (if any) and press
+Using the third page of wizard you can choose an other course as a template for
+your course. Select the course from the list and press
 <guibutton>Finish</guibutton>.
 </para>
 <screenshot>
@@ -1169,7 +1170,7 @@ loaded showing one of the built-in quality-assurance checks: if a lesson
 contains characters not available in that lesson, because they are not among the
 configured new characters of this lesson or any previous one, they are
 highlighted in red. There is also a check for too long lines resulting in a
-muted color the characters behind the allowed column.
+muted color for the characters behind the allowed column.
 </para>
 <para>
 On the left side there is a list over all data files &i18n-ktouch; knows about,
@@ -1184,15 +1185,15 @@ layout the program will adapt appropriately.
 <sect1 id="create_layouts">
 <title>Creating keyboard layouts</title>
 <para>You can create your own keyboard layouts using built-in &i18n-ktouch; editor.
-Best is to start with an existing layout, create a copy for your keyboard
-layout and simply adjust it.</para>
+Usually it's best is to start with an existing layout close to to the keyboard layout
+you want to create, and use that as a base for own layout. That way you can avoid a
+lot of work.</para>
 
 <sect2 id="layout_properties">
 <title>Keyboard layout properties</title>
 <para>
 The course properties can be chosen using &i18n-ktouch; keyboard layout creation
-wizard. To
-invoke this wizard you should press <inlinemediaobject>
+wizard. To invoke this wizard you should press <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-document-new.png" format="PNG"/>
 </imageobject> </inlinemediaobject> button in the toolbar of <guilabel>Course
 and Keyboard Layout Editor</guilabel> window.
@@ -1249,8 +1250,7 @@ The layout name will be used as a name of the layout by &i18n-ktouch; internally
 </screenshot>
 <para>
 Using the third page of wizard you can choose other layout as a template for
-your
-layout. Select the course from the list (if any) and press
+your layout. Select the course from the list and press
 <guibutton>Finish</guibutton>.
 </para>
 <screenshot>
@@ -1265,8 +1265,8 @@ layout. Select the course from the list (if any) and press
 </mediaobject>
 </screenshot>
 <para>
-&i18n-ktouch; will open the course editor window prepared to entering your keyboard
-layout data. First thing you can do is to change the layout image geometry.
+&i18n-ktouch; will open the editor window prepared to entering your keyboard
+layout data.
 </para>
 </sect2>
 
@@ -1279,7 +1279,7 @@ format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Normal
 Key</guilabel> button to add new normal key or <inlinemediaobject> <imageobject>
 <imagedata fileref="Icon-list-add.png"
 format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Special
-Key</guilabel> button to add new special key (modifier, <keycap>Space</keycap>,
+Key</guilabel> button to add new special key (modifier keys, <keycap>Space</keycap>,
 &Backspace;, &Tab;, <keycap>Caps Lock</keycap> or &Enter;) to the layout.
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-edit-delete.png"
@@ -1301,7 +1301,7 @@ Begin by clicking on the key you want to change. This selects the clicked key as
 the current key.
 </para>
 <para>
-There are now 4 squares on the corners of the key. By moving these squares, you
+There are now 4 squares on the corners of the key. By dragging these squares, you
 will be able to drag the key border to a new location. Dragging the whole key
 allows you to change the key position in the layout.
 </para>
