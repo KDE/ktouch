@@ -104,7 +104,7 @@ FocusScope {
         trainingStats: screen.visible? screen.stats: null
     }
 
-    Baloon {
+    Balloon {
         id: graphTypeDialog
         visualParent: graphTypeButton
 
@@ -136,7 +136,7 @@ FocusScope {
         }
     }
 
-    Baloon {
+    Balloon {
         id: learningProgressDialog
         visualParent: learningProgressFilterButton
 
@@ -170,7 +170,7 @@ FocusScope {
         }
     }
 
-    Baloon {
+    Balloon {
         id: learningProgressPointTooltip
         visualParent: parent
         property int row: -1
@@ -205,7 +205,7 @@ FocusScope {
         }
     }
 
-    Baloon {
+    Balloon {
         id: errorsTooltip
         visualParent: parent
         property int row: -1
