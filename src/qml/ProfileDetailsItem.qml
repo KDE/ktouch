@@ -127,7 +127,7 @@ Item {
                     },
                     InfoItem {
                         title: i18n("Last trained:")
-                        text: profile && profile.id !== -1 && profileInfoTable.trainedLessonCount > 0? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): ""
+                        text: profile && profile.id !== -1 && profileInfoTable.trainedLessonCount > 0? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): i18n("Never")
                     }
                 ]
 
