@@ -129,6 +129,7 @@ FocusScope {
             width: parent.width
             trainingStarted: screen.trainingStarted
             trainingFinished: screen.trainingFinished
+            stats: stats
             menuOverlayItem: menuOverlay
         }
 

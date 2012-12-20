@@ -18,20 +18,22 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
+import ktouch 1.0
 
 Item {
     id: item
 
+    property TrainingStats stats
     property bool trainingStarted: false
     property bool trainingFinished: true
     property Item menuOverlayItem
 
     function setMessage() {
         if (!stats.timeIsRunning && !trainingFinished) {
-            messageBox.showMessage(
-                        trainingStarted?
-                            i18n("Training session started. Time begins running with the first keystroke."):
-                            i18n("Training session interrupted. Time begins running again with next keystroke."))
+            var msg = trainingStarted?
+                i18n("Training session started. Time begins running with the first keystroke."):
+                i18n("Training session interrupted. Time begins running again with next keystroke.")
+            messageBox.showMessage(msg, "media-playback-pause")
         }
         else {
             messageBox.clearMessage()
@@ -44,6 +46,11 @@ Item {
 
     onTrainingStartedChanged: setMessage()
     onTrainingFinishedChanged: setMessage()
+
+    Connections {
+        target: stats
+        onTimeIsRunningChanged: setMessage()
+    }
 
     PlasmaCore.FrameSvgItem {
         anchors.fill: parent
@@ -62,20 +69,12 @@ Item {
         }
 
         spacing: 3
-        height: pauseButton.height
+        height: menuButton.height
 
         PlasmaComponents.ToolButton {
             id: menuButton
             iconSource: "go-home"
             onClicked: item.menuOverlayItem.show()
-        }
-
-        PlasmaComponents.ToolButton {
-            id: pauseButton
-            iconSource: "media-playback-pause"
-            checked: !stats.timeIsRunning
-            onClicked: stats.stopTraining()
-            onCheckedChanged: setMessage()
         }
 
         MessageBox {

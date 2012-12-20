@@ -24,13 +24,14 @@ Rectangle {
     anchors.verticalCenter: parent.verticalCenter
     radius: 3
     color: "#eee4be"
-    height: messageLabel.height + 6
-    width: messageLabel.width + 6
+    height: layout.height + 6
+    width: layout.width + 6
     smooth: true
 
-    function showMessage(msg){
+    function showMessage(msg, iconSource) {
         item.state = "hidden";
-        messageLabel.text = msg
+        label.text = msg
+        icon.source = iconSource || ""
         item.state = "normal"
     }
 
@@ -55,12 +56,23 @@ Rectangle {
 
     state: "hidden"
 
-    PlasmaComponents.Label {
+    Row {
+        id: layout
         anchors.centerIn: parent
-        id: messageLabel
-        text: ""
-        height: paintedHeight
-        smooth: true
+        width: icon.width + spacing + label.width
+        spacing: icon.valid? 3: 0
+
+        PlasmaCore.IconItem {
+            id: icon
+            width: height
+            height: valid? label.height: 0
+        }
+
+        PlasmaComponents.Label {
+            id: label
+            height: paintedHeight
+            smooth: true
+        }
     }
 
     states: [
