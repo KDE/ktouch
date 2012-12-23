@@ -255,6 +255,8 @@ FocusScope {
     Column {
         anchors.fill: parent
 
+        spacing: header.margins.bottom / 2
+
         PlasmaComponents.ToolBar {
             id: header
             width: parent.width
