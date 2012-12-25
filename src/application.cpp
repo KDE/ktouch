@@ -27,6 +27,7 @@
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
+#include "declarativeitems/applicationbackground.h"
 #include "declarativeitems/cursorshapearea.h"
 #include "declarativeitems/griditem.h"
 #include "declarativeitems/lessonfontsizecalculater.h"
@@ -115,6 +116,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
+    qmlRegisterType<ApplicationBackground>("ktouch", 1, 0, "ApplicationBackground");
     qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
     qmlRegisterType<LessonFontSizeCalculater>("ktouch", 1, 0, "LessonFontSizeCalculater");

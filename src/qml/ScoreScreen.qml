@@ -296,11 +296,10 @@ FocusScope {
             }
         }
 
-
         Rectangle {
             width: parent.width
             height: parent.height - ((parent.children.length - 1) * parent.spacing) - header.height
-            color: "#fff"
+            color: theme.backgroundColor
 
             Column {
                 id: content
@@ -343,6 +342,7 @@ FocusScope {
                                     i18n("You have not passed the lesson.")
                                 height: paintedHeight
                                 font.pointSize: 1.5 * theme.defaultFont.pointSize
+                                color: "#000000"
                             }
                         }
                         PlasmaComponents.Label {
@@ -358,6 +358,7 @@ FocusScope {
                                 return ""
                             }
                             height: paintedHeight
+                            color: "#000000"
                         }
                     }
                 }

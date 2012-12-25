@@ -21,6 +21,7 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 
 Item {
     property Dimension dimension
+    property alias color: label.color
 
     height: label.height
     width: box.width + label.width + 5

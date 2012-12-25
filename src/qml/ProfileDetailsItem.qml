@@ -68,11 +68,11 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - 40
                 height: 250
-                color: "white"
+                color: theme.backgroundColor
 
                 border {
                     width: 1
-                    color: "black"
+                    color: theme.textColor
                 }
 
                 Column {

@@ -61,6 +61,7 @@ Rectangle {
         text: ""
         height: paintedHeight
         smooth: true
+        color: "#000000"
     }
 
     states: [

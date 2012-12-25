@@ -42,6 +42,7 @@ set(ktouch_SRCS
     mainwindow.cpp
     bindings/utils.cpp
     bindings/stringformatter.cpp
+    declarativeitems/applicationbackground.cpp
     declarativeitems/cursorshapearea.cpp
     declarativeitems/griditem.cpp
     declarativeitems/lessonfontsizecalculater.cpp

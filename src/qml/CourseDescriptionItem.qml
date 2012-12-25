@@ -28,7 +28,7 @@ Rectangle {
 
     height: active || content.opacity > 0? childrenRect.height: 0
     visible: height > 0
-    color: "white"
+    color: theme.backgroundColor
 
     Behavior on height {
         NumberAnimation {

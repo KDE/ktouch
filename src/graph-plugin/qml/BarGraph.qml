@@ -27,6 +27,7 @@ Item {
     property alias textRole: core.textRole
 
     property alias backgroundColor: bg.color
+    property color textColor: theme.textColor
 
     signal barClicked(int row, variant bar)
     signal barEntered(int row, variant bar)
@@ -35,7 +36,7 @@ Item {
     Rectangle {
         id: bg
         anchors.fill: parent
-        color: "white"
+        color: theme.backgroundColor
     }
 
     BarGraphCore {
@@ -129,6 +130,7 @@ Item {
             topMargin: 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
         valueFactor: 1
     }
@@ -140,6 +142,7 @@ Item {
             topMargin: (core.height - 4) / 2 + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
         valueFactor: 0.5
     }
@@ -151,6 +154,7 @@ Item {
             topMargin: 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
         valueFactor: 1
     }
@@ -162,6 +166,7 @@ Item {
             topMargin: (core.height - 4) / 2 + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
         valueFactor: 0.5
     }
