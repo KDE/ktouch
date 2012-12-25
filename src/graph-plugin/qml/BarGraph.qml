@@ -49,7 +49,7 @@ Item {
             clip: true
 
             onContentWidthChanged: {
-                // work arround ListView bug: contentWidth doesn't take geometry of the header/footer into account
+                // work around ListView bug: contentWidth doesn't take geometry of the header/footer into account
                 if (contentWidth + core.pitch > width) {
                     contentX = contentWidth - width + core.pitch
                 }
