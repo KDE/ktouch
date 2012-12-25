@@ -103,7 +103,7 @@ Item {
             id: head
             width: parent.width
             height: Math.ceil(courseTitleLabel.height + 6)
-            color: "#fff"
+            color: theme.backgroundColor
 
             Row {
                 anchors {

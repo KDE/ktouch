@@ -106,6 +106,11 @@ Item {
         keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
     }
 
+    ApplicationBackground {
+        id: background
+        anchors.fill: parent
+    }
+
     HomeScreen {
         id: homeScreen
         anchors.fill: parent

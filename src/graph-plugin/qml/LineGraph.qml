@@ -27,6 +27,7 @@ Item {
     property alias pointRadius: core.pointRadius
 
     property alias backgroundColor: bg.color
+    property color textColor: theme.textColor
 
     signal pointClicked(int row, variant point)
     signal pointEntered(int row, variant point)
@@ -35,7 +36,7 @@ Item {
     Rectangle {
         id: bg
         anchors.fill: parent
-        color: "white"
+        color: theme.backgroundColor
     }
 
     LineGraphCore {
@@ -109,6 +110,7 @@ Item {
             topMargin: core.pointRadius + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
         valueFactor: 1
     }
@@ -120,6 +122,7 @@ Item {
             topMargin: core.pointRadius + (core.height - 2 * core.pointRadius - 4) / 2 + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 0? core.dimensions[0]: null
         valueFactor: 0.5
     }
@@ -131,6 +134,7 @@ Item {
             topMargin: core.pointRadius + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
         valueFactor: 1
     }
@@ -142,6 +146,7 @@ Item {
             topMargin: core.pointRadius + (core.height - 2 * core.pointRadius) / 2 + 2
         }
         backgroundItem: bg
+        color: root.textColor
         dimension: core.dimensions.length > 1? core.dimensions[1]: null
         valueFactor: 0.5
     }

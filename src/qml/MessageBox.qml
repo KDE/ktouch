@@ -72,6 +72,7 @@ Rectangle {
             id: label
             height: paintedHeight
             smooth: true
+            color: "#000000"
         }
     }
 
