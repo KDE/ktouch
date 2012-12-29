@@ -349,6 +349,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/ara.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Belgian</title>
+    <name>be</name>
+    <id>{1d1ac1cf-ba26-43a5-b3a0-b17c55fe7767}</id>
+    <path>keyboardlayouts/be.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Bulgarian</title>
     <name>bg</name>
     <id>{fca6401c-5e8b-4b54-ad4c-98ffc764a2dc}</id>
