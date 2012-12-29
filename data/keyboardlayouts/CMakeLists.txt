@@ -1,5 +1,6 @@
 set(keyboardfiles
     ara.xml
+    be.xml
     bg.xml
     br.xml
     ch.fr.xml
