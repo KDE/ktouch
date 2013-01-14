@@ -1192,7 +1192,7 @@ lot of work.</para>
 <sect2 id="layout_properties">
 <title>Keyboard layout properties</title>
 <para>
-The course properties can be chosen using &i18n-ktouch; keyboard layout creation
+The keyboard layout properties can be chosen using &i18n-ktouch; keyboard layout creation
 wizard. To invoke this wizard you should press <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-document-new.png" format="PNG"/>
 </imageobject> </inlinemediaobject> button in the toolbar of <guilabel>Course
