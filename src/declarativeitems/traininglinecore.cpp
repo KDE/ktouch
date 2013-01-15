@@ -86,6 +86,7 @@ void TrainingLineCore::setReferenceLine(const QString& referenceLine)
     {
         m_referenceLine = referenceLine;
         m_actualLine = "";
+        clearKeyHint();
         emit referenceLineChanged();
         emit actualLineChanged();
     }
