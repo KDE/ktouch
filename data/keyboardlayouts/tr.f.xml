@@ -163,10 +163,6 @@
       <char position="topLeft" modifier="left_shift">W</char>
       <char position="hidden">w</char>
     </key>
-    <key left="1180" top="200" width="80" height="80" fingerIndex="7">
-      <char position="topLeft" modifier="left_shift">&#x15E;</char>
-      <char position="hidden">&#x15F;</char>
-    </key>
     <key left="130" top="300" width="80" height="80" fingerIndex="0">
       <char position="topLeft" modifier="right_shift">&gt;</char>
       <char position="bottomLeft">&lt;</char>
@@ -221,7 +217,7 @@
     <specialKey left="1150" top="400" width="130" height="80" type="other" modifierId="altgr" label="Alt Gr"/>
     <specialKey left="1300" top="400" width="130" height="80" type="other" label="Ctrl"/>
     <specialKey left="1300" top="0" width="130" height="80" type="backspace"/>
-    <specialKey left="1290" top="200" width="130" height="80" type="return"/>
+    <specialKey left="1280" top="200" width="150" height="80" type="return"/>
     <specialKey left="1230" top="300" width="200" height="80" type="shift" modifierId="right_shift"/>
   </keys>
 </keyboardLayout>
