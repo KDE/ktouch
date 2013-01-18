@@ -81,7 +81,14 @@ bool CategorizedResourceSortFilterProxyModel::subSortLessThan(const QModelIndex&
 {
     const QString leftStr = sourceModel()->data(left, Qt::DisplayRole).toString();
     const QString rightStr = sourceModel()->data(right, Qt::DisplayRole).toString();
-    return KStringHandler::naturalCompare(leftStr, rightStr, Qt::CaseInsensitive) < 0;
+    const int difference = KStringHandler::naturalCompare(leftStr, rightStr, Qt::CaseInsensitive);
+
+    if (difference == 0)
+    {
+        return left.row() < right.row();
+    }
+
+    return  difference < 0;
 }
 
 bool CategorizedResourceSortFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex& source_parent) const
