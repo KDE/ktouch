@@ -54,8 +54,8 @@ int main(int argc, char **argv)
 
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineOptions options;
-    options.add("opengl", ki18n("use a QGLWidget for the viewport"));
-    options.add("resource-editor", ki18n("launch the course and keyboard layout editor"));
+    options.add("opengl", ki18n("Use OpenGL for rendering (experimental)"));
+    options.add("resource-editor", ki18n("Launch the course and keyboard layout editor"));
     KCmdLineArgs::addCmdLineOptions(options);
 
     KApplication::setGraphicsSystem("raster");
