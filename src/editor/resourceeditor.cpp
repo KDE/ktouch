@@ -53,6 +53,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     KMainWindow(parent),
     m_dataIndex(Application::dataIndex()),
     m_resourceModel(new ResourceModel(this)),
+    m_categorizedResourceModel(new CategorizedResourceSortFilterProxyModel(this)),
     m_currentResource(0),
     m_backupResource(0),
     m_undoGroup(new QUndoGroup(this)),
@@ -68,9 +69,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
 {
     m_resourceModel->setDataIndex(m_dataIndex);
-    CategorizedResourceSortFilterProxyModel* categorizedResourceModel = new CategorizedResourceSortFilterProxyModel(this);
-    categorizedResourceModel->setResourceModel(m_resourceModel);
-    categorizedResourceModel->setCategorizedModel(true);
+    m_categorizedResourceModel->setResourceModel(m_resourceModel);
+    m_categorizedResourceModel->setCategorizedModel(true);
 
     setMinimumSize(700, 500);
     setCaption(i18n("Course and Keyboard Layout Editor"));
@@ -109,7 +109,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_editorWidget->setUndoGroup(m_undoGroup);
 
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
-    resourceView->setModel(categorizedResourceModel);
+    resourceView->setModel(m_categorizedResourceModel);
     connect(resourceView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onResourceSelected()));
 
     selectFirstResource();
@@ -160,6 +160,9 @@ void ResourceEditor::deleteResource()
 
     save();
 
+    // HACK: disable categorization temporarily as mitigation against kdelibs bug 303228
+    m_categorizedResourceModel->setCategorizedModel(false);
+
     DataAccess dataAccess;
     UserDataAccess userDataAccess;
 
@@ -208,6 +211,9 @@ void ResourceEditor::deleteResource()
             }
         }
     }
+
+    // HACK: reactivate categorization again
+    m_categorizedResourceModel->setCategorizedModel(true);
 
     selectFirstResource();
 }

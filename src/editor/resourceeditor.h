@@ -25,6 +25,7 @@ class QTimer;
 class KAction;
 class KActionCollection;
 class KCategorizedView;
+class CategorizedResourceSortFilterProxyModel;
 class DataIndex;
 class ResourceModel;
 class Resource;
@@ -61,6 +62,7 @@ private:
     bool importKeyboardLayout(const QString& path);
     DataIndex* m_dataIndex;
     ResourceModel* m_resourceModel;
+    CategorizedResourceSortFilterProxyModel* m_categorizedResourceModel;
     Resource* m_currentResource;
     Resource* m_backupResource;
     QUndoGroup* m_undoGroup;
