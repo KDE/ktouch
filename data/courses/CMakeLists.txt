@@ -1,4 +1,3 @@
-FILE(GLOB coursesfiles *.xml)
 set (coursefiles
     ara.xml
     bg1.xml
@@ -40,5 +39,5 @@ set (coursefiles
     us.xml
 )
 
-install( FILES ${coursesfiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/courses )
+install( FILES ${coursefiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/courses )
 
