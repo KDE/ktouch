@@ -4,8 +4,9 @@ include(MacroLogFeature)
 
 find_package(KDeclarative REQUIRED)
 
-find_library(X11_Xkbfile_LIB OPTIONAL)
-macro_log_feature(X11_Xkbfile_FOUND "libxkb" "X Keyboard Extension" "http://www.x.org/wiki/XKB" FALSE "" "Support for keyboard layout auto-detection in KTouch")
+# Currently it is called by FindQt4, but call it explicitly
+find_package(X11)
+macro_log_feature(X11_Xkbfile_FOUND "libxkbfile" "X Keyboard Extension" "http://www.x.org/wiki/XKB" FALSE "" "Support for keyboard layout auto-detection in KTouch")
 
 add_subdirectory(qml)
 add_subdirectory(schemata)
@@ -96,6 +97,7 @@ set(ktouch_SRCS
 
 if (X11_Xkbfile_FOUND)
     add_definitions(-DKTOUCH_BUILD_WITH_X11)
+    include_directories(${X11_Xkbfile_INCLUDE_PATH})
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
 else (X11_Xkbfile_FOUND)
     set(ktouch_SRCS ${ktouch_SRCS} keyboardlayoutmenu.cpp)
