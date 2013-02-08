@@ -33,7 +33,7 @@ QScriptValue findImage(QScriptContext *context, QScriptEngine *engine)
         return QScriptValue("");
     }
 
-    if (context->argumentCount() == 0)
+    if (context->argumentCount() > 1)
     {
         kWarning() << "expected one argument, got more";
     }
@@ -61,7 +61,7 @@ QScriptValue getSecondsOfQTime(QScriptContext *context, QScriptEngine *engine)
         return QScriptValue("");
     }
 
-    if (context->argumentCount() == 0)
+    if (context->argumentCount() > 1)
     {
         kWarning() << "expected one argument, got more";
     }
@@ -87,7 +87,7 @@ QScriptValue getMinutesOfQTime(QScriptContext *context, QScriptEngine *engine)
         return QScriptValue("");
     }
 
-    if (context->argumentCount() == 0)
+    if (context->argumentCount() > 1)
     {
         kWarning() << "expected one argument, got more";
     }
