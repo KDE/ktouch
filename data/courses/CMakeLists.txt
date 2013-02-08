@@ -39,5 +39,11 @@ set (coursefiles
     us.xml
 )
 
+file(GLOB coursefiles_GLOB RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.xml)
+list(SORT coursefiles_GLOB)
+if(NOT "${coursefiles}" STREQUAL "${coursefiles_GLOB}")
+    message(AUTHOR_WARNING "List of .xml files in data/courses differs from the list of couses")
+endif()
+
 install( FILES ${coursefiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/courses )
 
