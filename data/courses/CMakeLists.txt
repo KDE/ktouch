@@ -5,19 +5,19 @@ set (coursefiles
     br.xml
     cat.xml
     cz.xml
-    de1.xml
-    de2.xml
     de.dvorak.xml
     de.neo.xml
+    de1.xml
+    de2.xml
     dk1.xml
+    es.dvorak.xml
     es1.xml
     es2.xml
     es3.xml
-    es.dvorak.xml
     fi.xml
-    fr.xml
     fr.bepo.xml
     fr.dvarok.xml
+    fr.xml
     gb.xml
     gr.xml
     it.xml
@@ -26,9 +26,9 @@ set (coursefiles
     nl2.xml
     no.xml
     pl.xml
+    ru.legacy.xml
     ru1.xml
     ru2.xml
-    ru.legacy.xml
     si.xml
     sk.xml
     tr.xml
