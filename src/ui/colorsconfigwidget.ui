@@ -85,7 +85,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="fingerLabel2">
             <property name="text">
-             <string>Middle finger</string>
+             <string>Middle finger:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -231,7 +231,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="fingerLabel5">
             <property name="text">
-             <string>Middle finger</string>
+             <string>Middle finger:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
