@@ -1,5 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -199,27 +199,30 @@ FocusScope {
                 function highlightKey(which) {
                     for (var i = 0; i < highlightedKeys.length; i++)
                         highlightedKeys[i].isHighlighted = false
-                    var key = findKeyItem(which)
-                    if (key) {
-                        var newHighlightedKeys = []
-                        key.isHighlighted = true
-                        newHighlightedKeys.push(key)
-                        if (typeof which == "string") {
-                            var code = which.charCodeAt(0)
-                            for (var i = 0; i < key.key.keyCharCount; i++) {
-                                var keyChar = key.key.keyChar(i)
-                                if (keyChar.value == code && keyChar.modifier != "") {
-                                    var modifier = findModifierKeyItem(keyChar.modifier)
-                                    if (modifier) {
-                                        modifier.isHighlighted = true
-                                        newHighlightedKeys.push(modifier)
+                    var keys = findKeyItems(which)
+                    var newHighlightedKeys = []
+                    for (var index = 0; index < keys.length ; index++) {
+                        var key = keys[index]
+                        if (key) {
+                            key.isHighlighted = true
+                            newHighlightedKeys.push(key)
+                            if (typeof which == "string") {
+                                var code = which.charCodeAt(0)
+                                for (var i = 0; i < key.key.keyCharCount; i++) {
+                                    var keyChar = key.key.keyChar(i)
+                                    if (keyChar.value == code && keyChar.modifier != "") {
+                                        var modifier = findModifierKeyItem(keyChar.modifier)
+                                        if (modifier) {
+                                            modifier.isHighlighted = true
+                                            newHighlightedKeys.push(modifier)
+                                        }
+                                        break
                                     }
-                                    break
                                 }
                             }
                         }
-                        highlightedKeys = newHighlightedKeys
                     }
+                    highlightedKeys = newHighlightedKeys
                 }
 
                 function updateKeyHighlighting() {

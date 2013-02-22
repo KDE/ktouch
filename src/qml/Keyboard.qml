@@ -1,5 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -29,40 +29,49 @@ Item {
 
     function keyItems() {
         var items = []
-        for (var i = 0; i < keys.count; i++)
+
+        for (var i = 0; i < keys.count; i++) {
             items.push(keys.itemAt(i))
+        }
+
         return items
     }
 
-    function findKeyItem(keyChar) {
+    function findKeyItems(keyChar) {
+        var matchingKeys = []
+
         for (var i = 0; i < keys.count; i++) {
             var key = keys.itemAt(i);
             if (key.match(keyChar))
-                return key
+            matchingKeys.push(key)
         }
-        return null
 
+        return matchingKeys
     }
 
     function findModifierKeyItem(modifierId) {
         for (var i = 0; i < keys.count; i++) {
             var key = keys.itemAt(i);
-            if (key.key.keyType() == "specialKey" && key.key.modifierId == modifierId)
+            if (key.key.keyType() === "specialKey" && key.key.modifierId === modifierId)
                 return key
         }
         return null
     }
 
     function handleKeyPress(event) {
-        var key = findKeyItem(event)
-        if (key)
-            key.pressed = true
+        var eventKeys = findKeyItems(event)
+
+        for (var i = 0; i < eventKeys.length; i++) {
+            eventKeys[i].pressed = true
+        }
     }
 
     function handleKeyRelease(event) {
-        var key = findKeyItem(event)
-        if (key)
-            key.pressed = false
+        var eventKeys = findKeyItems(event)
+
+        for (var i = 0; i < eventKeys.length; i++) {
+            eventKeys[i].pressed = false
+        }
     }
 
     Item {
