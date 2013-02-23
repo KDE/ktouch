@@ -69,7 +69,7 @@ Text {
 
     color: key.state == "normal"? "#333": "#222"
     smooth: true
-    font.pixelSize: referenceKey.height * scaleFactor / 3
+    font.pixelSize: referenceKey.height * Math.min(horizontalScaleFactor, verticalScaleFactor) / 3
     text: key.keyType() == "specialKey"?
         position == KeyChar.TopLeft? specialKeyLabel(key.type): "":
         keyLabel(position, key)

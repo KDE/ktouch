@@ -82,10 +82,10 @@ Item {
         getTint(preferences.fingerColor(key.fingerIndex)):
         "#00000000"
 
-    x: Math.round(key.left * scaleFactor)
-    y: Math.round(key.top * scaleFactor)
-    width: Math.round(key.width * scaleFactor)
-    height: Math.round(key.height * scaleFactor)
+    x: Math.round(key.left * horizontalScaleFactor)
+    y: Math.round(key.top * verticalScaleFactor)
+    width: Math.round(key.width * horizontalScaleFactor)
+    height: Math.round(key.height * verticalScaleFactor)
 
     state: enabled? (pressed? "pressed": "normal"): "disabled"
 
@@ -199,7 +199,7 @@ Item {
     Rectangle {
         id: body
         anchors.fill: parent
-        radius: Math.max(3, Math.min(referenceKey.height, referenceKey.width) / 10 * scaleFactor)
+        radius: Math.max(3, Math.min(referenceKey.height, referenceKey.width) / 10 * Math.min(horizontalScaleFactor, verticalScaleFactor))
         border.width: 1
         border.color: "#000"
         smooth: true
@@ -230,9 +230,9 @@ Item {
     }
 
     Item {
-        anchors.topMargin: Math.max(referenceKey.width / 20, 3 * scaleFactor)
+        anchors.topMargin: Math.max(referenceKey.width / 20, 3 * verticalScaleFactor)
         anchors.bottomMargin: anchors.topMargin
-        anchors.leftMargin: Math.max(referenceKey.width / 10, 5 * scaleFactor)
+        anchors.leftMargin: Math.max(referenceKey.width / 10, 5 * horizontalScaleFactor)
         anchors.rightMargin: anchors.leftMargin
         anchors.fill: parent
         KeyLabel {

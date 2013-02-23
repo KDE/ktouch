@@ -26,6 +26,8 @@ Item {
     }
 
     property real scaleFactor: Math.pow(2, zoomLevel / 2)
+    property real horizontalScaleFactor: scaleFactor
+    property real verticalScaleFactor: scaleFactor
     property KeyboardLayout layout: keyboardLayout
     property int lastZIndex: 0
 

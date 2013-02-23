@@ -177,7 +177,8 @@ FocusScope {
                         top: trainingLine.bottom
                         topMargin: LessonFontSizeCalculater.BasePixelSize
                     }
-                    property real scaleFactor: 1
+                    property real horizontalScaleFactor: 1
+                    property real verticalScaleFactor: 1
                     property Key defaultKey: Key {}
                     property KeyboardLayout defaultKeyboardLayout: KeyboardLayout {}
 

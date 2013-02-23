@@ -25,7 +25,8 @@ Item {
 
     property KeyboardLayout keyboardLayout
     property real aspectRatio: keyboardLayout.width / keyboardLayout.height
-    property real scaleFactor: Math.min(width / keyboardLayout.width, height / keyboardLayout.height)
+    property real horizontalScaleFactor: width / keyboardLayout.width
+    property real verticalScaleFactor: height / keyboardLayout.height
 
     function keyItems() {
         var items = []
