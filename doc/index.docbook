@@ -1004,7 +1004,7 @@ already introduced characters.
 <title>Rationale</title>
 <para>
 Such lessons help to strengthen the acquired
-skills and and provide a way to check the overall training level. They are also
+skills and provide a way to check the overall training level. They are also
 better suited for repeated training to further improve one's general typing
 skills.
 </para>
@@ -1185,7 +1185,7 @@ layout the program will adapt appropriately.
 <sect1 id="create_layouts">
 <title>Creating keyboard layouts</title>
 <para>You can create your own keyboard layouts using built-in &i18n-ktouch; editor.
-Usually it's best is to start with an existing layout close to to the keyboard layout
+Usually it's best is to start with an existing layout close to the keyboard layout
 you want to create, and use that as a base for own layout. That way you can avoid a
 lot of work.</para>
 
