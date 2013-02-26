@@ -51,6 +51,8 @@ public:
     bool isCorrect() const;
     QString nextCharacter() const;
     int hintKey() const;
+public slots:
+    void reset();
 signals:
     void activeChanged();
     void cursorItemChanged();
@@ -68,7 +70,7 @@ private:
     void add(const QString& text);
     void backspace();
     void deleteStartOfWord();
-    void reset();
+    void clearActualLine();
     void giveKeyHint(int key);
     void clearKeyHint();
     bool m_active;

@@ -94,6 +94,10 @@ FocusScope {
         screen.trainingStarted = true
     }
 
+    function forceActiveFocus() {
+        trainingWidget.forceActiveFocus()
+    }
+
     onLessonChanged: setLessonKeys()
 
     onIsActiveChanged: {

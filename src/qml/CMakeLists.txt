@@ -18,7 +18,6 @@ set(ktouch_qml_files
     TrainingScreenToolbar.qml
     TrainingScreenMenuOverlay.qml
     TrainingWidget.qml
-    TrainingLine.qml
     StatBox.qml
     ElapsedTimeMeter.qml
     CharactersPerMinuteMeter.qml

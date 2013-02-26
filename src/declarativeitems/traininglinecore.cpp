@@ -124,6 +124,15 @@ int TrainingLineCore::hintKey() const
     return m_keyHintOccurrenceCount >= 3? m_hintKey: -1;
 }
 
+void TrainingLineCore::reset()
+{
+    m_referenceLine = "";
+    m_actualLine = "";
+    clearKeyHint();
+    emit referenceLineChanged();
+    emit actualLineChanged();
+}
+
 void TrainingLineCore::keyPressEvent(QKeyEvent* event)
 {
     QDeclarativeItem::keyPressEvent(event);
@@ -140,9 +149,9 @@ void TrainingLineCore::keyPressEvent(QKeyEvent* event)
         {
             if (event->key() == Qt::Key_Return)
             {
-                reset();
-                clearKeyHint();
                 emit done();
+                clearActualLine();
+                clearKeyHint();
                 event->accept();
                 return;
             }
@@ -155,9 +164,9 @@ void TrainingLineCore::keyPressEvent(QKeyEvent* event)
         {
             if (event->key() == Qt::Key_Space)
             {
-                reset();
-                clearKeyHint();
                 emit done();
+                clearActualLine();
+                clearKeyHint();
                 event->accept();
                 return;
             }
@@ -331,7 +340,7 @@ void TrainingLineCore::deleteStartOfWord()
     }
 }
 
-void TrainingLineCore::reset()
+void TrainingLineCore::clearActualLine()
 {
     m_actualLine = "";
     emit actualLineChanged();

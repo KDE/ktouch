@@ -45,7 +45,7 @@ set(ktouch_SRCS
     declarativeitems/applicationbackground.cpp
     declarativeitems/cursorshapearea.cpp
     declarativeitems/griditem.cpp
-    declarativeitems/lessonfontsizecalculater.cpp
+    declarativeitems/lessonpainter.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp
     declarativeitems/traininglinecore.cpp

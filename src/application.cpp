@@ -30,7 +30,7 @@
 #include "declarativeitems/applicationbackground.h"
 #include "declarativeitems/cursorshapearea.h"
 #include "declarativeitems/griditem.h"
-#include "declarativeitems/lessonfontsizecalculater.h"
+#include "declarativeitems/lessonpainter.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
 #include "declarativeitems/traininglinecore.h"
@@ -119,7 +119,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<ApplicationBackground>("ktouch", 1, 0, "ApplicationBackground");
     qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
-    qmlRegisterType<LessonFontSizeCalculater>("ktouch", 1, 0, "LessonFontSizeCalculater");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
+    qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
 }
