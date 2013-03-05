@@ -34,6 +34,7 @@ ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     m_messageWidget->hide();
     m_messageWidget->setCloseButtonVisible(false);
 
+    m_resourceView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     m_resourceView->setCategoryDrawer(new KCategoryDrawerV3(m_resourceView));
     m_resourceView->setMouseTracking(true);
     m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
