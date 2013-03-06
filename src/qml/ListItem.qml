@@ -25,7 +25,8 @@ Item {
     property alias title: label.text
     property string iconSource
     property alias label: label
-    signal selected
+    signal clicked
+    signal doubleClicked
     height: padding.height + bg.margins.top + bg.margins.bottom
     state: ListView.isCurrentItem? "selected": mouseArea.containsMouse? "hover": "normal"
 
@@ -79,7 +80,8 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: root.selected()
+        onClicked: root.clicked()
+        onDoubleClicked: root.doubleClicked()
     }
 
     states: [

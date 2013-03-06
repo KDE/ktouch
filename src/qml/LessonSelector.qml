@@ -103,7 +103,12 @@ Item {
                     property Lesson lesson: index < course.lessonCount? course.lesson(index): null
                     property bool locked: index > lessonList.lastUnlockedIndex
                     width: lessonList.width - scrollBar.width
-                    onSelected: lessonList.currentIndex = index
+                    onClicked: lessonList.currentIndex = index
+                    onDoubleClicked: {
+                        if (!locked) {
+                            lessonSelected(course, lessonList.currentIndex)
+                        }
+                    }
                     iconSource: locked? "object-locked": ""
                     label.opacity: locked? 0.5: 1.0
                     title: lesson? lesson.title: ""

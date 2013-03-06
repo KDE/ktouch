@@ -62,13 +62,18 @@ FocusScope {
                                    index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
                         label.font.italic: isNewButton
                         iconSource: isNewButton? "list-add": "user-identity"
-                        onSelected: {
+                        onClicked: {
                             list.currentIndex = index
                             if (isNewButton) {
                                 createNewProfile()
                             }
                             else {
                                 selectProfile(index)
+                            }
+                        }
+                        onDoubleClicked: {
+                            if (!isNewButton) {
+                                root.profileChosen(profileDataAccess.profile(list.currentIndex))
                             }
                         }
                     }
