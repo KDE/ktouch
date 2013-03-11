@@ -187,7 +187,6 @@ void LessonPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QW
 
 void LessonPainter::updateLayout()
 {
-    invalidateImageCache();
 
     // ### reset text width from previous run
     m_doc->setTextWidth(-1);
@@ -204,6 +203,9 @@ void LessonPainter::updateLayout()
 
     setWidth(qCeil(docWidth * m_textScale));
     setHeight(qCeil(docHeight * m_textScale));
+
+    invalidateImageCache();
+    updateCursorRectangle();
 }
 
 void LessonPainter::resetTrainingStatus()
@@ -212,6 +214,7 @@ void LessonPainter::resetTrainingStatus()
         return;
 
     m_trainingLineCore->reset();
+    m_currentLine = 0;
     m_trainingLineCore->setReferenceLine(m_lines[0]);
 }
 
@@ -251,6 +254,7 @@ void LessonPainter::updateTrainingStatus()
     }
 
     invalidateImageCache();
+    updateCursorRectangle();
 }
 
 void LessonPainter::advanceToNextTrainingLine()
@@ -320,7 +324,6 @@ void LessonPainter::checkImageCache()
     m_imageCache = img;
     m_imageCacheDirty = false;
 
-    updateCursorRectangle();
     update();
 }
 
