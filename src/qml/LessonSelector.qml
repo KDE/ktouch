@@ -125,6 +125,7 @@ Item {
         Column {
             width: parent.width - listContainer.width - parent.spacing
             height: parent.height
+            spacing: 5
 
             LessonPreview {
                 width: parent.width
@@ -144,10 +145,7 @@ Item {
 
                 PlasmaComponents.Button {
                     id: startButton
-                    anchors {
-                        horizontalCenter: startButtonContainer.horizontalCenter
-                        bottom: parent.bottom
-                    }
+                    anchors.centerIn: parent
                     text: i18n("Start Training")
                     enabled: lessonList.currentItem !== null && !lessonList.currentItem.locked
                     iconSource: "go-next-view"
