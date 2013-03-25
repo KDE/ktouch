@@ -39,6 +39,7 @@ protected:
     void raiseError(const QSqlError& error);
 private:
     bool checkDbSchema();
+    bool migrateFrom1_0To1_1();
     QString m_errorMessage;
 };
 

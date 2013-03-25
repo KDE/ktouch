@@ -134,7 +134,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
 
     QSqlQuery lessonsQuery(db);
 
-    lessonsQuery.prepare("SELECT title, new_characters, text FROM course_lessons WHERE course_id = ?");
+    lessonsQuery.prepare("SELECT id, title, new_characters, text FROM course_lessons WHERE course_id = ?");
     lessonsQuery.bindValue(0, id);
     lessonsQuery.exec();
 
@@ -149,9 +149,10 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
     {
         Lesson* lesson = new Lesson();
 
-        lesson->setTitle(lessonsQuery.value(0).toString());
-        lesson->setNewCharacters(lessonsQuery.value(1).toString());
-        lesson->setText(lessonsQuery.value(2).toString());
+        lesson->setId(lessonsQuery.value(0).toString());
+        lesson->setTitle(lessonsQuery.value(1).toString());
+        lesson->setNewCharacters(lessonsQuery.value(2).toString());
+        lesson->setText(lessonsQuery.value(3).toString());
 
         target->addLesson(lesson);
     }
@@ -222,17 +223,18 @@ bool UserDataAccess::storeCourse(Course* course)
 
     QSqlQuery insertLessonsQuery(db);
 
-    insertLessonsQuery.prepare("INSERT INTO course_lessons (title, new_characters, text, course_id) VALUES(?, ?, ?, ?)");
+    insertLessonsQuery.prepare("INSERT INTO course_lessons (id, title, new_characters, text, course_id) VALUES(?, ?, ?, ?, ?)");
 
-    insertLessonsQuery.bindValue(3, course->id());
+    insertLessonsQuery.bindValue(4, course->id());
 
     for (int i = 0; i < course->lessonCount(); i++)
     {
         Lesson* lesson = course->lesson(i);
 
-        insertLessonsQuery.bindValue(0, lesson->title());
-        insertLessonsQuery.bindValue(1, lesson->newCharacters());
-        insertLessonsQuery.bindValue(2, lesson->text());
+        insertLessonsQuery.bindValue(0, lesson->id());
+        insertLessonsQuery.bindValue(1, lesson->title());
+        insertLessonsQuery.bindValue(2, lesson->newCharacters());
+        insertLessonsQuery.bindValue(3, lesson->text());
         insertLessonsQuery.exec();
 
         if (insertLessonsQuery.lastError().isValid())

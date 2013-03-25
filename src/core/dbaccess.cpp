@@ -95,7 +95,15 @@ bool DbAccess::checkDbSchema()
     if (versionQuery.next())
     {
         QString version = versionQuery.value(0).toString();
-        if (version != "1.0")
+
+        versionQuery.clear();
+
+        if (version == "1.0")
+        {
+            return migrateFrom1_0To1_1();
+        }
+
+        if (version != "1.1")
         {
             m_errorMessage = i18n("Invalid database version '%1'.", version);
             emit errorMessageChanged();
@@ -110,7 +118,7 @@ bool DbAccess::checkDbSchema()
             raiseError(db.lastError());
             return false;
         }
-        db.exec("INSERT INTO metadata (key, value) VALUES ('version', '1.0')");
+        db.exec("INSERT INTO metadata (key, value) VALUES ('version', '1.1')");
         if (db.lastError().isValid())
         {
             kWarning() << db.lastError().text();
@@ -201,7 +209,7 @@ bool DbAccess::checkDbSchema()
     }
 
     db.exec("CREATE TABLE IF NOT EXISTS course_lessons ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "id TEXT PRIMARY KEY, "
             "course_id TEXT, "
             "title TEXT, "
             "new_characters TEXT, "
@@ -261,6 +269,80 @@ bool DbAccess::checkDbSchema()
             ")");
 
     if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    return true;
+}
+
+bool DbAccess::migrateFrom1_0To1_1()
+{
+    QSqlDatabase db = QSqlDatabase::database();
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("ALTER TABLE course_lessons "
+            "RENAME TO course_lessons_backup");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("CREATE TABLE course_lessons ("
+            "id TEXT PRIMARY KEY, "
+            "course_id TEXT, "
+            "title TEXT, "
+            "new_characters TEXT, "
+            "text TEXT "
+            ")");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("INSERT INTO course_lessons (id, course_id, title, new_characters, text) "
+            "SELECT id, course_id, title, new_characters, text FROM course_lessons_backup ");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("DROP TABLE course_lessons_backup");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    db.exec("UPDATE metadata SET value = '1.1' WHERE key = 'version'");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    if (!db.commit())
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
