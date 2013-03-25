@@ -207,9 +207,9 @@
     <specialKey left="1380" top="100" width="100" height="180" type="return"/>
     <specialKey left="1230" top="300" width="250" height="80" type="shift" modifierId="right_shift"/>
     <specialKey left="1150" top="400" width="180" height="80" type="other" modifierId="altgr" label="Alt Gr"/>
-    <specialKey left="1350" top="400" width="130" height="80" type="other" label="Strg"/>
+    <specialKey left="1350" top="400" width="130" height="80" type="other" label="Ctlr"/>
     <specialKey left="150" top="400" width="130" height="80" type="other" label="Alt"/>
-    <specialKey left="0" top="400" width="130" height="80" type="other" label="Strg"/>
+    <specialKey left="0" top="400" width="130" height="80" type="other" label="Ctrl"/>
     <specialKey left="300" top="400" width="830" height="80" type="space"/>
     <specialKey left="0" top="300" width="110" height="80" type="shift" modifierId="left_shift"/>
     <specialKey left="0" top="200" width="160" height="80" type="capslock"/>
