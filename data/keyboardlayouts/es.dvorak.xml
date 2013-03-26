@@ -202,9 +202,9 @@
   <specialKey width="100" left="1380" height="180" type="return" top="100"/>
   <specialKey width="250" modifierId="right_shift" left="1230" height="80" type="shift" top="300"/>
   <specialKey width="180" modifierId="altgr" left="1150" height="80" type="other" label="Alt Gr" top="400"/>
-  <specialKey width="130" left="1350" height="80" type="other" label="Strg" top="400"/>
+  <specialKey width="130" left="1350" height="80" type="other" label="Ctrl" top="400"/>
   <specialKey width="130" left="150" height="80" type="other" label="Alt" top="400"/>
-  <specialKey width="130" left="0" height="80" type="other" label="Strg" top="400"/>
+  <specialKey width="130" left="0" height="80" type="other" label="Ctrl" top="400"/>
   <specialKey width="830" left="300" height="80" type="space" top="400"/>
   <specialKey width="110" modifierId="left_shift" left="0" height="80" type="shift" top="300"/>
   <specialKey width="160" left="0" height="80" type="capslock" top="200"/>
