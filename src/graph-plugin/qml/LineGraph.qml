@@ -51,10 +51,20 @@ Item {
             contentHeight: height
             contentWidth: lineBg.width
 
+            property real lastWidth: -1
+
             onContentWidthChanged: {
                 if (contentWidth > width) {
                     contentX = contentWidth - width
                 }
+            }
+
+            onWidthChanged: {
+                if (lastWidth != -1 && contentWidth > width) {
+                    contentX = contentX + lastWidth - width
+
+                }
+                lastWidth = width
             }
 
             LineGraphBackgroundPainter {
