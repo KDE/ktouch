@@ -17,6 +17,7 @@
 
 #include "dbaccess.h"
 
+#include <QUuid>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
@@ -286,6 +287,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() <<  db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
@@ -296,6 +298,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
@@ -311,6 +314,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
@@ -321,6 +325,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
@@ -330,7 +335,47 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
+    }
+
+    // generate new UUIDs for lessons
+
+    QSqlQuery idsQuery = db.exec("SELECT id FROM course_lessons");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        db.rollback();
+        return false;
+    }
+
+    QStringList ids;
+
+    while (idsQuery.next())
+    {
+        ids << idsQuery.value(0).toString();
+    }
+
+    QSqlQuery updateIdQuery(db);
+
+    updateIdQuery.prepare("UPDATE course_lessons SET id = ? WHERE id = ?");
+
+    foreach (const QString id, ids)
+    {
+        updateIdQuery.bindValue(0, QUuid::createUuid().toString());
+        updateIdQuery.bindValue(1, id);
+
+        updateIdQuery.exec();
+
+        if (updateIdQuery.lastError().isValid())
+        {
+            kWarning() << updateIdQuery.lastError().text();
+            raiseError(updateIdQuery.lastError());
+            db.rollback();
+            return false;
+        }
     }
 
     db.exec("UPDATE metadata SET value = '1.1' WHERE key = 'version'");
@@ -339,6 +384,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
@@ -346,6 +392,7 @@ bool DbAccess::migrateFrom1_0To1_1()
     {
         kWarning() << db.lastError().text();
         raiseError(db.lastError());
+        db.rollback();
         return false;
     }
 
