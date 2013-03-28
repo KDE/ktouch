@@ -755,7 +755,7 @@ gebastelten Gedichten, wie diesem.</text>
 Die Zeichen &lt; und > werden als Operatoren benutzt.
 &lt; ist der Eingabeoperator und > ist der Ausgabeoperator.
 Mit ls > dateiname kann ich unter Linux eine Dateiliste
-mit allen Dateien des akuellen Verzeichnisses anlegen.
+mit allen Dateien des aktuellen Verzeichnisses anlegen.
 Will ich eine Datei nicht überschreiben sondern Daten
 anhängen, benutze ich >> als Operator.
 In HTML-Quellen spielen die Zeichen &lt; und > eine wesent-
