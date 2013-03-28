@@ -69,7 +69,18 @@ void LineGraphPoint::setBackgroundPainter(LineGraphBackgroundPainter* background
 {
     if (backgroundPainter != m_backgroundPainter)
     {
+        if (m_backgroundPainter)
+        {
+            m_backgroundPainter->disconnect(this);
+        }
+
         m_backgroundPainter = backgroundPainter;
+
+        if (m_backgroundPainter)
+        {
+            connect(m_backgroundPainter, SIGNAL(linePolygonsUpdated()), SLOT(triggerUpdate()));
+        }
+
         triggerUpdate();
         emit backgroundPainterChanged();
     }

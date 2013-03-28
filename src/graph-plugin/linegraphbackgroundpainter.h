@@ -35,6 +35,7 @@ public:
     const QList<QPolygonF>& linePolygons() const;
 signals:
     void lineGraphCoreChanged();
+    void linePolygonsUpdated();
 private slots:
     void triggerUpdate();
 private:

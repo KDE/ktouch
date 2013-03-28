@@ -31,6 +31,8 @@ LineGraphBackgroundPainter::LineGraphBackgroundPainter(QDeclarativeItem* parent)
     m_lineGraphCore(0)
 {
     setFlag(QGraphicsItem::ItemHasNoContents, false);
+
+    connect(this, SIGNAL(heightChanged()), SLOT(triggerUpdate()));
 }
 
 LineGraphCore* LineGraphBackgroundPainter::lineGraphCore() const
@@ -141,6 +143,8 @@ void LineGraphBackgroundPainter::updateLinePolygons()
 
         m_linePolygons << line;
     }
+
+    emit linePolygonsUpdated();
 }
 
 
