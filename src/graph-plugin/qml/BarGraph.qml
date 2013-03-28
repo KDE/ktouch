@@ -48,13 +48,6 @@ Item {
             anchors.fill: parent
             clip: true
 
-            onContentWidthChanged: {
-                // work around ListView bug: contentWidth doesn't take geometry of the header/footer into account
-                if (contentWidth + core.pitch > width) {
-                    contentX = contentWidth - width + core.pitch
-                }
-            }
-
             model: core.model
             orientation: ListView.Horizontal
 
