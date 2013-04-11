@@ -25,7 +25,6 @@ FocusScope {
     property Lesson lesson
     property KeyboardLayout keyboardLayout
     property TrainingStats trainingStats
-    property variant lines: [];
 
     property alias nextChar: trainingLine.nextCharacter
     property alias isCorrect: trainingLine.isCorrect
