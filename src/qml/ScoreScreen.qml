@@ -188,7 +188,7 @@ FocusScope {
         InformationTable {
             property list<InfoItem> infoModel: [
                 InfoItem {
-                    title: i18n("On:")
+                    title: i18nc("Statistics on lesson:", "On:")
                     text: learningProgressPointTooltip.row !== -1? learningProgressPointTooltip.findLessonTitle(learningProgressModel.lessonId(learningProgressPointTooltip.row)): ""
                 },
                 InfoItem {
@@ -393,7 +393,7 @@ FocusScope {
                         id: showLabel
                         color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
-                        text: i18n("Show")
+                        text: i18nc("Show a specific type of statistic", "Show")
                         height: paintedHeight
                     }
 
@@ -419,7 +419,7 @@ FocusScope {
                         id: overLabel
                         color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
-                        text: i18n("Over")
+                        text: i18nc("Show a statistic over one or more lessons", "Over")
                         height: paintedHeight
                         opacity: tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
