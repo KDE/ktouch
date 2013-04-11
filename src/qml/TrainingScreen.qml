@@ -166,6 +166,7 @@ FocusScope {
                 lesson: screen.lesson
                 keyboardLayout: screen.keyboardLayout
                 trainingStats: stats
+                overlayContainer: trainingOverlayContainer
                 onKeyPressed: keyboard.handleKeyPress(event)
                 onKeyReleased: keyboard.handleKeyRelease(event)
                 onNextCharChanged: keyboard.updateKeyHighlighting()
@@ -266,6 +267,11 @@ FocusScope {
                 visible: !screen.keyboardLayout.isValid
             }
         }
+    }
+
+    Item {
+        id: trainingOverlayContainer
+        anchors.fill: parent
     }
 
     TrainingScreenMenuOverlay {

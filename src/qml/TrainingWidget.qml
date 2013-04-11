@@ -25,6 +25,7 @@ FocusScope {
     property Lesson lesson
     property KeyboardLayout keyboardLayout
     property TrainingStats trainingStats
+    property Item overlayContainer
 
     property alias nextChar: trainingLine.nextCharacter
     property alias isCorrect: trainingLine.isCorrect
@@ -183,9 +184,10 @@ FocusScope {
 
     KeyItem {
         id: hintKey
-        anchors {
-            centerIn: trainingWidget
-        }
+        parent: trainingWidget.overlayContainer
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: Math.max(height, Math.min(parent.height - 2 * height,
+            sheetFlick.mapToItem(parent, 0, cursor.y + 3 * cursor.height - sheetFlick.contentY).y))
 
         property real horizontalScaleFactor: 1
         property real verticalScaleFactor: 1
