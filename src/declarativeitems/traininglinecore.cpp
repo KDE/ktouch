@@ -285,11 +285,12 @@ void TrainingLineCore::add(const QString& text)
     for (int i = 0; i < newText.length(); i++)
     {
         const QString character(newText.at(i));
-        const bool characterIsCorrect = character == m_referenceLine.at(actualLength + i);
+        const QString referenceCharacter(m_referenceLine.at(actualLength + i));
+        const bool characterIsCorrect = character == referenceCharacter;
 
         if (m_trainingStats)
         {
-            m_trainingStats->logCharacter(character, characterIsCorrect? TrainingStats::CorrectCharacter: TrainingStats::IncorrectCharacter);
+            m_trainingStats->logCharacter(referenceCharacter, characterIsCorrect? TrainingStats::CorrectCharacter: TrainingStats::IncorrectCharacter);
         }
 
         correct = correct && characterIsCorrect;
