@@ -20,8 +20,17 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import ktouch 1.0
 
-LessonSelector {
+Item {
     id: root
+
+    property Profile profile
+    property DataIndexCourse dataIndexCourse
+    signal lessonSelected(variant course, int lessonIndex)
+
+    width: parent.width
+    height: parent.height
+    visible: false
+    opacity: 0
 
     function showImmediately() {
         root.x = 0
@@ -43,14 +52,29 @@ LessonSelector {
         disappearAnimation.start()
     }
 
-    width: parent.width
-    height: parent.height
-    visible: false
-    opacity: 0
 
     QtObject {
         id: priv
         property int duration: 250
+    }
+
+    LessonSelector {
+        id: lessonSelector
+
+        anchors.fill: parent
+        visible: !!dataIndexCourse
+
+        profile: root.profile
+        dataIndexCourse: root.dataIndexCourse
+        onLessonSelected: root.lessonSelected(course, lessonIndex)
+    }
+
+    Rectangle {
+        id: customLessonSelector
+        anchors.fill: parent
+        color: "red"
+        visible: !root.dataIndexCourse
+
     }
 
     SequentialAnimation {

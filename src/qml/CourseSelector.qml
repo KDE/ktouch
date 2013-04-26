@@ -31,6 +31,12 @@ Item {
         if (!profile)
             return
         var courseId = profile.lastUsedCourseId;
+
+        if (courseId == "custom_lessons") {
+            selectCourse(courseRepeater.count, true)
+            return
+        }
+
         for (var i = 0; i < courseRepeater.count; i++) {
             var dataIndexCourse = courseRepeater.itemAt(i).dataIndexCourse
             if (dataIndexCourse.id === courseId) {
@@ -38,9 +44,8 @@ Item {
                 return
             }
         }
-        if (courseRepeater.count > 0) {
-            selectCourse(0, true)
-        }
+
+        selectCourse(0, true)
     }
 
     function selectCourse(index, automaticSelection) {
@@ -48,13 +53,14 @@ Item {
             return
 
         var direction = index > priv.currentIndex? Item.Left: Item.Right
-        var dataIndexCourse = courseRepeater.itemAt(index).dataIndexCourse
+        var dataIndexCourse = index < courseRepeater.count?
+                courseRepeater.itemAt(index).dataIndexCourse: null
         var targetPage = automaticSelection? coursePageContainer.activePage: coursePageContainer.inactivePage
 
         priv.currentIndex = index;
         targetPage.dataIndexCourse = dataIndexCourse
-        courseTitleLabel.text = dataIndexCourse.title
-        courseDescriptionItem.description = dataIndexCourse.description
+        courseTitleLabel.text = dataIndexCourse? dataIndexCourse.title: i18n("Custom Lessons")
+        courseDescriptionItem.description = dataIndexCourse? dataIndexCourse.description: ""
 
         if (!automaticSelection) {
             coursePageContainer.inactivePage = coursePageContainer.activePage
@@ -62,7 +68,7 @@ Item {
             coursePageContainer.inactivePage.hide(direction)
             coursePageContainer.activePage.show(direction)
 
-            saveLastUsedCourse(dataIndexCourse.id)
+            saveLastUsedCourse(dataIndexCourse? dataIndexCourse.id: "custom_lessons")
         }
     }
 
@@ -75,6 +81,11 @@ Item {
 
     Connections {
         target: courseModel
+        onRowsRemoved: {
+            priv.currentIndex = -1
+            selectLastUsedCourse()
+
+        }
         onRowsInserted: {
             priv.currentIndex = -1
             selectLastUsedCourse()
@@ -97,7 +108,6 @@ Item {
 
     Column {
         anchors.fill: parent
-        visible: courseRepeater.count > 0
 
         Rectangle {
             id: head
@@ -129,7 +139,13 @@ Item {
                 PlasmaComponents.ToolButton {
                     id: courseDescriptionButton
                     iconSource: "dialog-information"
+                    enabled: priv.currentIndex < courseRepeater.count
                     checkable: true
+                    onEnabledChanged: {
+                        if (!enabled) {
+                            checked = false;
+                        }
+                    }
                 }
 
                 Item {
@@ -140,8 +156,8 @@ Item {
                 PlasmaComponents.ToolButton {
                     id: previousButton
                     iconSource: "arrow-left"
-                    visible: courseRepeater.count > 1
                     enabled: priv.currentIndex > 0
+                    visible: courseRepeater.count > 0
                     onClicked: {
                         var newIndex = priv.currentIndex - 1
                         root.selectCourse(newIndex, false)
@@ -151,10 +167,10 @@ Item {
                 PlasmaComponents.ToolButton {
                     id: nextButton
                     iconSource: "arrow-right"
-                    visible: courseRepeater.count > 1
-                    enabled: priv.currentIndex < courseRepeater.count - 1
+                    enabled: priv.currentIndex < courseRepeater.count
+                    visible: courseRepeater.count > 0
                     onClicked: {
-                        var newIndex = (priv.currentIndex + 1) % courseRepeater.count
+                        var newIndex = (priv.currentIndex + 1) % (courseRepeater.count + 1)
                         root.selectCourse(newIndex, false)
                     }
                 }
@@ -188,14 +204,5 @@ Item {
                 onLessonSelected: root.lessonSelected(course, lessonIndex)
             }
         }
-    }
-
-    CoursePage {
-        profile: root.profile
-    }
-
-    NoCoursesMessage {
-        visible: courseRepeater.count === 0
-        anchors.fill: parent
     }
 }
