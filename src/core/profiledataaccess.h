@@ -29,6 +29,7 @@ class Profile;
 class TrainingStats;
 class Course;
 class Lesson;
+class KeyboardLayout;
 
 class ProfileDataAccess : public DbAccess
 {
@@ -65,6 +66,7 @@ public:
     Q_INVOKABLE QDateTime lastTrainingSession(Profile* profile);
 
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
+    QSqlQuery customLessonQuery(Profile* profile, const QString& keyboardLayoutNameFilter = 0);
 
 signals:
     void profileCountChanged();

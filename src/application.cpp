@@ -47,6 +47,7 @@
 #include "core/profiledataaccess.h"
 #include "models/resourcemodel.h"
 #include "models/lessonmodel.h"
+#include "models/customlessonmodel.h"
 #include "models/categorizedresourcesortfilterproxymodel.h"
 #include "models/learningprogressmodel.h"
 #include "models/errorsmodel.h"
@@ -112,6 +113,7 @@ void Application::registerQmlTypes()
 
     qmlRegisterType<ResourceModel>("ktouch", 1, 0, "ResourceModel");
     qmlRegisterType<LessonModel>("ktouch", 1, 0, "LessonModel");
+    qmlRegisterType<CustomLessonModel>("ktouch", 1, 0, "CustomLessonModel");
     qmlRegisterType<CategorizedResourceSortFilterProxyModel>("ktouch", 1, 0, "CategorizedResourceSortFilterProxyModel");
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");

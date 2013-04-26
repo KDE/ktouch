@@ -26,6 +26,7 @@
 #include "core/profile.h"
 #include "core/course.h"
 #include "core/lesson.h"
+#include "core/keyboardlayout.h"
 #include "core/trainingstats.h"
 
 ProfileDataAccess::ProfileDataAccess(QObject* parent) :
@@ -617,6 +618,44 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
     if (lessonFilter)
     {
         query.bindValue(courseFilter? 2: 1, lessonFilter->id());
+    }
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return QSqlQuery();
+    }
+
+    return query;
+}
+
+QSqlQuery ProfileDataAccess::customLessonQuery(Profile* profile, const QString& keyboardLayoutNameFilter)
+{
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return QSqlQuery();
+
+    if (!db.isOpen())
+        return QSqlQuery();
+
+    QString sql = "SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?";
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        sql += " AND keyboard_layout_name = ?";
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+
+    query.bindValue(0, profile->id());
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        query.bindValue(1, keyboardLayoutNameFilter);
     }
 
     if (!query.exec())

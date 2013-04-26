@@ -69,6 +69,7 @@ set(ktouch_SRCS
     core/userdataaccess.cpp
     undocommands/coursecommands.cpp
     undocommands/keyboardlayoutcommands.cpp
+    models/customlessonmodel.cpp
     models/resourcemodel.cpp
     models/lessonmodel.cpp
     models/charactersmodel.cpp
