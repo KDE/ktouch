@@ -25,19 +25,37 @@ Item {
     property int margin: 30
 
     onLessonChanged: {
-        if (!lesson)
+        if (!lesson) {
+            sheet.lessonPainter.lesson = null
             return;
-        updateAnimation.restart()
-    }
+        }
 
+        swapPreviewAnimation.stop()
+        swapPreviewAnimation.from = sheet.lessonPainter == lessonPainter1? lessonPainter1: lessonPainter2
+        swapPreviewAnimation.to = sheet.lessonPainter == lessonPainter1? lessonPainter2: lessonPainter1
+        swapPreviewAnimation.start()
+    }
 
     Rectangle {
         id: sheet
-        anchors.centerIn: parent
 
-        opacity: 0
+        property LessonPainter lessonPainter: lessonPainter1
+
+        anchors.centerIn: parent
         width: lessonPainter.width
         height: lessonPainter.height
+
+        Behavior on width {
+            NumberAnimation {
+                duration: 100
+            }
+        }
+
+        Behavior on height {
+            NumberAnimation {
+                duration: 100
+            }
+        }
 
         border {
             width: 1
@@ -45,26 +63,39 @@ Item {
         }
 
         LessonPainter {
-            id: lessonPainter
+            id: lessonPainter1
+            opacity: 1
             maximumWidth: item.width
             maximumHeight: item.height
         }
 
+        LessonPainter {
+            id: lessonPainter2
+            maximumWidth: item.width
+            maximumHeight: item.height
+            opacity: 0
+        }
     }
 
     SequentialAnimation {
-        id: updateAnimation
+        id: swapPreviewAnimation
+        property LessonPainter from: lessonPainter1
+        property LessonPainter to: lessonPainter2
         NumberAnimation {
-            target: sheet
+            target: swapPreviewAnimation.from
             property: "opacity"
             to: 0
             duration: 100
         }
         ScriptAction {
-            script: lessonPainter.lesson = lesson
+            script: {
+                swapPreviewAnimation.to.lesson = lesson
+                sheet.lessonPainter = swapPreviewAnimation.to
+            }
         }
+        PauseAnimation { duration: 100 }
         NumberAnimation {
-            target: sheet
+            target: swapPreviewAnimation.to
             property: "opacity"
             to: 1
             duration: 100
