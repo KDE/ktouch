@@ -1,7 +1,7 @@
 # KDE Config File
 [Desktop Entry]
 Type=Application
-Exec=ktouch -caption "%c" %i
+Exec=ktouch -caption %c %i
 Icon=ktouch
 X-DocPath=ktouch/index.html
 GenericName=Touch Typing Tutor
