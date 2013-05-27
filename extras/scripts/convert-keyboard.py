@@ -197,7 +197,7 @@ def parse_key(key_node):
         else:
             finger_index = key_node.attrib['FingerKeyIndex']
         
-        chars = parse_chars(get_char_nodes(key_node))
+        chars = parse_chars(get_char_nodes(key_node), finger_index)
         key = Key(left, top, width, height, finger_index, chars)
         key.has_haptic_marker = has_haptic_marker
     elif type == "TAB":
@@ -206,7 +206,7 @@ def parse_key(key_node):
         key = SpecialKey(left, top, width, height, 'capslock')
     elif type == "SHIFT":
         key = SpecialKey(left, top, width, height, 'shift')
-        key.modifier_id = 'shift'
+        key.modifier_id = left < 700 and 'left_shift' or 'right_shift'
     elif type == "BACKSPACE":
         key = SpecialKey(left, top, width, height, 'backspace')
     elif type == "ENTER":
@@ -222,17 +222,19 @@ def parse_key(key_node):
             key.modifier_id = 'altgr'
     return key
 
-def parse_chars(char_nodes):
+def parse_chars(char_nodes, finger_index):
     chars = []
     for char_node in char_nodes:
         value = char_node.text
         position = POSITION_MAP[char_node.attrib['Position']]
         modifier = MODIFIER_MAP[position]
+        if modifier == 'shift':
+            modifier = finger_index <= 4 and "right_shift" or "left_shift"
         char = Char(value, position, modifier)
         chars.append(char)
         if value.lower() != value:
             hiddenChar = Char(value.lower(), 'hidden')
-            char.modifier = 'shift'
+            char.modifier = finger_index <= 4 and "right_shift" or "left_shift"
             chars.append(hiddenChar)
     return chars
 
