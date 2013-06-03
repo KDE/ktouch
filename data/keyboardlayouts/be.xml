@@ -76,7 +76,7 @@
    <char position="topLeft" modifier="left_shift">7</char>
    <char position="bottomLeft">è</char>
   </key>
-  <key width="80" left="800" height="80" fingerIndex="7" top="0">
+  <key width="80" left="800" height="80" fingerIndex="5" top="0">
    <char position="topLeft" modifier="left_shift">8</char>
    <char position="bottomLeft">!</char>
   </key>
@@ -94,7 +94,7 @@
    <char position="topLeft" modifier="left_shift">°</char>
    <char position="bottomLeft">)</char>
   </key>
-  <key width="80" left="1200" height="80" fingerIndex="4" top="0">
+  <key width="80" left="1200" height="80" fingerIndex="7" top="0">
    <char position="topLeft" modifier="left_shift">_</char>
    <char position="bottomLeft">-</char>
   </key>
