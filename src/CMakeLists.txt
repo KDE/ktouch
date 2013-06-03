@@ -31,6 +31,7 @@ kde4_add_ui_files(ktouch_UIS
     ui/newkeyboardlayoutwidget.ui
     ui/resourcetemplatewidget.ui
     ui/courseeditor.ui
+    ui/lessontexteditor.ui
     ui/keyboardlayouteditor.ui
     ui/keyboardlayoutpropertieswidget.ui
 )
@@ -85,6 +86,7 @@ set(ktouch_SRCS
     editor/abstracteditor.cpp
     editor/courseeditor.cpp
     editor/keyboardlayoutcombobox.cpp
+    editor/lessontexteditor.cpp
     editor/lessontexthighlighter.cpp
     editor/keyboardlayouteditor.cpp
     editor/keyboardlayouteditorview.cpp
