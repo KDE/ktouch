@@ -144,6 +144,13 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/fi.xml</path>
   </course>
   <course>
+    <title>Fran&#xE7;ais (dvorak b&#xE9;po)</title>
+    <description>http://bepo.fr/wiki/Exercices</description>
+    <keyboardLayout>fr(bepo)</keyboardLayout>
+    <id>{0c655ef9-3e7e-423f-b21c-ade0696ffaaf}</id>
+    <path>courses/fr.bepo.xml</path>
+  </course>
+  <course>
     <title>Dvorak Fran&#xE7;ais</title>
     <description>Apprentissage du clavier Dvorak-fr
 30 mai 2002 - Francis Leboutte, www.algo.be
@@ -350,7 +357,7 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
   <keyboardLayout>
     <title>Belgi&#xEB;</title>
     <name>be</name>
-    <id>{1d1ac1cf-ba26-43a5-b3a0-b17c55fe7767}</id>
+    <id>{f9e87dce-c298-4919-98aa-7a73ae5744c9}</id>
     <path>keyboardlayouts/be.xml</path>
   </keyboardLayout>
   <keyboardLayout>
@@ -436,6 +443,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>fi</name>
     <id>{1a667173-266e-4064-8947-ba6ac76d56f7}</id>
     <path>keyboardlayouts/fi.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Fran&#xE7;ais (dvorak b&#xE9;po)</title>
+    <name>fr(bepo)</name>
+    <id>{e8d047f3-85d9-495e-8cf0-25402ebc0765}</id>
+    <path>keyboardlayouts/fr.bepo.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Fran&#xE7;ais Dvorak</title>

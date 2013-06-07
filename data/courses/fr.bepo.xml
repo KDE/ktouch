@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<course>
+ <id>{0c655ef9-3e7e-423f-b21c-ade0696ffaaf}</id>
+ <title>Français (dvorak bépo)</title>
+ <description>http://bepo.fr/wiki/Exercices</description>
+ <keyboardLayout>fr(bepo)</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{8da32071-ac1a-429b-bfd9-63361303ba1e}</id>
+   <title>E, T, A, N (ind.+aur. – rg. repos)</title>
+   <newCharacters>etan</newCharacters>
+   <text>et et et et et et et te te te te te te te tee tee ette ette
+et et teet an an an an an an an na na na na na na na anna
+nana anan anna nana anan en en en en ta ta ta ta ta ne ne ne
+ne ne ane tate tante nana tata tete tata et annette tannent
+ta tante natte tentante et tente attenante annette et tata
+tentent attentat en tente</text>
+  </lesson>
+  <lesson>
+   <id>{128e03b1-1cc4-486e-87ba-a4ce799265b9}</id>
+   <title>I et S (majeurs – rg. repos)</title>
+   <newCharacters>i s</newCharacters>
+   <text>ss ii ss ii si si si is is is isis et sissi sises tes
+siestes et ses tasses titi sieste et sissi tisse sainte anne
+atteint ses antiennes annette assiste insiste et atteste
+satan est sienne si ta tante se tait tante annette insistait
+et teintait sa tisane sissi nantaise et titi sataniste
+naissent nantis ni ses antennes ni ses tasses ne tentaient
+sa tante annie est assise et anais a ses assiettes et ses
+tasses anastasie tissait sa taie en satin et anne assistait
+assise en se taisant</text>
+  </lesson>
+  <lesson>
+   <id>{a8edbb76-c89c-4492-96c1-2e2d95ec4237}</id>
+   <title>U et R (annulaires – rg. repos)</title>
+   <newCharacters>u r</newCharacters>
+   <text>ur ur ur ru ru ru rue rue rue eur eur eur eur sanie sur un
+nanti est inane sirius statue et nina sursaute tu attises
+sans tester tes risettes un narrateur rit et renie sa nature
+tu essaies un instant et tu es saisi tu eus une transe et tu
+te ratatinas un statut saint unirait ses instituts une eau
+saine et sans nitrates rassure ses saisies insanes initient
+sa retraite une instit tunisienne se tait en entrant nina
+ruse et ne susurre rien au russe assis un interne ruant sur
+rue ne saurait user sa rate un artiste teint ses tartines et
+rature ses raies en ratissant sa teinturerie sirius sent sa
+nature inerte un assaut retentissant terrassa un tsar et
+instaura une terreur un raisin rassis sustenterait un
+sarrasin sinistre et une tunisienne nantie en nuisette</text>
+  </lesson>
+  <lesson>
+   <id>{7498eed7-0fa8-4d1e-ace6-d076cc693a3a}</id>
+   <title>V et O (index – rg. haut)</title>
+   <newCharacters>o v AUIETSRNOV</newCharacters>
+   <text>vo vo vo ov ov ov Nous envions votre aviation souveraine Un
+toit en soie sur une tasse toute neuve Un virtuose novateur
+et avenant renversait nos vies Nous arriverons vers Tours
+via une autoroute toute neuve Un visionnaire vivote et
+entrevoit un tournevis novateur Nous savonnerons notre
+ventouse et retournerons notre veste Une voisine a vu un
+avion en ivoire et une voiture innovante Nous arriverons en
+vitesse et nous nous enivrerons en vos vins On va vers une
+aventure vaseuse si on avoue avoir vu son invention</text>
+  </lesson>
+  <lesson>
+   <id>{b42c94a5-fba9-4549-ac01-2f8c5e38a655}</id>
+   <title>P et D (majeurs – rg. haut)</title>
+   <newCharacters>pdPD</newCharacters>
+   <text>Nous nous disputons pour des prunes Un papa panda divin
+parade au paradis Nous parviendrons en Inde avant votre
+venue Nous adoptons votre point de vue sur notre patriote Un
+artiste peintre en peine a perdu de vue son inspiration Un
+oiseau de proie est souvent suspendu au dessus de terre Nous
+adoptons une attitude positive et nions avoir pris du poids
+Votre titre de transport apatride vous sera repris avant de
+sortir de notre avion Nous avons pour ainsi dire perdu notre
+inspiration et repoussons notre dispensaire</text>
+  </lesson>
+  <lesson>
+   <id>{3ae87bf2-3746-4833-944d-d782b4c90184}</id>
+   <title>É et L (annulaires – rg. haut)</title>
+   <newCharacters>élÉL</newCharacters>
+   <text>Ils étaient pourtant anéantis Le ré et le la ont été
+entendus Il a idéalisé son idole antirévolutionnaire Un
+oiseau a des ailes et en réalité les avions aussi Une eau
+désaltérante est la plus utile durant un été étoilé Les
+dépolluants ont évolué et peuvent délivrer une eau saine
+Nous avons pu altérer les évolutions prévues de notre Étoile
+en étain Le député et le président ont été élus suite au
+vote sans surprise de la droite Alerté par la radio un
+adulte daltonien a pu délivrer le latéral droit de Lens Une
+révolutionnaire esseulée est délaissée par les prisonniers
+dépassés par les éventualités</text>
+  </lesson>
+  <lesson>
+   <id>{f9382627-5d88-4b7e-9bdd-b39ba1b58759}</id>
+   <title>B et J (auriculaires – rg. haut)</title>
+   <newCharacters>bjBJ</newCharacters>
+   <text>Je blablate bien trop du jubilé de Platini Je jubile devant
+une bien belle bijouterie Je vous dis bienvenue dans le
+Libre via bépo Bien entendu je vais juste jouer au jeune
+toubib Nous balisons les jalons des joutes de javelot et de
+bouée Bébé a avalé son jus de baies puis a bien bavé Le
+barbu a brutalisé un juré et la réponse du tribunal était
+terrible Un bretteur battu a troublé les badauds obnubilés
+par son adresse au sabre Jules abjura les jeunes et éblouit
+ses subordonnés débordants de jalousie</text>
+  </lesson>
+  <lesson>
+   <id>{1b5a9cd0-0f6a-41a7-9187-0ffb16da77ec}</id>
+   <title>È, « , » et C (index au centre – rg. haut)</title>
+   <newCharacters>è,cÈC</newCharacters>
+   <text>Il coopère avec une contrepèterie Ils accaparèrent,
+caressèrent, et cartonnèrent La cavalière, tenant la
+crinière, put rester en selle Une industrie céréalière ne
+produit ni cèpes, ni cèdre La cuisinière, la caissière et la
+conseillère en colère passèrent en vitesse Si la sorcière ne
+décolère pas, elle possède les ressources nécessaires pour
+se détendre Ces noces princières occasionnèrent des troubles
+dans la populace, et les troupes policières durent
+intervenir</text>
+  </lesson>
+  <lesson>
+   <id>{ebf368ce-d170-4127-8363-14e550916dd8}</id>
+   <title>M et Z (extension des auriculaires)</title>
+   <newCharacters>mzMZ</newCharacters>
+   <text>Le combat semble impossible, mais le succès demeurera une
+victoire intemporelle Zou, il est temps de partir Bleu,
+comme le ciel azuréen La moutarde lui monte au nez Vous
+devez votre ceinture abdominale Un nez, un pic, un cap, une
+péninsule Un zombie disparu et tout est dépeuplé Libérez ce
+prisonnier insolent et malade Vous entamez cette procédure
+très attentivement Vous acclamerez sans problème ces émois
+juvéniles Une émeute a éclaté, mais vous avez amnistié les
+meneurs En Amazonie, les amateurs de meubles en acajou se
+réjouissent Justement, vous pouvez ajuster cet alambic avec
+votre nez Vous vous débarrassez de cet animal empaillé dont
+le nez empestait Entre zèbres et zébus, la Zambie demeure
+accueillante Treize litres de mazout déversés dans la mer,
+et le vizir est alarmé Vous lézardez au son de cet air de
+jazz Vous venez de commander votre seizième pizza, elle sera
+très moelleuse Ce zélote zozote mais reste zen en zippant
+son blouson Les trapézistes volent, une dizaine de zèbres
+parcourent la piste, et douze lézards ramassent les restes</text>
+  </lesson>
+  <lesson>
+   <id>{8221ce68-ecd1-4955-9123-07b65cabde70}</id>
+   <title>Ç et W (extension des auriculaires)</title>
+   <newCharacters>çwÇW</newCharacters>
+   <text>Les edelweiss poussent en altitude Lawrence est un
+darwiniste convaincu Le journaliste a interviewé le steward
+wallon Avec une jupe en tweed et un sweat, je suis parée
+pour assister au spectacle de clowns En ensemençant
+maintenant, nous aurons un beau jardin au printemps La
+rançon demandée est désarçonnante Il passait inaperçu et
+demeurait donc insoupçonnable Nous vous avons aperçus puis
+reçus, comme ça, sans attendre Le caleçon du maçon se coinça
+dans un escalier en colimaçon mal conçu, alors il menaça de
+poinçonner son remplaçant déçu Elle a conçu un brownie tout
+simplement sublime Dans ce western, les cavaliers sont
+souvent désarçonnés</text>
+  </lesson>
+  <lesson>
+   <id>{0db6b8a0-8a1d-4561-afbe-72c109b35f47}</id>
+   <title>K . ' et Q (index – rg. bas)</title>
+   <newCharacters>k.'qKQ</newCharacters>
+   <text>J'ai la joie d'utiliser un point. L'accueil d'une douzaine
+d'émirs est crucial. Il s'est présenté tel quel. Je joue
+tandis qu'il travaille. L'aéronautique est souvent critiquée
+mais demeure un domaine de compétence. Un enquiquineur de
+première classe. Je viens d'acquérir un kiwi. C'est
+anecdotique, mais l'acoustique de cette salle est
+remarquable. Il a empaqueté son anorak et l'a embarqué pour
+Astrakan. Après le cours de karaté, un bon cake te
+requinquera. Le judoka qui est en kaki teste ton
+kaléidoscope. Un cocktail suivra la kermesse. Les
+basketteurs seront présents, ainsi que les quelques
+rockeurs. Après quelques vodkas, je serai partant pour un
+jerk et un rock endiablés. J'ai acquis une belle aquarelle
+d'antiquaire, que je mettrai près de mon aquarium. C'est
+dans la zone équatoriale que j'ai pu pratiquer l'équitation.
+Cet ecclésiastique éloquent évoquait une escroquerie sans
+équivoque. Je m'inquiète de ce qu'impliquent ces quatorze
+quatrains.</text>
+  </lesson>
+  <lesson>
+   <id>{e9d05be9-b557-4c06-b6bc-d29672581f60}</id>
+   <title>X et G (majeurs – rg. bas)</title>
+   <newCharacters>xgXG</newCharacters>
+   <text>J'exagère sans doute, mais l'état de mon gazon s'aggrave.
+Les Anglais s'agglutinent dans cette agglomération.
+Lorsqu'elle angoisse, elle ingurgite et engloutit des
+quantités astronomiques. Nous avons obtenu l'agrément pour
+l'agrandissement de notre maison et l'aménagement de
+l'annexe. L'agence nous a conseillé l'agriculture, mais
+l'élevage de grenouilles pourrait nous nuire. Le matin, on
+conseille un bon verre de jus d'orange ou de tout autre
+agrume. La gourmandise n'aide pas pour maigrir. J'enrage car
+l'enregistrement que j'avais programmé a raté. Mon garçon
+est ambidextre. Avec mes index et mes majeurs, j'indexe des
+données qui avaient été annexées.</text>
+  </lesson>
+  <lesson>
+   <id>{c92bf552-4d84-472f-9dbb-55ed1cd49387}</id>
+   <title>Y et H (annulaires – rg. bas)</title>
+   <newCharacters>yhYH</newCharacters>
+   <text>J'espère hypnotiser les sénateurs avec les chrysanthèmes
+disséminés dans l'hémicycle. Les polytechniciens aussi ont
+besoin de s'hydrater. C'est avec du rythme que le
+saxophoniste et le psychiatre joueur de synthé pourront se
+synchroniser. Un asthmatique en crise présente une
+inspiration maximale qui abaisse le diaphragme, repousse les
+abdominaux et hausse le thorax. Je suis chez ce cher Serge,
+cherchant des chers cierges, assis sur des chers sièges. Le
+chiche, son chicha et son chien sont souvent chez Sanson ou
+chez Charles sans se soucier de sa sécheuse sèche.</text>
+  </lesson>
+  <lesson>
+   <id>{42384107-9fd1-436e-a321-d3abb40e1bac}</id>
+   <title>À et F (auriculaires – rg. bas)</title>
+   <newCharacters>àfÀF</newCharacters>
+   <text>Riri, Fifi et Loulou. Pif, paf, pouf. Et voilà, on a fait le
+tour de toutes les touches. Le bépo, c'est facile,
+finalement. À partir de maintenant, il suffira de faire
+quelques derniers petits efforts.</text>
+  </lesson>
+  <lesson>
+   <id>{9eabb817-abb0-43ee-ac16-1d244ee3592b}</id>
+   <title>Touches en AltGr (Ù, Œ, Æ,…)</title>
+   <newCharacters>ùœæÙŒÆ…</newCharacters>
+   <text>Où que soit cet œuf. Qui vole un œuf, vole un bœuf…
+Curriculum Vitæ. Et cætera. Lætitia et Éric sont arrivés ex
+æquo. Où qu'il soit, il y est… Je ne sais où ni quand…</text>
+  </lesson>
+  <lesson>
+   <id>{bf736b12-7187-40b2-82e3-5365b8b6cb0a}</id>
+   <title>Accents morts ^ et ¨ (Ê, Î, Û, Â, Ô, Ï, Ä)</title>
+   <newCharacters>êîûâôïäëöüÊÎÛÂÔÏÄËÖÜ</newCharacters>
+   <text>Être ou ne pas être. Il paraît qu'un bon feu dans l'âtre
+contribue au bienêtre. Il est sûr et certain. La brebis a
+dû paître à côté. La laïcité peut être ambiguë. Le canoë est
+emporté dans un maelström. C'est la belle nuit de Noël. Ma
+trisaïeule hébraïque raffole de l'aïoli. Les paranoïaques
+poussent des cris suraigüs.</text>
+  </lesson>
+  <lesson>
+   <id>{d980945e-c03a-4bae-a122-a65122d91427}</id>
+   <title>Tiret et point d'interrogation (avec espace insécable)</title>
+   <newCharacters>-? </newCharacters>
+   <text>Les chaussettes de l'archi-duchesse sont-elles sèches,
+archi-sèches ? Où est-il ? Que se passe-t-il ? Qu'est-il
+arrivé ? Qu'y a-t-il ? Peut-être est-il trop tard.</text>
+  </lesson>
+  <lesson>
+   <id>{1a713a31-9b6e-4764-81c3-50c7bef5648d}</id>
+   <title>Ponctuation double (; : !) et espace insécable</title>
+   <newCharacters>;:!</newCharacters>
+   <text>Et revoilà la sous-préfète ! La voilà ; elle arrive !</text>
+  </lesson>
+  <lesson>
+   <id>{ae012e55-52c3-4879-83f7-01fef27838a2}</id>
+   <title>Parenthèses</title>
+   <newCharacters>()</newCharacters>
+   <text>World Wide Web (www)</text>
+  </lesson>
+  <lesson>
+   <id>{93e37f36-4b41-4467-a061-d5cfa3ef6021}</id>
+   <title>Guillemets</title>
+   <newCharacters>«»</newCharacters>
+   <text>la Haute Autorité pour la Diffusion des Œuvres et la
+Protection des Droits sur Internet ou « HADOPI »</text>
+  </lesson>
+  <lesson>
+   <id>{7ecf5c3a-56ae-4660-9238-d1f30006eb97}</id>
+   <title>Pangrammes</title>
+   <newCharacters></newCharacters>
+   <text>Vif PDG mentor, exhibez la squaw jockey. Juge, flambez
+l'exquis patchwork d'Yvon. Vif juge, trempez ce blond whisky
+aqueux. Fripon, mixez l'abject whisky qui vidange. Buvez de
+ce whisky que le patron juge fameux. Portez ce vieux whisky
+au juge blond qui fume. Jugez qu'un vieux whisky blond pur
+malt fonce. Faux kwachas ? Quel projet de voyage zambien !
+Fougueux, j'enivre la squaw au pack de beau zythum. Ketch,
+yawl, jonque flambant neuve… jugez des prix ! Vieux pelage
+que je modifie : breitschwanz ou yak ? Prouvez, beau juge,
+que le fameux sandwich au yak tue. Voyez ce jeu exquis
+wallon, de graphie en kit mais bref.</text>
+  </lesson>
+  <lesson>
+   <id>{1af677bd-a38c-42c7-89bc-750878c610ba}</id>
+   <title>Pangrammes accentués</title>
+   <newCharacters></newCharacters>
+   <text>Perchez dix, vingt woks. Qu'y flambé-je ? Le moujik équipé
+de faux breitschwanz voyage. Kiwi fade, aptéryx, quel jambon
+vous gâchez ! Voyez le brick géant que j'examine près du
+wharf. Bâchez la queue du wagon-taxi avec les pyjamas du
+fakir. Mon pauvre zébu ankylosé choque deux fois ton wagon
+jaune. Voix ambiguë d'un cœur qui, au zéphyr, préfère les
+jattes de kiwis.</text>
+  </lesson>
+ </lessons>
+</course>

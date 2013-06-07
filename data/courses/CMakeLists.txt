@@ -17,6 +17,7 @@ set (coursefiles
     es.dvorak.xml
     fi.xml
     fr.xml
+    fr.bepo.xml
     fr.dvarok.xml
     gb.xml
     gr.xml

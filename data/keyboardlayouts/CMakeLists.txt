@@ -15,6 +15,7 @@ set(keyboardfiles
     es.dvorak.xml
     es.xml
     fi.xml
+    fr.bepo.xml
     fr.dvorak.xml
     fr.xml
     gb.dvorak.xml
