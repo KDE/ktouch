@@ -187,6 +187,15 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
     <path>courses/gr.xml</path>
   </course>
   <course>
+    <title>&#x641;&#x627;&#x631;&#x633;&#x6CC;</title>
+    <description>&#x646;&#x6AF;&#x627;&#x631;&#x646;&#x62F;&#x647;: &#x633;&#x6CC;&#x62F;&#x200C;&#x639;&#x644;&#x6CC;&#x200C;&#x627;&#x6A9;&#x628;&#x631; &#x646;&#x62C;&#x641;&#x6CC;&#x627;&#x646;
+&#x631;&#x627;&#x6CC;&#x627;&#x646;&#x627;&#x645;&#x647;: s.ali.najafian@chmail.ir
+</description>
+    <keyboardLayout>ir</keyboardLayout>
+    <id>{78bc47c4-e91c-42e2-b0b2-5c9055bc1d9e}</id>
+    <path>courses/ir.xml</path>
+  </course>
+  <course>
     <title>Italiana (generata automaticamente)</title>
     <description>KTouch training file generated Tue Jul 27 13:27:52 2004
 Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
@@ -497,6 +506,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>in(tam_unicode)</name>
     <id>{1c94be1f-5497-4443-8562-ea754fde5fbe}</id>
     <path>keyboardlayouts/in.tam_unicode.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x641;&#x627;&#x631;&#x633;&#x6CC;</title>
+    <name>ir</name>
+    <id>{8667cc1a-081f-4bef-a19c-cd66211f125c}</id>
+    <path>keyboardlayouts/ir.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Italiana</title>

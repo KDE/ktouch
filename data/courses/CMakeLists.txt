@@ -20,6 +20,7 @@ set (coursefiles
     fr.xml
     gb.xml
     gr.xml
+    ir.xml
     it.xml
     lt.std.xml
     nl1.xml
