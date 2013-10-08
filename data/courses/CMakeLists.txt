@@ -14,6 +14,7 @@ set (coursefiles
     es1.xml
     es2.xml
     es3.xml
+    es4.xml
     fi.xml
     fr.bepo.xml
     fr.dvarok.xml

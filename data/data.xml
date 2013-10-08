@@ -136,6 +136,13 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/es3.xml</path>
   </course>
   <course>
+    <title>Euskara</title>
+    <description>KTouch ariketa sorta Alexander Gabilondok egina.</description>
+    <keyboardLayout>es</keyboardLayout>
+    <id>{bb9db843-92a4-481c-851f-5d742f4b508a}</id>
+    <path>courses/es4.xml</path>
+  </course>
+  <course>
     <title>Suomalainen (automaattisesti luotu)</title>
     <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
 </description>

@@ -1,0 +1,816 @@
+<?xml version="1.0"?>
+<course>
+ <id>{bb9db843-92a4-481c-851f-5d742f4b508a}</id>
+ <title>Euskara</title>
+ <description>KTouch ariketa sorta Alexander Gabilondok egina.</description>
+ <keyboardLayout>es</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{10ad248f-4d30-428f-bb7d-624298027c41}</id>
+   <title>1. ariketa: j eta f</title>
+   <newCharacters>jf</newCharacters>
+   <text>fj j f j f f fj f fj fj ffj f fjf f f jj f fj jf jf fj jfj
+fjf ffj ffj fj ff f f ff fj fj ffjj jjjf j f jj fj jj jfj ff
+f ff ff fj ffj ff jfj jf jff ffj f ff ffj f fjf j fj ffj fj
+jj ffj jj f jfj jff j ffj ffjj ff j f fjf ffj jff ffj jf ffj
+jff fj fj f f f f fj jff ffj fjf f j j jf jf j jfj fjf fj ff
+fj jfj jfj fj jff fj f ffjj f fjf ffj jfj ff j ff jf jjjf jf
+j jff jfj j f jj f jfj fj j jff jfj jfj jff jf fj jj j j fjf
+j fj j fj j f j f ff j ffjj j jfj ffjj jfj f jfj f fj f f f
+jfj j jf jfj fj j jf f fjf fjf jf ff ff fjf fjf fjf jfj jjjf
+j f jf jfj f jjjf f ff ff jf f fj</text>
+  </lesson>
+  <lesson>
+   <id>{86efb926-d459-45a9-88e6-45c6526b378f}</id>
+   <title>2. ariketa: k eta d</title>
+   <newCharacters>kd</newCharacters>
+   <text>djd k djd k fdj k fdj k k jdd dd k kf dd k k dd k d fdfk k k
+kf d kf fdfk k fdj k df jk jdd jkjd jjkk d k k d d d d k k d
+kf d d dd k d jjd d d dkk jkjd k k k djd dkk kf fdj k fdfk k
+k fdj k dkk d d df df df k k djd dd k d d d dd jdd d kf fdj
+k k d jkjd k k k djd k d dd d jdd jjd d d d jdd d k k dd
+fdfk jjkk k fdfk k d d fdfk jjkk kfd k k dd k k dkk jjd jjkk
+k kfd df kfd d d d fdj df jdd k d jdd k d k k k jjkk dd d d
+k jk df k jjkk d k k k jjkk d fdfk fdfk fdj d k d jjkk djd k
+k k k djd k d d d df k k djd k kfd df k k k d k dd kfd df d
+kfd k k k kfd djd k k jk dd dd</text>
+  </lesson>
+  <lesson>
+   <id>{5815ead3-03c1-432b-a05e-7176d98b5b1d}</id>
+   <title>3. ariketa: l eta s</title>
+   <newCharacters>ls</newCharacters>
+   <text>s sl s fl skl s sl fl skl sfj l sk s sk ss s sfj jss l fs ss
+fs sk jss sk s fl s l fs s fl jss sfj l s sk l sk s fs s ss
+l fl l sf fl lll skl sfj sk dsk sk sfj ss sf l fl jssj fl l
+l jss sfj sk sk s fl fl s jss s s s l fl jssj sl l l s fl sl
+l fs ss l fs jss s dsk s jssj sk fs l l skl l fl l s l s s
+sl skl fl s s l skl l fl s skl sk s l l jssj s sk s jss jss
+sfj sf sl sk s lll jssj sl s s fl l lll fl l sk fl ss dsk fl
+fl fjjs l fl s s s l s jss skl jss sfj l fl l sfj sfj skl l
+fl l sk fl fl sk ss l fs l sk l sl fl skl l l sl s fl fjjs
+fjjs l fjjs l fl ss fl l sk s l l l</text>
+  </lesson>
+  <lesson>
+   <id>{3e7765fa-05c4-4c09-a50e-1a037e8e56df}</id>
+   <title>4. ariketa: c eta a</title>
+   <newCharacters>ca</newCharacters>
+   <text>dc dc dc dc cdc cdc dcd dcd cd cd dc dsc dsc jc jc fdc fdc
+fdc dc dc sca clac asa cascad sa al sca ass clac slac cak da
+fla c la fa ja fa salad ca daf addl fa scal slak facad al
+flask lass ac sass lack sac a c sla sca addl saf c aa fla
+fad salsa ad fla ad a ladl als c facad da fla call scal fla
+sac c al daff flas as ca all ak ac sadl cas ala c sak c
+jackas ca af caff aa aa ja sa afa sla lac ca fla fadd fa ja
+la faff sca sal alkal fals lac fla sass cas slas al fa clack
+af flak flas fla as af ass ass fad alack c sadl ass sack sca
+add sa c ja al lack cas cla cas add c las sa ac jacka sass
+cla sca cla ja c sak alack slak slas dadd slack alkal la la
+ak jc saka aska salak kalak laka jakak kaka jasa kasa kasaka
+faja kalaka kaska laja</text>
+  </lesson>
+  <lesson>
+   <id>{6445fbed-1572-421a-818e-b0c03c08220d}</id>
+   <title>5. ariketa: n eta t</title>
+   <newCharacters>nt</newCharacters>
+   <text>jn jn jn jnj jnj nj nj nj jnj jnj kjn kjn nk nkj fn fn nf
+fjn fjn ft ft ft tf tf tf ftf ftf ftf tft tft tft fjt fjt
+fjt ftj ftj jft jft tattl tan tac na lan snaf jat staccat na
+t can fact an fann catcall ta tattl sta nast task cast tan
+cantata can n lankl slan tall sanda na snak knac ta annal
+jakak attac t san canca stall san caftan ta ct kalaka t
+scandal flank last dankl nat cattl stat skat stal stak cact
+candl fat ana ta flatlan t tal tatt scant flatca dandl staf
+slat castl fan scantl sna snatc talk sna sna flank cast
+dandl n task tak lastl alt fan landlad tal ta stan lank flan
+tal tast sand sta landfall talka da salda jan naska landa
+lasta tanta kantak nasa jaka flana satsa tantaka takataka
+tasa landan jasa jasan tnt kantata lastana kana sastada lana
+aldats sakana akats</text>
+  </lesson>
+  <lesson>
+   <id>{ccca0903-2075-4cdb-9d61-12d6411e3d10}</id>
+   <title>6. ariketa: i eta v</title>
+   <newCharacters>iv</newCharacters>
+   <text>ik ik ik ki ki ki iki iki iki kik kik kji kji kji fik fik
+fik jki jki fv fv fv vf vf vf fvf fvf fvf vfv vfv vfv jfv
+jfv vjf vjf fjv fjv jv cassi sic laddi affin canin flint
+inclinin vivain icil ni satinin vi lil caddis snifflin fit
+assail nif lanai kil addic lis ick dia ninn ti fil cavalcad
+sanit slackin catfis dinin astatin dadaist killin fil sift
+vial sniffin fantasti lividl li invalid flick satinin di
+affiancin dia finn inkin acidl final vannin tin itc italic
+instancin inla titia fisika tintak dilista didaktika tantak
+jasan itsas datila kanta isilik aita kanika tila kinka falta
+ikasi jasa lija jaia lana dana ana fiskala sifili sitsa tina
+tink dafaila dalia ninia diala dialisi sandinista fantasia
+dilata dilinda diskala sinklinal laia laka lastana lanaldia
+idiaska adaska inka filiala idiki intifada finala flakia
+naftalina sasia taila tantaia landa finka sail sakana
+finalista saia sasi ilada tantaka sakatsa salda saskia ikasi
+lilia nasai natilla fina jadanik jaialdi jaiki jakina kasik
+kinka dilindan adina laia lasai lilia itsatsi</text>
+  </lesson>
+  <lesson>
+   <id>{dae61daf-93ac-4d1b-b59e-b3257dbbb954}</id>
+   <title>7. ariketa: m eta e</title>
+   <newCharacters>me</newCharacters>
+   <text>jm jm jm jmj jmj jmn jmn jmn mnj mnj fm fm fmj fmj jfnm jfnm
+jfnm de de de ed ed ed ded ded ded ede ede ede dfe dfe dfed
+dfed je je je insentienc decedent fiesta saltcella demiste
+title steadines scammin fancie envie fee descent se
+incivilitie amide site demitass lesse animatedl meta lema
+jendea salda sentimental fasea mendea mendia temati kimika
+masta metala mina testa mendafina kika kilima jaia jasan
+eitea lasaia samina tema milaka kea kenketa seme kilika
+dastamena idasmena menia antena ninia mitina tamala sendia
+imana tenka sendakin semen seinale fite siesta sinesmen
+sintesi sistema tindaketa diadema idealista ikaskide imajina
+inkesta tamaina tiketa sakela salmenta satelite sakela sama
+seinale sekta semantika sendia sestante mila neska neskatila
+samalda senide lankide neskame leial esaldi ale eman atseden
+jela kafea enkante jende jentil familia sendia kale kalte
+kanale esteka eten lekeda lema kandela amama kasketaldi kea
+tentel kemen kenketa mina kide seinale kimaketa dei dema
+denda destaina lankide laket maite estanda</text>
+  </lesson>
+  <lesson>
+   <id>{20d48fda-0399-4570-8aca-2032650db5b4}</id>
+   <title>8. ariketa: h eta r</title>
+   <newCharacters>hr</newCharacters>
+   <text>jh jh jh hj hj hj jhj jhj jhj hjh hjh hjh jih kijh jmjh kijh
+jmjh fr fr fr rf rf rf frf frf frf rfr rfr rfr fdr fdr fdr
+rdf rdf cdr cdr dare testifier eradicate terminat trafficke
+hadin inferenc franti saddler rancidit mandrak rattl threade
+cardinall larc trisectin intrinsi astelehena asteartea hemen
+han hark herria hiria tirritarra liskar idia ardia nahaste
+ahatea kedarra erdia herena nirea hirea harena irain
+menditik sineskeria takikardia talaiaria saiakera saltari
+erdietsi takera salakeria sastraka senarra nahasi nahi
+nederlandera tantra ilara sastre akerra tarranta indarra
+sakalaria satira sestra titare sastar lakrimal ikerlana
+seiren haria tankera sarrera salatari ahalke fraile
+jaitsiera janari arreta jarraiki jarrera aire tankera eraiki
+handiki karraka hatsa edari kari arin hamar deiadar aldera
+lerden merke errei erne liskar kikara kilker kirats kirten
+fardel hamarra dardara distira tarte sari eder harri irten
+fereka kirten irrist tresna lar larri larre laster lardaska
+arineketan marra amarra erreka lehen lehiaketa lehiakide
+lekari lirain</text>
+  </lesson>
+  <lesson>
+   <id>{1d937cd8-fa5d-4d5e-82be-40d717bdc314}</id>
+   <title>9. ariketa: g eta o</title>
+   <newCharacters>go</newCharacters>
+   <text>fg fg fg gf gf gf fgf fgf fgf gfg gfg gfg gt gt gt fgt fgt
+fgt tg tg tg lo lo lo lolo lolo olio olio olio ol ol ol klo
+klo klo olio olio olio overcook rotat comi reconfirmatio
+reregistratio horma astiro larregi iraingarri indarge
+kankarreko argal mandio geldi segida elikagai sega negar
+leohia leihoa ainhoa ohiala ohiana oiloa oilarra hor hori
+honek horrek sedentario sator segada seinalagarri seminario
+senadore sendagai egonkor semaforoa serora nehor nehon
+nehola taiga sinesgarri morroi harro igeri egia froga
+soineko jario molde igorri jaso grina eraso oldar takigrafia
+amildegi jolas gar jori olgetan egoki arlote ogia oinarri
+ondo sargori gogorra kako aldagela koska aitona garesti
+tontakeria soil katarro odol kilikolo klarion kokolo komeri
+historia gose galera ergel elikagai derrigor hondamendi
+dotore dohainik ohore hots sotil doi doilor tindategi gangar
+dote matrailako masailako losin lagin ohaide amona fidagarri
+hodei morokil gora laino mordoilo goian nigana lakio salgai
+igandea jaio legelari iradoki jo eta leher lehiakor lehor
+idor lehorte toki lelo lelokeri gidari solte likido itsaskor
+lorategi sotil gordin narkotiko kaotiko argal logale loti
+loia lotsati sasoi goiko lastategi otso otsoko ito eta kito</text>
+  </lesson>
+  <lesson>
+   <id>{04c94873-e338-4956-bc64-1400d2ac0a3f}</id>
+   <title>10. ariketa: b, p eta ñ</title>
+   <newCharacters>bpñ</newCharacters>
+   <text>gb gb gb bg bg bg gbg gbg gbg fgb fgb fgb gbf gbf gbf bfg
+bfg bfg gbg bgb ñp ñp ñp pñ pñ pñ ñpñ ñpñ ñpñ pñp pñp pñp
+ñlp ñlp ñlp pñl pñl pñl lop lop gb gb ñp ñp bgb bgb ñpñ ñpñ
+gbg gbg pñp pñp bfg bfg bfg ñop ñop ñop archbishop
+parliamentar calibe respel korapilo lanbide atsekabea
+eleberri paren snappil absconde nobodie lotsagabe kalapita
+garbiketa kanpo ospe lapiko sendabide oparo epel bihi
+askapen benta bota jipoi denbora balio bakana bakarra lapa
+beso kanpai kanpora bart bipil danborra atabala pare
+ganorabako trakets danbada kapen labain labankor labaina
+bipil baldar dorpe labainkada laprast apal beste pattar
+ebatsi belardi anabasa baleko lasterbide besarkada askapena
+lipar bake ekarpen porrot sabai sabel betea bakarrik arropa
+sorospen berriketa paga disolbagarri berri berripaper bero
+epela nabarmen opilpaisaia palanka habe panpin pare partaide
+partida patal pena tapoi pepelerdo baimen petril petrala
+pika pila pila patata tortila pinpirin potolo pirata epe
+epetan epeka kolpeka polit polit baina kalapita porrot
+portaera posibilitate posta postari pote praka premia presa
+neba prest branka behia nerabe trebe laborari minbera
+banaketa apain piper beta nahaspila aterpe kiribil tripa
+tripakada bide bete bakar gabe jabego koipe</text>
+  </lesson>
+  <lesson>
+   <id>{e3efd3b4-7e4c-4d66-af83-bbfcc619bcfc}</id>
+   <title>11. ariketa: q eta u</title>
+   <newCharacters>qu</newCharacters>
+   <text>aq aq aq qa qa qa saq saq saq qas qas qas ju ju ju uj uj uj
+jku jku ukj ju ju ju uj uj uj kju kju kju ui ui ui kiu kiu
+kiu aq aq qa qa aq asq asq thoroughnes recrudescin
+tunefulnes rigorousnes imprimatu rounde capsule breakou
+reintroduce contentiousnes bullfinche biennium augmenter
+nurse stoup inundation undeservin fluf goibeldu beldurti
+argitasuna lagun sugar domeinu doinu hautsi arrenkura heldu
+hau salbuespen enkantu sinesdun quita poquita aqua aquarium
+aquiles aquila equitativo equidad equido ausart irudi
+begitandu pelikula egurra funts bat bi hiru lau bost sei
+jaulki jaurti jausi arrunt fakultate mamu nagusi gune
+erakunde ipurdi kalentura sukarra kriseilu katilu kausa
+keinu kasu istilu kukubilka lurjabe komun damu egun musutruk
+debeku ulu oihu gordailu deus diru ilun labur dokumentu
+doitasun dolu duda dudamuda duin dunbotsa murgil apurtu laku
+lanpostu ume kume estutasun urduria larru larrugorritan
+lukurrero sosegu lugorri istilu errebolu urri kurrilo
+letratu likatsu leun askatasuna muga liluratu eskuargi
+eskuarki burruka sokamuturra euskarri puru puska lotura
+adeitsu lausengu hau hori hura honek horrek hark lurrin
+kurrin neurtu neurri mutil sekretu ohartu garau pausu punpa
+arduragabe urrats piku sukoi punta puntu bularretako
+purrustasa</text>
+  </lesson>
+  <lesson>
+   <id>{64d78c61-d6dc-46ba-b420-3cf1ca388202}</id>
+   <title>12. ariketa: w eta -</title>
+   <newCharacters>w-</newCharacters>
+   <text>sw sw sw ws ws ws sws sws sws wsw wsw wsw asw asw asw dsw
+dsw dsw sw sw sw lñ lñ lñ ñl ñl ñl lñl lñl lñl lñl ñlñ ñlñ
+ñlñ ñp ñp ñp ñ- ñ- ñ- lñp lñp lñp
+weed-middleweigh-whelmin-wavie-bookworm-snowie-widemouthe-
+downwar-sawhorse-wigwa-wakefu</text>
+  </lesson>
+  <lesson>
+   <id>{87dc848f-8c47-472a-9eb7-19fdbe18258c}</id>
+   <title>13. ariketa: x</title>
+   <newCharacters>x</newCharacters>
+   <text>dc dc dc cd cd cd dcd dcd dcd cdc cdc acdc acdc adcd dcf dcf
+dcf dcf sx sx sx xs xs xs sxs sxs sxs xsx xsx xsx sdx sdx
+sdx sxc sxc sxc sdx seraphicall misconstruin conservativenes
+scrabblin cosmeticia deficiencie copiousl chican
+dissociativel pronouncin congenitall extende cementer poleax
+attachment recombine compatibilitie colorles obscenes
+spamblock cinchin agrochemica nonreciproca cleare coastlin
+crumblines insurrectio discounte preconditionin relocke
+complexion destructibl crawlin corrode decommissione sec
+percusse discograph beneficia couple pixel officialis
+lurchin rapprochemen raccoon incom nic doctorin ratche
+falsificatio kaxkar mehatxu tximinia kexa axola patxada
+xartaketa txilio dexente txantxa txantxarra txurrut txalo
+txipristin xafla xaflagarri xaboi losintxa uxa txoriburu
+litxarreri litxarrero kuluxka atxeki atxekimendu txiki
+txikito patxada perretxiko perxenta pikotx pixa pixka
+panpoxa poxpolu puxika</text>
+  </lesson>
+  <lesson>
+   <id>{59f23980-a429-49d9-bf2b-763679906fdf}</id>
+   <title>14. ariketa: y eta z</title>
+   <newCharacters>yz</newCharacters>
+   <text>hy hy hy yh yh yh hyh hyh hyh yhy yhy yhy juy juy juy yhj
+yhj yhj az az az aza aza aza zaz zaz saz saz saz zx zx zx
+zas zas zas qwerty qwerty qwerty putzu urratsez pausuz
+oihartzun eztitsu poza boza goza kazkabarra kazeta inozo
+azkar zokoratu auzi kezka antzeko kidetza ozta mataza
+zuzenketa gizaixo itzuli zarpail gezi urpekontzi dedukzio
+intziri zintzo zintzilik izpi diruzain diruzale mutilzahar
+gatz eztabaida ezbaia zalantza ziur zarata zalaparta zurrut
+zaplada zartako zaplasteko debozio auzi jauzi zart zartatu
+aizto nekazaritza eltze lapitz arkatz zehar ziria zoria
+zorionez zoritxarrez zorioneko zorabio azal azaleratu azaldu
+baratza lokatza garratza zorrotza zakarra gorazarre wisky
+eztia lazaka zaparrada argazki bazkalondo ekoizpen legez
+bezala zapaldu aintzina lehenbizi antzu ziega nintzela izotz
+zerua zorroa zozoa lemazain lorazain zabal zuri zingira
+lizun zikin likitz zantar gozo goza zale zaletasun legatza
+lokatz lozorro itzala izen izan azeri gorputz azelko lubizi
+artazi arazi luze luzera luzatu luzakin zilbor tripazorri
+zentzu barazki bizkar haizu pizgarri bizkor ziza izurri
+plazer pozoi prezisio printza narrazio</text>
+  </lesson>
+  <lesson>
+   <id>{52b7d7e5-2b75-4f6f-9012-c238622a5219}</id>
+   <title>15. ariketa: hizki larriak</title>
+   <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
+   <text>Jon Aintzane Oier Endika Mikel Rakel Unai Xabier Karmele Ana
+Leire Santi Peru Willy Ohiane Felix Kike Estibalitz Nora
+Sara Kerman Xuban Iñigo Asier Lierni Ibon Leire Marina
+Mattin Eneritz Jon Hodei Iñaki Itziar Nora Haritz Iñigo
+Lierni</text>
+  </lesson>
+  <lesson>
+   <id>{c57f4348-03a6-445d-880f-84999f6af8e3}</id>
+   <title>16. ariketa: , . eta '</title>
+   <newCharacters>,.'</newCharacters>
+   <text>k, k, k, ,k ,k ,k k,k k,k k,k ,k, ,k, ,k, k,k, ,k,k ik, ik,
+,ki ,ki k, k, l. l. l. .l .l .l l.l l.l l.l .l. .l. .l. l.l.
+.l.l kl. kl. .lk .lk l. l. Puntuazio seinua eta gero
+zuriunea utzi behar da Euskal Herriko Hondartzak Bizkaiko
+Arena, Areeta, Ereaga, Arrigunaga, Gorrondatxe, Barinatxe,
+Arrietar, Atxabiribil, Meñakotz, Muriola, Plentzia, Astondo,
+Armintza, Bakio, Arribolak, Aritzatxu, Laidatxu, Toña, San
+Antonio, San Kristobal, Laida, Laga, Lapatza, Ea, Ogella,
+Isuntza, Karraspio, Egiluz, Endai, Arrigorri. Gipuzkoako
+Saturraran, Zazpi Hondartzak, Lehena, Ondarbeltz, Lapari,
+Altzuri, Mendata, Sakoneta, Elorriaga, Algorri, Itzurun,
+Santiago, Orrua, Gaztetape, Malkorbe, Ubide, Zarautz,
+Moliarri, Oribarzar, Antilla, Tximistarri, Ondarreta,
+Kontxa, Zurriola, Alabortza, Artzu, Hondarribia. Lapurdiko
+Ondarraitz, Loia, Zokoa, Donibane Lohizune, Erromadia,
+Lafitenea, Maiarko, Zeintz, Palementia, Uhabia, Erdikoa,
+Erretegia, Pavillon Royal, Libaritz, Milady, Marbella,
+Euskaldunen Kostaldea, Portu Zaharra, Hondartza Handia,
+Miramar, Amodio Ganbara, Urrezko Hondartza, Marinela,
+Itsaslapurrak, Ma Drague, L'Ocean, Zaldunak eta Barra.</text>
+  </lesson>
+  <lesson>
+   <id>{62ac4c80-825e-4630-9b84-7d6fc3c667c0}</id>
+   <title>17. ariketa: Andre Madalen</title>
+   <newCharacters></newCharacters>
+   <text>Hasi goiko kaletik
+eta beheraino
+ez da ederragorik
+Madalentxo baino.
+Txikia naizelako
+ez nauzula utzi
+kapitaina izango naiz
+bihar edo etzi.
+Ai Madalen, Madalen, ai Madalen
+zure bila nenbilen orain baino lehen.
+Andre Madalen, andre Madalen
+laurden erdi bat olio
+Aitak saria ekarri zion
+amak ordainduko dio.
+Amak ordaintzen ez baldin badio
+aitak ordainduko dio.
+Aitak ordaintzen ez baldin badio
+hor konpon eta adio.</text>
+  </lesson>
+  <lesson>
+   <id>{3f469d05-a52c-4be5-bbec-443c7d1a1397}</id>
+   <title>18. ariketa: =, ? eta !</title>
+   <newCharacters>=?!</newCharacters>
+   <text>ñp=? ñp=? ñp=? ñp=? ñ? ñ? ñ? ? ? ? ?ñ ?ñ ?ñ ñp? ñp? ñ? ñ? ñ?
+? ? ? aq! aq! aq! aq! a! a! a! ! ! ! !a !a !a aq! aq! a! a!
+a! ! ! ! Nor? Zer? Nor? Zein? Noiz? Non? Nondik? Nora?
+Norekin? Zergatik? Katxiporreta! Arraioa! Kaguen! Hara!
+Begira! Ene! Harrapa ezak! Nortzuk? Zertara? Noiztik?
+Noruntz? Zeinek? Zertarako? Noraino? Alde hemendik! Ospa!
+Utikan! Kendu hortik! Hara bestea! Aski da!</text>
+  </lesson>
+  <lesson>
+   <id>{d1b12566-8e39-4b12-9e00-b19077abce10}</id>
+   <title>19. ariketa: Artillero</title>
+   <newCharacters></newCharacters>
+   <text>Artillero, dale fuego,
+ezkontzen zaigula pastelero.
+Eta zeinekin? Eta norekin?
+Orpo zikinaren alabakin.
+Orpo zikin, gona luze,
+atzeko aldeko erregidore.
+Jotzen zioten tarrapatatan,
+zergatik neskatxa zatarra zan.</text>
+  </lesson>
+  <lesson>
+   <id>{51a876ca-e21c-47d0-8651-210cd6950a68}</id>
+   <title>20. ariketa: ; eta :</title>
+   <newCharacters>;:</newCharacters>
+   <text>k; k; k; k; ;k ;k ;k ;k k;k; k;k; k;k; lk; lk; lk; jk; jk;
+jk; ,; ,; ;, l: l: l: l: :l :l :l :l l:l: l:l: l:l: kl: kl:
+kl: kl: ñl: ñl: .: .: .:</text>
+  </lesson>
+  <lesson>
+   <id>{86157eab-01e6-450f-90e6-7ba4dd183275}</id>
+   <title>21. ariketa: Ardo gorri naparra</title>
+   <newCharacters></newCharacters>
+   <text>A, a, a:
+Ardo gorri naparra!
+eztarriko lakarra,
+kentzen hau den azkarra;
+a, a, a: kentzen hau den azkarra.
+E, e, e:
+Ni ardoaren alde!
+goiz eta arratsalde,
+beti naiz haren galde;
+I, i, i:
+hi haut nere edari!
+hik jartzen nauk kantari,
+ta sarritan dantzari.
+O, o, o:
+Edari demonio!
+inpernuko jario,
+pardel danen bizio.
+U, u, u:
+Ardo madarikatu!
+Gau-txorien teilatu,
+alper danen ostatu;
+u, u, u:
+Ardo madarikatu!</text>
+  </lesson>
+  <lesson>
+   <id>{09279773-afb1-4b17-9b07-75369a4eac9d}</id>
+   <title>22. ariketa: "</title>
+   <newCharacters>"/</newCharacters>
+   <text>sw" sw" sw" sw" "ws "ws "ws s" s" s" " " " "s "s "s "ws "ws
+"ws ss"" ss""</text>
+  </lesson>
+  <lesson>
+   <id>{f47a8d8c-ffda-4fe9-bae1-63689de1eea7}</id>
+   <title>23. ariketa: Haika mutil</title>
+   <newCharacters></newCharacters>
+   <text>"Haika mutil, jeiki hadi
+argia den mira hadi."
+- Bai, nausia, argia da,
+gure oilarra kanpoan da.
+"Haika mutil, jeiki hadi
+euria den mira hadi."
+- Bai, nausia, euria da,
+gure orra bustia da.
+"Haika mutil, jeiki hadi
+surik baden mira hadi."
+- Bai, nausia, sua bada,
+gur gatoa beroa da.
+"Haika mutil, jeiki hadi
+hortxe zer den mira hadi."
+- Bai, nausia, haizea da,
+gur leihoa ideki da.
+"Haika mutil, jeiki hadi
+kanpoan zer den mira hadi."
+- Bai, nausia, edurra da,
+lurra zuriz estali da.
+"Haika mutil, jeiki hadi
+urean zer den mira hadi."
+- Bai, nausia, ardia da,
+aspaldian itoa da.
+"Haika mutil, jeiki hadi
+zer oinon den mira hadi."
+- Bai, nausia, egia da,
+mutiltto hau unatu da.</text>
+  </lesson>
+  <lesson>
+   <id>{16ebb7b8-73eb-4385-9589-3692368b62ac}</id>
+   <title>24. ariketa: ( eta )</title>
+   <newCharacters>()</newCharacters>
+   <text>ki( ki( ki( ki( lo) lo) lo) ki(lo) ki(lo) k(lo) k(l) (l) (l)
+(l) (l) ki( ki( ki( ki( lo) lo) lo) ki(lo) ki(lo) k(lo) k(l)
+(l) (l) (l) (l) (l) (baga) (biga) (higa) (laga) (boga)
+(sega) (zai) (zoi) (bele) (arma) (tiro) (pun) (txirristi)
+(mirristi) (gerrena) (plat) (olio) (sopa) (kikili) (salda)
+(urrup) (edan) (edo) (klik) (ikili) (mikili) (klik)</text>
+  </lesson>
+  <lesson>
+   <id>{0cc32f23-090c-479f-bed2-d5ba83bb2ac0}</id>
+   <title>25. ariketa: Azken agurraren negarra</title>
+   <newCharacters></newCharacters>
+   <text>Nora zoaz, Euskal semea,
+arma hori eskutan?
+Armen hartzera deitzen naute
+Frantsen aldera.
+Euskal Herritik urrunduz,
+eta atzerrira joanak,
+a ze negarra entzunen duzun
+Euskal Herrietan!
+Morts pour la patrie,
+morts pour la patrie,
+eskuara baizik etzakiten haiek
+morts pour la patrie.
+Gure historian zehar
+zenbat malko eta ezbehar;
+Landetaratu gindutenekilan
+dugu orain hil behar .
+Bere ama agurtu du
+etxolako atarian;
+bere amak bisitatuko du
+atzerriko hilobian.</text>
+  </lesson>
+  <lesson>
+   <id>{ce15068f-25d8-43fd-b2aa-28653c65ffa9}</id>
+   <title>26. ariketa: 4 eta 7</title>
+   <newCharacters>47</newCharacters>
+   <text>fr4 fr4 fr4 fr4 4rf 4rf 4rf 4rf 4f 4f 4f f4 f4 f4
+ju7 ju7 ju7 ju7 7uj 7uj 7uj 7uj 7j 7j 7j j7 j7 j7
+fr4-fr4-fr4-fr4-4rf-4rf-4rf-4rf-4f-4f-4f-f4-f4-f4
+ju7-ju7-ju7-ju7-7uj-7uj-7uj-7uj-7j-7j-7j-j7-j7-j7
+47 47 47 47 47 47 47 74 74 74 74 74 74 74 74 47 47 47 47
+ñ- ñ- ñ- ñ- ñ- -ñ -ñ -ñ -ñ ñ-ñ ñ-ñ ñ-ñ ñ-ñ -ñ- -ñ- -ñ-
+47 74 47 74 4lau 7zazpi 4lau 7zazpi 4lau 7zazpi
+zazpi ken lau 7-4 zazpi ken lau 7-4</text>
+  </lesson>
+  <lesson>
+   <id>{55a8de96-039f-4ba3-b706-5fa8a1cd5570}</id>
+   <title>27. ariketa: Baldorba</title>
+   <newCharacters></newCharacters>
+   <text>Ezkil gabeko elizen
+eremu emankorra,
+giza murzuriko
+zure ardientzat.
+Oi Baldorba! Oi Baldorba!
+eguzki eta haize idor,
+mahats-ardo ibai,
+galburuarena.
+Lur gorri, harri landu,
+mailu eta xixelaren kantu.
+Gitarrazko alakiketan,
+Armeniako kanun ahots urratuan.
+Oi Baldorba! Oi Baldorba!
+esazu nor zen bidetik
+baztertu zintuen madarikatua!
+Zure irrio erromanikoa
+erdi izoztu eta leloturik
+utzi zuen madarikatuaren
+izena nahi dut,
+izena nahi dut.
+Oi Baldorba! Oi Baldorba!
+esazu nor zen bidetik
+baztertu zintuen madarikatua!
+Oi Baldorba!
+zutaz oroit eta
+zuri nagozu,
+zuri nagozu.
+Kantu bat laburra da eta
+pentsa zuk,
+esaten ez dizudan hartaz.
+Oi Baldorba! Oi Baldorba!
+esazu nor zen bidetik
+baztertu zintuen madarikatua!</text>
+  </lesson>
+  <lesson>
+   <id>{2fbdd914-1865-43c9-938c-d1b79a856b16}</id>
+   <title>28. ariketa: 3 eta 8</title>
+   <newCharacters>38</newCharacters>
+   <text>de3 de3 de3 de3 3ed 3ed 3ed 3ed d3 d3 d3 3d 3d 3d 3d3 3d3
+3d3 ki8 ki8 ki8 ki8 8ik 8ik 8ik 8ik k8 k8 k8 8k 8k 8k 8k8
+8k8 8k8 38 38 38 d3 k8 38 83 83 d3 k8 38 83 f4d3 43 43 j7k8
+78 78 3784 f4d3j7k8 773838 8374 8384 8374 8374 4738 4738
+4738 7483 7483</text>
+  </lesson>
+  <lesson>
+   <id>{116693ae-cdd6-474d-93f9-47bfa8f55950}</id>
+   <title>29. ariketa: Egun da Santi Mamiña</title>
+   <newCharacters></newCharacters>
+   <text>Egun da Santi Mamiña
+benetan egun samina;
+goiko zeruan gorde dezala
+luzaro neure arima.
+Esanen dizut egia,
+hau ez da usategia;
+erroi artean izan nintzaden
+benetan ausartegia.
+Itsas aldean izarra,
+hari begira lizarra;
+euskara salbo ikusi arte
+ez dut kenduko bizarra.</text>
+  </lesson>
+  <lesson>
+   <id>{8200ebfa-b09d-492a-8139-b1edb447be40}</id>
+   <title>30. ariketa: 5 eta 6</title>
+   <newCharacters>56</newCharacters>
+   <text>fr45 fr45 fr45 fr45 fr5 fr5 f5 f5 f5 5f 5f f5 f5 54 54 45 45
+545 545f ju76 ju76 ju76 ju76 ju6 ju6 j6 j6 j6 6j 6j j6 j6 67
+67 76 76 676 676j de3 de3 de3 345 345 345 ju6 ju6 ju6 678
+678 678 345678 345678 876543 d3f4f5j6j7k8 d3f4f5j6j7k8
+d3f4f5j6j7k8 d3f4f5j6j7k8 d3f4f5j6j7k8 36 37 38 46 47 48 56
+57 58 36 37 38 46 47 48 56 57 58 33 44 55 66 77 88 3388 4477
+5566 3388 4477 5566 3388 4477 5566 3388 4477 5566 3388 4477
+5566 3567 4573 4786 5786 7564 3565 8763 8574 8874 5587 6445
+3876 7445 7867 3348</text>
+  </lesson>
+  <lesson>
+   <id>{1744fe87-622c-437d-868c-24a36976cca1}</id>
+   <title>31. ariketa: Euskal Herrian euskaraz</title>
+   <newCharacters></newCharacters>
+   <text>Euskal Herrian euskaraz
+nahi dugu hitz eta jolas,
+lan eta bizi euskaraz eta
+hortara goaz,
+bada garaia noizbait dezagun
+guda hori gal edo irabaz.
+Zabal bideak eta aireak
+gure hizkuntzak har dezan arnas,
+bada garaia noizbait dezagun
+guda hori gal edo irabaz.
+Euskal Herrian euskara
+hitzegiterik ez bada,
+bota dezagun demokrazia
+zerri-askara;
+geure arima hiltzen uzteko
+bezain odolgalduak ez gara.
+Hizkuntza gabe esaidazue
+nola irtengo naizen plazara,
+geure arima hiltzen uzteko
+bezain odolgalduak ez gara.
+Euskal Herri euskalduna
+irabazteko eguna,
+pazientzia erre aurretik
+behar duguna;
+ez al dakizu euskara dela
+euskaldun egiten gaituena?
+Zer Euskal Herri litzake bere
+hizkuntza ere galtzen duena?
+Ez al dakizu euskara dela
+euskaldun egiten gaituena?</text>
+  </lesson>
+  <lesson>
+   <id>{fff12b0d-eee5-42d3-9638-a907fa35a35d}</id>
+   <title>32. ariketa: 2 eta 9</title>
+   <newCharacters>29</newCharacters>
+   <text>sw2 sw2 sw2 sw2 2ws 2ws 2ws 2s2s2s s2s2s2 22ss ss22 22ss
+ss22 s2s2s2s2s2 lo9 lo9 lo9 lo9 9ol 9ol 9ol 9l9l9l l9l9l9
+99ll ll99 99ll ll99 l9l9l9l9l9 sw23 lo98 sw23 lo98 s2l9 s2l9
+2389 2389 2389 2299 23456789 23456789 s2d3d3f4f5 j6j7k8l9
+s2d3f4f5j6j7k8l9 s2d3f4f5j6j7k8l9 s2d3f4f5j6j7k8l9 s234 l987
+s234 l987 s234 l987 s25s25s25 l96l96l96 s2l9d3k8f4j7f5j6
+3875 2987 4578 8497 3576 3482 2988 9466 7849 2239 8946 6675
+6478 9487</text>
+  </lesson>
+  <lesson>
+   <id>{e6eb3580-e7f6-404f-9e90-0490cecd2e39}</id>
+   <title>33. ariketa: Furra furra</title>
+   <newCharacters></newCharacters>
+   <text>Furra furra fandangua
+hortxe duzu fandangua
+geure gustukua.
+Gaur goizean jaiki naiz
+suerte onean,
+tanke bat topatu dut
+neure kafesnean.
+Ez dakit zer daukagun
+bakea ala gerra,
+baina nik, badaezpada,
+egin dut puzkerra.
+Furra furra fandangua
+hortxe duzu fandangua
+geure gustukua.
+Zerbait egitekotan,
+zuzen eta artez,
+zorri bat garbitu dut
+ur-pistola batez;
+orain galdurik nago,
+beldurrez beteta,
+muniziorik gabe
+gelditu naiz eta.
+Furra furra fandangua
+hortxe duzu fandangua
+geure gustukua.
+Neure arma bakarra
+dut akordeoia;
+auspoari eraginez
+dirudi lehoia.
+Eskua jaten badit,
+on egin dezaion;
+Cervantesi holakorik
+gertatu zitzaion.
+Furra furra fandangua
+hortxe duzu fandangua
+geure gustukua.
+Eta orain banoa
+berriro ohera,
+bila ez badatozkit
+lo-lo egitera;
+bihar ikusiko da
+zer dagoen berri,
+jakintsuenak ere
+ezin du igerri.</text>
+  </lesson>
+  <lesson>
+   <id>{38974d03-8156-49c4-99f6-2b0d411a7d7d}</id>
+   <title>34. ariketa: 1 eta 0</title>
+   <newCharacters>10</newCharacters>
+   <text>aq1 aq1 aq1 aq1 1qa 1qa 1qa 1a1a1a a1a1a1 11aa aa11 11aa
+aa11 a1a1a1a1a1 ñp0 ñp0 ñp0 ñp0 0pñ 0pñ 0pñ 0ñ0ñ0ñ ñ0ñ0ñ0
+00ññ ññ00 00ññ ññ00 ñ0ñ0ñ0ñ0ñ0 aq12 ñp09 aq12 ñp09 a1ñ0 a1ñ0
+1209 1209 1209 1100 1234567890 1234567890 aq12 ñp09 aq12
+ñp09 a1ñ0 a1ñ0 1209 1209 1209 1100 1234567890 1234567890
+a1234 ñ0987 a1234 ñ0987 a1234 ñ0987 a12345 ñ09876 5432167890
+1234567890 0987654321 0987654321 0987654321 123457890 01 23
+34 56 78 89 00 a1s2d3f4f5j6j7k8l9ñ0 a1s2d3f4f5j6j7k8l9ñ0
+a1s2d3f4f5j6j7k8l9ñ0 1234567890 1234567890 0987654321
+0987654321 0192837465 0192837465 1987 1976 2006 2010 1512
+1786 2004 1298 2012 1937 2001 1897 1657 2009</text>
+  </lesson>
+  <lesson>
+   <id>{50e57ea0-67c4-4768-b39d-875cadf1d8ff}</id>
+   <title>35. ariketa: 14 zortzimilak</title>
+   <newCharacters></newCharacters>
+   <text>Everest-8848, K2-8611, Kangtxenjunga-8586, Lhotse-8545,
+Makalu-8515, Daulagiri-8172, Manaslu-8156, Txo Oiu-8153,
+Nanga Parbat-8126, Annapurna-8087, Gasherbrum I-8068, Broad
+Peak-8047, Gasherbrum II-8035, Xixabangma-8012.</text>
+  </lesson>
+  <lesson>
+   <id>{52133999-d322-4a85-8f0e-0bce33268034}</id>
+   <title>36. ariketa: Aitormena</title>
+   <newCharacters></newCharacters>
+   <text>Ez dira betiko garai onenak
+azken finean gizaki hutsak gara.
+Barearen ostean dator ekaitza.
+Udaberri berririk ez guretzat.
+Denborak aurrera etengabian
+ta orain ezin eutsi izan giñana
+"rutinaren" morroiak bihurtu gara
+laztana lehen baino lehen aska gaitezan.
+hartu gabe arrunt bilakatuta.
+Ohartu gabe heldu gara mugara.
+Mundua jautsi zaigu gainera
+maitia lehen baino lehen aska gaitezan.
+Ez dakigu non dagoen hoberena.
+Bila dezagun beste lekuetan.
+Bai, zin dagizut ez dizudala inoiz gezurrik esan eta zaude
+zihur ezin izango zaitudala ahaztu inoiz
+aitortzen dut izan zarela ene bizitzaren onena
+baina orain, maitia lehen baino lehen aska gaitezan.</text>
+  </lesson>
+  <lesson>
+   <id>{d12c691a-585a-4469-a6a3-769391eea85b}</id>
+   <title>37. ariketa: teklatu numerikoa</title>
+   <newCharacters></newCharacters>
+   <text>Zenbaki segida luzeak idatzi behar ditugunean eskuin aldeko
+teklatu numerikoa erabil dezakegu. Koxka duen tekla 5 da.
+Bertan hatz luzea kokatuko dugu; haren ezkerrean erakuslea
+eta eskuinean nagia. 0 erpuruaz eta "." normalean ","
+ikusiko duguna, hatz nagiaz egingo dugu. Sartu -Intro edo
+Return- hatz txikiaz.
+5
+4
+6
+1
+2
+3
+7
+8
+9
+0
+5.5
+1.2
+12351
+12458
+125.3
+147.6
+45684
+9874
+12568
+1254.30
+58960
+1200
+5.30
+6.10
+8.90
+4785
+5659
+1248
+12459
+5451525356
+1234587
+4102453.2
+5457585956
+15483
+1255477
+8954.02
+15483.20</text>
+  </lesson>
+  <lesson>
+   <id>{9a7749ea-9b4c-4f8a-9e93-2f6be440a696}</id>
+   <title>38. ariketa: Batzuetan jartzen naiz</title>
+   <newCharacters></newCharacters>
+   <text>Batzuetan jartzen naiz etxetik begira
+begiak jausten zaizkit leihotik behera
+lurrean salto eginez kanikak balira
+gaua etorri arte dibertitzen dira.
+Ikusmira galduta asper naizenean
+gogoa ipintzen dut etorkizunean
+zer egin behar dudan euskaldun artean
+suizidatzen ez banaiz datorren urtean.
+Estraineko gauza zeharo alpertu
+jatearekin soilik nor da gaur kontentu?
+Asmatu behar ditut makina bat santu
+egutegia festaz erabat gorritu.
+Lagunekin paratu txokolate jatea
+saku-karrerak eta bidaia handiak
+ezagutu nahi ditut enpatxu-eztiak
+Konstantinopla eta Parisko zubiak.
+Apaizei sotanak dizkiet kenduko
+itsasontzi piraten banderak egiteko
+tiobibo batetan denok gara igoko
+zintzoak garelako ez dugu ordainduko.
+Musika joko dugu alde guztietan
+batek bonboan eta besteak tronpetan.
+Biluzirik bainatu ilargi-argitan
+maitia bilatuko dugu ur azpitan.
+Biziko gara horrela hiru ehun bat urtez
+banku guztietako jabetzaren kaltez
+sufrimendua eta negarraren ordez
+farra eta farrandaz historia betez.
+Ta horrelakorik inoiz gerta ez baledi
+izan gintezke arrano batzuetan txori
+txit ondo hitz eginez eskuetan geldi
+borreroak baditu milaka aurpegi.</text>
+  </lesson>
+ </lessons>
+</course>
