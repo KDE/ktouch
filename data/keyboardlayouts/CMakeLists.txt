@@ -40,6 +40,7 @@ set(keyboardfiles
     ua.xml
     us.colemak.xml
     us.dvorak.xml
+    us.workman.xml
     us.xml
 )
 

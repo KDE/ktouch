@@ -357,6 +357,15 @@ Available at http://www.gigliwood.com/abcd/abcd.html
     <path>courses/us.dvorak2.xml</path>
   </course>
   <course>
+    <title>English Workman (auto-generated)</title>
+    <description>Auto-Generated for ordered letters: t h s a n e o i g y c l d r u p q w b j f z x m v k
+
+By Peter Feigl &lt;craven@gmx.net&gt;</description>
+    <keyboardLayout>us(workman)</keyboardLayout>
+    <id>{a9688e24-25db-4d99-aaf1-b79d7cd274e6}</id>
+    <path>courses/us.workman.xml</path>
+  </course>
+  <course>
     <title>English (US) (auto-generated)</title>
     <description>KTouch training file generated Sun Mar 11 09:59:58 2007
 Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</description>
@@ -609,6 +618,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>us(dvorak)</name>
     <id>{82647f1d-cfaa-491e-ab41-6d6c86e4f5fd}</id>
     <path>keyboardlayouts/us.dvorak.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Workman</title>
+    <name>us(workman)</name>
+    <id>{fd4b5454-739b-4d7d-81d2-5fd0273774c4}</id>
+    <path>keyboardlayouts/us.workman.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>English (USA)</title>

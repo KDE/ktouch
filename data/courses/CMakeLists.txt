@@ -38,6 +38,7 @@ set (coursefiles
     us.colemak.xml
     us.dvorak1.xml
     us.dvorak2.xml
+    us.workman.xml
     us.xml
 )
 
