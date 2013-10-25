@@ -94,7 +94,10 @@ def parse_lesson(lesson_node):
     for line in input_lines:
         line = unicode(line)
         while len(line) > 59:
-            split_pos = line.rindex(" ", 0, 60)
+            try:
+                split_pos = line.rindex(" ", 0, 60)
+            except ValueError:
+                break
             lines.append(line[:split_pos])
             line = line[split_pos + 1:]
         lines.append(line)
