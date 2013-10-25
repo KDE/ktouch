@@ -29,7 +29,7 @@ class Lesson : public QObject
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString newCharacters READ newCharacters WRITE setNewCharacters NOTIFY newCharactersChanged)
     Q_PROPERTY(QString characters READ characters WRITE setCharacters NOTIFY charactersChanged)
-    Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged);
+    Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 
 public:
     explicit Lesson(QObject *parent = 0);
