@@ -22,6 +22,7 @@
 
 #include <KFileDialog>
 #include <KMessageBox>
+#include <KDialog>
 
 #include "editor/lessontexthighlighter.h"
 

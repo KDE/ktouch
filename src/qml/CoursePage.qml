@@ -25,7 +25,14 @@ Item {
 
     property Profile profile
     property DataIndexCourse dataIndexCourse
+    property string keyboardLayoutName
     signal lessonSelected(variant course, variant lesson)
+
+    property Course course: lessonSelector.visible? lessonSelector.course: customLessonSelector.course
+
+    function getCourse() {
+        return !!dataIndexCourse? lessonSelector.course: customLessonSelector.course
+    }
 
     width: parent.width
     height: parent.height
@@ -64,7 +71,7 @@ Item {
         anchors.fill: parent
         visible: !!dataIndexCourse
 
-        profile: root.profile
+        profile: visible? root.profile: null
         dataIndexCourse: root.dataIndexCourse
         onLessonSelected: root.lessonSelected(course, lesson)
     }
@@ -73,7 +80,8 @@ Item {
         id: customLessonSelector
         anchors.fill: parent
         visible: !root.dataIndexCourse
-        profile: root.profile
+        profile: visible? root.profile: null
+        keyboardLayoutName: root.keyboardLayoutName
         onLessonSelected: root.lessonSelected(course, lesson)
     }
 

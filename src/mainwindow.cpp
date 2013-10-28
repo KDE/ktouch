@@ -24,6 +24,7 @@
 #include <QPointer>
 #include <QVariant>
 
+#include <KDialog>
 #include <KStandardDirs>
 #include <KMenu>
 #include <KCmdLineArgs>
@@ -40,6 +41,7 @@
 #include "preferences.h"
 #include "trainingconfigwidget.h"
 #include "colorsconfigwidget.h"
+#include "customlessoneditorwidget.h"
 
 #ifdef KTOUCH_BUILD_WITH_X11
 #include "x11_helper.h"
@@ -125,6 +127,26 @@ void MainWindow::showResourceEditor()
     resourceEditor->activateWindow();
 }
 
+bool MainWindow::showCustomLessonDialog(Lesson *lesson, const QString &keyboardLayoutName)
+{
+    KDialog* dialog = new KDialog(this);
+    CustomLessonEditorWidget* editor = new CustomLessonEditorWidget(dialog);
+
+    dialog->setWindowTitle(i18n("Edit Custom Lesson"));
+    dialog->setButtons(KDialog::Ok | KDialog::Cancel);
+    dialog->setMainWidget(editor);
+
+    connect(editor, SIGNAL(validChanged(bool)), dialog, SLOT(enableButtonOk(bool)));
+
+    editor->setLesson(lesson);
+    //editor->setKeyboardLayoutName(keyboardLayoutName);
+
+    bool result = dialog->exec() == KDialog::Accepted;
+
+    delete dialog;
+
+    return result;
+}
 
 void MainWindow::showConfigDialog()
 {

@@ -34,6 +34,7 @@ kde4_add_ui_files(ktouch_UIS
     ui/lessontexteditor.ui
     ui/keyboardlayouteditor.ui
     ui/keyboardlayoutpropertieswidget.ui
+    ui/customlessoneditorwidget.ui
 )
 
 # set the source code files from which KTouch is compiled
@@ -94,6 +95,7 @@ set(ktouch_SRCS
     editor/charactersviewdelegate.cpp
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
+    customlessoneditorwidget.cpp
 )
 
 if (X11_Xkbfile_FOUND)

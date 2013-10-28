@@ -115,6 +115,7 @@ Item {
         id: homeScreen
         anchors.fill: parent
         courseModel: availableCourseModel
+        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
         visible: false
         focus: true
         onLessonSelected: {

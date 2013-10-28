@@ -24,6 +24,7 @@ Item {
     id: root
 
     property alias list: listContainer.data
+    property alias previewArea: column
     property Lesson selectedLesson
     property bool selectedLessonLocked
     signal startButtonClicked()
@@ -41,6 +42,7 @@ Item {
         }
 
         Column {
+            id: column
             width: parent.width - listContainer.width - parent.spacing
             height: parent.height
             spacing: 5

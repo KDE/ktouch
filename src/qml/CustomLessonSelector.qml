@@ -23,14 +23,23 @@ import ktouch 1.0
 Item {
     id: root
     property Profile profile
+    property string keyboardLayoutName
+    property alias course: courseItem
     signal lessonSelected(variant course, variant lesson)
 
     function update() {
         if (!profile) return;
-        // selectLastLesson()
+        profileDataAccess.loadCustomLessons(profile, keyboardLayoutName, courseItem)
+    }
+
+    QtObject {
+        id: internal
+        property variant deletedLessons: []
     }
 
     function selectLastLesson() {
+        if (!course.isValid)
+            return;
         var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastSelectedLesson);
         if (lessonId !== "") {
             for (var index = 0; index < course.lessonCount; index++) {
@@ -42,22 +51,58 @@ Item {
         }
     }
 
-    onProfileChanged: update()
-
-    CustomLessonModel {
-        id: customLessonModel
-        profile: root.profile
-    }
-
-    Course {
-        id: dummyCourse
-        Component.onCompleted: {
-            dummyCourse.id = "custom_lessons"
+    function createNewLesson() {
+        tmpLesson.id = uuid()
+        tmpLesson.title = ""
+        tmpLesson.text = ""
+        if (showCustomLessonDialog(tmpLesson, "")) {
+            profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
+            update()
+            lessonList.currentIndex = lessonList.count - 2
         }
     }
 
+    function editLesson() {
+        tmpLesson.copyFrom(base.selectedLesson)
+        if (showCustomLessonDialog(tmpLesson, "")) {
+            profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
+            update()
+        }
+    }
+
+    function deleteLesson() {
+        var deletedLessons = internal.deletedLessons
+        var lesson = Qt.createQmlObject("import ktouch 1.0; Lesson{}", internal, "lesson")
+        lesson.copyFrom(base.selectedLesson)
+        deletedLessons.push(lesson)
+        profileDataAccess.deleteCustomLesson(lesson.id)
+        update()
+        internal.deletedLessons = deletedLessons
+    }
+
+    function undoLessonDeletion() {
+        var deletedLessons = internal.deletedLessons
+        var lesson = deletedLessons.pop()
+        internal.deletedLessons = deletedLessons
+        profileDataAccess.storeCustomLesson(lesson, root.profile, keyboardLayoutName)
+        update()
+    }
+
+    function confirmLessonDeletion() {
+        var deletedLessons = internal.deletedLessons
+        var lesson = deletedLessons.pop()
+        internal.deletedLessons = deletedLessons
+    }
+
+    onProfileChanged: update()
+    onKeyboardLayoutNameChanged: update()
+
+    Course {
+        id: courseItem
+    }
+
     Lesson {
-        id: lesson
+        id: tmpLesson
     }
 
     LessonSelectorBase {
@@ -69,29 +114,39 @@ Item {
             id: lessonList
             anchors.fill: parent
 
-            model: ColumnProxyModel {
-                sourceModel: customLessonModel
-                column: 1
-            }
+            model: course.isValid? course.lessonCount + 1: 0
 
             clip: true
 
             delegate: ListItem {
+                property Lesson lesson: index < course.lessonCount? course.lesson(index): null
+                property bool isNewButton: index == course.lessonCount
                 width: lessonList.width - scrollBar.width
-                onClicked: lessonList.currentIndex = index
-                onDoubleClicked: {
-                    lessonSelected(dummyCourse, lesson)
+                onClicked: {
+                    lessonList.currentIndex = index
+                    if (isNewButton) {
+                        createNewLesson()
+                    }
                 }
-                title: display
+                onDoubleClicked: {
+                    if (!isNewButton) {
+                        lessonSelected(course, lesson)
+                    }
+                }
+                title: isNewButton? i18n("Create New Custom Lesson"): (lesson? lesson.title: "")
+                iconSource: isNewButton? "list-add": ""
             }
 
             onCurrentIndexChanged: {
-                base.selectedLesson = null
                 if (currentIndex !== -1) {
-                    customLessonModel.loadLesson(currentIndex, lesson)
-                    base.selectedLesson = lesson
+                    base.selectedLesson = lessonList.currentItem.lesson
+                }
+                else {
+                    base.selectedLesson = null
                 }
             }
+
+            onModelChanged: selectLastLesson()
 
             PlasmaComponents.ScrollBar {
                 id: scrollBar
@@ -99,8 +154,75 @@ Item {
             }
         }
 
+        InlineToolbar {
+            id: lessonToolbar
+            parent: base.previewArea
+            anchors {
+                top: parent.top
+                horizontalCenter: parent.horizontalCenter
+                topMargin: 5
+            }
+            opacity: base.selectedLesson != null? 1: 0
+            content: [
+                PlasmaComponents.ToolButton {
+                    iconSource: "document-edit"
+                    text: i18n("Edit")
+                    onClicked: editLesson()
+                    width: minimumWidth
+
+                },
+                PlasmaComponents.ToolButton {
+                    iconSource: "edit-delete"
+                    text: i18n("Delete")
+                    width: minimumWidth
+                    onClicked: deleteLesson()
+                }
+            ]
+        }
+
+        InlineToolbar {
+            id: undoToolbar
+            property Lesson lastDeletedLesson: internal.deletedLessons.length > 0? internal.deletedLessons[internal.deletedLessons.length - 1]: null
+            property string lastDeletedLessonTitle: ""
+            onLastDeletedLessonChanged: {
+                if (!!lastDeletedLesson) {
+                    lastDeletedLessonTitle = lastDeletedLesson.title
+                }
+            }
+
+            parent: screen
+            color: "#eee4be"
+            anchors {
+                top: parent.top
+                horizontalCenter: parent.horizontalCenter
+                topMargin: 15
+            }
+            opacity: !!lastDeletedLesson? 1: 0
+            content: [
+                PlasmaComponents.Label {
+                    text: i18n("'%1' deleted.", undoToolbar.lastDeletedLessonTitle)
+                },
+                Item {
+                    width: 5
+                    height: 1
+                },
+                PlasmaComponents.ToolButton {
+                    iconSource: "edit-undo"
+                    text: i18n("Undo")
+                    width: minimumWidth
+                    onClicked: undoLessonDeletion()
+                },
+                PlasmaComponents.ToolButton {
+                    iconSource: "dialog-close"
+                    text: i18n("Dismiss")
+                    width: minimumWidth
+                    onClicked: confirmLessonDeletion()
+                }
+            ]
+        }
+
         selectedLesson: null
         selectedLessonLocked: false
-        onStartButtonClicked: lessonSelected(dummyCourse, lesson)
+        onStartButtonClicked: lessonSelected(course, lessonList.currentItem.lesson)
     }
 }

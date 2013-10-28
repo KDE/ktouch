@@ -25,6 +25,8 @@ Item {
 
     property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
+    property string keyboardLayoutName
+
     signal lessonSelected(variant course, variant lesson)
 
     function selectLastUsedCourse() {
@@ -59,8 +61,6 @@ Item {
 
         priv.currentIndex = index;
         targetPage.dataIndexCourse = dataIndexCourse
-        courseTitleLabel.text = dataIndexCourse? dataIndexCourse.title: i18n("Custom Lessons")
-        courseDescriptionItem.description = dataIndexCourse? dataIndexCourse.description: ""
 
         if (!automaticSelection) {
             coursePageContainer.inactivePage = coursePageContainer.activePage
@@ -128,6 +128,7 @@ Item {
                     id: courseTitleLabel
                     height: paintedHeight
                     font.pointSize: 1.5 * theme.defaultFont.pointSize
+                    text: coursePageContainer.activePage.course.title
                 }
 
                 Item {
@@ -139,13 +140,7 @@ Item {
                 PlasmaComponents.ToolButton {
                     id: courseDescriptionButton
                     iconSource: "dialog-information"
-                    enabled: priv.currentIndex < courseRepeater.count
                     checkable: true
-                    onEnabledChanged: {
-                        if (!enabled) {
-                            checked = false;
-                        }
-                    }
                 }
 
                 Item {
@@ -181,6 +176,7 @@ Item {
             id: courseDescriptionItem
             width: parent.width
             active: courseDescriptionButton.checked
+            description: coursePageContainer.activePage.course.description
         }
 
         Item {
@@ -194,6 +190,7 @@ Item {
             CoursePage {
                 id: page0
                 profile: root.profile
+                keyboardLayoutName: screen.keyboardLayoutName
                 onLessonSelected: root.lessonSelected(course, lesson)
                 Component.onCompleted: page0.showImmediately()
             }
@@ -201,6 +198,7 @@ Item {
             CoursePage {
                 id: page1
                 profile: root.profile
+                keyboardLayoutName: root.keyboardLayoutName
                 onLessonSelected: root.lessonSelected(course, lesson)
             }
         }

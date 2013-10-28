@@ -27,6 +27,7 @@ class QMenu;
 class KActionCollection;
 class DataIndex;
 class ResourceEditor;
+class Lesson;
 
 #ifdef KTOUCH_BUILD_WITH_X11
 class XEventNotifier;
@@ -49,6 +50,7 @@ public:
     Q_INVOKABLE void showMenu(int xPos, int yPos);
 public slots:
     void showResourceEditor();
+    bool showCustomLessonDialog(Lesson* lesson, const QString& keyboardLayoutName);
 signals:
     void keyboardLayoutNameChanged();
 private slots:
