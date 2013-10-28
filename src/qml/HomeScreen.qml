@@ -24,7 +24,7 @@ FocusScope {
     id: screen
 
     property CategorizedResourceSortFilterProxyModel courseModel
-    signal lessonSelected(variant course, int lessonIndex, variant profile)
+    signal lessonSelected(variant course, variant lesson, variant profile)
 
     QtObject {
         id: d
@@ -122,7 +122,7 @@ FocusScope {
                 courseModel: screen.courseModel
                 profile: d.profile
                 anchors.fill: parent
-                onLessonSelected: screen.lessonSelected(course, lessonIndex, d.profile)
+                onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
             }
 
             InitialProfileForm {

@@ -9,7 +9,9 @@ set(ktouch_qml_files
     ProfileSelector.qml
     ProfileForm.qml
     ProfileDetailsItem.qml
+    LessonSelectorBase.qml
     LessonSelector.qml
+    CustomLessonSelector.qml
     LessonPreview.qml
     LessonLockedNotice.qml
     InitialProfileForm.qml

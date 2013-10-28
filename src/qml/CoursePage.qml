@@ -25,7 +25,7 @@ Item {
 
     property Profile profile
     property DataIndexCourse dataIndexCourse
-    signal lessonSelected(variant course, int lessonIndex)
+    signal lessonSelected(variant course, variant lesson)
 
     width: parent.width
     height: parent.height
@@ -66,15 +66,15 @@ Item {
 
         profile: root.profile
         dataIndexCourse: root.dataIndexCourse
-        onLessonSelected: root.lessonSelected(course, lessonIndex)
+        onLessonSelected: root.lessonSelected(course, lesson)
     }
 
-    Rectangle {
+    CustomLessonSelector {
         id: customLessonSelector
         anchors.fill: parent
-        color: "red"
         visible: !root.dataIndexCourse
-
+        profile: root.profile
+        onLessonSelected: root.lessonSelected(course, lesson)
     }
 
     SequentialAnimation {

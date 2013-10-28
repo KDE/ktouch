@@ -25,7 +25,7 @@ Item {
 
     property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
-    signal lessonSelected(variant course, int lessonIndex)
+    signal lessonSelected(variant course, variant lesson)
 
     function selectLastUsedCourse() {
         if (!profile)
@@ -194,14 +194,14 @@ Item {
             CoursePage {
                 id: page0
                 profile: root.profile
-                onLessonSelected: root.lessonSelected(course, lessonIndex)
+                onLessonSelected: root.lessonSelected(course, lesson)
                 Component.onCompleted: page0.showImmediately()
             }
 
             CoursePage {
                 id: page1
                 profile: root.profile
-                onLessonSelected: root.lessonSelected(course, lessonIndex)
+                onLessonSelected: root.lessonSelected(course, lesson)
             }
         }
     }
