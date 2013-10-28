@@ -35,6 +35,7 @@ set(ktouch_qml_files
 
     InformationTable.qml
     InfoItem.qml
+    InlineToolbar.qml
     MessageBox.qml
     ListItem.qml
     SheetDialog.qml
