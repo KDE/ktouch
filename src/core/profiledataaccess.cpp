@@ -22,6 +22,7 @@
 #include <QSqlError>
 
 #include <KDebug>
+#include <KLocale>
 
 #include "core/profile.h"
 #include "core/course.h"
@@ -580,6 +581,158 @@ QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
         return QDateTime();
 
     return QDateTime::fromMSecsSinceEpoch(query.value(0).value<quint64>());
+}
+
+bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keyboardLayoutNameFilter, Course* target)
+{
+    target->setIsValid(false);
+
+    QSqlQuery lessonsQuery = this->customLessonQuery(profile, keyboardLayoutNameFilter);
+
+    if (!lessonsQuery.isActive())
+        return false;
+
+    target->setDoSyncLessonCharacters(false);
+    target->setId("custom_lessons");
+    target->setTitle(i18n("Custom Lessons"));
+    target->setDescription(i18n("A place to store personal lesson texts"));
+    target->setKeyboardLayoutName(keyboardLayoutNameFilter);
+    target->clearLessons();
+
+    while (lessonsQuery.next())
+    {
+        Lesson* lesson = new Lesson(this);
+
+        lesson->setId(lessonsQuery.value(0).toString());
+        lesson->setTitle(lessonsQuery.value(1).toString());
+
+        const QString text = lessonsQuery.value(2).toString();
+        QString characters = "";
+
+        for (int i = 0; i < text.length(); i++)
+        {
+            const QChar character = text.at(i);
+
+            if (!characters.contains(character))
+            {
+                characters.append(character);
+            }
+        }
+
+        lesson->setText(text);
+        lesson->setCharacters(characters);
+
+        target->addLesson(lesson);
+    }
+
+    target->setIsValid(true);
+    return true;
+}
+
+bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, const QString& keyboardLayoutName)
+{
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return false;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    QSqlQuery cleanUpQuery(db);
+
+    cleanUpQuery.prepare("DELETE FROM custom_lessons WHERE id = ?");
+    cleanUpQuery.bindValue(0, lesson->id());
+    cleanUpQuery.exec();
+
+    if (cleanUpQuery.lastError().isValid())
+    {
+        kWarning() << cleanUpQuery.lastError().text();
+        raiseError(cleanUpQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    QSqlQuery insertQuery(db);
+
+    insertQuery.prepare("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)");
+
+    if (insertQuery.lastError().isValid())
+    {
+        kWarning() << insertQuery.lastError().text();
+        raiseError(insertQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    insertQuery.bindValue(0, lesson->id());
+    insertQuery.bindValue(1, profile->id());
+    insertQuery.bindValue(2, lesson->title());
+    insertQuery.bindValue(3, lesson->text());
+    insertQuery.bindValue(4, keyboardLayoutName);
+
+    insertQuery.exec();
+
+    if (insertQuery.lastError().isValid())
+    {
+        kWarning() << insertQuery.lastError().text();
+        raiseError(insertQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        db.rollback();
+        return false;
+    }
+
+    return true;
+}
+
+bool ProfileDataAccess::deleteCustomLesson(const QString& id)
+{
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return false;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    QSqlQuery deleteQuery(db);
+
+    deleteQuery.prepare("DELETE FROM custom_lessons WHERE id = ?");
+    deleteQuery.bindValue(0, id);
+    deleteQuery.exec();
+
+    if (deleteQuery.lastError().isValid())
+    {
+        kWarning() << deleteQuery.lastError().text();
+        raiseError(deleteQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        db.rollback();
+        return false;
+    }
+
+    return true;
 }
 
 QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* courseFilter, Lesson* lessonFilter)

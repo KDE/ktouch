@@ -65,6 +65,11 @@ public:
     Q_INVOKABLE quint64 totalTrainingTime(Profile* profile);
     Q_INVOKABLE QDateTime lastTrainingSession(Profile* profile);
 
+    Q_INVOKABLE bool loadCustomLessons(Profile* profile, const QString& keyboardLayoutNameFilter, Course* target);
+
+    Q_INVOKABLE bool storeCustomLesson(Lesson* lesson, Profile* profile, const QString& keyboardLayoutName);
+    Q_INVOKABLE bool deleteCustomLesson(const QString& id);
+
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
     QSqlQuery customLessonQuery(Profile* profile, const QString& keyboardLayoutNameFilter = 0);
 
