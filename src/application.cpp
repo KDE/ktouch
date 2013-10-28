@@ -88,6 +88,7 @@ void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine
     globalObject.setProperty("findImage", engine->newFunction(findImage));
     globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
     globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
+    globalObject.setProperty("uuid", engine->newFunction(uuid));
     globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
 }
 
