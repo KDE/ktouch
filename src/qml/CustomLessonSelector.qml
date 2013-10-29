@@ -29,7 +29,8 @@ Item {
     signal lessonSelected(variant course, variant lesson)
 
     function update() {
-        if (!profile) return;
+        if (!profile)
+            return
         profileDataAccess.loadCustomLessons(profile, keyboardLayoutName, courseItem)
     }
 
@@ -45,8 +46,8 @@ Item {
         if (lessonId !== "") {
             for (var index = 0; index < course.lessonCount; index++) {
                 if (course.lesson(index).id === lessonId) {
-                    lessonList.currentIndex = index;
-                    break;
+                    lessonList.currentIndex = index
+                    break
                 }
             }
         }
@@ -170,7 +171,6 @@ Item {
                     text: i18n("Edit")
                     onClicked: editLesson()
                     width: minimumWidth
-
                 },
                 PlasmaComponents.ToolButton {
                     iconSource: "edit-delete"
