@@ -24,6 +24,7 @@
 #include "ui_customlessoneditorwidget.h"
 
 class Lesson;
+class KeyboardLayout;
 
 class CustomLessonEditorWidget : public QWidget, private Ui::CustomLessonEditorWidget
 {
@@ -32,19 +33,20 @@ public:
     explicit CustomLessonEditorWidget(QWidget* parent = 0);
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);
-    QString keyboardLayoutName() const;
+    KeyboardLayout* keyboardLayout() const;
+    void setKeyboardLayout(KeyboardLayout* keyboardLayout);
 signals:
     void validChanged(bool valid);
-    
 private slots:
     void updateTitle();
     void updateText();
+    void updateAllowedCharacters();
     void onTitleChanged();
     void onTextChanged();
 private:
     void emitValidChanged();
     Lesson* m_lesson;
-    
+    KeyboardLayout* m_keyboardLayout;
 };
 
 #endif // CUSTOMLESSONEDITORWIDGET_H

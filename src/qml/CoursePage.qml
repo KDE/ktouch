@@ -25,6 +25,7 @@ Item {
 
     property Profile profile
     property DataIndexCourse dataIndexCourse
+    property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
     signal lessonSelected(variant course, variant lesson)
 
@@ -81,6 +82,7 @@ Item {
         anchors.fill: parent
         visible: !root.dataIndexCourse
         profile: visible? root.profile: null
+        keyboardLayout: root.keyboardLayout
         keyboardLayoutName: root.keyboardLayoutName
         onLessonSelected: root.lessonSelected(course, lesson)
     }

@@ -25,6 +25,7 @@ Item {
 
     property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
+    property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
 
     signal lessonSelected(variant course, variant lesson)
@@ -190,7 +191,8 @@ Item {
             CoursePage {
                 id: page0
                 profile: root.profile
-                keyboardLayoutName: screen.keyboardLayoutName
+                keyboardLayout: root.keyboardLayout
+                keyboardLayoutName: root.keyboardLayoutName
                 onLessonSelected: root.lessonSelected(course, lesson)
                 Component.onCompleted: page0.showImmediately()
             }
@@ -198,6 +200,7 @@ Item {
             CoursePage {
                 id: page1
                 profile: root.profile
+                keyboardLayout: root.keyboardLayout
                 keyboardLayoutName: root.keyboardLayoutName
                 onLessonSelected: root.lessonSelected(course, lesson)
             }

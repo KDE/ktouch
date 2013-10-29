@@ -17,12 +17,17 @@
 
 #include "customlessoneditorwidget.h"
 
+#include "core/keyboardlayout.h"
+#include "core/key.h"
+#include "core/keychar.h"
 #include "core/lesson.h"
+#include "editor/lessontexthighlighter.h"
 
 CustomLessonEditorWidget::CustomLessonEditorWidget(QWidget* parent) :
     QWidget(parent),
     Ui::CustomLessonEditorWidget(),
-    m_lesson(0)
+    m_lesson(0),
+    m_keyboardLayout(0)
 {
     this->setupUi(this);
 
@@ -57,6 +62,30 @@ void CustomLessonEditorWidget::setLesson(Lesson* lesson)
     }
 }
 
+KeyboardLayout* CustomLessonEditorWidget::keyboardLayout() const
+{
+    return m_keyboardLayout;
+}
+
+void CustomLessonEditorWidget::setKeyboardLayout(KeyboardLayout* keyboardLayout)
+{
+    if (keyboardLayout != m_keyboardLayout)
+    {
+        if (m_keyboardLayout)
+        {
+            m_keyboardLayout->disconnect(this);
+        }
+
+        m_keyboardLayout = keyboardLayout;
+        updateAllowedCharacters();
+
+        if (m_keyboardLayout)
+        {
+            connect(m_keyboardLayout, SIGNAL(isValidChanged()), SLOT(updateAllowedCharacters()));
+        }
+    }
+}
+
 void CustomLessonEditorWidget::updateTitle()
 {
     const QString title = m_lesson->title();
@@ -75,6 +104,34 @@ void CustomLessonEditorWidget::updateText()
     {
         m_lessonTextEditor->textEdit()->setPlainText(text);
     }
+}
+
+void CustomLessonEditorWidget::updateAllowedCharacters()
+{
+    if (!m_keyboardLayout || !m_keyboardLayout->isValid())
+    {
+        m_lessonTextEditor->highlighter()->setAllowedCharacters(QString());
+        return;
+    }
+
+    QString chars;
+
+    for (int i = 0; i < m_keyboardLayout->keyCount(); i++)
+    {
+        Key* const key = qobject_cast<Key*>(m_keyboardLayout->key(i));
+
+        if (!key)
+            continue;
+
+        for (int j = 0; j < key->keyCharCount(); j++)
+        {
+            KeyChar* const keyChar = key->keyChar(j);
+
+            chars += keyChar->value();
+        }
+    }
+
+    m_lessonTextEditor->highlighter()->setAllowedCharacters(chars);
 }
 
 void CustomLessonEditorWidget::onTitleChanged()

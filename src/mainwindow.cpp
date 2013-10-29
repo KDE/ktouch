@@ -127,7 +127,7 @@ void MainWindow::showResourceEditor()
     resourceEditor->activateWindow();
 }
 
-bool MainWindow::showCustomLessonDialog(Lesson *lesson, const QString &keyboardLayoutName)
+bool MainWindow::showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout)
 {
     KDialog* dialog = new KDialog(this);
     CustomLessonEditorWidget* editor = new CustomLessonEditorWidget(dialog);
@@ -139,7 +139,7 @@ bool MainWindow::showCustomLessonDialog(Lesson *lesson, const QString &keyboardL
     connect(editor, SIGNAL(validChanged(bool)), dialog, SLOT(enableButtonOk(bool)));
 
     editor->setLesson(lesson);
-    //editor->setKeyboardLayoutName(keyboardLayoutName);
+    editor->setKeyboardLayout(keyboardLayout);
 
     bool result = dialog->exec() == KDialog::Accepted;
 

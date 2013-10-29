@@ -23,6 +23,7 @@ import ktouch 1.0
 Item {
     id: root
     property Profile profile
+    property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
     property alias course: courseItem
     signal lessonSelected(variant course, variant lesson)
@@ -55,7 +56,7 @@ Item {
         tmpLesson.id = uuid()
         tmpLesson.title = ""
         tmpLesson.text = ""
-        if (showCustomLessonDialog(tmpLesson, "")) {
+        if (showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
             profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
             update()
             lessonList.currentIndex = lessonList.count - 2
@@ -64,7 +65,7 @@ Item {
 
     function editLesson() {
         tmpLesson.copyFrom(base.selectedLesson)
-        if (showCustomLessonDialog(tmpLesson, "")) {
+        if (showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
             profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
             update()
         }

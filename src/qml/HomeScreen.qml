@@ -24,6 +24,7 @@ FocusScope {
     id: screen
 
     property CategorizedResourceSortFilterProxyModel courseModel
+    property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
     signal lessonSelected(variant course, variant lesson, variant profile)
 
@@ -122,6 +123,7 @@ FocusScope {
                 opacity: 1 - initialProfileForm.opacity
                 courseModel: screen.courseModel
                 profile: d.profile
+                keyboardLayout: screen.keyboardLayout
                 keyboardLayoutName: screen.keyboardLayoutName
                 anchors.fill: parent
                 onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
