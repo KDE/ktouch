@@ -71,7 +71,6 @@ public:
     Q_INVOKABLE bool deleteCustomLesson(const QString& id);
 
     QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
-    QSqlQuery customLessonQuery(Profile* profile, const QString& keyboardLayoutNameFilter = 0);
 
 signals:
     void profileCountChanged();

@@ -587,9 +587,40 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
 {
     target->setIsValid(false);
 
-    QSqlQuery lessonsQuery = this->customLessonQuery(profile, keyboardLayoutNameFilter);
+    QSqlDatabase db = database();
 
-    if (!lessonsQuery.isActive())
+    if (!profile)
+        return false;
+
+    if (!db.isOpen())
+        return false;
+
+    QString sql = "SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?";
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        sql += " AND keyboard_layout_name = ?";
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+
+    query.bindValue(0, profile->id());
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        query.bindValue(1, keyboardLayoutNameFilter);
+    }
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return false;
+    }
+
+    if (!query.isActive())
         return false;
 
     target->setDoSyncLessonCharacters(false);
@@ -599,14 +630,14 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
     target->setKeyboardLayoutName(keyboardLayoutNameFilter);
     target->clearLessons();
 
-    while (lessonsQuery.next())
+    while (query.next())
     {
         Lesson* lesson = new Lesson(this);
 
-        lesson->setId(lessonsQuery.value(0).toString());
-        lesson->setTitle(lessonsQuery.value(1).toString());
+        lesson->setId(query.value(0).toString());
+        lesson->setTitle(query.value(1).toString());
 
-        const QString text = lessonsQuery.value(2).toString();
+        const QString text = query.value(2).toString();
         QString characters = "";
 
         for (int i = 0; i < text.length(); i++)
@@ -771,44 +802,6 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
     if (lessonFilter)
     {
         query.bindValue(courseFilter? 2: 1, lessonFilter->id());
-    }
-
-    if (!query.exec())
-    {
-        kWarning() <<  query.lastError().text();
-        raiseError(query.lastError());
-        return QSqlQuery();
-    }
-
-    return query;
-}
-
-QSqlQuery ProfileDataAccess::customLessonQuery(Profile* profile, const QString& keyboardLayoutNameFilter)
-{
-    QSqlDatabase db = database();
-
-    if (!profile)
-        return QSqlQuery();
-
-    if (!db.isOpen())
-        return QSqlQuery();
-
-    QString sql = "SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?";
-
-    if (!keyboardLayoutNameFilter.isNull())
-    {
-        sql += " AND keyboard_layout_name = ?";
-    }
-
-    QSqlQuery query(db);
-
-    query.prepare(sql);
-
-    query.bindValue(0, profile->id());
-
-    if (!keyboardLayoutNameFilter.isNull())
-    {
-        query.bindValue(1, keyboardLayoutNameFilter);
     }
 
     if (!query.exec())
