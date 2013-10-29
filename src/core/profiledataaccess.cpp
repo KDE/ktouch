@@ -674,46 +674,82 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
         return false;
     }
 
-    QSqlQuery cleanUpQuery(db);
+    QSqlQuery idQuery(db);
 
-    cleanUpQuery.prepare("DELETE FROM custom_lessons WHERE id = ?");
-    cleanUpQuery.bindValue(0, lesson->id());
-    cleanUpQuery.exec();
+    idQuery.prepare("SELECT count(*) FROM custom_lessons WHERE id = ?");
+    idQuery.bindValue(0, lesson->id());
+    idQuery.exec();
 
-    if (cleanUpQuery.lastError().isValid())
+    if (idQuery.lastError().isValid())
     {
-        kWarning() << cleanUpQuery.lastError().text();
-        raiseError(cleanUpQuery.lastError());
+        kWarning() << idQuery.lastError().text();
+        raiseError(idQuery.lastError());
         db.rollback();
         return false;
     }
 
-    QSqlQuery insertQuery(db);
+    idQuery.next();
+    const bool lessonAlreadyExists = idQuery.value(0).toInt() == 1;
 
-    insertQuery.prepare("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)");
-
-    if (insertQuery.lastError().isValid())
+    if (lessonAlreadyExists)
     {
-        kWarning() << insertQuery.lastError().text();
-        raiseError(insertQuery.lastError());
-        db.rollback();
-        return false;
+        QSqlQuery updateQuery(db);
+
+        updateQuery.prepare("UPDATE custom_lessons SET profile_id = ?, title = ?, text = ?, keyboard_layout_name = ? WHERE id = ?");
+
+        if (updateQuery.lastError().isValid())
+        {
+            kWarning() << updateQuery.lastError().text();
+            raiseError(updateQuery.lastError());
+            db.rollback();
+            return false;
+        }
+
+        updateQuery.bindValue(0, profile->id());
+        updateQuery.bindValue(1, lesson->title());
+        updateQuery.bindValue(2, lesson->text());
+        updateQuery.bindValue(3, keyboardLayoutName);
+        updateQuery.bindValue(4, lesson->id());
+
+        updateQuery.exec();
+
+        if (updateQuery.lastError().isValid())
+        {
+            kWarning() << updateQuery.lastError().text();
+            raiseError(updateQuery.lastError());
+            db.rollback();
+            return false;
+        }
     }
-
-    insertQuery.bindValue(0, lesson->id());
-    insertQuery.bindValue(1, profile->id());
-    insertQuery.bindValue(2, lesson->title());
-    insertQuery.bindValue(3, lesson->text());
-    insertQuery.bindValue(4, keyboardLayoutName);
-
-    insertQuery.exec();
-
-    if (insertQuery.lastError().isValid())
+    else
     {
-        kWarning() << insertQuery.lastError().text();
-        raiseError(insertQuery.lastError());
-        db.rollback();
-        return false;
+        QSqlQuery insertQuery(db);
+
+        insertQuery.prepare("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)");
+
+        if (insertQuery.lastError().isValid())
+        {
+            kWarning() << insertQuery.lastError().text();
+            raiseError(insertQuery.lastError());
+            db.rollback();
+            return false;
+        }
+
+        insertQuery.bindValue(0, lesson->id());
+        insertQuery.bindValue(1, profile->id());
+        insertQuery.bindValue(2, lesson->title());
+        insertQuery.bindValue(3, lesson->text());
+        insertQuery.bindValue(4, keyboardLayoutName);
+
+        insertQuery.exec();
+
+        if (insertQuery.lastError().isValid())
+        {
+            kWarning() << insertQuery.lastError().text();
+            raiseError(insertQuery.lastError());
+            db.rollback();
+            return false;
+        }
     }
 
     if(!db.commit())
