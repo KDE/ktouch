@@ -360,7 +360,7 @@ void CourseEditor::onLessonSelected()
         m_lessonTitleLineEdit->setText(m_currentLesson->title());
         m_newCharactersLineEdit->setEnabled(true);
         m_newCharactersLineEdit->setText(m_currentLesson->newCharacters());
-        m_lessonTextEditor->textEdit()->setEnabled(true);
+        m_lessonTextEditor->setEnabled(true);
         m_lessonTextEditor->textEdit()->setPlainText(m_currentLesson->text());
 
         m_lessonTextEditor->highlighter()->setAllowedCharacters(m_currentLesson->characters());
@@ -383,7 +383,7 @@ void CourseEditor::onLessonSelected()
         m_lessonTitleLineEdit->clear();
         m_newCharactersLineEdit->setEnabled(false);
         m_newCharactersLineEdit->clear();
-        m_lessonTextEditor->textEdit()->setEnabled(false);
+        m_lessonTextEditor->setEnabled(false);
         m_lessonTextEditor->textEdit()->clear();
 
         m_removeLessonButton->setEnabled(false);
