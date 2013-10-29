@@ -401,5 +401,5 @@ void CourseEditor::setIsReadOnly(bool readOnly)
     m_addLessonButton->setEnabled(!readOnly);
     m_lessonTitleLineEdit->setReadOnly(readOnly);
     m_newCharactersLineEdit->setReadOnly(readOnly);
-    m_lessonTextEditor->textEdit()->setReadOnly(readOnly);
+    m_lessonTextEditor->setReadOnly(readOnly);
 }

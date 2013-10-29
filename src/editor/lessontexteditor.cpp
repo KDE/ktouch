@@ -29,6 +29,7 @@
 LessonTextEditor::LessonTextEditor(QWidget* parent) :
     QWidget(parent),
     Ui::LessonTextEditor(),
+    m_readOnly(false),
     m_highlighter(new LessonTextHighlighter(this))
 {
     setupUi(this);
@@ -37,6 +38,22 @@ LessonTextEditor::LessonTextEditor(QWidget* parent) :
     connect(m_openTextFileButton, SIGNAL(clicked()), SLOT(openTextFile()));
     connect(m_reformatLessonTextButton, SIGNAL(clicked()), SLOT(reformatText()));
     connect(m_lessonTextEdit, SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
+}
+
+bool LessonTextEditor::readOnly() const
+{
+    return m_readOnly;
+}
+
+void LessonTextEditor::setReadOnly(bool readOnly)
+{
+    if (readOnly != m_readOnly)
+    {
+        m_readOnly = readOnly;
+        m_lessonTextEdit->setReadOnly(readOnly);
+        m_openTextFileButton->setEnabled(!readOnly);
+        m_reformatLessonTextButton->setEnabled(!readOnly);
+    }
 }
 
 KTextEdit* LessonTextEditor::textEdit() const

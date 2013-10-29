@@ -28,6 +28,8 @@ class LessonTextEditor : public QWidget, private Ui::LessonTextEditor
     Q_OBJECT
 public:
     explicit LessonTextEditor(QWidget* parent = 0);
+    bool readOnly() const;
+    void setReadOnly(bool readOnly);
     KTextEdit* textEdit() const;
     LessonTextHighlighter* highlighter() const;
 private slots:
@@ -35,6 +37,7 @@ private slots:
     void openTextFile();
     void reformatText();
 private:
+    bool m_readOnly;
     LessonTextHighlighter* m_highlighter;
 };
 
