@@ -72,7 +72,7 @@ Item {
         anchors.fill: parent
         visible: !!dataIndexCourse
 
-        profile: visible? root.profile: null
+        profile: root.profile
         dataIndexCourse: root.dataIndexCourse
         onLessonSelected: root.lessonSelected(course, lesson)
     }
@@ -81,7 +81,7 @@ Item {
         id: customLessonSelector
         anchors.fill: parent
         visible: !root.dataIndexCourse
-        profile: visible? root.profile: null
+        profile: root.profile
         keyboardLayout: root.keyboardLayout
         keyboardLayoutName: root.keyboardLayoutName
         onLessonSelected: root.lessonSelected(course, lesson)

@@ -116,7 +116,7 @@ Item {
         anchors.fill: parent
         courseModel: availableCourseModel
         keyboardLayout: keyboardLayout
-        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
+        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
         visible: false
         focus: true
         onLessonSelected: {
