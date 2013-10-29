@@ -20,8 +20,25 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import ktouch 1.0
 
-LessonSelector {
+Item {
     id: root
+
+    property Profile profile
+    property DataIndexCourse dataIndexCourse
+    property KeyboardLayout keyboardLayout
+    property string keyboardLayoutName
+    signal lessonSelected(variant course, variant lesson)
+
+    property Course course: lessonSelector.visible? lessonSelector.course: customLessonSelector.course
+
+    function getCourse() {
+        return !!dataIndexCourse? lessonSelector.course: customLessonSelector.course
+    }
+
+    width: parent.width
+    height: parent.height
+    visible: false
+    opacity: 0
 
     function showImmediately() {
         root.x = 0
@@ -43,14 +60,31 @@ LessonSelector {
         disappearAnimation.start()
     }
 
-    width: parent.width
-    height: parent.height
-    visible: false
-    opacity: 0
 
     QtObject {
         id: priv
         property int duration: 250
+    }
+
+    LessonSelector {
+        id: lessonSelector
+
+        anchors.fill: parent
+        visible: !!dataIndexCourse
+
+        profile: root.profile
+        dataIndexCourse: root.dataIndexCourse
+        onLessonSelected: root.lessonSelected(course, lesson)
+    }
+
+    CustomLessonSelector {
+        id: customLessonSelector
+        anchors.fill: parent
+        visible: !root.dataIndexCourse
+        profile: root.profile
+        keyboardLayout: root.keyboardLayout
+        keyboardLayoutName: root.keyboardLayoutName
+        onLessonSelected: root.lessonSelected(course, lesson)
     }
 
     SequentialAnimation {

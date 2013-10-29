@@ -341,38 +341,13 @@
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>10</height>
+                <height>13</height>
                </size>
               </property>
              </spacer>
             </item>
             <item>
-             <widget class="KTextEdit" name="m_lessonTextEdit">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="font">
-               <font>
-                <family>Monospace</family>
-               </font>
-              </property>
-              <property name="tabChangesFocus">
-               <bool>true</bool>
-              </property>
-              <property name="lineWrapMode">
-               <enum>QTextEdit::NoWrap</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="m_characterCountLabel">
-              <property name="text">
-               <string>0 Characters</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
+             <widget class="LessonTextEditor" name="m_lessonTextEditor" native="true"/>
             </item>
            </layout>
           </item>
@@ -407,6 +382,12 @@
    <extends>QComboBox</extends>
    <header>editor/keyboardlayoutcombobox.h</header>
   </customwidget>
+  <customwidget>
+   <class>LessonTextEditor</class>
+   <extends>QWidget</extends>
+   <header>editor/lessontexteditor.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>m_titleLineEdit</tabstop>
@@ -419,7 +400,6 @@
   <tabstop>m_moveLessonDownButton</tabstop>
   <tabstop>m_lessonTitleLineEdit</tabstop>
   <tabstop>m_newCharactersLineEdit</tabstop>
-  <tabstop>m_lessonTextEdit</tabstop>
  </tabstops>
  <resources/>
  <connections/>

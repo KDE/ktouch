@@ -19,6 +19,7 @@
 
 #include <QScriptContext>
 #include <QTime>
+#include <QUuid>
 
 #include <KStandardDirs>
 #include <KDebug>
@@ -101,4 +102,18 @@ QScriptValue getMinutesOfQTime(QScriptContext *context, QScriptEngine *engine)
     }
 
     return QScriptValue(time.minute());
+}
+
+QScriptValue uuid(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+
+    if (context->argumentCount() > 0)
+    {
+        kWarning() << "uuid() expects no arguments, got more";
+    }
+
+    const QString uuid = QUuid::createUuid().toString();
+
+    return QScriptValue(uuid);
 }

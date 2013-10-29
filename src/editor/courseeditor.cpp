@@ -29,6 +29,7 @@
 #include "core/userdataaccess.h"
 #include "models/lessonmodel.h"
 #include "editor/lessontexthighlighter.h"
+#include "editor/lessontexteditor.h"
 
 CourseEditor::CourseEditor(QWidget* parent):
     AbstractEditor(parent),
@@ -38,8 +39,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_currentLessonIndex(-1),
     m_currentLesson(0),
     m_lessonModel(new LessonModel(this)),
-    m_readOnly(false),
-    m_lessonTextHighlighter(new LessonTextHighlighter(this))
+    m_readOnly(false)
 {
     setupUi(this);
     m_messageWidget->hide();
@@ -65,10 +65,7 @@ CourseEditor::CourseEditor(QWidget* parent):
 
     connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
     connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
-    connect(m_lessonTextEdit, SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
-
-    m_lessonTextHighlighter->setMaximumLineLength(60);
-    m_lessonTextHighlighter->setDocument(m_lessonTextEdit->document());
+    connect(m_lessonTextEditor->textEdit(), SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
 }
 
 void CourseEditor::setResourceModel(ResourceModel* model)
@@ -298,16 +295,16 @@ void CourseEditor::updateLessonText()
 
     const QString text = m_currentLesson->text();
 
-    if (text != m_lessonTextEdit->toPlainText())
+    if (text != m_lessonTextEditor->textEdit()->toPlainText())
     {
-        m_lessonTextEdit->setText(text);
+        m_lessonTextEditor->textEdit()->setText(text);
     }
 }
 
 void CourseEditor::updateLessonCharacters()
 {
     Q_ASSERT(m_currentLesson);
-    m_lessonTextHighlighter->setAllowedCharacters(m_currentLesson->characters());
+    m_lessonTextEditor->highlighter()->setAllowedCharacters(m_currentLesson->characters());
 }
 
 
@@ -331,11 +328,7 @@ void CourseEditor::onLessonTextChanged()
     if (!m_currentLesson)
         return;
 
-    const QString text = m_lessonTextEdit->toPlainText();
-
-    const int length = text.length();
-
-    m_characterCountLabel->setText(i18np("%1 Character", "%1 Characters", length));
+    const QString text = m_lessonTextEditor->textEdit()->toPlainText();
 
     if (text != m_currentLesson->text())
     {
@@ -367,10 +360,10 @@ void CourseEditor::onLessonSelected()
         m_lessonTitleLineEdit->setText(m_currentLesson->title());
         m_newCharactersLineEdit->setEnabled(true);
         m_newCharactersLineEdit->setText(m_currentLesson->newCharacters());
-        m_lessonTextEdit->setEnabled(true);
-        m_lessonTextEdit->setPlainText(m_currentLesson->text());
+        m_lessonTextEditor->setEnabled(true);
+        m_lessonTextEditor->textEdit()->setPlainText(m_currentLesson->text());
 
-        m_lessonTextHighlighter->setAllowedCharacters(m_currentLesson->characters());
+        m_lessonTextEditor->highlighter()->setAllowedCharacters(m_currentLesson->characters());
 
         m_removeLessonButton->setEnabled(!m_readOnly);
         m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
@@ -390,8 +383,8 @@ void CourseEditor::onLessonSelected()
         m_lessonTitleLineEdit->clear();
         m_newCharactersLineEdit->setEnabled(false);
         m_newCharactersLineEdit->clear();
-        m_lessonTextEdit->setEnabled(false);
-        m_lessonTextEdit->clear();
+        m_lessonTextEditor->setEnabled(false);
+        m_lessonTextEditor->textEdit()->clear();
 
         m_removeLessonButton->setEnabled(false);
         m_moveLessonUpButton->setEnabled(false);
@@ -408,5 +401,5 @@ void CourseEditor::setIsReadOnly(bool readOnly)
     m_addLessonButton->setEnabled(!readOnly);
     m_lessonTitleLineEdit->setReadOnly(readOnly);
     m_newCharactersLineEdit->setReadOnly(readOnly);
-    m_lessonTextEdit->setReadOnly(readOnly);
+    m_lessonTextEditor->setReadOnly(readOnly);
 }

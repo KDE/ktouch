@@ -28,4 +28,6 @@ QScriptValue findImage(QScriptContext* context, QScriptEngine* engine);
 QScriptValue getSecondsOfQTime(QScriptContext* context, QScriptEngine* engine);
 QScriptValue getMinutesOfQTime(QScriptContext* context, QScriptEngine* engine);
 
+QScriptValue uuid(QScriptContext* context, QScriptEngine* engine);
+
 #endif // UTILS_H

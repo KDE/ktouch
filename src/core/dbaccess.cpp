@@ -276,6 +276,21 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
+    db.exec("CREATE TABLE IF NOT EXISTS custom_lessons ("
+            "id TEXT PRIMARY KEY, "
+            "profile_id INTEGER, "
+            "title TEXT, "
+            "text TEXT, "
+            "keyboard_layout_name TEXT "
+            ")");
+
+    if (db.lastError().isValid())
+    {
+        kWarning() << db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
     return true;
 }
 

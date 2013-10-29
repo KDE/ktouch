@@ -87,6 +87,7 @@ FocusScope {
         screen.trainingStarted = false
         screen.trainingFinished = true
         profileDataAccess.loadReferenceTrainingStats(referenceStats, screen.profile, screen.course.id, screen.lesson.id)
+        profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
     }
 
     function start() {

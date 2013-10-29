@@ -28,7 +28,8 @@
 
 Course::Course(QObject *parent) :
     CourseBase(parent),
-    m_associatedDataIndexCourse(),
+    m_associatedDataIndexCourse(0),
+    m_doSyncLessonCharacters(true),
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(updateLessonCharacters(int)));
@@ -45,6 +46,20 @@ void Course::setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse)
     {
         m_associatedDataIndexCourse = dataIndexCourse;
         emit associatedDataIndexCourseChanged();
+    }
+}
+
+bool Course::doSyncLessonCharacters() const
+{
+    return m_doSyncLessonCharacters;
+}
+
+void Course::setDoSyncLessonCharacters(bool doSync)
+{
+    if (doSync != m_doSyncLessonCharacters)
+    {
+        m_doSyncLessonCharacters = doSync;
+        emit doSyncLessonCharactersChanged();
     }
 }
 
@@ -156,6 +171,7 @@ void Course::copyFrom(Course* source)
     setTitle(source->title());
     setDescription(source->description());
     setKeyboardLayoutName(source->keyboardLayoutName());
+    setDoSyncLessonCharacters(source->doSyncLessonCharacters());
     clearLessons();
     for (int i = 0; i < source->lessonCount(); i++)
     {
@@ -168,6 +184,9 @@ void Course::copyFrom(Course* source)
 
 void Course::updateLessonCharacters(int firstIndex)
 {
+    if (!m_doSyncLessonCharacters)
+        return;
+
     QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): "";
 
     for (int i = firstIndex; i < lessonCount(); i++)

@@ -25,7 +25,7 @@ Item {
     property Profile profile
     property DataIndexCourse dataIndexCourse
     property alias course: courseItem
-    signal lessonSelected(variant course, int lessonIndex)
+    signal lessonSelected(variant course, variant lesson)
 
     function update() {
         if (!course.isValid) return;
@@ -83,38 +83,31 @@ Item {
         Component.onCompleted: update()
     }
 
-    Row {
+    LessonSelectorBase {
         anchors.fill: parent
-        anchors.margins: 5
-        spacing: 20
 
-        Item {
-            id: listContainer
-            height: parent.height
-            width: Math.round((parent.width - parent.spacing) / 2)
-
-            ListView {
-                id: lessonList
-                property int lastUnlockedIndex: 0
-                anchors.fill: parent
-                model: course.isValid? course.lessonCount: 0
-                clip: true
-                delegate: ListItem {
-                    property Lesson lesson: index < course.lessonCount? course.lesson(index): null
-                    property bool locked: index > lessonList.lastUnlockedIndex
-                    width: lessonList.width - scrollBar.width
-                    onClicked: lessonList.currentIndex = index
-                    onDoubleClicked: {
-                        if (!locked) {
-                            lessonSelected(course, lessonList.currentIndex)
-                        }
+        list: ListView {
+            id: lessonList
+            property int lastUnlockedIndex: 0
+            anchors.fill: parent
+            model: course.isValid? course.lessonCount: 0
+            clip: true
+            delegate: ListItem {
+                property Lesson lesson: index < course.lessonCount? course.lesson(index): null
+                property bool locked: index > lessonList.lastUnlockedIndex
+                width: lessonList.width - scrollBar.width
+                onClicked: lessonList.currentIndex = index
+                onDoubleClicked: {
+                    if (!locked) {
+                        lessonSelected(course, lesson)
                     }
-                    iconSource: locked? "object-locked": ""
-                    label.opacity: locked? 0.5: 1.0
-                    title: lesson? lesson.title: ""
                 }
-                onModelChanged: update()
+                iconSource: locked? "object-locked": ""
+                label.opacity: locked? 0.5: 1.0
+                title: lesson? lesson.title: ""
+
             }
+            onModelChanged: update()
 
             PlasmaComponents.ScrollBar {
                 id: scrollBar
@@ -122,40 +115,8 @@ Item {
             }
         }
 
-        Column {
-            width: parent.width - listContainer.width - parent.spacing
-            height: parent.height
-            spacing: 5
-
-            LessonPreview {
-                width: parent.width
-                height: parent.height - startButtonContainer.height
-                lesson: lessonList.currentItem != null? lessonList.currentItem.lesson: null
-
-                LessonLockedNotice {
-                    anchors.centerIn: parent
-                    opacity: lessonList.currentItem !== null && lessonList.currentItem.locked? 1: 0
-                }
-            }
-
-            Item {
-                id: startButtonContainer
-                width: parent.width
-                height: Math.round(1.5 * startButton.height)
-
-                PlasmaComponents.Button {
-                    id: startButton
-                    anchors.centerIn: parent
-                    text: i18n("Start Training")
-                    enabled: lessonList.currentItem !== null && !lessonList.currentItem.locked
-                    iconSource: "go-next-view"
-                    onClicked: {
-                        var lesson = course.lesson(lessonList.currentIndex)
-                        profileDataAccess.saveCourseProgress(lesson.id, profile, course.id, ProfileDataAccess.LastSelectedLesson)
-                        lessonSelected(course, lessonList.currentIndex)
-                    }
-                }
-            }
-        }
+        selectedLesson: lessonList.currentItem != null? lessonList.currentItem.lesson: null
+        selectedLessonLocked: lessonList.currentItem !== null && lessonList.currentItem.locked
+        onStartButtonClicked: lessonSelected(course, lessonList.currentItem.lesson)
     }
 }

@@ -9,7 +9,9 @@ set(ktouch_qml_files
     ProfileSelector.qml
     ProfileForm.qml
     ProfileDetailsItem.qml
+    LessonSelectorBase.qml
     LessonSelector.qml
+    CustomLessonSelector.qml
     LessonPreview.qml
     LessonLockedNotice.qml
     InitialProfileForm.qml
@@ -33,6 +35,7 @@ set(ktouch_qml_files
 
     InformationTable.qml
     InfoItem.qml
+    InlineToolbar.qml
     MessageBox.qml
     ListItem.qml
     SheetDialog.qml

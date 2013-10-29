@@ -69,6 +69,9 @@ void LessonTextHighlighter::highlightBlock(const QString& text)
         setFormat(60, text.length() - 60, m_overLongLineFormat);
     }
 
+    if (m_allowedCharacters.isNull())
+        return;
+
     for (int i = 0; i < text.length(); i++)
     {
         const QChar c = text.at(i);

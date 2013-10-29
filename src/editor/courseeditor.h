@@ -71,7 +71,6 @@ private:
     Lesson* m_currentLesson;
     LessonModel* m_lessonModel;
     bool m_readOnly;
-    LessonTextHighlighter* m_lessonTextHighlighter;
 };
 
 #endif // COURSEEDITOR_H

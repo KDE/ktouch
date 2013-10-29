@@ -115,13 +115,30 @@ Item {
         id: homeScreen
         anchors.fill: parent
         courseModel: availableCourseModel
+        keyboardLayout: keyboardLayout
+        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
         visible: false
         focus: true
         onLessonSelected: {
             trainingScreen.profile = profile
             scoreScreen.profile = profile
+            var lessonIndex = -1;
+            for (var i = 0; i < course.lessonCount; i++) {
+                if (lesson === course.lesson(i)) {
+                    lessonIndex = i
+                    break
+                }
+            }
             selectedCourse.copyFrom(course)
-            selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
+
+            if (lessonIndex !== -1) {
+                selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
+            }
+            else {
+                customLessonCopy.copyFrom(lesson)
+                selectedCourse.selectedLesson = customLessonCopy
+            }
+
             main.switchScreen(homeScreen, trainingScreen)
         }
         Component.onCompleted: {
@@ -133,6 +150,10 @@ Item {
     Course {
         id: selectedCourse
         property Lesson selectedLesson
+    }
+
+    Lesson {
+        id: customLessonCopy
     }
 
     TrainingScreen {

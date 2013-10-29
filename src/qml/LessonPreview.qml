@@ -24,20 +24,52 @@ Item {
     property Lesson lesson
     property int margin: 30
 
-    onLessonChanged: {
-        if (!lesson)
-            return;
-        updateAnimation.restart()
+    onLessonChanged: swap()
+
+    Connections {
+        target: lesson
+        onTextChanged: swap()
+        onTitleChanged: swap()
     }
 
+    function swap() {
+        if (!lesson)
+            return
+        swapPreviewAnimation.stop()
+        swapPreviewAnimation.from = sheet.lessonPainter == lessonPainter1? lessonPainter1: lessonPainter2
+        swapPreviewAnimation.to = sheet.lessonPainter == lessonPainter1? lessonPainter2: lessonPainter1
+        swapPreviewAnimation.start()
+    }
 
     Rectangle {
         id: sheet
-        anchors.centerIn: parent
 
-        opacity: 0
+        property LessonPainter lessonPainter: lessonPainter1
+
+        anchors.centerIn: parent
         width: lessonPainter.width
         height: lessonPainter.height
+        opacity: lesson? 1: 0
+
+        Behavior on width {
+            enabled: swapPreviewAnimation.running
+            NumberAnimation {
+                duration: sheet.opacity == 1? 100: 0
+            }
+        }
+
+        Behavior on height {
+            enabled: swapPreviewAnimation.running
+            NumberAnimation {
+                duration: sheet.opacity == 1? 100: 0
+            }
+        }
+
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 200
+            }
+        }
 
         border {
             width: 1
@@ -45,29 +77,52 @@ Item {
         }
 
         LessonPainter {
-            id: lessonPainter
+            id: lessonPainter1
+            opacity: 1
             maximumWidth: item.width
             maximumHeight: item.height
+            lesson: lesson1
+
+            Lesson {
+                id: lesson1
+            }
         }
 
+        LessonPainter {
+            id: lessonPainter2
+            maximumWidth: item.width
+            maximumHeight: item.height
+            opacity: 0
+            lesson: lesson2
+
+            Lesson {
+                id: lesson2
+            }
+        }
     }
 
     SequentialAnimation {
-        id: updateAnimation
+        id: swapPreviewAnimation
+        property LessonPainter from: lessonPainter1
+        property LessonPainter to: lessonPainter2
         NumberAnimation {
-            target: sheet
+            target: swapPreviewAnimation.from
             property: "opacity"
             to: 0
-            duration: 100
+            duration: sheet.opacity == 1? 100: 0
         }
         ScriptAction {
-            script: lessonPainter.lesson = lesson
+            script: {
+                swapPreviewAnimation.to.lesson.copyFrom(lesson)
+                sheet.lessonPainter = swapPreviewAnimation.to
+            }
         }
+        PauseAnimation { duration: sheet.opacity == 1? 100: 0 }
         NumberAnimation {
-            target: sheet
+            target: swapPreviewAnimation.to
             property: "opacity"
             to: 1
-            duration: 100
+            duration: sheet.opacity == 1? 100: 0
         }
     }
 }

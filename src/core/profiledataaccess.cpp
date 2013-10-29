@@ -22,10 +22,12 @@
 #include <QSqlError>
 
 #include <KDebug>
+#include <KLocale>
 
 #include "core/profile.h"
 #include "core/course.h"
 #include "core/lesson.h"
+#include "core/keyboardlayout.h"
 #include "core/trainingstats.h"
 
 ProfileDataAccess::ProfileDataAccess(QObject* parent) :
@@ -579,6 +581,225 @@ QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
         return QDateTime();
 
     return QDateTime::fromMSecsSinceEpoch(query.value(0).value<quint64>());
+}
+
+bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keyboardLayoutNameFilter, Course* target)
+{
+    target->setIsValid(false);
+
+    QSqlDatabase db = database();
+
+    if (!profile)
+        return false;
+
+    if (!db.isOpen())
+        return false;
+
+    QString sql = "SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?";
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        sql += " AND keyboard_layout_name = ?";
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare(sql);
+
+    query.bindValue(0, profile->id());
+
+    if (!keyboardLayoutNameFilter.isNull())
+    {
+        query.bindValue(1, keyboardLayoutNameFilter);
+    }
+
+    if (!query.exec())
+    {
+        kWarning() <<  query.lastError().text();
+        raiseError(query.lastError());
+        return false;
+    }
+
+    if (!query.isActive())
+        return false;
+
+    target->setDoSyncLessonCharacters(false);
+    target->setId("custom_lessons");
+    target->setTitle(i18n("Custom Lessons"));
+    target->setDescription(i18n("A place to store personal lesson texts"));
+    target->setKeyboardLayoutName(keyboardLayoutNameFilter);
+    target->clearLessons();
+
+    while (query.next())
+    {
+        Lesson* lesson = new Lesson(this);
+
+        lesson->setId(query.value(0).toString());
+        lesson->setTitle(query.value(1).toString());
+
+        const QString text = query.value(2).toString();
+        QString characters = "";
+
+        for (int i = 0; i < text.length(); i++)
+        {
+            const QChar character = text.at(i);
+
+            if (!characters.contains(character))
+            {
+                characters.append(character);
+            }
+        }
+
+        lesson->setText(text);
+        lesson->setCharacters(characters);
+
+        target->addLesson(lesson);
+    }
+
+    target->setIsValid(true);
+    return true;
+}
+
+bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, const QString& keyboardLayoutName)
+{
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return false;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    QSqlQuery idQuery(db);
+
+    idQuery.prepare("SELECT count(*) FROM custom_lessons WHERE id = ?");
+    idQuery.bindValue(0, lesson->id());
+    idQuery.exec();
+
+    if (idQuery.lastError().isValid())
+    {
+        kWarning() << idQuery.lastError().text();
+        raiseError(idQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    idQuery.next();
+    const bool lessonAlreadyExists = idQuery.value(0).toInt() == 1;
+
+    if (lessonAlreadyExists)
+    {
+        QSqlQuery updateQuery(db);
+
+        updateQuery.prepare("UPDATE custom_lessons SET profile_id = ?, title = ?, text = ?, keyboard_layout_name = ? WHERE id = ?");
+
+        if (updateQuery.lastError().isValid())
+        {
+            kWarning() << updateQuery.lastError().text();
+            raiseError(updateQuery.lastError());
+            db.rollback();
+            return false;
+        }
+
+        updateQuery.bindValue(0, profile->id());
+        updateQuery.bindValue(1, lesson->title());
+        updateQuery.bindValue(2, lesson->text());
+        updateQuery.bindValue(3, keyboardLayoutName);
+        updateQuery.bindValue(4, lesson->id());
+
+        updateQuery.exec();
+
+        if (updateQuery.lastError().isValid())
+        {
+            kWarning() << updateQuery.lastError().text();
+            raiseError(updateQuery.lastError());
+            db.rollback();
+            return false;
+        }
+    }
+    else
+    {
+        QSqlQuery insertQuery(db);
+
+        insertQuery.prepare("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)");
+
+        if (insertQuery.lastError().isValid())
+        {
+            kWarning() << insertQuery.lastError().text();
+            raiseError(insertQuery.lastError());
+            db.rollback();
+            return false;
+        }
+
+        insertQuery.bindValue(0, lesson->id());
+        insertQuery.bindValue(1, profile->id());
+        insertQuery.bindValue(2, lesson->title());
+        insertQuery.bindValue(3, lesson->text());
+        insertQuery.bindValue(4, keyboardLayoutName);
+
+        insertQuery.exec();
+
+        if (insertQuery.lastError().isValid())
+        {
+            kWarning() << insertQuery.lastError().text();
+            raiseError(insertQuery.lastError());
+            db.rollback();
+            return false;
+        }
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        db.rollback();
+        return false;
+    }
+
+    return true;
+}
+
+bool ProfileDataAccess::deleteCustomLesson(const QString& id)
+{
+    QSqlDatabase db = database();
+
+    if (!db.isOpen())
+        return false;
+
+    if (!db.transaction())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        return false;
+    }
+
+    QSqlQuery deleteQuery(db);
+
+    deleteQuery.prepare("DELETE FROM custom_lessons WHERE id = ?");
+    deleteQuery.bindValue(0, id);
+    deleteQuery.exec();
+
+    if (deleteQuery.lastError().isValid())
+    {
+        kWarning() << deleteQuery.lastError().text();
+        raiseError(deleteQuery.lastError());
+        db.rollback();
+        return false;
+    }
+
+    if(!db.commit())
+    {
+        kWarning() <<  db.lastError().text();
+        raiseError(db.lastError());
+        db.rollback();
+        return false;
+    }
+
+    return true;
 }
 
 QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* courseFilter, Lesson* lessonFilter)

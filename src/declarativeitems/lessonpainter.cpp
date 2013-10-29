@@ -102,8 +102,8 @@ void LessonPainter::setLesson(Lesson* lesson)
 
         if (m_lesson)
         {
-            m_lines = lesson->text().split("\n");
-            connect(m_lesson, SIGNAL(textChanged()), SLOT(resetTrainingStatus()));
+            connect(m_lesson, SIGNAL(titleChanged()), SLOT(reset()));
+            connect(m_lesson, SIGNAL(textChanged()), SLOT(reset()));
         }
 
         reset();
@@ -175,6 +175,7 @@ QRectF LessonPainter::cursorRectangle() const
 
 void LessonPainter::reset()
 {
+    m_lines = m_lesson? m_lesson->text().split("\n"): QStringList();
     updateDoc();
     resetTrainingStatus();
 }
@@ -187,6 +188,14 @@ void LessonPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QW
 
 void LessonPainter::updateLayout()
 {
+    invalidateImageCache();
+
+    if (!m_lesson)
+    {
+        setWidth(0);
+        setHeight(0);
+        return;
+    }
 
     // ### reset text width from previous run
     m_doc->setTextWidth(-1);
@@ -204,7 +213,6 @@ void LessonPainter::updateLayout()
     setWidth(qCeil(docWidth * m_textScale));
     setHeight(qCeil(docHeight * m_textScale));
 
-    invalidateImageCache();
     updateCursorRectangle();
 }
 
@@ -276,8 +284,10 @@ void LessonPainter::updateDoc()
 {
     m_doc->clear();
 
-    if (!m_lesson)
+    if (!m_lesson) {
+        updateLayout();
         return;
+    }
 
     m_doc->setDocumentMargin(20.0);
 
