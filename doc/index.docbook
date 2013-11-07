@@ -52,8 +52,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2012-11-26</date>
-<releaseinfo>2.0</releaseinfo>
+<date>2013-11-07</date>
+<releaseinfo>2.2.0</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -1073,6 +1073,19 @@ it is usually better to use the existing course as a base for a new one.
 The content of the lesson can be edited using bottom right edit field. You can
 copy snippets of the text from your favorite text editor and paste them to this
 field.
+</para>
+<para>
+Use <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-document-open.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button to open generic text file
+that will be imported into the lesson text field.
+</para>
+<para>
+The <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-format-justify-fill.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button to wrap the lesson text.
+&ktouch; editor wraps such that every line of the lesson does not exceed 60
+characters limit.
 </para>
 <para>
 Let's assume you want to add a new lesson. There are a few guidelines you
