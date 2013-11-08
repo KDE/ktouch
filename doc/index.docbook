@@ -1084,7 +1084,7 @@ that will be imported into the lesson text field.
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-format-justify-fill.png"
 format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap the lesson text.
-&ktouch; editor wraps such that every line of the lesson does not exceed 60
+&i18n-ktouch; editor wraps such that every line of the lesson does not exceed 60
 characters limit.
 </para>
 <para>
