@@ -215,6 +215,14 @@ selector. For more information see <xref linkend="training_preparation"/>.
 layout.
 </para>
 
+<para>
+  You can switch between courses or choose <link linkend="custom_lessons">custom lessons</link> using <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-arrow-right.png" format="PNG"/>
+</imageobject> </inlinemediaobject> and <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-arrow-left.png" format="PNG"/>
+</imageobject> </inlinemediaobject> buttons in the top right part of the window.
+</para>
+
 <note>
 <para>
 On some platforms, especially on &Microsoft; &Windows;, automatic keyboard layout
@@ -1084,7 +1092,8 @@ that will be imported into the lesson text field.
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-format-justify-fill.png"
 format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap the lesson text.
-&i18n-ktouch; editor wraps such that every line of the lesson does not exceed 60
+&i18n-ktouch; editor wraps text such that every line of the lesson does not 
+exceed 60
 characters limit.
 </para>
 <para>
@@ -1399,6 +1408,78 @@ use them as appropriate. The table of modifier keys identifiers is given below.
 </table>
 </sect3>
 </sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title>Custom Lessons</title>
+<para>
+The custom lessons feature allows you to extend your training material in 
+an easy way by choosing some arbitrary text.
+</para>
+<para>
+The custom lessons are gathered in a special course, the <guilabel>Custom 
+Lessons</guilabel> course, always available right next to <link 
+linkend="picking_a_lesson">the normal built-in courses</link>.
+</para>
+<screenshot>
+<screeninfo>Custom lessons course</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Custom lessons course</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+This special course mostly acts like any other, training and statistics 
+gathering works as usual. Clicking on <guibutton>Create New Custom 
+Lesson</guibutton> or the <guibutton>Edit</guibutton> button (for 
+existing lessons) brings up a stripped-down version of <link 
+linkend="adding_lessons">the normal lesson editor</link>.
+</para>
+<screenshot>
+<screeninfo>Custom lesson editor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Custom lesson editor</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+Use <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-document-open.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button to open generic text 
+file that will be imported into the lesson text field.
+</para>
+<para>
+The <inlinemediaobject>
+<imageobject> <imagedata fileref="Icon-format-justify-fill.png"
+format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap 
+the lesson text. &i18n-ktouch; editor wraps text such that every line of the 
+lesson does not exceed 60 characters limit.
+</para>
+<para>
+&i18n-ktouch; applies the usual quality checks for custom lessons. The 
+characters of the lesson text are matched against the current keyboard layout, 
+so the user has a realistic chance to spot special or foreign characters that 
+cannot be typed before hitting them during training.
+</para>
+<para>
+The custom lessons are stored per user profile and keyboard layout, so one can 
+train on different lessons depending on the specific situation.
+</para>
+<tip>
+<para>
+One nice side effect of using custom lessons is that you can at least basically 
+use &i18n-ktouch; with every keyboard layout, even those &i18n-ktouch; offers 
+no courses for.
+</para>
+</tip>
 </sect1>
 
 <sect1 id="sharing_your_results">
