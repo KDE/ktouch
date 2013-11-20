@@ -46,7 +46,7 @@
 <holder>Håvard Frøiland, Andreas Nicolai</holder>
 </copyright>
 <copyright>
-<year>2011-2012</year>
+<year>2011-2013</year>
 <holder>Sebastian Gottfried</holder>
 </copyright>
 
@@ -111,15 +111,15 @@ at the keyboard all the time to find the right keys which slows you down a lot.
 <sect2>
 <title>Features</title>
 
-<para>In its current version, &i18n-ktouch; 2.0 has quite a number of
+<para>In its current version, &i18n-ktouch; 2.2 has quite a number of
 features, such as:</para>
 <itemizedlist>
 <listitem><simpara>Ships with dozens different courses in many
 languages and a comfortable course editor</simpara></listitem>
 <listitem><simpara>Support for different keyboard layouts with the ability to
 use and edit user-defined layouts</simpara></listitem>
-<listitem><simpara>During your training session comprehensive statistical
-information is obtained to help you or your teacher analyze your
+<listitem><simpara>During your training session &i18n-ktouch; collects comprehensive statistical
+information to help you or your teacher analyze your
 progress</simpara></listitem>
 </itemizedlist>
 <para>
@@ -216,7 +216,7 @@ layout.
 </para>
 
 <para>
-  You can switch between courses or choose <link linkend="custom_lessons">custom lessons</link> using <inlinemediaobject>
+You can switch between courses or choose <link linkend="custom_lessons">custom lessons</link> using the <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-arrow-right.png" format="PNG"/>
 </imageobject> </inlinemediaobject> and <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-arrow-left.png" format="PNG"/>
@@ -1083,18 +1083,17 @@ copy snippets of the text from your favorite text editor and paste them to this
 field.
 </para>
 <para>
-Use <inlinemediaobject>
+Use the <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-document-open.png"
-format="PNG"/> </imageobject> </inlinemediaobject> button to open generic text file
-that will be imported into the lesson text field.
+format="PNG"/> </imageobject> </inlinemediaobject> button to open generic a text file
+that will be loaded into the lesson text field.
 </para>
 <para>
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-format-justify-fill.png"
 format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap the lesson text.
 &i18n-ktouch; editor wraps text such that every line of the lesson does not 
-exceed 60
-characters limit.
+exceed the recommended 60 characters limit.
 </para>
 <para>
 Let's assume you want to add a new lesson. There are a few guidelines you
@@ -1453,33 +1452,19 @@ linkend="adding_lessons">the normal lesson editor</link>.
 <para>
 Use <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-document-open.png"
-format="PNG"/> </imageobject> </inlinemediaobject> button to open generic text 
-file that will be imported into the lesson text field.
+format="PNG"/> </imageobject> </inlinemediaobject> button to open a generic text 
+file that will be loaded into the lesson text field.
 </para>
 <para>
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-format-justify-fill.png"
 format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap 
 the lesson text. &i18n-ktouch; editor wraps text such that every line of the 
-lesson does not exceed 60 characters limit.
+lesson does not exceed the recommended 60 characters limit.
 </para>
 <para>
-&i18n-ktouch; applies the usual quality checks for custom lessons. The 
-characters of the lesson text are matched against the current keyboard layout, 
-so the user has a realistic chance to spot special or foreign characters that 
-cannot be typed before hitting them during training.
+The editor will highlight problematic sections of your lesson texts. Characters which can't by typed on your keyboard layout will be shown on a dark red, lines which are considered to be too long use a gray font for the excess characters.
 </para>
-<para>
-The custom lessons are stored per user profile and keyboard layout, so one can 
-train on different lessons depending on the specific situation.
-</para>
-<tip>
-<para>
-One nice side effect of using custom lessons is that you can at least basically 
-use &i18n-ktouch; with every keyboard layout, even those &i18n-ktouch; offers 
-no courses for.
-</para>
-</tip>
 </sect1>
 
 <sect1 id="sharing_your_results">
