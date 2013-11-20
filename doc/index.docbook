@@ -1085,7 +1085,7 @@ field.
 <para>
 Use the <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-document-open.png"
-format="PNG"/> </imageobject> </inlinemediaobject> button to open generic a text file
+format="PNG"/> </imageobject> </inlinemediaobject> button to open a generic text file
 that will be loaded into the lesson text field.
 </para>
 <para>
@@ -1465,6 +1465,11 @@ lesson does not exceed the recommended 60 characters limit.
 <para>
 The editor will highlight problematic sections of your lesson texts. Characters which can't by typed on your keyboard layout will be shown on a dark red, lines which are considered to be too long use a gray font for the excess characters.
 </para>
+<tip>
+<para>
+All custom lessons are stored per profile and keyboard layout individually. Use this to manage different sets of lessons depending on the specific training situation.
+</para>
+</tip>
 </sect1>
 
 <sect1 id="sharing_your_results">
