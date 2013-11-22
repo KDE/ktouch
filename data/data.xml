@@ -602,6 +602,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/tr.f.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>T&#xFC;rk&#xE7;e</title>
+    <name>tr</name>
+    <id>{7aac4342-e36f-456d-9c30-45404d65ab80}</id>
+    <path>keyboardlayouts/tr.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>
     <name>ua</name>
     <id>{9245b106-80f1-4217-9e35-ba581db0ec99}</id>

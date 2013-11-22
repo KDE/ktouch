@@ -36,6 +36,7 @@ set(keyboardfiles
     si.xml
     sk.qwerty.xml
     sk.xml
+    tr.xml
     tr.f.xml
     ua.xml
     us.colemak.xml
