@@ -377,7 +377,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     updateIdQuery.prepare("UPDATE course_lessons SET id = ? WHERE id = ?");
 
-    foreach (const QString id, ids)
+    foreach (const QString& id, ids)
     {
         updateIdQuery.bindValue(0, QUuid::createUuid().toString());
         updateIdQuery.bindValue(1, id);

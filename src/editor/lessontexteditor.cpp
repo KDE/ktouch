@@ -120,7 +120,7 @@ void LessonTextEditor::reformatText()
     QStringList lines;
     QString currentLine("");
 
-    foreach(const QString token, tokens)
+    foreach(const QString& token, tokens)
     {
         if (token.isEmpty())
             continue;
