@@ -27,7 +27,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="m_titleLineEdit"/>
+      <widget class="KLineEdit" name="m_titleLineEdit"/>
      </item>
     </layout>
    </item>
