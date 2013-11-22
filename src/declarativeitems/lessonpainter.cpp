@@ -175,7 +175,7 @@ QRectF LessonPainter::cursorRectangle() const
 
 void LessonPainter::reset()
 {
-    m_lines = m_lesson? m_lesson->text().split("\n"): QStringList();
+    m_lines = m_lesson? m_lesson->text().split('\n'): QStringList();
     updateDoc();
     resetTrainingStatus();
 }

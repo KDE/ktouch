@@ -116,7 +116,7 @@ void LessonTextEditor::reformatText()
     text = text.replace('\n', " ");
     text = text.replace(QString::fromUtf8("\u2029"), " ");
 
-    const QStringList tokens(text.split(" "));
+    const QStringList tokens(text.split(' '));
     QStringList lines;
     QString currentLine("");
 
@@ -132,7 +132,7 @@ void LessonTextEditor::reformatText()
         }
         else
         {
-            currentLine += currentLine.isEmpty()? token: " " + token;
+            currentLine += currentLine.isEmpty()? token: ' ' + token;
         }
     }
 
