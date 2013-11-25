@@ -548,6 +548,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/lt.std.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Nederlands</title>
+    <name>nl</name>
+    <id>{075361d1-0959-46c7-a865-4de6b9f0ccaf}</id>
+    <path>keyboardlayouts/nl.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Norsk</title>
     <name>no</name>
     <id>{1c5acd1b-09a8-46aa-a9d3-1ee82f926692}</id>

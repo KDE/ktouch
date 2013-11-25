@@ -28,6 +28,7 @@ set(keyboardfiles
     it.xml
     latam.xml
     lt.std.xml
+    nl.xml
     no.xml
     pt.xml
     ru.legacy.xml
