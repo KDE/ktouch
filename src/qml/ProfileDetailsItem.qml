@@ -133,24 +133,29 @@ Item {
 
                 model: infoModel
             }
+        }
 
-            Row {
-                spacing: 10
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: childrenRect.width
-                height: childrenRect.height
+        InlineToolbar {
+            anchors {
+                top: parent.top
+                horizontalCenter: parent.horizontalCenter
+                topMargin: 5
+            }
+            content: [
                 PlasmaComponents.ToolButton {
                     iconSource: "document-edit"
                     text: i18n("Edit")
                     onClicked: root.state = "editor"
-                }
+                    width: minimumWidth
+                },
                 PlasmaComponents.ToolButton {
                     iconSource: "edit-delete"
                     text: i18n("Delete")
                     enabled: profileDataAccess.profileCount > 1
                     onClicked: root.state = "deleteConfirmation"
+                    width: minimumWidth
                 }
-            }
+            ]
         }
     }
 
