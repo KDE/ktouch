@@ -211,10 +211,12 @@ Item {
                     iconSource: "edit-delete"
                     text: i18n("Delete")
                     onClicked: root.deletionRequest()
+                    width: minimumWidth
                 }
                 PlasmaComponents.ToolButton {
                     text: i18n("Cancel")
                     onClicked: root.state = "info"
+                    width: minimumWidth
                 }
             }
         }
