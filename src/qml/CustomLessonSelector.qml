@@ -147,6 +147,7 @@ Item {
                 }
                 title: isNewButton? i18n("Create New Custom Lesson"): (lesson? lesson.title: "")
                 iconSource: isNewButton? "list-add": ""
+                label.font.italic: isNewButton
             }
 
             onCurrentIndexChanged: updateSelectedLesson()
