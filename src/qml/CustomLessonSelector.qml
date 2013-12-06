@@ -77,6 +77,7 @@ Item {
         var lesson = Qt.createQmlObject("import ktouch 1.0; Lesson{}", internal, "lesson")
         lesson.copyFrom(base.selectedLesson)
         deletedLessons.push(lesson)
+        base.selectedLesson = null
         profileDataAccess.deleteCustomLesson(lesson.id)
         update()
         internal.deletedLessons = deletedLessons
@@ -94,6 +95,15 @@ Item {
         var deletedLessons = internal.deletedLessons
         var lesson = deletedLessons.pop()
         internal.deletedLessons = deletedLessons
+    }
+
+    function updateSelectedLesson() {
+        if (lessonList.currentIndex !== -1) {
+            base.selectedLesson = lessonList.currentItem.lesson
+        }
+        else {
+            base.selectedLesson = null
+        }
     }
 
     onProfileChanged: update()
@@ -137,16 +147,10 @@ Item {
                 }
                 title: isNewButton? i18n("Create New Custom Lesson"): (lesson? lesson.title: "")
                 iconSource: isNewButton? "list-add": ""
+                label.font.italic: isNewButton
             }
 
-            onCurrentIndexChanged: {
-                if (currentIndex !== -1) {
-                    base.selectedLesson = lessonList.currentItem.lesson
-                }
-                else {
-                    base.selectedLesson = null
-                }
-            }
+            onCurrentIndexChanged: updateSelectedLesson()
 
             onModelChanged: selectLastLesson()
 
@@ -164,7 +168,7 @@ Item {
                 horizontalCenter: parent.horizontalCenter
                 topMargin: 5
             }
-            opacity: base.selectedLesson != null? 1: 0
+            opacity: base.selectedLesson !== null? 1: 0
             content: [
                 PlasmaComponents.ToolButton {
                     iconSource: "document-edit"
