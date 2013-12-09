@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <course>
-  <id>{6f530b7b-36d5-4268-b45c-398fa8f0688b}</id>
-  <title>Suomalainen (automaattisesti luotu)</title>
-  <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
+ <id>{6f530b7b-36d5-4268-b45c-398fa8f0688b}</id>
+ <title>Suomalainen (automaattisesti luotu)</title>
+ <description>KTouch training file generated March 22, 2006 by Ulla Lewman.
 </description>
-  <keyboardLayout>fi</keyboardLayout>
-  <lessons>
-    <lesson>
-      <id>{7b364ec0-55f3-41c7-9b75-c6f24a766fe2}</id>
-      <title>Lesson 1</title>
-      <newCharacters>jf</newCharacters>
-      <text>ff jjj jf jfj j jff fjjf ff jfj j jff ff jjj fjj fjj fjf
+ <keyboardLayout>fi</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{7b364ec0-55f3-41c7-9b75-c6f24a766fe2}</id>
+   <title>Lesson 1</title>
+   <newCharacters>jf</newCharacters>
+   <text>ff jjj jf jfj j jff fjjf ff jfj j jff ff jjj fjj fjj fjf
 jfj jjj
 f fjjf jjj fjjf jfj fjjf f j fjj jff j fjj jf jjj fjjf f f
 fjf
@@ -70,12 +70,12 @@ j jfj jj jjj jf f fjjf j ff jjj jfj jff jff f fjjf fjj fjjf
 f
 jfj jj f ff jff fjjf jff f jjj jfj jj j jfj ff fjj ff j f
 jj fjjf</text>
-    </lesson>
-    <lesson>
-      <id>{fbddd16f-9355-48ef-8e20-9911f0ed492c}</id>
-      <title>Lesson 2</title>
-      <newCharacters>kd</newCharacters>
-      <text>jjd fdfj rd djd jk jd k dd fjk fd fk k jfkd dkkf fk dkd dd
+  </lesson>
+  <lesson>
+   <id>{fbddd16f-9355-48ef-8e20-9911f0ed492c}</id>
+   <title>Lesson 2</title>
+   <newCharacters>kd</newCharacters>
+   <text>jjd fdfj rd djd jk jd k dd fjk fd fk k jfkd dkkf fk dkd dd
 jk k
 dfj djd fkkk fk dff d dkkf fd fk fdfj fk k dkkf djd dff dkd
 dff
@@ -135,12 +135,12 @@ fkkk fk fk dffd fk dfj jd dd jk dfj fjk fd jfkd fk fd jd fd
 jd k
 dffd rd dkd dd fk fk jk dffd fk dkd fjk jk k jk djd fdfj fk
 dd jd</text>
-    </lesson>
-    <lesson>
-      <id>{9b6733e3-d561-44cd-872b-c4b82ed73d91}</id>
-      <title>Lesson 3</title>
-      <newCharacters>ls</newCharacters>
-      <text>fl s l ldk l s slj s dks sf kl ll ls l ls dss lkj slk ks jl
+  </lesson>
+  <lesson>
+   <id>{9b6733e3-d561-44cd-872b-c4b82ed73d91}</id>
+   <title>Lesson 3</title>
+   <newCharacters>ls</newCharacters>
+   <text>fl s l ldk l s slj s dks sf kl ll ls l ls dss lkj slk ks jl
 jjss
 l slj jl lkj l ldf s ld ll l ll ldk jjdl dlkk fl rs dss fld
 fl
@@ -200,12 +200,12 @@ fl sf kl ll kl ld jjss dds kl fld jjdl fl js jl sf kl kl jl
 jl
 ldf ll dds dds s ll slk dks slj lkj fld kl ks rs fl kl ldk
 ld l</text>
-    </lesson>
-    <lesson>
-      <id>{efcf7310-9355-47af-a410-d76bbd253d74}</id>
-      <title>Lesson 4</title>
-      <newCharacters>ca</newCharacters>
-      <text>a a a c c c aa aa cc cc aca aaca caac ccaa acac aaaa cccc
+  </lesson>
+  <lesson>
+   <id>{efcf7310-9355-47af-a410-d76bbd253d74}</id>
+   <title>Lesson 4</title>
+   <newCharacters>ca</newCharacters>
+   <text>a a a c c c aa aa cc cc aca aaca caac ccaa acac aaaa cccc
 aaaa cccc aaaa
 a c a c a c aa cc aa cc cc aa ja jjaa fafa ffaa ffcc ccfa
 afca cafa jafa caja
@@ -254,12 +254,12 @@ acks flack sacks sass lacs cal flacks jacks ajaa sakka
 alack flacks
 flack ask dad flacks ads kcal cal jack assa cads asks ala
 callas jacks</text>
-    </lesson>
-    <lesson>
-      <id>{c1096bdf-1601-48b2-9d02-6065150a657d}</id>
-      <title>Lesson 5</title>
-      <newCharacters></newCharacters>
-      <text>jaffa kaada fafa laaka lakka saada ca ja aa jj kk ss ll
+  </lesson>
+  <lesson>
+   <id>{c1096bdf-1601-48b2-9d02-6065150a657d}</id>
+   <title>Lesson 5</title>
+   <newCharacters></newCharacters>
+   <text>jaffa kaada fafa laaka lakka saada ca ja aa jj kk ss ll
 sala salaa lalla kalla
 jalla falla cafca salsa jfjf jkjk fkfk dkdk kdkd kfkf djdj
 kjkj jl lj sf fs j f k l
@@ -303,12 +303,12 @@ jalla falla cafca salsa jaffa kaffa faffa als kasaa kaada
 saada lalal laa laa
 salsaa kasa kafka safka ff jj kk dd ll ss cc aa j f k d l s
 c a jaffa kaffa sala</text>
-    </lesson>
-    <lesson>
-      <id>{0b8ae48c-044c-42b8-a72b-96682df693ac}</id>
-      <title>Lesson 6</title>
-      <newCharacters>nt</newCharacters>
-      <text>tt t t tttt tt nn nn nt tn nntt ttnn ntnt tttn tnnn nntt
+  </lesson>
+  <lesson>
+   <id>{0b8ae48c-044c-42b8-a72b-96682df693ac}</id>
+   <title>Lesson 6</title>
+   <newCharacters>nt</newCharacters>
+   <text>tt t t tttt tt nn nn nt tn nntt ttnn ntnt tttn tnnn nntt
 tnnt nnnn tttt tntn 
 n n n t t t tt tt nn nn nntt nntt ntnt nttt nnnt tntn tt tt
 tt nn nn nn tntn
@@ -367,12 +367,12 @@ flatlands
 tads stand tat clanks at ands ansat alts ts snacks assn
 tanks
 flatlands stack lands scandals scats cancan santa jct atlas</text>
-    </lesson>
-    <lesson>
-      <id>{20c9aaef-1f20-4dc6-a125-5fdabf27fffb}</id>
-      <title>Lesson 7</title>
-      <newCharacters>iv</newCharacters>
-      <text>i i i v v v iv iv vi vi iivv vvii viii iiiv vivi ivvi viiv
+  </lesson>
+  <lesson>
+   <id>{20c9aaef-1f20-4dc6-a125-5fdabf27fffb}</id>
+   <title>Lesson 7</title>
+   <newCharacters>iv</newCharacters>
+   <text>i i i v v v iv iv vi vi iivv vvii viii iiiv vivi ivvi viiv
 iiii iiii vvvv vvvv ivvv viii
 i i i v v v ivi ivi viv vivi iviv vvii ivvv iivv iiiv vivi
 iviv ivvi iivv iiii vvvv
@@ -426,12 +426,12 @@ kita kaita maita maata maat naatta niin kaiva kaivata ivata
 kaivata
 lasi laasti laava aava naava anti lantti vaadin vailla
 villa alla aivan</text>
-    </lesson>
-    <lesson>
-      <id>{f6c3bae8-1a31-4338-82a3-56442f20394f}</id>
-      <title>Lesson 8</title>
-      <newCharacters>me</newCharacters>
-      <text>vitsi eilen massiivinen villaiset leikki divaani
+  </lesson>
+  <lesson>
+   <id>{f6c3bae8-1a31-4338-82a3-56442f20394f}</id>
+   <title>Lesson 8</title>
+   <newCharacters>me</newCharacters>
+   <text>vitsi eilen massiivinen villaiset leikki divaani
 akateeminen kateellinen
 festivaali viesti sateliitti fani asteet fiini kaneli ale
 ladata vaskinen 
@@ -493,12 +493,12 @@ ilkivalta seitti ivata laasti lantti kantti kanttiini kaste
 maistella maksaa maksa
 kide diiva me te ne se iva kiva kiivailla miete asiakas
 vaadin kaadin kiiski menin</text>
-    </lesson>
-    <lesson>
-      <id>{c562d085-c884-4f85-a628-12b19bcf2cc5}</id>
-      <title>Lesson 9</title>
-      <newCharacters></newCharacters>
-      <text>jaffa kaada fafa laaka lakka saada avain aasi aivan astia
+  </lesson>
+  <lesson>
+   <id>{c562d085-c884-4f85-a628-12b19bcf2cc5}</id>
+   <title>Lesson 9</title>
+   <newCharacters></newCharacters>
+   <text>jaffa kaada fafa laaka lakka saada avain aasi aivan astia
 lasti anna antaa
 vaiva sieti seiti lesti siika silakka salakka salainen
 salava maanalainen
@@ -524,12 +524,12 @@ maittava maitse lattia salaatti melamiini mela mestata mies
 maalattia
 mainita massiivinen matala neitonen neiti niitti tanssi
 taivas televiesti</text>
-    </lesson>
-    <lesson>
-      <id>{8c8b822e-8831-4843-a5ae-883d860ff726}</id>
-      <title>Lesson 10</title>
-      <newCharacters>hr</newCharacters>
-      <text>h h hh hh h hhh r r rr rr rhhr hrrh hhrr hhrr rrhh hh rr hr
+  </lesson>
+  <lesson>
+   <id>{8c8b822e-8831-4843-a5ae-883d860ff726}</id>
+   <title>Lesson 10</title>
+   <newCharacters>hr</newCharacters>
+   <text>h h hh hh h hhh r r rr rr rhhr hrrh hhrr hhrr rrhh hh rr hr
 hr rh rh hhrr
 metallit miehet hakeva retiisi rehti hevonen herra hera
 meret hiki haave
@@ -583,12 +583,12 @@ kirjaraati ratti rahtilava laiva reimari harittaa aristaa
 saari armeija lahti
 lehti leiri lirisee aristaa aristella eriste kirjava
 herjata kaavake saareke</text>
-    </lesson>
-    <lesson>
-      <id>{513fda14-9626-4e1b-882d-ee194fc55f61}</id>
-      <title>Lesson 11</title>
-      <newCharacters>go</newCharacters>
-      <text>oo gg oooo oooo gggg gggg gogo ogog ooog gggo oogg ggoo
+  </lesson>
+  <lesson>
+   <id>{513fda14-9626-4e1b-882d-ee194fc55f61}</id>
+   <title>Lesson 11</title>
+   <newCharacters>go</newCharacters>
+   <text>oo gg oooo oooo gggg gggg gogo ogog ooog gggo oogg ggoo
 oggg ooog
 o g o g gggo ggoo ooog oogg oggg oggg oo gg oo gg go go og
 og ooog
@@ -644,12 +644,12 @@ eri veri arvo osinko oranki gorilla gerilla harja
 harjoitella looginen logo
 loisto loinen merta meri mormooni hormooni harmooni
 rangaista rikos</text>
-    </lesson>
-    <lesson>
-      <id>{c6bd82e4-49cc-4846-b6eb-97b95e84e409}</id>
-      <title>Lesson 12</title>
-      <newCharacters>bp</newCharacters>
-      <text>b b b b p p p p bb pp pb bp bppp pbbb bbpp ppbb bbbp bbbp
+  </lesson>
+  <lesson>
+   <id>{c6bd82e4-49cc-4846-b6eb-97b95e84e409}</id>
+   <title>Lesson 12</title>
+   <newCharacters>bp</newCharacters>
+   <text>b b b b p p p p bb pp pb bp bppp pbbb bbpp ppbb bbbp bbbp
 pbbb b b b b p p p p pp pp pp bb bb bb bob pop pappa pippa
 bibbi babba baba papa
 bio boi pio poi abba baab appa paap ebbe eppe eeep eeeb
@@ -692,12 +692,12 @@ kipsi kiire merimaili merisiili litra metri millimetri
 viivotin harppi happi
 hepenet hiprakka promoottori pilli pilkka palkka rapa
 repale riisi reisi</text>
-    </lesson>
-    <lesson>
-      <id>{632a3e17-b84a-458e-b1fc-88b4d35a802b}</id>
-      <title>Lesson 13</title>
-      <newCharacters></newCharacters>
-      <text>jaffa fafa ca ja jakaa sala faarao kaftaani laiva aasi
+  </lesson>
+  <lesson>
+   <id>{632a3e17-b84a-458e-b1fc-88b4d35a802b}</id>
+   <title>Lesson 13</title>
+   <newCharacters></newCharacters>
+   <text>jaffa fafa ca ja jakaa sala faarao kaftaani laiva aasi
 lapsi lopettaa aivan lasta pasta vasta kasta paperi berberi
 baskeri sivellin reitti peitto keitto
 katso lapanen gogo herra korppi kapalo sana kisa kissa risa
@@ -735,12 +735,12 @@ geologia sello
 viulu okariino basso kontrabasso basisti ksylofoni altto
 sopraano
 baritoni metrosopraano fagotti fregatti gastronomia</text>
-    </lesson>
-    <lesson>
-      <id>{acb9475a-f75b-444c-ba76-f7cbbcdd5ff7}</id>
-      <title>Lesson 14</title>
-      <newCharacters>qux</newCharacters>
-      <text>q u x qq uu xx quxx qqxx uuuu uuuq uuuq uuux uuuu uu uu uu
+  </lesson>
+  <lesson>
+   <id>{acb9475a-f75b-444c-ba76-f7cbbcdd5ff7}</id>
+   <title>Lesson 14</title>
+   <newCharacters>qux</newCharacters>
+   <text>q u x qq uu xx quxx qqxx uuuu uuuq uuuq uuux uuuu uu uu uu
 u u uuuu
 qqqu qqqx qqxx qxxx xxxx xxxx xxxu xxxu xxuu xxxx xxqq xxqq
 quxx q x
@@ -791,120 +791,120 @@ kvintetti xylophone on tietenkin ksylofoni xenophobia tai
 xenofobia tarkoittaa vieraiden maiden tai
 muukalaisten pelkoa outo on usein kummallinen juttu tuuli
 uusi kuusi</text>
-    </lesson>
-    <lesson>
-      <id>{1211ca84-5d06-46d1-bc0d-c27f1effde00}</id>
-      <title>Lesson 15</title>
-      <newCharacters>w&#xE4;&#xE5;</newCharacters>
-      <text>&#xE5; &#xE5; &#xE5; &#xE5; &#xE5;&#xE5; &#xE5;&#xE5; &#xE5;&#xE5; &#xE5;&#xE5;&#xE5;&#xE5; &#xE5;&#xE5;&#xE5;&#xE5; &#xE5; &#xE5; &#xE5;&#xE5; &#xE5;&#xE5; &#xE5;&#xE5; &#xE5;&#xE5; &#xE5; &#xE5;&#xE5; &#xE5; &#xE5;&#xE5; &#xE5;&#xE5;&#xE5;&#xE5; &#xE5;
-&#xE5; &#xE5; &#xE5; &#xE5; &#xE5; &#xE5; &#xE5; &#xE5;
-w w w w ww ww ww ww wwww wwww &#xE5;w &#xE5;w &#xE5;w &#xE5;w &#xE5;w &#xE5;w &#xE5;ww&#xE5; w&#xE5;&#xE5;w
-w&#xE5;w&#xE5; ww&#xE5;&#xE5; w&#xE5;w&#xE5; ww&#xE5;&#xE5; &#xE5;&#xE5;ww &#xE5;&#xE5;ww &#xE5;w&#xE5;w &#xE5;ww&#xE5; w&#xE5;&#xE5;w &#xE5;ww&#xE5; &#xE5;&#xE5;&#xE5;w ww
-&#xE4; &#xE4; &#xE4; &#xE4; &#xE4;&#xE4; &#xE4;&#xE4; &#xE4;&#xE4; &#xE4;&#xE4;&#xE4;&#xE4; &#xE4;&#xE4;&#xE4;&#xE4; w&#xE4;&#xE4;w &#xE4;&#xE5;&#xE4;&#xE5; &#xE5;&#xE4;&#xE4;&#xE5; &#xE5;&#xE4;&#xE4;&#xE4; &#xE5;&#xE5;&#xE4;&#xE4; &#xE4;&#xE4;&#xE4;&#xE4;
-&#xE4;&#xE4;&#xE4;&#xE4; www&#xE4;
-s&#xE4;&#xE4; t&#xE4;m&#xE4; t&#xE4;ll&#xE4; h&#xE4;m&#xE4;r&#xE4; h&#xE4;nt&#xE4; min&#xE4; sin&#xE4; h&#xE4;n me te he t&#xE4;m&#xE4; tuo
-se n&#xE4;m&#xE4; nuo ne ovat kaikki pronomineja
-h&#xE4;&#xE4;t h&#xE4;&#xE4;t&#xE4;&#xE4; h&#xE4;&#xE4;r&#xE4;t&#xE4; h&#xE4;irit&#xE4; h&#xE4;kki n&#xE4;kkileip&#xE4; lev&#xE4;t&#xE4; ker&#xE4;t&#xE4;
-kehr&#xE4;t&#xE4; ker&#xE4;t&#xE4;
-ker&#xE4; r&#xE4;&#xE4;k&#xE4;t&#xE4; &#xE4;&#xE4;ri k&#xE4;&#xE4;ri&#xE4; k&#xE4;rki h&#xE4;rk&#xE4; h&#xE4;k&#xE4; j&#xE4;k&#xE4;l&#xE4; m&#xE4;t&#xE4;s
-m&#xE4;ss&#xE4;t&#xE4; m&#xE4;&#xE4;r&#xE4;
-m&#xE4;&#xE4;r&#xE4;np&#xE4;&#xE4; p&#xE4;&#xE4; p&#xE4;&#xE4;tt&#xE4;&#xE4; p&#xE4;iv&#xE4; v&#xE4;ri s&#xE4;&#xE4;ri s&#xE4;&#xE4;li s&#xE4;il&#xE4; er&#xE4;s
-erist&#xE4;&#xE4; er&#xE4; ker&#xE4;
-p&#xE5; on ruotsiksi p&#xE4;&#xE4;ll&#xE4; west on l&#xE4;nsi s&#xE4;rki h&#xE4;m&#xE4;r&#xE4; s&#xE4;&#xE4;ri
-r&#xE4;&#xE4;t&#xE4;li h&#xE4;&#xE4;t&#xE4;&#xE4;
-h&#xE4;&#xE4;t&#xE4;&#xE4; h&#xE4;ll&#xE4; v&#xE4;li&#xE4; h&#xE4;ss&#xE4;kk&#xE4; t&#xE4;ysi r&#xE4;hj&#xE4;t&#xE4; k&#xE4;si k&#xE4;sitell&#xE4;
-k&#xE4;ns&#xE4; h&#xE4;&#xE4;vieras
-k&#xE4;sitell&#xE4; k&#xE4;skytt&#xE4;&#xE4; h&#xE4;&#xE4;r&#xE4;t&#xE4; &#xE4;iti m&#xE4;t&#xE4;s &#xE4;lli t&#xE4;lli k&#xE4;si &#xE4;l&#xE4;
-k&#xE4;l&#xE4;tt&#xE4;&#xE4; &#xE4;&#xE4;ri
-&#xE4;&#xE4;rimm&#xE4;inen &#xE4;&#xE4;ress&#xE4; &#xE4;k&#xE4;inen s&#xE4;k&#xE4; t&#xE4;hk&#xE4; &#xE4;ss&#xE4; v&#xE4;rj&#xE4;t&#xE4;
-v&#xE4;ritt&#xE4;&#xE4; k&#xE4;&#xE4;ri&#xE4;
-k&#xE4;hert&#xE4;&#xE4; k&#xE4;&#xE4;mi k&#xE4;ns&#xE4; k&#xE4;&#xE4;repaperi hel&#xE4;ht&#xE4;&#xE4; k&#xE4;ki k&#xE4;si s&#xE4;il&#xE4;
-s&#xE4;&#xE4; m&#xE4;&#xE4; b&#xE4;&#xE4;
-&#xE4;&#xE4;ri r&#xE4;&#xE4;vi er&#xE4;s er&#xE4; mets&#xE4; el&#xE4;kel&#xE4;inen p&#xE4;&#xE4;rme k&#xE4;&#xE4;rme
-&#xE4;kseer&#xE4;t&#xE4; &#xE4;l&#xE4;ht&#xE4;&#xE4;
-t&#xE4;m&#xE4; t&#xE4;&#xE4;ll&#xE4; t&#xE4;ss&#xE4; m&#xE4;&#xE4;ki&#xE4; m&#xE4;k&#xE4;r&#xE4;inen n&#xE4;r&#xE4;st&#xE4;&#xE4; n&#xE4;hd&#xE4; &#xE4;l&#xE4;ht&#xE4;&#xE4;
-k&#xE4;tev&#xE4;
-k&#xE4;&#xE4;ri&#xE4; k&#xE4;&#xE4;reess&#xE4; &#xE4;&#xE4;rell&#xE4; k&#xE4;sitell&#xE4; t&#xE4;rke&#xE4; t&#xE4;sm&#xE4;llinen
-p&#xE4;&#xE4;rme p&#xE4;&#xE4;rm&#xE4;t&#xE4;
-h&#xE4;vit&#xE4; h&#xE4;vet&#xE4; &#xE4;llit&#xE4;lli t&#xE4;sm&#xE4;llinen k&#xE4;dellinen j&#xE4;m&#xE4;
-j&#xE4;m&#xE4;ht&#xE4;&#xE4; j&#xE4;te j&#xE4;&#xE4; j&#xE4;&#xE4;t
-m&#xE4;&#xE4;r&#xE4;np&#xE4;&#xE4; p&#xE4;&#xE4;m&#xE4;&#xE4;r&#xE4; m&#xE4;&#xE4;r&#xE4;t&#xE4; k&#xE4;&#xE4;ri&#xE4; v&#xE4;&#xE4;r&#xE4; v&#xE4;rj&#xE4;t&#xE4; v&#xE4;ritt&#xE4;&#xE4;
-k&#xE4;dellinen
-s&#xE4;&#xE4;ret s&#xE4;&#xE4;rintama s&#xE4;&#xE4;li&#xE4; s&#xE4;&#xE4;litt&#xE4;v&#xE4; r&#xE4;m&#xE4;p&#xE4;&#xE4; p&#xE4;&#xE4;m&#xE4;&#xE4;r&#xE4;
-m&#xE4;&#xE4;r&#xE4;t&#xE4; &#xE4;l&#xE4;ht&#xE4;&#xE4;
-&#xE4;iti &#xE4;imistell&#xE4; &#xE4;l&#xE4; k&#xE4;l&#xE4;tt&#xE4;&#xE4; kierr&#xE4;tt&#xE4;&#xE4; t&#xE4;sm&#xE4;llinen ter&#xE4;v&#xE4;
-v&#xE4;&#xE4;r&#xE4; vieritt&#xE4;&#xE4;
-h&#xE4;m&#xE4;r&#xE4; h&#xE4;&#xE4;matka &#xE4;l&#xE4;ht&#xE4;&#xE4; l&#xE4;ll&#xE4;ll&#xE4;&#xE4; l&#xE4;ll&#xE4;tt&#xE4;&#xE4; mets&#xE4;st&#xE4;&#xE4;
-mielt&#xE4;&#xE4; mielelt&#xE4;&#xE4;n
-&#xE4;idin k&#xE4;&#xE4;ri&#xE4; kieri&#xE4; &#xE4;imistell&#xE4; t&#xE4;hk&#xE4; t&#xE4;hk&#xE4;p&#xE4;&#xE4; &#xE4;ss&#xE4; t&#xE4;ss&#xE4;
-t&#xE4;sm&#xE4; t&#xE4;sm&#xE4;llinen
-t&#xE4;hti t&#xE4;hdellinen t&#xE4;rin&#xE4; k&#xE4;rp&#xE4;nen k&#xE4;ske&#xE4; k&#xE4;hmi&#xE4; k&#xE4;&#xE4;mi k&#xE4;&#xE4;re
+  </lesson>
+  <lesson>
+   <id>{1211ca84-5d06-46d1-bc0d-c27f1effde00}</id>
+   <title>Lesson 15</title>
+   <newCharacters>wäå</newCharacters>
+   <text>å å å å åå åå åå åååå åååå å å åå åå åå åå å åå å åå åååå å
+å å å å å å å å
+w w w w ww ww ww ww wwww wwww åw åw åw åw åw åw åwwå wååw
+wåwå wwåå wåwå wwåå ååww ååww åwåw åwwå wååw åwwå åååw ww
+ä ä ä ä ää ää ää ääää ääää wääw äåäå åääå åäää ååää ääää
+ääää wwwä
+sää tämä tällä hämärä häntä minä sinä hän me te he tämä tuo
+se nämä nuo ne ovat kaikki pronomineja
+häät häätää häärätä häiritä häkki näkkileipä levätä kerätä
+kehrätä kerätä
+kerä rääkätä ääri kääriä kärki härkä häkä jäkälä mätäs
+mässätä määrä
+määränpää pää päättää päivä väri sääri sääli säilä eräs
+eristää erä kerä
+på on ruotsiksi päällä west on länsi särki hämärä sääri
+räätäli häätää
+häätää hällä väliä hässäkkä täysi rähjätä käsi käsitellä
+känsä häävieras
+käsitellä käskyttää häärätä äiti mätäs älli tälli käsi älä
+kälättää ääri
+äärimmäinen ääressä äkäinen säkä tähkä ässä värjätä
+värittää kääriä
+kähertää käämi känsä käärepaperi helähtää käki käsi säilä
+sää mää bää
+ääri räävi eräs erä metsä eläkeläinen päärme käärme
+äkseerätä älähtää
+tämä täällä tässä määkiä mäkäräinen närästää nähdä älähtää
+kätevä
+kääriä kääreessä äärellä käsitellä tärkeä täsmällinen
+päärme päärmätä
+hävitä hävetä ällitälli täsmällinen kädellinen jämä
+jämähtää jäte jää jäät
+määränpää päämäärä määrätä kääriä väärä värjätä värittää
+kädellinen
+sääret säärintama sääliä säälittävä rämäpää päämäärä
+määrätä älähtää
+äiti äimistellä älä kälättää kierrättää täsmällinen terävä
+väärä vierittää
+hämärä häämatka älähtää lällällää lällättää metsästää
+mieltää mieleltään
+äidin kääriä kieriä äimistellä tähkä tähkäpää ässä tässä
+täsmä täsmällinen
+tähti tähdellinen tärinä kärpänen käskeä kähmiä käämi kääre
 kiire
-r&#xE4;&#xE4;t&#xE4;li r&#xE4;hj&#xE4;t&#xE4; r&#xE4;hin&#xE4; t&#xE4;rin&#xE4; p&#xE4;rin&#xE4; n&#xE4;tti j&#xE4;&#xE4;r&#xE4;p&#xE4;&#xE4;
-k&#xE4;sitell&#xE4; k&#xE4;rjist&#xE4;&#xE4;</text>
-    </lesson>
-    <lesson>
-      <id>{ebe6d83e-33d5-446d-bfdd-ee5e51518735}</id>
-      <title>Lesson 16</title>
-      <newCharacters>yz&#xF6;</newCharacters>
-      <text>y y y y yyyy yyyy yy yy yyyy yy yyyy y y y y yy yyy yyyy yy
+räätäli rähjätä rähinä tärinä pärinä nätti jääräpää
+käsitellä kärjistää</text>
+  </lesson>
+  <lesson>
+   <id>{ebe6d83e-33d5-446d-bfdd-ee5e51518735}</id>
+   <title>Lesson 16</title>
+   <newCharacters>yzö</newCharacters>
+   <text>y y y y yyyy yyyy yy yy yyyy yy yyyy y y y y yy yyy yyyy yy
 y yyy y yyyy
 z z z z z zz zz zz zzz zzz zzz zzzz zzz zz z z z z z yz yz
 yzyz yzyz yz zyyz
-&#xF6; &#xF6; &#xF6; &#xF6; &#xF6;&#xF6; &#xF6;&#xF6; &#xF6;&#xF6; &#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6;&#xF6; &#xF6;&#xF6;&#xF6; &#xF6;&#xF6;yy yy&#xF6;&#xF6;
-y&#xF6;y&#xF6; zy&#xF6;z zy&#xF6;z
-sy&#xF6; ty&#xF6; &#xF6;ljy ty&#xF6;nt&#xE4;&#xE4; &#xF6;rvelt&#xE4;&#xE4; &#xF6;r&#xE4;hdell&#xE4; yll&#xE4;tys ty&#xF6;l&#xE4;s
-tyypillinen jyr&#xE4;
-ry&#xF6;v&#xE4;t&#xE4; ry&#xF6;v&#xE4;ri sy&#xF6;veri sy&#xF6;t&#xE4;v&#xE4; sy&#xF6;m&#xE4;ri s&#xE4;r&#xF6;ill&#xE4; &#xE4;&#xE4;ret&#xF6;n
-&#xF6;ljy &#xF6;h&#xF6;m tyr&#xE4;
-k&#xE4;yt&#xE4;v&#xE4; v&#xE4;yl&#xE4; t&#xF6;rm&#xE4;t&#xE4; ty&#xF6;maa ty&#xF6;mies hy&#xF6;tyk&#xE4;ytt&#xF6; hyv&#xE4;
-hy&#xF6;tytarha
-hy&#xF6;dyllinen hy&#xF6;ty sy&#xF6;m&#xE4;lakko ty&#xF6;t&#xF6;n ty&#xF6;llisyys kylv&#xF6;ty&#xF6;
-&#xF6;ljytty py&#xF6;r&#xE4;ht&#xE4;&#xE4;
-yst&#xE4;v&#xE4;llinen bazz bizz izzy k&#xE4;yskennell&#xE4; k&#xE4;yt&#xE4;v&#xE4; k&#xE4;yt&#xF6;s
-ty&#xF6;p&#xE4;iv&#xE4;
-v&#xE4;l&#xE4;ytt&#xE4;&#xE4; k&#xE4;rytt&#xE4;&#xE4; k&#xE4;&#xE4;ryle jyr&#xE4;t&#xE4; syyn&#xE4;t&#xE4; kyyk&#xE4;&#xE4;rme
-s&#xE4;&#xE4;rystin p&#xE4;&#xE4;ryn&#xE4;
-&#xE4;lymyst&#xF6; &#xE4;lynystyr&#xE4; kyyn&#xE4;r&#xE4; s&#xE4;yn&#xE4;v&#xE4; n&#xE4;ytt&#xE4;v&#xE4; n&#xE4;ytelm&#xE4;
-ny&#xF6;ritt&#xE4;&#xE4; py&#xF6;r&#xE4;
-kyhmy tyhmyri kysta t&#xE4;ysikuu t&#xE4;ydennys p&#xF6;yt&#xE4;liina sy&#xF6;t&#xE4;v&#xE4;
-hyytel&#xF6; h&#xF6;rh&#xF6;
-t&#xF6;rm&#xE4;ys t&#xE4;rin&#xE4; t&#xE4;ysi k&#xE4;dellinen k&#xE4;sitys t&#xE4;ydennys k&#xE4;rsimys
+ö ö ö ö öö öö öö öö ööö ööö ööö öööö öööö ööö ööyy yyöö
+yöyö zyöz zyöz
+syö työ öljy työntää örveltää örähdellä yllätys työläs
+tyypillinen jyrä
+ryövätä ryöväri syöveri syötävä syömäri säröillä ääretön
+öljy öhöm tyrä
+käytävä väylä törmätä työmaa työmies hyötykäyttö hyvä
+hyötytarha
+hyödyllinen hyöty syömälakko työtön työllisyys kylvötyö
+öljytty pyörähtää
+ystävällinen bazz bizz izzy käyskennellä käytävä käytös
+työpäivä
+väläyttää käryttää kääryle jyrätä syynätä kyykäärme
+säärystin päärynä
+älymystö älynystyrä kyynärä säynävä näyttävä näytelmä
+nyörittää pyörä
+kyhmy tyhmyri kysta täysikuu täydennys pöytäliina syötävä
+hyytelö hörhö
+törmäys tärinä täysi kädellinen käsitys täydennys kärsimys
 mysli
-mysteeri myllerrys myllert&#xE4;&#xE4; my&#xF6;nnytys ny&#xF6;nt&#xE4;&#xE4; ty&#xF6;nt&#xE4;&#xE4;
-ty&#xF6;nt&#xE4;yteinen
-syys syyskuu syli sy&#xF6;p&#xE4; sy&#xF6;p&#xE4;l&#xE4;inen kylm&#xE4; kylm&#xE4;kiskoinen
-kyyn&#xE4;r&#xE4;
-kysymys kyyn&#xE4;rp&#xE4;&#xE4; kylm&#xE4;kiskoinen sy&#xF6;t&#xE4;v&#xE4; sy&#xF6;m&#xE4;ri y&#xF6;my&#xF6;h&#xE4;
-my&#xF6;t&#xE4;
-my&#xF6;t&#xE4;p&#xE4;iv&#xE4; pyyt&#xE4;&#xE4; py&#xF6;r&#xE4;ill&#xE4; kyt&#xE4;t&#xE4; kylm&#xE4;kiskoinen &#xF6;ljym&#xE4;ki
-&#xF6;ljyt&#xE4; y&#xF6;ty&#xF6;
-yst&#xE4;v&#xE4;llinen yrmy kyhmy ry&#xF6;mi&#xE4; ty&#xF6;myyr&#xE4; m&#xE4;yr&#xE4;koira
-k&#xE4;sik&#xE4;hm&#xE4; &#xE4;&#xE4;ri
-p&#xE4;&#xE4;ri m&#xE4;&#xE4;ritell&#xE4; my&#xF6;nnytys s&#xE4;&#xE4;ri py&#xF6;r&#xE4;ill&#xE4; pyr&#xE4;hdys
-py&#xF6;r&#xE4;hdys p&#xF6;yt&#xE4;
-tiety&#xF6;maa k&#xE4;skyl&#xE4;inen p&#xE4;&#xE4;skynen p&#xE4;rj&#xE4;ily v&#xE4;rin&#xE4; p&#xE4;&#xE4;st&#xE4;inen
-p&#xE4;&#xE4;v&#xE4;rit
-punainen sininen keltainen v&#xE4;liv&#xE4;rit vihre&#xE4; oranssi ruskea
-pastelliv&#xE4;rit
-vaaleanpunainen vaaleansininen vaaleanvihre&#xE4; t&#xE4;sm&#xE4;llinen
-ty&#xF6;myyr&#xE4;
-yst&#xE4;v&#xE4;llisyys syksy talvi kev&#xE4;t kes&#xE4; kyyn&#xE4;r&#xE4; ky&#xF6;peli
-hy&#xF6;tyk&#xE4;ytt&#xF6; s&#xE4;&#xE4;ty
-vy&#xF6;t&#xE4;r&#xF6; vy&#xF6;ti&#xE4;inen &#xE4;rj&#xE4;ht&#xE4;&#xE4; kyyn&#xE4;r&#xE4; kyp&#xE4;r&#xE4; k&#xE4;yskennell&#xE4;
-t&#xE4;ydellinen
-&#xF6;yl&#xE4;tti l&#xF6;yly l&#xF6;ylykippo kyt&#xE4;t&#xE4; kyyk&#xE4;&#xE4;rme sy&#xF6;m&#xE4;puikot
-ty&#xF6;p&#xE4;iv&#xE4; yksi
-pysti yksi kaksi kolme nelj&#xE4; viisi kuusi seitsem&#xE4;n
-kahdeksan yhdeks&#xE4;n
-kymmenen yksitoista yhdestoista kyt&#xE4;t&#xE4; k&#xE4;sitys k&#xE4;skennell&#xE4;
-k&#xE4;&#xE4;rme</text>
-    </lesson>
-    <lesson>
-      <id>{3d5c2070-98e3-4796-9608-8e909409f3fc}</id>
-      <title>Lesson 17</title>
-      <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
-      <text>Anna Anastasia Aaro Barbara Bart Bernard Cecilia Charlot
+mysteeri myllerrys myllertää myönnytys nyöntää työntää
+työntäyteinen
+syys syyskuu syli syöpä syöpäläinen kylmä kylmäkiskoinen
+kyynärä
+kysymys kyynärpää kylmäkiskoinen syötävä syömäri yömyöhä
+myötä
+myötäpäivä pyytää pyöräillä kytätä kylmäkiskoinen öljymäki
+öljytä yötyö
+ystävällinen yrmy kyhmy ryömiä työmyyrä mäyräkoira
+käsikähmä ääri
+pääri määritellä myönnytys sääri pyöräillä pyrähdys
+pyörähdys pöytä
+tietyömaa käskyläinen pääskynen pärjäily värinä päästäinen
+päävärit
+punainen sininen keltainen välivärit vihreä oranssi ruskea
+pastellivärit
+vaaleanpunainen vaaleansininen vaaleanvihreä täsmällinen
+työmyyrä
+ystävällisyys syksy talvi kevät kesä kyynärä kyöpeli
+hyötykäyttö sääty
+vyötärö vyötiäinen ärjähtää kyynärä kypärä käyskennellä
+täydellinen
+öylätti löyly löylykippo kytätä kyykäärme syömäpuikot
+työpäivä yksi
+pysti yksi kaksi kolme neljä viisi kuusi seitsemän
+kahdeksan yhdeksän
+kymmenen yksitoista yhdestoista kytätä käsitys käskennellä
+käärme</text>
+  </lesson>
+  <lesson>
+   <id>{3d5c2070-98e3-4796-9608-8e909409f3fc}</id>
+   <title>Lesson 17</title>
+   <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
+   <text>Anna Anastasia Aaro Barbara Bart Bernard Cecilia Charlot
 Chad Desiree
 Daniel Dick Erja Eero Elvis Faruk Filemon Fiona Gabriel
 Gabby Gideon
@@ -912,77 +912,77 @@ Heikki Hanna Hilkka Iiro Irja Ilmari Jaana Janne Jouni
 Kaarina Kaapo
 Kerttu Lauri Lotta Lyly Mirjami Monica Mauri Nyyrikki Nicky
 Niko
-Ohto Orvokki Ossi Paavali Pauliina P&#xE4;ivi&#xF6; Rafael Rudolf
+Ohto Orvokki Ossi Paavali Pauliina Päiviö Rafael Rudolf
 Ruben Sverker
 Sven Sylvester Tage Torgny Theodor Ulf Uuno Ulrika Valdemar
-V&#xE4;in&#xE4;m&#xF6;
-Vieno Wilhelmiina Wellamo Werneri Yngve Yrj&#xF6; Yvonne Xenobia
+Väinämö
+Vieno Wilhelmiina Wellamo Werneri Yngve Yrjö Yvonne Xenobia
 Xerxes
-Xanadu Zowie Zacharias Zeppo &#xC5;ke &#xC5;sa &#xC5;got &#xC4;rjyl&#xE4; &#xC4;ij&#xE4;
-&#xC4;yr&#xE4;p&#xE4;&#xE4; &#xD6;jvind
-&#xD6;rjan &#xD6;sten Adlercreutz Ahlroos Aho Backman Bergh&#xE4;ll
-B&#xF6;stman Calas
+Xanadu Zowie Zacharias Zeppo Åke Åsa Ågot Ärjylä Äijä
+Äyräpää Öjvind
+Örjan Östen Adlercreutz Ahlroos Aho Backman Berghäll
+Böstman Calas
 Collander Chalyquinn Degerholm Doughan Dufva Eazaz Eerola
 Efrat
-Fabert Fagerstr&#xF6;m Feldt Galetzky Gates Gr&#xF6;nroos Haapalehto
-Hyt&#xF6;nen
-H&#xE4;ggblom It&#xE4;l&#xE4; Ivanoff Iwendorff J&#xE4;yn&#xE4;s J&#xE4;&#xE4;tteenm&#xE4;ki
-J&#xF6;rgensen Kaabar
-Kyll&#xF6;nen K&#xF6;n&#xF6;nen Lyyra L&#xE4;ykki L&#xE4;&#xE4;peri Maltzew M&#xE4;k&#xE4;r&#xE4;inen
-M&#xF6;lsy
-Nyk&#xE4;nen Nyqvist N&#xE4;&#xE4;t&#xE4;nen Oravisto Ostroff Oyer Paader
+Fabert Fagerström Feldt Galetzky Gates Grönroos Haapalehto
+Hytönen
+Häggblom Itälä Ivanoff Iwendorff Jäynäs Jäätteenmäki
+Jörgensen Kaabar
+Kyllönen Könönen Lyyra Läykki Lääperi Maltzew Mäkäräinen
+Mölsy
+Nykänen Nyqvist Näätänen Oravisto Ostroff Oyer Paader
 Packalen
-P&#xF6;ysti Qvanstr&#xF6;m Qvick Qvist Raade Riley R&#xE4;s&#xE4;nen Salmi
+Pöysti Qvanström Qvick Qvist Raade Riley Räsänen Salmi
 Szilvay Seger
-Tanskanen Tyynel&#xE4; T&#xE4;htinen Udd Uhlenius Uosukainen
+Tanskanen Tyynelä Tähtinen Udd Uhlenius Uosukainen
 Vapaavuori Vuori
-V&#xF6;rlin Wahlberg Westberg W&#xE4;re Xerox Xue Xavier Ylenius
-Yl&#xF6;nen Yusuf
-Zetterstr&#xF6;m Zucca Zeus &#xC5;berg &#xC5;bo &#xC5;str&#xF6;m &#xC4;r&#xF6;l&#xE4; &#xC4;yr&#xE4;p&#xE4;&#xE4;
-&#xC4;mm&#xE4;l&#xE4; &#xD6;berg
-&#xD6;sterman &#xD6;&#xF6;rni</text>
-    </lesson>
-    <lesson>
-      <id>{f4e92761-d8d7-4853-9f24-cdac695e95c3}</id>
-      <title>Lesson 18</title>
-      <newCharacters>,.</newCharacters>
-      <text>. . . . . . . . .  , , , , . , . , .. ,, .. ,, .,., ., .,
+Vörlin Wahlberg Westberg Wäre Xerox Xue Xavier Ylenius
+Ylönen Yusuf
+Zetterström Zucca Zeus Åberg Åbo Åström Ärölä Äyräpää
+Ämmälä Öberg
+Österman Öörni</text>
+  </lesson>
+  <lesson>
+   <id>{f4e92761-d8d7-4853-9f24-cdac695e95c3}</id>
+   <title>Lesson 18</title>
+   <newCharacters>,.</newCharacters>
+   <text>. . . . . . . . .  , , , , . , . , .. ,, .. ,, .,., ., .,
 ,. ,. ,. . . . . . . . ... ... ... , , , ,, ,, ,, .... ...
-Muista k&#xE4;ytt&#xE4;&#xE4; pistett&#xE4; aina lauseen lopuksi. Pisteen
-j&#xE4;lkeen on aina v&#xE4;lily&#xF6;nti. Lause alkaa aina isolla
+Muista käyttää pistettä aina lauseen lopuksi. Pisteen
+jälkeen on aina välilyönti. Lause alkaa aina isolla
 alkukirjaimella. Lause on yksi asia. Kirjoitan sinulle nyt
 muutaman esimerkin. Ulla ui. Uiminen on Ullasta hauskaa.
-Ainolla on aurinkoinen hymy. Aamu alkaa aamiaisella.Min&#xE4;
-olen viisas kissa. Min&#xE4; olen Sisu. Sano aa. Sano a. Sano
+Ainolla on aurinkoinen hymy. Aamu alkaa aamiaisella.Minä
+olen viisas kissa. Minä olen Sisu. Sano aa. Sano a. Sano
 apina.
 Aasi ui. Susi ui. Sisu ui.  Ullakon ovessa oli lappu. Alisa
 luki lapun
-Runoissa k&#xE4;ytet&#xE4;&#xE4;n v&#xE4;limerkkin&#xE4; usein pilkkua. Seuraava
+Runoissa käytetään välimerkkinä usein pilkkua. Seuraava
 runo on kopioitu Salaisesta aapisesta.
 Joutsenen hoito
-N&#xE4;in n&#xE4;in n&#xE4;itk&#xF6; sen,
+Näin näin näitkö sen,
 linnun lennon valkoisen.
 Ilmaa alla siipien,
 joutsenen, niin, joutsenen.
-Ee ee etel&#xE4;&#xE4;n,
-etel&#xE4;&#xE4;n lennet&#xE4;&#xE4;n.
+Ee ee etelään,
+etelään lennetään.
 Uupuu voima siipien,
 joutsenen, niin joutsenen.
 Oo oo onnea,
 onnea on matkalla.
 Linnun siiven hoitelen,
 jousenen, niin joutsenen.
-Lee lee lempe&#xE4;,
-lempe&#xE4; on k&#xE4;p&#xE4;l&#xE4;.
-Hell&#xE4; hoito siipien,
+Lee lee lempeä,
+lempeä on käpälä.
+Hellä hoito siipien,
 joutsenen, niin joutsenen.
 Nyt olet harjoitellut kaikki kirjoituksen merkit, niin isot
-kuin pienetkin kirjaimet. Viel&#xE4; voit harjoitella numerot ja
+kuin pienetkin kirjaimet. Vielä voit harjoitella numerot ja
 muut merkit. Opettajasi varmaankin seuraavaksi neuvoo sinua
-k&#xE4;ytt&#xE4;m&#xE4;&#xE4;n @-merkki&#xE4; ja tavuviivaa. Samalla on hyv&#xE4;
-opetella jokin tekstink&#xE4;sittelyohjelma. Onnea
-kirjoitustaidollesi ja voitkin pyyt&#xE4;&#xE4; nyt opettajaltasi
-todistus kymmensormisj&#xE4;rjestelm&#xE4;n osaamisesta.</text>
-    </lesson>
-  </lessons>
+käyttämään @-merkkiä ja tavuviivaa. Samalla on hyvä
+opetella jokin tekstinkäsittelyohjelma. Onnea
+kirjoitustaidollesi ja voitkin pyytää nyt opettajaltasi
+todistus kymmensormisjärjestelmän osaamisesta.</text>
+  </lesson>
+ </lessons>
 </course>
