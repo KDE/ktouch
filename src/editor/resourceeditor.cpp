@@ -40,6 +40,7 @@
 #include "core/dataaccess.h"
 #include "core/resource.h"
 #include "core/course.h"
+#include "core/lesson.h"
 #include "core/keyboardlayout.h"
 #include "core/resourcedataaccess.h"
 #include "core/userdataaccess.h"
@@ -520,6 +521,11 @@ bool ResourceEditor::importCourse(const QString& path)
             {
                 case KMessageBox::Yes:
                     course.setId(QUuid::createUuid());
+                    for (int j = 0; j < course.lessonCount(); j++)
+                    {
+                        Lesson* const lesson = course.lesson(j);
+                        lesson->setId(QUuid::createUuid());
+                    }
                     break;
                 default:
                     return true;
@@ -536,6 +542,11 @@ bool ResourceEditor::importCourse(const QString& path)
             {
                 case KMessageBox::Yes:
                     course.setId(QUuid::createUuid());
+                    for (int j = 0; j < course.lessonCount(); j++)
+                    {
+                        Lesson* const lesson = course.lesson(j);
+                        lesson->setId(QUuid::createUuid());
+                    }
                     break;
                 case KMessageBox::No:
                     overwriteDataIndexCourse = testCourse;
