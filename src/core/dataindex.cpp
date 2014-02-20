@@ -44,7 +44,7 @@ void DataIndex::addCourse(DataIndexCourse* course)
 
 void DataIndex::removeCourse(int index)
 {
-    Q_ASSERT(index >= index && index < m_courses.length());
+    Q_ASSERT(index >= 0 && index < m_courses.length());
     emit coursesAboutToBeRemoved(index, index);
     delete m_courses.at(index);
     m_courses.removeAt(index);
