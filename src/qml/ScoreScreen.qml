@@ -20,7 +20,7 @@ import ktouch 1.0
 import org.kde.qtextracomponents 0.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.ktouch.graph 0.1 as Graph
+import org.kde.charts 0.1 as Charts
 
 FocusScope {
     id: screen
@@ -453,7 +453,7 @@ FocusScope {
 
                     }
 
-                    Graph.LegendItem {
+                    Charts.LegendItem {
                         id: accuracyLegend
                         anchors.verticalCenter: parent.verticalCenter
                         dimension: learningProgressGraph.accuracy
@@ -462,7 +462,7 @@ FocusScope {
                             NumberAnimation {duration: 150}
                         }
                     }
-                    Graph.LegendItem {
+                    Charts.LegendItem {
                         id: charactersPerMinuteLegend
                         anchors.verticalCenter: parent.verticalCenter
                         dimension: learningProgressGraph.charactersPerMinute
@@ -488,13 +488,13 @@ FocusScope {
                             anchors.fill: parent
                             model: learningProgressModel
 
-                            onPointEntered: {
-                                learningProgressPointTooltip.visualParent = point;
+                            onElemEntered: {
+                                learningProgressPointTooltip.visualParent = elem
                                 learningProgressPointTooltip.row = row
                                 learningProgressPointTooltip.open()
                             }
 
-                            onPointExited: {
+                            onElemExited: {
                                 learningProgressPointTooltip.close()
                             }
                         }
@@ -506,14 +506,14 @@ FocusScope {
                         property string title: i18n("Errors")
                         property string iconSource: "office-chart-bar"
 
-                        Graph.BarGraph {
+                        Charts.BarChart{
                             anchors.fill: parent
                             model: errorsModel
                             pitch: 60
                             textRole: 3 // Qt::ToolTipRole
 
                             dimensions: [
-                                Graph.Dimension {
+                                Charts.Dimension {
                                     dataColumn: 0
                                     color: "#ffb12d"
                                     maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
@@ -521,13 +521,13 @@ FocusScope {
                                 }
                             ]
 
-                            onBarEntered: {
-                                errorsTooltip.visualParent = bar;
+                            onElemEntered: {
+                                errorsTooltip.visualParent = elem;
                                 errorsTooltip.row = row
                                 errorsTooltip.open()
                             }
 
-                            onBarExited: {
+                            onElemExited: {
                                 errorsTooltip.close()
                             }
                         }
