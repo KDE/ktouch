@@ -90,8 +90,8 @@ Item {
                     width: parent.width
                     height: parent.height - legend.height - parent.spacing
 
-                    LearningProgressGraph {
-                        id: learningProgressGraph
+                    LearningProgressChart {
+                        id: learningProgressChart
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width
                         height: parent.height - legend.height - parent.spacing
@@ -104,10 +104,10 @@ Item {
                         anchors.horizontalCenter: parent.horizontalCenter
                         spacing: 20
                         Charts.LegendItem {
-                            dimension: learningProgressGraph.accuracy
+                            dimension: learningProgressChart.accuracy
                         }
                         Charts.LegendItem {
-                            dimension: learningProgressGraph.charactersPerMinute
+                            dimension: learningProgressChart.charactersPerMinute
                         }
                     }
                 }

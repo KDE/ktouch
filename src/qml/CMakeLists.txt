@@ -31,7 +31,7 @@ set(ktouch_qml_files
     KeyboardUnavailableNotice.qml
 
     ScoreScreen.qml
-    LearningProgressGraph.qml
+    LearningProgressChart.qml
 
     InformationTable.qml
     InfoItem.qml
