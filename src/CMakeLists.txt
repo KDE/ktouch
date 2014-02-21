@@ -10,7 +10,6 @@ macro_log_feature(X11_Xkbfile_FOUND "libxkbfile" "X Keyboard Extension" "http://
 
 add_subdirectory(qml)
 add_subdirectory(schemata)
-add_subdirectory(graph-plugin)
 
 # set include directories
 include_directories(${QT_INCLUDE} ${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})

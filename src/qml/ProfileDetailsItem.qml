@@ -19,7 +19,7 @@ import QtQuick 1.1
 import org.kde.locale 0.1 as Locale
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.ktouch.graph 0.1 as Graph
+import org.kde.charts 0.1 as Charts
 import ktouch 1.0
 
 Item {
@@ -90,8 +90,8 @@ Item {
                     width: parent.width
                     height: parent.height - legend.height - parent.spacing
 
-                    LearningProgressGraph {
-                        id: learningProgressGraph
+                    LearningProgressChart {
+                        id: learningProgressChart
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width
                         height: parent.height - legend.height - parent.spacing
@@ -103,11 +103,11 @@ Item {
                         id: legend
                         anchors.horizontalCenter: parent.horizontalCenter
                         spacing: 20
-                        Graph.LegendItem {
-                            dimension: learningProgressGraph.accuracy
+                        Charts.LegendItem {
+                            dimension: learningProgressChart.accuracy
                         }
-                        Graph.LegendItem {
-                            dimension: learningProgressGraph.charactersPerMinute
+                        Charts.LegendItem {
+                            dimension: learningProgressChart.charactersPerMinute
                         }
                     }
                 }

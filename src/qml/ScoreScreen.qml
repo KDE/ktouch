@@ -20,7 +20,7 @@ import ktouch 1.0
 import org.kde.qtextracomponents 0.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.ktouch.graph 0.1 as Graph
+import org.kde.charts 0.1 as Charts
 
 FocusScope {
     id: screen
@@ -105,32 +105,32 @@ FocusScope {
     }
 
     Balloon {
-        id: graphTypeDialog
-        visualParent: graphTypeButton
+        id: chartTypeDialog
+        visualParent: chartTypeButton
 
         Column {
-            id: graphTypeDialogContents
+            id: chartTypeDialogContents
 
             PlasmaComponents.ToolButton {
-                id: progressGraphButton
+                id: progressChartButton
                 property Item tab: learningProgressTab
-                width: Math.max(minimumWidth, errorsGraphButton.minimumWidth)
+                width: Math.max(minimumWidth, errorsChartButton.minimumWidth)
                 text: tab.title
                 iconSource: tab.iconSource
                 onClicked: {
                     tabGroup.currentTab = tab
-                    graphTypeDialog.close()
+                    chartTypeDialog.close()
                 }
             }
             PlasmaComponents.ToolButton {
-                id: errorsGraphButton
+                id: errorsChartButton
                 property Item tab: errorsTab
-                width: Math.max(minimumWidth, progressGraphButton.minimumWidth)
+                width: Math.max(minimumWidth, progressChartButton.minimumWidth)
                 text: tab.title
                 iconSource: tab.iconSource
                 onClicked: {
                     tabGroup.currentTab = tab
-                    graphTypeDialog.close()
+                    chartTypeDialog.close()
                 }
             }
         }
@@ -230,7 +230,7 @@ FocusScope {
         id: toggleLearningProgressFilterAnimation
         NumberAnimation
         {
-            target: learningProgressGraph
+            target: learningProgressChart
             property: "opacity"
             to: 0
             duration: 250
@@ -244,7 +244,7 @@ FocusScope {
         }
         NumberAnimation
         {
-            target: learningProgressGraph
+            target: learningProgressChart
             property: "opacity"
             to: 1
             duration: 250
@@ -385,7 +385,7 @@ FocusScope {
                 }
 
                 Row {
-                    id: graphControls
+                    id: chartControls
                     spacing: 5
                     width: parent.width
 
@@ -398,18 +398,18 @@ FocusScope {
                     }
 
                     PlasmaComponents.ToolButton {
-                        id: graphTypeButton
+                        id: chartTypeButton
                         anchors.verticalCenter: parent.verticalCenter
                         text: tabGroup.currentTab.title
                         iconSource: tabGroup.currentTab.iconSource
-                        width: graphTypeDialogContents.width
-                        checked: graphTypeDialog.status === PlasmaComponents.DialogStatus.Open || graphTypeDialog.status === PlasmaComponents.DialogStatus.Opening
+                        width: chartTypeDialogContents.width
+                        checked: chartTypeDialog.status === PlasmaComponents.DialogStatus.Open || chartTypeDialog.status === PlasmaComponents.DialogStatus.Opening
                         onClicked: {
                             if (checked) {
-                                graphTypeDialog.close()
+                                chartTypeDialog.close()
                             }
                             else {
-                                graphTypeDialog.open()
+                                chartTypeDialog.open()
                             }
 
                         }
@@ -449,23 +449,23 @@ FocusScope {
 
                     Item {
                         height: parent.height
-                        width: parent.width - showLabel.width - graphTypeButton.width - overLabel.width - learningProgressFilterButton.width - accuracyLegend.width - charactersPerMinuteLegend.width - (parent.children.length - 1) * parent.spacing
+                        width: parent.width - showLabel.width - chartTypeButton.width - overLabel.width - learningProgressFilterButton.width - accuracyLegend.width - charactersPerMinuteLegend.width - (parent.children.length - 1) * parent.spacing
 
                     }
 
-                    Graph.LegendItem {
+                    Charts.LegendItem {
                         id: accuracyLegend
                         anchors.verticalCenter: parent.verticalCenter
-                        dimension: learningProgressGraph.accuracy
+                        dimension: learningProgressChart.accuracy
                         opacity: tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
                     }
-                    Graph.LegendItem {
+                    Charts.LegendItem {
                         id: charactersPerMinuteLegend
                         anchors.verticalCenter: parent.verticalCenter
-                        dimension: learningProgressGraph.charactersPerMinute
+                        dimension: learningProgressChart.charactersPerMinute
                         opacity: tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
@@ -476,25 +476,25 @@ FocusScope {
                 PlasmaComponents.TabGroup {
                     id: tabGroup
                     width: parent.width
-                    height: content.height - caption.height - statsBox.height - contentSpacer.height - graphControls.height - (content.children.length - 1) * content.spacing
+                    height: content.height - caption.height - statsBox.height - contentSpacer.height - chartControls.height - (content.children.length - 1) * content.spacing
 
                     PlasmaComponents.Page {
                         id: learningProgressTab
                         property string title: i18n("Progress")
                         property string iconSource: "office-chart-area"
 
-                        LearningProgressGraph {
-                            id: learningProgressGraph
+                        LearningProgressChart {
+                            id: learningProgressChart
                             anchors.fill: parent
                             model: learningProgressModel
 
-                            onPointEntered: {
-                                learningProgressPointTooltip.visualParent = point;
+                            onElemEntered: {
+                                learningProgressPointTooltip.visualParent = elem
                                 learningProgressPointTooltip.row = row
                                 learningProgressPointTooltip.open()
                             }
 
-                            onPointExited: {
+                            onElemExited: {
                                 learningProgressPointTooltip.close()
                             }
                         }
@@ -506,14 +506,14 @@ FocusScope {
                         property string title: i18n("Errors")
                         property string iconSource: "office-chart-bar"
 
-                        Graph.BarGraph {
+                        Charts.BarChart{
                             anchors.fill: parent
                             model: errorsModel
                             pitch: 60
                             textRole: 3 // Qt::ToolTipRole
 
                             dimensions: [
-                                Graph.Dimension {
+                                Charts.Dimension {
                                     dataColumn: 0
                                     color: "#ffb12d"
                                     maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
@@ -521,13 +521,13 @@ FocusScope {
                                 }
                             ]
 
-                            onBarEntered: {
-                                errorsTooltip.visualParent = bar;
+                            onElemEntered: {
+                                errorsTooltip.visualParent = elem;
                                 errorsTooltip.row = row
                                 errorsTooltip.open()
                             }
 
-                            onBarExited: {
+                            onElemExited: {
                                 errorsTooltip.close()
                             }
                         }
