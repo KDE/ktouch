@@ -12,8 +12,9 @@ KTouch has the following build dependencies:
  * KDElibs >= 4.10.0
  * Qt >= 4.8 (but not Qt 5.x)
  * CMake >= 2.8.9
+ * libxkbfile (optional, for keyboard layout auto-detection)
 
-If the build requirements are met, KTouch can be build and installed with:
+If the build requirements are met, KTouch can be built and installed with:
 
 $ mkdir build
 $ cd build/
