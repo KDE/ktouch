@@ -27,7 +27,7 @@
 static const char description[] =
     I18N_NOOP("Learn and practice typewriting");
 
-static const char version[] = "2.2.0";
+static const char version[] = "2.3.0";
 
 int main(int argc, char **argv)
 {
