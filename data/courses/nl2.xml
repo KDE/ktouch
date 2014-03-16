@@ -8,14 +8,14 @@ De woordkeuze werd gebaseerd op het
 Perl Script geschreven door Steinar Theigmann &amp; Håvard Frøiland.
 
 Kenmerken van dit oefenbestand zijn :
-                          1. Een zeer geleidelijke overgang van het 
+                          1. Een zeer geleidelijke overgang van het
                              ene niveau naar het andere, vooral in het
                              begin.
                           2. Een grote nadruk op het ritme
                           3. Herhaling
 
 Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
-Dit document is een onderdeel van het KTouch programma en valt onder de 
+Dit document is een onderdeel van het KTouch programma en valt onder de
 bepalingen van de GNU General Public License versie 2 of recenter.</description>
  <keyboardLayout>nl</keyboardLayout>
  <lessons>
@@ -152,7 +152,7 @@ stout stout stout kleur kleur kleur kleur lees lees lees
 meel meel meel meel smelt smelt smelt smelt keer keer keer
 streek streek streek hees hees hees goed goed goed goed hout hout
 goud goud houd houd goud koud koud koud fout fout fout
-koer koer koer koers koers koers koers 
+koer koer koer koers koers koers koers
 tikje tikje tikje tikje modder modder modder modder
 liedje liedje liedje liedje soort soort soort soort</text>
   </lesson>
@@ -228,7 +228,7 @@ Doe maar wat Ga voort Mijn hond heet Rex</text>
    <id>{adabab65-7502-402b-875b-d6a104d61c09}</id>
    <title>leestekens</title>
    <newCharacters>,.!?:";</newCharacters>
-   <text>Dit is een, en dat is twee. 
+   <text>Dit is een, en dat is twee.
 Jan, Mieke, Maaike, Steffen en Rex, de hond, gingen wandelen.
 Dat is straf! Je bent helemaal nat! Wat heb je nu weer gedaan?
 Ik heb een heleboel dieren gezien: katten, honden, vogels...
