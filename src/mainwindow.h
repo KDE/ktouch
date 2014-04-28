@@ -61,6 +61,7 @@ private slots:
     void setFullscreen(bool fullscreen);
 private:
     void init();
+    bool testKCMAvailibility(const QString& name);
     QDeclarativeView* m_view;
     KActionCollection* m_actionCollection;
     QMenu* m_menu;

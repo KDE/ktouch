@@ -53,6 +53,8 @@
 #else
 #endif
 
+const QString keyboardKCMName = "kcm_keyboard";
+
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
     m_view(new QDeclarativeView(this)),
@@ -173,7 +175,7 @@ void MainWindow::configureKeyboard()
     QPointer<KCMultiDialog> kcm = new KCMultiDialog(this);
 
     kcm->setWindowTitle(i18n("Configure Keyboard"));
-    kcm->addModule("kcm_keyboard");
+    kcm->addModule(keyboardKCMName);
     kcm->exec();
 
     delete kcm;
@@ -199,9 +201,12 @@ void MainWindow::init()
 
 
 #ifdef KTOUCH_BUILD_WITH_X11
-    KAction* configureKeyboardAction = new KAction(i18n("Configure Keyboard..."), this);
-    m_menu->addAction(configureKeyboardAction);
-    connect(configureKeyboardAction, SIGNAL(triggered()), SLOT(configureKeyboard()));
+    if (testKCMAvailibility(keyboardKCMName))
+    {
+        KAction* configureKeyboardAction = new KAction(i18n("Configure Keyboard..."), this);
+        m_menu->addAction(configureKeyboardAction);
+        connect(configureKeyboardAction, SIGNAL(triggered()), SLOT(configureKeyboard()));
+    }
 #else
     m_menu->addMenu(m_keyboardLayoutMenu);
 #endif
@@ -219,4 +224,16 @@ void MainWindow::init()
     m_view->rootContext()->setContextObject(this);
     m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
     m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/main.qml")));
+}
+
+bool MainWindow::testKCMAvailibility(const QString& name)
+{
+    KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
+
+    if (!service)
+    {
+        return false;
+    }
+
+    return service->hasServiceType("KCModule") && !service->noDisplay();
 }
