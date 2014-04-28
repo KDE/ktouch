@@ -28,4 +28,6 @@ Runtime dependencies
 To run KTouch, additional libraries have to installed.
  * KDE-runtime >= 4.10.0
  * kqtquickcharts >= 4.12.0 (git://anongit.kde.org/kqtquickcharts)
+ * kde-workspace >= 4.10.0 (optional, for keyboard layout configuration
+   from within the application)
 
