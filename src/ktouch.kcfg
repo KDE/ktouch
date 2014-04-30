@@ -11,6 +11,10 @@
     </entry>
   </group>
   <group name="Training">
+    <entry name="EnforceTypingErrorCorrection" type="Bool">
+      <label>Controls whether typing errors have to be corrected or not.</label>
+      <default>true</default>
+    </entry>
     <entry name="ShowKeyboard" type="Bool">
       <label>Controls the visibility of the keyboard during training.</label>
       <default>true</default>
