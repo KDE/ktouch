@@ -104,6 +104,9 @@ QString TrainingLineCore::preeditString() const
 
 bool TrainingLineCore::isCorrect() const
 {
+    if (!Preferences::enforceTypingErrorCorrection())
+        return true;
+
     return m_actualLine == m_referenceLine.left(m_actualLine.length());
 }
 
@@ -143,7 +146,7 @@ void TrainingLineCore::keyPressEvent(QKeyEvent* event)
         return;
     }
 
-    if (m_referenceLine == m_actualLine)
+    if (isCorrect() && m_referenceLine.length() == m_actualLine.length())
     {
         if (Preferences::nextLineWithReturn())
         {
@@ -293,7 +296,7 @@ void TrainingLineCore::add(const QString& text)
             m_trainingStats->logCharacter(referenceCharacter, characterIsCorrect? TrainingStats::CorrectCharacter: TrainingStats::IncorrectCharacter);
         }
 
-        correct = correct && characterIsCorrect;
+        correct = correct && (!Preferences::enforceTypingErrorCorrection() || characterIsCorrect);
 
         if (correct)
         {
@@ -313,7 +316,7 @@ void TrainingLineCore::backspace()
 {
     const int actualLength = m_actualLine.length();
 
-    if (actualLength > 0)
+    if (actualLength > 0 && Preferences::enforceTypingErrorCorrection())
     {
         m_actualLine = m_actualLine.left(actualLength - 1);
         emit actualLineChanged();
@@ -329,7 +332,7 @@ void TrainingLineCore::deleteStartOfWord()
 {
     const int actualLength = m_actualLine.length();
 
-    if (actualLength > 0)
+    if (actualLength > 0 && Preferences::enforceTypingErrorCorrection())
     {
         QTextBoundaryFinder finder(QTextBoundaryFinder::Word, m_actualLine);
 
