@@ -52,8 +52,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-11-07</date>
-<releaseinfo>2.2.0</releaseinfo>
+<date>2014-05-01</date>
+<releaseinfo>2.3.0</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -513,6 +513,9 @@ format="PNG"/></imageobject>
 <textobject><phrase>Training options</phrase></textobject>
 </mediaobject>
 </screenshot>
+<para>
+  The <guilabel>Enforce correction of typing errors</guilabel> check box can be used to control whether typing errors have to be corrected.
+</para>
 <para>
   You can control the visibility of statistics and keyboard panes during
 training using <guilabel>Show keyboard</guilabel> and <guilabel>Show real-time
