@@ -32,6 +32,11 @@ Column {
     property alias doneButtonText: doneBtn.text
     signal done()
 
+    onSkillLevelChanged: {
+        beginnerRadioButton.checked = skillLevel == Profile.Beginner
+        advancedRadioButton.checked = skillLevel == Profile.Advanced
+    }
+
     spacing: 15
 
     PlasmaComponents.Label {
@@ -46,80 +51,39 @@ Column {
         placeholderText: i18n("Name")
     }
 
-    PlasmaComponents.RadioButton {
-        id: beginnerRadioBox
-        onClicked: {
+    DetailedRadioButton {
+        id: beginnerRadioButton
+        width: parent.width
+        enabled: root.skillLevelSelectionEnabled
+        label: i18n("I have no or only very little experience in machine typing")
+        hint: i18n("Lessons are unlocked as your typing skills improve over time.")
+        onCheckedChanged: {
             if (checked) {
-                advancedRadioBox.checked = false;
                 root.skillLevel = Profile.Beginner
-            }
-            else {
-                checked = true
+                advancedRadioButton.checked = false
             }
         }
+    }
+
+    DetailedRadioButton {
+        id: advancedRadioButton
+        width: parent.width
         enabled: root.skillLevelSelectionEnabled
-        checked: root.skillLevel === Profile.Beginner
-        width: parent.width
-        text: i18n("I have no or only very little experience in machine typing")
-    }
-
-    Row {
-        width: parent.width
-
-        Item {
-            width: 30
-            height: parent.height
-        }
-
-        PlasmaComponents.Label {
-            font.pointSize: theme.smallestFont.pointSize
-            height: paintedHeight
-            opacity: advancedRadioBox.opacity
-            font.italic: true
-            text: i18n("Lessons are unlocked as your typing skills improve over time.")
-        }
-    }
-
-    PlasmaComponents.RadioButton {
-        id: advancedRadioBox
-        onClicked: {
+        label: i18n("I am an experienced machine typist and want to improve my skills")
+        hint: i18n("All lessons are unlocked immediately.")
+        onCheckedChanged: {
             if (checked) {
-                beginnerRadioBox.checked = false;
                 root.skillLevel = Profile.Advanced
-            }
-            else {
-                checked = true
+                beginnerRadioButton.checked = false
             }
         }
-        enabled: root.skillLevelSelectionEnabled
-        checked: root.skillLevel === Profile.Advanced
-        width: parent.width
-        text: i18n("I am an experienced machine typist and want to improve my skills")
-    }
-
-    Row {
-        width: parent.width
-
-        Item {
-            width: 30
-            height: parent.height
-        }
-
-        PlasmaComponents.Label {
-            font.pointSize: theme.smallestFont.pointSize
-            height: paintedHeight
-            opacity: advancedRadioBox.opacity
-            font.italic: true
-            text: i18n("All lessons are unlocked immediately.")
-        }
-
     }
 
     PlasmaComponents.Button {
         id: doneBtn
         anchors.horizontalCenter: parent.horizontalCenter
         text: i18n("Done")
-        enabled: nameTextField.text !== "" && (beginnerRadioBox.checked || advancedRadioBox.checked)
+        enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
         iconSource: "dialog-ok"
         onClicked: done()
     }

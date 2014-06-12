@@ -33,6 +33,7 @@ set(ktouch_qml_files
     ScoreScreen.qml
     LearningProgressChart.qml
 
+    DetailedRadioButton.qml
     InformationTable.qml
     InfoItem.qml
     InlineToolbar.qml
