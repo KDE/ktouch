@@ -1353,7 +1353,7 @@ NTV  Nachrichten Television
 PLZ  Postleitzahl
 PVC  Polyvinyl-Chlorid (Kunststoff)
 RAF  Rote Armee Fraktion (linksradikale deutsche
-     Terrorvereinigung aus den70ern)
+     Terrorvereinigung aus den 70ern)
 SOS  Morsenotruf ... --- ... (Eselsbrücke: "Save Our Souls")
 THW  Technisches Hilfswerk
 TNT  Trinitrotoluol (Sprengstoff)
@@ -2539,7 +2539,7 @@ passwd ändert das aktuelle Passwort des jeweiligen
 Benutzers.
 ps Liefert eine Liste aller Prozesse.
 rm löscht Dateien.
-rmdir Löscht ein Verzeichnis mit dessen Inhalt.
+rmdir Löscht ein leeres Verzeichnis.
 su Wechselt den aktuellen Benutzer.
 sudo Wird dieses Kommando vor ein anderes geschrieben (mit
 Leerzeichen) so wird es mit root-Rechten (Administrator)
@@ -2577,7 +2577,7 @@ cat [Datei] Zeigt Inhalt einer Datei. cat 123.txt
 more [Datei] Zeigt Inhalt einer Datei seitenweise an. more
 123.txt
 touch [Datei] Erzeugt leere Datei. touch 123.txt
-whereis [Prog] Sucht nach Programm. whereis Firefox
+whereis [Prog] Sucht nach Programm. whereis firefox
 find . | grep [DATEI] sucht eine Datei im Verzeichnis. find
 . | grep 123.txt
 grep [KEY] [DATEI] Sucht nach Begriff in einer Datei. grep
