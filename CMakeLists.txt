@@ -19,5 +19,6 @@ add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
 install( PROGRAMS ktouch.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install(FILES ktouch.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
 
 macro_display_feature_log()
