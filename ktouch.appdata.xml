@@ -5,7 +5,9 @@
   <project_license>GPL-2.0+</project_license>
   <name>KTouch</name>
   <name xml:lang="cs">KTouch</name>
+  <name xml:lang="es">KTouch</name>
   <name xml:lang="fi">KTouch</name>
+  <name xml:lang="lt">KTouch</name>
   <name xml:lang="nds">KTouch</name>
   <name xml:lang="nl">KTouch</name>
   <name xml:lang="pl">KTouch</name>
@@ -17,6 +19,7 @@
   <name xml:lang="x-test">xxKTouchxx</name>
   <summary>Touch Typing Tutor</summary>
   <summary xml:lang="cs">Výuka psaní na stroji</summary>
+  <summary xml:lang="es">Tutor de mecanografía al tacto</summary>
   <summary xml:lang="fi">Konekirjoituksen ohjaaja</summary>
   <summary xml:lang="nds">Schriefmaschien öven</summary>
   <summary xml:lang="nl">Typcursus</summary>
