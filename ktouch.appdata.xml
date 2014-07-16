@@ -5,6 +5,8 @@
   <project_license>GPL-2.0+</project_license>
   <name>KTouch</name>
   <name xml:lang="cs">KTouch</name>
+  <name xml:lang="de">KTouch</name>
+  <name xml:lang="en-GB">KTouch</name>
   <name xml:lang="es">KTouch</name>
   <name xml:lang="fi">KTouch</name>
   <name xml:lang="lt">KTouch</name>
@@ -19,6 +21,7 @@
   <name xml:lang="x-test">xxKTouchxx</name>
   <summary>Touch Typing Tutor</summary>
   <summary xml:lang="cs">Výuka psaní na stroji</summary>
+  <summary xml:lang="en-GB">Touch Typing Tutor</summary>
   <summary xml:lang="es">Tutor de mecanografía al tacto</summary>
   <summary xml:lang="fi">Konekirjoituksen ohjaaja</summary>
   <summary xml:lang="nds">Schriefmaschien öven</summary>
@@ -32,6 +35,7 @@
   <summary xml:lang="x-test">xxTouch Typing Tutorxx</summary>
   <description>
     <p>KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.</p>
+    <p xml:lang="en-GB">KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyse your progress.</p>
     <p xml:lang="nds">KTouch is en Programm, mit dat Du Schriefmaschien schrieven lehren kannst. Dat stellt Di de Öövtexten praat un passt de Sworheit dor na an, wo goot Du al büst. Dat wiest Dien Tastatuur, de Tast, de Du drücken schallst un den richtigen Finger dor för. Du lehrst dat Tippen mit all Fingers Schritt för Schritt, un ok, ahn dat Du na nerrn op de Tasten un Dien Fingers kieken muttst. Dat is goot för jünger un ok för öller Lüüd un en goot Tipplehrer för Scholen un Universiteten. Dor sünd KTouch en Barg verscheden Lexen in vele Spraken bi un en kommood Lexeneditor. dat ünnerstütt verscheden Tastanornen, Du kannst ok Dien egen Anornen opstellen. Bi't Öven sammelt KTouch Statistikinformatschonen, mit de Du oder Dien Lehrer Dien Vörankamen bekieken kannst.</p>
     <p xml:lang="nl">KTouch is een oefenprogramma voor blindtypen. Het geeft u oefenteksten en past het oefenniveau aan aan uw huidige vaardigheid. Het toetsenbord wordt getoond, en de volgende toets die u moet aanslaan, en met welke vinger. U leert met alle vingers te typen, stap voor stap, zonder dat u op het toetsenbord naar de toetsen kijkt. Het is voor alle leeftijden geschikt, en perfect om te leren typen op school, de universiteit, of thuis. KTouch komt met tientallen verschillende cursussen in vele talen, en bevat een handige cursusbewerker. Diverse toetsenbordindelingen worden ondersteund, en u kunt ook nieuwe zelf aanmaken. Tijdens de oefeningen verzamelt KTouch uitvoerige statistische informatie, voor het beoordelen van uw vorderingen.</p>
     <p xml:lang="pl">KTouch jest trenerem bezwzrokowego pisania na klawiaturze. Dostarcza teksty do ćwiczeń i dostosowuje się do poziomu użytkownika. Wyświetla klawiaturę, wskazuje, które klawisze nacisnąć i jakim palcem. Dzięki programowi uczysz się pisać wszystkimi palcami. Jest wygodny dla użytkowników w różnym wieku i idealny do ćwiczenia pisania w szkołach, uniwersytetach i czasie prywatnym. KTouch jest dostarczany z wieloma kursami w różnych językach oraz wygodnym edytorem kursów. Obsługiwane są różne układy klawiatury, można także dodawać układy stworzone przez użytkownika. Podczas ćwiczeń, KTouch zbiera wiele informacji statystycznych, aby pomóc tobie lub twojemu nauczycielowi analizować twój postęp.</p>
