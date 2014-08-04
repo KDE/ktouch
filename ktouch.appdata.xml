@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KTouch</name>
+  <name xml:lang="ca">KTouch</name>
   <name xml:lang="cs">KTouch</name>
   <name xml:lang="de">KTouch</name>
   <name xml:lang="en-GB">KTouch</name>
@@ -22,6 +23,7 @@
   <name xml:lang="uk">KTouch</name>
   <name xml:lang="x-test">xxKTouchxx</name>
   <summary>Touch Typing Tutor</summary>
+  <summary xml:lang="ca">Tutor de mecanografia</summary>
   <summary xml:lang="cs">Výuka psaní na stroji</summary>
   <summary xml:lang="de">Schreibmaschinenkurs</summary>
   <summary xml:lang="en-GB">Touch Typing Tutor</summary>
@@ -40,6 +42,7 @@
   <summary xml:lang="x-test">xxTouch Typing Tutorxx</summary>
   <description>
     <p>KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.</p>
+    <p xml:lang="ca">El KTouch és un entrenador mecanogràfic per aprendre mecanografia. Proporciona text per entrenar i s'ajusta a diferents nivells en funció del vostre nivell. Mostra el teclat i indica la tecla següent a prémer i quin és el dit correcte a utilitzar. Aprendreu mecanografia amb tots els dits, pas a pas, sense haver de mirar el teclat per cercar les tecles. És apropiat per a totes les edats i és el tutor de mecanografia perfecte per escoles, universitats i ús personal. El KTouch es distribueix amb dotzenes de cursos diferents en molts idiomes i un editor còmode de cursos. S'accepten diferents disposicions de teclat i es poden crear noves disposicions definides per l'usuari. Durant l'entrenament, el KTouch acumula informació estadística global pr ajudar-vos a analitzar el progrés.</p>
     <p xml:lang="en-GB">KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyse your progress.</p>
     <p xml:lang="et">KTouch on rakendus, mis aitab omandada masinkirjaoskust. See pakub harjutamiseks tekste ning kohandab tasemeid vastavalt sellele, millised on sinu oskused. Rakendus näitab klaviatuuri ning vihjab, millist klahvi ja millise sõrmega järgmisena vajutada. Tasapisi omandad rakenduse abil oskuse kirjutada kõigi kümne sõrmega, ilma et peaksid klaviatuurile vaatamagi. KTouch sobib igas vanuses õppurile ning sobib ühtmoodi hästi kasutada nii koolides, ülikoolides kui ka kodus. Rakendusega on kaasa kümneid kursuseid paljudes keeltes ning mugav kursuseredaktor. Toetatud on paljud klaviatuuripaigutused ja luua saab ka uusi, kasutaja enda määratud paigutusi. Harjutamise käigus kogub KTouch põhjaliku statistika, mis aitab sul endal või su õpetajal edenemist hinnata ja analüüsida.</p>
     <p xml:lang="fi">KTouch on ohjelma kymmensormijärjestelmän harjoittelemiseen. Se tarjoaa harjoitustekstiä ja säätää vaikeustason riippuen käyttäjän taidoista. Se näyttää näppäimistö ja ilmaisee, mitä näppäintä painaa seuraavaksi ja millä sormella. Opit kirjoittamaan kaikilla sormilla, vaihe vaiheelta, katsomatta näppäimistöön etsimään näppäimiä. KTouch sopii kaikenikäisille omaan, koulujen ja yliopistojen käyttöön. KTouchin mukana tulee kymmeniä kursseja eri kielille ja kurssimuokkain, jota on mukava käyttää. Se tukee useita näppäimistöasetteluita ja käyttäjä voi luoda uusia. Harjoituksen aikana KTouch kerää kattavat tilastot, jotka auttavat harjoittelijaa tai hänen opettajaansa analysoimaan edistymistä.</p>
