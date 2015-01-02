@@ -98,6 +98,24 @@ Item {
                     hide()
                 }
             }
+
+            Keys.onDownPressed: {
+                if (resumeButton.focus)
+                    restartButton.focus = true;
+                else if (restartButton.focus)
+                    returnButton.focus = true;
+            }
+
+            Keys.onUpPressed: {
+                if (restartButton.focus)
+                    resumeButton.focus = true;
+                else if (returnButton.focus)
+                    restartButton.focus = true;
+            }
+
+            Keys.onEscapePressed: {
+                hide()
+            }
         }
     }
 
