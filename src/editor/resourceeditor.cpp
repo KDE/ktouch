@@ -534,7 +534,7 @@ bool ResourceEditor::importCourse(const QString& path)
 
         if (testCourse->source() == DataIndex::UserResource &&  testCourse->id() == course.id())
         {
-            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected course is already present as an user course."), QString(),
+            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected course is already present as a user course."), QString(),
                                                KGuiItem(i18n("Import as new course"), "dialog-ok"),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
@@ -597,7 +597,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
 
         if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
-            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected keyboard layout is already present as an user keyboard layout."), QString(),
+            switch (KMessageBox::questionYesNoCancel(this, i18n("The selected keyboard layout is already present as a user keyboard layout."), QString(),
                                                KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
