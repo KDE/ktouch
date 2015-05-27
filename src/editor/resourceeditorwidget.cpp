@@ -17,8 +17,10 @@
 
 #include "resourceeditorwidget.h"
 
+#include <QAction>
+
 #include <KCategoryDrawer>
-#include <KAction>
+#include <KLocalizedString>
 #include <KStandardAction>
 
 #include "core/dataindex.h"
@@ -26,8 +28,8 @@
 ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     QWidget(parent),
     Ui::ResourceEditorWidget(),
-    m_undeleteAction(new KAction(KIcon("edit-undo"), i18n("Restore"), this)),
-    m_clearMsgAction(new KAction(KIcon("window-close"), i18n("Dismiss"), this))
+    m_undeleteAction(new QAction(QIcon::fromTheme("edit-undo"), i18n("Restore"), this)),
+    m_clearMsgAction(new QAction(QIcon::fromTheme("window-close"), i18n("Dismiss"), this))
 {
     setupUi(this);
 
@@ -35,7 +37,7 @@ ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     m_messageWidget->setCloseButtonVisible(false);
 
     m_resourceView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    m_resourceView->setCategoryDrawer(new KCategoryDrawerV3(m_resourceView));
+    m_resourceView->setCategoryDrawer(new KCategoryDrawer(m_resourceView));
     m_resourceView->setMouseTracking(true);
     m_resourceView->setVerticalScrollMode(QListView::ScrollPerPixel);
     m_resourceView->setMinimumWidth(200);

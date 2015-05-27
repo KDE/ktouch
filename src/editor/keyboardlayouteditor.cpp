@@ -20,14 +20,12 @@
 
 #include <math.h>
 
-#include <qdeclarative.h>
-
-#include <QDeclarativeContext>
 #include <QUndoStack>
+#include <QStandardPaths>
+#include <QQmlContext>
 
-#include <KStandardDirs>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <KDebug>
 
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -53,8 +51,8 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
     Application::setupDeclarativeBindings(m_view->engine());
 
-    m_view->rootContext()->setContextObject(this);
-    m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));
+    m_view->rootContext()->setContextProperty("keyboardLayoutEditor", this);
+    m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/KeyboardLayoutEditor.qml")));
 
     connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
     connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));

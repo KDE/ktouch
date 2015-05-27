@@ -103,5 +103,5 @@ QColor PreferencesProxy::fingerColor(int index)
 
 void PreferencesProxy::writeConfig()
 {
-    Preferences::self()->writeConfig();
+    Preferences::self()->save();
 }

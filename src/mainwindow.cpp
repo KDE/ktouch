@@ -17,17 +17,15 @@
 
 #include "mainwindow.h"
 
-#include <QDeclarativeView>
-#include <QDeclarativeContext>
-#include <QGLWidget>
+#include <QQuickWidget>
 #include <QMenu>
 #include <QPointer>
 #include <QVariant>
+#include <QDialogButtonBox>
+#include <QStandardPaths>
+#include <QMenu>
+#include <QQmlContext>
 
-#include <KDialog>
-#include <KStandardDirs>
-#include <KMenu>
-#include <KCmdLineArgs>
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KHelpMenu>
@@ -35,6 +33,7 @@
 #include <KShortcutsDialog>
 #include <KConfigDialog>
 #include <KCMultiDialog>
+#include <KLocalizedString>
 
 #include "editor/resourceeditor.h"
 #include "application.h"
@@ -49,18 +48,14 @@
 #include "keyboardlayoutmenu.h"
 #endif
 
-#ifdef KTOUCH_BUILD_WITH_X11
-#else
-#endif
 
 const QString keyboardKCMName = "kcm_keyboard";
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
-    m_view(new QDeclarativeView(this)),
+    m_view(new QQuickWidget(this)),
     m_actionCollection(new KActionCollection(this)),
-    m_menu(new QMenu(this)),
-    m_useOpenGLViewport(false)
+    m_menu(new QMenu(this))
 {
 #ifdef KTOUCH_BUILD_WITH_X11
     m_XEventNotifier = new XEventNotifier();
@@ -96,20 +91,6 @@ DataIndex *MainWindow::dataIndex()
     return Application::dataIndex();
 }
 
-bool MainWindow::useOpenGLViewport() const
-{
-    return m_useOpenGLViewport;
-}
-
-void MainWindow::setUseOpenGLViewport(bool useOpenGLViewport)
-{
-    if (useOpenGLViewport != m_useOpenGLViewport)
-    {
-        m_useOpenGLViewport = useOpenGLViewport;
-        m_view->setViewport(useOpenGLViewport? new QGLWidget(): new QWidget());
-    }
-}
-
 void MainWindow::showMenu(int xPos, int yPos)
 {
     m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
@@ -117,10 +98,10 @@ void MainWindow::showMenu(int xPos, int yPos)
 
 void MainWindow::showResourceEditor()
 {
-    QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+    QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
     if (resourceEditorRef.isNull())
     {
-        resourceEditorRef = new ResourceEditor();
+        resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
     }
 
     ResourceEditor* resourceEditor = resourceEditorRef.data();
@@ -131,19 +112,21 @@ void MainWindow::showResourceEditor()
 
 bool MainWindow::showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout)
 {
-    KDialog* dialog = new KDialog(this);
-    CustomLessonEditorWidget* editor = new CustomLessonEditorWidget(dialog);
+    QDialog* dialog = new QDialog(this);
+    QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dialog);
+    CustomLessonEditorWidget* editor = new CustomLessonEditorWidget(buttonBox);
 
-    dialog->setWindowTitle(i18n("Edit Custom Lesson"));
-    dialog->setButtons(KDialog::Ok | KDialog::Cancel);
-    dialog->setMainWidget(editor);
+    buttonBox->setWindowTitle(i18n("Edit Custom Lesson"));
 
-    connect(editor, SIGNAL(validChanged(bool)), dialog, SLOT(enableButtonOk(bool)));
+
+    connect(editor, &CustomLessonEditorWidget::validChanged, buttonBox->button(QDialogButtonBox::Ok), &QPushButton::setEnabled);
+
 
     editor->setLesson(lesson);
     editor->setKeyboardLayout(keyboardLayout);
 
-    bool result = dialog->exec() == KDialog::Accepted;
+
+    bool result = dialog->exec() == QDialog::Accepted;
 
     delete dialog;
 
@@ -191,8 +174,8 @@ void MainWindow::init()
     m_actionCollection->addAssociatedWidget(this);
     m_menu->addAction(KStandardAction::fullScreen(this, SLOT(setFullscreen(bool)), this, m_actionCollection));
     m_menu->addSeparator();
-    KAction* editorAction = new KAction(i18n("Course and Keyboard Layout Editor..."), this);
-    connect(editorAction, SIGNAL(triggered()), SLOT(showResourceEditor()));
+    QAction* editorAction = new QAction(i18n("Course and Keyboard Layout Editor..."), this);
+    connect(editorAction, &QAction::triggered, this, &MainWindow::showResourceEditor);
     m_actionCollection->addAction("editor", editorAction);
     m_menu->addAction(editorAction);
     m_menu->addSeparator();
@@ -203,16 +186,16 @@ void MainWindow::init()
 #ifdef KTOUCH_BUILD_WITH_X11
     if (testKCMAvailibility(keyboardKCMName))
     {
-        KAction* configureKeyboardAction = new KAction(i18n("Configure Keyboard..."), this);
+        QAction* configureKeyboardAction = new QAction(i18n("Configure Keyboard..."), this);
         m_menu->addAction(configureKeyboardAction);
-        connect(configureKeyboardAction, SIGNAL(triggered()), SLOT(configureKeyboard()));
+        connect(configureKeyboardAction, &QAction::triggered, this, &MainWindow::configureKeyboard);
     }
 #else
     m_menu->addMenu(m_keyboardLayoutMenu);
 #endif
 
     m_menu->addSeparator();
-    KHelpMenu* helpMenu = new KHelpMenu(m_menu, KCmdLineArgs::aboutData(), false, m_actionCollection);
+    KHelpMenu* helpMenu = new KHelpMenu(this);
     m_menu->addMenu(helpMenu->menu());
 
     setCentralWidget(m_view);
@@ -220,10 +203,9 @@ void MainWindow::init()
     Application::setupDeclarativeBindings(m_view->engine());
 
     m_view->setMinimumSize(1000, 700);
-    m_view->setStyleSheet("background-color: transparent;");
-    m_view->rootContext()->setContextObject(this);
-    m_view->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/main.qml")));
+    m_view->rootContext()->setContextProperty(QStringLiteral("ktouch"), this);
+    m_view->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/main.qml")));
 }
 
 bool MainWindow::testKCMAvailibility(const QString& name)

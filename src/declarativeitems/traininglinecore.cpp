@@ -23,14 +23,14 @@
 #include "core/trainingstats.h"
 #include "preferences.h"
 
-TrainingLineCore::TrainingLineCore(QDeclarativeItem* parent) :
-    QDeclarativeItem(parent),
+TrainingLineCore::TrainingLineCore(QQuickItem* parent) :
+    QQuickItem(parent),
     m_active(false),
     m_trainingStats(0),
     m_hintKey(-1),
     m_keyHintOccurrenceCount(0)
 {
-    setFlag(QDeclarativeItem::ItemAcceptsInputMethod);
+    setFlag(QQuickItem::ItemAcceptsInputMethod, true);
 }
 
 bool TrainingLineCore::active() const
@@ -47,12 +47,12 @@ void TrainingLineCore::setActive(bool active)
     }
 }
 
-QDeclarativeItem* TrainingLineCore::cursorItem() const
+QQuickItem* TrainingLineCore::cursorItem() const
 {
     return m_cursorItem;
 }
 
-void TrainingLineCore::setCursorItem(QDeclarativeItem* cursorPosition)
+void TrainingLineCore::setCursorItem(QQuickItem* cursorPosition)
 {
     if (cursorPosition != m_cursorItem)
     {
@@ -138,7 +138,7 @@ void TrainingLineCore::reset()
 
 void TrainingLineCore::keyPressEvent(QKeyEvent* event)
 {
-    QDeclarativeItem::keyPressEvent(event);
+    QQuickItem::keyPressEvent(event);
 
     if (!m_active)
     {

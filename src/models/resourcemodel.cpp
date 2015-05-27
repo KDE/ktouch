@@ -17,10 +17,10 @@
 
 #include "resourcemodel.h"
 
+#include <QIcon>
 #include <QSignalMapper>
 
-#include <KLocale>
-#include <KIcon>
+#include <KLocalizedString>
 #include <KCategorizedSortFilterProxyModel>
 
 ResourceModel::ResourceModel(QObject* parent) :
@@ -29,11 +29,6 @@ ResourceModel::ResourceModel(QObject* parent) :
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
-    QHash<int,QByteArray> roleNames = this->roleNames();
-    roleNames.insert(ResourceModel::KeyboardLayoutNameRole, "keyboardLayoutName");
-    roleNames.insert(ResourceModel::PathRole, "path");
-    roleNames.insert(ResourceModel::DataRole, "dataRole");
-    setRoleNames(roleNames);
 }
 
 DataIndex* ResourceModel::dataIndex() const
@@ -118,6 +113,15 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
         return 0;
 
     return m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount();
+}
+
+QHash<int, QByteArray> ResourceModel::roleNames() const
+{
+    QHash<int, QByteArray> names = QAbstractItemModel::roleNames();
+    names.insert(ResourceModel::KeyboardLayoutNameRole, "keyboardLayoutName");
+    names.insert(ResourceModel::PathRole, "path");
+    names.insert(ResourceModel::DataRole, "dataRole");
+    return names;
 }
 
 void ResourceModel::onCourseAboutToBeAdded(DataIndexCourse* course, int index)
@@ -258,7 +262,7 @@ void ResourceModel::updateMappings()
 
 QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
 {
-    static QIcon systemIcon = KIcon("computer");
-    static QIcon userIcon = KIcon("user-identity");
+    static QIcon systemIcon = QIcon::fromTheme("computer");
+    static QIcon userIcon = QIcon::fromTheme("user-identity");
     return source == DataIndex::BuiltInResource? systemIcon: userIcon;
 }

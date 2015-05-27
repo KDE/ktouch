@@ -18,9 +18,9 @@
 #ifndef KEYBOARDLAYOUTEDITORVIEW_H
 #define KEYBOARDLAYOUTEDITORVIEW_H
 
-#include <QDeclarativeView>
+#include <QQuickWidget>
 
-class KeyboardLayoutEditorView : public QDeclarativeView
+class KeyboardLayoutEditorView : public QQuickWidget
 {
     Q_OBJECT
 public:

@@ -17,18 +17,13 @@
 
 #include "application.h"
 
-#include <qdeclarative.h>
-#include <QGraphicsDropShadowEffect>
-#include <QScriptValue>
-#include <QScriptEngine>
-#include <QKeyEvent>
+#include <QQmlEngine>
+#include <QJSValue>
 
-#include <kdeclarative.h>
+#include <KDeclarative/KDeclarative>
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
-#include "declarativeitems/applicationbackground.h"
-#include "declarativeitems/cursorshapearea.h"
 #include "declarativeitems/griditem.h"
 #include "declarativeitems/lessonpainter.h"
 #include "declarativeitems/preferencesproxy.h"
@@ -51,8 +46,9 @@
 #include "models/learningprogressmodel.h"
 #include "models/errorsmodel.h"
 
-Application::Application() :
-    KApplication(true),
+
+Application::Application(int& argc, char** argv, int flags):
+    QApplication(argc, argv, flags),
     m_dataIndex(new DataIndex(this))
 {
     registerQmlTypes();
@@ -68,33 +64,27 @@ DataIndex* Application::dataIndex()
     return app->m_dataIndex;
 }
 
-QWeakPointer<ResourceEditor>& Application::resourceEditorRef()
+QSharedPointer<ResourceEditor>& Application::resourceEditorRef()
 {
     Application* app = qobject_cast<Application*>(QCoreApplication::instance());
 
     return app->m_resourceEditorRef;
 }
 
-void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
+void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 {
-    KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(declarativeEngine);
-    kDeclarative.initialize();
+    KDeclarative::KDeclarative kDeclarative;
+    kDeclarative.setDeclarativeEngine(qmlEngine);
     kDeclarative.setupBindings();
 
-    QScriptEngine* engine = kDeclarative.scriptEngine();
-    QScriptValue globalObject = engine->globalObject();
+    QJSValue globalObject = qmlEngine->globalObject();
 
-    globalObject.setProperty("findImage", engine->newFunction(findImage));
-    globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
-    globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
-    globalObject.setProperty("uuid", engine->newFunction(uuid));
-    globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
+    globalObject.setProperty("utils", qmlEngine->newQObject(new Utils()));
+    globalObject.setProperty("strFormatter", qmlEngine->newQObject(new StringFormatter()));
 }
 
 void Application::registerQmlTypes()
 {
-    qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
     qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
     qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKey");
     qmlRegisterType<Key>("ktouch", 1, 0, "Key");
@@ -117,8 +107,6 @@ void Application::registerQmlTypes()
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
-    qmlRegisterType<ApplicationBackground>("ktouch", 1, 0, "ApplicationBackground");
-    qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");

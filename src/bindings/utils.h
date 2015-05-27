@@ -18,16 +18,20 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include <QScriptValue>
+#include <QObject>
+#include <QTime>
 
-class QScriptContext;
-class QScriptEngine;
+class Utils : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Utils(QObject* parent = 0);
+    Q_INVOKABLE QString findImage(QString name);
+    Q_INVOKABLE int getMinutesOfQTime(const QTime& time);
+    Q_INVOKABLE int getSecondsOfQTime(const QTime& time);
+    Q_INVOKABLE QString uuid();
 
-QScriptValue findImage(QScriptContext* context, QScriptEngine* engine);
+};
 
-QScriptValue getSecondsOfQTime(QScriptContext* context, QScriptEngine* engine);
-QScriptValue getMinutesOfQTime(QScriptContext* context, QScriptEngine* engine);
-
-QScriptValue uuid(QScriptContext* context, QScriptEngine* engine);
 
 #endif // UTILS_H

@@ -22,7 +22,7 @@
 
 #include <QWeakPointer>
 
-class QDeclarativeView;
+class QQuickWidget;
 class QMenu;
 class KActionCollection;
 class DataIndex;
@@ -46,8 +46,6 @@ public:
     ~MainWindow();
     QString keyboardLayoutName() const;
     DataIndex* dataIndex();
-    bool useOpenGLViewport() const;
-    void setUseOpenGLViewport(bool useOpenGLViewport);
     Q_INVOKABLE void showMenu(int xPos, int yPos);
 public slots:
     void showResourceEditor();
@@ -62,10 +60,9 @@ private slots:
 private:
     void init();
     bool testKCMAvailibility(const QString& name);
-    QDeclarativeView* m_view;
+    QQuickWidget* m_view;
     KActionCollection* m_actionCollection;
     QMenu* m_menu;
-    bool m_useOpenGLViewport;
 #ifdef KTOUCH_BUILD_WITH_X11
     XEventNotifier* m_XEventNotifier;
 #else

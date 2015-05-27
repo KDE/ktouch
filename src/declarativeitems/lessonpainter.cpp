@@ -20,7 +20,6 @@
 #include <qmath.h>
 #include <QAbstractTextDocumentLayout>
 #include <QPainter>
-#include <QPixmap>
 #include <QTextCharFormat>
 #include <QTextCursor>
 #include <QTextDocument>
@@ -64,8 +63,8 @@ struct LessonPainterPrivate
     QTextCharFormat titleCharFormat;
 };
 
-LessonPainter::LessonPainter(QDeclarativeItem* parent) :
-    QDeclarativeItem(parent),
+LessonPainter::LessonPainter(QQuickItem* parent) :
+    QQuickPaintedItem(parent),
     d(new LessonPainterPrivate()),
     m_doc(new QTextDocument(this)),
     m_textScale(1.0),
@@ -75,7 +74,7 @@ LessonPainter::LessonPainter(QDeclarativeItem* parent) :
     m_trainingLineCore(0),
     m_currentLine(0)
 {
-    this->setFlag(QDeclarativeItem::ItemHasNoContents, false);
+    this->setFlag(QQuickPaintedItem::ItemHasContents, true);
     m_doc->setUseDesignMetrics(true);
 }
 
@@ -180,7 +179,7 @@ void LessonPainter::reset()
     resetTrainingStatus();
 }
 
-void LessonPainter::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
+void LessonPainter::paint(QPainter* painter)
 {
     checkImageCache();
     painter->drawPixmap(0, 0, m_imageCache);

@@ -17,13 +17,13 @@
 
 #include "userdataaccess.h"
 
+#include <QDebug>
 #include <QVariant>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
 
-#include <KLocale>
-#include <KDebug>
+#include <KLocalizedString>
 
 #include "core/dataindex.h"
 #include "core/course.h"
@@ -55,7 +55,7 @@ bool UserDataAccess::fillDataIndex(DataIndex* target)
 
     if (courseQuery.lastError().isValid())
     {
-        kWarning() << courseQuery.lastError().text();
+        qWarning() << courseQuery.lastError().text();
         raiseError(courseQuery.lastError());
         return false;
     }
@@ -77,7 +77,7 @@ bool UserDataAccess::fillDataIndex(DataIndex* target)
 
     if (keyboardLayoutQuery.lastError().isValid())
     {
-        kWarning() << keyboardLayoutQuery.lastError().text();
+        qWarning() << keyboardLayoutQuery.lastError().text();
         raiseError(keyboardLayoutQuery.lastError());
         return false;
     }
@@ -114,7 +114,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
 
     if (courseQuery.lastError().isValid())
     {
-        kWarning() << courseQuery.lastError().text();
+        qWarning() << courseQuery.lastError().text();
         raiseError(courseQuery.lastError());
         return false;
     }
@@ -122,7 +122,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
     if (!courseQuery.next())
     {
         const QString warning = i18n("No course with ID %1", id);
-        kWarning() << warning;
+        qWarning() << warning;
         raiseError(warning);
     }
 
@@ -140,7 +140,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
 
     if (lessonsQuery.lastError().isValid())
     {
-        kWarning() << lessonsQuery.lastError().text();
+        qWarning() << lessonsQuery.lastError().text();
         raiseError(lessonsQuery.lastError());
         return false;
     }
@@ -171,7 +171,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -184,7 +184,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     if (cleanUpCourseQuery.lastError().isValid())
     {
-        kWarning() << cleanUpCourseQuery.lastError().text();
+        qWarning() << cleanUpCourseQuery.lastError().text();
         raiseError(cleanUpCourseQuery.lastError());
         db.rollback();
         return false;
@@ -198,7 +198,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     if (cleanUpLessonsQuery.lastError().isValid())
     {
-        kWarning() << cleanUpLessonsQuery.lastError().text();
+        qWarning() << cleanUpLessonsQuery.lastError().text();
         raiseError(cleanUpLessonsQuery.lastError());
         db.rollback();
         return false;
@@ -215,7 +215,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     if (insertCourseQuery.lastError().isValid())
     {
-        kWarning() << insertCourseQuery.lastError().text();
+        qWarning() << insertCourseQuery.lastError().text();
         raiseError(insertCourseQuery.lastError());
         db.rollback();
         return false;
@@ -239,7 +239,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
         if (insertLessonsQuery.lastError().isValid())
         {
-            kWarning() << insertLessonsQuery.lastError().text();
+            qWarning() << insertLessonsQuery.lastError().text();
             raiseError(insertLessonsQuery.lastError());
             db.rollback();
             return false;
@@ -248,7 +248,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -266,7 +266,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -279,7 +279,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     if (deleteCourseQuery.lastError().isValid())
     {
-        kWarning() << deleteCourseQuery.lastError().text();
+        qWarning() << deleteCourseQuery.lastError().text();
         raiseError(deleteCourseQuery.lastError());
         db.rollback();
         return false;
@@ -293,7 +293,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     if (deleteLessonsQuery.lastError().isValid())
     {
-        kWarning() << deleteLessonsQuery.lastError().text();
+        qWarning() << deleteLessonsQuery.lastError().text();
         raiseError(deleteLessonsQuery.lastError());
         db.rollback();
         return false;
@@ -301,7 +301,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -328,7 +328,7 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
 
     if (keyboardLayoutQuery.lastError().isValid())
     {
-        kWarning() << keyboardLayoutQuery.lastError().text();
+        qWarning() << keyboardLayoutQuery.lastError().text();
         raiseError(keyboardLayoutQuery.lastError());
         return false;
     }
@@ -336,7 +336,7 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
     if (!keyboardLayoutQuery.next())
     {
         const QString warning = i18n("No keyboard layout with ID %1", id);
-        kWarning() << warning;
+        qWarning() << warning;
         raiseError(warning);
     }
 
@@ -359,7 +359,7 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
 
     if (keysQuery.lastError().isValid())
     {
-        kWarning() << keysQuery.lastError().text();
+        qWarning() << keysQuery.lastError().text();
         raiseError(keysQuery.lastError());
         return false;
     }
@@ -382,7 +382,7 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
 
             if (keyCharsQuery.lastError().isValid())
             {
-                kWarning() << keyCharsQuery.lastError().text();
+                qWarning() << keyCharsQuery.lastError().text();
                 raiseError(keyCharsQuery.lastError());
                 return false;
             }
@@ -433,7 +433,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -446,7 +446,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (cleanUpKeyCharsQuery.lastError().isValid())
     {
-        kWarning() << cleanUpKeyCharsQuery.lastError().text();
+        qWarning() << cleanUpKeyCharsQuery.lastError().text();
         raiseError(cleanUpKeyCharsQuery.lastError());
         db.rollback();
         return false;
@@ -461,7 +461,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (cleanUpKeysQuery.lastError().isValid())
     {
-        kWarning() << cleanUpKeysQuery.lastError().text();
+        qWarning() << cleanUpKeysQuery.lastError().text();
         raiseError(cleanUpKeysQuery.lastError());
         db.rollback();
         return false;
@@ -475,7 +475,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (cleanUpKeyboardLayoutQuery.lastError().isValid())
     {
-        kWarning() << cleanUpKeyboardLayoutQuery.lastError().text();
+        qWarning() << cleanUpKeyboardLayoutQuery.lastError().text();
         raiseError(cleanUpKeyboardLayoutQuery.lastError());
         db.rollback();
         return false;
@@ -493,7 +493,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (insertKeyboardLayoutQuery.lastError().isValid())
     {
-        kWarning() << insertKeyboardLayoutQuery.lastError().text();
+        qWarning() << insertKeyboardLayoutQuery.lastError().text();
         raiseError(insertKeyboardLayoutQuery.lastError());
         db.rollback();
         return false;
@@ -529,7 +529,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
             if (insertKeyQuery.lastError().isValid())
             {
-                kWarning() << insertKeyQuery.lastError().text();
+                qWarning() << insertKeyQuery.lastError().text();
                 raiseError(insertKeyQuery.lastError());
                 db.rollback();
                 return false;
@@ -539,7 +539,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
             if (idQuery.lastError().isValid())
             {
-                kWarning() << idQuery.lastError().text();
+                qWarning() << idQuery.lastError().text();
                 raiseError(idQuery.lastError());
                 db.rollback();
                 return false;
@@ -562,7 +562,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
                 if (insertKeyCharQuery.lastError().isValid())
                 {
-                    kWarning() << insertKeyCharQuery.lastError().text();
+                    qWarning() << insertKeyCharQuery.lastError().text();
                     raiseError(insertKeyCharQuery.lastError());
                     db.rollback();
                     return false;
@@ -583,7 +583,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
             if (insertSpecialKeyQuery.lastError().isValid())
             {
-                kWarning() << insertSpecialKeyQuery.lastError().text();
+                qWarning() << insertSpecialKeyQuery.lastError().text();
                 raiseError(insertSpecialKeyQuery.lastError());
                 db.rollback();
                 return false;
@@ -593,7 +593,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -611,7 +611,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -624,7 +624,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (deleteKeyCharsQuery.lastError().isValid())
     {
-        kWarning() << deleteKeyCharsQuery.lastError().text();
+        qWarning() << deleteKeyCharsQuery.lastError().text();
         raiseError(deleteKeyCharsQuery.lastError());
         db.rollback();
         return false;
@@ -639,7 +639,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (deleteKeysQuery.lastError().isValid())
     {
-        kWarning() << deleteKeysQuery.lastError().text();
+        qWarning() << deleteKeysQuery.lastError().text();
         raiseError(deleteKeysQuery.lastError());
         db.rollback();
         return false;
@@ -653,7 +653,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if (deleteKeyboardLayoutQuery.lastError().isValid())
     {
-        kWarning() << deleteKeyboardLayoutQuery.lastError().text();
+        qWarning() << deleteKeyboardLayoutQuery.lastError().text();
         raiseError(deleteKeyboardLayoutQuery.lastError());
         db.rollback();
         return false;
@@ -661,7 +661,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;

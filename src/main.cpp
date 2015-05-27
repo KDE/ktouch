@@ -15,52 +15,63 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QCommandLineParser>
+
 #include <KAboutData>
-#include <KCmdLineArgs>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "application.h"
 #include "mainwindow.h"
-
-#include "KDebug"
-
-static const char description[] =
-    I18N_NOOP("Learn and practice typewriting");
-
-static const char version[] = "2.3.0";
+#include "version.h"
 
 int main(int argc, char **argv)
 {
-    KAboutData about("ktouch", 0,
-                ki18n("Typewriting Trainer"),
-                version,
-                ki18n(description),
-                KAboutData::License_GPL,
-                ki18n(
-                    "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
+    Application app(argc, argv);
+
+    KLocalizedString::setApplicationDomain("ktouch");
+
+    KAboutData about(QStringLiteral("ktouch"),
+                i18n("Typewriting Trainer"),
+                QStringLiteral(KTOUCH_VERSION_STRING),
+                i18n("Learn and practice typewriting"),
+                KAboutLicense::GPL,
+                i18n(
+                    "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
                     "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
                 ),
-                KLocalizedString(),
-                "http://edu.kde.org/ktouch",
-                "submit@bugs.kde.org");
+                QString(),
+                QStringLiteral("http://edu.kde.org/ktouch"),
+                QStringLiteral("submit@bugs.kde.org"));
 
-    about.addAuthor(ki18n("Sebastian Gottfried"), ki18n("Current maintainer"), "sebastiangottfried@web.de");
-    about.addAuthor(ki18n("Andreas Nicolai"), ki18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net");
-    about.addAuthor(ki18n("Håvard Frøiland"), ki18n("Original author"), "haavard@users.sourceforge.net");
+    about.addAuthor(i18n("Sebastian Gottfried"), i18n("Current maintainer"), "sebastiangottfried@web.de");
+    about.addAuthor(i18n("Andreas Nicolai"), i18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net");
+    about.addAuthor(i18n("Håvard Frøiland"), i18n("Original author"), "haavard@users.sourceforge.net");
 
-    about.addCredit(ki18n("David Vignoni"), ki18n("Creator of the SVG icon"), "david80v@tin.it");
-    about.addCredit(ki18n("Anne-Marie Mahfouf"), ki18n("Lots of patches, fixes and updates"), "annma@kde.org");
-    about.addCredit(ki18n("All the creators of training and keyboard files"));
+    about.addCredit(i18n("David Vignoni"), i18n("Creator of the SVG icon"), "david80v@tin.it");
+    about.addCredit(i18n("Anne-Marie Mahfouf"), i18n("Lots of patches, fixes and updates"), "annma@kde.org");
+    about.addCredit(i18n("All the creators of training and keyboard files"));
 
-    KCmdLineArgs::init(argc, argv, &about);
-    KCmdLineOptions options;
-    options.add("opengl", ki18n("Use OpenGL for rendering (experimental)"));
-    options.add("resource-editor", ki18n("Launch the course and keyboard layout editor"));
-    KCmdLineArgs::addCmdLineOptions(options);
+    about.setOrganizationDomain(QByteArray("kde.org"));
 
-    KApplication::setGraphicsSystem("raster");
+    KAboutData::setApplicationData(about);
 
-    Application app;
+    app.setApplicationName(about.componentName());
+    app.setApplicationDisplayName(about.displayName());
+    app.setOrganizationDomain(about.organizationDomain());
+    app.setApplicationVersion(about.version());
+
+    QApplication::setWindowIcon(QIcon::fromTheme(QLatin1String("ktouch")));
+
+
+    QCommandLineParser parser;
+    about.setupCommandLine(&parser);
+
+    parser.addOption(QCommandLineOption(QStringLiteral("resource-editor"), i18n("Launch the course and keyboard layout editor"), QStringLiteral("resource-editor")));
+
+    parser.process(app);
+
+    about.processCommandLine(&parser);
+
 
     if (app.isSessionRestored())
     {
@@ -74,11 +85,11 @@ int main(int argc, char **argv)
             }
             else if (name == "ResourceEditor")
             {
-                QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+                QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
 
                 if (resourceEditorRef.isNull())
                 {
-                    resourceEditorRef = new ResourceEditor();
+                    resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
                     resourceEditorRef.data()->restore(i);
                 }
             }
@@ -86,14 +97,12 @@ int main(int argc, char **argv)
     }
     else
     {
-        KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-
-        if (args->isSet("resource-editor"))
+        if (parser.isSet("resource-editor"))
         {
-            QWeakPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+            QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
             if (resourceEditorRef.isNull())
             {
-                resourceEditorRef = new ResourceEditor();
+                resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
             }
 
             ResourceEditor* resourceEditor = resourceEditorRef.data();
@@ -104,10 +113,8 @@ int main(int argc, char **argv)
         {
             MainWindow *mainWin = 0;
             mainWin = new MainWindow();
-            mainWin->setUseOpenGLViewport(args->isSet("opengl"));
             mainWin->show();
         }
-        args->clear();
     }
 
     return app.exec();

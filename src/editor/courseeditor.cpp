@@ -20,6 +20,7 @@
 
 #include <QUuid>
 
+#include <KLocalizedString>
 #include <KMessageBox>
 
 #include "core/course.h"
@@ -157,7 +158,7 @@ void CourseEditor::setDescription(const QString& newDescription)
 void CourseEditor::addLesson()
 {
     const int newIndex = m_currentLessonIndex + 1;
-    const QString id = QUuid::createUuid();
+    const QString id = QUuid::createUuid().toString();
     QUndoCommand* command = new AddLessonCommand(m_course, newIndex, id);
 
     currentUndoStack()->push(command);

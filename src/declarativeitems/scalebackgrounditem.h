@@ -18,9 +18,9 @@
 #ifndef SCALEBACKGROUNDITEM_H
 #define SCALEBACKGROUNDITEM_H
 
-#include <QDeclarativeItem>
+#include <QQuickPaintedItem>
 
-class ScaleBackgroundItem: public QDeclarativeItem
+class ScaleBackgroundItem: public QQuickPaintedItem
 {
     Q_OBJECT
     Q_PROPERTY(qreal startAngle READ startAngle WRITE setStartAngle NOTIFY startAngleChanged)
@@ -29,7 +29,7 @@ class ScaleBackgroundItem: public QDeclarativeItem
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 
 public:
-    explicit ScaleBackgroundItem(QDeclarativeItem* parent = 0);
+    explicit ScaleBackgroundItem(QQuickItem* parent = 0);
     qreal startAngle() const;
     void setStartAngle(qreal angle);
     qreal stopAngle() const;
@@ -38,7 +38,7 @@ public:
     void setScaleMarkHeight(qreal height);
     QColor color() const;
     void setColor(const QColor& color);
-    virtual void paint(QPainter* painter, const QStyleOptionGraphicsItem* , QWidget* = 0);
+    virtual void paint(QPainter* painter);
 signals:
     void startAngleChanged();
     void stopAngleChanged();

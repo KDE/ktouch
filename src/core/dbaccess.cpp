@@ -17,14 +17,15 @@
 
 #include "dbaccess.h"
 
+#include <QDebug>
 #include <QUuid>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QStandardPaths>
 
-#include <KStandardDirs>
-#include <KDebug>
-#include <KLocale>
+#include <KLocalizedString>
+
 
 DbAccess::DbAccess(QObject* parent) :
     QObject(parent),
@@ -41,12 +42,12 @@ QSqlDatabase DbAccess::database()
 {
     if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection))
     {
-        QString dbPath = KGlobal::dirs()->locateLocal("appdata", "profiles.db");
+        QString dbPath = QStandardPaths::locate(QStandardPaths::DataLocation, "profiles.db");
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName(dbPath);
         if (!db.open())
         {
-            kWarning() << db.lastError().text();
+            qWarning() << db.lastError().text();
             raiseError(db.lastError());
             return db;
         }
@@ -79,7 +80,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -88,7 +89,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -115,20 +116,20 @@ bool DbAccess::checkDbSchema()
     {
         if (!db.transaction())
         {
-            kWarning() <<  db.lastError().text();
+            qWarning() <<  db.lastError().text();
             raiseError(db.lastError());
             return false;
         }
         db.exec("INSERT INTO metadata (key, value) VALUES ('version', '1.1')");
         if (db.lastError().isValid())
         {
-            kWarning() << db.lastError().text();
+            qWarning() << db.lastError().text();
             raiseError(db.lastError());
             return false;
         }
         if (!db.commit())
         {
-            kWarning() << db.lastError().text();
+            qWarning() << db.lastError().text();
             raiseError(db.lastError());
             return false;
         }
@@ -143,7 +144,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -161,7 +162,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -175,7 +176,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -190,7 +191,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -204,7 +205,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -219,7 +220,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -234,7 +235,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -256,7 +257,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -271,7 +272,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -286,7 +287,7 @@ bool DbAccess::checkDbSchema()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -300,7 +301,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -311,7 +312,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -327,7 +328,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -338,7 +339,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -348,7 +349,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -360,7 +361,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -386,7 +387,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
         if (updateIdQuery.lastError().isValid())
         {
-            kWarning() << updateIdQuery.lastError().text();
+            qWarning() << updateIdQuery.lastError().text();
             raiseError(updateIdQuery.lastError());
             db.rollback();
             return false;
@@ -397,7 +398,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -405,7 +406,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     if (!db.commit())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;

@@ -17,12 +17,12 @@
 
 #include "profiledataaccess.h"
 
+#include <QDebug>
 #include <QVariant>
 #include <QSqlDatabase>
 #include <QSqlError>
 
-#include <KDebug>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "core/profile.h"
 #include "core/course.h"
@@ -52,7 +52,7 @@ void ProfileDataAccess::loadProfiles()
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         return;
     }
@@ -96,7 +96,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return;
     }
@@ -105,7 +105,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     if (!addQuery.prepare("INSERT INTO profiles (name, skill_level, last_used_course_id) VALUES (?, ?, ?)"))
     {
-        kWarning() <<  addQuery.lastError().text();
+        qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
         db.rollback();
         return;
@@ -116,7 +116,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     if (!addQuery.exec())
     {
-        kWarning() <<  addQuery.lastError().text();
+        qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
         db.rollback();
         return;
@@ -126,7 +126,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -137,7 +137,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     if (!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -158,7 +158,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return;
     }
@@ -167,7 +167,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     if (!updateQuery.prepare("UPDATE profiles SET name = ?, skill_level = ?, last_used_course_id = ? WHERE id = ?"))
     {
-        kWarning() <<  updateQuery.lastError().text();
+        qWarning() <<  updateQuery.lastError().text();
         raiseError(updateQuery.lastError());
         return;
     }
@@ -179,7 +179,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     if (!updateQuery.exec())
     {
-        kWarning() <<  updateQuery.lastError().text();
+        qWarning() <<  updateQuery.lastError().text();
         raiseError(updateQuery.lastError());
         db.rollback();
         return;
@@ -187,7 +187,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     if (!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -205,7 +205,7 @@ void ProfileDataAccess::removeProfile(int index)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -215,7 +215,7 @@ void ProfileDataAccess::removeProfile(int index)
 
     if (!removeQuery.prepare("DELETE FROM profiles WHERE id = ?"))
     {
-        kWarning() <<  removeQuery.lastError().text();
+        qWarning() <<  removeQuery.lastError().text();
         raiseError(removeQuery.lastError());
         db.rollback();
         return;
@@ -226,7 +226,7 @@ void ProfileDataAccess::removeProfile(int index)
 
     if (!removeQuery.exec())
     {
-        kWarning() <<  removeQuery.lastError().text();
+        qWarning() <<  removeQuery.lastError().text();
         raiseError(removeQuery.lastError());
         db.rollback();
         return;
@@ -234,7 +234,7 @@ void ProfileDataAccess::removeProfile(int index)
 
     if (!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -272,7 +272,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile
 
     if (!selectQuery.prepare("SELECT id, characters_typed, error_count, elapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1"))
     {
-        kWarning() <<  selectQuery.lastError().text();
+        qWarning() <<  selectQuery.lastError().text();
         raiseError(selectQuery.lastError());
         return;
     }
@@ -283,7 +283,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile
 
     if (!selectQuery.exec())
     {
-        kWarning() <<  selectQuery.lastError().text();
+        qWarning() <<  selectQuery.lastError().text();
         raiseError(selectQuery.lastError());
         return;
     }
@@ -304,7 +304,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile
 
     if (!errorSelectQuery.exec())
     {
-        kWarning() <<  errorSelectQuery.lastError().text();
+        qWarning() <<  errorSelectQuery.lastError().text();
         raiseError(errorSelectQuery.lastError());
         return;
     }
@@ -331,7 +331,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return;
     }
@@ -339,7 +339,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if (!addQuery.prepare("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, elapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)"))
     {
-        kWarning() <<  addQuery.lastError().text();
+        qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
         db.rollback();
         return;
@@ -355,7 +355,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if (!addQuery.exec())
     {
-        kWarning() <<  addQuery.lastError().text();
+        qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
         db.rollback();
         return;
@@ -365,7 +365,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if (db.lastError().isValid())
     {
-        kWarning() << db.lastError().text();
+        qWarning() << db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -378,7 +378,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if (!addErrorsQuery.prepare("INSERT INTO training_stats_errors (stats_id, character, count) VALUES (?, ?, ?)"))
     {
-        kWarning() <<  addErrorsQuery.lastError().text();
+        qWarning() <<  addErrorsQuery.lastError().text();
         raiseError(addErrorsQuery.lastError());
         db.rollback();
         return;
@@ -394,7 +394,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
         if (!addErrorsQuery.exec())
         {
-            kWarning() <<  addErrorsQuery.lastError().text();
+            qWarning() <<  addErrorsQuery.lastError().text();
             raiseError(addErrorsQuery.lastError());
             db.rollback();
             return;
@@ -403,7 +403,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -431,7 +431,7 @@ QString ProfileDataAccess::courseProgress(Profile* profile, const QString& cours
 
     if (!selectQuery.exec())
     {
-        kWarning() <<  selectQuery.lastError().text();
+        qWarning() <<  selectQuery.lastError().text();
         raiseError(selectQuery.lastError());
         return QString();
     }
@@ -455,7 +455,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return;
     }
@@ -473,7 +473,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
 
         if (!insertQuery.exec())
         {
-            kWarning() <<  insertQuery.lastError().text();
+            qWarning() <<  insertQuery.lastError().text();
             raiseError(insertQuery.lastError());
             db.rollback();
             return;
@@ -490,7 +490,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
 
         if (!updateQuery.exec())
         {
-            kWarning() <<  updateQuery.lastError().text();
+            qWarning() <<  updateQuery.lastError().text();
             raiseError(updateQuery.lastError());
             db.rollback();
             return;
@@ -499,7 +499,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return;
@@ -522,7 +522,7 @@ int ProfileDataAccess::lessonsTrained(Profile* profile)
 
     if (!query.exec())
     {
-        kWarning() <<  query.lastError().text();
+        qWarning() <<  query.lastError().text();
         raiseError(query.lastError());
         return 0;
     }
@@ -547,7 +547,7 @@ quint64 ProfileDataAccess::totalTrainingTime(Profile* profile)
 
     if (!query.exec())
     {
-        kWarning() <<  query.lastError().text();
+        qWarning() <<  query.lastError().text();
         raiseError(query.lastError());
         return 0;
     }
@@ -572,7 +572,7 @@ QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
 
     if (!query.exec())
     {
-        kWarning() <<  query.lastError().text();
+        qWarning() <<  query.lastError().text();
         raiseError(query.lastError());
         return QDateTime();
     }
@@ -615,7 +615,7 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
 
     if (!query.exec())
     {
-        kWarning() <<  query.lastError().text();
+        qWarning() <<  query.lastError().text();
         raiseError(query.lastError());
         return false;
     }
@@ -669,7 +669,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -682,7 +682,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
     if (idQuery.lastError().isValid())
     {
-        kWarning() << idQuery.lastError().text();
+        qWarning() << idQuery.lastError().text();
         raiseError(idQuery.lastError());
         db.rollback();
         return false;
@@ -699,7 +699,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
         if (updateQuery.lastError().isValid())
         {
-            kWarning() << updateQuery.lastError().text();
+            qWarning() << updateQuery.lastError().text();
             raiseError(updateQuery.lastError());
             db.rollback();
             return false;
@@ -715,7 +715,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
         if (updateQuery.lastError().isValid())
         {
-            kWarning() << updateQuery.lastError().text();
+            qWarning() << updateQuery.lastError().text();
             raiseError(updateQuery.lastError());
             db.rollback();
             return false;
@@ -729,7 +729,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
         if (insertQuery.lastError().isValid())
         {
-            kWarning() << insertQuery.lastError().text();
+            qWarning() << insertQuery.lastError().text();
             raiseError(insertQuery.lastError());
             db.rollback();
             return false;
@@ -745,7 +745,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
         if (insertQuery.lastError().isValid())
         {
-            kWarning() << insertQuery.lastError().text();
+            qWarning() << insertQuery.lastError().text();
             raiseError(insertQuery.lastError());
             db.rollback();
             return false;
@@ -754,7 +754,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -772,7 +772,7 @@ bool ProfileDataAccess::deleteCustomLesson(const QString& id)
 
     if (!db.transaction())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         return false;
     }
@@ -785,7 +785,7 @@ bool ProfileDataAccess::deleteCustomLesson(const QString& id)
 
     if (deleteQuery.lastError().isValid())
     {
-        kWarning() << deleteQuery.lastError().text();
+        qWarning() << deleteQuery.lastError().text();
         raiseError(deleteQuery.lastError());
         db.rollback();
         return false;
@@ -793,7 +793,7 @@ bool ProfileDataAccess::deleteCustomLesson(const QString& id)
 
     if(!db.commit())
     {
-        kWarning() <<  db.lastError().text();
+        qWarning() <<  db.lastError().text();
         raiseError(db.lastError());
         db.rollback();
         return false;
@@ -842,7 +842,7 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
 
     if (!query.exec())
     {
-        kWarning() <<  query.lastError().text();
+        qWarning() <<  query.lastError().text();
         raiseError(query.lastError());
         return QSqlQuery();
     }
@@ -869,7 +869,7 @@ int ProfileDataAccess::findCourseProgressId(Profile* profile, const QString& cou
 
     if (!findQuery.exec())
     {
-        kWarning() << findQuery.lastError().text();
+        qWarning() << findQuery.lastError().text();
         raiseError(findQuery.lastError());
         return -1;
     }

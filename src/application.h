@@ -18,27 +18,26 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include <KApplication>
-
-#include <QWeakPointer>
+#include <QApplication>
+#include <QSharedPointer>
 
 #include "editor/resourceeditor.h"
 
-class QDeclarativeEngine;
+class QQmlEngine;
 class DataIndex;
 
-class Application : public KApplication
+class Application : public QApplication
 {
     Q_OBJECT
 public:
-    explicit Application();
+    Application(int& argc, char** argv, int flags = ApplicationFlags);
     static DataIndex* dataIndex();
-    static void setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine);
-    static QWeakPointer<ResourceEditor>& resourceEditorRef();
+    static void setupDeclarativeBindings(QQmlEngine* qmlEngine);
+    static QSharedPointer<ResourceEditor>& resourceEditorRef();
 private:
     void registerQmlTypes();
     DataIndex* m_dataIndex;
-    QWeakPointer<ResourceEditor> m_resourceEditorRef;
+    QSharedPointer<ResourceEditor> m_resourceEditorRef;
 };
 
 #endif // APPLICATION_H

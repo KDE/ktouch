@@ -20,13 +20,13 @@
 #include <QPainter>
 #include <QPainterPath>
 
-ScaleBackgroundItem::ScaleBackgroundItem(QDeclarativeItem* parent) :
-    QDeclarativeItem(parent),
+ScaleBackgroundItem::ScaleBackgroundItem(QQuickItem* parent) :
+    QQuickPaintedItem(parent),
     m_startAngle(0),
     m_stopAngle(0),
     m_scaleMarkHeight(0)
 {
-    setFlag(QGraphicsItem::ItemHasNoContents, false);
+    setFlag(QQuickItem::ItemHasContents, true);
 }
 
 qreal ScaleBackgroundItem::startAngle() const
@@ -89,7 +89,7 @@ void ScaleBackgroundItem::setColor(const QColor& color)
     }
 }
 
-void ScaleBackgroundItem::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*)
+void ScaleBackgroundItem::paint(QPainter* painter)
 {
     QBrush brush(m_color);
     painter->setPen(Qt::NoPen);

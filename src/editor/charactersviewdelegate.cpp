@@ -21,7 +21,7 @@
 
 #include <KComboBox>
 #include <KLineEdit>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "core/keyboardlayout.h"
 #include "core/keychar.h"

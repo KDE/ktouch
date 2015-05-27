@@ -10,19 +10,7 @@
     <height>480</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="m_verticalLayout">
-   <property name="spacing">
-    <number>2</number>
-   </property>
-   <property name="topMargin">
-    <number>0</number>
-   </property>
-   <property name="rightMargin">
-    <number>0</number>
-   </property>
-   <property name="bottomMargin">
-    <number>0</number>
-   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="KMessageWidget" name="m_messageWidget"/>
    </item>
@@ -176,28 +164,20 @@
     </layout>
    </item>
    <item>
-    <widget class="KeyboardLayoutEditorView" name="m_view">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QScrollArea" name="m_scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
      </property>
-     <property name="verticalScrollBarPolicy">
-      <enum>Qt::ScrollBarAsNeeded</enum>
-     </property>
-     <property name="horizontalScrollBarPolicy">
-      <enum>Qt::ScrollBarAsNeeded</enum>
-     </property>
-     <property name="backgroundBrush">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>88</red>
-        <green>88</green>
-        <blue>88</blue>
-       </color>
-      </brush>
-     </property>
+     <widget class="KeyboardLayoutEditorView" name="m_view">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>517</width>
+        <height>287</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </item>
    <item>
@@ -221,7 +201,7 @@
   </customwidget>
   <customwidget>
    <class>KeyboardLayoutEditorView</class>
-   <extends>QGraphicsView</extends>
+   <extends>QWidget</extends>
    <header>editor/keyboardlayouteditorview.h</header>
   </customwidget>
   <customwidget>
@@ -232,7 +212,6 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>m_view</tabstop>
   <tabstop>m_newKeyToolButton</tabstop>
   <tabstop>m_newSpecialKeyToolButton</tabstop>
   <tabstop>m_deleteKeyToolButton</tabstop>

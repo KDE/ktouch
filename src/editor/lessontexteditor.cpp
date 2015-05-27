@@ -17,12 +17,12 @@
 
 #include "lessontexteditor.h"
 
+#include <QFileDialog>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
 
-#include <KFileDialog>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <KDialog>
 
 #include "editor/lessontexthighlighter.h"
 
@@ -76,7 +76,7 @@ void LessonTextEditor::onLessonTextChanged()
 
 void LessonTextEditor::openTextFile()
 {
-    const QString path(KFileDialog::getOpenFileName(KUrl("kfiledialog:///text"), QString("text/plain"), this));
+    const QString path(QFileDialog::getOpenFileName(this, QString(), QString(), i18n("Text files (*.txt)")));
 
     if (path.isNull())
         return;

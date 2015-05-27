@@ -3,22 +3,56 @@
 
 project(ktouch)
 
-find_package(KDE4 4.9.95 REQUIRED)
-include(KDE4Defaults)
+cmake_minimum_required(VERSION 2.8.12)
+find_package(ECM 1.0.0 REQUIRED NO_MODULE)
+find_package(KF5DocTools)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${QT4_INCLUDES})
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+include(KDEInstallDirs)
+include(ECMAddTests)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(ECMInstallIcons)
+include(ECMOptionalAddSubdirectory)
+include(ECMSetupVersion)
+include(FeatureSummary)
+
+find_package(Qt5 REQUIRED COMPONENTS
+    Widgets
+    Sql
+    Script
+    XmlPatterns
+    Qml
+    Quick
+    QuickWidgets
+    Test
+)
+
+find_package(KF5 REQUIRED COMPONENTS
+    Config
+    ConfigWidgets
+    CoreAddons
+    Declarative
+    I18n
+    KIO
+    NewStuff
+    WidgetsAddons
+    XmlGui
+    ItemViews
+    KCMUtils
+    TextEditor
+)
 
 # subdirectories to build
-add_subdirectory(data)
-add_subdirectory(doc)
-add_subdirectory(src)
-# add_subdirectory(sounds) # excluded because of the lack of sound support
-add_subdirectory(images)
-add_subdirectory(icons)
+ecm_optional_add_subdirectory(data)
+ecm_optional_add_subdirectory(doc)
+ecm_optional_add_subdirectory(src)
+# ecm_optional_add_subdirectory(sounds)
+ecm_optional_add_subdirectory(images)
+ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
-install( PROGRAMS ktouch.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install(PROGRAMS ktouch.desktop DESTINATION  ${XDG_APPS_INSTALL_DIR})
 install(FILES ktouch.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
 
-macro_display_feature_log()
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -67,12 +67,12 @@ private:
     Resource* m_backupResource;
     QUndoGroup* m_undoGroup;
     KActionCollection* m_actionCollection;
-    KAction* m_newResourceAction;
-    KAction* m_deleteResourceAction;
-    KAction* m_undoAction;
-    KAction* m_redoAction;
-    KAction* m_importResourceAction;
-    KAction* m_exportResourceAction;
+    QAction* m_newResourceAction;
+    QAction* m_deleteResourceAction;
+    QAction* m_undoAction;
+    QAction* m_redoAction;
+    QAction* m_importResourceAction;
+    QAction* m_exportResourceAction;
     ResourceEditorWidget* m_editorWidget;
     QTimer* m_saveTimer;
 };
