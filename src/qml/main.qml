@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
+import QtQuick 2.4
 import ktouch 1.0
 
 Item {
@@ -31,25 +31,27 @@ Item {
         id: dataAccess
     }
 
-    property DataIndex dataIndex: globalDataIndex
+    Text {
+        text: ktouch.globalDataIndex.courseCount
+    }
 
     QtObject {
         id: helper
-        property string name: keyboardLayoutName
-        property int keyboardLayoutCount: dataIndex.keyboardLayoutCount
-        property int courseCount: dataIndex.courseCount
+        property string name: ktouch.keyboardLayoutName
+        property int keyboardLayoutCount: ktouch.globalDataIndex.keyboardLayoutCount
+        property int courseCount: ktouch.globalDataIndex.courseCount
         onNameChanged: {
             keyboardLayout.update()
         }
         onKeyboardLayoutCountChanged: {
-            if (dataIndex.isValid)
+            if (ktouch.globalDataIndex.isValid)
                 keyboardLayout.update()
         }
     }
 
     ResourceModel {
         id: resourceModel
-        dataIndex: main.dataIndex
+        dataIndex: ktouch.globalDataIndex
     }
 
     ProfileDataAccess {
@@ -64,20 +66,20 @@ Item {
         id: keyboardLayout
 
         Component.onCompleted: {
-            if (dataIndex.isValid) {
+            if (ktouch.globalDataIndex.isValid) {
                 keyboardLayout.update()
             }
         }
 
         function update() {
             isValid = false
-            var name = keyboardLayoutName;
+            var name = ktouch.keyboardLayoutName;
 
             // first pass - exact match
 
-            for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
+            for (var i = 0; i < ktouch.globalDataIndex.keyboardLayoutCount; i++)
             {
-                var dataIndexLayout = dataIndex.keyboardLayout(i)
+                var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (dataIndexLayout.name === name) {
                     dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
@@ -87,9 +89,9 @@ Item {
 
             // second pass - substring match
 
-            for (var i = 0; i < dataIndex.keyboardLayoutCount; i++)
+            for (var i = 0; i < ktouch.globalDataIndex.keyboardLayoutCount; i++)
             {
-                var dataIndexLayout = dataIndex.keyboardLayout(i)
+                var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (name.search(dataIndexLayout.name) === 0) {
                     dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
@@ -106,11 +108,16 @@ Item {
         keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
     }
 
-    ApplicationBackground {
-        id: background
-        anchors.fill: parent
+    Course {
+        id: selectedCourse
+        property Lesson selectedLesson
     }
 
+    Lesson {
+        id: customLessonCopy
+    }
+
+    /*
     HomeScreen {
         id: homeScreen
         anchors.fill: parent
@@ -147,15 +154,6 @@ Item {
         }
     }
 
-    Course {
-        id: selectedCourse
-        property Lesson selectedLesson
-    }
-
-    Lesson {
-        id: customLessonCopy
-    }
-
     TrainingScreen {
         id: trainingScreen
         anchors.fill: parent
@@ -183,6 +181,7 @@ Item {
             main.switchScreen(scoreScreen, trainingScreen)
         }
     }
+    */
 
     Rectangle {
         id: curtain
@@ -191,6 +190,7 @@ Item {
         opacity: 0
     }
 
+    /*
     SequentialAnimation
     {
         id: switchScreenAnimation
@@ -230,4 +230,5 @@ Item {
             }
         }
     }
+    */
 }

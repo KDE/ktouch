@@ -89,6 +89,9 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
+    if (!m_dataIndex)
+        return QVariant();
+
     if (index.row() > m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount())
         return QVariant();
 
@@ -110,6 +113,9 @@ QVariant ResourceModel::headerData(int section, Qt::Orientation orientation, int
 int ResourceModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid())
+        return 0;
+
+    if (!m_dataIndex)
         return 0;
 
     return m_dataIndex->courseCount() + m_dataIndex->keyboardLayoutCount();
@@ -137,6 +143,9 @@ void ResourceModel::onCoursesAboutToBeRemoved(int first, int last)
 
 void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index)
 {
+    if (!m_dataIndex)
+        return;
+
     const int offset = m_dataIndex->courseCount();
     connectToKeyboardLayout(keyboardLayout);
     beginInsertRows(QModelIndex(), index + offset, index + offset);
@@ -144,6 +153,9 @@ void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyb
 
 void ResourceModel::onKeyboardLayoutsAboutToBeRemoved(int first, int last)
 {
+    if (!m_dataIndex)
+        return;
+
     const int offset = m_dataIndex->courseCount();
     beginRemoveRows(QModelIndex(), first + offset, last + offset);
 }
@@ -168,6 +180,9 @@ void ResourceModel::emitDataChanged(int row)
 
 QVariant ResourceModel::courseData(int row, int role) const
 {
+    if (!m_dataIndex)
+        return QVariant();
+
     switch(role)
     {
     case KCategorizedSortFilterProxyModel::CategorySortRole:
@@ -199,6 +214,9 @@ QVariant ResourceModel::courseData(int row, int role) const
 
 QVariant ResourceModel::keyboardLayoutData(int row, int role) const
 {
+    if (!m_dataIndex)
+        return QVariant();
+
     switch(role)
     {
     case KCategorizedSortFilterProxyModel::CategorySortRole:
@@ -247,6 +265,9 @@ void ResourceModel::connectToKeyboardLayout(DataIndexKeyboardLayout *keyboardLay
 
 void ResourceModel::updateMappings()
 {
+    if (!m_dataIndex)
+        return;
+
     for (int i = 0; i < m_dataIndex->courseCount(); i++)
     {
         m_signalMapper->setMapping(m_dataIndex->course(i), i);
