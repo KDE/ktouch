@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 FocusScope {
@@ -68,22 +69,24 @@ FocusScope {
         preferences.writeConfig()
     }
 
-    Column {
+    ColumnLayout {
         anchors.fill: parent
-        spacing: header.margins.bottom / 2
 
-        PlasmaComponents.ToolBar {
+        ToolBar {
             visible: homeScreenAccordion.opacity > 0
             id: header
-            width: parent.width
-            tools: Row {
+            Layout.fillWidth: true
+
+            RowLayout {
+                anchors.fill: parent
                 anchors.leftMargin: 3
                 anchors.rightMargin: 3
                 spacing: 5
 
-                PlasmaComponents.ToolButton {
+                ToolButton {
+                    // TODO: Find a better control here which supports both an icon and a label
                     id: profileButton
-                    iconSource: "user-identity"
+                    // iconName: "user-identity"
                     text: d.profile !== null? d.profile.name: ""
                     onClicked: {
                         if (profileSelectorSheet.isOpen()) {
@@ -94,20 +97,18 @@ FocusScope {
                         }
                     }
                     checked: profileSelectorSheet.isOpen()
-                    width: minimumWidth
                 }
 
                 Item {
-                    height: parent.height
-                    width: parent.width - profileButton.width - configureButton.width - (parent.children.length - 1) * parent.spacing
+                    Layout.fillWidth: true
                 }
 
-                PlasmaComponents.ToolButton {
+                ToolButton {
                     id: configureButton
-                    iconSource: "configure"
+                    iconName: "configure"
                     onClicked: {
                         var position = mapToItem(null, 0, height)
-                        showMenu(position.x, position.y)
+                        ktouch.showMenu(position.x, position.y)
                     }
                 }
             }
@@ -115,9 +116,10 @@ FocusScope {
 
         Item {
             id: content
-            width: parent.width
-            height: parent.height - header.height
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
+            /*
             CourseSelector {
                 id: homeScreenAccordion
                 opacity: 1 - initialProfileForm.opacity
@@ -128,6 +130,7 @@ FocusScope {
                 anchors.fill: parent
                 onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
             }
+            */
 
             InitialProfileForm {
                 id: initialProfileForm
@@ -143,6 +146,7 @@ FocusScope {
                 }
             }
 
+            /*
             SheetDialog {
                 id: profileSelectorSheet
                 anchors.fill: parent
@@ -161,6 +165,7 @@ FocusScope {
                     }
                 }
             }
+            */
         }
     }
 }

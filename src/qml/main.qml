@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -117,7 +118,6 @@ Item {
         id: customLessonCopy
     }
 
-    /*
     HomeScreen {
         id: homeScreen
         anchors.fill: parent
@@ -154,6 +154,7 @@ Item {
         }
     }
 
+    /*
     TrainingScreen {
         id: trainingScreen
         anchors.fill: parent
@@ -190,7 +191,6 @@ Item {
         opacity: 0
     }
 
-    /*
     SequentialAnimation
     {
         id: switchScreenAnimation
@@ -230,5 +230,4 @@ Item {
             }
         }
     }
-    */
 }
