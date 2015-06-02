@@ -18,6 +18,7 @@
 #include "dbaccess.h"
 
 #include <QDebug>
+#include <QDir>
 #include <QUuid>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -42,7 +43,12 @@ QSqlDatabase DbAccess::database()
 {
     if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection))
     {
-        QString dbPath = QStandardPaths::locate(QStandardPaths::DataLocation, "profiles.db");
+        QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        if (!dataDir.exists())
+        {
+            dataDir.mkpath(dataDir.path());
+        }
+        QString dbPath = dataDir.filePath("profiles.db");
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName(dbPath);
         if (!db.open())
