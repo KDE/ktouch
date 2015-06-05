@@ -19,8 +19,14 @@
 import QtQuick 2.4
 import ktouch 1.0
 
-Item {
+Rectangle {
+    SystemPalette {
+        id: activePallete
+        colorGroup: SystemPalette.Active
+    }
+
     id: main
+    color: activePallete.window
 
     function switchScreen(from, to) {
         switchScreenAnimation.from = from

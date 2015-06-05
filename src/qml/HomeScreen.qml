@@ -71,9 +71,10 @@ FocusScope {
 
     ColumnLayout {
         anchors.fill: parent
+        spacing: 0
 
         ToolBar {
-            visible: homeScreenAccordion.opacity > 0
+            visible: courseSelector.opacity > 0
             id: header
             Layout.fillWidth: true
 
@@ -119,9 +120,8 @@ FocusScope {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            /*
             CourseSelector {
-                id: homeScreenAccordion
+                id: courseSelector
                 opacity: 1 - initialProfileForm.opacity
                 courseModel: screen.courseModel
                 profile: d.profile
@@ -130,7 +130,6 @@ FocusScope {
                 anchors.fill: parent
                 onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
             }
-            */
 
             InitialProfileForm {
                 id: initialProfileForm

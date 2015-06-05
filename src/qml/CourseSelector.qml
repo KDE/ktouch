@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 Item {
@@ -107,16 +108,22 @@ Item {
         property int currentIndex: -1
     }
 
-    Column {
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
+
+    ColumnLayout {
         anchors.fill: parent
+        spacing: 0
 
         Rectangle {
             id: head
-            width: parent.width
-            height: Math.ceil(courseTitleLabel.height + 6)
-            color: theme.backgroundColor
+            Layout.fillWidth: true
+            height: Math.ceil(Math.max(courseTitleLabel.height, courseDescriptionButton.height) + 6)
+            color: palette.base
 
-            Row {
+            RowLayout {
                 anchors {
                     fill: parent
                     leftMargin: 5
@@ -125,10 +132,10 @@ Item {
                     bottomMargin: 3
                 }
 
-                PlasmaComponents.Label {
+                Label {
+                    anchors.verticalCenter: parent.verticalCenter
                     id: courseTitleLabel
-                    height: paintedHeight
-                    font.pointSize: 1.5 * theme.defaultFont.pointSize
+                    font.pointSize: 1.5 * Qt.font({'family': 'sansserif'}).pointSize
                     text: coursePageContainer.activePage.course.title
                 }
 
@@ -138,20 +145,22 @@ Item {
                     width: 3
                 }
 
-                PlasmaComponents.ToolButton {
+                ToolButton {
                     id: courseDescriptionButton
-                    iconSource: "dialog-information"
+                    anchors.verticalCenter: parent.verticalCenter
+                    iconName: "dialog-information"
                     checkable: true
                 }
 
                 Item {
-                    width: parent.width - courseTitleLabel.width - smallSpacer.width - courseDescriptionButton.width - previousButton.width - nextButton.width - (parent.children.length - 1) * parent.spacing
-                    height: parent.height
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
                 }
 
-                PlasmaComponents.ToolButton {
+                ToolButton {
                     id: previousButton
-                    iconSource: "arrow-left"
+                    anchors.verticalCenter: parent.verticalCenter
+                    iconName: "arrow-left"
                     enabled: priv.currentIndex > 0
                     visible: courseRepeater.count > 0
                     onClicked: {
@@ -160,9 +169,9 @@ Item {
                     }
                 }
 
-                PlasmaComponents.ToolButton {
+                ToolButton {
                     id: nextButton
-                    iconSource: "arrow-right"
+                    iconName: "arrow-right"
                     enabled: priv.currentIndex < courseRepeater.count
                     visible: courseRepeater.count > 0
                     onClicked: {
@@ -173,11 +182,16 @@ Item {
             }
         }
 
-        CourseDescriptionItem {
-            id: courseDescriptionItem
-            width: parent.width
-            active: courseDescriptionButton.checked
-            description: coursePageContainer.activePage.course.description
+        Item {
+            Layout.fillWidth: true
+            Layout.minimumHeight: courseDescriptionItem.height
+            Layout.maximumHeight: courseDescriptionItem.height
+            CourseDescriptionItem {
+                id: courseDescriptionItem
+                active: courseDescriptionButton.checked
+                description: coursePageContainer.activePage.course.description
+                width: parent.width
+            }
         }
 
         Item {
@@ -185,8 +199,8 @@ Item {
             property CoursePage activePage: page0
             property CoursePage inactivePage: page1
 
-            width: parent.width
-            height: parent.height - head.height - courseDescriptionItem.height
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
             CoursePage {
                 id: page0

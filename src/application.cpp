@@ -18,7 +18,7 @@
 #include "application.h"
 
 #include <QQmlEngine>
-#include <QJSValue>
+#include <QQmlContext>
 
 #include <KDeclarative/KDeclarative>
 
@@ -77,10 +77,10 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
     kDeclarative.setDeclarativeEngine(qmlEngine);
     kDeclarative.setupBindings();
 
-    QJSValue globalObject = qmlEngine->globalObject();
+    QQmlContext* rootContext = qmlEngine->rootContext();
 
-    globalObject.setProperty("utils", qmlEngine->newQObject(new Utils()));
-    globalObject.setProperty("strFormatter", qmlEngine->newQObject(new StringFormatter()));
+    rootContext->setContextProperty("utils", new Utils());
+    rootContext->setContextProperty("strFormatter", new StringFormatter());
 }
 
 void Application::registerQmlTypes()

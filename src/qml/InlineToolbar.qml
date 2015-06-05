@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
 
 Item {
 
@@ -29,10 +28,15 @@ Item {
     width: contentArea.width + 6
     height: contentArea.height + 6
 
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
+
     Rectangle {
         anchors.fill: parent
         id: background
-        color: "#888"
+        color: pallete.mid
         opacity: 0.7
         radius: 3
     }
