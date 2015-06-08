@@ -171,12 +171,12 @@ Item {
             opacity: base.selectedLesson !== null? 1: 0
             content: [
                 ToolButton {
-                    iconSource: "document-edit"
+                    iconName: "document-edit"
                     text: i18n("Edit")
                     onClicked: editLesson()
                 },
                 ToolButton {
-                    iconSource: "edit-delete"
+                    iconName: "edit-delete"
                     text: i18n("Delete")
                     onClicked: deleteLesson()
                 }
@@ -204,18 +204,19 @@ Item {
             content: [
                 Label {
                     text: i18n("'%1' deleted.", undoToolbar.lastDeletedLessonTitle)
+                    anchors.verticalCenter: parent.verticalCenter
                 },
                 Item {
                     width: 5
                     height: 1
                 },
                 ToolButton {
-                    iconSource: "edit-undo"
+                    iconName: "edit-undo"
                     text: i18n("Undo")
                     onClicked: undoLessonDeletion()
                 },
                 ToolButton {
-                    iconSource: "dialog-close"
+                    iconName: "dialog-close"
                     text: i18n("Dismiss")
                     onClicked: confirmLessonDeletion()
                 }

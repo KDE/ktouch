@@ -28,17 +28,18 @@ Item {
     width: contentArea.width + 6
     height: contentArea.height + 6
 
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
-    }
 
     Rectangle {
         anchors.fill: parent
         id: background
-        color: pallete.mid
+        color: activePalette.mid
         opacity: 0.7
         radius: 3
+
+        SystemPalette {
+            id: activePalette
+            colorGroup: SystemPalette.Active
+        }
     }
 
     Behavior on opacity {
