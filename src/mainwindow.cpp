@@ -40,7 +40,7 @@
 #include "preferences.h"
 #include "trainingconfigwidget.h"
 #include "colorsconfigwidget.h"
-#include "customlessoneditorwidget.h"
+#include "customlessoneditordialog.h"
 
 #ifdef KTOUCH_BUILD_WITH_X11
 #include "x11_helper.h"
@@ -112,19 +112,10 @@ void MainWindow::showResourceEditor()
 
 bool MainWindow::showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout)
 {
-    QDialog* dialog = new QDialog(this);
-    QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dialog);
-    CustomLessonEditorWidget* editor = new CustomLessonEditorWidget(buttonBox);
+    CustomLessonEditorDialog* dialog = new CustomLessonEditorDialog(this);
 
-    buttonBox->setWindowTitle(i18n("Edit Custom Lesson"));
-
-
-    connect(editor, &CustomLessonEditorWidget::validChanged, buttonBox->button(QDialogButtonBox::Ok), &QPushButton::setEnabled);
-
-
-    editor->setLesson(lesson);
-    editor->setKeyboardLayout(keyboardLayout);
-
+    dialog->setLesson(lesson);
+    dialog->setKeyboardLayout(keyboardLayout);
 
     bool result = dialog->exec() == QDialog::Accepted;
 

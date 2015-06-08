@@ -77,7 +77,7 @@ set(ktouch_SRCS
     editor/charactersviewdelegate.cpp
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
-    customlessoneditorwidget.cpp
+    customlessoneditordialog.cpp
 )
 
 # compile UI files
@@ -93,7 +93,7 @@ qt5_wrap_ui(ktouch_SRCS
     ui/lessontexteditor.ui
     ui/keyboardlayouteditor.ui
     ui/keyboardlayoutpropertieswidget.ui
-    ui/customlessoneditorwidget.ui
+    ui/customlessoneditordialog.ui
 )
 
 if (X11_Xkbfile_FOUND)
