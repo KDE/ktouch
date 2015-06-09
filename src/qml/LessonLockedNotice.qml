@@ -30,15 +30,31 @@ Item {
     width: content.width + 40
     height: content.height + 40
 
+    property alias blurSource: effectSource.sourceItem
+
     SystemPalette {
         id: palette
         colorGroup: SystemPalette.Active
+    }
+
+    ShaderEffectSource {
+        id: effectSource
+        anchors.fill: parent
+        hideSource: false
+        sourceRect: Qt.rect(root.x, root.y, root.width, root.height)
+    }
+
+    FastBlur {
+        anchors.fill: parent
+        source: effectSource
+        radius: 25
     }
 
     Rectangle {
         id: background
         anchors.fill: parent
         color: palette.base
+        opacity: 0.3
         radius: 15
     }
 

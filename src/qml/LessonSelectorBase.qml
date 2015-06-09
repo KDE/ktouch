@@ -55,11 +55,12 @@ Item {
                 Layout.fillHeight: true
 
                 lesson: selectedLesson
+            }
 
-                LessonLockedNotice {
-                    anchors.centerIn: parent
-                    opacity: selectedLessonLocked? 1: 0
-                }
+            LessonLockedNotice {
+                anchors.centerIn: lessonPreview
+                blurSource: lessonPreview
+                opacity: selectedLessonLocked? 1: 0
             }
 
             Item {
