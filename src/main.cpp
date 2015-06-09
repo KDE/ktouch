@@ -68,9 +68,19 @@ int main(int argc, char **argv)
 
     parser.addOption(QCommandLineOption(QStringLiteral("resource-editor"), i18n("Launch the course and keyboard layout editor")));
 
+    parser.addOption({{"I", "import-path"}, i18n("Prepend the path to the list of QML import paths"), "path"});
+
     parser.process(app);
 
     about.processCommandLine(&parser);
+
+    if (parser.isSet("import-path"))
+    {
+        foreach (const QString& path, parser.values("import-path"))
+        {
+            app.qmlImportPaths().append(path);
+        }
+    }
 
 
     if (app.isSessionRestored())

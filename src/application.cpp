@@ -77,10 +77,21 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
     kDeclarative.setDeclarativeEngine(qmlEngine);
     kDeclarative.setupBindings();
 
+    Application* app = static_cast<Application*>(Application::instance());
+    foreach (const QString& path, app->m_qmlImportPaths)
+    {
+        qmlEngine->addImportPath(path);
+    }
+
     QQmlContext* rootContext = qmlEngine->rootContext();
 
     rootContext->setContextProperty("utils", new Utils());
     rootContext->setContextProperty("strFormatter", new StringFormatter());
+}
+
+QStringList& Application::qmlImportPaths()
+{
+    return m_qmlImportPaths;
 }
 
 void Application::registerQmlTypes()

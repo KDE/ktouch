@@ -34,10 +34,12 @@ public:
     static DataIndex* dataIndex();
     static void setupDeclarativeBindings(QQmlEngine* qmlEngine);
     static QSharedPointer<ResourceEditor>& resourceEditorRef();
+    QStringList& qmlImportPaths();
 private:
     void registerQmlTypes();
     DataIndex* m_dataIndex;
     QSharedPointer<ResourceEditor> m_resourceEditorRef;
+    QStringList m_qmlImportPaths;
 };
 
 #endif // APPLICATION_H
