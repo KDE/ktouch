@@ -90,14 +90,14 @@ FocusScope {
                     // iconName: "user-identity"
                     text: d.profile !== null? d.profile.name: ""
                     onClicked: {
-                        if (profileSelectorSheet.isOpen()) {
-                            profileSelectorSheet.close()
-                        }
-                        else {
+                        if (checked) {
                             profileSelectorSheet.open()
                         }
+                        else {
+                            profileSelectorSheet.close()
+                        }
                     }
-                    checked: profileSelectorSheet.isOpen()
+                    checkable: true
                 }
 
                 Item {
@@ -145,15 +145,17 @@ FocusScope {
                 }
             }
 
-            /*
             SheetDialog {
                 id: profileSelectorSheet
                 anchors.fill: parent
-                onOpended: {
+                onOpened: {
                     if (d.profile) {
                         var index = profileDataAccess.indexOfProfile(d.profile)
                         profileSelector.selectProfile(index)
                     }
+                }
+                onClosed: {
+                    profileButton.checked = false;
                 }
                 content: ProfileSelector {
                     id: profileSelector
@@ -164,7 +166,6 @@ FocusScope {
                     }
                 }
             }
-            */
         }
     }
 }

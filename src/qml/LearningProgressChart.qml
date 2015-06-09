@@ -15,9 +15,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import org.kde.charts 0.1
 import ktouch 1.0
 
@@ -40,7 +40,7 @@ LineChart {
 
         return 0;
     }
-    
+
     dimensions: [
         Dimension {
             id: accuracyDimension

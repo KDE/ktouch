@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,10 +16,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.locale 0.1 as Locale
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import org.kde.kcoreaddons 1.0
 import org.kde.charts 0.1 as Charts
 import ktouch 1.0
 
@@ -42,9 +43,11 @@ Item {
 
     onProfileChanged: update()
 
-    Locale.Locale {
-        id: locale
+    SystemPalette {
+        id: activePalette
+        colorGroup: SystemPalette.Active
     }
+
 
     Item {
         id: infoContainer
@@ -68,11 +71,11 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - 40
                 height: 250
-                color: theme.backgroundColor
+                color: activePalette.base
 
                 border {
                     width: 1
-                    color: theme.textColor
+                    color: activePalette.text
                 }
 
                 Column {
@@ -123,11 +126,11 @@ Item {
                     },
                     InfoItem {
                         title: i18n("Total training time:")
-                        text: profile && profile.id !== -1? locale.prettyFormatDuration(profileDataAccess.totalTrainingTime(profile)): ""
+                        text: profile && profile.id !== -1? Format.formatDuration(profileDataAccess.totalTrainingTime(profile)): ""
                     },
                     InfoItem {
                         title: i18n("Last trained:")
-                        text: profile && profile.id !== -1 && profileInfoTable.trainedLessonCount > 0? locale.formatDateTime(profileDataAccess.lastTrainingSession(profile)): i18n("Never")
+                        text: profile && profile.id !== -1 && profileInfoTable.trainedLessonCount > 0? profileDataAccess.lastTrainingSession(profile).toLocaleDateString(): i18n("Never")
                     }
                 ]
 
@@ -142,18 +145,16 @@ Item {
                 topMargin: 5
             }
             content: [
-                PlasmaComponents.ToolButton {
-                    iconSource: "document-edit"
+                ToolButton {
+                    iconName: "document-edit"
                     text: i18n("Edit")
                     onClicked: root.state = "editor"
-                    width: minimumWidth
                 },
-                PlasmaComponents.ToolButton {
-                    iconSource: "edit-delete"
+                ToolButton {
+                    iconName: "edit-delete"
                     text: i18n("Delete")
                     enabled: profileDataAccess.profileCount > 1
                     onClicked: root.state = "deleteConfirmation"
-                    width: minimumWidth
                 }
             ]
         }
@@ -194,7 +195,7 @@ Item {
             height: childrenRect.height
             spacing: 15
 
-            PlasmaComponents.Label {
+            Label {
                 property string name
                 id: deleteConfirmationLabel
                 width: parent.width
@@ -207,16 +208,14 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: childrenRect.width
                 height: childrenRect.height
-                PlasmaComponents.ToolButton {
-                    iconSource: "edit-delete"
+                ToolButton {
+                    iconName: "edit-delete"
                     text: i18n("Delete")
                     onClicked: root.deletionRequest()
-                    width: minimumWidth
                 }
-                PlasmaComponents.ToolButton {
+                ToolButton {
                     text: i18n("Cancel")
                     onClicked: root.state = "info"
-                    width: minimumWidth
                 }
             }
         }
