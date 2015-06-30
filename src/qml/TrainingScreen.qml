@@ -127,7 +127,7 @@ FocusScope {
         spacing: 0
         BorderImage {
             Layout.fillWidth: true
-            Layout.preferredHeight: 29
+            Layout.preferredHeight: 41
             border {
                 top: 1
                 bottom: 1
@@ -136,15 +136,15 @@ FocusScope {
             source: utils.findImage("trainingscreen-toolbar.png")
             horizontalTileMode: BorderImage.Repeat
             verticalTileMode: BorderImage.Repeat
-            /*
+
             TrainingScreenToolbar {
                 id: toolbar
+                anchors.fill: parent
                 trainingStarted: screen.trainingStarted
                 trainingFinished: screen.trainingFinished
                 stats: stats
                 menuOverlayItem: menuOverlay
             }
-            */
         }
 
         BorderImage {
