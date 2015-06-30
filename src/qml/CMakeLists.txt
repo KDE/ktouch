@@ -5,7 +5,6 @@ set(ktouch_qml_files
     CourseSelector.qml
     CoursePage.qml
     CourseDescriptionItem.qml
-    NoCoursesMessage.qml
     ProfileSelector.qml
     ProfileForm.qml
     ProfileDetailsItem.qml
