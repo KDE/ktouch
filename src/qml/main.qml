@@ -38,10 +38,6 @@ Rectangle {
         id: dataAccess
     }
 
-    Text {
-        text: ktouch.globalDataIndex.courseCount
-    }
-
     QtObject {
         id: helper
         property string name: ktouch.keyboardLayoutName
@@ -134,7 +130,6 @@ Rectangle {
         focus: true
         onLessonSelected: {
             trainingScreen.profile = profile
-            scoreScreen.profile = profile
             var lessonIndex = -1;
             for (var i = 0; i < course.lessonCount; i++) {
                 if (lesson === course.lesson(i)) {
@@ -160,7 +155,6 @@ Rectangle {
         }
     }
 
-    /*
     TrainingScreen {
         id: trainingScreen
         anchors.fill: parent
@@ -172,6 +166,7 @@ Rectangle {
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
         onFinished: main.switchScreen(trainingScreen, scoreScreen)
     }
+    /*
 
     ScoreScreen {
         id: scoreScreen
@@ -180,6 +175,7 @@ Rectangle {
         course: trainingScreen.course
         lesson: trainingScreen.lesson
         stats: trainingScreen.stats
+        profile: trainingScreen.profile
         referenceStats: trainingScreen.referenceStats
         onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
         onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)

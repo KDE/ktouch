@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,8 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 FocusScope {
@@ -119,48 +121,67 @@ FocusScope {
         id: referenceStats
     }
 
-    PlasmaCore.Svg {
-        id: screenSvg
-        imagePath: findImage("trainingscreen.svgz")
-        usingRenderingCache: false
-    }
 
-    Column {
+    ColumnLayout {
         anchors.fill: parent
-
-        TrainingScreenToolbar {
-            id: toolbar
-            height: 29
-            width: parent.width
-            trainingStarted: screen.trainingStarted
-            trainingFinished: screen.trainingFinished
-            stats: stats
-            menuOverlayItem: menuOverlay
+        spacing: 0
+        BorderImage {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 29
+            border {
+                top: 1
+                bottom: 1
+            }
+            cache: false
+            source: utils.findImage("trainingscreen-toolbar.png")
+            horizontalTileMode: BorderImage.Repeat
+            verticalTileMode: BorderImage.Repeat
+            /*
+            TrainingScreenToolbar {
+                id: toolbar
+                trainingStarted: screen.trainingStarted
+                trainingFinished: screen.trainingFinished
+                stats: stats
+                menuOverlayItem: menuOverlay
+            }
+            */
         }
 
-        PlasmaCore.SvgItem {
+        BorderImage {
             id: header
-            svg: screenSvg
-            elementId: "header"
-            width: parent.width
+            Layout.fillWidth: true
+            Layout.preferredHeight: visible? 130: 0
             visible: preferences.showStatistics
-            height: visible? 130: 0
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-header.png")
+            cache: false
 
+            /*
             StatBox {
                 anchors.centerIn: parent
                 width: parent.width - 60
                 stats: stats
                 referenceStats: referenceStats
             }
+            */
         }
 
-        PlasmaCore.SvgItem {
-            id: body
-            width: parent.width
-            height: parent.height - toolbar.height - header.height - footer.height
-            svg: screenSvg
-            elementId: "content"
 
+        BorderImage {
+            id: body
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-viewport.png")
+            cache: false
+
+            /*
             TrainingWidget {
                 id: trainingWidget
                 anchors.fill: parent
@@ -178,26 +199,40 @@ FocusScope {
                     screen.trainingFinished = true
                 }
             }
+            */
 
-            PlasmaCore.FrameSvgItem {
+            BorderImage {
                 anchors.fill: parent
-                imagePath: findImage("trainingscreen.svgz")
-                prefix: "content-shadow"
+                border {
+                    top: 3
+                    bottom: 3
+                }
+                source: utils.findImage("trainingscreen-viewport-shadow.png")
+                cache: false
+
             }
+
         }
 
-        PlasmaCore.SvgItem {
+        BorderImage {
             id: footer
-            width: parent.width
             visible: preferences.showKeyboard
+            Layout.fillWidth: true
+            Layout.preferredHeight: 100
+            /*
             height: visible?
                         screen.keyboardLayout.isValid?
                             Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)):
                             keyboardUnavailableNotice.height:
                         0
-            svg: screenSvg
-            elementId: "footer"
-
+            */
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-footer.png")
+            cache: false
+            /*
             Keyboard {
                 id: keyboard
 
@@ -267,6 +302,7 @@ FocusScope {
                 id: keyboardUnavailableNotice
                 visible: !screen.keyboardLayout.isValid
             }
+            */
         }
     }
 
@@ -275,6 +311,7 @@ FocusScope {
         anchors.fill: parent
     }
 
+    /*
     TrainingScreenMenuOverlay {
         id: menuOverlay
         anchors.fill: parent
@@ -286,4 +323,5 @@ FocusScope {
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()
     }
+    */
 }
