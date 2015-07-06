@@ -218,21 +218,17 @@ FocusScope {
             id: footer
             visible: preferences.showKeyboard
             Layout.fillWidth: true
-            Layout.preferredHeight: 100
-            /*
-            height: visible?
+            Layout.preferredHeight: visible?
                         screen.keyboardLayout.isValid?
                             Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)):
                             keyboardUnavailableNotice.height:
                         0
-            */
             border {
                 top: 1
                 bottom: 1
             }
             source: utils.findImage("trainingscreen-footer.png")
             cache: false
-            /*
             Keyboard {
                 id: keyboard
 
@@ -302,7 +298,6 @@ FocusScope {
                 id: keyboardUnavailableNotice
                 visible: !screen.keyboardLayout.isValid
             }
-            */
         }
     }
 

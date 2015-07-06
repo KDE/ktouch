@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,10 +16,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.qtextracomponents 0.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import org.kde.kquickcontrolsaddons 2.0
 import ktouch 1.0
 
 Item {
@@ -38,14 +39,13 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: theme.smallIconSize
             height: theme.smallIconSize
-            icon: QIcon("dialog-warning")
+            icon: "dialog-warning"
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: label
             anchors.verticalCenter: parent.verticalCenter
             width: parent.width - icon.width - parent.spacing
-            height: paintedHeight
             text: i18n("No visualization available for your keyboard layout.")
             color: "white"
         }
