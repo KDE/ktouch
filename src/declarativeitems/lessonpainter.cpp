@@ -262,6 +262,7 @@ void LessonPainter::updateTrainingStatus()
 
     invalidateImageCache();
     updateCursorRectangle();
+    update();
 }
 
 void LessonPainter::advanceToNextTrainingLine()
@@ -332,8 +333,6 @@ void LessonPainter::checkImageCache()
 
     m_imageCache = img;
     m_imageCacheDirty = false;
-
-    update();
 }
 
 void LessonPainter::updateCursorRectangle()
