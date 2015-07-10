@@ -66,7 +66,7 @@ Rectangle {
         QIconItem {
             id: icon
             width: height
-            height: valid? label.height: 0
+            height: icon? label.height: 0
         }
 
         Label {
