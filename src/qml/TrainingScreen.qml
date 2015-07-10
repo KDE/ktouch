@@ -181,7 +181,6 @@ FocusScope {
             source: utils.findImage("trainingscreen-viewport.png")
             cache: false
 
-            /*
             TrainingWidget {
                 id: trainingWidget
                 anchors.fill: parent
@@ -199,7 +198,6 @@ FocusScope {
                     screen.trainingFinished = true
                 }
             }
-            */
 
             BorderImage {
                 anchors.fill: parent
