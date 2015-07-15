@@ -159,14 +159,12 @@ FocusScope {
             source: utils.findImage("trainingscreen-header.png")
             cache: false
 
-            /*
             StatBox {
                 anchors.centerIn: parent
                 width: parent.width - 60
                 stats: stats
                 referenceStats: referenceStats
             }
-            */
         }
 
 
