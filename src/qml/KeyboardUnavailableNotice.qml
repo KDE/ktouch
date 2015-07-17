@@ -37,8 +37,8 @@ Item {
         QIconItem {
             id: icon
             anchors.verticalCenter: parent.verticalCenter
-            width: theme.smallIconSize
-            height: theme.smallIconSize
+            width: 22
+            height: 22
             icon: "dialog-warning"
         }
 
