@@ -123,6 +123,7 @@ FocusScope {
 
 
     ColumnLayout {
+        id: screenContent
         anchors.fill: parent
         spacing: 0
         BorderImage {
@@ -302,9 +303,9 @@ FocusScope {
         anchors.fill: parent
     }
 
-    /*
     TrainingScreenMenuOverlay {
         id: menuOverlay
+        blurSource: screenContent
         anchors.fill: parent
         onVisibleChanged: {
             if (!visible) {
@@ -314,5 +315,4 @@ FocusScope {
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()
     }
-    */
 }
