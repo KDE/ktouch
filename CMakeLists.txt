@@ -26,6 +26,7 @@ find_package(Qt5 REQUIRED COMPONENTS
     Quick
     QuickWidgets
     Test
+    X11Extras
 )
 
 find_package(KF5 REQUIRED COMPONENTS

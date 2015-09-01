@@ -123,6 +123,7 @@ target_link_libraries(ktouch
         Qt5::Script
         Qt5::Sql
         Qt5::XmlPatterns
+        Qt5::X11Extras
         KF5::ConfigWidgets
         KF5::Declarative
         KF5::KIOWidgets

@@ -20,10 +20,13 @@
 #ifndef X11_HELPER_H_
 #define X11_HELPER_H_
 
-#include <QtGui/QKeySequence>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
-#include <QtGui/QWidget>
+#include <QDebug>
+#include <QKeySequence>
+#include <QString>
+#include <QStringList>
+#include <QWidget>
+
+#include <X11/Xlib.h>
 
 
 class XEventNotifier : public QWidget {
