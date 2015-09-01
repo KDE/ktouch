@@ -1,11 +1,11 @@
 ecm_install_icons(
   ICONS
-    hi16-app-ktouch.png
-    hi22-app-ktouch.png
-    hi32-app-ktouch.png
-    hi48-app-ktouch.png
-    hi128-app-ktouch.png
-    hisc-app-ktouch.svgz
+    16-apps-ktouch.png
+    22-apps-ktouch.png
+    32-apps-ktouch.png
+    48-apps-ktouch.png
+    128-apps-ktouch.png
+    sc-apps-ktouch.svgz
   DESTINATION ${ICON_INSTALL_DIR}
   THEME hicolor
 )

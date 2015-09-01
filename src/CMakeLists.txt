@@ -108,6 +108,13 @@ kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
 
 add_executable(ktouch ${ktouch_SRCS})
 
+set(ktouch_X11_DEPS "")
+
+if (X11_Xkbfile_FOUND)
+    set(ktouch_X11_DEPS ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
+endif (X11_Xkbfile_FOUND)
+
+#uncomment this if oxygen icons for ktouch are available
 target_link_libraries(ktouch
     LINK_PUBLIC
         Qt5::Qml
@@ -125,13 +132,9 @@ target_link_libraries(ktouch
         KF5::I18n
         KF5::KCMUtils
         KF5::TextEditor
+        ${ktouch_X11_DEPS}
 )
 
-if (X11_Xkbfile_FOUND)
-    target_link_libraries(ktouch ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
-endif (X11_Xkbfile_FOUND)
-
-#uncomment this if oxygen icons for ktouch are available
 #kde4_add_app_icon(ktouch_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/ktouch.png")
 #kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktouch.png")
 
