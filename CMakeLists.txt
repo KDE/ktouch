@@ -42,6 +42,7 @@ find_package(KF5 REQUIRED COMPONENTS
     ItemViews
     KCMUtils
     TextEditor
+    WindowSystem
 )
 
 # subdirectories to build

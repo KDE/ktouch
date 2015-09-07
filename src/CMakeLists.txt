@@ -133,6 +133,7 @@ target_link_libraries(ktouch
         KF5::I18n
         KF5::KCMUtils
         KF5::TextEditor
+        KF5::WindowSystem
         ${ktouch_X11_DEPS}
 )
 
