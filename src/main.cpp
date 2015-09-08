@@ -19,6 +19,7 @@
 
 #include <KAboutData>
 #include <KLocalizedString>
+#include <Kdelibs4ConfigMigrator>
 
 #include "application.h"
 #include "mainwindow.h"
@@ -42,6 +43,13 @@ int main(int argc, char **argv)
                 QString(),
                 QStringLiteral("http://edu.kde.org/ktouch"),
                 QStringLiteral("submit@bugs.kde.org"));
+
+    /* for migration*/
+    QStringList configFiles;
+    configFiles << QLatin1String("ktouchrc");
+    Kdelibs4ConfigMigrator migrator(QLatin1String("ktouch"));
+    migrator.setConfigFiles(configFiles);
+    migrator.migrate();
 
     about.addAuthor(i18n("Sebastian Gottfried"), i18n("Current maintainer"), "sebastiangottfried@web.de");
     about.addAuthor(i18n("Andreas Nicolai"), i18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net");
