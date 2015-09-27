@@ -34,6 +34,7 @@ find_package(KF5 REQUIRED COMPONENTS
     ConfigWidgets
     CoreAddons
     Declarative
+    DocTools
     I18n
     KIO
     NewStuff
