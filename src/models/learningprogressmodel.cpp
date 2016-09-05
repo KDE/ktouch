@@ -26,7 +26,9 @@
 
 LearningProgressModel::LearningProgressModel(QObject* parent) :
     QSqlQueryModel(parent),
-    m_profile(0)
+    m_profile(0),
+    m_courseFilter(0),
+    m_lessonFilter(0)
 {
 }
 
