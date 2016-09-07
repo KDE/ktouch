@@ -57,7 +57,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
 
     connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
-    connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
+    connect(m_lessonView->selectionModel(), SIGNAL(currentChanged(QModelIndex, QModelIndex)), SLOT(onLessonSelected()));
 
     connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
     connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
