@@ -220,38 +220,5 @@
   <tabstop>m_zoomInToolButton</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>m_zoomOutToolButton</sender>
-   <signal>clicked()</signal>
-   <receiver>m_zoomSlider</receiver>
-   <slot>subtractStep()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>307</x>
-     <y>28</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>354</x>
-     <y>26</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>m_zoomInToolButton</sender>
-   <signal>clicked()</signal>
-   <receiver>m_zoomSlider</receiver>
-   <slot>addStep()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>470</x>
-     <y>30</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>411</x>
-     <y>27</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

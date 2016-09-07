@@ -59,6 +59,14 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     connect(m_zoomSlider, SIGNAL(valueChanged(int)), SLOT(setZoomLevel(int)));
     connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
     connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
+
+    connect(m_zoomOutToolButton, &QToolButton::clicked, [=](){
+        m_zoomSlider->setValue(m_zoomSlider->value() - 1);
+    });
+    connect(m_zoomInToolButton, &QToolButton::clicked, [=](){
+        m_zoomSlider->setValue(m_zoomSlider->value() + 1);
+    });
+
 }
 
 void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)
