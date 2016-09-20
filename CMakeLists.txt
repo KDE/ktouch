@@ -56,6 +56,6 @@ ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
 install( PROGRAMS org.kde.ktouch.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install(FILES org.kde.ktouch.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/metainfo/)
+install(FILES org.kde.ktouch.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
