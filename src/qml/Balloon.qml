@@ -43,6 +43,13 @@ Loader {
             id: dismissArea
             anchors.fill: parent
             opacity: root.active && (root.status == 'open' || root.status =='opening')? 1 : 0
+            layer.enabled: true
+            layer.effect: DropShadow {
+                anchors.fill: parent
+                source: internalWrapper
+                radius: 5
+                samples: 11
+            }
 
             Behavior on opacity {
                 SequentialAnimation {
@@ -65,89 +72,78 @@ Loader {
                 colorGroup: SystemPalette.Active
             }
 
-            Item {
-                id: internalWrapper
-                anchors.fill: parent
-                visible: false
+            Rectangle {
+                id: internal
+                color: palette.alternateBase
+                radius: 5
 
-                Rectangle {
-                    id: internal
-                    color: palette.alternateBase
-                    radius: 5
+                property variant parentPos: root.visualParent? root.visualParent.mapToItem(dismissArea, 0, 0): Qt.point(0, 0)
+                property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
 
-                    property variant parentPos: root.visualParent? root.visualParent.mapToItem(dismissArea, 0, 0): Qt.point(0, 0)
-                    property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
-
-                    //bindings won't work inside anchors definition
-                    onUnderChanged: {
-                        if (under) {
-                            balloonTip.anchors.top = undefined
-                            balloonTip.anchors.bottom = balloonTip.parent.top
-                        } else {
-                            balloonTip.anchors.bottom = undefined
-                            balloonTip.anchors.top = balloonTip.parent.bottom
-                        }
-                    }
-
-                    property int preferedX: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
-                    x: Math.round(Math.max(radius, Math.min(dismissArea.width - internal.width - radius, preferedX)))
-                    y: {
-                        if (root.visualParent) {
-                            if (under) {
-                                Math.round(internal.parentPos.y + root.visualParent.height + balloonTip.height + radius)
-                            } else {
-                                Math.round(internal.parentPos.y - internal.height - balloonTip.height - radius)
-                            }
-                        } else {
-                            Math.round(dismissArea.height/2 - internal.height/2)
-                        }
-                    }
-                    width: contentItem.width + 2 * internal.radius
-                    height: contentItem.height + 2 * internal.radius
-
-                    Rectangle {
-                        id: balloonTip
-                        color: internal.color
-                        anchors {
-                            horizontalCenter: parent.horizontalCenter
-                            horizontalCenterOffset: internal.preferedX - internal.x
-                        }
-                        width: 10
-                        height: 10
-                        visible: false
-                    }
-
-                    Image {
-                        id: balloonTipMask
-                        anchors.fill: balloonTip
-                        visible: false
-                        source: utils.findImage("balloontip.svgz")
-                        sourceSize: Qt.size(width, height)
-                    }
-
-                    OpacityMask {
-                        anchors.fill: balloonTip
-                        visible: root.visualParent != null
-                        source: balloonTip
-                        maskSource: balloonTipMask
+                //bindings won't work inside anchors definition
+                onUnderChanged: {
+                    if (under) {
+                        balloonTip.anchors.top = undefined
+                        balloonTip.anchors.bottom = balloonTip.parent.top
+                    } else {
+                        balloonTip.anchors.bottom = undefined
+                        balloonTip.anchors.top = balloonTip.parent.bottom
                     }
                 }
-            }
 
-            DropShadow {
-                anchors.fill: parent
-                source: internalWrapper
-                radius: 5
-                samples: 11
-            }
+                property int preferedX: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
+                x: Math.round(Math.max(radius, Math.min(dismissArea.width - internal.width - radius, preferedX)))
+                y: {
+                    if (root.visualParent) {
+                        if (under) {
+                            Math.round(internal.parentPos.y + root.visualParent.height + balloonTip.height + radius)
+                        } else {
+                            Math.round(internal.parentPos.y - internal.height - balloonTip.height - radius)
+                        }
+                    } else {
+                        Math.round(dismissArea.height/2 - internal.height/2)
+                    }
+                }
+                width: contentItem.width + 2 * internal.radius
+                height: contentItem.height + 2 * internal.radius
 
-            Item {
-                id: contentItem
-                x: internal.x + internal.radius
-                y: internal.y + internal.radius
-                width: childrenRect.width
-                height: childrenRect.height + 2
-                data: root.data
+                Rectangle {
+                    id: balloonTip
+                    color: internal.color
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        horizontalCenterOffset: internal.preferedX - internal.x
+                        top: parent.bottom
+                    }
+                    width: 10
+                    height: 10
+                    visible: false
+                }
+
+                Image {
+                    id: balloonTipMask
+                    anchors.fill: balloonTip
+                    visible: false
+                    source: utils.findImage("balloontip.svgz")
+                    sourceSize: Qt.size(width, height)
+               }
+
+                OpacityMask {
+                    anchors.fill: balloonTip
+                    visible: root.visualParent != null
+                    source: balloonTip
+                    maskSource: balloonTipMask
+                    rotation: internal.under? 0: 180
+                }
+
+                Item {
+                    id: contentItem
+                    x: internal.radius
+                    y: internal.radius
+                    width: childrenRect.width
+                    height: childrenRect.height + 2
+                    data: root.data
+                }
             }
 
             onClicked: {
