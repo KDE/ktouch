@@ -49,28 +49,19 @@ Text {
             if (position === keyChar.position) {
                 return keyChar
             }
-            else if (position === keyChar.position) {
-                return keyChar
-            }
-            else if (position === keyChar.position) {
-                return keyChar
-            }
-            else if (position === keyChar.position) {
-                return keyChar
-            }
         }
         return null;
     }
 
     function keyLabel(position, key) {
         var keyChar = root.keyChar(position, key)
-        return keyChar? String.fromCharCode(keyChar.value): ""
+        return keyChar? keyChar.value: ""
     }
 
-    color: key.state == "normal"? "#333": "#222"
+    color: key.state === "normal"? "#333": "#222"
     smooth: true
     font.pixelSize: referenceKey.height * Math.min(horizontalScaleFactor, verticalScaleFactor) / 3
-    text: key.keyType() == "specialKey"?
-        position == KeyChar.TopLeft? specialKeyLabel(key.type): "":
+    text: key.keyType() === "specialKey"?
+        position === KeyChar.TopLeft? specialKeyLabel(key.type): "":
         keyLabel(position, key)
 }

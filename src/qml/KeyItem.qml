@@ -47,7 +47,7 @@ Item {
         switch (key.keyType()) {
         case "key":
             for (var i = 0; i < key.keyCharCount; i++) {
-                if (key.keyChar(i).value == eventText.charCodeAt(0)) {
+                if (key.keyChar(i).value == eventText) {
                     return true;
                 }
             }

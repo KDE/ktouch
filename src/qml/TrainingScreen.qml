@@ -56,7 +56,7 @@ FocusScope {
                 keyItems[i].enabled = false;
                 for (var j = 0; j < key.keyCharCount; j++) {
                     var keyChar = key.keyChar(j)
-                    if (chars.indexOf(String.fromCharCode(keyChar.value)) != -1) {
+                    if (chars.indexOf(keyChar.value) != -1) {
                         keyItems[i].enabled = true;
                         if (keyChar.modifier !== "") {
                             usedModifiers[keyChar.modifier] = true
@@ -241,10 +241,9 @@ FocusScope {
                             key.isHighlighted = true
                             newHighlightedKeys.push(key)
                             if (typeof which == "string") {
-                                var code = which.charCodeAt(0)
                                 for (var i = 0; i < key.key.keyCharCount; i++) {
                                     var keyChar = key.key.keyChar(i)
-                                    if (keyChar.value == code && keyChar.modifier != "") {
+                                    if (keyChar.value == which && keyChar.modifier != "") {
                                         var modifier = findModifierKeyItem(keyChar.modifier)
                                         if (modifier) {
                                             modifier.isHighlighted = true
