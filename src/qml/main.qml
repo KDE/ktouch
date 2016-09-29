@@ -166,7 +166,6 @@ Rectangle {
         onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
         onFinished: main.switchScreen(trainingScreen, scoreScreen)
     }
-    /*
 
     ScoreScreen {
         id: scoreScreen
@@ -184,7 +183,6 @@ Rectangle {
             main.switchScreen(scoreScreen, trainingScreen)
         }
     }
-    */
 
     Rectangle {
         id: curtain
