@@ -2,6 +2,7 @@ set(image_files
     accuracymeter-background.png
     accuracymeter-scale.png
     accuracymeter-hand.png
+    balloontip.svgz
     charactersperminutemeter-background.png
     charactersperminutemeter-scale.png
     charactersperminutemeter-hand.png
