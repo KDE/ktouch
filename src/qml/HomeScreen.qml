@@ -84,10 +84,10 @@ FocusScope {
                 anchors.rightMargin: 3
                 spacing: 5
 
-                ToolButton {
+                Button {
                     // TODO: Find a better control here which supports both an icon and a label
                     id: profileButton
-                    // iconName: "user-identity"
+                    iconName: "user-identity"
                     text: d.profile !== null? d.profile.name: ""
                     onClicked: {
                         if (checked) {
