@@ -9,12 +9,8 @@ set(image_files
     elapsedtimemeter-background.png
     elapsedtimemeter-minute-hand.png
     elapsedtimemeter-second-hand.png
-    meterbox.svgz
     meterbox-left.png
     meterbox-right.png
-    resizegrip.svgz
-    statusled.svgz
-    trainingscreen.svgz
     trainingscreen-footer.png
     trainingscreen-header.png
     trainingscreen-toolbar.png
