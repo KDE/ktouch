@@ -69,6 +69,11 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
 }
 
+KeyboardLayoutEditor::~KeyboardLayoutEditor()
+{
+    m_view->setSource(QUrl());
+}
+
 void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)
 {
     DataAccess dataAccess;
