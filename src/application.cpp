@@ -17,9 +17,14 @@
 
 #include "application.h"
 
+#include <QDir>
+#include <QFile>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QStandardPaths>
 
+#include <Kdelibs4ConfigMigrator>
+#include <Kdelibs4Migration>
 #include <KDeclarative/KDeclarative>
 
 #include "bindings/utils.h"
@@ -52,6 +57,7 @@ Application::Application(int& argc, char** argv, int flags):
     m_dataIndex(new DataIndex(this))
 {
     registerQmlTypes();
+    migrateKde4Files();
 
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
@@ -122,4 +128,29 @@ void Application::registerQmlTypes()
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
+}
+
+void Application::migrateKde4Files()
+{
+    QStringList configFiles;
+    configFiles << QLatin1String("ktouchrc");
+    Kdelibs4ConfigMigrator confMigrator(QLatin1String("ktouch"));
+    confMigrator.setConfigFiles(configFiles);
+    confMigrator.migrate();
+
+    Kdelibs4Migration migration;
+    const QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+    if (!dataDir.exists())
+    {
+        dataDir.mkpath(dataDir.path());
+    }
+    const QString dbPath = dataDir.filePath("profiles.db");
+    const QString oldDbPath = migration.locateLocal("data", QStringLiteral("ktouch/profiles.db"));
+    auto exists = QFile(dbPath).exists();
+    auto empty = oldDbPath.isEmpty();
+    if (!QFile(dbPath).exists() && !oldDbPath.isEmpty())
+    {
+        QFile(oldDbPath).copy(dbPath);
+    }
+
 }
