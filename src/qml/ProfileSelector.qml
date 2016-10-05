@@ -104,7 +104,7 @@ FocusScope {
         Button {
             id: selectButton
             anchors.horizontalCenter: parent.horizontalCenter
-            iconSource: "go-next-view"
+            iconName: "go-next-view"
             text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
             onClicked: root.profileChosen(profileDataAccess.profile(list.currentIndex))
