@@ -1,4 +1,4 @@
-ecm_setup_version(2.3.0
+ecm_setup_version(${KDE_APPLICATIONS_VERSION}
     VARIABLE_PREFIX KTOUCH
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KTouchConfigVersion.cmake"
