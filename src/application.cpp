@@ -146,8 +146,6 @@ void Application::migrateKde4Files()
     }
     const QString dbPath = dataDir.filePath("profiles.db");
     const QString oldDbPath = migration.locateLocal("data", QStringLiteral("ktouch/profiles.db"));
-    auto exists = QFile(dbPath).exists();
-    auto empty = oldDbPath.isEmpty();
     if (!QFile(dbPath).exists() && !oldDbPath.isEmpty())
     {
         QFile(oldDbPath).copy(dbPath);
