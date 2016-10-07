@@ -108,7 +108,7 @@ Rectangle {
         id: availableCourseModel
         resourceModel: resourceModel
         resourceTypeFilter: ResourceModel.CourseItem
-        keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: keyboardLayoutName
+        keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: ktouch.keyboardLayoutName
     }
 
     Course {
