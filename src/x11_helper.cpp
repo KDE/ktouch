@@ -18,22 +18,35 @@
 
 #include "x11_helper.h"
 
+#define explicit explicit_is_keyword_in_cpp
+#include <xcb/xkb.h>
+#undef explicit
+
+
 #include <QX11Info>
+#include <QCoreApplication>
+#include <QDebug>
 
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBrules.h>
+#include <xcb/xcb.h>
 #include <fixx11h.h>
 
-
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
-int X11Helper::MAX_GROUP_COUNT = 4;
-const char* X11Helper::LEFT_VARIANT_STR = "(";
-const char* X11Helper::RIGHT_VARIANT_STR = ")";
+const int X11Helper::MAX_GROUP_COUNT = 4;
+const int X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT = 8;
+
+const char X11Helper::LEFT_VARIANT_STR[] = "(";
+const char X11Helper::RIGHT_VARIANT_STR[] = ")";
 
 bool X11Helper::xkbSupported(int* xkbOpcode)
 {
+    if (!QX11Info::isPlatformX11()) {
+        return false;
+    }
     // Verify the Xlib has matching XKB extension.
 
     int major = XkbMajorVersion;
@@ -58,7 +71,7 @@ bool X11Helper::xkbSupported(int* xkbOpcode)
     }
 
     if( xkbOpcode != NULL ) {
-    	*xkbOpcode = xkb_opcode;
+        *xkbOpcode = xkb_opcode;
     }
 
     return true;
@@ -66,79 +79,82 @@ bool X11Helper::xkbSupported(int* xkbOpcode)
 
 void X11Helper::switchToNextLayout()
 {
-	int size = getLayoutsList().size();	//TODO: could optimize a bit as we don't need the layouts - just count
-	int group = (X11Helper::getGroup() + 1) % size;
-	X11Helper::setGroup(group);
+    int size = getLayoutsList().size();	//TODO: could optimize a bit as we don't need the layouts - just count
+    int group = (X11Helper::getGroup() + 1) % size;
+    X11Helper::setGroup(group);
 }
 
 void X11Helper::scrollLayouts(int delta)
 {
-	int size = getLayoutsList().size();	//TODO: could optimize a bit as we don't need the layouts - just count
-	int group = X11Helper::getGroup() + delta;
-	group = group < 0 ? size - ((-group) % size) : group % size;
+    int size = getLayoutsList().size();	//TODO: could optimize a bit as we don't need the layouts - just count
+    int group = X11Helper::getGroup() + delta;
+    group = group < 0 ? size - ((-group) % size) : group % size;
 
-	X11Helper::setGroup(group);
+    X11Helper::setGroup(group);
 }
 
 QStringList X11Helper::getLayoutsListAsString(const QList<LayoutUnit>& layoutsList)
 {
-	QStringList stringList;
-	foreach(const LayoutUnit& layoutUnit, layoutsList) {
-		stringList << layoutUnit.toString();
-	}
-	return stringList;
+    QStringList stringList;
+    foreach(const LayoutUnit& layoutUnit, layoutsList) {
+        stringList << layoutUnit.toString();
+    }
+    return stringList;
 }
 
 bool X11Helper::setLayout(const LayoutUnit& layout)
 {
-	QList<LayoutUnit> currentLayouts = getLayoutsList();
-	int idx = currentLayouts.indexOf(layout);
-	if( idx == -1 || idx >= X11Helper::MAX_GROUP_COUNT ) {
-		qWarning() << "Layout" << layout.toString() << "is not found in current layout list"
-								<< getLayoutsListAsString(currentLayouts);
-		return false;
-	}
+    QList<LayoutUnit> currentLayouts = getLayoutsList();
+    int idx = currentLayouts.indexOf(layout);
+    if( idx == -1 || idx >= X11Helper::MAX_GROUP_COUNT ) {
+        qWarning() << "Layout" << layout.toString() << "is not found in current layout list"
+                                << getLayoutsListAsString(currentLayouts);
+        return false;
+    }
 
-	return X11Helper::setGroup((unsigned int)idx);
+    return X11Helper::setGroup((unsigned int)idx);
 }
 
 bool X11Helper::setDefaultLayout() {
-	return X11Helper::setGroup(0);
+    return X11Helper::setGroup(0);
 }
 
 bool X11Helper::isDefaultLayout() {
-	return X11Helper::getGroup() == 0;
+    return X11Helper::getGroup() == 0;
 }
 
 LayoutUnit X11Helper::getCurrentLayout()
 {
-	QList<LayoutUnit> currentLayouts = getLayoutsList();
-	unsigned int group = X11Helper::getGroup();
-	if( group < (unsigned int)currentLayouts.size() )
-		return currentLayouts[group];
+    if (!QX11Info::isPlatformX11()) {
+        return LayoutUnit();
+    }
+    QList<LayoutUnit> currentLayouts = getLayoutsList();
+    unsigned int group = X11Helper::getGroup();
+    if( group < (unsigned int)currentLayouts.size() )
+        return currentLayouts[group];
 
-	qWarning() << "Current group number" << group << "is outside of current layout list" <<
-						getLayoutsListAsString(currentLayouts);
-	return LayoutUnit();
+    qWarning() << "Current group number" << group << "is outside of current layout list" <<
+                        getLayoutsListAsString(currentLayouts);
+    return LayoutUnit();
 }
 
 LayoutSet X11Helper::getCurrentLayouts()
 {
-	LayoutSet layoutSet;
+    LayoutSet layoutSet;
 
-	QList<LayoutUnit> currentLayouts = getLayoutsList();
-	layoutSet.layouts = currentLayouts;
+    QList<LayoutUnit> currentLayouts = getLayoutsList();
+    layoutSet.layouts = currentLayouts;
 
-	unsigned int group = X11Helper::getGroup();
-	if( group < (unsigned int)currentLayouts.size() ) {
-		layoutSet.currentLayout = currentLayouts[group];
-	}
-	else {
-		qWarning() << "Current group number" << group << "is outside of current layout list" << getLayoutsListAsString(currentLayouts);
-		layoutSet.currentLayout = LayoutUnit();
-	}
+    unsigned int group = X11Helper::getGroup();
+    if( group < (unsigned int)currentLayouts.size() ) {
+        layoutSet.currentLayout = currentLayouts[group];
+    }
+    else {
+        qWarning() << "Current group number" << group << "is outside of current layout list" << getLayoutsListAsString(currentLayouts);
+        layoutSet.currentLayout = LayoutUnit();
+    }
 
-	return layoutSet;
+    return layoutSet;
 }
 
 
@@ -151,251 +167,285 @@ LayoutSet X11Helper::getCurrentLayouts()
 
 QList<LayoutUnit> X11Helper::getLayoutsList()
 {
-	XkbConfig xkbConfig;
-	QList<LayoutUnit> layouts;
-	if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::LAYOUTS_ONLY) ) {
-		for(int i=0; i<xkbConfig.layouts.size(); i++) {
-			QString layout(xkbConfig.layouts[i]);
-			QString variant;
-			if( i<xkbConfig.variants.size() && ! xkbConfig.variants[i].isEmpty() ) {
-				variant = xkbConfig.variants[i];
-			}
-			layouts << LayoutUnit(layout, variant);
-		}
-		// if there are layouts with same map name add numbers to display name
+    if (!QX11Info::isPlatformX11()) {
+        return QList<LayoutUnit>();
+    }
+    XkbConfig xkbConfig;
+    QList<LayoutUnit> layouts;
+    if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::LAYOUTS_ONLY) ) {
+        for(int i=0; i<xkbConfig.layouts.size(); i++) {
+            QString layout(xkbConfig.layouts[i]);
+            QString variant;
+            if( i<xkbConfig.variants.size() && ! xkbConfig.variants[i].isEmpty() ) {
+                variant = xkbConfig.variants[i];
+            }
+            layouts << LayoutUnit(layout, variant);
+        }
+        // if there are layouts with same map name add numbers to display name
 //		for(int i=0; i<layouts.length(); i++) {
 //			int n=1;
 //			for(int j=i+1; j<layouts.length(); j++) {
 //				if( layouts[i].layout == layouts[j].layout && layouts[i].getRawDisplayName().isEmpty() ) {
 //					layouts[i].setDisplayName( addNum(layouts[i].layout, 1) );
 //					layouts[j].setDisplayName( addNum(layouts[j].layout, ++n) );
-//					qDebug() << "Adding" << 1 << "to" << layouts[i].toString();
-//					qDebug() << "Adding" << n << "to" << layouts[j].toString();
+//					qCDebug(KCM_KEYBOARD) << "Adding" << 1 << "to" << layouts[i].toString();
+//					qCDebug(KCM_KEYBOARD) << "Adding" << n << "to" << layouts[j].toString();
 //				}
 //			}
 //		}
-	}
-	else {
-		qWarning() << "Failed to get layout groups from X server";
-	}
-	return layouts;
+    }
+    else {
+        qWarning() << "Failed to get layout groups from X server";
+    }
+    return layouts;
 }
 
 bool X11Helper::setGroup(unsigned int group)
 {
-	return XkbLockGroup(QX11Info::display(), XkbUseCoreKbd, group);
+    qDebug() << group;
+    xcb_void_cookie_t cookie;
+    cookie = xcb_xkb_latch_lock_state(QX11Info::connection(),
+        XCB_XKB_ID_USE_CORE_KBD,
+        0, 0,
+        1,
+        group,
+        0, 0, 0
+    );
+    xcb_generic_error_t *error = 0;
+    error = xcb_request_check(QX11Info::connection(), cookie);
+    if (error) {
+        qDebug() << "Couldn't change the group" << error->error_code;
+        return false;
+    }
+
+    return true;
 }
 
 unsigned int X11Helper::getGroup()
 {
-	XkbStateRec xkbState;
-	XkbGetState( QX11Info::display(), XkbUseCoreKbd, &xkbState );
-	return xkbState.group;
+    XkbStateRec xkbState;
+    XkbGetState( QX11Info::display(), XkbUseCoreKbd, &xkbState );
+    return xkbState.group;
 }
 
 bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType fetchType)
 {
-	static const char* OPTIONS_SEPARATOR = ",";
+    static const char OPTIONS_SEPARATOR[] = ",";
 
-	Atom real_prop_type;
-	int fmt;
-	unsigned long nitems, extra_bytes;
-	char *prop_data = NULL;
-	Status ret;
+    Atom real_prop_type;
+    int fmt;
+    unsigned long nitems, extra_bytes;
+    char *prop_data = NULL;
+    Status ret;
 
-	Atom rules_atom = XInternAtom(display, _XKB_RF_NAMES_PROP_ATOM, False);
+    Atom rules_atom = XInternAtom(display, _XKB_RF_NAMES_PROP_ATOM, False);
 
-	/* no such atom! */
-	if (rules_atom == None) {       /* property cannot exist */
-		qWarning() << "Failed to fetch layouts from server:" << "could not find the atom" << _XKB_RF_NAMES_PROP_ATOM;
-		return false;
-	}
+    /* no such atom! */
+    if (rules_atom == None) {       /* property cannot exist */
+        qWarning() << "Failed to fetch layouts from server:" << "could not find the atom" << _XKB_RF_NAMES_PROP_ATOM;
+        return false;
+    }
 
-	ret = XGetWindowProperty(display,
-			DefaultRootWindow(display),
-			rules_atom, 0L, _XKB_RF_NAMES_PROP_MAXLEN,
-			False, XA_STRING, &real_prop_type, &fmt,
-			&nitems, &extra_bytes,
-			(unsigned char **) (void *) &prop_data);
+    ret = XGetWindowProperty(display,
+            DefaultRootWindow(display),
+            rules_atom, 0L, _XKB_RF_NAMES_PROP_MAXLEN,
+            False, XA_STRING, &real_prop_type, &fmt,
+            &nitems, &extra_bytes,
+            (unsigned char **) (void *) &prop_data);
 
-	/* property not found! */
-	if (ret != Success) {
-		qWarning() << "Failed to fetch layouts from server:" << "Could not get the property";
-		return false;
-	}
+    /* property not found! */
+    if (ret != Success) {
+        qWarning() << "Failed to fetch layouts from server:" << "Could not get the property";
+        return false;
+    }
 
-	/* has to be array of strings */
-	if ((extra_bytes > 0) || (real_prop_type != XA_STRING) || (fmt != 8)) {
-		if (prop_data)
-			XFree(prop_data);
-		qWarning() << "Failed to fetch layouts from server:" << "Wrong property format";
-		return false;
-	}
+    /* has to be array of strings */
+    if ((extra_bytes > 0) || (real_prop_type != XA_STRING) || (fmt != 8)) {
+        if (prop_data)
+            XFree(prop_data);
+        qWarning() << "Failed to fetch layouts from server:" << "Wrong property format";
+        return false;
+    }
 
-//	qDebug() << "prop_data:" << nitems << prop_data;
-	QStringList names;
-	for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
-		names.append( p );
-//		qDebug() << " " << p;
-	}
+//	qCDebug(KCM_KEYBOARD) << "prop_data:" << nitems << prop_data;
+    QStringList names;
+    for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
+        names.append( p );
+//		kDebug() << " " << p;
+    }
 
-	if( names.count() < 4 ) { //{ rules, model, layouts, variants, options }
-		XFree(prop_data);
-		return false;
-	}
+    if( names.count() < 4 ) { //{ rules, model, layouts, variants, options }
+        XFree(prop_data);
+        return false;
+    }
 
-	if( fetchType == ALL || fetchType == LAYOUTS_ONLY ) {
-		QStringList layouts = names[2].split(OPTIONS_SEPARATOR);
-		QStringList variants = names[3].split(OPTIONS_SEPARATOR);
+    if( fetchType == ALL || fetchType == LAYOUTS_ONLY ) {
+        QStringList layouts = names[2].split(OPTIONS_SEPARATOR);
+        QStringList variants = names[3].split(OPTIONS_SEPARATOR);
 
-		for(int ii=0; ii<layouts.count(); ii++) {
-			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : "");
-			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : "");
-		}
-//		qDebug() << "Fetched layout groups from X server:"
-//				<< "\tlayouts:" << xkbConfig->layouts
-//				<< "\tvariants:" << xkbConfig->variants;
-	}
+        for(int ii=0; ii<layouts.count(); ii++) {
+            xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : QLatin1String(""));
+            xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : QLatin1String(""));
+        }
+        qDebug() << "Fetched layout groups from X server:"
+                << "\tlayouts:" << xkbConfig->layouts
+                << "\tvariants:" << xkbConfig->variants;
+    }
 
-	if( fetchType == ALL || fetchType == MODEL_ONLY ) {
-		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : "");
-//		qDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
-	}
+    if( fetchType == ALL || fetchType == MODEL_ONLY ) {
+        xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : QLatin1String(""));
+        qDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
+    }
 
-	if( fetchType == ALL ) {
-		if( names.count() >= 5 ) {
-			QString options = (names[4] != NULL ? names[4] : "");
-			xkbConfig->options = options.split(OPTIONS_SEPARATOR);
-//			qDebug() << "Fetched xkbOptions from X server:" << options;
-		}
-	}
+    if( fetchType == ALL ) {
+        if( names.count() >= 5 ) {
+            QString options = (names[4] != NULL ? names[4] : QLatin1String(""));
+            xkbConfig->options = options.split(OPTIONS_SEPARATOR);
+            qDebug() << "Fetched xkbOptions from X server:" << options;
+        }
+    }
 
-	XFree(prop_data);
-	return true;
+    XFree(prop_data);
+    return true;
 }
 
-XEventNotifier::XEventNotifier(QWidget* parent):
-		QWidget(parent),
-		xkbOpcode(-1)
+XEventNotifier::XEventNotifier():
+        xkbOpcode(-1)
 {
-    // KF5 TODO: Figure out the proper way to check for this
-// 	if( KApplication::kApplication() == NULL ) {
-// 		qWarning() << "Layout Widget won't work properly without KApplication instance";
-// 	}
+    if( QCoreApplication::instance() == NULL ) {
+        qWarning() << "Layout Widget won't work properly without QCoreApplication instance";
+    }
 }
 
 void XEventNotifier::start()
 {
-  // KF5 TODO: Figure out the proper way to check for this
-// 	if( KApplication::kApplication() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
-// 		registerForXkbEvents(QX11Info::display());
-// 
-// 		// start the event loop
-// 		KApplication::kApplication()->installX11EventFilter(this);
-// 	}
+    qDebug() << "qCoreApp" << QCoreApplication::instance();
+    if( QCoreApplication::instance() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
+        registerForXkbEvents(QX11Info::display());
+
+        // start the event loop
+        QCoreApplication::instance()->installNativeEventFilter(this);
+    }
 }
 
 void XEventNotifier::stop()
 {
-  // KF5 TODO: Figure out the proper way to check for this
-// 	if( KApplication::kApplication() != NULL ) {
-// 		//TODO: unregister
-// 	//    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
-// 
-// 		// stop the event loop
-// 		KApplication::kApplication()->removeX11EventFilter(this);
-// 	}
+    if( QCoreApplication::instance() != NULL ) {
+        //TODO: unregister
+    //    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
+
+        // stop the event loop
+        QCoreApplication::instance()->removeNativeEventFilter(this);
+    }
 }
 
-bool XEventNotifier::isXkbEvent(XEvent* event)
+
+bool XEventNotifier::isXkbEvent(xcb_generic_event_t* event)
 {
-	return event->type == xkbOpcode;
+//	kDebug() << "event response type:" << (event->response_type & ~0x80) << xkbOpcode << ((event->response_type & ~0x80) == xkbOpcode + XkbEventCode);
+    return (event->response_type & ~0x80) == xkbOpcode + XkbEventCode;
 }
 
-bool XEventNotifier::processOtherEvents(XEvent* /*event*/)
+bool XEventNotifier::processOtherEvents(xcb_generic_event_t* /*event*/)
 {
-	return true;
+    return true;
 }
 
-bool XEventNotifier::processXkbEvents(XEvent* event)
+bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 {
-	if( XEventNotifier::isGroupSwitchEvent(event) ) {
-		emit(layoutChanged());
-	}
-	else if( XEventNotifier::isLayoutSwitchEvent(event) ) {
-		emit(layoutMapChanged());
-	}
-	return true;
+    _xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
+    if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
+//		kDebug() << "group switch event";
+        emit(layoutChanged());
+    }
+    else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
+//		kDebug() << "layout switch event";
+        emit(layoutMapChanged());
+    }
+    return true;
 }
 
-bool XEventNotifier::x11Event(XEvent * event)
+bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, long *)
 {
-	//    qApp->x11ProcessEvent ( event );
-	if( isXkbEvent(event) ) {
-		processXkbEvents(event);
-	}
-	else {
-		processOtherEvents(event);
-	}
-        // KF5 TODO: Figure out the equivalent
-// 	return QWidget::x11Event(event);
-        return true;
+//	kDebug() << "event type:" << eventType;
+    if (eventType == "xcb_generic_event_t") {
+        xcb_generic_event_t* ev = static_cast<xcb_generic_event_t *>(message);
+        if( isXkbEvent(ev) ) {
+            processXkbEvents(ev);
+        }
+        else {
+            processOtherEvents(ev);
+        }
+    }
+    return false;
 }
 
-bool XEventNotifier::isGroupSwitchEvent(XEvent* event)
+//bool XEventNotifier::x11Event(XEvent * event)
+//{
+//	//    qApp->x11ProcessEvent ( event );
+//	if( isXkbEvent(event) ) {
+//		processXkbEvents(event);
+//	}
+//	else {
+//		processOtherEvents(event);
+//	}
+//	return QWidget::x11Event(event);
+//}
+
+bool XEventNotifier::isGroupSwitchEvent(_xkb_event* xkbEvent)
 {
-    XkbEvent *xkbEvent = (XkbEvent*) event;
+//    XkbEvent *xkbEvent = (XkbEvent*) event;
 #define GROUP_CHANGE_MASK \
     ( XkbGroupStateMask | XkbGroupBaseMask | XkbGroupLatchMask | XkbGroupLockMask )
 
-    return xkbEvent->any.xkb_type == XkbStateNotify && xkbEvent->state.changed & GROUP_CHANGE_MASK;
+    return xkbEvent->any.xkbType == XkbStateNotify && (xkbEvent->state_notify.changed & GROUP_CHANGE_MASK);
 }
 
-bool XEventNotifier::isLayoutSwitchEvent(XEvent* event)
+bool XEventNotifier::isLayoutSwitchEvent(_xkb_event* xkbEvent)
 {
-    XkbEvent *xkbEvent = (XkbEvent*) event;
+//    XkbEvent *xkbEvent = (XkbEvent*) event;
 
     return //( (xkbEvent->any.xkb_type == XkbMapNotify) && (xkbEvent->map.changed & XkbKeySymsMask) ) ||
 /*    	  || ( (xkbEvent->any.xkb_type == XkbNamesNotify) && (xkbEvent->names.changed & XkbGroupNamesMask) || )*/
-    	   (xkbEvent->any.xkb_type == XkbNewKeyboardNotify);
+           (xkbEvent->any.xkbType == XkbNewKeyboardNotify);
 }
 
 int XEventNotifier::registerForXkbEvents(Display* display)
 {
     int eventMask = XkbNewKeyboardNotifyMask | XkbStateNotifyMask;
     if( ! XkbSelectEvents(display, XkbUseCoreKbd, eventMask, eventMask) ) {
-    	qWarning() << "Couldn't select desired XKB events";
-    	return false;
+        qWarning() << "Couldn't select desired XKB events";
+        return false;
     }
     return true;
 }
 
 
-static const char* LAYOUT_VARIANT_SEPARATOR_PREFIX = "(";
-static const char* LAYOUT_VARIANT_SEPARATOR_SUFFIX = ")";
+static const char LAYOUT_VARIANT_SEPARATOR_PREFIX[] = "(";
+static const char LAYOUT_VARIANT_SEPARATOR_SUFFIX[] = ")";
 
 static QString& stripVariantName(QString& variant)
 {
-	if( variant.endsWith(LAYOUT_VARIANT_SEPARATOR_SUFFIX) ) {
-		int suffixLen = strlen(LAYOUT_VARIANT_SEPARATOR_SUFFIX);
-		return variant.remove(variant.length()-suffixLen, suffixLen);
-	}
-	return variant;
+    if( variant.endsWith(LAYOUT_VARIANT_SEPARATOR_SUFFIX) ) {
+        int suffixLen = strlen(LAYOUT_VARIANT_SEPARATOR_SUFFIX);
+        return variant.remove(variant.length()-suffixLen, suffixLen);
+    }
+    return variant;
 }
 
 LayoutUnit::LayoutUnit(const QString& fullLayoutName)
 {
-	QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
-	layout = lv[0];
-	variant = lv.size() > 1 ? stripVariantName(lv[1]) : "";
+    QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
+    layout = lv[0];
+    variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
 }
 
 QString LayoutUnit::toString() const
 {
-	if( variant.isEmpty() )
-		return layout;
+    if( variant.isEmpty() )
+        return layout;
 
-	return layout + LAYOUT_VARIANT_SEPARATOR_PREFIX+variant+LAYOUT_VARIANT_SEPARATOR_SUFFIX;
+    return layout + LAYOUT_VARIANT_SEPARATOR_PREFIX+variant+LAYOUT_VARIANT_SEPARATOR_SUFFIX;
 }
 
 const int LayoutUnit::MAX_LABEL_LENGTH = 3;

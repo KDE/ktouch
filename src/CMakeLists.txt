@@ -5,7 +5,10 @@ ecm_setup_version(${KDE_APPLICATIONS_VERSION}
 )
 
 find_package(X11)
-# macro_log_feature(X11_Xkbfile_FOUND "libxkbfile" "X Keyboard Extension" "http://www.x.org/wiki/XKB" FALSE "" "Support for keyboard layout auto-detection in KTouch")
+add_feature_info("X11-Xkbfile" X11_Xkbfile_FOUND "required for automatic keyboard layout detection")
+
+find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
+add_feature_info("XCB-XKB" XCB_XKB_FOUND "required for automatic keyboard layout detection")
 
 ecm_optional_add_subdirectory(qml)
 ecm_optional_add_subdirectory(schemata)
@@ -96,13 +99,15 @@ qt5_wrap_ui(ktouch_SRCS
     ui/customlessoneditordialog.ui
 )
 
-if (X11_Xkbfile_FOUND)
+set (KTOUCH_BUILD_WITH_X11 X11_Xkbfile_FOUND AND XCB_XKB_FOUND AND XCB_FOUND)
+
+if (KTOUCH_BUILD_WITH_X11)
     add_definitions(-DKTOUCH_BUILD_WITH_X11)
     include_directories(${X11_Xkbfile_INCLUDE_PATH})
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
-else (X11_Xkbfile_FOUND)
+else (KTOUCH_BUILD_WITH_X11)
     set(ktouch_SRCS ${ktouch_SRCS} keyboardlayoutmenu.cpp)
-endif (X11_Xkbfile_FOUND)
+endif (KTOUCH_BUILD_WITH_X11)
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
 
@@ -110,9 +115,10 @@ add_executable(ktouch ${ktouch_SRCS})
 
 set(ktouch_X11_DEPS "")
 
-if (X11_Xkbfile_FOUND)
-    set(ktouch_X11_DEPS ${X11_Xkbfile_LIB} ${X11_LIBRARIES})
-endif (X11_Xkbfile_FOUND)
+if (KTOUCH_BUILD_WITH_X11)
+    set(ktouch_X11_DEPS ${X11_Xkbfile_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
+endif (KTOUCH_BUILD_WITH_X11)
+
 
 #uncomment this if oxygen icons for ktouch are available
 target_link_libraries(ktouch
