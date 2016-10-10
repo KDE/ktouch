@@ -59,7 +59,7 @@ void ProfileDataAccess::loadProfiles()
 
     while(profileQuery.next())
     {
-        Profile* profile = new Profile();
+        Profile* profile = new Profile(this);
         profile->setId(profileQuery.value(0).toInt());
         profile->setName(profileQuery.value(1).toString());
         int rawSkillLevel = profileQuery.value(2).toInt();
