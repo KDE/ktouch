@@ -46,6 +46,7 @@ public:
         IndexRole,
         SourceRole
     };
+    Q_ENUM(AdditionalRoles)
     explicit ResourceModel( QObject* parent = 0);
     DataIndex* dataIndex() const;
     void setDataIndex(DataIndex* dataIndex);

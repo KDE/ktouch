@@ -32,17 +32,19 @@ Item {
     signal lessonSelected(variant course, variant lesson)
 
     function selectLastUsedCourse() {
-        if (!profile)
+        if (!profile) {
             return
+        }
+
         var courseId = profile.lastUsedCourseId;
 
-        if (courseId == "custom_lessons") {
+        if (courseId === "custom_lessons") {
             selectCourse(courseRepeater.count, true)
             return
         }
 
-        for (var i = 0; i < courseRepeater.count; i++) {
-            var dataIndexCourse = courseRepeater.itemAt(i).dataIndexCourse
+        for (var i = 0; i < courseModel.rowCount(); i++) {
+            var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {
                 selectCourse(i, true)
                 return
@@ -53,12 +55,14 @@ Item {
     }
 
     function selectCourse(index, automaticSelection) {
-        if (index === priv.currentIndex)
+        if (index === priv.currentIndex) {
             return
+        }
 
         var direction = index > priv.currentIndex? Item.Left: Item.Right
-        var dataIndexCourse = index < courseRepeater.count?
-                courseRepeater.itemAt(index).dataIndexCourse: null
+        var dataIndexCourse = index < courseModel.rowCount()?
+                courseModel.data(courseModel.index(index, 0), ResourceModel.DataRole):
+                null;
         var targetPage = automaticSelection? coursePageContainer.activePage: coursePageContainer.inactivePage
 
         priv.currentIndex = index;
@@ -91,15 +95,6 @@ Item {
         onRowsInserted: {
             priv.currentIndex = -1
             selectLastUsedCourse()
-        }
-    }
-
-    Repeater {
-        id: courseRepeater
-        model: courseModel
-
-        delegate: Item {
-            property DataIndexCourse dataIndexCourse: dataRole
         }
     }
 
@@ -162,7 +157,7 @@ Item {
                     anchors.verticalCenter: parent.verticalCenter
                     iconName: "arrow-left"
                     enabled: priv.currentIndex > 0
-                    visible: courseRepeater.count > 0
+                    visible: courseModel.rowCount() > 0
                     onClicked: {
                         var newIndex = priv.currentIndex - 1
                         root.selectCourse(newIndex, false)
@@ -172,10 +167,10 @@ Item {
                 ToolButton {
                     id: nextButton
                     iconName: "arrow-right"
-                    enabled: priv.currentIndex < courseRepeater.count
-                    visible: courseRepeater.count > 0
+                    enabled: priv.currentIndex < courseModel.rowCount()
+                    visible: courseModel.rowCount() > 0
                     onClicked: {
-                        var newIndex = (priv.currentIndex + 1) % (courseRepeater.count + 1)
+                        var newIndex = (priv.currentIndex + 1) % (courseModel.rowCount() + 1)
                         root.selectCourse(newIndex, false)
                     }
                 }
