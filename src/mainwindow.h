@@ -23,12 +23,8 @@
 #include <QWeakPointer>
 
 class QQuickWidget;
-class QMenu;
-class KActionCollection;
-class DataIndex;
-class ResourceEditor;
-class KeyboardLayout;
-class Lesson;
+
+class KTouchContext;
 
 #ifdef KTOUCH_BUILD_WITH_X11
 class XEventNotifier;
@@ -39,35 +35,13 @@ class KeyboardLayoutMenu;
 class MainWindow : public KMainWindow
 {
     Q_OBJECT
-    Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName NOTIFY keyboardLayoutNameChanged)
-    Q_PROPERTY(DataIndex* globalDataIndex READ dataIndex CONSTANT)
 public:
     explicit MainWindow(QWidget* parent = 0);
     ~MainWindow();
-    QString keyboardLayoutName() const;
-    DataIndex* dataIndex();
-    Q_INVOKABLE void showMenu(int xPos, int yPos);
-public slots:
-    void showResourceEditor();
-    bool showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout);
-signals:
-    void keyboardLayoutNameChanged();
-private slots:
-    void showConfigDialog();
-    void configureShortcuts();
-    void configureKeyboard();
-    void setFullscreen(bool fullscreen);
 private:
     void init();
-    bool testKCMAvailibility(const QString& name);
     QQuickWidget* m_view;
-    KActionCollection* m_actionCollection;
-    QMenu* m_menu;
-#ifdef KTOUCH_BUILD_WITH_X11
-    XEventNotifier* m_XEventNotifier;
-#else
-    KeyboardLayoutMenu* m_keyboardLayoutMenu;
-#endif
+    KTouchContext* m_context;
 };
 
 #endif // MAINWINDOW_H

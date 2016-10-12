@@ -81,6 +81,7 @@ set(ktouch_SRCS
     trainingconfigwidget.cpp
     colorsconfigwidget.cpp
     customlessoneditordialog.cpp
+    ktouchcontext.cpp
 )
 
 # compile UI files
