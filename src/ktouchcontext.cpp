@@ -97,10 +97,10 @@ void KTouchContext::showMenu(int xPos, int yPos)
 
 void KTouchContext::showResourceEditor()
 {
-    QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+    QPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
     if (resourceEditorRef.isNull())
     {
-        resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
+        resourceEditorRef = QPointer<ResourceEditor>(new ResourceEditor());
     }
 
     ResourceEditor* resourceEditor = resourceEditorRef.data();

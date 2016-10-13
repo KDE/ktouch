@@ -70,7 +70,7 @@ DataIndex* Application::dataIndex()
     return app->m_dataIndex;
 }
 
-QSharedPointer<ResourceEditor>& Application::resourceEditorRef()
+QPointer<ResourceEditor>& Application::resourceEditorRef()
 {
     Application* app = qobject_cast<Application*>(QCoreApplication::instance());
 

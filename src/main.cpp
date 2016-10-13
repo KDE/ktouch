@@ -95,11 +95,11 @@ int main(int argc, char **argv)
             }
             else if (name == "ResourceEditor")
             {
-                QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+                QPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
 
                 if (resourceEditorRef.isNull())
                 {
-                    resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
+                    resourceEditorRef = QPointer<ResourceEditor>(new ResourceEditor());
                     resourceEditorRef.data()->restore(i);
                 }
             }
@@ -109,10 +109,10 @@ int main(int argc, char **argv)
     {
         if (parser.isSet("resource-editor"))
         {
-            QSharedPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
+            QPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
             if (resourceEditorRef.isNull())
             {
-                resourceEditorRef = QSharedPointer<ResourceEditor>(new ResourceEditor());
+                resourceEditorRef = QPointer<ResourceEditor>(new ResourceEditor());
             }
 
             ResourceEditor* resourceEditor = resourceEditorRef.data();

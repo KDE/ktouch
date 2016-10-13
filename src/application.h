@@ -19,7 +19,7 @@
 #define APPLICATION_H
 
 #include <QApplication>
-#include <QSharedPointer>
+#include <QPointer>
 
 #include "editor/resourceeditor.h"
 
@@ -33,13 +33,13 @@ public:
     Application(int& argc, char** argv, int flags = ApplicationFlags);
     static DataIndex* dataIndex();
     static void setupDeclarativeBindings(QQmlEngine* qmlEngine);
-    static QSharedPointer<ResourceEditor>& resourceEditorRef();
+    static QPointer<ResourceEditor>& resourceEditorRef();
     QStringList& qmlImportPaths();
 private:
     void registerQmlTypes();
     void migrateKde4Files();
     DataIndex* m_dataIndex;
-    QSharedPointer<ResourceEditor> m_resourceEditorRef;
+    QPointer<ResourceEditor> m_resourceEditorRef;
     QStringList m_qmlImportPaths;
 };
 
