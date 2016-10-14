@@ -54,10 +54,19 @@ Item {
         hideSource: false
     }
 
+    HueSaturation {
+        id: desaturatedBackground
+        source: effectSource
+        anchors.fill: parent
+        lightness: -0.3
+        saturation: -0.5
+        visible: false
+    }
+
     FastBlur {
         anchors.fill: parent
-        source: effectSource
-        radius: 25
+        source: desaturatedBackground
+        radius: 50
     }
 
     Rectangle {
