@@ -104,7 +104,7 @@ Item {
         width: item.width + marginSize
         height: item.height + marginSize
         smooth: true
-        radius: 5 // body.radius
+        radius: body.radius
         state: "normal"
 
         states: [
