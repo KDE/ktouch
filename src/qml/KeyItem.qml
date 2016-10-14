@@ -74,8 +74,7 @@ Item {
     }
 
     function getTint(color) {
-        // stupid hack to set alpha because in Qt Quick 1.1 it's impossible to access color components
-        color = "#20" + ("" + color).substr(1)
+        color.a = 0.125
         return color
     }
 
