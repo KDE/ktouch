@@ -24,7 +24,7 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 
-find_package(Qt5 REQUIRED COMPONENTS
+find_package(Qt5 5.5 REQUIRED COMPONENTS
     Widgets
     Sql
     Script
