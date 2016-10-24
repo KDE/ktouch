@@ -118,7 +118,7 @@ FocusScope {
                         trainingStats: stats
                         cursorItem: cursor
 
-                        onFocusChanged: {
+                        onActiveFocusChanged: {
                             if (!trainingLine.activeFocus) {
                                 trainingStats.stopTraining()
                             }

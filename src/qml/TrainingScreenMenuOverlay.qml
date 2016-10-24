@@ -22,11 +22,12 @@ import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 import ktouch 1.0
 
-Item {
+FocusScope {
     id: item
 
     property alias blurSource: effectSource.sourceItem
 
+    signal closed()
     signal restartRequested()
     signal abortRequested()
 
@@ -41,11 +42,12 @@ Item {
 
     function show() {
         item.opacity = 1
-        groupBox.forceActiveFocus()
+        resumeButton.forceActiveFocus()
     }
 
     function hide() {
         item.opacity = 0
+        closed()
     }
 
     ShaderEffectSource {
@@ -101,6 +103,9 @@ Item {
                 text: i18n("Resume Training")
                 width: parent.width
                 onClicked: hide()
+                KeyNavigation.backtab: returnButton
+                KeyNavigation.tab: restartButton
+                KeyNavigation.down: restartButton
             }
 
             Button {
@@ -112,6 +117,10 @@ Item {
                     restartRequested()
                     hide()
                 }
+                KeyNavigation.backtab: resumeButton
+                KeyNavigation.tab: returnButton
+                KeyNavigation.up: resumeButton
+                KeyNavigation.down: returnButton
             }
 
             Button {
@@ -123,6 +132,9 @@ Item {
                     abortRequested()
                     hide()
                 }
+                KeyNavigation.backtab: restartButton
+                KeyNavigation.tab: resumeButton
+                KeyNavigation.up: restartButton
             }
 
             Keys.onDownPressed: {

@@ -112,8 +112,9 @@ FocusScope {
     TrainingStats {
         id: stats
         onTimeIsRunningChanged: {
-            if (timeIsRunning)
+            if (timeIsRunning) {
                 screen.trainingStarted = false
+            }
         }
     }
 
@@ -306,11 +307,7 @@ FocusScope {
         id: menuOverlay
         blurSource: screenContent
         anchors.fill: parent
-        onVisibleChanged: {
-            if (!visible) {
-                trainingWidget.forceActiveFocus()
-            }
-        }
+        onClosed: trainingWidget.forceActiveFocus()
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()
     }
