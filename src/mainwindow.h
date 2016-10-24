@@ -22,7 +22,7 @@
 
 #include <QWeakPointer>
 
-class QQuickWidget;
+class QQuickView;
 
 class KTouchContext;
 
@@ -40,7 +40,7 @@ public:
     ~MainWindow();
 private:
     void init();
-    QQuickWidget* m_view;
+    QQuickView* m_view;
     KTouchContext* m_context;
 };
 

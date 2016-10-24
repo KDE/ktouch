@@ -17,7 +17,7 @@
 
 #include "mainwindow.h"
 
-#include <QQuickWidget>
+#include <QQuickView>
 #include <QVariant>
 #include <QStandardPaths>
 #include <QQmlContext>
@@ -29,7 +29,7 @@
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
-    m_view(new QQuickWidget(this)),
+    m_view(new QQuickView()),
     m_context(new KTouchContext(this, m_view, this))
 {
     init();
@@ -42,13 +42,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::init()
 {
-
-    setCentralWidget(m_view);
+    QWidget* viewWidget = QWidget::createWindowContainer(m_view, this);
+    viewWidget->setMinimumSize(1000, 700);
+    setCentralWidget(viewWidget);
 
     Application::setupDeclarativeBindings(m_view->engine());
 
-    m_view->setMinimumSize(1000, 700);
     m_view->rootContext()->setContextProperty(QStringLiteral("ktouch"), m_context);
-    m_view->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    m_view->setResizeMode(QQuickView::SizeRootObjectToView);
     m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/main.qml")));
 }

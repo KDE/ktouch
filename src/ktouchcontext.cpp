@@ -21,7 +21,7 @@
 #include <QPointer>
 #include <QDialogButtonBox>
 #include <QMenu>
-#include <QQuickWidget>
+#include <QQuickView>
 
 #include "application.h"
 #include "colorsconfigwidget.h"
@@ -49,7 +49,7 @@
 
 const QString keyboardKCMName = "kcm_keyboard";
 
-KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickWidget* view, QObject *parent) :
+KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject *parent) :
     QObject(parent),
     m_actionCollection(new KActionCollection(this)),
     m_menu(new QMenu(mainWindow)),
