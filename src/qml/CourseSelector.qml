@@ -88,11 +88,13 @@ Item {
     Connections {
         target: courseModel
         onRowsRemoved: {
+            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
             priv.currentIndex = -1
             selectLastUsedCourse()
 
         }
         onRowsInserted: {
+            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
             priv.currentIndex = -1
             selectLastUsedCourse()
         }
@@ -157,7 +159,6 @@ Item {
                     anchors.verticalCenter: parent.verticalCenter
                     iconName: "arrow-left"
                     enabled: priv.currentIndex > 0
-                    visible: courseModel.rowCount() > 0
                     onClicked: {
                         var newIndex = priv.currentIndex - 1
                         root.selectCourse(newIndex, false)
@@ -168,7 +169,6 @@ Item {
                     id: nextButton
                     iconName: "arrow-right"
                     enabled: priv.currentIndex < courseModel.rowCount()
-                    visible: courseModel.rowCount() > 0
                     onClicked: {
                         var newIndex = (priv.currentIndex + 1) % (courseModel.rowCount() + 1)
                         root.selectCourse(newIndex, false)
