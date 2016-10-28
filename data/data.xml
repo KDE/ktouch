@@ -614,6 +614,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/tr.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>монгол (кирил)</title>
+    <name>mn</name>
+    <id>{542d81b2-53b3-41a7-a296-bf5ec0030478}</id>
+    <path>keyboardlayouts/mn-Cyrl.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>
     <name>ua</name>
     <id>{9245b106-80f1-4217-9e35-ba581db0ec99}</id>

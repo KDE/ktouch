@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<keyboardLayout>
+ <id>{542d81b2-53b3-41a7-a296-bf5ec0030478}</id>
+ <title>монгол (кирил)</title>
+ <name>mn</name>
+ <width>1430</width>
+ <height>480</height>
+ <keys>
+  <key width="80" left="180" height="80" fingerIndex="0" top="200">
+   <char position="topLeft" modifier="right_shift">Й</char>
+   <char position="hidden">й</char>
+  </key>
+  <key width="80" left="280" height="80" fingerIndex="1" top="200">
+   <char position="topLeft" modifier="right_shift">Ы</char>
+   <char position="hidden">ы</char>
+  </key>
+  <key width="80" left="380" height="80" fingerIndex="2" top="200">
+   <char position="topLeft" modifier="right_shift">Б</char>
+   <char position="hidden">б</char>
+  </key>
+  <key width="80" left="480" height="80" hasHapticMarker="true" fingerIndex="3" top="200">
+   <char position="topLeft" modifier="right_shift">Ө</char>
+   <char position="hidden">ө</char>
+  </key>
+  <key width="80" left="780" height="80" hasHapticMarker="true" fingerIndex="4" top="200">
+   <char position="topLeft" modifier="left_shift">Р</char>
+   <char position="hidden">р</char>
+  </key>
+  <key width="80" left="880" height="80" fingerIndex="5" top="200">
+   <char position="topLeft" modifier="left_shift">О</char>
+   <char position="hidden">о</char>
+  </key>
+  <key width="80" left="980" height="80" fingerIndex="6" top="200">
+   <char position="topLeft" modifier="left_shift">Л</char>
+   <char position="hidden">л</char>
+  </key>
+  <key width="80" left="1080" height="80" fingerIndex="7" top="200">
+   <char position="topLeft" modifier="left_shift">Д</char>
+   <char position="hidden">д</char>
+  </key>
+  <key width="80" left="0" height="80" fingerIndex="0" top="0">
+   <char position="topLeft" modifier="right_shift">+</char>
+   <char position="bottomLeft">=</char>
+  </key>
+  <key width="80" left="100" height="80" fingerIndex="0" top="0">
+   <char position="topLeft" modifier="right_shift">№</char>
+   <char position="bottomLeft">1</char>
+  </key>
+  <key width="80" left="200" height="80" fingerIndex="1" top="0">
+   <char position="topLeft" modifier="right_shift">-</char>
+   <char position="bottomLeft">2</char>
+  </key>
+  <key width="80" left="300" height="80" fingerIndex="2" top="0">
+   <char position="topLeft" modifier="right_shift">"</char>
+   <char position="bottomLeft">3</char>
+  </key>
+  <key width="80" left="400" height="80" fingerIndex="3" top="0">
+   <char position="topLeft" modifier="right_shift">₮</char>
+   <char position="bottomLeft">4</char>
+  </key>
+  <key width="80" left="500" height="80" fingerIndex="3" top="0">
+   <char position="topLeft" modifier="right_shift">:</char>
+   <char position="bottomLeft">5</char>
+  </key>
+  <key width="80" left="600" height="80" fingerIndex="4" top="0">
+   <char position="topLeft" modifier="left_shift">.</char>
+   <char position="bottomLeft">6</char>
+  </key>
+  <key width="80" left="700" height="80" fingerIndex="4" top="0">
+   <char position="topLeft" modifier="left_shift">_</char>
+   <char position="bottomLeft">7</char>
+  </key>
+  <key width="80" left="800" height="80" fingerIndex="5" top="0">
+   <char position="topLeft" modifier="left_shift">;</char>
+   <char position="bottomLeft">8</char>
+  </key>
+  <key width="80" left="900" height="80" fingerIndex="6" top="0">
+   <char position="topLeft" modifier="left_shift">(</char>
+   <char position="bottomLeft">9</char>
+  </key>
+  <key width="80" left="1000" height="80" fingerIndex="7" top="0">
+   <char position="topLeft" modifier="left_shift">)</char>
+   <char position="bottomLeft">0</char>
+  </key>
+  <key width="80" left="1100" height="80" fingerIndex="7" top="0">
+   <char position="topLeft" modifier="left_shift">Е</char>
+   <char position="hidden">е</char>
+  </key>
+  <key width="80" left="1200" height="80" fingerIndex="7" top="0">
+   <char position="topLeft" modifier="left_shift">Щ</char>
+   <char position="hidden">щ</char>
+  </key>
+  <key width="80" left="150" height="80" fingerIndex="0" top="100">
+   <char position="topLeft" modifier="right_shift">Ф</char>
+   <char position="hidden">ф</char>
+  </key>
+  <key width="80" left="250" height="80" fingerIndex="1" top="100">
+   <char position="topLeft" modifier="right_shift">Ц</char>
+   <char position="hidden">ц</char>
+  </key>
+  <key width="80" left="350" height="80" fingerIndex="2" top="100">
+   <char position="topLeft" modifier="right_shift">У</char>
+   <char position="hidden">у</char>
+  </key>
+  <key width="80" left="450" height="80" fingerIndex="3" top="100">
+   <char position="topLeft" modifier="right_shift">Ж</char>
+   <char position="hidden">ж</char>
+  </key>
+  <key width="80" left="550" height="80" fingerIndex="3" top="100">
+   <char position="topLeft" modifier="right_shift">Э</char>
+   <char position="hidden">э</char>
+  </key>
+  <key width="80" left="230" height="80" fingerIndex="0" top="300">
+   <char position="topLeft" modifier="right_shift">Я</char>
+   <char position="hidden">я</char>
+  </key>
+  <key width="80" left="750" height="80" fingerIndex="4" top="100">
+   <char position="topLeft" modifier="left_shift">Г</char>
+   <char position="hidden">г</char>
+  </key>
+  <key width="80" left="850" height="80" fingerIndex="5" top="100">
+   <char position="topLeft" modifier="left_shift">Ш</char>
+   <char position="hidden">ш</char>
+  </key>
+  <key width="80" left="950" height="80" fingerIndex="6" top="100">
+   <char position="topLeft" modifier="left_shift">Ү</char>
+   <char position="hidden">ү</char>
+  </key>
+  <key width="80" left="1050" height="80" fingerIndex="7" top="100">
+   <char position="topLeft" modifier="left_shift">З</char>
+   <char position="hidden">з</char>
+  </key>
+  <key width="80" left="1150" height="80" fingerIndex="7" top="100">
+   <char position="topLeft" modifier="left_shift">К</char>
+   <char position="hidden">к</char>
+  </key>
+  <key width="80" left="1250" height="80" fingerIndex="7" top="100">
+   <char position="topLeft" modifier="left_shift">Ъ</char>
+   <char position="hidden">ъ</char>
+  </key>
+  <key width="80" left="580" height="80" fingerIndex="3" top="200">
+   <char position="topLeft" modifier="right_shift">А</char>
+   <char position="hidden">а</char>
+  </key>
+  <key width="80" left="680" height="80" fingerIndex="4" top="200">
+   <char position="topLeft" modifier="left_shift">Х</char>
+   <char position="hidden">х</char>
+  </key>
+  <key width="80" left="1180" height="80" fingerIndex="7" top="200">
+   <char position="topLeft" modifier="left_shift">П</char>
+   <char position="hidden">п</char>
+  </key>
+  <key width="80" left="1350" height="80" fingerIndex="7" top="100">
+   <char position="topLeft" modifier="left_shift">|</char>
+   <char position="bottomLeft">!</char>
+  </key>
+  <key width="80" left="650" height="80" fingerIndex="4" top="100">
+   <char position="topLeft" modifier="left_shift">Н</char>
+   <char position="hidden">н</char>
+  </key>
+  <key width="80" left="330" height="80" fingerIndex="1" top="300">
+   <char position="topLeft" modifier="right_shift">Ч</char>
+   <char position="hidden">ч</char>
+  </key>
+  <key width="80" left="430" height="80" fingerIndex="2" top="300">
+   <char position="topLeft" modifier="right_shift">Ё</char>
+   <char position="hidden">ё</char>
+  </key>
+  <key width="80" left="530" height="80" fingerIndex="3" top="300">
+   <char position="topLeft" modifier="right_shift">С</char>
+   <char position="hidden">с</char>
+  </key>
+  <key width="80" left="630" height="80" fingerIndex="3" top="300">
+   <char position="topLeft" modifier="right_shift">М</char>
+   <char position="hidden">м</char>
+  </key>
+  <key width="80" left="730" height="80" fingerIndex="4" top="300">
+   <char position="topLeft" modifier="left_shift">И</char>
+   <char position="hidden">и</char>
+  </key>
+  <key width="80" left="830" height="80" fingerIndex="4" top="300">
+   <char position="topLeft" modifier="left_shift">Т</char>
+   <char position="hidden">т</char>
+  </key>
+  <key width="80" left="930" height="80" fingerIndex="5" top="300">
+   <char position="topLeft" modifier="left_shift">Ь</char>
+   <char position="hidden">ь</char>
+  </key>
+  <key width="80" left="1030" height="80" fingerIndex="6" top="300">
+   <char position="topLeft" modifier="left_shift">В</char>
+   <char position="hidden">в</char>
+  </key>
+  <key width="80" left="1130" height="80" fingerIndex="7" top="300">
+   <char position="topLeft" modifier="left_shift">Ю</char>
+   <char position="hidden">ю</char>
+  </key>
+  <specialKey width="130" left="0" height="80" type="tab" top="100"/>
+  <specialKey width="150" left="1280" height="80" type="return" top="200"/>
+  <specialKey width="200" modifierId="right_shift" left="1230" height="80" type="shift" top="300"/>
+  <specialKey width="130" left="1150" height="80" type="other" label="Alt" top="400"/>
+  <specialKey width="130" left="1300" height="80" type="other" label="Ctrl" top="400"/>
+  <specialKey width="130" left="150" height="80" type="other" label="Alt" top="400"/>
+  <specialKey width="130" left="0" height="80" type="other" label="Ctrl" top="400"/>
+  <specialKey width="830" left="300" height="80" type="space" top="400"/>
+  <specialKey width="210" modifierId="left_shift" left="0" height="80" type="shift" top="300"/>
+  <specialKey width="160" left="0" height="80" type="capslock" top="200"/>
+  <specialKey width="130" left="1300" height="80" type="backspace" top="0"/>
+ </keys>
+</keyboardLayout>
