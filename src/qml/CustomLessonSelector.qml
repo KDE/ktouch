@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 Item {
@@ -54,10 +55,10 @@ Item {
     }
 
     function createNewLesson() {
-        tmpLesson.id = uuid()
+        tmpLesson.id = utils.uuid()
         tmpLesson.title = ""
         tmpLesson.text = ""
-        if (showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
+        if (ktouch.showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
             profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
             update()
             lessonList.currentIndex = lessonList.count - 2
@@ -66,7 +67,7 @@ Item {
 
     function editLesson() {
         tmpLesson.copyFrom(base.selectedLesson)
-        if (showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
+        if (ktouch.showCustomLessonDialog(tmpLesson, root.keyboardLayout)) {
             profileDataAccess.storeCustomLesson(tmpLesson, root.profile, keyboardLayoutName)
             update()
         }
@@ -122,41 +123,40 @@ Item {
 
         anchors.fill: parent
 
-        list: ListView {
-            id: lessonList
-            anchors.fill: parent
+        list: ScrollView {
+            width: 500
+            height: 500
+            ListView {
+                id: lessonList
+                anchors.fill: parent
 
-            model: course.isValid? course.lessonCount + 1: 0
+                model: course.isValid? course.lessonCount + 1: 0
 
-            clip: true
+                clip: true
 
-            delegate: ListItem {
-                property Lesson lesson: index < course.lessonCount? course.lesson(index): null
-                property bool isNewButton: index == course.lessonCount
-                width: lessonList.width - scrollBar.width
-                onClicked: {
-                    lessonList.currentIndex = index
-                    if (isNewButton) {
-                        createNewLesson()
+                delegate: ListItem {
+                    property Lesson lesson: index < course.lessonCount? course.lesson(index): null
+                    property bool isNewButton: index == course.lessonCount
+                    width: lessonList.width
+                    onClicked: {
+                        lessonList.currentIndex = index
+                        if (isNewButton) {
+                            createNewLesson()
+                        }
                     }
-                }
-                onDoubleClicked: {
-                    if (!isNewButton) {
-                        lessonSelected(course, lesson)
+                    onDoubleClicked: {
+                        if (!isNewButton) {
+                            lessonSelected(course, lesson)
+                        }
                     }
+                    title: isNewButton? i18n("Create New Custom Lesson"): (lesson? lesson.title: "")
+                    iconSource: isNewButton? "list-add": ""
+                    label.font.italic: isNewButton
                 }
-                title: isNewButton? i18n("Create New Custom Lesson"): (lesson? lesson.title: "")
-                iconSource: isNewButton? "list-add": ""
-                label.font.italic: isNewButton
-            }
 
-            onCurrentIndexChanged: updateSelectedLesson()
+                onCurrentIndexChanged: updateSelectedLesson()
 
-            onModelChanged: selectLastLesson()
-
-            PlasmaComponents.ScrollBar {
-                id: scrollBar
-                flickableItem: lessonList
+                onModelChanged: selectLastLesson()
             }
         }
 
@@ -170,16 +170,14 @@ Item {
             }
             opacity: base.selectedLesson !== null? 1: 0
             content: [
-                PlasmaComponents.ToolButton {
-                    iconSource: "document-edit"
+                ToolButton {
+                    iconName: "document-edit"
                     text: i18n("Edit")
                     onClicked: editLesson()
-                    width: minimumWidth
                 },
-                PlasmaComponents.ToolButton {
-                    iconSource: "edit-delete"
+                ToolButton {
+                    iconName: "edit-delete"
                     text: i18n("Delete")
-                    width: minimumWidth
                     onClicked: deleteLesson()
                 }
             ]
@@ -204,23 +202,22 @@ Item {
             }
             opacity: !!lastDeletedLesson? 1: 0
             content: [
-                PlasmaComponents.Label {
+                Label {
                     text: i18n("'%1' deleted.", undoToolbar.lastDeletedLessonTitle)
+                    anchors.verticalCenter: parent.verticalCenter
                 },
                 Item {
                     width: 5
                     height: 1
                 },
-                PlasmaComponents.ToolButton {
-                    iconSource: "edit-undo"
+                ToolButton {
+                    iconName: "edit-undo"
                     text: i18n("Undo")
-                    width: minimumWidth
                     onClicked: undoLessonDeletion()
                 },
-                PlasmaComponents.ToolButton {
-                    iconSource: "dialog-close"
+                ToolButton {
+                    iconName: "dialog-close"
                     text: i18n("Dismiss")
-                    width: minimumWidth
                     onClicked: confirmLessonDeletion()
                 }
             ]

@@ -18,17 +18,17 @@
 #ifndef TRAININGLINECORE_H
 #define TRAININGLINECORE_H
 
-#include <QDeclarativeItem>
+#include <QQuickItem>
 
 #include <QPointer>
 
 class TrainingStats;
 
-class TrainingLineCore : public QDeclarativeItem
+class TrainingLineCore : public QQuickItem
 {
     Q_OBJECT
     Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
-    Q_PROPERTY(QDeclarativeItem* cursorItem READ cursorItem WRITE setCursorItem NOTIFY cursorItemChanged)
+    Q_PROPERTY(QQuickItem* cursorItem READ cursorItem WRITE setCursorItem NOTIFY cursorItemChanged)
     Q_PROPERTY(TrainingStats* trainingStats READ trainingStats WRITE setTrainingStats NOTIFY trainingStatsChanged)
     Q_PROPERTY(QString referenceLine READ referenceLine WRITE setReferenceLine NOTIFY referenceLineChanged)
     Q_PROPERTY(QString actualLine READ actualLine NOTIFY actualLineChanged)
@@ -37,11 +37,11 @@ class TrainingLineCore : public QDeclarativeItem
     Q_PROPERTY(QString nextCharacter READ nextCharacter NOTIFY actualLineChanged)
     Q_PROPERTY(int hintKey READ hintKey NOTIFY hintKeyChanged)
 public:
-    explicit TrainingLineCore(QDeclarativeItem* parent = 0);
+    explicit TrainingLineCore(QQuickItem* parent = 0);
     bool active() const;
     void setActive(bool active);
-    QDeclarativeItem* cursorItem() const;
-    void setCursorItem(QDeclarativeItem* cursorItem);
+    QQuickItem* cursorItem() const;
+    void setCursorItem(QQuickItem* cursorItem);
     TrainingStats* trainingStats() const;
     void setTrainingStats(TrainingStats* trainingStats);
     QString referenceLine() const;
@@ -80,7 +80,7 @@ private:
     QString m_preeditString;
     int m_hintKey;
     int m_keyHintOccurrenceCount;
-    QPointer<QDeclarativeItem> m_cursorItem;
+    QPointer<QQuickItem> m_cursorItem;
 };
 
 #endif // TRAININGLINECORE_H

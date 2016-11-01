@@ -15,7 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "customlessoneditorwidget.h"
+#include "customlessoneditordialog.h"
+
+#include <QPushButton>
 
 #include "core/keyboardlayout.h"
 #include "core/key.h"
@@ -23,9 +25,9 @@
 #include "core/lesson.h"
 #include "editor/lessontexthighlighter.h"
 
-CustomLessonEditorWidget::CustomLessonEditorWidget(QWidget* parent) :
-    QWidget(parent),
-    Ui::CustomLessonEditorWidget(),
+CustomLessonEditorDialog::CustomLessonEditorDialog(QWidget* parent) :
+    QDialog(parent),
+    Ui::CustomLessonEditorDialog(),
     m_lesson(0),
     m_keyboardLayout(0)
 {
@@ -33,14 +35,15 @@ CustomLessonEditorWidget::CustomLessonEditorWidget(QWidget* parent) :
 
     connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SLOT(onTitleChanged()));
     connect(m_lessonTextEditor->textEdit(), SIGNAL(textChanged()), SLOT(onTextChanged()));
+    connect(this, &CustomLessonEditorDialog::validChanged, m_buttonBox->button(QDialogButtonBox::Ok), &QPushButton::setEnabled);
 }
 
-Lesson* CustomLessonEditorWidget::lesson() const
+Lesson* CustomLessonEditorDialog::lesson() const
 {
     return m_lesson;
 }
 
-void CustomLessonEditorWidget::setLesson(Lesson* lesson)
+void CustomLessonEditorDialog::setLesson(Lesson* lesson)
 {
     if (lesson != m_lesson)
     {
@@ -62,12 +65,12 @@ void CustomLessonEditorWidget::setLesson(Lesson* lesson)
     }
 }
 
-KeyboardLayout* CustomLessonEditorWidget::keyboardLayout() const
+KeyboardLayout* CustomLessonEditorDialog::keyboardLayout() const
 {
     return m_keyboardLayout;
 }
 
-void CustomLessonEditorWidget::setKeyboardLayout(KeyboardLayout* keyboardLayout)
+void CustomLessonEditorDialog::setKeyboardLayout(KeyboardLayout* keyboardLayout)
 {
     if (keyboardLayout != m_keyboardLayout)
     {
@@ -86,7 +89,7 @@ void CustomLessonEditorWidget::setKeyboardLayout(KeyboardLayout* keyboardLayout)
     }
 }
 
-void CustomLessonEditorWidget::updateTitle()
+void CustomLessonEditorDialog::updateTitle()
 {
     const QString title = m_lesson->title();
 
@@ -96,7 +99,7 @@ void CustomLessonEditorWidget::updateTitle()
     }
 }
 
-void CustomLessonEditorWidget::updateText()
+void CustomLessonEditorDialog::updateText()
 {
     const QString text = m_lesson->text();
 
@@ -106,7 +109,7 @@ void CustomLessonEditorWidget::updateText()
     }
 }
 
-void CustomLessonEditorWidget::updateAllowedCharacters()
+void CustomLessonEditorDialog::updateAllowedCharacters()
 {
     if (!m_keyboardLayout || !m_keyboardLayout->isValid())
     {
@@ -134,7 +137,7 @@ void CustomLessonEditorWidget::updateAllowedCharacters()
     m_lessonTextEditor->highlighter()->setAllowedCharacters(chars);
 }
 
-void CustomLessonEditorWidget::onTitleChanged()
+void CustomLessonEditorDialog::onTitleChanged()
 {
     if (!m_lesson)
         return;
@@ -144,7 +147,7 @@ void CustomLessonEditorWidget::onTitleChanged()
     emitValidChanged();
 }
 
-void CustomLessonEditorWidget::onTextChanged()
+void CustomLessonEditorDialog::onTextChanged()
 {
     if (!m_lesson)
         return;
@@ -154,7 +157,7 @@ void CustomLessonEditorWidget::onTextChanged()
     emitValidChanged();
 }
 
-void CustomLessonEditorWidget::emitValidChanged()
+void CustomLessonEditorDialog::emitValidChanged()
 {
     const QString title = m_lesson->title();
     const QString text = m_lesson->text();

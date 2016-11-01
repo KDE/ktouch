@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,20 +16,27 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import ktouch 1.0
 
 Item {
     id: root
 
+    SystemPalette {
+        id: activePalette
+        colorGroup: SystemPalette.Active
+    }
+
     property alias content: contentArea.children
     property int innerMargin: 20
-    signal opended
+    signal opened
     signal closed
 
     function open() {
         root.state = "open"
-        opended()
+        opened()
     }
 
     function close() {
@@ -52,7 +60,7 @@ Item {
     Rectangle {
         id: bg
         anchors.fill: parent
-        color: theme.backgroundColor
+        color: activePalette.window
         opacity: 1.0
 
         Behavior on opacity {
@@ -62,30 +70,16 @@ Item {
         }
     }
 
-    Item {
+    Rectangle {
         id: slider
+        color: activePalette.window
         width: parent.width
         height: parent.height
 
-        PlasmaCore.FrameSvgItem {
+        Item {
+            id: contentArea
             anchors {
                 fill: parent
-                leftMargin: 10
-                rightMargin: 10
-                bottomMargin: 10
-            }
-            imagePath: "dialogs/background"
-            enabledBorders: PlasmaCore.FrameSvg.LeftBorder + PlasmaCore.FrameSvg.RightBorder + PlasmaCore.FrameSvg.BottomBorder
-
-            Item {
-                id: contentArea
-                anchors {
-                    fill: parent
-                    leftMargin: parent.margins.left + innerMargin
-                    rightMargin: parent.margins.right + innerMargin
-                    topMargin: parent.margins.top + innerMargin
-                    bottomMargin: parent.margins.bottom + innerMargin
-                }
             }
         }
     }

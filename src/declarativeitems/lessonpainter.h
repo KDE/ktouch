@@ -18,7 +18,8 @@
 #ifndef LESSONPAINTER_H
 #define LESSONPAINTER_H
 
-#include <QDeclarativeItem>
+#include <QQuickPaintedItem>
+#include <QPixmap>
 
 #include <QPointer>
 
@@ -29,7 +30,7 @@ class Lesson;
 class TrainingLineCore;
 struct LessonPainterPrivate;
 
-class LessonPainter : public QDeclarativeItem
+class LessonPainter : public QQuickPaintedItem
 {
     Q_OBJECT
     Q_PROPERTY(Lesson* lesson READ lesson WRITE setLesson NOTIFY lessonChanged)
@@ -38,7 +39,7 @@ class LessonPainter : public QDeclarativeItem
     Q_PROPERTY(TrainingLineCore* trainingLineCore READ trainingLineCore WRITE setTrainingLineCore NOTIFY trainingLineCoreChanged)
     Q_PROPERTY(QRectF cursorRectangle READ cursorRectangle NOTIFY cursorRectangleChanged)
 public:
-    explicit LessonPainter(QDeclarativeItem* parent = 0);
+    explicit LessonPainter(QQuickItem* parent = 0);
     ~LessonPainter();
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);
@@ -59,7 +60,7 @@ signals:
     void cursorRectangleChanged();
     void done();
 protected:
-    void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*);
+    void paint(QPainter* painter);
 private slots:
     void updateLayout();
     void resetTrainingStatus();
@@ -81,7 +82,7 @@ private:
     bool m_imageCacheDirty;
     TrainingLineCore* m_trainingLineCore;
     int m_currentLine;
-    QPointer<QDeclarativeItem> m_cursorItem;
+    QPointer<QQuickItem> m_cursorItem;
     QRectF m_cursorRectangle;
 };
 

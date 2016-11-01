@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,41 +16,55 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.qtextracomponents 0.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import org.kde.kquickcontrolsaddons 2.0
+import ktouch 1.0
 
 Item {
     id: root
     property alias title: label.text
     property string iconSource
     property alias label: label
+    property bool isCurrent: ListView.isCurrentItem;
     signal clicked
     signal doubleClicked
-    height: padding.height + bg.margins.top + bg.margins.bottom
-    state: ListView.isCurrentItem? "selected": mouseArea.containsMouse? "hover": "normal"
+    height: 2 * content.height
 
-    PlasmaCore.FrameSvgItem {
+    SystemPalette {
+        id: listItemPallete
+        colorGroup: SystemPalette.Active
+    }
+
+    Rectangle {
         id: bg
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-        opacity: 0
         anchors.fill: parent
+        color: Qt.rgba(listItemPallete.highlight.r, listItemPallete.highlight.g, listItemPallete.highlight.b, 0.3)
+        radius: 0.2 * height
+        border {
+            width: 1
+            color: listItemPallete.highlight
+        }
+        opacity: root.isCurrent || mouseArea.containsMouse? 1: 0
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 150
+            }
+        }
     }
 
     Item {
-        id: padding
+        id: content
 
         anchors {
-            fill: parent
-            topMargin: bg.margins.top
-            rightMargin: bg.margins.right
-            bottomMargin: bg.margins.bottom
-            leftMargin: bg.margins.left
+            verticalCenter: parent.verticalCenter
+            left: parent.left
+            right: parent.right
+            leftMargin: 5
+            rightMargin: 5
         }
 
-        width: parent.width
         height: Math.max(label.height, label.height)
 
         QIconItem {
@@ -59,12 +74,12 @@ Item {
                 left: parent.left
                 verticalCenter: parent.verticalCenter
             }
-            icon: QIcon(root.iconSource)
-            width: theme.smallIconSize
-            height: theme.smallIconSize
+            icon: root.iconSource
+            width: 22
+            height: 22
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: label
             elide: Text.ElideRight
             anchors {
@@ -72,7 +87,6 @@ Item {
                 right: parent.right
                 verticalCenter: parent.verticalCenter
             }
-            height: paintedHeight
         }
     }
 
@@ -83,53 +97,4 @@ Item {
         onClicked: root.clicked()
         onDoubleClicked: root.doubleClicked()
     }
-
-    states: [
-        State {
-            name: "normal"
-            PropertyChanges {
-                target: bg
-                opacity: 0
-            }
-        },
-        State {
-            name: "hover"
-            PropertyChanges {
-                target: bg
-                opacity: 1
-                prefix: "hover"
-            }
-        },
-        State {
-            name: "selected"
-            PropertyChanges {
-                target: bg
-                opacity: 1
-                prefix: "selected"
-            }
-        }
-    ]
-
-    transitions: [
-        Transition {
-            from: "normal"
-            to: "hover"
-            NumberAnimation {
-                target: bg
-                property: "opacity"
-                duration: 250
-                easing.type: Easing.OutCubic
-            }
-        },
-        Transition {
-            from: "hover"
-            to: "normal"
-            NumberAnimation {
-                target: bg
-                property: "opacity"
-                duration: 250
-                easing.type: Easing.OutCubic
-            }
-        }
-    ]
 }

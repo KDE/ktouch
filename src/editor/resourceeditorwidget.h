@@ -23,8 +23,8 @@
 #include "ui_resourceeditorwidget.h"
 
 class QAbstractItemView;
+class QAction;
 class QUndoGroup;
-class KAction;
 class KMessageWidget;
 class Resource;
 class ResourceModel;
@@ -52,8 +52,8 @@ private slots:
     void requestResourceRestoration();
     void clearMessage();
 private:
-    KAction* m_undeleteAction;
-    KAction* m_clearMsgAction;
+    QAction* m_undeleteAction;
+    QAction* m_clearMsgAction;
     MessageType m_currentMessageType;
 };
 

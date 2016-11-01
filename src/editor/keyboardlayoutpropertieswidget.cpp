@@ -18,10 +18,8 @@
 #include "keyboardlayoutpropertieswidget.h"
 
 #include <QUndoStack>
+#include <QFontDatabase>
 #include <QStyledItemDelegate>
-
-#include <KGlobalSettings>
-#include <KDebug>
 
 #include "core/keyboardlayout.h"
 #include "core/abstractkey.h"
@@ -42,8 +40,7 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     m_charactersViewDelegate(new CharactersViewDelegate(this))
 {
     setupUi(this);
-    setFont(KGlobalSettings::smallestReadableFont());
-    connect(KGlobalSettings::self(), SIGNAL(appearanceChanged()), SLOT(updateFont()));
+    setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
     setSelectedKey(-1);
 
     m_charactersView->setModel(m_charactersModel);
@@ -178,11 +175,6 @@ void KeyboardLayoutPropertiesWidget::setReadOnly(bool readOnly)
     m_specialKeyTypeComboBox->setEnabled(!readOnly);
     m_specialKeyLabelLineEdit->setReadOnly(readOnly);
     m_specialKeyModifierIdLineEdit->setReadOnly(readOnly);
-}
-
-void KeyboardLayoutPropertiesWidget::updateFont()
-{
-    setFont(KGlobalSettings::smallestReadableFont());
 }
 
 void KeyboardLayoutPropertiesWidget::setKeyboardLayoutTitle(const QString& title)

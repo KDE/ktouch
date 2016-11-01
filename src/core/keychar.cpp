@@ -17,8 +17,6 @@
 
 #include "keychar.h"
 
-#include <kdebug.h>
-
 KeyChar::KeyChar(QObject *parent) :
     QObject(parent),
     m_value(QChar(32)),

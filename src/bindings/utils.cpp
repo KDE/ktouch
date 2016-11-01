@@ -17,103 +17,52 @@
 
 #include "utils.h"
 
-#include <QScriptContext>
 #include <QTime>
 #include <QUuid>
+#include <QtDebug>
+#include <QStandardPaths>
 
-#include <KStandardDirs>
-#include <KDebug>
-
-QScriptValue findImage(QScriptContext *context, QScriptEngine *engine)
+Utils::Utils(QObject* parent):
+    QObject(parent)
 {
-    Q_UNUSED(engine);
+}
 
-    if (context->argumentCount() == 0)
-    {
-        kWarning() << "got no arguments, expected one";
-        return QScriptValue("");
-    }
-
-    if (context->argumentCount() > 1)
-    {
-        kWarning() << "expected one argument, got more";
-    }
-
-    const QString imageName = context->argument(0).toString();
-    const QString relPath = QString("images/") + imageName;
-    const QString path = KGlobal::dirs()->findResource("appdata", relPath);
+QString Utils::findImage(QString name)
+{
+    const QString relPath = QString("images/") + name;
+    const QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
 
     if (path.isNull())
     {
-        kWarning() << "can't find image resource:" << imageName;
+        qWarning() << "can't find image resource:" << name;
     }
 
-    return QScriptValue(path);
+    return path;
 }
 
-
-QScriptValue getSecondsOfQTime(QScriptContext *context, QScriptEngine *engine)
+int Utils::getMinutesOfQTime(const QTime& time)
 {
-    Q_UNUSED(engine);
-
-    if (context->argumentCount() == 0)
-    {
-        kWarning() << "got no arguments, expected one";
-        return QScriptValue("");
-    }
-
-    if (context->argumentCount() > 1)
-    {
-        kWarning() << "expected one argument, got more";
-    }
-
-    const QTime time = context->argument(0).toVariant().toTime();
-
     if (!time.isValid())
     {
-        kWarning() << "invalid QTime passed";
-        return QScriptValue(0);
+        qWarning() << "invalid QTime passed";
+        return 0;
     }
 
-    return QScriptValue(time.second());
+    return time.minute();
 }
 
-QScriptValue getMinutesOfQTime(QScriptContext *context, QScriptEngine *engine)
+int Utils::getSecondsOfQTime(const QTime& time)
 {
-    Q_UNUSED(engine);
-
-    if (context->argumentCount() == 0)
-    {
-        kWarning() << "got no arguments, expected one";
-        return QScriptValue("");
-    }
-
-    if (context->argumentCount() > 1)
-    {
-        kWarning() << "expected one argument, got more";
-    }
-
-    const QTime time = context->argument(0).toVariant().toTime();
-
     if (!time.isValid())
     {
-        kWarning() << "invalid QTime passed";
-        return QScriptValue(0);
+        qWarning() << "invalid QTime passed";
+        return 0;
     }
 
-    return QScriptValue(time.minute());
+    return time.second();
 }
 
-QScriptValue uuid(QScriptContext *context, QScriptEngine *engine)
+QString Utils::uuid()
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() > 0)
-    {
-        kWarning() << "uuid() expects no arguments, got more";
-    }
-
-    const QString uuid = QUuid::createUuid().toString();
-
-    return QScriptValue(uuid);
+    return QUuid::createUuid().toString();
 }

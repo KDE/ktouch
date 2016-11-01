@@ -17,18 +17,18 @@
 
 #include "application.h"
 
-#include <qdeclarative.h>
-#include <QGraphicsDropShadowEffect>
-#include <QScriptValue>
-#include <QScriptEngine>
-#include <QKeyEvent>
+#include <QDir>
+#include <QFile>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QStandardPaths>
 
-#include <kdeclarative.h>
+#include <Kdelibs4ConfigMigrator>
+#include <Kdelibs4Migration>
+#include <KDeclarative/KDeclarative>
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
-#include "declarativeitems/applicationbackground.h"
-#include "declarativeitems/cursorshapearea.h"
 #include "declarativeitems/griditem.h"
 #include "declarativeitems/lessonpainter.h"
 #include "declarativeitems/preferencesproxy.h"
@@ -51,11 +51,13 @@
 #include "models/learningprogressmodel.h"
 #include "models/errorsmodel.h"
 
-Application::Application() :
-    KApplication(true),
+
+Application::Application(int& argc, char** argv, int flags):
+    QApplication(argc, argv, flags),
     m_dataIndex(new DataIndex(this))
 {
     registerQmlTypes();
+    migrateKde4Files();
 
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
@@ -68,33 +70,38 @@ DataIndex* Application::dataIndex()
     return app->m_dataIndex;
 }
 
-QWeakPointer<ResourceEditor>& Application::resourceEditorRef()
+QPointer<ResourceEditor>& Application::resourceEditorRef()
 {
     Application* app = qobject_cast<Application*>(QCoreApplication::instance());
 
     return app->m_resourceEditorRef;
 }
 
-void Application::setupDeclarativeBindings(QDeclarativeEngine* declarativeEngine)
+void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 {
-    KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(declarativeEngine);
-    kDeclarative.initialize();
+    KDeclarative::KDeclarative kDeclarative;
+    kDeclarative.setDeclarativeEngine(qmlEngine);
     kDeclarative.setupBindings();
 
-    QScriptEngine* engine = kDeclarative.scriptEngine();
-    QScriptValue globalObject = engine->globalObject();
+    Application* app = static_cast<Application*>(Application::instance());
+    foreach (const QString& path, app->m_qmlImportPaths)
+    {
+        qmlEngine->addImportPath(path);
+    }
 
-    globalObject.setProperty("findImage", engine->newFunction(findImage));
-    globalObject.setProperty("getSecondsOfQTime", engine->newFunction(getSecondsOfQTime));
-    globalObject.setProperty("getMinutesOfQTime", engine->newFunction(getMinutesOfQTime));
-    globalObject.setProperty("uuid", engine->newFunction(uuid));
-    globalObject.setProperty("strFormatter", engine->newQObject(new StringFormatter(), QScriptEngine::ScriptOwnership));
+    QQmlContext* rootContext = qmlEngine->rootContext();
+
+    rootContext->setContextProperty("utils", new Utils());
+    rootContext->setContextProperty("strFormatter", new StringFormatter());
+}
+
+QStringList& Application::qmlImportPaths()
+{
+    return m_qmlImportPaths;
 }
 
 void Application::registerQmlTypes()
 {
-    qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
     qmlRegisterType<KeyboardLayout>("ktouch", 1, 0, "KeyboardLayout");
     qmlRegisterType<AbstractKey>("ktouch", 1, 0, "AbstractKey");
     qmlRegisterType<Key>("ktouch", 1, 0, "Key");
@@ -117,10 +124,31 @@ void Application::registerQmlTypes()
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
-    qmlRegisterType<ApplicationBackground>("ktouch", 1, 0, "ApplicationBackground");
-    qmlRegisterType<CursorShapeArea>("ktouch", 1, 0 , "CursorShapeArea");
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
+}
+
+void Application::migrateKde4Files()
+{
+    QStringList configFiles;
+    configFiles << QLatin1String("ktouchrc");
+    Kdelibs4ConfigMigrator confMigrator(QLatin1String("ktouch"));
+    confMigrator.setConfigFiles(configFiles);
+    confMigrator.migrate();
+
+    Kdelibs4Migration migration;
+    const QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+    if (!dataDir.exists())
+    {
+        dataDir.mkpath(dataDir.path());
+    }
+    const QString dbPath = dataDir.filePath("profiles.db");
+    const QString oldDbPath = migration.locateLocal("data", QStringLiteral("ktouch/profiles.db"));
+    if (!QFile(dbPath).exists() && !oldDbPath.isEmpty())
+    {
+        QFile(oldDbPath).copy(dbPath);
+    }
+
 }

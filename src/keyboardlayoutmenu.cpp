@@ -17,8 +17,9 @@
 
 #include "keyboardlayoutmenu.h"
 
-#include <KAction>
-#include <KLocale>
+#include <QAction>
+
+#include <KLocalizedString>
 
 #include "core/dataindex.h"
 #include "preferences.h"
@@ -68,7 +69,7 @@ void KeyboardLayoutMenu::populate()
     for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
     {
         DataIndexKeyboardLayout* layout = m_dataIndex->keyboardLayout(i);
-        KAction* action = new KAction(layout->title(), this);
+        QAction* action = new QAction(layout->title(), this);
 
         action->setData(layout->name());
         action->setCheckable(true);

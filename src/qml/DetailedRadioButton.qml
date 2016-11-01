@@ -1,5 +1,6 @@
 /*
  *  Copyright 2014  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,11 +16,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 
-Column {
+ColumnLayout {
     id: root
 
     property alias checked: radioButton.checked
@@ -31,18 +32,17 @@ Column {
 
     Row {
         id: radioButtonRow
-        width: parent.width
+        Layout.fillWidth: true
         spacing: Math.round(label.height / 4)
 
-        PlasmaComponents.RadioButton {
+        RadioButton {
             id: radioButton
             anchors.verticalCenter: parent.verticalCenter
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: label
             anchors.verticalCenter: parent.verticalCenter
-            height: paintedHeight
             /*
              * The text wrapping of the label doesn't work if it is invible
              * (wrapped at every character), hence the following hack.
@@ -61,7 +61,7 @@ Column {
     }
 
     Row {
-        width: parent.width
+        Layout.fillWidth: true
         spacing: radioButtonRow.spacing
 
         Item {
@@ -69,11 +69,9 @@ Column {
             height: hint.height
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: hint
-            font.pointSize: theme.smallestFont.pointSize
             font.italic: true
-            height: paintedHeight
             width: visible? parent.width - radioButton.width - parent.spacing: 0
             wrapMode: Text.Wrap
             opacity: radioButton.opacity

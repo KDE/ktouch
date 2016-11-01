@@ -1,9 +1,8 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
- "dtd/kdex.dtd" [
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
 <!ENTITY i18n-ktouch "<application>Typewriting Trainer</application>">
 <!ENTITY kappname "&i18n-ktouch;"><!-- replace kapp here -->
-<!ENTITY package "kdeedu">
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -52,8 +51,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2014-05-01</date>
-<releaseinfo>2.3.0</releaseinfo>
+<date>2015-09-27</date>
+<releaseinfo>&ktouch; 2.3.0 (Applications 15.12)</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -1554,17 +1553,6 @@ contributors of keyboard and lesson files.</emphasis>
 &underGPL;        	 <!-- GPL License -->
 
 </chapter>
-
-<appendix id="installation">
-<title>How to obtain and install &i18n-ktouch;</title>
-
-&install.intro.documentation;
- 
-<sect1 id="Compilation">
-<title>Compilation and Installation</title>
-&install.compile.documentation;
-</sect1>
-</appendix>
 
 &documentation.index;
 </book>

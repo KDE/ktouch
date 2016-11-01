@@ -17,7 +17,7 @@
 
 #include "keyboardlayoutcommands.h"
 
-#include "KLocale"
+#include <KLocalizedString>
 
 #include <core/keyboardlayout.h>
 #include <core/abstractkey.h>

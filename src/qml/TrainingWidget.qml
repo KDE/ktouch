@@ -15,9 +15,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
+import QtQuick 2.4
+import QtQuick.Controls 1.3
 import ktouch 1.0
-import org.kde.plasma.components 0.1 as PlasmaComponents
 
 FocusScope {
     id: trainingWidget
@@ -41,6 +41,10 @@ FocusScope {
         trainingLine.active = true
     }
 
+    function forceActiveFocus() {
+        trainingLine.forceActiveFocus()
+    }
+
     Timer {
         id: stopTimer
         interval: 5000
@@ -49,137 +53,140 @@ FocusScope {
         }
     }
 
-    Flickable
-    {
-        id: sheetFlick
+    ScrollView {
         anchors.fill: parent
-        contentWidth: parent.width
-        contentHeight: sheet.height + 60
-        clip: true
-        flickableDirection: Flickable.VerticalFlick
-
-        function currentLineY() {
-            var cursorRect = lessonPainter.cursorRectangle
-            var y = cursorRect.y + sheet.y + (cursorRect.height / 2)
-            return Math.max(Math.min((y - (height / 2)), contentHeight - height), 0)
-        }
-
-        function scrollToCurrentLine() {
-            scrollAnimation.to = currentLineY()
-            scrollAnimation.start()
-        }
-
-        onHeightChanged: {
-            contentY = currentLineY()
-        }
-
-        NumberAnimation {
-            target: sheetFlick
-            id: scrollAnimation
-            duration: 150
-            property: "contentY"
-        }
-
-        Rectangle {
-            id: sheet
-            color: "#fff"
-            anchors.centerIn: parent
-            width: parent.width - 60
-            height: lessonPainter.height
-
-            border {
-                width: 1
-                color: "#000"
-            }
-
-            LessonPainter {
-                id: lessonPainter
-                anchors.centerIn: sheet
-                lesson: trainingWidget.lesson
-                maximumWidth: parent.width
-                trainingLineCore: trainingLine
-
-                onDone: {
-                    trainingLine.active = false
-                    trainingWidget.finished();
-                    stats.stopTraining();
-                }
-
-                TrainingLineCore {
-                    id: trainingLine
-                    anchors.fill: parent
-                    focus: true
-                    trainingStats: stats
-                    cursorItem: cursor
-
-                    onFocusChanged: {
-                        if (!trainingLine.activeFocus) {
-                            trainingStats.stopTraining()
-                        }
-                    }
-
-                    Keys.onPressed: {
-                        if (!trainingLine.active)
-                            return
-
-                        cursorAnimation.restart()
-                        trainingStats.startTraining()
-                        stopTimer.restart()
-
-                        if (!event.isAutoRepeat) {
-                            trainingWidget.keyPressed(event)
-                        }
-                    }
-
-                    Keys.onReleased: {
-                        if (!trainingLine.active)
-                            return
-
-                        if (!event.isAutoRepeat) {
-                            trainingWidget.keyReleased(event)
-                        }
-                    }
-                }
-
-                Rectangle {
-                    id: cursor
-                    color: "#000"
-                    x: Math.floor(lessonPainter.cursorRectangle.x)
-                    y: lessonPainter.cursorRectangle.y
-                    width: lessonPainter.cursorRectangle.width
-                    height: lessonPainter.cursorRectangle.height
-
-                    onYChanged: sheetFlick.scrollToCurrentLine()
-
-                    SequentialAnimation {
-                        id: cursorAnimation
-                        running: trainingLine.active && trainingLine.activeFocus && Qt.application.active
-                        loops: Animation.Infinite
-                        PropertyAction {
-                            target: cursor
-                            property: "opacity"
-                            value: 1
-                        }
-                        PauseAnimation {
-                            duration: 500
-                        }
-                        PropertyAction {
-                            target: cursor
-                            property: "opacity"
-                            value: 0
-                        }
-                        PauseAnimation {
-                            duration: 500
-                        }
-                    }
-                }
-            }
-        }
-
-        MouseArea {
+        Flickable
+        {
+            id: sheetFlick
             anchors.fill: parent
-            onClicked: trainingLine.forceActiveFocus()
+            contentWidth: parent.width
+            contentHeight: sheet.height + 60
+            clip: true
+            flickableDirection: Flickable.VerticalFlick
+
+            function currentLineY() {
+                var cursorRect = lessonPainter.cursorRectangle
+                var y = cursorRect.y + sheet.y + (cursorRect.height / 2)
+                return Math.max(Math.min((y - (height / 2)), contentHeight - height), 0)
+            }
+
+            function scrollToCurrentLine() {
+                scrollAnimation.to = currentLineY()
+                scrollAnimation.start()
+            }
+
+            onHeightChanged: {
+                contentY = currentLineY()
+            }
+
+            NumberAnimation {
+                target: sheetFlick
+                id: scrollAnimation
+                duration: 150
+                property: "contentY"
+            }
+
+            Rectangle {
+                id: sheet
+                color: "#fff"
+                anchors.centerIn: parent
+                width: parent.width - 60
+                height: lessonPainter.height
+
+                border {
+                    width: 1
+                    color: "#000"
+                }
+
+                LessonPainter {
+                    id: lessonPainter
+                    anchors.centerIn: sheet
+                    lesson: trainingWidget.lesson
+                    maximumWidth: parent.width
+                    trainingLineCore: trainingLine
+
+                    onDone: {
+                        trainingLine.active = false
+                        trainingWidget.finished();
+                        stats.stopTraining();
+                    }
+
+                    TrainingLineCore {
+                        id: trainingLine
+                        anchors.fill: parent
+                        focus: true
+                        trainingStats: stats
+                        cursorItem: cursor
+
+                        onActiveFocusChanged: {
+                            if (!trainingLine.activeFocus) {
+                                trainingStats.stopTraining()
+                            }
+                        }
+
+                        Keys.onPressed: {
+                            if (!trainingLine.active)
+                                return
+
+                            cursorAnimation.restart()
+                            trainingStats.startTraining()
+                            stopTimer.restart()
+
+                            if (!event.isAutoRepeat) {
+                                trainingWidget.keyPressed(event)
+                            }
+                        }
+
+                        Keys.onReleased: {
+                            if (!trainingLine.active)
+                                return
+
+                            if (!event.isAutoRepeat) {
+                                trainingWidget.keyReleased(event)
+                            }
+                        }
+                    }
+
+                    Rectangle {
+                        id: cursor
+                        color: "#000"
+                        x: Math.floor(lessonPainter.cursorRectangle.x)
+                        y: lessonPainter.cursorRectangle.y
+                        width: lessonPainter.cursorRectangle.width
+                        height: lessonPainter.cursorRectangle.height
+
+                        onYChanged: sheetFlick.scrollToCurrentLine()
+
+                        SequentialAnimation {
+                            id: cursorAnimation
+                            running: trainingLine.active && trainingLine.activeFocus && Qt.application.active
+                            loops: Animation.Infinite
+                            PropertyAction {
+                                target: cursor
+                                property: "opacity"
+                                value: 1
+                            }
+                            PauseAnimation {
+                                duration: 500
+                            }
+                            PropertyAction {
+                                target: cursor
+                                property: "opacity"
+                                value: 0
+                            }
+                            PauseAnimation {
+                                duration: 500
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: trainingLine.forceActiveFocus()
     }
 
     KeyItem {
@@ -228,10 +235,6 @@ FocusScope {
         Behavior on opacity {
             NumberAnimation { duration: 150 }
         }
-    }
-
-    PlasmaComponents.ScrollBar {
-        flickableItem: sheetFlick
     }
 }
 

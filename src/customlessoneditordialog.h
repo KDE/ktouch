@@ -16,21 +16,21 @@
  */
 
 
-#ifndef CUSTOMLESSONEDITORWIDGET_H
-#define CUSTOMLESSONEDITORWIDGET_H
+#ifndef CUSTOMLESSONEDITORDIALOG_H
+#define CUSTOMLESSONEDITORDIALOG_H
 
-#include <QWidget>
+#include <QDialog>
 
-#include "ui_customlessoneditorwidget.h"
+#include "ui_customlessoneditordialog.h"
 
 class Lesson;
 class KeyboardLayout;
 
-class CustomLessonEditorWidget : public QWidget, private Ui::CustomLessonEditorWidget
+class CustomLessonEditorDialog : public QDialog, private Ui::CustomLessonEditorDialog
 {
     Q_OBJECT
 public:
-    explicit CustomLessonEditorWidget(QWidget* parent = 0);
+    explicit CustomLessonEditorDialog(QWidget* parent = 0);
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);
     KeyboardLayout* keyboardLayout() const;
@@ -49,4 +49,4 @@ private:
     KeyboardLayout* m_keyboardLayout;
 };
 
-#endif // CUSTOMLESSONEDITORWIDGET_H
+#endif // CUSTOMLESSONEDITORDIALOG_H

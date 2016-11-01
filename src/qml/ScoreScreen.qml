@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2016  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,11 +16,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
-import org.kde.qtextracomponents 0.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import org.kde.kquickcontrolsaddons 2.0
 import org.kde.charts 0.1 as Charts
 
 FocusScope {
@@ -91,6 +92,11 @@ FocusScope {
 
     }
 
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
+
     LearningProgressModel {
         property bool filterByLesson: false
         id: learningProgressModel
@@ -111,26 +117,24 @@ FocusScope {
         Column {
             id: chartTypeDialogContents
 
-            PlasmaComponents.ToolButton {
+            Button {
                 id: progressChartButton
-                property Item tab: learningProgressTab
-                width: Math.max(minimumWidth, errorsChartButton.minimumWidth)
-                text: tab.title
-                iconSource: tab.iconSource
+                width: Math.max(implicitWidth, errorsChartButton.implicitWidth)
+                text: i18n("Progress")
+                iconName: "office-chart-area"
                 onClicked: {
-                    tabGroup.currentTab = tab
                     chartTypeDialog.close()
+                    tabGroup.currentIndex = 0
                 }
             }
-            PlasmaComponents.ToolButton {
+            Button {
                 id: errorsChartButton
-                property Item tab: errorsTab
-                width: Math.max(minimumWidth, progressChartButton.minimumWidth)
-                text: tab.title
-                iconSource: tab.iconSource
+                width: Math.max(implicitWidth, progressChartButton.implicitWidth)
+                text: i18n("Errors")
+                iconName: "office-chart-bar"
                 onClicked: {
-                    tabGroup.currentTab = tab
                     chartTypeDialog.close()
+                    tabGroup.currentIndex = 1
                 }
             }
         }
@@ -143,27 +147,23 @@ FocusScope {
         Column {
             id: learningProgressDialogContents
 
-            PlasmaComponents.ToolButton {
+            Button {
                 id: allLessonsButton
                 width: Math.max(implicitWidth, thisLessonButton.implicitWidth)
                 text: i18n("All Lessons")
-                iconSource: "view-filter"
+                iconName: "view-filter"
                 onClicked: {
-                    if (learningProgressModel.filterByLesson) {
-                        toggleLearningProgressFilterAnimation.restart()
-                    }
+                    learningProgressModel.filterByLesson = false
                     learningProgressDialog.close()
                 }
             }
-            PlasmaComponents.ToolButton {
+            Button {
                 id: thisLessonButton
                 width: Math.max(implicitWidth, allLessonsButton.implicitWidth)
                 text: i18n("This Lesson")
-                iconSource: "view-filter"
+                iconName: "view-filter"
                 onClicked: {
-                    if (!learningProgressModel.filterByLesson) {
-                        toggleLearningProgressFilterAnimation.restart()
-                    }
+                    learningProgressModel.filterByLesson = true
                     learningProgressDialog.close()
                 }
             }
@@ -226,69 +226,45 @@ FocusScope {
         }
     }
 
-    SequentialAnimation {
-        id: toggleLearningProgressFilterAnimation
-        NumberAnimation
-        {
-            target: learningProgressChart
-            property: "opacity"
-            to: 0
-            duration: 250
-            easing.type: Easing.InOutQuart
-        }
-        PropertyAction
-        {
-            target: learningProgressModel
-            property: "filterByLesson"
-            value: !learningProgressModel.filterByLesson
-        }
-        NumberAnimation
-        {
-            target: learningProgressChart
-            property: "opacity"
-            to: 1
-            duration: 250
-            easing.type: Easing.InOutQuart
-        }
-    }
-
-    Column {
+    ColumnLayout {
         anchors.fill: parent
 
-        spacing: header.margins.bottom / 2
+        spacing: 0
 
-        PlasmaComponents.ToolBar {
+        ToolBar {
             id: header
-            width: parent.width
+            Layout.fillWidth: true
 
-            tools: Row {
+            RowLayout {
 
+                anchors.fill: parent
                 anchors.leftMargin: 10
                 anchors.rightMargin: 10
                 spacing: anchors.leftMargin
 
-                PlasmaComponents.ToolButton {
+                Button {
                     id: homeScreenButton
+                    anchors.verticalCenter: parent.verticalCenter
                     text: i18n("Return to Home Screen")
-                    iconSource: "go-home"
+                    iconName: "go-home"
                     onClicked: screen.homeScreenRequested()
                 }
 
                 Item {
-                    height: parent.height
-                    width: parent.width - homeScreenButton.width - repeatLessonButton.width - nextLessonButton.width - (parent.children.length - 1) * parent.spacing
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
                 }
 
-                PlasmaComponents.ToolButton {
+                Button {
                     id: repeatLessonButton
-                    iconSource: "view-refresh"
+                    iconName: "view-refresh"
                     text: i18n("Repeat Lesson")
                     onClicked: screen.lessonRepetionRequested()
                 }
 
-                PlasmaComponents.ToolButton {
+                Button {
                     id: nextLessonButton
-                    iconSource: "go-next-view"
+                    iconName: "go-next-view"
                     text: i18n("Next Lesson")
                     enabled: !!internal.nextLesson
                     onClicked: screen.nextLessonRequested(internal.nextLesson)
@@ -297,11 +273,11 @@ FocusScope {
         }
 
         Rectangle {
-            width: parent.width
-            height: parent.height - ((parent.children.length - 1) * parent.spacing) - header.height
-            color: theme.backgroundColor
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: palette.base
 
-            Column {
+            ColumnLayout {
                 id: content
                 anchors.fill: parent
                 anchors.margins: 20
@@ -309,10 +285,10 @@ FocusScope {
 
                 Rectangle {
                     id: caption
-                    width: parent.width
-                    color: "#eee4be"
-                    height: captionContent.height + 30
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: captionContent.height + 30
                     radius: 15
+                    color: "#eee4be"
 
                     Item {
                         id: captionContent
@@ -329,23 +305,22 @@ FocusScope {
                                 id: captionIcon
                                 anchors.left: parent.left
                                 anchors.verticalCenter: parent.verticalCenter
-                                icon: QIcon(internal.lessonPassed? "dialog-ok-apply": "dialog-cancel")
+                                icon: internal.lessonPassed? "dialog-ok-apply": "dialog-cancel"
                                 width: height
                                 height: captionLabel.height
                             }
-                            PlasmaComponents.Label {
+                            Label {
                                 id: captionLabel
                                 anchors.right: parent.right
                                 anchors.verticalCenter: parent.verticalCenter
                                 text:  internal.lessonPassed?
                                     i18n("Congratulations! You have passed the lesson."):
                                     i18n("You have not passed the lesson.")
-                                height: paintedHeight
-                                font.pointSize: 1.5 * theme.defaultFont.pointSize
+                                font.pointSize: 1.5 * Qt.font({'family': 'sansserif'}).pointSize
                                 color: "#000000"
                             }
                         }
-                        PlasmaComponents.Label {
+                        Label {
                             id: subCaption
                             anchors.bottom: parent.bottom
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -357,7 +332,6 @@ FocusScope {
                                     return i18n("Next lesson unlocked")
                                 return ""
                             }
-                            height: paintedHeight
                             color: "#000000"
                         }
                     }
@@ -365,10 +339,10 @@ FocusScope {
 
                 Rectangle {
                     id: statsBox
-                    width: parent.width
-                    height: 140
-                    color: "#cccccc"
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 140
                     radius: 15
+                    color: "#cccccc"
 
                     StatBox {
                         anchors.centerIn: parent
@@ -380,30 +354,29 @@ FocusScope {
 
                 Item {
                     id: contentSpacer
-                    height: 10
-                    width: parent.width
+                    Layout.preferredHeight: 10
+                    Layout.fillWidth: true
                 }
 
-                Row {
+                RowLayout {
                     id: chartControls
                     spacing: 5
-                    width: parent.width
+                    Layout.fillWidth: true
 
-                    PlasmaComponents.Label {
+                    Label {
                         id: showLabel
                         color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("Show a specific type of statistic", "Show")
-                        height: paintedHeight
                     }
 
-                    PlasmaComponents.ToolButton {
+                    Button {
                         id: chartTypeButton
                         anchors.verticalCenter: parent.verticalCenter
                         text: tabGroup.currentTab.title
-                        iconSource: tabGroup.currentTab.iconSource
-                        width: chartTypeDialogContents.width
-                        checked: chartTypeDialog.status === PlasmaComponents.DialogStatus.Open || chartTypeDialog.status === PlasmaComponents.DialogStatus.Opening
+                        iconName: tabGroup.currentTab.iconName
+                        Layout.preferredWidth: chartTypeDialogContents.width
+                        checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
                         onClicked: {
                             if (checked) {
                                 chartTypeDialog.close()
@@ -415,24 +388,23 @@ FocusScope {
                         }
                     }
 
-                    PlasmaComponents.Label {
+                    Label {
                         id: overLabel
                         color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("Show a statistic over one or more lessons", "Over")
-                        height: paintedHeight
                         opacity: tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
                     }
 
-                    PlasmaComponents.ToolButton {
+                    Button {
                         id: learningProgressFilterButton
                         anchors.verticalCenter: parent.verticalCenter
                         text: learningProgressModel.filterByLesson? thisLessonButton.text: allLessonsButton.text
-                        iconSource: "view-filter"
-                        checked: learningProgressDialog.status === PlasmaComponents.DialogStatus.Open || learningProgressDialog.status === PlasmaComponents.DialogStatus.Opening
+                        iconName: "view-filter"
+                        checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
                         opacity: tabGroup.currentTab === learningProgressTab? 1: 0
                         onClicked: {
                             if (checked) {
@@ -448,45 +420,31 @@ FocusScope {
                     }
 
                     Item {
-                        height: parent.height
-                        width: parent.width - showLabel.width - chartTypeButton.width - overLabel.width - learningProgressFilterButton.width - accuracyLegend.width - charactersPerMinuteLegend.width - (parent.children.length - 1) * parent.spacing
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
 
                     }
 
-                    Charts.LegendItem {
-                        id: accuracyLegend
-                        anchors.verticalCenter: parent.verticalCenter
-                        dimension: learningProgressChart.accuracy
-                        opacity: tabGroup.currentTab === learningProgressTab? 1: 0
-                        Behavior on opacity {
-                            NumberAnimation {duration: 150}
-                        }
-                    }
-                    Charts.LegendItem {
-                        id: charactersPerMinuteLegend
-                        anchors.verticalCenter: parent.verticalCenter
-                        dimension: learningProgressChart.charactersPerMinute
-                        opacity: tabGroup.currentTab === learningProgressTab? 1: 0
-                        Behavior on opacity {
-                            NumberAnimation {duration: 150}
-                        }
-                    }
                 }
 
-                PlasmaComponents.TabGroup {
+                TabView {
                     id: tabGroup
-                    width: parent.width
-                    height: content.height - caption.height - statsBox.height - contentSpacer.height - chartControls.height - (content.children.length - 1) * content.spacing
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    frameVisible: false
+                    tabsVisible: false
+                    property Tab currentTab: count > 0 && currentIndex != -1? getTab(currentIndex): null
 
-                    PlasmaComponents.Page {
+                    Tab {
                         id: learningProgressTab
-                        property string title: i18n("Progress")
-                        property string iconSource: "office-chart-area"
+                        title: i18n("Progress")
+                        property string iconName: "office-chart-area"
 
                         LearningProgressChart {
                             id: learningProgressChart
                             anchors.fill: parent
                             model: learningProgressModel
+                            backgroundColor: palette.base
 
                             onElemEntered: {
                                 learningProgressPointTooltip.visualParent = elem
@@ -500,17 +458,17 @@ FocusScope {
                         }
                     }
 
-                    PlasmaComponents.Page {
+                    Tab {
                         id: errorsTab
-
-                        property string title: i18n("Errors")
-                        property string iconSource: "office-chart-bar"
+                        title: i18n("Errors")
+                        property string iconName: "office-chart-bar"
 
                         Charts.BarChart{
                             anchors.fill: parent
                             model: errorsModel
                             pitch: 60
                             textRole: 3 // Qt::ToolTipRole
+                            backgroundColor: palette.base
 
                             dimensions: [
                                 Charts.Dimension {

@@ -20,14 +20,12 @@
 
 #include <math.h>
 
-#include <qdeclarative.h>
-
-#include <QDeclarativeContext>
 #include <QUndoStack>
+#include <QStandardPaths>
+#include <QQmlContext>
 
-#include <KStandardDirs>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <KDebug>
 
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -53,14 +51,27 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
     Application::setupDeclarativeBindings(m_view->engine());
 
-    m_view->rootContext()->setContextObject(this);
-    m_view->setSource(QUrl::fromLocalFile(KGlobal::dirs()->findResource("appdata", "qml/KeyboardLayoutEditor.qml")));
+    m_view->rootContext()->setContextProperty("keyboardLayoutEditor", this);
+    m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/KeyboardLayoutEditor.qml")));
 
     connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
     connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));
     connect(m_zoomSlider, SIGNAL(valueChanged(int)), SLOT(setZoomLevel(int)));
     connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
     connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
+
+    connect(m_zoomOutToolButton, &QToolButton::clicked, [=](){
+        m_zoomSlider->setValue(m_zoomSlider->value() - 1);
+    });
+    connect(m_zoomInToolButton, &QToolButton::clicked, [=](){
+        m_zoomSlider->setValue(m_zoomSlider->value() + 1);
+    });
+
+}
+
+KeyboardLayoutEditor::~KeyboardLayoutEditor()
+{
+    m_view->setSource(QUrl());
 }
 
 void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)

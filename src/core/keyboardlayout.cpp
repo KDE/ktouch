@@ -26,9 +26,6 @@
 #include <QXmlSchema>
 #include <QXmlSchemaValidator>
 
-#include <kstandarddirs.h>
-#include <klocale.h>
-#include <kdebug.h>
 
 #include "abstractkey.h"
 #include "key.h"

@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import Effects 1.0
+import QtQuick 2.4
 import ktouch 1.0
 
 Meter {
@@ -31,64 +30,37 @@ Meter {
     referenceValue: strFormatter.formatTimeDiff(meter.referenceElapsedTime, meter.elapsedTime)
     positiveDiffIsGood: false
 
-    analogPartContent: PlasmaCore.SvgItem {
+    analogPartContent: Image {
         anchors.centerIn: parent
-        svg: clockSvg
-        elementId: "background"
-        width: naturalSize.width
-        height: naturalSize.height
+        source: utils.findImage("elapsedtimemeter-background.png")
 
-        PlasmaCore.SvgItem {
+        Image {
             id: minuteHand
             anchors.centerIn: parent
-            svg: clockSvg
-            elementId: "minute-hand"
-            width: naturalSize.width
-            height: naturalSize.height
+            source: utils.findImage("elapsedtimemeter-minute-hand.png")
             smooth: true
-            effect: DropShadow {
-                color: "#000000"
-                blurRadius: 5
-                xOffset: 0
-                yOffset: 0
-            }
             transform: Rotation {
-                origin.x: minuteHand.naturalSize.width / 2
-                origin.y: minuteHand.naturalSize.height / 2
-                angle: elapsedTime? 6 * getMinutesOfQTime(elapsedTime): 0
+                origin.x: minuteHand.width / 2
+                origin.y: minuteHand.height / 2
+                angle: elapsedTime? 6 * utils.getMinutesOfQTime(elapsedTime): 0
                 Behavior on angle {
                     SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
                 }
             }
         }
 
-        PlasmaCore.SvgItem {
+        Image {
             id: secondHand
             anchors.centerIn: parent
-            svg: clockSvg
-            elementId: "second-hand"
-            width: naturalSize.width
-            height: naturalSize.height
-            smooth: true
-            effect: DropShadow {
-                color: "#000000"
-                blurRadius: 5
-                xOffset: 0
-                yOffset: 0
-            }
+            source: utils.findImage("elapsedtimemeter-second-hand.png")
             transform: Rotation {
-                origin.x: secondHand.naturalSize.width / 2
-                origin.y: secondHand.naturalSize.height / 2
-                angle: elapsedTime? 6 * getSecondsOfQTime(elapsedTime): 0
+                origin.x: secondHand.width / 2
+                origin.y: secondHand.height / 2
+                angle: elapsedTime? 6 * utils.getSecondsOfQTime(elapsedTime): 0
                 Behavior on angle {
                     SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
                 }
             }
         }
-    }
-
-    PlasmaCore.Svg {
-        id: clockSvg
-        imagePath: findImage("elapsedtimemeter.svgz")
     }
 }

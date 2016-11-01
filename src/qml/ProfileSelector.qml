@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 FocusScope {
@@ -35,70 +36,61 @@ FocusScope {
         profileForm.profile = profileDataAccess.profile(index)
     }
 
-    Column {
+    ColumnLayout {
         anchors.fill: parent
+        anchors.bottomMargin: 10
         spacing: 10
 
-        Row {
-            height: parent.height - selectButton.height - parent.spacing
-            width: parent.width
+        RowLayout {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
             spacing: 10
 
             Item {
                 id: listContainer
-                height: parent.height
-                width: Math.round((parent.width - parent.spacing) / 2)
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
-                ListView {
-                    id: list
+                ScrollView {
                     anchors.fill: parent
-                    model: profileDataAccess.profileCount + 1
-                    clip: true
-                    delegate: ListItem {
-                        property bool isNewButton: index >= profileDataAccess.profileCount
-                        width: list.width - scrollBar.width
-                        title: isNewButton?
-                                   i18n("Create New Profile"):
-                                   index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
-                        label.font.italic: isNewButton
-                        iconSource: isNewButton? "list-add": "user-identity"
-                        onClicked: {
-                            list.currentIndex = index
-                            if (isNewButton) {
-                                createNewProfile()
+                    ListView {
+                        id: list
+                        anchors.fill: parent
+                        anchors.margins: 3
+                        spacing: 3
+                        model: profileDataAccess.profileCount + 1
+                        clip: true
+                        delegate: ListItem {
+                            property bool isNewButton: index >= profileDataAccess.profileCount
+                            width: list.width
+                            title: isNewButton?
+                                    i18n("Create New Profile"):
+                                    index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
+                            label.font.italic: isNewButton
+                            iconSource: isNewButton? "list-add": "user-identity"
+                            onClicked: {
+                                list.currentIndex = index
+                                if (isNewButton) {
+                                    createNewProfile()
+                                }
+                                else {
+                                    selectProfile(index)
+                                }
                             }
-                            else {
-                                selectProfile(index)
-                            }
-                        }
-                        onDoubleClicked: {
-                            if (!isNewButton) {
-                                root.profileChosen(profileDataAccess.profile(list.currentIndex))
+                            onDoubleClicked: {
+                                if (!isNewButton) {
+                                    root.profileChosen(profileDataAccess.profile(list.currentIndex))
+                                }
                             }
                         }
                     }
-                }
-
-                PlasmaComponents.ScrollBar {
-                    id: scrollBar
-                    flickableItem: list
-                }
-            }
-
-            PlasmaCore.SvgItem {
-                id: line
-                width: naturalSize.width
-                height: parent.height
-                elementId: "vertical-line"
-                svg: PlasmaCore.Svg {
-                    imagePath: "widgets/line"
                 }
             }
 
             ProfileDetailsItem {
                 id: profileForm
-                width: parent.width - listContainer.width - line.width - 2 * parent.spacing
-                height: parent.height
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 onDeletionRequest: {
                     var index = profileDataAccess.indexOfProfile(profileForm.profile)
@@ -109,10 +101,10 @@ FocusScope {
             }
         }
 
-        PlasmaComponents.Button {
+        Button {
             id: selectButton
             anchors.horizontalCenter: parent.horizontalCenter
-            iconSource: "go-next-view"
+            iconName: "go-next-view"
             text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
             onClicked: root.profileChosen(profileDataAccess.profile(list.currentIndex))

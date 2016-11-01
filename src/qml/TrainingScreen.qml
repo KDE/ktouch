@@ -1,5 +1,6 @@
 /*
  *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,8 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.5
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 FocusScope {
@@ -54,7 +56,7 @@ FocusScope {
                 keyItems[i].enabled = false;
                 for (var j = 0; j < key.keyCharCount; j++) {
                     var keyChar = key.keyChar(j)
-                    if (chars.indexOf(String.fromCharCode(keyChar.value)) != -1) {
+                    if (chars.indexOf(keyChar.value) != -1) {
                         keyItems[i].enabled = true;
                         if (keyChar.modifier !== "") {
                             usedModifiers[keyChar.modifier] = true
@@ -110,8 +112,9 @@ FocusScope {
     TrainingStats {
         id: stats
         onTimeIsRunningChanged: {
-            if (timeIsRunning)
+            if (timeIsRunning) {
                 screen.trainingStarted = false
+            }
         }
     }
 
@@ -119,32 +122,58 @@ FocusScope {
         id: referenceStats
     }
 
-    PlasmaCore.Svg {
-        id: screenSvg
-        imagePath: findImage("trainingscreen.svgz")
-        usingRenderingCache: false
-    }
-
-    Column {
-        anchors.fill: parent
-
-        TrainingScreenToolbar {
-            id: toolbar
-            height: 29
-            width: parent.width
-            trainingStarted: screen.trainingStarted
-            trainingFinished: screen.trainingFinished
-            stats: stats
-            menuOverlayItem: menuOverlay
+    Shortcut {
+        sequence: "Escape"
+        enabled: screen.visible
+        onActivated: {
+            if (menuOverlay.opacity === 0) {
+                menuOverlay.show()
+            }
+            else {
+                menuOverlay.hide()
+            }
         }
 
-        PlasmaCore.SvgItem {
+    }
+
+
+    ColumnLayout {
+        id: screenContent
+        anchors.fill: parent
+        spacing: 0
+        BorderImage {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 41
+            border {
+                top: 1
+                bottom: 1
+            }
+            cache: false
+            source: utils.findImage("trainingscreen-toolbar.png")
+            horizontalTileMode: BorderImage.Repeat
+            verticalTileMode: BorderImage.Repeat
+
+            TrainingScreenToolbar {
+                id: toolbar
+                anchors.fill: parent
+                trainingStarted: screen.trainingStarted
+                trainingFinished: screen.trainingFinished
+                stats: stats
+                menuOverlayItem: menuOverlay
+            }
+        }
+
+        BorderImage {
             id: header
-            svg: screenSvg
-            elementId: "header"
-            width: parent.width
+            Layout.fillWidth: true
+            Layout.preferredHeight: visible? 130: 0
             visible: preferences.showStatistics
-            height: visible? 130: 0
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-header.png")
+            cache: false
 
             StatBox {
                 anchors.centerIn: parent
@@ -154,12 +183,17 @@ FocusScope {
             }
         }
 
-        PlasmaCore.SvgItem {
+
+        BorderImage {
             id: body
-            width: parent.width
-            height: parent.height - toolbar.height - header.height - footer.height
-            svg: screenSvg
-            elementId: "content"
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-viewport.png")
+            cache: false
 
             TrainingWidget {
                 id: trainingWidget
@@ -179,25 +213,34 @@ FocusScope {
                 }
             }
 
-            PlasmaCore.FrameSvgItem {
+            BorderImage {
                 anchors.fill: parent
-                imagePath: findImage("trainingscreen.svgz")
-                prefix: "content-shadow"
+                border {
+                    top: 3
+                    bottom: 3
+                }
+                source: utils.findImage("trainingscreen-viewport-shadow.png")
+                cache: false
+
             }
+
         }
 
-        PlasmaCore.SvgItem {
+        BorderImage {
             id: footer
-            width: parent.width
             visible: preferences.showKeyboard
-            height: visible?
+            Layout.fillWidth: true
+            Layout.preferredHeight: visible?
                         screen.keyboardLayout.isValid?
                             Math.round(Math.min((parent.height - toolbar.height - header.height) / 2, parent.width / keyboard.aspectRatio)):
                             keyboardUnavailableNotice.height:
                         0
-            svg: screenSvg
-            elementId: "footer"
-
+            border {
+                top: 1
+                bottom: 1
+            }
+            source: utils.findImage("trainingscreen-footer.png")
+            cache: false
             Keyboard {
                 id: keyboard
 
@@ -213,10 +256,9 @@ FocusScope {
                             key.isHighlighted = true
                             newHighlightedKeys.push(key)
                             if (typeof which == "string") {
-                                var code = which.charCodeAt(0)
                                 for (var i = 0; i < key.key.keyCharCount; i++) {
                                     var keyChar = key.key.keyChar(i)
-                                    if (keyChar.value == code && keyChar.modifier != "") {
+                                    if (keyChar.value == which && keyChar.modifier != "") {
                                         var modifier = findModifierKeyItem(keyChar.modifier)
                                         if (modifier) {
                                             modifier.isHighlighted = true
@@ -277,12 +319,9 @@ FocusScope {
 
     TrainingScreenMenuOverlay {
         id: menuOverlay
+        blurSource: screenContent
         anchors.fill: parent
-        onVisibleChanged: {
-            if (!visible) {
-                trainingWidget.forceActiveFocus()
-            }
-        }
+        onClosed: trainingWidget.forceActiveFocus()
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()
     }

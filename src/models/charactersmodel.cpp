@@ -19,7 +19,7 @@
 
 #include <QSignalMapper>
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "core/keyboardlayout.h"
 #include "core/key.h"

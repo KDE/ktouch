@@ -25,6 +25,7 @@ class Resource : public QObject
     Q_OBJECT
     Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
+
 public:
     explicit Resource(QObject* parent = 0);
     QString id() const;

@@ -19,6 +19,7 @@
 #define NEWRESOURCEASSISTANT_H
 
 #include <KAssistantDialog>
+#include <KLocalizedString>
 
 #include "models/resourcemodel.h"
 

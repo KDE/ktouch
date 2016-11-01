@@ -19,13 +19,13 @@
 
 #include <QPainter>
 
-GridItem::GridItem(QDeclarativeItem* parent) :
-    QDeclarativeItem(parent),
+GridItem::GridItem(QQuickItem* parent) :
+    QQuickPaintedItem(parent),
     m_lineDistance(10.0),
     m_color(Qt::black),
     m_backgroundColor(Qt::white)
 {
-    setFlag(QGraphicsItem::ItemHasNoContents, false);
+    setFlag(QQuickItem::QQuickItem::ItemHasContents, true);
 }
 
 qreal GridItem::lineDistance() const
@@ -71,7 +71,7 @@ void GridItem::setBackgroundColor(const QColor& backgroundColor)
     }
 }
 
-void GridItem::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget *)
+void GridItem::paint(QPainter* painter)
 {
     const QRect rect = boundingRect().toRect();
 

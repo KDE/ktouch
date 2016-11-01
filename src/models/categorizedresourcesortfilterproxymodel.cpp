@@ -18,7 +18,7 @@
 
 #include "categorizedresourcesortfilterproxymodel.h"
 
-#include "KStringHandler"
+#include <QCollator>
 
 CategorizedResourceSortFilterProxyModel::CategorizedResourceSortFilterProxyModel(QObject *parent) :
     KCategorizedSortFilterProxyModel(parent),
@@ -81,7 +81,10 @@ bool CategorizedResourceSortFilterProxyModel::subSortLessThan(const QModelIndex&
 {
     const QString leftStr = sourceModel()->data(left, Qt::DisplayRole).toString();
     const QString rightStr = sourceModel()->data(right, Qt::DisplayRole).toString();
-    const int difference = KStringHandler::naturalCompare(leftStr, rightStr, Qt::CaseInsensitive);
+    QCollator locater;
+    locater.setCaseSensitivity(Qt::CaseInsensitive);
+
+    const int difference = locater.compare(leftStr, rightStr);
 
     if (difference == 0)
     {

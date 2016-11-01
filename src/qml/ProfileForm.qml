@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 Column {
@@ -39,13 +40,13 @@ Column {
 
     spacing: 15
 
-    PlasmaComponents.Label {
+    Label {
         id: welcomeLabel
         width: parent.width
         text: i18n("Before you start training, please introduce yourself:")
     }
 
-    PlasmaComponents.TextField {
+    TextField {
         id: nameTextField
         width: parent.width
         placeholderText: i18n("Name")
@@ -79,12 +80,12 @@ Column {
         }
     }
 
-    PlasmaComponents.Button {
+    Button {
         id: doneBtn
         anchors.horizontalCenter: parent.horizontalCenter
         text: i18n("Done")
         enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
-        iconSource: "dialog-ok"
+        iconName: "dialog-ok"
         onClicked: done()
     }
 }

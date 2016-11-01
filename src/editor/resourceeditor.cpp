@@ -19,22 +19,19 @@
 
 #include <QUuid>
 #include <QFile>
+#include <QFileDialog>
 #include <QDir>
 #include <QPointer>
 #include <QTimer>
 #include <QAbstractItemView>
+#include <QStandardPaths>
 #include <QUndoGroup>
 
-#include <KGlobal>
-#include <KStandardDirs>
 #include <KToolBar>
-#include <KAction>
 #include <KActionCollection>
 #include <KStandardAction>
-#include <KIcon>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KMessageBox>
-#include <KFileDialog>
 
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -60,11 +57,11 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_undoGroup(new QUndoGroup(this)),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
-    m_deleteResourceAction(new KAction(KIcon("edit-delete"), i18n("Delete"), this)),
+    m_deleteResourceAction(new QAction(QIcon::fromTheme("edit-delete"), i18n("Delete"), this)),
     m_undoAction(KStandardAction::undo(m_undoGroup, SLOT(undo()), m_actionCollection)),
     m_redoAction(KStandardAction::redo(m_undoGroup, SLOT(redo()), m_actionCollection)),
-    m_importResourceAction(new KAction(KIcon("document-import"), i18n("Import"), this)),
-    m_exportResourceAction(new KAction(KIcon("document-export"), i18n("Export"), this)),
+    m_importResourceAction(new QAction(QIcon::fromTheme("document-import"), i18n("Import"), this)),
+    m_exportResourceAction(new QAction(QIcon::fromTheme("document-export"), i18n("Export"), this)),
     m_editorWidget(new ResourceEditorWidget(this)),
     m_saveTimer(new QTimer(this))
 
@@ -221,7 +218,7 @@ void ResourceEditor::deleteResource()
 
 void ResourceEditor::importResource()
 {
-    const QString path(KFileDialog::getOpenFileName(KUrl("kfiledialog:///importexport"), QString("text/xml"), this));
+    const QString path = QFileDialog::getOpenFileName(this, QString(), QString(), i18n("XML files (*.xml)"));
 
     if (!path.isNull())
     {
@@ -260,8 +257,8 @@ void ResourceEditor::exportResource()
                     return;
                 }
 
-                const QString initialFileName(QString("filedialog:///importexport/%1.xml").arg(course->keyboardLayoutName()));
-                const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
+                const QString initialFileName(QString("%1.xml").arg(course->keyboardLayoutName()));
+                const QString path(QFileDialog::getSaveFileName(this, QString(), initialFileName, i18n("XML files (*.xml)")));
 
                 if (!path.isNull())
                 {
@@ -288,8 +285,8 @@ void ResourceEditor::exportResource()
                     return;
                 }
 
-                const QString initialFileName(QString("filedialog:///importexport/%1.xml").arg(keyboardlayout->name()));
-                const QString path(KFileDialog::getSaveFileName(KUrl(initialFileName), QString("text/xml"), this, QString(), KFileDialog::ConfirmOverwrite));
+                const QString initialFileName(QString("%1.xml").arg(keyboardlayout->name()));
+                const QString path(QFileDialog::getSaveFileName(this, QString(), initialFileName, i18n("XML files (*.xml)")));
 
                 if (!path.isNull())
                 {
@@ -380,11 +377,11 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
 
     if (Course* course = qobject_cast<Course*>(backup))
     {
-        msg = i18n("Course <b>%1</b> deleted", Qt::escape(course->title()));
+        msg = i18n("Course <b>%1</b> deleted", course->title().toHtmlEscaped());
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(backup))
     {
-        msg = i18n("Keyboard layout <b>%1</b> deleted", Qt::escape(keyboardLayout->title()));
+        msg = i18n("Keyboard layout <b>%1</b> deleted", keyboardLayout->title().toHtmlEscaped());
     }
 
     m_editorWidget->showMessage(ResourceEditorWidget::ResourceDeletedMsg, msg);
@@ -399,6 +396,7 @@ void ResourceEditor::prepareResourceRestore(Resource* backup)
 
 Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexResource)
 {
+    // FIXME: Is all this path mangling necessary?
     UserDataAccess userDataAccess;
 
     if (Course* course = qobject_cast<Course*>(resource))
@@ -407,7 +405,10 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             new DataIndexCourse():
             dynamic_cast<DataIndexCourse*>(dataIndexResource);
 
-        const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "courses", true));
+        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        dir.mkpath(QStringLiteral("courses"));
+        dir.cd(QStringLiteral("courses"));
+
         QString path = dataIndexResource == 0?
             dir.filePath(QString("%1.xml").arg(course->id())):
             dataIndexCourse->path();
@@ -438,7 +439,10 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             new DataIndexKeyboardLayout():
             qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource);
 
-        const QDir dir = QDir(KGlobal::dirs()->saveLocation("appdata", "keyboardlayouts", true));
+        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        dir.mkpath(QStringLiteral("keyboardlayouts"));
+        dir.cd(QStringLiteral("keyboardlayouts"));
+
         QString path = dataIndexResource == 0?
             dir.filePath(QString("%1.xml").arg(keyboardLayout->id())):
             dataIndexKeyboardLayout->path();
@@ -520,11 +524,11 @@ bool ResourceEditor::importCourse(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
-                    course.setId(QUuid::createUuid());
+                    course.setId(QUuid::createUuid().toString());
                     for (int j = 0; j < course.lessonCount(); j++)
                     {
                         Lesson* const lesson = course.lesson(j);
-                        lesson->setId(QUuid::createUuid());
+                        lesson->setId(QUuid::createUuid().toString());
                     }
                     break;
                 default:
@@ -541,11 +545,11 @@ bool ResourceEditor::importCourse(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
-                    course.setId(QUuid::createUuid());
+                    course.setId(QUuid::createUuid().toString());
                     for (int j = 0; j < course.lessonCount(); j++)
                     {
                         Lesson* const lesson = course.lesson(j);
-                        lesson->setId(QUuid::createUuid());
+                        lesson->setId(QUuid::createUuid().toString());
                     }
                     break;
                 case KMessageBox::No:
@@ -588,7 +592,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
-                    keyboardLayout.setId(QUuid::createUuid());
+                    keyboardLayout.setId(QUuid::createUuid().toString());
                     break;
                 default:
                     return true;
@@ -604,7 +608,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
             ))
             {
                 case KMessageBox::Yes:
-                    keyboardLayout.setId(QUuid::createUuid());
+                    keyboardLayout.setId(QUuid::createUuid().toString());
                     break;
                 case KMessageBox::No:
                     overwriteDataIndexKeyboardLayout = testKeyboardLayout;

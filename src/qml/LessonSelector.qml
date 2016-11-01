@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
 Item {
@@ -86,32 +87,31 @@ Item {
     LessonSelectorBase {
         anchors.fill: parent
 
-        list: ListView {
-            id: lessonList
-            property int lastUnlockedIndex: 0
+        list:ScrollView {
             anchors.fill: parent
-            model: course.isValid? course.lessonCount: 0
-            clip: true
-            delegate: ListItem {
-                property Lesson lesson: index < course.lessonCount? course.lesson(index): null
-                property bool locked: index > lessonList.lastUnlockedIndex
-                width: lessonList.width - scrollBar.width
-                onClicked: lessonList.currentIndex = index
-                onDoubleClicked: {
-                    if (!locked) {
-                        lessonSelected(course, lesson)
+            ListView {
+                anchors.fill: parent
+                id: lessonList
+                property int lastUnlockedIndex: 0
+                model: course.isValid? course.lessonCount: 0
+                spacing: 3
+                clip: true
+                delegate: ListItem {
+                    property Lesson lesson: index < course.lessonCount? course.lesson(index): null
+                    property bool locked: index > lessonList.lastUnlockedIndex
+                    width: lessonList.width
+                    onClicked: lessonList.currentIndex = index
+                    onDoubleClicked: {
+                        if (!locked) {
+                            lessonSelected(course, lesson)
+                        }
                     }
+                    iconSource: locked? "object-locked": ""
+                    label.opacity: locked? 0.5: 1.0
+                    title: lesson? lesson.title: ""
+
                 }
-                iconSource: locked? "object-locked": ""
-                label.opacity: locked? 0.5: 1.0
-                title: lesson? lesson.title: ""
-
-            }
-            onModelChanged: update()
-
-            PlasmaComponents.ScrollBar {
-                id: scrollBar
-                flickableItem: lessonList
+                onModelChanged: update()
             }
         }
 

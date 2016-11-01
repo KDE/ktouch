@@ -17,6 +17,8 @@
 
 #include "newkeyboardlayoutwidget.h"
 
+#include <KLocalizedString>
+
 #include "core/dataindex.h"
 #include "models/resourcemodel.h"
 

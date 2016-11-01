@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,13 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.qtextracomponents 0.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
+import org.kde.kquickcontrolsaddons 2.0
+import ktouch 1.0
+
 
 Item {
     id: root
@@ -25,11 +30,31 @@ Item {
     width: content.width + 40
     height: content.height + 40
 
-    Rectangle {
+    property alias blurSource: effectSource.sourceItem
+
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
+
+    ShaderEffectSource {
+        id: effectSource
         anchors.fill: parent
+        hideSource: false
+        sourceRect: Qt.rect(root.x, root.y, root.width, root.height)
+    }
+
+    FastBlur {
+        anchors.fill: parent
+        source: effectSource
+        radius: 25
+    }
+
+    Rectangle {
         id: background
-        color: "#000"
-        opacity: 0.7
+        anchors.fill: parent
+        color: palette.base
+        opacity: 0.3
         radius: 15
     }
 
@@ -49,17 +74,16 @@ Item {
         QIconItem {
             id: icon
             anchors.horizontalCenter: parent.horizontalCenter
-            icon: QIcon("object-locked")
-            width: theme.enormousIconSize
-            height: theme.enormousIconSize
+            icon: "object-locked"
+            width: 128
+            height: 128
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: text
             text: i18n("Complete Previous Lessons to Unlock")
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
-            color: "#fff"
             font.weight: Font.Bold
             wrapMode: Text.Wrap
         }

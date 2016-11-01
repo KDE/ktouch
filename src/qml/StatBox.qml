@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,10 +16,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
+import QtQuick 2.4
+import QtQuick.Layouts 1.1
 import ktouch 1.0
 
-Row {
+RowLayout {
     property TrainingStats stats
     property TrainingStats referenceStats
 
@@ -27,21 +29,21 @@ Row {
 
     ElapsedTimeMeter {
         id: elapsedTimeMeter
-        width: Math.floor((parent.width - 2 * parent.spacing) / 3)
+        Layout.fillWidth: true
         elapsedTime: stats.elapsedTime
         referenceElapsedTime: referenceStats.isValid? referenceStats.elapsedTime: stats.elapsedTime
     }
 
     CharactersPerMinuteMeter {
         id: charactersPerMinuteMeter
-        width: elapsedTimeMeter.width
+        Layout.fillWidth: true
         charactersPerMinute: stats.charactersPerMinute
         referenceCharactersPerMinute: referenceStats.isValid? referenceStats.charactersPerMinute: stats.charactersPerMinute
     }
 
     AccuracyMeter {
         id: accuracyMeter
-        width: parent.width - 2 * (elapsedTimeMeter.width + parent.spacing)
+        Layout.fillWidth: true
         accuracy: stats.accuracy
         referenceAccuracy: referenceStats.isValid? referenceStats.accuracy: stats.accuracy
     }

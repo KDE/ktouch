@@ -18,7 +18,7 @@
 
 #include "coursecommands.h"
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "core/course.h"
 #include "core/lesson.h"

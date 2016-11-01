@@ -18,7 +18,6 @@
 #include "lessontexthighlighter.h"
 
 #include <KColorScheme>
-#include <KDebug>
 
 LessonTextHighlighter::LessonTextHighlighter(QObject* parent):
     QSyntaxHighlighter(parent)

@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,26 +16,59 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
+import ktouch 1.0
 
-Item {
+FocusScope {
     id: item
 
+    property alias blurSource: effectSource.sourceItem
+
+    signal closed()
     signal restartRequested()
     signal abortRequested()
 
-    visible: false
     opacity: 0
 
+    Behavior on opacity {
+        NumberAnimation {
+            duration: 300
+            easing.type: Easing.InOutQuad
+        }
+    }
+
     function show() {
-        focusScope.forceActiveFocus()
-        fadeInAnimation.start()
+        item.opacity = 1
+        resumeButton.forceActiveFocus()
     }
 
     function hide() {
-        fadeOutAnimation.start()
+        item.opacity = 0
+        closed()
+    }
+
+    ShaderEffectSource {
+        id: effectSource
+        anchors.fill: parent
+        hideSource: false
+    }
+
+    HueSaturation {
+        id: desaturatedBackground
+        source: effectSource
+        anchors.fill: parent
+        lightness: -0.3
+        saturation: -0.5
+        visible: false
+    }
+
+    FastBlur {
+        anchors.fill: parent
+        source: desaturatedBackground
+        radius: 50
     }
 
     Rectangle {
@@ -45,58 +79,62 @@ Item {
     /* swallow all mouse events */
     MouseArea {
         anchors.fill: parent
+        enabled: item.opacity > 0
         hoverEnabled: true
     }
 
-    FocusScope {
-        id: focusScope
+
+    GroupBox {
+        id: groupBox
         anchors.centerIn: parent
-
-        PlasmaCore.FrameSvgItem  {
-            id: frame
-            anchors.centerIn: parent
-            imagePath: "widgets/frame"
-            prefix: "raised"
-            width: column.width + frame.margins.left + frame.margins.right + 30
-            height: column.height + frame.margins.top + frame.margins.bottom + 30
-
-        }
+        width: column.width + 30
+        height: column.height + 30
 
         Column {
             id: column
+            focus: true
             anchors.centerIn: parent
             spacing: 15
             width: Math.max(resumeButton.implicitWidth, restartButton.implicitWidth, returnButton.implicitWidth)
 
-            PlasmaComponents.Button {
-                focus: true
+            Button {
                 id: resumeButton
-                iconSource: "go-next-view"
+                iconName: "go-next-view"
                 text: i18n("Resume Training")
                 width: parent.width
                 onClicked: hide()
+                KeyNavigation.backtab: returnButton
+                KeyNavigation.tab: restartButton
+                KeyNavigation.down: restartButton
             }
 
-            PlasmaComponents.Button {
+            Button {
                 id: restartButton
-                iconSource: "view-refresh"
+                iconName: "view-refresh"
                 text: i18n("Restart Lesson")
                 width: parent.width
                 onClicked: {
                     restartRequested()
                     hide()
                 }
+                KeyNavigation.backtab: resumeButton
+                KeyNavigation.tab: returnButton
+                KeyNavigation.up: resumeButton
+                KeyNavigation.down: returnButton
             }
 
-            PlasmaComponents.Button {
+            Button {
                 id: returnButton
-                iconSource: "go-home"
+                iconName: "go-home"
                 text: i18n("Return to Home Screen")
                 width: parent.width
                 onClicked: {
                     abortRequested()
                     hide()
                 }
+                KeyNavigation.backtab: restartButton
+                KeyNavigation.tab: resumeButton
+                KeyNavigation.up: restartButton
             }
 
             Keys.onDownPressed: {
@@ -116,38 +154,6 @@ Item {
             Keys.onEscapePressed: {
                 hide()
             }
-        }
-    }
-
-    SequentialAnimation {
-        id: fadeInAnimation
-        PropertyAction {
-            target: item
-            property: "visible"
-            value: true
-        }
-        NumberAnimation {
-            target: item
-            property: "opacity"
-            to: 1
-            duration: 300
-            easing.type: Easing.InOutQuad
-        }
-    }
-
-    SequentialAnimation {
-        id: fadeOutAnimation
-        NumberAnimation {
-            target: item
-            property: "opacity"
-            to: 0
-            duration: 300
-            easing.type: Easing.InOutQuad
-        }
-        PropertyAction {
-            target: item
-            property: "visible"
-            value: false
         }
     }
 }

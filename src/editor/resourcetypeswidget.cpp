@@ -17,7 +17,10 @@
 
 #include "resourcetypeswidget.h"
 
+#include <QFileDialog>
 #include <QStandardItemModel>
+
+#include <KLocalizedString>
 
 ResourceTypesWidget::ResourceTypesWidget(QWidget* parent) :
     QWidget(parent),

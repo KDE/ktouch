@@ -37,7 +37,6 @@ public:
     void setSelectedKey(int index);
     void setReadOnly(bool readOnly);
 private slots:
-    void updateFont();
     void setKeyboardLayoutTitle(const QString& title);
     void setKeyboardLayoutName(const QString& name);
     void setKeyboardLayoutSize(const QSize& size);

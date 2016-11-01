@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.0
-import org.kde.plasma.core 0.1 as PlasmaCore
-import Effects 1.0
+import QtQuick 2.4
 import ktouch 1.0
 
 Meter {
@@ -31,12 +30,10 @@ Meter {
     referenceValue: strFormatter.formatAccuracyDiff(meter.referenceAccuracy, meter.accuracy)
     valueStatus: Math.round(1000 * meter.accuracy) >= Math.round(10 * preferences.requiredAccuracy)? "good": "bad"
 
-    analogPartContent: PlasmaCore.SvgItem {
+    analogPartContent: Image {
         anchors.centerIn: parent
-        svg: clockSvg
-        elementId: "background"
-        width: naturalSize.width
-        height: naturalSize.height
+        source: utils.findImage("accuracymeter-background.png")
+
         ScaleBackgroundItem {
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
@@ -48,14 +45,11 @@ Meter {
             color: "#88ff00";
         }
 
-        PlasmaCore.SvgItem {
+        Image {
             id: scale
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            svg: clockSvg
-            elementId: "scale"
-            width: naturalSize.width
-            height: naturalSize.height
+            source: utils.findImage("accuracymeter-scale.png")
         }
 
         Text {
@@ -78,34 +72,19 @@ Meter {
             font.pixelSize: 10
         }
 
-        PlasmaCore.SvgItem {
+        Image {
             id: hand
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            svg: clockSvg
-            elementId: "hand"
-            width: naturalSize.width
-            height: naturalSize.height
-            smooth: true
-            effect: DropShadow {
-                color: "#000000"
-                blurRadius: 5
-                xOffset: 0
-                yOffset: 0
-            }
+            source: utils.findImage("accuracymeter-hand.png")
             transform: Rotation {
-                origin.x: hand.naturalSize.width / 2
-                origin.y: hand.naturalSize.height / 2
+                origin.x: hand.width / 2
+                origin.y: hand.height / 2
                 angle: Math.min(90, Math.max(0, accuracy - 0.9) * 900)
                 Behavior on angle {
                     SpringAnimation { spring: 2; damping: 0.2; modulus: 360; mass: 0.75}
                 }
             }
         }
-    }
-
-    PlasmaCore.Svg {
-        id: clockSvg
-        imagePath: findImage("accuracymeter.svgz")
     }
 }

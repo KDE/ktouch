@@ -19,16 +19,15 @@
 #include "keyboardlayouteditorview.h"
 
 #include <QMouseEvent>
-#include <KDebug>
 
 KeyboardLayoutEditorView::KeyboardLayoutEditorView(QWidget* parent) :
-    QDeclarativeView(parent)
+    QQuickWidget(parent)
 {
 }
 
 void KeyboardLayoutEditorView::mousePressEvent(QMouseEvent* event)
 {
-    QGraphicsView::mousePressEvent(event);
+    QQuickWidget::mousePressEvent(event);
 
     if (!event->isAccepted() && event->button() == Qt::LeftButton)
     {

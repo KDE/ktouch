@@ -20,6 +20,7 @@
 
 #include <QUuid>
 
+#include <KLocalizedString>
 #include <KMessageBox>
 
 #include "core/course.h"
@@ -56,7 +57,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
 
     connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
-    connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
+    connect(m_lessonView->selectionModel(), SIGNAL(currentChanged(QModelIndex, QModelIndex)), SLOT(onLessonSelected()));
 
     connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
     connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
@@ -157,7 +158,7 @@ void CourseEditor::setDescription(const QString& newDescription)
 void CourseEditor::addLesson()
 {
     const int newIndex = m_currentLessonIndex + 1;
-    const QString id = QUuid::createUuid();
+    const QString id = QUuid::createUuid().toString();
     QUndoCommand* command = new AddLessonCommand(m_course, newIndex, id);
 
     currentUndoStack()->push(command);

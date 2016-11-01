@@ -1,5 +1,6 @@
 /*
  *   Copyright 2012 Marco Martin <mart@kde.org>
+ *   Copyright 2015 Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,156 +18,150 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.extras 0.1 as PlasmaExtras
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtGraphicalEffects 1.0
 
-Item {
+Loader {
     id: root
     property Item visualParent
-    z: 9000
-    property int status: PlasmaComponents.DialogStatus.Closed
-    default property alias data: contentItem.data
+    property string status: 'closed'
+    default property Item data
+    active: status != 'closed'
 
     function open()
     {
-        if (root.visualParent) {
-            internal.parentPos = root.visualParent.mapToItem(dismissArea.parent, 0, 0)
-        }
-        root.status = PlasmaComponents.DialogStatus.Opening
-        appearAnimation.restart()
+        root.status = 'loading'
     }
 
     function close()
     {
-        root.status = PlasmaComponents.DialogStatus.Closing
-        appearAnimation.restart()
+        root.status = 'closing'
     }
 
-    SequentialAnimation {
-        id: appearAnimation
-        NumberAnimation {
-            duration: 250
-            easing.type: Easing.InOutQuad
-            target: dismissArea
-            properties: "opacity"
-            to: root.status == PlasmaComponents.DialogStatus.Opening ? 1 : 0
-        }
-        ScriptAction {
-            script: root.status == PlasmaComponents.DialogStatus.Opening ? root.status = PlasmaComponents.DialogStatus.Open : PlasmaComponents.DialogStatus.Closed
-        }
-    }
-
-    MouseArea {
-        id: dismissArea
-        z: 9000
-        anchors.fill: parent
-        opacity: 0
-
-        //FIXME: this is an hack: it's taking the dialog background making sure no opaque or transparent are selected
-        //in Plasma2 we need to have the backingstore blur there as well
-        PlasmaExtras.FallbackComponent {
-            id: fallbackComponent
-            basePath: "desktoptheme"
-            candidates: [theme.themeName, "default"]
-            property string svgPath: fallbackComponent.filePath("/dialogs/background.svgz")
-        }
-        Connections {
-            target: theme
-            //fallback if inline-background doesn't work
-            onThemeChanged: {
-                fallbackComponent.svgPath = fallbackComponent.filePath("/dialogs/background.svgz")
-                shadowFrame.visible = backgroundSvg.hasElement("shadow-top")
-            }
-        }
-        PlasmaCore.FrameSvgItem {
-            id: shadowFrame
-            imagePath: fallbackComponent.svgPath
-            prefix: "shadow"
-            anchors {
-                fill: internal
-                leftMargin: -margins.left
-                topMargin: -margins.top
-                rightMargin: -margins.right
-                bottomMargin: -margins.bottom
-            }
-            Component.onCompleted: shadowFrame.visible = backgroundSvg.hasElement("shadow-top")
-        }
-        PlasmaCore.FrameSvgItem {
-            id: internal
-            property variant parentPos
-            imagePath: fallbackComponent.svgPath
-            property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
-            //bindings won't work inside anchers definition
-            onUnderChanged: {
-                if (under) {
-                    tipSvg.anchors.top = undefined
-                    tipSvg.anchors.bottom = tipSvg.parent.top
-                } else {
-                    tipSvg.anchors.bottom = undefined
-                    tipSvg.anchors.top = tipSvg.parent.bottom
-                }
+    sourceComponent: Component {
+        MouseArea {
+            id: dismissArea
+            anchors.fill: parent
+            opacity: root.active && (root.status == 'open' || root.status =='opening')? 1 : 0
+            layer.enabled: true
+            layer.effect: DropShadow {
+                anchors.fill: parent
+                source: internalWrapper
+                radius: 5
+                samples: 11
             }
 
-            property int preferedX: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
-            x: Math.max(shadowFrame.margins.left, Math.min(dismissArea.width - internal.width - shadowFrame.margins.right, preferedX))
-            y: {
-                if (root.visualParent) {
-                    if (under) {
-                        internal.parentPos.y + root.visualParent.height + tipSvg.height
-                    } else {
-                        internal.parentPos.y - internal.height - tipSvg.height
+            Behavior on opacity {
+                SequentialAnimation {
+                    NumberAnimation {
+                        duration: 250
+                        easing.type: Easing.InOutQuad
+                        properties: "opacity"
                     }
-                } else {
-                    dismissArea.height/2 - internal.height/2
-                }
-            }
-            width: contentItem.width + margins.left + margins.right
-            height: contentItem.height + margins.top + margins.bottom
+                    ScriptAction {
+                        script: {
+                            root.status = root.status == 'opening' ? 'open' : 'closed'
+                        }
 
-            PlasmaCore.SvgItem {
-                id: tipSvg
-                visible: root.visualParent != null
-                svg: PlasmaCore.Svg {
-                    id: backgroundSvg
-                    imagePath: fallbackComponent.svgPath
+                    }
                 }
-                elementId: internal.under ? "balloon-tip-top" : "balloon-tip-bottom"
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    horizontalCenterOffset: internal.preferedX - internal.x
-                    bottom: parent.top
-                    top: parent.bottom
-                    topMargin: -backgroundSvg.elementSize("hint-bottom-shadow").height - 1
-                    bottomMargin: -backgroundSvg.elementSize("hint-top-shadow").height - 1
+            }
+
+            SystemPalette {
+                id: palette
+                colorGroup: SystemPalette.Active
+            }
+
+            Rectangle {
+                id: internal
+                color: palette.alternateBase
+                radius: 5
+
+                property variant parentPos: root.visualParent? root.visualParent.mapToItem(dismissArea, 0, 0): Qt.point(0, 0)
+                property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
+
+                //bindings won't work inside anchors definition
+                onUnderChanged: {
+                    if (under) {
+                        balloonTip.anchors.top = undefined
+                        balloonTip.anchors.bottom = balloonTip.parent.top
+                    } else {
+                        balloonTip.anchors.bottom = undefined
+                        balloonTip.anchors.top = balloonTip.parent.bottom
+                    }
                 }
-                width: naturalSize.width
-                height: naturalSize.height
+
+                property int preferedX: internal.parentPos.x - internal.width/2 + root.visualParent.width/2
+                x: Math.round(Math.max(radius, Math.min(dismissArea.width - internal.width - radius, preferedX)))
+                y: {
+                    if (root.visualParent) {
+                        if (under) {
+                            Math.round(internal.parentPos.y + root.visualParent.height + balloonTip.height + radius)
+                        } else {
+                            Math.round(internal.parentPos.y - internal.height - balloonTip.height - radius)
+                        }
+                    } else {
+                        Math.round(dismissArea.height/2 - internal.height/2)
+                    }
+                }
+                width: contentItem.width + 2 * internal.radius
+                height: contentItem.height + 2 * internal.radius
+
+                Rectangle {
+                    id: balloonTip
+                    color: internal.color
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        horizontalCenterOffset: internal.preferedX - internal.x
+                        top: parent.bottom
+                    }
+                    width: 10
+                    height: 10
+                    visible: false
+                }
+
+                Image {
+                    id: balloonTipMask
+                    anchors.fill: balloonTip
+                    visible: false
+                    source: utils.findImage("balloontip.svgz")
+                    sourceSize: Qt.size(width, height)
+               }
+
+                OpacityMask {
+                    anchors.fill: balloonTip
+                    visible: root.visualParent != null
+                    source: balloonTip
+                    maskSource: balloonTipMask
+                    rotation: internal.under? 0: 180
+                }
+
+                Item {
+                    id: contentItem
+                    x: internal.radius
+                    y: internal.radius
+                    width: childrenRect.width
+                    height: childrenRect.height + 2
+                    data: root.data
+                }
             }
-            MouseArea {
-                id: contentItem
-                x: parent.margins.left
-                y: parent.margins.top
-                width: childrenRect.width
-                height: childrenRect.height
-                onClicked: mouse.accepted = true
+
+            onClicked: {
+                root.close()
             }
+
+            Component.onCompleted: {
+                var candidate = root
+                while (candidate.parent.parent) {
+                    candidate = candidate.parent
+                }
+                if (candidate) {
+                    dismissArea.parent = candidate
+                }
+                root.status = 'opening'
+            }
+
         }
-        onClicked: {
-            root.close()
-        }
-        Component.onCompleted: {
-            var candidate = root
-            while (candidate.parent) {
-                candidate = candidate.parent
-            }
-            if (candidate) {
-                dismissArea.parent = candidate
-            } else {
-                dismissArea.visible = false
-            }
-            internal.parentPos = root.mapToItem(dismissArea.parent, 0, 0)
-        }
+
     }
 }

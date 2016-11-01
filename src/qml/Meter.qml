@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,10 +16,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.4
+import QtQuick.Layouts 1.1
 
-Row {
+RowLayout {
     id: meter
 
     property alias label: label.text
@@ -30,21 +31,32 @@ Row {
 
     height: 112
     width: 304
+    spacing: 0
 
-    PlasmaCore.FrameSvgItem {
+    BorderImage {
         id: analogPart
-        width: height
-        height: parent.height
-        imagePath: findImage("meterbox.svgz")
-        prefix: "analog"
+        Layout.preferredWidth: height
+        Layout.fillHeight: true
+        border {
+            left: 6
+            top: 6
+            right:6
+            bottom: 6
+        }
+        source: utils.findImage("meterbox-left.png")
     }
 
-    PlasmaCore.FrameSvgItem {
+    BorderImage {
         id: digitalPart
-        width: parent.width - analogPart.width
-        height: parent.height
-        imagePath: findImage("meterbox.svgz")
-        prefix: "digital"
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        border {
+            left: 6
+            top: 6
+            right:6
+            bottom: 6
+        }
+        source: utils.findImage("meterbox-right.png")
 
         Column {
             anchors {
@@ -55,7 +67,7 @@ Row {
                 rightMargin: 12
             }
 
-            spacing: 8
+            spacing: 0
 
             Row {
                 width: parent.width
@@ -69,19 +81,15 @@ Row {
                     elide: Text.ElideRight
                 }
 
-                PlasmaCore.SvgItem {
+                Rectangle {
                     id: statusLed
-                    anchors.verticalCenter: parent.verticalCenter
-                    height: naturalSize.height
-                    width: naturalSize.width
+                    height: 15
+                    width: 15
+                    radius: height / 2
                     visible: valueStatus !== "none"
-                    elementId: valueStatus === "good"? "led-good": "led-bad"
-                    svg: PlasmaCore.Svg {
-                        imagePath: findImage("statusled.svgz")
-                    }
-                    smooth: true
+                    color: valueStatus === "good"? "#88ff00": "#424b35"
 
-                    onElementIdChanged: statusLedAnimaton.restart()
+                    onColorChanged: statusLedAnimaton.restart()
 
                     SequentialAnimation {
                         id: statusLedAnimaton

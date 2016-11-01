@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>344</width>
-    <height>267</height>
+    <width>374</width>
+    <height>299</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -79,14 +79,14 @@
      <item row="4" column="1">
       <widget class="QRadioButton" name="kcfg_NextLineWithReturn">
        <property name="text">
-        <string>Return</string>
+        <string>Ret&amp;urn</string>
        </property>
       </widget>
      </item>
      <item row="5" column="1">
       <widget class="QRadioButton" name="kcfg_NextLineWithSpace">
        <property name="text">
-        <string>Space</string>
+        <string>Spa&amp;ce</string>
        </property>
       </widget>
      </item>
@@ -120,13 +120,10 @@
       <string>Lesson unlocking limits</string>
      </property>
      <layout class="QFormLayout" name="formLayout">
-      <property name="fieldGrowthPolicy">
-       <enum>QFormLayout::ExpandingFieldsGrow</enum>
-      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="requiredStrokesPerMinuteLabel">
         <property name="text">
-         <string>Minimum strokes per minute:</string>
+         <string>Minimum strokes &amp;per minute:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -137,24 +134,12 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KIntNumInput" name="kcfg_RequiredStrokesPerMinute">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimum">
-         <number>0</number>
-        </property>
+       <widget class="QSpinBox" name="kcfg_RequiredStrokesPerMinute">
         <property name="maximum">
          <number>360</number>
         </property>
         <property name="singleStep">
          <number>10</number>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -172,30 +157,18 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_RequiredAccuracy">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimum">
-         <double>90.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>100.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>0.100000000000000</double>
-        </property>
+       <widget class="QDoubleSpinBox" name="kcfg_RequiredAccuracy">
         <property name="suffix">
-         <string>%</string>
+         <string> %</string>
         </property>
         <property name="decimals">
          <number>1</number>
         </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
+        <property name="minimum">
+         <double>90.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
         </property>
        </widget>
       </item>
@@ -217,18 +190,15 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KDoubleNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KIntNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-  </customwidget>
- </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_EnforceTypingErrorCorrection</tabstop>
+  <tabstop>kcfg_ShowKeyboard</tabstop>
+  <tabstop>kcfg_ShowStatistics</tabstop>
+  <tabstop>kcfg_NextLineWithReturn</tabstop>
+  <tabstop>kcfg_NextLineWithSpace</tabstop>
+  <tabstop>kcfg_RequiredStrokesPerMinute</tabstop>
+  <tabstop>kcfg_RequiredAccuracy</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

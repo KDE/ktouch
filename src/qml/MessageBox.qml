@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,9 +16,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.plasma.components 0.1 as PlasmaComponents
+import QtQuick 2.4
+import QtQuick.Controls 1.3
+import org.kde.kquickcontrolsaddons 2.0
 
 Rectangle {
     id: item
@@ -31,7 +32,7 @@ Rectangle {
     function showMessage(msg, iconSource) {
         item.state = "hidden";
         label.text = msg
-        icon.source = iconSource || ""
+        icon.icon = iconSource || ""
         item.state = "normal"
     }
 
@@ -62,16 +63,14 @@ Rectangle {
         width: icon.width + spacing + label.width
         spacing: icon.valid? 3: 0
 
-        PlasmaCore.IconItem {
+        QIconItem {
             id: icon
             width: height
-            height: valid? label.height: 0
+            height: icon? label.height: 0
         }
 
-        PlasmaComponents.Label {
+        Label {
             id: label
-            height: paintedHeight
-            smooth: true
             color: "#000000"
         }
     }

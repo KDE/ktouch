@@ -19,23 +19,23 @@
 #ifndef GRIDITEM_H
 #define GRIDITEM_H
 
-#include <QDeclarativeItem>
+#include <QQuickPaintedItem>
 
-class GridItem : public QDeclarativeItem
+class GridItem : public QQuickPaintedItem
 {
     Q_OBJECT
     Q_PROPERTY(qreal lineDistance READ lineDistance WRITE setLineDistance NOTIFY lineDistanceChanged)
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 public:
-    explicit GridItem(QDeclarativeItem* parent = 0);
+    explicit GridItem(QQuickItem* parent = 0);
     qreal lineDistance() const;
     void setLineDistance(qreal distance);
     QColor color() const;
     void setColor(const QColor& color);
     QColor backgroundColor() const;
     void setBackgroundColor(const QColor& backgroundColor);
-    virtual void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget* = 0);
+    virtual void paint(QPainter* painter);
 signals:
     void lineDistanceChanged();
     void colorChanged();

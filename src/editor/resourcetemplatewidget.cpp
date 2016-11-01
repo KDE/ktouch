@@ -18,6 +18,8 @@
 
 #include "resourcetemplatewidget.h"
 
+#include <KLocalizedString>
+
 #include "core/resource.h"
 #include "models/categorizedresourcesortfilterproxymodel.h"
 

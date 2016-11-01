@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import Effects 1.0
+import QtQuick 2.4
+import QtGraphicalEffects 1.0
 import ktouch 1.0
 
 Item {
@@ -46,7 +47,7 @@ Item {
         switch (key.keyType()) {
         case "key":
             for (var i = 0; i < key.keyCharCount; i++) {
-                if (key.keyChar(i).value == eventText.charCodeAt(0)) {
+                if (key.keyChar(i).value == eventText) {
                     return true;
                 }
             }
@@ -73,8 +74,7 @@ Item {
     }
 
     function getTint(color) {
-        // stupid hack to set alpha because in Qt Quick 1.1 it's impossible to access color components
-        color = "#20" + ("" + color).substr(1)
+        color.a = 0.125
         return color
     }
 
@@ -105,21 +105,6 @@ Item {
         height: item.height + marginSize
         smooth: true
         radius: body.radius
-        effect: DropShadow {
-            color: shadow.color
-            blurRadius: 5
-            xOffset: 0
-            yOffset: 0
-
-            Behavior on blurRadius {
-                enabled: animateHighlight
-                NumberAnimation {
-                    duration: 150
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-
         state: "normal"
 
         states: [
@@ -131,8 +116,8 @@ Item {
                     marginSize: 0
                 }
                 PropertyChanges {
-                    target: shadow.effect
-                    blurRadius: 10
+                    target: shadowEffect
+                    glowRadius: 10
                 }
             },
             State {
@@ -143,8 +128,8 @@ Item {
                     marginSize: 4
                 }
                 PropertyChanges {
-                    target: shadow.effect
-                    blurRadius: 15
+                    target: shadowEffect
+                    glowRadius: 15
                 }
             },
             State {
@@ -155,8 +140,8 @@ Item {
                     marginSize: 0
                 }
                 PropertyChanges {
-                    target: shadow.effect
-                    blurRadius: 15
+                    target: shadowEffect
+                    glowRadius: 15
                 }
             }
         ]
@@ -193,7 +178,21 @@ Item {
             }
             PauseAnimation { duration: 150 }
         }
+    }
 
+    RectangularGlow {
+        id: shadowEffect
+        anchors.fill: shadow
+        color: shadow.color
+        glowRadius: 5
+
+        Behavior on glowRadius {
+            enabled: animateHighlight
+            NumberAnimation {
+                duration: 150
+                easing.type: Easing.InOutQuad
+            }
+        }
     }
 
     Rectangle {

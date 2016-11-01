@@ -15,10 +15,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 1.1
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.4
 import ktouch 1.0
-import Effects 1.0
 
 Item {
     id: root
@@ -48,10 +46,10 @@ Item {
             xLocked = true
             var effX = Math.round(x / scaleFactor)
             if (horizontalPosition == "left") {
-                setKeyGeometry(targetItem.keyIndex, effX, target.top, target.width + target.left - effX, target.height)
+                keyboardLayoutEditor.setKeyGeometry(targetItem.keyIndex, effX, target.top, target.width + target.left - effX, target.height)
             }
             else {
-                setKeyGeometry(targetItem.keyIndex, target.left, target.top, effX - target.left, target.height)
+                keyboardLayoutEditor.setKeyGeometry(targetItem.keyIndex, target.left, target.top, effX - target.left, target.height)
             }
             xLocked = false
         }
@@ -62,10 +60,10 @@ Item {
             yLocked = true
             var effY = Math.round(y / scaleFactor)
             if (verticalPosition == "top") {
-                setKeyGeometry(targetItem.keyIndex, target.left, effY, target.width, target.height + target.top - effY)
+                keyboardLayoutEditor.setKeyGeometry(targetItem.keyIndex, target.left, effY, target.width, target.height + target.top - effY)
             }
             else {
-                setKeyGeometry(targetItem.keyIndex, target.left, target.top, target.width, effY - target.top)
+                keyboardLayoutEditor.setKeyGeometry(targetItem.keyIndex, target.left, target.top, target.width, effY - target.top)
             }
             yLocked = false
         }
@@ -74,7 +72,12 @@ Item {
     width: 1
     height: 1
 
-    PlasmaCore.SvgItem {
+    SystemPalette {
+        id: palette
+        colorGroup: SystemPalette.Active
+    }
+
+    Rectangle {
         anchors {
             centerIn: parent
             verticalCenterOffset: verticalPosition == "top"? -10: 10
@@ -82,16 +85,14 @@ Item {
         }
         width: 15
         height: 15
-        svg: PlasmaCore.Svg {
-            imagePath: findImage("resizegrip.svgz")
-            usingRenderingCache: false
-        }
-        elementId: "grip"
+        color: palette.highlight
         visible: interactive
+
 
         MouseArea {
             id: mouseArea
             anchors.fill: parent
+            cursorShape: ((horizontalPosition == "left") != (verticalPosition == "top"))? Qt.SizeBDiagCursor: Qt.SizeFDiagCursor
             onClicked: {
                 mouse.accepted = true
             }
@@ -109,14 +110,10 @@ Item {
                         var top = 10 * Math.round(target.top / 10)
                         var width = 10 * Math.round(target.width / 10)
                         var height = 10 * Math.round(target.height / 10)
-                        setKeyGeometry(targetItem.keyIndex, left, top, width, height)
+                        keyboardLayoutEditor.setKeyGeometry(targetItem.keyIndex, left, top, width, height)
                     }
                 }
             }
-        }
-        CursorShapeArea {
-            anchors.fill: parent
-            cursorShape: ((horizontalPosition == "left") != (verticalPosition == "top"))? Qt.SizeBDiagCursor: Qt.SizeFDiagCursor
         }
     }
 }

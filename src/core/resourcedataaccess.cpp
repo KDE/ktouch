@@ -17,17 +17,17 @@
 
 #include "resourcedataaccess.h"
 
-#include <QFile>
+#include <QDebug>
 #include <QDir>
+#include <QFile>
 #include <QDomDocument>
 #include <QDomElement>
 #include <QDomNodeList>
+#include <QUrl>
+#include <QStandardPaths>
 #include <QXmlSchema>
 #include <QXmlSchemaValidator>
 
-#include <KUrl>
-#include <KStandardDirs>
-#include <KDebug>
 
 #include "dataindex.h"
 #include "keyboardlayout.h"
@@ -48,20 +48,20 @@ bool ResourceDataAccess::fillDataIndex(DataIndex* target)
     if (!schema.isValid())
         return false;
 
-    foreach (const QString& path, KGlobal::dirs()->findAllResources("appdata", "data.xml"))
+    foreach (const QString& path, QStandardPaths::locateAll(QStandardPaths::DataLocation, "data.xml"))
     {
         QDir dir = QFileInfo(path).dir();
         QFile dataIndexFile;
         dataIndexFile.setFileName(path);
         if (!dataIndexFile.open(QIODevice::ReadOnly))
         {
-            kWarning() << "can't open:" << path;
+            qWarning() << "can't open:" << path;
             return false;
         }
         QDomDocument doc = getDomDocument(dataIndexFile, schema);
         if (doc.isNull())
         {
-            kWarning() << "invalid doc:" << path;
+            qWarning() << "invalid doc:" << path;
             return false;
         }
         QDomElement root(doc.documentElement());
@@ -106,7 +106,7 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
     keyboardLayoutFile.setFileName(path);
     if (!keyboardLayoutFile.open(QIODevice::ReadOnly))
     {
-        kWarning() << "can't open:" << path;
+        qWarning() << "can't open:" << path;
         return false;
     }
     QXmlSchema schema = loadXmlSchema("keyboardlayout");
@@ -115,7 +115,7 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
     QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
     if (doc.isNull())
     {
-        kWarning() << "invalid doc:" << path;
+        qWarning() << "invalid doc:" << path;
         return false;
     }
     QDomElement root(doc.documentElement());
@@ -272,7 +272,7 @@ bool ResourceDataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout
 
     if (!file.open(QIODevice::WriteOnly))
     {
-        kWarning() << "can't open:" << file.fileName();
+        qWarning() << "can't open:" << file.fileName();
         return false;
     }
 
@@ -288,7 +288,7 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
     courseFile.setFileName(path);
     if (!courseFile.open(QIODevice::ReadOnly))
     {
-        kWarning() << "can't open:" << path;
+        qWarning() << "can't open:" << path;
         return false;
     }
     QXmlSchema schema = loadXmlSchema("course");
@@ -297,7 +297,7 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
     QDomDocument doc = getDomDocument(courseFile, schema);
     if (doc.isNull())
     {
-        kWarning() << "invalid doc:" << path;
+        qWarning() << "invalid doc:" << path;
         return false;
     }
     QDomElement root(doc.documentElement());
@@ -382,7 +382,7 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
 
     if (!file.open(QIODevice::WriteOnly))
     {
-        kWarning() << "can't open:" << file.fileName();
+        qWarning() << "can't open:" << file.fileName();
         return false;
     }
 
@@ -399,10 +399,10 @@ QXmlSchema ResourceDataAccess::loadXmlSchema(const QString &name)
     {
         return schema;
     }
-    schema.load(&schemaFile, KUrl::fromLocalFile(schemaFile.fileName()));
+    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
     if (!schema.isValid())
     {
-        kWarning() << schemaFile.fileName() << "is invalid";
+        qWarning() << schemaFile.fileName() << "is invalid";
     }
     return schema;
 }
@@ -419,23 +419,23 @@ QDomDocument ResourceDataAccess::getDomDocument(QFile &file, QXmlSchema &schema)
     QString errorMsg;
     if (!doc.setContent(&file, &errorMsg))
     {
-        kWarning() << errorMsg;
+        qWarning() << errorMsg;
     }
     return doc;
 }
 
 bool ResourceDataAccess::openResourceFile(const QString &relPath, QFile& file)
 {
-    QString path = KGlobal::dirs()->findResource("appdata", relPath);
+    QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
     if (path.isNull())
     {
-        kWarning() << "can't find resource:" << relPath;
+        qWarning() << "can't find resource:" << relPath;
         return false;
     }
     file.setFileName(path);
     if (!file.open(QIODevice::ReadOnly))
     {
-        kWarning() << "can't open" << path;
+        qWarning() << "can't open" << path;
         return false;
     }
     return true;

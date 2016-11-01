@@ -19,10 +19,6 @@
 
 #include <QSignalMapper>
 
-#include <kstandarddirs.h>
-#include <klocale.h>
-#include <kdebug.h>
-
 #include "lesson.h"
 #include "dataindex.h"
 
