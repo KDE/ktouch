@@ -85,7 +85,7 @@ set(ktouch_SRCS
 )
 
 # compile UI files
-qt5_wrap_ui(ktouch_SRCS
+ki18n_wrap_ui(ktouch_SRCS
     ui/colorsconfigwidget.ui
     ui/trainingconfigwidget.ui
     ui/resourceeditorwidget.ui
