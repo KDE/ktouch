@@ -9,25 +9,40 @@ Building
 ========
 
 KTouch has the following build dependencies:
- * KDElibs >= 4.10.0
- * Qt >= 4.8 (but not Qt 5.x)
- * CMake >= 2.8.9
+ * CMake >= 2.8.12
+ * CMake Extra Modules >= 1.0.0
+ * Qt >= 5.5
+ * KDE Frameworks:
+   *  Config
+   *  ConfigWidgets
+   *  CoreAddons
+   *  Declarative
+   *  DocTools
+   *  I18n
+   *  ItemViews
+   *  KCMUtils
+   *  KIO
+   *  NewStuff
+   *  TextEditor
+   *  WidgetsAddons
+   *  WindowSystem
+   *  XmlGui
  * libxkbfile (optional, for keyboard layout auto-detection)
+ * libxcb (optional, for keyboard layout auto-detection)
 
 If the build requirements are met, KTouch can be built and installed with:
 
-$ mkdir build
-$ cd build/
-$ cmake ..
-$ make
-# make install
+    mkdir build
+    cd build/
+    cmake ..
+    make
+    sudo make install
 
 Runtime dependencies
 ====================
 
-To run KTouch, additional libraries have to installed.
- * KDE-runtime >= 4.10.0
- * kqtquickcharts >= 4.12.0 (git://anongit.kde.org/kqtquickcharts)
- * kde-workspace >= 4.10.0 (optional, for keyboard layout configuration
+At runtime KTouch needs the following software packages to be present:
+ * kqtquickcharts >= 16.12 (git://anongit.kde.org/kqtquickcharts)
+ * plasma-desktop (optional, for keyboard layout configuration
    from within the application)
 
