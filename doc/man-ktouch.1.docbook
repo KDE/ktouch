@@ -9,8 +9,8 @@
 <author><firstname>Ben</firstname><surname>Burton</surname>
 <contrib>KTouch man page.</contrib>
 <email>bab@debian.org</email></author>
-<date>2015-09-27</date>
-<releaseinfo>&ktouch; 2.3.0 (Applications 15.12)</releaseinfo>
+<date>2016-11-02</date>
+<releaseinfo>&ktouch; 2.3.0 (Applications 16.12)</releaseinfo>
 <productname>KDE Applications</productname>
 </refentryinfo>
 
@@ -27,8 +27,8 @@
 <refsynopsisdiv>
 <cmdsynopsis>
 <command>ktouch</command>
-<group choice="opt"><option>URL</option></group>
-<arg choice="opt">options</arg>
+<group choice="opt"><option>--resource-editor</option></group>
+<group choice="opt"><option>-I --import-path</option> <replaceable>path</replaceable></group>
 </cmdsynopsis>
 </refsynopsisdiv>
 
@@ -40,7 +40,7 @@ the keyboard with associated keys to press.</para>
 <para>&ktouch; helps you learn to touch type by providing you with text to
 train on, and adjusts to different levels depending on how good you are.  It
 can display which key to press next, and correct finger to use.</para>
-<para>This application is part of the official &kde; edutainment
+<para>This application is part of the official &kde; education
 module.</para>
 </refsect1>
 
@@ -48,12 +48,12 @@ module.</para>
 <title>KTouch Options</title>
 <variablelist>
 <varlistentry>
-<term><option>--opengl</option></term>
-<listitem><para>Use a QGLWidget for the viewport.</para></listitem>
-</varlistentry>
-<varlistentry>
 <term><option>--resource-editor</option></term>
 <listitem><para>Launch the course and keyboard layout editor.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>-I --import-path</option> <replaceable>path</replaceable></term>
+<listitem><para>Prepend the path to the list of QML import paths.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -61,14 +61,18 @@ module.</para>
 
 <refsect1>
 <title>See Also</title>
-<para>More detailed user documentation is available from <ulink
+<simplelist>
+<member>More detailed user documentation is available from <ulink
 url="help:/ktouch">help:/ktouch</ulink>
 (either enter this <acronym>URL</acronym> into &konqueror;, or run
 <userinput><command>khelpcenter</command>
-<parameter>help:/ktouch</parameter></userinput>).</para>
+<parameter>help:/ktouch</parameter></userinput>).</member>
+<member>kf5options(7)</member> <!-- only for application with a GUI-->
+<member>qt5options(7)</member> <!-- only for application with a GUI-->
+<member>There is also further information available at the <ulink
+url="http://edu.kde.org/ktouch/">&kde; education website</ulink>.</member>
+</simplelist>
 
-<para>There is also further information available at the <ulink
-url="http://edu.kde.org/ktouch/">&kde; edutainment website</ulink>.</para>
 </refsect1>
 
 <refsect1>

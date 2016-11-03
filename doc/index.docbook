@@ -51,8 +51,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2015-09-27</date>
-<releaseinfo>&ktouch; 2.3.0 (Applications 15.12)</releaseinfo>
+<date>2016-11-02</date>
+<releaseinfo>Applications 16.12</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -110,7 +110,7 @@ at the keyboard all the time to find the right keys which slows you down a lot.
 <sect2>
 <title>Features</title>
 
-<para>In its current version, &i18n-ktouch; 2.2 has quite a number of
+<para>In its current version, &i18n-ktouch; has quite a number of
 features, such as:</para>
 <itemizedlist>
 <listitem><simpara>Ships with dozens different courses in many
@@ -228,7 +228,7 @@ On some platforms, especially on &Microsoft; &Windows;, automatic keyboard layou
 detection is not available. In that case you have to click on the <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-configure.png" format="PNG"/>
 </imageobject> </inlinemediaobject> button in the toolbar, select <guisubmenu>
-Choose Keyboard Layout...</guisubmenu> submenu and choose the name of keyboard
+Configure Keyboard...</guisubmenu> submenu and choose the name of keyboard
 layout or some keyboard layout which is similar to yours. If your keyboard is
 not included, you can define your own keyboard layout yourself, see <xref
 linkend="create_layouts"/>.
@@ -468,7 +468,7 @@ with some actions
 </varlistentry>
 
 <varlistentry>
-<term><guimenuitem>Configure keyboard layout...</guimenuitem></term>
+<term><guimenuitem>Configure Keyboard...</guimenuitem></term>
 <listitem><para>A shortcut to the &systemsettings;
 module to configure the keyboard settings. Useful to prepare for training on
 a different keyboard layout.
@@ -485,7 +485,10 @@ with a submenu to select &i18n-ktouch;'s keyboard layout manually.
 
 </variablelist>
 
-&help.menu.documentation;
+<para>
+&i18n-ktouch; has the common &kde; <guimenu>Help</guimenu> menu item, for more information read the section
+about the <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
+</para>
 </sect3>
 
 <sect3 id="configuration_dialog">
