@@ -89,8 +89,9 @@ FocusScope {
             Rectangle {
                 id: sheet
                 color: "#fff"
-                anchors.centerIn: parent
-                width: parent.width - 60
+                x: 30
+                y: 30
+                width: trainingWidget.width - 60
                 height: lessonPainter.height
 
                 border {
