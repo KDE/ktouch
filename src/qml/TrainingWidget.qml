@@ -53,6 +53,11 @@ FocusScope {
         }
     }
 
+    MouseArea {
+        anchors.fill: parent
+        onClicked: trainingLine.forceActiveFocus()
+    }
+
     ScrollView {
         anchors.fill: parent
         Flickable
@@ -183,11 +188,6 @@ FocusScope {
                 }
             }
         }
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: trainingLine.forceActiveFocus()
     }
 
     KeyItem {
