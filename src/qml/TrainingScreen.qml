@@ -126,11 +126,11 @@ FocusScope {
         sequence: "Escape"
         enabled: screen.visible
         onActivated: {
-            if (menuOverlay.opacity === 0) {
-                menuOverlay.show()
+            if (menuOverlay.active) {
+                menuOverlay.hide()
             }
             else {
-                menuOverlay.hide()
+                menuOverlay.show()
             }
         }
 
