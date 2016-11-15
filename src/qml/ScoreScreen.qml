@@ -74,6 +74,15 @@ FocusScope {
         learningProgressModel.update()
     }
 
+    function forceActiveFocus() {
+        if (internal.nextLesson) {
+            nextLessonButton.forceActiveFocus()
+        }
+        else {
+            repeatLessonButton.forceActiveFocus()
+        }
+    }
+
     property Profile profile
     property Lesson lesson
     property Course course
@@ -266,7 +275,7 @@ FocusScope {
                     id: nextLessonButton
                     iconName: "go-next-view"
                     text: i18n("Next Lesson")
-                    enabled: !!internal.nextLesson
+                    enabled: internal.nextLesson
                     onClicked: screen.nextLessonRequested(internal.nextLesson)
                 }
             }
