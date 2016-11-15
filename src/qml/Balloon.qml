@@ -46,7 +46,6 @@ Loader {
             layer.enabled: true
             layer.effect: DropShadow {
                 anchors.fill: parent
-                source: internalWrapper
                 radius: 5
                 samples: 11
             }
