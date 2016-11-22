@@ -431,9 +431,24 @@ FocusScope {
                     Item {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
-
                     }
 
+                    Charts.LegendItem {
+                        id: accuracyLegend
+                        anchors.verticalCenter: parent.verticalCenter
+                        opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
+                        Behavior on opacity {
+                            NumberAnimation {duration: 150}
+                        }
+                    }
+                    Charts.LegendItem {
+                        id: charactersPerMinuteLegend
+                        anchors.verticalCenter: parent.verticalCenter
+                        opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
+                        Behavior on opacity {
+                            NumberAnimation {duration: 150}
+                        }
+                    }
                 }
 
                 TabView {
@@ -463,6 +478,15 @@ FocusScope {
 
                             onElemExited: {
                                 learningProgressPointTooltip.close()
+                            }
+
+                            Component.onCompleted: {
+                                accuracyLegend.dimension = learningProgressChart.accuracy
+                                charactersPerMinuteLegend.dimension = learningProgressChart.charactersPerMinute
+                            }
+                            Component.onDestruction: {
+                                accuracyLegend.dimension = 0
+                                charactersPerMinuteLegend.dimension = 0
                             }
                         }
                     }
