@@ -57,7 +57,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
 
     connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
-    connect(m_lessonView->selectionModel(), SIGNAL(currentChanged(QModelIndex, QModelIndex)), SLOT(onLessonSelected()));
+    connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
 
     connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
     connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
@@ -205,29 +205,35 @@ void CourseEditor::moveLessonDown()
 
 void CourseEditor::setLessonTitle(const QString& newTitle)
 {
-    Q_ASSERT(m_currentLesson);
-    const QString oldTitle = m_currentLesson->title();
-    m_currentLesson->setTitle(newTitle);
-    QUndoCommand* command = new SetLessonTitleCommand(m_course, m_currentLessonIndex, oldTitle);
-    currentUndoStack()->push(command);
+    if (m_currentLesson)
+    {
+        const QString oldTitle = m_currentLesson->title();
+        m_currentLesson->setTitle(newTitle);
+        QUndoCommand* command = new SetLessonTitleCommand(m_course, m_currentLessonIndex, oldTitle);
+        currentUndoStack()->push(command);
+    }
 }
 
 void CourseEditor::setLessonNewCharacters(const QString& newCharacters)
 {
-    Q_ASSERT(m_currentLesson);
-    const QString oldNewCharacters = m_currentLesson->newCharacters();
-    m_currentLesson->setNewCharacters(newCharacters);
-    QUndoCommand* command = new SetLessonNewCharactersCommand(m_course, m_currentLessonIndex, oldNewCharacters);
-    currentUndoStack()->push(command);
+    if (m_currentLesson)
+    {
+        const QString oldNewCharacters = m_currentLesson->newCharacters();
+        m_currentLesson->setNewCharacters(newCharacters);
+        QUndoCommand* command = new SetLessonNewCharactersCommand(m_course, m_currentLessonIndex, oldNewCharacters);
+        currentUndoStack()->push(command);
+    }
 }
 
 void CourseEditor::setLessonText(const QString& newText)
 {
-    Q_ASSERT(m_currentLesson);
-    const QString oldText = m_currentLesson->text();
-    m_currentLesson->setText(newText);
-    QUndoCommand* command = new SetLessonTextCommand(m_course, m_currentLessonIndex, oldText);
-    currentUndoStack()->push(command);
+    if (m_currentLesson)
+    {
+        const QString oldText = m_currentLesson->text();
+        m_currentLesson->setText(newText);
+        QUndoCommand* command = new SetLessonTextCommand(m_course, m_currentLessonIndex, oldText);
+        currentUndoStack()->push(command);
+    }
 }
 
 void CourseEditor::updateTitle()
@@ -381,9 +387,9 @@ void CourseEditor::onLessonSelected()
         m_currentLesson = 0;
 
         m_lessonTitleLineEdit->setEnabled(false);
-        m_lessonTitleLineEdit->clear();
+        m_lessonTitleLineEdit->setText("");
         m_newCharactersLineEdit->setEnabled(false);
-        m_newCharactersLineEdit->clear();
+        m_newCharactersLineEdit->setText("");
         m_lessonTextEditor->setEnabled(false);
         m_lessonTextEditor->textEdit()->clear();
 
