@@ -21,8 +21,7 @@
 #include <KMainWindow>
 
 #include <QWeakPointer>
-
-class QQuickView;
+#include <QQuickView>
 
 class KTouchContext;
 
@@ -40,6 +39,7 @@ public:
     ~MainWindow();
 private:
     void init();
+    void onViewStatusChanged(QQuickView::Status status);
     QQuickView* m_view;
     KTouchContext* m_context;
 };
