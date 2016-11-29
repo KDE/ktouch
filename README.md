@@ -1,3 +1,8 @@
+KTouch
+======
+
+[![Build Status](https://build.kde.org/buildStatus/icon?job=ktouch master kf5-qt5)](https://build.kde.org/job/ktouch%20master%20kf5-qt5/)
+
 KTouch is a program to learn and practice touch typing. Every finger
 has its place on the keyboard with associated keys to press. Starting
 with only a few keys to remember you will advance through different
