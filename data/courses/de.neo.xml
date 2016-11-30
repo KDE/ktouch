@@ -3,7 +3,7 @@
  <id>{f19ee751-3545-4b52-83ab-8c5b80d42045}</id>
  <title>Deutsches Neo 2</title>
  <description>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com> inspiriert durch die Vorlage von Hanno Behrens.
-Fehlerkorrektur von Hans Meine in 2012.
+Fehlerkorrektur von Hans Meine in 2012. Kleine Fehler entfernt in 2015.
 Homepage: http://neo-layout.org</description>
  <keyboardLayout>de(neo)</keyboardLayout>
  <lessons>
@@ -127,8 +127,7 @@ rar nen ene ara iti udu nen rar tit dud udu iti ara ene ene
 ene nen nen ara ara rar rar iti iti tit tit udu udu dud dud
 ene ene nen nen ara ara rar rar iti iti tit tit udu udu dud
 dud dud tit rar nen ene ara iti udu nen rar tit dud udu iti
-ara ene dud tit rar nen ene ara iti udu nen rar tit dud udu
-</text>
+ara ene dud tit rar nen ene ara iti udu nen rar tit dud udu</text>
   </lesson>
   <lesson>
    <id>{50a1a955-e543-4de5-9d2d-fafde8ee7c62}</id>
@@ -435,8 +434,7 @@ hose hose hose dose dose hose hose dose hose ostern ostern
 ostern ostsee ostsee ostsee ostern ostern ostsee ostsee
 sonst sonst sonst solange solange solange sonst sonst
 solange solange sonne sonne sonne soldat soldat soldat sonne
-sonne soldat soldat storch storch storch stroh stroh stroh
-</text>
+sonne soldat soldat storch storch storch stroh stroh stroh</text>
   </lesson>
   <lesson>
    <id>{045112c4-5a5d-4cb3-825c-dce5cb13db11}</id>
@@ -484,7 +482,7 @@ wie was nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn
 nkn nhn nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd
 nkt nkr knd knt knr kne kna kni knu knd knt knr kne kna kni
 knu knd ack ack ack kat kat kat ack kat ack kat ack kat ack
-kat ack </text>
+kat ack</text>
   </lesson>
   <lesson>
    <id>{4ff2f2cc-f227-4b9d-ac09-9fe56d602b72}</id>
@@ -638,8 +636,7 @@ wohlklang karawane wirklich kauderwelsch wecker
 krankenschwester wickeln wunderkind parlament parteimitglied
 partikel passwort pauke pelikan perlmutt personalcomputer
 pessimismus petrochemie phantom moskwa mundharmonika
-musikgruppe muskatnuss muskel muttersprachler protokoll
-</text>
+musikgruppe muskatnuss muskel muttersprachler protokoll</text>
   </lesson>
   <lesson>
    <id>{1e3ca905-f338-4730-8fa9-572743e509e7}</id>
@@ -932,20 +929,30 @@ bitte gib mir das buch. du sollst schweigen.</text>
    <id>{34468230-ce9c-4bba-a445-96b23a38150e}</id>
    <title>Wir üben den Punkt</title>
    <newCharacters></newCharacters>
-   <text>nmn r,r t.t t.t t.t t.t t.t t.t t.u t.i t.a t.e t.d t.t t.n
-t.r t.u t.i t.a t.e t.d t.t t.r t.n mnm ,r, .t. nmn r,r t.t
-t.e t.a t.i t.u t.n t.r t.t t.d t.e t.a t.i t.u t.n t.r t.t
-t.d t.t t.t es. es. es. es. er. er. er. er. es. er. es. er.
-an. an. an. an. es. es. er. er. an. an. eine. eine. eine.
-eine. eines. eines. eines. bald. bald. bald. sitzt. sitzt.
-sitzt. aber. aber. aber. aber. holt. holt. holt. holt. dar.
-dar. dar. dar. her. her. her. her. hin. hin. hin. hin. ihn.
-ihn. ihn. ihm. ihm. ihm. ihm. hirn. hirn. hirn. hirn. mir.
-mir. mir. mir. dir. dir. dir. dir. melde. melde. melde.
-melde. ihr. ihr. ihr. ihr. der schlusspunkt steht am ende
-eines aussagesatzes. gestern hat es geregnet. westwinde
-bringen meist regen. morgen wird wieder die sonne scheinen.
-bitte gib mir das buch. du sollst schweigen.</text>
+   <text>klage. klage. klage. klage. neues. neues. neues. neues.
+altes. altes. altes. altes. meine. meine. meine. meine.
+deine. deine. deine. deine. bauen. bauen. bauen. bauen.
+nenne. nenne. nenne. nenne. ihren. ihren. ihren. ihren.
+gerne. gerne. gerne. gerne. seine. seine. seine. seine.
+leine. leine. leine. leine. keine. keine. keine. keine.
+klage. klage, klage. klage, neues. neues, neues. neues,
+altes. altes, altes. altes, meine. meine, meine. meine,
+deine. deine, deine. deine, bauen. bauen, bauen. bauen,
+nenne. nenne, nenne. nenne, ihren. ihren, ihren. ihren,
+gerne. gerne, gerne. gerne, seine. seine, seine. seine,
+leine. leine, leine. leine, keine. keine, keine. keine,
+zaubern. zaubern. zebra. zebra. zauberstab. zauberstab.
+zeilenumbruch. zeilenumbruch. badezimmer. badezimmer.
+beelzebub. beelzebub. benzinpumpe. benzinpumpe. besitzen.
+besitzen. zeitbombe. zeitbombe. zeitungsschreiber.
+zeitungsschreiber. zerbrechlich. zerbrechlich. bestellzettel.
+bestellzettel. bezahlen. bezahlen. bulldozer. bulldozer.
+bezirk. bezirk. zierband. zierband. zimtbaum. zimtbaum.
+zwiebel. zwiebel. zollbeamter. zollbeamter. bezeugen.
+bezeugen. brustwarze. brustwarze. bronzezeit. bronzezeit.
+beweinen. beweinen. zusammenbringen. zusammenbringen.
+zubinden. zubinden. zusammenprallen. zusammenprallen.
+zwieback. zwieback.</text>
   </lesson>
   <lesson>
    <id>{6b6e0e5e-e6dc-4c08-bb58-c1c1d5a481d2}</id>
