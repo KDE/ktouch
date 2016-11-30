@@ -66,7 +66,7 @@ void MainWindow::onViewStatusChanged(QQuickView::Status status)
             errorMessages.append(error.toString());
         }
         QMessageBox qmlErrorMsgBox;
-        qmlErrorMsgBox.setText(i18n("%1 has encounterd a runtime error and has to be closed.", KAboutData::applicationData().displayName()));
+        qmlErrorMsgBox.setText(i18n("%1 has encountered a runtime error and has to be closed.", KAboutData::applicationData().displayName()));
         qmlErrorMsgBox.setDetailedText(errorMessages.join("\n"));
         qmlErrorMsgBox.setStandardButtons(QMessageBox::Close);
         qmlErrorMsgBox.setIcon(QMessageBox::Critical);
