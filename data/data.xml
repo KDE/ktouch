@@ -211,6 +211,13 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <path>courses/it.xml</path>
   </course>
   <course>
+    <title>Latvie&#353;u (modern&#257;)</title>
+    <description>Latvie&#353;u modern&#257;s tastat&#363;ras izk&#257;rtojuma lekcijas</description>
+    <keyboardLayout>lv(modern)</keyboardLayout>
+    <id>{f40b79d7-12ee-490a-acb3-c461764a824d}</id>
+    <path>courses/lv.modern.xml</path>
+  </course>
+  <course>
     <title>Lietuvi&#x173; (standartinis)</title>
     <description>Tekstas i&#x161; programos &#x201E;Klaviat&#x16B;ros treniruokl&#x117; &#x201E;KP Typing Tutor&#x201C;&#x201C;.
 A&#x10D;i&#x16B; Sigitai Pedzevi&#x10D;ienei (sigitab@ktl.mii.lt)</description>
@@ -540,6 +547,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>latam</name>
     <id>{7c1842a3-3d8d-4cd9-ad75-2eee8bd7e231}</id>
     <path>keyboardlayouts/latam.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>Lietvie&#353;u (modern&#257;)</title>
+    <name>lv(modern)</name>
+    <id>{f40b79d7-12ee-490a-acb3-c461764a824d}</id>
+    <path>keyboardlayouts/lv.modern.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Lietuvi&#x173; (standartinis)</title>
