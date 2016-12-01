@@ -21,6 +21,7 @@
 
 #include "core/resource.h"
 #include "core/course.h"
+#include "core/lesson.h"
 #include "core/keyboardlayout.h"
 #include "core/dataindex.h"
 #include "core/dataaccess.h"
@@ -72,6 +73,10 @@ Resource* NewResourceAssistant::createResource()
             DataAccess dataAccess;
             dataAccess.loadCourse(templateDataIndexCourse, &templateCourse);
             course->copyFrom(&templateCourse);
+            for (int i = 0; i < course->lessonCount(); i++)
+            {
+                course->lesson(i)->setId(QUuid::createUuid().toString());
+            }
         }
 
         course->setId(QUuid::createUuid().toString());
