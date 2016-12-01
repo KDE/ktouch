@@ -24,7 +24,6 @@ set (coursefiles
     ir.xml
     it.xml
     lt.std.xml
-    lv.modern.xml
     nl1.xml
     nl2.xml
     no.xml
