@@ -62,7 +62,7 @@ Homepage: http://xapient.net</description>
   <course>
     <title>Deutsches Neo 2</title>
     <description>&#xDC;berarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com&gt; inspiriert durch die Vorlage von Hanno Behrens.
-Fehlerkorrektur von Hans Meine in 2012.
+Fehlerkorrektur von Hans Meine in 2012. Kleine Fehler entfernt in 2015.
 Homepage: http://neo-layout.org</description>
     <keyboardLayout>de(neo)</keyboardLayout>
     <id>{f19ee751-3545-4b52-83ab-8c5b80d42045}</id>
@@ -536,6 +536,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <path>keyboardlayouts/it.xml</path>
   </keyboardLayout>
   <keyboardLayout>
+    <title>Japanese OADG</title>
+    <name>jp</name>
+    <id>{076f7e63-1b7d-4f3e-8fdb-dcfc543b31b9}</id>
+    <path>keyboardlayouts/jp.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
     <title>Espa&#xF1;ol (Latinoamarican)</title>
     <name>latam</name>
     <id>{7c1842a3-3d8d-4cd9-ad75-2eee8bd7e231}</id>
@@ -546,6 +552,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>lt(std)</name>
     <id>{dc0469c9-1de6-4f60-a85c-cfe7182f17c3}</id>
     <path>keyboardlayouts/lt.std.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>&#x43C;&#x43E;&#x43D;&#x433;&#x43E;&#x43B; (&#x43A;&#x438;&#x440;&#x438;&#x43B;)</title>
+    <name>mn</name>
+    <id>{542d81b2-53b3-41a7-a296-bf5ec0030478}</id>
+    <path>keyboardlayouts/mn.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>Nederlands</title>
@@ -612,12 +624,6 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>tr</name>
     <id>{7aac4342-e36f-456d-9c30-45404d65ab80}</id>
     <path>keyboardlayouts/tr.xml</path>
-  </keyboardLayout>
-  <keyboardLayout>
-    <title>монгол (кирил)</title>
-    <name>mn</name>
-    <id>{542d81b2-53b3-41a7-a296-bf5ec0030478}</id>
-    <path>keyboardlayouts/mn.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</title>

@@ -26,6 +26,7 @@ set(keyboardfiles
     in.kan.xml
     in.tam_unicode.xml
     it.xml
+    jp.xml
     latam.xml
     lt.std.xml
     mn.xml
