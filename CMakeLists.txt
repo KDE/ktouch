@@ -25,32 +25,32 @@ include(ECMSetupVersion)
 include(FeatureSummary)
 
 find_package(Qt5 5.5 REQUIRED COMPONENTS
-    Widgets
-    Sql
-    Script
-    XmlPatterns
+    Gui
     Qml
     Quick
     QuickWidgets
+    Script
+    Sql
     Test
+    Widgets
     X11Extras
+    Xml
+    XmlPatterns
 )
 
 find_package(KF5 REQUIRED COMPONENTS
+    Completion
     Config
     ConfigWidgets
     CoreAddons
     Declarative
     DocTools
     I18n
-    KIO
-    NewStuff
-    WidgetsAddons
-    XmlGui
     ItemViews
     KCMUtils
-    TextEditor
-    WindowSystem
+    TextWidgets
+    WidgetsAddons
+    XmlGui
 )
 
 # subdirectories to build

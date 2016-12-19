@@ -131,16 +131,14 @@ target_link_libraries(ktouch
         Qt5::Sql
         Qt5::XmlPatterns
         Qt5::X11Extras
+        KF5::Completion
         KF5::ConfigWidgets
         KF5::Declarative
-        KF5::KIOWidgets
         KF5::ItemViews
-        KF5::NewStuff
         KF5::XmlGui
         KF5::I18n
         KF5::KCMUtils
-        KF5::TextEditor
-        KF5::WindowSystem
+        KF5::TextWidgets
         KF5::CoreAddons
         ${ktouch_X11_DEPS}
 )
