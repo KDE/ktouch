@@ -139,6 +139,7 @@ target_link_libraries(ktouch
         KF5::I18n
         KF5::KCMUtils
         KF5::TextWidgets
+        KF5::WindowSystem
         KF5::CoreAddons
         ${ktouch_X11_DEPS}
 )

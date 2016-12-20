@@ -50,6 +50,7 @@ find_package(KF5 REQUIRED COMPONENTS
     KCMUtils
     TextWidgets
     WidgetsAddons
+    WindowSystem
     XmlGui
 )
 
