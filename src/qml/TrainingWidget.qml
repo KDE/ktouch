@@ -151,6 +151,9 @@ FocusScope {
                                 trainingWidget.keyReleased(event)
                             }
                         }
+
+                        KeyNavigation.backtab: trainingLine
+                        KeyNavigation.tab: trainingLine
                     }
 
                     Rectangle {
