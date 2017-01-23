@@ -75,7 +75,7 @@ FocusScope {
     }
 
     function forceActiveFocus() {
-        if (internal.nextLesson) {
+        if (internal.lessonPassed && internal.nextLesson) {
             nextLessonButton.forceActiveFocus()
         }
         else {
