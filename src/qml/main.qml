@@ -216,18 +216,18 @@ Rectangle {
             property: "visible"
             value: true
         }
+        ScriptAction {
+            script: {
+                switchScreenAnimation.to.start()
+                switchScreenAnimation.to.forceActiveFocus()
+            }
+        }
         NumberAnimation {
             target: curtain
             property: "opacity"
             to: 0
             duration: switchScreenAnimation.to == homeScreen? 250: 750
             easing.type: Easing.InQuad
-        }
-        ScriptAction {
-            script: {
-                switchScreenAnimation.to.start()
-                switchScreenAnimation.to.forceActiveFocus()
-            }
         }
     }
 }
