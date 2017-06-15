@@ -83,6 +83,8 @@ set(ktouch_SRCS
     ktouchcontext.cpp
 )
 
+qt5_add_resources(ktouch_SRCS qml/qml.qrc)
+
 # compile UI files
 ki18n_wrap_ui(ktouch_SRCS
     ui/colorsconfigwidget.ui
@@ -149,4 +151,3 @@ target_link_libraries(ktouch
 install(TARGETS ktouch ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktouch.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 
-install(DIRECTORY qml/ DESTINATION ${DATA_INSTALL_DIR}/ktouch/qml FILES_MATCHING PATTERN "*.qml")

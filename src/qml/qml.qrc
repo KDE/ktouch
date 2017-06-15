@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>main.qml</file>
+        <file>meters/AccuracyMeter.qml</file>
+        <file>meters/CharactersPerMinuteMeter.qml</file>
+        <file>meters/ElapsedTimeMeter.qml</file>
+        <file>meters/Meter.qml</file>
+        <file>meters/StatBox.qml</file>
+        <file>common/DetailedRadioButton.qml</file>
+        <file>common/InfoItem.qml</file>
+        <file>common/InformationTable.qml</file>
+        <file>common/InlineToolbar.qml</file>
+        <file>common/LearningProgressChart.qml</file>
+        <file>common/ListItem.qml</file>
+        <file>common/MessageBox.qml</file>
+        <file>common/SelectionGrip.qml</file>
+        <file>common/SelectionRectangle.qml</file>
+        <file>common/SheetDialog.qml</file>
+        <file>common/Balloon.qml</file>
+        <file>scorescreen/ScoreScreen.qml</file>
+        <file>trainingscreen/KeyboardUnavailableNotice.qml</file>
+        <file>trainingscreen/TrainingScreenMenuOverlay.qml</file>
+        <file>trainingscreen/TrainingScreen.qml</file>
+        <file>trainingscreen/TrainingScreenToolbar.qml</file>
+        <file>trainingscreen/TrainingWidget.qml</file>
+        <file>homescreen/CourseDescriptionItem.qml</file>
+        <file>homescreen/CoursePage.qml</file>
+        <file>homescreen/CourseSelector.qml</file>
+        <file>homescreen/InitialProfileForm.qml</file>
+        <file>homescreen/LessonLockedNotice.qml</file>
+        <file>homescreen/LessonPreview.qml</file>
+        <file>homescreen/LessonSelectorBase.qml</file>
+        <file>homescreen/HomeScreen.qml</file>
+        <file>homescreen/CustomLessonSelector.qml</file>
+        <file>homescreen/ProfileForm.qml</file>
+        <file>homescreen/LessonSelector.qml</file>
+        <file>homescreen/ProfileSelector.qml</file>
+        <file>homescreen/ProfileDetailsItem.qml</file>
+        <file>keyboard/Keyboard.qml</file>
+        <file>keyboard/KeyItem.qml</file>
+        <file>keyboard/KeyLabel.qml</file>
+        <file>keyboard/KeyboardLayoutEditor.qml</file>
+    </qresource>
+</RCC>
