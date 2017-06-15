@@ -23,6 +23,9 @@ import ktouch 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.charts 0.1 as Charts
 
+import "../common"
+import "../meters"
+
 FocusScope {
     id: screen
 

@@ -52,7 +52,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     Application::setupDeclarativeBindings(m_view->engine());
 
     m_view->rootContext()->setContextProperty("keyboardLayoutEditor", this);
-    m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/KeyboardLayoutEditor.qml")));
+    m_view->setSource(QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::DataLocation, "qml/keyboard/KeyboardLayoutEditor.qml")));
 
     connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
     connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));

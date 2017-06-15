@@ -23,6 +23,8 @@ import org.kde.kcoreaddons 1.0
 import org.kde.charts 0.1 as Charts
 import ktouch 1.0
 
+import "../common"
+
 Item {
     id: root
 

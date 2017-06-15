@@ -10,7 +10,6 @@ add_feature_info("X11-Xkbfile" X11_Xkbfile_FOUND "required for automatic keyboar
 find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "required for automatic keyboard layout detection")
 
-ecm_optional_add_subdirectory(qml)
 ecm_optional_add_subdirectory(schemata)
 
 # set include directories
@@ -149,3 +148,5 @@ target_link_libraries(ktouch
 
 install(TARGETS ktouch ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktouch.kcfg DESTINATION ${KCFG_INSTALL_DIR})
+
+install(DIRECTORY qml/ DESTINATION ${DATA_INSTALL_DIR}/ktouch/qml FILES_MATCHING PATTERN "*.qml")

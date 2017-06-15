@@ -19,6 +19,12 @@
 import QtQuick 2.4
 import ktouch 1.0
 
+import "./common"
+import "./meters"
+import "./homescreen"
+import "./trainingscreen"
+import "./scorescreen"
+
 Rectangle {
     SystemPalette {
         id: activePallete
