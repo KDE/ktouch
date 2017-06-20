@@ -31,6 +31,7 @@ set(ktouch_SRCS
     bindings/utils.cpp
     bindings/stringformatter.cpp
     declarativeitems/griditem.cpp
+    declarativeitems/kcolorschemeproxy.cpp
     declarativeitems/lessonpainter.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp

@@ -30,6 +30,7 @@
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
 #include "declarativeitems/griditem.h"
+#include "declarativeitems/kcolorschemeproxy.h"
 #include "declarativeitems/lessonpainter.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
@@ -128,6 +129,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
+    qmlRegisterType<KColorSchemeProxy>("ktouch", 1, 0, "KColorScheme");
 }
 
 void Application::migrateKde4Files()
