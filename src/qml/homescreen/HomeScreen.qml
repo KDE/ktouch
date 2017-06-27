@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import ktouch 1.0
 
@@ -76,21 +76,34 @@ FocusScope {
         spacing: 0
 
         ToolBar {
+            KColorScheme {
+                id: toolbarColorScheme
+                colorGroup: KColorScheme.Active
+                colorSet: KColorScheme.Complementary
+                property color toolbarBackground: toolbarColorScheme.shade(toolbarColorScheme.focusDecoration, KColorScheme.MidShade)
+            }
             visible: courseSelector.opacity > 0
             id: header
             Layout.fillWidth: true
+            height: 60
+
+            background: Rectangle {
+                color: toolbarColorScheme.toolbarBackground
+            }
+
 
             RowLayout {
                 anchors.fill: parent
-                anchors.leftMargin: 3
-                anchors.rightMargin: 3
                 spacing: 5
 
-                Button {
-                    // TODO: Find a better control here which supports both an icon and a label
+                IconToolButton {
                     id: profileButton
-                    iconName: "user-identity"
+                    icon: "user-identity"
                     text: d.profile !== null? d.profile.name: ""
+                    color: toolbarColorScheme.normalText
+                    backgroundColor: toolbarColorScheme.normalBackground
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 300
                     onClicked: {
                         if (checked) {
                             profileSelectorSheet.open()
@@ -106,9 +119,13 @@ FocusScope {
                     Layout.fillWidth: true
                 }
 
-                ToolButton {
+                IconToolButton {
                     id: configureButton
-                    iconName: "configure"
+                    icon: "application-menu"
+                    color: toolbarColorScheme.normalText
+                    backgroundColor: toolbarColorScheme.normalBackground
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: header.height
                     onClicked: {
                         var position = mapToItem(null, 0, height)
                         ktouch.showMenu(position.x, position.y)
