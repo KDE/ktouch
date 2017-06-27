@@ -80,7 +80,7 @@ FocusScope {
                 id: toolbarColorScheme
                 colorGroup: KColorScheme.Active
                 colorSet: KColorScheme.Complementary
-                property color toolbarBackground: toolbarColorScheme.shade(toolbarColorScheme.focusDecoration, KColorScheme.MidShade)
+                property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.3)
             }
             visible: courseSelector.opacity > 0
             id: header
