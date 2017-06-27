@@ -40,5 +40,6 @@
         <file>keyboard/KeyItem.qml</file>
         <file>keyboard/KeyLabel.qml</file>
         <file>keyboard/KeyboardLayoutEditor.qml</file>
+        <file>common/IconToolButton.qml</file>
     </qresource>
 </RCC>
