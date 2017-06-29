@@ -89,6 +89,26 @@ Version: 0.1 beta</description>
     <path>courses/de2.xml</path>
   </course>
   <course>
+    <title>Deutsch (CH)</title>
+    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt; (Modified for Swiss keyboard layout)</description>
+    <keyboardLayout>ch</keyboardLayout>
+    <id>{7361fd17-5457-48e1-b118-a59a429c734b}</id>
+    <path>courses/ch1.xml</path>
+  </course>
+  <course>
+    <title>Deutsch (CH - aus Tipptrainer)</title>
+    <description>German training file
+adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
+for ktouch from a training file distributed by
+Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
+for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
+distributed under the GPL2
+Version: 0.1 beta (Modified for Swiss keyboard layout)</description>
+    <keyboardLayout>ch</keyboardLayout>
+    <id>{90a0ad22-18e7-484f-b1cd-6babdd0f7037}</id>
+    <path>courses/ch2.xml</path>
+  </course>
+  <course>
     <title>Dansk</title>
     <description>Tr&#xE6;ningsfil udviklet af
 Gunther Strube,  gstrube@tiscali.dk og
