@@ -17,19 +17,23 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import ktouch 1.0
 
-Item {
+import "../common"
+
+FocusScope {
     id: root
 
     property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
     property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
+    property DataIndexCourse selectedCourse
 
     signal lessonSelected(variant course, variant lesson)
+    signal courseSelectec(Course course)
 
     function selectLastUsedCourse() {
         if (!profile) {
@@ -89,130 +93,86 @@ Item {
         target: courseModel
         onRowsRemoved: {
             nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
-            priv.currentIndex = -1
             selectLastUsedCourse()
 
         }
         onRowsInserted: {
             nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
-            priv.currentIndex = -1
             selectLastUsedCourse()
         }
     }
 
-    QtObject {
-        id: priv
-        property int currentIndex: -1
+    ResourceModel {
+        id: resourceModel
+        dataIndex: ktouch.globalDataIndex
     }
 
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
+    CategorizedResourceSortFilterProxyModel {
+        id: allKeyboardLayoutsModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.KeyboardLayoutItem
     }
 
-    ColumnLayout {
+    KColorScheme {
+        id: courseSelectorColorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
+    Rectangle {
+        id: bg
         anchors.fill: parent
-        spacing: 0
-
-        Rectangle {
-            id: head
-            Layout.fillWidth: true
-            height: Math.ceil(Math.max(courseTitleLabel.height, courseDescriptionButton.height) + 6)
-            color: palette.base
-
-            RowLayout {
-                anchors {
-                    fill: parent
-                    leftMargin: 5
-                    rightMargin: 5
-                    topMargin: 3
-                    bottomMargin: 3
-                }
-
-                Label {
-                    anchors.verticalCenter: parent.verticalCenter
-                    id: courseTitleLabel
-                    font.pointSize: 1.5 * Qt.font({'family': 'sansserif'}).pointSize
-                    text: coursePageContainer.activePage.course.title
-                }
-
-                Item {
-                    id: smallSpacer
-                    height: parent.height
-                    width: 3
-                }
-
-                ToolButton {
-                    id: courseDescriptionButton
-                    anchors.verticalCenter: parent.verticalCenter
-                    iconName: "dialog-information"
-                    checkable: true
-                }
-
-                Item {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-
-                ToolButton {
-                    id: previousButton
-                    anchors.verticalCenter: parent.verticalCenter
-                    iconName: "arrow-left"
-                    enabled: priv.currentIndex > 0
-                    onClicked: {
-                        var newIndex = priv.currentIndex - 1
-                        root.selectCourse(newIndex, false)
-                    }
-                }
-
-                ToolButton {
-                    id: nextButton
-                    iconName: "arrow-right"
-                    enabled: priv.currentIndex < courseModel.rowCount()
-                    onClicked: {
-                        var newIndex = (priv.currentIndex + 1) % (courseModel.rowCount() + 1)
-                        root.selectCourse(newIndex, false)
-                    }
-                }
-            }
-        }
-
-        Item {
-            Layout.fillWidth: true
-            Layout.minimumHeight: courseDescriptionItem.height
-            Layout.maximumHeight: courseDescriptionItem.height
-            CourseDescriptionItem {
-                id: courseDescriptionItem
-                active: courseDescriptionButton.checked
-                description: coursePageContainer.activePage.course.description
-                width: parent.width
-            }
-        }
-
-        Item {
-            id: coursePageContainer
-            property CoursePage activePage: page0
-            property CoursePage inactivePage: page1
-
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            CoursePage {
-                id: page0
-                profile: root.profile
-                keyboardLayout: root.keyboardLayout
-                keyboardLayoutName: root.keyboardLayoutName
-                onLessonSelected: root.lessonSelected(course, lesson)
-                Component.onCompleted: page0.showImmediately()
-            }
-
-            CoursePage {
-                id: page1
-                profile: root.profile
-                keyboardLayout: root.keyboardLayout
-                keyboardLayoutName: root.keyboardLayoutName
-                onLessonSelected: root.lessonSelected(course, lesson)
-            }
-        }
+        color: courseSelectorColorScheme.normalBackground
     }
+
+    Flickable {
+        clip: true
+        anchors.fill: parent
+        contentWidth: width
+        contentHeight: content.height
+        Column {
+            id: content
+            width: parent.width
+
+            ListItem {
+                width: parent.width
+                text: i18n('Courses For Your Keyboard Layout')
+                font.bold: true
+                bg.color: courseSelectorColorScheme.alternateBackground
+                bg.opacity: 1
+                label.opacity: 0.7
+            }
+
+            ListItem {
+                width: parent.width
+                text: i18n('Other Courses')
+                font.bold: true
+                bg.color: courseSelectorColorScheme.alternateBackground
+                bg.opacity: 1
+                label.opacity: 0.7
+            }
+
+            Repeater {
+                model: allKeyboardLayoutsModel
+                CourseSelectorKeyboardLayoutItem {
+                    width: parent.width
+                    name: keyboardLayoutName
+                    title: display
+                    resourceModel: allKeyboardLayoutsModel.resourceModel
+                    selectedCourse: root.selectedCourse
+                    onCourseSelected: {
+                        root.selectedCourse = course
+                    }
+                }
+            }
+
+        }
+        ScrollBar.vertical: ScrollBar { }
+    }
+
+
+
+
+
+
 }

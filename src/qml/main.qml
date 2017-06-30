@@ -32,7 +32,7 @@ Rectangle {
     }
 
     id: main
-    color: activePallete.window
+    color: Qt.darker(activePallete.window, 1.6)
 
     function switchScreen(from, to) {
         switchScreenAnimation.from = from

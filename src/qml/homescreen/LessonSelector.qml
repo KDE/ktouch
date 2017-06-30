@@ -109,8 +109,7 @@ Item {
                         }
                     }
                     iconSource: locked? "object-locked": ""
-                    label.opacity: locked? 0.5: 1.0
-                    title: lesson? lesson.title: ""
+                    text: lesson? lesson.title: ""
 
                 }
                 onModelChanged: update()

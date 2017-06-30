@@ -58,18 +58,17 @@ FocusScope {
                     ListView {
                         id: list
                         anchors.fill: parent
-                        anchors.margins: 3
-                        spacing: 3
                         model: profileDataAccess.profileCount + 1
                         clip: true
                         delegate: ListItem {
                             property bool isNewButton: index >= profileDataAccess.profileCount
                             width: list.width
-                            title: isNewButton?
+                            text: isNewButton?
                                     i18n("Create New Profile"):
                                     index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
                             label.font.italic: isNewButton
-                            iconSource: isNewButton? "list-add": "user-identity"
+                            icon: isNewButton? "list-add": "user-identity"
+                            highlighted: ListView.isCurrentItem
                             onClicked: {
                                 list.currentIndex = index
                                 if (isNewButton) {

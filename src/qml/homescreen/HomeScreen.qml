@@ -139,16 +139,28 @@ FocusScope {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            CourseSelector {
-                id: courseSelector
-                opacity: 1 - initialProfileForm.opacity
-                courseModel: screen.courseModel
-                profile: d.profile
-                keyboardLayout: screen.keyboardLayout
-                keyboardLayoutName: screen.keyboardLayoutName
+            RowLayout {
                 anchors.fill: parent
-                onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
+
+                CourseSelector {
+                    id: courseSelector
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 300
+                    opacity: 1 - initialProfileForm.opacity
+                    courseModel: screen.courseModel
+                    profile: d.profile
+                    keyboardLayout: screen.keyboardLayout
+                    keyboardLayoutName: screen.keyboardLayoutName
+                    onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
+                }
+
+                Item {
+                    id: filler
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                }
             }
+
 
             InitialProfileForm {
                 id: initialProfileForm
