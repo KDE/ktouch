@@ -16,30 +16,17 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtGraphicalEffects 1.0
+import org.kde.kquickcontrolsaddons 2.0
 
-ToolButton {
-    id: button
-
-    property alias color: content.color
-    property alias icon: content.icon
-    property color backgroundColor: "#ffffff"
-    padding: 0
-
-    hoverEnabled: true
-
-    contentItem: IconLabel {
-        id: content
-        text: button.text
-    }
-
-    background: Rectangle {
-        opacity: (checked? 0.6: 0) + (hovered? 0.3: 0)
-        color: button.backgroundColor
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
-            }
-        }
+QIconItem {
+    property color color: "#000000"
+    id: icon
+    width: 24
+    height: 24
+    ColorOverlay {
+        anchors.fill: parent
+        source: icon
+        color: parent.color
     }
 }

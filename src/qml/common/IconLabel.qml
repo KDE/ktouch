@@ -18,28 +18,27 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.0
 
-ToolButton {
-    id: button
+Label {
+    property string icon: ""
+    property bool reserveSpaceForIcon: false
+    id: label
+    elide: Text.ElideRight
 
-    property alias color: content.color
-    property alias icon: content.icon
-    property color backgroundColor: "#ffffff"
-    padding: 0
+    padding: Math.ceil(0.7 * font.pixelSize)
+    leftPadding: iconItem.visible || reserveSpaceForIcon? 2 * padding + iconItem.width: padding
+    verticalAlignment: Text.AlignVCenter
 
-    hoverEnabled: true
-
-    contentItem: IconLabel {
-        id: content
-        text: button.text
-    }
-
-    background: Rectangle {
-        opacity: (checked? 0.6: 0) + (hovered? 0.3: 0)
-        color: button.backgroundColor
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
-            }
+    MonochromeIcon {
+        id: iconItem
+        visible: label.icon != ""
+        color: label.color
+        anchors {
+            left: parent.left
+            leftMargin: label.padding
+            verticalCenter: parent.verticalCenter
         }
+        icon: label.icon
+        width: 22
+        height: 22
     }
 }
