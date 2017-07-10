@@ -26,6 +26,7 @@ Column {
     property string name
     property alias title: keyboardLayoutItem.text
     property ResourceModel resourceModel
+    property string selectedKeyboardLayoutName
     property DataIndexCourse selectedCourse
 
     signal courseSelected(DataIndexCourse course)
@@ -33,12 +34,30 @@ Column {
     height: keyboardLayoutItem.height + (loader.active? loader.height: 0)
     clip: true
 
+    onSelectedKeyboardLayoutNameChanged: {
+        if (selectedKeyboardLayoutName == root.name) {
+            loader.active = true
+        }
+    }
+
+    CategorizedResourceSortFilterProxyModel {
+        id: courseModel
+        resourceModel: root.resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
+        keyboardLayoutNameFilter: loader.keyboardLayoutNameFilter
+    }
+
     ListItem {
         id: keyboardLayoutItem
         icon: "input-keyboard"
         width: parent.width
         onClicked: {
             loader.active = !loader.active
+            if (loader.active) {
+                if (courseModel.rowCount()) {
+                    courseSelected(courseModel.data(courseModel.index(0, 0), ResourceModel.DataRole))
+                }
+            }
         }
     }
 
@@ -51,12 +70,6 @@ Column {
             id: courseSelectionComponent
 
             Column {
-                CategorizedResourceSortFilterProxyModel {
-                    id: courseModel
-                    resourceModel: root.resourceModel
-                    resourceTypeFilter: ResourceModel.CourseItem
-                    keyboardLayoutNameFilter: loader.keyboardLayoutNameFilter
-                }
                 Repeater {
                     id: courseRepeater
                     model: courseModel
@@ -75,11 +88,6 @@ Column {
                     id: ownLessonsItem
                     reserveSpaceForIcon: true
                     width: parent.width
-                }
-                Component.onCompleted: {
-                    if (courseModel.rowCount()) {
-                        courseSelected(courseModel.data(courseModel.index(0, 0), ResourceModel.DataRole))
-                    }
                 }
             }
         }

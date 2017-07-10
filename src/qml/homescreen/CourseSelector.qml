@@ -26,10 +26,10 @@ import "../common"
 FocusScope {
     id: root
 
-    property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
     property KeyboardLayout keyboardLayout
-    property string keyboardLayoutName
+    property string currentKeyboardLayoutName
+    property string selectedKeyboardLayoutName
     property DataIndexCourse selectedCourse
 
     signal lessonSelected(variant course, variant lesson)
@@ -43,74 +43,59 @@ FocusScope {
         var courseId = profile.lastUsedCourseId;
 
         if (courseId === "custom_lessons") {
-            selectCourse(courseRepeater.count, true)
+            // selectCourse(courseRepeater.count, true)
             return
         }
 
         for (var i = 0; i < courseModel.rowCount(); i++) {
             var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {
-                selectCourse(i, true)
+                root.selectedCourse = dataIndexCourse
                 return
             }
         }
 
-        selectCourse(0, true)
-    }
-
-    function selectCourse(index, automaticSelection) {
-        if (index === priv.currentIndex) {
-            return
-        }
-
-        var direction = index > priv.currentIndex? Item.Left: Item.Right
-        var dataIndexCourse = index < courseModel.rowCount()?
-                courseModel.data(courseModel.index(index, 0), ResourceModel.DataRole):
-                null;
-        var targetPage = automaticSelection? coursePageContainer.activePage: coursePageContainer.inactivePage
-
-        priv.currentIndex = index;
-        targetPage.dataIndexCourse = dataIndexCourse
-
-        if (!automaticSelection) {
-            coursePageContainer.inactivePage = coursePageContainer.activePage
-            coursePageContainer.activePage = targetPage
-            coursePageContainer.inactivePage.hide(direction)
-            coursePageContainer.activePage.show(direction)
-
-            saveLastUsedCourse(dataIndexCourse? dataIndexCourse.id: "custom_lessons")
+        if (coursdeModel.rowCount() > 0) {
+            var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
+            root.selectedCourse = dataIndexCourse
         }
     }
 
-    function saveLastUsedCourse(courseId) {
-        profile.lastUsedCourseId = courseId;
-        profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
+    onSelectedCourseChanged: {
+        root.selectedKeyboardLayoutName = root.selectedCourse.keyboardLayoutName;
+        if (profile.lastUsedCourseId != root.selectedCourse.id) {
+            profile.lastUsedCourseId = root.selectedCourse.id;
+            profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
+        }
     }
 
     onProfileChanged: selectLastUsedCourse()
 
-    Connections {
-        target: courseModel
+    ResourceModel {
+        id: resourceModel
+        dataIndex: ktouch.globalDataIndex
         onRowsRemoved: {
-            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
             selectLastUsedCourse()
 
         }
         onRowsInserted: {
-            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
             selectLastUsedCourse()
         }
     }
 
-    ResourceModel {
-        id: resourceModel
-        dataIndex: ktouch.globalDataIndex
+    CategorizedResourceSortFilterProxyModel {
+        id: currentKeyboardLayoutsModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.KeyboardLayoutItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
     }
 
     CategorizedResourceSortFilterProxyModel {
-        id: allKeyboardLayoutsModel
+        id: otherKeyboardLayoutsModel
         resourceModel: resourceModel
         resourceTypeFilter: ResourceModel.KeyboardLayoutItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
+        invertedKeyboardLayoutNameFilter: true
     }
 
     KColorScheme {
@@ -134,39 +119,33 @@ FocusScope {
             id: content
             width: parent.width
 
-            ListItem {
+            CourseSelectorKeyboardLayoutList {
                 width: parent.width
-                text: i18n('Courses For Your Keyboard Layout')
-                font.bold: true
-                bg.color: courseSelectorColorScheme.alternateBackground
-                bg.opacity: 1
-                label.opacity: 0.7
-            }
-
-            ListItem {
-                width: parent.width
-                text: i18n('Other Courses')
-                font.bold: true
-                bg.color: courseSelectorColorScheme.alternateBackground
-                bg.opacity: 1
-                label.opacity: 0.7
-            }
-
-            Repeater {
-                model: allKeyboardLayoutsModel
-                CourseSelectorKeyboardLayoutItem {
-                    width: parent.width
-                    name: keyboardLayoutName
-                    title: display
-                    resourceModel: allKeyboardLayoutsModel.resourceModel
-                    selectedCourse: root.selectedCourse
-                    onCourseSelected: {
-                        root.selectedCourse = course
-                    }
+                title: i18n('Courses For Your Keyboard Layout')
+                model: currentKeyboardLayoutsModel
+                resourceModel: resourceModel
+                colorScheme: courseSelectorColorScheme
+                selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
+                selectedCourse: root.selectedCourse
+                onCourseSelected: {
+                    root.selectedCourse = course
                 }
             }
 
+            CourseSelectorKeyboardLayoutList {
+                width: parent.width
+                title: i18n('Other courses')
+                model: otherKeyboardLayoutsModel
+                resourceModel: resourceModel
+                colorScheme: courseSelectorColorScheme
+                selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
+                selectedCourse: root.selectedCourse
+                onCourseSelected: {
+                    root.selectedCourse = course
+                }
+            }
         }
+
         ScrollBar.vertical: ScrollBar { }
     }
 

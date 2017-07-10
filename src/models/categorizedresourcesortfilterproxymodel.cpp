@@ -23,6 +23,7 @@
 CategorizedResourceSortFilterProxyModel::CategorizedResourceSortFilterProxyModel(QObject *parent) :
     KCategorizedSortFilterProxyModel(parent),
     m_resourceTypeFilter(ResourceModel::CourseItem | ResourceModel::KeyboardLayoutItem),
+    m_invertedKeyboardLayoutNameFilter(false),
     m_resourceModel(0)
 {
     setDynamicSortFilter(true);
@@ -62,10 +63,29 @@ void CategorizedResourceSortFilterProxyModel::setKeyboardLayoutNameFilter(const 
     }
 }
 
+bool CategorizedResourceSortFilterProxyModel::invertedKeyboardLayoutNameFilter() const
+{
+    return m_invertedKeyboardLayoutNameFilter;
+}
+
+void CategorizedResourceSortFilterProxyModel::setInvertedKeyboardLayoutNameFilter(bool inverted)
+{
+    if (inverted != m_invertedKeyboardLayoutNameFilter)
+    {
+        m_invertedKeyboardLayoutNameFilter = inverted;
+        invalidateFilter();
+        invalidate();
+        sort(0);
+        emit invertedKeyboardLayoutNameFilterChanged();
+    }
+}
+
+
 ResourceModel* CategorizedResourceSortFilterProxyModel::resourceModel() const
 {
     return m_resourceModel;
 }
+
 void CategorizedResourceSortFilterProxyModel::setResourceModel(ResourceModel* resourceModel)
 {
     if (resourceModel != m_resourceModel)
@@ -107,5 +127,5 @@ bool CategorizedResourceSortFilterProxyModel::filterAcceptsRow(int source_row, c
 
     const QString name = sourceModel()->data(index, ResourceModel::KeyboardLayoutNameRole).toString();
 
-    return name == m_keyboardLayoutNameFilter;
+    return m_invertedKeyboardLayoutNameFilter ^ (name == m_keyboardLayoutNameFilter);
 }

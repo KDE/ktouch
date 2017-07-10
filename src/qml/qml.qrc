@@ -44,5 +44,6 @@
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>
         <file>common/IconLabel.qml</file>
         <file>common/MonochromeIcon.qml</file>
+        <file>homescreen/CourseSelectorKeyboardLayoutList.qml</file>
     </qresource>
 </RCC>
