@@ -34,7 +34,7 @@ Label {
         color: label.color
         anchors {
             left: parent.left
-            leftMargin: label.padding
+            leftMargin: label.text == ""? (label.width - width) / 2: label.padding
             verticalCenter: parent.verticalCenter
         }
         icon: label.icon
