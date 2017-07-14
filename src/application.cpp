@@ -125,7 +125,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
-    qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
+    qmlRegisterType<GridItem>("ktouch", 1, 0 , "LineGrid");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");

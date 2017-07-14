@@ -32,9 +32,10 @@ Item {
 
     property alias blurSource: effectSource.sourceItem
 
-    SystemPalette {
+    KColorScheme {
         id: palette
-        colorGroup: SystemPalette.Active
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     ShaderEffectSource {
@@ -53,8 +54,8 @@ Item {
     Rectangle {
         id: background
         anchors.fill: parent
-        color: palette.base
-        opacity: 0.3
+        color: palette.neutralBackground
+        opacity: 0.7
         radius: 15
     }
 

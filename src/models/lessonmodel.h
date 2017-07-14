@@ -28,13 +28,18 @@ class LessonModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(Course* course READ course WRITE setCourse NOTIFY courseChanged)
+    Q_ENUMS(AdditionalRoles)
 public:
+    enum AdditionalRoles {
+        DataRole = Qt::UserRole + 1
+    };
     explicit LessonModel(QObject* parent = 0);
     Course* course() const;
     void setCourse(Course* course);
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
     int rowCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+    QHash<int, QByteArray> roleNames() const;
 
 signals:
     void courseChanged();

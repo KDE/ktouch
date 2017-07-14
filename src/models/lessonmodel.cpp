@@ -82,6 +82,8 @@ QVariant LessonModel::data(const QModelIndex& index, int role) const
                 QVariant(lesson->title()): QVariant(i18n("<No title>"));
         case Qt::ToolTipRole:
             return QVariant(i18n("<p>New characters: %1</p><p>%2</p>", lesson->newCharacters(), lesson->text()));
+        case LessonModel::DataRole:
+            return QVariant::fromValue<QObject*>(lesson);
         default:
             return QVariant();
     }
@@ -136,6 +138,13 @@ QVariant LessonModel::headerData(int section, Qt::Orientation orientation, int r
     if (orientation == Qt::Vertical)
         return QVariant(section + 1);
     return QVariant(i18n("Title"));
+}
+
+QHash<int, QByteArray> LessonModel::roleNames() const
+{
+    QHash<int, QByteArray> names = QAbstractItemModel::roleNames();
+    names.insert(LessonModel::DataRole, "dataRole");
+    return names;
 }
 
 void LessonModel::updateMappings()

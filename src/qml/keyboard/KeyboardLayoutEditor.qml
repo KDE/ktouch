@@ -46,7 +46,7 @@ Item {
         }
     }
 
-    Grid {
+    LineGrid {
         id: keyContainer
 
         anchors.centerIn: parent

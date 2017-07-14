@@ -17,59 +17,63 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.1
 import ktouch 1.0
+import QtGraphicalEffects 1.0
 
 import "../common"
 
-Item {
-    id: item
+ColumnLayout {
+    id: root
     property Profile profile
     property DataIndexCourse dataIndexCourse
     property alias course: courseItem
-    signal lessonSelected(variant course, variant lesson)
+    property Lesson selectedLesson: null
+    signal lessonSelected(Course course, Lesson lesson)
 
     function update() {
         if (!course.isValid) return;
         if (!profile) return;
         selectLastLesson()
-        enableUnlockedLessons()
     }
+
+    spacing: 0
 
     function selectLastLesson() {
         var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastSelectedLesson);
         if (lessonId !== "") {
             for (var index = 0; index < course.lessonCount; index++) {
                 if (course.lesson(index).id === lessonId) {
-                    lessonList.currentIndex = index;
-                    break;
+                    root.selectedLesson = course.lesson(index)
                 }
             }
         }
     }
 
-    function enableUnlockedLessons() {
+    function isLessonLocked(lesson) {
         if (profile.skillLevel === Profile.Advanced) {
-            lessonList.lastUnlockedIndex = course.lessonCount - 1;
-            return;
+            return false
         }
-
-        lessonList.lastUnlockedIndex = 0;
-        var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
-        if (lessonId !== "") {
+        var lastUnlockedLessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
+        if (lastUnlockedLessonId !== "") {
             for (var index = 0; index < course.lessonCount; index++) {
-                if (course.lesson(index).id === lessonId) {
-                    lessonList.lastUnlockedIndex = index;
-                    break;
+                if (course.lesson(index).id === lesson.id) {
+                    return false
+                }
+                if (course.lesson(index).id === lastUnlockedLessonId) {
+                    return true
                 }
             }
+            return false
         }
+        return course.lessonCount && course.lesson(0) !== lesson
     }
 
     onProfileChanged: update()
 
     onDataIndexCourseChanged: {
+        root.selectedLesson = null;
         course.update()
         update()
     }
@@ -77,7 +81,7 @@ Item {
     Course {
         id: courseItem
         function update() {
-            if (item.dataIndexCourse === null)
+            if (root.dataIndexCourse === null)
                 return
             if (isValid && courseItem.id === dataIndexCourse.id)
                 return
@@ -86,38 +90,202 @@ Item {
         Component.onCompleted: update()
     }
 
-    LessonSelectorBase {
-        anchors.fill: parent
+    Item {
+        Layout.fillWidth: true
+        height: toolbar.height
+        z: 2
 
-        list:ScrollView {
-            anchors.fill: parent
-            ListView {
+        ToolBar {
+            id: toolbar
+            width: parent.width
+
+            background: Rectangle {
+                color: toolbarColorScheme.toolbarBackground
+            }
+
+            KColorScheme {
+                id: toolbarColorScheme
+                colorGroup: KColorScheme.Active
+                colorSet: KColorScheme.Complementary
+                property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.5)
+            }
+
+            RowLayout {
                 anchors.fill: parent
-                id: lessonList
-                property int lastUnlockedIndex: 0
-                model: course.isValid? course.lessonCount: 0
-                spacing: 3
-                clip: true
-                delegate: ListItem {
-                    property Lesson lesson: index < course.lessonCount? course.lesson(index): null
-                    property bool locked: index > lessonList.lastUnlockedIndex
-                    width: lessonList.width
-                    onClicked: lessonList.currentIndex = index
-                    onDoubleClicked: {
-                        if (!locked) {
-                            lessonSelected(course, lesson)
-                        }
-                    }
-                    iconSource: locked? "object-locked": ""
-                    text: lesson? lesson.title: ""
+                anchors.leftMargin: 20
+                spacing: 5
 
+                Label {
+                    text: root.course? root.course.title: ""
+                    font.bold: true
+                    color: toolbarColorScheme.normalText
                 }
-                onModelChanged: update()
+
+                IconToolButton {
+                    icon: "help-about"
+                    color: toolbarColorScheme.normalText
+                    backgroundColor: toolbarColorScheme.normalBackground
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: toolbar.height
+               }
+
+                Item {
+                    Layout.fillWidth: true
+                }
+
+                IconToolButton {
+                    id: configureButton
+                    icon: "application-menu"
+                    color: toolbarColorScheme.normalText
+                    backgroundColor: toolbarColorScheme.normalBackground
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: toolbar.height
+                    onClicked: {
+                        var position = mapToItem(null, 0, height)
+                        ktouch.showMenu(position.x, position.y)
+                    }
+                }
             }
         }
-
-        selectedLesson: lessonList.currentItem != null? lessonList.currentItem.lesson: null
-        selectedLessonLocked: lessonList.currentItem !== null && lessonList.currentItem.locked
-        onStartButtonClicked: lessonSelected(course, lessonList.currentItem.lesson)
+        DropShadow {
+            anchors.fill: toolbar
+            source: toolbar
+            samples: 16
+            horizontalOffset: 0
+            verticalOffset: 0
+        }
     }
+
+
+    Item {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        z: 1
+
+        KColorScheme {
+            id: gridColorScheme
+            colorGroup: KColorScheme.Active
+            colorSet: KColorScheme.View
+        }
+        KColorScheme {
+            id: gridSelectionColorScheme
+            colorGroup: KColorScheme.Active
+            colorSet: KColorScheme.Selection
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            color: gridColorScheme.shade(gridColorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
+        }
+
+        Flickable {
+            id: flickable
+            anchors.fill: parent
+            contentWidth: width
+            contentHeight: content.height + 20
+            clip: true
+
+            Grid {
+                id: content
+                width: parent.width - 20
+                anchors.horizontalCenter: parent.horizontalCenter
+                y: 10
+                columns: Math.floor(width / (300 + 20))
+
+                Repeater {
+                    model: LessonModel {
+                        course: courseItem
+                    }
+
+                    delegate: Item {
+                        width: sheet.width + 20
+                        height: sheet.height + 20
+                        Rectangle {
+                            anchors.fill: parent
+                            color: gridSelectionColorScheme.normalBackground
+                            opacity: selectedLesson == dataRole? 1: 0
+                        }
+
+                        Rectangle {
+                            id: sheet
+                            anchors.centerIn: parent
+                            width: painter.width
+                            height: painter.height
+                            color: "white"
+                            LessonPainter {
+                                id: painter
+                                lesson: dataRole
+                                maximumWidth: 300
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: selectedLesson = dataRole
+                                onDoubleClicked: lessonSelected(course, dataRole)
+                            }
+                        }
+                        LessonLockedNotice  {
+                            anchors.centerIn: parent
+                            blurSource: sheet
+                            visible: root.isLessonLocked(dataRole)
+                        }
+                    }
+
+                }
+            }
+
+            ScrollBar.vertical: ScrollBar { }
+        }
+    }
+
+
+    Item {
+        Layout.fillWidth: true
+        height: footer.height
+        z: 2
+
+        ToolBar {
+            id: footer
+            width: parent.width
+
+            KColorScheme {
+                id: footerColorScheme
+                colorGroup: KColorScheme.Active
+                colorSet: KColorScheme.Window
+            }
+
+            background: Rectangle {
+                color: footerColorScheme.normalBackground
+            }
+
+            RowLayout {
+                anchors.fill: parent
+                spacing: 0
+
+                Item {
+                    Layout.fillWidth: true
+                    height: startButton.implicitHeight
+
+                    IconButton {
+                        id: startButton
+                        icon: "go-next-view"
+                        bgColor: colorScheme.positiveBackground
+                        anchors.centerIn: parent
+                        text: i18n("Start Training")
+                        enabled: root.selectedLesson && !isLessonLocked(root.selectedLesson)
+                        onClicked: lessonSelected(course, root.selectedLesson)
+                    }
+                }
+            }
+
+        }
+
+        DropShadow {
+            anchors.fill: footer
+            source: footer
+            samples: 16
+            horizontalOffset: 0
+            verticalOffset: 0
+        }
+    }
+
 }

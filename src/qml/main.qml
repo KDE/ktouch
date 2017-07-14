@@ -26,13 +26,14 @@ import "./trainingscreen"
 import "./scorescreen"
 
 Rectangle {
-    SystemPalette {
+    KColorScheme {
         id: activePallete
-        colorGroup: SystemPalette.Active
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     id: main
-    color: Qt.darker(activePallete.window, 1.6)
+    color: activePallete.normalBackground
 
     function switchScreen(from, to) {
         switchScreenAnimation.from = from

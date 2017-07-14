@@ -55,7 +55,7 @@ FocusScope {
             }
         }
 
-        if (coursdeModel.rowCount() > 0) {
+        if (courseModel.rowCount() > 0) {
             var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
             root.selectedCourse = dataIndexCourse
         }

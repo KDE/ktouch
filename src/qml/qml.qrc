@@ -7,6 +7,7 @@
         <file>meters/Meter.qml</file>
         <file>meters/StatBox.qml</file>
         <file>common/DetailedRadioButton.qml</file>
+        <file>common/IconButton.qml</file>
         <file>common/InfoItem.qml</file>
         <file>common/InformationTable.qml</file>
         <file>common/InlineToolbar.qml</file>
