@@ -178,61 +178,49 @@ ColumnLayout {
             color: gridColorScheme.shade(gridColorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
         }
 
-        Flickable {
-            id: flickable
+
+        GridView {
+            id: content
             anchors.fill: parent
-            contentWidth: width
-            contentHeight: content.height + 20
             clip: true
+            property int columns: Math.floor(width / (300 + 40))
+            cellWidth: Math.floor(content.width / content.columns)
+            cellHeight: Math.round(cellWidth * 2 / 3)
 
-            Grid {
-                id: content
-                width: parent.width - 20
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: 10
-                columns: Math.floor(width / (300 + 20))
-
-                Repeater {
-                    model: LessonModel {
-                        course: courseItem
-                    }
-
-                    delegate: Item {
-                        width: sheet.width + 20
-                        height: sheet.height + 20
-                        Rectangle {
-                            anchors.fill: parent
-                            color: gridSelectionColorScheme.normalBackground
-                            opacity: selectedLesson == dataRole? 1: 0
-                        }
-
-                        Rectangle {
-                            id: sheet
-                            anchors.centerIn: parent
-                            width: painter.width
-                            height: painter.height
-                            color: "white"
-                            LessonPainter {
-                                id: painter
-                                lesson: dataRole
-                                maximumWidth: 300
-                            }
-                            MouseArea {
-                                anchors.fill: parent
-                                onClicked: selectedLesson = dataRole
-                                onDoubleClicked: lessonSelected(course, dataRole)
-                            }
-                        }
-                        LessonLockedNotice  {
-                            anchors.centerIn: parent
-                            blurSource: sheet
-                            visible: root.isLessonLocked(dataRole)
-                        }
-                    }
-
-                }
+            model: LessonModel {
+                course: courseItem
             }
 
+            delegate: Item {
+                width: content.cellWidth
+                height: content.cellHeight
+                Rectangle {
+                    anchors.fill: parent
+                    anchors.margins: 10
+                    color: gridSelectionColorScheme.normalBackground
+                    opacity: selectedLesson == dataRole? 1: 0
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: selectedLesson = dataRole
+                    onDoubleClicked: lessonSelected(course, dataRole)
+                }
+
+                LessonSelectorItem {
+                    anchors.fill: parent
+                    anchors.margins: 20
+                    id: sheet
+                    anchors.centerIn: parent
+                    lesson: dataRole
+
+                }
+                LessonLockedNotice  {
+                    anchors.centerIn: parent
+                    blurSource: sheet
+                    visible: root.isLessonLocked(dataRole)
+                }
+            }
             ScrollBar.vertical: ScrollBar { }
         }
     }

@@ -26,6 +26,7 @@
         <file>trainingscreen/TrainingWidget.qml</file>
         <file>homescreen/CourseDescriptionItem.qml</file>
         <file>homescreen/CourseSelector.qml</file>
+        <file>homescreen/CourseSelectorKeyboardLayoutList.qml</file>
         <file>homescreen/InitialProfileForm.qml</file>
         <file>homescreen/LessonLockedNotice.qml</file>
         <file>homescreen/LessonPreview.qml</file>
@@ -34,6 +35,7 @@
         <file>homescreen/CustomLessonSelector.qml</file>
         <file>homescreen/ProfileForm.qml</file>
         <file>homescreen/LessonSelector.qml</file>
+        <file>homescreen/LessonSelectorItem.qml</file>
         <file>homescreen/ProfileSelector.qml</file>
         <file>homescreen/ProfileDetailsItem.qml</file>
         <file>keyboard/Keyboard.qml</file>
@@ -44,6 +46,5 @@
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>
         <file>common/IconLabel.qml</file>
         <file>common/MonochromeIcon.qml</file>
-        <file>homescreen/CourseSelectorKeyboardLayoutList.qml</file>
     </qresource>
 </RCC>
