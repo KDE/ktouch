@@ -25,7 +25,7 @@ Label {
     elide: Text.ElideRight
 
     padding: Math.ceil(0.7 * font.pixelSize)
-    leftPadding: iconItem.visible || reserveSpaceForIcon? 2 * padding + iconItem.width: padding
+    leftPadding: (iconItem.visible || reserveSpaceForIcon? padding + iconItem.width: 0) + (label.text != ""? padding: 0)
     verticalAlignment: Text.AlignVCenter
 
     MonochromeIcon {

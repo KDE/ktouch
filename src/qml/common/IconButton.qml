@@ -47,12 +47,12 @@ Button {
 
     background: Rectangle {
         id: bg
-        color: buttonColorScheme.normalBackground
+        color: button.activeFocus? buttonColorScheme.focusDecoration: buttonColorScheme.normalBackground
         HueSaturation {
             anchors.fill: bg
             source: bg
-            saturation: hovered? 0.2: 0
-            lightness: hovered? -0.02: 0
+            saturation: hovered? 0.3: 0
+            lightness: hovered? -0.04: 0
             Behavior on saturation {
                 NumberAnimation {
                     duration: 150
