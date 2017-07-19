@@ -183,15 +183,31 @@ ColumnLayout {
             id: content
             anchors.fill: parent
             clip: true
+            focus: true
             property int columns: Math.floor(width / (300 + 40))
             cellWidth: Math.floor(content.width / content.columns)
             cellHeight: Math.round(cellWidth * 2 / 3)
 
+            Keys.onPressed: {
+                if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                    event.accepted = true;
+                    if (root.selectedLesson && !isLessonLocked(root.selectedLesson)) {
+                        lessonSelected(course, root.selectedLesson)
+                    }
+                }
+            }
+
             model: LessonModel {
+                id: lessonModel
                 course: courseItem
             }
 
+            onCurrentIndexChanged: {
+                root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
+            }
+
             delegate: Item {
+                id: item
                 width: content.cellWidth
                 height: content.cellHeight
                 Rectangle {
@@ -203,7 +219,11 @@ ColumnLayout {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: selectedLesson = dataRole
+                    onClicked: {
+                        item.forceActiveFocus()
+                        content.currentIndex = index
+                    }
+
                     onDoubleClicked: lessonSelected(course, dataRole)
                 }
 
