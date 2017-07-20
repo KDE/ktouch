@@ -52,6 +52,10 @@ ColumnLayout {
     }
 
     function isLessonLocked(lesson) {
+        if (!lesson) {
+            return false
+        }
+
         if (profile.skillLevel === Profile.Advanced) {
             return false
         }
@@ -214,7 +218,7 @@ ColumnLayout {
                     anchors.fill: parent
                     anchors.margins: 10
                     color: gridSelectionColorScheme.normalBackground
-                    opacity: selectedLesson == dataRole? 1: 0
+                    opacity: content.currentIndex == index? 1: 0
                 }
 
                 MouseArea {

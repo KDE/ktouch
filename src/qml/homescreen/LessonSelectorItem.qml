@@ -42,7 +42,7 @@ Item {
             Layout.column: 0
             Layout.row: 0
             Layout.fillWidth: true
-            text: lesson.title
+            text: lesson? lesson.title: ""
             color: "#000000"
             font.bold: true
             elide: Label.ElideRight
@@ -68,7 +68,7 @@ Item {
             Label {
                 id: textLabel
                 anchors.fill: parent
-                text: lesson.text
+                text: lesson? lesson.text: ""
                 color: "#000000"
                 font.family: 'monospace'
                 lineHeight: 1.5
