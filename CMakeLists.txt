@@ -54,6 +54,9 @@ find_package(KF5 REQUIRED COMPONENTS
     XmlGui
 )
 
+# enable QML debugging for debug builds
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
+
 # subdirectories to build
 ecm_optional_add_subdirectory(data)
 ecm_optional_add_subdirectory(doc)
