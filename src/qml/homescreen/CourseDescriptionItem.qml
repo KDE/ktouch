@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.2
 import ktouch 1.0
 
 Rectangle {
@@ -27,14 +27,15 @@ Rectangle {
     property string description
     property bool active: false
 
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     height: active || content.opacity > 0? content.height: 0
     visible: height > 0
-    color: palette.base
+    color: colorScheme.normalBackground
 
     Behavior on height {
         NumberAnimation {
@@ -58,7 +59,7 @@ Rectangle {
         property bool needsUpdate: false
 
         width: parent.width
-        height: descriptionLabel.height + 6
+        height: descriptionLabel.height + 20
         opacity: root.active && !content.needsUpdate && root.height === root.childrenRect.height? 1: 0
 
         Behavior on opacity {
@@ -77,7 +78,7 @@ Rectangle {
         Label {
             id: descriptionLabel
             anchors.centerIn: parent
-            width: parent.width - 10
+            width: parent.width - 40
         }
     }
 

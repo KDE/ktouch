@@ -96,70 +96,85 @@ ColumnLayout {
 
     Item {
         Layout.fillWidth: true
-        height: toolbar.height
+        Layout.preferredHeight: header.height
         z: 2
 
-        ToolBar {
-            id: toolbar
+        Column {
+            id: header
             width: parent.width
+            height: toolbar.height + courseDescriptionItem.height
 
-            background: Rectangle {
-                color: toolbarColorScheme.toolbarBackground
-            }
+            ToolBar {
+                id: toolbar
+                width: parent.width
 
-            KColorScheme {
-                id: toolbarColorScheme
-                colorGroup: KColorScheme.Active
-                colorSet: KColorScheme.Complementary
-                property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.5)
-            }
-
-            RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: 20
-                spacing: 5
-
-                Label {
-                    text: root.course? root.course.title: ""
-                    font.bold: true
-                    color: toolbarColorScheme.normalText
+                background: Rectangle {
+                    color: toolbarColorScheme.toolbarBackground
                 }
 
-                IconToolButton {
-                    icon: "help-about"
-                    color: toolbarColorScheme.normalText
-                    backgroundColor: toolbarColorScheme.normalBackground
-                    Layout.fillHeight: true
-                    Layout.preferredWidth: toolbar.height
-               }
-
-                Item {
-                    Layout.fillWidth: true
+                KColorScheme {
+                    id: toolbarColorScheme
+                    colorGroup: KColorScheme.Active
+                    colorSet: KColorScheme.Complementary
+                    property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.5)
                 }
 
-                IconToolButton {
-                    id: configureButton
-                    icon: "application-menu"
-                    color: toolbarColorScheme.normalText
-                    backgroundColor: toolbarColorScheme.normalBackground
-                    Layout.fillHeight: true
-                    Layout.preferredWidth: toolbar.height
-                    onClicked: {
-                        var position = mapToItem(null, 0, height)
-                        ktouch.showMenu(position.x, position.y)
+                RowLayout {
+                    anchors.fill: parent
+                    anchors.leftMargin: 20
+                    spacing: 5
+
+                    Label {
+                        text: root.course? root.course.title: ""
+                        font.bold: true
+                        color: toolbarColorScheme.normalText
+                    }
+
+                    IconToolButton {
+                        id: toggleCourseDesciptionButton
+                        icon: "help-about"
+                        checkable: true
+                        color: toolbarColorScheme.normalText
+                        backgroundColor: toolbarColorScheme.normalBackground
+                        Layout.fillHeight: true
+                        Layout.preferredWidth: toolbar.height
+                   }
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    IconToolButton {
+                        id: configureButton
+                        icon: "application-menu"
+                        color: toolbarColorScheme.normalText
+                        backgroundColor: toolbarColorScheme.normalBackground
+                        Layout.fillHeight: true
+                        Layout.preferredWidth: toolbar.height
+                        onClicked: {
+                            var position = mapToItem(null, 0, height)
+                            ktouch.showMenu(position.x, position.y)
+                        }
                     }
                 }
             }
+
+            CourseDescriptionItem {
+                id: courseDescriptionItem
+                width: parent.width
+                active: toggleCourseDesciptionButton.checked
+                description: courseItem.description
+            }
         }
+
         DropShadow {
-            anchors.fill: toolbar
-            source: toolbar
+            anchors.fill: header
+            source: header
             samples: 16
             horizontalOffset: 0
             verticalOffset: 0
         }
     }
-
 
     Item {
         Layout.fillHeight: true
