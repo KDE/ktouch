@@ -17,7 +17,7 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
 import ktouch 1.0
 import '../common'
 
@@ -47,6 +47,15 @@ Item {
             font.bold: true
             elide: Label.ElideRight
 
+            ToolTip.text: titleLabel.text
+            ToolTip.visible: titleMouseArea.containsMouse
+
+            MouseArea {
+                id: titleMouseArea
+                anchors.fill: parent
+                acceptedButtons: Qt.NoButton
+                hoverEnabled: titleLabel.truncated
+            }
         }
 
         IconToolButton {
