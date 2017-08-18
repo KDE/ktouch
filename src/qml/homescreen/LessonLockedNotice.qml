@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 import org.kde.kquickcontrolsaddons 2.0
@@ -27,42 +27,13 @@ import ktouch 1.0
 Item {
     id: root
 
-    width: content.width + 40
-    height: content.height + 40
-
-    property alias blurSource: effectSource.sourceItem
+    width: content.width
+    height: content.height
 
     KColorScheme {
         id: palette
         colorGroup: KColorScheme.Active
         colorSet: KColorScheme.Window
-    }
-
-    ShaderEffectSource {
-        id: effectSource
-        anchors.fill: parent
-        hideSource: false
-        sourceRect: Qt.rect(root.x, root.y, root.width, root.height)
-    }
-
-    FastBlur {
-        anchors.fill: parent
-        source: effectSource
-        radius: 25
-    }
-
-    Rectangle {
-        id: background
-        anchors.fill: parent
-        color: palette.neutralBackground
-        opacity: 0.7
-        radius: 15
-    }
-
-    Behavior on opacity {
-        NumberAnimation {
-            duration: 200
-        }
     }
 
     Column {
@@ -80,13 +51,28 @@ Item {
             height: 128
         }
 
-        Label {
-            id: text
-            text: i18n("Complete Previous Lessons to Unlock")
+        Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.AlignHCenter
-            font.weight: Font.Bold
-            wrapMode: Text.Wrap
+            width: text.width + 2 * text.font.pixelSize
+            height: text.height + text.font.pixelSize
+            radius: text.font.pixelSize
+            color: palette.neutralBackground
+
+            Label {
+                anchors.centerIn: parent
+                id: text
+                text: i18n("Complete Previous Lessons to Unlock")
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Bold
+                wrapMode: Text.Wrap
+            }
         }
+    }
+
+    Glow {
+        anchors.fill: content
+        source: content
+        color: "white"
+        samples: 25
     }
 }

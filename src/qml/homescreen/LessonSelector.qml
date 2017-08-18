@@ -256,7 +256,6 @@ ColumnLayout {
                 }
                 LessonLockedNotice  {
                     anchors.centerIn: parent
-                    blurSource: sheet
                     visible: root.isLessonLocked(dataRole)
                 }
             }
