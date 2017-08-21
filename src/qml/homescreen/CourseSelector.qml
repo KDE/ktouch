@@ -42,11 +42,6 @@ FocusScope {
 
         var courseId = profile.lastUsedCourseId;
 
-        if (courseId === "custom_lessons") {
-            // selectCourse(courseRepeater.count, true)
-            return
-        }
-
         for (var i = 0; i < courseModel.rowCount(); i++) {
             var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {

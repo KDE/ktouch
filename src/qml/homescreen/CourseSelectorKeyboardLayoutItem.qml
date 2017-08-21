@@ -84,10 +84,23 @@ Column {
                     }
                 }
                 ListItem {
-                    text: i18n("Custom Lessons")
+                    DataIndexCourse {
+                        id: customLessonsCourse
+                        title: i18n("Custom Lessons")
+                        keyboardLayoutName: root.name
+                        Component.onCompleted: {
+                            id = "custom_lessons"
+                        }
+                    }
+
+                    text: customLessonsCourse.title
                     id: ownLessonsItem
                     reserveSpaceForIcon: true
                     width: parent.width
+                    highlighted: root.selectedCourse == customLessonsCourse
+                    onClicked: {
+                        courseSelected(customLessonsCourse)
+                    }
                 }
             }
         }

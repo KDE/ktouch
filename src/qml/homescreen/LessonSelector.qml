@@ -85,11 +85,19 @@ ColumnLayout {
     Course {
         id: courseItem
         function update() {
-            if (root.dataIndexCourse === null)
+            if (root.dataIndexCourse === null) {
                 return
-            if (isValid && courseItem.id === dataIndexCourse.id)
-                return
-            dataAccess.loadCourse(dataIndexCourse, courseItem)
+            }
+            if (dataIndexCourse.id == "custom_lessons") {
+                console.log("loading custom lessons: " + dataIndexCourse.keyboardLayoutName)
+                profileDataAccess.loadCustomLessons(root.profile, dataIndexCourse.keyboardLayoutName, courseItem)
+            }
+            else {
+                if (isValid && courseItem.id === dataIndexCourse.id) {
+                    return
+                }
+                dataAccess.loadCourse(dataIndexCourse, courseItem)
+            }
         }
         Component.onCompleted: update()
     }
@@ -222,7 +230,12 @@ ColumnLayout {
             }
 
             onCurrentIndexChanged: {
-                root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
+                if (lessonModel.rowCount() > 0) {
+                    root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
+                }
+                else {
+                    root.selectedLesson = null
+                }
             }
 
             delegate: Item {
