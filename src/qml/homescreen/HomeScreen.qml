@@ -19,6 +19,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
+import QtGraphicalEffects 1.0
 import ktouch 1.0
 
 import "../common"
@@ -71,77 +72,88 @@ FocusScope {
         preferences.writeConfig()
     }
 
-    GridLayout {
+    RowLayout {
         anchors.fill: parent
-        columns: 2
-        columnSpacing: 0
-        rowSpacing: 0
+        spacing: 0
 
-        ToolBar {
-            visible: courseSelector.opacity > 0
-            id: header
-
-            Layout.column: 0
-            Layout.row: 0
-            Layout.preferredWidth: 300
-
+        Item {
+            id: navigationArea
             z: 2
+            Layout.preferredWidth: 300
+            Layout.fillHeight: true
 
-            background: Rectangle {
-                color: toolbarColorScheme.toolbarBackground
+            DropShadow {
+                anchors.fill: navigationAreaLayout
+                source: navigationAreaLayout
+                samples: 16
+                horizontalOffset: 0
+                verticalOffset: 0
             }
 
-            KColorScheme {
-                id: toolbarColorScheme
-                colorGroup: KColorScheme.Active
-                colorSet: KColorScheme.Complementary
-                property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.3)
-            }
-
-
-            RowLayout {
+            ColumnLayout {
+                id: navigationAreaLayout
                 anchors.fill: parent
-                spacing: 5
+                spacing: 0
 
-                IconToolButton {
-                    id: profileButton
-                    icon: "user-identity"
-                    text: d.profile !== null? d.profile.name: ""
-                    color: toolbarColorScheme.normalText
-                    backgroundColor: toolbarColorScheme.normalBackground
-                    Layout.fillHeight: true
-                    Layout.preferredWidth: 300
-                    onClicked: {
-                        if (checked) {
-                            profileSelectorSheet.open()
-                        }
-                        else {
-                            profileSelectorSheet.close()
+                ToolBar {
+                    id: header
+                    Layout.fillWidth: true
+                    visible: courseSelector.opacity > 0
+
+                    background: Rectangle {
+                        color: toolbarColorScheme.toolbarBackground
+                    }
+
+                    KColorScheme {
+                        id: toolbarColorScheme
+                        colorGroup: KColorScheme.Active
+                        colorSet: KColorScheme.Complementary
+                        property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.3)
+                    }
+
+
+                    RowLayout {
+                        anchors.fill: parent
+                        spacing: 5
+
+                        IconToolButton {
+                            id: profileButton
+                            icon: "user-identity"
+                            text: d.profile !== null? d.profile.name: ""
+                            color: toolbarColorScheme.normalText
+                            backgroundColor: toolbarColorScheme.normalBackground
+                            Layout.fillHeight: true
+                            Layout.preferredWidth: 300
+                            onClicked: {
+                                if (checked) {
+                                    profileSelectorSheet.open()
+                                }
+                                else {
+                                    profileSelectorSheet.close()
+                                }
+                            }
+                            checkable: true
+                            Layout.fillWidth: true
                         }
                     }
-                    checkable: true
-                    Layout.fillWidth: true
                 }
+
+                CourseSelector {
+                    id: courseSelector
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    opacity: 1 - initialProfileForm.opacity
+                    profile: d.profile
+                    keyboardLayout: screen.keyboardLayout
+                    currentKeyboardLayoutName: screen.keyboardLayoutName
+                }
+
             }
         }
 
-        CourseSelector {
-            id: courseSelector
-            Layout.column: 0
-            Layout.row: 1
-            Layout.fillHeight: true
-            Layout.preferredWidth: 300
-            opacity: 1 - initialProfileForm.opacity
-            profile: d.profile
-            keyboardLayout: screen.keyboardLayout
-            currentKeyboardLayoutName: screen.keyboardLayoutName
-            z: 2
-        }
+
 
         LessonSelector {
-            Layout.column: 1
-            Layout.row: 0
-            Layout.rowSpan: 2
             Layout.fillHeight: true
             Layout.fillWidth: true
             profile: d.profile
