@@ -89,7 +89,6 @@ ColumnLayout {
                 return
             }
             if (dataIndexCourse.id == "custom_lessons") {
-                console.log("loading custom lessons: " + dataIndexCourse.keyboardLayoutName)
                 profileDataAccess.loadCustomLessons(root.profile, dataIndexCourse.keyboardLayoutName, courseItem)
             }
             else {
@@ -256,7 +255,11 @@ ColumnLayout {
                         content.currentIndex = index
                     }
 
-                    onDoubleClicked: lessonSelected(course, dataRole)
+                    onDoubleClicked: {
+                        if (!root.isLessonLocked(dataRole)) {
+                            lessonSelected(course, dataRole)
+                        }
+                    }
                 }
 
                 LessonSelectorItem {
