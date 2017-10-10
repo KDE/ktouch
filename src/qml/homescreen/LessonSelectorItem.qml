@@ -24,12 +24,20 @@ import '../common'
 Item {
     id: root
     property Lesson lesson
+    property bool selected
+    property alias background: background
     clip: true
+
+    KColorScheme {
+        id: selectionColorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Selection
+    }
 
     Rectangle {
         id: background
         anchors.fill: parent
-        color: "#ffffff";
+        color: selected? Qt.tint(selectionColorScheme.normalBackground, "#a0ffffff"): "#ffffff"
     }
 
     GridLayout {
@@ -88,9 +96,9 @@ Item {
             Rectangle {
                 anchors.fill: parent
                 gradient: Gradient {
-                    GradientStop { position: 0.0; color: "#00ffffff" }
-                    GradientStop { position: 0.8; color: "#00ffffff" }
-                    GradientStop { position: 1.0; color: "#ffffffff" }
+                    GradientStop { position: 0.0; color: "#00000000" }
+                    GradientStop { position: 0.8; color: Qt.rgba(background.color.r, background.color.g, background.color.b, 0) }
+                    GradientStop { position: 1.0; color: background.color }
                 }
             }
         }

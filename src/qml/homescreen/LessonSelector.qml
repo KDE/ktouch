@@ -193,11 +193,6 @@ ColumnLayout {
             colorGroup: KColorScheme.Active
             colorSet: KColorScheme.View
         }
-        KColorScheme {
-            id: gridSelectionColorScheme
-            colorGroup: KColorScheme.Active
-            colorSet: KColorScheme.Selection
-        }
 
         Rectangle {
             anchors.fill: parent
@@ -208,9 +203,10 @@ ColumnLayout {
         GridView {
             id: content
             anchors.fill: parent
+            anchors.leftMargin: 20
             clip: true
             focus: true
-            property int columns: Math.floor(width / (300 + 40))
+            property int columns: Math.floor(width / (300 + 20))
             cellWidth: Math.floor(content.width / content.columns)
             cellHeight: Math.round(cellWidth * 2 / 3)
 
@@ -241,38 +237,38 @@ ColumnLayout {
                 id: item
                 width: content.cellWidth
                 height: content.cellHeight
-                Rectangle {
-                    anchors.fill: parent
-                    anchors.margins: 10
-                    color: gridSelectionColorScheme.normalBackground
-                    opacity: content.currentIndex == index? 1: 0
-                }
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        item.forceActiveFocus()
-                        content.currentIndex = index
-                    }
 
-                    onDoubleClicked: {
-                        if (!root.isLessonLocked(dataRole)) {
-                            lessonSelected(course, dataRole)
+                LessonSelectorItem {
+                    id: lessonItem
+                    anchors.fill: parent
+                    anchors.topMargin: 10
+                    anchors.leftMargin: 0
+                    anchors.rightMargin: 20
+                    anchors.bottomMargin: 10
+                    anchors.centerIn: parent
+                    lesson: dataRole
+                    selected: content.currentIndex == index
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            item.forceActiveFocus()
+                            content.currentIndex = index
+                        }
+
+                        onDoubleClicked: {
+                            if (!root.isLessonLocked(dataRole)) {
+                                lessonSelected(course, dataRole)
+                            }
                         }
                     }
                 }
 
-                LessonSelectorItem {
-                    anchors.fill: parent
-                    anchors.margins: 20
-                    id: sheet
-                    anchors.centerIn: parent
-                    lesson: dataRole
-
-                }
                 LessonLockedNotice  {
                     anchors.centerIn: parent
                     visible: root.isLessonLocked(dataRole)
+                    glowColor: lessonItem.background.color
                 }
             }
             ScrollBar.vertical: ScrollBar { }

@@ -30,6 +30,8 @@ Item {
     width: content.width
     height: content.height
 
+    property color glowColor: "#ffffff"
+
     KColorScheme {
         id: palette
         colorGroup: KColorScheme.Active
@@ -72,7 +74,7 @@ Item {
     Glow {
         anchors.fill: content
         source: content
-        color: "white"
+        color: root.glowColor
         samples: 25
     }
 }
