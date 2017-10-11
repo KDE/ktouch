@@ -32,13 +32,10 @@ FocusScope {
     property string keyboardLayoutName
     signal lessonSelected(variant course, variant lesson, variant profile)
 
-    QtObject {
-        id: d
-
-        property Profile profile
-        property int profileCount: profileDataAccess.profileCount
-
+    Connections {
+        target: profileDataAccess
         onProfileCountChanged: findCurrentProfile()
+
     }
 
     function start() {}
@@ -47,27 +44,26 @@ FocusScope {
     }
 
     function findCurrentProfile() {
-        d.profile = null
+        profileComboBox.profile = null
 
         var lastProfileId = preferences.lastUsedProfileId
 
         for (var i = 0; i < profileDataAccess.profileCount; i++) {
             var profile = profileDataAccess.profile(i)
             if (profile.id === lastProfileId) {
-                d.profile = profile
+                profileComboBox.profile = profile
                 return;
             }
         }
 
         if (profileDataAccess.profileCount > 0) {
-            d.profile = profileDataAccess.profile(0)
-            preferences.lastUsedProfileId = d.profile.id
+            profileComboBox.profile = profileDataAccess.profile(0)
+            preferences.lastUsedProfileId = profileComboBox.profile.id
             preferences.writeConfig()
         }
     }
 
-    function switchToProfile(profile) {
-        d.profile = profile
+    function safeLastUsedProfile(profile) {
         preferences.lastUsedProfileId = profile.id
         preferences.writeConfig()
     }
@@ -116,25 +112,19 @@ FocusScope {
                         anchors.fill: parent
                         spacing: 5
 
-                        IconToolButton {
-                            id: profileButton
-                            icon: "user-identity"
-                            text: d.profile !== null? d.profile.name: ""
-                            color: toolbarColorScheme.normalText
-                            backgroundColor: toolbarColorScheme.normalBackground
+
+                        ProfileComboBox {
+                            id: profileComboBox
+                            colorScheme: toolbarColorScheme
+                            manageProfileButtonBgColor: toolbarColorScheme.toolbarBackground
                             Layout.fillHeight: true
                             Layout.preferredWidth: 300
-                            onClicked: {
-                                if (checked) {
-                                    profileSelectorSheet.open()
-                                }
-                                else {
-                                    profileSelectorSheet.close()
-                                }
-                            }
-                            checkable: true
                             Layout.fillWidth: true
+                            onActivated: {
+                                safeLastUsedProfile(profile)
+                            }
                         }
+
                     }
                 }
 
@@ -143,7 +133,7 @@ FocusScope {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     opacity: 1 - initialProfileForm.opacity
-                    profile: d.profile
+                    profile: profileComboBox.profile
                     keyboardLayout: screen.keyboardLayout
                     currentKeyboardLayoutName: screen.keyboardLayoutName
                 }
@@ -156,9 +146,9 @@ FocusScope {
         LessonSelector {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            profile: d.profile
+            profile: profileComboBox.profile
             dataIndexCourse: courseSelector.selectedCourse
-            onLessonSelected: screen.lessonSelected(course, lesson, d.profile)
+            onLessonSelected: screen.lessonSelected(course, lesson, profileComboBox.profile)
             z: 1
         }
     }
@@ -183,8 +173,8 @@ FocusScope {
         id: profileSelectorSheet
         anchors.fill: parent
         onOpened: {
-            if (d.profile) {
-                var index = profileDataAccess.indexOfProfile(d.profile)
+            if (profileComboBox.profile) {
+                var index = profileDataAccess.indexOfProfile(profileComboBox.profile)
                 profileSelector.selectProfile(index)
             }
         }
