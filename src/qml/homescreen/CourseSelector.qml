@@ -42,24 +42,27 @@ FocusScope {
 
         var courseId = profile.lastUsedCourseId;
 
-        for (var i = 0; i < courseModel.rowCount(); i++) {
-            var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
+        for (var i = 0; i < allCoursesModel.rowCount(); i++) {
+            var dataIndexCourse = allCoursesModel.data(allCoursesModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {
                 root.selectedCourse = dataIndexCourse
                 return
             }
         }
 
-        if (courseModel.rowCount() > 0) {
-            var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
+        if (allCoursesModel.rowCount() > 0) {
+            var dataIndexCourse = allCoursesModel.data(allCoursesModel.index(0, 0), ResourceModel.DataRole);
             root.selectedCourse = dataIndexCourse
         }
     }
 
     onSelectedCourseChanged: {
         root.selectedKeyboardLayoutName = root.selectedCourse.keyboardLayoutName;
-        if (profile.lastUsedCourseId != root.selectedCourse.id) {
-            profile.lastUsedCourseId = root.selectedCourse.id;
+    }
+
+    function saveLastUsedCourse(course) {
+        if (profile.lastUsedCourseId != course.id) {
+            profile.lastUsedCourseId = course.id;
             profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
         }
     }
@@ -76,6 +79,12 @@ FocusScope {
         onRowsInserted: {
             selectLastUsedCourse()
         }
+    }
+
+    CategorizedResourceSortFilterProxyModel {
+        id: allCoursesModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
     }
 
     CategorizedResourceSortFilterProxyModel {
@@ -124,6 +133,7 @@ FocusScope {
                 selectedCourse: root.selectedCourse
                 onCourseSelected: {
                     root.selectedCourse = course
+                    root.saveLastUsedCourse(course)
                 }
             }
 
@@ -137,6 +147,7 @@ FocusScope {
                 selectedCourse: root.selectedCourse
                 onCourseSelected: {
                     root.selectedCourse = course
+                    root.saveLastUsedCourse(course)
                 }
             }
         }

@@ -111,13 +111,6 @@ Rectangle {
         }
     }
 
-    CategorizedResourceSortFilterProxyModel {
-        id: availableCourseModel
-        resourceModel: resourceModel
-        resourceTypeFilter: ResourceModel.CourseItem
-        keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: ktouch.keyboardLayoutName
-    }
-
     Course {
         id: selectedCourse
         property Lesson selectedLesson
@@ -130,7 +123,6 @@ Rectangle {
     HomeScreen {
         id: homeScreen
         anchors.fill: parent
-        courseModel: availableCourseModel
         keyboardLayout: keyboardLayout
         keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
         visible: false

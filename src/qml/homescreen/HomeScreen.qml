@@ -27,7 +27,6 @@ import "../common"
 FocusScope {
     id: screen
 
-    property CategorizedResourceSortFilterProxyModel courseModel
     property KeyboardLayout keyboardLayout
     property string keyboardLayoutName
     signal lessonSelected(variant course, variant lesson, variant profile)

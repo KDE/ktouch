@@ -46,6 +46,8 @@ ColumnLayout {
             for (var index = 0; index < course.lessonCount; index++) {
                 if (course.lesson(index).id === lessonId) {
                     root.selectedLesson = course.lesson(index)
+                    content.currentIndex = index
+                    break
                 }
             }
         }
@@ -78,8 +80,8 @@ ColumnLayout {
 
     onDataIndexCourseChanged: {
         root.selectedLesson = null;
-        course.update()
-        update()
+        course.update();
+        root.update();
     }
 
     Course {
@@ -238,7 +240,6 @@ ColumnLayout {
                 width: content.cellWidth
                 height: content.cellHeight
 
-
                 LessonSelectorItem {
                     id: lessonItem
                     anchors.fill: parent
@@ -248,7 +249,7 @@ ColumnLayout {
                     anchors.bottomMargin: 10
                     anchors.centerIn: parent
                     lesson: dataRole
-                    selected: content.currentIndex == index
+                    selected:  content.currentIndex == index
 
                     MouseArea {
                         anchors.fill: parent
