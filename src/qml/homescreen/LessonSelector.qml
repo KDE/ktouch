@@ -35,6 +35,7 @@ ColumnLayout {
     function update() {
         if (!course.isValid) return;
         if (!profile) return;
+        course.updateLastUnlockedLessonIndex();
         selectLastLesson()
     }
 
@@ -53,29 +54,6 @@ ColumnLayout {
         }
     }
 
-    function isLessonLocked(lesson) {
-        if (!lesson) {
-            return false
-        }
-
-        if (profile.skillLevel === Profile.Advanced) {
-            return false
-        }
-        var lastUnlockedLessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
-        if (lastUnlockedLessonId !== "") {
-            for (var index = 0; index < course.lessonCount; index++) {
-                if (course.lesson(index).id === lesson.id) {
-                    return false
-                }
-                if (course.lesson(index).id === lastUnlockedLessonId) {
-                    return true
-                }
-            }
-            return false
-        }
-        return course.lessonCount && course.lesson(0) !== lesson
-    }
-
     onProfileChanged: update()
 
     onDataIndexCourseChanged: {
@@ -86,6 +64,7 @@ ColumnLayout {
 
     Course {
         id: courseItem
+        property int lastUnlockedLessonIndex: -1
         function update() {
             if (root.dataIndexCourse === null) {
                 return
@@ -98,6 +77,24 @@ ColumnLayout {
                     return
                 }
                 dataAccess.loadCourse(dataIndexCourse, courseItem)
+            }
+        }
+        function updateLastUnlockedLessonIndex() {
+            lastUnlockedLessonIndex = 0;
+            if (profile.skillLevel === Profile.Advanced) {
+                lastUnlockedLessonIndex = course.lessonCount - 1;
+                return
+            }
+            var lastUnlockedLessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
+            if (lastUnlockedLessonId !== "") {
+                for (var index = 0; index < course.lessonCount; index++) {
+                    console.log(course.lesson(index).id, lastUnlockedLessonId)
+                    lastUnlockedLessonIndex = index
+                    if (course.lesson(index).id === lastUnlockedLessonId) {
+                        console.log(lastUnlockedLessonIndex)
+                        return
+                    }
+                }
             }
         }
         Component.onCompleted: update()
@@ -215,7 +212,7 @@ ColumnLayout {
             Keys.onPressed: {
                 if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                     event.accepted = true;
-                    if (root.selectedLesson && !isLessonLocked(root.selectedLesson)) {
+                    if (root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex) {
                         lessonSelected(course, root.selectedLesson)
                     }
                 }
@@ -259,7 +256,7 @@ ColumnLayout {
                         }
 
                         onDoubleClicked: {
-                            if (!root.isLessonLocked(dataRole)) {
+                            if (index <= course.lastUnlockedLessonIndex) {
                                 lessonSelected(course, dataRole)
                             }
                         }
@@ -268,7 +265,7 @@ ColumnLayout {
 
                 LessonLockedNotice  {
                     anchors.centerIn: parent
-                    visible: root.isLessonLocked(dataRole)
+                    visible: index > course.lastUnlockedLessonIndex
                     glowColor: lessonItem.background.color
                 }
             }
@@ -310,7 +307,7 @@ ColumnLayout {
                         bgColor: colorScheme.positiveBackground
                         anchors.centerIn: parent
                         text: i18n("Start Training")
-                        enabled: root.selectedLesson && !isLessonLocked(root.selectedLesson)
+                        enabled: root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex
                         onClicked: lessonSelected(course, root.selectedLesson)
                     }
                 }
