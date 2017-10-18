@@ -1,0 +1,1171 @@
+<?xml version="1.0"?>
+<course>
+ <id>{90a0ad22-18e7-484f-b1cd-6babdd0f7037}</id>
+ <title>Deutsch (CH - aus Tipptrainer)</title>
+ <description>German training file
+adapted by Sven Gohlke &lt;sven@clio.in-berlin.de>
+for ktouch from a training file distributed by
+Andreas Kalbitz  &lt;felix@pingos.schulnetz.org>
+for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
+distributed under the GPL2
+Version: 0.1 beta  (Modified for Swiss keyboard layout)</description>
+ <keyboardLayout>ch</keyboardLayout>
+ <lessons>
+  <lesson>
+   <id>{538f576c-135e-46b2-86f2-333488359bdd}</id>
+   <title>Grundhaltung 1</title>
+   <newCharacters>dfjk</newCharacters>
+   <text>ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj ff jj
+fj jf fj jf fj jf fj fj jf fj jf jf fj jf fj jf jf jf jf fj
+ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj ffj
+jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf jjf
+jfj jfj fjf jfj fjf jfj fjf jfj fjf fjf fjf fjf fjf fjf fjf
+fff jjj fff jjj fff jjj fff jjj fff jjj fff jjj fff jjj fff
+fjf jfj jfj jfj fjf fjf jfj fjf jfj fjf jfj jfj jfj fjf fjf
+dd kk dd kk dd kk dd kk dd kk dd kk dd kk dd kk dd kk dd kk
+dk dk dk kd kd kd kd dk dk dk dk kd kd kd kd dk dk kd kd dk
+ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd kkk ddd
+ddk ddk kkd ddk kkd ddk ddk kkd kkd ddk ddk ddk ddk kkd kkd
+dkd kdk dkd dkd kdk dkd kdk dkd dkd kdk dkd dkd kdk kdk dkd
+dkk kkd dkd dkk kkd dkd kkd dkd kkd dkd kdk kdk dkd kdk dkd
+ddd kkk dkd kdk dkk kdd ddd ddd kkk dkd kdk kdk dkd kkk ddd</text>
+  </lesson>
+  <lesson>
+   <id>{8194dc73-5356-45a8-91cb-faa53004f4f1}</id>
+   <title>Grundhaltung 2</title>
+   <newCharacters>aslö</newCharacters>
+   <text>ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll ss ll
+ls sl ls sl sl ls sl ls sl sl sl sl ls ls sl ls sl ls sl ls
+ssl ssl lss lss lss lss lss lss lss lss lss ssl ssl ssl ssl
+lsl sls lsl lsl ssl sls lsl sls sls lss lsl sls sls lsl sls
+ssl lsl lsl sls lss lls lll sls lsl sls lsl sls sls sls sls
+lsl sls lsl lls lsl ssl sls lls lls lsl lls lsl sls lsl lls
+lll sss lsl lll lsl sss lsl ssl ssl lsl lls lll sss lsl ssl
+aö öa aö aö öa aö öa öa aö aö aö öa öa öa aö aö öa öa aö aö
+öa aa öö aö öö aa öö öö aa öa öa öa öa aö aö öö aa öö aö öa
+aöa öaö aöa aöa öaö aöa aaö aaö aaö ööa aaö öaa öaö ööa aöa
+ööö aaa aöa ööö aöa aaa öaö aöa aöa öaö aöa aöa öaö aöa öaö
+aöa ööö aaa aöa aöa aöa öaö aöa aöa aöa öaö aöa aöa ööö aöa
+aaö aaö aaö öaö aöa ööö aöa ööö ööö ööa ööa aaö öaö aöa ööa
+aöa aaa öaö aöö ööa aöö ööa aaö öaa aöö öaa aöa öaö aaö öaa</text>
+  </lesson>
+  <lesson>
+   <id>{7c5080f2-6117-40da-83a7-30ac1c5ede83}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>asdf jklö asdf jklö asdf jklö ölkj fdsa ölkj fdsa asdf jklö
+asdf ölkj asdf ölkj asdf ölkj asdf ölkj asdf ölkj asdf jklö
+askj asjk askj askj asjk asjk asjk asjk asjk askj askj asjk
+lsöa lsöa lsöa aösl aösl aösl aösl aösl aösl aösl aösl aösl
+alsö aösl lsöa löls löss skök lsöa slöa löal ölsö slaö söal
+aösk alsk aöls aöls aöld aösl aösk asök öska alök asld öskö
+dask klsa klsd dlsa öldk dkls ölsa klsa klas lkas slak skal
+fksk dksl jfjf skdj dsaj jafj jsdj fjdk jfkd fjdk fjdk fjdk
+fkds kldj jkld fdsa fdsa fdsa fdsa jkls sakd dsaö jkdk djfk
+slaö aljs sdkf dkls kkls llsk söak dlsd sldl dlsl dsld dlsl
+dlld ldld sösl alsö dlfk fldk fkld kfal fals lssa lass lass
+lsls ldfj kalf klas lkas jdks lsak kdfj alsj lkdf kjja jaja
+falk lfds fall lfds jfks fall falk fall fals slak dlsa lsdf
+jkak kaks lkak ksda kdls lsdf dsaj kjlj lökd fksl slkd jkls
+ffkd kdkk dkks saak sask ssas dsas klöl dsas lkkl lkjk lkjl
+aösl ssas llkö kkök ölkj lkjl ölkö ölöa ölks öklj jlkk lkds</text>
+  </lesson>
+  <lesson>
+   <id>{574a6b59-ea61-492e-99fd-de5ac4e71ad9}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>sla las laa aal sla lsa las sas lsa laa las all als ass als
+all als las all als las all als las all als las all als las
+sla sal sla sla saa sas asa lal ala als sss lsa sla sll sla
+las als all las als all las als las als all als all las als
+sls lsl lal sas lls ala lal las asl las sal las als all sla
+als all las als all las als all las all all als als las las
+fad das sad lös las lad lad aal fas kal sal fas dsa dks fda
+fall lass kalk lass klas salö salk laös llsa llsa ölsa lsaö
+ösal löss ösks öskl öslk lsal löas klsa löls löls klsa klös
+kalk kalk fall fall falk lass lssa lass kalk falk fass sass
+safd safd klöa aölk lsal lsas slas lsls fjdl alsa jaja jdld
+jldd kjsk klas kalk saal lass fakl sall lall ladd ladd dsal
+falk kalk falk kalk saal kalk falk saal kalk fall saal fall
+falk fall fals kall kalk saal falk lass kalk löss lass fall
+falk kalk fall löss kalk fall saal fall löss saal fall falk
+lass fall lass falk kalk saal fall löss kalk kalk saal fall
+falls kafka kajak kajak falls falls kafka kajak kajaj kafka
+kafka falls kajak falls kafka falls kajak kafka falls kajak
+falls als falk kalk kafka das all das lass das las als kalk
+öl als löss kafka kajak öl als all falk löss lass las kajak
+all das öd all dass das öl kafka lass das ja kalk öl ja las
+all das saal falk kalk kajak kafka saal falls das dass lass
+als all das öl falls all das öl ja als all das öl kafka las
+falls falk all das las das öl als all kalk fall saal las ja
+ja ja sass da als all das öl kafka las falk sass da als all
+das öl lass das all kafka las all falls all das öl as ja da
+da das alls kafka las kalk fall saal falls all das öl ja ja</text>
+  </lesson>
+  <lesson>
+   <id>{30b3f653-2953-45f6-b2c5-c3c4ba2ff6cb}</id>
+   <title>i und e</title>
+   <newCharacters>ei</newCharacters>
+   <text>de ki de ki de ki de ki de ki de ki di ke di ke di ke di ke
+dak dik dak dek dak dik kid kid dik eki ede kde dek dei die
+sei sie lie ise asi esi ase las lie fie kis eis ise ike eki
+jie jei eij eej jee jii sii ees iis ais iis ssi sse sie ies
+kei iek kii kee eke ike adi ida ede ese see ise isa sai sae
+lee lei lie lle ill eel sea eas ase lea kea jea sik aik eik
+kade lade jade lade kiss lies like daks jade jedi kadi sadi
+kess lass löss lies siel alle fell fiel fail siel fiel feil
+seil lies keil like feil fiel jail dail das is fis ais lief
+fiel fall feil dies seil jade keks siek jedi fade sade lade
+file seil siel fiel jail lade like jedi kadi eile alle eile
+siele lalle falle kalle seile feile leise keile lalle falle
+alles kalles elle felle fiele öse seile keile fiele die eis
+lasse fasse kasse sasse löse sie lasse fasse kasse asse die
+isa kies alias salsa else fels als je ja sass iss kiss esse
+lasse kasse kaffee affe safe lief ilse kleie eise seile sie
+ade alle lies alias alles falle felle kalle kill keil kille
+elle alle delle seile eile keile kiel fiel siel adidas lies
+ja das alles dies lies sie alle eile leise feile delle asse
+kasse lasse diese dieses dies lies fiese lade sade fade eis
+jail file alias kiss sed deal seal lease fade ill fill feel
+kaffee fiel alles eile kalle feile sie seil seile kasse eis
+ja sei da fallada kafka saal öle öse als alles fiel siel es
+lade es fade saal es das fass es ja fiese liese lies dallas
+das da die sei jede jedes diese sei seife eides filiale eis
+dies des seide dieses fidel lief des alles lies das kleides</text>
+  </lesson>
+  <lesson>
+   <id>{68d858c0-a520-4195-a4d2-e0efe56fde02}</id>
+   <title>g und h</title>
+   <newCharacters>gh</newCharacters>
+   <text>fgf fgf jhj jhj fgf jhj jhj fgf jhj fgf jhj fgf jhj fgf jhj
+fggf jhhj fgjh fgjh fgjh fghj jhgf fghj fgjh fghj gfhj fgjh
+fgf gfg jhj hjh gfh jhg fgj jhg fgh jhg hgf ghf hgf ghf fjh
+fga agf gfa fga fag fga fga afg fag fag fag gaf gfa gag gfa
+jag ajg jag ajg ajg gaj jag jga jga gja fgj gjf ajf agj ajg
+öjh hjö hjö öjh jöh jöh hjö jhö öjh öjh jöh jöh jhö ögö öhö
+afg öhj agh öhg agj öhj gaj höj gaj hög hag ögh öhg ahg öhh
+haag haff haag haff haag haff fahl half fahl half hasl lasa
+kahl lags slag glas alga gala agfa haff haag glas lags gasa
+gesa sage hage jage fehl fahl hege gehe hege gehe sehe hase
+hass fahl kahl kehl kiel geil lieg heil hies dega gade jage
+jagd jögh hals gels gisa löse geis sieg igel lieg lage gala
+egel flegel fahles kahles sage es kegel segel jagd laage he
+hegel flegel kegel fahle ihle ahle alge felge selige heilig
+heilige eilig seele gelee heel heals hall he his heise leis
+geisel feige fehle helfe half fege diggi daggi jiggi jag is
+geige feige liege fliege siege diehle fiele galle falle heg
+hilfe heile half fall gehe giga glas flies dies see eisiges
+die eisige see die alge das fass das glas das glas seidiges
+gaffe haff kaff die alge  die felge siege sage gehe sehe es
+she is his he is she lies es gase gas hass fass lass kahles
+gisela höhle sah diese höhle geöle hase jade jage lage heil
+hadi sage lass das fass dies seidige kleid gehe hege gelege
+geklage gelage sage die sage gejage klage felge helge leide</text>
+  </lesson>
+  <lesson>
+   <id>{cfeb09fa-6f1a-49e4-8559-ac21230531b4}</id>
+   <title>w und o</title>
+   <newCharacters>wo</newCharacters>
+   <text>sws lol sws lol sws lol sws lol was los was los was los was
+was sws los lol sws lol was los wag weg wog log los weh wie
+log los was wow lol sws wow sow saw osw aso oso los kos jas
+kdw dwk jdw wdj okw wok wie aol das los leo loe lei wei wie
+gold geld soll will kilo lose kose wald jagd wage lage lego
+hose hase lode ewig soda dose wild will soll wald feil woll
+weise leise heise hose lose wiese waffel wieso weil was wie
+wiege weise will logo leise wiese wiese wieso wald was wohl
+waage wiege agil wog was wieso wald waldig wilde kilo wieso
+jage wildes wild wald was sah sie wie log sie was wieso log
+isa die wiese lag weg wie weil sie wo sowieso lolö öle ölig
+loewe leise lose gosse gasse hose dose diese woge loge wade
+wash fish who is who was whose fool while whole who goes he
+goes she goes goal she saw dow kill as file off while whole
+false welsh wise whis joda jedi fish flash dog ale while we
+wie weise wieso kafka was las als da was fiel die hose lose
+die gosse sie wog je dose kaffee das was sie sah die kladde
+sie fiel da die wade kafka fade das die lade los es wog was
+kafka las die kladde als was fiel was wog das löss wege weg
+öle die waage das wog kafka las wie las kafka die kladde da
+wieso lass sie wog diese kasse affe wog die waage log sowas
+die wiege die waage das segel flog die woge die jagd so wie
+das wild floh es goss waldig eisig als die wiese wie willig</text>
+  </lesson>
+  <lesson>
+   <id>{3e39987a-5238-4579-92b9-bdd307f57971}</id>
+   <title>r und u</title>
+   <newCharacters>ru</newCharacters>
+   <text>frf frf juj juj juj frf fuj juf uuj uuj fuf uuf ruu uru ufr
+fra aua fau fra fru jau jar dau dar sau sua sar sra öuö rör
+ded kik juj ded frf ase ras juk kuj fuj ruf dei ser usl öre
+war wor rio rus ras ral rel ril rol ole oli koi oki dok rod
+eul eur edu sui seu weu leu keu heu geu feu deu aeu are dar
+frau ursl fahr wahr wehr wors wurs juss juhu uhus guss fuss
+raus haus laus daus wars waru daru karu saru laru jaru ufos
+gard hars kars lars jare jarr jeuh jerr kerr herr gerr gurr
+darauf klaus uwes rufe jeder rief alles rief sehr ruf werke
+darauf  dass klaus das rief wolle rolle solle kuddel suddel
+alles was das haus so liege der wille der frau der herr aus
+rief das alles was die seele jaja ferkel hase wolf uhu eule
+rehe jage wild gewehr erlege kugel wars kugel flog reh floh
+hase lief wolf rief war es der wolf der da so rief der hase
+luise las das auf was fiel so fiel der herr das war wohl so
+wer lief der rief regel gewehr soll der hase wohl war es da
+hallo wer war diese halli hallo hallöle hallali hirse hafer
+rede lies sage wage rufe lusiese sie war es kuss fred gelle
+wars ulli sage es liese war es dieses haus klaus rede ruhig
+ruhe wer da rief das lief so weil das haus ruhig lag es war
+wage es war dusselig es war eisig weil luise da war egal du
+will es kalle oder ole hose aus wolle kleid seidig haus aus
+löss fiel kafka was er rede ruhig lies es ruhig aller regel
+das regal das fiel der saal war leer wars fred wars ole was
+war luise wer ulli wer dario alles lief  als das regal fiel</text>
+  </lesson>
+  <lesson>
+   <id>{26c9b437-3f79-4c84-9772-852aa5e1983f}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>aufs dies jura soda hier ufer haus erde frau juda judo joda
+ruhe rase glas gras fass fuss ewig jahr rede klar aula fuhr
+lauf lief rauf rief dorf darf half hilf hole sole rose lose
+hose ferse hirse kriese kreise leise heise weise aus garaus
+weise welle welse ferse wohlig wasserglas wasserfass wildes
+frage gelage heraus wieso darf fasse wasser lasse oswald wo
+war da was  wieso war der das eilig wohlig ruhig eisig hals
+hilfe kalle saal solle wolle wille wild wilde wildes waldig
+wollo kohle sohle dohle gejohle logo sog flog woge jod hose
+jagd gewehr eule geheule keule kuhle soul klaue wohlig hole
+war er das  war sie das  wer war das wohl  wieso war es so
+weise leise reise heise kriese wiese ferse hirse garaus was
+also was soll das  weil das so sei  klar das war so ja das
+was so war  was soll er was will er wer will es wer soll es
+er soll was sie soll was sah er was so sah es aus was wohl
+sie wolle was so er sah wer will das da wer soll wer ursel
+alles war da was fiel das war gerade gefiel er jodele wolle
+walle walle falle gefiel gefahr gewehr wars wurde gulli
+woge flog sog sauge lauge klaue dau gerade gelage woge woge
+wage sage frage frau herr hausfrau hausherr heraus goldig
+falke eule uhu juhu also falls das so war  war es so klar</text>
+  </lesson>
+  <lesson>
+   <id>{8029cb35-c799-44dc-a820-4d89e245f36d}</id>
+   <title>t und z</title>
+   <newCharacters>tz</newCharacters>
+   <text>ft ft ft ft ft ft jz jz jz jz jz jz ft jz ft jz ft jz ft jz
+ftf jzj ftf jzj ftz jzt ftz jtz fzt jtz ftz fjt fjz fjt fjz
+dzd fzf dzf dzd dzd szs aza ata sts sts ktk tlt ltl ötö özi
+zög zöge zog log lok teig teil tide tage tag zarge zag zuse
+ast last hast fast hatz fatz latz katz katze satz satz jazz
+zu zur zeit ziel zahl ziel zeit teil teile heil feile zeile
+ziele ketzer satz heile zeile ziele teile tief tage lage zu
+dutze kartzer kratze kratzer latz garz jetzt kerze kurz zur
+zeit seit der zeit zeisig ziele zahl zahle dutze kratze tue
+zarge zulu taz fratz jazz katze kurzer kurz letzte lust las
+zog er gefasst lasst trage frage trug zur hetze falz fetter
+herr fette öle zola ritze der herr zog das heraus gezielter
+welt erde orte worte warte zarte witze werte harte karte zu
+der zug zog er flog sie lief es geht halt das  halt auf zoo
+wetter wettere watte lagert wagt es gelegt gelege fegt dies
+löss fiel saugt es auf fegt es auf liest er was  er las das
+wieso liest er das wer sagt etwas gesagt getagt gewagt erze
+löst es auf gelöst geht er wer wagt geht wer zaudert steht
+fast gewagt ist gesagt tag tue eis taut auf zahl das eis da
+kafka liest der titel ist das tier war da weil dies tier da
+war  fiel der krug alles lief  half  saugte sagte rief geht
+also daher wer geht geht jetzt er liest die kladde wer hört
+da zu er hör sie hört kafka liest zola elise fragt fritz da
+der was hörte wartete kafka sagt zu elise geht jetzt frau
+es stört wer da fragt die woge erstarrt alles stille
+elise geht es war kafkas wille sie geht als der krug grade
+fiel der saft lief der autor rief alles eilte dazu jetzt
+war ruh</text>
+  </lesson>
+  <lesson>
+   <id>{72c11609-d70c-4981-a0f0-20382f667e66}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>der die das wer wie was wo der die das wer wie was wo da so
+sehr steil sehr stark her klar sogar das der das die daraus
+dass das dass das es was klar sogar das dies wie es ist sag
+sah sehe sieh daraus woraus des dies dar wer wo was weg war
+der die das des dies diese dieser dar daraus der der dieses
+wer wieso war was wo woraus wort worte wolle wollte soll es
+sollte hole holte hals halt halte falte kalte altere walter
+walte wer will wer soll wer ist wer hat er hatte sie hat du
+du hast du sollst du willst du holst du sagst du sagtest es
+was sagt er da was hat er da was soll das da was will er da
+wer will das wer soll das wer hat das wer sagt das was sagt
+sie sie sagt was er hat er sagt dass du das sagtest was sie
+gesagt hat er sagte dass sie es ja gesagt hat gesagt hat er
+heute dass sie es gesagt hat sie tat wieso sie das tat weil
+sie das tat was er sagte ja er sagte was sie tat es tat weh
+heute hat er heu geharkt das gras war heu heutzutage hat er
+alles was er will jeder hat was er will jeder ist wer wieso
+er das ist was er ist ist klar weil er isst was er ist weil
+es so gut ist dass er es isst wo er es sieht dazu sagte sie
+dass er heute isst was sie will lege die karte auf die erde
+wo geht es zur see wie geht es heute geht es gut es geht so
+so wie das geht geht es gut gut gesagt der fluss das wasser
+löse das seil jetzt ist es so weit auf dieser welt sagt sie
+alles was sie weiss was weiss sie alles wer wusste das</text>
+  </lesson>
+  <lesson>
+   <id>{db1adb3c-a61a-440b-824a-9ebd3d915a35}</id>
+   <title>q und p</title>
+   <newCharacters>qp</newCharacters>
+   <text>qp pq qp pq qp pq qp qp pq qp qp pq pq qp pq qp qp qp pq pq
+qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu qu
+pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr pr
+op op op op op op op op op op op op op op op op op op op op
+qua quo qua quo qua qua quo que que qua quo que qui qui quo
+pra pra pro pro pro pro pre pri pre pra pro pra pre pri pru
+pod qua pas pes pis pid pad ped pre pfa pfe pfi pfo pal ple
+pli ple pla pek pik pak pok pei peu pou pol puk pfu pfr pfu
+faq fap dap kap lap laq leq geq seq que hap kap sap paw wap
+quer quar quap quir quet quel qual quod quep quer quar quas
+pros pras pris prid prod prad prol pril pral peil pfei pfah
+pfla pflo plat plas plea plig plik plag pleg plus plei plie
+quil quik quas wapp weap wipp lipp dipp sipp hipp kipp ripp
+qual real praktik praktiker pelle pille palle qualle quelle
+prall aufprall spiel gefiel progress proto prater prall pro
+prof prokura prokurist predator presse erpresser protze opa
+oper opera portal portiert apropos quelle portierte plagiat
+plage pflug egge quast quest top hopper plaque platz pfeile
+quoll geplagt gesagt gefragt preis preise leise quassele op
+oper rap rippe rappe ertappt getappt getippt tip wippe pril
+prasse presse klappe klappere geklappert depp stupid steppe
+stop stoppt alle er ist gestoppt sie isst er stopft tropfte
+das wasser tropft der wasserfall gefoppt poppig pope papier
+pappe lappe radikal gerappt gerafft das wasser quillt leise
+heraus aqua aquarell artist produkt palette preise pflaster
+paragraph perl protokoll sparpreis kapitalgruppe post paare
+quadrat quadrate quadratur des kreises philosoph pause quiz
+porto partie partei plato padua parkplatz professor pariser
+reprise die quelle des flusses die weserquelle europapokale</text>
+  </lesson>
+  <lesson>
+   <id>{256e9080-6c95-4d5f-8f22-81e83ae00813}</id>
+   <title>v und m</title>
+   <newCharacters>vm</newCharacters>
+   <text>vm mv vm mv fv jm mj vf fm vj jv mf vf gv jm hm mj mh mg vh
+vi va ve vr vg vi vu vo av ev iv uv ov uv me ma mo mi me mu
+vim vam mer mar mir mei mol mal mie mig mag mog meh muh mau
+vau vei vie vor vol val jav jov jev jam mai maj mer wem vim
+viel vase vers mehr maar mit voll pomm luv rom reim warm am
+vom wem dem ihm rum mull male maus mais mies muss kaum moos
+viel oval volk vater immer mehr immer mehr meister viele im
+vieles muss meise mehr mus meer viele klammer wieviel warum
+mitte mittel matte matt platt platte watte quaddel mast mus
+vertrag kaum verzug vermerk zuvor zuviel jemals vorteil ihm
+vorgemerkt vorgesagt vor dem saal im stall muster kohlmeise
+makulatur mogelei malerei verse ferse merke markiert markus
+mimik hervor herum vertreter wurde mehrere verkauf verglast
+fremde vögel vogel des vogels vögel klaus kommt aus amerika
+es stimmt die stimme der stummel verlade gestammelt stummer
+kummer fummel hummel summe summt krumm kram er kramt lahmer
+verkehr verkehrt herum umfahre marktplatz wer mag apfelmus
+lava magma mutter vater gemerkt vermerkt vermarktet versagt
+vermisst vermiest verklagt verzagt er verzog werktags werft
+er vertrat klaus vertrat fred vera vertritt maria uta reimt
+verse paul liest verse vom autor kafka goethes verse las er
+am mittag wer liest zolas werke daheim liest sie heim jedem
+etwas mit viel gehalt die werte qualle im meer klammtal die
+quasselstrippe warum streift der kater herum es ist so kalt
+die katze sitzt im haus herum sie miaut zu laut verwahre es</text>
+  </lesson>
+  <lesson>
+   <id>{77936aa4-ec36-4208-9cff-309273975b00}</id>
+   <title>n und b</title>
+   <newCharacters>nb</newCharacters>
+   <text>bn nb bn nb nb bn bn nb nb bn nb bn gn gn gb hb bh jb fn bf
+gn fn gb bg fb hb bh jb bj kb bk db bd sb bs ab ba lb bl bö
+öb bo bu bi no nu ni ne be br bw kb bk bt tb zb bz ln nl vn
+jnj jnj njn fbf bfb fbf bfb jnj njn bfj njf gbt bgt nju njh
+hun han kan fan bus und ohn pon ihn ein nie nun neu nah den
+din win pin uin ein nau bau bew beo boh bog bag big gib gab
+geb fab dab sab kab lab lan dan san wan han zen ren wen tun
+nein wein kein bein bier kein tier aber ober bald bild blei
+blau blue baff biff bahn sein wein wohn wien sinn fein kein
+neid pein rein eine leim fein huhn hahn nuss bann kann wann
+dann mann nein bett bass biss boss blau wald bald halt salz
+beginn gewinn allein negation blamage bagage tonnage gebete
+gebeten sagen fragen plagen nagen neige trinken singen sang
+klang fang den ball alle singen den song alles nur sinnlose
+singerei er hat viel zu tun die tante kommt zu ihm umziehen
+der umzug kostet viel geld seine einnahmen waren angemessen
+zu lies das manual sagt man rtm die informationen findet er
+dort zuerst wer liest lernt er sie liest viel uta lernt was
+man tun muss um arbeiten zu können könnte sein dass er nein
+sagt aber fragen ist besser als warten wen interessiert das
+alles was man lesen kann hilft beim lernen fahrt ski in den
+bergen beine festhalten er will reinen wein wann wird er es
+lesen kafka soll seine verse lesen alle wollen ihn hören da
+er so eine tiefe stimme hat eva strittmatter liest viel aus
+erbe ihres mannes aber die eigenen verse sind ebenso gut zu
+lesen  ist heine vergessen  keine ahnung  ist heine bekannt</text>
+  </lesson>
+  <lesson>
+   <id>{a2ad917d-fe44-4186-b68e-080d9096742e}</id>
+   <title>c und ,</title>
+   <newCharacters>c,</newCharacters>
+   <text>c, c, ,c dc cd k, ,k k, ,k cd dc ck kc d, ,d ck k, c, d, k,
+, , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
+ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck ck
+cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd, cd,
+dcd k,k dcd k,k dcd k,k dcd k,k dcd k,k dcd k,k dcd k,k dcd
+sch sch sch sch sch sch sch sch sch sch sch sch sch sch sch
+sch, sch, sch, ch, ch, ch, ch, ch, ch, ch, ch, ch, ch, sch,
+ddcc dcdc dccd cddc dcdc cddc dccd cddc cdcd ddcc ddcc dccd
+k,,k k,k, ,,kk k,k, kk,, k,k, k,k, ,k, k k,k, k,k, ,k,k ,kk
+ac ac ca ca acdc dcca ac acdc acdc ak,k ak,k ak,k k,ak k,,k
+fc cf fccf fccf fcf fcf cfc fcf fcf fccf cffc cffc cfcf cfc
+lcl lcl clc llcc clc clc lcl lcl cllc lach lach wache mache
+ach auch doch dach ich mich sich nicht euch ich welch solch
+solche molche welche jene, welche der, die, auch, wenn nun,
+da sobald, wenn, dann gerade, als je mehr, desto besser, so
+wie du,  na dann,  ich bin, glaube ich  wer glaubt, der ist
+dick lack leck auch dich doch deck lech dach loch doch noch
+buch fluch such versuch betrug falsch pflicht verzicht auch
+versuchung besuch tuch tauche seuche verflucht gedichte chi
+eva liest gedichte die ich schon lange kenne, doch schön
+sind sie doch  auch, wenn der saal nicht voll ist, wird er
+seine verse lesen kommt das komma da hin, oder da hin  ich
+will gerne kommes setzen, doch ich mache das sicher immer
+falsch  na schön, wenn es sein muss, dann auch mit kommata
+schick, schlank, schnick, schnack, schön, schade, schwer,
+schlank, schön, schöner, schneller, zu schnell, schriftlich
+hilfreich ist, wenn man die regeln zur kommasetzung kennt
+auch wenn der rechner streikt, musst du die ruhe bewahren</text>
+  </lesson>
+  <lesson>
+   <id>{3999e8df-dc1c-4898-9718-b6f4550dbe6e}</id>
+   <title>x und .</title>
+   <newCharacters>x.</newCharacters>
+   <text>x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x. x.
+x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x x.x
+xx.. xx.. xx.. xx.. xx.. xx.. x.. xx.. xx.. xx.. xx.. xx..
+axa ö.ö axa ö.ö axa ö.ö axa ö.ö axa ö.ö axa ö.ö axa ö.ö axa
+axt exe axt exe ol. ol. mol. mal. mel. en. en. en. ein. en.
+fax max axt axt. fax. max. a..a s..s d..d f..f j..j k..k xx
+exe exa ex dax sax fax nux lux mux  tux exakt lexikon lexik
+tux. taxi text textur taxen taxator taxameter saxophon lexx
+tux. tex. exakt. explosion. exorbitant. mexiko. exempel. ex
+tux luxemburg. fix. fax. fixum. fixieren. extrakt. extra.
+tux nixe verflixt fixen ein problem fixen. fix. max. lol l.
+tux. den text revidieren. xerxes, der perserkönig war nicht
+in luxemburg, sagt er. felix lebt nicht am existenzminimum.
+linux linux linux linux linux linux linux linux linux linux
+tux tux tux tux tux tux tux tux tux tux tux tux tux tux tux
+taxi fahren ist toll. linus begann mit linux als student.
+auch heute arbeiten viele studenten an der entwicklung von
+software, die unter linux laufen soll. exakt nach dem start
+blieb der wagen stehen. der fahrer schloss erstmal alle
+fenster. er war programmierer, doch er kannte linux nicht.
+nach der explosion war der saal leer. kafka las erstmal die
+verse nicht mehr weiter, bis sich die aufregung legte. text
+der text aus dem lexikon ist nicht ausreichend. deshalb las
+sie auch noch die entsprechenden seiten im internet. ende.</text>
+  </lesson>
+  <lesson>
+   <id>{bb83a31a-2456-4491-8b0d-6a3195f06daf}</id>
+   <title>y und -</title>
+   <newCharacters>y-</newCharacters>
+   <text>y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y- y-
+y- y- y- y- y- y- y- -y -y -y -y -y -y -y -y -y -y -y -y -y
+ö-ö ö-ö ö-ö ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö- ö-ö -ö-
+aya yay aya yay aya aya yay yay aya yay yay aya yay yay aya
+fsdaya jklö-ö fsdaya jklö-ö fsdaya jklö-ö fsadya jkl-ö-ö a-
+sys l-l sys l-l sys l-l sys l-l sys l-l sys l-l sys l-l sys
+dyn k-m dyn k-n dyn k-n syd ky- syf k-d syg k-h syn jn- hay
+asyl asyl sylt sylt type type asyl sylt sys- teme syn- oden
+bay- ern ana- lyse hygiene dynamo gymnastik lyzeum ly- zeum
+bayern analyse hy- giene dy- namo gym- nastik synode system
+yeti - yak - synthetisches - synergetisch - sylt asyl typen
+yast - yet another setup tool
+sympathisch sympathie hypothek lyon
+als der pc noch nicht das standard-schreibmittel war, und
+förmliche texte in die schreibmaschiene gehackt wurden,
+stellte man mittels bindestrich sicher, dass der rechte
+rand relativ einheitlich wurde. die wörter wurden nach sil-
+ben getrennt. der bindestrich kann aber auch zwischen zwei
+hauptwörtern stehen, um diese zu verbinden, wie in
+kaffee-ersatz. wer sich mit sport auskennt, orientiert sich
+an den punktetabellen, wenn er die ergebnisse verschiedener
+mannschaften vergleichen will. dort wird der bindestrich
+verwendet, um zu zeigen, wer gegen wen spielt.
+    herta bsc - fortuna köln
+in verbindungen wie gertrud-meier-platz oder
+nord-ostsee-kanal wird der mittelstrich ohne leerzeichen
+verwendet. als gedankestrich taucht er auf, wenn man ein
+paar stichworte logisch voneinander absetzen möchte.</text>
+  </lesson>
+  <lesson>
+   <id>{d357879e-b9c9-4f34-b556-248a4a413c2c}</id>
+   <title>ü und ä</title>
+   <newCharacters>üä</newCharacters>
+   <text>öüö öüö öüö öüö öüö öüö öüö üöü üöü üöü üöü öüö üöü öüö üöü
+öäö öäö äöä äöä äöä öäö öäö öäö äöä öäö öäö öäö öäö äöä äöä
+äüä äüä äüä äüö äüä üäü üäü öüö öäü üäü üäü öäü öäü üöä äüö
+öüä öüä öüä öäü öäü üäö äüö öäü öüä äöü üöä äüö öäü öäü üöä
+möhre mähre fähre führe würde könnte müsste hätte täte gäbe
+wäre sähe läge säge wäge mägen lägen lügen rügen trügen übt
+geübt gepflügt - übt bemüht, berühmt, gerühmt, gesühnt über
+flögen die vögel über die meere
+und sähen die mähre,
+gefolgt von dem bären,
+dann würden sie stürzen hinab auf den bösen,
+zum töten bereiten, verfressenen räuber,
+ihn zausen und hacken,
+mit schnäbeln zwacken,
+ihn stechen und jagen
+bis er zög von dannen
+mit hungrigem magen...
+gesöff, krüge, züge, betrügen, gähnen, erwähnen, gröhlen,
+gesänge, gelänge, begänne, zöliakie, zünglein, zündhölzer,
+gezündet, verzückt, glücklich, verrückt, bedrückt, rücken,
+genügend, berühren, verführen, verfahren, für wen, wofür,
+dafür, die tür, das gebälk, etwas gebäck, äpfel, überlegen
+übermütig, gäbelchen, geflügel, gebügelt, verbrüht, bäume,
+verprügelt, die äste, das geäst, die jäger, flöhe fliehen,
+konfitüre, marmelade, breitmaulfrösche ängstigen sich vor
+störchen, die lärche, die lerche, schübe, zöge, träge, er-
+träglich, nachgeäfft, geschäft, kräftig, beschäftigt, über
+von früh bis spät, qualitätsartikel zur verfügung stellen.
+die fläche der europäischen gemeinschaft beträgt...
+vorwärts und rückwärts gelesen ergäbe der text dieser lek-
+tion keinen sinn.
+...ach so, vögel ärgern keine bären.</text>
+  </lesson>
+  <lesson>
+   <id>{77bbbd9e-9945-4b36-8b3f-e50a741a0e24}</id>
+   <title>Capslock</title>
+   <newCharacters>ASDFJKLEIGHWORUTZQPVMNBC;X:Y_</newCharacters>
+   <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
+LINKS GESCHRIEBEN. DABEI BLEIBEN AUCH PUNKT UND KOMMA, SO-
+WIE BINDESTRICHE ERHALTEN. IM FOLGENDEN BENUTZEN WIR DIESE
+TASTE NICHT MEHR, DA DAMIT NICHT DER UEBLICHE SCHREIBALLTAG
+BEWAELTIGT WIRD. DIE BEIDEN ANDEREN UMSCHALTTASTEN WERDEN
+JEWEILS VON DEM KLEINEN FINGER DER HAND BENUTZT, DIE EINEN
+KUERZEREN WEG HAT. DAS IST IN DER REGEL DIE HAND, DIE FUER
+DEN FOLGENDEN BUCHSTABEN NICHT BENOETIGT WIRD. DAMIT IST ES
+DANN AUCH MOEGLICH, ALLE ZEICHEN DER ZWEITBELEGUNG ZU TIP-
+PEN, ALSO AUCH DAS FRAGEZEICHEN.
+DIE ERSTE UEBUNG WIRD FUER DIE UMSCHALTTASTE LINKS, DIE ZWEI-
+TE FUER DIE UMSCHALTTASTE RECHTS SEIN. DANACH WIRD GEMISCHT.
+ACHTUNG, DIE FESTSTELLTASTE MUSS NUN NOCH EINMAL BETAETIGT
+WERDEN. jetzt sollte das capslock-lämpchen aus sein.</text>
+  </lesson>
+  <lesson>
+   <id>{11b17b71-708a-4439-8471-4865c0bc7640}</id>
+   <title>Grossbuchstaben (links)</title>
+   <newCharacters></newCharacters>
+   <text>Ja Ja Ja Ja Ja Ja Ja Ja Ka Ka Ka Ka Ka Ka Ka Ka La La La La
+Ma Ma Ma Ma Ma Ma Za Za Za Za Ha Ja Ja Ha Ha Za Ha Ha Ha Ha</text>
+  </lesson>
+  <lesson>
+   <id>{e0352f14-83af-4c0a-98a5-6806fdf05d78}</id>
+   <title>Grossbuchstaben (rechts)</title>
+   <newCharacters></newCharacters>
+   <text>Fö Fö Fö Fö Fö Fö Fö Fö Fö Fö Gö Gö Gö Gö Gö Bö Bö Bö Bö Bö
+Wö Wö Wö Wö Rä Rä Rä Rö Rö Gä Gä Fä Dä Sä Vä Vä Vö Sö Dä Dä</text>
+  </lesson>
+  <lesson>
+   <id>{d3aa1c68-3af6-432d-93ed-262cfc611394}</id>
+   <title>Grossbuchstaben</title>
+   <newCharacters></newCharacters>
+   <text>Kalk Kalk Wald Wald Rand Sand Hand Land Verstand Klang Tank
+Wort, Ort, Hort, Gehrung, Nahrung, Klarheit, Vergangenheit,
+Art, Hahn, Mahnung, Lohn, Sohn, Hohn, Keim, Krönung, Krone,
+Leine, Leim, Heim, Geheimnis, Verbannung, Bekanntmachungen,
+Training, die Träne, der Trost, trostlos, das Los, Losungen
+Die folgenden vier Lektionen werden aus ganz normalen Text-
+übungen bestehen, danach geht es mit den Sonder- und Zahl-
+zeichen weiter.</text>
+  </lesson>
+  <lesson>
+   <id>{68e54c24-91f9-4b7b-b5d1-40376cc55898}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>Linux - meine Freude
+Es war ein ganz normaler Tag. Alles war wie immer. Ich kam
+aus der Schule und setzte mich an den PC. Homepage verwal-
+ten, Schülerdaten aktualisieren, Unterricht vorbereiten,
+nebenbei ein paar MIDI-Files bearbeiten und E-Mail lesen.
+Mein Windows-PC ist eben gut ausgestattet. Doch dann ging
+es wieder los. Das Abholen der E-Mail dauerte satte drei
+Minuten. Als ich dann im Postfach sah, dass da genau eine
+nicht einmal sehr lange Mail reingekommen war, stand für
+mich der Umstieg fest. Linux musste her. Ich wusste nicht,
+was da auf mich zukommen würde, doch das war mir egal. Es
+konnte nur noch besser werden. Kostenlose Software, gute
+Internetanbindung, arbeiten auf verschiedenen Konsolen,
+es klang vielversprechend. Dann ging es los. Erwartungs-
+voll packte ich mein SuSE-Paket aus und begann sofort mit
+der Installation. Innerhalb eines Tages hatte ich alles
+wichtige, also auch die ISDN-Konfiguration, fertig.
+Einiges an meiner Hardware war problematisch, z.B. bekam
+ich die Soundkarte nicht gleich voll einsatzfähig, aber da
+ich nun sowieso erstmal mehrere Gigabyte an Software zu
+erkunden hatte, störte mich das weniger.
+Eine vernünftige Mailkonfiguration habe ich erst Wochen
+später eingerichtet, doch für den Anfang tat es Netscape.
+Inzwischen arbeite ich seit zehn Monaten mit Linux, und ich
+habe keinen Tag davon bereut. Ich habe wieder angefangen,
+Bücher zu lesen, und meine Fähigkeit, mich auf ein Problem
+zu konzentrieren, statt einfach drauf los zu arbeiten, ist
+irgendwie auch besser geworden. Dennoch gibt es noch sehr
+viel zu lernen.</text>
+  </lesson>
+  <lesson>
+   <id>{abe1fad2-1209-4c46-8ef4-5e0dcfa1f7ab}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>Das Internet
+
+Das Internet ist in aller Munde. Alle wollen daran teil-
+haben, viele wollen daran verdienen. Selbst Boris ist, wie
+jeder weiss, inzwischen drin. Wie aber alles ganz genau be-
+gann, wissen die wenigsten.
+In den späten sechziger Jahren begann die Advanced Research
+Projects Agency des amerikanischen Verteidigungsministeri-
+ums, kurz ARPA genannt, mit der Finanzierung eines experi-
+mentellen Wide Area Network, kurz WAN, um damit wichtige
+Forschungsorganisationen in den Vereinigten Staaten von Ame-
+rika zu verbinden. Dieses Computernetz wurde ARPAnet ge-
+nannt. Das ursprüngliche Ziel bestand in der Freigabe teue-
+rer und knapper Rechnerressourcen an Auftragnehmern der Re-
+gierung. Von Anfang an wurde das Netzwerk von den Benutzern
+aber auch für die Zusammenarbeit, also der gemeinsamen Nut-
+zung von Dateien und Software, dem Austausch von E-Mail und
+der gemeinsamen Entwicklung und Forschung über gemeinsam ge-
+nutzte entfernte Computer, verwendet.
+In den frühen achtziger Jahren wurde über eine Protokoll-
+Suite nachgedacht. Es entstand das Transmission Control Pro-
+tocol, Internet Protocol. Dieses wurde im ARPAnet schnell
+Standard. Mit der Aufnahme dieses Protokolls in das populäre
+BSD Unix-Betriebssystem der University of California at
+Berkeley begann die Demokratisierung von Netzwerken. Es wur-
+den zunächst Universitäten verbunden, doch es dauerte nicht
+lange, bis die in ein lokales Netzwerk eingebundenen Compu-
+ter über das ARPAnet kommunizieren konnten. Das Netzwerk
+wuchs und wuchs. Waren es anfangs noch eine Handvoll Hosts,
+so wurde es schnell ein Netz von Zehntausenden von Hosts.
+Das ursprüngliche ARPAnet wurde zum Rückgrat des Internet.</text>
+  </lesson>
+  <lesson>
+   <id>{5624e3c0-2e09-4e38-b514-60a88777046e}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>A. Kalbitz
+Lesung
+
+Samstagabend, Feierabend. Beine hochlegen, abschlaffen,
+das miese Fernsehprogramm über sich ergehen lassen, schla-
+fen. Ein Leben lang berieselt von den Impressionen irgend-
+welcher Fernsehredakteure, Krankenhausserien - Ein Muss,
+zumindest, seit Dr. Brinkmann in der Schwarzwaldklinik zu
+Weltruhm vor der Aerzteschaft der Fernsehwelt gelangte.
+Aber da war doch noch was. Da gab es noch andere Möglich-
+keiten der Freizeitgestaltung. Beruhigt lehne ich mich zu-
+rück und merke kaum, wie mir die Augen zu fielen.
+Es ist höchste Zeit. Gleich beginnt die Lesung, und unser-
+eins sitzt noch im Taxi und sucht die Eintrittskarten.
+Ich bin absolut kein Kafka-Freund, aber es ist mal was an-
+deres.
+Endlich - wir betreten den Saal und erwischen schnell noch
+einen Platz in der letzten Reihe. Es wird dunkel. Nur vorn
+auf der Bühne strahlt ein greller Scheinwerfer auf das et-
+was zu kleine Lesepult. Applaus. Von der Seite tritt ein
+Mann herein, den ich nicht kenne, der aber als Autor vor-
+gestellt wird, und der sein neuestes Werk auszugweise vor-
+lesen soll. Er setzt sich, räuspert sich noch einmal und
+blättert bedächtig in seinem Buch. Bei einem Lesezeichen
+hält er inne, überfliegt die Seite, wirft noch einen Blick
+in den Saal, als wolle er sagen - Achtung, es geht gleich
+los - und atmet tief ein, um zu lesen, als plötzlich ein
+lautes Krachen den Saal erfüllt. Das war kein Schuss,
+dachte ich gleich. Derartige Geräusche kennt man ja aus
+den Actionfilmen im Fernsehen. Der Stuhl eines Gastes kann
+auch nicht zusammengebrochen sein. Dafür war das Geräusch
+zu laut...</text>
+  </lesson>
+  <lesson>
+   <id>{ffc77c76-9443-4d35-a618-6da92146e42a}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>A. Kalbitz
+Was hat...
+
+Was hat uns so verblendet,
+dass alles was wir schaffen,
+gemessen wird an anderem,
+verglichen wird, getaxt, bewertet
+und am Ende nicht verwendet.
+Was hat uns nur so abgestumpft,
+dass wir nicht erstmal sehen,
+warum da einer etwas tut,
+ob er es schafft, noch Hilfe braucht,
+am Ende wirds gemeinsam gehen.
+Was hat die Menschen kalt gemacht,
+dass mancher gleich darüber lacht,
+wenn einem mal ein Missgeschick
+die Röte auf die Wangen malt, er sich blamiert,
+verletzt dann einfach resigniert.
+Was hat verdammt noch mal
+der Autor sich dabei gedacht,
+uns unser Dasein zu vermiesen,
+mit dummen Texten, Meinungen und ungeschickt
+gebastelten Gedichten, wie diesem.</text>
+  </lesson>
+  <lesson>
+   <id>{51ae34a8-bc0b-4258-ae38-67af011e123e}</id>
+   <title>&lt; und ></title>
+   <newCharacters>&lt;></newCharacters>
+   <text>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>&lt;>
+&lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; >  &lt; > &lt; > &lt; > &lt; > &lt; > &lt; > &lt; >
+>&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt; >&lt;
+&lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt; >> &lt;&lt;
+Die Zeichen &lt; und > werden als Operatoren benutzt.
+&lt; ist der Eingabeoperator und > ist der Ausgabeoperator.
+Mit ls > dateiname kann ich unter Linux eine Dateiliste
+mit allen Dateien des aktuellen Verzeichnisses anlegen.
+Will ich eine Datei nicht überschreiben sondern Daten
+anhängen, benutze ich >> als Operator.
+In HTML-Quellen spielen die Zeichen &lt; und > eine wesent-
+liche Rolle. Alle Tags, gesprochen: Tägs, werden zwischen
+&lt; und > eingeschlossen.
+Beispiele: &lt;html> &lt;head> &lt;body> &lt;a href... &lt;img src...
+&lt;table> &lt;hr> &lt;br> &lt;p> &lt;li> &lt;ol> &lt;ul>
+Auch in der XML-Syntax werden diese Zeichen verwendet um
+die Tags von den normalen Texten abzugrenzen.
+Häufig werden die Zeichen auch verwendet, um Unterschiede
+darzustellen. Daher stammen auch die Bezeichnungen:
+ist grösser als - für > und ist kleiner als - für &lt;.
+In ASCII-ART-Manier lassen die Zeichen sich ebenfalls gut
+verwenden. Beispiele dazu wird es in einer der Abschluss-
+lektionen geben.
+&lt;->&lt;-&lt;>->&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;-->>-&lt;&lt;->>-&lt;&lt;--->>-->>-&lt;&lt;->>-&lt;&lt;>></text>
+  </lesson>
+  <lesson>
+   <id>{3da5a63b-f5f6-40c0-a5b4-a99ce1cb73d8}</id>
+   <title>1,!, ; und ?</title>
+   <newCharacters>1!;?</newCharacters>
+   <text>1! ? 1! ? 1! ? 1!? ?1? !1?! 1!? ??!!11 !!1??!!1
+.!? sind Interpunktionszeichen, die im Deutschen dazu ver-
+wendet werden, um zu signalisieren, dass es sich bei einem
+Satz um eine normale Aussage, einen Ausruf oder eine Frage
+handelt. Wer war das? Wieso machst Du das? Wo kommst Du
+denn her? Das alles sind typische Fragen, bei denen der
+Leser sofort weiss, wie er sie betonen muss.
+Komm her! Sei leise! Hallo! Achtung! Das wiederum sind, so
+sagt das Interpunktionszeichen, Ausrufesätze. Sie werden
+vom Leser ebenfalls deutlich anders gesprochen, als Frage-
+sätze oder normale Sätze, die mit dem Punkt abgeschlossen
+werden.
+Auf der Tastatur werden !?.&lt;> als Sonderzeichen betrachtet,
+was eigentlich nur bedeuten soll, dass sie von den normalen
+Buchstaben unterschieden werden müssen. Ebenfalls unter-
+schieden werden die Zahlzeichen, wie z.B. die 1. Aus Zahl-
+zeichen werden Zahlen gebildet:
+1 steht für eins, 11 für elf, 111 für einhundertundelf.
+Verwendet man das Wort ein in Texten, wird es für gewöhn-
+lich als unbestimmter Artikel verwendet. Das lässt sich
+aber manchmal auch anders interpretieren: Werden kleine
+Mengen in Texten verwendet, schreibt man dafür häufig die
+Zahlwörter ein, zwei oder drei. In Aufzählungen oder bei
+der Festlegung von Reihenfolgen hingegen benutzt man gern
+die Zahlzeichen: 1.; 1. Platz; 1. Durchlauf; 1. Datensatz.
+In HTML wird das Ausrufezeichen übrigens verwendet, um
+Kommentare in die Quellen einzufügen, die dann später in
+der Internetseite nicht zu sehen sind.
+&lt;!-- Dies ist ein Kommentar in einem HTML-Quelltext -->
+Willst Du noch mehr über die Bedeutung von ! und ? wissen?</text>
+  </lesson>
+  <lesson>
+   <id>{bdc9d888-3bf5-4785-ad07-6fb6225c169c}</id>
+   <title>5, %, 8 und (</title>
+   <newCharacters>5%8(</newCharacters>
+   <text>((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+58% liest man als achtundfünfzig Prozent. Prozent bedeutet
+von Hundert.
+Berechne:
+58% von 1111 EUR.
+88% von 888 kg Mehl.
+%-Werte werden benötigt, um den Anteil an einem bestimmten
+Grundwert zu berechnen.
+In Perl wird das %-Zeichen benutzt, um einen Hash festzu-
+legen. %namen wird dann eine z.B. zweispaltige Liste mit
+Vor- und Nachnamen zugeordnet, die dann in dem Programm
+ausgelesen werden kann.
+In der Bash ist % ein Operator für Modulus-Operationen.
+Das entspricht dem Rest bei einer ganzzahligen Division.
+((((((((((((((((((((((((((((((((((((((((((((((((((((((((((</text>
+  </lesson>
+  <lesson>
+   <id>{03df6991-bef7-4bf8-96b2-98dac8522158}</id>
+   <title>2, 6, &amp;, 7 und /</title>
+   <newCharacters>26 &amp; 7 /</newCharacters>
+   <text>1 5 8 6 7 7 6 5 8 1 67 76 58 85 158 178 167 187 585 151 58
+6 7 &amp; / 16/8 7/5 1/7 6/8 5/8 6/5 8/8 5/5 7/7 6/7 1/7 1/6 &amp;
+Internet &amp; Co.; Max Meier &amp; Söhne; Grunewald &amp; Co. KG
+Das Kaufmanns-und &amp; begegnet uns bewusst oder unbewusst recht
+häufig. Aber es wird nicht nur in Firmenbezeichnungen ver-
+wendet.
+In der Bash dient das Kaufmanns-und als Operator.
+Ein &amp; bedeutet bitweises UND und
+ein &amp;&amp; bedeutet logisches UND.
+In 1>&amp;2 wird die Standardausgabe eines Befehls auf die
+Standardfehlerausgabe umgeleitet.
+Der Slash / wird häufig als Zeichen für die Division ver-
+wendet. Unter LINUX ist es ein wesentliches Zeichen für
+die Organisation der Verzeichnisstruktur. So ist /
+das Wurzelverzeichnis, von dem aus in Unterverzeichnisse
+verzweigt wird. /boot, /root, /opt, /usr, /var, /tmp,
+/etc, /bin sind Standardverzeichnisse in dieser Struktur.
+In HTML wird der Slash benutzt, um Tags zu schliessen.
+&lt;html>
+&lt;head>&lt;title> Homepagetitel &lt;/title>&lt;/head>
+&lt;body>
+Seitentext inklusive weiterer HTML-Befehle.
+&lt;/body>
+&lt;/html>
+Dies ist eine gültige Grundstruktur einer HTML-Seite mit
+sehr wenig Inhalt.</text>
+  </lesson>
+  <lesson>
+   <id>{d002e8c0-6db1-4c4e-be34-26ffe7f2c5f9}</id>
+   <title>4, $, 9 und )</title>
+   <newCharacters>4$9)</newCharacters>
+   <text>(49$) (49$) (48$) (57$) (56$) (78$) (89$) (18$) ($81) (51$)
+Das $-Zeichen steht für Dollar. Jedem ist klar, dass dieses
+Zeichen für eine Währung steht, die den Weltmarkt beherrst.
+Dies soll jetzt kein Text über Umrechnungskurse werden. Die
+wechseln ja doch regelmässig. Stattdessen wollen wir auch
+für dieses $-Zeichen nach weiteren Bedeutungen fahnden.
+Zunächst die Bash:
+$ steht für Variablen- oder Befehlssubstitution.
+Beispiel für Befehlssubstitution: Befehl1 $(Befehl2)
+Beispiele für Variablensubstitution können hier leider noch
+nicht geschrieben werden, da dabei die geschweifte Klammer
+verwendet wird.
+Und nun Perl:
+In Perl lassen sich mit dem $-Zeichen ganz einfach Variablen
+festlegen. Mit
+chomp($eingabe);
+wird das Newline-Zeichen am Ende der Eingabe entfernt.
+Dabei wird der Inhalt der Variablen $eingabe bereits ausge-
+lesen und verarbeitet.</text>
+  </lesson>
+  <lesson>
+   <id>{8cb0ef48-00da-4a89-bbe6-7e59772d62bc}</id>
+   <title>3, §, 0 und =</title>
+   <newCharacters>3§0=</newCharacters>
+   <text>§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30=§30
+134567890 098765431 !§$%&amp;/()= =)(/&amp;%$§! 890 60 470 160 3140
+
+§ - Paragraph
+Dieses Zeichen steht für Recht und Ordnung auf der ganzen
+Welt. Sie kennen das:
+§1 Jeder macht seins.
+§2 Wenn keine anderen Paragraphen entgegenstehen, gilt §1!
+
+Selbst das Wort Paragraphenreiter kommt nicht von ungefähr.
+Schliesslich sieht § aus wie ein Seepferdchen.
+
+Das = (in Worten: ist gleich) steht ebenfalls für Gerech-
+tigkeit. Eine Gleichung ist nur dann eine wahre Aussage,
+wenn die Kräfte (Terme?, Werte?) auf beiden Seiten gerecht
+verteilt sind.
+ 2-1=1
+ 4-2=2
+ 91347-34567=56780
+ f(x)=3x-7
+In der Programmierung nimmt man mit = oder == eine Zuwei-
+sung vor.
+ $eingabe = &lt;STDIN>
+
+Schlimmstenfalls lässt sich das = aber schön als Trennzei-
+chen für Textabsätze verwenden.
+</text>
+  </lesson>
+  <lesson>
+   <id>{0d0ffc2e-661d-49c2-a0f4-f970858e33b7}</id>
+   <title>"</title>
+   <newCharacters>"</newCharacters>
+   <text>ALLES WAS HIER STEHT IST, MIT FESTGESTELLTER UMSCHALTTASTE
+1234567890 0987654321 20 21 22 23 24 25 26 27 28 29 2222 2
+"Dies ist eine Aussage!"
+Die "Gänsefüsschen" werden in der Schriftsprache verwendet,
+um wörtliche Rede deutlich zu machen. So kann man zum Bei-
+spiel ab sofort nicht nur sagen, dass Kafka darüber etwas
+las, wie man etwas sagt, sondern man kann nun auch schrei-
+ben Kafka las:"Ich sage ihnen mal wie man das sagt!"
+Darauf antwortete das Publikum:"Nee, lass mal!"
+Wie in "Gänsefüsschen" werden die "Gänsefüsschen" manchmal
+auch dazu verwendet, um eine nicht ganz korrekte aber ge-
+läufige Bezeichnung zu verwenden. Schliesslich sehen es
+die Gänse nicht gern, wenn man ihre Füsse mit einfachen An-
+führungsstrichen vergleicht.
+Eine Aussage im Computerbereich ist ähnlich einer Aussage
+im literarischen Bereich häufig in Anführungsstriche zu
+setzen. echo "Dies ist ein Text!" bringt in der Bash
+Dies ist ein Text!
+zum Vorschein. Eingebaut als Warnungen in Scripte in der
+Form
+echo "Konnte den User nicht anlegen!"
+Führt das zu sinnvollen Ausgaben, die zur rechten Zeit
+das richtige sagen.</text>
+  </lesson>
+  <lesson>
+   <id>{405ff01c-a162-4ad7-b12b-e5066911c2ef}</id>
+   <title>+, *, # und '</title>
+   <newCharacters>+*#'</newCharacters>
+   <text>+*#' +*#' +'*# #*#' *#' #+'+ +##+ '++' ++'#*# #+#+#+#+* #*
+  3+3=6
+  3*3=9
+ #include &lt;gtk.h>
+ # dies ist ein Kommentar
+ ## dies auch
+c++ ist eine objektorientierte Programmiersprache.
+g++ ist nichts anderes.
+Berechne!
+  3+3+3+3=
+  3*3*3*3=
+  9*9*9*9=
+  9+9+9+9=
+Rechenoperationen in der Mathematik:
+  + ist das Zeichen für die Addition.
+  * ist das Zeichen für Multiplikation.
+'Hier steht etwas drin!'
+In literarischen Texten wird das Zeichen ' häufig dafür
+verwendet, um eine wörtliche Rede: ("Du hast doch gesagt,
+dass ich den Film noch zuende sehen darf.") von Gedanken,
+die nicht ausgesprochen werden ('Immer muss ich um acht
+ins Bett! Das ist echt unfair!') zu unterscheiden.
+So kann man sehr sinnreiche Texte formulieren, in denen
+man genau darauf achten muss, was gesagt und was nur ge-
+dacht wurde.
+"Ein schönes Kleid haben sie heute wiede an, Frau Meier!"
+'Den Fummel haben sie wohl aus dem Schlussverkauf, oder?'</text>
+  </lesson>
+  <lesson>
+   <id>{06ba9efd-8525-4f69-b7aa-397745e71c75}</id>
+   <title>_, ^, °, ' und `</title>
+   <newCharacters>_ ^ ° '  `</newCharacters>
+   <text>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° °
+' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '
+` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` ` `
+Heute werden Tageshöchsttemperaturen von 21°C erwartet.
+Bei 0°C liegt der Gefrierpunkt des Wassers.
+Wasser siedet bei 100 °C.
+Das ^ ist ein Sonderzeichen, das z.B. beim Programmieren
+in C++ das Bit-Exclusive-ODER XOR repräsentiert.
+^ ist dort also ein Operator.
+` (Backquotes) werden in Perl wie in einer Shell dazu
+verwendet, Ausgaben eines Programms als Daten zu über-
+nehmen.
+$jetzt = "Die aktuelle Uhrzeit ist ".`date`
+foreach $_ (`who`) ...</text>
+  </lesson>
+  <lesson>
+   <id>{19b122b4-7b9f-4c4d-9d86-8896d1119680}</id>
+   <title>Zwischenübung</title>
+   <newCharacters></newCharacters>
+   <text>Sitzung
+frei erschwindelt von A. Kalbitz
+
+"Hast du dir das auch gut überlegt?" Rainer schaute zwei-
+felnd auf Felix und man sah seinen Augen an, dass da nicht
+nur Zweifel, sondern auch besseres Wissen in dieser Frage
+lag. "Aeh, ich dachte, ja,", kam Felix zögerlich mit der
+Sprache raus, "wenn ich schon Linux auf dem Schulnetz fah-
+re, dann sollen auch die Schüler die Möglichkeit haben,
+mit Linux zu arbeiten." Rainer sah immer noch skeptisch
+aus. "Dann bist Du aber erst einmal der Einzige, der das
+benutzen und den Schülern verständlich machen kann."
+"Das ist schon klar, aber ich bin guter Hoffnung, das
+das System so nach und nach überzeugt!" -
+"Und die Kollegen?" - "Bekommen eine Schulung, wenn der
+Bedarf da ist." - "Na gut, wenn Du glaubst, dass das so
+machbar ist, dann gehen wir es an, ich bezweifle nur,
+dass du damit viele erreichen wirst." Felix grinste nun
+breit übers ganze Gesicht: "Warten wir es doch ab."
+Nun sah er aus, als hätte er ein As aus dem Aermel gezogen.
+"Wir haben bisher niemanden dazu überredet, sich einen
+Computer "anzutun", und selbst unter den älteren Kollegen
+wird die Zahl derjenigen, die diese Technik akzeptieren
+nun doch immer grösser, warum soll sich dass denn mit dem
+interessantesten System, das die Branche zu bieten hat
+nicht bald ähnlich einstellen. Letztendlich setzt sich die
+Neugierde doch durch." Nun grinste auch Rainer, "Na gut,
+ich kaufe mir schon mal für meinen privaten Rechner eine
+neue Festplatte, damit ich dann mitreden kann, wenn es
+losgeht." - "Siehste! Es wirkt schon!" ;-)</text>
+  </lesson>
+  <lesson>
+   <id>{9637c6f2-f6c7-45d3-b0c0-1af06897375f}</id>
+   <title>², ³, {, [, ], }, \, @, ~ und |</title>
+   <newCharacters>{[]}\@~|</newCharacters>
+   <text>Drittbelegung: Das sind die Zeichen { [ ] } \ @ ~ |
+"geschweifte" und "eckige" Klammern:
+  {} []
+  y={3x*[2x-1]-4}
+  if test "${!arg_num}" = "-v"; then
+    verbose on
+"Backslash":
+  \ wir verwendet, um eine Befehlszeile in einem
+  Script auf der foldenden Zeile weiterzuführen.
+"Klammeraffe":
+  @ kommt in E-Mailadressen vor.
+  moritz@musterdomain.de
+  user@localhost
+  @ Wird z.B. in Perl für zur Festlegung von
+  Arrays oder als Feldplatzhalter verwendet.
+  @nonsens("Quatsch","Witz","Blödsinn")
+  @&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+"Tilde":
+  ~ dient z.B. standardmässig als Kennzeichnung für
+  Sicherheitskopien, die von ln angelegt werden.
+"Pipe":
+  | wird als arithmetischer Ausdruck für bitweises
+  ODER z.B. in der bash verwendet.
+  || hingegen kennzeichnet ein logisches ODER
+  |= ist ein ODER mit anschliessender Zuweisung
+  Mit | lassen sich Ausgaben eines Befehls in
+  andere Anwendungen umleiten.
+  ls *.jpg | less listet alle Dateien des aktuellen
+  Verzeichnisses in less auf.
+Die Zeichen der Drittbelegung haben mit der Einführung des
+Computers in das Leben der Schreibenden Einzug gehalten.
+Aus diesem Grund haben wir sie in den Kurs aufgenommen.
+Im ursprünglichen Zehnfinger-System gibt es keine
+Entsprechung, da auf alten Schreibmaschinen die &lt;Alt Gr>-
+Taste nicht existiert.
+{@@@} || {@@@} || [@@@] || [@@@] || \\\ || @@@ || ~~~ ||</text>
+  </lesson>
+  <lesson>
+   <id>{0873b22f-d9b9-4bd4-9c8e-27f0c33aee49}</id>
+   <title>Geschafft</title>
+   <newCharacters></newCharacters>
+   <text>/* info.cpp - description
+ *
+ * begin: Sun Jan 30 14:40:59 MET 2000
+ * copyright: (C) 1999 by Daniel Reith
+ * email: DanR@gmx.de
+ *
+ * This program is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU General
+ * Public License as published by the Free Software
+ * Foundation; either version 2 of the License, or (at your
+ * option) any later version.
+ */
+
+#include "info.h"
+#include "wx/image.h"
+#include &lt;config.h>
+
+enum
+{
+  C = 211,
+  OK = 212
+};
+
+BEGIN_EVENT_TABLE(Info_Dialog, wxDialog)
+  EVT_BUTTON(OK, Info_Dialog::OnSchliessen)
+END_EVENT_TABLE()
+
+// Konstruktor
+Info_Dialog::Info_Dialog(wxWindow* parent, wxWindowID id,
+    const wxString&amp; title,
+    const wxPoint&amp; pos = wxDefaultPosition,
+    const wxSize&amp; size = wxDefaultSize,
+    long style = wxDEFAULT_DIALOG_STYLE,
+    const wxString&amp; name = "dialogBox")
+ :  wxDialog(parent, id, title, pos, size, style, name)
+{
+  SetAutoLayout(TRUE);
+ #ifdef __WXMSW__
+  wxBitmap::AddHandler(new wxPNGFileHandler);
+ #endif
+ #ifdef __WXGTK__
+  wxImage::AddHandler(new wxPNGHandler);
+ #endif
+  wxString f;
+  f &lt;&lt; L_DIR &lt;&lt; "logo.png";
+  logo = new wxBitmap(f , wxBITMAP_TYPE_PNG);
+  canvas = new MyCanvas(this,  logo, wxDefaultPosition,
+      wxDefaultSize);
+  wxLayoutConstraints *c1 = new wxLayoutConstraints;
+  c1->top.SameAs(this, wxTop, 5);
+  c1->left.SameAs(this, wxLeft, 5);
+  c1->width.PercentOf(this, wxWidth, 48);
+  c1->height.PercentOf(this, wxHeight, 80);
+  canvas->SetConstraints(c1);
+  info_text = new wxStaticText(this, -1, "",
+      wxDefaultPosition, wxDefaultSize);
+  wxLayoutConstraints *c3 = new wxLayoutConstraints;
+  c3->top.SameAs(this, wxTop, 5);
+  c3->left.SameAs(canvas, wxRight, 15);
+  c3->width.PercentOf(this, wxWidth, 47);
+  c3->height.PercentOf(this, wxHeight, 80);
+  info_text->SetConstraints(c3);
+  wxString msg;
+  msg &lt;&lt; _("PingoS Tipptrainer\n")
+      &lt;&lt; _("------------------\n")
+      &lt;&lt; _("Version:\t") &lt;&lt; VERSION &lt;&lt; _("\n")
+      &lt;&lt; _("http://www.pingos.schulnetz.org/tipptrainer\n")
+      &lt;&lt; _("Veröffentlicht unter der GPL 2.0\n\n")
+      &lt;&lt; _("Autoren:\n")
+      &lt;&lt; "Andreas Kalbitz\n"
+      &lt;&lt; "\t(felix@musik-workshop.de)\n"
+      &lt;&lt; "Matthias Kleine\n"
+      &lt;&lt; "\t(Matthias.Kleine@selflinux.de)\n"
+      &lt;&lt; "Daniel Reith (DanR@gmx.de)\n"
+      &lt;&lt; _("\nFeedback bitte an:\n")
+      &lt;&lt; _(\ttipptrainer@reith.8m.com");
+  info_text->SetLabel(msg);
+  ok = new wxButton(this, OK, _("Schliessen"));
+  wxLayoutConstraints *c2 = new wxLayoutConstraints;
+  c2->centreX.SameAs(this, wxCentreX);
+  c2->top.SameAs(canvas, wxBottom, 10);
+  c2->width.PercentOf(this, wxWidth, 30);
+  c2->height.PercentOf(this, wxHeight, 9);
+  ok->SetConstraints(c2);
+}
+
+// Destruktor
+Info_Dialog::~Info_Dialog()
+{
+}
+
+// Fenster schliessen
+void Info_Dialog::OnSchliessen(wxCommandEvent* event)
+{
+  EndModal(GetReturnCode());
+}
+BEGIN_EVENT_TABLE(MyCanvas, wxScrolledWindow)
+    EVT_PAINT(MyCanvas::OnPaint)
+END_EVENT_TABLE()
+MyCanvas::MyCanvas(wxWindow *parent, wxBitmap *b,
+    const wxPoint&amp; pos, const wxSize&amp; size)
+ :  wxScrolledWindow(parent, -1, pos, size)
+{
+  logo = b;
+}
+
+MyCanvas::~MyCanvas()
+{
+}
+
+void MyCanvas::OnPaint(wxPaintEvent&amp; WXUNUSED(event))
+{
+  wxPaintDC dc(this);
+  wxMemoryDC memDC;
+  memDC.SelectObject(* logo);
+  dc.Blit(5, 25, logo->GetWidth(), logo->GetHeight(),
+      &amp; memDC, 0, 0, wxCOPY, TRUE);
+  memDC.SelectObject(wxNullBitmap);
+}</text>
+  </lesson>
+ </lessons>
+</course>

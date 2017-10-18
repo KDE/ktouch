@@ -1,8 +1,5 @@
 # KTouch CMakeLists.txt file
 #
-
-project(ktouch)
-
 # KDE Application Version, managed by release script
 set (KDE_APPLICATIONS_VERSION_MAJOR "17")
 set (KDE_APPLICATIONS_VERSION_MINOR "11")
@@ -10,7 +7,9 @@ set (KDE_APPLICATIONS_VERSION_MICRO "70")
 set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 
 
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+project(ktouch VERSION ${KDE_APPLICATIONS_VERSION})
+
 find_package(ECM 1.0.0 REQUIRED NO_MODULE)
 find_package(KF5DocTools)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})

@@ -4,6 +4,8 @@ set (coursefiles
     bg2.xml
     br.xml
     cat.xml
+    ch1.xml
+    ch2.xml
     cz.xml
     de.dvorak.xml
     de.neo.xml
