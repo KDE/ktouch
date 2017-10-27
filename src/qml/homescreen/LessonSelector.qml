@@ -88,10 +88,8 @@ ColumnLayout {
             var lastUnlockedLessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastUnlockedLesson);
             if (lastUnlockedLessonId !== "") {
                 for (var index = 0; index < course.lessonCount; index++) {
-                    console.log(course.lesson(index).id, lastUnlockedLessonId)
                     lastUnlockedLessonIndex = index
                     if (course.lesson(index).id === lastUnlockedLessonId) {
-                        console.log(lastUnlockedLessonIndex)
                         return
                     }
                 }
