@@ -21,6 +21,7 @@
 #include <QFile>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 #include <QStandardPaths>
 
 #include <Kdelibs4ConfigMigrator>
@@ -59,6 +60,8 @@ Application::Application(int& argc, char** argv, int flags):
 {
     registerQmlTypes();
     migrateKde4Files();
+
+    QQuickStyle::setStyle("Default");
 
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
