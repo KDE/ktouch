@@ -26,6 +26,8 @@
 
 int main(int argc, char **argv)
 {
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
     Application app(argc, argv);
 
     KLocalizedString::setApplicationDomain("ktouch");
