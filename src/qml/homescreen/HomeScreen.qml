@@ -123,7 +123,6 @@ FocusScope {
                                 safeLastUsedProfile(profile)
                             }
                         }
-
                     }
                 }
 
@@ -164,28 +163,6 @@ FocusScope {
             NumberAnimation {
                 duration: screen.visible? 500: 0
                 easing.type: Easing.InOutCubic
-            }
-        }
-    }
-
-    SheetDialog {
-        id: profileSelectorSheet
-        anchors.fill: parent
-        onOpened: {
-            if (profileComboBox.profile) {
-                var index = profileDataAccess.indexOfProfile(profileComboBox.profile)
-                profileSelector.selectProfile(index)
-            }
-        }
-        onClosed: {
-            profileButton.checked = false;
-        }
-        content: ProfileSelector {
-            id: profileSelector
-            anchors.fill: parent
-            onProfileChosen: {
-                screen.switchToProfile(profile)
-                profileSelectorSheet.close()
             }
         }
     }

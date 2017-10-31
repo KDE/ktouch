@@ -26,19 +26,20 @@ import "./trainingscreen"
 import "./scorescreen"
 
 Rectangle {
-    KColorScheme {
-        id: activePallete
-        colorGroup: KColorScheme.Active
-        colorSet: KColorScheme.Window
-    }
-
     id: main
     color: activePallete.normalBackground
+    property Item appContent: appContentItem
 
     function switchScreen(from, to) {
         switchScreenAnimation.from = from
         switchScreenAnimation.to = to
         switchScreenAnimation.start()
+    }
+
+    KColorScheme {
+        id: activePallete
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     DataAccess {
@@ -120,66 +121,72 @@ Rectangle {
         id: customLessonCopy
     }
 
-    HomeScreen {
-        id: homeScreen
+    Item {
         anchors.fill: parent
-        keyboardLayout: keyboardLayout
-        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
-        visible: false
-        focus: true
-        onLessonSelected: {
-            trainingScreen.profile = profile
-            var lessonIndex = -1;
-            for (var i = 0; i < course.lessonCount; i++) {
-                if (lesson === course.lesson(i)) {
-                    lessonIndex = i
-                    break
+        id: appContentItem
+        layer.enabled: true
+
+        HomeScreen {
+            id: homeScreen
+            anchors.fill: parent
+            keyboardLayout: keyboardLayout
+            keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
+            visible: false
+            focus: true
+            onLessonSelected: {
+                trainingScreen.profile = profile
+                var lessonIndex = -1;
+                for (var i = 0; i < course.lessonCount; i++) {
+                    if (lesson === course.lesson(i)) {
+                        lessonIndex = i
+                        break
+                    }
                 }
-            }
-            selectedCourse.copyFrom(course)
+                selectedCourse.copyFrom(course)
 
-            if (lessonIndex !== -1) {
-                selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
-            }
-            else {
-                customLessonCopy.copyFrom(lesson)
-                selectedCourse.selectedLesson = customLessonCopy
-            }
+                if (lessonIndex !== -1) {
+                    selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
+                }
+                else {
+                    customLessonCopy.copyFrom(lesson)
+                    selectedCourse.selectedLesson = customLessonCopy
+                }
 
-            main.switchScreen(homeScreen, trainingScreen)
+                main.switchScreen(homeScreen, trainingScreen)
+            }
+            Component.onCompleted: {
+                homeScreen.reset()
+                homeScreen.visible = true
+            }
         }
-        Component.onCompleted: {
-            homeScreen.reset()
-            homeScreen.visible = true
+
+        TrainingScreen {
+            id: trainingScreen
+            anchors.fill: parent
+            visible: false
+            keyboardLayout: keyboardLayout
+            course: selectedCourse
+            lesson: selectedCourse.selectedLesson
+            onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
+            onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
+            onFinished: main.switchScreen(trainingScreen, scoreScreen)
         }
-    }
 
-    TrainingScreen {
-        id: trainingScreen
-        anchors.fill: parent
-        visible: false
-        keyboardLayout: keyboardLayout
-        course: selectedCourse
-        lesson: selectedCourse.selectedLesson
-        onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
-        onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
-        onFinished: main.switchScreen(trainingScreen, scoreScreen)
-    }
-
-    ScoreScreen {
-        id: scoreScreen
-        anchors.fill: parent
-        visible: false
-        course: trainingScreen.course
-        lesson: trainingScreen.lesson
-        stats: trainingScreen.stats
-        profile: trainingScreen.profile
-        referenceStats: trainingScreen.referenceStats
-        onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
-        onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
-        onNextLessonRequested: {
-            selectedCourse.selectedLesson = lesson
-            main.switchScreen(scoreScreen, trainingScreen)
+        ScoreScreen {
+            id: scoreScreen
+            anchors.fill: parent
+            visible: false
+            course: trainingScreen.course
+            lesson: trainingScreen.lesson
+            stats: trainingScreen.stats
+            profile: trainingScreen.profile
+            referenceStats: trainingScreen.referenceStats
+            onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
+            onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
+            onNextLessonRequested: {
+                selectedCourse.selectedLesson = lesson
+                main.switchScreen(scoreScreen, trainingScreen)
+            }
         }
     }
 

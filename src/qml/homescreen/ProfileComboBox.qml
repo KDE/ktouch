@@ -1,5 +1,5 @@
 /*
- *  Copyright 20175  Sebastian Gottfried <sebastian.gottfried@posteo.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -133,9 +133,9 @@ ComboBox {
                             mouse.accepted = true
                         }
                         onClicked: {
-                            console.log("manage profile")
                             root.popup.close()
                             mouse.accepted = true
+                            manageProfileDialog.open()
                         }
                     }
                 }
@@ -148,6 +148,27 @@ ComboBox {
                 samples: 24
                 horizontalOffset: 0
                 verticalOffset: 0
+            }
+        }
+    }
+
+    PopupDialog {
+        id: manageProfileDialog
+        modal: true
+        focus: true
+        title: i18n("Manage Profiles")
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+        contentItem:  ProfileSelector {
+            id: profileSelector
+            onProfileChosen: {
+                root.profile = profile
+                manageProfileDialog.close()
+            }
+        }
+        onOpened: {
+            if (profileComboBox.profile) {
+                var index = profileDataAccess.indexOfProfile(profileComboBox.profile)
+                profileSelector.selectProfile(index)
             }
         }
     }
