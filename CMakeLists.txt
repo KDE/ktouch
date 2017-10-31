@@ -23,11 +23,12 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 
-find_package(Qt5 5.5 REQUIRED COMPONENTS
+find_package(Qt5 5.9 REQUIRED COMPONENTS
     Gui
     Qml
     Quick
     QuickWidgets
+    QuickControls2
     Script
     Sql
     Test

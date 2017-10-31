@@ -129,6 +129,7 @@ target_link_libraries(ktouch
         Qt5::Qml
         Qt5::Quick
         Qt5::QuickWidgets
+        Qt5::QuickControls2
         Qt5::Script
         Qt5::Sql
         Qt5::XmlPatterns
