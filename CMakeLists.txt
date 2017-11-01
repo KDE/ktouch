@@ -52,6 +52,7 @@ find_package(KF5 REQUIRED COMPONENTS
     WidgetsAddons
     WindowSystem
     XmlGui
+    IconThemes
 )
 
 # enable QML debugging for debug builds
