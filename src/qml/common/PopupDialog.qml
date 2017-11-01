@@ -33,6 +33,8 @@ Dialog {
 
     width: parent.width - leftMargin - rightMargin
     height: parent.height - topMargin - bottomMargin
+    opacity: 0
+    scale: 0.9
 
     Component.onCompleted: {
         var candidate = root
@@ -50,6 +52,7 @@ Dialog {
         width: root.parent.width
         height: root.parent.height
         visible: root.visible && root.dim
+        opacity: 0
 
         ShaderEffectSource {
             id: effectSource
@@ -81,16 +84,16 @@ Dialog {
 
     enter: Transition {
         // grow_fade_in
-        NumberAnimation { property: "scale"; from: 0.9; to: 1.0; easing.type: Easing.OutQuint; duration: 220 }
-        NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; easing.type: Easing.OutCubic; duration: 150 }
-        NumberAnimation { target: dimOverlay;  property: "opacity"; from: 0.0; to: 1.0; easing.type: Easing.OutCubic; duration: 220 }
+        NumberAnimation { property: "scale"; to: 1.0; easing.type: Easing.OutQuint; duration: 220 }
+        NumberAnimation { property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: 150 }
+        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: 220 }
     }
 
     exit: Transition {
         // shrink_fade_out
-        NumberAnimation { property: "scale"; from: 1.0; to: 0.9; easing.type: Easing.OutQuint; duration: 220 }
-        NumberAnimation { property: "opacity"; from: 1.0; to: 0.0; easing.type: Easing.OutCubic; duration: 150 }
-        NumberAnimation { target: dimOverlay;  property: "opacity"; from: 1.0; to: 0.0; easing.type: Easing.OutCubic; duration: 220 }
+        NumberAnimation { property: "scale"; to: 0.9; easing.type: Easing.OutQuint; duration: 220 }
+        NumberAnimation { property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: 150 }
+        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: 220 }
     }
 
     background: Rectangle {
