@@ -181,8 +181,20 @@ void LessonPainter::reset()
 
 void LessonPainter::paint(QPainter* painter)
 {
-    checkImageCache();
-    painter->drawPixmap(0, 0, m_imageCache);
+    if (m_imageCacheDirty)
+    {
+        const auto device = painter->device();
+        QImage img(QSize(qFloor(device->width()), qFloor(device->height())), QImage::Format_ARGB32_Premultiplied);
+        img.setDevicePixelRatio(img.width() / width());
+        img.fill(Qt::transparent);
+        QPainter painter(&img);
+        painter.scale(m_textScale, m_textScale);
+        m_doc->drawContents(&painter);
+        m_imageCache = img;
+        m_imageCacheDirty = false;
+    }
+
+    painter->drawImage(0, 0, m_imageCache);
 }
 
 void LessonPainter::updateLayout()
@@ -317,7 +329,7 @@ void LessonPainter::updateDoc()
 void LessonPainter::invalidateImageCache()
 {
     m_imageCacheDirty = true;
-    m_imageCache = QPixmap();
+    m_imageCache = QImage();
 }
 
 void LessonPainter::checkImageCache()
@@ -325,7 +337,7 @@ void LessonPainter::checkImageCache()
     if (!m_imageCacheDirty)
         return;
 
-    QPixmap img(qFloor(width()), qFloor(height()));
+    QImage img(QSize(qFloor(width()), qFloor(height())), QImage::Format_ARGB32_Premultiplied);
     img.fill(Qt::transparent);
     QPainter painter(&img);
     painter.scale(m_textScale, m_textScale);

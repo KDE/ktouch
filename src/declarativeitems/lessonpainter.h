@@ -19,7 +19,7 @@
 #define LESSONPAINTER_H
 
 #include <QQuickPaintedItem>
-#include <QPixmap>
+#include <QImage>
 
 #include <QPointer>
 
@@ -78,7 +78,7 @@ private:
     qreal m_textScale;
     qreal m_maximumWidth;
     qreal m_maximumHeight;
-    QPixmap m_imageCache;
+    QImage m_imageCache;
     bool m_imageCacheDirty;
     TrainingLineCore* m_trainingLineCore;
     int m_currentLine;
