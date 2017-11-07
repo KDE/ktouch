@@ -47,7 +47,8 @@ Runtime dependencies
 ====================
 
 At runtime KTouch needs the following software packages to be present:
- * kqtquickcharts >= 16.12 (git://anongit.kde.org/kqtquickcharts)
- * plasma-desktop (optional, for keyboard layout configuration
-   from within the application)
+ * [Breeze icon set](https://phabricator.kde.org/source/breeze-icons/)
+ * [kqtquickcharts](https://phabricator.kde.org/source/kqtquickcharts/) >= 16.12
+ * [plasma-desktop](https://phabricator.kde.org/source/plasma-desktop/)
+   (optional, for keyboard layout configuration from within the application)
 
