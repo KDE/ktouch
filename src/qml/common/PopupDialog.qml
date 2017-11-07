@@ -17,6 +17,7 @@
 
 import QtQuick 2.4
 import QtQuick.Controls 2.2
+import QtQuick.Layouts 1.3
 import ktouch 1.0
 import QtGraphicalEffects 1.0
 
@@ -117,15 +118,28 @@ Dialog {
             property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.3)
         }
 
-        Label {
-            id: titleLabel
-            text: root.title
-            width: parent.width
-            color: toolbarColorScheme.normalText
-            font.bold: true
-            padding: font.pixelSize
-        }
+        RowLayout {
+            anchors.fill: parent
 
+            Label {
+                id: titleLabel
+                text: root.title
+                width: parent.width
+                color: toolbarColorScheme.normalText
+                font.bold: true
+                padding: font.pixelSize
+                Layout.fillWidth: true
+            }
+
+            IconToolButton {
+                icon: "window-close-symbolic"
+                color: toolbarColorScheme.normalText
+                backgroundColor: toolbarColorScheme.normalBackground
+                Layout.preferredWidth: titleLabel.implicitHeight
+                Layout.preferredHeight: titleLabel.implicitHeight
+                onClicked: root.close()
+            }
+        }
     }
 
 }
