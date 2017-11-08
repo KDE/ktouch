@@ -1,6 +1,7 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
  *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,8 +18,8 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.2
+import QtQuick.Layouts 1.3
 import org.kde.kcoreaddons 1.0
 import org.kde.charts 0.1 as Charts
 import ktouch 1.0
@@ -147,13 +148,13 @@ Item {
                 topMargin: 5
             }
             content: [
-                ToolButton {
-                    iconName: "document-edit"
+                IconToolButton {
+                    icon: "document-edit"
                     text: i18n("Edit")
                     onClicked: root.state = "editor"
                 },
-                ToolButton {
-                    iconName: "edit-delete"
+                IconToolButton {
+                    icon: "edit-delete"
                     text: i18n("Delete")
                     enabled: profileDataAccess.profileCount > 1
                     onClicked: root.state = "deleteConfirmation"
@@ -167,6 +168,7 @@ Item {
         width: parent.width - 40
         height: childrenRect.height
         anchors.centerIn: parent
+
         ProfileForm {
             id: profileForm
             width: parent.width
@@ -210,12 +212,13 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: childrenRect.width
                 height: childrenRect.height
-                ToolButton {
-                    iconName: "edit-delete"
+                IconButton {
+                    icon: "edit-delete"
                     text: i18n("Delete")
+                    bgColor: colorScheme.negativeBackground
                     onClicked: root.deletionRequest()
                 }
-                ToolButton {
+                IconButton {
                     text: i18n("Cancel")
                     onClicked: root.state = "info"
                 }

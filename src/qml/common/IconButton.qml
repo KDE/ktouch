@@ -47,7 +47,7 @@ Button {
 
     background: Rectangle {
         id: bg
-        color: button.activeFocus? buttonColorScheme.focusDecoration: buttonColorScheme.normalBackground
+        color: button.activeFocus? buttonColorScheme.focusDecoration: buttonColorScheme.alternateBackground
         HueSaturation {
             anchors.fill: bg
             source: bg

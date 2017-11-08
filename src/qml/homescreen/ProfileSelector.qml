@@ -1,6 +1,7 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
  *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,7 +18,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
+import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import ktouch 1.0
 
@@ -38,20 +39,25 @@ FocusScope {
         profileForm.profile = profileDataAccess.profile(index)
     }
 
+    KColorScheme {
+        id: listColorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
     ColumnLayout {
         anchors.fill: parent
-        anchors.bottomMargin: 10
-        spacing: 10
+        spacing: 0
 
         RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            spacing: 10
 
-            Item {
+            Rectangle {
                 id: listContainer
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                color: listColorScheme.normalBackground
 
                 ScrollView {
                     anchors.fill: parent
@@ -102,12 +108,13 @@ FocusScope {
             }
         }
 
-        Button {
+        IconButton {
             id: selectButton
-            anchors.horizontalCenter: parent.horizontalCenter
-            iconName: "go-next-view"
+            Layout.fillWidth: true
+            icon: "go-next-view"
             text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
+            bgColor: colorScheme.positiveBackground
             onClicked: root.profileChosen(profileDataAccess.profile(list.currentIndex))
         }
     }

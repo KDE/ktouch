@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
 
 ToolButton {
     id: button
@@ -31,6 +31,7 @@ ToolButton {
     contentItem: IconLabel {
         id: content
         text: button.text
+        elide: "ElideNone"
     }
 
     background: Rectangle {

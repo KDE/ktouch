@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.2
+import QtQuick.Layouts 1.2
 import ktouch 1.0
 
 import "../common"
@@ -31,7 +31,7 @@ Column {
 
     property bool skillLevelSelectionEnabled: true
     property alias showWelcomeLabel: welcomeLabel.visible
-    property alias doneButtonIconSource: doneBtn.iconSource
+    property alias doneButtonIconSource: doneBtn.icon
     property alias doneButtonText: doneBtn.text
     signal done()
 
@@ -82,12 +82,12 @@ Column {
         }
     }
 
-    Button {
+    IconButton {
         id: doneBtn
         anchors.horizontalCenter: parent.horizontalCenter
         text: i18n("Done")
         enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
-        iconName: "dialog-ok"
+        icon: "dialog-ok"
         onClicked: done()
     }
 }

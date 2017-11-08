@@ -158,6 +158,7 @@ ComboBox {
         focus: true
         title: i18n("Manage Profiles")
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+        padding: 0
         contentItem:  ProfileSelector {
             id: profileSelector
             onProfileChosen: {

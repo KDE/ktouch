@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
 
 Label {
     property string icon: ""
@@ -25,7 +25,7 @@ Label {
     elide: Text.ElideRight
 
     padding: Math.ceil(0.7 * font.pixelSize)
-    leftPadding: (iconItem.visible || reserveSpaceForIcon? padding + iconItem.width: 0) + (label.text != ""? padding: 0)
+    leftPadding: (iconItem.visible || reserveSpaceForIcon? padding + iconItem.width: 0) + (label.text !== ""? padding: 0)
     verticalAlignment: Text.AlignVCenter
 
     MonochromeIcon {
@@ -34,7 +34,7 @@ Label {
         color: label.color
         anchors {
             left: parent.left
-            leftMargin: label.text == ""? (label.width - width) / 2: label.padding
+            leftMargin: label.text === ""? (label.width - width) / 2: label.padding
             verticalCenter: parent.verticalCenter
         }
         icon: label.icon
