@@ -25,17 +25,10 @@ Dialog {
     id: root
     dim: true
 
-    margins: {
-        left: 40
-        bottom: 40
-        right: 40
-        top: 40
-    }
-
-    width: parent.width - leftMargin - rightMargin
-    height: parent.height - topMargin - bottomMargin
     opacity: 0
     scale: 0.9
+    leftMargin: Math.floor((parent.width - width) / 2)
+    topMargin: Math.floor((parent.height - height) / 2)
 
     Component.onCompleted: {
         var candidate = root
@@ -108,7 +101,7 @@ Dialog {
     }
 
     header: Rectangle {
-        height: titleLabel.implicitHeight
+        implicitHeight: Math.max(titleLabel.implicitHeight, closeButton.implicitHeight)
         color: toolbarColorScheme.toolbarBackground
 
         KColorScheme {
@@ -132,8 +125,10 @@ Dialog {
             }
 
             IconToolButton {
+                id: closeButton
                 icon: "window-close-symbolic"
                 color: toolbarColorScheme.normalText
+                visible: root.closePolicy & Popup.CloseOnEscape
                 backgroundColor: toolbarColorScheme.normalBackground
                 Layout.preferredWidth: titleLabel.implicitHeight
                 Layout.preferredHeight: titleLabel.implicitHeight

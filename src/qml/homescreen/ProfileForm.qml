@@ -23,7 +23,7 @@ import ktouch 1.0
 
 import "../common"
 
-Column {
+ColumnLayout {
     id: root
 
     property alias name: nameTextField.text
@@ -44,19 +44,20 @@ Column {
 
     Label {
         id: welcomeLabel
-        width: parent.width
+        Layout.fillWidth: true
+        Layout.preferredWidth: 500
         text: i18n("Before you start training, please introduce yourself:")
     }
 
     TextField {
         id: nameTextField
-        width: parent.width
+        Layout.fillWidth: true
         placeholderText: i18n("Name")
     }
 
     DetailedRadioButton {
         id: beginnerRadioButton
-        width: parent.width
+        Layout.fillWidth: true
         enabled: root.skillLevelSelectionEnabled
         label: i18n("I have no or only very little experience in machine typing")
         hint: i18n("Lessons are unlocked as your typing skills improve over time.")
@@ -70,7 +71,7 @@ Column {
 
     DetailedRadioButton {
         id: advancedRadioButton
-        width: parent.width
+        Layout.fillWidth: true
         enabled: root.skillLevelSelectionEnabled
         label: i18n("I am an experienced machine typist and want to improve my skills")
         hint: i18n("All lessons are unlocked immediately.")
@@ -82,12 +83,19 @@ Column {
         }
     }
 
-    IconButton {
-        id: doneBtn
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: i18n("Done")
-        enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
-        icon: "dialog-ok"
-        onClicked: done()
+
+    Item {
+        Layout.fillWidth: true
+        Layout.preferredHeight: doneBtn.implicitHeight
+
+        IconButton {
+            id: doneBtn
+            anchors.horizontalCenter: parent.horizontalCenter
+            bgColor: colorScheme.positiveBackground
+            text: i18n("Done")
+            enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
+            icon: "dialog-ok"
+            onClicked: done()
+        }
     }
 }

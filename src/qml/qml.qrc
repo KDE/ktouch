@@ -22,7 +22,7 @@
         <file>homescreen/CourseSelectorKeyboardLayoutList.qml</file>
         <file>homescreen/CustomLessonSelector.qml</file>
         <file>homescreen/HomeScreen.qml</file>
-        <file>homescreen/InitialProfileForm.qml</file>
+        <file>homescreen/InitialProfileDialog.qml</file>
         <file>homescreen/LessonLockedNotice.qml</file>
         <file>homescreen/LessonPreview.qml</file>
         <file>homescreen/LessonSelector.qml</file>

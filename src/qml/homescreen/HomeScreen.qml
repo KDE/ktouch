@@ -16,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtQuick 2.6
+import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 import ktouch 1.0
@@ -34,7 +34,6 @@ FocusScope {
     Connections {
         target: profileDataAccess
         onProfileCountChanged: findCurrentProfile()
-
     }
 
     function start() {}
@@ -93,7 +92,6 @@ FocusScope {
                 ToolBar {
                     id: header
                     Layout.fillWidth: true
-                    visible: courseSelector.opacity > 0
 
                     background: Rectangle {
                         color: toolbarColorScheme.toolbarBackground
@@ -130,7 +128,6 @@ FocusScope {
                     id: courseSelector
                     Layout.fillHeight: true
                     Layout.fillWidth: true
-                    opacity: 1 - initialProfileForm.opacity
                     profile: profileComboBox.profile
                     keyboardLayout: screen.keyboardLayout
                     currentKeyboardLayoutName: screen.keyboardLayoutName
@@ -138,8 +135,6 @@ FocusScope {
 
             }
         }
-
-
 
         LessonSelector {
             Layout.fillHeight: true
@@ -151,19 +146,8 @@ FocusScope {
         }
     }
 
-
-    InitialProfileForm {
+    InitialProfileDialog {
         id: initialProfileForm
-        opacity: profileDataAccess.profileCount == 0? 1: 0
-        visible: opacity > 0
-        anchors.fill: parent
-        anchors.margins: 5
-
-        Behavior on opacity {
-            NumberAnimation {
-                duration: screen.visible? 500: 0
-                easing.type: Easing.InOutCubic
-            }
-        }
+        visible: profileDataAccess.profileCount == 0
     }
 }

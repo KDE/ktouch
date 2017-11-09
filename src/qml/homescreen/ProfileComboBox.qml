@@ -154,10 +154,20 @@ ComboBox {
 
     PopupDialog {
         id: manageProfileDialog
+
+        margins: {
+            left: 40
+            bottom: 40
+            right: 40
+            top: 40
+        }
+
+        width: parent.width - leftMargin - rightMargin
+        height: parent.height - topMargin - bottomMargin
         modal: true
         focus: true
         title: i18n("Manage Profiles")
-        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+        closePolicy: Popup.CloseOnEscape
         padding: 0
         contentItem:  ProfileSelector {
             id: profileSelector

@@ -157,6 +157,7 @@ Rectangle {
             Component.onCompleted: {
                 homeScreen.reset()
                 homeScreen.visible = true
+                homeScreen.start()
             }
         }
 
