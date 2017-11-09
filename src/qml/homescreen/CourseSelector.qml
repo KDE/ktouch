@@ -42,6 +42,7 @@ FocusScope {
 
         var courseId = profile.lastUsedCourseId;
 
+        // fist try to to select the course the user has used last
         for (var i = 0; i < allCoursesModel.rowCount(); i++) {
             var dataIndexCourse = allCoursesModel.data(allCoursesModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {
@@ -50,9 +51,17 @@ FocusScope {
             }
         }
 
+        // if this fails try to select course matching the current keyboard layout
+        if (coursesForCurrentKeyboardLayoutModel.rowCount() > 0) {
+            var blub = coursesForCurrentKeyboardLayoutModel.data(coursesForCurrentKeyboardLayoutModel.index(0, 0), ResourceModel.DataRole);
+            console.log(blub)
+            root.selectedCourse = blub
+            return;
+        }
+
+        // finally just select the first course
         if (allCoursesModel.rowCount() > 0) {
-            var dataIndexCourse = allCoursesModel.data(allCoursesModel.index(0, 0), ResourceModel.DataRole);
-            root.selectedCourse = dataIndexCourse
+            root.selectedCourse = allCoursesModel.data(allCoursesModel.index(0, 0), ResourceModel.DataRole);
         }
     }
 
@@ -85,6 +94,14 @@ FocusScope {
         id: allCoursesModel
         resourceModel: resourceModel
         resourceTypeFilter: ResourceModel.CourseItem
+    }
+
+
+    CategorizedResourceSortFilterProxyModel {
+        id: coursesForCurrentKeyboardLayoutModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
     }
 
     CategorizedResourceSortFilterProxyModel {
