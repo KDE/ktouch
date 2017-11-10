@@ -44,11 +44,16 @@ Button {
         id: content
         text: button.text
         elide: "ElideNone"
+
+        Behavior on color {
+            ColorAnimation { duration: 150 }
+        }
     }
 
     background: Rectangle {
         id: bg
         color: button.activeFocus? buttonColorScheme.focusDecoration: buttonColorScheme.alternateBackground
+
         HueSaturation {
             anchors.fill: bg
             source: bg
