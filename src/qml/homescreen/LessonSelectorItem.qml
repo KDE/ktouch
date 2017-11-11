@@ -26,6 +26,11 @@ Item {
     property Lesson lesson
     property bool selected
     property alias background: background
+
+    signal clicked
+    signal doubleClicked
+    signal statButtonClicked
+
     clip: true
 
     KColorScheme {
@@ -38,6 +43,16 @@ Item {
         id: background
         anchors.fill: parent
         color: selected? Qt.tint(selectionColorScheme.normalBackground, "#a0ffffff"): "#ffffff"
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            root.clicked()
+        }
+        onDoubleClicked: {
+            root.doubleClicked()
+        }
     }
 
     GridLayout {
@@ -72,6 +87,9 @@ Item {
             icon: 'view-statistics'
             color: "#808080"
             backgroundColor: "#c0c0c0c0"
+            onClicked: {
+                root.statButtonClicked();
+            }
         }
 
         Item {

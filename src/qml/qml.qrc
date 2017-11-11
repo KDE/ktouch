@@ -32,6 +32,7 @@
         <file>homescreen/ProfileDetailsItem.qml</file>
         <file>homescreen/ProfileForm.qml</file>
         <file>homescreen/ProfileSelector.qml</file>
+        <file>homescreen/StatPopupDialog.qml</file>
         <file>keyboard/KeyItem.qml</file>
         <file>keyboard/KeyLabel.qml</file>
         <file>keyboard/Keyboard.qml</file>

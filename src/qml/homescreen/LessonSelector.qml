@@ -98,6 +98,12 @@ ColumnLayout {
         Component.onCompleted: update()
     }
 
+    StatPopupDialog {
+        id: statPopupDialog
+        profile: root.profile
+        course: course
+    }
+
     Item {
         Layout.fillWidth: true
         Layout.preferredHeight: header.height
@@ -245,19 +251,19 @@ ColumnLayout {
                     anchors.centerIn: parent
                     lesson: dataRole
                     selected:  content.currentIndex == index
+                    onClicked: {
+                        item.forceActiveFocus()
+                        content.currentIndex = index
+                    }
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            item.forceActiveFocus()
-                            content.currentIndex = index
+                    onDoubleClicked: {
+                        if (index <= course.lastUnlockedLessonIndex) {
+                            lessonSelected(course, dataRole)
                         }
-
-                        onDoubleClicked: {
-                            if (index <= course.lastUnlockedLessonIndex) {
-                                lessonSelected(course, dataRole)
-                            }
-                        }
+                    }
+                    onStatButtonClicked: {
+                        statPopupDialog.lesson = lesson
+                        statPopupDialog.open()
                     }
                 }
 
