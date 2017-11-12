@@ -252,6 +252,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     lesson: dataRole
                     selected:  content.currentIndex == index
+                    editButtonVisible: course.id == "custom_lessons"
                     onClicked: {
                         item.forceActiveFocus()
                         content.currentIndex = index

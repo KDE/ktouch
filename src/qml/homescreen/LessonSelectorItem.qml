@@ -25,10 +25,12 @@ Item {
     id: root
     property Lesson lesson
     property bool selected
+    property alias editButtonVisible: editButton.visible
     property alias background: background
 
     signal clicked
     signal doubleClicked
+    signal editButtonClicked
     signal statButtonClicked
 
     clip: true
@@ -65,10 +67,12 @@ Item {
             Layout.column: 0
             Layout.row: 0
             Layout.fillWidth: true
+            Layout.preferredHeight: buttonRow.implicitHeight
             text: lesson? lesson.title: ""
             color: "#000000"
             font.bold: true
             elide: Label.ElideRight
+            verticalAlignment: Qt.AlignVCenter
 
             ToolTip.text: titleLabel.text
             ToolTip.visible: titleMouseArea.containsMouse
@@ -81,14 +85,29 @@ Item {
             }
         }
 
-        IconToolButton {
+        Row {
+            id: buttonRow
             Layout.column: 1
             Layout.row: 0
-            icon: 'view-statistics'
-            color: "#808080"
-            backgroundColor: "#c0c0c0c0"
-            onClicked: {
-                root.statButtonClicked();
+            visible: root.selected
+
+            IconToolButton {
+                id: editButton
+                icon: 'edit-entry'
+                color: "#808080"
+                backgroundColor: "#c0c0c0c0"
+                onClicked: {
+                    root.editButtonClicked();
+                }
+            }
+
+            IconToolButton {
+                icon: 'view-statistics'
+                color: "#808080"
+                backgroundColor: "#c0c0c0c0"
+                onClicked: {
+                    root.statButtonClicked();
+                }
             }
         }
 
