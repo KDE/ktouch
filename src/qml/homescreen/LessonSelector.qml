@@ -102,6 +102,7 @@ ColumnLayout {
         id: statPopupDialog
         profile: root.profile
         course: course
+        lesson: root.selectedLesson
     }
 
     Item {
@@ -262,7 +263,6 @@ ColumnLayout {
                         }
                     }
                     onStatButtonClicked: {
-                        statPopupDialog.lesson = lesson
                         statPopupDialog.open()
                     }
                 }

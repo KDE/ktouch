@@ -55,7 +55,7 @@ PopupDialog {
 
             Label {
                 id: titleLabel
-                text: lesson.title
+                text: lesson? lesson.title: ""
                 font.bold: true
             }
 
