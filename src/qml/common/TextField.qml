@@ -19,7 +19,7 @@ import QtQuick 2.6
 import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 
-Controls.TextArea {
+Controls.TextField {
     id: control
 
     property KColorScheme colorScheme: KColorScheme {
@@ -33,8 +33,6 @@ Controls.TextArea {
     }
 
     selectByMouse: true
-    selectByKeyboard: true
-    color: control.colorScheme.normalText
     selectionColor: selectionColorScheme.normalBackground
     selectedTextColor: selectionColorScheme.normalText
 
@@ -51,6 +49,4 @@ Controls.TextArea {
             ColorAnimation { duration: 150 }
         }
     }
-
-
 }
