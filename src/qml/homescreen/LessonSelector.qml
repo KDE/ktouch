@@ -28,6 +28,7 @@ ColumnLayout {
     id: root
     property Profile profile
     property DataIndexCourse dataIndexCourse
+    property KeyboardLayout keyboardLayout
     property alias course: courseItem
     property Lesson selectedLesson: null
     signal lessonSelected(Course course, Lesson lesson)
@@ -103,6 +104,16 @@ ColumnLayout {
         profile: root.profile
         course: course
         lesson: root.selectedLesson
+    }
+
+    LessonEditorDialog {
+        id: lesseonEditorDialog
+        profile: root.profile
+        keyboardLayout: root.keyboardLayout
+        onClosed: {
+            courseItem.update()
+            root.update()
+        }
     }
 
     Item {
@@ -265,6 +276,9 @@ ColumnLayout {
                     }
                     onStatButtonClicked: {
                         statPopupDialog.open()
+                    }
+                    onEditButtonClicked: {
+                        lesseonEditorDialog.editLesson(lesson)
                     }
                 }
 
