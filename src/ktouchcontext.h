@@ -43,6 +43,7 @@ public:
     QString keyboardLayoutName() const;
     DataIndex* dataIndex();
     Q_INVOKABLE void showMenu(int xPos, int yPos);
+    Q_INVOKABLE Lesson* createLesson();
 public slots:
     void showResourceEditor();
     bool showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout);

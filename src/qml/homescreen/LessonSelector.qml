@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import ktouch 1.0
 import QtGraphicalEffects 1.0
@@ -66,6 +66,7 @@ ColumnLayout {
     Course {
         id: courseItem
         property int lastUnlockedLessonIndex: -1
+        property bool editable: courseItem.isValid && courseItem.id === "custom_lessons"
         function update() {
             if (root.dataIndexCourse === null) {
                 return
@@ -82,7 +83,7 @@ ColumnLayout {
         }
         function updateLastUnlockedLessonIndex() {
             lastUnlockedLessonIndex = 0;
-            if (profile.skillLevel === Profile.Advanced) {
+            if (course.kind == Course.LessonCollection || profile.skillLevel === Profile.Advanced) {
                 lastUnlockedLessonIndex = course.lessonCount - 1;
                 return
             }
@@ -111,8 +112,8 @@ ColumnLayout {
         profile: root.profile
         keyboardLayout: root.keyboardLayout
         onClosed: {
-            courseItem.update()
-            root.update()
+            courseItem.update();
+            courseItem.updateLastUnlockedLessonIndex();
         }
     }
 
@@ -160,7 +161,37 @@ ColumnLayout {
                         backgroundColor: toolbarColorScheme.normalBackground
                         Layout.fillHeight: true
                         Layout.preferredWidth: toolbar.height
-                   }
+                    }
+
+
+                    ToolSeparator {
+                        visible: courseItem.editable
+                    }
+
+                    IconToolButton {
+                        id: newLessonButton
+                        icon: "document-new"
+                        text: "Add New Lesson"
+                        color: toolbarColorScheme.normalText
+                        visible: courseItem.editable
+                        backgroundColor: toolbarColorScheme.normalBackground
+                        Layout.fillHeight: true
+                        onClicked: {
+                            var lesson = ktouch.createLesson();
+                            lesson.id = utils.uuid()
+                            lesseonEditorDialog.editLesson(lesson)
+                        }
+                    }
+
+                    IconToolButton {
+                        id: deleteLessonButton
+                        icon: "edit-delete"
+                        text: "Delete Lesson"
+                        color: toolbarColorScheme.normalText
+                        visible: courseItem.editable
+                        backgroundColor: toolbarColorScheme.normalBackground
+                        Layout.fillHeight: true
+                    }
 
                     Item {
                         Layout.fillWidth: true
@@ -263,7 +294,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     lesson: dataRole
                     selected:  content.currentIndex == index
-                    editButtonVisible: course.id == "custom_lessons"
+                    editButtonVisible: courseItem.editable
                     onClicked: {
                         item.forceActiveFocus()
                         content.currentIndex = index

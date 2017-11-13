@@ -29,6 +29,7 @@
 #include "customlessoneditordialog.h"
 #include "preferences.h"
 #include "trainingconfigwidget.h"
+#include "core/lesson.h"
 
 #include <KActionCollection>
 #include <KStandardAction>
@@ -93,6 +94,11 @@ DataIndex* KTouchContext::dataIndex()
 void KTouchContext::showMenu(int xPos, int yPos)
 {
     m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
+}
+
+Lesson* KTouchContext::createLesson()
+{
+    return new Lesson();
 }
 
 void KTouchContext::showResourceEditor()
