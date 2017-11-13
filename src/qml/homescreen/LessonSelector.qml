@@ -97,6 +97,18 @@ ColumnLayout {
                 }
             }
         }
+
+        function createNewCustomLesson() {
+            var lesson = ktouch.createLesson();
+            lesson.id = utils.uuid()
+            profileDataAccess.storeCustomLesson(lesson, root.profile, root.keyboardLayout.name)
+            course.addLesson(lesson)
+            updateLastUnlockedLessonIndex()
+            content.currentIndex = course.lessonCount - 1;
+            root.selectedLesson = lesson
+            lessonEditorDialog.open()
+        }
+
         Component.onCompleted: update()
     }
 
@@ -108,13 +120,10 @@ ColumnLayout {
     }
 
     LessonEditorDialog {
-        id: lesseonEditorDialog
+        id: lessonEditorDialog
         profile: root.profile
         keyboardLayout: root.keyboardLayout
-        onClosed: {
-            courseItem.update();
-            courseItem.updateLastUnlockedLessonIndex();
-        }
+        lesson: root.selectedLesson
     }
 
     Item {
@@ -177,20 +186,8 @@ ColumnLayout {
                         backgroundColor: toolbarColorScheme.normalBackground
                         Layout.fillHeight: true
                         onClicked: {
-                            var lesson = ktouch.createLesson();
-                            lesson.id = utils.uuid()
-                            lesseonEditorDialog.editLesson(lesson)
+                            course.createNewCustomLesson()
                         }
-                    }
-
-                    IconToolButton {
-                        id: deleteLessonButton
-                        icon: "edit-delete"
-                        text: "Delete Lesson"
-                        color: toolbarColorScheme.normalText
-                        visible: courseItem.editable
-                        backgroundColor: toolbarColorScheme.normalBackground
-                        Layout.fillHeight: true
                     }
 
                     Item {
@@ -309,7 +306,7 @@ ColumnLayout {
                         statPopupDialog.open()
                     }
                     onEditButtonClicked: {
-                        lesseonEditorDialog.editLesson(lesson)
+                        lessonEditorDialog.open()
                     }
                 }
 

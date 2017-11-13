@@ -29,11 +29,6 @@ PopupDialog {
     property KeyboardLayout keyboardLayout: KeyboardLayout {}
     property Profile profile: Profile {}
 
-    function editLesson(lesson) {
-        root.lesson.copyFrom(lesson)
-        root.open()
-    }
-
     onClosed: {
         profileDataAccess.storeCustomLesson(root.lesson, root.profile, root.keyboardLayout.name)
     }
