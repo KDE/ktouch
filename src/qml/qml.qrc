@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/qml">
         <file>common/Balloon.qml</file>
+        <file>common/Collapsable.qml</file>
         <file>common/DetailedRadioButton.qml</file>
         <file>common/IconButton.qml</file>
         <file>common/IconLabel.qml</file>

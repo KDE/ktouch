@@ -134,7 +134,6 @@ ColumnLayout {
         Column {
             id: header
             width: parent.width
-            height: toolbar.height + courseDescriptionItem.height
 
             ToolBar {
                 id: toolbar
@@ -212,7 +211,7 @@ ColumnLayout {
             CourseDescriptionItem {
                 id: courseDescriptionItem
                 width: parent.width
-                active: toggleCourseDesciptionButton.checked
+                collapsed: !toggleCourseDesciptionButton.checked
                 description: courseItem.description
             }
         }
