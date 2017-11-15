@@ -91,6 +91,11 @@ DataIndex* KTouchContext::dataIndex()
     return Application::dataIndex();
 }
 
+bool KTouchContext::keyboardKCMAvailable()
+{
+    return testKCMAvailibility(keyboardKCMName);
+}
+
 void KTouchContext::showMenu(int xPos, int yPos)
 {
     m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
@@ -149,7 +154,7 @@ void KTouchContext::configureShortcuts()
     KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, m_mainWindow);
 }
 
-void KTouchContext::configureKeyboard()
+void KTouchContext::showKeyboardKCM()
 {
     QPointer<KCMultiDialog> kcm = new KCMultiDialog(m_mainWindow);
 
@@ -184,7 +189,7 @@ void KTouchContext::init()
     {
         QAction* configureKeyboardAction = new QAction(i18n("Configure Keyboard..."), this);
         m_menu->addAction(configureKeyboardAction);
-        connect(configureKeyboardAction, &QAction::triggered, this, &KTouchContext::configureKeyboard);
+        connect(configureKeyboardAction, &QAction::triggered, this, &KTouchContext::showKeyboardKCM);
     }
 #else
     m_menu->addMenu(m_keyboardLayoutMenu);

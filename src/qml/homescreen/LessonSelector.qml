@@ -29,6 +29,7 @@ ColumnLayout {
     property Profile profile
     property DataIndexCourse dataIndexCourse
     property KeyboardLayout keyboardLayout
+    property string currentKeyboardLayoutName
     property alias course: courseItem
     property Lesson selectedLesson: null
     signal lessonSelected(Course course, Lesson lesson)
@@ -213,6 +214,11 @@ ColumnLayout {
                 width: parent.width
                 collapsed: !toggleCourseDesciptionButton.checked
                 description: courseItem.description
+            }
+
+            KeyboardLayoutMismatchMessage {
+                width: parent.width
+                collapsed: !root.course || !root.course.isValid || root.currentKeyboardLayoutName == root.course.keyboardLayoutName
             }
         }
 

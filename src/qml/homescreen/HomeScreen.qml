@@ -141,6 +141,7 @@ FocusScope {
             Layout.fillWidth: true
             profile: profileComboBox.profile
             keyboardLayout: screen.keyboardLayout
+            currentKeyboardLayoutName: screen.keyboardLayoutName
             dataIndexCourse: courseSelector.selectedCourse
             onLessonSelected: screen.lessonSelected(course, lesson, profileComboBox.profile)
             z: 1
