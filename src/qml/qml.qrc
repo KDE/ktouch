@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/qml">
+        <file>common/AutoTriggerButton.qml</file>
         <file>common/Balloon.qml</file>
         <file>common/Collapsable.qml</file>
         <file>common/DetailedRadioButton.qml</file>
@@ -27,6 +28,7 @@
         <file>homescreen/HomeScreen.qml</file>
         <file>homescreen/InitialProfileDialog.qml</file>
         <file>homescreen/KeyboardLayoutMismatchMessage.qml</file>
+        <file>homescreen/LessonDeletedMessage.qml</file>
         <file>homescreen/LessonEditorDialog.qml</file>
         <file>homescreen/LessonLockedNotice.qml</file>
         <file>homescreen/LessonPreview.qml</file>

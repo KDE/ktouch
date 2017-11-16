@@ -148,6 +148,11 @@ void Course::removeLesson(int index)
     emit lessonsRemoved();
 }
 
+int Course::indexOfLesson(Lesson* lesson)
+{
+    return m_lessons.indexOf(lesson);
+}
+
 void Course::clearLessons()
 {
     if (m_lessons.count() == 0)

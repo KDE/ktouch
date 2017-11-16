@@ -25,11 +25,12 @@ Item {
     id: root
     property Lesson lesson
     property bool selected
-    property alias editButtonVisible: editButton.visible
+    property bool editable: false
     property alias background: background
 
     signal clicked
     signal doubleClicked
+    signal deleteButtonClicked
     signal editButtonClicked
     signal statButtonClicked
 
@@ -93,8 +94,9 @@ Item {
 
             IconToolButton {
                 id: editButton
+                visible: root.editable
                 icon: 'edit-entry'
-                color: "#808080"
+                color: "#000000"
                 backgroundColor: "#c0c0c0c0"
                 onClicked: {
                     root.editButtonClicked();
@@ -102,8 +104,19 @@ Item {
             }
 
             IconToolButton {
+                id: deleteButton
+                visible: root.editable
+                icon: 'edit-delete'
+                color: "#000000"
+                backgroundColor: "#c0c0c0c0"
+                onClicked: {
+                    root.deleteButtonClicked();
+                }
+            }
+
+            IconToolButton {
                 icon: 'view-statistics'
-                color: "#808080"
+                color: "#000000"
                 backgroundColor: "#c0c0c0c0"
                 onClicked: {
                     root.statButtonClicked();

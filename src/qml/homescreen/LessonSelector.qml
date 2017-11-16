@@ -105,9 +105,25 @@ ColumnLayout {
             profileDataAccess.storeCustomLesson(lesson, root.profile, root.keyboardLayout.name)
             course.addLesson(lesson)
             updateLastUnlockedLessonIndex()
-            content.currentIndex = course.lessonCount - 1;
+            content.currentIndex = course.indexOfLesson(lesson)
             root.selectedLesson = lesson
             lessonEditorDialog.open()
+        }
+
+        function deleteCustomLesson() {
+            var msgItem = lessonDeletedMessageComponent.createObject(header);
+            msgItem.deletedLesson.copyFrom(selectedLesson);
+            profileDataAccess.deleteCustomLesson(selectedLesson.id);
+            course.removeLesson(course.indexOfLesson(selectedLesson));
+            root.selectedLesson = null;
+            content.currentIndex = -1;
+        }
+
+        function restoreCustomLesson(lesson) {
+            course.addLesson(lesson);
+            profileDataAccess.storeCustomLesson(lesson, root.profile, root.keyboardLayout.name)
+            content.currentIndex = course.indexOfLesson(lesson);
+            updateLastUnlockedLessonIndex();
         }
 
         Component.onCompleted: update()
@@ -220,6 +236,16 @@ ColumnLayout {
                 width: parent.width
                 collapsed: !root.course || !root.course.isValid || root.currentKeyboardLayoutName == root.course.keyboardLayoutName
             }
+
+            Component {
+                id: lessonDeletedMessageComponent
+                LessonDeletedMessage {
+                    width: parent.width
+                    onUndeleteRequested: {
+                        course.restoreCustomLesson(deletedLesson)
+                    }
+                }
+            }
         }
 
         DropShadow {
@@ -273,7 +299,7 @@ ColumnLayout {
             }
 
             onCurrentIndexChanged: {
-                if (lessonModel.rowCount() > 0) {
+                if (lessonModel.rowCount() > 0 && currentIndex != -1) {
                     root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
                 }
                 else {
@@ -296,7 +322,7 @@ ColumnLayout {
                     anchors.centerIn: parent
                     lesson: dataRole
                     selected:  content.currentIndex == index
-                    editButtonVisible: courseItem.editable
+                    editable: courseItem.editable
                     onClicked: {
                         item.forceActiveFocus()
                         content.currentIndex = index
@@ -312,6 +338,9 @@ ColumnLayout {
                     }
                     onEditButtonClicked: {
                         lessonEditorDialog.open()
+                    }
+                    onDeleteButtonClicked: {
+                        course.deleteCustomLesson();
                     }
                 }
 

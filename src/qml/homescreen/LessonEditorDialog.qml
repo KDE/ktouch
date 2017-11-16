@@ -61,9 +61,11 @@ PopupDialog {
 
         TextField {
             id: titleTextField
-            text: root.lesson.title
+            text: root.lesson? root.lesson.title: ""
             onTextChanged: {
-                root.lesson.title = text
+                if (root.lesson) {
+                    root.lesson.title = text
+                }
             }
             Layout.row: 0
             Layout.column: 1
@@ -79,9 +81,11 @@ PopupDialog {
 
             TextArea {
                 id: lessonTextArea
-                text: root.lesson.text
+                text: root.lesson? root.lesson.text: ""
                 onTextChanged: {
-                    root.lesson.text = text
+                    if (root.lesson) {
+                        root.lesson.text = text
+                    }
                 }
                 placeholderText: i18n("Lesson text")
                 font.family: "monospace"
