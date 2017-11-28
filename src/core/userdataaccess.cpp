@@ -130,6 +130,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
     target->setTitle(courseQuery.value(0).toString());
     target->setDescription(courseQuery.value(1).toString());
     target->setKeyboardLayoutName(courseQuery.value(2).toString());
+    target->setKind(Course::SequentialCourse);
     target->clearLessons();
 
     QSqlQuery lessonsQuery(db);
