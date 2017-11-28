@@ -24,16 +24,13 @@
         <file>homescreen/CourseSelector.qml</file>
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>
         <file>homescreen/CourseSelectorKeyboardLayoutList.qml</file>
-        <file>homescreen/CustomLessonSelector.qml</file>
         <file>homescreen/HomeScreen.qml</file>
         <file>homescreen/InitialProfileDialog.qml</file>
         <file>homescreen/KeyboardLayoutMismatchMessage.qml</file>
         <file>homescreen/LessonDeletedMessage.qml</file>
         <file>homescreen/LessonEditorDialog.qml</file>
         <file>homescreen/LessonLockedNotice.qml</file>
-        <file>homescreen/LessonPreview.qml</file>
         <file>homescreen/LessonSelector.qml</file>
-        <file>homescreen/LessonSelectorBase.qml</file>
         <file>homescreen/LessonSelectorItem.qml</file>
         <file>homescreen/ProfileComboBox.qml</file>
         <file>homescreen/ProfileDetailsItem.qml</file>
