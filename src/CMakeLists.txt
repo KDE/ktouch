@@ -33,6 +33,7 @@ set(ktouch_SRCS
     declarativeitems/griditem.cpp
     declarativeitems/kcolorschemeproxy.cpp
     declarativeitems/lessonpainter.cpp
+    declarativeitems/lessontexthighlighteritem.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp
     declarativeitems/traininglinecore.cpp

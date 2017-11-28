@@ -34,6 +34,7 @@
 #include "declarativeitems/griditem.h"
 #include "declarativeitems/kcolorschemeproxy.h"
 #include "declarativeitems/lessonpainter.h"
+#include "declarativeitems/lessontexthighlighteritem.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
 #include "declarativeitems/traininglinecore.h"
@@ -133,6 +134,7 @@ void Application::registerQmlTypes()
     qmlRegisterType<GridItem>("ktouch", 1, 0 , "LineGrid");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
+    qmlRegisterType<LessonTextHighlighterItem>("ktouch", 1, 0, "LessonTextHighlighter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
     qmlRegisterType<KColorSchemeProxy>("ktouch", 1, 0, "KColorScheme");
 }

@@ -89,6 +89,11 @@ PopupDialog {
                 }
                 placeholderText: i18n("Lesson text")
                 font.family: "monospace"
+
+                LessonTextHighlighter {
+                    document: lessonTextArea.textDocument
+                    allowedCharacters: root.visible? keyboardLayout.allCharacters(): ""
+                }
             }
         }
     }

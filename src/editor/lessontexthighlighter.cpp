@@ -20,7 +20,8 @@
 #include <KColorScheme>
 
 LessonTextHighlighter::LessonTextHighlighter(QObject* parent):
-    QSyntaxHighlighter(parent)
+    QSyntaxHighlighter(parent),
+    m_maximumLineLength(60)
 {
     KColorScheme inactiveScheme(QPalette::Inactive, KColorScheme::View);
     KColorScheme activeScheme(QPalette::Active, KColorScheme::View);
@@ -63,9 +64,9 @@ void LessonTextHighlighter::highlightBlock(const QString& text)
 {
     const QLatin1Char space(32);
 
-    if (text.length() > 60)
+    if (text.length() > m_maximumLineLength)
     {
-        setFormat(60, text.length() - 60, m_overLongLineFormat);
+        setFormat(m_maximumLineLength, text.length() - m_maximumLineLength, m_overLongLineFormat);
     }
 
     if (m_allowedCharacters.isNull())
