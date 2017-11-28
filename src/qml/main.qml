@@ -52,11 +52,11 @@ Rectangle {
         property int keyboardLayoutCount: ktouch.globalDataIndex.keyboardLayoutCount
         property int courseCount: ktouch.globalDataIndex.courseCount
         onNameChanged: {
-            keyboardLayout.update()
+            activeKeyboardLayout.update()
         }
         onKeyboardLayoutCountChanged: {
             if (ktouch.globalDataIndex.isValid)
-                keyboardLayout.update()
+                activeKeyboardLayout.update()
         }
     }
 
@@ -74,11 +74,11 @@ Rectangle {
     }
 
     KeyboardLayout {
-        id: keyboardLayout
+        id: activeKeyboardLayout
 
         Component.onCompleted: {
             if (ktouch.globalDataIndex.isValid) {
-                keyboardLayout.update()
+                activeKeyboardLayout.update()
             }
         }
 
@@ -93,7 +93,7 @@ Rectangle {
                 var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (dataIndexLayout.name === name) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, activeKeyboardLayout)
                     return
                 }
             }
@@ -105,7 +105,7 @@ Rectangle {
                 var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (name.search(dataIndexLayout.name) === 0) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, activeKeyboardLayout)
                     return
                 }
             }
@@ -129,8 +129,7 @@ Rectangle {
         HomeScreen {
             id: homeScreen
             anchors.fill: parent
-            keyboardLayout: keyboardLayout
-            keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
+            activeKeyboardLayoutName: activeKeyboardLayout.isValid? activeKeyboardLayout.name: helper.name
             visible: false
             focus: true
             onLessonSelected: {
@@ -165,7 +164,7 @@ Rectangle {
             id: trainingScreen
             anchors.fill: parent
             visible: false
-            keyboardLayout: keyboardLayout
+            keyboardLayout: homeScreen.selectedKeyboardLayout
             course: selectedCourse
             lesson: selectedCourse.selectedLesson
             onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)

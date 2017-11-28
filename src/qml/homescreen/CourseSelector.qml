@@ -27,9 +27,9 @@ FocusScope {
     id: root
 
     property Profile profile
-    property KeyboardLayout keyboardLayout
     property string currentKeyboardLayoutName
     property string selectedKeyboardLayoutName
+    property DataIndexKeyboardLayout selectedKeyboardLayout
     property DataIndexCourse selectedCourse
 
     signal lessonSelected(variant course, variant lesson)
@@ -67,6 +67,18 @@ FocusScope {
 
     onSelectedCourseChanged: {
         root.selectedKeyboardLayoutName = root.selectedCourse.keyboardLayoutName;
+
+        for (var i = 0; i < ktouch.globalDataIndex.keyboardLayoutCount; i++)
+        {
+            var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
+
+            if (dataIndexLayout.name === root.selectedKeyboardLayoutName) {
+                root.selectedKeyboardLayout = dataIndexLayout;
+                return
+            }
+        }
+
+        root.selectedKeyboardLayout = null;
     }
 
     function saveLastUsedCourse(course) {

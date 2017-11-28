@@ -27,8 +27,8 @@ import "../common"
 FocusScope {
     id: screen
 
-    property KeyboardLayout keyboardLayout
-    property string keyboardLayoutName
+    property KeyboardLayout selectedKeyboardLayout: KeyboardLayout {}
+    property string activeKeyboardLayoutName
     signal lessonSelected(variant course, variant lesson, variant profile)
 
     Connections {
@@ -129,8 +129,10 @@ FocusScope {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     profile: profileComboBox.profile
-                    keyboardLayout: screen.keyboardLayout
-                    currentKeyboardLayoutName: screen.keyboardLayoutName
+                    currentKeyboardLayoutName: screen.activeKeyboardLayoutName
+                    onSelectedKeyboardLayoutChanged: {
+                        dataAccess.loadKeyboardLayout(courseSelector.selectedKeyboardLayout, screen.selectedKeyboardLayout)
+                    }
                 }
 
             }
@@ -140,8 +142,8 @@ FocusScope {
             Layout.fillHeight: true
             Layout.fillWidth: true
             profile: profileComboBox.profile
-            keyboardLayout: screen.keyboardLayout
-            currentKeyboardLayoutName: screen.keyboardLayoutName
+            selectedKeyboardLayout: screen.selectedKeyboardLayout
+            activeKeyboardLayoutName: screen.activeKeyboardLayoutName
             dataIndexCourse: courseSelector.selectedCourse
             onLessonSelected: screen.lessonSelected(course, lesson, profileComboBox.profile)
             z: 1

@@ -28,8 +28,8 @@ ColumnLayout {
     id: root
     property Profile profile
     property DataIndexCourse dataIndexCourse
-    property KeyboardLayout keyboardLayout
-    property string currentKeyboardLayoutName
+    property KeyboardLayout selectedKeyboardLayout
+    property string activeKeyboardLayoutName
     property alias course: courseItem
     property Lesson selectedLesson: null
     signal lessonSelected(Course course, Lesson lesson)
@@ -102,7 +102,7 @@ ColumnLayout {
         function createNewCustomLesson() {
             var lesson = ktouch.createLesson();
             lesson.id = utils.uuid()
-            profileDataAccess.storeCustomLesson(lesson, root.profile, root.keyboardLayout.name)
+            profileDataAccess.storeCustomLesson(lesson, root.profile, root.selectedKeyboardLayout.name)
             course.addLesson(lesson)
             updateLastUnlockedLessonIndex()
             content.currentIndex = course.indexOfLesson(lesson)
@@ -121,7 +121,7 @@ ColumnLayout {
 
         function restoreCustomLesson(lesson) {
             course.addLesson(lesson);
-            profileDataAccess.storeCustomLesson(lesson, root.profile, root.keyboardLayout.name)
+            profileDataAccess.storeCustomLesson(lesson, root.profile, root.selectedKeyboardLayout.name)
             content.currentIndex = course.indexOfLesson(lesson);
             updateLastUnlockedLessonIndex();
         }
@@ -139,7 +139,7 @@ ColumnLayout {
     LessonEditorDialog {
         id: lessonEditorDialog
         profile: root.profile
-        keyboardLayout: root.keyboardLayout
+        keyboardLayout: root.selectedKeyboardLayout
         lesson: root.selectedLesson
     }
 
@@ -234,7 +234,7 @@ ColumnLayout {
 
             KeyboardLayoutMismatchMessage {
                 width: parent.width
-                collapsed: !root.course || !root.course.isValid || root.currentKeyboardLayoutName == root.course.keyboardLayoutName
+                collapsed: !root.course || !root.course.isValid || root.activeKeyboardLayoutName == root.course.keyboardLayoutName
             }
 
             Component {
