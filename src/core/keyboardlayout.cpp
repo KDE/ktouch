@@ -29,6 +29,7 @@
 
 #include "abstractkey.h"
 #include "key.h"
+#include "keychar.h"
 #include "specialkey.h"
 #include "dataindex.h"
 
@@ -160,6 +161,23 @@ void KeyboardLayout::copyFrom(KeyboardLayout* source)
         addKey(abstractKey);
     }
     setIsValid(true);
+}
+
+QString KeyboardLayout::allCharacters() const
+{
+    QString result;
+    for (const auto abstractKey: m_keys)
+    {
+        Key* const key = qobject_cast<Key*>(abstractKey);
+        if (key)
+        {
+            for (const auto keyChar : key->keyChars())
+            {
+                result.append(keyChar->value());
+            }
+        }
+    }
+    return result;
 }
 
 AbstractKey* KeyboardLayout::key(int index) const

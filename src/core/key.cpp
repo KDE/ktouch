@@ -61,6 +61,11 @@ void Key::setHasHapticMarker(bool hasHapticMarker)
     }
 }
 
+const QList<KeyChar*>& Key::keyChars() const
+{
+    return m_keyChars;
+}
+
 int Key::keyCharCount() const
 {
     return m_keyChars.count();
