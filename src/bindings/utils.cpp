@@ -17,6 +17,7 @@
 
 #include "utils.h"
 
+#include <QColor>
 #include <QTime>
 #include <QUuid>
 #include <QtDebug>
@@ -66,4 +67,11 @@ int Utils::getSecondsOfQTime(const QTime& time)
 QString Utils::uuid()
 {
     return QUuid::createUuid().toString();
+}
+
+QColor Utils::alpha(const QColor& color, float alpha)
+{
+    auto result = QColor(color);
+    result.setAlphaF(alpha * result.alphaF());
+    return result;
 }

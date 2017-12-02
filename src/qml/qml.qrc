@@ -3,18 +3,19 @@
         <file>common/AutoTriggerButton.qml</file>
         <file>common/Balloon.qml</file>
         <file>common/Collapsable.qml</file>
-        <file>common/DetailedRadioButton.qml</file>
         <file>common/IconButton.qml</file>
         <file>common/IconLabel.qml</file>
         <file>common/IconToolButton.qml</file>
         <file>common/InfoItem.qml</file>
         <file>common/InformationTable.qml</file>
         <file>common/InlineToolbar.qml</file>
+        <file>common/Label.qml</file>
         <file>common/LearningProgressChart.qml</file>
         <file>common/ListItem.qml</file>
         <file>common/MessageBox.qml</file>
         <file>common/MonochromeIcon.qml</file>
         <file>common/PopupDialog.qml</file>
+        <file>common/RadioButton.qml</file>
         <file>common/SelectionGrip.qml</file>
         <file>common/SelectionRectangle.qml</file>
         <file>common/SheetDialog.qml</file>

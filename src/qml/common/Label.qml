@@ -1,5 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -15,25 +15,20 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef UTILS_H
-#define UTILS_H
+import QtQuick 2.9
+import QtQuick.Controls 2.2 as Controls
+import ktouch 1.0
 
-#include <QObject>
-#include <QTime>
-#include <QUrl>
+Controls.Label {
+    id: control
 
-class Utils : public QObject
-{
-    Q_OBJECT
-public:
-    explicit Utils(QObject* parent = 0);
-    Q_INVOKABLE QUrl findImage(QString name);
-    Q_INVOKABLE int getMinutesOfQTime(const QTime& time);
-    Q_INVOKABLE int getSecondsOfQTime(const QTime& time);
-    Q_INVOKABLE QString uuid();
-    Q_INVOKABLE QColor alpha(const QColor& color, float alpha);
+    property alias colorScheme: colorScheme
 
-};
+    KColorScheme {
+        id: colorScheme
+        colorGroup: control.enabled? KColorScheme.Active: KColorScheme.Disabled
+        colorSet: KColorScheme.Window
+    }
 
-
-#endif // UTILS_H
+    color: colorScheme.normalText
+}

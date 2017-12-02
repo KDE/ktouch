@@ -172,7 +172,6 @@ Item {
         ProfileForm {
             id: profileForm
             width: parent.width
-            height: childrenRect.height
             showWelcomeLabel: false
             onDone: {
                 root.profile.name = profileForm.name

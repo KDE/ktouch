@@ -55,34 +55,49 @@ ColumnLayout {
         placeholderText: i18n("Name")
     }
 
-    DetailedRadioButton {
+    RadioButton {
         id: beginnerRadioButton
-        Layout.fillWidth: true
+        Layout.maximumWidth: parent.width
         enabled: root.skillLevelSelectionEnabled
-        label: i18n("I have no or only very little experience in machine typing")
-        hint: i18n("Lessons are unlocked as your typing skills improve over time.")
+        text: i18n("I have no or only very little experience in machine typing")
+        label.wrapMode: Text.Wrap
         onCheckedChanged: {
             if (checked) {
                 root.skillLevel = Profile.Beginner
-                advancedRadioButton.checked = false
             }
         }
     }
 
-    DetailedRadioButton {
-        id: advancedRadioButton
-        Layout.fillWidth: true
+    Label {
+        text: i18n("Lessons are unlocked as your typing skills improve over time.")
+        wrapMode: Text.Wrap
+        Layout.maximumWidth: parent.width
+        leftPadding: font.pixelSize * 2
+        font.italic: true
         enabled: root.skillLevelSelectionEnabled
-        label: i18n("I am an experienced machine typist and want to improve my skills")
-        hint: i18n("All lessons are unlocked immediately.")
+    }
+
+    RadioButton {
+        id: advancedRadioButton
+        Layout.maximumWidth: parent.width
+        enabled: root.skillLevelSelectionEnabled
+        text: i18n("I have no or only very little experience in machine typing")
+        label.wrapMode: Text.Wrap
         onCheckedChanged: {
             if (checked) {
                 root.skillLevel = Profile.Advanced
-                beginnerRadioButton.checked = false
             }
         }
     }
 
+    Label {
+        text: i18n("All lessons are unlocked immediately.")
+        wrapMode: Text.Wrap
+        Layout.maximumWidth: parent.width
+        leftPadding: font.pixelSize * 2
+        font.italic: true
+        enabled: root.skillLevelSelectionEnabled
+    }
 
     Item {
         Layout.fillWidth: true
