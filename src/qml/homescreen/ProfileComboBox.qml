@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.6
+import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Controls.impl 2.2
 import QtGraphicalEffects 1.0
@@ -36,13 +36,26 @@ ComboBox {
         colorSet: KColorScheme.View
     }
 
-    background: Rectangle {
-        opacity: (popup.visible? 0.6: 0.0) + (hovered || visualFocus? 0.3: 0.0)
-        color: colorScheme.normalBackground
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
+    background: Item {
+        Rectangle {
+            anchors.fill: parent
+            opacity: (popup.visible? 0.6: 0.0) + (root.hovered || root.visualFocus? 0.3: 0.0)
+            color: colorScheme.normalBackground
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 150
+                }
             }
+        }
+
+        FocusBar {
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+            height: 3
+            control: root
         }
     }
 

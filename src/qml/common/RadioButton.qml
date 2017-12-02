@@ -80,23 +80,14 @@ RadioButton {
         leftPadding: control.indicator.width + control.spacing
         bottomPadding: 3
 
-        Rectangle {
+        FocusBar {
             anchors {
                 left: parent.left
                 right: parent.right
                 bottom: parent.bottom
                 leftMargin: parent.leftPadding
             }
-
-            height: 2
-            color: control.colorScheme.focusDecoration
-            opacity: control.activeFocus? 1: 0
-
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: 150
-                }
-            }
+            control: control
         }
     }
 }

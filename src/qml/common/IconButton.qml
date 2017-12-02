@@ -48,27 +48,41 @@ Button {
         Behavior on color {
             ColorAnimation { duration: 150 }
         }
+
     }
 
-    background: Rectangle {
-        id: bg
-        color: button.activeFocus? buttonColorScheme.focusDecoration: buttonColorScheme.alternateBackground
+    background: Item {
+        Rectangle {
+            anchors.fill: parent;
+            id: bg
+            color: buttonColorScheme.alternateBackground
 
-        HueSaturation {
-            anchors.fill: bg
-            source: bg
-            saturation: hovered? 0.3: 0
-            lightness: hovered? -0.04: 0
-            Behavior on saturation {
-                NumberAnimation {
-                    duration: 150
+            HueSaturation {
+                anchors.fill: bg
+                source: bg
+                saturation: hovered? 0.3: 0
+                lightness: hovered? -0.04: 0
+                Behavior on saturation {
+                    NumberAnimation {
+                        duration: 150
+                    }
+                }
+                Behavior on lightness {
+                    NumberAnimation {
+                        duration: 150
+                    }
                 }
             }
-            Behavior on lightness {
-                NumberAnimation {
-                    duration: 150
-                }
+        }
+
+        FocusBar {
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
             }
+            height: 3
+            control: button
         }
     }
 }

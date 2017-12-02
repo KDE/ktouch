@@ -15,15 +15,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import QtQuick.Controls 2.2
+import ktouch 1.0
 
 ToolButton {
     id: button
 
+    KColorScheme {
+        id: buttonColorScheme
+        colorGroup:  button.enabled? KColorScheme.Active: KColorScheme.Disabled
+        colorSet: KColorScheme.Button
+    }
+
     property alias color: content.color
     property alias icon: content.icon
-    property color backgroundColor: "#ffffff"
+    property color backgroundColor: button.colorScheme.normalBackground
+    property alias colorScheme: buttonColorScheme
     padding: 0
 
     hoverEnabled: true
@@ -31,16 +39,30 @@ ToolButton {
     contentItem: IconLabel {
         id: content
         text: button.text
+        color: button.colorScheme.normalText
         elide: "ElideNone"
     }
 
-    background: Rectangle {
-        opacity: (checked? 0.6: 0) + (hovered? 0.3: 0)
-        color: button.backgroundColor
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
+    background: Item {
+        Rectangle {
+            anchors.fill: parent
+            opacity: (button.checked? 0.6: 0) + (button.activeFocus || button.hovered? 0.3: 0)
+            color: button.backgroundColor
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: 150
+                }
             }
+        }
+
+        FocusBar {
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+            height: 3
+            control: button
         }
     }
 }
