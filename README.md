@@ -14,24 +14,35 @@ Building
 ========
 
 KTouch has the following build dependencies:
- * CMake >= 2.8.12
- * CMake Extra Modules >= 1.0.0
- * Qt >= 5.5
- * KDE Frameworks:
-   *  Config
-   *  ConfigWidgets
-   *  CoreAddons
-   *  Declarative
-   *  DocTools
-   *  I18n
-   *  ItemViews
-   *  KCMUtils
-   *  KIO
-   *  NewStuff
-   *  TextEditor
-   *  WidgetsAddons
-   *  WindowSystem
-   *  XmlGui
+ * CMake ≥ 3.0.0
+ * CMake Extra Modules ≥ 1.0.0
+ * Qt ≥ 5.9 with the following modules
+   * Qt GUI
+   * Qt QML
+   * Qt Quick
+   * Qt Quick Widgets
+   * Qt Quick Controls 2
+   * Qt SQL
+   * Qt Test
+   * Qt X11 Extras
+   * Qt XML
+   * Qt XML Patterns
+ * KDE Frameworks 5:
+   * Completion
+   * Config
+   * ConfigWidgets
+   * CoreAddons
+   * Declarative
+   * DocTools
+   * I18n
+   * ItemViews
+   * KCMUtils
+   * KIO
+   * TextWidgets
+   * WidgetsAddons
+   * WindowSystem
+   * XmlGui
+   * IconThemes
  * libxkbfile (optional, for keyboard layout auto-detection)
  * libxcb (optional, for keyboard layout auto-detection)
 

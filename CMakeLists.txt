@@ -29,9 +29,7 @@ find_package(Qt5 5.9 REQUIRED COMPONENTS
     Quick
     QuickWidgets
     QuickControls2
-    Script
     Sql
-    Test
     Widgets
     X11Extras
     Xml
