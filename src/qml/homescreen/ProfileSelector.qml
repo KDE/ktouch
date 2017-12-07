@@ -53,43 +53,42 @@ FocusScope {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            Rectangle {
-                id: listContainer
+            ListView {
+                id: list
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                color: listColorScheme.normalBackground
-
-                ScrollView {
-                    anchors.fill: parent
-                    ListView {
-                        id: list
-                        anchors.fill: parent
-                        model: profileDataAccess.profileCount + 1
-                        clip: true
-                        delegate: ListItem {
-                            property bool isNewButton: index >= profileDataAccess.profileCount
-                            width: list.width
-                            text: isNewButton?
-                                    i18n("Create New Profile"):
-                                    index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
-                            label.font.italic: isNewButton
-                            icon: isNewButton? "list-add": "user-identity"
-                            highlighted: ListView.isCurrentItem
-                            onClicked: {
-                                list.currentIndex = index
-                                if (isNewButton) {
-                                    createNewProfile()
-                                }
-                                else {
-                                    selectProfile(index)
-                                }
-                            }
-                            onDoubleClicked: {
-                                if (!isNewButton) {
-                                    root.profileChosen(profileDataAccess.profile(list.currentIndex))
-                                }
-                            }
+                model: profileDataAccess.profileCount + 1
+                clip: true
+                delegate: ListItem {
+                    property bool isNewButton: index >= profileDataAccess.profileCount
+                    width: list.width
+                    text: isNewButton?
+                            i18n("Create New Profile"):
+                            index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
+                    label.font.italic: isNewButton
+                    icon: isNewButton? "list-add": "user-identity"
+                    highlighted: ListView.isCurrentItem
+                    onClicked: {
+                        list.currentIndex = index
+                        if (isNewButton) {
+                            createNewProfile()
                         }
+                        else {
+                            selectProfile(index)
+                        }
+                    }
+                    onDoubleClicked: {
+                        if (!isNewButton) {
+                            root.profileChosen(profileDataAccess.profile(list.currentIndex))
+                        }
+                    }
+                }
+                onCurrentItemChanged: {
+                    if (currentItem.isNewButton) {
+                        createNewProfile()
+                    }
+                    else {
+                        selectProfile(currentIndex)
                     }
                 }
             }

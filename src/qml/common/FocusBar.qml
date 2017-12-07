@@ -20,7 +20,7 @@ import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 
 Rectangle {
-    property Controls.Control control
+    property Item control
 
     height: 2
     color: control.colorScheme.focusDecoration

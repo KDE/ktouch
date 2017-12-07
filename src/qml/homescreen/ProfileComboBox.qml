@@ -79,6 +79,7 @@ ComboBox {
     model: profileDataAccess.profileCount
 
     onActivated: {
+        console.log("activated");
         profile = index < profileDataAccess.profileCount? profileDataAccess.profile(index): null
     }
 
@@ -131,7 +132,6 @@ ComboBox {
                 model: root.popup.visible ? root.delegateModel : null
                 currentIndex: root.highlightedIndex
 
-                ScrollIndicator.vertical: ScrollIndicator { }
                 footer: IconButton {
                     id: manageProfileButton
                     width: parent.width

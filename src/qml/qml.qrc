@@ -13,6 +13,7 @@
         <file>common/Label.qml</file>
         <file>common/LearningProgressChart.qml</file>
         <file>common/ListItem.qml</file>
+        <file>common/ListView.qml</file>
         <file>common/MessageBox.qml</file>
         <file>common/MonochromeIcon.qml</file>
         <file>common/PopupDialog.qml</file>
