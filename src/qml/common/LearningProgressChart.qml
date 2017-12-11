@@ -15,17 +15,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
-import org.kde.charts 0.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
+import org.kde.charts 0.1 as Charts
 import ktouch 1.0
 
-LineChart {
+Charts.LineChart {
     id: chart
 
-    property Dimension accuracy: accuracyDimension
-    property Dimension charactersPerMinute: charactersPerMinuteDimension
+    property Charts.Dimension accuracy: accuracyDimension
+    property Charts.Dimension charactersPerMinute: charactersPerMinuteDimension
 
     pitch: 60
 
@@ -42,7 +41,7 @@ LineChart {
     }
 
     dimensions: [
-        Dimension {
+        Charts.Dimension {
             id: accuracyDimension
             dataColumn: 5
             color: "#ffb12d"
@@ -52,7 +51,7 @@ LineChart {
             unit: "%"
             unitFactor: 100
         },
-        Dimension {
+        Charts.Dimension {
             id: charactersPerMinuteDimension
             dataColumn: 6
             color: "#38aef4"

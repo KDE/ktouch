@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import QtGraphicalEffects 1.0
 
 Loader {

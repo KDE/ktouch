@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.6
+import QtQuick 2.9
 import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 

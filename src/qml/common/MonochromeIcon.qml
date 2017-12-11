@@ -15,11 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import QtGraphicalEffects 1.0
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons 2.0 as Addons
 
-QIconItem {
+Addons.QIconItem {
     property color color: "#000000"
     id: icon
     width: 24
