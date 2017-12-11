@@ -58,5 +58,5 @@ ListView {
         z: -1
     }
 
-    ScrollIndicator.vertical: ScrollIndicator { }
+    ScrollBar.vertical: ScrollBar { }
 }
