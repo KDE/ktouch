@@ -1,4 +1,3 @@
-import QtQuick 2.0
 /*
  *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
