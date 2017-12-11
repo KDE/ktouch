@@ -4,6 +4,7 @@
         <file>common/Balloon.qml</file>
         <file>common/Collapsable.qml</file>
         <file>common/FocusBar.qml</file>
+        <file>common/GridView.qml</file>
         <file>common/IconButton.qml</file>
         <file>common/IconLabel.qml</file>
         <file>common/IconToolButton.qml</file>

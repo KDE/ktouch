@@ -262,15 +262,9 @@ ColumnLayout {
         Layout.fillWidth: true
         z: 1
 
-        KColorScheme {
-            id: gridColorScheme
-            colorGroup: KColorScheme.Active
-            colorSet: KColorScheme.View
-        }
-
         Rectangle {
             anchors.fill: parent
-            color: gridColorScheme.shade(gridColorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
+            color: content.colorScheme.shade(content.colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
         }
 
 
@@ -280,6 +274,7 @@ ColumnLayout {
             anchors.leftMargin: 20
             clip: true
             focus: true
+            background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
             property int columns: Math.floor(width / (300 + 20))
             cellWidth: Math.floor(content.width / content.columns)
             cellHeight: Math.round(cellWidth * 2 / 3)
@@ -350,7 +345,6 @@ ColumnLayout {
                     glowColor: lessonItem.background.color
                 }
             }
-            ScrollBar.vertical: ScrollBar { }
         }
     }
 
@@ -393,7 +387,6 @@ ColumnLayout {
                     }
                 }
             }
-
         }
 
         DropShadow {
