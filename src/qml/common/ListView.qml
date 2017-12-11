@@ -24,6 +24,8 @@ ListView {
 
     property alias colorScheme: colorScheme
 
+    activeFocusOnTab: true
+
     KColorScheme {
         id: colorScheme
         colorGroup: control.enabled? KColorScheme.Active: KColorScheme.Disabled
