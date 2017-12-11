@@ -1,3 +1,4 @@
+import QtQuick 2.0
 /*
  *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
@@ -19,24 +20,32 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 
-GridView {
+Controls.ScrollBar {
     id: control
 
     property alias colorScheme: colorScheme
-    property alias background: backgroundItem
 
     KColorScheme {
         id: colorScheme
         colorGroup: control.enabled? KColorScheme.Active: KColorScheme.Disabled
-        colorSet: KColorScheme.View
+        colorSet: KColorScheme.Window
     }
 
-    Rectangle {
-        id: backgroundItem
-        anchors.fill: parent
-        color: colorScheme.normalBackground
-        z: -1
-    }
-
-    Controls.ScrollBar.vertical: ScrollBar { }
+    contentItem: Rectangle {
+        implicitWidth: 6
+        implicitHeight: 100
+        radius: width / 2
+        color: control.pressed ? colorScheme.focusDecoration: colorScheme.alternateBackground
+        opacity: control.active? 1: 0.3
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 150
+            }
+        }
+        Behavior on color {
+            ColorAnimation {
+                duration: 150
+            }
+        }
+   }
 }
