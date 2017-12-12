@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import ktouch 1.0
 
 import "../common"
@@ -39,7 +38,6 @@ Collapsable {
     onContentReadyForSwap: {
         descriptionLabel.text = description
     }
-
 
     Label {
         id: descriptionLabel

@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 import org.kde.charts 0.1 as Charts
@@ -68,6 +67,7 @@ PopupDialog {
                     id: learningProgressModel
                 }
             }
+
             Row {
                 spacing: 2 * titleLabel.font.pixelSize
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter

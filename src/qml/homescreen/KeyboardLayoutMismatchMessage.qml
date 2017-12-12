@@ -16,10 +16,8 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import ktouch 1.0
-import org.kde.kquickcontrolsaddons 2.0
 
 import "../common"
 
@@ -41,7 +39,7 @@ Collapsable {
             rowSpacing: label.font.pixelSize
             columnSpacing: 10
 
-            QIconItem {
+            Icon {
                 Layout.column: 0
                 Layout.row: 0
                 width: 32

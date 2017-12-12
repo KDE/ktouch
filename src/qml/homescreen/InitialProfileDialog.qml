@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 
@@ -27,7 +26,7 @@ PopupDialog {
     id: root
     modal: true
     title: i18n("Welcome to Typewriting Trainer")
-    closePolicy: Popup.NoAutoClose
+    closePolicy: PopupDialog.NoAutoClose
     padding: 20
 
     function save() {
