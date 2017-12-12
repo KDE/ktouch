@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 import QtGraphicalEffects 1.0
@@ -155,17 +154,7 @@ ColumnLayout {
             ToolBar {
                 id: toolbar
                 width: parent.width
-
-                background: Rectangle {
-                    color: toolbarColorScheme.toolbarBackground
-                }
-
-                KColorScheme {
-                    id: toolbarColorScheme
-                    colorGroup: KColorScheme.Active
-                    colorSet: KColorScheme.Complementary
-                    property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.5)
-                }
+                dimFactor: 1.5
 
                 RowLayout {
                     anchors.fill: parent
@@ -175,19 +164,18 @@ ColumnLayout {
                     Label {
                         text: root.course? root.course.title: ""
                         font.bold: true
-                        color: toolbarColorScheme.normalText
+                        color: toolbar.colorScheme.normalText
                     }
 
                     IconToolButton {
                         id: toggleCourseDesciptionButton
                         icon: "help-about"
                         checkable: true
-                        color: toolbarColorScheme.normalText
-                        backgroundColor: toolbarColorScheme.normalBackground
+                        color: toolbar.colorScheme.normalText
+                        backgroundColor: toolbar.colorScheme.normalBackground
                         Layout.fillHeight: true
                         Layout.preferredWidth: toolbar.height
                     }
-
 
                     ToolSeparator {
                         visible: courseItem.editable
@@ -197,9 +185,9 @@ ColumnLayout {
                         id: newLessonButton
                         icon: "document-new"
                         text: "Add New Lesson"
-                        color: toolbarColorScheme.normalText
+                        color: toolbar.colorScheme.normalText
+                        backgroundColor: toolbar.colorScheme.normalBackground
                         visible: courseItem.editable
-                        backgroundColor: toolbarColorScheme.normalBackground
                         Layout.fillHeight: true
                         onClicked: {
                             course.createNewCustomLesson()
@@ -213,8 +201,8 @@ ColumnLayout {
                     IconToolButton {
                         id: configureButton
                         icon: "application-menu"
-                        color: toolbarColorScheme.normalText
-                        backgroundColor: toolbarColorScheme.normalBackground
+                        color: toolbar.colorScheme.normalText
+                        backgroundColor: toolbar.colorScheme.normalBackground
                         Layout.fillHeight: true
                         Layout.preferredWidth: toolbar.height
                         onClicked: {
@@ -348,7 +336,6 @@ ColumnLayout {
         }
     }
 
-
     Item {
         Layout.fillWidth: true
         height: footer.height
@@ -397,5 +384,4 @@ ColumnLayout {
             verticalOffset: 0
         }
     }
-
 }

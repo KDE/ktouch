@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 import ktouch 1.0
@@ -91,19 +90,9 @@ FocusScope {
 
                 ToolBar {
                     id: header
+
                     Layout.fillWidth: true
-
-                    background: Rectangle {
-                        color: toolbarColorScheme.toolbarBackground
-                    }
-
-                    KColorScheme {
-                        id: toolbarColorScheme
-                        colorGroup: KColorScheme.Active
-                        colorSet: KColorScheme.Complementary
-                        property color toolbarBackground: Qt.darker(toolbarColorScheme.shade(toolbarColorScheme.hoverDecoration, KColorScheme.MidShade, toolbarColorScheme.contrast, -0.2), 1.3)
-                    }
-
+                    dimFactor: 1.3
 
                     RowLayout {
                         anchors.fill: parent
@@ -112,8 +101,8 @@ FocusScope {
 
                         ProfileComboBox {
                             id: profileComboBox
-                            colorScheme: toolbarColorScheme
-                            manageProfileButtonBgColor: toolbarColorScheme.toolbarBackground
+                            colorScheme: header.colorScheme
+                            manageProfileButtonBgColor: header.colorScheme.toolbarBackground
                             Layout.fillHeight: true
                             Layout.preferredWidth: 300
                             Layout.fillWidth: true

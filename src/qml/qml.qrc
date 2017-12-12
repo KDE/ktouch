@@ -25,6 +25,8 @@
         <file>common/SelectionRectangle.qml</file>
         <file>common/TextArea.qml</file>
         <file>common/TextField.qml</file>
+        <file>common/ToolBar.qml</file>
+        <file>common/ToolSeparator.qml</file>
         <file>homescreen/CourseDescriptionItem.qml</file>
         <file>homescreen/CourseSelector.qml</file>
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>
