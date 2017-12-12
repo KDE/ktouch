@@ -69,6 +69,7 @@ FocusScope {
                     icon: isNewButton? "list-add": "user-identity"
                     highlighted: ListView.isCurrentItem
                     onClicked: {
+                        list.forceActiveFocus()
                         list.currentIndex = index
                         if (isNewButton) {
                             createNewProfile()

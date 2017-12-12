@@ -15,16 +15,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtGraphicalEffects 1.0
+import org.kde.kquickcontrolsaddons 2.0 as Addons
 
-Icon {
-    property color color: "#000000"
-    id: icon
-    width: 24
-    height: 24
-    ColorOverlay {
-        anchors.fill: parent
-        source: icon
-        color: parent.color
-    }
+Addons.QIconItem {
+
 }
