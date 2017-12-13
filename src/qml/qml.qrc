@@ -22,6 +22,7 @@
         <file>common/PopupDialog.qml</file>
         <file>common/RadioButton.qml</file>
         <file>common/ScrollBar.qml</file>
+        <file>common/ScrollView.qml</file>
         <file>common/SelectionGrip.qml</file>
         <file>common/SelectionRectangle.qml</file>
         <file>common/TextArea.qml</file>

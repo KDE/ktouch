@@ -19,32 +19,24 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 
-Controls.ScrollBar {
+Controls.ScrollView {
     id: control
 
-    property alias colorScheme: colorScheme
+    Controls.ScrollBar.vertical: ScrollBar {
+         parent: control
+         x: control.mirrored ? 0 : control.width - width
+         y: control.topPadding
+         height: control.availableHeight
+         active: control.ScrollBar.horizontal.active
+         visible: size < 1
+     }
 
-    KColorScheme {
-        id: colorScheme
-        colorGroup: control.enabled? KColorScheme.Active: KColorScheme.Disabled
-        colorSet: KColorScheme.Window
-    }
-
-    contentItem: Rectangle {
-        implicitWidth:  control.orientation == Qt.Horizontal? 100: 6
-        implicitHeight: control.orientation == Qt.Horizontal? 6: 100
-        radius: 3
-        color: control.pressed ? colorScheme.focusDecoration: colorScheme.alternateBackground
-        opacity: control.active? 1: 0.3
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
-            }
-        }
-        Behavior on color {
-            ColorAnimation {
-                duration: 150
-            }
-        }
-   }
+     Controls.ScrollBar.horizontal: ScrollBar {
+         parent: control
+         x: control.leftPadding
+         y: control.height - height
+         width: control.availableWidth
+         active: control.ScrollBar.vertical.active
+         visible: size < 1
+     }
 }
