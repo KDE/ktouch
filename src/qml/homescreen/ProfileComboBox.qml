@@ -16,8 +16,6 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
-import QtQuick.Controls.impl 2.2
 import QtGraphicalEffects 1.0
 import ktouch 1.0
 
@@ -27,39 +25,9 @@ ComboBox {
     id: root
 
     property Profile profile
-    property KColorScheme colorScheme
     property color manageProfileButtonBgColor
 
-    KColorScheme {
-        id: listColorScheme
-        colorGroup: KColorScheme.Active
-        colorSet: KColorScheme.View
-    }
-
-    background: Item {
-        Rectangle {
-            anchors.fill: parent
-            opacity: (popup.visible? 0.6: 0.0) + (root.hovered || root.visualFocus? 0.3: 0.0)
-            color: colorScheme.normalBackground
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: 150
-                }
-            }
-        }
-
-        FocusBar {
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-            }
-            height: 3
-            control: root
-        }
-    }
-
-    hoverEnabled: true
+    model: profileDataAccess.profileCount
 
     contentItem: IconLabel {
         icon: "user-identity"
@@ -68,18 +36,7 @@ ComboBox {
 
     }
 
-    indicator: MonochromeIcon {
-        color: colorScheme.normalText
-        icon: "arrow-down-double"
-        x: root.width - width - root.contentItem.padding
-        y: root.topPadding + (root.availableHeight - height) / 2
-        rotation: root.popup.opacity * -180
-    }
-
-    model: profileDataAccess.profileCount
-
     onActivated: {
-        console.log("activated");
         profile = index < profileDataAccess.profileCount? profileDataAccess.profile(index): null
     }
 
@@ -100,67 +57,23 @@ ComboBox {
         highlighted: root.currentIndex === index
     }
 
-    popup: Popup {
-        y: root.height
-        width: root.width
-        implicitHeight: contentItem.implicitHeight
-        padding: 0
-        opacity: 0
-
-        enter: Transition {
-            NumberAnimation {
-                property: "opacity"
-                to: 1.0
-                duration: 150
+    popupListView.footer:  IconButton {
+        id: manageProfileButton
+        width: parent.width
+        color: root.colorScheme.normalText
+        bgColor: root.manageProfileButtonBgColor
+        text: i18n("Manage Profiles")
+        icon: "user-properties"
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: false
+            onPressed: {
+                mouse.accepted = true
             }
-        }
-
-        exit: Transition {
-            NumberAnimation {
-                property: "opacity"
-                to: 0.0
-                duration: 150
-            }
-        }
-
-        contentItem:
-            ListView {
-                id: list
-                clip: true
-                implicitHeight: contentHeight
-                width: parent.width
-                model: root.popup.visible ? root.delegateModel : null
-                currentIndex: root.highlightedIndex
-
-                footer: IconButton {
-                    id: manageProfileButton
-                    width: parent.width
-                    color: root.colorScheme.normalText
-                    bgColor: root.manageProfileButtonBgColor
-                    text: i18n("Manage Profiles")
-                    icon: "user-properties"
-                    MouseArea {
-                        anchors.fill: parent
-                        hoverEnabled: false
-                        onPressed: {
-                            mouse.accepted = true
-                        }
-                        onClicked: {
-                            root.popup.close()
-                            mouse.accepted = true
-                            manageProfileDialog.open()
-                        }
-                    }
-                }
-            }
-
-        background: Rectangle {
-            color: listColorScheme.normalBackground
-            layer.enabled: true
-            layer.effect: DropShadow {
-                samples: 24
-                horizontalOffset: 0
-                verticalOffset: 0
+            onClicked: {
+                root.popup.close()
+                mouse.accepted = true
+                manageProfileDialog.open()
             }
         }
     }
@@ -180,7 +93,7 @@ ComboBox {
         modal: true
         focus: true
         title: i18n("Manage Profiles")
-        closePolicy: Popup.CloseOnEscape
+        closePolicy: PopupDialog.CloseOnEscape
         padding: 0
         contentItem:  ProfileSelector {
             id: profileSelector
