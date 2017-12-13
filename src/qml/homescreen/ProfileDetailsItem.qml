@@ -20,6 +20,7 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import org.kde.charts 0.1 as Charts
+import org.kde.kcoreaddons 1.0
 import ktouch 1.0
 
 import "../common"
