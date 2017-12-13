@@ -17,7 +17,6 @@
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.2
 import ktouch 1.0
 import '../common'
 
@@ -75,8 +74,11 @@ Item {
             elide: Label.ElideRight
             verticalAlignment: Qt.AlignVCenter
 
-            ToolTip.text: titleLabel.text
-            ToolTip.visible: titleMouseArea.containsMouse
+            ToolTip {
+                parent: titleLabel
+                text: titleLabel.text
+                visible: titleMouseArea.containsMouse
+            }
 
             MouseArea {
                 id: titleMouseArea

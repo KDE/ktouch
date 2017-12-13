@@ -27,6 +27,7 @@
         <file>common/TextField.qml</file>
         <file>common/ToolBar.qml</file>
         <file>common/ToolSeparator.qml</file>
+        <file>common/ToolTip.qml</file>
         <file>homescreen/CourseDescriptionItem.qml</file>
         <file>homescreen/CourseSelector.qml</file>
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>
