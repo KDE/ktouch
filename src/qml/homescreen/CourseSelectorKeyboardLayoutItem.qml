@@ -74,7 +74,7 @@ Column {
                     id: courseRepeater
                     model: courseModel
                     ListItem {
-                        text: display
+                        text: dataRole.title
                         width: parent.width
                         reserveSpaceForIcon: true
                         highlighted: root.selectedCourse == dataRole
