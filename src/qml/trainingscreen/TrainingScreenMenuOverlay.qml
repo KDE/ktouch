@@ -148,8 +148,8 @@ Loader {
                         text: i18n("Return to Home Screen")
                         width: parent.width
                         onClicked: {
-                            abortRequested()
                             hide()
+                            abortRequested()
                         }
                         KeyNavigation.backtab: restartButton
                         KeyNavigation.tab: resumeButton

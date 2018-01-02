@@ -23,7 +23,7 @@ import QtGraphicalEffects 1.0
 
 import "../common"
 
-ColumnLayout {
+FocusScope {
     id: root
     property Profile profile
     property DataIndexCourse dataIndexCourse
@@ -39,8 +39,6 @@ ColumnLayout {
         course.updateLastUnlockedLessonIndex();
         selectLastLesson()
     }
-
-    spacing: 0
 
     function selectLastLesson() {
         var lessonId = profileDataAccess.courseProgress(profile, course.id, ProfileDataAccess.LastSelectedLesson);
@@ -142,246 +140,252 @@ ColumnLayout {
         lesson: root.selectedLesson
     }
 
-    Item {
-        Layout.fillWidth: true
-        Layout.preferredHeight: header.height
-        z: 2
+    ColumnLayout {
+        anchors.fill: parent
+        spacing: 0
 
-        Column {
-            id: header
-            width: parent.width
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: header.height
+            z: 2
+
+            Column {
+                id: header
+                width: parent.width
+
+                ToolBar {
+                    id: toolbar
+                    width: parent.width
+                    dimFactor: 1.5
+
+                    RowLayout {
+                        anchors.fill: parent
+                        anchors.leftMargin: 20
+                        spacing: 5
+
+                        Label {
+                            text: root.course? root.course.title: ""
+                            font.bold: true
+                            color: toolbar.colorScheme.normalText
+                        }
+
+                        IconToolButton {
+                            id: toggleCourseDesciptionButton
+                            icon: "help-about"
+                            checkable: true
+                            color: toolbar.colorScheme.normalText
+                            backgroundColor: toolbar.colorScheme.normalBackground
+                            Layout.fillHeight: true
+                            Layout.preferredWidth: toolbar.height
+                        }
+
+                        ToolSeparator {
+                            visible: courseItem.editable
+                        }
+
+                        IconToolButton {
+                            id: newLessonButton
+                            icon: "document-new"
+                            text: "Add New Lesson"
+                            color: toolbar.colorScheme.normalText
+                            backgroundColor: toolbar.colorScheme.normalBackground
+                            visible: courseItem.editable
+                            Layout.fillHeight: true
+                            onClicked: {
+                                course.createNewCustomLesson()
+                            }
+                        }
+
+                        Item {
+                            Layout.fillWidth: true
+                        }
+
+                        IconToolButton {
+                            id: configureButton
+                            icon: "application-menu"
+                            color: toolbar.colorScheme.normalText
+                            backgroundColor: toolbar.colorScheme.normalBackground
+                            Layout.fillHeight: true
+                            Layout.preferredWidth: toolbar.height
+                            onClicked: {
+                                var position = mapToItem(null, 0, height)
+                                ktouch.showMenu(position.x, position.y)
+                            }
+                        }
+                    }
+                }
+
+                CourseDescriptionItem {
+                    id: courseDescriptionItem
+                    width: parent.width
+                    collapsed: !toggleCourseDesciptionButton.checked
+                    description: courseItem.description
+                }
+
+                KeyboardLayoutMismatchMessage {
+                    width: parent.width
+                    collapsed: !root.course || !root.course.isValid || root.activeKeyboardLayoutName == root.course.keyboardLayoutName
+                }
+
+                Component {
+                    id: lessonDeletedMessageComponent
+                    LessonDeletedMessage {
+                        width: parent.width
+                        onUndeleteRequested: {
+                            course.restoreCustomLesson(deletedLesson)
+                        }
+                    }
+                }
+            }
+
+            DropShadow {
+                anchors.fill: header
+                source: header
+                samples: 16
+                horizontalOffset: 0
+                verticalOffset: 0
+            }
+        }
+
+        Item {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            z: 1
+
+            Rectangle {
+                anchors.fill: parent
+                color: content.colorScheme.shade(content.colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
+            }
+
+
+            GridView {
+                id: content
+                anchors.fill: parent
+                anchors.leftMargin: 20
+                clip: true
+                focus: true
+                background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
+                property int columns: Math.floor(width / (300 + 20))
+                cellWidth: Math.floor(content.width / content.columns)
+                cellHeight: Math.round(cellWidth * 2 / 3)
+
+                Keys.onPressed: {
+                    if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                        event.accepted = true;
+                        if (root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex) {
+                            lessonSelected(course, root.selectedLesson)
+                        }
+                    }
+                }
+
+                model: LessonModel {
+                    id: lessonModel
+                    course: courseItem
+                }
+
+                onCurrentIndexChanged: {
+                    if (lessonModel.rowCount() > 0 && currentIndex != -1) {
+                        root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
+                    }
+                    else {
+                        root.selectedLesson = null
+                    }
+                }
+
+                delegate: Item {
+                    id: item
+                    width: content.cellWidth
+                    height: content.cellHeight
+
+                    LessonSelectorItem {
+                        id: lessonItem
+                        anchors.fill: parent
+                        anchors.topMargin: 10
+                        anchors.leftMargin: 0
+                        anchors.rightMargin: 20
+                        anchors.bottomMargin: 10
+                        anchors.centerIn: parent
+                        lesson: dataRole
+                        selected:  content.currentIndex == index
+                        editable: courseItem.editable
+                        onClicked: {
+                            item.forceActiveFocus()
+                            content.currentIndex = index
+                        }
+
+                        onDoubleClicked: {
+                            if (index <= course.lastUnlockedLessonIndex) {
+                                lessonSelected(course, dataRole)
+                            }
+                        }
+                        onStatButtonClicked: {
+                            statPopupDialog.open()
+                        }
+                        onEditButtonClicked: {
+                            lessonEditorDialog.open()
+                        }
+                        onDeleteButtonClicked: {
+                            course.deleteCustomLesson();
+                        }
+                    }
+
+                    LessonLockedNotice  {
+                        anchors.centerIn: parent
+                        visible: index > course.lastUnlockedLessonIndex
+                        glowColor: lessonItem.background.color
+                    }
+                }
+            }
+        }
+
+        Item {
+            Layout.fillWidth: true
+            height: footer.height
+            z: 2
 
             ToolBar {
-                id: toolbar
+                id: footer
                 width: parent.width
-                dimFactor: 1.5
+
+                KColorScheme {
+                    id: footerColorScheme
+                    colorGroup: KColorScheme.Active
+                    colorSet: KColorScheme.Window
+                }
+
+                background: Rectangle {
+                    color: footerColorScheme.normalBackground
+                }
 
                 RowLayout {
                     anchors.fill: parent
-                    anchors.leftMargin: 20
-                    spacing: 5
-
-                    Label {
-                        text: root.course? root.course.title: ""
-                        font.bold: true
-                        color: toolbar.colorScheme.normalText
-                    }
-
-                    IconToolButton {
-                        id: toggleCourseDesciptionButton
-                        icon: "help-about"
-                        checkable: true
-                        color: toolbar.colorScheme.normalText
-                        backgroundColor: toolbar.colorScheme.normalBackground
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: toolbar.height
-                    }
-
-                    ToolSeparator {
-                        visible: courseItem.editable
-                    }
-
-                    IconToolButton {
-                        id: newLessonButton
-                        icon: "document-new"
-                        text: "Add New Lesson"
-                        color: toolbar.colorScheme.normalText
-                        backgroundColor: toolbar.colorScheme.normalBackground
-                        visible: courseItem.editable
-                        Layout.fillHeight: true
-                        onClicked: {
-                            course.createNewCustomLesson()
-                        }
-                    }
+                    spacing: 0
 
                     Item {
                         Layout.fillWidth: true
-                    }
+                        height: startButton.implicitHeight
 
-                    IconToolButton {
-                        id: configureButton
-                        icon: "application-menu"
-                        color: toolbar.colorScheme.normalText
-                        backgroundColor: toolbar.colorScheme.normalBackground
-                        Layout.fillHeight: true
-                        Layout.preferredWidth: toolbar.height
-                        onClicked: {
-                            var position = mapToItem(null, 0, height)
-                            ktouch.showMenu(position.x, position.y)
+                        IconButton {
+                            id: startButton
+                            icon: "go-next-view"
+                            bgColor: colorScheme.positiveBackground
+                            anchors.centerIn: parent
+                            text: i18n("Start Training")
+                            enabled: root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex
+                            onClicked: lessonSelected(course, root.selectedLesson)
                         }
                     }
                 }
             }
 
-            CourseDescriptionItem {
-                id: courseDescriptionItem
-                width: parent.width
-                collapsed: !toggleCourseDesciptionButton.checked
-                description: courseItem.description
+            DropShadow {
+                anchors.fill: footer
+                source: footer
+                samples: 16
+                horizontalOffset: 0
+                verticalOffset: 0
             }
-
-            KeyboardLayoutMismatchMessage {
-                width: parent.width
-                collapsed: !root.course || !root.course.isValid || root.activeKeyboardLayoutName == root.course.keyboardLayoutName
-            }
-
-            Component {
-                id: lessonDeletedMessageComponent
-                LessonDeletedMessage {
-                    width: parent.width
-                    onUndeleteRequested: {
-                        course.restoreCustomLesson(deletedLesson)
-                    }
-                }
-            }
-        }
-
-        DropShadow {
-            anchors.fill: header
-            source: header
-            samples: 16
-            horizontalOffset: 0
-            verticalOffset: 0
-        }
-    }
-
-    Item {
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        z: 1
-
-        Rectangle {
-            anchors.fill: parent
-            color: content.colorScheme.shade(content.colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
-        }
-
-
-        GridView {
-            id: content
-            anchors.fill: parent
-            anchors.leftMargin: 20
-            clip: true
-            focus: true
-            background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
-            property int columns: Math.floor(width / (300 + 20))
-            cellWidth: Math.floor(content.width / content.columns)
-            cellHeight: Math.round(cellWidth * 2 / 3)
-
-            Keys.onPressed: {
-                if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                    event.accepted = true;
-                    if (root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex) {
-                        lessonSelected(course, root.selectedLesson)
-                    }
-                }
-            }
-
-            model: LessonModel {
-                id: lessonModel
-                course: courseItem
-            }
-
-            onCurrentIndexChanged: {
-                if (lessonModel.rowCount() > 0 && currentIndex != -1) {
-                    root.selectedLesson = lessonModel.data(lessonModel.index(currentIndex, 0), LessonModel.DataRole)
-                }
-                else {
-                    root.selectedLesson = null
-                }
-            }
-
-            delegate: Item {
-                id: item
-                width: content.cellWidth
-                height: content.cellHeight
-
-                LessonSelectorItem {
-                    id: lessonItem
-                    anchors.fill: parent
-                    anchors.topMargin: 10
-                    anchors.leftMargin: 0
-                    anchors.rightMargin: 20
-                    anchors.bottomMargin: 10
-                    anchors.centerIn: parent
-                    lesson: dataRole
-                    selected:  content.currentIndex == index
-                    editable: courseItem.editable
-                    onClicked: {
-                        item.forceActiveFocus()
-                        content.currentIndex = index
-                    }
-
-                    onDoubleClicked: {
-                        if (index <= course.lastUnlockedLessonIndex) {
-                            lessonSelected(course, dataRole)
-                        }
-                    }
-                    onStatButtonClicked: {
-                        statPopupDialog.open()
-                    }
-                    onEditButtonClicked: {
-                        lessonEditorDialog.open()
-                    }
-                    onDeleteButtonClicked: {
-                        course.deleteCustomLesson();
-                    }
-                }
-
-                LessonLockedNotice  {
-                    anchors.centerIn: parent
-                    visible: index > course.lastUnlockedLessonIndex
-                    glowColor: lessonItem.background.color
-                }
-            }
-        }
-    }
-
-    Item {
-        Layout.fillWidth: true
-        height: footer.height
-        z: 2
-
-        ToolBar {
-            id: footer
-            width: parent.width
-
-            KColorScheme {
-                id: footerColorScheme
-                colorGroup: KColorScheme.Active
-                colorSet: KColorScheme.Window
-            }
-
-            background: Rectangle {
-                color: footerColorScheme.normalBackground
-            }
-
-            RowLayout {
-                anchors.fill: parent
-                spacing: 0
-
-                Item {
-                    Layout.fillWidth: true
-                    height: startButton.implicitHeight
-
-                    IconButton {
-                        id: startButton
-                        icon: "go-next-view"
-                        bgColor: colorScheme.positiveBackground
-                        anchors.centerIn: parent
-                        text: i18n("Start Training")
-                        enabled: root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex
-                        onClicked: lessonSelected(course, root.selectedLesson)
-                    }
-                }
-            }
-        }
-
-        DropShadow {
-            anchors.fill: footer
-            source: footer
-            samples: 16
-            horizontalOffset: 0
-            verticalOffset: 0
         }
     }
 }
+

@@ -136,6 +136,7 @@ FocusScope {
             dataIndexCourse: courseSelector.selectedCourse
             onLessonSelected: screen.lessonSelected(course, lesson, profileComboBox.profile)
             z: 1
+            focus: true
         }
     }
 

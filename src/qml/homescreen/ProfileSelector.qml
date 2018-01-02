@@ -58,6 +58,7 @@ FocusScope {
                 Layout.fillHeight: true
                 model: profileDataAccess.profileCount + 1
                 clip: true
+                focus: true
                 delegate: ListItem {
                     property bool isNewButton: index >= profileDataAccess.profileCount
                     width: list.width

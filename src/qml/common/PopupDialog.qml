@@ -40,6 +40,10 @@ Dialog {
         }
     }
 
+    onOpened: {
+        contentItem.forceActiveFocus()
+    }
+
     Item {
         id: dimOverlay
         parent: root.parent
@@ -130,11 +134,11 @@ Dialog {
                 color: toolbarColorScheme.normalText
                 visible: root.closePolicy & Popup.CloseOnEscape
                 backgroundColor: toolbarColorScheme.normalBackground
+                activeFocusOnTab: false
                 Layout.preferredWidth: titleLabel.implicitHeight
                 Layout.preferredHeight: titleLabel.implicitHeight
                 onClicked: root.close()
             }
         }
     }
-
 }
