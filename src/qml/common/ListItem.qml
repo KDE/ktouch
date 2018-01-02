@@ -22,7 +22,7 @@ import ktouch 1.0
 
 ItemDelegate {
     id: root
-    property string icon
+    property string iconName
     property alias label: label
     property alias bg: bg
     property alias reserveSpaceForIcon: label.reserveSpaceForIcon
@@ -57,7 +57,7 @@ ItemDelegate {
     contentItem: IconLabel {
         id: label
         text: root.text
-        icon: root.icon
+        iconName: root.iconName
         color: root.highlighted? listItemColorSchemeHighlighted.activeText: listItemColorSchemeNormal.normalText;
     }
 }

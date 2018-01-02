@@ -25,7 +25,7 @@ Button {
 
     property alias color: content.color
     property alias bgColor: bg.color
-    property alias icon: content.icon
+    property alias iconName: content.iconName
     property alias colorScheme: buttonColorScheme
 
 

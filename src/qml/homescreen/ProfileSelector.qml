@@ -66,7 +66,7 @@ FocusScope {
                             i18n("Create New Profile"):
                             index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
                     label.font.italic: isNewButton
-                    icon: isNewButton? "list-add": "user-identity"
+                    iconName: isNewButton? "list-add": "user-identity"
                     highlighted: ListView.isCurrentItem
                     onClicked: {
                         list.forceActiveFocus()
@@ -111,7 +111,7 @@ FocusScope {
         IconButton {
             id: selectButton
             Layout.fillWidth: true
-            icon: "go-next-view"
+            iconName: "go-next-view"
             text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
             bgColor: colorScheme.positiveBackground

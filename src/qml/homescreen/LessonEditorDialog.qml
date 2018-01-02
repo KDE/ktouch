@@ -99,7 +99,7 @@ PopupDialog {
 
     footer: IconButton {
         text: i18n("Done")
-        icon: "dialog-ok"
+        iconName: "dialog-ok"
         bgColor: colorScheme.positiveBackground
         onClicked: {
             root.close()

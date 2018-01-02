@@ -171,7 +171,7 @@ FocusScope {
 
                         IconToolButton {
                             id: toggleCourseDesciptionButton
-                            icon: "help-about"
+                            iconName: "help-about"
                             checkable: true
                             color: toolbar.colorScheme.normalText
                             backgroundColor: toolbar.colorScheme.normalBackground
@@ -185,7 +185,7 @@ FocusScope {
 
                         IconToolButton {
                             id: newLessonButton
-                            icon: "document-new"
+                            iconName: "document-new"
                             text: "Add New Lesson"
                             color: toolbar.colorScheme.normalText
                             backgroundColor: toolbar.colorScheme.normalBackground
@@ -202,7 +202,7 @@ FocusScope {
 
                         IconToolButton {
                             id: configureButton
-                            icon: "application-menu"
+                            iconName: "application-menu"
                             color: toolbar.colorScheme.normalText
                             backgroundColor: toolbar.colorScheme.normalBackground
                             Layout.fillHeight: true
@@ -367,7 +367,7 @@ FocusScope {
 
                         IconButton {
                             id: startButton
-                            icon: "go-next-view"
+                            iconName: "go-next-view"
                             bgColor: colorScheme.positiveBackground
                             anchors.centerIn: parent
                             text: i18n("Start Training")

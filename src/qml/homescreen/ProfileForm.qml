@@ -30,7 +30,7 @@ ColumnLayout {
 
     property bool skillLevelSelectionEnabled: true
     property alias showWelcomeLabel: welcomeLabel.visible
-    property alias doneButtonIconSource: doneBtn.icon
+    property alias doneButtonIconSource: doneBtn.iconName
     property alias doneButtonText: doneBtn.text
     signal done()
 
@@ -108,7 +108,7 @@ ColumnLayout {
             bgColor: colorScheme.positiveBackground
             text: i18n("Done")
             enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
-            icon: "dialog-ok"
+            iconName: "dialog-ok"
             onClicked: done()
         }
     }

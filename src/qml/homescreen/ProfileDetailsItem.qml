@@ -148,12 +148,12 @@ Item {
             }
             content: [
                 IconToolButton {
-                    icon: "document-edit"
+                    iconName: "document-edit"
                     text: i18n("Edit")
                     onClicked: root.state = "editor"
                 },
                 IconToolButton {
-                    icon: "edit-delete"
+                    iconName: "edit-delete"
                     text: i18n("Delete")
                     enabled: profileDataAccess.profileCount > 1
                     onClicked: root.state = "deleteConfirmation"
@@ -211,7 +211,7 @@ Item {
                 width: childrenRect.width
                 height: childrenRect.height
                 IconButton {
-                    icon: "edit-delete"
+                    iconName: "edit-delete"
                     text: i18n("Delete")
                     bgColor: colorScheme.negativeBackground
                     onClicked: root.deletionRequest()

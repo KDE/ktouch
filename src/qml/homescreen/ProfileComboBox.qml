@@ -30,7 +30,7 @@ ComboBox {
     model: profileDataAccess.profileCount
 
     contentItem: IconLabel {
-        icon: "user-identity"
+        iconName: "user-identity"
         text: profile !== null? profile.name: ""
         color: colorScheme.normalText
 
@@ -63,7 +63,7 @@ ComboBox {
         color: root.colorScheme.normalText
         bgColor: root.manageProfileButtonBgColor
         text: i18n("Manage Profiles")
-        icon: "user-properties"
+        iconName: "user-properties"
         MouseArea {
             anchors.fill: parent
             hoverEnabled: false

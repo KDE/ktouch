@@ -130,7 +130,7 @@ Dialog {
 
             IconToolButton {
                 id: closeButton
-                icon: "window-close-symbolic"
+                iconName: "window-close-symbolic"
                 color: toolbarColorScheme.normalText
                 visible: root.closePolicy & Popup.CloseOnEscape
                 backgroundColor: toolbarColorScheme.normalBackground

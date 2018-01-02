@@ -59,7 +59,7 @@ Collapsable {
             }
 
             IconButton {
-                icon: "edit-undo"
+                iconName: "edit-undo"
                 text: i18n("Undo")
                 onClicked: {
                     root.undeleteRequested();
@@ -69,7 +69,7 @@ Collapsable {
 
             AutoTriggerButton {
                 id: okButton
-                icon: "dialog-ok"
+                iconName: "dialog-ok"
                 text: i18n("Confirm")
                 onClicked: {
                     root.collapsed = true;

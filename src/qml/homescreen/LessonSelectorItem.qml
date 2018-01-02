@@ -97,7 +97,7 @@ Item {
             IconToolButton {
                 id: editButton
                 visible: root.editable
-                icon: 'edit-entry'
+                iconName: 'edit-entry'
                 color: "#000000"
                 backgroundColor: "#c0c0c0c0"
                 onClicked: {
@@ -108,7 +108,7 @@ Item {
             IconToolButton {
                 id: deleteButton
                 visible: root.editable
-                icon: 'edit-delete'
+                iconName: 'edit-delete'
                 color: "#000000"
                 backgroundColor: "#c0c0c0c0"
                 onClicked: {
@@ -117,7 +117,7 @@ Item {
             }
 
             IconToolButton {
-                icon: 'view-statistics'
+                iconName: 'view-statistics'
                 color: "#000000"
                 backgroundColor: "#c0c0c0c0"
                 onClicked: {

@@ -29,7 +29,7 @@ ToolButton {
     }
 
     property alias color: content.color
-    property alias icon: content.icon
+    property alias iconName: content.iconName
     property color backgroundColor: button.colorScheme.normalBackground
     property alias colorScheme: buttonColorScheme
     padding: 0

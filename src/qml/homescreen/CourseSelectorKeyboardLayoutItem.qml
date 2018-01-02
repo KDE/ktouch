@@ -49,7 +49,7 @@ Column {
 
     ListItem {
         id: keyboardLayoutItem
-        icon: "input-keyboard"
+        iconName: "input-keyboard"
         width: parent.width
         onClicked: {
             loader.active = !loader.active

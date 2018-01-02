@@ -19,7 +19,7 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 
 Label {
-    property string icon: ""
+    property string iconName: ""
     property bool reserveSpaceForIcon: false
     id: label
     elide: Text.ElideRight
@@ -30,14 +30,14 @@ Label {
 
     MonochromeIcon {
         id: iconItem
-        visible: label.icon != ""
+        visible: label.iconName != ""
         color: label.color
         anchors {
             left: parent.left
             leftMargin: label.text === ""? (label.width - width) / 2: label.padding
             verticalCenter: parent.verticalCenter
         }
-        icon: label.icon
+        icon: label.iconName
         width: 22
         height: 22
     }
