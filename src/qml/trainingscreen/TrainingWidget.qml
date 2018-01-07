@@ -1,5 +1,5 @@
 /*
- *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -16,10 +16,10 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 1.3
 import ktouch 1.0
 
 import "../keyboard"
+import "../common"
 
 FocusScope {
     id: trainingWidget

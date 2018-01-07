@@ -1,6 +1,5 @@
 /*
- *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
- *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,10 +16,10 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 
+import "../common"
 import "../keyboard"
 import "../meters"
 
@@ -112,6 +111,12 @@ FocusScope {
         }
     }
 
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Complementary
+    }
+
     TrainingStats {
         id: stats
         onTimeIsRunningChanged: {
@@ -129,14 +134,10 @@ FocusScope {
         sequence: "Escape"
         enabled: screen.visible
         onActivated: {
-            if (menuOverlay.active) {
-                menuOverlay.hide()
-            }
-            else {
-                menuOverlay.show()
+            if (!menu.visible) {
+                menu.open()
             }
         }
-
     }
 
 
@@ -162,7 +163,7 @@ FocusScope {
                 trainingStarted: screen.trainingStarted
                 trainingFinished: screen.trainingFinished
                 stats: stats
-                menuOverlayItem: menuOverlay
+                menu: menu
             }
         }
 
@@ -244,6 +245,7 @@ FocusScope {
             }
             source: utils.findImage("trainingscreen-footer.png")
             cache: false
+
             Keyboard {
                 id: keyboard
 
@@ -310,7 +312,9 @@ FocusScope {
 
             KeyboardUnavailableNotice {
                 id: keyboardUnavailableNotice
+                colorScheme: colorScheme
                 visible: !screen.keyboardLayout.isValid
+                width: parent.width
             }
         }
     }
@@ -320,10 +324,8 @@ FocusScope {
         anchors.fill: parent
     }
 
-    TrainingScreenMenuOverlay {
-        id: menuOverlay
-        blurSource: screenContent
-        anchors.fill: parent
+    TrainingScreenMenu {
+        id: menu
         onClosed: trainingWidget.forceActiveFocus()
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()

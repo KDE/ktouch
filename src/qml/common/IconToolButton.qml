@@ -22,16 +22,16 @@ import ktouch 1.0
 ToolButton {
     id: button
 
-    KColorScheme {
+    property alias color: content.color
+    property alias iconName: content.iconName
+    property color backgroundColor: button.colorScheme.normalBackground
+
+    property KColorScheme colorScheme: KColorScheme {
         id: buttonColorScheme
         colorGroup:  button.enabled? KColorScheme.Active: KColorScheme.Disabled
         colorSet: KColorScheme.Button
     }
 
-    property alias color: content.color
-    property alias iconName: content.iconName
-    property color backgroundColor: button.colorScheme.normalBackground
-    property alias colorScheme: buttonColorScheme
     padding: 0
 
     hoverEnabled: true

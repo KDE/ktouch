@@ -1,6 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
- *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,19 +16,20 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 
 import "../common"
 
-Item {
-    id: item
+ToolBar {
+    id: root
 
     property TrainingStats stats
     property bool trainingStarted: false
     property bool trainingFinished: true
-    property Item menuOverlayItem
+    property PopupDialog menu
+
+    dimFactor: 1.8
 
     function setMessage() {
         if (!stats.timeIsRunning && !trainingFinished) {
@@ -62,16 +62,15 @@ Item {
             right: parent.right
             leftMargin: 30
             rightMargin: 30
-            verticalCenterOffset: -1
         }
 
-        spacing: 3
-        height: menuButton.height
+        spacing: 5
 
-        ToolButton {
+        IconToolButton {
             id: menuButton
             iconName: "go-home"
-            onClicked: item.menuOverlayItem.show()
+            onClicked: root.menu.open()
+            colorScheme: root.colorScheme
         }
 
         MessageBox {

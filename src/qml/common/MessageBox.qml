@@ -1,6 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
- *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,22 +16,22 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 1.3
-import org.kde.kquickcontrolsaddons 2.0
+
+import "../common"
 
 Rectangle {
     id: item
     anchors.verticalCenter: parent.verticalCenter
     radius: 3
     color: "#eee4be"
-    height: layout.height + 6
-    width: layout.width + 6
+    height: label.height + 6
+    width: label.width + 6
     smooth: true
 
     function showMessage(msg, iconSource) {
         item.state = "hidden";
         label.text = msg
-        icon.icon = iconSource || ""
+        label.iconName = iconSource || ""
         item.state = "normal"
     }
 
@@ -57,22 +56,10 @@ Rectangle {
 
     state: "hidden"
 
-    Row {
-        id: layout
+    IconLabel {
         anchors.centerIn: parent
-        width: icon.width + spacing + label.width
-        spacing: icon.valid? 3: 0
-
-        QIconItem {
-            id: icon
-            width: height
-            height: icon? label.height: 0
-        }
-
-        Label {
-            id: label
-            color: "#000000"
-        }
+        id: label
+        padding: 2
     }
 
     states: [

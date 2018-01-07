@@ -60,7 +60,7 @@
         <file>scorescreen/ScoreScreen.qml</file>
         <file>trainingscreen/KeyboardUnavailableNotice.qml</file>
         <file>trainingscreen/TrainingScreen.qml</file>
-        <file>trainingscreen/TrainingScreenMenuOverlay.qml</file>
+        <file>trainingscreen/TrainingScreenMenu.qml</file>
         <file>trainingscreen/TrainingScreenToolbar.qml</file>
         <file>trainingscreen/TrainingWidget.qml</file>
     </qresource>
