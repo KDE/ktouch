@@ -110,7 +110,7 @@ FocusScope {
 
 
     LearningProgressModel {
-        property bool filterByLesson: false
+        property bool filterByLesson: learningProgressFilterComboBox.currentIndex == 1
         id: learningProgressModel
         profile: screen.visible? screen.profile: null
         courseFilter: screen.visible? screen.course: null
@@ -120,66 +120,6 @@ FocusScope {
     ErrorsModel {
         id: errorsModel
         trainingStats: screen.visible? screen.stats: null
-    }
-
-    Balloon {
-        id: chartTypeDialog
-        visualParent: chartTypeButton
-
-        Column {
-            id: chartTypeDialogContents
-
-            IconToolButton {
-                id: progressChartButton
-                width: Math.max(implicitWidth, errorsChartButton.implicitWidth)
-                text: i18n("Progress")
-                iconName: "office-chart-area"
-                onClicked: {
-                    chartTypeDialog.close()
-                    tabGroup.currentIndex = 0
-                }
-            }
-            IconToolButton {
-                id: errorsChartButton
-                width: Math.max(implicitWidth, progressChartButton.implicitWidth)
-                text: i18n("Errors")
-                iconName: "office-chart-bar"
-                onClicked: {
-                    chartTypeDialog.close()
-                    tabGroup.currentIndex = 1
-                }
-            }
-        }
-    }
-
-    Balloon {
-        id: learningProgressDialog
-        visualParent: learningProgressFilterButton
-
-        Column {
-            id: learningProgressDialogContents
-
-            IconToolButton {
-                id: allLessonsButton
-                width: Math.max(implicitWidth, thisLessonButton.implicitWidth)
-                text: i18n("All Lessons")
-                iconName: "view-filter"
-                onClicked: {
-                    learningProgressModel.filterByLesson = false
-                    learningProgressDialog.close()
-                }
-            }
-            IconToolButton {
-                id: thisLessonButton
-                width: Math.max(implicitWidth, allLessonsButton.implicitWidth)
-                text: i18n("This Lesson")
-                iconName: "view-filter"
-                onClicked: {
-                    learningProgressModel.filterByLesson = true
-                    learningProgressDialog.close()
-                }
-            }
-        }
     }
 
     Balloon {
@@ -380,55 +320,46 @@ FocusScope {
 
                     Label {
                         id: showLabel
-                        color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("Show a specific type of statistic", "Show")
+                        opacity: 0.7
                     }
 
-                    IconToolButton {
-                        id: chartTypeButton
+                    ComboBox {
+                        id: chartTypeComboBox
                         anchors.verticalCenter: parent.verticalCenter
-                        text: tabGroup.currentItem? tabGroup.currentItem.title: ""
-                        iconName: tabGroup.currentItem? tabGroup.currentItem.iconName: ""
-                        Layout.preferredWidth: chartTypeDialogContents.width
-                        checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
-                        onClicked: {
-                            if (checked) {
-                                chartTypeDialog.close()
+                        model: ListModel {
+                            Component.onCompleted: {
+                                append({"text": i18n("Progress"), "icon": "office-chart-area"});
+                                append({"text": i18n("Errors"), "icon": "office-chart-bar"});
                             }
-                            else {
-                                chartTypeDialog.open()
-                            }
-
                         }
+                        textRole: "text"
+                        currentIndex: 0
                     }
 
                     Label {
                         id: overLabel
-                        color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("Show a statistic over one or more lessons", "Over")
-                        opacity: tabGroup.currentItem === learningProgressTab? 1: 0
+                        opacity: tabGroup.currentItem === learningProgressTab? 0.7: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
                     }
 
-                    IconToolButton {
-                        id: learningProgressFilterButton
+                    ComboBox {
+                        id: learningProgressFilterComboBox
                         anchors.verticalCenter: parent.verticalCenter
-                        text: learningProgressModel.filterByLesson? thisLessonButton.text: allLessonsButton.text
-                        iconName: "view-filter"
-                        checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
-                        opacity: tabGroup.currentItem === learningProgressTab? 1: 0
-                        onClicked: {
-                            if (checked) {
-                                learningProgressDialog.close()
-                            }
-                            else {
-                                learningProgressDialog.open()
+                        model: ListModel {
+                            Component.onCompleted: {
+                                append({"text": i18n("All Lessons"), "icon": "view-filter"});
+                                append({"text": i18n("This Lessons"), "icon": "view-filter"});
                             }
                         }
+                        textRole: "text"
+                        currentIndex: 0
+                        opacity: tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
@@ -464,6 +395,7 @@ FocusScope {
                     StackLayout {
                         anchors.fill: parent
                         id: tabGroup
+                        currentIndex: chartTypeComboBox.currentIndex
                         property Item currentItem: currentIndex != -1? children[currentIndex]: null
 
 
@@ -528,7 +460,6 @@ FocusScope {
                             }
                         }
                     }
-
                 }
             }
         }

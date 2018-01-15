@@ -23,6 +23,8 @@ import ktouch 1.0
 ComboBox {
     id: control
 
+    property string iconRole: "icon"
+
     property KColorScheme colorScheme: KColorScheme {
         colorGroup: control.enabled? KColorScheme.Active: KColorScheme.Inactive
         colorSet: KColorScheme.Button
@@ -37,11 +39,12 @@ ComboBox {
     }
 
     hoverEnabled: true
+    spacing: 0.7 * font.pixelSize
 
     background: Item {
         Rectangle {
             anchors.fill: parent
-            opacity: (popup.visible? 0.6: 0.0) + (root.hovered || root.visualFocus? 0.3: 0.0)
+            opacity: (popup.visible? 0.6: 0.0) + (control.hovered || control.visualFocus? 0.3: 0.0)
             color: colorScheme.normalBackground
             Behavior on opacity {
                 NumberAnimation {
@@ -57,32 +60,34 @@ ComboBox {
                 bottom: parent.bottom
             }
             height: 3
-            control: root
+            control: control
         }
     }
 
-    contentItem: Label {
+    contentItem: IconLabel {
         text: control.displayText
+        iconName: currentIndex != -1 && currentIndex < model.count ? control.model.get(currentIndex)[control.iconRole]: ""
         color: colorScheme.normalText
     }
 
     indicator: MonochromeIcon {
         color: colorScheme.normalText
         icon: "arrow-down-double"
-        x: root.width - width - root.contentItem.padding
-        y: root.topPadding + (root.availableHeight - height) / 2
-        rotation: root.popup.opacity * -180
+        x: control.width - width - control.contentItem.padding
+        y: control.topPadding + (control.availableHeight - height) / 2
+        rotation: control.popup.opacity * -180
     }
 
     delegate: ListItem {
-        width: root.width
-        text: modelData
-        highlighted: root.currentIndex === index
+        width: control.width
+        text: control.textRole ? (Array.isArray(control.model) ? modelData[control.textRole] : model[control.textRole]) : modelData
+        iconName: control.iconRole ? (Array.isArray(control.model) ? modelData[control.iconRole] : model[control.iconRole]) : ""
+        highlighted: control.currentIndex === index
     }
 
     popup: Popup {
-        y: root.height
-        width: root.width
+        y: control.height
+        width: control.width
         implicitHeight: contentItem.implicitHeight
         padding: 0
         opacity: 0
@@ -109,8 +114,8 @@ ComboBox {
                 clip: true
                 implicitHeight: contentHeight
                 width: parent.width
-                model: root.popup.visible ? root.delegateModel : null
-                currentIndex: root.highlightedIndex
+                model: control.popup.visible ? control.delegateModel : null
+                currentIndex: control.highlightedIndex
             }
 
         background: Rectangle {
