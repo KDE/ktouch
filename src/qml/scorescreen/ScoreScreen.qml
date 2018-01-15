@@ -1,6 +1,5 @@
 /*
- *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
- *  Copyright 2016  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -17,10 +16,8 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.3
 import ktouch 1.0
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.charts 0.1 as Charts
 
 import "../common"
@@ -104,10 +101,13 @@ FocusScope {
 
     }
 
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
     }
+
+
 
     LearningProgressModel {
         property bool filterByLesson: false
@@ -129,7 +129,7 @@ FocusScope {
         Column {
             id: chartTypeDialogContents
 
-            Button {
+            IconToolButton {
                 id: progressChartButton
                 width: Math.max(implicitWidth, errorsChartButton.implicitWidth)
                 text: i18n("Progress")
@@ -139,7 +139,7 @@ FocusScope {
                     tabGroup.currentIndex = 0
                 }
             }
-            Button {
+            IconToolButton {
                 id: errorsChartButton
                 width: Math.max(implicitWidth, progressChartButton.implicitWidth)
                 text: i18n("Errors")
@@ -159,7 +159,7 @@ FocusScope {
         Column {
             id: learningProgressDialogContents
 
-            Button {
+            IconToolButton {
                 id: allLessonsButton
                 width: Math.max(implicitWidth, thisLessonButton.implicitWidth)
                 text: i18n("All Lessons")
@@ -169,7 +169,7 @@ FocusScope {
                     learningProgressDialog.close()
                 }
             }
-            Button {
+            IconToolButton {
                 id: thisLessonButton
                 width: Math.max(implicitWidth, allLessonsButton.implicitWidth)
                 text: i18n("This Lesson")
@@ -254,11 +254,12 @@ FocusScope {
                 anchors.rightMargin: 10
                 spacing: anchors.leftMargin
 
-                Button {
+                IconToolButton {
                     id: homeScreenButton
                     anchors.verticalCenter: parent.verticalCenter
                     text: i18n("Return to Home Screen")
                     iconName: "go-home"
+                    colorScheme.colorSet: KColorScheme.Complementary
                     onClicked: screen.homeScreenRequested()
                 }
 
@@ -267,18 +268,20 @@ FocusScope {
                     Layout.fillWidth: true
                 }
 
-                Button {
+                IconToolButton {
                     id: repeatLessonButton
                     iconName: "view-refresh"
                     text: i18n("Repeat Lesson")
+                    colorScheme.colorSet: KColorScheme.Complementary
                     onClicked: screen.lessonRepetionRequested()
                 }
 
-                Button {
+                IconToolButton {
                     id: nextLessonButton
                     iconName: "go-next-view"
                     text: i18n("Next Lesson")
                     enabled: internal.nextLesson
+                    colorScheme.colorSet: KColorScheme.Complementary
                     onClicked: screen.nextLessonRequested(internal.nextLesson)
                 }
             }
@@ -287,7 +290,7 @@ FocusScope {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: palette.base
+            color: colorScheme.normalBackground
 
             ColumnLayout {
                 id: content
@@ -313,7 +316,7 @@ FocusScope {
                             anchors.horizontalCenter: parent.horizontalCenter
                             width: captionIcon.width + captionLabel.width + 7
                             height: Math.max(captionIcon.height, captionLabel.height)
-                            QIconItem {
+                            Icon {
                                 id: captionIcon
                                 anchors.left: parent.left
                                 anchors.verticalCenter: parent.verticalCenter
@@ -326,8 +329,8 @@ FocusScope {
                                 anchors.right: parent.right
                                 anchors.verticalCenter: parent.verticalCenter
                                 text:  internal.lessonPassed?
-                                    i18n("Congratulations! You have passed the lesson."):
-                                    i18n("You have not passed the lesson.")
+                                           i18n("Congratulations! You have passed the lesson."):
+                                           i18n("You have not passed the lesson.")
                                 font.pointSize: 1.5 * Qt.font({'family': 'sansserif'}).pointSize
                                 color: "#000000"
                             }
@@ -382,11 +385,11 @@ FocusScope {
                         text: i18nc("Show a specific type of statistic", "Show")
                     }
 
-                    Button {
+                    IconToolButton {
                         id: chartTypeButton
                         anchors.verticalCenter: parent.verticalCenter
-                        text: tabGroup.currentTab.title
-                        iconName: tabGroup.currentTab.iconName
+                        text: tabGroup.currentItem? tabGroup.currentItem.title: ""
+                        iconName: tabGroup.currentItem? tabGroup.currentItem.iconName: ""
                         Layout.preferredWidth: chartTypeDialogContents.width
                         checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
                         onClicked: {
@@ -405,19 +408,19 @@ FocusScope {
                         color: "#888"
                         anchors.verticalCenter: parent.verticalCenter
                         text: i18nc("Show a statistic over one or more lessons", "Over")
-                        opacity: tabGroup.currentTab === learningProgressTab? 1: 0
+                        opacity: tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
                     }
 
-                    Button {
+                    IconToolButton {
                         id: learningProgressFilterButton
                         anchors.verticalCenter: parent.verticalCenter
                         text: learningProgressModel.filterByLesson? thisLessonButton.text: allLessonsButton.text
                         iconName: "view-filter"
                         checked: chartTypeDialog.status === 'open' || chartTypeDialog.status === 'opening'
-                        opacity: tabGroup.currentTab === learningProgressTab? 1: 0
+                        opacity: tabGroup.currentItem === learningProgressTab? 1: 0
                         onClicked: {
                             if (checked) {
                                 learningProgressDialog.close()
@@ -432,14 +435,13 @@ FocusScope {
                     }
 
                     Item {
-                        Layout.fillHeight: true
                         Layout.fillWidth: true
                     }
 
                     Charts.LegendItem {
                         id: accuracyLegend
                         anchors.verticalCenter: parent.verticalCenter
-                        opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
+                        opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
@@ -447,31 +449,31 @@ FocusScope {
                     Charts.LegendItem {
                         id: charactersPerMinuteLegend
                         anchors.verticalCenter: parent.verticalCenter
-                        opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
+                        opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
                         }
                     }
                 }
 
-                TabView {
-                    id: tabGroup
+                Item {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
-                    frameVisible: false
-                    tabsVisible: false
-                    property Tab currentTab: count > 0 && currentIndex != -1? getTab(currentIndex): null
 
-                    Tab {
-                        id: learningProgressTab
-                        title: i18n("Progress")
-                        property string iconName: "office-chart-area"
+
+                    StackLayout {
+                        anchors.fill: parent
+                        id: tabGroup
+                        property Item currentItem: currentIndex != -1? children[currentIndex]: null
+
 
                         LearningProgressChart {
-                            id: learningProgressChart
+                            id: learningProgressTab
+                            property string title: i18n("Progress")
+                            property string iconName: "office-chart-area"
                             anchors.fill: parent
                             model: learningProgressModel
-                            backgroundColor: palette.base
+                            backgroundColor: colorScheme.normalBackground
 
                             onElemEntered: {
                                 learningProgressPointTooltip.visualParent = elem
@@ -484,48 +486,49 @@ FocusScope {
                             }
 
                             Component.onCompleted: {
-                                accuracyLegend.dimension = learningProgressChart.accuracy
-                                charactersPerMinuteLegend.dimension = learningProgressChart.charactersPerMinute
+                                accuracyLegend.dimension = learningProgressTab.accuracy
+                                charactersPerMinuteLegend.dimension = learningProgressTab.charactersPerMinute
                             }
                             Component.onDestruction: {
-                                accuracyLegend.dimension = 0
-                                charactersPerMinuteLegend.dimension = 0
+                                accuracyLegend.dimension = null
+                                charactersPerMinuteLegend.dimension = null
                             }
                         }
-                    }
 
-                    Tab {
-                        id: errorsTab
-                        title: i18n("Errors")
-                        property string iconName: "office-chart-bar"
+                        Item {
+                            id: errorsTab
+                            property string title: i18n("Errors")
+                            property string iconName: "office-chart-bar"
 
-                        Charts.BarChart{
-                            anchors.fill: parent
-                            model: errorsModel
-                            pitch: 60
-                            textRole: 3 // Qt::ToolTipRole
-                            backgroundColor: palette.base
+                            Charts.BarChart{
+                                anchors.fill: parent
+                                model: errorsModel
+                                pitch: 60
+                                textRole: 3 // Qt::ToolTipRole
+                                backgroundColor: colorScheme.normalBackground
 
-                            dimensions: [
-                                Charts.Dimension {
-                                    dataColumn: 0
-                                    color: "#ffb12d"
-                                    maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
-                                    label: i18n("Errors")
+                                dimensions: [
+                                    Charts.Dimension {
+                                        dataColumn: 0
+                                        color: "#ffb12d"
+                                        maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
+                                        label: i18n("Errors")
+                                    }
+                                ]
+
+                                onElemEntered: {
+                                    errorsTooltip.visualParent = elem;
+                                    errorsTooltip.row = row
+                                    errorsTooltip.open()
                                 }
-                            ]
 
-                            onElemEntered: {
-                                errorsTooltip.visualParent = elem;
-                                errorsTooltip.row = row
-                                errorsTooltip.open()
-                            }
-
-                            onElemExited: {
-                                errorsTooltip.close()
+                                onElemExited: {
+                                    errorsTooltip.close()
+                                }
                             }
                         }
                     }
+
                 }
             }
         }

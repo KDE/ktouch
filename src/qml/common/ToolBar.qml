@@ -23,7 +23,7 @@ Controls.ToolBar {
     id: control
 
     property alias colorScheme: colorScheme
-    property real dimFactor: 1.0
+    property real dimFactor: 1.3
 
     background: Rectangle {
         color: colorScheme.toolbarBackground
