@@ -129,7 +129,7 @@ FocusScope {
     StatPopupDialog {
         id: statPopupDialog
         profile: root.profile
-        course: course
+        course: courseItem
         lesson: root.selectedLesson
     }
 

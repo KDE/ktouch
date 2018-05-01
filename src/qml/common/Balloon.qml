@@ -76,10 +76,10 @@ Loader {
                 color: palette.alternateBase
                 radius: 5
 
-                property variant parentPos: root.visualParent? root.visualParent.mapToItem(dismissArea, 0, 0): Qt.point(0, 0)
+                property variant parentPos: root.visualParent? root.visualParent.mapToItem(null, 0, 0): Qt.point(0, 0)
                 property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
 
-                //bindings won't work inside anchors definition
+                // bindings don't work for anchor definition
                 onUnderChanged: {
                     if (under) {
                         balloonTip.anchors.top = undefined
