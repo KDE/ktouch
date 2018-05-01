@@ -117,7 +117,7 @@ Item {
                 }
                 PropertyChanges {
                     target: shadowEffect
-                    glowRadius: 10
+                    glowRadius: body.radius
                 }
             },
             State {
@@ -129,7 +129,7 @@ Item {
                 }
                 PropertyChanges {
                     target: shadowEffect
-                    glowRadius: 15
+                    glowRadius: 1.5 * body.radius
                 }
             },
             State {
@@ -141,7 +141,7 @@ Item {
                 }
                 PropertyChanges {
                     target: shadowEffect
-                    glowRadius: 15
+                    glowRadius: 1.5 * body.radius
                 }
             }
         ]
