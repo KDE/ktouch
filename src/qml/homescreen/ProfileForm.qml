@@ -80,7 +80,7 @@ ColumnLayout {
         id: advancedRadioButton
         Layout.maximumWidth: parent.width
         enabled: root.skillLevelSelectionEnabled
-        text: i18n("I have no or only very little experience in machine typing")
+        text: i18n("I am an experienced machine typist and want to improve my skills")
         label.wrapMode: Text.Wrap
         onCheckedChanged: {
             if (checked) {
