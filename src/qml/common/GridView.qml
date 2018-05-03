@@ -46,7 +46,6 @@ GridView {
         }
         height: 3
         control: control
-        // z: -1
     }
 
     FocusBar {
@@ -57,7 +56,6 @@ GridView {
         }
         height: 3
         control: control
-        // z: -1
     }
 
     Controls.ScrollBar.vertical: ScrollBar { }
