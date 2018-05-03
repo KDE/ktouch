@@ -261,7 +261,6 @@ FocusScope {
             GridView {
                 id: content
                 anchors.fill: parent
-                anchors.leftMargin: 20
                 clip: true
                 focus: true
                 background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
@@ -300,10 +299,7 @@ FocusScope {
                     LessonSelectorItem {
                         id: lessonItem
                         anchors.fill: parent
-                        anchors.topMargin: 10
-                        anchors.leftMargin: 0
-                        anchors.rightMargin: 20
-                        anchors.bottomMargin: 10
+                        anchors.margins: 10
                         anchors.centerIn: parent
                         lesson: dataRole
                         selected:  content.currentIndex == index

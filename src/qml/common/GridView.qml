@@ -38,5 +38,27 @@ GridView {
         z: -1
     }
 
+    FocusBar {
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+        height: 3
+        control: control
+        // z: -1
+    }
+
+    FocusBar {
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: 3
+        control: control
+        // z: -1
+    }
+
     Controls.ScrollBar.vertical: ScrollBar { }
 }
