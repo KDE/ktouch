@@ -186,6 +186,13 @@ QVariant LearningProgressModel::data(const QModelIndex &item, int role) const
     }
 }
 
+QDateTime LearningProgressModel::date(int row) const
+{
+    LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
+    QSqlRecord record = model->record(row);
+    return QDateTime::fromMSecsSinceEpoch(record.value(0).value<quint64>());
+}
+
 int LearningProgressModel::charactersPerMinute(int row) const
 {
     const int charactersTyped = this->charactersTyped(row);

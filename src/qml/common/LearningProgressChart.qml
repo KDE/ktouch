@@ -89,8 +89,14 @@ Charts.LineChart {
         InformationTable {
             property list<InfoItem> infoModel: [
                 InfoItem {
-                    title: i18nc("Statistics on lesson:", "On:")
+                    title: i18nc("Statistics on lesson:", "Lesson:")
                     text: learningProgressPointTooltip.row !== -1? learningProgressPointTooltip.findLessonTitle(learningProgressModel.lessonId(learningProgressPointTooltip.row)): ""
+                },
+                InfoItem {
+                    title: i18n("Training on:")
+                    text: learningProgressPointTooltip.row !== -1?
+                              learningProgressModel.date(learningProgressPointTooltip.row).toLocaleString():
+                              ""
                 },
                 InfoItem {
                     title: i18n("Accuracy:")

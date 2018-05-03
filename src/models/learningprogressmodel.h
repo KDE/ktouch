@@ -45,6 +45,7 @@ public:
     qreal minAccuracy() const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+    Q_INVOKABLE QDateTime date(int row) const;
     Q_INVOKABLE int charactersPerMinute(int row) const;
     Q_INVOKABLE int charactersTyped(int row) const;
     Q_INVOKABLE int errorCount(int row) const;
