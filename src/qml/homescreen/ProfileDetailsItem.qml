@@ -71,7 +71,7 @@ Item {
             Rectangle {
 
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 40
+                width: parent.width
                 height: 250
                 color: activePalette.base
 
@@ -164,7 +164,7 @@ Item {
 
     Item {
         id: editorContainer
-        width: parent.width - 40
+        width: parent.width
         height: childrenRect.height
         anchors.centerIn: parent
 
@@ -189,7 +189,7 @@ Item {
 
     Item {
         id: deleteConfirmationContainer
-        width: parent.width - 40
+        width: parent.width
         height: childrenRect.height
         anchors.centerIn: parent
         Column {

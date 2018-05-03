@@ -46,11 +46,13 @@ FocusScope {
 
     ColumnLayout {
         anchors.fill: parent
-        spacing: 0
+        anchors.margins: 20
+        spacing: 20
 
         RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            spacing: 20
 
             ListView {
                 id: list
