@@ -1,5 +1,4 @@
-KTouch
-======
+# KTouch
 
 [![Build Status](https://build.kde.org/view/Applications/job/Applications%20ktouch%20kf5-qt5%20SUSEQt5.9/badge/icon)](https://build.kde.org/view/Applications/job/Applications%20ktouch%20kf5-qt5%20SUSEQt5.9/)
 
@@ -10,13 +9,15 @@ training levels where additional keys are introduced. Because you no
 longer need to search for the keys on the keyboard you will be able
 to type quickly and accurately.
 
-Building
-========
+# Development Setup
+
+## Building
 
 KTouch has the following build dependencies:
- * CMake ≥ 3.0.0
- * CMake Extra Modules ≥ 1.0.0
- * Qt ≥ 5.9 with the following modules
+
+ * [CMake][cmake] ≥ 3.0.0
+ * [Extra CMake Modules][ecm] ≥ 1.0.0
+ * [Qt][qt] ≥ 5.9 with the following modules
    * Qt GUI
    * Qt QML
    * Qt Quick
@@ -27,7 +28,7 @@ KTouch has the following build dependencies:
    * Qt X11 Extras
    * Qt XML
    * Qt XML Patterns
- * KDE Frameworks 5:
+ * [KDE Frameworks 5][kf5] with:
    * Completion
    * Config
    * ConfigWidgets
@@ -43,23 +44,58 @@ KTouch has the following build dependencies:
    * WindowSystem
    * XmlGui
    * IconThemes
- * libxkbfile (optional, for keyboard layout auto-detection)
- * libxcb (optional, for keyboard layout auto-detection)
+ * [libxkbfile][libxkbfile] (optional, for keyboard layout auto-detection)
+ * [libxcb][libxcb] (optional, for keyboard layout auto-detection)
 
-If the build requirements are met, KTouch can be built and installed with:
+[cmake]: https://cmake.org/
+[ecm]: https://cgit.kde.org/extra-cmake-modules.git/
+[qt]: https://www.qt.io/
+[kf5]: https://api.kde.org/frameworks/
+[libxkbfile]: https://cgit.freedesktop.org/xorg/lib/libxkbfile
+[libxcb]: https://xcb.freedesktop.org/
+
+Collecting and installing all dependencies by hand can be a challenge.
+Far easier is to use the dependency resolution of your package
+manager. Usually they can be instructed to install all dependencies
+automatically by using the information of the packaged version of
+KTouch:
+
+    apt-get build-dep ktouch # Ubuntu, Debian, ...
+    zypper source-install --build-deps-only # openSUSE
+
+If the build requirements are met, execute the following commands in
+the root directory of your working copy to built and install KTouch:
 
     mkdir build
-    cd build/
-    cmake ..
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX=../install
     make
-    sudo make install
+    make install
 
-Runtime dependencies
-====================
+These commands install KTouch to the directory `install` in the root of
+your working copy. You can install KTouch to any directory of your
+choice by passing a different path to `-DCMAKE_INSTALL_PREFIX`.
 
-At runtime KTouch needs the following software packages to be present:
- * [Breeze icon set](https://phabricator.kde.org/source/breeze-icons/)
- * [kqtquickcharts](https://phabricator.kde.org/source/kqtquickcharts/) >= 16.12
- * [plasma-desktop](https://phabricator.kde.org/source/plasma-desktop/)
-   (optional, for keyboard layout configuration from within the application)
+## Running
 
+At runtime KTouch needs the following additional software packages to be
+installed:
+
+ * [Breeze icon set][breeze]
+ * [kqtquickcharts][kqtquickcharts] ≥ 16.12
+ * [plasma-desktop][plasma-desktop] (optional, for keyboard layout
+   configuration inside the application)
+
+[breeze]: https://phabricator.kde.org/source/breeze-icons/
+[kqtquickcharts]: https://phabricator.kde.org/source/kqtquickcharts/
+[plasma-desktop]: https://phabricator.kde.org/source/plasma-desktop/
+
+KTouch needs the following environment variables to be set in order
+to find all its installed resources:
+
+    export KDEDIRS=<full-path-to-install-dir>:$KDEDIRS
+    export XDG_DATA_DIRS=<full-path-to-install-dir>/share:$XDG_DATA_DIRS
+
+After this, KTouch can finally be launched with:
+
+    <path-to-install-dir>/bin/ktouch
