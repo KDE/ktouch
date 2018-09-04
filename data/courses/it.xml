@@ -1,646 +1,1903 @@
 <?xml version="1.0"?>
 <course>
- <id>{d5a3ac52-ec39-495d-aa70-0e6de23f7d4b}</id>
- <title>Italiana (generata automaticamente)</title>
- <description>KTouch training file generated Tue Jul 27 13:27:52 2004
-Perl Script written by Steinar Theigmann &amp; Håvard Frøiland.</description>
- <keyboardLayout>it</keyboardLayout>
- <lessons>
-  <lesson>
-   <id>{df018091-e7f3-48af-886a-fcedcf10af05}</id>
-   <title>Lesson 1</title>
-   <newCharacters>jf</newCharacters>
-   <text>f ffj jf jf jjfj fjjj jfj jf f ff jjfj jjf jfjj jfjj jf jfjj
-ffj fjjf jf fj j ff fj jjf jfjj fjf fjf ff ff fjjj j jj fj
-ff jjjj jf f jf jj ff ffj fj f fjf ff f jjjj fj j ff j ff
-ffj jjjj fj jfj jjjj jjfj f j ffj fjjj jjfj jjf jjfj f jj ff
-jjf jj ff jfj f f ff f fjff j jf fj jfj jf ff fj jjfj fj jj
-fjff fjjf jj fj j jjf jj ff jj f jfjj jjjj jjfj fjjf jjfj jf
-jjf fj fj fjf jf jfjj ff fjjj fj jf jfjj ff jf jjfj jj fjjj
-jj jfj ff fj fjf jj fj ffj j j ffj fj fjjj f ff fjjj fjjj f
-jfjj jfjj fjff jfjj ff ffj jjf jjjj jf fjjf jjjj fjf jjfj jf
-ffj jjjj j ff jfjj j jj jf jf f jf jfj fjjj fj fjf j j jjfj
-jjfj jf ffj jjfj jj fjjj jfj fj ff jfjj jjfj fjff ff j ffj
-jjfj fj j jjjj jfjj j j ff fj ff jfjj fj ffj fjjf ff ff f
-jfjj jfjj jf fjjj jfjj jf jjjj f jf jj fjf f jfjj fjjj fjjj
-jjfj jjfj fjjf fjjj fj f jfjj fjjf f jjjj fjf jjfj jj fj j j
-jjf jjfj fjjf ffj ffj fj fjff jjjj jjjj fj f fjjf fjjj jfjj
-ff ff fjjf fj jjjj jf j j jfjj jf fjjj fjjf fj jfjj jfjj j
-ff fj jf jjjj ff ff fj j fjjj fj jj ff jfjj jjf fj jjfj f j
-jf jf ff ff fjjj jfj jf fj jfj j ff fjff jf jf j j ff j ff j
-fj j fjf jjf jjfj fj fjjf jfj fj jf fj ff fjjj fjf jf jf jj
-jjfj jfj f j ff jfjj jjf ff jjfj fjjf ff ff fj fj jj j jf ff
-j j fj fj ff f jj j jfjj fj j fj jjfj jf f jfjj jjjj ff jj j
-jf fj jf j fj fjjj jfjj fj jjfj j j f ff j f jjfj ff fjjf jf
-jjf jfj fjff ff fjf jfjj jjfj jjf ff jjfj jjjj j fj fjf jjfj
-ff jf jf jf jfjj fjff j fj f jf fj f jj ff jj jfj jjfj jj
-jjjj ff fjf j f fjjj j fj jjjj fjjf jjjj fjjf j j ff jfj
-jjfj ff fjff f fj fjjf jj j j fjff jf jj fjjf jfjj fjff fj j
-ff fj jjjj jfjj j fj fjjf jfjj j jj fjf jjjj j jjf j jfjj
-ffj jfjj jjfj j fj fjjj jf fjf jjfj jfjj fjf ff ff jjjj f
-fjjf fjf fj jj j ff jfj ff jjfj jj j jf jj jfjj ff jjjj fjf
-ffj j fjf fjf jjjj ffj ff ffj jjjj ff jjfj fj j jf f f fjjf
-ffj j fj jjfj fj ff jfjj fj fj j jj jj f ff ff ff ff jf f
-jjfj fjjj fjjf j ffj jj jjjj ff ff fjjj ff ffj jj fjjj fjf</text>
-  </lesson>
-  <lesson>
-   <id>{3531e8c4-f88d-42da-85e2-66c39c989ef4}</id>
-   <title>Lesson 2</title>
-   <newCharacters>kd</newCharacters>
-   <text>djj jjkf ddj k djk ddj d dj jd dj kfdff kkjk kdkd fk fk d kj
-jk kfdff dk jk fk k dk fd d fd jfjk d dk fk jd jk jk fk
-kfdff djk df fk jfjk d dj jk fk dd dk kdkd dk dd fk jfjk jk
-kdkd kj dj d fd k kd kj d kdkd k k dk jd df dd jd dd jd djk
-kd dk df jd df jk fk ddj jd jk jd ddj dk dd ddj djk dk kdkd
-kkjk fk djj fd kd dk d fd fd kk kd kd d dd dj d kfdj dk k
-kfdj kfdj dk fk dj df df jfjk jfjk kfdff ddj df dk dk d ddj
-fd dd dj d df d fk dj dd jk df ddj df jd kj jd d dk dj jfjk
-dd d jk fk fk fk kd df djj jd kfdj jk d dj df kj df djj fk
-kfdj kkjk k jfjk k df kfdff jfjk d kj dk kk kdkd dj fd dd d
-kfdff df dd df dj jd jd df kd k ddj fd jd jjkf jd kkjk kdkd
-k d jd df kd dj d kkjk kfdff kkjk kfdj dd kfdff d k jd djk
-df jfjk dd kk dj dj dk jfjk kfdff kdkd jd ddj df d dk kfdj
-dj kj df dj kfdj jjkf kfdj d d k kj kdkd jfjk kfdff jd fk
-jjkf dk d d kd jd d d jfjk d fk kj fd fk dd jfjk d kj dj fk
-dk dj djk kfdj fk kdkd df kkjk k kj d dj jfjk d dj fk jk d
-jjkf djj dk jd kfdff jjkf k kdkd d kd fk fk d d fk k dd djj
-kd df fk k fk dd jk dk ddj kkjk kfdj d fd jjkf d fk ddj jjkf
-k jd d kd djj kdkd kfdff d dj jd kfdj kfdff dk d kfdff kj df
-djj dj fk d kdkd d dk d dk k dk jd df kdkd kdkd fk fk jjkf
-djk dj kfdff kfdff kfdj ddj kj dd fd djk dj kj fd kdkd dd
-kfdj jd jfjk kfdj kd dd kfdj djk kdkd dd djj kfdff dj df jd
-df fk df df d fk df fd kfdj kfdff kfdff df dd d d d jd dd dd
-djk kfdj dk d jjkf fd dd kdkd df dk kfdj dk dj kkjk kkjk
-jfjk kj kd fd kj jjkf kd fk dk dd kfdff jfjk d kd d jjkf djj
-kfdj jd dj dk kkjk jd d df df djk df jk dk d djj djj df djk
-djk d djj kfdff d kj df d dk d d djk dj fk fk djj kj df
-kfdff dd k dj kfdff ddj df d kfdj kj jjkf d dj jfjk kd d
-kkjk fd kfdj jd k d df d kfdff fk djj fd dk d dk dd jd djj d
-d fk kj df d d kk djj dj ddj dk jd ddj d df fk dk kkjk jfjk
-kfdff jd kfdj jk fd d kdkd d d kdkd d dk df kd kkjk dj djj
-jjkf jk jd fk jd dj jjkf dk ddj fk d jjkf dj djk dk kj d ddj
-fk kfdff djj kkjk kfdff djj jd fd dk df kfdff dk</text>
-  </lesson>
-  <lesson>
-   <id>{129129e0-2015-4b5e-bc65-87681e44de4c}</id>
-   <title>Lesson 3</title>
-   <newCharacters>ls</newCharacters>
-   <text>jkll dsk dsk sfl lfsj ss sfl fjl fjsf sl sfl sllld ls ls
-skfds ksf ls jsd kl sfj js l kl sllld sl sl js sjll js lfsj
-l lfsj sfl dsk ss l fsl sjll sflk fsl jsd ksf sl fjsf l sl
-sfl sflk l sl dsk sjll l l fjsf ls sl ldd sfl sl sfl sl
-skfds l jlk ldd ls l jsd ss jsd jlk lfsj ss ldd sfj ls l ss
-ls l ss ls ss sfl fjl js sfl sjll sl sl js sjll sllld sfj ss
-jlk sfj ls lfsj ldd ss fjsf sllld kl l l sfj jsd sl fjsf ls
-sjll sl lfsj fsl jkll jlk sflk sf l sl ldd sl l ls fjsf l
-sfl fjsf sllld ls sfl ldd sjll ss lfsj sl l fsl ss dsk jsd
-lfsj sjll l sllld sfl kl dsk js jlk jsd dsk sfl ldd lfsj ss
-jlk l skfds ksf sl ls sfl dsk fjsf fjsf l sfl fsl sfl sf ss
-fjsf jsd jlk fjl sllld jlk sfj sfj sfl l sflk sfl l ls l dsk
-jlk skfds sfl sl sfl sl sfj jlk l kl kl jsd fjl skfds sjll
-fjl skfds js sl l skfds sllld kl l jsd sfl sllld sl sf fjsf
-js sl sl dsk kl kl kl dsk sflk kl l sfj sl l fjl jsd ss fjsf
-l ss dsk fsl sl jlk dsk sl js l l sl kl sf ksf sllld dsk l
-js ksf sfj sflk l sl ldd jkll kl sflk jlk ls ldd lfsj sllld
-sl sfj ls ss sfl sjll lfsj ls jlk ss jlk l l jsd kl sl l
-lfsj ksf l ls sf ss sfl js fjl sf sflk lfsj sfl jlk l sl jlk
-sflk fsl dsk sl ls fsl fsl l js fjsf kl sfj ss sfl l fjl fsl
-jkll kl sf sjll sflk dsk fjl sllld l ls ss sfj sfj sf l sflk
-ss sfl fjl l ls ksf kl l skfds ksf sl l fsl sfl l lfsj l sl
-sjll sflk l js ls sjll sfl kl jsd js ls fjsf dsk sl fjl ksf
-jlk sjll ss l ls js jlk skfds sflk jlk jsd sl sjll fjsf lfsj
-sfj js sfj sl l jlk ldd sfl kl ss sfl sllld sl sf dsk ls fsl
-ss ss kl fjl ls fsl dsk l ss jlk kl sf dsk ksf ss skfds jkll
-fjl sl ls sllld jsd kl js ss sl kl sjll ss jsd fsl sfj ss kl
-l ss fjsf fsl dsk ksf sfl fjsf ss sfj l kl fjl ss ksf ls l
-sfl l sfl sfl l sflk sjll skfds ksf sjll jlk ls sllld sl l
-sfl l sjll ss jlk sf jsd sl l dsk l sfj jkll js lfsj ls
-sllld sfl jsd sfl skfds ksf sfl sjll sllld ls ldd jsd sflk
-jsd sl lfsj fsl kl ls fsl lfsj ldd fsl ss sf sfl kl sfj jsd
-fsl ls fjsf fjsf sfl ldd l sfl l ss sf ls</text>
-  </lesson>
-  <lesson>
-   <id>{99c1684f-31ae-405b-b943-9370dd0710bf}</id>
-   <title>Lesson 4</title>
-   <newCharacters>ca</newCharacters>
-   <text>cf alla casa salassa cala jc falla dalla llcl lacca falda
-scalda alla dalla alfa dafjs cassa jc scalda calda jc sala
-scassa sacca scada calda jc falla aaaad cassa alfa jc sala
-scala salsa alfa falsa salassa alfa sala accasa kc alla
-dafjs alfa scala calda accasa dall cala salda dafjs accasa
-aaaad salsa alfa alfa casa dalla cala alfa aaaad dalla kc
-calda aaaad lacca alfa falda sacca falla dall alfa scassa
-salassa salda salda accada falsa scala scala jc alfa falda
-sala falsa salassa scada jc calda alla falla falla kc salda
-accasa accada llcl calda llcl lacca alla sacca llcl scassa
-falla falsa jc calda sala scalda salassa casa cf jc sacca
-sacca lacca jc llcl cf accada scalda sala cala accada cassa
-kc alfa accada salsa sala scalda dall scalda scassa cassa kc
-scada cassa dall dafjs alfa alfa cala salda cf cf cassa
-sacca alfa llcl cala falda calda falda accasa sala cala
-scala llcl dafjs scassa sacca dall scalda accada cf calda
-alla dafjs sala salsa dalla scada falda scala aaaad aaaad
-scala lacca alla cala jc falsa falla dafjs dall salda dalla
-salassa aaaad aaaad salda scada sacca salassa scala scalda
-lacca salda salsa scada cassa salda sacca salassa sala lacca
-falsa alfa lacca scala salassa scala sala lacca alfa scala
-falla scala kc falda salda salsa cassa scassa accasa kc
-calda dalla cassa salsa llcl dafjs sala accada sala salsa
-sala lacca accasa jc sala cala scassa jc sacca sala dall
-aaaad sacca dafjs salda falla scassa salda alfa falsa alfa
-cf salsa accada salda sacca cassa kc scassa falsa scala
-accada sacca alla falla cala falsa scassa accasa scada calda
-casa dalla sacca scala sala scada salsa salassa kc scalda
-dalla salassa scada lacca cala accada alfa llcl llcl falla
-dall falda sala jc falsa sala lacca aaaad sala accada calda
-scassa jc llcl sacca dalla accada accasa sala salsa scalda
-lacca llcl accada scada sala falda accada alfa falda sala
-cala jc jc kc sala dafjs cassa falla cala llcl cassa sala
-falsa llcl jc alfa lacca falsa cala dalla cala dall accada
-dalla alla casa aaaad dalla falda dall dall</text>
-  </lesson>
-  <lesson>
-   <id>{b1690f90-2ddd-47d9-acf6-c18bd328d585}</id>
-   <title>Lesson 5</title>
-   <newCharacters>nt</newCharacters>
-   <text>sassata scaldata adatta fata scattata calata attaccata fata
-adatta allatta catasta datata attaccata cantata saltata
-salta scassata attaccata andata stana scalata danna cascata
-scattata adattata cascata staffa sfatta andata casta datata
-sanata salta scaldata annata salata tasta tanta attacca
-dannata attacca nana scassata anca tanta allatta nata tanta
-alta lana alta tasca tassa lana catasta adatta stanca tana
-data affanna allattata lana canta stana scalata sassata
-salassata fatta nana scassata alta data scatta canna scatta
-tassa calata staccata nafta salata stalla alta salta tassata
-cantata allattata cantata latta alta stacca sfatta canna
-tanta stanca tana sana casta stana scassata sana landa
-datata sfatta staffa sanata stacca canta affanna staffa
-stata dannata stacca tana scattata tanta anca allattata
-andata stacca allatta calata dannata stacca casta dannata
-fata nafta stalla adattata allattata salassata allatta stata
-andata santa salata tana canna sassata nafta sfatta scaldata
-alta sana fata stanata stata sfatta nafta cantata datata
-nata adatta sfatta cascata stancata sana datata nafta nafta
-adatta scassata stacca sanata catasta tastata stacca stalla
-landa adatta danna scatta sfatta alta sana data salassata
-data latta andata adatta scatta tasca anca landa scalata
-salassata tassata nana stanata tassata canta tasca lana
-salata stalla affanna scattata nana adattata adattata stata
-annata staffa tastata andata tasta tastata saltata scaldata
-canta lana fatta stacca attaccata tana catasta stanca calata
-saldata data affannata scassata salata santa data sana
-stanata tastata saltata nafta nafta tassa landa latta
-stancata affannata tassata tassata tasta danna scattata
-tastata fata staccata stata scattata latta attaccata andata
-andata allatta adatta staffa cantata casta annata stata
-stanca staffa fata danna nafta tanta sassata staffa nafta
-datata canna staffa staffa nana salta andata scaldata
-sassata dannata fata canta nana saldata adattata sfatta
-stalla anca tastata stalla staccata stana staffa salata
-cantata affannata attaccata salta adatta fata landa casta
-scassata scalata tastata anca</text>
-  </lesson>
-  <lesson>
-   <id>{154d3cd2-f000-438c-b4ce-5b796b8d41d9}</id>
-   <title>Lesson 6</title>
-   <newCharacters>iv</newCharacters>
-   <text>affacciatici incanta statista incivili affaticatisi falciavi
-cavalla avvisi lanciava sindacati cinici dici stancassi
-statisti accasassi scassavi nidi inviassi affidava
-distaccata incassati scalati asina intasai lavai lavandai
-inviavi scandita assassina vaccini valida faticati taciti
-disfatta fasciassi scavavi adattasti assillassi svanivi
-avvisava assassinai slacciassi distati svitava avida vana
-allattava accasasti stancassi fasciavi affannassi tintinnii
-tasti annidata svisata dici salassavi lanci assassini
-accaniti aliti dilaniava vantava cacciasti cacci affiliata
-latina stiva vini fissi falciava stivavi nativi laici
-avallava fissavi accasciata scavalcai scansia visti nati
-avvicinatici faticati avvicini lavasti nativi avvistata
-infatti adattati scalini divini scaffali incantata datai
-vantati salti citati inciti invitava fantastici affaticava
-asili tacciassi stivava saldi lividi falciati lava svanita
-fatali visitati affannati affittai cacciati cattiva avvitava
-dilatasti vini cantassi visitai visiva allacciava affini
-additativi lasciavi accanita ansia avvisatici vili datai
-slacciava inviata indica lasciava finissi saldava svii
-saltai scavavi classici salati affiatativi distilli accaniva
-dannai affacciatici insalata vacilli svii classica svisasti
-lanciavi installai distaccava dilaniata dilaniasti tacciati
-affannatisi distillata facilita inadatti insaccati anditi
-lanci affaticassi citavi sfiniva cinica accanintisi affila
-vaccinavi stillava incassai sanati assillassi italiana
-accasciai affannatici scaccia sfasciai sfacciati scalassi
-affaticativi stavi accidia allattatici avvitassi insaccai
-attaccativi dici scaldavi diffidava stanava lava assisti
-calci lavassi salassava fasci accanii invitassi vaccinassi
-svanissi infilati tacciai scacciavi affidasti lacci
-affaticai insili attillata sanavi svitai inviata acciai
-affannatisi affidi scava allatti affidatisi tastavi inadatta
-stadi affittatisi scaldassi sfacciata incanta visitai
-assassini classificati fasciati affiatata saldai asfissia
-invia additativi avvisasti incitavi sintattici avanti lisca
-distillata allacciai stivassi filavi avvicini distaccata
-scalava vincita lavandai distilla stillati incantava</text>
-  </lesson>
-  <lesson>
-   <id>{f37f4ef3-ade9-47f5-8cec-c630f899bfaa}</id>
-   <title>Lesson 7</title>
-   <newCharacters>me</newCharacters>
-   <text>inventate effettive avallasse assistette infamiate civettava
-invitasse elefante deve tediati cadesse faticate inventate
-allenativi accidenti amativi mettiti leccai accedei
-intimidita stelle inviate fende mentali nevica dimmela
-celaste stenta scalavate sedete allettasse fece vietaste
-lamentassi stellate dimenata defletta infilaste minima
-evince salassaste nascessi devastaste defletta staffetta
-caviale vedessi falciasse medie levassi mendicanti velina
-emanasti massaie levati lede diventasti emenda addensaste
-fisse salviate vidimai nemica ammassai salisse salma
-sdentata salassate amnistia fattela incettassi micce
-scassasse salme allentasti limitavi meccanismi elencate
-sfidasse allenativi limitiate meditata svenivate disinfetti
-addentava dimenai smania settanta maledette lecite eccitasti
-sfidate dissetai fame mettiti esentiate decise venite assise
-infettata inamidiate vestite infinitesime desinava alimentai
-leccavi salvate saldiate minima assiale esaminiate assedia
-tenace amassi affamati immense avvitavate cimice mancate
-assediante inamida difendeva animava allacciasse
-affettantesi densa cimentassi addensaste viscide siediti
-limitavate filasse menate vestite esentate affettava
-smaltita difetti eccitaste assillante emette scavavate
-malvivente emanai vesti sistemavi assistevate mandata esilia
-mania infettai addensate svelti affilavate eliminati
-accennava fatene decimi accendiate inamidasse sane slittaste
-detta tesse insalate satelliti ammaccava maledivi intestiate
-attentava alienantisi sedai accasciate sedile lavasse
-smaltisce cimentate datate dimenati dialetti veli alleni
-vedete edificasse sistema seni celassi ammalasti alletta
-lemmi annientiate ammaliai dente fessa attaccantesi
-svestissi dice ammassata seccanti salvietta anelastica lesti
-scese vantiate delimitati limitati esclamasse selle
-affilavate ammalavate stima cassetta dissetasti incantaste
-elimina lesi accettati allevava smaltite elettive allacciate
-mandassi sentita fanale svanisce ammaliante esiti stenda
-eccessivamente affacciiate vietati salsicce deflettevi
-intendete caste andatela scenda statemi ciste accade
-scassavate decennale scende devastassi nevai dettaste
-cantante affettati istantanea filasse</text>
-  </lesson>
-  <lesson>
-   <id>{72a0a169-96c2-4a3e-85cc-4faa4995aaca}</id>
-   <title>Lesson 8</title>
-   <newCharacters>hr</newCharacters>
-   <text>hermitiani riferiate chinerete elencare satira recedevi
-rammendi deridere aritmetiche ritardare detersa ravvivai
-stirassi restereste avvelenerai cremate avverata trasferita
-mischiate lecchiate circhi staccherai allatterei alterantesi
-stendardi trascritte traenti arricchirai tradire diserti
-meridiana chiederci dilaterei deridere trascriva criniera
-rassettate ricadeva fiaccare firmasse smentirete reattiva
-inamidare salteresti adiravate tessereste schernirei
-inventerai addestrantesi alletterei franate marchese
-calmerai attirantisi attraente levereste ricamaste finche
-assestereste alterante alternantisi saltare affrettava
-arrestati attirati immeritata riscritta marcia saliera
-riferiste ammirasse schernissi scasserei tracciava valicare
-disarmasti accasare tranvieri scartasse smettere tardavate
-sentirsi rincasava rescindi mira mieterete starete
-alternarti traviasse esserne carcere terminati salasserai
-avversaria strette internet svernasti alternantesi ricamavi
-adiriate recedevate alleviarti visiterei alimentarti severi
-attirantisi creatrice dirvi acciaierie affretteresti
-incaricate sverrai estetiche raffinerei entrare scardina
-rincaraste ammireresti citereste emenderai tasserai tramare
-attirarsi fischiate avveriate annientarmi tartassate
-creavate schemi arenava rimediava trattasse varavate
-accentravi vesserete variava criminali maschere inavvertite
-trasalisce cadaveri rideva canteresti ammetterete stanchi
-arricchiresti smacchia ammaccherai ladra versate decreti
-raschiate sterile tratterete mastri incarica richiedi
-sanerete atterravate mesteresti riferisca vanteresti
-trasferisce raschia eserciti venerasti avviarmi centrale
-franerete renderle avvicinerei fisserai scremi stralciate
-incaricava stradali stentare marinerete schiantavi
-assideriate fischiasse serraste franavi ricavasse chinassi
-retti raffinate scriversi ricavasse certe interattiva
-affrancata dirti remerete slitterete venirsene schietta
-traviasse fricativa fracassavi diletterai raffinerei
-incaricati chimiche schermi mirasse caricata affermassi
-transitavi emersi rasenti irreale chiamavate verificata
-emanereste arava rimandaste atterrante arricciare
-ammiratrice detersi chieda allarmantisi fissare rendimenti</text>
-  </lesson>
-  <lesson>
-   <id>{ff4e0a9a-74c7-4841-a49c-78d5fd2b1597}</id>
-   <title>Lesson 9</title>
-   <newCharacters>go</newCharacters>
-   <text>vongola refrigeri svisando decoro notassero addestrandomi
-tosai ritegno adagiativi carnagioni affrontarono informate
-diventato annegate accorantisi stornino frodo atterrandoci
-tremino conosceva tritiamo svenano forcella frettolosi
-logorando meritino assimilandoci fondasse sfogliavi
-adagiavamo schernano sfilano tollera armeranno governata
-entreremmo denigrasti vestaglie arrestammo terrori dirigere
-segregare avveleno scartammo soggettivi rimando arrogavate
-chiamavamo aggravereste frodammo sanassero arrotolereste
-grafoanalisi riordinata diramano dimensione scovo ritoccando
-conciliano condensare svegliasti addentrammo tennero gestire
-incontrava litigavamo gioiscono allargatisi adimensionali
-trovasse allargato dominasti caveranno acclamo arroga
-dondolerei immigrai tormenta rigido sondassero segnalassi
-assodavano mostrati coronai sregolate disertano fora segale
-accostatomi odorerete dedotte segnasti torrente affiatatosi
-gettammo evitavamo rientrino scalando sottometto visitiamo
-ignote denominano congedai traligni verseranno disdegnare
-svio loderai accorciarono stroncando inchinavo rilassiamo
-stillavo accecando svolterei integrasse marginali togli
-volammo gaio generavate offrigli riscossero rotolaste
-accaniscono agivi rosolerei veneravo constatare modereremo
-crocifisse settimo stimando tastarono annideranno aforismi
-trionfati lavorarono sostento risanato sottintesa incantammo
-regnino rotaia sondino dissetiamo tostata alieniamo
-distinsero inviavano lotte affronterete giochiamo
-avvisandosi annotino traforiamo legato svisammo covavate
-scomodi indicano assordano esercito alienavamo dimagrisca
-sfiorisse conigliere segnalano accettino vaso cova
-accomiatate atteggiandosi canfora riformati vireremo
-gettavamo sviato sfilano intaso sollevasse vergognoso
-sociologi seconde affidammo tentiamo addossata immigrasse
-distato verificavo isoliate raccatto ritornasse arricchiremo
-maritarono arrota adocchierete segnaliate gemello odoriate
-ingelosiva orde tramortii scortavi sfronda finora affermino
-vietavamo tornavo coordinato fascicoli vigilavate
-alleviatomi assiderandoci affogarci svaghiate vagano
-scagliavi sgravava scontata accontentativi coltivino
-dignitoso estivo comandata allegarono leggerne affogati</text>
-  </lesson>
-  <lesson>
-   <id>{18d4f629-5388-4821-a27b-0ce9ffd0330c}</id>
-   <title>Lesson 10</title>
-   <newCharacters>bp</newCharacters>
-   <text>spasimavi interrompe sfibrerei appestassi colpita tenebra
-spirammo precisai tarpino comporta sperperare poeta birra
-sprecavamo approfondivate perforati adoperarsi spin
-rapidamente propinaste spalmi abbonderemmo aggrappavo
-premetto annebbiando copieranno sbilancino spallate provino
-pignoriamo rapimmo previsto appesantivi penetrai abolisce
-pescatore passaporto adombrantisi deposita rispettivamente
-recapitino accampi spesereste coperta esorbitavo bevibili
-baffo ripassava sopravvenne risplendi apporti accoppiiate
-pollaio bisbetici preveniva episodi brevettava praticammo
-ribassammo sopperirei temprata tossirebbe proibisti praterie
-pregate spopolasti opinai biasimasti apportativi galoppata
-crepiterei abbagliavano antilope accampino applicandovi
-basati pescare baseresti opere preda riempirlo ripenserai
-nebbiosi provenne lavabo preleviate appestiamo popolo
-sparlava adagierebbe copierebbe penassimo sfibrerai
-predicesti elaborare palpino pergolato pene bottino
-screpolato parlereste pericolose abolita sbarcherai
-coabitiamo rapassi scampiate alienerebbero approfittatosi
-paesaggio ripensassi spregeremo appellassi aggiornerebbe
-tamponai orbene verbali appostandoti spetti barbare spietata
-incolpiate abbassassero importo pernotto panca apportante
-piani penato potenti parallelo abitanti pesai presiedono
-spiraglio inabili riappari scolpivo approntiate
-approfondireste sbocciati spellati risponda obbligate
-speravate prendile prostrassi salpava appoggiassimo sfibravi
-soppesammo spandono tarpavano pescammo applicato insipido
-provaste operanti compilano precorri approfittasse stampasse
-platino copertoni possessiva prevenendo annebbiamo appronto
-salverebbe acerbo provassero benderei appesantitosi sporcavo
-appiana aprile abolissero praticano ripenso comprassi
-specificate birbante storpie accoppiaste scalpello pedinando
-presbiti impedisca nobilitato sbavarono apposito obbedivano
-simpatiche posdaterai apportiamo porpora annebbieranno
-possedesti celebrasse mobile ripieghi badavamo sbendai
-riprove nespola battesimo affonderebbe assemblea
-abbattessero albine deperivano procedeva addormenterebbero
-ponderino scamperai scolpisce brillai traballavo pinacoteca
-rivedibili planetari ripiegando mieterebbe vispe riposaste</text>
-  </lesson>
-  <lesson>
-   <id>{cfd57f60-d55c-4ac3-baf0-6f47158a7c69}</id>
-   <title>Lesson 11</title>
-   <newCharacters>qu</newCharacters>
-   <text>gufi ondulavo ripulirono alture cucinino amuleti allungo
-svalutasse allungavamo fluissero guastato attribuisco pugni
-autoesplicativa squagliavi utenti inquietudine seduta
-abbruna costrutto reputarono consumavo trasudano accusatomi
-aumentasse appuntavate riusciremo sfruttino adeguai insulti
-appunti educassero suora abiuriamo stupisca questo ultimassi
-paralume reputeremo speculino duecentocinquanta umori sbuffi
-sturavamo sputeremmo consumassi bussammo adunerei accumulare
-abiurare potature insultavi autentica discutono annullavi
-occultano effettuavi urlare abbattuto vituperai continuo
-puntini accuseremo tumefacciate uniformo subbuglio
-suggellavi fugavate escludi redarguite muovo buttare
-subaffitti abbruni pubblicare quaranta misurarono fuggiasco
-cuocendo defunta pubblicato fenditura duplicati commutassi
-squarciava promuove sussurrando suoneremmo ingenua indugiate
-ucciderti nubili acquistandovi questura trascuri sufficiente
-computare quoterebbe pedicure annacquerebbe curvando
-trascurabile paurosi escluse devoluti sostituita abiurammo
-asciughiamo rullammo affumicarmi occuperai quote offuscaste
-urta avvenuta maturavano casualmente devolute trafugasse
-acquisirti astuti quereliamo ultimavate adularci guariate
-attribuiva giurerete smussate succinti lucidavi nuotereste
-frustata impaurirai permuta crudeli ruminammo adulantisi
-pregusta acquietasse attualmente numerando cucinarono
-svaluta speculiamo cullavamo amputa reputa confluire arguti
-luoghi illudere pulseremmo speculerai elusa ustionare
-stupefarei aiutatoti acquisentisi confetture suscitavo
-piacque stantuffo battute procuriate assicuro arguto
-depuravano abituale cellule risultato alquanto clausola
-sontuosa fiuta riassunti asciugano recuperano rifiutano
-adulerai frustiamo diminuite desumo suonasse nauseasti
-camuffati occupi risciacqui deturpai trasudasti congiunti
-suonarono unto perquisito gustosi imburra commutata abitui
-adulata increduli consumo musichi tramuti fumaste putrefeci
-aumentandoti sguainino discute attuerai alcun tutelammo
-accumulato nuotano denunciare usurpaste salutati statue
-squaglino squarti trattenuto ulcere nullo tramutando
-devoluti trasumanai tessiture scusati allungandoti</text>
-  </lesson>
-  <lesson>
-   <id>{6d4301dc-dd4b-433e-9c1b-a9d1e35e1449}</id>
-   <title>Lesson 12</title>
-   <newCharacters>wn</newCharacters>
-   <text>sdegnata troncate allunghereste tisana ragnatele sondereste
-pasticcino aquiloni coniugammo granai comunisti incito
-schernisci dominammo nobilita sentiresti nobilitate
-scontiate allungavate figurini aboliscano eventuale notate
-esentaste odierni opinavi allentantesi accomiatante
-annacquasti processino svanito infila grondaia
-strutturalmente salparono risanerei salutarono emenderei
-riattivano svaniste condonava riscattano lanciaste cognata
-variopinto disputando travasino indipendentemente leghino
-eccitarono aggirando accontentantesi bastonino sparlano
-allungavano inventare energie integrava appaiandomi numero
-abbrunato rientrai introitate sembrando allungheremmo
-conservino ostentassi appianereste ammutinavo accechino
-aspettandovi alternatici distinguere coronasti sgraneremo
-cucinano prenoterai rinnegavo affrontavano accanirebbero
-sgranchito notavamo destando esteriormente rinnovati
-condenso rammenda congedata competendo stancasti annullerei
-indagano indagherai espugnerai stendeva inferriate
-appianassero vendereste annebbiai monarca stridono vibrante
-esamina abbonarsi sconvolse svagano guastino attaccandomi
-insultammo sintattico comunicare rimarranno elencare addenso
-appoggiandomi turavano facendomi aggancierete accentuano
-indietro traenti ritornaste mangiavo rana contestino
-incontrano cintura ignoreremo assumono nutrire trapanavo
-svestendo troncai turbini connessa annusandovi tranci
-raccontati dileguano ingrossi ammontante babbuino guadagnino
-firmando sorprende insegue cimentate allattano rinvenga
-tornito centesimi infamando ratificano tornivi dinamico
-ingelosii assunto ingrossi arginata cuocendo notavo
-atteggieranno immagine toniche tiranniche affrontandoti
-prostrano sospinta richiedente sgranerai addentasse
-abituavano annuseremo decantandomi accordino armandomi
-condensare taciturne ponderi accontentatici montati lontra
-discutono pensereste illumina garantiti arrangiatici
-anticipiamo conteremmo avvelena arginandosi dignitoso
-innesti spuntino tracannavo affondatosi intimano
-appianeremmo lusingai arrangierebbe addensereste stonate
-scartando renderei curino dispensi ordivano mischiano
-modellino emenderete comportamenti dinamismo tamponassi
-approfitteranno incitati sventate disegna arrangiatomi</text>
-  </lesson>
-  <lesson>
-   <id>{79546ec7-eea3-440c-b504-957be910f825}</id>
-   <title>Lesson 13</title>
-   <newCharacters>cx</newCharacters>
-   <text>affrancare incrementato schiena accigliato sfasciavi
-speculaste scrollate secolare mischiasti capitola scongiuro
-declinaste scoppio bocciarono occupo archi cancellando
-angoscia ricambiavo sottoscala tirchi accomodammo scambiando
-archiviarci taccia recuperata crampi schieriamo calmino
-accusandoci cigolerai baciato avvicinerebbero tipiche
-confessati scuro insacca parolacce scartaste affumicassimo
-accendesti causiate arricchitoti corrodere chiesero
-recuperano consultati incatenino asciugatoti chiamiamo
-contagiose competa consultava scrostasse cessino circolavo
-schiarii masticato incorsi accedeva asciutte scambiassi
-tragica assicurano sblocchino mescolasse rincarerei
-ricoprendo dichiarati lanciavano creperai notificava
-annodarci crani smaltisco confetture stuccato concilio
-binocoli accertasti commentavi provocai cavatappi accasaste
-delicati spiaccica scalasse plance macerarono accaloravi
-scaldasse accreditava decidermi camoscio causeremmo
-incrinava cavati attacco ostacolavi condannato crepitano
-succinto assicuriamo crederebbe sferici agganciassi
-sconnessa smascheri ricordaste ammucchia palchi notifico
-solcavi scontammo assecondantesi decolorino recitavi
-squarcerei applicata ammucchia scaldammo affumicavano
-incupisce piacque vacillammo pulci costando curvilinea
-colonnato taciturne pubblico voce accigliato ricavarono
-completano accordantisi agiscano luccicando cigoleremo
-creino comete aggruppandoci sciolgono lacero caratteristiche
-lirica esaurisci eccedesti qualcos imbianca calcagni
-accusassimo cultura pertica sblocchino accorciereste
-ricattammo avvicinassi strascichi ufficiosa anticipassero
-rivincita denunciavo aceto matriciale assicurammo prescrive
-procurare scaglie concludeva accusatosi scaldata commentati
-confluisca citato trinciato ricchi evacuerete brancolo
-accorgendoci poca corredato scrosti richiedi tematico buche
-termica scaltri delicato aggancieremo rivincite affaticata
-scortarono tracciato affascinato camminare compagni
-accorciandoci asciughereste assecondavo occhi intonachi
-snobistiche conferiscono educhiamo consenso conservato
-scalerei scolorite maceriate maceravo accanimmo sopisci
-affittarci raschierei assicurassero scuotere accompagnato
-ricurve deperisce scrivono accontentare scovare</text>
-  </lesson>
-  <lesson>
-   <id>{6c18bed0-4408-48ea-a7ad-27092f81995b}</id>
-   <title>Lesson 14</title>
-   <newCharacters>yz</newCharacters>
-   <text>tizi penzolasse penalizzare sparizioni oziano palizzata
-ammazzato cozzarono scherzato influenzati ammazzarti
-indicazione grazie zeri carezzasti negoziate dirizzammo
-rafforzino smilzi addizionandoci avvertenza analizzarci
-sgozzino terzetti informazioni tramezzo spazioso rinforzate
-dipendenza corazzi orazioni imprudenza azienda attrezzavi
-azzuffati azzufferebbe sgozzavate strizzi ammazzandovi
-funzionali calzone dirizzammo azzuffano calziate precauzione
-rincalzate presenzino tassazione stazzerai azzufferemo
-indirizzare rinforzato abbozzasti zoppicavi realizzato
-sovvenzioni divorziate vicinanze zucche funzione sozzure
-inzuppano aguzzerebbero cozze benzina silenziose gironzolo
-spruzzavo pazzo abbozzava carezze scandalizzi forzate zeri
-azzuffammo oziavi calzai eliminazione sprezzasse accarezzo
-penzolata sterzino saziavi pulizia azzeccheranno elettrizzi
-relazione innalzaste agonizzeremo imparziale viziavi
-inzuppati danzasti rincalzate grazia rafforzi economizzi
-giudiziosa deliziando attrezzantisi annunzierei zucchina
-detronizzato addizioneremo analizzerei spazziate tappezzaste
-danzeremmo riselezionabile azionista aguzzai iniezioni
-mozzassimo iniziali seduzione stilizza balzare smezzati
-vizino riselezionabile azzardante saziasti frequenza
-stazzata credenze giudiziari bidirezionali pizzicammo
-definizioni viziosi incertezze spruzzai saziavo melanzana
-coniazioni alzerebbero fattorizzabile calzaste azzardata
-orizzonti spazzasti stazionaria attrezzerai sporgenza
-apprezzarti azzarderemmo mozzasse certezze penzolasti
-ricchezza implementazione stizzoso cozzo agonizzavate
-detrazioni autorizzi ammazzandovi alzante conferenze
-forzereste smilzi indirizzare mozzasti svolazzano negoziassi
-internazionale annunzieremo inizierete zufolavi spaziosa
-operazione zappammo bizzarra azzuffate sezionare dimezzato
-danzeremmo viziato azzuffativi vizierebbe azzarderanno
-iniziare composizione abbozzavo zoologici geometrizzazione
-sterzassi affezionarono apprezzerete ammazzai ripugnanza
-azzera rialzavamo addizionarti leibniziano schematizzazione
-balzammo alzate ammazzai affluenza ammazzandoti rincalza
-asserzioni inzuppati altezzosi tappezzavo zoccoli sterzammo
-attrezzerebbe finzione aguzzata sfarzo aguzzerete zucche</text>
-  </lesson>
-  <lesson>
-   <id>{38ebfd59-8f54-4d3a-b1aa-5d8056046256}</id>
-   <title>Lesson 15</title>
-   <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
-   <text>Adagieranno Sguaino Splendesti Travasa Anniderete Mostrati
-Legherei Alterandone Delegavamo Pomposi Blocca Arbitrio
-Saltata Greggi Esentavano Allacciarci Balzeranno Biblici
-Liquidai Differenziato Turbavate Adulterai Atterreremmo
-Incriniate Avvistiate Foschie Domiate Considerevole Tensori
-Dilatasti Unificammo Controlli Amputatosi Ingesserai
-Amputereste Ritarda Torchio Diffusero Esaltante Barattate
-Entravamo Osavano Riscuotano Annebbierebbe Rassicurai
-Sturare Collegamenti Guadato Meccanismi Bolli Areniate
-Sdoppiato Visito Misti Sovrano Comizio Agganciati Mutata
-Complete Affatico Trottando Viaggerei Vestirsi Stappiamo
-Avversaria Disadatte Tastiera Chiedere Ammaliativi
-Sfrondasse Adorassimo Pagavate Invenzioni Furgone Enti
-Affiaterei Contraendo Interpreto Cooperassi Lanose Svegliamo
-Rimanervi Analizzeremmo Ciascun Asciugandoci Anditi Ironico
-Aravano Devastare Sbranerei Elogi Ricerchino Adunato
-Stirasse Assordatomi Metallica Appurereste Brontolai
-Prelibata Ronzavi Riparate Denotata Raschiaste Diffiderei
-Braccetto Accaduto Accompagnassi Percento Invasi Sfinisse
-Persuadere Visitiamo Arrangiasse Presentito Purificava
-Strutto Sparavo Nevicarono Assillassimo Foderaste Toserei
-Mescolasse Fandango Tuberei Potertela Impedite Eccessive
-Spedirai Rilevati Fiaccando Tramutando Prematura Perequai
-Giovane Quella Amavo Dilettarsi Emissari Preventivi
-Commentato Scossi Obbedirete Affanneranno Edotta Molari
-Rosolavano Denigriamo Implico Interdirei Guariste Animatoti
-Suppongono Adegueremo Tramontata Ricambiai Regneresti
-Loderei Lesse Impegnata Violenti Minaccerai Emulavo
-Sgrassasse Colpivate Appuntate Schiariscano Ricorderei
-Arrotolare Pensiamo Affittarti Allegaste Vivace Rintoccare
-Suonasti Amputerebbero Sballiate Avvicineranno Stammi
-Oscillerei Affilavi Illibate Tignole Inondavo Soppeserei
-Approntassero Spelliate Spalmai Ammazzatosi Prolungo Tenta
-Sopraelevo Annacquassi Ritagliavi Dilaniata Sfioravi
-Appostandosi Acquietandomi Occorsi Interesse Anticipino
-Ammasserai Occorra Assaggiassimo Reciterete Proibendo Copi
-Congelino Alzate Hermitiano Annoiante Alieneremmo Trasalisco
-Campanili Gradazione Strillerai Sibila Svoltasti Sedava
-Scrutando Desiderosi Produzione Sigillo Letterario
-Incontrollabili Comandando Ripugnato Rancori</text>
-  </lesson>
- </lessons>
+  <id>{3e9119fa-7dfb-4bb9-be65-737d88d9e187}</id>
+  <title>Italiano</title>
+  <description>File di addestramento tratto da &#xAB;Appunti di informatica
+ libera&#xBB;</description>
+  <keyboardLayout>it</keyboardLayout>
+  <lessons>
+    <lesson>
+      <id>{070e46b4-c40d-4a8a-b486-f1ccc5abfef9}</id>
+      <title>Riga base sinistra</title>
+      <newCharacters>asdf</newCharacters>
+      <text>asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf
+fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa
+afsd afsd afsd afsd afad afsd afsd afsd afsd afsd
+fads fads fads fads fads fads fads fads fads fads
+asfd asfd asfd asfd asfd asfd asfd asfd asfd asfd
+fdas fdas fdas fdas fdas fdas fdas fdas fdas fdas
+sdaf sdaf sdaf sdaf sdaf sdaf sdaf sdaf sdaf sdaf
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad
+ad afa da fa sa ad afa da fa sa ad afa da fa sa ad</text>
+    </lesson>
+    <lesson>
+      <id>{16a25177-5ee0-4125-a40f-d8e74514a0fa}</id>
+      <title>Riga base destra</title>
+      <newCharacters>jkl&#xF2;</newCharacters>
+      <text>jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2; jkl&#xF2;
+&#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj &#xF2;lkj
+j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl j&#xF2;kl
+&#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk &#xF2;jlk
+jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l jk&#xF2;l
+&#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk &#xF2;ljk
+klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2; klj&#xF2;
+jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2; jlk&#xF2;
+j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk j&#xF2;lk
+&#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj &#xF2;klj
+&#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl &#xF2;jkl
+k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl k&#xF2;jl
+kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l kj&#xF2;l
+kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j kl&#xF2;j</text>
+    </lesson>
+    <lesson>
+      <id>{8e276c36-6442-46b0-acf7-929061192ef1}</id>
+      <title>Riga base</title>
+      <newCharacters/>
+      <text>ad adala add adds ads afa aj aja ajada al ala
+alada alafa alas alfa alfaja alfalfa alfalfal
+alfas all alla als as asa asada ask asks ass da
+dad dada dadas dads dal dala dalla dl d&#xF2; fa fad
+fada fads faja fajada falda fall falla fallada
+falls fal&#xF2; falsa falsada fas ff flak flaks flask
+flasks ja jada jalda jaldada jas jasa ka ks la lad
+lada lads laja las lasa lass lassa lfd ls sa sad
+saja sajada sal sala salad salada salads salassa
+salass&#xF2; salda sald&#xF2; sal&#xF2; salsa salsas sas sass
+sass sas salsas salsa sal&#xF2; sald&#xF2; salda salass&#xF2;
+salassa salads salada salad sala sal sajada saja
+sad sa ls lfd lassa lass lasa las laja lads lada
+lad la ks ka jasa jas jaldada jalda jada ja flasks
+flask flaks flak ff fas falsada falsa fal&#xF2; falls
+fallada falla fall falda fajada faja fads fada fad
+fa d&#xF2; dl dalla dala dal dads dadas dada dad da ass
+asks ask asada asa as als alla all alfas alfalfal
+alfalfa alfaja alfa alas alafa alada ala al ajada
+aja aj afa ads adds add adala ad</text>
+    </lesson>
+    <lesson>
+      <id>{4e09842b-2f05-4588-a0e9-279ffaa61796}</id>
+      <title>Riga base 2</title>
+      <newCharacters>hg</newCharacters>
+      <text>slash slags slag shall shahs shah shags shag shads
+shad sh sass sash sas salsas salsa sal&#xF2; salgada
+salga sald&#xF2; salda salass&#xF2; salassa salads salada
+salad sala sal sajada saja sah sags sagas saga sag
+sad sa ls llaga lfd lassa lass lash lasa las laja
+lags lag lads lada lad la ks kg kahl ka jasa jas
+jaldada jalda jags jaga jag jada ja hl hg hash has
+halls hallada hall half haldada halda hala hahs
+hah hags hag hadada hada had ha gs glass glas
+glads glad ggf gash gasajada gasa gas gals galls
+galla gall galga galas gala gal gags gaga gag
+gaffs gaff gafa gads gad flasks flask flash flaks
+flak flags flag ff fas falsada falsa fal&#xF2; falls
+fallada falla fall falda fajada faja fahl fags fag
+fads fada fad fa d&#xF2; dl dg dash dalla dalaga dala
+dal daga dads dadas dada dad da ass asks ask ash
+asada asa as als allg allag&#xF2; allaga alla all
+alhaja alga alfas alfalfal alfalfa alfaja alfa
+alas alafa alada ala al ajada aja aj ahas aha ah
+agallada agalla afa ads adds add adala adahala ad</text>
+    </lesson>
+    <lesson>
+      <id>{4666c56d-587e-4cf8-9ff2-117f89a6ee15}</id>
+      <title>Riga base 3</title>
+      <newCharacters>&#xE0;</newCharacters>
+      <text>ad adahala adala add adds ads afa agalla agallada
+ah aha ahas aj aja ajada al ala alada alafa alas
+alfa alfaja alfalfa alfalfal alfas alga alhaja all
+alla allaga allag&#xF2; allg als as asa asada ash ask
+asks ass da d&#xE0; dad dada dadas dads daga dal dala
+dalaga dalla dash dg dl d&#xF2; fa fad fada fads fag
+fags fahl faja fajada falda fall falla fallada
+falls fal&#xF2; falsa falsada fas ff flag flags flak
+flaks flash flask flasks gad gads gafa gaff gaffs
+gag gaga gags gal gala galas galga gall galla
+galls gals gas gasa gasajada gash ggf glad glads
+glas glass gs ha had hada hadada hag hags hah hahs
+hala halda haldada half hall hallada halls has
+hash hg hl ja jada jag jaga jags jalda jaldada jas
+jasa ka kahl kg ks la l&#xE0; lad lada lads lag lags
+laja las lasa lash lass lassa lfd llaga ls sa sad
+sag saga sagas sags sah saja sajada sal sala salad
+salada salads salassa salass&#xF2; salda sald&#xF2; salga
+salgada sal&#xF2; salsa salsas sas sash sass sh shad
+shads shag shags shah shahs shall slag slags slash</text>
+    </lesson>
+    <lesson>
+      <id>{d00b0a08-5292-4168-8e8f-f843e11daa11}</id>
+      <title>Riga superiore sinistra</title>
+      <newCharacters>ert</newCharacters>
+      <text>adagereste adattate adatte addestrata afa affare
+afferrereste afferrerete affettereste affetterete
+affrettereste affretterete araste arata arerete
+arreda arrederete arresa arrestereste arresterete
+arretrereste arretrerete asse assesta assesterete
+assetata atta atte atterrata atterrate attestasse
+attestaste attrasse daffare dataste datata degrada
+degradare derrata derrate destaste destata
+detergere detersa detestate detestereste dettate
+dette era ere errare errasse erte esagera
+esagererete esatta estate estesa fara fare fatte
+fede feste fetta fredde frega gas gatta gettate
+gettereste grate gratta gratterete gregge
+raffreddaste raffreddata rasare rasasse rassetta
+rassettare rata rate regge reggere restasse
+restaste rete retta sarta sarte sedata sedate sega
+segare segregata segregate serrare serrasse sesta
+seta sfere sfratta sfratterete sfrega sgrassare
+sgrassasse stadera staffa stasera stata strada
+strade stretta strette tardasse tardaste targa
+tartassa tartasserete tassa tassereste tasserete
+tastereste tasterete terrestre tersa tesserare
+tesserasse tessereste tesserete testata testate
+trae trarre trattaste trattata</text>
+    </lesson>
+    <lesson>
+      <id>{8b5f3e59-5e8c-4ffa-aafd-be363ae80705}</id>
+      <title>Riga superiore destra</title>
+      <newCharacters>yuiop&#xE8;&#xF9;</newCharacters>
+      <text>yuppy yup yuk youyou you yolk yo yip uphill up
+uopo ulul&#xF2; ululo ululi uh pupull&#xF2; pupullo pupulli
+puppy pupil pup puoi pu&#xF2; pulpy pulp pull pulii pu
+pou populo poppy popol&#xF2; popolo popoli pop poop
+pool pooh polyp polo pollo polli poll polipo
+polipi polio poli pol poky poilu poil poi ply plu
+ploy plop pli pi&#xF9; pip pioppo pioppi pioli pio
+pilou pill pii pi&#xE8; pi phil oui o&#xF9; ou oppio oli&#xF2;
+olio olii oli ol&#xE0; ok oily oil oho ohi oh luppolo
+lupo lupi lull lui lu loup lop loopy loop look
+lollypop lollipop loll loi lo lippu lip lily li l&#xE0;
+kp kooky kook klipp kilo killjoy kill joy joujou
+joui jolly joli io ill ilk il hypo hull hulk hui
+huh hop hoop hooky hookup hook holy holly hohl ho
+hl hippy hippo hip hilly hill hi</text>
+    </lesson>
+    <lesson>
+      <id>{80abc6a9-ab85-4442-80ab-6e905d3542f0}</id>
+      <title>Riga superiore</title>
+      <newCharacters>qw</newCharacters>
+      <text>adager&#xE0; additereste adirare adotti afferr&#xF2;
+affiler&#xF2; affrettata aggrappare agitereste
+allargaste alleiate altre appello appostassero
+aprirla arrederete arrotate aspett&#xF2; asserto
+assisterla assuefatti attestassi augurassero
+datata degradare deperirai deputato desta deturpai
+diffidare dilapideresti dilettiate dirupo
+disgreghi disputassero dissip&#xF2; distrarsi dosare
+durer&#xF2; eleggo erede esagerati eseguir&#xE0; espiare
+esserti fardello ferii figlio fisser&#xF2; fodero
+fratte frugher&#xE0; fruttereste gaio gelida gil&#xE8;
+gioiello giurate graduate gretto guardi guido
+halters hashish heap hep hippest hooded hosted
+hulas idolatrer&#xF2; irreligioso ispettore iterer&#xF2;
+jetties juggled kilt laser legassero lesti
+listereste logoriate odorate oltrepassati oraria
+orsi ospit&#xF2; paffutella palpaste parere partoriste
+paura perdete perquisirai pestiferi pi&#xE8; pigola pi&#xF9;
+popolosi posdatassero potassero predisposti
+prelato presterai professassero progrediti
+propositi prosper&#xF2; prototipo purga quaggi&#xF9; questi
+rado raggruppo rapereste rassettaste reati regger&#xE0;
+relitto respiriate retrodateresti riepilogherei
+rifuggiste rilegherei ripassereste riposai risalti
+risposto ritirereste rugiada salassassero salpato
+sapr&#xE0; sederti seguitare sequestrati sfido
+sfoderasse sfregasse sgrassaste sigarette
+slegherai sode soli sopporter&#xE0; sorrisi sosterai
+spara sparpagli&#xF2; sperder&#xE0; spettassero spillereste
+spoglier&#xF2; spregiare squarter&#xF2; statale stipulate
+storpier&#xF2; strepit&#xF2; stritoleresti stupirai
+suffragati superata susseguire taglierai tarper&#xE0;
+tastassi telegrafati tessereresti tirasti tollero
+torturer&#xF2; tradita traghetter&#xE0; trasferirlo
+trasportiate trepida trite truppe udii urlare
+usufruisti waits wassailed wedder whalers
+whitewalls wilds woefully worsted yea</text>
+    </lesson>
+    <lesson>
+      <id>{349ddc35-483e-47a2-bd49-b18629a2076c}</id>
+      <title>Riga superiore e maiuscole</title>
+      <newCharacters>ASDFGHJKLQWERTYUIOP&#xE9;</newCharacters>
+      <text>Afar Affair Afrodite Agatha Aldo Alessio Algeria
+Algiers Alighieri Aosta Apollo Apoth&#xE9;ose Arturo
+Australia Austria Dallas Darida Delphi Eagles
+Egitto Elia Elliotte Ellis Eulero Fedora Ferrari
+Filippo Ford Fred Friday Fuji Fujitsu Galileo
+Gauss Georgia Gerardo Gert Giorgio Giosu&#xE8; Giulio
+Giuseppe Golia Greg Gregoire Gregory Gretel Hayes
+Hewlett Hoepli Iraq IRQ Israele Italia Italy
+Jerrold Jerry Jersey Joliet Jukka Kelley Klaus
+Korea Korpela Kurdish Kurt Kuwait Lafayette Larry
+Leopardi Leopoldo LIFO Lira Lord Loris Louis
+Lourdes Luigi ORF Paolo Paride Paris Pegasus
+Pesaro Peseta Pfeifer Philips Piero Pierre Pietro
+Pirelli Pisa Pistoia Portogallo Powell Pula
+Rudolph Rush Russell Russia Saffo Saudita Sergio
+Silea Siria Solaris Sperry Tardif Tatu Ted Teresa
+Turati Urdu Uruguay Wales Walsh Waterlo Wesley
+Wietse Wright Yggdrasil Yiddish York</text>
+    </lesson>
+    <lesson>
+      <id>{7185dda9-0b5b-4f96-8cb7-e574b0411546}</id>
+      <title>Riga inferiore sinistra</title>
+      <newCharacters>zcvb</newCharacters>
+      <text>abbassa abbassava accada accasa accasava afa bada
+badava basa basava bassa bava bazza cada
+casa casacca casca cascava cassa cava cavava dava
+fava gas gazza sacca sbava sbavava scada scassa
+scassava scava scavava svaga svagava vacca vada
+vaga vagava vasca zac
+zac vasca vagava vaga vada vacca svagava svaga
+scavava scava scassava scassa scada sbavava sbava
+sacca gazza gas fava dava cavava cava cassa
+cascava casca casacca casa cada bazza bava
+bassa basava basa badava bada afa accasava accasa
+accada abbassava abbassa</text>
+    </lesson>
+    <lesson>
+      <id>{b3f73d71-3c7f-4c8e-8736-40a17fc45852}</id>
+      <title>Riga inferiore destra</title>
+      <newCharacters>nm</newCharacters>
+      <text>nm m&#xF9;n m&#xF2; mn&#xE0; mm mln ml mk mh&#xF2; mh&#xE0;n mh&#xE0;m mh&#xE0;l mb
+m&#xE0;n m&#xE0;m m&#xE0;l m&#xE0;b m&#xE0; l&#xF9;b l&#xF2;n l&#xF2; lkm lb l&#xE0;n l&#xE0;mh l&#xE0;
+km kl kk kbm kbk kb hm hl hk hh b&#xF9;b b&#xF2;l bm bln bl
+bh&#xE0;n bh&#xE0; bh b&#xE0;n b&#xE0;
+km kl kk kbm kbk kb hm hl hk hh b&#xF9;b b&#xF2;l bm bln bl
+m&#xE0;n m&#xE0;m m&#xE0;l m&#xE0;b m&#xE0; l&#xF9;b l&#xF2;n l&#xF2; lkm lb l&#xE0;n l&#xE0;mh l&#xE0;
+nm m&#xF9;n m&#xF2; mn&#xE0; mm mln ml mk mh&#xF2; mh&#xE0;n mh&#xE0;m mh&#xE0;l mb
+bh&#xE0;n bh&#xE0; bh b&#xE0;n b&#xE0;</text>
+    </lesson>
+    <lesson>
+      <id>{e55701a8-cb39-48f1-8457-f0b25957b74b}</id>
+      <title>Riga inferiore</title>
+      <newCharacters/>
+      <text>abbassa abbass&#xF2; accasa accas&#xF2; acclamava ad affama
+affam&#xF2; affannava al alba alga allaga allag&#xF2; alzava
+ama amalgama amalgam&#xF2; ammacca ammacc&#xF2; ammalava
+ammassa ammass&#xF2; ammazzava am&#xF2; anca and&#xF2; ansava
+avallava avanza avanz&#xF2; bada bad&#xF2; bagnava baldanza
+ballava balza balz&#xF2; banca basa bas&#xF2; bava blanda
+cagna calava calcagna calma calm&#xF2; calva
+calzava canna casacca cascava cassa cavalcava
+cavava da dal dama danna dann&#xF2; danzava dava fa
+falla falsa fan gala gamba gas ha kg l&#xE0; lagnanza
+lagn&#xF2; lana lasagna lava lavanda lav&#xF2; madama magma
+mal malsana mamba mamm&#xE0; mancanza manc&#xF2; mandava
+manna massa nana sa sala salassava salava saldava
+salga sal&#xF2; salva salvava san sanava sansa sballava
+sbalza sbalz&#xF2; sbava sbav&#xF2; scala scalda scald&#xF2;
+scalza scansava scassa scass&#xF2; scavalca scavalc&#xF2;
+scav&#xF2; sfamava svaga svag&#xF2; vacanza vada vagava val
+valga vana vangava vasca zanna</text>
+    </lesson>
+    <lesson>
+      <id>{28f2059f-e772-49e7-95ee-5ab7efe559d9}</id>
+      <title>Riga inferiore e maiuscole</title>
+      <newCharacters>xXCVBNM</newCharacters>
+      <text>Abbas Adam Adan Addams Afghans Ahmad Ajax Ala
+Alabaman Alan Alaska Alaskans Aldan Allahabad Alma
+Alva Amman Andaman Anna Anshan Asama Assad Ava
+Baal Bach Baghdad Bahamas Balkans Ball Banach Bass
+Blacks Blvd Callaghan Callas Canada Casals Chad
+Chan Changsha Dada Dan Dhaka Fahd Falkland Fla
+Galahad Gall Gdansk Glass Hahn Hal Hals Haman Hank
+Hannah Havana JFK Jamaal Jan Janna Javas Kafka
+Kama Kans Kansans Kazakh Khan Klansman Laban Lana
+Lang Lassa Lhasa MHz Mach Mack Madagascans Malacca
+Manama Manx Mashhad Max Mazda McCall Nan Nanchang
+Nazca Sachs Sagan Saks Salas Sam Sana Sang Sasha
+Shaka Shanna Slavs Val Van Vang Xmas</text>
+    </lesson>
+    <lesson>
+      <id>{65ac9536-d66c-4a0f-8f44-5bb0d056d199}</id>
+      <title>La volpe e l'uva</title>
+      <newCharacters>&#xEC;,.:"</newCharacters>
+      <text>Una volpe che aveva fame, come vide su una vite
+dei grappoli sospesi, volle impadronirsene ma non
+poteva.
+Allontanandosi disse fra s&#xE9;: "Sono acerbi". Cos&#xEC;
+anche alcuni uomini, non potendo raggiungere i
+propri scopi per inettitudine, accusano le
+circostanze.</text>
+    </lesson>
+    <lesson>
+      <id>{e842077b-224a-4f42-af02-4bff569d6fc2}</id>
+      <title>La volpe davanti a una maschera da teatro</title>
+      <newCharacters/>
+      <text>Una volpe che era entrata nella casa di un attore
+e che esplorava ciascuno dei suoi arredi trov&#xF2;
+anche una maschera da teatro lavorata con molta
+abilit&#xE0;, e avendola sollevata con le mani disse:
+"Oh, quale testa, ma non ha cervello".</text>
+    </lesson>
+    <lesson>
+      <id>{bfd2b8dc-8f96-4d32-8544-2ac332dbff30}</id>
+      <title>La gallina dalle uova d'oro</title>
+      <newCharacters>'</newCharacters>
+      <text>Un tale aveva una gallina che faceva le uova
+d'oro, e credendo che dentro di essa ci fosse una
+massa d'oro, avendola uccisa, la trov&#xF2; simile alle
+altre galline.
+E lui, avendo sperato di trovarvi una ricchezza
+ammassata, fu privato anche di quella piccola
+ricchezza.</text>
+    </lesson>
+    <lesson>
+      <id>{07149d8e-e1ed-4a1b-8c4d-751594133a7e}</id>
+      <title>Le due bisacce</title>
+      <newCharacters/>
+      <text>Ciascun uomo porta due bisacce, una davanti,
+l'altra dietro, e ciascuna delle due &#xE8; piena di
+difetti, ma quella davanti &#xE8; piena dei difetti
+altrui, quella dietro dei difetti dello stesso che
+la porta.
+E per questo gli uomini non vedono i difetti che
+vengono da loro stessi, mentre vedono assai
+perfettamente quelli altrui.</text>
+    </lesson>
+    <lesson>
+      <id>{c1444696-4dc1-4318-b4f2-4310c686227a}</id>
+      <title>Il contadino e la serpe</title>
+      <newCharacters/>
+      <text>Un vecchio contadino durante la stagione
+dell'inverno, avendo trovato una serpe intirizzita
+dal freddo e avendone avuto compassione, la prese
+e se la mise in seno. Quella poi, riscaldandosi e
+riprendendo la propria natura, fer&#xEC; il benefattore
+e lo uccise.
+Allora lui morendo disse: "Ho quello che mi
+merito, poich&#xE9; ho avuto compassione di quella
+malvagia".</text>
+    </lesson>
+    <lesson>
+      <id>{02040f24-c9d2-4d2e-97b7-a179ac3ea601}</id>
+      <title>La cicala e le formiche</title>
+      <newCharacters>;?</newCharacters>
+      <text>In inverno, essendosi bagnati i chicchi di grano,
+le formiche li esposero all'aria; una cicala
+invece che aveva fame chiedeva loro del cibo.
+E le formiche le dissero: "Perch&#xE9; durante l'estate
+non hai raccolto del cibo?".
+E quella disse: "Non sono stata in ozio, ma ho
+cantato armoniosamente".
+E quelle mettendosi a ridere dissero: "Ebbene, se
+nelle giornate d'estate hai cantato, d'inverno
+balla".
+La favoletta mostra che non bisogna essere
+negligenti per non affliggersi ed essere in
+pericolo.</text>
+    </lesson>
+    <lesson>
+      <id>{2946101b-a92c-4572-bcbb-e7657f191f00}</id>
+      <title>La fortuna del cavallo</title>
+      <newCharacters>-</newCharacters>
+      <text>Un giorno un cavallo, ricco d'ornamenti, venne
+incontro a un asino che, stanco e carico com'era,
+tard&#xF2; a dargli la via. "Avrei una gran voglia -
+disse - di fracassarti a calci". L'asino non
+rispose: e con un gemito chiam&#xF2; testimoni gli dei.
+Pass&#xF2; qualche tempo.
+Il cavallo durante una corsa, azzopp&#xF2; e fu mandato
+a servire in campagna. Appena l'asino lo vide
+tutto carico di letame: "Ricordi - domand&#xF2; - che
+boria e che pompa? Ah? E che n'hai avuto? Eccoti
+ridotto alla miseria che prima spregiavi".</text>
+    </lesson>
+    <lesson>
+      <id>{ca6ad6fb-80e5-4b36-9e40-08a5919eab8c}</id>
+      <title>Il leone e il cinghiale</title>
+      <newCharacters/>
+      <text>D'estate, quando il calore provoca la sete, un
+leone e un cinghiale andarono a bere a una piccola
+fonte, e cominciarono a litigare su chi dei due
+dovesse dissetarsi per primo. La lite si inaspr&#xEC;
+fino a trasformarsi in duello mortale. Ma ecco
+che, mentre si volgevano un momento per riprendere
+fiato, scorsero degli avvoltoi che stavano l&#xEC; ad
+aspettare il primo che sarebbe caduto, per
+mangiarselo. A tal vista, ponendo fine al duello,
+dichiararono: "Meglio diventare amici che diventar
+pascolo di avvoltoi e di corvi".</text>
+    </lesson>
+    <lesson>
+      <id>{f0ffc112-2836-4f28-bcd8-766fd1d153a4}</id>
+      <title>Il pescatore che batteva l'acqua</title>
+      <newCharacters/>
+      <text>Un pescatore pescava in un fiume.
+Dopo aver teso le reti e sbarrato la corrente
+dall'una all'altra riva, batteva l'acqua con una
+pietra legata a una funicella, perch&#xE9; i pesci,
+fuggendo all'impazzata, andassero ad impigliarsi
+tra le maglie.
+Vedendolo intento a quest'operazione, uno degli
+abitanti del luogo si mise a rimproverarlo perch&#xE9;
+insudiciava il fiume e rendeva loro impossibile di
+bere un po' d'acqua limpida.
+E quello rispose: "Ma se non intorbido cos&#xEC;
+l'acqua, a me non resta che morir di fame".</text>
+    </lesson>
+    <lesson>
+      <id>{0542e717-bd5f-4e01-ac2c-f377570cebc5}</id>
+      <title>L'asino, la volpe e il leone</title>
+      <newCharacters/>
+      <text>Un asino ed una volpe fecero amicizia e insieme se
+ne andarono a caccia. Incontrarono un leone
+dall'aria minacciosa.
+La volpe intu&#xEC; il pericolo che stava correndo, gli
+si avvicin&#xF2; e cominci&#xF2; a parlargli: si impegnava a
+consegnargli l'asino, in cambio della sua
+salvezza.
+Il leone le promise la libert&#xE0;: cos&#xEC; la volpe
+condusse l'asino verso una trappola e ce lo lasci&#xF2;
+cadere. Il leone, appena vide che l'asino era
+nell'impossibilit&#xE0; di fuggire, assal&#xEC; per primo la
+volpe e poi, con calma, ritorn&#xF2; ad occuparsi
+dell'animale che era caduto nella trappola.</text>
+    </lesson>
+    <lesson>
+      <id>{f789f97b-5501-477e-b8c2-119430c6cffd}</id>
+      <title>Il leone e il toro</title>
+      <newCharacters/>
+      <text>Un leone da lungo tempo meditava di uccidere un
+forte toro. Un giorno decise di riuscire nel suo
+intento con l'astuzia.
+Gli fece sapere di aver catturato un montone e lo
+invit&#xF2; al banchetto. Aveva preparato tutto per
+assalirlo, una volta seduto a tavola il toro and&#xF2;
+all'appuntamento: vide molte pentole, lunghi
+spiedi, ma di montone nessuna traccia.
+Allora, senza dire neanche una parola, se ne and&#xF2;.
+Il leone lo richiam&#xF2; e gli chiese il motivo del
+suo comportamento, visto che non gli era stato
+fatto nessun affronto. E il toro rispose: - Ho una
+buona ragione per andarmene: vedo tutto pronto per
+cucinare non un montone, ma un toro.</text>
+    </lesson>
+    <lesson>
+      <id>{b4518468-f559-4b06-a80a-311addf268d1}</id>
+      <title>L'aquila dalle ali mozze e la volpe</title>
+      <newCharacters/>
+      <text>Una volta un'aquila fu catturata da un uomo.
+Questi le mozz&#xF2; le ali e poi la lasci&#xF2; andare,
+perch&#xE9; vivesse in mezzo al pollame di casa.
+L'aquila stava a capo chino e non mangiava pi&#xF9; per
+il dolore: sembrava un re in catene.
+Poi la comper&#xF2; un altro, il quale le strapp&#xF2; le
+penne mozze e, con un unguento di mirra, gliele
+fece ricrescere.
+Allora l'aquila prese il volo, afferr&#xF2; con gli
+artigli una lepre e gliela port&#xF2; in dono.
+Ma la volpe che la vide, ammon&#xEC;: "I regali non
+devi farli a questo, ma piuttosto al padrone di
+prima: questo &#xE8; gi&#xE0; buono per natura; l'altro
+invece &#xE8; meglio che tu lo rabbonisca, perch&#xE9; non
+ti privi delle ali se ti acchiappa di nuovo".</text>
+    </lesson>
+    <lesson>
+      <id>{07699996-bc52-4881-83dd-7a4b80d26f25}</id>
+      <title>La cornacchia e la brocca</title>
+      <newCharacters/>
+      <text>Una cornacchia, mezza morta di sete, trov&#xF2; una
+brocca che una volta era stata piena d'acqua. Ma
+quando infil&#xF2; il becco nella brocca si accorse che
+vi era rimasto soltanto un po' d'acqua sul fondo.
+Prov&#xF2; e riprov&#xF2;, ma inutilmente, e alla fine fu
+presa da disperazione.
+Le venne un'idea e, preso un sasso, lo gett&#xF2; nella
+brocca. Poi prese un altro sasso e lo gett&#xF2; nella
+brocca. Ne prese un altro e gett&#xF2; anche questo
+nella brocca. Ne prese un altro e gett&#xF2; anche
+questo nella brocca. Ne prese un altro e gett&#xF2;
+anche questo nella brocca. Ne prese un altro e
+gett&#xF2; anche questo nella brocca.
+Piano piano vide l'acqua salire verso di s&#xE9;, e
+dopo aver gettati altri sassi riusc&#xEC; a bere e a
+salvare la sua vita.</text>
+    </lesson>
+    <lesson>
+      <id>{5a45f581-9e32-4fca-b4a0-fdbb6e8ac545}</id>
+      <title>Il corvo e la volpe</title>
+      <newCharacters/>
+      <text>Un corvo aveva rubato un pezzo di carne ed era
+andato a posarsi su di un albero. Lo vide la volpe
+e le venne voglia di quella carne. Si ferm&#xF2; ai
+suoi piedi e cominci&#xF2; ad adularla, facendo grandi
+lodi del suo corpo perfetto e della sua bellezza,
+della lucentezza delle sue penne, dicendo che
+nessuno era pi&#xF9; adatto di lui ad essere il re
+degli uccelli, e che lo sarebbe diventato
+senz'altro, se avesse avuto la voce.
+Il corvo, allora, volendo mostrare che neanche la
+voce gli mancava, si mise a gracchiare con tutte
+le sue forze, e lasci&#xF2; cadere la carne. La volpe
+si precipit&#xF2; ad afferrarla e beffeggi&#xF2; il corvo
+soggiungendo: "Se, poi, caro il mio corvo, tu
+avessi anche il cervello, non ti mancherebbe
+altro, per diventare re".</text>
+    </lesson>
+    <lesson>
+      <id>{e131dacd-9c19-42e7-8355-4000a210ae47}</id>
+      <title>Il lupo e il pastore</title>
+      <newCharacters>!</newCharacters>
+      <text>Un lupo andava al seguito di un gregge di pecore,
+senza far loro alcun male. Il pastore, sulle
+prime, lo teneva a bada come un nemico, e lo
+sorvegliava con estrema diffidenza. Ma quello
+ostinatamente lo seguiva, senza arrischiare il
+minimo tentativo di rapina. Cos&#xEC; gradatamente il
+pastore si convinse di avere in lui un custode,
+piuttosto che un nemico intenzionato a
+danneggiarlo. Un giorno ebbe bisogno di recarsi in
+citt&#xE0;, gli lasci&#xF2; le pecore in custodia e part&#xEC;
+tranquillo. Ma il lupo seppe cogliere l'occasione:
+si lanci&#xF2; sul gregge e ne fece strage sbranandone
+una gran parte. Il pastore, quando fu di ritorno e
+vide la rovina del suo gregge, esclam&#xF2;: - Mi sta
+bene! Quale stupidit&#xE0; mi ha spinto ad affidare le
+pecore ad un lupo?</text>
+    </lesson>
+    <lesson>
+      <id>{429657c2-fc9e-4b5b-8730-a0b27a62f1ae}</id>
+      <title>La lepre e la tartaruga</title>
+      <newCharacters/>
+      <text>La lepre un giorno si vantava con gli altri
+animali: - Nessuno pu&#xF2; battermi in velocit&#xE0; -
+diceva. - Sfido chiunque a correre come me.
+La tartaruga, con la sua solita calma, disse: -
+Accetto la sfida.
+- Questa &#xE8; buona! - esclam&#xF2; la lepre; e scoppi&#xF2; a
+ridere. - Non vantarti prima di aver vinto replic&#xF2;
+la tartaruga. - Vuoi fare questa gara?
+Cos&#xEC; fu stabilito un percorso e dato il via.
+La lepre part&#xEC; come un fulmine: quasi non si
+vedeva pi&#xF9;, tanto era gi&#xE0; lontana. Poi si ferm&#xF2;, e
+per mostrare il suo disprezzo verso la tartaruga
+si sdrai&#xF2; a fare un sonnellino.
+La tartaruga intanto camminava con fatica, un
+passo dopo l'altro, e quando la lepre si svegli&#xF2;,
+la vide vicina al traguardo.
+Allora si mise a correre con tutte le sue forze,
+ma ormai era troppo tardi per vincere la gara.
+La tartaruga sorridendo disse: "Non serve correre,
+bisogna partire in tempo."</text>
+    </lesson>
+    <lesson>
+      <id>{487c7623-234d-4b37-942f-537a93dd3716}</id>
+      <title>Lo scherzo del pastore</title>
+      <newCharacters/>
+      <text>Un pastorello conduceva ogni giorno le sue
+pecorelle a pascolare.
+Si annoiava molto e cos&#xEC; decise di fare uno
+scherzo a tutta la gente del villaggio.
+"Aiuto! al lupo al lupo."
+Cominci&#xF2; allora a gridare con quanto fiato aveva
+in gola.
+Tutti i contadini accorsero armati di forconi e
+randelli, ma quando arrivarono nel grande prato
+non videro neanche l'ombra del lupo. Il pastorello
+rideva a crepapelle:
+"Era solo uno scherzo e voi ci siete cascati!!!"
+Qualche giorno dopo ripet&#xE9; lo stesso e i contadini
+allarmati giunsero di corsa la prato.
+Presto si accorsero che il pastorello si era
+giocato un'altra volta di loro.
+Un giorno arriv&#xF2; d'improvviso un intero branco di
+lupi; il pastorello cominci&#xF2; a gridare
+disperatamente: "Al lupo al lupo."
+Ma i contadini, credendo a un altro scherzo, non
+si mossero pi&#xF9;. Indisturbati, i lupi, fecero
+strage di pecore e agnelli.</text>
+    </lesson>
+    <lesson>
+      <id>{3fe7b04c-f73e-4671-9df2-3e61c2fa3c09}</id>
+      <title>Il leone e il topo</title>
+      <newCharacters/>
+      <text>Mentre un leone dormiva in un bosco, topi di
+campagna facevano baldoria. Uno di loro, senza
+accorgersene, nel correre si butt&#xF2; su quel corpo
+sdraiato. Povero disgraziato! Il leone con un
+rapido balzo lo afferr&#xF2;, deciso a sbranarlo. Il
+topo supplic&#xF2; clemenza: in cambio della libert&#xE0;,
+gli sarebbe stato riconoscente per tutta la vita.
+Il re della foresta scoppi&#xF2; a ridere e lo lasci&#xF2;
+andare.
+Passarono pochi giorni ed egli ebbe salva la vita
+proprio per la riconoscenza del piccolo topo.
+Cadde, infatti, nella trappola dei cacciatori e fu
+legato al tronco di un albero. Il topo ud&#xEC; i suoi
+ruggiti di lamento, accorse in suo aiuto e, da
+esperto, si mise a rodere la corda. Dopo averlo
+restituito alla libert&#xE0;, gli disse:
+- Tempo fa hai riso di me perch&#xE9; credevi di non
+poter ricevere la ricompensa del bene che mi hai
+fatto. Ora sai che anche noi, piccoli e deboli
+topi, possiamo essere utili ai grandi.</text>
+    </lesson>
+    <lesson>
+      <id>{ec7ac7b2-7845-4527-801b-12eaf03fa066}</id>
+      <title>Il vento e il sole</title>
+      <newCharacters/>
+      <text>Un giorno il vento e il sole cominciarono a
+litigare. Il vento sosteneva di essere il pi&#xF9;
+forte e a sua volta il sole diceva di essere la
+forza pi&#xF9; grande della terra. Alla fine decisero
+di fare una prova.
+Videro un viandante che stava camminando lungo un
+sentiero e decisero che il pi&#xF9; forte di loro
+sarebbe stato colui che sarebbe riuscito a
+togliergli i vestiti.
+Il vento, cos&#xEC;, si mise all'opera: cominci&#xF2; a
+soffiare, e soffiare, ma il risultato fu che il
+viandante si avvolgeva sempre pi&#xF9; nel mantello. Il
+vento allora soffi&#xF2; con pi&#xF9; forza, e l'uomo
+chinando la testa si avvolse una sciarpa intorno
+al collo.
+Fu quindi la volta del sole, che cacciando via le
+nubi, cominci&#xF2; a splendere tiepidamente. L'uomo
+che era arrivato nelle prossimit&#xE0; di un ponte,
+cominci&#xF2; pian piano a togliersi il mantello. Il
+sole molto soddisfatto intensific&#xF2; il calore dei
+suoi raggi, fino a farli diventare incandescenti.
+L'uomo rosso per il gran caldo, guard&#xF2; le acque
+del fiume e senza esitare si tuff&#xF2;.
+Il sole alto nel cielo rideva e rideva!! Il vento
+deluso e vinto si nascose in un luogo lontano.</text>
+    </lesson>
+    <lesson>
+      <id>{c2edeecf-3092-4809-8540-6d044233f902}</id>
+      <title>L'aquila e lo scarafaggio</title>
+      <newCharacters/>
+      <text>Un'aquila inseguiva una lepre per catturarla.
+Questa non sapeva come trovare aiuto; cos&#xEC;, visto
+uno scarafaggio, il solo essere in cui il caso la
+fece imbattere, si diede a supplicarlo. Lo
+scarafaggio la rassicur&#xF2; e, appena l'aquila gli si
+avvicin&#xF2;, prese a scongiurarla perch&#xE9; non gli
+portasse via la povera lepre. Ma l'aquila non si
+cur&#xF2; di quel piccolo insetto nero e divor&#xF2; la
+lepre proprio sotto i suoi occhi.
+Memore dell'offesa, lo scarafaggio, da allora,
+prese a seguire l'aquila con costanza: osservava i
+luoghi dove quella faceva il nido e deponeva le
+uova; volava al nido, si posava sulle uova e le
+faceva rotolare provocandone la rottura.
+Cacciata da tutti i luoghi, l'aquila un giorno si
+rivolse a Giove e lo preg&#xF2; di procurarle un luogo
+sicuro, dove poter fare le sue covate. Giove le
+permise di deporre le uova nel proprio grembo. Ma
+lo scarafaggio ide&#xF2; uno stratagemma: fece una
+pallottola di sterco, vol&#xF2; sopra il grembo di
+Giove e ve lo lasci&#xF2; cadere.
+Il dio, per liberarsi da quella sporcizia, si alz&#xF2;
+in piedi con uno scatto e, senza rendersene conto,
+fece cadere a terra le uova.
+Da quel tempo, si dice che nella stagione in cui
+appaiono gli scarafaggi le aquile non facciano il
+nido.</text>
+    </lesson>
+    <lesson>
+      <id>{7ad1810b-fa5b-43e6-9a67-8caf33737ef4}</id>
+      <title>Il leone, l'orso e la volpe</title>
+      <newCharacters/>
+      <text>Quella mattina un grande orso bruno, era proprio
+affamato. Vagava con la lingua di fuori per la
+foresta in cerca di un po' di cibo quando
+all'improvviso vide, nascosto tra i cespugli, un
+bel cesto ricolmo di provviste abbandonato
+sicuramente da qualche cacciatore. Fuori di s&#xE9;
+dalla gioia si tuff&#xF2; su quell'insperato tesoro
+culinario ma, proprio nello stesso momento ebbe la
+medesima idea anche un grosso leone che non
+mangiava da alcuni giorni. I due si trovarono
+faccia a faccia e si studiarono con espressione
+rabbiosa.
+"Questo cesto appartiene a me!" Url&#xF2; l'orso.
+"Bugiardo!" Rugg&#xEC; il leone infuriato.
+In men che non si dica esplose una lotta terribile
+tra i contendenti i quali si azzuffarono
+insultandosi senza riserva. Intanto, poco
+distante, una giovane volpe passeggiava tranquilla
+per il bosco occupandosi delle proprie faccende.
+All'improvviso venne attirata da insolite urla e
+si avvicin&#xF2; al luogo di provenienza per scoprire
+di cosa si trattasse.
+Appena vide i due animali impegnatissimi a lottare
+come matti ed il cesto di cibo abbandonato vicino
+a loro, le balen&#xF2; un'idea. Quatta, quatta si
+avvicin&#xF2; al paniere, lo afferr&#xF2; e fuggi via
+andando a mangiare in pace in un luogo sicuro.
+Quando, sia il leone che l'orso, sfiniti per
+l'estenuante baruffa sostenuta, decisero di
+spartirsi le provviste dovettero fare i conti con
+un'amara sorpresa. Il cesto era sparito e al suo
+posto trovarono unicamente le impronte di una
+volpe, sicuramente molto furba!</text>
+    </lesson>
+    <lesson>
+      <id>{424b208e-b05e-4714-bf77-890782ce3eda}</id>
+      <title>Il topo di citt&#xE0; e il topo di campagna</title>
+      <newCharacters/>
+      <text>Un giorno il topo di citt&#xE0; and&#xF2; a trovare il
+cugino di campagna. Questo cugino era di modi
+semplici e rozzi, ma amava molto l'amico di citt&#xE0;
+e gli diede un cordiale benvenuto. Lardo e
+fagioli, pane e formaggio erano tutto ci&#xF2; che
+poteva offrirgli, ma li offr&#xEC; volentieri. Il topo
+di citt&#xE0; torse il lungo naso e disse:
+- Non riesco a capire, caro cugino, come tu possa
+tirare innanzi con un cibo cos&#xEC; misero ma certo,
+in campagna non ci si pu&#xF2; aspettare di meglio.
+Vieni con me, ed io ti far&#xF2; vedere come si vive.
+quando avrai trascorso una settimana in citt&#xE0;, ti
+meraviglierai di aver potuto sopportare la vita in
+campagna!
+Detto fatto, i due topi si misero in cammino e
+arrivarono all'abitazione del topo di citt&#xE0; a
+notte tarda.
+- Desideri un rinfresco, dopo un viaggio cos&#xEC;
+lungo? - domand&#xF2; con cortesia il topo di citt&#xE0;; e
+condusse l'amico nella grande sala da pranzo. Qui
+trovarono i resti di un ricco banchetto e si
+misero subito a divorare dolci, marmellata e tutto
+quello che c'era di buono.
+Ad un tratto udirono dei latrati.
+- Che cos'&#xE8; questo? - chiese il topo di campagna.
+- Oh, sono soltanto i cani di casa - rispose
+l'altro.
+- Soltanto! - esclam&#xF2; il topo di campagna. - Non
+amo questa musica, durante i pasti. -
+In quell'istante si spalanc&#xF2; la porta ed entrarono
+due enormi mastini: i due topi ebbero appena il
+tempo di saltar gi&#xF9; e di correre fuori.
+- Addio, cugino - disse il topo di campagna.
+- Come! Te ne vai cos&#xEC; presto? - chiese l'altro.
+- S&#xEC; - replic&#xF2; il topo di campagna:
+- Meglio lardo e fagioli in pace che dolci e
+marmellata nell'angoscia.</text>
+    </lesson>
+    <lesson>
+      <id>{51efdb38-30b0-4bb3-bbfa-16eda39b03a4}</id>
+      <title>L'usignolo e lo sparviero</title>
+      <newCharacters/>
+      <text>Era una dolcissima giornata di primavera.
+I rami fioriti di ogni albero si stagliavano sotto
+un cielo limpido e cristallino. Ogni animale del
+bosco era lieto di correre libero tra i mille
+profumi della natura appena risvegliatasi. Era
+bello vivere, gridare, ruzzolare nei campi,
+giocare all'aria aperta. A questo pensava un
+grazioso usignolo svolazzando tra una pianta e
+l'altra. Egli era enormemente contento. Infatti
+era appena diventato pap&#xE0; di cinque meravigliosi
+uccellini. La sua cara mogliettina se ne stava
+premurosa nel nido a curare i simpaticissimi
+cucciolotti che ciangottavano allegramente, mentre
+lui vagava per il bosco in cerca di un po' di cibo
+per tutta la famiglia.
+Attirato da quell'aria frizzante, il piccolino si
+trattenne in giro per i prati, assaporando il buon
+sapore di libert&#xE0;. Ma, quando si decise a tornare
+a casa portando del mangime nel becco, not&#xF2; in
+lontananza l'arrivo di un terribile sparviero che
+puntava dritto, dritto sul nido in cui si
+trovavano i suoi cuccioli.
+Con coraggio e senza esitare, l'usignolo si pos&#xF2;
+sul ramo di un'alta pianta e cominci&#xF2; a cantare
+con quanto fiato aveva in gola. Una melodia
+bellissima usc&#xEC; dal suo beccuccio. Ogni creatura
+si ferm&#xF2; ad ascoltare. Era il canto di un genitore
+disperato. Lo sparviero, attirato da quel suono si
+lanci&#xF2; deciso sull'uccellino agguantandolo
+saldamente e rivolando via velocemente.
+L'usignolo, sfinito per il faticoso canto, si
+abbandon&#xF2; felicemente agli artigli dello
+sparviero. Era riuscito a distogliere l'attenzione
+del rapace dai suoi piccoli grazie alla sua
+melodia canora. S&#xEC;, quel padre aveva salvato i
+suoi figli con il proprio sacrificio.</text>
+    </lesson>
+    <lesson>
+      <id>{7966997c-1e0d-4e06-aa16-599bebaf6ebc}</id>
+      <title>L'inverno e la primavera</title>
+      <newCharacters/>
+      <text>La Primavera e l'Inverno sono due stagioni
+completamente opposte che non sono mai riuscite a
+trovare la corretta armonia per andare d'accordo.
+Fortunatamente esse non devono convivere, infatti,
+quando compare una deve umilmente ritirarsi
+l'altro.
+Un giorno il signor Inverno si trov&#xF2; faccia a
+faccia con la giovane signorina Primavera.
+L'anziana stagione, con quella sua aria sapiente
+prese a dire: "Mia cara amica, tu non sai essere
+decisa e determinata. Quando giunge il tuo periodo
+annuale, le persone e gli animali ne approfittano
+per precipitarsi fuori dalle loro case o dalle
+loro tane e si riversano in quei prati che tu, con
+tanta premura, hai provveduto a far fiorire. Essi
+strappano i giovani arbusti, calpestano senza
+piet&#xE0; l'erba e assorbono ogni sorso di quel sole
+splendente che, col tuo arrivo diventa pi&#xF9; caldo.
+I tuoi frutti vengono ignobilmente raccolti e
+divorati e infine, con il baccano e la cagnara che
+tutti fanno, non ti permettono neppure di riposare
+in pace. Invece io incuto timore e rispetto con le
+mie nebbie, il freddo e il gelo. La gente si
+rintana in casa e non esce quasi mai per paura del
+brutto tempo e cos&#xEC; mi lascia riposare
+tranquillo".
+La bella e dolce Primavera, colpita da quelle
+parole, rispose: "Il mio arrivo &#xE8; desiderato da
+tutti e le persone mi amano. Tu non puoi nemmeno
+immaginare cosa significhi essere tanto
+apprezzati, &#xE8; una sensazione bellissima che non
+potrai mai provare perch&#xE9; con il freddo che porti
+al tuo arrivo anche i cuori pi&#xF9; caldi si
+raggelano". L'inverno non disse pi&#xF9; niente e si
+ferm&#xF2; a riflettere. Forse, essere ammirati ed
+amati dagli altri, poteva anche essere una bella
+sensazione.</text>
+    </lesson>
+    <lesson>
+      <id>{a614e4ab-cbf4-40fe-8dbb-2af66c3159e1}</id>
+      <title>Il corvo malato</title>
+      <newCharacters/>
+      <text>Tempo fa un cucciolo di corvo assai vivace e
+irrequieto se ne andava a zonzo tutto il giorno
+sbirciando in faccende che non lo riguardavano.
+Ficcava il becco in ogni cosa e non perdeva
+l'occasione di fare scherzi o dispetti ad ogni
+animale. Quel mattino per&#xF2;, la sua monelleria lo
+spinse a compiere ci&#xF2; che non avrebbe mai dovuto
+fare. Si intrufol&#xF2; infatti in una piccola casa
+situata al limitare del bosco e lesto, lesto rub&#xF2;
+un bel pezzo di carne sistemato sul davanzale
+della finestra spalancata. Per sua sfortuna il
+contadino fece in tempo ad accorgersi del furto e,
+senza esitare, colp&#xEC; il corvo con una pietra. Ecco
+fatto! Il ladro fu colpito in pieno. Quel pezzo di
+carne gli cost&#xF2; caro!
+Ferito e spaventato il corvetto se ne torn&#xF2; al
+nido volando piano per il male, quindi si sdrai&#xF2;
+sfinito tra le braccia della sua cara mamma.
+Questa, disperata per le condizioni del figliolo,
+scoppi&#xF2; in lacrime sfogando la propria
+preoccupazione.
+"Oh, mammina!" Disse il cucciolo "Prega il Signore
+per me affinch&#xE9; guarisca la mia ferita". La corva
+colma di tristezza rispose: "Povero piccolo mio,
+come puoi chiedere al Cielo un miracolo se non ti
+sei nemmeno pentito del male commesso?" Solo in
+quel momento il corvetto comprese la sua colpa e
+giur&#xF2; a se stesso di non rubare mai pi&#xF9; in vita
+sua.
+Fortunatamente la ferita riportata durante la
+scorribanda alla fattoria si rimargin&#xF2; in fretta e
+il cucciolo riacquist&#xF2; le forze. Quando fu
+completamente guarito pot&#xE9; tornare a svolazzare
+tra gli alberi ma, ricordandosi della promessa
+fatta, da quel giorno non tocc&#xF2; pi&#xF9; ci&#xF2; che non
+gli apparteneva. Aveva imparato a sue spese il
+significato della parola "furto".</text>
+    </lesson>
+    <lesson>
+      <id>{916451ee-ace2-449c-9f7f-cf619bc078d3}</id>
+      <title>La leonessa e la volpe</title>
+      <newCharacters/>
+      <text>Serenamente accucciate all'ombra di una fresca
+pianta situata nel cuore della foresta, una
+tranquilla leonessa e una placida volpe,
+chiacchieravano tra loro come due vecchie amiche,
+discutendo del pi&#xF9; e del meno.
+Per un ascoltatore attento non era difficile per&#xF2;,
+scoprire che, nascoste nelle loro parole, vi era
+racchiuso un pizzico d'invidia. In effetti, la
+volpe, desiderava possedere lo stesso coraggio e
+l'identica sicurezza che alimentavano il
+comportamento dell'amica la leonessa, mentre a
+questa sarebbe piaciuto conquistare la celebre
+furbizia dell'altra. Nonostante le piccole gelosie
+racchiuse nei loro cuori, entrambe mantenevano un
+rapporto forzatamente cortese, scambiandosi
+sorrisi ed esagerati complimenti.
+Finch&#xE9;, un giorno, passeggiando insieme nel bosco
+con i rispettivi cuccioli che trotterellavano
+amabilmente intorno a loro, giocando e
+rincorrendosi fra gli alberi, la volpe non riusc&#xEC;
+pi&#xF9; a trattenere una frase alimentata unicamente
+dall'invidia. "Mia cara" disse atteggiandosi a
+gran dama e indicando con lo sguardo i suoi
+piccoli, "tu avrai anche un portamento da regina,
+possiedi grande forza e vigore, ma, in quanto a
+madre, devi ammettere che io sono pi&#xF9; portata.
+Guarda i miei cinque volpacchiotti come giocano
+felici tra loro. Invece tu hai messo al mondo un
+solo figliolo e, poveretto, sembra tanto triste
+senza fratelli!"
+Evitando di scomporsi, la leonessa rispose: "Certo
+amica mia, io ho partorito un solo cucciolo. Ma
+questo piccolo vale pi&#xF9; d'ogni altro animale. Egli
+&#xE8; un leone e, una volta cresciuto, sar&#xE0; un Re!"
+Non potendo ribattere niente la volpe si limit&#xF2; ad
+ingoiare la propria gelosia accettando ci&#xF2; che la
+natura aveva dispensato.</text>
+    </lesson>
+    <lesson>
+      <id>{74beb185-72bd-4bfe-b65e-2f5c8a518d36}</id>
+      <title>Il nibbio e il serpente</title>
+      <newCharacters/>
+      <text>Un giovane serpentello se ne andava tranquillo
+strisciando fra una pietra e l'altra, godendosi i
+caldi raggi del primo sole primaverile. L'aria era
+tiepida e carica di un buon profumo di fiori e
+ogni animale si sentiva rasserenato da quel clima
+dolce. Il piccolo serpente si muoveva piano nel
+prato quando all'improvviso una spaventosa ombra
+si proiett&#xF2; sul suo cammino. L'animale preoccupato
+alz&#xF2; il testino per guardare da dove provenisse la
+macchia scura e solo allora scopr&#xEC; che un
+terribile nibbio stava puntando dritto dritto su
+di lui!
+Il poverino non ebbe nemmeno il tempo di scappare
+perch&#xE9; in un lampo il volatile gli piomb&#xF2; addosso
+afferrandolo con il becco. Il serpente fu, cos&#xEC;,
+sollevato in cielo da quel rapace che, senza
+avere piet&#xE0; per le sue grida vol&#xF2; via il pi&#xF9;
+velocemente possibile.
+"Lasciami andare!" Implorava lo sfortunato
+animaletto "Non ti ho fatto niente!" Ma il nibbio
+non l'ascolt&#xF2; neppure.
+A quel punto il serpentello si rivolt&#xF2; su se
+stesso e con un'abile mossa diede un morso al suo
+nemico. Finalmente il volatile colpito dal veleno
+della sua preda fu costretto ad aprire il becco
+liberando il serpente che cadde a terra senza
+farsi male. Il nibbio invece, con la vista
+annebbiata e senza pi&#xF9; forze a causa del morso
+velenoso, precipit&#xF2; sul terreno a peso morto
+riportando parecchie ferite. Quando il volatile
+era ancora stordito, il serpentello gli si
+avvicin&#xF2; e gli disse: "Ben ti sta! Io non volevo
+farti del male ma tu mi ci hai costretto e adesso
+ne paghi le conseguenze!" Trascorsero due giorni
+interi prima che il nibbio potesse riprendere a
+volare ma, a partire da quella volta egli si tenne
+sempre ad una certa distanza da tutti i serpenti!</text>
+    </lesson>
+    <lesson>
+      <id>{595f3de2-2538-47d5-bcf1-cb97d6835e81}</id>
+      <title>La volpe e il leone</title>
+      <newCharacters/>
+      <text>Quella mattina una volpe se ne andava tranquilla
+per i prati rifioriti dopo la brutta stagione
+invernale. I profumi della natura le solleticavano
+le nari accarezzandole la fantasia, permettendole
+di sognare paesi lontani, belli e sconosciuti.
+All'improvviso la sua attenzione venne richiamata
+da un violento ruggito. Era un verso che non aveva
+mai sentito e, terrorizzata, fugg&#xEC; a nascondersi
+dietro ad un cespuglio. Da li pot&#xE9; vedere,
+riparata tra le foglie, il terribile animale che
+aveva emesso quel suono: si trattava di un leone,
+una bestia a lei sconosciuta. Spaventata, la
+povera volpe, scapp&#xF2; via il pi&#xF9; velocemente
+possibile.
+Trascorsero un paio di giorni tranquilli dopo quel
+brutto incontro che sembrava quasi essere stato
+dimenticato, quando, d'un tratto, la piccola volpe
+si imbatt&#xE9; ancora nel leone. Questa volta il Re
+della foresta le apparve proprio davanti
+ostacolandole il cammino. Essa, impaurita, inizi&#xF2;
+a tremare come una foglia senza tuttavia fuggire
+ma rimanendo ferma al suo posto fino a quando il
+leone non si fu allontanato. La terza volta che la
+volpe si imbatt&#xE9; in quel grosso e possente animale
+dal risonante ruggito, scopr&#xEC; che il proprio
+timore nei suoi confronti andava pian piano
+assopendosi. Cos&#xEC;, durante il successivo incontro
+con il leone, si dimostr&#xF2; molto pi&#xF9; calma e riusc&#xEC;
+persino a guardarlo bene dentro agli occhi
+salutandolo con un cordiale 'buongiorno!".Infine,
+quando ebbe ancora modo di vederlo, la volpe prov&#xF2;
+a parlargli e riusc&#xEC; finalmente a scoprire in lui
+doti come il coraggio e l'intelligenza.
+Da quel giorno non si stanc&#xF2; mai di ascoltarlo
+sicura che, dall'esperienza di un animale cos&#xEC;
+astuto e bravo cacciatore, avrebbe tratto solo
+vantaggi.</text>
+    </lesson>
+    <lesson>
+      <id>{90a590d9-f552-41e3-b864-2a0d6f06ecd9}</id>
+      <title>L'asino selvatico e l'asino domestico</title>
+      <newCharacters/>
+      <text>C'era una volta un simpatico asinello selvatico
+che trascorreva le sue giornate in libert&#xE0;,
+passeggiando per i campi e mangiando il cibo che
+trovava. Durante uno dei suoi giri quotidiani ebbe
+modo di vedere un suo simile, dall'aspetto sano e
+robusto, che brucava l'erba in un grande prato
+cintato da un'alta staccionata di legno. Esso,
+osservando l'animale domestico, pens&#xF2;: "Che bella
+vita! Lui s&#xEC; che sta bene: &#xE9; spensierato, senza
+problemi e con il cibo a volont&#xE0;". In effetti
+l'altro asino sembrava proprio fortunato: gli
+venivano serviti due pasti abbondanti al giorno,
+riposava in una stalla bene attrezzata ed aveva un
+pascolo meraviglioso a sua disposizione.
+L'asino selvatico, invece, doveva accontentarsi
+dei miseri sterpi che riusciva a trovare ai
+margini della strada, perch&#xE9; i prati ricoperti di
+erbetta fresca erano tutti privati. Ogni tanto, il
+povero asinello appoggiava il muso sulla cima
+della staccionata e, guardando l'altro, lo
+invidiava da morire.
+Un giorno, per&#xF2;, il giovane asinello, girovagando
+tranquillo, incontr&#xF2; sulla via, un animale
+talmente sovraccarico di legna, sacchi di grano ed
+altro da non essere in grado di capire di che
+bestia si trattasse. Quando questa, per reagire ad
+una violenta frustata del suo padrone, tir&#xF2; un
+calcio e alz&#xF2; il muso, lo riconobbe: era l'asino
+domestico che fino a quel giorno aveva tanto
+invidiato! "Eh, caro mio," gli grid&#xF2; affiancandosi
+a lui "a questo prezzo non farei mai cambio con
+te. Nessuno mi comanda, io sono libero e leggero
+come una libellula. Se poi non mangio bene come
+te, meglio, mi mantengo in linea. E per
+sopravvivere mi arrangio". Dopo quell'incontro
+l'asino selvatico non prov&#xF2; pi&#xF9; alcuna invidia per
+il suo simile.</text>
+    </lesson>
+    <lesson>
+      <id>{83a657b0-29ce-4ce4-b838-3705005fb1c3}</id>
+      <title>Il lupo sazio e la pecora</title>
+      <newCharacters/>
+      <text>Quello era davvero un gran giorno per un lupo
+rinomato in tutto il contado per la sua
+insaziabile fame. Infatti, senza neppure alzare un
+dito egli era riuscito a procurarsi ottime prede
+trovate casualmente a terra perch&#xE9; colpite da
+qualche cacciatore e si era preparato un pranzo
+degno di Re! Il lupo, dopo avere abbondantemente
+mangiato, si inoltr&#xF2; nella foresta per fare due
+passi. Fu cos&#xEC; che incontr&#xF2; una mansueta pecorella
+la quale, terrorizzata dal temibile animale
+notoriamente suo nemico, non riusc&#xEC; neppure a
+muoversi, paralizzata dallo spavento. Il lupo, pi&#xF9;
+per istinto che per altre ragioni, afferr&#xF2; la
+preda tenendola stretta, stretta. Ma solo dopo
+averla catturata si rese conto di essere talmente
+sazio da non avere pi&#xF9; alcun appetito. Occorreva
+trovare una valida giustificazione per poter
+liberare quella pecora senza fare brutta figura.
+"Ho deciso" Disse quindi il lupo "di lasciarti
+andare a condizione che tu sappia espormi tre
+desideri con intelligenza. La pecorella
+sconcertata, dopo aver pensato un istante rispose:
+"B&#xE8;, anzitutto avrei voluto non averti mai
+incontrato. Seconda cosa, se proprio ci&#xF2; doveva
+avvenire, avrei voluto trovarti cieco. Ma visto
+che nessuno di questi due desideri &#xE8; stato
+esaudito, adesso vorrei che tu e tutta la tua
+razza siate maledetti e facciate una brutta fine
+perch&#xE9; mi avete reso la vita impossibile e avete
+mangiato centinaia di mie compagne che non vi
+avevano fatto alcun male!"
+Inaspettatamente il lupo, invece di adirarsi come
+prevedibile, dichiar&#xF2;:
+"Apprezzo la tua sincerit&#xE0;. Hai avuto molto
+coraggio a dirmi ci&#xF2; che realmente pensavi per
+questo ti lascer&#xF2; libera!" Cos&#xEC; dicendo liber&#xF2; la
+pecorella e, con un cenno di saluto, la invit&#xF2; ad
+allontanarsi.</text>
+    </lesson>
+    <lesson>
+      <id>{786ccbe8-1390-4332-a974-8eacb9f202a9}</id>
+      <title>Il leone e l'asino</title>
+      <newCharacters/>
+      <text>Un asinello un po' troppo vanesio, si vantava
+sempre con gli altri animali, del proprio coraggio
+e della propria forza. Un giorno ricevette una
+inaspettata proposta dal pi&#xF9; importante felino
+della foresta: il leone.
+Costui disse all'asino: "Ho pensato che, in fondo,
+potremmo esserci di reciproco aiuto. Vorrei che tu
+mi aiutassi nelle battute di caccia e per questo
+avrei deciso di costituire una societ&#xE0; con te"
+Onoratissimo, l'asinello rispose: "Sono lusingato
+della tua richiesta e accetto volentieri!"
+Cos&#xEC; ebbe inizio la loro collaborazione reciproca.
+Una mattina, di buon ora, si incamminarono verso
+una caverna dove avevano visto rifugiarsi un
+numeroso gruppo di capre selvatiche. Il Re degli
+animali si ferm&#xF2; sulla soglia con l'intenzione di
+catturare le prede una per volta appena sarebbero
+uscite dal rifugio. L'asino, invece, si era
+intrufolato nella grotta ed aveva cominciato a
+lanciare ragli acutissimi per spaventare le povere
+bestiole causando un incredibile putiferio. Le
+capre terrorizzate ruzzolarono una sull'altra e si
+precipitarono verso l'uscita dove per&#xF2;, trovarono
+ad attenderle l'astuto leone che riusc&#xEC; ad
+imprigionarle tutte.
+Quindi, finalmente l'asino usc&#xEC; dalla grotta e,
+con aria trionfante esclam&#xF2;:
+"Hai visto come sono stato bravo? Sono un grande
+cacciatore! Sarai contento del tuo socio!"
+"Certo!" Rispose con una risata il leone "Anzi, a
+dirti la verit&#xE0;, avrei avuto anch'io paura di te
+se non ti conoscessi bene e non sapessi che sei
+solo un asinello!"
+Tutto soddisfatto l'asino and&#xF2; buono, buono a
+brucare un po' d'erba mentre il leone si
+apprestava a fare un succulento banchetto!
+Le persone che, valendo poco, si vantano
+esageratamente con chi le conosce bene, rischiano
+di essere beffate.</text>
+    </lesson>
+    <lesson>
+      <id>{b4a64652-e73a-441a-8acd-98ac4de44366}</id>
+      <title>Il leone va alla guerra</title>
+      <newCharacters/>
+      <text>Il leone, re della foresta, decise un bel giorno
+di fare una guerra e, come fanno tutti i re,
+diram&#xF2; un bando fra tutti gli animali suoi
+sudditi.
+-Gli animali- diceva il bando -vengano da ogni
+parte della foresta per aiutare il loro re a fare
+la guerra. Vengano tutti, senza nessuna
+esclusione, per prendervi parte.
+Vennero tutti, dai pi&#xF9; grandi ai pi&#xF9; piccoli.
+Tutti erano stati invitati perch&#xE9; il leone aveva
+detto che tutti avrebbero avuto un compito in
+guerra. E quando tutti gli animali furono riuniti
+davanti al re e ai suoi ministri, il leone
+cominci&#xF2; ad assegnare ad ognuno il proprio
+compito.
+Disse all'elefante: -Tu hai molta forza.
+Combatterai, ma porterai anche l'artiglieria e
+tutto quello che occorre ai tuoi compagni.
+Poi disse alla volpe: -Tu che sei il pi&#xF9; furbo
+degli animali, mi aiuterai ad ingannare il nemico.
+-E tu- disse all'orso -che sei forte e agile,
+sarai utile quando dovremo assalire le fortezze.
+Scavalcherai le mura e conquisterai in breve tempo
+le citt&#xE0;.
+Ad uno a uno il leone chiam&#xF2; tutti gli animali e
+trov&#xF2; per ognuno un compito preciso per la guerra
+che stava per cominciare. Quando comparvero
+davanti al re gli asini e le lepri, i ministri e i
+consiglieri gli dissero:
+-Questi sono animali inutili alla nostra guerra.
+Gli asini sono sciocchi e le lepri paurose e
+timide, che cosa ne facciamo? Mandiamoli via.
+Ma il leone rispose ai suoi consiglieri e
+ministri: -L'asino ha una voce pi&#xF9; forte della
+mia. Sar&#xE0; un'ottima tromba per chiamare a raccolta
+i soldati. La lepre &#xE8; velocissima e porter&#xE0; i
+messaggi da un luogo all'altro.
+Il leone che era saggio sapeva che nessuno era
+inutile e disse: -Dovete imparare che tutti sono
+utili se usati al momento opportuno e sfruttando
+le loro capacit&#xE0;.</text>
+    </lesson>
+    <lesson>
+      <id>{622a9228-38a6-4b70-bc52-f0b8673ffa3a}</id>
+      <title>Il cervo alla fonte e il leone</title>
+      <newCharacters/>
+      <text>In una dolce giornata estiva, sotto un cielo
+limpido e azzurrissimo, un bellissimo cervo dalle
+lunghe e possenti corna, si stava abbeverando ad
+una fonte tanto cristallina da riuscire a
+riflettergli la sua immagine come fosse uno
+specchio. Ammirando il proprio bell'aspetto fiero
+e slanciato l'animale era orgoglioso di se stesso.
+Le sue lunghe e ramificate corna erano stupende e
+si ergevano decise verso l'alto come fossero
+maestose corone. Il suo muso allungato era
+delicato e deciso come quello di un principe e
+l'intero suo corpo era forte e robusto. Le uniche
+cose che a suo avviso non erano degne di lui erano
+quelle sue zampette troppo fragili e delicate. E
+si, se fossero state almeno un poco pi&#xF9; grosse non
+avrebbero stonato con il suo fisico possente.
+Ma proprio mentre egli era tutto intento a
+rimirarsi, un brusco movimento alle sue spalle
+risvegli&#xF2; la sua attenzione: qualcuno lo stava
+spiando! Si trattava di un grosso leone pronto a
+balzargli addosso alla prima occasione.
+Fortunatamente il cervo si accorse in tempo di lui
+e riusc&#xEC; ad allontanarsi cautamente dalla fonte
+per andare a nascondersi dietro ad un grande
+cespuglio. L'enorme felino per&#xF2; riusc&#xEC; senza
+difficolt&#xE0; a rintracciare la sua preda a causa
+delle lunghe corna di quest'ultima che ne
+tradivano la presenza. Appena scovato, il cervo si
+lanci&#xF2; in una velocissima fuga verso la salvezza.
+Le sue agili zampe correvano come non mai
+superando ogni ostacolo e portandolo al sicuro.
+Quando finalmente l'animale fu lontano da ogni
+pericolo pot&#xE9; fermarsi per riprendere fiato. "Che
+buffo," pens&#xF2; il cervo "io ammiravo tanto le mie
+belle corna ed invece esse mi hanno tradito mentre
+invece, queste zampette apparentemente fragili che
+disprezzavo mi hanno salvato la vita!"</text>
+    </lesson>
+    <lesson>
+      <id>{410d9540-19a8-4f25-8c21-d76376683fbb}</id>
+      <title>Il topo e la ranocchia</title>
+      <newCharacters/>
+      <text>Un dolcissimo topolino di campagna, col musetto
+simpatico e due occhioni scuri, vagando tutto solo
+per i campi, incontr&#xF2; un bel giorno una buffa
+sgraziata ranocchia. Osservandosi al principio
+dubbiosi, i due fecero ben presto amicizia.
+"Sai, mi piacerebbe sapere come ti procuri il
+cibo!" Chiese quella. "Oh, b&#xE8;," borbott&#xF2; il
+topolino con la testa bassa "non &#xE8; che io sia un
+gran campione... anzi, faccio enorme fatica a
+trovare qualcosa da mettere sotto i denti."
+"Ehi!" Grid&#xF2; la rana "che ne diresti se andassimo
+insieme a caccia di cibarie? In due di sicuro
+avremmo pi&#xF9; fortuna! Potremmo legarci con una
+catena l'un all'altro cos&#xEC; da essere sicuri di non
+perderci!"
+Il topolino rimase un istante a riflettere, quindi
+disse: "Mi sembra una buona idea!" E cos&#xEC; fecero.
+Legati insieme i due si diedero da fare per
+cercare del cibo e bisogna dire che ne trovarono
+proprio tanto! Quando, alla fine della giornata
+furono veramente sazi, si incamminarono verso
+casa. Ancora incatenati, giunsero allo stagno
+della ranocchia e questa, senza pensarci due
+volte, si tuff&#xF2; decisa nell'acqua trascinandosi
+dietro il povero topino che, non sapendo nuotare
+si mise a urlare e cominci&#xF2; a dibattersi per non
+annegare.
+Un nibbio, osservando dal cielo tutto quel
+trambusto e vedendo il povero topo ormai privo di
+sensi pens&#xF2; di aver trovato un buon bocconcino. Si
+precipit&#xF2; allora sullo stagno e afferr&#xF2; con gli
+artigli il corpo del topino al quale era legata
+anche la ranocchia. Risvegliato dalle grida della
+rana, il topolino inizi&#xF2;, coi suoi dentini aguzzi,
+a morsicare le zampe del volatile il quale apr&#xEC;
+gli artigli per il male e li lasci&#xF2; ricadere. I
+due toccarono il suolo senza farsi male ma
+decisero subito di togliersi quella catena che gli
+aveva procurato tanti guai!</text>
+    </lesson>
+    <lesson>
+      <id>{38c777da-8669-4d7f-9c65-bc9b175b3cf6}</id>
+      <title>La volpe e il rovo</title>
+      <newCharacters/>
+      <text>C'era una volta una graziosa volpe dal manto
+marrone e lucente che viveva in una piccola
+casetta in mezzo al bosco. Un bel mattino di
+primavera l'animale usc&#xEC; dalla propria abitazione
+con l'intenzione di procurarsi una preda per il
+mezzogiorno.
+Vagando per la brughiera fischiettando
+allegramente, la volpe attir&#xF2; l'attenzione di un
+ingenuo leprottino il quale, incuriosito, le si
+avvicin&#xF2; per osservarla meglio. L'astuta volpe non
+si lasci&#xF2; sfuggire l'occasione e sorridendo al
+cucciolotto gli disse: "Buongiorno a te mio
+piccolo amico. Cosa fai tutto solo in questi
+boschi?" Il leprotto divenne improvvisamente
+diffidente di fronte a tutto quell'interessamento
+e, indietreggiando piano rispose: "Oh, niente,
+proprio niente. Anzi, adesso che ci penso, dovevo
+tornare a casa".
+Ma la volpe non aveva alcuna intenzione di
+lasciarsi scappare un bocconcino cos&#xEC; prelibato.
+Quindi, con un abile balzo si gett&#xF2;
+sull'animaletto per afferrarlo.
+Fortunatamente il piccolino, risvegliato
+dall'improvviso attacco, riusc&#xEC; a schivare
+l'aggressione con un veloce salto indietro,
+precipitandosi in una folle fuga verso il limitare
+del bosco. La volpe lo segu&#xEC; fino a quando non si
+trov&#xF2; sull'orlo di una grossa buca. Per evitare di
+cadere nel vuoto l'animale si aggrapp&#xF2; ad una
+siepe di rovo graffiandosi e pungendosi con le sue
+spine. Abbandonando l'inseguimento la povera volpe
+rimase seduta di fronte al rovo leccandosi le
+ferite da questo provocate.
+"Che stupida sono stata!" Si disse fra s&#xE9; "Mi sono
+aggrappata alla prima cosa che ho trovato per non
+cadere in una buca e mi sono procurata solo graffi
+e punture. Tanto valeva proseguire l'inseguimento
+e tuffarmi nella fossa".
+Ma per quel giorno ormai non poteva pi&#xF9; far niente
+e camminando piano per il male, se ne torn&#xF2; a casa
+sconsolata.</text>
+    </lesson>
+    <lesson>
+      <id>{10c23af7-c5a1-4b81-8b24-757d7b81e08e}</id>
+      <title>Il nibbio che voleva nitrire</title>
+      <newCharacters/>
+      <text>Il nibbio, durante il primo periodo della sua
+esistenza, aveva posseduto una voce, certo non
+bella, ma comunque acuta e decisa. Egli, per&#xF2;, era
+sempre stato nutrito da una incontenibile invidia
+di tutto e di tutti. Sapeva di essere imparentato
+con l'aquila, ma questo, invece di costituire un
+vanto, non faceva altro che alimentare la sua
+gelosia: capiva di essere inferiore e si rodeva
+dalla rabbia per questo. Invidiava gli uccelli
+variopinti come il pappagallo e il pavone, lodati
+e vezzeggiati da tutti. Inoltre, si mostrava
+sprezzante nei riguardi dell'usignolo, dicendo tra
+s&#xE9;:
+"S&#xEC;, ha una bella vocetta ma &#xE8; troppo delicata e
+romantica! Roba da donnicciole! Se devo cercare di
+migliorare la mia voce certamente non prender&#xF2;
+come esempio questo stupido uccello. Io voglio una
+voce forte, che si imponga sulle altre!"
+Era un bel giorno di primavera. Il nibbio se ne
+stava tranquillamente appollaiato sopra un ramo di
+faggio, riparato dalle fresche fronde della
+pianta.
+Inaspettato, giunse un cavallo accaldato che,
+cercando un po' di refrigerio, and&#xF2; a riposarsi
+all'ombra dell'albero.
+Sdraiandosi con l'intenzione di fare un
+sonnellino, l'equino, inavvertitamente si punse
+con un cardo spinoso e, dal dolore, lanci&#xF2; un
+lungo e acutissimo nitrito.
+"Oh, che meraviglia!" Esclam&#xF2; il nibbio con
+entusiasmo. Questa &#xE8; la voce che andrebbe bene per
+me: acuta, imponente e inconfondibile!"
+Il nibbio cominci&#xF2; da quel mattino, ad esercitarsi
+nell'imitazione di quel verso meraviglioso. Prov&#xF2;
+e riprov&#xF2; scorticandosi la gola, ma inutilmente.
+Quando, dopo molti tentativi senza successo, si
+rassegn&#xF2; a tornare alla sua voce originale, ebbe
+una brutta sorpresa: gli era sparita a furia di
+sforzarla! Cos&#xEC; dovette accontentarsi di emettere
+un suono insignificante e rauco per tutta la vita!</text>
+    </lesson>
+    <lesson>
+      <id>{372976e7-5121-43e0-9f4d-12357f9a895d}</id>
+      <title>Il cerbiatto e il cervo</title>
+      <newCharacters/>
+      <text>Un bellissimo cerbiatto dal manto scuro e con
+delle stupende macchioline bianche sul dorso
+viveva con la sua famiglia in una meravigliosa
+foresta con un ricchissimo sottobosco che offriva
+cibo in abbondanza.
+Il cerbiatto ammirava il suo caro babbo e
+desiderava diventare grande e forte proprio come
+lui aspettando con ansia che gli spuntassero
+finalmente le stesse lunghissime corna che tutti
+invidiavano al suo genitore. Nell'impazienza di
+quel momento egli seguiva costantemente il grosso
+cervo cercando di imitarlo in ogni cosa.
+Durante un bel mattino di fine inverno, mentre il
+grande cervo brucava tranquillo le foglie dei
+cespugli pi&#xF9; bassi in compagnia dell'inseparabile
+figliolo, un possente ruggito squarci&#xF2; il silenzio
+della foresta. Era un leone! Il cerbiatto
+sconcertato osserv&#xF2; il suo babbo e, con enorme
+stupore scopr&#xEC; che questi tremava come un fuscello
+al vento. S&#xEC;, il suo venerato pap&#xE0; aveva paura!
+Come era possibile? Ma prima ancora che egli
+potesse chiedergli spiegazioni il cervo grid&#xF2; al
+figlio: "Corri!" e si lanci&#xF2; in una velocissima
+fuga. Il cucciolo obbediente lo segu&#xEC; con le
+lacrime agli occhi per la vergogna e la delusione.
+Quando finalmente si fermarono il cervo si
+avvicin&#xF2; al figlio e scorgendo il suo pianto gli
+parl&#xF2; con voce dolce: "Piccolo mio, questa paura
+che tu disprezzi ci ha salvato la vita. Quel leone
+non avrebbe avuto piet&#xE0; di noi e ci avrebbe
+sicuramente sbranati se non fossimo fuggiti. A
+volte bisogna ingoiare il proprio orgoglio e
+sapersi arrendere di fronte a chi &#xE9; pi&#xF9; forte di
+noi. Questo significa diventare adulti e saggi."
+Quelle parole consolarono il cerbiatto. Adesso
+ammirava ancora di pi&#xF9; quel suo babbo che non
+aveva esitato a dimostrarsi un fifone rischiando
+di perdere la stima del figlio pur di salvargli la
+vita. Questo era il vero coraggio.</text>
+    </lesson>
+    <lesson>
+      <id>{5a7b9373-b1a8-4aef-a76c-d6cb26255e60}</id>
+      <title>La volpe e la pantera</title>
+      <newCharacters/>
+      <text>Al di l&#xE0; di un boschetto di frassini profumati vi
+era un bellissimo laghetto dalle acque limpide e
+cristalline davanti al quale, due giovani animali
+accarezzati da un lieve venticello primaverile, si
+stavano specchiando, rimirando ciascuno il proprio
+portamento fiero e il colore del pelo. Si trattava
+di una graziosa pantera e di una volpe ugualmente
+carina.
+"Vuoi mettere la mia figura con la tua?" Disse la
+pantera all'amica.
+"Tu sei goffa e piccola io invece sono snella,
+slanciata e flessuosa. Il mio portamento &#xE8; tale
+che perfino gli uomini usano il mio nome per
+indicare certe donne dal fascino aggressivo!"
+La volpe, dopo avere ascoltato in silenzio
+rispose: "Io sar&#xF2; forse meno bella e pi&#xF9; piccola
+ma sono comunque pi&#xF9; piacente e pi&#xF9; simpatica. E
+poi il mio pelo &#xE8; senza dubbio pi&#xF9; folto e pi&#xF9;
+caldo del tuo. A proposito di donne, se tu andassi
+in citt&#xE0; vedresti quante signore si fanno belle
+indossando la mia pelliccia morbida, a volte rossa
+e altre volte argentata".
+Sempre pi&#xF9; altezzosa, la pantera ribatt&#xE9;: "In
+quanto al pelo, si, &#xE8; vero, il mio &#xE8; pi&#xF9; corto ma
+&#xE8; pi&#xF9; lucido e splendente, inoltre nella mia
+famiglia c'&#xE8; da sbizzarrirsi nella scelta dei
+colori. So di non peccare di vanit&#xE0; dicendo di
+essere molto pi&#xF9; bella di te!"
+Solo in quel momento la volpe si rese conto di
+essere stata al gioco di quella frivola compagna
+la quale badava solamente al proprio aspetto
+tisico, cos&#xEC; concluse: "Cara amica, sicuramente tu
+sei ammirata da tutti per la tua bellezza
+esteriore. Io invece sono molto pi&#xF9; apprezzata per
+la mia intelligenza e la mia furbizia. Ti assicuro
+che sono queste le doti pi&#xF9; importanti e non le
+scambierei mai con qualit&#xE0; puramente estetiche!"
+A quelle parole la pantera non fu in grado di
+ribattere e non le rimase altro che tacere di
+fronte all'evidenza dei fatti.</text>
+    </lesson>
+    <lesson>
+      <id>{291a21c8-c809-4a07-ac66-87440bdffb5c}</id>
+      <title>La pulce e il bue</title>
+      <newCharacters/>
+      <text>Quel giorno una piccola pulce sembrava meno vivace
+del solito. Le sue minuscole alette non avevano
+voglia di scuotersi e le zampettine che
+normalmente la portavano a saltellare avanti e
+indietro, erano pressoch&#xE9; immobili. Era una pulce
+graziosa e nervosetta, anche se quel mattino la
+noia pare va essersi impossessata di lei. Per
+vivacizzare le sue ore decise di andare a trovare
+il bue della fattoria. Il grande animale pascolava
+quieto nelle verdeggianti distese erbose che
+circondavano le stalle, scuotendo di tanto in
+tanto la sua lunga coda sotto i caldi raggi del
+sole.
+Con agili piroette l'animaletto and&#xF2; a posarsi
+davanti a lui. "Salve" Strill&#xF2; con un vocino
+acuto. "Oh, buongiorno". Rispose gentilmente il
+bue avvicinando il suo grosso muso al minuscolo
+corpicino dell'insetto. "Sai", disse la piccolina
+"avevo voglia di chiacchierare con qualcuno"
+"Bene, e di cosa vogliamo parlare?" Chiese il bue.
+"Non so..., raccontami un po' del tuo lavoro"
+"Io lavoro per l'uomo e svolgo duri compiti. Il
+mio padrone &#xE8; un contadino e per lui tiro
+l'aratro, obbedendo a ogni suo ordine". Spieg&#xF2; il
+bue.
+"Che buffo!" Squitt&#xEC; la piccola pulce "Io invece
+non prendo ordini da nessuno e mi riposo quando ne
+ho voglia. L'unica cosa a cui devo fare attenzione
+&#xE8; di non essere schiacciata dalle manacce di
+qualcuno. Ma tu cosa ne ricavi da tanta fatica?"
+Il bue, con un moto di commozione nella voce,
+mormor&#xF2;: "Ecco vedi, quelle mani di cui tu hai
+paura, si trasformano per me in tenere carezze".
+Mentre parlava alcune lacrime di gioia gli
+scivolarono lungo il muso. "L'uomo apprezza il
+lavoro che svolgo per lui e mi ripaga con tanto
+affetto." La pulce, stupita dal pianto del suo
+amico, si allontan&#xF2; piano ripensando a quanto
+udito. Chiss&#xE0;, forse quell'affetto di cui il bue
+parlava con tanta commozione era veramente un bel
+premio.</text>
+    </lesson>
+    <lesson>
+      <id>{e1243056-7f7b-45ca-a154-8be9e46bb98c}</id>
+      <title>Il granchio e la volpe</title>
+      <newCharacters/>
+      <text>Quel giorno un paffuto granchio arancione, era
+proprio di ottimo umore. Se ne andava passeggiando
+allegramente per la spiaggia riscaldata dal sole,
+canticchiando la sua canzoncina preferita, una
+vecchia serenata imparata chiss&#xE0; dove. Egli si
+vantava spesso con gli altri abitanti del mare,
+della sua capacit&#xE0; di poter vivere tranquillamente
+sia dentro che fuori dall'acqua. E quelli, senza
+nascondere un pizzico d'invidia, lo osservavano
+camminare tranquillamente sulla terraferma. Ogni
+volta per&#xF2;, il buon granchio riportava ai suoi
+amici pesci un grazioso ricordino delle sue
+escursioni. Ma quel mattino egli non ne voleva
+proprio sapere di rientrare in acqua. Il cielo era
+tanto limpido e sereno da attirare l'ammirazione
+anche dei pi&#xF9; indifferenti. Per questo il
+granchietto continu&#xF2; la sua lunga passeggiata.
+Nello stesso giorno, una giovane volpe
+insoddisfatta per la scarsit&#xE0; del suo pranzo
+quotidiano, si aggirava affamata per la spiaggia
+in cerca di qualcosa da mettere sotto i denti.
+Camminava molto arrabbiata con se stessa per
+l'incapacit&#xE0; dimostrata a procurarsi del cibo
+quando vide, quasi per caso, l'ignaro granchio
+fermo sulla sabbia a contemplare il paesaggio.
+La volpe gli si avvicin&#xF2; curiosa e con un balzo
+gli piomb&#xF2; proprio davanti. Il povero granchio si
+prese uno di quegli spaventi memorabili che
+rimangono bene impressi nei nostri ricordi per
+tutta la vita e, cercando di indietreggiare si
+ripar&#xF2; con le zampine.
+La volpe era decisa e pronta a mangiarselo in un
+sol boccone pur non sapendo bene di che animale si
+trattasse. Fortunatamente il granchio, riavutosi
+dalla paura, riusc&#xEC; a respingere il suo nemico
+sfoderandogli le sue terribili tenaglie e
+pungendogli il muso. Dopo la fuga della volpe
+sconfitta, il granchio si tuff&#xF2; in acqua e and&#xF2; a
+raccontare la sua brutta avventura agli amici
+spiegando quanto fosse pi&#xF9; sicuro vivere nel mare!</text>
+    </lesson>
+    <lesson>
+      <id>{bc1b4827-a4eb-4ff2-b171-24e659673695}</id>
+      <title>La scimmia e il cammello</title>
+      <newCharacters/>
+      <text>Quello era un giorno particolarmente importante.
+Infatti, dalla foresta era partito un invito
+rivolto ai delegati di ogni specie animale che
+avrebbero dovuto riunirsi in una assemblea durante
+la quale si sarebbe discusso di un argomento molto
+serio. Non manc&#xF2; proprio nessuno. Il primo a
+prendere la parola fu il leone, indiscusso Re
+degli animali. Nel rispettoso silenzio generale
+egli disse: "Carissimi sudditi, ci siamo riuniti
+oggi allo scopo di stabilire una pace duratura tra
+noi, eliminando ogni diverbio e ogni invidia per
+riuscire cos&#xEC; ad affrontare insieme gli eventuali
+pericoli provocati dall'uomo alla natura". Il
+discorso continu&#xF2; a lungo, sottolineato da
+applausi di assenso. Erano dunque tutti d'accordo:
+era necessario unirsi per superare qualsiasi
+problema.
+Al termine dell'assemblea, ogni animale prese
+parte al grande pranzo organizzato per
+l'occasione. Ci fu cibo in abbondanza e bevande a
+volont&#xE0;. Quando tutti furono sazi e soddisfatti
+qualcuno chiese alla scimmia, notoriamente allegra
+e vivace, di allietare la cerimonia con qualche
+spettacolo divertente. Questa, senza farsi
+pregare, sal&#xEC; sulla pedana e con agilit&#xE0; e
+simpatia diede inizio ad un numero spassosissimo
+ricco di salti acrobatici, capriole e danze.
+Estasiati gli spettatori applaudirono come non
+mai, divertiti dall'abilit&#xE0; di quell'insolito
+comico.
+L'unico che rimase in silenzio fu il cammello che,
+geloso del successo ottenuto dalla scimmia, decise
+di esibirsi anch'egli sul palco attirando
+l'attenzione su di s&#xE9;. Questo buffo animale diede
+il via ad un balletto goffo e sgraziato. Egli non
+era affatto agile ne' divertente. Tra i fischi
+generali fu cos&#xEC; costretto a ritirarsi
+nascondendosi in un angolo dove ripens&#xF2; ai buoni
+propositi di cui si era discusso durante
+l'assemblea: certo, per restare tutti uniti ed
+amici egli doveva cominciare ad ingoiare un po'
+della propria invidia.</text>
+    </lesson>
+    <lesson>
+      <id>{93bc2a59-cb4d-47c4-aade-3bae981d1ebf}</id>
+      <title>I lupi e i cani</title>
+      <newCharacters/>
+      <text>Era una regione fredda e ostile quella in cui
+viveva il grande branco del lupo pi&#xF9; furbo e
+intelligente che si fosse mai visto. I suoi simili
+lo seguivano con rispetto e obbedivano ad ogni suo
+ordine, timorosi di con tradirlo ben conoscendo la
+portata della sua forza. Esso era soprannominato
+"Il Pirata" a causa di quella benda scura che gli
+copriva l'occhio sinistro perso in chiss&#xE0; quali
+battaglie.
+Molte giovani lupe si erano innamorate di lui,
+colpite da quel suo fare sicuro e deciso e da
+quella sua aria sempre un poco malinconica. Ma il
+lupo non aveva voluto formare una famiglia perch&#xE9;
+quel suo spirito di avventuriero gli impediva di
+avere un focolare dove vivere. Ultimamente per&#xF2;,
+quel vecchio lupo aveva dei problemi. Si trattava
+del cibo. Purtroppo il gelo dell'inverno aveva
+fatto fuggire ogni preda e distrutto ogni raccolto
+facendo scarseggiare il mangiare.
+Inoltre un feroce branco di cani selvatici si
+aggirava da quelle parti, rubando e invadendo ogni
+cosa appartenente ai lupi. Per questo decise di
+affrontare il comandante dei cani in un'unica e
+decisiva battaglia al termine della quale il
+vincitore avrebbe preso pieno possesso di tutto il
+territorio scacciando il perdente. I cani, muniti
+di prepotenza e spavalderia, accettarono
+volentieri il confronto sicuri di sconfiggere gli
+avversari.
+L'esito della battaglia fu invece favorevole per i
+lupi guidati dall'abilissimo lupo che ormai
+abituato alla lotta, sferr&#xF2; un attacco compatto e
+decisivo. I cani, disordinati e divisi cercarono
+di difendersi in qualche modo ma persero comunque
+la guerra fuggendo via sconfitti.
+"La migliore arma per vincere qualsiasi battaglia
+&#xE8; l'unione!" Spieg&#xF2; al suo felice branco di lupi.
+"I cani appartenevano a razze diverse ed era
+impossibile riuscire a coordinarli. Per questo
+abbiamo vinto!" Cos&#xEC;, in un coro di grida gioiose
+i lupi riacquistarono la padronanza del loro
+territorio.</text>
+    </lesson>
+    <lesson>
+      <id>{8197cdbb-dcc5-4d42-bb5b-1f305ac47ac1}</id>
+      <title>Il tordo</title>
+      <newCharacters/>
+      <text>Il caldo nido della mamma accoglieva dentro s&#xE9;
+quattro bellissimi tordi appena nati. I piccoli
+aspettavano costantemente il cibo con il beccuccio
+spalancato fiduciosi di ci&#xF2; che la loro premurosa
+madre gli avrebbe portato e accogliendola sempre
+con gridolini di gioia. L'unico a non essere
+soddisfatto era il pi&#xF9; grandicello dei fratellini.
+Egli pretendeva qualcosa di meglio per placare la
+propria fame. Quei vermicelli e quelle bacche
+marce che la solerte mamma gli portava ogni giorno
+non andavano certo bene per soddisfare un palato
+fino come il suo!
+Quando giunse finalmente all'et&#xE0; giusta per poter
+volare e procurarsi il cibo che desiderava, il
+tordo si allontan&#xF2; dal nido e cos&#xEC; si diede subito
+da fare per cercare prelibate leccornie. Cominci&#xF2;
+a svolazzare da una pianta all'altra arricciando
+il becco disgustato alla vista di insulse bacche o
+frutta appassita.
+Durante uno dei suoi giri d'ispezione per&#xF2;, il
+tordo capit&#xF2; su una rarissima pianta di mirto.
+Attirato da quella prelibatezza, l'uccellino si
+tuff&#xF2; tra i suoi rami e fece una bella
+scorpacciata. Soddisfatto per l'ottimo cibo,
+decise di tornare in quel luogo anche il mattino
+successivo. Con quel proposito nel cuore rientr&#xF2;
+nel suo nido senza accorgersi di essere stato
+spiato da un uccellatore! Quest'uomo appassionato
+di volatili, notando la predilezione che il tordo
+aveva per quella pianta, spalm&#xF2; di nascosto un po'
+di vischio su alcuni rami. Il giorno seguente il
+giovane tordo vol&#xF2; sicuro verso la pianta di mirto
+pronto a farsi una nuova scorpacciata, ma appena
+pos&#xF2; le zampine sui rami rimase imprigionato dalla
+sostanza collosa. Terrorizzato egli cominci&#xF2; a
+piangere e gridare cos&#xEC; forte che fu possibile
+udire la sua voce a miglia di distanza.
+Fortunatamente prima dell'arrivo dell'uccellatore
+la mamma accorse dal suo figliolo riuscendo con
+pazienza a liberargli le zampine e a riportarlo al
+nido.
+Questa volta il tordo se l'era vista proprio
+brutta a causa della sua golosit&#xE0;!</text>
+    </lesson>
+    <lesson>
+      <id>{debae6bc-d9f3-43c0-b62b-b2e372c96a55}</id>
+      <title>La zanzara e il leone</title>
+      <newCharacters/>
+      <text>C'era una piccola zanzara assai furba e spavalda.
+Stanca di giocare con le solite amiche, decise un
+giorno, di lanciare una sfida al Re della foresta.
+Si present&#xF2; cos&#xEC; davanti al sovrano che era il
+leone e lo salut&#xF2; con un rispettoso inchino. Il
+grande Re che era intento a schiacciare uno dei
+suoi pisolini pi&#xF9; belli lungo la riva di un fiume,
+lanci&#xF2; una distratta occhiata all'insetto. "Oh!
+Buongiorno".
+Rispose Sua Maest&#xE0; spalancando la bocca in un
+possente sbadiglio.
+La zanzara disse: "Sire, sono giunta davanti a Voi
+per lanciarvi una sfida!" Il leone, un po' pi&#xF9;
+interessato, si risvegli&#xF2; completamente e si mise
+ad ascoltare.
+"Voi" continu&#xF2; l'insetto "credete di essere il pi&#xF9;
+forte degli animali eppure io dico che se
+facessimo un duello riuscirei a sconfiggervi!" Il
+Sovrano divertito disse: "Ebbene se sei tanto
+sicura, proviamo!" In men che non si dica il
+piazzale si riemp&#xEC; di animali d'ogni genere
+desiderosi di assistere alla sfida. Il "Singolar
+Tenzone" ebbe inizio. L'insetto and&#xF2;
+immediatamente a posarsi sul largo naso
+dell'avversario cominciando a pungerlo a pi&#xF9; non
+posso. Il povero leone preso alla sprovvista tent&#xF2;
+con le sue enormi zampe di scacciare la zanzara
+ma, invece di eliminarla, egli non fece altro che
+graffiarsi il naso con i suoi stessi artigli.
+Estenuato, il Re della foresta, si gett&#xF2; a terra
+sconfitto. Cos&#xEC;, la piccola zanzara fu acclamata
+da tutti i presenti. Levandosi in volo colma di
+gioia, la zanzara non si accorse per&#xF2; della tela
+di un ragno tessuta tra due rami e and&#xF2; ad
+imprigionarvisi proprio contro. Intrappolato in
+quell'infida ragnatela l'insetto scoppi&#xF2; in
+lacrime, consapevole del pericolo che stava
+correndo. Fortunatamente il leone, che aveva
+assistito alla scena, con una zampata distrusse la
+tela e liber&#xF2; la piccolina dicendo: "Eccoti
+salvata mia cara amica. Ricordati che esiste
+sempre qualcuno pi&#xF9; forte di te! E questo me lo
+hai insegnato proprio tu!" La zanzara, da quel
+giorno impar&#xF2; a tenere un po' a freno la propria
+spavalderia.</text>
+    </lesson>
+    <lesson>
+      <id>{4d33a557-8c84-473e-a04f-a6110a081fcb}</id>
+      <title>La volpe con la pancia piena</title>
+      <newCharacters/>
+      <text>L'inverno era ormai alle porte. Gli alberi privi
+di foglie non offrivano pi&#xF9; alcun riparo ed i
+piccoli animali si erano gi&#xE0; preparati ad
+affrontare il freddo.
+Una giovane volpe vagava solitaria in cerca di un
+po' di cibo con il quale placare quella fame
+terribile che l'aveva colpita. Erano molti giorni
+che non mangiava. Le sue abituali prede si erano
+rifugiate in caldi ripari nutrendosi con le scorte
+alimentari raccolte durante l'estate ed era
+impossibile stanarli.
+Cos&#xEC;, il povero animale camminava sconsolato
+pensando che la fame era veramente una brutta
+nemica. All'improvviso, un profumo delizioso le
+stuzzic&#xF2; le narici.
+La volpe si avvicin&#xF2; al punto da cui si propagava
+l'inaspettata fragranza e finalmente vide un
+enorme pezzo d'arrosto premurosamente sistemato
+nell'incavo di una quercia. Sicuramente era il
+pranzo dimenticato da qualche pastore.
+L'animale si intrufol&#xF2; nella cavit&#xE0; della pianta,
+riuscendo ad entrarvi con molta fatica.
+Quando si trov&#xF2; all'interno del buco pot&#xE9; placare
+la propria irresistibile fame, divorando la carne
+in un boccone. Trascorsi alcuni minuti, la volpe
+con la pancia spaventosamente piena, decise di
+uscire dall'incavo per tornare all'aperto. Ma
+appena tent&#xF2; di oltrepassare il buco dal quale era
+entrata scopr&#xEC; di non essere pi&#xF9; in grado di
+superarlo! Aveva mangiato troppo ed era diventata
+molto pi&#xF9; grossa rispetto a prima. Spaventatissima
+si sforz&#xF2; cos&#xEC; tanto per uscire che alla fine
+rimase irreparabilmente incastrata nella
+fenditura!
+Lo sfortunato animale inizi&#xF2; a gridare finch&#xE9; una
+seconda volpe passando la vide e saputo quanto
+accaduto disse: "E' inutile strillare. Avresti
+dovuto avere pazienza ed aspettare tranquilla
+all'interno della pianta fino a quando la tua
+pancia non diminuiva. Invece l'impulsivit&#xE0; ti ha
+ridotto in questa condizione e dovrai comunque
+aspettare finch&#xE9; non smaltirai ci&#xF2; che hai
+mangiato". Cos&#xEC;, la povera volpe rimase incastrata
+nella cavit&#xE0; per pi&#xF9; di un giorno, rimpiangendo il
+calduccio che avrebbe trovato se avesse aspettato
+paziente all'interno della quercia.</text>
+    </lesson>
+    <lesson>
+      <id>{2e739903-9a41-4007-94b1-16e56e181b93}</id>
+      <title>Il cervo e la vite</title>
+      <newCharacters/>
+      <text>Era una mattina di primavera. Il sole brillava
+alto in un cielo azzurro e limpido mentre un
+gruppo di uccellini ciangottavano allegramente tra
+i rami di un'alta quercia. Un bellissimo cervo dal
+manto splendidamente fulvo, brucava tranquillo
+l'erba di una vasta distesa situata ai confini di
+una piccola fattoria. Proprio quel giorno un
+grande orso e un vecchio cane decisero di
+catturare un cervo da tenere rinchiuso nel recinto
+del podere per allietare i loro cuccioli. Cos&#xEC;,
+vagando tra i campi, videro quasi per caso
+l'animale che pascolava sereno.
+Senza perdere tempo gli corsero incontro per
+agguantarlo ma fortunatamente egli, comprendendo
+al volo la situazione, si lanci&#xF2; in una corsa
+sfrenata per sfuggire alle loro insidiose grinfie.
+Poco distante cresceva, placidamente accarezzata
+dai caldi raggi del sole che dominava il cielo,
+una magnifica vite selvatica ricolma di fronde e
+grappoli di un'uva succosa e matura.
+Il cervo decise di nascondersi all'ombra di quel
+folto intrico di foglie, sicuro che nessuno
+sarebbe mai riuscito ad individuarlo. Infatti,
+quando l'orso e il cane passarono non furono in
+grado di vederlo e andarono oltre. Tranquillizzato
+per lo scampato pericolo, l'animale tir&#xF2; un
+sospiro di sollievo e, allettato dal buon profumo
+che emanava la vite, inizi&#xF2; a mangiucchiare i suoi
+grappoli d'uva e le sue gustose foglie. Fu proprio
+in quel momento che il cane si accorse della sua
+presenza: ascoltando con attenzione egli aveva
+potuto distinguere quello strano rumore e,
+tornando sui suoi passi riusc&#xEC; a scorgere il cervo
+che masticava la vigna incurante del pericolo. Per
+la preda non vi fu pi&#xF9; scampo. I due cacciatori
+gli balzarono addosso e lo catturarono senza
+difficolt&#xE0; trascinandolo fino alla loro fattoria.
+Da quel giorno in poi, il povero cervo fu
+costretto a pascolare solo all'interno di un
+recinto divenendo un'attrazione per i cuccioli che
+lo ammiravano divertiti. E tutto a causa della sua
+golosit&#xE0;.
+A volte, le premature certezze, si trasformano in
+delusioni molto pericolose. Non bisogna mai
+sottovalutare il pericolo finch&#xE9; esso non &#xE8;
+realmente passato.</text>
+    </lesson>
+    <lesson>
+      <id>{6ba08705-71af-40eb-a88c-d053f3a9ba0c}</id>
+      <title>Il pipistrello, il rovo e il gabbiano</title>
+      <newCharacters/>
+      <text>Molto tempo fa, un pipistrello, un rovo e un
+gabbiano si riunirono in un isolotto per formare
+una strana societ&#xE0; commerciale fondata sulla
+vendita di stoffe e di rame. Il rovo possedeva una
+buona quantit&#xE0; di lana, seta e cotone procurate
+grazie al duro lavoro dei suoi antenati. Egli
+aveva conservato i suo averi nell'attesa di una
+buona occasione per poterli rivendere. Il
+pipistrello, essendo il pi&#xF9; abile dei tre negli
+affari, si prodig&#xF2; per procurare il denaro
+necessario per l'acquisto di una buona
+imbarcazione sulla quale trasportare il materiale
+fino al continente. Per riuscirvi fece parecchi
+debiti con degli strozzini ai quali avrebbe dovuto
+restituire il doppio dei soldi prestati. Comunque,
+con il discreto gruzzoletto che ebbe a
+disposizione egli compr&#xF2; una piccola barca a remi.
+Il gabbiano invece aveva adocchiato un buon
+quantitativo di rame abbandonato da qualche
+mercante. Munitosi di pazienza recuper&#xF2; tutto quel
+tesoro che sarebbe servito per la loro societ&#xE0;.
+Giunse infine il gran giorno. I tre avevano
+caricato ogni cosa sulla barchette ed erano ormai
+pronti per partire. "Speriamo che questa barca sia
+abbastanza robusta!" Disse il gabbiano
+preoccupato. "Se il tempo si manterr&#xE0; calmo andr&#xE0;
+tutto benissimo". Rispose il pipistrello.
+Finalmente gli amici si imbarcarono e partirono.
+Ma durante la sera, un terribile temporale fece
+ribollire le acque del mare le cui onde
+gigantesche inghiottirono senza piet&#xE0; la piccola
+barca. I tre compagni fortunatamente si salvarono
+perdendo per&#xF2; ogni cosa. Da quel giorno il
+pipistrello incapace di ripagare i debiti usc&#xEC;
+solo di notte per evitare di incontrare gli
+strozzini che volevano indietro il loro denaro; il
+gabbiano impar&#xF2; a rimanere appollaiato sopra
+scogli marini nella speranza che le acque gli
+restituissero il suo rame; infine, il rovo aguzz&#xF2;
+le sue spine strappando i vestiti dei passanti
+nell'attesa di ricostruire, con i brandelli
+procurati, il suo prezioso patrimonio di stoffe
+ormai perdute.
+Questa &#xE8; una antichissima leggenda con la quale
+viene spiegata l'origine delle abitudini dei tre
+protagonisti.</text>
+    </lesson>
+  </lessons>
 </course>

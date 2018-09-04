@@ -11,7 +11,7 @@
   </course>
   <course>
     <title>Bulgarian (auto-generated)</title>
-    <description>Georgi P. Georgiev 
+    <description>Georgi P. Georgiev
 joro_georgiev2001@magibg.com</description>
     <keyboardLayout>bg</keyboardLayout>
     <id>{00459b0a-bb5c-479f-9bb9-de044c5ae510}</id>
@@ -19,7 +19,7 @@ joro_georgiev2001@magibg.com</description>
   </course>
   <course>
     <title>Bulgarian (auto-generated, long)</title>
-    <description>Georgi P. Georgiev, 
+    <description>Georgi P. Georgiev,
 joro_georgiev2001@magibg.com</description>
     <keyboardLayout>bg</keyboardLayout>
     <id>{4807933b-7e09-4019-8e0f-b53ca6cedd38}</id>
@@ -40,6 +40,26 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</descr
     <keyboardLayout>es</keyboardLayout>
     <id>{503d3f86-e6e7-4597-88ed-e5d7b6431aba}</id>
     <path>courses/cat.xml</path>
+  </course>
+  <course>
+    <title>Deutsch (CH)</title>
+    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt;  (Modified for Swiss keyboard layout)</description>
+    <keyboardLayout>ch</keyboardLayout>
+    <id>{7361fd17-5457-48e1-b118-a59a429c734b}</id>
+    <path>courses/ch1.xml</path>
+  </course>
+  <course>
+    <title>Deutsch (CH - aus Tipptrainer)</title>
+    <description>German training file
+adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
+for ktouch from a training file distributed by
+Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
+for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
+distributed under the GPL2
+Version: 0.1 beta  (Modified for Swiss keyboard layout)</description>
+    <keyboardLayout>ch</keyboardLayout>
+    <id>{90a0ad22-18e7-484f-b1cd-6babdd0f7037}</id>
+    <path>courses/ch2.xml</path>
   </course>
   <course>
     <title>&#x10C;esk&#xE9; (automaticky vytvo&#x159;eno)</title>
@@ -87,26 +107,6 @@ Version: 0.1 beta</description>
     <keyboardLayout>de</keyboardLayout>
     <id>{6fe46eef-3182-4322-82b6-bb65831e594e}</id>
     <path>courses/de2.xml</path>
-  </course>
-  <course>
-    <title>Deutsch (CH)</title>
-    <description>Deutscher Kurs f&#xFC;r KTouch von Markus Frisch &lt;frisch@vr-web.de&gt; (Modified for Swiss keyboard layout)</description>
-    <keyboardLayout>ch</keyboardLayout>
-    <id>{7361fd17-5457-48e1-b118-a59a429c734b}</id>
-    <path>courses/ch1.xml</path>
-  </course>
-  <course>
-    <title>Deutsch (CH - aus Tipptrainer)</title>
-    <description>German training file
-adapted by Sven Gohlke &lt;sven@clio.in-berlin.de&gt;
-for ktouch from a training file distributed by
-Andreas Kalbitz  &lt;felix@pingos.schulnetz.org&gt;
-for Tipptrainer V0.4 http://www.pingos.schulnetz.org/tipptrainer
-distributed under the GPL2
-Version: 0.1 beta (Modified for Swiss keyboard layout)</description>
-    <keyboardLayout>ch</keyboardLayout>
-    <id>{90a0ad22-18e7-484f-b1cd-6babdd0f7037}</id>
-    <path>courses/ch2.xml</path>
   </course>
   <course>
     <title>Dansk</title>
@@ -223,11 +223,11 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
     <path>courses/ir.xml</path>
   </course>
   <course>
-    <title>Italiana (generata automaticamente)</title>
-    <description>KTouch training file generated Tue Jul 27 13:27:52 2004
-Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+    <title>Italiano</title>
+    <description>File di addestramento tratto da &#xAB;Appunti di informatica
+ libera&#xBB;</description>
     <keyboardLayout>it</keyboardLayout>
-    <id>{d5a3ac52-ec39-495d-aa70-0e6de23f7d4b}</id>
+    <id>{3e9119fa-7dfb-4bb9-be65-737d88d9e187}</id>
     <path>courses/it.xml</path>
   </course>
   <course>
@@ -258,14 +258,14 @@ De woordkeuze werd gebaseerd op het
 Perl Script geschreven door Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
 
 Kenmerken van dit oefenbestand zijn :
-                          1. Een zeer geleidelijke overgang van het 
+                          1. Een zeer geleidelijke overgang van het
                              ene niveau naar het andere, vooral in het
                              begin.
                           2. Een grote nadruk op het ritme
                           3. Herhaling
 
 Copyright 2004 by Marc Heyvaert (marc_heyvaert AT yahoo DOT com)
-Dit document is een onderdeel van het KTouch programma en valt onder de 
+Dit document is een onderdeel van het KTouch programma en valt onder de
 bepalingen van de GNU General Public License versie 2 of recenter.</description>
     <keyboardLayout>nl</keyboardLayout>
     <id>{fc3330f6-ce6c-4b90-b344-3ff2bac66c32}</id>
@@ -301,9 +301,9 @@ Mon Nov 14, 2005</description>
   </course>
   <course>
     <title>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x430;&#x44F; (&#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x430;&#x44F;)</title>
-    <description>Russian training file                                                                                 
-adapted by Chemisov Konstantin &lt;dabc4123@mail.ru&gt;                                                            
-from ktouch-gen utility 
+    <description>Russian training file
+adapted by Chemisov Konstantin &lt;dabc4123@mail.ru&gt;
+from ktouch-gen utility
 29-08-2005</description>
     <keyboardLayout>ru</keyboardLayout>
     <id>{ebfc3797-2556-41bb-9f8a-2c2c1b3ac66f}</id>
@@ -350,7 +350,7 @@ Inspired by H&#xE5;vard Fr&#xF8;iland's version</description>
   </course>
   <course>
     <title>English (USA) Colemak (auto-generated)</title>
-    <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain. 
+    <description>2005-12-15 Shai Coleman, http://colemak.com/ . Public domain.
 Modified by Sascha Peilicke 2008-08-07
 </description>
     <keyboardLayout>us(colemak)</keyboardLayout>
