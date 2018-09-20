@@ -37,6 +37,8 @@ find_package(Qt5 5.5 REQUIRED COMPONENTS
     XmlPatterns
 )
 
+find_package(Qt5 CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
+
 find_package(KF5 REQUIRED COMPONENTS
     Completion
     Config

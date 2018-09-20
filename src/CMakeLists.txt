@@ -83,7 +83,11 @@ set(ktouch_SRCS
     ktouchcontext.cpp
 )
 
-qt5_add_resources(ktouch_SRCS qml/qml.qrc)
+if (Qt5QuickCompiler_FOUND)
+    qtquick_compiler_add_resources(ktouch_qml_SRCS qml/qml.qrc)
+else ()
+    qt5_add_resources(ktouch_qml_SRCS qml/qml.qrc)
+endif()
 
 # compile UI files
 ki18n_wrap_ui(ktouch_SRCS
@@ -113,7 +117,7 @@ endif (KTOUCH_BUILD_WITH_X11)
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
 
-add_executable(ktouch ${ktouch_SRCS})
+add_executable(ktouch ${ktouch_SRCS} ${ktouch_qml_SRCS})
 
 set(ktouch_X11_DEPS "")
 
