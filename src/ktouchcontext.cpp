@@ -20,7 +20,6 @@
 #include <QMenu>
 #include <QPointer>
 #include <QDialogButtonBox>
-#include <QMenu>
 #include <QQuickView>
 
 #include "application.h"

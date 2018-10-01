@@ -44,7 +44,7 @@ ColumnLayout {
             id: label
             anchors.verticalCenter: parent.verticalCenter
             /*
-             * The text wrapping of the label doesn't work if it is invible
+             * The text wrapping of the label doesn't work if it is invisible
              * (wrapped at every character), hence the following hack.
              */
             width: visible? parent.width - radioButton.width - parent.spacing: 0
