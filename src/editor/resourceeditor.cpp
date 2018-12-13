@@ -254,6 +254,7 @@ void ResourceEditor::exportResource()
                 if (!dataAccess.loadCourse(m_dataIndex->course(i), course))
                 {
                     KMessageBox::error(this, i18n("Error while opening course"));
+                    delete course;
                     return;
                 }
 
@@ -265,9 +266,11 @@ void ResourceEditor::exportResource()
                     if (!resourceDataAccess.storeCourse(path, course))
                     {
                         KMessageBox::error(this, i18n("Error while saving course"));
+                        delete course;
                         return;
                     }
                 }
+                delete course;
             }
         }
     }
@@ -282,6 +285,7 @@ void ResourceEditor::exportResource()
                 if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i), keyboardlayout))
                 {
                     KMessageBox::error(this, i18n("Error while opening keyboard layout"));
+                    delete keyboardlayout;
                     return;
                 }
 
@@ -293,9 +297,11 @@ void ResourceEditor::exportResource()
                     if (!resourceDataAccess.storeKeyboardLayout(path, keyboardlayout))
                     {
                         KMessageBox::error(this, i18n("Error while saving keyboard layout"));
+                        delete keyboardlayout;
                         return;
                     }
                 }
+                delete keyboardlayout;
             }
         }
     }
