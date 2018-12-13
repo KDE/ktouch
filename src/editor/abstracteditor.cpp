@@ -29,6 +29,11 @@ AbstractEditor::AbstractEditor(QWidget* parent):
 {
 }
 
+AbstractEditor::~AbstractEditor()
+{
+    delete m_undoStacks;
+}
+
 QUndoGroup* AbstractEditor::undoGroup() const
 {
     return m_undoGroup;
