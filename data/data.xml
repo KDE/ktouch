@@ -231,6 +231,14 @@ Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.
     <path>courses/it.xml</path>
   </course>
   <course>
+    <title>Italiano (generata automaticamente)</title>
+    <description>Lezione generata automaticamente usando ktouch-lesson-generator
+da Simone Gaiarin &lt;simgunz@gmail.com&gt;</description>
+    <keyboardLayout>it</keyboardLayout>
+    <id>{ac42f85a-7d50-4ab6-8709-9c52cff2859a}</id>
+    <path>courses/it2.xml</path>
+  </course>
+  <course>
     <title>Lietuvi&#x173; (standartinis)</title>
     <description>Tekstas i&#x161; programos &#x201E;Klaviat&#x16B;ros treniruokl&#x117; &#x201E;KP Typing Tutor&#x201C;&#x201C;.
 A&#x10D;i&#x16B; Sigitai Pedzevi&#x10D;ienei (sigitab@ktl.mii.lt)</description>

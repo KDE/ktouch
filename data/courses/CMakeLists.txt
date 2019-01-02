@@ -25,6 +25,7 @@ set (coursefiles
     gr.xml
     ir.xml
     it.xml
+    it2.xml
     lt.std.xml
     nl1.xml
     nl2.xml
