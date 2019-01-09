@@ -93,10 +93,10 @@ void CharactersModel::setKeyIndex(int keyIndex)
 
         if (m_key)
         {
-            connect(m_key, SIGNAL(keyCharAboutToBeAdded(KeyChar*,int)), SLOT(onKeyCharAboutToBeAdded(KeyChar*,int)));
-            connect(m_key, SIGNAL(keyCharAdded()), SLOT(onKeyCharAdded()));
-            connect(m_key, SIGNAL(keyCharsAboutToBeRemoved(int,int)), SLOT(onKeyCharsAboutToBeRemoved(int,int)));
-            connect(m_key, SIGNAL(keyCharsRemoved()), SLOT(onKeyCharsRemoved()));
+            connect(m_key, &Key::keyCharAboutToBeAdded, this, &CharactersModel::onKeyCharAboutToBeAdded);
+            connect(m_key, &Key::keyCharAdded, this, &CharactersModel::onKeyCharAdded);
+            connect(m_key, &Key::keyCharsAboutToBeRemoved, this, &CharactersModel::onKeyCharsAboutToBeRemoved);
+            connect(m_key, &Key::keyCharsRemoved, this, &CharactersModel::onKeyCharsRemoved);
 
             for (int i = 0; i < m_key->keyCharCount(); i++)
             {

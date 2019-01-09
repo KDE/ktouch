@@ -35,8 +35,8 @@ ResourceTemplateWidget::ResourceTemplateWidget(ResourceModel* resourceModel, QWi
     m_filteredResourcesModel->setResourceModel(resourceModel);
     m_templatesView->setModel(m_filteredResourcesModel);
 
-    connect(m_useTemplateCheckbox, SIGNAL(clicked()), SIGNAL(isValidChanged()));
-    connect(m_templatesView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SIGNAL(isValidChanged()));
+    connect(m_useTemplateCheckbox, &QAbstractButton::clicked, this, &ResourceTemplateWidget::isValidChanged);
+    connect(m_templatesView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ResourceTemplateWidget::isValidChanged);
 }
 
 ResourceModel::ResourceItemType ResourceTemplateWidget::templateType() const

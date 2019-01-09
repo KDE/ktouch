@@ -43,12 +43,12 @@ int main(int argc, char **argv)
                 QStringLiteral("http://edu.kde.org/ktouch"),
                 QStringLiteral("submit@bugs.kde.org"));
 
-    about.addAuthor(i18n("Sebastian Gottfried"), i18n("Current maintainer"), "sebastiangottfried@web.de");
-    about.addAuthor(i18n("Andreas Nicolai"), i18n("Former maintainer and programmer"), "Andreas.Nicolai@gmx.net");
-    about.addAuthor(i18n("Håvard Frøiland"), i18n("Original author"), "haavard@users.sourceforge.net");
+    about.addAuthor(i18n("Sebastian Gottfried"), i18n("Current maintainer"), QStringLiteral("sebastiangottfried@web.de"));
+    about.addAuthor(i18n("Andreas Nicolai"), i18n("Former maintainer and programmer"), QStringLiteral("Andreas.Nicolai@gmx.net"));
+    about.addAuthor(i18n("Håvard Frøiland"), i18n("Original author"), QStringLiteral("haavard@users.sourceforge.net"));
 
-    about.addCredit(i18n("David Vignoni"), i18n("Creator of the SVG icon"), "david80v@tin.it");
-    about.addCredit(i18n("Anne-Marie Mahfouf"), i18n("Lots of patches, fixes and updates"), "annma@kde.org");
+    about.addCredit(i18n("David Vignoni"), i18n("Creator of the SVG icon"), QStringLiteral("david80v@tin.it"));
+    about.addCredit(i18n("Anne-Marie Mahfouf"), i18n("Lots of patches, fixes and updates"), QStringLiteral("annma@kde.org"));
     about.addCredit(i18n("All the creators of training and keyboard files"));
 
     about.setOrganizationDomain(QByteArray("kde.org"));
@@ -60,7 +60,7 @@ int main(int argc, char **argv)
     app.setOrganizationDomain(about.organizationDomain());
     app.setApplicationVersion(about.version());
 
-    QApplication::setWindowIcon(QIcon::fromTheme(QLatin1String("ktouch")));
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("ktouch")));
 
 
     QCommandLineParser parser;
@@ -68,13 +68,13 @@ int main(int argc, char **argv)
 
     parser.addOption(QCommandLineOption(QStringLiteral("resource-editor"), i18n("Launch the course and keyboard layout editor")));
 
-    parser.addOption({{"I", "import-path"}, i18n("Prepend the path to the list of QML import paths"), "path"});
+    parser.addOption({{"I", "import-path"}, i18n("Prepend the path to the list of QML import paths"), QStringLiteral("path")});
 
     parser.process(app);
 
     about.processCommandLine(&parser);
 
-    if (parser.isSet("import-path"))
+    if (parser.isSet(QStringLiteral("import-path")))
     {
         foreach (const QString& path, parser.values("import-path"))
         {
@@ -89,11 +89,11 @@ int main(int argc, char **argv)
         {
             const QString name = KMainWindow::classNameOfToplevel(i);
 
-            if (name == "MainWindow")
+            if (name == QLatin1String("MainWindow"))
             {
                 (new MainWindow)->restore(i);
             }
-            else if (name == "ResourceEditor")
+            else if (name == QLatin1String("ResourceEditor"))
             {
                 QPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
 
@@ -107,7 +107,7 @@ int main(int argc, char **argv)
     }
     else
     {
-        if (parser.isSet("resource-editor"))
+        if (parser.isSet(QStringLiteral("resource-editor")))
         {
             QPointer<ResourceEditor>& resourceEditorRef = Application::resourceEditorRef();
             if (resourceEditorRef.isNull())

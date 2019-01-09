@@ -44,7 +44,7 @@ ResourceDataAccess::ResourceDataAccess(QObject *parent) :
 
 bool ResourceDataAccess::fillDataIndex(DataIndex* target)
 {
-    QXmlSchema schema = loadXmlSchema("data");
+    QXmlSchema schema = loadXmlSchema(QStringLiteral("data"));
     if (!schema.isValid())
         return false;
 
@@ -69,25 +69,25 @@ bool ResourceDataAccess::fillDataIndex(DataIndex* target)
             !dataNode.isNull();
             dataNode = dataNode.nextSiblingElement())
         {
-            const QString path = dir.filePath(dataNode.firstChildElement("path").text());
+            const QString path = dir.filePath(dataNode.firstChildElement(QStringLiteral("path")).text());
 
-            if (dataNode.tagName() == "course")
+            if (dataNode.tagName() == QLatin1String("course"))
             {
                 DataIndexCourse* course = new DataIndexCourse(this);
-                course->setTitle(dataNode.firstChildElement("title").text());
-                course->setDescription(dataNode.firstChildElement("description").text());
-                course->setKeyboardLayoutName(dataNode.firstChildElement("keyboardLayout").text());
-                course->setId(dataNode.firstChildElement("id").text());
+                course->setTitle(dataNode.firstChildElement(QStringLiteral("title")).text());
+                course->setDescription(dataNode.firstChildElement(QStringLiteral("description")).text());
+                course->setKeyboardLayoutName(dataNode.firstChildElement(QStringLiteral("keyboardLayout")).text());
+                course->setId(dataNode.firstChildElement(QStringLiteral("id")).text());
                 course->setPath(path);
                 course->setSource(DataIndex::BuiltInResource);
                 target->addCourse(course);
             }
-            else if (dataNode.tagName() == "keyboardLayout")
+            else if (dataNode.tagName() == QLatin1String("keyboardLayout"))
             {
                 DataIndexKeyboardLayout* keyboardLayout = new DataIndexKeyboardLayout(this);
-                keyboardLayout->setTitle(dataNode.firstChildElement("title").text());
-                keyboardLayout->setName(dataNode.firstChildElement("name").text());
-                keyboardLayout->setId(dataNode.firstChildElement("id").text());
+                keyboardLayout->setTitle(dataNode.firstChildElement(QStringLiteral("title")).text());
+                keyboardLayout->setName(dataNode.firstChildElement(QStringLiteral("name")).text());
+                keyboardLayout->setId(dataNode.firstChildElement(QStringLiteral("id")).text());
                 keyboardLayout->setPath(path);
                 keyboardLayout->setSource(DataIndex::BuiltInResource);
                 target->addKeyboardLayout(keyboardLayout);
@@ -109,7 +109,7 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema("keyboardlayout");
+    QXmlSchema schema = loadXmlSchema(QStringLiteral("keyboardlayout"));
     if (!schema.isValid())
         return false;
     QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
@@ -121,50 +121,50 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
     QDomElement root(doc.documentElement());
 
     target->clearKeys();
-    target->setId(root.firstChildElement("id").text());
-    target->setTitle(root.firstChildElement("title").text());
-    target->setName(root.firstChildElement("name").text());
-    target->setWidth(root.firstChildElement("width").text().toInt());
-    target->setHeight(root.firstChildElement("height").text().toInt());
-    for (QDomElement keyNode = root.firstChildElement("keys").firstChildElement();
+    target->setId(root.firstChildElement(QStringLiteral("id")).text());
+    target->setTitle(root.firstChildElement(QStringLiteral("title")).text());
+    target->setName(root.firstChildElement(QStringLiteral("name")).text());
+    target->setWidth(root.firstChildElement(QStringLiteral("width")).text().toInt());
+    target->setHeight(root.firstChildElement(QStringLiteral("height")).text().toInt());
+    for (QDomElement keyNode = root.firstChildElement(QStringLiteral("keys")).firstChildElement();
          !keyNode.isNull();
          keyNode = keyNode.nextSiblingElement())
     {
         AbstractKey* abstractKey;
 
-        if (keyNode.tagName() == "key")
+        if (keyNode.tagName() == QLatin1String("key"))
         {
             Key* key = new Key(this);
-            key->setFingerIndex(keyNode.attribute("fingerIndex").toInt());
-            key->setHasHapticMarker(keyNode.attribute("hasHapticMarker") == "true");
-            for (QDomElement charNode = keyNode.firstChildElement("char");
+            key->setFingerIndex(keyNode.attribute(QStringLiteral("fingerIndex")).toInt());
+            key->setHasHapticMarker(keyNode.attribute(QStringLiteral("hasHapticMarker")) == QLatin1String("true"));
+            for (QDomElement charNode = keyNode.firstChildElement(QStringLiteral("char"));
                  !charNode.isNull();
-                 charNode = charNode.nextSiblingElement("char"))
+                 charNode = charNode.nextSiblingElement(QStringLiteral("char")))
             {
                 KeyChar* keyChar = new KeyChar(key);
                 keyChar->setValue(charNode.text().at(0));
-                keyChar->setPositionStr(charNode.attribute("position"));
-                keyChar->setModifier(charNode.attribute("modifier"));
+                keyChar->setPositionStr(charNode.attribute(QStringLiteral("position")));
+                keyChar->setModifier(charNode.attribute(QStringLiteral("modifier")));
                 key->addKeyChar(keyChar);
             }
             abstractKey = key;
         }
-        else if (keyNode.tagName() == "specialKey")
+        else if (keyNode.tagName() == QLatin1String("specialKey"))
         {
             SpecialKey* specialKey = new SpecialKey(this);
-            specialKey->setTypeStr(keyNode.attribute("type"));
-            specialKey->setModifierId(keyNode.attribute("modifierId"));
-            specialKey->setLabel(keyNode.attribute("label"));
+            specialKey->setTypeStr(keyNode.attribute(QStringLiteral("type")));
+            specialKey->setModifierId(keyNode.attribute(QStringLiteral("modifierId")));
+            specialKey->setLabel(keyNode.attribute(QStringLiteral("label")));
             abstractKey = specialKey;
         }
         else
         {
             continue;
         }
-        abstractKey->setLeft(keyNode.attribute("left").toInt());
-        abstractKey->setTop(keyNode.attribute("top").toInt());
-        abstractKey->setWidth(keyNode.attribute("width").toInt());
-        abstractKey->setHeight(keyNode.attribute("height").toInt());
+        abstractKey->setLeft(keyNode.attribute(QStringLiteral("left")).toInt());
+        abstractKey->setTop(keyNode.attribute(QStringLiteral("top")).toInt());
+        abstractKey->setWidth(keyNode.attribute(QStringLiteral("width")).toInt());
+        abstractKey->setHeight(keyNode.attribute(QStringLiteral("height")).toInt());
         target->addKey(abstractKey);
     }
 
@@ -176,18 +176,18 @@ bool ResourceDataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout
 {
     QDomDocument doc;
 
-    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
+    QDomProcessingInstruction header = doc.createProcessingInstruction(QStringLiteral("xml"), QStringLiteral("version=\"1.0\""));
     doc.appendChild(header);
 
-    QDomElement root = doc.createElement("keyboardLayout");
+    QDomElement root = doc.createElement(QStringLiteral("keyboardLayout"));
     doc.appendChild(root);
 
-    QDomElement idElem = doc.createElement("id");
-    QDomElement titleElem = doc.createElement("title");
-    QDomElement nameElem = doc.createElement("name");
-    QDomElement widthElem = doc.createElement("width");
-    QDomElement heightElem = doc.createElement("height");
-    QDomElement keysElem = doc.createElement("keys");
+    QDomElement idElem = doc.createElement(QStringLiteral("id"));
+    QDomElement titleElem = doc.createElement(QStringLiteral("title"));
+    QDomElement nameElem = doc.createElement(QStringLiteral("name"));
+    QDomElement widthElem = doc.createElement(QStringLiteral("width"));
+    QDomElement heightElem = doc.createElement(QStringLiteral("height"));
+    QDomElement keysElem = doc.createElement(QStringLiteral("keys"));
 
     idElem.appendChild(doc.createTextNode(source->id()));
     titleElem.appendChild(doc.createTextNode(source->title()));
@@ -199,35 +199,35 @@ bool ResourceDataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout
     {
         AbstractKey* const abstractKey = source->key(i);
 
-        QDomElement keyElem = doc.createElement("key");
+        QDomElement keyElem = doc.createElement(QStringLiteral("key"));
 
-        keyElem.setAttribute("left", abstractKey->left());
-        keyElem.setAttribute("top", abstractKey->top());
-        keyElem.setAttribute("width", abstractKey->width());
-        keyElem.setAttribute("height", abstractKey->height());
+        keyElem.setAttribute(QStringLiteral("left"), abstractKey->left());
+        keyElem.setAttribute(QStringLiteral("top"), abstractKey->top());
+        keyElem.setAttribute(QStringLiteral("width"), abstractKey->width());
+        keyElem.setAttribute(QStringLiteral("height"), abstractKey->height());
 
         if (Key* const key = qobject_cast<Key*>(abstractKey))
         {
-            keyElem.setTagName("key");
-            keyElem.setAttribute("fingerIndex", key->fingerIndex());
+            keyElem.setTagName(QStringLiteral("key"));
+            keyElem.setAttribute(QStringLiteral("fingerIndex"), key->fingerIndex());
             if (key->hasHapticMarker())
             {
-                keyElem.setAttribute("hasHapticMarker", "true");
+                keyElem.setAttribute(QStringLiteral("hasHapticMarker"), QStringLiteral("true"));
             }
 
             for (int j = 0; j < key->keyCharCount(); j++)
             {
                 KeyChar* const keyChar = key->keyChar(j);
 
-                QDomElement keyCharElem = doc.createElement("char");
-                keyCharElem.setAttribute("position", keyChar->positionStr());
+                QDomElement keyCharElem = doc.createElement(QStringLiteral("char"));
+                keyCharElem.setAttribute(QStringLiteral("position"), keyChar->positionStr());
                 const QString modifier = keyChar->modifier();
                 if (!modifier.isEmpty())
                 {
-                    keyCharElem.setAttribute("modifier", modifier);
+                    keyCharElem.setAttribute(QStringLiteral("modifier"), modifier);
                 }
                 const QString value = keyChar->value();
-                if (value == " ")
+                if (value == QLatin1String(" "))
                 {
                     keyCharElem.appendChild(doc.createCDATASection(value));
                 }
@@ -241,18 +241,18 @@ bool ResourceDataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout
 
         if (SpecialKey* const specialKey = qobject_cast<SpecialKey*>(abstractKey))
         {
-            keyElem.setTagName("specialKey");
-            keyElem.setAttribute("type", specialKey->typeStr());
+            keyElem.setTagName(QStringLiteral("specialKey"));
+            keyElem.setAttribute(QStringLiteral("type"), specialKey->typeStr());
 
             const QString modifierId = specialKey->modifierId();
             if (!modifierId.isNull())
             {
-                keyElem.setAttribute("modifierId", modifierId);
+                keyElem.setAttribute(QStringLiteral("modifierId"), modifierId);
             }
             const QString label = specialKey->label();
             if (!label.isNull())
             {
-                keyElem.setAttribute("label", label);
+                keyElem.setAttribute(QStringLiteral("label"), label);
             }
         }
 
@@ -291,7 +291,7 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema("course");
+    QXmlSchema schema = loadXmlSchema(QStringLiteral("course"));
     if (!schema.isValid())
         return false;
     QDomDocument doc = getDomDocument(courseFile, schema);
@@ -302,21 +302,21 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
     }
     QDomElement root(doc.documentElement());
 
-    target->setId(root.firstChildElement("id").text());
-    target->setTitle(root.firstChildElement("title").text());
-    target->setDescription(root.firstChildElement("description").text());
-    target->setKeyboardLayoutName(root.firstChildElement("keyboardLayout").text());
+    target->setId(root.firstChildElement(QStringLiteral("id")).text());
+    target->setTitle(root.firstChildElement(QStringLiteral("title")).text());
+    target->setDescription(root.firstChildElement(QStringLiteral("description")).text());
+    target->setKeyboardLayoutName(root.firstChildElement(QStringLiteral("keyboardLayout")).text());
     target->clearLessons();
 
-    for (QDomElement lessonNode = root.firstChildElement("lessons").firstChildElement();
+    for (QDomElement lessonNode = root.firstChildElement(QStringLiteral("lessons")).firstChildElement();
          !lessonNode.isNull();
          lessonNode = lessonNode.nextSiblingElement())
     {
         Lesson* lesson = new Lesson(this);
-        lesson->setId(lessonNode.firstChildElement("id").text());
-        lesson->setTitle(lessonNode.firstChildElement("title").text());
-        lesson->setNewCharacters(lessonNode.firstChildElement("newCharacters").text());
-        lesson->setText(lessonNode.firstChildElement("text").text());
+        lesson->setId(lessonNode.firstChildElement(QStringLiteral("id")).text());
+        lesson->setTitle(lessonNode.firstChildElement(QStringLiteral("title")).text());
+        lesson->setNewCharacters(lessonNode.firstChildElement(QStringLiteral("newCharacters")).text());
+        lesson->setText(lessonNode.firstChildElement(QStringLiteral("text")).text());
         target->addLesson(lesson);
     }
 
@@ -329,17 +329,17 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
 
     QDomDocument doc;
 
-    QDomProcessingInstruction header = doc.createProcessingInstruction("xml", "version=\"1.0\"");
+    QDomProcessingInstruction header = doc.createProcessingInstruction(QStringLiteral("xml"), QStringLiteral("version=\"1.0\""));
     doc.appendChild(header);
 
-    QDomElement root = doc.createElement("course");
+    QDomElement root = doc.createElement(QStringLiteral("course"));
     doc.appendChild(root);
 
-    QDomElement idElem = doc.createElement("id");
-    QDomElement titleElem = doc.createElement("title");
-    QDomElement descriptionElem = doc.createElement("description");
-    QDomElement keyboardLayoutElem = doc.createElement("keyboardLayout");
-    QDomElement lessonsElem = doc.createElement("lessons");
+    QDomElement idElem = doc.createElement(QStringLiteral("id"));
+    QDomElement titleElem = doc.createElement(QStringLiteral("title"));
+    QDomElement descriptionElem = doc.createElement(QStringLiteral("description"));
+    QDomElement keyboardLayoutElem = doc.createElement(QStringLiteral("keyboardLayout"));
+    QDomElement lessonsElem = doc.createElement(QStringLiteral("lessons"));
 
     idElem.appendChild(doc.createTextNode(source->id()));
     titleElem.appendChild(doc.createTextNode(source->title()));
@@ -352,11 +352,11 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
 
         QStringList lines;
 
-        QDomElement lessonElem = doc.createElement("lesson");
-        QDomElement idElem = doc.createElement("id");
-        QDomElement titleElem = doc.createElement("title");
-        QDomElement newCharactersElem = doc.createElement("newCharacters");
-        QDomElement textElem = doc.createElement("text");
+        QDomElement lessonElem = doc.createElement(QStringLiteral("lesson"));
+        QDomElement idElem = doc.createElement(QStringLiteral("id"));
+        QDomElement titleElem = doc.createElement(QStringLiteral("title"));
+        QDomElement newCharactersElem = doc.createElement(QStringLiteral("newCharacters"));
+        QDomElement textElem = doc.createElement(QStringLiteral("text"));
 
         idElem.appendChild(doc.createTextNode(lesson->id()));
         titleElem.appendChild(doc.createTextNode(lesson->title()));
@@ -393,7 +393,7 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
 QXmlSchema ResourceDataAccess::loadXmlSchema(const QString &name)
 {
     QXmlSchema schema;
-    QString relPath = QString("schemata/%1.xsd").arg(name);
+    QString relPath = QStringLiteral("schemata/%1.xsd").arg(name);
     QFile schemaFile;
     if (!openResourceFile(relPath, schemaFile))
     {

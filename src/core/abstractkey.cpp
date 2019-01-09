@@ -85,7 +85,7 @@ void AbstractKey::setHeight(int height)
 
 QString AbstractKey::keyType() const
 {
-    return "abstractKey";
+    return QStringLiteral("abstractKey");
 }
 
 void AbstractKey::copyFrom(AbstractKey* source)

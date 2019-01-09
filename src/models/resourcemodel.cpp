@@ -51,14 +51,14 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
 
         if (m_dataIndex)
         {
-            connect(m_dataIndex, SIGNAL(courseAboutToBeAdded(DataIndexCourse*,int)), SLOT(onCourseAboutToBeAdded(DataIndexCourse*,int)));
-            connect(m_dataIndex, SIGNAL(courseAdded()), SLOT(onResourceAdded()));
-            connect(m_dataIndex, SIGNAL(coursesAboutToBeRemoved(int,int)), SLOT(onCoursesAboutToBeRemoved(int,int)));
-            connect(m_dataIndex, SIGNAL(coursesRemoved()), SLOT(onResourceRemoved()));
-            connect(m_dataIndex, SIGNAL(keyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)), SLOT(onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout*,int)));
-            connect(m_dataIndex, SIGNAL(keyboardLayoutAdded()), SLOT(onResourceAdded()));
-            connect(m_dataIndex, SIGNAL(keyboardLayoutsAboutToBeRemoved(int,int)), SLOT(onKeyboardLayoutsAboutToBeRemoved(int,int)));
-            connect(m_dataIndex, SIGNAL(keyboardLayoutsRemoved()), SLOT(onResourceRemoved()));
+            connect(m_dataIndex, &DataIndex::courseAboutToBeAdded, this, &ResourceModel::onCourseAboutToBeAdded);
+            connect(m_dataIndex, &DataIndex::courseAdded, this, &ResourceModel::onResourceAdded);
+            connect(m_dataIndex, &DataIndex::coursesAboutToBeRemoved, this, &ResourceModel::onCoursesAboutToBeRemoved);
+            connect(m_dataIndex, &DataIndex::coursesRemoved, this, &ResourceModel::onResourceRemoved);
+            connect(m_dataIndex, &DataIndex::keyboardLayoutAboutToBeAdded, this, &ResourceModel::onKeyboardLayoutAboutToBeAdded);
+            connect(m_dataIndex, &DataIndex::keyboardLayoutAdded, this, &ResourceModel::onResourceAdded);
+            connect(m_dataIndex, &DataIndex::keyboardLayoutsAboutToBeRemoved, this, &ResourceModel::onKeyboardLayoutsAboutToBeRemoved);
+            connect(m_dataIndex, &DataIndex::keyboardLayoutsRemoved, this, &ResourceModel::onResourceRemoved);
         }
 
         for (int i = 0; i < dataIndex->courseCount(); i++)

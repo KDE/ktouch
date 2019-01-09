@@ -35,9 +35,9 @@ LessonTextEditor::LessonTextEditor(QWidget* parent) :
     setupUi(this);
     m_highlighter->setMaximumLineLength(60);
     m_highlighter->setDocument(m_lessonTextEdit->document());
-    connect(m_openTextFileButton, SIGNAL(clicked()), SLOT(openTextFile()));
-    connect(m_reformatLessonTextButton, SIGNAL(clicked()), SLOT(reformatText()));
-    connect(m_lessonTextEdit, SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
+    connect(m_openTextFileButton, &QAbstractButton::clicked, this, &LessonTextEditor::openTextFile);
+    connect(m_reformatLessonTextButton, &QAbstractButton::clicked, this, &LessonTextEditor::reformatText);
+    connect(m_lessonTextEdit, &QTextEdit::textChanged, this, &LessonTextEditor::onLessonTextChanged);
 }
 
 bool LessonTextEditor::readOnly() const
@@ -112,13 +112,13 @@ void LessonTextEditor::reformatText()
 
     QString text = doPartialReplace? cursor.selectedText(): m_lessonTextEdit->toPlainText();
 
-    text = text.replace('\r', " ");
-    text = text.replace('\n', " ");
-    text = text.replace(QString::fromUtf8("\u2029"), " ");
+    text = text.replace('\r', QLatin1String(" "));
+    text = text.replace('\n', QLatin1String(" "));
+    text = text.replace(QString::fromUtf8("\u2029"), QLatin1String(" "));
 
     const QStringList tokens(text.split(' '));
     QStringList lines;
-    QString currentLine("");
+    QString currentLine(QLatin1String(""));
 
     foreach(const QString& token, tokens)
     {
@@ -141,7 +141,7 @@ void LessonTextEditor::reformatText()
         lines.append(currentLine);
     }
 
-    text = lines.join("\n");
+    text = lines.join(QStringLiteral("\n"));
 
     if (!doPartialReplace)
     {

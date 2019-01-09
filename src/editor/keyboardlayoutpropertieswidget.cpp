@@ -47,9 +47,9 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     m_charactersView->setItemDelegate(m_charactersViewDelegate);
     m_charactersView->verticalHeader()->setDefaultSectionSize(m_charactersView->verticalHeader()->minimumSectionSize() + 6);
 
-    connect(m_charactersView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onCharacterSelected()));
-    connect(m_keyboardLayoutTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutTitle(QString)));
-    connect(m_keyboardLayoutNameEdit, SIGNAL(textEdited(QString)), SLOT(setKeyboardLayoutName(QString)));
+    connect(m_charactersView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &KeyboardLayoutPropertiesWidget::onCharacterSelected);
+    connect(m_keyboardLayoutTitleLineEdit, &QLineEdit::textEdited, this, &KeyboardLayoutPropertiesWidget::setKeyboardLayoutTitle);
+    connect(m_keyboardLayoutNameEdit, &QLineEdit::textEdited, this, &KeyboardLayoutPropertiesWidget::setKeyboardLayoutName);
     connect(m_keyboardLayoutWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyboardLayoutWidthChanged(int)));
     connect(m_keyboardLayoutHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyboardLayoutHeightChanged(int)));
     connect(m_keyLeftSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyLeftChanged(int)));
@@ -57,12 +57,12 @@ KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) 
     connect(m_keyWidthSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyWidthChanged(int)));
     connect(m_keyHeightSpinBox, SIGNAL(valueChanged(int)), SLOT(onKeyHeightChanged(int)));
     connect(m_keyFingerComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onFingerIndexChanged(int)));
-    connect(m_keyHapticMarkerCheckBox, SIGNAL(clicked(bool)), SLOT(setKeyHasHapticMarker(bool)));
-    connect(m_addCharacterButton, SIGNAL(clicked()), SLOT(addCharacter()));
-    connect(m_removeCharacterButton, SIGNAL(clicked()), SLOT(removeCharacter()));
+    connect(m_keyHapticMarkerCheckBox, &QAbstractButton::clicked, this, &KeyboardLayoutPropertiesWidget::setKeyHasHapticMarker);
+    connect(m_addCharacterButton, &QAbstractButton::clicked, this, &KeyboardLayoutPropertiesWidget::addCharacter);
+    connect(m_removeCharacterButton, &QAbstractButton::clicked, this, &KeyboardLayoutPropertiesWidget::removeCharacter);
     connect(m_specialKeyTypeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(onSpecialKeyTypeChanged(int)));
-    connect(m_specialKeyLabelLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyLabel(QString)));
-    connect(m_specialKeyModifierIdLineEdit, SIGNAL(textEdited(QString)), SLOT(setSpecialKeyModifierId(QString)));
+    connect(m_specialKeyLabelLineEdit, &QLineEdit::textEdited, this, &KeyboardLayoutPropertiesWidget::setSpecialKeyLabel);
+    connect(m_specialKeyModifierIdLineEdit, &QLineEdit::textEdited, this, &KeyboardLayoutPropertiesWidget::setSpecialKeyModifierId);
 }
 
 void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
@@ -77,10 +77,10 @@ void KeyboardLayoutPropertiesWidget::setKeyboardLayout(KeyboardLayout* layout)
     m_charactersModel->setKeyboardLayout(layout);
     m_charactersViewDelegate->setKeyboardLayout(layout);
 
-    connect(m_keyboardLayout, SIGNAL(titleChanged()), SLOT(updateKeyboardLayoutTitle()));
-    connect(m_keyboardLayout, SIGNAL(nameChanged()), SLOT(updateKeyboardLayoutName()));
-    connect(m_keyboardLayout, SIGNAL(widthChanged()), SLOT(updateKeyboardLayoutWidth()));
-    connect(m_keyboardLayout, SIGNAL(heightChanged()), SLOT(updateKeyboardLayoutHeight()));
+    connect(m_keyboardLayout, &KeyboardLayoutBase::titleChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyboardLayoutTitle);
+    connect(m_keyboardLayout, &KeyboardLayoutBase::nameChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyboardLayoutName);
+    connect(m_keyboardLayout, &KeyboardLayout::widthChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyboardLayoutWidth);
+    connect(m_keyboardLayout, &KeyboardLayout::heightChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyboardLayoutHeight);
 }
 
 void KeyboardLayoutPropertiesWidget::setUndoStack(QUndoStack* undoStack)
@@ -114,10 +114,10 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 
         m_stackedWidget->setCurrentWidget(m_keyProperties);
 
-        connect(m_selectedKey, SIGNAL(leftChanged()), SLOT(updateKeyLeft()));
-        connect(m_selectedKey, SIGNAL(topChanged()), SLOT(updateKeyTop()));
-        connect(m_selectedKey, SIGNAL(widthChanged()), SLOT(updateKeyWidth()));
-        connect(m_selectedKey, SIGNAL(heightChanged()), SLOT(updateKeyHeight()));
+        connect(m_selectedKey, &AbstractKey::leftChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyLeft);
+        connect(m_selectedKey, &AbstractKey::topChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyTop);
+        connect(m_selectedKey, &AbstractKey::widthChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyWidth);
+        connect(m_selectedKey, &AbstractKey::heightChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyHeight);
 
         if (Key* key = qobject_cast<Key*>(m_selectedKey))
         {
@@ -135,8 +135,8 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
                 m_charactersView->selectRow(0);
             }
 
-            connect(key, SIGNAL(fingerIndexChanged()), SLOT(updateKeyFingerIndex()));
-            connect(key, SIGNAL(hasHapticMarkerChanged()), SLOT(updateKeyHasHapticMarker()));
+            connect(key, &Key::fingerIndexChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyFingerIndex);
+            connect(key, &Key::hasHapticMarkerChanged, this, &KeyboardLayoutPropertiesWidget::updateKeyHasHapticMarker);
         }
         else if (SpecialKey* specialKey = qobject_cast<SpecialKey*>(m_selectedKey))
         {
@@ -149,9 +149,9 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 
             m_charactersModel->setKeyIndex(-1);
 
-            connect(specialKey, SIGNAL(typeChanged()), SLOT(updateSpecialKeyType()));
-            connect(specialKey, SIGNAL(labelChanged()), SLOT(updateSpecialKeyLabel()));
-            connect(specialKey, SIGNAL(modifierIdChanged()), SLOT(updateSpecialKeyModifierId()));
+            connect(specialKey, &SpecialKey::typeChanged, this, &KeyboardLayoutPropertiesWidget::updateSpecialKeyType);
+            connect(specialKey, &SpecialKey::labelChanged, this, &KeyboardLayoutPropertiesWidget::updateSpecialKeyLabel);
+            connect(specialKey, &SpecialKey::modifierIdChanged, this, &KeyboardLayoutPropertiesWidget::updateSpecialKeyModifierId);
         }
     }
 }

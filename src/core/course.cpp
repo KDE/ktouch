@@ -183,7 +183,7 @@ void Course::updateLessonCharacters(int firstIndex)
     if (!m_doSyncLessonCharacters)
         return;
 
-    QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): "";
+    QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): QLatin1String("");
 
     for (int i = firstIndex; i < lessonCount(); i++)
     {

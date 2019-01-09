@@ -30,7 +30,7 @@ TrainingStats::TrainingStats(QObject* parent) :
     m_startTime(0),
     m_updateTimer(new QTimer(this))
 {
-    connect(m_updateTimer, SIGNAL(timeout()), SLOT(update()));
+    connect(m_updateTimer, &QTimer::timeout, this, &TrainingStats::update);
 }
 
 int TrainingStats::charactesTyped() const

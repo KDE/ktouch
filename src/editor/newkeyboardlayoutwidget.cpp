@@ -36,10 +36,10 @@ NewKeyboardLayoutWidget::NewKeyboardLayoutWidget(ResourceModel* resourceModel, Q
 {
     setupUi(this);
 
-    connect(m_nameLineEdit, SIGNAL(textChanged(QString)), SLOT(checkName()));
-    connect(m_nameLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
-    connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
-    connect(m_pasteCurrentNameButton, SIGNAL(clicked()), SLOT(pasteCurrentName()));
+    connect(m_nameLineEdit, &QLineEdit::textChanged, this, &NewKeyboardLayoutWidget::checkName);
+    connect(m_nameLineEdit, &QLineEdit::textChanged, this, &NewKeyboardLayoutWidget::isValidChanged);
+    connect(m_titleLineEdit, &QLineEdit::textChanged, this, &NewKeyboardLayoutWidget::isValidChanged);
+    connect(m_pasteCurrentNameButton, &QAbstractButton::clicked, this, &NewKeyboardLayoutWidget::pasteCurrentName);
 
     m_messageWidget->setMessageType(KMessageWidget::Error);
     m_messageWidget->setCloseButtonVisible(false);

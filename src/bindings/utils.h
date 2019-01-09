@@ -27,7 +27,7 @@ class Utils : public QObject
     Q_OBJECT
 public:
     explicit Utils(QObject* parent = 0);
-    Q_INVOKABLE QUrl findImage(QString name);
+    Q_INVOKABLE QUrl findImage(const QString &name);
     Q_INVOKABLE int getMinutesOfQTime(const QTime& time);
     Q_INVOKABLE int getSecondsOfQTime(const QTime& time);
     Q_INVOKABLE QString uuid();

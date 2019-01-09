@@ -50,8 +50,8 @@ void LearningProgressModel::setProfile(Profile* profile)
 
         if (m_profile)
         {
-            connect(m_profile, SIGNAL(idChanged()), SLOT(update()));
-            connect(m_profile, SIGNAL(destroyed()), SLOT(profileDestroyed()));
+            connect(m_profile, &Profile::idChanged, this, &LearningProgressModel::update);
+            connect(m_profile, &QObject::destroyed, this, &LearningProgressModel::profileDestroyed);
         }
 
         update();
@@ -77,7 +77,7 @@ void LearningProgressModel::setCourseFilter(Course* courseFilter)
 
         if (m_courseFilter)
         {
-            connect(courseFilter, SIGNAL(idChanged()), SLOT(update()));
+            connect(courseFilter, &Resource::idChanged, this, &LearningProgressModel::update);
         }
 
         update();
@@ -103,7 +103,7 @@ void LearningProgressModel::setLessonFilter(Lesson* lessonFilter)
 
         if (m_lessonFilter)
         {
-            connect(m_lessonFilter, SIGNAL(idChanged()), SLOT(update()));
+            connect(m_lessonFilter, &Lesson::idChanged, this, &LearningProgressModel::update);
         }
 
         update();

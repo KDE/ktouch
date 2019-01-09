@@ -42,7 +42,7 @@ ResourceTypesWidget::ResourceTypesWidget(QWidget* parent) :
 
     m_typesView->setModel(m_typesModel);
 
-    connect(m_typesView->selectionModel(), SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), SLOT(currentRowChanged(QModelIndex)));
+    connect(m_typesView->selectionModel(), &QItemSelectionModel::currentRowChanged, this, &ResourceTypesWidget::currentRowChanged);
 }
 
 void ResourceTypesWidget::currentRowChanged(const QModelIndex& current)

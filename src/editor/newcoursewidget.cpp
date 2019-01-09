@@ -26,7 +26,7 @@ NewCourseWidget::NewCourseWidget(ResourceModel* resourceModel, QWidget* parent) 
 {
     setupUi(this);
 
-    connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SIGNAL(isValidChanged()));
+    connect(m_titleLineEdit, &QLineEdit::textChanged, this, &NewCourseWidget::isValidChanged);
     connect(m_keyboardLayoutComboBox, SIGNAL(currentIndexChanged(int)), SIGNAL(isValidChanged()));
 
     m_keyboardLayoutComboBox->setResourceModel(resourceModel);
@@ -52,7 +52,7 @@ QString NewCourseWidget::title() const
 QString NewCourseWidget::keyboardLayoutName() const
 {
     DataIndexKeyboardLayout* const layout = m_keyboardLayoutComboBox->selectedKeyboardLayout();
-    return layout? layout->name(): "";
+    return layout? layout->name(): QLatin1String("");
 }
 
 QString NewCourseWidget::description() const
