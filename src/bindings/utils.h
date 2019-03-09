@@ -21,6 +21,7 @@
 #include <QObject>
 #include <QTime>
 #include <QUrl>
+#include <QColor>
 
 class Utils : public QObject
 {
