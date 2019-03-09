@@ -28,9 +28,9 @@ Utils::Utils(QObject* parent):
 {
 }
 
-QUrl Utils::findImage(QString name)
+QUrl Utils::findImage(const QString &name)
 {
-    const QString relPath = QString("images/") + name;
+    const QString relPath = QStringLiteral("images/") + name;
     const QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
 
     if (path.isNull())

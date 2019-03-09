@@ -28,8 +28,8 @@
 ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
     QWidget(parent),
     Ui::ResourceEditorWidget(),
-    m_undeleteAction(new QAction(QIcon::fromTheme("edit-undo"), i18n("Restore"), this)),
-    m_clearMsgAction(new QAction(QIcon::fromTheme("window-close"), i18n("Dismiss"), this))
+    m_undeleteAction(new QAction(QIcon::fromTheme(QStringLiteral("edit-undo")), i18n("Restore"), this)),
+    m_clearMsgAction(new QAction(QIcon::fromTheme(QStringLiteral("window-close")), i18n("Dismiss"), this))
 {
     setupUi(this);
 
@@ -44,8 +44,8 @@ ResourceEditorWidget::ResourceEditorWidget(QWidget* parent) :
 
     m_splitter->setStretchFactor(1, 1);
 
-    connect(m_clearMsgAction, SIGNAL(triggered()), SLOT(clearMessage()));
-    connect(m_undeleteAction, SIGNAL(triggered()), SLOT(requestResourceRestoration()));
+    connect(m_clearMsgAction, &QAction::triggered, this, &ResourceEditorWidget::clearMessage);
+    connect(m_undeleteAction, &QAction::triggered, this, &ResourceEditorWidget::requestResourceRestoration);
 }
 
 void ResourceEditorWidget::setResourceModel(ResourceModel* model)

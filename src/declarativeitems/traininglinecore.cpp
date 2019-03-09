@@ -85,7 +85,7 @@ void TrainingLineCore::setReferenceLine(const QString& referenceLine)
     if (referenceLine != m_referenceLine)
     {
         m_referenceLine = referenceLine;
-        m_actualLine = "";
+        m_actualLine = QLatin1String("");
         clearKeyHint();
         emit referenceLineChanged();
         emit actualLineChanged();
@@ -129,8 +129,8 @@ int TrainingLineCore::hintKey() const
 
 void TrainingLineCore::reset()
 {
-    m_referenceLine = "";
-    m_actualLine = "";
+    m_referenceLine = QLatin1String("");
+    m_actualLine = QLatin1String("");
     clearKeyHint();
     emit referenceLineChanged();
     emit actualLineChanged();
@@ -308,7 +308,7 @@ void TrainingLineCore::add(const QString& text)
         }
     }
 
-    m_actualLine += text.left(maxLength - actualLength);
+    m_actualLine += text.leftRef(maxLength - actualLength);
     emit actualLineChanged();
 }
 
@@ -346,7 +346,7 @@ void TrainingLineCore::deleteStartOfWord()
 
 void TrainingLineCore::clearActualLine()
 {
-    m_actualLine = "";
+    m_actualLine = QLatin1String("");
     emit actualLineChanged();
 }
 

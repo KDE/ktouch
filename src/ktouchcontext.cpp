@@ -20,7 +20,6 @@
 #include <QMenu>
 #include <QPointer>
 #include <QDialogButtonBox>
-#include <QMenu>
 #include <QQuickView>
 
 #include "application.h"
@@ -48,7 +47,7 @@
 
 
 
-const QString keyboardKCMName = "kcm_keyboard";
+const QString keyboardKCMName = QStringLiteral("kcm_keyboard");
 
 KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject *parent) :
     QObject(parent),
@@ -60,7 +59,7 @@ KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject 
 #ifdef KTOUCH_BUILD_WITH_X11
     m_XEventNotifier = new XEventNotifier();
     m_XEventNotifier->start();
-    connect(m_XEventNotifier, SIGNAL(layoutChanged()), SIGNAL(keyboardLayoutNameChanged()));
+    connect(m_XEventNotifier, &XEventNotifier::layoutChanged, this, &KTouchContext::keyboardLayoutNameChanged);
 #else
     m_keyboardLayoutMenu = new KeyboardLayoutMenu(this);
     m_keyboardLayoutMenu->setDataIndex(Application::dataIndex());
@@ -136,16 +135,16 @@ bool KTouchContext::showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keybo
 
 void KTouchContext::showConfigDialog()
 {
-    if (KConfigDialog::showDialog("preferences"))
+    if (KConfigDialog::showDialog(QStringLiteral("preferences")))
     {
         return;
     }
 
-    KConfigDialog* dialog = new KConfigDialog(m_mainWindow, "preferences", Preferences::self());
+    KConfigDialog* dialog = new KConfigDialog(m_mainWindow, QStringLiteral("preferences"), Preferences::self());
     dialog->setFaceType(KPageDialog::List);
     dialog->setModal(true);
-    dialog->addPage(new TrainingConfigWidget(), i18n("Training"), "chronometer", i18n("Training Settings"));
-    dialog->addPage(new ColorsConfigWidget(), i18n("Colors"), "preferences-desktop-color", i18n("Color Settings"));
+    dialog->addPage(new TrainingConfigWidget(), i18n("Training"), QStringLiteral("chronometer"), i18n("Training Settings"));
+    dialog->addPage(new ColorsConfigWidget(), i18n("Colors"), QStringLiteral("preferences-desktop-color"), i18n("Color Settings"));
     dialog->show();
 }
 
@@ -177,7 +176,7 @@ void KTouchContext::init()
     m_menu->addSeparator();
     QAction* editorAction = new QAction(i18n("Course and Keyboard Layout Editor..."), this);
     connect(editorAction, &QAction::triggered, this, &KTouchContext::showResourceEditor);
-    m_actionCollection->addAction("editor", editorAction);
+    m_actionCollection->addAction(QStringLiteral("editor"), editorAction);
     m_menu->addAction(editorAction);
     m_menu->addSeparator();
     m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
@@ -209,5 +208,5 @@ bool KTouchContext::testKCMAvailibility(const QString& name)
         return false;
     }
 
-    return service->hasServiceType("KCModule") && !service->noDisplay();
+    return service->hasServiceType(QStringLiteral("KCModule")) && !service->noDisplay();
 }

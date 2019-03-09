@@ -34,7 +34,7 @@ struct LessonPainterPrivate
     {
         blockFormat.setLineHeight(200, QTextBlockFormat::ProportionalHeight);
 
-        textCharFormat.setFontFamily("monospace");
+        textCharFormat.setFontFamily(QStringLiteral("monospace"));
         textCharFormat.setFontPointSize(10);
         textCharFormat.setForeground(QColor("#000"));
         textCharFormat.setFontHintingPreference(QFont::PreferVerticalHinting);
@@ -50,7 +50,7 @@ struct LessonPainterPrivate
         preeditCharFromat.setBackground(QColor("#d0d0d0"));
 
         titleCharFormat = textCharFormat;
-        titleCharFormat.setFontFamily("sans-serif");
+        titleCharFormat.setFontFamily(QStringLiteral("sans-serif"));
         titleCharFormat.setFontPointSize(15);
     }
 
@@ -101,8 +101,8 @@ void LessonPainter::setLesson(Lesson* lesson)
 
         if (m_lesson)
         {
-            connect(m_lesson, SIGNAL(titleChanged()), SLOT(reset()));
-            connect(m_lesson, SIGNAL(textChanged()), SLOT(reset()));
+            connect(m_lesson.data(), &Lesson::titleChanged, this, &LessonPainter::reset);
+            connect(m_lesson.data(), &Lesson::textChanged, this, &LessonPainter::reset);
         }
 
         reset();
@@ -160,9 +160,9 @@ void LessonPainter::setTrainingLineCore(TrainingLineCore* trainingLineCore)
 
         if (m_trainingLineCore)
         {
-            connect(m_trainingLineCore, SIGNAL(actualLineChanged()), SLOT(updateTrainingStatus()));
-            connect(m_trainingLineCore, SIGNAL(preeditStringChanged()), SLOT(updateTrainingStatus()));
-            connect(m_trainingLineCore, SIGNAL(done()), SLOT(advanceToNextTrainingLine()));
+            connect(m_trainingLineCore, &TrainingLineCore::actualLineChanged, this, &LessonPainter::updateTrainingStatus);
+            connect(m_trainingLineCore, &TrainingLineCore::preeditStringChanged, this, &LessonPainter::updateTrainingStatus);
+            connect(m_trainingLineCore, &TrainingLineCore::done, this, &LessonPainter::advanceToNextTrainingLine);
         }
     }
 }

@@ -56,7 +56,7 @@ void ErrorsModel::setTrainingStats(TrainingStats* trainingStats)
 
         if (m_trainingStats)
         {
-            connect(m_trainingStats, SIGNAL(errorsChanged()), SLOT(buildErrorList()));
+            connect(m_trainingStats, &TrainingStats::errorsChanged, this, &ErrorsModel::buildErrorList);
         }
 
         buildErrorList();

@@ -98,8 +98,8 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 
     QQmlContext* rootContext = qmlEngine->rootContext();
 
-    rootContext->setContextProperty("utils", new Utils());
-    rootContext->setContextProperty("strFormatter", new StringFormatter());
+    rootContext->setContextProperty(QStringLiteral("utils"), new Utils());
+    rootContext->setContextProperty(QStringLiteral("strFormatter"), new StringFormatter());
 }
 
 QStringList& Application::qmlImportPaths()
@@ -142,8 +142,8 @@ void Application::registerQmlTypes()
 void Application::migrateKde4Files()
 {
     QStringList configFiles;
-    configFiles << QLatin1String("ktouchrc");
-    Kdelibs4ConfigMigrator confMigrator(QLatin1String("ktouch"));
+    configFiles << QStringLiteral("ktouchrc");
+    Kdelibs4ConfigMigrator confMigrator(QStringLiteral("ktouch"));
     confMigrator.setConfigFiles(configFiles);
     confMigrator.migrate();
 
@@ -153,7 +153,7 @@ void Application::migrateKde4Files()
     {
         dataDir.mkpath(dataDir.path());
     }
-    const QString dbPath = dataDir.filePath("profiles.db");
+    const QString dbPath = dataDir.filePath(QStringLiteral("profiles.db"));
     const QString oldDbPath = migration.locateLocal("data", QStringLiteral("ktouch/profiles.db"));
     if (!QFile(dbPath).exists() && !oldDbPath.isEmpty())
     {

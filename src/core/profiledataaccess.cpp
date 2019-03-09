@@ -48,7 +48,7 @@ void ProfileDataAccess::loadProfiles()
     m_profiles.clear();
     emit profileCountChanged();
 
-    QSqlQuery profileQuery = db.exec("SELECT id, name, skill_level, last_used_course_id FROM profiles");
+    QSqlQuery profileQuery = db.exec(QStringLiteral("SELECT id, name, skill_level, last_used_course_id FROM profiles"));
 
     if (db.lastError().isValid())
     {
@@ -103,7 +103,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
 
     QSqlQuery addQuery(db);
 
-    if (!addQuery.prepare("INSERT INTO profiles (name, skill_level, last_used_course_id) VALUES (?, ?, ?)"))
+    if (!addQuery.prepare(QStringLiteral("INSERT INTO profiles (name, skill_level, last_used_course_id) VALUES (?, ?, ?)")))
     {
         qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
@@ -122,7 +122,7 @@ void ProfileDataAccess::addProfile(Profile* profile)
         return;
     }
 
-    QSqlQuery idQuery = db.exec("SELECT last_insert_rowid()");
+    QSqlQuery idQuery = db.exec(QStringLiteral("SELECT last_insert_rowid()"));
 
     if (db.lastError().isValid())
     {
@@ -165,7 +165,7 @@ void ProfileDataAccess::updateProfile(int index)
 
     QSqlQuery updateQuery(db);
 
-    if (!updateQuery.prepare("UPDATE profiles SET name = ?, skill_level = ?, last_used_course_id = ? WHERE id = ?"))
+    if (!updateQuery.prepare(QStringLiteral("UPDATE profiles SET name = ?, skill_level = ?, last_used_course_id = ? WHERE id = ?")))
     {
         qWarning() <<  updateQuery.lastError().text();
         raiseError(updateQuery.lastError());
@@ -213,7 +213,7 @@ void ProfileDataAccess::removeProfile(int index)
 
     QSqlQuery removeQuery(db);
 
-    if (!removeQuery.prepare("DELETE FROM profiles WHERE id = ?"))
+    if (!removeQuery.prepare(QStringLiteral("DELETE FROM profiles WHERE id = ?")))
     {
         qWarning() <<  removeQuery.lastError().text();
         raiseError(removeQuery.lastError());
@@ -270,7 +270,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile
 
     QSqlQuery selectQuery;
 
-    if (!selectQuery.prepare("SELECT id, characters_typed, error_count, elapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1"))
+    if (!selectQuery.prepare(QStringLiteral("SELECT id, characters_typed, error_count, elapsed_time FROM training_stats WHERE profile_id = ? AND course_id = ? AND lesson_id = ? ORDER BY date DESC LIMIT 1")))
     {
         qWarning() <<  selectQuery.lastError().text();
         raiseError(selectQuery.lastError());
@@ -298,7 +298,7 @@ void ProfileDataAccess::loadReferenceTrainingStats(TrainingStats* stats, Profile
 
     QSqlQuery errorSelectQuery;
 
-    errorSelectQuery.prepare("SELECT character, count FROM training_stats_errors WHERE stats_id = ?");
+    errorSelectQuery.prepare(QStringLiteral("SELECT character, count FROM training_stats_errors WHERE stats_id = ?"));
 
     errorSelectQuery.bindValue(0, statsId);
 
@@ -337,7 +337,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
     }
     QSqlQuery addQuery(db);
 
-    if (!addQuery.prepare("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, elapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)"))
+    if (!addQuery.prepare(QStringLiteral("INSERT INTO training_stats (profile_id, course_id, lesson_id, date, characters_typed, error_count, elapsed_time) VALUES (?, ?, ?, ?, ?, ?, ?)")))
     {
         qWarning() <<  addQuery.lastError().text();
         raiseError(addQuery.lastError());
@@ -361,7 +361,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
         return;
     }
 
-    QSqlQuery idQuery = db.exec("SELECT last_insert_rowid()");
+    QSqlQuery idQuery = db.exec(QStringLiteral("SELECT last_insert_rowid()"));
 
     if (db.lastError().isValid())
     {
@@ -376,7 +376,7 @@ void ProfileDataAccess::saveTrainingStats(TrainingStats* stats, Profile* profile
 
     QSqlQuery addErrorsQuery(db);
 
-    if (!addErrorsQuery.prepare("INSERT INTO training_stats_errors (stats_id, character, count) VALUES (?, ?, ?)"))
+    if (!addErrorsQuery.prepare(QStringLiteral("INSERT INTO training_stats_errors (stats_id, character, count) VALUES (?, ?, ?)")))
     {
         qWarning() <<  addErrorsQuery.lastError().text();
         raiseError(addErrorsQuery.lastError());
@@ -425,7 +425,7 @@ QString ProfileDataAccess::courseProgress(Profile* profile, const QString& cours
 
     QSqlQuery selectQuery;
 
-    selectQuery.prepare("SELECT lesson_id FROM course_progress WHERE id = ?");
+    selectQuery.prepare(QStringLiteral("SELECT lesson_id FROM course_progress WHERE id = ?"));
 
     selectQuery.bindValue(0, id);
 
@@ -464,7 +464,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     {
         QSqlQuery insertQuery;
 
-        insertQuery.prepare("INSERT INTO course_progress (profile_id, course_id, type, lesson_id) VALUES (?, ?, ?, ?)");
+        insertQuery.prepare(QStringLiteral("INSERT INTO course_progress (profile_id, course_id, type, lesson_id) VALUES (?, ?, ?, ?)"));
 
         insertQuery.bindValue(0, profile->id());
         insertQuery.bindValue(1, courseId);
@@ -483,7 +483,7 @@ void ProfileDataAccess::saveCourseProgress(const QString& lessonId, Profile* pro
     {
         QSqlQuery updateQuery;
 
-        updateQuery.prepare("UPDATE course_progress SET lesson_id = ? WHERE id = ?");
+        updateQuery.prepare(QStringLiteral("UPDATE course_progress SET lesson_id = ? WHERE id = ?"));
 
         updateQuery.bindValue(0, lessonId);
         updateQuery.bindValue(1, id);
@@ -513,7 +513,7 @@ int ProfileDataAccess::lessonsTrained(Profile* profile)
     if (!profile)
         return 0;
 
-    QString sql = "SELECT COUNT(*) FROM training_stats WHERE profile_id = ?";
+    QString sql = QStringLiteral("SELECT COUNT(*) FROM training_stats WHERE profile_id = ?");
 
     QSqlQuery query(db);
 
@@ -538,7 +538,7 @@ quint64 ProfileDataAccess::totalTrainingTime(Profile* profile)
     if (!profile)
         return 0;
 
-    QString sql = "SELECT SUM(elapsed_time) FROM training_stats WHERE profile_id = ?";
+    QString sql = QStringLiteral("SELECT SUM(elapsed_time) FROM training_stats WHERE profile_id = ?");
 
     QSqlQuery query(db);
 
@@ -563,7 +563,7 @@ QDateTime ProfileDataAccess::lastTrainingSession(Profile* profile)
     if (!profile)
         return QDateTime();
 
-    QString sql = "SELECT date FROM training_stats WHERE profile_id = ? ORDER BY date DESC LIMIT 1";
+    QString sql = QStringLiteral("SELECT date FROM training_stats WHERE profile_id = ? ORDER BY date DESC LIMIT 1");
 
     QSqlQuery query(db);
 
@@ -595,11 +595,11 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
     if (!db.isOpen())
         return false;
 
-    QString sql = "SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?";
+    QString sql = QStringLiteral("SELECT id, title, text, keyboard_layout_name FROM custom_lessons WHERE profile_id = ?");
 
     if (!keyboardLayoutNameFilter.isNull())
     {
-        sql += " AND keyboard_layout_name = ?";
+        sql += QLatin1String(" AND keyboard_layout_name = ?");
     }
 
     QSqlQuery query(db);
@@ -624,7 +624,7 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
         return false;
 
     target->setKind(Course::LessonCollection);
-    target->setId("custom_lessons");
+    target->setId(QStringLiteral("custom_lessons"));
     target->setTitle(i18n("Custom Lessons"));
     target->setDescription(i18n("A place to store personal lesson texts"));
     target->setKeyboardLayoutName(keyboardLayoutNameFilter);
@@ -638,7 +638,7 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
         lesson->setTitle(query.value(1).toString());
 
         const QString text = query.value(2).toString();
-        QString characters = "";
+        QString characters = QLatin1String("");
 
         for (int i = 0; i < text.length(); i++)
         {
@@ -676,7 +676,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
 
     QSqlQuery idQuery(db);
 
-    idQuery.prepare("SELECT count(*) FROM custom_lessons WHERE id = ?");
+    idQuery.prepare(QStringLiteral("SELECT count(*) FROM custom_lessons WHERE id = ?"));
     idQuery.bindValue(0, lesson->id());
     idQuery.exec();
 
@@ -695,7 +695,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
     {
         QSqlQuery updateQuery(db);
 
-        updateQuery.prepare("UPDATE custom_lessons SET profile_id = ?, title = ?, text = ?, keyboard_layout_name = ? WHERE id = ?");
+        updateQuery.prepare(QStringLiteral("UPDATE custom_lessons SET profile_id = ?, title = ?, text = ?, keyboard_layout_name = ? WHERE id = ?"));
 
         if (updateQuery.lastError().isValid())
         {
@@ -725,7 +725,7 @@ bool ProfileDataAccess::storeCustomLesson(Lesson* lesson, Profile* profile, cons
     {
         QSqlQuery insertQuery(db);
 
-        insertQuery.prepare("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)");
+        insertQuery.prepare(QStringLiteral("INSERT INTO custom_lessons (id, profile_id, title, text, keyboard_layout_name) VALUES (?, ?, ?, ?, ?)"));
 
         if (insertQuery.lastError().isValid())
         {
@@ -779,7 +779,7 @@ bool ProfileDataAccess::deleteCustomLesson(const QString& id)
 
     QSqlQuery deleteQuery(db);
 
-    deleteQuery.prepare("DELETE FROM custom_lessons WHERE id = ?");
+    deleteQuery.prepare(QStringLiteral("DELETE FROM custom_lessons WHERE id = ?"));
     deleteQuery.bindValue(0, id);
     deleteQuery.exec();
 
@@ -812,16 +812,16 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
     if (!db.isOpen())
         return QSqlQuery();
 
-    QString sql = "SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?";
+    QString sql = QStringLiteral("SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?");
 
     if (courseFilter)
     {
-        sql += " AND course_id = ?";
+        sql += QLatin1String(" AND course_id = ?");
     }
 
     if (lessonFilter)
     {
-        sql += " AND lesson_id = ?";
+        sql += QLatin1String(" AND lesson_id = ?");
     }
 
     QSqlQuery query(db);
@@ -861,7 +861,7 @@ int ProfileDataAccess::findCourseProgressId(Profile* profile, const QString& cou
 
     QSqlQuery findQuery;
 
-    findQuery.prepare("SELECT id FROM course_progress WHERE profile_id = ? AND course_id = ? AND type = ? LIMIT 1");
+    findQuery.prepare(QStringLiteral("SELECT id FROM course_progress WHERE profile_id = ? AND course_id = ? AND type = ? LIMIT 1"));
 
     findQuery.bindValue(0, profile->id());
     findQuery.bindValue(1, courseId);

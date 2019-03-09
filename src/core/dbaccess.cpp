@@ -48,8 +48,8 @@ QSqlDatabase DbAccess::database()
         {
             dataDir.mkpath(dataDir.path());
         }
-        QString dbPath = dataDir.filePath("profiles.db");
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        QString dbPath = dataDir.filePath(QStringLiteral("profiles.db"));
+        QSqlDatabase db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"));
         db.setDatabaseName(dbPath);
         if (!db.open())
         {
@@ -71,7 +71,7 @@ QSqlDatabase DbAccess::database()
 
 void DbAccess::raiseError(const QSqlError& error)
 {
-    m_errorMessage = QString("%1: %2").arg(error.driverText(), error.databaseText());
+    m_errorMessage = QStringLiteral("%1: %2").arg(error.driverText(), error.databaseText());
     emit errorMessageChanged();
 }
 
@@ -91,7 +91,7 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    QSqlQuery versionQuery = db.exec("SELECT value FROM metadata WHERE key = 'version'");
+    QSqlQuery versionQuery = db.exec(QStringLiteral("SELECT value FROM metadata WHERE key = 'version'"));
 
     if (db.lastError().isValid())
     {
@@ -106,12 +106,12 @@ bool DbAccess::checkDbSchema()
 
         versionQuery.clear();
 
-        if (version == "1.0")
+        if (version == QLatin1String("1.0"))
         {
             return migrateFrom1_0To1_1();
         }
 
-        if (version != "1.1")
+        if (version != QLatin1String("1.1"))
         {
             m_errorMessage = i18n("Invalid database version '%1'.", version);
             emit errorMessageChanged();
@@ -126,7 +126,7 @@ bool DbAccess::checkDbSchema()
             raiseError(db.lastError());
             return false;
         }
-        db.exec("INSERT INTO metadata (key, value) VALUES ('version', '1.1')");
+        db.exec(QStringLiteral("INSERT INTO metadata (key, value) VALUES ('version', '1.1')"));
         if (db.lastError().isValid())
         {
             qWarning() << db.lastError().text();
@@ -351,7 +351,7 @@ bool DbAccess::migrateFrom1_0To1_1()
         return false;
     }
 
-    db.exec("DROP TABLE course_lessons_backup");
+    db.exec(QStringLiteral("DROP TABLE course_lessons_backup"));
 
     if (db.lastError().isValid())
     {
@@ -363,7 +363,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     // generate new UUIDs for lessons
 
-    QSqlQuery idsQuery = db.exec("SELECT id FROM course_lessons");
+    QSqlQuery idsQuery = db.exec(QStringLiteral("SELECT id FROM course_lessons"));
 
     if (db.lastError().isValid())
     {
@@ -382,7 +382,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     QSqlQuery updateIdQuery(db);
 
-    updateIdQuery.prepare("UPDATE course_lessons SET id = ? WHERE id = ?");
+    updateIdQuery.prepare(QStringLiteral("UPDATE course_lessons SET id = ? WHERE id = ?"));
 
     foreach (const QString& id, ids)
     {
@@ -400,7 +400,7 @@ bool DbAccess::migrateFrom1_0To1_1()
         }
     }
 
-    db.exec("UPDATE metadata SET value = '1.1' WHERE key = 'version'");
+    db.exec(QStringLiteral("UPDATE metadata SET value = '1.1' WHERE key = 'version'"));
 
     if (db.lastError().isValid())
     {

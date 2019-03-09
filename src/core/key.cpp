@@ -28,7 +28,7 @@ Key::Key(QObject* parent) :
 
 QString Key::keyType() const
 {
-    return "key";
+    return QStringLiteral("key");
 }
 
 int Key::fingerIndex() const

@@ -54,10 +54,10 @@ NewResourceAssistant::NewResourceAssistant(ResourceModel* resourceModel, QWidget
     m_resourceTemplatePage = addPage(m_resourceTemplateWidget, i18n("Template"));
     setValid(m_resourceTemplatePage, false);
 
-    connect(m_resourceTypesWidget, SIGNAL(typeSelected(ResourceModel::ResourceItemType)), SLOT(setResourceType(ResourceModel::ResourceItemType)));
-    connect(m_newCourseWidget, SIGNAL(isValidChanged()), SLOT(updateNewCoursePageValidity()));
-    connect(m_newKeyboardLayoutWidget, SIGNAL(isValidChanged()), SLOT(updateNewKeyboardLayoutPageValidity()));
-    connect(m_resourceTemplateWidget, SIGNAL(isValidChanged()), SLOT(updateResourceTemplatePageValidity()));
+    connect(m_resourceTypesWidget, &ResourceTypesWidget::typeSelected, this, &NewResourceAssistant::setResourceType);
+    connect(m_newCourseWidget, &NewCourseWidget::isValidChanged, this, &NewResourceAssistant::updateNewCoursePageValidity);
+    connect(m_newKeyboardLayoutWidget, &NewKeyboardLayoutWidget::isValidChanged, this, &NewResourceAssistant::updateNewKeyboardLayoutPageValidity);
+    connect(m_resourceTemplateWidget, &ResourceTemplateWidget::isValidChanged, this, &NewResourceAssistant::updateResourceTemplatePageValidity);
 }
 
 Resource* NewResourceAssistant::createResource()

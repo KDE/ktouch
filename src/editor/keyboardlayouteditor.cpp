@@ -51,14 +51,14 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
 
     Application::setupDeclarativeBindings(m_view->engine());
 
-    m_view->rootContext()->setContextProperty("keyboardLayoutEditor", this);
-    m_view->setSource(QUrl("qrc:/qml/keyboard/KeyboardLayoutEditor.qml"));
+    m_view->rootContext()->setContextProperty(QStringLiteral("keyboardLayoutEditor"), this);
+    m_view->setSource(QUrl(QStringLiteral("qrc:/qml/keyboard/KeyboardLayoutEditor.qml")));
 
-    connect(m_newKeyToolButton, SIGNAL(clicked()), SLOT(createNewKey()));
-    connect(m_newSpecialKeyToolButton, SIGNAL(clicked()), SLOT(createNewSpecialKey()));
-    connect(m_zoomSlider, SIGNAL(valueChanged(int)), SLOT(setZoomLevel(int)));
-    connect(m_deleteKeyToolButton, SIGNAL(clicked(bool)), SLOT(deleteSelectedKey()));
-    connect(m_view, SIGNAL(clicked()), SLOT(clearSelection()));
+    connect(m_newKeyToolButton, &QAbstractButton::clicked, this, &KeyboardLayoutEditor::createNewKey);
+    connect(m_newSpecialKeyToolButton, &QAbstractButton::clicked, this, &KeyboardLayoutEditor::createNewSpecialKey);
+    connect(m_zoomSlider, &QAbstractSlider::valueChanged, this, &KeyboardLayoutEditor::setZoomLevel);
+    connect(m_deleteKeyToolButton, &QAbstractButton::clicked, this, &KeyboardLayoutEditor::deleteSelectedKey);
+    connect(m_view, &KeyboardLayoutEditorView::clicked, this, &KeyboardLayoutEditor::clearSelection);
 
     connect(m_zoomOutToolButton, &QToolButton::clicked, [=](){
         m_zoomSlider->setValue(m_zoomSlider->value() - 1);
@@ -87,10 +87,10 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
         currentUndoStack()->disconnect(this, SLOT(validateSelection()));
     }
 
-    initUndoStack(QString("keyboard-layout-%1").arg(dataIndexKeyboardLayout->id()));
+    initUndoStack(QStringLiteral("keyboard-layout-%1").arg(dataIndexKeyboardLayout->id()));
     m_propertiesWidget->setUndoStack(currentUndoStack());
     setSelectedKey(0);
-    connect(currentUndoStack(), SIGNAL(indexChanged(int)), SLOT(validateSelection()));
+    connect(currentUndoStack(), &QUndoStack::indexChanged, this, &KeyboardLayoutEditor::validateSelection);
 
     m_keyboardLayout->setAssociatedDataIndexKeyboardLayout(m_dataIndexKeyboardLayout);
 

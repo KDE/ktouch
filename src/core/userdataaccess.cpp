@@ -51,7 +51,7 @@ bool UserDataAccess::fillDataIndex(DataIndex* target)
     if (!db.isOpen())
         return false;
 
-    QSqlQuery courseQuery = db.exec("SELECT id, title, description, keyboard_layout_name FROM courses");
+    QSqlQuery courseQuery = db.exec(QStringLiteral("SELECT id, title, description, keyboard_layout_name FROM courses"));
 
     if (courseQuery.lastError().isValid())
     {
@@ -73,7 +73,7 @@ bool UserDataAccess::fillDataIndex(DataIndex* target)
         target->addCourse(course);
     }
 
-    QSqlQuery keyboardLayoutQuery = db.exec("SELECT id, title, name FROM keyboard_layouts");
+    QSqlQuery keyboardLayoutQuery = db.exec(QStringLiteral("SELECT id, title, name FROM keyboard_layouts"));
 
     if (keyboardLayoutQuery.lastError().isValid())
     {
@@ -108,7 +108,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
 
     QSqlQuery courseQuery(db);
 
-    courseQuery.prepare("SELECT title, description, keyboard_layout_name FROM courses WHERE id = ? LIMIT 1");
+    courseQuery.prepare(QStringLiteral("SELECT title, description, keyboard_layout_name FROM courses WHERE id = ? LIMIT 1"));
     courseQuery.bindValue(0, id);
     courseQuery.exec();
 
@@ -135,7 +135,7 @@ bool UserDataAccess::loadCourse(const QString& id, Course* target)
 
     QSqlQuery lessonsQuery(db);
 
-    lessonsQuery.prepare("SELECT id, title, new_characters, text FROM course_lessons WHERE course_id = ?");
+    lessonsQuery.prepare(QStringLiteral("SELECT id, title, new_characters, text FROM course_lessons WHERE course_id = ?"));
     lessonsQuery.bindValue(0, id);
     lessonsQuery.exec();
 
@@ -179,7 +179,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     QSqlQuery cleanUpCourseQuery(db);
 
-    cleanUpCourseQuery.prepare("DELETE FROM courses WHERE id = ?");
+    cleanUpCourseQuery.prepare(QStringLiteral("DELETE FROM courses WHERE id = ?"));
     cleanUpCourseQuery.bindValue(0, course->id());
     cleanUpCourseQuery.exec();
 
@@ -193,7 +193,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     QSqlQuery cleanUpLessonsQuery(db);
 
-    cleanUpLessonsQuery.prepare("DELETE FROM course_lessons WHERE course_id = ?");
+    cleanUpLessonsQuery.prepare(QStringLiteral("DELETE FROM course_lessons WHERE course_id = ?"));
     cleanUpLessonsQuery.bindValue(0, course->id());
     cleanUpLessonsQuery.exec();
 
@@ -207,7 +207,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     QSqlQuery insertCourseQuery(db);
 
-    insertCourseQuery.prepare("INSERT INTO courses (id, title, description, keyboard_layout_name) VALUES (?, ?, ?, ?)");
+    insertCourseQuery.prepare(QStringLiteral("INSERT INTO courses (id, title, description, keyboard_layout_name) VALUES (?, ?, ?, ?)"));
     insertCourseQuery.bindValue(0, course->id());
     insertCourseQuery.bindValue(1, course->title());
     insertCourseQuery.bindValue(2, course->description());
@@ -224,7 +224,7 @@ bool UserDataAccess::storeCourse(Course* course)
 
     QSqlQuery insertLessonsQuery(db);
 
-    insertLessonsQuery.prepare("INSERT INTO course_lessons (id, title, new_characters, text, course_id) VALUES(?, ?, ?, ?, ?)");
+    insertLessonsQuery.prepare(QStringLiteral("INSERT INTO course_lessons (id, title, new_characters, text, course_id) VALUES(?, ?, ?, ?, ?)"));
 
     insertLessonsQuery.bindValue(4, course->id());
 
@@ -274,7 +274,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     QSqlQuery deleteCourseQuery(db);
 
-    deleteCourseQuery.prepare("DELETE FROM courses WHERE id = ?");
+    deleteCourseQuery.prepare(QStringLiteral("DELETE FROM courses WHERE id = ?"));
     deleteCourseQuery.bindValue(0, course->id());
     deleteCourseQuery.exec();
 
@@ -288,7 +288,7 @@ bool UserDataAccess::deleteCourse(Course* course)
 
     QSqlQuery deleteLessonsQuery(db);
 
-    deleteLessonsQuery.prepare("DELETE FROM course_lessons WHERE course_id = ?");
+    deleteLessonsQuery.prepare(QStringLiteral("DELETE FROM course_lessons WHERE course_id = ?"));
     deleteLessonsQuery.bindValue(0, course->id());
     deleteLessonsQuery.exec();
 
@@ -322,7 +322,7 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
 
     QSqlQuery keyboardLayoutQuery(db);
 
-    keyboardLayoutQuery.prepare("SELECT title, name, width, height FROM keyboard_layouts WHERE id = ? LIMIT 1");
+    keyboardLayoutQuery.prepare(QStringLiteral("SELECT title, name, width, height FROM keyboard_layouts WHERE id = ? LIMIT 1"));
     keyboardLayoutQuery.bindValue(0, id);
     keyboardLayoutQuery.exec();
 
@@ -350,13 +350,13 @@ bool UserDataAccess::loadKeyboardLayout(const QString& id, KeyboardLayout* targe
 
     QSqlQuery keysQuery(db);
 
-    keysQuery.prepare("SELECT id, left, top, width, height, type, finger_index, has_haptic_marker, special_key_type, modifier_id, label FROM keyboard_layout_keys WHERE keyboard_layout_id = ?");
+    keysQuery.prepare(QStringLiteral("SELECT id, left, top, width, height, type, finger_index, has_haptic_marker, special_key_type, modifier_id, label FROM keyboard_layout_keys WHERE keyboard_layout_id = ?"));
     keysQuery.bindValue(0, id);
     keysQuery.exec();
 
     QSqlQuery keyCharsQuery(db);
 
-    keyCharsQuery.prepare("SELECT position, character, modifier FROM keyboard_layout_key_chars WHERE key_id = ?");
+    keyCharsQuery.prepare(QStringLiteral("SELECT position, character, modifier FROM keyboard_layout_key_chars WHERE key_id = ?"));
 
     if (keysQuery.lastError().isValid())
     {
@@ -441,7 +441,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery cleanUpKeyCharsQuery(db);
 
-    cleanUpKeyCharsQuery.prepare("DELETE FROM keyboard_layout_key_chars WHERE key_id IN (SELECT id FROM keyboard_layout_keys WHERE keyboard_layout_id = ?)");
+    cleanUpKeyCharsQuery.prepare(QStringLiteral("DELETE FROM keyboard_layout_key_chars WHERE key_id IN (SELECT id FROM keyboard_layout_keys WHERE keyboard_layout_id = ?)"));
     cleanUpKeyCharsQuery.bindValue(0, keyboardLayout->id());
     cleanUpKeyCharsQuery.exec();
 
@@ -456,7 +456,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery cleanUpKeysQuery(db);
 
-    cleanUpKeysQuery.prepare("DELETE FROM keyboard_layout_keys WHERE keyboard_layout_id = ?");
+    cleanUpKeysQuery.prepare(QStringLiteral("DELETE FROM keyboard_layout_keys WHERE keyboard_layout_id = ?"));
     cleanUpKeysQuery.bindValue(0, keyboardLayout->id());
     cleanUpKeysQuery.exec();
 
@@ -470,7 +470,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery cleanUpKeyboardLayoutQuery(db);
 
-    cleanUpKeyboardLayoutQuery.prepare("DELETE FROM keyboard_layouts WHERE id = ?");
+    cleanUpKeyboardLayoutQuery.prepare(QStringLiteral("DELETE FROM keyboard_layouts WHERE id = ?"));
     cleanUpKeyboardLayoutQuery.bindValue(0, keyboardLayout->id());
     cleanUpKeyboardLayoutQuery.exec();
 
@@ -484,7 +484,7 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery insertKeyboardLayoutQuery(db);
 
-    insertKeyboardLayoutQuery.prepare("INSERT INTO keyboard_layouts (id, title, name, width, height) VALUES (?, ?, ?, ?, ?)");
+    insertKeyboardLayoutQuery.prepare(QStringLiteral("INSERT INTO keyboard_layouts (id, title, name, width, height) VALUES (?, ?, ?, ?, ?)"));
     insertKeyboardLayoutQuery.bindValue(0, keyboardLayout->id());
     insertKeyboardLayoutQuery.bindValue(1, keyboardLayout->title());
     insertKeyboardLayoutQuery.bindValue(2, keyboardLayout->name());
@@ -505,14 +505,14 @@ bool UserDataAccess::storeKeyboardLayout(KeyboardLayout* keyboardLayout)
     QSqlQuery insertKeyCharQuery(db);
     QSqlQuery idQuery(db);
 
-    insertKeyQuery.prepare("INSERT INTO keyboard_layout_keys (keyboard_layout_id, left, top, width, height, type, finger_index, has_haptic_marker) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    insertKeyQuery.prepare(QStringLiteral("INSERT INTO keyboard_layout_keys (keyboard_layout_id, left, top, width, height, type, finger_index, has_haptic_marker) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"));
     insertKeyQuery.bindValue(0, keyboardLayout->id());
     insertKeyQuery.bindValue(5, KeyId);
-    insertSpecialKeyQuery.prepare("INSERT INTO keyboard_layout_keys (keyboard_layout_id, left, top, width, height, type, special_key_type, modifier_id, label) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    insertSpecialKeyQuery.prepare(QStringLiteral("INSERT INTO keyboard_layout_keys (keyboard_layout_id, left, top, width, height, type, special_key_type, modifier_id, label) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"));
     insertSpecialKeyQuery.bindValue(0, keyboardLayout->id());
     insertSpecialKeyQuery.bindValue(5, SpecialKeyId);
-    insertKeyCharQuery.prepare("INSERT INTO keyboard_layout_key_chars (key_id, position, character, modifier) VALUES (?, ?, ?, ?)");
-    idQuery.prepare("SELECT last_insert_rowid()");
+    insertKeyCharQuery.prepare(QStringLiteral("INSERT INTO keyboard_layout_key_chars (key_id, position, character, modifier) VALUES (?, ?, ?, ?)"));
+    idQuery.prepare(QStringLiteral("SELECT last_insert_rowid()"));
 
     for (int i = 0; i < keyboardLayout->keyCount(); i++)
     {
@@ -619,7 +619,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery deleteKeyCharsQuery(db);
 
-    deleteKeyCharsQuery.prepare("DELETE FROM keyboard_layout_key_chars WHERE key_id IN (SELECT id FROM keyboard_layout_keys WHERE keyboard_layout_id = ?)");
+    deleteKeyCharsQuery.prepare(QStringLiteral("DELETE FROM keyboard_layout_key_chars WHERE key_id IN (SELECT id FROM keyboard_layout_keys WHERE keyboard_layout_id = ?)"));
     deleteKeyCharsQuery.bindValue(0, keyboardLayout->id());
     deleteKeyCharsQuery.exec();
 
@@ -634,7 +634,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery deleteKeysQuery(db);
 
-    deleteKeysQuery.prepare("DELETE FROM keyboard_layout_keys WHERE keyboard_layout_id = ?");
+    deleteKeysQuery.prepare(QStringLiteral("DELETE FROM keyboard_layout_keys WHERE keyboard_layout_id = ?"));
     deleteKeysQuery.bindValue(0, keyboardLayout->id());
     deleteKeysQuery.exec();
 
@@ -648,7 +648,7 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
 
     QSqlQuery deleteKeyboardLayoutQuery(db);
 
-    deleteKeyboardLayoutQuery.prepare("DELETE FROM keyboard_layouts WHERE id = ?");
+    deleteKeyboardLayoutQuery.prepare(QStringLiteral("DELETE FROM keyboard_layouts WHERE id = ?"));
     deleteKeyboardLayoutQuery.bindValue(0, keyboardLayout->id());
     deleteKeyboardLayoutQuery.exec();
 

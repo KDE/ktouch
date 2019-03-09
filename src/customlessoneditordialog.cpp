@@ -33,8 +33,8 @@ CustomLessonEditorDialog::CustomLessonEditorDialog(QWidget* parent) :
 {
     this->setupUi(this);
 
-    connect(m_titleLineEdit, SIGNAL(textChanged(QString)), SLOT(onTitleChanged()));
-    connect(m_lessonTextEditor->textEdit(), SIGNAL(textChanged()), SLOT(onTextChanged()));
+    connect(m_titleLineEdit, &QLineEdit::textChanged, this, &CustomLessonEditorDialog::onTitleChanged);
+    connect(m_lessonTextEditor->textEdit(), &QTextEdit::textChanged, this, &CustomLessonEditorDialog::onTextChanged);
     connect(this, &CustomLessonEditorDialog::validChanged, m_buttonBox->button(QDialogButtonBox::Ok), &QPushButton::setEnabled);
 }
 
@@ -59,8 +59,8 @@ void CustomLessonEditorDialog::setLesson(Lesson* lesson)
             updateTitle();
             updateText();
 
-            connect(lesson, SIGNAL(titleChanged()), SLOT(updateTitle()));
-            connect(lesson, SIGNAL(textChanged()), SLOT(updateText()));
+            connect(lesson, &Lesson::titleChanged, this, &CustomLessonEditorDialog::updateTitle);
+            connect(lesson, &Lesson::textChanged, this, &CustomLessonEditorDialog::updateText);
         }
     }
 }
@@ -84,7 +84,7 @@ void CustomLessonEditorDialog::setKeyboardLayout(KeyboardLayout* keyboardLayout)
 
         if (m_keyboardLayout)
         {
-            connect(m_keyboardLayout, SIGNAL(isValidChanged()), SLOT(updateAllowedCharacters()));
+            connect(m_keyboardLayout, &Resource::isValidChanged, this, &CustomLessonEditorDialog::updateAllowedCharacters);
         }
     }
 }

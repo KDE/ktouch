@@ -54,7 +54,7 @@ void MainWindow::init()
     m_view->connect(m_view, &QQuickView::statusChanged, this, &MainWindow::onViewStatusChanged);
     m_view->rootContext()->setContextProperty(QStringLiteral("ktouch"), m_context);
     m_view->setResizeMode(QQuickView::SizeRootObjectToView);
-    m_view->setSource(QUrl("qrc:/qml/main.qml"));
+    m_view->setSource(QUrl(QStringLiteral("qrc:/qml/main.qml")));
 }
 
 void MainWindow::onViewStatusChanged(QQuickView::Status status)
@@ -68,7 +68,7 @@ void MainWindow::onViewStatusChanged(QQuickView::Status status)
         }
         QMessageBox qmlErrorMsgBox;
         qmlErrorMsgBox.setText(i18n("%1 has encountered a runtime error and has to be closed.", KAboutData::applicationData().displayName()));
-        qmlErrorMsgBox.setDetailedText(errorMessages.join("\n"));
+        qmlErrorMsgBox.setDetailedText(errorMessages.join(QStringLiteral("\n")));
         qmlErrorMsgBox.setStandardButtons(QMessageBox::Close);
         qmlErrorMsgBox.setIcon(QMessageBox::Critical);
         qmlErrorMsgBox.exec();

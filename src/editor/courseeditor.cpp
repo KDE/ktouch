@@ -48,25 +48,25 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_lessonModel->setCourse(m_course);
     m_lessonView->setModel(m_lessonModel);
 
-    connect(m_course, SIGNAL(titleChanged()), SLOT(updateTitle()));
-    connect(m_course, SIGNAL(keyboardLayoutNameChanged()), SLOT(updateKeyboardLayoutName()));
-    connect(m_course, SIGNAL(descriptionChanged()), SLOT(updateDescription()));
+    connect(m_course, &CourseBase::titleChanged, this, &CourseEditor::updateTitle);
+    connect(m_course, &CourseBase::keyboardLayoutNameChanged, this, &CourseEditor::updateKeyboardLayoutName);
+    connect(m_course, &CourseBase::descriptionChanged, this, &CourseEditor::updateDescription);
 
-    connect(m_titleLineEdit, SIGNAL(textEdited(QString)), SLOT(setTitle(QString)));
+    connect(m_titleLineEdit, &QLineEdit::textEdited, this, &CourseEditor::setTitle);
     connect(m_keyboardLayoutComboBox, SIGNAL(activated(int)), SLOT(onKeyboardLayoutChosen()));
-    connect(m_descriptionTextEdit, SIGNAL(textChanged()), SLOT(onDescriptionChanged()));
+    connect(m_descriptionTextEdit, &QTextEdit::textChanged, this, &CourseEditor::onDescriptionChanged);
 
-    connect(m_lessonModel, SIGNAL(lessonChanged(int)), SLOT(selectLesson(int)));
-    connect(m_lessonView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onLessonSelected()));
+    connect(m_lessonModel, &LessonModel::lessonChanged, this, &CourseEditor::selectLesson);
+    connect(m_lessonView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &CourseEditor::onLessonSelected);
 
-    connect(m_addLessonButton, SIGNAL(clicked(bool)), SLOT(addLesson()));
-    connect(m_removeLessonButton, SIGNAL(clicked(bool)), SLOT(removeLesson()));
-    connect(m_moveLessonUpButton, SIGNAL(clicked(bool)), SLOT(moveLessonUp()));
-    connect(m_moveLessonDownButton, SIGNAL(clicked(bool)), SLOT(moveLessonDown()));
+    connect(m_addLessonButton, &QAbstractButton::clicked, this, &CourseEditor::addLesson);
+    connect(m_removeLessonButton, &QAbstractButton::clicked, this, &CourseEditor::removeLesson);
+    connect(m_moveLessonUpButton, &QAbstractButton::clicked, this, &CourseEditor::moveLessonUp);
+    connect(m_moveLessonDownButton, &QAbstractButton::clicked, this, &CourseEditor::moveLessonDown);
 
-    connect(m_lessonTitleLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonTitle(QString)));
-    connect(m_newCharactersLineEdit, SIGNAL(textEdited(QString)), SLOT(setLessonNewCharacters(QString)));
-    connect(m_lessonTextEditor->textEdit(), SIGNAL(textChanged()), SLOT(onLessonTextChanged()));
+    connect(m_lessonTitleLineEdit, &QLineEdit::textEdited, this, &CourseEditor::setLessonTitle);
+    connect(m_newCharactersLineEdit, &QLineEdit::textEdited, this, &CourseEditor::setLessonNewCharacters);
+    connect(m_lessonTextEditor->textEdit(), &QTextEdit::textChanged, this, &CourseEditor::onLessonTextChanged);
 }
 
 void CourseEditor::setResourceModel(ResourceModel* model)
@@ -80,7 +80,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
 
     m_dataIndexCourse = dataIndexCourse;
 
-    initUndoStack(QString("course-%1").arg(dataIndexCourse->id()));
+    initUndoStack(QStringLiteral("course-%1").arg(dataIndexCourse->id()));
 
     m_currentLessonIndex = -1;
     m_currentLesson = 0;
@@ -376,10 +376,10 @@ void CourseEditor::onLessonSelected()
         m_moveLessonUpButton->setEnabled(!m_readOnly && m_currentLessonIndex > 0);
         m_moveLessonDownButton->setEnabled(!m_readOnly && m_currentLessonIndex < m_course->lessonCount() - 1);
 
-        connect(m_currentLesson, SIGNAL(titleChanged()), SLOT(updateLessonTitle()));
-        connect(m_currentLesson, SIGNAL(newCharactersChanged()), SLOT(updateLessonNewCharacters()));
-        connect(m_currentLesson, SIGNAL(textChanged()), SLOT(updateLessonText()));
-        connect(m_currentLesson, SIGNAL(charactersChanged()), SLOT(updateLessonCharacters()));
+        connect(m_currentLesson, &Lesson::titleChanged, this, &CourseEditor::updateLessonTitle);
+        connect(m_currentLesson, &Lesson::newCharactersChanged, this, &CourseEditor::updateLessonNewCharacters);
+        connect(m_currentLesson, &Lesson::textChanged, this, &CourseEditor::updateLessonText);
+        connect(m_currentLesson, &Lesson::charactersChanged, this, &CourseEditor::updateLessonCharacters);
     }
     else
     {
@@ -387,9 +387,9 @@ void CourseEditor::onLessonSelected()
         m_currentLesson = 0;
 
         m_lessonTitleLineEdit->setEnabled(false);
-        m_lessonTitleLineEdit->setText("");
+        m_lessonTitleLineEdit->setText(QLatin1String(""));
         m_newCharactersLineEdit->setEnabled(false);
-        m_newCharactersLineEdit->setText("");
+        m_newCharactersLineEdit->setText(QLatin1String(""));
         m_lessonTextEditor->setEnabled(false);
         m_lessonTextEditor->textEdit()->clear();
 

@@ -53,10 +53,10 @@ void LessonModel::setCourse(Course* course)
 
         if (m_course)
         {
-            connect(m_course, SIGNAL(lessonAboutToBeAdded(Lesson*,int)), SLOT(onLessonAboutToBeAdded(Lesson*,int)));
-            connect(m_course, SIGNAL(lessonAdded()), SLOT(onLessonAdded()));
-            connect(m_course, SIGNAL(lessonsAboutToBeRemoved(int,int)), SLOT(onLessonsAboutToBeRemoved(int,int)));
-            connect(m_course, SIGNAL(lessonsRemoved()), SLOT(onLessonsRemoved()));
+            connect(m_course, &Course::lessonAboutToBeAdded, this, &LessonModel::onLessonAboutToBeAdded);
+            connect(m_course, &Course::lessonAdded, this, &LessonModel::onLessonAdded);
+            connect(m_course, &Course::lessonsAboutToBeRemoved, this, &LessonModel::onLessonsAboutToBeRemoved);
+            connect(m_course, &Course::lessonsRemoved, this, &LessonModel::onLessonsRemoved);
         }
 
         endResetModel();

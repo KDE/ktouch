@@ -57,11 +57,11 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_undoGroup(new QUndoGroup(this)),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
-    m_deleteResourceAction(new QAction(QIcon::fromTheme("edit-delete"), i18n("Delete"), this)),
+    m_deleteResourceAction(new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), this)),
     m_undoAction(KStandardAction::undo(m_undoGroup, SLOT(undo()), m_actionCollection)),
     m_redoAction(KStandardAction::redo(m_undoGroup, SLOT(redo()), m_actionCollection)),
-    m_importResourceAction(new QAction(QIcon::fromTheme("document-import"), i18n("Import"), this)),
-    m_exportResourceAction(new QAction(QIcon::fromTheme("document-export"), i18n("Export"), this)),
+    m_importResourceAction(new QAction(QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import"), this)),
+    m_exportResourceAction(new QAction(QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export"), this)),
     m_editorWidget(new ResourceEditorWidget(this)),
     m_saveTimer(new QTimer(this))
 
@@ -76,20 +76,20 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_newResourceAction->setToolTip(i18n("Create a new course or keyboard layout"));
     m_deleteResourceAction->setEnabled(false);
     m_deleteResourceAction->setToolTip(i18n("Delete the current selected course or keyboard layout"));
-    m_actionCollection->addAction("deleteResource", m_deleteResourceAction);
-    connect(m_deleteResourceAction, SIGNAL(triggered()), SLOT(deleteResource()));
+    m_actionCollection->addAction(QStringLiteral("deleteResource"), m_deleteResourceAction);
+    connect(m_deleteResourceAction, &QAction::triggered, this, &ResourceEditor::deleteResource);
     m_undoAction->setEnabled(false);
-    connect(m_undoGroup, SIGNAL(canUndoChanged(bool)), m_undoAction, SLOT(setEnabled(bool)));
-    connect(m_undoGroup, SIGNAL(undoTextChanged(QString)), SLOT(setUndoText(QString)));
+    connect(m_undoGroup, &QUndoGroup::canUndoChanged, m_undoAction, &QAction::setEnabled);
+    connect(m_undoGroup, &QUndoGroup::undoTextChanged, this, &ResourceEditor::setUndoText);
     m_redoAction->setEnabled(false);
-    connect(m_undoGroup, SIGNAL(canRedoChanged(bool)), m_redoAction, SLOT(setEnabled(bool)));
-    connect(m_undoGroup, SIGNAL(redoTextChanged(QString)), SLOT(setRedoText(QString)));
-    m_actionCollection->addAction("importResource", m_importResourceAction);
+    connect(m_undoGroup, &QUndoGroup::canRedoChanged, m_redoAction, &QAction::setEnabled);
+    connect(m_undoGroup, &QUndoGroup::redoTextChanged, this, &ResourceEditor::setRedoText);
+    m_actionCollection->addAction(QStringLiteral("importResource"), m_importResourceAction);
     m_importResourceAction->setToolTip(i18n("Import a course or keyboard layout from a file"));
-    connect(m_importResourceAction, SIGNAL(triggered()), SLOT(importResource()));
+    connect(m_importResourceAction, &QAction::triggered, this, &ResourceEditor::importResource);
     m_exportResourceAction->setToolTip(i18n("Export the current selected course or keyboard layout to a file"));
-    m_actionCollection->addAction("exportResource", m_exportResourceAction);
-    connect(m_exportResourceAction, SIGNAL(triggered()), SLOT(exportResource()));
+    m_actionCollection->addAction(QStringLiteral("exportResource"), m_exportResourceAction);
+    connect(m_exportResourceAction, &QAction::triggered, this, &ResourceEditor::exportResource);
     m_exportResourceAction->setEnabled(false);
 
     toolBar()->addAction(m_newResourceAction);
@@ -108,14 +108,14 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     QAbstractItemView* const resourceView = m_editorWidget->resourceView();
     resourceView->setModel(m_categorizedResourceModel);
-    connect(resourceView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(onResourceSelected()));
+    connect(resourceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &ResourceEditor::onResourceSelected);
 
     selectFirstResource();
 
-    connect(m_editorWidget, SIGNAL(resourceRestorationRequested()), SLOT(restoreResourceBackup()));
-    connect(m_editorWidget, SIGNAL(resourceRestorationDismissed()), SLOT(clearResourceBackup()));
+    connect(m_editorWidget, &ResourceEditorWidget::resourceRestorationRequested, this, &ResourceEditor::restoreResourceBackup);
+    connect(m_editorWidget, &ResourceEditorWidget::resourceRestorationDismissed, this, &ResourceEditor::clearResourceBackup);
 
-    connect(m_saveTimer, SIGNAL(timeout()), SLOT(save()));
+    connect(m_saveTimer, &QTimer::timeout, this, &ResourceEditor::save);
     m_saveTimer->setInterval(60000);
 }
 
@@ -254,10 +254,11 @@ void ResourceEditor::exportResource()
                 if (!dataAccess.loadCourse(m_dataIndex->course(i), course))
                 {
                     KMessageBox::error(this, i18n("Error while opening course"));
+                    delete course;
                     return;
                 }
 
-                const QString initialFileName(QString("%1.xml").arg(course->keyboardLayoutName()));
+                const QString initialFileName(QStringLiteral("%1.xml").arg(course->keyboardLayoutName()));
                 const QString path(QFileDialog::getSaveFileName(this, QString(), initialFileName, i18n("XML files (*.xml)")));
 
                 if (!path.isNull())
@@ -265,9 +266,11 @@ void ResourceEditor::exportResource()
                     if (!resourceDataAccess.storeCourse(path, course))
                     {
                         KMessageBox::error(this, i18n("Error while saving course"));
+                        delete course;
                         return;
                     }
                 }
+                delete course;
             }
         }
     }
@@ -282,10 +285,11 @@ void ResourceEditor::exportResource()
                 if (!dataAccess.loadKeyboardLayout(m_dataIndex->keyboardLayout(i), keyboardlayout))
                 {
                     KMessageBox::error(this, i18n("Error while opening keyboard layout"));
+                    delete keyboardlayout;
                     return;
                 }
 
-                const QString initialFileName(QString("%1.xml").arg(keyboardlayout->name()));
+                const QString initialFileName(QStringLiteral("%1.xml").arg(keyboardlayout->name()));
                 const QString path(QFileDialog::getSaveFileName(this, QString(), initialFileName, i18n("XML files (*.xml)")));
 
                 if (!path.isNull())
@@ -293,9 +297,11 @@ void ResourceEditor::exportResource()
                     if (!resourceDataAccess.storeKeyboardLayout(path, keyboardlayout))
                     {
                         KMessageBox::error(this, i18n("Error while saving keyboard layout"));
+                        delete keyboardlayout;
                         return;
                     }
                 }
+                delete keyboardlayout;
             }
         }
     }
@@ -410,7 +416,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dir.cd(QStringLiteral("courses"));
 
         QString path = dataIndexResource == 0?
-            dir.filePath(QString("%1.xml").arg(course->id())):
+            dir.filePath(QStringLiteral("%1.xml").arg(course->id())):
             dataIndexCourse->path();
 
         if (!userDataAccess.storeCourse(course))
@@ -444,7 +450,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dir.cd(QStringLiteral("keyboardlayouts"));
 
         QString path = dataIndexResource == 0?
-            dir.filePath(QString("%1.xml").arg(keyboardLayout->id())):
+            dir.filePath(QStringLiteral("%1.xml").arg(keyboardLayout->id())):
             dataIndexKeyboardLayout->path();
 
         if (!userDataAccess.storeKeyboardLayout(keyboardLayout))
@@ -519,7 +525,7 @@ bool ResourceEditor::importCourse(const QString& path)
         if (testCourse->source() == DataIndex::BuiltInResource &&  testCourse->id() == course.id())
         {
             switch (KMessageBox::questionYesNo(this, i18n("The selected course is already present as a built-in course."), QString(),
-                                               KGuiItem(i18n("Import as new course"), "dialog-ok"),
+                                               KGuiItem(i18n("Import as new course"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::cancel()
             ))
             {
@@ -539,7 +545,7 @@ bool ResourceEditor::importCourse(const QString& path)
         if (testCourse->source() == DataIndex::UserResource &&  testCourse->id() == course.id())
         {
             switch (KMessageBox::questionYesNoCancel(this, i18n("The selected course is already present as a user course."), QString(),
-                                               KGuiItem(i18n("Import as new course"), "dialog-ok"),
+                                               KGuiItem(i18n("Import as new course"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
             ))
@@ -587,7 +593,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
         if (testKeyboardLayout->source() == DataIndex::BuiltInResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
             switch (KMessageBox::questionYesNo(this, i18n("The selected keyboard layout is already present as a built-in keyboard layout."), QString(),
-                                               KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
+                                               KGuiItem(i18n("Import as new keyboard layout"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::cancel()
             ))
             {
@@ -602,7 +608,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
         if (testKeyboardLayout->source() == DataIndex::UserResource &&  testKeyboardLayout->id() == keyboardLayout.id())
         {
             switch (KMessageBox::questionYesNoCancel(this, i18n("The selected keyboard layout is already present as a user keyboard layout."), QString(),
-                                               KGuiItem(i18n("Import as new keyboard layout"), "dialog-ok"),
+                                               KGuiItem(i18n("Import as new keyboard layout"), QStringLiteral("dialog-ok")),
                                                KStandardGuiItem::overwrite(),
                                                KStandardGuiItem::cancel()
             ))

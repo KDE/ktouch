@@ -29,34 +29,34 @@ QString KeyChar::positionStr() const
     switch (m_position)
     {
     case KeyChar::TopLeft:
-        return "topLeft";
+        return QStringLiteral("topLeft");
     case KeyChar::TopRight:
-        return "topRight";
+        return QStringLiteral("topRight");
     case KeyChar::BottomLeft:
-        return "bottomLeft";
+        return QStringLiteral("bottomLeft");
     case KeyChar::BottomRight:
-        return "bottomRight";
+        return QStringLiteral("bottomRight");
     case KeyChar::Hidden:
     default:
-        return "hidden";
+        return QStringLiteral("hidden");
     }
 }
 
 void KeyChar::setPositionStr(const QString &position)
 {
-    if (position == "topLeft")
+    if (position == QLatin1String("topLeft"))
     {
         m_position = KeyChar::TopLeft;
     }
-    else if (position == "topRight")
+    else if (position == QLatin1String("topRight"))
     {
         m_position = KeyChar::TopRight;
     }
-    else if (position == "bottomLeft")
+    else if (position == QLatin1String("bottomLeft"))
     {
         m_position = KeyChar::BottomLeft;
     }
-    else if (position == "bottomRight")
+    else if (position == QLatin1String("bottomRight"))
     {
         m_position = KeyChar::BottomRight;
     }

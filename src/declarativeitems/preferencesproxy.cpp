@@ -23,7 +23,7 @@ PreferencesProxy::PreferencesProxy(QObject* parent):
     QObject(parent)
 
 {
-    connect(Preferences::self(), SIGNAL(configChanged()), SIGNAL(configChanged()));
+    connect(Preferences::self(), &KCoreConfigSkeleton::configChanged, this, &PreferencesProxy::configChanged);
 }
 
 bool PreferencesProxy::showKeyboard() const

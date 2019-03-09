@@ -190,7 +190,7 @@ void Course::updateLessonCharacters(int firstIndex)
         return;
     }
 
-    QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): "";
+    QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): QLatin1String("");
 
     for (int i = firstIndex; i < lessonCount(); i++)
     {

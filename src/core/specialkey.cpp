@@ -25,7 +25,7 @@ SpecialKey::SpecialKey(QObject *parent) :
 
 QString SpecialKey::keyType() const
 {
-    return "specialKey";
+    return QStringLiteral("specialKey");
 }
 
 QString SpecialKey::typeStr() const
@@ -33,46 +33,46 @@ QString SpecialKey::typeStr() const
     switch(m_type)
     {
     case SpecialKey::Tab:
-        return "tab";
+        return QStringLiteral("tab");
     case SpecialKey::Capslock:
-        return "capslock";
+        return QStringLiteral("capslock");
     case SpecialKey::Shift:
-        return "shift";
+        return QStringLiteral("shift");
     case SpecialKey::Backspace:
-        return "backspace";
+        return QStringLiteral("backspace");
     case SpecialKey::Return:
-        return "return";
+        return QStringLiteral("return");
     case SpecialKey::Space:
-        return "space";
+        return QStringLiteral("space");
     case SpecialKey::Other:
     default:
-        return "other";
+        return QStringLiteral("other");
     }
 }
 
 void SpecialKey::setTypeStr(const QString &typeStr)
 {
-    if (typeStr == "tab")
+    if (typeStr == QLatin1String("tab"))
     {
         m_type = SpecialKey::Tab;
     }
-    else if (typeStr == "capslock")
+    else if (typeStr == QLatin1String("capslock"))
     {
         m_type = SpecialKey::Capslock;
     }
-    else if (typeStr == "shift")
+    else if (typeStr == QLatin1String("shift"))
     {
         m_type = SpecialKey::Shift;
     }
-    else if (typeStr == "backspace")
+    else if (typeStr == QLatin1String("backspace"))
     {
         m_type = SpecialKey::Backspace;
     }
-    else if (typeStr == "return")
+    else if (typeStr == QLatin1String("return"))
     {
         m_type = SpecialKey::Return;
     }
-    else if (typeStr == "space")
+    else if (typeStr == QLatin1String("space"))
     {
         m_type = SpecialKey::Space;
     }

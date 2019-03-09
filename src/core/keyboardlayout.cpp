@@ -36,8 +36,8 @@
 KeyboardLayout::KeyboardLayout(QObject *parent) :
     KeyboardLayoutBase(parent),
     m_associatedDataIndexKeyboardLayout(0),
-    m_title(""),
-    m_name(""),
+    m_title(QLatin1String("")),
+    m_name(QLatin1String("")),
     m_width(0),
     m_height(0),
     m_keys(QList<AbstractKey*>()),
