@@ -47,9 +47,13 @@ FocusScope {
                 if (course.lesson(index).id === lessonId) {
                     root.selectedLesson = course.lesson(index)
                     content.currentIndex = index
-                    break
+                    return
                 }
             }
+        }
+        if (course.lessonCount > 0) {
+            root.selectedLesson = course.lesson(0)
+            content.currentIndex = 0
         }
     }
 
