@@ -40,6 +40,7 @@ Controls.TextArea {
 
     background: Rectangle {
         color: control.colorScheme.normalBackground
+        anchors.fill: parent
         border.width: 1
         border.color: control.activeFocus?
                           control.colorScheme.focusDecoration:
