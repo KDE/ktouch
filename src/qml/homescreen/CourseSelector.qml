@@ -168,7 +168,7 @@ FocusScope {
 
             CourseSelectorKeyboardLayoutList {
                 width: parent.width
-                title: i18n('Other courses')
+                title: i18n('Other Courses')
                 model: otherKeyboardLayoutsModel
                 resourceModel: resourceModel
                 colorScheme: courseSelectorColorScheme
