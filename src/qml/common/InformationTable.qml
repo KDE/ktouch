@@ -23,7 +23,7 @@ import ktouch 1.0
 
 Item {
     property alias model: repeator.model
-    width: parent.width
+    id: root
     height: childrenRect.height
 
     Column {
@@ -34,10 +34,12 @@ Item {
 
         Repeater {
             id: repeator
+
             Row {
                 spacing: 5
                 height: Math.max(titleLabel.height, valueLabel.height)
-                width: column.width
+                width: root.width
+
                 Label {
                     id: titleLabel
                     width: Math.round((parent.width - parent.spacing) / 2)
