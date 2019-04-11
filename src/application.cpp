@@ -88,7 +88,8 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 {
     KDeclarative::KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(qmlEngine);
-    kDeclarative.setupBindings();
+    kDeclarative.setupContext();
+    kDeclarative.setupEngine(qmlEngine);
 
     Application* app = static_cast<Application*>(Application::instance());
     foreach (const QString& path, app->m_qmlImportPaths)
