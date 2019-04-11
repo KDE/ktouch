@@ -33,7 +33,7 @@ class Key : public AbstractKey
 
 public:
     explicit Key(QObject* parent = 0);
-    Q_INVOKABLE QString keyType() const;
+    Q_INVOKABLE QString keyType() const override;
     int fingerIndex() const;
     void setFingerIndex(int finger);
     bool hasHapticMarker() const;

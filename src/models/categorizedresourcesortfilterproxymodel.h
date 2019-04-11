@@ -31,7 +31,7 @@ class CategorizedResourceSortFilterProxyModel : public KCategorizedSortFilterPro
     Q_PROPERTY(bool invertedKeyboardLayoutNameFilter READ invertedKeyboardLayoutNameFilter WRITE setInvertedKeyboardLayoutNameFilter NOTIFY invertedKeyboardLayoutNameFilterChanged)
     Q_PROPERTY(ResourceModel* resourceModel READ resourceModel WRITE setResourceModel NOTIFY resourceModelChanged)
 public:
-    explicit CategorizedResourceSortFilterProxyModel(QObject* parent = 0);
+    explicit CategorizedResourceSortFilterProxyModel(QObject* parent = nullptr);
     ResourceModel::ResourceItemTypes resourceTypeFilter() const;
     void setResourceTypeFilter(ResourceModel::ResourceItemTypes types);
     QString keyboardLayoutNameFilter() const;
@@ -46,8 +46,8 @@ signals:
     void invertedKeyboardLayoutNameFilterChanged();
     void resourceModelChanged();
 protected:
-    bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const;
-    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const;
+    bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const override;
 private:
     ResourceModel::ResourceItemTypes m_resourceTypeFilter;
     QString m_keyboardLayoutNameFilter;

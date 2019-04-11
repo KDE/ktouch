@@ -32,19 +32,19 @@ class CharactersModel : public QAbstractTableModel
     Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout WRITE setKeyboardLayout NOTIFY keyboardLayoutChanged)
     Q_PROPERTY(int keyIndex READ keyIndex WRITE setKeyIndex NOTIFY keyIndexChanged)
 public:
-    explicit CharactersModel(QObject *parent = 0);
+    explicit CharactersModel(QObject *parent = nullptr);
     KeyboardLayout* keyboardLayout() const;
     void setKeyboardLayout(KeyboardLayout* keyboardLayout);
     int keyIndex() const;
     void setKeyIndex(int keyIndex);
     QUndoStack* undoStack() const;
     void setUndoStack(QUndoStack* undoStack);
-    Qt::ItemFlags flags(const QModelIndex& index) const;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
-    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole);
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-    int rowCount(const QModelIndex& parent = QModelIndex()) const;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const;
+    Qt::ItemFlags flags(const QModelIndex& index) const override;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
 signals:
     void aboutToBeEdited(const QModelIndex& index, const QVariant& newValue);
     void keyboardLayoutChanged();

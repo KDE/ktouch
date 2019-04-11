@@ -28,14 +28,14 @@ class ErrorsModel : public QAbstractTableModel
     Q_PROPERTY(TrainingStats* trainingStats READ trainingStats WRITE setTrainingStats NOTIFY trainingStatsChanged)
     Q_PROPERTY(int maximumErrorCount READ maximumErrorCount NOTIFY maximumErrorCountChanged)
 public:
-    explicit ErrorsModel(QObject* parent = 0);
+    explicit ErrorsModel(QObject* parent = nullptr);
     TrainingStats* trainingStats() const;
     void setTrainingStats(TrainingStats* trainingStats);
     int maximumErrorCount() const;
-    QVariant data(const QModelIndex& index, int role) const;
-    int columnCount(const QModelIndex& parent) const;
-    int rowCount(const QModelIndex& parent) const;
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    QVariant data(const QModelIndex& index, int role) const override;
+    int columnCount(const QModelIndex& parent) const override;
+    int rowCount(const QModelIndex& parent) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     Q_INVOKABLE QString character(int row) const;
     Q_INVOKABLE int errors(int row) const;
 signals:

@@ -27,14 +27,14 @@ class LessonTextHighlighter : public QSyntaxHighlighter
     Q_OBJECT
 
 public:
-    explicit LessonTextHighlighter(QObject* parent = 0);
+    explicit LessonTextHighlighter(QObject* parent = nullptr);
     int maximumLineLength() const;
     void setMaximumLineLength(int length);
     QString allowedCharacters() const;
     void setAllowedCharacters(const QString& characters);
 
 protected:
-    virtual void highlightBlock(const QString& text);
+    virtual void highlightBlock(const QString& text) override;
 private:
     int m_maximumLineLength;
     QString m_allowedCharacters;

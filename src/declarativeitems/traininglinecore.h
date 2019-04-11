@@ -63,9 +63,9 @@ signals:
     void hintKeyChanged();
     void done();
 protected:
-    void keyPressEvent(QKeyEvent* event);
-    void inputMethodEvent(QInputMethodEvent* event);
-    QVariant inputMethodQuery(Qt::InputMethodQuery query) const;
+    void keyPressEvent(QKeyEvent* event) override;
+    void inputMethodEvent(QInputMethodEvent* event) override;
+    QVariant inputMethodQuery(Qt::InputMethodQuery query) const override;
 private:
     void add(const QString& text);
     void backspace();
