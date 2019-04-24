@@ -71,7 +71,7 @@ QString Profile::lastUsedCourseId() const
     return m_lastUsedCourseId;
 }
 
-void Profile::setLastUsedCourseId(QString id)
+void Profile::setLastUsedCourseId(const QString &id)
 {
     if (id != m_lastUsedCourseId)
     {

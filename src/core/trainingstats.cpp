@@ -144,7 +144,7 @@ void TrainingStats::reset()
     statsChanged();
 }
 
-void TrainingStats::logCharacter(QString character, EventType type)
+void TrainingStats::logCharacter(const QString &character, EventType type)
 {
     if (type == TrainingStats::CorrectCharacter)
     {
