@@ -42,8 +42,8 @@ signals:
     void keyboardLayoutNameFilterChanged();
     void resourceModelChanged();
 protected:
-    bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const;
-    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const;
+    bool subSortLessThan(const QModelIndex& left, const QModelIndex& right) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const override;
 private:
     ResourceModel::ResourceItemTypes m_resourceTypeFilter;
     QString m_keyboardLayoutNameFilter;

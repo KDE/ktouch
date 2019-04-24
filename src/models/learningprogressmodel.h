@@ -43,8 +43,8 @@ public:
     void setLessonFilter(Lesson* lessonFilter);
     int maxCharactersTypedPerMinute() const;
     qreal minAccuracy() const;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const;
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     Q_INVOKABLE int charactersPerMinute(int row) const;
     Q_INVOKABLE int charactersTyped(int row) const;
     Q_INVOKABLE int errorCount(int row) const;
@@ -62,7 +62,7 @@ signals:
 private slots:
     void profileDestroyed();
 private:
-    QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const;
+    QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const override;
     QVariant accuracyData(int row, int role = Qt::DisplayRole) const;
     QVariant charactersPerMinuteData(int row, int role = Qt::DisplayRole) const;
     int m_charactersTypedFieldIndex;

@@ -29,9 +29,9 @@ public:
     explicit CharactersViewDelegate(QObject* parent = 0);
     KeyboardLayout* keyboardLayout() const;
     void setKeyboardLayout(KeyboardLayout* keyboardLayout);
-    QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& option, const QModelIndex& index) const;
-    void setEditorData(QWidget* editor, const QModelIndex& index) const;
-    void setModelData(QWidget *editor, QAbstractItemModel* model, const QModelIndex& index) const;
+    QWidget* createEditor(QWidget* parent, const QStyleOptionViewItem& option, const QModelIndex& index) const override;
+    void setEditorData(QWidget* editor, const QModelIndex& index) const override;
+    void setModelData(QWidget *editor, QAbstractItemModel* model, const QModelIndex& index) const override;
 private:
     KeyboardLayout* m_keyboardLayout;
 };

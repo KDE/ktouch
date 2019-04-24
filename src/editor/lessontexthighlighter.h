@@ -34,7 +34,7 @@ public:
     void setAllowedCharacters(const QString& characters);
 
 protected:
-    virtual void highlightBlock(const QString& text);
+    void highlightBlock(const QString& text) override;
 private:
     int m_maximumLineLength;
     QString m_allowedCharacters;

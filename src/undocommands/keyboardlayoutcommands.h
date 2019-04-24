@@ -30,10 +30,10 @@ class SetKeyboardLayoutTitleCommand : public QUndoCommand
 {
 public:
     explicit SetKeyboardLayoutTitleCommand(KeyboardLayout* layout, const QString& newTitle, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     QString m_oldTitle;
@@ -44,10 +44,10 @@ class SetKeyboardLayoutNameCommand : public QUndoCommand
 {
 public:
     explicit SetKeyboardLayoutNameCommand(KeyboardLayout* layout, const QString& newName, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     QString m_oldName;
@@ -58,10 +58,10 @@ class SetKeyboardLayoutSizeCommand : public QUndoCommand
 {
 public:
     explicit SetKeyboardLayoutSizeCommand(KeyboardLayout* layout, const QSize& newSize, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     QSize m_oldSize;
@@ -73,10 +73,10 @@ class AddKeyCommand : public QUndoCommand
 public:
     AddKeyCommand(KeyboardLayout* layout, AbstractKey* key, QUndoCommand* parent = 0);
     ~AddKeyCommand();
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     AbstractKey* m_backupKey;
@@ -87,10 +87,10 @@ class RemoveKeyCommand : public QUndoCommand
 public:
     RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
     ~RemoveKeyCommand();
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -101,10 +101,10 @@ class SetKeyGeometryCommand : public QUndoCommand
 {
 public:
     explicit SetKeyGeometryCommand(KeyboardLayout* layout, int keyIndex, const QRect& newRect, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -116,10 +116,10 @@ class SetKeyFingerIndexCommand : public QUndoCommand
 {
 public:
     explicit SetKeyFingerIndexCommand(KeyboardLayout* layout, int keyIndex, int newFingerIndex, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -131,10 +131,10 @@ class SetKeyHasHapticMarkerCommand : public QUndoCommand
 {
 public:
     explicit SetKeyHasHapticMarkerCommand(KeyboardLayout* layout, int keyIndex, bool newHasHapticMarker, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -146,10 +146,10 @@ class AddKeyCharCommand : public QUndoCommand
 {
 public:
     AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -160,10 +160,10 @@ class RemoveKeyCharCommand : public QUndoCommand
 public:
     RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent = 0);
     ~RemoveKeyCharCommand();
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -175,10 +175,10 @@ class SetKeyCharValueCommand : public QUndoCommand
 {
 public:
     explicit SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -191,10 +191,10 @@ class SetKeyCharModifierCommand : public QUndoCommand
 {
 public:
     explicit SetKeyCharModifierCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, const QString& newModifier, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -207,10 +207,10 @@ class SetKeyCharPositionCommand : public QUndoCommand
 {
 public:
     explicit SetKeyCharPositionCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, KeyChar::Position newPosition, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -223,10 +223,10 @@ class SetSpecialKeyTypeCommand : public QUndoCommand
 {
 public:
     explicit SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -238,10 +238,10 @@ class SetSpecialKeyLabelCommand : public QUndoCommand
 {
 public:
     explicit SetSpecialKeyLabelCommand(KeyboardLayout* layout, int keyIndex, const QString& newLabel, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;
@@ -253,10 +253,10 @@ class SetSpecialKeyModifierIdCommand : public QUndoCommand
 {
 public:
     explicit SetSpecialKeyModifierIdCommand(KeyboardLayout* layout, int keyIndex, const QString& newModifiewId, QUndoCommand* parent = 0);
-    void undo();
-    void redo();
-    int id() const;
-    bool mergeWith(const QUndoCommand* other);
+    void undo() override;
+    void redo() override;
+    int id() const override;
+    bool mergeWith(const QUndoCommand* other) override;
 private:
     KeyboardLayout* m_layout;
     int m_keyIndex;

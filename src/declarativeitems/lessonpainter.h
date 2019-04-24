@@ -60,7 +60,7 @@ signals:
     void cursorRectangleChanged();
     void done();
 protected:
-    void paint(QPainter* painter);
+    void paint(QPainter* painter) override;
 private slots:
     void updateLayout();
     void resetTrainingStatus();

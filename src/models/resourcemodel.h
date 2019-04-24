@@ -50,11 +50,11 @@ public:
     explicit ResourceModel( QObject* parent = 0);
     DataIndex* dataIndex() const;
     void setDataIndex(DataIndex* dataIndex);
-    Qt::ItemFlags flags(const QModelIndex& index) const;
-    QVariant data(const QModelIndex& index, int role) const;
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-    int rowCount(const QModelIndex &parent) const;
-    QHash<int, QByteArray> roleNames() const;
+    Qt::ItemFlags flags(const QModelIndex& index) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+    int rowCount(const QModelIndex &parent) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
 signals:
     void dataIndexChanged();

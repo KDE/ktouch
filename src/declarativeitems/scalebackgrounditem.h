@@ -38,7 +38,7 @@ public:
     void setScaleMarkHeight(qreal height);
     QColor color() const;
     void setColor(const QColor& color);
-    virtual void paint(QPainter* painter);
+    void paint(QPainter* painter) override;
 signals:
     void startAngleChanged();
     void stopAngleChanged();
