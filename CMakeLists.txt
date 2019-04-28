@@ -55,6 +55,8 @@ find_package(KF5 REQUIRED COMPONENTS
     XmlGui
 )
 
+option(COMPILE_QML "Precompile QML code" ON)
+
 # enable QML debugging for debug builds
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
 

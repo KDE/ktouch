@@ -83,7 +83,7 @@ set(ktouch_SRCS
     ktouchcontext.cpp
 )
 
-if (Qt5QuickCompiler_FOUND)
+if (Qt5QuickCompiler_FOUND AND COMPILE_QML)
     qtquick_compiler_add_resources(ktouch_qml_SRCS qml/qml.qrc)
 else ()
     qt5_add_resources(ktouch_qml_SRCS qml/qml.qrc)
