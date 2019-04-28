@@ -44,7 +44,7 @@ public:
     SkillLevel skillLevel() const;
     void setSkillLevel(SkillLevel skillLevel);
     QString lastUsedCourseId() const;
-    void setLastUsedCourseId(QString id);
+    void setLastUsedCourseId(const QString &id);
 
 signals:
     void idChanged();

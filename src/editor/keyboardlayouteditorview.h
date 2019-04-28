@@ -28,7 +28,7 @@ public:
 signals:
     void clicked();
 protected:
-    virtual void mousePressEvent(QMouseEvent* event) override;
+    void mousePressEvent(QMouseEvent* event) override;
 };
 
 #endif // KEYBOARDLAYOUTEDITORVIEW_H

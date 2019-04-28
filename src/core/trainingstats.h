@@ -60,7 +60,7 @@ public:
     Q_INVOKABLE void startTraining();
     Q_INVOKABLE void stopTraining();
     Q_INVOKABLE void reset();
-    Q_INVOKABLE void logCharacter(QString character, EventType type);
+    Q_INVOKABLE void logCharacter(const QString &character, EventType type);
     float accuracy();
     int charactersPerMinute();
 
