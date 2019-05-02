@@ -68,7 +68,7 @@ def check_imports(file, module, local_path):
 def check_package_import(line, module, local_path):
     matches = IMPORT_RE.match(line)
     if matches is None:
-        raise ValueError('unrecgonized import')
+        raise ValueError('unrecognized import')
     current_import = Import(*matches.group(1, 2, 4))
     for allowed_module, allowed_imports in ALLOWED_IMPORTS.items():
         if allowed_module == '*' or allowed_module == module:
