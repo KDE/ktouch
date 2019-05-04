@@ -123,7 +123,7 @@ Loader {
                     id: balloonTipMask
                     anchors.fill: balloonTip
                     visible: false
-                    source: utils.findImage("balloontip.svgz")
+                    source: "qrc:///ktouch/images/balloontip.svgz"
                     sourceSize: Qt.size(width, height)
                }
 

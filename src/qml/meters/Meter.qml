@@ -43,7 +43,7 @@ RowLayout {
             right:6
             bottom: 6
         }
-        source: utils.findImage("meterbox-left.png")
+        source: "qrc:///ktouch/images/meterbox-left.png"
     }
 
     BorderImage {
@@ -56,7 +56,7 @@ RowLayout {
             right:6
             bottom: 6
         }
-        source: utils.findImage("meterbox-right.png")
+        source: "qrc:///ktouch/images/meterbox-right.png"
 
         Column {
             anchors {

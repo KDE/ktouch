@@ -63,7 +63,6 @@ ecm_optional_add_subdirectory(data)
 ecm_optional_add_subdirectory(doc)
 ecm_optional_add_subdirectory(src)
 # ecm_optional_add_subdirectory(sounds)
-ecm_optional_add_subdirectory(images)
 ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory

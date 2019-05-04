@@ -32,12 +32,12 @@ Meter {
 
     analogPartContent: Image {
         anchors.centerIn: parent
-        source: utils.findImage("elapsedtimemeter-background.png")
+        source: "qrc:///ktouch/images/elapsedtimemeter-background.png"
 
         Image {
             id: minuteHand
             anchors.centerIn: parent
-            source: utils.findImage("elapsedtimemeter-minute-hand.png")
+            source: "qrc:///ktouch/images/elapsedtimemeter-minute-hand.png"
             smooth: true
             transform: Rotation {
                 origin.x: minuteHand.width / 2
@@ -52,7 +52,7 @@ Meter {
         Image {
             id: secondHand
             anchors.centerIn: parent
-            source: utils.findImage("elapsedtimemeter-second-hand.png")
+            source: "qrc:///ktouch/images/elapsedtimemeter-second-hand.png"
             transform: Rotation {
                 origin.x: secondHand.width / 2
                 origin.y: secondHand.height / 2

@@ -153,7 +153,7 @@ FocusScope {
                 bottom: 1
             }
             cache: false
-            source: utils.findImage("trainingscreen-toolbar.png")
+            source: "qrc:///ktouch/images/trainingscreen-toolbar.png"
             horizontalTileMode: BorderImage.Repeat
             verticalTileMode: BorderImage.Repeat
 
@@ -176,7 +176,7 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-header.png")
+            source: "qrc:///ktouch/images/trainingscreen-header.png"
             cache: false
 
             StatBox {
@@ -196,7 +196,7 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-viewport.png")
+            source: "qrc:///ktouch/images/trainingscreen-viewport.png"
             cache: false
 
             TrainingWidget {
@@ -223,7 +223,7 @@ FocusScope {
                     top: 3
                     bottom: 3
                 }
-                source: utils.findImage("trainingscreen-viewport-shadow.png")
+                source: "qrc:///ktouch/images/trainingscreen-viewport-shadow.png"
                 cache: false
 
             }
@@ -243,7 +243,7 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-footer.png")
+            source: "qrc:///ktouch/images/trainingscreen-footer.png"
             cache: false
 
             Keyboard {

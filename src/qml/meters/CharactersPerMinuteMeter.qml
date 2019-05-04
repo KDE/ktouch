@@ -35,7 +35,7 @@ Meter {
 
     analogPartContent: Image {
         anchors.centerIn: parent
-        source: utils.findImage("charactersperminutemeter-background.png")
+        source: "qrc:///ktouch/images/charactersperminutemeter-background.png"
 
         ScaleBackgroundItem {
             anchors.centerIn: parent
@@ -52,7 +52,7 @@ Meter {
             id: scale
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            source: utils.findImage("charactersperminutemeter-scale.png")
+            source: "qrc:///ktouch/images/charactersperminutemeter-scale.png"
         }
 
         Text {
@@ -79,7 +79,7 @@ Meter {
             id: hand
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            source: utils.findImage("charactersperminutemeter-hand.png")
+            source: "qrc:///ktouch/images/charactersperminutemeter-hand.png"
             smooth: true
             transform: Rotation {
                 origin.x: hand.width / 2

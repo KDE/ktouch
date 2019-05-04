@@ -32,7 +32,7 @@ Meter {
 
     analogPartContent: Image {
         anchors.centerIn: parent
-        source: utils.findImage("accuracymeter-background.png")
+        source: "qrc:///ktouch/images/accuracymeter-background.png"
 
         ScaleBackgroundItem {
             anchors.centerIn: parent
@@ -49,7 +49,7 @@ Meter {
             id: scale
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            source: utils.findImage("accuracymeter-scale.png")
+            source: "qrc:///ktouch/images/accuracymeter-scale.png"
         }
 
         Text {
@@ -76,7 +76,7 @@ Meter {
             id: hand
             anchors.centerIn: parent
             anchors.verticalCenterOffset: 25
-            source: utils.findImage("accuracymeter-hand.png")
+            source: "qrc:///ktouch/images/accuracymeter-hand.png"
             transform: Rotation {
                 origin.x: hand.width / 2
                 origin.y: hand.height / 2
