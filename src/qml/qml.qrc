@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/qml">
+    <qresource prefix="/ktouch/qml">
         <file>common/AutoTriggerButton.qml</file>
         <file>common/Balloon.qml</file>
         <file>common/Collapsable.qml</file>

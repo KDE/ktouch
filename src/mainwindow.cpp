@@ -54,7 +54,7 @@ void MainWindow::init()
     m_view->connect(m_view, &QQuickView::statusChanged, this, &MainWindow::onViewStatusChanged);
     m_view->rootContext()->setContextProperty(QStringLiteral("ktouch"), m_context);
     m_view->setResizeMode(QQuickView::SizeRootObjectToView);
-    m_view->setSource(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+    m_view->setSource(QUrl(QStringLiteral("qrc:/ktouch/qml/main.qml")));
 }
 
 void MainWindow::onViewStatusChanged(QQuickView::Status status)
