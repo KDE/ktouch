@@ -28,20 +28,6 @@ Utils::Utils(QObject* parent):
 {
 }
 
-QUrl Utils::findImage(const QString &name)
-{
-    const QString relPath = QStringLiteral("images/") + name;
-    const QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
-
-    if (path.isNull())
-    {
-        qWarning() << "can't find image resource:" << name;
-        return QUrl();
-    }
-
-    return QUrl::fromLocalFile(path);
-}
-
 int Utils::getMinutesOfQTime(const QTime& time)
 {
     if (!time.isValid())
