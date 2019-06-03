@@ -26,9 +26,7 @@
 class KTouchContext;
 
 #ifdef KTOUCH_BUILD_WITH_X11
-class XEventNotifier;
 #else
-class KeyboardLayoutMenu;
 #endif
 
 class MainWindow : public KMainWindow

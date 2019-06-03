@@ -24,12 +24,10 @@
 
 #include "undocommands/coursecommands.h"
 
-class QUndoStack;
 class DataIndexCourse;
 class Course;
 class Lesson;
 class LessonModel;
-class LessonTextHighlighter;
 
 class CourseEditor : public AbstractEditor, private Ui::CourseEditor
 {

@@ -24,7 +24,6 @@ class QUndoGroup;
 class QTimer;
 class KAction;
 class KActionCollection;
-class KCategorizedView;
 class CategorizedResourceSortFilterProxyModel;
 class DataIndex;
 class ResourceModel;

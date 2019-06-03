@@ -22,7 +22,6 @@
 
 class QUndoGroup;
 class QUndoStack;
-class ResourceModel;
 
 class AbstractEditor : public QWidget
 {

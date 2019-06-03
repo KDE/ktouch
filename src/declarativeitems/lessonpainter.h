@@ -24,7 +24,6 @@
 #include <QPointer>
 
 class QTextDocument;
-class QTextFrame;
 
 class Lesson;
 class TrainingLineCore;

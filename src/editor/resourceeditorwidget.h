@@ -25,7 +25,6 @@
 class QAbstractItemView;
 class QAction;
 class QUndoGroup;
-class KMessageWidget;
 class Resource;
 class ResourceModel;
 

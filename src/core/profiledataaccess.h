@@ -29,7 +29,6 @@ class Profile;
 class TrainingStats;
 class Course;
 class Lesson;
-class KeyboardLayout;
 
 class ProfileDataAccess : public DbAccess
 {
