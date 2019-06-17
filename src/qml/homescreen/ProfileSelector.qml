@@ -87,11 +87,13 @@ FocusScope {
                     }
                 }
                 onCurrentItemChanged: {
-                    if (currentItem.isNewButton) {
-                        createNewProfile()
-                    }
-                    else {
-                        selectProfile(currentIndex)
+                    if (currentItem != null) {
+                        if (currentItem.isNewButton) {
+                            createNewProfile()
+                        }
+                        else {
+                            selectProfile(currentIndex)
+                        }
                     }
                 }
             }
