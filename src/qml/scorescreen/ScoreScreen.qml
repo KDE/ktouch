@@ -161,7 +161,6 @@ FocusScope {
 
                 IconToolButton {
                     id: homeScreenButton
-                    anchors.verticalCenter: parent.verticalCenter
                     text: i18n("Return to Home Screen")
                     iconName: "go-home"
                     colorScheme.colorSet: KColorScheme.Complementary
@@ -285,14 +284,14 @@ FocusScope {
 
                     Label {
                         id: showLabel
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         text: i18nc("Show a specific type of statistic", "Show")
                         opacity: 0.7
                     }
 
                     ComboBox {
                         id: chartTypeComboBox
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         model: ListModel {
                             Component.onCompleted: {
                                 append({"text": i18n("Progress"), "icon": "office-chart-area"});
@@ -305,7 +304,7 @@ FocusScope {
 
                     Label {
                         id: overLabel
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         text: i18nc("Show a statistic over one or more lessons", "Over")
                         opacity: tabGroup.currentItem === learningProgressTab? 0.7: 0
                         Behavior on opacity {
@@ -315,7 +314,7 @@ FocusScope {
 
                     ComboBox {
                         id: learningProgressFilterComboBox
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         model: ListModel {
                             Component.onCompleted: {
                                 append({"text": i18n("All Lessons"), "icon": "view-filter"});
@@ -336,7 +335,7 @@ FocusScope {
 
                     Charts.LegendItem {
                         id: accuracyLegend
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
@@ -344,7 +343,7 @@ FocusScope {
                     }
                     Charts.LegendItem {
                         id: charactersPerMinuteLegend
-                        anchors.verticalCenter: parent.verticalCenter
+                        Layout.alignment: Qt.AlignVCenter
                         opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
                             NumberAnimation {duration: 150}
@@ -368,7 +367,6 @@ FocusScope {
                             id: learningProgressTab
                             property string title: i18n("Progress")
                             property string iconName: "office-chart-area"
-                            anchors.fill: parent
                             model: learningProgressModel
                             backgroundColor: colorScheme.normalBackground
 
@@ -388,7 +386,6 @@ FocusScope {
                             property string iconName: "office-chart-bar"
 
                             Charts.BarChart{
-                                anchors.fill: parent
                                 model: errorsModel
                                 pitch: 60
                                 textRole: 3 // Qt::ToolTipRole
