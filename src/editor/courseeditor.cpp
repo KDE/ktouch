@@ -38,7 +38,7 @@ CourseEditor::CourseEditor(QWidget* parent):
     m_dataIndexCourse(0),
     m_course(new Course(this)),
     m_currentLessonIndex(-1),
-    m_currentLesson(0),
+    m_currentLesson(nullptr),
     m_lessonModel(new LessonModel(this)),
     m_readOnly(false)
 {
@@ -69,6 +69,11 @@ CourseEditor::CourseEditor(QWidget* parent):
     connect(m_lessonTextEditor->textEdit(), &QTextEdit::textChanged, this, &CourseEditor::onLessonTextChanged);
 }
 
+CourseEditor::~CourseEditor()
+{
+    m_currentLesson = nullptr;
+}
+
 void CourseEditor::setResourceModel(ResourceModel* model)
 {
     m_keyboardLayoutComboBox->setResourceModel(model);
@@ -83,7 +88,7 @@ void CourseEditor::openCourse(DataIndexCourse* dataIndexCourse)
     initUndoStack(QStringLiteral("course-%1").arg(dataIndexCourse->id()));
 
     m_currentLessonIndex = -1;
-    m_currentLesson = 0;
+    m_currentLesson = nullptr;
 
     m_course->setAssociatedDataIndexCourse(m_dataIndexCourse);
 
