@@ -120,6 +120,7 @@ Item {
 
             InformationTable {
                 id: profileInfoTable
+                width: parent.width
                 property int trainedLessonCount: profile && profile.id !== -1? profileDataAccess.lessonsTrained(profile): 0
                 property list<InfoItem> infoModel: [
                     InfoItem {
