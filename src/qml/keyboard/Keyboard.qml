@@ -91,6 +91,8 @@ Item {
             KeyItem {
                 keyboardLayout: keyboard.keyboardLayout;
                 keyIndex: index
+                horizontalScaleFactor: keyboard.horizontalScaleFactor
+                verticalScaleFactor: keyboard.verticalScaleFactor
             }
         }
     }

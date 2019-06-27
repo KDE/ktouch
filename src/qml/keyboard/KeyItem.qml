@@ -29,6 +29,8 @@ Item {
     property bool animateHighlight: true
     property bool enabled: true
     property bool pressed: false
+    property real horizontalScaleFactor: 1
+    property real verticalScaleFactor: 1
 
     property AbstractKey key: item.keyboardLayout.key(item.keyIndex)
     property AbstractKey referenceKey: keyboardLayout.referenceKey

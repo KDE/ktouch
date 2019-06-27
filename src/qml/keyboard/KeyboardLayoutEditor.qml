@@ -28,8 +28,6 @@ Item {
     }
 
     property real scaleFactor: Math.pow(2, keyboardLayoutEditor.zoomLevel / 2)
-    property real horizontalScaleFactor: scaleFactor
-    property real verticalScaleFactor: scaleFactor
     property KeyboardLayout layout: keyboardLayoutEditor.keyboardLayout
     property int lastZIndex: 0
 
@@ -69,6 +67,8 @@ Item {
                 isHighlighted: keyItem.key == keyboardLayoutEditor.selectedKey
                 animateHighlight: false
                 opacity: manipulated? 0.7: 1.0
+                horizontalScaleFactor: scaleFactor
+                verticalScaleFactor: scaleFactor
 
                 MouseArea {
                     anchors.fill: parent
