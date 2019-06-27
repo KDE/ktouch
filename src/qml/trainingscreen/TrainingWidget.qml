@@ -202,8 +202,6 @@ FocusScope {
         y: Math.max(height, Math.min(parent.height - 2 * height,
             sheetFlick.mapToItem(parent, 0, cursor.y + 3 * cursor.height - sheetFlick.contentY).y))
 
-        property real horizontalScaleFactor: 1
-        property real verticalScaleFactor: 1
         property Key defaultKey: Key {}
         property KeyboardLayout defaultKeyboardLayout: KeyboardLayout {}
 
