@@ -438,6 +438,7 @@ FocusScope {
 
                     Charts.LegendItem {
                         id: accuracyLegend
+                        textColor: palette.text
                         anchors.verticalCenter: parent.verticalCenter
                         opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
@@ -446,6 +447,7 @@ FocusScope {
                     }
                     Charts.LegendItem {
                         id: charactersPerMinuteLegend
+                        textColor: palette.text
                         anchors.verticalCenter: parent.verticalCenter
                         opacity:  tabGroup.currentTab === learningProgressTab? 1: 0
                         Behavior on opacity {
