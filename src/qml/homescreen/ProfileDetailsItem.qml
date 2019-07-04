@@ -110,9 +110,11 @@ Item {
                         spacing: 20
                         Charts.LegendItem {
                             dimension: learningProgressChart.accuracy
+                            textColor: activePalette.text
                         }
                         Charts.LegendItem {
                             dimension: learningProgressChart.charactersPerMinute
+                            textColor: activePalette.text
                         }
                     }
                 }
