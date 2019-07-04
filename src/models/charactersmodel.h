@@ -32,7 +32,7 @@ class CharactersModel : public QAbstractTableModel
     Q_PROPERTY(KeyboardLayout* keyboardLayout READ keyboardLayout WRITE setKeyboardLayout NOTIFY keyboardLayoutChanged)
     Q_PROPERTY(int keyIndex READ keyIndex WRITE setKeyIndex NOTIFY keyIndexChanged)
 public:
-    explicit CharactersModel(QObject *parent = 0);
+    explicit CharactersModel(QObject *parent = nullptr);
     KeyboardLayout* keyboardLayout() const;
     void setKeyboardLayout(KeyboardLayout* keyboardLayout);
     int keyIndex() const;

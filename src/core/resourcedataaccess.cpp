@@ -306,6 +306,7 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
     target->setTitle(root.firstChildElement(QStringLiteral("title")).text());
     target->setDescription(root.firstChildElement(QStringLiteral("description")).text());
     target->setKeyboardLayoutName(root.firstChildElement(QStringLiteral("keyboardLayout")).text());
+    target->setKind(Course::SequentialCourse);
     target->clearLessons();
 
     for (QDomElement lessonNode = root.firstChildElement(QStringLiteral("lessons")).firstChildElement();

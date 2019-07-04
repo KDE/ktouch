@@ -23,14 +23,13 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 
-find_package(Qt5 5.5 REQUIRED COMPONENTS
+find_package(Qt5 5.9 REQUIRED COMPONENTS
     Gui
     Qml
     Quick
     QuickWidgets
-    Script
+    QuickControls2
     Sql
-    Test
     Widgets
     X11Extras
     Xml
@@ -53,6 +52,7 @@ find_package(KF5 REQUIRED COMPONENTS
     WidgetsAddons
     WindowSystem
     XmlGui
+    IconThemes
 )
 
 option(COMPILE_QML "Precompile QML code" ON)
@@ -65,7 +65,6 @@ ecm_optional_add_subdirectory(data)
 ecm_optional_add_subdirectory(doc)
 ecm_optional_add_subdirectory(src)
 # ecm_optional_add_subdirectory(sounds)
-ecm_optional_add_subdirectory(images)
 ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory

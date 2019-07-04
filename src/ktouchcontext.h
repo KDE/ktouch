@@ -37,19 +37,22 @@ class KTouchContext : public QObject
     Q_OBJECT
     Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName NOTIFY keyboardLayoutNameChanged)
     Q_PROPERTY(DataIndex* globalDataIndex READ dataIndex CONSTANT)
+    Q_PROPERTY(bool keyboardKCMAvailable READ keyboardKCMAvailable CONSTANT)
 public:
     explicit KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject* parent = 0);
     ~KTouchContext();
     QString keyboardLayoutName() const;
     DataIndex* dataIndex();
+    bool keyboardKCMAvailable();
     Q_INVOKABLE void showMenu(int xPos, int yPos);
+    Q_INVOKABLE Lesson* createLesson();
 public slots:
     void showResourceEditor();
+    void showKeyboardKCM();
     bool showCustomLessonDialog(Lesson* lesson, KeyboardLayout* keyboardLayout);
 private slots:
     void showConfigDialog();
     void configureShortcuts();
-    void configureKeyboard();
     void setFullscreen(bool fullscreen);
 signals:
     void keyboardLayoutNameChanged();

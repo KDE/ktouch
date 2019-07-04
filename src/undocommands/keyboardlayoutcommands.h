@@ -29,7 +29,7 @@ class KeyboardLayout;
 class SetKeyboardLayoutTitleCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyboardLayoutTitleCommand(KeyboardLayout* layout, const QString& newTitle, QUndoCommand* parent = 0);
+    explicit SetKeyboardLayoutTitleCommand(KeyboardLayout* layout, const QString& newTitle, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -43,7 +43,7 @@ private:
 class SetKeyboardLayoutNameCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyboardLayoutNameCommand(KeyboardLayout* layout, const QString& newName, QUndoCommand* parent = 0);
+    explicit SetKeyboardLayoutNameCommand(KeyboardLayout* layout, const QString& newName, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -57,7 +57,7 @@ private:
 class SetKeyboardLayoutSizeCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyboardLayoutSizeCommand(KeyboardLayout* layout, const QSize& newSize, QUndoCommand* parent = 0);
+    explicit SetKeyboardLayoutSizeCommand(KeyboardLayout* layout, const QSize& newSize, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -71,8 +71,8 @@ private:
 class AddKeyCommand : public QUndoCommand
 {
 public:
-    AddKeyCommand(KeyboardLayout* layout, AbstractKey* key, QUndoCommand* parent = 0);
-    ~AddKeyCommand();
+    AddKeyCommand(KeyboardLayout* layout, AbstractKey* key, QUndoCommand* parent = nullptr);
+    ~AddKeyCommand() override;
     void undo() override;
     void redo() override;
     int id() const override;
@@ -85,7 +85,7 @@ private:
 class RemoveKeyCommand : public QUndoCommand
 {
 public:
-    RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
+    RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = nullptr);
     ~RemoveKeyCommand();
     void undo() override;
     void redo() override;
@@ -100,7 +100,7 @@ private:
 class SetKeyGeometryCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyGeometryCommand(KeyboardLayout* layout, int keyIndex, const QRect& newRect, QUndoCommand* parent = 0);
+    explicit SetKeyGeometryCommand(KeyboardLayout* layout, int keyIndex, const QRect& newRect, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -115,7 +115,7 @@ private:
 class SetKeyFingerIndexCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyFingerIndexCommand(KeyboardLayout* layout, int keyIndex, int newFingerIndex, QUndoCommand* parent = 0);
+    explicit SetKeyFingerIndexCommand(KeyboardLayout* layout, int keyIndex, int newFingerIndex, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -130,7 +130,7 @@ private:
 class SetKeyHasHapticMarkerCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyHasHapticMarkerCommand(KeyboardLayout* layout, int keyIndex, bool newHasHapticMarker, QUndoCommand* parent = 0);
+    explicit SetKeyHasHapticMarkerCommand(KeyboardLayout* layout, int keyIndex, bool newHasHapticMarker, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -145,7 +145,7 @@ private:
 class AddKeyCharCommand : public QUndoCommand
 {
 public:
-    AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = 0);
+    AddKeyCharCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -158,7 +158,7 @@ private:
 class RemoveKeyCharCommand : public QUndoCommand
 {
 public:
-    RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent = 0);
+    RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent = nullptr);
     ~RemoveKeyCharCommand();
     void undo() override;
     void redo() override;
@@ -174,7 +174,7 @@ private:
 class SetKeyCharValueCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent = 0);
+    explicit SetKeyCharValueCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QChar newValue, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -190,7 +190,7 @@ private:
 class SetKeyCharModifierCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyCharModifierCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, const QString& newModifier, QUndoCommand* parent = 0);
+    explicit SetKeyCharModifierCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, const QString& newModifier, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -206,7 +206,7 @@ private:
 class SetKeyCharPositionCommand : public QUndoCommand
 {
 public:
-    explicit SetKeyCharPositionCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, KeyChar::Position newPosition, QUndoCommand* parent = 0);
+    explicit SetKeyCharPositionCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, KeyChar::Position newPosition, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -222,7 +222,7 @@ private:
 class SetSpecialKeyTypeCommand : public QUndoCommand
 {
 public:
-    explicit SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent = 0);
+    explicit SetSpecialKeyTypeCommand(KeyboardLayout* layout, int keyIndex, SpecialKey::Type newType, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -237,7 +237,7 @@ private:
 class SetSpecialKeyLabelCommand : public QUndoCommand
 {
 public:
-    explicit SetSpecialKeyLabelCommand(KeyboardLayout* layout, int keyIndex, const QString& newLabel, QUndoCommand* parent = 0);
+    explicit SetSpecialKeyLabelCommand(KeyboardLayout* layout, int keyIndex, const QString& newLabel, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;
@@ -252,7 +252,7 @@ private:
 class SetSpecialKeyModifierIdCommand : public QUndoCommand
 {
 public:
-    explicit SetSpecialKeyModifierIdCommand(KeyboardLayout* layout, int keyIndex, const QString& newModifiewId, QUndoCommand* parent = 0);
+    explicit SetSpecialKeyModifierIdCommand(KeyboardLayout* layout, int keyIndex, const QString& newModifiewId, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     int id() const override;

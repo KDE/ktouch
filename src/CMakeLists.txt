@@ -31,7 +31,9 @@ set(ktouch_SRCS
     bindings/utils.cpp
     bindings/stringformatter.cpp
     declarativeitems/griditem.cpp
+    declarativeitems/kcolorschemeproxy.cpp
     declarativeitems/lessonpainter.cpp
+    declarativeitems/lessontexthighlighteritem.cpp
     declarativeitems/preferencesproxy.cpp
     declarativeitems/scalebackgrounditem.cpp
     declarativeitems/traininglinecore.cpp
@@ -83,6 +85,8 @@ set(ktouch_SRCS
     ktouchcontext.cpp
 )
 
+qt5_add_resources(ktouch_imgs_SRCS images/images.qrc)
+
 if (Qt5QuickCompiler_FOUND AND COMPILE_QML)
     qtquick_compiler_add_resources(ktouch_qml_SRCS qml/qml.qrc)
 else ()
@@ -117,7 +121,7 @@ endif (KTOUCH_BUILD_WITH_X11)
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
 
-add_executable(ktouch ${ktouch_SRCS} ${ktouch_qml_SRCS})
+add_executable(ktouch ${ktouch_SRCS} ${ktouch_imgs_SRCS} ${ktouch_qml_SRCS})
 
 set(ktouch_X11_DEPS "")
 
@@ -132,7 +136,7 @@ target_link_libraries(ktouch
         Qt5::Qml
         Qt5::Quick
         Qt5::QuickWidgets
-        Qt5::Script
+        Qt5::QuickControls2
         Qt5::Sql
         Qt5::XmlPatterns
         Qt5::X11Extras
@@ -146,6 +150,7 @@ target_link_libraries(ktouch
         KF5::TextWidgets
         KF5::WindowSystem
         KF5::CoreAddons
+        KF5::IconThemes
         ${ktouch_X11_DEPS}
 )
 

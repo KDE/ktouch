@@ -16,41 +16,31 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import ktouch 1.0
 
-FocusScope {
+import '../common'
 
+PopupDialog {
     id: root
+    modal: true
+    title: i18n("Welcome to Typewriting Trainer")
+    closePolicy: PopupDialog.NoAutoClose
+    padding: 20
 
     function save() {
         var profile = profileDataAccess.createProfile()
         profile.name = form.name
         profile.skillLevel = form.skillLevel
         profileDataAccess.addProfile(profile)
+        close()
     }
 
-    GroupBox  {
-        id: frame
-        anchors.centerIn: parent
-        title: i18n("Welcome to Typewriting Trainer")
-        width: form.width + 150
-        height: form.height + 80
-
-        Item {
-            id: content
-            anchors.fill: parent
-
-            ProfileForm {
-                id: form
-                width: 400
-                anchors.centerIn: parent
-                doneButtonIconSource: "go-next-view"
-                doneButtonText: i18n("Start Training")
-                onDone: save()
-            }
-        }
+    contentItem: ProfileForm {
+        id: form
+        doneButtonIconSource: "go-next-view"
+        doneButtonText: i18n("Start Training")
+        onDone: save()
     }
 }

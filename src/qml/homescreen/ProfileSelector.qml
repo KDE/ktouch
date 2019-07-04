@@ -1,6 +1,7 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
  *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -16,9 +17,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import ktouch 1.0
 
 import "../common"
@@ -38,52 +38,61 @@ FocusScope {
         profileForm.profile = profileDataAccess.profile(index)
     }
 
+    KColorScheme {
+        id: listColorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
     ColumnLayout {
         anchors.fill: parent
-        anchors.bottomMargin: 10
-        spacing: 10
+        anchors.margins: 20
+        spacing: 20
 
         RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            spacing: 10
+            spacing: 20
 
-            Item {
-                id: listContainer
+            ListView {
+                id: list
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-
-                ScrollView {
-                    anchors.fill: parent
-                    ListView {
-                        id: list
-                        anchors.fill: parent
-                        anchors.margins: 3
-                        spacing: 3
-                        model: profileDataAccess.profileCount + 1
-                        clip: true
-                        delegate: ListItem {
-                            property bool isNewButton: index >= profileDataAccess.profileCount
-                            width: list.width
-                            title: isNewButton?
-                                    i18n("Create New Profile"):
-                                    index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
-                            label.font.italic: isNewButton
-                            iconSource: isNewButton? "list-add": "user-identity"
-                            onClicked: {
-                                list.currentIndex = index
-                                if (isNewButton) {
-                                    createNewProfile()
-                                }
-                                else {
-                                    selectProfile(index)
-                                }
-                            }
-                            onDoubleClicked: {
-                                if (!isNewButton) {
-                                    root.profileChosen(profileDataAccess.profile(list.currentIndex))
-                                }
-                            }
+                model: profileDataAccess.profileCount + 1
+                clip: true
+                focus: true
+                delegate: ListItem {
+                    property bool isNewButton: index >= profileDataAccess.profileCount
+                    width: list.width
+                    text: isNewButton?
+                            i18n("Create New Profile"):
+                            index < profileDataAccess.profileCount? profileDataAccess.profile(index).name: null
+                    label.font.italic: isNewButton
+                    iconName: isNewButton? "list-add": "user-identity"
+                    highlighted: ListView.isCurrentItem
+                    onClicked: {
+                        list.forceActiveFocus()
+                        list.currentIndex = index
+                        if (isNewButton) {
+                            createNewProfile()
+                        }
+                        else {
+                            selectProfile(index)
+                        }
+                    }
+                    onDoubleClicked: {
+                        if (!isNewButton) {
+                            root.profileChosen(profileDataAccess.profile(list.currentIndex))
+                        }
+                    }
+                }
+                onCurrentItemChanged: {
+                    if (currentItem != null) {
+                        if (currentItem.isNewButton) {
+                            createNewProfile()
+                        }
+                        else {
+                            selectProfile(currentIndex)
                         }
                     }
                 }
@@ -103,12 +112,13 @@ FocusScope {
             }
         }
 
-        Button {
+        IconButton {
             id: selectButton
-            anchors.horizontalCenter: parent.horizontalCenter
+            Layout.fillWidth: true
             iconName: "go-next-view"
             text: i18n("Use Selected Profile")
             enabled: list.currentIndex !== -1 && list.currentIndex < profileDataAccess.profileCount
+            bgColor: colorScheme.positiveBackground
             onClicked: root.profileChosen(profileDataAccess.profile(list.currentIndex))
         }
     }

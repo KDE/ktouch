@@ -38,6 +38,7 @@ public:
     void setFingerIndex(int finger);
     bool hasHapticMarker() const;
     void setHasHapticMarker(bool hasHapticMarker);
+    const QList<KeyChar*>& keyChars() const;
     int keyCharCount() const;
     Q_INVOKABLE KeyChar* keyChar(int index) const;
     Q_INVOKABLE void addKeyChar(KeyChar* keyChar);

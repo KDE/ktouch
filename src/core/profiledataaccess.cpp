@@ -623,7 +623,7 @@ bool ProfileDataAccess::loadCustomLessons(Profile* profile, const QString& keybo
     if (!query.isActive())
         return false;
 
-    target->setDoSyncLessonCharacters(false);
+    target->setKind(Course::LessonCollection);
     target->setId(QStringLiteral("custom_lessons"));
     target->setTitle(i18n("Custom Lessons"));
     target->setDescription(i18n("A place to store personal lesson texts"));

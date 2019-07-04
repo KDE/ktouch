@@ -16,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 
 RowLayout {
     id: meter
@@ -43,7 +43,7 @@ RowLayout {
             right:6
             bottom: 6
         }
-        source: utils.findImage("meterbox-left.png")
+        source: "qrc:///ktouch/images/meterbox-left.png"
     }
 
     BorderImage {
@@ -56,7 +56,7 @@ RowLayout {
             right:6
             bottom: 6
         }
-        source: utils.findImage("meterbox-right.png")
+        source: "qrc:///ktouch/images/meterbox-right.png"
 
         Column {
             anchors {

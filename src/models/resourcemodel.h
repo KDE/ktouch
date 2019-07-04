@@ -47,7 +47,7 @@ public:
         SourceRole
     };
     Q_ENUM(AdditionalRoles)
-    explicit ResourceModel( QObject* parent = 0);
+    explicit ResourceModel( QObject* parent = nullptr);
     DataIndex* dataIndex() const;
     void setDataIndex(DataIndex* dataIndex);
     Qt::ItemFlags flags(const QModelIndex& index) const override;

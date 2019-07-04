@@ -24,7 +24,7 @@ class KeyboardLayoutEditorView : public QQuickWidget
 {
     Q_OBJECT
 public:
-    explicit KeyboardLayoutEditorView(QWidget* parent = 0);
+    explicit KeyboardLayoutEditorView(QWidget* parent = nullptr);
 signals:
     void clicked();
 protected:

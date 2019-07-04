@@ -18,9 +18,11 @@
 #include "application.h"
 
 #include <QDir>
+#include <QIcon>
 #include <QFile>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 #include <QStandardPaths>
 
 #include <Kdelibs4ConfigMigrator>
@@ -30,7 +32,9 @@
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
 #include "declarativeitems/griditem.h"
+#include "declarativeitems/kcolorschemeproxy.h"
 #include "declarativeitems/lessonpainter.h"
+#include "declarativeitems/lessontexthighlighteritem.h"
 #include "declarativeitems/preferencesproxy.h"
 #include "declarativeitems/scalebackgrounditem.h"
 #include "declarativeitems/traininglinecore.h"
@@ -59,6 +63,9 @@ Application::Application(int& argc, char** argv, int flags):
     registerQmlTypes();
     migrateKde4Files();
 
+    QIcon::setThemeName("breeze");
+    QQuickStyle::setStyle("Default");
+
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
 }
@@ -81,7 +88,8 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 {
     KDeclarative::KDeclarative kDeclarative;
     kDeclarative.setDeclarativeEngine(qmlEngine);
-    kDeclarative.setupBindings();
+    kDeclarative.setupContext();
+    kDeclarative.setupEngine(qmlEngine);
 
     Application* app = static_cast<Application*>(Application::instance());
     foreach (const QString& path, app->m_qmlImportPaths)
@@ -124,10 +132,12 @@ void Application::registerQmlTypes()
     qmlRegisterType<LearningProgressModel>("ktouch", 1, 0, "LearningProgressModel");
     qmlRegisterType<ErrorsModel>("ktouch", 1, 0, "ErrorsModel");
 
-    qmlRegisterType<GridItem>("ktouch", 1, 0 , "Grid");
+    qmlRegisterType<GridItem>("ktouch", 1, 0 , "LineGrid");
     qmlRegisterType<ScaleBackgroundItem>("ktouch", 1, 0, "ScaleBackgroundItem");
     qmlRegisterType<LessonPainter>("ktouch", 1, 0, "LessonPainter");
+    qmlRegisterType<LessonTextHighlighterItem>("ktouch", 1, 0, "LessonTextHighlighter");
     qmlRegisterType<TrainingLineCore>("ktouch", 1, 0, "TrainingLineCore");
+    qmlRegisterType<KColorSchemeProxy>("ktouch", 1, 0, "KColorScheme");
 }
 
 void Application::migrateKde4Files()

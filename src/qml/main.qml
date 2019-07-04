@@ -16,7 +16,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import ktouch 1.0
 
 import "./common"
@@ -26,18 +26,20 @@ import "./trainingscreen"
 import "./scorescreen"
 
 Rectangle {
-    SystemPalette {
-        id: activePallete
-        colorGroup: SystemPalette.Active
-    }
-
     id: main
-    color: activePallete.window
+    color: activePallete.normalBackground
+    property Item appContent: appContentItem
 
     function switchScreen(from, to) {
         switchScreenAnimation.from = from
         switchScreenAnimation.to = to
         switchScreenAnimation.start()
+    }
+
+    KColorScheme {
+        id: activePallete
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     DataAccess {
@@ -50,11 +52,11 @@ Rectangle {
         property int keyboardLayoutCount: ktouch.globalDataIndex.keyboardLayoutCount
         property int courseCount: ktouch.globalDataIndex.courseCount
         onNameChanged: {
-            keyboardLayout.update()
+            activeKeyboardLayout.update()
         }
         onKeyboardLayoutCountChanged: {
             if (ktouch.globalDataIndex.isValid)
-                keyboardLayout.update()
+                activeKeyboardLayout.update()
         }
     }
 
@@ -72,11 +74,11 @@ Rectangle {
     }
 
     KeyboardLayout {
-        id: keyboardLayout
+        id: activeKeyboardLayout
 
         Component.onCompleted: {
             if (ktouch.globalDataIndex.isValid) {
-                keyboardLayout.update()
+                activeKeyboardLayout.update()
             }
         }
 
@@ -91,7 +93,7 @@ Rectangle {
                 var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (dataIndexLayout.name === name) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, activeKeyboardLayout)
                     return
                 }
             }
@@ -103,18 +105,11 @@ Rectangle {
                 var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
 
                 if (name.search(dataIndexLayout.name) === 0) {
-                    dataAccess.loadKeyboardLayout(dataIndexLayout, keyboardLayout)
+                    dataAccess.loadKeyboardLayout(dataIndexLayout, activeKeyboardLayout)
                     return
                 }
             }
         }
-    }
-
-    CategorizedResourceSortFilterProxyModel {
-        id: availableCourseModel
-        resourceModel: resourceModel
-        resourceTypeFilter: ResourceModel.CourseItem
-        keyboardLayoutNameFilter: keyboardLayout.isValid? keyboardLayout.name: ktouch.keyboardLayoutName
     }
 
     Course {
@@ -126,67 +121,72 @@ Rectangle {
         id: customLessonCopy
     }
 
-    HomeScreen {
-        id: homeScreen
+    Item {
         anchors.fill: parent
-        courseModel: availableCourseModel
-        keyboardLayout: keyboardLayout
-        keyboardLayoutName: keyboardLayout.isValid? keyboardLayout.name: helper.name
-        visible: false
-        focus: true
-        onLessonSelected: {
-            trainingScreen.profile = profile
-            var lessonIndex = -1;
-            for (var i = 0; i < course.lessonCount; i++) {
-                if (lesson === course.lesson(i)) {
-                    lessonIndex = i
-                    break
+        id: appContentItem
+        layer.enabled: true
+
+        HomeScreen {
+            id: homeScreen
+            anchors.fill: parent
+            activeKeyboardLayoutName: activeKeyboardLayout.isValid? activeKeyboardLayout.name: helper.name
+            visible: false
+            focus: true
+            onLessonSelected: {
+                trainingScreen.profile = profile
+                var lessonIndex = -1;
+                for (var i = 0; i < course.lessonCount; i++) {
+                    if (lesson === course.lesson(i)) {
+                        lessonIndex = i
+                        break
+                    }
                 }
-            }
-            selectedCourse.copyFrom(course)
+                selectedCourse.copyFrom(course)
 
-            if (lessonIndex !== -1) {
-                selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
-            }
-            else {
-                customLessonCopy.copyFrom(lesson)
-                selectedCourse.selectedLesson = customLessonCopy
-            }
+                if (lessonIndex !== -1) {
+                    selectedCourse.selectedLesson = selectedCourse.lesson(lessonIndex)
+                }
+                else {
+                    customLessonCopy.copyFrom(lesson)
+                    selectedCourse.selectedLesson = customLessonCopy
+                }
 
-            main.switchScreen(homeScreen, trainingScreen)
+                main.switchScreen(homeScreen, trainingScreen)
+            }
+            Component.onCompleted: {
+                homeScreen.reset()
+                homeScreen.visible = true
+                homeScreen.start()
+            }
         }
-        Component.onCompleted: {
-            homeScreen.reset()
-            homeScreen.visible = true
+
+        TrainingScreen {
+            id: trainingScreen
+            anchors.fill: parent
+            visible: false
+            keyboardLayout: homeScreen.selectedKeyboardLayout
+            course: selectedCourse
+            lesson: selectedCourse.selectedLesson
+            onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
+            onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
+            onFinished: main.switchScreen(trainingScreen, scoreScreen)
         }
-    }
 
-    TrainingScreen {
-        id: trainingScreen
-        anchors.fill: parent
-        visible: false
-        keyboardLayout: keyboardLayout
-        course: selectedCourse
-        lesson: selectedCourse.selectedLesson
-        onRestartRequested: main.switchScreen(trainingScreen, trainingScreen)
-        onAbortRequested: main.switchScreen(trainingScreen, homeScreen)
-        onFinished: main.switchScreen(trainingScreen, scoreScreen)
-    }
-
-    ScoreScreen {
-        id: scoreScreen
-        anchors.fill: parent
-        visible: false
-        course: trainingScreen.course
-        lesson: trainingScreen.lesson
-        stats: trainingScreen.stats
-        profile: trainingScreen.profile
-        referenceStats: trainingScreen.referenceStats
-        onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
-        onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
-        onNextLessonRequested: {
-            selectedCourse.selectedLesson = lesson
-            main.switchScreen(scoreScreen, trainingScreen)
+        ScoreScreen {
+            id: scoreScreen
+            anchors.fill: parent
+            visible: false
+            course: trainingScreen.course
+            lesson: trainingScreen.lesson
+            stats: trainingScreen.stats
+            profile: trainingScreen.profile
+            referenceStats: trainingScreen.referenceStats
+            onHomeScreenRequested: main.switchScreen(scoreScreen, homeScreen)
+            onLessonRepetionRequested: main.switchScreen(scoreScreen, trainingScreen)
+            onNextLessonRequested: {
+                selectedCourse.selectedLesson = lesson
+                main.switchScreen(scoreScreen, trainingScreen)
+            }
         }
     }
 

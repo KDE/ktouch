@@ -27,7 +27,7 @@ class Lesson;
 class SetCourseTitleCommand: public QUndoCommand
 {
 public:
-    SetCourseTitleCommand(Course* course, const QString& oldTitle, QUndoCommand* parent = 0);
+    SetCourseTitleCommand(Course* course, const QString& oldTitle, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -41,7 +41,7 @@ private:
 class SetCourseKeyboadLayoutNameCommand: public QUndoCommand
 {
 public:
-    SetCourseKeyboadLayoutNameCommand(Course* course, const QString& oldKeyboardLayoutName, QUndoCommand* parent = 0);
+    SetCourseKeyboadLayoutNameCommand(Course* course, const QString& oldKeyboardLayoutName, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -55,7 +55,7 @@ private:
 class SetCourseDescriptionCommand: public QUndoCommand
 {
 public:
-    SetCourseDescriptionCommand(Course* course, const QString& oldDescription, QUndoCommand* parent = 0);
+    SetCourseDescriptionCommand(Course* course, const QString& oldDescription, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -69,7 +69,7 @@ private:
 class AddLessonCommand: public QUndoCommand
 {
 public:
-    AddLessonCommand(Course* course, int lessonIndex, const QString& lessonTitle, QUndoCommand* parent = 0);
+    AddLessonCommand(Course* course, int lessonIndex, const QString& lessonTitle, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -83,7 +83,7 @@ private:
 class RemoveLessonCommand: public QUndoCommand
 {
 public:
-    RemoveLessonCommand(Course* course, int lessonIndex, QUndoCommand* parent = 0);
+    RemoveLessonCommand(Course* course, int lessonIndex, QUndoCommand* parent = nullptr);
     virtual ~RemoveLessonCommand();
     void undo() override;
     void redo() override;
@@ -98,7 +98,7 @@ private:
 class MoveLessonCommand: public QUndoCommand
 {
 public:
-    MoveLessonCommand(Course* course, int oldLessonIndex, int newLessonIndex, QUndoCommand* parent = 0);
+    MoveLessonCommand(Course* course, int oldLessonIndex, int newLessonIndex, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -127,7 +127,7 @@ private:
 class SetLessonNewCharactersCommand: public QUndoCommand
 {
 public:
-    SetLessonNewCharactersCommand(Course* course, int lessonIndex, const QString& oldNewCharacters, QUndoCommand* parent = 0);
+    SetLessonNewCharactersCommand(Course* course, int lessonIndex, const QString& oldNewCharacters, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;
@@ -142,7 +142,7 @@ private:
 class SetLessonTextCommand: public QUndoCommand
 {
 public:
-    SetLessonTextCommand(Course* course, int lessonIndex, const QString& oldText, QUndoCommand* parent = 0);
+    SetLessonTextCommand(Course* course, int lessonIndex, const QString& oldText, QUndoCommand* parent = nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;

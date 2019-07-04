@@ -16,52 +16,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
-import org.kde.kquickcontrolsaddons 2.0
 import ktouch 1.0
 
+import '../common'
 
 Item {
     id: root
 
-    width: content.width + 40
-    height: content.height + 40
+    width: content.width
+    height: content.height
 
-    property alias blurSource: effectSource.sourceItem
+    property color glowColor: "#ffffff"
 
-    SystemPalette {
+    KColorScheme {
         id: palette
-        colorGroup: SystemPalette.Active
-    }
-
-    ShaderEffectSource {
-        id: effectSource
-        anchors.fill: parent
-        hideSource: false
-        sourceRect: Qt.rect(root.x, root.y, root.width, root.height)
-    }
-
-    FastBlur {
-        anchors.fill: parent
-        source: effectSource
-        radius: 25
-    }
-
-    Rectangle {
-        id: background
-        anchors.fill: parent
-        color: palette.base
-        opacity: 0.3
-        radius: 15
-    }
-
-    Behavior on opacity {
-        NumberAnimation {
-            duration: 200
-        }
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Window
     }
 
     Column {
@@ -71,7 +44,7 @@ Item {
         width: Math.max(icon.width, text.width)
         spacing: 10
 
-        QIconItem {
+        Icon {
             id: icon
             anchors.horizontalCenter: parent.horizontalCenter
             icon: "object-locked"
@@ -79,13 +52,28 @@ Item {
             height: 128
         }
 
-        Label {
-            id: text
-            text: i18n("Complete Previous Lessons to Unlock")
+        Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.AlignHCenter
-            font.weight: Font.Bold
-            wrapMode: Text.Wrap
+            width: text.width + 2 * text.font.pixelSize
+            height: text.height + text.font.pixelSize
+            radius: text.font.pixelSize
+            color: palette.neutralBackground
+
+            Label {
+                anchors.centerIn: parent
+                id: text
+                text: i18n("Complete Previous Lessons to Unlock")
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Bold
+                wrapMode: Text.Wrap
+            }
         }
+    }
+
+    Glow {
+        anchors.fill: content
+        source: content
+        color: root.glowColor
+        samples: 25
     }
 }

@@ -25,7 +25,7 @@
 Course::Course(QObject *parent) :
     CourseBase(parent),
     m_associatedDataIndexCourse(0),
-    m_doSyncLessonCharacters(true),
+    m_kind(Course::SequentialCourse),
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(updateLessonCharacters(int)));
@@ -45,17 +45,17 @@ void Course::setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse)
     }
 }
 
-bool Course::doSyncLessonCharacters() const
+Course::Kind Course::kind() const
 {
-    return m_doSyncLessonCharacters;
+    return m_kind;
 }
 
-void Course::setDoSyncLessonCharacters(bool doSync)
+void Course::setKind(Kind kind)
 {
-    if (doSync != m_doSyncLessonCharacters)
+    if (kind != m_kind)
     {
-        m_doSyncLessonCharacters = doSync;
-        emit doSyncLessonCharactersChanged();
+        m_kind = kind;
+        emit kindChanged();
     }
 }
 
@@ -148,6 +148,11 @@ void Course::removeLesson(int index)
     emit lessonsRemoved();
 }
 
+int Course::indexOfLesson(Lesson* lesson)
+{
+    return m_lessons.indexOf(lesson);
+}
+
 void Course::clearLessons()
 {
     if (m_lessons.count() == 0)
@@ -167,7 +172,7 @@ void Course::copyFrom(Course* source)
     setTitle(source->title());
     setDescription(source->description());
     setKeyboardLayoutName(source->keyboardLayoutName());
-    setDoSyncLessonCharacters(source->doSyncLessonCharacters());
+    setKind(source->kind());
     clearLessons();
     for (int i = 0; i < source->lessonCount(); i++)
     {
@@ -180,8 +185,10 @@ void Course::copyFrom(Course* source)
 
 void Course::updateLessonCharacters(int firstIndex)
 {
-    if (!m_doSyncLessonCharacters)
+    if (m_kind == Course::LessonCollection)
+    {
         return;
+    }
 
     QString characters = firstIndex > 0? lesson(firstIndex - 1)->characters(): QLatin1String("");
 

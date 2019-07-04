@@ -1,6 +1,5 @@
 /*
- *  Copyright 2013  Sebastian Gottfried <sebastiangottfried@web.de>
- *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2018  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -16,11 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.5
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import ktouch 1.0
 
+import "../common"
 import "../keyboard"
 import "../meters"
 
@@ -112,6 +111,12 @@ FocusScope {
         }
     }
 
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.Complementary
+    }
+
     TrainingStats {
         id: stats
         onTimeIsRunningChanged: {
@@ -129,14 +134,10 @@ FocusScope {
         sequence: "Escape"
         enabled: screen.visible
         onActivated: {
-            if (menuOverlay.active) {
-                menuOverlay.hide()
-            }
-            else {
-                menuOverlay.show()
+            if (!menu.visible) {
+                menu.open()
             }
         }
-
     }
 
 
@@ -152,7 +153,7 @@ FocusScope {
                 bottom: 1
             }
             cache: false
-            source: utils.findImage("trainingscreen-toolbar.png")
+            source: "qrc:///ktouch/images/trainingscreen-toolbar.png"
             horizontalTileMode: BorderImage.Repeat
             verticalTileMode: BorderImage.Repeat
 
@@ -162,7 +163,7 @@ FocusScope {
                 trainingStarted: screen.trainingStarted
                 trainingFinished: screen.trainingFinished
                 stats: stats
-                menuOverlayItem: menuOverlay
+                menu: menu
             }
         }
 
@@ -175,7 +176,7 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-header.png")
+            source: "qrc:///ktouch/images/trainingscreen-header.png"
             cache: false
 
             StatBox {
@@ -195,7 +196,7 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-viewport.png")
+            source: "qrc:///ktouch/images/trainingscreen-viewport.png"
             cache: false
 
             TrainingWidget {
@@ -222,7 +223,7 @@ FocusScope {
                     top: 3
                     bottom: 3
                 }
-                source: utils.findImage("trainingscreen-viewport-shadow.png")
+                source: "qrc:///ktouch/images/trainingscreen-viewport-shadow.png"
                 cache: false
 
             }
@@ -242,8 +243,9 @@ FocusScope {
                 top: 1
                 bottom: 1
             }
-            source: utils.findImage("trainingscreen-footer.png")
+            source: "qrc:///ktouch/images/trainingscreen-footer.png"
             cache: false
+
             Keyboard {
                 id: keyboard
 
@@ -310,7 +312,9 @@ FocusScope {
 
             KeyboardUnavailableNotice {
                 id: keyboardUnavailableNotice
+                colorScheme: colorScheme
                 visible: !screen.keyboardLayout.isValid
+                width: parent.width
             }
         }
     }
@@ -320,10 +324,8 @@ FocusScope {
         anchors.fill: parent
     }
 
-    TrainingScreenMenuOverlay {
-        id: menuOverlay
-        blurSource: screenContent
-        anchors.fill: parent
+    TrainingScreenMenu {
+        id: menu
         onClosed: trainingWidget.forceActiveFocus()
         onRestartRequested: screen.restartRequested()
         onAbortRequested: screen.abortRequested()

@@ -16,69 +16,35 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
 import ktouch 1.0
 
-Rectangle {
+import "../common"
+
+Collapsable {
     id: root
 
     property string description
-    property bool active: false
-
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
-    }
-
-    height: active || content.opacity > 0? content.height: 0
-    visible: height > 0
-    color: palette.base
-
-    Behavior on height {
-        NumberAnimation {
-            duration: 150
-            easing.type: Easing.InOutQuad
-        }
-    }
 
     onDescriptionChanged: {
-        if (content.opacity === 0) {
+        if (contentItem.opacity === 0) {
             descriptionLabel.text = description
         }
         else {
-            content.needsUpdate = true
+            swapContent()
         }
     }
 
-    Item {
-        id: content
+    onContentReadyForSwap: {
+        descriptionLabel.text = description
+    }
 
-        property bool needsUpdate: false
-
-        width: parent.width
-        height: descriptionLabel.height + 6
-        opacity: root.active && !content.needsUpdate && root.height === root.childrenRect.height? 1: 0
-
-        Behavior on opacity {
-            NumberAnimation {
-                duration: 150
-            }
-        }
-
-        onOpacityChanged: {
-            if (needsUpdate && opacity === 0) {
-                descriptionLabel.text = root.description
-                needsUpdate = false
-            }
-        }
-
-        Label {
-            id: descriptionLabel
-            anchors.centerIn: parent
-            width: parent.width - 10
-        }
+    Label {
+        id: descriptionLabel
+        leftPadding: 20
+        rightPadding: 20
+        topPadding: 10
+        bottomPadding: 10
     }
 
 }

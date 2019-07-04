@@ -28,10 +28,10 @@
 
 CharactersModel::CharactersModel(QObject *parent) :
     QAbstractTableModel(parent),
-    m_keyboardLayout(0),
+    m_keyboardLayout(nullptr),
     m_keyIndex(-1),
-    m_key(0),
-    m_undoStack(0),
+    m_key(nullptr),
+    m_undoStack(nullptr),
     m_signalMapper(new QSignalMapper(this))
 {
     connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitCharacterChanged(int)));
@@ -62,7 +62,7 @@ void CharactersModel::setKeyIndex(int keyIndex)
     if (!m_keyboardLayout)
         return;
 
-    Key* key = 0;
+    Key* key = nullptr;
 
     if (keyIndex != -1)
     {
@@ -168,7 +168,7 @@ bool CharactersModel::setData(const QModelIndex& index, const QVariant& value, i
         return false;
 
     KeyChar* keyChar = m_key->keyChar(index.row());
-    QUndoCommand* cmd = 0;
+    QUndoCommand* cmd = nullptr;
 
     switch (index.column())
     {
@@ -279,7 +279,6 @@ QVariant CharactersModel::characterData(KeyChar* keyChar, int role) const
     case Qt::DisplayRole:
     case Qt::EditRole:
         return keyChar->value();
-        return keyChar->value();
     default:
         return QVariant();
     }
@@ -315,6 +314,7 @@ QVariant CharactersModel::positionData(KeyChar *keyChar, int role) const
         case KeyChar::Hidden:
             return i18n("Hidden");
         }
+        return QVariant();
     case Qt::EditRole:
         return QVariant(keyChar->position());
     default:

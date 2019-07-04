@@ -34,7 +34,7 @@ class LearningProgressModel : public QSqlQueryModel
     Q_PROPERTY(int maxCharactersTypedPerMinute READ maxCharactersTypedPerMinute NOTIFY maxCharactersTypedPerMinuteChanged)
     Q_PROPERTY(qreal minAccuracy READ minAccuracy NOTIFY minAccuracyChanged)
 public:
-    explicit LearningProgressModel(QObject* parent = 0);
+    explicit LearningProgressModel(QObject* parent = nullptr);
     Profile* profile() const;
     void setProfile(Profile* profile);
     Course* courseFilter() const;
@@ -45,6 +45,7 @@ public:
     qreal minAccuracy() const;
     int columnCount(const QModelIndex& parent = QModelIndex()) const override;
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
+    Q_INVOKABLE QDateTime date(int row) const;
     Q_INVOKABLE int charactersPerMinute(int row) const;
     Q_INVOKABLE int charactersTyped(int row) const;
     Q_INVOKABLE int errorCount(int row) const;

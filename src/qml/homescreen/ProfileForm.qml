@@ -16,14 +16,13 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import ktouch 1.0
 
 import "../common"
 
-Column {
+ColumnLayout {
     id: root
 
     property alias name: nameTextField.text
@@ -31,7 +30,7 @@ Column {
 
     property bool skillLevelSelectionEnabled: true
     property alias showWelcomeLabel: welcomeLabel.visible
-    property alias doneButtonIconSource: doneBtn.iconSource
+    property alias doneButtonIconSource: doneBtn.iconName
     property alias doneButtonText: doneBtn.text
     signal done()
 
@@ -44,50 +43,73 @@ Column {
 
     Label {
         id: welcomeLabel
-        width: parent.width
+        Layout.fillWidth: true
+        Layout.preferredWidth: 500
         text: i18n("Before you start training, please introduce yourself:")
     }
 
     TextField {
         id: nameTextField
-        width: parent.width
+        Layout.fillWidth: true
         placeholderText: i18n("Name")
     }
 
-    DetailedRadioButton {
+    RadioButton {
         id: beginnerRadioButton
-        width: parent.width
+        Layout.maximumWidth: parent.width
         enabled: root.skillLevelSelectionEnabled
-        label: i18n("I have no or only very little experience in machine typing")
-        hint: i18n("Lessons are unlocked as your typing skills improve over time.")
+        text: i18n("I have no or only very little experience in machine typing")
+        label.wrapMode: Text.Wrap
         onCheckedChanged: {
             if (checked) {
                 root.skillLevel = Profile.Beginner
-                advancedRadioButton.checked = false
             }
         }
     }
 
-    DetailedRadioButton {
-        id: advancedRadioButton
-        width: parent.width
+    Label {
+        text: i18n("Lessons are unlocked as your typing skills improve over time.")
+        wrapMode: Text.Wrap
+        Layout.maximumWidth: parent.width
+        leftPadding: font.pixelSize * 2
+        font.italic: true
         enabled: root.skillLevelSelectionEnabled
-        label: i18n("I am an experienced machine typist and want to improve my skills")
-        hint: i18n("All lessons are unlocked immediately.")
+    }
+
+    RadioButton {
+        id: advancedRadioButton
+        Layout.maximumWidth: parent.width
+        enabled: root.skillLevelSelectionEnabled
+        text: i18n("I am an experienced machine typist and want to improve my skills")
+        label.wrapMode: Text.Wrap
         onCheckedChanged: {
             if (checked) {
                 root.skillLevel = Profile.Advanced
-                beginnerRadioButton.checked = false
             }
         }
     }
 
-    Button {
-        id: doneBtn
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: i18n("Done")
-        enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
-        iconName: "dialog-ok"
-        onClicked: done()
+    Label {
+        text: i18n("All lessons are unlocked immediately.")
+        wrapMode: Text.Wrap
+        Layout.maximumWidth: parent.width
+        leftPadding: font.pixelSize * 2
+        font.italic: true
+        enabled: root.skillLevelSelectionEnabled
+    }
+
+    Item {
+        Layout.fillWidth: true
+        Layout.preferredHeight: doneBtn.implicitHeight
+
+        IconButton {
+            id: doneBtn
+            anchors.horizontalCenter: parent.horizontalCenter
+            bgColor: colorScheme.positiveBackground
+            text: i18n("Done")
+            enabled: nameTextField.text !== "" && (beginnerRadioButton.checked || advancedRadioButton.checked)
+            iconName: "dialog-ok"
+            onClicked: done()
+        }
     }
 }

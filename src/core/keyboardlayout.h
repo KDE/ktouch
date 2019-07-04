@@ -56,6 +56,7 @@ public:
     Q_INVOKABLE void clearKeys();
     AbstractKey* referenceKey();
     Q_INVOKABLE void copyFrom(KeyboardLayout* source);
+    Q_INVOKABLE QString allCharacters() const;
 
     QSize size() const;
     void setSize(const QSize& size);

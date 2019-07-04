@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/ktouch/images">
+        <file>accuracymeter-background.png</file>
+        <file>accuracymeter-hand.png</file>
+        <file>accuracymeter-scale.png</file>
+        <file>meterbox-left.png</file>
+        <file>meterbox-right.png</file>
+        <file>statusled.svgz</file>
+        <file>trainingscreen-footer.png</file>
+        <file>trainingscreen-header.png</file>
+        <file>trainingscreen-toolbar.png</file>
+        <file>trainingscreen-viewport-shadow.png</file>
+        <file>trainingscreen-viewport.png</file>
+        <file>balloontip.svgz</file>
+        <file>charactersperminutemeter-background.png</file>
+        <file>charactersperminutemeter-hand.png</file>
+        <file>charactersperminutemeter-scale.png</file>
+        <file>elapsedtimemeter-background.png</file>
+        <file>elapsedtimemeter-background@2x.png</file>
+        <file>elapsedtimemeter-minute-hand.png</file>
+        <file>elapsedtimemeter-second-hand.png</file>
+        <file>elapsedtimemeter-minute-hand@2x.png</file>
+        <file>elapsedtimemeter-second-hand@2x.png</file>
+        <file>images.qrc</file>
+        <file>meterbox-left@2x.png</file>
+        <file>meterbox-right@2x.png</file>
+        <file>accuracymeter-background@2x.png</file>
+        <file>accuracymeter-hand@2x.png</file>
+        <file>accuracymeter-scale@2x.png</file>
+        <file>charactersperminutemeter-background@2x.png</file>
+        <file>charactersperminutemeter-scale@2x.png</file>
+    </qresource>
+</RCC>

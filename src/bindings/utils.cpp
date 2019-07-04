@@ -17,6 +17,7 @@
 
 #include "utils.h"
 
+#include <QColor>
 #include <QTime>
 #include <QUuid>
 #include <QtDebug>
@@ -25,20 +26,6 @@
 Utils::Utils(QObject* parent):
     QObject(parent)
 {
-}
-
-QUrl Utils::findImage(const QString &name)
-{
-    const QString relPath = QStringLiteral("images/") + name;
-    const QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
-
-    if (path.isNull())
-    {
-        qWarning() << "can't find image resource:" << name;
-        return QUrl();
-    }
-
-    return QUrl::fromLocalFile(path);
 }
 
 int Utils::getMinutesOfQTime(const QTime& time)
@@ -66,4 +53,11 @@ int Utils::getSecondsOfQTime(const QTime& time)
 QString Utils::uuid()
 {
     return QUuid::createUuid().toString();
+}
+
+QColor Utils::alpha(const QColor& color, float alpha)
+{
+    auto result = QColor(color);
+    result.setAlphaF(alpha * result.alphaF());
+    return result;
 }

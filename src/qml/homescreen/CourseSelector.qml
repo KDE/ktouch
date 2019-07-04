@@ -16,20 +16,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2 as Controls
 import ktouch 1.0
 
-Item {
+import "../common"
+
+FocusScope {
     id: root
 
-    property CategorizedResourceSortFilterProxyModel courseModel
     property Profile profile
-    property KeyboardLayout keyboardLayout
-    property string keyboardLayoutName
+    property string currentKeyboardLayoutName
+    property string selectedKeyboardLayoutName
+    property DataIndexKeyboardLayout selectedKeyboardLayout
+    property DataIndexCourse selectedCourse
 
     signal lessonSelected(variant course, variant lesson)
+    signal courseSelectec(Course course)
 
     function selectLastUsedCourse() {
         if (!profile) {
@@ -38,181 +42,151 @@ Item {
 
         var courseId = profile.lastUsedCourseId;
 
-        if (courseId === "custom_lessons") {
-            selectCourse(courseRepeater.count, true)
-            return
-        }
-
-        for (var i = 0; i < courseModel.rowCount(); i++) {
-            var dataIndexCourse = courseModel.data(courseModel.index(i, 0), ResourceModel.DataRole);
+        // fist try to to select the course the user has used last
+        for (var i = 0; i < allCoursesModel.rowCount(); i++) {
+            var dataIndexCourse = allCoursesModel.data(allCoursesModel.index(i, 0), ResourceModel.DataRole);
             if (dataIndexCourse.id === courseId) {
-                selectCourse(i, true)
+                root.selectedCourse = dataIndexCourse
                 return
             }
         }
 
-        selectCourse(0, true)
-    }
-
-    function selectCourse(index, automaticSelection) {
-        if (index === priv.currentIndex) {
-            return
+        // if this fails try to select course matching the current keyboard layout
+        if (coursesForCurrentKeyboardLayoutModel.rowCount() > 0) {
+            var blub = coursesForCurrentKeyboardLayoutModel.data(coursesForCurrentKeyboardLayoutModel.index(0, 0), ResourceModel.DataRole);
+            console.log(blub)
+            root.selectedCourse = blub
+            return;
         }
 
-        var direction = index > priv.currentIndex? Item.Left: Item.Right
-        var dataIndexCourse = index < courseModel.rowCount()?
-                courseModel.data(courseModel.index(index, 0), ResourceModel.DataRole):
-                null;
-        var targetPage = automaticSelection? coursePageContainer.activePage: coursePageContainer.inactivePage
-
-        priv.currentIndex = index;
-        targetPage.dataIndexCourse = dataIndexCourse
-
-        if (!automaticSelection) {
-            coursePageContainer.inactivePage = coursePageContainer.activePage
-            coursePageContainer.activePage = targetPage
-            coursePageContainer.inactivePage.hide(direction)
-            coursePageContainer.activePage.show(direction)
-
-            saveLastUsedCourse(dataIndexCourse? dataIndexCourse.id: "custom_lessons")
+        // finally just select the first course
+        if (allCoursesModel.rowCount() > 0) {
+            root.selectedCourse = allCoursesModel.data(allCoursesModel.index(0, 0), ResourceModel.DataRole);
         }
     }
 
-    function saveLastUsedCourse(courseId) {
-        profile.lastUsedCourseId = courseId;
-        profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
+    onSelectedCourseChanged: {
+        root.selectedKeyboardLayoutName = root.selectedCourse.keyboardLayoutName;
+
+        for (var i = 0; i < ktouch.globalDataIndex.keyboardLayoutCount; i++)
+        {
+            var dataIndexLayout = ktouch.globalDataIndex.keyboardLayout(i)
+
+            if (dataIndexLayout.name === root.selectedKeyboardLayoutName) {
+                root.selectedKeyboardLayout = dataIndexLayout;
+                return
+            }
+        }
+
+        root.selectedKeyboardLayout = null;
+    }
+
+    function saveLastUsedCourse(course) {
+        if (profile.lastUsedCourseId != course.id) {
+            profile.lastUsedCourseId = course.id;
+            profileDataAccess.updateProfile(profileDataAccess.indexOfProfile(profile));
+        }
     }
 
     onProfileChanged: selectLastUsedCourse()
 
-    Connections {
-        target: courseModel
+    ResourceModel {
+        id: resourceModel
+        dataIndex: ktouch.globalDataIndex
         onRowsRemoved: {
-            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
-            priv.currentIndex = -1
             selectLastUsedCourse()
 
         }
         onRowsInserted: {
-            nextButton.visible = previousButton.visible = courseModel.rowCount() > 1
-            priv.currentIndex = -1
             selectLastUsedCourse()
         }
     }
 
-    QtObject {
-        id: priv
-        property int currentIndex: -1
+    CategorizedResourceSortFilterProxyModel {
+        id: allCoursesModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
     }
 
-    SystemPalette {
-        id: palette
-        colorGroup: SystemPalette.Active
+
+    CategorizedResourceSortFilterProxyModel {
+        id: coursesForCurrentKeyboardLayoutModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.CourseItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
     }
 
-    ColumnLayout {
+    CategorizedResourceSortFilterProxyModel {
+        id: currentKeyboardLayoutsModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.KeyboardLayoutItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
+    }
+
+    CategorizedResourceSortFilterProxyModel {
+        id: otherKeyboardLayoutsModel
+        resourceModel: resourceModel
+        resourceTypeFilter: ResourceModel.KeyboardLayoutItem
+        keyboardLayoutNameFilter: root.currentKeyboardLayoutName
+        invertedKeyboardLayoutNameFilter: true
+    }
+
+    KColorScheme {
+        id: courseSelectorColorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
+    Rectangle {
+        id: bg
         anchors.fill: parent
-        spacing: 0
-
-        Rectangle {
-            id: head
-            Layout.fillWidth: true
-            height: Math.ceil(Math.max(courseTitleLabel.height, courseDescriptionButton.height) + 6)
-            color: palette.base
-
-            RowLayout {
-                anchors {
-                    fill: parent
-                    leftMargin: 5
-                    rightMargin: 5
-                    topMargin: 3
-                    bottomMargin: 3
-                }
-
-                Label {
-                    anchors.verticalCenter: parent.verticalCenter
-                    id: courseTitleLabel
-                    font.pointSize: 1.5 * Qt.font({'family': 'sansserif'}).pointSize
-                    text: coursePageContainer.activePage.course.title
-                }
-
-                Item {
-                    id: smallSpacer
-                    height: parent.height
-                    width: 3
-                }
-
-                ToolButton {
-                    id: courseDescriptionButton
-                    anchors.verticalCenter: parent.verticalCenter
-                    iconName: "dialog-information"
-                    checkable: true
-                }
-
-                Item {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-
-                ToolButton {
-                    id: previousButton
-                    anchors.verticalCenter: parent.verticalCenter
-                    iconName: "arrow-left"
-                    enabled: priv.currentIndex > 0
-                    onClicked: {
-                        var newIndex = priv.currentIndex - 1
-                        root.selectCourse(newIndex, false)
-                    }
-                }
-
-                ToolButton {
-                    id: nextButton
-                    iconName: "arrow-right"
-                    enabled: priv.currentIndex < courseModel.rowCount()
-                    onClicked: {
-                        var newIndex = (priv.currentIndex + 1) % (courseModel.rowCount() + 1)
-                        root.selectCourse(newIndex, false)
-                    }
-                }
-            }
-        }
-
-        Item {
-            Layout.fillWidth: true
-            Layout.minimumHeight: courseDescriptionItem.height
-            Layout.maximumHeight: courseDescriptionItem.height
-            CourseDescriptionItem {
-                id: courseDescriptionItem
-                active: courseDescriptionButton.checked
-                description: coursePageContainer.activePage.course.description
-                width: parent.width
-            }
-        }
-
-        Item {
-            id: coursePageContainer
-            property CoursePage activePage: page0
-            property CoursePage inactivePage: page1
-
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            CoursePage {
-                id: page0
-                profile: root.profile
-                keyboardLayout: root.keyboardLayout
-                keyboardLayoutName: root.keyboardLayoutName
-                onLessonSelected: root.lessonSelected(course, lesson)
-                Component.onCompleted: page0.showImmediately()
-            }
-
-            CoursePage {
-                id: page1
-                profile: root.profile
-                keyboardLayout: root.keyboardLayout
-                keyboardLayoutName: root.keyboardLayoutName
-                onLessonSelected: root.lessonSelected(course, lesson)
-            }
-        }
+        color: courseSelectorColorScheme.normalBackground
     }
+
+    Flickable {
+        clip: true
+        anchors.fill: parent
+        contentWidth: width
+        contentHeight: content.height
+        Column {
+            id: content
+            width: parent.width
+
+            CourseSelectorKeyboardLayoutList {
+                width: parent.width
+                title: i18n('Courses For Your Keyboard Layout')
+                model: currentKeyboardLayoutsModel
+                resourceModel: resourceModel
+                colorScheme: courseSelectorColorScheme
+                selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
+                selectedCourse: root.selectedCourse
+                onCourseSelected: {
+                    root.selectedCourse = course
+                    root.saveLastUsedCourse(course)
+                }
+            }
+
+            CourseSelectorKeyboardLayoutList {
+                width: parent.width
+                title: i18n('Other Courses')
+                model: otherKeyboardLayoutsModel
+                resourceModel: resourceModel
+                colorScheme: courseSelectorColorScheme
+                selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
+                selectedCourse: root.selectedCourse
+                onCourseSelected: {
+                    root.selectedCourse = course
+                    root.saveLastUsedCourse(course)
+                }
+            }
+        }
+
+        Controls.ScrollBar.vertical: ScrollBar { }
+    }
+
+
+
+
+
+
 }

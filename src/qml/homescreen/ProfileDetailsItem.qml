@@ -1,6 +1,7 @@
 /*
  *  Copyright 2012  Sebastian Gottfried <sebastiangottfried@web.de>
  *  Copyright 2015  Sebastian Gottfried <sebastiangottfried@web.de>
+ *  Copyright 2017  Sebastian Gottfried <sebastian.gottfried@posteo.de>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -16,11 +17,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
-import org.kde.kcoreaddons 1.0
+import QtQuick 2.9
+import QtQuick.Layouts 1.3
 import org.kde.charts 0.1 as Charts
+import org.kde.kcoreaddons 1.0
 import ktouch 1.0
 
 import "../common"
@@ -71,7 +71,7 @@ Item {
             Rectangle {
 
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 40
+                width: parent.width
                 height: 250
                 color: activePalette.base
 
@@ -150,12 +150,12 @@ Item {
                 topMargin: 5
             }
             content: [
-                ToolButton {
+                IconToolButton {
                     iconName: "document-edit"
                     text: i18n("Edit")
                     onClicked: root.state = "editor"
                 },
-                ToolButton {
+                IconToolButton {
                     iconName: "edit-delete"
                     text: i18n("Delete")
                     enabled: profileDataAccess.profileCount > 1
@@ -167,13 +167,13 @@ Item {
 
     Item {
         id: editorContainer
-        width: parent.width - 40
+        width: parent.width
         height: childrenRect.height
         anchors.centerIn: parent
+
         ProfileForm {
             id: profileForm
             width: parent.width
-            height: childrenRect.height
             showWelcomeLabel: false
             onDone: {
                 root.profile.name = profileForm.name
@@ -192,7 +192,7 @@ Item {
 
     Item {
         id: deleteConfirmationContainer
-        width: parent.width - 40
+        width: parent.width
         height: childrenRect.height
         anchors.centerIn: parent
         Column {
@@ -213,12 +213,13 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: childrenRect.width
                 height: childrenRect.height
-                ToolButton {
+                IconButton {
                     iconName: "edit-delete"
                     text: i18n("Delete")
+                    bgColor: colorScheme.negativeBackground
                     onClicked: root.deletionRequest()
                 }
-                ToolButton {
+                IconButton {
                     text: i18n("Cancel")
                     onClicked: root.state = "info"
                 }

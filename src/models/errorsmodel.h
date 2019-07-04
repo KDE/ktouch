@@ -28,7 +28,7 @@ class ErrorsModel : public QAbstractTableModel
     Q_PROPERTY(TrainingStats* trainingStats READ trainingStats WRITE setTrainingStats NOTIFY trainingStatsChanged)
     Q_PROPERTY(int maximumErrorCount READ maximumErrorCount NOTIFY maximumErrorCountChanged)
 public:
-    explicit ErrorsModel(QObject* parent = 0);
+    explicit ErrorsModel(QObject* parent = nullptr);
     TrainingStats* trainingStats() const;
     void setTrainingStats(TrainingStats* trainingStats);
     int maximumErrorCount() const;

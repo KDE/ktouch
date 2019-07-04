@@ -52,7 +52,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     Application::setupDeclarativeBindings(m_view->engine());
 
     m_view->rootContext()->setContextProperty(QStringLiteral("keyboardLayoutEditor"), this);
-    m_view->setSource(QUrl(QStringLiteral("qrc:/qml/keyboard/KeyboardLayoutEditor.qml")));
+    m_view->setSource(QUrl(QStringLiteral("qrc:/ktouch/qml/keyboard/KeyboardLayoutEditor.qml")));
 
     connect(m_newKeyToolButton, &QAbstractButton::clicked, this, &KeyboardLayoutEditor::createNewKey);
     connect(m_newSpecialKeyToolButton, &QAbstractButton::clicked, this, &KeyboardLayoutEditor::createNewSpecialKey);
