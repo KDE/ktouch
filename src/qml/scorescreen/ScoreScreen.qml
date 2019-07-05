@@ -318,7 +318,7 @@ FocusScope {
                         model: ListModel {
                             Component.onCompleted: {
                                 append({"text": i18n("All Lessons"), "icon": "view-filter"});
-                                append({"text": i18n("This Lessons"), "icon": "view-filter"});
+                                append({"text": i18n("This Lesson"), "icon": "view-filter"});
                             }
                         }
                         textRole: "text"
