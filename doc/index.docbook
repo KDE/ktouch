@@ -45,14 +45,14 @@
 <holder>Håvard Frøiland, Andreas Nicolai</holder>
 </copyright>
 <copyright>
-<year>2011-2013</year>
+<year>2011-2019</year>
 <holder>Sebastian Gottfried</holder>
 </copyright>
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2016-11-02</date>
-<releaseinfo>Applications 16.12</releaseinfo>
+<date>2019-07-05</date>
+<releaseinfo>Applications 19.08</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -215,11 +215,7 @@ layout.
 </para>
 
 <para>
-You can switch between courses or choose <link linkend="custom_lessons">custom lessons</link> using the <inlinemediaobject>
-<imageobject> <imagedata fileref="Icon-arrow-right.png" format="PNG"/>
-</imageobject> </inlinemediaobject> and <inlinemediaobject>
-<imageobject> <imagedata fileref="Icon-arrow-left.png" format="PNG"/>
-</imageobject> </inlinemediaobject> buttons in the top right part of the window.
+You can switch between courses or choose <link linkend="custom_lessons">custom lessons</link> by clicking their thumbnails in the right part of the window.
 </para>
 
 <note>
@@ -1438,8 +1434,8 @@ linkend="picking_a_lesson">the normal built-in courses</link>.
 </screenshot>
 <para>
 This special course mostly acts like any other, training and statistics 
-gathering works as usual. Clicking on <guibutton>Create New Custom 
-Lesson</guibutton> or the <guibutton>Edit</guibutton> button (for 
+gathering works as usual. Clicking on <guibutton>Add New 
+Lesson</guibutton> or the <guibutton>Edit</guibutton> button (the pencil icon for 
 existing lessons) brings up a stripped-down version of <link 
 linkend="adding_lessons">the normal lesson editor</link>.
 </para>
@@ -1455,20 +1451,11 @@ linkend="adding_lessons">the normal lesson editor</link>.
 </mediaobject>
 </screenshot>
 <para>
-Use <inlinemediaobject>
-<imageobject> <imagedata fileref="Icon-document-open.png"
-format="PNG"/> </imageobject> </inlinemediaobject> button to open a generic text 
-file that will be loaded into the lesson text field.
-</para>
-<para>
-The <inlinemediaobject>
-<imageobject> <imagedata fileref="Icon-format-justify-fill.png"
-format="PNG"/> </imageobject> </inlinemediaobject> button can be used to wrap 
-the lesson text. &i18n-ktouch; editor wraps text such that every line of the 
+The editor will highlight problematic sections of your lesson texts. Characters which can't by typed on your keyboard layout will be shown on a dark red background, lines which are considered to be too long use a pink background for the excess characters. &i18n-ktouch; requires that every line of the 
 lesson does not exceed the recommended 60 characters limit.
 </para>
 <para>
-The editor will highlight problematic sections of your lesson texts. Characters which can't by typed on your keyboard layout will be shown on a dark red, lines which are considered to be too long use a gray font for the excess characters.
+Use the <guibutton>Done</guibutton> button to confirm your edits or close the editor window to cancel them.
 </para>
 <tip>
 <para>
@@ -1533,7 +1520,7 @@ button in the toolbar and choose &XML; file that was earlier exported using
 net</email></simpara></listitem>
 </itemizedlist>
 <para>
-  &i18n-ktouch;, Copyright 2011-2012 by Sebastian Gottfried
+  &i18n-ktouch;, Copyright 2011-2019 by Sebastian Gottfried
 <email>sebastiangottfried@web DOT de</email>.
 </para>
 
