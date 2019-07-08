@@ -382,35 +382,33 @@ FocusScope {
                             }
                         }
 
-                        Item {
+                        Charts.BarChart{
                             id: errorsTab
                             property string title: i18n("Errors")
                             property string iconName: "office-chart-bar"
 
-                            Charts.BarChart{
-                                model: errorsModel
-                                pitch: 60
-                                textRole: 3 // Qt::ToolTipRole
-                                backgroundColor: colorScheme.normalBackground
+                            model: errorsModel
+                            pitch: 60
+                            textRole: 3 // Qt::ToolTipRole
+                            backgroundColor: colorScheme.normalBackground
 
-                                dimensions: [
-                                    Charts.Dimension {
-                                        dataColumn: 0
-                                        color: "#ffb12d"
-                                        maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
-                                        label: i18n("Errors")
-                                    }
-                                ]
-
-                                onElemEntered: {
-                                    errorsTooltip.visualParent = elem;
-                                    errorsTooltip.row = row
-                                    errorsTooltip.open()
+                            dimensions: [
+                                Charts.Dimension {
+                                    dataColumn: 0
+                                    color: "#ffb12d"
+                                    maximumValue: Math.max(4, Math.ceil(errorsModel.maximumErrorCount / 4) * 4)
+                                    label: i18n("Errors")
                                 }
+                            ]
 
-                                onElemExited: {
-                                    errorsTooltip.close()
-                                }
+                            onElemEntered: {
+                                errorsTooltip.visualParent = elem;
+                                errorsTooltip.row = row
+                                errorsTooltip.open()
+                            }
+
+                            onElemExited: {
+                                errorsTooltip.close()
                             }
                         }
                     }
