@@ -33,11 +33,11 @@ find_package(Qt5 5.9 REQUIRED COMPONENTS
     QuickControls2
     Sql
     Widgets
-    X11Extras
     Xml
     XmlPatterns
 )
 
+find_package(Qt5X11Extras)
 find_package(Qt5 CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
 find_package(KF5 REQUIRED COMPONENTS

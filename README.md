@@ -25,7 +25,6 @@ KTouch has the following build dependencies:
    * Qt Quick Controls 2
    * Qt SQL
    * Qt Test
-   * Qt X11 Extras
    * Qt XML
    * Qt XML Patterns
  * [KDE Frameworks 5][kf5] with:
@@ -45,6 +44,7 @@ KTouch has the following build dependencies:
    * XmlGui
    * IconThemes
  * optionally, for keyboard layout auto-detection:
+   * Qt X11 Extras
    * [Xlib][xlib]
    * [XKB][xkb]
    * [libxkbfile][libxkbfile]

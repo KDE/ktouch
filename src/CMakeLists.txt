@@ -7,11 +7,11 @@ ecm_setup_version(${KDE_APPLICATIONS_VERSION}
 find_package(X11)
 find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
 
-if (X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
+if (Qt5X11Extras_FOUND AND X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
     set(KTOUCH_BUILD_WITH_X11 TRUE)
 endif()
 
-add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
+add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs Qt5X11Extras, libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
 
 ecm_optional_add_subdirectory(schemata)
 
@@ -117,7 +117,7 @@ if (KTOUCH_BUILD_WITH_X11)
     include_directories(${X11_Xkb_INCLUDE_PATH})
     include_directories(${X11_Xkbfile_INCLUDE_PATH})
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
-    set(ktouch_X11_DEPS ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
+    set(ktouch_X11_DEPS Qt5::X11Extras ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
 endif ()
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
@@ -133,7 +133,6 @@ target_link_libraries(ktouch
         Qt5::QuickControls2
         Qt5::Sql
         Qt5::XmlPatterns
-        Qt5::X11Extras
         KF5::Completion
         KF5::ConfigWidgets
         KF5::Declarative
