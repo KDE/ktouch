@@ -61,7 +61,7 @@ KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject 
     m_XEventNotifier->start();
     connect(m_XEventNotifier, &XEventNotifier::layoutChanged, this, &KTouchContext::keyboardLayoutNameChanged);
 #else
-    m_keyboardLayoutMenu = new KeyboardLayoutMenu(this);
+    m_keyboardLayoutMenu = new KeyboardLayoutMenu(m_mainWindow);
     m_keyboardLayoutMenu->setDataIndex(Application::dataIndex());
     connect(m_keyboardLayoutMenu, SIGNAL(keyboardLayoutNameChanged()), SIGNAL(keyboardLayoutNameChanged()));
 #endif

@@ -44,14 +44,19 @@ KTouch has the following build dependencies:
    * WindowSystem
    * XmlGui
    * IconThemes
- * [libxkbfile][libxkbfile] (optional, for keyboard layout auto-detection)
- * [libxcb][libxcb] (optional, for keyboard layout auto-detection)
+ * optionally, for keyboard layout auto-detection:
+   * [Xlib][xlib]
+   * [XKB][xkb]
+   * [libxkbfile][libxkbfile]
+   * [libxcb][libxcb] with libxcb-xkb
 
 [cmake]: https://cmake.org/
 [ecm]: https://cgit.kde.org/extra-cmake-modules.git/
 [qt]: https://www.qt.io/
 [kf5]: https://api.kde.org/frameworks/
-[libxkbfile]: https://cgit.freedesktop.org/xorg/lib/libxkbfile
+[xlib]: https://tronche.com/gui/x/xlib/
+[xkb]: https://www.x.org/wiki/XKB/
+[libxkbfile]: https://gitlab.freedesktop.org/xorg/lib/libxkbfile
 [libxcb]: https://xcb.freedesktop.org/
 
 Collecting and installing all dependencies by hand can be a challenge.

@@ -24,6 +24,7 @@ include(ECMSetupVersion)
 include(FeatureSummary)
 
 find_package(Qt5 5.9 REQUIRED COMPONENTS
+    Core
     Gui
     Qml
     Quick
