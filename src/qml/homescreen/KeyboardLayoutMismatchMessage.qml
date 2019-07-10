@@ -62,7 +62,7 @@ Collapsable {
                 Layout.columnSpan: configureKeyboardButton.visible? 2: 1
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
-                text: i18n("KTouch can't switch or set up keyboard layouts. Before training, you have to configure your computer to use the correct keyboard layout or you will have to use your current keyboard layout to type the lesson text.")
+                text: i18n("KTouch can't switch or set up keyboard layouts. Before training, you have to configure your computer to use the correct keyboard layout. Otherwise you will have to use your current keyboard layout to type the lesson text.")
                 opacity: 0.7
             }
 
