@@ -61,7 +61,7 @@ automatically by using the information of the packaged version of
 KTouch:
 
     apt-get build-dep ktouch # Ubuntu, Debian, ...
-    zypper source-install --build-deps-only # openSUSE
+    zypper source-install --build-deps-only ktouch # openSUSE
 
 If the build requirements are met, execute the following commands in
 the root directory of your working copy to built and install KTouch:
