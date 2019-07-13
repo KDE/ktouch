@@ -41,8 +41,6 @@
 
 #ifdef KTOUCH_BUILD_WITH_X11
 #include "x11_helper.h"
-#else
-#include "keyboardlayoutmenu.h"
 #endif
 
 
@@ -60,10 +58,6 @@ KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject 
     m_XEventNotifier = new XEventNotifier();
     m_XEventNotifier->start();
     connect(m_XEventNotifier, &XEventNotifier::layoutChanged, this, &KTouchContext::keyboardLayoutNameChanged);
-#else
-    m_keyboardLayoutMenu = new KeyboardLayoutMenu(m_mainWindow);
-    m_keyboardLayoutMenu->setDataIndex(Application::dataIndex());
-    connect(m_keyboardLayoutMenu, SIGNAL(keyboardLayoutNameChanged()), SIGNAL(keyboardLayoutNameChanged()));
 #endif
     init();
 }
@@ -81,7 +75,7 @@ QString KTouchContext::keyboardLayoutName() const
 #ifdef KTOUCH_BUILD_WITH_X11
     return X11Helper::getCurrentLayout().toString();
 #else
-    return m_keyboardLayoutMenu->keyboardLayoutName();
+    return "unknown";
 #endif
 }
 
@@ -182,17 +176,12 @@ void KTouchContext::init()
     m_menu->addAction(KStandardAction::preferences(this, SLOT(showConfigDialog()), m_actionCollection));
     m_menu->addAction(KStandardAction::keyBindings(this, SLOT(configureShortcuts()), m_actionCollection));
 
-
-#ifdef KTOUCH_BUILD_WITH_X11
     if (testKCMAvailibility(keyboardKCMName))
     {
         QAction* configureKeyboardAction = new QAction(i18n("Configure Keyboard..."), this);
         m_menu->addAction(configureKeyboardAction);
         connect(configureKeyboardAction, &QAction::triggered, this, &KTouchContext::showKeyboardKCM);
     }
-#else
-    m_menu->addMenu(m_keyboardLayoutMenu);
-#endif
 
     m_menu->addSeparator();
     KHelpMenu* helpMenu = new KHelpMenu(m_mainWindow);

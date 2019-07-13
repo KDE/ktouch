@@ -65,8 +65,6 @@ private:
     QQuickView* m_view;
 #ifdef KTOUCH_BUILD_WITH_X11
     XEventNotifier* m_XEventNotifier;
-#else
-    KeyboardLayoutMenu* m_keyboardLayoutMenu;
 #endif
 };
 
