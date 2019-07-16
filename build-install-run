@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Usage: ./build-install-run [BUILD_TYPE]
+
+set -e
+
+if [ -z "$1"]; then
+  BUILD_TYPE=Debug
+else
+  BUILD_TYPE=$1
+fi
+
+BASEDIR=`readlink -f -- .`
+BUILDDIR=${BASEDIR}/build/$BUILD_TYPE
+INSTALLDIR=${BASEDIR}/install/$BUILD_TYPE
+
+CMAKE_ARGS="-DCMAKE_INSTALL_PREFIX=${INSTALLDIR} -DCMAKE_BUILD_TYPE=$BUILD_TYPE ../.."
+
+# Use ninja instead of make if command is available
+if [ -x "$(command -v ninja)" ]; then
+  CMAKE_ARGS="${CMAKE_ARGS} -GNinja"
+fi
+
+echo "Configuring build in '${BUILDDIR}' ... "
+mkdir -p $BUILDDIR
+cd $BUILDDIR
+cmake $CMAKE_ARGS
+
+echo "Building in '${BUILDDIR}' ... "
+cmake --build .
+
+echo "Installing to '${INSTALLDIR}' ... "
+cmake --build . --target install
+
+echo "Running KTouch ... "
+export KDEDIRS=${INSTALLDIR}:$KDEDIRS
+export XDG_DATA_DIRS=${INSTALLDIR}/share:$XDG_DATA_DIRS
+# export QT_SCALE_FACTOR=2
+${INSTALLDIR}/bin/ktouch

@@ -11,6 +11,19 @@ to type quickly and accurately.
 
 # Development Setup
 
+## Quick Start
+
+In the top level directory there is a script called `build-install-run`
+which can be used to configure, build, install and run KTouch in one
+step. Execute:
+
+   ./build-install-run
+
+in the top-level directory of the KTouch repository to get started.
+It is just simple wrapper arround CMake and set ups the necessary
+environment variables to run KTouch. Build artifacts are stored in
+the subdirectory `build/`, install files go to `install/`.
+
 ## Building
 
 KTouch has the following build dependencies:

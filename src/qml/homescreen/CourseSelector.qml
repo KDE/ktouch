@@ -91,7 +91,7 @@ FocusScope {
     onProfileChanged: selectLastUsedCourse()
 
     ResourceModel {
-        id: resourceModel
+        id: allResourcesModel
         dataIndex: ktouch.globalDataIndex
         onRowsRemoved: {
             selectLastUsedCourse()
@@ -104,28 +104,28 @@ FocusScope {
 
     CategorizedResourceSortFilterProxyModel {
         id: allCoursesModel
-        resourceModel: resourceModel
+        resourceModel: allResourcesModel
         resourceTypeFilter: ResourceModel.CourseItem
     }
 
 
     CategorizedResourceSortFilterProxyModel {
         id: coursesForCurrentKeyboardLayoutModel
-        resourceModel: resourceModel
+        resourceModel: allResourcesModel
         resourceTypeFilter: ResourceModel.CourseItem
         keyboardLayoutNameFilter: root.currentKeyboardLayoutName
     }
 
     CategorizedResourceSortFilterProxyModel {
         id: currentKeyboardLayoutsModel
-        resourceModel: resourceModel
+        resourceModel: allResourcesModel
         resourceTypeFilter: ResourceModel.KeyboardLayoutItem
         keyboardLayoutNameFilter: root.currentKeyboardLayoutName
     }
 
     CategorizedResourceSortFilterProxyModel {
         id: otherKeyboardLayoutsModel
-        resourceModel: resourceModel
+        resourceModel: allResourcesModel
         resourceTypeFilter: ResourceModel.KeyboardLayoutItem
         keyboardLayoutNameFilter: root.currentKeyboardLayoutName
         invertedKeyboardLayoutNameFilter: true
@@ -152,25 +152,29 @@ FocusScope {
             id: content
             width: parent.width
 
-            CourseSelectorKeyboardLayoutList {
+            Loader {
                 width: parent.width
-                title: i18n("Courses For Your Keyboard Layout")
-                model: currentKeyboardLayoutsModel
-                resourceModel: resourceModel
-                colorScheme: courseSelectorColorScheme
-                selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
-                selectedCourse: root.selectedCourse
-                onCourseSelected: {
-                    root.selectedCourse = course
-                    root.saveLastUsedCourse(course)
+                active: root.currentKeyboardLayoutName != 'unknown'
+                sourceComponent: CourseSelectorKeyboardLayoutList {
+                    width: parent.width
+                    title: i18n("Courses For Your Keyboard Layout")
+                    model: currentKeyboardLayoutsModel
+                    resourceModel: allResourcesModel
+                    colorScheme: courseSelectorColorScheme
+                    selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
+                    selectedCourse: root.selectedCourse
+                    onCourseSelected: {
+                        root.selectedCourse = course
+                        root.saveLastUsedCourse(course)
+                    }
                 }
             }
 
             CourseSelectorKeyboardLayoutList {
                 width: parent.width
-                title: i18n("Other Courses")
+                title: root.currentKeyboardLayoutName == 'unknown'? i18n("Courses"): i18n("Other Courses")
                 model: otherKeyboardLayoutsModel
-                resourceModel: resourceModel
+                resourceModel: allResourcesModel
                 colorScheme: courseSelectorColorScheme
                 selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
                 selectedCourse: root.selectedCourse
