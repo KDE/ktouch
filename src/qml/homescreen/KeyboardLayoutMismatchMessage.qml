@@ -23,6 +23,7 @@ import "../common"
 
 Collapsable {
     id: root
+    property string activeKeyboardLayoutName: ''
 
     background: Rectangle {
         color: colorScheme.neutralBackground
@@ -54,7 +55,9 @@ Collapsable {
                 Layout.fillWidth: true
                 font.bold: true
                 wrapMode: Text.Wrap
-                text: i18n("The selected course doesn't match your computer's active keyboard layout.")
+                text: root.activeKeyboardLayoutName == 'unknown'?
+                   i18n("The selected course is intended for a specific keyboard layout."):
+                   i18n("The selected course is not intended for your computer's active keyboard layout.")
             }
             Label {
                 Layout.column: 1

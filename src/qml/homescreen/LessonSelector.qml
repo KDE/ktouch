@@ -228,6 +228,7 @@ FocusScope {
 
                 KeyboardLayoutMismatchMessage {
                     width: parent.width
+                    activeKeyboardLayoutName: root.activeKeyboardLayoutName
                     collapsed: !root.course || !root.course.isValid || root.activeKeyboardLayoutName == root.course.keyboardLayoutName
                 }
 
