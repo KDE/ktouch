@@ -211,6 +211,7 @@ FocusScope {
                             backgroundColor: toolbar.colorScheme.normalBackground
                             Layout.fillHeight: true
                             Layout.preferredWidth: toolbar.height
+                            Layout.rightMargin: 20
                             onClicked: {
                                 var position = mapToItem(null, 0, height)
                                 ktouch.showMenu(position.x, position.y)
@@ -270,8 +271,11 @@ FocusScope {
                 focus: true
                 background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
                 property int columns: Math.floor(width / (300 + 20))
-                cellWidth: Math.floor(content.width / content.columns)
+                cellWidth: Math.floor(content.contentWidth / content.columns)
                 cellHeight: Math.round(cellWidth * 2 / 3)
+                contentWidth: width - 20
+                rightMargin: 20
+                bottomMargin: 20
 
                 Keys.onPressed: {
                     if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
@@ -304,7 +308,8 @@ FocusScope {
                     LessonSelectorItem {
                         id: lessonItem
                         anchors.fill: parent
-                        anchors.margins: 10
+                        anchors.leftMargin: 20
+                        anchors.topMargin: 20
                         anchors.centerIn: parent
                         lesson: dataRole
                         selected:  content.currentIndex == index
