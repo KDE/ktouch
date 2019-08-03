@@ -1,6 +1,12 @@
 # KTouch
 
-[![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/12/)
+| Jenkins CI Name | Master | Stable |
+| --------------- | ------ | ------ |
+| OpenSuse Qt 5.12 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/) |
+| FreeBSD Qt 5.13 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/) |
+
+
+![Screenshot](https://cdn.kde.org/screenshots/ktouch/ktouch.png)
 
 KTouch is a program to learn and practice touch typing. Every finger
 has its place on the keyboard with associated keys to press. Starting
@@ -17,7 +23,7 @@ In the top level directory there is a script called `build-install-run`
 which can be used to configure, build, install and run KTouch in one
 step. Execute:
 
-   ./build-install-run
+    ./build-install-run
 
 in the top-level directory of the KTouch repository to get started.
 It is just simple wrapper arround CMake and set ups the necessary
