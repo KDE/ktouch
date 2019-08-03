@@ -20,7 +20,6 @@
 
 #include <QAbstractListModel>
 
-class QSignalMapper;
 class Course;
 class Lesson;
 
@@ -55,7 +54,6 @@ private slots:
 private:
     void updateMappings();
     Course* m_course;
-    QSignalMapper* m_signalMapper;
 };
 
 #endif // LESSONMODEL_H

@@ -17,8 +17,6 @@
 
 #include "charactersmodel.h"
 
-#include <QSignalMapper>
-
 #include <KLocalizedString>
 
 #include "core/keyboardlayout.h"
@@ -31,10 +29,8 @@ CharactersModel::CharactersModel(QObject *parent) :
     m_keyboardLayout(nullptr),
     m_keyIndex(-1),
     m_key(nullptr),
-    m_undoStack(nullptr),
-    m_signalMapper(new QSignalMapper(this))
+    m_undoStack(nullptr)
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitCharacterChanged(int)));
 }
 
 KeyboardLayout* CharactersModel::keyboardLayout() const
@@ -83,8 +79,7 @@ void CharactersModel::setKeyIndex(int keyIndex)
             for (int i = 0; i < m_key->keyCharCount(); i++)
             {
                 KeyChar* keyChar = m_key->keyChar(i);
-                keyChar->disconnect(m_signalMapper);
-                m_signalMapper->setMapping(keyChar, i);
+                keyChar->disconnect(this);
             }
         }
 
@@ -101,10 +96,9 @@ void CharactersModel::setKeyIndex(int keyIndex)
             for (int i = 0; i < m_key->keyCharCount(); i++)
             {
                 KeyChar* keyChar = m_key->keyChar(i);
-                connect(keyChar, SIGNAL(valueChanged()), m_signalMapper, SLOT(map()));
-                connect(keyChar, SIGNAL(modifierChanged()), m_signalMapper, SLOT(map()));
-                connect(keyChar, SIGNAL(positionChanged()), m_signalMapper, SLOT(map()));
-                m_signalMapper->setMapping(keyChar, i);
+                connect(keyChar, &KeyChar::valueChanged, this, [=] { emitCharacterChanged(i); });
+                connect(keyChar, &KeyChar::modifierChanged, this, [=] { emitCharacterChanged(i); });
+                connect(keyChar, &KeyChar::positionChanged, this, [=] { emitCharacterChanged(i); });
             }
         }
 
@@ -237,9 +231,9 @@ int CharactersModel::rowCount(const QModelIndex& parent) const
 
 void CharactersModel::onKeyCharAboutToBeAdded(KeyChar* keyChar, int index)
 {
-    connect(keyChar, SIGNAL(valueChanged()), m_signalMapper, SLOT(map()));
-    connect(keyChar, SIGNAL(modifierChanged()), m_signalMapper, SLOT(map()));
-    connect(keyChar, SIGNAL(positionChanged()), m_signalMapper, SLOT(map()));
+    connect(keyChar, &KeyChar::valueChanged, this, [=] { emitCharacterChanged(index); });
+    connect(keyChar, &KeyChar::modifierChanged, this, [=] { emitCharacterChanged(index); });
+    connect(keyChar, &KeyChar::positionChanged, this, [=] { emitCharacterChanged(index); });
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -268,7 +262,12 @@ void CharactersModel::updateMappings()
 {
     for (int i = 0; i < m_key->keyCharCount(); i++)
     {
-        m_signalMapper->setMapping(m_key->keyChar(i), i);
+        disconnect(m_key->keyChar(i), &KeyChar::valueChanged, this, nullptr);
+        disconnect(m_key->keyChar(i), &KeyChar::modifierChanged, this, nullptr);
+        disconnect(m_key->keyChar(i), &KeyChar::positionChanged, this, nullptr);
+        connect(m_key->keyChar(i), &KeyChar::valueChanged, this, [=] { emitCharacterChanged(i); });
+        connect(m_key->keyChar(i), &KeyChar::modifierChanged, this, [=] { emitCharacterChanged(i); });
+        connect(m_key->keyChar(i), &KeyChar::positionChanged, this, [=] { emitCharacterChanged(i); });
     }
 }
 

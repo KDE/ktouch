@@ -20,7 +20,6 @@
 
 #include <QAbstractTableModel>
 
-class QSignalMapper;
 class QUndoStack;
 class KeyboardLayout;
 class Key;
@@ -64,7 +63,6 @@ private:
     int m_keyIndex;
     Key* m_key;
     QUndoStack* m_undoStack;
-    QSignalMapper* m_signalMapper;
 };
 
 #endif // CHARACTERSMODEL_H

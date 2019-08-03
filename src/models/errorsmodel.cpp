@@ -138,7 +138,7 @@ void ErrorsModel::buildErrorList()
         m_errors.append(QPair<QString,int>(errorIterator.key(), errorIterator.value()));
     }
 
-    qSort(m_errors.begin(), m_errors.end(), lessThan);
+    std::sort(m_errors.begin(), m_errors.end(), lessThan);
 
     emit maximumErrorCountChanged();
 

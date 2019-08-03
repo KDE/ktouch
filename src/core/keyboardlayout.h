@@ -23,7 +23,6 @@
 #include <QString>
 #include <QVariant>
 
-class QSignalMapper;
 class AbstractKey;
 class DataIndexKeyboardLayout;
 
@@ -81,7 +80,6 @@ private:
     int m_height;
     QList<AbstractKey*> m_keys;
     AbstractKey* m_referenceKey;
-    QSignalMapper* m_signalMapper;
 
 };
 

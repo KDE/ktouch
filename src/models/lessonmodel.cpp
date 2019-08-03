@@ -18,8 +18,6 @@
 
 #include "lessonmodel.h"
 
-#include <QSignalMapper>
-
 #include <KLocalizedString>
 
 #include <core/course.h>
@@ -27,10 +25,8 @@
 
 LessonModel::LessonModel(QObject* parent) :
     QAbstractListModel(parent),
-    m_course(0),
-    m_signalMapper(new QSignalMapper(this))
+    m_course(0)
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitLessonChanged(int)));
 }
 
 Course* LessonModel::course() const
@@ -102,9 +98,9 @@ int LessonModel::rowCount(const QModelIndex& parent) const
 
 void LessonModel::onLessonAboutToBeAdded(Lesson* lesson, int index)
 {
-    connect(lesson, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
-    connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
-    connect(lesson, SIGNAL(textChanged()), m_signalMapper, SLOT(map()));
+    connect(lesson, &Lesson::titleChanged, this, [=] { emitLessonChanged(index); });
+    connect(lesson, &Lesson::newCharactersChanged, this, [=] { emitLessonChanged(index); });
+    connect(lesson, &Lesson::textChanged, this, [=] { emitLessonChanged(index); });
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -151,6 +147,11 @@ void LessonModel::updateMappings()
 {
     for (int i = 0; i < m_course->lessonCount(); i++)
     {
-        m_signalMapper->setMapping(m_course->lesson(i), i);
+        disconnect(m_course->lesson(i), &Lesson::titleChanged, this, nullptr);
+        disconnect(m_course->lesson(i), &Lesson::newCharactersChanged, this, nullptr);
+        disconnect(m_course->lesson(i), &Lesson::textChanged, this, nullptr);
+        connect(m_course->lesson(i), &Lesson::titleChanged, this, [=] { emitLessonChanged(i); });
+        connect(m_course->lesson(i), &Lesson::newCharactersChanged, this, [=] { emitLessonChanged(i); });
+        connect(m_course->lesson(i), &Lesson::textChanged, this, [=] { emitLessonChanged(i); });
     }
 }

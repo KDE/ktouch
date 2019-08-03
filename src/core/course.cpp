@@ -17,18 +17,14 @@
 
 #include "course.h"
 
-#include <QSignalMapper>
-
 #include "lesson.h"
 #include "dataindex.h"
 
 Course::Course(QObject *parent) :
     CourseBase(parent),
     m_associatedDataIndexCourse(0),
-    m_kind(Course::SequentialCourse),
-    m_signalMapper(new QSignalMapper(this))
+    m_kind(Course::SequentialCourse)
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(updateLessonCharacters(int)));
 }
 
 DataIndexCourse* Course::associatedDataIndexCourse() const
@@ -117,8 +113,7 @@ void Course::addLesson(Lesson* lesson)
     lesson->setParent(this);
     const int index = m_lessons.length() - 1;
     updateLessonCharacters(index);
-    connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
-    m_signalMapper->setMapping(lesson, index);
+    connect(lesson, &Lesson::newCharactersChanged, this, [=] { updateLessonCharacters(index); });
     emit lessonCountChanged();
     emit lessonAdded();
 }
@@ -130,8 +125,7 @@ void Course::insertLesson(int index, Lesson* lesson)
     m_lessons.insert(index, lesson);
     lesson->setParent(this);
     updateLessonCharacters(index);
-    connect(lesson, SIGNAL(newCharactersChanged()), m_signalMapper, SLOT(map()));
-    m_signalMapper->setMapping(lesson, index);
+    connect(lesson, &Lesson::newCharactersChanged, this, [=] { updateLessonCharacters(index); });
     emit lessonCountChanged();
     emit lessonAdded();
 }

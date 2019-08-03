@@ -23,7 +23,6 @@
 #include <QString>
 #include <QList>
 
-class QSignalMapper;
 class Lesson;
 class DataIndexCourse;
 
@@ -76,7 +75,6 @@ private:
     DataIndexCourse* m_associatedDataIndexCourse;
     Kind m_kind;
     QList<Lesson*> m_lessons;
-    QSignalMapper* m_signalMapper;
 };
 
 #endif // COURSE_H

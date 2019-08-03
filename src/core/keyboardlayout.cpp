@@ -17,7 +17,6 @@
 
 #include "keyboardlayout.h"
 
-#include <QSignalMapper>
 #include <QFile>
 #include <QUrl>
 #include <QDomDocument>
@@ -41,10 +40,8 @@ KeyboardLayout::KeyboardLayout(QObject *parent) :
     m_width(0),
     m_height(0),
     m_keys(QList<AbstractKey*>()),
-    m_referenceKey(0),
-    m_signalMapper(new QSignalMapper(this))
+    m_referenceKey(0)
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(onKeyGeometryChanged(int)));
 }
 
 DataIndexKeyboardLayout* KeyboardLayout::associatedDataIndexKeyboardLayout() const
@@ -195,9 +192,8 @@ void KeyboardLayout::addKey(AbstractKey* key)
 {
     m_keys.append(key);
     key->setParent(this);
-    connect(key, SIGNAL(widthChanged()), m_signalMapper, SLOT(map()));
-    connect(key, SIGNAL(heightChanged()), m_signalMapper, SLOT(map()));
-    m_signalMapper->setMapping(key, m_keys.count() - 1);
+    connect(key, &AbstractKey::widthChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
+    connect(key, &AbstractKey::heightChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
     emit keyCountChanged();
     updateReferenceKey(key);
 }
@@ -206,9 +202,8 @@ void KeyboardLayout::insertKey(int index, AbstractKey* key)
 {
     m_keys.insert(index, key);
     key->setParent(this);
-    connect(key, SIGNAL(widthChanged()), m_signalMapper, SLOT(map()));
-    connect(key, SIGNAL(heightChanged()), m_signalMapper, SLOT(map()));
-    m_signalMapper->setMapping(key, m_keys.count() - 1);
+    connect(key, &AbstractKey::widthChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
+    connect(key, &AbstractKey::heightChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
     emit keyCountChanged();
     updateReferenceKey(key);
 }

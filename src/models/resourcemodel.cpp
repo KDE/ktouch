@@ -18,17 +18,14 @@
 #include "resourcemodel.h"
 
 #include <QIcon>
-#include <QSignalMapper>
 
 #include <KLocalizedString>
 #include <KCategorizedSortFilterProxyModel>
 
 ResourceModel::ResourceModel(QObject* parent) :
     QAbstractListModel(parent),
-    m_dataIndex(0),
-    m_signalMapper(new QSignalMapper(this))
+    m_dataIndex(0)
 {
-    connect(m_signalMapper, SIGNAL(mapped(int)), SLOT(emitDataChanged(int)));
 }
 
 DataIndex* ResourceModel::dataIndex() const
@@ -63,12 +60,12 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
 
         for (int i = 0; i < dataIndex->courseCount(); i++)
         {
-            connectToCourse(dataIndex->course(i));
+            connectToCourse(dataIndex->course(i), i);
         }
 
         for (int i = 0; i < dataIndex->keyboardLayoutCount(); i++)
         {
-            connectToKeyboardLayout(dataIndex->keyboardLayout(i));
+            connectToKeyboardLayout(dataIndex->keyboardLayout(i), i);
         }
 
         updateMappings();
@@ -132,7 +129,7 @@ QHash<int, QByteArray> ResourceModel::roleNames() const
 
 void ResourceModel::onCourseAboutToBeAdded(DataIndexCourse* course, int index)
 {
-    connectToCourse(course);
+    connectToCourse(course, index);
     beginInsertRows(QModelIndex(), index, index);
 }
 
@@ -147,7 +144,7 @@ void ResourceModel::onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyb
         return;
 
     const int offset = m_dataIndex->courseCount();
-    connectToKeyboardLayout(keyboardLayout);
+    connectToKeyboardLayout(keyboardLayout, index + offset);
     beginInsertRows(QModelIndex(), index + offset, index + offset);
 }
 
@@ -246,21 +243,30 @@ QVariant ResourceModel::keyboardLayoutData(int row, int role) const
     }
 }
 
-void ResourceModel::connectToCourse(DataIndexCourse* course)
+void ResourceModel::connectToCourse(DataIndexCourse* course, int index)
 {
-    connect(course, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(descriptionChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(keyboardLayoutNameChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
-    connect(course, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    disconnect(course, &DataIndexCourse::titleChanged, this, nullptr);
+    disconnect(course, &DataIndexCourse::descriptionChanged, this, nullptr);
+    disconnect(course, &DataIndexCourse::keyboardLayoutNameChanged, this, nullptr);
+    disconnect(course, &DataIndexCourse::pathChanged, this, nullptr);
+    disconnect(course, &DataIndexCourse::sourceChanged, this, nullptr);
+    connect(course, &DataIndexCourse::titleChanged, this, [=] { emitDataChanged(index); });
+    connect(course, &DataIndexCourse::descriptionChanged, this, [=] { emitDataChanged(index); });
+    connect(course, &DataIndexCourse::keyboardLayoutNameChanged, this, [=] { emitDataChanged(index); });
+    connect(course, &DataIndexCourse::pathChanged, this, [=] { emitDataChanged(index); });
+    connect(course, &DataIndexCourse::sourceChanged, this, [=] { emitDataChanged(index); });
 }
 
-void ResourceModel::connectToKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout)
+void ResourceModel::connectToKeyboardLayout(DataIndexKeyboardLayout *keyboardLayout, int index)
 {
-    connect(keyboardLayout, SIGNAL(titleChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(nameChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(pathChanged()), m_signalMapper, SLOT(map()));
-    connect(keyboardLayout, SIGNAL(sourceChanged()), m_signalMapper, SLOT(map()));
+    disconnect(keyboardLayout, &DataIndexKeyboardLayout::titleChanged, this, nullptr);
+    disconnect(keyboardLayout, &DataIndexKeyboardLayout::nameChanged, this, nullptr);
+    disconnect(keyboardLayout, &DataIndexKeyboardLayout::pathChanged, this, nullptr);
+    disconnect(keyboardLayout, &DataIndexKeyboardLayout::sourceChanged, this, nullptr);
+    connect(keyboardLayout, &DataIndexKeyboardLayout::titleChanged, this, [=] { emitDataChanged(index); });
+    connect(keyboardLayout, &DataIndexKeyboardLayout::nameChanged, this, [=] { emitDataChanged(index); });
+    connect(keyboardLayout, &DataIndexKeyboardLayout::pathChanged, this, [=] { emitDataChanged(index); });
+    connect(keyboardLayout, &DataIndexKeyboardLayout::sourceChanged, this, [=] { emitDataChanged(index); });
 }
 
 void ResourceModel::updateMappings()
@@ -270,14 +276,14 @@ void ResourceModel::updateMappings()
 
     for (int i = 0; i < m_dataIndex->courseCount(); i++)
     {
-        m_signalMapper->setMapping(m_dataIndex->course(i), i);
+        connectToCourse(m_dataIndex->course(i), i);
     }
 
     const int offset = m_dataIndex->courseCount();
 
     for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
     {
-        m_signalMapper->setMapping(m_dataIndex->keyboardLayout(i), i + offset);
+        connectToKeyboardLayout(m_dataIndex->keyboardLayout(i), i + offset);
     }
 }
 
