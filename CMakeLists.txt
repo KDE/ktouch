@@ -8,7 +8,9 @@ set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATI
 
 
 cmake_minimum_required(VERSION 3.5)
-cmake_policy(VERSION 3.10)
+if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
+   cmake_policy(VERSION 3.10)
+endif()
 project(ktouch VERSION ${KDE_APPLICATIONS_VERSION})
 
 find_package(ECM 1.0.0 REQUIRED NO_MODULE)
