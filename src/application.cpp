@@ -63,7 +63,6 @@ Application::Application(int& argc, char** argv, int flags):
     registerQmlTypes();
     migrateKde4Files();
 
-    QIcon::setThemeName("breeze");
     QQuickStyle::setStyle("Default");
 
     DataAccess dataAccess;
