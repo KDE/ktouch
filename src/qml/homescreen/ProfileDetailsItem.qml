@@ -50,6 +50,12 @@ Item {
         colorGroup: SystemPalette.Active
     }
 
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
 
     Item {
         id: infoContainer
@@ -100,7 +106,8 @@ Item {
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width
                         height: parent.height - legend.height - parent.spacing
-
+                        backgroundColor: colorScheme.normalBackground
+                        textColor: colorScheme.normalText
                         model: learningProgressModel
                     }
 
@@ -110,11 +117,11 @@ Item {
                         spacing: 20
                         Charts.LegendItem {
                             dimension: learningProgressChart.accuracy
-                            textColor: activePalette.text
+                            textColor: colorScheme.normalText
                         }
                         Charts.LegendItem {
                             dimension: learningProgressChart.charactersPerMinute
-                            textColor: activePalette.text
+                            textColor: colorScheme.normalText
                         }
                     }
                 }

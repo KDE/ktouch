@@ -108,7 +108,6 @@ FocusScope {
     }
 
 
-
     LearningProgressModel {
         property bool filterByLesson: learningProgressFilterComboBox.currentIndex == 1
         id: learningProgressModel
@@ -371,6 +370,7 @@ FocusScope {
                             property string iconName: "office-chart-area"
                             model: learningProgressModel
                             backgroundColor: colorScheme.normalBackground
+                            textColor: colorScheme.normalText
 
                             Component.onCompleted: {
                                 accuracyLegend.dimension = learningProgressTab.accuracy

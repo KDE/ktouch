@@ -63,6 +63,7 @@ PopupDialog {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 backgroundColor: colorScheme.normalBackground
+                textColor: colorScheme.normalText
                 model: LearningProgressModel {
                     id: learningProgressModel
                 }
@@ -74,10 +75,12 @@ PopupDialog {
                 Charts.LegendItem {
                     id: accuracyLegend
                     dimension: learningProgressChart.accuracy
+                    textColor: colorScheme.normalText
                 }
                 Charts.LegendItem {
                     id: charactersPerMinuteLegend
                     dimension: learningProgressChart.charactersPerMinute
+                    textColor: colorScheme.normalText
                 }
             }
         }
