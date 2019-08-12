@@ -26,6 +26,13 @@ Item {
     id: root
     height: childrenRect.height
 
+    KColorScheme {
+        id: colorScheme
+        colorGroup: KColorScheme.Active
+        colorSet: KColorScheme.View
+    }
+
+
     Column {
         id: column
         spacing: 3
@@ -58,6 +65,7 @@ Item {
                     text: model.modelData.text
                     wrapMode: Text.Wrap
                     height: Math.max(paintedHeight, titleLabel.paintedHeight)
+                    color: colorScheme.normalText
                 }
             }
         }
