@@ -107,7 +107,7 @@ Charts.LineChart {
                     text: learningProgressPointTooltip.row !== -1? learningProgressModel.charactersPerMinute(learningProgressPointTooltip.row): ""
                 }
             ]
-            width: 250
+            width: 450
             model: infoModel
         }
     }
