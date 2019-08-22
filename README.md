@@ -1,10 +1,7 @@
 # KTouch
 
-| Jenkins CI Name | Master | Stable |
-| --------------- | ------ | ------ |
-| OpenSuse Qt 5.12 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/) |
-| FreeBSD Qt 5.13 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/) |
-
+<a href='https://flathub.org/apps/details/org.kde.ktouch'><img height='56' alt='Get KTouch from Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'></a>
+<a href='https://snapcraft.io/ktouch'><img height='56' alt='Get KTouch from the Snap Store' src='https://snapcraft.io/static/images/badges/en/snap-store-black.svg'></a>
 
 ![Screenshot](https://cdn.kde.org/screenshots/ktouch/ktouch.png)
 
@@ -14,6 +11,13 @@ with only a few keys to remember you will advance through different
 training levels where additional keys are introduced. Because you no
 longer need to search for the keys on the keyboard you will be able
 to type quickly and accurately.
+
+# Build Status
+
+| Jenkins CI Name | Master | Stable |
+| --------------- | ------ | ------ |
+| OpenSuse Qt 5.12 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/) |
+| FreeBSD Qt 5.13 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/) |
 
 # Development Setup
 
