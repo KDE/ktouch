@@ -108,7 +108,7 @@ void Key::removeKeyChar(int index)
 
 void Key::clearKeyChars()
 {
-    if (m_keyChars.count() == 0)
+    if (m_keyChars.isEmpty())
         return;
 
     emit keyCharsAboutToBeRemoved(0, m_keyChars.length() - 1);

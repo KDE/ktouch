@@ -112,9 +112,9 @@ void LessonTextEditor::reformatText()
 
     QString text = doPartialReplace? cursor.selectedText(): m_lessonTextEdit->toPlainText();
 
-    text = text.replace('\r', QLatin1String(" "));
-    text = text.replace('\n', QLatin1String(" "));
-    text = text.replace(QString::fromUtf8("\u2029"), QLatin1String(" "));
+    text.replace('\r', QLatin1String(" "));
+    text.replace('\n', QLatin1String(" "));
+    text.replace(QString::fromUtf8("\u2029"), QLatin1String(" "));
 
     const QStringList tokens(text.split(' '));
     QStringList lines;
@@ -141,7 +141,7 @@ void LessonTextEditor::reformatText()
         lines.append(currentLine);
     }
 
-    text = lines.join(QStringLiteral("\n"));
+    text = lines.join(QLatin1Char('\n'));
 
     if (!doPartialReplace)
     {

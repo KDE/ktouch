@@ -149,7 +149,7 @@ int Course::indexOfLesson(Lesson* lesson)
 
 void Course::clearLessons()
 {
-    if (m_lessons.count() == 0)
+    if (m_lessons.isEmpty())
         return;
 
     emit lessonsAboutToBeRemoved(0, m_lessons.length() - 1);

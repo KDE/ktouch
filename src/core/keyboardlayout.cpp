@@ -220,7 +220,7 @@ void KeyboardLayout::removeKey(int index)
 
 void KeyboardLayout::clearKeys()
 {
-    if (m_keys.count() == 0)
+    if (m_keys.isEmpty())
         return;
 
     qDeleteAll(m_keys);

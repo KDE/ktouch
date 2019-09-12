@@ -227,7 +227,7 @@ bool ResourceDataAccess::storeKeyboardLayout(const QString& path, KeyboardLayout
                     keyCharElem.setAttribute(QStringLiteral("modifier"), modifier);
                 }
                 const QString value = keyChar->value();
-                if (value == QLatin1String(" "))
+                if (value == QLatin1Char(' '))
                 {
                     keyCharElem.appendChild(doc.createCDATASection(value));
                 }

@@ -37,7 +37,7 @@ TrainingStats* ErrorsModel::trainingStats() const
 
 int ErrorsModel::maximumErrorCount() const
 {
-    if (m_errors.count() == 0)
+    if (m_errors.isEmpty())
         return 0;
 
     return m_errors.at(0).second;
