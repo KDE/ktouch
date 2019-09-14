@@ -13,7 +13,11 @@ if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
 endif()
 project(ktouch VERSION ${KDE_APPLICATIONS_VERSION})
 
-find_package(ECM 1.0.0 REQUIRED NO_MODULE)
+set(QT_MIN_VERSION "5.11.0")
+set(KF5_MIN_VERSION "5.46.0")
+
+
+find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 find_package(KF5DocTools)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
@@ -26,7 +30,7 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 
-find_package(Qt5 5.9 REQUIRED COMPONENTS
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Gui
     Qml
@@ -42,7 +46,7 @@ find_package(Qt5 5.9 REQUIRED COMPONENTS
 find_package(Qt5X11Extras)
 find_package(Qt5 CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
-find_package(KF5 REQUIRED COMPONENTS
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
     ConfigWidgets
