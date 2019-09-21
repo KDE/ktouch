@@ -258,7 +258,7 @@ QVariant TrainingLineCore::inputMethodQuery(Qt::InputMethodQuery query) const
 {
     switch (query)
     {
-    case Qt::ImMicroFocus:
+    case Qt::ImCursorRectangle:
         if (!m_cursorItem)
             return QVariant();
         return QVariant(m_cursorItem->mapRectToItem(this, m_cursorItem->boundingRect().toRect()));
