@@ -66,7 +66,7 @@ if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
    add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 endif()
 
-option(COMPILE_QML "Precompile QML code" ON)
+option(COMPILE_QML "Precompile QML code" OFF)
 
 # enable QML debugging for debug builds
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
