@@ -129,5 +129,5 @@
   <provides>
     <binary>ktouch</binary>
   </provides>
-  <content_rating type="oars-1.0" />
+  <content_rating type="oars-1.0"/>
 </component>
