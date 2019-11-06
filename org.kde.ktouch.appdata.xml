@@ -126,10 +126,19 @@
     </screenshot>
     <screenshot>
       <caption>Selecting a Lesson for Training</caption>
+      <caption xml:lang="ca">Selecció d'una lliçó per entrenar-se</caption>
+      <caption xml:lang="cs">Výběr lekce k učení</caption>
+      <caption xml:lang="nl">Een les voor training wordt geselecteerd</caption>
+      <caption xml:lang="uk">Вибір уроку для навчання</caption>
+      <caption xml:lang="x-test">xxSelecting a Lesson for Trainingxx</caption>
       <image>https://cdn.kde.org/screenshots/ktouch/ktouch_homescreen.png</image>
     </screenshot>
     <screenshot>
       <caption>Reviewing Typing Performance after Finishing a Lesson</caption>
+      <caption xml:lang="ca">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
+      <caption xml:lang="nl">Bekijken van Presentaties met typen na beëindigen van een les</caption>
+      <caption xml:lang="uk">Огляд поступу навчання після завершення уроку</caption>
+      <caption xml:lang="x-test">xxReviewing Typing Performance after Finishing a Lessonxx</caption>
       <image>https://cdn.kde.org/screenshots/ktouch/ktouch_scorescreen.png</image>
     </screenshot>
   </screenshots>
