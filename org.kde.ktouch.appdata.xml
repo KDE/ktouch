@@ -95,9 +95,9 @@
     <p xml:lang="x-test">xxKTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.xx</p>
     <p xml:lang="zh-TW">KTouch 是一套打字訓練程式。它可以訓練您打字，並依您的程度來調整訓練等級。它會顯示您的鍵盤，並指引您下一個要按下什麼鍵，以及該使用哪個指頭。您可以學習使用所有的指頭來打字，一步步，不需要看鍵盤來找鍵。所有的年齡層、所有程度的學校都適用，包括個人練習也可以。KTouch 中有多種不同的語言課程，並且提供了課程編輯器。它也支援不同的鍵盤佈局，也可以建立使用者自訂的鍵盤佈局。在訓練課程中，KTouch 會收集統計資料，協助您與您的老師分析追蹤您的進度。</p>
   </description>
-  <url type="homepage">http://edu.kde.org/ktouch/</url>
+  <url type="homepage">https://kde.org/applications/education/org.kde.ktouch</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=ktouch</url>
-  <url type="help">http://docs.kde.org/stable/en/kdeedu/ktouch/index.html</url>
+  <url type="help">https://docs.kde.org/stable/en/kdeedu/ktouch/index.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=ktouch&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
@@ -149,6 +149,7 @@
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
+  <developer_name>The KDE Community</developer_name>
   <provides>
     <binary>ktouch</binary>
   </provides>
