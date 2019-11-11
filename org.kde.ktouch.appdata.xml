@@ -128,6 +128,7 @@
       <caption>Selecting a Lesson for Training</caption>
       <caption xml:lang="ca">Selecció d'una lliçó per entrenar-se</caption>
       <caption xml:lang="cs">Výběr lekce k učení</caption>
+      <caption xml:lang="en-GB">Selecting a Lesson for Training</caption>
       <caption xml:lang="es">Seleccionando una lección para practicar</caption>
       <caption xml:lang="nl">Een les voor training wordt geselecteerd</caption>
       <caption xml:lang="pt">Selecção de uma Lição para Exercício</caption>
@@ -140,6 +141,7 @@
     <screenshot>
       <caption>Reviewing Typing Performance after Finishing a Lesson</caption>
       <caption xml:lang="ca">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
+      <caption xml:lang="en-GB">Reviewing Typing Performance after Finishing a Lesson</caption>
       <caption xml:lang="es">Revisión del rendimiento de escritura tras terminar una lección</caption>
       <caption xml:lang="nl">Bekijken van Presentaties met typen na beëindigen van een les</caption>
       <caption xml:lang="pt">Revisão da Performance da Escrita após Terminar uma Lição</caption>
@@ -152,6 +154,13 @@
   </screenshots>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
+  <developer_name xml:lang="ca">La comunitat KDE</developer_name>
+  <developer_name xml:lang="en-GB">The KDE Community</developer_name>
+  <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
+  <developer_name xml:lang="pt-BR">KDE Community</developer_name>
+  <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
+  <developer_name xml:lang="uk">Спільнота KDE</developer_name>
+  <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <provides>
     <binary>ktouch</binary>
   </provides>
