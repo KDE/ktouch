@@ -12,7 +12,7 @@
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include <QCommandLineParser>
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
                     "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
                 ),
                 QString(),
-                QStringLiteral("http://edu.kde.org/ktouch"),
+                QStringLiteral("https://edu.kde.org/ktouch"),
                 QStringLiteral("submit@bugs.kde.org"));
 
     about.addAuthor(i18n("Sebastian Gottfried"), i18n("Current maintainer"), QStringLiteral("sebastiangottfried@web.de"));
