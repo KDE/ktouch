@@ -137,6 +137,7 @@
       <caption xml:lang="pl">Wybieranie lekcji do ćwiczeń</caption>
       <caption xml:lang="pt">Selecção de uma Lição para Exercício</caption>
       <caption xml:lang="pt-BR">Seleção de uma lição para treino</caption>
+      <caption xml:lang="sk">Výber lekcie pre tréning</caption>
       <caption xml:lang="sv">Välja en lektion för övning</caption>
       <caption xml:lang="uk">Вибір уроку для навчання</caption>
       <caption xml:lang="x-test">xxSelecting a Lesson for Trainingxx</caption>
@@ -153,6 +154,7 @@
       <caption xml:lang="pl">Ocena sprawności pisania po ukończeniu lekcji</caption>
       <caption xml:lang="pt">Revisão da Performance da Escrita após Terminar uma Lição</caption>
       <caption xml:lang="pt-BR">Revisão do desempenho da digitação após concluir uma lição</caption>
+      <caption xml:lang="sk">Kontrola výkonnosti písania po dokončení lekcie</caption>
       <caption xml:lang="sv">Granska skrivprestation efter en lektion har avslutats</caption>
       <caption xml:lang="uk">Огляд поступу навчання після завершення уроку</caption>
       <caption xml:lang="x-test">xxReviewing Typing Performance after Finishing a Lessonxx</caption>
@@ -164,11 +166,13 @@
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
+  <developer_name xml:lang="es">La comunidad KDE</developer_name>
   <developer_name xml:lang="et">KDE kogukond</developer_name>
   <developer_name xml:lang="nl">De KDE-community</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">KDE Community</developer_name>
+  <developer_name xml:lang="sk">KDE Komunita</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
