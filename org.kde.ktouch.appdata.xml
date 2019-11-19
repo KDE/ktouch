@@ -133,6 +133,7 @@
       <caption xml:lang="es">Seleccionando una lección para practicar</caption>
       <caption xml:lang="et">Õppetunni valimine harjutamiseks</caption>
       <caption xml:lang="id">Memilih Pelajaran untuk Pelatihan</caption>
+      <caption xml:lang="it">Selezionare una lezione per l'allenamento</caption>
       <caption xml:lang="nl">Een les voor training wordt geselecteerd</caption>
       <caption xml:lang="pl">Wybieranie lekcji do ćwiczeń</caption>
       <caption xml:lang="pt">Selecção de uma Lição para Exercício</caption>
@@ -150,6 +151,7 @@
       <caption xml:lang="es">Revisión del rendimiento de escritura tras terminar una lección</caption>
       <caption xml:lang="et">Kirjutamise edenemise ülevaade pärast õppetunni läbimist</caption>
       <caption xml:lang="id">Peninjauan Ulang Kinerja Pengetikan sesudah Selesai Pelajaran</caption>
+      <caption xml:lang="it">Revisione delle prestazioni di digitazione dopo aver terminato una lezione</caption>
       <caption xml:lang="nl">Bekijken van Presentaties met typen na beëindigen van een les</caption>
       <caption xml:lang="pl">Ocena sprawności pisania po ukończeniu lekcji</caption>
       <caption xml:lang="pt">Revisão da Performance da Escrita após Terminar uma Lição</caption>
@@ -168,6 +170,7 @@
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
   <developer_name xml:lang="es">La comunidad KDE</developer_name>
   <developer_name xml:lang="et">KDE kogukond</developer_name>
+  <developer_name xml:lang="it">La comunità KDE</developer_name>
   <developer_name xml:lang="nl">De KDE-community</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
