@@ -128,6 +128,7 @@
     <screenshot>
       <caption>Selecting a Lesson for Training</caption>
       <caption xml:lang="ca">Selecció d'una lliçó per entrenar-se</caption>
+      <caption xml:lang="ca-valencia">Selecció d'una lliçó per entrenar-se</caption>
       <caption xml:lang="cs">Výběr lekce k učení</caption>
       <caption xml:lang="en-GB">Selecting a Lesson for Training</caption>
       <caption xml:lang="es">Seleccionando una lección para practicar</caption>
@@ -148,6 +149,7 @@
     <screenshot>
       <caption>Reviewing Typing Performance after Finishing a Lesson</caption>
       <caption xml:lang="ca">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
+      <caption xml:lang="ca-valencia">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
       <caption xml:lang="en-GB">Reviewing Typing Performance after Finishing a Lesson</caption>
       <caption xml:lang="es">Revisión del rendimiento de escritura tras terminar una lección</caption>
       <caption xml:lang="et">Kirjutamise edenemise ülevaade pärast õppetunni läbimist</caption>
@@ -168,6 +170,7 @@
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
+  <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
   <developer_name xml:lang="es">La comunidad KDE</developer_name>
