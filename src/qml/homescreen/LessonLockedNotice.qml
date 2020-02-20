@@ -26,9 +26,6 @@ import '../common'
 Item {
     id: root
 
-    width: content.width
-    height: content.height
-
     property color glowColor: "#ffffff"
 
     KColorScheme {
@@ -37,36 +34,42 @@ Item {
         colorSet: KColorScheme.Window
     }
 
-    Column {
+    ColumnLayout {
         id: content
 
         anchors.centerIn: parent
-        width: Math.max(icon.width, text.width)
+        width: parent.witdh
         spacing: 10
 
         Icon {
             id: icon
-            anchors.horizontalCenter: parent.horizontalCenter
             icon: "object-locked"
-            width: 128
-            height: 128
+            Layout.preferredWidth: 128
+            Layout.preferredHeight: 128
+            Layout.alignment: Qt.AlignHCenter
         }
 
-        Rectangle {
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: text.width + 2 * text.font.pixelSize
-            height: text.height + text.font.pixelSize
-            radius: text.font.pixelSize
-            color: palette.neutralBackground
 
-            Label {
-                anchors.centerIn: parent
-                id: text
-                text: i18n("Complete Previous Lessons to Unlock")
-                horizontalAlignment: Text.AlignHCenter
-                font.weight: Font.Bold
-                wrapMode: Text.Wrap
+        Label {
+            id: text
+            text: i18n("Complete Previous Lessons to Unlock")
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+            topPadding: text.font.pixelSize / 2
+            bottomPadding: topPadding
+            background: Rectangle {
+                radius: text.font.pixelSize
+                color: palette.neutralBackground
             }
+
+            FontMetrics {
+                id: metrics
+                font: text.font
+            }
+
+            Layout.alignment: Qt.AlignHCenter
+            Layout.maximumWidth: root.width
+            Layout.preferredWidth: metrics.boundingRect(text.text).width + 2 * text.font.pixelSize
         }
     }
 
