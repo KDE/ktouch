@@ -333,13 +333,14 @@ FocusScope {
                         onDeleteButtonClicked: {
                             course.deleteCustomLesson();
                         }
+                        LessonLockedNotice  {
+                            anchors.fill: parent
+                            anchors.margins: 5
+                            visible: index > course.lastUnlockedLessonIndex
+                            glowColor: lessonItem.background.color
+                        }
                     }
 
-                    LessonLockedNotice  {
-                        anchors.centerIn: parent
-                        visible: index > course.lastUnlockedLessonIndex
-                        glowColor: lessonItem.background.color
-                    }
                 }
             }
         }
