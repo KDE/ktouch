@@ -33,5 +33,5 @@ echo "Installing to '${INSTALLDIR}' ... "
 cmake --build . --target install
 
 echo "Running KTouch ... "
-source ${INSTALLDIR}/prefix.sh
+. ${INSTALLDIR}/prefix.sh
 ${INSTALLDIR}/bin/ktouch
