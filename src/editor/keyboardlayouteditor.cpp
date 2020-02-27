@@ -42,7 +42,7 @@ KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     m_dataIndexKeyboardLayout(0),
     m_keyboardLayout(new KeyboardLayout(this)),
     m_readOnly(false),
-    m_selectedKey(0),
+    m_selectedKey(nullptr),
     m_zoomLevel(0)
 {
     setupUi(this);
@@ -73,7 +73,8 @@ KeyboardLayoutEditor::~KeyboardLayoutEditor()
 {
     m_view->setSource(QUrl());
     delete m_view;
-    m_view = 0;
+    m_view = nullptr;
+    m_selectedKey = nullptr;
 }
 
 void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout)
