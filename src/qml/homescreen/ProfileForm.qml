@@ -39,12 +39,12 @@ ColumnLayout {
         advancedRadioButton.checked = skillLevel == Profile.Advanced
     }
 
-    spacing: 15
+    spacing: Units.gridUnit
 
     Label {
         id: welcomeLabel
         Layout.fillWidth: true
-        Layout.preferredWidth: 500
+        Layout.preferredWidth: 24 * Units.gridUnit
         text: i18n("Before you start training, please introduce yourself:")
     }
 
@@ -71,7 +71,7 @@ ColumnLayout {
         text: i18n("Lessons are unlocked as your typing skills improve over time.")
         wrapMode: Text.Wrap
         Layout.maximumWidth: parent.width
-        leftPadding: font.pixelSize * 2
+        leftPadding: font.pixelSize + Units.largeSpacing
         font.italic: true
         enabled: root.skillLevelSelectionEnabled
     }

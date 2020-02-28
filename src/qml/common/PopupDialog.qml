@@ -82,16 +82,16 @@ Dialog {
 
     enter: Transition {
         // grow_fade_in
-        NumberAnimation { property: "scale"; to: 1.0; easing.type: Easing.OutQuint; duration: 220 }
-        NumberAnimation { property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: 150 }
-        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: 220 }
+        NumberAnimation { property: "scale"; to: 1.0; easing.type: Easing.OutQuint; duration: Units.longDuration }
+        NumberAnimation { property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: Units.shortDuration }
+        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 1.0; easing.type: Easing.OutCubic; duration: Units.longDuration }
     }
 
     exit: Transition {
         // shrink_fade_out
-        NumberAnimation { property: "scale"; to: 0.9; easing.type: Easing.OutQuint; duration: 220 }
-        NumberAnimation { property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: 150 }
-        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: 220 }
+        NumberAnimation { property: "scale"; to: 0.9; easing.type: Easing.OutQuint; duration: Units.longDuration }
+        NumberAnimation { property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: Units.shortDuration }
+        NumberAnimation { target: dimOverlay;  property: "opacity"; to: 0.0; easing.type: Easing.OutCubic; duration: Units.longDuration }
     }
 
     background: Rectangle {

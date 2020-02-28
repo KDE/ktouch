@@ -26,7 +26,7 @@ Charts.LineChart {
     property Charts.Dimension accuracy: accuracyDimension
     property Charts.Dimension charactersPerMinute: charactersPerMinuteDimension
 
-    pitch: 60
+    pitch: 3 * Units.gridUnit
 
     function minAccuracy(accuracy) {
         var canditades = [0.9, 0.8, 0.5]
@@ -107,7 +107,7 @@ Charts.LineChart {
                     text: learningProgressPointTooltip.row !== -1? learningProgressModel.charactersPerMinute(learningProgressPointTooltip.row): ""
                 }
             ]
-            width: 450
+            width: 25 * Units.gridUnit
             model: infoModel
         }
     }

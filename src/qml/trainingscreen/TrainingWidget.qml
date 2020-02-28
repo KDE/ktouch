@@ -67,7 +67,7 @@ FocusScope {
             id: sheetFlick
             anchors.fill: parent
             contentWidth: parent.width
-            contentHeight: sheet.height + 60
+            contentHeight: sheet.height + 2 * Units.gridUnit
             clip: true
             flickableDirection: Flickable.VerticalFlick
 
@@ -89,20 +89,20 @@ FocusScope {
             NumberAnimation {
                 target: sheetFlick
                 id: scrollAnimation
-                duration: 150
+                duration: Units.shortDuration
                 property: "contentY"
             }
 
             Rectangle {
                 id: sheet
                 color: "#fff"
-                x: 30
-                y: 30
-                width: trainingWidget.width - 60
+                x: Units.gridUnit
+                y: Units.gridUnit
+                width: trainingWidget.width - 2 * Units.gridUnit
                 height: lessonPainter.height
 
                 border {
-                    width: 1
+                    width: Units.borderWidth
                     color: "#000"
                 }
 
@@ -237,7 +237,7 @@ FocusScope {
         isHighlighted: opacity == 1
         keyboardLayout: screen.keyboardLayout || defaultKeyboardLayout
         Behavior on opacity {
-            NumberAnimation { duration: 150 }
+            NumberAnimation { duration: Units.shortDuration }
         }
     }
 }

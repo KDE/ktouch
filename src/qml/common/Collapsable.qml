@@ -41,7 +41,7 @@ Controls.Control {
 
     Behavior on height {
         NumberAnimation {
-            duration: 150
+            duration: Units.shortDuration
             easing.type: Easing.InOutQuad
         }
     }
@@ -54,11 +54,13 @@ Controls.Control {
         property bool isSwapping: false
         opacity: !root.collapsed && !isSwapping && root.height === implicitHeight? 1: 0
         data: root.data
-        implicitHeight: children.length > 0? children[0].implicitHeight: 0
+        implicitHeight: children.length > 0?
+            children[0].implicitHeight + children[0].anchors.topMargin + children[0].anchors.topMargin:
+            0
 
         Behavior on opacity {
             NumberAnimation {
-                duration: 150
+                duration: Units.shortDuration
             }
         }
 

@@ -20,8 +20,6 @@ import QtGraphicalEffects 1.0
 Icon {
     property color color: "#000000"
     id: icon
-    width: 22
-    height: 22
     ColorOverlay {
         anchors.fill: parent
         source: icon

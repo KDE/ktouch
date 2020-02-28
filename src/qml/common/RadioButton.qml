@@ -23,7 +23,7 @@ RadioButton {
     id: control
 
     hoverEnabled: true
-    spacing: label.font.pixelSize
+    spacing: Units.largeSpacing
     padding: 0
 
     property alias colorScheme: colorScheme
@@ -57,7 +57,7 @@ RadioButton {
 
         Behavior on border.color {
             ColorAnimation {
-                duration: 150
+                duration: Units.shortDuration
             }
         }
 
@@ -76,9 +76,9 @@ RadioButton {
         color: control.colorScheme.normalText
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignVCenter
-        topPadding: 3
+        topPadding: Units.smallSpacing
         leftPadding: control.indicator.width + control.spacing
-        bottomPadding: 3
+        bottomPadding: Units.smallSpacing
 
         FocusBar {
             anchors {

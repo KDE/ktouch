@@ -35,21 +35,21 @@ PopupDialog {
     title: i18n("Edit lesson")
 
     margins: {
-        left: 40
-        bottom: 40
-        right: 40
-        top: 40
+        left: 2 * Units.gridUnit
+        bottom: 2 * Units.gridUnit
+        right: 2 * Units.gridUnit
+        top: 2 * Units.gridUnit
     }
 
     width: parent.width - leftMargin - rightMargin
     height: parent.height - topMargin - bottomMargin
 
-    padding: titleLabel.font.pixelSize
+    padding: Units.gridUnit
 
     contentItem: GridLayout {
 
-        columnSpacing: titleLabel.font.pixelSize
-        rowSpacing: titleLabel.font.pixelSize
+        columnSpacing: Units.gridUnit
+        rowSpacing: Units.gridUnit
 
         Label {
             id: titleLabel

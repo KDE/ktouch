@@ -46,7 +46,7 @@ Button {
         elide: "ElideNone"
 
         Behavior on color {
-            ColorAnimation { duration: 150 }
+            ColorAnimation { duration: Units.shortDuration }
         }
 
     }
@@ -64,12 +64,12 @@ Button {
                 lightness: hovered? -0.04: 0
                 Behavior on saturation {
                     NumberAnimation {
-                        duration: 150
+                        duration: Units.shortDuration
                     }
                 }
                 Behavior on lightness {
                     NumberAnimation {
-                        duration: 150
+                        duration: Units.shortDuration
                     }
                 }
             }
@@ -81,7 +81,6 @@ Button {
                 right: parent.right
                 bottom: parent.bottom
             }
-            height: 3
             control: button
         }
     }

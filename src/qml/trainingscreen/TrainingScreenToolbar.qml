@@ -60,11 +60,11 @@ ToolBar {
             verticalCenter: parent.verticalCenter
             left: parent.left
             right: parent.right
-            leftMargin: 30
-            rightMargin: 30
+            leftMargin: Units.gridUnit
+            rightMargin: Units.gridUnit
         }
 
-        spacing: 5
+        spacing: Units.largeSpacing
 
         IconToolButton {
             id: menuButton

@@ -147,7 +147,7 @@ FocusScope {
         spacing: 0
         BorderImage {
             Layout.fillWidth: true
-            Layout.preferredHeight: 41
+            Layout.preferredHeight: toolbar.implicitHeight + 1
             border {
                 top: 1
                 bottom: 1
@@ -170,7 +170,7 @@ FocusScope {
         BorderImage {
             id: header
             Layout.fillWidth: true
-            Layout.preferredHeight: visible? 130: 0
+            Layout.preferredHeight: visible? statBox.height + 2 * Units.gridUnit: 0
             visible: preferences.showStatistics
             border {
                 top: 1
@@ -180,8 +180,9 @@ FocusScope {
             cache: false
 
             StatBox {
+                id: statBox
                 anchors.centerIn: parent
-                width: parent.width - 60
+                width: parent.width - 2 * Units.gridUnit
                 stats: stats
                 referenceStats: referenceStats
             }
@@ -225,7 +226,6 @@ FocusScope {
                 }
                 source: "qrc:///ktouch/images/trainingscreen-viewport-shadow.png"
                 cache: false
-
             }
 
         }
@@ -297,10 +297,10 @@ FocusScope {
                 keyboardLayout: screen.keyboardLayout
                 anchors {
                     fill: parent
-                    leftMargin: 30
-                    rightMargin: 30
-                    topMargin: 10
-                    bottomMargin: 10
+                    leftMargin: Units.gridUnit
+                    rightMargin: Units.gridUnit
+                    topMargin: Units.largeSpacing
+                    bottomMargin: Units.largeSpacing
                 }
 
                 onKeyboardUpdate: {

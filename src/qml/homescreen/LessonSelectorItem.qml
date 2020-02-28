@@ -60,7 +60,7 @@ Item {
     GridLayout {
         id: content
         anchors.fill: parent
-        anchors.margins: 10
+        anchors.margins: Units.largeSpacing
 
         Label {
             id: titleLabel

@@ -154,8 +154,8 @@ FocusScope {
             RowLayout {
 
                 anchors.fill: parent
-                anchors.leftMargin: 20
-                anchors.rightMargin: 20
+                anchors.leftMargin: Units.gridUnit
+                anchors.rightMargin: Units.gridUnit
                 spacing: anchors.leftMargin
 
                 IconToolButton {
@@ -198,26 +198,26 @@ FocusScope {
             ColumnLayout {
                 id: content
                 anchors.fill: parent
-                anchors.margins: 20
-                spacing: 15
+                anchors.margins: Units.gridUnit
+                spacing: Units.gridUnit
 
                 Rectangle {
                     id: caption
                     Layout.fillWidth: true
-                    Layout.preferredHeight: captionContent.height + 30
-                    radius: 15
+                    Layout.preferredHeight: captionContent.height + 2 * Units.gridUnit
+                    radius: Units.gridUnit
                     color: "#eee4be"
 
                     Item {
                         id: captionContent
                         anchors.centerIn: parent
                         width: Math.max(mainCaption.width, subCaption.width)
-                        height: subCaption.visible? mainCaption.height + subCaption.height + 5: mainCaption.height
+                        height: subCaption.visible? mainCaption.height + subCaption.height + Units.smallSpacing: mainCaption.height
                         Item {
                             id: mainCaption
                             anchors.top: parent.top
                             anchors.horizontalCenter: parent.horizontalCenter
-                            width: captionIcon.width + captionLabel.width + 7
+                            width: captionIcon.width + captionLabel.width + Units.largeSpacing
                             height: Math.max(captionIcon.height, captionLabel.height)
                             Icon {
                                 id: captionIcon
@@ -272,7 +272,7 @@ FocusScope {
 
                 Item {
                     id: contentSpacer
-                    Layout.preferredHeight: 10
+                    Layout.preferredHeight: Units.gridUnit
                     Layout.fillWidth: true
                 }
 
@@ -307,7 +307,7 @@ FocusScope {
                         text: i18nc("Show a statistic over one or more lessons", "Over")
                         opacity: tabGroup.currentItem === learningProgressTab? 0.7: 0
                         Behavior on opacity {
-                            NumberAnimation {duration: 150}
+                            NumberAnimation {duration: Units.shortDuration}
                         }
                     }
 
@@ -324,7 +324,7 @@ FocusScope {
                         currentIndex: 0
                         opacity: tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
-                            NumberAnimation {duration: 150}
+                            NumberAnimation {duration: Units.shortDuration}
                         }
                     }
 
@@ -338,7 +338,7 @@ FocusScope {
                         Layout.alignment: Qt.AlignVCenter
                         opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
-                            NumberAnimation {duration: 150}
+                            NumberAnimation {duration: Units.shortDuration}
                         }
                     }
                     Charts.LegendItem {
@@ -347,7 +347,7 @@ FocusScope {
                         Layout.alignment: Qt.AlignVCenter
                         opacity:  tabGroup.currentItem === learningProgressTab? 1: 0
                         Behavior on opacity {
-                            NumberAnimation {duration: 150}
+                            NumberAnimation {duration: Units.shortDuration}
                         }
                     }
                 }
@@ -388,7 +388,7 @@ FocusScope {
                             property string iconName: "office-chart-bar"
 
                             model: errorsModel
-                            pitch: 60
+                            pitch: 3 * Units.gridUnit
                             textRole: 3 // Qt::ToolTipRole
                             backgroundColor: colorScheme.normalBackground
 

@@ -41,10 +41,15 @@ Collapsable {
 
     Label {
         id: descriptionLabel
-        leftPadding: 20
-        rightPadding: 20
-        topPadding: 10
-        bottomPadding: 10
+        anchors {
+            fill: parent
+            leftMargin: Units.gridUnit
+            rightMargin: Units.gridUnit
+            topMargin: Units.largeSpacing
+            bottomMargin: Units.largeSpacing
+        }
+
+        wrapMode: Text.Wrap
     }
 
 }

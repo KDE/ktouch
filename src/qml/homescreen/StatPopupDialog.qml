@@ -33,10 +33,10 @@ PopupDialog {
     modal: true
 
     margins: {
-        left: 40
-        bottom: 40
-        right: 40
-        top: 40
+        left: 2 * Units.gridUnit
+        bottom: 2 * Units.gridUnit
+        right: 2 * Units.gridUnit
+        top: 2 * Units.gridUnit
     }
 
     width: parent.width - leftMargin - rightMargin
@@ -49,8 +49,8 @@ PopupDialog {
 
         ColumnLayout {
             anchors.fill: parent
-            anchors.margins: titleLabel.font.pixelSize
-            spacing: titleLabel.font.pixelSize
+            anchors.margins: Units.gridUnit
+            spacing: Units.gridUnit
 
             Label {
                 id: titleLabel
@@ -70,7 +70,7 @@ PopupDialog {
             }
 
             Row {
-                spacing: 2 * titleLabel.font.pixelSize
+                spacing: 2 * Units.gridUnit
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 Charts.LegendItem {
                     id: accuracyLegend

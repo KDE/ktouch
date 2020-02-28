@@ -50,7 +50,7 @@ ToolButton {
             color: button.backgroundColor
             Behavior on opacity {
                 NumberAnimation {
-                    duration: 150
+                    duration: Units.shortDuration
                 }
             }
         }
@@ -61,7 +61,6 @@ ToolButton {
                 right: parent.right
                 bottom: parent.bottom
             }
-            height: 3
             control: button
         }
     }

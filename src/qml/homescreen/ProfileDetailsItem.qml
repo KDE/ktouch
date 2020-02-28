@@ -66,7 +66,7 @@ Item {
         Column {
             width: parent.width
             height: childrenRect.height
-            spacing: 40
+            spacing: 2 * Units.gridUnit
 
             LearningProgressModel {
                 id: learningProgressModel
@@ -78,11 +78,11 @@ Item {
 
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width
-                height: 250
+                height: 14 * Units.gridUnit
                 color: activePalette.base
 
                 border {
-                    width: 1
+                    width: Units.borderWidth
                     color: activePalette.text
                 }
 
@@ -96,7 +96,7 @@ Item {
                         bottomMargin: column.spacing
                     }
 
-                    spacing: 20
+                    spacing: Units.gridUnit
 
                     width: parent.width
                     height: parent.height - legend.height - parent.spacing
@@ -114,7 +114,7 @@ Item {
                     Row {
                         id: legend
                         anchors.horizontalCenter: parent.horizontalCenter
-                        spacing: 20
+                        spacing: Units.gridUnit
                         Charts.LegendItem {
                             dimension: learningProgressChart.accuracy
                             textColor: colorScheme.normalText
@@ -154,7 +154,7 @@ Item {
             anchors {
                 top: parent.top
                 horizontalCenter: parent.horizontalCenter
-                topMargin: 5
+                topMargin: Units.largeSpacing
             }
             content: [
                 IconToolButton {
@@ -205,7 +205,7 @@ Item {
         Column {
             width: parent.width
             height: childrenRect.height
-            spacing: 15
+            spacing: Units.gridUnit
 
             Label {
                 property string name
@@ -216,7 +216,7 @@ Item {
                 horizontalAlignment: Text.AlignHCenter
             }
             Row {
-                spacing: 10
+                spacing: Units.largeSpacing
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: childrenRect.width
                 height: childrenRect.height

@@ -24,7 +24,7 @@ Label {
     id: label
     elide: Text.ElideRight
 
-    padding: Math.ceil(0.7 * font.pixelSize)
+    padding: Units.largeSpacing
     leftPadding: (iconItem.visible || reserveSpaceForIcon? padding + iconItem.width: 0) + (label.text !== ""? padding: 0)
     verticalAlignment: Text.AlignVCenter
 
@@ -38,7 +38,5 @@ Label {
             verticalCenter: parent.verticalCenter
         }
         icon: label.iconName
-        width: 22
-        height: 22
     }
 }

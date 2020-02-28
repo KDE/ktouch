@@ -22,7 +22,7 @@ import ktouch 1.0
 Rectangle {
     property Item control
 
-    height: 2
+    height: Math.max(Math.floor(Units.gridUnit / 6), 1)
     color: control.colorScheme.focusDecoration
     opacity: control.activeFocus? 1: 0
 

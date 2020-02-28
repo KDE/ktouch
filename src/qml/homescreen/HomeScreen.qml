@@ -72,13 +72,14 @@ FocusScope {
         Item {
             id: navigationArea
             z: 2
-            Layout.preferredWidth: 300
+            Layout.preferredWidth: 16 * Units.gridUnit
             Layout.fillHeight: true
 
             DropShadow {
                 anchors.fill: navigationAreaLayout
                 source: navigationAreaLayout
-                samples: 16
+                radius: Units.largeSpacing
+                samples: 2 * radius + 1
                 horizontalOffset: 0
                 verticalOffset: 0
             }
@@ -94,21 +95,13 @@ FocusScope {
                     Layout.fillWidth: true
                     dimFactor: 1.3
 
-                    RowLayout {
+                    ProfileComboBox {
                         anchors.fill: parent
-                        spacing: 5
-
-
-                        ProfileComboBox {
-                            id: profileComboBox
-                            colorScheme: header.colorScheme
-                            manageProfileButtonBgColor: header.colorScheme.toolbarBackground
-                            Layout.fillHeight: true
-                            Layout.preferredWidth: 300
-                            Layout.fillWidth: true
-                            onActivated: {
-                                safeLastUsedProfile(profile)
-                            }
+                        id: profileComboBox
+                        colorScheme: header.colorScheme
+                        manageProfileButtonBgColor: header.colorScheme.toolbarBackground
+                        onActivated: {
+                            safeLastUsedProfile(profile)
                         }
                     }
                 }

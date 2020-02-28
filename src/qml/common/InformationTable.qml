@@ -35,7 +35,7 @@ Item {
 
     Column {
         id: column
-        spacing: 3
+        spacing: Units.largeSpacing
         width: parent.width
         height: childrenRect.height
 
@@ -43,7 +43,7 @@ Item {
             id: repeator
 
             Row {
-                spacing: 5
+                spacing: Units.smallSpacing
                 height: Math.max(titleLabel.height, valueLabel.height)
                 width: root.width
 
@@ -52,7 +52,8 @@ Item {
                     width: Math.round((parent.width - parent.spacing) / 2)
                     horizontalAlignment: Text.AlignRight
                     verticalAlignment: Text.AlignTop
-                    color: "#888"
+                    color: colorScheme.normalText
+                    opacity: 0.7
                     text: model.modelData.title
                     wrapMode: Text.Wrap
                     height: Math.max(paintedHeight, valueLabel.paintedHeight)

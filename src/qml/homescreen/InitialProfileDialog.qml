@@ -27,7 +27,7 @@ PopupDialog {
     modal: true
     title: i18n("Welcome to Typewriting Trainer")
     closePolicy: PopupDialog.NoAutoClose
-    padding: 20
+    padding: Units.gridUnit
 
     function save() {
         var profile = profileDataAccess.createProfile()

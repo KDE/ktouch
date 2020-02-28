@@ -29,13 +29,11 @@ Controls.ToolSeparator {
         colorGroup: KColorScheme.Active
         colorSet: KColorScheme.Complementary
     }
-    padding: vertical? 6: 2
-    topPadding: vertical? 2: 6
-    bottomPadding: vertical? 2: 6
+    padding: Units.smallSpacing
 
     contentItem: Rectangle {
-        implicitWidth: control.vertical? 1: 24
-        implicitHeight: control.vertical? 24: 1
+        implicitWidth: control.vertical? 1: Units.gridUnit
+        implicitHeight: control.vertical? Units.gridUnit: 1
         color: control.colorScheme.normalText
     }
 }

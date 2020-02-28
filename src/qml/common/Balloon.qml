@@ -46,14 +46,14 @@ Loader {
             layer.enabled: true
             layer.effect: DropShadow {
                 anchors.fill: parent
-                radius: 5
-                samples: 11
+                radius: Units.smallSpacing
+                samples: 2 * radius + 1
             }
 
             Behavior on opacity {
                 SequentialAnimation {
                     NumberAnimation {
-                        duration: 250
+                        duration: Units.shortDuration
                         easing.type: Easing.InOutQuad
                         properties: "opacity"
                     }
@@ -74,7 +74,7 @@ Loader {
             Rectangle {
                 id: internal
                 color: palette.alternateBase
-                radius: 5
+                radius: Units.smallSpacing
 
                 property variant parentPos: root.visualParent? root.visualParent.mapToItem(null, 0, 0): Qt.point(0, 0)
                 property bool under: root.visualParent ? internal.parentPos.y + root.visualParent.height + height < dismissArea.height : true
@@ -114,8 +114,8 @@ Loader {
                         horizontalCenterOffset: internal.preferedX - internal.x
                         top: parent.bottom
                     }
-                    width: 10
-                    height: 10
+                    width: Math.floor(Units.gridUnit / 2)
+                    height: width
                     visible: false
                 }
 

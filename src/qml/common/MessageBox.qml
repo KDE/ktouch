@@ -22,10 +22,10 @@ import "../common"
 Rectangle {
     id: item
     anchors.verticalCenter: parent.verticalCenter
-    radius: 3
+    radius: Units.smallSpacing
     color: "#eee4be"
-    height: label.height + 6
-    width: label.width + 6
+    height: label.height
+    width: label.width
     smooth: true
 
     function showMessage(msg, iconSource) {
@@ -58,8 +58,8 @@ Rectangle {
 
     IconLabel {
         anchors.centerIn: parent
+        padding: Units.smallSpacing
         id: label
-        padding: 2
     }
 
     states: [

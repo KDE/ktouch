@@ -82,10 +82,10 @@ ComboBox {
         id: manageProfileDialog
 
         margins: {
-            left: 40
-            bottom: 40
-            right: 40
-            top: 40
+            left: 2 * Units.gridUnit
+            bottom: 2 * Units.gridUnit
+            right: 2 * Units.gridUnit
+            top: 2 * Units.gridUnit
         }
 
         width: parent.width - leftMargin - rightMargin

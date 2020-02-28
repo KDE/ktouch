@@ -39,13 +39,13 @@ Item {
 
         anchors.centerIn: parent
         width: parent.witdh
-        spacing: 10
+        spacing: Units.largeSpacing
 
         Icon {
             id: icon
             icon: "object-locked"
-            Layout.preferredWidth: 128
-            Layout.preferredHeight: 128
+            Layout.preferredWidth: Units.fontMetrics.roundedIconSize(8 * Units.gridUnit)
+            Layout.preferredHeight: Layout.preferredWidth
             Layout.alignment: Qt.AlignHCenter
         }
 
@@ -55,8 +55,8 @@ Item {
             text: i18n("Complete Previous Lessons to Unlock")
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
-            topPadding: text.font.pixelSize / 2
-            bottomPadding: topPadding
+            topPadding: Units.largeSpacing
+            bottomPadding: Units.largeSpacing
             background: Rectangle {
                 radius: text.font.pixelSize
                 color: palette.neutralBackground
@@ -77,6 +77,7 @@ Item {
         anchors.fill: content
         source: content
         color: root.glowColor
-        samples: 25
+        radius: Math.floor(.75 * Units.gridUnit)
+        samples: 2 * radius + 1
     }
 }

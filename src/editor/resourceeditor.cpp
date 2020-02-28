@@ -70,7 +70,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_categorizedResourceModel->setResourceModel(m_resourceModel);
     m_categorizedResourceModel->setCategorizedModel(true);
 
-    setMinimumSize(700, 500);
+    const int unit = fontMetrics().height();
+    setMinimumSize(39 * unit, 28 * unit);
     setCaption(i18n("Course and Keyboard Layout Editor"));
 
     m_newResourceAction->setToolTip(i18n("Create a new course or keyboard layout"));

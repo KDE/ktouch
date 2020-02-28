@@ -43,11 +43,11 @@ Collapsable {
 
     Item {
         implicitWidth: root.width
-        implicitHeight: layout.implicitHeight + 20
+        implicitHeight: layout.implicitHeight + 2 * Units.largeSpacing
 
         RowLayout {
             id: layout
-            width: root.width - 40
+            width: root.width - 2 * Units.gridUnit
             anchors.centerIn: parent
 
             Label {

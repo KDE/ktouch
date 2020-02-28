@@ -18,5 +18,6 @@
 import org.kde.kquickcontrolsaddons 2.0 as Addons
 
 Addons.QIconItem {
-
+        height: Units.fontMetrics.roundedIconSize(Units.gridUnit)
+        width: height
 }

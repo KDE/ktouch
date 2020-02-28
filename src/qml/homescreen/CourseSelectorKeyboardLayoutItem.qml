@@ -108,7 +108,7 @@ Column {
 
     Behavior on height {
         NumberAnimation {
-            duration: 150
+            duration: Units.shortDuration
             easing.type: Easing.InOutQuad
         }
     }

@@ -39,7 +39,7 @@ ComboBox {
     }
 
     hoverEnabled: true
-    spacing: 0.7 * font.pixelSize
+    spacing: Units.largeSpacing
 
     background: Item {
         Rectangle {
@@ -48,7 +48,7 @@ ComboBox {
             color: colorScheme.normalBackground
             Behavior on opacity {
                 NumberAnimation {
-                    duration: 150
+                    duration: Units.shortDuration
                 }
             }
         }
@@ -96,7 +96,7 @@ ComboBox {
             NumberAnimation {
                 property: "opacity"
                 to: 1.0
-                duration: 150
+                duration: Units.shortDuration
             }
         }
 
@@ -104,7 +104,7 @@ ComboBox {
             NumberAnimation {
                 property: "opacity"
                 to: 0.0
-                duration: 150
+                duration: Units.shortDuration
             }
         }
 
@@ -122,7 +122,8 @@ ComboBox {
             color: listColorScheme.normalBackground
             layer.enabled: true
             layer.effect: DropShadow {
-                samples: 24
+                radius: Units.smallSpacing
+                samples: 2 * radius + 1
                 horizontalOffset: 0
                 verticalOffset: 0
             }

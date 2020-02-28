@@ -31,20 +31,19 @@ Collapsable {
 
     Item {
         implicitWidth: root.width
-        implicitHeight: layout.implicitHeight + 20
+        implicitHeight: layout.implicitHeight + 2 * Units.largeSpacing
 
         GridLayout {
             id: layout
             anchors.centerIn: parent
-            width: root.width - 40
-            rowSpacing: label.font.pixelSize
-            columnSpacing: 10
+            width: root.width - 2 * Units.gridUnit
+            rowSpacing: Units.gridUnit
+            columnSpacing: Units.gridUnit
 
             Icon {
                 Layout.column: 0
                 Layout.row: 0
-                width: 32
-                height: 32
+                height: Units.fontMetrics.roundedIconSize(2 * Units.gridUnit)
                 icon: "dialog-warning"
             }
 

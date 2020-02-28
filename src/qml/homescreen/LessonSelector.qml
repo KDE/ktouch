@@ -164,8 +164,8 @@ FocusScope {
 
                     RowLayout {
                         anchors.fill: parent
-                        anchors.leftMargin: 20
-                        spacing: 5
+                        anchors.leftMargin: Units.gridUnit
+                        spacing: Units.smallSpacing
 
                         Label {
                             text: root.course? root.course.title: ""
@@ -211,7 +211,7 @@ FocusScope {
                             backgroundColor: toolbar.colorScheme.normalBackground
                             Layout.fillHeight: true
                             Layout.preferredWidth: toolbar.height
-                            Layout.rightMargin: 20
+                            Layout.rightMargin: Units.gridUnit
                             onClicked: {
                                 var position = mapToItem(null, 0, height)
                                 ktouch.showMenu(position.x, position.y)
@@ -247,7 +247,8 @@ FocusScope {
             DropShadow {
                 anchors.fill: header
                 source: header
-                samples: 16
+                radius: Units.largeSpacing
+                samples: 2 * radius + 1
                 horizontalOffset: 0
                 verticalOffset: 0
             }
@@ -270,12 +271,12 @@ FocusScope {
                 clip: true
                 focus: true
                 background.color: colorScheme.shade(colorScheme.normalBackground, KColorScheme.DarkShade, 1, 0.0)
-                property int columns: Math.floor(width / (300 + 20))
+                property int columns: Math.floor(width / (17 * Units.gridUnit))
                 cellWidth: Math.floor(content.contentWidth / content.columns)
                 cellHeight: Math.round(cellWidth * 2 / 3)
-                contentWidth: width - 20
-                rightMargin: 20
-                bottomMargin: 20
+                contentWidth: width - Units.gridUnit
+                rightMargin: Units.gridUnit
+                bottomMargin: Units.gridUnit
 
                 Keys.onPressed: {
                     if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
@@ -308,8 +309,8 @@ FocusScope {
                     LessonSelectorItem {
                         id: lessonItem
                         anchors.fill: parent
-                        anchors.leftMargin: 20
-                        anchors.topMargin: 20
+                        anchors.leftMargin: Units.gridUnit
+                        anchors.topMargin: Units.gridUnit
                         anchors.centerIn: parent
                         lesson: dataRole
                         selected:  content.currentIndex == index
@@ -335,7 +336,7 @@ FocusScope {
                         }
                         LessonLockedNotice  {
                             anchors.fill: parent
-                            anchors.margins: 5
+                            anchors.margins: Units.smallSpacing
                             visible: index > course.lastUnlockedLessonIndex
                             glowColor: lessonItem.background.color
                         }
@@ -376,8 +377,8 @@ FocusScope {
                             id: startButton
                             iconName: "go-next-view"
                             bgColor: colorScheme.positiveBackground
-                            anchors.centerIn: parent
                             text: i18n("Start Training")
+                            anchors.centerIn: parent
                             enabled: root.selectedLesson && content.currentIndex <= course.lastUnlockedLessonIndex
                             onClicked: lessonSelected(course, root.selectedLesson)
                         }
@@ -388,7 +389,8 @@ FocusScope {
             DropShadow {
                 anchors.fill: footer
                 source: footer
-                samples: 16
+                radius: Units.largeSpacing
+                samples: 2 * radius + 1
                 horizontalOffset: 0
                 verticalOffset: 0
             }

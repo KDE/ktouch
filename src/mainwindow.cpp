@@ -45,7 +45,8 @@ MainWindow::~MainWindow()
 void MainWindow::init()
 {
     QWidget* viewWidget = QWidget::createWindowContainer(m_view, this);
-    viewWidget->setMinimumSize(1000, 700);
+    const int unit = fontMetrics().height();
+    viewWidget->setMinimumSize(56 * unit, 39 * unit);
     viewWidget->setFocusPolicy(Qt::StrongFocus);
     setCentralWidget(viewWidget);
 

@@ -44,7 +44,6 @@ ListView {
             left: parent.left
             right: parent.right
         }
-        height: 3
         control: control
         z: -1
     }
@@ -55,7 +54,6 @@ ListView {
             right: parent.right
             bottom: parent.bottom
         }
-        height: 3
         control: control
         z: -1
     }

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/ktouch/qml">
+        <file>common/qmldir</file>
         <file>common/AutoTriggerButton.qml</file>
         <file>common/Balloon.qml</file>
         <file>common/Collapsable.qml</file>
@@ -30,6 +31,7 @@
         <file>common/ToolBar.qml</file>
         <file>common/ToolSeparator.qml</file>
         <file>common/ToolTip.qml</file>
+        <file>common/Units.qml</file>
         <file>homescreen/CourseDescriptionItem.qml</file>
         <file>homescreen/CourseSelector.qml</file>
         <file>homescreen/CourseSelectorKeyboardLayoutItem.qml</file>

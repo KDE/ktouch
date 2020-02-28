@@ -31,19 +31,20 @@ Controls.ScrollBar {
     }
 
     contentItem: Rectangle {
-        implicitWidth:  control.orientation == Qt.Horizontal? 100: 6
-        implicitHeight: control.orientation == Qt.Horizontal? 6: 100
-        radius: 3
+        property int size: Math.floor(Units.gridUnit / 3)
+        implicitWidth:  control.orientation == Qt.Horizontal? 100: size
+        implicitHeight: control.orientation == Qt.Horizontal? size: 100
+        radius: size / 2
         color: control.pressed ? colorScheme.focusDecoration: colorScheme.alternateBackground
         opacity: control.active? 1: 0.3
         Behavior on opacity {
             NumberAnimation {
-                duration: 150
+                duration: Units.shortDuration
             }
         }
         Behavior on color {
             ColorAnimation {
-                duration: 150
+                duration: Units.shortDuration
             }
         }
    }

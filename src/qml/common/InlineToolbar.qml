@@ -25,8 +25,8 @@ Item {
     property alias content: contentArea.data
     property alias color: background.color
 
-    width: contentArea.width + 6
-    height: contentArea.height + 6
+    width: contentArea.width + Units.largeSpacing
+    height: contentArea.height + Units.largeSpacing
 
 
     Rectangle {
@@ -34,7 +34,7 @@ Item {
         id: background
         color: activePalette.mid
         opacity: 0.7
-        radius: 3
+        radius: Units.smallSpacing
 
         SystemPalette {
             id: activePalette
@@ -43,13 +43,13 @@ Item {
     }
 
     Behavior on opacity {
-        NumberAnimation { duration: 250 }
+        NumberAnimation { duration: Units.shortDuration }
     }
 
     Row {
         id: contentArea
         anchors.centerIn: parent
         height: childrenRect.height
-        spacing: 3
+        spacing: Units.smallSpacing
     }
 }

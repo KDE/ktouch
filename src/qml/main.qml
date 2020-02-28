@@ -206,7 +206,7 @@ Rectangle {
             target: curtain
             property: "opacity"
             to: 1
-            duration: switchScreenAnimation.to == homeScreen? 250: 750
+            duration: switchScreenAnimation.to == homeScreen? Units.longDuration: 3 * Units.longDuration
             easing.type: Easing.OutQuad
         }
         PropertyAction {
@@ -232,7 +232,7 @@ Rectangle {
             target: curtain
             property: "opacity"
             to: 0
-            duration: switchScreenAnimation.to == homeScreen? 250: 750
+            duration: switchScreenAnimation.to == homeScreen? Units.longDuration: 3 * Units.longDuration
             easing.type: Easing.InQuad
         }
     }

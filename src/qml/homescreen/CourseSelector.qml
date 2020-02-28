@@ -53,9 +53,8 @@ FocusScope {
 
         // if this fails try to select course matching the current keyboard layout
         if (coursesForCurrentKeyboardLayoutModel.rowCount() > 0) {
-            var blub = coursesForCurrentKeyboardLayoutModel.data(coursesForCurrentKeyboardLayoutModel.index(0, 0), ResourceModel.DataRole);
-            console.log(blub)
-            root.selectedCourse = blub
+            var course = coursesForCurrentKeyboardLayoutModel.data(coursesForCurrentKeyboardLayoutModel.index(0, 0), ResourceModel.DataRole);
+            root.selectedCourse = course
             return;
         }
 

@@ -49,7 +49,7 @@ Controls.TextArea {
                                   control.colorScheme.focusDecoration.hslValue,
                                   control.enabled? 0.5: 0.2)
         Behavior on border.color {
-            ColorAnimation { duration: 150 }
+            ColorAnimation { duration: Units.shortDuration }
         }
     }
 

@@ -44,7 +44,6 @@ GridView {
             left: parent.left
             right: parent.right
         }
-        height: 3
         control: control
     }
 
@@ -54,7 +53,6 @@ GridView {
             right: parent.right
             bottom: parent.bottom
         }
-        height: 3
         control: control
     }
 

@@ -31,7 +31,7 @@ Item {
     property bool xLocked: false
     property bool yLocked: false
 
-    property int minSize: 20
+    property int minSize: Units.gridUnit
 
     x: targetItem?
         targetItem.x + (horizontalPosition == "left"? 0: targetItem.width - 1):
@@ -80,11 +80,11 @@ Item {
     Rectangle {
         anchors {
             centerIn: parent
-            verticalCenterOffset: verticalPosition == "top"? -10: 10
-            horizontalCenterOffset: horizontalPosition == "left"? -10: 10
+            verticalCenterOffset: verticalPosition == "top"? -Units.largeSpacing: Units.largeSpacing
+            horizontalCenterOffset: horizontalPosition == "left"? -Units.largeSpacing: Units.largeSpacing
         }
-        width: 15
-        height: 15
+        width: Math.floor(Units.gridUnit / 2)
+        height: Math.floor(Units.gridUnit / 2)
         color: palette.highlight
         visible: interactive
 

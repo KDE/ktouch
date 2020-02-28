@@ -48,7 +48,7 @@ ItemDelegate {
         opacity: root.highlighted ? 1 : (root.hovered? 0.3: 0)
         Behavior on opacity {
             NumberAnimation {
-                duration: 150
+                duration: Units.shortDuration
 
             }
         }
