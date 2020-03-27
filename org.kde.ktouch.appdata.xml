@@ -122,6 +122,7 @@
       <caption xml:lang="pt">Exercício com o KTouch</caption>
       <caption xml:lang="pt-BR">Treinando com o KTouch</caption>
       <caption xml:lang="sk">Tréning s KTouch</caption>
+      <caption xml:lang="sl">Vaje s KTouch</caption>
       <caption xml:lang="sv">Övning med Ktouch</caption>
       <caption xml:lang="uk">Вправляння у KTouch</caption>
       <caption xml:lang="x-test">xxTraining with KTouchxx</caption>
@@ -146,6 +147,7 @@
       <caption xml:lang="pt">Selecção de uma Lição para Exercício</caption>
       <caption xml:lang="pt-BR">Seleção de uma lição para treino</caption>
       <caption xml:lang="sk">Výber lekcie pre tréning</caption>
+      <caption xml:lang="sl">Izbira lekcije za vadbo</caption>
       <caption xml:lang="sv">Välja en lektion för övning</caption>
       <caption xml:lang="uk">Вибір уроку для навчання</caption>
       <caption xml:lang="x-test">xxSelecting a Lesson for Trainingxx</caption>
@@ -167,6 +169,7 @@
       <caption xml:lang="pt">Revisão da Performance da Escrita após Terminar uma Lição</caption>
       <caption xml:lang="pt-BR">Revisão do desempenho da digitação após concluir uma lição</caption>
       <caption xml:lang="sk">Kontrola výkonnosti písania po dokončení lekcie</caption>
+      <caption xml:lang="sl">Pregled uspešnosti tipkanja po zaključku lekcije</caption>
       <caption xml:lang="sv">Granska skrivprestation efter en lektion har avslutats</caption>
       <caption xml:lang="uk">Огляд поступу навчання після завершення уроку</caption>
       <caption xml:lang="x-test">xxReviewing Typing Performance after Finishing a Lessonxx</caption>
@@ -190,6 +193,7 @@
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">KDE Community</developer_name>
   <developer_name xml:lang="sk">KDE Komunita</developer_name>
+  <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
