@@ -8,3 +8,4 @@
 # Default build and install locations
 /build*/
 /install
+.cmake/
