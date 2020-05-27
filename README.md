@@ -16,8 +16,8 @@ to type quickly and accurately.
 
 | Jenkins CI Name | Master | Stable |
 | --------------- | ------ | ------ |
-| OpenSuse Qt 5.12 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.12/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.12/) |
-| FreeBSD Qt 5.13 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.13/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.13/) |
+| OpenSuse Qt 5.14 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20SUSEQt5.14/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20SUSEQt5.14/) |
+| FreeBSD Qt 5.14 | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/kf5-qt5%20FreeBSDQt5.14/) | [![Build Status](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.14/badge/icon)](https://build.kde.org/job/Applications/job/ktouch/job/stable-kf5-qt5%20FreeBSDQt5.14/) |
 
 # Development Setup
 
