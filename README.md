@@ -74,7 +74,7 @@ KTouch has the following build dependencies:
    * [libxcb][libxcb] with libxcb-xkb
 
 [cmake]: https://cmake.org/
-[ecm]: https://cgit.kde.org/extra-cmake-modules.git/
+[ecm]: https://invent.kde.org/frameworks/extra-cmake-modules/
 [qt]: https://www.qt.io/
 [kf5]: https://api.kde.org/frameworks/
 [xlib]: https://tronche.com/gui/x/xlib/
