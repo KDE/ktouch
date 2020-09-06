@@ -77,6 +77,7 @@ ecm_optional_add_subdirectory(src)
 ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
+ki18n_install(po)
 install( PROGRAMS org.kde.ktouch.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install(FILES org.kde.ktouch.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
