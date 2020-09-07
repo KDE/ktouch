@@ -135,7 +135,6 @@ target_link_libraries(ktouch
         Qt5::XmlPatterns
         KF5::Completion
         KF5::ConfigWidgets
-        KF5::Declarative
         KF5::ItemViews
         KF5::XmlGui
         KF5::I18n

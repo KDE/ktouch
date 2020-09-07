@@ -25,9 +25,9 @@
 #include <QQuickStyle>
 #include <QStandardPaths>
 
+#include <KLocalizedContext>
 #include <Kdelibs4ConfigMigrator>
 #include <Kdelibs4Migration>
-#include <KDeclarative/KDeclarative>
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
@@ -85,10 +85,9 @@ QPointer<ResourceEditor>& Application::resourceEditorRef()
 
 void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
 {
-    KDeclarative::KDeclarative kDeclarative;
-    kDeclarative.setDeclarativeEngine(qmlEngine);
-    kDeclarative.setupContext();
-    kDeclarative.setupEngine(qmlEngine);
+    // prepare i18n
+    auto context = new KLocalizedContext(qmlEngine);
+    qmlEngine->rootContext()->setContextObject(context);
 
     Application* app = static_cast<Application*>(Application::instance());
     foreach (const QString& path, app->m_qmlImportPaths)
