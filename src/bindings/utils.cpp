@@ -17,8 +17,6 @@
 
 #include "utils.h"
 
-#include <QColor>
-#include <QTime>
 #include <QUuid>
 #include <QtDebug>
 #include <QStandardPaths>
