@@ -40,7 +40,7 @@ ToolButton {
         id: content
         text: button.text
         color: button.colorScheme.normalText
-        elide: "ElideNone"
+        elide: Text.ElideNone
     }
 
     background: Item {

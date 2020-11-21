@@ -15,14 +15,24 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import QtQuick 2.9
 import QtGraphicalEffects 1.0
 
-Icon {
-    property color color: "#000000"
-    id: icon
+Item {
+    property alias icon: icon.icon
+    property color color : "#000000"
+    width: icon.width
+    height: icon.height
+
+    Icon {
+        id: icon
+        visible: false
+    }
+
     ColorOverlay {
-        anchors.fill: parent
+        anchors.fill: icon
         source: icon
         color: parent.color
     }
 }
+
