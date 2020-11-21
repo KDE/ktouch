@@ -43,7 +43,7 @@ Button {
         color: buttonColorScheme.normalText
         id: content
         text: button.text
-        elide: "ElideNone"
+        elide: Text.ElideNone
 
         Behavior on color {
             ColorAnimation { duration: Units.shortDuration }
@@ -56,21 +56,22 @@ Button {
             anchors.fill: parent;
             id: bg
             color: buttonColorScheme.alternateBackground
+            visible: false
+        }
 
-            HueSaturation {
-                anchors.fill: bg
-                source: bg
-                saturation: hovered? 0.3: 0
-                lightness: hovered? -0.04: 0
-                Behavior on saturation {
-                    NumberAnimation {
-                        duration: Units.shortDuration
-                    }
+        HueSaturation {
+            anchors.fill: bg
+            source: bg
+            saturation: hovered? 0.3: 0
+            lightness: hovered? -0.04: 0
+            Behavior on saturation {
+                NumberAnimation {
+                    duration: Units.shortDuration
                 }
-                Behavior on lightness {
-                    NumberAnimation {
-                        duration: Units.shortDuration
-                    }
+            }
+            Behavior on lightness {
+                NumberAnimation {
+                    duration: Units.shortDuration
                 }
             }
         }
