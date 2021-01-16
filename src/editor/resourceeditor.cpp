@@ -72,7 +72,7 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
 
     const int unit = fontMetrics().height();
     setMinimumSize(39 * unit, 28 * unit);
-    setCaption(i18n("Course and Keyboard Layout Editor"));
+    setCaption(i18nc("@title:window", "Course and Keyboard Layout Editor"));
 
     m_newResourceAction->setToolTip(i18n("Create a new course or keyboard layout"));
     m_deleteResourceAction->setEnabled(false);

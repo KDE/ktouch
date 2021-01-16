@@ -92,7 +92,7 @@ ComboBox {
         height: parent.height - topMargin - bottomMargin
         modal: true
         focus: true
-        title: i18n("Manage Profiles")
+        title: i18nc("@title:window", "Manage Profiles")
         closePolicy: PopupDialog.CloseOnEscape
         padding: 0
         contentItem:  ProfileSelector {

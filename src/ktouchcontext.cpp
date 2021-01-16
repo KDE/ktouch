@@ -151,7 +151,7 @@ void KTouchContext::showKeyboardKCM()
 {
     QPointer<KCMultiDialog> kcm = new KCMultiDialog(m_mainWindow);
 
-    kcm->setWindowTitle(i18n("Configure Keyboard"));
+    kcm->setWindowTitle(i18nc("@title:window", "Configure Keyboard"));
     kcm->addModule(keyboardKCMName);
     kcm->exec();
 
