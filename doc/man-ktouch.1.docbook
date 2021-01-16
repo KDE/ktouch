@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application>Typewriting Trainer</application>">
 <!ENTITY % English "INCLUDE">
 ]>
 
@@ -7,10 +8,10 @@
 <refentryinfo>
 <title>&ktouch; User's Manual</title>
 <author><firstname>Ben</firstname><surname>Burton</surname>
-<contrib>KTouch man page.</contrib>
+<contrib>&ktouch; man page.</contrib>
 <email>bab@debian.org</email></author>
-<date>2016-11-02</date>
-<releaseinfo>&ktouch; 2.3.0 (Applications 16.12)</releaseinfo>
+<date>2020-01-05</date>
+<releaseinfo>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
 <productname>KDE Applications</productname>
 </refentryinfo>
 
@@ -21,7 +22,7 @@
 
 <refnamediv>
 <refname><command>ktouch</command></refname>
-<refpurpose>a typing tutor by KDE</refpurpose>
+<refpurpose>A typing tutor by &kde;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -34,18 +35,18 @@
 
 <refsect1>
 <title>Description</title>
-<para>&ktouch; is a program for learning touch typing.  It helps you learn
-to type on a keyboard quickly and correctly.  Every finger has it's place on
+<para>&i18n-ktouch; is a program for learning touch typing. It helps you learn
+to type on a keyboard quickly and correctly. Every finger has it's place on
 the keyboard with associated keys to press.</para> 
-<para>&ktouch; helps you learn to touch type by providing you with text to
-train on, and adjusts to different levels depending on how good you are.  It
+<para>&i18n-ktouch; helps you learn to touch type by providing you with text to
+train on, and adjusts to different levels depending on how good you are. It
 can display which key to press next, and correct finger to use.</para>
 <para>This application is part of the official &kde; education
 module.</para>
 </refsect1>
 
 <refsect1>
-<title>KTouch Options</title>
+<title>&ktouch; Options</title>
 <variablelist>
 <varlistentry>
 <term><option>--resource-editor</option></term>
@@ -64,9 +65,8 @@ module.</para>
 <simplelist>
 <member>More detailed user documentation is available from <ulink
 url="help:/ktouch">help:/ktouch</ulink>
-(either enter this <acronym>URL</acronym> into &konqueror;, or run
-<userinput><command>khelpcenter</command>
-<parameter>help:/ktouch</parameter></userinput>).</member>
+(either enter this &URL; into &konqueror;, or run
+<userinput><command>khelpcenter</command> <parameter>help:/ktouch</parameter></userinput>).</member>
 <member>kf5options(7)</member> <!-- only for application with a GUI-->
 <member>qt5options(7)</member> <!-- only for application with a GUI-->
 <member>There is also further information available at the <ulink
@@ -77,7 +77,7 @@ url="https://edu.kde.org/ktouch/">&kde; education website</ulink>.</member>
 
 <refsect1>
 <title>Authors</title>
-<para>KTouch was written by <personname><firstname>Haavard</firstname><surname>Froeiland</surname></personname> <email>haavard@users.sourceforge.net</email> and <personname><firstname>Andreas</firstname><surname>Nicolai</surname></personname> <email>Andreas.Nicolai@gmx.net</email>.This manual page based on the one prepared for Debian by <personname>
+<para>&ktouch; was written by <personname><firstname>Haavard</firstname><surname>Froeiland</surname></personname> <email>haavard@users.sourceforge.net</email> and <personname><firstname>Andreas</firstname><surname>Nicolai</surname></personname> <email>Andreas.Nicolai@gmx.net</email>.This manual page based on the one prepared for &Debian; by <personname>
 <firstname>Ben</firstname><surname>Burton</surname></personname>
 </para>
 </refsect1>

@@ -2,7 +2,6 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
  "dtd/kdedbx45.dtd" [
 <!ENTITY i18n-ktouch "<application>Typewriting Trainer</application>">
-<!ENTITY kappname "&i18n-ktouch;"><!-- replace kapp here -->
 <!ENTITY % addindex "IGNORE">
 <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -10,7 +9,7 @@
 <book id="ktouch" lang="&language;">
 
 <bookinfo>
-<title>The &i18n-ktouch; Handbook</title>
+<title>The &ktouch; Handbook</title>
 
 <authorgroup>
 
@@ -51,8 +50,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2019-07-05</date>
-<releaseinfo>Applications 19.08</releaseinfo>
+<date>2020-01-05</date>
+<releaseinfo>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
 
 <abstract>
 <para>&i18n-ktouch; is a program for learning to touch type.  &i18n-ktouch;
@@ -300,7 +299,7 @@ erase the wrongly typed characters.
 </para>
 <para>
 When you have successfully completed a line of text you need to press the
-<keycap>Return</keycap> to advance to the next line.
+&Enter; to advance to the next line.
 </para>
 <tip>
 <para>
@@ -521,7 +520,7 @@ statistics</guilabel> check boxes.
 </para>
 <para>
   The keystroke to go to the next line of training text can be chosen from two
-options, <keycap>Return</keycap> or <keycap>Space</keycap>.
+options, &Enter; or &Space;.
 </para>
 <para>The <guilabel>Lesson unlocking limits</guilabel> can be used to choose
 settings that control unlocking of higher level lessons. &i18n-ktouch; checks the
@@ -816,7 +815,7 @@ scratch or using an existing course as a template.</para>
 <important>
 <para>
 You cannot edit the built-in courses, even if you have the write access to the
-installation directory.
+installation folder.
 </para>
 </important>
 
@@ -933,7 +932,7 @@ lesson</emphasis></term>
 <para>
 For each level you can specify the new characters/keys in the lesson. It is
 worth to include the new characters in the lesson title. Click on a name label
-in the <guilabel>Lessons</guilabel> list and enter some meaningful name.
+in the <guilabel>Lessons:</guilabel> list and enter some meaningful name.
 </para>
 <note>
 <title>Rationale</title>
@@ -1301,13 +1300,13 @@ format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Normal
 Key</guilabel> button to add new normal key or <inlinemediaobject> <imageobject>
 <imagedata fileref="Icon-list-add.png"
 format="PNG"/> </imageobject> </inlinemediaobject> <guilabel>Special
-Key</guilabel> button to add new special key (modifier keys, <keycap>Space</keycap>,
+Key</guilabel> button to add new special key (modifier keys, &Space;,
 &Backspace;, &Tab;, <keycap>Caps Lock</keycap> or &Enter;) to the layout.
 The <inlinemediaobject>
 <imageobject> <imagedata fileref="Icon-edit-delete.png"
 format="PNG"/> </imageobject> </inlinemediaobject><guilabel>Delete</guilabel>
 button can be used to remove a selected key from your layout. The scale can be
-changed using the slider at the left part of the editor toolbar.
+changed using the slider at the right part of the editor toolbar.
 </para>
 <para>
 The properties of individual keys can be edited using the bottom pane of the
@@ -1494,7 +1493,7 @@ list</ulink>.
 <important>
 <para>
 Your data should be licensed under <ulink
-url="https://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License,
+url="https://www.gnu.org/licenses/gpl-2.0.html">&GNU; General Public License,
 version 2</ulink> to include them into the default &i18n-ktouch; installation.
 </para>
 </important>
@@ -1512,7 +1511,7 @@ button in the toolbar and choose &XML; file that was earlier exported using
 <title>Credits and License</title>
 <para>&i18n-ktouch;</para>
 <para>
-&i18n-ktouch;, Copyright 1999-2007 by</para>
+&ktouch;, Copyright 1999-2007 by</para>
 <itemizedlist>
 <listitem><simpara>Håvard Frøiland
 &Haavard.Froeiland.mail;</simpara></listitem>
@@ -1520,7 +1519,7 @@ button in the toolbar and choose &XML; file that was earlier exported using
 net</email></simpara></listitem>
 </itemizedlist>
 <para>
-  &i18n-ktouch;, Copyright 2011-2019 by Sebastian Gottfried
+&ktouch;, Copyright 2011-2019 by Sebastian Gottfried
 <email>sebastiangottfried@web DOT de</email>.
 </para>
 
