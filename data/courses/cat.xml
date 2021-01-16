@@ -2,13 +2,14 @@
 <course>
  <id>{503d3f86-e6e7-4597-88ed-e5d7b6431aba}</id>
  <title>Català (autogenerat)</title>
- <description>KTouch training file generated Sat Aug 23 21:40:00 2003
-Perl Script written by Steinar Theigmann &amp; H&#xE5;vard Fr&#xF8;iland.</description>
+ <description>Fitxer de formació del KTouch, generat el dissabte 23
+d'agost a les 21:40:00 de 2003 amb un script en Perl escrit per en
+Steinar Theigmann i en H&#xE5;vard Fr&#xF8;iland.</description>
  <keyboardLayout>es</keyboardLayout>
  <lessons>
   <lesson>
    <id>{fa8accb2-1509-481e-a604-78409207d858}</id>
-   <title>Lesson 1</title>
+   <title>Lliçó 1</title>
    <newCharacters>jf</newCharacters>
    <text>ff jfjf fj jjj ff ffjf fjjj jjff ff fjj j fj ff jf fjjj ff j
 jjj ff j j ffjjf fj fjj fjjj fjjj j fjjj fjj fff j fjj j jf
@@ -18,7 +19,7 @@ fjjj ffjf ff  </text>
   </lesson>
   <lesson>
    <id>{b481db11-5c84-4e2b-aced-68084192054b}</id>
-   <title>Lesson 2</title>
+   <title>Lliçó 2</title>
    <newCharacters>kd</newCharacters>
    <text>jkj k d kd jd jd fdf jkj kd kf jd fd jkj fdj jd dd dd fk fdk
 jfkj jd jkj kdj ffk kf ffk jkj jkkdf jd ddfkd fd jd dk dd jd
@@ -27,7 +28,7 @@ fk ddfkd fdj jkj k kdj dk fdjd jd djd jkj jk fdj jfkj fd fdj</text>
   </lesson>
   <lesson>
    <id>{d6ddebfe-b9e6-4c1c-a2f5-7fa3665018ee}</id>
-   <title>Lesson 3</title>
+   <title>Lliçó 3</title>
    <newCharacters>laesç</newCharacters>
    <text>deses sedesses sedada dese efes sedada jaça sella llas sedes
 alesses e lassesses desllaçada allejada alleja llaçada fase
@@ -37,7 +38,7 @@ lesa e fallades falsada llaçada alleja faldades ells</text>
   </lesson>
   <lesson>
    <id>{fcb1c832-53a5-4865-bfc5-cc968d366dc4}</id>
-   <title>Lesson 4</title>
+   <title>Lliçó 4</title>
    <newCharacters>coss</newCharacters>
    <text>alfalsos falles caldejades collesses lesos cossesses fosses
 sassolada assolda sedes defeco salles assolelles aflacada
@@ -48,7 +49,7 @@ ecs callols colcada</text>
   </lesson>
   <lesson>
    <id>{3f3ca95f-4e0e-402c-a271-7335422a0d93}</id>
-   <title>Lesson 5</title>
+   <title>Lliçó 5</title>
    <newCharacters>ntàèé</newCharacters>
    <text>encasant flotà llastesses sotalades faldejat desenastes
 tonants sadollà encastés onejants estassant escalena socons
@@ -59,7 +60,7 @@ tantejat sedàs desolessen assesto descontentats atans</text>
   </lesson>
   <lesson>
    <id>{7f18e5b7-2b67-466a-9abe-2c9c6deedfcc}</id>
-   <title>Lesson 6</title>
+   <title>Lliçó 6</title>
    <newCharacters>ívrr</newCharacters>
    <text>florada acontentar arrosarà estotara escaloní acatarrares
 enverdescades corallejaran versessen desvalorara
@@ -71,7 +72,7 @@ corredores</text>
   </lesson>
   <lesson>
    <id>{96c6bfbd-477e-41ac-92ae-e6c959be02be}</id>
-   <title>Lesson 7</title>
+   <title>Lliçó 7</title>
    <newCharacters>meó</newCharacters>
    <text>somortes falsejaríem mort amanollí cerví entravessat
 escalafons ensofrant retrec masera forjaves comeses
@@ -82,7 +83,7 @@ malmesclant llefardaríem armoll declamares terçades</text>
   </lesson>
   <lesson>
    <id>{c87b80e4-e443-4f29-9e63-9e551bba37c5}</id>
-   <title>Lesson 8</title>
+   <title>Lliçó 8</title>
    <newCharacters>hrü</newCharacters>
    <text>rastellesses desenfarcellar forçat anhelant lletreres remara
 decoloraràs desarraconara tercers defenestrà electromotor
@@ -94,7 +95,7 @@ remarcàs assamarrades</text>
   </lesson>
   <lesson>
    <id>{a1e6647d-c013-4559-a122-d1cd00de493a}</id>
-   <title>Lesson 9</title>
+   <title>Lliçó 9</title>
    <newCharacters>goï</newCharacters>
    <text>rotífer maregés colltorcerà desgravat vagassegés torcejam
 conhortades honorares comarcans escassegesses clatellejo
@@ -106,7 +107,7 @@ torcada</text>
   </lesson>
   <lesson>
    <id>{78f82515-6cbc-4167-9b13-9d56fc79b681}</id>
-   <title>Lesson 10</title>
+   <title>Lliçó 10</title>
    <newCharacters>bpl·l</newCharacters>
    <text>desenrojolaran clamoregí debategar aborronarem encrespàvem
 engolfem capejat desemmerletara coralets peonarà llocota
@@ -118,7 +119,7 @@ sorollarem</text>
   </lesson>
   <lesson>
    <id>{454a5a4e-9da8-435c-9318-dc1018413b56}</id>
-   <title>Lesson 11</title>
+   <title>Lliçó 11</title>
    <newCharacters>quny</newCharacters>
    <text>cadascuna esbrotonàrem enfadaríem falsejàreu endolau
 condolgué arrengàveu envellutaves nannaran tondosaré
@@ -130,7 +131,7 @@ destrempaven gallofejaren desoleu caçaven confessarem</text>
   </lesson>
   <lesson>
    <id>{4f5ecdf9-9823-4536-b9b9-a0905586d0da}</id>
-   <title>Lesson 12</title>
+   <title>Lliçó 12</title>
    <newCharacters>wncc</newCharacters>
    <text>esbatanésseu ensangonem embargaments contraforadí emmorcarem
 acamussades desatrac desencarregara provaven asserenaràs
@@ -141,7 +142,7 @@ enforno vencereu cessa bastonera promoguessen</text>
   </lesson>
   <lesson>
    <id>{b0ef273f-b314-4bf0-949a-536294982028}</id>
-   <title>Lesson 13</title>
+   <title>Lliçó 13</title>
    <newCharacters>cx</newCharacters>
    <text>cuafí contrapassar desencerclades escarufejau clatrats
 camuflau crestejaríeu entretancarà gronxolàvem dutxaré
@@ -153,7 +154,7 @@ desencastaren</text>
   </lesson>
   <lesson>
    <id>{f369e6c3-9069-4a42-b66e-55be29006384}</id>
-   <title>Lesson 14</title>
+   <title>Lliçó 14</title>
    <newCharacters>yz</newCharacters>
    <text>anyenca escanyoten grunya muntanyosos embotzegam zumzejades
 enlleganyaren embotzegàs esmorzades complanyesses allenyats
@@ -165,7 +166,7 @@ desenyoraràs polzejàveu</text>
   </lesson>
   <lesson>
    <id>{f07547a3-54b3-4191-84b6-9f321ed3eea7}</id>
-   <title>Lesson 15</title>
+   <title>Lliçó 15</title>
    <newCharacters>ABCDEFGHIJKLMNOPQRSTUVWXYZ</newCharacters>
    <text>Sorells Masos Campdevànol Montenegro Iraq Cabanelles
 Camarasa Macra Bompàs Laurentí Ix Salamanca Urgell Armenter
