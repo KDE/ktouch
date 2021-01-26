@@ -19,6 +19,7 @@
   <name xml:lang="fi">KTouch</name>
   <name xml:lang="fr">KTouch</name>
   <name xml:lang="gl">KTouch</name>
+  <name xml:lang="ia">KTouch</name>
   <name xml:lang="id">KTouch</name>
   <name xml:lang="it">KTouch</name>
   <name xml:lang="ko">KTouch</name>
@@ -53,6 +54,7 @@
   <summary xml:lang="fi">Konekirjoituksen harjoitteluohjelma</summary>
   <summary xml:lang="fr">Formateur en dactylographie KTouch</summary>
   <summary xml:lang="gl">Titor de mecanografía</summary>
+  <summary xml:lang="ia">Preceptor per typar per toccar</summary>
   <summary xml:lang="id">Tutorial Pengetikan Setuh</summary>
   <summary xml:lang="it">Istruttore di dattilografia</summary>
   <summary xml:lang="ko">타자 연습</summary>
@@ -199,6 +201,7 @@
   <developer_name xml:lang="eu">KDE komunitatea</developer_name>
   <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
+  <developer_name xml:lang="ia">Le communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La comunità KDE</developer_name>
   <developer_name xml:lang="nl">De KDE-gemeenschap</developer_name>
