@@ -149,6 +149,6 @@ target_link_libraries(ktouch
 #kde4_add_app_icon(ktouch_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/ktouch.png")
 #kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktouch.png")
 
-install(TARGETS ktouch ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS ktouch ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ktouch.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 
