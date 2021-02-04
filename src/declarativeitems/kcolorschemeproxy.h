@@ -102,7 +102,6 @@ public:
     QColor hoverDecoration() const;
 
     QColor normalText() const;
-    QColor inactiveText() const;
     QColor activeText() const;
     QColor linkText() const;
     QColor visitedText() const;

@@ -45,7 +45,6 @@ public:
     int rowCount(const QModelIndex& parent = QModelIndex()) const override;
     int columnCount(const QModelIndex& parent = QModelIndex()) const override;
 signals:
-    void aboutToBeEdited(const QModelIndex& index, const QVariant& newValue);
     void keyboardLayoutChanged();
     void keyIndexChanged();
 private slots:
