@@ -51,5 +51,5 @@ if(NOT "${coursefiles}" STREQUAL "${coursefiles_GLOB}")
     message(AUTHOR_WARNING "List of .xml files in data/courses differs from the list of couses")
 endif()
 
-install( FILES ${coursefiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/courses )
+install( FILES ${coursefiles} DESTINATION ${KDE_INSTALL_DATADIR}/ktouch/courses )
 

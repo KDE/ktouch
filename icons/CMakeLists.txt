@@ -6,6 +6,6 @@ ecm_install_icons(
     48-apps-ktouch.png
     128-apps-ktouch.png
     sc-apps-ktouch.svgz
-  DESTINATION ${ICON_INSTALL_DIR}
+  DESTINATION ${KDE_INSTALL_ICONDIR}
   THEME hicolor
 )

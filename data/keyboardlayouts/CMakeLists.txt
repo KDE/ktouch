@@ -48,5 +48,5 @@ set(keyboardfiles
     us.xml
 )
 
-install( FILES ${keyboardfiles} DESTINATION ${DATA_INSTALL_DIR}/ktouch/keyboardlayouts)
+install( FILES ${keyboardfiles} DESTINATION ${KDE_INSTALL_DATADIR}/ktouch/keyboardlayouts)
 

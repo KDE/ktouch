@@ -1,2 +1,2 @@
 FILE(GLOB wavfile *.wav)
-install( FILES ${wavfile}  DESTINATION  ${DATA_INSTALL_DIR}/ktouch )
+install( FILES ${wavfile}  DESTINATION  ${KDE_INSTALL_DATADIR}/ktouch )
