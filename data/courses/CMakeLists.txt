@@ -48,7 +48,7 @@ set (coursefiles
 file(GLOB coursefiles_GLOB RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.xml)
 list(SORT coursefiles_GLOB)
 if(NOT "${coursefiles}" STREQUAL "${coursefiles_GLOB}")
-    message(AUTHOR_WARNING "List of .xml files in data/courses differs from the list of couses")
+    message(AUTHOR_WARNING "List of .xml files in data/courses differs from the list of courses")
 endif()
 
 install( FILES ${coursefiles} DESTINATION ${KDE_INSTALL_DATADIR}/ktouch/courses )
