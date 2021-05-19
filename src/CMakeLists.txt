@@ -88,12 +88,12 @@ set(ktouch_SRCS
     ktouchcontext.cpp
 )
 
-qt5_add_resources(ktouch_imgs_SRCS images/images.qrc)
+qt_add_resources(ktouch_imgs_SRCS images/images.qrc)
 
 if (Qt5QuickCompiler_FOUND AND COMPILE_QML)
     qtquick_compiler_add_resources(ktouch_qml_SRCS qml/qml.qrc)
 else ()
-    qt5_add_resources(ktouch_qml_SRCS qml/qml.qrc)
+    qt_add_resources(ktouch_qml_SRCS qml/qml.qrc)
 endif()
 
 # compile UI files
@@ -117,7 +117,7 @@ if (KTOUCH_BUILD_WITH_X11)
     include_directories(${X11_Xkb_INCLUDE_PATH})
     include_directories(${X11_Xkbfile_INCLUDE_PATH})
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp)
-    set(ktouch_X11_DEPS Qt5::X11Extras ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
+    set(ktouch_X11_DEPS Qt::X11Extras ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
 endif ()
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
@@ -127,12 +127,12 @@ add_executable(ktouch ${ktouch_SRCS} ${ktouch_imgs_SRCS} ${ktouch_qml_SRCS})
 #uncomment this if oxygen icons for ktouch are available
 target_link_libraries(ktouch
     LINK_PUBLIC
-        Qt5::Qml
-        Qt5::Quick
-        Qt5::QuickWidgets
-        Qt5::QuickControls2
-        Qt5::Sql
-        Qt5::XmlPatterns
+        Qt::Qml
+        Qt::Quick
+        Qt::QuickWidgets
+        Qt::QuickControls2
+        Qt::Sql
+        Qt::XmlPatterns
         KF5::Completion
         KF5::ConfigWidgets
         KF5::ItemViews
