@@ -19,6 +19,7 @@
 #include "trainingconfigwidget.h"
 #include "core/lesson.h"
 
+#include <kxmlgui_version.h>
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KHelpMenu>
@@ -133,7 +134,11 @@ void KTouchContext::showConfigDialog()
 
 void KTouchContext::configureShortcuts()
 {
+#if KXMLGUI_VERSION >= QT_VERSION_CHECK(5, 84, 0)
+    KShortcutsDialog::showDialog(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, m_mainWindow);
+#else
     KShortcutsDialog::configure(m_actionCollection, KShortcutsEditor::LetterShortcutsDisallowed, m_mainWindow);
+#endif
 }
 
 void KTouchContext::showKeyboardKCM()
