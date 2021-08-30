@@ -65,7 +65,7 @@ Item {
     }
 
     function getTint(color) {
-        color.a = 0.125
+        color.a = preferences.fingerOpacity / 100;
         return color
     }
 

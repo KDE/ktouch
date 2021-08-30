@@ -21,6 +21,7 @@ class PreferencesProxy : public QObject
     Q_PROPERTY(int requiredStrokesPerMinute READ requiredStrokesPerMinute WRITE setRequiredStrokesPerMinute NOTIFY configChanged)
     Q_PROPERTY(double requiredAccuracy READ requiredAccuracy WRITE setRequiredAccuracy NOTIFY configChanged)
     Q_PROPERTY(int lastUsedProfileId READ lastUsedProfileId WRITE setLastUsedProfileId NOTIFY configChanged)
+    Q_PROPERTY(double fingerOpacity READ fingerOpacity WRITE setFingerOpacity NOTIFY configChanged)
 
 public:
     explicit PreferencesProxy(QObject* parent = 0);
@@ -36,6 +37,8 @@ public:
     void setRequiredStrokesPerMinute(int strokesPerMinute);
     double requiredAccuracy() const;
     void setRequiredAccuracy(double accuracy);
+    double fingerOpacity() const;
+    void setFingerOpacity(double alpha);
     int lastUsedProfileId() const;
     void setLastUsedProfileId(int profileId);
     Q_INVOKABLE QColor fingerColor(int index);

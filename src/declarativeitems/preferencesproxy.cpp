@@ -90,6 +90,16 @@ QColor PreferencesProxy::fingerColor(int index)
     return Preferences::fingerColor(index);
 }
 
+double PreferencesProxy::fingerOpacity() const
+{
+    return Preferences::fingerOpacity();
+}
+
+void PreferencesProxy::setFingerOpacity(double alpha)
+{
+    Preferences::setFingerOpacity(alpha);
+}
+
 void PreferencesProxy::writeConfig()
 {
     Preferences::self()->save();

@@ -57,6 +57,12 @@
       <default param="6">#0000ff</default>
       <default param="7">#ff0000</default>
     </entry>
+    <entry name="FingerOpacity" type="Double">
+      <label>How transparent finger colors should be shown.</label>
+      <default>12.5</default>
+      <min>0</min>
+      <max>100</max>
+    </entry>
   </group>
   <group name="Session">
     <entry name="LastUsedProfileId" type="Int">
