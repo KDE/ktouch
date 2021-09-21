@@ -138,12 +138,6 @@ struct LayoutUnit {
         layout = layout_;
         variant = variant_;
     }
-    /*explicit*/ LayoutUnit(const LayoutUnit& layoutUnit) {
-        layout = layoutUnit.layout;
-        variant = layoutUnit.variant;
-        displayName = layoutUnit.displayName;
-        shortcut = layoutUnit.shortcut;
-    }
 
     QString getRawDisplayName() const { return displayName; }
     QString getDisplayName() const { return !displayName.isEmpty() ? displayName :  layout; }
