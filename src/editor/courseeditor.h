@@ -23,7 +23,7 @@ class CourseEditor : public AbstractEditor, private Ui::CourseEditor
     Q_OBJECT
 public:
     explicit CourseEditor(QWidget* parent = 0);
-    ~CourseEditor();
+    ~CourseEditor() override;
     void setResourceModel(ResourceModel* model);
     void openCourse(DataIndexCourse* dataIndexCourse);
     void clearUndoStackForCourse(DataIndexCourse* course);

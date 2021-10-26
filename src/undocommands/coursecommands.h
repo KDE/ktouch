@@ -73,7 +73,7 @@ class RemoveLessonCommand: public QUndoCommand
 {
 public:
     RemoveLessonCommand(Course* course, int lessonIndex, QUndoCommand* parent = nullptr);
-    virtual ~RemoveLessonCommand();
+    ~RemoveLessonCommand() override;
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;

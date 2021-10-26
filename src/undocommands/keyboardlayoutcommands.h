@@ -75,7 +75,7 @@ class RemoveKeyCommand : public QUndoCommand
 {
 public:
     RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCommand* parent = nullptr);
-    ~RemoveKeyCommand();
+    ~RemoveKeyCommand() override;
     void undo() override;
     void redo() override;
     int id() const override;
@@ -148,7 +148,7 @@ class RemoveKeyCharCommand : public QUndoCommand
 {
 public:
     RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex, int keyCharIndex, QUndoCommand* parent = nullptr);
-    ~RemoveKeyCharCommand();
+    ~RemoveKeyCharCommand() override;
     void undo() override;
     void redo() override;
     int id() const override;

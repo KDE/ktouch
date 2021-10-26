@@ -23,7 +23,7 @@ class KeyboardLayoutEditor : public AbstractEditor, private Ui::KeyboardLayoutEd
     Q_PROPERTY(int zoomLevel READ zoomLevel WRITE setZoomLevel NOTIFY zoomLevelChanged)
 public:
     explicit KeyboardLayoutEditor(QWidget* parent = 0);
-    ~KeyboardLayoutEditor();
+    ~KeyboardLayoutEditor() override;
 
     void openKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);
     void clearUndoStackForKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);

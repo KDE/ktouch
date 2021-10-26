@@ -23,7 +23,7 @@ class MainWindow : public KMainWindow
     Q_OBJECT
 public:
     explicit MainWindow(QWidget* parent = 0);
-    ~MainWindow();
+    ~MainWindow() override;
 private:
     void init();
     void onViewStatusChanged(QQuickView::Status status);

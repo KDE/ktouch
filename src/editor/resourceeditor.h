@@ -24,7 +24,7 @@ class ResourceEditor : public KMainWindow
     Q_OBJECT
 public:
     explicit ResourceEditor(QWidget* parent = 0);
-    virtual ~ResourceEditor();
+    ~ResourceEditor() override;
 
 protected:
     void closeEvent(QCloseEvent* event) override;

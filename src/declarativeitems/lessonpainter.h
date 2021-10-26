@@ -28,7 +28,7 @@ class LessonPainter : public QQuickPaintedItem
     Q_PROPERTY(QRectF cursorRectangle READ cursorRectangle NOTIFY cursorRectangleChanged)
 public:
     explicit LessonPainter(QQuickItem* parent = 0);
-    ~LessonPainter();
+    ~LessonPainter() override;
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);
     qreal maximumWidth() const;
