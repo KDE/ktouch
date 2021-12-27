@@ -22,6 +22,7 @@ set(keyboardfiles
     gb.xml
     hu.xml
     il.xml
+    in.mal_enhanced.xml
     ir.xml
     in.kan.xml
     in.tam_unicode.xml

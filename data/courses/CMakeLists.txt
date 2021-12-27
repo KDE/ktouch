@@ -23,6 +23,8 @@ set (coursefiles
     fr.xml
     gb.xml
     gr.xml
+    in.mal_enhanced1.xml
+    in.mal_enhanced2.xml
     ir.xml
     it.xml
     it2.xml
