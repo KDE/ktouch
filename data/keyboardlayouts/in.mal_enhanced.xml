@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<keyboardLayout>
+ <id>{4c6bce71-c3f5-40b8-9793-fd12db77e4f9}</id>
+ <title>Malayalam</title>
+ <name>in(mal_enhanced)</name>
+ <width>1430</width>
+ <height>480</height>
+ <keys>
+  <key height="80" top="200" fingerIndex="0" width="80" left="180">
+   <char modifier="right_shift" position="topLeft">ഓ</char>
+   <char position="bottomLeft">ോ</char>
+  </key>
+  <key height="80" top="200" fingerIndex="1" width="80" left="280">
+   <char modifier="right_shift" position="topLeft">ഏ</char>
+   <char position="bottomLeft">േ</char>
+  </key>
+  <key height="80" top="200" fingerIndex="2" width="80" left="390">
+   <char modifier="right_shift" position="topLeft">അ</char>
+   <char position="bottomLeft">്</char>
+  </key>
+  <key height="80" top="200" fingerIndex="3" width="80" left="480">
+   <char modifier="right_shift" position="topLeft">ഇ</char>
+   <char position="bottomLeft">ി</char>
+  </key>
+  <key height="80" top="200" fingerIndex="4" width="80" left="780">
+   <char modifier="left_shift" position="topLeft">റ</char>
+   <char position="bottomLeft">ര</char>
+  </key>
+  <key height="80" top="200" fingerIndex="5" width="80" left="880">
+   <char modifier="left_shift" position="topLeft">ഖ</char>
+   <char position="bottomLeft">ക</char>
+  </key>
+  <key height="80" top="200" fingerIndex="6" width="80" left="980">
+   <char modifier="left_shift" position="topLeft">ഥ</char>
+   <char position="bottomLeft">ത</char>
+  </key>
+  <key height="80" top="200" fingerIndex="7" width="80" left="1080">
+   <char modifier="left_shift" position="topLeft">ഛ</char>
+   <char position="bottomLeft">ച</char>
+  </key>
+  <key height="80" top="0" fingerIndex="0" width="80" left="0">
+   <char modifier="right_shift" position="topLeft">ഒ</char>
+   <char position="bottomLeft">ൊ</char>
+  </key>
+  <key height="80" top="0" fingerIndex="0" width="80" left="100">
+   <char modifier="right_shift" position="topLeft">!</char>
+   <char position="bottomLeft">൧</char>
+  </key>
+  <key height="80" top="0" fingerIndex="1" width="80" left="200">
+   <char modifier="right_shift" position="topLeft">@</char>
+   <char position="bottomLeft">൨</char>
+  </key>
+  <key height="80" top="0" fingerIndex="2" width="80" left="300">
+   <char modifier="right_shift" position="topLeft">#</char>
+   <char position="bottomLeft">൩</char>
+  </key>
+  <key height="80" top="0" fingerIndex="3" width="80" left="400">
+   <char modifier="right_shift" position="topLeft">$</char>
+   <char position="bottomLeft">൪</char>
+  </key>
+  <key height="80" top="0" fingerIndex="3" width="80" left="500">
+   <char modifier="right_shift" position="topLeft">%</char>
+   <char position="bottomLeft">൫</char>
+  </key>
+  <key height="80" top="0" fingerIndex="4" width="80" left="600">
+   <char modifier="left_shift" position="topLeft">^</char>
+   <char position="bottomLeft">൬</char>
+  </key>
+  <key height="80" top="0" fingerIndex="4" width="80" left="700">
+   <char modifier="left_shift" position="topLeft">&amp;</char>
+   <char position="bottomLeft">൭</char>
+  </key>
+  <key height="80" top="0" fingerIndex="5" width="80" left="800">
+   <char modifier="left_shift" position="topLeft">ൾ</char>
+   <char position="bottomLeft">൮</char>
+  </key>
+  <key height="80" top="0" fingerIndex="6" width="80" left="900">
+   <char modifier="left_shift" position="topLeft">(</char>
+   <char position="bottomLeft">൯</char>
+  </key>
+  <key height="80" top="0" fingerIndex="7" width="80" left="1000">
+   <char modifier="left_shift" position="topLeft">)</char>
+   <char position="bottomLeft">൦</char>
+  </key>
+  <key height="80" top="0" fingerIndex="7" width="80" left="1100">
+   <char modifier="left_shift" position="topLeft">ഃ</char>
+   <char position="bottomLeft">-</char>
+  </key>
+  <key height="80" top="0" fingerIndex="7" width="80" left="1200">
+   <char modifier="left_shift" position="topLeft">ഋ</char>
+   <char position="bottomLeft">ൃ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="0" width="80" left="150">
+   <char modifier="right_shift" position="topLeft">ഔ</char>
+   <char position="bottomLeft">ൗ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="1" width="80" left="250">
+   <char modifier="right_shift" position="topLeft">ഐ</char>
+   <char position="bottomLeft">ൈ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="2" width="80" left="360">
+   <char modifier="right_shift" position="topLeft">ആ</char>
+   <char position="bottomLeft">ാ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="3" width="80" left="460">
+   <char modifier="right_shift" position="topLeft">ഈ</char>
+   <char position="bottomLeft">ീ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="3" width="80" left="550">
+   <char modifier="right_shift" position="topLeft">ഊ</char>
+   <char position="bottomLeft">ൂ</char>
+  </key>
+  <key height="80" top="300" fingerIndex="0" width="80" left="230">
+   <char modifier="right_shift" position="topLeft">എ</char>
+   <char position="bottomLeft">െ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="4" width="80" left="750">
+   <char modifier="left_shift" position="topLeft">ങ</char>
+   <char position="bottomLeft">ഹ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="5" width="80" left="850">
+   <char modifier="left_shift" position="topLeft">ഘ</char>
+   <char position="bottomLeft">ഗ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="6" width="80" left="950">
+   <char modifier="left_shift" position="topLeft">ധ</char>
+   <char position="bottomLeft">ദ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="7" width="80" left="1050">
+   <char modifier="left_shift" position="topLeft">ഝ</char>
+   <char position="bottomLeft">ജ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="7" width="80" left="1150">
+   <char modifier="left_shift" position="topLeft">ഢ</char>
+   <char position="bottomLeft">ഡ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="7" width="80" left="1250">
+   <char modifier="left_shift" position="topLeft">ഞ</char>
+   <char position="bottomLeft">‍</char>
+  </key>
+  <key height="80" top="200" fingerIndex="3" width="80" left="580">
+   <char modifier="right_shift" position="topLeft">ഉ</char>
+   <char position="bottomLeft">ു</char>
+  </key>
+  <key height="80" top="200" fingerIndex="4" width="80" left="680">
+   <char modifier="left_shift" position="topLeft">ഫ</char>
+   <char position="bottomLeft">പ</char>
+  </key>
+  <key height="80" top="200" fingerIndex="7" width="80" left="1180">
+   <char modifier="left_shift" position="topLeft">ഠ</char>
+   <char position="bottomLeft">ട</char>
+  </key>
+  <key height="80" top="100" fingerIndex="7" width="80" left="1350">
+   <char modifier="left_shift" position="topLeft">\</char>
+   <char position="bottomLeft">ർ</char>
+  </key>
+  <key height="80" top="100" fingerIndex="4" width="80" left="650">
+   <char modifier="left_shift" position="topLeft">ഭ</char>
+   <char position="bottomLeft">ബ</char>
+  </key>
+  <key height="80" top="300" fingerIndex="1" width="80" left="330">
+   <char modifier="right_shift" position="topLeft">ൺ</char>
+   <char position="bottomLeft">ം</char>
+  </key>
+  <key height="80" top="300" fingerIndex="2" width="80" left="430">
+   <char modifier="right_shift" position="topLeft">ണ</char>
+   <char position="bottomLeft">മ</char>
+  </key>
+  <key height="80" top="300" fingerIndex="3" width="80" left="530">
+   <char modifier="right_shift" position="topLeft">ൻ</char>
+   <char position="bottomLeft">ന</char>
+  </key>
+  <key height="80" top="300" fingerIndex="3" width="80" left="630">
+   <char modifier="right_shift" position="topLeft">ഴ</char>
+   <char position="bottomLeft">വ</char>
+  </key>
+  <key height="80" top="300" fingerIndex="4" width="80" left="730">
+   <char modifier="left_shift" position="topLeft">ള</char>
+   <char position="bottomLeft">ല</char>
+  </key>
+  <key height="80" top="300" fingerIndex="4" width="80" left="830">
+   <char modifier="left_shift" position="topLeft">ശ</char>
+   <char position="bottomLeft">സ</char>
+  </key>
+  <key height="80" top="300" fingerIndex="5" width="80" left="930">
+   <char modifier="left_shift" position="topLeft">ഷ</char>
+   <char position="bottomLeft">,</char>
+  </key>
+  <key height="80" top="300" fingerIndex="6" width="80" left="1030">
+   <char modifier="left_shift" position="topLeft">ൽ</char>
+   <char position="bottomLeft">.</char>
+  </key>
+  <key height="80" top="300" fingerIndex="7" width="80" left="1130">
+   <char modifier="left_shift" position="topLeft">?</char>
+   <char position="bottomLeft">യ</char>
+  </key>
+  <specialKey height="80" top="100" width="130" left="0" type="tab"/>
+  <specialKey height="80" top="200" width="150" left="1280" type="return"/>
+  <specialKey height="80" top="300" width="200" left="1230" modifierId="right_shift" type="shift"/>
+  <specialKey height="80" top="400" width="130" label="Alt" left="1150" type="other"/>
+  <specialKey height="80" top="400" width="130" label="Ctrl" left="1300" type="other"/>
+  <specialKey height="80" top="400" width="130" label="Alt" left="150" type="other"/>
+  <specialKey height="80" top="400" width="130" label="Ctrl" left="0" type="other"/>
+  <specialKey height="80" top="400" width="830" left="300" type="space"/>
+  <specialKey height="80" top="300" width="210" left="0" modifierId="left_shift" type="shift"/>
+  <specialKey height="80" top="200" width="160" left="0" type="capslock"/>
+  <specialKey height="80" top="0" width="130" left="1300" type="backspace"/>
+ </keys>
+</keyboardLayout>
