@@ -401,6 +401,26 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <id>{c6cf3cc1-7bc2-4b15-91fa-a07b4633b51d}</id>
     <path>courses/us.xml</path>
   </course>
+  <course>
+    <title>വിക്കി താളുകൾ</title>
+    <description>വിക്കിയിൽ നിന്ന് തിരഞ്ഞെടുത്ത Random താളുകൾ.
+    താളുകളെല്ലാം മലയാളം വിക്കിപീഡിയയിൽ നിന്നും പകർത്തിയവയാണ്.
+    തയ്യാറാക്കിയത് - വിവേക് കെ ജെ (vivekkj2004@gmail.com)
+    </description>
+    <keyboardLayout>in(mal_enhanced)</keyboardLayout>
+    <id>{bd5a9e90-287b-4444-96ed-83e77162efe8}</id>
+    <path>courses/in.mal_enhanced1.xml</path>
+  </course>
+  <course>
+    <title>മലയാളം - ക്രമരഹിത വാക്കുകൾ</title>
+    <description>മലയാളത്തിലെ ചില വാക്കുകൾ ക്രമരഹിതമായി കൊടുത്തിരിക്കുന്നു
+    തയ്യാറാക്കിയത് - വിവേക് കെ ജെ (vivekkj2004@gmail.com)
+    </description>
+    <keyboardLayout>in(mal_enhanced)</keyboardLayout>
+    <id>{b8ebf047-3c3e-4786-869a-8e77e4faaf3d}</id>
+    <path>courses/in.mal_enhanced2.xml</path>
+  </course>
+
   <keyboardLayout>
     <title>&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</title>
     <name>ara</name>
@@ -580,6 +600,12 @@ Perl Script written by Steinar Theigmann and H&#xE5;vard Fr&#xF8;iland.</descrip
     <name>lt(std)</name>
     <id>{dc0469c9-1de6-4f60-a85c-cfe7182f17c3}</id>
     <path>keyboardlayouts/lt.std.xml</path>
+  </keyboardLayout>
+  <keyboardLayout>
+    <title>മലയാളം</title>
+    <name>in(mal_enhanced)</name>
+    <id>{6a1fed47-1713-437c-931e-2ebc3ba1f366}</id>
+    <path>keyboardlayouts/in.mal_enhanced.xml</path>
   </keyboardLayout>
   <keyboardLayout>
     <title>&#x43C;&#x43E;&#x43D;&#x433;&#x43E;&#x43B; (&#x43A;&#x438;&#x440;&#x438;&#x43B;)</title>
