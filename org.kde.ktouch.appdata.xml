@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KTouch</name>
+  <name xml:lang="ar">معلم طباعة</name>
   <name xml:lang="bs">KTouch</name>
   <name xml:lang="ca">KTouch</name>
   <name xml:lang="ca-valencia">KTouch</name>
@@ -39,6 +40,7 @@
   <name xml:lang="zh-CN">KTouch</name>
   <name xml:lang="zh-TW">打字練習_KTouch</name>
   <summary>Touch Typing Tutor</summary>
+  <summary xml:lang="ar">معلم طباعة باللمس</summary>
   <summary xml:lang="bs">Intruktor kucanja na tastaturi</summary>
   <summary xml:lang="ca">Tutor de mecanografia</summary>
   <summary xml:lang="ca-valencia">Tutor de mecanografia</summary>
@@ -74,6 +76,7 @@
   <summary xml:lang="zh-TW">觸摸輸入輔助教學</summary>
   <description>
     <p>KTouch is a typewriter trainer for learning to touch type. It provides you with text to train on and adjusts to different levels depending on how good you are. It displays your keyboard and indicates which key to press next and which is the correct finger to use. You learn typing with all fingers, step by step, without having to look down at the keyboard to find your keys. It is convenient for all ages and the perfect typing tutor for schools, universities, and personal use. KTouch ships with dozens of different courses in many languages and a comfortable course editor. Different keyboard layouts are supported and new user-defined layouts can be created. During training, KTouch collects comprehensive statistical information to help you or your teacher to analyze your progress.</p>
+    <p xml:lang="ar">معلم الطباعة هو مدرب آلة كاتبة لتعلم لمس الكتابة. يوفر لك نصًا للتدريب عليه ويتكيف مع مستويات مختلفة اعتمادًا على مدى مهارتك. يعرض لوحة المفاتيح ويشير إلى المفتاح الذي يجب الضغط عليه بعد ذلك والإصبع الصحيح الذي يجب استخدامه. تتعلم الكتابة بكل أصابعك ، خطوة بخطوة ، دون الحاجة إلى إلقاء نظرة على لوحة المفاتيح للعثور على مفاتيحك.  إنه مناسب لجميع الأعمار ومعلم الكتابة المثالي للمدارس والجامعات والاستخدام الشخصي. يأتي معلم الطباعة بالعشرات من الدورات التدريبية المختلفة في العديد من اللغات ومحرر الدورة التدريبية المريح. يتم دعم تخطيطات لوحة المفاتيح المختلفة ويمكن إنشاء تخطيطات جديدة معرّفة من قبل المستخدم. أثناء التدريب، يقوم معلم الطابعة بجمع معلومات إحصائية شاملة لمساعدتك أنت أو معلمك على تحليل تقدمك.</p>
     <p xml:lang="bs">KTouch je trener za učenje kucanja na pisaćoj mašini. On vam pruža tekst za trenirati i prilagođava na različite nivoe zavisno od toga koliko ste dobri. On prikazuje tastaturu i ukazuje na to koji taster pritisnuti sljedeći i koji je ispravan prst za korištenje. Učite kucanje sa svim prstima, korak po korak, bez da pogledom dolje na tastaturi pronađete svoje tastere. On je pogodan za sve uzraste i savršen učitelj kucanja za škole, univerzitete i osobnu upotrebu. KTouch dolazi s desecima različitih kurseva za mnoge jezike i udobnim urednikom kurseva. Različite tastature su podržane i novi korisnički definirani rasporedi mogu biti kreirani. Tokom treninga, KTouch prikuplja sveobuhvatne statističke podatke koji će pomoći vama ili vašem učitelj da analizirate vaš napredak.</p>
     <p xml:lang="ca">El KTouch és un entrenador de mecanografia per a aprendre a teclejar. Proporciona text per a entrenar i s'ajusta a diferents nivells en funció del vostre nivell. Mostra el teclat i indica la tecla següent a prémer i quin és el dit correcte a utilitzar. Aprendreu mecanografia amb tots els dits, pas a pas, sense haver de mirar el teclat per a cercar les tecles. És apropiat per a totes les edats i és el tutor de mecanografia perfecte per a les escoles, universitats i ús personal. El KTouch es distribueix amb dotzenes de cursos diferents en molts idiomes i és un editor còmode de cursos. S'accepten diferents disposicions de teclat i se'n poden crear de noves definides per l'usuari. Durant l'entrenament, el KTouch acumula informació estadística global per a ajudar-vos a analitzar el progrés.</p>
     <p xml:lang="ca-valencia">El KTouch és un entrenador de mecanografia per a aprendre a teclejar. Proporciona text per a entrenar i s'ajusta a diferents nivells en funció del vostre nivell. Mostra el teclat i indica la tecla següent a prémer i quin és el dit correcte a utilitzar. Aprendreu mecanografia amb tots els dits, pas a pas, sense haver de mirar el teclat per a cercar les tecles. És apropiat per a totes les edats i és el tutor de mecanografia perfecte per a les escoles, universitats i ús personal. El KTouch es distribueix amb dotzenes de cursos diferents en molts idiomes i és un editor còmode de cursos. S'accepten diferents disposicions de teclat i se'n poden crear de noves definides per l'usuari. Durant l'entrenament, el KTouch acumula informació estadística global per a ajudar-vos a analitzar el progrés.</p>
@@ -111,6 +114,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Training with KTouch</caption>
+      <caption xml:lang="ar">التدرب مع معلم الطباعة</caption>
       <caption xml:lang="ca">Entrenant amb el KTouch</caption>
       <caption xml:lang="ca-valencia">Entrenant amb el KTouch</caption>
       <caption xml:lang="cs">Procvičování s KTouch</caption>
@@ -141,6 +145,7 @@
     </screenshot>
     <screenshot>
       <caption>Selecting a Lesson for Training</caption>
+      <caption xml:lang="ar">اختر درس للتدرب</caption>
       <caption xml:lang="ca">Selecció d'una lliçó per a entrenar-se</caption>
       <caption xml:lang="ca-valencia">Selecció d'una lliçó per a entrenar-se</caption>
       <caption xml:lang="cs">Výběr lekce k učení</caption>
@@ -169,6 +174,7 @@
     </screenshot>
     <screenshot>
       <caption>Reviewing Typing Performance after Finishing a Lesson</caption>
+      <caption xml:lang="ar">يراجع أداء الطباعة بعد الانتهاء من الدرس</caption>
       <caption xml:lang="ca">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
       <caption xml:lang="ca-valencia">Revisió del rendiment del tecleig després de finalitzar una lliçó</caption>
       <caption xml:lang="de">Überprüfen der Eingabegeschwindigkeit nach Beendigung einer Lektion</caption>
@@ -197,6 +203,7 @@
   </screenshots>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
+  <developer_name xml:lang="ar">مجتمع كدي</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
