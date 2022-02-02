@@ -401,7 +401,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             new DataIndexCourse():
             dynamic_cast<DataIndexCourse*>(dataIndexResource);
 
-        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
         dir.mkpath(QStringLiteral("courses"));
         dir.cd(QStringLiteral("courses"));
 
@@ -435,7 +435,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
             new DataIndexKeyboardLayout():
             qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource);
 
-        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        QDir dir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
         dir.mkpath(QStringLiteral("keyboardlayouts"));
         dir.cd(QStringLiteral("keyboardlayouts"));
 

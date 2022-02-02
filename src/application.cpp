@@ -136,7 +136,7 @@ void Application::migrateKde4Files()
     confMigrator.migrate();
 
     Kdelibs4Migration migration;
-    const QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+    const QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
     if (!dataDir.exists())
     {
         dataDir.mkpath(dataDir.path());

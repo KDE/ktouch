@@ -32,7 +32,7 @@ QSqlDatabase DbAccess::database()
 {
     if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection))
     {
-        QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+        QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
         if (!dataDir.exists())
         {
             dataDir.mkpath(dataDir.path());

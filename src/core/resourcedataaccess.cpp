@@ -37,7 +37,7 @@ bool ResourceDataAccess::fillDataIndex(DataIndex* target)
     if (!schema.isValid())
         return false;
 
-    foreach (const QString& path, QStandardPaths::locateAll(QStandardPaths::DataLocation, "data.xml"))
+    foreach (const QString& path, QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, "data.xml"))
     {
         QDir dir = QFileInfo(path).dir();
         QFile dataIndexFile;
@@ -416,7 +416,7 @@ QDomDocument ResourceDataAccess::getDomDocument(QFile &file, QXmlSchema &schema)
 
 bool ResourceDataAccess::openResourceFile(const QString &relPath, QFile& file)
 {
-    QString path = QStandardPaths::locate(QStandardPaths::DataLocation, relPath);
+    QString path = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, relPath);
     if (path.isNull())
     {
         qWarning() << "can't find resource:" << relPath;
