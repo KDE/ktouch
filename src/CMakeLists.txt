@@ -21,11 +21,6 @@ include_directories(
     ${ktouch_SOURCE_DIR}
 )
 
-
-# configure the local configuration file
-configure_file(ktouch_build_config.h.in ktouch_build_config.h)
-
-
 # set the source code files from which KTouch is compiled
 set(ktouch_SRCS
     application.cpp
