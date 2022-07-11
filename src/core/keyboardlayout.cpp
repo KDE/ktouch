@@ -11,8 +11,6 @@
 #include <QDomDocument>
 #include <QDomElement>
 #include <QDomNodeList>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
 
 
 #include "abstractkey.h"
