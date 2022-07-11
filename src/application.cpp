@@ -15,8 +15,10 @@
 #include <QStandardPaths>
 
 #include <KLocalizedContext>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
 #include <Kdelibs4Migration>
+#endif
 
 #include "bindings/utils.h"
 #include "bindings/stringformatter.h"
@@ -50,7 +52,9 @@ Application::Application(int& argc, char** argv, int flags):
     m_dataIndex(new DataIndex(this))
 {
     registerQmlTypes();
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     migrateKde4Files();
+#endif
 
     QQuickStyle::setStyle("Default");
 
@@ -129,6 +133,7 @@ void Application::registerQmlTypes()
 
 void Application::migrateKde4Files()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QStringList configFiles;
     configFiles << QStringLiteral("ktouchrc");
     Kdelibs4ConfigMigrator confMigrator(QStringLiteral("ktouch"));
@@ -147,5 +152,5 @@ void Application::migrateKde4Files()
     {
         QFile(oldDbPath).copy(dbPath);
     }
-
+#endif
 }
