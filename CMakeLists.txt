@@ -11,8 +11,8 @@ cmake_minimum_required(VERSION 3.15)
 project(ktouch VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.83.0")
-
+set(KF5_MIN_VERSION "5.90.0")
+set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 find_package(KF5DocTools)
@@ -27,7 +27,7 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Gui
     Qml
@@ -39,9 +39,10 @@ find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Xml
     XmlPatterns
 )
-
+if (QT_MAJOR_VERSION STREQUAL "5")
 find_package(Qt5X11Extras)
-find_package(Qt5 CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
+endif()
+find_package(Qt${QT_MAJOR_VERSION} CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Completion
