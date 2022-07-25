@@ -35,7 +35,7 @@
 
 
 
-const QString keyboardKCMName = QStringLiteral("kcm_keyboard");
+const QString keyboardKCMName = QStringLiteral("plasma/kcms/systemsettings/kcm_keyboard");
 
 KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject *parent) :
     QObject(parent),
@@ -146,7 +146,7 @@ void KTouchContext::showKeyboardKCM()
     QPointer<KCMultiDialog> kcm = new KCMultiDialog(m_mainWindow);
 
     kcm->setWindowTitle(i18nc("@title:window", "Configure Keyboard"));
-    kcm->addModule(keyboardKCMName);
+    kcm->addModule(KPluginMetaData(keyboardKCMName));
     kcm->exec();
 
     delete kcm;
@@ -184,12 +184,5 @@ void KTouchContext::init()
 
 bool KTouchContext::testKCMAvailibility(const QString& name)
 {
-    KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
-
-    if (!service)
-    {
-        return false;
-    }
-
-    return service->hasServiceType(QStringLiteral("KCModule")) && !service->noDisplay();
+    return KPluginMetaData(name).isValid();
 }
