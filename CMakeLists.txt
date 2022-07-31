@@ -39,9 +39,6 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Xml
     XmlPatterns
 )
-if (QT_MAJOR_VERSION STREQUAL "5")
-find_package(Qt5X11Extras)
-endif()
 find_package(Qt${QT_MAJOR_VERSION} CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -62,6 +59,21 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 
 option(COMPILE_QML "Precompile QML code" OFF)
+option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X11)" OFF)
+
+if (NOT WITHOUT_X11)
+    find_package(X11)
+    find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
+    if (QT_MAJOR_VERSION STREQUAL "5")
+        find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
+    endif()
+
+    if (Qt5X11Extras_FOUND AND X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
+        set(KTOUCH_BUILD_WITH_X11 TRUE)
+    endif()
+
+    add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs Qt5X11Extras, libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
+endif()
 
 # enable QML debugging for debug builds
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")

@@ -4,15 +4,6 @@ ecm_setup_version(${RELEASE_SERVICE_VERSION}
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KTouchConfigVersion.cmake"
 )
 
-find_package(X11)
-find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
-
-if (Qt5X11Extras_FOUND AND X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
-    set(KTOUCH_BUILD_WITH_X11 TRUE)
-endif()
-
-add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs Qt5X11Extras, libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
-
 ecm_optional_add_subdirectory(schemata)
 
 # set include directories
@@ -137,9 +128,7 @@ set(ktouch_SRCS
     undocommands/coursecommands.cpp
     undocommands/coursecommands.h
     undocommands/keyboardlayoutcommands.cpp
-    undocommands/keyboardlayoutcommands.h
-    x11_helper.cpp
-    x11_helper.h)
+    undocommands/keyboardlayoutcommands.h)
 
 qt_add_resources(ktouch_imgs_SRCS images/images.qrc)
 
