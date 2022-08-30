@@ -23,6 +23,7 @@
   <name xml:lang="ia">KTouch</name>
   <name xml:lang="id">KTouch</name>
   <name xml:lang="it">KTouch</name>
+  <name xml:lang="ka">KTouch</name>
   <name xml:lang="ko">KTouch</name>
   <name xml:lang="lt">KTouch</name>
   <name xml:lang="nds">KTouch</name>
@@ -59,6 +60,7 @@
   <summary xml:lang="ia">Preceptor per typar per toccar</summary>
   <summary xml:lang="id">Tutorial Pengetikan Setuh</summary>
   <summary xml:lang="it">Istruttore di dattilografia</summary>
+  <summary xml:lang="ka">შეხებით აკრეფის მასწავლებელი</summary>
   <summary xml:lang="ko">타자 연습 도우미</summary>
   <summary xml:lang="lt">Treniruoklė aklajam teksto rinkimui</summary>
   <summary xml:lang="nds">Schriefmaschien öven</summary>
@@ -132,6 +134,7 @@
       <caption xml:lang="gl">Adestrando con KTouch</caption>
       <caption xml:lang="id">Berlatih dengan KTouch</caption>
       <caption xml:lang="it">Allenamento con KTouch</caption>
+      <caption xml:lang="ka">KTouch-ით სწავლა</caption>
       <caption xml:lang="ko">KTouch로 타자 연습</caption>
       <caption xml:lang="nl">Oefenen met KTouch</caption>
       <caption xml:lang="pl">Ćwiczenie w KTouch</caption>
@@ -164,6 +167,7 @@
       <caption xml:lang="fr">Sélectionner une leçon d'entraînement</caption>
       <caption xml:lang="id">Memilih Pelajaran untuk Pelatihan</caption>
       <caption xml:lang="it">Selezionare una lezione per l'allenamento</caption>
+      <caption xml:lang="ka">აირჩიეთ გაკვეთილი</caption>
       <caption xml:lang="ko">타자 연습 종류 선택</caption>
       <caption xml:lang="nl">Een les voor training wordt geselecteerd</caption>
       <caption xml:lang="pl">Wybieranie lekcji do ćwiczeń</caption>
@@ -227,6 +231,7 @@
   <developer_name xml:lang="ia">Le communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La comunità KDE</developer_name>
+  <developer_name xml:lang="ka">KDE-ის საზოგადოება</developer_name>
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">De KDE-gemeenschap</developer_name>
   <developer_name xml:lang="nn">KDE-fellesskapet</developer_name>
