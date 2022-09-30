@@ -8,15 +8,13 @@
 
 #include <QDebug>
 #include <QDir>
-#include <QFile>
 #include <QDomDocument>
 #include <QDomElement>
-#include <QDomNodeList>
-#include <QUrl>
+#include <QFile>
 #include <QStandardPaths>
+#include <QUrl>
 #include <QXmlSchema>
 #include <QXmlSchemaValidator>
-
 
 #include "dataindex.h"
 #include "keyboardlayout.h"

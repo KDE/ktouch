@@ -13,6 +13,8 @@
 #include "core/keychar.h"
 #include "undocommands/keyboardlayoutcommands.h"
 
+#include <QUndoStack>
+
 CharactersModel::CharactersModel(QObject *parent) :
     QAbstractTableModel(parent),
     m_keyboardLayout(nullptr),

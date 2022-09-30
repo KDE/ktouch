@@ -6,9 +6,8 @@
 
 #include "keyboardlayoutpropertieswidget.h"
 
-#include <QUndoStack>
 #include <QFontDatabase>
-#include <QStyledItemDelegate>
+#include <QUndoStack>
 
 #include "core/keyboardlayout.h"
 #include "core/abstractkey.h"

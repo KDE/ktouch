@@ -7,10 +7,9 @@
 #include "application.h"
 
 #include <QDir>
-#include <QIcon>
 #include <QFile>
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQuickStyle>
 #include <QStandardPaths>
 

@@ -6,13 +6,6 @@
 
 #include "keyboardlayout.h"
 
-#include <QFile>
-#include <QUrl>
-#include <QDomDocument>
-#include <QDomElement>
-#include <QDomNodeList>
-
-
 #include "abstractkey.h"
 #include "key.h"
 #include "keychar.h"

@@ -9,7 +9,6 @@
 
 #include <KMainWindow>
 
-#include <QWeakPointer>
 #include <QQuickView>
 
 class KTouchContext;

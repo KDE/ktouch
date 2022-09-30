@@ -8,7 +8,6 @@
 
 #include <QMenu>
 #include <QPointer>
-#include <QDialogButtonBox>
 #include <QQuickView>
 
 #include "application.h"

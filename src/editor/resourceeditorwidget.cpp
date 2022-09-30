@@ -10,7 +10,6 @@
 
 #include <KCategoryDrawer>
 #include <KLocalizedString>
-#include <KStandardAction>
 
 #include "core/dataindex.h"
 

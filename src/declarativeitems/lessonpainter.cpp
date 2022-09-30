@@ -6,13 +6,13 @@
 
 #include "lessonpainter.h"
 
-#include <qmath.h>
 #include <QAbstractTextDocumentLayout>
 #include <QPainter>
+#include <QTextBlock>
 #include <QTextCharFormat>
 #include <QTextCursor>
 #include <QTextDocument>
-#include <QTextFrame>
+#include <qmath.h>
 
 #include "core/lesson.h"
 #include "declarativeitems/traininglinecore.h"

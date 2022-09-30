@@ -6,7 +6,6 @@
 
 #include "resourcetypeswidget.h"
 
-#include <QFileDialog>
 #include <QStandardItemModel>
 
 #include <KLocalizedString>

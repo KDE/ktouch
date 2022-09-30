@@ -9,7 +9,6 @@
 
 #include <QObject>
 #include <QString>
-#include <QList>
 
 class Lesson : public QObject
 {

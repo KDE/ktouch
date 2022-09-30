@@ -8,7 +8,6 @@
 
 #include <QFileDialog>
 #include <QTextCursor>
-#include <QTextDocumentFragment>
 
 #include <KLocalizedString>
 #include <KMessageBox>

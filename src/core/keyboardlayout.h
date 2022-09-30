@@ -10,7 +10,6 @@
 #include "keyboardlayoutbase.h"
 
 #include <QString>
-#include <QVariant>
 
 class AbstractKey;
 class DataIndexKeyboardLayout;
