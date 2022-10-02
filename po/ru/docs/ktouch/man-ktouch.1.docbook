@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Клавиатурный тренажёр</application
+>">
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Руководство пользователя &ktouch;</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>&ktouch; man page.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>5 января 2021 г.</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Приложения KDE 20.12)</releaseinfo>
+<productname
+>Приложения KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Клавиатурный тренажёр от &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>путь</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Описание</title>
+<para
+>&i18n-ktouch; — программа, позволяющая легко и быстро научиться печатать вслепую. Она показывает, где на клавиатуре должен находиться каждый из пальцев и какие клавиши следует им нажимать.</para
+> 
+<para
+>Для обучения слепой печати &i18n-ktouch; предоставляет тренировочный текст и регулирует уровень сложности в зависимости от результатов пользователя. Она показывает, какую клавишу нужно нажать следующей и каким пальцем это следует сделать.</para>
+<para
+>Данная программа — часть модуля &kde; «Образование».</para>
+</refsect1>
+
+<refsect1>
+<title
+>Параметры &ktouch;</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Запустить редактор курсов и раскладок клавиатуры.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>путь</replaceable
+></term>
+<listitem
+><para
+>Добавить путь к списку путей импорта QML.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+<simplelist>
+<member
+>Более подробная документация доступна по адресу <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (введите данный &URL; в адресную строку &konqueror; или выполните команду <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Дополнительная информация доступна на <ulink url="https://edu.kde.org/ktouch/"
+>сайте проекта &kde; «Образование»</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Авторы</title>
+<para
+>Авторы программы &ktouch;: <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> и <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Эта man-страница основывается на странице, подготовленной для проекта &Debian; <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

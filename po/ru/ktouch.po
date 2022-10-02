@@ -1,0 +1,3127 @@
+# KDE3 - kdeedu/ktouch.po Russian translation.
+# Copyright (C) 2005 KDE Russian translation team.
+#
+# Andrei Darashenka <home@dream.bas-net.by>, 2002.
+# Nick Shafff <shafff@ukr.net>, 2003.
+# Nickolai Shaforostoff <shafff@ukr.net>, 2004.
+# Nick Shaforostoff <shafff@ukr.net>, 2005.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2017.
+# Julia Dronova <juliette.tux@gmail.com>, 2012.
+# Yury G. Kudryashov <urkud.urkud@gmail.com>, 2012.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alex K. <bird.translator@gmail.com>, 2013, 2014.
+# Alexander Wolf <alex.v.wolf@gmail.com>, 2014.
+# Andrey Cherepanov <sibskull@mail.ru>, 2015.
+# Мария Шикунова <translation-team@basealt.ru>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2022-07-08 09:01+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Николай Шафоростов,Алексей Андросов,Alex K.,Мария Шикунова"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"shafff@ukr.net,alexey@androsov.net,bird.translator@gmail.com,translation-"
+"team@basealt.ru"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Недопустимая версия базы данных «%1»."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Пользовательские упражнения"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "Место для хранения файлов личных курсов"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Нет курса с идентификатором %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Нет раскладки клавиатуры с идентификатором %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Скрыто"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Слева вверху"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Справа вверху"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Слева внизу"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Справа внизу"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Ошибка при открытии курса"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Нельзя редактировать встроенные курсы."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Ошибка при открытии раскладки клавиатуры"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Нельзя редактировать встроенные раскладки клавиатуры."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 символ"
+msgstr[1] "%1 символа"
+msgstr[2] "%1 символов"
+msgstr[3] "%1 символ"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "Текстовые файлы (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "Не удалось открыть выбранный файл"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Раскладка клавиатуры с таким названием уже существует."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "Создать"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Создать..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Новый курс"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Новая раскладка клавиатуры"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Шаблон"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Импорт"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Экспорт"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Редактор курсов и раскладок"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Создать новый курс или раскладку"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Удалить выбранный курс или раскладку"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Импорт курса или раскладки из файла"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Экспорт выбранного курса или раскладки в файл"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Ошибка при удалении курса"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Ошибка при удалении раскладки"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "Файлы XML (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "Выбранный файл не может быть импортирован."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Ошибка при сохранении курса"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Ошибка при сохранении раскладки клавиатуры"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "Курс <b>%1</b> удалён"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Раскладка клавиатуры <b>%1</b> удалена"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Ошибка при сохранении курса на диске."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Ошибка при сохранении раскладки клавиатуры на диске."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Выбранный курс уже присутствует в качестве встроенного."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Импортировать как новый курс"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "Выбранный курс уже присутствует в качестве пользовательского."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr "Выбранная раскладка клавиатуры уже присутствует в качестве встроенной."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Импортировать как новую раскладку клавиатуры"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"Выбранная раскладка клавиатуры уже присутствует в качестве пользовательской."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Восстановить"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Закрыть"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Использовать другой курс в качестве шаблона"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Использовать другую раскладку клавиатуры в качестве шаблона"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Курс"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Раскладку клавиатуры"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Раскладка клавиатуры для использования на платформах, отличных от X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Управление необходимостью исправления ошибок."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Управление показом клавиатуры во время тренировки."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Управление показом статистики во время тренировки."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Использовать клавишу «Ввод» для перехода на следующую строку."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "Использовать клавишу «Пробел» для перехода на следующую строку."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Минимальное необходимое количество нажатий в минуту, чтобы разблокировать "
+"следующее упражнение."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Минимальная требуемая точность ввода в процентах, чтобы разблокировать "
+"следующее упражнение."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Цветовая тонировка клавиатуры для выделения клавиш каждого пальца."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Отображение прозрачных цветов пальцев."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Идентификатор последнего используемого профиля."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Тренировка"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Параметры тренировки"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Цвета"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Параметры цвета"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Настройка клавиатуры"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Редактор курсов и раскладок клавиатуры..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Настройка клавиатуры..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Клавиатурный тренажёр"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Освоение и тренировка клавиатурного набора"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"© Sebastian Gottfried, 2011–2015\n"
+"© Håvard Frøiland и Andreas Nicolai, 2000–2007"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Текущий сопровождающий"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Бывший сопровождающий и разработчик"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Автор идеи"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Автор значка SVG"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Множество усовершенствований, исправлений и обновлений"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Всем создателям упражнений и файлов раскладок клавиатуры"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Запустить редактор курсов и раскладок клавиатуры"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "Добавить путь к списку путей импорта QML"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "%1 обнаружил ошибку во время выполнения и должен быть закрыт."
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Символ"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Ид. модификатора"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Положение"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Без названия>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Новые символы: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Название"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Курсы"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Раскладки клавиатуры"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Название: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Точность"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Символов в минуту"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Неизвестно</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Упражнения"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "Тренировка:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Точность:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Символов в минуту:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Курсы для вашей раскладки клавиатуры"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "Другие курсы"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Добро пожаловать в клавиатурный тренажёр"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Начать тренировку"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Выбранный курс предназначен для определённой раскладки."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "Выбранный курс не предназначен для активной раскладки."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"KTouch не позволяет переключать или настраивать раскладки клавиатуры. Перед "
+"началом обучения требуется самостоятельно настроить правильную раскладку. В "
+"противном случае придётся использовать текущую раскладку клавиатуры для "
+"ввода текста упражнения."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Настройка клавиатуры"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Курс <b>%1</b> удалён."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "Курс без названия удалён."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Отменить"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "Изменить упражнение"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Название:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "Текст упражнения"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Готово"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Выполните предыдущие упражнения, чтобы разблокировать"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "Управление профилями"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Управление профилями"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Пройденные упражнения:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Общее время тренировки:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Последняя тренировка:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Никогда"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Изменить"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Действительно удалить профиль «<b>%1</b>»?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Прежде чем начать тренировку, представьтесь:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Имя"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "У меня нет или очень мало опыта в клавиатурном наборе"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+"Упражнения будут разблокированы, когда ваши навыки набора текста улучшатся."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Я свободно владею клавиатурным набором и хочу улучшить свои навыки"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Все упражнения будут разблокированы сразу."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Создать новый профиль"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Использовать выбранный профиль"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "Статистика упражнения"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Затраченное время"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Символ:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Ошибки:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Вернуться на главный экран"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Повторить упражнение"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Следующее упражнение"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Поздравляем! Упражнение пройдено."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Упражнение не пройдено."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Повторите попытку. С течением времени навыки будут улучшаться."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Следующее упражнение разблокировано"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Показать"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Выполнение"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Ошибки"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "За"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "Все упражнения"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "Это упражнение"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Нет доступных отображений для вашей раскладки клавиатуры."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "Меню"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Возобновить тренировку"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Перезапустить упражнение"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Упражнение начато! Отсчёт времени начнётся с первого нажатия клавиши."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "Упражнение приостановлено. Оно продолжится по первому нажатию клавиши."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Пальцы"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Левая рука"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Указательный палец:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Средний палец:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Безымянный палец:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Мизинец:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Правая рука"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Прозрачность"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Раскладка клавиатуры:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Упражнения:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Добавить новое упражнение"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Удалить упражнение"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Переместить упражнение вверх"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Переместить упражнение вниз"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Новые символы:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Диалог"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Создать обычную клавишу"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Обычная клавиша"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Создать специальную клавишу"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Специальная клавиша"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Удалить выбранную клавишу"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Клавиатура"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Раскладка:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Ширина:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Высота:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Геометрия клавиши"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Позиция слева:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Позиция сверху:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Клавиша"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Палец:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Левый мизинец"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Левый безымянный"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Левый средний"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Левый указательный"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Правый указательный"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Правый средний"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Правый безымянный"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Правый мизинец"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Тактильные маркеры:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Символы"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Добавить новый символ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Удалить символ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Tab"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Ввод"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Пробел"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Прочие клавиши"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Метка:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Ид. модификатора:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Открыть текстовый файл..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Автоматический перенос строк"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 символов"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Вставить название текущей системной раскладки клавиатуры"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Во время тренировки:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Требовать исправления ошибок"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Показывать клавиатуру"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Показывать статистику в режиме реального времени"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Переход на следующую строку:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "В&вод"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "Про&бел"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Предел разблокирования упражнений"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Минимум нажатий &в минуту:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Минимальная точность:"
+
+# BUGME: all these undo commands should be translated to Russian as nouns --aspotashev
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Указать название"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Указать раскладку клавиатуры"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Изменить описание"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Добавить упражнение"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Переместить упражнение"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Указать название упражнения"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Указать новые символы для упражнения"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Указать текст упражнения"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Указать название раскладки клавиатуры"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Указать название раскладки клавиатуры"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Указать размер раскладки клавиатуры"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Добавить клавишу"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Удалить клавишу"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Указать геометрию клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Указать палец клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Указать тактильный маркер клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Добавить символ клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Удалить символ клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Указать значение символа клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Указать модификатор символа клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Указать положение символа клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Указать тип специальной клавиши"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Указать надпись на специальной клавише"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Указать модификатор специальной клавиши"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Выбрать раскладку клавиатуры"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Создать новое пользовательское упражнение"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "«%1» удалено."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Шаг:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "Использовать OpenGL для вывода графики (экспериментальная версия)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Редактирование пользовательского курса"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Нет доступных курсов"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "Клавиатурный тренажёр не имеет курсов для выбранной раскладки. Вы можете "
+#~ "создать свой собственный курс в редакторе."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Запустить редактор"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Арабская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Бразильская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Болгарская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Чешская qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Чешская qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Датская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Английская Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Английская раскладка Дворака"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Английская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Английская Dvorak (Великобритания)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Английская (Великобритания)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Эстонская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Французская раскладка Дворака"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Французская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Немецкая Dvorak тип II"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Немецкая"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Немецкая Neo 2"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Греческая (Английская)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Иврит"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Венгерская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Итальянская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Каннада"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Латиноамериканская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Литовская стандартная"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Норвежская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Portuguese"
+#~ msgstr "Португальская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Квебекская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Русская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Словацкая qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Словацкая qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Словенская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Словацкая Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Испанская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Шведская клавиатура"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Немецкая (Швейцарская)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Французская Швейцарская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil Eng"
+#~ msgstr "Тамильская Английская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil"
+#~ msgstr "Тамильская"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Turkish f (Türkçe F klavye)"
+#~ msgstr "Турецкая f (Türkçe F klavye)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Украинская (winkeys)"
+
+#~ msgid "Default User"
+#~ msgstr "Пользователь по умолчанию"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Текстовые файлы\n"
+#~ "*|Все файлы"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Выберите текст для практики"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Текст из файла «%1»"
+
+#~ msgid "generated from text file"
+#~ msgstr "сгенерированный из текстового файла"
+
+#~ msgid "all available"
+#~ msgstr "все доступные"
+
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Файлы лекций"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Выбор упражнения"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Использовать текущий уровень для нового упражнения?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Начать новый сеанс тренировки"
+
+#~ msgid "Keep current level"
+#~ msgstr "Остаться на текущем уровне"
+
+#~ msgid "Start from first level"
+#~ msgstr "Начать с этого уровня"
+
+#~ msgid "General Options"
+#~ msgstr "Общие настройки"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Настройки клавиатуры"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Уровень: правильно: %1, всего: %2, слов: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Сеанс: правильно: %1, всего: %2, слов: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Обратите внимание, что в разных странах немного по-разному обучают "
+#~ "сенсорному вводу, который обычно затрагивает только верхний ряд клавиш. "
+#~ "Например, в Соединенных Штатах учат нажимать мизинцем левой руки левую "
+#~ "клавишу и клавишу 1. В Германии мизинцем нажимают также клавишу 2,"
+#~ "следовательно области нажатия в верхнем ряду для каждого из пальцев "
+#~ "смещаются на одну позицию вправо.\n"
+#~ "Обычно это имеет значение только для разделенных или эргономических "
+#~ "клавиатур."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Не удаётся открыть файл упражнения «%1»."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Смена пользователя на «%1». Перезапуск тренировки на текущем уровне."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Открыть упражнение..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Изменить упражнение..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "И&зменить цветовую тему..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "&Изменить раскладку клавиатуры..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "&Приостановить"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "&Статистика"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Упражнения по &умолчанию"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "&Цветовые темы клавиатур"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Настройка пользователей..."
+
+#~ msgid "&Current User"
+#~ msgstr "&Текущий пользователь"
+
+#~ msgid "untitled lecture"
+#~ msgstr "Упражнение"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Номер текущей цветовой темы."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr ""
+#~ "Использовать стандартные цвета для строки набора вместо цветов темы."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Цвет фона поля показа текста."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Цвет текста поля показа текста"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "Цвет фона поля ввода текста."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Цвет текста поля ввода текста"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Изменять цвет фона при ошибке."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Цвет фона поля ввода текста при ошибке."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Цвет текста поля ввода текста при ошибке."
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Издать звуковой сигнал при ошибке"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Воспроизводить звуки во время набора."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Проиграть звук при автоматической смене уровня"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Скорость прокрутки"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Максимальная высота строки набора"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Использовать другие шрифты."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Шрифт полей показа и ввода текста"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Загруженный файл упражнения"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Набор справа налево."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Использовать цвета для показа клавиш."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr ""
+#~ "Показывать только изученные/известные клавиши или всегда все клавиши."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Показывать ли экранную клавиатуру."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Изменить шрифт по умолчанию."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Шрифт клавиш"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Загруженный файл клавиатуры"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "Для завершения строки необходимо нажать клавишу enter."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Автоматическое изменение уровня сложности"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Отключить смену уровней вручную, если включена автоматическая смена "
+#~ "уровней"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Сохранять уровень перед выходом из программы"
+
+#~ msgid "The current training level"
+#~ msgstr "Текущий уровень"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr ""
+#~ "Количество символов в минуту, необходимое для увеличения уровня сложности"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr ""
+#~ "Доля правильно введённых символов, необходимая для увеличения уровня "
+#~ "сложности"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr ""
+#~ "Количество символов в минуту, необходимое для уменьшения уровня сложности"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr ""
+#~ "Доля правильно введённых символов, необходимая для уменьшения уровня "
+#~ "сложности"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Количество строк, которые должны быть набраны для смены уровня"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Запустить как минимум один уровень, прежде чем продолжить"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr ""
+#~ "Позволяет нескольким пользователям KTouch использовать одну учетную запись"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Имя текущего пользователя."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Сохранить изменения в цветовой теме?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "тема без названия"
+
+#~ msgid "Black && White"
+#~ msgstr "Чёрно-белая"
+
+#~ msgid "Classic"
+#~ msgstr "Классическая"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Синева"
+
+#~ msgid "Stripy"
+#~ msgstr "Полосатая"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Не удаётся открыть файл раскладки «%1»."
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "Клавишу %1 с символом отображения '%2' и код unicode '%3' уже было "
+#~ "определено, поэтому новое определение было пропущено.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Клавиша управления"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Неизвестная клавиша пальца с кодом unicode '%1'. Обычная клавиша с "
+#~ "символом отображения '%2' и кодом unicode '%3' была пропущена.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Неизвестная клавиша цель с кодом unicode '%1'. Скрытая клавиша с символом "
+#~ "отображения '%2' и кодом unicode '%3' была пропущена.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Неизвестная клавиша пальца с кодом unicode '%1'. Скрытая клавиша с "
+#~ "символом отображения '%2' и кодом unicode '%3' была пропущена.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Неизвестная клавиша модификатор/клавиша управления с кодом unicode '%1'. "
+#~ "Скрытая клавиша с символом отображения '%2' и кодом unicode '%3' была "
+#~ "пропущена.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|Раскладки клавиатуры KTouch (*.keyboard.xml)\n"
+#~ "*|Все файлы"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Удалить эту клавишу?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Редактор раскладок KTouch"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Это неверный номер юникод-символа. Пожалуйста, исправьте его или введите "
+#~ "символ."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Пожалуйста, введите символ или номер юникод-символа."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Удалить все связи для этой клавиши?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Ошибка редактора раскладок KTouch"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<клавиша-модификатор"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Открытие файла раскладки"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Какой файл упражнения вы хотите изменить?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Изменить текущее упражнение:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Открыть упражнение по умолчанию:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Открыть файл раскладки:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<нет файлов раскладок>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Не удаётся открыть файл раскладки, будет создан новый."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "При чтении файла раскладки «%1» возникли ошибки:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (изменён)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Редактор раскладок KTouch - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Редактор раскладок KTouch - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<новая раскладка>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Текущая раскладка была изменена. Хотите её сохранить?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Не удаётся прочитать файл раскладки «%1». %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Не удаётся открыть файл раскладки из «%1»."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Ошибка чтения файла раскладки. Будет использована раскладка по умолчанию. "
+#~ "Вы можете выбрать другую раскладку клавиатуры в настройках."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Упражнение по умолчанию..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Сохранить упражнение"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Редактор упражнений KTouch - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<новое упражнение>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Данные уровня %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Открыть упражнение"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Какой файл упражнения вы хотите изменить?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Изменить текущее упражнение:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Открыть упражнение по умолчанию:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Не удаётся открыть файл упражнения, будет создано новое упражнение."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Текущее упражнение было изменено. Хотите его сохранить?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Достаточно для начала"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Это небольшое упражнение для начала. \n"
+#~ "Если у вас уже есть опыт в наборе текста, \n"
+#~ "выберите другое упражнение. После того, как \n"
+#~ "вы нажмёте Enter, это упражнение будет \n"
+#~ "закончено."
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<нет файлов по умолчанию>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Укажите имя файла."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Ошибка в ссылке. Исправьте её."
+
+#~ msgid "***current***  "
+#~ msgstr "***сейчас***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Нет данных для статистики."
+
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr ""
+#~ "Стереть все статистические данные для текущего пользователя?\n"
+#~ "Все тренировочные сеансы будут начинаться с текущего уровня."
+
+#~ msgid "Words per minute"
+#~ msgstr "Слов в минуту"
+
+#~ msgid "Correctness"
+#~ msgstr "Точность набора"
+
+#~ msgid "Skill"
+#~ msgstr "Уровень"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Дней с момента начала упражнения"
+
+#~ msgid "Sessions"
+#~ msgstr "Сеансы"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Начало упражнения: ожидание первого нажатия клавиши..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Вы закончили это тренировочное упражнение.\n"
+#~ "Эта тренировка начнётся сначала."
+
+#~ msgid "You rock!"
+#~ msgstr "Вы жжоте!"
+
+#~ msgid "S&tatistics"
+#~ msgstr "С&татистика"
+
+#~ msgid "&Settings"
+#~ msgstr "&Настройка"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Основная панель инструментов"
+
+#~ msgid "New User"
+#~ msgstr "Новый пользователь"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Пожалуйста, введите уникальное имя пользователя."
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Это неправильное (неуникальное) имя пользователя!"
+
+#~ msgid "Save user list?"
+#~ msgstr "Сохранить список пользователей?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "Программа, помогающая научиться быстрому набору."
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Открыть файл упражнения"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Редактор цветовых тем"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Пользовательские цветовые темы"
+
+#~ msgid "Add"
+#~ msgstr "Добавить"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "И&зменить цветовую тему"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Название цветовой темы:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Сохранить данные"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Цвета строки набора и образца"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Фон образца:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Текст образца:"
+
+#~ msgid "Student background:"
+#~ msgstr "Фон строки набора:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Ошибочно набранный текст:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Фон строки набора при ошибке:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Цвета клавиатуры"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Фон обычных клавиш:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Фон подсвеченных клавиш:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Цвета обычных клавиш:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Цвет подсвеченного текста:"
+
+#~ msgid "Text color:"
+#~ msgstr "Цвет текста:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Рамки вокруг клавиш:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Клавиши-модификаторы:"
+
+#~ msgid "Text color"
+#~ msgstr "Надписи"
+
+#~ msgid "Background:"
+#~ msgstr "Фон:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Идентификатор клавиатуры"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Название раскладки:"
+
+#~ msgid "Language id:"
+#~ msgstr "Язык:"
+
+#~ msgid "Comments:"
+#~ msgstr "Комментарий:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Свойства клавиши"
+
+#~ msgid "Key type:"
+#~ msgstr "Тип клавиши:"
+
+#~ msgid "Key text:"
+#~ msgstr "Текст клавиши:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Параметры клавиатуры"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Задать шрифт раскладки..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Сохранить раскладку как..."
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Key connectors"
+#~ msgstr "Связи клавиш"
+
+#~ msgid "or unicode"
+#~ msgstr "или в Юникоде"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Очистить связи"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Добавить/обновить связь"
+
+#~ msgid "< modifier key>"
+#~ msgstr "< клавиша-модификатор >"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Раскладка клавиатуры (щёлкните, чтобы активировать редактирование клавиш, "
+#~ "или перетащите их)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Редактор упражнений KTouch"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Свойства упражнения"
+
+#~ msgid "Comment:"
+#~ msgstr "Комментарий:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Данные уровня 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Новые символы на этом уровне:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Описание уровня:"
+
+#~ msgid "Level data:"
+#~ msgstr "Данные уровня:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Описание уровня обучения"
+
+#~ msgid "Summary"
+#~ msgstr "Описание"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Рекорды для этого уровня"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Score"
+#~ msgstr "Счёт"
+
+#~ msgid "Characters per second"
+#~ msgstr "Символов в минуту"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Рекорды всех пользователей для этого уровня"
+
+#~ msgid "&Retry level"
+#~ msgstr "Пройти уровень снова"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "Продолжить на &следующем уровне"
+
+#~ msgid "Browse..."
+#~ msgstr "Обзор..."
+
+#~ msgid "&OK"
+#~ msgstr "&ОК"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Собственные цвета для строки набора"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Цвет текста в строке обучения"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Строка-образец"
+
+#~ msgid "Text:"
+#~ msgstr "Текст:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Цвет вводимого текста"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Здесь можно изменить цвет вводимого текста."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Цвет фона строки-образца:"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Здесь можно изменить цвет фона для строки-образца (строка текста, который "
+#~ "вам нужно набрать)."
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Использовать другие цвета при ошибках набора"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Цвет фона при ошибке"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Если вы включили «Разные цвета при ошибках», вы можете выбрать другой "
+#~ "цвет фона при ошибке ввода. Ошибкой считается неверно введённый символ. "
+#~ "Выделение ошибок цветом позволяет наглядно показать ошибки."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Цвет текста при ошибке"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Если вы включили «Разные цвета при ошибках», вы можете выбрать другой "
+#~ "цвет показываемого текста при ошибке ввода. Ошибкой считается неверно "
+#~ "введённый символ. Выделение ошибок цветом позволяет наглядно показать "
+#~ "ошибки."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Настройки текстовой строки"
+
+#~ msgid "Fast"
+#~ msgstr "Быстро"
+
+#~ msgid "Slow"
+#~ msgstr "Медленно"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Скорость прокрутки:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Изменить шрифт упражнения"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Шрифт показываемого и набираемого текста:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "При нажатии на эту кнопку появится диалог выбора шрифта для полей показа "
+#~ "и ввода текста."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Подсвечивать клавиши на клавиатуре, которые вам нужно нажать"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Подсвечивать клавиши на клавиатуре, которые вам нужно нажать следующими. "
+#~ "При включении этой опции ввод текста становится проще."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Подсвечивать &клавиши на клавиатуре"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Прятать/затенять ещё невыученные клавиши"
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "При включении этой опции вы можете указать другой шрифт для показа клавиш "
+#~ "на клавиатуре."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Для каждой раскладки клавиатуры можно указать другой шрифт. Если шрифт по "
+#~ "умолчанию для раскладки клавиатуры отображается неправильно или вам не "
+#~ "нравится, нажмите эту кнопку. Шрифт, который вы укажите, будет "
+#~ "использован для показа символов на клавишах клавиатуры."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Изменить шрифт клавиатуры"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Шрифт клавиш:"
+
+#~ msgid "Sound"
+#~ msgstr "Звук"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "При включении этой опции (по умолчанию она включена) при каждой ошибке "
+#~ "будет произведён сигнал из системного динамика."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Сигнал при ошибке"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Издавать звук печатной машинки при каждом нажатии клавиши"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Если выбрано, то звук печатной машинки будет издаваться при каждом "
+#~ "нажатии клавиши"
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "Звуки печатной машинки"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Проиграть звук при автоматической смене уровня."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "При включении этой опции (по умолчанию она включена) при автоматической "
+#~ "смене уровня будет проигран звуковой файл."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Звук при автоматической смене уровня"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "&Автоматическое изменение уровня сложности"
+
+#~ msgid "chars/minute"
+#~ msgstr "символ/мин"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Скорость набора:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Точность:"
+
+#~ msgid "Workload:"
+#~ msgstr "Рабочая нагрузка:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Закончите упражнение перед продолжением"
+
+#~ msgid "lines"
+#~ msgstr "строк"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Ограничения на увеличение уровня"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Ограничения на уменьшение уровня"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Скрыть кнопки изменения уровня"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr ""
+#~ "&Режим печатной машинки (пользователь должен подтвердить строку, нажав "
+#~ "Enter)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "&Сохранять уровень перед выходом из программы"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Текущее упражнение"
+
+#~ msgid "Lecture:"
+#~ msgstr "Упражнение:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Уровни:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Прошло (с):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr "Количество секунд, потраченное на сеанс."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Набрано символов:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "Количество символов (правильных и ошибочных)."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Опечаток:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Количество ошибочных символов."
+
+#~ msgid "Words typed:"
+#~ msgstr "Набрано слов:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Общее количество символов."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Отношение правильных символов к общему количеству напечатанных символов."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Темп набора"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Количество правильных символов за одну минуту."
+
+#~ msgid "Words per minute:"
+#~ msgstr "Слов в минуту:"
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Количество слов за одну минуту."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Количество символов, набранных неверно. Процент показывает отношение "
+#~ "неверно набранного символа к общему количеству этого символа во время "
+#~ "набора. Больший процент показывает, что вы часто пропускали этот символ."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Статистика символов (только важные)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Статистика уровня"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "lectureLabel2"
+
+#~ msgid "Level:"
+#~ msgstr "Уровень:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "levelLabel2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Количество символов, набранных неверно. Процент показывает отношение "
+#~ "неверно набранного символа к общему количеству этого символа во время "
+#~ "набора. Больший процент показывает, что вы часто пропускали этот символ."
+
+#~ msgid "Monitor Progress"
+#~ msgstr "Процесс выполнения"
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Процесс набора"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Показывать прогресс выполнения:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "Здесь вы можете выбрать упражнение для просмотра статистики по ней."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Настройка графика набора"
+
+#~ msgid "Chart Data"
+#~ msgstr "Данные графика"
+
+#~ msgid "Session stats"
+#~ msgstr "Статистика сеанса"
+
+#~ msgid "Level stats"
+#~ msgstr "Статистика уровня"
+
+#~ msgid "Chart Type"
+#~ msgstr "Тип графика"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Диаграмма с осями"
+
+#~ msgid "Time scaled"
+#~ msgstr "Простая диаграмма"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Интервал"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "При нажатии на эту кнопку вся статистика для текущего пользователя будет "
+#~ "очищена."
+
+#~ msgid "Clear History"
+#~ msgstr "Очистить журнал"
+
+#~ msgid "Level"
+#~ msgstr "Уровень"
+
+#~ msgid "Current level"
+#~ msgstr "Текущий уровень"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Здесь показан уровень, на котором вы находитесь."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Speed"
+#~ msgstr "Скорость"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "символ/мин"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Здесь показана ваша скорость набора. Она измеряется в символах в минуту."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Насколько правильно вы набираете?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Здесь показана точность вашего набора."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Новые символы на этом уровне"
+
+#~ msgid "Setup Users"
+#~ msgstr "Управление пользователями"
+
+#~ msgid "&Add"
+#~ msgstr "Доб&авить"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "Закрыть"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Арабская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "BR-Nativo"
+#~ msgstr "Бразильская-Nativo"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Болгарская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Болгарская (длинная, автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Каталанская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Чешская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Дворака (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Датская (полный курс)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Голландская детская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Голландская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Дворака (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Раскладка Дворака - ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Английская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (for AlphaGrip)"
+#~ msgstr "Английская (для AlphaGrip)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Финнская детская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Финнская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Французская (автоматически сгенерированная) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Французская (автоматически сгенерированная) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Французская раскладка Дворака (часть 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Французская раскладка Дворака (часть 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Немецкая (до 9 уровня)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Немецкая (из Tipptrainer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Немецкая (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Немецкая (раскладка клавиатуры Dvorak)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Немецкая (раскладка клавиатуры Neo 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Немецкая (дополнительная клавиатура)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Греческая"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Венгерская для экспертов++"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Венгерская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Итальянская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Латинская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Литовская (sdt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Норвежская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Польская (из TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Русская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Русская 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Русская (длинная, автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Словацкая (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Словенская"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Испанская (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Испанская (автоматически сгенерированная) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Испанская (автоматически сгенерированная) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Испанская раскладка Дворака"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Турецкая (автоматически сгенерированная)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Украинская"
+
+#~ msgid "F&ile"
+#~ msgstr "&Файл"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Дворака (NEO-Schnellschreiblayout)"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "Открыть в редакторе"
+
+#~ msgid "Current something"
+#~ msgstr "Текущие данные"
+
+#~ msgid "Preset something:"
+#~ msgstr "Предопределённые данные:"
+
+#~ msgid "Open file:"
+#~ msgstr "Открыть файл:"
+
+#~ msgid "New something"
+#~ msgstr "Новое..."
+
+#~ msgid "levelLabel1"
+#~ msgstr "levelLabel1"
+
+#~ msgid "lectureLabel1"
+#~ msgstr "lectureLabel1"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "Упражнение по умолчанию..."
+
+#~ msgid "Keypad/Number block"
+#~ msgstr "Блок цифровых клавиш"
+
+#~ msgid "Could not open file."
+#~ msgstr "Не удаётся открыть файл."
+
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Пропущен набор клавиши в строке '%1'."
+
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Размер клавиатуры: %1 x %2"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Не использовать"
+
+#~ msgid "Keyboard dimensions:"
+#~ msgstr "Размеры клавиатуры:"
+
+#~ msgid "Key Definitions"
+#~ msgstr "Клавиши"
+
+#~ msgid "Key definition data:"
+#~ msgstr "Клавиши:"
+
+#~ msgid "Default level..."
+#~ msgstr "Уровень по умолчанию..."
+
+#~ msgid "Edit color scheme:"
+#~ msgstr "Изменить тему:"
+
+#~ msgid "Background"
+#~ msgstr "Фон"
+
+#~ msgid "Change Font..."
+#~ msgstr "Шрифт..."
+
+#~ msgid "Levels"
+#~ msgstr "Уровни"
+
+#~ msgid "Time needed (beg/adv/pro): "
+#~ msgstr "Время (новичок,продвинутый,профи): "
+
+#~ msgid "Save &As..."
+#~ msgstr "Сохранить &как..."
+
+#~ msgid "Select File to Open"
+#~ msgstr "Открыть файл"
+
+#~ msgid "Current something file"
+#~ msgstr "Файл данных"
+
+#~ msgid "Color Scheme"
+#~ msgstr "Цветовая тема"
+
+#~ msgid "Select color scheme:"
+#~ msgstr "Выберите тему:"
+
+#~ msgid "Color scheme for displaying the keyboard"
+#~ msgstr "Цветовая тема для показа клавиатуры"
+
+#~ msgid ""
+#~ "You can choose here the color scheme for displaying the keyboard. "
+#~ "<i>Black & White</i> will display all keyboard letters black on white, "
+#~ "<i>Classic</i> will colorize the same color for each finger, <i>Deep "
+#~ "Blue</i> will display the keyboard in different deep blue colors and "
+#~ "<i>Stripy</i> will alternate blue and gray for letters corresponding to "
+#~ "same finger."
+#~ msgstr ""
+#~ "Вы можете выбрать цветовую тему для показа клавиатуры. <i>Чёрно-белая "
+#~ "тема</i> показывает клавиши чёрными на белом фоне, <i>Классическая тема</"
+#~ "i> раскрашивает клавиши под разные пальцы, <i>Синева</i> показывает "
+#~ "клавиши оттенками синего цвета, а <i>Полосатая тема</i> чередует синий и "
+#~ "синий цвет для клавиш под одним и тем же пальцем."
+
+#~ msgid "Use common typing line colors independent of color scheme"
+#~ msgstr "Использовать стандартные цвета для строки набора"
+
+#~ msgid "Typing Line Colors"
+#~ msgstr "Цвета строки набора"
+
+#~ msgid ""
+#~ "If checked this shows your error using the colors below on the typing line"
+#~ msgstr ""
+#~ "При включении этой опции ошибка ввода будет показана изменением цвета "
+#~ "текста и фона"
+
+#~ msgid "Maximum height of sliding line widget:"
+#~ msgstr "Высота строки набора:"
+
+#~ msgid "in pixels"
+#~ msgstr "точек"
+
+#~ msgid "Change the font for the student and teacher lines"
+#~ msgstr "Изменить шрифт для полей показа и ввода текста"
+
+#~ msgid ""
+#~ "If you want to override the font of the training lecture check this box "
+#~ "and set your own font."
+#~ msgstr ""
+#~ "Если вы хотите использовать свой шрифт вместо заданного в упражнении, "
+#~ "включите этот флажок и укажите другой шрифт."
+
+#~ msgid ""
+#~ "Most lectures suggest a font to use. This is necessary for not so common "
+#~ "languages where characters may be displayed in a strange way and distort "
+#~ "the sliding line. If you check this button you can choose your own font "
+#~ "and override the lecture font."
+#~ msgstr ""
+#~ "Большинство упражнений содержит шрифт по умолчанию для показа текста. "
+#~ "Если этот шрифт показывается неправильно или вам не нравится, нажмите на "
+#~ "эту кнопку для его изменения."
+
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Ограничения уровня"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

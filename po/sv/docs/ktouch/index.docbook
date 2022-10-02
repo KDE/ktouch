@@ -1,0 +1,1678 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Maskinskrivningsträning</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Handbok &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Program 20.12)</releaseinfo>
+
+<abstract>
+<para
+>&i18n-ktouch; är ett program för att lära sig maskinskrivning. &i18n-ktouch; tillhandahåller en text att öva på, och justeras till olika nivåer, beroende på hur bra du är. Det visar vilken tangent som ska tryckas ner härnäst, och det riktiga fingret som ska användas.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>maskinskrivning</keyword>
+<keyword
+>maskinskrivning</keyword>
+<keyword
+>maskinskrivning</keyword>
+<keyword
+>maskinskrivning</keyword>
+<keyword
+>utbildning</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>maskin</keyword>
+<keyword
+>skrivning</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Lära sig skriva maskin med &i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Inledning</title>
+
+<sect2>
+<title
+>Vad är &i18n-ktouch;?</title>
+<para
+>&i18n-ktouch; är ett program för att lära sig maskinskrivning.</para>
+<para
+>&i18n-ktouch; tillhandahåller en text att öva på, och justeras till olika nivåer, beroende på hur bra du är. Det visar ditt tangentbord, och anger vilken tangent som ska tryckas ner härnäst, och det riktiga fingret som ska användas.</para>
+
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s huvudskärm</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s huvudskärm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; är ett övningsverktyg för maskinskrivning som i huvudsak är ämnat för personligt bruk. Man lär sig att skriva med alla fingrar, steg för steg, utan att behöva titta ner på tangentbordet hela tiden för att hitta rätt tangenter, vilket gör att man blir mycket långsammare. </para>
+</sect2>
+
+<sect2>
+<title
+>Funktioner</title>
+
+<para
+>I sin nuvarande version har &i18n-ktouch; ett stort antal funktioner, såsom:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Levereras med dussintals olika kurser på många språk och med en bekväm kurseditor</simpara
+></listitem>
+<listitem
+><simpara
+>Stöd för olika tangentbordslayouter med möjlighet att använda och redigera användardefinierade layouter</simpara
+></listitem>
+<listitem
+><simpara
+>Under inlärningsövningen samlar &i18n-ktouch; in omfattande statistisk information för att hjälpa dig eller din lärare att analysera dina framsteg</simpara
+></listitem>
+</itemizedlist>
+<para
+>Det finns många fler funktioner, som beskrivs i lämpliga kapitel i den här handboken. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Komma igång</title>
+
+<para
+>Här är en annan skärmbild av &i18n-ktouch; i användning, den här gången med tyskt tangentbord och övningslektion:</para>
+
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s huvudskärm</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s huvudskärm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Även om det bör vara mycket enkelt att lära sig skriva maskin med &i18n-ktouch; och att använda programmet, tar vi en närmare titt på &i18n-ktouch; i följande avsnitt.</para>
+
+<sect2 id="creating_profile">
+<title
+>Skapa din första profil</title>
+
+<para
+>Första gången som &i18n-ktouch; startas visas en särskild skärm som hjälper dig skapa din första profil. Du kan välja profilens namn och nivån på dina maskinskrivningskunskaper. </para>
+<tip>
+<para
+>Nivån du väljer bestämmer det allmänna funktionen hos &i18n-ktouch;. I nybörjarläge låses lektioner upp en efter en när du klarar av dem, medan för avancerade maskinskrivare är alla lektioner tillgängliga från första början. </para>
+</tip>
+<note>
+<para
+>Tänk igenom valet, det går inte att ändra en profils typ senare. Men du kan alltid skapa nya profiler för att fatta beslutet igen. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s välkomstskärm</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s välkomstskärm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Efter att ha klickat på <guibutton
+>Starta övning</guibutton
+> kommer du till hemskärmen. Denna skärm är också den första skärmen som visas när &i18n-ktouch; körs nästa gång. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Välja en lektion</title>
+
+<para
+>Hemskärmen i &i18n-ktouch; består av en verktygsrad och kursväljaren. För mer information se <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s hemskärm</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s hemskärm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; visar den första kursen som är tillgänglig för den nuvarande tangentbordslayouten. </para>
+
+<para
+>Man kan byta mellan kurser eller välja <link linkend="custom_lessons"
+>egna lektioner</link
+> genom att klicka på deras miniatyrbilder på höger sida av fönstret. </para>
+
+<note>
+<para
+>På vissa plattformar, i synnerhet &Microsoft; &Windows; är inte automatisk detektering av tangentbordslayout tillgänglig. I så fall måste du klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i verktygsraden, välja undermenyn <guisubmenu
+>Anpassa tangentbord...</guisubmenu
+> och välja namnet på tangentbordslayouten eller någon tangentbordslayout som liknar din. Om ditt tangentbord inte ingår, kan du definiera din egen tangentbordslayout själv, se <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Välj lektion från listan till vänster i fönstret. Du kan inte välja lektionerna låsta med <inlinemediaobject
+><imageobject
+><imagedata fileref="Icon-object-locked.png" format="PNG"/></imageobject
+></inlinemediaobject
+> eftersom de är för svåra för dina nuvarande kunskaper. Klara av lektioner för att låsa upp nya. Förhandsgranskningen av den valda lektionen visas till höger om lektionslistan. </para>
+<tip>
+<para
+>Mer information om den valda kursen kan visas och döljas igen med knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="Icon-dialog-information.png" format="PNG"/></imageobject
+></inlinemediaobject
+> intill kursens titel. </para>
+</tip>
+<para
+>När valet är klart, klicka på <guibutton
+>Starta övning</guibutton
+> för att gå till övningsskärmen i &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Övning</title>
+<para
+>Övningsfönstret i &i18n-ktouch; visar tre huvuddelar: </para>
+<orderedlist>
+<listitem
+><simpara
+>En del skrivstatistik i informationsrutor längst upp</simpara
+></listitem>
+<listitem
+><simpara
+>Texten du ska skriva</simpara
+></listitem>
+<listitem
+><simpara
+>Visualiseringen av tangentbordet</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s övningsskärm</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s övningsskärm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>Synligheten hos övningsskärmens delar kan anpassas genom att använda <link linkend="configuration_dialog"
+>inställningsdialogrutan i &i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Placera dina två pekfingrar på de två tangenterna på tangentbordet med de två små taktila markeringarna nära mitten av den mellersta teckenraden. På så sätt hittar övriga fingrar tangenterna avsedda för dem nästan automatiskt. Tummarna ska vila ovanför mellanslagstangenten, den enda tangent som du någonsin använder dem för vid maskinskrivning. Övriga fingrar ska vara placerade på de tre tangenterna intill de markerade tangenterna på raden i mitten. Tangenter för samma finger är grupperade tillsammans enligt färg. Försök att flytta händerna så lite som möjligt och efter du skrivit in ett tecken försök alltid låta fingrarna återgå till sina vilopositioner. </para>
+<para
+>Börja skriva in texten mitt på skärmen. Nästa tangent du ska trycka på är alltid markerad i visualiseringen av tangentbordet. Medan du skriver kan du göra misstag och trycka på fel tangent. I så fall visas tecknen med rött och du måste trycka på backsteg så många gånger som är nödvändigt för att radera de felaktigt inskrivna tecknen. </para>
+<para
+>När du har gjort färdigt en textrad med lyckat resultat, måste du trycka på returtangenten för att gå vidare till nästa rad. </para>
+<tip>
+<para
+>Tangenten som används för att gå vidare till nästa rad kan ändras med <link linkend="configuration_dialog"
+>inställningsdialogrutan i &i18n-ktouch;</link
+>. </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Granska dina framsteg</title>
+<para
+>När en lektion är klar, byter &i18n-ktouch; till resultatskärmen. Den visar den nuvarande övningen och lektionsstatistik, samt en grafisk historik över tidigare övningssessioner. </para>
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s statistikdialogruta</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s statistikdialogruta</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Du kan välja att visa en viss lektion eller <guilabel
+>Alla lektioner</guilabel
+> i statistikdialogrutan. Det är användbart för att skilja på övergripande resultat och kunskapsnivån för vissa lektioner. </para>
+<para
+>Om du känner dig redo för nästa lektion, klicka på knappen <guibutton
+>Nästa lektion</guibutton
+> i verktygsraden för att fortsätta med nästa lektion i den pågående kursen eller knappen <guibutton
+>Upprepa lektion</guibutton
+> för att prova kunskaperna i nuvarande lektion igen. Knappen <guibutton
+>Nästa lektion</guibutton
+> är bara tillgänglig om du har klarat av lektionen. </para>
+<para
+>Om du vill byta till någon annan lektion eller kurs, klicka på <guibutton
+>Gå tillbaka till hemskärmen</guibutton
+>. </para>
+<para
+>Om du inte vill fortsätta övningen i &i18n-ktouch;, stäng bara programfönstret. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Övningsförberedelse</title>
+<para
+>I stort sett allting på hemskärmen i &i18n-ktouch; bör vara självförklarligt. Verktygsraden längst upp är avsedd som stället där du kan visa och anpassa inställningar i &i18n-ktouch;. Kursväljaren kan användas för att visa information om kurserna och byta mellan dem. </para>
+
+<sect2 id="toolbar">
+  <title
+>Verktygsraden i &i18n-ktouch;</title>
+<para
+>Verktygsraden i &i18n-ktouch; omfattar profilknappen till vänster och programmenyknappen till höger. </para>
+
+<sect3 id="profile_management">
+<title
+>Profilhantering</title>
+<para
+>Profilknappen med namnet på din profil till vänster på hemskärmens verktygsrad kan användas för att hantera profiler i &i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Profilhantering i &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Profilhantering i &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Inställningarna i befintliga profiler kan granskas eller tas bort, och en ny profil kan skapas genom att använda knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="Icon-list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. </para>
+<para
+>För att byta till granskningsläge klicka på <guibutton
+>Redigera</guibutton
+>. För att välja en profil och återgå till hemskärmen tryck på <guibutton
+>Använd vald profil</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Granska profilinformation</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Granska profilinformation</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Menyn i &i18n-ktouch;</title>
+<para
+>Menyn i &i18n-ktouch; kan öppnas genom att använda knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="Icon-configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> på hemskärmens verktygsrad. </para>
+
+<screenshot>
+<screeninfo
+>&i18n-ktouch;s meny</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&i18n-ktouch;s meny</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>En lista med menyalternativen och en kort beskrivning finns nedan. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Fullskärmsläge</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Ändra</action
+> fullskärmsläge för &i18n-ktouch;: på eller av</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Editor för kurser och tangentbordslayout...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Öppna</action
+> <link linkend="extending"
+>redigeringsfönstret</link
+> i &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Anpassa Maskinskrivningsträning...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Visa</action
+> <link linkend="configuration_dialog"
+>inställningsdialogrutan</link
+> i &i18n-ktouch;. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Anpassa genvägar...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Anpassa</action
+> snabbtangenterna du vill koppla ihop med vissa åtgärder </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Anpassa tangentbord...</guimenuitem
+></term>
+<listitem
+><para
+>En genväg till modulen i systeminställningarna för att anpassa tangentbordsinställningarna. Användbar för att förbereda övningar med en annan tangentbordslayout. </para>
+<note>
+<para
+>På plattformar som saknar stöd för att automatiskt detektera tangentbordslayout, i synnerhet &Microsoft; &Windows;, är alternativet ersatt med en undermeny för att välja tangentbordslayout i &i18n-ktouch; manuellt. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>&i18n-ktouch; har &kde;:s vanliga menyalternativ i menyn <guimenu
+>Hjälp</guimenu
+>. För mer information läs avsnittet om <ulink url="help:/fundamentals/menus.html#menus-help"
+>hjälpmenyn</ulink
+> i &kde;:s grunder. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Inställningsdialogruta</title>
+
+<para
+>Man kan anpassa &i18n-ktouch; en hel del. Inställningarna gäller globalt för alla profiler. Öppna inställningsdialogrutan genom att klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> till höger i verktygsraden längst upp på hemskärmen, och välj därefter <guimenuitem
+>Anpassa Maskinskrivning...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Övningsinställningar</guilabel
+></term>
+     <listitem>
+       <para
+>I den här dialogrutan kan man välja alternativ som styr övningsfönstrets utseende och hur &i18n-ktouch; beter sig under en övning.</para>
+<screenshot>
+<screeninfo
+>Övningsalternativ</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Övningsalternativ</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Kryssrutan <guilabel
+>Tvinga korrigering av skrivfel</guilabel
+> kan användas för att bestämma om skrivfel måste korrigeras. </para>
+<para
+>Man kan bestämma om rutorna med statistik och tangentbord är synliga under övningar genom att använda kryssrutorna <guilabel
+>Visa tangentbord</guilabel
+> och <guilabel
+>Visa realtidsstatistik</guilabel
+>. </para>
+<para
+>Tangentnedtryckningen för att gå till nästa rad i övningstexten kan väljas bland två alternativ, <keycap
+>Retur</keycap
+> eller <keycap
+>Mellanslag</keycap
+>. </para>
+<para
+><guilabel
+>Gränser för upplåsning av lektion</guilabel
+> kan användas för att välja inställningar som bestämmer när lektioner med högre nivå låses upp. &i18n-ktouch; kontrollerar angivna gränser i slutet på varje nivå, och bestämmer om nästa nivå ska låsas upp. Om skrivhastigheten i tecken per minut och noggrannheten <emphasis
+>båda</emphasis
+> är lika med eller större än <guilabel
+>Gränser för upplåsning av lektion</guilabel
+> låser &i18n-ktouch; upp nästa högre nivå. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Färginställningar</guilabel
+></term>
+  <listitem>
+<para
+>Du kan finjustera färgerna som används av &i18n-ktouch; i den här dialogrutan.</para>
+<screenshot>
+<screeninfo
+>Färginställningar</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Färginställningar</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Du kan välja bakgrundsfärgen för varje fingertangent. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Val av kurser och lektioner</title>
+<para
+>&i18n-ktouch; detekterar automatiskt tangentbordslayouten och visar bara de kurser som är optimerade för denna layout. </para>
+<note>
+<para
+>På vissa plattformar, i synnerhet &Microsoft; &Windows; är inte automatisk detektering av tangentbordslayout tillgänglig. Använd då programmenyn för att välja tangentbordslayout manuellt. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Byta kurser</title>
+<para
+>Om det skulle finnas mer än en kurs tillgänglig för använd tangentbordslayout, kan man välja sin favorit genom att använda knapparna <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> och <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> till höger om kursnamnets beteckning. Om det bara finns en kurs är inte knapparna synliga. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Låsa upp lektioner</title>
+<para
+>Om <guilabel
+>Jag har ingen eller mycket begränsad erfarenhet av maskinskrivning</guilabel
+> valdes när <link linkend="creating_profile"
+>profilen ursprungligen skapades</link
+>, märker du att vissa lektioner är låsta. Dessa alternativ är markerade med ikonen <inlinemediaobject
+> <imageobject
+><imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> och kan inte kommas åt förrän föregående lektioner har klarats. </para>
+<note>
+<para
+>Inställningarna för att klara lektioner kan ändras med <link linkend="configuration_dialog"
+>inställningsdialogrutan i &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Öva med en annan tangentbordslayout</title>
+<para
+>Det är möjligt att använda vilken tangentbordslayout som helst för att öva i &i18n-ktouch;. Tryck bara på knapparna som är markerade i övningsfönstret, oberoende av vad det står på de fysiska knapparna på tangentbordet. </para>
+<para
+>Välj <menuchoice
+><guimenu
+>Anpassa tangentbord...</guimenu
+></menuchoice
+> i programmenyn för att välja en annan tangentbordslayout. Därefter anpassas &i18n-ktouch; i enlighet med det, och visar kurserna som finns för denna layout. </para>
+<note>
+<para
+>På plattformar utan automatisk detektering av tangentbordslayout, i synnerhet &Microsoft; &Windows;, måste man först ställa in operativsystemet att använda layouten du vill öva med och därefter välja samma layout i &i18n-ktouch; via programmenyn. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Effektiv övning</title>
+<sect2 id="training_techniques">
+<title
+>Övningsteknik</title>
+<para
+>I det följande hittar du en del allmänna råd om tekniker för att lära sig maskinskrivning. </para>
+<sect3 id="steady_speed">
+<title
+>Jämn hastighet</title>
+<para
+>För att vara effektiv när man ska lära sig maskinskrivning är det viktigt att inte bara försöka skriva så snabbt som möjligt, utan hålla en jämn hastighet och hitta en naturlig rytm att trycka ner tangenterna med. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>Riktigheten är det som styr</title>
+<para
+>Nästa viktiga sak att fokusera sin uppmärksamhet på är riktighet. Bara om man har bemästrat användning av tangenterna som för närvarande är upplåsta, vilket betyder att man nu bara gör ett fåtal misstag med dem, har man någon chans i följande lektioner där ännu fler tangenter måste hanteras. Du kommer att märka att du nästan automatiskt blir bra om du bara gör några få fel, och sparar dyrbar tid när du inte behöver rätta så många fel. </para>
+<note>
+<para
+>Det är också orsaken till att den förinställda riktighetsnivån för att låsa upp nästa lektion är 98 %, medan hastighetskraven är ganska måttliga med bara 180 tecken per minut. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Rätta misstag</title>
+<para
+>Om man gör misstag är det viktigt att rätta dem effektivt. Att rätta enskilda tecken är nästan alltid långsammare än att rätta hela ordet. I det senare fallet behöver man bara trycka på <keycombo
+>&Ctrl;&Backspace; </keycombo
+> och skriva om ordet. Tankemödan för att göra det är mycket liten. I det första fallet måste du först lokalisera misstaget, ta bort till precis det ställe där felet finns, avgöra vilken del av  ordet som fattas och skriva in den igen. Det kräver mycket mer koncentration än att skriva om hela ordet. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Pausa övningssessionen</title>
+<sect3 id="automatically_pausing">
+<title
+>Automatiskt</title>
+<para
+>Om man öppnar någon dialogruta eller byter till ett annat program medan man håller på med en övningssession, pausas övningen och tidtagningen stoppas till man ger fönstret i &i18n-ktouch; fokus igen och trycker på någon tangent. </para>
+<para
+>Övningssessionen pausas också om användaren inte utför någon aktivitet under fem sekunder. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Manuellt</title>
+<para
+>Man kan pausa aktuell session manuellt genom att använda knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i verktygsraden. </para>
+<para
+>Om man klickar på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i verktygsraden, pausar &i18n-ktouch; den aktuella sessionen och visar en överlagrad meny med ytterligare några alternativ. </para>
+<screenshot>
+<screeninfo
+>Menyn i &i18n-ktouch; vid paus</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Menyn i &i18n-ktouch; vid paus</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Följa framsteg i inlärningen</title>
+<para
+>Efter att ha gjort färdig en lektion kommer man inte omedelbart tillbaka till hemskärmen. Istället visas en särskild skärm med en sammanfattning och statistik. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Statistik över hastighet och riktighet</title>
+<screenshot>
+<screeninfo
+>Resultatskärmens framstegssida</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Resultatskärmens framstegssida</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Filtrera per lektion</title>
+<para
+>Med hjälp av statistiksidan över hastighet och riktighet kan man granska sina framsteg i inlärningen och identifiera sina svagheter. </para>
+<para
+>Statistikdata kan filtreras per lektion genom att använda kombinationsrutan vid beteckningen <guilabel
+>Över</guilabel
+>. Funktionen kan vara användbar för att kontrollera framstegen i den aktuella lektionen och jämföra den med framstegen i andra lektioner. </para>
+<screenshot>
+<screeninfo
+>Kombinationsmenyn med statistikintervall</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Kombinationsmenyn med statistikintervall</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Ytterligare information om sessionen kan visas med överlägg. Om du håller musen över en plats i diagrammet, visar &i18n-ktouch; statistik för motsvarande session. </para>
+<screenshot>
+<screeninfo
+>Framsteg per lektion</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Framsteg per lektion</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Felstatistik</title>
+<para
+>Resultatskärmen kan ändras för att visa felfrekvensen för varje tangent med kombinationsmenyn vid beteckningen <guilabel
+>Visa</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Byta statistikvisning</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Byta statistikvisning</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Med detta visar &i18n-ktouch; ett stapeldiagram med fel för varje tangent under den senaste övningssessionen. </para>
+<screenshot>
+<screeninfo
+>Feldiagram per tangent</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Feldiagram per tangent</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Man kan byta tillbaka till lektionsdiagrammet med samma kombinationsmeny vid beteckningen <guilabel
+>Visa</guilabel
+>. </para>
+<para
+>Om man har klarat lektionen kan man välja att börja öva på nästa lektion direkt genom att klicka på <guibutton
+>Nästa lektion</guibutton
+> i verktygsraden. Annars kan man upprepa aktuell lektion med <guibutton
+>Upprepa lektion</guibutton
+> eller återgå till hemskärmen med den återstående knappen. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Utöka &i18n-ktouch;</title>
+
+<sect1 id="create_courses">
+<title
+>Skapa kurser</title>
+<para
+>Man kan enkelt skapa sin egen övningskurs med den inbyggda editorn för kurser och tangentbordslayout i &i18n-ktouch;. Klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> till höger i verktygsraden på hemskärmen och välj därefter <guimenuitem
+>Editor för kurser och tangentbordslayout...</guimenuitem
+>. Man kan välja att öppna en kursfil, skapa en tom kurs från början, eller använda en befintlig kurs som mall.</para>
+<important>
+<para
+>Man kan inte redigera de inbyggda kurserna, även om man har skrivåtkomst till installationskatalogen. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Huvudfönstret i editorn för kurser och tangentbordslayout</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Huvudfönstret i editorn för kurser och tangentbordslayout</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Kursegenskaper</title>
+<para
+>Kursegenskaperna kan väljas med guiden för att skapa kurser i &i18n-ktouch;. För att starta guiden, klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i verktygsraden i fönstret <guilabel
+>Editor för kurser och tangentbordslayout</guilabel
+>. </para>
+<para
+>Den första sidan i guiden för &i18n-ktouch; gör det möjligt att välja typ av data. Välj <guilabel
+>Kurs</guilabel
+> och klicka på <guibutton
+>Nästa</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Välja typen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Välja typen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Den andra sidan i guiden gör det möjligt att välja titel, tangentbordslayout och kursens beskrivning. </para>
+<screenshot>
+<screeninfo
+>Andra sidan i guiden för ny kurs</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Andra sidan i guiden för ny kurs</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Kurstiteln är viktig för menyalternativet för snabbval i kurslistan och för statistiken. </para>
+<para
+>Beskrivningen ska användas för att inkludera information om lektionens upphovsman och källan för lektionsdata om det finns någon. Beskrivningen kan visas genom att klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> på hemskärmen i &i18n-ktouch;. </para>
+<para
+>När inskrivning av lämpliga värden är klar, klicka på knappen <guibutton
+>Nästa</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Tredje sidan i guiden för ny kurs</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tredje sidan i guiden för ny kurs</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Genom att använda guidens tredje sida kan man välja en annan kurs som mall för kursen. Välj kursen i listan och klicka på <guibutton
+>Slutför</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Fönstret för redigering av ny kurs</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Fönstret för redigering av ny kurs</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; öppnar fönstret för redigering av ny kurs klart för att mata in kursinformation. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Lägga till lektioner</title>
+<para
+>En kurs är en ordnad följd av lektioner. För att vara effektiv när det gäller att lära sig maskinskrivning bör kursens innehåll uppfylla ett antal krav. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Välj ett meningsfullt namn på lektionen</emphasis
+></term>
+<listitem>
+<para
+>Nya tecken/tangenter kan specificeras för varje nivå i kursen. Det är värt att inkludera de nya tecknen i lektionens titel. Klicka på en namnbeteckning i listan <guilabel
+>Lektioner:</guilabel
+> och skriv in något meningsfullt namn. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Texten som skrivs in som lektionstitel visas som informationstext om lektionen i kurslistan på hemskärmen. Det är mycket enklare för användaren att välja lektion om den har en meningsfull titel. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Den första lektionen bör täcka hemtangenterna</emphasis
+></term>
+<listitem>
+<para
+>Oftast har ett tangentbord två taktila markeringar för tangenterna på andra raden som hör till pekfingrarna. Dessa två tangenter, och de tre intilliggande tangenterna utåt är hemtangenterna. Det är <emphasis
+>asdfjklö</emphasis
+> på den svenska tangentbordslayouten. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Dessa åtta tangenter är startpositionerna för varje finger. Man måste först låta platsen för dessa tangenter bli helt självklar för att lyckas lära sig maskinskrivning. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Introducera två nya tangenter per lektion </emphasis
+></term>
+<listitem>
+<para
+>Ordningen som tangenter låses upp är inte fast, men oftast introduceras tangenter i par som hör till samma finger på båda händerna. Gå från hemtangenterna till de som är längre bort. På så sätt bör den fjärde raden introduceras sist. Föredra tangenter för viktiga tecken på språket, vilket kan kräva att introduktionsmönstret förändras en del. Exempelvis är accenter mycket viktiga på franska, vilket berättigar till en tidig lektion som bara fokuserar på accenttangenterna. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Om fler tangenter introduceras kan eleven bli överväldigad av lektionens svårighetsgrad och förlora sin motivation. Introducera tangenter för viktiga tecken först för att kunna skapa riktiga ord tidigare. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Extra betoning på nya tangenter</emphasis
+></term>
+<listitem>
+<para
+>Försäkra dig om att tecken som hör till nyintroducerade tangenter är de mest använda tecknen eller åtminstone ofta använda tecken i lektionstexten. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Om eleven klarar av en lektion ska han ha bemästrat de nya tangenterna. Det är bara möjligt om lektionen innehåller en väsentlig delmängd av den nya tecknen. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Blanda lektioner med nya tangenter och repetitionslektioner</emphasis
+></term>
+<listitem>
+<para
+>Lägg till en repetitionslektion utan nya tangenter som varannan eller var tredje lektion. De bör ha en jämn blandning av tecken som täcker alla redan introducerade tecken. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Sådana lektioner hjälper till att förstärka de inhämtade kunskaperna och ger ett sätt att kontrollera den övergripande kunskapsnivån. De är också bättre lämpade för upprepade övningar för att ytterligare förbättra de allmänna maskinskrivningskunskaperna. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Särskilda lektioner för stora bokstäver</emphasis
+></term>
+<listitem>
+<para
+>Det bör finnas flera lektioner som fokuserar bara på stora bokstäver. Idealiskt ska stora bokstäver introduceras i flera steg: Först bara den vänstra &Shift;-tangenten, därefter den högra, sedan båda följt av en eller flera repetitionslektioner. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Att bemästra stora bokstäver är den svåraste delen av att lära sig maskinskrivning. Därför behöver en extra ansträngning spenderas på dessa lektioner. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Täck den fullständiga tangentbordslayouten</emphasis
+></term>
+<listitem>
+<para
+>Det omfattar tecken och symboler som är tillgängliga via andra väljartangenter än &Shift;. Idealiskt ska varje tecken, tal och symbol som visas på ett riktigt tangentbord täckas. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Ju mer fullständig en kurs är desto mer kan en elev lära sig av den. Det gör också att kursen är intressant för redan vana maskinskrivare. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Använd knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> för att lägga till nya lektioner i kursen, knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> för att ta bort markerade lektioner från kursen, och knapparna <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> för att arrangera om lektionerna i kursen. </para>
+<important>
+<para
+>Ta bara bort lektioner med försiktighet. Att göra det kan nollställa framsteg med upplåsning för användarna av kursen. Om du planerar att revidera en kurs i större utsträckning är det oftast bättre att använda den befintliga kursen som bas för en ny. </para>
+</important>
+<para
+>Lektionens innehåll kan redigeras med redigeringsfältet längst ner till höger. Man kan kopiera textsnuttar från sin favorittexteditor och klistra in dem i det här fältet. </para>
+<para
+>Använd knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="Icon-document-open.png" format="PNG"/></imageobject
+> </inlinemediaobject
+> för att öppna en generell textfil som läses in i lektionens textfält. </para>
+<para
+>Knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> kan användas för att radbryta lektionstexten. Editorn &i18n-ktouch; radbryter så att varje rad i lektionen inte överskrider den rekommenderade gränsen 60 tecken. </para>
+<para
+>Låt oss anta att du vill lägga till en ny lektion. Det finns några riktlinjer som du bör tänka på: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Ge lektioner en beskrivande titel</emphasis
+></term>
+<listitem>
+<para
+>Namnge de nya tecknen om det finns några, annars ange vad lektionen handlar om. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Bra titlar gör det enklare att hitta rätt kurs om man vill öva på något speciellt. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Lektionstexten ska bestå av riktiga ord och meningar</emphasis
+></term>
+<listitem>
+<para
+>Optimalt utgör en lektion en fullständig löpande text med ett fritt valt ämne. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Att öva med riktiga ord och meningar är effektivare än med godtyckliga slumpmässiga teckenföljder eftersom det är närmare verklig maskinskrivning. Och det är dessutom roligare. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Undvik teckenföljder som inte kan ingå i ord</emphasis
+></term>
+<listitem>
+<para
+>Det kan vara omöjligt i de allra första lektionerna där bara några få tecken är tillgängliga, men så snart som möjligt bör bara riktiga ord användas. Använd aldrig felstavade ord. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Slumpmässiga teckenföljder är svåra att skriva och hittas sällan i daglig maskinskrivning. Felstavade ord är å andra sidan förvillande och har till och med ett negativt inlärningsvärde, eftersom eleven kan memorera fel stavning. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Lektionstexter bör vara omkring 600 tecken långa</emphasis
+></term>
+<listitem>
+<para
+>De kan vara längre, upp till 1200 tecken är okej, men kortare lektioner bör undvikas. Det gäller särskilt för repetitionslektioner. </para>
+<note>
+<title
+>Motivering</title>
+<para
+>Att hålla sig inom detta intervall försäkrar att ovana maskinskrivare (omkring 120 tecken per minut) kan avsluta en lektion på fem till tio minuter. Längre lektioner blir frustrerande, medan kortare inte blir effektiva. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Kvalitetskontroller i lektionstexteditorn</title>
+<screenshot>
+<screeninfo
+>Kvalitetskontroller i kursredigeringsfönstret</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Kvalitetskontroller i kursredigeringsfönstret</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Ovan visas en skärmbild av kurseditorn med ett exempel på en problematisk lektion inläst, som visar en av de inbyggda kontrollerna för kvalitetssäkring: Om en lektion innehåller tecken som inte är tillgängliga i lektionen, eftersom de inte ingår bland lektionens  eller någon föregående lektions inställda nya tecken, markeras de med rött. Det finns också en kontroll för alltför långa rader, som ger en dämpad färg för tecken bortom den tillåtna kolumnen. </para>
+<para
+>På vänster sida finns en lista över alla datafiler som &i18n-ktouch; känner till, både inbyggda och skapade av användaren. Om användaren väljer en inbyggd resurs, förenklas editorn dock till en enkel visning. Om användaren väljer en tangentbordslayout anpassas programmet i enlighet med det. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Skapa tangentbordslayouter</title>
+<para
+>Man kan redigera sin egen tangentbordslayout med den inbyggda editorn i &i18n-ktouch;. Oftast är det bäst att börja med en befintlig layout som är lik tangentbordslayouten man vill skapa, och använda den som grund för den egna layouten. På så sätt kan man undvika en hel del arbete.</para>
+
+<sect2 id="layout_properties">
+<title
+>Tangentbordslayoutens egenskaper</title>
+<para
+>Egenskaperna för tangentbordslayouten kan väljas med guiden för att skapa tangentbordslayout i &i18n-ktouch;. För att starta guiden ska man klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i verktygsraden på fönstret <guilabel
+>Editor för kurser och tangentbordslayout</guilabel
+>. </para>
+<para
+>Den första sidan i guiden för &i18n-ktouch; gör det möjligt att välja typ av data. Välj <guilabel
+>Tangentbordslayout</guilabel
+> och klicka på <guibutton
+>Nästa</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Välja typen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Välja typen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Den andra sidan i guiden gör det möjligt att välja titel och namn på layouten. </para>
+<screenshot>
+<screeninfo
+>Andra sidan i guiden för ny layout</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Andra sidan i guiden för ny layout</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Layoutens titel är viktig för menyalternativet för snabbval från layoutlistan i <link linkend="ktouch_menu"
+>inställningsmenyn för &i18n-ktouch;</link
+> och för statistiken. </para>
+<para
+>Layoutens namn används som ett namn på layouten internt i &i18n-ktouch;. </para>
+<screenshot>
+<screeninfo
+>Tredje sidan i guiden för ny layout</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tredje sidan i guiden för ny layout</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Genom att använda guidens tredje sida kan man välja en annan layout som mall för layouten. Välj kursen i listan och klicka på <guibutton
+>Slutför</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Redigeringsfönstret för ny layout</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Redigeringsfönstret för ny layout</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; öppnar fönstret för redigering klart för att mata in information om tangentbordslayouten. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Lägga till tangenter</title>
+<para
+>Använd knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Normal tangent</guilabel
+> för att lägga till en ny normal tangent, eller knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Specialtangent</guilabel
+> för att lägga till en ny specialtangent (väljartangent, <keycap
+>Mellanslag</keycap
+>, &Backspace;, <keycap
+>Tabulator</keycap
+>, <keycap
+>Caps Lock</keycap
+> eller <keycap
+>Retur</keycap
+>) i layouten. Knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Delete</guilabel
+> kan användas för att ta bort en vald tangent från layouten. Skalan kan ändras med skjutreglaget i den högra delen av editorns verktygsrad. </para>
+<para
+>Egenskaper för enskilda tangenter kan redigeras genom att använda den nedre rutan i redigeringsfönstret. </para>
+<sect3 id="normal_keys">
+<title
+>Normala tangenter</title>
+<para
+>Det är enkelt att ändar storlek eller egenskaper för en tangent. </para>
+<para
+>Börja med att klicka på tangenten som ska ändras. Det markerar den klickade tangenten som vald tangent. </para>
+<para
+>Nu finns det 4 fyrkanter vid tangentens hörn. Genom att dra fyrkanterna kan man dra tangentens kant till en nya plats. Att dra hela tangenten gör det möjligt att ändra tangentens plats i layouten. </para>
+<para
+>De numeriska värdena för tangentens geometri kan också ändras med avdelningen <guilabel
+>Geometri</guilabel
+> i rutan längst ner på redigeringsfönstret. </para>
+<screenshot>
+<screeninfo
+>Redigera egenskaper för en enskild tangent</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Redigera egenskaper för en enskild tangent</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Rutan längst ner kan också användas för att välja finger som ska användas för att trycka ner tangenten, och ändra den taktila markeringen för tangenten. </para>
+<sect4 id="key_characters">
+<title
+>Tangenttecken</title>
+<para
+>Tecknen som ska visas på en tangent kan ändras med avdelningen <guilabel
+>Tecken</guilabel
+> i rutan längst ner i editorn. </para>
+<screenshot>
+<screeninfo
+>Redigera tecknets position</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Redigera tecknets position</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Man kan lägga till ett tecken genom att klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Ett valt tecken kan tas bort genom att klicka på knappen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Man kan också välja position för enskilda tecken på tangenten genom att dubbelklicka på kolumnen <guilabel
+>Position</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Väljartangenter</title>
+<para
+>Det finns flera väljartangenter som kan definieras i &i18n-ktouch;. De kan redigeras som vanliga tangenter men det är till hjälp att känna till väljartangenternas identifikation för att använda dem på lämpligt sätt. Tabellen med väljartangenternas identifikation anges nedan. </para>
+<table>
+<title
+>Väljartangenter</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Väljartangent</entry>
+<entry
+>Väljartangenters identifikation i &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>Alt Gr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>left_shift</literal
+> eller <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Egna lektioner</title>
+<para
+>Funktionen för egna lektioner låter dig utöka övningsmaterialet på ett enkelt sätt genom att välja en godtycklig text. </para>
+<para
+>De egna lektionerna samlas i en särskild kurs, kursen <guilabel
+>Egna lektioner</guilabel
+>, som alltid är tillgänglig precis intill <link linkend="picking_a_lesson"
+>de vanliga inbyggda kurserna</link
+>. </para>
+<screenshot>
+<screeninfo
+>Kurs med egna lektioner</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Kurs med egna lektioner</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Denna särskilda kurs fungerar i huvudsak som alla andra, övning och statistikinsamling fungerar som vanligt. Genom att klicka på <guibutton
+>Skapa ny lektion</guibutton
+> eller knappen <guibutton
+>Redigera</guibutton
+> (pennikonen för befintliga lektioner) visar en förenklad version av <link linkend="adding_lessons"
+>den normala lektionseditorn</link
+>. </para>
+<screenshot>
+<screeninfo
+>Editor för egna lektioner</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editor för egna lektioner</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Editorn markerar problematiska avsnitt i lektionstexterna. Tecken som inte går att skriva med din tangentbordslayout visas med mörkröd bakgrund, och rader som anses vara för långa använder en rosa bakgrund för de överskjutande tecknen. &i18n-ktouch; kräver att alla lektionens rader inte överskrider den rekommenderade gränsen på 60 tecken. </para>
+<para
+>Använd knappen <guibutton
+>Klar</guibutton
+> för att bekräfta din redigering eller stäng editorfönstret för att avbryta den. </para>
+<tip>
+<para
+>Alla egna lektioner lagras individuellt per profil och tangentbordslayout. Använd det för att hantera olika uppsättningar lektioner beroende på den specifika övningssituationen. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Dela med dig av dina resultat</title>
+<para
+>Det är möjligt att spara kurser och tangentbordslayouter i separata filer utanför den lokala databasen i &i18n-ktouch;. </para>
+<sect2 id="export_import">
+<title
+>Exportera och importera</title>
+<para
+>För att exportera en kurs eller tangentbordslayout till en separat fil, markera motsvarande objekt i listan till vänster i fönstret <guilabel
+>Editor för kurser och tangentbordslayout</guilabel
+> och klicka på knappen <guibutton
+>Exportera</guibutton
+> i verktygsraden. </para>
+<para
+>&i18n-ktouch; öppnar då en vanlig dialogruta för att spara i &kde;. En beskrivning av detaljerna i denna dialogruta finns i kapitlet <ulink url="help:/fundamentals/files.html"
+>Öppna och spara filer</ulink
+> i &kde;:s grunder. </para>
+<para
+>Man kan välja namn och plats för &XML;-filen att spara. </para>
+<para
+>Om du finner det värt att dela filer med andra användare, skicka dem gärna till <ulink url="mailto:kde-edu@kde.org"
+>e-postlistan kde-edu</ulink
+> med en bifogad beskrivning. </para>
+<important>
+<para
+>Data ska licensieras enligt <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>&GNU; General Public License, version 2</ulink
+> för att kunna inkluderas i den vanliga installationen av &i18n-ktouch;. </para>
+</important>
+<para
+>För att importera datafiler i &i18n-ktouch;, klicka på knappen <guibutton
+>Importera</guibutton
+> i verktygsraden och välj &XML;-filen som tidigare exporterades med &i18n-ktouch;. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>&ktouch;, Copyright 1999-2007 av</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx PUNKT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&ktouch;, Copyright 2011-2019 av Sebastian Gottfried <email
+>sebastiangottfried@web PUNKT de</email
+>. </para>
+
+<para
+>Bidragsgivare:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, tyskt tangentbord och tysk övningsfil och översättning.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, latinamerikanskt tangentbord</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, portugisiskt tangentbord</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, franskt tangentbord</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Särskilt tack till alla andra bidragsgivare (som inte nämns här) av tangentbords- och lektionsfiler.</emphasis>
+</para>
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

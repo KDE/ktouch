@@ -1,0 +1,2994 @@
+#
+# Tamas Szanto <taszanto@gmail.com>, 2001.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2013-11-08 20:19+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Bojtos Péter,Szántó Tamás,Úr Balázs"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ptr@ulx.hu,taszanto@gmail.com,urbalazs@gmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Érvénytelen adatbázis verzió: „%1”."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Egyéni leckék"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "Egy hely személyes leckeszövegek tárolásához"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Nincs tanfolyam ezzel az azonosítóval: %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Nincs billentyűzetkiosztás ezzel az azonosítóval: %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Rejtett"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Bal felső"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Jobb felső"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Bal alsó"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Jobb alsó"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Hiba történt a tanfolyam megnyitása során"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Csak a beépített tanfolyamok tekinthetők meg."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Hiba történt a billentyűzetkiosztás megnyitása során"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Csak a beépített billentyűzetkiosztások tekinthetők meg."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 karakter"
+msgstr[1] "%1 karakter"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "A kiválasztott fájl nem nyitható meg"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Már van billentyűzetkiosztás ugyanezzel a névvel."
+
+#: src/editor/newresourceassistant.cpp:30
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@title:window"
+msgid "New"
+msgstr "Új"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Új…"
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Új tanfolyam"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Új billentyűzetkiosztás"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Sablon"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Törlés"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Importálás"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Exportálás"
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Tanfolyam és billentyűzetkiosztás szerkesztő"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Új tanfolyam vagy billentyűzetkiosztás létrehozása"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "A jelenleg kiválasztott tanfolyam vagy billentyűzetkiosztás törlése"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Tanfolyam vagy billentyűzetkiosztás importálása fájlból"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr ""
+"A jelenleg kiválasztott tanfolyam vagy billentyűzetkiosztás exportálása "
+"fájlba"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Hiba történt a tanfolyam törlése során"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Hiba történt a billentyűzetkiosztás törlése során"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "A kiválasztott fájl nem importálható."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Hiba történt a tanfolyam mentése során"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Hiba történt a billentyűzetkiosztás mentése során"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "A(z) <b>%1</b> tanfolyam törölve"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "A(z) <b>%1</b> billentyűzetkiosztás törölve"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Hiba történt a tanfolyam lemezre mentése során."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Hiba történt a billentyűzetkiosztás lemezre mentése során."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "A kijelölt tanfolyam már jelen van beépített tanfolyamként."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Importálás új tanfolyamként"
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected course is already present as an user course."
+msgid "The selected course is already present as a user course."
+msgstr "A kijelölt tanfolyam már jelen van felhasználói tanfolyamként."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+"A kijelölt billentyűzetkiosztás már jelen van beépített "
+"billentyűzetkiosztásként."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Importálás új billentyűzetkiosztásként"
+
+#: src/editor/resourceeditor.cpp:600
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"A kijelölt billentyűzetkiosztás már jelen van felhasználói "
+"billentyűzetkiosztásként."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Elutasítás"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Másik tanfolyam használata sablonként"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Másik billentyűzetkiosztás használata sablonként"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Tanfolyam"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Billentyűzetkiosztás"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Nem X11 platformon használandó billentyűzetkiosztás"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Vezérli a billentyűzet láthatóságát gyakorlás közben."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Vezérli a valós idejű statisztika láthatóságát gyakorlás közben."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Az enter billentyű a sor végén új sort fog váltani."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "A szóköz billentyű a sor végén új sort fog váltani."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"A minimálisan szükséges leütés mennyisége percenként a következő lecke "
+"feloldásához."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"A minimálisan szükséges gépelési pontosság százalékosan a következő lecke "
+"feloldásához."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "A billentyűzet kifestő színe a billentyűk kiemeléséhez minden ujjhoz."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "A legutóbb használt profil azonosítója."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Gyakorlás"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Gyakorlás beállításai"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Színek"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Színbeállítások"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Billentyűzet beállítása"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Tanfolyam és billentyűzetkiosztás szerkesztő…"
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Billentyűzet beállítása…"
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Gépírás oktató"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Gépírás tanulása és gyakorlása"
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
+#| "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright © Sebastian Gottfried, 2011-2012.\n"
+"Copyright © Håvard Frøiland és Andreas Nicolai, 2000-2007."
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Jelenlegi karbantartó"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Jelenlegi karbantartó és programozó"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Eredeti szerző"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Az SVG-ikon készítője"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Rengeteg javítófolt, javítások és frissítések"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "A gyakorlófájlok és billentyűzetfájlok készítői"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "A tanfolyam és a billentyűzetkiosztás-szerkesztő indítása"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Karakter"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Módosító azonosító"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Pozíció"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Nincs cím>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Új karakterek: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Cím"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Tanfolyamok"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Billentyűzetkiosztások"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Név: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Pontosság"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Karakter/perc"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Ismeretlen</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+#| msgid "Lessons:"
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Leckék:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "Training"
+msgid "Training on:"
+msgstr "Gyakorlás"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Pontosság:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Karakter/perc:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Choose Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "Billentyűzetkiosztás választása"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "Courses"
+msgid "Other Courses"
+msgstr "Tanfolyamok"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Üdvözli a Gépírás oktató"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Gyakorlás elkezdése"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr ""
+"A kijelölt billentyűzetkiosztás már jelen van felhasználói "
+"billentyűzetkiosztásként."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+"A kijelölt billentyűzetkiosztás már jelen van felhasználói "
+"billentyűzetkiosztásként."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Billentyűzet beállítása"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "Course <b>%1</b> deleted"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "A(z) <b>%1</b> tanfolyam törölve"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Visszavonás"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Add lesson"
+msgid "Edit lesson"
+msgstr "Lecke hozzáadása"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Cím:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Set lesson text"
+msgid "Lesson text"
+msgstr "Lecke szövegének beállítása"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Kész"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Előző leckék teljesítése a feloldáshoz"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgid "Manage Profiles"
+msgstr "Új profil létrehozása"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Új profil létrehozása"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Gyakorolt leckék:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Teljes gyakorlási idő:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Legutóbb gyakorolt:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Soha"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Valóban törölni akarja ezt a profilt: „<b>%1</b>”?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Mielőtt elkezdi a gyakorlást, mutatkozzon be:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Név"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "Nincs, vagy csak nagyon kevés ismeretem van a gépírásban"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr "A leckék feloldásra kerülnek, ahogyan gépelési képessége javul."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Egy tapasztalt gépíró vagyok és javítani szeretném képességeimet"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Minden lecke azonnal feloldásra kerül."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Új profil létrehozása"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Kiválasztott profil használata"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "A mostani gyakorlási szakasz statisztikája"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Eltelt idő"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Karakter:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Hibák:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Visszatérés a nyitóképernyőre"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Lecke ismétlése"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Következő lecke"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Gratulálunk! Teljesítette a leckét!"
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Nem teljesítette a leckét."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Lecke ismétlése. A képességei javulni fognak idővel."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "A következő lecke feloldva"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Megjelenítés"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Folyamat"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Hibák"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "Felett"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "Minden lecke"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "This Lesson"
+msgid "This Lesson"
+msgstr "Ez a lecke"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Nem érhető el képi megjelenítés a billentyűzetkiosztásához."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Visszatérés a gyakorláshoz"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Lecke újraindítása"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr ""
+"A gyakorló munkamenet elindult. Az idő az első billentyű lenyomásával indul."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"A gyakorló munkamenet meg lett szakítva. Az idő a következő billentyű "
+"lenyomásával indul ismét."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Ujjak"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Bal kéz"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Mutató ujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Középső ujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Gyűrűsujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Kisujj:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Jobb kéz"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Billentyűzetkiosztás:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Leírás:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Leckék:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Új lecke hozzáadása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Lecke eltávolítása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Lecke mozgatása fel"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Lecke mozgatása le"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Új karakterek:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Új normál billentyű létrehozása"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Normál billentyű"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Új speciális billentyű létrehozása"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Speciális billentyű"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "A kijelölt billentyű törlése"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Billentyűzet"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Név:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Szélesség"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Magasság:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Balra:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Fent:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Billentyű"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Ujj:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Bal kisujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Bal gyűrűsujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Bal középső ujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Bal mutatóujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Jobb mutatóujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Jobb középső ujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Jobb gyűrűsujj"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Jobb kisujj"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Karakterek"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Új karakter hozzáadása"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Karakter eltávolítása"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Típus:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Tab"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Enter"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Szóköz"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Egyéb"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Címke:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Módosító azonosító:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Egy szövegfájl megnyitása…"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Sorok automatikus tördelése"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 karakter"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "A jelenlegi rendszer billentyűzetkiosztás nevének beillesztése"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Gyakorlás közben:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Billentyűzetkép"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Valós idejű statisztika megjelenítése"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Ugrás a következő sorra ezzel:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Lecke feloldási korlátok"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Minimum strokes per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "Minimális leütés percenként:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Minimális pontosság:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Cím beállítása"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Billentyűzetkiosztás beállítása"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Leírás szerkesztése"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Lecke hozzáadása"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Lecke mozgatása"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Lecke címének beállítása"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Új karakterek beállítása a leckéhez"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Lecke szövegének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Billentyűzetkiosztás címének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Billentyűzetkiosztás nevének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Billentyűzetkiosztás méretének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Billentyű hozzáadása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Billentyű eltávolítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Billentyűgeometria beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Billentyűkarakter hozzáadása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Billentyűkarakter eltávolítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Billentyűkarakter értékének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Billentyűkarakter módosító beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Billentyűkarakter pozíciójának beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Speciális billentyű típusának beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Speciális billentyű címkéjének beállítása"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Speciális billentyű módosító azonosítójának beállítása"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Billentyűzetkiosztás választása"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Új egyéni lecke létrehozása"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "„%1” törölve."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Ekkor:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "OpenGL használata (kísérleti)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Egyéni lecke szerkesztése"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Nincsenek elérhető tanfolyamok"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "A gépírás-oktatónak nincsenek leckéi a billentyűzetkiosztásához. "
+#~ "Létrehozhatha sajátját a billentyűzetkiosztás- és leckeszerkesztővel."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Szerkesztő indítása"
+
+#~ msgid "Form"
+#~ msgstr "Űrlap"
+
+#~ msgid "use a QGLWidget for the viewport"
+#~ msgstr "QGLWidget használata a nézőponthoz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Arab"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Brazil"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Bolgár"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Cseh qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Cseh qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Dán"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Angol Colemak-féle"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Angol Dvorak-féle"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Angol"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Angol Dvorak-féle (Egyesült Királyság)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Angol (Egyesült Királyság)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Észt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Francia Dvorak-féle"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Francia"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Német Dvorak-féle II. típus"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Német"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Német Neo 2"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Görög (Angol)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Héber"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Magyar"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Olasz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Latin-amerikai"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Litván szabvány"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norvég"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Portuguese"
+#~ msgstr "Portugál"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Québec"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Orosz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Szlovák qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Szlovák qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Szlovén"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Spanyol Dvorak-féle"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Spanyol"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Svéd billentyűzet"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Német (Svájci)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Francia svájci"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil Eng"
+#~ msgstr "Tamil Eng"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Turkish f (Türkçe F klavye)"
+#~ msgstr "Török f (Türkçe F klavye)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ukrán (Windows billentyűk)"
+
+#~ msgid "Default User"
+#~ msgstr "Alapértelmezett felhasználó"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Szöveges fájlok\n"
+#~ "*|Minden fájl"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Gyakorlószöveg kiválasztása"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Importált szöveg innen: '%1'"
+
+#~ msgid "generated from text file"
+#~ msgstr "szövegfájlból készített"
+
+#~ msgid "all available"
+#~ msgstr "minden rendelkezésre álló"
+
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Gyakorlófájlok"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Gyakorlófájl kiválasztása"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "A mostani szintet szeretné megtartani az új gyakorlási szakaszon?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Új gyakorlási menet kezdése"
+
+#~ msgid "Keep current level"
+#~ msgstr "A mostani szint maradjon"
+
+#~ msgid "Start from first level"
+#~ msgstr "Az első szinttől"
+
+#~ msgid "General Options"
+#~ msgstr "Általános beállítások"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Billentyűzetbeállítások"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Szint: Helyes/összes karakter: %1/%2  A szavak száma: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Gyakorlási menet: Helyes/összes karakter: %1/%2  A szavak száma: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Az egyes országokban eltérőek lehetnek a gépírási szokások. Eltérések "
+#~ "általában a felső billentyűsorban vannak. Az Egyesült Államokban csak a "
+#~ "bal szélső és az 1 billentyű lenyomását végzik a bal kisujjal. "
+#~ "Németországban a 2 billentyűt is a bal kisujjal ütik le, így az ujjak "
+#~ "hozzárendelése eggyel elcsúszik jobbra.\n"
+#~ "Jelentősebb eltérést ez csak osztott vagy speciális, ergonómikus "
+#~ "billentyűzeteknél okoz."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Nem található vagy nem nyitható meg a(z) '%1' gyakorlófájl."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Felhasználóváltás erre: %1. A gyakorlás újrakezdődik a jelenlegi szint "
+#~ "elejétől."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "Gyakorlófájl megny&itása..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Gyakorlófájl sz&erkesztése..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "A színösszeállítás mó&dosítása..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "A billentyűzet&kiosztás módosítása..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "A gyakorlás felfü&ggesztése"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Leckest&atisztika"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Az ala&pértelmezett gyakorlatok"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Szín&sémák a billentyűzetre"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "Fel&használók..."
+
+#~ msgid "&Current User"
+#~ msgstr "&Jelenlegi felhasználó"
+
+#~ msgid "untitled lecture"
+#~ msgstr "névtelen lecke"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "A jelenlegi színséma neve."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr ""
+#~ "Adott színek használata a beírási sorban, függetlenül a színsémától."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "A tanár sorának háttérszíne."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "A tanár sorának szövegszíne"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "A tanuló sorának háttérszíne."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "A tanuló sorának szövegszíne"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Más háttérszín használata hibásan és helyesen beírt karaktereknél."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "A hibásan beírt karakterek háttérszíne a tanuló sorában."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "A hibásan beírt karakterek szövegszíne a tanuló sorában."
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Hangjelzés minden hibánál"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Billentyűleütési hanghatás."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Hangjelzés automatikus szintváltásnál"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Csúszási sebesség"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "A csúszó elem maximális magassága"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "A gyakorlat alapértelmezett betűtípusának felülbírálása."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "A tanár és a tanuló sorainak betűtípusa"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "A jelenleg betöltött gyakorlófájl"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Jobbról balra haladó írás."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Színes vagy egyszerű billentyűk."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "Csak a már megtanult billentyűk látszódjanak vagy minden billentyű."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "A billentyűzet megjelenítése."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Az alapértelmezett betűtípusok felülbírálása."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "A billentyűk kiírásánál használt betűtípus"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Jelenleg betöltött billentyűkiosztás-fájl"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "Le kell-e nyomni az Entert a sor végén."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Automatikus szintigazítás"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr "Automatikus szintválasztás esetén a kézi szintbeállítás letiltása"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Az aktuális szint elmentése kilépéskor"
+
+#~ msgid "The current training level"
+#~ msgstr "A jelenlegi gyakorlási szint"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Szintemelési küszöb (karakter / perc)"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Szintemeléshez szükséges helyes beírási százalék"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Szintcsökkentési küszöb (karakter / perc)"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Szintcsökkentéshez szükséges helyes beírási százalék"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Szintváltáshoz szükséges minimális sorszám"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Legalább egy teljes szint lejátszása feladás előtt"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Több KTouch-felhasználó engedélyezése egy azonosítónál"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Az aktuális felhasználó neve."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "El szeretné menteni a módosított színösszeállításokat?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "névtelen színösszeállítás"
+
+#~ msgid "Black && White"
+#~ msgstr "Fekete-fehér"
+
+#~ msgid "Classic"
+#~ msgstr "Klasszikus"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Mélykék"
+
+#~ msgid "Stripy"
+#~ msgstr "Csíkos"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr ""
+#~ "Nem sikerült letölteni vagy megnyitni ezt a billentyűzetfájlt: \"%1\"."
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "Már definiált, ezért kimarad: %1 (megjelenített karakter: %2, Unicode-"
+#~ "érték: %3).\n"
+
+#~ msgid "Control key"
+#~ msgstr "Vezérlőbillentyű"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Ismeretlen ujjbillentyű, Unicode-érték: %1. Kihagyva egy normál billentyű "
+#~ "%2 megjelenített karakterrel és %3 Unicode-értékkel.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Ismeretlen célbillentyű %1 Unicode-értékkel. Kihagyva egy rejtett "
+#~ "billentyű %2 megjelenített karakterrel és %3 Unicode-értékkel.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Ismeretlen ujjbillentyű %1 Unicode-értékkel. Kihagyva egy rejtett "
+#~ "billentyű %2 megjelenített karakterrel és %3 Unicode-értékkel.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Ismeretlen módosító billentyű %1 Unicode-értékkel. Kihagyva egy rejtett "
+#~ "billentyű %2 megjelenített karakterrel és %3 Unicode-értékkel.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "NumLock"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch billentyűzetfájlok (*.keyboard.xml)\n"
+#~ "*|Minden fájl"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Biztosan törölni szeretné ezt a billentyűt?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "KTocuh billentyűzetszerkesztő"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Érvénytelen Unicode-érték. Javítsa ki a számot vagy írjon be egy "
+#~ "karaktert."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Írjon be egy karaktert vagy egy Unicode-értéket."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Biztosan törölni szeretné az összes billentyűkapcsolatot?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "KTouch billentyűzetszerkesztő - hiba"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<Módosító billentyű>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Billentyűzetfájl megnyitása"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Melyik billentyűzetkiosztást szeretné szerkeszteni?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Az aktuális billentyűzetkiosztás szerkesztése:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Alapértelmezett billentyűzetkiosztás megnyitása:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Billentyűzetkiosztás megnyitása:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<nem érhető el billentyűzetkiosztás>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Nem sikerült megnyitni a billentyűzetfájlt, új lesz létrehozva."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Figyelmeztetés történt a következő billentyűzetfájl betöltésekor: "
+#~ "\"%1\".\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (módosítva)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "KTouch billentyűkiosztás-szerkesztő - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "KTocuh billentyűzetkiosztás-szerkesztő - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<névtelen billentyűzetkiosztás>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr ""
+#~ "A billentyűzetkiosztás megváltozott. El szeretné menteni a változásokat?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Nem sikerült beolvasni ezt a billentyűzetfájlt: \"%1\". %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr ""
+#~ "Nem sikerült letölteni vagy megnyitni a billentyűkiosztás-fájlt erről a "
+#~ "címről: '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Hiba történt a billentyűkiosztás beolvasása közben. Az alapértelmezett "
+#~ "számú billentyű lesz létrehozva. A beállításoknál másik kiosztást lehet "
+#~ "választani."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Alapértelmezett gyakorlat..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Gyakorlat elmentése"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "KTouch gyakorlatszerkesztő - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<új névtelen gyakorlófájl>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "A(z) %1. szint adatai"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "aábcdeéfghiíjklmnoóöőpqrstuúüűxyvz"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Ide kell beírni a szöveget..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Gyakorlófájl megnyitása"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Melyik gyakorlófájlt szeretné megnyitni?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Az aktuális gyakorlat szerkesztése:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Alapértelmezett gyakorlat megnyitása:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "Nem sikerült megnyitni a gyakorlófájlt, új lesz létrehozva helyette."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr ""
+#~ "Az aktuális gyakorlat megváltozott. El szeretné menteni a változásokat?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Elég sokat"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Ez egy rövid, alapértelmezett szöveg. Ha el szeretné\n"
+#~ "kezdeni a gyakorlást, nyisson meg egy\n"
+#~ "gyakorlófájlt a főmenüben.\n"
+#~ "Ha a következő sor után lenyomja az Entert,\n"
+#~ "sikerült befejeznie az alapértelmezett leckét. Gratulálunk!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "aábcdeéfghiíjklmnoóöőpqrstuúüűxyvz"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<nem áll rendelkezésre alapértelmezett fájl>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Válasszon ki vagy írjon be egy fájlnevet."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Az URL hibás, kérem javítsa ki."
+
+#~ msgid "***current***  "
+#~ msgstr "***aktuális*** "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Nincsenek statisztikai adatok."
+
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr ""
+#~ "Törli a jelenlegi felhasználó összes statisztikai adatát?\n"
+#~ "A gyakorlási szakasz újra fog indulni a jelenlegi szintről."
+
+#~ msgid "Words per minute"
+#~ msgstr "Szó/perc"
+
+#~ msgid "Correctness"
+#~ msgstr "Gépelési pontosság"
+
+#~ msgid "Skill"
+#~ msgstr "Ügyesség"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Az első gyakorlat óta eltelt napok száma"
+
+#~ msgid "Sessions"
+#~ msgstr "Szakaszok"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Gyakorlási szakasz kezdése: várakozás billentyűleütésre..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Befejeződött a gyakorlat.\n"
+#~ "Folytatás a gyakorlat elejétől."
+
+#~ msgid "You rock!"
+#~ msgstr "Szuper!"
+
+#~ msgid "S&tatistics"
+#~ msgstr "S&tatisztikák"
+
+#~ msgid "&Settings"
+#~ msgstr "&Beállítások"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Fő eszköztár"
+
+#~ msgid "New User"
+#~ msgstr "Új felhasználó"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Írjon be egy egyedi felhasználónevet:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Érvénytelen felhasználónév"
+
+#~ msgid "Save user list?"
+#~ msgstr "El szeretné menteni a felhasználót?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "A program segít a gyors és pontos gépelés megtanulásában és gyakorlásában."
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "A megnyitni kívánt gyakorlófájl"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Színösszeállítás-szerkesztő"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Egyedi színsémák"
+
+#~ msgid "Add"
+#~ msgstr "Hozzáadás"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "A színséma módosítása"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "A színösszeállítás neve:"
+
+#~ msgid "&Store Data"
+#~ msgstr "Az adatok men&tése"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "A gépelési sor színei"
+
+#~ msgid "Teacher background:"
+#~ msgstr "A tanár háttere:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "A tanár szövege:"
+
+#~ msgid "Student background:"
+#~ msgstr "A tanuló háttere:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "A tanuló szövege hiba esetén:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "A tanuló háttere hiba esetén:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "A billentyűzet színei"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "A normál billentyűk háttérszíne:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Kiemelt háttér:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "A normál billentyűk színei:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Kiemelt szövegszín:"
+
+#~ msgid "Text color:"
+#~ msgstr "Szövegszín:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Billentyűkeret:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Módosító és egyéb billentyűk:"
+
+#~ msgid "Text color"
+#~ msgstr "Szövegszín"
+
+#~ msgid "Background:"
+#~ msgstr "Háttér:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Billentyűzetleíró adatok"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "A billentyűzet címe:"
+
+#~ msgid "Language id:"
+#~ msgstr "Nyelvazonosító:"
+
+#~ msgid "Comments:"
+#~ msgstr "Megjegyzések:"
+
+#~ msgid "Key Properties"
+#~ msgstr "A billentyű tulajdonságai"
+
+#~ msgid "Key type:"
+#~ msgstr "Billentyűtípus:"
+
+#~ msgid "Key text:"
+#~ msgstr "Billentyűszöveg:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Billentyűzetbeállítások"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "A billentyűzetséma betűtípusa..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "A billentyűzetséma mentése másként..."
+
+#~ msgid "Close"
+#~ msgstr "Bezárás"
+
+#~ msgid "Key connectors"
+#~ msgstr "Billentyűcsatlakozók"
+
+#~ msgid "or unicode"
+#~ msgstr "vagy Unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "A csatlakozók törlése"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Új csatlakozó/módosítás"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<módosító billentyű>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr "Billentyűzetséma (szerkesztés kattintásra vagy húzással)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "KTouch gyakorlatszerkesztő"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "A gyakorlat tulajdonságai"
+
+#~ msgid "Comment:"
+#~ msgstr "Megjegyzés:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "A 10. szint adatai"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Új karakterek ezen a szinten:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Megjegyzés a szinthez (opcionális):"
+
+#~ msgid "Level data:"
+#~ msgstr "Szintadatok:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Összegzés a szintről"
+
+#~ msgid "Summary"
+#~ msgstr "Összegzés"
+
+#~ msgid "High scores for this level"
+#~ msgstr "A legjobb eredmények ezen a szinten"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
+
+#~ msgid "Score"
+#~ msgstr "Pontszám"
+
+#~ msgid "Characters per second"
+#~ msgstr "Karakter/másodperc"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Minden felhasználó eredményei"
+
+#~ msgid "&Retry level"
+#~ msgstr "Ez a sz&int újból"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&Következő szint"
+
+#~ msgid "Browse..."
+#~ msgstr "Tallózás..."
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Egyedi színű beírási sor"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "A tanár sorának színe"
+
+#~ msgid "Teacher's line"
+#~ msgstr "A tanár sora"
+
+#~ msgid "Text:"
+#~ msgstr "Szöveg:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "A tanuló sorában érvényes szövegszín beállítása"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Itt választható ki, mi legyen a tanuló sorában írt szövegek színe."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "A tanár sorának háttere"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Itt lehet beállítani a tanár sorának háttérszínét (azaz a gyakorlatban "
+#~ "beírandó karakterek színét)"
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "A beírási sorban más színűek legyenek a hibásan leütött karakterek"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Válassza ki, mi legyen a háttér színe a gépelési sorban"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Ha bejelölte a 'Hiba esetén más szín használata a gépelési sorban' "
+#~ "opciót, akkor megadható a hibásan beírt karakterek háttérszíne. Így jól "
+#~ "láthatóan kiemelhetők a gyakorlás során elkövetett hibák."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Válassza ki, mi legyen a hiba színe a gépelési sorban"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Ha bejelölte a 'Hiba esetén más szín használata a gépelési sorban' "
+#~ "opciót, akkor megadható a hibásan beírt karakterek szövegszíne. Így jól "
+#~ "láthatóan kiemelhetők a gyakorlás során elkövetett hibák."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "A szövegsor beállításai"
+
+#~ msgid "Fast"
+#~ msgstr "Gyors"
+
+#~ msgid "Slow"
+#~ msgstr "Lassú"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Csúszási sebesség:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "A gyakorlat betűtípusának felülbírálása"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "A megjelenített/beírt szöveg betűtípusa:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Ezzel a gombbal egy betűtípus-beállító ablak hívható elő, melyben a tanár "
+#~ "és a tanuló sorának betűtípusa állítható be. Az ablak bezárásakor az új "
+#~ "betűtípus megtekinthető az alábbi sorban. Érvényesítéséhez meg kell "
+#~ "nyomni az Alkalmazás gombot."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "A következő karakter kiemelése"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Ennek hatására a kiosztási ábrán ki lesz emelve a soron következő "
+#~ "karakter. Ez az opció tehát a könnyebb beírást segíti elő."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "A billentyűk kiemelése a&z ábrán"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "A még nem tanult billentyűk elrejtése/elhalványítása"
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "Ha ez az opció be van jelölve, akkor a kiosztáshoz megadott helyett az Ön "
+#~ "által választott betűtípussal jelennek meg a billentyűn levő karakterek."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Minden billentyűzetkiosztás saját betűtípust használhat. Ha egy "
+#~ "kiosztáshoz megadott betűtípus valami miatt mégsem megfelelő vagy "
+#~ "egyszerűen másikat szeretne használni, jelölje be ezt az opciót. A "
+#~ "kiválasztott betűtípussal fognak megjelenni a billentyűkön megjelenő "
+#~ "karakterek."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "A billentyűk betűtípusának felülbírálása"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "A billentyűzetkiosztás megjelenítésének betűtípusa:"
+
+#~ msgid "Sound"
+#~ msgstr "Hang"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Ha ez be van jelölve (alapértelmezés szerint igen), akkor a program "
+#~ "minden elírt karakternél hangjelzést fog adni."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Hangjelzés hiba esetén"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Hangjelzés minden leütésnél"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr "Ha be van jelölve, minden leütéskor hangjelzést ad a gép."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "Í&rógép-hang minden leütésnél"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Hangjelzés automatikus szintváltásnál."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Ha ez be van jelölve (alapértelmezés szerint igen), hangjelzést ad a "
+#~ "program automatikus szintváltás esetén."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Hangjelzés a&utomatikus szintváltásnál"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "A&utomatikus szintigazítás"
+
+#~ msgid "chars/minute"
+#~ msgstr "karakter/perc"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Gépelési sebesség:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Gépelési pontosság:"
+
+#~ msgid "Workload:"
+#~ msgstr "Adag:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Továbblépés előtt a teljes szintet teljesíteni kell"
+
+#~ msgid "lines"
+#~ msgstr "sor"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Szintemelési érték"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Szintcsökkentési érték"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "A kézi szintváltó gombok elrejtése"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "&Írógép-mód: Enterrel kell lezárni a sort"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "A szint megjegyzése ki&lépéskor"
+
+#~ msgid "Current Training Session"
+#~ msgstr "A mostani gyakorlási szakasz"
+
+#~ msgid "Lecture:"
+#~ msgstr "Gyakorlófájl:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "A szakasz szintjei:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Az eltelt idő (másodpercben):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr "Az ebben a gyakorlási szakaszban eltelt másodpercek száma."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Leütött karakter:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "Az eddig beírt karakterek száma (a jók és a hibásak együtt)."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Hibásan leütött karakter:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Megmutatja az eddig hibásan beírt karakterek számát."
+
+#~ msgid "Words typed:"
+#~ msgstr "Begépelt szó:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Az eddig beírt szavak száma."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "A helyesen beírt karakterek száma az összesen beírt karakterek számához "
+#~ "képest."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Gépelési sebesség"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "A helyesen beírt karakterek száma percenként."
+
+#~ msgid "Words per minute:"
+#~ msgstr "Szó/perc:"
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "A beírt szavak száma percenként."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "A gyakorlat során eddig hibásan beírt karakterek száma. Százalékos "
+#~ "arányként mutatja, hogy egy karaker hányszor lett hibásan beírva, "
+#~ "elosztva az összes eddigi karakter számával. Nagy szám esetén gyakran "
+#~ "hibásan lenyomott a karakter."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Karakterstatisztika (ezekre a karakterekre kell jobban odafigyelni)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Az aktuális szint statisztikája"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "lectureLabel2"
+
+#~ msgid "Level:"
+#~ msgstr "Szint:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "levelLabel2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Itt láthatók a gyakorlat során kihagyott karakterek. A százalékos érték "
+#~ "azt mutatja, hogy hányszor lett hibásan lenyomva egy karakter a helyes "
+#~ "beírásokhoz képest. Nagy szám esetén a karakter gyakran lett hibásan "
+#~ "beírva."
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Az Ön előrehaladása"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Az előrehaladás mutatása:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "Itt lehet kiválasztani, melyik gyakorlatról kér statisztikát."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Az előrehaladási grafikon beállításai"
+
+#~ msgid "Chart Data"
+#~ msgstr "Grafikonadatok"
+
+#~ msgid "Session stats"
+#~ msgstr "Statisztika a szakaszról"
+
+#~ msgid "Level stats"
+#~ msgstr "Statisztika a szintről"
+
+#~ msgid "Chart Type"
+#~ msgstr "Grafikontípus"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Időtengely-skála"
+
+#~ msgid "Time scaled"
+#~ msgstr "Időskálás"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Állandó térköz"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Ha megnyomja ezt a gombot, törlődnek az aktuális felhasználó statisztikai "
+#~ "adatai."
+
+#~ msgid "Clear History"
+#~ msgstr "Előzmények törlése"
+
+#~ msgid "Level"
+#~ msgstr "Szint"
+
+#~ msgid "Current level"
+#~ msgstr "A mostani szint"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Itt látszik a mostani szint értéke."
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Speed"
+#~ msgstr "Sebesség"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Karakter/perc"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr "Itt látható a gépelési sebesség karakter/perc formátumban."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Mennyire pontos a gépelés?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Megmutatja, hogy a begépelt karakterek mekkora hányada helyes."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Új karakterek ezen a szinten"
+
+#~ msgid "Setup Users"
+#~ msgstr "Felhasználóbeállítás"
+
+#~ msgid "&Add"
+#~ msgstr "&Hozzáadás"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "&Bezárás"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Arab"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "BR-Nativo"
+#~ msgstr "BR-Nativo"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bolgár (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bolgár (hosszú, automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Katalán (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Cseh (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Dán (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Dán (teljes)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Holland (gyerekeknek)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Holland (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak-féle (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak-féle (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak-féle ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Angol (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (for AlphaGrip)"
+#~ msgstr "Angol (az AlphaGripnek)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Finn (gyerekeknek)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Finn (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Francia (automatikus), 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Francia (automatikus), 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Dvorak-féle francia (1. rész)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Dvorak-féle francia (2. rész)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Német (9 szinten)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Német (a Tipptrainerből)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Német (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Német (Dvorak billentyűzetkiosztás)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Német (numerikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Görög"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Magyar szakértő++"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Magyar (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Olasz (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Latin"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Litván (std)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norvég"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Lengyel (a TTCoach-ból)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Orosz (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Orosz 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Orosz (hosszú, automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Szlovák (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Szlovén"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Spanyol (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Spanyol (automatikus), 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Spanyol (automatikus), 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Dvorak-féle spanyol"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Török (automatikus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrán"
+
+#~ msgid "F&ile"
+#~ msgstr "&Fájl"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Magyar gépírótanfolyam (Expert++)"
+#~ msgstr "Magyar gépírótanfolyam (Expert++)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Német (NEO elrendezés)"

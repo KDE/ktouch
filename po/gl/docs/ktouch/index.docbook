@@ -1,0 +1,1273 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY kappname "&ktouch;"
+><!-- replace kapp here -->
+<!ENTITY package "kdeedu">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Galician  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title
+>Manual do &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Xosé</firstname
+><surname
+>Calvo</surname
+><affiliation
+><address
+><email
+></email
+></address
+></affiliation
+><contrib
+>Tradutor do proxecto Trasno</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2008-08-23</date>
+<releaseinfo
+>1.7.1</releaseinfo>
+
+<abstract>
+<para
+>O &ktouch; é un programa para aprender a escribir nun teclado. O &ktouch; fornece un texto de adestramento e axústase a niveis diferentes dependendo da túa destreza. Mostra a tecla que hai que premer a continuación e o dedo correcto que hai que empregar.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>escribir a máquina</keyword>
+<keyword
+>escribir nun teclado</keyword>
+<keyword
+>mecanografar</keyword>
+<keyword
+>mecanografía</keyword>
+<keyword
+>educación</keyword>
+<keyword
+>KTouch</keyword>
+<keyword
+>teclado</keyword>
+<keyword
+>escribir</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="using_ktouch">
+<title
+>Uso do &ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Introdución</title>
+
+<sect2>
+<title
+>Que é o &ktouch;?</title>
+<para
+>O &ktouch; é un programa para aprender a escribir nun teclado.</para>
+<para
+>O &ktouch; fornece un texto para adestrar e axústase a niveis diferentes dependendo da túa destreza. Mostra o teclado e indica que tecla hai que premer a continuación e o dedo correcto que hai que empregar.</para>
+
+<screenshot>
+<screeninfo
+>A xanela principal do &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A xanela principal do &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>O &ktouch; é un excelente titor de mecanografía. Apréndese a escribir con todos os dedos, paso a paso, sen ter que mirar para o teclado todo o tempo para atopar as teclas (o que enlentece moito). É axeitado para todas as idades e o titor de mecanografía perfecto para escolas, universidades e individuos. É libre e está licenciado baixo a Licenza Pública &GNU;, polo que nunca haberá que pagar nada polo programa ou por calquera actualización. </para>
+</sect2>
+
+<sect2>
+<title
+>Características </title>
+
+<para
+>Na versión actual, &ktouch; 1.7.1 ten bastantes características útiles, como:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Posibilidade de moitas leccións de prácticas diferentes en moitas linguas, incluindo tipos de letra específicos e un editor de leccións cómodo</simpara
+></listitem>
+<listitem
+><simpara
+>Permite varias disposicións de teclado coa posibilidade de empregar as que defina o usuario</simpara
+></listitem>
+<listitem
+><simpara
+>Durante as sesións de prácticas obtense información estatística detallada para axudar a que quen estea a aprender (ou o profesor) analize o seu progreso.</simpara
+></listitem>
+</itemizedlist>
+<para
+>Inclúense moitas outras características, que se tratarán nos capítulos correspondentes deste manual. </para>
+
+</sect2>
+</sect1>
+
+
+<sect1 id="learning">
+<title
+>Aprender a escribir nun teclado co &ktouch;</title>
+
+<para
+>Velaquí outra captura do &ktouch; en acción, esta vez cun teclado alemán e unha lección de prácticas:</para>
+
+<screenshot>
+<screeninfo
+>Xanela principal do &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Xanela principal do &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Mesmo se aprender mecanografía co &ktouch; e empregar o programa é moi doado, ollaremos máis de perto o &ktouch; nas seccións seguintes.</para>
+
+<sect2 id="getting_started">
+<title
+>Comezar</title>
+
+<para
+>Ao comezar co &ktouch; pódese ver a pantalla de arriba. A xanela principal do programa mostra tres seccións principais: </para>
+<orderedlist>
+<listitem
+><simpara
+>Algunhas estatísticas nos cadros informativos da parte superior</simpara
+></listitem>
+<listitem
+><simpara
+>O texto que hai que escribir (na liña do profesor) e o texto que se leva escrito (na liña do alumno)</simpara
+></listitem>
+<listitem
+><simpara
+>O teclado (que, esperemos, se parece ao que tes)</simpara
+></listitem>
+</orderedlist>
+<para
+>Miraremos de novo estas seccións máis adiante.</para>
+<para
+>Ok, the first time you start &ktouch; it will open a lecture and select a keyboard layout for the locale and keyboard defined in the &systemsettings;. To adjust the keyboard layout go to <menuchoice
+><guimenu
+>Input Devices</guimenu
+><guisubmenu
+>Keyboard </guisubmenu
+></menuchoice
+> in the category <guilabel
+>Hardware</guilabel
+> and select the country you're in (or some country which uses the same keyboard layout as you). If your keyboard is not included, you can always define your own keyboard (see <link linkend="create_keyboards"
+>Creating your own keyboard</link
+>). </para>
+<para
+>Unha vez seleccionado o teclado, escolle a lección de prácticas. A primeira liña da lección e niveis actuais aparece na liña do profesor. Pódese seleccionar calquera lección predefinida mediante <menuchoice
+><guimenu
+>Adestramento</guimenu
+><guisubmenu
+>Leccións predefinidas</guisubmenu
+></menuchoice
+> ou abrir un ficheiro cunha lección definida polo usuario (&eg;, se o teu profesor che dá unha clase especial para que practiques) con <menuchoice
+><guimenu
+>Ficheiro</guimenu
+><guimenuitem
+>Abrir lección</guimenuitem
+></menuchoice
+>. Podes mesmo crear a túa propia lección (consulta <link linkend="create_lectures"
+>Crear leccións propias</link
+>). Tendo seleccionado o teclado e a lección, xa podes comezar a escribir. </para>
+<para
+>Coloca a man no teclado como se indica coas oito teclas dos dedos (os polegares repousan sobre a barra de espazo) e comeza a escribir o texto que aparece na liña do profesor. Cada tecla que teñas que premer aparece resaltada no teclado e, se tes que mover un dedo desde a posición na que repousa, resáltanse a tecla e o dedo axeitados. Tenta mover as mans o menos que poidas e despois de escribir cada letra tenta que os dedos volvan para as posicións normais. </para>
+<tip
+><para
+>As cores das teclas indican que dedo hai que utilizar para cada tecla.</para
+></tip>
+<para
+>Mentres escribes pódeste trabucar e premer a tecla equivocada. Neste caso, a liña do estudante muda de cor (por omisión para vermello) e tes que premer a tecla de retroceso para borrar o carácter ou caracteres nos que te trabucache. </para>
+<para
+>Ao rematares unha liña de texto tes que premer a tecla &Enter; para avanzar á liña seguinte. </para>
+</sect2>
+
+<sect2 id="lectures_and_levels">
+<title
+>Leccións e niveis</title>
+<para
+>Como xa se mencionou antes, tes que seleccionar unha lección de prácticas que conteña todo o texto que teñas que practicar. Normalmente, a dificultade do texto aumenta gradualmente, polo que a maioría das leccións conteñen varios niveis de dificultade. Porén, pode que algunhas leccións conteñan só un único nivel e texto (&eg; un artigo de prensa para probar a túa habilidade). </para>
+<para
+>Nos cadros informativos da parte superior da xanela principal do &ktouch; vese o nivel actual á esquerda. Os botonciños da dereita permiten pasar manualmente de nivel. Normalmente, isto acontece automaticamente (máis sobre isto na sección <link linkend="training_options"
+>Opcións de adestramento</link
+>. O cadro informativo da dereita mostra un texto informativo breve sobre o nivel. Normalmente, dá unha lista de caracteres que son novos no nivel. Os dous cadros informativos do medio mostran a velocidade de escrita actual (en caracteres por minuto) e o nivel de precisión. Estes valores son Estatísticas de Nivel e cada vez que se inicia un nivel novo estes valores apáganse. Porén, o programa lembra sempre as estatísticas previas (consulta a sección <link linkend="statistics"
+>Estatísticas no &ktouch;</link
+>). </para>
+</sect2>
+
+<sect2 id="starting_stopping">
+<title
+>Comezar e parar unha sesión de prácticas</title>
+<para
+>Mentres se escribe o texto dunha lección de adestramento estase nunha sesión de práctica. Pódese comezar unha sesión de práctica nova con <menuchoice
+><guimenu
+>Adestramento</guimenu
+><guimenuitem
+>Iniciar unha nova sesión</guimenuitem
+></menuchoice
+> ou o botón correspondente da barra de ferramentas. Os cambios de nivel (automáticos ou manuais) non mudan de sesión de adestramento. Permanécese na mesma sesión de adestramento até que se inicia unha nova, se selecciona unha lección nova (o que enceta automaticamente unha sesión de adestramento nova) ou se sae do programa. </para>
+<para
+>Se se abre calquera diálogo no &ktouch; cando se está nunha sesión de adestramento, este detense e o cronómetro tamén até que se volva a premer a seguinte tecla. Pódese deter manualmente a sesión con <menuchoice
+><guimenu
+>Adestramento</guimenu
+><guimenuitem
+>Deter a sesión</guimenuitem
+></menuchoice
+> ou o botón correspondente da barra de ferramentas. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="statistics">
+<title
+>Estatísticas do &ktouch;</title>
+<para
+>O &ktouch; lémbrase de ti! Basicamente, o que escribas gárdase e créanse estatísticas útiles (ou, por veces, simplemente interesantes). O &ktouch; almacena datos estatísticos baseados no ficheiro de lección coa que te adestras. Gárdase un historial separado para cada ficheiro de lección. O &ktouch; distingue tamén entre estatísticas de nivel e de sesión de práctica. Isto é importante para evitar que se fagan trampas :-). </para>
+
+<sect2>
+<title
+>Estatísticas da sesión de prácticas</title>
+<screenshot>
+<screeninfo
+>Estatísticas da práctica actual</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Estatísticas da práctica actual</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Cando se comeza unha nova sesión de adestramento iníciase un novo rexistro estatístico. O &ktouch; lembra varias cousas para avaliar o desempeño e axudar a identificar as teclas problemáticas: </para>
+<itemizedlist>
+<listitem
+><simpara
+>Cantas teclas se premeron en total?</simpara
+></listitem>
+<listitem
+><simpara
+>Cantas se premeron correctamente?</simpara
+></listitem>
+<listitem
+><simpara
+>Que teclas se atrapallaron e con que frecuencia?</simpara
+></listitem>
+<listitem
+><simpara
+>Cantas palabras correctas se escribiron?</simpara
+></listitem>
+<listitem
+><simpara
+>Canto tempo fixo falta?</simpara
+></listitem>
+</itemizedlist>
+<para
+>Co uso das estatísticas das sesións de prácticas, quen está a aprender e o &ktouch; poden avaliar o desempeño xeral con determinada lección de adestramento.</para>
+</sect2>
+
+<sect2>
+<title
+>Estatísticas do nivel</title>
+<para
+>En cada nivel da sesión de prácticas (&ie; todos os niveis nos que se escriba texto) obtéñense as mesmas estatísticas que na sesión de prácticas. Co uso das estatísticas dos niveis pódese investigar o progreso en cadasnivel dunha lección de práctica (e vese como se mellora nivel a nivel e un pódese concentrar nos niveis que ainda causan problemas). </para>
+</sect2>
+
+<sect2>
+<title
+>O diálogo de estatísticas</title>
+<para
+><menuchoice
+><guimenu
+>Adestramento</guimenu
+><guimenuitem
+>Estatísticas da lección</guimenuitem
+></menuchoice
+> ou o botón de estatísticas na barra de ferramentas abren o diálogo das estatísticas. Este mostra as estatísticas do nivel e da práctica actuais e mostra un historial gráfico das sesións de prácticas anteriores. </para>
+<para
+>Cando se abre o diálogo de estatísticas pódese seleccionar unha páxina <guilabel
+>Sesión de prácticas actual</guilabel
+> e unha páxina <guilabel
+>Estatísticas do nivel actual</guilabel
+>. A primeira páxina ofrece un resumo de todo o que se escribiu até agora. O páxina <guilabel
+>Estatísticas do nivel actual</guilabel
+> contén só as estatísticas do nivel actual. Resulta útil para distinguir entre o desempeño xeral e a destreza en determinados niveis. </para>
+<para
+>A terceira páxina das estatísticas ofrece un resumo gráfico da destreza ao escribir con varias opcións. Unha nota sobre a opción da escala temporal. Cando se obteñen as estatísticas dunha sesión ou nivel, tamén se almacena a data. Así, pódese ver como baixou a destreza en intervalos longos sen practicar e cando se practicou unha sesión ou nivel por última vez. </para>
+<screenshot>
+<screeninfo
+>Gráfica das estatísticas das prácticas</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog_chart.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Gráfica das estatísticas das prácticas</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="ui_guide">
+<title
+>O menú principal do &ktouch; e os diálogos do programa</title>
+<para
+>Neste capítulo vemos algúns dos detalles do programa. <tip
+><para
+>Pódese empregar o <quote
+>Que é isto?</quote
+> (o signo de interrogación que está a carón dos botóns para minimizar e maximizar as xanelas) en moitos dos diálogos do programa.</para
+></tip>
+</para>
+
+<sect1 id="main_menu">
+<title
+>O menú do &ktouch;</title>
+<para
+>Case todo o que hai no menú do &ktouch; debería explicarse por si mesmo. O menú <guimenu
+>Ficheiro</guimenu
+> contén opcións para cargar unha lección definida polo usuario e editar as sesións. O menú <guimenu
+>Adestramento</guimenu
+> contén opcións de prácticas e o menú <guimenu
+>Configuración</guimenu
+> contén opcións para axustar o programa. As distintas opcións do diálogo de configuración explícanse na seguinte sección.</para>
+</sect1>
+
+<sect1 id="program_settings">
+<title
+>Opcións de configuración do &ktouch;</title>
+<para
+>O &ktouch; pódese personalizar bastante. As opcións gárdanse sempre para o usuario actual do programa. Abre o diálogo de configuración con <menuchoice
+><guimenu
+>Configuración</guimenu
+><guimenuitem
+>Configurar &ktouch;...</guimenuitem
+></menuchoice
+></para>
+
+<sect2 id="general_options">
+<title
+>Opcións xerais</title>
+<para
+>Neste diálogo pódense mudar as opcións xerais que controlan o comportamento do &ktouch;. </para>
+<screenshot>
+<screeninfo
+>Opcións xerais</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="general_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcións xerais</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Primeiro de todo, pódese prender ou apagar o son (pode ser útil nunha aula). Tamén se pode axustar a velocidade de deslizamento das liñas do profesor e do alumno. </para>
+<para
+>Porén, o máis importante é a selección do tipo de letra da lección. Cando mostra o texto do profesor, o &ktouch; emprega normalmente o tipo de letra especificado no ficheiro da lección. Mais se este tipo de letra non existe no sistema ou non se especificou nengún, o &ktouch; emprega un tipo de letra por omisión. Que acontece se esta fonte non contén todos os caracteres precisos para a lección? Nestes casos pódese substituir a escolla do tipo de letra e especificar o tipo de letra que se queira. <note
+><para
+>O &ktouch; distingue entre tipos de letra da lección e do teclado. Ao substituir o tipo de letra da lección non se axusta automaticamente tamén o tipo de letra do teclado. Emprega a opción axeitada na páxina Configuración do teclado.</para
+></note>
+</para>
+</sect2>
+
+<sect2 id="training_options">
+<title
+>Opcións de práctica</title>
+<para
+>Neste diálogo pódense seleccionar as opcións que controlan o xeito en que o &ktouch; muda de niveis de dificultade baseándose na destreza do usuario.</para>
+<screenshot>
+<screeninfo
+>Opcións de práctica</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcións de práctica</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Se se activa <guilabel
+>Axuste automático de nivel</guilabel
+>, o &ktouch; comproba os límites dados ao final de cada nivel e decide se aumentar ou diminuir o nivel ou se ficar no mesmo nivel outra vez. Os cambios de nivel prodúcense sempre ao final dun nivel (&ie; cando o usuario rematou a derradeira liña dun nivel). Se a velocidade de escrita (en caracteres por minuto) e a precisión (corrección) están <emphasis
+>ambas as dúas</emphasis
+> por riba de ou son iguais aos <guilabel
+>Límites para aumentar un nivel</guilabel
+>, o &ktouch; pasa ao seguinte nivel superior. Se <emphasis
+>tanto</emphasis
+> a velocidade de escrita como a precisión fican por baixo dos <guilabel
+>Límites para diminuir un nivel</guilabel
+>, o &ktouch; baixa ao nivel inferior anterior. </para>
+<para
+>Nesta páxina de configuración tamén se pode seleccionar que o programa lembre o nivel actual ao sair del e volva ao mesmo cando se reinicie o &ktouch;. </para>
+</sect2>
+
+<sect2 id="keyboard_options">
+<title
+>Configuración do Teclado</title>
+<para
+>Neste diálogo pódense seleccionar opcións específicas do teclado.</para>
+<screenshot>
+<screeninfo
+>Configuración do teclado</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="keyboard_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuración do Teclado</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Este diálogo controla a aparencia e a funcionalidade do teclado. De xeito semellante á opción <guilabel
+>Ignorar o tipo de letra da lección</guilabel
+>, aquí pódese especificar un tipo de letra do teclado propia. Pódese empregar a opción <guilabel
+>Resaltar as teclas no teclado</guilabel
+> para diminuir a dificultade da práctica. <tip
+><para
+>Unha vez que se está familiarizado co teclado, pode que se queira deixar de resaltar as teclas para que non distraian ao concentrarse no texto do profesor.</para
+></tip>
+</para>
+</sect2>
+
+<sect2 id="color_options">
+<title
+>Configuración das cores</title>
+<para
+>Neste diálogo pódense axustar as cores que emprega o &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configuración das cores</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuración das cores</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Pódense seleccionar as cores do texto e do fondo a liña do profesor, da liña na que se escribe e dos erros que se cometen. </para>
+</sect2>
+
+<sect2 id="sound_options">
+<title
+>Configuración do son</title>
+<para
+>Neste diálogo pódense axustar as opcións do son do &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configuración do son</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="sound_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuración do son</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Activar o desactivar a <guilabel
+>Badalada nos erros</guilabel
+>, <guilabel
+>Son de máquina de escribir cando se escribe</guilabel
+> ou <guilabel
+>Son no cambio automático de nivel</guilabel
+>. </para>
+</sect2>
+
+</sect1>
+</chapter>
+
+
+<chapter id="extending">
+<title
+>Extender o &ktouch;</title>
+
+<sect1 id="create_lectures">
+<title
+>Crear leccións propias</title>
+<para
+>Pódense crear facilmente sesións de prácticas propias co editor de sesións incorporado do &ktouch;. Ao seleccionar <menuchoice
+><guimenu
+>Ficheiro</guimenu
+><guimenuitem
+>Editar lección...</guimenuitem
+></menuchoice
+>, ábrese o diálogo <guilabel
+>Abrir ficheiro de lección</guilabel
+>, que pide que se seleccione unha lección. Pódese escoller modificar a lección actual, calquera das leccións predefinidias (se se ten acceso de escrita ao directorio de instalación), abrir un ficheiro de lección ou crear unha lección nova desde cero.</para>
+
+<sect2>
+<title
+>Crear unha lección</title>
+<para
+>Asumamos que queremos crear unha lección nova. Hai unhas orientacións que hai que considerar: </para>
+<itemizedlist>
+
+
+<listitem
+><para
+>Nas primeiras 20 teclas ou así, engade dúas teclas de cada vez a cada nivel. Hai que facer que o usuario practique só estas teclas primeiro en diferentes combinacións e que despois empergue as teclas novas en palabras e mezcladas con palabras xa coñecidas. </para
+></listitem>
+
+<listitem
+><para
+>Engade ao menos uns niveis á lección para permitir que o usuario vexa progreso cando practica</para
+></listitem>
+
+<listitem
+><para
+>Non fagas niveis demasiado longos. </para
+></listitem>
+
+<listitem
+><para
+>Tenta aumentar a dificultade do texto gradualmente e próbate a ti mesmo. </para
+></listitem>
+
+<listitem
+><para
+>Despois de ter aprendidas as primerias teclas inclúe unha lección de repaso. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title
+>Cousas que hai que saber sobre as leccións</title>
+<para
+>O título da lección é importante para a entrada do menú de selección rápida do menú de adestramento e para as estatísticas. Deberíase empregar o comentario para incluir información acerca do autor da lección e a fonte dos datos, de ser o caso. </para>
+<para
+>Pódense especificar os caracteres/teclas novos de cada lección en cada nivel. O texto que se escriba aparecerá como texto de información do nivel no cadro de información superior dereito da xanela principal do &ktouch;. </para>
+<para
+>Tamén se pode especificar un tipo de letra por omisión para a sesión, que será o que se empregue nas liñas do profesor e do alumno no diálogo de edición das leccións coa icona <guiicon
+>Tipo de letra</guiicon
+>. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="create_keyboards">
+<title
+>Crear un teclado propio</title>
+<para
+>Pódense crear teclados propios creando ficheiros de teclado. Actualmente o &ktouch; carece de editor de teclados, mais ainda así é bastante doado definir un teclado personalizado. Non require máis que algo de matemáticas averiguar a xeometría e algo de tempo. O mellor é comezar cun ficheiro de teclado xa existente, crear unha copia para a nova disposición do teclado e simplemente axustar as liñas.</para>
+<para
+>Actualmente os ficheiros de teclado son ficheiros simples de texto codificados en UTF-8. Nunha próxima versión do &ktouch;, os datos almacenaranse tamén en ficheiros &XML;. Polo tanto, só vou explicar brevemente a estrutura dun ficheiro de teclado. </para>
+<para
+>Un ficheiro de teclado normalmente comeza cun cabezallo que inclúe información acerca do autor e o tipo de teclado.</para>
+<programlisting
+>####################################################
+#    &ktouch;
+#    Keyboard layout file for german keyboard layout
+#    Code=UTF-8
+####################################################
+</programlisting>
+<para
+>Todas as liñas que comecen co carácter "#" considéranse comentarios. Despois da sección do cabezallo sigue un bloque do que se chaman <quote
+>teclas dos dedos</quote
+>, que indica onde repousa cada un dos oito dedos. </para>
+<programlisting
+>#
+#          Unicode  KeyChar  x    y
+#
+FingerKey  97       A        18   20
+FingerKey  115      S        28   20
+FingerKey  100      D        38   20
+FingerKey  102      F        48   20
+FingerKey  106      J        78   20
+FingerKey  107      K        88   20
+FingerKey  108      L        98   20
+FingerKey  246      Ö        108  20
+</programlisting>
+<para
+>As teclas teñen por omisión un tamaño de 8 unidades, polo que empregar unha grella de 10 unidades crea un teclado de aparencia normal. O primeiro número é o código do carácter unicode como número decimal. KeyText é o texto impreso na tecla codificado como UTF-8 (automático nas versións recentes do &Linux;; asegúrate de que o editor garda os ficheiros no formato UTF-8).</para>
+<para
+>A sección seguinte contén teclas especiais que son, aparte da que borra para tras e o Intro, simplemente decorativas.</para>
+<programlisting
+>#
+#           Unicode  KeyText    x     y     Width Height
+#
+ControlKey  260      Tab        0     10    15    10
+ControlKey  13       Enter      138   20    12    10
+ControlKey  258      Shift      123   30    27    10
+ControlKey  264      AltGr      120   40    15    10
+ControlKey  265      Ctrl       135   40    15    10
+ControlKey  263      Alt        15    40    15    10
+ControlKey  262      Strg       0     40    15    10
+ControlKey  32       Leertaste  30    40    90    10
+ControlKey  257      Shift      0     30    13    10
+ControlKey  259      CapsLock   0     20    18    10
+ControlKey  8        BackSpace  130   0     20    10
+</programlisting>
+<para
+>O texto especificado para a tecla imprímese completamente no teclado. Porén, o &ktouch; debuxa os símbolos axeitados para <quote
+>Maiúsculas</quote
+>, <quote
+>Bloqueo de maiúsculas</quote
+><quote
+>Tabulador</quote
+>, <quote
+>Borrado para tras</quote
+> e <quote
+>Intro</quote
+>. Por iso se poden empregar estes textos de tecla independentemente da lingua. Porén, hai que traducir os outros, como Ctrl ou Alt. A xeometría das teclas de control poden ser calquera rectángulo, definido con coordenadas x e y arriba á esquerda e largura e altura.</para>
+<para
+>A sección seguinte contén todos os caracteres do teclado (excepto as teclas dos dedos xa definidas) que se poden escribir <emphasis
+>sen</emphasis
+> premer as Maiúsculas.</para>
+<programlisting
+>#
+#          Unicode  KeyChar   x    y      FingerKeyUnicode
+#
+NormalKey  94       ^         0    0      97
+NormalKey  49       1         10   0      97
+NormalKey  50       2         20   0      115
+NormalKey  51       3         30   0      100
+NormalKey  52       4         40   0      102
+NormalKey  53       5         50   0      102
+NormalKey  54       6         60   0      102
+.
+.
+.
+NormalKey  46       .         103  30     108
+NormalKey  45       -         113  30     246
+</programlisting>
+<para
+>A definición destas teclas ou caracteres primarios é basicamente a mesma que as teclas dos dedos, mais inclúen unha propiedade adicional. O derradeiro carácter unicode identifica a tecla do dedo asociada. Basicamente, que dedo hai que empregar para premer esta tecla.</para>
+<para
+>A seguinte, e derradeira, sección dunha disposición de teclado define todas as teclas que se premen empregando unha tecla modificadora como a das maiúsculas. </para>
+<programlisting
+>#
+#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode    
+Comment
+#
+HiddenKey   65        97              97              258                 #A
+HiddenKey   66        98              102             258                 #B
+HiddenKey   67        99              100             258                 #C
+HiddenKey   68        100             100             258                 #D
+.
+.
+.
+HiddenKey   124       60              97              264                 #|
+HiddenKey   64        113             97              264                 #@
+</programlisting>
+<para
+>As <quote
+>teclas acochadas</quote
+> realmente controlan o que acontece no teclado cando se escribe determinado carácter. O primeiro número unicode é o código do carácter do carácter que se defina. O segundo número é o código do carácter da tecla do teclado (unha das teclas normais xa definidas). O terceiro número indica unha tecla de dedo (onde repousa o dedo que hai que empregar con esa tecla) e o derradeiro número indica a tecla modificadora que hai que premer para obter ese carácter. </para>
+<para
+>Vexamos un exemplo:</para>
+<para
+>Queremos definir o carácter "R" maiúsculo. Ten o unicode 82. O carácter que se obtén cando se preme a tecla "R" sen modificar é o "r" minúsculo, co unicode 114. O dedo do "R" repousa sobre a tecla "f", que ten o unicode 102. Para obter o "R" hai que premer a tecla de maiúsculas dereita (ou esquerda), que ten o unicode 264 (realmente non se trata dun unicode, senón do código que se obtén dun evento "premer tecla" do Qt). Lembra que a identificación das teclas de control mudará probabelmente na vindeira versión do &ktouch;. Mais, polo de agora, pódense empregar os códigos utilizados noutros ficheiros de teclado. </para>
+
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Referencia dos comandos</title>
+
+<sect1 id="ktouch-mainwindow">
+<title
+>Menús e atallos de teclado</title>
+
+<sect2>
+<title
+>O menú <guimenu
+>Ficheiro</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Abrir un ficheiro de texto simple...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> un ficheiro de texto simple e empregalo como lección.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Abrir lección...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> un ficheiro de lección de prácticas</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Editar lección...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> o editor de leccións para poder modificar o ficheiro de prácticas actual </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Editar esquema de cores...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> o editor de esquemas de cores para poder definir esquemas de cores novos</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Editar disposición de teclado...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> un ficheiro de teclado e modificar unha disposición de teclado no diálogo <guilabel
+>Editor de teclado do &ktouch;</guilabel
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ficheiro</guimenu
+> <guimenuitem
+>Sair</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sair</action
+> do &ktouch;</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+
+
+<sect2>
+<title
+>O menú <guimenu
+>Adestramento</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Adestramento</guimenu
+> <guimenuitem
+>Iniciar unha nova sesión</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Comezar</action
+> unha sesión de prácticas nova e preguntar se se quere iniciar no mesmo nivel</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Adestramento</guimenu
+> <guimenuitem
+>Deter a sesión</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Parar</action
+> a sesión actual; as estatísticas tamén se deteñen</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Adestramento</guimenu
+> <guimenuitem
+>Estatísticas da lección</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abrir</action
+> o diálogo de estatísticas da sesión actual</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Adestramento</guimenu
+> <guisubmenu
+>Leccións predefinidas</guisubmenu
+> <guimenuitem
+>Inglés (autoxerado)</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> a lingua coa que se quere aprender a mecanografar</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>O menú <guimenu
+>Configuración</guimenu
+></title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Mostrar a barra de ferramentas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Conmutar</action
+> a barra de ferramentas</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Mostrar a barra de estado</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Conmutar</action
+> a barra de estado</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Configuracións de teclado</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Este elemento <action
+>mostra</action
+> unha lista de teclados disponíbeis na que se pode escoller que disposición se quere empregar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Esquemas de cores do teclado</guisubmenu
+> <guimenuitem
+>Branco e negro</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> o deseño do teclado en branco e negro: todas as teclas son brancas e coa que hai que escribir está en negro</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Esquemas de cores do teclado</guisubmenu
+> <guimenuitem
+>Clásico</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> a disposición de cores do teclado clásica: cada columna de teclas ten unha cor diferente</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Esquemas de cores do teclado</guisubmenu
+> <guimenuitem
+>Azul escuro</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> a disposición do teclado azul escuro: cada columna de teclas ten unha cor diferente nun ton de azul</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Esquemas de configuración do teclado</guisubmenu
+> <guimenuitem
+>Con faixas</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> a disposición de cores do teclado con faixas: en azul e gris</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guisubmenu
+>Usuario actual</guisubmenu
+> <guimenuitem
+>Usuario predefinido</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escoller</action
+> o usuario das sesións de prácticas actuais.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Configurar os usuarios...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostra</action
+> un diálogo no que engadir ou eliminar un usuario do &ktouch;. Os usuarios que se enumeren neste diálogo móstranse no submenú <guisubmenu
+>Usuario actual</guisubmenu
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Configurar os atallos de teclado...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Configurar</action
+> os atallos de teclado que se queiran asociar con determinadas accións </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Configurar as barras de ferramentas...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Configurar</action
+> os elementos que se queiran colocar na barra de ferramentas </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuración</guimenu
+> <guimenuitem
+>Configurar &ktouch;...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Mostrar</action
+> o diálogo de configuración do &ktouch;. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>O menú <guimenu
+>Axuda</guimenu
+></title>
+&help.menu.documentation; </sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e licenza</title>
+<para
+>&ktouch;</para>
+<para
+>&ktouch;, Copyright 1999-2007 de</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+
+<para
+>Colaboradores:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, teclado alemán e ficheiro de prácticas e tradución en alemán.</simpara
+></listitem>
+<listitem
+><simpara
+>Enernesto Hern&aacute;ndez-Novich, teclado latinoamericano</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, teclado portugués</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, teclado francés</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Un agradecemento especial para todos os demais (non mencionados aquí) que aportaron ficheiros de teclado e de leccións.</emphasis>
+</para>
+<para
+>Tradución da documentación: Xosé Calvo - http://trasno.net/</para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Como obter e instalar o &ktouch;</title>
+
+ &install.intro.documentation;
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->

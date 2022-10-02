@@ -1,0 +1,1698 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Allenatore di dattilografia</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Manuale di &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Traduzione e manutenzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Davide</firstname
+><surname
+>Rizzo</surname
+><affiliation
+><address
+><email
+>drizzo@daviderizzo.com</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Marcello</firstname
+><surname
+>Anni</surname
+><affiliation
+><address
+><email
+>marcello.anni@alice.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>05/01/2021</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
+
+<abstract>
+<para
+>&i18n-ktouch; è un programma per imparare a dattilografare: ti fornisce del testo su cui esercitarti, sceglie dei livelli differenti in base alle tue capacità, ti mostra il tasto successivo da premere e il dito da usare.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>dattilografia</keyword>
+<keyword
+>dattilografia</keyword>
+<keyword
+>dattilografia</keyword>
+<keyword
+>dattilografia</keyword>
+<keyword
+>educazione</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>tocco</keyword>
+<keyword
+>digitare</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Imparare a dattilografare con &i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Introduzione</title>
+
+<sect2>
+<title
+>Che cos'è &i18n-ktouch;?</title>
+<para
+>&i18n-ktouch; è un programma per imparare a dattilografare.</para>
+<para
+>&i18n-ktouch; ti fornisce del testo su cui esercitarti, sceglie dei livelli diversi in base alle tue capacità, ti mostra la tua tastiera, ti indica il tasto successivo da premere e il dito da usare.</para>
+
+<screenshot>
+<screeninfo
+>La finestra principale di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La finestra principale di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; è un insegnante di dattilografia pensato per l'uso personale. Impari a scrivere con tutte le dita, passo dopo passo, inoltre non dovrai più guardare la tastiera alla ricerca dei tasti giusti: questo rallenta di parecchio la tua velocità di battitura. </para>
+</sect2>
+
+<sect2>
+<title
+>Caratteristiche</title>
+
+<para
+>Nella sua versione attuale, &i18n-ktouch; ha parecchie funzionalità utili, per esempio:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Il supporto a molte lezioni differenti in parecchie lingue, ed un comodo editor di lezioni</simpara
+></listitem>
+<listitem
+><simpara
+>Il supporto alle diverse mappature della tastiera, con la possibilità di utilizzarne altre definite dall'utente</simpara
+></listitem>
+<listitem
+><simpara
+>Durante le tue sessioni di allenamento &i18n-ktouch; raccoglie una gamma completa di statistiche, per aiutare te o il tuo insegnante ad analizzare i tuoi progressi</simpara
+></listitem>
+</itemizedlist>
+<para
+>Sono incluse molte altre funzioni, che saranno discusse nei relativi capitoli di questo manuale. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Primi passi</title>
+
+<para
+>Ecco un'altra immagine di &i18n-ktouch; in azione, stavolta con una tastiera ed una lezione in tedesco:</para>
+
+<screenshot>
+<screeninfo
+>Finestra principale di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra principale di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Sebbene dovrebbe essere molto semplice imparare a dattilografare con &i18n-ktouch; ed a usarlo, nelle prossime sezioni daremo un'occhiata più approfondita al programma.</para>
+
+<sect2 id="creating_profile">
+<title
+>Creare il tuo primo profilo</title>
+
+<para
+>La prima volta che avvii &i18n-ktouch; si aprirà una finestra speciale, che ti aiuta a creare il tuo primo profilo. Puoi scegliere il nome del tuo profilo ed il livello delle tue capacità di dattilografia. </para>
+<tip>
+<para
+>Il livello scelto determina il funzionamento generale di &i18n-ktouch;: nella modalità principiante le lezioni vengono sbloccate una ad una solo dopo averle superate, mentre in quella per i dattilografi esperti tutte le lezioni sono disponibili fin da subito. </para>
+</tip>
+<note>
+<para
+>Considera attentamente la scelta da fare, non potrai cambiare il tipo di profilo successivamente. Potrai comunque creare nuovi profili per rivedere questa decisione. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>La finestra di benvenuto di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La finestra di benvenuto di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Dopo aver premuto <guibutton
+>Inizia l'allenamento</guibutton
+> verrai diretto alla schermata iniziale; questa sarà anche la prima visibile la volta successiva che avvierai &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Selezionare una lezione</title>
+
+<para
+>La schermata principale di &i18n-ktouch; consiste in una barra degli strumenti e in un selettore dei corsi. Per maggiori informazioni vedi <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>Finestra principale di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra principale di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; ti mostrerà il primo corso disponibile per la tua mappatura della tastiera attuale. </para>
+
+<para
+>Puoi spostarti fra i corsi, oppure scegliere le <link linkend="custom_lessons"
+>lezioni personalizzate</link
+> facendo clic sulla loro miniatura nella parte destra della finestra. </para>
+
+<note>
+<para
+>In alcune piattaforme, specialmente in &Microsoft; &Windows;, il rilevamento automatico della mappatura della tastiera non è disponibile. In questo caso devi fare clic sul pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella barra degli strumenti, selezionare il sotto-menu <guisubmenu
+>Configura la tastiera...</guisubmenu
+> e scegliere il nome della mappatura della tastiera, o di un'altra simile alla tua. Se la tua tastiera non è inclusa puoi definire manualmente la tua mappatura, vedi <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Scegli la tua lezione dalla lista che c'è alla sinistra nella finestra. Non puoi scegliere quelle bloccate con <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> perché sono troppo difficili per le tue attuali abilità; passa le lezioni per abilitarne di nuove. L'anteprima della lezione selezionata sarà mostrata alla destra della lista delle lezioni. </para>
+<tip>
+<para
+>Maggiori informazioni relative al corso selezionato possono essere mostrate o nascoste nuovamente usando il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, che si trova vicino al titolo del corso. </para>
+</tip>
+<para
+>Quando hai finito di selezionare, premi <guibutton
+>Inizia l'allenamento</guibutton
+> per andare nella schermata di allenamento di &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Allenamento</title>
+<para
+>La finestra di allenamento di &i18n-ktouch; mostra tre sezioni principali: </para>
+<orderedlist>
+<listitem
+><simpara
+>Alcune statistiche di digitazione nei riquadri informativi in alto</simpara
+></listitem>
+<listitem
+><simpara
+>Il testo che devi scrivere</simpara
+></listitem>
+<listitem
+><simpara
+>La visualizzazione della tastiera</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>La finestra di allenamento di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La finestra di allenamento di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>La visibilità delle parti della schermata di allenamento può essere configurata usando la <link linkend="configuration_dialog"
+>finestra di configurazione di &i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Poggia i tuoi indici sui due tasti della tastiera con i due piccoli marcatori tattili vicino al centro della fila di mezzo: in questo modo le altre tue dita troveranno i tasti a cui sono destinate quasi automaticamente. I pollici dovrebbero restare all'incirca sulla barra spaziatrice, l'unico tasto che userai sempre durante la digitazione. Le altre dita dovrebbero invece stare sui tre tasti vicini a quelli marcati della fila centrale, inoltre i tasti destinati allo stesso dito sono raggruppati insieme attraverso il colore. Prova a spostare le mani il meno possibile, e cerca sempre di far tornare le dita nella loro posizione di riposo dopo aver digitato un carattere. </para>
+<para
+>Inizia a digitare il testo in mezzo allo schermo: il prossimo tasto che devi premere è sempre evidenziato nella visualizzazione della tastiera. Durante la digitazione è possibile che tu commetta errori premendo il tasto sbagliato: in tal caso i caratteri saranno visualizzati in rosso, e dovrai premere &Backspace; tante volte quante saranno necessarie per cancellare i caratteri digitati erroneamente. </para>
+<para
+>Dopo aver completato una riga di testo devi premere il tasto &Enter; per passare alla successiva. </para>
+<tip>
+<para
+>Il tasto usato per passare alla riga successiva può essere cambiato usando la <link linkend="configuration_dialog"
+>finestra delle impostazioni di &i18n-ktouch;</link
+> </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Controllare i tuoi progressi</title>
+<para
+>Quando hai completato una lezione &i18n-ktouch; passerà alla schermata dei punteggi, che visualizza le statistiche dei tuoi allenamenti e delle tue lezioni, e mostra un grafico che riassume l'andamento delle precedenti sessioni di allenamento. </para>
+<screenshot>
+<screeninfo
+>Finestra delle statistiche di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra delle statistiche di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Nella finestra delle statistiche puoi scegliere di visualizzare una lezione particolare, oppure <guilabel
+>tutte le lezioni</guilabel
+>. Questo è utile per distinguere tra le prestazioni complessive e quelle in determinate lezioni. </para>
+<para
+>Se ti senti pronto per la lezione successiva, premi il pulsante <guibutton
+>Prossima lezione</guibutton
+> nella barra degli strumenti per avanzare, oppure <guibutton
+>Ripeti la lezione</guibutton
+> per testare nuovamente le tue abilità con l'attuale lezione. Il pulsante<guibutton
+>Prossima lezione</guibutton
+> è disponibile solo se hai superato la lezione. </para>
+<para
+>Se vuoi passare ad altre lezioni o corsi, premi <guibutton
+>Ritorna alla schermata principale</guibutton
+>. </para>
+<para
+>Se non vuoi continuare l'allenamento con &i18n-ktouch;, chiudi semplicemente la finestra dell'applicazione. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Preparazione all'allenamento</title>
+<para
+>Praticamente qualsiasi cosa nella finestra principale di &i18n-ktouch; dovrebbe essere autoesplicativa: la barra degli strumenti in alto è intesa essere il luogo in cui puoi vedere e configurare le sue impostazioni, mentre il selettore dei corsi può essere usato per vedere le informazioni sui corsi e per spostarti fra essi. </para>
+
+<sect2 id="toolbar">
+  <title
+>Barra degli strumenti di &i18n-ktouch;</title>
+<para
+>La barra degli strumenti di &i18n-ktouch; ospita sulla sinistra il pulsante del profilo, e sulla destra il pulsante del menu dell'applicazione. </para>
+
+<sect3 id="profile_management">
+<title
+>Gestione del profilo</title>
+<para
+>Il pulsante del profilo con il nome del tuo profilo che c'è alla sinistra della barra degli strumenti nella schermata principale può essere usato per gestire i profili di &i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Gestione del profilo in &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Gestione del profilo in &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Puoi rivedere le impostazioni dei profili esistenti, cancellarli o crearne uno nuovo usando il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Per passare alla modalità di revisione premi <guibutton
+>Modifica</guibutton
+>, mentre per selezionare un profilo e ritornare alla schermata principale premi <guibutton
+>Usa il profilo selezionato</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Rivedere le informazioni del profilo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Rivedere le informazioni del profilo</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Menu di &i18n-ktouch;</title>
+<para
+>Il menu di &i18n-ktouch; può essere aperto usando il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella barra degli strumenti della schermata principale. </para>
+
+<screenshot>
+<screeninfo
+>Menu di &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Menu di &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Qui sotto puoi avere una lista degli elementi del menu, con una breve descrizione. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Modalità a tutto schermo</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Commuta</action
+> la modalità a tutto schermo di &i18n-ktouch; da attiva a disattiva o viceversa</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Editor dei corsi e delle mappature della tastiera...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Apre</action
+> la <link linkend="extending"
+>finestra di modifica</link
+> di &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configurare l'allenatore di dattilografia...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Mostra</action
+> la <link linkend="configuration_dialog"
+>finestra delle impostazioni</link
+> di &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configura le scorciatoie...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Configura</action
+> le scorciatoie da tastiera da associare a determinate azioni </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configura la tastiera...</guimenuitem
+></term>
+<listitem
+><para
+>Una scorciatoia al modulo &systemsettings; per configurare le impostazioni della tastiera. Utile per prepararsi all'allenamento su diverse mappatura della tastiera. </para>
+<note>
+<para
+>Su piattaforme in cui manca il supporto al riconoscimento automaticamente della mappatura della tastiera, specialmente in &Microsoft; &Windows;, questa voce è rimpiazzata da un sottomenu da cui selezionare manualmente la mappatura della tastiera per &i18n-ktouch;. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>&i18n-ktouch; ha i normali elementi del menu di &kde; <guimenu
+>Aiuto</guimenu
+>; per maggiori informazioni leggi le sezioni sul <ulink url="help:/fundamentals/menus.html#menus-help"
+>menu Aiuto</ulink
+> dei Fondamentali di &kde;. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Finestra di configurazione</title>
+
+<para
+>Puoi personalizzare &i18n-ktouch; in maniera considerevole. Le impostazioni vengono applicate globalmente su ogni profilo. Apri la finestra di configurazione premendo il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> che c'è alla destra nella barra degli strumenti nella schermata principale, quindi scegli <guimenuitem
+>Configura l'allenatore di dattilografia...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Impostazioni dell'allenamento</guilabel
+></term>
+     <listitem>
+       <para
+>In questa finestra puoi selezionare le opzioni che controllano l'aspetto della finestra dell'istruttore, e come &i18n-ktouch; si comporta durante l'allenamento.</para>
+<screenshot>
+<screeninfo
+>Opzioni dell'allenamento</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opzioni dell'allenamento</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>La casella <guilabel
+>Applica la correzione degli errori di battitura</guilabel
+> può essere usata per controllare se gli errori di battitura devono essere corretti o meno. </para>
+<para
+>Durante l'allenamento puoi controllare la visibilità delle statistiche e dei pannelli della tastiera: usa le caselle <guilabel
+>Mostra la tastiera</guilabel
+> e <guilabel
+>Mostra le statistiche in tempo reale</guilabel
+>. </para>
+<para
+>Il tasto per passare alle riga successiva del testo di allenamento può essere uno fra &Enter; o &Space;. </para>
+<para
+>I <guilabel
+>Limiti di sblocco della lezione</guilabel
+> possono essere impostati per controllare le impostazioni di sblocco delle lezioni di livello più elevato. &i18n-ktouch; controlla i limiti dati alla fine di ogni livello, e decide se sbloccare la lezione successiva: questo accade se la velocità di digitazione in caratteri al minuto e la correttezza sono <emphasis
+>entrambe</emphasis
+> maggiori o uguali a questi limiti. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Configurazione dei colori</guilabel
+></term>
+  <listitem>
+<para
+>In questa finestra puoi modificare i colori usati da &i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configurazione dei colori</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configurazione dei colori</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Puoi selezionare il colore di sfondo per ciascun tasto dito. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Selezione del corso e della lezione</title>
+<para
+>&i18n-ktouch; riconosce automaticamente la mappatura della tastiera, e ti mostra solo i corsi ottimizzati per essa. </para>
+<note>
+<para
+>In qualche piattaforma, specialmente in &Windows;, il riconoscimento automatico della mappatura della tastiera non è disponibile; usa il menu dell'applicazione per selezionarlo manualmente. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Cambiare i corsi</title>
+<para
+>Qualora dovesse esserci più di un corso disponibile per la mappatura della tua tastiera puoi scegliere il tuo preferito usando i pulsanti <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> e <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> alla destra dell'etichetta con il nome del corso. I pulsanti non sarebbero visibili in presenza di un solo corso. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Sbloccare le lezioni</title>
+<para
+>Se durante la <link linkend="creating_profile"
+>creazione del profilo iniziale</link
+> hai scelto <guilabel
+>Ho poca o nessuna esperienza nella dattilografia</guilabel
+> ti accorgerai che alcune lezioni sono bloccate. Questi elementi sono contrassegnati dall'icona <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, e non sono accessibili finché non superi le lezioni precedenti. </para>
+<note>
+<para
+>Le impostazioni per passare le lezioni possono essere cambiate usando la <link linkend="configuration_dialog"
+>finestra di configurazione di &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Allenamento con una diversa mappatura della tastiera</title>
+<para
+>Con &i18n-ktouch; è possibile usare per l'allenamento una qualsiasi mappatura della tastiera: basta premere i pulsanti che sono evidenziati dall'allenatore, senza curarsi dell'etichetta che c'è sul tasto fisico della tastiera. </para>
+<para
+>Seleziona <menuchoice
+><guimenu
+>Configura la tastiera...</guimenu
+></menuchoice
+> dal menu dell'applicazione per selezionare una diversa mappatura della tastiera, e &i18n-ktouch; si adatterà a questa: ti presenterà inoltre solo i corsi che sono disponibili per essa. </para>
+<note>
+<para
+>Nelle piattaforme senza il riconoscimento automatico della mappatura della tastiera, specialmente in &Microsoft; &Windows;, devi prima configurare il sistema operativo in modo che usi la mappatura con cui ti vuoi allenare, e poi selezionare la stessa mappatura per &i18n-ktouch; attraverso il menu dell'applicazione. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Allenamento efficiente</title>
+<sect2 id="training_techniques">
+<title
+>Tecniche di allenamento</title>
+<para
+>Di seguito puoi trovare qualche consiglio generale sulle tecniche di apprendimento della dattilografia. </para>
+<sect3 id="steady_speed">
+<title
+>Velocità costante</title>
+<para
+>Per imparare a dattilografare in maniera efficiente non è importante semplicemente provare a digitare il più velocemente possibile, ma mantenere invece una velocità costante e trovare un ritmo naturale nella pressione dei tasti. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>La precisione è sovrana</title>
+<para
+>La prossima cosa importante su cui focalizzare la propria attenzione è la precisione. Solo quando padroneggerai nell'uso dei tasti attualmente sbloccati, cioè farai pochissimi errori con questi, avrai delle possibilità nelle lezioni successive, dove ci saranno ancor più tasti da maneggiare. Noterai di star diventando quasi automaticamente padrone della tastiera quando commetterai solo pochissimi errori e non dovrai quindi correggerne molti, risparmiando così del tempo prezioso. </para>
+<note>
+<para
+>Questa è anche la ragione per cui il livello di precisione predefinita per sbloccare la lezione successiva è al 98%, mentre la velocità richiesta è piuttosto moderata, con solo 180 caratteri al minuto. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Correggere gli errori</title>
+<para
+>Se commetti degli errori è importante che tu li corregga in maniera efficiente. La correzione di un singolo carattere è quasi sempre più lenta di quella di un'intera parola: in quest'ultimo caso ti basta premere <keycombo
+>&Ctrl;&Backspace;</keycombo
+> e ridigitarla. Il sovraccarico mentale è molto piccolo. Per cancellare un singolo carattere devi invece prima localizzare il tuo errore, cancellarlo nel punto in cui si trova, determinare la parte mancante della parola e quindi ridigitarla. Questo richiede più concentrazione della riscrittura dell'intera parola. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Mettere in pausa una sessione di allenamento</title>
+<sect3 id="automatically_pausing">
+<title
+>Automaticamente</title>
+<para
+>Se apri una qualsiasi finestra o passi ad una diversa applicazione durante una sessione di allenamento, questa viene messa in pausa e il cronometro viene fermato; dura fino a quando il fuoco non passa nuovamente alla finestra di &i18n-ktouch; e premi un tasto. </para>
+<para
+>La sessione di allenamento viene messa in pausa anche se non c'è attività dell'utente per cinque secondi. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Manualmente</title>
+<para
+>Puoi mettere in pausa manualmente l'attuale sessione di allenamento usando il pulsante <inlinemediaobject
+><imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> che c'è nella barra degli strumenti. </para>
+<para
+>Se premi il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella barra degli strumenti, &i18n-ktouch; metterà in pausa l'attuale sessione mostrando un menu con ulteriori azioni. </para>
+<screenshot>
+<screeninfo
+>Il menu di &i18n-ktouch; durante la pausa</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Il menu di &i18n-ktouch; durante la pausa</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Monitoraggio dei progressi dell'apprendimento</title>
+<para
+>Dopo aver completato una lezione non tornerai immediatamente alla schermata principale: ti verrà invece mostrato un riassunto speciale ed una finestra delle statistiche. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Statistiche sulla velocità e sull'accuratezza</title>
+<screenshot>
+<screeninfo
+>Pagina con la schermata del progresso dei punteggi</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Pagina con la schermata del progresso dei punteggi</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Filtro in base alle lezioni</title>
+<para
+>Con l'aiuto della pagina delle statistiche sulla velocità e sulla precisione puoi analizzare i tuoi progressi nell'allenamento e identificare le tue debolezze. </para>
+<para
+>I dati statistici possono essere filtrati per lezione usando il menu a tendina vicino all'etichetta <guilabel
+>Relativamente a</guilabel
+>. Questa caratteristica può essere utile per controllare i tuoi progressi nell'attuale lezione e compararli con quelli delle altre. </para>
+<screenshot>
+<screeninfo
+>Il menu a discesa intervallo delle statistiche</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Il menu a discesa intervallo delle statistiche</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Dati addizionali sulla sessione possono essere visualizzati in sovrapposizione: se passi il puntatore del mouse sopra un punto del grafico &i18n-ktouch; ti mostrerà le statistiche della corrispondente sessione. </para>
+<screenshot>
+<screeninfo
+>Progressi per lezione</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Progressi per lezione</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Statistiche degli errori</title>
+<para
+>Usando il menu a cascata vicino all'etichetta <guilabel
+>Mostra</guilabel
+> la schermata del punteggio può essere cambiata in quella per mostrare il tasso di errore per ogni tasto. </para>
+<screenshot>
+<screeninfo
+>Passare alla modalità statistiche</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Passare alla modalità statistiche</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>In questa modalità &i18n-ktouch; mostra un diagramma a barre degli errori per ogni tasto nell'ultima sessione di allenamento. </para>
+<screenshot>
+<screeninfo
+>Grafico degli errori per tasto</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Grafico degli errori per tasto</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Puoi tornare indietro al grafico delle lezioni usando lo stesso menu a discesa che c'è vicino all'etichetta <guilabel
+>Mostra</guilabel
+>. </para>
+<para
+>Se hai superato la lezione puoi scegliere di iniziare subito l'allenamento con la prossima lezione premendo <guibutton
+>Prossima lezione</guibutton
+> nella barra degli strumenti. Diversamente puoi ripetere l'attuale lezione con <guibutton
+>Ripeti la lezione</guibutton
+>, oppure tornare alla schermata principale con il pulsante rimanente. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Estendere &i18n-ktouch;</title>
+
+<sect1 id="create_courses">
+<title
+>Creare i corsi</title>
+<para
+>Puoi creare facilmente il tuo corso di allenamento usando l'editor dei corsi e della mappatura della tastiera integrato in &i18n-ktouch;: premi il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> alla destra della barra degli strumenti della schermata principale, quindi scegli <guimenuitem
+>Editor dei corsi e delle mappature della tastiera...</guimenuitem
+>. Puoi scegliere di aprire un corso, di crearne uno vuoto da zero, oppure di usarne un altro come modello.</para>
+<important>
+<para
+>Non puoi modificare i corsi integrati, a meno che tu non abbia l'accesso in scrittura alla cartella di installazione. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Finestra principale dell'editor dei corsi e delle mappature della tastiera</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra principale dell'editor dei corsi e delle mappature della tastiera</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Proprietà dei corsi</title>
+<para
+>Le proprietà dei corsi possono essere scelte usando l'assistente per la creazione dei corsi di &i18n-ktouch;. Per invocarlo premi il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella barra degli strumenti della finestra <guilabel
+>Editor dei corsi e della mappatura della tastiera</guilabel
+>. </para>
+<para
+>La prima pagina dell'assistente per la creazione di &i18n-ktouch; ti permette di scegliere il tipo di dati; seleziona <guilabel
+>Corso</guilabel
+> e premi <guibutton
+>Prossima</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Scegliere il tipo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Scegliere il tipo</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>La seconda pagina dell'assistente ti permette di scegliere il titolo, la mappatura della tastiera e la descrizione del corso. </para>
+<screenshot>
+<screeninfo
+>Seconda pagina dell'assistente al nuovo corso</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Seconda pagina dell'assistente al nuovo corso</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Il titolo del corso è importante per la voce del menu a selezione veloce nella lista dei corsi, e per le statistiche. </para>
+<para
+>La descrizione dovrebbe essere usata per includere le informazioni sull'autore della lezione e sulla sorgente dei dati della lezione, se ce n'è una. Questa descrizione può essere mostrata premendo il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella schermata principale di &i18n-ktouch;. </para>
+<para
+>Quando hai finito di inserire i valori corretti, premi <guibutton
+>Successivo</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Terza pagina dell'assistente al nuovo corso</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Terza pagina dell'assistente al nuovo corso</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Usando la terza pagina dell'assistente puoi scegliere un altro corso come modello per il tuo: seleziona il corso dalla lista, e premi <guibutton
+>Fine</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Finestra di modifica del nuovo corso</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra di modifica del nuovo corso</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; aprirà la finestra dell'editor dei corsi per inserire i dati. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Aggiungere le lezioni</title>
+<para
+>Un corso è un insieme ordinato di lezioni. Per imparare in modo efficiente a dattilografare il contenuto del corso deve rispettare alcune caratteristiche. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Scegli un nome adatto per la lezione</emphasis
+></term>
+<listitem>
+<para
+>Per ogni livello puoi specificare i nuovi caratteri/tasti nella lezione. È preferibile includere i nuovi caratteri nel titolo della lezione: fai clic sull'etichetta di un nome nella lista <guilabel
+>Lezioni:</guilabel
+> e inserisci un nome significativo. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Il testo che inserisci come titolo della lezione verrà mostrato come testo informativo sulla lezione nella lista dei corsi della schermata principale. È più facile per l'utente scegliere la lezione che ha un titolo significativo. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>La prima lezione dovrebbe interessare i tasti pilota</emphasis
+></term>
+<listitem>
+<para
+>In genere le tastiere hanno due marcatori tattili nei tasti della seconda fila che appartengono alle due dita indice. Questi due tasti e i tre adiacenti verso l'esterno sono i tasti pilota, cioè <emphasis
+>asdfjklò</emphasis
+> nella mappatura italiana. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Questi otto tasti sono la posizione iniziale di ogni dito. Bisogna assimilare la posizione di questi tasti per imparare a dattilografare con successo. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Introduci due tasti nuovi per lezione </emphasis
+></term>
+<listitem>
+<para
+>L'ordine di sblocco dei tasti non è fisso: solitamente vengono introdotti in coppia, quelli che interessano lo stesso dito delle due mani. Segui il tuo percorso, dai tasti pilota a quelli più lontani, con quelli della quarta fila che dovrebbero essere introdotti alla fine. Preferisci i tasti di lettere importanti per la tua lingua, anche se questo potrebbe richiedere di deviare un po' dal modello di introduzione. Per esempio, in francese gli accenti sono molto importanti, e questo giustifica la presenza di una lezione all'inizio per focalizzarsi solo su questi. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Se vengono introdotti molti tasti lo studente potrebbe essere sopraffatto dalla difficoltà della lezione, e perdere così la motivazione. Introduci prima i tasti di lettere importanti, in modo che sia in grado fin dall'inizio di formare delle parole concrete. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Attenzione extra ai nuovi tasti</emphasis
+></term>
+<listitem>
+<para
+>Assicurati che i caratteri che appartengono ai tasti appena introdotti siano quelli più usati, o, almeno, usati molto di frequente nel testo della lezione. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Se lo studente supera la lezione dovrebbe aver imparato a usare i nuovi tasti. Ciò è possibile solo se la lezione contiene un numero significativo di caratteri nuovi. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Alterna lezioni con dei nuovi tasti ad altre di ripasso</emphasis
+></term>
+<listitem>
+<para
+>Ogni due o tre lezioni aggiungine una di ripetizione, senza tasti nuovi, che dovrebbe contenere una miscela omogenea di tutti i caratteri già introdotti. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Queste lezioni aiutano a rafforzare le abilità acquisite, e forniscono un modo per controllare il livello di formazione generale. Sono anche più adatte per migliorare ulteriormente le proprie abilità di battitura generale. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Lezioni dedicate al maiuscolo</emphasis
+></term>
+<listitem>
+<para
+>Ci dovrebbero essere molte lezioni che si focalizzano esclusivamente sul maiuscolo. Idealmente questo viene introdotto con dei passaggi multipli: prima solo il tasto &Shift; di sinistra, poi il destro, poi entrambi, seguiti da una o più lezioni di ripasso. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>La padronanza del maiuscolo è la parte più difficile dell'imparare a dattilografare, pertanto deve essere fatto un ulteriore sforzo per queste lezioni. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Coprire l'intera mappatura della tastiera</emphasis
+></term>
+<listitem>
+<para
+>Questo include i caratteri e i simboli raggiungibili con altri trasti modificatori come &Shift;. Idealmente ogni carattere, numero o simbolo che è stampato su un tasto dovrebbe essere coperto. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Più il corso è completo, più l'allievo può imparare da esso, e fa anche sì che rimanga interessante anche per i dattilografi esperti. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Usa il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per aggiungere una nuova lezione al corso, il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per rimuovere la lezione selezionata dal corso, e i pulsanti <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per modificare le lezione del corso. </para>
+<important>
+<para
+>Cancella le lezioni con cautela, perché questo potrebbe annullare il progresso di sblocco degli utenti del corso. Se stai programmando di revisionare scrupolosamente un corso, solitamente è meglio usarne uno esistente come base per il nuovo. </para>
+</important>
+<para
+>Il contenuto di una lezione può essere modificato usando il campo di modifica in basso a destra: puoi copiare frammenti di testo dal tuo editor preferito ed incollarli in questo campo. </para>
+<para
+>Usa il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per aprire un generico file di testo, che sarà caricato nel campo di testo della lezione. </para>
+<para
+>Il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> può essere usato per mandare a capo il testo della lezione. L'editor di &i18n-ktouch; taglia il testo in modo che ogni riga della lezione non superi il limite raccomandato dei 60 caratteri. </para>
+<para
+>Mettiamo che tu voglia creare una nuova lezione. Ci sono alcune linee guida che dovresti prendere in considerazione: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Dai dei titoli descrittivi alle lezioni</emphasis
+></term>
+<listitem>
+<para
+>Nomina i nuovi caratteri se ce ne sono di nuovi, altrimenti specifica di cosa tratta la lezione. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Dei buoni titoli rendono più semplice trovare il giusto corso, se uno si vuole allenare su qualcosa di specifico. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Il testo della lezione dovrebbe essere composto da frasi e da parole concrete</emphasis
+></term>
+<listitem>
+<para
+>Una lezione ideale è formata da un testo comprensibile contiguo, su un soggetto liberamente scelto. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Allenarsi con frasi e parole concrete è più efficace rispetto alle combinazioni arbitrarie di caratteri casuali, perché è più simile alla vera scrittura. Ed è più divertente. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Evita combinazioni di caratteri non-parola</emphasis
+></term>
+<listitem>
+<para
+>Questo può essere impossibile nelle prime lezioni, perché sono disponibili solo pochi caratteri, ma le parole reali dovrebbero essere usate non appena possibile. Non usare mai parole scritte in maniera errata. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Le combinazioni di caratteri casuali sono difficili da digitare, e difficilmente verranno incontrate nell'uso quotidiano. D'altra parte le parole errate portano confusione, e sono anche un valore negativo nell'apprendimento, dal momento che l'allievo potrebbe memorizzare l'ortografia scorretta. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Il testo della lezione dovrebbe essere lungo circa 600 caratteri</emphasis
+></term>
+<listitem>
+<para
+>Può essere più lungo, fino a 1200 caratteri va bene, ma dovrebbero essere evitate lezioni più brevi, soprattutto se sono di ripasso. </para>
+<note>
+<title
+>Fondamento logico</title>
+<para
+>Mantenersi in questo intervallo fa sì che i dattilografi inesperti (circa 120 caratteri al minuto) possano finire una lezione in 5-10 minuti. Lezioni più lunghe sono frustranti, mentre più corte sono inefficaci. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Controlli di qualità nell'editor del testo della lezione</title>
+<screenshot>
+<screeninfo
+>Controllo di qualità nella finestra di modifica del corso</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Controllo di qualità nella finestra di modifica del corso</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Qui sopra c'è una schermata di un editor dei corsi con caricata una lezione problematica, che mostra una delle verifiche del controllo di qualità integrato: se una lezione contiene dei caratteri non qui disponibili, perché non sono tra quelli nuovi configurati per questa lezione o per una delle precedenti, essi sono evidenziati in rosso. Sono presenti anche dei controlli per le linee troppo lunghe, con i caratteri che vanno al di là dei margini che vengono visualizzati in colori smorzati. </para>
+<para
+>Nella parte sinistra c'è una lista con tutti i file di dati che &i18n-ktouch; conosce, quelli integrati e quelli creati dall'utente. Se quest'ultimo seleziona una risorsa integrata l'editor viene degradato a semplice visualizzatore, mentre se seleziona una mappatura di tastiera il programma si adatterà di conseguenza. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Creare le mappature della tastiera</title>
+<para
+>Puoi creare le tue mappature della tastiera usando l'editor integrato in &i18n-ktouch;. Generalmente è meglio iniziare da una esistente e simile a quella che vuoi creare, usandola come base. Questo può farti risparmiare molto lavoro.</para>
+
+<sect2 id="layout_properties">
+<title
+>Proprietà della mappatura della tastiera</title>
+<para
+>Le proprietà della mappatura della tastiera possono essere scelte usando l'assistente per la creazione di mappature della tastiera di &i18n-ktouch;. Per aprirlo devi premere il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> nella barra degli strumenti della finestra <guilabel
+>Editor del corso e della mappatura della tastiera</guilabel
+>. </para>
+<para
+>La prima pagina dell'assistente per la creazione di &i18n-ktouch; ti permette di scegliere il tipo dei dati. Seleziona <guilabel
+>Mappatura della tastiera</guilabel
+> e premi <guibutton
+>Avanti</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Scegliere il tipo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Scegliere il tipo</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>La seconda pagina dell'assistente ti consente di scegliere il titolo ed il nome della mappatura. </para>
+<screenshot>
+<screeninfo
+>Seconda pagina dell'assistente per una nuova mappatura</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Seconda pagina dell'assistente per una nuova mappatura</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Il titolo della mappatura è importante per la voce del menu a selezione veloce nella lista delle mappature del <link linkend="ktouch_menu"
+>menu di configurazione di &i18n-ktouch;</link
+> e per le statistiche. </para>
+<para
+>Il nome della mappatura verrà usato internamente da &i18n-ktouch; come nome della mappatura. </para>
+<screenshot>
+<screeninfo
+>Terza pagina dell'assistente per una nuova mappatura</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Terza pagina dell'assistente per una nuova mappatura</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Con la terza pagina dell'assistente puoi scegliere un'altra mappatura come modello per la tua. Seleziona il corso dalla lista e premi <guibutton
+>Fine</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Finestra per la modifica della nuova mappatura</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra per la modifica della nuova mappatura</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; aprirà la finestra dell'editor, pronta per l'inserimento dei dati della tua mappatura della tastiera. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Aggiungere i tasti</title>
+<para
+>Usa il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tasto normale</guilabel
+> per aggiungere un nuovo tasto normale, o il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tasto speciale</guilabel
+> per aggiungere un nuovo tasto speciale (tasti modificatori, &Space;, &Backspace;, &Tab;, <keycap
+>Maiuscole attive</keycap
+> o &Enter;) alla mappatura, mentre il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Cancella</guilabel
+> può essere usato per rimuovere un tasto selezionato dalla tua mappatura. Puoi cambiare la scala usando il cursore che c'è nella parte destra della barra degli strumenti dell'editor. </para>
+<para
+>Le proprietà dei singoli tasti possono essere modificate usando il pannello inferiore della finestra dell'editor. </para>
+<sect3 id="normal_keys">
+<title
+>Tasti normali</title>
+<para
+>È facile cambiare le dimensioni o le proprietà di un tasto. </para>
+<para
+>Inizia facendo clic sul tasto che vuoi cambiare: ciò seleziona il tasto premuto come l'attuale. </para>
+<para
+>Ci sono ora quattro quadrati agli angoli del tasto: trascinandoli sarai in grado di spostare i bordi del tasto in una nuova posizione. Il trascinamento dell'intero tasto ti permette di cambiare la sua posizione nella mappatura. </para>
+<para
+>Le caratteristiche numeriche della geometria del tasto possono essere anche cambiate usando la sezione <guilabel
+>Geometria</guilabel
+> del pannello inferiore nella finestra dell'editor. </para>
+<screenshot>
+<screeninfo
+>Modificare le proprietà di un singolo tasto</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Modificare le proprietà di un singolo tasto</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Il pannello inferiore può essere anche usato per scegliere il dito con cui premere il tasto, e per scambiare i marcatori tattili. </para>
+<sect4 id="key_characters">
+<title
+>Caratteri del tasto</title>
+<para
+>I caratteri che saranno mostrati su un tasto possono essere cambiati usando la sezione <guilabel
+> Caratteri</guilabel
+> nel pannello inferiore dell'editor. </para>
+<screenshot>
+<screeninfo
+>Modificare la posizione del carattere</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Modificare la posizione del carattere</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Puoi aggiungere un carattere premendo il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Un carattere selezionato può essere rimosso premendo il pulsante <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Puoi anche selezionare la posizione dei singoli caratteri sul tasto facendo doppio clic nella colonna <guilabel
+>Posizione</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Modificatori</title>
+<para
+>Ci sono diversi tasti modificatori che possono essere definiti in &i18n-ktouch;. Questi possono essere modificati come tasti normali, ma è utile conoscere gli identificatori dei tasti modificatori per usarli nella maniera appropriata. Qui sotto viene data la tabella degli identificatori dei tasti modificatori. </para>
+<table>
+<title
+>Tasti modificatori</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Tasto modificatore</entry>
+<entry
+>Id modificatore in &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>shift_sinistro</literal
+> o <literal
+>shift_destro</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Lezioni personalizzate</title>
+<para
+>Le lezioni personalizzate ti permettono di ampliare il tuo materiale di allenamento in modo semplice, scegliendo del testo arbitrario. </para>
+<para
+>Le lezioni personalizzate sono raccolte in un corso speciale, quello delle <guilabel
+>Lezioni personalizzate</guilabel
+>, sempre disponibile vicino ai <link linkend="picking_a_lesson"
+>normali corsi integrati</link
+>. </para>
+<screenshot>
+<screeninfo
+>Lezioni personalizzate</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Lezioni personalizzate</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Questi corsi speciali funzionano essenzialmente come gli altri, così come l'allenamento e la raccolta delle statistiche. Facendo clic sul pulsante <guibutton
+>Aggiungi una nuova lezione</guibutton
+>, oppure su <guibutton
+>Modifica</guibutton
+> (l'icona della matita per le lezioni esistenti) viene portata in primo piano una versione ridotta del <link linkend="adding_lessons"
+>normale editor delle lezioni</link
+>. </para>
+<screenshot>
+<screeninfo
+>Editor delle lezioni personalizzate</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editor delle lezioni personalizzate</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>L'editor evidenzierà le sezioni problematiche dei testi delle tue lezioni: i caratteri che non potranno essere digitati con la tua mappatura della della tastiera saranno mostrati con uno sfondo rosso scuro, mentre le righe che sono considerate troppo lunghe usano uno sfondo rosa per i caratteri in eccesso. &i18n-ktouch; richiede che ogni riga della lezione non ecceda il limite raccomandato dei 60 caratteri. </para>
+<para
+>Usa il pulsante <guibutton
+>Fatto</guibutton
+> per confermare le tue modifiche, oppure chiudi la finestra dell'editor per annullarle. </para>
+<tip>
+<para
+>Tutte le lezioni personalizzate sono memorizzate nel profilo, mentre le mappature della tastiera individualmente. Usa questo per gestire i diversi insiemi di lezioni in base alle specifiche situazioni di allenamento. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Condividere i tuoi risultati</title>
+<para
+>È possibile salvare i propri corsi e le mappature della tastiera in file separati al di fuori del database locale di &i18n-ktouch;. </para>
+<sect2 id="export_import">
+<title
+>Esporta/Importa</title>
+<para
+>Per esportare un corso o una mappatura di tastiera in un file separato scegli l'elemento corrispondente dall'elenco nella parte sinistra della finestra <guilabel
+>Editor dei corsi e della mappatura della tastiera</guilabel
+>, e premi il pulsante <guibutton
+>Esporta</guibutton
+> nella barra degli strumenti. </para>
+<para
+>&i18n-ktouch; aprirà la finestra di salvataggio standard di &kde;, una cui descrizione dettagliata può essere trovata nel capitolo <ulink url="help:/fundamentals/files.html"
+>Apertura e salvataggio dei file</ulink
+> dei fondamentali di &kde;. </para>
+<para
+>Puoi scegliere il nome e la posizione del file &XML; da salvare. </para>
+<para
+>Se credi valga la pena di condividerli con gli altri utenti, per favore spediscili con una descrizione alla <ulink url="mailto:kde-edu@kde.org"
+>mailing list di kde-edu</ulink
+>. </para>
+<important>
+<para
+>Per essere inclusi nell'installazione standard di &i18n-ktouch; i tuoi dati devono essere rilasciati sotto la <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>&GNU; General Public License, versione 2</ulink
+>. </para>
+</important>
+<para
+>Per importare i tuoi file di dati in &i18n-ktouch; premi il pulsante <guibutton
+>Importa</guibutton
+> nella barra degli strumenti, e scegli il file &XML; che era stato esportato in precedenza con &i18n-ktouch;. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Riconoscimenti e licenza</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>&ktouch;, Copyright 1999-2007 di</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&ktouch;, Copyright 2011-2019 by Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>. </para>
+
+<para
+>Hanno contribuito:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, tastiera, traduzione e file di allenamento tedeschi.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, tastiera latinoamericana</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, tastiera portoghese</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, tastiera francese</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Una grazie particolare a tutti i contributori (non menzionati qui) dei file di tastiera e delle lezioni.</emphasis>
+</para>
+<para
+>Traduzione e manutenzione della documentazione<email
+>zapaolo@email.it</email
+></para
+><para
+>Traduzione italiana Davide Rizzo <email
+>drizzo@daviderizzo.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

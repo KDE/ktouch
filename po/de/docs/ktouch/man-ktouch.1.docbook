@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Schreibmaschinenkurs</application
+>">
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&ktouch;-Benutzerhandbuch</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>Benutzerhandbuch für &ktouch;</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Anwendungen 20.12)</releaseinfo>
+<productname
+>KDE-Anwendungen</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Ein Schreibmaschinenkurs von &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>path</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+<para
+>&i18n-ktouch; ist ein Programm, um das Maschineschreiben zu lernen. Sie lernen schnell und richtig auf der Tastatur zu schreiben. Jeder Finger hat einen bestimmten Platz auf der Tastatur und soll die zugehörigen Tasten drücken. </para
+> 
+<para
+>&i18n-ktouch; unterstützt Sie beim Lernen des Maschineschreibens mit Übungstexten in verschiedenen Schwierigkeitsstufen. Das Programm zeigt Ihnen die Taste an, die als Nächste gedrückt werden muss, und auch welchen Finger Sie dafür benutzen sollen.</para>
+<para
+>Dieses Programm ist Teil der offiziellen &kde;-Lernprogramme.</para>
+</refsect1>
+
+<refsect1>
+<title
+>&ktouch;-Optionen</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Startet den Kurs- und Tastaturbelegungseditor.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>path</replaceable
+></term>
+<listitem
+><para
+>Diesen Pfad der Liste der QML-Import-Pfade voranstellen.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+<simplelist>
+<member
+>Weitere ausführliche Dokumentation finden Sie unter <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (geben Sie diese &URL; entweder im &konqueror; ein oder starten Sie <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Weitere Informationen finden Sie auf der <ulink url="https://edu.kde.org/ktouch/"
+> &kde; -Edu-Webseite</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>&ktouch; wurde von <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> und <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+> geschrieben. Diese Handbuchseite wurde auf der Grundlage des von <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> für das &Debian;-Projekt geschriebenen Handbuchs erstellt. </para>
+</refsect1>
+
+</refentry>

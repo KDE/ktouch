@@ -1,0 +1,1700 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Клавиатурный тренажёр</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Руководство пользователя &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Пётр</firstname
+><surname
+>Астахов (Zebar)</surname
+><affiliation
+><address
+><email
+>astakhovp@mail.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit>
+<othercredit role="translator"
+><firstname
+>Николай</firstname
+> <surname
+>Шафоростов</surname
+><affiliation
+><address
+><email
+> linux@inet.ua</email
+></address
+></affiliation
+><contrib
+>Редактирование перевода</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Обновление перевода</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>5 января 2021 г.</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Приложения KDE 20.12)</releaseinfo>
+
+<abstract>
+<para
+>&i18n-ktouch; — программа, позволяющая научиться печатать вслепую. Она предоставляет пользователю текст для тренировки и регулирует уровень сложности в зависимости от достигнутых результатов. Программа показывает, где на клавиатуре должен находиться каждый из пальцев и какие клавиши следует им нажимать.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>быстрый набор</keyword>
+<keyword
+>быстрая печать</keyword>
+<keyword
+>набор</keyword>
+<keyword
+>слепая печать</keyword>
+<keyword
+>обучение</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>касание</keyword>
+<keyword
+>печать</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Освоение слепой печати с помощью &i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Введение</title>
+
+<sect2>
+<title
+>Что такое &i18n-ktouch;?</title>
+<para
+>&i18n-ktouch; — программа для обучения печати вслепую.</para>
+<para
+>&i18n-ktouch; предоставляет пользователю текст для тренировки и регулирует уровень сложности в зависимости от достигнутых результатов. Программа показывает, какую клавишу нужно нажать следующей и каким пальцем это следует сделать.</para>
+
+<screenshot>
+<screeninfo
+>Главное окно &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Главное окно &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; — программа, которая позволяет освоить слепую печать. Она предназначена в основном для личного пользования. Пользователь шаг за шагом осваивает печать всеми пальцами без визуальной опоры на клавиатуру (что значительно увеличивает скорость печати). </para>
+</sect2>
+
+<sect2>
+<title
+>Возможности</title>
+
+<para
+>Текущая версия &i18n-ktouch; предоставляет довольно много возможностей. Среди них:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Поддержка десятков различных курсов на многих языках, удобный редактор курсов</simpara
+></listitem>
+<listitem
+><simpara
+>Поддержка различных раскладок клавиатуры с возможностью использования и редактирования пользовательских раскладок</simpara
+></listitem>
+<listitem
+><simpara
+>Сбор комплексных статистических данных во время сеанса обучения; эта информация позволяет пользователю или его учителю анализировать ход обучения</simpara
+></listitem>
+</itemizedlist>
+<para
+>В программе также есть много других возможностей, о которых будет рассказано в соответствующих главах этого руководства. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Начало работы</title>
+
+<para
+>Вот ещё один снимок окна &i18n-ktouch;, на этот раз с немецкой раскладкой клавиатуры и обучающим упражнением:</para>
+
+<screenshot>
+<screeninfo
+>Главное окно &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Главное окно &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Несмотря на то, что обучаться слепой печати с помощью &i18n-ktouch; и работать с программой очень просто, в следующих разделах будет более подробно рассмотрены возможности &i18n-ktouch;.</para>
+
+<sect2 id="creating_profile">
+<title
+>Создание первого профиля пользователя</title>
+
+<para
+>При первом запуске &i18n-ktouch; появится специальное окно для создания первого профиля пользователя. Возможно указать имя профиля и выбрать уровень владения навыками печати. </para>
+<tip>
+<para
+>Выбранный уровень определяет общие принципы работы &i18n-ktouch;. Для новичков упражнения последовательно открываются одно за другим (по мере прохождения), в то время как для опытных пользователей они будут доступны все сразу. </para>
+</tip>
+<note>
+<para
+>Хорошо обдумайте выбор; тип профиля будет невозможно изменить в дальнейшем. Но всегда можно создать новые профили, которые будут лучше соответствовать имеющимся навыкам. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>Окно приветствия &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Окно приветствия &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>После нажатия кнопки <guibutton
+>Начать тренировку</guibutton
+> появится начальное окно. Это окно появится первым при следующем запуске &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Выбор упражнения</title>
+
+<para
+>Начальное окно &i18n-ktouch; состоит из панели инструментов и панели выбора курсов. Подробнее: <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>Начальное окно &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Начальное окно &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; отобразит первый доступный курс для текущей раскладки клавиатуры. </para>
+
+<para
+>Для переключения между курсами или выбора <link linkend="custom_lessons"
+>пользовательских курсов</link
+> следует щёлкать по соответствующим миниатюрам, расположенным в правой части окна. </para>
+
+<note>
+<para
+>На некоторых платформах, особенно на &Microsoft; &Windows;, нельзя воспользоваться возможностью автоматического определения раскладки клавиатуры. В этом случае следует нажать кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов, выбрать пункт <guisubmenu
+>Настройка клавиатуры...</guisubmenu
+> и указать название своей раскладки клавиатуры (или название раскладки, похожей на неё). Если нужной раскладки нет в списке, возможно задать свою собственную (смотрите <xref linkend="create_layouts"/>). </para>
+</note>
+<para
+>Выберите упражнение в списке, расположенном в левой части окна. Заблокированные упражнения (<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>) недоступны для выбора, так как имеют слишком высокую сложность относительно текущих навыков. Проходите упражнения, чтобы разблокировать последующие. Содержимое выбранного упражнения отображается справа от списка упражнений. </para>
+<tip>
+<para
+>Чтобы включить или отключить показ дополнительных сведений о выбранном курсе, воспользуйтесь кнопкой <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, расположенной рядом с названием курса. </para>
+</tip>
+<para
+>Когда выбор сделан, нажмите кнопку <guibutton
+>Начать тренировку</guibutton
+> для перехода в окно обучения &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Обучение</title>
+<para
+>Окно обучения &i18n-ktouch; содержит три основных раздела: </para>
+<orderedlist>
+<listitem
+><simpara
+>Некоторые статистические данные, размещённые в информационных полях сверху</simpara
+></listitem>
+<listitem
+><simpara
+>Текст, который необходимо набрать</simpara
+></listitem>
+<listitem
+><simpara
+>Визуальная клавиатура</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>Окно обучения &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Окно обучения &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>Видимость частей окна обучения возможно настроить с помощью <link linkend="configuration_dialog"
+>диалога конфигурации &i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Расположите указательные пальцы на двух клавишах с небольшими выступами рядом с центральной частью среднего ряда клавиш. Когда вы это сделаете, другие ваши пальцы найдут подходящие клавиши почти автоматически. Большие пальцы должны быть расположены над клавишей пробела, — единственной клавишей, которую вы будете ими нажимать. Другие пальцы должны расположиться на трёх клавишах, соседствующих с клавишами с выступами и находящихся в том же ряду клавиш. Клавиши, которые следует нажимать определённым пальцем, будут отмечены одинаковым цветом. Старайтесь как можно меньше двигать руками. После нажатия клавиши всегда пытайтесь вернуть пальцы в исходное положение. </para>
+<para
+>Начните вводить текст, показанный в середине окна программы. Следующая клавиша, которую следует нажать, всегда подсвечивается на визуальной клавиатуре. Во время печати можно ошибиться и нажать не ту клавишу. Ошибочно введённые символы обозначены красным цветом. Вам придётся нажимать клавишу &Backspace;, чтобы удалить ошибочные символы и ввести правильные. </para>
+<para
+>После успешного набора строки текста следует нажать клавишу «Ввод» для перехода к следующей строке. </para>
+<tip>
+<para
+>Изменить клавишу, используемую для перехода к следующей строке, возможно в <link linkend="configuration_dialog"
+>диалоге конфигурации &i18n-ktouch;</link
+> </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Просмотр данных о ходе обучения</title>
+<para
+>После прохождения упражнения &i18n-ktouch; откроет окно статистики. В нём показаны статистические данные текущего сеанса обучения и упражнения, а также графические данные предыдущих сеансов обучения. </para>
+<screenshot>
+<screeninfo
+>Диалог статических данных &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Диалог статических данных &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>В диалоге статистических данных может быть показано определённое упражнение или <guilabel
+>Все упражнения</guilabel
+>. Эти режимы показа полезны при анализе общего продвижения обучения и продвижения в определённых упражнениях. </para>
+<para
+>Чтобы перейти к выполнению следующего упражнения, нажмите кнопку <guibutton
+>Следующее упражнение</guibutton
+> на панели инструментов (будет открыто следующее упражнение текущего курса). Для повторного выполнения того же самого упражнения нажмите кнопку <guibutton
+>Повторить упражнение</guibutton
+>. Кнопка <guibutton
+>Следующее упражнение</guibutton
+> доступна только в случае успешного выполнения упражнения. </para>
+<para
+>Чтобы перейти к какому-либо другому упражнению или курсу, нажмите кнопку <guibutton
+>Вернуться на главный экран</guibutton
+>. </para>
+<para
+>Чтобы прекратить сеанс обучения в &i18n-ktouch;, просто закройте окно приложения. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Подготовка к обучению</title>
+<para
+>Назначение практически всех элементов начального окна программы &i18n-ktouch; должно быть понятным без подсказок. С помощью панели инструментов, расположенной в верхней части окна, возможно просмотреть и настроить параметры &i18n-ktouch;. Для просмотра информации о курсах и переключения между курсами используется панель выбора курсов. </para>
+
+<sect2 id="toolbar">
+  <title
+>Панель инструментов &i18n-ktouch;</title>
+<para
+>На панели инструментов &i18n-ktouch; находятся кнопка профиля (слева) и меню приложения (справа). </para>
+
+<sect3 id="profile_management">
+<title
+>Управление профилями</title>
+<para
+>Кнопка с названием вашего профиля, расположенная в левой части панели инструментов начального окна, позволяет управлять профилями &i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Управление профилями в &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Управление профилями в &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Возможно изменить параметры существующих профилей, удалить их или создать новый профиль с помощью кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Чтобы перейти в режим правки, нажмите кнопку <guibutton
+>Изменить</guibutton
+>. Для выбора профиля и возврата в начальное окно нажмите кнопку <guibutton
+>Использовать выбранный профиль</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Редактирование данных профиля</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Редактирование данных профиля</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Меню &i18n-ktouch;</title>
+<para
+>Чтобы открыть меню &i18n-ktouch;, нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов в начальном окне. </para>
+
+<screenshot>
+<screeninfo
+>Меню &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Меню &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Далее приводится перечень пунктов меню с их кратким описанием назначения каждого из них. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Полноэкранный режим</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Включение и отключение</action
+> полноэкранного режима &i18n-ktouch;</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Редактор курсов и раскладок клавиатуры...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Открытие</action
+> <link linkend="extending"
+>окна редактора</link
+> &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Настроить Клавиатурный тренажёр…</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Показ</action
+> <link linkend="configuration_dialog"
+>диалога конфигурации</link
+> &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Комбинации клавиш...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Настройка</action
+> комбинаций клавиш, которые требуется назначить некоторым действиям </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Настройка клавиатуры...</guimenuitem
+></term>
+<listitem
+><para
+>Пункт модуля программы «Параметры системы» для настройки параметров клавиатуры. Возможно использовать для подготовки к обучению с помощью другой раскладки клавиатуры. </para>
+<note>
+<para
+>На платформах без поддержки автоматического определения раскладки клавиатуры (в том числе &Microsoft; &Windows;) этот пункт заменяется на пункт, позволяющий выбрать раскладку клавиатуры &i18n-ktouch; вручную. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>В &i18n-ktouch; содержится общий для всех приложений &kde; пункт меню <guimenu
+>Справка</guimenu
+>. Дополнительные сведения доступны в разделе <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> «Основ &kde;». </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Диалог конфигурации</title>
+
+<para
+>Программа &i18n-ktouch; предоставляет довольно широкие возможности настройки. Параметры применяются сразу ко всем профилям. Чтобы открыть диалог конфигурации, нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, расположенную в правой части верхней панели инструментов в начальном окне, затем выберите пункт <guimenuitem
+>Настроить Клавиатурный тренажёр...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Параметры тренировки</guilabel
+></term>
+     <listitem>
+       <para
+>В этом диалоге возможно задать параметры, управляющие внешним видом окна тренажёра и поведением &i18n-ktouch; во время обучения.</para>
+<screenshot>
+<screeninfo
+>Параметры тренировки</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметры тренировки</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Флажок <guilabel
+>Требовать исправления ошибок</guilabel
+> позволяет указать, следует ли требовать исправления ошибок при наборе текста. </para>
+<para
+>Флажки <guilabel
+>Показывать клавиатуру</guilabel
+> и <guilabel
+>Показывать статистику в режиме реального времени</guilabel
+> позволяют включить или отключить видимость панелей клавиатуры и статистических данных во время обучения. </para>
+<para
+>Для перехода к следующей строке тренировочного текста может использоваться одна из двух клавиш: «Ввод» или «Пробел». </para>
+<para
+>В разделе <guilabel
+>Предел разблокирования упражнений</guilabel
+> возможно задать параметры, управляющие разблокированием упражнений более высокого уровня. &i18n-ktouch; проверяет указанные значения в конце каждого уровня и определяет, следует ли разблокировать следующее упражнение. Если значения <emphasis
+>обоих</emphasis
+> параметров (скорости набора в символах в минуту и точности) выше или равны указанным в разделе <guilabel
+>Предел разблокирования упражнений</guilabel
+>, &i18n-ktouch; разблокирует следующее упражнение более высокого уровня. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Параметры цвета</guilabel
+></term>
+  <listitem>
+<para
+>В этом диалоге возможно изменить цвета, используемые &i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Параметры цвета</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметры цвета</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Возможно выбрать цвет фона для клавиш каждого из пальцев. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Выбор курсов и упражнений</title>
+<para
+>&i18n-ktouch; автоматически определяет раскладку клавиатуры и показывает только те курсы, которые подходят для неё. </para>
+<note>
+<para
+>На некоторых платформах (включая &Windows;) не поддерживается автоматическое определение раскладки клавиатуры. Используйте меню приложения для выбора раскладки клавиатуры вручную. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Смена курсов</title>
+<para
+>Если для раскладки клавиатуры доступно несколько курсов, можно выбрать предпочитаемый с помощью кнопок <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> и <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> справа от названия курса. Когда доступен только один курс, эти кнопки не будут видны. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Разблокирование упражнений</title>
+<para
+>Если при <link linkend="creating_profile"
+>создании первого профиля</link
+> был выбран вариант <guilabel
+>У меня нет или очень мало опыта в клавиатурном наборе</guilabel
+>, некоторые упражнения будут заблокированы. Такие упражнения отмечены значком <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> и становятся доступными только после успешного прохождения предыдущих. </para>
+<note>
+<para
+>Параметры прохождения упражнений возможно изменить в <link linkend="configuration_dialog"
+>диалоге конфигурации &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Обучение с помощью другой раскладки клавиатуры</title>
+<para
+>&i18n-ktouch; позволяет использовать для обучения любую раскладку клавиатуры. Просто нажимайте клавиши, которые подсвечивает программа, не обращая внимания на то, что на них написано на физической клавиатуре. </para>
+<para
+>Чтобы выбрать другую раскладку клавиатуры, воспользуйтесь пунктом меню <menuchoice
+><guimenu
+>Настроить клавиатуру...</guimenu
+></menuchoice
+>. После этого &i18n-ktouch; применит соответствующие изменения и предоставит курсы для этой раскладки. </para>
+<note>
+<para
+>На платформах без автоматического определения раскладки клавиатуры (например, &Microsoft; &Windows;) придётся сначала настроить операционную систему на использование раскладки, которую требуется использовать для обучения, а затем выбрать ту же раскладку в &i18n-ktouch; с помощью меню приложения. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Эффективное обучение</title>
+<sect2 id="training_techniques">
+<title
+>Методики обучения</title>
+<para
+>Далее приводится несколько общих советов по методикам обучения слепой печати. </para>
+<sect3 id="steady_speed">
+<title
+>Постоянная скорость</title>
+<para
+>Для эффективного обучения слепой печати важно не просто пытаться печатать как можно быстрее, но и сохранять постоянную скорость, а также найти для себя естественный ритм нажатия клавиш. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>Точность — основа всего</title>
+<para
+>Следующий важный момент — сосредоточение внимания на точности. Переходить к упражнениям с другими клавишами можно только в том случае, если полностью освоено использование текущих разблокированных клавиш (то есть допускается очень мало ошибок при наборе текста). Вы заметете рост мастерства, если будете очень мало ошибок (а также сэкономите время на их исправление). </para>
+<note>
+<para
+>По этой причине уровень точности для разблокирования следующего упражнения по умолчанию составляет 98%, в то время как требования к скорости не так высоки (всего 180 символов в минуту). </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Исправление ошибок</title>
+<para
+>Следует применять эффективные способы исправления ошибок. На исправление отдельных символов почти всегда тратится больше времени, чем на исправление всего слова. Для исправления слова достаточно просто нажать комбинацию клавиш <keycombo
+>&Ctrl;&Backspace;</keycombo
+> и набрать это слово заново. Для такой правки почти не требуется умственных усилий. Для исправления же отдельного символа следует сначала найти его в слове, удалить символы до места ошибки, определить недостающую часть слова и заново ввести её. Это требует гораздо большей концентрации внимания, чем простой повторный набор слова. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Приостановка сеанса обучения</title>
+<sect3 id="automatically_pausing">
+<title
+>Автоматически</title>
+<para
+>Если открыть любое диалоговое окно или перейти в другое приложения во время сеанса обучения, он будет приостановлен, а таймер — отключён (вплоть до момента возврата фокуса окну &i18n-ktouch; и нажатия любой клавиши). </para>
+<para
+>Сеанс обучения также будет приостановлен, если пользователь не предпринимал никаких действий на протяжении пяти секунд. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Вручную</title>
+<para
+>Текущий сеанс возможно приостановить вручную с помощью кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов. </para>
+<para
+>Если нажать кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов, &i18n-ktouch; приостановит текущий сеанс и отобразит накладывающееся меню с вариантами дальнейших действий. </para>
+<screenshot>
+<screeninfo
+>Меню &i18n-ktouch; при приостановке</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Меню &i18n-ktouch; при приостановке</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Отслеживание хода обучения</title>
+<para
+>После завершения упражнения программа не возвращается сразу к начальному экрану. Вместо этого открывается особое окно сводки и статистических данных. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Статистические данные о скорости и точности</title>
+<screenshot>
+<screeninfo
+>Страница продвижения окна статистических данных</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Страница продвижения окна статистических данных</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Фильтрация по упражнениям</title>
+<para
+>Страница статистических данных о скорости и точности позволяет оценить ход обучения и определить свои слабые стороны. </para>
+<para
+>Статистические данные возможно фильтровать по упражнениям с помощью раскрывающегося меню рядом с надписью <guilabel
+>За</guilabel
+>. Эта возможность позволяет контролировать прохождение текущего упражнения и сравнивать достигнутые результаты с результатами прохождения других упражнений. </para>
+<screenshot>
+<screeninfo
+>Раскрывающееся меню диапазона статистических данных</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Раскрывающееся меню диапазона статистических данных</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Для просмотра дополнительных сведений о сеансе наведите указатель мыши на точку на графике; &i18n-ktouch; отобразит статистические данные для соответствующего сеанса. </para>
+<screenshot>
+<screeninfo
+>Результаты выполнения упражнения</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Результаты выполнения упражнения</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Статистические данные об ошибках</title>
+<para
+>Чтобы переключить страницу результатов на показ частоты ошибок для каждой клавиши, воспользуйтесь раскрывающимся меню рядом с надписью <guilabel
+>Показать</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Переключение режима статистических данных</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Переключение режима статистических данных</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>В этом режиме &i18n-ktouch; отображает столбчатую диаграмму ошибок для каждой клавиши в последнем сеансе обучения. </para>
+<screenshot>
+<screeninfo
+>Диаграмма ошибок по клавишам</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Диаграмма ошибок по клавишам</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Чтобы снова включить показ графика упражнений, воспользуйтесь тем же раскрывающимся меню рядом с надписью <guilabel
+>Показать</guilabel
+>. </para>
+<para
+>Если упражнение успешно пройдено, можно сразу перейти к следующему: нажмите кнопку <guibutton
+>Следующее упражнение</guibutton
+> на панели инструментов. В ином случае можно повторить текущее упражнение с помощью кнопки <guibutton
+>Повторить упражнение</guibutton
+> или вернуться на начальный экран (для этого предназначена оставшаяся кнопка). </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Расширение &i18n-ktouch;</title>
+
+<sect1 id="create_courses">
+<title
+>Создание курсов</title>
+<para
+>Встроенный редактор курсов и раскладок &i18n-ktouch; позволяет с лёгкостью создать свой собственный обучающий курс. Нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, расположенную в правой части панели инструментов начального экрана, и выберите пункт <guimenuitem
+>Редактор курсов и раскладок клавиатуры...</guimenuitem
+>. Возможно открыть файл курса, создать пустой курс с нуля или использовать существующий курс в качестве шаблона.</para>
+<important>
+<para
+>Редактировать встроенные курсы нельзя (даже при наличии прав доступа на запись в папку установки). </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Главное окно редактора курсов и раскладок</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Главное окно редактора курсов и раскладок</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Свойства курса</title>
+<para
+>Свойства курса возможно указать с помощью мастера создания курсов &i18n-ktouch;. Для запуска этого мастера нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов окна <guilabel
+>Редактор курсов и раскладок</guilabel
+>. </para>
+<para
+>Первая страница мастера создания курсов &i18n-ktouch; позволяет выбрать тип данных. Выберите <guilabel
+>Курс</guilabel
+> и нажмите кнопку <guibutton
+>Далее</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Выбор типа</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Выбор типа</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>На второй странице мастера возможно указать название, раскладку клавиатуры и описание курса. </para>
+<screenshot>
+<screeninfo
+>Вторая страница мастера создания курсов</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вторая страница мастера создания курсов</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Название курса используется для обозначения соответствующего пункта в списке курсов, а также для показа статистических данных. </para>
+<para
+>В описании следует указать информацию об авторе курса и источнике данных упражнений (если имеется). Это описание будет показано при нажатии кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на начальном экране &i18n-ktouch;. </para>
+<para
+>Когда надлежащие значения параметров будут указаны, нажмите кнопку <guibutton
+>Далее</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Третья страница мастера создания курсов</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Третья страница мастера создания курсов</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>На третьей странице мастера в качестве шаблона для создаваемого курса возможно выбрать другой курс. Выберите курс в списке и нажмите кнопку <guibutton
+>Готово</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Окно редактирования нового курса</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Окно редактирования нового курса</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; откроет окно редактора курсов, в котором будет возможно ввести данные курса. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Добавление упражнений</title>
+<para
+>Курс представляет собой упорядоченный набор упражнений. Чтобы обеспечить успешное освоение слепой печати, содержимое курса должно соответствовать нескольким требованиям. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Название упражнения должно быть информативным</emphasis
+></term>
+<listitem>
+<para
+>Для каждого уровня в упражнении возможно указать новые символы/клавиши. Стоит включить новые символы в название упражнения. Щёлкните по пункту названия в списке <guilabel
+>Упражнения</guilabel
+> и введите информативное название. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Текст, который указывается в качестве названия упражнения, будет использоваться как текст сведений об упражнении в списке курсов на начальном экране. Пользователю будет гораздо проще выбрать упражнение при наличии информативного названия. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>В первом упражнении должны быть задания для основных клавиш</emphasis
+></term>
+<listitem>
+<para
+>Обычно на клавиатуре есть два тактильных маркера для клавиш во втором ряду, на которых должны находиться указательные пальцы. Эти две клавиши и три соседние клавиши во внешнем направлении от каждой из них являются основными. В русской раскладке на этих клавишах расположены символы <emphasis
+>фываолдж</emphasis
+>. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Эти восемь клавиш определяют исходное расположение пальцев на клавиатуре. Для успешного изучения слепой печати необходимо сначала освоить это расположение. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>В каждом упражнении должны добавляться две новые клавиши </emphasis
+></term>
+<listitem>
+<para
+>Порядок разблокирования клавиш не является фиксированным, но обычно клавиши добавляются парами (для одного и того же пальца на обеих руках). Продвигайтесь от основных клавиш к тем, которые находятся дальше (то есть клавиши четвёртого ряда следует добавлять последними). Предпочтение следует отдавать клавишам с основными символами языка; для этого может потребоваться немного отойти от приведённых выше рекомендаций по добавлению клавиш. Например, во французском языке очень важны диакритические знаки, поэтому в одном из первых упражнений можно просто добавить клавишу с таким знаком. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Если добавить больше клавиш, упражнение может стать слишком сложным, что приведёт к потере мотивации учеником. В первых же упражнениях должны использоваться клавиши с важными символами языка; это позволит быстрее перейти к формированию настоящих слов. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Дополнительный упор на новые клавиши</emphasis
+></term>
+<listitem>
+<para
+>Убедитесь, что символы, которые вводятся с помощью добавленных в упражнении клавиш, являются наиболее употребительными в тексте упражнения (или хотя бы встречаются в нём достаточно часто). </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Успешное выполнение упражнения учеником означает освоение им новых клавиш. Это возможно только в том случае, если упражнение содержит значительное количество соответствующих этим клавишам символов. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>К упражнениям с новыми клавишами следует добавлять упражнения на закрепление уже пройденных</emphasis
+></term>
+<listitem>
+<para
+>Через каждые два-три упражнения следует включать одно на закрепление пройденного материала (то есть не содержащее новых клавиш). Такие упражнения должны в примерном равном количестве содержать все уже пройденные символы. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Они помогают закрепить приобретённые навыки и позволяют проверить общий уровень освоения слепой печати. Кроме того, такие упражнения хорошо подходят для повторных тренировок, нацеленных на дальнейшее совершенствование общих навыков набора. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Отдельные упражнения для верхнего регистра</emphasis
+></term>
+<listitem>
+<para
+>Несколько упражнений следует посвятить исключительно верхнему регистру. В идеале верхний регистр вводится поэтапно: сначала только левая клавиша &Shift;, потом правая, затем обе, а далее — одно или несколько упражнений на закрепление. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Освоение набора в верхнем регистре — это самая сложная часть освоения слепой печати. Поэтому этим упражнениям следует уделить больше внимания. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Необходимо добавить в упражнения все символы раскладки</emphasis
+></term>
+<listitem>
+<para
+>Следует включить те символы, которые доступны с помощью модификаторов, отличных от &Shift;. В идеале необходимо добавить в упражнения каждый символ, нанесённый на физическую клавиатуру. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Чем полнее курс, тем полезнее он для ученика. Кроме того, такой курс будет более интересен уже уверенно владеющим слепой печатью пользователям. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Кнопка <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> позволяет добавить новое упражнение в курс, а кнопка <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> — удалить выбранное упражнение из курса. Кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> позволяют переупорядочить упражнения в курсе. </para>
+<important>
+<para
+>Удалять упражнения следует с осторожностью. При удалении упражнений могут быть сброшены данных о прохождении обучения для всех пользователей курса. Если в курс планируется внести масштабные изменения, обычно лучше использовать существующий курс в качестве основы для нового. </para>
+</important>
+<para
+>Содержимое упражнения возможно изменить с помощью поля ввода, расположенного в нижней правой части окна. Можно скопировать фрагменты текста из предпочитаемого текстового редактора и вставить их в это поле. </para>
+<para
+>Кнопка <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> позволяет открыть обычный текстовый файл, содержимое которого будет загружаться в поле текста упражнения. </para>
+<para
+>Кнопка <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> позволяет выполнить перенос текста упражнения. Редактор &i18n-ktouch; переносит текст таким образом, чтобы каждая строка упражнения соответствовала рекомендуемому ограничению (60 символов). </para>
+<para
+>Предположим, что требуется добавить новое упражнение. Рекомендуется обратить внимание на следующее: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Упражнениям следует дать информативные названия</emphasis
+></term>
+<listitem>
+<para
+>В названии можно указать новые символы (если имеются) или иным образом указать, чему посвящено упражнение. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Содержательные названия облегчают поиск нужного курса. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Текст упражнения должен состоять из настоящих слов и предложений</emphasis
+></term>
+<listitem>
+<para
+>Лучше всего, если упражнение будет содержать связный последовательный текст на свободную тему. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Обучение на настоящих словах и предложениях эффективнее обучения на произвольных случайных сочетаниях символов, так как оно ближе к набору в реальных условиях. Кроме того, так интереснее учиться. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Сочетаний символов, которые не формируют слова, следует избегать</emphasis
+></term>
+<listitem>
+<para
+>Обучение с помощью настоящих слов может оказаться невозможным при выполнении первых упражнений, поскольку ученику будет доступен довольно ограниченный набор символов. Но при первой возможности следует начать использовать только настоящие слова. Никогда не включайте в упражнения слова, написанныес ошибками. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Случайные комбинации символов трудно набирать, и они почти не встречаются при наборе обычных текстов. С другой стороны, слова с ошибками сбивают с толка и даже могут негативно отразиться на процессе обучения (ученик может запомнить неверное написание). </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Длина текста упражнения должна составлять примерно 600 символов</emphasis
+></term>
+<listitem>
+<para
+>Упражнения могут быть и длиннее (до 1200 символов), но вот более коротких упражнений следует избегать. Это особенно верно для упражнений на закрепление. </para>
+<note>
+<title
+>Пояснение</title>
+<para
+>Если размер упражнений находится в этих рамках, ещё не владеющему слепой печатью пользователю потребуется от пяти до десяти минут на выполнение одного упражнения. Более длинные упражнения утомительны, а более короткие — неэффективны. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Проверки качества в редакторе текста упражнений</title>
+<screenshot>
+<screeninfo
+>Проверка качества в окне редактирования курса</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Проверка качества в окне редактирования курса</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Выше приводится снимок окна редактора курсов с проблемным упражнением. На снимке показана одна из встроенных проверок качества: если упражнение содержит символы, которые не должны быть доступны (так как не являются новыми символами из этого упражнения или символами из предыдущих упражнений), они выделяются красным цветом. Также имеется проверка длины строк; цвет символов, выходящих за пределы допустимой длины строки, становится приглушённым. </para>
+<para
+>С левой стороны окна находится список всех известных &i18n-ktouch; файлов данных (как встроенных, так и созданных пользователем). Если пользователь выбирает встроенный ресурс, редактор переходит в режим простого просмотра. Если пользователь выбирает раскладку клавиатуры, программа также скорректирует режим отображения соответствующим образом. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Создание раскладок клавиатуры</title>
+<para
+>Встроенный редактор &i18n-ktouch; позволяет пользователю создавать свои собственные раскладки клавиатуры. Обычно новую раскладку проще всего создать на основе близкой уже существующей раскладки. Это сильно уменьшает количество работы.</para>
+
+<sect2 id="layout_properties">
+<title
+>Свойства раскладки клавиатуры</title>
+<para
+>Свойства раскладки клавиатуры возможно указать с помощью мастера создания раскладок &i18n-ktouch;. Для запуска этого мастера нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панели инструментов окна <guilabel
+>Редактор курсов и раскладок</guilabel
+>. </para>
+<para
+>Первая страница мастера создания курсов &i18n-ktouch; позволяет выбрать тип данных. Выберите <guilabel
+>Раскладку клавиатуры</guilabel
+> и нажмите кнопку <guibutton
+>Далее</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Выбор типа</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Выбор типа</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>На второй странице мастера возможно указать название и имя раскладки клавиатуры. </para>
+<screenshot>
+<screeninfo
+>Вторая страница мастера создания раскладок</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вторая страница мастера создания раскладок</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Название раскладки используется для обозначения соответствующего пункта в списке раскладок в <link linkend="ktouch_menu"
+>меню конфигурации &i18n-ktouch;</link
+>, а также для показа статистических данных. </para>
+<para
+>Имя раскладки используется самой программой &i18n-ktouch;. </para>
+<screenshot>
+<screeninfo
+>Третья страница мастера создания раскладок</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Третья страница мастера создания раскладок</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>На третьей странице мастера в качестве шаблона для создаваемой раскладки возможно выбрать другую раскладку. Выберите раскладку в списке и нажмите кнопку <guibutton
+>Готово</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Окно редактирования новой раскладки</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Окно редактирования новой раскладки</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; откроет окно редактора, в котором будет возможно ввести данные раскладки клавиатуры. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Добавление клавиш</title>
+<para
+>Нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Обычная клавиша</guilabel
+> для добавления обычной клавиши или кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Специальная клавиша</guilabel
+> для добавления специальной клавиши (клавиши-модификаторы, «Пробел», &Backspace;, &Tab;, <keycap
+>Caps Lock</keycap
+> или «Ввод») в раскладку. Кнопка <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Удалить</guilabel
+> позволяет удалить выбранную клавишу из раскладки. Чтобы изменить масштаб, воспользуйтесь ползунком в правой части панели инструментов редактора. </para>
+<para
+>Свойства отдельных клавиш возможно изменить с помощью нижней панели окна редактора. </para>
+<sect3 id="normal_keys">
+<title
+>Обычные клавиши</title>
+<para
+>Изменить размер или свойства клавиши очень легко. </para>
+<para
+>Начните со щелчка по клавише, которую следует изменить; она будет выбрана в качестве текущей. </para>
+<para
+>По углам клавиши расположены 4 квадрата. Перетаскивая их, возможно переместить границу клавиши в другое место. Чтобы изменить место клавиши в раскладке, перетащите её целиком. </para>
+<para
+>Числовые характеристики геометрии клавиши также возможно изменить: воспользуйтесь разделом <guilabel
+>Геометрия клавиши</guilabel
+> панели в нижней части окна редактора. </para>
+<screenshot>
+<screeninfo
+>Изменение свойств отдельной клавиши</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Изменение свойств отдельной клавиши</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Нижняя панель также позволяет указать палец, которым следует нажимать клавишу, и включить или отключить показ тактильного маркера для этой клавиши. </para>
+<sect4 id="key_characters">
+<title
+>Символы клавиши</title>
+<para
+>Символы, которые показаны на клавише, возможно изменить с помощью раздела <guilabel
+> Символы</guilabel
+> нижней панели редактора. </para>
+<screenshot>
+<screeninfo
+>Изменение положения символа</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Изменение положения символа</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Чтобы добавить символ, нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Чтобы удалить выбранный символ, нажмите кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Также возможно выбрать положение отдельных символов на клавише двойным щелчком в столбце <guilabel
+>Положение</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Модификаторы</title>
+<para
+>В программе &i18n-ktouch; можно назначить несколько клавиш-модификаторов. Их возможно редактировать тем же образом, что и обычные клавиши, но для надлежащего использования этих клавиш желательно знать их идентификаторы. Ниже представлена таблица идентификаторов клавиш-модификаторов. </para>
+<table>
+<title
+>Клавиши-модификаторы</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Клавиша-модификатор</entry>
+<entry
+>Идентификатор модификатора в &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>left_shift</literal
+> или <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Пользовательские упражнения</title>
+<para
+>Эта возможность позволяет легко дополнять обучающий материал, выбирая какой-либо произвольный текст. </para>
+<para
+>Пользовательские упражнения собраны в специальный курс, <guilabel
+>Пользовательские упражнения</guilabel
+>, доступ к которому можно получить там же, где и к <link linkend="picking_a_lesson"
+>обычным встроенным курсам</link
+>. </para>
+<screenshot>
+<screeninfo
+>Курс пользовательских упражнений</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Курс пользовательских упражнений</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Этот особый курс в целом похож на любой другой, функциональные возможности обучения и сбора статистических данных работают как обычно. При нажатии кнопки <guibutton
+>Добавить новое упражнение</guibutton
+> или <guibutton
+>Изменить</guibutton
+> (значок с карандашом для существующих упражнений) появится урезанная версия <link linkend="adding_lessons"
+>редактора обычных упражнений</link
+>. </para>
+<screenshot>
+<screeninfo
+>Редактор пользовательских упражнений</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Редактор пользовательских упражнений</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Редактор выделяет проблемные области текстов упражнений. Символы, которые нельзя набрать с помощью указанной раскладки клавиатуры, отображаются на тёмно-красном фоне, а символы, которые выходят за пределы максимальной длины строки, — на розовом. &i18n-ktouch; ограничивает длину каждой строки в упражнении; рекомендуемая длина составляет не более 60 символов. </para>
+<para
+>Воспользуйтесь кнопкой <guibutton
+>Готово</guibutton
+> для подтверждения правок или закройте окно редактора для их отмены. </para>
+<tip>
+<para
+>Пользовательские упражнения распределяются по профилям пользователей и раскладкам клавиатуры. Возможно работать с разными наборами упражнений в зависимости от конкретных задач обучения. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Публикация результатов работы</title>
+<para
+>Созданные пользователем курсы и раскладки можно сохранить в отдельных файлах вне локальной базы данных &i18n-ktouch;. </para>
+<sect2 id="export_import">
+<title
+>Экспорт и импорт</title>
+<para
+>Чтобы экспортировать курс или раскладку клавиатуры в отдельный файл, выберите соответствующий пункт в списке в левой части окна <guilabel
+>Редактора курсов и раскладок</guilabel
+> и нажмите кнопку <guibutton
+>Экспорт</guibutton
+> на панели инструментов. </para>
+<para
+>&i18n-ktouch; откроет стандартный диалог сохранения &kde;. Подробное описание этого диалога доступно в разделе <ulink url="help:/fundamentals/files.html"
+>Открытие и сохранение файлов</ulink
+> «Основ &kde;». </para>
+<para
+>Возможно указать название и расположение &XML;-файла, который следует сохранить. </para>
+<para
+>Чтобы поделиться созданными файлами с другими пользователями, отправьте эти файлы вместе с описанием в <ulink url="mailto:kde-edu@kde.org"
+>список рассылки kde-edu</ulink
+>. </para>
+<important>
+<para
+>Чтобы авторы программы смогли включить предоставленные пользователем данные в стандартный комплект данных &i18n-ktouch;, они должны быть предоставлены на условиях <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>стандартной общественной лицензии &GNU; версии 2</ulink
+>. </para>
+</important>
+<para
+>Чтобы импортировать файлы данных в &i18n-ktouch;, нажмите кнопку <guibutton
+>Импорт</guibutton
+> на панели инструментов и выберите ранее экспортированный с помощью &i18n-ktouch; &XML;-файл. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>&ktouch;, © 1999—2007</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&ktouch;, © Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>, 2011—2019. </para>
+
+<para
+>При участии:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, немецкая раскладка, тренировочный файл и перевод</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, латиноамериканская раскладка</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, португальская раскладка</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, французская раскладка</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Особая благодарность всем остальным (не упомянутым здесь) участникам разработки файлов раскладок и упражнений.</emphasis>
+</para>
+<para
+>Перевод на русский язык: Астахов Пётр (Zebar)<email
+>astakhovp@mail.ru</email
+></para
+><para
+>Обновление перевода: Олеся Герасименко<email
+>translation-team@basealt.ru</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

@@ -1,0 +1,1646 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Typetrainer</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Handboek van &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+&Jaap.Woldringh; 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
+
+<abstract>
+<para
+>&i18n-ktouch; is een programma waarmee u kunt leren blind typen. &i18n-ktouch; bevat oefenteksten, en gaat automatisch naar een ander niveau, afhankelijk van uw vorderingen. Het programma toont welke toets u als volgende moet aanslaan, en met welke vinger.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>blind typen</keyword>
+<keyword
+>blind typen</keyword>
+<keyword
+>typen</keyword>
+<keyword
+>typen</keyword>
+<keyword
+>educatie</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>blind</keyword>
+<keyword
+>typ</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Leren blind typen met &i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Inleiding</title>
+
+<sect2>
+<title
+>Wat is &i18n-ktouch;?</title>
+<para
+>&i18n-ktouch; is een programma waarmee u kunt leren blind typen.</para>
+<para
+>&i18n-ktouch; bevat oefenteksten, en gaat automatisch naar een ander niveau, afhankelijk van uw vorderingen. Het programma toont welke toets u als volgende moet aanslaan, en met welke vinger.</para>
+
+<screenshot>
+<screeninfo
+>Hoofdscherm van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Hoofdscherm van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; is een leerprogramma voor blindtypen voor persoonlijk gebruik. U leert met alle vingers te typen, stap voor stap, zonder daarbij op het toetsenbord te moeten kijken. Hierdoor kunt u straks veel sneller typen. </para>
+</sect2>
+
+<sect2>
+<title
+>Mogelijkheden</title>
+
+<para
+>In zijn huidige versie heeft &i18n-ktouch; heel wat handige eigenschappen, zoals:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Bevat vele verschillende lessen in vele talen en een handig bewerkingsprogramma voor lessen</simpara
+></listitem>
+<listitem
+><simpara
+>Ondersteuning voor diverse toetsenbordindelingen met de mogelijkheid om zelfgedefinieerde indelingen te gebruiken</simpara
+></listitem>
+<listitem
+><simpara
+>Gedurende de oefensessie wordt uitgebreide statistische informatie verzameld waarmee u (of uw leraar) uw vorderingen kunt analyseren</simpara
+></listitem>
+</itemizedlist>
+<para
+>Het programma heeft nog vele andere eigenschappen, die worden behandeld in de daarvoor bestemde hoofdstukken van dit handboek. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>De eerste stapjes</title>
+
+<para
+>Hier is nog een  schermafdruk van &i18n-ktouch; in actie, deze keer met een Duits toetsenbord en oefenles:</para>
+
+<screenshot>
+<screeninfo
+>Hoofdscherm van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Hoofdscherm van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Hoewel het leren blind typen met &i18n-ktouch; en met het programma werken eigenlijk erg eenvoudig is, zullen we &i18n-ktouch; in de volgende secties wat nader beschouwen.</para>
+
+<sect2 id="creating_profile">
+<title
+>Uw eigen profiel aanmaken</title>
+
+<para
+>Bij de eerste keer dat u &i18n-ktouch; start, ziet u een scherm waarin u uw eerste profiel kunt aanmaken. U kunt hier een naam voor kiezen, en het niveau van uw typevaardigheid instellen. </para>
+<tip>
+<para
+>Het door u gekozen niveau bepaalt het gedrag van &i18n-ktouch;. Voor beginners worden de lessen een voor een beschikbaar door ze te doen. Voor de gevorderde typist zijn alle lessen direct na vanaf het begin beschikbaar. </para>
+</tip>
+<note>
+<para
+>Denk goed na wat u kiest, In dit profiel kunt u de keus niet meer veranderen. Maar u kunt natuurlijk wel altijd weer een nieuw profiel aanmaken, waarin u iets anders kiest.  </para>
+</note>
+
+<screenshot>
+<screeninfo
+>Welkomstscherm van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Welkomstscherm van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Nadat u op de knop <guibutton
+>Start oefening</guibutton
+> heeft gedrukt, komt u in het thuisscherm. Dit is ook het eerste scherm dat u ziet als u de volgende keer &i18n-ktouch; start. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Een les uitzoeken</title>
+
+<para
+>In het thuisscherm van &i18n-ktouch; is een werkbalk en kunt u een les uitzoeken. Voor meer informatie zie <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>Home screen of &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Home screen of &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&i18n-ktouch; toont u de eerste beschikbare les voor uw huidige toetsenbordindeling. </para>
+
+<para
+>Door op de bijbehorende  miniaturen rechts in het venster te klikken, kunt u tussen lessen en  <link linkend="custom_lessons"
+>aangepaste lessen</link
+> schakelen. </para>
+
+<note>
+<para
+>Op sommige platformen, met name van &Microsoft; &Windows;, is het automatisch detecteren van de toetsenbordindeling niet aanwezig. In zo'n geval moet u klikken op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk, het submenu <guisubmenu
+>Toetsenbordindeling instellen...</guisubmenu
+> kiezen, en de naam kiezen van de toetsenbordindeling, of van een soortgelijk toetsenbord. Als uw toetsenbord niet voorkomt in de lijst, dan kunt u er zelf een maken, zie <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Kies de les die u wilt maken uit de lijst links in het venster. U kunt niet de voor u geblokkeerde lessen kiezen, gekenmerkt met <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, omdat die nog te moeilijk voor u zijn. Door lessen met goed gevolg te maken kunt u steeds meer lessen doen. De vooruitblik van de geselecteerde les ziet u rechts van de lijst met lessen. </para>
+<tip>
+<para
+>Meer informatie over de gekozen les kunt u laten zien of verbergen met behulp van de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> naast de naam van de les. </para>
+</tip>
+<para
+>Wanneer u een les heeft gekozen klikt u op <guibutton
+>Start oefening</guibutton
+>, u komt dan in het oefenscherm van &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Oefenen</title>
+<para
+>In het oefenvenster van &i18n-ktouch; ziet u drie hoofdsecties: </para>
+<orderedlist>
+<listitem
+><simpara
+>Bovenin wat statistieken van het typen, in informatievakken</simpara
+></listitem>
+<listitem
+><simpara
+>De tekst die u moet typen</simpara
+></listitem>
+<listitem
+><simpara
+>Een afbeelding van het toetsenbord</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>Oefenscherm van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Oefenscherm van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>Het zichtbaar zijn van delen van het oefenscherm kan worden ingesteld met behulp van de <link linkend="configuration_dialog"
+>instellingendialoog van &i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Plaats uw beide wijsvingers op de beide toetsen op uw toetsenbord gekenmerkt door de  kleine ribbeltjes, nabij het midden van de middelste rij met karakters (US: f en j). Op deze manier zullen uw vingers de ervoor bestemde toetsen bijna automatisch vinden. Uw duimen moeten zich boven de spatiebalk bevinden, de enige toets die zij tijdens het typen zullen aanslaan. De andere vingers moeten worden geplaatst op de drie toetsen naast de toetsen voor de wijsvingers, op de middelste rij van karakters. Toetsen voor de zelfde vingers worden met dezelfde kleur gekenmerkt. Probeer uw handen zo weinig mogelijk te bewegen, en probeer steeds uw vingers naar de ruststand te laten terugkeren na het typen van een karakter. </para>
+<para
+>Begin nu de tekst te typen in het midden van het scherm. De volgende toets die u moet indrukken wordt altijd aangegeven op het getoonde beeld van het toetsenbord. Bij het typen kunt u fouten maken en op de verkeerde toets drukken. In dat geval verandert de kleur van de karakters in rood, en moet u een of meer keren op &Backspace; drukken om het foute teken (of tekens) te wissen. </para>
+<para
+>Nadat een regel met tekst met succes is voltooid, gaat u met &Enter; naar de volgende regel. </para>
+<tip>
+<para
+>De toets gebruikt voor het naar de volgende regel gaan kan worden gewijzigd met behulp van <link linkend="configuration_dialog"
+>de instellingendialoog van &i18n-ktouch;</link
+> </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Uw vorderingen bekijken</title>
+<para
+>Na het voltooien van een les toont &i18n-ktouch; het scherm met de scores.Hierin worden uw huidige les- en niveaustatistieken en een grafische geschiedenis van voorgaande oefensessies zichtbaar gemaakt. </para>
+<screenshot>
+<screeninfo
+>Statistiekendialoog van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Statistiekendialoog van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In het dialoogscherm voor statistieken kunt u een bepaalde les kiezen om te tonen, of <guilabel
+>Alle lessen</guilabel
+>. U kunt dit gebruiken voor het onderscheid tussen uw algemene prestaties, of alleen in bepaalde lessen. </para>
+<para
+>Indien u denkt dat u de volgende les aankunt, kiest u <guibutton
+>Volgende les</guibutton
+> in de werkbalk, zodat u door kunt gaan met de volgende les van de huidige cursus, of u kiest <guibutton
+>Les herhalen</guibutton
+>, zodat u de huidige les opnieuw kunt proberen. De knop <guibutton
+>Volgende les</guibutton
+> is alleen beschikbaar als u deze les met goed gevolg heeft gedaan. </para>
+<para
+>Indien u naar een andere les of cursus wilt gaan, dan drukt u op de knop <guibutton
+>Terug naar thuisscherm</guibutton
+>. </para>
+<para
+>Indien u niet meer verder wilt gaan met oefenen met &i18n-ktouch;, dan sluit u gewoon het programma af. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Oefening voorbereiden</title>
+<para
+>Zo goed als alles in het thuisscherm van &i18n-ktouch; wijst eigenlijk zich zelf. De bovenste werkbalk is de plaats waar u de instellingen van &i18n-ktouch; kunt zien en wijzigen. De keuze van de cursussen kunt u gebruiken om informatie over de cursussen te bekijken, en tussen cursussen te schakelen. </para>
+
+<sect2 id="toolbar">
+  <title
+>De werkbalk van &i18n-ktouch;</title>
+<para
+>De werkbalk van &i18n-ktouch; bevat de profielknop links, en de menuknop voor toepassingen rechts. </para>
+
+<sect3 id="profile_management">
+<title
+>Profielbeheer</title>
+<para
+>De profielknop met de naam van het huidige profiel, links in de werkbalk van het thuisscherm, kunt u gebruiken voor het beheer van profielen in &i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Profielbeheer in &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Profielbeheer in &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>U kunt de instellingen van bestaande profielen bekijken, profielen wissen of aanmaken, met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Met de knop <guibutton
+>Bewerken</guibutton
+> schakelt u naar de modus voor bekijken. U kunt een profiel selecteren en terugkeren naar het thuisscherm door op de knop <guibutton
+>Geselecteerd profiel gebruiken</guibutton
+> te klikken. </para>
+
+<screenshot>
+<screeninfo
+>Bekijken profielinformatie</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Bekijken profielinformatie</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Menu van &i18n-ktouch;</title>
+<para
+>U kunt het menu van &i18n-ktouch; openen met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk van het thuisscherm. </para>
+
+<screenshot>
+<screeninfo
+>Menu van &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Menu van &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Hieronder vindt u een overzicht van de menu-onderdelen met bij elk een korte beschrijving. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Volledig scherm</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Aan/uit</action
+> zetten volledig scherm in &i18n-ktouch;</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Bewerker cursussen en toetsenbordindelingen...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Openen</action
+> van het <link linkend="extending"
+>bewerkingsvenster</link
+> van &i18n-ktouch;  </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Typetrainer instellen...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Tonen</action
+>van de <link linkend="configuration_dialog"
+>instellingendialoog</link
+> van &i18n-ktouch;  </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Sneltoetsen instellen...</guimenuitem
+></term>
+<listitem
+><para
+>De sneltoetsen <action
+>instellen</action
+> die u wilt koppelen aan sommige acties </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Toetsenbordindeling instellen...</guimenuitem
+></term>
+<listitem
+><para
+>Een sneltoets voor de module &systemsettings; waarmee de instellingen van het toetsenbord kunnen worden gewijzigd. Nuttig voor het voorbereiden van oefeningen op een andere toetsenbordindeling. </para>
+<note>
+<para
+>Op platformen die ondersteuning ontberen voor het automatisch detecteren van de toetsenbordindeling, met name &Microsoft; &Windows;, wordt deze toegang vervangen door een submenu waarin u de toetsenbordindeling in &i18n-ktouch; met de hand kunt instellen. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>&i18n-ktouch; heeft het gewone &kde; <guimenu
+>Help</guimenu
+>-menu. Meer informatie vind u in de sectie  <ulink url="help:/fundamentals/menus.html#menus-help"
+>Helpmenu</ulink
+> in de Basisinformatie van &kde;. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Instellingendialoog</title>
+
+<para
+>U kunt heel wat instellen in  &i18n-ktouch;. De instellingen zijn globaal, voor alle profielen. Open de instellingendialoog door op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> te klikken, rechts in de bovenste werkbalk in het thuisscherm, en daarna <guimenuitem
+>Typeoefeningen instellen...</guimenuitem
+> te kiezen.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Instellingen voor oefeningen</guilabel
+></term>
+     <listitem>
+       <para
+>In deze dialoog kunt u de opties selecteren die het uiterlijk van het lesvenster en het gedrag bepalen, van  &i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Oefenopties</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Oefenopties</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Met het keuzevakje <guilabel
+>Verbeteringen van typefouten forceren</guilabel
+> kunt u bepalen dat typefouten verbeterd moeten worden. </para>
+<para
+>U kunt de zichtbaarheid instellen van statistieken en toetsenborden tijdens de oefening, met behulp van de aankruisvakjes voor <guilabel
+>Toetsenbord tonen</guilabel
+> en <guilabel
+>Statistieken tonen</guilabel
+>  </para>
+<para
+>De toets waarmee u naar de volgende regel kunt gaan van de oefentekst, kan worden gekozen uit twee opties: &Enter; of &Space;. </para>
+<para
+>Met de <guilabel
+>Grenzen voor niveauverhoging</guilabel
+> kunnen instellingen worden gekozen voor het vrijgeven van lessen op een hoger niveau. &i18n-ktouch; controleert na elk niveau de opgegeven grenzen, en beslist dan of de volgende les wordt vrijgegeven. Indien de typesnelheid en de accuratesse beiden beter zijn dan of gelijk aan de genoemde grenzen, wordt de les op het volgende hogere niveau door &i18n-ktouch; vrijgegeven. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Kleurinstellingen</guilabel
+></term>
+  <listitem>
+<para
+>In deze dialoog kunt u de door &i18n-ktouch; gebruikte kleuren wijzigen.</para>
+<screenshot>
+<screeninfo
+>Kleurinstellingen</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Kleurinstellingen</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>U kunt de achtergrondkleur kiezen voor elk van de vingertoetsen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Cursus en les selecteren</title>
+<para
+>&i18n-ktouch; detecteert uw toetsenbordindeling automatisch, en toont alleen de voor deze toetsenbordindeling geschikte cursussen. </para>
+<note>
+<para
+>Op sommige platformen, met name &Windows;, is het atomatisch detecteren van de toetsenbordindeling niet aanwezig. U moet die dan in het applicatiemenu met de hand instellen. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Andere cursus kiezen</title>
+<para
+>Als er meerdere cursussen beschikbaar zijn, dan kunt u uw favoriete cursus kiezen met de knoppen  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> and <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> rechts van de cursusnamen. Indien er maar één cursus is, dan zijn deze knoppen niet zichtbaar. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Lessen vrijgeven</title>
+<para
+>Indien u heeft gekozen <guilabel
+>Ik heb geen of erg weinig ervaring met typen</guilabel
+> tijdens de <link linkend="creating_profile"
+>initiële profielaanmaak</link
+>, dan merkt u dat enkele lessen geblokkeerd zijn . Deze lessen worden gemarkeerd met het pictogram <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> en zijn pas beschikbaar als u met de voorgaande lessen klaar bent. </para>
+<note>
+<para
+>De instellingen voor het voltooien van de lessen kunnen worden gewijzigd in de <link linkend="configuration_dialog"
+>instellingendialoog van &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Oefenen op een andere toetsenbordindeling</title>
+<para
+>In &i18n-ktouch; kunt u op elke toetsenbordindeling oefenen. U hoeft alleen maar te drukken op de in het oefenprogramma gemarkeerde toetsen, onafhankelijk van wat er op de toetsen staat van uw werkelijke toetsenbord. </para>
+<para
+>Selecteer <menuchoice
+><guimenu
+>Toetsenbordindelingen...</guimenu
+></menuchoice
+> in het applicatiemenu en selecteer een andere toetsenbordindeling. Daarna past &i18n-ktouch; zich hieraan aan, en biedt het u de cursussen aan die bij deze indeling passen. </para>
+<note>
+<para
+>Op platformen zonder automatische detectie van de toetsenbordindeling, met name &Microsoft; &Windows;, moet u eerst het besturingssysteem instellen voor het gebruik van de door u gewenste toetsenbordindeling, om op te oefenen, waarna u deze zelfde indeling kiest in het applicatiemenu van &i18n-ktouch;. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Efficiënt oefenen</title>
+<sect2 id="training_techniques">
+<title
+>Oefenmethodes</title>
+<para
+>Hierna volgt wat algemeen advies over hoe u blindtypen kunt oefenen. </para>
+<sect3 id="steady_speed">
+<title
+>Constante snelheid</title>
+<para
+>Om efficiënt te leren blindtypen is het belangrijk dat u niet zo snel mogelijk probeert te typen, maar dat u probeert dit met een constante snelheid te doen, en een natuurlijk ritme probeert te vinden waarmee u de toetsen indrukt. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>Accuratesse is koning</title>
+<para
+>Het volgende waar u op moet letten, is aandacht te besteden aan accuratesse. Alleen wanneer u met de huidige vrijgegeven toetsen goed overweg kunt, wat inhoudt dat u er nog maar weinig fouten mee maakt, kunt u met kans op succes de volgende lessen voltooien, waarin er nog meer toetsen worden gebruikt. U zult merken dat u bijna automatisch het blindtypen zult gaan beheersen, wanneer u slechts heel weinig fouten maakt, en u kostbare tijd uitspaart wanneer u niet steeds weer zo veel fouten moet herstellen. </para>
+<note>
+<para
+>Daarom is het niveau voor de accuratesse, nodig voor het vrijgeven van een volgende les, standaard ingesteld op 98%, terwijl de snelheidseis tamelijk gematigd is ingesteld op slechts 180 karakters per minuut. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Fouten herstellen</title>
+<para
+>Indien u fouten maakt, is het belangrijk die op een efficiënte manier te herstellen. Het verbeteren van een enkel karakter is bijna altijd langzamer dan het verbeteren van het hele woord. Voor het laatste hoeft u slechts op <keycombo
+>&Ctrl;&Backspace;</keycombo
+> te drukken, en het hele woord opnieuw te typen. De mentale belasting hiervoor is slechts gering. Voor de eerste actie moet u eerst de plaats van de fout lokaliseren, de fout op exact de juiste locatie wissen, het missende deel van het woord bepalen, en dit opnieuw typen. Dit vereist veel meer aandacht dan het opnieuw typen van het hele woord. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>De oefenles onderbreken</title>
+<sect3 id="automatically_pausing">
+<title
+>Automatisch</title>
+<para
+>Indien u een dialoog opent, of naar een ander programma schakelt, terwijl u bezig bent met een oefenles, wordt de oefening onderbroken, en wordt de tijdmeting gestopt, totdat u weer terugkomt in het venster van &i18n-ktouch;, en een toets aanslaat. </para>
+<para
+>De oefensessie wordt ook onderbroken na vijf seconden van inactiviteit van de gebruiker. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Handmatig</title>
+<para
+>U kunt de huidige oefensessie handmatig onderbreken met de knop  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk. </para>
+<para
+>Als u klikt op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk, onderbreekt &i18n-ktouch; de huidige oefensessie, en toont het u een menu met enkele verdere mogelijke acties. </para>
+<screenshot>
+<screeninfo
+>Menu van &i18n-ktouch; na een onderbreking</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Menu van &i18n-ktouch; na een onderbreking</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Het volgen van de vorderingen</title>
+<para
+>Na het voltooien van een les, gaat u niet automatisch terug naar het thuisscherm. In plaats daarvan wordt u een speciale samenvatting getoond, en een scherm met statistische informatie. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Statistieken voor snelheid en accuratesse</title>
+<screenshot>
+<screeninfo
+>Vorderingen in scorescherm</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Vorderingen in scorescherm</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Filteren per les</title>
+<para
+>Met behulp van de statistieken voor uw snelheid en accuratesse kunt u uw leerproces volgen, en zien waar u nog aandacht aan moet besteden. </para>
+<para
+>De statistische gegevens kunnen per les worden gefilterd, in het neerklapmenu bij <guilabel
+>Over</guilabel
+>. Dit kan nuttig zijn voor het volgen van uw vorderingen in de huidige les, en die te vergelijken met de vorderingen in andere lessen. </para>
+<screenshot>
+<screeninfo
+>Neerklapmenu statistisch bereik</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Neerklapmenu statistisch bereik</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>U kunt nog meer gegevens zien over uw oefensessie. Houdt u de muisaanwijzer boven een punt in de grafiek,  &i18n-ktouch; toont u dan de statistieken van de daarbij behorende sessie. </para>
+<screenshot>
+<screeninfo
+>Vorderingen per les</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Vorderingen per les</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Foutenstatistieken</title>
+<para
+>U kunt in het scorescherm schakelen naar het tonen van de gemaakte fouten per toets, met behulp van het neerklapmenu naast <guilabel
+>Tonen</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Statistische modus schakelen</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Statistische modus schakelen</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>In deze modus toont &i18n-ktouch; een staafdiagram voor fouten, voor elke toets in de laatste oefensessie. </para>
+<screenshot>
+<screeninfo
+>Foutenkaart voor de toetsen</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Foutenkaart voor de toetsen</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>U kunt weer terugkeren naar de grafiek voor lessen met behulp van het zelfde neerklapmenu naast <guilabel
+>Tonen</guilabel
+>. </para>
+<para
+>Indien u een les met goed gevolg heeft voltooid, kunt u direct beginnen met oefenen met de volgende les door op <guibutton
+>Volgende les</guibutton
+> te klikken in de werkbalk. U kunt ook dezelfde les nog een keer doen met  <guibutton
+>Herhalen</guibutton
+> of terugkeren naar het thuisscherm met de resterende knop. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>&i18n-ktouch; uitbreiden</title>
+
+<sect1 id="create_courses">
+<title
+>Cursussen aanmaken</title>
+<para
+>U kunt eenvoudig zelf een oefencursus aanmaken met behulp van het in &i18n-ktouch; ingebouwde bewerkingsprogramma voor cursussen en toetsenbordindelingen. Druk op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> rechts in de werkbalk in het thuisscherm, en kies <guimenuitem
+>Cursus en toetsenbordindeling bewerken...</guimenuitem
+>. U kunt een bestaand cursusbestand openen, of van het begin af aan een lege cursus aanmaken, of een bestaande cursus gebruiken als sjabloon.</para>
+<important>
+<para
+>De ingebouwde cursussen kunt u niet bewerken, zelfs met schrijftoegang tot de installatiemap. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Hoofdvenster cursus en toetsenbordindeling bewerken</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Hoofdvenster cursus en toetsenbordindeling bewerken</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Cursuseigenschappen</title>
+<para
+>De eigenschappen van de cursus kunnen worden gekozen in de assistent van &i18n-ktouch; voor het aanmaken van een cursus. U start deze assistent door te drukken op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk in het venster van <guilabel
+>Cursus en toetsenbordindeling bewerken</guilabel
+>. </para>
+<para
+>In de eerste pagina van de assistent van &i18n-ktouch; voor het aanmaken van een cursus kunt u het gegevenstype kiezen. Selecteer <guilabel
+>Cursus</guilabel
+> en klik op <guibutton
+>Volgende</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Het type kiezen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Het type kiezen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In de tweede pagina van de assistent kunt u de naam, de toetsenbordindeling en de cursusbeschrijving invoeren. </para>
+<screenshot>
+<screeninfo
+>Tweede pagina assistent nieuwe cursus</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tweede pagina assistent nieuwe cursus</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>De naam van de cursus is van belang in het snelkeuzemenu in de cursuslijst en voor de statistieken. </para>
+<para
+>In de cursusbeschrijving moet informatie worden opgenomen over de auteur, en de bron van de lesgegevens, indien aanwezig. Deze beschrijving kan worden getoond door op de knop  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> te drukken in de werkbalk van het thuisscherm van &i18n-ktouch;. </para>
+<para
+>Wanneer u klaar bent met het invoeren van de geëigende waarden, klit u op de knop <guibutton
+>Volgende</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Derde pagina assistent nieuwe cursus</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Derde pagina assistent nieuwe cursus</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In de derde pagina van de assistent kunt u een andere cursus kiezen als sjabloon voor uw nieuwe cursus. Selecteer de cursus in de lijst en druk op <guibutton
+>Voltooien</guibutton
+>.  </para>
+<screenshot>
+<screeninfo
+>Het bewerkingsvenster voor de nieuwe cursus</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Het bewerkingsvenster voor de nieuwe cursus</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; opent het venster voor de cursusbewerker, klaar voor de invoer van de inhoud van uw cursus. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Lessen toevoegen</title>
+<para
+>Een cursus is een geordende verzameling van lessen. Om efficient blindtypen te kunnen oefenen moet de inhoud van de cursus voldoen aan een paar eisen. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Geef de les een betekenisvolle naam</emphasis
+></term>
+<listitem>
+<para
+>Voor elk niveau kunt u de nieuwe karakters/toetsen opgeven in de les. Het is goed om de nieuwe karakters op te nemen in de naam van de les. Klik op een naam in de lijst van <guilabel
+>Lessen:</guilabel
+> en voer een betekenisvolle naam in, </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>De tekst die u invoert als naam van de oefenstof, wordt getoond als lesinformatie in de cursuslijst in het thuisscherm. Het is voor de gebruiker veel makkelijker de juiste les te kiezen, als de les een betekenisvolle naam heeft. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>De eerste les moet gaan over de basistoetsen</emphasis
+></term>
+<listitem>
+<para
+>Gewoonlijk heeft een toetsenbord twee toetsen met voelbare ribbeltjes op de tweed rij, die bestemd zijn voor de wijsvingers. Deze twee toetsen, en de drie naastliggende toetsen naar buiten, zijn de basistoetsen. Dat zijn op het US-toetsenbord de toetsen gekenmerkt met  <emphasis
+>asdfjkl;</emphasis
+> (In Nederland zijn bijna alle toetsenborden van  dit type). </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Deze acht toetsen zijn voor elke vinger de startpositie. Men moet de locatie van deze toetsen goed onthouden voordat men met succes kan leren blindtypen. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Introduceer per les twee nieuwe toetsen </emphasis
+></term>
+<listitem>
+<para
+>De volgorde van het vrijgeven van toetsen is niet vast, maar gewoonlijk worden toetsen geïntroduceerd in paren, behorend bij dezelfde vinger aan beide handen. Ga hierbij van binnen naar buiten vanaf de basistoetsen. Op deze manier komen de toetsen van de vierde rij het laatst aan de beurt. Geef de voorkeur aan toetsen die in uw taal belangrijk zijn, dit kan het nodig maken de genoemde volgorde wat aan te passen. In het Frans zijn bijvoorbeeld de accenten erg belangrijk, wat het nodig maakt om in de lessen al vroeg aan de accenttoets aandacht te besteden. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Als er meer toetsen worden geïntroduceerd, kunnen de lessen voor de cursist al gauw te moeilijk worden, en kan hij zijn motivatie verliezen. Introduceer belangrijke toetsen eerst, zodat u al vroeg echte woorden kunt laten typen. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Extra aandacht voor de nieuwe toetsen</emphasis
+></term>
+<listitem>
+<para
+>Zorg er voor dat de karakters bij de nieuw geïntroduceerde toetsen het meest worden gebruikt, of minstens in de oefentekst heel veel worden gebruikt. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Na het met succes voltooien van de les moet de cursist de nieuwe toetsen goed beheersen. Dit kan alleen als in de oefenstof de nieuwe karakters behoorlijk vaak voorkomen. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Las herhalingslessen in, tussen lessen waarin nieuwe toetsen worden geleerd</emphasis
+></term>
+<listitem>
+<para
+>Voeg een herhalingsles in tussen elke twee of drie lessen waarin nieuwe toetsen worden geleerd. In de herhalingslessen moeten alle reeds bekende letters zo veel mogelijk even vaak voorkomen. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Door zulke lessen worden de verkregen vaardigheden versterkt, en wordt het mogelijk het algehele oefenniveau te controleren. Zij zijn ook meer geschikt voor herhaalde oefeningen om de typevaardigheden nog verder te verbeteren. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Lessen speciaal voor hoofdletters</emphasis
+></term>
+<listitem>
+<para
+>Er moeten lessen aanwezig zijn waarin goed aandacht wordt besteed aan hoofdletters. Ideaal is het wanneer hoofdletters in stappen worden geïntroduceerd: eerst alleen de linker &Shift;-toets, daarna de rechter, daarna beide, gevolgd door een of meer herhalingslessen. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Het leren van de hoofdletters is het moeilijkste onderdeel van het leren blindtypen. Dus moet hieraan in de lessen extra aandacht worden besteed. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>De gehele toetsenbordindeling behandelen</emphasis
+></term>
+<listitem>
+<para
+>Dit betreft karakters en symbolen die op andere manieren beschikbaar zijn dan alleen via &Shift;. Ideaal is het als elk karakter, cijfer en teken dat op de toetsen voorkomt van een echt toetsenbord, aan bod komt. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Hoe vollediger een cursus is, hoe meer een cursist er mee kan leren. De cursus is zo ook interessant voor hen die reeds heel aardig kunnen blindtypen. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Met de knoppen <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> kunt u een nieuwe les toevoegen aan de cursus, <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> een geselecteerde les uit de cursus verwijderen, en  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>  de volgorde van de lessen in de cursus wijzigen. </para>
+<important>
+<para
+>Wees voorzichtig met het wissen van een les. Op deze manier kunt u het beschikbaar zijn van lessen voor de gebruikers van de cursus ongedaan maken. Indien u plannen heeft de cursus grondig te wijzigen, kunt u beter de bestaande cursus gebruiken als basis voor een nieuwe cursus. </para>
+</important>
+<para
+>De inhoud van de les kan worden gewijzigd in het bewerkingsveld rechtsonder. U kunt stukken tekst kopiëren vanuit uw favoriete tekstverwerker, en die in dit veld plakken. </para>
+<para
+>Met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> kunt u een tekstbestand openen dat wordt ingelezen in het tekstveld van de les. </para>
+<para
+>Met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> kunt u de lestekst over meerdere regels verdelen. De bewerker van &i18n-ktouch; zorgt er dan voor dat er op elke regel niet meer dan de aanbevolen 60 karakters zijn. </para>
+<para
+>Laten we aannemen dat u een nieuwe les wilt toevoegen. Daarbij kunt u een aantal richtlijnen in acht nemen: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Geef lessen een beschrijvende naam</emphasis
+></term>
+<listitem>
+<para
+>Noem de nieuwe karakters, indien die er zijn, en vertel anders wat het doel is van de les. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Goede namen voor de lessen maken het zoeken van de juiste cursus gemakkelijker, als iemand iets speciaal wilt gaan oefenen. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>De tekst in de les moet bestaan uit werkelijke woorden en zinnen</emphasis
+></term>
+<listitem>
+<para
+>Optimaal is een les een begrijpelijke doorlopende tekst over een vrij gekozen onderwerp. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Oefenen met werkelijke woorden en zinnen is effectiever dan oefenen met willekeurige combinaties van willekeurige karakters, omdat dit het werkelijke typen meer benadert. En het is natuurlijk ook veel leuker. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Vermijd karaktercombinaties die geen woorden zijn</emphasis
+></term>
+<listitem>
+<para
+>Dit is misschien onmogelijk in de eerste lessen, waarbij slechts weinig karakters beschikbaar zijn, maar werkelijke woorden moeten zo snel mogelijk worden gebruikt. Gebruik nooit verkeerd gespelde woorden. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Willekeurige karaktercombinaties zijn moeilijk te typen, en komen bij  het dagelijkse typen zelden voor. Verkeerd gespelde woorden zijn verwarrend, en hebben zelfs een negatieve invloed op het leerproces, omdat de cursist misschien de verkeerde spelling gaat onthouden. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>De tekst in de lessen moet ongeveer 600 karakters lang zijn</emphasis
+></term>
+<listitem>
+<para
+>De tekst mag ook wel langer zijn, tot 1200 karakters is oké, maar de lessen mogen niet korter zijn. Dit geldt met name voor de herhalingslessen. </para>
+<note>
+<title
+>Uitleg</title>
+<para
+>Door binnen deze grenzen te blijven kan een ongeoefende cursist (~20 karakters per minuut) een les in vijf tot tien minuten afmaken. Langere lessen worden frustrerend, en kortere lessen hebben geen effect. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Kwaliteitscontroles in de tekstbewerker van de les</title>
+<screenshot>
+<screeninfo
+>Kwaliteitscontroles in het venster van de cursusbewerker</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Kwaliteitscontroles in het venster van de cursusbewerker</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Hierboven ziet u een schermbeeld van de cursusbewerker waarin een problematische les wordt getoond, waarin een van de ingebouwde kwaliteitscontroles is te zien: als een les een karakter bevat die in die les niet beschikbaar is, omdat dit karakter in deze les of een van de vorige nog niet aan bod is gekomen, dan wordt het met rood weergegeven. Er is ook een controle voor te lange regels, de karakters na de laatst toegestane positie worden in een lichtere tint weergegeven. </para>
+<para
+>Links is er een lijst van alle aan &i18n-ktouch; bekende gegevensbestanden, zowel ingebouwd als door de gebruiker gemaakt. Als de gebruiker een ingebouwde hulpbron selecteert, verandert de bewerker in een eenvoudig bekijkprogramma. Indien de gebruiker een toetsenbordindeling selecteert, dan past het programma zich daaraan aan. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Toetsenbordindelingen aanmaken</title>
+<para
+>U kunt met het bewerkingsprogramma van &i18n-ktouch; uw eigen toetsenbordindeling aanmaken. Het is gewoonlijk het beste om uit te gaan van een bestaande indeling, die lijkt op de toetsenbordindeling die u wilt maken. Op die manier kunt u u een heleboel werk besparen.</para>
+
+<sect2 id="layout_properties">
+<title
+>Eigenschappen van toetsenbordindelingen</title>
+<para
+>Met de assistent voor het maken van een toetsenbordindeling in &i18n-ktouch; kunt u de eigenschappen van de toetsenbordindeling kiezen. U kunt deze assistent starten door te klikken op de knop  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> in de werkbalk in het venster van  <guilabel
+>Cursus en  toetsenbordindeling bewerken</guilabel
+>. </para>
+<para
+>In de eerste pagina van de assistent van &i18n-ktouch; kunt u het type kiezen van de gegevens. Selecteer  <guilabel
+>Toetsenbordindeling</guilabel
+> en druk op  <guilabel
+>Volgende</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Het type kiezen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Het type kiezen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In de tweede pagina van de assistent kunt u de titel opgeven, en de naam van de indeling. </para>
+<screenshot>
+<screeninfo
+>Tweede pagina assistent nieuwe indeling</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tweede pagina assistent nieuwe indeling</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>De naam van het toetsenbord is van belang in het snelkeuzemenu in de lijst van toetsenbordindelingen in het <link linkend="ktouch_menu"
+>Instellingenmenu van &i18n-ktouch;</link
+>, en voor de statistieken. </para>
+<para
+>De naam van de indeling wordt intern door &i18n-ktouch; gebruikt. </para>
+<screenshot>
+<screeninfo
+>Derde pagina assistent nieuwe indeling</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Derde pagina assistent nieuwe indeling</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In de derde pagina van de assistent kunt u een andere indeling kiezen als sjabloon voor de door u te maken toetsenbordindeling. Selecteer deze in de lijst en klik op <guibutton
+>Voltooien</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Venster voor bewerken nieuwe indeling</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Venster voor bewerken nieuwe indeling</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>&i18n-ktouch; opent nu het venster voor het bewerkingsprogramma, klaar voor de invoer van de gegevens voor uw toetsenbordindeling. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Toetsen toevoegen</title>
+<para
+>Met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Normale toets</guilabel
+> kunt u een normale toets toevoegen  aan de indeling, of met <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Speciale toets</guilabel
+>  een speciale toets (samensteltoets, &Space;, &Backspace;, &Tab;, <keycap
+>Caps Lock</keycap
+> of &Enter;). Met de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Wissen</guilabel
+> kunt u een geselecteerde toets uit uw indeling verwijderen. U kunt de schaal wijzigen met de schuifknop rechts in de werkbalk van het bewerkingsprogramma. </para>
+<para
+>In het onderste paneel van het bewerkingsvenster kunt u de eigenschappen wijzigen van individuele toetsen. </para>
+<sect3 id="normal_keys">
+<title
+>Normale toetsen</title>
+<para
+>Het is eenvoudig de grootte of eigenschappen te wijzigen van een toets. </para>
+<para
+>Begin met op de te wijzigen toets te klikken. Hierdoor wordt deze toets de huidige toets. </para>
+<para
+>Er zijn nu 4 vierkantjes zichtbaar op de hoekpunten van de toets. Door deze vierkantjes met de muis te slepen, kunt u de grenzen van de toets slepen naar een nieuwe locatie. Door de hele toets te slepen kunt u de plaats van de toets in de indeling wijzigen. </para>
+<para
+>De numerieke afmetingen van de toets kunnen ook worden gewijzigd in de sectie <guilabel
+>Plaatsgegevens</guilabel
+> in het paneel onder in het bewerkingsvenster. </para>
+<screenshot>
+<screeninfo
+>Eigenschappen individuele toets bewerken</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Eigenschappen individuele toets bewerken</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In het onderste paneel kunt u ook instellen door welke vinger de toets moet worden bediend, en ook of er een voelbaar ribbeltje aanwezig moet zijn op de toets. </para>
+<sect4 id="key_characters">
+<title
+>Karakters voor de toets</title>
+<para
+>De karakters die op een toets zichtbaar moeten zijn, kunnen worden gewijzigd in de sectie <guilabel
+> Karakters</guilabel
+>, in het onderste paneel van de bewerker. </para>
+<screenshot>
+<screeninfo
+>De positie van het karakter wijzigen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>De positie van het karakter wijzigen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>U kunt een karakter toevoegen, door op de knop <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> te klikken. Een geselecteerd karakter kunt u verwijderen met de knop  <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>U kunt ook de positie op de toets van individuele karakters selecteren door in de kolom <guilabel
+>Positie</guilabel
+> te dubbelklikken. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Samensteltoetsen</title>
+<para
+>Er zijn een aantal samensteltoetsen die u in &i18n-ktouch; kunt definiëren. Zij kunnen als normale toetsen worden bewerkt, maar het is handig de naam van de samensteltoets te kennen, om die op de goede manier te kunnen gebruiken. Hieronder ziet u een tabel van de namen van samensteltoetsen. </para>
+<table>
+<title
+>Samensteltoetsen</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Samensteltoets</entry>
+<entry
+>Id samensteltoets in &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>links_shift</literal
+> of <literal
+>rechts_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Eigen lessen</title>
+<para
+>Met de eigen lessen kunt u uw oefenmateriaal gemakkelijk uitbreiden met een of andere willekeurige tekst. </para>
+<para
+>De eigen lessen komen in een speciale cursus terecht, de <guilabel
+>Eigen lessen</guilabel
+>, die altijd beschikbaar is naast de <link linkend="picking_a_lesson"
+>gewone ingebouwde cursussen</link
+>. </para>
+<screenshot>
+<screeninfo
+>Cursus eigen lessen maken</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Cursus eigen lessen make</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Deze speciale cursus is in grote lijnen als de andere, het oefenen en verzamelen van statististische gegevens is zoals gebruikelijk. Klikken op de knop <guibutton
+>Nieuwe les toevoegen</guibutton
+> of op de knop  <guibutton
+>Bewerken</guibutton
+> (pictogram met potlood voor bestaande lessen) geeft u een beperkte versie van <link linkend="adding_lessons"
+>de  gewone lesbewerker</link
+>. </para>
+<screenshot>
+<screeninfo
+>Bewerken eigen lessen</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Bewerken eigen lessen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>In de bewerker worden de problematische gedeelten in uw lesteksten gemarkeerd. Karakters die niet op de gekozen toetsenbordindeling kunnen worden getypt, worden donkerrood gekleurd, van regels die mogelijk te lang zijn worden de overtallige karakters grijs weergegeven. In &i18n-ktouch; mag  geen enkele regel langer zijn dan de aanbevolen limiet van 60 karakters.  </para>
+<para
+>Met de knop <guibutton
+>Klaar</guibutton
+> kunt u uw wijzigingen bevestigen, of het venster van de editor afsluiten, waarmee u die annuleert. </para>
+<tip>
+<para
+>De eigen lessen worden elk afzonderlijk opgeslagen per profiel en toetsenbordindeling. Zo kan men verschillende lessen beheren, afhankelijk van de situatie. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Uw resultaten delen met anderen</title>
+<para
+>U kunt cursussen en toetsenbordindelingen opslaan in afzonderlijke bestanden, buiten de eigen gegevensbank van &i18n-ktouch; om. </para>
+<sect2 id="export_import">
+<title
+>Exporteren/Importeren</title>
+<para
+>Om een cursus of toetsenbordindeling in een afzonderlijk bestand op te slaan, kiest u die in de lijst in het linker deel van het venster van  <guilabel
+>Cursus en toetsenbordindeling bewerken</guilabel
+>, en klikt u op de knop <guibutton
+>Exporteren</guibutton
+> in de werkbalk. </para>
+<para
+>Hierdoor opent &i18n-ktouch; een standaard dialoog van &kde; voor opslaan. Een beschrijving hiervan vindt u in het hoofdstuk <ulink url="help:/fundamentals/files.html"
+>Bestanden openen en opslaan</ulink
+> van de Basiskennis van &kde;. </para>
+<para
+>U kunt naam en locatie kiezen van het op te slaan  &XML;-bestand. </para>
+<para
+>Indien u het de moeite waard vindt, uw bestanden beschikbaar te stellen voor anderen, dan kunt u die met een beschrijving ook opsturen  naar de <ulink url="mailto:kde-edu@kde.org"
+>discussielijst van kde-edu</ulink
+>. </para>
+<important>
+<para
+>Uw gegevens moeten voldoen aan de licentie <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>&GNU; General Public License, version 2</ulink
+>om te kunnen worden opgenomen in de standaard installatie van &i18n-ktouch; (dit betekent dat u dit moet goed vinden). </para>
+</important>
+<para
+>Om de gegevensbestanden in &i18n-ktouch; in te voeren, drukt u op de knop <guibutton
+>Importeren</guibutton
+> in de werkbalk, en kiest u het &XML;-bestand dat eerder met &i18n-ktouch; werd geëxporteerd. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>&ktouch;, Copyright 1999-2007 van</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&ktouch;, Copyright 2011-2019 van Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>. </para>
+
+<para
+>Medewerkers:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, Duits toetsenbord, Duits oefenbestand en vertaling.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich: Latijns-Amerikaans toetsenbord</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves: Portugees toetsenbord</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, Frans toetsenbord</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Speciale dank aan alle anderen (hier niet genoemd) die  toetsenbord- en lesbestanden hebben bijgedragen.</emphasis>
+</para>
+&meld.fouten;&vertaling.jaap;&nagelezen.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

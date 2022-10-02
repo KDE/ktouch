@@ -1,0 +1,2946 @@
+# translation of ktouch.po to greek
+# Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+#
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2004.
+# Spiros Georgaras <sng@hellug.gr>, 2005, 2006, 2007.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2006, 2007, 2008, 2009.
+# Petros <pvidalis@gmail.com>, 2010.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2012, 2013, 2014.
+# Stelios <sstavra@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2021-10-07 08:09+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "manolis@koppermind.homelinux.org"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Μη έγκυρη έκδοση βάσης δεδομένων '%1'."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Προσαρμοσμένα μαθήματα"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "Μια τοποθεσία για την αποθήκευση προσωπικών κειμένων μαθημάτων"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Δεν υπάρχει μάθημα με αναγνωριστικό %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Δεν υπάρχει διάταξη πληκτρολογίου με αναγνωριστικό %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Κρυμμένο"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Πάνω αριστερά"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Πάνω δεξιά"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Κάτω αριστερά"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Κάτω δεξιά"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Σφάλμα κατά το άνοιγμα του μαθήματος"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Τα ενσωματωμένα μαθήματα είναι διαθέσιμα μόνο για προβολή."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Σφάλμα κατά το άνοιγμα της διάταξης πληκτρολογίου"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+"Οι ενσωματωμένες διατάξεις πληκτρολογίου είναι διαθέσιμες μόνο για προβολή."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 Χαρακτήρας"
+msgstr[1] "%1 Χαρακτήρες"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "Αρχεία κειμένου (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "Το συγκεκριμένο αρχείο δεν μπορεί να ανοιχτεί"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Υπάρχει ήδη διάταξη πληκτρολογίου με το ίδιο όνομα ."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "Νέο"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Νέο..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Νέο μάθημα"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Νέα διάταξη πληκτρολογίου"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Πρότυπο"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Διαγραφή "
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Επεξεργαστής μαθημάτων και διατάξεων πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Δημιουργία μαθήματος ή διάταξης πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Διαγραφή του επιλεγμένου μαθήματος ή της διάταξης πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Εισαγωγή μαθήματος ή διάταξης πληκτρολογίου από αρχείο"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Εξαγωγή μαθήματος ή διάταξης πληκτρολογίου σε αρχείο"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Σφάλμα κατά τη διαγραφή του μαθήματος"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Σφάλμα κατά τη διαγραφή της διάταξης πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "XML αρχεία (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "Δε μπορεί να πραγματοποιηθεί η εισαγωγή του επιλεγμένου αρχείου."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Σφάλμα κατά την αποθήκευση του μαθήματος"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Σφάλμα κατά την αποθήκευση της διάταξης πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "Το μάθημα <b>%1</b> διαγράφηκε"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Η διάταξη πληκτρολογίου <b>%1</b> διαγράφηκε"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Σφάλμα κατά την αποθήκευση του μαθήματος στο δίσκο."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Σφάλμα κατά την αποθήκευση της διάταξης πληκτρολογίου στο δίσκο."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Το επιλεγμένο μάθημα υπάρχει ήδη ως ενσωματωμένο μάθημα."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Εισαγωγή ως νέο μάθημα"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "Το επιλεγμένο μάθημα υπάρχει ήδη ως μάθημα χρήστη."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+"Η επιλεγμένη διάταξη πληκτρολογίου υπάρχει ήδη ως ενσωματωμένη διάταξη "
+"πληκτρολογίου."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Εισαγωγή ως νέα διάταξη πληκτρολογίου"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"Η επιλεγμένη διάταξη πληκτρολογίου υπάρχει ήδη ως διάταξη πληκτρολογίου "
+"χρήστη."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Επαναφορά"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Αποδέσμευση"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Χρήση ενός άλλου μαθήματος ως πρότυπο"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Χρήση μιας άλλης διάταξης πληκτρολογίου ως πρότυπο"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Μάθημα"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Διάταξη πληκτρολογίου"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+"Η διάταξη πληκτρολογίου που θα χρησιμοποιηθεί στα συστήματα που δε "
+"χρησιμοποιούν X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Ελέγχει αν τα σφάλματα πληκτρολόγησης πρέπει να διορθωθούν ή όχι."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Ελέγχει αν το πληκτρολόγιο θα εμφανίζεται κατά την εξάσκηση."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+"Ελέγχει αν τα στατιστικά πραγματικού χρόνου θα εμφανίζονται κατά την "
+"εξάσκηση."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+"Το πάτημα του πλήκτρου επαναφοράς στο τέλος μια γραμμής θα οδηγεί στην "
+"επόμενη γραμμή."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+"Το πάτημα του πλήκτρου διαστήματος στο τέλος μια γραμμής θα οδηγεί στην "
+"επόμενη γραμμή."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Ο ελάχιστος απαιτούμενος αριθμός χτυπημάτων ανά λεπτό για να ξεκλειδωθεί το "
+"επόμενο μάθημα."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Η μικρότερη απαιτούμενη ακρίβεια πληκτρολόγησης (σε ποσοστό) για να "
+"ξεκλειδωθεί το επόμενο μάθημα."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Ο τόνος χρωματισμού για την επισήμανση των πλήκτρων κάθε δαχτύλου."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Πώς πρέπει να εμφανίζονται τα χρώματα στα διαφανή δάχτυλα."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Το αναγνωριστικό του προφίλ που χρησιμοποιήθηκε την τελευταία φορά."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Εξάσκηση"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Ρυθμίσεις εξάσκησης"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Χρώματα"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Ρυθμίσεις χρωμάτων"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Διαμόρφωση πληκτρολογίου"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Επεξεργαστής μαθημάτων και διατάξεων πληκτρολογίου..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Διαμόρφωση πληκτρολογίου..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Εκπαιδευτής δακτυλογράφησης"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Εκμάθηση και εξάσκηση δακτυλογράφησης"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Πνευματικά δικαιώματα (C) 2011-2015 Sebastian Gottfried\n"
+"Πνευματικά δικαιώματα  (C) 2000-2007 Håvard Frøiland και Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Τρέχων συντηρητής"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Τρέχων συντηρητής και προγραμματιστής"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Αρχικός δημιουργός"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Δημιουργός του εικονιδίου SVG"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Μια σειρά βελτιώσεων, διορθώσεων και ενημερώσεων"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Όλοι οι δημιουργοί αρχείων εκπαίδευσης και πληκτρολογίων"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Εκκίνηση του επεξεργαστή μαθημάτων και διατάξεων πληκτρολογίου"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "Εισαγωγή της διαδρομής στη λίστα των QML εισηγμένων διαδρομών"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "Το %1 παρουσίασε σφάλμα εκτέλεσης και πρέπει να κλείσει."
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Χαρακτήρας"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Αναγνωριστικό τροποποιητή"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Θέση"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<No title>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Νέοι χαρακτήρες: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Τίτλος"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Μαθήματα"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Διατάξεις πληκτρολογίου"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Όνομα: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Ακρίβεια"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Χαρακτήρες ανά λεπτό"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Άγνωστο</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Μάθημα:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "Εξάσκηση σε:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Ακρίβεια:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Χαρακτήρες ανά λεπτό:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Μαθήματα για τη διάταξη του πληκτρολογίου σας"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "Άλλα μαθήματα"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Καλωσορίσατε στον εκπαιδευτή δακτυλογράφησης"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Εκκίνηση εξάσκησης"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr ""
+"Το επιλεγμένο μάθημα προορίζεται για συγκεκριμένη διάταξη πληκτρολογίου."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+"Το επιλεγμένο μάθημα προορίζεται για τη διάταξη πληκτρολογίου του υπολογιστή "
+"σας."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"Το KTouch δεν κάνει εναλλαγή ή ρύθμιση των διατάξεων του πληκτρολογίου. Πριν "
+"την εξάσκηση, πρέπει να διαμορφώσετε τον υπολογιστή σας για να "
+"χρησιμοποιηθεί η σωστή διάταξη. Διαφορετικά θα πρέπει να χρησιμοποιήσετε την "
+"τρέχουσα διάταξη για να πληκτρολογήσετε το κείμενο του μαθήματος."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Διαμόρφωση πληκτρολογίου"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Το μάθημα <b>%1</b> διαγράφηκε."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "Το μάθημα χωρίς τίτλο διαγράφηκε."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Αναίρεση"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "Επεξεργασία μαθήματος"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Τίτλος:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "Κείμενο μαθήματος"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Ολοκληρώθηκε"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Ολοκλήρωση προηγουμένων μαθημάτων για ξεκλείδωμα"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "Διαχείριση προφίλ"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Διαχείριση προφίλ"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Εξασκημένα μαθήματα:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Συνολικός χρόνος εξάσκησης:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Τελευταία εξάσκηση:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Ποτέ"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Επιθυμείτε πραγματικά τη διαγραφή του προφίλ \"<b>%1</b>\";"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Πριν ξεκινήστε την εξάσκηση, συστηθείτε παρακαλώ:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Όνομα"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "Δεν έχω καθόλου ή έχω πολύ μικρή εμπειρία στη δακτυλογράφηση"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+"Τα μαθήματα ξεκλειδώνονται καθώς οι ικανότητές σας βελτιώνονται με την "
+"πάροδο του χρόνου."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+"Είμαι έμπειρος δακτυλογράφος και επιθυμώ τη βελτίωση των ικανοτήτων μου"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Όλα τα μαθήματα ξεκλειδώνονται αυτόματα."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Δημιουργία νέου προφίλ"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Άνοιγμα επιλεγμένου προφίλ"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "Στατιστικά εξάσκησης στο μάθημα"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Χρόνος που πέρασε"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Χαρακτήρας:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Σφάλματα:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Επιστροφή στην αρχική οθόνη"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Επανάληψη μαθήματος"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Επόμενο μάθημα"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Συγχαρητήρια! Περάσατε το μάθημα."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Δεν περάσατε το μάθημα."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Επαναλάβετε το μάθημα. Οι ικανότητες σας θα βελτιωθούν με το χρόνο."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Το επόμενο μάθημα ξεκλειδώθηκε"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Προβολή"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Πρόοδος"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Σφάλματα"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "Σχετικά με"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "Όλα τα μαθήματα"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "Αυτό το μάθημα"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr ""
+"Δεν είναι διαθέσιμη η οπτική αναπαράσταση της διάταξης πληκτρολογίου σας."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "Μενού"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Συνέχιση εξάσκησης"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Επανεκκίνηση μαθήματος"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr ""
+"Εκκίνηση συνεδρίας εξάσκησης. Ο χρόνος αρχίζει να μετρά με το πρώτο πάτημα "
+"πλήκτρου."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Παύση συνεδρίας εξάσκησης Ο χρόνος αρχίζει να μετρά ξανά με το πρώτο πάτημα "
+"πλήκτρου."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Δάχτυλα"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Αριστερό χέρι"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Δείκτης:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Μέσος:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Παράμεσος:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Μικρός:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Δεξί χέρι"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Αδιαφάνεια"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Διάταξη πληκτρολογίου:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Μαθήματα:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Προσθήκη νέου μαθήματος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Αφαίρεση μαθήματος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Μετακίνηση μαθήματος προς τα πάνω"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Μετακίνηση μαθήματος προς τα κάτω"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Νέοι χαρακτήρες:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Διάλογος"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Δημιουργία νέου κανονικού πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Κανονικό πλήκτρο"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Δημιουργία νέου ειδικού πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Ειδικό πλήκτρο"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Διαγραφή επιλεγμένου πλήκτρου"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Όνομα:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Πλάτος:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Ύψος:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Γεωμετρία"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Αριστερά:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Πάνω:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Πλήκτρο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Δάχτυλο:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Αριστερός μικρός"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Αριστερός παράμεσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Αριστερός μέσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Αριστερός δείκτης"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Δεξιός δείκτης"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Δεξιός μέσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Δεξιός παράμεσος"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Δεξιός μικρός"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Δείκτης αφής:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Χαρακτήρες"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Προσθήκη νέου χαρακτήρα"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Διαγραφή χαρακτήρα"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Τύπος:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Tab"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Επαναφορά (Return)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Διάστημα"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Άλλο"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Ετικέτα:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Διακριτικό τροποποιητή:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Άνοιγμα αρχείου κειμένου..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Αυτόματη αναδίπλωση γραμμών"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 χαρακτήρες"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr ""
+"Επικόλληση του ονόματος της τρέχουσας διάταξης πληκτρολογίου του συστήματος"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Κατά τη διάρκεια της εξέτασης:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Εξαναγκασμός διόρθωσης για σφάλματα πληκτρολόγησης"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Εμφάνιση πληκτρολογίου"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Εμφάνιση στατιστικών πραγματικού χρόνου"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Πέρασμα σε νέα γραμμή με:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "ΕπιστρΙοφή"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "Κε&νό"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Όρια ξεκλειδώματος μαθημάτων"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Ελάχιστος αριθμός πληκτρολογήσεων &ανά λεπτό:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Ελάχιστη ακρίβεια:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Ορισμός τίτλου"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Ορισμός διάταξης πληκτρολογίου"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Επεξεργασία περιγραφής"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Προσθήκη μαθήματος"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Μετακίνηση μαθήματος"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Ορισμός τίτλου μαθήματος"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Ορισμός νέων χαρακτήρων για το μάθημα"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Ορισμός κειμένου μαθήματος"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Ορισμός τίτλου διάταξης πληκτρολογίου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Ορισμός ονόματος διάταξης πληκτρολογίου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Ορισμός μεγέθους διάταξης πληκτρολογίου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Προσθήκη πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Αφαίρεση πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Ορισμός γεωμετρίας πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Ορισμός δαχτύλου πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Ορισμός δείκτη αφής"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Προσθήκη πλήκτρου χαρακτήρα"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Διαγραφή πλήκτρου χαρακτήρα"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Ορισμός τιμής πλήκτρου χαρακτήρα"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Ορισμός τροποποιητή πλήκτρου χαρακτήρα"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Ορισμός θέσης πλήκτρου χαρακτήρα"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Ορισμός τύπου ειδικού πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Ορισμός ετικέτας ειδικού πλήκτρου"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Ορισμός του αναγνωριστικού του τροποποιητή ειδικού πλήκτρου"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Επιλογή διάταξης πληκτρολογίου"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Δημιουργία νέου προσαρμοσμένου μαθήματος"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "Το '%1' διαγράφηκε."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Σε:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "Χρήση OpenGL για την αποτύπωση (πειραματικά)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Επεξεργασία προσαρμοσμένου μαθήματος"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Δεν υπάρχουν διαθέσιμα μαθήματα"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "Ο εκπαιδευτής δακτυλογράφησης δεν έχει διαθέσιμα μαθήματα για τη διάταξη "
+#~ "πληκτρολογίου σας. Μπορείτε να δημιουργήσετε το δικό σας μάθημα με τη "
+#~ "διάταξη πληκτρολογίου και τον επεξεργαστή μαθημάτων."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Εκκίνηση επεξεργαστή"
+
+#~ msgid "use a QGLWidget for the viewport"
+#~ msgstr "χρήση QGLWidget για τη θύρα"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Ουκρανικά"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Ουγκρικά (για προχωρημένους)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Δανικό"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Αγγλικό Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Αγγλικό Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Αγγλικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Αγγλικό Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Γαλλικό Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Γαλλικό"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Γερμανικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Γερμανικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Αγγλικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Ουγκρικά (για προχωρημένους)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Ιταλικό"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Νορβηγικό"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Σλοβενικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Αγγλικό Dvorak"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Δανικό"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Σουηδικό πληκτρολόγιο"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Γερμανικά (με 9 επίπεδα)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Γαλλικό"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ουκρανικά"
+
+#~ msgid "Default User"
+#~ msgstr "Προκαθορισμένος χρήστης"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt|Αρχεία κειμένου\n"
+#~ "*.*|Όλα τα αρχεία"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Επιλέξτε κείμενο εξάσκησης"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Έγινε εισαγωγή κειμένου από το αρχείο '%1'"
+
+#~ msgid "generated from text file"
+#~ msgstr "δημιουργήθηκε από αρχείο κειμένου"
+
+#~ msgid "all available"
+#~ msgstr "όλα τα διαθέσιμα"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Επιλέξτε αρχείο εξάσκησης μαθήματος"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr ""
+#~ "Θα θέλατε να κρατήσετε το τρέχον επίπεδο για τη νέα συνεδρία εξάσκησης;"
+
+#~ msgid "Start new training session"
+#~ msgstr "Έναρξη νέας συνεδρίας εξάσκησης"
+
+#~ msgid "Keep current level"
+#~ msgstr "Διατήρηση τρέχοντος επιπέδου"
+
+#~ msgid "Start from first level"
+#~ msgstr "Έναρξη από το πρώτο επίπεδο"
+
+#~ msgid "General Options"
+#~ msgstr "Γενικές επιλογές"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Ρυθμίσεις πληκτρολογίου"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Επίπεδο: Σωστοί/Σύνολο χαρακτ.: %1/%2 Λέξεις: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Συνεδρία: Σωστοί/Σύνολο χαρακτ.: %1/%2  Λέξεις: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Σημειώστε ότι σε διαφορετικές χώρες η πληκτρολόγηση είναι ελαφρώς "
+#~ "διαφορετική και συνήθως έχει διαφορές στην πάνω σειρά των πλήκτρων. Για "
+#~ "παράδειγμα, στις Ηνωμένες Πολιτείες μόνο το πιο αριστερό πλήκτρο και το "
+#~ "πλήκτρο με το 1 πιέζονται με το μικρό δάχτυλο του αριστερού χεριού. Στη "
+#~ "Γερμανία το μικρό δάχτυλο πιέζει επίσης το πλήκτρο 2, οπότε και τα "
+#~ "δάχτυλα μεταφέρονται ένα πλήκτρο στα δεξιά στην πάνω σειρά.\n"
+#~ "Συνήθως αυτό έχει διαφορά για διαιρεμένα ή εργονομικά πληκτρολόγια."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Αδύνατη η εύρεση/άνοιγμα του αρχείου μαθήματος '%1'."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Αλλαγή του χρήστη σε '%1'. Επανεκκίνηση συνεδρίας εκμάθησης στο τρέχον "
+#~ "επίπεδο."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "Ά&νοιγμα μαθήματος..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Επεξεργασία μαθήματος..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Επε&ξεργασία θέματος χρωμάτων..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "&Επεξεργασία διάταξης πληκτρολογίου..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "&Παύση συνεδρίας"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "&Στατιστικά μαθήματος"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Προκαθορισμένα &μαθήματα"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Θέματα χ&ρωμάτων πληκτρολογίων"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Ρύθμιση χρηστών..."
+
+#~ msgid "&Current User"
+#~ msgstr "&Τρέχων χρήστης"
+
+#~ msgid "untitled lecture"
+#~ msgstr "μάθημα χωρίς τίτλο"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Ο αριθμός του τρέχοντος θέματος χρωμάτων."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "Χρήση ίδιων χρωμάτων πληκτρολόγησης ανεξάρτητα με το θέμα χρωμάτων."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Το χρώμα φόντου της γραμμής του εκπαιδευτή."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Το χρώμα κειμένου της γραμμής του εκπαιδευτή"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "Το χρώμα φόντου της γραμμής του μαθητή."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Το χρώμα κειμένου της γραμμής του μαθητή"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr ""
+#~ "Αν θα γίνεται χρήση διαφορετικού φόντου για το εσφαλμένο κείμενο ή όχι."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Το χρώμα φόντου για το εσφαλμένο κείμενο (γραμμή μαθητή)."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Το χρώμα κειμένου για το εσφαλμένο κείμενο (γραμμή μαθητή)."
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Αναπαραγωγή ενός προειδοποιητικού ήχου σε κάθε λάθος πληκτρολόγησης"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Αναπαραγωγή ήχων πληκτρολόγησης."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Ήχος κατά την αυτόματη αλλαγή επιπέδου"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Η ταχύτητα κύλισης"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Το μέγιστο ύψος του συστατικού κύλισης"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Αντικατάσταση προκαθορισμένων γραμματοσειρών μαθήματος."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Η γραμματοσειρά για τις γραμμές εκπαιδευτή και μαθητή"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Το τρέχον φορτωμένο αρχείο μαθήματος"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Αν θα γίνεται χρήση δεξιά προς αριστερά πληκτρολόγησης."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Αν θα γίνει χρήση χρωμάτων στα πλήκτρα ή όχι."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "Αν θα εμφανίζονται μόνο τα γνωστά πλήκτρα ή όλα τα πλήκτρα."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Αν θα εμφανίζεται το πληκτρολόγιο."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr ""
+#~ "Αν θα γίνει αντικατάσταση των προκαθορισμένων γραμματοσειρών του "
+#~ "πληκτρολογίου."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Η γραμματοσειρά για τα πλήκτρα στο πληκτρολόγιο"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Το τρέχον φορτωμένο αρχείο πληκτρολογίου"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr ""
+#~ "Απαιτεί από το χρήστη την πίεση του enter μετά την ολοκλήρωση της γραμμής."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Αυτόματη ρύθμιση επιπέδου"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Απενεργοποίηση της χειροκίνητης ρύθμισης επιπέδου όταν είναι ενεργή η "
+#~ "αυτόματη ρύθμιση"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Απομνημόνευση επιπέδου για την επόμενη εκκίνηση του KTouch"
+
+#~ msgid "The current training level"
+#~ msgstr "Το τρέχον επίπεδο εκπαίδευσης"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Αριθμός χαρακτήρων ανά λεπτό για την αύξηση ενός επιπέδου"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Ποσοστό ορθότητας για την αύξηση ενός επιπέδου"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Αριθμός χαρακτήρων ανά λεπτό για τη μείωση ενός επιπέδου"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Ποσοστό ορθότητας για τη μείωση ενός επιπέδου"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr ""
+#~ "Ο αριθμός πληκτρολογημένων γραμμών πριν την τροποποίηση του επιπέδου"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Εκτέλεση τουλάχιστον ενός πλήρους επιπέδου πριν την άνοδό του"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Επίτρεψε πολλαπλούς χρήστες KTouch για έναν λογαριασμό χρήστη"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Το όνομα του τρέχοντος χρήστη."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Να αποθηκευτούν τα τροποποιημένα θέματα χρωμάτων;"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "θέμα χρωμάτων χωρίς τίτλο"
+
+#~ msgid "Black && White"
+#~ msgstr "Μαύρο && άσπρο"
+
+#~ msgid "Classic"
+#~ msgstr "Κλασικό"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Βαθύ μπλε"
+
+#~ msgid "Stripy"
+#~ msgstr "Ριγωτό"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Αδύνατη η λήψη/άνοιγμα του αρχείου πληκτρολογίου '%1'"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "το %1 με χαρακτήρα εμφάνισης '%2' και unicode '%3' έχει ήδη οριστεί οπότε "
+#~ "έγινε παράλειψη.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Πλήκτρο ελέγχου"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Άγνωστο πλήκτρο δαχτύλου με unicode '%1'. Το κανονικό πλήκτρο με "
+#~ "χαρακτήρα εμφάνισης '%2' και unicode '%3' παραλείφθηκε.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Άγνωστο πλήκτρο προορισμού με unicode '%1'. Το κρυφό πλήκτρο με χαρακτήρα "
+#~ "εμφάνισης '%2' και unicode '%3' παραλείφθηκε.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Άγνωστο πλήκτρο δαχτύλου με unicode '%1'. Το κρυφό πλήκτρο με χαρακτήρα "
+#~ "εμφάνισης '%2' και unicode '%3' παραλείφθηκε.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Άγνωστο πλήκτρο τροποποιητή/ελέγχου με unicode '%1'. Το κρυφό πλήκτρο με "
+#~ "χαρακτήρα εμφάνισης '%2' και unicode '%3' παραλείφθηκε.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|Αρχεία πληκτρολογίου KTouch (*.keyboard.xml)\n"
+#~ "*.*|Όλα τα αρχεία"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Πραγματικά διαγραφή του πλήκτρου αυτού;"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Επεξεργαστής πληκτρολογίου KTouch"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Αυτός δεν είναι ένας έγκυρος αριθμός unicode. Παρακαλώ διορθώστε τον "
+#~ "αριθμό ή εισάγετε έναν χαρακτήρα."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Παρακαλώ εισάγετε ένα χαρακτήρα ή έναν αριθμό unicode."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Διαγραφή όλων των συνδέσεων γι' αυτό το πλήκτρο;"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Σφάλμα επεξεργαστή πληκτρολογίου KTouch"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<πλήκτρο τροποποιητή>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Άνοιγμα αρχείου πληκτρολογίου"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Ποιο αρχείο πληκτρολογίου επιθυμείτε να επεξεργαστείτε;"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Επεξεργασία τρέχοντος πληκτρολογίου:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Άνοιγμα ενός προκαθορισμένου πληκτρολογίου:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Άνοιγμα ενός αρχείου πληκτρολογίου:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<κανένα αρχείο πληκτρολογίου διαθέσιμο>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr ""
+#~ "Αδύνατο το άνοιγμα του αρχείου πληκτρολογίου, δημιουργία ενός νέου στη "
+#~ "θέση του."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Υπήρξαν προειδοποιήσεις κατά την ανάγνωση του αρχείου πληκτρολογίου "
+#~ "'%1':\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (τροποποιημένο)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Επεξεργαστής πληκτρολογίου KTouch - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Επεξεργαστής πληκτρολογίου KTouch - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<ανώνυμο αρχείο πληκτρολογίου>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr ""
+#~ "Το πληκτρολόγιό σας τροποποιήθηκε. Επιθυμείτε την αποθήκευση των αλλαγών;"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Αδύνατη η ανάγνωση του αρχείου διάταξης πληκτρολογίου '%1'. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr ""
+#~ "Αδύνατη η λήψη/άνοιγμα του αρχείου διάταξης πληκτρολογίου από το '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Σφάλμα ανάγνωσης της διάταξης πληκτρολογίου: Το προκαθορισμένο αριθμητικό "
+#~ "πληκτρολόγιο θα δημιουργηθεί στη θέση της. Μπορείτε να επιλέξετε μια άλλη "
+#~ "διάταξη πληκτρολογίου στο διάλογο προτιμήσεων."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Ένα προκαθορισμένο μάθημα..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Αποθήκευση μαθήματος εξάσκησης"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Επεξεργαστής μαθήματος KTouch - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<νέο ανώνυμο αρχείο μαθήματος>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Δεδομένα επιπέδου %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Εισάγετε εδώ τις γραμμές σας..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Άνοιγμα αρχείου μαθήματος"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Ποιο αρχείο μαθήματος επιθυμείτε να επεξεργαστείτε;"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Επεξεργασία τρέχοντος μαθήματος:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Άνοιγμα ενός προκαθορισμένου μαθήματος:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "Αδύνατο το άνοιγμα του αρχείου μαθήματος, δημιουργία ενός νέου στη θέση "
+#~ "του."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Το μάθημα τροποποιήθηκε. Επιθυμείτε την αποθήκευση των αλλαγών;"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Πάρα πολλοί"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Αυτό είναι ένα μικρό προκαθορισμένο κείμενο. Αν θέλετε\n"
+#~ "να ξεκινήσετε την εξάσκηση, ανοίξτε ένα αρχείο\n"
+#~ "μαθήματος/εξάσκησης από το κύριο μενού. Αν πατήσετε\n"
+#~ "Enter μετά την επόμενη γραμμή θα έχετε ολοκληρώσει με\n"
+#~ "επιτυχία το προκαθορισμένο μάθημα. Βιαστείτε!!!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<κανένα προκαθορισμένο αρχείο διαθέσιμο>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Παρακαλώ επιλέξτε ή εισάγετε ένα όνομα αρχείου."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Η διεύθυνση URL δεν έχει σωστή μορφή. Παρακαλώ διορθώστε την."
+
+#~ msgid "***current***  "
+#~ msgstr "***τρέχον***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Δεν υπάρχουν στατιστικά δεδομένα για την ώρα!"
+
+#, fuzzy
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "Διαγραφή όλων των στατιστικών για τον τρέχοντα χρήστη;"
+
+#~ msgid "Words per minute"
+#~ msgstr "Λέξεις ανά λεπτό"
+
+#~ msgid "Correctness"
+#~ msgstr "Ορθότητα"
+
+#~ msgid "Skill"
+#~ msgstr "Δεξιότητα"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Χρόνος από την πρώτη εξάσκηση σε μέρες"
+
+#~ msgid "Sessions"
+#~ msgstr "Συνεδρίες"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr ""
+#~ "Εκκίνηση συνεδρίας εξάσκησης. Αναμονή για το πρώτο πάτημα πλήκτρου..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Ολοκληρώσατε αυτή τη συνεδρία εξάσκησης.\n"
+#~ "Η συνεδρία θα ξεκινήσει από την αρχή."
+
+#~ msgid "You rock!"
+#~ msgstr "Είστε τέλειοι!"
+
+#, fuzzy
+#~ msgid "S&tatistics"
+#~ msgstr "Γενικά στατιστικά"
+
+#~ msgid "&Settings"
+#~ msgstr "Ρ&υθμίσεις"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Κύρια γραμμή εργαλείων"
+
+#~ msgid "New User"
+#~ msgstr "Νέος χρήστης"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Παρακαλώ εισάγετε ένα μοναδικό όνομα χρήστη:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Αυτό δεν είναι ένα έγκυρο (μοναδικό) όνομα χρήστη!"
+
+#~ msgid "Save user list?"
+#~ msgstr "Αποθήκευση λίστας χρηστών;"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "Ένα πρόγραμμα που σας βοηθάει να μάθετε και να εξασκηθείτε στην "
+#~ "πληκτρολόγηση"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Αρχείο εξάσκησης για άνοιγμα"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Επεξεργαστής θέματος χρωμάτων"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Θέματα χρωμάτων του χρήστη"
+
+#~ msgid "Add"
+#~ msgstr "Προσθήκη"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Επεξεργασία θέματος χρωμάτων"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Όνομα του θέματος χρωμάτων:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Αποθήκευση δεδομένων"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Χρώματα γραμμής κύλισης"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Φόντο εκπαιδευτή:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Κείμενο εκπαιδευτή:"
+
+#~ msgid "Student background:"
+#~ msgstr "Φόντο εκπαίδευσης:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Κείμενο σφάλματος εκπαίδευσης:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Φόντο εκπαίδευσης σε σφάλμα:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Χρώματα πληκτρολογίου"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Χρώμα φόντου για κανονικά πλήκτρα:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Τονισμένο φόντο:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Χρώματα κανονικών πλήκτρων:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Χρώμα τονισμένου κειμένου:"
+
+#~ msgid "Text color:"
+#~ msgstr "Χρώμα κειμένου:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Πλαίσιο πλήκτρου:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Άλλα πλήκτρα/τροποποιητές:"
+
+#~ msgid "Text color"
+#~ msgstr "Χρώμα κειμένου"
+
+#~ msgid "Background:"
+#~ msgstr "Φόντο:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Δεδομένα αναγνώρισης πληκτρολογίου"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Τίτλος πληκτρολογίου:"
+
+#~ msgid "Language id:"
+#~ msgstr "Ταυτότητα γλώσσας:"
+
+#~ msgid "Comments:"
+#~ msgstr "Σχόλια:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Ιδιότητες πλήκτρου"
+
+#~ msgid "Key type:"
+#~ msgstr "Τύπος πλήκτρου:"
+
+#~ msgid "Key text:"
+#~ msgstr "Κείμενο πλήκτρου:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Επιλογές επεξεργασίας πληκτρολογίου"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Ορισμός γραμματοσειράς πληκτρολογίου..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Αποθήκευση πληκτρολογίου ως..."
+
+#~ msgid "Close"
+#~ msgstr "Κλείσιμο"
+
+#~ msgid "Key connectors"
+#~ msgstr "Συνδέσεις πλήκτρου"
+
+#~ msgid "or unicode"
+#~ msgstr "ή unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Καθαρισμός συνδέσεων"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Προσθήκη/ενημέρωση σύνδεσης"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<πλήκτρο τροποποιητή>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Διάταξη πληκτρολογίου (κλικ για ενεργοποίηση πλήκτρων για επεξεργασία ή "
+#~ "σύρσιμο πλήκτρων)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Επεξεργαστής μαθήματος KTouch"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Ιδιότητες μαθήματος"
+
+#~ msgid "Comment:"
+#~ msgstr "Σχόλιο:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Δεδομένα επιπέδου του επιπέδου 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Νέοι χαρακτήρες σε αυτό το επίπεδο:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Σχόλιο επιπέδου (προαιρετικό):"
+
+#~ msgid "Level data:"
+#~ msgstr "Δεδομένα επιπέδου:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Περίληψη επιπέδου εξάσκησης"
+
+#~ msgid "Summary"
+#~ msgstr "Περίληψη"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Υψηλές βαθμολογίες για αυτό το επίπεδο"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Ημερομηνία"
+
+#~ msgid "Score"
+#~ msgstr "Βαθμός"
+
+#~ msgid "Characters per second"
+#~ msgstr "Χαρακτήρες ανά δευτερόλεπτο"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Υψηλές βαθμολογίες όλων των χρηστών γι' αυτό το επίπεδο"
+
+#~ msgid "&Retry level"
+#~ msgstr "&Ξανά προσπάθεια επιπέδου"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&Συνέχεια στο επόμενο επίπεδο"
+
+#~ msgid "Browse..."
+#~ msgstr "Περιήγηση..."
+
+#, fuzzy
+#~ msgid "&OK"
+#~ msgstr "&Εντάξει"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Χρήση προσαρμοσμένου χρώματος για τη γραμμή πληκτρολόγησης"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Το χρώμα της γραμμής του εκπαιδευτή"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Γραμμή εκπαιδευτή"
+
+#~ msgid "Text:"
+#~ msgstr "Κείμενο:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Τροποποίηση του χρώματος κειμένου της γραμμής εκπαίδευσης"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να τροποποιήσετε το χρώμα κειμένου της γραμμής εκπαίδευσης "
+#~ "στην οποία πληκτρολογείτε."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Το φόντο της γραμμής του εκπαιδευτή"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Εδώ μπορείτε να τροποποιήσετε το φόντο της γραμμής του εκπαιδευτή (τη "
+#~ "γραμμή με τα γράμματα που πρέπει να πληκτρολογήσετε)."
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Χρήση διαφορετικού χρώματος σε ελλείψεις πληκτρολόγησης"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Επιλέξτε το χρώμα φόντου για λάθη πληκτρολόγησης"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Αν έχετε ενεργοποιήσει την επιλογή 'Χρήση διαφορετικού χρώματος σε λάθη "
+#~ "πληκτρολόγησης', μπορείτε να επιλέξετε ένα χρώμα για το φόντο των λαθών. "
+#~ "Κάνετε λάθη όταν πληκτρολογείτε λάθος γράμμα στη γραμμή εκπαίδευσης. Αυτή "
+#~ "είναι μια μέθοδος για να γίνονται πιο ορατά τα λάθη σας."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Επιλέξτε το χρώμα κειμένου για λάθη πληκτρολόγησης"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Αν έχετε ενεργοποιήσει την επιλογή 'Χρήση διαφορετικού χρώματος σε λάθη "
+#~ "πληκτρολόγησης', μπορείτε να επιλέξετε ένα χρώμα για το κείμενο των "
+#~ "λαθών. Κάνετε λάθη όταν πληκτρολογείτε λάθος γράμμα στη γραμμή "
+#~ "εκπαίδευσης. Αυτή είναι μια μέθοδος για να γίνονται πιο ορατά τα λάθη σας."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Ρυθμίσεις γραμμής κειμένου"
+
+#~ msgid "Fast"
+#~ msgstr "Γρήγορη"
+
+#~ msgid "Slow"
+#~ msgstr "Αργή"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Ταχύτητα κύλισης:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Αντικατάσταση γραμματοσειράς μαθήματος"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Γραμματοσειρά εμφαν./πληκτρ. κείμενου:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Αυτό το κουμπί εμφανίζει ένα διάλογο γραμματοσειράς στον οποίο μπορείτε "
+#~ "να τροποποιήσετε τη γραμματοσειρά για τις γραμμές εκπαίδευσης και "
+#~ "εκπαιδευτή. Μόλις κλείσετε το διάλογο, θα γίνει προεπισκόπηση της νέας "
+#~ "γραμματοσειράς στην παρακάτω γραμμή και θα εφαρμοστεί μόνο όταν κάνετε "
+#~ "κλικ στο κουμπί εφαρμογής."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Εμφάνιση στο πληκτρολόγιο των πλήκτρων που πρέπει να πατήσετε"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Αυτή η επιλογή τονίζει πάνω στο πληκτρολόγιο το πλήκτρο που πρέπει να "
+#~ "πατήσετε κάθε στιγμή. Είναι ευκολότερη η πληκτρολόγηση αν είναι "
+#~ "ενεργοποιημένο αυτό."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Τονισμός &πλήκτρων στο πληκτρολόγιο"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Απόκρυψη/σκίαση πλήκτρων εκτός εξάσκησης"
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "Αν ενεργοποιήσετε αυτή την επιλογή μπορείτε να ορίσετε τη δική σας "
+#~ "γραμματοσειρά πληκτρολογίου στη θέση της προκαθορισμένης από τη διάταξη "
+#~ "πληκτρολογίου."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Κάθε διάταξη πληκτρολογίου μπορεί να ορίσει τη δική της γραμματοσειρά. Αν "
+#~ "η προκαθορισμένη γραμματοσειρά μιας διάταξης πληκτρολογίου δε λειτουργεί "
+#~ "ή επιθυμείτε μια διαφορετική γραμματοσειρά, μπορείτε να επιλέξετε αυτό το "
+#~ "κουμπί. Μπορείτε έπειτα να επιλέξετε τη δική σας γραμματοσειρά που θα "
+#~ "χρησιμοποιηθεί για την εμφάνιση των χαρακτήρων πάνω στα πλήκτρα."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Αντικατάσταση γραμματοσειράς πληκτρολογίου"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Γραμματοσειρά για τα πλήκτρα στο πληκτρολόγιο:"
+
+#~ msgid "Sound"
+#~ msgstr "Ήχος"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Αν ενεργοποιήσετε αυτή την επιλογή (προκαθορισμένο) θα γίνεται "
+#~ "αναπαραγωγή ενός προειδοποιητικού ήχου σε κάθε λάθος πληκτρολόγησης."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Προειδοποιητικός ήχος σε σφάλμα"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Ήχος γραφομηχανής σε κάθε πίεση πλήκτρου"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Αν ενεργοποιήσετε αυτήν την επιλογή, θα γίνεται αναπαραγωγή ήχου "
+#~ "γραφομηχανής σε κάθε πάτημα πλήκτρου."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "Ή&χος γραφομηχανής κατά την πληκτρολόγηση"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Αναπαραγωγή ενός ήχου κατά την αυτόματη αλλαγή επιπέδου."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Αν ενεργοποιήσετε αυτή την επιλογή (προκαθορισμένο) θα γίνεται "
+#~ "αναπαραγωγή ενός ήχου κατά την αυτόματη αλλαγή επιπέδου."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Ή&χος κατά την αυτόματη αλλαγή επιπέδου"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "&Αυτόματη ρύθμιση επιπέδου"
+
+#~ msgid "chars/minute"
+#~ msgstr "χαρακτήρες/λεπτό"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Ταχύτητα πληκτρολόγησης:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Ορθότητα:"
+
+#~ msgid "Workload:"
+#~ msgstr "Φόρτος εργασίας:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Ολοκλήρωση ολόκληρου του επιπέδου πριν τη συνέχεια"
+
+#~ msgid "lines"
+#~ msgstr "γραμμές"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Όρια για την αύξηση ενός επιπέδου"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Όρια για τη μείωση ενός επιπέδου"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Απενεργοποίηση της χειροκίνητης αλλαγής επιπέδου"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr ""
+#~ "&Λειτουργία γραφομηχανής (ο χρήστης επιβεβαιώνει τη γραμμή με το Enter)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "&Απομνημόνευση επιπέδου για την επόμενη εκκίνηση του προγράμματος"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Τρέχουσα συνεδρία εξάσκησης"
+
+#~ msgid "Lecture:"
+#~ msgstr "Μάθημα:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Επίπεδα αυτής της συνεδρίας:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Χρόνος (δευτερόλεπτα) που πέρασε:"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr ""
+#~ "Αυτό εμφανίζει τον αριθμό των δευτερολέπτων που πληκτρολογείτε σε αυτήν "
+#~ "τη συνεδρία εξάσκησης."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Χαρακτήρες που πληκτρολογήθηκαν:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr ""
+#~ "Ο αριθμός των χαρακτήρων (σωστοί και λάθος) που πληκτρολογήσατε μέχρι "
+#~ "αυτήν τη στιγμή."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Λάθος πληκτρολογημένοι χαρακτήρες:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Εμφανίζει το πλήθος των λάθος χαρακτήρων που πληκτρολογήσατε."
+
+#~ msgid "Words typed:"
+#~ msgstr "Λέξεις που πληκτρολογήθηκαν:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Ο αριθμός λέξεων που πληκτρολογήσατε μέχρι αυτή τη στιγμή."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Ο λόγος των σωστά πληκτρολογημένων χαρακτήρων με το σύνολο των χαρακτήρων "
+#~ "που πληκτρολογήσατε."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Ρυθμός πληκτρολόγησης"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Ο αριθμός των σωστών χαρακτήρων ανά λεπτό."
+
+#~ msgid "Words per minute:"
+#~ msgstr "Λέξεις ανά λεπτό:"
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Ο αριθμός των λέξεων που πληκτρολογήσατε ανά λεπτό."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Εδώ εμφανίζονται οι χαρακτήρες που είχατε πρόβλημα κατά τη διάρκεια της "
+#~ "εξάσκησης. Το ποσοστό εμφανίζει τον αριθμό των λαθών που κάνατε σε ένα "
+#~ "πλήκτρο σε σχέση με το σύνολο των πληκτρολογήσεων αυτού του πλήκτρου. Οι "
+#~ "μεγαλύτεροι αριθμοί υποδηλώνουν περισσότερα λάθη σε ένα πλήκτρο."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Στατιστικά χαρακτήρων (χαρακτήρες που πρέπει να επικεντρωθείτε)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Στατιστικά τρέχοντος επιπέδου"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "ετικέταΜαθήματος2"
+
+#~ msgid "Level:"
+#~ msgstr "Επίπεδο:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "ετικέταΕπιπέδου2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Εδώ εμφανίζονται οι χαρακτήρες που είχατε πρόβλημα κατά τη διάρκεια της "
+#~ "εξάσκησης. Το ποσοστό εμφανίζει τον αριθμό των λαθών που κάνατε σε ένα "
+#~ "πλήκτρο σε σχέση με το σύνολο των πληκτρολογήσεων αυτού του πλήκτρου. Οι "
+#~ "μεγαλύτεροι αριθμοί υποδηλώνουν περισσότερα λάθη σε ένα πλήκτρο."
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Η πρόοδός σας στην πληκτρολόγηση"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Εμφάνιση προόδου του μαθήματος:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να επιλέξετε το μάθημα για το οποίο επιθυμείτε τη λήψη "
+#~ "στατιστικών."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Επιλογές γραφήματος προόδου"
+
+#~ msgid "Chart Data"
+#~ msgstr "Δεδομένα γραφήματος"
+
+#~ msgid "Session stats"
+#~ msgstr "Στατιστικά συνεδρίας"
+
+#~ msgid "Level stats"
+#~ msgstr "Στατιστικά επιπέδου"
+
+#~ msgid "Chart Type"
+#~ msgstr "Τύπος γραφήματος"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Κλίμακα άξονα του χρόνου"
+
+#~ msgid "Time scaled"
+#~ msgstr "Κλιμάκωση με το χρόνο"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Σταθερά διαστήματα"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Πατώντας αυτό το κουμπί θα καθαριστούν όλα τα στατιστικά εξάσκησης για "
+#~ "τον τρέχοντα χρήστη."
+
+#~ msgid "Clear History"
+#~ msgstr "Καθαρισμός ιστορικού"
+
+#~ msgid "Level"
+#~ msgstr "Επίπεδο"
+
+#~ msgid "Current level"
+#~ msgstr "Τρέχον επίπεδο"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Εδώ εμφανίζεται το επίπεδο στο οποίο βρίσκεστε."
+
+#~ msgid "Speed"
+#~ msgstr "Ταχύτητα"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Χαρακτήρες/λεπτό"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Αυτό εμφανίζει την ταχύτητα με την οποία πληκτρολογείτε σε χαρακτήρες ανά "
+#~ "λεπτό."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Κατά πόσο πληκτρολογείτε σωστά;"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Εδώ εμφανίζεται το πόσο σωστά πληκτρολογείτε."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Νέοι χαρακτήρες σε αυτό το επίπεδο"
+
+#~ msgid "Setup Users"
+#~ msgstr "Ρύθμιση χρηστών"
+
+#~ msgid "&Add"
+#~ msgstr "&Προσθήκη"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+Π"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+Α"
+
+#~ msgid "&Close"
+#~ msgstr "&Κλείσιμο"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Βουλγαρικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Βουλγαρικά (αυτόματη δημιουργία πλήρες)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Καταλανικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Τσέχικα (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Δανέζικα (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Δανέζικα (πλήρες μάθημα)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Ολανδικά παιδικό (Ολανδικά για παιδιά)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Ολανδικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak - ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Αγγλικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Φινλανδικά για παιδιά"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Φινλανδικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Γαλλικά (αυτόματη δημιουργία) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Γαλλικά (αυτόματη δημιουργία) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Dvorak γαλλικό (μέρος 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Dvorak γαλλικό (μέρος 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Γερμανικά (με 9 επίπεδα)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Γερμανικά (από το Tipptrainer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Γερμανικά (αυτόματη δημιουργία)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Γερμανικό (Νέα 2 διάταξη πληκτρολογίου)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Γερμανικό (αριθμητικό πληκτρολόγιο)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Ελληνικά"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Ουγκρικά (για προχωρημένους)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Ουγκρικά  (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Ιταλικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Λατινικά"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Νορβηγικά"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Πολωνικά (από το TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Ρωσικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Ρωσικά (αυτόματη δημιουργία πλήρες)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Σλοβακικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Σλοβενικά"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Ισπανικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Ισπανικά (αυτόματη δημιουργία) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Ισπανικά (αυτόματη δημιουργία) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Dvorak ισπανικό"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Τουρκικά (αυτόματη δημιουργία)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ουκρανικά"
+
+#~ msgid "F&ile"
+#~ msgstr "Α&ρχείο"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Magyar gépírótanfolyam (Expert++)"
+#~ msgstr "Ούγγρικο gépírótanfolyam (Προχωρημένοι++)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Γερμανικά (NEO-Schnellschreiblayout)"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "Άνοιγμα περιεχομένου στον επεξεργαστή"
+
+#~ msgid "Title Question..."
+#~ msgstr "Ερώτηση τίτλου..."
+
+#~ msgid "Current something"
+#~ msgstr "Τρέχον περιεχόμενο"
+
+#~ msgid "Preset something:"
+#~ msgstr "Προκαθορισμένο περιεχόμενο:"
+
+#~ msgid "Open file:"
+#~ msgstr "Άνοιγμα αρχείου:"
+
+#~ msgid "New something"
+#~ msgstr "Νέο περιεχόμενο"

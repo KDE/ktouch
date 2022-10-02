@@ -1,0 +1,2176 @@
+# translation of ktouch.po to Icelandic
+# Copyright (C) 2003, 2004, 2009 Free Software Foundation, Inc.
+#
+# Arnar Leósson <leosson@frisurf.no>, 2003.
+# Björgvin Ragnarsson <nifgraup@hotmail.com>, 2004.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2009-07-28 20:13+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Björgvin Ragnarsson"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nifgraup@hotmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+msgid "Custom Lessons"
+msgstr "&Hefja nýja æfingarlotu"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Stafir slegnir inn:"
+msgstr[1] "Stafir slegnir inn:"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr ""
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+msgid "New course"
+msgstr "Veldu litaskema:"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+msgid "New keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "&Æfing"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Statistics"
+msgid "Training Settings"
+msgstr "Tölfræði æfingar"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "Litastillingar"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Color Settings"
+msgstr "Litastillingar"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+msgid "Configure Keyboard..."
+msgstr "Lyklaborð"
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Typewriting Trainer"
+msgstr "Innslátarlína"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+#| msgid "Current Training Session"
+msgid "Current maintainer"
+msgstr "Núverandi æfingarlota"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr ""
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr ""
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr ""
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr ""
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr ""
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr ""
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr ""
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+msgid "Character"
+msgstr "Stafir slegnir inn:"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+msgid "Modifier ID"
+msgstr "(breytt)"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "nýjir stafir"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+msgid "Keyboard Layouts"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Nákvæmni"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "Stafir á mínútu"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "&Æfing"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "Nákvæmni"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+#| msgid "Characters per minute:"
+msgid "Characters per Minute:"
+msgstr "Stafir á mínútu:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+msgid "Other Courses"
+msgstr "Veldu litaskema:"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Welcome to Typewriting Trainer"
+msgstr "Innslátarlína"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "&Æfing"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+msgid "Configure Keyboard"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+msgid "Edit lesson"
+msgstr "Flauta við villu"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+msgid "Lesson text"
+msgstr "Flauta við villu"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+msgid "Manage Profiles"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "Valkostir æfingar"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+msgid "Create New Profile"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr ""
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "Tölfræði núverandi æfingarlotu"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+msgid "Character:"
+msgstr "Stafir slegnir inn:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+msgid "This Lesson"
+msgstr "&Hefja nýja æfingarlotu"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "&Æfing"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+msgid "Restart Lesson"
+msgstr "&Hefja nýja æfingarlotu"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Æfingarlota! Tíminn líður..."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "Æfingarlota heldur áfram við næsta innslátt..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Index finger:"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+msgid "Middle finger:"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Ring finger:"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+msgid "Little finger:"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+msgid "Keyboard layout:"
+msgstr "Lyklaborðsuppsetningar"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+msgid "Move lesson up"
+msgstr "Flauta við villu"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "New characters:"
+msgstr "nýjir stafir"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+msgid "Create new normal key"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+msgid "Create new special key"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+msgid "Special Key"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+msgid "Keyboard"
+msgstr "Lyklaborðsuppsetningar"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, fuzzy, kde-format
+msgid "Left:"
+msgstr "Sjálfgefnir fyrirlestrar"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Finger:"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+msgid "Left little finger"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Left ring finger"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+msgid "Left middle finger"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+msgid "Left index finger"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right index finger"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+msgid "Right middle finger"
+msgstr "Liðinn þjálfunartími"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right ring finger"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right little finger"
+msgstr "Innslátarlína"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+msgid "Characters"
+msgstr "Stafir slegnir inn:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add new character"
+msgstr "nýjir stafir"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove character"
+msgstr "nýjir stafir"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+msgid "Modifier ID:"
+msgstr "(breytt)"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+msgid "Open a text file..."
+msgstr "&Sýsla með fyrirlestur"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+msgid "0 Characters"
+msgstr "Stafir slegnir inn:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Lyklaborðsuppsetningar"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "During training:"
+msgstr "&Æfing"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, fuzzy, kde-format
+msgid "Show keyboard"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "General Statistics"
+msgid "Show real-time statistics"
+msgstr "Almenn tölfræði"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Words per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "Orð á mínútu:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Minimum accuracy:"
+msgstr "Nákvæmni"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set new characters for lesson"
+msgstr "nýjir stafir"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+msgid "Set lesson text"
+msgstr "Flauta við villu"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+msgid "Set keyboard layout title"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout name"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+msgid "Set keyboard layout size"
+msgstr "Lyklaborðsuppsetningar"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove key"
+msgstr "nýjir stafir"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add key character"
+msgstr "nýjir stafir"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove key character"
+msgstr "nýjir stafir"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set key character value"
+msgstr "nýjir stafir"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+msgid "Set special key type"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+msgid "Set special key label"
+msgstr "Veldu lyklaborðsuppsetningu:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Veldu lyklaborðsuppsetningu:"
+
+#, fuzzy
+#~ msgid "Launch Editor"
+#~ msgstr "Gögn borðs:"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "&Æfing"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "&Æfing"
+
+#, fuzzy
+#~ msgid "Default User"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Liðinn þjálfunartími"
+
+#, fuzzy
+#~| msgid "Start New Training Session"
+#~ msgid "Start new training session"
+#~ msgstr "Hefja nýja æfingarlotu"
+
+#, fuzzy
+#~ msgid "Keep current level"
+#~ msgstr "Geyma núverandi borð"
+
+#~ msgid "General Options"
+#~ msgstr "Almennar stillingar"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Lyklaborðsstillingar"
+
+#, fuzzy
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "   Réttir stafir: %1   Heildarstafir: %1   Orð: %1   "
+
+#, fuzzy
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "   Réttir stafir: %1   Heildarstafir: %1   Orð: %1   "
+
+#, fuzzy
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Gat ekki fundið/opnað fyrirlestrarskrána '%1.ktouch'."
+
+#, fuzzy
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Breyta fyrirlestri..."
+
+#, fuzzy
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~ msgid "&Pause Session"
+#~ msgstr "&Setja æfingarlotu í bið"
+
+#, fuzzy
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Almenn tölfræði"
+
+#, fuzzy
+#~ msgid "Default &Lectures"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Lyklaborðs litaskemur"
+
+#, fuzzy
+#~ msgid "&Current User"
+#~ msgstr "Núverandi borð"
+
+#, fuzzy
+#~ msgid "untitled lecture"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "The background color for the student's line."
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "The text color for the student's line"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Hljóð þegar skipt er sjálfvirkt á nýtt borð"
+
+#, fuzzy
+#~ msgid "The sliding speed"
+#~ msgstr "Skrunhraði:"
+
+#, fuzzy
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Veldu lyklaborðsuppsetningu:"
+
+#, fuzzy
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Geyma núverandi borð"
+
+#, fuzzy
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Letur fyrir hnappa á lyklaborði:"
+
+#, fuzzy
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Sjálfvirkar borðsbreytingar"
+
+#, fuzzy
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Muna borð við næstu ræsingu forritsins"
+
+#, fuzzy
+#~ msgid "The current training level"
+#~ msgstr "Geyma núverandi borð"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Takmörk við hækkun stigs"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Takmörk við hækkun stigs"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Takmörk við lækkun stigs"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Takmörk við lækkun stigs"
+
+#, fuzzy
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "untitled color scheme"
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~| msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Gat ekki hlaðið niður/opnað lyklaborðsuppsetningarskrána frá '%1'."
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "Open Keyboard File"
+#~ msgstr "Lyklaborð"
+
+#, fuzzy
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Núverandi fyrirlestri hefur verið breytt. Viltu vista hann?"
+
+#, fuzzy
+#~ msgid "Edit current keyboard:"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Gat ekki fundið/opnað fyrirlestrarskrána '%1.ktouch'."
+
+#, fuzzy
+#~ msgid " (modified)"
+#~ msgstr "(breytt)"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Núverandi fyrirlestri hefur verið breytt. Viltu vista hann?"
+
+#, fuzzy
+#~| msgid "Could not read the keyboard layout file '%1'. "
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Gat ekki lesið lyklaborðsuppsetningarskrána '%1'. "
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Gat ekki hlaðið niður/opnað lyklaborðsuppsetningarskrána frá '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Villa við lestur á lyklaborðsuppsetningu! Sjálfgefna uppsetningin verður "
+#~ "búin til í staðinn. Þú getur valið aðra lyklaborðsuppsetningu í "
+#~ "stillingaglugganum."
+
+#, fuzzy
+#~ msgid "A default lecture..."
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgid "Save Training Lecture"
+#~ msgstr "Liðinn þjálfunartími"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "Data of Level %1"
+#~ msgstr "Gögn borðs á stigi %1"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Skrifaðu línurnar þínar hér..."
+
+#, fuzzy
+#~ msgid "Open Lecture File"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Núverandi fyrirlestri hefur verið breytt. Viltu vista hann?"
+
+#, fuzzy
+#~ msgid "Edit current lecture:"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "Open a default lecture:"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Gat ekki fundið/opnað fyrirlestrarskrána '%1.ktouch'."
+
+#, fuzzy
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Núverandi fyrirlestri hefur verið breytt. Viltu vista hann?"
+
+#~ msgid "Words per minute"
+#~ msgstr "Orð á mínútu"
+
+#~ msgid "Correctness"
+#~ msgstr "Nákvæmni"
+
+#, fuzzy
+#~ msgid "Sessions"
+#~ msgstr "&Setja æfingarlotu í bið"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Hef nýja æfingarlotu: Bíð eftir fyrsta innslættir..."
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "Almenn tölfræði"
+
+#, fuzzy
+#~ msgid "&Settings"
+#~ msgstr "Litastillingar"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "Forrit sem aðstoðar þig við að læra og þjálfa vélritun"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Æfingaskrá sem á að opna"
+
+#, fuzzy
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Litaskema lyklaborðs"
+
+#, fuzzy
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "Name of color scheme:"
+#~ msgstr "Veldu litaskema:"
+
+#, fuzzy
+#~ msgid "Slide Line Colors"
+#~ msgstr "Litir innsláttarlínu"
+
+#, fuzzy
+#~ msgid "Teacher background:"
+#~ msgstr "Bakgrunnur:"
+
+#, fuzzy
+#~ msgid "Teacher text:"
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~ msgid "Student background:"
+#~ msgstr "Bakgrunnur:"
+
+#, fuzzy
+#~ msgid "Student text on error:"
+#~ msgstr "Flauta við villu"
+
+#, fuzzy
+#~ msgid "Student background on error:"
+#~ msgstr "Bakgrunnur:"
+
+#, fuzzy
+#~ msgid "Keyboard Colors"
+#~ msgstr "Litaskema lyklaborðs"
+
+#, fuzzy
+#~ msgid "Highlighted background:"
+#~ msgstr "Lýsa upp hnappa á lyklaborði"
+
+#, fuzzy
+#~ msgid "Highlighted text color:"
+#~ msgstr "Lýsa upp hnappa á lyklaborði"
+
+#, fuzzy
+#~| msgid "Text:"
+#~ msgid "Text color:"
+#~ msgstr "Texti:"
+
+#~ msgid "Background:"
+#~ msgstr "Bakgrunnur:"
+
+#, fuzzy
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Lyklaborðsstillingar"
+
+#, fuzzy
+#~ msgid "Keyboard title:"
+#~ msgstr "Lyklaborð"
+
+#, fuzzy
+#~ msgid "Key Properties"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~| msgid "Keyboard Settings"
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Lyklaborðsstillingar"
+
+#, fuzzy
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~ msgid "Key connectors"
+#~ msgstr "Litaskema lyklaborðs"
+
+#, fuzzy
+#~| msgid "Clear History"
+#~ msgid "Clear connectors"
+#~ msgstr "Hreinsa feril"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "Lecture Properties"
+#~ msgstr "Fyrirlestraritill"
+
+#, fuzzy
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Gögn borðs á stigi 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Nýir stafir í þessu borði:"
+
+#, fuzzy
+#~ msgid "Level comment (optional):"
+#~ msgstr "Lýsing borðs:"
+
+#~ msgid "Level data:"
+#~ msgstr "Gögn borðs:"
+
+#, fuzzy
+#~| msgid "New characters in this level:"
+#~ msgid "High scores for this level"
+#~ msgstr "Nýir stafir í þessu borði:"
+
+#, fuzzy
+#~| msgid "Characters per minute"
+#~ msgid "Characters per second"
+#~ msgstr "Stafir á mínútu"
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Lína kennara:"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Lína kennara:"
+
+#~ msgid "Text:"
+#~ msgstr "Texti:"
+
+#, fuzzy
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Lína kennara:"
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#, fuzzy
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Nota mismunandi liti í innsláttarlínu"
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Stillingar textalínu"
+
+#, fuzzy
+#~ msgid "Fast"
+#~ msgstr "Hratt"
+
+#, fuzzy
+#~ msgid "Slow"
+#~ msgstr "Hægt"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Skrunhraði:"
+
+#, fuzzy
+#~ msgid "Override lecture font"
+#~ msgstr "Veldu lyklaborðsuppsetningu:"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Letur fyrir sýndan/innsleginn texta:"
+
+#, fuzzy
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Lýsa upp hnappa á lyklaborði"
+
+#, fuzzy
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Veldu lyklaborðsuppsetningu:"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Letur fyrir hnappa á lyklaborði:"
+
+#~ msgid "Sound"
+#~ msgstr "Hljóð"
+
+#, fuzzy
+#~ msgid "&Beep on error"
+#~ msgstr "Flauta við villu"
+
+#, fuzzy
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Hljóð þegar skipt er sjálfvirkt á nýtt borð"
+
+#, fuzzy
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Hljóð þegar skipt er sjálfvirkt á nýtt borð"
+
+#, fuzzy
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Sjálfvirkar borðsbreytingar"
+
+#~ msgid "chars/minute"
+#~ msgstr "stafir/mínútu"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Innsláttarhraði:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Nákvæmni:"
+
+#, fuzzy
+#~ msgid "Workload:"
+#~ msgstr "Orð slegin inn:"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Takmörk við hækkun stigs"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Takmörk við lækkun stigs"
+
+#, fuzzy
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Muna borð við næstu ræsingu forritsins"
+
+#, fuzzy
+#~ msgid "Lecture:"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Tími (sekúndur) liðinn:"
+
+#~ msgid "Characters typed:"
+#~ msgstr "Stafir slegnir inn:"
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Stafir ranglega slegnir inn:"
+
+#~ msgid "Words typed:"
+#~ msgstr "Orð slegin inn:"
+
+#~ msgid "Typing Rate"
+#~ msgstr "Innsláttarhraði:"
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Stafatölfræði (stafir sem þú þarft að einbeita þér að)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#, fuzzy
+#~ msgid "Current Level Statistics"
+#~ msgstr "Almenn tölfræði"
+
+#, fuzzy
+#~ msgid "Level:"
+#~ msgstr "Borð"
+
+#, fuzzy
+#~ msgid "Show progress in lecture:"
+#~ msgstr "&Sýsla með fyrirlestur"
+
+#, fuzzy
+#~ msgid "Chart Data"
+#~ msgstr "Graf"
+
+#, fuzzy
+#~ msgid "Session stats"
+#~ msgstr "&Setja æfingarlotu í bið"
+
+#, fuzzy
+#~ msgid "Level stats"
+#~ msgstr "Gögn borðs:"
+
+#, fuzzy
+#~ msgid "Chart Type"
+#~ msgstr "Stafir slegnir inn:"
+
+#~ msgid "Clear History"
+#~ msgstr "Hreinsa feril"
+
+#~ msgid "Level"
+#~ msgstr "Borð"
+
+#, fuzzy
+#~ msgid "Current level"
+#~ msgstr "Geyma núverandi borð"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Þetta sýnir á hvaða borði þú ert."
+
+#~ msgid "Speed"
+#~ msgstr "Hraði"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Stafir/Mínúta"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Þetta sýnir hversu hratt þú ert að skrifa. Það mælir innslátarhraðann í "
+#~ "stöfum á mínútu."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Hversu nákvæmlega ertu að vélrita?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Þetta sýnir hversu nákvæmlega þú ert að vélrita."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Nýir stafir í þessu borði"
+
+#, fuzzy
+#~ msgid "Setup Users"
+#~ msgstr "Sjálfgefnir fyrirlestrar"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Lyklaborðsuppsetningar"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "&Æfing"

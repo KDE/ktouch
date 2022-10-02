@@ -1,0 +1,2417 @@
+# Irish translation of ktouch
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the ktouch package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeedu/ktouch.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+#| msgid "Restart Lesson"
+msgid "Custom Lessons"
+msgstr "Atosaigh an Ceacht"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Folaithe"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Barr ar chlé"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Barr ar dheis"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Bun ar chlé"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Bun ar dheis"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 Charachtar"
+msgstr[1] "%1 Charachtar"
+msgstr[2] "%1 Charachtar"
+msgstr[3] "%1 gCarachtar"
+msgstr[4] "%1 Carachtar"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr ""
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@title:window"
+msgid "New"
+msgstr "Nua"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Nua..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Teimpléad"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Scrios"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Iompórtáil"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Easpórtáil"
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Eagarthóir Cúrsaí agus Leaganacha Amach an Mhéarchláir"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Iompórtáil mar leagan amach nua"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Athchóirigh"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Cúrsa"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Leagan amach an mhéarchláir"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Traenáil"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Socruithe Traenála"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Dathanna"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Socruithe Datha"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Cumraigh an Méarchlár"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Eagarthóir Cúrsaí agus Leaganacha Amach an Mhéarchláir..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Cumraigh an Méarchlár..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr ""
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
+#| "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Cóipcheart © 2011-2012 Sebastian Gottfried\n"
+"Cóipcheart © 2000-2007 Håvard Frøiland agus Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Cothaitheoir reatha"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Iarchothaitheoir agus ríomhchláraitheoir"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "An chéad údar"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Cruthaitheoir an deilbhín SVG"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Go leor paistí, ceartúcháin, nuashonruithe"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr ""
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
+msgid "Launch the course and keyboard layout editor"
+msgstr "Eagarthóir Cúrsaí agus Leaganacha Amach an Mhéarchláir"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Carachtar"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr ""
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Ionad"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Gan teideal>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Carachtair nua: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Teideal"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Cúrsaí"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Leaganacha Amach an Mhéarchláir"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Ainm: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Cruinneas"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Carachtair sa Nóiméad"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Anaithnid</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+#| msgid "Lessons:"
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Ceachtanna:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "Training"
+msgid "Training on:"
+msgstr "Traenáil"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Cruinneas:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Carachtair sa Nóiméad:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Choose Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "Roghnaigh leagan amach an mhéarchláir"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "Courses"
+msgid "Other Courses"
+msgstr "Cúrsaí"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr ""
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Tosaigh Traenáil"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Cumraigh an Méarchlár"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "This Lesson"
+msgid "Edit lesson"
+msgstr "An Ceacht Seo"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Teideal:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Lessons:"
+msgid "Lesson text"
+msgstr "Ceachtanna:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Críochnaithe"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgid "Manage Profiles"
+msgstr "Cruthaigh Próifíl Nua"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Cruthaigh Próifíl Nua"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Am iomlán traenála:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Eagar"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Ainm"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Cruthaigh Próifíl Nua"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Úsáid an Phróifíl Roghnaithe:"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "Staitisticí don Seisiún Traenála Reatha"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Am Ídithe"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Carachtar:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Earráidí:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, fuzzy, kde-format
+#| msgid "Show"
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Taispeáin"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Dul Chun Cinn"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Earráidí"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "Gach Ceacht"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "This Lesson"
+msgid "This Lesson"
+msgstr "An Ceacht Seo"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Atosaigh Traenáil"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Atosaigh an Ceacht"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Leagan amach an mhéarchláir:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Cur Síos:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Ceachtanna:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Bain ceacht"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+#| msgid "Remove lesson"
+msgid "Move lesson up"
+msgstr "Bain ceacht"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, fuzzy, kde-format
+#| msgid "Remove lesson"
+msgid "Move lesson down"
+msgstr "Bain ceacht"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Carachtair nua:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgid "Create new normal key"
+msgstr "Cruthaigh Próifíl Nua"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Gnátheochair"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgid "Create new special key"
+msgstr "Cruthaigh Próifíl Nua"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Méarchlár"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Ainm:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Leithead:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Airde:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Clé:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Barr:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Eochair"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Carachtair"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Cuir carachtar nua leis"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "New characters:"
+msgid "Remove character"
+msgstr "Carachtair nua:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Cineál:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Táb"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Cúlspás"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Return"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Eile"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Lipéad:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+#| msgid "Modifier/other keys:"
+msgid "Modifier ID:"
+msgstr "Eochracha mionathraithe/eile:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+#| msgid "&Open Plain Text File..."
+msgid "Open a text file..."
+msgstr "&Oscail Comhad Gnáth-théacs"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 Carachtar"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
+msgid "Paste current system keyboard layout name"
+msgstr "Eagarthóir Cúrsaí agus Leaganacha Amach an Mhéarchláir"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "Start Training"
+msgid "During training:"
+msgstr "Tosaigh Traenáil"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Taispeáin méarchlár"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Words per minute"
+msgid "Minimum strokes &per minute:"
+msgstr "Focail sa nóiméad"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy:"
+msgid "Minimum accuracy:"
+msgstr "Cruinneas:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Socraigh teideal"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Socraigh leagan amach an mhéarchláir"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Cuir cur síos in eagar"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Cuir eochair leis"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Roghnaigh leagan amach an mhéarchláir"
+
+#, fuzzy
+#~| msgid "Create New Profile"
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Cruthaigh Próifíl Nua"
+
+#, fuzzy
+#~| msgid "On:"
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Ar:"
+
+#~ msgid "Launch Editor"
+#~ msgstr "Tosaigh an tEagarthóir"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Danmhargach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Colemak Béarla"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Dvorak Béarla"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Béarla"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Dvorak Béarla (RA)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Francach Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Francach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Gearmánach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Iodálach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Ioruach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slóivéanach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Dvorak Spáinneach"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Méarchlár Sualannach"
+
+#~ msgid "Default User"
+#~ msgstr "Úsáideoir Réamhshocraithe"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Téacschomhaid\n"
+#~ "*|Gach comhad"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Roghnaigh Téacs Cleachta"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Téacs iompórtáilte ó chomhad '%1'"
+
+#~ msgid "generated from text file"
+#~ msgstr "cruthaithe ó théacschomhad"
+
+#~ msgid "all available"
+#~ msgstr "gach rud ar fáil"
+
+#~ msgid "Start new training session"
+#~ msgstr "Tosaigh seisiún nua traenála"
+
+#~ msgid "Keep current level"
+#~ msgstr "Coinnigh an leibhéal reatha"
+
+#~ msgid "Start from first level"
+#~ msgstr "Tosaigh ag an chéad leibhéal"
+
+#~ msgid "General Options"
+#~ msgstr "Roghanna Ginearálta"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Socruithe an Mhéarchláir"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Leibhéal:  Líon Ceart/Iomlán: %1/%2  Focail: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Seisiún:   Líon Ceart/Iomlán: %1/%2  Focail: %3"
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Oscail Léacht..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Cuir Léacht in &Eagar..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Cuir Scéim Datha in &Eagar..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Cuir Leagan Amach an Mhéarchláir in &Eagar..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "Cuir an Seisiún ar &Shos"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "&Léachtaí Réamhshocraithe"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Socraigh Úsáideoirí..."
+
+#~ msgid "&Current User"
+#~ msgstr "Úsáideoir &Reatha"
+
+#~ msgid "untitled lecture"
+#~ msgstr "léacht gan teideal"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Uimhir na scéime datha reatha."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Dath téacs ar líne an mhic léinn"
+
+#~ msgid "The sliding speed"
+#~ msgstr "An luas sleamhnaithe"
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Cló d'eochracha ar an méarchlár"
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Ceadaigh coigeartú uathoibríoch ar leibhéil"
+
+#~ msgid "The current training level"
+#~ msgstr "An leibhéal reatha traenála"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "An bhfuil fonn ort na scéimeanna athraithe dathanna a shábháil?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "scéim dathanna gan teideal"
+
+#~ msgid "Black && White"
+#~ msgstr "Dubh agus Bán"
+
+#~ msgid "Classic"
+#~ msgstr "Clasaiceach"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Gorm Domhain"
+
+#~ msgid "Stripy"
+#~ msgstr "Stríocach"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Níorbh fhéidir comhad méarchláir '%1' a oscailt/íosluchtú"
+
+#~ msgid "Control key"
+#~ msgstr "Eochair rialúcháin"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|Comhaid Mhéarchláir KTouch (*.keyboard.xml)\n"
+#~ "*|Gach Comhad"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "An bhfuil tú cinnte gur mian leat an eochair seo a scriosadh?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Eagarthóir méarchláir KTouch"
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Iontráil carachtar nó uimhir Unicode."
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Earráid: eagarthóir méarchláir KTouch"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<eochair mhionathraithe>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Oscail Comhad Méarchláir"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Cé acu comhad méarchlár ba mhaith leat a chur in eagar?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Cuir an méarchlár reatha in eagar:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Oscail méarchlár réamhshocraithe:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Oscail comhad méarchláir:"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr ""
+#~ "Níorbh fhéidir an comhad méarchláir a oscailt, ceann nua á chruthú ina "
+#~ "ionad."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Bhí rabhaidh ann agus comhad méarchláir '%1' á léamh:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (athraithe)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Eagarthóir Méarchláir KTouch - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Eagarthóir Méarchláir KTouch - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<comhad méarchláir gan ainm>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr ""
+#~ "Athraíodh an méarchlár. An bhfuil fonn ort na hathruithe a shábháil?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Níorbh fhéidir comhad leagan amach an mhéarchláir '%1' a léamh. %2"
+
+#~ msgid "A default lecture..."
+#~ msgstr "Léacht réamhshocraithe..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Sábháil an Léacht Traenála"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Eagarthóir Léachta KTouch - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<comhad nua léachta gan ainm>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Sonraí Leibhéal %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Iontráil do chuid línte anseo..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Oscail Comhad Léachta"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Cé acu comhad léachta ar mhaith leat cur in eagar?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Cuir an léacht reatha in eagar:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Oscail léacht réamhshocraithe:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "Níorbh fhéidir an comhad léachta a oscailt, ceann nua á chruthú ina ionad."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Athraíodh an léacht. An bhfuil fonn ort na hathruithe a shábháil?"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Roghnaigh nó iontráil ainm comhaid."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Tá an URL míchumtha de réir cosúlachta; ceartaigh é le do thoil."
+
+#~ msgid "***current***  "
+#~ msgstr "***reatha***  "
+
+#~ msgid "Correctness"
+#~ msgstr "Cirte"
+
+#~ msgid "Skill"
+#~ msgstr "Scil"
+
+#~ msgid "Sessions"
+#~ msgstr "Seisiúin"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Seisiún traenála á thosú: ag feitheamh leis an chéad eochairbhrú..."
+
+#~ msgid "You rock!"
+#~ msgstr "Maith thú!"
+
+#~ msgid "S&tatistics"
+#~ msgstr "S&taitisticí"
+
+#~ msgid "&Settings"
+#~ msgstr "&Socruithe"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Príomhbharra Uirlisí"
+
+#~ msgid "New User"
+#~ msgstr "Úsáideoir Nua"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Comhad traenála le hoscailt"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Eagarthóir Scéimeanna Datha"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Scéimeanna Saincheaptha Datha"
+
+#~ msgid "Add"
+#~ msgstr "Cuir Leis"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Cuir an Scéim Datha in Eagar"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Ainm na scéime datha:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Stóráil Sonraí"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Cúlra théacs an mhúinteora:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Téacs an mhúinteora:"
+
+#~ msgid "Student background:"
+#~ msgstr "Cúlra théacs an mhic léinn:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Earráid i dtéacs an mhic léinn:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Cúlra earráide i dtéacs an mhic léinn:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Dathanna an Mhéarchláir"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Dathanna cúlra na ngnátheochracha:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Cúlra aibhsithe:"
+
+# was "Gnáthdhathanna eochrach:"; but see above
+#~ msgid "Normal key colors:"
+#~ msgstr "Dathanna gnátheochracha:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Dath téacs aibhsithe:"
+
+#~ msgid "Text color:"
+#~ msgstr "Dath téacs:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Fráma eochrach:"
+
+#~ msgid "Text color"
+#~ msgstr "Dath téacs"
+
+#~ msgid "Background:"
+#~ msgstr "Cúlra:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Sonraí Aitheantais Méarchláir"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Teideal an mhéarchláir:"
+
+#~ msgid "Language id:"
+#~ msgstr "Aitheantas teanga:"
+
+#~ msgid "Comments:"
+#~ msgstr "Nótaí:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Airíonna na hEochrach"
+
+#~ msgid "Key type:"
+#~ msgstr "Cineál na heochrach:"
+
+#~ msgid "Key text:"
+#~ msgstr "Téacs na heochrach:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Socruithe Eagarthóireachta an Mhéarchláir"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Socraigh Cló an Mhéarchláir..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Sábháil Méarchlár Mar..."
+
+#~ msgid "Close"
+#~ msgstr "Dún"
+
+#~ msgid "Key connectors"
+#~ msgstr "Nascóirí eochracha"
+
+#~ msgid "or unicode"
+#~ msgstr "nó unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Glan nascóirí"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Cruthaigh/nuashonraigh nascóir"
+
+#~ msgid "< modifier key>"
+#~ msgstr "< eochair mhionathraithe>"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Eagarthóir Léachta KTouch"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Airíonna na Léachta"
+
+#~ msgid "Comment:"
+#~ msgstr "Nóta:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Sonraí Leibhéil de Leibhéal 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Carachtair nua sa leibhéal seo:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Nóta leibhéil (roghnach):"
+
+#~ msgid "Level data:"
+#~ msgstr "Sonraí leibhéil:"
+
+#~ msgid "Summary"
+#~ msgstr "Achoimre"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Na scóir is fearr ar an leibhéal seo"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Dáta"
+
+#~ msgid "Score"
+#~ msgstr "Scór"
+
+#~ msgid "Characters per second"
+#~ msgstr "Carachtair sa soicind"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "An scór is fearr ag na húsáideoirí go léir ar an leibhéal seo"
+
+#~ msgid "&Retry level"
+#~ msgstr "An leibhéal &seo arís"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "An &chéad leibhéal eile"
+
+#~ msgid "Browse..."
+#~ msgstr "Brabhsáil..."
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Úsáid dath saincheaptha ar an líne chlóscríofa"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Dath líne an mhúinteora"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Líne an mhúinteora"
+
+#~ msgid "Text:"
+#~ msgstr "Téacs:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Athraigh dath téacs ar líne an mhic léinn"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr ""
+#~ "Anseo is féidir dath an téacs a chlóscríobhann tú ar líne an mhic léinn a "
+#~ "athrú."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Cúlra líne an mhúinteora"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Anseo is féidir dath chúlra líne an mhúinteora a athrú (.i. an líne de "
+#~ "litreacha le clóscríobh.)"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Roghnaigh dath cúlra le haghaidh botúin sa líne chlóscríofa"
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Roghnaigh dath an téacs le haghaidh botúin chlóscríofa"
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Socruithe Líne Téacs"
+
+#~ msgid "Fast"
+#~ msgstr "Tapa"
+
+#~ msgid "Slow"
+#~ msgstr "Mall"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Luas sleamhnaithe:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Sáraigh cló léachta"
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Taispeáin na heochracha a chaithfidh tú clóscríobh ar na méarchláir"
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Aibhsigh &eochracha ar an méarchlár"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Folaigh/dorchaigh eochracha gan foghlaim fós "
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Sáraigh clónna méarchláir"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Cló eochracha ar an méarchlár:"
+
+#~ msgid "Sound"
+#~ msgstr "Fuaim"
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Fuaim i ndiaidh earráide"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Coigeartú &uathoibríoch leibhéil"
+
+#~ msgid "chars/minute"
+#~ msgstr "carachtair/nóiméad"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Ráta clóscríofa:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Cirte:"
+
+#~ msgid "Workload:"
+#~ msgstr "Ualach Oibre:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Críochnaigh leibhéal iomlán traenála roimh leanúint ar aghaidh"
+
+#~ msgid "lines"
+#~ msgstr "líne"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Seisiún Traenála Reatha"
+
+#~ msgid "Lecture:"
+#~ msgstr "Léacht:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Leibhéil sa seisiún seo:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Am imithe (soicindí):"
+
+#~ msgid "Characters typed:"
+#~ msgstr "Carachtair a clóscríobhadh:"
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Líon na gcarachtar mícheart:"
+
+#~ msgid "Words typed:"
+#~ msgstr "Líon na bhfocal a clóscríobhadh:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Líon na bhfocal clóscríofa go dtí seo."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Ráta Clóscríofa"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Líon na bhfocal ceart a chlóscríobh tú sa nóiméad."
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Líon na bhfocal a chlóscríobh tú sa nóiméad."
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Staitisticí don Leibhéal Reatha"
+
+#~ msgid "Level:"
+#~ msgstr "Leibhéal:"
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Do Dhul Chun Cinn Clóscríofa"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Taispeáin dul chun cinn sa léacht:"
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Roghanna na Cairte Dul Chun Cinn"
+
+#~ msgid "Chart Data"
+#~ msgstr "Sonraí na Cairte"
+
+#~ msgid "Session stats"
+#~ msgstr "Staitisticí an tSeisiúin"
+
+#~ msgid "Level stats"
+#~ msgstr "Staitisticí an Leibhéil"
+
+#~ msgid "Chart Type"
+#~ msgstr "Cinéal na Cairte"
+
+#~ msgid "Clear History"
+#~ msgstr "Glan an Stair"
+
+#~ msgid "Level"
+#~ msgstr "Leibhéal"
+
+#~ msgid "Current level"
+#~ msgstr "Leibhéal reatha"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Taispeánann sé seo do leibhéal."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Speed"
+#~ msgstr "Luas"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Carachtair/Nóiméad"
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Carachtair Nua Sa Leibhéal Seo"
+
+#~ msgid "Setup Users"
+#~ msgstr "Socraigh Úsáideoirí"
+
+#~ msgid "&Add"
+#~ msgstr "&Cuir Leis"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ions, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Scrios, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "&Dún"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bulgárach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bulgárach (fada uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Catalónach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Seiceach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Danmhargach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Danmhargach (cúrsa iomlán)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Ollannach Sóisearach (Ollannach le haghaidh Páistí)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Ollannach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak - ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Béarla (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Fionlannach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Francach (uathoibríoch) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Francach (uathoibríoch) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Francach Dvorak (Cuid 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Francach Dvorak (Cuir 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Gearmánach (naoi leibhéal)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Gearmánach (ó Tipptrainer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Gearmánach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Gearmánach (Eochaircheap Uimhriúil)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Heilléanach"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Saineolaí Ungárach++"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Ungárach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Iodálach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Laidin"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Ioruach"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Polannach (ó TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Rúiseach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Rúiseach (fada uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Slóvacach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slóivéanach"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Spáinneach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Spáinneach (uathoibríoch) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Spáinneach (uathoibríoch) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Spáinneach Dvorak"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Turcach (uathoibríoch)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Úcránach"
+
+#~ msgid "F&ile"
+#~ msgstr "C&omhad"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Gearmánach (NEO-Schnellschreiblayout)"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "Oscail Rud Éigin san Eagarthóir"
+
+#~ msgid "Current something"
+#~ msgstr "Rud reatha"
+
+#~ msgid "Preset something:"
+#~ msgstr "Rud réamhshocraithe:"
+
+#~ msgid "Open file:"
+#~ msgstr "Oscail comhad:"
+
+#~ msgid "New something"
+#~ msgstr "Rud nua"
+
+#~ msgid "default user"
+#~ msgstr "úsáideoir réamhshocraithe"
+
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Cineál eochair ar iarraidh i líne '%1'."
+
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Toisí an mhéarchláir: %1 × %2"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Ná Coinnigh"
+
+#~ msgid "Background"
+#~ msgstr "Cúlra"
+
+#~ msgid "Change Font..."
+#~ msgstr "Athraigh an Cló..."
+
+#~ msgid "Levels"
+#~ msgstr "Leibhéil"
+
+#~ msgid "Current something file"
+#~ msgstr "Comhad an ruda reatha"
+
+# #-#-#-#-#  tmp.XXXXK5LpVx (PACKAGE VERSION)  #-#-#-#-#
+# #-#-#-#-#  temp2.po (yudit 2.7.6)  #-#-#-#-#
+# #-#-#-#-#  tmp.XXXXMZ2Xhi (yudit 2.7.6)  #-#-#-#-#
+# #-#-#-#-#  temp1.po (firefox 1.0_pre)  #-#-#-#-#
+# #-#-#-#-#  ga-win.po (firefox 0.8)  #-#-#-#-#
+# the separator character used between modifiers
+# #-#-#-#-#  ga-unix.po (firefox 0.8)  #-#-#-#-#
+# the separator character used between modifiers
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

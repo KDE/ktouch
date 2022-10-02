@@ -1,0 +1,1670 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Entrenador de mecanografia</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+> <firstname
+>Daniel</firstname
+> <surname
+>Fortuny Anguera</surname
+> <affiliation
+><address
+><email
+>dfortuny@xtec.net</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+>&traductor.Antoni.Bella; 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>5 de gener de 2021</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Aplicacions 20.12)</releaseinfo>
+
+<abstract>
+<para
+>L'&i18n-ktouch; és un programa per a aprendre a mecanografiar. L'&i18n-ktouch; proveeix textos per a practicar i que s'ajusten a diferents nivells en funció de la vostra destresa. Mostra la següent tecla que s'ha de prémer i el dit que hauríeu d'emprar per a aquesta tecla.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>touchwriting</keyword>
+<keyword
+>mecanografiar</keyword>
+<keyword
+>teclejar</keyword>
+<keyword
+>mecanografia</keyword>
+<keyword
+>educació</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>teclejar</keyword>
+<keyword
+>escriure</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Aprendre a teclejar amb l'&i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Introducció</title>
+
+<sect2>
+<title
+>Què és l'&i18n-ktouch;?</title>
+<para
+>L'&i18n-ktouch; és un programa per a aprendre a mecanografiar.</para>
+<para
+>L'&i18n-ktouch; proveeix textos per a practicar i que s'ajusten a diferents nivells en funció de la vostra destresa. Es pot veure la següent tecla a prémer i el dit que hauríeu d'emprar.</para>
+
+<screenshot>
+<screeninfo
+>La pantalla principal de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La pantalla principal de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>L'&i18n-ktouch; és un tutor de mecanografia al tacte dirigit sobretot a l'ús personal. Aprendreu a teclejar amb tots els dits, pas a pas, sense haver de mirar el teclat en tot moment per a trobar les tecles correctes, el qual frena molt. </para>
+</sect2>
+
+<sect2>
+<title
+>Característiques</title>
+
+<para
+>En la versió actual, l'&i18n-ktouch; té un gran nombre de característiques útils, com:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Ve amb dotzenes de cursos diferents en molts idiomes i un còmode editor de cursos.</simpara
+></listitem>
+<listitem
+><simpara
+>Suport per a diferents disposicions de teclat amb l'habilitat d'utilitzar i editar disposicions definides per l'usuari.</simpara
+></listitem>
+<listitem
+><simpara
+>Durant la sessió d'entrenament l'&i18n-ktouch; col·leccionarà comprensibles estadístiques informatives per a ajudar-vos (o al vostre professor) a analitzar el vostre progrés.</simpara
+></listitem>
+</itemizedlist>
+<para
+>S'inclouen moltes altres característiques que es tractaran en els capítols apropiats d'aquest manual. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Com començar</title>
+
+<para
+>Veiem una altra captura de pantalla de l'&i18n-ktouch; en acció, aquesta vegada amb un teclat i la lliçó d'entrenament en alemany:</para>
+
+<screenshot>
+<screeninfo
+>Pantalla principal de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Pantalla principal de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Tot i que aprendre mecanografia amb l'&i18n-ktouch; i utilitzar el programa hauria de ser molt senzill, a les següents seccions ens hi endinsarem una mica més.</para>
+
+<sect2 id="creating_profile">
+<title
+>Crear el vostre primer perfil</title>
+
+<para
+>El primer cop que inicieu l'&i18n-ktouch; s'obrirà una pantalla especial que us ajudarà a crear el vostre primer perfil. Podeu triar el nom del vostre perfil i el nivell de la vostra habilitat teclejant. </para>
+<tip>
+<para
+>El nivell que trieu determinarà el funcionament general de l'&i18n-ktouch;. En el mode principiant, les lliçons es desbloquegen una a una, una vegada les passeu, per a un mecanògraf avançat estaran disponibles totes les lliçons des del començament. </para>
+</tip>
+<note>
+<para
+>Penseu sobre la vostra elecció, més tard no sereu capaç de canviar el tipus d'un perfil. Però sempre en podreu crear de nous per a revisar aquesta decisió. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>Pantalla de benvinguda de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Pantalla de benvinguda de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Després de prémer <guibutton
+>Inicia l'entrenament</guibutton
+> se us presentarà la pantalla inicial. Aquesta pantalla també serà la primera pantalla visible quan executeu l'&i18n-ktouch; la pròxima vegada. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Escollir una lliçó</title>
+
+<para
+>La pantalla inicial de l'&i18n-ktouch; consisteix d'una barra d'eines i el selector del curs. Per a obtenir més informació, vegeu <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>Pantalla inicial de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Pantalla inicial de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>L'&i18n-ktouch; us mostrarà el primer curs disponible per a la disposició de teclat actual. </para>
+
+<para
+>Podreu alternar entre els cursos o escollir <link linkend="custom_lessons"
+>lliçons personalitzades</link
+> fent clic en les seves miniatures a la part dreta de la finestra. </para>
+
+<note>
+<para
+>En algunes plataformes, especialment a &Microsoft; &Windows;, la detecció automàtica de la disposició de teclat no estarà disponible. En aquest cas, haureu de fer clic al botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> de la barra d'eines, seleccioneu el submenú <guisubmenu
+>Configura el teclat...</guisubmenu
+> i escolliu el nom d'una disposició de teclat o alguna disposició de teclat que sigui similar a la vostra. Si el teclat no està inclòs, podeu definir la vostra pròpia disposició de teclat, vegeu <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Escolliu la lliçó des de la llista a l'esquerra de la finestra. No podreu triar les lliçons tancades amb <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> atès que són massa difícils per a les vostres habilitats actuals. Aneu passant les lliçons per a desbloquejar les noves. La vista prèvia de la lliçó seleccionada es mostra a la dreta de la llista de lliçons. </para>
+<tip>
+<para
+>Es pot mostrar i ocultar més informació sobre el curs seleccionat utilitzant el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> situat al costat del títol del curs. </para>
+</tip>
+<para
+>Per a acabar, seleccioneu <guibutton
+>Inicia l'entrenament</guibutton
+> per a anar a la pantalla de l'&i18n-ktouch; per a la formació. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Entrenar</title>
+<para
+>La finestra d'entrenament de l'&i18n-ktouch; mostra tres seccions principals: </para>
+<orderedlist>
+<listitem
+><simpara
+>Algunes estadístiques del teclejat en el rètol informatiu superior.</simpara
+></listitem>
+<listitem
+><simpara
+>El text que heu de teclejar</simpara
+></listitem>
+<listitem
+><simpara
+>La visualització del teclat</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>La pantalla d'entrenament de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La pantalla d'entrenament de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>La visibilitat de les parts de la pantalla d'entrenament es pot configurar utilitzant el <link linkend="configuration_dialog"
+>diàleg de configuració per a l'&i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Col·loqueu els dos dits índex sobre les dues tecles al teclat amb les dues petites marques tàctils prop del centre al mig de la fila de caràcters. Un cop fet, els altres dits trobaran les tecles corresponents gairebé de forma automàtica. Els polzes han d'anar sobre la tecla espai, l'única tecla que s'utilitza en mecanografiar. Els altres dits haurien d'anar a les tres tecles adjacents a les tecles marcades a la fila central. Les tecles per al mateix dit s'agrupen pel seu color. Intenteu moure les mans el menys possible i mirar sempre de tornar els dits a la seva posició de repòs després d'haver escrit un caràcter. </para>
+<para
+>Comenceu a escriure el text al centre de la pantalla. La següent tecla a prémer serà ressaltada a la visualització del teclat. Mentre teclegeu podeu cometre errors i prémer la tecla equivocada. En aquest cas els caràcters es mostraran en vermell i haureu de prémer la tecla &Retro; tantes vegades com calgui per a esborrar els caràcters mal escrits. </para>
+<para
+>Una vegada completada una línia de text haureu de prémer la tecla &Intro; per a avançar cap a la línia següent. </para>
+<tip>
+<para
+>La tecla utilitzada per a avançar a la següent línia es pot canviar utilitzant el <link linkend="configuration_dialog"
+>diàleg de configuració per a l'&i18n-ktouch;</link
+>. </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Revisar el vostre progrés</title>
+<para
+>Quan completeu una lliçó de l'&i18n-ktouch;, aquest canviarà a la pantalla de puntuacions. Mostra el vostre entrenament actual i les estadístiques de la lliçó, i mostra un historial gràfic de les sessions d'entrenament anteriors. </para>
+<screenshot>
+<screeninfo
+>El diàleg Estadístiques de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>El diàleg Estadístiques de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Al diàleg de les estadístiques podreu seleccionar mostrar una lliçó en particular o <guilabel
+>Totes les lliçons</guilabel
+>. Això és útil per a distingir entre el rendiment general i l'habilitat en certes lliçons. </para>
+<para
+>Si us sentiu preparat per a la lliçó següent, premeu el botó <guibutton
+>Lliçó següent</guibutton
+> a la barra d'eines per a continuar amb la següent lliçó del curs actual o el botó <guibutton
+>Repeteix la lliçó</guibutton
+> per a provar de nou les vostres habilitats en la lliçó actual. El botó <guibutton
+>Lliçó següent</guibutton
+> només estarà disponible si aconseguiu completar la lliçó. </para>
+<para
+>Per a canviar a alguna altra lliçó o curs, premeu <guibutton
+>Retorna a la pantalla inicial</guibutton
+>. </para>
+<para
+>Si no voleu continuar l'entrenament amb l'&i18n-ktouch;, senzillament tanqueu la finestra de l'aplicació. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Preparar l'entrenament</title>
+<para
+>Gairebé tot a la pantalla inicial de l'&i18n-ktouch; s'explica per si mateix. La barra d'eines superior està destinada a ser el lloc on podeu veure i configurar les opcions de l'&i18n-ktouch;. El selector del curs es pot utilitzar per a veure informació sobre els cursos i canviar entre aquests. </para>
+
+<sect2 id="toolbar">
+  <title
+>Barra d'eines de l'&i18n-ktouch;</title>
+<para
+>A la barra d'eines de l'&i18n-ktouch; resideix el botó de perfil a l'esquerra i el botó de menú de l'aplicació a la dreta. </para>
+
+<sect3 id="profile_management">
+<title
+>Gestionar els perfils</title>
+<para
+>El botó de perfil amb el nom del vostre perfil a l'esquerra de la barra d'eines de la pantalla inicial es pot utilitzar per a gestionar els perfils de l'&i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Gestió dels perfils a l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Gestió dels perfils a l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Podeu revisar les opcions dels perfils existents, suprimir o crear un perfil nou utilitzant el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Per a canviar al mode de revisió premeu <guibutton
+>Edita</guibutton
+>. Per a seleccionar un perfil i tornar a la pantalla inicial premeu <guibutton
+>Usa el perfil seleccionat</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Revisió de la informació del perfil</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Revisió de la informació del perfil</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>El menú de l'&i18n-ktouch;</title>
+<para
+>El menú de l'&i18n-ktouch; es pot obrir utilitzant el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la barra d'eines de la pantalla inicial. </para>
+
+<screenshot>
+<screeninfo
+>El menú de l'&i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>El menú de l'&i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>A continuació trobareu una llista dels elements de menú amb les seves descripcions curtes. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Mode de pantalla completa</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Alterna</action
+> el mode de pantalla completa de l'&i18n-ktouch;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Editor de cursos i la disposició de teclat...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Obre</action
+> la <link linkend="extending"
+>finestra de l'editor</link
+> de l'&i18n-ktouch;. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configura l'Entrenador de mecanografia...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Mostra</action
+> el <link linkend="configuration_dialog"
+>diàleg de configuració</link
+> per a l'&i18n-ktouch;. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configura les dreceres de teclat...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Configura</action
+> les dreceres que voleu associar amb algunes accions. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configura el teclat...</guimenuitem
+></term>
+<listitem
+><para
+>Una drecera cap al mòdul d'&systemsettings; per a configurar les opcions del teclat. D'utilitat per a preparar l'entrenament sobre una disposició de teclat diferent. </para>
+<note>
+<para
+>Sobre les plataformes que no tenen suport per a la detecció de la disposició de teclat de forma automàtica, especialment &Microsoft; &Windows;, on aquesta entrada se substitueix per un submenú per a seleccionar manualment la disposició de teclat de l'&i18n-ktouch;. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>L'&i18n-ktouch; té la configuració comuna al &kde; i els elements del menú <guimenu
+>Ajuda</guimenu
+>. Per a obtenir més informació, llegiu la secció sobre <ulink url="help:/fundamentals/menus.html#menus-help"
+>El menú Ajuda</ulink
+> en els Fonaments del &kde;. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>El diàleg de configuració</title>
+
+<para
+>Podeu personalitzar força l'&i18n-ktouch;. Les opcions són d'aplicació globalment a tots els perfils. Obriu el diàleg de configuració prement el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la part dreta de la barra d'eines a la part superior de la pantalla inicial i després escolliu <guimenuitem
+>Configura l'Entrenador de mecanografia</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Configuració de l'entrenament</guilabel
+></term>
+     <listitem>
+       <para
+>En aquest diàleg podreu seleccionar les opcions que controlen l'aspecte de la finestra del tutor i com es comportarà l'&i18n-ktouch; durant l'entrenament.</para>
+<screenshot>
+<screeninfo
+>Opcions de l'entrenament</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcions de l'entrenament</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>La casella de selecció <guilabel
+>Força la correcció dels errors d'escriptura</guilabel
+> es pot utilitzar per a controlar si els errors d'escriptura s'han de corregir. </para>
+<para
+>Podeu controlar la visibilitat de les estadístiques i les subfinestres de teclat durant l'entrenament utilitzant les caselles de selecció <guilabel
+>Mostra el teclat</guilabel
+> i <guilabel
+>Mostra les estadístiques en temps real</guilabel
+>. </para>
+<para
+>La tecla a prémer per a anar a la següent línia del text d'entrenament es pot triar entre dues opcions, &Intro; o &Space;. </para>
+<para
+>Els <guilabel
+>Límits de desbloqueig de les lliçons</guilabel
+> es poden utilitzar per a escollir les opcions que controlen el desbloqueig de les lliçons de nivell superior. L'&i18n-ktouch; comprova els límits indicats al final de cada nivell i decideix si ha de desbloquejar la següent lliçó. Si la velocitat de tecleig en caràcters per minut i la correcció estan <emphasis
+>ambdues</emphasis
+> per sobre o igual que als <guilabel
+>Límits de desbloqueig de les lliçons</guilabel
+>, l'&i18n-ktouch; desbloquejarà la lliçó de nivell superior. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Configuració del color</guilabel
+></term>
+  <listitem>
+<para
+>En aquest diàleg podreu afinar els colors emprats per l'&i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configuració del color</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuració del color</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Podeu seleccionar el color de fons per a la tecla de cada dit. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Seleccionar un curs i la lliçó</title>
+<para
+>L'&i18n-ktouch; detecta automàticament la disposició de teclat i només mostrarà els cursos optimitzats per a aquesta. </para>
+<note>
+<para
+>En algunes plataformes, especialment a &Microsoft; &Windows;, la detecció automàtica de la disposició de teclat no estarà disponible. Utilitzeu el menú de l'aplicació per a seleccionar la disposició de teclat de forma manual. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Alternar entre els cursos</title>
+<para
+>Si hi ha més d'un curs disponible per a la vostra disposició de teclat, podreu escollir el vostre preferit utilitzant els botons <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> situats a la dreta de l'etiqueta amb el nom del curs. Si només hi ha un curs, els botons no seran visibles. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Desbloquejar les lliçons</title>
+<para
+>Si heu escollit <guilabel
+>Tinc poca o nul·la experiència en mecanografia</guilabel
+> durant la <link linkend="creating_profile"
+>creació inicial del perfil</link
+>, trobareu que algunes de les lliçons estan bloquejades. Aquests elements estaran marcats amb una icona <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> i no s'hi podrà accedir fins a passar per les lliçons anteriors. </para>
+<note>
+<para
+>Les opcions per a passar les lliçons es poden canviar utilitzant el <link linkend="configuration_dialog"
+>diàleg de configuració per a l'&i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Entrenar sobre una disposició de teclat diferent</title>
+<para
+>Amb l'&i18n-ktouch; és possible utilitzar qualsevol disposició de teclat per a l'entrenament. Només heu de prémer els botons que són ressaltats per l'entrenador, independentment de les etiquetes al teclat físic. </para>
+<para
+>Seleccioneu <menuchoice
+><guimenu
+>Configura el teclat...</guimenu
+></menuchoice
+> al menú de l'aplicació per a seleccionar una disposició de teclat diferent. Després d'això, l'&i18n-ktouch; s'adaptarà en conseqüència i us presentarà els seus cursos per a aquesta disposició. </para>
+<note>
+<para
+>En algunes plataformes sense detecció automàtica de la disposició de teclat, especialment a &Microsoft; &Windows;, primer haureu de configurar el sistema operatiu per a utilitzar la disposició sobre la qual voleu entrenar i després seleccioneu la mateixa disposició a l'&i18n-ktouch; mitjançant el menú de l'aplicació. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Entrenar de forma eficient</title>
+<sect2 id="training_techniques">
+<title
+>Tècniques d'entrenament</title>
+<para
+>D'ara endavant, trobareu alguns consells generals sobre les tècniques per a aprendre a mecanografiar. </para>
+<sect3 id="steady_speed">
+<title
+>Una velocitat constant</title>
+<para
+>Per a ser eficient quan s'està aprenent a mecanografiar, és important no limitar-se a intentar teclejar tan de pressa com sigui possible, sinó mantenir una velocitat constant i trobar un ritme natural en prémer les tecles. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>La precisió és un rei</title>
+<para
+>La següent qüestió important és centrar l'atenció en la precisió. Només si domineu l'ús de les tecles actualment desbloquejades, el qual vol dir que fareu molt pocs errors, a les lliçons següents tindreu l'oportunitat de manejar més tecles. Cal tenir present que us convertireu gairebé automàticament en un mestre si cometeu pocs errors i estalviareu un temps preciós si no n'heu de corregir gaires. </para>
+<note>
+<para
+>Aquesta és també la raó per la qual el nivell de precisió predeterminat per a desbloquejar la següent lliçó és del 98%, mentre que els requisits de velocitat són força moderats, amb només 180 caràcters per minut. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>La correcció dels errors</title>
+<para
+>Si heu comès errors, és important corregir-los de manera eficient. La correcció de caràcters individuals és gairebé sempre més lenta que la correcció de la paraula sencera. En aquest últim cas, només haureu de prémer <keycombo
+>&Ctrl;&Retro;</keycombo
+> i tornar a escriure la paraula. La sobrecàrrega mental per a això és molt petita. Per al primer cas d'ús, primer cal localitzar l'error, suprimir amb precisió la ubicació de l'error i determinar la part que falta de la paraula que tornareu a teclejar. Això requereix molta més concentració que quan es torna a escriure la paraula sencera. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Fer una pausa durant la sessió d'entrenament</title>
+<sect3 id="automatically_pausing">
+<title
+>Automàticament</title>
+<para
+>Si obriu qualsevol diàleg o canvieu entre aplicacions durant una sessió d'entrenament, l'entrenament es posarà en pausa i el temporitzador s'aturarà fins que doneu el focus de nou a la finestra de l'&i18n-ktouch; i premeu qualsevol tecla. </para>
+<para
+>La sessió d'entrenament també es posarà en pausa si no hi ha activitat per part de l'usuari durant cinc segons. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Manualment</title>
+<para
+>Podeu fer una pausa manualment durant la sessió utilitzant el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la barra d'eines. </para>
+<para
+>Si feu clic sobre el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la barra d'eines, l'&i18n-ktouch; farà una pausa en la sessió actual i mostrarà un menú superposat amb algunes accions addicionals. </para>
+<screenshot>
+<screeninfo
+>El menú de l'&i18n-ktouch; durant una pausa</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>El menú de l'&i18n-ktouch; durant una pausa</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Seguir el progrés de l'entrenament</title>
+<para
+>Després de completar una lliçó, no tornareu immediatament a la pantalla inicial. En comptes d'això, es mostrarà una pantalla de resum i d'estadístiques especial. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Estadístiques de la velocitat i exactitud</title>
+<screenshot>
+<screeninfo
+>Pàgina de progressos amb la pantalla de puntuació</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Pàgina de progressos amb la pantalla de puntuació</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Filtrar per lliçó</title>
+<para
+>Amb l'ajuda de la pàgina de les estadístiques sobre la velocitat i la precisió podreu revisar el vostre progrés durant l'aprenentatge i identificar els vostres punts febles. </para>
+<para
+>Les dades estadístiques es poden filtrar per lliçó utilitzant la llista desplegable al costat de l'etiqueta <guilabel
+>Engloba</guilabel
+>. Aquesta característica pot ser útil per a controlar el progrés en la lliçó actual i comparar aquest progrés amb el progrés en altres lliçons. </para>
+<screenshot>
+<screeninfo
+>Abast de les estadístiques al menú desplegable</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Abast de les estadístiques al menú desplegable</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Les dades addicionals sobre la sessió es poden veure en les superposicions. Si passeu el cursor del ratolí sobre un punt del gràfic, l'&i18n-ktouch; mostrarà les estadístiques de la sessió corresponent. </para>
+<screenshot>
+<screeninfo
+>Progrés per lliçó</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Progrés per lliçó</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Estadístiques dels errors</title>
+<para
+>La pantalla de puntuació es pot alternar per a mostrar la taxa d'errors per a cada tecla amb el menú desplegable al costat de l'etiqueta <guilabel
+>Mostra</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Alternant el mode de les estadístiques</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Alternant el mode de les estadístiques</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>En aquest mode, l'&i18n-ktouch; mostrarà un diagrama de barres amb els errors per a cada tecla durant l'última sessió d'entrenament. </para>
+<screenshot>
+<screeninfo
+>Gràfic dels errors amb les tecles</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Gràfic dels errors amb les tecles</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Podreu alternar al gràfic de lliçons utilitzant el mateix menú desplegable al costat de l'etiqueta <guilabel
+>Mostra</guilabel
+>. </para>
+<para
+>Si heu passat la lliçó, podreu optar per començar a entrenar immediatament a la següent lliçó prement <guibutton
+>Lliçó següent</guibutton
+> a la barra d'eines. En cas contrari, podreu repetir la lliçó actual amb <guibutton
+>Repeteix la lliçó</guibutton
+> o tornar a la pantalla inicial amb el botó restant. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Estendre l'&i18n-ktouch;</title>
+
+<sect1 id="create_courses">
+<title
+>Crear lliçons</title>
+<para
+>Podeu crear amb facilitat el vostre propi curs d'entrenament utilitzant el curs integrat de l'&i18n-ktouch; i l'editor de disposicions de teclat. Premeu el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la part dreta de la barra d'eines de la pantalla inicial del curs i després escolliu <guimenuitem
+>Editor de cursos i la disposició de teclat...</guimenuitem
+>. Podreu escollir obrir un fitxer de curs o crear un curs buit des de zero o mitjançant un curs existent com a plantilla.</para>
+<important>
+<para
+>No podreu editar els cursos integrats, fins i tot si teniu accés d'escriptura a la carpeta d'instal·lació. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Finestra principal de l'Editor de cursos i la disposició de teclat</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra principal de l'Editor de cursos i la disposició de teclat</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Propietats del curs</title>
+<para
+>Les propietats del curs es poden escollir utilitzant l'assistent de creació de cursos de l'&i18n-ktouch;. Per a invocar aquest assistent, haureu de prémer el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la barra d'eines de la finestra <guilabel
+>Editor de cursos i la disposició de teclat</guilabel
+>. </para>
+<para
+>La primera pàgina de l'assistent de creació de l'&i18n-ktouch; permet escollir el tipus de les dades. Seleccioneu <guilabel
+>Curs</guilabel
+> i premeu <guibutton
+>Següent</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Triant el tipus</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Triant el tipus</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>La segona pàgina de l'assistent permet escollir el títol, la disposició de teclat i la descripció del curs. </para>
+<screenshot>
+<screeninfo
+>Segona pàgina de l'assistent Curs nou</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Segona pàgina de l'assistent Curs nou</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>El títol del curs és important per a l'entrada al menú de selecció ràpida en la llista de cursos i per a les estadístiques. </para>
+<para
+>La descripció s'ha d'utilitzar per a incloure informació sobre l'autor de la lliçó i la font de les dades de la lliçó, si n'hi ha. Aquesta descripció es pot mostrar prement el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la pantalla inicial de l'&i18n-ktouch;. </para>
+<para
+>Una vegada hàgiu finalitzat amb la introducció dels valors adequats, premeu <guibutton
+>Següent</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Tercera pàgina de l'assistent Curs nou</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tercera pàgina de l'assistent Curs nou</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Amb la tercera pàgina de l'assistent, podreu escollir un altre curs com a plantilla per al vostre curs. Seleccioneu el curs des de la llista i premeu <guibutton
+>Finalitza</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Finestra d'edició d'un curs nou</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra d'edició d'un curs nou</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>L'&i18n-ktouch; obrirà la finestra de l'editor de cursos preparat per a la introducció de les vostres dades del curs. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Afegir lliçons</title>
+<para
+>Un curs és un conjunt ordenat de lliçons. Per a ser eficient en l'aprenentatge de mecanografia, el contingut del curs haurà de complir alguns requisits. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Trieu un nom significatiu per a la lliçó</emphasis
+></term>
+<listitem>
+<para
+>Per a cada nivell podreu especificar els caràcters nous/tecles que hi ha a la lliçó. Val la pena incloure els caràcters nous en el títol de la lliçó. Feu clic sobre una etiqueta de nom a la llista <guilabel
+>Lliçons:</guilabel
+> i introduïu un nom significatiu. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>El text que introduïu com a títol de la lliçó es mostrarà com a text informatiu de la lliçó a la pantalla inicial de la llista de cursos. Serà molt més fàcil per a l'usuari triar la lliçó si té un títol significatiu. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>La primera lliçó haurà de cobrir les tecles inicials</emphasis
+></term>
+<listitem>
+<para
+>En general, un teclat té dues marques hàptiques per a les tecles en la segona fila que pertanyen als dits índex. Aquestes dues tecles i les tres adjacents són les tecles inicials. Aquestes són <emphasis
+>asdfjkl;</emphasis
+> per a una disposició de teclat EUA. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Aquestes vuit tecles són la posició inicial de cada dit. Cal interioritzar la ubicació d'aquestes primeres tecles per a aprendre a mecanografiar amb èxit. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Presenteu dues tecles noves per lliçó </emphasis
+></term>
+<listitem>
+<para
+>L'ordre de desbloqueig de les tecles no és fix, però usualment les tecles s'introdueixen en parells que pertanyen al mateix dit d'ambdues mans. Seguiu el camí des de les tecles inicials fins a les més llunyanes. Per tant, en la quarta fila s'introduirà l'última. Prefereixo les tecles per a caràcters importants del vostre idioma, d'aquesta manera es pot condicionar una mica el patró d'introducció. Per exemple, en els accents francesos són realment importants, això mereix una lliçó centrada sols en les tecles dels accents. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Si s'introdueixen més tecles, l'alumne podria sentir-se aclaparat per la dificultat de la lliçó i perdre la seva motivació. Introduïu primer les tecles més importants per a poder formar abans les paraules. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Feu un èmfasi addicional sobre les tecles noves</emphasis
+></term>
+<listitem>
+<para
+>Assegureu-vos que els caràcters de les tecles de recent introducció són els més o menys utilitzats amb molta freqüència en el text de la lliçó. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Si l'alumne passa una lliçó, ja hauria de dominar les tecles noves. Això només és possible si la lliçó conté una quantitat significativa de caràcters nous. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Intercaleu les lliçons amb tecles noves amb les lliçons repetides</emphasis
+></term>
+<listitem>
+<para
+>Cada dues o tres lliçons, afegiu una lliçó repetida sense tecles noves. Aquestes hauran de tenir una barreja de caràcters que cobreixi tots els introduïts. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Aquestes lliçons ajuden a reforçar els coneixements adquirits, així com a proporcionar una forma de comprovar el nivell de formació general. També és més adequat repetir l'entrenament per a millorar encara més la destresa general pròpia de la mecanografia. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Creeu lliçons dedicades a majúscules/minúscules</emphasis
+></term>
+<listitem>
+<para
+>Hi haurà d'haver diverses lliçons centrades sobretot a posar en majúscules. Idealment, aquesta s'introdueix en múltiples passos: en un primer moment, només la tecla &Maj; esquerra, després la dreta, després ambdues i tot seguit una o més lliçons repetides. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>El domini de posar en majúscula és la part més difícil d'aprendre en la mecanografia. Per tant, cal esforçar-se una mica en aquestes lliçons. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Cobriu tota la disposició de teclat</emphasis
+></term>
+<listitem>
+<para
+>Això inclou els caràcters i símbols accessibles a través d'altres modificadors que &Maj;. De manera ideal, cal cobrir cada caràcter, nombre i símbol que està imprès en un teclat real. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Com més vegades es realitza un curs, més pot aprendre un alumne. També manté interessant el curs per als mecanògrafs més avançats. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Utilitzeu el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> per a afegir una lliçó nova del curs, el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per a eliminar la lliçó seleccionada del vostre curs i els botons <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per a tornar a organitzar les lliçons del curs. </para>
+<important>
+<para
+>Aneu amb compte en eliminar les lliçons. Si ho feu, podríeu restablir el progrés de desbloqueig dels usuaris del curs. Si esteu planejant revisar un curs a fons, en general és millor utilitzar el curs existent com a base per a un de nou. </para>
+</important>
+<para
+>El contingut de la lliçó es pot editar utilitzant el camp d'edició inferior dret. Podeu copiar fragments de text des del vostre editor de text preferit i enganxar-los en aquest camp. </para>
+<para
+>Utilitzeu el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> per a obrir un fitxer de text genèric que es carregarà al camp de text de la lliçó. </para>
+<para
+>El botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> es pot utilitzar per a condicionar el text de la lliçó. L'editor de l'&i18n-ktouch; canviarà el text de manera que cada línia de la lliçó no excedeixi dels 60 caràcters recomanats. </para>
+<para
+>Assumirem que voleu afegir una lliçó nova. No obstant això, hi ha algunes directrius que potser voldreu considerar: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Doneu un títol descriptiu a les lliçons</emphasis
+></term>
+<listitem>
+<para
+>Indiqueu els caràcters nous, si n'hi ha, o bé expliqueu com és la lliçó. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Els bons títols simplifiquen trobar el curs correcte si es vol entrenar sobre quelcom específic. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>El text de la lliçó haurà d'estar compost de paraules i frases reals</emphasis
+></term>
+<listitem>
+<para
+>De manera òptima, una lliçó forma un text contigu comprensible sobre un tema escollit lliurement. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>L'entrenament amb paraules i frases reals és més eficaç que amb combinacions de caràcters a l'atzar, ja que està més a prop d'un teclejat real. I és més divertit. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Eviteu combinacions de caràcters que no siguin paraules</emphasis
+></term>
+<listitem>
+<para
+>Això pot ser impossible en les primeres lliçons, on només hi ha disponibles uns pocs caràcters, però tan aviat com sigui possible només s'hauran d'utilitzar paraules reals. No utilitzeu mai paraules mal escrites. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Combinacions de caràcters aleatoris són difícils d'escriure i poques vegades es troben en el tecleig del dia a dia. Les paraules mal escrites en canvi són confuses, fins i tot donen un valor negatiu a l'aprenentatge, ja que els alumnes podrien memoritzar una ortografia equivocada. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>El text de la lliçó haurà de tenir aproximadament uns 600 caràcters</emphasis
+></term>
+<listitem>
+<para
+>Poden ser més llargues, fins a 1200 caràcters està bé, però s'han d'evitar lliçons més curtes. Això és especialment cert per a les lliçons repetides. </para>
+<note>
+<title
+>Exposició raonada</title>
+<para
+>Mantenir-se dins d'aquest interval assegura que un mecanògraf no entrenat (~120 caràcters per minut) pugui finalitzar una lliçó en cinc o deu minuts. Lliçons més llargues són frustrants, més curtes són ineficaces. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Controls de qualitat a l'editor de text de la lliçó</title>
+<screenshot>
+<screeninfo
+>Control de qualitat a la finestra d'edició de cursos</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Control de qualitat a la finestra d'edició de cursos</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>A dalt hi ha una captura de pantalla de l'editor de cursos carregat amb una lliçó problemàtica que mostra un dels controls de garantia de qualitat incorporat: si una lliçó conté caràcters que no estan disponibles en aquesta lliçó, perquè no es troben entre els caràcters nous configurats en aquesta lliçó o qualsevol anterior, es ressaltaran en vermell. També hi ha una comprovació per a les línies massa llargues, resultaran en un color apagat per als caràcters després de la columna permesa. </para>
+<para
+>Al costat esquerre hi ha un llistat de tots els fitxers que coneix l'&i18n-ktouch;, tant els integrats com els creats per l'usuari. Si l'usuari selecciona un recurs integrat a l'editor, aquest esdevindrà un visualitzador senzill. Si l'usuari selecciona una disposició de teclat, el programa s'adaptarà de manera adequada. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Crear disposicions de teclat</title>
+<para
+>Podeu crear les vostres pròpies disposicions de teclat utilitzant l'editor integrat de l'&i18n-ktouch;. El millor és començar amb una disposició existent, i utilitzar-la com a base per a una de pròpia. D'aquesta manera us estalviareu un munt de treball.</para>
+
+<sect2 id="layout_properties">
+<title
+>Propietats de la disposició de teclat</title>
+<para
+>Les propietats dels cursos es poden escollir utilitzant l'assistent per a la creació de disposicions de teclat de l'&i18n-ktouch;. Per a invocar aquest assistent, haureu de prémer el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> a la barra d'eines de la finestra <guilabel
+>Editor de cursos i disposicions de teclat</guilabel
+>. </para>
+<para
+>La primera pàgina de l'assistent de l'&i18n-ktouch; per a la creació, permet escollir el tipus de les dades. Seleccioneu <guilabel
+>Disposició de teclat</guilabel
+> i premeu <guibutton
+>Següent</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Triant el tipus</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Triant el tipus</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>La segona pàgina de l'assistent permet escollir el títol i el nom de la disposició. </para>
+<screenshot>
+<screeninfo
+>Segona pàgina de l'assistent Disposició nova</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Segona pàgina de l'assistent Disposició nova</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>El títol de la disposició és important per a la selecció ràpida de l'entrada del menú a la llista de disposició del <link linkend="ktouch_menu"
+>menú de configuració de l'&i18n-ktouch;</link
+> i per a les estadístiques. </para>
+<para
+>El nom de la disposició l'utilitzarà internament l'&i18n-ktouch; com a nom de la disposició. </para>
+<screenshot>
+<screeninfo
+>Tercera pàgina de l'assistent Disposició nova</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tercera pàgina de l'assistent Disposició nova</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Utilitzant la tercera pàgina de l'assistent, podreu escollir una altra disposició com a plantilla per a la vostra. Seleccioneu el curs de la llista i premeu <guibutton
+>Finalitza</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Finestra d'edició d'una Disposició nova</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Finestra d'edició d'una Disposició nova</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>L'&i18n-ktouch; obrirà la finestra de l'editor preparada per a introduir les dades de la disposició de teclat. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Afegir tecles</title>
+<para
+>Utilitzeu el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tecla normal</guilabel
+> per a afegir una tecla normal o el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tecla especial</guilabel
+> per a afegir una tecla especial (tecles modificadores, &Space;, &Retro;, &Tab;, <keycap
+>Bloq Maj</keycap
+> o &Intro;) per a la disposició. El botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Elimina</guilabel
+> es pot utilitzar per a eliminar una tecla seleccionada de la vostra disposició. L'escala es pot canviar utilitzant el control lliscant a la part dreta de la barra d'eines de l'editor. </para>
+<para
+>Les propietats individuals de les tecles es poden editar utilitzant la subfinestra inferior de la finestra de l'editor. </para>
+<sect3 id="normal_keys">
+<title
+>Tecles normals</title>
+<para
+>És fàcil canviar la mida o les propietats d'una tecla. </para>
+<para
+>Comenceu fent clic sobre la tecla que voleu canviar. Això la seleccionarà com la tecla actual. </para>
+<para
+>Ara hi ha 4 quadrats a les cantonades de la tecla. Arrossegant-los, podreu arrossegar la vora de la tecla a una nova ubicació. Arrossegant la tecla sencera podreu canviar la posició clau a la disposició. </para>
+<para
+>Les característiques numèriques de la geometria de la tecla també es poden canviar utilitzant la secció <guilabel
+>Geometria</guilabel
+> de la subfinestra a la part inferior de la finestra de l'editor. </para>
+<screenshot>
+<screeninfo
+>Editant les propietats individuals d'una tecla</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editant de les propietats individuals d'una tecla</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>La subfinestra inferior també es pot utilitzar per a escollir el dit per a prémer la tecla i alternar el marcador hàptic per a aquesta. </para>
+<sect4 id="key_characters">
+<title
+>Caràcters de tecla</title>
+<para
+>Els caràcters que es mostraran en una tecla es poden canviar utilitzant la secció <guilabel
+>Caràcters</guilabel
+> de la subfinestra a la part inferior de l'editor. </para>
+<screenshot>
+<screeninfo
+>Editant la posició del caràcter</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editant la posició del caràcter</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Podeu afegir un caràcter prement el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Es pot eliminar un caràcter seleccionat prement el botó <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>També podeu seleccionar la posició individual dels caràcters sobre la tecla fent doble clic sobre la columna <guilabel
+>Posició</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Modificadors</title>
+<para
+>Hi ha diverses tecles modificadores que es poden definir a l'&i18n-ktouch;. Es poden editar com a tecles normals, però és útil conèixer l'identificador de la tecla modificadora per a utilitzar-lo segons correspongui. La taula d'identificadors de tecles modificadores és la següent. </para>
+<table>
+<title
+>Tecles modificadores</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Tecla modificadora</entry>
+<entry
+>ID del modificador a l'&i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Maj;</entry>
+<entry
+><literal
+>left_shift</literal
+> o <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Lliçons personalitzades</title>
+<para
+>La característica de les lliçons personalitzades permet estendre el vostre material de formació d'una manera fàcil però escollint un text arbitrari. </para>
+<para
+>Les lliçons personalitzades estan recollides en un curs especial, el curs <guilabel
+>Lliçons personalitzades</guilabel
+>, sempre disponible just al costat <link linkend="picking_a_lesson"
+>dels cursos integrats normals</link
+>. </para>
+<screenshot>
+<screeninfo
+>Curs de lliçons personalitzades</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Curs de lliçons personalitzades</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Aquest curs especial generalment funciona com qualsevol altre, l'entrenament i la recopilació d'estadístiques funcionen com de costum. En fer clic al botó <guibutton
+>Afegeix una lliçó nova</guibutton
+> o <guibutton
+>Edita</guibutton
+> (una icona de llapis per a les lliçons existents) us presentarà una versió reduïda de <link linkend="adding_lessons"
+>l'editor de lliçons normal</link
+>. </para>
+<screenshot>
+<screeninfo
+>Editor de lliçons personalitzades</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editor de lliçons personalitzades</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>L'editor ressaltarà les seccions problemàtiques als textos de la vostra lliçó. Els caràcters que no es poden teclejar en la vostra disposició de teclat es mostraran en un fons vermell fosc, les línies que es consideren massa llargues utilitzen un fons rosa per als caràcters sobrants. L'&i18n-ktouch; requereix que cada línia de la lliçó no excedeixi el límit recomanat de 60 caràcters. </para>
+<para
+>Utilitzeu el botó <guibutton
+>Fet</guibutton
+> per a confirmar les vostres edicions o tancar la finestra de l'editor per a cancel·lar-les. </para>
+<tip>
+<para
+>Totes les lliçons personalitzades s'emmagatzemen de forma individual per perfil i disposició de teclat. Utilitzeu-ho per a gestionar els diferents conjunts de lliçons en funció de la situació específica de l'entrenament. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Compartir els vostres resultats</title>
+<para
+>És possible desar els vostres cursos i disposicions de teclat en fitxers separats fora de la base de dades local de l'&i18n-ktouch;. </para>
+<sect2 id="export_import">
+<title
+>Exportar/Importar</title>
+<para
+>Per a exportar un curs o disposició de teclat en un fitxer separat escolliu l'element corresponent a la llista de la part esquerra de la finestra <guilabel
+>Editor de cursos i la disposició de teclat</guilabel
+> de l'editor i premeu el botó <guibutton
+>Exporta</guibutton
+> de la barra d'eines. </para>
+<para
+>L'&i18n-ktouch; obrirà un diàleg estàndard del &kde; per a desar. La descripció d'aquest diàleg en detall es troba en el capítol <ulink url="help:/fundamentals/files.html"
+>Obrir i desar fitxers</ulink
+> en els Fonaments del &kde;. </para>
+<para
+>Podeu escollir el nom i la ubicació del fitxer &XML; que voleu desar. </para>
+<para
+>Si trobeu que val la pena compartir els vostres fitxers amb més usuaris, si us plau, envieu-los amb alguna descripció a la <ulink url="mailto:kde-edu@kde.org"
+>llista de correu del kde-edu</ulink
+>. </para>
+<important>
+<para
+>Les dades han d'estar llicenciades sota la <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>Llicència pública general de &GNU;, versió 2</ulink
+> per a incloure-les en la instal·lació predeterminada de l'&i18n-ktouch;. </para>
+</important>
+<para
+>Per a importar els vostres fitxers de dades a l'&i18n-ktouch;, premeu el botó <guibutton
+>Importa</guibutton
+> de la barra d'eines i escolliu el fitxer &XML; exportat anteriorment utilitzant l'&i18n-ktouch;. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>El &ktouch;, Copyright 1999-2007 per</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>El &ktouch;, Copyright 2011-2019 per Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>. </para>
+
+<para
+>Col·laboradors:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, traductor del fitxer de teclat i d'entrenament a l'alemany, així com la traducció.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, teclat llatinoamericà</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, teclat portuguès</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, teclat francès</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Un agraïment especial a tothom (que no hagi estat mencionat) col·laboradors amb els fitxers de teclat i de lliçó.</emphasis>
+</para>
+<para
+>Traductor de la documentació: Daniel Fortuny Anguera <email
+>dfortuny@pie.xtec.es</email
+></para
+><para
+>Traductor/Revisor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

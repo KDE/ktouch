@@ -1,0 +1,2967 @@
+# translation of ktouch.po to Swedish
+# Översättning ktouch.po till Svenska
+# Copyright (C).
+#
+# Mattias Newzella <newzella@linux.nu>, 2003.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2005, 2011, 2012, 2013, 2014, 2015, 2016, 2019, 2021.
+# Arve Eriksson <031299870@telia.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2021-09-28 16:02+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Ogiltig databasversion '%1'."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Egna lektioner"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "En plats att lagra personliga lektionstexter"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Ingen kurs med identifieraren %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Ingen tangentbordslayout med identifieraren %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Dold"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Överst till vänster"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Överst till höger"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Nederst till vänster"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Nederst till höger"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Fel när kursen skulle öppnas"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Inbyggda kurser kan bara visas."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Fel när tangentbordslayout skulle öppnas"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Inbyggda tangentbordslayouter kan bara visas."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1 %"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 tecken"
+msgstr[1] "%1 tecken"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "Textfiler (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "Den valda filen kunde inte öppnas"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Det finns redan en tangentbordslayout med samma namn."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "Ny"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Ny..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Ny kurs"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Ny tangentbordslayout"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Mall"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Ta bort"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Importera"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Exportera"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Editor för kurser och tangentbordslayout"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Skapa en ny kurs eller tangentbordslayout"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Ta bort kursen eller tangentbordslayouten som för närvarande är vald"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Importera en kurs eller tangentbordslayout från en fil"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr ""
+"Exportera kursen eller tangentbordslayouten som för närvarande är vald till "
+"en fil"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Fel vid borttagning av kurs"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Fel vid borttagning av tangentbordslayout"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "XML-filer (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "Den valda filen kunde inte importeras."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Fel när kurs skulle sparas"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Fel när tangentbordslayout skulle sparas"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "Kurs <b>%1</b> borttagen"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Tangentbordslayout <b>%1</b> borttagen"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Fel när kurs skulle sparas på disk."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Fel när tangentbordslayout sparades på disk."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Den valda kursen är redan närvarande som en inbyggd kurs."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Importera som ny kurs"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "Den valda kursen är redan närvarande som en användarkurs."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+"Den valda tangentbordslayouten är redan närvarande som en inbyggd "
+"tangentbordslayout."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Importera som ny tangentbordslayout"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"Den valda tangentbordslayouten är redan närvarande som en användar-"
+"tangentbordslayout."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Återställ"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Stäng"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Använd en annan kurs som mall"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Använd en annan tangentbordslayout som mall"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Kurs"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Tangentbordslayout"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Tangentbordslayout att använda på andra plattformar än X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Bestämmer om skrivfel måste korrigeras eller inte."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Styr tangentbordets synlighet under övningar."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Styr realtidsstatistikens synlighet under övningar."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Returtangenten i slutet på en rad byter till nästa rad."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "Mellanslagstangenten i slutet på en rad byter till nästa rad."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Det minsta antal tangentnedtryckningar per minut som krävs för att låsa upp "
+"nästa lektion."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr "Den minsta skrivriktigheten i procent för att låsa upp nästa lektion."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Tangentbordets färgnyans för att markera tangenter för varje finger."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Hur genomskinliga fingerfärger ska visas."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Identifierare för den senast använda profilen."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Övning"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Övningsinställningar"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Färger"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Färginställningar"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Anpassa tangentbord"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Editor för kurser och tangentbordslayout..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Anpassa tangentbord..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Maskinskrivningsträning"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Lär dig och öva maskinskrivning"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright © 2011-2015 av Sebastian Gottfried\n"
+"Copyright © 2000-2007 av Håvard Frøiland och Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Nuvarande utvecklare"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Tidigare utvecklare och programmerare"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Ursprunglig upphovsman"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Skapade SVG-ikonen"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Många programfixar, rättningar och uppdateringar"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Alla skapare av övnings- och tangentbordsfiler"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Starta kurs- och tangentbordslayouteditorn"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "Lägg till sökvägen först i listan över QML-importsökvägar"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "%1 har stött på ett körtidsfel och måste avslutas."
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Tecken"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Väljartangent-identifikation"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Position"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Ingen titel>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Nya tecken: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Titel"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Kurser"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Tangentbordslayouter"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Namn: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Riktighet"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Tecken per minut"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Okänd</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Lektion:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "Övning den:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Riktighet:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Tecken per minut:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Kurser för din tangentbordslayout"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "Andra kurser"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Välkommen till Maskinskrivningsträning"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Starta övning"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Den valda kursen är avsedd för en specifik tangentbordslayout."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "Den valda kursen är inte avsedd för datorns aktiva tangentbordslayout."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"KTouch kan inte byta eller ställa in tangentbordslayouter. Innan en övning "
+"måste du ställa in datorn att använda rätt tangentbordslayout. Annars måste "
+"nuvarande tangentbordslayout användas för att skriva in texten."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Anpassa tangentbord"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Lektion <b>%1</b> borttagen."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "Lektion utan titel borttagen."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Ångra"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "Bekräfta"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "Redigera lektion"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Titel:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "Lektionstext"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Klar"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Gör färdigt föregående lektion för att låsa upp"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "Hantera profiler"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Hantera profiler"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Övade lektioner:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Total övningstid"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Senaste övning:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Aldrig"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Redigera"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Vill du verkligen ta bort profilen \"<b>%1</b>\"?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Innan du börjar öva, presentera dig gärna:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Namn"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "Jag har ingen eller mycket begränsad erfarenhet av maskinskrivning"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+"Lektioner låses upp allt eftersom dina skrivfärdigheter förbättras med tiden."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Jag är en erfaren maskinskrivare och vill förbättra mina färdigheter"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Alla lektioner låses omedelbart upp."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Skapa ny profil"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Använd vald profil"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "Statistik för lektionsövningar"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Förfluten tid"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Tecken:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Fel:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Gå tillbaka till hemskärmen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Upprepa lektion"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Nästa lektion"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Gratulerar! Du har klarat lektionen."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Du har inte klarat lektionen."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Upprepa lektionen. Din färdighet förbättras automatiskt med tiden."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Nästa lektion upplåst"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Visa"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Framsteg"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Fel"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "Över"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "Alla lektioner"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "De här lektionen"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Ingen visualisering tillgänglig för tangentbordslayouten."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "Meny"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Återuppta övning"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Starta om lektion"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr ""
+"Övningsomgång startad. Tiden börjar gå vid första tangentnedtryckningen."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Övningsomgången avbruten. Tiden börjar gå igen vid nästa tangentnedtryckning."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Fingrar"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Vänster hand"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Pekfinger:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Långfinger:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Ringfinger:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Lillfinger:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Höger hand"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Ogenomskinlighet"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Tangentbordslayout:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Beskrivning:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Lektioner:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Lägg till ny lektion"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Ta bort lektion"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Flytta upp lektion"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Flytta ner lektion"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Nya tecken:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Dialogruta"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Skapa ny normal tangent"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Normal tangent"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Skapa ny specialtangent"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Specialtangent"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Ta bort markerad tangent"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100 %"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Tangentbord"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Namn:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Bredd:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Höjd:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometri"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Vänster:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Överst:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Tangent"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Finger:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Vänster lillfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Vänster ringfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Vänster långfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Vänster pekfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Höger pekfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Höger långfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Höger ringfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Höger lillfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Taktil markering:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Tecken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Lägg till nytt tecken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Ta bort tecken"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Skriv:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Tabulator"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "Caps Lock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Skift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Backsteg"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Retur"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Mellanslag"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Annat"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Beteckning:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Väljartangent-identifikation:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Öppna en textfil..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Radbryt automatiskt"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 tecken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Klistra in nuvarande layoutnamn på systemtangentbordet"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Under övning:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Tvinga korrigering av skrivfel"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Visa tangentbord"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Visa realtidsstatistik"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Gå till nästa rad med:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "Ret&ur"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "&Mellanslag"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Gränser för upplåsning av lektion"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Minsta antal tangentnedtryckningar &per minut:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Minsta riktighet:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Ange titel"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Ange tangentbordslayout"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Redigera beskrivning"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Lägg till lektion"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Flytta lektion"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Ange lektionens titel"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Ange nya tecken för lektion"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Ange lektionens text"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Ange tangentbordslayoutens titel"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Ange tangentbordslayoutens namn"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Ange tangentbordslayoutens storlek"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Lägg till tangent"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Ta bort tangent"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Ange tangentgeometri"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Ange tangentfinger"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Ange tangentens taktila markering"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Lägg till tangenttecken"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Ta bort tangenttecken"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Ange tangenttecknets värde"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Ange tangenttecknets väljartangent"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Ange tangenttecknets position"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Ange specialtangentens typ"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Ange specialtangentens beteckning"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Ange väljartangent-identifikation för specialtecken"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Välj tangentbordslayout"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Skapa ny egen lektion"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "'%1' borttagen."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "På:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "Använd OpenGL för återgivning (experimentellt)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Redigera egen lektion"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Inga kurser tillgängliga"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "Maskinskrivningsträning har inga kurser för din tangentbordslayout. Du "
+#~ "kan skapa egna kurser med tangentbordslayout- och kurseditorn."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Starta editor"
+
+#~ msgid "Form"
+#~ msgstr "Formulär"
+
+#~ msgid "use a QGLWidget for the viewport"
+#~ msgstr "Använd en QGLWidget för vyn"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Arabiskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Brasilianska"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgariskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Tjeckiskt qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Tjeckiskt qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Danskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Engelskt Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Engelskt Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Engelskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Engelskt Dvorak (Storbritannien)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Engelskt (Storbritannien)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Estländskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Franskt Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Franskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Tyskt Dvorak typ II"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Tyskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Tyskt Neo 2"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Grekiskt (engelskt)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Hebreiskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Ungerskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Italienskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Kanaresiskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Latinamerikanskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Litauisk standard"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Portuguese"
+#~ msgstr "Portugisiska"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Québec"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Ryskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Slovakiska qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Slovakiskt qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Sloveniskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Spanskt Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Spanskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Svenskt tangentbord"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Tyskt (schweiziskt)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Fransk-schweiziskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil Eng"
+#~ msgstr "Tamilskt eng"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil"
+#~ msgstr "Tamilskt"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Turkish f (Türkçe F klavye)"
+#~ msgstr "Turkiskt f (Türkçe F klavye)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ukrainskt (Win-tangenter)"
+
+#~ msgid "Default User"
+#~ msgstr "Förvald användare"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Textfiler\n"
+#~ "*|Alla filer"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Välj övningstext"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Importerade text från filen '%1'"
+
+#~ msgid "generated from text file"
+#~ msgstr "skapad från textfil"
+
+#~ msgid "all available"
+#~ msgstr "alla tillgängliga"
+
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Inlärningsfiler"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Välj fil med inlärningsövning"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Vill du behålla aktuell nivå för den nya inlärningsövningen?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Starta ny övningsomgång"
+
+#~ msgid "Keep current level"
+#~ msgstr "Behåll aktuell nivå"
+
+#~ msgid "Start from first level"
+#~ msgstr "Starta med första nivån"
+
+#~ msgid "General Options"
+#~ msgstr "Allmänna alternativ"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Tangentbordsalternativ"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Nivå:  Riktiga/totalt antal tecken: %1/%2  Ord: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Omgång: Riktiga/totalt antal tecken: %1/%2  Ord: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Observera att i olika länder sker undervisning i maskinskrivning något "
+#~ "olika, vilket oftast bara påverkar den översta tangentraden. I U.S.A. "
+#~ "används till exempel bara vänster hands lillfinger för att trycka ner "
+#~ "tangenten längst till vänster och tangenten betecknad med 1. I Tyskland "
+#~ "används lillfingret också för att trycka ner tangenten med 2, och alltså "
+#~ "skiftas fingrarna en tangent åt höger på den översta tangentraden.\n"
+#~ "Normalt spelar det bara någon roll för delade eller ergonomiska "
+#~ "tangentbord."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Kunde inte hitta/öppna inlärningsfilen '%1'."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Ändrar användare till '%1'. Startar om övningsomgång på aktuell nivå."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "Ö&ppna inlärningsfil..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Redigera inlärningsfil..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "&Redigera färgschema..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "&Redigera tangentbordslayout..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "&Paus för övningsomgång"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "In&lärningsstatistik"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Standardin&lärningsfiler"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "&Färgscheman för tangentbord"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Ställ in användare..."
+
+#~ msgid "&Current User"
+#~ msgstr "&Aktuell användare"
+
+#~ msgid "untitled lecture"
+#~ msgstr "namnlös inlärningsfil"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Det nuvarande färgschemats nummer."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "Använd samma färger för skrivraden oberoende av färgschema."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Bakgrundsfärgen för lärarens rad."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Textfärgen på lärarens rad"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "Bakgrundsfärgen för elevens rad."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Ändra textfärgen för elevens rad"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Om en annan bakgrund ska användas för felaktig text eller inte."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Bakgrundsfärgen för felaktig text (elevens rad)."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Textfärgen för felaktig text (elevens rad)."
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Ge en ljudsignal för varje skrivfel"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Spela ljud vid skrivning."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Spela ett ljud vid automatisk nivåändring"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Glidhastigheten"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Den maximala höjden på den glidande grafiska komponenten"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Överskrid standard eller fördefinierade övningsteckensnitt."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Teckensnitt för elevens och lärarens rad"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Inlärningsfilen som för närvarande är laddad"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Om höger-till-vänster skrivning används."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Om färger på tangenterna ska användas eller inte."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr ""
+#~ "Om bara inlärda och kända tangenter ska visas, eller alltid alla "
+#~ "tangenter."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Om tangentbordet ska visas."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Om fördefinierade teckensnitt för tangentbordet ska överskridas."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Teckensnitt för tangenter på tangentbordet"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Tangentbordsfilen som för närvarande är laddad"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr ""
+#~ "Kräver att användaren trycker på returtangenten efter raden är färdig."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Tillåt automatiska nivåjusteringar"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Inaktivera manuella nivåjusteringar när automatisk nivåändring är "
+#~ "aktiverad"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Kom ihåg aktuell nivå nästa gång Ktouch startar"
+
+#~ msgid "The current training level"
+#~ msgstr "Aktuell övningsnivå"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Antal tecken per minut för att gå upp en nivå"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Riktighet i procent för att gå upp en nivå"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Antal tecken per minut för att gå ner en nivå"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Riktighet i procent för att gå ner en nivå"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Hur många rader som måste skrivas innan nivån kan ändras"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Utför minst en fullständig nivå innan nivån ökas"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Tillåt flera användare av Ktouch med ett användarkonto"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Den nuvarande användarens namn."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Spara ändrade färgscheman?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "namnlöst färgschema"
+
+#~ msgid "Black && White"
+#~ msgstr "Svartvitt"
+
+#~ msgid "Classic"
+#~ msgstr "Klassiskt"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Mörkblått"
+
+#~ msgid "Stripy"
+#~ msgstr "Randigt"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Kunde inte öppna eller ladda ner tangentbordsfil från '%1'"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "%1 med skärmtecknet '%2' och Unicode '%3' har redan definierats, och "
+#~ "hoppas över.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Väljartangent"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Okänd fingertangent med Unicode '%1'. Normal tangent med skärmtecknet "
+#~ "'%2' och Unicode '%3* hoppas över.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Okänd måltangent med Unicode '%1'. Dold tangent med skärmtecknet '%2' och "
+#~ "Unicode '%3* hoppas över.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Okänd fingertangent med Unicode '%1'. Dold tangent med skärmtecknet '%2' "
+#~ "och Unicode '%3* hoppas över.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Okänd väljartangent med Unicode '%1'. Dold tangent med skärmtecknet '%2' "
+#~ "och Unicode '%3* hoppas över.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num Lock"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|Ktouch-tangentbordsfiler (*.keyboard.xml)\n"
+#~ "*|Alla filer"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Ska den här tangenten verkligen tas bort?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Ktouch tangentbordseditor"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Det här är inte ett giltigt Unicode-värde. Korrigera värdet eller skriv "
+#~ "in ett tecken."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Ange antingen ett tecken eller ett Unicode-värde."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Ta bort alla tangentkopplingar för tangenten?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Fel i Ktouch tangentbordseditor"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Öppna tangentbordsfil"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Vilken tangentbordsfil vill du redigera?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Redigera aktuellt tangentbord:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Öppna ett standardtangentbord:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Öppna en tangentbordsfil:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<inga tangentbordsfiler tillgängliga>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Kunde inte öppna tangentbordsfilen. Skapar en ny istället."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Varningar rapporterades när tangentbordsfilen '%1' lästes:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (ändrad)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Ktouch tangentbordseditor - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Ktouch tangentbordseditor - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<ny namnlös tangentbordsfil>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Tangentbordet har ändrats. Vill du spara ändringarna?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Kan inte läsa tangentbordslayoutfilen '%1': %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Kunde inte ladda ner eller öppna tangentbordslayout från '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Fel vid läsning av tangentbordslayout. Det vanliga numeriska "
+#~ "tangentbordet skapas istället. Du kan välja en annan tangentbordslayout i "
+#~ "inställningsdialogrutan."
+
+#~ msgid "A default lecture..."
+#~ msgstr "En standardinlärningsfil..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Spara inlärningsövning"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Ktouch inlärningseditor - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<ny namnlös inlärningsfil>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Data för nivå %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Skriv in rader här..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Öppna inlärningsfil"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Vilken inlärningsfil vill du redigera?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Redigera aktuell inlärningsfil:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Öppna en standardinlärningsfil:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Kunde inte öppna inlärningsfilen. Skapar en ny istället."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr ""
+#~ "Den aktuella inlärningsfilen har ändrats. Vill du spara ändringarna?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "En hel del"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Det här är en liten standardtext. Om du vill\n"
+#~ "börja öva maskinskrivning, öppna en\n"
+#~ "övning eller träningsfil med huvudmenyn.\n"
+#~ "Om du trycker på returtangenten efter nästa rad\n"
+#~ "har du lyckats klara av standardövningen. Hurra!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzåäö"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<inga standardfiler tillgängliga>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Välj eller skriv in ett filnamn."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Webbadressen verkar vara felaktig. Rätta den."
+
+#~ msgid "***current***  "
+#~ msgstr "***aktuell***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Ingen statistik tillgänglig ännu."
+
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr ""
+#~ "Radera all statistik för nuvarande användare?\n"
+#~ "Övningsomgången startar om på nuvarande nivå."
+
+#~ msgid "Words per minute"
+#~ msgstr "Ord per minut"
+
+#~ msgid "Correctness"
+#~ msgstr "Rätt"
+
+#~ msgid "Skill"
+#~ msgstr "Förmåga"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Tid sedan första inlärningsövningen i dagar"
+
+#~ msgid "Sessions"
+#~ msgstr "Omgångar"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Startar övningsomgång: Väntar på första tangentnedtryckningen..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Du är klar med övningen.\n"
+#~ "Övningsomgången kommer att starta från början."
+
+#~ msgid "You rock!"
+#~ msgstr "Du rockar!"
+
+#~ msgid "S&tatistics"
+#~ msgstr "S&tatistik"
+
+#~ msgid "&Settings"
+#~ msgstr "In&ställningar"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Huvudverktygsrad"
+
+#~ msgid "New User"
+#~ msgstr "Ny användare"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Ange ett unikt användarnamn:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Det här är inte ett giltigt (unikt) användarnamn."
+
+#~ msgid "Save user list?"
+#~ msgstr "Spara användarlista?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "Program som hjälper dig lära dig och öva på att skriva med tangentbord"
+
+#~ msgid "KTouch"
+#~ msgstr "Ktouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Övningsfil att öppna"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Färgschemaeditor"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Använd definierade färgscheman"
+
+#~ msgid "Add"
+#~ msgstr "Lägg till"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Redigera färgschema"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Färgschemats namn:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Lagra information"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Rörliga radernas färger"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Lärarens bakgrund:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Lärarens text:"
+
+#~ msgid "Student background:"
+#~ msgstr "Elevens bakgrund:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Elevens text vid fel:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Elevens bakgrund vid fel:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Tangentbordsfärger"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Bakgrundsfärger för normala tangenter:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Markerad bakgrund:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Normala tangentfärger:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Markerad textfärg:"
+
+#~ msgid "Text color:"
+#~ msgstr "Textfärg:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Tangentram:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Väljartangenter och andra tangenter:"
+
+#~ msgid "Text color"
+#~ msgstr "Textfärg"
+
+#~ msgid "Background:"
+#~ msgstr "Bakgrund:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Tangentbordets identifieringsdata"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Tangentbordets rubrik:"
+
+#~ msgid "Language id:"
+#~ msgstr "Språkidentifikation:"
+
+#~ msgid "Comments:"
+#~ msgstr "Kommentarer:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Tangentegenskaper"
+
+#~ msgid "Key type:"
+#~ msgstr "Tangentens typ:"
+
+#~ msgid "Key text:"
+#~ msgstr "Tangentens text:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Alternativ för tangentbordsredigering"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Ställ in tangentbordsteckensnitt..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Spara tangentbord som..."
+
+#~ msgid "Close"
+#~ msgstr "Stäng"
+
+#~ msgid "Key connectors"
+#~ msgstr "Tangentanslutningar"
+
+#~ msgid "or unicode"
+#~ msgstr "eller Unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Rensa anslutningar"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Lägg till eller uppdatera anslutning"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<väljartangent>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Tangentbordslayout (klicka för att aktivera tangenter för redigering, "
+#~ "eller dra tangenter)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Ktouch inlärningseditor"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Inlärningsegenskaper"
+
+#~ msgid "Comment:"
+#~ msgstr "Kommentar:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Data för nivå 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Nya tecken på nivån:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Nivåbeskrivning (valfri):"
+
+#~ msgid "Level data:"
+#~ msgstr "Nivådata:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Sammanfattning av övningsnivå"
+
+#~ msgid "Summary"
+#~ msgstr "Sammanfattning"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Högsta poäng för nivån"
+
+#~ msgid "1."
+#~ msgstr "1:a"
+
+#~ msgid "2."
+#~ msgstr "2:a"
+
+#~ msgid "3."
+#~ msgstr "3:e"
+
+#~ msgid "4."
+#~ msgstr "4:e"
+
+#~ msgid "5."
+#~ msgstr "5:e"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Score"
+#~ msgstr "Poäng"
+
+#~ msgid "Characters per second"
+#~ msgstr "Tecken per sekund"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Alla användares högsta poäng för nivån"
+
+#~ msgid "&Retry level"
+#~ msgstr "Försök nivå &igen"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&Fortsätt till nästa nivå"
+
+#~ msgid "Browse..."
+#~ msgstr "Bläddra..."
+
+#~ msgid "&OK"
+#~ msgstr "&Ok"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Använd egen färg för skrivraden"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Färgen på lärarens rad"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Lärarens rad"
+
+#~ msgid "Text:"
+#~ msgstr "Text:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Ändra textfärgen för elevens rad"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Här kan du ändra textfärgen du skriver med för elevens rad."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Bakgrunden för lärarens rad"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Här kan du ändra bakgrundsfärg för lärarens rad (raden med bokstäver som "
+#~ "du måste skriva)."
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Använd annan färg vid missade tecken"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Välj bakgrundsfärgen för fel på skrivraden"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "När du har markerat 'Använd olika färg vid fel på skrivraden', kan du "
+#~ "därefter välja en färg för felens bakgrund. Du gör ett fel när du skriver "
+#~ "ett felaktigt tecken på elevens rad. Det här är ett sätt att göra att "
+#~ "dina fel syns bättre."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Välj textfärgen för fel på skrivraden"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "När du har markerat 'Använd olika färg vid fel på skrivraden', kan du "
+#~ "därefter välja en färg för text med fel. Du gör ett fel när du skriver "
+#~ "ett felaktigt tecken på elevens rad. Det här är ett sätt att göra att "
+#~ "dina fel syns bättre."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Textradsinställningar"
+
+#~ msgid "Fast"
+#~ msgstr "Snabb"
+
+#~ msgid "Slow"
+#~ msgstr "Långsam"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Glidhastighet:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Överskrid övningsteckensnitt"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Teckensnitt för visad/inskriven text:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Den här knappen visar en dialogruta för val av teckensnitt, där du kan "
+#~ "ändra teckensnittet på elevens och lärarens rad. När du avslutar "
+#~ "dialogrutan, visas en förhandsgranskning av teckensnittet på raden "
+#~ "nedanför, och ändringen verkställs först när du klickar på knappen "
+#~ "Verkställ nedan."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Visa tangenterna du måste skriva på tangentbordet"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Det här markerar tangenten på tangentbordet som du måste skriva in "
+#~ "härnäst. Det är enklare att skriva när den är markerad."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Markera &tangenter på tangentbordet"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Dölj eller dämpa ännu inte inlärda tangenter "
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "Om markerad kan du ange ditt eget teckensnitt för tangentbordet istället "
+#~ "för tangentbordslayoutens fördefinierade."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Varje tangentbord kan ange sitt eget teckensnitt. Om det fördefinierade "
+#~ "teckensnittet för ett visst tangentbord inte fungerar, eller om du vill "
+#~ "ha ditt eget, markera den här knappen. Därefter kan du välja ditt eget "
+#~ "teckensnitt som används för att visa tecknen på tangenterna."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Överskrid tangentbordsteckensnitt"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Teckensnitt för tangenter på tangentbordet:"
+
+#~ msgid "Sound"
+#~ msgstr "Ljud"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Om det här är markerat (förval) avges en ljudsignal varje gång du skriver "
+#~ "fel."
+
+#~ msgid "&Beep on error"
+#~ msgstr "L&judsignal vid fel"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Ge ett skrivmaskinsljud för varje tangent som trycks ner"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Om markerad avges ett skrivmaskinsljud för varje tangent som trycks ner."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "Skrivmaskinsljud för &tangenter"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Spela ett ljud vid automatisk nivåändring."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Om det här är markerat (förval) spelas ett ljud varje gång du automatiskt "
+#~ "byter nivå."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Ljud vid automatisk nivåändring"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "A&utomatiska nivåjusteringar"
+
+#~ msgid "chars/minute"
+#~ msgstr "tecken per minut"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Skrivhastighet:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Riktighet:"
+
+#~ msgid "Workload:"
+#~ msgstr "Arbetsbelastning:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Avsluta hela övningsnivån innan övergång"
+
+#~ msgid "lines"
+#~ msgstr "rader"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Gränser för att gå upp en nivå"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Gränser för att gå ner en nivå"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Inaktivera manuella nivåändringsknappar"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr ""
+#~ "&Skrivmaskinsläge (användaren måste bekräfta raden med returtangenten)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "&Kom ihåg nivå nästa gång programmet startar"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Aktuell övningsomgång"
+
+#~ msgid "Lecture:"
+#~ msgstr "Övning:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Nivåer i sessionen:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Förfluten tid (i sekunder):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr ""
+#~ "Det här visar antal sekunder du har skrivit under den här "
+#~ "inlärningsövningen."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Antal skrivna tecken:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "Antal tecken (riktiga och felaktiga) som du hittills har skrivit."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Felskrivna tecken:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Visar hur många felaktiga tecken du skrev."
+
+#~ msgid "Words typed:"
+#~ msgstr "Skrivna ord:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Antal ord som hittills skrivits."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Förhållandet mellan riktigt skrivna tecken mot totalt antal skrivna "
+#~ "tecken."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Skrivhastighet"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Antal riktiga tecken per minut som du skrev."
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Antal ord per minut som du skrev."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Här listas tecken som du har missat under skrivprovet. Procenttalet visar "
+#~ "förhållandet mellan hur ofta en tangent missades mot hur ofta tangenten "
+#~ "totalt användes. Stora tal anger att tangenten missades många gånger."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Teckenstatistik (tecken du behöver öva mer på)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Aktuell nivåstatistik"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "övningsetikett 2"
+
+#~ msgid "Level:"
+#~ msgstr "Nivå:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "nivåetikett2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Här listas tecken som du har missat under skrivprovet. Procenttalet visar "
+#~ "förhållandet mellan hur ofta en tangent missades mot hur ofta tangenten "
+#~ "användes riktigt. Stora tal anger att tangenten missades många gånger."
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Ditt skrivförlopp"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Visa inlärningens förlopp:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "Här kan du välja övningen som du vill få statistik över."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Alternativ för förloppsdiagram"
+
+#~ msgid "Chart Data"
+#~ msgstr "Diagramdata"
+
+#~ msgid "Session stats"
+#~ msgstr "Omgångsstatistik"
+
+#~ msgid "Level stats"
+#~ msgstr "Nivåstatistik"
+
+#~ msgid "Chart Type"
+#~ msgstr "Diagramtyp"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Tidsaxelns skalning"
+
+#~ msgid "Time scaled"
+#~ msgstr "Skalad tid"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Konstant mellanrum"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Att klicka på den här knappen rensar hela övningsstatistiken för "
+#~ "nuvarande användare."
+
+#~ msgid "Clear History"
+#~ msgstr "Töm historik"
+
+#~ msgid "Level"
+#~ msgstr "Nivå"
+
+#~ msgid "Current level"
+#~ msgstr "Aktuell nivå"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Det här visar på vilken nivå du befinner dig."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Speed"
+#~ msgstr "Hastighet"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Tecken per minut"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Det här visar hur fort du skriver. Det mäter skrivhastigheten i tecken "
+#~ "per minut."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Hur mycket skriver du in rätt?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Det här visar hur rätt du skriver."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Nya tecken på den här nivån"
+
+#~ msgid "Setup Users"
+#~ msgstr "Ställ in användare"
+
+#~ msgid "&Add"
+#~ msgstr "&Lägg till"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Insert, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Delete, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "Stän&g"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Arabiska"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "BR-Nativo"
+#~ msgstr "BR-Nativo"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bulgariska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bulgariska (långt automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Katalanska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Tjeckiska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Danska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Danska (fullständig kurs)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Nederländska junior (nederländska för barn)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Nederländska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak - ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Engelska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (for AlphaGrip)"
+#~ msgstr "Engelska (för AlphaGrip)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Finska för barn"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Finska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Franska 2 (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Franska 1 (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Franska Dvorak (del 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Franska Dvorak (del 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Tyska (med nio nivåer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Tyska (från Tipptrainer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Tyska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Tyska (Dvorak tangentbordslayout)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Tyska (numeriskt tangentbord)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Grekiska"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Ungerska expert++"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Ungerska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Italienska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Latin"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Litauiska (sdt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norska"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Polska (från TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Ryska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Ryskt 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Ryska (långt automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Slovakiska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slovenska"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Spanska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Spanska 1 (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Spanska 2 (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Spanska Dvorak"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Turkiska (automatgenererad)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainska"
+
+#~ msgid "F&ile"
+#~ msgstr "&Arkiv"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Magyar gépírótanfolyam (Expert++)"
+#~ msgstr "Magyar gépírótanfolyam (Expert++)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Tyska (NEO-snabbskriftslayout)"

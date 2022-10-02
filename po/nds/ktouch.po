@@ -1,0 +1,3138 @@
+# Translation of ktouch.po to Low Saxon
+#
+# Manfred Wiese <m.j.wiese@web.de>, 2007, 2008, 2009, 2010, 2011, 2014.
+# Sönke Dibbern <s_dibbern@web.de>, 2007, 2008, 2009, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2014-05-09 19:13+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Manfred Wiese, Sönke Dibbern"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "m.j.wiese@web.de, s_dibbern@web.de"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Leeg Datenbankverschoon \"%1\"."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Egen Lexen"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "En Steed för't Sekern vun egen Lextexten"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Keen Lex dor mit de ID %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Keen Tasttoornen dor mit de ID %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Versteken"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Baven links"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Baven rechts"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Nerrn links"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Nerrn rechts"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Fehler bi't Opmaken vun den Lex"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Inbuut Lexen laat sik bloots ankieken."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Fehler bi't Opmaken vun de Tasttoornen"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Inbuut Tasttoornen laat sik bloots ankieken."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 Teken"
+msgstr[1] "%1 Tekens"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "De utsöchte Datei lett sik nich opmaken."
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Dat gifft al en Tasttoornen mit dissen Naam."
+
+#: src/editor/newresourceassistant.cpp:30
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@title:window"
+msgid "New"
+msgstr "Nieg"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Nieg..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Nieg Lex"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Nieg Tasttoornen"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Vörlaag"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Wegmaken"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Importeren"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Exporteren"
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Lex- un Tasttoornen-Editor"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Nieg Lex oder Tastatuur opstellen"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "De oder den opstunns utsöcht Lex oder Tasttoornen wegdoon"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "En Lex oder Tasttoornen ut en -Datei importeren"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "De oder den opstunns utsöcht Lex oder Tasttoornen as Datei exporteren"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Fehler bi't Wegdoon vun den Lex"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Fehler bi't Wegdoon vun de Tasttoornen"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "De utsöchte Datei lett sik nich importeren"
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Fehler bi't Sekern vun den Lex"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Fehler bi't Sekern vun de Tasttoornen"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "Lex <b>%1</b> wegdaan"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Tasttoornen <b>%1</b> wegdaan"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Fehler bi't Sekern vun den Lex op de Fastplaat."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Fehler bi't Sekern vun de Tasttoornen op de Fastplaat."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Den utsöchten Lex gifft dat al as inbuut Lex."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "As nieg Lex importeren"
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected course is already present as an user course."
+msgid "The selected course is already present as a user course."
+msgstr "Den utsöchten Lex gifft dat al as Bruker-Lex."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr "De utsöchte Tasttoornen gifft dat al as inbuut Tasttoornen."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "As nieg Tasttoornen importeren"
+
+#: src/editor/resourceeditor.cpp:600
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr "De utsöchte Tasttoornen gifft dat al as Bruker-Tasttoornen."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Wedderherstellen"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Wegdoon"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "En anner Lex as Vörlaag bruken"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "En anner Tasttoornen as Vörlaag bruken"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Lex"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Tasttoornen"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "De Tasttoornen, de Du op anner as X11-Systemen bruken wullt"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Leggt fast, wat Tippfehlers wegmaakt warrn mööt"
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Leggt de Sichtborkeit vun de Tastatuur bi't Öven fast."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Leggt de Sichtborkeit vun de Echttietstatistik bi't Öven fast."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "De Ingaavtast an't Reegeen wesselt na de nakamen Reeg."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "Freetast an't Reegenn wesselt na de nakamen Reeg."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"De lüttste Weert vun Tastdrück per Minuut, de Een hebben mutt, ehr de "
+"nakamen Lex freegeven warrt."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"De lüttste Weert för de Akkraatheit bi't Tippen, de Een hebben mutt, ehr de "
+"nakamen Lex freegeven warrt."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+"De Tastatuur-Infarvklöör för't Rutheven vun de Tasten för elkeen Finger"
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "De ID vun dat tolest bruukte Profil."
+
+# unreviewed-context
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Lehren"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Lehrinstellen"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Klören"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Klöörinstellen"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Tastatuur instellen"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Lex- un Tasttoornen-Editor..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Tastatuur instellen..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Tipp-Lehrprogramm"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Tippen lehren un öven"
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
+#| "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright © 2011-2012: Sebastian Gottfried\n"
+"Copyright © 2000-2007: Håvard Frøiland un Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Pleger opstunns"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Verleden Pleger un Schriever"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Orginaalschriever"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Maker vun't SVG-Symbool"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "En Barg vun Kodeplasters, Fehlerrichten un Opfrischen"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "All de Makers vun Lehrtörns un Tastatuurdateien"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Den Lex- un Tasttoornen-Editor opropen"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Teken"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Sünnertast-Beteker"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Positschoon"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Keen Titel>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Nieg Tekens: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Titel"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Lexen"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Tasttoornen"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Naam: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Akkraatheit"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Tekens per Minuut"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Nich begäng</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+#| msgid "Lessons:"
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Lexen:"
+
+# unreviewed-context
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "Training"
+msgid "Training on:"
+msgstr "Lehren"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Akkraatheit:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Tekens per Minuut:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Choose Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "Tasttoornen utsöken"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "Courses"
+msgid "Other Courses"
+msgstr "Lexen"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Willkamen bi den Tipplehrer"
+
+# unreviewed-context
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Lehren anfangen"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "De utsöchte Tasttoornen gifft dat al as Bruker-Tasttoornen."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected keyboard layout is already present as an user keyboard "
+#| "layout."
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "De utsöchte Tasttoornen gifft dat al as Bruker-Tasttoornen."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Tastatuur instellen"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "Course <b>%1</b> deleted"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Lex <b>%1</b> wegdaan"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Torüchnehmen"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Add lesson"
+msgid "Edit lesson"
+msgstr "Lex tofögen"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Titel:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Set lesson text"
+msgid "Lesson text"
+msgstr "Lextext fastleggen"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Afslaten"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+"Du muttst eerst de vörankamen Lexen fardigmaken, ehr disse freegeven warrt"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgid "Manage Profiles"
+msgstr "Nieg Profil opstellen"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create New Profile"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Nieg Profil opstellen"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Öövt Lexen:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Heel Öövtiet:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Tolest öövt:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Nienich"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Bewerken"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Wullt Du dat Profil „<b>%1</b>“ redig wegdoon?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Afbreken"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Stell Di bitte vör, ehr Du mit Öven anfangst:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Naam"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "Ik heff keen oder bloots wenig Könen bi't Tippen op en Schrievmaschien"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+"Lexen warrt freegeven, wenn Dien Könen bi't Tippen över de Tiet beter warrt."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Ik kann goot maschienschrieven un will mien Könen utbuen."
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "All Lexen warrt fuurts freegeven."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Nieg Profil opstellen"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Utsöcht Profil bruken"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "Statistik för den aktuellen Törn"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Aflopen Tiet"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Teken:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Fehlers:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Na Anfangschirm torüchgahn"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Lex wedderhalen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Nakamen Lex"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Graleren, Du hest den Lex afslaten!"
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Du hest den Lex nich afslaten!"
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+"Wedderhaal den Lex man. Dien Könen warrt mit de Tiet automaatsch beter."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Nakamen Lex freegeven"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Wiesen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Vörankamen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Fehlers"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "Över"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "All Lexen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "This Lesson"
+msgid "This Lesson"
+msgstr "Dissen Lex"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "För Dien Tasttoornen gifft dat keen Dorstellen."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+# unreviewed-context
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Lex wiedermaken"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Lex nieg starten"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "De Lehrtörn hett anfungen. De Tiet löppt mit de eerste Tast."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "Lehrtörn anhollen. De Tiet löppt bi den tokamen Tastdruck wieder."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Fingers"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Linke Hand"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Wiesfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Middelfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Ringfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Lüttfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Rechte Hand"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Tasttoornen:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Beschrieven:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Lexen:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Nieg Lex tofögen"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Lex wegmaken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Lex na baven"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Lex na nerrn"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Nieg Tekens:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Nieg normaal Tast opstellen"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Normaal Tast"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Nieg Sünnertast opstellen"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Sünnertast"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Utsöcht Tast wegdoon"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Tastatuur"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Naam:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Breed:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Hööchde:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Afmeten"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Links:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Baven:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Tast"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Finger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Linke Lüttfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Linke Ringfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Linke Middelfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Linke Wiesfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Rechte Wiesfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Rechte Middelfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Rechte Ringfinger"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Rechte Lüttfinger"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Tastmark:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Tekens"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Nieg Teken tofögen"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Teken wegmaken"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Typ:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Tabulator"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "GrootschrRast"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Ümschalt"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Torüchtast"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Ingaav"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Freetast"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Anner"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Beteker:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Sünnertast-Beteker:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "En Textdatei opmaken"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Regen automaatsch ümbreken"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 Tekens"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Aktuell Systeem-Tasttoornennaam infögen"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Bi't Öven:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Korrigeren vun Tippfehlers verdwingen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Tastatuur wiesen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Echttiet-Statistik wiesen"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Na nakamen Reeg gahn mit:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Sülls för't Freegeven vun Lexen"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Minimum strokes per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "Lüttst Weert vun Tastdrück per Minuut:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Lüttst Akkraatheit:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Titel fastleggen"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Tasttoornen fastleggen"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Beschrieven bewerken"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Lex tofögen"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Lex verschuven"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Lextitel fastleggen"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Nieg Tekens för Lex fastleggen"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Lextext fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Tasttoornentitel fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Tasttoornennaam fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Tasttoornengrött fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Tast tofögen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Tast wegmaken"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Tastafmeten fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Tastfinger fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Tastmark fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Tastteken tofögen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Tastteken wegmaken"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Tasttekenweert fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Sünnertast-Tastteken fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Taststeed fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Besünner Tasttyp fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Besünner Tastbeteker fastleggen"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Besünner Sünnertast-Beteker fastleggen"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Tasttoornen utsöken"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Nieg egen Lex opstellen"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "„%1“ wegdaan"
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "An:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "OpenGL-Dorstellen anmaken (testwies)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Sülven opstellt Lex bewerken"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Keen Lexen verföögbor"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "De Tipplehrer hett för Dien Tasttoornen keen Lexen. Du kannst mit den "
+#~ "Lex- un Tasttoornen-Editor Dien egen Lexen opstellen."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Editor opropen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Araabsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Brasiliaansch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgaarsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Tschechsch QWERTY"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Tschechsch QWERTZ"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Däänsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Engelsch, Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Engelsch, Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Engelsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Engelsch, Dvorak (Grootbritannien)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Engelsch (Grootbritannien)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Eestlannsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Franzöösch, Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Franzöösch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Hoochdüütsch (Dvorak-Tasttoornen Typ II)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Hoochdüütsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Hoochdüütsch \"Neo 2\""
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Greeksch (Engelsch)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Hebrääsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Ungaarsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Italieensch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Latienamerikaansch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Litausch standard"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norweegsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Québec"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Russ'sch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Slowaaksch QWERTY"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Slowaaksch QWERTZ"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Sloweensch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Spaansch Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Spaansch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Sweedsch Tastatuur"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Hoochdüütsch (Swiez)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Franzöösch Swiez"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil Eng"
+#~ msgstr "Tamielsch Engelsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil"
+#~ msgstr "Tamielsch"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ukrainsch (Windows-Tasten)"
+
+#~ msgid "Default User"
+#~ msgstr "Standardbruker"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Text-Dateien\n"
+#~ "*|All Dateien"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Öövtext utsöken"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Ut Datei \"%1\" importeert Text"
+
+#~ msgid "generated from text file"
+#~ msgstr "ut Textdatei opstellt"
+
+#~ msgid "all available"
+#~ msgstr "All verföögboren"
+
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Lex-Dateien"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Lex-Datei utsöken"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Wullt Du de aktuelle Stoop för den niegen Törn wohren?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Nieg Törn anfangen"
+
+#~ msgid "Keep current level"
+#~ msgstr "Aktuell Stoop wohren"
+
+#~ msgid "Start from first level"
+#~ msgstr "Bi eerst Stoop anfangen"
+
+#~ msgid "General Options"
+#~ msgstr "Allgemeen Optschonen"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Tastatuurinstellen"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Stoop: Richtige/All Tekens: %1/%2, Wöör: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Törn: Richtige/All Tekens: %1/%2, Wöör: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Beacht bitte: In de verscheden Länner warrt dat Tippen mit lütte "
+#~ "Verschelen lehrt, tomehrst geiht dat dor üm de böverste Reeg. In de "
+#~ "Vereente Staten a.B. bruukt Een den linken lütten Finger bloots för de "
+#~ "bütersten Tasten linkerhand un de \"1\". In Düütschland bruukt Een den "
+#~ "lütten Finger ok för de \"2\", de annern Fingers rückt in de böverste "
+#~ "Reeg denn ok all een Tast na rechts.\n"
+#~ "Normalerwies is dat bloots bi deelt oder Sundheit-Tastaturen en Verscheel."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "De Lex-Datei \"%1\" lett sik nich finnen/opmaken."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Bruker warrt op \"%1\" ännert. Lex warrt bi aktuelle Stoop wedder "
+#~ "opnahmen."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "Lex &opmaken..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Lex &bewerken..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Klöörschema &bewerken..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Tasttoornen &bewerken..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "Törn &anhollen"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "&Lex-Statistik"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Standard-&Lexen"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "&Klöörschemas för Tastaturen"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "Brukers &inrichten..."
+
+#~ msgid "&Current User"
+#~ msgstr "A&ktuell Bruker"
+
+#~ msgid "untitled lecture"
+#~ msgstr "Lex ahn Naam"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "De Nummer vun't aktuell Klöörschema."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "De sülven Klören för de Tippregen mit all Klöörschemas bruken"
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "De Achtergrundklöör för den Schoolmester sien Reeg"
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "De Textklöör för den Schoolmester sien Reeg"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "De Achtergrundklöör för den Schöler sien Reeg"
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "De Textklöör för den Schöler sien Reeg"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "En anner Achtergrund för leeg Text bruken"
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "De Achtergrundklöör för leeg Text (Schöler sien Reeg)"
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "De Textklöör för leeg Text (Schöler sien Reeg)"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Signaaltoon bi elk Tippfehler"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Tippkläng afspelen."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Klang bi't automaatsch Ännern vun de Stoop afspelen"
+
+#~ msgid "The sliding speed"
+#~ msgstr "De Loopschriftgauheit"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "De gröttst Hööchde vun dat Loopschriftfeld"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "De Standard-/vörinstellt Lex-Schriftoorden överschrieven"
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "De Schriftoort för den Schöler un den Schoolmester ehr Regen"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "De opstunns laadt Lex-Datei"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Vun rechts na links schrieven"
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Klöört Tasten bruken"
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "Bloots begäng Tasten oder jümmers all Tasten wiesen"
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Tastatuuransicht wiesen"
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Standard-/vörinstellt Schriftoorden för de Tastatuur överschrieven"
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "De Schriftoort för Tasten op de Tastatuur"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "De aktuell laadt Tastatuurdatei"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "De Bruker mutt an't Reegenn de Ingaavtast drücken"
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Automaatsch Topassen vun de Stoop tolaten"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Stoop nich vun Hand topassen laten, wenn automaatsch Topassen vun de "
+#~ "Stoop anmaakt is"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Aktuell Stoop för den tokamen Start vun KTouch wohren"
+
+#~ msgid "The current training level"
+#~ msgstr "Aktuell Stoop bi't Öven"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Tall vun Tekens per Minuut för en höger Stoop"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Perzentsatz vun richtig Tekens för en höger Stoop"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Tall vun Tekens per Minuut för en sieter Stoop"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Perzentsatz vun richtig Tekens för en sieter Stoop"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Tall vun ingeven Regen, ehr sik en Stoop wesseln lett"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Tominnst een Stoop to Enn maken, ehr Du de Stoop wesselst"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Mehr KTouch-Brukers op een Brukerkonto tolaten"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Den aktuellen Bruker sien Naam"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Ännert Klöörschema sekern?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "Klöörschema ahn Naam"
+
+#~ msgid "Black && White"
+#~ msgstr "Swattwitt"
+
+#~ msgid "Classic"
+#~ msgstr "Klass'sch"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Blaag"
+
+#~ msgid "Stripy"
+#~ msgstr "Striept"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "De Tastatuur-Datei \"%1\" lett sik nich opmaken/daalladen"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "\"%1\" mit Wiesteken \"%2\" un Unicode \"%3\" wöör al fastleggt un warrt "
+#~ "utlaten.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Sünnertast"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Fingertast mit Unicode \"%1\" nich begäng. Normaaltast mit Wiesteken "
+#~ "\"%2\" un Unicode \"%3\" utlaten.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Teel mit Unicode \"%1\" nich begäng. Versteken Tast mit Wiesteken \"%2\" "
+#~ "un Unicode \"%3\" utlaten.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Fingertast mit Unicode \"%1\" nich begäng. Versteken Tast mit Wiesteken "
+#~ "\"%2\" un Unicode \"%3\" utlaten.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Sünnertast mit Unicode \"%1\" nich begäng. Versteken Tast mit Wiesteken "
+#~ "\"%2\" un Unicode \"%3\" utlaten.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch-Tastatuurdateien (*.keyboard.xml)\n"
+#~ "*|All Dateien"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Disse Tast redig wegdoon?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "KTouch sien Tastatuur-Editor"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Dit gellt nich as Unicode-Nummer. Richt de Nummer bitte, oder giff en "
+#~ "Teken in."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Giff bitte en Teken oder en Unicode-Nummer in."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "All Tastverbinnen för disse Tast wegdoon?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Fehler vun KTouch sien Tastatuur-Editor"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<Sünnertast>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Tastatuurdatei opmaken"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Welk Tastatuurdatei wullt Du bewerken?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Aktuell Tastatuur bewerken:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "En Standardtastatuur opmaken:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "En Tastatuurdatei opmaken:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<keen Tastatuurdatei verföögbor>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr ""
+#~ "De Tastatuurdatei lett sik nich opmaken, ansteed warrt en niege opstellt."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Bi't Lesen vun de Tastatuurdatei \"%1\" geev dat Wohrschoen:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (ännert)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "KTouch sien Tastatuur-Editor - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "KTouch sien Tastatuur-Editor - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<Tastatuurdatei ahn Naam>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "De Tastatuur wöör ännert. Wullt Du de Ännern sekern?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "De Tasttoornen-Datei \"%1\" lett sik nich lesen: %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "De Tasttoornen-Datei lett sik nich vun \"%1\" laden."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Fehler bi't Lesen vun de Tasttoornen, ansteed warrt de Standard-"
+#~ "Tallenblock opstellt. Anner Tasttoornen laat sik in den Dialoog "
+#~ "\"Vörinstellen\" utsöken."
+
+#~ msgid "A default lecture..."
+#~ msgstr "En Standard-Lex..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Lex sekern"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Lex-Editor vun KTouch - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<nieg Lex-Datei ahn Naam>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Daten vun Stoop %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzäöüß"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Giff Dien Regen hier in..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Lex-Datei opmaken"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Welk Lex-Datei wullt Du bewerken?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Aktuell Lex bewerken:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Standard-Lex opmaken:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "De Lex-Datei lett sik nich opmaken, ansteed warrt en niege opstellt."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Dien Lex wöör ännert. Wullt Du de Ännern sekern?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Recht en Barg"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Dit is en kort Standardtext. Wenn Du\n"
+#~ "dat Blindtippen lehren wullt, maak en\n"
+#~ "Lex-Datei ut dat Hööftmenü op.\n"
+#~ "Wenn Du na de tokamen Reeg de\n"
+#~ "Ingaav-Tast drückst, büst Du mit\n"
+#~ "den Standard-Lex fardig. Graleren!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzäöüß"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<keen Standarddatei verföögbor>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Bitte en Dateinaam utsöken oder ingeven."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "As dat lett is de URL leeg, richt ehr bitte."
+
+#~ msgid "***current***  "
+#~ msgstr "***aktuell***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Noch keen Statistikdaten verföögbor."
+
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr ""
+#~ "All Statistikdaten vun den aktuellen Bruker wegdoon?\n"
+#~ "De Öven warrt bi de aktuelle Stoop nieg start."
+
+#~ msgid "Words per minute"
+#~ msgstr "Wöör per Minuut"
+
+#~ msgid "Correctness"
+#~ msgstr "Nauigkeit"
+
+#~ msgid "Skill"
+#~ msgstr "Könen"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Tiet siet den eersten Törn in Daag"
+
+#~ msgid "Sessions"
+#~ msgstr "Törns"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Lehr-Törn warrt start: An't Töven op den eersten Tastdruck..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Du hest mit dissen Lex nu afslaten.\n"
+#~ "De Lehrtörn fangt nu wedder vun vörn an."
+
+#~ msgid "You rock!"
+#~ msgstr "Du büst deegt!"
+
+#~ msgid "S&tatistics"
+#~ msgstr "S&tatistik"
+
+#~ msgid "&Settings"
+#~ msgstr "&Instellen"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Hööft-Warktüüchbalken"
+
+#~ msgid "New User"
+#~ msgstr "Nieg Bruker"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Bitte en eenkennig Brukernaam ingeven:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Dit gell nich as (eenkennig) Brukernaam."
+
+#~ msgid "Save user list?"
+#~ msgstr "Brukerlist sekern?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "En Programm, dat Di bi't Lehren vun Schriefmaschien-Blindschrieven hölpt"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Lex-Datei, de opmaakt warrn schall"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Klöörschema-Editor"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Egen Klöörschemas"
+
+#~ msgid "Add"
+#~ msgstr "Tofögen"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Klöörschema bewerken"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Naam vun't Klöörschema:"
+
+#~ msgid "&Store Data"
+#~ msgstr "Daten &sekern"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Loopschriftreeg-Klören"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Schoolmester-Achtergrund:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Schoolmester-Text:"
+
+#~ msgid "Student background:"
+#~ msgstr "Schöler-Achtergrund:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Schöler-Text bi Fehler:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Schöler-Achtergrund bi Fehler:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Tastatuurklören"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Achtergrundklören för normale Tasten:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Klöör för rutheevt Achtergrund:"
+
+# unreviewed-context
+#~ msgid "Normal key colors:"
+#~ msgstr "Klören för normale Tasten:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Klöör för rutheevt Text:"
+
+#~ msgid "Text color:"
+#~ msgstr "Textklöör:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Tastrahmen:"
+
+# unreviewed-context
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Sünnertasten / anner Tasten:"
+
+#~ msgid "Text color"
+#~ msgstr "Textklöör"
+
+#~ msgid "Background:"
+#~ msgstr "Achtergrund:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Tastatuurkenndaten"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Tastatuurtitel:"
+
+#~ msgid "Language id:"
+#~ msgstr "Spraak-ID:"
+
+#~ msgid "Comments:"
+#~ msgstr "Kommentaren:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Tast-Egenschappen"
+
+#~ msgid "Key type:"
+#~ msgstr "Tasttyp:"
+
+#~ msgid "Key text:"
+#~ msgstr "Tasttext:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Tastatuurinstellen"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Tastatuurschriftoort fastleggen..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Tastatuurdatei sekern as..."
+
+#~ msgid "Close"
+#~ msgstr "Tomaken"
+
+#~ msgid "Key connectors"
+#~ msgstr "Tastverbinnen"
+
+#~ msgid "or unicode"
+#~ msgstr "oder Unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Verbinnen leddig maken"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Verbinnen tofögen / opfrischen"
+
+#~ msgid "< modifier key>"
+#~ msgstr "< Sünnertast >"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr "Tasttoornen (Na en Klick bewerken oder Tasten trecken)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Lex-Editor vun KTouch"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Lex-Egenschappen"
+
+#~ msgid "Comment:"
+#~ msgstr "Kommentar:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Stoopdaten vun Stoop 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Nieg Tekens in disse Stoop:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Stoop-Kommentar (nich nödig):"
+
+#~ msgid "Level data:"
+#~ msgstr "Stoopdaten:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Lex-Tosamenfaten"
+
+#~ msgid "Summary"
+#~ msgstr "Tosamenfaten"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Hööchste Pünkt för disse Stoop"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Score"
+#~ msgstr "Pünkt"
+
+#~ msgid "Characters per second"
+#~ msgstr "Tekens per Sekunn"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "De Hööchstpünkt för disse Stoop vun all Brukers"
+
+#~ msgid "&Retry level"
+#~ msgstr "Stoop &nochmaal maken"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "Na &nakamen Lex gahn"
+
+#~ msgid "Browse..."
+#~ msgstr "Utsöken..."
+
+#, fuzzy
+#~| msgid "&Ok"
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Egen Klöör för de Tippreeg bruken"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "De Klöör för den Schoolmester sien Reeg ännern"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Den Schoolmester sien Reeg"
+
+#~ msgid "Text:"
+#~ msgstr "Text:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "De Klöör för den Schöler sien Reeg ännern"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Hier lett sik de Textklöör för den Schöler sien Reeg ännern."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Achtergrund för den Schoolmester sien Reeg"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Hier lett sik de Achtergrundklöör för den Schoolmester sien Reeg ännern "
+#~ "(De Reeg vun Bookstaven, de Du tippen schallst.)"
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Anner Klöör för de Tippreeg bi Fehlers"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Achtergrundklöör för Fehler in de Tippreeg utsöken"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Wenn Du \"Anner Klöör för de Tippreeg bi Fehlers\" anmaakt hest, kannst "
+#~ "Du en Achtergrundklöör för Fehlers utsöken. Du maakst en Fehler, wenn Du "
+#~ "in den Schöler sien Reeg en leeg Bookstaav ingiffst. Op disse Oort warrt "
+#~ "Dien Fehlers beter sichtbor."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Textklöör för Fehler in de Tippreeg utsöken"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Wenn Du \"Anner Klöör för de Tippreeg bi Fehlers\" anmaakt hest, kannst "
+#~ "Du en Textklöör för Fehlers utsöken. Du maakst en Fehler, wenn Du in den "
+#~ "Schöler sien Reeg en leeg Bookstaav ingiffst. Op disse Oort warrt Dien "
+#~ "Fehlers beter sichtbor."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Instellen för de Textreeg"
+
+#~ msgid "Fast"
+#~ msgstr "Gau"
+
+#~ msgid "Slow"
+#~ msgstr "Langsam"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Loopschriftgauheit:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Lex-Schriftoort överschrieven"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Schriftoort för wiest/tippt Text:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "En Klick op dissen Knoop maakt en Schriftoort-Dialoog op, binnen den Du "
+#~ "de Schriftoort för den Schöler un den Schoolmester ehr Regen ännern lett. "
+#~ "Wenn Du den Schriftoort-Dialoog verlettst, warrt in de Reeg nerrn en "
+#~ "Vöransicht wiest un bloots övernahmen, wenn Du op den Knoop \"Anwennen\" "
+#~ "klickst."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Op de Tastatuur de Tasten wiesen, de Du tippen schallst"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Dit markeert op de Tastatuur de nakamen Tast, de Du tippen schallst. Dat "
+#~ "Tippen is eenfacher, wenn dit anmaakt is."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "&Tasten op de Tastatuur markeren"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Noch nich lehrte Tasten bleek wiesen / versteken"
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "Wenn Du dit anmaakst, kannst Du Dien egen Tastatuur-Schriftoort ansteed "
+#~ "vun de vörinstellte ut de Tasttoornen bruken."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Elk Tasttoornen kann en egen Schriftoort angeven. Wenn de för en geven "
+#~ "Tastatuur vörinstellt Schriftoort nich löppt, oder Du Dien egen hebben "
+#~ "wullt, maak dit an. Du kannst denn Dien egen Schriftoort utsöken, de för "
+#~ "de Tekens op de Tasten bruukt warrt."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Tastatuurschriftoort överschrieven"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Schriftoort för Tasten op de Tastatuur:"
+
+#~ msgid "Sound"
+#~ msgstr "Klang"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Wenn dit anmaakt is (standardwies), gifft dat bi elk Tippfehler en "
+#~ "Signaaltoon."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Signaaltoon bi Fehler"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Bi elk Tast en Schriefmaschien-Klang maken"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Wenn anmaakt, lööst en Druck op en Tast en Schriefmaschien-Klang ut."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "Schriefmaschien-&Klang bi't Schrieven"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Klang afspelen, wenn sik de Stoop automaatsch ännert"
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Wenn dit anmaakt is (standardwies), warrt bi elk automaatsch Ännern vun "
+#~ "de Stoop en Klang afspeelt."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Klang bi't automaatsch Ännern vun de Stoop"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "&Stoop automaatsch topassen"
+
+#~ msgid "chars/minute"
+#~ msgstr "Tekens/Minuut"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Tippgauheit:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Nauigkeit:"
+
+#~ msgid "Workload:"
+#~ msgstr "Arbeitlast:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Maak bitte den Lex to Enn, ehr Du wiedermaakst"
+
+#~ msgid "lines"
+#~ msgstr "Regen"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Grenzen för höger Stoop"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Grenzen för sieter Stoop"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Knööp för't Ännern vun de Stoop utmaken"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "&Schriefmaschien-Bedrief (Bruker mutt Reeg mit Ingaavtast afsluten)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "&Stoop för tokamen Programmstart wohren"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Aktuell Törn"
+
+#~ msgid "Lecture:"
+#~ msgstr "Lex:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Stopen in dissen Törn:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "AflopenTiet (Sekunnen):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr "Dit wiest, woveel Sekunnen Du wielt dissen Törn tippt hest."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Tippt Tekens:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "De Tall vun Tekens (richtig oder leeg), de Du betherto tippt hest."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Leeg Tekens:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Wiest, woveel Tekens Du leeg tippt hest."
+
+#~ msgid "Words typed:"
+#~ msgstr "Tippt Wöör:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "De Tall vun tippt Wöör betherto."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "De Andeel vun richtig ingeven Tekens an de Tall vun all tippt Tekens."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Tippgauheit"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "De Tall vun richtig Tekens, de Du in een Minuut tippt hest."
+
+#~ msgid "Words per minute:"
+#~ msgstr "Wöör per Minuut:"
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "De Tall vun Wöör, de Du in een Minuut tippt hest."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Dit sünd de Bookstaven, de Du wielt de Lex leeg tippt hest. De "
+#~ "Perzentsatz wiest, wo faken Du en Tast nich drapen hest gegenöver wo "
+#~ "faken de Tast överhööft tippt wöör. Hoge Tallen wiest, dat Du Di faken "
+#~ "vertippt hest."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Tekenstatistik (Tekens, de Du wat mehr öven schullst)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Statistik för de aktuelle Stoop"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "lectureLabel2"
+
+#~ msgid "Level:"
+#~ msgstr "Stoop:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "levelLabel2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Dit sünd de Bookstaven, de Du wielt de Lex leeg tippt hest. De "
+#~ "Perzentsatz wiest den Andeel vun falsch tippt Tasten gegenöver de "
+#~ "richtigen Ingaven. Hoge Tallen wiest, dat Du Di faken vertippt hest."
+
+#~ msgid "Monitor Progress"
+#~ msgstr "Vörankamen beluern"
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Dien Vörankamen bi't Tippen"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Lex-Vörankamen wiesen:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr ""
+#~ "Hier kannst Du den Lex utsöken, för den Du de Statistik ankieken wullt."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Optschonen för't Vörankamen-Diagramm"
+
+#~ msgid "Chart Data"
+#~ msgstr "Diagrammdaten"
+
+#~ msgid "Session stats"
+#~ msgstr "Törnstatistik"
+
+#~ msgid "Level stats"
+#~ msgstr "Stoopstatistik"
+
+#~ msgid "Chart Type"
+#~ msgstr "Diagrammtyp"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Tietassenskala"
+
+#~ msgid "Time scaled"
+#~ msgstr "Tietskaleert"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Fast Afstand"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Wenn Du dissen Knoop anklickst, warrt de hele Lehrstatistik för den "
+#~ "aktuellen Bruker wegdaan."
+
+#~ msgid "Clear History"
+#~ msgstr "Vörgeschicht leddig maken"
+
+#~ msgid "Level"
+#~ msgstr "Stoop"
+
+#~ msgid "Current level"
+#~ msgstr "Aktuell Stoop"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Dit wiest Dien aktuelle Stoop."
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Speed"
+#~ msgstr "Gauheit"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Tekens/Minuut"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr "Dit wiest, wo gau Du tippst, meten in Tekens per Minuut."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Woveel tippst Du richtig?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Dit wiest, wo richtig Du tippst."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Nieg Tekens in disse Stoop"
+
+#~ msgid "Setup Users"
+#~ msgstr "Brukers inrichten"
+
+#~ msgid "&Add"
+#~ msgstr "&Tofögen"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Inf, Alt+T"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Entf, Alt+W"
+
+#~ msgid "&Close"
+#~ msgstr "&Tomaken"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Araabsch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "BR-Nativo"
+#~ msgstr "BR-Nativo"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bulgaarsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bulgaarsch (automaatsch opstellt, lang)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Katalaansch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Tschechsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Däänsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Däänsch (heel Kursus)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Lütt Nedderlannsch (Nedderlannsch för Kinner)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Nedderlannsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak, ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Engelsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (for AlphaGrip)"
+#~ msgstr "Engelsch (för AlphaGrip)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Lütt Finnsch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Finnsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Franzöösch (automaatsch opstellt) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Franzöösch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Dvorak, Franzöösch (Deel 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Dvorak, Franzöösch (Deel 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Hoochdüütsch (in 9 Stopen)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Hoochdüütsch (ut Tipptrainer)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Hoochdüütsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Hoochdüütsch (Dvorak-Tasttoornen)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Hoochdüütsch (Tasttoornen na »Neo 2«)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Hoochdüütsch (Tallenblock)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Greeksch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Ungaarsch Fachlüüd **"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Ungaarsch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Italieensch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Latiensch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Litausch (sdt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norweegsch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Poolsch (ut TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Russ'sch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Russ'sch 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Russ'sch (automaatsch lang opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Slowaaksch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Sloweensch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Spaansch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Spaansch (automaatsch opstellt) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Spaansch (automaatsch opstellt) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Dvorak, Spaansch"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Törksch (automaatsch opstellt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainsch"
+
+#~ msgid "F&ile"
+#~ msgstr "&Datei"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Magyar gépírótanfolyam (Expert++)"
+#~ msgstr "Magyar gépírótanfolyam (Fachlüüd++)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Hoochdüütsch (NEO-Gauschrievtoornen)"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "Jichtenswat mit den Editor opmaken"
+
+#~ msgid "Title Question..."
+#~ msgstr "Titelfraag..."
+
+#~ msgid "Current something"
+#~ msgstr "Aktuell Jichtenswat"
+
+#~ msgid "Preset something:"
+#~ msgstr "Vörinstellt Jichtenswat:"
+
+#~ msgid "Open file:"
+#~ msgstr "Datei opmaken:"
+
+#~ msgid "New something"
+#~ msgstr "Nieg Jichtenswat"
+
+#~ msgid "levelLabel1"
+#~ msgstr "levelLabel1"
+
+#~ msgid "lectureLabel1"
+#~ msgstr "lectureLabel1"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "En Standard-Lex..."
+
+#~ msgid "Keypad/Number block"
+#~ msgstr "Tallenblock"
+
+#~ msgid "Could not open file."
+#~ msgstr "Datei lett sik nich opmaken."
+
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Tast-Typ in Reeg \"%1\" fehlt."
+
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Tastafmeten: %1 x %2"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Nich wohren"
+
+#~ msgid "Keyboard dimensions:"
+#~ msgstr "Tastafmeten:"
+
+#~ msgid "Key Definitions"
+#~ msgstr "Tast-Definitschonen"
+
+#~ msgid "Key definition data:"
+#~ msgstr "Tastkenndaten:"
+
+#~ msgid "Default level..."
+#~ msgstr "Standard-Stoop..."
+
+#~ msgid "Edit color scheme:"
+#~ msgstr "Klöörschema bewerken:"
+
+#~ msgid "Background"
+#~ msgstr "Achtergrund"
+
+#~ msgid "Change Font..."
+#~ msgstr "Schriftoort ännern..."
+
+#~ msgid "Levels"
+#~ msgstr "Stopen"
+
+#~ msgid "Time needed (beg/adv/pro): "
+#~ msgstr "Bruukt Tiet (Anf./Vör./Baas): "
+
+#~ msgid "Save &As..."
+#~ msgstr "Sekern &as..."
+
+#~ msgid "Select File to Open"
+#~ msgstr "Datei för't Opmaken utsöken"
+
+#~ msgid "Current something file"
+#~ msgstr "Aktuell Jichtenswat-Datei"
+
+#~ msgid "Color Scheme"
+#~ msgstr "Klöörschema"
+
+#~ msgid "Select color scheme:"
+#~ msgstr "Klöörschema utsöken:"
+
+#~ msgid "Color scheme for displaying the keyboard"
+#~ msgstr "Klöörschema för de Tastatuur"
+
+#~ msgid ""
+#~ "You can choose here the color scheme for displaying the keyboard. "
+#~ "<i>Black & White</i> will display all keyboard letters black on white, "
+#~ "<i>Classic</i> will colorize the same color for each finger, <i>Deep "
+#~ "Blue</i> will display the keyboard in different deep blue colors and "
+#~ "<i>Stripy</i> will alternate blue and gray for letters corresponding to "
+#~ "same finger."
+#~ msgstr ""
+#~ "Hier kannst Du de Klören för't Utsehn vun de Tastatuur utsöken. "
+#~ "<i>Swattwitt</i> wiest swatte Bookstaven op en witt Tastatuur, "
+#~ "<i>Klass'sch</i> farvt all Tasten för elkeen Finger mit de sülve Klöör "
+#~ "in, <i>Blaag</i> wiest de Tastatuur in verscheden Blaagtöön, un "
+#~ "<i>Striept</i> wiest de Bookstaven för de enkelten Fingers wesselwies "
+#~ "blaag un gries."
+
+#~ msgid "Use common typing line colors independent of color scheme"
+#~ msgstr ""
+#~ "Egen Klören för de Tippregen bruken, eendoont wat as Klöörschema bruukt "
+#~ "warrt"
+
+#~ msgid "Typing Line Colors"
+#~ msgstr "Klören för de Tippregen"
+
+#~ msgid ""
+#~ "If checked this shows your error using the colors below on the typing line"
+#~ msgstr ""
+#~ "Wenn Du dit anmaakst, warrt Dien Fehler in de nerrn angeven Klöör markeert"
+
+#~ msgid "Maximum height of sliding line widget:"
+#~ msgstr "Gröttst Hööchde vun't Loopschriftreeg-Feld:"
+
+#~ msgid "in pixels"
+#~ msgstr "Pixels"
+
+#~ msgid "Change the font for the student and teacher lines"
+#~ msgstr "Schriftoort för den Schöler un den Schoolmester ehr Regen ännern"
+
+#~ msgid ""
+#~ "If you want to override the font of the training lecture check this box "
+#~ "and set your own font."
+#~ msgstr ""
+#~ "Wenn Du de Schriftoort vun den Lex överschrieven wullt, maak dit an un "
+#~ "stell Dien egen Schriftoort in."
+
+#~ msgid ""
+#~ "Most lectures suggest a font to use. This is necessary for not so common "
+#~ "languages where characters may be displayed in a strange way and distort "
+#~ "the sliding line. If you check this button you can choose your own font "
+#~ "and override the lecture font."
+#~ msgstr ""
+#~ "De mehrsten Lexen slaat en Schriftoort vör. Dit deit noot bi Spraken, de "
+#~ "nich so begäng sünd un bi de de Tekens snaaksch wiest warrt, wat de "
+#~ "Loopschriftreeg vertarren kunn. Wenn Du dit anmaakst, kannst Du Dien egen "
+#~ "Schriftoort utsöken un de Lex-Schriftoort överschrieven."
+
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Böver-/Neddergrenzen för de Stopen"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

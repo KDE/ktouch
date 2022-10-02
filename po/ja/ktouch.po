@@ -1,0 +1,1578 @@
+# Translation of ktouch into Japanese.
+# This file is distributed under the same license as the kdeedu package.
+# Kyosuke Takayama <support@mc.neweb.ne.jp>, 2004.
+# Toyohiro Asukai <toyohiro@ksmplus.com>, 2004.
+# KIMIZUKA Tomokazu <sgtom@pluto.dti.ne.jp>, 2005.
+# Fumiaki Okushi <okushi@kde.gr.jp>, 2006.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2009-07-13 00:38+0900\n"
+"Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KIMIZUKA Tomokazu,Kyosuke Takayama,Fumiaki Okushi,Yukiko Bando"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"sgtom@pluto.dti.ne.jp,support@mc.neweb.ne.jp,okushi@kde.gr.jp,ybando@k6.dion."
+"ne.jp"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Custom Lessons"
+msgstr "新規セッションを開始(&S)"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "No keyboard layout with ID %1"
+msgstr "キーボード配列(&K)"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, fuzzy, kde-format
+#| msgid "Hidden key"
+msgid "Hidden"
+msgstr "隠しキー"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, fuzzy, kde-format
+#| msgid "Top left:"
+msgid "Top left"
+msgstr "上段左:"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, fuzzy, kde-format
+#| msgid "Top right:"
+msgid "Top right"
+msgstr "上段右:"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, fuzzy, kde-format
+#| msgid "Bottom left:"
+msgid "Bottom left"
+msgstr "下段左:"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, fuzzy, kde-format
+#| msgid "Bottom right:"
+msgid "Bottom right"
+msgstr "下段右:"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while opening keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "文字"
+msgstr[1] "文字"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be opened"
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "New course"
+msgstr "新しい配色"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "New keyboard layout"
+msgstr "キーボード配列(&K)"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete"
+msgstr "キーを削除"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "キーボード配列エディタ"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Create a new course or keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Delete the current selected course or keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Import a course or keyboard layout from a file"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while deleting keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be imported."
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while saving keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "キーボード配列(&K)"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Error while saving keyboard layout to disk."
+msgstr "キーボード配列エディタ"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is already present as a user course."
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Import as new keyboard layout"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourceeditor.cpp:600
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Use another keyboard layout as template"
+msgstr "名前のないキーボード配列"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout"
+msgstr "キーボード配列(&K)"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "練習(&R)"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Statistics"
+msgid "Training Settings"
+msgstr "練習の統計"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "色の設定"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "色の設定"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Swedish Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "スウェーデン語"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Course and Keyboard Layout Editor..."
+msgstr "キーボード配列エディタ"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+#| msgid "Open Keyboard..."
+msgid "Configure Keyboard..."
+msgstr "キーボードを開く..."
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Typewriting Trainer"
+msgstr "入力行"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr "Copyright (C) 2000-2007, Håvard Frøiland, Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Current maintainer"
+msgstr "現在のメンテナおよびプログラマ"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Former maintainer and programmer"
+msgstr "現在のメンテナおよびプログラマ"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+#| msgid "Original author, project admin"
+msgid "Original author"
+msgstr "作者、プロジェクト管理者"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "SVG アイコン作成者"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "Lots of patches, fixes, updates"
+msgid "Lots of patches, fixes and updates"
+msgstr "数々のパッチ、フィックス、アップデート"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "練習ファイルとキーボードファイルを作ってくれたすべての人"
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Launch the course and keyboard layout editor"
+msgstr "名前のないキーボード配列"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "文字"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID"
+msgstr "修飾キー"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "新しい文字"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgid "Title"
+msgstr "タイトル:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard Layouts"
+msgstr "キーボード配列(&K)"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "正確さ"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "1 分あたりの文字数"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "削除"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "練習(&R)"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "正確さ"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+#| msgid "Characters per minute:"
+msgid "Characters per Minute:"
+msgstr "1 分あたりの文字数:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "キーボード配列を保存"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "Other Courses"
+msgstr "新しい配色"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Welcome to Typewriting Trainer"
+msgstr "入力行"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "練習(&R)"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "選択されたキーはホームポジションキーではありません。"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Swedish Keyboard"
+msgid "Configure Keyboard"
+msgstr "スウェーデン語"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "キーボード配列(&K)"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Edit lesson"
+msgstr "削除"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "タイトル:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Lesson text"
+msgstr "生徒行のテキスト:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Manage Profiles"
+msgstr "新しいキーボードを作成"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "新しいキーボードを作成"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "練習のオプション"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgid "Cancel"
+msgstr "キャンセル(&C)"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create New Profile"
+msgstr "新しいキーボードを作成"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, fuzzy, kde-format
+#| msgid "Open a lecture file:"
+msgid "Use Selected Profile"
+msgstr "教本ファイルを開く:"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "General Statistics"
+msgid "Lesson training statistics"
+msgstr "全般的な統計"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character:"
+msgstr "文字"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Repeat Lesson"
+msgstr "削除"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, fuzzy, kde-format
+#| msgid "Monitor Progress"
+msgid "Progress"
+msgstr "進度モニター"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "This Lesson"
+msgstr "新規セッションを開始(&S)"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "No visualization available for your keyboard layout."
+msgstr "名前のないキーボード配列"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "練習(&R)"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Restart Lesson"
+msgstr "新規セッションを開始(&S)"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "練習セッション! 時間を測定しています..."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+#| msgid "Training session paused. Training continues on next keypress..."
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "練習セッション一時停止中。どれかキーを押して練習を再開..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Fingers"
+msgstr "ホームポジションキー"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Index finger:"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Middle finger:"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Ring finger:"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Little finger:"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout:"
+msgstr "キーボード配列(&K)"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Add new lesson"
+msgstr "削除"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove lesson"
+msgstr "削除"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson up"
+msgstr "削除"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson down"
+msgstr "削除"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "New characters:"
+msgstr "新しい文字"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create new normal key"
+msgstr "新しいキーボードを作成"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+#| msgid "Normal key"
+msgid "Normal Key"
+msgstr "普通のキー"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Create new special key"
+msgstr "新しい教本を作成"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Special Key"
+msgstr "新しい教本を作成"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete selected key"
+msgstr "キーを削除"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+#| msgid "Save Keyboard"
+msgid "Keyboard"
+msgstr "キーボードを保存"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "幅:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "高さ:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, fuzzy, kde-format
+#| msgid "Key Geometry"
+msgid "Geometry"
+msgstr "キーの位置"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "左:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "上:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Finger:"
+msgstr "ホームポジションキー"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left little finger"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Left ring finger"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left middle finger"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left index finger"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right index finger"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Right middle finger"
+msgstr "ホームポジションキーを選択"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right ring finger"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right little finger"
+msgstr "入力行"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Characters"
+msgstr "文字"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add new character"
+msgstr "新しい文字"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove character"
+msgstr "キートップの文字"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID:"
+msgstr "修飾キー"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+#| msgid "&Open Plain Text File..."
+msgid "Open a text file..."
+msgstr "プレーンテキストファイルを開く(&O)..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "0 Characters"
+msgstr "文字"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Paste current system keyboard layout name"
+msgstr "名前のないキーボード配列"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "During training:"
+msgstr "練習(&R)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "キーボードを表示する"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "General Statistics"
+msgid "Show real-time statistics"
+msgstr "全般的な統計"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Words per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "1 分あたりの単語数:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Minimum accuracy:"
+msgstr "正確さ"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout"
+msgstr "キーボード配列(&K)"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Add lesson"
+msgstr "削除"
+
+#: src/undocommands/coursecommands.cpp:218
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson"
+msgstr "削除"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set new characters for lesson"
+msgstr "新しい文字"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Set lesson text"
+msgstr "生徒行のテキスト:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout title"
+msgstr "キーボード配列(&K)"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Set keyboard layout name"
+msgstr "名前のないキーボード配列"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout size"
+msgstr "キーボード配列(&K)"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "キーを追加"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove key"
+msgstr "削除(&R)"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add key character"
+msgstr "新しい文字"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove key character"
+msgstr "キートップの文字"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Set key character value"
+msgstr "キートップの文字"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key type"
+msgstr "新しい教本を作成"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key label"
+msgstr "新しい教本を作成"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""

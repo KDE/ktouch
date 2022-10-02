@@ -1,0 +1,2919 @@
+# Translation for ktouch.po to Euskara/Basque (eu).
+# Copyright (C) 2003, 2004, 2005, 2006, 2009 Free Software Foundation, Inc.
+# Copyright (C) 2010-2021, This file is copyright:
+# This file is distributed under the same license as the ktouch package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2003.
+# Juan Irigoien <juanirigoien@irakasle.net>, 2004.
+# Naiara Maya <naiabera@yahoo.es>, 2005.
+# Ion Gaztañaga <ion_g_m@hotmail.com>, 2005.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# marcos <marcos@euskalgnu.org>, 2006.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
+# Ander Elortondo <ander.elor@gmail.com>, 2019, 2020.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2021-10-10 21:19+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Naiara Maya,Ion Gaztañaga,Ander Elortondo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "naiabera@yahoo.es,igaztanaga@gmail.com,Ander.elor@gmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Datu-base bertsio baliogabea '%1'"
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Ikasgai pertsonalizatuak"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "Ikasgai pertsonalizatuak biltegiratzeko toki bat "
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Ez dago ikastarorik %1 IDaz"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Ez dago %1 IDa duen teklatu diseinurik"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Ezkutuan"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Goian ezkerrean"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Goian eskuinean"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Behean ezkerrean"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Behean eskuinean"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Errorea ikastaroa irekitzean"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Barneko ikastaroak ikusi bakarrik egin daitezke."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Errorea teklatuaren diseinua irekitzean"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Barneko teklatuaren diseinuak ikusi bakarrik egin daitezke."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%%1"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Karaktere %1"
+msgstr[1] "%1 Karaktere"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "Testu fitxategiak (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "Hautatutako fitxategia ezin da ireki"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Lehendik ere badago izen hori duen teklatu diseinua."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "Berria"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Berria..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Ikastaro berria"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Teklatuaren diseinu berria"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Txantiloia"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Inportatu"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Esportatu"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Ikastaro eta teklatuaren diseinuaren editorea"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Sortu ikastaro edo teklatuaren diseinu berri bat"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Ezabatu une honetan hautatutako ikastaro edo teklatuaren diseinua"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Inportatu ikastaro edo teklatuaren diseinua fitxategi batetik"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Esportatu uneko ikastaro edo teklatuaren diseinua fitxategi batera"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Errorea ikastaroa ezabatzean"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "errorea teklatuaren diseinua ezabatzean"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "XML fitxategiak (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "Hautatutako fitxategia ezin da inportatu."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Errorea ikastaroa gordetzean"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Errorea teklatuaren diseinua gordetzean"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "<b>%1</b> ikastaroa ezabatua"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "<b>%1</b> teklatuaren diseinua ezabatua"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Errorea ikastaroa diskoan gordetzean."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Errorea teklatuaren diseinua diskoan gordetzean."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Hautatutako ikastaroa dagoeneko badago barne ikastaro gisa."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Inportatu ikastaro berri gisa"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "Hautatutako ikastaroa dagoeneko badago erabiltzaile ikastaro gisa."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+"Hautatutako teklatuaren diseinua dagoeneko badago barne tekatuaren diseinu "
+"gisa."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Inportatu teklatuaren diseinu berri gisa"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"Hautatutako teklatuaren diseinua dagoeneko badago erabiltzailearen "
+"tekatuaren diseinu gisa."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Leheneratu"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Baztertu"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Erabili beste ikastaro bat txantiloi gisa"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Erabili beste teklatuaren diseinu bat txantiloi gisa"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Ikastaroa"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Teklatuaren diseinua"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "X11 ez diren plataformetan erabiltzeko teklatuaren diseinua"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Idazterakoan akatsak zuzendu behar diren ala ez kontrolatzen du."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Ikasgaia egiten den bitartean teklatuaren bistaratzea kontrolatzen du."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+"Ikasgaia egiten den bitartean denbora errealeko estatistiken bistaratzea "
+"kontrolatzen du."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Lerro bukaeran 'sartu' teklak aldatuko du hurrengo lerrora."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "Lerro bukaeran 'zuriune' teklak aldatuko du hurrengo lerrora."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Hurrengo ikasgaia askatzeko minutuko egin behar den gutxieneko sakatze "
+"kopurua."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Gutxieneko sakatze zuzenak ehunekotan adierazita hurrengo ikasgaia askatzeko."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Hatz bakoitzaren teklak nabarmentzeko teklatua tindatzeko koloreak. "
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Hatzen kolorea nolako gardentasunez erakutsi behar diren."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Erabilitako azken profilaren IDa."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Trebakuntza"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Trebakuntzaren ezarpenak"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Koloreak"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Kolore ezarpenak"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Konfiguratu teklatua"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Ikastaro eta teklatuaren diseinuaren editorea..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Konfiguratu teklatua..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Mekanografia trebakuntza"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Ikasi eta trebatu mekanografian"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Uneko mantentzailea"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Aurreko mantentzailea eta programatzailea"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Jatorrizko egilea"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "SVG ikonoaren sortzailea"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Adabaki, konponketa eta eguneraketa asko."
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Trebakuntzaren eta teklatuaren fitxategien sortzaile guztiak"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Abiarazi ikastaro eta teklatuaren diseinu editorea"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "Prestatu bide-izena QML inportazio bide-izen zerrendara"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "%1-(e)k exekuzio errorea aurkitu du eta itxi behar da."
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Karakterea"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Aldatzaile IDa"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Kokapena"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Izenbururik ez>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Karaktere berriak: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Izenburua:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Ikastaroak"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Teklatuaren diseinuak"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Izena: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Zuzentasuna"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Karaktereak minutuko"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Ezezaguna</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Ikasgaia:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "Trebatzen:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Zuzentasuna:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Karaktereak minutuko:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Ikastaroak zure teklatu diseinurako"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "Beste ikastaroak"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Ongi etorri mekanografia trebakuntzara"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Hasi trebakuntza"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Hautatutako ikastaroa teklatu diseinu zehatzerako prestatu da."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+"Hautatutako ikastaroa ez dago prestatua zure ordenagailuko uneko teklatu "
+"diseinurako."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"KTouch ezin du teklatu ezarpenak edo diseinua aldatu. Trebakuntza aurretik "
+"zure ordenagailua konfiguratu behar duzu teklatu diseinu egokia erabiltzeko. "
+"Bestela zure uneko teklatu diseinua erabili beharko duzu ikasgaiaren testua "
+"tekleatzeko."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Konfiguratu teklatua"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "<b>%1</b> ikasgaia ezabatua"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "Izenburu gabeko ikasgaia ezabatua."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Desegin"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "Berretsi"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "Editatu ikasgaia"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Izenburua:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "Ikasgaiaren testua"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Egina"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Osatu aurreko ikasgaiak askatzeko"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "Kudeatu profilak"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Kudeatu profilak"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Trebatutako ikasgaiak:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Trebatzen emandako denbora:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Azken trebakuntza:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Inoiz ez"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Editatu"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Benetan ezabatu nahi duzu '\"<b>%1'</b> profila?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Trebakuntza hasi aurretik mesedez aurkeztu zure burua:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Izena"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "Makinaz idazten ez dakit edo oso gutxi ibilia naiz."
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+"Ikasgaiak askatuz doaz zure idazketa gaitasuna aurrera egin ahala denboran."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Makinaz idaztera ohitua nago eta nire gaitasunak frogatu nahi ditut."
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Ikasgai guztiak berehala askatzen dira."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Sortu profila berria"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Erabili hautatutako profila"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "Trebakuntza ikasgaiaren estatistikak"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Igarotako denbora"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Karakterea:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Akatsak:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Itzuli pantaila nagusira"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Errepikatu ikasgaia"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Hurrengo ikasgaia"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Zorionak! Ikasgaia gainditu duzu."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Ez duzu ikasgaia gainditu."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Errepikatu ikasgaia, zure gaitasunak hobetuz joango dira denboraz."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Hurrengo ikasgaia askatua"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Erakutsi"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Aurrerapena"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "Akatsak"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "Ikasgai"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "guztiak"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "Ikasgai hau"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Zure teklatuaren diseinua ezin da erakutsi."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "Menua"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Berrekin trebakuntza"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Berrabiarazi ikasgaia"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Trebakuntza saioa hasi da! Denbora lehen tekla sakatzean abiatuko da."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Trebakuntza saioa pausatuta. Trebakuntzak hurrengo tekla sakatzean "
+"jarraituko du."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Hatzak"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Ezkerreko eskua"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Hatz erakuslea:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Hatz luzea:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Hatz nagia:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Hatz txikia:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Eskuineko eskua"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Opakutasuna"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr "% "
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Teklatuaren diseinua"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Azalpena:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Ikasgaiak:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Gehitu ikasgai berria"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Kendu ikasgaia"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Eraman ikasgaia gora"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Eraman ikasgaia behera"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Karaktere berriak:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Elkarrizketa"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Sortu tekla arrunt berria"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Tekla arrunta"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Sortu tekla berezi berria"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Tekla berezia"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Ezabatu hautatutako tekla"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "% 100"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Teklatua"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Izena:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Zabalera:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Altuera:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Ezkerrean:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Goian:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Tekla"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Hatza:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Ezkerreko hatz txikia"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Ezkerreko hatz nagia"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Ezkerreko hatz luzea"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Ezkerreko hatz erakuslea"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Eskumako hatz erakuslea"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Eskumako hatz luzea"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Eskumako hatz nagia"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Eskumako hatz txikia"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Ukimen markatzailea:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Karaktereak"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Gehitu karaktere berria"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Kendu karakterea"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Mota:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "TAB"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "MAIUS blok"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "MAIUS"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Atzera"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Sartu"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Zuriunea"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Beste bat"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Etiketa:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Aldatzaile IDa:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Ireki testu fitxategi bat..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Bildu lerroak automatikoki"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 Karaktere"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Itsatsi uneko sistemako teklatuaren diseinu izena"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Trebakuntzan zehar:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Behartu zuzentzera idazketa akatsak"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Erakutsi teklatua"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Erakutsi estatistikak zuzenean"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Hurrengo lerrora joateko erabili:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "Sartu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "Zuriunea"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Ikasgaiak askatzeko mugak"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Gutxieneko sakatzeak minutuko:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Gutxieneko zuzentasuna:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Ezarri izenburua"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Ezarri teklatuaren diseinua"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Editatu azalpena"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Gehitu ikasgaia"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Mugitu ikasgaia"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Ezarri ikasgai izenburua"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Ezarri ikasgaiaren karaktere berriak"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Ezarri ikasgaiaren testua:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Ezarri teklatuaren diseinuaren izenburua"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Ezarri teklatuaren diseinuaren izena"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Ezarri teklatuaren diseinu tamaina"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Gehitu tekla"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Kendu tekla"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Ezarri teklaren geometria"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Ezarri teklaren hatza"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Ezarri ukimen markagailua"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Gehitu tekla karakterea"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Kendu tekla karakterea"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Ezarri teklaren karakterearen balioa"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Ezarri teklaren karaktere aldatzailea"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Ezarri karaktere kokapena"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Ezarri tekla berezi mota"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Ezarri tekla berezi etiketa"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Ezarri tekla berezi aldatzaile IDa"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Aukeratu teklatuaren diseinua"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Sortu ikasgai pertsonalizatu berria"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "'%1' ezabatua."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Estatistika non:"
+
+#, fuzzy
+#~| msgid "<no lecture files available>"
+#~ msgid "No Courses Available"
+#~ msgstr "<Ez dago irakurketa fitxategirik eskuragai>"
+
+#, fuzzy
+#~| msgid "Level Editor"
+#~ msgid "Launch Editor"
+#~ msgstr "Maila-editorea"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Ukrainian"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Ukraniera"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (expert)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Hungariera (aditua)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Daniera"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Ingelesa Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Ingelesa Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Ingelesa"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Ingelesa Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Frantsesa Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Frantsesa"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Alemana"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "German"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Alemana"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Ingelesa"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (expert)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Hungariera (aditua)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Italiera"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norvegiera"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Esloveniera"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Ingelesa Dvorak"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "Danish"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Daniera"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Teklatu suediarra"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "German (in 9 levels)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Alemana (9 mailatan)"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "French"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Frantsesa"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Ukrainian"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ukraniera"
+
+#~ msgid "Default User"
+#~ msgstr "Erabiltzaile lehenetsia"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.txt|Text files\n"
+#~| "*.*|All files"
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt|Testu-fitxategiak\n"
+#~ "*.*|Fitxategi denak"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Hautatu praktikako testua"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Inportatu testua '%1' fitxategitik"
+
+#~ msgid "generated from text file"
+#~ msgstr "testu-fitxategitik sortuta"
+
+#~ msgid "all available"
+#~ msgstr "erabilgarri guztiak"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Aukeratu Trebakuntzarako testu fitxategia"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Trebakuntza sesio berrirako uneko maila mantendu nahi duzu?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Hasi trebakuntza saio berria"
+
+#~ msgid "Keep current level"
+#~ msgstr "Mantendu uneko maila"
+
+#~ msgid "Start from first level"
+#~ msgstr "Hasi aurreneko mailatik"
+
+#~ msgid "General Options"
+#~ msgstr "Aukera orokorrak"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Teklatuaren ezarpenak"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Maila: Karaktere zuzenak/guztira: %1/%2 Hitzak: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Sesioa: Zuzenak/Guztira: %1/%2  Hitzak: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Jakin ezazu herrialde desberdin batean teklen lekua piska bat desberdina "
+#~ "izan daitekeela, normalean goiko teklen errenkadari eragiten dio. "
+#~ "Adibidez, Ameriketako Estatu Batuetan ezkerrenen dagoen tekla eta 1 duen "
+#~ "tekla ezker eskuko hatz txikiarekin sakatzen dira. Alemanian berriz hatz "
+#~ "txikiak 2 tekla ere sakatzen du, eta horrela hatzak tekla bat "
+#~ "desplazatzen dira eskuineruntz goiko errenkadan.\n"
+#~ "Normalean, honek zatitutako edo ergonomikoak diren teklatuetan soilik "
+#~ "desberdintzen diktu."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Ezin da aurkitu/ireki '%1' irakurketa fitxategia."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "'%1' erabiltzailera aldatzen. Trebakuntzako saioa berrabiarazten uneko "
+#~ "mailan."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Ireki irakurgaia..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Editatu irakurgaia..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "&Editatu kolore-eskema..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "&editatu teklatuaren diseinua..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "&Geldiarazi saioa"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "&Irakurketaren estatistikak"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Irakurgai &Lehenetsiak"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "K&olore-eskemak"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Konfiguratu erabiltzaileak..."
+
+#~ msgid "&Current User"
+#~ msgstr "&Uneko erabiltzailea"
+
+#~ msgid "untitled lecture"
+#~ msgstr "Izenburu gabeko irakurgaia"
+
+#, fuzzy
+#~| msgid "Name of color scheme:"
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Kolore-eskemaren izena:"
+
+#, fuzzy
+#~| msgid "The background for the teacher's line"
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Irakaslearen lerroko atze kolorea"
+
+#, fuzzy
+#~| msgid "The color for the teacher's line"
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Irakaslearen lerroaren kolorea"
+
+#, fuzzy
+#~| msgid "The background for the teacher's line"
+#~ msgid "The background color for the student's line."
+#~ msgstr "Irakaslearen lerroko atze kolorea"
+
+#, fuzzy
+#~| msgid "Change the text color for the student line"
+#~ msgid "The text color for the student's line"
+#~ msgstr "Ikaslearen lerroaren kolorea aldatu"
+
+#, fuzzy
+#~| msgid "The background for the teacher's line"
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Irakaslearen lerroko atze kolorea"
+
+#, fuzzy
+#~| msgid "Change the text color for the student line"
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Ikaslearen lerroaren kolorea aldatu"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Bip egin teklatzerakoan egindako errore bakoitzean"
+
+#, fuzzy
+#~| msgid "&Sound on automatic level change"
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "&Soinua maila aldaketa automatikoa egitean"
+
+#, fuzzy
+#~| msgid "Sliding speed:"
+#~ msgid "The sliding speed"
+#~ msgstr "Diapositiben abiadura:"
+
+#, fuzzy
+#~| msgid "Override lecture font"
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Aldatu irakurketako letra mota"
+
+#, fuzzy
+#~| msgid "The color for the teacher's line"
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Irakaslearen lerroaren kolorea"
+
+#, fuzzy
+#~| msgid "<new unnamed lecture file>"
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "<izen gabeko irakurketa fitxategi berria>"
+
+#, fuzzy
+#~| msgid "Font for keys on keyboard:"
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Teklatuaren letra-mota:"
+
+#, fuzzy
+#~| msgid "<unnamed keyboard file>"
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "<izengabeko teklatu-fitxategia>"
+
+#, fuzzy
+#~| msgid "A&utomatic level adjustment"
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "&Mailaren aldaketa automatikoa"
+
+#, fuzzy
+#~| msgid "&Remember level for next program start"
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Gogoratu maila &hurrengo saiorako"
+
+#, fuzzy
+#~| msgid "Keep current level"
+#~ msgid "The current training level"
+#~ msgstr "Mantendu uneko maila"
+
+#, fuzzy
+#~| msgid "Limits to increase a level"
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Maila igotzeko mugak"
+
+#, fuzzy
+#~| msgid "Limits to increase a level"
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Maila igotzeko mugak"
+
+#, fuzzy
+#~| msgid "Limits to decrease a level"
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Maila jeisteko mugak"
+
+#, fuzzy
+#~| msgid "Limits to decrease a level"
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Maila jeisteko mugak"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Gorde aldatutako kolore-eskemak?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "kolore-eskema izengabea"
+
+#~ msgid "Black && White"
+#~ msgstr "Beltza eta zuria"
+
+#~ msgid "Classic"
+#~ msgstr "Klasikoa"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Urdin iluna"
+
+#~ msgid "Stripy"
+#~ msgstr "Marraduna"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Ezin da ireki/deskargatu teklatuaren diseinuko '%1' fitxategia"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "%1  jadanik definituta dago (bistaratzeko '%2' karakterea eta '%3' "
+#~ "unicode-arekin) eta saltatu egin da.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Kontrol tekla"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Hatzaren tekla ezezaguna '%1' unicode-arekin. Tekla normala (bistaratzeko "
+#~ "%2 karakterea eta %3 unicode-arekin) saltatuta.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Helburuko tekla ('%1' unicode-arekin) ezezaguna. Ezkutuko tekla "
+#~ "(bistaratzeko '%2' karakterea eta %3 unicode-arekin) saltatuta.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Hatzaren tekla ('%1' unicode-arekin) ezezaguna. Ezkutuko tekla "
+#~ "(bistaratzeko '%2' karakterea eta %3 unicode-arekin) saltatuta.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Kontroleko tekla edo tekla aldatzailea ('%1' unicode-arekin) ezezaguna. "
+#~ "Ezkutuko tekla (bistaratzeko '%2' karakterea eta %3 unicode-arekin) "
+#~ "saltatuta.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~| "*.*|All Files"
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch teklatuaren fitxategiak (*.keyboard.xml)\n"
+#~ "*.*|Fitxategi guztiak"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Tekla hau ezabatu nahi duzu?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "KTouch teklatuaren editorea"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Hau ez da baliozko unicode zenbakia. Zuzendu ezazu zenbakia edo sartu "
+#~ "karaktere bat."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Sartu karaktere bat edo unicode zenbaki bat."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Tekla honen konexio guztiak ezabatu?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "KTouch-eko teklatuaren editorearen errorea"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<tekla aldatzailea>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Ireki teklatu-fitxategia"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Zein teklatu-fitxategi editatu nahid duzu?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Editatu uneko teklatua:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Ireki teklatu lehenetsia:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Ireki teklatu-fitxategi bat:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<ez dago teklatu-fitxategirik eskuragai>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Ezin izan da da teklatu-fitxategia ireki, berria sortzen."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Abisuak daude teklatuko %1 fitxategia irakurtzean:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr "(eraldatua)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "KTouch-en teklatuaren editorea - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "KTouch-en teklatuaren editorea - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<izengabeko teklatu-fitxategia>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Teklatua aldatu da. Aldaketak gorde nahi al dituzu?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Ezin izan da teklatuaren diseinuko '%1' fitxategia irakurri. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Ezin da jeitsi/ireki teklatuaren diseinu fitxategia '%1'(e)tik"
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Errorea teklatuaren diseinua irakurtzean; hori dela eta, teklatu "
+#~ "antolaketa lehenetsia ezarriko da. Beste diseinu bat hauta dezakezu "
+#~ "ezarpenen menuan."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Irakurketa lehenetsia..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Trebakuntza irakurgaia gorde"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "KTouch-eko Irakurgaien editorea - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<izen gabeko irakurketa fitxategi berria>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "%1 mailaren datuak"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnop(q)rstu(v)(w)x(y)z"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Idatz itzazu zure lerroak hemen"
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Ireki irakurgaiaren fitxategia"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Zein irakurgai fitxategi editatu nahi duzu?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Editatu oraingo irakurgaia:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Irakurgai lehenetsiak ireki:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Ezin da aurkitu/ireki irakurketa fitxategia, berria sortzen"
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Uneko irakurgaia aldatu egin da. Gorde nahi al duzu?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Dexente"
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a small default text. If you want\n"
+#~| "to start practicing touch typing, open\n"
+#~| "a lecture/training file from the main menu.\n"
+#~| "If you press enter after the next line you have\n"
+#~| "successfully completed the default lecture. Hurray!!!"
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Hau testu txiki lehenetsia da. Praktikatzen\n"
+#~ "hasi nahi baduzu, ireki irakurgaia/entrenatzeko fitxategia menu "
+#~ "nagusian.\n"
+#~ "Sartu tekla zapatu baduzu hurrengo teklaren ondoren\n"
+#~ "irakurgai lehenetsia ongi burutu duzu.Gora!!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxy"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<ez dago eskuragai lehenetsitako fitxategirik>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Mesedez, aukeratu edo idatzi fitxategiaren izena"
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "URL-a oker egon daiteke; zuzendu ezazu mesedez"
+
+#~ msgid "***current***  "
+#~ msgstr "***unekoa***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Ez dago estatistikarik eskuragarri oraindik."
+
+#, fuzzy
+#~| msgid "Erase all statistics data for the current user?"
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "Uneko erabiltzailearen estatistika datu guztiak ezabatu?"
+
+#~ msgid "Words per minute"
+#~ msgstr "Hitzak minutuko"
+
+#~ msgid "Correctness"
+#~ msgstr "Zuzentasuna"
+
+#~ msgid "Skill"
+#~ msgstr "Trebetasuna"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Lehenengo saiakeratik pasatako egunak"
+
+#~ msgid "Sessions"
+#~ msgstr "Sesioak"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Trebakuntza saioa hasieratzen: Lehen tekla zapalketen zain..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Trebakuntzako ariketa amaitu duzu.\n"
+#~ "Trebakuntzaren saioa hasieratik hasiko da."
+
+#~ msgid "You rock!"
+#~ msgstr "Lortu duzu!"
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "Estatistika orokorrak"
+
+#~ msgid "&Settings"
+#~ msgstr "E&zarpenak"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Tresna-barra nagusia"
+
+#~ msgid "New User"
+#~ msgstr "Erabiltzaile berria"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Sartu erabiltzaile-izen esklusiboa:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Hau ez da baliozko (esklusiboa) erabiltzaile-izena."
+
+#~ msgid "Save user list?"
+#~ msgstr "Gorde erabiltzaileen zerrenda?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "Mekanografia ikasten eta lantzen lagunduko dizun programa"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Irekiko den trebakuntza fitxategia"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Kolore-eskemen editorea"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Erabiltzeak definitutako kolore-eskemak"
+
+#~ msgid "Add"
+#~ msgstr "Gehitu"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Editatu kolore-eskema"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Kolore-eskemaren izena:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Gorde datuak"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Diapositiba lerroaren koloreak"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Irakaslearen atzeko planoa:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Irakaslearen testua:"
+
+#~ msgid "Student background:"
+#~ msgstr "Ikaslearen atzeko planoa:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Ikaslearen testua huts egitean:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Ikaslearen atzeko planoa huts egitean:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Teklatuaren koloreak"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Tekla normalen atzeko planoko koloreak:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Atzeko plano nabarmendua:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Tekla normalen koloreak:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Nabrmendutako testuaren kolorea:"
+
+#~ msgid "Text color:"
+#~ msgstr "Testuaren kolorea:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Teklaren markoa:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Tekla aldatzaileak/bestelakoak:"
+
+#~ msgid "Text color"
+#~ msgstr "Testuaren kolorea"
+
+#~ msgid "Background:"
+#~ msgstr "Atzeko planoa:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Teklatuaren identifikaziorako datuak"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Teklatuaren izenburua:"
+
+#~ msgid "Language id:"
+#~ msgstr "Hizkuntzaren id-a:"
+
+#~ msgid "Comments:"
+#~ msgstr "Iruzkinak:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Teklaren propietateak"
+
+#~ msgid "Key type:"
+#~ msgstr "Tekla mota:"
+
+#~ msgid "Key text:"
+#~ msgstr "Teklaren testua:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Teklatuaren edizioko ezarpenak"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Ezarri teklatuaren letra-tipoa..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Gorde teklatua honela..."
+
+#~ msgid "Close"
+#~ msgstr "Itxi"
+
+#~ msgid "Key connectors"
+#~ msgstr "Teklatuaren konektoreak"
+
+#~ msgid "or unicode"
+#~ msgstr "edo unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Garbitu konektoreak"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Gehitu/eguneratu konektorea"
+
+#~ msgid "< modifier key>"
+#~ msgstr "< tekla aldatzailea>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Teklatuaren diseinua (egin klik teklak ediziorako aktibatzeko edo "
+#~ "arrastatu teklak)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "KTouch-eko irakurgaien editorea"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Irakurgaiaren propietateak"
+
+#~ msgid "Comment:"
+#~ msgstr "Komentarioa:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "10 mailaren datuak"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Maila honetako karaktere berriak:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Mailaren deskripzioa (aukerazkoa):"
+
+#~ msgid "Level data:"
+#~ msgstr "Maila-datuak:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Trebakuntzaren mailaren laburpena"
+
+#~ msgid "Summary"
+#~ msgstr "Laburpena"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Maila honetako puntuaziorik altuenak"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Score"
+#~ msgstr "Puntuazioa"
+
+#~ msgid "Characters per second"
+#~ msgstr "Karaktereak minutuko"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Maila honetako erabiltzaile guztien puntuaziorik altuena"
+
+#~ msgid "&Retry level"
+#~ msgstr "&Saiatu berriro maila"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&Jarraitu hurrengo mailarekin"
+
+#~ msgid "Browse..."
+#~ msgstr "Arakatu..."
+
+#, fuzzy
+#~| msgid "&Ok"
+#~ msgid "&OK"
+#~ msgstr "&Ados"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Erabili kolore pertsonalizatua idazketa lerroan"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Irakaslearen lerroaren kolorea"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Irakaslearen lerroa"
+
+#~ msgid "Text:"
+#~ msgstr "Testua:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Ikaslearen lerroaren kolorea aldatu"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Hemen, ikaslearen lerroaren testuaren kolorea aldatu dezakezu"
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Irakaslearen lerroko atze kolorea"
+
+#, fuzzy
+#~| msgid ""
+#~| "You can change here the background color for the teacher's line (the "
+#~| "line of letters you have to type.)"
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Hemen, irakaslearen lerroko atze kolorea aldatu dezakezu (tekleatu behar "
+#~ "dituzun letren lerroa"
+
+#, fuzzy
+#~| msgid "Use different color for missed typing"
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Erabili beste kolore bat idazketa falta denean"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Erroreentzako atzeko kolorea aukeratu "
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "   'Erroreentzako atzeko kolorea aukeratu'   hautatzen baduzu, errorea "
+#~ "egitean letran ipiniko den kolorea aukera dezakezu. Errorea izango da, "
+#~ "ikaslearen lerroan letra desegoki bat idazten duzunean. Hau erroreak "
+#~ "argiago ikusteko modu bat da."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Aukeratu akatsa egitean testuan agertuko den kolorea "
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "   'Aukeratu akatsa egitean testuan agertuko den kolorea'   aukeratzen "
+#~ "baduzu, errorea egitean letran ipiniko den kolorea aukera dezakezu. "
+#~ "Errorea izango da, ikaslearen lerroan letra desegoki bat idazten "
+#~ "duzunean. Hau erroreak argiago ikusteko modu bat da."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Testu lerroaren ezarpenak"
+
+#~ msgid "Fast"
+#~ msgstr "Azkar"
+
+#~ msgid "Slow"
+#~ msgstr "Motel"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Diapositiben abiadura:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Aldatu irakurketako letra mota"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Erakutsitako/idatzitako testuaren letra-mota"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Botoi honek, leiho bat erakutsiko dizu, honetan letra mota ezberdinak "
+#~ "egonen dira, eta nahi dituzunak aukeratuko duzu ikasle eta irakasle "
+#~ "lerroetarako Leiho hau itxitzean azpiko lerroan ikusiko da aldaketa, "
+#~ "baina ez da aplikatuko Apply botoian klikatzen duzun arte"
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Erakutsi teklatuan sakatu beharreko tekla"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Honekin teklatuan azpimarratuko da, teklatu behar duzun letra. Errazagoa "
+#~ "da tekleatzea hau aukeratuta dagoenean."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "&Nabarmendu teklak teklatuan"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Ezkutatu/ilundu oraindik ikasi gabeko teklak "
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr "Hau aukeratzen baduzu, teklatuko letren mota aukeratu dezakezu"
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Teklatuko diseinu bakoitzak bere letra-mota propioa du. Ez baduzu gustoko "
+#~ "erabiltzen den letra diseinua, aukeratu botoi hau. Ondoren nahi duzun "
+#~ "letra-mota aukeratu dezakezu tekletako karaktereak marrazteko."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Aldatu teklatuaren diseinua:"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Teklatuaren letra-mota:"
+
+#~ msgid "Sound"
+#~ msgstr "Soinua"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Hau aukeratzen baduzu (lehenetsia) bip eginen du, errore bat egiten duzun "
+#~ "bakoitzean"
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Bip huts egitean"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Jo idazmakinaren soinua tekla bakoitza sakatzean"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Aktibatzen bada, honek idazmakinaren soinua erreproduzituko du tekla "
+#~ "bakoitza sakatzean."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "&Idazmakinaren soinua idaztean"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Soinua egin maila aldaketa automatikoa gauzatzean."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Hau aukeratzen baduzu (lehenetsia) soinua hasiko da, mailaz igotzen zaren "
+#~ "bakoitzean"
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Soinua maila aldaketa automatikoa egitean"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "&Mailaren aldaketa automatikoa"
+
+#~ msgid "chars/minute"
+#~ msgstr "karaktere/minutuko"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Idazketa abiadura:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Zuzentasuna:"
+
+#~ msgid "Workload:"
+#~ msgstr "Lankarga:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Osatu trebakuntzaren maila osoa aurrera jarraitu aurretik"
+
+#~ msgid "lines"
+#~ msgstr "lerroak"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Maila igotzeko mugak"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Maila jeisteko mugak"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Ezgaitu maila eskuz aldatzeko botoiak"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr ""
+#~ "&Idazmakina modua (erabiltzaileak lerroa berretsi behar du Sartu-rekin)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Gogoratu maila &hurrengo saiorako"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Uneko trebakuntza saioa"
+
+#~ msgid "Lecture:"
+#~ msgstr "Irakurgaia:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Saio honetako mailak:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Emandako denbora (segundutan):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr ""
+#~ "Honek trebakuntza sesio honetan idatzi dituzun segunduak ikus ditzakezu."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Idatzitako karaktereak:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "Orain arte idatzitako karaktere-kopurua (zuzenak eta okerrak)."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Gaizki idatzitako karaktereak:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Zuk idatzitako karaktere okerren kopurua erakusten du."
+
+#~ msgid "Words typed:"
+#~ msgstr "Idatzitako hitzak:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Orain arte idatzitako karaktere kopurua."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Zuzen sartutako karaktere kopurua guztizko karaktere kopuruarekin "
+#~ "konparatuta."
+
+#~ msgid "Typing Rate"
+#~ msgstr "Pulsazio tasa"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Minutuko zuzen sartutako karaktere-kopurua."
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Minutuko sartutako karaktere-kopurua."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Hemen idazketa proba oker sartu dituzun karaktereen zerrenda duzu. "
+#~ "Portzentaiak teklaren errore proportzioa adierazten du. Zenbaki handiek "
+#~ "tekla okerra askotan sartu dela esan nahi dute."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr ""
+#~ "Karaktere estatistikak (karaktere hauekin arreta berezia izan beharko "
+#~ "duzu)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Uneko mailaren estatistikak"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "irakurgaietiketa2"
+
+#~ msgid "Level:"
+#~ msgstr "Maila:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "Maila-etiketa2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Hemen idazketa proba oker sartu dituzun karaktereen zerrenda duzu. "
+#~ "Portzentaiak tekla okerren proportzioa adierazten du. Zenbaki handiek "
+#~ "tekla okerra askotan sartu dela esan nahi dute."
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Zure idazketaren aurrerapena"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Erakutsi aurrerapena irakurgaian:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr ""
+#~ "Hemen zein irakurgaiaren estatistikak eskuratu nahi dituzun hauta "
+#~ "dezakezu."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Progresio diagramen aukerak"
+
+#~ msgid "Chart Data"
+#~ msgstr "Grafikaren datuak"
+
+#~ msgid "Session stats"
+#~ msgstr "Sesioaren estatistikak"
+
+#~ msgid "Level stats"
+#~ msgstr "Mailaren estatistikak"
+
+#~ msgid "Chart Type"
+#~ msgstr "Grafika mota"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Denboraren ardatzaren eskala"
+
+#~ msgid "Time scaled"
+#~ msgstr "Eskalatutako denbora"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Tarte konstantea"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Botoia sakatzean uneko erabiltzailearen trebakuntza estatistika guztiak "
+#~ "ezabatuko ditu."
+
+#~ msgid "Clear History"
+#~ msgstr "Garbitu historia"
+
+#~ msgid "Level"
+#~ msgstr "Maila"
+
+#~ msgid "Current level"
+#~ msgstr "Uneko maila"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Honek zer mailatan zauden erakutsiko dizu."
+
+#~ msgid "Speed"
+#~ msgstr "Abiadura"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Karaktereak/minutuko"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Honek zer abiaduratan idazten ari zaren erakusten dizu, neurketarako "
+#~ "minutuko zenbat karaktere idatzi dituzun hartzen du kontutan"
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Zenbat ari zara zuzen idazten?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Honek zenbaterainoko zuzentasunez idazten ari zaren erakusten du."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Maila honetako karaktere berriak"
+
+#~ msgid "Setup Users"
+#~ msgstr "Konfirugatu erabiltzaileak"
+
+#~ msgid "&Add"
+#~ msgstr "&Gehitu"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Txert, Alt+G"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Ezab, Alt+K"
+
+#~ msgid "&Close"
+#~ msgstr "It&xi"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bulgariera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bulgariera (auto-sortutako luzea)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Katalana (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Txekiera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Daniera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Daniera (kurtso osoa)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Herbehereak gaztea (Herbehereak umeentzako)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Herbehereak (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak - ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Ingelesa (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Finlandiera umeentzako"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Finlandiera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Frantsesa (auto-sortuta) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Frantsesa (auto-sortuta) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Frantsesa Dvorak (1. zatia)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Frantsesa Dvorak (2. zatia)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Alemana (9 mailatan)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Alemana (Tipptrainer-etik)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Alemana (auto-sortuta)"
+
+#, fuzzy
+#~| msgid "untitled keyboard layout"
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "izengabeko teklatuaren diseinua"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Alemana (teklatu numerikoa)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Grekoa"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (expert)"
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Hungariera (aditua)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Hungariera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Italiera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Latina"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norvegiera"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Poloniera (TTCoach-etik)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Errusiera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Errusiera (auto-sortutako luzea)"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Dvorak (auto-generated)"
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Dvorak (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Esloveniera"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Gaztelera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Gaztelera (auto-sortuta) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Gaztelera (auto-sortuta) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Gaztelera Dvorak"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Turkiera (auto-sortuta)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ukraniera"
+
+#~ msgid "F&ile"
+#~ msgstr "&Fitxategia"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (NEO-Schnellschreiblayout)"
+#~ msgstr "Alemana (NEO-Schnellschreiblayout)"

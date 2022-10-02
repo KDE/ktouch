@@ -1,0 +1,3460 @@
+# translation of @PACKAGE.po to @LANGUAGE
+# Copyright (C).
+# Claudiu Costin <claudiuc@kde.org>, 2003.
+# Sergiu Bivol <sergiu@cip.md>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: @PACKAGE\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2011-11-28 22:30+0200\n"
+"Last-Translator: Costin Raluca <costin_raluca_96@yahoo.com>\n"
+"Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#, fuzzy, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Costin Raluca"
+
+#, fuzzy, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "costin_raluca_96@yahoo.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Custom Lessons"
+msgstr "Începe sesiune nouă"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "No keyboard layout with ID %1"
+msgstr "Aspectul tastaturii"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, fuzzy, kde-format
+#| msgid "Hidden key"
+msgid "Hidden"
+msgstr "Cheie ascunsa"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, fuzzy, kde-format
+#| msgid "Top left:"
+msgid "Top left"
+msgstr "Stînga-sus:"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, fuzzy, kde-format
+#| msgid "Top right:"
+msgid "Top right"
+msgstr "Dreapta-sus:"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, fuzzy, kde-format
+#| msgid "Bottom left:"
+msgid "Bottom left"
+msgstr "Stînga-jos:"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, fuzzy, kde-format
+#| msgid "Bottom right:"
+msgid "Bottom right"
+msgstr "Dreapta-jos:"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+#| msgctxt "Lesson Name"
+#| msgid "German (Neo 2 keyboard layout)"
+msgid "Error while opening keyboard layout"
+msgstr "Limba Germana(aspectul tastaturii Neo 2 )"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Caracter"
+msgstr[1] "Caracter"
+msgstr[2] "Caracter"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be opened"
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+msgid "New course"
+msgstr "Schemă de culori nouă"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "New keyboard layout"
+msgstr "Aspectul tastaturii"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete"
+msgstr "Sterge cheia"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Editor aspect tastatura"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Create a new course or keyboard layout"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Import a course or keyboard layout from a file"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+#| msgctxt "Lesson Name"
+#| msgid "German (Neo 2 keyboard layout)"
+msgid "Error while deleting keyboard layout"
+msgstr "Limba Germana(aspectul tastaturii Neo 2 )"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be imported."
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+#| msgctxt "Lesson Name"
+#| msgid "German (Neo 2 keyboard layout)"
+msgid "Error while saving keyboard layout"
+msgstr "Limba Germana(aspectul tastaturii Neo 2 )"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Aspectul tastaturii"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Error while saving keyboard layout to disk."
+msgstr "Editor aspect tastatura"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is already present as a user course."
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+#| msgctxt "Lesson Name"
+#| msgid "German (Neo 2 keyboard layout)"
+msgid "Import as new keyboard layout"
+msgstr "Limba Germana(aspectul tastaturii Neo 2 )"
+
+#: src/editor/resourceeditor.cpp:600
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Use another keyboard layout as template"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout"
+msgstr "Aspectul tastaturii"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "Pregatire"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Statistics"
+msgid "Training Settings"
+msgstr "Statistici de pregatire"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "Configurări culoare"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Sound Settings"
+msgid "Color Settings"
+msgstr "Setari de sunet"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Finnish Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Tastatura finlandeza"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Editor aspect tastatura"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+#| msgid "Open Keyboard..."
+msgid "Configure Keyboard..."
+msgstr "Deschidere tastatura..."
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Typewriting Trainer"
+msgstr "Linia de scriere"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr "Copyright (C) 2000-2007 by Håvard Frøiland si Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Current maintainer"
+msgstr "Sustinatorul si programatorul curent "
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andrei Nicolae"
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Former maintainer and programmer"
+msgstr "Sustinatorul si programatorul curent "
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+#| msgid "Original author, project admin"
+msgid "Original author"
+msgstr "Autorul original, admin proiect"
+
+#: src/main.cpp:42
+#, fuzzy, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, fuzzy, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Creatorul imaginii SVG"
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "Lots of patches, fixes, updates"
+msgid "Lots of patches, fixes and updates"
+msgstr "Multe patch-uri, stabiliri, actualizari"
+
+#: src/main.cpp:44
+#, fuzzy, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Toti creatorii de pregatire si fisiere "
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Launch the course and keyboard layout editor"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character"
+msgstr "Caracter"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+msgid "Modifier ID"
+msgstr "Tasta modificator:"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "Caractere noi"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgid "Title"
+msgstr "Titlu:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard Layouts"
+msgstr "Aspectul tastaturii"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, fuzzy, kde-format
+msgid "Accuracy"
+msgstr "Precizie"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "Caractere pe minut"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Elimină"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "Pregatire"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "Precizie"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+#| msgid "Characters per minute:"
+msgid "Characters per Minute:"
+msgstr "Caractere pe minut:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "Salveaza aspectul tastaturii"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+msgid "Other Courses"
+msgstr "Schemă de culori nouă"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Welcome to Typewriting Trainer"
+msgstr "Linia de scriere"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "Pregatire"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "Cheia selectată nu este o cheie deget."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Finnish Keyboard"
+msgid "Configure Keyboard"
+msgstr "Tastatura finlandeza"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Aspectul tastaturii"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Edit lesson"
+msgstr "Elimină"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, fuzzy, kde-format
+msgid "Title:"
+msgstr "Titlu:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Lesson text"
+msgstr "Textul studentului"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Manage Profiles"
+msgstr "Creeaza o nouă tastatură"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Creeaza o nouă tastatură"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "Opțiuni antrenement"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "&Renunță"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create New Profile"
+msgstr "Creeaza o nouă tastatură"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, fuzzy, kde-format
+#| msgid "Open a lecture file:"
+msgid "Use Selected Profile"
+msgstr "Dschide o prelegere a fişieruluiŞ"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+msgid "Lesson training statistics"
+msgstr "Statisticile curentei sesiuni de pregatire"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character:"
+msgstr "Caracter"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Repeat Lesson"
+msgstr "Elimină"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, fuzzy, kde-format
+#| msgid "Monitor Progress"
+msgid "Progress"
+msgstr "Monitorizarea prosgresului"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "This Lesson"
+msgstr "Începe sesiune nouă"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "No visualization available for your keyboard layout."
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "Pregatire"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Restart Lesson"
+msgstr "Începe sesiune nouă"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Sesiune de pregatire! Timpul se scruge.."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+#| msgid "Training session paused. Training continues on next keypress..."
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Sesiune de pregatire intrerupta. Preatirea continua la urmatoarea pasare de "
+"cheie.."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Fingers"
+msgstr "Deget cheie"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Index finger:"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Middle finger:"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Ring finger:"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Little finger:"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout:"
+msgstr "Aspectul tastaturii"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Add new lesson"
+msgstr "Elimină"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove lesson"
+msgstr "Elimină"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson up"
+msgstr "Elimină"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson down"
+msgstr "Elimină"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "New characters:"
+msgstr "Caractere noi"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create new normal key"
+msgstr "Creeaza o nouă tastatură"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+#| msgid "Normal key"
+msgid "Normal Key"
+msgstr "Cheie normala"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Create new special key"
+msgstr "Creeaza o nouă prelegere"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Special Key"
+msgstr "Creeaza o nouă prelegere"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete selected key"
+msgstr "Sterge cheia"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+#| msgid "Save Keyboard"
+msgid "Keyboard"
+msgstr "Salveaza tastatura"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, fuzzy, kde-format
+msgid "Width:"
+msgstr "Lățime:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, fuzzy, kde-format
+msgid "Height:"
+msgstr "Inălțime:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, fuzzy, kde-format
+#| msgid "Key Geometry"
+msgid "Geometry"
+msgstr "Geometria cheii"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, fuzzy, kde-format
+msgid "Left:"
+msgstr "Rămase:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, fuzzy, kde-format
+msgid "Top:"
+msgstr "Sus:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Finger:"
+msgstr "Deget cheie"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left little finger"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Left ring finger"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left middle finger"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Left index finger"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right index finger"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Right middle finger"
+msgstr "Selecteaza degetul-cheie"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right ring finger"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right little finger"
+msgstr "Linia de scriere"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Characters"
+msgstr "Caracter"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add new character"
+msgstr "Caractere noi"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove character"
+msgstr "Caracterele cheii"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+msgid "Modifier ID:"
+msgstr "Tasta modificator:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+msgid "Open a text file..."
+msgstr "Deschide fiesiereletext clare..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "0 Characters"
+msgstr "Caracter"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Paste current system keyboard layout name"
+msgstr "Aspect al tastaturii fara titlu"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "During training:"
+msgstr "Pregatire"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, fuzzy, kde-format
+msgid "Show keyboard"
+msgstr "Arată tastatura"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "General Statistics"
+msgid "Show real-time statistics"
+msgstr "Statisitici generale"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Words per minute:"
+msgid "Minimum strokes &per minute:"
+msgstr "Cuvinte pe minut:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Minimum accuracy:"
+msgstr "Precizie"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout"
+msgstr "Aspectul tastaturii"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Add lesson"
+msgstr "Elimină"
+
+#: src/undocommands/coursecommands.cpp:218
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Move lesson"
+msgstr "Elimină"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set new characters for lesson"
+msgstr "Caractere noi"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Set lesson text"
+msgstr "Textul studentului"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout title"
+msgstr "Aspectul tastaturii"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Set keyboard layout name"
+msgstr "Aspect al tastaturii fara titlu"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout size"
+msgstr "Aspectul tastaturii"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, fuzzy, kde-format
+msgid "Add key"
+msgstr "Adauga cheie"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove key"
+msgstr "&Elimină"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add key character"
+msgstr "Caractere noi"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove key character"
+msgstr "Caracterele cheii"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Set key character value"
+msgstr "Caracterele cheii"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key type"
+msgstr "Creeaza o nouă prelegere"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key label"
+msgstr "Creeaza o nouă prelegere"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Save Keyboard Layout"
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Salveaza aspectul tastaturii"
+
+#, fuzzy
+#~| msgid "Create new keyboard"
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Creeaza o nouă tastatură"
+
+#, fuzzy
+#~| msgid "<no lecture files available>"
+#~ msgid "No Courses Available"
+#~ msgstr "<prelegeri ale fişierleor nevalabile>"
+
+#, fuzzy
+#~| msgid "Level Editor"
+#~ msgid "Launch Editor"
+#~ msgstr "Editor de nivele"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Limba Araba"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Brazilian"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Limba Bulgara"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Limba Ceha qwerty"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Limba Ceha qwertz"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Limba Daneza"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Limba Engleza Colemak"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Limba Engleza Dvorak"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Limba Engleza"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Limba Engleza Dvorak(Regatul Unit)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Limba Engleza(Regatul Unit)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Limba Estona"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Limba Franceza Dvorak"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Limba Franceza"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Limba Germana Dvorak Tipul II"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Limba Germana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Limba Germana Neo 2"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Limba Greaca (LImba Engleza)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Limba Ebraica"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Limba Maghiara"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Limba Italiana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Limba Latinoamericana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Limba lituaniana standard"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Limba Norvegiana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Quebec"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Limba Rusa"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Limba Slovaca qwerty"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Limba slovaca qwertz"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Limba Sloveniana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Limba Spaniola Dvorak"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Limba SPaniola"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Tastatura suedeza"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Limba Germana(Limba Elvetiana)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Limba Franceza Elvetiana"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil Eng"
+#~ msgstr "Tamil Eng"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Tamil"
+#~ msgstr "Tamil"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ucrainean"
+
+#, fuzzy
+#~ msgid "Default User"
+#~ msgstr "Utilizator implicit"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Fisiere text\n"
+#~ "*|Toate fisierele"
+
+#, fuzzy
+#~ msgid "Select Practice Text"
+#~ msgstr "Selecteaza Textul Practicat"
+
+#, fuzzy
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Importa text de la fisierul '%1'"
+
+#, fuzzy
+#~ msgid "generated from text file"
+#~ msgstr "generat dintextul fisierului"
+
+#, fuzzy
+#~ msgid "all available"
+#~ msgstr "toate valabile"
+
+#, fuzzy
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Prelegere fisiere"
+
+#, fuzzy
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Selecteaza pregatirea prelegerii fisierului"
+
+#, fuzzy
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr ""
+#~ "Ti-ar placea sa mentii nivelul curent pentru noua sesiune de pregatire?"
+
+#, fuzzy
+#~ msgid "Start new training session"
+#~ msgstr "Incepe noua sesiune de pregatire"
+
+#, fuzzy
+#~ msgid "Keep current level"
+#~ msgstr "Pastreaza nivelul curent"
+
+#, fuzzy
+#~ msgid "Start from first level"
+#~ msgstr "Incepe de la primul nivel"
+
+#, fuzzy
+#~ msgid "General Options"
+#~ msgstr "Opțiuni generale"
+
+#, fuzzy
+#~ msgid "Keyboard Settings"
+#~ msgstr "Configurări tastatură"
+
+#, fuzzy
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Nivel: Corect/ Caractere totale:%1%2 Cuvinte:%3"
+
+#, fuzzy
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Sesiune: Corect/ Caractere totale: %1 %2 Cuvinte: %3"
+
+#, fuzzy
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Observa ca in diferite tari scrierea cu atingere se preda putin diferit "
+#~ "cu influente obisnuite doar topul de sus al cheilor. De exemplu, in "
+#~ "Statele Unite ale Americii doar cheia din stanga si cheia cu 1 sunt "
+#~ "apasate de degetul mic de la mana stanga. In Germania degetul mic apasa "
+#~ "deasemenea 2 chei si astfel degetele schimba doar o cheie de la dreapta "
+#~ "in topul de sus. \n"
+#~ "Normal, aceasta afce doar o diferenta pentru a imparti sau pentru "
+#~ "tastaturi ergonomice."
+
+#, fuzzy
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Nu poate fi gasit/ deschide prelegerea fisierelor '%1'."
+
+#, fuzzy
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Schimbarea utilizatorului la '%1'. Reinceperea sesiunii de pregatire a "
+#~ "nivelului curent."
+
+#, fuzzy
+#~ msgid "&Open Lecture..."
+#~ msgstr "Deschide prelegerile..."
+
+#, fuzzy
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Editare prelegere"
+
+#, fuzzy
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Editare schemă de culori"
+
+#, fuzzy
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Editare aspect tastatura"
+
+#, fuzzy
+#~ msgid "&Pause Session"
+#~ msgstr "Sestiune de pauza"
+
+#, fuzzy
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Statistici prelegeri"
+
+#, fuzzy
+#~ msgid "Default &Lectures"
+#~ msgstr "Prelegeri implicite"
+
+#, fuzzy
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Tastaturi &Scheme de culori"
+
+#, fuzzy
+#~ msgid "&Setup Users..."
+#~ msgstr "Setarile userilor"
+
+#, fuzzy
+#~ msgid "&Current User"
+#~ msgstr "Userul curent"
+
+#, fuzzy
+#~ msgid "untitled lecture"
+#~ msgstr "Prelegere fara titlu"
+
+#, fuzzy
+#~| msgid "Name of color scheme:"
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Denumirea schemei de culori:"
+
+#, fuzzy
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr ""
+#~ "Foloseste aceleasi culori de scriere a liniei, independenta de schema "
+#~ "culorii."
+
+#, fuzzy
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Culoarea fundalului pentru linia profesorului."
+
+#, fuzzy
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Culoarea textului pentru linia profesorului."
+
+#, fuzzy
+#~ msgid "The background color for the student's line."
+#~ msgstr "Culoarea fundalului pentru linia studentului."
+
+#, fuzzy
+#~ msgid "The text color for the student's line"
+#~ msgstr "Culoarea textului pentru linia studentului"
+
+#, fuzzy
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Daca folosesti un fundal diferit pentru texte gresite sau nu."
+
+#, fuzzy
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Culoarea fondului pentru texte gresite(linia studentului)."
+
+#, fuzzy
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Culoarea textului pentru texte gresite(linia studentilor)."
+
+#, fuzzy
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Emite un sunet la fiecare eroare de scriere"
+
+#, fuzzy
+#~ msgid "Play sounds for typing."
+#~ msgstr "Reda sunete pentru scriere."
+
+#, fuzzy
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Reda un sunet la schimbarea automata a nivelului"
+
+#, fuzzy
+#~| msgid "Typing speed:"
+#~ msgid "The sliding speed"
+#~ msgstr "Viteză tastare:"
+
+#, fuzzy
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Inaltimea maxima a widget-ului"
+
+#, fuzzy
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Treci peste fontul prelegerii implicite/predefinite."
+
+#, fuzzy
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Fontul pentru linia studentilor si a profesorilor."
+
+#, fuzzy
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Prelegerea fisierului curent incarcata"
+
+#, fuzzy
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Daca folosim scrierea de la dreapta la stanga."
+
+#, fuzzy
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Daca folosesti culori pentru chei sau nu."
+
+#, fuzzy
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr ""
+#~ "Daca arati doar cheile invatate/stiute sau intotdeauna toate cheile."
+
+#, fuzzy
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Daca arati doar afisajul tastaturii."
+
+#, fuzzy
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Daca treci peste fonturile tastaturii implicite/predefinite."
+
+#, fuzzy
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Fontul pentru chei pe tastatura"
+
+#, fuzzy
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Fisierul tastaturii recent incarcat"
+
+#, fuzzy
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "Impune utilizatorului sa apese eneter dupa ce linia este completa."
+
+#, fuzzy
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Permite ajustarile automate ale nivelului."
+
+#, fuzzy
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Dezactivati  manual ajustarile cand schimbarea autonivelului este activata"
+
+#, fuzzy
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Reaminteste nivelul curent pentru urmatorul start KTouch"
+
+#, fuzzy
+#~| msgid "Current level"
+#~ msgid "The current training level"
+#~ msgstr "Nivel curent"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Numarul de caractere pe minut pentru a creste nivelul"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Procentul corecitudinii pentru a creste nivelul"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Numarul de caractere pe minut pentru a scadea nivelul"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Procentajul corectitudinii pentru a scadea nivelul"
+
+#, fuzzy
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr ""
+#~ "Cat de multe linii trebuie scrise inainte ca nivelul sa se poata schimba"
+
+#, fuzzy
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Functioneaza minim un singur nivel complet inaintea majorarii"
+
+#, fuzzy
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr ""
+#~ "Permite multipli utilizatori KTouch pentru un singur acont de utilizator"
+
+#, fuzzy
+#~ msgid "The user name of the current user."
+#~ msgstr "Numele utilizatorului pentru utlizatorul curent."
+
+#, fuzzy
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Salveaza culorile schemelor modificate?"
+
+#, fuzzy
+#~ msgid "untitled color scheme"
+#~ msgstr "schema de culori nedenumita"
+
+#, fuzzy
+#~ msgid "Black && White"
+#~ msgstr "Alb și negru"
+
+#, fuzzy
+#~ msgid "Classic"
+#~ msgstr "Clasic"
+
+#, fuzzy
+#~ msgid "Deep Blue"
+#~ msgstr "Albastru Inchis"
+
+#, fuzzy
+#~ msgid "Stripy"
+#~ msgstr "Stripy"
+
+#, fuzzy
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Nu se poate deschide/descarca tabloul de control al fisirelui '%1'"
+
+#, fuzzy
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "%1 cu afisarea caracterelor '%2' si unicod '%3' a fost deja definit si "
+#~ "este sarit. \n"
+
+#, fuzzy
+#~ msgid "Control key"
+#~ msgstr "Cheie de control"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Deget cheie necunoscut cu unicodul '%1'. Cheie normala cu afisarea "
+#~ "caracterului '%2' si unicodul '%3' sarit. \n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Cheie cu scop necunoscut si unciodul '%1'. Cheie ascunca cu afisarea "
+#~ "caracterului '%2' si unicodul '%3' sarit. \n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Degetul cheie necunoscut cu unicodul '%1'. Cheie ascunsa cu caracterul "
+#~ "afisat '%2' si uncodul '%3' sarit.\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Modificator necunoscut/cheie de control cu unicodul '%1'. Cheie ascunsa "
+#~ "cu caracterul afisat '%2' si unicodul  '%3' sarit. \n"
+
+#, fuzzy
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|Fisierele tastaturii Keyboard (*.keyboard.xml)\n"
+#~ "*|All files"
+
+#, fuzzy
+#~ msgid "Really delete this key?"
+#~ msgstr "Stergeti cu adevarat aceasta cheie?"
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Editor Tastatura KTouch"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Acesta nu este un număr de unicod valid. Vă rugăm corectaţi numărul sau "
+#~ "pune-ţi un caracter."
+
+#, fuzzy
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Vă rugăm introduce-ţi un caracter sau un număr de unicod."
+
+#, fuzzy
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Ştergeţi toate conexiunile cheie pentru această cheie."
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Tastatură de editare a erorilor KTouch"
+
+#, fuzzy
+#~ msgid "<modifier key>"
+#~ msgstr "<midificator cheie>"
+
+#, fuzzy
+#~ msgid "Open Keyboard File"
+#~ msgstr "Deschide fişierul tastaturii"
+
+#, fuzzy
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Ce fişier al tastaturii ţi-ar plăcea sa modifici?"
+
+#, fuzzy
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Modifică tastatura curentă:"
+
+#, fuzzy
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Deschide o tastatură implicităŞ"
+
+#, fuzzy
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Deschide un fişier al tastaturii:"
+
+#, fuzzy
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<nu sunt disponibile fisiere ale tastaturii>"
+
+#, fuzzy
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr ""
+#~ "Nu se poate deschide un fişier al tastaturii, creeează unul nou in schimb."
+
+#, fuzzy
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Aici sunt avertizări in timpul citirii fişierului tastaturii '%1':/n%2"
+
+#, fuzzy
+#~ msgid " (modified)"
+#~ msgstr "Modificat:"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Editor tastatură KTouch - %1 %2"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Editor tastatură KTouch - %1"
+
+#, fuzzy
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<fişier al tastaturii nedenumit>"
+
+#, fuzzy
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Tastatura a fost schimbată. Doreşti să salvezi schimbările?"
+
+#, fuzzy
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Nu se poate citi aspectul fişierului tastaturii '%1' . %2"
+
+#, fuzzy
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr ""
+#~ "Nu se poate descărca/deschide aspectul fişierului tastaturii de la  '%1'."
+
+#, fuzzy
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Eroare în citirea aspetului tastaturii; în schimb va fi creat numărul "
+#~ "implicit al tastaturii. Poţi alege  un alt aspect al  tastaturii in "
+#~ "preferintele de dialog."
+
+#, fuzzy
+#~ msgid "A default lecture..."
+#~ msgstr "O prelegere implicita..."
+
+#, fuzzy
+#~ msgid "Save Training Lecture"
+#~ msgstr "Salvează pregatirea prelegerii"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Editor Prelegere KTouch"
+
+#, fuzzy
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<un nou fişier de prelegere nedenumit>"
+
+#, fuzzy
+#~ msgid "Data of Level %1"
+#~ msgstr "Nivelul de date %1"
+
+#, fuzzy
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "aăâbcdefghiîjklmnoprsștțuvxz"
+
+#, fuzzy
+#~ msgid "Enter your lines here..."
+#~ msgstr "Introdu liniile tale aici..."
+
+#, fuzzy
+#~ msgid "Open Lecture File"
+#~ msgstr "Deschide prelegerea fişierului"
+
+#, fuzzy
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Ce prelegere a fişierului ţi-ar plăcea sa deschizi_"
+
+#, fuzzy
+#~ msgid "Edit current lecture:"
+#~ msgstr "Modifică o prelegere curentă:"
+
+#, fuzzy
+#~ msgid "Open a default lecture:"
+#~ msgstr "Deschide o prelegere implicită:"
+
+#, fuzzy
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "Nu se poate deschide prelegerea fişierlui, în schimb creează unul nou."
+
+#, fuzzy
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Această prelegere a fost schimbată. Vrei să salvezi schimbările?"
+
+#, fuzzy
+#~ msgid "Quite a lot"
+#~ msgstr "Destul de mult"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Acesta este un mic text. Daca doresti/nsă incepi să utilizezi scrierea "
+#~ "prin atingere, deschide/no prelegere/un fişier de pregătire din meniul "
+#~ "principal./nDacă apeşi Enter după următoarea linie ai completat/ncu "
+#~ "succes prelegerea implicită. Uraaa!!!"
+
+#, fuzzy
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "aăâbcdefghiîjklmnoprsștțuvxz"
+
+#, fuzzy
+#~ msgid "<no default files available>"
+#~ msgstr "<fişiere implicite nevalabile>"
+
+#, fuzzy
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Vă rugăam selectaţi sau introduceţi un nume."
+
+#, fuzzy
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "URL-ul pare sa fie malformat; va rugam corectati-l."
+
+#, fuzzy
+#~ msgid "***current***  "
+#~ msgstr "Curent: %1"
+
+#, fuzzy
+#~ msgid "No statistics data available yet."
+#~ msgstr "Statisici de date nevalabile inca."
+
+#, fuzzy
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr ""
+#~ "Sterge-ti toate statisticile de date pentru utilizatorul curent?\n"
+#~ "Sesiunea de pregatire va incepe la nivelul curent."
+
+#, fuzzy
+#~ msgid "Words per minute"
+#~ msgstr "Cuvinte pe minut"
+
+#, fuzzy
+#~ msgid "Correctness"
+#~ msgstr "Corectitudine"
+
+#, fuzzy
+#~ msgid "Skill"
+#~ msgstr "Îndemînare"
+
+#, fuzzy
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Timpul de la prima sesiune de pregatire in zile"
+
+#, fuzzy
+#~ msgid "Sessions"
+#~ msgstr "Sesiuni"
+
+#, fuzzy
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr ""
+#~ "Incepere sesiune de pregatire: Asteptare pentru prima apasare de cheie..."
+
+#, fuzzy
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Ai terminat acest exercitiu de pregatire.\n"
+#~ "Aceasta sesiune de pregatire va incepe de la inceput."
+
+#, fuzzy
+#~ msgid "You rock!"
+#~ msgstr "Tu esti cel mai bun!"
+
+#, fuzzy
+#~ msgid "S&tatistics"
+#~ msgstr "Statistice"
+
+#, fuzzy
+#~ msgid "&Settings"
+#~ msgstr "Configurări"
+
+#, fuzzy
+#~ msgid "Main Toolbar"
+#~ msgstr "Bara de unelte principală"
+
+#, fuzzy
+#~ msgid "New User"
+#~ msgstr "Utlizator Nou"
+
+#, fuzzy
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Te rog introdu un nume de utilizator unic:"
+
+#, fuzzy
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Acest nume de utilizator nu este valid(unic)!"
+
+#, fuzzy
+#~ msgid "Save user list?"
+#~ msgstr "Salvati lista de utlizatori?"
+
+#, fuzzy
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "Un program ce te ajuta sa inveti si sa exersezi scrisul prin atingere."
+
+#, fuzzy
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#, fuzzy
+#~ msgid "Training file to open"
+#~ msgstr "Pregatire fisier de deschidere"
+
+#, fuzzy
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Editare Schema Culori"
+
+#, fuzzy
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Schema de culori definita de user"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "Adaugă"
+
+#, fuzzy
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Editare schemă de culori"
+
+#, fuzzy
+#~ msgid "Name of color scheme:"
+#~ msgstr "Denumirea schemei de culori:"
+
+#, fuzzy
+#~ msgid "&Store Data"
+#~ msgstr "Stocare date"
+
+#, fuzzy
+#~ msgid "Slide Line Colors"
+#~ msgstr "Muta linia culorilor"
+
+#, fuzzy
+#~ msgid "Teacher background:"
+#~ msgstr "Fundalul profesorului"
+
+#, fuzzy
+#~ msgid "Teacher text:"
+#~ msgstr "Textul profesorului"
+
+#, fuzzy
+#~ msgid "Student background:"
+#~ msgstr "Fundalul studentului"
+
+#, fuzzy
+#~ msgid "Student text on error:"
+#~ msgstr "Textul studentului la erori"
+
+#, fuzzy
+#~ msgid "Student background on error:"
+#~ msgstr "Fundalul studentului la erori"
+
+#, fuzzy
+#~ msgid "Keyboard Colors"
+#~ msgstr "Culorile tastaturii"
+
+#, fuzzy
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Culorile de fundal pentru chei normale"
+
+#, fuzzy
+#~ msgid "Highlighted background:"
+#~ msgstr "Fundale evidentiate:"
+
+#, fuzzy
+#~ msgid "Normal key colors:"
+#~ msgstr "Culori normale ale cheilor:"
+
+#, fuzzy
+#~ msgid "Highlighted text color:"
+#~ msgstr "Culoarea textului evidentiata"
+
+#, fuzzy
+#~ msgid "Text color:"
+#~ msgstr "Culoare text:"
+
+#, fuzzy
+#~ msgid "Key frame:"
+#~ msgstr "Cadrui cheii:"
+
+#, fuzzy
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Modificare/alte cheu:"
+
+#, fuzzy
+#~ msgid "Text color"
+#~ msgstr "Culoare text"
+
+#, fuzzy
+#~ msgid "Background:"
+#~ msgstr "Fundal:"
+
+#, fuzzy
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Identificare de date a tastaturii"
+
+#, fuzzy
+#~ msgid "Keyboard title:"
+#~ msgstr "Titlul tastaturii"
+
+#, fuzzy
+#~ msgid "Language id:"
+#~ msgstr "Limba id-ului:"
+
+#, fuzzy
+#~ msgid "Comments:"
+#~ msgstr "Comentarii:"
+
+#, fuzzy
+#~ msgid "Key Properties"
+#~ msgstr "Proprietăți cheie"
+
+#, fuzzy
+#~ msgid "Key type:"
+#~ msgstr "Tipul cheii:"
+
+#, fuzzy
+#~ msgid "Key text:"
+#~ msgstr "Testul cheii:"
+
+#, fuzzy
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Optiuni de editare a tastaturii"
+
+#, fuzzy
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Selecteaza fontul  tastaturii..."
+
+#, fuzzy
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Salveaza tastatura ca..."
+
+#, fuzzy
+#~ msgid "Close"
+#~ msgstr "Închide"
+
+#, fuzzy
+#~ msgid "Key connectors"
+#~ msgstr "Conectorii cheii"
+
+#, fuzzy
+#~ msgid "or unicode"
+#~ msgstr "sau unicod"
+
+#, fuzzy
+#~ msgid "Clear connectors"
+#~ msgstr "Sterge conectorii"
+
+#, fuzzy
+#~ msgid "Add/update connector"
+#~ msgstr "Adauga/incarca conectori"
+
+#, fuzzy
+#~ msgid "< modifier key>"
+#~ msgstr "<modifcator cheie>"
+
+#, fuzzy
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Aspect tastatura(apasa pentru a activa cheile pentru a edita sau a adaga "
+#~ "chei)"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Editare prelegere KTouch"
+
+#, fuzzy
+#~ msgid "Lecture Properties"
+#~ msgstr "Proprietatile prelegerii"
+
+#, fuzzy
+#~ msgid "Comment:"
+#~ msgstr "Comentariu:"
+
+#, fuzzy
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Nivel de date la nivelul 10"
+
+#, fuzzy
+#~ msgid "New characters in this level:"
+#~ msgstr "Noi caractere in acest nivel:"
+
+#, fuzzy
+#~ msgid "Level comment (optional):"
+#~ msgstr "Comentariu la nivel(optional):"
+
+#, fuzzy
+#~ msgid "Level data:"
+#~ msgstr "Nivel de date:"
+
+#, fuzzy
+#~ msgid "Training level summary"
+#~ msgstr "Pregatire rezumat al nivelului"
+
+#, fuzzy
+#~ msgid "Summary"
+#~ msgstr "Sumar"
+
+#, fuzzy
+#~ msgid "High scores for this level"
+#~ msgstr "Scoruri mari pentru acest nivel"
+
+#, fuzzy
+#~ msgid "1."
+#~ msgstr "1."
+
+#, fuzzy
+#~ msgid "2."
+#~ msgstr "2."
+
+#, fuzzy
+#~ msgid "3."
+#~ msgstr "3."
+
+#, fuzzy
+#~ msgid "4."
+#~ msgstr "4."
+
+#, fuzzy
+#~ msgid "5."
+#~ msgstr "5."
+
+#, fuzzy
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#, fuzzy
+#~ msgid "Score"
+#~ msgstr "Scor"
+
+#, fuzzy
+#~ msgid "Characters per second"
+#~ msgstr "Caractere pe secundă"
+
+#, fuzzy
+#~ msgid "All users high scores for this level"
+#~ msgstr "Scorurile mari ale tuturor utilizatorilor pentru acest nivel"
+
+#, fuzzy
+#~ msgid "&Retry level"
+#~ msgstr "Reincearca nivel"
+
+#, fuzzy
+#~ msgid "&Continue to next level"
+#~ msgstr "Continua cu urmatorul nivel"
+
+#, fuzzy
+#~ msgid "Browse..."
+#~ msgstr "Răsfoiește..."
+
+#, fuzzy
+#~| msgid "&Ok"
+#~ msgid "&OK"
+#~ msgstr "Ok"
+
+#, fuzzy
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Foloseste culori particularizate pentru linia de scriere"
+
+#, fuzzy
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Culoarea pentru linia profesorului"
+
+#, fuzzy
+#~ msgid "Teacher's line"
+#~ msgstr "Linia profesorului"
+
+#, fuzzy
+#~ msgid "Text:"
+#~ msgstr "Text:"
+
+#, fuzzy
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Schimba culoarea textului pentru linia studentului"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr ""
+#~ "Aici poti schimba culoarea textului pe care il scrii pe linia studentului"
+
+#, fuzzy
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Fundalul pentru linia profesorului"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Aici poti schimba culoarea fundalului pentru linia profesorului(linia "
+#~ "literelor pe care tu trebuie sa o scrii.) "
+
+#, fuzzy
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Foloseste o culoare diferita pentru lipsa scrierii"
+
+#, fuzzy
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Alece culoarea fundalului pentru in erori in linia de scriere"
+
+#, fuzzy
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Cand ai verficat 'Foloseste o culoare diferita in scrierea liniei', "
+#~ "atunci poti alege o culoare pentru fundalul erorilor. Poti face o "
+#~ "greseala cand scrii o litera gresita in linia studentului. Aceasta este "
+#~ "un mod prin care poti face greselile tale mult mai vizibile."
+
+#, fuzzy
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Alege culoarea textului pentru erorile din linia de scriere"
+
+#, fuzzy
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Cand ai verificat 'Foloseste o culoare diferita pentru erorile din linia "
+#~ "de scriere ', atunci poti sa alegi o culoare pentru erorile textului. "
+#~ "Poti face o greseala  cand scrii o litera gresita in linia studentului. "
+#~ "Aceasta este o metoda pentru a face greselile tale mai vizibile."
+
+#, fuzzy
+#~ msgid "Text Line Settings"
+#~ msgstr "Setarile pentru linia textului"
+
+#, fuzzy
+#~ msgid "Fast"
+#~ msgstr "Rapid"
+
+#, fuzzy
+#~ msgid "Slow"
+#~ msgstr "Lent"
+
+#, fuzzy
+#~ msgid "Sliding speed:"
+#~ msgstr "Viteza gllisarii:"
+
+#, fuzzy
+#~ msgid "Override lecture font"
+#~ msgstr "Treci peste prelegerile fontului"
+
+#, fuzzy
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Font de afisat/ text scris:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Aceste buton va afaisa un font de dialog  unde poti schimba fontul pentru "
+#~ "linia studentului si a profesorului. Cand parasesti fontul de dialog, "
+#~ "noul font este previzualizat in linia de mai jos si aplicat doar cand "
+#~ "apesi pe butonul Aplica de mai sus."
+
+#, fuzzy
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Arata pe tastaturi cheile  pe care trebuie sa le scrii"
+
+#, fuzzy
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Aceste evidentieri pe tastatura sunt cheile pe care tu trebuie sa le "
+#~ "scrii in continuare. Este mai usor sa scrii cand acesta este verificat."
+
+#, fuzzy
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Chei evidentiate pe tastatura"
+
+#, fuzzy
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Ascunde/nu sterge inca cheile invatate"
+
+#, fuzzy
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "Daca e verificat poti specifica propriul tau font pentru tastatura in "
+#~ "schimbul celor predefinte din aspectul tastaturii."
+
+#, fuzzy
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Fiecare aspect al tastaturii poate avea propriul sau font. Daca fondul "
+#~ "predefinit al unui anumit aspect al tastaturii nu merge sau ti-ar placea "
+#~ "sa al ai pe al tau, apasa acest buton. Poti apoti sa alegi propriul font "
+#~ "care va fi utilizat pentru a reporezenta caracterele cheilor."
+
+#, fuzzy
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Omite fonturile cheilor"
+
+#, fuzzy
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Fontrui pentru chei pe tastatura:"
+
+#, fuzzy
+#~ msgid "Sound"
+#~ msgstr "Sunet"
+
+#, fuzzy
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "Daca verifici(implicit) aceasta va emite un sunet de fiecare data cand "
+#~ "faci o eroade scriere."
+
+#, fuzzy
+#~ msgid "&Beep on error"
+#~ msgstr "Sunet la eroare"
+
+#, fuzzy
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Fa un sunet dactilograf pentru fiecare cheie apasata"
+
+#, fuzzy
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Daca ai verificat asta, va reda un sunet dactilograf pentru fiecare cheie "
+#~ "apasata."
+
+#, fuzzy
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "&Sunet dactilograf cand se scrie"
+
+#, fuzzy
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Reda un sunt cand nivelul se schimba automatic."
+
+#, fuzzy
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Daca acesta este verificat(implicit) un sunet va fi redat de fiecare data "
+#~ "la schimbarea nivelului."
+
+#, fuzzy
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Sunet  la schimbarea automata a nivelului"
+
+#, fuzzy
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Adjustare automatica a nivelului"
+
+#, fuzzy
+#~ msgid "chars/minute"
+#~ msgstr "caractere/minut"
+
+#, fuzzy
+#~ msgid "Typing speed:"
+#~ msgstr "Viteză tastare:"
+
+#, fuzzy
+#~ msgid "Correctness:"
+#~ msgstr "Corectitudine:"
+
+#, fuzzy
+#~ msgid "Workload:"
+#~ msgstr "Sarcină:"
+
+#, fuzzy
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Completeaza intregul nivel de pregatire inaintea procedurii."
+
+#, fuzzy
+#~ msgid "lines"
+#~ msgstr "linii"
+
+#, fuzzy
+#~ msgid "Limits to increase a level"
+#~ msgstr "Limita de creste a nivelului"
+
+#, fuzzy
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Limita de scadere a nivelului"
+
+#, fuzzy
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Dezactivarea manuala a schimbarilor de butoane a nivelului"
+
+#, fuzzy
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "&Mod dactilograf(utilizatorul trebuie sa confirme linia cu Enter)"
+
+#, fuzzy
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Memoreaza nivelul pentru urmatoarea incepere a programului"
+
+#, fuzzy
+#~ msgid "Current Training Session"
+#~ msgstr "Sesiunea de pregatire curenta"
+
+#, fuzzy
+#~ msgid "Lecture:"
+#~ msgstr "Prelegeri:"
+
+#, fuzzy
+#~ msgid "Levels in this session:"
+#~ msgstr "Nivele in aceasta sesiune:"
+
+#, fuzzy
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Timpul(secunde) scurs:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr ""
+#~ "Aceasta afiseaza numarul secundelor in care ai scris  in aceasta sesiune "
+#~ "de pregatire."
+
+#, fuzzy
+#~ msgid "Characters typed:"
+#~ msgstr "Caractere scrise:"
+
+#, fuzzy
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr ""
+#~ "Numarul de caractere(corecte si gresite) pe care le-ai scris pana acum."
+
+#, fuzzy
+#~ msgid "Mistyped characters:"
+#~ msgstr "Caractere gresite:"
+
+#, fuzzy
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Arata cat de multe caractere ai scris gresit."
+
+#, fuzzy
+#~ msgid "Words typed:"
+#~ msgstr "Cuvinte scrie:"
+
+#, fuzzy
+#~ msgid "The number of words typed so far."
+#~ msgstr "Numarul de cuvinte scrise pana acum."
+
+#, fuzzy
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Raportul caracterelor scrise gresit contra numarului total de caractere "
+#~ "scrie."
+
+#, fuzzy
+#~ msgid "Typing Rate"
+#~ msgstr "Rata scrierii"
+
+#, fuzzy
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Numarul de caractere corecte pe care le-ai scris pe minut."
+
+#, fuzzy
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Numarul de cuvinte pe care le-ai scris pe minut."
+
+#, fuzzy
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Aici caracterele sunt enumerate cand le-ai uitat pe parcurusul testului "
+#~ "de scriere. Procentul arata raportul a cat de des o cheie a fost uitata "
+#~ "contra cat de des cheia a fost apasata in total. Numerele mari indica "
+#~ "faptul ca cheia a fost uitata de multe ori."
+
+#, fuzzy
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr ""
+#~ "Statisticile caracterelor(caracterele pe care trebuie sa te concentrezi)"
+
+#, fuzzy
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#, fuzzy
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#, fuzzy
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#, fuzzy
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#, fuzzy
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#, fuzzy
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#, fuzzy
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#, fuzzy
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#, fuzzy
+#~ msgid "Current Level Statistics"
+#~ msgstr "Statisiticile nivelului curent"
+
+#, fuzzy
+#~ msgid "lectureLabel2"
+#~ msgstr "prelegereEticheta2"
+
+#, fuzzy
+#~ msgid "Level:"
+#~ msgstr "Nivel:"
+
+#, fuzzy
+#~ msgid "levelLabel2"
+#~ msgstr "nivelEticheta2"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Aici caracterele sunt enumerate cand le-ai pierdut in timpul testului de "
+#~ "scriere. Procentul arata raportul a cat de des o cheie a fost uitata "
+#~ "contra cat de des cheaia a fost apasata corect. Numerele mari indica "
+#~ "faptul ca cheia a fost uitata de multe ori."
+
+#, fuzzy
+#~ msgid "Your Typing Progress"
+#~ msgstr "Progresul tau de scriere"
+
+#, fuzzy
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Arata progresul in prelegere:"
+
+#, fuzzy
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "Aici poti selecta prelegerea pe care dorecti sa o obtii statistic."
+
+#, fuzzy
+#~ msgid "Progress Chart Options"
+#~ msgstr "Optiunile progresului diagramei"
+
+#, fuzzy
+#~ msgid "Chart Data"
+#~ msgstr "Diagrama de date"
+
+#, fuzzy
+#~ msgid "Session stats"
+#~ msgstr "Statisticile sesiunii"
+
+#, fuzzy
+#~ msgid "Level stats"
+#~ msgstr "Statisticile nivelului"
+
+#, fuzzy
+#~ msgid "Chart Type"
+#~ msgstr "Diagrama scrierii"
+
+#, fuzzy
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Timp scalat pe axa"
+
+#, fuzzy
+#~ msgid "Time scaled"
+#~ msgstr "Tmip redus"
+
+#, fuzzy
+#~ msgid "Constant spacing"
+#~ msgstr "Constanta de spatiere"
+
+#, fuzzy
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Apasand acest buton va sterge intreaga pregatire a statisticii pentru "
+#~ "utilizatorul curent,"
+
+#, fuzzy
+#~ msgid "Clear History"
+#~ msgstr "Șterge istoricul"
+
+#, fuzzy
+#~ msgid "Level"
+#~ msgstr "Nivel"
+
+#, fuzzy
+#~ msgid "Current level"
+#~ msgstr "Nivel curent"
+
+#, fuzzy
+#~ msgid "This shows which level you are at."
+#~ msgstr "Aceasta arata la ce nivel ai ajuns."
+
+#, fuzzy
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~ msgid "Speed"
+#~ msgstr "Viteză"
+
+#, fuzzy
+#~ msgid "Characters/Minute"
+#~ msgstr "Caractere/minut"
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Aceasta arata cat de repede scrii. Aceasta masoara viteza de scriere in "
+#~ "caractere pe minut."
+
+#, fuzzy
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Cat de mult scrii corect?"
+
+#, fuzzy
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Aceasta arata cat de corect scrii."
+
+#, fuzzy
+#~ msgid "New Characters in This Level"
+#~ msgstr "Caractere noi in acest nivel"
+
+#, fuzzy
+#~ msgid "Setup Users"
+#~ msgstr "Setarile utilizatorilor"
+
+#, fuzzy
+#~ msgid "&Add"
+#~ msgstr "&Adaugă"
+
+#, fuzzy
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+A"
+
+#, fuzzy
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+R"
+
+#, fuzzy
+#~ msgid "&Close"
+#~ msgstr "În&chide"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Limba Araba"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "BR-Nativo"
+#~ msgstr "BR-Nativo"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Limba Bulgara(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Limba Bulgara(auto-generata-de-a lungul)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Catalana(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Limba Ceha(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Limba Daneza(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Limba Daneza(cursul complet)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Limba Olandeza Junior(Limba Olandeza pentru copii)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Limba Olandeza(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvorak(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvorak-ABCD"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Limba Engleza(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "English (for AlphaGrip)"
+#~ msgstr "Limba Engleza(pentru AlphaGrip)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Limba Finlandeza pentru Copii"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Limba Finlandeza(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Limba Franceza(auto-generata) 2"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Limba Franceza(auto-generata) 1"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Limba Franceza Dvorak(Partea 1)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Limba Franceza Dvorak(Partea 2)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Limba Germana (in 9 nivele)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Limba Germana(de la Tripptrainer)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Limba Germana (auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Limba Germana(aspectul tastaturii Dvorak)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Limba Germana(Numar Suport)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Limba Greaca"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Limba Maghiara Expert++"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Limba Maghiara(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Limba Italiana(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Limba Latina "
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Limba Lituaniana(sdt)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Limba Norvegiana"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Limba Poloneza(de la TTCoach)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Limba Rusa(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Limba Rusa 2"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Limba Rusa(auto-generata-de-alungul)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Limba Slovaca (auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Limba Slovena"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Limba Spaniola(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Limba Spaniola(auto-generata) 1"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Limba Spaniola(auto-generata) 2"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Limba Spaniola Dvorak"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Limba Turca(auto-generata)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ucrainean"
+
+#, fuzzy
+#~ msgid "F&ile"
+#~ msgstr "F&ișier"

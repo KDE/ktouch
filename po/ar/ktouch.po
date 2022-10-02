@@ -1,0 +1,2860 @@
+# translation of ktouch.po to Arabic
+# Copyright (C) 2002, 2004, 2007, 2009 Free Software Foundation, Inc.
+# translation of ktouch.po to
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ahmad M. Zawawi <zawawi@arabeyes.org>, 2004.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2009, 2021.
+# Safa Alfulaij <safaalfulaij@hotmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2021-11-16 20:01+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "زايد السعيدي, صفا الفليج"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zayed.alsaidi@gmail.com,safaalfulaij@hotmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "إصدار قاعدة بيانات خاطئ '%1'."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "حصص مخصصة"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "مكان لحفظ نصوص الدروس المخصصة"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "لا تمرين بالمعرّف %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "لا تخطيط لوحة مفاتيح بالمعرّف %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "مخفي"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "أعلى اليسار"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "أعلى اليمين"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "أسفل اليسار"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "أسفل اليمين"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "خطأ أثناء فتح التمرين"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "التمارين المضمّنة يمكن عرضها فقط."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "خطأ أثناء فتح تخطيط لوحة المفاتيح"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "تخطيطات لوحة المفاتيح يمكن عرضها فقط."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "لا محارف"
+msgstr[1] "محرف واحد"
+msgstr[2] "محرفان"
+msgstr[3] "%1 محارف"
+msgstr[4] "%1 محرفًا"
+msgstr[5] "%1 محرف"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "ملفّات نصّيّة (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "الملف المحدّد لا يمكن فتحه"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "هناك تخطيط لوحة مفاتيح بهذا الاسم بالفعل."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "جديد"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "جديد..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "تمرين جديد"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "تخطيط لوحة مفاتيح جديد"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "القالب"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "احذف"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "استورد"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "صدّر"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "محرّر التمرين وتخطيط لوحة المفاتيح"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "أنشئ تمرين أو تخطيط لوحة مفاتيح جديد"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "احذف التمرين أو تخطيط لوحة المفاتيح المحدّد"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "استورد تمرين أو تخطيط لوحة مفاتيح من ملف"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "صدّر التمرين أو تخطيط لوحة المفاتيح المحدّد إلى ملف"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "خطأ أثناء حذف التمرين"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "خطأ أثناء حذف تخطيط لوحة المفاتيح"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "ملفّات XML (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "الملف المحدّد لا يمكن استيراده"
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "خطأ أثناء حفظ التمرين"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "خطأ أثناء حفظ تخطيط لوحة المفاتيح"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "التمرين <b>%1</b> حُذف"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "تخطيط لوحة المفاتيح <b>%1</b> حُذف"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "خطأ أثناء حفظ التمرين على القرص."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "خطأ أثناء حفظ تخطيط لوحة المفاتيح على القرص."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "التمرين المحدّد موجود بالفعل كتمرين مضمّن."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "استورد كتمرين جديد"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "التمرين المحدّد موجود بالفعل كتمرين مستخدِم."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr "تخطيط لوحة المفاتيح المحدّد موجود بالفعل كتخطيط لوحة مفاتيح مضمّن."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "استورد كتخطيط لوحة مفاتيح جديد"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr "تخطيط لوحة المفاتيح المحدّد موجود بالفعل كتخطيط لوحة مفاتيح مستخدِم."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "استرجعه"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "تجاهل"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "استخدم تمرين آخر كقالب"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "استخدم تخطيط لوحة مفاتيح آخر كقالب"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "تمرين"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "تخطيط لوحة المفاتيح"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "تخطيط لوحة المفاتيح لاستخدامه على منصّات ليست منصّات X11"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "يتحكم في ما إذا كان يجب تصحيح أخطاء الكتابة أم لا."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "يتحكّم في ظهور لوحة المفاتيح أثناء التمرّن."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "يتحكّم في ظهور إحصائيّات الوقت الحقيقي أثناء التمرّن."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "مفتاح الإعادة نهاية السطر سيبدّل إلى سطر جديد."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr "مفتاح المسافة نهاية السطر سيبدّل إلى سطر جديد."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr "الحدّ الأدنى المطلوب للضربات لكل دقيقة لفتح الدرس التالي."
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr "الحدّ الأدنى المطلوب للدقّة بالنسبة المئوية لفتح الدرس التالي."
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "لون تلوين لوحة المفاتيح لإبراز المفاتيح لكل اصبع."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "كيف يجب أن تعرض ألوان الإصبع الشفافة."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "معرّف التشكيلة المستخدَمة مؤخرًا."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "التدريب"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "إعدادات التمرين"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "الألوان"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "إعدادات اللون"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "اضبط لوحة المفاتيح"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "محرّر التمرين وتخطيط لوحة المفاتيح..."
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "اضبط لوحة المفاتيح..."
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "مدرّب طباعة"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "تعلّم وتدرّب الطباعة"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "المشرف الحالي"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "المشرف والمطوّر السابق"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "الكاتب الأساسي"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "منشئ أيقونة SVG"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "الكثير من الرقع، الإصلاحات والتحديثات"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "كل منشئ للتمارين وملفات لوحة المفاتيح"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "أطلق محرّر التمرين وتخطيط لوحة المفاتيح"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "ألحق  المسار بقائمة مسارات استيراد QML"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "واجه %1 خطأ في وقت التشغيل ويجب إغلاقه. "
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "المحرف"
+
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "معرّف المعدّل"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "الموقع"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<لا عنوان>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>المحارف الجديدة: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "العنوان"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "التمارين"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "تخطيطات لوحة المفاتيح"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "الاسم: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "الدقة"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "المحارف لكل دقيقة"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>مجهول</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "الدرس:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "التدريب على:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "الدقة:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "المحارف لكل دقيقة:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "تمارين للوحة مفاتيحك"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "تمارين أخرى"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "مرحبًا في مدرّب التنضيد"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "ابدأ التدرّب"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "التمرين المحدد مخصص لتخطيط لوحة مفاتيح معين."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "التمرين المحدد غير مخصص لتخطيط لوحة مفاتيح النشطة على حاسوبك."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"لا يمكن لـمعلم الطباعة تبديل تخطيطات لوحة المفاتيح أو إعدادها. قبل التدريب ، "
+"يجب عليك تكوين جهاز الحاسوب الخاص بك لاستخدام تخطيط لوحة المفاتيح الصحيح. "
+"وإلا فسيتعين عليك استخدام تخطيط لوحة المفاتيح الحالي لكتابة نص الدرس."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "اضبط لوحة المفاتيح"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "التمرين <b>%1</b> حُذف"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "تمرين بدون عنوان حذفت."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "تراجع"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "أكد"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "حرر درس"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "العنوان:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "نص الدرس"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "تمّ"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "أكمل التمارين السابقة لفك القفل"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "أدر التشكيلات"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "أدر التشكيلات"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "الدروس المُتدرّب عليها:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "وقت التدريب الكلّي:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "آخر تدريب:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "أبدًا"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "حرّر"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "هل تريد حقًّا حذف التشكيلة \"<b>%1</b>\"؟"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "ألغ"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "قبل أن تبدأ التدريب، يرجى تقديم نفسك:"
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "الاسم"
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr "لا أملك أو أملك القليل القليل من الخبرة في الطباعة الآلية"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr "الدروس مفتوحة كلمّا تطوّرت مهاراتك في الطباعة مع الوقت."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "أنا طابع آلة خبير وأريد تحسين مهاراتي"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "جميع الدروس مفتوحة فورًا"
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "أنشئ تشكيلة جديدة"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "استخدم التشكيلة المحدّدة"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "إحصائيات حصة التدريب"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "الوقت المنقضي"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "المحرف:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "الأخطاء:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "ارجع إلى شاشة المنزل"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "أعد الدرس"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "الدرس التالي"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "تهانينا! لقد نجحت في هذا الدرس."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "لم تنجح في هذا الدرس."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "أعد الدرس. مهاراتك ستتطوّر تلقائيًّا مع مرور الوقت."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "فُتح الدرس التالي"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "أظهر"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "التقدّم"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "الأخطاء"
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr "لـ"
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "كل الدروس"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "هذا الدرس"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "لا تصوّر متوفّر لتخطيط لوحة المفاتيح لديك."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "القائمة"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "تابع التمرّن"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "أعد الدرس"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "بدءت جلسة التدريب. سيبدأ الوقت مع أول ضربة مفتاح."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "قوطعت جلسة التدريب. سيدأ الوقت مرة أخرى مع أول ضربة مفتاح."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "الأصابع"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "اليد اليسرى"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "اصبع السبّابة:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "اصبع الوسطى:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "اصبع البنصر:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "اصبع الخنصر:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "اليد اليمنى"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "الشّفافيّة"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " ٪"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "تخطيط لوحة المفاتيح:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "الوصف:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "الدروس:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "أضف درس جديد"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "أزل الدرس"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "حرّك الدرس لأعلى"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "حرّك الدرس لأسفل"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "المحارف الجديدة:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "حواريّ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "أنشئ مفتاح عادي جديد"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "مفتاح عادي"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "أنشئ مفتاح خاص جديد"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "مفتاح خاص"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "احذف المفتاح المحدّد"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "لوحة المفاتيح"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "الاسم:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "العرض:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "الارتفاع:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "هندسة"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "اليسار:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "الأعلى:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "مفتاح"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "الاصبع:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "اصبع الخنصر الأيسر"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "اصبع البنصر الأيسر"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "اصبع الوسطى الأيسر"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "اصبع السبّابة الأيسر"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "اصبع السبّابة الأيمن"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "اصبع الوسطى الأيمن"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "اصبع البنصر الأيمن"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "اصبع الخنصر الأيسر"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "واسم لمسي:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "محارف"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "أضف محرف جديد"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "أزل المحرف"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "النوع:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "محرف جدولة"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "CapsLock"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Backspace"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Return"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "مسافة"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "أخرى"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "اللصيقة:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "معدّل المعرّف:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "افتح ملف نص صرف..."
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "لف السطور آلياً"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "لا محارف"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "الصق اسم تخطيط لوحة المفاتيح الحالي"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "أثناء التمرّن:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "أجبر تصحيح أخطاء الطباعة"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "أظهر لوحة المفاتيح"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "أظهر إحصائيّات الوقت الحقيقي"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "انتقل للسطر التالي بـ:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "الإدخال"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "&مسافة"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "حدود فتح قفل التمرين"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "الحد الأدنى للضربات لكلّ &دقيقة:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "الحد الأدنى للدقة:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "تعيين عنوان"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "تعيين تخطيط لوحة المفاتيح"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "حرّر الوصف"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "أضف درس"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "حرّك الدرس"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "تعيين عنوان الدرس"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "عيّن محارف جديدة للتمرين"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "تعيين اسم الدرس"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "تعيين عنوان تخطيط لوحة المفاتيح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "تعيين اسم تخطيط لوحة المفاتيح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "تعيين حجم تخطيط لوحة المفاتيح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "أضف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "إزالة مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "عيّن هندسة المفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "تعيين اصبع المفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "عيّن المفتاح كواسم لمسي"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "إضافة محرف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "إزالة محرف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "تعيين قيمة محرف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "تعيين معدّل محرف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "تعيين موقع محرف مفتاح"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "تعيين نوع مفتاح خاص"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "عيّن لصيقة المفتاح الخاص"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "تعيين معدّل معرّف مفتاح خاص"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "اختر تخطيط لوحة المفاتيح"
+
+#, fuzzy
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "أنشئ لوحة المفاتيح:"
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "في:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "استخدم OpenGL للتصيير (تجريبي)"
+
+#~ msgid "No Courses Available"
+#~ msgstr "لا تمارين متوفّرة"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "ليس لدى مدرّب الطباعة أي تمرين لتخطيط لوحة المفاتيح لديك. قد ترغب في إنشاء "
+#~ "تمرينك الخاص بتخطيط لوحة المفاتيح لديك ومحرّر التمارين."
+
+#~ msgid "Launch Editor"
+#~ msgstr "أطلق المحرر"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Ukrainian"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "الأوكرانية"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (auto-generated)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "هنجارية (مولدة آليا)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "دنماركية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "كلوماك إنجليزي"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "دفورك إنجليزي"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "إنجليزية"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "دفورك إنجليزي"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "دفورك فرنسية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "فرنسية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "ألمانية"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "German"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "ألمانية"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "إنجليزية"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (auto-generated)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "هنجارية (مولدة آليا)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "إيطالية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "النرويجية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "سلوفينية"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "دفورك إنجليزي"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "Danish"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "دنماركية"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "لوحة المفاتيح سويدية"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "German (in 9 levels)"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "الألمانية (في 9 مستويات)"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "French"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "فرنسية"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Ukrainian"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "الأوكرانية"
+
+#~ msgid "Default User"
+#~ msgstr "المستخدم الافتراضي"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.txt|Text files\n"
+#~| "*.*|All files"
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt|ملفات نصية\n"
+#~ "*.*|كافة الملفات"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "اختر نص التدريب"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "استورد النص من ملف %1"
+
+#~ msgid "generated from text file"
+#~ msgstr "مولدة من ملف نصي"
+
+#~ msgid "all available"
+#~ msgstr "كل المتوفّر"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "اختر ملف درس التدريب"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "هل ترغب في الاحتفاظ بالمستوى الحالي للجلسة التدريب الجديدة؟"
+
+#~ msgid "Start new training session"
+#~ msgstr "ابدأ جلسة تدريب جديدة"
+
+#~ msgid "Keep current level"
+#~ msgstr "أبق المستوى الحالي"
+
+#~ msgid "Start from first level"
+#~ msgstr "ابدأ أول مستوى"
+
+#~ msgid "General Options"
+#~ msgstr "خيارات عامة"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "إعدادات لوحة المفاتيح"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "المستوى:  الصحيح/مجموع المحارف : %1/%2  الكلمات: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "الجلسة:  الصحيح/مجموع المحارف : %1/%2  الكلمات: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "لاحظ أن الطباعة قد تختلف جزئيا بين مختلف الدول ، و الاختلاف عادة يكون في "
+#~ "أعلى صف من المفاتيح. على سبيل المثال في الولايات المتحدة الأمريكية نجد أن "
+#~ "المفتاح الذي يوجد في أقصى اليسار و مفتاح رقم 1 يضغط بواسطة خنصر اليد "
+#~ "اليسرى. وفي ألمانيا  توكل مهمة ضغط على مفتاح رقم 1 أيضا للخنصر مما يؤدي "
+#~ "أن الأصابع تتحرك مفتاح واحد لليمين في أعلى صف.\n"
+#~ "عادة  يشكل هذا الاختلاف فارقا للوحات المفاتيح المفصولة أو المريحة."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "لا يمكن إيجاد/فتح ملف الدرس '%1'."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "يغير المستخدم إلى '%1'.  ويعيد بدأ الجلسة التدريب إلى المستوى الحالي."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "اف&تح درس ..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&حرر الدرس..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "&حرر المخطط اللوني..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "حرر &تخطيط لوحة المفاتيح..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "أ&وقف الجلسة مؤقتاً "
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "إ&حصائيات الدرس"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "ال&دروس الافتراضية"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "مخططات الل&ونية للوحات المفاتيح"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "إعداد مستخدم.."
+
+#~ msgid "&Current User"
+#~ msgstr "ال&مستخدم الحالي"
+
+#~ msgid "untitled lecture"
+#~ msgstr "درس غير معنون"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "رقم مخطط اللوني الحالي:"
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "استعمل نفس ألوان سطر الطباعة مستقلة عن المخطط اللوني"
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "لون الخلفية لسطر المعلم."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "لون النص لسطر المعلم"
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "لون الخلفية لسطر الطالب."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "لون نص سطر الطالب"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "إذا ما ستستخدم خلفية مختلفة للنص الخاطئ أم لا."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "لون الخلفية للنص الخاطئ (لسطر الطالب)"
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "لون النص الخاطئ (لسطر الطالب)"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "اخرج بيب عند كل خطأ"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "شغل أصوات للطباعة."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "شغل صوت عن تغير المستوى آليا"
+
+#~ msgid "The sliding speed"
+#~ msgstr "سرعة الانزلاق"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "أقصى ارتفاع لودجة المنزلق"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "تجاوز خط الدرس الافتراضي/المعرف مسبقا"
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "خط سطر المعلم و الطالب"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "ملف الدرس المحمل حاليا"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "إذا ما ستستخدم الطباعة من اليمين-إلى-اليسار"
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "إذا ما ستسخدم الألوان على المفاتيح أم لا."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "إذا ما ستعرض المفاتيح المتعلمة /المعروفة فقط أم كل المفاتيح."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "إذا ما ستعرض لوحة المفاتيح."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "إذا ما ستتجاوز خطوط لوحة المفتايح الافتراضية/المعرفة مسبقا."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "خط المفاتيح على لوحة المفاتيح:"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "ملف لوحة مفاتيح المحملة حاليا"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "تتطلب أن يضغط المستخدم زر الإدخال enter عندما يكتمل السطر."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "اسمح بالضبط آلي للمستوى"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr "عطل ضبط المستوى اليدوي عندما تفعل تغير الآلي للمستوى"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "تذكر المستوى عند التشغيل التالي"
+
+#~ msgid "The current training level"
+#~ msgstr "المستوى التدريب الحالي"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "عدد المحارف في الدقيقة لتزيد مستوى"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "نسبة الصحة لتزيد مستوى"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "عدد المحارف في الدقيقة لتنقص مستوى"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "نسبة الصحة لتنقص مستوى"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "كم عدد السطور التي يجب طباعتها قبل السماح بتغير المستوى"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "أنه على الأقل مستوى كامل قبل أن تصعد"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "اسمح لعدة مستخدمي ك.توتش  باستعمال حساب مستخدم واحد"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "اسم المستخدم للمستخدم الحالي."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "أأحفظ المخططات اللونية المعدلة؟"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "مخطط لوني غير معنون"
+
+#~ msgid "Black && White"
+#~ msgstr "أسود و أبيض"
+
+#~ msgid "Classic"
+#~ msgstr "تقليدي"
+
+#~ msgid "Deep Blue"
+#~ msgstr "أزرق غامق"
+
+#~ msgid "Stripy"
+#~ msgstr "مخطط"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "لا يمكن فتح/تنزيل ملف لوحة المفاتيح '%1'"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "%1 بالمحرف المعروض كـ '%2' واليونكود '%3' معرف مسبقا و  سيتم تخطيه.\n"
+
+#~ msgid "Control key"
+#~ msgstr "مفتاح تحكم"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "مفتاح الإصبع مجهول ذو اليونكود '%1'. مفتاح عادي بالمحرف المعروض كـ '%2' "
+#~ "واليونكود '%3' سيتم تخطيه.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "مفتاح غير معلوم الهدف ذو اليونكود '%1'. مفتاح مخفي بالمحرف المعروض كـ "
+#~ "'%2' واليونكود '%3' سيتم تخطيه.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "مفتاح إصبع مجهول ذو اليونكود '%1'. مفتاح مخفي بالمحرف المعروض كـ '%2' "
+#~ "واليونكود '%3' سيتم تخطيه.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "مفتاح مغير/تحكم ذو اليونكود '%1'. مفتاح مخفي بالمحرف المعروض كـ '%2' "
+#~ "واليونكود '%3' سيتم تخطيه.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "رقم"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~| "*.*|All Files"
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|ملفات لوحة مفاتيح (*.keyboard.xml)\n"
+#~ "*.*|كافة الملفات"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "متأكد من حذف هذا المفتاح؟"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "محرر لوحة المفتايح ك.توتش"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr "هذا ليس رقم يونكود صالح. الرجاء صحح الرقم أو أدخل المحرف."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "الرجاء أدخل المحرف أو رقم اليونكود."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "أأحذف كل روابط المفتاح لهذا المفتاح؟"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "خطأ محرر لوحة المفتايح لك.توتش"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<مفتاح مغير>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "افتح ملف لوحة مفاتيح"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "أي ملف لوحة مفاتيح تريد تعديله؟"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "حرر لوحة المفاتيح الحالية:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "افتح ملف لوحة المفاتيح الافتراضي:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "افتح ملف لوحة مفاتيح:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<لا يوجد ملفات لوحات مفاتيح>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "لا يمكن فتح ملف لوحة المفاتيح، أنشئ واحدا جديدا"
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "يوجد تحذيرات أثناء قراءة ملف لوحة المفاتيح '%1':\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr "(معدل)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "محرر لوحة المفاتيح ك.توتش - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "محرر لوحة المفاتيح ك.توتش - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<ملف لوحة مفاتيح غير مسمى>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "لوحة المفاتيح غيرت . هل تريد حفظ التغيرات ؟"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "لا يمكن قراءة ملف تخطيط لوحة المفاتيح '%1'. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "لا يمكن تنزيل/فتح ملف تخطيط لوحة المفاتيح '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "حدث خطأ في قراءة مخطط لوحة المفاتيح ، عوضا عن ذلك سيتم إنشاء المفاتيح "
+#~ "المبدئية . يمكنك اختيار مخطط لوحة مفاتيح أخرى من مربع حوار التفضيلات."
+
+#~ msgid "A default lecture..."
+#~ msgstr "درس مبدئي..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "احفظ درس التدريب"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "محرر دورس ك.توتش - "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<ملف درس جديد غير مسمى>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "بيانات المستوى %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "أ ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "أدخل أسطرك هنا..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "افتح ملف درس"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "أي ملف درس تود تعديله؟"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "حرر الدرس الحالي:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "افتح الدرس المبدئي"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "لا يمكن فتح ملف الدرس ، ينشئ واحد جديد عوضا عن ذلك."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "الدرس غير ، هل تريد حفظ التغيرات؟"
+
+#~ msgid "Quite a lot"
+#~ msgstr "كثيرا"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "هذا نص مبدئي صغير. إذا رغبت\n"
+#~ "في بدء التدرب على الطباعة ، افتح\n"
+#~ "ملف الدرس/التدريب من القائمة الرئيسة.\n"
+#~ "إذا ضغت enter بعد السطر التالي ستكون\n"
+#~ "قد أكملت بنجاح الدرس المبدئي. مرحا !!!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "أ ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<لا يوجد ملفات مبدئية>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "الرجاء انتق أو ادخل اسم ملف."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "يبدو أن العنوان مشوه ، الرجاء تصحيحه."
+
+#~ msgid "***current***  "
+#~ msgstr "***الحالي***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "لا يوجد بيانات إحصائية بعد."
+
+#, fuzzy
+#~| msgid "Erase all statistics data for the current user?"
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "أأمسح كل البيانات الإحصائية للمستخدم الحالي؟"
+
+#~ msgid "Words per minute"
+#~ msgstr "كلمات كل دقيقة"
+
+#~ msgid "Correctness"
+#~ msgstr "الدقة"
+
+#~ msgid "Skill"
+#~ msgstr "المهارة"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "الوقت بالأيام منذ أو جلسة تدريب "
+
+#~ msgid "Sessions"
+#~ msgstr "الجلسات"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "يبدأ جلسة التدريب: بانتظار أول كبسة مفتاح..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "لقد أنهيت تمرين التدريب هذا.\n"
+#~ "ستبدأ جلسة التدريب هذه من البداية."
+
+#~ msgid "You rock!"
+#~ msgstr "أنت عظيم!"
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "إحصائيات عامة"
+
+#~ msgid "&Settings"
+#~ msgstr "إ&عدادات"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "شريط الأدوات الرئيسي"
+
+#~ msgid "New User"
+#~ msgstr "مستخدم جديد"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "الرجاء أدخل اسم مستخدم فريد:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "هذا الاسم غير صالح (فريد) !"
+
+#~ msgid "Save user list?"
+#~ msgstr "حفظ قائمة المستخدم؟"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "برنامج يساعد على تعلم و تدرب على الطابعة"
+
+#~ msgid "KTouch"
+#~ msgstr "ك.توتش"
+
+#~ msgid "Training file to open"
+#~ msgstr "ملف تدريب ليتم فتحه"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "محرر مخطط الألوان"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "مخططات ألوان معرفة بواسطة المستخدم"
+
+#~ msgid "Add"
+#~ msgstr "أضف"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "حرر المخطط اللوني"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "اسم مخطط اللوني:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&خزن البيانات"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "أزح ألوان السطر"
+
+#~ msgid "Teacher background:"
+#~ msgstr "خلفية المعلم:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "نص المعلم:"
+
+#~ msgid "Student background:"
+#~ msgstr "خلفية الطالب:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "نص الطالب في حال الخطأ:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "خلفية الطالب في حال الخطأ:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "ألوان لوحة المفاتيح"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "ألوان الخلفية للمفاتيح العادية:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "الخلفية المبرزة:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "لون المفتاح العادي:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "لون النص المبرز:"
+
+#~ msgid "Text color:"
+#~ msgstr "لون النص:"
+
+#~ msgid "Key frame:"
+#~ msgstr "إطار المفتاح:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "مفتاح مغير / أخرى:"
+
+#~ msgid "Text color"
+#~ msgstr "لون النص"
+
+#~ msgid "Background:"
+#~ msgstr "الخلفية:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "بيانات تعريف لوحة المفاتيح"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "عنوان لوحة المفاتيح:"
+
+#~ msgid "Language id:"
+#~ msgstr "معرف اللغة:"
+
+#~ msgid "Comments:"
+#~ msgstr "ملاحظات:"
+
+#~ msgid "Key Properties"
+#~ msgstr "خصائص المفتاح"
+
+#~ msgid "Key type:"
+#~ msgstr "نوع المفتاح:"
+
+#~ msgid "Key text:"
+#~ msgstr "نص المفتاح:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "خيارات تحرير لوحة المفاتيح"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "عيّن خط لوحة المفاتيح..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "احفظ لوحة المفاتيح كـ ..."
+
+#~ msgid "Close"
+#~ msgstr "أغلق"
+
+#~ msgid "Key connectors"
+#~ msgstr "موصلات المفتاح"
+
+#~ msgid "or unicode"
+#~ msgstr "أو يونكود"
+
+#~ msgid "Clear connectors"
+#~ msgstr "امسح الموصلات"
+
+#~ msgid "Add/update connector"
+#~ msgstr "أضف/حدث الموصل"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<مفتاح مغير>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr "تخطيط لوحة المفاتيح (انقر لتنشيط المفاتيح لتحررها أو لتسحب مفاتيح)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "محرر دروس ك.توتش"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "خصائص الدرس"
+
+#~ msgid "Comment:"
+#~ msgstr "التعليق:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "بيانات المستوى 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "المحارف الجديدة في هذا المستوى:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "تعليق المستوى (اختياري):"
+
+#~ msgid "Level data:"
+#~ msgstr "بيانات المستوى:"
+
+#~ msgid "Training level summary"
+#~ msgstr "ملخص المستوى التدريبي"
+
+#~ msgid "Summary"
+#~ msgstr "الملخص"
+
+#~ msgid "High scores for this level"
+#~ msgstr "أعلى درجات في هذا المستوى"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "التاريخ"
+
+#~ msgid "Score"
+#~ msgstr "الدرجة"
+
+#~ msgid "Characters per second"
+#~ msgstr "حرف كل دقيقة"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "أعلى الدرجات لكل المستخدمين في هذا المستوى"
+
+#~ msgid "&Retry level"
+#~ msgstr "أ&عد المستوى"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&تابع للمستوى التالي"
+
+#~ msgid "Browse..."
+#~ msgstr "استعراض..."
+
+#, fuzzy
+#~| msgid "&Ok"
+#~ msgid "&OK"
+#~ msgstr "&موافق"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "استعمل لون مخصص لسطر الطباعة"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "لون سطر المعلم"
+
+#~ msgid "Teacher's line"
+#~ msgstr "سطر المعلم"
+
+#~ msgid "Text:"
+#~ msgstr "النص:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "غيّر لون نص سطر الطالب"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "هنا يمكنك تغير لون النص الذي تطبعه في سطر الطالب."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "لون الخلفية لسطر المعلم"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr "يمكنك هنا تغير لون خلفية سطر المعلم (السطر الذي يجب عليك طباعته.)"
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "استعمل لون مختلف للطباعة الخاطئة"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "اختر لون خلفية للخطأ في سطر الطباعة"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "عندما تختار 'استعمل لون مختلف للطباعة الخاطئة' ، فبإمكانك اختيار لون "
+#~ "لخلفية الأخطاء ، تكون الأخطاء عندما تدخل الحرف الخاطئ في سطر الطالب. بهذه "
+#~ "الطريقة تستطيع جعل الأخطاء أكثر وضوحا."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "اختر لون النص للخطأ في سطر الطباعة"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "عندما تختار 'استعمل لون مختلف للأخطاء في سطر الطباعة' ، فبإمكانك اختيار "
+#~ "لون لنص الأخطاء ، تكون الأخطاء عندما تدخل الحرف الخاطئ في سطر الطالب. "
+#~ "بهذه الطريقة تستطيع جعل الأخطاء أكثر وضوحا."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "إعدادات سطر النص"
+
+#~ msgid "Fast"
+#~ msgstr "سريع"
+
+#~ msgid "Slow"
+#~ msgstr "بطيء"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "سرعة الانزلاق:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "تجاوز خط الدرس"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "الخط للنص المعروض / المطبوع:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "سيعرض هذا الزر مربع حوار الخط حيث يمكنك تغير الخط سطر الطالب و المعلم. "
+#~ "عندما تترك مربع حوار الخط ، فإن الخط سيستعرض في السطر الذي في الأسفل ، "
+#~ "ولن يطبق حتى تنقر على زر طبق في الأسفل."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "أظهر المفاتيح التي يجب عليك طبعتها على لوحة المفاتيح"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "ستبرز المفتاح التالي الذي يجب عليك طباعتها على لوحة المفاتيح ؛ ستسهل هذه "
+#~ "عملية الطباعة."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "أ&برز المفاتيح على لوحة المفاتيح"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "أخف/عتم المفاتيح التي لم تتعلمها بعد"
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr ""
+#~ "إذا اخترته ؛ فبإمكانك تحديد خط لوحة المفاتيح  بنفسك بدلا عن المعرف بشكل "
+#~ "مسبق في تخطيط لوحة المفاتيح."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "كل مخطط لوحة مفاتيح يمكن أن يحدد خطه الخاص به . إذا لم يعمل الخط المعرف "
+#~ "مسبقا لمخطط لوحة المفاتيح  فبإمكانك تغيره بنفسك بالنقر على هذا الزر. "
+#~ "يمكنك بعد ذلك اختيار خطوطك التي ستستعمل لرسم المحارف على المفاتيح."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "تجاوز خطوط لوحة المفاتيح"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "خط المفاتيح على لوحة المفاتيح:"
+
+#~ msgid "Sound"
+#~ msgstr "الصوت"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr "إذا اختير (مبدئي) سيصدر الحاسوب صوت بيب كل مرة تخطأ في الطباعة."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&بيب عن الخطأ"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "اصدر صوت آلة الكاتبة عن ضغط على كل مفتاح"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr "إذا اختير فإن الحاسوب سيصدر صوت الآلة الكاتبة عن ضغط  على أي مفتاح"
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "&صوت الآلة الكاتبة عند الطباعة"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "شغّل صوت عندما يتغير المستوى آليا."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr "إذا علمت هذه (المبدئي) فإن صوت سيشغل كل مرة تغير فيها المستوى."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "ص&وت عن تغير المستوى آليا"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "&ضبط آلي للمستوى"
+
+#~ msgid "chars/minute"
+#~ msgstr "حرف كل دقيقة"
+
+#~ msgid "Typing speed:"
+#~ msgstr "سرعة الطباعة:"
+
+#~ msgid "Correctness:"
+#~ msgstr "الدقة:"
+
+#~ msgid "Workload:"
+#~ msgstr "حمل العمل:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "أكمل كامل المستوى قبل المتابعة"
+
+#~ msgid "lines"
+#~ msgstr "سطور"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "النهايات لتزيد المستوى"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "النهايات لتنقص المستوى"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "عطّل أزرار تغير المستوى اليدوية"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "نمط &كاتب الطابعة (يجب على المستخدم تأكيد السطر بEnter )"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "تذكر المستوى عند التشغيل التالي"
+
+#~ msgid "Current Training Session"
+#~ msgstr "جلسة التدريب الحالية"
+
+#~ msgid "Lecture:"
+#~ msgstr "الدرس:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "المستويات في هذه الجلسة:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "الوقت المنقضي (بالثواني):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr "هذه تظهر عدد الثواني التي قمت بالطباعة فيها في هذه الجلسة."
+
+#~ msgid "Characters typed:"
+#~ msgstr "المحارف المطبوعة:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "عدد المحارف (الصحيحة و الخاطئة) التي طبعتها لحد الآن."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "المحارف الخاطئة:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "تظهر عدد المحارف التي طبعتها بشكل خاطئ."
+
+#~ msgid "Words typed:"
+#~ msgstr "الكلمات المطبوعة:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "عدد الكلمات المطبوعة لحد الآن."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "نسبة المحارف المطبوعة بشكل صحيح إلى العدد الكلي من المحارف المطبوعة."
+
+#~ msgid "Typing Rate"
+#~ msgstr "معدل الطباعة"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "عدد المحارف الصحيحة التي طبعتها في الدقيقة."
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "عدد الكلمات التي طبعتها في الدقيقة."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "يتم هنا سرد المحارف التي فاتتك في اختبار الطباعة. النسبة تعرض معدل عدد "
+#~ "المفاتيح الغائبة بالمقارنة مع عدد المفاتيح الكلي. الأعداد الكبير تدل على "
+#~ "المفتاح مغيب كثيرا."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "إحصائيات المحرف (المحارف التي تحتاج إلى التركيز عليها)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "إحصائيات المستوى الحالي"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "lectureLabel2"
+
+#~ msgid "Level:"
+#~ msgstr "المستوى:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "levelLabel2"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "يتم هنا سرد المحارف التي فاتتك في اختبار الطباعة. النسبة تعرض معدل عدد "
+#~ "المفاتيح الغائبة بالمقارنة مع عدد المفاتيح الكلي. الأعداد الكبير تدل على "
+#~ "المفتاح مغيب كثيرا."
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "مستوى تقدم طباعتك"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "اظهر التقدم في الدرس:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "هنا يمكنك انتقاء الدرس الذي ترغب في رؤية إحصائياته."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "خيارات رسمة التقدم"
+
+#~ msgid "Chart Data"
+#~ msgstr "بيانات الرسمة"
+
+#~ msgid "Session stats"
+#~ msgstr "إحصائيات الجلسة"
+
+#~ msgid "Level stats"
+#~ msgstr "إحصائيات المستوى"
+
+#~ msgid "Chart Type"
+#~ msgstr "نوع الرسمة"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "تحجيم محور الوقت"
+
+#~ msgid "Time scaled"
+#~ msgstr "الوقت حُجم"
+
+#~ msgid "Constant spacing"
+#~ msgstr "مساحات ثابتة"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "بالضغط على هذا الزر ؛ فإن كل إحصائيات التدريب لهذا للمستخدم الحالي ستمحى."
+
+#~ msgid "Clear History"
+#~ msgstr "امح التاريخ"
+
+#~ msgid "Level"
+#~ msgstr "المستوى"
+
+#~ msgid "Current level"
+#~ msgstr "المستوى الحالي"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "تظهر هذه المستوى الذي أنت فيه."
+
+#~ msgid "Speed"
+#~ msgstr "السرعة"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "محرف كل دقيقة"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "تظهر هذه سرعتك في الطباعة ، و هي تقاس عدد الأحرف المطبوعة في كل دقيقة."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "كم حرف طبعت بشكل صحيح؟"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "هذه تظهر مدى دقتك في الطباعة"
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "المحارف الجديدة في هذا المستوى"
+
+#~ msgid "Setup Users"
+#~ msgstr "إعداد ال&مستخدمين"
+
+#~ msgid "&Add"
+#~ msgstr "أ&ضف"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins، Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del ، Alt R"
+
+#~ msgid "&Close"
+#~ msgstr "أ&غلق"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "بلغارية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "البلغارية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "كاتلنية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "التشيكية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "الدنماركية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "الدنماركية (دورة كاملة)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "هولندية للمبتدئين (هولندية للاطفال)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "الهولندية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "كلوماك (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "دفورك (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "دفورك - ألفبائية"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "الإنجليزية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "فلندية للأطفال"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "الفنلندية  (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "الفرنسية (مولدة آليا) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "الفرنسية (مولدة آليا) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "فرنسية دفورك (الجزء 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "فرنسية دفورك (الجزء 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "الألمانية (في 9 مستويات)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "الألمانية (من Tipptrainer )"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "الألمانية (مولدة آليا)"
+
+#, fuzzy
+#~| msgid "untitled keyboard layout"
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "تخطيط لوحة المفاتيح غير معنون"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "الألمانية (لوحة الأرقام)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "الهيلانية"
+
+#, fuzzy
+#~| msgctxt "Lesson Name"
+#~| msgid "Hungarian (auto-generated)"
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "هنجارية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "هنجارية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "الإيطالية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "اللاتينية"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "النرويجية"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "البولندية (من TTCoach)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "روسية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "روسية (مولدة آليا بشكل طويل)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "السلوفاكية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "السلوفينية"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "الأسبانية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "الأسبانية (مولدة آليا) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "الأسبانية (مولدة آليا) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "دفورك الأسبانية"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "التركية (مولدة آليا)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "الأوكرانية"
+
+#~ msgid "F&ile"
+#~ msgstr "&ملف"

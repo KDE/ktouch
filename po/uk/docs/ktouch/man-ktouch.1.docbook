@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Навчання машинопису</application
+>">
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Інструкція користувача &ktouch;</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>Сторінка довідника (man) для KTouch.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>5 січня 2021 року</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Програми 20.12)</releaseinfo>
+<productname
+>Програми KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Інструктор з навчання друку KDE</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>шлях</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Опис</title>
+<para
+>«&i18n-ktouch;» — це програма для навчання друку наосліп. Вона допоможе вам навчитися друкувати на клавіатурі швидко і правильно. Ця програма підкаже вам, де має знаходитися кожен з пальців на клавіатурі і клавіші, які слід натискати цим пальцем.</para
+> 
+<para
+>«&i18n-ktouch;» проводить навчання друку наосліп за допомогою тренувальних текстів і змінює рівень їх складності залежно від вашої вправності. Програма може показувати вам, яку клавішу слід натискати наступною, і який палець для цього слід використати.</para>
+<para
+>Ця програма є частиною офіційного освітнього модуля &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Параметри &ktouch;</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Запустити редактор курсів навчання та розкладок клавіатури.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>шлях</replaceable
+></term>
+<listitem
+><para
+>Дописати шлях на початку списку шляхів імпортування QML.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+<simplelist>
+<member
+>Детальнішу інформацію для користувача можна знайти за адресою <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (або введіть цю адресу <acronym
+>URL</acronym
+> у поле адреси &konqueror;, або виконайте команду <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Подальшу інформацію можна отримати на <ulink url="https://edu.kde.org/ktouch/"
+>сайті освітнього модуля &kde;</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>&ktouch; було написано <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> and <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Ця сторінка довідника заснована на сторінці підготованій для проєкту &Debian; <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

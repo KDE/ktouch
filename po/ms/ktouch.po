@@ -1,0 +1,2678 @@
+# SOME DESCRIPTIVE TITLE.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2007-02-23 16:07+0730\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sharuzzaman Ahmat Raslan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sharuzzaman@myrealbox.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Custom Lessons"
+msgstr "Mulakan &Sesi Baru"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, fuzzy, kde-format
+msgid "Hidden"
+msgstr "Pilihan Papan Kekunci"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Aksara per inci"
+msgstr[1] "Aksara per inci"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr ""
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+msgid "New course"
+msgstr "Tajuk laman baru"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+msgid "New keyboard layout"
+msgstr "Susunatur papan kekunci: %s\n"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Susunatur papan kekunci: %s\n"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard layout"
+msgstr "Susunatur papan kekunci: %s\n"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+msgid "Training"
+msgstr "Opsyen RAID"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+msgid "Training Settings"
+msgstr "Statistik Ethernet"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Colors"
+msgstr "Tetapan Lain-lain"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Color Settings"
+msgstr "Tetapan Lain-lain"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+msgid "Configure Keyboard..."
+msgstr "Dokumen yang hendak dibuka"
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+msgid "Typewriting Trainer"
+msgstr "Nombor baris:"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+msgid "Current maintainer"
+msgstr "Semasa dan"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Semasa dan"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr ""
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+msgid "Original author"
+msgstr "Asal pengarang"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr ""
+
+#: src/main.cpp:42
+#, fuzzy, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Pencipta bagi"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr ""
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Banyak bagi"
+
+#: src/main.cpp:44
+#, fuzzy, kde-format
+#| msgid "The currently loaded keyboard file"
+msgid "All the creators of training and keyboard files"
+msgstr "Fail papan kekunci termuat semasa"
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+msgid "Character"
+msgstr "Aksara per inci"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+msgid "Modifier ID"
+msgstr "Kekunci Dipercayai DNS"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "Teks baru"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgid "Title"
+msgstr "Tajuk:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+msgid "Keyboard Layouts"
+msgstr "Pilihan Papan Kekunci"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Ketepatan"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+msgid "Characters per Minute"
+msgstr "Aksara per inci"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+msgid "Training on:"
+msgstr "Opsyen RAID"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "Ketepatan"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+msgid "Characters per Minute:"
+msgstr "Aksara per inci"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Susunatur papan kekunci: %s\n"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+msgid "Other Courses"
+msgstr "Tajuk laman baru"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Nombor baris:"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+msgid "Start Training"
+msgstr "Opsyen RAID"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+msgid "Configure Keyboard"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Susunatur papan kekunci: %s\n"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+msgid "Edit lesson"
+msgstr "Teks baru"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Tajuk:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+msgid "Lesson text"
+msgstr "Teks baru"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+msgid "Manage Profiles"
+msgstr "Tajuk laman baru"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Tajuk laman baru"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+msgid "Total training time:"
+msgstr "Opsyen RAID"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+msgid "Create New Profile"
+msgstr "Tajuk laman baru"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, fuzzy, kde-format
+msgid "Use Selected Profile"
+msgstr "Dokumen yang hendak dibuka"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+msgid "Lesson training statistics"
+msgstr "Semasa Sesi Statistik"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+msgid "Character:"
+msgstr "Aksara per inci"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "Perkembangan"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "This Lesson"
+msgstr "Mulakan &Sesi Baru"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+msgid "Resume Training"
+msgstr "Opsyen RAID"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Restart Lesson"
+msgstr "Mulakan &Sesi Baru"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "masa  ialah larian."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "buka."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+msgid "Index finger:"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Middle finger:"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+msgid "Ring finger:"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Little finger:"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+msgid "Keyboard layout:"
+msgstr "Susunatur papan kekunci: %s\n"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+msgid "Move lesson up"
+msgstr "Teks baru"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+msgid "New characters:"
+msgstr "Teks baru"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+msgid "Create new normal key"
+msgstr "Tajuk laman baru"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+msgid "Normal Key"
+msgstr "256 Warna (8 Bit)"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+msgid "Create new special key"
+msgstr "Tajuk laman baru"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+msgid "Special Key"
+msgstr "Tajuk laman baru"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+msgid "Keyboard"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, fuzzy, kde-format
+msgid "Left:"
+msgstr "Teks"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+msgid "Finger:"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Left little finger"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+msgid "Left ring finger"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Left middle finger"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Left index finger"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+msgid "Right index finger"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+#| msgid "Select Training Lecture File"
+msgid "Right middle finger"
+msgstr "Pilih Fail Syarahan Latihan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+msgid "Right ring finger"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+msgid "Right little finger"
+msgstr "Nombor baris:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+msgid "Characters"
+msgstr "Aksara per inci"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+msgid "Add new character"
+msgstr "Teks baru"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+msgid "Remove character"
+msgstr "Teks baru"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+msgid "Modifier ID:"
+msgstr "Kekunci Dipercayai DNS"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+msgid "Open a text file..."
+msgstr "Buka Fail"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+msgid "0 Characters"
+msgstr "Aksara per inci"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+msgid "During training:"
+msgstr "Opsyen RAID"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, fuzzy, kde-format
+msgid "Show keyboard"
+msgstr "Tajuk laman baru"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+msgid "Show real-time statistics"
+msgstr "Statistik Ethernet"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "<b>Jenis Monitor Kedua</b>:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Minimum accuracy:"
+msgstr "Ketepatan"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+msgid "Set new characters for lesson"
+msgstr "Teks baru"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+msgid "Set lesson text"
+msgstr "Teks baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+msgid "Set keyboard layout title"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout name"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+msgid "Set keyboard layout size"
+msgstr "Tetapkan susunatur papan kekunci"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, fuzzy, kde-format
+msgid "Add key"
+msgstr "Pilihan Papan Kekunci"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+msgid "Remove key"
+msgstr "Teks baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+msgid "Add key character"
+msgstr "Teks baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+msgid "Remove key character"
+msgstr "Teks baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+msgid "Set key character value"
+msgstr "Teks baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+msgid "Set special key type"
+msgstr "Tajuk laman baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+msgid "Set special key label"
+msgstr "Tajuk laman baru"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Susunatur papan kekunci: %s\n"
+
+#, fuzzy
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Tajuk laman baru"
+
+#, fuzzy
+#~ msgid "No Courses Available"
+#~ msgstr "Tiada kemaskini didapati (%d diabaikan)"
+
+#, fuzzy
+#~ msgid "Launch Editor"
+#~ msgstr "&Tetap Penyunting..."
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Default User"
+#~ msgstr "default:LTR"
+
+#, fuzzy
+#~ msgid "all available"
+#~ msgstr "Tiada kemaskini didapati (%d diabaikan)"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Pilih Fail Syarahan Latihan"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Adakah anda hendah menyimpan aras semasa untuk sesi latihan baru?"
+
+#, fuzzy
+#~| msgid "Start New Training Session"
+#~ msgid "Start new training session"
+#~ msgstr "Mula Sesi Baru Latihan"
+
+#, fuzzy
+#~| msgid "Keep Current Level"
+#~ msgid "Keep current level"
+#~ msgstr "Kekalkan Aras Semasa"
+
+#~ msgid "General Options"
+#~ msgstr "Pilihan Umum"
+
+#, fuzzy
+#~ msgid "Keyboard Settings"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Peringkat Jumlah Perkataan 3"
+
+#, fuzzy
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Sesi Jumlah Perkataan 3"
+
+#, fuzzy
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Tidak dapat membuka '%1'. Fail tidak wujud."
+
+#, fuzzy
+#~ msgid "&Open Lecture..."
+#~ msgstr "Buka Fail"
+
+#, fuzzy
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Ubah sambungan..."
+
+#, fuzzy
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Kod sumber Scheme"
+
+#, fuzzy
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgid "&Pause Session"
+#~ msgstr "Mengembalikan Sesi Terakhir"
+
+#, fuzzy
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Statistik Ethernet"
+
+#, fuzzy
+#~ msgid "Default &Lectures"
+#~ msgstr "default:LTR"
+
+#, fuzzy
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Kedalaman _Warna:"
+
+#, fuzzy
+#~ msgid "&Current User"
+#~ msgstr "Tahap latihan semasa"
+
+#, fuzzy
+#~ msgid "untitled lecture"
+#~ msgstr "tak bertajuk"
+
+#, fuzzy
+#~ msgid "The number of the current color scheme."
+#~ msgstr "jumlah semasa salinan lengkap (seed)"
+
+#, fuzzy
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "Guna bagi."
+
+#, fuzzy
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "latar belakang for s."
+
+#, fuzzy
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "teks for s"
+
+#, fuzzy
+#~ msgid "The background color for the student's line."
+#~ msgstr "latar belakang for s."
+
+#, fuzzy
+#~ msgid "The text color for the student's line"
+#~ msgstr "teks for s"
+
+#, fuzzy
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "hingga latar belakang for teks atau."
+
+#, fuzzy
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "latar belakang for teks."
+
+#, fuzzy
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "teks for teks."
+
+#, fuzzy
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "buka"
+
+#, fuzzy
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Main buka"
+
+#, fuzzy
+#~ msgid "The sliding speed"
+#~ msgstr "Kelajuan Failover"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Ketinggian maksimum bagi widget gelongsor"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Atasi font syarahan default/pratetap."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Font untuk baris pelajar dan guru"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Fail syarahan termuat semasa"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Sama ada kita menggunakan menaip kanan-ke-kiri"
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Sama ada untuk menggunakan warna pada kekunci atau tidak."
+
+#, fuzzy
+#~| msgid "Whether to hide the keyboard display."
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "Sama ada untuk menyorokkan paparan papan kekunci."
+
+#, fuzzy
+#~| msgid "Whether to hide the keyboard display."
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Sama ada untuk menyorokkan paparan papan kekunci."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr ""
+#~ "Sama ada untuk mengatasi font papan kekunci default/telah dinyatakan."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Font untuk kekunci pada papan kekunci"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Fail papan kekunci termuat semasa"
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Benarkan pelarasan tahap automatik"
+
+#, fuzzy
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Matikan pelarasan tahap manual apabila perubahan tahap automatik "
+#~ "dihidupkan"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Ingat tahap semasa ketika KTouch dimulakan nanti"
+
+#~ msgid "The current training level"
+#~ msgstr "Tahap latihan semasa"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Jumlah aksara per minit untuk menaikkan tahap"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Peratusan yang betul untuk menaikkan tahap"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Jumlah aksara per minit untuk menurunkan tahap"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Peratusan yang betul untuk mengurangkan tahap"
+
+#, fuzzy
+#~ msgid "The user name of the current user."
+#~ msgstr "jumlah semasa salinan lengkap (seed)"
+
+#, fuzzy
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Simpan telah diubah?"
+
+#, fuzzy
+#~ msgid "untitled color scheme"
+#~ msgstr "Kod sumber Scheme"
+
+#, fuzzy
+#~ msgid "Black && White"
+#~ msgstr "Aras putih:"
+
+#~ msgid "Classic"
+#~ msgstr "Klasik"
+
+#, fuzzy
+#~ msgid "Deep Blue"
+#~ msgstr "Blue Swirl"
+
+#, fuzzy
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "fail."
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr "Papan Kekunci Fail Semua Fail"
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "<modifier key>"
+#~ msgstr "Kekunci Dipercayai DNS"
+
+#, fuzzy
+#~ msgid "Open Keyboard File"
+#~ msgstr "Dokumen yang hendak dibuka"
+
+#, fuzzy
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "fail seperti hingga?"
+
+#, fuzzy
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Ubah hubungan semasa"
+
+#, fuzzy
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Dokumen yang hendak dibuka"
+
+#, fuzzy
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Dokumen yang hendak dibuka"
+
+#, fuzzy
+#~ msgid "<no keyboard files available>"
+#~ msgstr "Tiada kemaskini didapati (%d diabaikan)"
+
+#, fuzzy
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "fail baru!"
+
+#, fuzzy
+#~ msgid " (modified)"
+#~ msgstr "Diubahsuai"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "Comment=Fail Projek KDevelop"
+
+#, fuzzy
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "diubah hingga?"
+
+#, fuzzy
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "fail "
+
+#, fuzzy
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "fail."
+
+#, fuzzy
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr "Ralat piawai Anda inci."
+
+#, fuzzy
+#~ msgid "A default lecture..."
+#~ msgstr "default:LTR"
+
+#, fuzzy
+#~ msgid "Save Training Lecture"
+#~ msgstr "Tahap latihan semasa"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "Tidak, simpan kepada fail baru"
+
+#, fuzzy
+#~ msgid "Data of Level %1"
+#~ msgstr "_Aras RAID:"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#, fuzzy
+#~ msgid "Enter your lines here..."
+#~ msgstr "Sila masukkan namapengguna anda"
+
+#, fuzzy
+#~ msgid "Open Lecture File"
+#~ msgstr "Dokumen yang hendak dibuka"
+
+#, fuzzy
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Fail Anda hingga Edit?"
+
+#, fuzzy
+#~ msgid "Edit current lecture:"
+#~ msgstr "Ubah hubungan semasa"
+
+#, fuzzy
+#~ msgid "Open a default lecture:"
+#~ msgstr "Dokumen yang hendak dibuka"
+
+#, fuzzy
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "fail baru."
+
+#, fuzzy
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "diubah hingga?"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr "ialah kecil piawai teks fail piawai!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#, fuzzy
+#~ msgid "<no default files available>"
+#~ msgstr "Tiada kemaskini didapati (%d diabaikan)"
+
+#, fuzzy
+#~ msgid "Please select or enter a file name."
+#~ msgstr "atau fail nama."
+
+#, fuzzy
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "URL hingga."
+
+#, fuzzy
+#~ msgid "***current***  "
+#~ msgstr "Masa Semasa:"
+
+#, fuzzy
+#~ msgid "No statistics data available yet."
+#~ msgstr "Tidak!"
+
+#, fuzzy
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "Padam for?"
+
+#, fuzzy
+#~ msgid "Words per minute"
+#~ msgstr "Permintaan per Sambungan"
+
+#, fuzzy
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Masa inci hari"
+
+#~ msgid "Sessions"
+#~ msgstr "Sesi"
+
+#, fuzzy
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Menunggu for."
+
+#, fuzzy
+#~ msgid "S&tatistics"
+#~ msgstr "Statistik Ethernet"
+
+#, fuzzy
+#~ msgid "&Settings"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "atau fail nama."
+
+#, fuzzy
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "A hingga dan"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#, fuzzy
+#~ msgid "Training file to open"
+#~ msgstr "Tidak dapat membuka '%1'. Fail tidak wujud."
+
+#, fuzzy
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Membuang rantaian ditakrif pengguna:"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgid "Add"
+#~ msgstr "Tambah..."
+
+#, fuzzy
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Kod sumber Scheme"
+
+#, fuzzy
+#~ msgid "Name of color scheme:"
+#~ msgstr "Name=KDevelop: KDE/C++"
+
+#, fuzzy
+#~ msgid "&Store Data"
+#~ msgstr "Data LPD"
+
+#, fuzzy
+#~ msgid "Slide Line Colors"
+#~ msgstr "Papar nombor baris"
+
+#, fuzzy
+#~ msgid "Teacher background:"
+#~ msgstr "Peranti PCM default:"
+
+#, fuzzy
+#~ msgid "Teacher text:"
+#~ msgstr "Teks baru"
+
+#, fuzzy
+#~ msgid "Student background:"
+#~ msgstr "Peranti PCM default:"
+
+#, fuzzy
+#~ msgid "Student text on error:"
+#~ msgstr "Ralat dalam %s pada baris %d: "
+
+#, fuzzy
+#~ msgid "Student background on error:"
+#~ msgstr "Ralat dalam %s pada baris %d: "
+
+#, fuzzy
+#~ msgid "Keyboard Colors"
+#~ msgstr "256 Warna"
+
+#, fuzzy
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Latarbelakang for normal:"
+
+#, fuzzy
+#~ msgid "Highlighted background:"
+#~ msgstr "Peranti PCM default:"
+
+#, fuzzy
+#~ msgid "Normal key colors:"
+#~ msgstr "256 Warna (8 Bit)"
+
+#, fuzzy
+#~ msgid "Highlighted text color:"
+#~ msgstr "Sorotan warna sintaks"
+
+#, fuzzy
+#~ msgid "Text color:"
+#~ msgstr "Teks baru"
+
+#, fuzzy
+#~ msgid "Key frame:"
+#~ msgstr "_Kekunci Enkripsi"
+
+#, fuzzy
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Kekunci Dipercayai DNS"
+
+#, fuzzy
+#~ msgid "Text color"
+#~ msgstr "Teks baru"
+
+#, fuzzy
+#~ msgid "Background:"
+#~ msgstr "Latarbelakang:"
+
+#, fuzzy
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Ralat Dengan Data"
+
+#, fuzzy
+#~ msgid "Keyboard title:"
+#~ msgstr "Tajuk baru"
+
+#, fuzzy
+#~ msgid "Language id:"
+#~ msgstr "ID SCSI"
+
+#~ msgid "Comments:"
+#~ msgstr "Komen:"
+
+#, fuzzy
+#~ msgid "Key Properties"
+#~ msgstr "Ciri perkongsian - %s"
+
+#, fuzzy
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgid "Key connectors"
+#~ msgstr "256 Warna"
+
+#, fuzzy
+#~ msgid "Clear connectors"
+#~ msgstr "Buang Sejarah"
+
+#, fuzzy
+#~ msgid "< modifier key>"
+#~ msgstr "Kekunci Dipercayai DNS"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Penyunting teks XEmacs."
+
+#, fuzzy
+#~ msgid "Lecture Properties"
+#~ msgstr "Ciri perkongsian - %s"
+
+#~ msgid "Comment:"
+#~ msgstr "Komen:"
+
+#, fuzzy
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Etc/GMT-10"
+
+#, fuzzy
+#~ msgid "New characters in this level:"
+#~ msgstr "Baru inci:"
+
+#, fuzzy
+#~ msgid "Level comment (optional):"
+#~ msgstr "Comment=Projek Ada"
+
+#, fuzzy
+#~ msgid "Level data:"
+#~ msgstr "Data LPD"
+
+#, fuzzy
+#~ msgid "High scores for this level"
+#~ msgstr "Baru inci:"
+
+#, fuzzy
+#~ msgid "Characters per second"
+#~ msgstr "Aksara per inci"
+
+#, fuzzy
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Guna buka inci"
+
+#, fuzzy
+#~ msgid "The color for the teacher's line"
+#~ msgstr "GUI bagi beberapa pengenyahpepijat baris-arahan."
+
+#, fuzzy
+#~ msgid "Teacher's line"
+#~ msgstr "Nombor baris:"
+
+#, fuzzy
+#~ msgid "Text:"
+#~ msgstr "Teks"
+
+#, fuzzy
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Tukar teks for"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "bagi teks jenis inci."
+
+#, fuzzy
+#~ msgid "The background for the teacher's line"
+#~ msgstr "GUI bagi beberapa pengenyahpepijat baris-arahan."
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr "Anda latar belakang for s bagi hingga jenis"
+
+#, fuzzy
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Guna buka inci"
+
+#, fuzzy
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "latar belakang for inci"
+
+#, fuzzy
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Guna buka inci for latar belakang bagi Anda jenis inci ialah hingga lebih "
+#~ "dapat dilihat."
+
+#, fuzzy
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "teks for inci"
+
+#, fuzzy
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Guna buka inci for teks bagi Anda jenis inci ialah hingga lebih dapat "
+#~ "dilihat."
+
+#, fuzzy
+#~ msgid "Text Line Settings"
+#~ msgstr "Papar nombor baris"
+
+#, fuzzy
+#~ msgid "Fast"
+#~ msgstr "Fast-Fusion"
+
+#, fuzzy
+#~ msgid "Slow"
+#~ msgstr "Rock Perlahan"
+
+#, fuzzy
+#~ msgid "Sliding speed:"
+#~ msgstr "Kelajuan Failover"
+
+#, fuzzy
+#~ msgid "Override lecture font"
+#~ msgstr "Mulakan Server Font X: "
+
+#, fuzzy
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Guna font tersendiri untuk teks status"
+
+#, fuzzy
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr "for dan baru ialah inci dan Terap."
+
+#, fuzzy
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Papar buka hingga jenis"
+
+#, fuzzy
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr "buka hingga jenis ialah hingga jenis ialah."
+
+#, fuzzy
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "bu&ka"
+
+#, fuzzy
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr "bagi bagi."
+
+#, fuzzy
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr "bagi atau seperti hingga Anda hingga buka."
+
+#, fuzzy
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Font Bitstream Vera"
+
+#, fuzzy
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Font for buka:"
+
+#~ msgid "Sound"
+#~ msgstr "Bunyi"
+
+#, fuzzy
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr "piawai masa ."
+
+#, fuzzy
+#~ msgid "&Beep on error"
+#~ msgstr "Name=Ralat proses"
+
+#, fuzzy
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Main."
+
+#, fuzzy
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr "ialah piawai masa  bagi."
+
+#, fuzzy
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Bunyi buka"
+
+#, fuzzy
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "         %s [--level <tahap>] <nama> %s)\n"
+
+#, fuzzy
+#~ msgid "chars/minute"
+#~ msgstr "Aksara per inci"
+
+#, fuzzy
+#~ msgid "Typing speed:"
+#~ msgstr "Kelajuan Failover"
+
+#, fuzzy
+#~ msgid "Workload:"
+#~ msgstr "%s: %d perkataan"
+
+#, fuzzy
+#~ msgid "Limits to increase a level"
+#~ msgstr "Peratusan yang betul untuk menaikkan tahap"
+
+#, fuzzy
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Peratusan yang betul untuk mengurangkan tahap"
+
+#, fuzzy
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Dimatikan"
+
+#, fuzzy
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Ingat tahap semasa ketika KTouch dimulakan nanti"
+
+#, fuzzy
+#~ msgid "Current Training Session"
+#~ msgstr "Mengembalikan Sesi Terakhir"
+
+#, fuzzy
+#~ msgid "Levels in this session:"
+#~ msgstr "Ingat kebenaran untuk sessi ini"
+
+#, fuzzy
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "[T] Sela masa pemancaran utama (saat): "
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr "bagi saat inci."
+
+#, fuzzy
+#~ msgid "Characters typed:"
+#~ msgstr "objek memori berjenis"
+
+#, fuzzy
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "bagi dan."
+
+#, fuzzy
+#~ msgid "Mistyped characters:"
+#~ msgstr "Aksara per inci"
+
+#, fuzzy
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "jenis."
+
+#, fuzzy
+#~ msgid "Words typed:"
+#~ msgstr "objek memori berjenis"
+
+#, fuzzy
+#~ msgid "The number of words typed so far."
+#~ msgstr "bagi."
+
+#, fuzzy
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr "nisbah bagi bagi."
+
+#, fuzzy
+#~ msgid "Typing Rate"
+#~ msgstr "Kadar HSync: "
+
+#, fuzzy
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "bagi."
+
+#, fuzzy
+#~ msgid "Words per minute:"
+#~ msgstr "Permintaan per Sambungan"
+
+#, fuzzy
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "bagi."
+
+#, fuzzy
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr "nisbah bagi sering sering inci Besar."
+
+#, fuzzy
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Aksara Statistik hingga buka"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#, fuzzy
+#~ msgid "Current Level Statistics"
+#~ msgstr "Tahap latihan semasa"
+
+#, fuzzy
+#~ msgid "Level:"
+#~ msgstr "Aras:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr "nisbah bagi sering sering Besar."
+
+#, fuzzy
+#~ msgid "Monitor Progress"
+#~ msgstr "Sedang dilaksanakan...   "
+
+#, fuzzy
+#~ msgid "Your Typing Progress"
+#~ msgstr "Jumlah Kemajuan (ulang pakej):"
+
+#, fuzzy
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Ulangbut automatik sedang dijalankan."
+
+#, fuzzy
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "hingga for."
+
+#, fuzzy
+#~ msgid "Progress Chart Options"
+#~ msgstr "Opsyen Saiz Tambahan"
+
+#, fuzzy
+#~ msgid "Chart Data"
+#~ msgstr "Data LPD"
+
+#, fuzzy
+#~ msgid "Session stats"
+#~ msgstr "Mengembalikan Sesi Terakhir"
+
+#, fuzzy
+#~ msgid "Level stats"
+#~ msgstr "Statistik Pakej"
+
+#, fuzzy
+#~ msgid "Chart Type"
+#~ msgstr "Jenis MIME"
+
+#, fuzzy
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Baki masa: %s minit"
+
+#, fuzzy
+#~ msgid "Time scaled"
+#~ msgstr "Waktu Alaska"
+
+#, fuzzy
+#~ msgid "Constant spacing"
+#~ msgstr "CBR"
+
+#, fuzzy
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr "for."
+
+#, fuzzy
+#~ msgid "Clear History"
+#~ msgstr "Buang Sejarah"
+
+#~ msgid "Level"
+#~ msgstr "Aras"
+
+#, fuzzy
+#~| msgid "Keep Current Level"
+#~ msgid "Current level"
+#~ msgstr "Kekalkan Aras Semasa"
+
+#, fuzzy
+#~| msgid "Edit..."
+#~ msgid "..."
+#~ msgstr "Sunting..."
+
+#~ msgid "Speed"
+#~ msgstr "Kelajuan"
+
+#, fuzzy
+#~ msgid "Characters/Minute"
+#~ msgstr "Aksara per inci"
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr "inci."
+
+#, fuzzy
+#~ msgid "New Characters in This Level"
+#~ msgstr "Baru Aksara inci Peringkat"
+
+#, fuzzy
+#~ msgid "Setup Users"
+#~ msgstr "default:LTR"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgid "&Add"
+#~ msgstr "Tambah..."
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Tetapkan susunatur papan kekunci"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Opsyen RAID"
+
+#~ msgid "F&ile"
+#~ msgstr "Fa&il"
+
+#, fuzzy
+#~ msgid "Open Something in Editor"
+#~ msgstr "Buka inci Editor"
+
+#, fuzzy
+#~ msgid "Current something"
+#~ msgstr "Masa Semasa:"
+
+#, fuzzy
+#~ msgid "Preset something:"
+#~ msgstr "/Simpan/Pra-tetap"
+
+#, fuzzy
+#~ msgid "Open file:"
+#~ msgstr "Buka Fail"
+
+#, fuzzy
+#~ msgid "New something"
+#~ msgstr "Teks baru"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "default:LTR"
+
+#, fuzzy
+#~ msgid "Keypad/Number block"
+#~ msgstr "Papar nombor baris"
+
+#, fuzzy
+#~ msgid "Could not open file."
+#~ msgstr "Tidak dapat membuka '%1'. Fail tidak wujud."
+
+#, fuzzy
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Hilang jenis inci."
+
+#, fuzzy
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Pilihan Papan Kekunci"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Jangan Kekalkan"
+
+#, fuzzy
+#~ msgid "Keyboard dimensions:"
+#~ msgstr "Pilihan Papan Kekunci"
+
+#, fuzzy
+#~ msgid "Key Definitions"
+#~ msgstr "Takrifan hos"
+
+#, fuzzy
+#~ msgid "Key definition data:"
+#~ msgstr "Ralat Dengan Data"
+
+#, fuzzy
+#~ msgid "Default level..."
+#~ msgstr "_Aras RAID:"
+
+#, fuzzy
+#~ msgid "Edit color scheme:"
+#~ msgstr "Kod sumber Scheme"
+
+#, fuzzy
+#~ msgid "Background"
+#~ msgstr "Latar Belakang"
+
+#, fuzzy
+#~ msgid "Change Font..."
+#~ msgstr "Tukar Susunan Tab"
+
+#, fuzzy
+#~ msgid "Levels"
+#~ msgstr "Laras Aras..."
+
+#, fuzzy
+#~ msgid "Time needed (beg/adv/pro): "
+#~ msgstr "Masa "
+
+#, fuzzy
+#~ msgid "Save &As..."
+#~ msgstr "Simpan sebagai.."
+
+#, fuzzy
+#~ msgid "Select File to Open"
+#~ msgstr "Tidak dapat membuka '%1'. Fail tidak wujud."
+
+#, fuzzy
+#~ msgid "Current something file"
+#~ msgstr "Comment=Fail Projek KDevelop"
+
+#, fuzzy
+#~ msgid "Color Scheme"
+#~ msgstr "Kedalaman _Warna:"
+
+#, fuzzy
+#~ msgid "Select color scheme:"
+#~ msgstr "Kod sumber Scheme"
+
+#, fuzzy
+#~ msgid "Color scheme for displaying the keyboard"
+#~ msgstr "Warna for"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can choose here the color scheme for displaying the keyboard. "
+#~ "<i>Black & White</i> will display all keyboard letters black on white, "
+#~ "<i>Classic</i> will colorize the same color for each finger, <i>Deep "
+#~ "Blue</i> will display the keyboard in different deep blue colors and "
+#~ "<i>Stripy</i> will alternate blue and gray for letters corresponding to "
+#~ "same finger."
+#~ msgstr ""
+#~ "Anda for<i> Hitam Putih</i> buka<i> Klasik</i> for<i> Dalam Biru</i> inci "
+#~ "dan<i></i> dan for hingga."
+
+#, fuzzy
+#~ msgid "Use common typing line colors independent of color scheme"
+#~ msgstr "Guna bagi"
+
+#, fuzzy
+#~ msgid "Typing Line Colors"
+#~ msgstr "Papar nombor baris"
+
+#, fuzzy
+#~ msgid ""
+#~ "If checked this shows your error using the colors below on the typing line"
+#~ msgstr "buka"
+
+#, fuzzy
+#~ msgid "Maximum height of sliding line widget:"
+#~ msgstr "tinggi bagi:"
+
+#, fuzzy
+#~ msgid "in pixels"
+#~ msgstr "Lebar kanvas dalam piksel"
+
+#, fuzzy
+#~ msgid "Change the font for the student and teacher lines"
+#~ msgstr "Tukar for dan"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you want to override the font of the training lecture check this box "
+#~ "and set your own font."
+#~ msgstr "hingga bagi kotak dan."
+
+#, fuzzy
+#~ msgid ""
+#~ "Most lectures suggest a font to use. This is necessary for not so common "
+#~ "languages where characters may be displayed in a strange way and distort "
+#~ "the sliding line. If you check this button you can choose your own font "
+#~ "and override the lecture font."
+#~ msgstr "hingga ialah for inci dan dan."
+
+#, fuzzy
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Peringkat Atas Bawah Had"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

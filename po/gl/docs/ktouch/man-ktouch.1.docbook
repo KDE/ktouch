@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Galician  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual do usuario do KDE</title>
+<author
+><personname
+> <firstname
+>Ben</firstname
+> <surname
+>Burton</surname
+> </personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>30 May, 2005</date>
+<productname
+>Ambiente de Escritorio K</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Titor de mecanografía para o KDE</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>URL</option
+></group
+> <arg choice="opt"
+>Opcións xenéricas do KDE</arg
+> <arg choice="opt"
+>Opcións xenéricas do Qt</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrición</title>
+<para
+>O &ktouch; é un programa para aprender a escribir nun teclado. Axuda a aprender a escribir nun teclado rápida e correctamente. Cada dedo ten o seu sitio no teclado con teclas asociadas que premer.</para
+> 
+<para
+>O &ktouch; axuda a aprender a escribir nun teclado fornecendo un texto co que adestrarse e axústase a niveis diferentes dependendo de como vaias. Pode mostrar a tecla que hai que premer a continuación e o dedo correcto que hai que empregar.</para>
+<para
+>Este aplicativo fai parte do módulo de educación oficial do &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Opcións</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>URL</option
+></term>
+<listitem
+><para
+>O ficheiro de adestramento que abrir</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vexa tamén</title>
+<para
+>Disponse de documentación do usuario máis detallada en <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (introduza tanto este <acronym
+>URL</acronym
+> no &konqueror; como execute <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</para>
+
+<para
+>Tamén hai máis información dispoñíbel no <ulink url="http://edu.kde.org/ktouch/"
+>sitio web de Edutainment do &kde;</ulink
+>.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>KTouch escribíronno <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> e <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Esta páxina de manual está baseada na preparada para Debian por <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

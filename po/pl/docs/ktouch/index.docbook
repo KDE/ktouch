@@ -1,0 +1,1273 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY kappname "&ktouch;"
+><!-- replace kapp here -->
+<!ENTITY package "kdeedu">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Polish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title
+>Podręcznik &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+> <surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Adrian</firstname
+><surname
+>Brosz</surname
+><affiliation
+><address
+><email
+>adriian@wp.pl</email
+></address
+></affiliation
+><contrib
+>Polskie tłumaczenie</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2008-08-23</date>
+<releaseinfo
+>1.7.1</releaseinfo>
+
+<abstract>
+<para
+>&ktouch; to program do nauki szybkiego (bezwzrokowego) pisania na klawiaturze. Udostępnia on tekst do treningu, i dopasowuje go do różnych poziomów, w zależności od tego jak dobry jesteś w pisaniu. Program może również wyświetlać jaki klawisz ma być naciśnięty w następnej kolejności oraz właściwy dla tego klawisza palec.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>bezwzrokowe pisanie maszynowe</keyword>
+<keyword
+>bezwzrokowe pisanie na klawiaturze</keyword>
+<keyword
+>pisanie na klawiaturze</keyword>
+<keyword
+>pisanie maszynowe</keyword>
+<keyword
+>edukacja</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>dotyk</keyword>
+<keyword
+>pisanie</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="using_ktouch">
+<title
+>Sposób użycia programu &ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Wprowadzenie</title>
+
+<sect2>
+<title
+>Co to jest &ktouch;?</title>
+<para
+>&ktouch; jest programem do nauki bezwzrokowego pisania na klawiaturze.</para>
+<para
+>&ktouch; udostępnia tekst do treningu, i dopasowuje go do różnych poziomów, w zależności od tego jak dobry jesteś w pisaniu. Program może również wyświetlać jaki klawisz ma być naciśnięty w następnej kolejności oraz właściwy dla tego klawisza palec.</para>
+
+<screenshot>
+<screeninfo
+>Okno główne &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Okno główne &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&ktouch; udostępnia Ci tekst do treningu dopasowując się do zróżnicowanych poziomów, w zależności jak zaawansowany jesteś. Może wyświetlać który klawisz nacisnąć jako następny, jak również którego palca użyć. Jest on doskonałym nauczycielem bezwzrokowego pisania na klawiaturze, uczysz się krok po kroku używając kolejnych palców, bez patrzenia na klawisze. Jest wygodnym dla wszystkich grup wiekowych, świetnym nauczycielem dla szkół, uniwersytetów, a także przy nauczaniu indywidualnym. &ktouch; jest darmowy, i udostępniany na licencji &GNU;, więc nigdy nie będziesz musiał płacić za program lub aktualizację. </para>
+</sect2>
+
+<sect2>
+<title
+>Możliwości </title>
+
+<para
+>W bieżącej wersji &ktouch; 1.7.1 posiada wiele pomocnych usprawnień takich jak:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Wsparcie dla wielu różnych ćwiczeń treningowych w  kilku językach, włączając w to specyficzne dla danego języka czcionki oraz wygodny edytor ćwiczeń</simpara
+></listitem>
+<listitem
+><simpara
+>Wsparcie dla różnych układów klawiatury, z możliwością używania układów klawiatury zdefiniowanych przez użytkownika</simpara
+></listitem>
+<listitem
+><simpara
+>Podczas sesji treningowej uzyskiwane są obszerne informacje statystyczne, aby pomóc Ci (lub Twojemu nauczycielowi) zanalizować postępy</simpara
+></listitem>
+</itemizedlist>
+<para
+>Wiele z tych funkcji jest zawartych i zostanie omówionych w odpowiednich rozdziałach tego podręcznika. </para>
+
+</sect2>
+</sect1>
+
+
+<sect1 id="learning">
+<title
+>Nauka szybkiego pisania na klawiaturze z &ktouch;</title>
+
+<para
+>Tutaj znajduje się zrzut ekranu programu &ktouch; w akcji, tym razem z niemieckim układem klawiatury oraz ćwiczeniem:</para>
+
+<screenshot>
+<screeninfo
+>Okno główne programu &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Okno główne programu &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Mimo, że nauka szybkiego pisania na klawiaturze z programem &ktouch; oraz jego obsługa powinna być bardzo prosta, przyjrzymy się mu dokładniej w kolejnych sekcjach.</para>
+
+<sect2 id="getting_started">
+<title
+>Rozpoczynanie pracy</title>
+
+<para
+>Kiedy uruchamiasz &ktouch; możesz zobaczyć ekran pokazany powyżej. Główne okno programu wyświetla trzy sekcje: </para>
+<orderedlist>
+<listitem
+><simpara
+>Parę statystyk dotyczących pisania - na górze</simpara
+></listitem>
+<listitem
+><simpara
+>Tekst który powinieneś wpisać (w linijce nauczyciela) oraz tekst który wpisałeś do tej pory ( w linijce studenta)</simpara
+></listitem>
+<listitem
+><simpara
+>Klawiatura (wyglądająca, mam nadzieję jak Twoja)</simpara
+></listitem>
+</orderedlist>
+<para
+>Przejrzymy te sekcje później jeszcze raz.</para>
+<para
+>Ok, kiedy po raz pierwszy uruchomisz &ktouch;, otworzy on domyślne ćwiczenie i wybierze domyślny układ klawiatury zdefiniowany w &systemsettings;. Aby zmienić układ klawiatury należy wybrać <menuchoice
+><guimenu
+>Ustawienia</guimenu
+><guimenuitem
+>Układy klawiatury...</guimenuitem
+></menuchoice
+> i wybrać kraj w którym się znajdujesz (lub kraj w którym się używa takiej samej klawiatury jak Twoja). Jeśli Twoja klawiatura nie jest zawarta w zestawie, zawsze możesz zdefiniować własną (zobacz<link linkend="create_keyboards"
+>Tworzenie własnego układu klawiatury</link
+>). </para>
+<para
+>Po wybraniu układu klawiatury, wybierz jeszcze ćwiczenie. Pierwsza linia w twoim bieżącym ćwiczeniu jest pokazywana w linijce nauczyciela. Możesz wybrać dowolne z domyślnych ćwiczeń poprzez <menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+><guimenuitem
+>Domyślne ćwiczenia...</guimenuitem
+></menuchoice
+> albo otworzyć ćwiczenie zdefiniowane przez użytkownika (np. jeśli twój nauczyciel da Ci specjalny zestaw ćwiczeń do nauki) poprzez <menuchoice
+><guimenu
+>Plik</guimenu
+><guimenuitem
+>Otwórz ćwiczenie...</guimenuitem
+></menuchoice
+>. Możesz nawet stworzyć swoje własne ćwiczenie (zobacz <link linkend="create_lectures"
+>Tworzenie własnych ćwiczeń</link
+>). Kiedy wybierzesz ćwiczenie i układ klawiatury możesz zaczynać pisanie. </para>
+<para
+>Połóż ręce na klawiaturze, jak oznaczono 8 kolorami (kciuki na spacji) i zacznij pisać tekst pokazywany w linijce nauczyciela. Klawisz który należy nacisnąć jest podświetlony na klawiaturze (ekranowej), a jeśli potrzeba przesunięcia palca z jego pozycji spoczynkowej, na klawisz docelowy, podświetlone są klawisze docelowy i odpowiedni klawisz spod palca. Staraj się jak najmniej poruszać rękami, a po napisaniu znaku zawsze próbuj przemieszczać palce na ich pozycje spoczynkowe. </para>
+<tip
+><para
+>Kolory klawiszy wskazują, którym palcem masz nacisnąć dany klawisz.</para
+></tip>
+<para
+>Kiedy piszesz zdarzają się błędy, naciśnięcia niewłaściwych klawiszy. W takim przypadku linijka studenta zmieni swój kolor (domyślnie na czerwony) i musisz nacisnąć Backspace aby usunąć błędny znak (lub znaki). </para>
+<para
+>Jeśli zakończysz poprawnie jedną linię tekstu, musisz nacisnąć &Enter; aby przejść do następnej. </para>
+</sect2>
+
+<sect2 id="lectures_and_levels">
+<title
+>Ćwiczenia i poziomy</title>
+<para
+>Jak już wcześniej wspomniano potrzebne jest ćwiczenie treningowe, zawierające cały tekst, który chcesz przerobić. Zwykle, poziom trudności tekstu wzrsta stopniowo, ponieważ większość ćwiczeń zawiera zróżnicowane poziomy trudności. Jednak niektóre ćwiczenia mogą zawierać pojedynczy poziom i test (np. artykuł z gazety dla sprawdzenia Twoich umiejętności). </para>
+<para
+>W ramkach informacyjnych okna głównego &ktouch; po lewej stronie możesz zobaczyć bieżący poziom. Małe przyciski po prawej stronie pozwalają na ręczną zmianę poziomów. Zwykle wykonuje się to automatycznie (więcej na ten temat w sekcji <link linkend="training_options"
+>Opcje treningu</link
+>. Ramka po prawej ukazuje krótką informację o poziomie. Podaje ona zwykle listę znaków, które są nowe na danym poziomie. Środkowe dwie ramki pokazują Twoją bieżącą szybkość pisania (w znakach na minutę) oraz poprawność. Te wartości to statystyki dla poziomu, więc są czyszczone kiedy zaczynasz nowy poziom. Jednakże, program nadal pamięta Twoje poprzednie statystyki (więcej na ten temat w sekcji <link linkend="statistics"
+>Statystyki w &ktouch;</link
+>). </para>
+</sect2>
+
+<sect2 id="starting_stopping">
+<title
+>Rozpoczynanie i kończenie sesji treningowej</title>
+<para
+>W momencie gdy piszesz tekst ćwiczenia trenigowego, znajdujesz się w trakcie sesji. Możesz rozpocząć nową sesję poprzez <menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+><guimenuitem
+>Rozpocznij nową sesję ćwiczeniową</guimenuitem
+></menuchoice
+> albo odpowiedni przycisk na pasku narzędzi. Zmiana poziomu (automatyczna lub ręczna) nie zmienia Twojej sesji treninigowej. Pozostajesz w niej do czasu rozpoczęcia nowej sesji, wyboru nowego ćwiczenia (co automatycznie rozpoczyna nową sesje) lub wyjścia z programu. </para>
+<para
+>Jeśli otworzysz dowolne okno dialogowe w programi &ktouch;, podczas sesji treninowej, ćwiczenie jest zatrzymywane, jak również zegar, aż do momnetu nacisnięcia następnego klawisza. Mozesz ręcznie zatrzymać sesję poprzez <menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+><guimenuitem
+>Zatrzymaj sesję</guimenuitem
+></menuchoice
+> lub odpowiedni przycisk na pasku narzędzi. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="statistics">
+<title
+>Statystyki w &ktouch;</title>
+<para
+>&ktouch; pamięta o Tobie! Wszystko co napiszesz jest rejestrowane i tworzy się kilka użytecznych (a czasami po prostu interesujących) statystyk. &ktouch; zachowuje dane statystyczne opierając się  na pliku ćwiczeniowym, który używasz do treningu. Dla każdego ćwiczenia przechowywana jest osobna statystyka. &ktouch; również odróżnia statystyki poziomu i sesji treningowej, co jest ważne, by umiemożliwić oszukiwanie :-). </para>
+
+<sect2>
+<title
+>Statystyki sesji treningowej</title>
+<screenshot>
+<screeninfo
+>Bieżące statystyki treningu</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Bieżące statystyki treningu</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Kiedy tylko rozpoczniesz nową sesję treningową uruchamiane jest zapisywanie nowych statystyk. &ktouch; zapamiętuje kilka wartości, w celu oceny Twoich umiejętności, oraz pomocy przy identyfikacji klawiszy sprawiających najwięcej problemów: </para>
+<itemizedlist>
+<listitem
+><simpara
+>Ile klawiszów nacisnięto w sumie?</simpara
+></listitem>
+<listitem
+><simpara
+>Ile klawiszów naciśnięto poprawnie?</simpara
+></listitem>
+<listitem
+><simpara
+>Które klawisze były pomijane, i jak często?</simpara
+></listitem>
+<listitem
+><simpara
+>Ile poprawnych słów napisałeś?</simpara
+></listitem>
+<listitem
+><simpara
+>Ile czasu potrzebowałeś?</simpara
+></listitem>
+</itemizedlist>
+<para
+>Przy użyciu statystyk sesji treningowych, możesz wyznaczyć swoje ogólne wyniki oraz umiejętności w konkretnym ćwiczeniu.</para>
+</sect2>
+
+<sect2>
+<title
+>Statystyki poziomu</title>
+<para
+>Dla każdego poziomu Twojej sesji treningowej (np. wszystkie poziomy w których wpisywałeś tekst) otrzymywane są takie same statystyki jak dla całej sesji. Używając danych statystcznych poziomu, możesz wykryć postęp jakiego dokonałeś w każdym poziomie ćwiczenia (dzięki czemu zobaczysz jak Twoje umiejętności zwiększają się, z poziomu na poziom i skoncentrować się na tych poziomach które nadal powodują problemy. </para>
+</sect2>
+
+<sect2>
+<title
+>Okno dialogowe statystyk</title>
+<para
+><menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+><guimenuitem
+>Statystyki ćwiczenia</guimenuitem
+></menuchoice
+> albo przycisk statystyk w pasku narzędzi otwiera okno dialogowe statystyk. Wyświetla ono bieżące statystyki treningu i poziomu oraz graficzną historię poprzednich sesji. </para>
+<para
+>Po otwarciu okna dialogowe statystyk można wybrać kartę <guilabel
+>Aktualna sesja treningowa</guilabel
+> lub kartę <guilabel
+>Statystyki bieżącego poziomu</guilabel
+>. Pierwsza karta zawiera podsumowanie wszystkiego co do tej pory napisałeś. Druga zawiera statystyki dla bieżącego poziomu. Jest ona użyteczna do oceny różnic pomiędzy ogólną sprawnością pisania oraz umiejętnościami na poszczególnych poziomach. </para>
+<para
+>Trzecia zakładka statystyk, wyświetla graficzny przegląd Twoich umiejętności pisania udostępniając kilka możliwości. Należy zwrócić uwagę na skalę czasu. Zawsze gdy wyświetlane są statystyki poziomu lub sesji, zapisywana jest ich data. Tak więc można zobaczyć jak Twoje umiejętności zmniejszyły się z powodu długich przerw między treningami oraz kiedy ostatnio ćwiczyłaś jakieś ćwiczenie lub poziom. </para>
+<screenshot>
+<screeninfo
+>Wykres statystyk treningu</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog_chart.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Wykres statystyk treninigu</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="ui_guide">
+<title
+>Menu głowne programu &ktouch; oraz okna dialogowe</title>
+<para
+>W tym rozdziale zajmiemy się paroma detalami programu. <tip
+><para
+>Możesz użyć <quote
+>Co to jest? </quote
+> (mały znak pytajnika obok przycisków minimalizujących/maksymalizujących okno) w wielu oknach dialogowych programu.</para
+></tip>
+</para>
+
+<sect1 id="main_menu">
+<title
+>Menu &ktouch;</title>
+<para
+>Większość pozycji menu &ktouch; nie wymaga szczegółowych wyjaśnień.Menu <guimenu
+>Plik</guimenu
+> zawiera opcje otwierania zdefiniowanego przez użytkownika ćwiczenia oraz edycji ćwiczeń. Menu <guimenu
+>Ćwiczenie</guimenu
+> zawiera opcje treningu, natomiast menu <guimenu
+>Ustawienia</guimenu
+> zawiera opcje ustawień programu. Różnorodne opcje znajdujące się w oknie dialogowym konfiguracji są wyjaśnione w następnej sekcji.</para>
+</sect1>
+
+<sect1 id="program_settings">
+<title
+>Opcje konfiguracji dla &ktouch;</title>
+<para
+>Możesz dopasować &ktouch; do swoich potrzeb. Ustawienia są zawsze zachowywane dla bieżącego użytkownika programu. Otwórz okno dialogowe konfiguracji poprzez <menuchoice
+><guimenu
+>Ustawienia</guimenu
+><guimenuitem
+>Konfiguruj &ktouch; ...</guimenuitem
+></menuchoice
+>.</para>
+
+<sect2 id="general_options">
+<title
+>Opcje ogólne</title>
+<para
+>W tym oknie dialogowym możesz zmieniać opcje ogólne, kontrolujące zachowanie programu &ktouch;. </para>
+<screenshot>
+<screeninfo
+>Opcje ogólne</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="general_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcje ogólne</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Na początek, można włączyć lub wyłączyć dzwięk (co może być użyteczne w szkolnych klasach). Możesz również ustawić szybkość przesuwania się linijki nauczyciela i studenta. </para>
+<para
+>Ważniejszym jednak, może być wybór czcionki ćwiczenia. &ktouch; wyświetla normalnie linijkę nauczyciela używając czcionki wyspecyfikowanej w pliku ćwiczeniowym. Jeśli nie ma takiej czcionki w systemie, lub też żadna nie została wybrana, &ktouch; użyje domyślnej czcionki systemowej. Ale co zrobić, gdy ta czcionka nie zawiera wszystkich potrzebnych znaków? Wtedy możesz wybrać taką czionkę która będzie Ci odpowiadać. <note
+><para
+>&ktouch; rozróznia pomiędzy czcionkami ćwiczenia i klawiatury. Nadpisanie ustawienia czcionki ćwiczeniowej nie powoduje automatycznego dostosowania czcionki klawiatury. Trzeba użyć odpowiedniej opcji na zakładce Opcje klawiatury.</para
+></note>
+</para>
+</sect2>
+
+<sect2 id="training_options">
+<title
+>Opcje treningu</title>
+<para
+>W tym oknie dialogowym możesz wybrać opcje kontrolujące sposób zmiany poziomów trudności przez &ktouch; opierające się na umiejętnościach użytkownika.</para>
+<screenshot>
+<screeninfo
+>Opcje treningu</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opcje treningu</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Jeśli włączone jest<guibutton
+>Automatyczne dopasowanie poziomu</guibutton
+> , &ktouch; sprawdza podane limity na zakończenie każdego poziomu i decyduje czy zmniejszyć czy zwiększyć poziom trudności, lub ewentualnie pozostać na bieżącym w celu jego powtórzenia. Zmiany poziomów odbywają się zawsze po ichzakończeniu (np. gdy użytkownik ukończy ostatnią linijkę poziomu). Jeśli szybkość pisania (w znakach na sekundę) oraz dokładność (poprawność) są <emphasis
+>obie</emphasis
+> powyżej lub równe <quote
+>Limitom potrzebnym dla zwiększenia poziomu</quote
+> &ktouch; przeskoczy do następnego wyższego poziomu treningu. Jeśli szybkość pisania <emphasis
+>lub</emphasis
+> dokładność jest poniżej <quote
+>Limitów potrzebnych dla zmniejszenie poziomu</quote
+> &ktouch; powróci do poprzedniego, niższego poziomu. </para>
+<para
+>Na tej zakładce konfiguracyjnej możesz również wybrać czy program ma zapamiętywać Twój obecny poziom treningu i wracać do niego przy restarcie. </para>
+</sect2>
+
+<sect2 id="keyboard_options">
+<title
+>Ustawienia klawiatury</title>
+<para
+>W tym oknie dialogowym możesz zmienić opcje dotyczące klawiatury.</para>
+<screenshot>
+<screeninfo
+>Ustawienia klawiatury</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="keyboard_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Ustawienia klawiatury</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>To okno dialogowe kontroluje wygląd i funkcjonalność klawiatury. Podobnie jak opcja <quote
+>Nadpisz czcionkę ćwiczenia </quote
+> w <guilabel
+>Ustawieniach ogólnych</guilabel
+>, możesz tutaj ustawić swoją własną czcionkę klawiatury. Opcja <quote
+> Podświetlaj klawisze na klawiaturze </quote
+> może być używana do zmniejszania trudności treningu. <tip
+><para
+>Jak tylko zaznajomisz się z klawiaturą możesz wyłączyć podświetlenie klawiszy, dzięki czemu nie będzie rozpraszało to Twojej koncentracji na tekście nauczyciela.</para
+></tip>
+</para>
+</sect2>
+
+<sect2 id="color_options">
+<title
+>Ustawienia koloru</title>
+<para
+>W tym oknie dialogowym możesz dopasować kolory używane przez &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Ustawienia koloru</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Ustawienia koloru</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Można określić kolor tekstu i kolor tła dla wiersza w którym znajduje się tekst uczony, tekst wprowadzany i tekst błędnie wprowadzony. </para>
+</sect2>
+
+<sect2 id="sound_options">
+<title
+>Ustawienia dźwięków</title>
+<para
+>W tym oknie dialogowym możesz dopasować opcje dźwiękowe programu &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Ustawienia dźwięków</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="sound_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Ustawienia dźwięków</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Włączanie lub wyłączanie opcji <guilabel
+>Sygnał błędu</guilabel
+>, <guilabel
+>Odgłosymaszyny do pisania</guilabel
+> lub <guilabel
+>Dźwięk automatycznej zmiany poziomu</guilabel
+>. </para>
+</sect2>
+
+</sect1>
+</chapter>
+
+
+<chapter id="extending">
+<title
+>Rozszerzanie możliwości programu &ktouch;</title>
+
+<sect1 id="create_lectures">
+<title
+>Tworzenie własnego ćwiczenia</title>
+<para
+>Możesz łatwo stworzyć swój własny plik ćwiczeniowy, poprzez wbudowany w &ktouch; edytor ćwiczeń. Kiedy wybierzesz <menuchoice
+><guimenu
+>Plik</guimenu
+><guimenuitem
+>Edytuj ćwiczenie...</guimenuitem
+></menuchoice
+> otworzy się <quote
+>Okno dialogowe otwierania pliku</quote
+> i będziesz miał możliwość wybrania ćwiczenia. Możesz zarówno edytować bieżące ćwiczenie, każde z wstępnie zdefiniowanych ćwiczeń (jeśli masz uprawnienia zapisu do katalogu instalacji), można również stworzyć nowe, puste ćwiczenie.</para>
+
+<sect2>
+<title
+>Tworzenie ćwiczenia</title>
+<para
+>Przyjmijmy że chcesz stworzyć nowe ćwiczenie. Oto kilka wskazówek, które możesz wziąć pod uwagę: </para>
+<itemizedlist>
+
+
+<listitem
+><para
+>Dla pierwszych 20 klawiszy, dodawaj na raz tylko 2 nowe na każdy poziom. Pozwól użytkownikowi ćwiczyć klawisze pojedynczo w różnych kombinacjach, a następnie używaj tych klawiszy w słowach, połączonych z już znanymi słowami. </para
+></listitem>
+
+<listitem
+><para
+>Dodaj co najmniej kilka poziomów ćwiczenia, w celu umożliwienia użytkownikowi zobaczenia swojego postępu podczas treningu</para
+></listitem>
+
+<listitem
+><para
+>Nie twórz zbyt długich poziomów. </para
+></listitem>
+
+<listitem
+><para
+>Próbuj stopniowo zwiększać trudność tekstu, i sprawdzaj swój tekst własnoręcznie. </para
+></listitem>
+
+<listitem
+><para
+>Po nauczeniu się pierwszych klawiszy dołącz ćwiczenie podsumowujące. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title
+>Rzeczy, które należy wiedzieć o ćwiczeniach</title>
+<para
+>Tytuł ćwiczenia jest ważny dla szybkiego wyboru pozycji menu, w menu treningowym, oraz dla statystyk. Komentarz powinien zawierać informacje o autorze oraz źródle ćwiczenia jeśli jakieś istnieje. </para>
+<para
+>Dla każdego poziomu możesz ustalić nowe znaki/klawisze w ćwiczeniu. Tekst który wpiszesz będzie widoczny jako informacja o poziomie w prawej górnej ramce w oknie głównym programu &ktouch; </para>
+<para
+>Możesz także ustalić domyślną czcionkę dla ćwiczenia, używaną później w linijce nauczyciela i studenta, jak również oknie dialogowym edycji ćwiczenia poprzez przycisk <guibutton
+>Czcionka</guibutton
+>. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="create_keyboards">
+<title
+>Tworzenie własnego pliku klawiaturowego</title>
+<para
+>Istnieje możliwość tworzenia własnych układów klawiatury poprzez pliki klawiaturowe. Obecnie &ktouch; nie posiada edytora klawiatur, ale wciąż jest bardzo łatwo zdefiniować własną klawiaturę. Nie wymaga to nic ponad niewielką znajomością matematyki aby ustalić geometrię i nieco czasu. Najlepiej rozpocząć z istniejącym plikiem klawiatury, stworzyć kopię i po prostu dopasować linijki.</para>
+<para
+>Obecnie pliki klawiatur są zwykłymi kodowanymi w UTF-8 plikami tekstowymi. W następnych wersjach &ktouch;, dane będą przechowywane również w plikach &XML;. Dlatego wyjaśnię tylko pokrótce strukturę pliku układu klawiatury. </para>
+<para
+>Plik układu klawiatury zwykle rozpoczyna się od nagłówka zawierającego informacje o autorze i rodzaju klawiatury.</para>
+<programlisting
+>####################################################
+#   &ktouch;
+#    Plik układu klawiatury dla języka niemieckiego
+#    Kodowanie=UTF-8
+####################################################
+</programlisting>
+<para
+>Wszystkie linijki rozpoczynające się od '#' są uważane za komentarze. Po nagłówku, następuje blok tak zwanych <quote
+> klawiszy palca</quote
+>, oznaczających miejsca spoczynku dla wszystkich 8 palców. </para>
+<programlisting
+>#
+#          Unicode  KeyChar  x    y
+#
+KlawiszPalca  97       A        18   20
+KlawiszPalca  115      S        28   20
+KlawiszPalca  100      D        38   20
+KlawiszPalca  102      F        48   20
+KlawiszPalca  106      J        78   20
+KlawiszPalca  107      K        88   20
+KlawiszPalca  108      L        98   20
+KlawiszPalca  246      Ö        108  20
+</programlisting>
+<para
+>Klawisze mają domyślny rozmiar 8 jednostek, więc siatka 10 jednostek daje w rezultacie normalnie wyglądająca klawiaturę. Pierwsza liczba to kod Unicode znaku (liczba dziesiętna). KeyText to tekst wyświetlany na klawiszu kodowany w UTF-8 (domyślne kodowanie w nowych wersjach systemu &Linux;, upewnij się tylko, że Twój edytor zapisuje pliki w formacie UTF-8).</para>
+<para
+>Następna sekcje zawiera klawisze specjalne, które - poza Backspace'm i Enterem - spełniają wyłącznie funkcje dekoracyjne.</para>
+<programlisting
+>#
+#           Unicode  KeyText    x     y     Width Height
+#
+KlawiszKontrolny  260      Tab        0     10    15    10
+KlawiszKontrolny  13       Enter      138   20    12    10
+KlawiszKontrolny  258      Shift      123   30    27    10
+KlawiszKontrolny  264      AltGr      120   40    15    10
+KlawiszKontrolny  265      Ctrl       135   40    15    10
+KlawiszKontrolny  263      Alt        15    40    15    10
+KlawiszKontrolny  262      Strg       0     40    15    10
+KlawiszKontrolny  32       Space  30    40    90    10
+KlawiszKontrolny  257      Shift      0     30    13    10
+KlawiszKontrolny  259      CapsLock   0     20    18    10
+KlawiszKontrolny  8        BackSpace  130   0     20    10
+</programlisting>
+<para
+>Tekst, który wyspecyfikujesz dla klawisza jest wyświetlany w całości na klawiaturze ekranowej. Jednak opisy<quote
+>Shift</quote
+>, <quote
+>CapsLock</quote
+>, <quote
+>Tab</quote
+>, <quote
+>BackSpace</quote
+> i <quote
+>Enter</quote
+> wyświetlają odpowiednie symbole. Dzięki temu możesz użyć tych tekstów niezależnie od języka. Inne opisy, jak Ctrl i Alt muszą być jednak przetłumaczone. Geometria klawiszy funkcyjnych, to dowolny prostopadłościan, zdefiniowany poprzez górny lewy punkt x i y oraz szerokość i wysokość.</para>
+<para
+>Następna sekcja zawiera wszystkie znaki na klawiaturze (poza już zdefiniowanymi klawiszami palców) które można uzyskać <emphasis
+> bez </emphasis
+>naciśnięcia klawisza Shift.</para>
+<programlisting
+>#
+#          Unicode  KeyChar   x    y      FingerKeyUnicode
+#
+KlawiszNormalny  94       ^         0    0      97
+KlawiszNormalny  49       1         10   0      97
+KlawiszNormalny  50       2         20   0      115
+KlawiszNormalny  51       3         30   0      100
+KlawiszNormalny  52       4         40   0      102
+KlawiszNormalny  53       5         50   0      102
+KlawiszNormalny  54       6         60   0      102
+.
+.
+.
+KlawiszNormalny  46       .         103  30     108
+KlawiszNormalny  45       -         113  30     246
+</programlisting>
+<para
+>Definicja tych podstawowych klawiszy jest praktycznie taka sama jak dla klawiszy palców, ale zawierają one dodatkową właściwość. Ostatni kod Unicode identyfikuje połączony klawisz palca, czyli generalnie, który palec jest używany do naciśnięcia tego klawisza.</para>
+<para
+>Następna, a jednocześnie ostatnia sekcja w układzie klawiatury definiuje wszystkie klawisze uzyskiwane przez naciśnięcie klawisza modyfikującego, takiego jak na przykład Shift. </para>
+<programlisting
+>#
+#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode    
+Komentarz
+#
+KlawiszUkryty   65        97              97              258                 #A
+KlawiszUkryty   66        98              102             258                 #B
+KlawiszUkryty   67        99              100             258                 #C
+KlawiszUkryty   68        100             100             258                 #D
+.
+.
+.
+KlawiszUkryty   124       60              97              264                 #|
+KlawiszUkryty   64        113             97              264                 #@
+</programlisting>
+<para
+><quote
+>Klawisz ukryte</quote
+> w rzeczywistości kontrolują co powinno się zdarzyć na klawiaturze kiedy wpiszesz konkrety znak. Pierwszy kod Unicode to kod znaku który definiujesz. Druga liczba jest kodem znaku klawisza na klawiaturze (jednego z już zdefiniowanych, normalnych klawiszy) Trzecia liczba oznacza klawisz palca (gdzie spoczywa palec potrzebny do napisania tego znaku) natomiast ostatnia liczba oznacza klawisz modyfikacyjny, który musisz nacisnąć aby uzyskać ten znak. </para>
+<para
+>Popatrzmy na przykład:</para>
+<para
+>Potrzebujesz klawisza dużego 'R', który ma kod Unicode 82. Znak uzyskiwany gdy naciśnie się klawisz 'R' bez modyfikatora to małe 'r'  o kodzie 114. Klawisz palca dla 'R' spoczywa nad klawiszem 'f' o kodzie Unicode 102. Ażeby uzyskać duże 'R' musisz nacisnąć prawy (lub lewy) Shift który ma kod 264 (nie jest to kod Unicode, lecz liczba uzyskana ze zdarzenia "keypress" w QT). Pamiętaj, że identyfikacja klawiszy sterujących, prawdopodobnie ulegnie zmianie w następnej wersji programu &ktouch;. Ale obecnie możesz używać kodów zawartych w innych plikach klawiatury. </para>
+
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Spis poleceń</title>
+
+<sect1 id="ktouch-mainwindow">
+<title
+>Menu i skróty klawiaturowe</title>
+
+<sect2>
+<title
+>Menu <guimenu
+>Plik</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Plik</guimenu
+> <guimenuitem
+>Otwórz plik tekstowy...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> nowy plik tekstowy do wykorzystania jako ćwiczenie.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Plik</guimenu
+> <guimenuitem
+>Otwórz ćwiczenie...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> nowy plik treninigowy z ćwiczeniem</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Plik</guimenu
+> <guimenuitem
+>Edytuj ćwiczenie...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> edytor ćwiczeń, abyś mógł zmienić bieżący plik treningowy </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Plik</guimenu
+> <guimenuitem
+>Modyfikuj zestaw kolorów...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> edytor zestawu kolorów, który pozwala na zdefiniowanie nowych schematów kolorów</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Plik</guimenu
+> <guimenuitem
+>Modyfikuj układ klawiatury...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> plik klawiatury i pozwala na zmianę układu klawiaturyw oknie dialogowym <guilabel
+>Edytora klawiatur &ktouch;</guilabel
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Plik</guimenu
+> <guimenuitem
+>Wyjdź</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wychodzi</action
+> z programu &ktouch;</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+
+
+<sect2>
+<title
+>Menu <guimenu
+>Ćwiczenie</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+> <guimenuitem
+>Zacznij nową sesję</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Rozpoczyna</action
+> nową sesję ćwiczeń pisania i zapytuje czy chcesz zaczynać na tym samym poziomie</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+> <guimenuitem
+>Zatrzymaj sesję</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zatrzymuje</action
+> bieżącą sesję: statistyki są zachowane</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+> <guimenuitem
+>Statystyki ćwiczeń</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Otwiera</action
+> okno dialogowe bieżących statystyk sesji</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ćwiczenie</guimenu
+> <guisubmenu
+>Domyślne ćwiczenia</guisubmenu
+> <guimenuitem
+>Angielski (auto-generowany)</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> język, dla którego chcesz uczyć się pisania</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menu <guimenu
+>Ustawienia</guimenu
+></title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Wyświetlaj pasek narzędzi</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Przełącza</action
+> wyświetlanie paska narzędzi</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Wyświetlaj pasek stanu</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Przełącza</action
+> wyświetlanie pasku stanu</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Układy klawiatury</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>W tej pozycji <action
+>wyświetlana</action
+> jest lista dostępnych układów klawiatury, z której można wybrać układ mający być używany do ćwiczeń.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Schematy kolorów klawiatury</guisubmenu
+> <guimenuitem
+>Black &amp; White</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> biały schemat kolorów klawiatury: wszystkie są białe, a ten który masz nacisnąć - czarny.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Schematy kolorów klawiatury</guisubmenu
+><guimenuitem
+>Klasyczny</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> klasyczny układ kolorów klawiatury: każda kolumna klawiszy ma inny kolor.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Schematy kolorów klawiatury</guisubmenu
+><guimenuitem
+>Ciemnoniebieski</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> ciemnoniebieski układ kolorów klawiatury: każda kolumna ma inny odcień niebieskiego</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Schematy kolorów klawiatury</guisubmenu
+> <guimenuitem
+>Paski</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> paskowy wygląd kolorów klawiatury: wyświetlane są paski w kolorze niebieskim i szarym</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guisubmenu
+>Bieżący użytkownik</guisubmenu
+><guimenuitem
+>Domyślny użytkownik</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wybiera</action
+> użytkownika dla bieżącej sesji ćwiczeń.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Konfiguruj użytkowników...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wyświetla</action
+> okno dialogowe umożliwiające dodawanie i usuwanie użytkowników programu &ktouch;. Lista użytkowników z tego okna dialogowego jest wyświetlana w podmenu: <guisubmenu
+>Bieżący użytkownik</guisubmenu
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Konfiguruj skróty...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Konfiguruje</action
+> skróty połączone z niektórymi czynnościami </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Konfiguruj paski narzędzi...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Konfiguruje</action
+> elementy które chcesz umieścić w pasku narzędzi </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Ustawienia</guimenu
+> <guimenuitem
+>Konfiguruj &ktouch;...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wyświetla</action
+> okno dialogowe ustawieńt programu &ktouch; </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menu <guimenu
+>Pomoc</guimenu
+></title>
+&help.menu.documentation; </sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasługi i licencja</title>
+<para
+>&ktouch;</para>
+<para
+>&ktouch;, Prawa autorskie 1999-2007</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+
+<para
+>Współpracownicy:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, klawiatura niemiecka, oraz niemiecki plik treningowy i tłumaczenie.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, klawiatura latynoamerykańska</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, klawiatura portugalska</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, klawiatura francuska</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Specjalne podziękowania dla wszstkich innych (nie wymienionych tutaj) osób mających swój wkład w pliki klawiatur i ćwiczeń.</emphasis>
+</para>
+<para
+>Tłumaczenie: Adrian Brosz <email
+>adriian@wp.pl</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Jak zdobyć i zainstalować &ktouch;</title>
+
+ &install.intro.documentation;
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->

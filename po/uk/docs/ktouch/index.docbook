@@ -1,0 +1,1673 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Навчання машинопису</application
+>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Підручник з «Навчання машинопису»</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2019</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>5 січня 2021 року</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Програми 20.12)</releaseinfo>
+
+<abstract>
+<para
+>«&i18n-ktouch;» — це програма для вивчення способу друку наосліп. &i18n-ktouch; надає вам текст для вправ і змінює рівень, на якому ви вправляєтеся, залежно від якості вашої підготовки. Ця програма показує клавішу, яку вам слід натиснути наступною і натякає вам, яким пальцем це слід зробити.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>набирання наосліп</keyword>
+<keyword
+>друк наосліп</keyword>
+<keyword
+>набирання</keyword>
+<keyword
+>машинопис</keyword>
+<keyword
+>освіта</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>дотик</keyword>
+<keyword
+>набір</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Вивчення друку наосліп за допомогою «&i18n-ktouch;»</title>
+
+<sect1 id="introduction">
+<title
+>Вступ</title>
+
+<sect2>
+<title
+>Що таке «&i18n-ktouch;»?</title>
+<para
+>«&i18n-ktouch;» — це програма для навчання друку наосліп.</para>
+<para
+>«&i18n-ktouch;» надає вам текст для вправ і змінює рівень, на якому ви вправляєтеся, залежно від якості вашої підготовки. Ця програма показує клавіатуру і клавішу, яку вам слід натиснути наступною, а крім того, натякає вам, яким пальцем це слід зробити.</para>
+
+<screenshot>
+<screeninfo
+>Головне вікно «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Головне вікно «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Програму «&i18n-ktouch;» призначено для навчання машинопису на особистому рівні. За її допомогою можна навчитися набирати текст усіма пальцями покроково, не дивлячись на клавіатуру і не шукаючи на ній повсякчас потрібні вам клавіші (таке зазирання значно сповільнює друк). </para>
+</sect2>
+
+<sect2>
+<title
+>Можливості</title>
+
+<para
+>У поточній версії «&i18n-ktouch;» програма має кілька корисних функцій, зокрема:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Підтримка багатьох різних курсів багатьма мовами, включно зі зручним редактором курсів</simpara
+></listitem>
+<listitem
+><simpara
+>Підтримка різних розкладок клавіатури з можливістю для користувача самому визначати і редагувати розкладку</simpara
+></listitem>
+<listitem
+><simpara
+>Під час сеансу тренування програмою «&i18n-ktouch;» буде отримано комплексну статистичну інформацію, яка допоможе вам або вашому вчителю проаналізувати поступ навчання</simpara
+></listitem>
+</itemizedlist>
+<para
+>Програма також має багато інших можливостей, які буде обговорено у належних частинах цього довідника. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Перші кроки</title>
+
+<para
+>Ось інший знімок вікна «&i18n-ktouch;» у дії, цього разу з німецькою розкладкою клавіатури і тренувальним уроком:</para>
+
+<screenshot>
+<screeninfo
+>Головне вікно «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Головне вікно «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Хоча навчання друку наосліп за допомогою «&i18n-ktouch;» і використання програми є дуже простим, ви ретельніше оглянемо можливості «&i18n-ktouch;» у наступних розділах.</para>
+
+<sect2 id="creating_profile">
+<title
+>Створення вашого першого профілю</title>
+
+<para
+>Після першого запуску програми «&i18n-ktouch;» ви побачите особливе вікно, яке допоможе вам у створенні вашого першого профілю. Ви можете вибрати назву вашого профілю та рівень ваших навичок у машинописі. </para>
+<tip>
+<para
+>Визначений вами рівень знань вплине за загальні принципи роботи програми «&i18n-ktouch;». У режимі початківця програма розблоковуватиме уроки один за одним, мірою того, як ви їх проходитимете. Досвідченим же користувачам буде одразу відкрито доступ до всіх уроків. </para>
+</tip>
+<note>
+<para
+>Добре обдумайте ваш вибір, оскільки ви не зможете змінити тип профілю згодом. Втім, ви завжди можете створити нові профілі, які краще відповідатимуть вашим навичкам. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>Вітальне вікно «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вітальне вікно «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Щойно буде натиснуто кнопку <guibutton
+>Розпочати навчання</guibutton
+>, програма відкриє свою домашню сторінку. Ця сторінка буде початковою сторінкою програми під час всіх наступних запусків програми «&i18n-ktouch;». </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Вибір уроку</title>
+
+<para
+>Домашня сторінка програми «&i18n-ktouch;» складається з верхньої панелі інструментів та панелі вибору курсу. Додаткові відомості щодо цієї сторінки можна знайти у розділі <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>Вікно домівки «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вікно домівки «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Програма «&i18n-ktouch;» покаже вам перший з курсів, якими можна скористатися для вашої поточної розкладки клавіатури. </para>
+
+<para
+>Якщо для вашої розкладки клавіатури встановлено декілька курсів, ви можете вибрати потрібний вам або вибрати <link linkend="custom_lessons"
+>нетипові уроки</link
+> натисканням відповідних мініатюр у правій частині вікна. </para>
+
+<note>
+<para
+>На деяких платформах, особливо на платформі &Microsoft; &Windows;, ви не зможете скористатися можливістю автоматичного визначення розкладки клавіатури. У такому випадку вам слід натиснути кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів, вибрати пункт <guisubmenu
+>Налаштувати клавіатуру...</guisubmenu
+> і позначити у меню пункт вашої розкладки клавіатури або пункт розкладки, подібної до вашої. Якщо у списку немає потрібної вам розкладки, ви завжди можете визначити власну, див. <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Виберіть потрібний вам урок зі списку у лівій частині вікна. Вибрати заблоковані уроки зі значком <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> не можна, оскільки вони є надто складними для ваших поточних навичок. Вам слід пройти урок, щоб розблокувати наступний. Після позначення пункту уроку його вміст буде показано праворуч від списку уроків. </para>
+<tip>
+<para
+>Ви можете наказати програмі показати або приховати додаткову інформацію щодо позначеного курсу за допомогою кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, розташованої поруч міткою назви курсу. </para>
+</tip>
+<para
+>Щойно буде встановлено потрібні параметри навчання, натисніть кнопку <guibutton
+>Розпочати навчання</guibutton
+>, щоб перемкнутися на навчальне вікно «&i18n-ktouch;». </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Навчання</title>
+<para
+>Навчальне вікно програми «&i18n-ktouch;» складається з трьох основних частин: </para>
+<orderedlist>
+<listitem
+><simpara
+>Деяких статистичних даних, які наведено на інформаційних панелях згори</simpara
+></listitem>
+<listitem
+><simpara
+>Тексту, який вам потрібно вводити</simpara
+></listitem>
+<listitem
+><simpara
+>Візуалізації клавіатури</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>Навчальне вікно «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Навчальне вікно «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>Видимість окремих частин вікна навчання можна налаштувати за допомогою <link linkend="configuration_dialog"
+>діалогового вікна налаштовування програми «&i18n-ktouch;»</link
+>. </para>
+</note>
+
+<para
+>Розташуйте ваші вказівні пальці на двох клавішах з невеличкими виступами поряд з центральною частиною середнього ряду клавіш. Якщо ви так зробите, інші ваші пальці знайдуть відповідні клавіші майже автоматично. Великі пальці має бути розташовано над клавішею пробілу, — єдиної клавіші, яку ви ними натискатимете. Інші пальці мають розташуватися на трьох клавішах, які є сусідніми з клавішами з виступами і перебувають у тому ж ряді клавіш. Клавіші, які слід натискати певним пальцем, буде позначено однаковим кольором. Намагайтеся якомога менше рухати руками. Після того, як ви натиснули клавішу, намагайтеся повернути пальці у вихідні позиції. </para>
+<para
+>Почніть вводити текст, показаний посередині вікна програми. Наступну клавішу, яку вам слід натиснути, завжди буде підсвічено на візуальній клавіатурі. Під час друку ви можете помилитися і натиснути не ту клавішу. У цьому випадку помилково введені символи змінять колір на червоний. Вам доведеться натиснути клавішу &Backspace;, щоб витерти помилкові символи і ввести правильні. </para>
+<para
+>Після успішного завершення рядка тексту вам слід натиснути на клавішу &Enter;, щоб перейти до наступного рядка. </para>
+<tip>
+<para
+>Клавішу, яка переводитиме курсор до наступного рядка можна змінити за допомогою <link linkend="configuration_dialog"
+>діалогового вікна налаштовування програми &i18n-ktouch;</link
+>. </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Перегляд даних щодо поступу навчання</title>
+<para
+>Щойно ви завершити введення уроку, «&i18n-ktouch;» відкриє діалогове вікно статистики. У ньому буде показано статистичні дані поточного сеансу навчання та уроку, а також дані щодо попередніх навчальних сеансів. </para>
+<screenshot>
+<screeninfo
+>Діалогове вікно статистики «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Діалогове вікно статистики «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>У діалоговому вікні статистичних даних ви можете наказати програмі показувати дані щодо певного уроку або дані щодо <guilabel
+>Всіх уроків</guilabel
+>. Ці режими показу будуть корисними для аналізу загального поступу навчання та поступу у вивченні певних уроків. </para>
+<para
+>Якщо ви готові до наступного уроку, натисніть на панелі інструментів кнопку <guibutton
+>Наступний урок</guibutton
+>, щоб продовжити навчання за допомогою наступного уроку у курсі, або натисніть кнопку <guibutton
+>Повторити урок</guibutton
+>, щоб ще раз спробувати ваші навички на поточному уроці. Кнопкою <guibutton
+>Наступний урок</guibutton
+> можна буде скористатися, лише якщо ви пройшли поточний урок. </para>
+<para
+>Якщо ви хочете пройти якийсь інший урок або змінити курс, натисніть кнопку <guibutton
+>Повернутися до початкової сторінки</guibutton
+>. </para>
+<para
+>Якщо ви бажаєте припинити сеанс навчання у програмі «&i18n-ktouch;», просто закрийте вікно програми. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Приготування до навчання</title>
+<para
+>Користування майже всіма елементами домашньої сторінки програми &i18n-ktouch; має зрозумілим без підказок. За допомогою панелі інструментів у верхній частині сторінки ви можете переглянути і налаштувати параметри &i18n-ktouch;. Панеллю вибору курсів можна скористатися для перегляду даних щодо курсів та перемикання між курсами. </para>
+
+<sect2 id="toolbar">
+  <title
+>Панель інструментів «&i18n-ktouch;»</title>
+<para
+>На панелі інструментів програми «&i18n-ktouch;» розташовано кнопку доступу до профілів ліворуч і кнопку меню програми праворуч. </para>
+
+<sect3 id="profile_management">
+<title
+>Керування профілями</title>
+<para
+>За допомогою кнопки профілів, на якій ви побачите мітку з назвою вашого профілю, ви можете керувати профілями програми «&i18n-ktouch;». </para>
+
+<screenshot>
+<screeninfo
+>Керування профілями у «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Керування профілями у «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Ви можете переглядати параметри вже створених профілів, вилучати їх або створити новий профіль за допомогою кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Щоб перевести програму у режим перегляду, натисніть кнопку <guibutton
+>Змінити</guibutton
+>. Щоб вибрати профіль і повернутися до домашньої сторінки, натисніть кнопку <guibutton
+>Використовувати вибраний профіль</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Перегляд даних профілю</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Перегляд даних профілю</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Меню «&i18n-ktouch;»</title>
+<para
+>Меню програми «&i18n-ktouch;» можна відкрити за допомогою кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів домашньої сторінки програми. </para>
+
+<screenshot>
+<screeninfo
+>Меню «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Меню «&i18n-ktouch;»</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Нижче наведено список пунктів меню та короткий опис призначення кожного з них. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Повноекранний режим</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Вмикає або вимикає</action
+> повноекранний режим роботи «&i18n-ktouch;».</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Редактор курсів та розкладок клавіатури...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Відкриває</action
+> <link linkend="extending"
+>вікно редактора</link
+> програми «&i18n-ktouch;» </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Налаштувати Навчання машинопису...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Відкриває</action
+> <link linkend="configuration_dialog"
+>діалогове вікно налаштування</link
+> програми «&i18n-ktouch;» </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Налаштувати скорочення...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Налаштувати</action
+> клавіатурні скорочення, які ви бажаєте пов’язати з якимись із дій </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Налаштувати клавіатуру…</guimenuitem
+></term>
+<listitem
+><para
+>Пункт модуля «Системних параметрів» для налаштовування параметрів роботи клавіатури. Корисний для приготування до навчання за допомогою іншої розкладки клавіатури. </para>
+<note>
+<para
+>На платформах, на яких немає підтримки автоматичного визначення розкладки клавіатури, особливо на платформі &Microsoft; &Windows;, цей пункт буде замінено на підменю вибору розкладки клавіатури у програмі «&i18n-ktouch;» вручну. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>У програмі «&i18n-ktouch;» передбачено типовий пункт меню <guimenu
+>Довідка</guimenu
+> &kde;. Щоб дізнатися більше, ознайомтеся з розділом, присвяченим <ulink url="help:/fundamentals/menus.html#menus-help"
+>меню «Довідка»</ulink
+> підручника з основ роботи у &kde;. </para>
+</sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Діалогове вікно налаштовування</title>
+
+<para
+>Програму «&i18n-ktouch;» можна трохи налаштувати. Визначені параметри роботи буде застосовано одразу до всіх ваших профілів. Відкрити діалогове вікно налаштовування можна натиснувши кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> у правій частині верхньої панелі інструментів домашньої сторінки і вибравши пункт <guimenuitem
+>Налаштувати Навчання машинопису...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Параметри навчання</guilabel
+></term>
+     <listitem>
+       <para
+>У цьому діалоговому вікні ви можете вибрати параметри, які керують виглядом вікна навчання програми «&i18n-ktouch;» та тим, як поводитиме себе програма під час навчання.</para>
+<screenshot>
+<screeninfo
+>Параметри вправи</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметри вправи</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>За допомогою пункту <guilabel
+>Змушувати виправляти друкарські помилки</guilabel
+> можна керувати тим, чи змушуватиме програма користувача виправляти друкарські помилки. </para>
+<para
+>Керувати видимістю панелей статистики та клавіатури можна за допомогою пунктів <guilabel
+>Показувати клавіатуру</guilabel
+> і <guilabel
+>Показувати інтерактивну статистику</guilabel
+>. </para>
+<para
+>Ви можете вибрати клавішу, за допомогою якої можна буде переходити до наступного рядка тексту. Передбачено два варіанти: &Enter; і <keycap
+>Пробіл</keycap
+>. </para>
+<para
+>За допомогою панелі <guilabel
+>Обмеження розблокування наступного уроку</guilabel
+> можна визначити параметри, які керуватимуть розблокуванням уроків вищих рівнів. Програма «&i18n-ktouch;» перевіряє виконання визначених умов після завершення кожного з уроків і вирішує, чи слід розблоковувати наступний урок. Якщо швидкість у символах на хвилину та точність  <emphasis
+>одночасно</emphasis
+> є більшими або рівним за параметри <guilabel
+>Обмеження розблокування наступного уроку</guilabel
+> програма &i18n-ktouch; розблокує наступний урок вищого рівня. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Параметри кольорів</guilabel
+></term>
+  <listitem>
+<para
+>У цьому діалозі ви можете налаштувати кольори, що використовуються &i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Параметри кольорів</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Параметри кольорів</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Тут ви можете вибрати колір тла для клавіш кожного з пальців. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Вибір курсу і уроку</title>
+<para
+>«&i18n-ktouch;» має автоматично визначити вашу розкладку клавіатури і показати лише курси, оптимальні для цієї розкладки. </para>
+<note>
+<para
+>На деяких платформах, зокрема на платформі &Windows;, автоматичним визначенням розкладки клавіатури не можна скористатися. На таких платформах вам слід вибрати розкладку клавіатури вручну за допомогою меню. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Перемикання між курсами</title>
+<para
+>Якщо для вашої розкладки клавіатури встановлено декілька курсів, ви можете вибрати потрібний вам натисканням кнопок <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> і <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, розташованих праворуч від мітки з назвою курсу. Якщо курс лише один, ці кнопки не буде показано. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Розблоковування уроків</title>
+<para
+>Якщо під час <link linkend="creating_profile"
+>початкового створення профілю</link
+> вами було вибрано варіант <guilabel
+>Не маю досвіду з машинопису або маю зовсім невеличкий досвід</guilabel
+> деякі з пунктів уроків буде заблоковано. Такі пункти у списку позначено значком <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, ви не зможете вибрати ці пункти, доки не буде пройдено уроки, які перебувають вище у списку. </para>
+<note>
+<para
+>Параметри проходження уроків можна змінити за допомогою <link linkend="configuration_dialog"
+>діалогового вікна налаштовування програми &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Навчання за допомогою іншої розкладки клавіатури</title>
+<para
+>У «&i18n-ktouch;» ви можете скористатися для навчання будь-якою розкладкою клавіатури. Просто натискайте клавіші, які підсвічує програма, незалежно від того, що написано на них на вашій клавіатурі. </para>
+<para
+>Виберіть пункт <menuchoice
+><guimenu
+>Налаштувати клавіатуру...</guimenu
+></menuchoice
+> у меню програми, щоб вибрати іншу розкладку клавіатури. Щойно вибір буде здійснено, програма «&i18n-ktouch;» підлаштується під нього і покаже вам курси, доступні для вибраної розкладки. </para>
+<note>
+<para
+>На платформах без підтримки автоматичного визначення розкладки клавіатури, зокрема &Microsoft; &Windows;, вам спочатку слід налаштувати операційну систему на нову розкладку, а потім вибрати ту саму розкладку у програмі «&i18n-ktouch;» за допомогою меню програми. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Ефективне навчання</title>
+<sect2 id="training_techniques">
+<title
+>Методики навчання</title>
+<para
+>Нижче можна знайти декілька загальних порад щодо методик навчання машинопису. </para>
+<sect3 id="steady_speed">
+<title
+>Постійна швидкість</title>
+<para
+>Для того, щоб користуватися машинописом ефективно, важливо не просто намагатися друкувати якомога швидше, але і зберігати постійну швидкість, а також знайти для себе природний ритм натискання на клавіші. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>Основа всього — точність</title>
+<para
+>Наступною важливою річчю є зосередження уваги на точності. Лише якщо ви майстерно оволодієте введенням літер поточних розблокованих клавіш, тобто помилятиметеся з введенням відповідних літер дуже рідко, ви матимете змогу пройти складніші уроки з більшою кількістю літер. Як можна переконатися, ви зможете досягти успіху майже автоматично, якщо ви робитимете дуже мало помилок, оскільки ви зекономите багато часу, який раніше витрачався на виправлення помилок. </para>
+<note>
+<para
+>Саме це є причиною того, що для типового рівня точності для розблокування наступного уроку встановлено значення 98%, а вимоги до швидкості є доволі помірними: всього лише 180 символів на хвилину. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Виправлення помилок</title>
+<para
+>Варто ознайомитися з ефективними способами виправлення помилок. Виправлення окремих символів майже завжди є повільнішою справою на виправлення всього слова. Для виправлення слова достатньо просто натиснути комбінацію клавіш <keycombo
+>&Ctrl;&Backspace;</keycombo
+>, а потім знову ввести слово. Для такого виправлення майже не потрібно розумових зусиль. Для виправлення ж окремого символу вам слід спочатку знайти його у слові, вилучити символи до місця помилки, визначити частину слова, якої не вистачає і знову ввести її. Це потребує набагато більшої концентрації уваги, ніж просте повторне введення слова. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Призупинення навчального сеансу</title>
+<sect3 id="automatically_pausing">
+<title
+>Автоматичне призупинення</title>
+<para
+>Якщо ви відкриєте будь-яке діалогове вікно або перемкнетеся на іншу програму під час навчального сеансу, навчання буде призупинено, аж доки ви не повернете фокус до вікна програми «&i18n-ktouch;» і натиснете будь-яку клавішу. </para>
+<para
+>Навчальний сеанс буде призупинено, якщо програма виявить, що користувач не виконує ніяких дій протягом п’яти секунд. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Призупинення вручну</title>
+<para
+>Призупинити поточний сеанс вручну можна натисканням кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів. </para>
+<para
+>Якщо ви натиснете кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів, програма «&i18n-ktouch;» призупинить поточний сеанс і покаже віконце-накладку з пунктами можливих подальших дій. </para>
+<screenshot>
+<screeninfo
+>Меню призупинення програми «&i18n-ktouch;»</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Меню призупинення програми «&i18n-ktouch;»</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Стеження за поступом навчання</title>
+<para
+>Після завершення уроку програма не повертається негайно до домашньої сторінки. Замість цього вам буде показано особливу сторінку резюме і статистичних даних. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Дані щодо швидкості і точності</title>
+<screenshot>
+<screeninfo
+>Сторінка поступу вікна статистичних даних</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Сторінка поступу вікна статистичних даних</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Фільтрування за уроками</title>
+<para
+>За допомогою сторінки статистичних даних щодо швидкості і точності ви можете спостерігати за поступом вашого навчання і визначати слабкі місця у вашій підготовці. </para>
+<para
+>Статистичні дані можна фільтрувати за уроками за допомогою спадного списку, розташованого поряд з міткою <guilabel
+>Набір</guilabel
+>. Ця можливість корисна для стеження за поступом у вивчення поточного уроку і порівняння цього поступу з поступом у вивченні інших уроків. </para>
+<screenshot>
+<screeninfo
+>Спадне меню діапазону статистичних даних</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Спадне меню діапазону статистичних даних</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Додаткові дані щодо сеансу можна переглянути за допомогою панелі підказки пунктів графіків. Якщо ви затримаєте вказівник миші над точкою на графіку, програма «&i18n-ktouch;» покаже статистичні дані щодо відповідного сеансу. </para>
+<screenshot>
+<screeninfo
+>Поступ за уроками</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Поступ за уроками</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Статистика помилок</title>
+<para
+>Перемкнути сторінку результатів на показ частотних характеристик помилок для кожної з клавіш можна за допомогою спадного меню, розташованого поряд з міткою <guilabel
+>Показ</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Перемикання режиму показу статистичних даних</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Перемикання режиму показу статистичних даних</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>У цьому режимі програма «&i18n-ktouch;» показує стовпчикову діаграму помилок для кожної клавіш у останньому сеансі навчання. </para>
+<screenshot>
+<screeninfo
+>Стовпчикова діаграма помилок за клавішами</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Стовпчикова діаграма помилок за клавішами</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Повернутися до графіка уроків можна за допомогою того самого спадного меню, розташованого поряд з міткою <guilabel
+>Показ</guilabel
+>. </para>
+<para
+>Якщо ви пройшли урок, ви можете розпочати вивчення наступного уроку одразу натисканням кнопки <guibutton
+>Наступний урок</guibutton
+> на панелі інструментів. Крім того, ви можете повторити поточний урок за допомогою натискання кнопки <guibutton
+>Повторити урок</guibutton
+> або повернутися до початкової сторінки за допомогою натискання останньої кнопки на панелі інструментів. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Доповнення «&i18n-ktouch;»</title>
+
+<sect1 id="create_courses">
+<title
+>Створення курсів</title>
+<para
+>Ви можете без проблем створити власний навчальний курс за допомогою вбудованого редактора курсів і розкладок клавіатури програми «&i18n-ktouch;». Натисніть кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> у правій частині панелі інструментів початкової сторінки програми і виберіть у меню пункт <guimenuitem
+>Редактор курсів та розкладок клавіатури...</guimenuitem
+>. Ви можете відкрити файл курсу, створити курс з нуля або скористатися вже створеним курсом як шаблоном.</para>
+<important>
+<para
+>Вбудовані курси не можна редагувати, навіть якщо у вас є доступ на запис до теки, до якої їх встановлено. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Головне вікно редактора курсів та розкладок клавіатури</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Головне вікно редактора курсів та розкладок клавіатури</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Властивості курсу</title>
+<para
+>Властивості курсу можна визначити за допомогою майстра створення курсів програми «&i18n-ktouch;». Викликати вікно цього майстра можна за допомогою натискання кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів вікна <guilabel
+>Редактор курсів та розкладок клавіатури</guilabel
+>. </para>
+<para
+>За допомогою першої частині майстра створення даних програми «&i18n-ktouch;» ви можете вибрати тип даних. Виберіть пункт <guilabel
+>Курс</guilabel
+> і натисніть кнопку <guibutton
+>Далі</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Вибір типу</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вибір типу</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>За допомогою другої сторінки майстра ви можете вибрати заголовок, розкладку клавіатури і опис курсу. </para>
+<screenshot>
+<screeninfo
+>Друга сторінка майстра створення нових курсів</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Друга сторінка майстра створення нових курсів</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Заголовок курсу є важливим для пришвидшення доступу до нього за допомогою пункту меню та для показу статистичних даних. </para>
+<para
+>Поле опису слід використовувати для включення даних щодо автора курсу та джерела даних уроків. Цей опис можна буде переглянути за допомогою натискання кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на початковій сторінці програми «&i18n-ktouch;». </para>
+<para
+>Коли належні значення параметрів буде вказано, натисніть кнопку <guibutton
+>Далі</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Третя сторінка майстра створення нових курсів</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Третя сторінка майстра створення нових курсів</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>За допомогою третьої сторінки майстра ви можете вибрати якийсь з вже створених курсів як шаблон для вашого курсу. Виберіть пункт курсу зі списку (якщо це потрібно) і натисніть кнопку <guibutton
+>Завершити</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Вікно редагування нового курсу</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вікно редагування нового курсу</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>У відповідь програма «&i18n-ktouch;» відкриє вікно редактора курсів, готове до введення даних вашого курсу. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Додавання уроків</title>
+<para
+>Курс є впорядкованим набором уроків. Щоб навчання машинопису було ефективним, вміст курсу має відповідати декільком вимогам. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Вибирайте змістовні назви для уроків</emphasis
+></term>
+<listitem>
+<para
+>Для кожного з рівнів ви можете визначити нові символи або клавіші у уроці. Варто зазначити назви нових символів у заголовку уроку. Натисніть пункт назви у списку <guilabel
+>Уроки</guilabel
+> і вкажіть змістовну назву уроку. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Текст, який буде вказано у заголовку уроку, буде показано як дані щодо уроку на початковій сторінці у списку курсів. Якщо урок матиме зрозумілу назву, користувачеві буде набагато простіше його вибрати. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>У першому уроці мають бути завдання для вказівних пальців</emphasis
+></term>
+<listitem>
+<para
+>Зазвичай на клавіатурі є дві тактильні позначки для клавіш у другому ряді, на яких мають перебувати вказівні пальці. Ці дві клавіші та три сусідні з ними клавіші є основним клавішами пальців. В українській розкладці на цих клавішах розташовано символи <emphasis
+>фівапролдж</emphasis
+>. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Над цими вісьмома клавішами слід розташовувати пальці у початковому стані. Учень має спочатку вивчити розташування цих клавіш для успішного продовження навчання машинопису. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Додавайте по дві нові клавіші на урок </emphasis
+></term>
+<listitem>
+<para
+>Звичайно ж, жорстких правил щодо додавання нових клавіш до уроків немає, але, зазвичай, клавіші додають парами, по одній на відповідний палець на обох руках. Додавання слід виконувати від клавіш початкових позицій пальців до найвіддаленіших клавіш. Таким чином, клавіші четвертого ряду слід додавати останніми. Перевагу слід надавати клавішам основних символів вашої мови, — цього можна досягти трохи видозмінивши наведені вище настанови. Наприклад, для французької мови важливими є акценти, тому наголос у уроках слід від початку ставити на введенні акцентів. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Якщо додати у наступному уроці багато клавіш, учень може не впоратися зі складністю цього уроку і втратить мотивацію до подальшого навчання. У перших же уроках слід використовувати основні символи мови, щоб можна було перейти до введення слів якомога раніше. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Додатковий наголос слід робити на нових клавішах</emphasis
+></term>
+<listitem>
+<para
+>Слід робити так, щоб символи, які вводяться за допомогою доданих у уроці клавіш, є найуживанішими у тексті уроку або принаймні такими, що зустрічаються у ньому доволі часто. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>За допомогою відповідного уроку учень має призвичаїтися до нових клавіш. Це можливо, лише якщо у уроці міститься значна кількість відповідних символів. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Перемежовуйте уроки з новими клавішами з уроками повторення вже вивчених клавіш</emphasis
+></term>
+<listitem>
+<para
+>Кожні два або три уроки додавайте урок повторення, у якому нові клавіші не додаватимуться. Уроком повторення має бути звичайний набір символів, у якому зустрічаються всі символи вже використані у попередніх уроках. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Такі уроки допомагають у засвоєнні набутих навичок і допомагають перевірити загальний рівень вивчення матеріалу. Такі уроки також є корисними з огляду на можливість повторного тренування з метою покращення загальних навичок машинопису. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Спеціальні уроки вивчення введення великих літер</emphasis
+></term>
+<listitem>
+<para
+>У курсі має бути передбачено декілька спеціальних уроків, які буде присвячено введенню великих літер. Найкраще вводити великі літери у декілька етапів: спочатку використати ліву клавішу &Shift;, потім праву, потім обидві, а потім один або два уроки повторення. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Вивчення введення великих літер є найскладнішою частиною навчання машинопису. Тому ці уроки потребуватимуть особливих зусиль. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Вивчення всього набору клавіш на клавіатурі</emphasis
+></term>
+<listitem>
+<para
+>Таке вивчення має навчити учня користуватися символами, доступ до яких здійснюється за допомогою клавіш-модифікаторів, відмінних від &Shift;. За ідеальних умов, має бути використано всі можливі символи, цифри та символи, які можна ввести за допомогою клавіатури. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Чим повнішим є курс, тим більше знань може почерпнути з нього учень. Повніші курси також будуть цікавішими для досвідчених у машинописі користувачів. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Скористайтеся кнопкою <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> для додавання до курсу нового уроку, кнопкою <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> для вилучення позначеного уроку з вашого курсу і кнопками <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> для зміни порідку уроків у курсі. </para>
+<important>
+<para
+>Будьте обережними, якщо вилучаєте уроки. Вилучення уроків може призвести до вилучення даних щодо поступу навчання для всіх користувачів курсу. Якщо ви плануєте масштабні зміни у курсі, варто вносити їх до копії старої версії курсу. </para>
+</important>
+<para
+>Вміст уроку можна редагувати за допомогою поля редагування у нижній правій частині вікна редактора. Ви можете скопіювати фрагменти тексту з вашого улюбленого текстового редактора і вставити їх до цього поля. </para>
+<para
+>За допомогою кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> можна відкрити звичайний текстовий файл, вміст якого буде імпортовано до поля тексту уроку. </para>
+<para
+>Кнопку <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> призначено для перенесення рядків тексту уроку. Редактор «Навчання машинопису» переносить рядки так, щоб у кожному з них було не більше рекомендованих 60 символів. </para>
+<para
+>Припустімо, що ви бажаєте додати новий урок. Ось декілька порад, на які вам слід зважати: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Надавайте урокам зрозумілі назви</emphasis
+></term>
+<listitem>
+<para
+>Назви нових символів, якщо такі використано, або формулювання змісту уроку у іншій формі. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Хороший заголовок спрощує пошук курсу, якщо вам потрібен певний курс. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Текст уроку має складатися зі слів мови і речень</emphasis
+></term>
+<listitem>
+<para
+>Краще за все, щоб урок складався зі зрозумілого неперервного фрагмента тексту на довільну тему. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Навчання за допомогою справжніх слів і речень є ефективнішим за навчання за допомогою довільних комбінацій символів, оскільки таке навчання є ближчим до справжнього машинопису. Крім того, так навчатися набагато веселіше. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Уникайте комбінацій літер, що не використовуються у записі слів</emphasis
+></term>
+<listitem>
+<para
+>Навчання за допомогою справжніх слів мови може виявитися неможливим протягом початкових уроків, оскільки учневі буде доступним доволі обмежений набір символів, але щойно це стане можливим, варто використовувати лише слова справжньої мови. Ніколи не використовуйте у ваших уроках слів, які написано з помилками. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Випадкові комбінації символів важко набирати, вони навряд чи трапляться під час набирання звичайних текстів. З іншого боку, слова з помилками можуть збити учня з пантелику або навіть зашкодити навчанню, оскільки учень може запам’ятати помилкове написання слів. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Урок має складатися приблизно з 600 символів</emphasis
+></term>
+<listitem>
+<para
+>Уроки можуть бути довшими, аж до 1200 символів, а ось коротших уроків слід уникати. Це зокрема стосується уроків повторення. </para>
+<note>
+<title
+>Пояснення</title>
+<para
+>Використання розмірів уроків у цьому діапазоні надасть змогу недосвідченому учню (учню, швидкість набирання символів яким є близькою до 120 символів на хвилину) виконати урок протягом п’яти-десяти хвилин. Довші уроки втомлюватимуть учнів, коротші є неефективними. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Перевірка якості на панелі редактора тексту уроку</title>
+<screenshot>
+<screeninfo
+>Перевірка якості у вікні редактора курсів</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Перевірка якості у вікні редактора курсів</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Вище наведено знімок вікна редактора курсів з одним з проблемних уроків. На знімку можна бачити результати використання однієї з вбудованих перевірок якості: перевірки на символи, які є недоступними для цього уроку, оскільки цих символів не було серед нових символів уроку або символів попередніх уроків. Помилкові символи позначено червоним кольором. Також програма здатна перевіряти урок на занадто довгі рядки, притлумлюючи колір символів, які виходять за межі дозволеної довжини рядка. </para>
+<para
+>Ліворуч можна бачити список всіх файлів даних, про які відомо програмі «&i18n-ktouch;», вбудованих та створених користувачем. Якщо користувачем буде вибрано вбудований ресурс, редактор перемкнеться у режим простого перегляду. Якщо користувачем буде вибрано пункт розкладки клавіатури, показані дані також буде видозмінено відповідним чином. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Створення розкладок клавіатури</title>
+<para
+>Створювати власні розкладки клавіатури можна за допомогою вбудованого редактора програми «&i18n-ktouch;». Найкращим варіантом дій є створення нової розкладки на основі вже створеної розкладки, тобто копіювання цієї розкладки з наступним внесенням до неї потрібних вам змін.</para>
+
+<sect2 id="layout_properties">
+<title
+>Властивості розкладки клавіатури</title>
+<para
+>Властивості розкладки клавіатури можна визначити за допомогою майстра створення розкладок клавіатури програми «&i18n-ktouch;». Викликати вікно цього майстра можна за допомогою натискання кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> на панелі інструментів вікна <guilabel
+>Редактор курсів та розкладок клавіатури</guilabel
+>. </para>
+<para
+>За допомогою першої частині майстра створення даних програми «&i18n-ktouch;» ви можете вибрати тип даних. Виберіть пункт <guilabel
+>Розкладка клавіатури</guilabel
+> і натисніть кнопку <guibutton
+>Далі</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Вибір типу</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вибір типу</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>За допомогою другої сторінки майстра ви можете вибрати заголовок і назву розкладки. </para>
+<screenshot>
+<screeninfo
+>Друга сторінка майстра створення розкладки</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Друга сторінка майстра створення розкладки</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Заголовок розкладки є важливим для пришвидшення доступу до неї у списку <link linkend="ktouch_menu"
+>меню налаштовування програми «&i18n-ktouch;»</link
+> та для показу статистичних даних. </para>
+<para
+>Назва розкладки використовуватиметься самою програмою «&i18n-ktouch;». </para>
+<screenshot>
+<screeninfo
+>Третя сторінка майстра створення розкладки</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Третя сторінка майстра створення розкладки</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>За допомогою третьої сторінки майстра ви можете вибрати якусь з вже створених розкладок як шаблон для вашої розкладки. Виберіть пункт розкладки зі списку і натисніть кнопку <guibutton
+>Завершити</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Вікно редагування нової розкладки</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Вікно редагування нової розкладки</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>У відповідь програма «&i18n-ktouch;» відкриє вікно редактора розкладок, готове до введення даних вашої розкладки клавіатури. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Додавання клавіш</title>
+<para
+>Скористайтеся кнопкою <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Звичайна клавіша</guilabel
+>, щоб додати нову звичайну клавішу, або кнопкою <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Спеціальна клавіша</guilabel
+>, щоб додати нову спеціальну клавішу (клавішу-модифікатор, <keycap
+>Пробіл</keycap
+>, &Backspace;, &Tab;, <keycap
+>Caps Lock</keycap
+> або &Enter;) до розкладки. Кнопкою <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Вилучити</guilabel
+> можна скористатися для вилучення позначеної клавіші з розкладки. Масштаб зображення розкладки можна змінювати за допомогою повзунка у лівій частині панелі інструментів редактора. </para>
+<para
+>Параметри окремих клавіш можна змінювати за допомогою нижньої панелі вікна редактора. </para>
+<sect3 id="normal_keys">
+<title
+>Звичайні клавіші</title>
+<para
+>Змінити розмір або параметри клавіші доволі просто. </para>
+<para
+>Почніть з клацання на клавіші, параметри якої ви хочете змінити. У відповідь програма зробить цю клавішу поточною. </para>
+<para
+>У кутах клавіші ви побачите чотири квадратики. Пересуванням цих квадратиків ви можете пересунути межі клавіші у нове місце. Перетягуванням всієї клавіші ви можете змінити розташування клавіші у розкладці. </para>
+<para
+>Числові характеристики геометричних параметрів клавіші також можна змінити за допомогою розділу <guilabel
+>Позиція і розміри</guilabel
+> панелі у нижній частині вікна редактора. </para>
+<screenshot>
+<screeninfo
+>Редагування властивостей окремої клавіші</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Редагування властивостей окремої клавіші</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Крім того, нижньою панеллю можна скористатися для вибору пальця, яким слід натискати клавішу та перемикання показу тактильної позначки на клавіші. </para>
+<sect4 id="key_characters">
+<title
+>Символи клавіші</title>
+<para
+>Символи, які буде показано на клавіші можна змінити за допомогою розділу <guilabel
+>Символи</guilabel
+> нижньої панелі редактора. </para>
+<screenshot>
+<screeninfo
+>Редагування позиції символу</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Редагування позиції символу</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Додати символ можна натисканням кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Позначений пункт символу можна вилучити натисканням кнопки <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Ви також можете вибрати розташування окремих символів на клавіші за допомогою меню, що викликається подвійним клацанням на комірці у стовпчику <guilabel
+>Розташування</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Клавіші-модифікатори</title>
+<para
+>У програмі «&i18n-ktouch;» ви можете визначити декілька клавіш-модифікаторів. Редагувати такі клавіші можна у спосіб, подібний до способу редагування звичайних клавіш, але вам буде корисним знати ідентифікатор клавіші-модифікатора, щоб цією клавішею можна було користуватися належним чином. Нижче наведено таблицю ідентифікаторів клавіш-модифікаторів. </para>
+<table>
+<title
+>Клавіші-модифікатори</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Клавіша-модифікатор</entry>
+<entry
+>Ідентифікатор у програмі «&i18n-ktouch;»</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>left_shift</literal
+> або <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Нетипові уроки</title>
+<para
+>За допомогою нетипових уроків ви можете розширювати навчальний матеріал у простий спосіб, вибираючи для навчання якийсь довільний текст. </para>
+<para
+>Нетипові уроки зібрано у спеціальному курсі, <guilabel
+>Нетипові уроки</guilabel
+>, доступ до якого можна отримати там же, де і до <link linkend="picking_a_lesson"
+>звичайних вбудованих курсів</link
+>. </para>
+<screenshot>
+<screeninfo
+>Курс нетипових уроків</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Курс нетипових уроків</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Цей спеціальний курс працює так само, як і усі інші, зокрема для нього так само збираються навчальні і статистичні дані. Натисканням кнопки <guibutton
+>Додати новий урок</guibutton
+> або кнопки <guibutton
+>Змінити</guibutton
+> (піктограма олівця для вже створених уроків) можна відкрити спрощену версію <link linkend="adding_lessons"
+>звичайного редактора уроків</link
+>. </para>
+<screenshot>
+<screeninfo
+>Редактор нетипових уроків</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Редактор нетипових уроків</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Редактор підсвічуватиме проблемні місця у тексті вашого уроку. Символи, які неможливо набрати за допомогою вибраної розкладки клавіатури, буде позначено червоним тлом, а у рядках, які є занадто довгими, зайві символи буде позначено рожевим кольором тла. У цій програмі для навчання машинопису кожен з рядків уроку має не перевищувати за довжиною рекомендованих 60 символів. </para>
+<para
+>Натисніть кнопку <guibutton
+>Готово</guibutton
+>, щоб підтвердити ваші редагування або закрийте вікно редактора, щоб їх скасувати. </para>
+<tip>
+<para
+>Нетипові уроки розподіляються за профілями користувачів та розкладками клавіатури. Отже, ви можете використовувати різні нетипові уроки для різних потреб навчання. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Перенесення результатів вашої роботи</title>
+<para
+>У програмі «&i18n-ktouch;» передбачено можливість збереження ваших курсів і розкладок клавіатури у окремих файлах поза локальною базою даних програми. </para>
+<sect2 id="export_import">
+<title
+>Експортування та імпортування</title>
+<para
+>Щоб експортувати курс або розкладку клавіатури до окремого файла, натисніть відповідний пункт у списку лівої панелі вікна <guilabel
+>Редактора курсів та розкладок клавіатури</guilabel
+>, а потім натисніть кнопку <guibutton
+>Експортувати</guibutton
+> на панелі інструментів цього ж вікна. </para>
+<para
+>Програма «&i18n-ktouch;» відкриє стандартне діалогове вікно збереження файлів &kde;. Опис цього діалогового вікна можна знайти у главі <ulink url="help:/fundamentals/files.html"
+>Відкриття і збереження файлів</ulink
+> підручника з основ роботи у &kde;. </para>
+<para
+>Ви можете вибрати назву і розташування файла &XML;, який слід зберегти. </para>
+<para
+>Якщо ви вважаєте, що ваша робота варта того, щоб поділитися нею з іншими користувачами, будь ласка, надішліть її з описом  до <ulink url="mailto:kde-edu@kde.org"
+>списку листування kde-edu</ulink
+>. </para>
+<important>
+<para
+>Ваші дані має бути ліцензовано відповідно до <ulink url="https://www.gnu.org/licenses/gpl-2.0.html"
+>Загальної громадської ліцензії &GNU;, версії 2</ulink
+>, щоб автори програми змогли включити їх до типового комплекту даних «&i18n-ktouch;». </para>
+</important>
+<para
+>Щоб імпортувати файли з вашими даними до програми «&i18n-ktouch;», натисніть кнопку <guibutton
+>Імпортувати</guibutton
+> на панелі інструментів і виберіть файл &XML;, який було раніше експортовано за допомогою «&i18n-ktouch;». </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Подяки і ліцензія</title>
+<para
+>«&i18n-ktouch;»</para>
+<para
+>Авторські права на програму «Навчання машинопису» належать (1999–2007):</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>Авторські права на «Навчання машинопису» належать Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>, 2011–2019. </para>
+
+<para
+>Учасники розробки:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, німецька розкладка клавіатури, файли вправ німецькою і переклад.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, латиноамериканська розкладка клавіатури</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, португальська розкладка клавіатури</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, французька розкладка клавіатури</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Особлива подяка всім іншим (не згаданим тут) учасникам розробки файлів розкладок і уроків.</emphasis>
+</para>
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

@@ -1,0 +1,2481 @@
+# translation of ktouch.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the ktouch.po package.
+# ANI PETER|അനി പീറ്റര്‍ <apeter@redhat.com>, 2008
+# Reviewed By Santhosh Thottingal <santhosh.thottingal@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2019-12-12 21:33+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "അനി പീറ്റര്‍"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+msgid "Custom Lessons"
+msgstr "പുതിയ സെഷന്‍ &ആരംഭിക്കുക"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "അദൃശ്യമായ"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "മുകള്‍-ഇടതു്"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "മുകളില്‍ വലതു്"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "താഴെ ഇടത് "
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "താഴെ വലത് "
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "കോഴ്സ് തുറക്കുന്നതിൽ സാങ്കേതിക തടസം "
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "അക്ഷരം"
+msgstr[1] "അക്ഷരം"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "തിരഞ്ഞെടുത്ത ഫയൽ തുറക്കാനായില്ല "
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "ഇതേ പേരിൽ ഒരു കീബോര്ഡ് മാതൃക നിലവിൽ ഉണ്ട് "
+
+#: src/editor/newresourceassistant.cpp:30
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@title:window"
+msgid "New"
+msgstr "പുതിയത് "
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "പുതിയ..."
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "പുതിയ പാഠ്യക്രമം "
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "പുതിയ കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "രൂപമാതൃകകള്‍"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്‍"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്‍"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+msgid "Import as new keyboard layout"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard layout"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+msgid "Training"
+msgstr "&പരിശീലനം"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+msgid "Training Settings"
+msgstr "പരിശീലന സ്ഥിതിവിവരം"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Colors"
+msgstr "വര്‍ണ്ണ സജ്ജീകരണങ്ങള്‍"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Color Settings"
+msgstr "ശബ്ദ സജ്ജീകരണങ്ങള്‍"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "സ്വീഡിഷ് കീബോര്‍ഡ്"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്‍"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+msgid "Configure Keyboard..."
+msgstr "കീബോര്‍ഡ് തുറക്കുക..."
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+msgid "Typewriting Trainer"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr "Copyright (C) 2000-2007 - ഹാവര്‍ഡ് ഫ്രോയിലാന്‍ഡ്, ആന്‍ഡ്രിയാസ് നിക്കോളായി"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "ഇപ്പോഴത്തെ പരിപാലകൻ"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "ആന്‍ഡ്രിയാസ് നിക്കോളായി"
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+msgid "Former maintainer and programmer"
+msgstr "നിലവിലുള്ള പാലകനും പ്രോഗ്രാമറും"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "ഹാവര്‍ഡ് ഫ്രോയിലാന്‍ഡ്"
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+msgid "Original author"
+msgstr "യഥാര്‍ത്ഥ രചയിതാവു്, പ്രൊജക്ട് അഡ്മിന്‍"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "ഡേവിഡ് വിഗ്നനി"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr ""
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "ആനി-മേരി മാഫോഫ്"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "പരിശീലനത്തിനുള്ളതും കീബോര്‍ഡുകളുടേയും ഫയലുകളുടെ സൃഷ്ടാക്കള്‍"
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+msgid "Character"
+msgstr "അക്ഷരം"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+msgid "Modifier ID"
+msgstr "മോഡിഫയര്‍/മറ്റ് കീകള്‍:"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "പുതിയ അക്ഷരങ്ങള്‍"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, fuzzy, kde-format
+msgid "Title"
+msgstr "തലക്കെട്ട്:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+msgid "Keyboard Layouts"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "കൃത്യത"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+msgid "Characters per Minute"
+msgstr "ഒരു മിനിറ്റില്‍ എത്ര അക്ഷരങ്ങള്‍"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, fuzzy, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+msgid "Training on:"
+msgstr "&പരിശീലനം"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+msgid "Accuracy:"
+msgstr "കൃത്യത"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+msgid "Characters per Minute:"
+msgstr "ഒരു മിനിറ്റില്‍ എത്ര അക്ഷരങ്ങള്‍:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "കീബോര്‍ഡ് മാതൃക സൂക്ഷിക്കുക"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "New course"
+msgid "Other Courses"
+msgstr "പുതിയ പാഠ്യക്രമം "
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+msgid "Start Training"
+msgstr "&പരിശീലനം"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+msgid "Configure Keyboard"
+msgstr "സ്വീഡിഷ് കീബോര്‍ഡ്"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+msgid "Edit lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "തലക്കെട്ട്:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+msgid "Lesson text"
+msgstr "വിദ്യാര്‍ത്ഥിയുടെ വാചകം:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+msgid "Manage Profiles"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+msgid "Total training time:"
+msgstr "പരിശീലനത്തിനുള്ള ഉപാധികള്‍"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "&റദ്ദാക്കുക"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+msgid "Create New Profile"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr ""
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "നിലവിലുള്ള പരിശീലന സെഷന്റെ സ്ഥിതിവിവരക്കണക്കു്"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+msgid "Character:"
+msgstr "അക്ഷരം"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, fuzzy, kde-format
+msgid "Repeat Lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, fuzzy, kde-format
+msgid "Progress"
+msgstr "പുരോഗതി നിരീക്ഷിക്കുക"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+msgid "This Lesson"
+msgstr "പുതിയ സെഷന്‍ &ആരംഭിക്കുക"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+msgid "Resume Training"
+msgstr "&പരിശീലനം"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+msgid "Restart Lesson"
+msgstr "പുതിയ സെഷന്‍ &ആരംഭിക്കുക"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "പരിശീലന സെഷന്‍! സമയം കടന്നുപോകുന്നു..."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+msgid "Index finger:"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+msgid "Middle finger:"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+msgid "Ring finger:"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+msgid "Little finger:"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+msgid "Keyboard layout:"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, fuzzy, kde-format
+msgid "Add new lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, fuzzy, kde-format
+msgid "Remove lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+msgid "Move lesson up"
+msgstr "നീക്കം ചെയ്യുക"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, fuzzy, kde-format
+msgid "Move lesson down"
+msgstr "നീക്കം ചെയ്യുക"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+msgid "New characters:"
+msgstr "പുതിയ അക്ഷരങ്ങള്‍"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+msgid "Create new normal key"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+msgid "Normal Key"
+msgstr "സാധാരണ കീ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+msgid "Create new special key"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+msgid "Special Key"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, fuzzy, kde-format
+msgid "Delete selected key"
+msgstr "കീ വെട്ടിമാറ്റുക"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+msgid "Keyboard"
+msgstr "കീബോര്‍ഡ് സൂക്ഷിക്കുക"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "വീതി: "
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "ഉയരം:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "ഇടതു്:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "മുകളില്‍:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+msgid "Finger:"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+msgid "Left ring finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+msgid "Left index finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+msgid "Right index finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+msgid "Right middle finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+msgid "Right ring finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+msgid "Right little finger"
+msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+msgid "Characters"
+msgstr "അക്ഷരം"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+msgid "Add new character"
+msgstr "പുതിയ അക്ഷരങ്ങള്‍"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+msgid "Remove character"
+msgstr "കീയിലുള്ള അക്ഷരങ്ങള്‍"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, fuzzy, kde-format
+msgid "Label:"
+msgstr "ടെക്സ്റ്റ്ലേബല്‍"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+msgid "Modifier ID:"
+msgstr "മോഡിഫയര്‍/മറ്റ് കീകള്‍:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+msgid "Open a text file..."
+msgstr "കീബോര്‍ഡ് ഫയല്‍ തുറക്കുക:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+msgid "0 Characters"
+msgstr "അക്ഷരം"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+msgid "During training:"
+msgstr "&പരിശീലനം"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "കീബോര്‍ഡ് കാണിക്കുക"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+msgid "Show real-time statistics"
+msgstr "സാധാരണയുള്ള സ്ഥിതിവിവരക്കണക്കുകള്‍"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "ഒരു മിനിറ്റില്‍ എത്ര വാക്കുകള്‍:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+msgid "Minimum accuracy:"
+msgstr "കൃത്യത"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, fuzzy, kde-format
+msgid "Add lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: src/undocommands/coursecommands.cpp:218
+#, fuzzy, kde-format
+msgid "Move lesson"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+msgid "Set new characters for lesson"
+msgstr "പുതിയ അക്ഷരങ്ങള്‍"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+msgid "Set lesson text"
+msgstr "വിദ്യാര്‍ത്ഥിയുടെ വാചകം:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+msgid "Set keyboard layout title"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout name"
+msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+msgid "Set keyboard layout size"
+msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "കീ ചേര്‍ക്കുക"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+msgid "Remove key"
+msgstr "&നീക്കം ചെയ്യുക"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+msgid "Add key character"
+msgstr "പുതിയ അക്ഷരങ്ങള്‍"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+msgid "Remove key character"
+msgstr "കീയിലുള്ള അക്ഷരങ്ങള്‍"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+msgid "Set key character value"
+msgstr "കീയിലുള്ള അക്ഷരങ്ങള്‍"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+msgid "Set special key type"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+msgid "Set special key label"
+msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "കീബോര്‍ഡ് മാതൃക സൂക്ഷിക്കുക"
+
+#, fuzzy
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "പുതിയ കീബോര്‍ഡ് ഉണ്ടാക്കുക"
+
+#, fuzzy
+#~ msgid "No Courses Available"
+#~ msgstr "<no keyboard files available>"
+
+#, fuzzy
+#~ msgid "Launch Editor"
+#~ msgstr "നിലയുടെ എഡിറ്റര്‍"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "യുക്രേനിയന്‍"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "ഹംഗേറിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "ഇംഗ്ലീഷ്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "ഇംഗ്ലീഷ് ദ്വോരക്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "ഇംഗ്ലീഷ് ദ്വോരക്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "ഇംഗ്ലീഷ്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "ഇംഗ്ലീഷ് ദ്വോരക്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "ഫ്രെഞ്ച് ദ്വോരക്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "ഫ്രെഞ്ച്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "ജര്‍മന്‍"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "ജര്‍മന്‍"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "ഇംഗ്ലീഷ്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "ഹംഗേറിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "ഇറ്റാലിയന്‍"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "നോര്‍വേജിയന്‍"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "സ്ലോവേനിയന്‍"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "ഇംഗ്ലീഷ് ദ്വോരക്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "ഇംഗ്ലീഷ്"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "സ്വീഡിഷ് കീബോര്‍ഡ്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "ജര്‍മന്‍ (9 നിലകള്‍)"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "ഫ്രെഞ്ച്"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "യുക്രേനിയന്‍"
+
+#~ msgid "Default User"
+#~ msgstr "സഹജമായ ഉപയോക്താവു്"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt|Text files\n"
+#~ "*.*|All files"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "'%1' ഫയലില്‍ നിന്നും ലഭ്യമാക്കിയ വാചകം"
+
+#~ msgid "generated from text file"
+#~ msgstr "വാചക ഫയലില്‍ നിന്നും ലഭ്യമാക്കിയതു്"
+
+#~ msgid "all available"
+#~ msgstr "ലഭ്യമായവയെല്ലാം"
+
+#~ msgid "Start new training session"
+#~ msgstr "പുതിയ പരിശീലന സെഷന്‍ ആരംഭിക്കുക"
+
+#~ msgid "Keep current level"
+#~ msgstr "ഈ നില സൂക്ഷിക്കുക"
+
+#~ msgid "Start from first level"
+#~ msgstr "ആദ്യ നിലയില്‍ നിന്നും ആരംഭിക്കുക"
+
+#~ msgid "General Options"
+#~ msgstr "സാധാരണയുള്ള ഐച്ഛികങ്ങള്‍"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "കീബോര്‍ഡ് സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "നില:  ശരി/മൊത്തം അക്ഷരങ്ങള്‍: %1/%2  വാക്കുകള്‍: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "സെഷന്‍:  ശരി/മൊത്തം അക്ഷരങ്ങള്‍: %1/%2  വാക്കുകള്‍: %3"
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "നിറക്കൂട്ട് &ചിട്ടപ്പെടുത്തുക..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "കീബോര്‍ഡ് മാതൃക &ചിട്ടപ്പെടുത്തുത..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "സെഷന്‍ &താല്‍ക്കാലത്തേക്കു് നിര്‍ത്തുക"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "കീബോര്‍ഡുകളും &നിറക്കൂട്ടുകളും"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "ഉപയോക്താക്കളെ &സജ്ജമാക്കുക..."
+
+#~ msgid "&Current User"
+#~ msgstr "&നിലവിലുള്ള ഉപയോക്താവു്"
+
+#, fuzzy
+#~ msgid "The number of the current color scheme."
+#~ msgstr "നിറക്കൂട്ടിന്റെ പേരു്:"
+
+#, fuzzy
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയുടെ പശ്ചാത്തലനിറം"
+
+#, fuzzy
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയ്ക്കുള്ള നിറം"
+
+#, fuzzy
+#~ msgid "The background color for the student's line."
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയുടെ പശ്ചാത്തലനിറം"
+
+#, fuzzy
+#~ msgid "The text color for the student's line"
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ വരിയുടെ വാചകത്തിനുള്ള നിറം മാറ്റുക"
+
+#, fuzzy
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയുടെ പശ്ചാത്തലനിറം"
+
+#, fuzzy
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ വരിയുടെ വാചകത്തിനുള്ള നിറം മാറ്റുക"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "ടൈപ്പിങില്‍ ഓരോ പിശകുണ്ടാകുമ്പോഴും ഒരു ബീപ്പ് ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "സ്വയം നില മാറ്റുമ്പോള്‍ ശബ്ദമുണ്ടാക്കുക"
+
+#, fuzzy
+#~ msgid "The sliding speed"
+#~ msgstr "ടൈപിങ് വേഗത:"
+
+#, fuzzy
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയ്ക്കുള്ള നിറം"
+
+#, fuzzy
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "<new unnamed lecture file>"
+
+#, fuzzy
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "കീബോര്‍ഡിലുള്ള കീകള്‍ക്കുള്ള അക്ഷരസഞ്ചയം:"
+
+#, fuzzy
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "<പേരില്ലാത്ത കീബോര്‍ഡ് ഫയല്‍>"
+
+#, fuzzy
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "നിലകള്‍ സ്വയം സജ്ജീകരിയ്ക്കല്‍"
+
+#, fuzzy
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "അടുത്ത തവണ പ്രോഗ്രാം ആരംഭിക്കുമ്പോള്‍ നില &ലഭ്യമാക്കുക"
+
+#, fuzzy
+#~ msgid "The current training level"
+#~ msgstr "ഈ നില സൂക്ഷിക്കുക"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "ഒരു നില കൂട്ടുന്നതിനുള്ള പരിധികള്‍"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "ഒരു നില കൂട്ടുന്നതിനുള്ള പരിധികള്‍"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "ഒരു നില കുറയ്ക്കുന്നതിനുള്ള പരിധികള്‍"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "ഒരു നില കുറയ്ക്കുന്നതിനുള്ള പരിധികള്‍"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "മാറ്റം വരുത്തിയ നിറക്കൂട്ടുകള്‍ സൂക്ഷിക്കണമോ?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "തലക്കെട്ടില്ലാത്ത നിറക്കൂട്ട്"
+
+#, fuzzy
+#~ msgid "Black && White"
+#~ msgstr "കറുപ്പും വെളുപ്പും"
+
+#~ msgid "Deep Blue"
+#~ msgstr "കടും നീല"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "കീബോര്‍ഡ് ഫയല്‍ '%1' തുറക്കുവാനോ ഡൌണ്‍ലോട് ചെയ്യുവാനോ സാധ്യമായില്ല"
+
+#~ msgid "Control key"
+#~ msgstr "നിയന്ത്രണ കീ"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#, fuzzy
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*.*|All Files"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "ഈ കീ വെട്ടിമാറ്റണമോ?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "കെ ടച്ച് കീബോര്‍ഡ് എഡിറ്റര്‍"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "ഇതു് ശരിയായൊരു യൂണിക്കോഡ് നമ്പര്‍ അല്ല. ദയവായി നമ്പര്‍ തിരുത്തുക അല്ലെങ്കില്‍ ഉചിതമായ അക്ഷരം നല്‍"
+#~ "കുക."
+
+#, fuzzy
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "ദയവായി യൂണിക്കോഡ് നമ്പര്‍ അല്ലെങ്കില്‍ ഉചിതമായ അക്ഷരം നല്‍കുക!"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "കെ ടച്ച് കീബോര്‍ജ് എഡിറ്ററില്‍ പിശകു്"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<modifier key>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "കീബോര്‍ഡ് ഫയല്‍ തുറക്കുക"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "നിങ്ങള്‍ക്കേതു് കീബോര്‍ഡ് ഫയലാണു് ചിട്ടപ്പെടുത്തേണ്ടതു്?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "നിലവിലുള്ള കീബോര്‍ഡ് ചിട്ടപ്പെടുത്തുക:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "സ്വതവേയുള്ള കീബോര്‍ഡ് തുറക്കുക:"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "കീബോര്‍ഡ് ഫയല്‍ തുറക്കുവാനായില്ല, പകരം പുതിയൊന്നുണ്ടാക്കുന്നു."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "കീബോര്‍ഡ് ഫയല്‍ '%1' ലഭ്യമാക്കുന്നതിനിടെ മുന്നറിയിപ്പുകള്‍ കിട്ടിയിരുന്നു:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (മാറ്റം വരുത്തിയ)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "കെ ടച്ച് കീബോര്‍ഡ് എഡിറ്റര്‍ - %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "കെ ടച്ച് കീബോര്‍ഡ് എഡിറ്റര്‍ - %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<പേരില്ലാത്ത കീബോര്‍ഡ് ഫയല്‍>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "കീബോര്‍ഡില്‍ വരുത്തിയ മാറ്റങ്ങള്‍ നിങ്ങള്‍ക്കു് സൂക്ഷിക്കണമോ?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "കീബോര്‍ഡ് മാതൃകാ ഫയല്‍ '%1' ലഭ്യമായില്ല. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "'%1'-ല്‍ നിന്നും കീബോര്‍ഡ് മാതൃകാ ഫയല്‍ ഡൌണ്‍ലോട് ചെയ്യുവാനോ തുറക്കുവാനോ സാധ്യമായില്ല."
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<new unnamed lecture file>"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "അആഇഈഉഊഋഎഏഐഒഓഔഅംഅഃകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമ യരറലവളഴശഷസ"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "നിങ്ങളുടെ വരികള്‍ ഇവിടെ നല്‍കുക..."
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "അആഇഈഉഊഋഎഏഐഒഓഔഅംഅഃകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമ യരറലവളഴശഷസ"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "ദയവായി ഒരു ഫയലിന്റെ പേരു് നല്‍കുക അല്ലെങ്കില്‍ തിരഞ്ഞെടുക്കുക."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "യുആര്‍എല്‍ തെറ്റാകുന്നു; ദയവായി തിരുത്തുക."
+
+#~ msgid "***current***  "
+#~ msgstr "***നിലവിലുള്ള***  "
+
+#~ msgid "Words per minute"
+#~ msgstr "ഒരു മിനിറ്റില്‍ എത്ര വാക്കുകള്‍"
+
+#~ msgid "Correctness"
+#~ msgstr "ശരിയായതു്"
+
+#~ msgid "Skill"
+#~ msgstr "കഴിവു്"
+
+#~ msgid "Sessions"
+#~ msgstr "സെഷനുകള്‍"
+
+#~ msgid "You rock!"
+#~ msgstr "നിങ്ങള്‍ കൊള്ളാലോ!"
+
+#, fuzzy
+#~ msgid "S&tatistics"
+#~ msgstr "സാധാരണയുള്ള സ്ഥിതിവിവരക്കണക്കുകള്‍"
+
+#~ msgid "&Settings"
+#~ msgstr "&സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "പ്രധാന ഉപകരണപട്ട"
+
+#~ msgid "New User"
+#~ msgstr "പുതിയ ഉപയോക്താവു്"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "ഒരു ഉപയോക്തൃ നാമം നല്‍കുക:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "ഇതു് ശരിയായ ഉപയോക്തൃ നാമമല്ല!"
+
+#~ msgid "Save user list?"
+#~ msgstr "ഉപയോക്താക്കളുടെ പട്ടിക സൂക്ഷിക്കണമോ?"
+
+#~ msgid "KTouch"
+#~ msgstr "കെ ടച്ച്"
+
+#~ msgid "Training file to open"
+#~ msgstr "തുറക്കുവാനുള്ള പരിശീലന ഫയല്‍"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "വര്‍ണ്ണങ്ങള്‍ തെരഞ്ഞെടുക്കുക"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "ഉപയോക്താവു് പറഞ്ഞ നിറങ്ങള്‍"
+
+#~ msgid "Add"
+#~ msgstr "ചേര്‍ക്കുക"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "നിറക്കൂട്ട് ചിട്ടപ്പെടുത്തുക"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "നിറക്കൂട്ടിന്റെ പേരു്:"
+
+#~ msgid "&Store Data"
+#~ msgstr "വിവരം &സൂക്ഷിക്കുക"
+
+#~ msgid "Teacher background:"
+#~ msgstr "അദ്ധ്യാപകന്റെ പശ്ചാത്തലനിറം:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "അദ്ധ്യാപകന്റെ വാചകം:"
+
+#~ msgid "Student background:"
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ പശ്ചാത്തനിറം:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ വാചകത്തില്‍ പിശകു്:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ പശ്ചാത്തലത്തില്‍ പിശകു്:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "കീബോര്‍ഡ് നിറങ്ങള്‍"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "സാധാരണ കീകളുടെ പശ്ചാത്തലത്തിലുള്ള നിറങ്ങള്‍:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "എടുത്തുകാണിക്കുമ്പോഴത്തെ പശ്ചാത്തലനിറം"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "സാധാരണ കീ നിറങ്ങള്‍:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "എടുത്തുകാണിക്കുമ്പോഴത്തെ വാചകത്തിന്റെ നിറം"
+
+#~ msgid "Text color:"
+#~ msgstr "വാചകത്തിനുള്ള നിറം:"
+
+#~ msgid "Key frame:"
+#~ msgstr "കീ ഫ്രെയിം:"
+
+#~ msgid "Text color"
+#~ msgstr "വാചകത്തിനുള്ള നിറം"
+
+#~ msgid "Background:"
+#~ msgstr "പശ്ചാത്തലം:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "കീബോര്‍ഡ് തിരിച്ചറിയുന്നതിനുള്ള ഡേറ്റാ"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "കീബോര്‍ഡിനുള്ള തലക്കെട്ട്:"
+
+#~ msgid "Language id:"
+#~ msgstr "ഭാഷയുടെ ഐഡി:"
+
+#~ msgid "Comments:"
+#~ msgstr "അഭിപ്രായങ്ങള്‍:"
+
+#~ msgid "Key Properties"
+#~ msgstr "കീ വിശേഷതകള്‍"
+
+#~ msgid "Key type:"
+#~ msgstr "കീ തരം:"
+
+#~ msgid "Key text:"
+#~ msgstr "കീ വാചകം:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "കീബോര്‍ഡ്ചിട്ടപ്പെടുത്തുന്നതിനുള്ള ഐച്ഛികങ്ങള്‍"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "കീബോര്‍ഡിനുള്ള അക്ഷരസഞ്ചയം സജ്ജമാക്കുക..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "കീബോര്‍ഡ് പേരു് മാറ്റി സൂക്ഷിക്കുക..."
+
+#~ msgid "Close"
+#~ msgstr "അടയ്ക്കുക"
+
+#~ msgid "or unicode"
+#~ msgstr "അല്ലെങ്കില്‍ യൂണിക്കോഡ്"
+
+#~ msgid "Clear connectors"
+#~ msgstr "കണക്ടറുകള്‍ വെടിപ്പാക്കുക"
+
+#~ msgid "Add/update connector"
+#~ msgstr "കണക്ടര്‍ ചേര്‍ക്കുക/പുതുക്കുക"
+
+#~ msgid "< modifier key>"
+#~ msgstr "< മോഡിഫയര്‍ കീ>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "കീബോര്‍ഡ് മാതൃക (ചിട്ടപ്പെടുത്തുന്നതിനുള്ള കീകള്‍ സജ്ജമാക്കുന്നതിനായി ക്ലിക്ക് ചെയ്യുക അല്ലെങ്കില്‍ "
+#~ "വലിച്ചിടുക)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "കെ-ടച്ച് ലെക്ചര്‍ എഡിറ്റര്‍"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "ലെക്ചര്‍ സവിശേഷതകള്‍"
+
+#~ msgid "Comment:"
+#~ msgstr "അഭിപ്രായം:"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "ഈ നിലയിലുള്ള പുതിയ അക്ഷരങ്ങള്‍:"
+
+#~ msgid "Training level summary"
+#~ msgstr "പരിശീലന നിലയുടെ  സംക്ഷിപ്തം"
+
+#~ msgid "Summary"
+#~ msgstr "സംക്ഷിപ്തം"
+
+#~ msgid "High scores for this level"
+#~ msgstr "ഈ നിലയിലുള്ള ഏറ്റവും ഉയര്‍ന്ന സ്കോര്‍"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "തീയതി"
+
+#~ msgid "Score"
+#~ msgstr "സ്കോര്‍"
+
+#~ msgid "Characters per second"
+#~ msgstr "ഒരു നിമിഷത്തില്‍ എത്ര അക്ഷരങ്ങള്‍"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "ഈ നിലയില്‍ എല്ലാ ഉപയോക്താക്കളുടേയും ഉയര്‍ന്ന സ്കോറുകള്‍"
+
+#~ msgid "&Retry level"
+#~ msgstr "നില &വീണ്ടും ശ്രമിക്കുക"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "അടുത്ത നിലയിലേക്കു് &തുടരുക"
+
+#~ msgid "Browse..."
+#~ msgstr "പരതുക..."
+
+#, fuzzy
+#~ msgid "&OK"
+#~ msgstr "&ശരി"
+
+#, fuzzy
+#~ msgid "Use custom color for typing line"
+#~ msgstr "വരിയ്ക്കായി നിങ്ങള്‍ക്കിഷ്ടമുള്ള നിറമുപയോഗിക്കുക"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയ്ക്കുള്ള നിറം"
+
+#~ msgid "Teacher's line"
+#~ msgstr "അദ്ധ്യാപകന്റെ വരി"
+
+#~ msgid "Text:"
+#~ msgstr "വാചകം:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "വിദ്യാര്‍ത്ഥിയുടെ വരിയുടെ വാചകത്തിനുള്ള നിറം മാറ്റുക"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr ""
+#~ "വിദ്യാര്‍ത്ഥിയുടെ വരിയില്‍ ടൈപ്പ് ചെയ്യുന്ന വാചകത്തിന്റെ നിറം നിങ്ങള്‍ക്കിവിടെ മാറ്റാം."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "അദ്ധ്യാപകന്റെ വരിയുടെ പശ്ചാത്തലനിറം"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "അദ്ധ്യാപകന്റെ വരിയുടെ (നിങ്ങള്‍ ടൈപ്പ് ചെയ്യാനുള്ള വരി) പശ്ചാത്തലനിറം നിങ്ങള്‍ക്കിവിടെ "
+#~ "മാറ്റാം"
+
+#, fuzzy
+#~ msgid "Use different color on missed typing"
+#~ msgstr "തെറ്റിയടിച്ചാല്‍ വേറെ നിറം ഉപയോഗിയ്ക്കുക"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "തെറ്റായി ടൈപ്പ് ചെയ്താല്‍ കാണിയ്ക്കേണ്ട പശ്ചാത്തലനിറം തിരഞ്ഞെടുക്കുക"
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "തെറ്റായി ടൈപ്പ് ചെയ്താല്‍ കാണിക്കേണ്ട വാചകത്തിന്റെ നിറം"
+
+#~ msgid "Text Line Settings"
+#~ msgstr "വാചക വരിയ്ക്കുള്ള സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid "Fast"
+#~ msgstr "വേഗം"
+
+#~ msgid "Slow"
+#~ msgstr "പതുക്കെ"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "പ്രദര്‍ശിപ്പിക്കുന്ന/ടൈപ്പ് ചെയ്യുന്ന വാചകത്തിനുള്ള അക്ഷരസഞ്ചയം:"
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "നിങ്ങള്‍ ടൈപ്പ് ചെയ്ത കീകള്‍ കീബോര്‍ഡില്‍ കാണിക്കുക"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "കീബോര്‍ഡിലുള്ള കീകള്‍ക്കുള്ള അക്ഷരസഞ്ചയം:"
+
+#~ msgid "Sound"
+#~ msgstr "ശബ്ദം"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr ""
+#~ "ഇതു് തിരഞ്ഞെടുത്താല്‍ (സ്വതവേ), ടൈപ്പിങില്‍ ഓരോ പിശകുണ്ടാകുമ്പോഴും ഒരു ബീപ്പ് ചെയ്യുന്നതാണു്."
+
+#~ msgid "&Beep on error"
+#~ msgstr "പിശകുണ്ടാകുമ്പോള്‍ &ബീപ്പ് ചെയ്യുക"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "കീ അമര്‍ത്തുമ്പോള്‍ ടൈപ്പ് റൈറ്റിന്റെ പോലെ ശബ്ദമുണ്ടാക്കുക"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr "ഓരോ കീ അമര്‍ത്തുമ്പോഴും ടൈപ്പ് റൈറ്ററിന്റെ പോലെ ശബ്ദമുണ്ടാക്കുക"
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "ടൈപ്പ് ചെയ്യുമ്പോള്‍ ടൈപ്പ് റൈറ്റര്‍ &ശബ്ദം"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "ഓരോ നിലയും മാറുന്നതനുസരിച്ചു് ശബ്ദമുണ്ടാക്കുക."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr "ഇതു് തിരഞ്ഞെടുത്താല്‍ (സ്വതവേ), ഓരോ നിലയും മാറുന്നതനുസരിച്ചു് ശബ്ദമുണ്ടാക്കുന്നു."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "സ്വയം നില മാറ്റുമ്പോള്‍ ശബ്ദമുണ്ടാക്കുക"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "നിലകള്‍ സ്വയം സജ്ജീകരിയ്ക്കല്‍"
+
+#~ msgid "chars/minute"
+#~ msgstr "അക്ഷരങ്ങള്‍/മിനിറ്റു്"
+
+#~ msgid "Typing speed:"
+#~ msgstr "ടൈപിങ് വേഗത:"
+
+#~ msgid "Correctness:"
+#~ msgstr "ശരിയായതു്"
+
+#~ msgid "Workload:"
+#~ msgstr "ജോലിഭാരം:"
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "മുമ്പോട്ടു് തുടരുന്നതിനു് മുമ്പു് പരിശീലന നില പൂര്‍ത്തിയാക്കുക"
+
+#~ msgid "lines"
+#~ msgstr "വരികള്‍"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "ഒരു നില കൂട്ടുന്നതിനുള്ള പരിധികള്‍"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "ഒരു നില കുറയ്ക്കുന്നതിനുള്ള പരിധികള്‍"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "നിലമാറ്റുന്നതിനുള്ള ബട്ടണുകള്‍ പ്രവര്‍ത്തനരഹിതമാക്കുക"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "&ടൈപ്പ് റൈറ്റര്‍ രീതി (Enter ഉപയോഗിച്ചു് ഉപയോക്താവു് വരി ഉറപ്പാക്കണം)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "അടുത്ത തവണ പ്രോഗ്രാം ആരംഭിക്കുമ്പോള്‍ നില &ലഭ്യമാക്കുക"
+
+#~ msgid "Current Training Session"
+#~ msgstr "നിലവിലുള്ള പരിശീലന സെഷന്‍"
+
+#~ msgid "Lecture:"
+#~ msgstr "ലെക്ചര്‍"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "ഈ സെഷനുള്ള നിലകള്‍:"
+
+#~ msgid "Characters typed:"
+#~ msgstr "ടൈപ്പ് ചെയ്ത അക്ഷരങ്ങള്‍:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "ഇതുവരെ ടൈപ്പ് ചെയ്ത അക്ഷരങ്ങളുടെ (ശരിയായതും തെറ്റായതും) എണ്ണം."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "തെറ്റായി ടൈപ്പ് ചെയ്ത അക്ഷരങ്ങള്‍:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "നിങ്ങള്‍ തെറ്റായി ടൈപ്പ് ചെയ്ത അക്ഷരങ്ങളുടെ എണ്ണം കാണിക്കുക."
+
+#~ msgid "Words typed:"
+#~ msgstr "ടൈപ്പ് ചെയ്ത വാക്കുകള്‍:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "ഇതുവരെ ടൈപ്പ് ചെയ്ത വാക്കുകളുടെ എണ്ണം."
+
+#~ msgid "Typing Rate"
+#~ msgstr "ടൈപ്പിങ്ങ് തോത്"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "ഒരു മിനിറ്റില്‍ ടൈപ്പ് ചെയ്ത ശരിയായ അക്ഷരങ്ങളുടെ എണ്ണം."
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "ഒരു മിനിറ്റില്‍ ടൈപ്പ് ചെയ്ത വാക്കുകളുടെ എണ്ണം."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "അക്ഷരങ്ങളുടെ സ്ഥിതിവിവരക്കണക്ക്"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "ഇപ്പഴുള്ള നിലയുടെ സ്ഥിതിവിവരക്കണക്ക്"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "lectureLabel2"
+
+#~ msgid "Level:"
+#~ msgstr "നില:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "levelLabel2"
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "നിങ്ങളുടെ ടൈപ്പിങ്ങ് പുരോഗതി"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "ലെക്ചര്‍ പുരോഗതി കാണിയ്ക്കുക"
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "പുരോഗതിപ്പട്ടികയുടെ ക്രമീകരണങ്ങള്‍"
+
+#~ msgid "Chart Data"
+#~ msgstr "പട്ടികാവിവരം"
+
+#~ msgid "Session stats"
+#~ msgstr "സെഷന്‍ സ്ഥിതിവിവരക്കണക്ക്"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "ഈ ബട്ടണ്‍ അമര്‍ത്തിയാല്‍ നിലവിലുള്ള ഉപയോക്താവിന്റെ പൂര്‍ണ്ണ പരിശീലന സ്ഥിതിവിവരക്കണക്കുകള്‍ "
+#~ "വെടിപ്പാക്കുന്നു."
+
+#~ msgid "Clear History"
+#~ msgstr "ഹിസ്റ്ററി വെടിപ്പാക്കുക"
+
+#~ msgid "Level"
+#~ msgstr "നില"
+
+#~ msgid "Current level"
+#~ msgstr "ഇപ്പോഴുള്ള നില"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "നിങ്ങള്‍ ഇപ്പോള്‍ ഏതു് നിലയിലെന്നു് ഇതു് കാണിക്കുന്നു."
+
+#~ msgid "Speed"
+#~ msgstr "വേഗത"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "അക്ഷരങ്ങള്‍/മിനിറ്റു്"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "നിങ്ങളുടെ ടൈപ്പിങ് വേഗത ഇതു് കാണിക്കുന്നു. ഒരു മിനിറ്റില്‍ എത്ര അക്ഷരങ്ങള്‍ എന്ന രീതിയില്‍ "
+#~ "ടൈപ്പിങ് വേഗത അളക്കുന്നു."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "ഈ നിലയിലുള്ള പുതിയ അക്ഷരങ്ങള്‍"
+
+#~ msgid "Setup Users"
+#~ msgstr "ഉപയോക്താക്കളെ സജ്ജമാക്കുക"
+
+#~ msgid "&Add"
+#~ msgstr "&ചേര്‍ക്കുക"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "&അടയ്ക്കുക"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "ബള്‍ഗേരിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "ബള്‍ഗേരിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "കാറ്റലന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "ചെക്ക് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "ഡാനിഷ് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "ഡാനിഷ് (പൂര്‍ണ്ണ കോഴ്സ്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "നെദര്‍ലാന്‍ഡ്സ് (സ്വയമുണ്ടായതു്)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "ദ്വോരക് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "ദ്വോരക് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "ദ്വോരക് - എബിസിഡി"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "ഇംഗ്ലീഷ് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "കുട്ടികള്‍ക്കുള്ള ഫിന്നിഷ്"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "ഫിന്നിഷ് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "ഫ്രെഞ്ച് (സ്വയമുണ്ടായതു്) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "ഫ്രെഞ്ച് (സ്വയമുണ്ടായതു്) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "ദ്വോരക് ഫ്രെഞ്ച് (ഭാഗം 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "ദ്വോരക് ഫ്രെഞ്ച് (ഭാഗം 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "ജര്‍മന്‍ (9 നിലകള്‍)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "ജര്‍മന്‍ (സ്വയമുണ്ടായതു്)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "ജര്‍മന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "ഹെല്ലനിക്"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "ഹംഗേറിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "ഹംഗേറിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "ഇറ്റാലിയന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "ലാറ്റിന്‍"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "നോര്‍വേജിയന്‍"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "റഷ്യന്‍ (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "റഷ്യന്‍ (സ്വയമുണ്ടായതു്)"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "ദ്വോരക് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "സ്ലോവേനിയന്‍"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "സ്പാനിഷ് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "സ്പാനിഷ് (സ്വയമുണ്ടായതു്) 1"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "സ്പാനിഷ് (സ്വയമുണ്ടായതു്) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "ദ്വോരക് സ്പാനിഷ്"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "ടര്‍ക്കിഷ് (സ്വയമുണ്ടായതു്)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "യുക്രേനിയന്‍"
+
+#~ msgid "F&ile"
+#~ msgstr "&ഫയല്‍"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "എഡിറ്ററില്‍ തുറക്കുക"
+
+#~ msgid "Title Question..."
+#~ msgstr "തലക്കെട്ടിനുള്ള ചോദ്യം..."
+
+#~ msgid "Current something"
+#~ msgstr "നിലവിലുള്ള"
+
+#~ msgid "Preset something:"
+#~ msgstr "വീണ്ടു് ക്രമികരിക്കുക:"
+
+#~ msgid "Open file:"
+#~ msgstr "തുറക്കേണ്ട ഫയല്‍:"
+
+#~ msgid "New something"
+#~ msgstr "പുതിയതു്"

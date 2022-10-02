@@ -1,0 +1,2314 @@
+# translation of ktouch.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2022-02-26 11:47+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raviratlami@aol.in,"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Custom Lessons"
+msgstr "नया सत्र प्रारंभ करें (&S)"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "No keyboard layout with ID %1"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, fuzzy, kde-format
+#| msgid "Hidden key"
+msgid "Hidden"
+msgstr "छुपा कुंजी"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while opening keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "अक्षर"
+msgstr[1] "अक्षर"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be opened"
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "New course"
+msgstr "नई रंग योजना"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "New keyboard layout"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Create a new course or keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Delete the current selected course or keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Import a course or keyboard layout from a file"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while deleting keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be imported."
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while saving keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Error while saving keyboard layout to disk."
+msgstr "कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is already present as a user course."
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Import as new keyboard layout"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourceeditor.cpp:600
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Use another keyboard layout as template"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout"
+msgstr "कुंजीपट ख़ाका"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "प्रशिक्षण (&r)"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Training Settings"
+msgstr "प्रशिक्षण विकल्प"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "रंग विन्यास"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Sound Settings"
+msgid "Color Settings"
+msgstr "ध्वनि विन्यास"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "कुंजीपट ख़ाका सहेजें"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Course and Keyboard Layout Editor..."
+msgstr "कुंजीपट ख़ाका"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+#| msgid "Open Keyboard File"
+msgid "Configure Keyboard..."
+msgstr "कुंजीपट फ़ाइल खोलें"
+
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr ""
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr "सर्वाधिकार (C) 2000-2007 हावर्ड फ्राइलैंड तथा आंद्रेयस निकोलाई"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Current maintainer"
+msgstr "वर्तमान मेंटेनर तथा प्रोग्रामर"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "आंद्रेयास निकोलाई"
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Former maintainer and programmer"
+msgstr "वर्तमान मेंटेनर तथा प्रोग्रामर"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "हावर्ड फ्राइलैंड"
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+#| msgid "Original author, project admin"
+msgid "Original author"
+msgstr "मूल लेखक, परियोजना प्रबंधक"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "डेविड विग्नोनी"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "एसवीजी प्रतीक का सृजक"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "एन्ने मैरी मेहफोफ"
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "Lots of patches, fixes, updates"
+msgid "Lots of patches, fixes and updates"
+msgstr "बहुत से पैचेस, फ़िक्सेस, अपडेट्स"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "अभ्यास तथा कुंजीपट फ़ाइलों के सभी सृजक"
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Launch the course and keyboard layout editor"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character"
+msgstr "अक्षर"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID"
+msgstr "परिवर्धक कुंजी"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "अक्षर"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard Layouts"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "अक्षर प्रति मिनट"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "प्रशिक्षण (&r)"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute:"
+msgstr "अक्षर प्रति मिनट"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Courses For Your Keyboard Layout"
+msgstr "कुंजीपट ख़ाका सहेजें"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "Other Courses"
+msgstr "नई रंग योजना"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr ""
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "प्रशिक्षण (&r)"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr "चयनित कुंजी नहीं फिंगर कुंजी नहीं है."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Configure Keyboard"
+msgstr "कुंजीपट ख़ाका सहेजें"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "कुंजीपट ख़ाका"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Manage Profiles"
+msgstr "नया कुंजीपट बनाएँ"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "नया कुंजीपट बनाएँ"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "प्रशिक्षण विकल्प"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create New Profile"
+msgstr "नया कुंजीपट बनाएँ"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, fuzzy, kde-format
+#| msgid "Open a lecture file:"
+msgid "Use Selected Profile"
+msgstr "व्याख्यान फ़ाइल खोलें:"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "&Lecture Statistics"
+msgid "Lesson training statistics"
+msgstr "व्याख्यान आंकड़े (&L)"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character:"
+msgstr "अक्षर"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "This Lesson"
+msgstr "नया सत्र प्रारंभ करें (&S)"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "No visualization available for your keyboard layout."
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "प्रशिक्षण (&r)"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Restart Lesson"
+msgstr "नया सत्र प्रारंभ करें (&S)"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "प्रशिक्षण सत्र! समय बीता जा रहा है..."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+#| msgid "Training session paused. Training continues on next keypress..."
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "अभ्यास सत्र ठहरा हुआ है. अभ्यास अगला कोई कुंजी दबाने पर जारी रहेगा..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Fingers"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Index finger:"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Middle finger:"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Ring finger:"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Little finger:"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard layout:"
+msgstr "कुंजीपट ख़ाका"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "New characters:"
+msgstr "अक्षर"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create new normal key"
+msgstr "नया कुंजीपट बनाएँ"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+#| msgid "Normal key"
+msgid "Normal Key"
+msgstr "सामान्य कुंजी"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Create new special key"
+msgstr "नया व्याख्यान बनाएँ"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Special Key"
+msgstr "नया व्याख्यान बनाएँ"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Keyboard"
+msgstr "कुंजीपट ख़ाका सहेजें"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Finger:"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Left little finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Left middle finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Left index finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Right index finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Right middle finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Right little finger"
+msgstr "फ़िंगर कुंजी"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Characters"
+msgstr "अक्षर"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Add new character"
+msgstr "अक्षर"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Remove character"
+msgstr "अक्षर"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID:"
+msgstr "परिवर्धक कुंजी"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+#| msgid "&Open Plain Text File..."
+msgid "Open a text file..."
+msgstr "सादा पाठ फ़ाइल खोलें... (&O)"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "0 Characters"
+msgstr "अक्षर"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Paste current system keyboard layout name"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "During training:"
+msgstr "प्रशिक्षण (&r)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Show keyboard"
+msgstr "नया कुंजीपट बनाएँ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "&Lecture Statistics"
+msgid "Show real-time statistics"
+msgstr "व्याख्यान आंकड़े (&L)"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+#| msgid "Words per minute"
+msgid "Minimum strokes &per minute:"
+msgstr "शब्द प्रति मिनट"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Set new characters for lesson"
+msgstr "अक्षर"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout title"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Set keyboard layout name"
+msgstr "अनाम कुंजीपट ख़ाका"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Set keyboard layout size"
+msgstr "कुंजीपट ख़ाका"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, fuzzy, kde-format
+#| msgid "Hidden key"
+msgid "Add key"
+msgstr "छुपा कुंजी"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Remove key"
+msgstr "अक्षर"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Add key character"
+msgstr "अक्षर"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Remove key character"
+msgstr "अक्षर"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Set key character value"
+msgstr "अक्षर"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key type"
+msgstr "नया व्याख्यान बनाएँ"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Set special key label"
+msgstr "नया व्याख्यान बनाएँ"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Save Keyboard Layout"
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "कुंजीपट ख़ाका सहेजें"
+
+#, fuzzy
+#~| msgid "Create new keyboard"
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "नया कुंजीपट बनाएँ"
+
+#, fuzzy
+#~| msgid "<no lecture files available>"
+#~ msgid "No Courses Available"
+#~ msgstr "<कोई व्याख्यान फ़ाइलें उपलब्ध नहीं है>"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "प्रशिक्षण (&r)"
+
+#, fuzzy
+#~| msgid "Save Keyboard Layout"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "कुंजीपट ख़ाका सहेजें"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "प्रशिक्षण (&r)"
+
+#~ msgid "Default User"
+#~ msgstr "डिफ़ॉल्ट उपयोक्ता"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.txt|Text files\n"
+#~| "*.*|All files"
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.*|सभी फ़ाइलें\n"
+#~ "*.txt|सादा पाठ फ़ाइलें"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "अभ्यास पाठ चुनें"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "फ़ाइल '%1' में से पाठ आयातित"
+
+#~ msgid "generated from text file"
+#~ msgstr "पाठ फ़ाइल में से बनाया"
+
+#~ msgid "all available"
+#~ msgstr "सभी उपलब्ध"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "प्रशिक्षण व्याख्यान फ़ाइल चुनें"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "नए ट्रेनिंग सत्र के लिए क्या आप वर्तमान स्तर को बनाए रखना चाहेंगे?"
+
+#~ msgid "Start new training session"
+#~ msgstr "नया प्रशिक्षण सत्र प्रारंभ करें"
+
+#~ msgid "Keep current level"
+#~ msgstr "मौज़ूदा स्तर बनाए रखें"
+
+#~ msgid "Start from first level"
+#~ msgstr "प्रथम स्तर से प्रारंभ करें"
+
+#~ msgid "General Options"
+#~ msgstr "सामान्य विकल्प"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "कुंजीपट विन्यास"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "स्तर:  सही/कुल अक्षर: %1/%2  शब्द: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "सत्र: सही/कुल अक्षर: %1/%2  शब्द: %3"
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "व्याख्यान फ़ाइल '%1' ढूंढ/खोल नहीं सका."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "उपयोक्ता को '%1' पर बदला जा रहा है. वर्तमान स्तर पर अभ्यास सत्र फिर से चालू किया "
+#~ "जा रहा है."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "व्याख्यान खोलें... (&O)"
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "व्याख्यान संपादित करें...(&E)"
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "रंग योजना संपादित करें... (&E)"
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "कुंजीपटल खाका संपादित करें... (&E)"
+
+#~ msgid "&Pause Session"
+#~ msgstr "सत्र ठहराएँ (&P)"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "व्याख्यान आंकड़े (&L)"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "डिफ़ॉल्ट व्याख्यान (&L)"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "कुंजीपट रंग योजनाएँ (&C)"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "उपयोक्ता सेटअप करें... (&S)"
+
+#~ msgid "&Current User"
+#~ msgstr "मौजूदा उपयोक्ता (&C)"
+
+#~ msgid "untitled lecture"
+#~ msgstr "अनाम व्याख्यान"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "वर्तमान रंग योजना की संख्या."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "रंग योजना से स्वतंत्र, एक ही टाइपिंग लाइन रंग इस्तेमाल करें."
+
+#, fuzzy
+#~| msgid "The background color for the teacher's line."
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "शिक्षक पंक्ति के लिए पृष्ठभूमि रंग"
+
+#, fuzzy
+#~| msgid "The text color for the teacher's line"
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "शिक्षक पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "The background color for wrong text (students line)."
+#~ msgid "The background color for the student's line."
+#~ msgstr "गलत पाठ के लिए पृष्ठभूमि रंग (विद्यार्थी पंक्ति)."
+
+#, fuzzy
+#~| msgid "The text color for the student's line"
+#~ msgid "The text color for the student's line"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पाठ रंग"
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "गलत पाठ के लिए भिन्न पृष्ठभूमि उपयोग करें या नहीं"
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "गलत पाठ के लिए पृष्ठभूमि रंग (विद्यार्थी पंक्ति)."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "गलत पाठ के लिए पाठ रंग (विद्यार्थी पंक्ति)"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "प्रत्येक टाइपिंग त्रुटियों पर एक बीप बजाएँ"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "टाइपिंग के लिए ध्वनि बजाएँ."
+
+#, fuzzy
+#~| msgid "Play a sound on automatic level change"
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "स्वचालित स्तर बदलने पर एक ध्वनि बजाएँ"
+
+#, fuzzy
+#~| msgid "The sliding speed"
+#~ msgid "The sliding speed"
+#~ msgstr "स्लाइडिंग गति"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "स्लाइडिंग विजेट की अधिकतम ऊंचाई"
+
+#, fuzzy
+#~| msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "क्या डिफ़ॉल्ट/पूर्व-पारिभाषित कुंजीपट फ़ॉन्ट को ओवरराइड करें."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "विद्यार्थी तथा शिक्षक पंक्तियों के लिए फ़ॉन्ट"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "वर्तमान में लोड किया गया व्याख्यान फ़ाइल"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "क्या हम दाएँ से बाएँ टाइपिंग इस्तेमाल करेंगे."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "क्या कुंजियों में रंगों का उपयोग करें या नहीं."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "क्या सिर्फ सीखे गए/ज्ञात कुंजियों को दिखाना है या सभी कुंजियों को."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "क्या कुंजीपट दिखाना है"
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "क्या डिफ़ॉल्ट/पूर्व-पारिभाषित कुंजीपट फ़ॉन्ट को ओवरराइड करें."
+
+#, fuzzy
+#~| msgid "The font for the keys on the keyboard"
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "कुंजीपटल पर कुंजियों हेतु फ़ॉन्ट"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "वर्तमान में लोड किया कुंजीपटल फ़ाइल"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "जब लाइन पूरा हो जाता है तो उपयोक्ता को एंटर बटन दबाना होता है."
+
+#, fuzzy
+#~| msgid "Allow automatic level adjustments"
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "स्वचालित स्तर समायोजन स्वीकारें"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr "जब स्वतः स्तर परिवर्तन सक्षम किया जाता है तो मेनुअल स्तर एडजस्टमेंट अक्षम कर रखें"
+
+#, fuzzy
+#~| msgid "Remember the current level for the next KTouch start"
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "अगली दफ़ा के-टच प्रारंभ करने के लिए वर्तमान स्तर याद रखें"
+
+#~ msgid "The current training level"
+#~ msgstr "वर्तमान प्रशिक्षण स्तर"
+
+#, fuzzy
+#~| msgid "Percentage of correctness to increase a level"
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "स्तर बढ़ाने के लिए सही का प्रतिशत"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "स्तर बढ़ाने के लिए सही का प्रतिशत"
+
+#, fuzzy
+#~| msgid "Percentage of correctness to decrease a level"
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "स्तर कम करने के लिए सही का प्रतिशत"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "स्तर कम करने के लिए सही का प्रतिशत"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "कितनी लाइनों को टाइप करना होगा इससे पहले कि स्तर बदले"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "ऊपर जाने से पहले कम से कम एक पूर्ण स्तर चलाएँ"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "एकल उपयोक्ता खाता के लिए बहुत से केटच उपयोक्ता स्वीकारें"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "मौजूदा उपयोक्ता का उपयोक्ता नाम."
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "परिवर्धित रंग योजनाओं को सहेजें?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "अनाम रंग योजना"
+
+#, fuzzy
+#~| msgid "Black & White"
+#~ msgid "Black && White"
+#~ msgstr "काला व सफेद"
+
+#~ msgid "Classic"
+#~ msgstr "क्लासिक"
+
+#~ msgid "Deep Blue"
+#~ msgstr "गहरा नीला"
+
+#~ msgid "Stripy"
+#~ msgstr "स्ट्रिपी"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "कुंजीपटल फ़ाइल '%1' खोल/डाउनलोड नहीं कर सका"
+
+#~ msgid "Control key"
+#~ msgstr "कंट्रोल कुंजी"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "नंबर"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~| "*.*|All Files"
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|केटच कुंजीपट फ़ाइलें (*.keyboard.xml)\n"
+#~ "*.*|सभी फ़ाइलें"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "क्या सचमुच इस कुंजी को मिटाएँ?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "के-टच कुंजीपट संपादक"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr "यह एक वैध यूनिकोड संख्या नहीं है. कृपया संख्या को ठीक करें या अक्षर प्रविष्ट करें."
+
+#, fuzzy
+#~| msgid "Please enter either a character or a unicode number!"
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "कृपया या तो कोई अक्षर या यूनिकोड संख्या भरें!"
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "इस कुंजी के लिए सभी कुंजी कनेक्शनों को मिटाएँ?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "केटच कुंजीपट ख़ाका संपादक त्रुटि"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<परिवर्धक कुंजी>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "कुंजीपट फ़ाइल खोलें"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "कौन सा कुंजीपट फ़ाइल आप संपादित करना चाहते हैं?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "वर्तमान कुंजीपट संपादित करें:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "डिफ़ॉल्ट कुंजीपट खोलें:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "कुंजीपट फ़ाइल खोलें:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<कोई कुंजीपट फ़ाइलें उपलब्ध नहीं है>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "कुंजीपट फ़ाइल खोल नहीं सका, बदले में एक नया बनाया."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "कुंजीपट फ़ाइल '%1' को पढ़ने के दौरान चेतावनियाँ मिलीं:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr "(परिवर्धित)"
+
+#, fuzzy
+#~| msgid "KTouch keyboard editor"
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "के-टच कुंजीपट संपादक"
+
+#, fuzzy
+#~| msgid "KTouch keyboard editor"
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "के-टच कुंजीपट संपादक"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<अनाम कुंजीपट फ़ाइल>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "कुंजीपट परिवर्तित किया गया है. क्या आप परिवर्तनों को सहेजना चाहेंगे?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "कुंजीपटल अभिन्यास फ़ाइल  '%1'. %2 पढ़ नहीं सका."
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "'%1' से कुंजीपटल अभिन्यास फ़ाइल डाउनलोड/खोल नहीं सका."
+
+#~ msgid "A default lecture..."
+#~ msgstr "डिफ़ॉल्ट व्याख्यान..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "प्रशिक्षण व्याख्यान सहेजें"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "के-टच व्याख्यान संपादक -"
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<नया अनाम व्याख्यान फ़ाइल>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "स्तर %1 का डाटा"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "कखगघजझञटठडढणपफबभम"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "पंक्तियों को यहाँ भरें..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "व्याख्यान फ़ाइल खोलें"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "कौन सा व्याख्यान फ़ाइल आप संपादित करना चाहते हैं?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "वर्तमान व्याख्यान संपादित करें:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "डिफ़ॉल्ट व्याख्यान खोलें:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "व्याख्यान फ़ाइल खोल नहीं सका, अतः एक नया बनाया."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "व्याख्यान परिवर्तित किया गया है. क्या आप परिवर्तनों को सहेजना चाहेंगे?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "बहुत सारे"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "कखगघजझञटठडढणपफबभम"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<कोई डिफ़ॉल्ट फ़ाइल उपलब्ध नहीं है>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "कृपया कोई फ़ाइल नाम चुनें या भरें."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "प्रतीत होता है कि यूआरएल गलत है, कृपया इसे सुधारें."
+
+#~ msgid "***current***  "
+#~ msgstr "***मौज़ूदा***"
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "कोई डाटा अभी उपलब्ध नहीं है."
+
+#, fuzzy
+#~| msgid "Erase all statistics data for the current user?"
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "वर्तमान उपयोक्ता के लिए सभी सांख्यिकी डाटा मिटाएँ?"
+
+#~ msgid "Words per minute"
+#~ msgstr "शब्द प्रति मिनट"
+
+#~ msgid "Correctness"
+#~ msgstr "करेक्टनेस"
+
+#~ msgid "Skill"
+#~ msgstr "निपुणता"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "प्रथम अभ्यास सत्र से लेकर समय - दिनों में"
+
+#~ msgid "Sessions"
+#~ msgstr "सत्र"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "प्रट्रेनिंग सत्र प्रारंभ किया जा रहा हैः प्रथम कुंजी दबाए जाने का इंतजार."
+
+#~ msgid "You rock!"
+#~ msgstr "आप तो छा गए!"
+
+#, fuzzy
+#~| msgid "&Lecture Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "व्याख्यान आंकड़े (&L)"
+
+#~ msgid "&Settings"
+#~ msgstr "विन्यास (&S)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "मुख्य औज़ार पट्टी"
+
+#~ msgid "New User"
+#~ msgstr "नया उपयोक्ता"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "कृपया एक बेजोड़ उपयोक्ता नाम भरें:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "यह एक वैध (बेजोड़) उपयोक्ता नाम नहीं है!"
+
+#~ msgid "Save user list?"
+#~ msgstr "उपयोक्ता सूची सहेजें?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "एक प्रोग्राम जो आपको टच टाइपिंग सीखने तथा अभ्यास करने में मदद करता है"
+
+#~ msgid "KTouch"
+#~ msgstr "के-टच"
+
+#~ msgid "Training file to open"
+#~ msgstr "खोलने हेतु प्रशिक्षण फ़ाइल"
+
+#, fuzzy
+#~| msgid "&Edit Color Scheme..."
+#~ msgid "Color Scheme Editor"
+#~ msgstr "रंग योजना संपादित करें... (&E)"
+
+#, fuzzy
+#~| msgid "Keyboards &Color Schemes"
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "कुंजीपट रंग योजनाएँ (&C)"
+
+#, fuzzy
+#~| msgid "&Edit Color Scheme..."
+#~ msgid "Edit Color Scheme"
+#~ msgstr "रंग योजना संपादित करें... (&E)"
+
+#, fuzzy
+#~| msgid "New color scheme"
+#~ msgid "Name of color scheme:"
+#~ msgstr "नई रंग योजना"
+
+#, fuzzy
+#~| msgid "Keyboards &Color Schemes"
+#~ msgid "Keyboard Colors"
+#~ msgstr "कुंजीपट रंग योजनाएँ (&C)"
+
+#, fuzzy
+#~| msgid "Normal key"
+#~ msgid "Normal key colors:"
+#~ msgstr "सामान्य कुंजी"
+
+#, fuzzy
+#~| msgid "Modifier key"
+#~ msgid "Modifier/other keys:"
+#~ msgstr "परिवर्धक कुंजी"
+
+#, fuzzy
+#~| msgid "Keyboard Settings"
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "कुंजीपट विन्यास"
+
+#, fuzzy
+#~| msgid "Open Keyboard File"
+#~ msgid "Keyboard title:"
+#~ msgstr "कुंजीपट फ़ाइल खोलें"
+
+#, fuzzy
+#~| msgid "Keyboard Settings"
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "कुंजीपट विन्यास"
+
+#, fuzzy
+#~| msgid "&Edit Keyboard Layout..."
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "कुंजीपटल खाका संपादित करें... (&E)"
+
+#, fuzzy
+#~| msgid "Save Keyboard Layout"
+#~ msgid "Save Keyboard As..."
+#~ msgstr "कुंजीपट ख़ाका सहेजें"
+
+#, fuzzy
+#~| msgid "<modifier key>"
+#~ msgid "< modifier key>"
+#~ msgstr "<परिवर्धक कुंजी>"
+
+#, fuzzy
+#~| msgid "KTouch Lecture Editor - "
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "के-टच व्याख्यान संपादक -"
+
+#, fuzzy
+#~| msgid "Data of Level %1"
+#~ msgid "Level Data of Level 10"
+#~ msgstr "स्तर %1 का डाटा"
+
+#, fuzzy
+#~| msgid "Characters per minute"
+#~ msgid "Characters per second"
+#~ msgstr "अक्षर प्रति मिनट"
+
+#, fuzzy
+#~| msgid "The text color for the student's line"
+#~ msgid "Use custom color for typing line"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "The text color for the teacher's line"
+#~ msgid "The color for the teacher's line"
+#~ msgstr "शिक्षक पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "The text color for the student's line"
+#~ msgid "Change the text color for the student line"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "The background color for the teacher's line."
+#~ msgid "The background for the teacher's line"
+#~ msgstr "शिक्षक पंक्ति के लिए पृष्ठभूमि रंग"
+
+#, fuzzy
+#~| msgid "The text color for the student's line"
+#~ msgid "Use different color on missed typing"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "The background color for the student's line."
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पृष्ठभूमि रंग."
+
+#, fuzzy
+#~| msgid "The text color for the student's line"
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "विद्यार्थी पंक्ति के लिए पाठ रंग"
+
+#, fuzzy
+#~| msgid "Sound Settings"
+#~ msgid "Text Line Settings"
+#~ msgstr "ध्वनि विन्यास"
+
+#, fuzzy
+#~| msgid "The sliding speed"
+#~ msgid "Sliding speed:"
+#~ msgstr "स्लाइडिंग गति"
+
+#, fuzzy
+#~| msgid "Override the default/predefined lecture fonts."
+#~ msgid "Override lecture font"
+#~ msgstr "डिफ़ॉल्ट/पूर्व-निर्धारित व्याख्यान फ़ॉन्ट को ओवरराइड करें."
+
+#, fuzzy
+#~| msgid "Save Keyboard Layout"
+#~ msgid "Override keyboard fonts"
+#~ msgstr "कुंजीपट ख़ाका सहेजें"
+
+#, fuzzy
+#~| msgid "The font for the keys on the keyboard"
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "कुंजीपटल पर कुंजियों हेतु फ़ॉन्ट"
+
+#, fuzzy
+#~| msgid "Play a sound on automatic level change"
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "स्वचालित स्तर बदलने पर एक ध्वनि बजाएँ"
+
+#, fuzzy
+#~| msgid "Play a sound on automatic level change"
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "स्वचालित स्तर बदलने पर एक ध्वनि बजाएँ"
+
+#, fuzzy
+#~| msgid "Allow automatic level adjustments"
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "स्वचालित स्तर समायोजन स्वीकारें"
+
+#, fuzzy
+#~| msgid "Characters per minute"
+#~ msgid "chars/minute"
+#~ msgstr "अक्षर प्रति मिनट"
+
+#, fuzzy
+#~| msgid "The sliding speed"
+#~ msgid "Typing speed:"
+#~ msgstr "स्लाइडिंग गति"
+
+#, fuzzy
+#~| msgid "Correctness"
+#~ msgid "Correctness:"
+#~ msgstr "करेक्टनेस"
+
+#, fuzzy
+#~| msgid "Number of chars per minute to increase a level"
+#~ msgid "Limits to increase a level"
+#~ msgstr "स्तर बढ़ाने के लिए प्रति मिनट अक्षरों की संख्या"
+
+#, fuzzy
+#~| msgid "Number of chars per minute to decrease a level"
+#~ msgid "Limits to decrease a level"
+#~ msgstr "स्तर कम करने के लिए प्रति मिनट अक्षरों की संख्या"
+
+#, fuzzy
+#~| msgid "Remember the current level for the next KTouch start"
+#~ msgid "&Remember level for next program start"
+#~ msgstr "अगली दफ़ा के-टच प्रारंभ करने के लिए वर्तमान स्तर याद रखें"
+
+#, fuzzy
+#~| msgid "Start new training session"
+#~ msgid "Current Training Session"
+#~ msgstr "नया प्रशिक्षण सत्र प्रारंभ करें"
+
+#, fuzzy
+#~| msgid "Character"
+#~ msgid "Characters typed:"
+#~ msgstr "अक्षर"
+
+#, fuzzy
+#~| msgid "&Lecture Statistics"
+#~ msgid "Current Level Statistics"
+#~ msgstr "व्याख्यान आंकड़े (&L)"
+
+#, fuzzy
+#~| msgid "Edit current lecture:"
+#~ msgid "Show progress in lecture:"
+#~ msgstr "वर्तमान व्याख्यान संपादित करें:"
+
+#, fuzzy
+#~| msgid "Character"
+#~ msgid "Chart Data"
+#~ msgstr "अक्षर"
+
+#, fuzzy
+#~| msgid "Sessions"
+#~ msgid "Session stats"
+#~ msgstr "सत्र"
+
+#, fuzzy
+#~| msgid "Character"
+#~ msgid "Chart Type"
+#~ msgstr "अक्षर"
+
+#, fuzzy
+#~| msgid "Keep current level"
+#~ msgid "Current level"
+#~ msgstr "मौज़ूदा स्तर बनाए रखें"
+
+#, fuzzy
+#~| msgid "Characters per minute"
+#~ msgid "Characters/Minute"
+#~ msgstr "अक्षर प्रति मिनट"
+
+#, fuzzy
+#~| msgid "&Setup Users..."
+#~ msgid "Setup Users"
+#~ msgstr "उपयोक्ता सेटअप करें... (&S)"
+
+#, fuzzy
+#~| msgid "untitled keyboard layout"
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "अनाम कुंजीपट ख़ाका"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "प्रशिक्षण (&r)"
+
+#~ msgid "F&ile"
+#~ msgstr "फ़ाइल (&i)"
+
+#, fuzzy
+#~| msgid "&Current User"
+#~ msgid "Current something"
+#~ msgstr "मौजूदा उपयोक्ता (&C)"
+
+#, fuzzy
+#~| msgid "Open a lecture file:"
+#~ msgid "Open file:"
+#~ msgstr "व्याख्यान फ़ाइल खोलें:"
+
+#~ msgid "default user"
+#~ msgstr "डिफ़ॉल्ट उपयोक्ता"

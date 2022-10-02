@@ -1,0 +1,1265 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY kappname "&ktouch;"
+><!-- replace kapp here -->
+<!ENTITY package "kdeedu">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book lang="&language;">
+
+<bookinfo>
+<title
+>Manuel de &ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+&traducteurLudovicGrossard; &traducteurYohannHamon; &traducteurOlivierDelaune; 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>23/08/2008</date>
+<releaseinfo
+>1.7.1</releaseinfo>
+
+<abstract>
+<para
+>&ktouch; est un programme pour apprendre la dactylographie. &ktouch; vous propose un texte pour vous entraîner, et ajuste le niveau de difficulté en fonction de vos performances. Il affiche la touche suivante sur laquelle vous devez appuyer, et le doigt à utiliser.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>dactylographie</keyword>
+<keyword
+>dactylographie</keyword>
+<keyword
+>saisie</keyword>
+<keyword
+>saisie</keyword>
+<keyword
+>éducation</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>touche</keyword>
+<keyword
+>saisie</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="using_ktouch">
+<title
+>Utilisation de &ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Introduction</title>
+
+<sect2>
+<title
+>Qu'est-ce qu'est &ktouch; ?</title>
+<para
+>&ktouch; est un programme pour apprendre la dactylographie.</para>
+<para
+>&ktouch; vous propose un texte pour vous entraîner, et ajuste le niveau de difficulté en fonction de vos performances. Il affiche votre clavier et vous indique la touche suivante sur laquelle vous devez appuyer, et le doigt à utiliser.</para>
+
+<screenshot>
+<screeninfo
+>Écran principal de &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Écran principal de &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&ktouch; est un excellent professeur de dactylographie. Vous apprenez à taper au clavier avec tous les doigts, pas à pas, sans avoir à regarder le clavier tout le temps pour trouver vos touches (ce qui vous ralentit énormément). Il convient à tous les âges et est le parfait professeur pour les écoles, les universités et les particuliers. Il est libre et sous licence publique &GNU;, donc vous n'aurez jamais à payer quoi que ce soit pour le programme ou toute mise à jour. </para>
+</sect2>
+
+<sect2>
+<title
+>Fonctionnalités </title>
+
+<para
+>Dans sa version courante, &ktouch; 1.7.1 a un nombre important de fonctionnalités intéressantes, telles que :</para>
+<itemizedlist>
+<listitem
+><simpara
+>la prise en charge de nombreuses dictées d'entraînement différentes dans beaucoup de langues incluant les polices de caractères spécifiques aux langues et un éditeur de dictée facile d'utilisation, </simpara
+></listitem>
+<listitem
+><simpara
+>la prise en charge de différentes dispositions de clavier avec la possibilité d'utiliser des dispositions définies par l'utilisateur, </simpara
+></listitem>
+<listitem
+><simpara
+>durant vos sessions d'entraînement, des informations statistiques sont affichées pour vous aider (ou votre enseignant) à analyser vos progrès, </simpara
+></listitem>
+</itemizedlist>
+<para
+>Beaucoup d'autres fonctionnalités sont incluses et seront décrites dans les chapitres appropriés de ce manuel. </para>
+
+</sect2>
+</sect1>
+
+
+<sect1 id="learning">
+<title
+>Apprendre la dactylographie à l'aide de &ktouch;</title>
+
+<para
+>Vous avez ici une autre copie d'écran de &ktouch; en action, cette fois avec un clavier et une dictée en allemand :</para>
+
+<screenshot>
+<screeninfo
+>Écran principal de &ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Écran principal de &ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Bien qu'apprendre la dactylographie avec &ktouch; et utiliser le logiciel devrait être très simple nous découvrirons plus en avant &ktouch; dans les sections suivantes.</para>
+
+<sect2 id="getting_started">
+<title
+>Premiers pas</title>
+
+<para
+>Lorsque vous démarrez &ktouch; vous pouvez voir l'écran présenté plus haut. L'écran principal du logiciel est composé de trois sections principales : </para>
+<orderedlist>
+<listitem
+><simpara
+>des informations statistiques dans des boîtes d'informations en haut, </simpara
+></listitem>
+<listitem
+><simpara
+>le texte que vous devez saisir (dans la ligne enseignant) et le texte que vous avez saisi pour l'instant (dans la ligne étudiant), </simpara
+></listitem>
+<listitem
+><simpara
+>le clavier (qui avec de la chance ressemble au vôtre).</simpara
+></listitem>
+</orderedlist>
+<para
+>Nous reviendrons à ces sections plus tard.</para>
+<para
+>Bon, la première fois que vous démarrez &ktouch;, il ouvrira une dictée et sélectionnera une disposition de clavier suivant la localisation et la définition de clavier définies dans le &centreConfiguration;. Pour régler la configuration du clavier, allez dans <menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Disposition du clavier...</guisubmenu
+></menuchoice
+> et sélectionnez le pays dans lequel vous êtes (ou un pays qui utilise la même disposition de clavier que vous). Si votre clavier n'est pas disponible, vous pouvez toujours définir votre propre clavier (voir <link linkend="create_keyboards"
+>Créez votre propre clavier</link
+>). </para>
+<para
+>Une fois que vous avez sélectionné votre clavier, choisissez votre dictée d'entraînement. La première ligne dans votre dictée courante et le niveau sont affichés dans la ligne du professeur. Vous pouvez sélectionner l'une des dictées par défaut via <menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guisubmenu
+>Dictées par défaut</guisubmenu
+></menuchoice
+> ou ouvrir un fichier de dictée (&pex; si votre enseignant vous donne une dictée spéciale avec laquelle travailler) avec <menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Ouvrir une dictée...</guimenuitem
+></menuchoice
+>. Vous pouvez même créer vos propres dictées (voir <link linkend="create_lectures"
+>Créez vos propres dictées</link
+>). Lorsque vous avez sélectionné le clavier et la dictée, vous pouvez commencer à dactylographier. </para>
+<para
+>Placez votre main sur le clavier comme indiqué par les 8 touches correspondant aux doigts (pouces au-dessus de la barre espace) et commencez à dactylographier le texte affiché dans la ligne du professeur. Chaque touche sur laquelle vous devez appuyer est mise en évidence sur le clavier et si vous avez besoin de déplacer un doigt depuis sa position de repos, la touche cible et la touche du doigt approprié sont mises en évidence. Essayez de déplacer vos mains le moins possible et après avoir saisi un caractère essayez toujours de remettre vos doigts à leur position de repos. </para>
+<tip
+><para
+>La couleur des touches indique le doigt qui doit appuyer sur la touche.</para
+></tip>
+<para
+>Lorsque vous saisissez du texte, vous pouvez faire des erreurs et appuyer sur la mauvaise touche. Dans ce cas la ligne de l'étudiant changera de couleur (rouge par défaut) et vous devez appuyer sur la touche de retour en arrière pour effacer le mauvais caractère (ou les mauvais caractères). </para>
+<para
+>Lorsque vous avez correctement rempli une ligne de texte vous devez appuyer sur la touche &Enter; pour avancer à la ligne suivante. </para>
+</sect2>
+
+<sect2 id="lectures_and_levels">
+<title
+>Dictées et niveaux</title>
+<para
+>Comme mentionné précédemment, vous devez sélectionner une dictée d'entraînement qui contient tout le texte sur lequel vous voulez pratiquer. Normalement la difficulté du texte croît progressivement et de nombreuses dictées contiennent des niveaux de différentes difficultés. Cependant, certaines dictées contiennent seulement un niveau unique et un seul texte (&pex; un article de journal pour tester vos capacités). </para>
+<para
+>Dans la boîte d'information en haut de la fenêtre principale de &ktouch;, vous voyez le niveau courant sur la gauche. Les petits boutons sur la droite vous permettent de changer de niveau manuellement. Normalement cela se produit automatiquement (plus d'informations à propos de cela dans la section <link linkend="training_options"
+>Options d'entraînement</link
+>). La boîte d'information de droite affiche quelques informations textuelles à propos du niveau. Généralement il vous donne une liste de caractères qui sont nouveaux dans ce niveau. Les deux boîtes d'informations au centre affichent votre vitesse actuelle de dactylographie (en caractères par minute) et votre niveau d'exactitude. Ces valeurs sont les statistiques du niveau et dès que vous commencez un nouveau niveau, ces valeurs sont initialisées. Cependant, le programme se souviendra de vos statistiques précédentes (voir la section <link linkend="statistics"
+>Statistiques dans &ktouch;</link
+>). </para>
+</sect2>
+
+<sect2 id="starting_stopping">
+<title
+>Démarrer et arrêter une session d'entraînement</title>
+<para
+>Lorsque vous saisissez le texte d'une dictée d'entraînement vous êtes dans une session de pratique. Vous pouvez commencer une nouvelle session de pratique en utilisant <menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guimenuitem
+>Démarrer une nouvelle session</guimenuitem
+></menuchoice
+> ou le bouton approprié dans la barre d'outils. Les changements de niveau (automatique ou manuel) ne modifient pas votre session d'entraînement. Vous restez dans cette session d'entraînement jusqu'à ce que vous en commenciez une nouvelle, sélectionniez une nouvelle dictée (qui commence automatiquement une nouvelle session d'entraînement) ou quittiez le programme. </para>
+<para
+>Si vous ouvrez une boîte de dialogue dans &ktouch; durant une session d'entraînement, l'entraînement est mis en pause et le chronomètre est stoppé jusqu'à ce que vous appuyiez sur le touche suivante. Vous pouvez mettre en pause la session manuellement en utilisant <menuchoice
+><guimenu
+>Entraînement </guimenu
+><guimenuitem
+>Stopper la session</guimenuitem
+></menuchoice
+> ou le bouton approprié de la barre d'outils. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="statistics">
+<title
+>Statistiques dans &ktouch;</title>
+<para
+>&ktouch; se souvient de vous ! Normalement tout ce que vous saisissez est enregistré et différentes statistiques utiles (parfois juste intéressantes) sont créées. &ktouch; conserve des données statistiques fondées sur le fichier de dictée que vous utilisez pour l'entraînement. Pour tous les fichiers de dictées un historique particulier est conservé. &ktouch; fait également la distinction entre les statistiques de niveau et de session d'entraînement. C'est important pour éviter la triche ! </para>
+
+<sect2>
+<title
+>Statistiques de sessions d'entraînements</title>
+<screenshot>
+<screeninfo
+>Statistiques de la session d'entraînement en cours</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Statistiques de la session d'entraînement en cours</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>À chaque fois que vous commencez une nouvelle session d'entraînement, un nouveau suivi de vos statistiques débute. &ktouch; se rappelle de plusieurs choses pour évaluer vos compétences pour vous aider à identifier les touches qui posent problème : </para>
+<itemizedlist>
+<listitem
+><simpara
+>Combien de touches ont été pressées au total ?</simpara
+></listitem>
+<listitem
+><simpara
+>Combien ont été correctement pressées ?</simpara
+></listitem>
+<listitem
+><simpara
+>Quelles touches ont été manquées et combien de fois ?</simpara
+></listitem>
+<listitem
+><simpara
+>Combien de mots corrects avez-vous saisis ?</simpara
+></listitem>
+<listitem
+><simpara
+>De combien de temps avez-vous eu besoin ?</simpara
+></listitem>
+</itemizedlist>
+<para
+>En utilisant les statistiques des sessions d'entraînement vous, ainsi que &ktouch;, pouvez évaluer vos performances et compétences globales sur une dictée d'entraînement donnée. </para>
+</sect2>
+
+<sect2>
+<title
+>Statistiques de niveau</title>
+<para
+>Pour chaque niveau de votre session d'entraînement (&cad; tous les niveaux dans lesquels vous saisissez du texte), les mêmes statistiques que celles pour votre session d'entraînement sont obtenues. En utilisant les données statistiques de niveau vous pouvez analyser vos progrès dans chaque niveau d'une dictée d'entraînement (et vous noterez combien vos compétences s'accroissent niveau par niveau et vous pourrez vous concentrez sur les niveaux qui vous causent toujours des problèmes). </para>
+</sect2>
+
+<sect2>
+<title
+>La boîte de dialogue de statistiques</title>
+<para
+><menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guimenuitem
+>Statistiques de dictée</guimenuitem
+></menuchoice
+> ou le bouton de statistiques dans la barre d'outils ouvre la boîte de dialogue de statistiques. Elle affiche votre entraînement actuel et les statistiques de niveau et affiche un historique graphique de vos précédentes sessions d'entraînement. </para>
+<para
+>Lorsque vous ouvrez la boîte de dialogue de statistiques, vous pouvez sélectionner une page de <guilabel
+>statistiques de session en cours</guilabel
+> et une page de <guilabel
+>statistiques de niveau en cours</guilabel
+>. La première page vous donne un résumé concernant tout ce que vous avez saisi jusqu'à maintenant. La page de <guilabel
+>statistiques de niveau en cours</guilabel
+> contient uniquement les statistiques pour le niveau en cours. Ceci est utile pour distinguer entre les performances et compétences globales selon les différents niveaux.  </para>
+<para
+>La troisième page de statistiques vous donne une vue d'ensemble graphique de vos compétences en dactylographie en vous offrant plusieurs choix. Un mot à propos de l'option d'échelle de temps. À chaque fois que des statistiques de session ou de niveau sont obtenues, la date est aussi enregistrée. Vous pouvez donc également voir comment vos compétences chutent durant de longues pauses dans vos entraînements et quand vous avez pratiqué pour la dernière fois une certaine dictée ou un certain niveau. </para>
+<screenshot>
+<screeninfo
+>Diagramme des statistiques de la session d'entraînement</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_dialog_chart.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Diagramme des statistiques de la session d'entraînement</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="ui_guide">
+<title
+>Le menu principal de &ktouch; et les boîtes de dialogue</title>
+<para
+>Dans ce chapitre, nous nous penchons sur quelques détails du programme.  <tip
+><para
+>Vous pouvez utiliser la fonctionnalité <quote
+>Qu'est-ce que c'est ?</quote
+> (le petit point d'interrogation à côté des boutons d'agrandissement / réduction de la fenêtre) dans beaucoup de boîte de dialogue du programme.</para
+></tip>
+</para>
+
+<sect1 id="main_menu">
+<title
+>Le menu de &ktouch;</title>
+<para
+>À peu près tout ce qui est dans le menu de &ktouch; devrait être compréhensible sans explication. Le menu <guimenu
+>Fichier</guimenu
+> contient des options pour charger une dictée définie par un utilisateur et éditer des dictées. Le menu <guimenu
+>Entraînement</guimenu
+> contient des options d'entraînement et le menu <guimenu
+>Configuration</guimenu
+> contient des options de paramétrage du programme. Les différentes options dans la boîte de dialogue de configuration sont expliquées dans la prochaine section.</para>
+</sect1>
+
+<sect1 id="program_settings">
+<title
+>Options de configuration de &ktouch;</title>
+<para
+>Vous pouvez énormément personnaliser &ktouch;. Les configurations sont toujours enregistrées pour l'utilisateur courant du programme. Ouvrez la boîte de dialogue de configuration via <menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Configurer &ktouch;...</guimenuitem
+></menuchoice
+>.</para>
+
+<sect2 id="general_options">
+<title
+>Options générales</title>
+<para
+>Dans cette boîte de dialogue, vous pouvez changer les options générales qui contrôlent le comportement de &ktouch;. </para>
+<screenshot>
+<screeninfo
+>Options générales</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="general_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Options générales</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Pour commencer, vous pouvez activer ou désactiver le son (cela peut être utile dans une salle de classe). Vous pouvez également configurer la vitesse de défilement des lignes de l'enseignant et de l'étudiant. </para>
+<para
+>Mais le plus important est sans doute la sélection de la police de caractères des dictées. Lorsqu'il affiche le texte de l'enseignant, &ktouch; utilisera normalement la police de caractères spécifiée dans le fichier de dictée. Mais si cette police de caractères n'existe pas sur votre système ou n'a pas été spécifiée, &ktouch; utilise la police de caractères par défaut du système. Que se passe-t-il si cette police de caractères ne contient pas tous les caractères dont est composée la dictée ? Dans ce cas, vous pouvez outrepasser le choix de la police de caractères et spécifier la police de caractères que vous aimez. <note
+><para
+>&ktouch; fait la distinction entre les polices de caractères des dictées et du clavier. Outrepasser la police de caractères de la dictée n'ajustera pas automatiquement la police de caractères du clavier. Utilisez l'option appropriée dans la page de configuration des options du clavier.</para
+></note>
+</para>
+</sect2>
+
+<sect2 id="training_options">
+<title
+>Options d'entraînement</title>
+<para
+>Dans cette boîte de dialogue, vous pouvez sélectionner les options qui contrôlent comment &ktouch; change le niveau de difficulté en fonction des compétences de l'utilisateur.</para>
+<screenshot>
+<screeninfo
+>Options d'entraînement</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Options d'entraînement</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Si <guilabel
+>Ajustement automatique du niveau</guilabel
+> est activé, &ktouch; vérifie les limites de fin de niveau et décide si il doit augmenter, diminuer ou rester dans le niveau pour une autre série. Les changements de niveau arrivent toujours à la fin d'un niveau (&cad; lorsque l'utilisateur a terminé la dernière ligne d'un niveau). Si la vitesse de frappe (en caractères par minute) et l'exactitude sont <emphasis
+>toutes les deux</emphasis
+> supérieures ou égales aux <guilabel
+>limites pour augmenter d'un niveau</guilabel
+>, &ktouch; sautera au niveau supérieur suivant. Si <emphasis
+>l'une des deux</emphasis
+> de la vitesse de frappe ou de l'exactitude tombe en dessous des <guilabel
+>limites pour diminuer d'un niveau</guilabel
+>, &ktouch; retournera au niveau inférieur précédent. </para>
+<para
+>Sur cette page de configuration vous pouvez également sélectionner que le programme se souvienne de votre niveau courant lorsque vous le quitter et y retourne lorsque vous redémarrez &ktouch;. </para>
+</sect2>
+
+<sect2 id="keyboard_options">
+<title
+>Configuration du clavier</title>
+<para
+>Dans cette boîte de dialogue, vous pouvez sélectionner les options spécifiques du clavier.</para>
+<screenshot>
+<screeninfo
+>Configuration du clavier</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="keyboard_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuration du clavier</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Cette boîte de dialogue contrôle l'apparence et les fonctionnalités du clavier. De la même manière que pour l'option <guilabel
+>Écraser la police de la dictée</guilabel
+> dans page de configuration des <guilabel
+>options générales</guilabel
+>, vous pouvez spécifier ici votre propre police de caractères pour le clavier. L'option <guilabel
+>Surligner les touches sur le clavier</guilabel
+> peut être utilisée pour diminuer la difficulté de l'entraînement. <tip
+><para
+>Une fois que vous êtes familier avec le clavier vous pouvez supprimer le surlignement des touches du clavier pour que vous ne soyez pas distrait lorsque vous vous concentrez sur le texte de l'enseignant.</para
+></tip>
+</para>
+</sect2>
+
+<sect2 id="color_options">
+<title
+>Configuration des couleurs</title>
+<para
+>Dans cette boîte de dialogue, vous pouvez modifier les couleurs utilisées par &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configuration des couleurs</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuration des couleurs</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Vous pouvez sélectionner le texte et la couleur de fond de la ligne du professeur, de la ligne de saisie ainsi que lors d'une erreur de frappe. </para>
+</sect2>
+
+<sect2 id="sound_options">
+<title
+>Configuration du son</title>
+<para
+>Dans cette boîte de dialogue, vous pouvez modifier les options du son de &ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configuration du son</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="sound_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configuration du son</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Activer ou désactiver le <guilabel
+>Bip d'erreur</guilabel
+>, <guilabel
+>Son de machine à écrire lorsque vous tapez</guilabel
+> ou <guilabel
+>Son lors du changement automatique de niveau</guilabel
+>. </para>
+</sect2>
+
+</sect1>
+</chapter>
+
+
+<chapter id="extending">
+<title
+>Étendre les possibilités de &ktouch;</title>
+
+<sect1 id="create_lectures">
+<title
+>Créer votre propre dictée</title>
+<para
+>Vous pouvez facilement créer votre propre dictée d'entraînement en utilisant l'éditeur de dictée intégré à &ktouch;. Lorsque vous sélectionnez <menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Modifier la dictée...</guimenuitem
+></menuchoice
+>, la <guilabel
+>boîte de dialogue d'ouverture de dictée</guilabel
+> s'ouvrira et vous demandera de sélectionner une dictée. Vous pouvez choisir aussi bien de modifier la dictée en cours, une des dictées préexistantes (si vous avez le droit d'écriture dans le dossier d'installation), ouvrir un fichier de dictée ou créer une dictée vierge.</para>
+
+<sect2>
+<title
+>Créer une dictée</title>
+<para
+>Supposons que vous vouliez créer une nouvelle dictée. Il y a quelques recommandations que vous devez prendre en compte : </para>
+<itemizedlist>
+
+
+<listitem
+><para
+>pour les 20 premières lettres, ajouter seulement deux lettres à la fois à un nouveau niveau. Laissez d'abord l'utilisateur s'entraîner sur les lettres seules selon différentes combinaisons puis utilisez les nouvelles lettres dans des mots et mélangez avec des mots déjà connus,  </para
+></listitem>
+
+<listitem
+><para
+>ajoutez au moins quelques niveaux à la dictée pour permettre à l'utilisateur de voir quelques progrès lors de son entraînement, </para
+></listitem>
+
+<listitem
+><para
+>ne faites pas de niveaux trop long,  </para
+></listitem>
+
+<listitem
+><para
+>essayer d'augmenter la difficulté du texte graduellement et testez-le vous même,  </para
+></listitem>
+
+<listitem
+><para
+>après l'apprentissage des premières touches, incluez une dictée de récapitulation. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2>
+<title
+>Les choses à savoir à propos des dictées</title>
+<para
+>Le titre de la dictée est important pour l'entrée dans le menu de sélection rapide et pour les statistiques. Le commentaire devrait être utilisé pour inclure des informations à propos de l'auteur de la dictée et de la source des données de la dictée si besoin. </para>
+<para
+>Pour chaque niveau, vous pouvez spécifier les nouvelles lettres / touches de la dictée. Le texte que vous saisissez ici sera affiché comme texte d'information du niveau en haut à droite de la boîte d'information de la fenêtre principale de &ktouch;. </para>
+<para
+>Vous pouvez également spécifier une police de caractères par défaut pour la dictée, laquelle sera utilisée dans les lignes de l'enseignant et de l'étudiant et bien sûr dans la boîte de dialogue de modification de la dictée en utilisant l'icône <guiicon
+>Police</guiicon
+>. </para>
+</sect2>
+
+</sect1>
+
+<sect1 id="create_keyboards">
+<title
+>Créer votre propre clavier</title>
+<para
+>Vous pouvez créer votre propre clavier en créant des fichiers de clavier. Pour l'instant &ktouch; ne possède pas d'éditeur de clavier mais il est relativement facile de définir votre propre clavier. Cela ne requiert pas beaucoup plus qu'un peu de mathématiques pour établir la géométrie, et un peu de temps. Le mieux est de commencer avec un fichier de clavier existant, créer une copie pour votre propre disposition de clavier et modifier simplement les lignes.</para>
+<para
+>Pour l'instant les fichiers de clavier sont des fichiers texte encodés en UTF-8. Dans une des futures versions de &ktouch;, les données de clavier seront enregistrées dans des fichiers &XML; également. Par conséquent je n'expliquerai que brièvement la structure d'un fichier de clavier. </para>
+<para
+>Un fichier de clavier commence habituellement avec un en-tête incluant quelques informations à propos de l'auteur et du type de clavier.</para>
+<programlisting
+>####################################################
+#    &ktouch;
+#    Fichier de disposition du clavier pour les dispositions de claviers allemands
+#    Code=UTF-8
+####################################################
+</programlisting>
+<para
+>Toutes les lignes commençant par le caractère <quote
+>#</quote
+> sont considérées comme des commentaires. La section d'en-tête est suivi par un bloc appelé <quote
+>touches des doigts</quote
+>, indiquant les positions de repos pour les huit doigts. </para>
+<programlisting
+>#
+#          Unicode  KeyChar  x    y
+#
+FingerKey  97       A        18   20
+FingerKey  115      S        28   20
+FingerKey  100      D        38   20
+FingerKey  102      F        48   20
+FingerKey  106      J        78   20
+FingerKey  107      K        88   20
+FingerKey  108      L        98   20
+FingerKey  246      Ö        108  20
+</programlisting>
+<para
+>Les touches ont les dimensions par défaut de huit unités, utiliser alors une grille de 10 unités donne un clavier d'aspect normal. Le premier chiffre est le code unicode du caractère sous la forme d'un chiffre décimal. Le KetChar est le texte imprimé sur la touche encodé au format UTF-8 (automatique sous les nouvelles versions de &Linux;, assurez vous simplement que votre éditeur enregistre les fichiers au format UTF-8).</para>
+<para
+>La section suivante contient les touches spéciales, qui sont - exception faite de Retour chariot et Entrée - justes décoratives.</para>
+<programlisting
+>#
+#           Unicode  KeyText    x     y     Width Height
+#
+ControlKey  260      Tab        0     10    15    10
+ControlKey  13       Enter      138   20    12    10
+ControlKey  258      Maj      123   30    27    10
+ControlKey  264      AltGr      120   40    15    10
+ControlKey  265      Ctrl       135   40    15    10
+ControlKey  263      Alt        15    40    15    10
+ControlKey  262      Strg       0     40    15    10
+ControlKey  32       Leertaste  30    40    90    10
+ControlKey  257      Maj      0     30    13    10
+ControlKey  259      CapsLock   0     20    18    10
+ControlKey  8        BackSpace  130   0     20    10
+</programlisting>
+<para
+>Le texte que vous spécifiez pour la touche est imprimé en totalité sur le clavier. Cependant, pour les textes <quote
+>Maj</quote
+>, <quote
+>CapsLock</quote
+>, <quote
+>Tab</quote
+>, <quote
+>BackSpace</quote
+> et <quote
+>Enter</quote
+> &ktouch; dessine les symboles appropriés. Par conséquent vous pouvez utiliser ces KeyText indépendamment de la langue. Cependant les autres KeyText comme Ctrl ou Alt nécessitent d'être traduits. La géométrie des touches de contrôles peut être tout rectangle, défini par les coordonnées supérieures x et y et la largeur et la hauteur.</para>
+<para
+>La section suivante contient tous les caractères présents sur le clavier (exception faite des touches des doigts déjà définies) qui peuvent être saisis <emphasis
+>sans</emphasis
+> appuyer sur la touche Maj.</para>
+<programlisting
+>#
+#          Unicode  KeyChar   x    y      FingerKeyUnicode
+#
+NormalKey  94       ^         0    0      97
+NormalKey  49       1         10   0      97
+NormalKey  50       2         20   0      115
+NormalKey  51       3         30   0      100
+NormalKey  52       4         40   0      102
+NormalKey  53       5         50   0      102
+NormalKey  54       6         60   0      102
+.
+.
+.
+NormalKey  46       .         103  30     108
+NormalKey  45       -         113  30     246
+</programlisting>
+<para
+>La définition de ces touches est principalement la même que celle des touches des doigts, mais elle inclut une propriété additionnelle. Le dernier code de caractère unicode identifie les doigts associés aux touches. Plus simplement quel doigt doit être utilisé pour appuyer sur cette touche.</para>
+<para
+>La section suivante, qui est également la dernière dans la disposition du clavier, définit toutes les touches qui sont pressées en utilisant l'une des touches de modifications telle que la touche Maj. </para>
+<programlisting
+>#
+#           Unicode   TargetUnicode   FingerUnicode   ControllUnicode    
+Comment
+#
+HiddenKey   65        97              97              258                 #A
+HiddenKey   66        98              102             258                 #B
+HiddenKey   67        99              100             258                 #C
+HiddenKey   68        100             100             258                 #D
+.
+.
+.
+HiddenKey   124       60              97              264                 #|
+HiddenKey   64        113             97              264                 #@
+</programlisting>
+<para
+>Les <quote
+>touches cachées</quote
+> contrôlent réellement ce qui devrait arriver sur le clavier lorsque vous saisissez un certain caractère. Le premier chiffre unicode est le code de caractère du caractère que vous définissez. Le second chiffre est le code de caractère de la touche sur le clavier (une des touches normales précédemment définies). Le troisième chiffre indique une touche de doigt (où est la position de repos du doigt qui doit appuyer sur cette touche) et le dernier chiffre indique la touche de modification qur laquelle vous devez appuyer pour obtenir ce caractère. </para>
+<para
+>Regardons un exemple : </para>
+<para
+>Vous voulez définir le caractère majuscule « R ». Il a le code unicode 82. Le caractère qui est obtenu lorsque le « R » est pressé sans la touche de modification est le « r » minuscule avec le code unicode 114. Le doigt pour le « R » se repose au-dessus de la touche « f » qui a le code unicode 102. Et pour obtenir le « R » vous devez appuyer sur la touche Maj de droite (ou de gauche) qui a le code 264 (en fait ce n'est pas un code unicode mais un code obtenu à partir d'un évènement keypress de QT). Notez que l'identification des touches de contrôle changera probablement dans les prochaines versions de &ktouch;. Mais pour l'instant vous pouvez utiliser les codes présents dans les autres fichiers de clavier. </para>
+
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Référence des commandes</title>
+
+<sect1 id="ktouch-mainwindow">
+<title
+>Menus et raccourcis</title>
+
+<sect2>
+<title
+>Le menu <guimenu
+>Fichier</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Ouvrir un fichier texte...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> un fichier texte et l'utilise comme dictée.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Ouvrir une dictée...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> un nouveau fichier de dictée d'entraînement</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Modifier la dictée...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> l'éditeur de dictée pour vous permettre de modifier le fichier d'entraînement courant </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Modifier le modèle de couleurs...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> le modèle de couleurs pour vous permettre de définir un nouveau modèle de couleurs.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Modifier la disposition du clavier...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> un fichier de clavier et modifie la disposition du clavier dans la boîte de dialogue <guilabel
+>Éditeur de clavier de &ktouch;</guilabel
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+> </keycombo
+></shortcut
+> <guimenu
+>Fichier</guimenu
+> <guimenuitem
+>Quitter</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Quitte</action
+> &ktouch;</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+
+
+<sect2>
+<title
+>Le menu <guimenu
+>Entraînement</guimenu
+></title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guimenuitem
+>Démarrer une nouvelle session</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Démarre</action
+> une nouvelle session de dactylographie et vous demande si vous voulez commencer au même niveau</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guimenuitem
+>Stopper la session</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Met en pause</action
+> la session courante : les statistiques sont suspendues</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guimenuitem
+>Statistiques de la dictée</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Ouvre</action
+> la boîte de dialogue des statistiques du niveau courant</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Entraînement</guimenu
+> <guisubmenu
+>Dictées par défaut</guisubmenu
+> <guimenuitem
+>Français (généré automatiquement)</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> la langue dans laquelle vous voulez apprendre à dactylographier</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Le menu <guimenu
+>Configuration</guimenu
+></title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Afficher la barre d'outils</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Affiche / cache</action
+> la barre d'outils</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Afficher la barre d'état</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Affiche / cache</action
+> la barre d'état</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Disposition du clavier</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Cet objet <action
+>affiche</action
+> une liste des dispositions de clavier disponible où vous pouvez choisir la disposition que vous voulez utiliser.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Modèles de couleurs du clavier</guisubmenu
+> <guimenuitem
+>Noir et blanc</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> le thème de couleur noir et blanc pour le clavier : toutes les touches sont en blanc et celle que vous devriez utiliser est noire</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Modèles de couleurs du clavier</guisubmenu
+> <guimenuitem
+>Classique</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> le thème de couleur classique pour le clavier : chaque colonne de touches a une couleur différente</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Modèles de couleurs du clavier</guisubmenu
+> <guimenuitem
+>Teintes de bleu</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> le thème de couleur <quote
+>Teintes de bleu</quote
+> pour le clavier : chaque colonne de touches a une couleur différente en nuances de bleu.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Modèles de couleurs de clavier</guisubmenu
+> <guimenuitem
+>Bleu et gris</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> le thème de couleur <quote
+>Bleu et gris</quote
+> pour le clavier : en bleu et gris</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guisubmenu
+>Utilisateur actuel</guisubmenu
+> <guimenuitem
+>Utilisateur par défaut</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Choisit</action
+> l'utilisateur de la session d'entraînement actuel.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Configurer les utilisateurs...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Affiche</action
+> une boîte de dialogue pour ajouter ou supprimer un utilisateur dans &ktouch;. Les utilisateurs listées dans la boîte de dialogue apparaissent dans le sous menu <guisubmenu
+>Utilisateur actuel</guisubmenu
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Configurer les raccourcis clavier...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Configure</action
+> les raccourcis que vous voulez associer à certaines actions </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Configurer les barres d'outils...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Configure</action
+> les éléments que vous voulez mettre dans la barre d'outils </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Configuration</guimenu
+> <guimenuitem
+>Configurer &ktouch;...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Affiche</action
+> la boîte de dialogue de configuration de &ktouch; </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Le menu <guimenu
+>Aide</guimenu
+></title>
+&help.menu.documentation; </sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Remerciements et licence</title>
+<para
+>&ktouch;</para>
+<para
+>&ktouch;, Copyright 1999-2007 par</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+
+<para
+>Collaborateurs :</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, disposition de clavier en allemand, fichier d'entraînement en allemand et traduction.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, disposition de clavier d'Amérique latine</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, disposition de clavier en portugais</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, disposition de clavier en français</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Mes remerciements à tous les autres contributeurs (non mentionnés ici) pour les fichiers de dictées et de claviers.</emphasis>
+</para>
+<para
+>Traduction française par &LudovicGrossard;, &YohannHamon; et &OlivierDelaune;. Relecture par &LudovicGrossard;.</para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Comment obtenir et installer &ktouch;</title>
+
+ &install.intro.documentation;
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=2:sw=2:tw=78:noet
+-->

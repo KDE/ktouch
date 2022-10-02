@@ -1,0 +1,3114 @@
+# Translation of ktouch.po into finnish
+# Copyright (C) 2003, 2005, 2006 Free Software Foundation, Inc.
+# Mikko Ikola <kola@netikka.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005, 2006.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2005.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2012, 2013, 2014, 2015, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2018, 2021.
+# Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2021-10-12 16:30+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-02 17:03:34+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Mikko Ikola, Teemu Rytilahti, Ilpo Kantonen, Lasse Liehu, Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"ikola@iki.fi,teemu.rytilahti@kde-fi.org,ilpo@iki.fi,lasse.liehu@gmail.com, "
+"translator@legisign.org"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr "Virheellinen tietokannan versio ”%1”."
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr "Omat oppitunnit"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr "Paikka omien harjoitustekstien säilömiseen"
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr "Ei kurssia tunnisteella %1"
+
+#: src/core/userdataaccess.cpp:328
+#, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Ei näppäimistöasettelua tunnisteella %1"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr "Piilotettu"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr "Ylävasen"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr "Yläoikea"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr "Alavasen"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr "Alaoikea"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr "Virhe avattaessa kurssia"
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr "Sisäänrakennettuja kursseja voi vain katsella."
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Virhe avattaessa näppäimistöasettelua"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr "Sisäänrakennettuja näppäimistöasetteluita voi vain katsella."
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr "%1 %"
+
+# %1 on merkkien määrä
+#: src/editor/lessontexteditor.cpp:62
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 merkki"
+msgstr[1] "%1 merkkiä"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr "Tekstitiedostot (*.txt)"
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr "Valittua tiedostoa ei saatu avattua"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr "Samalla tunnisteella on jo näppäimistöasettelu."
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr "Uusi"
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr "Uusi…"
+
+#: src/editor/newresourceassistant.cpp:35
+#, kde-format
+msgid "New course"
+msgstr "Uusi kurssi"
+
+#: src/editor/newresourceassistant.cpp:39
+#, kde-format
+msgid "New keyboard layout"
+msgstr "Uusi näppäimistöasettelu"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr "Pohja"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr "Poista"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr "Tuo"
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr "Vie"
+
+#: src/editor/resourceeditor.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Kurssi- ja näppäimistöasettelumuokkain"
+
+#: src/editor/resourceeditor.cpp:66
+#, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Luo uusi kurssi tai näppäimistöasettelu"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Poista valittu kurssi tai näppäimistöasettelu"
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Tuo kurssi tai näppäimistöasettelu tiedostosta"
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Vie valittu kurssi tai näppäimistöasettelu tiedostoon"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr "Virhe poistettaessa kurssia"
+
+#: src/editor/resourceeditor.cpp:194
+#, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Virhe poistettaessa näppäimistöasettelua"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr "XML-tiedostot (*.xml)"
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr "Valittua tiedostoa ei saatu tuotua."
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr "Virhe tallennettaessa kurssia"
+
+#: src/editor/resourceeditor.cpp:289
+#, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Virhe tallennettaessa näppäimistöasettelua"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr "Kurssi <b>%1</b> poistettu"
+
+#: src/editor/resourceeditor.cpp:380
+#, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Näppäimistöasettelu <b>%1</b> poistettu"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr "Virhe tallennettaessa kurssia levylle."
+
+#: src/editor/resourceeditor.cpp:448
+#, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Virhe tallennettaessa näppäimistöasettelua levylle."
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr "Valittu kurssi on jo olemassa sisäänrakennettuna kurssina."
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr "Tuo uutena kurssina"
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr "Valittu kurssi on jo olemassa käyttäjän kurssina."
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+"Valittu näppäimistöasettelu on jo olemassa sisäänrakennettuna "
+"näppäimistöasetteluna."
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Tuo uutena näppäimistöasetteluna"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+"Valittu näppäimistöasettelu on jo olemassa käyttäjän näppäimistöasetteluna."
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr "Palauta"
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr "Kuittaa"
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr "Käytä toista kurssia pohjana"
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Käytä toista näppäimistöasettelua pohjana"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr "Kurssi"
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, kde-format
+msgid "Keyboard layout"
+msgstr "Näppäimistöasettelu"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr "Muilla kuin X11-alustoilla käytettävä näppäimistöasettelu"
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr "Hallitsee kirjoitusvirheiden korjaamisen pakottamista."
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr "Hallitsee näppäimistön näkyvyyttä harjoituksen aikana."
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr "Hallitsee reaaliaikaisten tilastojen näkymistä harjoituksen aikana."
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr "Enter-näppäimen painallus rivin lopussa siirtää seuraavalle riville."
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+"Välilyöntinäppäimen painallus rivin lopussa siirtää seuraavalle riville."
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+"Seuraavan oppitunnin avaamiseen vaadittu painalluksia minuutissa -"
+"vähimmäisarvo"
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+"Seuraavan oppitunnin avaamiseen vaadittu kirjoittamisen vähimmäistarkkuus"
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr "Väri eri sormien näppäimien korostamiseksi sävyttämällä."
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr "Kuinka läpikuultavat sormivärit tulisi esittää."
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr "Viimeksi käytetyn profiilin tunniste."
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training"
+msgstr "Harjoittelu"
+
+#: src/ktouchcontext.cpp:129
+#, kde-format
+msgid "Training Settings"
+msgstr "Harjoitteluasetukset"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Colors"
+msgstr "Värit"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Väriasetukset"
+
+#: src/ktouchcontext.cpp:143
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Näppäimistöasetukset"
+
+#: src/ktouchcontext.cpp:160
+#, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Kurssi- ja näppäimistöasettelumuokkain…"
+
+#: src/ktouchcontext.cpp:170
+#, kde-format
+msgid "Configure Keyboard..."
+msgstr "Näppäimistön asetukset…"
+
+# pmap: =:gen=Konekirjoituksen harjoitteluohjelman:
+# pmap: =:elat=Konekirjoituksen harjoitteluohjelmasta:
+# pmap: =:yleisnimi=kyllä:
+#: src/main.cpp:26
+#, kde-format
+msgid "Typewriting Trainer"
+msgstr "Konekirjoituksen harjoitteluohjelma"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr "Opi ja harjoittele konekirjoitusta"
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+"Copyright © 2011–2015 Sebastian Gottfried\n"
+"Copyright © 2000–2007 Håvard Frøiland ja Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr "Sebastian Gottfried"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Current maintainer"
+msgstr "Nykyinen ylläpitäjä"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr "Entinen ylläpitäjä ja ohjelmoija"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr "Alkuperäinen tekijä"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "SVG-kuvakkeen tekijä"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr "Paljon paikkauksia, korjauksia ja päivityksiä"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Kaikki harjoitus- ja näppäimistötiedostoja luoneet"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Käynnistä kurssi- ja näppäimistöasettelumuokkain"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr "Lisää sijainti QML-tuontipolun alkuun"
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr "%1 on kohdannut ajonaikaisen virheen ja se täytyy sulkea."
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Merkki"
+
+# ID jätetty ID:ksi lyhyyden vuoksi.
+#: src/models/charactersmodel.cpp:197
+#, kde-format
+msgid "Modifier ID"
+msgstr "Muunnosnäppäimen ID"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr "Sijainti"
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr "<Nimetön>"
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "<p>Uusia merkkejä: %1</p><p>%2</p>"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr "Nimi"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr "Kurssit"
+
+#: src/models/resourcemodel.cpp:211
+#, kde-format
+msgid "Keyboard Layouts"
+msgstr "Näppäimistöasettelut"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr "Tunniste: %1"
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Tarkkuus"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, kde-format
+msgid "Characters per Minute"
+msgstr "Merkkejä minuutissa"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr "<i>Tuntematon</i>"
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr "Oppitunti:"
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, kde-format
+msgid "Training on:"
+msgstr "Harjoitus:"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, kde-format
+msgid "Accuracy:"
+msgstr "Tarkkuus:"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, kde-format
+msgid "Characters per Minute:"
+msgstr "Merkkejä minuutissa:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Näppäimistöasettelusi kurssit"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Other Courses"
+msgstr "Muut kurssit"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr "Tervetuloa harjoittelemaan konekirjoitusta"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, kde-format
+msgid "Start Training"
+msgstr "Aloita harjoittelu"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Valittu kurssi on tarkoitettu tietylle näppäimistöasettelulle."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+"Valittua kurssia ei ole tarkoitettu tietokoneen aktiiviselle "
+"näppäimistöasettelulle."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+"KTouch ei voinut asettaa tai vaihtaa näppäimistöasettelua. Ennen harjoitusta "
+"tietokone on asetettava käyttämään oikeaa asettelua, muuten joudut "
+"käyttämään nykyistä asettelua oppitunnin tekstin kirjoittamiseen."
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, kde-format
+msgid "Configure Keyboard"
+msgstr "Näppäimistön asetukset"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Oppitunti <b>%1</b> on poistettu."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr "Otsikoton oppitunti poistettu."
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr "Kumoa"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr "Vahvista"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, kde-format
+msgid "Edit lesson"
+msgstr "Muokkaa oppituntia"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Nimi:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, kde-format
+msgid "Lesson text"
+msgstr "Oppitunnin teksti"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr "Valmis"
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr "Avaa läpäisemällä aiemmat oppitunnit"
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, kde-format
+msgid "Manage Profiles"
+msgstr "Profiilien hallinta"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Profiilien hallinta"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr "Harjoiteltuja oppitunteja:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, kde-format
+msgid "Total training time:"
+msgstr "Harjoitellut yhteensä:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr "Harjoitellut viimeksi:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr "Haluatko varmasti poistaa profiilin <b>%1</b>?"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr "Peru"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr "Esittele itsesi ennen harjoittelun aloittamista."
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr "Nimi"
+
+# Suomennoksessa on rivinvaihto, koska teksti menisi muuten rumasti ohjelmassa olevan laatikon ulkopuolelle. Kyseinen laatikko näkyy vain, kun ohjelma käynnistetään ensimmäisen kerran. Lisäksi ilman rivinvaihtoa teksti voisi leikkautua muutenkin uutta profiilia luotaessa, jos ohjelmaikkuna on riittävän pieni.
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+"Minulla ei ole lainkaan tai on hyvin vähän kokemusta\n"
+"konekirjoituksesta"
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr "Oppitunnit avataan kirjoitustaitojesi parantuessa."
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr "Olen kokenut konekirjoittaja, ja haluan parantaa taitojani"
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr "Kaikki oppitunnit ovat saatavilla heti."
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, kde-format
+msgid "Create New Profile"
+msgstr "Luo uusi profiili"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr "Käytä valittua profiilia"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, kde-format
+msgid "Lesson training statistics"
+msgstr "Oppituntien harjoitustilastot"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr "Kulunut aika"
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, kde-format
+msgid "Character:"
+msgstr "Merkki:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr "Virheitä:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr "Palaa aloitusnäyttöön"
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr "Aloita oppitunti alusta"
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr "Seuraava oppitunti"
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr "Onnittelut! Läpäisit oppitunnin."
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr "Et läpäissyt oppituntia."
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr "Aloita oppitunti alusta. Taitosi paranevat itsestään ajan myötä."
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr "Seuraava oppitunti avattu"
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr "Näytä"
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr "edistyminen"
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr "virheet"
+
+# Käännetty välilyönniksi kontekstin vuoksi. Esim. ”Show” ”Progress” ”Over” ”This Lesson”, suomeksi ”Näytä edistyminen tämän oppitunnin osalta”.
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr " "
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr "kaikkien oppituntien osalta"
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, kde-format
+msgid "This Lesson"
+msgstr "tämän oppitunnin osalta"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Näppäimistöasettelullesi ei ole visualista esitystä."
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr "Valikko"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, kde-format
+msgid "Resume Training"
+msgstr "Jatka harjoitusta"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, kde-format
+msgid "Restart Lesson"
+msgstr "Aloita oppitunti alusta"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, kde-format
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Harjoitus alkoi. Aika alkaa ensimmäisestä näppäinpainalluksesta."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Harjoitus on keskeytetty. Aika alkaa taas kulua ensimmäisestä "
+"näppäinpainalluksesta."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr "Sormet"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr "Vasen käsi"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr "Etusormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr "Keskisormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, kde-format
+msgid "Ring finger:"
+msgstr "Nimetön:"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr "Pikkusormi:"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr "Oikea käsi"
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr "Peittävyys"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, no-c-format, kde-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, kde-format
+msgid "Keyboard layout:"
+msgstr "Näppäimistöasettelu:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr "Oppitunnit:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr "Lisää uusi oppitunti"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr "Poista oppitunti"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr "Siirrä oppituntia ylemmäs"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr "Siirrä oppituntia alemmas"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, kde-format
+msgid "New characters:"
+msgstr "Uudet merkit:"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr "Valintaikkuna"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, kde-format
+msgid "Create new normal key"
+msgstr "Luo uusi tavallinen näppäin"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr "Tavallinen näppäin"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, kde-format
+msgid "Create new special key"
+msgstr "Luo uusi erikoisnäppäin"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr "Erikoisnäppäin"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr "Poista valittu näppäin"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr "100 %"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, kde-format
+msgid "Keyboard"
+msgstr "Näppäimistö"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr "Tunniste:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Leveys:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Korkeus:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr "Geometria"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Vasen:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Ylä:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr "Näppäin"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, kde-format
+msgid "Finger:"
+msgstr "Sormi:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr "Vasen pikkusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr "Vasen nimetön"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr "Vasen keskisormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr "Vasen etusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr "Oikea etusormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr "Oikea keskisormi"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr "Oikea nimetön"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr "Oikea pikkusormi"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr "Kohouma:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, kde-format
+msgid "Characters"
+msgstr "Merkit"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, kde-format
+msgid "Add new character"
+msgstr "Lisää uusi merkki"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, kde-format
+msgid "Remove character"
+msgstr "Poista merkki"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr "Tyyppi:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr "Sarkain"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr "Vaihtolukko"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr "Vaihto"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr "Askelpalautin"
+
+# BUGI: Sama viesti kahdessa eri kontekstissa
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr "Enter"
+
+# BUGI: Sama viesti kahdessa eri kontekstissa
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr "Välilyönti"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr "Muu"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr "Nimike:"
+
+# ID jätetty ID:ksi lyhyyden vuoksi.
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, kde-format
+msgid "Modifier ID:"
+msgstr "Muunnosnäppäimen ID:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, kde-format
+msgid "Open a text file..."
+msgstr "Avaa tekstitiedosto…"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr "Rivitä automaattisesti"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, kde-format
+msgid "0 Characters"
+msgstr "0 merkkiä"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Liitä nykyisen järjestelmänäppäimistöasettelun tunniste"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr "Harjoituksen aikana:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr "Pakota korjaamaan kirjoitusvirheet"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Näytä näppäimistö"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, kde-format
+msgid "Show real-time statistics"
+msgstr "Näytä reaaliaikaiset tilastot"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr "Siirry seuraavalle riville:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr "&Enter"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr "&Välilyönti"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr "Oppitunnin avaamisrajat"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "&Painalluksia minuutissa vähintään:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr "Vähimmäistarkkuus:"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr "Aseta nimi"
+
+#: src/undocommands/coursecommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout"
+msgstr "Aseta näppäimistöasettelu"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr "Muokkaa kuvausta"
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr "Lisää oppitunti"
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr "Siirrä oppituntia"
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr "Aseta oppitunnin nimi"
+
+#: src/undocommands/coursecommands.cpp:321
+#, kde-format
+msgid "Set new characters for lesson"
+msgstr "Aseta oppitunnin uudet merkit"
+
+#: src/undocommands/coursecommands.cpp:360
+#, kde-format
+msgid "Set lesson text"
+msgstr "Aseta oppitunnin teksti"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, kde-format
+msgid "Set keyboard layout title"
+msgstr "Aseta näppäimistöasettelun nimi"
+
+# Name on tässä tunniste, koska muuten näppäimistöasettelun sekä title että name on nimi.
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, kde-format
+msgid "Set keyboard layout name"
+msgstr "Aseta näppäimistöasettelun tunniste"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, kde-format
+msgid "Set keyboard layout size"
+msgstr "Aseta näppäimistöasettelun koko"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Lisää näppäin"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, kde-format
+msgid "Remove key"
+msgstr "Poista näppäin"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr "Aseta näppäimen geometria"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr "Aseta näppäimen sormi"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr "Aseta kohouma"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, kde-format
+msgid "Add key character"
+msgstr "Lisää näppäinmerkki"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, kde-format
+msgid "Remove key character"
+msgstr "Poista näppäinmerkki"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, kde-format
+msgid "Set key character value"
+msgstr "Aseta näppäinmerkin arvo"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr "Aseta näppäinmerkin muunnosnäppäin"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr "Aseta näppäinmerkin sijainti"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr "Aseta erikoisnäppäimen tyyppi"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr "Aseta erikoisnäppäimen nimike"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr "Aseta erikoisnäppäimen muunnnosnäppäintunniste"
+
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Valitse näppäimistöasettelu"
+
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Luo uusi oma oppitunti"
+
+#~ msgid "'%1' deleted."
+#~ msgstr "”%1” poistettiin."
+
+#~ msgctxt "Statistics on lesson:"
+#~ msgid "On:"
+#~ msgstr "Oppitunti:"
+
+#~ msgid "Use OpenGL for rendering (experimental)"
+#~ msgstr "Piirrä OpenGL:llä (kokeellinen)"
+
+#~ msgid "Edit Custom Lesson"
+#~ msgstr "Muokkaa omaa oppituntia"
+
+#~ msgid "No Courses Available"
+#~ msgstr "Kursseja ei saatavilla"
+
+#~ msgid ""
+#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
+#~ "create your own course with the keyboard layout and course editor."
+#~ msgstr ""
+#~ "Konekirjoituksen harjoitteluohjelmalla ei ole kursseja "
+#~ "näppäimistöasettelullesi. Voit luoda oman kurssin kurssi- ja "
+#~ "näppäimistöasettelumuokkaimella."
+
+#~ msgid "Launch Editor"
+#~ msgstr "Käynnistä muokkain"
+
+#~ msgid "use a QGLWidget for the viewport"
+#~ msgstr "käytä QGlWidgetiä näkymässä"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Arabic"
+#~ msgstr "Arabialainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "Brasialainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarialainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwerty"
+#~ msgstr "Tšekkiläinen qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Czech qwertz"
+#~ msgstr "Tšekkiläinen qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Tanskalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Englantilainen Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Englantilainen Dvořak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Englantilainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "AlphaGrip"
+#~ msgstr "AlphaGrip"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Dvořak (Iso-Britannia)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English (United Kingdom)"
+#~ msgstr "Englantilainen (Yhdistynyt kuningaskunta)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Estonian"
+#~ msgstr "Virolainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Ranskalainen Dvořak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Ranskalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Dvorak Type II"
+#~ msgstr "Saksalainen Dvořak tyyppi II"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Saksalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Saksalainen Neo 2"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Kreikkalainen (Englanti)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hebrew"
+#~ msgstr "Heprealainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Hungarian"
+#~ msgstr "Unkarilainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Italialainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Kannada"
+#~ msgstr "Kannada"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Latinoamerican"
+#~ msgstr "Latinalaisamerikkalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Lithuanian standard"
+#~ msgstr "Liettualainen standardi"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norjalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Portuguese"
+#~ msgstr "Portugalilainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Québec"
+#~ msgstr "Québec"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Russian"
+#~ msgstr "Venäläinen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwerty"
+#~ msgstr "Slovakialainen qwerty"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovak qwertz"
+#~ msgstr "Slovakialainen qwertz"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slovenialainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Espanjalainen Dvořak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Espanjalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Ruotsalainen näppäimistö"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Saksalainen (Sveitsi)"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Sveitsinranskalainen"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "Ukrainalainen (Win-näppäimet)"
+
+#~ msgid "Default User"
+#~ msgstr "Oletuskäyttäjä"
+
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt *ktouch.xml|Tekstitiedostot\n"
+#~ "*|Kaikki tiedostot"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Valitse harjoitusteksti"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Tuotiin teksti tiedostosta ”%1”"
+
+#~ msgid "generated from text file"
+#~ msgstr "luotiin tekstitiedostosta"
+
+#~ msgid "all available"
+#~ msgstr "kaikki käytettävissä"
+
+#~ msgid "*.ktouch.xml|Lecture files"
+#~ msgstr "*.ktouch.xml|Harjoitustiedostot"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Valitse harjoituksen tiedosto"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Haluatko säilyttää nykyisen tason uusiin harjoituksiin?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Aloita uusi harjoituslerta"
+
+#~ msgid "Keep current level"
+#~ msgstr "Säilytä nykyinen taso"
+
+#~ msgid "Start from first level"
+#~ msgstr "Aloita ensimmäiseltä tasolta"
+
+#~ msgid "General Options"
+#~ msgstr "Yleisasetukset"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Näppäimistöasetukset"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Taso:  Oikeita/Kaikkiaan merkkejä: %1/%2  Sanoja: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Istunto: Oikeita/Kaikkiaan merkkejä: %1/%2  Sanoja: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Huomaa, että eri maissa konekirjoitusta opetetaan eri tavoin, mikä "
+#~ "yleensä vaikuttaa vain ylimpään näppäinriviin. Esimerkiksi Yhdysvalloissa "
+#~ "vain vasemmaisinta näppäintä sekä 1-näppäintä painetaan vasemman käden "
+#~ "pikkusormella, kun taas Saksassa pikkusormella painetaan myös 2-"
+#~ "näppäintä, josta syystä sormet siirtyvät näppäimen verran oikealle "
+#~ "ylärivillä.\n"
+#~ "Yleensä tällä on väliä vain ergonomisten näppäimistöjen osien kannalta."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Harjoitustiedostoa %1 ei löytynyt tai ei voitu avata."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Vaihdetaan käyttäjäksi ”%1”. ALoitetaan harjoituskerta alusta nykyisellä "
+#~ "tasolla."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Avaa harjoitus..."
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Muokkaa &harjoitusta..."
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Muokkaa &väriteemaa..."
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "&Muokkaa näppäimistöasettelua..."
+
+#~ msgid "&Pause Session"
+#~ msgstr "&Tauko"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Harjoituksen ti&lastot"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Oletus&harjoitukset"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Näppäimistön &väriteemat"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "&Aseta käyttäjät..."
+
+#~ msgid "&Current User"
+#~ msgstr "N&ykyinen käyttäjä"
+
+#~ msgid "untitled lecture"
+#~ msgstr "nimetön harjoitus"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Nykyisen väriteeman numero."
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "Käytä samaa kirjoitusrivin väriä riippumatta väriteemasta."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Opettajan rivin taustan väri."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Opettajan rivin tekstin väri."
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "Oppilaan rivin taustan väri."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Oppilaan rivin tekstin väri."
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Käytetäänkö väärän tekstin taustana eri väriä?"
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Väärän tekstin taustan väri (oppilaan rivi)."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Väärän tekstin väri (oppilaan rivi)."
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Anna äänimerkki jokaisesta kirjoitusvirheestä"
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Käytä kirjoitusääniä"
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Anna äänimerkki automaatisessa tasonvaihdossa"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Liukunopeus"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Liukusäätimen enimmäiskorkeus"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Korvaa harjoitusten oletuskirjasimet."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Oppilaan ja opettajan rivin kirjasin"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Nykyinen ladattu harjoitustiedosto"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Käytetäänkö oikealta vasemmalle -kirjoitusta."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Käytetäänkö näppäimissä värejä vai ei."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr "Näytetäänkö vain opitut/tunnetut näppäimet vai aina kaikki."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Näytetäänkö näppäimistönäyttö."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Korvataanko näppäimistön oletuskirjasimet."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Näppäimistön näppäinten kirjasin"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Nykyinen ladattu näppäimistötiedosto"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "Vaatii käyttäjää painamaan Enter, kun rivi on valmis."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Salli automaattiset tason säädöt"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Estä käyttäjää vaihtamasta tasoa, kun automaattinen tasonvaihto on "
+#~ "käytössä"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Muista nykyinen taso seuraavaan KTouch-ohjelman käynnistykseen"
+
+#~ msgid "The current training level"
+#~ msgstr "Nykyinen harjoitustaso"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Merkkien lukumäärä minuutissa tason nostamiseksi"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "VIrheettömyystaso prosenteissa tason korottamiseksi"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Merkkien lukumäärä minuutissa tason laskemiseksi"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "VIrheettömyystaso prosenteissa tason laskemiseksi"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Montako riviä on kirjoitettava, ennen kuin tasoa voi vaihtaa"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Tee vähintään yksi täysi taso ennen etenemistä"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Mahdollistaa useammat KTouch-käyttäjä yhdellä käyttäjätilillä"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Nykyisen käyttäjän käyttäjänimi:"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Talleta muokatut väriteemat?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "nimetön väriteema"
+
+#~ msgid "Black && White"
+#~ msgstr "Mustavalkoinen"
+
+#~ msgid "Classic"
+#~ msgstr "Klassinen"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Syvän sininen"
+
+#~ msgid "Stripy"
+#~ msgstr "Raidallinen"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Ei voitu ladata/avata näppäimistötiedostoa kohteesta ”%1”."
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr ""
+#~ "%1 jossa näyttömerkki ”%2” ja Unicode-arvo ”%3” on jo määritetty ja "
+#~ "ohitetaan.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Ctrl-näppäin"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Tuntematon sorminäppäin: Unicode ”%1”. Tavallinen näppäin, jossa "
+#~ "näyttömerkki ”%2” ja Unicode-arvo ”%3” ohitetaan.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Tuntematon kohdenäppäin: Unicode ”%1”. Piilonäppäin, jossa näyttömerkki "
+#~ "”%2” ja Unicode-arvo ”%3” ohitetaan.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Tuntematon sorminäppäin: Unicode ”%1”. Piilonäppäin, jossa näyttömerkki "
+#~ "”%2” ja Unicode-arvo ”%3” ohitetaan.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Tuntematon muunnos- tai Ctrl-näppäin: Unicode ”%1”. Piilonäppäin, jossa "
+#~ "näyttömerkki ”%2” ja Unicode-arvo ”%3” ohitetaan.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch-näppäimistötiedostot (*.keyboard.xml)\n"
+#~ "*.*|Kaikki tiedostot"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Poistetaanko näppäin oikeasti?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "KTouch-näppäimistömuokkain"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr ""
+#~ "Tämä ei ole kelvollinen Unicode-numero. Korjaa numero tai syötä merkki."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Anna joko merkki tai Unicode-numero."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Poistetaanko tämän näppäimen kaikki kytkökset?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "KTouch-näppäimistömuokkainvirhe"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<muunnosnäppäin>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Avaa näppäimistötiedosto"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Mitä näppäimistötiedostoa haluat muokata?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Muokkaa nykyisiä näppäimistöasetuksia:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Avaa oletusnäppäimistö:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Avaa näppäimistötiedosto:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<näppäimistötiedostoja ei ole käytettävissä>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Ei voitu avata näppäimistötiedostoa, luodaan sen sijaan uusi."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Luettaessa näppäimistötiedostoa ”%1” annettiin varoituksia:\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr " (muutettu)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "KTouch-näppäimistömuokkain – %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "KTouch-näppäimistömuokkain – %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<nimetön näppäimistötiedosto>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Näppäimistöä on muutettu. Haluatko tallentaa muutokset?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Ei voitu lukea näppäimistöasettelutiedostoa ”%1”. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Ei voitu ladata/avata näppäimistöasettelutiedostoa kohteesta ”%1”."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Virhe näppäimistöasettelun lukemisessa. Oletusasettelu otetaan käyttöön "
+#~ "numeronäppäimistöön. Voit valita toisen näppäimistöasettelun asettelut-"
+#~ "ikkunassa."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Oletusnäppäimistöasetus..."
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Tallenna harjoitustiedosto"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "KTouch-harjoitusmuokkain – "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<uusi nimetön harjoitustiedosto>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Tason %1 tiedot"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzåäö"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Kirjoita rivisi tähän..."
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Avaa harjoitustiedosto"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Mitä harjoitustiedostoa haluat muokata?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Muokkaa nykyistä harjoitusta:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Avaa oletusharjoitus:"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Ei voitu avata harjoitustiedostoa, luodaan sen sijaan uusi."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Harjoitus on muuttunut. Haluatko tallentaa muutokset?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Kohtalaisen paljon"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Tämä on pieni oletusteksti. Jos haluat alkaa\n"
+#~ "kirjoitusharjoituksen, avaa harjoitustiedosto\n"
+#~ "päävalikosta.\n"
+#~ "Jos napsautat Enter seuraavan rivin jälkeen, olet\n"
+#~ "läpäissyt onnistuneesti oletusharjoituksen. Jipii!!!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcdefghijklmnopqrstuvwxyzåäö"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<oletustiedostoja ei ole käytettävissä>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Valitse tai anna tiedostonimi."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Osoite näyttää virheelliseltä: korjaa se."
+
+#~ msgid "***current***  "
+#~ msgstr "***nykyinen***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Tilastotietoja ei vielä ole."
+
+#, fuzzy
+#~| msgid "Erase all statistics data for the current user?"
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "Poista nykyisen käyttäjän tilastotiedot"
+
+#~ msgid "Words per minute"
+#~ msgstr "Sanoja minuutissa"
+
+#~ msgid "Correctness"
+#~ msgstr "Virheettömyys"
+
+#~ msgid "Skill"
+#~ msgstr "Taito"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Aika ensimmäisestä harjoituskerrasta päivissä"
+
+#~ msgid "Sessions"
+#~ msgstr "Harjoituskerrat"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Harjoittelu alkaa: Odotan ensimmäistä napinpainallusta..."
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Tähän päättyy tämä harjoitustehtävä.\n"
+#~ "Harjoituskerta alkaa nyt alusta."
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "Yleiset tilastot"
+
+#~ msgid "&Settings"
+#~ msgstr "&Asetukset"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Päätyökalurivi"
+
+#~ msgid "New User"
+#~ msgstr "Uusi käyttäjä"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Anna ainutkertainen käyttäjänimi:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "Tämä ei ole kelvollinen (ainutkertainen) käyttäjänimi!"
+
+#~ msgid "Save user list?"
+#~ msgstr "Tallennetaanko käyttäjäluettelo?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr ""
+#~ "Ohjelma, joka auttaa sinua oppimaan ja harjoittelemaan konekirjoitusta"
+
+# pmap: =/gen=KTouchin/
+# pmap: =/elat=KTouchista/
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Avattava harjoitustiedosto"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Väriteemamuokkain"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Käyttäjän määrittämät väriteemat"
+
+#~ msgid "Add"
+#~ msgstr "Lisää"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Muokkaa väriteemaa"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Väriteeman nimi:"
+
+#~ msgid "&Store Data"
+#~ msgstr "Tallenna &data"
+
+#, fuzzy
+#~| msgid "Slide line colors"
+#~ msgid "Slide Line Colors"
+#~ msgstr "Diakuvan väri"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Opettajan tausta:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Opettajan teksti:"
+
+#~ msgid "Student background:"
+#~ msgstr "Oppilaan tausta:"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Oppilaan tekstin virhe:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Oppilaan virheen tausta:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Näppäimistön värit"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Tavallisten näppäinten taustavärit:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Korostettu tausta:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Tavallisten näppäinten värit:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Korostetun tekstin väri:"
+
+#~ msgid "Text color:"
+#~ msgstr "Tekstin väri:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Näppäimen kehys:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Muunnos- ja muut näppäimet:"
+
+#~ msgid "Text color"
+#~ msgstr "Tekstin väri"
+
+#~ msgid "Background:"
+#~ msgstr "Tausta:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Näppäimistön tunnistetieto"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Näppäimistön nimi:"
+
+#~ msgid "Language id:"
+#~ msgstr "Kielitunniste:"
+
+#~ msgid "Comments:"
+#~ msgstr "Kommentit:"
+
+#, fuzzy
+#~| msgid "Lecture Properties"
+#~ msgid "Key Properties"
+#~ msgstr "Harjoituksen ominaisuudet"
+
+#, fuzzy
+#~| msgid "Keyboard Settings"
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Näppäimistöasetukset"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Aseta näppäimistön kirjasin..."
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Tallenna näppäimistö nimellä..."
+
+#~ msgid "Close"
+#~ msgstr "Sulje"
+
+#~ msgid "Key connectors"
+#~ msgstr "Näppäimistökytkökset"
+
+#~ msgid "or unicode"
+#~ msgstr "tai Unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Poista kytkökset"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Lisää tai päivitä kytkös"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<muunnosnäppäin>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr "Näppäimistöasettelu (aktivoi napsauttamalla tai vedä näppäimiä)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "KTouch-harjoitusmuokkain"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Harjoituksen ominaisuudet"
+
+#~ msgid "Comment:"
+#~ msgstr "Kommentti:"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Tason 10 tiedot"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Uudet kirjaimet tällä tasolla"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Tason kuvaus (lisävalinta):"
+
+#~ msgid "Level data:"
+#~ msgstr "Tason tiedot:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Harjoitustason yhteenveto"
+
+#~ msgid "Summary"
+#~ msgstr "Yhteenveto"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Tämän tason ennätykset"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Päivämäärä"
+
+#~ msgid "Score"
+#~ msgstr "Tulos"
+
+#~ msgid "Characters per second"
+#~ msgstr "Merkkiä sekunnissa"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "Kaikki käyttäjän tämän tason ennätykset"
+
+#~ msgid "&Retry level"
+#~ msgstr "&Yritä tasoa uudelleen"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "&Jatka seuraavalle tasolle"
+
+#~ msgid "Browse..."
+#~ msgstr "Selaa..."
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Käytä eri väriä virheelliselle riville"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Opettajan rivin väri"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Opettajan rivi"
+
+#~ msgid "Text:"
+#~ msgstr "Teksti:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Vaihda oppilaan rivin tekstin väriä"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr "Tässä voit vaihtaa kirjoittamasi tekstin väriä oppilaan rivillä."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Opettajan rivin tausta"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Voit muuttaa tässä opettajan rivin taustaväriä (= merkkirivi, joka sinun "
+#~ "tulee kirjoittaa)."
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Käytä eri väriä virheelliselle riville"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Valitse taustan väri virheelle kirjoitusrivillä"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Kun olet valinnut 'käytä eri väriä virheille kirjoitusrivillä', voit "
+#~ "valita virhekohtien taustan värin. Teet virheen kun kirjoitat väärän "
+#~ "kirjaimen oppilaan rivillä. Tämä tapa tekee virheistä näkyvämpiä."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Valitse tekstin väri virheelle kirjoitusrivillä"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Kun olet valinnut 'käytä eri väriä virheille kirjoitusrivillä', voit "
+#~ "valita virhekohtien tekstin värin. Teet virheen kun kirjoitat väärän "
+#~ "kirjaimen oppilaan rivillä. Tämä tapa tekee virheistä näkyvämpiä."
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Tekstirivin asetukset"
+
+#~ msgid "Fast"
+#~ msgstr "Nopea"
+
+#~ msgid "Slow"
+#~ msgstr "Hidas"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Tekstin liukumisnopeus:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Ohita harjoituskirjasin"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Näytetyn/kirjoitetun tekstin kirjasin:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Tämä nappi näyttää kirjasinruudun, jossa voit vaihtaa oppilaan ja "
+#~ "opettajan rivien kirjasimen. Kun poistut ruudulta, uusi kirjasin estetään "
+#~ "alla olevalla rivillä ja otetaan käyttöön vain kun napsautat Hyväksy-"
+#~ "nappia alla."
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Näytä näppäimistöltä seuraavaksi näppäiltävät kirjaimet"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Tämä korostaa näppäimistöltä sen kirjaimen, joka sinun tulee kirjoittaa "
+#~ "seuraavaksi. On helpompaa kirjoittaa kun tämä on valittuna."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "&Korosta näppäimiä näppäimistössä"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Piilota/himmennä näppäimet, joita ei ole opittu "
+
+#~ msgid ""
+#~ "If checked you can specify your own keyboard font instead of the "
+#~ "predefined one of the keyboard layout."
+#~ msgstr "Oma kirjasin oletuskirjasimen tilalle näppäimistöasettelussa."
+
+#~ msgid ""
+#~ "Every keyboard layout may specify its own font. If the predefined font of "
+#~ "a certain keyboard layout does not work or you would like to have your "
+#~ "own, check this button. You may then choose your own font that will be "
+#~ "used to draw the characters on the keys."
+#~ msgstr ""
+#~ "Jokainen näppäimistöasettelu määrittelee oman kirjasimensa. Jos "
+#~ "ennaltamääritelty kirjasin näppäimistöasettelussa ei toimi tai haluat "
+#~ "käyttää omaa kirjasinta, valitse tämä nappi. Voit valita oman kirjasimen, "
+#~ "jota käytetään näppäimissä."
+
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Korvaa näppäimistön kirjasin"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Näppäimistön näppäinten kirjasin:"
+
+#~ msgid "Sound"
+#~ msgstr "Ääni"
+
+#~ msgid ""
+#~ "If checked (default) this will emit a beep each time you make a typing "
+#~ "error."
+#~ msgstr "Valittuna (oletus) tämä antaa äänimerkin kustakin virhelyönnistä."
+
+#~ msgid "&Beep on error"
+#~ msgstr "&Piippaa virheestä"
+
+#~ msgid "Make a typewriter sound for each key pressed"
+#~ msgstr "Tuota kirjoituskoneääni näppäinpainalluksista"
+
+#~ msgid "If checked this will play a typewriter sound for every key pressed."
+#~ msgstr ""
+#~ "Jos käytössä, jokainen näppäinpainallus aiheuttaa kirjoituskonemaisen "
+#~ "äänen."
+
+#~ msgid "&Typewriter sound when typing"
+#~ msgstr "&Kirjoituskoneääni kirjoitettaessa"
+
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Anna äänimerkki tason vaihtuessa."
+
+#~ msgid ""
+#~ "If this is checked (default) a sound will be played each time you "
+#~ "automatically change of level."
+#~ msgstr ""
+#~ "Valittuna (oletus) tämä antaa äänimerkin joka erta kun taso vaihtuu "
+#~ "automaattiesti."
+
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "&Äänimerkki autom. tasonvaihdossa"
+
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Automaattinen tason säätö"
+
+#~ msgid "chars/minute"
+#~ msgstr "merkkiä/minuutti"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Kirjoitusnopeus:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Virheettömyys:"
+
+#, fuzzy
+#~| msgid "Words: "
+#~ msgid "Workload:"
+#~ msgstr "Sanoja: "
+
+#~ msgid "Complete whole training level before proceeding"
+#~ msgstr "Tee harjoitustaso loppuun ennen etenemistä"
+
+#~ msgid "lines"
+#~ msgstr "riviä"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Rajoitukset tason nostamiseen"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Rajoitukset tason laskemiseen"
+
+#~ msgid "Disable manual level change buttons"
+#~ msgstr "Estä käsin vaihdettavat tasopainikkeet"
+
+#~ msgid "&Typewriter mode (user must confirm line with Enter)"
+#~ msgstr "&Kirjoituskonetila (rivi on vahvistettava Enterillä)"
+
+#~ msgid "&Remember level for next program start"
+#~ msgstr "&Muista taso ensi harjoituskertaan (ohjelmaa käynnistettäessä)"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Nykyinen harjoitus"
+
+#~ msgid "Lecture:"
+#~ msgstr "Oppitunti:"
+
+#~ msgid "Levels in this session:"
+#~ msgstr "Tasoja tässä istunnossa:"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Kulunut aika (sekuntia):"
+
+#~ msgid ""
+#~ "This shows the number of seconds you have typed in this training session."
+#~ msgstr ""
+#~ "Tämä näyttää käyttämiesi sekuntien määrän tällä harjoitusiskerralla."
+
+#~ msgid "Characters typed:"
+#~ msgstr "Kirjaimia kirjoitettu:"
+
+#~ msgid ""
+#~ "The number of characters (correct and wrong) that you have typed so far."
+#~ msgstr "Kirjoittamiesi merkkien lukumäärä (oikeiden ja väärien)."
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Harhaisketyt kirjaimet:"
+
+#~ msgid "Shows how many wrong characters you did type."
+#~ msgstr "Näyttää montako väärää merkkiä olet kirjoittanut."
+
+#~ msgid "Words typed:"
+#~ msgstr "Sanoja kirjoitettu:"
+
+#~ msgid "The number of words typed so far."
+#~ msgstr "Kirjoitettujen sanojen lukumäärä."
+
+#~ msgid ""
+#~ "The ratio of correctly typed characters versus total number of characters "
+#~ "typed."
+#~ msgstr ""
+#~ "Oikein kirjoittamiesi merkkien suhde kaikkiin kirjoittamiisi merkkeihin"
+
+#~ msgid "Typing Rate"
+#~ msgstr "Kirjoitusnopeus"
+
+#~ msgid "The number of correct characters you typed per minute."
+#~ msgstr "Oikein kirjoittamiesi merkkien lukumäärä."
+
+#~ msgid "Words per minute:"
+#~ msgstr "Sanoja minuutissa:"
+
+#~ msgid "The number of words you typed per minute."
+#~ msgstr "Kirjoittamiesi sanojen lukumäärä minuutissa."
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed in total. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Tässä on luettelo kirjoitustestin aikana unohtamistasi merkeistä. "
+#~ "Prosenttiluku ilmaisee kuinka usein näppäin on unohtunut verrattuna "
+#~ "siihen, kuinka usein näppäimiä on kaikkiaan paineltu. Suuri luku "
+#~ "merkitsee, että näppäimiä on unohdettu paljon."
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Merkkitilastot (merkit, jotka haluat kohdistaa)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#~ msgid "Current Level Statistics"
+#~ msgstr "Nykyisen tason tilastotiedot"
+
+#~ msgid "lectureLabel2"
+#~ msgstr "Oppitunnin 2 nimike"
+
+#~ msgid "Level:"
+#~ msgstr "Taso:"
+
+#~ msgid "levelLabel2"
+#~ msgstr "Tason 2 nimike"
+
+#~ msgid ""
+#~ "Here the characters are listed that you have missed during the typing "
+#~ "test. The percentage shows the ratio of how often a key was missed versus "
+#~ "how often the key was pressed correctly. Large numbers indicate that the "
+#~ "key was missed a lot."
+#~ msgstr ""
+#~ "Tässä ovat kirjoitustestissä unohtamasi merkkien luettelo. Prosenttiluku "
+#~ "ilmaisee kuinka usein näppäin on unohdettu verrattuna kuinka usein "
+#~ "näppäin on painettu oikein. Suuri luku merkitsee, että näppäimiä on "
+#~ "unohdettu paljon."
+
+#~ msgid "Monitor Progress"
+#~ msgstr "Seuraa edistymistä"
+
+#~ msgid "Your Typing Progress"
+#~ msgstr "Kirjoituksesi edistyminen"
+
+#~ msgid "Show progress in lecture:"
+#~ msgstr "Näytä edistyminen oppitunnilla:"
+
+#~ msgid "Here you can select the lecture you want to obtain statistics for."
+#~ msgstr "Tässä voit valita oppitunnin, jolta haluat hankkia tilastotietoja."
+
+#~ msgid "Progress Chart Options"
+#~ msgstr "Edistymiskortin valinnat"
+
+#~ msgid "Chart Data"
+#~ msgstr "Kaaviotiedot"
+
+#~ msgid "Session stats"
+#~ msgstr "istunnon tilastotiedot"
+
+#~ msgid "Level stats"
+#~ msgstr "Tason tilastotiedot"
+
+#~ msgid "Chart Type"
+#~ msgstr "Kaavion typpi"
+
+#~ msgid "Time Axis Scaling"
+#~ msgstr "Aika-akselin skaalaus"
+
+#~ msgid "Time scaled"
+#~ msgstr "Aika skaalattu"
+
+#~ msgid "Constant spacing"
+#~ msgstr "Vakioväli"
+
+#~ msgid ""
+#~ "Pressing this button will erase the whole training statistics for the "
+#~ "current user."
+#~ msgstr ""
+#~ "Napsauttamalla tätä painiketta poistaa koko harjoituksen tilastotiedot "
+#~ "nykyiselle käyttäjälle."
+
+#~ msgid "Clear History"
+#~ msgstr "Tyhjennä historia"
+
+#~ msgid "Level"
+#~ msgstr "Taso"
+
+#~ msgid "Current level"
+#~ msgstr "Nykyinen taso"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Tämä näyttää millä tasolla olet."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Speed"
+#~ msgstr "Nopeus"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Merkkiä/minuutissa"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr "Tämä näyttää kuinka nopeasti kirjoitat kirjaimia minuutissa."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Kuinka paljon kirjoitat virheettömästi?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Tämä näyttää kuinka virheettömästi kirjoitat."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Uudet kirjaimet tällä tasolla"
+
+#~ msgid "Setup Users"
+#~ msgstr "Aseta käyttäjät"
+
+#~ msgid "&Add"
+#~ msgstr "&Lisää"
+
+#~ msgid "Ins, Alt+A"
+#~ msgstr "Ins, Alt+A"
+
+#~ msgid "Del, Alt+R"
+#~ msgstr "Del, Alt+R"
+
+#~ msgid "&Close"
+#~ msgstr "&Sulje"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Arabic"
+#~ msgstr "Arabialainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated)"
+#~ msgstr "Bulgarialainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Bulgarian (auto-generated-long)"
+#~ msgstr "Bulgarialainen (pitkä, automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Catalan (auto-generated)"
+#~ msgstr "Katalonialainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Czech (auto-generated)"
+#~ msgstr "Tšekkiläinen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (auto-generated)"
+#~ msgstr "Tanskalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Danish (complete course)"
+#~ msgstr "Tanskalainen (täysi kurssi)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands Junior (Nederlands for Kids)"
+#~ msgstr "Nederlands Junior (lasten hollantilainen)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Nederlands (auto-generated)"
+#~ msgstr "Hollantilainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Colemak (auto-generated)"
+#~ msgstr "Colemak (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak (auto-generated)"
+#~ msgstr "Dvořak (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak - ABCD"
+#~ msgstr "Dvořak – ABCD"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "English (auto-generated)"
+#~ msgstr "Englantilainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish For Kids"
+#~ msgstr "Lasten suomalainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Finnish (auto-generated)"
+#~ msgstr "Suomalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 2"
+#~ msgstr "Ranskalainen (automaattisesti luotu) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "French (auto-generated) 1"
+#~ msgstr "Ranskalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 1)"
+#~ msgstr "Ranskalainen Dvořak (osa 1)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak French (Part 2)"
+#~ msgstr "Ranskalainen Dvořak (osa 2)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (in 9 levels)"
+#~ msgstr "Saksalainen (yhdeksäntasoinen)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (from Tipptrainer)"
+#~ msgstr "Saksalainen (Tipptrainerista)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (auto-generated)"
+#~ msgstr "Saksalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Saksalainen (Dvořak-näppäimistöasettelu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Saksalainen (Neo 2 -näppäimistöasettelu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Number Pad)"
+#~ msgstr "Saksalainen (numeronäppäimistö)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hellenic"
+#~ msgstr "Kreikkalainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian Expert++"
+#~ msgstr "Unkarilainen Expert++"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Hungarian (auto-generated)"
+#~ msgstr "Unkarilainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Italian (auto-generated)"
+#~ msgstr "Italialainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Latin"
+#~ msgstr "Latinalainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Lithuanian (sdt)"
+#~ msgstr "Liettualainen (sdt)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norjalainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Polish (from TTCoach)"
+#~ msgstr "Puolalainen (TTCoachista)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (auto-generated)"
+#~ msgstr "Venäläinen (automaattisesti luotu)"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "Russian"
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian 2"
+#~ msgstr "Venäläinen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Russian (long auto-generated)"
+#~ msgstr "Venäläinen (pitkä, automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovak (auto-generated)"
+#~ msgstr "Slovakialainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slovenialainen"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated)"
+#~ msgstr "Espanjalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 1"
+#~ msgstr "Espanjalainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Spanish (auto-generated) 2"
+#~ msgstr "Espanjalainen (automaattisesti luotu) 2"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Dvorak Spanish"
+#~ msgstr "Espanjalainen Dvořak"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Turkish (auto-generated)"
+#~ msgstr "Turkkilainen (automaattisesti luotu)"
+
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainalainen"
+
+#~ msgid "F&ile"
+#~ msgstr "T&iedosto"
+
+#~ msgid "Open Something in Editor"
+#~ msgstr "Avaa jotain muokkaimessa"
+
+#~ msgid "Current something"
+#~ msgstr "Tämänhetkinen jokin"
+
+#~ msgid "Preset something:"
+#~ msgstr "Esiaseta jokin:"
+
+#~ msgid "Open file:"
+#~ msgstr "Avaa tiedosto:"
+
+#~ msgid "New something"
+#~ msgstr "Uusi jokin"
+
+#~ msgid "levelLabel1"
+#~ msgstr "Tason 1 nimike"
+
+#~ msgid "lectureLabel1"
+#~ msgstr "Oppitunnin 1 nimike"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "Oletusnäppäimistöasetus..."
+
+#~ msgid "Keypad/Number block"
+#~ msgstr "Numeronäppäimistö"
+
+#~ msgid "Could not open file."
+#~ msgstr "Ei voitu avata tiedostoa."
+
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Puuttuva näppäinpainallus rivillä '%1'."
+
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Näppäimistön ulottuvuudet: %1 x %2"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Älä säilytä"
+
+#~ msgid "Keyboard dimensions:"
+#~ msgstr "Näppäimistön ulottuvuudet"
+
+#~ msgid "Key Definitions"
+#~ msgstr "Näppäinmäärittelyt"
+
+#~ msgid "Key definition data:"
+#~ msgstr "Näppäimistöasetustieto:"
+
+#~ msgid "Default level..."
+#~ msgstr "Oletustaso..."
+
+#~ msgid "Edit color scheme:"
+#~ msgstr "Muokkaa väriteemaa:"
+
+#~ msgid "Background"
+#~ msgstr "Tausta"
+
+#~ msgid "Change Font..."
+#~ msgstr "Aseta kirjasin..."
+
+#~ msgid "Levels"
+#~ msgstr "Tasot"
+
+#~ msgid "Time needed (beg/adv/pro): "
+#~ msgstr "Tarvittu aika (aloittelija/edistynyt/ammattilainen): "
+
+#~ msgid "Save &As..."
+#~ msgstr "T&allenna nimellä..."
+
+#~ msgid "Select File to Open"
+#~ msgstr "Valitse avattava tiedosto"
+
+#~ msgid "Current something file"
+#~ msgstr "Nykyinen jokin tiedosto"
+
+#~ msgid "Color Scheme"
+#~ msgstr "Väriteema"
+
+#~ msgid "Select color scheme:"
+#~ msgstr "Valitse väriteema:"
+
+#~ msgid "Color scheme for displaying the keyboard"
+#~ msgstr "Näppäimistön väriteema"
+
+#~ msgid ""
+#~ "You can choose here the color scheme for displaying the keyboard. "
+#~ "<i>Black & White</i> will display all keyboard letters black on white, "
+#~ "<i>Classic</i> will colorize the same color for each finger, <i>Deep "
+#~ "Blue</i> will display the keyboard in different deep blue colors and "
+#~ "<i>Stripy</i> will alternate blue and gray for letters corresponding to "
+#~ "same finger."
+#~ msgstr ""
+#~ "Voit valita näppäimistön väriteeman tässä. <i>Mustavalkoinen</i> näyttää "
+#~ "näppäimistön kirjaimet mustina valkoisella pohjalla, <i>Klassinen</i> "
+#~ "värittää eri sormien näppäimet omalla värillä, <i>Syvän sininen</i> "
+#~ "näyttää näppäimistön erilaisella syvän sinisen värillä ja <i>Stripy</i> "
+#~ "vaihtelee sinistä ja harmaata vastaavasti saman sormen näppäimelle."
+
+#~ msgid "Use common typing line colors independent of color scheme"
+#~ msgstr "Käytä yleisiä kirjoitusrivin värejä riippumatta väriteemasta"
+
+#~ msgid "Typing Line Colors"
+#~ msgstr "Kirjoitusrivin väri"
+
+#~ msgid ""
+#~ "If checked this shows your error using the colors below on the typing line"
+#~ msgstr "Näytä virheet käyttäen alla olevia värejä kirjoitusrivillä"
+
+#~ msgid "Maximum height of sliding line widget:"
+#~ msgstr "Dian maksimikorkeus:"
+
+#~ msgid "in pixels"
+#~ msgstr "pikseleissä"
+
+#~ msgid "Change the font for the student and teacher lines"
+#~ msgstr "Vaihda opettajan ja oppilaan rivin kirjasinta"
+
+#~ msgid ""
+#~ "If you want to override the font of the training lecture check this box "
+#~ "and set your own font."
+#~ msgstr "Korvaa harjoituksen kirjasin valitsemallasi kirjasimella."
+
+#~ msgid ""
+#~ "Most lectures suggest a font to use. This is necessary for not so common "
+#~ "languages where characters may be displayed in a strange way and distort "
+#~ "the sliding line. If you check this button you can choose your own font "
+#~ "and override the lecture font."
+#~ msgstr ""
+#~ "Suurin osa harjoituksista ehdottaa käytettävän kirjasimen. Tämä on "
+#~ "tarpeellinen ei niin yleisille kielille, joissa merkistö näkyy oudolla "
+#~ "tavalla ja vääristää kirjoitusriviä. Valitsemalla tämän valinnan voit "
+#~ "määritellä oman kirjasimen ja korvata harjoituksen kirjasimen sillä."
+
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Tason ylä- ja alarajat"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

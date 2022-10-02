@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Maskinskrivningsträning</application
+>">
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&ktouch; användarhandbok</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>&ktouch; manualsida.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Program 20.12)</releaseinfo>
+<productname
+>KDE-program</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Ett program för att lära sig maskinskrivning av &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>sökväg</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivning</title>
+<para
+>&i18n-ktouch; är ett program för att lära sig maskinskrivning. Det hjälper dig att skriva snabbt och korrekt på ett tangentbord. Varje finger har sin plats på tangentbordet med tillhörande tangenter att trycka ner.</para
+> 
+<para
+>&i18n-ktouch; hjälper dig att lära dig skriva maskin genom att tillhandahålla en text att öva på, och justeras till olika nivåer, beroende på hur bra du är. Det visar vilken tangent som ska tryckas ner härnäst, och det riktiga fingret som ska användas.</para>
+<para
+>Programmet är en del av &kde;:s officiella utbildningsmodul.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Väljare i &ktouch;</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Starta kurs- och tangentbordslayouteditorn.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>sökväg</replaceable
+></term>
+<listitem
+><para
+>Lägg till sökvägen först i listan över QML-importsökvägar.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+<simplelist>
+<member
+>Mer detaljerad användardokumentation är tillgänglig med <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (skriv antingen in webbadressen i &konqueror;, eller kör <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Det finns också ytterligare information tillgänglig på <ulink url="https://edu.kde.org/ktouch/"
+>webbsidan för &kde;:s utbildningsprojekt</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>&ktouch; är skrivet av <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> och <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Den här manualsidan är baserad på den som tagits fram för &Debian; av <personname
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+>. </para>
+</refsect1>
+
+</refentry>

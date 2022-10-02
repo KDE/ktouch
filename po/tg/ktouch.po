@@ -1,0 +1,2265 @@
+# translation of ktouch.po to Tajik
+# translation of ktouch.po to Тоҷикӣ
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# 2004, infoDev, a World Bank organization
+# 2004, Khujand Computer Technologies, Inc.
+# 2004, Youth Opportunities, NGO
+# Marina Kolucheva <youth_opportunities@tajik.net>, 2004.
+# Victor Ibragimov <youth_opportunities@tajik.net>, 2004, 2019.
+# Akmal Salomov <youth_opportunities@tajik.net>, 2004.
+# Malika Dushanbieva <youth_opportunities@tajik.net>, 2004.
+# Karimjon Salehov <youth_opportunities@tajik.net>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2019-09-29 12:21+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tajik KDE Teams:,Марина Колючева,Виктор Ибрагимов"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ",,youth_opportunities@tajik.net"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, fuzzy, kde-format
+msgid "Custom Lessons"
+msgstr "&Саркардани сессияи машқдиҳии нав"
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, kde-format
+msgid "Hidden"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, kde-format
+msgid "Top left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, kde-format
+msgid "Top right"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, kde-format
+msgid "Bottom left"
+msgstr ""
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, kde-format
+msgid "Bottom right"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+msgid "Error while opening keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Ҳарфҳои чопшуданд:"
+msgstr[1] "Ҳарфҳои чопшуданд:"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, kde-format
+msgid "The selected file could not be opened"
+msgstr ""
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+msgid "New course"
+msgstr "Интихоби ранги тарҳ:"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+msgid "New keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+msgid "Create a new course or keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:68
+#, fuzzy, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:78
+#, fuzzy, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:80
+#, fuzzy, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+msgid "Error while deleting keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, kde-format
+msgid "The selected file could not be imported."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, kde-format
+msgid "The selected course is already present as a user course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+msgid "Use another keyboard layout as template"
+msgstr "Нақшаҳои забонак"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "&Тайёрӣ"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Statistics"
+msgid "Training Settings"
+msgstr "Статистикаи Машқдиҳӣ"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "Танзимоти Рангҳо"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+msgid "Color Settings"
+msgstr "Танзимоти Рангҳо"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Нақшаҳои забонак"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Нақшаҳои забонак"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+msgid "Configure Keyboard..."
+msgstr "Забонак"
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Typewriting Trainer"
+msgstr "Хатои чоп"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, kde-format
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+msgid "Current maintainer"
+msgstr "Файлро кушода натавонист!"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr ""
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Former maintainer and programmer"
+msgstr ""
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr ""
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Original author"
+msgstr ""
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr ""
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr ""
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr ""
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Lots of patches, fixes and updates"
+msgstr ""
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr ""
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+msgid "Launch the course and keyboard layout editor"
+msgstr "Нақшаҳои забонак"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, fuzzy, kde-format
+msgid "Character"
+msgstr "Ҳарфҳои чопшуданд:"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+msgid "Modifier ID"
+msgstr "(дигаргун шуд)"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr "ҳарфҳои нав"
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, kde-format
+msgid "Title"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+msgid "Keyboard Layouts"
+msgstr "Нақшаҳои забонак"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Дурустӣ"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "Миқдори ҳарфҳо ҳар як дақиқа"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "&Тайёрӣ"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "Дурустӣ"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+#| msgid "Characters per minute:"
+msgid "Characters per Minute:"
+msgstr "Миқдори ҳарфҳо ҳар як дақиқа:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+msgid "Other Courses"
+msgstr "Интихоби ранги тарҳ:"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Welcome to Typewriting Trainer"
+msgstr "Хатои чоп"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "&Тайёрӣ"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Нақшаҳои забонак"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+msgid "Configure Keyboard"
+msgstr "Нақшаҳои забонак"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Нақшаҳои забонак"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+msgid "Edit lesson"
+msgstr "Сигнал дар хато"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+msgid "Lesson text"
+msgstr "Сигнал дар хато"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+msgid "Manage Profiles"
+msgstr "Намоиши нақшаи забонак:"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Намоиши нақшаи забонак:"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "Интихоботҳо машқ кунӣ"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+msgid "Create New Profile"
+msgstr "Намоиши нақшаи забонак:"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, kde-format
+msgid "Use Selected Profile"
+msgstr ""
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+#| msgid "Current Training Session Statistics"
+msgid "Lesson training statistics"
+msgstr "Статистикаи Тайёрии Сессияи Ҳозира"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+msgid "Character:"
+msgstr "Ҳарфҳои чопшуданд:"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+msgid "This Lesson"
+msgstr "&Саркардани сессияи машқдиҳии нав"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, fuzzy, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr "Нақшаҳои забонак"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "&Тайёрӣ"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+msgid "Restart Lesson"
+msgstr "&Саркардани сессияи машқдиҳии нав"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Сеанс сар шуд! Вақт рафта истодааст..."
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr "Бо пахшкунии тугмачаи забонак сеанс давом мешавад..."
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, kde-format
+msgid "Fingers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Index finger:"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy, kde-format
+msgid "Middle finger:"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Ring finger:"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy, kde-format
+msgid "Little finger:"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+msgid "Keyboard layout:"
+msgstr "Нақшаҳои забонак"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, kde-format
+msgid "Remove lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, fuzzy, kde-format
+msgid "Move lesson up"
+msgstr "Сигнал дар хато"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "New characters:"
+msgstr "ҳарфҳои нав"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+msgid "Create new normal key"
+msgstr "Намоиши нақшаи забонак:"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, kde-format
+msgid "Normal Key"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+msgid "Create new special key"
+msgstr "Намоиши нақшаи забонак:"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, fuzzy, kde-format
+msgid "Special Key"
+msgstr "Намоиши нақшаи забонак:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, kde-format
+msgid "Delete selected key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+msgid "Keyboard"
+msgstr "Нақшаҳои забонак"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, kde-format
+msgid "Geometry"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, fuzzy, kde-format
+msgid "Left:"
+msgstr "Муҳаррири лексия"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Finger:"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy, kde-format
+msgid "Left little finger"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Left ring finger"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy, kde-format
+msgid "Left middle finger"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy, kde-format
+msgid "Left index finger"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right index finger"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy, kde-format
+msgid "Right middle finger"
+msgstr "Вақти машқ кунӣ гузашт"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right ring finger"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Right little finger"
+msgstr "Хатои чоп"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+msgid "Characters"
+msgstr "Ҳарфҳои чопшуданд:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add new character"
+msgstr "ҳарфҳои нав"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove character"
+msgstr "ҳарфҳои нав"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+msgid "Modifier ID:"
+msgstr "(дигаргун шуд)"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+msgid "Open a text file..."
+msgstr "&Муҳаррир лексия"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+msgid "0 Characters"
+msgstr "Ҳарфҳои чопшуданд:"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+msgid "Paste current system keyboard layout name"
+msgstr "Нақшаҳои забонак"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "During training:"
+msgstr "&Тайёрӣ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, fuzzy, kde-format
+msgid "Show keyboard"
+msgstr "Намоиши нақшаи забонак:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+#| msgid "General Statistics"
+msgid "Show real-time statistics"
+msgstr "Статистикаи Умумӣ"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Миқдори калимаҳо ҳар як дақиқа"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Minimum accuracy:"
+msgstr "Дурустӣ"
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout"
+msgstr "Нақшаҳои забонак"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set new characters for lesson"
+msgstr "ҳарфҳои нав"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+msgid "Set lesson text"
+msgstr "Сигнал дар хато"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+msgid "Set keyboard layout title"
+msgstr "Нақшаҳои забонак"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+msgid "Set keyboard layout name"
+msgstr "Нақшаҳои забонак"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+msgid "Set keyboard layout size"
+msgstr "Нақшаҳои забонак"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove key"
+msgstr "ҳарфҳои нав"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, kde-format
+msgid "Set key geometry"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, kde-format
+msgid "Set key finger"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Add key character"
+msgstr "ҳарфҳои нав"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Remove key character"
+msgstr "ҳарфҳои нав"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "new characters"
+msgid "Set key character value"
+msgstr "ҳарфҳои нав"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, kde-format
+msgid "Set key character modifier"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, kde-format
+msgid "Set key character position"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, fuzzy, kde-format
+msgid "Set special key type"
+msgstr "Намоиши нақшаи забонак:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, fuzzy, kde-format
+msgid "Set special key label"
+msgstr "Намоиши нақшаи забонак:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgid "Create New Custom Lesson"
+#~ msgstr "Намоиши нақшаи забонак:"
+
+#, fuzzy
+#~ msgid "Launch Editor"
+#~ msgstr "Таърихи дараҷа:"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "&Тайёрӣ"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "&Тайёрӣ"
+
+#, fuzzy
+#~ msgid "Default User"
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Вақти машқ кунӣ гузашт"
+
+#, fuzzy
+#~| msgid "Start New Training Session"
+#~ msgid "Start new training session"
+#~ msgstr "Саркардани сессияи машқдиҳии нав"
+
+#, fuzzy
+#~ msgid "Keep current level"
+#~ msgstr "Дараҷаи равон нигоҳ доред"
+
+#~ msgid "General Options"
+#~ msgstr "Интихобҳои Умумӣ"
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Танзимотҳои Забонак"
+
+#, fuzzy
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "   Аломатҳои дуруст:%1   Аломатҳои ҳамагӣ: %1   Калимаҳо: %1   "
+
+#, fuzzy
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "   Аломатҳои дуруст:%1   Аломатҳои ҳамагӣ: %1   Калимаҳо: %1   "
+
+#, fuzzy
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Файли лексияи '%1.ktouch' ёфта/кушода натавонист!"
+
+#, fuzzy
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "&Edit Lecture..."
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgid "&Pause Session"
+#~ msgstr "&Қать кардани сеанси машқ"
+
+#, fuzzy
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "Default &Lectures"
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Нақшаҳои ранги забонак"
+
+#, fuzzy
+#~ msgid "&Current User"
+#~ msgstr "Дараҷаи Ҳозира"
+
+#, fuzzy
+#~ msgid "untitled lecture"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "The background color for the student's line."
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "The text color for the student's line"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Овоз дар ҳоли дигаргун кардани автоматикии дараҷа"
+
+#, fuzzy
+#~ msgid "The sliding speed"
+#~ msgstr "Суръати слайд:"
+
+#, fuzzy
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Намоиши нақшаи забонак:"
+
+#, fuzzy
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Дараҷаи равон нигоҳ доред"
+
+#, fuzzy
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Намуди ҳарфи забонак:"
+
+#, fuzzy
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Дигаргун кардани дараҷа бо автоматикӣ"
+
+#, fuzzy
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Нигоҳ доштани дараҷа пеш аз пӯшидани барнома"
+
+#, fuzzy
+#~ msgid "The current training level"
+#~ msgstr "Дараҷаи равон нигоҳ доред"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Маҳдудияти боло шавии дараҷа"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Маҳдудияти боло шавии дараҷа"
+
+#, fuzzy
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Маҳдудияти кам шавии дараҷа"
+
+#, fuzzy
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Маҳдудияти кам шавии дараҷа"
+
+#, fuzzy
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "untitled color scheme"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~| msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Файли нақшаи забонакро аз '%1' пурбор карда/кушода наиавонист!"
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "Open Keyboard File"
+#~ msgstr "Забонак"
+
+#, fuzzy
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Лексияи равон дигаргун карда шуд. Шумо мехоҳед ӯро нигоҳ доред?"
+
+#, fuzzy
+#~ msgid "Edit current keyboard:"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr "Файли лексияи '%1.ktouch' ёфта/кушода натавонист!"
+
+#, fuzzy
+#~ msgid " (modified)"
+#~ msgstr "(дигаргун шуд)"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Лексияи равон дигаргун карда шуд. Шумо мехоҳед ӯро нигоҳ доред?"
+
+#, fuzzy
+#~| msgid "Could not read the keyboard layout file '%1'. "
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Файли нақшаи '%1' хонда натавонист!"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr "Файли нақшаи забонакро аз '%1' пурбор карда/кушода наиавонист!"
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Хато дар ҳоли хондани файли нақшаи забонак! Нақшаи забонак бо пешфарз "
+#~ "истифода карда мешавад. Шумо метавонед нақшаи забонаки дигар дар диалоги "
+#~ "танзимӣ интихоб кунед."
+
+#, fuzzy
+#~ msgid "A default lecture..."
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Save Training Lecture"
+#~ msgstr "Вақти машқ кунӣ гузашт"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "Data of Level %1"
+#~ msgstr "Дараҷаи маълумоти дараҷа %1"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Хатҳои шумо дар ин ҷо гузоред..."
+
+#, fuzzy
+#~ msgid "Open Lecture File"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Лексияи равон дигаргун карда шуд. Шумо мехоҳед ӯро нигоҳ доред?"
+
+#, fuzzy
+#~ msgid "Edit current lecture:"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "Open a default lecture:"
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr "Файли лексияи '%1.ktouch' ёфта/кушода натавонист!"
+
+#, fuzzy
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Лексияи равон дигаргун карда шуд. Шумо мехоҳед ӯро нигоҳ доред?"
+
+#~ msgid "Words per minute"
+#~ msgstr "Миқдори калимаҳо ҳар як дақиқа"
+
+#~ msgid "Correctness"
+#~ msgstr "Саҳеҳӣ"
+
+#, fuzzy
+#~ msgid "Sessions"
+#~ msgstr "&Қать кардани сеанси машқ"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Сар кардани машқ: Интизорӣ барои зер кунии кнопкаи аввалин..."
+
+#, fuzzy
+#~| msgid "General Statistics"
+#~ msgid "S&tatistics"
+#~ msgstr "Статистикаи Умумӣ"
+
+#, fuzzy
+#~ msgid "&Settings"
+#~ msgstr "Танзимотҳои Рангҳо"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "Ин барнома барои ёд гирифтани чопи тез ба шумо сохта шудааст"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Файли тайёрӣ барои кушодан"
+
+#, fuzzy
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Тарҳи Ранги Забонак"
+
+#, fuzzy
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "Name of color scheme:"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "Slide Line Colors"
+#~ msgstr "Рангҳои хати чоп"
+
+#, fuzzy
+#~ msgid "Teacher background:"
+#~ msgstr "Замина:"
+
+#, fuzzy
+#~ msgid "Teacher text:"
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~ msgid "Student background:"
+#~ msgstr "Замина:"
+
+#, fuzzy
+#~ msgid "Student text on error:"
+#~ msgstr "Сигнал дар хато"
+
+#, fuzzy
+#~ msgid "Student background on error:"
+#~ msgstr "Замина:"
+
+#, fuzzy
+#~ msgid "Keyboard Colors"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgid "Highlighted background:"
+#~ msgstr "Аз таг равшан кардани тугмаи оянда"
+
+#, fuzzy
+#~ msgid "Highlighted text color:"
+#~ msgstr "Аз таг равшан кардани тугмаи оянда"
+
+#, fuzzy
+#~| msgid "Text:"
+#~ msgid "Text color:"
+#~ msgstr "Матн:"
+
+#~ msgid "Background:"
+#~ msgstr "Замина:"
+
+#, fuzzy
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Танзимотҳои Забонак"
+
+#, fuzzy
+#~ msgid "Keyboard title:"
+#~ msgstr "Забонак"
+
+#, fuzzy
+#~ msgid "Key Properties"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~| msgid "Keyboard Settings"
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Танзимотҳои Забонак"
+
+#, fuzzy
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgid "Key connectors"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~| msgid "Clear History"
+#~ msgid "Clear connectors"
+#~ msgstr "Таърихи тоза кунед"
+
+#, fuzzy
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "Lecture Properties"
+#~ msgstr "Муҳаррири лексия"
+
+#, fuzzy
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Таърихи дараҷаи дараҷаи 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Ҳарфҳои нав дар ин  дараҷа:"
+
+#, fuzzy
+#~ msgid "Level comment (optional):"
+#~ msgstr "Тасвири дараҷа:"
+
+#~ msgid "Level data:"
+#~ msgstr "Таърихи дараҷа:"
+
+#, fuzzy
+#~| msgid "New characters in this level:"
+#~ msgid "High scores for this level"
+#~ msgstr "Ҳарфҳои нав дар ин  дараҷа:"
+
+#, fuzzy
+#~| msgid "Characters per minute"
+#~ msgid "Characters per second"
+#~ msgstr "Миқдори ҳарфҳо ҳар як дақиқа"
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Хати муаллим"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Хати муаллим"
+
+#~ msgid "Text:"
+#~ msgstr "Матн:"
+
+#, fuzzy
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Хати муаллим"
+
+#, fuzzy
+#~| msgid "Use different color on error in typing line"
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#, fuzzy
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Рангҳои гуногун вақти хатоҳо"
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Танзимотҳои Матни Хат"
+
+#, fuzzy
+#~ msgid "Fast"
+#~ msgstr "Тез"
+
+#, fuzzy
+#~ msgid "Slow"
+#~ msgstr "Оҳиста"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Суръати слайд:"
+
+#, fuzzy
+#~ msgid "Override lecture font"
+#~ msgstr "Намоиши нақшаи забонак:"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Намуди ҳарфи матни намоиш/чоп карда истода:"
+
+#, fuzzy
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Аз таг равшан кардани тугмаи оянда"
+
+#, fuzzy
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Намоиши нақшаи забонак:"
+
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Намуди ҳарфи забонак:"
+
+#~ msgid "Sound"
+#~ msgstr "Овоз"
+
+#, fuzzy
+#~ msgid "&Beep on error"
+#~ msgstr "Сигнал дар хато"
+
+#, fuzzy
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Овоз дар ҳоли дигаргун кардани автоматикии дараҷа"
+
+#, fuzzy
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Овоз дар ҳоли дигаргун кардани автоматикии дараҷа"
+
+#, fuzzy
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Дигаргун кардани дараҷа бо автоматикӣ"
+
+#~ msgid "chars/minute"
+#~ msgstr "аломат/дақиқа"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Суръати чоп:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Саҳеҳӣ:"
+
+#, fuzzy
+#~ msgid "Workload:"
+#~ msgstr "Калимаҳои чопшуданд:"
+
+#~ msgid "Limits to increase a level"
+#~ msgstr "Маҳдудияти боло шавии дараҷа"
+
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Маҳдудияти кам шавии дараҷа"
+
+#, fuzzy
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Нигоҳ доштани дараҷа пеш аз пӯшидани барнома"
+
+#~ msgid "Current Training Session"
+#~ msgstr "Тайёрии Сессияи Ҳозира"
+
+#, fuzzy
+#~ msgid "Lecture:"
+#~ msgstr "Муҳаррири лексия"
+
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Вақти гузашт (сонияҳо):"
+
+#~ msgid "Characters typed:"
+#~ msgstr "Ҳарфҳои чопшуданд:"
+
+#~ msgid "Mistyped characters:"
+#~ msgstr "Ҳарфҳои чопнашуданд:"
+
+#~ msgid "Words typed:"
+#~ msgstr "Калимаҳои чопшуданд:"
+
+#~ msgid "Typing Rate"
+#~ msgstr "Дараҷаи чоп"
+
+#~ msgid "Words per minute:"
+#~ msgstr "Миқдори калимаҳо ҳар як дақиқа:"
+
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Статистикаи аломатҳо (фақат асосиаш)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#, fuzzy
+#~ msgid "Current Level Statistics"
+#~ msgstr "Статистикаи Умумӣ"
+
+#, fuzzy
+#~ msgid "Level:"
+#~ msgstr "Дараҷа"
+
+#, fuzzy
+#~ msgid "Show progress in lecture:"
+#~ msgstr "&Муҳаррир лексия"
+
+#, fuzzy
+#~ msgid "Chart Data"
+#~ msgstr "Нақшаҳо"
+
+#, fuzzy
+#~ msgid "Session stats"
+#~ msgstr "&Қать кардани сеанси машқ"
+
+#, fuzzy
+#~ msgid "Level stats"
+#~ msgstr "Таърихи дараҷа:"
+
+#, fuzzy
+#~ msgid "Chart Type"
+#~ msgstr "Ҳарфҳои чопшуданд:"
+
+#~ msgid "Clear History"
+#~ msgstr "Таърихи тоза кунед"
+
+#~ msgid "Level"
+#~ msgstr "Дараҷа"
+
+#, fuzzy
+#~ msgid "Current level"
+#~ msgstr "Дараҷаи равон нигоҳ доред"
+
+#~ msgid "This shows which level you are at."
+#~ msgstr "Дараҷае ки шумо ҷойгир шудаед, дар ин ҷо нишон додааст."
+
+#, fuzzy
+#~ msgid "..."
+#~ msgstr "&Муҳаррир лексия"
+
+#~ msgid "Speed"
+#~ msgstr "Суръат"
+
+#~ msgid "Characters/Minute"
+#~ msgstr "Ҳарфҳо/Дақиқа"
+
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Дар ин ҷо суръати чопи шуморо нишон дода истодааст. Он бо аломатҳо ба "
+#~ "дақиқа ҳисоб карда мешавад."
+
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Чанде шумо дуруст чоп карда истодаед?"
+
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Дар ин ҷо дақиқияти чопи шуморо нишон дода истодааст."
+
+#~ msgid "New Characters in This Level"
+#~ msgstr "Ҳарфҳои нав дар ин дараҷа"
+
+#, fuzzy
+#~ msgid "Setup Users"
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Нақшаҳои забонак"
+
+#, fuzzy
+#~| msgid "T&raining"
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "&Тайёрӣ"
+
+#, fuzzy
+#~ msgid "Preset something:"
+#~ msgstr "Файлро кушода натавонист!"
+
+#, fuzzy
+#~ msgid "New something"
+#~ msgstr "Файлро кушода натавонист!"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "Лексияи пешфарз"
+
+#~ msgid "Could not open file."
+#~ msgstr "Файлро кушода натавонист!"
+
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Нарасидани як ҳарф дар хати '%1'!"
+
+#, fuzzy
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Танзимотҳои Забонак"
+
+#, fuzzy
+#~ msgid "Key definition data:"
+#~ msgstr "Танзимотҳои Забонак"
+
+#, fuzzy
+#~ msgid "Default level..."
+#~ msgstr "Лексияи пешфарз"
+
+#, fuzzy
+#~ msgid "Edit color scheme:"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#, fuzzy
+#~ msgid "Background"
+#~ msgstr "Замина:"
+
+#, fuzzy
+#~ msgid "Change Font..."
+#~ msgstr "Интихоби Ҳарф..."
+
+#~ msgid "Levels"
+#~ msgstr "Дараҷаҳо"
+
+#, fuzzy
+#~ msgid "Select File to Open"
+#~ msgstr "Файли тайёрӣ барои кушодан"
+
+#, fuzzy
+#~ msgid "Current something file"
+#~ msgstr "Файлро кушода натавонист!"
+
+#, fuzzy
+#~ msgid "Color Scheme"
+#~ msgstr "Тарҳи Ранги Забонак"
+
+#~ msgid "Select color scheme:"
+#~ msgstr "Интихоби ранги тарҳ:"
+
+#~ msgid "Typing Line Colors"
+#~ msgstr "Рангҳои хати чоп"
+
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Маҳдудияти дараҷа "
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

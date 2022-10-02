@@ -1,0 +1,2760 @@
+# Translation of ktouch to Croatian
+#
+# Oliver Mucafir <oliver.untwist@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktouch 0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"PO-Revision-Date: 2010-06-27 20:45+0200\n"
+"Last-Translator: Oliver Mucafir <oliver.untwist@gmail.com>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Renato Pavičić, Oliver Mucafir"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "renato@translator-shop.org, oliver.untwist@gmail.com"
+
+#: src/core/dbaccess.cpp:105
+#, kde-format
+msgid "Invalid database version '%1'."
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:617
+#: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
+#, kde-format
+msgid "Custom Lessons"
+msgstr ""
+
+#: src/core/profiledataaccess.cpp:618
+#, kde-format
+msgid "A place to store personal lesson texts"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:113
+#, kde-format
+msgid "No course with ID %1"
+msgstr ""
+
+#: src/core/userdataaccess.cpp:328
+#, fuzzy, kde-format
+msgid "No keyboard layout with ID %1"
+msgstr "Odaberite raspored tipkovnice:"
+
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
+#, fuzzy, kde-format
+#| msgid "Hidden key"
+msgid "Hidden"
+msgstr "Skrivena tipka"
+
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
+#, fuzzy, kde-format
+#| msgid "Top left:"
+msgid "Top left"
+msgstr "Gore lijevo:"
+
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
+#, fuzzy, kde-format
+#| msgid "Top right:"
+msgid "Top right"
+msgstr "Gore desno"
+
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
+#, fuzzy, kde-format
+#| msgid "Bottom left:"
+msgid "Bottom left"
+msgstr "Dolje lijevo"
+
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
+#, fuzzy, kde-format
+#| msgid "Bottom right:"
+msgid "Bottom right"
+msgstr "Dolje desno"
+
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
+#: src/editor/resourceeditor.cpp:246
+#, kde-format
+msgid "Error while opening course"
+msgstr ""
+
+#: src/editor/courseeditor.cpp:93
+#, kde-format
+msgid "Built-in courses can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
+#: src/editor/resourceeditor.cpp:277
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while opening keyboard layout"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/editor/keyboardlayouteditor.cpp:96
+#, kde-format
+msgid "Built-in keyboard layouts can only be viewed."
+msgstr ""
+
+#: src/editor/keyboardlayouteditor.cpp:178
+#, kde-format
+msgid "%1%"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:62
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "Znak"
+msgstr[1] "Znak"
+msgstr[2] "Znak"
+
+#: src/editor/lessontexteditor.cpp:67
+#, kde-format
+msgid "Text files (*.txt)"
+msgstr ""
+
+#: src/editor/lessontexteditor.cpp:76
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be opened"
+msgstr "Odabrana tipka nije osnovna tipka"
+
+#: src/editor/newkeyboardlayoutwidget.cpp:83
+#, kde-format
+msgid "There is already a keyboard layout with the same name."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "New"
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:32
+#, kde-format
+msgid "New..."
+msgstr ""
+
+#: src/editor/newresourceassistant.cpp:35
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "New course"
+msgstr "Nova shema boja"
+
+#: src/editor/newresourceassistant.cpp:39
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "New keyboard layout"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/editor/newresourceassistant.cpp:43
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
+#: src/editor/resourceeditor.cpp:49
+#: src/qml/homescreen/ProfileDetailsItem.qml:156
+#: src/qml/homescreen/ProfileDetailsItem.qml:214
+#: src/ui/keyboardlayouteditor.ui:70
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete"
+msgstr "Izbriši tipku"
+
+#: src/editor/resourceeditor.cpp:52
+#, kde-format
+msgid "Import"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:53
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:64
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgctxt "@title:window"
+msgid "Course and Keyboard Layout Editor"
+msgstr "Uređivač rasporeda tipkovnice"
+
+#: src/editor/resourceeditor.cpp:66
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create a new course or keyboard layout"
+msgstr "Kreiraj novu tipkovnicu"
+
+#: src/editor/resourceeditor.cpp:68
+#, kde-format
+msgid "Delete the current selected course or keyboard layout"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:78
+#, kde-format
+msgid "Import a course or keyboard layout from a file"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:80
+#, kde-format
+msgid "Export the current selected course or keyboard layout to a file"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:172
+#, kde-format
+msgid "Error while deleting course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:194
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while deleting keyboard layout"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
+#: src/editor/resourceeditor.cpp:283
+#, kde-format
+msgid "XML files (*.xml)"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:223
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected file could not be imported."
+msgstr "Odabrana tipka nije osnovna tipka"
+
+#: src/editor/resourceeditor.cpp:258
+#, kde-format
+msgid "Error while saving course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:289
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Error while saving keyboard layout"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/editor/resourceeditor.cpp:376
+#, kde-format
+msgid "Course <b>%1</b> deleted"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:380
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Keyboard layout <b>%1</b> deleted"
+msgstr "Uređivač rasporeda tipkovnice"
+
+#: src/editor/resourceeditor.cpp:414
+#, kde-format
+msgid "Error while saving course to disk."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:448
+#, fuzzy, kde-format
+msgid "Error while saving keyboard layout to disk."
+msgstr "Odaberite raspored tipkovnice:"
+
+#: src/editor/resourceeditor.cpp:517
+#, kde-format
+msgid "The selected course is already present as a built-in course."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#, kde-format
+msgid "Import as new course"
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:537
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is already present as a user course."
+msgstr "Odabrana tipka nije osnovna tipka"
+
+#: src/editor/resourceeditor.cpp:585
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a built-in keyboard "
+"layout."
+msgstr ""
+
+#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#, fuzzy, kde-format
+msgid "Import as new keyboard layout"
+msgstr "Odaberite raspored tipkovnice:"
+
+#: src/editor/resourceeditor.cpp:600
+#, kde-format
+msgid ""
+"The selected keyboard layout is already present as a user keyboard layout."
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:19
+#, kde-format
+msgid "Restore"
+msgstr ""
+
+#: src/editor/resourceeditorwidget.cpp:20
+#, kde-format
+msgid "Dismiss"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:45
+#, kde-format
+msgid "Use another course as template"
+msgstr ""
+
+#: src/editor/resourcetemplatewidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Use another keyboard layout as template"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/editor/resourcetypeswidget.cpp:20
+#, kde-format
+msgid "Course"
+msgstr ""
+
+#: src/editor/resourcetypeswidget.cpp:24
+#, fuzzy, kde-format
+msgid "Keyboard layout"
+msgstr "Rasporedi tipkovnice"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+#, kde-format
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
+#: src/ktouch.kcfg:15
+#, kde-format
+msgid "Controls whether typing errors have to be corrected or not."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:19
+#, kde-format
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:23
+#, kde-format
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:27
+#, kde-format
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:31
+#, kde-format
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:35
+#, kde-format
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:41
+#, kde-format
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:50
+#, kde-format
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerOpacity), group (Colors)
+#: src/ktouch.kcfg:61
+#, kde-format
+msgid "How transparent finger colors should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:69
+#, kde-format
+msgid "The ID of the last used profile."
+msgstr ""
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training"
+msgstr "Vježbanje"
+
+#: src/ktouchcontext.cpp:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Training Settings"
+msgstr "Opcije vježbanja"
+
+#: src/ktouchcontext.cpp:130
+#, fuzzy, kde-format
+#| msgid "Color Settings"
+msgid "Colors"
+msgstr "Postavke boja"
+
+#: src/ktouchcontext.cpp:130
+#, kde-format
+msgid "Color Settings"
+msgstr "Postavke boja"
+
+#: src/ktouchcontext.cpp:143
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Swedish Keyboard"
+msgctxt "@title:window"
+msgid "Configure Keyboard"
+msgstr "Švedska tipkovnica"
+
+#: src/ktouchcontext.cpp:160
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Course and Keyboard Layout Editor..."
+msgstr "Uređivač rasporeda tipkovnice"
+
+#: src/ktouchcontext.cpp:170
+#, fuzzy, kde-format
+#| msgid "Open Keyboard..."
+msgid "Configure Keyboard..."
+msgstr "Otvori tipkovnicu …"
+
+#: src/main.cpp:26
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Typewriting Trainer"
+msgstr "Linija tipkanja"
+
+#: src/main.cpp:28
+#, kde-format
+msgid "Learn and practice typewriting"
+msgstr ""
+
+#: src/main.cpp:31
+#, fuzzy, kde-format
+#| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgid ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+msgstr "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+
+#: src/main.cpp:38
+#, kde-format
+msgid "Sebastian Gottfried"
+msgstr ""
+
+#: src/main.cpp:38
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Current maintainer"
+msgstr "Trenutni održavatelj i programer"
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Andreas Nicolai"
+msgstr "Andreas Nicolai"
+
+#: src/main.cpp:39
+#, fuzzy, kde-format
+#| msgid "Current maintainer and programmer"
+msgid "Former maintainer and programmer"
+msgstr "Trenutni održavatelj i programer"
+
+#: src/main.cpp:40
+#, kde-format
+msgid "Håvard Frøiland"
+msgstr "Håvard Frøiland"
+
+#: src/main.cpp:40
+#, fuzzy, kde-format
+#| msgid "Original author, project admin"
+msgid "Original author"
+msgstr "Izvorni autor, administrator projekta"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "David Vignoni"
+msgstr "David Vignoni"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "Creator of the SVG icon"
+msgstr "Kreator SVG ikone"
+
+#: src/main.cpp:43
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: src/main.cpp:43
+#, fuzzy, kde-format
+#| msgid "Lots of patches, fixes, updates"
+msgid "Lots of patches, fixes and updates"
+msgstr "Mnogo zakrpa, ispravaka i dopuna"
+
+#: src/main.cpp:44
+#, kde-format
+msgid "All the creators of training and keyboard files"
+msgstr "Svi kreatori tipkovničkih i vježbenih datoteka"
+
+#: src/main.cpp:61
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Launch the course and keyboard layout editor"
+msgstr "neimenovani raspored tipkovnice"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Prepend the path to the list of QML import paths"
+msgstr ""
+
+#: src/mainwindow.cpp:60
+#, kde-format
+msgid "%1 has encountered a runtime error and has to be closed."
+msgstr ""
+
+#: src/models/charactersmodel.cpp:195
+#, kde-format
+msgid "Character"
+msgstr "Znak"
+
+#: src/models/charactersmodel.cpp:197
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID"
+msgstr "Tipka mjenjača"
+
+#: src/models/charactersmodel.cpp:199
+#, kde-format
+msgid "Position"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:67
+#, kde-format
+msgid "<No title>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:69
+#, kde-format
+msgid "<p>New characters: %1</p><p>%2</p>"
+msgstr ""
+
+#: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgid "Title"
+msgstr "Naslov:"
+
+#: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
+#, kde-format
+msgid "Courses"
+msgstr ""
+
+#: src/models/resourcemodel.cpp:211
+#, fuzzy, kde-format
+#| msgid "&Keyboard Layouts"
+msgid "Keyboard Layouts"
+msgstr "Rasporedi tip&kovnice"
+
+#: src/models/resourcemodel.cpp:215
+#, kde-format
+msgid "Name: %1"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:39
+#: src/qml/meters/AccuracyMeter.qml:17
+#, kde-format
+msgid "Accuracy"
+msgstr "Preciznost"
+
+#: src/qml/common/LearningProgressChart.qml:48
+#: src/qml/meters/CharactersPerMinuteMeter.qml:20
+#, fuzzy, kde-format
+#| msgid "Characters per minute"
+msgid "Characters per Minute"
+msgstr "Znakova u minuti"
+
+#: src/qml/common/LearningProgressChart.qml:75
+#, kde-format
+msgid "<i>Unknown</i>"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:81
+#, kde-format
+msgctxt "Statistics on lesson:"
+msgid "Lesson:"
+msgstr ""
+
+#: src/qml/common/LearningProgressChart.qml:85
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Training on:"
+msgstr "Vježbanje"
+
+#: src/qml/common/LearningProgressChart.qml:91
+#, fuzzy, kde-format
+#| msgid "Accuracy"
+msgid "Accuracy:"
+msgstr "Preciznost"
+
+#: src/qml/common/LearningProgressChart.qml:95
+#, fuzzy, kde-format
+msgid "Characters per Minute:"
+msgstr "Znakova u minutu:"
+
+#: src/qml/homescreen/CourseSelector.qml:148
+#, fuzzy, kde-format
+msgid "Courses For Your Keyboard Layout"
+msgstr "Rasporedi tipkovnice"
+
+#: src/qml/homescreen/CourseSelector.qml:163
+#, fuzzy, kde-format
+#| msgid "New color scheme"
+msgid "Other Courses"
+msgstr "Nova shema boja"
+
+#: src/qml/homescreen/InitialProfileDialog.qml:17
+#, kde-format
+msgid "Welcome to Typewriting Trainer"
+msgstr ""
+
+#: src/qml/homescreen/InitialProfileDialog.qml:32
+#: src/qml/homescreen/LessonSelector.qml:369
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Start Training"
+msgstr "Vježbanje"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
+#, fuzzy, kde-format
+#| msgid "The selected key is not a finger key."
+msgid "The selected course is intended for a specific keyboard layout."
+msgstr "Odabrana tipka nije osnovna tipka"
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
+#, kde-format
+msgid ""
+"The selected course is not intended for your computer's active keyboard "
+"layout."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
+#, kde-format
+msgid ""
+"KTouch can't switch or set up keyboard layouts. Before training, you have to "
+"configure your computer to use the correct keyboard layout. Otherwise you "
+"will have to use your current keyboard layout to type the lesson text."
+msgstr ""
+
+#: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "Keyboard Layout Name"
+#| msgid "Swedish Keyboard"
+msgid "Configure Keyboard"
+msgstr "Švedska tipkovnica"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:44
+#, fuzzy, kde-format
+#| msgid "Keyboard Layout Editor"
+msgid "Lesson <b>%1</b> deleted."
+msgstr "Uređivač rasporeda tipkovnice"
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:45
+#, kde-format
+msgid "Lesson without title deleted."
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:52
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/qml/homescreen/LessonDeletedMessage.qml:62
+#, kde-format
+msgid "Confirm"
+msgstr ""
+
+#: src/qml/homescreen/LessonEditorDialog.qml:24
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Edit lesson"
+msgstr "Tekst vježbanja:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
+#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/customlessoneditorwidget.ui:25
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+#, kde-format
+msgid "Title:"
+msgstr "Naslov:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:78
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Lesson text"
+msgstr "Tekst vježbanja:"
+
+#: src/qml/homescreen/LessonEditorDialog.qml:90
+#: src/qml/homescreen/ProfileForm.qml:98
+#, kde-format
+msgid "Done"
+msgstr ""
+
+#: src/qml/homescreen/LessonLockedNotice.qml:44
+#, kde-format
+msgid "Complete Previous Lessons to Unlock"
+msgstr ""
+
+#: src/qml/homescreen/ProfileComboBox.qml:54
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Manage Profiles"
+msgstr "Kreiraj novu vježbu"
+
+#: src/qml/homescreen/ProfileComboBox.qml:84
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgctxt "@title:window"
+msgid "Manage Profiles"
+msgstr "Kreiraj novu vježbu"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:125
+#, kde-format
+msgid "Lessons trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:129
+#, fuzzy, kde-format
+#| msgid "Training Options"
+msgid "Total training time:"
+msgstr "Opcije vježbanja"
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:133
+#, kde-format
+msgid "Last trained:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:134
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:151
+#, kde-format
+msgid "Edit"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:203
+#, kde-format
+msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
+msgstr ""
+
+#: src/qml/homescreen/ProfileDetailsItem.qml:219
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgid "Cancel"
+msgstr "Odustani"
+
+#: src/qml/homescreen/ProfileForm.qml:37
+#, kde-format
+msgid "Before you start training, please introduce yourself:"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:43
+#, kde-format
+msgid "Name"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:50
+#, kde-format
+msgid "I have no or only very little experience in machine typing"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:60
+#, kde-format
+msgid "Lessons are unlocked as your typing skills improve over time."
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:72
+#, kde-format
+msgid "I am an experienced machine typist and want to improve my skills"
+msgstr ""
+
+#: src/qml/homescreen/ProfileForm.qml:82
+#, kde-format
+msgid "All lessons are unlocked immediately."
+msgstr ""
+
+#: src/qml/homescreen/ProfileSelector.qml:57
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Create New Profile"
+msgstr "Kreiraj novu vježbu"
+
+#: src/qml/homescreen/ProfileSelector.qml:108
+#, fuzzy, kde-format
+#| msgid "Open a lecture file:"
+msgid "Use Selected Profile"
+msgstr "Otvori datoteku vježbe:"
+
+#: src/qml/homescreen/StatPopupDialog.qml:21
+#, fuzzy, kde-format
+msgid "Lesson training statistics"
+msgstr "Statistika treninga"
+
+#: src/qml/meters/ElapsedTimeMeter.qml:17
+#, kde-format
+msgid "Elapsed time"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:121
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Character:"
+msgstr "Znak"
+
+#: src/qml/scorescreen/ScoreScreen.qml:125
+#, kde-format
+msgid "Errors:"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:152
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:69
+#, kde-format
+msgid "Return to Home Screen"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:166
+#, kde-format
+msgid "Repeat Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:174
+#, kde-format
+msgid "Next Lesson"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:224
+#, kde-format
+msgid "Congratulations! You have passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:225
+#, kde-format
+msgid "You have not passed the lesson."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:237
+#, kde-format
+msgid "Repeat the lesson. Your skills will improve automatically over time."
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:239
+#, kde-format
+msgid "Next lesson unlocked"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:276
+#, kde-format
+msgctxt "Show a specific type of statistic"
+msgid "Show"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:285
+#: src/qml/scorescreen/ScoreScreen.qml:358
+#, kde-format
+msgid "Progress"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:286
+#: src/qml/scorescreen/ScoreScreen.qml:376
+#: src/qml/scorescreen/ScoreScreen.qml:389
+#, kde-format
+msgid "Errors"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:296
+#, kde-format
+msgctxt "Show a statistic over one or more lessons"
+msgid "Over"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:308
+#, kde-format
+msgid "All Lessons"
+msgstr ""
+
+#: src/qml/scorescreen/ScoreScreen.qml:309
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "This Lesson"
+msgstr "Započni novu &sesiju"
+
+#: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
+#, kde-format
+msgid "No visualization available for your keyboard layout."
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:24
+#, kde-format
+msgid "Menu"
+msgstr ""
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:42
+#, fuzzy, kde-format
+#| msgid "T&raining"
+msgid "Resume Training"
+msgstr "Vježbanje"
+
+#: src/qml/trainingscreen/TrainingScreenMenu.qml:54
+#, fuzzy, kde-format
+#| msgid "&Start New Session"
+msgid "Restart Lesson"
+msgstr "Započni novu &sesiju"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
+#, fuzzy, kde-format
+#| msgid "Training session! The time is running..."
+msgid "Training session started. Time begins running with the first keystroke."
+msgstr "Vježbena sesija! Vrijeme teče …"
+
+#: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
+#, fuzzy, kde-format
+#| msgid "Training session paused. Training continues on next keypress..."
+msgid ""
+"Training session interrupted. Time begins running again with next keystroke."
+msgstr ""
+"Vježbena sesija je zaustavljena. Vježba se nastavlja sljedećim pritiskom na "
+"tipku …"
+
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Fingers"
+msgstr "Osnovna tipka"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+#, kde-format
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, kde-format
+msgid "Index finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, kde-format
+msgid "Middle finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy, kde-format
+#| msgid "Typing line"
+msgid "Ring finger:"
+msgstr "Linija tipkanja"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, kde-format
+msgid "Little finger:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+#, kde-format
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, opacityLabel)
+#: src/ui/colorsconfigwidget.ui:317
+#, kde-format
+msgid "Opacity"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
+#: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
+#, fuzzy, no-c-format, kde-format
+#| msgid "%"
+msgid " %"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy, kde-format
+msgid "Keyboard layout:"
+msgstr "Rasporedi tipkovnice"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+#, kde-format
+msgid "Description:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:153
+#, kde-format
+msgid "Lessons:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:182
+#, kde-format
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove lesson"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:228
+#, kde-format
+msgid "Move lesson up"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:243
+#, kde-format
+msgid "Move lesson down"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:320
+#, fuzzy, kde-format
+msgid "New characters:"
+msgstr "novi znakovi"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
+#: src/ui/customlessoneditordialog.ui:14
+#, kde-format
+msgid "Dialog"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:22
+#, fuzzy, kde-format
+#| msgid "Create new keyboard"
+msgid "Create new normal key"
+msgstr "Kreiraj novu tipkovnicu"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:25
+#, fuzzy, kde-format
+#| msgid "Normal key"
+msgid "Normal Key"
+msgstr "Uobičajena tipka"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Create new lecture"
+msgid "Create new special key"
+msgstr "Kreiraj novu vježbu"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:46
+#, kde-format
+msgid "Special Key"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:67
+#, fuzzy, kde-format
+#| msgid "Delete Key"
+msgid "Delete selected key"
+msgstr "Izbriši tipku"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:135
+#, no-c-format, kde-format
+msgid "100%"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy, kde-format
+#| msgid "Save Keyboard"
+msgid "Keyboard"
+msgstr "Spremi tipkovnicu"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+#, kde-format
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+#, kde-format
+msgid "Width:"
+msgstr "Širina:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+#, kde-format
+msgid "Height:"
+msgstr "Visina:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, fuzzy, kde-format
+#| msgid "Key Geometry"
+msgid "Geometry"
+msgstr "Geometrija tipke"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+#, kde-format
+msgid "Left:"
+msgstr "Lijevo:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+#, kde-format
+msgid "Top:"
+msgstr "Vrh:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#, kde-format
+msgid "Key"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy, kde-format
+#| msgid "Finger key"
+msgid "Finger:"
+msgstr "Osnovna tipka"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, kde-format
+msgid "Left little finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, kde-format
+msgid "Left ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, kde-format
+msgid "Left middle finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, kde-format
+msgid "Left index finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, kde-format
+msgid "Right index finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, kde-format
+msgid "Right middle finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, kde-format
+msgid "Right ring finger"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, kde-format
+msgid "Right little finger"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+#, kde-format
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "Characters"
+msgstr "Znak"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy, kde-format
+msgid "Add new character"
+msgstr "novi znakovi"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove character"
+msgstr "Znakovi tipke"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, kde-format
+msgid "Type:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#, kde-format
+msgid "Tab"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#, kde-format
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#, kde-format
+msgid "Shift"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#, kde-format
+msgid "Backspace"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#, kde-format
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#, kde-format
+msgid "Space"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#, kde-format
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, kde-format
+msgid "Label:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy, kde-format
+#| msgid "Modifier key"
+msgid "Modifier ID:"
+msgstr "Tipka mjenjača"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:31
+#, fuzzy, kde-format
+#| msgid "&Open Plain Text File..."
+msgid "Open a text file..."
+msgstr "&Otvori datoteku s običnim tekstom …"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:46
+#, kde-format
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:74
+#, fuzzy, kde-format
+#| msgid "Character"
+msgid "0 Characters"
+msgstr "Znak"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy, kde-format
+#| msgid "untitled keyboard layout"
+msgid "Paste current system keyboard layout name"
+msgstr "neimenovani raspored tipkovnice"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:25
+#, kde-format
+msgid "During training:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
+#: src/ui/trainingconfigwidget.ui:32
+#, kde-format
+msgid "Enforce correction of typing errors"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:45
+#, kde-format
+msgid "Show keyboard"
+msgstr "Prikaži tipkovnicu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:52
+#, fuzzy, kde-format
+msgid "Show real-time statistics"
+msgstr "Opšta statistika"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:75
+#, kde-format
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#: src/ui/trainingconfigwidget.ui:82
+#, kde-format
+msgid "Ret&urn"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#: src/ui/trainingconfigwidget.ui:89
+#, kde-format
+msgid "Spa&ce"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:120
+#, kde-format
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:126
+#, fuzzy, kde-format
+msgid "Minimum strokes &per minute:"
+msgstr "Riječi u minutu:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:149
+#, kde-format
+msgid "Minimum accuracy:"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:21
+#, kde-format
+msgid "Set title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Set keyboard layout"
+msgstr "Spremi raspored tipkovnice"
+
+#: src/undocommands/coursecommands.cpp:91
+#, kde-format
+msgid "Edit description"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:126
+#, kde-format
+msgid "Add lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:218
+#, kde-format
+msgid "Move lesson"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:282
+#, kde-format
+msgid "Set lesson title"
+msgstr ""
+
+#: src/undocommands/coursecommands.cpp:321
+#, fuzzy, kde-format
+msgid "Set new characters for lesson"
+msgstr "novi znakovi"
+
+#: src/undocommands/coursecommands.cpp:360
+#, fuzzy, kde-format
+#| msgid "Student text:"
+msgid "Set lesson text"
+msgstr "Tekst vježbanja:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:21
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Set keyboard layout title"
+msgstr "Spremi raspored tipkovnice"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:56
+#, fuzzy, kde-format
+#| msgid "Save Keyboard Layout"
+msgid "Set keyboard layout name"
+msgstr "Spremi raspored tipkovnice"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:91
+#, fuzzy, kde-format
+msgid "Set keyboard layout size"
+msgstr "Odaberite raspored tipkovnice:"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:143
+#, kde-format
+msgid "Add key"
+msgstr "Dodaj tipku"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:198
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove key"
+msgstr "Ukloni"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:260
+#, fuzzy, kde-format
+#| msgid "Key Geometry"
+msgid "Set key geometry"
+msgstr "Geometrija tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:298
+#, fuzzy, kde-format
+#| msgid "Select finger key"
+msgid "Set key finger"
+msgstr "Izaberite osnovnu tipku"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:344
+#, kde-format
+msgid "Set key haptic marker"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:389
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Add key character"
+msgstr "Znakovi tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:430
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Remove key character"
+msgstr "Znakovi tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:487
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Set key character value"
+msgstr "Znakovi tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:534
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Set key character modifier"
+msgstr "Znakovi tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:581
+#, fuzzy, kde-format
+#| msgid "Key characters"
+msgid "Set key character position"
+msgstr "Znakovi tipke"
+
+#: src/undocommands/keyboardlayoutcommands.cpp:627
+#, kde-format
+msgid "Set special key type"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:670
+#, kde-format
+msgid "Set special key label"
+msgstr ""
+
+#: src/undocommands/keyboardlayoutcommands.cpp:713
+#, kde-format
+msgid "Set special key modifier ID"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Choose Keyboard Layout"
+#~ msgstr "Rasporedi tipkovnice"
+
+#, fuzzy
+#~ msgid "S&tatistics"
+#~ msgstr "Opšta statistika"
+
+#~ msgid "&Settings"
+#~ msgstr "Po&stavke"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Glavna alatna traka"
+
+#~ msgid "Color Scheme Editor"
+#~ msgstr "Uređivač shema boja"
+
+#~ msgid "User Defined Color Schemes"
+#~ msgstr "Korisnički definirane sheme boja"
+
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgid "Edit Color Scheme"
+#~ msgstr "Uredi shemu boja"
+
+#~ msgid "Name of color scheme:"
+#~ msgstr "Ime sheme boja:"
+
+#~ msgid "&Store Data"
+#~ msgstr "&Spremi podatke"
+
+#~ msgid "Slide Line Colors"
+#~ msgstr "Boje na kliznoj traci"
+
+#~ msgid "Teacher background:"
+#~ msgstr "Pozadina pokazne linije:"
+
+#~ msgid "Teacher text:"
+#~ msgstr "Pokazni tekst:"
+
+#~ msgid "Student background:"
+#~ msgstr "Pozadina linije vježbanja"
+
+#~ msgid "Student text on error:"
+#~ msgstr "Tekst vježbanja ima grešku:"
+
+#~ msgid "Student background on error:"
+#~ msgstr "Pozadina linije vježbanja ima grešku:"
+
+#~ msgid "Keyboard Colors"
+#~ msgstr "Boje tipkovnice"
+
+#~ msgid "Background colors for normal keys:"
+#~ msgstr "Boje pozadine za uobičajene tipke:"
+
+#~ msgid "Highlighted background:"
+#~ msgstr "Istaknuta pozadina:"
+
+#~ msgid "Normal key colors:"
+#~ msgstr "Boje uobičajenih tipki:"
+
+#~ msgid "Highlighted text color:"
+#~ msgstr "Boja istaknutog teksta:"
+
+#~ msgid "Text color:"
+#~ msgstr "Boja teksta:"
+
+#~ msgid "Key frame:"
+#~ msgstr "Okvir tipke:"
+
+#~ msgid "Modifier/other keys:"
+#~ msgstr "Mjenjačke/druge tipke:"
+
+#~ msgid "Text color"
+#~ msgstr "Boja teksta"
+
+#~ msgid "Background:"
+#~ msgstr "Pozadina:"
+
+#~ msgid "Keyboard Identification Data"
+#~ msgstr "Identifikacijski podaci tipkovnice"
+
+#~ msgid "Keyboard title:"
+#~ msgstr "Ime tipkovnice:"
+
+#~ msgid "Language id:"
+#~ msgstr "ID jezika:"
+
+#~ msgid "Comments:"
+#~ msgstr "Komentar:"
+
+#~ msgid "Key Properties"
+#~ msgstr "Svojstva tipke"
+
+#~ msgid "Key type:"
+#~ msgstr "Vrsta tipke:"
+
+#~ msgid "Key text:"
+#~ msgstr "Tekst tipke:"
+
+#~ msgid "Keyboard Edit Options"
+#~ msgstr "Opcije uređivanja tipkovnice"
+
+#~ msgid "Set Keyboard Font..."
+#~ msgstr "Postavi pismo tipkovnice …"
+
+#~ msgid "Save Keyboard As..."
+#~ msgstr "Spremi tipkovnicu kao …"
+
+#~ msgid "Close"
+#~ msgstr "Zatvori"
+
+#~ msgid "Key connectors"
+#~ msgstr "Veze tipke"
+
+#~ msgid "or unicode"
+#~ msgstr "ili unicode"
+
+#~ msgid "Clear connectors"
+#~ msgstr "Izbriši veze"
+
+#~ msgid "Add/update connector"
+#~ msgstr "Dodaj/ažuriraj vezu"
+
+#~ msgid "< modifier key>"
+#~ msgstr "<tipka mjenjača>"
+
+#~ msgid "Keyboard Layout (click to activate keys for editing or drag keys)"
+#~ msgstr ""
+#~ "Raspored tipkovnice (kliknite kako biste aktivirali tipke za uređivanje "
+#~ "ili ih povucite)"
+
+#~ msgid "KTouch Lecture Editor"
+#~ msgstr "KTouch uređivač vježbi"
+
+#~ msgid "Lecture Properties"
+#~ msgstr "Svojstva vježbe"
+
+#~ msgid "Comment:"
+#~ msgstr "Komentar:"
+
+#~ msgid "Level Editor"
+#~ msgstr "Uređivač razine"
+
+#~ msgid "Level Data of Level 10"
+#~ msgstr "Podaci o razini 10"
+
+#~ msgid "New characters in this level:"
+#~ msgstr "Novi znakovi na ovoj razini:"
+
+#~ msgid "Level comment (optional):"
+#~ msgstr "Komentar razine (neobavezno):"
+
+#~ msgid "Level data:"
+#~ msgstr "Podaci o razini:"
+
+#~ msgid "Training level summary"
+#~ msgstr "Sažetak razine vježbe"
+
+#~ msgid "Summary"
+#~ msgstr "Sažetak"
+
+#~ msgid "High scores for this level"
+#~ msgstr "Najviši rezultati za ovu razinu"
+
+#~ msgid "1."
+#~ msgstr "1."
+
+#~ msgid "2."
+#~ msgstr "2."
+
+#~ msgid "3."
+#~ msgstr "3."
+
+#~ msgid "4."
+#~ msgstr "4."
+
+#~ msgid "5."
+#~ msgstr "5."
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Score"
+#~ msgstr "Rezultat"
+
+#~ msgid "Characters per second"
+#~ msgstr "Znakova u sekundi"
+
+#~ msgid "All users high scores for this level"
+#~ msgstr "najviši rezultati svih korisnika za ovu razinu"
+
+#~ msgid "&Retry level"
+#~ msgstr "Ponovi razinu"
+
+#~ msgid "&Continue to next level"
+#~ msgstr "Nastavi sa sljedećom razinom"
+
+#~ msgid "Browse..."
+#~ msgstr "Pretraži …"
+
+#~ msgid "&Ok"
+#~ msgstr "U redu"
+
+#~ msgid "Use custom color for typing line"
+#~ msgstr "Koristi prilagođenu boju za liniju tipkanja"
+
+#~ msgid "The color for the teacher's line"
+#~ msgstr "Boja za pokaznu liniju"
+
+#~ msgid "Teacher's line"
+#~ msgstr "Pokazna linija"
+
+#~ msgid "Text:"
+#~ msgstr "Tekst:"
+
+#~ msgid "Change the text color for the student line"
+#~ msgstr "Promijeni boju teksta za liniju vježbanja"
+
+#~ msgid ""
+#~ "Here you can change the color of the text you type in the student line."
+#~ msgstr ""
+#~ "Ovdje možete promijeniti boju teksta koji tipkate u liniji vježbanja."
+
+#~ msgid "The background for the teacher's line"
+#~ msgstr "Pozadina za pokaznu liniju"
+
+#~ msgid ""
+#~ "Here you can change the background color for the teacher's line (the line "
+#~ "of letters you have to type.)"
+#~ msgstr ""
+#~ "Ovdje možete promijeniti boju pozadine pokazne pokazne linije (liniju "
+#~ "slova koju trebate otipkati)."
+
+#~ msgid "Use different color on missed typing"
+#~ msgstr "Koristi drukčiju boju kod pogrešnog tipkanja"
+
+#~ msgid "Choose the background color for error in typing line"
+#~ msgstr "Izaberite boju pozadine za greške u liniji tipkanja"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the background of errors. You make an "
+#~ "error when you type a wrong letter in the student line. This is a way to "
+#~ "make your errors more visible."
+#~ msgstr ""
+#~ "Ako ste izabrali opciju 'Koristi drukčiju boju za greške u liniji "
+#~ "tipkanja', tada možete izabrati boju pozadine za greške. Greške činite "
+#~ "ako upišete krivo slovo u liniji vježbanja. Ovo je način da vam vaše "
+#~ "greške budu vidljivije."
+
+#~ msgid "Choose the text color for error in typing line"
+#~ msgstr "Izaberite boju teksta za greške u liniji tipkanja"
+
+#~ msgid ""
+#~ "When you have checked 'Use different color on error in the typing line', "
+#~ "you can then choose a color for the text of errors. You make an error "
+#~ "when you type a wrong letter in the student line. This is a way to make "
+#~ "your errors more visible."
+#~ msgstr ""
+#~ "Ako ste izabrali opciju 'Koristi drukčiju boju za greške u liniji "
+#~ "tipkanja', tada možete izabrati boju teksta za greške. Greške činite ako "
+#~ "upišete krivo slovo u liniji vježbanja. Ovo je način da vam vaše greške "
+#~ "budu vidljivije."
+
+#~ msgid "General Options"
+#~ msgstr "Općenite opcije"
+
+#~ msgid "Text Line Settings"
+#~ msgstr "Postavke linije teksta"
+
+#~ msgid "Fast"
+#~ msgstr "Brzo"
+
+#~ msgid "Slow"
+#~ msgstr "Sporo"
+
+#~ msgid "Sliding speed:"
+#~ msgstr "Brzina pomicanja:"
+
+#~ msgid "Override lecture font"
+#~ msgstr "Izbjegni pismo vježbe"
+
+#~ msgid "Font for displayed/typed text:"
+#~ msgstr "Pismo za prikazani/otipkani tekst:"
+
+#~ msgid ""
+#~ "This button will display a font dialog where you can change the font for "
+#~ "the student and the teacher lines. When you leave the font dialog, the "
+#~ "new font is previewed in the line below and only applied when you click "
+#~ "the Apply button below."
+#~ msgstr ""
+#~ "Ovaj gumb će prikazati dijalog u kojem možete promijeniti pismo za "
+#~ "pokaznu liniju i liniju vježbanja. Kada napustite dijalog, novo pismo će "
+#~ "biti prikazano na liniji ispod i bit će primjenjeno tek kad kliknete na "
+#~ "gumb Primjeni koji se nalazi ispod."
+
+#~ msgid "Keyboard Settings"
+#~ msgstr "Postavke tipkovnice"
+
+#~ msgid "Show on the keyboards the keys you have to type"
+#~ msgstr "Prikaži na tipkovnici tipke koje trebate otipkati"
+
+#~ msgid ""
+#~ "This highlights on the keyboard the key you have to type next. It is "
+#~ "easier to type when this is checked."
+#~ msgstr ""
+#~ "Ovo ističe tipku na tipkovnici koju sljedeću trebate otipkati. Lakše je "
+#~ "tipkati kada je ovo izabrano."
+
+#~ msgid "Highlight &keys on keyboard"
+#~ msgstr "Istakni gumbe na tipkovnici"
+
+#~ msgid "Hide/dim not yet learned keys "
+#~ msgstr "Sakrij/zamuti nenaučene tipke"
+
+#, fuzzy
+#~ msgid "Override keyboard fonts"
+#~ msgstr "Odaberite raspored tipkovnice:"
+
+#, fuzzy
+#~ msgid "Font for keys on keyboard:"
+#~ msgstr "Pismo za tipkae na tipkovnici:"
+
+#~ msgid "Sound"
+#~ msgstr "Zvuk"
+
+#~ msgid "Emit a beep on each typing error"
+#~ msgstr "Proizvedi bip kod svake pogreške tipkanja"
+
+#, fuzzy
+#~ msgid "&Beep on error"
+#~ msgstr "Oglasi se prilikom greške"
+
+#, fuzzy
+#~ msgid "Play a sound when the level automatically changes."
+#~ msgstr "Zvuk pri automatskoj promijeni nivoa"
+
+#, fuzzy
+#~ msgid "&Sound on automatic level change"
+#~ msgstr "Zvuk pri automatskoj promijeni nivoa"
+
+#, fuzzy
+#~ msgid "A&utomatic level adjustment"
+#~ msgstr "Automatsko prilagođavanje nivoa"
+
+#, fuzzy
+#~ msgid "chars/minute"
+#~ msgstr "znakova/minutu"
+
+#~ msgid "Typing speed:"
+#~ msgstr "Brzina tipkanja:"
+
+#~ msgid "Correctness:"
+#~ msgstr "Točnost:"
+
+#, fuzzy
+#~ msgid "Workload:"
+#~ msgstr "Otkucano reči:"
+
+#, fuzzy
+#~ msgid "Limits to increase a level"
+#~ msgstr "Ograničenja povećavanja nivoa"
+
+#, fuzzy
+#~ msgid "Limits to decrease a level"
+#~ msgstr "Ograničenja smanjivanja nivoa"
+
+#, fuzzy
+#~ msgid "&Remember level for next program start"
+#~ msgstr "Zapamti nivo za sljedeći put kada se program pokrene"
+
+#, fuzzy
+#~ msgid "Current Training Session"
+#~ msgstr "Trenutna trening sesija"
+
+#, fuzzy
+#~ msgid "Current Training Session Statistics"
+#~ msgstr "Statistika trenutne trening sesije"
+
+#~ msgid "Lecture:"
+#~ msgstr "Lekcija:"
+
+#, fuzzy
+#~ msgid "Time (seconds) elapsed:"
+#~ msgstr "Proteklo vrijeme (u sekundama):"
+
+#, fuzzy
+#~ msgid "Characters typed:"
+#~ msgstr "Otkucano znakova:"
+
+#, fuzzy
+#~ msgid "Mistyped characters:"
+#~ msgstr "Pogrešno otkucanih znakova:"
+
+#, fuzzy
+#~ msgid "Words typed:"
+#~ msgstr "Otkucano reči:"
+
+#, fuzzy
+#~ msgid "Typing Rate"
+#~ msgstr "Tempo utipkavanja"
+
+#, fuzzy
+#~ msgid "Character Statistics (characters you need to focus on)"
+#~ msgstr "Statistika znakova (znakovi na koje morate da obratite pažnju)"
+
+#~ msgid "a:"
+#~ msgstr "a:"
+
+#~ msgid "e:"
+#~ msgstr "e:"
+
+#~ msgid "b:"
+#~ msgstr "b:"
+
+#~ msgid "f:"
+#~ msgstr "f:"
+
+#~ msgid "c:"
+#~ msgstr "c:"
+
+#~ msgid "g:"
+#~ msgstr "g:"
+
+#~ msgid "d:"
+#~ msgstr "d:"
+
+#~ msgid "h:"
+#~ msgstr "h:"
+
+#, fuzzy
+#~ msgid "Current Level Statistics"
+#~ msgstr "Opšta statistika"
+
+#, fuzzy
+#~ msgid "Level:"
+#~ msgstr "Razina"
+
+#, fuzzy
+#~ msgid "Show progress in lecture:"
+#~ msgstr "&Promijeni lekciju"
+
+#, fuzzy
+#~ msgid "Chart Data"
+#~ msgstr "Grafikoni"
+
+#, fuzzy
+#~ msgid "Session stats"
+#~ msgstr "&Pauziraj trening sesiju"
+
+#, fuzzy
+#~ msgid "Level stats"
+#~ msgstr "Podaci o nivou:"
+
+#, fuzzy
+#~ msgid "Chart Type"
+#~ msgstr "Otkucano znakova:"
+
+#~ msgid "Correctness"
+#~ msgstr "Ispravnost"
+
+#~ msgid "Skill"
+#~ msgstr "Vještina"
+
+#~ msgid "Words per minute"
+#~ msgstr "Riječi u minuti"
+
+#~ msgid "Clear History"
+#~ msgstr "Izbriši povijest"
+
+#~ msgid "Level"
+#~ msgstr "Razina"
+
+#, fuzzy
+#~ msgid "Current level"
+#~ msgstr "Zadrži trenutni nivo"
+
+#, fuzzy
+#~ msgid "This shows which level you are at."
+#~ msgstr "Ovo pokazuje na kome ste nivou"
+
+#, fuzzy
+#~ msgid "..."
+#~ msgstr "&Promijeni lekciju"
+
+#~ msgid "Speed"
+#~ msgstr "Brzina"
+
+#, fuzzy
+#~ msgid "Characters/Minute"
+#~ msgstr "Znakovi/minutu"
+
+#, fuzzy
+#~ msgid ""
+#~ "This shows how fast you are typing. It measures the typing speed in "
+#~ "characters per minute."
+#~ msgstr ""
+#~ "Ovo pokazuje koliko brzo kucate. Meri brzinu utipkavanja u znakovima po "
+#~ "minutu."
+
+#, fuzzy
+#~ msgid "How much are you typing correctly?"
+#~ msgstr "Koliko kucate točno?"
+
+#, fuzzy
+#~ msgid "This shows how correctly you are typing."
+#~ msgstr "Ovo pokazuje koliko točno kucate."
+
+#, fuzzy
+#~ msgid "New Characters in This Level"
+#~ msgstr "Novi znakovi na ovom nivou"
+
+#, fuzzy
+#~ msgid "Setup Users"
+#~ msgstr "Uobičajene lekcije"
+
+#~ msgid "The number of the current color scheme."
+#~ msgstr "Broj trenutne sheme boja:"
+
+#~ msgid "Use the same typing line colors independent of color scheme."
+#~ msgstr "Koristite istu boju linije tipkanja neovisno o shemi boja."
+
+#~ msgid "The background color for the teacher's line."
+#~ msgstr "Boja pozadine za pokaznu liniju."
+
+#~ msgid "The text color for the teacher's line"
+#~ msgstr "Boja teksta za pokaznu liniju."
+
+#~ msgid "The background color for the student's line."
+#~ msgstr "Boja pozadine za liniju vježbanja."
+
+#~ msgid "The text color for the student's line"
+#~ msgstr "Boja teksta za liniju vježbanja."
+
+#~ msgid "Whether to use a different background for wrong text or not."
+#~ msgstr "Bilo da se koristi različita pozadina za neispravan tekst ili ne."
+
+#~ msgid "The background color for wrong text (students line)."
+#~ msgstr "Boja pozadine kod neispravnog teksta (linija vježbanja)."
+
+#~ msgid "The text color for wrong text (students line)."
+#~ msgstr "Boja teksta kod neispravnog teksta (linija vježbanja)."
+
+#~ msgid "Play sounds for typing."
+#~ msgstr "Sviraj zvukove kod tipkanja."
+
+#~ msgid "Play a sound on automatic level change"
+#~ msgstr "Proizvedi zvuk kod automatske promjene razine"
+
+#~ msgid "The sliding speed"
+#~ msgstr "Brzina pomicanja"
+
+#~ msgid "The maximum height of the sliding widget"
+#~ msgstr "Najveća visina widgeta pomicanja"
+
+#~ msgid "Override the default/predefined lecture fonts."
+#~ msgstr "Zaobiđi zadana/predefinirana pisma vježbi."
+
+#~ msgid "The font for the student and teacher lines"
+#~ msgstr "Pismo za pokaznu liniju i liniju vježbanja"
+
+#~ msgid "The currently loaded lecture file"
+#~ msgstr "Trenutno učitana datoteka vježbe"
+
+#~ msgid "Whether we use right-to-left typing."
+#~ msgstr "Bilo da koristimo tipkanje zdesna na lijevo."
+
+#~ msgid "Whether to use colors on the keys or not."
+#~ msgstr "Bilo da se koriste boje na tipkama ili ne."
+
+#~ msgid "Whether to show only the learned/known keys or always all keys."
+#~ msgstr ""
+#~ "Bilo da se pokazuju samo naučene/poznate tipke ili uvijek sve tipke."
+
+#~ msgid "Whether to show the keyboard display."
+#~ msgstr "Bilo da se pokazuje tipkovnica."
+
+#~ msgid "Whether to override the default/predefined keyboard fonts."
+#~ msgstr "Bilo da se zaobiđu zadana/predefinirana pisma tipkovnice."
+
+#~ msgid "The font for the keys on the keyboard"
+#~ msgstr "Pismo za tipke na tipkovnici"
+
+#~ msgid "The currently loaded keyboard file"
+#~ msgstr "Trenutno učitana tipkovnička datoteka"
+
+#~ msgid "Requires user to press enter after the line is complete."
+#~ msgstr "Korisnik treba pritisnuti Enter nakon završene linije."
+
+#~ msgid "Allow automatic level adjustments"
+#~ msgstr "Dopusti automatsko prilagođavanje razine"
+
+#~ msgid "Disable manual level adjustments when auto-level change is enabled"
+#~ msgstr ""
+#~ "Onemogući ručno prilagođavanje kada je omogućena automatska promjena "
+#~ "razine"
+
+#~ msgid "Remember the current level for the next KTouch start"
+#~ msgstr "Zapamti trenutnu razinu za sljedeće pokretanje programa"
+
+#~ msgid "The current training level"
+#~ msgstr "Trenutna vježbena razina"
+
+#~ msgid "Number of chars per minute to increase a level"
+#~ msgstr "Broj znakova u minuti za povišenje razine"
+
+#~ msgid "Percentage of correctness to increase a level"
+#~ msgstr "Postotak ispravnosti za povišenje razine"
+
+#~ msgid "Number of chars per minute to decrease a level"
+#~ msgstr "Broj znakova u minuti za sniženje razine"
+
+#~ msgid "Percentage of correctness to decrease a level"
+#~ msgstr "Postotak ispravnosti za sniženje razine"
+
+#~ msgid "How many lines that must be typed before level can change"
+#~ msgstr "Koliko linija mora biti otipkano prije promjene razine"
+
+#~ msgid "Run minimum one complete level before going up"
+#~ msgstr "Pokreni najmanje jednu cjelovitu razinu prije prelaska na višu"
+
+#~ msgid "Allow multiple KTouch users for single user account"
+#~ msgstr "Dopusti više korisnika programa za jedan korisnički račun"
+
+#~ msgid "The user name of the current user."
+#~ msgstr "Korisničko ime trenutnog korisnika."
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Dvorak keyboard layout)"
+#~ msgstr "Odaberite raspored tipkovnice:"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "German (Neo 2 keyboard layout)"
+#~ msgstr "Odaberite raspored tipkovnice:"
+
+#, fuzzy
+#~ msgctxt "Lesson Name"
+#~ msgid "Ukrainian"
+#~ msgstr "&Školovanje"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Brazilian"
+#~ msgstr "&Školovanje"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Danish"
+#~ msgstr "Danski"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Colemak"
+#~ msgstr "Engleski Colemak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak"
+#~ msgstr "Engleski Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English"
+#~ msgstr "Engleski"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "English Dvorak (United Kingdom)"
+#~ msgstr "Engleski Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Dvorak"
+#~ msgstr "Francuski Dvorak"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French"
+#~ msgstr "Francuski"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German"
+#~ msgstr "Njemački"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "German"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German Neo 2"
+#~ msgstr "Njemački"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Greek (English)"
+#~ msgstr "Engleski"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Italian"
+#~ msgstr "Talijanski"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Norwegian"
+#~ msgstr "Norveški"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Slovenian"
+#~ msgstr "Slovenski"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "English Dvorak"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish Dvorak"
+#~ msgstr "Engleski Dvorak"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "Danish"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Spanish"
+#~ msgstr "Danski"
+
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Swedish Keyboard"
+#~ msgstr "Švedska tipkovnica"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "German"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "German (Swiss)"
+#~ msgstr "Njemački"
+
+#, fuzzy
+#~| msgctxt "Keyboard Layout Name"
+#~| msgid "French"
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "French Swiss"
+#~ msgstr "Francuski"
+
+#, fuzzy
+#~ msgctxt "Keyboard Layout Name"
+#~ msgid "Ukrainian (winkeys)"
+#~ msgstr "&Školovanje"
+
+#~ msgid "Save modified color schemes?"
+#~ msgstr "Spremiti promijenjene sheme boja?"
+
+#~ msgid "untitled color scheme"
+#~ msgstr "neimenovana shema boja"
+
+#~ msgid "Black && White"
+#~ msgstr "Crno && Bijelo"
+
+#~ msgid "Classic"
+#~ msgstr "Klasično"
+
+#~ msgid "Deep Blue"
+#~ msgstr "Dubinska plava"
+
+#~ msgid "Stripy"
+#~ msgstr "Stripy"
+
+#~ msgid "Default User"
+#~ msgstr "Uobičajeni korisnik"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.txt|Text files\n"
+#~| "*|All files"
+#~ msgid ""
+#~ "*.txt *ktouch.xml|Text files\n"
+#~ "*|All files"
+#~ msgstr ""
+#~ "*.txt| Tekstualne datoteke\n"
+#~ "*|Sve datoteke"
+
+#~ msgid "Select Practice Text"
+#~ msgstr "Odaberite tekst za vježbanje"
+
+#~ msgid "Imported text from file '%1'"
+#~ msgstr "Uvezeni tekst iz datoteke '%1'"
+
+#~ msgid "generated from text file"
+#~ msgstr "generirano iz tekstualne datoteke"
+
+#~ msgid "all available"
+#~ msgstr "sve raspoloživo"
+
+#~ msgid "Select Training Lecture File"
+#~ msgstr "Izaberite datoteku za vježbanje"
+
+#~ msgid ""
+#~ "Would you like to keep the current level for the new training session?"
+#~ msgstr "Želite li zadržati trenutnu razinu za novu vježbenu sesiju?"
+
+#~ msgid "Start new training session"
+#~ msgstr "Započni novu vježbenu sesiju"
+
+#~ msgid "Keep current level"
+#~ msgstr "Zadrži trenutnu razinu"
+
+#~ msgid "Start from first level"
+#~ msgstr "Započni s prvom razinom"
+
+#~ msgid "Sound Settings"
+#~ msgstr "Postavke zvuka"
+
+#~ msgid "Level:  Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Razina:  Ispravno/Sveukupno znakova: %1/%2  Riječi: %3"
+
+#~ msgid "Session: Correct/Total chars: %1/%2  Words: %3"
+#~ msgstr "Sesija:  Ispravno/Sveukupno znakova: %1/%2  Riječi: %3"
+
+#~ msgid ""
+#~ "Note that in different countries touch typing is taught slightly "
+#~ "different which usually affects only the top row of keys. For instance, "
+#~ "in the United States only the leftmost key and the key with the 1 are "
+#~ "pressed by the little finger of the left hand. In Germany the little "
+#~ "finger also presses the 2 key, and thus the fingers shift one key to the "
+#~ "right on the top row.\n"
+#~ "Normally this only makes a difference for split or ergonomic keyboards."
+#~ msgstr ""
+#~ "Primjetite da se u različitim zemljama tipkanje uči malo različito i "
+#~ "uglavnom se odnosi samo na gornji red tipki. Npr. u SAD-u samo najljevija "
+#~ "tipka i tipka 1 pritišću se malim lijevim prstom. U Njemačkoj mali prst "
+#~ "pritišće i tipku 2 i zbog toga se prsti pomiču za jednu tipku desno u "
+#~ "gornjem redu. \n"
+#~ "Naravno ovo čini razliku samo kod dvodijelnih ili ergonomskih tipkovnica."
+
+#~ msgid "Could not find/open the lecture file '%1'."
+#~ msgstr "Nije moguće naći/otvoriti datoteku za vježbanje '%1'."
+
+#~ msgid "Changing user to '%1'. Restarting training session at current level."
+#~ msgstr ""
+#~ "Promjena korisnika u '%1'. Ponovno pokretanje vježbene sesije s trenutnom "
+#~ "razinom."
+
+#~ msgid "&Open Lecture..."
+#~ msgstr "&Otvori vježbu …"
+
+#~ msgid "&Edit Lecture..."
+#~ msgstr "Ur&edi vježbu …"
+
+#~ msgid "&Edit Color Scheme..."
+#~ msgstr "Ur&edi shemu boja …"
+
+#~ msgid "&Edit Keyboard Layout..."
+#~ msgstr "Ur&edi raspored tipkovnice …"
+
+#~ msgid "&Pause Session"
+#~ msgstr "Zaustavi sesiju"
+
+#~ msgid "&Lecture Statistics"
+#~ msgstr "Statistika vježbanja"
+
+#~ msgid "Default &Lectures"
+#~ msgstr "Uobičajene vježbe"
+
+#~ msgid "Keyboards &Color Schemes"
+#~ msgstr "Sheme boja tipkovni&ce"
+
+#~ msgid "&Setup Users..."
+#~ msgstr "Po&stavi korisnike …"
+
+#~ msgid "&Current User"
+#~ msgstr "Trenutni korisnik"
+
+#~ msgid "untitled lecture"
+#~ msgstr "neimenovana vježba"
+
+#~ msgid "Could not open/download keyboard file '%1'"
+#~ msgstr "Nije moguće otvoriti/preuzeti datoteku tipkovnice '%1'"
+
+#~ msgid ""
+#~ "%1 with display character '%2' and unicode '%3' has been already defined "
+#~ "and is skipped.\n"
+#~ msgstr "%1 sa znakom '%2' i unicode '%3' je već definiran i preskočen.\n"
+
+#~ msgid "Control key"
+#~ msgstr "Kontrolna tipka"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Normal key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Nepoznata osnovna tipka s unicode '%1'. Uobičajena tipka sa znakom '%2' i "
+#~ "unicode '%3' je preskočena.\n"
+
+#~ msgid ""
+#~ "Unknown target key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Nepoznata ciljana tipka s unicode '%1'. Skrivena tipka sa znakom '%2' i "
+#~ "unicode '%3' je preskočena.\n"
+
+#~ msgid ""
+#~ "Unknown finger key with unicode '%1'. Hidden key with display character "
+#~ "'%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Nepoznata osnovna tipka s unicode '%1'. Skrivena tipka sa znakom '%2' i "
+#~ "unicode '%3' je preskočena.\n"
+
+#~ msgid ""
+#~ "Unknown modifier/control key with unicode '%1'. Hidden key with display "
+#~ "character '%2' and unicode '%3' skipped.\n"
+#~ msgstr ""
+#~ "Nepoznata mjenjačka/kontrolna tipka s unicode '%1'. Skrivena tipka sa "
+#~ "znakom '%2' i unicode '%3' je preskočena.\n"
+
+#~ msgctxt "Num-lock"
+#~ msgid "Num"
+#~ msgstr "Num"
+
+#~ msgid ""
+#~ "*.keyboard.xml|KTouch Keyboard Files (*.keyboard.xml)\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "*.keyboard.xml|KTouch tipkovničke datoteke (*.keyboard.xml)\n"
+#~ "*|Sve datoteke"
+
+#~ msgid "Really delete this key?"
+#~ msgstr "Zaista izbrisati ovu tipku?"
+
+#~ msgid "KTouch keyboard editor"
+#~ msgstr " KTouch uređivač tipkovnice"
+
+#~ msgid ""
+#~ "This is not a valid unicode number. Please correct the number or enter a "
+#~ "character."
+#~ msgstr "To nije ispravan unicode broj. Ispravite broj ili upišite znak."
+
+#~ msgid "Please enter either a character or a unicode number."
+#~ msgstr "Upišite bilo koji znak ili unicode broj."
+
+#~ msgid "Delete all key connections for this key?"
+#~ msgstr "Izbrišite sve veze s tipkama za ovu tipku?"
+
+#~ msgid "KTouch keyboard editor error"
+#~ msgstr "Greška KTouch uređivača tipkovnice"
+
+#~ msgid "<modifier key>"
+#~ msgstr "<tipka mjenjača>"
+
+#~ msgid "Open Keyboard File"
+#~ msgstr "Otvori tipkovničku datoteku"
+
+#~ msgid "Which keyboard file would you like to edit?"
+#~ msgstr "Koju tipkovničku datoteku želite uređivati?"
+
+#~ msgid "Edit current keyboard:"
+#~ msgstr "Uredi trenutnu tipkovnicu:"
+
+#~ msgid "Open a default keyboard:"
+#~ msgstr "Otvori zadanu tipkovnicu:"
+
+#~ msgid "Open a keyboard file:"
+#~ msgstr "Otvori tipkovničku datoteku:"
+
+#~ msgid "<no keyboard files available>"
+#~ msgstr "<nema raspoložive tipkovničke datoteke>"
+
+#~ msgid "Could not open the keyboard file, creating a new one instead."
+#~ msgstr ""
+#~ "Kako nije moguće otvoriti tipkovničku datoteku, umjesto toga će se "
+#~ "kreirati nova."
+
+#~ msgid ""
+#~ "There were warnings while reading the keyboard file '%1':\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Bilo je upozorenja prilikom čitanja tipkovničke datoteke '%1':\n"
+#~ "%2"
+
+#~ msgid " (modified)"
+#~ msgstr "(izmijenjeno)"
+
+#~ msgid "KTouch Keyboard Editor - %1 %2"
+#~ msgstr "KTouch uređivač tipkovnice – %1 %2"
+
+#~ msgid "KTouch Keyboard Editor - %1"
+#~ msgstr "KTouch uređivač tipkovnice – %1"
+
+#~ msgid "<unnamed keyboard file>"
+#~ msgstr "<neimenovana tipkovnička datoteka>"
+
+#~ msgid "The keyboard has been changed. Do you want to save the changes?"
+#~ msgstr "Tipkovnica je promijenjena. želite li spremiti promjene?"
+
+#~ msgid "Could not read the keyboard layout file '%1'. %2"
+#~ msgstr "Nije moguće pročitati datoteku rasporeda tipkovnice '%1'. %2"
+
+#~ msgid "Could not download/open keyboard layout file from '%1'."
+#~ msgstr ""
+#~ "Nije moguće preuzeti/otvoriti datoteku rasporeda tipkovnice iz '%1'."
+
+#~ msgid ""
+#~ "Error reading the keyboard layout; the default number keypad will be "
+#~ "created instead. You can choose another keyboard layout in the "
+#~ "preferences dialog."
+#~ msgstr ""
+#~ "Greška prilikom čitanja rasporeda tipkovnice! Umjesto toga bit će "
+#~ "kreirana zadana numerička tipkovnica. Možete izabrati drugi raspored "
+#~ "tipkovnice u dijalogu postavki."
+
+#~ msgid "A default lecture..."
+#~ msgstr "Zadana vježba …"
+
+#~ msgid "Save Training Lecture"
+#~ msgstr "Spremi vježbu"
+
+#~ msgid "KTouch Lecture Editor - "
+#~ msgstr "KTouch uređivač vježbi – "
+
+#~ msgid "<new unnamed lecture file>"
+#~ msgstr "<nova neimenovana datoteka vježbe>"
+
+#~ msgid "Data of Level %1"
+#~ msgstr "Podaci o razini %1"
+
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcćčdđefghijklmnopqrsštuvwxyzž"
+
+#~ msgid "Enter your lines here..."
+#~ msgstr "Ovdje unesite vaše linije …"
+
+#~ msgid "Open Lecture File"
+#~ msgstr "Otvori datoteku vježbe"
+
+#~ msgid "Which Lecture File Would You Like to Edit?"
+#~ msgstr "Koju datoteku vježbe želite uređivati?"
+
+#~ msgid "Edit current lecture:"
+#~ msgstr "Uredi trenutnu vježbu:"
+
+#~ msgid "Open a default lecture:"
+#~ msgstr "Otvori zadanu vježbu:"
+
+#~ msgid "<no lecture files available>"
+#~ msgstr "<nema raspoloživih datoteka vježbi>"
+
+#~ msgid "Could not open the lecture file, creating a new one instead."
+#~ msgstr ""
+#~ "Kako nije moguće otvoriti datoteku vježbe, umjesto toga će se kreirati "
+#~ "nova."
+
+#~ msgid "The lecture has been changed. Do you want to save the changes?"
+#~ msgstr "Vježba je promijenjena. Želite li spremiti promjene?"
+
+#~ msgid "Quite a lot"
+#~ msgstr "Jako puno"
+
+#~ msgid ""
+#~ "This is a small default text. If you want\n"
+#~ "to start practicing touch typing, open\n"
+#~ "a lecture/training file from the main menu.\n"
+#~ "If you press Enter after the next line you have\n"
+#~ "successfully completed the default lecture. Hurray!!!"
+#~ msgstr ""
+#~ "Ovo je kratki zadani tekst. Ako želite\n"
+#~ "započeti uvježbavanje tipkanja, otvorite\n"
+#~ "datoteku vježbe iz glavnog izbornika.\n"
+#~ "Ako pritisnete Enter nakon sljedeće linije\n"
+#~ "vi ste uspješno završili zadanu vježbu. Hura!!!"
+
+#~ msgctxt "basically all characters on the keyboard"
+#~ msgid "abcdefghijklmnopqrstuvwxyz"
+#~ msgstr "abcčćdđefghijklmnopqrsštuvwxyzž"
+
+#~ msgid "<no default files available>"
+#~ msgstr "<nema raspoloživih zadanih datoteka>"
+
+#~ msgid "Please select or enter a file name."
+#~ msgstr "Odaberite ili upišite ime datoteke."
+
+#~ msgid "The URL seems to be malformed; please correct it."
+#~ msgstr "Čini se da je URL neispravan. Ispravite ga."
+
+#~ msgid "***current***  "
+#~ msgstr "***trenutno***  "
+
+#~ msgid "No statistics data available yet."
+#~ msgstr "Još nema raspoloživih statističkih podataka."
+
+#, fuzzy
+#~| msgid "Erase all statistics data for the current user?"
+#~ msgid ""
+#~ "Erase all statistics data for the current user?\n"
+#~ "The training session will restart at the current level."
+#~ msgstr "Izbrisati sve statističke podatke za trenutnog korisnika?"
+
+#~ msgid "Time since first practice session in days"
+#~ msgstr "Vrijeme pd prve sesije u danima"
+
+#~ msgid "Sessions"
+#~ msgstr "Sesije"
+
+#~ msgid "Starting training session: Waiting for first keypress..."
+#~ msgstr "Početak vježbene sesije: Čekanje na prvu pritisnutu tipku …"
+
+#~ msgid ""
+#~ "You have finished this training exercise.\n"
+#~ "This training session will start from the beginning."
+#~ msgstr ""
+#~ "Završili ste ovu vježbu.\n"
+#~ "Ova vježbena sesija će krenuti od početka."
+
+#~ msgid "You rock!"
+#~ msgstr "Rasturate!"
+
+#~ msgid "New User"
+#~ msgstr "Novi korisnik"
+
+#~ msgid "Please enter a unique user name:"
+#~ msgstr "Upišite jedinstveno korisničko ime:"
+
+#~ msgid "This is not a valid (unique) user name!"
+#~ msgstr "To nije ispravno (jedinstveno) korisničko ime!"
+
+#~ msgid "Save user list?"
+#~ msgstr "Spremiti popis korisnika?"
+
+#~ msgid "A program that helps you to learn and practice touch typing"
+#~ msgstr "Program koji vam pomaže učiti i vježbati tipkanje"
+
+#~ msgid "KTouch"
+#~ msgstr "KTouch"
+
+#~ msgid "Training file to open"
+#~ msgstr "Datoteka vježbe za otvoriti"
+
+#~ msgid "F&ile"
+#~ msgstr "Datoteka"
+
+#, fuzzy
+#~ msgid "Current something"
+#~ msgstr "Nisam mogao otvoriti datoteka!"
+
+#, fuzzy
+#~ msgid "Preset something:"
+#~ msgstr "Nisam mogao otvoriti datoteka!"
+
+#, fuzzy
+#~ msgid "New something"
+#~ msgstr "Nisam mogao otvoriti datoteka!"
+
+#, fuzzy
+#~ msgid "default user"
+#~ msgstr "Uobičajene lekcije"
+
+#, fuzzy
+#~ msgid "Words per second"
+#~ msgstr "Riječi u minutu"
+
+#, fuzzy
+#~ msgid "Could not open file."
+#~ msgstr "Nisam mogao otvoriti datoteka!"
+
+#, fuzzy
+#~ msgid "Missing key type in line '%1'."
+#~ msgstr "Nedostaje otkucano gumb u liniji „%1“!"
+
+#, fuzzy
+#~ msgid "Keyboard dimensions: %1 x %2"
+#~ msgstr "Podešavanja tipkovnice"
+
+#, fuzzy
+#~ msgid "Key definition data:"
+#~ msgstr "Podešavanja tipkovnice"
+
+#, fuzzy
+#~ msgid "Default level..."
+#~ msgstr "Uobičajene lekcije"
+
+#, fuzzy
+#~ msgid "Edit color scheme:"
+#~ msgstr "Odaberite šemu boja:"
+
+#, fuzzy
+#~ msgid "Background"
+#~ msgstr "Pozadina:"
+
+#, fuzzy
+#~ msgid "Change Font..."
+#~ msgstr "Izaberi pismo"
+
+#~ msgid "Levels"
+#~ msgstr "Razine"
+
+#, fuzzy
+#~ msgid "Select File to Open"
+#~ msgstr "Trening datoteka za otvaranje."
+
+#, fuzzy
+#~ msgid "Current something file"
+#~ msgstr "Nisam mogao otvoriti datoteka!"
+
+#, fuzzy
+#~ msgid "Color Scheme"
+#~ msgstr "Šema boja tipkovnice"
+
+#, fuzzy
+#~ msgid "Select color scheme:"
+#~ msgstr "Odaberite šemu boja:"
+
+#, fuzzy
+#~ msgid "Typing Line Colors"
+#~ msgstr "Boje linije za kucanje"
+
+#, fuzzy
+#~ msgid "Change the font for the student and teacher lines"
+#~ msgstr "Koristi različitu boju prilikom greške u liniji za kucanje"
+
+#, fuzzy
+#~ msgid "Level Up/Down Limits"
+#~ msgstr "Ograničenja za nivo gore/dole"
+
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "-"
+#~ msgstr "-"

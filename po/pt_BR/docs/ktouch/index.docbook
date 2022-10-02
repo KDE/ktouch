@@ -1,0 +1,1701 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+ "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Treino de datilografia</application
+>">
+<!ENTITY kappname "&i18n-ktouch;"
+><!-- replace kapp here -->
+<!ENTITY package "kdeedu">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="ktouch" lang="&language;">
+
+<bookinfo>
+<title
+>Manual do &i18n-ktouch;</title>
+
+<authorgroup>
+
+<author
+><firstname
+>Håvard</firstname
+><surname
+>Frøiland</surname
+> <affiliation
+> <address
+>&Haavard.Froeiland.mail;</address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+> <affiliation
+> <address
+><email
+>Andreas.nicolai@gmx.net</email
+></address>
+</affiliation>
+</author>
+
+<author
+><firstname
+>Sebastian</firstname
+><surname
+>Gottfried</surname
+> <affiliation
+> <address
+><email
+>sebastiangottfried@web.de</email
+></address>
+</affiliation>
+</author>
+
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+
+<copyright>
+<year
+>1999-2007</year>
+<holder
+>Håvard Frøiland, Andreas Nicolai</holder>
+</copyright>
+<copyright>
+<year
+>2011-2013</year>
+<holder
+>Sebastian Gottfried</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>01/05/2014</date>
+<releaseinfo
+>2.3.0</releaseinfo>
+
+<abstract>
+<para
+>O &i18n-ktouch; é um programa para aprender a datilografar. O &i18n-ktouch; fornece-lhe o texto para treinar, ajustando-se aos diferentes níveis, dependendo de quão bom você é. Ele mostrará qual a tecla pressionar a seguir, e o dedo correto a usar.</para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>escrita por toque</keyword>
+<keyword
+>digitação por toque</keyword>
+<keyword
+>digitação</keyword>
+<keyword
+>datilografia</keyword>
+<keyword
+>educação</keyword>
+<keyword
+>ktouch</keyword>
+<keyword
+>toque</keyword>
+<keyword
+>tipo</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="learning">
+<title
+>Aprendendo a digitar com o &i18n-ktouch;</title>
+
+<sect1 id="introduction">
+<title
+>Introdução</title>
+
+<sect2>
+<title
+>O que é o &i18n-ktouch;?</title>
+<para
+>O &i18n-ktouch; é um programa para ensinar datilografia pelo toque.</para>
+<para
+>O &i18n-ktouch; fornece texto opara treinar, ajustando-se aos diferentes níveis, dependendo de quão bom você é. Ele poderá mostrar qual a tecla pressionar a seguir, e o dedo correto a usar.</para>
+
+<screenshot>
+<screeninfo
+>A tela principal do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A tela principal do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>O &i18n-ktouch; é um professor de datilografia idealizado para uso pessoal. Você pode aprender a datilografar com todos os dedos, passo a passo, sem ter que olhar para o teclado a toda a hora para encontrar as teclas (o que pode atrasá-lo bastante). </para>
+</sect2>
+
+<sect2>
+<title
+>Recursos</title>
+
+<para
+>Na sua versão atual, o &i18n-ktouch; 2.2 possui um grande número de funcionalidades, como por exemplo:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Vem com diversos exercícios diferentes em vários idiomas, bem como um confortável editor de exercícios</simpara
+></listitem>
+<listitem
+><simpara
+>Suporte para diferentes formatos de teclado com a capacidade para usar e editar formatos definidos pelo usuário</simpara
+></listitem>
+<listitem
+><simpara
+>Durante a sua sessão de treinamento, o &i18n-ktouch; obtém diversas informações estatísticas para ajudar você ou seu professo a analisar seu progresso</simpara
+></listitem>
+</itemizedlist>
+<para
+>Existem muitas outras funcionalidades que serão discutidas nos capítulos apropriados deste manual. </para>
+</sect2>
+</sect1>
+
+
+<sect1 id="getting_started">
+<title
+>Iniciando o uso</title>
+
+<para
+>Aqui está outra imagem do &i18n-ktouch; em ação, só que desta vez com um teclado em alemão e com uma lição de treino:</para>
+
+<screenshot>
+<screeninfo
+>A tela principal do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window_german.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A tela principal do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Ainda que aprender a datilografar com o &i18n-ktouch;, bem como a utilização do programa, deverá ser extremamente simples, as próximas seções serão dedicadas a olhar um pouco melhor para o &i18n-ktouch;.</para>
+
+<sect2 id="creating_profile">
+<title
+>Criar o seu primeiro perfil</title>
+
+<para
+>Na primeira vez que iniciar o &i18n-ktouch;, ele abrirá uma tela especial que o auxilia a criar o seu primeiro perfil. Você poderá escolher o nome do seu perfil e o nível das suas aptidões de datilografia. </para>
+<tip>
+<para
+>O nível que escolheu define a operação geral do &i18n-ktouch;. No modo de principiante, as lições são desbloqueadas uma a uma, assim que passá-las, enquanto num datilógrafo experiente todas as lições estão disponíveis desde o início. </para>
+</tip>
+<note>
+<para
+>Pense sobre a sua escolha, porque você não poderá alterá-la posteriormente. Contudo, poderá sempre criar perfis novos para retificar essa decisão. </para>
+</note>
+
+<screenshot>
+<screeninfo
+>A tela de boas-vindas do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="welcome_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A tela de boas-vindas do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Após pressionar <guibutton
+>Iniciar o treino</guibutton
+>, você será conduzido para a tela inicial. Esta tela será também a tela inicial quando executar o &i18n-ktouch; da próxima vez. </para>
+</sect2>
+
+<sect2 id="picking_a_lesson">
+<title
+>Escolher uma lição</title>
+
+<para
+>A tela inicial do &i18n-ktouch; consiste na barra de topo e no seletor de exercícios. Para mais informações, veja o <xref linkend="training_preparation"/>. </para>
+<screenshot>
+<screeninfo
+>A tela inicial do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="home_screen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A tela inicial do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>O &i18n-ktouch; mostrará o primeiro exercício disponível para o seuleiaute de teclado atual. </para>
+
+<para
+>Você pode alternar entre os exercícios ou escolher <link linkend="custom_lessons"
+>lições personalizadas</link
+> usando <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> e <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> os botões no canto superior direito da janela. </para>
+
+<note>
+<para
+>Em algumas plataformas, especialmente no &Microsoft; &Windows;, a detecção automática da disposição de teclado não está disponível. Nesse caso, você terá que clicar no botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da barra de ferramentas, escolher o submenu <guisubmenu
+>Escolher a disposição do teclado...</guisubmenu
+> e selecionar o nome da disposição do teclado ou de alguma disposição semelhante que possua. Se o seu teclado não estiver incluído, você poderá sempre definir a sua própria disposição de teclado; veja mais informações em <xref linkend="create_layouts"/>. </para>
+</note>
+<para
+>Escolha a sua lição na lista à esquerda da janela. Você não poderá escolher as lições bloqueadas com o símbolo <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, uma vez que são muito difíceis para a sua aptidão atual. Será apresentada uma antevisão da lição selecionada à direita da lista de lições. </para>
+<tip>
+<para
+>Mais informações sobre o exercício selecionado podem ser exibidas se usar o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> ao lado do título do exercício. </para>
+</tip>
+<para
+>Quando tiver terminado a seleção, clique em <guibutton
+>Iniciar o treino</guibutton
+> para mudar para a tela de exercício do &i18n-ktouch;. </para>
+</sect2>
+
+<sect2 id="training">
+<title
+>Treino</title>
+<para
+>A janela de treino do &i18n-ktouch; exibe três seções principais: </para>
+<orderedlist>
+<listitem
+><simpara
+>Algumas estatísticas de digitação nas áreas informativas do topo</simpara
+></listitem>
+<listitem
+><simpara
+>O texto que você precisa escrever</simpara
+></listitem>
+<listitem
+><simpara
+>A visualização do teclado</simpara
+></listitem>
+</orderedlist>
+<screenshot>
+<screeninfo
+>A tela de treino do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_screen_default_color.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A tela de treino do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<note>
+  <para
+>A visibilidade das partes da tela de treino pode ser configurada com a <link linkend="configuration_dialog"
+>janela de configuração do &i18n-ktouch;</link
+>. </para>
+</note>
+
+<para
+>Coloque os seus dois dedos indicadores sobre as duas teclas do teclado que possuem pequenas marcas táteis, perto do centro da fila central de caracteres. Com isso, os seus outros dedos irão descobrir as teclas pretendidas de forma quase automática. Os seus polegares deverão ficar sobre a barra de espaços, sendo a única tecla usada por eles enquanto escrever. Os outros dedos deverão ser colocados nas três teclas adjacentes às teclas marcadas na mesma fila. As teclas para os mesmos dedos estão agrupadas pela sua cor. Tente mover as suas mãos o mínimo possível e, depois de pressionar num caractere, tente sempre colocar os seus dedos de volta às suas posições de descanso. </para>
+<para
+>Comece digitando o texto no meio da tela. A próxima tecla que terá que pressionar fica sempre realçada na visualização do teclado. Enquanto estiver digitando, você poderá cometer erros e pressionar na tecla errada. Nesse caso, a linha do aluno irá de cor (por padrão para vermelho) e você terá que pressionar &Backspace; para apagar o caractere (ou caracteres) errado, conforme o necessário. </para>
+<para
+>Quando tiver terminado com sucesso uma linha de texto, será necessário pressionar a tecla <keycap
+>Return</keycap
+> para passar para a próxima linha. </para>
+<tip>
+<para
+>As opções para ignorar lições poderão ser alteradas com a <link linkend="configuration_dialog"
+>janela de configuração do &i18n-ktouch;</link
+>. </para>
+</tip>
+</sect2>
+
+<sect2 id="review_your_progress">
+<title
+>Rever o seu progresso</title>
+<para
+>Quando você termina uma lição, o &i18n-ktouch; mostra a janela de estatísticas. Ela mostra os dados estatísticos da sua sessão de treino atual e do nível, bem como um histórico gráfico das sessões de treino anteriores. </para>
+<screenshot>
+<screeninfo
+>A janela de estatísticas do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="statistics_dialog.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>A janela de estatísticas do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Na janela de estatísticas, você poderá optar por mostrar uma lição em particular ou <guilabel
+>Todas as lições</guilabel
+>. Isto é útil para distinguir entre a performance global e a aptidão em determinadas lições. </para>
+<para
+>Se você se sentir pronto para a lição seguinte, pressione o botão <guibutton
+>Próxima lição</guibutton
+> da barra de ferramentas para passar para a lição seguinte do exercício atual ou <guibutton
+>Repetir a lição</guibutton
+> para tentar as suas aptidões na lição atual novamente. O botão <guibutton
+>Lição seguinte</guibutton
+> só estará disponível se tiver passado na lição. </para>
+<para
+>Se quiser mudar para outra lição ou exercício qualquer, pressione em <guibutton
+>Voltar à tela inicial</guibutton
+>. </para>
+<para
+>Se você não quiser continuar o treino com o &i18n-ktouch;, basta fechar a janela da aplicação. </para>
+</sect2>
+</sect1>
+
+<sect1 id="training_preparation">
+<title
+>Preparação do treino</title>
+<para
+>Praticamente tudo o que existe na tela inicial do &i18n-ktouch; deverá ser intuitivo. A barra de ferramentas no topo pretende ser o local onde poderá ver e configurar as definições do &i18n-ktouch;. O seletor de exercícios pode ser usado para ver as informações sobre os exercícios e mudar entre eles. </para>
+
+<sect2 id="toolbar">
+  <title
+>Barra de ferramentas do &i18n-ktouch;</title>
+<para
+>A barra de ferramentas do &i18n-ktouch; contém o botão do perfil à esquerda e o botão do menu da aplicação à direita. </para>
+
+<sect3 id="profile_management">
+<title
+>Gerenciamento de perfis</title>
+<para
+>O botão do perfil com o nome do seu perfil, à esquerda da barra de ferramentas da tela inicial, poderá ser usado para gerenciar os perfis do &i18n-ktouch;. </para>
+
+<screenshot>
+<screeninfo
+>Gerenciamento de perfis do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Gerenciamento de perfis do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Você poderá rever as configurações dos perfis existentes, apagá-los ou criar perfis novos com o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Para voltar ao modo de revisão, pressione <guibutton
+>Editar</guibutton
+>. Para selecionar um perfil e voltar à tela inicial, pressione <guibutton
+>Usar o perfil selecionado</guibutton
+>. </para>
+
+<screenshot>
+<screeninfo
+>Revendo informações do perfil</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="profiles1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Revendo informações do perfil</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+
+<sect3 id="ktouch_menu">
+<title
+>Menu do &i18n-ktouch;</title>
+<para
+>O menu do &i18n-ktouch; pode ser aberto usando o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da barra de ferramentas da tela inicial. </para>
+
+<screenshot>
+<screeninfo
+>Menu do &i18n-ktouch;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="ktouch_menu.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Menu do &i18n-ktouch;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Você poderá encontrar abaixo uma lista com os itens do menu com uma breve descrição de cada um deles. </para>
+<variablelist>
+<varlistentry>
+  <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>F</keycap
+></keycombo
+> </shortcut
+> <guimenuitem
+>Modo tela inteira</guimenuitem
+></menuchoice>
+</term>
+<listitem
+><para
+><action
+>Alterna</action
+> o modo de tela inteira do &i18n-ktouch;</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Editor de leiautes de teclado e exercícios...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Abre</action
+> a <link linkend="extending"
+>janela de edição</link
+> do &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configurar o treino de datilografia...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Mostra</action
+> a <link linkend="configuration_dialog"
+>janela de configuração</link
+> do &i18n-ktouch; </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configurar atalhos...</guimenuitem
+></term>
+<listitem
+><para
+><action
+>Configura</action
+> os atalhos de teclado que deseja associar a determinadas ações </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Configurar a disposição do teclado...</guimenuitem
+></term>
+<listitem
+><para
+>Um atalho para o módulo do &systemsettings; que permite configurar as definições do teclado. É útil para preparar um exercício sobre uma disposição de teclado diferente. </para>
+<note>
+<para
+>Nas plataformas que não suportam a detecção automática da disposição do teclado, especialmente no &Microsoft; &Windows;, este item é substituído por um submenu para selecionar manualmente a disposição do teclado do &i18n-ktouch;. </para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+&help.menu.documentation; </sect3>
+
+<sect3 id="configuration_dialog">
+<title
+>Janela de configuração</title>
+
+<para
+>Você poderá personalizar grande parte do &i18n-ktouch;. As opções aplicam-se a nível global para todos os perfis. Abra a janela de configuração, pressionando em <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>, à direita da barra de topo da tela inicial e depois escolher <guimenuitem
+>Configurar o professor de datilografia...</guimenuitem
+>.</para>
+
+ <variablelist>
+   <varlistentry>
+     <term
+><guilabel
+>Configuração do treino</guilabel
+></term>
+     <listitem>
+       <para
+>Nesta janela, você poderá selecionar as opções que controlam a aparência da janela e a forma como o &i18n-ktouch; se comporta durante o treino.</para>
+<screenshot>
+<screeninfo
+>Opções de treinamento</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="training_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Opções de treinamento</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>A opção <guilabel
+>Forçar a correção dos erros de digitação</guilabel
+> pode ser usada para controlar se os erros de digitação devem ser corrigidos. </para>
+<para
+>Você poderá controlar a visibilidade das estatísticas e das áreas do teclado durante o exercício, usando as opções <guilabel
+>Mostrar o teclado</guilabel
+> e <guilabel
+>Mostrar as estatísticas em tempo-real</guilabel
+>. </para>
+<para
+>A tecla para ir para a linha de texto de treino seguinte pode ser escolhida a partir de duas opções, o <keycap
+>Return</keycap
+> ou o <keycap
+>Espaço</keycap
+>. </para>
+<para
+>Os <guilabel
+>Limites de desbloqueio das lições</guilabel
+> podem ser usados para escolher as definições que controlam o desbloqueio das lições de nível mais elevado. O &i18n-ktouch; verifica os limites indicados no fim de cada nível e decide se desbloqueia a lição seguinte. Se a velocidade de escrita, em caracteres por minuto, e a correção forem <emphasis
+>ambas</emphasis
+> maiores ou iguais aos <guilabel
+>Limites de desbloqueio da lição</guilabel
+>, o &i18n-ktouch; irá desbloquear a lição de nível imediatamente superior. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+  <term
+><guilabel
+>Configurações de cores</guilabel
+></term>
+  <listitem>
+<para
+>Neste diálogo você pode alterar as cores usadas pelo &i18n-ktouch;.</para>
+<screenshot>
+<screeninfo
+>Configurações de cores</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="color_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Configurações de cores</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Você poderá selecionar a cor de fundo para as teclas atribuídas a cada dedo. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="course_and_lessons_selection">
+<title
+>Seleção do exercício e da lição</title>
+<para
+>O &i18n-ktouch; detecta automaticamente o leiaute do seu teclado e mostra apenas os exercícios otimizados para esse leiaute. </para>
+<note>
+<para
+>Em algumas plataformas, especialmente no &Windows;, a detecção automática da disposição do teclado não está disponível. Use o menu da aplicação para selecionar manualmente a sua disposição do teclado. </para>
+</note>
+<sect3 id="switching_courses">
+<title
+>Mudar de exercícios</title>
+<para
+>Caso exista mais de um exercício instalado para o seu leiaute de teclado, você poderá escolher o apropriado com os botões <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-left.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> e <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-right.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> à direita do texto do nome do exercício. Caso exista apenas um exercício, os botões não estarão visíveis. </para>
+</sect3>
+<sect3 id="unlocking_lessons">
+<title
+>Desbloquear lições</title>
+<para
+>Se você tiver escolhido <guilabel
+>Não tenho qualquer experiência ou muito pouca em datilografia</guilabel
+> durante a <link linkend="creating_profile"
+>criação do perfil inicial</link
+>, poderá reparar que alguns itens da lição estão bloqueados. Estes itens estão marcados com um ícone <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-object-locked.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> e não podem ser acessados até que passe as lições anteriores. </para>
+<note>
+<para
+>As opções para ignorar lições poderão ser alteradas com a <link linkend="configuration_dialog"
+>janela de configuração do &i18n-ktouch;</link
+>. </para>
+</note>
+</sect3>
+<sect3 id="training_on_a_different_keyboard_layout">
+<title
+>Treinar com uma disposição de teclado diferente</title>
+<para
+>Com o &i18n-ktouch;, é possível usar qualquer disposição de teclado para treinar. Basta clicar nos botões realçados pelo professor, independentemente das legendas no seu teclado físico. </para>
+<para
+>Selecione a opção <menuchoice
+><guimenu
+>Configurar teclado...</guimenu
+></menuchoice
+> no menu da aplicação para selecionar uma disposição de teclado diferente. Depois disso, o &i18n-ktouch; adaptar-se-á e apresentará adequadamente os exercícios destinados a esse leiaute. </para>
+<note>
+<para
+>Nas plataformas sem detecção automática da disposição do teclado, especialmente no &Microsoft; &Windows;, você terá que configurar primeiro o seu sistema operacional para a nova disposição de teclado e depois selecioná-la no &i18n-ktouch;, através do menu da aplicação. </para>
+</note>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="efficient_training">
+<title
+>Treino eficiente</title>
+<sect2 id="training_techniques">
+<title
+>Técnicas de treino</title>
+<para
+>Daqui em diante, você poderá encontrar alguns conselhos gerais sobre técnicas de aprendizagem de datilografia. </para>
+<sect3 id="steady_speed">
+<title
+>Velocidade estável</title>
+<para
+>Para ser eficiente ao aprender datilografia, é importante não tentar simplesmente escrever o mais rápido possível, mas sim, manter uma velocidade estável e descobrir um ritmo natural para pressionar as teclas. </para>
+</sect3>
+<sect3 id="accuracy_is_a_king">
+<title
+>A precisão vale ouro</title>
+<para
+>A próxima coisa importante é focar a atenção na correção e precisão. Só se tiver dominado por completo a utilização das teclas desbloqueadas no momento, que significa que comete apenas poucos erros com elas, é que terá chances nas lições seguintes, quando tiver que lidar com mais teclas. Irá reparar que se tornará quase um profissional se cometer poucos erros e que irá poupar um tempo precioso se não tiver que corrigir tantos erros. </para>
+<note>
+<para
+>Essa também é a razão pela qual a precisão predefinida para desbloquear a lição seguinte é de 98%, enquanto os requisitos de velocidade são bastante moderados, sendo apenas de 180 caracteres por minuto. </para>
+</note>
+</sect3>
+<sect3 id="correcting_mistakes">
+<title
+>Corrigir os erros</title>
+<para
+>Se você cometer erros, é importante corrigi-los de forma eficiente. A correção de caracteres individuais é quase sempre mais lenta que a correção da palavra inteira. No último caso, você apenas terá que pressionar <keycombo
+>&Ctrl;&Backspace;</keycombo
+> e reescrever a palavra. A sobrecarga mental deste processo é bastante pequena. Para o primeiro caso, teria que localizar primeiro o seu erro, deslocar-se de forma precisa para o local do mesmo, detectar a parte que falta na palavra e reescrevê-la. Isto necessita de maior concentração que escrever de novo a palavra inteira. </para>
+</sect3>
+</sect2>
+<sect2 id="pausing_the_training_session">
+<title
+>Parar uma sessão de treino</title>
+<sect3 id="automatically_pausing">
+<title
+>Automaticamente</title>
+<para
+>Se você abrir qualquer janela ou mudar para outro aplicativo, enquanto está numa sessão de treino, esta entra em pausa e o cronômetro pára até que coloque a janela do &i18n-ktouch; de novo em primeiro plano e pressione alguma tecla. </para>
+<para
+>A sessão de treino será também colocada em pausa se não existir qualquer atividade do usuários durante mais de cinco segundos. </para>
+</sect3>
+<sect3 id="manually_pausing">
+<title
+>Manualmente</title>
+<para
+>Você poderá colocar a sessão atual em pausa manualmente, usando o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-media-playback-pause.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da barra de ferramentas. </para>
+<para
+>Se você clicar no botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-go-home.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> na barra de ferramentas, o &i18n-ktouch; entrará com a sessão atual em pausa, sobrepondo um menu com algumas ações adicionais. </para>
+<screenshot>
+<screeninfo
+>O menu do &i18n-ktouch; em pausa</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="pause_options.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>O menu do &i18n-ktouch; em pausa</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="tracking_learning_progress">
+<title
+>Acompanhar o progresso da aprendizagem</title>
+<para
+>Após terminar uma lição, você não irá voltar imediatamente à tela inicial. Em vez disso, é apresentado uma tela especial de resumo e estatísticas. </para>
+<sect2 id="Speed_and_accuracy_statistics">
+<title
+>Estatísticas de velocidade e precisão</title>
+<screenshot>
+<screeninfo
+>Página de estatísticas de velocidade e precisão</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Página de estatísticas de velocidade e precisão</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<sect3 id="filter_per_lesson">
+<title
+>Filtrar por lição</title>
+<para
+>Com a ajuda da página de estatísticas de velocidade e precisão, você poderá rever a evolução da sua aprendizagem e identificar as suas fraquezas. </para>
+<para
+>Os dados estatísticos poderão ser filtrados por lição, usando a lista ao lado do texto <guilabel
+>Acima</guilabel
+>. Esta funcionalidade pode ser útil para controlar o seu progresso na lição atual e para comparar este progresso com o das outras lições. </para>
+<screenshot>
+<screeninfo
+>Menu da gama de estatísticas</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_over.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Menu da gama de estatísticas</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Os dados adicionais sobre a sessão poderão ser vistos com janelas sobrepostas. Se passar o cursor do mouse sobre um ponto do gráfico, o &i18n-ktouch; irá mostrar as estatísticas da sessão correspondente. </para>
+<screenshot>
+<screeninfo
+>Progresso por lição</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_hovering.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Progresso por lição</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+</sect3>
+</sect2>
+<sect2 id="errors_statistics">
+<title
+>Estatísticas dos erros</title>
+<para
+>A tela de pontuação poderá ser ativada para mostrar a taxa de erros de cada tecla, usando o menu ao lado do texto <guilabel
+>Mostrar</guilabel
+>. </para>
+<screenshot>
+<screeninfo
+>Mudar o modo das estatísticas</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="statistics_show.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Mudar o modo das estatísticas</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Neste modo, o &i18n-ktouch; mostra um gráfico de barras dos erros de cada tecla na última sessão de treino. </para>
+<screenshot>
+<screeninfo
+>Gráficos de erros por teclas</screeninfo>
+<mediaobject>
+<imageobject
+><imagedata fileref="score_screen_errors.png"
+format="PNG"/></imageobject>
+<textobject
+><phrase
+>Gráficos de erros por teclas</phrase
+></textobject>
+</mediaobject>
+</screenshot>
+<para
+>Você poderá voltar para o gráfico das lições, usando o mesmo menu ao lado do texto <guilabel
+>Mostrar</guilabel
+>. </para>
+<para
+>Se você tiver passado na lição, poderá optar por iniciar a lição seguinte pressionando o botão <guibutton
+>Lição seguinte</guibutton
+> na barra de ferramentas. Caso contrário, poderá repetir a lição atual com o botão <guibutton
+>Repetir a lição</guibutton
+> ou voltar à tela inicial com o botão restante. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="extending">
+<title
+>Estender o &i18n-ktouch;</title>
+
+<sect1 id="create_courses">
+<title
+>Criar exercícios</title>
+<para
+>Você poderá criar facilmente o seu próprio exercício de treino com o editor de exercícios e leiaute de teclado incorporado do &i18n-ktouch;. Clique no botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-configure.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> à direita da barra de ferramentas da tela inicial e escolher o <guimenuitem
+>Editor de exercícios e disposições de teclado...</guimenuitem
+>. Você poderá optar por abrir um arquivo de exercício, criar um novo exercício do zero ou usar um exercício existente como modelo.</para>
+<important>
+<para
+>Você não poderá editar os exercícios incorporados, mesmo que tenha acesso de escrita à pasta de instalação. </para>
+</important>
+
+<screenshot>
+<screeninfo
+>Janela principal do Editor de leiautes de teclado e exercícios</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="courses.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Janela principal do Editor de leiautes de teclado e exercícios</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<sect2 id="course_properties">
+<title
+>Propriedades do exercício</title>
+<para
+>As propriedades do exercício poderão ser escolhidas com o assistente de criação de exercícios do &i18n-ktouch;. Para invocar este assistente, você deverá pressionar o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da barra de ferramentas da janela do <guilabel
+>Editor de leiautes de teclado e exercícios</guilabel
+>. </para>
+<para
+>A primeira página do assistente de criação do &i18n-ktouch; permite-lhe escolher o tipo dos dados. Selecione o <guilabel
+>Exercício</guilabel
+> e pressione <guibutton
+>Seguinte</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Escolher o tipo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Escolher o tipo</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>A segunda página do assistente permite-lhe escolher o título, o leiaute do teclado e a descrição do exercício. </para>
+<screenshot>
+<screeninfo
+>Segunda página do assistente de novos exercícios</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Segunda página do assistente de novos exercícios</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>O título do exercício é importante para o item do menu de seleção rápida na lista de exercícios e para as estatísticas. </para>
+<para
+>A descrição deverá ser usada para incluir informações sobre o autor e a origem dos dados da lição, se estes forem importantes. Esta descrição poderá ser apresentada pressionando o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-dialog-information.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da janela inicial do &i18n-ktouch;. </para>
+<para
+>Quando tiver terminado a inserção dos valores apropriados, pressione <guibutton
+>Seguinte</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Terceira página do assistente de novas lições</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Terceira página do assistente de novas lições</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Ao usar a terceira página do assistente, você poderá escolher outro exercício como modelo para o seu. Selecione o exercício na lista (se existir) e pressione <guibutton
+>Terminar</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Janela de edição das lições novas</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_course3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Janela de edição das lições novas</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>O &i18n-ktouch; irá abrir a janela de edição do exercício preparada para inserir os dados do mesmo. </para>
+</sect2>
+
+<sect2 id="adding_lessons">
+<title
+>Adicionar lições</title>
+<para
+>Um exercício é um conjunto ordenado de lições. Para ser eficiente na datilografia, o conteúdo do exercício deverá cumprir alguns requisitos. </para>
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Escolha um nome significativo para a lição</emphasis
+></term>
+<listitem>
+<para
+>Para cada nível, você poderá indicar os novos caracteres/teclas na lição. Vale a pena incluir os novos caracteres no título da lição. Clique no texto do nome na lista de <guilabel
+>Lições</guilabel
+> e indique um nome intuitivo. </para>
+<note>
+<title
+>Razão</title>
+<para
+>O texto que indicar como título para a lição será apresentado como texto informativo da mesma no na lista de exercícios da tela inicial. Será muito mais fácil para o usuário escolher a lição, caso tenha um título que faça sentido. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>A primeira lição deverá cobrir as teclas iniciais</emphasis
+></term>
+<listitem>
+<para
+>Normalmente um teclado possui duas marcas tácteis nas teclas da segunda fila, que pertencem aos dedos indicadores. Essas duas teclas e as três teclas adjacentes para fora compõem as teclas iniciais. Essas são o <emphasis
+>asdfjkl;</emphasis
+> numa disposição de teclado dos EUA. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Essas oito teclas são a posição inicial de cada dedo. O usuário deverá interiorizar a posição dessas teclas primeiro para aprender com sucesso a datilografar. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Introduzir duas teclas novas por lição </emphasis
+></term>
+<listitem>
+<para
+>A ordem de desbloqueio das teclas não é fixa, mas normalmente as teclas são introduzidas em pares que pertencem ao mesmo dedo de ambas as mãos. Siga o seu caminho a partir das teclas iniciais para as mais distantes. Como tal, a quarta fila será introduzida por último. Prefira as teclas dos caracteres importantes da sua língua, com isto condicionando um pouco o padrão de introdução. Por exemplo, em Francês os acentos são realmente importantes, o que deverá garantir uma introdução com lições dedicadas aos acentos em si. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Se forem introduzidas mais teclas, o aluno poderá ficar confuso com a dificuldade da lição e perder a sua motivação. Introduza as teclas mais importantes primeiro para poder formar palavras reais mais cedo. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Ênfase extra sobre as teclas novas</emphasis
+></term>
+<listitem>
+<para
+>Certifique-se de que os caracteres que pertencem às novas teclas introduzidas são mais frequentes, ou pelo menos bastante frequentes, no texto da lição. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Se o aluno passar numa lição é porque deveria ter passado a dominar as novas teclas. Isso só é possível se a lição possuir de fato uma quantidade significativa dos novos caracteres. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Intercalar lições com teclas novas com lições de repetição</emphasis
+></term>
+<listitem>
+<para
+>A cada duas ou três lições, adicione uma lição de repetição sem teclas novas. Estas deverão ter uma mistura homogênea de caracteres que cubra todos os caracteres já introduzidos. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Estas lições ajudam a fortalecer as aptidões adquiridas e oferecem uma forma de verificar o nível de treino global. Também são mais adequados para os treinos repetitivos, que melhoram ainda mais as aptidões gerais de datilografia. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Lições dedicadas a maiúsculas/minúsculas</emphasis
+></term>
+<listitem>
+<para
+>Deverão existir várias lições que se foquem em especial na capitalização de maiúsculas ou minúsculas. Idealmente, esta é introduzida em vários passos: numa primeira vez, só a tecla &Shift; da esquerda, depois a da direita, depois ambas e finalmente seguir com uma ou mais lições de repetição. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Dominar a capitalização é a parte mais difícil de aprender em datilografia. Como tal, deverá se dispender algum esforço nessas lições. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Cobrir a disposição do teclado na totalidade</emphasis
+></term>
+<listitem>
+<para
+>Isto inclui os caracteres e símbolos acessíveis com outras teclas de modificação que não o &Shift;. Idealmente, deverão ser cobertos todos os caracteres, números e símbolos de um teclado real. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Quanto mais completo for um exercício, mais o aluno poderá aprender com ele. Ele também mantém o exercício interessante para datilógrafos mais experientes. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Use o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> para adicionar uma nova lição ao exercício, o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> para remover a lição selecionada do seu exercício e os botões <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-up.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>/<inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-arrow-down.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> para reorganizar as lições no exercício. </para>
+<important>
+<para
+>Tenha cuidado ao apagar as lições. Se o fizer, poderá limpar o processo de desbloqueio dos usuários do exercício. Se planeja rever um exercício detalhadamente, é melhor normalmente usar o exercício existente como base para um novo. </para>
+</important>
+<para
+>O conteúdo da lição poderá ser editado com o campo de edição no canto inferior direito. Você poderá copiar trechos do texto a partir do seu editor de texto favorito e colá-lo neste campo. </para>
+<para
+>Use o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> para abrir um arquivo de texto genérico que será carregado no campo de texto da lição. </para>
+<para
+>O botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> pode ser usado para quebrar o texto da lição. O editor do &i18n-ktouch; troca de linha para que o texto em nenhuma delas exceda o limite recomendado de 60 caracteres. </para>
+<para
+>Vamos assumir que deseja adicionar uma aula nova. Existem algumas ideias que poderá querer considerar: </para>
+
+<variablelist>
+<varlistentry
+><term
+><emphasis role="bold"
+>Atribua às lições um título descritivo</emphasis
+></term>
+<listitem>
+<para
+>Indique os novos caracteres, se existirem, ou então explique sobre o que trata a lição. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Bons títulos simplificam a descoberta do exercício correto, caso uma pessoa queira treinar sobre algo específico. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>O texto da lição deverá ser composto por palavras e frases reais</emphasis
+></term>
+<listitem>
+<para
+>Num caso ótimo, uma lição é composta por um texto contínuo sobre um assunto escolhido de forma livre. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Treinar com palavras e frases reais será mais eficiente que com combinações aleatórias de caracteres, uma vez que será mais próximo de uma escrita real. Além disso, é mais divertido. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>Evitar combinações de teclas que não sejam palavras</emphasis
+></term>
+<listitem>
+<para
+>Isto poderá ser impossível nas primeiras lições, onde só estão disponíveis alguns caracteres, mas assim que possível só deverá usar palavras reais. Nunca use palavras mal escritas. </para>
+<note>
+<title
+>Razão</title>
+<para
+>As combinações de caracteres aleatórias são mais difíceis de escrever e raramente são encontradas na escrita do dia-a-dia. As palavras mal escritas, por outro lado, são confusas e até conferem um valor de aprendizagem negativo, uma vez o aluno poderá aprender a escrever essas palavras incorretamente. </para>
+</note>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><emphasis role="bold"
+>O texto da lição deverá ter aproximadamente 600 caracteres</emphasis
+></term>
+<listitem>
+<para
+>Elas poderão ter mais - até 1200 caracteres é aceitável -, mas lições mais curtas deverão ser evitadas. Isto é especialmente verdadeiro nas lições de repetição. </para>
+<note>
+<title
+>Razão</title>
+<para
+>Manter-se dentro desse intervalo garante que um datilógrafo não treinado (~120 caracteres por minuto) possa terminar uma lição entre cinco e dez minutos. As lições mais demoradas são frustrantes e as mais curtas são pouco eficientes. </para>
+</note>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="quality_checks">
+<title
+>Verificações de qualidade no editor de texto da lição</title>
+<screenshot>
+<screeninfo
+>Verificação da qualidade na janela de edição do curso</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="quality_check.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Verificação da qualidade na janela de edição do curso</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Acima, encontra-se uma imagem do editor de exercícios com uma lição problemática carregada e que mostra uma das verificações de qualidade: se uma lição tiver caracteres que não estejam disponíveis nessa lição, porque não se encontram entre os novos caracteres configurados para esta lição ou alguma anterior, os mesmos irão aparecer em vermelho. Existe também uma verificação para linhas muito compridas, que se traduzirá na mudança da cor para os caracteres à frente da coluna permitida. </para>
+<para
+>Do lado esquerdo, existe uma lista sobre todos os arquivos de dados que o &i18n-ktouch; conhece, sejam eles incorporados ou criados pelo usuário. Se o usuário selecionar um recurso incorporado, o editor irá passar para um visualizador simples. Se o usuário selecionar uma disposição de teclado, o programa adaptar-se-á de forma apropriada. </para>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="create_layouts">
+<title
+>Criar disposições de teclado</title>
+<para
+>Você poderá criar as suas próprias disposições de teclado com o editor incorporado no &i18n-ktouch;. O melhor é começar com uma disposição existente, criar uma cópia para a sua nova disposição e simplesmente ajustá-la.</para>
+
+<sect2 id="layout_properties">
+<title
+>Propriedades da disposição do teclado</title>
+<para
+>As propriedades do leiaute do teclado podem ser escolhidas com o assistente de criação de leiautes de teclado do &i18n-ktouch;. Para carregar este assistente, você deve clicar no botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-new.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> da barra de ferramentas da janela do <guilabel
+>Editor de exercícios e leiautes de teclado</guilabel
+>. </para>
+<para
+>A primeira página do assistente de criação do &i18n-ktouch; permite-lhe escolher o tipo dos dados. Selecione a <guilabel
+>Disposição do teclado</guilabel
+> e pressione <guibutton
+>Seguinte</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Escolher o tipo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Escolher o tipo</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>A segunda página do assistente permite-lhe escolher o título e o nome da disposição. </para>
+<screenshot>
+<screeninfo
+>Segunda página do assistente de novas disposições</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Segunda página do assistente de novas disposições</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>O título da disposição é importante para o item de seleção rápida do menu na lista de disposições da <link linkend="ktouch_menu"
+>janela de configuração do &i18n-ktouch;</link
+> e para as estatísticas. </para>
+<para
+>O nome da disposição será usado como o nome interno da disposição no &i18n-ktouch;. </para>
+<screenshot>
+<screeninfo
+>Terceira página do assistente de novas disposições</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Terceira página do assistente de novas disposições</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Ao usar a terceira página do assistente, você poderá escolher outra disposição como modelo para a sua. Selecione o exercício na lista (se existir) e pressione <guibutton
+>Terminar</guibutton
+>. </para>
+<screenshot>
+<screeninfo
+>Janela de edição das novas disposições</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="create_layout3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Janela de edição das novas disposições</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>O &i18n-ktouch; irá abrir a janela de edição do exercício preparada para inserir os dados do mesmo. </para>
+</sect2>
+
+<sect2 id="adding_keys">
+<title
+>Adicionar teclas</title>
+<para
+>Use o botão de <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tecla normal</guilabel
+> para adicionar uma tecla normal nova ou em <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> <guilabel
+>Tecla especial</guilabel
+> para adicionar uma nova tecla especial (modificadora, <keycap
+>Espaço</keycap
+>, &Backspace;, &Tab;, <keycap
+>Caps Lock</keycap
+> ou &Enter;) à disposição. O botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-edit-delete.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+><guilabel
+>Delete</guilabel
+> pode ser usado para remover uma tecla selecionada da sua disposição. A escala poderá ser alterada com a barra no lado esquerdo da barra de edição. </para>
+<para
+>As propriedades das teclas individuais poderão ser editadas com a área inferior da janela de edição. </para>
+<sect3 id="normal_keys">
+<title
+>Teclas normais</title>
+<para
+>É fácil alterar o tamanho ou as propriedades de uma tecla. </para>
+<para
+>Comece por clicar na tecla que deseja alterar. Isto seleciona a tecla clicada como a tecla atual. </para>
+<para
+>Existem agora 4 quadrados nos cantos da tecla. Se mover esses quadrados, poderá arrastar o contorno da tecla para uma nova posição. Se arrastar toda a tecla, poderá mudar a posição da mesma na disposição. </para>
+<para
+>As características numéricas da geometria da tecla também poderão ser alteradas com a seção <guilabel
+>Geometria</guilabel
+> da área inferior da janela de edição. </para>
+<screenshot>
+<screeninfo
+>Editar as propriedades de uma tecla individual</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="key_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editar as propriedades de uma tecla individual</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>A área inferior também poderá ser usada para escolher o dedo que pressione a tecla e mudar o marcador tátil da tecla. </para>
+<sect4 id="key_characters">
+<title
+>Caracteres da tecla</title>
+<para
+>Os caracteres que serão apresentados numa tecla poderão ser alterados com a seção <guilabel
+>Caracteres</guilabel
+> da área inferior do editor. </para>
+<screenshot>
+<screeninfo
+>Editar a posição do caractere</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="character_editing.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editar a posição do caractere</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Você poderá adicionar um caractere pressionando o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-add.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. Um caractere selecionado poderá ser removido pressionando o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-list-remove.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+>. </para>
+<para
+>Você poderá também selecionar a posição dos caracteres individuais na tecla se fizer duplo-clique sobre a coluna <guilabel
+>Posição</guilabel
+>. </para>
+</sect4>
+</sect3>
+<sect3 id="modifier_keys">
+<title
+>Modificadores</title>
+<para
+>Existem várias teclas modificadoras que poderão ser definidas no &i18n-ktouch;. Elas poderão ser editadas como teclas normais, mas é útil saber o identificador da tecla modificadora para usá-las de forma apropriada. A tabela dos identificadores das teclas modificadoras é apresentada abaixo. </para>
+<table>
+<title
+>Teclas modificadoras</title>
+<tgroup cols="2">
+<thead>
+<row>
+<entry
+>Tecla modificadora</entry>
+<entry
+>ID do modificador no &i18n-ktouch;</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry
+>&Alt;</entry>
+<entry
+><literal
+>altgr</literal
+></entry>
+</row>
+<row>
+<entry
+>&Shift;</entry>
+<entry
+><literal
+>left_shift</literal
+> ou <literal
+>right_shift</literal
+></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect3>
+</sect2>
+</sect1>
+
+<sect1 id="custom_lessons">
+<title
+>Lições personalizadas</title>
+<para
+>O recurso de lições personalizadas permite-lhe ampliar o seu material de treinamento de forma simples, escolhendo algum texto arbitrário. </para>
+<para
+>As lições personalizadas são reunidas em um exercício especial, o exercício <guilabel
+>Lições personalizadas</guilabel
+>, que está sempre disponível ao lado dos <link linkend="picking_a_lesson"
+>exercícios incorporados normais</link
+>. </para>
+<screenshot>
+<screeninfo
+>Exercício com lições personalizadas</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Exercício com lições personalizadas</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Este exercício especial funciona geralmente como os outros, onde o treinamento e o agrupamento de informações para estatística funcionam como de costume. Se clicar no botão <guibutton
+>Criar uma nova lição personalizada</guibutton
+> ou em <guibutton
+>Editar</guibutton
+> (para as lições existentes), irá aparecer uma versão reduzida do <link linkend="adding_lessons"
+>editor normal de lições</link
+>. </para>
+<screenshot>
+<screeninfo
+>Editor de lições personalizadas</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="custom-lessons-edit.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Editor de lições personalizadas</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Use o botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-document-open.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> para abrir um arquivo de texto genérico que será carregado no campo de texto da lição. </para>
+<para
+>O botão <inlinemediaobject
+> <imageobject
+> <imagedata fileref="Icon-format-justify-fill.png" format="PNG"/> </imageobject
+> </inlinemediaobject
+> pode ser usado para quebrar o texto da lição. O editor do &i18n-ktouch; troca de linha para que o texto em nenhuma delas exceda o limite recomendado de 60 caracteres. </para>
+<para
+>O editor irá realçar as seções problemáticas do texto das suas lições. Os caracteres que não podem ser digitados no seu teclado serão apresentados em vermelho escuro e as linhas muito longas terão o texto dos caracteres em excesso apresentados em cinza. </para>
+<tip>
+<para
+>Todas as lições personalizadas são armazenadas individualmente por perfil e leiaute de teclado. Use isto para gerenciar os diferentes conjuntos de lições, dependendo da situação específica. </para>
+</tip>
+</sect1>
+
+<sect1 id="sharing_your_results">
+<title
+>Compartilhar os seus resultados</title>
+<para
+>É possível salvar os seus exercícios e disposições do teclado em arquivos separados, fora da base de dados local do &i18n-ktouch;. </para>
+<sect2 id="export_import">
+<title
+>Exportar/Importar</title>
+<para
+>Para exportar um exercício ou disposição de teclado num arquivo separado, escolha o item apropriado na lista da parte esquerda da janela do <guilabel
+>Editor de exercícios e disposições do teclado</guilabel
+> e pressione o botão <guibutton
+>Exportar</guibutton
+> da barra de ferramentas. </para>
+<para
+>O &i18n-ktouch; irá abrir uma janela de salvamento normal do &kde;. A descrição desta janela com mais detalhes poderá ser encontrada no capítulo para <ulink url="help:/fundamentals/files.html"
+>Abrir e salvar os arquivos</ulink
+> dos Fundamentos do &kde;. </para>
+<para
+>Você poderá escolher o nome a localização do arquivo &XML; a salvar. </para>
+<para
+>Se você achar que vale a pena compartilhar os seus arquivos com outros usuários, por favor envie-os com uma descrição breve para a <ulink url="mailto:kde-edu@kde.org"
+>lista de correio 'kde-edu'</ulink
+>. </para>
+<important>
+<para
+>Os seus dados deverão estar licenciados segundo a <ulink url="http://www.gnu.org/licenses/gpl-2.0.html"
+>Licença Geral Pública da GNU, na versão 2</ulink
+> para incluí-los na instalação padrão do &i18n-ktouch;. </para>
+</important>
+<para
+>Para importar os seus arquivos de dados para o &i18n-ktouch;, pressione em <guibutton
+>Importar</guibutton
+> na barra de ferramentas e escolha o arquivo &XML; que foi exportado anteriormente com o &i18n-ktouch;. </para>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e licença</title>
+<para
+>&i18n-ktouch;</para>
+<para
+>Direitos autorais do &i18n-ktouch;, 1999-2007 por</para>
+<itemizedlist>
+<listitem
+><simpara
+>Håvard Frøiland &Haavard.Froeiland.mail;</simpara
+></listitem>
+<listitem
+><simpara
+>Andreas Nicolai <email
+>andreas.nicolai@gmx DOT net</email
+></simpara
+></listitem>
+</itemizedlist>
+<para
+>&i18n-ktouch; com 'copyright' 2011-2012 de Sebastian Gottfried <email
+>sebastiangottfried@web DOT de</email
+>. </para>
+
+<para
+>Contribuições:</para>
+<itemizedlist>
+<listitem
+><simpara
+>Frank Quotschalla, teclado em alemão, arquivo de treino em alemão e tradução.</simpara
+></listitem>
+<listitem
+><simpara
+>Ernesto Hern&aacute;ndez-Novich, teclado latino americano</simpara
+></listitem>
+<listitem
+><simpara
+>Jo&atilde;o Miguel Neves, teclado em português</simpara
+></listitem>
+<listitem
+><simpara
+>Henri Girard, teclado em francês</simpara
+></listitem>
+</itemizedlist>
+<para
+><emphasis
+>Muito obrigado a todos os outros (que não foram mencionados aqui) os responsáveis por contribuir com arquivos de aula e de teclados.</emphasis>
+</para>
+<para
+>Tradução de Marcus Gama <email
+>marcus.gama@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Como obter e instalar o &i18n-ktouch;</title>
+
+&install.intro.documentation;
+ 
+<sect1 id="Compilation">
+<title
+>Compilação e instalação</title>
+&install.compile.documentation; </sect1>
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+// vim:ts=0:sw=2:tw=78:noet
+-->

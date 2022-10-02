@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Typetrainer</application
+>">
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Gebruikershandleiding van &ktouch;</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>&ktouch; manpagina.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>2021-01-05</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
+<productname
+>Toepassingen van KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>Een typecursus door &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-bewerker</option
+></group
+> <group choice="opt"
+><option
+>-I --import-pad</option
+> <replaceable
+>pad</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschrijving</title>
+<para
+>&i18n-ktouch; is een programma waarmee u kunt leren blind typen. Het helpt u snel en accuraat te leren typen op een toetsenbord. Elke vinger heeft zijn vaste plaats op het toetsenbord, bij de toetsen die ermee worden aangeslagen.</para
+> 
+<para
+>&i18n-ktouch; helpt u bij het leren blind typen, door u een tekst te tonen waarmee  geoefend kan worden, en past het niveau aan uw vorderingen aan. Het kan u laten zien welke toets als volgende moet worden aangeslagen, en met welke vinger.</para>
+<para
+>Dit programma behoort tot de officiële educatiemodule van &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Opties van &ktouch;</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Cursus- en toetsenbordbewerker starten.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>path</replaceable
+></term>
+<listitem
+><para
+>Voeg vooraan het pad toe aan de lijst van paden van van QML-imports.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+<simplelist>
+<member
+>Meer uitgebreide informatie vindt u in <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (voer deze &URL; in &konqueror; in, of typ <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+> in op de opdrachtregel).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Verdere informatie is beschikbaar op de <ulink url="https://edu.kde.org/ktouch/"
+>webpagina voor educatie van &kde;</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>&ktouch; is geschreven door <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> en <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Deze handleiding is gebaseerd op die, die gemaakt is voor &Debian; door <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

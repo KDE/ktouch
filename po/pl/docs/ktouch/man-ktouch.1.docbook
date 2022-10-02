@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Polish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Podręcznik użytkownika KDE</title>
+<author
+><personname
+> <firstname
+>Ben</firstname
+> <surname
+>Burton</surname
+> </personname
+> <email
+>bab@debian.org</email
+></author>
+<date
+>30 maj 2005</date
+> <productname
+>K Desktop Environment</productname
+> </refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>nauka pisania na klawiaturze dla środowiska KDE</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>URL</option
+></group
+> <arg choice="opt"
+>Standardowe opcje KDE</arg
+> <arg choice="opt"
+>Standardowe opcje Qt</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Opis</title>
+<para
+>&ktouch; to program do nauki szybkiego (bezwzrokowego) pisania na klawiaturze. Każdy palec ma swoje miejsce na klawiaturze wraz z przypisanym zestawem klawiszy.</para
+> 
+<para
+>Program &ktouch; udostępnia tekst do treningu pisania i dopasowuje go do różnych poziomów trudności, w zależności od możliwości użytkownika. Program może również wyświetlać jaki klawisz ma być naciśnięty w następnej kolejności oraz odpowiedni dla niego palec.</para>
+<para
+>Program stanowi część modułu edukacyjnego środowiska &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Opcje</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>URL</option
+></term>
+<listitem
+><para
+>Ścieżka do pliku treningowego</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zobacz także</title>
+<para
+>Szczegółowa dokumentacja jest dostępna pod adresem <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (należy go wprowadzić jako <acronym
+>URL</acronym
+> w programie &konqueror;, albo wykonać polecenie: <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</para>
+
+<para
+>Więcej informacji na temat programu dostępne jest na stronach <ulink url="http://edu.kde.org/ktouch/"
+>środowiska KDE</ulink
+></para>
+</refsect1>
+
+<refsect1>
+<title
+>Autorzy</title>
+<para
+>Autorami programu KTouch są: <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> oraz <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Ten podręcznik został przygotowany na podstawie podręcznika dla Debiana przez <personname
+><firstname
+>Ben'a</firstname
+><surname
+>Burton'a</surname
+></personname
+><email
+>bab@debian.org</email
+>. </para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual do usuário do &ktouch;</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>Manpage do KTouch.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>02/11/2016</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Applications 16.12)</releaseinfo>
+<productname
+>KDE Applications</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>um tutoria de digitação do KDE</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>caminho</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrição</title>
+<para
+>O &ktouch; é um programa para aprender a digitar. Ele ajuda você a aprender a digitar num teclado rápida e corretamente. Cada dedo tem sua posição no teclado e teclas associadas a pressionar.</para
+> 
+<para
+>O &ktouch; ajuda você a aprender a digitar fornecendo textos para treinar e ajustes a diferentes níveis dependendo de quanto você está bom. Ele pode exibir qual a próxima tecla a pressionar e o dedo correto a usar.</para>
+<para
+>Este aplicativo faz parte do módulo oficial de educação do &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Opções do KTouch</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Carrega o editor de layouts de teclado e exercícios.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>caminho</replaceable
+></term>
+<listitem
+><para
+>Antecede o caminho com a lista de caminhos de importação do QML.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja também</title>
+<simplelist>
+<member
+>A documentação mais detalhada para o usuário está disponível em <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (tanto poderá inserir esta <acronym
+>URL</acronym
+> no &konqueror;, como executar o comando <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Também existe mais informação disponível no <ulink url="https://edu.kde.org/ktouch/"
+>site do &kde; Edu</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>O KTouch foi escrito por <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> e <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Esta página de manual é baseada na preparada para o Debian por <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>

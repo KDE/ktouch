@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY i18n-ktouch "<application
+>Allenatore di dattilografia</application
+>">
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manuale utente di &ktouch;</title>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Burton</surname
+> <contrib
+>Pagina di manuale &ktouch;.</contrib
+> <email
+>bab@debian.org</email
+></author>
+<date
+>05/01/2021</date>
+<releaseinfo
+>&ktouch; 2.3.0 (Applications 20.12)</releaseinfo>
+<productname
+>KDE Applications</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>ktouch</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>ktouch</command
+></refname>
+<refpurpose
+>un istruttore di dattilografia creato da &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>ktouch</command
+> <group choice="opt"
+><option
+>--resource-editor</option
+></group
+> <group choice="opt"
+><option
+>-I --import-path</option
+> <replaceable
+>percorso</replaceable
+></group
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Descrizione</title>
+<para
+>&i18n-ktouch; è un programma per imparare la dattilografia. Ti aiuta a scrivere velocemente e senza errori con la tastiera. Ogni dito ha il proprio posto sulla tastiera, con i relativi tasti da premere.</para
+> 
+<para
+>&i18n-ktouch; ti aiuta a dattilografare fornendoti del testo con cui esercitarti, e sceglie il livello adatto alle tue capacità. Può mostrati il prossimo tasto da premere e il dito corretto da usare.</para>
+<para
+>Questa applicazione fa parte del modulo ufficiale di educazione di &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Opzioni di &ktouch;</title>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--resource-editor</option
+></term>
+<listitem
+><para
+>Avvia l'editor di corsi e mappature di tastiera.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>-I --import-path</option
+> <replaceable
+>percorso</replaceable
+></term>
+<listitem
+><para
+>Anteponi il percorso alla lista dei percorsi di importazione QML.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+<simplelist>
+<member
+>È possibile ottenere documentazione più dettagliata tramite <ulink url="help:/ktouch"
+>help:/ktouch</ulink
+> (inserisci questo &URL; in &konqueror;, oppure esegui <userinput
+><command
+>khelpcenter</command
+> <parameter
+>help:/ktouch</parameter
+></userinput
+>).</member>
+<member
+>kf5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>qt5options(7)</member
+> <!-- only for application with a GUI-->
+<member
+>Maggiori informazioni sono disponibili anche presso il <ulink url="https://edu.kde.org/ktouch/"
+>sito web di &kde; education</ulink
+>.</member>
+</simplelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+<para
+>&ktouch; è stato scritto da <personname
+><firstname
+>Haavard</firstname
+><surname
+>Froeiland</surname
+></personname
+> <email
+>haavard@users.sourceforge.net</email
+> e <personname
+><firstname
+>Andreas</firstname
+><surname
+>Nicolai</surname
+></personname
+> <email
+>Andreas.Nicolai@gmx.net</email
+>. Questa pagina di manuale è basata su quella scritta per &Debian; da <personname
+> <firstname
+>Ben</firstname
+><surname
+>Burton</surname
+></personname
+> </para>
+</refsect1>
+
+</refentry>
