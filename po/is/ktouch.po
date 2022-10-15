@@ -3,20 +3,20 @@
 #
 # Arnar Leósson <leosson@frisurf.no>, 2003.
 # Björgvin Ragnarsson <nifgraup@hotmail.com>, 2004.
-# Sveinn í Felli <sveinki@nett.is>, 2009.
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-01 00:41+0000\n"
-"PO-Revision-Date: 2009-07-28 20:13+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2022-10-14 10:09+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -618,10 +618,9 @@ msgstr "Innslátarlína"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Start Training"
-msgstr "&Æfing"
+msgstr "Byrja þjálfun"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
 #, fuzzy, kde-format
@@ -661,12 +660,12 @@ msgstr ""
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Afturkalla"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "Staðfesta"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, fuzzy, kde-format
@@ -683,18 +682,18 @@ msgstr "Flauta við villu"
 #: src/ui/newkeyboardlayoutwidget.ui:51
 #, kde-format
 msgid "Title:"
-msgstr ""
+msgstr "Titill:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
-#, fuzzy, kde-format
+#, kde-format
 msgid "Lesson text"
-msgstr "Flauta við villu"
+msgstr "Texti verkefnis"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "Lokið"
 
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
@@ -702,15 +701,15 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr ""
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
-#, fuzzy, kde-format
+#, kde-format
 msgid "Manage Profiles"
-msgstr "Veldu lyklaborðsuppsetningu:"
+msgstr "Sýsla með notkunarsnið"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr "Veldu lyklaborðsuppsetningu:"
+msgstr "Sýsla með notkunarsnið"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
@@ -718,10 +717,9 @@ msgid "Lessons trained:"
 msgstr ""
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
-#, fuzzy, kde-format
-#| msgid "Training Options"
+#, kde-format
 msgid "Total training time:"
-msgstr "Valkostir æfingar"
+msgstr "Heildartími æfingar:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
@@ -731,12 +729,12 @@ msgstr ""
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr ""
+msgstr "Aldrei"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Breyta"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
@@ -756,7 +754,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "Nafn"
 
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
@@ -779,9 +777,9 @@ msgid "All lessons are unlocked immediately."
 msgstr ""
 
 #: src/qml/homescreen/ProfileSelector.qml:57
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create New Profile"
-msgstr "Veldu lyklaborðsuppsetningu:"
+msgstr "Búa til nýtt notkunarsnið"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
@@ -800,14 +798,14 @@ msgid "Elapsed time"
 msgstr ""
 
 #: src/qml/scorescreen/ScoreScreen.qml:121
-#, fuzzy, kde-format
+#, kde-format
 msgid "Character:"
-msgstr "Stafir slegnir inn:"
+msgstr "Stafur:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:125
 #, kde-format
 msgid "Errors:"
-msgstr ""
+msgstr "Villur:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:152
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
@@ -917,75 +915,72 @@ msgstr "Æfingarlota heldur áfram við næsta innslátt..."
 #: src/ui/colorsconfigwidget.ui:17
 #, kde-format
 msgid "Fingers"
-msgstr ""
+msgstr "Fingur"
 
 #. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
 #: src/ui/colorsconfigwidget.ui:44
 #, kde-format
 msgid "Left Hand"
-msgstr ""
+msgstr "Vinstri hönd"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
 #: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Index finger:"
-msgstr "Innslátarlína"
+msgstr "Vísifingur:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
 #: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
-#, fuzzy, kde-format
+#, kde-format
 msgid "Middle finger:"
-msgstr "Liðinn þjálfunartími"
+msgstr "Langatöng:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
 #: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Ring finger:"
-msgstr "Innslátarlína"
+msgstr "Baugfingur:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
 #: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
-#, fuzzy, kde-format
+#, kde-format
 msgid "Little finger:"
-msgstr "Liðinn þjálfunartími"
+msgstr "Litlifingur:"
 
 #. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
 #: src/ui/colorsconfigwidget.ui:190
 #, kde-format
 msgid "Right Hand"
-msgstr ""
+msgstr "Hægri hönd"
 
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Ógegnsæi"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
+#, no-c-format, kde-format
 msgid " %"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
-#, fuzzy, kde-format
+#, kde-format
 msgid "Keyboard layout:"
-msgstr "Lyklaborðsuppsetningar"
+msgstr "Lyklaborðsuppsetning:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "Lýsing:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
@@ -1019,10 +1014,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:320
-#, fuzzy, kde-format
-#| msgid "new characters"
+#, kde-format
 msgid "New characters:"
-msgstr "nýjir stafir"
+msgstr "Nýir stafir:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
 #: src/ui/customlessoneditordialog.ui:14
@@ -1124,62 +1118,57 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:379
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Finger:"
-msgstr "Innslátarlína"
+msgstr "Fingur:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left little finger"
-msgstr "Liðinn þjálfunartími"
+msgstr "Vinstri litlifingur"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:401
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Left ring finger"
-msgstr "Innslátarlína"
+msgstr "Vinstri baugfingur"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:406
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left middle finger"
-msgstr "Liðinn þjálfunartími"
+msgstr "Vinstri langatöng"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:411
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left index finger"
-msgstr "Liðinn þjálfunartími"
+msgstr "Vinstri vísifingur"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Right index finger"
-msgstr "Innslátarlína"
+msgstr "Hægri vísifingur"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
-#, fuzzy, kde-format
+#, kde-format
 msgid "Right middle finger"
-msgstr "Liðinn þjálfunartími"
+msgstr "Hægri langatöng"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:426
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Right ring finger"
-msgstr "Innslátarlína"
+msgstr "Hægri baugfingur"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
-#, fuzzy, kde-format
-#| msgid "Typing line"
+#, kde-format
 msgid "Right little finger"
-msgstr "Innslátarlína"
+msgstr "Hægri litlifingur"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
@@ -1189,77 +1178,75 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, fuzzy, kde-format
+#, kde-format
 msgid "Characters"
-msgstr "Stafir slegnir inn:"
+msgstr "Stafir"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, fuzzy, kde-format
-#| msgid "new characters"
+#, kde-format
 msgid "Add new character"
-msgstr "nýjir stafir"
+msgstr "Bæta við nýjum staf"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:513
-#, fuzzy, kde-format
-#| msgid "new characters"
+#, kde-format
 msgid "Remove character"
-msgstr "nýjir stafir"
+msgstr "Fjarlægja staf"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:562
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "Tegund:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:579
 #, kde-format
 msgid "Tab"
-msgstr ""
+msgstr "Dálklykill (tab)"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:584
 #, kde-format
 msgid "Capslock"
-msgstr ""
+msgstr "CapsLock"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:589
 #, kde-format
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:594
 #, kde-format
 msgid "Backspace"
-msgstr ""
+msgstr "Baklykill (backspace)"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:599
 #, kde-format
 msgid "Return"
-msgstr ""
+msgstr "Enter/Return"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:604
 #, kde-format
 msgid "Space"
-msgstr ""
+msgstr "Bilslá"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:609
 #, kde-format
 msgid "Other"
-msgstr ""
+msgstr "Annað"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:617
 #, kde-format
 msgid "Label:"
-msgstr ""
+msgstr "Skýring:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:630
@@ -1281,9 +1268,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:74
-#, fuzzy, kde-format
+#, kde-format
 msgid "0 Characters"
-msgstr "Stafir slegnir inn:"
+msgstr "0 stafir"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
@@ -1306,16 +1293,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show keyboard"
-msgstr "Veldu lyklaborðsuppsetningu:"
+msgstr "Birta lyklaborð"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
-#, fuzzy, kde-format
-#| msgid "General Statistics"
+#, kde-format
 msgid "Show real-time statistics"
-msgstr "Almenn tölfræði"
+msgstr "Sýna tölfræði í rauntíma"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
@@ -1368,7 +1354,7 @@ msgstr "Lyklaborðsuppsetningar"
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
 msgid "Edit description"
-msgstr ""
+msgstr "Breyta lýsingu"
 
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format

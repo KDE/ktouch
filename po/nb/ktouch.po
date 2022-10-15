@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-27 00:42+0000\n"
+"POT-Creation-Date: 2022-10-01 00:41+0000\n"
 "PO-Revision-Date: 2013-11-26 10:41+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -60,27 +60,27 @@ msgstr "Ikke noe kurs med ID %1"
 msgid "No keyboard layout with ID %1"
 msgstr "Ikke noe tastaturoppsett med ID %1"
 
-#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:303
+#: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
 msgid "Hidden"
 msgstr "Skjult"
 
-#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:295
+#: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
 #, kde-format
 msgid "Top left"
 msgstr "Øverst til venstre"
 
-#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:297
+#: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
 #, kde-format
 msgid "Top right"
 msgstr "Øverst til høyre"
 
-#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:299
+#: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
 #, kde-format
 msgid "Bottom left"
 msgstr "Nederst til venstre"
 
-#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:301
+#: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
 #, kde-format
 msgid "Bottom right"
 msgstr "Nederst til høyre"
@@ -112,19 +112,19 @@ msgstr "Innebygde tastaturoppsett kan bare ses"
 msgid "%1%"
 msgstr "%1%"
 
-#: src/editor/lessontexteditor.cpp:63
+#: src/editor/lessontexteditor.cpp:62
 #, kde-format
 msgid "%1 Character"
 msgid_plural "%1 Characters"
 msgstr[0] "%1 tegn"
 msgstr[1] "%1 tegn"
 
-#: src/editor/lessontexteditor.cpp:68
+#: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
 msgstr ""
 
-#: src/editor/lessontexteditor.cpp:77
+#: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
 msgstr "Kunne ikke åpne den valgte fila."
@@ -289,12 +289,12 @@ msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
 
-#: src/editor/resourceeditorwidget.cpp:20
+#: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
 msgstr "Gjenopprett"
 
-#: src/editor/resourceeditorwidget.cpp:21
+#: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
 msgid "Dismiss"
 msgstr "Slå av"
@@ -309,12 +309,12 @@ msgstr "Bruk et annet kurs som mal"
 msgid "Use another keyboard layout as template"
 msgstr "Bruk et annet tastaturoppsett som mal"
 
-#: src/editor/resourcetypeswidget.cpp:21
+#: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
 msgid "Course"
 msgstr "Kurs"
 
-#: src/editor/resourcetypeswidget.cpp:25
+#: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
 msgstr "Tastaturoppsett"
@@ -389,38 +389,38 @@ msgstr ""
 msgid "The ID of the last used profile."
 msgstr "ID for siste brukte profil."
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Training"
 msgstr "Øvelse"
 
-#: src/ktouchcontext.cpp:130
+#: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Training Settings"
 msgstr "Øvelsesinnstillinger"
 
-#: src/ktouchcontext.cpp:131
+#: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Colors"
 msgstr "Farger"
 
-#: src/ktouchcontext.cpp:131
+#: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Color Settings"
 msgstr "Fargeinnstillinger"
 
-#: src/ktouchcontext.cpp:144
+#: src/ktouchcontext.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr ""
 
-#: src/ktouchcontext.cpp:161
+#: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
 msgstr "Redigering for kurs og tastaturoppsett …"
 
-#: src/ktouchcontext.cpp:171
+#: src/ktouchcontext.cpp:170
 #, kde-format
 msgid "Configure Keyboard..."
 msgstr "Sett opp tastatur …"
@@ -512,17 +512,17 @@ msgstr ""
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr ""
 
-#: src/models/charactersmodel.cpp:193
+#: src/models/charactersmodel.cpp:195
 #, kde-format
 msgid "Character"
 msgstr "Tegn"
 
-#: src/models/charactersmodel.cpp:195
+#: src/models/charactersmodel.cpp:197
 #, kde-format
 msgid "Modifier ID"
 msgstr "Valgtast ID"
 
-#: src/models/charactersmodel.cpp:197
+#: src/models/charactersmodel.cpp:199
 #, kde-format
 msgid "Position"
 msgstr "Posisjon"
