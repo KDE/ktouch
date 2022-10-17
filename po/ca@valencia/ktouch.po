@@ -327,7 +327,7 @@ msgstr "Disposició de teclat"
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "Disposició de teclat a utilitzar en plataformes no X11"
+msgstr "Disposició de teclat que s'ha d'utilitzar en plataformes no X11"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
