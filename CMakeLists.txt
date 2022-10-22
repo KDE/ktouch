@@ -57,6 +57,12 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     IconThemes
 )
 
+find_package(KQtQuickCharts)
+set_package_properties(KQtQuickCharts PROPERTIES
+    DESCRIPTION "QtQuick plugin to render beautiful and interactive charts"
+    URL "https://commits.kde.org/kqtquickcharts"
+    TYPE RUNTIME
+)
 
 option(COMPILE_QML "Precompile QML code" OFF)
 option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X11)" OFF)
