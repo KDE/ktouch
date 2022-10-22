@@ -17,7 +17,7 @@ class GridItem : public QQuickPaintedItem
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 public:
-    explicit GridItem(QQuickItem* parent = 0);
+    explicit GridItem(QQuickItem* parent = nullptr);
     qreal lineDistance() const;
     void setLineDistance(qreal distance);
     QColor color() const;

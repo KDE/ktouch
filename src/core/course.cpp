@@ -11,7 +11,7 @@
 
 Course::Course(QObject *parent) :
     CourseBase(parent),
-    m_associatedDataIndexCourse(0),
+    m_associatedDataIndexCourse(nullptr),
     m_kind(Course::SequentialCourse)
 {
 }

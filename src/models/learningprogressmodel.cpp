@@ -15,9 +15,9 @@
 
 LearningProgressModel::LearningProgressModel(QObject* parent) :
     QSqlQueryModel(parent),
-    m_profile(0),
-    m_courseFilter(0),
-    m_lessonFilter(0)
+    m_profile(nullptr),
+    m_courseFilter(nullptr),
+    m_lessonFilter(nullptr)
 {
 }
 
@@ -273,5 +273,5 @@ QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
 
 void LearningProgressModel::profileDestroyed()
 {
-    setProfile(0);
+    setProfile(nullptr);
 }

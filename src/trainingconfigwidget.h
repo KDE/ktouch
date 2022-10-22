@@ -14,7 +14,7 @@ class TrainingConfigWidget : public QWidget, private Ui::TrainingConfigWidget
 {
     Q_OBJECT
 public:
-    explicit TrainingConfigWidget(QWidget *parent = 0);
+    explicit TrainingConfigWidget(QWidget *parent = nullptr);
 
 signals:
 

@@ -13,7 +13,7 @@
 KeyboardLayoutComboBox::KeyboardLayoutComboBox(QWidget* parent) :
     KComboBox(parent),
     m_filteredResourceModel(new CategorizedResourceSortFilterProxyModel(this)),
-    m_resourceModel(0)
+    m_resourceModel(nullptr)
 {
     m_filteredResourceModel->setResourceTypeFilter(ResourceModel::KeyboardLayoutItem);
     setModel(m_filteredResourceModel);
@@ -47,7 +47,7 @@ DataIndexKeyboardLayout* KeyboardLayoutComboBox::keyboardLayoutAt(int index) con
 DataIndexKeyboardLayout* KeyboardLayoutComboBox::selectedKeyboardLayout() const
 {
     if (currentIndex() == -1)
-        return 0;
+        return nullptr;
 
 
     return keyboardLayoutAt(currentIndex());

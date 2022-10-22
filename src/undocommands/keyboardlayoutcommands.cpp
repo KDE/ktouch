@@ -175,7 +175,7 @@ void AddKeyCommand::redo()
 
     m_layout->addKey(m_backupKey);
 
-    m_backupKey = 0;
+    m_backupKey = nullptr;
 }
 
 int AddKeyCommand::id() const
@@ -193,7 +193,7 @@ RemoveKeyCommand::RemoveKeyCommand(KeyboardLayout* layout, int keyIndex, QUndoCo
     QUndoCommand(parent),
     m_layout(layout),
     m_keyIndex(keyIndex),
-    m_backupKey(0)
+    m_backupKey(nullptr)
 {
     setText(i18n("Remove key"));
 }
@@ -216,7 +216,7 @@ void RemoveKeyCommand::undo()
         m_layout->insertKey(m_keyIndex, m_backupKey);
     }
 
-    m_backupKey = 0;
+    m_backupKey = nullptr;
 }
 
 void RemoveKeyCommand::redo()
@@ -425,7 +425,7 @@ RemoveKeyCharCommand::RemoveKeyCharCommand(KeyboardLayout* layout, int keyIndex,
     m_layout(layout),
     m_keyIndex(keyIndex),
     m_keyCharIndex(keyCharIndex),
-    m_backupKeyChar(0)
+    m_backupKeyChar(nullptr)
 {
     setText(i18n("Remove key character"));
 }
@@ -451,7 +451,7 @@ void RemoveKeyCharCommand::undo()
         key->insertKeyChar(m_keyCharIndex, m_backupKeyChar);
     }
 
-    m_backupKeyChar = 0;
+    m_backupKeyChar = nullptr;
 }
 
 void RemoveKeyCharCommand::redo()

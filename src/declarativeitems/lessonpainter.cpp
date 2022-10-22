@@ -60,7 +60,7 @@ LessonPainter::LessonPainter(QQuickItem* parent) :
     m_maximumWidth(0),
     m_maximumHeight(-1),
     m_imageCacheDirty(false),
-    m_trainingLineCore(0),
+    m_trainingLineCore(nullptr),
     m_currentLine(0)
 {
     this->setFlag(QQuickPaintedItem::ItemHasContents, true);

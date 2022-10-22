@@ -15,7 +15,7 @@ bool lessThan(const QPair<QString,int>& left, const QPair<QString,int>& right)
 
 ErrorsModel::ErrorsModel(QObject* parent) :
     QAbstractTableModel(parent),
-    m_trainingStats(0)
+    m_trainingStats(nullptr)
 {
 }
 

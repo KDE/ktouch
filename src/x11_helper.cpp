@@ -56,7 +56,7 @@ bool X11Helper::xkbSupported(int* xkbOpcode)
         return false;
     }
 
-    if( xkbOpcode != NULL ) {
+    if( xkbOpcode != nullptr ) {
         *xkbOpcode = xkb_opcode;
     }
 
@@ -197,7 +197,7 @@ bool X11Helper::setGroup(unsigned int group)
         group,
         0, 0, 0
     );
-    xcb_generic_error_t *error = 0;
+    xcb_generic_error_t *error = nullptr;
     error = xcb_request_check(QX11Info::connection(), cookie);
     if (error) {
         qDebug() << "Couldn't change the group" << error->error_code;
@@ -221,7 +221,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
     Atom real_prop_type;
     int fmt;
     unsigned long nitems, extra_bytes;
-    char *prop_data = NULL;
+    char *prop_data = nullptr;
     Status ret;
 
     Atom rules_atom = XInternAtom(display, _XKB_RF_NAMES_PROP_ATOM, False);
@@ -255,7 +255,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 
 //	qCDebug(KCM_KEYBOARD) << "prop_data:" << nitems << prop_data;
     QStringList names;
-    for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
+    for(char* p=prop_data; p-prop_data < (long)nitems && p != nullptr; p += strlen(p)+1) {
         names.append( p );
 //		kDebug() << " " << p;
     }
@@ -270,8 +270,8 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
         QStringList variants = names[3].split(OPTIONS_SEPARATOR);
 
         for(int ii=0; ii<layouts.count(); ii++) {
-            xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : QLatin1String(""));
-            xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : QLatin1String(""));
+            xkbConfig->layouts << (layouts[ii] != nullptr ? layouts[ii] : QLatin1String(""));
+            xkbConfig->variants << (ii < variants.count() && variants[ii] != nullptr ? variants[ii] : QLatin1String(""));
         }
         qDebug() << "Fetched layout groups from X server:"
                 << "\tlayouts:" << xkbConfig->layouts
@@ -279,13 +279,13 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
     }
 
     if( fetchType == ALL || fetchType == MODEL_ONLY ) {
-        xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : QLatin1String(""));
+        xkbConfig->keyboardModel = (names[1] != nullptr ? names[1] : QLatin1String(""));
         qDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
     }
 
     if( fetchType == ALL ) {
         if( names.count() >= 5 ) {
-            QString options = (names[4] != NULL ? names[4] : QLatin1String(""));
+            QString options = (names[4] != nullptr ? names[4] : QLatin1String(""));
             xkbConfig->options = options.split(OPTIONS_SEPARATOR);
             qDebug() << "Fetched xkbOptions from X server:" << options;
         }
@@ -298,7 +298,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 XEventNotifier::XEventNotifier():
         xkbOpcode(-1)
 {
-    if( QCoreApplication::instance() == NULL ) {
+    if( QCoreApplication::instance() == nullptr ) {
         qWarning() << "Layout Widget won't work properly without QCoreApplication instance";
     }
 }
@@ -306,7 +306,7 @@ XEventNotifier::XEventNotifier():
 void XEventNotifier::start()
 {
     qDebug() << "qCoreApp" << QCoreApplication::instance();
-    if( QCoreApplication::instance() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
+    if( QCoreApplication::instance() != nullptr && X11Helper::xkbSupported(&xkbOpcode) ) {
         registerForXkbEvents(QX11Info::display());
 
         // start the event loop
@@ -316,7 +316,7 @@ void XEventNotifier::start()
 
 void XEventNotifier::stop()
 {
-    if( QCoreApplication::instance() != NULL ) {
+    if( QCoreApplication::instance() != nullptr ) {
         //TODO: unregister
     //    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
 

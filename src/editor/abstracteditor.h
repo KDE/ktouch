@@ -16,7 +16,7 @@ class AbstractEditor : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AbstractEditor(QWidget* parent = 0);
+    explicit AbstractEditor(QWidget* parent = nullptr);
     ~AbstractEditor() override;
     QUndoGroup* undoGroup() const;
     void setUndoGroup(QUndoGroup* undoGroup);

@@ -20,7 +20,7 @@ class ResourceTemplateWidget : public QWidget, private Ui::ResourceTemplateWidge
 {
     Q_OBJECT
 public:
-    explicit ResourceTemplateWidget(ResourceModel* resourceModel, QWidget* parent = 0);
+    explicit ResourceTemplateWidget(ResourceModel* resourceModel, QWidget* parent = nullptr);
     ResourceModel::ResourceItemType templateType() const;
     void setTemplateType(ResourceModel::ResourceItemType type);
     bool isValid() const;

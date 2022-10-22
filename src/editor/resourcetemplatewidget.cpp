@@ -67,9 +67,9 @@ bool ResourceTemplateWidget::isValid() const
 Resource* ResourceTemplateWidget::templateResource() const
 {
     if (!m_useTemplateCheckbox->isChecked())
-        return 0;
+        return nullptr;
     if (!m_templatesView->selectionModel()->hasSelection())
-        return 0;
+        return nullptr;
     const QModelIndex index = m_templatesView->selectionModel()->currentIndex();
     QObject* const object = m_filteredResourcesModel->data(index, ResourceModel::DataRole).value<QObject*>();
     return qobject_cast<Resource*>(object);

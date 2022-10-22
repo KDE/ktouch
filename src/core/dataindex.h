@@ -30,7 +30,7 @@ public:
         BuiltInResource,
         UserResource
     };
-    explicit DataIndex(QObject* parent = 0);
+    explicit DataIndex(QObject* parent = nullptr);
     int courseCount() const;
     Q_INVOKABLE DataIndexCourse* course(int index) const;
     Q_INVOKABLE void addCourse(DataIndexCourse* course);
@@ -68,7 +68,7 @@ class DataIndexCourse: public CourseBase
     Q_PROPERTY(DataIndex::Source source READ source WRITE setSource NOTIFY sourceChanged)
 
 public:
-    explicit DataIndexCourse(QObject* parent = 0);
+    explicit DataIndexCourse(QObject* parent = nullptr);
     QString path() const;
     void setPath(const QString& path);
     DataIndex::Source source() const;
@@ -90,7 +90,7 @@ class DataIndexKeyboardLayout: public KeyboardLayoutBase
     Q_PROPERTY(DataIndex::Source source READ source WRITE setSource NOTIFY sourceChanged)
 
 public:
-    explicit DataIndexKeyboardLayout(QObject* parent = 0);
+    explicit DataIndexKeyboardLayout(QObject* parent = nullptr);
 
     QString path() const;
     void setPath(const QString& path);

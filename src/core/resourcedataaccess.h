@@ -20,7 +20,7 @@ class ResourceDataAccess : public QObject
 {
     Q_OBJECT
 public:
-    explicit ResourceDataAccess(QObject *parent = 0);
+    explicit ResourceDataAccess(QObject *parent = nullptr);
     Q_INVOKABLE bool fillDataIndex(DataIndex* target);
     Q_INVOKABLE bool loadKeyboardLayout(const QString& path, KeyboardLayout* target);
     Q_INVOKABLE bool storeKeyboardLayout(const QString& path, KeyboardLayout* source);

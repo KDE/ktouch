@@ -28,7 +28,7 @@ public:
         Other
     };
 
-    explicit SpecialKey(QObject *parent = 0);
+    explicit SpecialKey(QObject *parent = nullptr);
     Q_INVOKABLE QString keyType() const override;
     QString typeStr() const;
     void setTypeStr(const QString& typeStr);

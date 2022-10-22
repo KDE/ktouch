@@ -16,7 +16,7 @@ class NewCourseWidget : public QWidget, private Ui::NewCourseWidget
 {
     Q_OBJECT
 public:
-    explicit NewCourseWidget(ResourceModel* resourceModel, QWidget* parent = 0);
+    explicit NewCourseWidget(ResourceModel* resourceModel, QWidget* parent = nullptr);
     bool isValid() const;
     QString title() const;
     QString keyboardLayoutName() const;

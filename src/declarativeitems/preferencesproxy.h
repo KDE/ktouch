@@ -24,7 +24,7 @@ class PreferencesProxy : public QObject
     Q_PROPERTY(double fingerOpacity READ fingerOpacity WRITE setFingerOpacity NOTIFY configChanged)
 
 public:
-    explicit PreferencesProxy(QObject* parent = 0);
+    explicit PreferencesProxy(QObject* parent = nullptr);
     bool showKeyboard() const;
     void setShowKeyboard(bool showKeyboard);
     bool showStatistics() const;

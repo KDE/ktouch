@@ -14,13 +14,13 @@
 
 KeyboardLayout::KeyboardLayout(QObject *parent) :
     KeyboardLayoutBase(parent),
-    m_associatedDataIndexKeyboardLayout(0),
+    m_associatedDataIndexKeyboardLayout(nullptr),
     m_title(QLatin1String("")),
     m_name(QLatin1String("")),
     m_width(0),
     m_height(0),
     m_keys(QList<AbstractKey*>()),
-    m_referenceKey(0)
+    m_referenceKey(nullptr)
 {
 }
 
@@ -117,7 +117,7 @@ void KeyboardLayout::copyFrom(KeyboardLayout* source)
     for(int i = 0; i < source->keyCount(); i++)
     {
         AbstractKey* const abstractSourceKey = source->key(i);
-        AbstractKey* abstractKey = 0;
+        AbstractKey* abstractKey = nullptr;
 
         Key* const sourceKey = qobject_cast<Key*>(abstractSourceKey);
         if (sourceKey)
@@ -194,7 +194,7 @@ void KeyboardLayout::removeKey(int index)
     AbstractKey* key = m_keys.at(index);
     m_keys.removeAt(index);
     emit keyCountChanged();
-    updateReferenceKey(0);
+    updateReferenceKey(nullptr);
     key->deleteLater();
 }
 
@@ -206,7 +206,7 @@ void KeyboardLayout::clearKeys()
     qDeleteAll(m_keys);
     m_keys.clear();
     emit keyCountChanged();
-    updateReferenceKey(0);
+    updateReferenceKey(nullptr);
 }
 
 QSize KeyboardLayout::size() const
@@ -242,10 +242,10 @@ void KeyboardLayout::updateReferenceKey(AbstractKey *testKey)
             return;
         }
     }
-    AbstractKey* canditate = 0;
+    AbstractKey* canditate = nullptr;
     foreach(AbstractKey* key, m_keys)
     {
-        if (canditate == 0)
+        if (canditate == nullptr)
         {
             canditate = key;
         }

@@ -19,7 +19,7 @@ class DataAccess : public QObject
 {
     Q_OBJECT
 public:
-    explicit DataAccess(QObject* parent = 0);
+    explicit DataAccess(QObject* parent = nullptr);
     Q_INVOKABLE bool loadDataIndex(DataIndex* target);
     Q_INVOKABLE bool loadCourse(DataIndexCourse* dataIndexCourse, Course* target);
     Q_INVOKABLE bool loadKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout, KeyboardLayout* target);

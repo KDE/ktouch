@@ -22,7 +22,7 @@ class NewResourceAssistant : public KAssistantDialog
 {
     Q_OBJECT
 public:
-    explicit NewResourceAssistant(ResourceModel* resourceModel, QWidget* parent = 0);
+    explicit NewResourceAssistant(ResourceModel* resourceModel, QWidget* parent = nullptr);
     Resource* createResource();
 private slots:
     void setResourceType(ResourceModel::ResourceItemType type);

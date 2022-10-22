@@ -113,7 +113,7 @@ int main(int argc, char **argv)
         }
         else
         {
-            MainWindow *mainWin = 0;
+            MainWindow *mainWin = nullptr;
             mainWin = new MainWindow();
             mainWin->show();
         }

@@ -19,7 +19,7 @@ class AbstractKey : public QObject
     Q_PROPERTY(int height READ height WRITE setHeight NOTIFY heightChanged)
 
 public:
-    explicit AbstractKey(QObject *parent = 0);
+    explicit AbstractKey(QObject *parent = nullptr);
 
     Q_INVOKABLE virtual QString keyType() const;
     int left() const;

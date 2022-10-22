@@ -23,7 +23,7 @@ class ResourceEditor : public KMainWindow
 {
     Q_OBJECT
 public:
-    explicit ResourceEditor(QWidget* parent = 0);
+    explicit ResourceEditor(QWidget* parent = nullptr);
     ~ResourceEditor() override;
 
 protected:
@@ -43,7 +43,7 @@ private slots:
 
 private:
     void prepareResourceRestore(Resource* backup);
-    Resource* storeResource(Resource* resource, Resource* dataIndexResource = 0);
+    Resource* storeResource(Resource* resource, Resource* dataIndexResource = nullptr);
     void selectDataResource(Resource* resource);
     void selectFirstResource();
     bool importCourse(const QString& path);

@@ -28,7 +28,7 @@
 
 KeyboardLayoutEditor::KeyboardLayoutEditor(QWidget* parent):
     AbstractEditor(parent),
-    m_dataIndexKeyboardLayout(0),
+    m_dataIndexKeyboardLayout(nullptr),
     m_keyboardLayout(new KeyboardLayout(this)),
     m_readOnly(false),
     m_selectedKey(nullptr),
@@ -79,7 +79,7 @@ void KeyboardLayoutEditor::openKeyboardLayout(DataIndexKeyboardLayout* dataIndex
 
     initUndoStack(QStringLiteral("keyboard-layout-%1").arg(dataIndexKeyboardLayout->id()));
     m_propertiesWidget->setUndoStack(currentUndoStack());
-    setSelectedKey(0);
+    setSelectedKey(nullptr);
     connect(currentUndoStack(), &QUndoStack::indexChanged, this, &KeyboardLayoutEditor::validateSelection);
 
     m_keyboardLayout->setAssociatedDataIndexKeyboardLayout(m_dataIndexKeyboardLayout);
@@ -141,7 +141,7 @@ void KeyboardLayoutEditor::setReadOnly(bool readOnly)
         emit readOnlyChanged();
         m_newKeyToolButton->setEnabled(!readOnly);
         m_newSpecialKeyToolButton->setEnabled(!readOnly);
-        m_deleteKeyToolButton->setEnabled(!readOnly && m_selectedKey != 0);
+        m_deleteKeyToolButton->setEnabled(!readOnly && m_selectedKey != nullptr);
         m_propertiesWidget->setReadOnly(readOnly);
     }
 }
@@ -158,7 +158,7 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
         m_selectedKey = key;
         emit selectedKeyChanged();
 
-        m_deleteKeyToolButton->setEnabled(!m_readOnly && m_selectedKey != 0);
+        m_deleteKeyToolButton->setEnabled(!m_readOnly && m_selectedKey != nullptr);
         m_propertiesWidget->setSelectedKey(m_keyboardLayout->keyIndex(key));
     }
 }
@@ -194,7 +194,7 @@ void KeyboardLayoutEditor::setKeyGeometry(int keyIndex, int top, int left, int w
 
 void KeyboardLayoutEditor::clearSelection()
 {
-    setSelectedKey(0);
+    setSelectedKey(nullptr);
 }
 
 void KeyboardLayoutEditor::validateSelection()
@@ -230,6 +230,6 @@ void KeyboardLayoutEditor::deleteSelectedKey()
     const int keyIndex = m_keyboardLayout->keyIndex(m_selectedKey);
     QUndoCommand* command = new RemoveKeyCommand(m_keyboardLayout, keyIndex);
 
-    setSelectedKey(0);
+    setSelectedKey(nullptr);
     currentUndoStack()->push(command);
 }

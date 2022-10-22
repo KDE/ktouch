@@ -27,7 +27,7 @@ class LessonPainter : public QQuickPaintedItem
     Q_PROPERTY(TrainingLineCore* trainingLineCore READ trainingLineCore WRITE setTrainingLineCore NOTIFY trainingLineCoreChanged)
     Q_PROPERTY(QRectF cursorRectangle READ cursorRectangle NOTIFY cursorRectangleChanged)
 public:
-    explicit LessonPainter(QQuickItem* parent = 0);
+    explicit LessonPainter(QQuickItem* parent = nullptr);
     ~LessonPainter() override;
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);

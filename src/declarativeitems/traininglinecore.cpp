@@ -15,7 +15,7 @@
 TrainingLineCore::TrainingLineCore(QQuickItem* parent) :
     QQuickItem(parent),
     m_active(false),
-    m_trainingStats(0),
+    m_trainingStats(nullptr),
     m_hintKey(-1),
     m_keyHintOccurrenceCount(0)
 {

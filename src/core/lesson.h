@@ -20,7 +20,7 @@ class Lesson : public QObject
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 
 public:
-    explicit Lesson(QObject *parent = 0);
+    explicit Lesson(QObject *parent = nullptr);
     QString id() const;
     void setId(const QString& id);
     QString title() const;

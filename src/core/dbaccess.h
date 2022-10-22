@@ -17,7 +17,7 @@ class DbAccess : public QObject
     Q_OBJECT
     Q_PROPERTY(QString errorMessage READ errorMessage NOTIFY errorMessageChanged)
 public:
-    explicit DbAccess(QObject* parent = 0);
+    explicit DbAccess(QObject* parent = nullptr);
     QString errorMessage() const;
 
 signals:

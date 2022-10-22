@@ -29,7 +29,7 @@ public:
     };
     Q_ENUM(Kind)
 
-    explicit Course(QObject *parent = 0);
+    explicit Course(QObject *parent = nullptr);
     DataIndexCourse* associatedDataIndexCourse() const;
     void setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse);
     int lessonCount() const;

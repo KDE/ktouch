@@ -24,7 +24,7 @@
 CourseEditor::CourseEditor(QWidget* parent):
     AbstractEditor(parent),
     Ui::CourseEditor(),
-    m_dataIndexCourse(0),
+    m_dataIndexCourse(nullptr),
     m_course(new Course(this)),
     m_currentLessonIndex(-1),
     m_currentLesson(nullptr),
@@ -378,7 +378,7 @@ void CourseEditor::onLessonSelected()
     else
     {
         m_currentLessonIndex = -1;
-        m_currentLesson = 0;
+        m_currentLesson = nullptr;
 
         m_lessonTitleLineEdit->setEnabled(false);
         m_lessonTitleLineEdit->setText(QLatin1String(""));

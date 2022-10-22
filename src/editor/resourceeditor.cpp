@@ -41,8 +41,8 @@ ResourceEditor::ResourceEditor(QWidget *parent) :
     m_dataIndex(Application::dataIndex()),
     m_resourceModel(new ResourceModel(this)),
     m_categorizedResourceModel(new CategorizedResourceSortFilterProxyModel(this)),
-    m_currentResource(0),
-    m_backupResource(0),
+    m_currentResource(nullptr),
+    m_backupResource(nullptr),
     m_undoGroup(new QUndoGroup(this)),
     m_actionCollection(new KActionCollection(this)),
     m_newResourceAction(KStandardAction::openNew(this, SLOT(newResource()), m_actionCollection)),
@@ -319,7 +319,7 @@ void ResourceEditor::onResourceSelected()
     }
     else
     {
-        m_currentResource = 0;
+        m_currentResource = nullptr;
         m_deleteResourceAction->setEnabled(false);
         m_exportResourceAction->setEnabled(false);
     }
@@ -344,7 +344,7 @@ void ResourceEditor::clearResourceBackup()
     Q_ASSERT(m_backupResource);
 
     delete m_backupResource;
-    m_backupResource = 0;
+    m_backupResource = nullptr;
 }
 
 void ResourceEditor::save()
@@ -397,7 +397,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
 
     if (Course* course = qobject_cast<Course*>(resource))
     {
-        DataIndexCourse* dataIndexCourse = dataIndexResource == 0?
+        DataIndexCourse* dataIndexCourse = dataIndexResource == nullptr?
             new DataIndexCourse():
             dynamic_cast<DataIndexCourse*>(dataIndexResource);
 
@@ -405,14 +405,14 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dir.mkpath(QStringLiteral("courses"));
         dir.cd(QStringLiteral("courses"));
 
-        QString path = dataIndexResource == 0?
+        QString path = dataIndexResource == nullptr?
             dir.filePath(QStringLiteral("%1.xml").arg(course->id())):
             dataIndexCourse->path();
 
         if (!userDataAccess.storeCourse(course))
         {
             KMessageBox::error(this, i18n("Error while saving course to disk."));
-            return 0;
+            return nullptr;
         }
 
         dataIndexCourse->setSource(DataIndex::UserResource);
@@ -422,7 +422,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dataIndexCourse->setId(course->id());
         dataIndexCourse->setPath(path);
 
-        if (dataIndexResource == 0)
+        if (dataIndexResource == nullptr)
         {
             m_dataIndex->addCourse(dataIndexCourse);
         }
@@ -431,7 +431,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
     }
     else if (KeyboardLayout* keyboardLayout = qobject_cast<KeyboardLayout*>(resource))
     {
-        DataIndexKeyboardLayout* dataIndexKeyboardLayout = dataIndexResource == 0?
+        DataIndexKeyboardLayout* dataIndexKeyboardLayout = dataIndexResource == nullptr?
             new DataIndexKeyboardLayout():
             qobject_cast<DataIndexKeyboardLayout*>(dataIndexResource);
 
@@ -439,14 +439,14 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dir.mkpath(QStringLiteral("keyboardlayouts"));
         dir.cd(QStringLiteral("keyboardlayouts"));
 
-        QString path = dataIndexResource == 0?
+        QString path = dataIndexResource == nullptr?
             dir.filePath(QStringLiteral("%1.xml").arg(keyboardLayout->id())):
             dataIndexKeyboardLayout->path();
 
         if (!userDataAccess.storeKeyboardLayout(keyboardLayout))
         {
             KMessageBox::error(this, i18n("Error while saving keyboard layout to disk."));
-            return 0;
+            return nullptr;
         }
 
         dataIndexKeyboardLayout->setSource(DataIndex::UserResource);
@@ -455,7 +455,7 @@ Resource* ResourceEditor::storeResource(Resource* resource, Resource* dataIndexR
         dataIndexKeyboardLayout->setId(keyboardLayout->id());
         dataIndexKeyboardLayout->setPath(path);
 
-        if (dataIndexResource == 0)
+        if (dataIndexResource == nullptr)
         {
             m_dataIndex->addKeyboardLayout(dataIndexKeyboardLayout);
         }
@@ -506,7 +506,7 @@ bool ResourceEditor::importCourse(const QString& path)
     if (!resourceDataAccess.loadCourse(path, &course))
         return false;
 
-    DataIndexCourse* overwriteDataIndexCourse(0);
+    DataIndexCourse* overwriteDataIndexCourse(nullptr);
 
     for (int i = 0; i < m_dataIndex->courseCount(); i++)
     {
@@ -574,7 +574,7 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
     if (!resourceDataAccess.loadKeyboardLayout(path, &keyboardLayout))
         return false;
 
-    DataIndexKeyboardLayout* overwriteDataIndexKeyboardLayout(0);
+    DataIndexKeyboardLayout* overwriteDataIndexKeyboardLayout(nullptr);
 
     for (int i = 0; i < m_dataIndex->keyboardLayoutCount(); i++)
     {

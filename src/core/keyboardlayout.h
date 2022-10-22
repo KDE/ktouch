@@ -24,7 +24,7 @@ class KeyboardLayout : public KeyboardLayoutBase
     Q_PROPERTY(int keyCount READ keyCount NOTIFY keyCountChanged)
 
 public:
-    explicit KeyboardLayout(QObject* parent = 0);
+    explicit KeyboardLayout(QObject* parent = nullptr);
     DataIndexKeyboardLayout* associatedDataIndexKeyboardLayout() const;
     void setAssociatedDataIndexKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLayout);
     void setId(const QString& id);
@@ -59,7 +59,7 @@ private slots:
     void onKeyGeometryChanged(int keyIndex);
 
 private:
-    void updateReferenceKey(AbstractKey* newKey=0);
+    void updateReferenceKey(AbstractKey* newKey=nullptr);
     bool compareKeysForReference(const AbstractKey* testKey, const AbstractKey* compareKey) const;
     DataIndexKeyboardLayout* m_associatedDataIndexKeyboardLayout;
     QString m_title;

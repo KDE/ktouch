@@ -25,7 +25,7 @@ public:
         Advanced
     };
 
-    explicit Profile(QObject* parent = 0);
+    explicit Profile(QObject* parent = nullptr);
     int id() const;
     void setId(int id);
     QString name() const;

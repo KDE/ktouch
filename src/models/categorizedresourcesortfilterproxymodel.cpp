@@ -13,7 +13,7 @@ CategorizedResourceSortFilterProxyModel::CategorizedResourceSortFilterProxyModel
     KCategorizedSortFilterProxyModel(parent),
     m_resourceTypeFilter(ResourceModel::CourseItem | ResourceModel::KeyboardLayoutItem),
     m_invertedKeyboardLayoutNameFilter(false),
-    m_resourceModel(0)
+    m_resourceModel(nullptr)
 {
     setDynamicSortFilter(true);
 }

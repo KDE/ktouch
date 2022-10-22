@@ -101,7 +101,7 @@ private:
 class SetLessonTitleCommand: public QUndoCommand
 {
 public:
-    SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent=0);
+    SetLessonTitleCommand(Course* course, int lessonIndex, const QString& oldTitle, QUndoCommand* parent=nullptr);
     void undo() override;
     void redo() override;
     bool mergeWith(const QUndoCommand* command) override;

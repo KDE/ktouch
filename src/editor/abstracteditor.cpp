@@ -12,9 +12,9 @@
 
 AbstractEditor::AbstractEditor(QWidget* parent):
     QWidget(parent),
-    m_undoGroup(0),
+    m_undoGroup(nullptr),
     m_undoStacks(new QMap<QString,QUndoStack*>),
-    m_currentUndoStack(0)
+    m_currentUndoStack(nullptr)
 {
 }
 

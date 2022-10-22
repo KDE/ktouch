@@ -16,7 +16,7 @@ class Resource : public QObject
     Q_PROPERTY(bool isValid READ isValid WRITE setIsValid NOTIFY isValidChanged)
 
 public:
-    explicit Resource(QObject* parent = 0);
+    explicit Resource(QObject* parent = nullptr);
     QString id() const;
     void setId(const QString& id);
     bool isValid() const;

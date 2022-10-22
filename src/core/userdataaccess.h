@@ -17,7 +17,7 @@ class UserDataAccess : public DbAccess
 {
     Q_OBJECT
 public:
-    explicit UserDataAccess(QObject* parent = 0);
+    explicit UserDataAccess(QObject* parent = nullptr);
     Q_INVOKABLE bool fillDataIndex(DataIndex* target);
     Q_INVOKABLE bool loadCourse(const QString& id, Course* target);
     Q_INVOKABLE bool storeCourse(Course* course);

@@ -30,7 +30,7 @@ public:
         BottomRight
     };
 
-    explicit KeyChar(QObject *parent = 0);
+    explicit KeyChar(QObject *parent = nullptr);
     QString positionStr() const;
     void setPositionStr(const QString& positionStr);
     QChar value() const;

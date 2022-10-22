@@ -25,7 +25,7 @@ public:
     {
         ResourceDeletedMsg
     };
-    explicit ResourceEditorWidget(QWidget* parent = 0);
+    explicit ResourceEditorWidget(QWidget* parent = nullptr);
     void setResourceModel(ResourceModel* model);
     void setUndoGroup(QUndoGroup* undoGroup);
     void showMessage(MessageType type, const QString& msg);

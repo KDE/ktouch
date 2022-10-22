@@ -19,7 +19,7 @@ class CourseBase : public Resource
     Q_PROPERTY(QString keyboardLayoutName READ keyboardLayoutName WRITE setKeyboardLayoutName NOTIFY keyboardLayoutNameChanged)
 
 public:
-    explicit CourseBase(QObject* parent = 0);
+    explicit CourseBase(QObject* parent = nullptr);
 
     QString title() const;
     void setTitle(const QString& title);

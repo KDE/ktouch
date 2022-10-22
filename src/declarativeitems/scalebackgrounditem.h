@@ -18,7 +18,7 @@ class ScaleBackgroundItem: public QQuickPaintedItem
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY colorChanged)
 
 public:
-    explicit ScaleBackgroundItem(QQuickItem* parent = 0);
+    explicit ScaleBackgroundItem(QQuickItem* parent = nullptr);
     qreal startAngle() const;
     void setStartAngle(qreal angle);
     qreal stopAngle() const;

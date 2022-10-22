@@ -16,7 +16,7 @@ class LessonTextEditor : public QWidget, private Ui::LessonTextEditor
 {
     Q_OBJECT
 public:
-    explicit LessonTextEditor(QWidget* parent = 0);
+    explicit LessonTextEditor(QWidget* parent = nullptr);
     bool readOnly() const;
     void setReadOnly(bool readOnly);
     KTextEdit* textEdit() const;

@@ -18,7 +18,7 @@ class KeyboardLayoutBase : public Resource
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
 public:
-    explicit KeyboardLayoutBase(QObject *parent = 0);
+    explicit KeyboardLayoutBase(QObject *parent = nullptr);
     const QString& title() const;
     void setTitle(const QString& title);
     const QString& name() const;

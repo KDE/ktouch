@@ -16,7 +16,7 @@ class NewKeyboardLayoutWidget : public QWidget, private Ui::NewKeyboardLayoutWid
 {
     Q_OBJECT
 public:
-    explicit NewKeyboardLayoutWidget(ResourceModel* resourceModel, QWidget* parent = 0);
+    explicit NewKeyboardLayoutWidget(ResourceModel* resourceModel, QWidget* parent = nullptr);
     QString name() const;
     QString title() const;
     bool isValid() const;

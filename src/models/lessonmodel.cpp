@@ -14,7 +14,7 @@
 
 LessonModel::LessonModel(QObject* parent) :
     QAbstractListModel(parent),
-    m_course(0)
+    m_course(nullptr)
 {
 }
 

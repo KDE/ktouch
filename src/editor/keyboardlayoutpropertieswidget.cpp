@@ -19,11 +19,11 @@
 
 KeyboardLayoutPropertiesWidget::KeyboardLayoutPropertiesWidget(QWidget* parent) :
     QWidget(parent),
-    m_keyboardLayout(0),
+    m_keyboardLayout(nullptr),
     m_selectedKeyIndex(-1),
-    m_selectedKey(0),
+    m_selectedKey(nullptr),
     m_readOnly(false),
-    m_undoStack(0),
+    m_undoStack(nullptr),
     m_charactersModel(new CharactersModel(this)),
     m_charactersViewDelegate(new CharactersViewDelegate(this))
 {
@@ -88,7 +88,7 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
 
     if (index == -1)
     {
-        m_selectedKey = 0;
+        m_selectedKey = nullptr;
 
         m_charactersModel->setKeyIndex(-1);
 
@@ -96,7 +96,7 @@ void KeyboardLayoutPropertiesWidget::setSelectedKey(int index)
     }
     else
     {
-        m_selectedKey = 0;
+        m_selectedKey = nullptr;
         resetKeyGeometry(m_keyboardLayout->key(index));
         m_selectedKey = m_keyboardLayout->key(index);
 

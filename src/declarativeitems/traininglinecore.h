@@ -26,7 +26,7 @@ class TrainingLineCore : public QQuickItem
     Q_PROPERTY(QString nextCharacter READ nextCharacter NOTIFY actualLineChanged)
     Q_PROPERTY(int hintKey READ hintKey NOTIFY hintKeyChanged)
 public:
-    explicit TrainingLineCore(QQuickItem* parent = 0);
+    explicit TrainingLineCore(QQuickItem* parent = nullptr);
     bool active() const;
     void setActive(bool active);
     QQuickItem* cursorItem() const;

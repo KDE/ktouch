@@ -15,7 +15,7 @@ class StringFormatter : public QObject
 {
     Q_OBJECT
 public:
-    explicit StringFormatter(QObject* parent = 0);
+    explicit StringFormatter(QObject* parent = nullptr);
     Q_INVOKABLE QString formatTime(const QTime& time);
     Q_INVOKABLE QString formatTimeDiff(const QTime& from, const QTime& to);
     Q_INVOKABLE QString formatAccuracy(qreal accuracy);

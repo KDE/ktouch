@@ -13,7 +13,7 @@
 
 ResourceModel::ResourceModel(QObject* parent) :
     QAbstractListModel(parent),
-    m_dataIndex(0)
+    m_dataIndex(nullptr)
 {
 }
 

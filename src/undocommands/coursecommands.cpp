@@ -162,7 +162,7 @@ RemoveLessonCommand::RemoveLessonCommand(Course* course, int lessonIndex, QUndoC
     QUndoCommand(parent),
     m_course(course),
     m_lessonIndex(lessonIndex),
-    m_backupLesson(0)
+    m_backupLesson(nullptr)
 {
     setText(i18n("Remove lesson"));
 }
@@ -188,7 +188,7 @@ void RemoveLessonCommand::undo()
         m_course->insertLesson(m_lessonIndex, m_backupLesson);
     }
 
-    m_backupLesson = 0;
+    m_backupLesson = nullptr;
 }
 
 void RemoveLessonCommand::redo()

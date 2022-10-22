@@ -17,7 +17,7 @@ class KeyboardLayoutComboBox: public KComboBox
 {
     Q_OBJECT
 public:
-    explicit KeyboardLayoutComboBox(QWidget* parent = 0);
+    explicit KeyboardLayoutComboBox(QWidget* parent = nullptr);
     ResourceModel* resourceModel() const;
     void setResourceModel(ResourceModel* model);
     DataIndexKeyboardLayout* keyboardLayoutAt(int index) const;

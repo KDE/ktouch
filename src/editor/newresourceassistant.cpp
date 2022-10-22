@@ -95,7 +95,7 @@ Resource* NewResourceAssistant::createResource()
         return keyboardLayout;
     }
 
-    return 0;
+    return nullptr;
 }
 
 void NewResourceAssistant::setResourceType(ResourceModel::ResourceItemType type)

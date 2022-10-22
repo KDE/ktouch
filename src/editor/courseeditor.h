@@ -22,7 +22,7 @@ class CourseEditor : public AbstractEditor, private Ui::CourseEditor
 {
     Q_OBJECT
 public:
-    explicit CourseEditor(QWidget* parent = 0);
+    explicit CourseEditor(QWidget* parent = nullptr);
     ~CourseEditor() override;
     void setResourceModel(ResourceModel* model);
     void openCourse(DataIndexCourse* dataIndexCourse);

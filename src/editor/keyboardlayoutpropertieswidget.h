@@ -20,7 +20,7 @@ class KeyboardLayoutPropertiesWidget : public QWidget, private Ui::KeyboardLayou
 {
     Q_OBJECT
 public:
-    explicit KeyboardLayoutPropertiesWidget(QWidget* parent = 0);
+    explicit KeyboardLayoutPropertiesWidget(QWidget* parent = nullptr);
     void setKeyboardLayout(KeyboardLayout* layout);
     void setUndoStack(QUndoStack* undoStack);
     void setSelectedKey(int index);

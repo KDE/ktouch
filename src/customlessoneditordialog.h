@@ -19,7 +19,7 @@ class CustomLessonEditorDialog : public QDialog, private Ui::CustomLessonEditorD
 {
     Q_OBJECT
 public:
-    explicit CustomLessonEditorDialog(QWidget* parent = 0);
+    explicit CustomLessonEditorDialog(QWidget* parent = nullptr);
     Lesson* lesson() const;
     void setLesson(Lesson* lesson);
     KeyboardLayout* keyboardLayout() const;

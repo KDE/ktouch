@@ -33,7 +33,7 @@ public:
         IncorrectCharacter
     };
 
-    explicit TrainingStats(QObject* parent = 0);
+    explicit TrainingStats(QObject* parent = nullptr);
     int charactesTyped() const;
     void setCharactersTyped(int charactesTyped);
     QTime elapsedTime() const;

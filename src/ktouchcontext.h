@@ -28,7 +28,7 @@ class KTouchContext : public QObject
     Q_PROPERTY(DataIndex* globalDataIndex READ dataIndex CONSTANT)
     Q_PROPERTY(bool keyboardKCMAvailable READ keyboardKCMAvailable CONSTANT)
 public:
-    explicit KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject* parent = 0);
+    explicit KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject* parent = nullptr);
     ~KTouchContext() override;
     QString keyboardLayoutName() const;
     DataIndex* dataIndex();

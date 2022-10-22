@@ -18,7 +18,7 @@
 
 CharactersViewDelegate::CharactersViewDelegate(QObject* parent) :
     QStyledItemDelegate(parent),
-    m_keyboardLayout(0)
+    m_keyboardLayout(nullptr)
 {
 }
 

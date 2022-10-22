@@ -17,8 +17,8 @@
 CustomLessonEditorDialog::CustomLessonEditorDialog(QWidget* parent) :
     QDialog(parent),
     Ui::CustomLessonEditorDialog(),
-    m_lesson(0),
-    m_keyboardLayout(0)
+    m_lesson(nullptr),
+    m_keyboardLayout(nullptr)
 {
     this->setupUi(this);
 

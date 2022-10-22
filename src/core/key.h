@@ -21,7 +21,7 @@ class Key : public AbstractKey
     Q_PROPERTY(int keyCharCount READ keyCharCount NOTIFY keyCharCountChanged)
 
 public:
-    explicit Key(QObject* parent = 0);
+    explicit Key(QObject* parent = nullptr);
     Q_INVOKABLE QString keyType() const override;
     int fingerIndex() const;
     void setFingerIndex(int finger);

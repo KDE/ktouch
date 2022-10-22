@@ -69,7 +69,7 @@ public:
         ShadowShade
     };
 
-    explicit KColorSchemeProxy(QObject* parent = 0);
+    explicit KColorSchemeProxy(QObject* parent = nullptr);
 
     ColorGroup colorGroup() const;
     void setColorGroup(ColorGroup group);

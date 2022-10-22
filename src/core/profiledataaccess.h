@@ -32,7 +32,7 @@ public:
         LastSelectedLesson = 2
     };
 
-    explicit ProfileDataAccess(QObject* parent = 0);
+    explicit ProfileDataAccess(QObject* parent = nullptr);
 
     Q_INVOKABLE void loadProfiles();
     int profileCount() const;
@@ -58,7 +58,7 @@ public:
     Q_INVOKABLE bool storeCustomLesson(Lesson* lesson, Profile* profile, const QString& keyboardLayoutName);
     Q_INVOKABLE bool deleteCustomLesson(const QString& id);
 
-    QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = 0, Lesson* lessonFilter = 0);
+    QSqlQuery learningProgressQuery(Profile* profile, Course* courseFilter = nullptr, Lesson* lessonFilter = nullptr);
 
 signals:
     void profileCountChanged();
