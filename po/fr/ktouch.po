@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"POT-Creation-Date: 2022-10-23 00:40+0000\n"
 "PO-Revision-Date: 2022-10-09 17:35+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -104,8 +104,8 @@ msgstr "En bas à gauche"
 msgid "Bottom right"
 msgstr "En bas à droite"
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
-#: src/editor/resourceeditor.cpp:246
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
+#: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
 msgstr "Erreur lors de l'ouverture du cours"
@@ -115,8 +115,8 @@ msgstr "Erreur lors de l'ouverture du cours"
 msgid "Built-in courses can only be viewed."
 msgstr "Les cours intégrés ne peuvent être que consultés."
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
-#: src/editor/resourceeditor.cpp:277
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
+#: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
 msgstr "Erreur lors de l'ouverture de la disposition du clavier"
@@ -180,7 +180,7 @@ msgid "Template"
 msgstr "Modèle"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:49
+#: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:70
@@ -188,112 +188,112 @@ msgstr "Modèle"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: src/editor/resourceeditor.cpp:52
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
 msgstr "Importer"
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
 msgstr "Exporter"
 
-#: src/editor/resourceeditor.cpp:64
+#: src/editor/resourceeditor.cpp:65
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Éditeur de format pour les leçons et le clavier"
 
-#: src/editor/resourceeditor.cpp:66
+#: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
 msgstr "Créer un nouveau cours ou une nouvelle disposition de clavier"
 
-#: src/editor/resourceeditor.cpp:68
+#: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
 msgstr "Supprimer le cours ou la disposition de clavier sélectionné"
 
-#: src/editor/resourceeditor.cpp:78
+#: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
 msgstr "Importer un cours ou une disposition de clavier à partir d'un fichier"
 
-#: src/editor/resourceeditor.cpp:80
+#: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr ""
 "Exporter le cours ou la disposition de clavier actuellement sélectionné dans "
 "un fichier"
 
-#: src/editor/resourceeditor.cpp:172
+#: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
 msgstr "Erreur lors de la suppression du cours"
 
-#: src/editor/resourceeditor.cpp:194
+#: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
 msgstr "Erreur lors de la suppression de la disposition de clavier"
 
-#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
-#: src/editor/resourceeditor.cpp:283
+#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
+#: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr "Fichier XML (*.xml)"
 
-#: src/editor/resourceeditor.cpp:223
+#: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr "Le fichier sélectionné n'a pas pu être importé."
 
-#: src/editor/resourceeditor.cpp:258
+#: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
 msgstr "Erreur lors de l'enregistrement du cours"
 
-#: src/editor/resourceeditor.cpp:289
+#: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
 msgstr "Erreur lors de l'enregistrement de la disposition de clavier"
 
-#: src/editor/resourceeditor.cpp:376
+#: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr "Le cours <b>%1</b> a été supprimé"
 
-#: src/editor/resourceeditor.cpp:380
+#: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "La disposition de clavier <b>%1</b> a été supprimée"
 
-#: src/editor/resourceeditor.cpp:414
+#: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr "Erreur lors de l'enregistrement du cours sur le disque."
 
-#: src/editor/resourceeditor.cpp:448
+#: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
 msgstr ""
 "Erreur lors de l'enregistrement de la disposition de clavier sur le disque."
 
-#: src/editor/resourceeditor.cpp:517
+#: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "Le cours sélectionné est déjà présent en tant que cours intégré"
 
-#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
 msgstr "Importer comme nouveau cours"
 
-#: src/editor/resourceeditor.cpp:537
+#: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "Le cours sélectionné est déjà présent comme cours utilisateur."
 
-#: src/editor/resourceeditor.cpp:585
+#: src/editor/resourceeditor.cpp:613
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
@@ -302,12 +302,12 @@ msgstr ""
 "La disposition de clavier sélectionnée est déjà présente comme disposition "
 "de clavier intégrée."
 
-#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "Importer comme nouvelle disposition de clavier"
 
-#: src/editor/resourceeditor.cpp:600
+#: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

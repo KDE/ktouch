@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"POT-Creation-Date: 2022-10-23 00:40+0000\n"
 "PO-Revision-Date: 2021-11-12 00:50+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -78,8 +78,8 @@ msgstr "왼쪽 아래"
 msgid "Bottom right"
 msgstr "오른쪽 아래"
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
-#: src/editor/resourceeditor.cpp:246
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
+#: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
 msgstr "과정을 여는 중 오류 발생"
@@ -89,8 +89,8 @@ msgstr "과정을 여는 중 오류 발생"
 msgid "Built-in courses can only be viewed."
 msgstr "내장 과정은 보기만 할 수 있습니다."
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
-#: src/editor/resourceeditor.cpp:277
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
+#: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
 msgstr "키보드 레이아웃을 여는 중 오류 발생"
@@ -153,7 +153,7 @@ msgid "Template"
 msgstr "템플릿"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:49
+#: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:70
@@ -161,121 +161,121 @@ msgstr "템플릿"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/editor/resourceeditor.cpp:52
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
 msgstr "가져오기"
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
 msgstr "내보내기"
 
-#: src/editor/resourceeditor.cpp:64
+#: src/editor/resourceeditor.cpp:65
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "과정과 키보드 레이아웃 편집기"
 
-#: src/editor/resourceeditor.cpp:66
+#: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
 msgstr "새 과정이나 키보드 레이아웃 만들기"
 
-#: src/editor/resourceeditor.cpp:68
+#: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
 msgstr "선택한 과정이나 키보드 레이아웃 삭제"
 
-#: src/editor/resourceeditor.cpp:78
+#: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
 msgstr "파일에서 과정이나 키보드 레이아웃 가져오기"
 
-#: src/editor/resourceeditor.cpp:80
+#: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr "파일로 과정이나 키보드 레이아웃 내보내기"
 
-#: src/editor/resourceeditor.cpp:172
+#: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
 msgstr "과정을 삭제하는 중 오류 발생"
 
-#: src/editor/resourceeditor.cpp:194
+#: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
 msgstr "키보드 레이아웃을 삭제하는 중 오류 발생"
 
-#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
-#: src/editor/resourceeditor.cpp:283
+#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
+#: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr "XML 파일 (*.xml)"
 
-#: src/editor/resourceeditor.cpp:223
+#: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr "선택한 파일을 가져올 수 없습니다."
 
-#: src/editor/resourceeditor.cpp:258
+#: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
 msgstr "과정을 저장하는 중 오류 발생"
 
-#: src/editor/resourceeditor.cpp:289
+#: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
 msgstr "키보드 레이아웃을 저장하는 중 오류 발생"
 
-#: src/editor/resourceeditor.cpp:376
+#: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr "<b>%1</b> 과정이 삭제됨"
 
-#: src/editor/resourceeditor.cpp:380
+#: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "<b>%1</b> 키보드 레이아웃이 삭제됨"
 
-#: src/editor/resourceeditor.cpp:414
+#: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr "과정을 저장하는 중 오류가 발생했습니다."
 
-#: src/editor/resourceeditor.cpp:448
+#: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
 msgstr "키보드 레이아웃을 저장하는 중 오류가 발생했습니다."
 
-#: src/editor/resourceeditor.cpp:517
+#: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr "선택한 과정이 이미 내장 과정으로 존재합니다."
 
-#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
 msgstr "새 과정으로 가져오기"
 
-#: src/editor/resourceeditor.cpp:537
+#: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr "선택한 과정이 이미 사용자 과정으로 존재합니다."
 
-#: src/editor/resourceeditor.cpp:585
+#: src/editor/resourceeditor.cpp:613
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr "선택한 키보드 레이아웃이 이미 내장 키보드 레이아웃으로 존재합니다."
 
-#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
 msgid "Import as new keyboard layout"
 msgstr "새 키보드 레이아웃으로 가져오기"
 
-#: src/editor/resourceeditor.cpp:600
+#: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."

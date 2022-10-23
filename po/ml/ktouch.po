@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:41+0000\n"
+"POT-Creation-Date: 2022-10-23 00:40+0000\n"
 "PO-Revision-Date: 2019-12-12 21:33+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -79,8 +79,8 @@ msgstr "താഴെ ഇടത് "
 msgid "Bottom right"
 msgstr "താഴെ വലത് "
 
-#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:166
-#: src/editor/resourceeditor.cpp:246
+#: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
+#: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
 msgstr "കോഴ്സ് തുറക്കുന്നതിൽ സാങ്കേതിക തടസം "
@@ -90,8 +90,8 @@ msgstr "കോഴ്സ് തുറക്കുന്നതിൽ സാങ്�
 msgid "Built-in courses can only be viewed."
 msgstr ""
 
-#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:189
-#: src/editor/resourceeditor.cpp:277
+#: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
+#: src/editor/resourceeditor.cpp:278
 #, fuzzy, kde-format
 msgid "Error while opening keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
@@ -156,7 +156,7 @@ msgid "Template"
 msgstr "രൂപമാതൃകകള്‍"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:49
+#: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:70
@@ -164,121 +164,121 @@ msgstr "രൂപമാതൃകകള്‍"
 msgid "Delete"
 msgstr "നീക്കം ചെയ്യുക"
 
-#: src/editor/resourceeditor.cpp:52
+#: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:53
+#: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:64
+#: src/editor/resourceeditor.cpp:65
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്‍"
 
-#: src/editor/resourceeditor.cpp:66
+#: src/editor/resourceeditor.cpp:67
 #, fuzzy, kde-format
 msgid "Create a new course or keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:68
+#: src/editor/resourceeditor.cpp:69
 #, fuzzy, kde-format
 msgid "Delete the current selected course or keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:78
+#: src/editor/resourceeditor.cpp:79
 #, fuzzy, kde-format
 msgid "Import a course or keyboard layout from a file"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:80
+#: src/editor/resourceeditor.cpp:81
 #, fuzzy, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:172
+#: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:194
+#: src/editor/resourceeditor.cpp:195
 #, fuzzy, kde-format
 msgid "Error while deleting keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:211 src/editor/resourceeditor.cpp:252
-#: src/editor/resourceeditor.cpp:283
+#: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
+#: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:223
+#: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:258
+#: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:289
+#: src/editor/resourceeditor.cpp:290
 #, fuzzy, kde-format
 msgid "Error while saving keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:376
+#: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:380
+#: src/editor/resourceeditor.cpp:381
 #, fuzzy, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
 msgstr "&കീബോര്‍ഡ് മാതൃകകള്‍"
 
-#: src/editor/resourceeditor.cpp:414
+#: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:448
+#: src/editor/resourceeditor.cpp:449
 #, fuzzy, kde-format
 msgid "Error while saving keyboard layout to disk."
 msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്‍"
 
-#: src/editor/resourceeditor.cpp:517
+#: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:518 src/editor/resourceeditor.cpp:538
+#: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:537
+#: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:585
+#: src/editor/resourceeditor.cpp:613
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
 
-#: src/editor/resourceeditor.cpp:586 src/editor/resourceeditor.cpp:601
+#: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, fuzzy, kde-format
 msgid "Import as new keyboard layout"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/editor/resourceeditor.cpp:600
+#: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
