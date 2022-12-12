@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2022-04-25 12:43+0300\n"
+"PO-Revision-Date: 2022-12-11 20:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -898,7 +898,7 @@ msgstr "Menü"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
 msgid "Resume Training"
-msgstr "Eğitime Devam Et"
+msgstr "Eğitimi Sürdür"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
