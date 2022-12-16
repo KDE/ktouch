@@ -164,6 +164,9 @@ endif ()
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)
 
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/*-apps-ktouch.png")
+ecm_add_app_icon(ktouch_SRCS ICONS ${ICONS_SRCS})
+
 add_executable(ktouch ${ktouch_SRCS} ${ktouch_imgs_SRCS} ${ktouch_qml_SRCS})
 
 #uncomment this if oxygen icons for ktouch are available
