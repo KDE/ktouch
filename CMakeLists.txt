@@ -11,7 +11,7 @@ cmake_minimum_required(VERSION 3.16)
 project(ktouch VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.90.0")
+set(KF5_MIN_VERSION "5.91.0")
 set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -27,6 +27,7 @@ include(ECMInstallIcons)
 include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
@@ -84,6 +85,8 @@ endif()
 
 # enable QML debugging for debug builds
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.101.0)
 
 # subdirectories to build
 ecm_optional_add_subdirectory(data)
