@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2022-12-27 07:04+0100\n"
+"PO-Revision-Date: 2022-12-28 09:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -700,17 +700,17 @@ msgstr "პროფილების მართვა"
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr ""
+msgstr "გავლილი გაკვეთილები:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
 msgid "Total training time:"
-msgstr ""
+msgstr "გაკვეთილების ჯამური დრო:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "ბოლო გაკვეთილი:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
@@ -856,12 +856,12 @@ msgstr "ზემოთ"
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr ""
+msgstr "ყველა გაკვეთილი"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "This Lesson"
-msgstr ""
+msgstr "ეს გაკვეთილი"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
@@ -876,12 +876,12 @@ msgstr "მენიუ"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
 msgid "Resume Training"
-msgstr ""
+msgstr "გაკვეთილის გაგრძელება"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
 msgid "Restart Lesson"
-msgstr ""
+msgstr "გაკვეთილის თავიდან დაწყება"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
