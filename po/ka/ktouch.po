@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2022-12-25 08:26+0100\n"
+"PO-Revision-Date: 2022-12-29 11:40+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -47,12 +47,12 @@ msgstr ""
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr ""
+msgstr "კურსი ID-ით %1 არ არსებობს"
 
 #: src/core/userdataaccess.cpp:328
 #, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr ""
+msgstr "კლავიატურის განლაგება ID-ით %1 არ არსებობს"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
@@ -83,18 +83,18 @@ msgstr "ქვედა მარჯვენა"
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr ""
+msgstr "კურსის გახსნის შეცდომა"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr ""
+msgstr "ჩაშენებული კურსები შეგიძლიათ მხოლოდ დაათვალიეროთ."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr ""
+msgstr "კლავიატურის განლაგების გახსნის შეცდომა"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
@@ -116,17 +116,17 @@ msgstr[1] "%1 სიმბოლო"
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "ტექსტური ფაილები (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
-msgstr ""
+msgstr "მონიშნული ფაილის გახსნა შეიძლებელია"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr ""
+msgstr "კლავიატურის განლაგება ამ სახელით უკვე არსებობს."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -147,7 +147,7 @@ msgstr "ახალი კურსი"
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr ""
+msgstr "ახალი კლავიატურის განლაგება"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -202,12 +202,12 @@ msgstr ""
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr ""
+msgstr "შეცდომა კურსის წაშლისას"
 
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr ""
+msgstr "შეცდომა კლავიატურის განლაგების წაშლისას"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
@@ -218,37 +218,37 @@ msgstr "XML ფაილები (*.xml)"
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr ""
+msgstr "მონიშნული ფაილის შემოტანა შეუძლებელია."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr ""
+msgstr "შეცდომა კურსის შენახვისას"
 
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr ""
+msgstr "შეცდომა კლავიატურის განლაგების შენახვისას"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr ""
+msgstr "კურსი <b>%1</b> წაშლილია"
 
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr ""
+msgstr "კლავიატურის განლაგება <b>%1</b> წაშლილია"
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr ""
+msgstr "შეცდომა კურსის დისკზე შენახვისას."
 
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr ""
+msgstr "შეცდომა კლავიატურის განლაგების დისკზე შენახვისას."
 
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
@@ -258,7 +258,7 @@ msgstr ""
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
-msgstr ""
+msgstr "ახალი კურსის შემოტანა"
 
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
@@ -275,7 +275,7 @@ msgstr ""
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
 msgid "Import as new keyboard layout"
-msgstr ""
+msgstr "ახალი კლავიატურის განლაგების სახით შემოტაან"
 
 #: src/editor/resourceeditor.cpp:637
 #, kde-format
@@ -296,12 +296,12 @@ msgstr "მოსილება"
 #: src/editor/resourcetemplatewidget.cpp:45
 #, kde-format
 msgid "Use another course as template"
-msgstr ""
+msgstr "ნიმუშად სხვა კურსის გამოყენება"
 
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr ""
+msgstr "ნიმუშად სხვა კლავიატურის განლაგების გამოყენება"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -389,7 +389,7 @@ msgstr "გაკვეთილები"
 #: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Training Settings"
-msgstr ""
+msgstr "გაკვეთილების მორგება"
 
 #: src/ktouchcontext.cpp:130
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "კლავიატურის მორგება"
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr ""
+msgstr "კურსისა და კლავიატურის განლაგების რედაქტორი..."
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
@@ -512,7 +512,7 @@ msgstr "სიმბოლო"
 #: src/models/charactersmodel.cpp:197
 #, kde-format
 msgid "Modifier ID"
-msgstr ""
+msgstr "მოდიფიკატორის ID"
 
 #: src/models/charactersmodel.cpp:199
 #, kde-format
@@ -522,7 +522,7 @@ msgstr "მდებარეობა"
 #: src/models/lessonmodel.cpp:67
 #, kde-format
 msgid "<No title>"
-msgstr ""
+msgstr "<სათაურის გარეშე>"
 
 #: src/models/lessonmodel.cpp:69
 #, kde-format
@@ -559,7 +559,7 @@ msgstr "სიზუსტე"
 #: src/qml/meters/CharactersPerMinuteMeter.qml:20
 #, kde-format
 msgid "Characters per Minute"
-msgstr ""
+msgstr "სიმბოლო წუთში"
 
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
@@ -585,17 +585,17 @@ msgstr "სიზუსტე:"
 #: src/qml/common/LearningProgressChart.qml:95
 #, kde-format
 msgid "Characters per Minute:"
-msgstr ""
+msgstr "სიმბოლო წუთში:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr ""
+msgstr "კურსები თქვენი კლავიატურის განლაგებისთვის"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Other Courses"
-msgstr ""
+msgstr "სხვა კურსები"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
@@ -636,12 +636,12 @@ msgstr "კლავიატურის მორგება"
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr ""
+msgstr "გაკვეთილი <b>%1</b> წაიშალა."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "უსახელო გაკვეთილი წაიშალა."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -679,7 +679,7 @@ msgstr "გაკვეთილის ტექსტი"
 #: src/qml/homescreen/ProfileForm.qml:98
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "დასრულებულია"
 
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
@@ -700,17 +700,17 @@ msgstr "პროფილების მართვა"
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr ""
+msgstr "გავლილი გაკვეთილები:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
 msgid "Total training time:"
-msgstr ""
+msgstr "გაკვეთილების ჯამური დრო:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "ბოლო გაკვეთილი:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
@@ -763,14 +763,14 @@ msgid "All lessons are unlocked immediately."
 msgstr ""
 
 #: src/qml/homescreen/ProfileSelector.qml:57
-#, fuzzy, kde-format
+#, kde-format
 msgid "Create New Profile"
 msgstr "ახალი პროფილის შექმნა"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
 msgid "Use Selected Profile"
-msgstr ""
+msgstr "მონიშნული პროფილის გამოყენება"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
@@ -801,12 +801,12 @@ msgstr ""
 #: src/qml/scorescreen/ScoreScreen.qml:166
 #, kde-format
 msgid "Repeat Lesson"
-msgstr ""
+msgstr "გაკვეთილის გამეორება"
 
 #: src/qml/scorescreen/ScoreScreen.qml:174
 #, kde-format
 msgid "Next Lesson"
-msgstr ""
+msgstr "შემდეგი გაკვეთილი"
 
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
@@ -856,12 +856,12 @@ msgstr "ზემოთ"
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr ""
+msgstr "ყველა გაკვეთილი"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "This Lesson"
-msgstr ""
+msgstr "ეს გაკვეთილი"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
@@ -876,12 +876,12 @@ msgstr "მენიუ"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
 msgid "Resume Training"
-msgstr ""
+msgstr "გაკვეთილის გაგრძელება"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
 msgid "Restart Lesson"
-msgstr ""
+msgstr "გაკვეთილის თავიდან დაწყება"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
@@ -957,49 +957,49 @@ msgstr " %"
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "კლავიატურის განლაგება:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "აღწერა:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
 #, kde-format
 msgid "Lessons:"
-msgstr ""
+msgstr "გაკვეთილები:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
 #: src/ui/courseeditor.ui:182
 #, kde-format
 msgid "Add new lesson"
-msgstr ""
+msgstr "ახალი გაკვეთილის დამატება"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
-msgstr ""
+msgstr "გაკვეთილის წაშლა"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:228
 #, kde-format
 msgid "Move lesson up"
-msgstr ""
+msgstr "გაკვეთილის აწევა"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
 #: src/ui/courseeditor.ui:243
 #, kde-format
 msgid "Move lesson down"
-msgstr ""
+msgstr "გაკვეთილის დაწევა"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:320
 #, kde-format
 msgid "New characters:"
-msgstr ""
+msgstr "ახალი სიმბოლოები:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
 #: src/ui/customlessoneditordialog.ui:14
@@ -1011,13 +1011,13 @@ msgstr "ფანჯარა"
 #: src/ui/keyboardlayouteditor.ui:22
 #, kde-format
 msgid "Create new normal key"
-msgstr ""
+msgstr "ახალი ნორმალური გასაღების დამატება"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:25
 #, kde-format
 msgid "Normal Key"
-msgstr ""
+msgstr "ნორმალური გასაღები"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:43
@@ -1169,13 +1169,13 @@ msgstr "სიმბოლოები"
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
 #, kde-format
 msgid "Add new character"
-msgstr ""
+msgstr "ახალი სიმბოლოს დამატება"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:513
 #, kde-format
 msgid "Remove character"
-msgstr ""
+msgstr "სიმბოლოს წაშლა"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:562
@@ -1235,7 +1235,7 @@ msgstr "ჭდე:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:630
 #, kde-format
 msgid "Modifier ID:"
-msgstr ""
+msgstr "მოდიფიკატორის ID:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
 #: src/ui/lessontexteditor.ui:31
@@ -1247,13 +1247,13 @@ msgstr ""
 #: src/ui/lessontexteditor.ui:46
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr ""
+msgstr "ხაზების გადატანა"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:74
 #, kde-format
 msgid "0 Characters"
-msgstr ""
+msgstr "0 სიმბოლო"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
@@ -1339,42 +1339,42 @@ msgstr "აღწერის შეცვლა"
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format
 msgid "Add lesson"
-msgstr ""
+msgstr "გაკვეთილის დამატება"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
 msgid "Move lesson"
-msgstr ""
+msgstr "გაკვეთილის გადატანა"
 
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr ""
+msgstr "გაკვეთილის სატაურის დაყენება"
 
 #: src/undocommands/coursecommands.cpp:321
 #, kde-format
 msgid "Set new characters for lesson"
-msgstr ""
+msgstr "გაკვეთილისთვის ახალი სიმბოლოების დაყენება"
 
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr ""
+msgstr "გაკვეთილის ტექსტის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr ""
+msgstr "კლავიატურის განლაგების სათაურის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr ""
+msgstr "კლავიატურის განლაგების სახელის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr ""
+msgstr "კლავიატურის განლაგების ზომის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
@@ -1384,12 +1384,12 @@ msgstr "გასაღების დამატება"
 #: src/undocommands/keyboardlayoutcommands.cpp:198
 #, kde-format
 msgid "Remove key"
-msgstr ""
+msgstr "გასაღების წაშლა"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
 msgid "Set key geometry"
-msgstr ""
+msgstr "გასაღების გეომეტრიის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
