@@ -404,7 +404,7 @@ msgstr "Entrenament"
 #: src/ktouchcontext.cpp:129
 #, kde-format
 msgid "Training Settings"
-msgstr "Configuració de l'entrenament"
+msgstr "Configureu l'entrenament"
 
 #: src/ktouchcontext.cpp:130
 #, kde-format
@@ -414,13 +414,13 @@ msgstr "Colors"
 #: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Color Settings"
-msgstr "Configuració del color"
+msgstr "Configureu el color"
 
 #: src/ktouchcontext.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr "Configuració del teclat"
+msgstr "Configureu el teclat"
 
 #: src/ktouchcontext.cpp:160
 #, kde-format
@@ -655,7 +655,7 @@ msgstr ""
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
 msgid "Configure Keyboard"
-msgstr "Configuració del teclat"
+msgstr "Configureu el teclat"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
