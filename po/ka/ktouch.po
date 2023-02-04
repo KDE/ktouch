@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2022-12-28 09:35+0100\n"
+"PO-Revision-Date: 2023-02-03 16:11+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -42,7 +42,7 @@ msgstr "გაკვეთილის ხელით მითითება"
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr ""
+msgstr "პირადი გაკვეთილების ტექსტების შესანახი ადგილი"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "კლავიატურის განლაგების გა�
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr ""
+msgstr "ჩაშენებული კლავიატურის განლაგებების მხოლოდ ნახვაა შესაძლებელი."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -177,27 +177,27 @@ msgstr "გატანა"
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr ""
+msgstr "კურსისა და კლავიატურის განლაგების რედაქტორი"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr ""
+msgstr "ახალი კურსის ან კლავიატურის განლაგების შექმნა"
 
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr ""
+msgstr "მონიშნული კურსის ან კლავიატურის განლაგების წაშლა"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr ""
+msgstr "კურსის ან კლავიატურის განლაგების ფაილიდან შემოტანა"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
-msgstr ""
+msgstr "ამჟამად მონიშნული კურსის ან კლავიატურის განლაგების ფაილში გატანა"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
@@ -253,7 +253,7 @@ msgstr "შეცდომა კლავიატურის განლა�
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr ""
+msgstr "მონიშნული კურსი უკვე ხელმისაწვდომია, როგორც ჩაშენებული კურსი."
 
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
@@ -263,7 +263,7 @@ msgstr "ახალი კურსის შემოტანა"
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr ""
+msgstr "მონიშნული კურსი უკვე ხელმისაწვდომია, როგორც მომხმარებლის კურსი."
 
 #: src/editor/resourceeditor.cpp:613
 #, kde-format
@@ -271,6 +271,8 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
+"მონიშნული კლავიატურის განლაგება უკვე ხელმისაწვდომია, როგორც ჩაშენებული "
+"კლავიატურის განლაგება."
 
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
@@ -282,6 +284,8 @@ msgstr "ახალი კლავიატურის განლაგე�
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
+"მონიშნული კლავიატურის განლაგება უკვე ხელმისაწვდომია, როგორც მომხმარებლის "
+"კლავიატურის განლაგება."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
@@ -317,25 +321,25 @@ msgstr "კლავიატურის განლაგება"
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr ""
+msgstr "კლავიატურის განლაგება არა-X11 პლატფორმებს იყენებს"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
+msgstr "აკონტროლებს, შესწორდება კრეფის შეცდომები, თუ არა."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
 #, kde-format
 msgid "Controls the visibility of the keyboard during training."
-msgstr ""
+msgstr "აკონტროლებს გაკვეთილების დროს კლავიატურის ხილვადობას."
 
 #. i18n: ectx: label, entry (ShowStatistics), group (Training)
 #: src/ktouch.kcfg:23
 #, kde-format
 msgid "Controls the visibility of realtime statistics during training."
-msgstr ""
+msgstr "აკონტროლებს გაკვეთილების დროს რეალური დროის სტატისტიკის ხილვადობას."
 
 #. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
 #: src/ktouch.kcfg:27
@@ -796,7 +800,7 @@ msgstr "შეცდომები:"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
-msgstr ""
+msgstr "საწყის ეკრანზე დაბრუნება"
 
 #: src/qml/scorescreen/ScoreScreen.qml:166
 #, kde-format
@@ -944,7 +948,7 @@ msgstr "მარჯვენა ხელი"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr "_გაუმჭვირვალობა"
+msgstr "გაუმჭვირვალობა"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
