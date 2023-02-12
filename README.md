@@ -6,20 +6,24 @@
 ![Screenshot](https://cdn.kde.org/screenshots/ktouch/ktouch.png)
 
 # What is touch typing and how does it work? 
-Touch typing, also called blind typing or touch keyboard, is a style of typing where the typist does not look at the keys as they type. The typist relies on their
-knowledge and muscle memory to locate the key on the keyboard. The typist will place their eight fingers on the home row, which is a horizontal row along the middle 
-of the keyboard, and reach for the other specific keys. 
+Touch typing, also called blind typing or touch keyboard, is a style of typing where the typist does not look at the keys as they type. 
+The typist relies on their knowledge and muscle memory to locate the key on the keyboard. 
+The typist will place their eight fingers on the home row, which is a horizontal row along the middle of the keyboard,
+and reach for the other specific keys as each finger is given its own section of the keyboard.
 
 # Why learn to touch type?
 Touch typing increases speed and accuracy. Average typing speeds are around 30-40 wpm (words per minute) while those who touch type have an average speed of
-60-80 wpm. There is also an increase in efficiency and productivity as the typist does not need to switch from looking at the monitor to lookng at the keyboard. This 
-also then helps reduce neck strain as the typist can keep their posture by avoiding having to keep looking down at the keyboard. Touch typing can also reduce fatigue,
-both mentally and physically. Physically, because it keeps the typist from having to keep bending their necks to look for the next key, and mentally, because it keeps
+60-80 wpm. 
+There is also an increase in efficiency and productivity as the typist does not need to switch from looking at the monitor to lookng at the keyboard. This 
+also then helps reduce neck strain as the typist can keep their posture by avoiding having to keep looking down at the keyboard. 
+Touch typing can also reduce fatigue, both mentally and physically. 
+Physically, because it keeps the typist from having to keep bending their necks to look for the next key, and mentally, because it keeps
 the typist from having to focus on two things at once. 
 
 # Why learn with KTouch?
-KTouch is a program that teaches you how to touch type. The program will help the user practice touch typing with the use of color and so the
-user will know which finger is associated with those key press. KTouch also uses random subset of letters and not just dictionary words so that the user
+KTouch is a program that teaches you how to touch type.
+The program will help the user practice touch typing with the use of color and so the user will know which finger is associated with those key press.
+KTouch also uses random subset of letters and not just dictionary words so that the user
 will be able to practice getting their fingers accustomed to certain patterns. 
     
 
