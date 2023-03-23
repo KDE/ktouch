@@ -1,13 +1,15 @@
 # Translation of ktouch into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Axel Rousseau <axel584@gmail.com>, 2015. #zanata
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2015-03-11 09:39-0400\n"
-"Last-Translator: Axel Rousseau <axel584@gmail.com>\n"
+"PO-Revision-Date: 2023-03-22 19:14+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +116,7 @@ msgstr[1] "%1 Tekstosignoj"
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "Tekstdosieroj (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
@@ -127,8 +129,7 @@ msgid "There is already a keyboard layout with the same name."
 msgstr "Jam ekzistas klavar-aranĝo kun tiu nomo"
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
 msgstr "Nova"
@@ -173,8 +174,7 @@ msgid "Export"
 msgstr "Eksporti"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Course and Keyboard Layout Editor"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Kursa kaj Klava-aranĝa Redaktilo"
@@ -402,8 +402,7 @@ msgid "Color Settings"
 msgstr "Koloraj Agordoj"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "Agordi klavaron"
@@ -429,16 +428,11 @@ msgid "Learn and practice typewriting"
 msgstr "Lerni kaj praktiki tajpadon"
 
 #: src/main.cpp:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
-#| "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+#, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
-"Kopirajtoj (C) 2011-2012 de Sebastian Gottfried\n"
-"Kopirajtoj (C) 2000-2007 de Håvard Frøiland kaj Andreas Nicolai"
 
 #: src/main.cpp:38
 #, kde-format
@@ -573,17 +567,15 @@ msgid "<i>Unknown</i>"
 msgstr "<i>Nekonata</i>"
 
 #: src/qml/common/LearningProgressChart.qml:81
-#, fuzzy, kde-format
-#| msgid "Lessons:"
+#, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
-msgstr "Lecionoj:"
+msgstr "Leciono:"
 
 #: src/qml/common/LearningProgressChart.qml:85
-#, fuzzy, kde-format
-#| msgid "Training"
+#, kde-format
 msgid "Training on:"
-msgstr "Trejnado"
+msgstr ""
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -596,16 +588,14 @@ msgid "Characters per Minute:"
 msgstr "Po Tekstosignoj minute"
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
-#| msgid "Choose Keyboard Layout"
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "Elekti klavar-aranĝon"
+msgstr ""
 
 #: src/qml/homescreen/CourseSelector.qml:163
-#, fuzzy, kde-format
-#| msgid "Courses"
+#, kde-format
 msgid "Other Courses"
-msgstr "Kursoj"
+msgstr "Aliaj Kursoj"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
@@ -619,20 +609,16 @@ msgid "Start Training"
 msgstr "Starti Trejnadon"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as a user keyboard layout."
+#, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "La elektita klavar-aranĝo jam ekzistas kiel uzanta klavar-aranĝo."
+msgstr ""
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as a user keyboard layout."
+#, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
-msgstr "La elektita klavar-aranĝo jam ekzistas kiel uzanta klavar-aranĝo."
+msgstr ""
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -648,10 +634,9 @@ msgid "Configure Keyboard"
 msgstr "Agordi klavaron"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
-#, fuzzy, kde-format
-#| msgid "Course <b>%1</b> deleted"
+#, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr "Kurso <b>%1</b> forigita"
+msgstr ""
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
@@ -666,13 +651,12 @@ msgstr "Malfari"
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "Konfirmi"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Add lesson"
+#, kde-format
 msgid "Edit lesson"
-msgstr "Aldoni Lecionon"
+msgstr "Redakti lecionon"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -687,10 +671,9 @@ msgid "Title:"
 msgstr "Titolo:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
-#, fuzzy, kde-format
-#| msgid "Set lesson text"
+#, kde-format
 msgid "Lesson text"
-msgstr "Agordi lecionan tekston"
+msgstr ""
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
@@ -704,17 +687,15 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Kompletu pasintan lecionon por malŝlosi"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
-#, fuzzy, kde-format
-#| msgid "Create New Profile"
+#, kde-format
 msgid "Manage Profiles"
-msgstr "Krei Novan Aspekton"
+msgstr ""
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
-#| msgid "Create New Profile"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr "Krei Novan Aspekton"
+msgstr ""
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
@@ -792,10 +773,9 @@ msgid "Use Selected Profile"
 msgstr "Uzi elektitan profilon"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Show real-time statistics"
+#, kde-format
 msgid "Lesson training statistics"
-msgstr "Montri realtempajn statistikojn"
+msgstr ""
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -879,8 +859,7 @@ msgid "All Lessons"
 msgstr "Ĉiuj lecionoj"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
-#, fuzzy, kde-format
-#| msgid "This Lesson"
+#, kde-format
 msgid "This Lesson"
 msgstr "Tiu leciono"
 
@@ -970,10 +949,9 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
+#, no-c-format, kde-format
 msgid " %"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
@@ -1333,10 +1311,9 @@ msgstr "Limo de malŝlositaj lecionoj"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
-#, fuzzy, kde-format
-#| msgid "Minimum strokes per minute:"
+#, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr "Minimuma tajpado minute"
+msgstr "Minimuma tajpado &po minuto:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
@@ -1463,35 +1440,3 @@ msgstr "Agordi specialan klavan etikedon"
 #, kde-format
 msgid "Set special key modifier ID"
 msgstr "Agordi specialan klavan modifiilan identigilon"
-
-#~ msgid "Choose Keyboard Layout"
-#~ msgstr "Elekti klavar-aranĝon"
-
-#~ msgid "Create New Custom Lesson"
-#~ msgstr "Krei Novan Propran Lecionon"
-
-#~ msgid "'%1' deleted."
-#~ msgstr "'%1' forigita"
-
-#~ msgctxt "Statistics on lesson:"
-#~ msgid "On:"
-#~ msgstr "Ĉe:"
-
-#~ msgid "Use OpenGL for rendering (experimental)"
-#~ msgstr "Uzi OpenGL por bildigo (eksperimenta)"
-
-#~ msgid "Edit Custom Lesson"
-#~ msgstr "Redakti propran lecionon"
-
-#~ msgid "No Courses Available"
-#~ msgstr "Neniu kurso disponebla"
-
-#~ msgid ""
-#~ "Typewriting Trainer has no courses for your keyboard layout. You may "
-#~ "create your own course with the keyboard layout and course editor."
-#~ msgstr ""
-#~ "Typewriting Trainer havas neniun kurson por tiu klavar-aranĝo. Vi povas "
-#~ "mem krei vian kurson per la klavar-aranĝan kaj kursan redaktilo."
-
-#~ msgid "Launch Editor"
-#~ msgstr "Lanĉi Redaktilon"
