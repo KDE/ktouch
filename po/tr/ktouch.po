@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2023-01-19 22:39+0300\n"
+"PO-Revision-Date: 2023-03-27 21:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -99,7 +99,7 @@ msgstr "Ders açılırken hata"
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr "Dahili dersler yalnızca görüntülenebilir."
+msgstr "İçsel dersler yalnızca görüntülenebilir."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
@@ -110,7 +110,7 @@ msgstr "Klavye düzeni açılırken hata"
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "Dahili klavye düzenleri yalnızca görüntülenebilir."
+msgstr "İçsel klavye düzenleri yalnızca görüntülenebilir."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -137,7 +137,7 @@ msgstr "Seçili dosya açılamadı"
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr "Aynı adda bir klavye düzeni zaten mevcut."
+msgstr "Aynı adda bir klavye düzeni halihazırda var."
 
 #: src/editor/newresourceassistant.cpp:30
 #, kde-format
@@ -153,12 +153,12 @@ msgstr "Yeni..."
 #: src/editor/newresourceassistant.cpp:35
 #, kde-format
 msgid "New course"
-msgstr "Yeni ders"
+msgstr "Yeni Ders"
 
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr "Yeni klavye düzeni"
+msgstr "Yeni Klavye Düzeni"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
@@ -177,18 +177,18 @@ msgstr "Sil"
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr "İçe aktar"
+msgstr "İçe Aktar"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
-msgstr "Dışa aktar"
+msgstr "Dışa Aktar"
 
 #: src/editor/resourceeditor.cpp:65
 #, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr "Ders ve Klavye Düzeni Düzenleyicsii"
+msgstr "Ders ve Klavye Düzeni Düzenleyici"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "Seçili ders veya klavye düzenini sil"
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr "Bir dosyadan ders veya klavye düzeni al"
+msgstr "Bir dosyadan ders veya klavye düzeni içe aktar"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "Ders"
 #: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
-msgstr "Klavye Dizilimi"
+msgstr "Klavye düzeni"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
@@ -420,7 +420,7 @@ msgstr "Renk Ayarları"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr "Klavye Yapılandır"
+msgstr "Klavyeyi Yapılandır"
 
 #: src/ktouchcontext.cpp:160
 #, kde-format
@@ -435,7 +435,7 @@ msgstr "Klavye Yapılandır..."
 #: src/main.cpp:26
 #, kde-format
 msgid "Typewriting Trainer"
-msgstr "Yazım Eğiticisi"
+msgstr "Yazım Eğitici"
 
 #: src/main.cpp:28
 #, kde-format
@@ -559,12 +559,12 @@ msgstr "Dersler"
 #: src/models/resourcemodel.cpp:211
 #, kde-format
 msgid "Keyboard Layouts"
-msgstr "Klavye Dizilimleri"
+msgstr "Klavye Düzenleri"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
 msgid "Name: %1"
-msgstr "İsmi: %1"
+msgstr "Ad: %1"
 
 #: src/qml/common/LearningProgressChart.qml:39
 #: src/qml/meters/AccuracyMeter.qml:17
@@ -576,7 +576,7 @@ msgstr "Doğruluk"
 #: src/qml/meters/CharactersPerMinuteMeter.qml:20
 #, kde-format
 msgid "Characters per Minute"
-msgstr "Dakikada Karakter Sayısı"
+msgstr "Karakter/dak"
 
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
@@ -602,7 +602,7 @@ msgstr "Doğruluk:"
 #: src/qml/common/LearningProgressChart.qml:95
 #, kde-format
 msgid "Characters per Minute:"
-msgstr "Dakikada Karakter Sayısı:"
+msgstr "Karakter/dak:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
@@ -617,7 +617,7 @@ msgstr "Diğer Dersler"
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr "Yazım Eğiticisi'ne Hoş Geldiniz"
+msgstr "Yazım Eğiticiye Hoş Geldiniz"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
@@ -645,10 +645,10 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
-"KTouch, klavye düzenlerini değiştiremez veya ayarlayamaz. Antremandan önce, "
-"bilgisayarınızı doğru klavye düzenini kullanması için yapılandırmalısınız. "
-"Diğer türlü ders metnine başlarken geçerli klavye düzeninizi kullanmak "
-"durumunda kalırsınız."
+"K On Parmak, klavye düzenlerini değiştiremez veya ayarlayamaz. Antremandan "
+"önce, bilgisayarınızı doğru klavye düzenini kullanması için "
+"yapılandırmalısınız. Diğer türlü ders metnine başlarken geçerli klavye "
+"düzeninizi kullanmak durumunda kalırsınız."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -732,12 +732,12 @@ msgstr "Toplam eğitim süresi:"
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr "En son çalışılan:"
+msgstr "En son çalışma:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr "Asla"
+msgstr "Yok"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
@@ -767,7 +767,7 @@ msgstr "Adı"
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr "Makine yazımında hiç bilgim yok veya çok az bilgim var"
+msgstr "Daktilo yazımı konusunda hiç bilgim yok veya çok az bilgim var"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
@@ -777,7 +777,7 @@ msgstr "Derslerin kilitleri, yazım yeteneğiniz zamanla iyileştikçe açılır
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
 msgid "I am an experienced machine typist and want to improve my skills"
-msgstr "Deneyimli bir makine yazarıyım ve yeteneklerimi artırmak istiyorum"
+msgstr "Deneyimli bir daktilocuyum ve yeteneklerimi geliştirmek istiyorum"
 
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
@@ -979,7 +979,7 @@ msgstr " %"
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr "Klavye Dizilimleri:"
+msgstr "Klavye düzenleri:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
@@ -1063,7 +1063,7 @@ msgstr "Seçili düğmeyi sil"
 #: src/ui/keyboardlayouteditor.ui:135
 #, no-c-format, kde-format
 msgid "100%"
-msgstr "100%"
+msgstr "%​100"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:36
@@ -1077,7 +1077,7 @@ msgstr "Klavye"
 #: src/ui/newkeyboardlayoutwidget.ui:22
 #, kde-format
 msgid "Name:"
-msgstr "Adı:"
+msgstr "Ad:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -1215,7 +1215,7 @@ msgstr "Sekme"
 #: src/ui/keyboardlayoutpropertieswidget.ui:584
 #, kde-format
 msgid "Capslock"
-msgstr "BüyükHarf"
+msgstr "Büyük Harf"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:589
@@ -1227,13 +1227,13 @@ msgstr "Üst Karakter"
 #: src/ui/keyboardlayoutpropertieswidget.ui:594
 #, kde-format
 msgid "Backspace"
-msgstr "Backspace"
+msgstr "Geri Sil"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:599
 #, kde-format
 msgid "Return"
-msgstr "Enter"
+msgstr "Dönüş"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:604
@@ -1293,7 +1293,7 @@ msgstr "Eğitim sırasında:"
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr "Yazım hatalarının düzeltilmesini zorunlu kılar"
+msgstr "Yazım hatalarının düzeltilmesini zorunlu kıl"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
@@ -1317,13 +1317,13 @@ msgstr "Sonraki satıra şununla geç:"
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr "En&ter"
+msgstr "&Dönüş"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr "Boş&luk"
+msgstr "&Boşluk"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
@@ -1346,12 +1346,12 @@ msgstr "En düşük doğruluk:"
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr "Başlığı belirle"
+msgstr "Başlığı ayarla"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Klavye düzenini belirle"
+msgstr "Klavye düzenini ayarla"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1371,32 +1371,32 @@ msgstr "Dersi taşı"
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr "Ders başlığını belirle"
+msgstr "Ders başlığını ayarla"
 
 #: src/undocommands/coursecommands.cpp:321
 #, kde-format
 msgid "Set new characters for lesson"
-msgstr "Ders için yeni karakter belirle"
+msgstr "Ders için yeni karakterler ayarla"
 
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr "Ders metnini belirle"
+msgstr "Ders metnini ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr "Ders klavye düzeni başlığını belirle"
+msgstr "Klavye düzeni başlığını ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr "Klavye düzeni adını belirle"
+msgstr "Klavye düzeni adını ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr "Klavye düzeni boyutunu belirle"
+msgstr "Klavye düzeni boyutunu ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
@@ -1411,17 +1411,17 @@ msgstr "Düğme kaldır"
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
 msgid "Set key geometry"
-msgstr "Düğme geometrisini belirle"
+msgstr "Düğme geometrisini ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
 msgid "Set key finger"
-msgstr "Düğme parmağını belirle"
+msgstr "Düğme parmağını ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr "Düğme dokunmatik işaretçiyi belirle"
+msgstr "Düğme dokunmatik işaretçisini ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
 #, kde-format
@@ -1436,32 +1436,32 @@ msgstr "Düğme karakteri kaldır"
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
 msgid "Set key character value"
-msgstr "Düğme karakter değerini belirle"
+msgstr "Düğme karakter değerini ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr "Düğme karakter değiştiriciyi belirle"
+msgstr "Düğme karakter değiştiriciyi ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr "Düğme karakter konumunu belirle"
+msgstr "Düğme karakter konumunu ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
 #, kde-format
 msgid "Set special key type"
-msgstr "Özel düğme türünü belirle"
+msgstr "Özel düğme türünü ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
 #, kde-format
 msgid "Set special key label"
-msgstr "Özel düğme etiketini belirle"
+msgstr "Özel düğme etiketini ayarla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr "Özel düğme değiştirici kimliğini belirle"
+msgstr "Özel düğme değiştirici kimliğini ayarla"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Klavye Düzenini Seçin"
