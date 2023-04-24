@@ -6,14 +6,14 @@
 # Nicola Ruggero <nixprog.adsl@tiscali.it>, 2006.
 # Nicola Ruggero <nicola@nxnt.org>, 2007.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2013.
-# Paolo Zamponi <zapaolo@email.it>, 2016, 2019, 2021.
+# Paolo Zamponi <feus73@gmail.com>, 2016, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
 "PO-Revision-Date: 2021-11-30 22:43+0100\n"
-"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Paolo Zamponi,Marcello Anni"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zapaolo@email.it,"
+msgstr "feus73@gmail.com,"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
