@@ -7,13 +7,13 @@
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2011, 2012.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2019-07-28 11:20+0200\n"
+"PO-Revision-Date: 2023-04-30 11:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,11 +138,10 @@ msgid "There is already a keyboard layout with the same name."
 msgstr "Xa hai unha disposición de teclado co mesmo nome."
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
-msgstr "Novo"
+msgstr "Nova"
 
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
@@ -184,8 +183,7 @@ msgid "Export"
 msgstr "Exportar"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Course and Keyboard Layout Editor"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "Editor de cursos e de disposición do teclado"
@@ -393,7 +391,7 @@ msgstr "A cor do teclado para realzar as teclas de cada dedo."
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Como de transparentes mostrar as cores dos dedos."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -422,11 +420,10 @@ msgid "Color Settings"
 msgstr "Configuración das cores"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr "Configuración do teclado"
+msgstr "Configurar o teclado"
 
 #: src/ktouchcontext.cpp:160
 #, kde-format
@@ -722,8 +719,7 @@ msgid "Manage Profiles"
 msgstr "Xestionar os perfís"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
-#| msgid "Manage Profiles"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
 msgstr "Xestionar os perfís"
@@ -981,7 +977,7 @@ msgstr "Man dereita"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Opacidade"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
@@ -1146,7 +1142,7 @@ msgstr "Dedo:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
 #, kde-format
 msgid "Left little finger"
-msgstr "Dedo maimiño esquerdo"
+msgstr "Dedo maimiño esquerdo"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:401
@@ -1158,19 +1154,19 @@ msgstr "Dedo anular esquerdo"
 #: src/ui/keyboardlayoutpropertieswidget.ui:406
 #, kde-format
 msgid "Left middle finger"
-msgstr "Dedo corazón esquerdo"
+msgstr "Dedo corazón esquerdo"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:411
 #, kde-format
 msgid "Left index finger"
-msgstr "Dedo índice esquerdo"
+msgstr "Dedo índice esquerdo"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
 #, kde-format
 msgid "Right index finger"
-msgstr "Dedo índice dereito"
+msgstr "Dedo índice dereito"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
@@ -1188,13 +1184,13 @@ msgstr "Dedo anular dereito"
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
 #, kde-format
 msgid "Right little finger"
-msgstr "Dedo maimiño dereito"
+msgstr "Dedo maimiño dereito"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr "Marcador háptico:"
+msgstr "Marcador táctil:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
@@ -1436,7 +1432,7 @@ msgstr "Indicar o dedo da tecla"
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr "Indicar o marcador háptico da tecla"
+msgstr "Indicar o marcador táctil da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
 #, kde-format
