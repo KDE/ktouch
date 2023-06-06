@@ -6,6 +6,7 @@
 
 #include "stringformatter.h"
 
+#include <KLocalizedString>
 #include <QTime>
 
 StringFormatter::StringFormatter(QObject* parent) :
@@ -27,7 +28,7 @@ QString StringFormatter::formatTimeDiff(const QTime& from, const QTime& to)
 
 QString StringFormatter::formatAccuracy(qreal accuracy)
 {
-    return QStringLiteral("%1%").arg(100 * accuracy, 0, 'f', 1);
+    return ki18nc("Accuracy percent value", "%1%").subs(100 * accuracy, 0, 'f', 1).toString();
 }
 
 QString StringFormatter::formatAccuracyDiff(qreal from, qreal to)
