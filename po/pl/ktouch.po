@@ -1,7 +1,7 @@
 # translation of ktouch.po to
 # translation of aktouch.po to
 # translation of aktouch.po to
-# Version: $Revision: 1636570 $
+# Version: $Revision: 1653341 $
 # Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Szymon Janc <szymon@janc.int.pl>, 2003.
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2021-10-03 10:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -42,6 +42,13 @@ msgid "Your emails"
 msgstr ""
 "kde-i18n@rybczynska.net, nkuznik@yahoo.com, szymon@janc.int.pl, mikmach@wp."
 "pl, adriian@wp.pl, lukasz.wojnilowicz@gmail.com"
+
+#: src/bindings/stringformatter.cpp:31
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

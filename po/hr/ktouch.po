@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2010-06-27 20:45+0200\n"
 "Last-Translator: Oliver Mucafir <oliver.untwist@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -29,6 +29,12 @@ msgstr "Renato Pavičić, Oliver Mucafir"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "renato@translator-shop.org, oliver.untwist@gmail.com"
+
+#: src/bindings/stringformatter.cpp:31
+#, kde-format
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr ""
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

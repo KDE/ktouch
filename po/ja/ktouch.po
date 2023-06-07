@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2009-07-13 00:38+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -32,6 +32,12 @@ msgid "Your emails"
 msgstr ""
 "sgtom@pluto.dti.ne.jp,support@mc.neweb.ne.jp,okushi@kde.gr.jp,ybando@k6.dion."
 "ne.jp"
+
+#: src/bindings/stringformatter.cpp:31
+#, kde-format
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr ""
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2017-06-28 10:30+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -34,6 +34,13 @@ msgid "Your emails"
 msgstr ""
 "rch@richard.eu.org, dgvirtual@akl.lt, eugenijus@agvila.lt, stikonas@gmail."
 "com, zmuogs@gmail.com, liudas@akmc.lt,opensuse.lietuviu.kalba@gmail.com"
+
+#: src/bindings/stringformatter.cpp:31
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

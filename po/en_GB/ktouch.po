@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2021-10-10 11:06+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -30,6 +30,13 @@ msgid "Your emails"
 msgstr ""
 "malcolm.hunter@gmx.co.uk,dwayne@translate.org.za, andrew_coles@yahoo.co.uk, "
 "steve.allewell@gmail.com"
+
+#: src/bindings/stringformatter.cpp:31
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

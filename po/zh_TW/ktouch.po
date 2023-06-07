@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2019-07-24 22:57+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -30,6 +30,13 @@ msgstr "Franklin Weng, Jeff Huang"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
+
+#: src/bindings/stringformatter.cpp:31
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

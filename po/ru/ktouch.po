@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2022-07-08 09:01+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -44,6 +44,13 @@ msgid "Your emails"
 msgstr ""
 "shafff@ukr.net,alexey@androsov.net,bird.translator@gmail.com,translation-"
 "team@basealt.ru"
+
+#: src/bindings/stringformatter.cpp:31
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
