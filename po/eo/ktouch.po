@@ -1,14 +1,16 @@
-# Translation of ktouch into esperanto.
+# Translation of ktouch.pot into esperanto.
 # Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the ktouch package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Axel Rousseau <axel584@gmail.com>, 2015. #zanata
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:42+0000\n"
-"PO-Revision-Date: 2023-03-22 19:14+0100\n"
+"PO-Revision-Date: 2023-06-07 21:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -21,16 +23,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Axel Rousseau"
+msgstr "Axel Rousseau,Oliver Kellogg"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "axel@esperanto-jeunes.org"
+msgstr "axel@esperanto-jeunes.org,okellogg@users.sourceforge.net"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -220,7 +221,7 @@ msgstr "Eraro dum forigo de klavar-aranĝo"
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr ""
+msgstr "XML-dosieroj (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
@@ -380,7 +381,7 @@ msgstr "la klavaro kolore flagras por reliefigi la klavon por ĉiuj fingroj"
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "Kiel travideblaj fingrokoloroj devus esti montritaj."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -440,6 +441,8 @@ msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
+"Kopirajto (C) 2011-2015 de Sebastian Gottfried\n"
+"Kopirajto (C) 2000-2007 de Håvard Frøiland kaj Andreas Nicolai"
 
 #: src/main.cpp:38
 #, kde-format
@@ -504,12 +507,12 @@ msgstr "Lanĉi Kursan kaj Klava-aranĝan Redaktilon"
 #: src/main.cpp:63
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "Antaŭmeti la vojon al la listo de QML-importvojoj"
 
 #: src/mainwindow.cpp:60
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "%1 renkontis rultempan eraron kaj devas esti fermata."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -582,7 +585,7 @@ msgstr "Leciono:"
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
 msgid "Training on:"
-msgstr ""
+msgstr "Trejnado pri:"
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -597,7 +600,7 @@ msgstr "Po Tekstosignoj minute"
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr ""
+msgstr "Kursoj Por Via Klavaro Aranĝo"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
@@ -618,7 +621,7 @@ msgstr "Starti Trejnadon"
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr ""
+msgstr "La elektita kurso estas destinita por specifa klavara aranĝo."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
@@ -626,6 +629,8 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
+"La elektita kurso ne estas destinita por la aktiva klavararanĝo de via "
+"komputilo."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -634,6 +639,9 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"KTouch ne povas ŝanĝi aŭ agordi klavarajn aranĝojn. Antaŭ trejnado, vi devas "
+"agordi vian komputilon por uzi la ĝustan klavaran aranĝon. Alie vi devos uzi "
+"vian nunan klavararanĝon por tajpi la lecionan tekston."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -643,12 +651,12 @@ msgstr "Agordi klavaron"
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr ""
+msgstr "Leciono <b>%1</b> forigita."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "Leciono sen titolo forigita."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -680,7 +688,7 @@ msgstr "Titolo:"
 #: src/qml/homescreen/LessonEditorDialog.qml:78
 #, kde-format
 msgid "Lesson text"
-msgstr ""
+msgstr "Leciona teksto"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
@@ -696,13 +704,13 @@ msgstr "Kompletu pasintan lecionon por malŝlosi"
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
 msgid "Manage Profiles"
-msgstr ""
+msgstr "Administri Profilojn"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr ""
+msgstr "Administri Profilojn"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
@@ -782,7 +790,7 @@ msgstr "Uzi elektitan profilon"
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
 msgid "Lesson training statistics"
-msgstr ""
+msgstr "Leciona trejnado-statistiko"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -878,7 +886,7 @@ msgstr "Neniu videbligo disponeblas por tiu klavar-aranĝo."
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "Menuo"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
@@ -951,7 +959,7 @@ msgstr "Dekstra Mano"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "Opakeco"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
@@ -1012,7 +1020,7 @@ msgstr "Novaj Tekstosignoj:"
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "Dialogo"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
@@ -1302,13 +1310,13 @@ msgstr "Iri al sekva linio per:"
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr ""
+msgstr "Reven&u"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr ""
+msgstr "Spa&co"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
