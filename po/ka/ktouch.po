@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:42+0000\n"
-"PO-Revision-Date: 2023-02-03 16:11+0100\n"
+"PO-Revision-Date: 2023-06-08 06:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,8 +29,7 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -352,13 +351,13 @@ msgstr "აკონტროლებს გაკვეთილების �
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
-msgstr ""
+msgstr "ხაზის ბოლოში ღილაკი Return ახალ ხაზზე გადაგრთავთ."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
-msgstr ""
+msgstr "ხაზის ბოლოში გამოტოვების ღილაკი ახალ ხაზზე გადაგრთავთ."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
@@ -390,7 +389,7 @@ msgstr ""
 #: src/ktouch.kcfg:69
 #, kde-format
 msgid "The ID of the last used profile."
-msgstr ""
+msgstr "ბოლოს გამოყენებული პროფილის ID."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -436,7 +435,7 @@ msgstr "კრეფის ასწავლებელი"
 #: src/main.cpp:28
 #, kde-format
 msgid "Learn and practice typewriting"
-msgstr ""
+msgstr "ისწავლეთ და ივარჯიშეთ ბეჭდვაში"
 
 #: src/main.cpp:31
 #, kde-format
@@ -444,6 +443,8 @@ msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
+"Copyright (C) 2011-2015 by Sebastian Gottfried\n"
+"Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 
 #: src/main.cpp:38
 #, kde-format
@@ -463,7 +464,7 @@ msgstr "Andreas Nicolai"
 #: src/main.cpp:39
 #, kde-format
 msgid "Former maintainer and programmer"
-msgstr ""
+msgstr "ყოფილი პროექტის ლიდერი და პროგრამისტი"
 
 #: src/main.cpp:40
 #, kde-format
@@ -483,7 +484,7 @@ msgstr "David Vignoni"
 #: src/main.cpp:42
 #, kde-format
 msgid "Creator of the SVG icon"
-msgstr ""
+msgstr "SVG ხატულის შემქმნელი"
 
 #: src/main.cpp:43
 #, kde-format
@@ -493,7 +494,7 @@ msgstr "Anne-Marie Mahfouf"
 #: src/main.cpp:43
 #, kde-format
 msgid "Lots of patches, fixes and updates"
-msgstr ""
+msgstr "ბევრი პაჩები, გასწორებები, განახლება"
 
 #: src/main.cpp:44
 #, kde-format
@@ -503,17 +504,17 @@ msgstr ""
 #: src/main.cpp:61
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr ""
+msgstr "კურსის და კლავიატურის განლაგების რედაქტორის გაშვება"
 
 #: src/main.cpp:63
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
-msgstr ""
+msgstr "ბილიკის QML ფაილების შემოტანის ბილიკისთვის თავში მიწერა"
 
 #: src/mainwindow.cpp:60
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "%1- ს გაშვების შეცდომა შეექმნა და უნდა დაიხუროს."
 
 #: src/models/charactersmodel.cpp:195
 #, kde-format
@@ -538,7 +539,7 @@ msgstr "<სათაურის გარეშე>"
 #: src/models/lessonmodel.cpp:69
 #, kde-format
 msgid "<p>New characters: %1</p><p>%2</p>"
-msgstr ""
+msgstr "<p>ახალი სიმბოლოები: %1</p><p>%2</p>"
 
 #: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
 #, kde-format
@@ -586,7 +587,7 @@ msgstr "გაკვეთილი:"
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
 msgid "Training on:"
-msgstr ""
+msgstr "ტრენინგი:"
 
 #: src/qml/common/LearningProgressChart.qml:91
 #, kde-format
@@ -611,7 +612,7 @@ msgstr "სხვა კურსები"
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr ""
+msgstr "კეთილი იყოს თქვენი მობრძანება ბეჭდვის მასწავლებელთან"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
@@ -771,7 +772,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
 msgid "All lessons are unlocked immediately."
-msgstr ""
+msgstr "ყველა გაკვეთილის განბლოკვა."
 
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
@@ -786,7 +787,7 @@ msgstr "მონიშნული პროფილის გამოყე�
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
 msgid "Lesson training statistics"
-msgstr ""
+msgstr "გაკვეთილის სწავლის სტატისტიკა"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -822,12 +823,12 @@ msgstr "შემდეგი გაკვეთილი"
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr ""
+msgstr "გილოცავთ! თქვენ გაიარეთ გაკვეთილი."
 
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr ""
+msgstr "გაკვეთილი ვერ გაიარეთ."
 
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
@@ -837,7 +838,7 @@ msgstr ""
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr ""
+msgstr "შემდეგი გაკვეთილი განბლოკილია"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
@@ -1034,19 +1035,19 @@ msgstr "ნორმალური გასაღები"
 #: src/ui/keyboardlayouteditor.ui:43
 #, kde-format
 msgid "Create new special key"
-msgstr ""
+msgstr "ახალი სპეციალური ღილაკის შექმნა"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:46
 #, kde-format
 msgid "Special Key"
-msgstr ""
+msgstr "სპეციალური ღილაკი"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:67
 #, kde-format
 msgid "Delete selected key"
-msgstr ""
+msgstr "სპეციალური ღილაკის წაშლა"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
 #: src/ui/keyboardlayouteditor.ui:135
@@ -1168,7 +1169,7 @@ msgstr "მარჯვენა პატარა თითი"
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
 #, kde-format
 msgid "Haptic Marker:"
-msgstr ""
+msgstr "ტაქტილური მარკერი:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
@@ -1252,7 +1253,7 @@ msgstr "მოდიფიკატორის ID:"
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr ""
+msgstr "ტექსტური ფაილის გახსნა..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:46
@@ -1270,19 +1271,19 @@ msgstr "0 სიმბოლო"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr ""
+msgstr "ჩასვით მიმდინარე სისტემის კლავიატურის განლაგების სახელი"
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
 #, kde-format
 msgid "During training:"
-msgstr ""
+msgstr "ვარჯიშის დროს:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr ""
+msgstr "კრეფისას დაშვებული შეცდომების გასწორება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
@@ -1294,53 +1295,53 @@ msgstr "კლავიატურის ჩვენება"
 #: src/ui/trainingconfigwidget.ui:52
 #, kde-format
 msgid "Show real-time statistics"
-msgstr ""
+msgstr "რეალურ დროში სტატისტიკის ჩვენება"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
 #, kde-format
 msgid "Go to next line with:"
-msgstr ""
+msgstr "შემდეგ ხაზზე გადასვლა ღილაკით:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr ""
+msgstr "&Enter"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr ""
+msgstr "&გამოტოვება"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr ""
+msgstr "გაკვეთილის განბლოკვის ლიმიტები"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
 #, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr ""
+msgstr "მინიმალური დარტყმა &წუთში:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
 #, kde-format
 msgid "Minimum accuracy:"
-msgstr ""
+msgstr "მინიმალური სიზუსტე:"
 
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr ""
+msgstr "სათაურის მითითება"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr ""
+msgstr "კლავიატურის განლაგების დაყენება"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1405,22 +1406,22 @@ msgstr "გასაღების გეომეტრიის დაყე�
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
 msgid "Set key finger"
-msgstr ""
+msgstr "დააყენეთ ძირითადი თითი"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr ""
+msgstr "დააყენეთ ღილაკის ტაქტილური მარკერი"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
 #, kde-format
 msgid "Add key character"
-msgstr ""
+msgstr "დააყენეთ ღილაკის სიმბოლო"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:430
 #, kde-format
 msgid "Remove key character"
-msgstr ""
+msgstr "ღილაკის სიმბოლოს წაშლა"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
