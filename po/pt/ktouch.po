@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:42+0000\n"
-"PO-Revision-Date: 2021-11-10 09:55+0000\n"
+"PO-Revision-Date: 2023-06-09 23:18+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -39,8 +39,7 @@ msgid "Your emails"
 msgstr "zepires@gmail.com,morais@kde.org,joao@silvaneves.org"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"

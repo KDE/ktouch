@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2013-11-26 10:41+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -33,6 +33,12 @@ msgid "Your emails"
 msgstr ""
 "klaus@skolelinux.no,gluras@c2i.net,jorgenhg@broadpark.no,"
 "fri_programvare@bojer.no"
+
+#: src/bindings/stringformatter.cpp:31
+#, kde-format
+msgctxt "Accuracy percent value"
+msgid "%1%"
+msgstr ""
 
 #: src/core/dbaccess.cpp:105
 #, kde-format

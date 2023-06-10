@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-23 00:40+0000\n"
+"POT-Creation-Date: 2023-06-07 00:42+0000\n"
 "PO-Revision-Date: 2007-09-11 22:44+0200\n"
 "Last-Translator: Northern Sami translation team <i18n-sme@lister.ping.uio."
 "no>\n"
@@ -27,6 +27,12 @@ msgstr ""
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
+msgstr ""
+
+#: src/bindings/stringformatter.cpp:31
+#, kde-format
+msgctxt "Accuracy percent value"
+msgid "%1%"
 msgstr ""
 
 #: src/core/dbaccess.cpp:105
