@@ -126,6 +126,7 @@
       <caption xml:lang="de">Übungen mit KTouch</caption>
       <caption xml:lang="el">Εξάσκηση με το KTouch</caption>
       <caption xml:lang="en-GB">Training with KTouch</caption>
+      <caption xml:lang="eo">Trejnado kun KTouch</caption>
       <caption xml:lang="es">Entrenando con KTouch</caption>
       <caption xml:lang="et">Harjutamine KTouchiga</caption>
       <caption xml:lang="eu">Trebatu Ktouch erabiliz</caption>
@@ -160,6 +161,7 @@
       <caption xml:lang="de">Auswahl einer Lektionsübung</caption>
       <caption xml:lang="el">Επιλογή μαθήματος για εξάσκηση</caption>
       <caption xml:lang="en-GB">Selecting a Lesson for Training</caption>
+      <caption xml:lang="eo">Elektante Lecionon por Trejnado</caption>
       <caption xml:lang="es">Seleccionando una lección para practicar</caption>
       <caption xml:lang="et">Õppetunni valimine harjutamiseks</caption>
       <caption xml:lang="eu">Aukeratuz ikasgaia trebatzeko</caption>
@@ -192,6 +194,7 @@
       <caption xml:lang="de">Überprüfen der Eingabegeschwindigkeit nach Beendigung einer Lektion</caption>
       <caption xml:lang="el">Αξιολόγηση απόδοσης στην πληκτρολόγηση μετά το τέλος του μαθήματος</caption>
       <caption xml:lang="en-GB">Reviewing Typing Performance after Finishing a Lesson</caption>
+      <caption xml:lang="eo">Reviziante Tajpan Agadon Post Finado de Leciono</caption>
       <caption xml:lang="es">Revisión del rendimiento de escritura tras terminar una lección</caption>
       <caption xml:lang="et">Kirjutamise edenemise ülevaade pärast õppetunni läbimist</caption>
       <caption xml:lang="eu">Berrikusiz mekanografia jarduera ikasgaia bukatu eta gero</caption>
@@ -225,6 +228,7 @@
   <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
+  <developer_name xml:lang="eo">La KDE-Komunumo</developer_name>
   <developer_name xml:lang="es">La comunidad KDE</developer_name>
   <developer_name xml:lang="et">KDE kogukond</developer_name>
   <developer_name xml:lang="eu">KDE komunitatea</developer_name>
