@@ -6,7 +6,7 @@
 # Nicola Ruggero <nixprog.adsl@tiscali.it>, 2006.
 # Nicola Ruggero <nicola@nxnt.org>, 2007.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2013.
-# Paolo Zamponi <feus73@gmail.com>, 2016, 2019, 2021.
+# Paolo Zamponi <feus73@gmail.com>, 2016, 2019, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
