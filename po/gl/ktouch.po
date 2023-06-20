@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-23 00:40+0000\n"
-"PO-Revision-Date: 2023-04-30 11:12+0200\n"
+"PO-Revision-Date: 2023-06-08 02:25+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -309,12 +309,12 @@ msgstr "Descartar"
 #: src/editor/resourcetemplatewidget.cpp:45
 #, kde-format
 msgid "Use another course as template"
-msgstr "Empregar outro curso como modelo"
+msgstr "Usar outro curso como modelo"
 
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr "Empregar outra disposición de teclado como modelo"
+msgstr "Usar outra disposición de teclado como modelo"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
@@ -330,7 +330,7 @@ msgstr "Disposición do teclado"
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr "A disposición de teclado que empregar en plataformas distintas da X11"
+msgstr "A disposición de teclado que usar en plataformas distintas da X11"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
@@ -391,7 +391,7 @@ msgstr "A cor do teclado para realzar as teclas de cada dedo."
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr "Como de transparentes mostrar as cores dos dedos."
+msgstr "Como de transparentes amosar as cores dos dedos."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -797,7 +797,7 @@ msgstr "Crear un perfil novo"
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
 msgid "Use Selected Profile"
-msgstr "Empregar o perfil escollido"
+msgstr "Usar o perfil escollido"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
@@ -860,7 +860,7 @@ msgstr "A lección seguinte está desbloqueada"
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
-msgstr "Mostrar"
+msgstr "Amosar"
 
 #: src/qml/scorescreen/ScoreScreen.qml:285
 #: src/qml/scorescreen/ScoreScreen.qml:358
@@ -1310,13 +1310,13 @@ msgstr "Obrigar a corrixir os erros de teclear."
 #: src/ui/trainingconfigwidget.ui:45
 #, kde-format
 msgid "Show keyboard"
-msgstr "Mostrar o teclado"
+msgstr "Amosar o teclado"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
 #, kde-format
 msgid "Show real-time statistics"
-msgstr "Mostrar as estatísticas en tempo real"
+msgstr "Amosar as estatísticas en tempo real"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
