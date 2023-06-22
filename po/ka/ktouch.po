@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-07 00:42+0000\n"
-"PO-Revision-Date: 2023-06-08 06:18+0200\n"
+"PO-Revision-Date: 2023-06-21 06:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -365,25 +365,26 @@ msgstr "ხაზის ბოლოში გამოტოვების ღ
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
+"შემდეგი გაკვეთილის გასახსნელად საჭირო მინიმალური დაჭერების რაოდენობა წუთში."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
 #, kde-format
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
-msgstr ""
+msgstr "შემდეგი გაკვეთილის გასახსნელად საჭირო კრეფის სიზუსტე, პროცენტებში."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr ""
+msgstr "კლავიატურის შეფერილობის ფერი თითოეული თითის ღილაკის გამოსაკვეთად."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "თითის გამჭვირვალე ფერების ჩვენება."
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -499,7 +500,7 @@ msgstr "ბევრი პაჩები, გასწორებები, �
 #: src/main.cpp:44
 #, kde-format
 msgid "All the creators of training and keyboard files"
-msgstr ""
+msgstr "ვარჯიშებისა და კლავიატურის ფაილების ყველა შემქმნელი"
 
 #: src/main.cpp:61
 #, kde-format
@@ -623,7 +624,7 @@ msgstr "გაკვეთილების დაწყება"
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr ""
+msgstr "არჩეული კურსი სპეციფიკური კლავიატურის განლაგებისთვისაა განკუთვნილი."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
@@ -631,6 +632,8 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
+"არჩეული კურსი კომპიუტერის მიმდინარე კლავიატურის განლაგებისთვის განკუთვნილი "
+"არაა."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -639,6 +642,9 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"KTouch-ს კლავიატურის განლაგებების დაყენება და გადართვა არ შეუძლია. "
+"ვარჯიშამდე კომპიუტერი თქვენ თვითონ უნდა მოიგოთ. წინააღმდეგ შემთხვევაში "
+"შემდეგ გაკვეთილში კლავიატურის მიმდინარე განლაგების გამოყენება მოგიწევთ."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -696,7 +702,7 @@ msgstr "დასრულებულია"
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr ""
+msgstr "განსაბლოკად ჯერ წინა გაკვეთილები დაასრულეთ"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -737,7 +743,7 @@ msgstr "რედაქტირება"
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr ""
+msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ პროფილი \"<b>%1</b>\"?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
 #, kde-format
@@ -747,7 +753,7 @@ msgstr "შეწყვეტა"
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr ""
+msgstr "სანამ ვარჯიშს დაიწყებთ, გაგვაცანით საკუთარი თავი:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
@@ -757,17 +763,17 @@ msgstr "სახელი"
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr ""
+msgstr "მანქანაზე კრეფაში გამოცდილება ან არ მაქვს, ან ძალიან ცოტა"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
-msgstr ""
+msgstr "გაკვეთილები თქვენი უნარების გაუმჯობესებასთან ერთად გამოჩნდება."
 
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
 msgid "I am an experienced machine typist and want to improve my skills"
-msgstr ""
+msgstr "მე გამოცდილი მკრეფავი ვარ და მსურს, ჩემი უნარები გავაუმჯობესო"
 
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
@@ -833,7 +839,7 @@ msgstr "გაკვეთილი ვერ გაიარეთ."
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
-msgstr ""
+msgstr "გაიმეორეთ გაკვეთილი. თქვენი უნარები თანდათან გაუმჯობესდება."
 
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
@@ -878,7 +884,7 @@ msgstr "ეს გაკვეთილი"
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr ""
+msgstr "თქვენი კლავიატურის განლაგებისთვის ვიზუალიზაცია ხელმისაწვდომი არაა."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
@@ -898,13 +904,15 @@ msgstr "გაკვეთილის თავიდან დაწყებ�
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
-msgstr ""
+msgstr "ვარჯიშის სესია დაიწყო. დროის ათვლა ღილაკზე პირველი დაწოლით იწყება."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
 #, kde-format
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr ""
+"ვარჯიშის სესია შეწყვეტილია. დროის გაგრძელება შემდეგი ღილაკის დაჭერასთან "
+"ერთად მოხდება."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
@@ -1426,29 +1434,29 @@ msgstr "ღილაკის სიმბოლოს წაშლა"
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
 msgid "Set key character value"
-msgstr ""
+msgstr "ღილაკის სიმბოლოს მნიშვნელობის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr ""
+msgstr "ღილაკის სიმბოლოს მოდიფიკატორის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr ""
+msgstr "ღილაკის სიმბოლოს მდებარეობის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
 #, kde-format
 msgid "Set special key type"
-msgstr ""
+msgstr "სპეციალური ღილაკის ტიპის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
 #, kde-format
 msgid "Set special key label"
-msgstr ""
+msgstr "სპეციალური ღილაკის ჭდის დაყენება"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr ""
+msgstr "სპეციალური ღილაკის მოდიფიკატორის ID-ის დაყენება"
