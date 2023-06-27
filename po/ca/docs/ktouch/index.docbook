@@ -1271,7 +1271,7 @@ format="PNG"/></imageobject>
 </mediaobject>
 </screenshot>
 <para
->A dalt hi ha una captura de pantalla de l'editor de cursos carregat amb una lliçó problemàtica que mostra un dels controls de garantia de qualitat incorporat: si una lliçó conté caràcters que no estan disponibles en aquesta lliçó, perquè no es troben entre els caràcters nous configurats en aquesta lliçó o qualsevol anterior, es ressaltaran en vermell. També hi ha una comprovació per a les línies massa llargues, resultaran en un color apagat per als caràcters després de la columna permesa. </para>
+>A dalt hi ha una captura de pantalla de l'editor de cursos carregat amb una lliçó problemàtica que mostra un dels controls de garantia de qualitat integrat: si una lliçó conté caràcters que no estan disponibles en aquesta lliçó, perquè no es troben entre els caràcters nous configurats en aquesta lliçó o qualsevol anterior, es ressaltaran en vermell. També hi ha una comprovació per a les línies massa llargues, resultaran en un color apagat per als caràcters després de la columna permesa. </para>
 <para
 >Al costat esquerre hi ha un llistat de tots els fitxers que coneix l'&i18n-ktouch;, tant els integrats com els creats per l'usuari. Si l'usuari selecciona un recurs integrat a l'editor, aquest esdevindrà un visualitzador senzill. Si l'usuari selecciona una disposició de teclat, el programa s'adaptarà de manera adequada. </para>
 </sect3>
