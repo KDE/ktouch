@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -116,6 +116,7 @@ msgstr ""
 msgid "%1 Character"
 msgid_plural "%1 Characters"
 msgstr[0] "نویسه‌‌‌"
+msgstr[1] ""
 
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
