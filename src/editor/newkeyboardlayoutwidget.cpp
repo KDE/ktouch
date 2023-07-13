@@ -94,3 +94,5 @@ void NewKeyboardLayoutWidget::checkName()
 
     emit isValidChanged();
 }
+
+#include "moc_newkeyboardlayoutwidget.cpp"

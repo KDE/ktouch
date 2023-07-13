@@ -48,3 +48,5 @@ QColor Utils::alpha(const QColor& color, float alpha)
     result.setAlphaF(alpha * result.alphaF());
     return result;
 }
+
+#include "moc_utils.cpp"

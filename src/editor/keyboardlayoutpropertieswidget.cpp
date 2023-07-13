@@ -508,3 +508,5 @@ void KeyboardLayoutPropertiesWidget::onSpecialKeyTypeChanged(int type)
         setSpecialKeyType(type);
     }
 }
+
+#include "moc_keyboardlayoutpropertieswidget.cpp"

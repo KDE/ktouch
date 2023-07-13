@@ -48,3 +48,5 @@ QString NewCourseWidget::description() const
 {
     return m_descriptionEdit->toPlainText();
 }
+
+#include "moc_newcoursewidget.cpp"

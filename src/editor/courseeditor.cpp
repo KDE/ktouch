@@ -404,3 +404,5 @@ void CourseEditor::setIsReadOnly(bool readOnly)
     m_newCharactersLineEdit->setReadOnly(readOnly);
     m_lessonTextEditor->setReadOnly(readOnly);
 }
+
+#include "moc_courseeditor.cpp"

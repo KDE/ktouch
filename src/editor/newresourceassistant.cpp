@@ -121,3 +121,5 @@ void NewResourceAssistant::updateResourceTemplatePageValidity()
 {
     setValid(m_resourceTemplatePage, m_resourceTemplateWidget->isValid());
 }
+
+#include "moc_newresourceassistant.cpp"

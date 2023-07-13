@@ -12,3 +12,5 @@ ColorsConfigWidget::ColorsConfigWidget(QWidget *parent) :
 {
     setupUi(this);
 }
+
+#include "moc_colorsconfigwidget.cpp"

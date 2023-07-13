@@ -75,3 +75,4 @@ Resource* ResourceTemplateWidget::templateResource() const
     return qobject_cast<Resource*>(object);
 }
 
+#include "moc_resourcetemplatewidget.cpp"

@@ -12,3 +12,5 @@ TrainingConfigWidget::TrainingConfigWidget(QWidget *parent) :
 {
     setupUi(this);
 }
+
+#include "moc_trainingconfigwidget.cpp"

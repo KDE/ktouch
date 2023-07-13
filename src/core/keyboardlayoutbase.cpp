@@ -35,3 +35,5 @@ void KeyboardLayoutBase::setName(const QString& name)
         emit nameChanged();
     }
 }
+
+#include "moc_keyboardlayoutbase.cpp"

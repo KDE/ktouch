@@ -120,3 +120,5 @@ void SpecialKey::copyFrom(SpecialKey* source)
     setLabel(source->label());
     setModifierId(source->modifierId());
 }
+
+#include "moc_specialkey.cpp"

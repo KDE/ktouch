@@ -143,3 +143,5 @@ int ErrorsModel::errors(int row) const
 {
     return m_errors.at(row).second;
 }
+
+#include "moc_errorsmodel.cpp"

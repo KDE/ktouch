@@ -97,3 +97,5 @@ void AbstractKey::setRect(const QRect& rect)
     setWidth(rect.width());
     setHeight(rect.height());
 }
+
+#include "moc_abstractkey.cpp"

@@ -125,3 +125,5 @@ void ResourceEditorWidget::clearMessage()
 
     m_messageWidget->animatedHide();
 }
+
+#include "moc_resourceeditorwidget.cpp"

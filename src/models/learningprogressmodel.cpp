@@ -275,3 +275,5 @@ void LearningProgressModel::profileDestroyed()
 {
     setProfile(nullptr);
 }
+
+#include "moc_learningprogressmodel.cpp"

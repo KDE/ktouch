@@ -358,3 +358,5 @@ void LessonPainter::updateCursorRectangle()
 
     emit cursorRectangleChanged();
 }
+
+#include "moc_lessonpainter.cpp"

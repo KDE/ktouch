@@ -669,3 +669,4 @@ bool ResourceEditor::importKeyboardLayout(const QString& path)
     return true;
 }
 
+#include "moc_resourceeditor.cpp"

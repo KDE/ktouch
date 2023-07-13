@@ -233,3 +233,5 @@ void KeyboardLayoutEditor::deleteSelectedKey()
     setSelectedKey(nullptr);
     currentUndoStack()->push(command);
 }
+
+#include "moc_keyboardlayouteditor.cpp"

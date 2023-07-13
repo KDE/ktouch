@@ -660,3 +660,5 @@ bool UserDataAccess::deleteKeyboardLayout(KeyboardLayout* keyboardLayout)
     return true;
 
 }
+
+#include "moc_userdataaccess.cpp"

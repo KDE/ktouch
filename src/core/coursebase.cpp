@@ -52,3 +52,5 @@ void CourseBase::setKeyboardLayoutName(const QString& keyboardLayoutName)
         emit keyboardLayoutNameChanged();
     }
 }
+
+#include "moc_coursebase.cpp"

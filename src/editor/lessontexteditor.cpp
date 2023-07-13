@@ -139,3 +139,5 @@ void LessonTextEditor::reformatText()
     cursor.removeSelectedText();
     cursor.insertText(text);
 }
+
+#include "moc_lessontexteditor.cpp"

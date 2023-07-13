@@ -89,3 +89,5 @@ void Lesson::copyFrom(Lesson* source)
     setCharacters(source->characters());
     setText(source->text());
 }
+
+#include "moc_lesson.cpp"

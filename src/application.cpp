@@ -153,3 +153,5 @@ void Application::migrateKde4Files()
     }
 #endif
 }
+
+#include "moc_application.cpp"

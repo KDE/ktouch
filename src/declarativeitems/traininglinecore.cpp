@@ -361,3 +361,5 @@ void TrainingLineCore::clearKeyHint()
 
     emit hintKeyChanged();
 }
+
+#include "moc_traininglinecore.cpp"

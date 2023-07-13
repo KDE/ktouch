@@ -50,3 +50,5 @@ void LessonTextHighlighterItem::setDocument(QQuickTextDocument* document)
         emit documentChanged();
     }
 }
+
+#include "moc_lessontexthighlighteritem.cpp"

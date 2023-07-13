@@ -265,3 +265,5 @@ bool KeyboardLayout::compareKeysForReference(const AbstractKey *testKey, const A
 {
     return testKey->width() * testKey->height() < compareKey->width() * compareKey->height();
 }
+
+#include "moc_keyboardlayout.cpp"

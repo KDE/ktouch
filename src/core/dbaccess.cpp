@@ -409,3 +409,5 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     return true;
 }
+
+#include "moc_dbaccess.cpp"

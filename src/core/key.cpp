@@ -119,3 +119,5 @@ void Key::copyFrom(Key* source)
         addKeyChar(keyChar);
     }
 }
+
+#include "moc_key.cpp"

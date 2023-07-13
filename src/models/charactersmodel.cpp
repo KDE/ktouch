@@ -311,3 +311,5 @@ QVariant CharactersModel::positionData(KeyChar *keyChar, int role) const
         return QVariant();
     }
 }
+
+#include "moc_charactersmodel.cpp"

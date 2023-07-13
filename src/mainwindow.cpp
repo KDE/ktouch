@@ -65,3 +65,5 @@ void MainWindow::onViewStatusChanged(QQuickView::Status status)
         exit(1);
     }
 }
+
+#include "moc_mainwindow.cpp"

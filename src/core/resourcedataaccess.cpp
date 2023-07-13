@@ -428,3 +428,5 @@ bool ResourceDataAccess::openResourceFile(const QString &relPath, QFile& file)
     }
     return true;
 }
+
+#include "moc_resourcedataaccess.cpp"

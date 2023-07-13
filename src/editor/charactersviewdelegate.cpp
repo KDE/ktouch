@@ -126,3 +126,5 @@ void CharactersViewDelegate::setModelData(QWidget* editor, QAbstractItemModel* m
         QStyledItemDelegate::setModelData(editor, model, index);
     }
 }
+
+#include "moc_charactersviewdelegate.cpp"

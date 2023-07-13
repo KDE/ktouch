@@ -186,3 +186,5 @@ void TrainingStats::update()
     }
     emit statsChanged();
 }
+
+#include "moc_trainingstats.cpp"

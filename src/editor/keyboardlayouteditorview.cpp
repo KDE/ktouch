@@ -23,3 +23,5 @@ void KeyboardLayoutEditorView::mousePressEvent(QMouseEvent* event)
         emit clicked();
     }
 }
+
+#include "moc_keyboardlayouteditorview.cpp"

@@ -61,3 +61,5 @@ QUndoStack* AbstractEditor::currentUndoStack() const
 {
     return m_currentUndoStack;
 }
+
+#include "moc_abstracteditor.cpp"

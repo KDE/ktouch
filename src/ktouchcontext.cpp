@@ -181,3 +181,5 @@ bool KTouchContext::testKCMAvailibility(const QString& name)
 {
     return KPluginMetaData(name).isValid();
 }
+
+#include "moc_ktouchcontext.cpp"

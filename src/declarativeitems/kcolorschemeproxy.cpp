@@ -179,3 +179,5 @@ QColor KColorSchemeProxy::shade(const QColor& color, ShadeRole role, qreal contr
 {
     return KColorScheme::shade(color, static_cast<KColorScheme::ShadeRole>(role), contrast, chromaAdjust);
 }
+
+#include "moc_kcolorschemeproxy.cpp"

@@ -282,3 +282,5 @@ QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
     static QIcon userIcon = QIcon::fromTheme("user-identity");
     return source == DataIndex::BuiltInResource? systemIcon: userIcon;
 }
+
+#include "moc_resourcemodel.cpp"

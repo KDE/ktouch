@@ -144,3 +144,5 @@ void LessonModel::updateMappings()
         connect(m_course->lesson(i), &Lesson::textChanged, this, [=] { emitLessonChanged(i); });
     }
 }
+
+#include "moc_lessonmodel.cpp"

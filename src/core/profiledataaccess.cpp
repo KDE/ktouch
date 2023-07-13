@@ -872,3 +872,5 @@ int ProfileDataAccess::findCourseProgressId(Profile* profile, const QString& cou
 
     return findQuery.value(0).toInt();
 }
+
+#include "moc_profiledataaccess.cpp"

@@ -62,3 +62,5 @@ bool DataAccess::loadKeyboardLayout(DataIndexKeyboardLayout* dataIndexKeyboardLa
         return true;
     }
 }
+
+#include "moc_dataaccess.cpp"

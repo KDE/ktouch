@@ -165,3 +165,4 @@ void DataIndexKeyboardLayout::setSource(DataIndex::Source source)
     }
 }
 
+#include "moc_dataindex.cpp"

@@ -104,3 +104,4 @@ void KeyChar::copyFrom(KeyChar* source)
     setModifier(source->modifier());
 }
 
+#include "moc_keychar.cpp"

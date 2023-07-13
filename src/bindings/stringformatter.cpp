@@ -46,3 +46,5 @@ QString StringFormatter::formatSign(qreal value)
         return QStringLiteral("-");
     return QString::fromUtf8("\u00B1");
 }
+
+#include "moc_stringformatter.cpp"

@@ -188,3 +188,5 @@ void Course::updateLessonCharacters(int firstIndex)
         lesson->setCharacters(characters);
     }
 }
+
+#include "moc_course.cpp"

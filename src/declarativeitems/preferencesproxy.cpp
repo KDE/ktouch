@@ -104,3 +104,5 @@ void PreferencesProxy::writeConfig()
 {
     Preferences::self()->save();
 }
+
+#include "moc_preferencesproxy.cpp"

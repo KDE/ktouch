@@ -64,3 +64,5 @@ void KeyboardLayoutComboBox::selectKeyboardLayout(DataIndexKeyboardLayout* layou
         }
     }
 }
+
+#include "moc_keyboardlayoutcombobox.cpp"

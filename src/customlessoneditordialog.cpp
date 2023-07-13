@@ -154,3 +154,5 @@ void CustomLessonEditorDialog::emitValidChanged()
 
     emit validChanged(valid);
 }
+
+#include "moc_customlessoneditordialog.cpp"

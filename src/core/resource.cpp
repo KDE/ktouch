@@ -39,3 +39,5 @@ void Resource::setIsValid(bool isValid)
         emit isValidChanged();
     }
 }
+
+#include "moc_resource.cpp"

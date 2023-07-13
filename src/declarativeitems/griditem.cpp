@@ -83,3 +83,5 @@ void GridItem::paint(QPainter* painter)
         painter->drawLine(rect.left(), roundedY, rect.right(), roundedY);
     }
 }
+
+#include "moc_griditem.cpp"

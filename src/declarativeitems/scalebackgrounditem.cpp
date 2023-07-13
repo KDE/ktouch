@@ -93,3 +93,5 @@ void ScaleBackgroundItem::paint(QPainter* painter)
     path.arcTo(innerRect, m_stopAngle, -sweepLength);
     painter->drawPath(path);
 }
+
+#include "moc_scalebackgrounditem.cpp"

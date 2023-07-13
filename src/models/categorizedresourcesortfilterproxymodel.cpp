@@ -118,3 +118,5 @@ bool CategorizedResourceSortFilterProxyModel::filterAcceptsRow(int source_row, c
 
     return m_invertedKeyboardLayoutNameFilter ^ (name == m_keyboardLayoutNameFilter);
 }
+
+#include "moc_categorizedresourcesortfilterproxymodel.cpp"

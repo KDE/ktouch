@@ -68,3 +68,5 @@ void Profile::setLastUsedCourseId(const QString &id)
         emit lastUsedCourseIdChanged();
     }
 }
+
+#include "moc_profile.cpp"
