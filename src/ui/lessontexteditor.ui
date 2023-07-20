@@ -31,9 +31,7 @@
         <string>Open a text file...</string>
        </property>
        <property name="icon">
-        <iconset theme="document-open">
-         <normaloff/>
-        </iconset>
+        <iconset theme="document-open"/>
        </property>
        <property name="autoRaise">
         <bool>true</bool>
@@ -46,9 +44,7 @@
         <string>Wrap lines automatically</string>
        </property>
        <property name="icon">
-        <iconset theme="format-justify-fill">
-         <normaloff/>
-        </iconset>
+        <iconset theme="format-justify-fill"/>
        </property>
        <property name="autoRaise">
         <bool>true</bool>

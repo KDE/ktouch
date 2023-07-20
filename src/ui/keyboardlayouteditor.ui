@@ -25,9 +25,7 @@
         <string>Normal Key</string>
        </property>
        <property name="icon">
-        <iconset theme="list-add">
-         <normaloff/>
-        </iconset>
+        <iconset theme="list-add"/>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -46,9 +44,7 @@
         <string>Special Key</string>
        </property>
        <property name="icon">
-        <iconset theme="list-add">
-         <normaloff/>
-        </iconset>
+        <iconset theme="list-add"/>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -70,9 +66,7 @@
         <string>Delete</string>
        </property>
        <property name="icon">
-        <iconset theme="edit-delete">
-         <normaloff/>
-        </iconset>
+        <iconset theme="edit-delete"/>
        </property>
        <property name="toolButtonStyle">
         <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -92,9 +86,7 @@
      <item>
       <widget class="QToolButton" name="m_zoomOutToolButton">
        <property name="icon">
-        <iconset theme="zoom-out">
-         <normaloff/>
-        </iconset>
+        <iconset theme="zoom-out"/>
        </property>
        <property name="autoRaise">
         <bool>true</bool>
@@ -139,9 +131,7 @@
      <item>
       <widget class="QToolButton" name="m_zoomInToolButton">
        <property name="icon">
-        <iconset theme="zoom-in">
-         <normaloff/>
-        </iconset>
+        <iconset theme="zoom-in"/>
        </property>
        <property name="autoRaise">
         <bool>true</bool>

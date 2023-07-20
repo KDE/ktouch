@@ -182,9 +182,7 @@
                <string>Add new lesson</string>
               </property>
               <property name="icon">
-               <iconset theme="list-add">
-                <normaloff/>
-               </iconset>
+               <iconset theme="list-add"/>
               </property>
              </widget>
             </item>
@@ -197,9 +195,7 @@
                <string>Remove lesson</string>
               </property>
               <property name="icon">
-               <iconset theme="list-remove">
-                <normaloff/>
-               </iconset>
+               <iconset theme="list-remove"/>
               </property>
              </widget>
             </item>
@@ -228,9 +224,7 @@
                <string>Move lesson up</string>
               </property>
               <property name="icon">
-               <iconset theme="arrow-up">
-                <normaloff/>
-               </iconset>
+               <iconset theme="arrow-up"/>
               </property>
              </widget>
             </item>
@@ -243,9 +237,7 @@
                <string>Move lesson down</string>
               </property>
               <property name="icon">
-               <iconset theme="arrow-down">
-                <normaloff/>
-               </iconset>
+               <iconset theme="arrow-down"/>
               </property>
              </widget>
             </item>
