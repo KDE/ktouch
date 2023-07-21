@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 00:42+0000\n"
+"POT-Creation-Date: 2023-07-21 00:44+0000\n"
 "PO-Revision-Date: 2021-10-07 08:09+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr "Πρότυπο"
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:70
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Διαγραφή "
@@ -699,10 +699,10 @@ msgstr "Επεξεργασία μαθήματος"
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
 #: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
 #: src/ui/customlessoneditorwidget.ui:25
 #: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:51
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Τίτλος:"
@@ -1023,25 +1023,25 @@ msgid "Add new lesson"
 msgstr "Προσθήκη νέου μαθήματος"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
 msgstr "Αφαίρεση μαθήματος"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:228
+#: src/ui/courseeditor.ui:224
 #, kde-format
 msgid "Move lesson up"
 msgstr "Μετακίνηση μαθήματος προς τα πάνω"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:243
+#: src/ui/courseeditor.ui:237
 #, kde-format
 msgid "Move lesson down"
 msgstr "Μετακίνηση μαθήματος προς τα κάτω"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:320
+#: src/ui/courseeditor.ui:312
 #, kde-format
 msgid "New characters:"
 msgstr "Νέοι χαρακτήρες:"
@@ -1065,25 +1065,25 @@ msgid "Normal Key"
 msgstr "Κανονικό πλήκτρο"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:43
+#: src/ui/keyboardlayouteditor.ui:41
 #, kde-format
 msgid "Create new special key"
 msgstr "Δημιουργία νέου ειδικού πλήκτρου"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:46
+#: src/ui/keyboardlayouteditor.ui:44
 #, kde-format
 msgid "Special Key"
 msgstr "Ειδικό πλήκτρο"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:67
+#: src/ui/keyboardlayouteditor.ui:63
 #, kde-format
 msgid "Delete selected key"
 msgstr "Διαγραφή επιλεγμένου πλήκτρου"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:135
+#: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
 msgstr "100%"
@@ -1139,7 +1139,7 @@ msgstr "Πάνω:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
 #, kde-format
 msgid "Key"
 msgstr "Πλήκτρο"
@@ -1217,67 +1217,67 @@ msgid "Add new character"
 msgstr "Προσθήκη νέου χαρακτήρα"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
 #, kde-format
 msgid "Remove character"
 msgstr "Διαγραφή χαρακτήρα"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
 #, kde-format
 msgid "Type:"
 msgstr "Τύπος:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
 msgstr "Tab"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
 msgstr "CapsLock"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
 msgstr "Backspace"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
 msgstr "Επαναφορά (Return)"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
 #, kde-format
 msgid "Space"
 msgstr "Διάστημα"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
 #, kde-format
 msgid "Other"
 msgstr "Άλλο"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
 #, kde-format
 msgid "Label:"
 msgstr "Ετικέτα:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
 #, kde-format
 msgid "Modifier ID:"
 msgstr "Διακριτικό τροποποιητή:"
@@ -1289,13 +1289,13 @@ msgid "Open a text file..."
 msgstr "Άνοιγμα αρχείου κειμένου..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:46
+#: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
 msgstr "Αυτόματη αναδίπλωση γραμμών"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:74
+#: src/ui/lessontexteditor.ui:70
 #, kde-format
 msgid "0 Characters"
 msgstr "0 χαρακτήρες"

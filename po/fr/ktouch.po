@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 00:42+0000\n"
+"POT-Creation-Date: 2023-07-21 00:44+0000\n"
 "PO-Revision-Date: 2022-10-09 17:35+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -190,7 +190,7 @@ msgstr "Modèle"
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
-#: src/ui/keyboardlayouteditor.ui:70
+#: src/ui/keyboardlayouteditor.ui:66
 #, kde-format
 msgid "Delete"
 msgstr "Supprimer"
@@ -719,10 +719,10 @@ msgstr "Modifier la leçon"
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
 #: src/qml/homescreen/LessonEditorDialog.qml:45 src/ui/courseeditor.ui:40
-#: src/ui/courseeditor.ui:303 src/ui/customlessoneditordialog.ui:22
+#: src/ui/courseeditor.ui:295 src/ui/customlessoneditordialog.ui:22
 #: src/ui/customlessoneditorwidget.ui:25
 #: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
-#: src/ui/newkeyboardlayoutwidget.ui:51
+#: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
 msgstr "Titre :"
@@ -1045,25 +1045,25 @@ msgid "Add new lesson"
 msgstr "Ajouter une nouvelle leçon"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
-#: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
+#: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
 msgstr "Supprimer la leçon"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
-#: src/ui/courseeditor.ui:228
+#: src/ui/courseeditor.ui:224
 #, kde-format
 msgid "Move lesson up"
 msgstr "Déplacer la leçon vers le haut"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
-#: src/ui/courseeditor.ui:243
+#: src/ui/courseeditor.ui:237
 #, kde-format
 msgid "Move lesson down"
 msgstr "Déplacer la leçon vers le bas"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
-#: src/ui/courseeditor.ui:320
+#: src/ui/courseeditor.ui:312
 #, kde-format
 msgid "New characters:"
 msgstr "Nouveaux caractères :"
@@ -1088,25 +1088,25 @@ msgid "Normal Key"
 msgstr "Touche normale"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:43
+#: src/ui/keyboardlayouteditor.ui:41
 #, kde-format
 msgid "Create new special key"
 msgstr "Créer une nouvelle touche spéciale"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:46
+#: src/ui/keyboardlayouteditor.ui:44
 #, kde-format
 msgid "Special Key"
 msgstr "Touche spéciale"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
-#: src/ui/keyboardlayouteditor.ui:67
+#: src/ui/keyboardlayouteditor.ui:63
 #, kde-format
 msgid "Delete selected key"
 msgstr "Supprimer la touche sélectionnée"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
-#: src/ui/keyboardlayouteditor.ui:135
+#: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
 msgstr "100 %"
@@ -1162,7 +1162,7 @@ msgstr "En haut :"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/ui/keyboardlayoutpropertieswidget.ui:361
-#: src/ui/keyboardlayoutpropertieswidget.ui:550
+#: src/ui/keyboardlayoutpropertieswidget.ui:546
 #, kde-format
 msgid "Key"
 msgstr "Touche"
@@ -1240,67 +1240,67 @@ msgid "Add new character"
 msgstr "Ajouter un nouveau caractère"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
-#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#: src/ui/keyboardlayoutpropertieswidget.ui:511
 #, kde-format
 msgid "Remove character"
 msgstr "Supprimer le caractère"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#: src/ui/keyboardlayoutpropertieswidget.ui:558
 #, kde-format
 msgid "Type:"
 msgstr "Type :"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:579
+#: src/ui/keyboardlayoutpropertieswidget.ui:575
 #, kde-format
 msgid "Tab"
 msgstr "Onglet"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:584
+#: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
 msgstr "Verrouillage majuscule"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:589
+#: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
 msgstr "Majuscule"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:594
+#: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
 msgstr "Retour arrière"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
 msgstr "Entrée"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#: src/ui/keyboardlayoutpropertieswidget.ui:600
 #, kde-format
 msgid "Space"
 msgstr "Espace"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
-#: src/ui/keyboardlayoutpropertieswidget.ui:609
+#: src/ui/keyboardlayoutpropertieswidget.ui:605
 #, kde-format
 msgid "Other"
 msgstr "Autre"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#: src/ui/keyboardlayoutpropertieswidget.ui:613
 #, kde-format
 msgid "Label:"
 msgstr "Étiquette :"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
-#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#: src/ui/keyboardlayoutpropertieswidget.ui:626
 #, kde-format
 msgid "Modifier ID:"
 msgstr "Modifier l'identifiant :"
@@ -1312,13 +1312,13 @@ msgid "Open a text file..."
 msgstr "Ouvrir un fichier texte...."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
-#: src/ui/lessontexteditor.ui:46
+#: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
 msgstr "Retour à la ligne dynamique"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/lessontexteditor.ui:74
+#: src/ui/lessontexteditor.ui:70
 #, kde-format
 msgid "0 Characters"
 msgstr "0 caractère"
