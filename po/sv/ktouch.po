@@ -4,14 +4,14 @@
 #
 # Mattias Newzella <newzella@linux.nu>, 2003.
 # Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
-# Stefan Asserhall <stefan.asserhall@bredband.net>, 2005, 2011, 2012, 2013, 2014, 2015, 2016, 2019, 2021.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2005, 2011, 2012, 2013, 2014, 2015, 2016, 2019, 2021, 2023.
 # Arve Eriksson <031299870@telia.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-21 00:44+0000\n"
-"PO-Revision-Date: 2021-09-28 16:02+0200\n"
+"PO-Revision-Date: 2023-07-31 10:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -32,8 +32,7 @@ msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1 %"
