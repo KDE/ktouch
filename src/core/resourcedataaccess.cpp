@@ -12,9 +12,16 @@
 #include <QDomElement>
 #include <QFile>
 #include <QStandardPaths>
+#include <QScopeGuard>
 #include <QUrl>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
+#if __has_include(<QXmlSchema>)
+#  include <QXmlSchema>
+#  include <QXmlSchemaValidator>
+#else
+#  include <libxml/parser.h>
+#  include <libxml/xmlschemas.h>
+#endif
+
 
 #include "dataindex.h"
 #include "keyboardlayout.h"
@@ -29,10 +36,106 @@ ResourceDataAccess::ResourceDataAccess(QObject *parent) :
 {
 }
 
+bool openResourceFile(const QString &relPath, QFile& file)
+{
+    QString path = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, relPath);
+    if (path.isNull())
+    {
+        qWarning() << "can't find resource:" << relPath;
+        return false;
+    }
+    file.setFileName(path);
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        qWarning() << "can't open" << path;
+        return false;
+    }
+    return true;
+}
+
+#if __has_include(<QXmlSchema>)
+std::pair<QXmlSchema, bool> ResourceDataAccess::loadXmlSchema(const QString &name)
+{
+    QXmlSchema schema;
+    QString relPath = QStringLiteral("schemata/%1.xsd").arg(name);
+    QFile schemaFile;
+    if (!openResourceFile(relPath, schemaFile))
+    {
+        return {schema, false};
+    }
+    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
+    cost bool = !schema.isValid();
+    if (isValid)
+    {
+        qWarning() << schemaFile.fileName() << "is invalid";
+    }
+    return {schema, isValid};
+}
+using Schema = QXmlSchema;
+#else
+std::pair<xmlSchemaPtr, bool> loadXmlSchema(const QString &name) {
+    QString relPath = QStringLiteral("schemata/%1.xsd").arg(name);
+    QFile schemaFile;
+    if (!openResourceFile(relPath, schemaFile))
+    {
+        return {nullptr, false};
+    }
+    // Load the XML schema
+    QFileInfo fileInfo(schemaFile);
+    Q_ASSERT(fileInfo.isNativePath());
+    xmlSchemaParserCtxtPtr schema_ctx = xmlSchemaNewParserCtxt(fileInfo.absoluteFilePath().toUtf8());
+    if (!schema_ctx)
+        return {nullptr, false};
+    auto cleanup = qScopeGuard([&](){
+        xmlSchemaFreeParserCtxt(schema_ctx);
+    });
+    xmlSchemaPtr schema = xmlSchemaParse(schema_ctx);
+    if (!schema)
+        return {nullptr, false};
+    return  {schema, true};
+}
+using Schema = xmlSchemaPtr;
+#endif
+
+QDomDocument getDomDocument(QFile &file, Schema schema)
+{
+    QDomDocument doc;
+#if __has_include(<QXmlSchema>)
+    QXmlSchemaValidator validator(schema);
+    if (!validator.validate(&file))
+    {
+        return doc;
+    }
+#else
+    QFileInfo fileInfo(file);
+    if (fileInfo.isNativePath()) {
+        // we only validate native paths as we assume anything in the qrc system must be
+        // valid, and xmlSchemaValidateFile can't deal with qrc anyway
+        auto path = fileInfo.absoluteFilePath();
+        xmlSchemaValidCtxtPtr schemaValidationContext = xmlSchemaNewValidCtxt(schema);
+        auto cleanup = qScopeGuard([&]() {
+            xmlSchemaFreeValidCtxt(schemaValidationContext);
+            xmlSchemaFree(schema);
+        });
+        if (!xmlSchemaValidateFile(schemaValidationContext, path.toUtf8(), 0)) {
+            return doc;
+        }
+    }
+#endif
+    file.reset();
+    QString errorMsg;
+    if (!doc.setContent(&file, &errorMsg))
+    {
+        qWarning() << errorMsg;
+    }
+    return doc;
+}
+
+
 bool ResourceDataAccess::fillDataIndex(DataIndex* target)
 {
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("data"));
-    if (!schema.isValid())
+    auto [schema, isValid] = loadXmlSchema(QStringLiteral("data"));
+    if (isValid)
         return false;
 
     foreach (const QString& path, QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, "data.xml"))
@@ -96,8 +199,8 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("keyboardlayout"));
-    if (!schema.isValid())
+    auto [schema, isValid] = loadXmlSchema(QStringLiteral("keyboardlayout"));
+    if (!isValid)
         return false;
     QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
     if (doc.isNull())
@@ -278,8 +381,8 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("course"));
-    if (!schema.isValid())
+    auto [schema, isValid] = loadXmlSchema(QStringLiteral("course"));
+    if (!isValid)
         return false;
     QDomDocument doc = getDomDocument(courseFile, schema);
     if (doc.isNull())
@@ -375,57 +478,6 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
     }
 
     file.write(doc.toByteArray());
-    return true;
-}
-
-QXmlSchema ResourceDataAccess::loadXmlSchema(const QString &name)
-{
-    QXmlSchema schema;
-    QString relPath = QStringLiteral("schemata/%1.xsd").arg(name);
-    QFile schemaFile;
-    if (!openResourceFile(relPath, schemaFile))
-    {
-        return schema;
-    }
-    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
-    if (!schema.isValid())
-    {
-        qWarning() << schemaFile.fileName() << "is invalid";
-    }
-    return schema;
-}
-
-QDomDocument ResourceDataAccess::getDomDocument(QFile &file, QXmlSchema &schema)
-{
-    QDomDocument doc;
-    QXmlSchemaValidator validator(schema);
-    if (!validator.validate(&file))
-    {
-        return doc;
-    }
-    file.reset();
-    QString errorMsg;
-    if (!doc.setContent(&file, &errorMsg))
-    {
-        qWarning() << errorMsg;
-    }
-    return doc;
-}
-
-bool ResourceDataAccess::openResourceFile(const QString &relPath, QFile& file)
-{
-    QString path = QStandardPaths::locate(QStandardPaths::AppLocalDataLocation, relPath);
-    if (path.isNull())
-    {
-        qWarning() << "can't find resource:" << relPath;
-        return false;
-    }
-    file.setFileName(path);
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        qWarning() << "can't open" << path;
-        return false;
-    }
     return true;
 }
 

@@ -177,7 +177,6 @@ target_link_libraries(ktouch
         Qt::QuickWidgets
         Qt::QuickControls2
         Qt::Sql
-        Qt::XmlPatterns
         KF5::Completion
         KF5::ConfigWidgets
         KF5::ItemViews
@@ -189,7 +188,10 @@ target_link_libraries(ktouch
         KF5::CoreAddons
         KF5::IconThemes
         ${ktouch_X11_DEPS}
+        LibXml2::LibXml2
 )
+
+set_target_properties(ktouch PROPERTIES CXX_STANDARD 17)
 
 #kde4_add_app_icon(ktouch_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/ktouch.png")
 #kde4_add_app_icon(ktouch_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/hi*-app-ktouch.png")

@@ -26,11 +26,6 @@ public:
     Q_INVOKABLE bool storeKeyboardLayout(const QString& path, KeyboardLayout* source);
     Q_INVOKABLE bool loadCourse(const QString& path, Course* target);
     Q_INVOKABLE bool storeCourse(const QString& path, Course* source);
-
-private:
-    QXmlSchema loadXmlSchema(const QString& name);
-    QDomDocument getDomDocument(QFile& file, QXmlSchema& schema);
-    bool openResourceFile(const QString& relPath, QFile& file);
 };
 
 #endif // RESOURCEDATAACCESS_H
