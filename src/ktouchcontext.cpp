@@ -17,6 +17,7 @@
 #include "preferences.h"
 #include "trainingconfigwidget.h"
 #include "core/lesson.h"
+#include "core/dataindex.h"
 
 #include <kxmlgui_version.h>
 #include <KActionCollection>
