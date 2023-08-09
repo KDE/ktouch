@@ -23,7 +23,7 @@ struct LessonPainterPrivate
     {
         blockFormat.setLineHeight(200, QTextBlockFormat::ProportionalHeight);
 
-        textCharFormat.setFontFamily(QStringLiteral("monospace"));
+        textCharFormat.setFontFamilies({QStringLiteral("monospace")});
         textCharFormat.setFontPointSize(10);
         textCharFormat.setForeground(QColor("#000"));
         textCharFormat.setFontHintingPreference(QFont::PreferVerticalHinting);
@@ -39,7 +39,7 @@ struct LessonPainterPrivate
         preeditCharFromat.setBackground(QColor("#d0d0d0"));
 
         titleCharFormat = textCharFormat;
-        titleCharFormat.setFontFamily(QStringLiteral("sans-serif"));
+        titleCharFormat.setFontFamilies({QStringLiteral("sans-serif")});
         titleCharFormat.setFontPointSize(15);
     }
 

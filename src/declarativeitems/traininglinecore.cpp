@@ -297,7 +297,7 @@ void TrainingLineCore::add(const QString& text)
         }
     }
 
-    m_actualLine += text.leftRef(maxLength - actualLength);
+    m_actualLine += QStringView{text}.left(maxLength - actualLength);
     emit actualLineChanged();
 }
 

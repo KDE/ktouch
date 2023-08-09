@@ -237,8 +237,8 @@ void LearningProgressModel::update()
 
     if (m_profile)
     {
-        const QSqlQuery query = access.learningProgressQuery(m_profile, m_courseFilter, m_lessonFilter);
-        setQuery(query);
+        QSqlQuery query = access.learningProgressQuery(m_profile, m_courseFilter, m_lessonFilter);
+        setQuery(std::move(query));
     }
 
     emit maxCharactersTypedPerMinuteChanged();
