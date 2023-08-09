@@ -11,12 +11,9 @@ cmake_minimum_required(VERSION 3.16)
 project(ktouch VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.91.0")
-set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
+set(KDE_COMPILERSETTINGS_LEVEL "5.82.0")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-find_package(KF5DocTools)
-find_package(LibXml2 REQUIRED)
+find_package(ECM 5.240.0  NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} )
 
 include(KDEInstallDirs)
@@ -29,6 +26,16 @@ include(ECMOptionalAddSubdirectory)
 include(ECMSetupVersion)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MAJOR_VERSION "5")
+endif()
+
+find_package(KF${KF_MAJOR_VERSION}DocTools)
+find_package(LibXml2 REQUIRED)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
@@ -43,7 +50,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
 )
 find_package(Qt${QT_MAJOR_VERSION} CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF${KF_MAJOR_VERSION} ${KF${KF_MAJOR_VERSION}_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
     ConfigWidgets
@@ -86,7 +93,7 @@ endif()
 # enable QML debugging for debug builds
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_QML_DEBUG")
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.101.0)
+ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.101.0)
 
 # subdirectories to build
 ecm_optional_add_subdirectory(data)
@@ -97,7 +104,7 @@ ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
 ki18n_install(po)
-if (KF5DocTools_FOUND)
+if (KF${KF_MAJOR_VERSION}DocTools_FOUND)
     kdoctools_install(po)
 endif()
 install( PROGRAMS org.kde.ktouch.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
