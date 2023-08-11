@@ -9,7 +9,6 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import org.kde.charts 0.1 as Charts
-import org.kde.kcoreaddons 1.0
 import org.kde.kirigami 2.20 as Kirigami
 import ktouch 1.0
 

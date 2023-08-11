@@ -1,2 +1,3 @@
 import Qt5Compat.GraphicalEffects
+import org.kde.coreaddons
 singleton Units 1.0 Units.qml
