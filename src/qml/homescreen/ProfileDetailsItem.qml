@@ -10,6 +10,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import org.kde.charts 0.1 as Charts
 import org.kde.kcoreaddons 1.0
+import org.kde.kirigami 2.20 as Kirigami
 import ktouch 1.0
 
 import "../common"
@@ -38,13 +39,6 @@ Item {
         id: activePalette
         colorGroup: SystemPalette.Active
     }
-
-    KColorScheme {
-        id: colorScheme
-        colorGroup: KColorScheme.Active
-        colorSet: KColorScheme.View
-    }
-
 
     Item {
         id: infoContainer
@@ -95,8 +89,8 @@ Item {
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width
                         height: parent.height - legend.height - parent.spacing
-                        backgroundColor: colorScheme.normalBackground
-                        textColor: colorScheme.normalText
+                        backgroundColor: Kirigami.Theme.backgroundColor
+                        textColor: Kirigami.Theme.textColor
                         model: learningProgressModel
                     }
 
