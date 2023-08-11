@@ -12,6 +12,7 @@
 
 
 #include <QCoreApplication>
+#include <QGuiApplication>
 #include <QDebug>
 
 #include <X11/X.h>
@@ -28,9 +29,14 @@ const int X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT = 8;
 const char X11Helper::LEFT_VARIANT_STR[] = "(";
 const char X11Helper::RIGHT_VARIANT_STR[] = ")";
 
+static bool isPlatformX11() {
+    return qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+}
+
 bool X11Helper::xkbSupported(int* xkbOpcode)
 {
-    if (!QX11Info::isPlatformX11()) {
+    auto *x11Application = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (x11Application) {
         return false;
     }
     // Verify the Xlib has matching XKB extension.
@@ -50,7 +56,7 @@ bool X11Helper::xkbSupported(int* xkbOpcode)
     int opcode_rtrn;
     int error_rtrn;
     int xkb_opcode;
-    if( ! XkbQueryExtension(QX11Info::display(), &opcode_rtrn, &xkb_opcode, &error_rtrn, &major, &minor)) {
+    if( ! XkbQueryExtension(x11Application->display(), &opcode_rtrn, &xkb_opcode, &error_rtrn, &major, &minor)) {
         qWarning() << "X server XKB extension " << major << '.' << minor <<
             " != " << XkbMajorVersion << '.' << XkbMinorVersion;
         return false;
@@ -111,7 +117,7 @@ bool X11Helper::isDefaultLayout() {
 
 LayoutUnit X11Helper::getCurrentLayout()
 {
-    if (!QX11Info::isPlatformX11()) {
+    if (!isPlatformX11()) {
         return LayoutUnit();
     }
     QList<LayoutUnit> currentLayouts = getLayoutsList();
@@ -153,12 +159,13 @@ LayoutSet X11Helper::getCurrentLayouts()
 
 QList<LayoutUnit> X11Helper::getLayoutsList()
 {
-    if (!QX11Info::isPlatformX11()) {
+    auto *x11Application = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11Application) {
         return QList<LayoutUnit>();
     }
     XkbConfig xkbConfig;
     QList<LayoutUnit> layouts;
-    if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::LAYOUTS_ONLY) ) {
+    if( X11Helper::getGroupNames(x11Application->display(), &xkbConfig, X11Helper::LAYOUTS_ONLY) ) {
         for(int i=0; i<xkbConfig.layouts.size(); i++) {
             QString layout(xkbConfig.layouts[i]);
             QString variant;
@@ -190,7 +197,8 @@ bool X11Helper::setGroup(unsigned int group)
 {
     qDebug() << group;
     xcb_void_cookie_t cookie;
-    cookie = xcb_xkb_latch_lock_state(QX11Info::connection(),
+    auto *x11Application = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    cookie = xcb_xkb_latch_lock_state(x11Application->connection(),
         XCB_XKB_ID_USE_CORE_KBD,
         0, 0,
         1,
@@ -198,7 +206,7 @@ bool X11Helper::setGroup(unsigned int group)
         0, 0, 0
     );
     xcb_generic_error_t *error = nullptr;
-    error = xcb_request_check(QX11Info::connection(), cookie);
+    error = xcb_request_check(x11Application->connection(), cookie);
     if (error) {
         qDebug() << "Couldn't change the group" << error->error_code;
         return false;
@@ -210,7 +218,8 @@ bool X11Helper::setGroup(unsigned int group)
 unsigned int X11Helper::getGroup()
 {
     XkbStateRec xkbState;
-    XkbGetState( QX11Info::display(), XkbUseCoreKbd, &xkbState );
+    auto *x11Application = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    XkbGetState( x11Application->display(), XkbUseCoreKbd, &xkbState );
     return xkbState.group;
 }
 
@@ -307,7 +316,8 @@ void XEventNotifier::start()
 {
     qDebug() << "qCoreApp" << QCoreApplication::instance();
     if( QCoreApplication::instance() != nullptr && X11Helper::xkbSupported(&xkbOpcode) ) {
-        registerForXkbEvents(QX11Info::display());
+        auto *x11Application = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+        registerForXkbEvents(x11Application->display());
 
         // start the event loop
         QCoreApplication::instance()->installNativeEventFilter(this);
@@ -400,7 +410,7 @@ bool XEventNotifier::isLayoutSwitchEvent(_xkb_event* xkbEvent)
            (xkbEvent->any.xkbType == XkbNewKeyboardNotify);
 }
 
-int XEventNotifier::registerForXkbEvents(Display* display)
+int XEventNotifier::registerForXkbEvents(Display *display)
 {
     int eventMask = XkbNewKeyboardNotifyMask | XkbStateNotifyMask;
     if( ! XkbSelectEvents(display, XkbUseCoreKbd, eventMask, eventMask) ) {

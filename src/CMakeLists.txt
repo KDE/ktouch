@@ -159,7 +159,7 @@ if (KTOUCH_BUILD_WITH_X11)
     include_directories(${X11_Xkb_INCLUDE_PATH})
     include_directories(${X11_Xkbfile_INCLUDE_PATH})
     set(ktouch_SRCS ${ktouch_SRCS} x11_helper.cpp x11_helper.h)
-    set(ktouch_X11_DEPS Qt::X11Extras ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
+    set(ktouch_X11_DEPS ${X11_Xkb_LIB} ${X11_LIBRARIES} XCB::XCB XCB::XKB)
 endif ()
 
 kconfig_add_kcfg_files(ktouch_SRCS preferences.kcfgc)

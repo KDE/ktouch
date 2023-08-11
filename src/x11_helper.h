@@ -12,9 +12,10 @@
 #include <QString>
 #include <QStringList>
 #include <QWidget>
-#include <QX11Info>
 #include <QAbstractNativeEventFilter>
 
+struct _XDisplay; // from Xlib.h
+typedef struct _XDisplay Display;
 #include <xcb/xcb.h>
 
 namespace

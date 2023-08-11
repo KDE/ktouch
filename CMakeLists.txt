@@ -79,15 +79,12 @@ option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X
 if (NOT WITHOUT_X11)
     find_package(X11)
     find_package(XCB OPTIONAL_COMPONENTS XCB XKB)
-    if (QT_MAJOR_VERSION STREQUAL "5")
-        find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
-    endif()
 
-    if (Qt5X11Extras_FOUND AND X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
+    if (X11_FOUND AND X11_Xkbfile_FOUND AND X11_Xkb_FOUND AND XCB_FOUND AND XCB_XKB_FOUND)
         set(KTOUCH_BUILD_WITH_X11 TRUE)
     endif()
 
-    add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs Qt5X11Extras, libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
+    add_feature_info ("Keyboard Layout Detection" KTOUCH_BUILD_WITH_X11 "needs libX11, libxkb, libxkbfile, libxcb, and libxcb-xkb")
 endif()
 
 # enable QML debugging for debug builds
