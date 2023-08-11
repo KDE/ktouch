@@ -6,6 +6,8 @@
 import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Icon {
+        id: root
+        property alias icon: root.source
         height: Units.fontMetrics.roundedIconSize(Units.gridUnit)
         width: height
 }
