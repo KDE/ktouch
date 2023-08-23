@@ -179,7 +179,7 @@ FocusScope {
                         IconToolButton {
                             id: newLessonButton
                             iconName: "document-new"
-                            text: "Add New Lesson"
+                            text: i18n("Add New Lesson")
                             color: toolbar.colorScheme.normalText
                             backgroundColor: toolbar.colorScheme.normalBackground
                             visible: courseItem.editable
