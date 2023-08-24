@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:44+0000\n"
+"POT-Creation-Date: 2023-08-24 00:41+0000\n"
 "PO-Revision-Date: 2012-12-23 09:56+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -716,6 +716,12 @@ msgstr "ਮੁਕੰਮਲ"
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr ""
+
+#: src/qml/homescreen/LessonSelector.qml:182
+#, fuzzy, kde-format
+#| msgid "Next Lesson"
+msgid "Add New Lesson"
+msgstr "ਅਗਲਾ ਪਾਠ"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, fuzzy, kde-format

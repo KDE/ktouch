@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:44+0000\n"
+"POT-Creation-Date: 2023-08-24 00:41+0000\n"
 "PO-Revision-Date: 2021-10-07 08:09+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -722,6 +722,12 @@ msgstr "Ολοκληρώθηκε"
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Ολοκλήρωση προηγουμένων μαθημάτων για ξεκλείδωμα"
+
+#: src/qml/homescreen/LessonSelector.qml:182
+#, fuzzy, kde-format
+#| msgid "Add new lesson"
+msgid "Add New Lesson"
+msgstr "Προσθήκη νέου μαθήματος"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format

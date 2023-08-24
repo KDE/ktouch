@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-21 00:44+0000\n"
+"POT-Creation-Date: 2023-08-24 00:41+0000\n"
 "PO-Revision-Date: 2023-06-09 23:18+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -719,6 +719,12 @@ msgstr "Concluído"
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Complete as Lições Anterior para Desbloquear"
+
+#: src/qml/homescreen/LessonSelector.qml:182
+#, fuzzy, kde-format
+#| msgid "Add new lesson"
+msgid "Add New Lesson"
+msgstr "Adicionar uma nova lição"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
