@@ -1,7 +1,7 @@
 # translation of ktouch.po to
 # translation of aktouch.po to
 # translation of aktouch.po to
-# Version: $Revision: 1653610 $
+# Version: $Revision: 1658861 $
 # Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Szymon Janc <szymon@janc.int.pl>, 2003.
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 00:42+0000\n"
+"POT-Creation-Date: 2023-08-24 02:21+0000\n"
 "PO-Revision-Date: 2023-06-10 10:03+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -718,6 +718,12 @@ msgstr "Gotowe"
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Ukończ poprzednie lekcje, aby odblokować"
+
+#: src/qml/homescreen/LessonSelector.qml:182
+#, fuzzy, kde-format
+#| msgid "Add new lesson"
+msgid "Add New Lesson"
+msgstr "Dodaj nową lekcję"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format

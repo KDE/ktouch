@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-07 00:42+0000\n"
+"POT-Creation-Date: 2023-08-24 02:21+0000\n"
 "PO-Revision-Date: 2013-11-01 04:18+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -718,6 +718,12 @@ msgstr "Дайын"
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
 msgstr "Келесіге ауысу үшін алдыңғы сабақты бітіру керек"
+
+#: src/qml/homescreen/LessonSelector.qml:182
+#, fuzzy, kde-format
+#| msgid "Add new lesson"
+msgid "Add New Lesson"
+msgstr "Жаңа сабақты қосу"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, fuzzy, kde-format
