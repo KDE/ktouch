@@ -1,0 +1,41 @@
+{
+    "id": "org.kde.ktouch",
+    "branch": "master",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15-22.08",
+    "sdk": "org.kde.Sdk",
+    "command": "ktouch",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": ["--share=ipc", "--socket=x11", "--socket=wayland" ],
+
+    "modules": [
+        {
+            "name": "libxkbfile",
+            "config-opts": [ "--disable-static", "--enable-x11" ],
+            "sources": [
+                 {
+                     "type": "archive",
+                     "url": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-1.0.9.tar.gz",
+                     "sha256": "95df50570f38e720fb79976f603761ae6eff761613eb56f258c3cb6bab4fd5e3",
+                     "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1781,
+                        "stable-only": true,
+                        "url-template": "https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-$version.tar.gz"
+                    }
+                 }
+            ]
+        },
+        {
+            "name": "kqtquickcharts",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/kde/kqtquickcharts.git" } ]
+        },
+        {
+            "name": "ktouch",
+            "buildsystem": "cmake-ninja",
+            "sources": [ { "type": "dir", "path": "." } ]
+        }
+    ]
+}
