@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 02:21+0000\n"
-"PO-Revision-Date: 2023-06-08 02:25+0200\n"
+"PO-Revision-Date: 2023-08-26 04:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -103,7 +103,7 @@ msgstr "Produciuse un erro ao abrir o curso"
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr "Os cursos incorporados só poden ser vistos."
+msgstr "Os cursos incluídos só poden verse."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
@@ -114,7 +114,7 @@ msgstr "Produciuse un erro ao abrir a disposición de teclado"
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr "As disposicións de teclado incorporadas só poden ser vistas."
+msgstr "As disposicións de teclado incluídas só poden verse."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
@@ -268,7 +268,7 @@ msgstr "Produciuse un erro ao gravar a disposición de teclado no disco."
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr "O curso escollido xa está presente como curso incorporado."
+msgstr "O curso escollido xa está presente como curso incluído."
 
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
@@ -278,7 +278,7 @@ msgstr "Importar como curso novo"
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr "O curso escollido xa está presente como curso dun usuario."
+msgstr "O curso escollido xa está presente como curso dunha persoa usuaria."
 
 #: src/editor/resourceeditor.cpp:613
 #, kde-format
@@ -287,7 +287,7 @@ msgid ""
 "layout."
 msgstr ""
 "A disposición de teclado escollida xa está presente como disposición de "
-"teclado incorporado."
+"teclado incluída."
 
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
@@ -300,7 +300,7 @@ msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
 "A disposición de teclado escollida xa está presente como disposición de "
-"teclado dun usuario."
+"teclado dunha persoa usuaria."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
@@ -403,7 +403,7 @@ msgstr "Como de transparentes amosar as cores dos dedos."
 #: src/ktouch.kcfg:69
 #, kde-format
 msgid "The ID of the last used profile."
-msgstr "O identificador do último perfil empregado."
+msgstr "O identificador do último perfil usado."
 
 #: src/ktouchcontext.cpp:129
 #, kde-format
@@ -468,7 +468,7 @@ msgstr "Sebastian Gottfried"
 #: src/main.cpp:38
 #, kde-format
 msgid "Current maintainer"
-msgstr "Mantedor actual"
+msgstr "Mantemento actual."
 
 #: src/main.cpp:39
 #, kde-format
@@ -478,7 +478,7 @@ msgstr "Andreas Nicolai"
 #: src/main.cpp:39
 #, kde-format
 msgid "Former maintainer and programmer"
-msgstr "Mantedor e programador anterior"
+msgstr "Mantemento e programación anteriores."
 
 #: src/main.cpp:40
 #, kde-format
@@ -488,7 +488,7 @@ msgstr "Håvard Frøiland"
 #: src/main.cpp:40
 #, kde-format
 msgid "Original author"
-msgstr "Autor orixinal"
+msgstr "Autoría orixinal."
 
 #: src/main.cpp:42
 #, kde-format
@@ -720,8 +720,7 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Completar as leccións anteriores para desbloquear"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
 msgstr "Engadir unha nova lección"
 
@@ -774,7 +773,7 @@ msgstr "Cancelar"
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr "Antes de comezar as prácticas, preséntate, por favor:"
+msgstr "Antes de comezar as prácticas, preséntese:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
@@ -1020,25 +1019,25 @@ msgstr "Leccións:"
 #: src/ui/courseeditor.ui:182
 #, kde-format
 msgid "Add new lesson"
-msgstr "Engadir unha nova lección"
+msgstr "Engadir unha nova lección."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:197 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
-msgstr "Retirar esta lección"
+msgstr "Retirar esta lección."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:228
 #, kde-format
 msgid "Move lesson up"
-msgstr "Subir esta lección"
+msgstr "Subir esta lección."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
 #: src/ui/courseeditor.ui:243
 #, kde-format
 msgid "Move lesson down"
-msgstr "Baixar esta lección"
+msgstr "Baixar esta lección."
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:320
@@ -1056,7 +1055,7 @@ msgstr "Diálogo"
 #: src/ui/keyboardlayouteditor.ui:22
 #, kde-format
 msgid "Create new normal key"
-msgstr "Crear unha tecla normal nova"
+msgstr "Crear unha tecla normal nova."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:25
@@ -1068,7 +1067,7 @@ msgstr "Tecla normal"
 #: src/ui/keyboardlayouteditor.ui:43
 #, kde-format
 msgid "Create new special key"
-msgstr "Crear unha tecla especial nova"
+msgstr "Crear unha tecla especial nova."
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:46
@@ -1080,7 +1079,7 @@ msgstr "Tecla especial"
 #: src/ui/keyboardlayouteditor.ui:67
 #, kde-format
 msgid "Delete selected key"
-msgstr "Eliminar a tecla escollida"
+msgstr "Eliminar a tecla escollida."
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
 #: src/ui/keyboardlayouteditor.ui:135
@@ -1214,13 +1213,13 @@ msgstr "Caracteres"
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
 #, kde-format
 msgid "Add new character"
-msgstr "Engadir un carácter novo"
+msgstr "Engadir un carácter novo."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:513
 #, kde-format
 msgid "Remove character"
-msgstr "Retirar este carácter"
+msgstr "Retirar este carácter."
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:562
@@ -1292,7 +1291,7 @@ msgstr "Abrir un ficheiro de texto…"
 #: src/ui/lessontexteditor.ui:46
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr "Dividir as liñas automaticamente"
+msgstr "Dividir as liñas automaticamente."
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:74
@@ -1304,7 +1303,7 @@ msgstr "0 caracteres"
 #: src/ui/newkeyboardlayoutwidget.ui:37
 #, kde-format
 msgid "Paste current system keyboard layout name"
-msgstr "Pegar o nome da disposición do teclado do sistema"
+msgstr "Pegar o nome da disposición do teclado do sistema."
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
@@ -1322,13 +1321,13 @@ msgstr "Obrigar a corrixir os erros de teclear."
 #: src/ui/trainingconfigwidget.ui:45
 #, kde-format
 msgid "Show keyboard"
-msgstr "Amosar o teclado"
+msgstr "Amosar o teclado."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
 #, kde-format
 msgid "Show real-time statistics"
-msgstr "Amosar as estatísticas en tempo real"
+msgstr "Amosar as estatísticas en tempo real."
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
@@ -1369,12 +1368,12 @@ msgstr "Precisión mínima:"
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr "Indicar un título"
+msgstr "Definir un título"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr "Indicar a disposición do teclado"
+msgstr "Definir a disposición do teclado"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
@@ -1394,32 +1393,32 @@ msgstr "Mover esta lección"
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr "Indicar o título da lección"
+msgstr "Definir o título da lección"
 
 #: src/undocommands/coursecommands.cpp:321
 #, kde-format
 msgid "Set new characters for lesson"
-msgstr "Indicar os caracteres novos da lección"
+msgstr "Definir os caracteres novos da lección"
 
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr "Indicar o texto da lección"
+msgstr "Definir o texto da lección"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr "Indicar o título da disposición do teclado"
+msgstr "Definir o título da disposición do teclado"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr "Indicar o nome da disposición do teclado"
+msgstr "Definir o nome da disposición do teclado"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr "Indicar o tamaño da disposición do teclado"
+msgstr "Definir o tamaño da disposición do teclado"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
@@ -1434,17 +1433,17 @@ msgstr "Retirar esta tecla"
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
 msgid "Set key geometry"
-msgstr "Indicar a xeometría da tecla"
+msgstr "Definir a xeometría da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
 msgid "Set key finger"
-msgstr "Indicar o dedo da tecla"
+msgstr "Definir o dedo da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
 msgid "Set key haptic marker"
-msgstr "Indicar o marcador táctil da tecla"
+msgstr "Definir o marcador táctil da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
 #, kde-format
@@ -1459,32 +1458,32 @@ msgstr "Retirar o carácter da tecla"
 #: src/undocommands/keyboardlayoutcommands.cpp:487
 #, kde-format
 msgid "Set key character value"
-msgstr "Indicar o valor do carácter da tecla"
+msgstr "Definir o valor do carácter da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
 msgid "Set key character modifier"
-msgstr "Indicar o modificador do carácter da tecla"
+msgstr "Definir o modificador do carácter da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:581
 #, kde-format
 msgid "Set key character position"
-msgstr "Indicar a posición do carácter da tecla"
+msgstr "Definir a posición do carácter da tecla"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:627
 #, kde-format
 msgid "Set special key type"
-msgstr "Indicar o tipo de tecla especial"
+msgstr "Definir o tipo de tecla especial"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
 #, kde-format
 msgid "Set special key label"
-msgstr "Indicar a etiqueta da tecla especial"
+msgstr "Definir a etiqueta da tecla especial"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr "Indicar o identificador do modificador da tecla especial"
+msgstr "Definir o identificador do modificador da tecla especial"
 
 #~ msgid "Choose Keyboard Layout"
 #~ msgstr "Escoller a configuración do teclado"
