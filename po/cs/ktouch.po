@@ -704,10 +704,9 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Pro odemknutí dokončete předcházející lekce"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
-msgstr "Přidat novou lekci"
+msgstr ""
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
