@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 00:41+0000\n"
-"PO-Revision-Date: 2023-08-26 04:33+0200\n"
+"PO-Revision-Date: 2023-09-03 13:20+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -342,7 +342,7 @@ msgstr "A disposición de teclado que usar en plataformas distintas da X11"
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr "Determina se deben corrixirse ou non os erros de teclear."
+msgstr "Controla se deben corrixirse ou non os erros de teclear."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
