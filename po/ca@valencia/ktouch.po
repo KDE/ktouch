@@ -359,13 +359,13 @@ msgstr ""
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
-msgstr "La tecla Retorn al final de la línia salta fins a la línia següent."
+msgstr "La tecla «Retorn» al final de la línia salta fins a la línia següent."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
-msgstr "La tecla Espai al final de la línia salta fins a la línia següent."
+msgstr "La tecla «Espai» al final de la línia salta fins a la línia següent."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
