@@ -6,7 +6,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005, 2006.
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2005.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2012, 2013, 2014, 2015, 2016, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2018, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2018, 2021, 2023.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
 #
 # KDE Finnish translation sprint participants:
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 00:41+0000\n"
-"PO-Revision-Date: 2021-10-12 16:30+0300\n"
+"PO-Revision-Date: 2023-09-04 15:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-02 17:03:34+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,8 +42,7 @@ msgstr ""
 "translator@legisign.org"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1 %"
