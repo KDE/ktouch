@@ -20,7 +20,7 @@
 
 MainWindow::MainWindow(QWidget* parent):
     KMainWindow(parent),
-    m_view(new QQuickView()),
+    m_view(new QQuickWidget()),
     m_context(new KTouchContext(this, m_view, this))
 {
     init();
@@ -33,23 +33,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::init()
 {
-    QWidget* viewWidget = QWidget::createWindowContainer(m_view, this);
     const int unit = fontMetrics().height();
-    viewWidget->setMinimumSize(56 * unit, 39 * unit);
-    viewWidget->setFocusPolicy(Qt::StrongFocus);
-    setCentralWidget(viewWidget);
+    m_view->setMinimumSize(56 * unit, 39 * unit);
+    m_view->setFocusPolicy(Qt::StrongFocus);
+    setCentralWidget(m_view);
 
     Application::setupDeclarativeBindings(m_view->engine());
 
-    m_view->connect(m_view, &QQuickView::statusChanged, this, &MainWindow::onViewStatusChanged);
+    m_view->connect(m_view, &QQuickWidget::statusChanged, this, &MainWindow::onViewStatusChanged);
     m_view->rootContext()->setContextProperty(QStringLiteral("ktouch"), m_context);
-    m_view->setResizeMode(QQuickView::SizeRootObjectToView);
+    m_view->setResizeMode(QQuickWidget::SizeRootObjectToView);
     m_view->setSource(QUrl(QStringLiteral("qrc:/ktouch/qml/main.qml")));
 }
 
-void MainWindow::onViewStatusChanged(QQuickView::Status status)
+void MainWindow::onViewStatusChanged(QQuickWidget::Status status)
 {
-    if (status == QQuickView::Error)
+    if (status == QQuickWidget::Error)
     {
         QStringList errorMessages;
         foreach (auto error, m_view->errors())

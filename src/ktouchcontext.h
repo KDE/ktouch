@@ -10,7 +10,7 @@
 #include <QObject>
 
 class QMenu;
-class QQuickView;
+class QQuickWidget;
 
 class KActionCollection;
 class KMainWindow;
@@ -28,7 +28,7 @@ class KTouchContext : public QObject
     Q_PROPERTY(DataIndex* globalDataIndex READ dataIndex CONSTANT)
     Q_PROPERTY(bool keyboardKCMAvailable READ keyboardKCMAvailable CONSTANT)
 public:
-    explicit KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject* parent = nullptr);
+    explicit KTouchContext(KMainWindow* mainWindow, QQuickWidget* widget, QObject* parent = nullptr);
     ~KTouchContext() override;
     QString keyboardLayoutName() const;
     DataIndex* dataIndex();
@@ -51,7 +51,7 @@ private:
     KActionCollection* m_actionCollection;
     QMenu* m_menu;
     KMainWindow* m_mainWindow;
-    QQuickView* m_view;
+    QQuickWidget* m_widget;
 #ifdef KTOUCH_BUILD_WITH_X11
     XEventNotifier* m_XEventNotifier;
 #endif

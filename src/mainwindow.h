@@ -9,7 +9,7 @@
 
 #include <KMainWindow>
 
-#include <QQuickView>
+#include <QQuickWidget>
 
 class KTouchContext;
 
@@ -25,8 +25,8 @@ public:
     ~MainWindow() override;
 private:
     void init();
-    void onViewStatusChanged(QQuickView::Status status);
-    QQuickView* m_view;
+    void onViewStatusChanged(QQuickWidget::Status status);
+    QQuickWidget* m_view;
     KTouchContext* m_context;
 };
 

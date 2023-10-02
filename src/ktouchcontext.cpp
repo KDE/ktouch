@@ -8,7 +8,7 @@
 
 #include <QMenu>
 #include <QPointer>
-#include <QQuickView>
+#include <QQuickWidget>
 
 #include "application.h"
 #include "colorsconfigwidget.h"
@@ -36,12 +36,12 @@
 
 const QString keyboardKCMName = QStringLiteral("plasma/kcms/systemsettings/kcm_keyboard");
 
-KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickView* view, QObject *parent) :
+KTouchContext::KTouchContext(KMainWindow* mainWindow, QQuickWidget* widget, QObject *parent) :
     QObject(parent),
     m_actionCollection(new KActionCollection(this)),
     m_menu(new QMenu(mainWindow)),
     m_mainWindow(mainWindow),
-    m_view(view)
+    m_widget(widget)
 {
 #ifdef KTOUCH_BUILD_WITH_X11
     m_XEventNotifier = new XEventNotifier();
@@ -80,7 +80,7 @@ bool KTouchContext::keyboardKCMAvailable()
 
 void KTouchContext::showMenu(int xPos, int yPos)
 {
-    m_menu->popup(m_view->mapToGlobal(QPoint(xPos, yPos)));
+    m_menu->popup(m_widget->mapToGlobal(QPoint(xPos, yPos)));
 }
 
 Lesson* KTouchContext::createLesson()
