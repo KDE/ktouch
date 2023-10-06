@@ -1,7 +1,7 @@
 # translation of ktouch.po to
 # translation of aktouch.po to
 # translation of aktouch.po to
-# Version: $Revision: 1659912 $
+# Version: $Revision: 1661771 $
 # Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Szymon Janc <szymon@janc.int.pl>, 2003.
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2023-09-09 10:59+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -528,7 +528,7 @@ msgstr "Uruchom edytor kursu i układu klawiatury"
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Poprzedź ścieżkę do listy ścieżek importów QML"
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr "%1 napotkał błąd uruchomieniowy i musi zostać zamknięty."

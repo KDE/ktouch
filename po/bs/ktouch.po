@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2015-02-24 23:35+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -524,7 +524,7 @@ msgstr "Pokreni uređivač kursa i rasporeda tastature"
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2002-09-30 13:07SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -508,7 +508,7 @@ msgstr "Ephilisiweyo ibhodi yezitshixo"
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr ""

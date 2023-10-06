@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2023-08-26 00:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -505,7 +505,7 @@ msgstr "과정과 키보드 레이아웃 편집기 실행"
 msgid "Prepend the path to the list of QML import paths"
 msgstr "QML 가져오기 경로 앞에 붙이기"
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr "%1에서 런타임 오류가 발생하여 종료합니다."

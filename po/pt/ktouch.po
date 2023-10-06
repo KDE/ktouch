@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2023-06-09 23:18+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -526,7 +526,7 @@ msgstr "Invocar o editor de disposições de teclado e exercícios"
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Anteceder a localização na lista de locais de importação do QML"
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr "Ocorreu um erro de execução do %1, pelo que teve de ser fechado."

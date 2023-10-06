@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-24 00:41+0000\n"
+"POT-Creation-Date: 2023-10-06 00:39+0000\n"
 "PO-Revision-Date: 2022-04-09 20:16+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -520,7 +520,7 @@ msgstr "Spustiť editor kurzu a rozloženia klávesnice"
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Pridať cestu do zoznamu ciest importu QML"
 
-#: src/mainwindow.cpp:60
+#: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
 msgstr "%1 nastala chyba behu a musí sa zatvoriť."
