@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the ktouch package.
-# Wantoyèk <wantoyek@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Wantoyèk <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 00:39+0000\n"
-"PO-Revision-Date: 2022-05-09 20:24+0700\n"
+"PO-Revision-Date: 2023-10-09 12:45+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,8 +28,7 @@ msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -364,7 +363,7 @@ msgstr "Tombol spasi di barisan akhir akan mengalihkan ke baris selanjutnya."
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
-"Jumlah ketukan minimum yang diperlukan per menit untuk melepas kunci "
+"Jumlah ketukan minimum yang diperlukan per menit untuk membuka kunci "
 "pelajaran berikutnya."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
@@ -373,7 +372,7 @@ msgstr ""
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
-"Minimum akurasi pengetikan yang diperlukan dalam persen untuk melepas kunci "
+"Minimum akurasi pengetikan yang diperlukan dalam persen untuk membuka kunci "
 "pelajaran berikutnya."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
@@ -704,13 +703,12 @@ msgstr "Selesai"
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr "Rampungkan Pelajaran Sebelumnya untuk Melepas Kunci"
+msgstr "Tuntaskan Pelajaran Sebelumnya untuk Membuka Kunci"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
-msgstr "Tambahkan pelajaran baru"
+msgstr "Tambahkan Pelajaran Baru"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -792,7 +790,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
 msgid "All lessons are unlocked immediately."
-msgstr "Semua pelajaran secara langsung dilepas kuncinya."
+msgstr "Semua pelajaran secara langsung dibuka kuncinya."
 
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
@@ -860,7 +858,7 @@ msgstr ""
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr "Pelajaran berikutnya dilepas kuncinya"
+msgstr "Pelajaran berikutnya dibuka kuncinya"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
@@ -1344,7 +1342,7 @@ msgstr "Spa&si"
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr "Batas pelepasan kunci pelajaran"
+msgstr "Batas pembukaan kunci pelajaran"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126

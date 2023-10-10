@@ -225,7 +225,7 @@ msgstr "S'ha produït un error en eliminar la disposició de teclat"
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr "Fitxers XML (*.xml)"
+msgstr "Fitxers en XML (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
