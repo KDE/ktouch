@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 00:39+0000\n"
-"PO-Revision-Date: 2023-10-09 12:45+0700\n"
+"PO-Revision-Date: 2023-10-10 15:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -42,12 +42,12 @@ msgstr "Versi basis data '%1' tidak valid."
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
 #, kde-format
 msgid "Custom Lessons"
-msgstr "Kustom Pelajaran"
+msgstr "Kustom Pelatihan"
 
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr "Sebuah tempat untuk menyimpan teks pelajaran personal"
+msgstr "Sebuah tempat untuk menyimpan teks pelatihan personal"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
@@ -364,7 +364,7 @@ msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
 "Jumlah ketukan minimum yang diperlukan per menit untuk membuka kunci "
-"pelajaran berikutnya."
+"pelatihan berikutnya."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
@@ -373,7 +373,7 @@ msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
 "Minimum akurasi pengetikan yang diperlukan dalam persen untuk membuka kunci "
-"pelajaran berikutnya."
+"pelatihan berikutnya."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
@@ -584,7 +584,7 @@ msgstr "<i>Tak diketahui</i>"
 #, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
-msgstr "Pelajaran:"
+msgstr "Pelatihan:"
 
 #: src/qml/common/LearningProgressChart.qml:85
 #, kde-format
@@ -645,7 +645,7 @@ msgstr ""
 "KTouch tidak dapat beralih atau mengatur tataletak keyboard. Sebelum "
 "pelatihan, kamu harus mengonfigurasi komputermu untuk menggunakan tataletak "
 "keyboard yang benar. Jika tidak, kamu harus menggunakan tataletak keyboardmu "
-"saat ini untuk mengetik teks pelajaran."
+"saat ini untuk mengetik teks pelatihan."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -655,12 +655,12 @@ msgstr "Konfigurasi Keyboard"
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr "Pelajaran <b>%1</b> dihapus."
+msgstr "Pelatihan <b>%1</b> dihapus."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr "Pelajaran tanpa judul dihapus."
+msgstr "Pelatihan tanpa judul dihapus."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -675,7 +675,7 @@ msgstr "Konfirmasi"
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
 msgid "Edit lesson"
-msgstr "Edit pelajaran"
+msgstr "Edit pelatihan"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -692,7 +692,7 @@ msgstr "Judul:"
 #: src/qml/homescreen/LessonEditorDialog.qml:78
 #, kde-format
 msgid "Lesson text"
-msgstr "Teks pelajaran"
+msgstr "Teks pelatihan"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
@@ -703,12 +703,12 @@ msgstr "Selesai"
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr "Tuntaskan Pelajaran Sebelumnya untuk Membuka Kunci"
+msgstr "Tuntaskan Pelatihan Sebelumnya untuk Membuka Kunci"
 
 #: src/qml/homescreen/LessonSelector.qml:182
 #, kde-format
 msgid "Add New Lesson"
-msgstr "Tambahkan Pelajaran Baru"
+msgstr "Tambahkan Pelatihan Baru"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
@@ -724,7 +724,7 @@ msgstr "Kelola Profil"
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr "Latihan pelajaran:"
+msgstr "Latihan pelatihan:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
@@ -777,7 +777,7 @@ msgstr ""
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
 msgstr ""
-"Pelajaran dilepas kuncinya saat keterampilan pengetikanmu meningkat seiring "
+"Pelatihan dilepas kuncinya saat keterampilan pengetikanmu meningkat seiring "
 "waktu."
 
 #: src/qml/homescreen/ProfileForm.qml:72
@@ -790,7 +790,7 @@ msgstr ""
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
 msgid "All lessons are unlocked immediately."
-msgstr "Semua pelajaran secara langsung dibuka kuncinya."
+msgstr "Semua pelatihan secara langsung dibuka kuncinya."
 
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
@@ -805,7 +805,7 @@ msgstr "Gunakan Profil Terpilih"
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
 msgid "Lesson training statistics"
-msgstr "Statistik latihan pelajaran"
+msgstr "Statistik latihan pelatihan"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -831,34 +831,34 @@ msgstr "Kembali ke Layar Beranda"
 #: src/qml/scorescreen/ScoreScreen.qml:166
 #, kde-format
 msgid "Repeat Lesson"
-msgstr "Ulangi Pelajaran"
+msgstr "Ulangi Pelatihan"
 
 #: src/qml/scorescreen/ScoreScreen.qml:174
 #, kde-format
 msgid "Next Lesson"
-msgstr "Pelajaran Selanjutnya"
+msgstr "Pelatihan Selanjutnya"
 
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr "Selamat! Kamu telah lulus pelajaran."
+msgstr "Selamat! Kamu telah lulus pelatihan."
 
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr "Kamu belum lulus pelajaran."
+msgstr "Kamu belum lulus pelatihan."
 
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr ""
-"Ulangi pelajaran. Keterampilanmu akan meningkat secara otomatis seiring "
+"Ulangi pelatihan. Keterampilanmu akan meningkat secara otomatis seiring "
 "waktu."
 
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr "Pelajaran berikutnya dibuka kuncinya"
+msgstr "Pelatihan berikutnya dibuka kuncinya"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
@@ -888,12 +888,12 @@ msgstr "Melalui"
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr "Semua Pelajaran"
+msgstr "Semua Pelatihan"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
 #, kde-format
 msgid "This Lesson"
-msgstr "Pelajaran Ini"
+msgstr "Pelatihan Ini"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
@@ -913,7 +913,7 @@ msgstr "Lanjutkan Latihan"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
 #, kde-format
 msgid "Restart Lesson"
-msgstr "Mulai Ulang Pelajaran"
+msgstr "Mulai Ulang Pelatihan"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
@@ -1004,31 +1004,31 @@ msgstr "Deskripsi:"
 #: src/ui/courseeditor.ui:153
 #, kde-format
 msgid "Lessons:"
-msgstr "Pelajaran:"
+msgstr "Pelatihan:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
 #: src/ui/courseeditor.ui:182
 #, kde-format
 msgid "Add new lesson"
-msgstr "Tambahkan pelajaran baru"
+msgstr "Tambahkan pelatihan baru"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
 #, kde-format
 msgid "Remove lesson"
-msgstr "Singkirkan pelajaran"
+msgstr "Singkirkan pelatihan"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:224
 #, kde-format
 msgid "Move lesson up"
-msgstr "Pindahkan naik pelajaran"
+msgstr "Pindahkan naik pelatihan"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
 #: src/ui/courseeditor.ui:237
 #, kde-format
 msgid "Move lesson down"
-msgstr "Pindahkan turun pelajaran"
+msgstr "Pindahkan turun pelatihan"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:312
@@ -1342,7 +1342,7 @@ msgstr "Spa&si"
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr "Batas pembukaan kunci pelajaran"
+msgstr "Batas pembukaan kunci pelatihan"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
@@ -1374,27 +1374,27 @@ msgstr "Edit deskripsi"
 #: src/undocommands/coursecommands.cpp:126
 #, kde-format
 msgid "Add lesson"
-msgstr "Tambahkan pelajaran"
+msgstr "Tambahkan pelatihan"
 
 #: src/undocommands/coursecommands.cpp:218
 #, kde-format
 msgid "Move lesson"
-msgstr "Pindah pelajaran"
+msgstr "Pindah pelatihan"
 
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr "Atur judul pelajaran"
+msgstr "Atur judul pelatihan"
 
 #: src/undocommands/coursecommands.cpp:321
 #, kde-format
 msgid "Set new characters for lesson"
-msgstr "Atur karakter baru untuk pelajaran"
+msgstr "Atur karakter baru untuk pelatihan"
 
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr "Atur teks pelajaran"
+msgstr "Atur teks pelatihan"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
