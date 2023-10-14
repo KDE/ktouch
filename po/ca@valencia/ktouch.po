@@ -1330,7 +1330,7 @@ msgstr "Mostra les estadístiques en temps real"
 #: src/ui/trainingconfigwidget.ui:75
 #, kde-format
 msgid "Go to next line with:"
-msgstr "Ves a la línia següent amb:"
+msgstr "Ves fins a la línia següent amb:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
 #: src/ui/trainingconfigwidget.ui:82
