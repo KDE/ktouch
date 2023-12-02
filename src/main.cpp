@@ -15,6 +15,11 @@
 
 int main(int argc, char **argv)
 {
+    // TODO ktouch doesn't detect keyboard presses on wayland at the moment so force X11/XWayland for now
+#ifdef Q_OS_LINUX
+    qputenv("QT_QPA_PLATFORM", "xcb");
+#endif
+
     Application::setAttribute(Qt::AA_EnableHighDpiScaling);
     Application::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
