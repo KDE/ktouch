@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2023-08-24 09:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -438,17 +438,17 @@ msgstr "Editor de cursos i la disposició de teclat..."
 msgid "Configure Keyboard..."
 msgstr "Configura el teclat..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Entrenador de mecanografia"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Aprendre i practicar mecanografia"
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -457,67 +457,67 @@ msgstr ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "Mantenidor actual"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Mantenidor i programador anterior"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr "Autor original"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Creador de la icona SVG"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Molts pedaços, correccions i actualitzacions"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Tots els creadors de fitxers de teclat i entrenament"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Executa l'editor de cursos i la disposició de teclat"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Preposa el camí cap a la llista de camins d'importació de QML"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2015-02-24 23:35+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -437,17 +437,17 @@ msgstr "Uređivač kurseva i rasporeda tastature..."
 msgid "Configure Keyboard..."
 msgstr "Podesi tastaturu..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Trener tastature"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Ućenje i uvježbavanje kucanja"
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 #| msgid ""
 #| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
@@ -459,67 +459,67 @@ msgstr ""
 "Autorska prava (C) 2011-2012  Sebastian Gottfried\n"
 "Autorska prava (C) 2000-2007  Håvard Frøiland i Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "Trenutni održavatelj"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Ranije održavanje i programer"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr "Prvobitni autor"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Autor SVG ikone"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Mnogo zakrpa, popravki i nadogradnji"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Svi tvorci trening datoteka i datoteka tastature"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Pokreni uređivač kursa i rasporeda tastature"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

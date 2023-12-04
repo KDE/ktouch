@@ -1,7 +1,7 @@
 # translation of ktouch.po to
 # translation of aktouch.po to
 # translation of aktouch.po to
-# Version: $Revision: 1664120 $
+# Version: $Revision: 1666482 $
 # Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Szymon Janc <szymon@janc.int.pl>, 2003.
@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2023-09-09 10:59+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -444,17 +444,17 @@ msgstr "Edytor kursów i układów klawiatury..."
 msgid "Configure Keyboard..."
 msgstr "Ustawienia klawiatury..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Trener pisania na klawiaturze"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "Ucz się i trenuj pisanie na klawiaturze"
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -463,67 +463,67 @@ msgstr ""
 "Prawa autorskie (C) 2011-2015 przez Sebastian Gottfried\n"
 "Prawa autorskie (C) 2000-2007 przez Håvard Frøiland i Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "Obecny opiekun"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Poprzedni opiekun i programista"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr "Autor pierwowzoru"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Twórca ikon w formacie SVG"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Dużo łat, poprawek i uaktualnień"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Wszyscy twórcy plików ćwiczeniowych i klawiatury"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Uruchom edytor kursu i układu klawiatury"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr "Poprzedź ścieżkę do listy ścieżek importów QML"

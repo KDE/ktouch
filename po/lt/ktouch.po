@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2017-06-28 10:30+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -438,17 +438,17 @@ msgstr "Kursų ir klaviatūros maketų rengyklė..."
 msgid "Configure Keyboard..."
 msgstr "Konfigūruoti klaviatūrą..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "Aklojo teksto rinkimo treniruoklė"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
@@ -457,67 +457,67 @@ msgstr ""
 "Copyright (C) 2011-2015 Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 Håvard Frøiland and Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "Dabartinis prižiūrėtojas"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "Ankstesnis prižiūrėtojas ir programuotojas"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr "Pradinis autorius"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "SVG piktogramos kūrėjas"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "Nemažai pataisymų, naujinimų ir atnaujinimų"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Visi treniruočių ir klaviatūrų failų kūrėjai"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "Atverti kursų ir klaviatūros maketų rengyklė..."
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

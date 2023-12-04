@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2010-06-08 15:50+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -433,17 +433,17 @@ msgstr "កម្មវិធី​កែសម្រួល​ប្លង់​
 msgid "Configure Keyboard..."
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ប្លង់​ក្ដារ​ចុច..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr "អ្នក​ហ្វឹកហាត់​ការវាយ"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr "ស្វែងយល់​ និង​អនុវត្ត​ការ​វាយ​"
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 #| msgid ""
 #| "Copyright (C) 2011-2012 by Sebastian Gottfried\n"
@@ -455,68 +455,68 @@ msgstr ""
 "រក្សាសិទ្ធិ​ឆ្នាំ ២០១១-២០១២ ដោយ Sebastian Gottfried\n"
 "រក្សាសិទ្ធិ​ឆ្នាំ ២០០០-២០០៧ ដោយ Håvard Frøiland និង Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr "Sebastian Gottfried"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "អ្នក​ថែទាំ​បច្ចុប្បន្ន"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr "អ្នក​សរសេរ​កម្មវិធី និង​អ្នក​ថែទាំ​មុន"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr "អ្នក​និពន្ធ​ដើម"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "អ្នក​បង្កើត​រូប​តំណាង SVG"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr "មាន​បំណៈ​ ការ​កែ និង​បច្ចុប្បន្ន​ភាព​ជា​ច្រើន"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "អ្នក​បង្កើត​ឯកសារ​ក្ដារចុច និង​ការ​ហ្វឹកហ្វឺន​​ទាំងអស់"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "launch the course and keyboard layout editor"
 msgid "Launch the course and keyboard layout editor"
 msgstr "ចាប់ផ្ដើម​វគ្គសិក្សា និង​កម្មវិធី​កែសម្រួល​ប្លង់​ក្ដារ​ចុច​"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

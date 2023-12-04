@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2012-12-23 09:56+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -437,85 +437,85 @@ msgstr "ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਕੋਰਸ ਅਤੇ ਐਡੀਟ�
 msgid "Configure Keyboard..."
 msgstr "...ਕੀਬੋਰਡ ਸੰਰਚਨਾ"
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
 msgstr ""
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "ਮੌਜੂਦਾ ਪਰਬੰਧਕ"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr ""
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
 msgstr ""
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr ""
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Original author"
 msgstr ""
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr ""
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr ""
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr ""
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr ""
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr ""
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "Course and Keyboard Layout Editor"
 msgid "Launch the course and keyboard layout editor"
 msgstr "ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਕੋਰਸ ਅਤੇ ਐਡੀਟਰ"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

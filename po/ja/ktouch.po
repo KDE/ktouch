@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2009-07-13 00:38+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -462,18 +462,18 @@ msgstr "キーボード配列エディタ"
 msgid "Configure Keyboard..."
 msgstr "キーボードを開く..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, fuzzy, kde-format
 #| msgid "Typing line"
 msgid "Typewriting Trainer"
 msgstr "入力行"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgid ""
@@ -481,72 +481,72 @@ msgid ""
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr "Copyright (C) 2000-2007, Håvard Frøiland, Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Current maintainer"
 msgstr "現在のメンテナおよびプログラマ"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andreas Nicolai"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Former maintainer and programmer"
 msgstr "現在のメンテナおよびプログラマ"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "Original author, project admin"
 msgid "Original author"
 msgstr "作者、プロジェクト管理者"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "SVG アイコン作成者"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, fuzzy, kde-format
 #| msgid "Lots of patches, fixes, updates"
 msgid "Lots of patches, fixes and updates"
 msgstr "数々のパッチ、フィックス、アップデート"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "練習ファイルとキーボードファイルを作ってくれたすべての人"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Launch the course and keyboard layout editor"
 msgstr "名前のないキーボード配列"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

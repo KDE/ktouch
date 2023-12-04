@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2019-12-12 21:33+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -424,84 +424,84 @@ msgstr "കീബോര്‍ഡ് മാതൃകാ എഡിറ്റര്�
 msgid "Configure Keyboard..."
 msgstr "കീബോര്‍ഡ് തുറക്കുക..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, fuzzy, kde-format
 msgid "Typewriting Trainer"
 msgstr "ടൈപ്പ് ചെയ്യാനുള്ള വരി"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr "Copyright (C) 2000-2007 - ഹാവര്‍ഡ് ഫ്രോയിലാന്‍ഡ്, ആന്‍ഡ്രിയാസ് നിക്കോളായി"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
 msgstr "ഇപ്പോഴത്തെ പരിപാലകൻ"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "ആന്‍ഡ്രിയാസ് നിക്കോളായി"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, fuzzy, kde-format
 msgid "Former maintainer and programmer"
 msgstr "നിലവിലുള്ള പാലകനും പ്രോഗ്രാമറും"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "ഹാവര്‍ഡ് ഫ്രോയിലാന്‍ഡ്"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, fuzzy, kde-format
 msgid "Original author"
 msgstr "യഥാര്‍ത്ഥ രചയിതാവു്, പ്രൊജക്ട് അഡ്മിന്‍"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "ഡേവിഡ് വിഗ്നനി"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr ""
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "ആനി-മേരി മാഫോഫ്"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
 msgstr ""
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "പരിശീലനത്തിനുള്ളതും കീബോര്‍ഡുകളുടേയും ഫയലുകളുടെ സൃഷ്ടാക്കള്‍"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 msgid "Launch the course and keyboard layout editor"
 msgstr "തലക്കെട്ടില്ലാത്ത കീബോര്‍ഡ് മാതൃക"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

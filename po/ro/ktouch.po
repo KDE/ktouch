@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2011-11-28 22:30+0200\n"
 "Last-Translator: Costin Raluca <costin_raluca_96@yahoo.com>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -463,18 +463,18 @@ msgstr "Editor aspect tastatura"
 msgid "Configure Keyboard..."
 msgstr "Deschidere tastatura..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, fuzzy, kde-format
 #| msgid "Typing line"
 msgid "Typewriting Trainer"
 msgstr "Linia de scriere"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgid ""
@@ -482,72 +482,72 @@ msgid ""
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr "Copyright (C) 2000-2007 by Håvard Frøiland si Andreas Nicolai"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Current maintainer"
 msgstr "Sustinatorul si programatorul curent "
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, fuzzy, kde-format
 msgid "Andreas Nicolai"
 msgstr "Andrei Nicolae"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Former maintainer and programmer"
 msgstr "Sustinatorul si programatorul curent "
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, fuzzy, kde-format
 msgid "Håvard Frøiland"
 msgstr "Håvard Frøiland"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "Original author, project admin"
 msgid "Original author"
 msgstr "Autorul original, admin proiect"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, fuzzy, kde-format
 msgid "David Vignoni"
 msgstr "David Vignoni"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, fuzzy, kde-format
 msgid "Creator of the SVG icon"
 msgstr "Creatorul imaginii SVG"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, fuzzy, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, fuzzy, kde-format
 #| msgid "Lots of patches, fixes, updates"
 msgid "Lots of patches, fixes and updates"
 msgstr "Multe patch-uri, stabiliri, actualizari"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, fuzzy, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr "Toti creatorii de pregatire si fisiere "
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Launch the course and keyboard layout editor"
 msgstr "Aspect al tastaturii fara titlu"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:23+0000\n"
+"POT-Creation-Date: 2023-12-04 00:38+0000\n"
 "PO-Revision-Date: 2008-11-17 10:06+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -452,18 +452,18 @@ msgstr "કીબોર્ડ દેખાવ સંપાદક"
 msgid "Configure Keyboard..."
 msgstr "કીબોર્ડ ખોલો..."
 
-#: src/main.cpp:26
+#: src/main.cpp:31
 #, fuzzy, kde-format
 #| msgid "Typing line"
 msgid "Typewriting Trainer"
 msgstr "લખવાનું વાક્ય"
 
-#: src/main.cpp:28
+#: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
 msgstr ""
 
-#: src/main.cpp:31
+#: src/main.cpp:36
 #, fuzzy, kde-format
 #| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgid ""
@@ -471,72 +471,72 @@ msgid ""
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
 msgstr "કોપીરાઇટ (C) ૨૦૦૦-૨૦૦૭ હાવર્ડ ફ્રોઇલેન્ડ અને એન્ડ્રાઇસ નિકોલાઇ"
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
 msgstr ""
 
-#: src/main.cpp:38
+#: src/main.cpp:43
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Current maintainer"
 msgstr "હાલમાં જાળવનાર અને પ્રોગ્રામર"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, kde-format
 msgid "Andreas Nicolai"
 msgstr "એન્ડ્રિઆસ નિકોલાઇ"
 
-#: src/main.cpp:39
+#: src/main.cpp:44
 #, fuzzy, kde-format
 #| msgid "Current maintainer and programmer"
 msgid "Former maintainer and programmer"
 msgstr "હાલમાં જાળવનાર અને પ્રોગ્રામર"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, kde-format
 msgid "Håvard Frøiland"
 msgstr "હાવર્ડ ફ્રોઇલેન્ડ"
 
-#: src/main.cpp:40
+#: src/main.cpp:45
 #, fuzzy, kde-format
 #| msgid "Original author, project admin"
 msgid "Original author"
 msgstr "મૂળ લેખક, પ્રોજેક્ટ સંચાલક"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "David Vignoni"
 msgstr "ડેવિડ વિગ્નોનિ"
 
-#: src/main.cpp:42
+#: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
 msgstr "SVG ચિહ્ન બનાવનાર"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "એની-મેરી માહફોઉફ"
 
-#: src/main.cpp:43
+#: src/main.cpp:48
 #, fuzzy, kde-format
 #| msgid "Lots of patches, fixes, updates"
 msgid "Lots of patches, fixes and updates"
 msgstr "ઘણી બધી પેચ્સ, સરખું કરનાર, સુધારાઓ"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
 msgstr ""
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, fuzzy, kde-format
 #| msgid "untitled keyboard layout"
 msgid "Launch the course and keyboard layout editor"
 msgstr "શીર્ષક વગરનો કીબોર્ડ દેખાવ"
 
-#: src/main.cpp:63
+#: src/main.cpp:68
 #, kde-format
 msgid "Prepend the path to the list of QML import paths"
 msgstr ""
