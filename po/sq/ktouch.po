@@ -8,59 +8,59 @@ msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2009-06-13 18:09+0000\n"
-"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"PO-Revision-Date: 2023-12-10 23:02+0200\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-04-21 23:09+0000\n"
-"X-Generator: Launchpad (build 12883)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-04-21 23:09+0000\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+msgstr "KDE Shqip"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-shqip@yahoogroups.com,vilsongjeci@gmail.com"
+msgstr "kde-shqip@yahoogroups.com"
 
 #: src/bindings/stringformatter.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
 msgctxt "Accuracy percent value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr ""
+msgstr "Version '%1' i pavlefshëm baze të dhënash."
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
-#, fuzzy, kde-format
-#| msgid "&Start New Session"
+#, kde-format
 msgid "Custom Lessons"
-msgstr "&Nis Seancë të Re"
+msgstr "Mësime Vetjake"
 
 #: src/core/profiledataaccess.cpp:618
 #, kde-format
 msgid "A place to store personal lesson texts"
-msgstr ""
+msgstr "Vend për të ruajtur tekste mësimesh personale"
 
 #: src/core/userdataaccess.cpp:113
 #, kde-format
 msgid "No course with ID %1"
-msgstr ""
+msgstr "S’ka kur me ID-në %1"
 
 #: src/core/userdataaccess.cpp:328
 #, kde-format
 msgid "No keyboard layout with ID %1"
-msgstr ""
+msgstr "S’ka skemë tastiere me ID-në %1"
 
 #: src/editor/charactersviewdelegate.cpp:73 src/models/charactersmodel.cpp:305
 #, kde-format
@@ -68,215 +68,213 @@ msgid "Hidden"
 msgstr ""
 
 #: src/editor/charactersviewdelegate.cpp:74 src/models/charactersmodel.cpp:297
-#, fuzzy, kde-format
-#| msgid "Top left:"
+#, kde-format
 msgid "Top left"
-msgstr "Në krye majtas:"
+msgstr "Në krye majtas"
 
 #: src/editor/charactersviewdelegate.cpp:75 src/models/charactersmodel.cpp:299
 #, kde-format
 msgid "Top right"
-msgstr ""
+msgstr "Në krye djathas"
 
 #: src/editor/charactersviewdelegate.cpp:76 src/models/charactersmodel.cpp:301
-#, fuzzy, kde-format
-#| msgid "Top left:"
+#, kde-format
 msgid "Bottom left"
-msgstr "Në krye majtas:"
+msgstr "Në fund majtas"
 
 #: src/editor/charactersviewdelegate.cpp:77 src/models/charactersmodel.cpp:303
 #, kde-format
 msgid "Bottom right"
-msgstr ""
+msgstr "Në fund djathtas"
 
 #: src/editor/courseeditor.cpp:86 src/editor/resourceeditor.cpp:167
 #: src/editor/resourceeditor.cpp:247
 #, kde-format
 msgid "Error while opening course"
-msgstr ""
+msgstr "Gabim teksa hapej kursi"
 
 #: src/editor/courseeditor.cpp:93
 #, kde-format
 msgid "Built-in courses can only be viewed."
-msgstr ""
+msgstr "Kurset e brendshme të programit mundet vetëm të shihen."
 
 #: src/editor/keyboardlayouteditor.cpp:89 src/editor/resourceeditor.cpp:190
 #: src/editor/resourceeditor.cpp:278
 #, kde-format
 msgid "Error while opening keyboard layout"
-msgstr ""
+msgstr "Gabim teksa hapej skemë tastiere"
 
 #: src/editor/keyboardlayouteditor.cpp:96
 #, kde-format
 msgid "Built-in keyboard layouts can only be viewed."
-msgstr ""
+msgstr "Skema tastiere të brendshme të programit mundet vetëm të shihen."
 
 #: src/editor/keyboardlayouteditor.cpp:178
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: src/editor/lessontexteditor.cpp:62
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "%1 Character"
 msgid_plural "%1 Characters"
-msgstr[0] "Gërma"
-msgstr[1] "Gërma"
+msgstr[0] "%1 Shenjë"
+msgstr[1] "%1 Shenja"
 
 #: src/editor/lessontexteditor.cpp:67
 #, kde-format
 msgid "Text files (*.txt)"
-msgstr ""
+msgstr "Kartela tekst (*.txt)"
 
 #: src/editor/lessontexteditor.cpp:76
 #, kde-format
 msgid "The selected file could not be opened"
-msgstr ""
+msgstr "Kartela e përzgjedhur s’u hap dot"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:83
 #, kde-format
 msgid "There is already a keyboard layout with the same name."
-msgstr ""
+msgstr "Ka tashmë një skemë tastiere me të njëjtin emër."
 
 #: src/editor/newresourceassistant.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New"
 msgctxt "@title:window"
 msgid "New"
-msgstr ""
+msgstr "E re"
 
 #: src/editor/newresourceassistant.cpp:32
 #, kde-format
 msgid "New..."
-msgstr ""
+msgstr "E re…"
 
 #: src/editor/newresourceassistant.cpp:35
-#, fuzzy, kde-format
-#| msgid "New User"
+#, kde-format
 msgid "New course"
-msgstr "Përdorues i Ri"
+msgstr "Kurs i ri"
 
 #: src/editor/newresourceassistant.cpp:39
 #, kde-format
 msgid "New keyboard layout"
-msgstr ""
+msgstr "Skemë e re tastiere"
 
 #: src/editor/newresourceassistant.cpp:43
 #, kde-format
 msgid "Template"
-msgstr ""
+msgstr "Gjedhe"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:50
 #: src/qml/homescreen/ProfileDetailsItem.qml:156
 #: src/qml/homescreen/ProfileDetailsItem.qml:214
 #: src/ui/keyboardlayouteditor.ui:66
-#, fuzzy, kde-format
-#| msgid "Delete Key"
+#, kde-format
 msgid "Delete"
-msgstr "Hiq tastin"
+msgstr "Fshije"
 
 #: src/editor/resourceeditor.cpp:53
 #, kde-format
 msgid "Import"
-msgstr ""
+msgstr "jeImporto"
 
 #: src/editor/resourceeditor.cpp:54
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Eksportoje"
 
 #: src/editor/resourceeditor.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Course and Keyboard Layout Editor"
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
-msgstr ""
+msgstr "Përpunues Kursi dhe Skeme Tastiere"
 
 #: src/editor/resourceeditor.cpp:67
 #, kde-format
 msgid "Create a new course or keyboard layout"
-msgstr ""
+msgstr "Krijoni një kurs, ose një skemë të re tastiere"
 
 #: src/editor/resourceeditor.cpp:69
 #, kde-format
 msgid "Delete the current selected course or keyboard layout"
-msgstr ""
+msgstr "Fshi kursin, ose skemën e tastierës të përzgjedhur tani"
 
 #: src/editor/resourceeditor.cpp:79
 #, kde-format
 msgid "Import a course or keyboard layout from a file"
-msgstr ""
+msgstr "i tanishëmImporto një kurs, ose skemë tastiere prej një kartele"
 
 #: src/editor/resourceeditor.cpp:81
 #, kde-format
 msgid "Export the current selected course or keyboard layout to a file"
 msgstr ""
+"Eksporto në një kartelë kursin, ose skemën e tastierës së përzgjedhur tani"
 
 #: src/editor/resourceeditor.cpp:173
 #, kde-format
 msgid "Error while deleting course"
-msgstr ""
+msgstr "Gabim teksa fshihej kursi"
 
 #: src/editor/resourceeditor.cpp:195
 #, kde-format
 msgid "Error while deleting keyboard layout"
-msgstr ""
+msgstr "Gabim teksa fshihej skemë tastiere"
 
 #: src/editor/resourceeditor.cpp:212 src/editor/resourceeditor.cpp:253
 #: src/editor/resourceeditor.cpp:284
 #, kde-format
 msgid "XML files (*.xml)"
-msgstr ""
+msgstr "Kartela XML (*.xml)"
 
 #: src/editor/resourceeditor.cpp:224
 #, kde-format
 msgid "The selected file could not be imported."
-msgstr ""
+msgstr "Kartela e përzgjedhur s’u importua dot."
 
 #: src/editor/resourceeditor.cpp:259
 #, kde-format
 msgid "Error while saving course"
-msgstr ""
+msgstr "Gabim teksa ruhej kursi"
 
 #: src/editor/resourceeditor.cpp:290
 #, kde-format
 msgid "Error while saving keyboard layout"
-msgstr ""
+msgstr "Gabim teksa ruhej skemë tastiere"
 
 #: src/editor/resourceeditor.cpp:377
 #, kde-format
 msgid "Course <b>%1</b> deleted"
-msgstr ""
+msgstr "Kursi b>%1</b> u fshi."
 
 #: src/editor/resourceeditor.cpp:381
 #, kde-format
 msgid "Keyboard layout <b>%1</b> deleted"
-msgstr ""
+msgstr "Skema e tastierës <b>%1</b> u fshi."
 
 #: src/editor/resourceeditor.cpp:415
 #, kde-format
 msgid "Error while saving course to disk."
-msgstr ""
+msgstr "Gabim teksa ruhej kursi në disk."
 
 #: src/editor/resourceeditor.cpp:449
 #, kde-format
 msgid "Error while saving keyboard layout to disk."
-msgstr ""
+msgstr "Gabim teksa ruhej skemë tastiere në disk."
 
 #: src/editor/resourceeditor.cpp:523
 #, kde-format
 msgid "The selected course is already present as a built-in course."
-msgstr ""
+msgstr "Kursi i përzgjedhur është tashmë i pranishëm si një kurs i brendshëm."
 
 #: src/editor/resourceeditor.cpp:524 src/editor/resourceeditor.cpp:553
 #, kde-format
 msgid "Import as new course"
-msgstr ""
+msgstr "Importoje si kurs të ri"
 
 #: src/editor/resourceeditor.cpp:552
 #, kde-format
 msgid "The selected course is already present as a user course."
-msgstr ""
+msgstr "Kursi i përzgjedhur është tashmë i pranishëm si një kurs përdoruesi."
 
 #: src/editor/resourceeditor.cpp:613
 #, kde-format
@@ -284,83 +282,90 @@ msgid ""
 "The selected keyboard layout is already present as a built-in keyboard "
 "layout."
 msgstr ""
+"Skema e përzgjedhur për tastierën është tashmë e pranishme si një skemë e "
+"brendshme tastiere."
 
 #: src/editor/resourceeditor.cpp:614 src/editor/resourceeditor.cpp:638
 #, kde-format
 msgid "Import as new keyboard layout"
-msgstr ""
+msgstr "Importoje si skemë të re tastiere"
 
 #: src/editor/resourceeditor.cpp:637
 #, kde-format
 msgid ""
 "The selected keyboard layout is already present as a user keyboard layout."
 msgstr ""
+"Skema e përzgjedhur për tastierën është tashmë e pranishme si një skemë "
+"tastiere përdoruesi."
 
 #: src/editor/resourceeditorwidget.cpp:19
 #, kde-format
 msgid "Restore"
-msgstr ""
+msgstr "Riktheje"
 
 #: src/editor/resourceeditorwidget.cpp:20
 #, kde-format
 msgid "Dismiss"
-msgstr ""
+msgstr "Hidhe tej"
 
 #: src/editor/resourcetemplatewidget.cpp:45
 #, kde-format
 msgid "Use another course as template"
-msgstr ""
+msgstr "Përdor si gjedhe një kurs tjetër"
 
 #: src/editor/resourcetemplatewidget.cpp:48
 #, kde-format
 msgid "Use another keyboard layout as template"
-msgstr ""
+msgstr "Përdor si gjedhe një tjetër skemë tastiere"
 
 #: src/editor/resourcetypeswidget.cpp:20
 #, kde-format
 msgid "Course"
-msgstr ""
+msgstr "Kurs"
 
 #: src/editor/resourcetypeswidget.cpp:24
 #, kde-format
 msgid "Keyboard layout"
-msgstr ""
+msgstr "Skemë tastiere"
 
 #. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
 #: src/ktouch.kcfg:9
 #, kde-format
 msgid "The keyboard layout to use on non-X11 platforms"
-msgstr ""
+msgstr "Skema e tastierës për përdorim në platforma jo-X11"
 
 #. i18n: ectx: label, entry (EnforceTypingErrorCorrection), group (Training)
 #: src/ktouch.kcfg:15
 #, kde-format
 msgid "Controls whether typing errors have to be corrected or not."
-msgstr ""
+msgstr "Kontrollon nëse janë ndrequr apo jo gabime në shtypje."
 
 #. i18n: ectx: label, entry (ShowKeyboard), group (Training)
 #: src/ktouch.kcfg:19
 #, kde-format
 msgid "Controls the visibility of the keyboard during training."
-msgstr ""
+msgstr "Kontrollon dukshmërinë e tastierës gjatë stërvitjes."
 
 #. i18n: ectx: label, entry (ShowStatistics), group (Training)
 #: src/ktouch.kcfg:23
 #, kde-format
 msgid "Controls the visibility of realtime statistics during training."
 msgstr ""
+"Kontrollon dukshmërinë e statistikave të atypëratyshme gjatë stërvitjes."
 
 #. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
 #: src/ktouch.kcfg:27
 #, kde-format
 msgid "Return key at the end of a line will switch to next line."
 msgstr ""
+"Tasti Return në fund të një rreshti do të bëjë kalimin në rreshtin pasues."
 
 #. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
 #: src/ktouch.kcfg:31
 #, kde-format
 msgid "Space key at the end of a line will switch to next line."
 msgstr ""
+"Tasti Space në fund të një rreshti do të bëjë kalimin në rreshtin pasues."
 
 #. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
 #: src/ktouch.kcfg:35
@@ -368,6 +373,8 @@ msgstr ""
 msgid ""
 "The minimum required amount of strokes per minute to unlock the next lesson."
 msgstr ""
+"Sasia minimum e domosdoshme shtypjesh në minutë për të shkyçur mësimin "
+"pasues."
 
 #. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
 #: src/ktouch.kcfg:41
@@ -375,12 +382,14 @@ msgstr ""
 msgid ""
 "The minimum required typing accuracy in percent to unlock the next lesson."
 msgstr ""
+"Përpikëria minimum e domosdoshme shtypjesh, në përqindje, për të shkyçur "
+"mësimin pasues."
 
 #. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
 #: src/ktouch.kcfg:50
 #, kde-format
 msgid "The keyboard tinting color to highlight keys for each finger."
-msgstr ""
+msgstr "Ngjyrë nuance tastiere për të theksuar tastet për çdo gisht."
 
 #. i18n: ectx: label, entry (FingerOpacity), group (Colors)
 #: src/ktouch.kcfg:61
@@ -392,74 +401,73 @@ msgstr ""
 #: src/ktouch.kcfg:69
 #, kde-format
 msgid "The ID of the last used profile."
-msgstr ""
+msgstr "ID-ja e profilit të fundit të përdorur."
 
 #: src/ktouchcontext.cpp:129
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Training"
-msgstr "T&rainimi"
+msgstr "Stërvitje"
 
 #: src/ktouchcontext.cpp:129
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Training Settings"
-msgstr "T&rainimi"
+msgstr "Rregullime Stërvitjeje"
 
 #: src/ktouchcontext.cpp:130
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Ngjyra"
 
 #: src/ktouchcontext.cpp:130
-#, fuzzy, kde-format
-#| msgid "&Settings"
+#, kde-format
 msgid "Color Settings"
-msgstr "&Parametrat"
+msgstr "Rregullime Ngjyrasg"
 
 #: src/ktouchcontext.cpp:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Keyboard"
 msgctxt "@title:window"
 msgid "Configure Keyboard"
-msgstr ""
+msgstr "Formësoni Tastierë"
 
 #: src/ktouchcontext.cpp:160
 #, kde-format
 msgid "Course and Keyboard Layout Editor..."
-msgstr ""
+msgstr "Përpunues Kursi dhe Skeme Tastiere…"
 
 #: src/ktouchcontext.cpp:170
 #, kde-format
 msgid "Configure Keyboard..."
-msgstr ""
+msgstr "Formësoni Tastierë…"
 
 #: src/main.cpp:31
 #, kde-format
 msgid "Typewriting Trainer"
-msgstr ""
+msgstr "Stërvitës Shtypjeje Në Tastierë"
 
 #: src/main.cpp:33
 #, kde-format
 msgid "Learn and practice typewriting"
-msgstr ""
+msgstr "Mësoni dhe praktikoni shtypjen në tastierë"
 
 #: src/main.cpp:36
-#, fuzzy, kde-format
-#| msgid "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
+#, kde-format
 msgid ""
 "Copyright (C) 2011-2015 by Sebastian Gottfried\n"
 "Copyright (C) 2000-2007 by Håvard Frøiland and Andreas Nicolai"
-msgstr "Copyright (C) 2000-2007 nga Håvard Frøiland dhe Andreas Nicolai"
+msgstr ""
+"Të drejta kopjimi (C) 2011-2015 nga Sebastian Gottfried\n"
+"Të drejta kopjimi (C) 2000-2007 nga Håvard Frøiland dhe Andreas Nicolai"
 
 #: src/main.cpp:43
 #, kde-format
 msgid "Sebastian Gottfried"
-msgstr ""
+msgstr "Sebastian Gottfried"
 
 #: src/main.cpp:43
 #, kde-format
 msgid "Current maintainer"
-msgstr ""
+msgstr "Mirëmbajtës i tanishëm"
 
 #: src/main.cpp:44
 #, kde-format
@@ -469,7 +477,7 @@ msgstr "Andreas Nicolai"
 #: src/main.cpp:44
 #, kde-format
 msgid "Former maintainer and programmer"
-msgstr ""
+msgstr "Mirëmbajtës dhe programues i dikurshëm"
 
 #: src/main.cpp:45
 #, kde-format
@@ -479,7 +487,7 @@ msgstr "Håvard Frøiland"
 #: src/main.cpp:45
 #, kde-format
 msgid "Original author"
-msgstr ""
+msgstr "Autori fillestar"
 
 #: src/main.cpp:47
 #, kde-format
@@ -489,7 +497,7 @@ msgstr "David Vignoni"
 #: src/main.cpp:47
 #, kde-format
 msgid "Creator of the SVG icon"
-msgstr ""
+msgstr "Krijues i ikonës SVG"
 
 #: src/main.cpp:48
 #, kde-format
@@ -499,17 +507,17 @@ msgstr "Anne-Marie Mahfouf"
 #: src/main.cpp:48
 #, kde-format
 msgid "Lots of patches, fixes and updates"
-msgstr ""
+msgstr "Mjaft arnime, ndreqje dhe përditësim"
 
 #: src/main.cpp:49
 #, kde-format
 msgid "All the creators of training and keyboard files"
-msgstr ""
+msgstr "Krejt krijuesit e kartelave të stërvitjeve dhe tastierave"
 
 #: src/main.cpp:66
 #, kde-format
 msgid "Launch the course and keyboard layout editor"
-msgstr ""
+msgstr "Vini në punë përpunuesin e kurseve dhe skemave të tastierës"
 
 #: src/main.cpp:68
 #, kde-format
@@ -519,126 +527,116 @@ msgstr ""
 #: src/mainwindow.cpp:59
 #, kde-format
 msgid "%1 has encountered a runtime error and has to be closed."
-msgstr ""
+msgstr "%1 ka hasur një gabim “runtime” dhe duhet mbyllur."
 
 #: src/models/charactersmodel.cpp:195
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Character"
-msgstr "Gërma"
+msgstr "Shenjë"
 
 #: src/models/charactersmodel.cpp:197
 #, kde-format
 msgid "Modifier ID"
-msgstr ""
+msgstr "ID Ndryshuesi"
 
 #: src/models/charactersmodel.cpp:199
 #, kde-format
 msgid "Position"
-msgstr ""
+msgstr "Pozicion"
 
 #: src/models/lessonmodel.cpp:67
 #, kde-format
 msgid "<No title>"
-msgstr ""
+msgstr "<Pa titull>"
 
 #: src/models/lessonmodel.cpp:69
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "<p>New characters: %1</p><p>%2</p>"
-msgstr "Gërma"
+msgstr "<p>Shenja të reja: %1</p><p>%2</p>"
 
 #: src/models/lessonmodel.cpp:125 src/models/resourcemodel.cpp:96
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgid "Title"
-msgstr "Titulli:"
+msgstr "Titull"
 
 #: src/models/resourcemodel.cpp:177 src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
 msgid "Courses"
-msgstr ""
+msgstr "Kurse"
 
 #: src/models/resourcemodel.cpp:211
 #, kde-format
 msgid "Keyboard Layouts"
-msgstr ""
+msgstr "Skema Tastiere"
 
 #: src/models/resourcemodel.cpp:215
 #, kde-format
 msgid "Name: %1"
-msgstr ""
+msgstr "Emër: %1"
 
 #: src/qml/common/LearningProgressChart.qml:39
 #: src/qml/meters/AccuracyMeter.qml:17
 #, kde-format
 msgid "Accuracy"
-msgstr "Preçizioni"
+msgstr "Përpikëri"
 
 #: src/qml/common/LearningProgressChart.qml:48
 #: src/qml/meters/CharactersPerMinuteMeter.qml:20
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Characters per Minute"
-msgstr "Gërma"
+msgstr "Shenja për Minutë"
 
 #: src/qml/common/LearningProgressChart.qml:75
 #, kde-format
 msgid "<i>Unknown</i>"
-msgstr ""
+msgstr "<i>I panjohur</i>"
 
 #: src/qml/common/LearningProgressChart.qml:81
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "Statistics on lesson:"
 msgid "Lesson:"
-msgstr "Hiqe"
+msgstr "Mësim:"
 
 #: src/qml/common/LearningProgressChart.qml:85
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Training on:"
-msgstr "T&rainimi"
+msgstr ""
 
 #: src/qml/common/LearningProgressChart.qml:91
-#, fuzzy, kde-format
-#| msgid "Accuracy"
+#, kde-format
 msgid "Accuracy:"
-msgstr "Preçizioni"
+msgstr "Përpikëri:"
 
 #: src/qml/common/LearningProgressChart.qml:95
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Characters per Minute:"
-msgstr "Gërma"
+msgstr "Shenja për Minutë:"
 
 #: src/qml/homescreen/CourseSelector.qml:148
 #, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr ""
+msgstr "Kurse për Skemën Tuaj të Tastierës"
 
 #: src/qml/homescreen/CourseSelector.qml:163
-#, fuzzy, kde-format
-#| msgid "New User"
+#, kde-format
 msgid "Other Courses"
-msgstr "Përdorues i Ri"
+msgstr "Kurse të Tjera"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:17
 #, kde-format
 msgid "Welcome to Typewriting Trainer"
-msgstr ""
+msgstr "Mirë se vini te Stërvitësi i Shtypjes Në Tastierë"
 
 #: src/qml/homescreen/InitialProfileDialog.qml:32
 #: src/qml/homescreen/LessonSelector.qml:369
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Start Training"
-msgstr "T&rainimi"
+msgstr "Nisni Stërvitjen"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
 #, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr ""
+msgstr "Kursi i përzgjedhur është menduar për një skemë të caktuar tastiere."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
 #, kde-format
@@ -646,6 +644,8 @@ msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
 msgstr ""
+"Kursi i përzgjedhur s’është menduar për skemën aktive të tastierës së "
+"kompjuterit tuaj."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -654,37 +654,40 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"KTouch-i s’mund të bëjë këmbim, apo ujdisje skemash tastierash. Para "
+"stërvitjes, ju duhet të formësoni kompjuterin tuaj të përdorë skemën e saktë "
+"të tastierës. Përndryshe, për shtypjen e tekstit të mësimit do t’ju duhet të "
+"përdorni skemën tuaj të tanishme të tastierës."
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
 msgid "Configure Keyboard"
-msgstr ""
+msgstr "Formësoni Tastierë"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:44
 #, kde-format
 msgid "Lesson <b>%1</b> deleted."
-msgstr ""
+msgstr "Mësimi <b>%1</b> u fshi."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "U fshi mësim pa titull."
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Zhbëje"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "Ripohojeni"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Edit lesson"
-msgstr "Hiqe"
+msgstr "Përpunoni mësim"
 
 #. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
@@ -696,289 +699,291 @@ msgstr "Hiqe"
 #: src/ui/newkeyboardlayoutwidget.ui:49
 #, kde-format
 msgid "Title:"
-msgstr "Titulli:"
+msgstr "Titull:"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:78
 #, kde-format
 msgid "Lesson text"
-msgstr ""
+msgstr "Tekst mësimi"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:90
 #: src/qml/homescreen/ProfileForm.qml:98
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "U bë"
 
 #: src/qml/homescreen/LessonLockedNotice.qml:44
 #, kde-format
 msgid "Complete Previous Lessons to Unlock"
-msgstr ""
+msgstr "Që të Shkyçet, Plotësoni Mësimet e Mëparshme"
 
 #: src/qml/homescreen/LessonSelector.qml:182
 #, fuzzy, kde-format
-#| msgid "Remove"
+#| msgid "Add new lesson"
 msgid "Add New Lesson"
-msgstr "Hiqe"
+msgstr "Shtoni mësim të ri"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
 msgid "Manage Profiles"
-msgstr ""
+msgstr "Administroni Profile"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Profiles"
 msgctxt "@title:window"
 msgid "Manage Profiles"
-msgstr ""
+msgstr "Administroni Profile"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:125
 #, kde-format
 msgid "Lessons trained:"
-msgstr ""
+msgstr "Mësime të kryera:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:129
 #, kde-format
 msgid "Total training time:"
-msgstr ""
+msgstr "Kohë stërvitjeje gjithsej:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:133
 #, kde-format
 msgid "Last trained:"
-msgstr ""
+msgstr "Stërvitja e fundit më:"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:134
 #, kde-format
 msgid "Never"
-msgstr ""
+msgstr "Kurrë"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:151
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Përpunoni"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:203
 #, kde-format
 msgid "Do you really want to delete the profile \"<b>%1</b>\"?"
-msgstr ""
+msgstr "Doni vërtet të fshihet profili “<b>%1</b>”?"
 
 #: src/qml/homescreen/ProfileDetailsItem.qml:219
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgid "Cancel"
-msgstr "&Anullo"
+msgstr "Anuloje"
 
 #: src/qml/homescreen/ProfileForm.qml:37
 #, kde-format
 msgid "Before you start training, please introduce yourself:"
-msgstr ""
+msgstr "Para se të nisni stërvitjen, ju lutemi, prezantoni veten:"
 
 #: src/qml/homescreen/ProfileForm.qml:43
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "Emër"
 
 #: src/qml/homescreen/ProfileForm.qml:50
 #, kde-format
 msgid "I have no or only very little experience in machine typing"
-msgstr ""
+msgstr "Nuk kam, ose kam fare pak përvojë në shtypje në makinë"
 
 #: src/qml/homescreen/ProfileForm.qml:60
 #, kde-format
 msgid "Lessons are unlocked as your typing skills improve over time."
 msgstr ""
+"Mësimet shkyçen dora-dorës që përmirësohet aftësitë tuaja përgjatë kohës."
 
 #: src/qml/homescreen/ProfileForm.qml:72
 #, kde-format
 msgid "I am an experienced machine typist and want to improve my skills"
-msgstr ""
+msgstr "Jam daktilografist i regjur dhe dëshiroj të përmirësoj aftësitë e mia"
 
 #: src/qml/homescreen/ProfileForm.qml:82
 #, kde-format
 msgid "All lessons are unlocked immediately."
-msgstr ""
+msgstr "Krejt mësimet shkyçen menjëherë."
 
 #: src/qml/homescreen/ProfileSelector.qml:57
 #, kde-format
 msgid "Create New Profile"
-msgstr ""
+msgstr "Krijoni Profil të Ri"
 
 #: src/qml/homescreen/ProfileSelector.qml:108
 #, kde-format
 msgid "Use Selected Profile"
-msgstr ""
+msgstr "Përdor Profilin e Përzgjedhur"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
 #, kde-format
 msgid "Lesson training statistics"
-msgstr ""
+msgstr "Statistika stërvitjeje me mësimin"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
 msgid "Elapsed time"
-msgstr ""
+msgstr "Kohë e rrjedhur"
 
 #: src/qml/scorescreen/ScoreScreen.qml:121
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Character:"
-msgstr "Gërma"
+msgstr "Shenjë:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:125
 #, kde-format
 msgid "Errors:"
-msgstr ""
+msgstr "Gabime:"
 
 #: src/qml/scorescreen/ScoreScreen.qml:152
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:69
 #, kde-format
 msgid "Return to Home Screen"
-msgstr ""
+msgstr "Kthehuni te Skena e Kreut"
 
 #: src/qml/scorescreen/ScoreScreen.qml:166
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Repeat Lesson"
-msgstr "Hiqe"
+msgstr "Përsëriteni Mësimin"
 
 #: src/qml/scorescreen/ScoreScreen.qml:174
 #, kde-format
 msgid "Next Lesson"
-msgstr ""
+msgstr "Mësimi Pasues"
 
 #: src/qml/scorescreen/ScoreScreen.qml:224
 #, kde-format
 msgid "Congratulations! You have passed the lesson."
-msgstr ""
+msgstr "Përgëzime! Kaluat në këtë mësim."
 
 #: src/qml/scorescreen/ScoreScreen.qml:225
 #, kde-format
 msgid "You have not passed the lesson."
-msgstr ""
+msgstr "S’kaluat në këtë mësim."
 
 #: src/qml/scorescreen/ScoreScreen.qml:237
 #, kde-format
 msgid "Repeat the lesson. Your skills will improve automatically over time."
 msgstr ""
+"Përsëritni mësimin. Aftësitë tuaja do të përmirësohen vetvetiu përgjatë "
+"kohës."
 
 #: src/qml/scorescreen/ScoreScreen.qml:239
 #, kde-format
 msgid "Next lesson unlocked"
-msgstr ""
+msgstr "Mësimi pasues u shkyç"
 
 #: src/qml/scorescreen/ScoreScreen.qml:276
 #, kde-format
 msgctxt "Show a specific type of statistic"
 msgid "Show"
-msgstr ""
+msgstr "Shfaqe"
 
 #: src/qml/scorescreen/ScoreScreen.qml:285
 #: src/qml/scorescreen/ScoreScreen.qml:358
 #, kde-format
 msgid "Progress"
-msgstr ""
+msgstr "Ecuri"
 
 #: src/qml/scorescreen/ScoreScreen.qml:286
 #: src/qml/scorescreen/ScoreScreen.qml:376
 #: src/qml/scorescreen/ScoreScreen.qml:389
 #, kde-format
 msgid "Errors"
-msgstr ""
+msgstr "Gabime"
 
 #: src/qml/scorescreen/ScoreScreen.qml:296
 #, kde-format
 msgctxt "Show a statistic over one or more lessons"
 msgid "Over"
-msgstr ""
+msgstr "Gjatë"
 
 #: src/qml/scorescreen/ScoreScreen.qml:308
 #, kde-format
 msgid "All Lessons"
-msgstr ""
+msgstr "Krejt Mësimet"
 
 #: src/qml/scorescreen/ScoreScreen.qml:309
-#, fuzzy, kde-format
-#| msgid "&Start New Session"
+#, kde-format
 msgid "This Lesson"
-msgstr "&Nis Seancë të Re"
+msgstr "Këtë Mësim"
 
 #: src/qml/trainingscreen/KeyboardUnavailableNotice.qml:24
 #, kde-format
 msgid "No visualization available for your keyboard layout."
-msgstr ""
+msgstr "S’ka pamje për skemën tuaj të tastierës."
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "Resume Training"
-msgstr "T&rainimi"
+msgstr "Vazhdoni Stërvitjen"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:54
-#, fuzzy, kde-format
-#| msgid "&Start New Session"
+#, kde-format
 msgid "Restart Lesson"
-msgstr "&Nis Seancë të Re"
+msgstr "Rinisni Mësimin"
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:26
 #, kde-format
 msgid "Training session started. Time begins running with the first keystroke."
 msgstr ""
+"Filloi sesioni i stërvitjes. Matja e kohës fillon me shtypjen e parë të një "
+"tasti."
 
 #: src/qml/trainingscreen/TrainingScreenToolbar.qml:27
 #, kde-format
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr ""
+"Sesioni i stërvitjes u ndërpre. Matja e kohës fillon me shtypjen e parë të "
+"një tasti."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
 #, kde-format
 msgid "Fingers"
-msgstr ""
+msgstr "Gishta"
 
 #. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
 #: src/ui/colorsconfigwidget.ui:44
 #, kde-format
 msgid "Left Hand"
-msgstr ""
+msgstr "Dora e Majtë"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
 #: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
 #, kde-format
 msgid "Index finger:"
-msgstr ""
+msgstr "Gishti tregues:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
 #: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
 #, kde-format
 msgid "Middle finger:"
-msgstr ""
+msgstr "Gishti i mesit:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
 #: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
 #, kde-format
 msgid "Ring finger:"
-msgstr ""
+msgstr "Gishti i unazës:"
 
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
 #. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
 #: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
 #, kde-format
 msgid "Little finger:"
-msgstr ""
+msgstr "Gishti i vogël:"
 
 #. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
 #: src/ui/colorsconfigwidget.ui:190
 #, kde-format
 msgid "Right Hand"
-msgstr ""
+msgstr "Dora e Djathtë"
 
 #. i18n: ectx: property (text), widget (QLabel, opacityLabel)
 #: src/ui/colorsconfigwidget.ui:317
@@ -989,112 +994,105 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
 #: src/ui/colorsconfigwidget.ui:330 src/ui/trainingconfigwidget.ui:162
-#, fuzzy, no-c-format, kde-format
-#| msgid "%"
+#, no-c-format, kde-format
 msgid " %"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
 #: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
 #, kde-format
 msgid "Keyboard layout:"
-msgstr ""
+msgstr "Skemë tastiere:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
 #: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
 #, kde-format
 msgid "Description:"
-msgstr ""
+msgstr "Përshkrim:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
 #: src/ui/courseeditor.ui:153
 #, kde-format
 msgid "Lessons:"
-msgstr ""
+msgstr "Mësime:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
 #: src/ui/courseeditor.ui:182
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Add new lesson"
-msgstr "Hiqe"
+msgstr "Shtoni mësim të ri"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
 #: src/ui/courseeditor.ui:195 src/undocommands/coursecommands.cpp:167
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Remove lesson"
-msgstr "Hiqe"
+msgstr "Hiqe mësimin"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
 #: src/ui/courseeditor.ui:224
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Move lesson up"
-msgstr "Hiqe"
+msgstr "Ngjite mësimin sipër"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
 #: src/ui/courseeditor.ui:237
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Move lesson down"
-msgstr "Hiqe"
+msgstr "Zbrite mësimin poshtë"
 
 #. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
 #: src/ui/courseeditor.ui:312
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "New characters:"
-msgstr "Gërma"
+msgstr "Shenja të reja:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, CustomLessonEditorDialog)
 #: src/ui/customlessoneditordialog.ui:14
 #, kde-format
 msgid "Dialog"
-msgstr ""
+msgstr "Dialog"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:22
 #, kde-format
 msgid "Create new normal key"
-msgstr ""
+msgstr "Krijoni tast normal të ri"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:25
 #, kde-format
 msgid "Normal Key"
-msgstr ""
+msgstr "Tast Normal"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:41
 #, kde-format
 msgid "Create new special key"
-msgstr ""
+msgstr "Krijoni tast special të ri"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:44
 #, kde-format
 msgid "Special Key"
-msgstr ""
+msgstr "Tast Special"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:63
-#, fuzzy, kde-format
-#| msgid "Delete Key"
+#, kde-format
 msgid "Delete selected key"
-msgstr "Hiq tastin"
+msgstr "Fshije tastin e përzgjedhur"
 
 #. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
 #: src/ui/keyboardlayouteditor.ui:127
 #, no-c-format, kde-format
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:36
 #, kde-format
 msgid "Keyboard"
-msgstr ""
+msgstr "Tastierë"
 
 #. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
@@ -1102,7 +1100,7 @@ msgstr ""
 #: src/ui/newkeyboardlayoutwidget.ui:22
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Emër:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
@@ -1110,7 +1108,7 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:276
 #, kde-format
 msgid "Width:"
-msgstr "Gjerësia:"
+msgstr "Gjerësi:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
@@ -1118,13 +1116,13 @@ msgstr "Gjerësia:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:305
 #, kde-format
 msgid "Height:"
-msgstr "Lartësia:"
+msgstr "Lartësi:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: src/ui/keyboardlayoutpropertieswidget.ui:185
 #, kde-format
 msgid "Geometry"
-msgstr ""
+msgstr "Gjeometri"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/ui/keyboardlayoutpropertieswidget.ui:211
@@ -1136,7 +1134,7 @@ msgstr "Majtas:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:221
 #, kde-format
 msgid "Top:"
-msgstr "Sipër:"
+msgstr "Në Krye:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
@@ -1144,61 +1142,61 @@ msgstr "Sipër:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:546
 #, kde-format
 msgid "Key"
-msgstr ""
+msgstr "Tast"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:379
 #, kde-format
 msgid "Finger:"
-msgstr ""
+msgstr "Gisht:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:396
 #, kde-format
 msgid "Left little finger"
-msgstr ""
+msgstr "Gishti i vogël i majtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:401
 #, kde-format
 msgid "Left ring finger"
-msgstr ""
+msgstr "Gishti i unazës i majtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:406
 #, kde-format
 msgid "Left middle finger"
-msgstr ""
+msgstr "Gishti i mesit i majtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:411
 #, kde-format
 msgid "Left index finger"
-msgstr ""
+msgstr "Gishti tregues i majtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:416
 #, kde-format
 msgid "Right index finger"
-msgstr ""
+msgstr "Gishti tregues i djathtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:421
 #, kde-format
 msgid "Right middle finger"
-msgstr ""
+msgstr "Gishti i mesit i djathtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:426
 #, kde-format
 msgid "Right ring finger"
-msgstr ""
+msgstr "Gishti i unazës i djathtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:431
 #, kde-format
 msgid "Right little finger"
-msgstr ""
+msgstr "Gishti i vogël i djathtë"
 
 #. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:439
@@ -1208,30 +1206,27 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
 #: src/ui/keyboardlayoutpropertieswidget.ui:465
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Characters"
-msgstr "Gërma"
+msgstr "Shenja"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:501
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Add new character"
-msgstr "Gërma"
+msgstr "Shtoni shenjë të re"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
 #: src/ui/keyboardlayoutpropertieswidget.ui:511
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Remove character"
-msgstr "Gërma"
+msgstr "Hiqe shenjën"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:558
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "Lloj:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:575
@@ -1243,68 +1238,67 @@ msgstr ""
 #: src/ui/keyboardlayoutpropertieswidget.ui:580
 #, kde-format
 msgid "Capslock"
-msgstr ""
+msgstr "Capslock"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:585
 #, kde-format
 msgid "Shift"
-msgstr ""
+msgstr "Tasti Shift"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:590
 #, kde-format
 msgid "Backspace"
-msgstr ""
+msgstr "Tasti Backspace"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:595
 #, kde-format
 msgid "Return"
-msgstr ""
+msgstr "Tasti Return"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:600
 #, kde-format
 msgid "Space"
-msgstr ""
+msgstr "Tasti hapësirë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
 #: src/ui/keyboardlayoutpropertieswidget.ui:605
 #, kde-format
 msgid "Other"
-msgstr ""
+msgstr "Tjetër"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:613
 #, kde-format
 msgid "Label:"
-msgstr ""
+msgstr "Etiketë:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
 #: src/ui/keyboardlayoutpropertieswidget.ui:626
 #, kde-format
 msgid "Modifier ID:"
-msgstr ""
+msgstr "ID Ndryshuesi:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
 #: src/ui/lessontexteditor.ui:31
 #, kde-format
 msgid "Open a text file..."
-msgstr ""
+msgstr "Hapni një kartelë tekst…"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
 #: src/ui/lessontexteditor.ui:44
 #, kde-format
 msgid "Wrap lines automatically"
-msgstr ""
+msgstr "Mbështilli rreshtat automatikisht"
 
 #. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
 #: src/ui/lessontexteditor.ui:70
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "0 Characters"
-msgstr "Gërma"
+msgstr "0 Shenja"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
@@ -1314,144 +1308,138 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, trainingLabel)
 #: src/ui/trainingconfigwidget.ui:25
-#, fuzzy, kde-format
-#| msgid "T&raining"
+#, kde-format
 msgid "During training:"
-msgstr "T&rainimi"
+msgstr "Gjatë stërvitjes:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnforceTypingErrorCorrection)
 #: src/ui/trainingconfigwidget.ui:32
 #, kde-format
 msgid "Enforce correction of typing errors"
-msgstr ""
+msgstr "Detyro ndreqje gabimesh shtypjeje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
 #: src/ui/trainingconfigwidget.ui:45
 #, kde-format
 msgid "Show keyboard"
-msgstr ""
+msgstr "Shfaq tastierë"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
 #: src/ui/trainingconfigwidget.ui:52
 #, kde-format
 msgid "Show real-time statistics"
-msgstr ""
+msgstr "Shfaq statistika të atypëratyshme"
 
 #. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
 #: src/ui/trainingconfigwidget.ui:75
 #, kde-format
 msgid "Go to next line with:"
-msgstr ""
+msgstr "Kalo te rreshti pasues me :"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
 #: src/ui/trainingconfigwidget.ui:82
 #, kde-format
 msgid "Ret&urn"
-msgstr ""
+msgstr "Ret&urn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
 #: src/ui/trainingconfigwidget.ui:89
 #, kde-format
 msgid "Spa&ce"
-msgstr ""
+msgstr "Spa&ce"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/trainingconfigwidget.ui:120
 #, kde-format
 msgid "Lesson unlocking limits"
-msgstr ""
+msgstr "Kufij shkyçjeje mësimesh"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
 #: src/ui/trainingconfigwidget.ui:126
 #, kde-format
 msgid "Minimum strokes &per minute:"
-msgstr ""
+msgstr "Shtypje minimum &për minutë:"
 
 #. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
 #: src/ui/trainingconfigwidget.ui:149
-#, fuzzy, kde-format
-#| msgid "Accuracy"
+#, kde-format
 msgid "Minimum accuracy:"
-msgstr "Preçizioni"
+msgstr "Përpikëri minimum:"
 
 #: src/undocommands/coursecommands.cpp:21
 #, kde-format
 msgid "Set title"
-msgstr ""
+msgstr "Caktoni titull"
 
 #: src/undocommands/coursecommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout"
-msgstr ""
+msgstr "Caktoni skemë tastiere"
 
 #: src/undocommands/coursecommands.cpp:91
 #, kde-format
 msgid "Edit description"
-msgstr ""
+msgstr "Përpunoni përshkrimin"
 
 #: src/undocommands/coursecommands.cpp:126
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Add lesson"
-msgstr "Hiqe"
+msgstr "Shtoni mësim"
 
 #: src/undocommands/coursecommands.cpp:218
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgid "Move lesson"
-msgstr "Hiqe"
+msgstr "Lëvizeni mësimin"
 
 #: src/undocommands/coursecommands.cpp:282
 #, kde-format
 msgid "Set lesson title"
-msgstr ""
+msgstr "Caktoni titull mësimi"
 
 #: src/undocommands/coursecommands.cpp:321
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Set new characters for lesson"
-msgstr "Gërma"
+msgstr "Caktoni shenja të reja për mësimin"
 
 #: src/undocommands/coursecommands.cpp:360
 #, kde-format
 msgid "Set lesson text"
-msgstr ""
+msgstr "Caktoni tekst mësimi"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:21
 #, kde-format
 msgid "Set keyboard layout title"
-msgstr ""
+msgstr "Caktoni titull skeme tastiere"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:56
 #, kde-format
 msgid "Set keyboard layout name"
-msgstr ""
+msgstr "Caktoni emër skeme tastiere"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:91
 #, kde-format
 msgid "Set keyboard layout size"
-msgstr ""
+msgstr "Caktoni madhësi skeme tastiere"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:143
 #, kde-format
 msgid "Add key"
-msgstr ""
+msgstr "Shtoni tast"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:198
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove key"
-msgstr "&Hiqe"
+msgstr "Hiqe tastin"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:260
 #, kde-format
 msgid "Set key geometry"
-msgstr ""
+msgstr "Caktoni gjeometri tastesh"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:298
 #, kde-format
 msgid "Set key finger"
-msgstr ""
+msgstr "Caktoni gisht për tastin"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:344
 #, kde-format
@@ -1459,22 +1447,19 @@ msgid "Set key haptic marker"
 msgstr ""
 
 #: src/undocommands/keyboardlayoutcommands.cpp:389
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Add key character"
-msgstr "Gërma"
+msgstr "Shtoni shenjë tasti"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:430
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Remove key character"
-msgstr "Gërma"
+msgstr "Hiqe shenjën e tastit"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:487
-#, fuzzy, kde-format
-#| msgid "Character"
+#, kde-format
 msgid "Set key character value"
-msgstr "Gërma"
+msgstr ""
 
 #: src/undocommands/keyboardlayoutcommands.cpp:534
 #, kde-format
@@ -1489,17 +1474,17 @@ msgstr ""
 #: src/undocommands/keyboardlayoutcommands.cpp:627
 #, kde-format
 msgid "Set special key type"
-msgstr ""
+msgstr "Caktoni lloj tasti special"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:670
 #, kde-format
 msgid "Set special key label"
-msgstr ""
+msgstr "Caktoni etiketë tasti special"
 
 #: src/undocommands/keyboardlayoutcommands.cpp:713
 #, kde-format
 msgid "Set special key modifier ID"
-msgstr ""
+msgstr "Caktoni ID ndryshuesi tasti special"
 
 #, fuzzy
 #~| msgid "Level Editor"
