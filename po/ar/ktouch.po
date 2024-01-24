@@ -4,14 +4,14 @@
 # Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
 # Ahmad M. Zawawi <zawawi@arabeyes.org>, 2004.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2009, 2021, 2023.
+# SPDX-FileCopyrightText: 2009, 2021, 2023, 2024 zayed <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safaalfulaij@hotmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 02:21+0000\n"
-"PO-Revision-Date: 2023-06-08 10:49+0400\n"
+"PO-Revision-Date: 2024-01-17 20:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -706,10 +706,9 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "أكمل التمارين السابقة لفك القفل"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
-msgstr "أضف درس جديد"
+msgstr "أضف درساً جديداً"
 
 #: src/qml/homescreen/ProfileComboBox.qml:54
 #, kde-format
