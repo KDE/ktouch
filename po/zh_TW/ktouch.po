@@ -6,19 +6,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2008, 2009, 2010.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 02:21+0000\n"
-"PO-Revision-Date: 2019-07-24 22:57+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-01-29 01:54+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.07.80\n"
+"X-Generator: Lokalize 24.01.95\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -32,8 +33,7 @@ msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
 #: src/bindings/stringformatter.cpp:31
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Accuracy percent value"
 msgid "%1%"
 msgstr "%1%"
@@ -41,7 +41,7 @@ msgstr "%1%"
 #: src/core/dbaccess.cpp:105
 #, kde-format
 msgid "Invalid database version '%1'."
-msgstr "不合法的資料庫版本 '%1'。"
+msgstr "無效的資料庫版本 '%1'。"
 
 #: src/core/profiledataaccess.cpp:617
 #: src/qml/homescreen/CourseSelectorKeyboardLayoutItem.qml:78
@@ -138,8 +138,7 @@ msgid "There is already a keyboard layout with the same name."
 msgstr "已經有同名的鍵盤佈局了。"
 
 #: src/editor/newresourceassistant.cpp:30
-#, fuzzy, kde-format
-#| msgid "New"
+#, kde-format
 msgctxt "@title:window"
 msgid "New"
 msgstr "新增"
@@ -184,8 +183,7 @@ msgid "Export"
 msgstr "匯出"
 
 #: src/editor/resourceeditor.cpp:65
-#, fuzzy, kde-format
-#| msgid "Course and Keyboard Layout Editor"
+#, kde-format
 msgctxt "@title:window"
 msgid "Course and Keyboard Layout Editor"
 msgstr "課程與鍵盤佈局編輯器"
@@ -384,7 +382,7 @@ msgstr "突顯每個指頭的按鍵的顏色。"
 #: src/ktouch.kcfg:61
 #, kde-format
 msgid "How transparent finger colors should be shown."
-msgstr ""
+msgstr "顯示手指顏色時要多透明。"
 
 #. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
 #: src/ktouch.kcfg:69
@@ -413,8 +411,7 @@ msgid "Color Settings"
 msgstr "顏色設定"
 
 #: src/ktouchcontext.cpp:143
-#, fuzzy, kde-format
-#| msgid "Configure Keyboard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Keyboard"
 msgstr "設定鍵盤"
@@ -602,10 +599,9 @@ msgid "Characters per Minute:"
 msgstr "每分鐘字元數："
 
 #: src/qml/homescreen/CourseSelector.qml:148
-#, fuzzy, kde-format
-#| msgid "Choose Keyboard Layout"
+#, kde-format
 msgid "Courses For Your Keyboard Layout"
-msgstr "選擇鍵盤佈局"
+msgstr "您的鍵盤佈局的課程"
 
 #: src/qml/homescreen/CourseSelector.qml:163
 #, kde-format
@@ -624,20 +620,16 @@ msgid "Start Training"
 msgstr "開始訓練"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:47
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as a user keyboard layout."
+#, kde-format
 msgid "The selected course is intended for a specific keyboard layout."
-msgstr "選取的鍵盤佈局已經是使用者的鍵盤佈局。"
+msgstr "選取的課程是某個鍵盤佈局用的。"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "The selected keyboard layout is already present as a user keyboard layout."
+#, kde-format
 msgid ""
 "The selected course is not intended for your computer's active keyboard "
 "layout."
-msgstr "選取的鍵盤佈局已經是使用者的鍵盤佈局。"
+msgstr "選取的課程不適用於您的電腦目前使用的鍵盤佈局。"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:56
 #, kde-format
@@ -646,6 +638,8 @@ msgid ""
 "configure your computer to use the correct keyboard layout. Otherwise you "
 "will have to use your current keyboard layout to type the lesson text."
 msgstr ""
+"KTouch 無法切換或設定鍵盤佈局。在訓練前，您必須讓電腦設定好使用正確的鍵盤佈"
+"局。否則您只能用目前的鍵盤佈局來打課程的文字。"
 
 #: src/qml/homescreen/KeyboardLayoutMismatchMessage.qml:65
 #, kde-format
@@ -660,7 +654,7 @@ msgstr "已刪除 <b>%1</b> 課程。"
 #: src/qml/homescreen/LessonDeletedMessage.qml:45
 #, kde-format
 msgid "Lesson without title deleted."
-msgstr ""
+msgstr "已刪除沒有標題的課程。"
 
 #: src/qml/homescreen/LessonDeletedMessage.qml:52
 #, kde-format
@@ -670,7 +664,7 @@ msgstr "復原"
 #: src/qml/homescreen/LessonDeletedMessage.qml:62
 #, kde-format
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 #: src/qml/homescreen/LessonEditorDialog.qml:24
 #, kde-format
@@ -706,8 +700,7 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "完成前一個訓練階段以解鎖"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
 msgstr "新增課程"
 
@@ -717,8 +710,7 @@ msgid "Manage Profiles"
 msgstr "管理設定檔"
 
 #: src/qml/homescreen/ProfileComboBox.qml:84
-#, fuzzy, kde-format
-#| msgid "Manage Profiles"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Profiles"
 msgstr "管理設定檔"
@@ -799,10 +791,9 @@ msgid "Use Selected Profile"
 msgstr "用選取的設定檔"
 
 #: src/qml/homescreen/StatPopupDialog.qml:21
-#, fuzzy, kde-format
-#| msgid "Show real-time statistics"
+#, kde-format
 msgid "Lesson training statistics"
-msgstr "顯示即時統計"
+msgstr "課程訓練統計"
 
 #: src/qml/meters/ElapsedTimeMeter.qml:17
 #, kde-format
@@ -898,7 +889,7 @@ msgstr "您的鍵盤佈局沒有視覺化工具。"
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:24
 #, kde-format
 msgid "Menu"
-msgstr ""
+msgstr "選單"
 
 #: src/qml/trainingscreen/TrainingScreenMenu.qml:42
 #, kde-format
@@ -971,7 +962,7 @@ msgstr "右手"
 #: src/ui/colorsconfigwidget.ui:317
 #, kde-format
 msgid "Opacity"
-msgstr ""
+msgstr "不透明度"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_RequiredAccuracy)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_FingerOpacity)
