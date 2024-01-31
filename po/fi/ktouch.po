@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-24 02:21+0000\n"
-"PO-Revision-Date: 2023-09-04 15:30+0300\n"
+"PO-Revision-Date: 2023-11-19 19:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -727,8 +727,7 @@ msgid "Complete Previous Lessons to Unlock"
 msgstr "Avaa läpäisemällä aiemmat oppitunnit"
 
 #: src/qml/homescreen/LessonSelector.qml:182
-#, fuzzy, kde-format
-#| msgid "Add new lesson"
+#, kde-format
 msgid "Add New Lesson"
 msgstr "Lisää uusi oppitunti"
 
