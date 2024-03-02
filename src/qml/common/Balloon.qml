@@ -11,18 +11,18 @@ import Qt5Compat.GraphicalEffects
 Loader {
     id: root
     property Item visualParent
-    property string status: 'closed'
+    property string statusState: 'closed'
     default property Item data
-    active: status != 'closed'
+    active: statusState != 'closed'
 
     function open()
     {
-        root.status = 'loading'
+        root.statusState = 'loading'
     }
 
     function close()
     {
-        root.status = 'closing'
+        root.statusState = 'closing'
     }
 
     sourceComponent: Component {
@@ -46,7 +46,7 @@ Loader {
                     }
                     ScriptAction {
                         script: {
-                            root.status = root.status == 'opening' ? 'open' : 'closed'
+                            root.statusState = root.statusState == 'opening' ? 'open' : 'closed'
                         }
 
                     }
@@ -144,7 +144,7 @@ Loader {
                 if (candidate) {
                     dismissArea.parent = candidate
                 }
-                root.status = 'opening'
+                root.statusState = 'opening'
             }
 
         }

@@ -7,6 +7,7 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import ktouch 1.0
+import org.kde.kirigami as Kirigami
 
 import "../common"
 
@@ -29,11 +30,11 @@ Collapsable {
             rowSpacing: Units.gridUnit
             columnSpacing: Units.gridUnit
 
-            Icon {
+            Kirigami.Icon {
                 Layout.column: 0
                 Layout.row: 0
-                height: Units.fontMetrics.roundedIconSize(2 * Units.gridUnit)
-                icon: "dialog-warning"
+                Layout.preferredHeight: Units.fontMetrics.roundedIconSize(2 * Units.gridUnit)
+                source: "dialog-warning"
             }
 
             Label {
