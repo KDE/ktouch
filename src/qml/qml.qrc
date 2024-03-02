@@ -7,7 +7,6 @@
         <file>common/ComboBox.qml</file>
         <file>common/FocusBar.qml</file>
         <file>common/GridView.qml</file>
-        <file>common/Icon.qml</file>
         <file>common/IconButton.qml</file>
         <file>common/IconLabel.qml</file>
         <file>common/IconToolButton.qml</file>
@@ -19,7 +18,6 @@
         <file>common/ListItem.qml</file>
         <file>common/ListView.qml</file>
         <file>common/MessageBox.qml</file>
-        <file>common/MonochromeIcon.qml</file>
         <file>common/PopupDialog.qml</file>
         <file>common/RadioButton.qml</file>
         <file>common/ScrollBar.qml</file>

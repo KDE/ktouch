@@ -4,8 +4,9 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Controls 2.2
+import QtQuick
+import QtQuick.Controls
+import org.kde.kirigami as Kirigami
 
 Label {
     property string iconName: ""
@@ -17,7 +18,7 @@ Label {
     leftPadding: (iconItem.visible || reserveSpaceForIcon? padding + iconItem.width: 0) + (label.text !== ""? padding: 0)
     verticalAlignment: Text.AlignVCenter
 
-    MonochromeIcon {
+    Kirigami.Icon {
         id: iconItem
         visible: label.iconName != ""
         color: label.color
@@ -26,6 +27,6 @@ Label {
             leftMargin: label.text === ""? (label.width - width) / 2: label.padding
             verticalCenter: parent.verticalCenter
         }
-        icon: label.iconName
+        source: label.iconName
     }
 }
