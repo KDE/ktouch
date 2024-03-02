@@ -28,7 +28,7 @@ public:
     void openCourse(DataIndexCourse* dataIndexCourse);
     void clearUndoStackForCourse(DataIndexCourse* course);
     void save();
-private slots:
+private Q_SLOTS:
     void setTitle(const QString& newTitle);
     void setKeyboardLayoutName(const QString& newName);
     void setDescription(const QString& newDescription);

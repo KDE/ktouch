@@ -33,10 +33,10 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     int rowCount(const QModelIndex& parent = QModelIndex()) const override;
     int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-signals:
+Q_SIGNALS:
     void keyboardLayoutChanged();
     void keyIndexChanged();
-private slots:
+private Q_SLOTS:
     void onKeyCharAboutToBeAdded(KeyChar* keyChar, int index);
     void onKeyCharAdded();
     void onKeyCharsAboutToBeRemoved(int first, int last);

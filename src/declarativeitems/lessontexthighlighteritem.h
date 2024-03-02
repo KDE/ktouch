@@ -23,7 +23,7 @@ public:
     void setAllowedCharacters(const QString& characters);
     QQuickTextDocument* document() const;
     void setDocument(QQuickTextDocument* document);
-signals:
+Q_SIGNALS:
     void allowedCharactersChanged();
     void documentChanged();
 private:

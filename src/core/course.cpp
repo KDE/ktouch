@@ -26,7 +26,7 @@ void Course::setAssociatedDataIndexCourse(DataIndexCourse* dataIndexCourse)
     if (dataIndexCourse != m_associatedDataIndexCourse)
     {
         m_associatedDataIndexCourse = dataIndexCourse;
-        emit associatedDataIndexCourseChanged();
+        Q_EMIT associatedDataIndexCourseChanged();
     }
 }
 
@@ -40,7 +40,7 @@ void Course::setKind(Kind kind)
     if (kind != m_kind)
     {
         m_kind = kind;
-        emit kindChanged();
+        Q_EMIT kindChanged();
     }
 }
 
@@ -97,38 +97,38 @@ Lesson* Course::lesson(int index) const
 
 void Course::addLesson(Lesson* lesson)
 {
-    emit lessonAboutToBeAdded(lesson, m_lessons.length());
+    Q_EMIT lessonAboutToBeAdded(lesson, m_lessons.length());
     m_lessons.append(lesson);
     lesson->setParent(this);
     const int index = m_lessons.length() - 1;
     updateLessonCharacters(index);
     connect(lesson, &Lesson::newCharactersChanged, this, [=] { updateLessonCharacters(index); });
-    emit lessonCountChanged();
-    emit lessonAdded();
+    Q_EMIT lessonCountChanged();
+    Q_EMIT lessonAdded();
 }
 
 void Course::insertLesson(int index, Lesson* lesson)
 {
     Q_ASSERT(index >= 0 && index < m_lessons.count());
-    emit lessonAboutToBeAdded(lesson, index);
+    Q_EMIT lessonAboutToBeAdded(lesson, index);
     m_lessons.insert(index, lesson);
     lesson->setParent(this);
     updateLessonCharacters(index);
     connect(lesson, &Lesson::newCharactersChanged, this, [=] { updateLessonCharacters(index); });
-    emit lessonCountChanged();
-    emit lessonAdded();
+    Q_EMIT lessonCountChanged();
+    Q_EMIT lessonAdded();
 }
 
 void Course::removeLesson(int index)
 {
     Q_ASSERT(index >= 0 && index < m_lessons.count());
-    emit lessonsAboutToBeRemoved(index, index);
+    Q_EMIT lessonsAboutToBeRemoved(index, index);
     Lesson* const lesson = m_lessons.at(index);
     m_lessons.removeAt(index);
     delete lesson;
     updateLessonCharacters(index);
-    emit lessonCountChanged();
-    emit lessonsRemoved();
+    Q_EMIT lessonCountChanged();
+    Q_EMIT lessonsRemoved();
 }
 
 int Course::indexOfLesson(Lesson* lesson)
@@ -141,11 +141,11 @@ void Course::clearLessons()
     if (m_lessons.isEmpty())
         return;
 
-    emit lessonsAboutToBeRemoved(0, m_lessons.length() - 1);
+    Q_EMIT lessonsAboutToBeRemoved(0, m_lessons.length() - 1);
     qDeleteAll(m_lessons);
     m_lessons.clear();
-    emit lessonCountChanged();
-    emit lessonsRemoved();
+    Q_EMIT lessonCountChanged();
+    Q_EMIT lessonsRemoved();
 }
 
 void Course::copyFrom(Course* source)

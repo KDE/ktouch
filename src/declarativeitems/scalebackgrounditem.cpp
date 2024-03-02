@@ -28,7 +28,7 @@ void ScaleBackgroundItem::setStartAngle(qreal angle)
     if (angle != m_startAngle)
     {
         m_startAngle = angle;
-        emit startAngleChanged();
+        Q_EMIT startAngleChanged();
         update();
     }
 }
@@ -43,7 +43,7 @@ void ScaleBackgroundItem::setStopAngle(qreal angle)
     if (angle != m_stopAngle)
     {
         m_stopAngle = angle;
-        emit stopAngleChanged();
+        Q_EMIT stopAngleChanged();
         update();
     }
 }
@@ -58,7 +58,7 @@ void ScaleBackgroundItem::setScaleMarkHeight(qreal height)
     if (height != m_scaleMarkHeight)
     {
         m_scaleMarkHeight = height;
-        emit scaleMarkHeightChanged();
+        Q_EMIT scaleMarkHeightChanged();
         update();
     }
 }
@@ -73,7 +73,7 @@ void ScaleBackgroundItem::setColor(const QColor& color)
     if (color != m_color)
     {
         m_color = color;
-        emit colorChanged();
+        Q_EMIT colorChanged();
         update();
     }
 }

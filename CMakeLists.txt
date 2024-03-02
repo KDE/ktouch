@@ -10,12 +10,12 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 cmake_minimum_required(VERSION 3.16)
 project(ktouch VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.91.0")
-set (KDE_COMPILERSETTINGS_LEVEL "5.82.0")
+set(QT_MIN_VERSION "6.6.0")
+set(KF_MIN_VERSION "6.0.0")
+set (KDE_COMPILERSETTINGS_LEVEL "6.0.0")
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-find_package(KF5DocTools)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(KF6DocTools)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} )
 
 include(KDEInstallDirs)
@@ -29,7 +29,7 @@ include(ECMSetupVersion)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Core
     Gui
     Qml
@@ -39,11 +39,9 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS
     Sql
     Widgets
     Xml
-    XmlPatterns
 )
-find_package(Qt${QT_MAJOR_VERSION} CONFIG QUIET OPTIONAL_COMPONENTS QuickCompiler)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Completion
     Config
     ConfigWidgets
@@ -56,15 +54,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
     WindowSystem
     XmlGui
-    IconThemes
 )
 
-find_package(KQtQuickCharts)
-set_package_properties(KQtQuickCharts PROPERTIES
-    DESCRIPTION "QtQuick plugin to render beautiful and interactive charts"
-    URL "https://commits.kde.org/kqtquickcharts"
-    TYPE RUNTIME
-)
+find_package(LibXml2 REQUIRED)
 
 option(COMPILE_QML "Precompile QML code" OFF)
 option(WITHOUT_X11 "Build without X11 Keyboard Layout Detection (skips finding X11)" OFF)
@@ -97,7 +89,7 @@ ecm_optional_add_subdirectory(icons)
 
 # files to install in the ktouch project root directory
 ki18n_install(po)
-if (KF5DocTools_FOUND)
+if (KF6DocTools_FOUND)
     kdoctools_install(po)
 endif()
 install( PROGRAMS org.kde.ktouch.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )

@@ -22,7 +22,7 @@ public:
     bool isValid() const;
     void setIsValid(bool isValid);
 
-signals:
+Q_SIGNALS:
     void idChanged();
     void isValidChanged();
 

@@ -40,7 +40,7 @@ public:
     void setLabel(const QString& label);
     Q_INVOKABLE void copyFrom(SpecialKey* source);
 
-signals:
+Q_SIGNALS:
     void typeChanged();
     void modifierIdChanged();
     void labelChanged();

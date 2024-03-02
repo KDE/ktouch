@@ -96,7 +96,7 @@ void LessonPainter::setLesson(Lesson* lesson)
 
         reset();
 
-        emit lessonChanged();
+        Q_EMIT lessonChanged();
     }
 }
 
@@ -110,7 +110,7 @@ void LessonPainter::setMaximumWidth(qreal maximumWidth)
     if (maximumWidth != m_maximumWidth)
     {
         m_maximumWidth = maximumWidth;
-        emit maximumWidthChanged();
+        Q_EMIT maximumWidthChanged();
         updateLayout();
     }
 }
@@ -125,7 +125,7 @@ void LessonPainter::setMaximumHeight(qreal maximumHeight)
     if (maximumHeight != m_maximumHeight)
     {
         m_maximumHeight = maximumHeight;
-        emit maximumHeightChanged();
+        Q_EMIT maximumHeightChanged();
         updateLayout();
     }
 }
@@ -145,7 +145,7 @@ void LessonPainter::setTrainingLineCore(TrainingLineCore* trainingLineCore)
         }
 
         m_trainingLineCore = trainingLineCore;
-        emit trainingLineCoreChanged();
+        Q_EMIT trainingLineCoreChanged();
 
         if (m_trainingLineCore)
         {
@@ -163,7 +163,7 @@ QRectF LessonPainter::cursorRectangle() const
 
 void LessonPainter::reset()
 {
-    m_lines = m_lesson? m_lesson->text().split('\n'): QStringList();
+    m_lines = m_lesson? m_lesson->text().split(QLatin1Char('\n')): QStringList();
     updateDoc();
     resetTrainingStatus();
 }
@@ -277,7 +277,7 @@ void LessonPainter::advanceToNextTrainingLine()
     else
     {
         m_trainingLineCore->setReferenceLine(QString());
-        emit done();
+        Q_EMIT done();
     }
 }
 
@@ -304,7 +304,7 @@ void LessonPainter::updateDoc()
 
     const QTextCharFormat textFormat = m_trainingLineCore? d->placeHolderCharFormat: d->textCharFormat;
 
-    foreach (const QString& line, m_lines)
+    for (const QString& line : std::as_const(m_lines))
     {
         blockFormat.setAlignment(line.isRightToLeft()? Qt::AlignRight: Qt::AlignLeft);
         cursor.insertBlock(d->blockFormat, textFormat);
@@ -356,7 +356,7 @@ void LessonPainter::updateCursorRectangle()
                 1,
                 m_textScale * (line.height()));
 
-    emit cursorRectangleChanged();
+    Q_EMIT cursorRectangleChanged();
 }
 
 #include "moc_lessonpainter.cpp"

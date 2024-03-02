@@ -36,7 +36,7 @@ public:
     Q_INVOKABLE void clearKeyChars();
     Q_INVOKABLE void copyFrom(Key* source);
 
-signals:
+Q_SIGNALS:
     void fingerIndexChanged();
     void hasHapticMarkerChanged();
     void keyCharCountChanged();

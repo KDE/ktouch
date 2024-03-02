@@ -51,7 +51,7 @@ void MainWindow::onViewStatusChanged(QQuickWidget::Status status)
     if (status == QQuickWidget::Error)
     {
         QStringList errorMessages;
-        foreach (auto error, m_view->errors())
+        for (auto error : m_view->errors())
         {
             errorMessages.append(error.toString());
         }

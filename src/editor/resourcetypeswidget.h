@@ -19,9 +19,9 @@ class ResourceTypesWidget : public QWidget, private Ui::ResourceTypesWidget
     Q_OBJECT
 public:
     explicit ResourceTypesWidget(QWidget* parent = nullptr);
-signals:
+Q_SIGNALS:
     void typeSelected(ResourceModel::ResourceItemType type);
-private slots:
+private Q_SLOTS:
     void currentRowChanged(const QModelIndex& current);
 private:
     QStandardItemModel* m_typesModel;

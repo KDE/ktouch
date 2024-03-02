@@ -13,8 +13,6 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QUrl>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
 
 #include "dataindex.h"
 #include "keyboardlayout.h"
@@ -24,6 +22,8 @@
 #include "course.h"
 #include "lesson.h"
 
+#include <libxml/xmlschemas.h>
+
 ResourceDataAccess::ResourceDataAccess(QObject *parent) :
     QObject(parent)
 {
@@ -31,11 +31,12 @@ ResourceDataAccess::ResourceDataAccess(QObject *parent) :
 
 bool ResourceDataAccess::fillDataIndex(DataIndex* target)
 {
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("data"));
-    if (!schema.isValid())
+    auto schema = loadXmlSchema(QStringLiteral("data"));
+    if (!schema)
         return false;
 
-    foreach (const QString& path, QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, "data.xml"))
+    const auto locations = QStandardPaths::locateAll(QStandardPaths::AppLocalDataLocation, QStringLiteral("data.xml"));
+    for (const QString& path : locations)
     {
         QDir dir = QFileInfo(path).dir();
         QFile dataIndexFile;
@@ -96,8 +97,8 @@ bool ResourceDataAccess::loadKeyboardLayout(const QString &path, KeyboardLayout*
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("keyboardlayout"));
-    if (!schema.isValid())
+    auto schema = loadXmlSchema(QStringLiteral("keyboardlayout"));
+    if (!schema)
         return false;
     QDomDocument doc = getDomDocument(keyboardLayoutFile, schema);
     if (doc.isNull())
@@ -278,8 +279,8 @@ bool ResourceDataAccess::loadCourse(const QString &path, Course* target)
         qWarning() << "can't open:" << path;
         return false;
     }
-    QXmlSchema schema = loadXmlSchema(QStringLiteral("course"));
-    if (!schema.isValid())
+    auto schema = loadXmlSchema(QStringLiteral("course"));
+    if (!schema)
         return false;
     QDomDocument doc = getDomDocument(courseFile, schema);
     if (doc.isNull())
@@ -378,33 +379,35 @@ bool ResourceDataAccess::storeCourse(const QString& path, Course* source)
     return true;
 }
 
-QXmlSchema ResourceDataAccess::loadXmlSchema(const QString &name)
+xmlSchemaValidCtxtPtr ResourceDataAccess::loadXmlSchema(const QString &name)
 {
-    QXmlSchema schema;
+    xmlInitParser();
     QString relPath = QStringLiteral("schemata/%1.xsd").arg(name);
     QFile schemaFile;
-    if (!openResourceFile(relPath, schemaFile))
-    {
-        return schema;
+    if (!openResourceFile(relPath, schemaFile)) {
+        return nullptr;
     }
-    schema.load(&schemaFile, QUrl::fromLocalFile(schemaFile.fileName()));
-    if (!schema.isValid())
-    {
-        qWarning() << schemaFile.fileName() << "is invalid";
-    }
-    return schema;
+    auto parserCtxt = xmlSchemaNewParserCtxt(schemaFile.fileName().toUtf8().constData());
+    auto schema = xmlSchemaParse(parserCtxt);
+    xmlSchemaFreeParserCtxt(parserCtxt);
+
+    return xmlSchemaNewValidCtxt(schema);
 }
 
-QDomDocument ResourceDataAccess::getDomDocument(QFile &file, QXmlSchema &schema)
+QDomDocument ResourceDataAccess::getDomDocument(QFile &file, xmlSchemaValidCtxtPtr schema)
 {
-    QDomDocument doc;
-    QXmlSchemaValidator validator(schema);
-    if (!validator.validate(&file))
-    {
-        return doc;
+    xmlDocPtr xmlDoc = xmlReadDoc((const xmlChar *)file.readAll().toStdString().c_str(), nullptr, NULL, 0);
+    if (xmlDoc == NULL) {
+        fprintf(stderr, "Failed to parse XML document.\n");
     }
+
+    if (xmlSchemaValidateDoc(schema, xmlDoc) != 0) {
+        return {};
+    }
+
     file.reset();
     QString errorMsg;
+    QDomDocument doc;
     if (!doc.setContent(&file, &errorMsg))
     {
         qWarning() << errorMsg;

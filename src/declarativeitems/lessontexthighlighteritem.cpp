@@ -25,7 +25,7 @@ void LessonTextHighlighterItem::setAllowedCharacters(const QString& characters)
     if (characters != m_highligher->allowedCharacters())
     {
         m_highligher->setAllowedCharacters(characters);
-        emit allowedCharactersChanged();
+        Q_EMIT allowedCharactersChanged();
     }
 }
 
@@ -47,7 +47,7 @@ void LessonTextHighlighterItem::setDocument(QQuickTextDocument* document)
         {
             m_highligher->setDocument(nullptr);
         }
-        emit documentChanged();
+        Q_EMIT documentChanged();
     }
 }
 

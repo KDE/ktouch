@@ -47,7 +47,7 @@ public:
     Q_INVOKABLE void clearLessons();
     Q_INVOKABLE void copyFrom(Course* source);
 
-signals:
+Q_SIGNALS:
     void associatedDataIndexCourseChanged();
     void lessonCountChanged();
     void kindChanged();
@@ -56,7 +56,7 @@ signals:
     void lessonsAboutToBeRemoved(int first, int last);
     void lessonsRemoved();
 
-private slots:
+private Q_SLOTS:
     void updateLessonCharacters(int firstIndex = 0);
 
 private:

@@ -46,7 +46,7 @@ void LessonModel::setCourse(Course* course)
 
         endResetModel();
 
-        emit courseChanged();
+        Q_EMIT courseChanged();
     }
 }
 
@@ -111,8 +111,8 @@ void LessonModel::onLessonsRemoved()
 
 void LessonModel::emitLessonChanged(int row)
 {
-    emit lessonChanged(row);
-    emit dataChanged(index(row, 0), index(row, 0));
+    Q_EMIT lessonChanged(row);
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
 }
 
 
@@ -122,7 +122,7 @@ QVariant LessonModel::headerData(int section, Qt::Orientation orientation, int r
         return QVariant();
     if (orientation == Qt::Vertical)
         return QVariant(section + 1);
-    return QVariant(i18n("Title"));
+    return i18n("Title");
 }
 
 QHash<int, QByteArray> LessonModel::roleNames() const

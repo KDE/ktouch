@@ -64,7 +64,7 @@ QString KTouchContext::keyboardLayoutName() const
 #ifdef KTOUCH_BUILD_WITH_X11
     return X11Helper::getCurrentLayout().toString();
 #else
-    return "unknown";
+    return QStringLiteral("unknown");
 #endif
 }
 

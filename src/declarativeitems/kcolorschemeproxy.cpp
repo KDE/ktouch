@@ -32,9 +32,9 @@ void KColorSchemeProxy::setColorGroup(ColorGroup group)
     if (newColorGroup != m_colorGroup)
     {
         m_colorGroup = newColorGroup;
-        emit colorGroupChanged();
+        Q_EMIT colorGroupChanged();
         m_colorScheme = KColorScheme(m_colorGroup, m_colorSet);
-        emit paletteChanged();
+        Q_EMIT paletteChanged();
     }
 }
 
@@ -49,9 +49,9 @@ void KColorSchemeProxy::setColorSet(ColorSet colorSet)
     if (newColorSet != m_colorSet)
     {
         m_colorSet = newColorSet;
-        emit colorSetChanged();
+        Q_EMIT colorSetChanged();
         m_colorScheme = KColorScheme(m_colorGroup, m_colorSet);
-        emit paletteChanged();
+        Q_EMIT paletteChanged();
     }
 }
 

@@ -51,11 +51,8 @@ Application::Application(int& argc, char** argv, int flags):
     m_dataIndex(new DataIndex(this))
 {
     registerQmlTypes();
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    migrateKde4Files();
-#endif
 
-    QQuickStyle::setStyle("Default");
+    QQuickStyle::setStyle(QStringLiteral("Default"));
 
     DataAccess dataAccess;
     dataAccess.loadDataIndex(m_dataIndex);
@@ -82,7 +79,7 @@ void Application::setupDeclarativeBindings(QQmlEngine* qmlEngine)
     qmlEngine->rootContext()->setContextObject(context);
 
     Application* app = static_cast<Application*>(Application::instance());
-    foreach (const QString& path, app->m_qmlImportPaths)
+    for (const QString& path : std::as_const(app->m_qmlImportPaths))
     {
         qmlEngine->addImportPath(path);
     }

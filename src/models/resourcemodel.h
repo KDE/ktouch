@@ -44,10 +44,10 @@ public:
     int rowCount(const QModelIndex &parent) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-signals:
+Q_SIGNALS:
     void dataIndexChanged();
 
-private slots:
+private Q_SLOTS:
     void onCourseAboutToBeAdded(DataIndexCourse* course, int index);
     void onCoursesAboutToBeRemoved(int first, int last);
     void onKeyboardLayoutAboutToBeAdded(DataIndexKeyboardLayout* keyboardLayout, int index);

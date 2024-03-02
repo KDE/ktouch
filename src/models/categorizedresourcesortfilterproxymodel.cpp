@@ -31,7 +31,7 @@ void CategorizedResourceSortFilterProxyModel::setResourceTypeFilter(ResourceMode
         invalidateFilter();
         invalidate();
         sort(0);
-        emit resourceTypeFilterChanged();
+        Q_EMIT resourceTypeFilterChanged();
     }
 }
 
@@ -48,7 +48,7 @@ void CategorizedResourceSortFilterProxyModel::setKeyboardLayoutNameFilter(const 
         invalidateFilter();
         invalidate();
         sort(0);
-        emit keyboardLayoutNameFilterChanged();
+        Q_EMIT keyboardLayoutNameFilterChanged();
     }
 }
 
@@ -65,7 +65,7 @@ void CategorizedResourceSortFilterProxyModel::setInvertedKeyboardLayoutNameFilte
         invalidateFilter();
         invalidate();
         sort(0);
-        emit invertedKeyboardLayoutNameFilterChanged();
+        Q_EMIT invertedKeyboardLayoutNameFilterChanged();
     }
 }
 
@@ -82,7 +82,7 @@ void CategorizedResourceSortFilterProxyModel::setResourceModel(ResourceModel* re
         m_resourceModel = resourceModel;
         setSourceModel(m_resourceModel);
         sort(0);
-        emit resourceModelChanged();
+        Q_EMIT resourceModelChanged();
     }
 }
 

@@ -33,7 +33,7 @@ public:
     void setText(const QString& text);
     Q_INVOKABLE void copyFrom(Lesson* source);
 
-signals:
+Q_SIGNALS:
     void idChanged();
     void titleChanged();
     void newCharactersChanged();

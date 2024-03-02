@@ -42,7 +42,7 @@ public:
     Q_INVOKABLE void removeKeyboardLayout(int index);
     Q_INVOKABLE void clearKeyboardLayouts();
 
-signals:
+Q_SIGNALS:
     void courseCountChanged();
     void keyboardLayoutCountChanged();
 
@@ -74,7 +74,7 @@ public:
     DataIndex::Source source() const;
     void setSource(DataIndex::Source source);
 
-signals:
+Q_SIGNALS:
     void pathChanged();
     void sourceChanged();
 
@@ -97,7 +97,7 @@ public:
     DataIndex::Source source() const;
     void setSource(DataIndex::Source source);
 
-signals:
+Q_SIGNALS:
     void pathChanged();
     void sourceChanged();
 

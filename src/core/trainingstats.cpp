@@ -32,7 +32,7 @@ void TrainingStats::setCharactersTyped(int charactesTyped)
     if(charactesTyped != m_charactersTyped)
     {
         m_charactersTyped = charactesTyped;
-        emit statsChanged();
+        Q_EMIT statsChanged();
     }
 }
 
@@ -48,7 +48,7 @@ void TrainingStats::setElapsedTime(const QTime& elapsedTime)
     if(msec != m_elapsedTime)
     {
         m_elapsedTime = msec;
-        emit statsChanged();
+        Q_EMIT statsChanged();
     }
 }
 
@@ -57,7 +57,7 @@ void TrainingStats::setElapsedTime(const quint64& msec)
     if(msec != m_elapsedTime)
     {
         m_elapsedTime = msec;
-        emit statsChanged();
+        Q_EMIT statsChanged();
     }
 }
 
@@ -71,7 +71,7 @@ void TrainingStats::setErrorCount(int errorCount)
     if(errorCount != m_errorCount)
     {
         m_errorCount = errorCount;
-        emit statsChanged();
+        Q_EMIT statsChanged();
     }
 }
 
@@ -85,7 +85,7 @@ void TrainingStats::setIsValid(bool isValid)
     if(isValid != m_isValid)
     {
         m_isValid = isValid;
-        emit isValidChanged();
+        Q_EMIT isValidChanged();
     }
 }
 QMap< QString, int > TrainingStats::errorMap() const
@@ -96,7 +96,7 @@ QMap< QString, int > TrainingStats::errorMap() const
 void TrainingStats::setErrorMap(const QMap< QString, int >& errorMap)
 {
     m_errorMap = errorMap;
-    emit errorsChanged();
+    Q_EMIT errorsChanged();
 }
 
 bool TrainingStats::timeIsRunning() const
@@ -151,7 +151,7 @@ void TrainingStats::logCharacter(const QString &character, EventType type)
             m_errorMap[character] = 1;
         }
 
-        emit errorsChanged();
+        Q_EMIT errorsChanged();
     }
 }
 
@@ -184,7 +184,7 @@ void TrainingStats::update()
         m_elapsedTime = now - m_startTime;
         m_updateTimer->start(200);
     }
-    emit statsChanged();
+    Q_EMIT statsChanged();
 }
 
 #include "moc_trainingstats.cpp"

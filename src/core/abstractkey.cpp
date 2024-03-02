@@ -21,7 +21,7 @@ void AbstractKey::setLeft(int left)
     if (left != m_left)
     {
         m_left = left;
-        emit leftChanged();
+        Q_EMIT leftChanged();
     }
 }
 
@@ -36,7 +36,7 @@ void AbstractKey::setTop(int top)
     if (top != m_top)
     {
         m_top = top;
-        emit topChanged();
+        Q_EMIT topChanged();
     }
 }
 
@@ -52,7 +52,7 @@ void AbstractKey::setWidth(int width)
     if (width != m_width)
     {
         m_width = width;
-        emit widthChanged();
+        Q_EMIT widthChanged();
     }
 }
 
@@ -68,7 +68,7 @@ void AbstractKey::setHeight(int height)
     if (height != m_height)
     {
         m_height = height;
-        emit heightChanged();
+        Q_EMIT heightChanged();
     }
 }
 

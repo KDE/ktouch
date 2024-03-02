@@ -109,7 +109,7 @@ public:
     Q_INVOKABLE QColor shade(const QColor &color, ShadeRole role) const;
     Q_INVOKABLE QColor shade(const QColor &color, ShadeRole role, qreal contrast, qreal chromaAdjust = 0.0) const;
 
-signals:
+Q_SIGNALS:
     void colorGroupChanged();
     void colorSetChanged();
     void paletteChanged();

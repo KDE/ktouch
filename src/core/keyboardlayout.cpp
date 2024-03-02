@@ -34,7 +34,7 @@ void KeyboardLayout::setAssociatedDataIndexKeyboardLayout(DataIndexKeyboardLayou
     if (dataIndexKeyboardLayout != m_associatedDataIndexKeyboardLayout)
     {
         m_associatedDataIndexKeyboardLayout = dataIndexKeyboardLayout;
-        emit associatedDataIndexKeyboardLayoutChanged();
+        Q_EMIT associatedDataIndexKeyboardLayoutChanged();
     }
 }
 
@@ -78,7 +78,7 @@ void KeyboardLayout::setWidth(int width)
     if(width != m_width)
     {
         m_width = width;
-        emit widthChanged();
+        Q_EMIT widthChanged();
     }
 }
 
@@ -92,7 +92,7 @@ void KeyboardLayout::setHeight(int height)
     if(height != m_height)
     {
         m_height = height;
-        emit heightChanged();
+        Q_EMIT heightChanged();
     }
 }
 
@@ -174,7 +174,7 @@ void KeyboardLayout::addKey(AbstractKey* key)
     key->setParent(this);
     connect(key, &AbstractKey::widthChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
     connect(key, &AbstractKey::heightChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
-    emit keyCountChanged();
+    Q_EMIT keyCountChanged();
     updateReferenceKey(key);
 }
 
@@ -184,7 +184,7 @@ void KeyboardLayout::insertKey(int index, AbstractKey* key)
     key->setParent(this);
     connect(key, &AbstractKey::widthChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
     connect(key, &AbstractKey::heightChanged, this, [=] { onKeyGeometryChanged(m_keys.count() - 1); } );
-    emit keyCountChanged();
+    Q_EMIT keyCountChanged();
     updateReferenceKey(key);
 }
 
@@ -193,7 +193,7 @@ void KeyboardLayout::removeKey(int index)
     Q_ASSERT(index >= 0 && index < m_keys.count());
     AbstractKey* key = m_keys.at(index);
     m_keys.removeAt(index);
-    emit keyCountChanged();
+    Q_EMIT keyCountChanged();
     updateReferenceKey(nullptr);
     key->deleteLater();
 }
@@ -205,7 +205,7 @@ void KeyboardLayout::clearKeys()
 
     qDeleteAll(m_keys);
     m_keys.clear();
-    emit keyCountChanged();
+    Q_EMIT keyCountChanged();
     updateReferenceKey(nullptr);
 }
 
@@ -232,18 +232,18 @@ void KeyboardLayout::updateReferenceKey(AbstractKey *testKey)
         if (!m_referenceKey)
         {
             m_referenceKey = testKey;
-            emit referenceKeyChanged();
+            Q_EMIT referenceKeyChanged();
             return;
         }
         if (compareKeysForReference(testKey, m_referenceKey))
         {
             m_referenceKey = testKey;
-            emit referenceKeyChanged();
+            Q_EMIT referenceKeyChanged();
             return;
         }
     }
     AbstractKey* canditate = nullptr;
-    foreach(AbstractKey* key, m_keys)
+    for(AbstractKey* key : std::as_const(m_keys))
     {
         if (canditate == nullptr)
         {
@@ -258,7 +258,7 @@ void KeyboardLayout::updateReferenceKey(AbstractKey *testKey)
         }
     }
     m_referenceKey = canditate;
-    emit referenceKeyChanged();
+    Q_EMIT referenceKeyChanged();
 }
 
 bool KeyboardLayout::compareKeysForReference(const AbstractKey *testKey, const AbstractKey *compareKey) const

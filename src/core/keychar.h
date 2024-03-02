@@ -41,7 +41,7 @@ public:
     void setModifier(const QString& modifier);
     Q_INVOKABLE void copyFrom(KeyChar* source);
 
-signals:
+Q_SIGNALS:
     void valueChanged();
     void positionChanged();
     void modifierChanged();

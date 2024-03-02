@@ -81,7 +81,7 @@ void SpecialKey::setType(SpecialKey::Type type)
     if(type != m_type)
     {
         m_type = type;
-        emit typeChanged();
+        Q_EMIT typeChanged();
     }
 }
 
@@ -95,7 +95,7 @@ void SpecialKey::setModifierId(const QString& modifierId)
     if(modifierId != m_modifierId)
     {
         m_modifierId = modifierId;
-        emit modifierIdChanged();
+        Q_EMIT modifierIdChanged();
     }
 }
 
@@ -109,7 +109,7 @@ void SpecialKey::setLabel(const QString& label)
     if(label != m_label)
     {
         m_label = label;
-        emit labelChanged();
+        Q_EMIT labelChanged();
     }
 }
 

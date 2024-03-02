@@ -112,7 +112,7 @@ void ResourceEditorWidget::save()
 
 void ResourceEditorWidget::requestResourceRestoration()
 {
-    emit(resourceRestorationRequested());
+    Q_EMIT resourceRestorationRequested();
     m_messageWidget->animatedHide();
 }
 
@@ -120,7 +120,7 @@ void ResourceEditorWidget::clearMessage()
 {
     if (m_currentMessageType == ResourceEditorWidget::ResourceDeletedMsg)
     {
-        emit(resourceRestorationDismissed());
+        Q_EMIT resourceRestorationDismissed();
     }
 
     m_messageWidget->animatedHide();

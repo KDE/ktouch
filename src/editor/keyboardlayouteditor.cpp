@@ -138,7 +138,7 @@ void KeyboardLayoutEditor::setReadOnly(bool readOnly)
     if (readOnly != m_readOnly)
     {
         m_readOnly = readOnly;
-        emit readOnlyChanged();
+        Q_EMIT readOnlyChanged();
         m_newKeyToolButton->setEnabled(!readOnly);
         m_newSpecialKeyToolButton->setEnabled(!readOnly);
         m_deleteKeyToolButton->setEnabled(!readOnly && m_selectedKey != nullptr);
@@ -156,7 +156,7 @@ void KeyboardLayoutEditor::setSelectedKey(AbstractKey* key)
     if (key != m_selectedKey)
     {
         m_selectedKey = key;
-        emit selectedKeyChanged();
+        Q_EMIT selectedKeyChanged();
 
         m_deleteKeyToolButton->setEnabled(!m_readOnly && m_selectedKey != nullptr);
         m_propertiesWidget->setSelectedKey(m_keyboardLayout->keyIndex(key));
@@ -173,7 +173,7 @@ void KeyboardLayoutEditor::setZoomLevel(int zoomLevel)
     if (zoomLevel != m_zoomLevel)
     {
         m_zoomLevel = zoomLevel;
-        emit zoomLevelChanged();
+        Q_EMIT zoomLevelChanged();
         const double zoomFactor = pow(2.0, zoomLevel / 2.0);
         m_zoomFactorLabel->setText(ki18n("%1%").subs(zoomFactor * 100, 0, 'f', 0).toString());
         m_zoomOutToolButton->setEnabled(zoomLevel > m_zoomSlider->minimum());

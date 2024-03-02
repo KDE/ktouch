@@ -30,7 +30,7 @@ QString DbAccess::errorMessage() const
 
 QSqlDatabase DbAccess::database()
 {
-    if (!QSqlDatabase::contains(QSqlDatabase::defaultConnection))
+    if (!QSqlDatabase::contains(QString::fromLatin1(QSqlDatabase::defaultConnection)))
     {
         QDir dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation));
         if (!dataDir.exists())
@@ -55,23 +55,23 @@ QSqlDatabase DbAccess::database()
         return db;
     }
 
-    return QSqlDatabase::database(QSqlDatabase::defaultConnection);
+    return QSqlDatabase::database(QString::fromLatin1(QSqlDatabase::defaultConnection));
 }
 
 void DbAccess::raiseError(const QSqlError& error)
 {
     m_errorMessage = QStringLiteral("%1: %2").arg(error.driverText(), error.databaseText());
-    emit errorMessageChanged();
+    Q_EMIT errorMessageChanged();
 }
 
 bool DbAccess::checkDbSchema()
 {
     QSqlDatabase db = QSqlDatabase::database();
 
-    db.exec("CREATE TABLE IF NOT EXISTS metadata ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS metadata ("
             "key TEXT PRIMARY KEY, "
             "value TEXT"
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -103,7 +103,7 @@ bool DbAccess::checkDbSchema()
         if (version != QLatin1String("1.1"))
         {
             m_errorMessage = i18n("Invalid database version '%1'.", version);
-            emit errorMessageChanged();
+            Q_EMIT errorMessageChanged();
             return false;
         }
     }
@@ -130,12 +130,12 @@ bool DbAccess::checkDbSchema()
         }
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS profiles ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS profiles ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "name TEXT, "
             "skill_level INTEGER, "
             "last_used_course_id TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -144,7 +144,7 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS training_stats ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS training_stats ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "profile_id INTEGER, "
             "course_id TEXT, "
@@ -153,7 +153,7 @@ bool DbAccess::checkDbSchema()
             "characters_typed INTEGER, "
             "error_count INTEGER, "
             "elapsed_time INTEGER "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -162,12 +162,12 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS training_stats_errors ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS training_stats_errors ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "stats_id INTEGER, "
             "character TEXT, "
             "count INTEGER "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -176,13 +176,13 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS course_progress ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS course_progress ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "profile_id INTEGER, "
             "course_id TEXT, "
             "type INTEGER, "
             "lesson_id TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -191,12 +191,12 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS courses ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS courses ("
             "id TEXT PRIMARY KEY, "
             "title TEXT, "
             "description TEXT, "
             "keyboard_layout_name TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -205,13 +205,13 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS course_lessons ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS course_lessons ("
             "id TEXT PRIMARY KEY, "
             "course_id TEXT, "
             "title TEXT, "
             "new_characters TEXT, "
             "text TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -220,13 +220,13 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS keyboard_layouts ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS keyboard_layouts ("
             "id TEXT PRIMARY KEY, "
             "title TEXT, "
             "name TEXT, "
             "width INTEGER, "
             "height INTEGER "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -235,7 +235,7 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS keyboard_layout_keys ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS keyboard_layout_keys ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "keyboard_layout_id TEXT, "
             "left INTEGER, "
@@ -248,7 +248,7 @@ bool DbAccess::checkDbSchema()
             "special_key_type TEXT, "
             "modifier_id TEXT, "
             "label TEXT"
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -257,13 +257,13 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS keyboard_layout_key_chars ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS keyboard_layout_key_chars ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT, "
             "key_id INTEGER, "
             "position INTEGER, "
             "character TEXT, "
             "modifier TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -272,13 +272,13 @@ bool DbAccess::checkDbSchema()
         return false;
     }
 
-    db.exec("CREATE TABLE IF NOT EXISTS custom_lessons ("
+    db.exec(QStringLiteral("CREATE TABLE IF NOT EXISTS custom_lessons ("
             "id TEXT PRIMARY KEY, "
             "profile_id INTEGER, "
             "title TEXT, "
             "text TEXT, "
             "keyboard_layout_name TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -302,8 +302,8 @@ bool DbAccess::migrateFrom1_0To1_1()
         return false;
     }
 
-    db.exec("ALTER TABLE course_lessons "
-            "RENAME TO course_lessons_backup");
+    db.exec(QStringLiteral("ALTER TABLE course_lessons "
+            "RENAME TO course_lessons_backup"));
 
     if (db.lastError().isValid())
     {
@@ -313,13 +313,13 @@ bool DbAccess::migrateFrom1_0To1_1()
         return false;
     }
 
-    db.exec("CREATE TABLE course_lessons ("
+    db.exec(QStringLiteral("CREATE TABLE course_lessons ("
             "id TEXT PRIMARY KEY, "
             "course_id TEXT, "
             "title TEXT, "
             "new_characters TEXT, "
             "text TEXT "
-            ")");
+            ")"));
 
     if (db.lastError().isValid())
     {
@@ -329,8 +329,8 @@ bool DbAccess::migrateFrom1_0To1_1()
         return false;
     }
 
-    db.exec("INSERT INTO course_lessons (id, course_id, title, new_characters, text) "
-            "SELECT id, course_id, title, new_characters, text FROM course_lessons_backup ");
+    db.exec(QStringLiteral("INSERT INTO course_lessons (id, course_id, title, new_characters, text) "
+            "SELECT id, course_id, title, new_characters, text FROM course_lessons_backup "));
 
     if (db.lastError().isValid())
     {
@@ -373,7 +373,7 @@ bool DbAccess::migrateFrom1_0To1_1()
 
     updateIdQuery.prepare(QStringLiteral("UPDATE course_lessons SET id = ? WHERE id = ?"));
 
-    foreach (const QString& id, ids)
+    for (const QString& id : std::as_const(ids))
     {
         updateIdQuery.bindValue(0, QUuid::createUuid().toString());
         updateIdQuery.bindValue(1, id);

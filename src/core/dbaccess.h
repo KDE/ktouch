@@ -20,7 +20,7 @@ public:
     explicit DbAccess(QObject* parent = nullptr);
     QString errorMessage() const;
 
-signals:
+Q_SIGNALS:
     void errorMessageChanged();
 
 protected:

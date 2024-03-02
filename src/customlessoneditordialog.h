@@ -24,9 +24,9 @@ public:
     void setLesson(Lesson* lesson);
     KeyboardLayout* keyboardLayout() const;
     void setKeyboardLayout(KeyboardLayout* keyboardLayout);
-signals:
+Q_SIGNALS:
     void validChanged(bool valid);
-private slots:
+private Q_SLOTS:
     void updateTitle();
     void updateText();
     void updateAllowedCharacters();

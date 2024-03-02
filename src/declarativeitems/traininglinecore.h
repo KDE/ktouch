@@ -40,9 +40,9 @@ public:
     bool isCorrect() const;
     QString nextCharacter() const;
     int hintKey() const;
-public slots:
+public Q_SLOTS:
     void reset();
-signals:
+Q_SIGNALS:
     void activeChanged();
     void cursorItemChanged();
     void trainingStatsChanged();

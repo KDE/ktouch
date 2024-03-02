@@ -32,7 +32,7 @@ void TrainingLineCore::setActive(bool active)
     if (active != m_active)
     {
         m_active = active;
-        emit activeChanged();
+        Q_EMIT activeChanged();
     }
 }
 
@@ -46,7 +46,7 @@ void TrainingLineCore::setCursorItem(QQuickItem* cursorPosition)
     if (cursorPosition != m_cursorItem)
     {
         m_cursorItem = cursorPosition;
-        emit cursorItemChanged();
+        Q_EMIT cursorItemChanged();
     }
 }
 
@@ -60,7 +60,7 @@ void TrainingLineCore::setTrainingStats(TrainingStats* trainingStats)
     if (trainingStats != m_trainingStats)
     {
         m_trainingStats = trainingStats;
-        emit trainingStatsChanged();
+        Q_EMIT trainingStatsChanged();
     }
 }
 
@@ -76,8 +76,8 @@ void TrainingLineCore::setReferenceLine(const QString& referenceLine)
         m_referenceLine = referenceLine;
         m_actualLine = QLatin1String("");
         clearKeyHint();
-        emit referenceLineChanged();
-        emit actualLineChanged();
+        Q_EMIT referenceLineChanged();
+        Q_EMIT actualLineChanged();
     }
 }
 
@@ -121,8 +121,8 @@ void TrainingLineCore::reset()
     m_referenceLine = QLatin1String("");
     m_actualLine = QLatin1String("");
     clearKeyHint();
-    emit referenceLineChanged();
-    emit actualLineChanged();
+    Q_EMIT referenceLineChanged();
+    Q_EMIT actualLineChanged();
 }
 
 void TrainingLineCore::keyPressEvent(QKeyEvent* event)
@@ -141,7 +141,7 @@ void TrainingLineCore::keyPressEvent(QKeyEvent* event)
         {
             if (event->key() == Qt::Key_Return)
             {
-                emit done();
+                Q_EMIT done();
                 clearActualLine();
                 clearKeyHint();
                 event->accept();
@@ -156,7 +156,7 @@ void TrainingLineCore::keyPressEvent(QKeyEvent* event)
         {
             if (event->key() == Qt::Key_Space)
             {
-                emit done();
+                Q_EMIT done();
                 clearActualLine();
                 clearKeyHint();
                 event->accept();
@@ -237,7 +237,7 @@ void TrainingLineCore::inputMethodEvent(QInputMethodEvent *event)
     if (preeditString != m_preeditString)
     {
         m_preeditString = preeditString;
-        emit preeditStringChanged();
+        Q_EMIT preeditStringChanged();
     }
 
     event->accept();
@@ -256,7 +256,7 @@ QVariant TrainingLineCore::inputMethodQuery(Qt::InputMethodQuery query) const
     case Qt::ImSurroundingText:
         return QVariant(m_actualLine);
     case Qt::ImCurrentSelection:
-        return QVariant("");
+        return QVariant(QString());
     case Qt::ImMaximumTextLength:
         return QVariant(m_referenceLine.length());
     case Qt::ImAnchorPosition:
@@ -297,8 +297,8 @@ void TrainingLineCore::add(const QString& text)
         }
     }
 
-    m_actualLine += text.leftRef(maxLength - actualLength);
-    emit actualLineChanged();
+    m_actualLine += text.left(maxLength - actualLength);
+    Q_EMIT actualLineChanged();
 }
 
 void TrainingLineCore::backspace()
@@ -308,7 +308,7 @@ void TrainingLineCore::backspace()
     if (actualLength > 0 && Preferences::enforceTypingErrorCorrection())
     {
         m_actualLine = m_actualLine.left(actualLength - 1);
-        emit actualLineChanged();
+        Q_EMIT actualLineChanged();
 
         if (isCorrect())
         {
@@ -329,14 +329,14 @@ void TrainingLineCore::deleteStartOfWord()
         finder.toPreviousBoundary();
 
         m_actualLine = m_actualLine.left(finder.position());
-        emit actualLineChanged();
+        Q_EMIT actualLineChanged();
     }
 }
 
 void TrainingLineCore::clearActualLine()
 {
     m_actualLine = QLatin1String("");
-    emit actualLineChanged();
+    Q_EMIT actualLineChanged();
 }
 
 void TrainingLineCore::giveKeyHint(int key)
@@ -351,7 +351,7 @@ void TrainingLineCore::giveKeyHint(int key)
         m_keyHintOccurrenceCount = 1;
     }
 
-    emit hintKeyChanged();
+    Q_EMIT hintKeyChanged();
 }
 
 void TrainingLineCore::clearKeyHint()
@@ -359,7 +359,7 @@ void TrainingLineCore::clearKeyHint()
     m_hintKey = -1;
     m_keyHintOccurrenceCount = 0;
 
-    emit hintKeyChanged();
+    Q_EMIT hintKeyChanged();
 }
 
 #include "moc_traininglinecore.cpp"

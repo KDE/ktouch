@@ -29,11 +29,11 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-signals:
+Q_SIGNALS:
     void courseChanged();
     void lessonChanged(int index);
 
-private slots:
+private Q_SLOTS:
     void onLessonAboutToBeAdded(Lesson* lesson, int index);
     void onLessonAdded();
     void onLessonsAboutToBeRemoved(int first, int last);

@@ -61,7 +61,7 @@ void ResourceModel::setDataIndex(DataIndex* dataIndex)
 
         endResetModel();
 
-        emit dataIndexChanged();
+        Q_EMIT dataIndexChanged();
     }
 }
 
@@ -161,7 +161,7 @@ void ResourceModel::onResourceRemoved()
 void ResourceModel::emitDataChanged(int row)
 {
     const QModelIndex modelIndex = index(row);
-    emit dataChanged(modelIndex, modelIndex);
+    Q_EMIT dataChanged(modelIndex, modelIndex);
 }
 
 QVariant ResourceModel::courseData(int row, int role) const
@@ -278,8 +278,8 @@ void ResourceModel::updateMappings()
 
 QIcon ResourceModel::resourceIcon(DataIndex::Source source) const
 {
-    static QIcon systemIcon = QIcon::fromTheme("computer");
-    static QIcon userIcon = QIcon::fromTheme("user-identity");
+    static QIcon systemIcon = QIcon::fromTheme(QStringLiteral("computer"));
+    static QIcon userIcon = QIcon::fromTheme(QStringLiteral("user-identity"));
     return source == DataIndex::BuiltInResource? systemIcon: userIcon;
 }
 

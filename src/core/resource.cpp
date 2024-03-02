@@ -22,7 +22,7 @@ void Resource::setId(const QString& id)
     if (id != m_id)
     {
         m_id = id;
-        emit idChanged();
+        Q_EMIT idChanged();
     }
 }
 
@@ -36,7 +36,7 @@ void Resource::setIsValid(bool isValid)
     if (isValid != m_isValid)
     {
         m_isValid = isValid;
-        emit isValidChanged();
+        Q_EMIT isValidChanged();
     }
 }
 

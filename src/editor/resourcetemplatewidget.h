@@ -25,7 +25,7 @@ public:
     void setTemplateType(ResourceModel::ResourceItemType type);
     bool isValid() const;
     Resource* templateResource() const;
-signals:
+Q_SIGNALS:
     void isValidChanged();
 private:
     ResourceModel* m_resourceModel;

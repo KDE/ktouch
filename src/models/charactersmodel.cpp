@@ -35,7 +35,7 @@ void CharactersModel::setKeyboardLayout(KeyboardLayout* keyboardLayout)
     {
         m_keyboardLayout = keyboardLayout;
         setKeyIndex(-1);
-        emit keyboardLayoutChanged();
+        Q_EMIT keyboardLayoutChanged();
     }
 }
 
@@ -246,7 +246,7 @@ void CharactersModel::onKeyCharsRemoved()
 
 void CharactersModel::emitCharacterChanged(int row)
 {
-    emit dataChanged(index(row, 0), index(row, columnCount() - 1));
+    Q_EMIT dataChanged(index(row, 0), index(row, columnCount() - 1));
 }
 
 void CharactersModel::updateMappings()

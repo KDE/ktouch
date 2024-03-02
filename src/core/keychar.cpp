@@ -65,7 +65,7 @@ void KeyChar::setValue(const QChar& value)
     if(value != m_value)
     {
         m_value = value;
-        emit valueChanged();
+        Q_EMIT valueChanged();
     }
 }
 
@@ -79,7 +79,7 @@ void KeyChar::setPosition(KeyChar::Position position)
     if(position != m_position)
     {
         m_position = position;
-        emit positionChanged();
+        Q_EMIT positionChanged();
     }
 }
 
@@ -93,7 +93,7 @@ void KeyChar::setModifier(const QString& modifier)
     if(modifier != m_modifier)
     {
         m_modifier = modifier;
-        emit modifierChanged();
+        Q_EMIT modifierChanged();
     }
 }
 

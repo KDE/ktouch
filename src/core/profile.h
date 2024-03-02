@@ -35,7 +35,7 @@ public:
     QString lastUsedCourseId() const;
     void setLastUsedCourseId(const QString &id);
 
-signals:
+Q_SIGNALS:
     void idChanged();
     void nameChanged();
     void skillLevelChanged();

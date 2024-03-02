@@ -35,7 +35,7 @@ public:
     QRect rect() const;
     void setRect(const QRect& rect);
 
-signals:
+Q_SIGNALS:
     void leftChanged();
     void topChanged();
     void widthChanged();

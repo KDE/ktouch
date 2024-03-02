@@ -152,7 +152,7 @@ void CustomLessonEditorDialog::emitValidChanged()
     const QString text = m_lesson->text();
     const bool valid = !title.isEmpty() && !text.isEmpty();
 
-    emit validChanged(valid);
+    Q_EMIT validChanged(valid);
 }
 
 #include "moc_customlessoneditordialog.cpp"
