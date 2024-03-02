@@ -9,13 +9,13 @@
 # Renan Cakirerk, 2010.
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-04 00:38+0000\n"
-"PO-Revision-Date: 2023-12-27 13:25+0300\n"
+"PO-Revision-Date: 2024-03-01 15:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -926,7 +926,8 @@ msgstr "Eğitim çalışması başladı. Zaman ilk düğme vuruşu ile başlar."
 msgid ""
 "Training session interrupted. Time begins running again with next keystroke."
 msgstr ""
-"Oturum duraklatıldı. Bir düğmeye bastığınızda süre yeniden çalışmaya başlar."
+"Oturum yarıda kesildi. Bir düğmeye bastığınızda süre yeniden çalışmaya "
+"başlar."
 
 #. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
 #: src/ui/colorsconfigwidget.ui:17
