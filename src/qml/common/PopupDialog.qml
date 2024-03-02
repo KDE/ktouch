@@ -5,7 +5,7 @@
  */
 
 import QtQuick 2.9
-import QtQuick.Controls 2.2
+import QtQuick.Controls
 import QtQuick.Layouts 1.3
 import ktouch 1.0
 import Qt5Compat.GraphicalEffects
@@ -15,9 +15,9 @@ Dialog {
     dim: true
 
     opacity: 0
-    scale: 0.9
-    leftMargin: Math.floor((parent.width - width) / 2)
-    topMargin: Math.floor((parent.height - height) / 2)
+    parent: QQC2.ApplicationWindow.window
+    x: Math.floor((parent.width - width) / 2)
+    y: Math.floor((parent.height - height) / 2)
 
     Component.onCompleted: {
         var candidate = root

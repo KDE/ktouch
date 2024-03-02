@@ -8,6 +8,8 @@
 
 #include <QSqlRecord>
 
+#include <KLocalizedString>
+
 #include "core/profile.h"
 #include "core/course.h"
 #include "core/lesson.h"
@@ -124,91 +126,80 @@ qreal LearningProgressModel::minAccuracy() const
     return min;
 }
 
-int LearningProgressModel::columnCount(const QModelIndex& parent) const
+QVariant LearningProgressModel::data(const QModelIndex &idx, int role) const
 {
-    Q_UNUSED(parent)
+    if (idx.column() > 0) {
+        return QSqlQueryModel::data(idx, Qt::DisplayRole);
+    }
 
-    const int originalColumnCount = QSqlQueryModel::columnCount();
-
-    return originalColumnCount > 0? originalColumnCount + 2: 0;
-}
-
-QVariant LearningProgressModel::headerData(int section, Qt::Orientation orientation, int role) const
-{
-    if (role != Qt::DisplayRole)
-        return QVariant();
-
-    if (orientation == Qt::Vertical)
-        return QSqlQueryModel::headerData(section, orientation, role);
-
-    const int originalColumnCount = QSqlQueryModel::columnCount();
-
-    if (section < originalColumnCount)
-        return QSqlQueryModel::headerData(section, orientation, role);
-
-    switch (section - originalColumnCount)
-    {
-    case 0:
-        return QStringLiteral("accuracy");
-    case 1:
-        return QStringLiteral("characters_per_minute");
+    switch (role) {
+    case Qt::DisplayRole:
+        return i18n("Lesson with id %1, elapsed time=%2, accuracy=%3", lessonId(idx.row()), date(idx.row()).toString(), accuracy(idx.row()));
+    case DateRole:
+        return QDateTime::fromMSecsSinceEpoch(QSqlQueryModel::data(index(idx.row(), 1), Qt::DisplayRole).value<quint64>());
+    case CharactersTypedRole:
+        return QSqlQueryModel::data(index(idx.row(), 2), Qt::DisplayRole);
+    case ErrorCountRole:
+        return QSqlQueryModel::data(index(idx.row(), 3), Qt::DisplayRole);
+    case ElapsedTimeRole:
+        return QSqlQueryModel::data(index(idx.row(), 4), Qt::DisplayRole);
+    case LessonIdRole:
+        return QSqlQueryModel::data(index(idx.row(), 5), Qt::DisplayRole);
+    case AccuracyRole:
+        return accuracy(idx.row());
+    case CharactersPerMinuteRole:
+        return charactersPerMinute(idx.row());
     default:
-        return QVariant();
+        return {};
     }
 }
 
-QVariant LearningProgressModel::data(const QModelIndex &item, int role) const
+QHash<int, QByteArray> LearningProgressModel::roleNames() const
 {
-    const int originalColumnCount = QSqlQueryModel::columnCount();
-
-    if (item.column() < originalColumnCount)
-        return QSqlQueryModel::data(item, role);
-
-    switch (item.column() - originalColumnCount)
-    {
-    case 0:
-        return accuracyData(item.row(), role);
-    case 1:
-        return charactersPerMinuteData(item.row(), role);
-    default:
-        return QVariant();
-    }
+    return {
+        { Qt::DisplayRole, "displayRole" },
+        { DateRole, "date" },
+        { CharactersTypedRole, "charactersTyped" },
+        { ErrorCountRole, "errorCount" },
+        { ElapsedTimeRole, "elapsedTime" },
+        { LessonIdRole, "lessonId" },
+        { AccuracyRole, "accuracy" },
+        { CharactersPerMinuteRole, "charactersPerMinute" },
+    };
 }
 
 QDateTime LearningProgressModel::date(int row) const
 {
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
-    return QDateTime::fromMSecsSinceEpoch(record.value(0).value<quint64>());
+    return QDateTime::fromMSecsSinceEpoch(record.value(1).value<quint64>());
 }
 
 int LearningProgressModel::charactersPerMinute(int row) const
 {
-    const int charactersTyped = this->charactersTyped(row);
-    const int elapsedTime = this->elapsedTime(row);
-
-    return elapsedTime > 0? charactersTyped * 60000 / elapsedTime: 0;
+    const int time = this->elapsedTime(row);
+    return time > 0 ? charactersTyped(row) * 60000 / time : 0;
 }
 
 int LearningProgressModel::charactersTyped(int row) const
 {
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
-    return record.value(1).toInt();
+    return record.value(2).toInt();
 }
 
 int LearningProgressModel::errorCount(int row) const
 {
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
-    return record.value(2).toInt();
+    return record.value(3).toInt();
 }
 
 int LearningProgressModel::elapsedTime(int row) const
 {
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
-    return record.value(3).toInt();
+    return record.value(4).toInt();
 }
 
 qreal LearningProgressModel::accuracy(int row) const
@@ -227,7 +218,7 @@ QString LearningProgressModel::lessonId(int row) const
 {
     LearningProgressModel* model = const_cast<LearningProgressModel*>(this);
     QSqlRecord record = model->record(row);
-    return record.value(4).toString();
+    return record.value(5).toString();
 }
 void LearningProgressModel::update()
 {
@@ -243,32 +234,6 @@ void LearningProgressModel::update()
 
     Q_EMIT maxCharactersTypedPerMinuteChanged();
     Q_EMIT minAccuracyChanged();
-}
-
-QVariant LearningProgressModel::accuracyData(int row, int role) const
-{
-    const qreal accuracy = this->accuracy(row);
-
-    switch(role)
-    {
-    case Qt::DisplayRole:
-        return QVariant(accuracy);
-    default:
-        return QVariant();
-    }
-}
-
-QVariant LearningProgressModel::charactersPerMinuteData(int row, int role) const
-{
-    int charactersPerMinute = this->charactersPerMinute(row);
-
-    switch(role)
-    {
-    case Qt::DisplayRole:
-        return QVariant(charactersPerMinute);
-    default:
-        return QVariant();
-    }
 }
 
 void LearningProgressModel::profileDestroyed()

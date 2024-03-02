@@ -7,6 +7,7 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import ktouch 1.0
+import org.kde.kirigami as Kirigami
 import org.kde.quickcharts as Charts
 import org.kde.quickcharts.controls as ChartsControls
 
@@ -35,7 +36,7 @@ PopupDialog {
 
 
     contentItem: Rectangle {
-        color: colorScheme.normalBackground
+        color: Kirigami.Units.backgroundColor
 
         ColumnLayout {
             anchors.fill: parent
@@ -56,16 +57,6 @@ PopupDialog {
                     id: learningProgressModel
                 }
             }
-
-            ChartsControls.Legend {
-                id: accuracyLegend
-                chart: learningProgressChart
-            }
-        }
-        KColorScheme {
-            id: colorScheme
-            colorGroup: KColorScheme.Active
-            colorSet: KColorScheme.View
         }
     }
 }

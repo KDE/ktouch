@@ -23,6 +23,16 @@ class LearningProgressModel : public QSqlQueryModel
     Q_PROPERTY(int maxCharactersTypedPerMinute READ maxCharactersTypedPerMinute NOTIFY maxCharactersTypedPerMinuteChanged)
     Q_PROPERTY(qreal minAccuracy READ minAccuracy NOTIFY minAccuracyChanged)
 public:
+    enum ExtraRole {
+        DateRole = Qt::UserRole + 1,
+        CharactersTypedRole,
+        ErrorCountRole,
+        ElapsedTimeRole,
+        LessonIdRole,
+        AccuracyRole,
+        CharactersPerMinuteRole,
+    };
+
     explicit LearningProgressModel(QObject* parent = nullptr);
     Profile* profile() const;
     void setProfile(Profile* profile);
@@ -32,8 +42,6 @@ public:
     void setLessonFilter(Lesson* lessonFilter);
     int maxCharactersTypedPerMinute() const;
     qreal minAccuracy() const;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     Q_INVOKABLE QDateTime date(int row) const;
     Q_INVOKABLE int charactersPerMinute(int row) const;
     Q_INVOKABLE int charactersTyped(int row) const;
@@ -53,8 +61,7 @@ private Q_SLOTS:
     void profileDestroyed();
 private:
     QVariant data(const QModelIndex& item, int role = Qt::DisplayRole) const override;
-    QVariant accuracyData(int row, int role = Qt::DisplayRole) const;
-    QVariant charactersPerMinuteData(int row, int role = Qt::DisplayRole) const;
+    QHash<int, QByteArray> roleNames() const override;
     int m_charactersTypedFieldIndex;
     Profile* m_profile;
     Course* m_courseFilter;

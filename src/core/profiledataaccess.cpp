@@ -801,7 +801,7 @@ QSqlQuery ProfileDataAccess::learningProgressQuery(Profile* profile, Course* cou
     if (!db.isOpen())
         return QSqlQuery();
 
-    QString sql = QStringLiteral("SELECT date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?");
+    QString sql = QStringLiteral("SELECT 1, date, characters_typed, error_count, elapsed_time, lesson_id FROM training_stats WHERE profile_id = ?");
 
     if (courseFilter)
     {

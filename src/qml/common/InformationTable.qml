@@ -7,56 +7,42 @@
 
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
+import QtQuick.Layouts
 import ktouch 1.0
+import org.kde.kirigami as Kirigami
 
-Item {
-    property alias model: repeator.model
+ColumnLayout {
     id: root
-    height: childrenRect.height
 
-    KColorScheme {
-        id: colorScheme
-        colorGroup: KColorScheme.Active
-        colorSet: KColorScheme.View
-    }
+    property alias model: repeator.model
 
+    spacing: Units.largeSpacing
 
-    Column {
-        id: column
-        spacing: Units.largeSpacing
-        width: parent.width
-        height: childrenRect.height
+    Repeater {
+        id: repeator
 
-        Repeater {
-            id: repeator
+        Row {
+            spacing: Units.smallSpacing
+            Layout.fillWidth: true
 
-            Row {
-                spacing: Units.smallSpacing
-                height: Math.max(titleLabel.height, valueLabel.height)
-                width: root.width
-
-                Label {
-                    id: titleLabel
-                    width: Math.round((parent.width - parent.spacing) / 2)
-                    horizontalAlignment: Text.AlignRight
-                    verticalAlignment: Text.AlignTop
-                    color: colorScheme.normalText
-                    opacity: 0.7
-                    text: model.modelData.title
-                    wrapMode: Text.Wrap
-                    height: Math.max(paintedHeight, valueLabel.paintedHeight)
-                }
-                Label {
-                    id: valueLabel
-                    width: parent.width - titleLabel.width - parent.spacing
-                    horizontalAlignment: Text.AlignLeft
-                    verticalAlignment: Text.AlignBottom
-                    text: model.modelData.text
-                    wrapMode: Text.Wrap
-                    height: Math.max(paintedHeight, titleLabel.paintedHeight)
-                    color: colorScheme.normalText
-                }
+            Label {
+                id: titleLabel
+                width: root.width / 2
+                horizontalAlignment: Text.AlignRight
+                verticalAlignment: Text.AlignTop
+                color: Kirigami.Theme.textColor
+                opacity: 0.7
+                text: model.modelData.title
+                wrapMode: Text.Wrap
+            }
+            Label {
+                id: valueLabel
+                width: root.width / 2 - Units.smallSpacing
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignBottom
+                text: model.modelData.text
+                wrapMode: Text.Wrap
+                color: Kirigami.Theme.textColor
             }
         }
     }
