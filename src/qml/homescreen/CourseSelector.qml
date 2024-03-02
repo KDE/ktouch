@@ -151,7 +151,7 @@ FocusScope {
                     colorScheme: courseSelectorColorScheme
                     selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
                     selectedCourse: root.selectedCourse
-                    onCourseSelected: {
+                    onCourseSelected: (course) => {
                         root.selectedCourse = course
                         root.saveLastUsedCourse(course)
                     }
@@ -166,7 +166,7 @@ FocusScope {
                 colorScheme: courseSelectorColorScheme
                 selectedKeyboardLayoutName: root.selectedKeyboardLayoutName
                 selectedCourse: root.selectedCourse
-                onCourseSelected: {
+                onCourseSelected: (course) => {
                     root.selectedCourse = course
                     root.saveLastUsedCourse(course)
                 }

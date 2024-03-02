@@ -116,7 +116,7 @@ FocusScope {
             selectedKeyboardLayout: screen.selectedKeyboardLayout
             activeKeyboardLayoutName: screen.activeKeyboardLayoutName
             dataIndexCourse: courseSelector.selectedCourse
-            onLessonSelected: screen.lessonSelected(course, lesson, profileComboBox.profile)
+            onLessonSelected: (course) => screen.lessonSelected(course, lesson, profileComboBox.profile)
             z: 1
             focus: true
         }

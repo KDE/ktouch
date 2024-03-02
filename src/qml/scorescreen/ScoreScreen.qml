@@ -7,7 +7,8 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import ktouch 1.0
-import org.kde.charts 0.1 as Charts
+import org.kde.quickcharts
+import org.kde.kirigami as Kirigami
 
 import "../common"
 import "../meters"
@@ -208,11 +209,11 @@ FocusScope {
                             anchors.horizontalCenter: parent.horizontalCenter
                             width: captionIcon.width + captionLabel.width + Units.largeSpacing
                             height: Math.max(captionIcon.height, captionLabel.height)
-                            Icon {
+                            Kirigami.Icon {
                                 id: captionIcon
                                 anchors.left: parent.left
                                 anchors.verticalCenter: parent.verticalCenter
-                                icon: internal.lessonPassed? "dialog-ok-apply": "dialog-cancel"
+                                source: internal.lessonPassed? "dialog-ok-apply": "dialog-cancel"
                                 width: height
                                 height: captionLabel.height
                             }
@@ -321,6 +322,7 @@ FocusScope {
                         Layout.fillWidth: true
                     }
 
+/*
                     Charts.LegendItem {
                         id: accuracyLegend
                         textColor: colorScheme.normalText
@@ -338,7 +340,7 @@ FocusScope {
                         Behavior on opacity {
                             NumberAnimation {duration: Units.shortDuration}
                         }
-                    }
+                    }*/
                 }
 
                 Item {
@@ -358,8 +360,6 @@ FocusScope {
                             property string title: i18n("Progress")
                             property string iconName: "office-chart-area"
                             model: learningProgressModel
-                            backgroundColor: colorScheme.normalBackground
-                            textColor: colorScheme.normalText
 
                             Component.onCompleted: {
                                 accuracyLegend.dimension = learningProgressTab.accuracy
@@ -370,6 +370,8 @@ FocusScope {
                                 charactersPerMinuteLegend.dimension = null
                             }
                         }
+
+                        /*
 
                         Charts.BarChart{
                             id: errorsTab
@@ -399,7 +401,7 @@ FocusScope {
                             onElemExited: {
                                 errorsTooltip.close()
                             }
-                        }
+                        }*/
                     }
                 }
             }

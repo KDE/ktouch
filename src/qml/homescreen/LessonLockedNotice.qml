@@ -9,6 +9,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import Qt5Compat.GraphicalEffects
 import ktouch 1.0
+import org.kde.kirigami as Kirigami
 
 import '../common'
 
@@ -30,9 +31,9 @@ Item {
         width: parent.witdh
         spacing: Units.largeSpacing
 
-        Icon {
+        Kirigami.Icon {
             id: icon
-            icon: "object-locked"
+            source: "object-locked"
             Layout.preferredWidth: Units.fontMetrics.roundedIconSize(8 * Units.gridUnit)
             Layout.preferredHeight: Layout.preferredWidth
             Layout.alignment: Qt.AlignHCenter

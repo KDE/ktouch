@@ -8,8 +8,9 @@
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
-import org.kde.charts 0.1 as Charts
-import org.kde.kcoreaddons 1.0
+import org.kde.quickcharts as Charts
+import org.kde.quickcharts.controls as ChartsControls
+import org.kde.coreaddons 1.0
 import ktouch 1.0
 
 import "../common"
@@ -95,15 +96,16 @@ Item {
                         anchors.horizontalCenter: parent.horizontalCenter
                         width: parent.width
                         height: parent.height - legend.height - parent.spacing
-                        backgroundColor: colorScheme.normalBackground
-                        textColor: colorScheme.normalText
-                        model: learningProgressModel
+                        //backgroundColor: colorScheme.normalBackground
+                        //textColor: colorScheme.normalText
+                        //model: learningProgressModel
                     }
 
                     Row {
                         id: legend
                         anchors.horizontalCenter: parent.horizontalCenter
                         spacing: Units.gridUnit
+                        /*
                         Charts.LegendItem {
                             dimension: learningProgressChart.accuracy
                             textColor: colorScheme.normalText
@@ -111,7 +113,7 @@ Item {
                         Charts.LegendItem {
                             dimension: learningProgressChart.charactersPerMinute
                             textColor: colorScheme.normalText
-                        }
+                        }*/
                     }
                 }
             }

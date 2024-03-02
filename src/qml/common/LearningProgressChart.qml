@@ -4,13 +4,21 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.3
-import org.kde.charts 0.1 as Charts
-import ktouch 1.0
+import QtQuick
+import QtQuick.Layouts
+import org.kde.quickcharts as Charts
+import org.kde.quickcharts.controls as ControlsCharts
+import ktouch
 
-Charts.LineChart {
+ControlsCharts.LineChartControl {
     id: root
+
+    property var model
+/*
+    valueSources: [
+        Charts.ModelSource { roleName: "accuracy"; model: accuracyModel },
+        Charts.ModelSource { roleName: "charactersPerMinute"; model: charactersPerMinuteModel }
+    ]
 
     property Charts.Dimension accuracy: accuracyDimension
     property Charts.Dimension charactersPerMinute: charactersPerMinuteDimension
@@ -99,6 +107,6 @@ Charts.LineChart {
             width: 25 * Units.gridUnit
             model: infoModel
         }
-    }
+    }*/
 
 }
